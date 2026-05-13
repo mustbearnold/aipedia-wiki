@@ -11,11 +11,11 @@ pricing_model: freemium
 price_range: "Free + paid web plans; API credits $1=200 credits"
 status: active
 launched: 2024-01
-last_updated: 2026-05-09
-last_verified: 2026-05-09
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
-seo_title: "PixVerse Review: V6 API Pricing, Credits & Buyer Fit (May 2026)"
-meta_description: "PixVerse is AIsphere's AI video platform for short-form text-to-video, image-to-video, lip-sync, sound, and API workflows. Updated May 9, 2026 with V6/C1/V5.6 credit rates, web-plan caveats, and buyer guidance."
+seo_title: "PixVerse Review: V6 API Pricing, Credits, Buyer Fit (May 2026)"
+meta_description: "PixVerse is AIsphere's AI video platform for short-form text-to-video, image-to-video, lip-sync, sound, and API workflows. Updated May 13, 2026 with V6/C1/V5.6 credit rates, web-plan caveats, and buyer guidance."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -34,16 +34,16 @@ facts:
     source: "https://docs.platform.pixverse.ai/pixverse-api-llm-txt-2109771m0"
     source_label: "PixVerse API overview"
     source_id: pixverse-api-overview
-    verified_at: 2026-05-09
+    verified_at: 2026-05-13
     volatility: medium
     confidence: medium
   pricing_anchor:
-    value: "API credit anchor: $1 = 200 credits; V6 5-second 540p no-audio generation costs 35 credits, 720p costs 45 credits, and 1080p costs 90 credits"
+    value: "API credit anchor: $1 = 200 credits = ~4.6 5s videos at Turbo 540p; V6 5-second 540p no-audio costs 35 credits, 720p costs 45 credits, and 1080p costs 90 credits"
     source: "https://docs.platform.pixverse.ai/model-pricing-796039m0"
     source_label: "PixVerse model pricing"
     source_id: pixverse-model-pricing
-    verified_at: 2026-05-09
-    next_review_at: 2026-06-09
+    verified_at: 2026-05-13
+    next_review_at: 2026-06-13
     volatility: high
     confidence: medium
   watch_out_for:
@@ -51,8 +51,8 @@ facts:
     source: "https://docs.platform.pixverse.ai/how-to-subscribe-api-plans-882969m0"
     source_label: "PixVerse API subscription docs"
     source_id: pixverse-api-subscriptions
-    verified_at: 2026-05-09
-    next_review_at: 2026-06-09
+    verified_at: 2026-05-13
+    next_review_at: 2026-06-13
     volatility: high
     confidence: medium
 tags: [video-generation, ai-video, chinese-ai, anime, short-video, pixverse]
@@ -69,6 +69,22 @@ not_best_for:
 quick_answer: >-
   Pixverse is AIsphere's AI video model. V5.6 delivers 1080p output with native audio, multi-character lip-sync, and character-consistent references. Pick it for short-form social and anime-style generation on a tight budget. Skip it for clips over 10 seconds or cinematic feature work.
 price_history:
+  - date: 2026-05-13
+    plan: "API credits"
+    price: "$1 = 200 credits"
+    source: "https://docs.platform.pixverse.ai/model-pricing-796039m0"
+    source_label: "PixVerse model pricing"
+    source_id: pixverse-model-pricing
+    verified_at: 2026-05-13
+    note: "Reverified May 13, 2026. API credit anchor unchanged; per-second rates by model/quality/audio still listed in official docs"
+  - date: 2026-05-13
+    plan: "Web app subscriptions"
+    price: "Verify in app"
+    source: "https://docs.platform.pixverse.ai/how-to-subscribe-api-plans-882969m0"
+    source_label: "PixVerse API subscription docs"
+    source_id: pixverse-api-subscriptions
+    verified_at: 2026-05-13
+    note: "Web-plan pricing remains opaque from unauthenticated surfaces; API memberships still separate from PixVerse Web"
   - date: 2026-05-09
     plan: "API credits"
     price: "$1 = 200 credits"
@@ -145,7 +161,7 @@ Character consistency via reference images is a core buyer reason to test PixVer
 
 PixVerse pricing needs two separate checks:
 
-| Surface | What AiPedia could verify on May 9, 2026 | Buyer note |
+| Surface | What AiPedia could verify on May 13, 2026 | Buyer note |
 |---|---|---|
 | PixVerse Web | Public web-plan pricing was not reliable enough to quote from non-official mirrors | Verify plan price, monthly credits, watermark rules, output resolution, queue priority, and commercial rights in the logged-in billing screen before paying |
 | PixVerse Platform API | Official docs list **$1 = 200 credits** and per-model credit tables | Good for developers who can estimate credit burn before generation |
@@ -161,7 +177,7 @@ Official API credit examples:
 | V5.6 | 720p, 5 seconds | 45 credits | 80 credits |
 | V5.6 | 1080p, 5 seconds | 75 credits | 150 credits |
 
-Prices and credit rates verified May 9, 2026 via [PixVerse Platform model pricing](https://docs.platform.pixverse.ai/model-pricing-796039m0) and [PixVerse API subscription docs](https://docs.platform.pixverse.ai/how-to-subscribe-api-plans-882969m0).
+Prices and credit rates verified May 13, 2026 via [PixVerse Platform model pricing](https://docs.platform.pixverse.ai/model-pricing-796039m0) and [PixVerse API subscription docs](https://docs.platform.pixverse.ai/how-to-subscribe-api-plans-882969m0).
 
 ## Against the alternatives
 
@@ -187,12 +203,12 @@ Prices and credit rates verified May 9, 2026 via [PixVerse Platform model pricin
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified May 9, 2026 against [PixVerse Platform model pricing](https://docs.platform.pixverse.ai/model-pricing-796039m0), [PixVerse API subscription docs](https://docs.platform.pixverse.ai/how-to-subscribe-api-plans-882969m0), [PixVerse API overview](https://docs.platform.pixverse.ai/pixverse-api-llm-txt-2109771m0), and [CnTechPost's AIsphere Series C report](https://cntechpost.com/2026/03/12/ai-video-startup-aisphere-raises-300-million-record-china-funding/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified May 13, 2026 against [PixVerse Platform model pricing](https://docs.platform.pixverse.ai/model-pricing-796039m0), [PixVerse API subscription docs](https://docs.platform.pixverse.ai/how-to-subscribe-api-plans-882969m0), [PixVerse API overview](https://docs.platform.pixverse.ai/pixverse-api-llm-txt-2109771m0), and [CnTechPost's AIsphere Series C report](https://cntechpost.com/2026/03/12/ai-video-startup-aisphere-raises-300-million-record-china-funding/).
 
 ## FAQ
 
 **Is Pixverse free to use?**
-PixVerse has a free/web app path, but AiPedia did not verify current public web-plan limits from an official, unauthenticated pricing table on May 9, 2026. Check the logged-in billing screen before relying on daily credits, watermark removal, or commercial-use assumptions.
+PixVerse has a free/web app path, but AiPedia did not verify current public web-plan limits from an official, unauthenticated pricing table on May 13, 2026. Check the logged-in billing screen before relying on daily credits, watermark removal, or commercial-use assumptions.
 
 **What is V5.6 and how is it different from V5?**
 PixVerse's official API pricing page still lists V5.6 credit tables, but it also lists V6 and C1. Treat V5.6 as a supported model family, not necessarily the only current flagship. For buying decisions, test the exact model option visible in your app or API account.

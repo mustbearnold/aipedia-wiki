@@ -11,10 +11,10 @@ pricing_model: freemium
 price_range: "$0-$325/seat/month"
 status: active
 launched: 2022-12
-last_updated: 2026-05-11
-last_verified: 2026-05-11
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
-seo_title: "Perplexity: Features, Pricing & Review (May 2026)"
+seo_title: "Perplexity Review: Pricing, Comet, Computer (May 2026)"
 meta_description: "Perplexity offers cited AI search, model switching, Deep Research, Comet, and Computer. Free tier; Pro $20/mo or $200/year; Enterprise Pro $40/seat/mo or $400/year; Enterprise Max $325/seat/mo or $3,250/year."
 author: "aipedia.wiki Editorial"
 affiliate:
@@ -34,61 +34,61 @@ facts:
     source: "https://www.perplexity.ai/enterprise/pricing"
     source_label: "Perplexity pricing"
     source_id: perplexity-pricing
-    verified_at: 2026-05-11
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-13
   context_window:
     value: "Sonar API context is 128K on Sonar and 200K on Sonar Pro; consumer context depends on selected model"
     source: "https://docs.perplexity.ai/docs/sonar/models/sonar-pro"
     source_label: "Perplexity Sonar Pro docs"
     source_id: perplexity-docs
-    verified_at: 2026-05-11
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-13
   pricing_anchor:
     value: "Free; Pro $20/mo or $200/year; Enterprise Pro $40/seat/mo or $400/year; Enterprise Max $325/seat/mo or $3,250/year"
     source: "https://www.perplexity.ai/enterprise/pricing"
     source_label: "Perplexity Enterprise pricing"
     source_id: perplexity-enterprise-pricing
-    verified_at: 2026-05-11
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-13
   free_plan:
-    value: "Yes — free answer engine access with limited advanced usage"
+    value: "Yes, free answer engine access with limited advanced usage"
     source: "https://www.perplexity.ai/enterprise/pricing"
     source_label: "Perplexity pricing"
     source_id: perplexity-pricing
-    verified_at: 2026-05-11
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-13
   best_paid_tier:
     value: "Pro for most individual researchers; Enterprise Pro for teams; Enterprise Max only for heavy reasoning, larger files, multi-model research, or high-volume Computer use"
     source: "https://www.perplexity.ai/enterprise/pricing"
     source_label: "Perplexity pricing"
     source_id: perplexity-pricing
-    verified_at: 2026-05-11
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-13
   api_available:
-    value: "Yes — Sonar API, Search API, and Agent API"
+    value: "Yes; Sonar API, Search API, and Agent API"
     source: "https://docs.perplexity.ai/docs/getting-started/pricing"
     source_label: "Perplexity API pricing docs"
     source_id: perplexity-docs
-    verified_at: 2026-05-11
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-13
   image_generation:
     value: "No dedicated consumer image generator; Sonar API supports image/file inputs and media responses"
     source: "https://docs.perplexity.ai/docs/sonar/media"
     source_label: "Perplexity media docs"
     source_id: perplexity-docs
-    verified_at: 2026-05-11
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   video_generation:
@@ -96,7 +96,7 @@ facts:
     source: "https://docs.perplexity.ai/docs/sonar/media"
     source_label: "Perplexity media docs"
     source_id: perplexity-docs
-    verified_at: 2026-05-11
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   real_time_voice:
@@ -104,24 +104,24 @@ facts:
     source: "https://www.perplexity.ai/enterprise/pricing"
     source_label: "Perplexity pricing"
     source_id: perplexity-pricing
-    verified_at: 2026-05-11
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   web_browsing:
-    value: "Yes — core cited answer engine plus Search API, Sonar grounding, Agent API web_search, and fetch_url tools"
+    value: "Yes; core cited answer engine plus Search API, Sonar grounding, Agent API web_search, and fetch_url tools"
     source: "https://docs.perplexity.ai/docs/agent-api/tools"
     source_label: "Perplexity Agent API tools"
     source_id: perplexity-docs
-    verified_at: 2026-05-11
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-13
   coding_agent:
-    value: "Limited — Perplexity Computer and Agent API automate tasks, but Perplexity is not a coding IDE agent like Codex or Claude Code"
+    value: "Limited; Perplexity Computer and Agent API automate tasks, but Perplexity is not a coding IDE agent like Codex or Claude Code"
     source: "https://www.perplexity.ai/enterprise/pricing"
     source_label: "Perplexity pricing"
     source_id: perplexity-pricing
-    verified_at: 2026-05-11
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   enterprise_controls:
@@ -129,25 +129,25 @@ facts:
     source: "https://www.perplexity.ai/enterprise/pricing"
     source_label: "Perplexity Enterprise pricing"
     source_id: perplexity-enterprise-pricing
-    verified_at: 2026-05-11
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-13
   data_retention_or_privacy:
     value: "Enterprise customer data is not used for training; Sonar API has a zero-data-retention policy"
     source: "https://docs.perplexity.ai/docs/resources/privacy-security"
     source_label: "Perplexity API privacy docs"
     source_id: perplexity-docs
-    verified_at: 2026-05-11
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-13
   open_source_or_local:
-    value: "No — Perplexity is a proprietary hosted answer engine and API platform"
+    value: "No; Perplexity is a proprietary hosted answer engine and API platform"
     source: "https://www.perplexity.ai/enterprise/pricing"
     source_label: "Perplexity pricing"
     source_id: perplexity-pricing
-    verified_at: 2026-05-11
+    verified_at: 2026-05-13
     volatility: low
     confidence: high
   best_for:
@@ -155,7 +155,7 @@ facts:
     source: "https://www.perplexity.ai/enterprise/pricing"
     source_label: "Perplexity pricing"
     source_id: perplexity-pricing
-    verified_at: 2026-05-11
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   watch_out_for:
@@ -163,7 +163,7 @@ facts:
     source: "https://docs.perplexity.ai/docs/sonar/models"
     source_label: "Perplexity Sonar model docs"
     source_id: perplexity-docs
-    verified_at: 2026-05-11
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
 tags: [search-engine, research, citations, answer-engine, web-search, real-time, fact-checking, sonar, deep-research, comet-browser, model-council, spaces]
@@ -181,6 +181,22 @@ not_best_for:
 quick_answer: >-
   Perplexity is the strongest AI-native answer engine for cited, verifiable research from the live web. Pick it for inline numbered citations, a Pro-tier frontier-model switcher, and Deep Research that exports to decks and spreadsheets. Skip it for long-form writing, coding, or image/video generation.
 price_history:
+  - date: 2026-05-13
+    plan: "Pro"
+    price: "$20/mo or $200/year"
+    source: "https://www.perplexity.ai/enterprise/pricing"
+    source_id: perplexity-pricing
+    source_label: "Perplexity pricing"
+    verified_at: 2026-05-13
+    note: "Pricing reverified on May 13, 2026; Pro stable at $20/month or $200/year"
+  - date: 2026-05-13
+    plan: "Enterprise"
+    price: "Enterprise Pro $40/seat/mo or $400/year; Enterprise Max $325/seat/mo or $3,250/year"
+    source: "https://www.perplexity.ai/enterprise/pricing"
+    source_id: perplexity-pricing
+    source_label: "Perplexity pricing"
+    verified_at: 2026-05-13
+    note: "Enterprise tiers unchanged on May 13, 2026 reverification"
   - date: 2026-05-11
     plan: "Pro"
     price: "$20/mo or $200/year"
@@ -301,7 +317,7 @@ Enterprise pricing via [perplexity.ai/enterprise/pricing](https://perplexity.ai/
 
 Sonar and Sonar Pro APIs are priced separately at [perplexity.ai/api-platform](https://perplexity.ai/api-platform). Verify current per-token rates there before building on it.
 
-Prices verified 2026-05-11 via [Perplexity pricing](https://www.perplexity.ai/enterprise/pricing) and the [Perplexity API pricing docs](https://docs.perplexity.ai/docs/getting-started/pricing).
+Prices verified 2026-05-13 via [Perplexity pricing](https://www.perplexity.ai/enterprise/pricing) and the [Perplexity API pricing docs](https://docs.perplexity.ai/docs/getting-started/pricing).
 
 ## Against the alternatives
 
@@ -325,7 +341,7 @@ Prices verified 2026-05-11 via [Perplexity pricing](https://www.perplexity.ai/en
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-11 against [Perplexity Pro](https://www.perplexity.ai/pro), [Perplexity Enterprise pricing](https://www.perplexity.ai/enterprise/pricing), the [Perplexity API pricing docs](https://docs.perplexity.ai/docs/getting-started/pricing), the [Sonar model docs](https://docs.perplexity.ai/docs/sonar/models), the [API privacy/security docs](https://docs.perplexity.ai/docs/resources/privacy-security), and the May 8, 2026 [Morningstar/PitchBook integration announcement](https://newsroom.morningstar.com/news/news-details/2026/Morningstar-and-PitchBook-Expand-Access-to-Trusted-Investment-Intelligence-Through-Perplexity/default.aspx).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [Perplexity Pro](https://www.perplexity.ai/pro), [Perplexity Enterprise pricing](https://www.perplexity.ai/enterprise/pricing), the [Perplexity API pricing docs](https://docs.perplexity.ai/docs/getting-started/pricing), the [Sonar model docs](https://docs.perplexity.ai/docs/sonar/models), the [API privacy/security docs](https://docs.perplexity.ai/docs/resources/privacy-security), the May 8, 2026 [Morningstar/PitchBook integration announcement](https://newsroom.morningstar.com/news/news-details/2026/Morningstar-and-PitchBook-Expand-Access-to-Trusted-Investment-Intelligence-Through-Perplexity/default.aspx), and the May 6, 2026 [Snap-Perplexity deal coverage](/news/2026-05-06-snap-perplexity-400m-deal-ended/).
 
 ## FAQ
 

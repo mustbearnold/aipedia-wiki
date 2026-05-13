@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: $0-$149/month
 status: active
 launched: 2019-01
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -32,51 +32,60 @@ facts:
     source: https://lovo.ai/
     source_label: LOVO AI official site
     source_id: lovo-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   pricing_anchor:
     value: "LOVO pricing should be checked for current voice-generation minutes, download rights, voice-cloning limits, team seats, and commercial usage allowances."
     source: https://lovo.ai/pricing
     source_label: LOVO pricing
     source_id: lovo-pricing
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-08-13'
   workflow_surface:
     value: "LOVO/Genny is more than text-to-speech; its fit depends on editor workflow, stock/media features, pronunciation controls, and export requirements."
     source: https://help.lovo.ai/
     source_label: LOVO help center
     source_id: lovo-help
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   voice_control:
     value: "Evaluate voice catalog, language support, cloning policy, pronunciation editing, and output licensing before committing to a production voice stack."
     source: https://lovo.ai/
     source_label: LOVO AI official site
     source_id: lovo-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
+  api_access:
+    value: "LOVO publicly promotes a developer API on the homepage as of May 2026 (advertised as a 5-line integration), narrowing the long-standing gap vs ElevenLabs and Fish Audio. Self-serve developer tier limits should still be verified before commitment."
+    source: https://lovo.ai/
+    source_label: LOVO AI official site
+    source_id: lovo-official
+    verified_at: '2026-05-13'
+    volatility: medium
+    confidence: medium
+    next_review_at: '2026-08-13'
   watch_out_for:
     value: "Voice cloning and synthetic narration require consent, brand-safety review, and downstream rights checks, especially for ads or impersonation-sensitive use cases."
     source: https://help.lovo.ai/
     source_label: LOVO help center
     source_id: lovo-help
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
 tags: [tts, text-to-speech, voice-generator, ai-voice, video-editor, e-learning, voiceover]
-seo_title: 'LOVO (Genny): Features, Pricing & Review (April 2026)'
+seo_title: 'LOVO (Genny): Features, Pricing & Review (May 2026)'
 meta_description: >-
   LOVO (Genny) is an AI voice generator with 500+ voices and a built-in video
-  editor. Plans run $0-$149/month. Pricing verified April 2026.
+  editor. Plans run $0-$149/month. Pricing verified May 2026.
 author: "aipedia.wiki Editorial"
 best_for:
   - e-learning narration
@@ -89,20 +98,40 @@ not_best_for:
   - real-time voice synthesis
   - creators chasing top-tier voice naturalness
 quick_answer: >-
-  LOVO (Genny) pairs 500+ voices across 100+ languages with a browser video editor. Pick it for e-learning and explainer workflows that need script, voiceover, and timeline in one tab. Skip it for API access, audiobooks, or top-tier naturalness.
+  LOVO (Genny) pairs 500+ voices across 100+ languages with a browser video editor. Pick it for e-learning and explainer workflows that need script, voiceover, and timeline in one tab. Skip it for top-tier naturalness or audiobook narration; a developer API is now publicly promoted, so the long-standing "no API" objection is softer than it was.
+price_history:
+  - date: 2026-04-17
+    plan: "Basic / Pro / Pro+"
+    price: "$24 / $48 / $149"
+    source: "https://lovo.ai/pricing"
+    source_label: "LOVO pricing"
+    source_id: lovo-pricing
+    note: "Verified unchanged at prior refresh"
+  - date: 2026-05-13
+    plan: "Basic / Pro / Pro+"
+    price: "$24 / $48 / $149"
+    source: "https://lovo.ai/pricing"
+    source_label: "LOVO pricing"
+    source_id: lovo-pricing
+    note: "Verified unchanged. Developer API now publicly promoted on lovo.ai (previously gated behind Enterprise)."
 ---
 
 # LOVO (Genny)
 
 LOVO AI runs Genny, a browser-based voice generator bundled with a drag-and-drop video editor, AI script writer, and screen recorder. The voice library covers 500+ voices across 100+ languages. Pricing runs $0 to $149/month with Enterprise above.
 
-No public TTS API on consumer plans. Voice cloning lands at the Basic tier and scales upward.
+A developer API is now publicly promoted on the homepage (advertised as a 5-line integration), a meaningful change from the prior Enterprise-only posture. Voice cloning lands at the Basic tier and scales upward.
+
+## Recent changes
+
+- **May 2026:** LOVO began publicly promoting a developer API on lovo.ai with a 5-line integration pitch. Tier pricing for the API is not yet broken out in the consumer plan grid, so treat per-character cost and rate limits as something to verify with sales rather than read off the page.
+- **2026-05-13:** Pricing across Basic, Pro, and Pro+ verified unchanged at $24 / $48 / $149/mo.
 
 ## System Verdict
 
 > **Pick LOVO if the job is narrated video, not just audio.** The Genny editor keeps script, voiceover, stock footage, and timeline in one tab. That matters most for e-learning developers, corporate trainers, and small marketing teams producing explainer volume.
 >
-> **Skip it if voice quality is the single axis.** [ElevenLabs](/tools/elevenlabs/) and [Fish Audio](/tools/fish-audio/) still edge Genny on raw naturalness and emotional range. Skip it for developer workflows too. LOVO is UI-first, and real API access sits behind Enterprise sales.
+> **Skip it if voice quality is the single axis.** [ElevenLabs](/tools/elevenlabs/) and [Fish Audio](/tools/fish-audio/) still edge Genny on raw naturalness and emotional range. LOVO does now advertise a public API on its homepage, but the documented self-serve depth at ElevenLabs and Fish Audio remains the safer pick for developer-first stacks until LOVO publishes pricing and rate-limit detail in a single tier comparison.
 >
 > **Who pays which tier:** Basic $24/mo for solo creators testing volume, Pro $48/mo for active channels and course builders, Pro+ $149/mo for small teams at production scale, Enterprise for custom voice commissions and SSO.
 
@@ -115,12 +144,12 @@ No public TTS API on consumer plans. Voice cloning lands at the Basic tier and s
 | **Voice cloning** | Available from Basic tier upward |
 | **Video editor** | Drag-and-drop timeline · stock media · on-screen text |
 | **Screen recorder** | Included · narration layered post-record |
-| **API access** | Enterprise only · no self-serve developer tier |
+| **API access** | Developer API publicly promoted on lovo.ai homepage (May 2026); self-serve tier pricing not in the consumer plan grid |
 | **Free tier** | Yes · watermark + download caps |
 | **Pricing** | Free · Basic $24 · Pro $48 · Pro+ $149 · Enterprise custom |
 | **Best commercial rights floor** | Paid tiers (Basic and above) |
 
-Every data point verified against vendor documentation on 2026-04-17. See Sources.
+Every data point verified against vendor documentation on 2026-05-13. See Sources.
 
 ## What it actually is
 
@@ -141,7 +170,7 @@ The moat is workflow compression. [ElevenLabs](/tools/elevenlabs/) produces clea
 ## When to pick something else
 
 - **Top-tier voice naturalness:** [ElevenLabs](/tools/elevenlabs/) still leads on expressive delivery. [Fish Audio](/tools/fish-audio/) competes on quality with open S1/S2 weights.
-- **Developer-first TTS API:** ElevenLabs and Fish Audio ship documented self-serve APIs. LOVO gates API access behind Enterprise.
+- **Developer-first TTS API with published rate limits and pricing:** ElevenLabs and Fish Audio still ship the most documented self-serve developer surfaces. LOVO's public API is newer; teams that need full docs and pricing transparency on day one are safer with the established vendors.
 - **Enterprise L&D with Articulate/Captivate exports:** [WellSaid Labs](/tools/wellsaid/) ships SCORM and LMS integrations Genny does not match.
 - **AI music for the same video:** [Mubert](/tools/mubert/) handles YouTube-safe background tracks. [Udio](/tools/udio/) covers full songs with vocals.
 - **Professional presentation narration with Slides integration:** [Murf](/tools/murf/) ships native Google Slides and PowerPoint hooks.
@@ -158,7 +187,7 @@ Subscription pricing via [lovo.ai/pricing](https://lovo.ai/pricing).
 | Pro+ | $149 | ~20 hrs/month | 400GB storage, priority support, all Pro features |
 | Enterprise | Custom | Volume | Custom voices, SSO, SLA, API access |
 
-*Prices verified 2026-04-17 via [LOVO pricing](https://lovo.ai/pricing). Annual billing saves roughly 20-30% across paid tiers.*
+*Prices verified 2026-05-13 via [LOVO pricing](https://lovo.ai/pricing). Annual billing saves roughly 20-30% across paid tiers.*
 
 ## Against the alternatives
 
@@ -167,7 +196,7 @@ Subscription pricing via [lovo.ai/pricing](https://lovo.ai/pricing).
 | **Voice naturalness** | Good | Strongest | Strong corporate | Strong narration |
 | **Video editor included** | **Yes (native)** | No | Timeline sync only | No |
 | **Voice cloning floor** | Basic $24 | Starter $5 | Enterprise only | Enterprise only |
-| **API access** | Enterprise only | Self-serve | Business tier | Teams (capped) |
+| **API access** | Public API promoted on homepage; tier pricing not yet listed in plan grid | Self-serve | Business tier | Teams (capped) |
 | **Languages** | 100+ | 70+ | 25+ | 18 |
 | **Best viewed as** | All-in-one creator suite | Voice quality specialist | L&D narration tool | Enterprise L&D platform |
 
@@ -176,13 +205,13 @@ Subscription pricing via [lovo.ai/pricing](https://lovo.ai/pricing).
 - **Voice naturalness ceiling.** Genny voices are polished but fall short of ElevenLabs and Fish Audio on emotional range. Long-form creative narration exposes the gap.
 - **Audio caps bite active creators.** Basic's ~2 hrs/month is thin. Heavy producers hit the ceiling fast and need Pro or Pro+.
 - **Editor is simple by design.** Genny handles basic timelines and transitions. It does not replace CapCut or DaVinci Resolve for complex projects.
-- **No self-serve API.** Developer integrations require Enterprise sales. Startups needing programmatic TTS should pick a different vendor.
+- **API is newly public, but tier pricing is opaque.** LOVO promotes a developer API on the homepage but its plan grid does not yet break out API-specific quotas, rate limits, or per-character pricing. Treat as evaluation-grade until the docs catch up.
 - **Free plan is a trial, not a product.** Watermarked video and 5 download cap/month make it useful for evaluation only.
 - **Voice cloning quality is variable.** Short sample uploads produce inconsistent clones. Multiple iterations are common on edge voices.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against the [LOVO pricing page](https://lovo.ai/pricing) and the [LOVO official site](https://lovo.ai).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-05-13 against the [LOVO pricing page](https://lovo.ai/pricing) and the [LOVO official site](https://lovo.ai).
 
 ## FAQ
 
@@ -190,13 +219,13 @@ This page was produced by the aipedia.wiki editorial pipeline, an automated syst
 Yes. The free tier provides ~20 minutes of audio and 5 downloads per month. Video exports carry a watermark. It works as an evaluation trial, not a production tool.
 
 **How many voices does LOVO have?**
-500+ voices across 100+ languages as of April 2026. Voices are tagged by age, accent, and style (narration, advertising, conversational, e-learning).
+500+ voices across 100+ languages as of May 2026. Voices are tagged by age, accent, and style (narration, advertising, conversational, e-learning).
 
 **Can LOVO clone my voice?**
 Yes, starting on the Basic plan at $24/month. Uploads of 10-30 seconds produce a usable clone. Pro unlocks unlimited cloning for teams maintaining multi-voice libraries.
 
 **Does LOVO have an API?**
-Not on consumer tiers. API access sits behind the Enterprise plan via sales contact. Developers needing self-serve programmatic TTS should pick [ElevenLabs](/tools/elevenlabs/) or [Fish Audio](/tools/fish-audio/).
+Yes, and it is now publicly promoted on lovo.ai (advertised as a 5-line integration) as of May 2026, a change from the prior Enterprise-only posture. Tier-level rate limits and pricing are not yet listed in the consumer plan grid, so teams that need full documentation and predictable per-character pricing on day one may still prefer [ElevenLabs](/tools/elevenlabs/) or [Fish Audio](/tools/fish-audio/).
 
 **Is LOVO better than ElevenLabs?**
 Different jobs. LOVO wins on bundled video workflow for narrated explainers. ElevenLabs wins on voice naturalness, creative range, and API depth. Most teams evaluate both and pick based on primary output format.

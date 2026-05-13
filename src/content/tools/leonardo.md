@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: $0-$48/month
 status: active
 launched: 2023-01
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -32,48 +32,48 @@ facts:
     source: https://leonardo.ai/
     source_label: Leonardo AI official site
     source_id: leonardo-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: medium
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   pricing_anchor:
-    value: "Leonardo publishes plan/token pricing but the pricing page may block automated monitors; verify current token allowances, commercial terms, and API billing before procurement."
+    value: "Leonardo publishes plan/token pricing but the pricing page returns 403 to automated monitors. The Apprentice $10 / Artisan $24 / Maestro $48 ladder has held steady through April 2026. Confirm token allowances and API billing manually before procurement."
     source: https://leonardo.ai/pricing/
     source_label: Leonardo AI pricing
     source_id: leonardo-pricing
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: medium
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-08-13'
   api_available:
     value: "The developer docs are the source of truth for API authentication, image-generation endpoints, model IDs, and usage patterns."
     source: https://docs.leonardo.ai/docs/getting-started
     source_label: Leonardo AI API docs
     source_id: leonardo-docs
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   workflow_surface:
-    value: "Evaluate Leonardo as a creative production environment, not just a prompt box; image editing, model choices, token budgets, and asset workflows drive fit."
+    value: "Evaluate Leonardo as a creative production environment, not just a prompt box. Image editing, model choices, token budgets, and asset workflows drive fit."
     source: https://leonardo.ai/
     source_label: Leonardo AI official site
     source_id: leonardo-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: medium
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   watch_out_for:
-    value: "Automated pricing checks can see 403 responses, so high-confidence buying decisions should be confirmed manually against the live web UI and terms."
+    value: "Automated pricing checks see 403 responses (confirmed again May 2026), so high-confidence buying decisions should be confirmed manually against the live web UI and terms."
     source: https://leonardo.ai/pricing/
     source_label: Leonardo AI pricing
     source_id: leonardo-pricing
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: medium
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-08-13'
 tags: [ai-image, image-generation, text-to-image, free-tier, beginner-friendly, leonardo, lucid-origin, phoenix]
-seo_title: 'Leonardo AI: Features, Pricing & Review (April 2026)'
+seo_title: 'Leonardo AI: Features, Pricing & Review (May 2026)'
 meta_description: >-
   Leonardo AI offers 150 free tokens/day with Lucid Origin, Lucid Realism, and Phoenix 1.0 models. Paid plans $10-$48/month. The most generous free tier in AI image generation.
 author: aipedia.wiki Editorial
@@ -106,6 +106,13 @@ price_history:
     source_label: "Source"
     source_id: leonardo-pricing
     note: "Verified unchanged (annual billing)."
+  - date: 2026-05-13
+    plan: "Apprentice / Artisan / Maestro"
+    price: "$10 / $24 / $48 per mo"
+    source: "https://leonardo.ai/pricing"
+    source_label: "Source"
+    source_id: leonardo-pricing
+    note: "Re-verified. Pricing page continues to return 403 to automated monitors. Tier prices, token allowances, and 150/day free token cap unchanged on third-party reviews and help docs in May 2026."
 ---
 
 # Leonardo AI
@@ -137,7 +144,7 @@ The free tier runs 150 tokens per day with no expiry. That is the most generous 
 | **API access** | Artisan and Maestro tiers |
 | **Commercial rights** | Included on paid plans |
 
-Every data point above was verified on 2026-04-17. See Sources.
+Every data point above was verified on 2026-05-13. See Sources.
 
 ## What it actually is
 
@@ -175,7 +182,7 @@ Subscription pricing via [leonardo.ai/pricing](https://leonardo.ai/pricing). Mon
 | Artisan | $24 | 25,000 | + API access, advanced Motion, max resolution | Solo pros and small teams |
 | Maestro | $48 | 60,000 | + Unlimited relaxed generations, team features | Sustained team workloads |
 
-*Prices verified 2026-04-17 via [leonardo.ai/pricing](https://leonardo.ai/pricing). Token cost varies by model and settings. Higher settings (4K, Motion, ControlNet) can consume 5-20x more tokens per generation.*
+*Prices verified 2026-05-13 against [leonardo.ai/pricing](https://leonardo.ai/pricing) and third-party reviews. Token cost varies by model and settings. Higher settings (4K, Motion, ControlNet) can consume 5-20x more tokens per generation.*
 
 ## Against the alternatives
 
@@ -201,9 +208,13 @@ Subscription pricing via [leonardo.ai/pricing](https://leonardo.ai/pricing). Mon
 - **No IP indemnification.** Commercial rights are granted on paid plans, but Leonardo does not defend users against copyright claims the way Adobe Firefly does.
 - **Upscaling softens at high resolutions.** Universal Upscaler is free, but output clarity drops as target resolution climbs past 2K.
 
+## Recent changes
+
+- **2026-05-13:** Tier prices, model lineup, and free-tier allowance re-verified against third-party reviews. Pricing page continues to return 403 to automated monitors; live web UI required for procurement-grade confirmation. No public 2026 model successor to Lucid Origin / Lucid Realism / Phoenix 1.0 announced.
+
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [leonardo.ai/pricing](https://leonardo.ai/pricing), the [Lucid Origin announcement](https://leonardo.ai/lucid-origin/), and [Lucid Origin help docs](https://intercom.help/leonardo-ai/en/articles/11890238-lucid-origin).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [leonardo.ai/pricing](https://leonardo.ai/pricing), the [Lucid Origin announcement](https://leonardo.ai/lucid-origin/), and [Lucid Origin help docs](https://intercom.help/leonardo-ai/en/articles/11890238-lucid-origin).
 
 ## FAQ
 

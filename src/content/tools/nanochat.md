@@ -11,8 +11,8 @@ pricing_model: open-source
 price_range: "Free (MIT open-source)"
 status: active
 launched: 2025-10
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: occasional
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: "https://github.com/karpathy/nanochat"
     source_label: "nanochat GitHub repository"
     source_id: nanochat-official
-    verified_at: 2026-05-04
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   learning_surface:
@@ -39,7 +39,7 @@ facts:
     source: "https://github.com/karpathy/nanochat/blob/master/README.md"
     source_label: "nanochat README"
     source_id: nanochat-readme
-    verified_at: 2026-05-04
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -47,7 +47,7 @@ facts:
     source: "https://github.com/karpathy/nanochat"
     source_label: "nanochat GitHub repository"
     source_id: nanochat-official
-    verified_at: 2026-05-04
+    verified_at: 2026-05-13
     volatility: low
     confidence: high
   workflow_surface:
@@ -55,7 +55,7 @@ facts:
     source: "https://github.com/karpathy/nanochat/blob/master/README.md"
     source_label: "nanochat README"
     source_id: nanochat-readme
-    verified_at: 2026-05-04
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   watch_out_for:
@@ -63,11 +63,11 @@ facts:
     source: "https://github.com/karpathy/nanochat"
     source_label: "nanochat GitHub repository"
     source_id: nanochat-official
-    verified_at: 2026-05-04
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
 tags: [education, llm-training, open-source, python, karpathy, pretraining, fine-tuning, rlhf, gpt, research, minimal]
-seo_title: "nanochat by Karpathy: Full LLM Pipeline in ~8K Lines (2026)"
+seo_title: "nanochat by Karpathy: Full LLM Pipeline in ~8K Lines (May 2026)"
 meta_description: "nanochat is Andrej Karpathy's minimal, MIT-licensed LLM training framework covering tokenization, pretraining, fine-tuning, RLHF, and inference in ~8K lines of Python."
 author: "aipedia.wiki Editorial"
 best_for:
@@ -86,7 +86,7 @@ quick_answer: >-
 
 Andrej Karpathy's open-source reference for the full LLM training pipeline. The repo covers tokenization, pretraining, supervised fine-tuning, RLHF, evaluation, inference, and a minimal chat UI in roughly 8,000 lines of Python.
 
-Released October 2025. MIT licensed. Past 50k GitHub stars by early 2026.
+Released October 2025. MIT licensed. Past 53k GitHub stars by May 2026 (7.2k forks), with the speedrun leaderboard down to **1.65 hours** for the GPT-2-grade run (vs 168 hours in 2019).
 
 ## System Verdict
 
@@ -105,11 +105,12 @@ Released October 2025. MIT licensed. Past 50k GitHub stars by early 2026.
 | **License** | MIT |
 | **Lines of code** | ~8,000 Python |
 | **Pipeline coverage** | Tokenizer, pretraining, SFT, RLHF, eval, inference, chat UI |
-| **Reference reproduction run** | GPT-2-grade model on 8xH100 node, ~2 hours, ~$100 |
+| **Reference reproduction run** | GPT-2-grade model on 8xH100 node, ~1.65 hours leaderboard best, ~$100 |
 | **Hyperparameter control** | Single `--depth` flag; other hparams auto-computed |
 | **Eval suite included** | MMLU, GSM8K, HumanEval |
 | **Hardware floor** | CPU or Apple MPS for toy runs. 8xH100 for the speedrun. |
-| **Stars** | 50,000+ as of April 2026 |
+| **Stars** | 53,400+ (7.2k forks) as of May 2026 |
+| **Recent experiments** | FP8 precision, batch-size tweaks, NVIDIA ClimbMix data, autoresearch loops |
 
 ## What it actually is
 
@@ -117,7 +118,7 @@ A single-repo walk-through of the LLM stack. The core library ships the tokenize
 
 The design dial is `--depth`. That one flag sets transformer layer count and auto-derives the rest for compute-optimal training. No hundred-parameter config files.
 
-The GPT-2 speedrun is the headline benchmark. Reproducing 2019's $43,000 training result costs roughly $100 in 2026 rental GPU time. That gap is the seven-year compounding of algorithmic and hardware efficiency gains.
+The GPT-2 speedrun is the headline benchmark. Reproducing 2019's $43,000 training result costs roughly $100 in 2026 rental GPU time, with the community leaderboard currently sitting at 1.65 hours for a CORE score of 0.2626 (March 2026 entry). That gap is the seven-year compounding of algorithmic and hardware efficiency gains, plus a steady drip of FP8 precision and ClimbMix data tricks from contributors.
 
 ## When to pick nanochat
 
@@ -144,7 +145,7 @@ The GPT-2 speedrun is the headline benchmark. Reproducing 2019's $43,000 trainin
 | CPU or MPS experimentation | Free on existing hardware |
 | Inference after training | User's choice of provider or self-host |
 
-*Prices verified 2026-04-17 via the [nanochat GitHub README](https://github.com/karpathy/nanochat).*
+*Verified 2026-05-13 via the [nanochat GitHub README](https://github.com/karpathy/nanochat) and the speedrun leaderboard.*
 
 ## Against the alternatives
 
@@ -169,7 +170,7 @@ The GPT-2 speedrun is the headline benchmark. Reproducing 2019's $43,000 trainin
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies claims against primary sources, and generates the editorial analysis shown here. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against the [nanochat GitHub repo](https://github.com/karpathy/nanochat) and [Karpathy's release thread](https://x.com/karpathy/status/1977755427569111362).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies claims against primary sources, and generates the editorial analysis shown here. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against the [nanochat GitHub repo](https://github.com/karpathy/nanochat), the speedrun leaderboard, and [Karpathy's release thread](https://x.com/karpathy/status/1977755427569111362).
 
 ## FAQ
 
