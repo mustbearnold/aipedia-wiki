@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: "$0-$49.99/month"
 status: active
 launched: 2019-11
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -28,20 +28,20 @@ scores:
   longevity: 6
 facts:
   best_for:
-    value: "Multi-model AI art platform with daily free credits, Flux.1, Flux.2, SDXL, Nano Banana, Seedream 4, and a community of creators. Best for image generation, editing, and visual-production workflows."
+    value: "Multi-model AI art platform with daily free credits, Flux.1, Flux.2, Flux 2 Klein, Z-Image Turbo, SDXL, Nano Banana, Seedream 4, and a community of creators. Best for image generation, editing, and visual-production workflows."
     source: "https://creator.nightcafe.studio/pricing"
     source_label: "Source"
     source_id: nightcafe-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: medium
     confidence: medium
   pricing_anchor:
-    value: "AI Hobbyist; $5.99/mo; Entry tier restructured."
+    value: "AI Hobbyist; $5.99/mo; entry tier verified unchanged in May 2026."
     source: "https://creator.nightcafe.studio/pricing"
     source_label: "Source"
     source_id: nightcafe-pricing
-    verified_at: 2026-05-03
-    next_review_at: 2026-08-03
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: medium
   watch_out_for:
@@ -49,14 +49,14 @@ facts:
     source: "https://creator.nightcafe.studio/pricing"
     source_label: "Source"
     source_id: nightcafe-pricing
-    verified_at: 2026-05-03
-    next_review_at: 2026-08-03
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: medium
 tags: [ai-image, image-generation, ai-art, community, multiple-models, flux, stable-diffusion]
-seo_title: 'NightCafe Review (April 2026): Multi-Model AI Art with Free Credits'
+seo_title: 'NightCafe Review (May 2026): Multi-Model AI Art with Free Credits'
 meta_description: >-
-  NightCafe runs Flux.1, Flux.2, SDXL, Nano Banana, Seedream 4, and GPT Image 2 from one interface. 5 free credits daily. Paid plans $5.99-$49.99/mo. Best for hobbyists who want model variety.
+  NightCafe runs Flux.1, Flux.2, Flux 2 Klein, Z-Image Turbo, SDXL, Nano Banana, Seedream 4, and GPT Image 2 from one interface. 5 free credits daily. Paid plans $5.99 to $49.99/mo. Best for hobbyists who want model variety.
 author: aipedia.wiki Editorial
 best_for:
   - AI art hobbyists running multi-model experiments
@@ -71,7 +71,7 @@ not_best_for:
   - enterprise teams needing indemnification
   - users who want predictable per-image costs
 quick_answer: >-
-  NightCafe is a multi-model AI art platform covering Flux.1, Flux.2, SDXL, Nano Banana, Seedream 4, and GPT Image 2. The free tier gives 5 credits daily with no expiry. Paid plans start at $5.99/month, the cheapest in the category. Best for hobbyists who want model variety and community without a locked-in subscription.
+  NightCafe is a multi-model AI art platform covering Flux.1, Flux.2, Flux 2 Klein, Z-Image Turbo, SDXL, Nano Banana, Seedream 4, and GPT Image 2. The free tier gives 5 credits daily with no expiry. Paid plans start at $5.99/month, the cheapest in the category. Best for hobbyists who want model variety and community without a locked-in subscription.
 price_history:
   - date: 2025-11-01
     plan: "AI Hobbyist"
@@ -87,11 +87,18 @@ price_history:
     source_label: "Source"
     source_id: nightcafe-pricing
     note: "Verified unchanged."
+  - date: 2026-05-13
+    plan: "AI Hobbyist"
+    price: "$5.99/mo"
+    source: "https://creator.nightcafe.studio/pricing"
+    source_label: "Source"
+    source_id: nightcafe-pricing
+    note: "Tiers verified unchanged. Flux 2 Klein and Z-Image Turbo added to lower-tier model access; Nano Banana, Seedream 4, and Flux.2 remain top-tier only."
 ---
 
 # NightCafe
 
-NightCafe Studio's multi-model AI art platform, live since 2019. Users access **Flux.1**, **Flux.2**, **Stable Diffusion XL**, **Nano Banana**, **Seedream 4**, **GPT Image 2**, and HiDream from a single interface.
+NightCafe Studio's multi-model AI art platform, live since 2019. Users access **Flux.1**, **Flux.2**, **Flux 2 Klein**, **Z-Image Turbo**, **Stable Diffusion XL**, **Nano Banana**, **Seedream 4**, **GPT Image 2**, **HiDream**, and **Qwen Image** from a single interface.
 
 The free tier provides 5 credits per day with no expiry. Paid plans start at $5.99/month, the cheapest entry point in the category.
 
@@ -107,16 +114,22 @@ The free tier provides 5 credits per day with no expiry. Paid plans start at $5.
 
 | | |
 |---|---|
-| **Models** | Flux.1 (Pro, Schnell, Dev), Flux.2, SDXL, Nano Banana, Seedream 4, GPT Image 2, HiDream, Qwen Image |
+| **Models** | Flux.1 (Pro, Schnell, Dev), Flux.2, Flux 2 Klein, Z-Image Turbo, SDXL, Nano Banana, Seedream 4, GPT Image 2, HiDream, Qwen Image |
 | **Free tier** | 5 credits/day, no expiry |
 | **Paid tiers** | $5.99 · $9.99 · $19.99 · $49.99 (monthly) |
 | **Unlimited-gen plans** | Premium tiers offer unlimited base generations on curated models |
-| **Credit cost per image** | 1-5 credits typical (varies by model and settings) |
+| **Credit cost per image** | 1 to 5 credits typical (varies by model and settings) |
 | **Community features** | Public gallery, likes, comments, challenges |
 | **Commercial rights** | Paid plans. Free tier is limited. |
 | **Public API** | None |
+| **Billing cadence** | Monthly, quarterly (15% off), annual (40% off) |
 
-Every data point above was verified on 2026-04-17. See Sources.
+Every data point above was verified on 2026-05-13. See Sources.
+
+## Recent changes
+
+- **2026-05-13:** Model roster expanded with Flux 2 Klein and Z-Image Turbo on lower tiers. Nano Banana, Seedream 4, and Flux.2 remain top-tier only. Pricing structure unchanged. Quarterly billing (15% off) verified as a middle option between monthly and annual (40% off).
+- **2026-04-17:** Tier pricing verified unchanged.
 
 ## What it actually is
 
@@ -155,13 +168,13 @@ Subscription pricing via [creator.nightcafe.studio/pricing](https://creator.nigh
 | AI Artist | $19.99 | 500 + 5/day | + Premium models, advanced features | Heavy hobbyists |
 | Artist Pro | $49.99 | 1,400 + 5/day | + Nano Banana, Seedream 4, Flux.2, max priority | Serious hobbyists |
 
-*Prices verified 2026-04-17 via [creator.nightcafe.studio/pricing](https://creator.nightcafe.studio/pricing). Credit cost varies by model (1-5 credits typical). Premium models (Nano Banana, Seedream 4, Flux.2) unlock at higher tiers.*
+*Prices verified 2026-05-13 via [creator.nightcafe.studio/pricing](https://creator.nightcafe.studio/pricing). Credit cost varies by model (1 to 5 credits typical). Premium models (Nano Banana, Seedream 4, Flux.2) unlock at higher tiers. Quarterly and annual billing add 15% and 40% discounts respectively.*
 
 ## Against the alternatives
 
 | | NightCafe | Midjourney V7 | Leonardo AI |
 |---|---|---|---|
-| **Model variety** | **8+ models in one UI** | Single model | Multiple Lucid + Phoenix + community |
+| **Model variety** | **10+ models in one UI** | Single model | Multiple Lucid + Phoenix + community |
 | **Free tier** | 5 credits/day (~1 image) | None | 150 tokens/day (~many images) |
 | **Aesthetic ceiling** | Mid | **Strongest** | Mid-high |
 | **Entry paid price** | **$5.99/mo** | $10/mo | $10/mo |
@@ -174,7 +187,7 @@ Subscription pricing via [creator.nightcafe.studio/pricing](https://creator.nigh
 
 - **Output ceiling trails Midjourney.** NightCafe's Flux and SDXL outputs are competent, but peak aesthetic work still belongs to Midjourney V7 or self-hosted Flux with LoRA stacks.
 - **Credit cost is opaque.** Different models and settings consume different credit amounts. Users run out faster than expected without monitoring.
-- **Free tier yields ~1 image per day.** 5 credits at 4-5 credits per generation is genuinely limiting. Heavy users hit the wall fast.
+- **Free tier yields ~1 image per day.** 5 credits at 4 to 5 credits per generation is genuinely limiting. Heavy users hit the wall fast.
 - **No public API.** Developers need a direct Flux or SDXL endpoint elsewhere. NightCafe is a consumer product.
 - **Community-layer noise.** Likes, challenges, and public gallery features cut against a pure production workflow. Users who only want image gen see more UI than they need.
 - **Premium models are tier-gated.** Flux.2, Nano Banana, and Seedream 4 sit on top tiers. Budget users get base models only.
@@ -183,15 +196,15 @@ Subscription pricing via [creator.nightcafe.studio/pricing](https://creator.nigh
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [creator.nightcafe.studio/pricing](https://creator.nightcafe.studio/pricing) and the [NightCafe Flux updates](https://nightcafe.studio/blogs/blog/updates-flux-forever-luma-dream-machine-more).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-05-13 against [creator.nightcafe.studio/pricing](https://creator.nightcafe.studio/pricing) and the [NightCafe Flux updates](https://nightcafe.studio/blogs/blog/updates-flux-forever-luma-dream-machine-more).
 
 ## FAQ
 
 **Is NightCafe free?**
-Yes. The free tier provides 5 credits per day with no expiry. Most generations cost 4-5 credits, so free users can expect roughly one image per day. No credit card required.
+Yes. The free tier provides 5 credits per day with no expiry. Most generations cost 4 to 5 credits, so free users can expect roughly one image per day. No credit card required.
 
 **Which models does NightCafe support?**
-As of April 2026: Flux.1 (Pro, Schnell, Dev), Flux.2, Stable Diffusion XL, Nano Banana, Seedream 4, GPT Image 2, HiDream, and Qwen Image. Premium models sit on top tiers ([NightCafe updates](https://nightcafe.studio/blogs/blog/updates-flux-forever-luma-dream-machine-more)).
+As of May 2026: Flux.1 (Pro, Schnell, Dev), Flux.2, Flux 2 Klein, Z-Image Turbo, Stable Diffusion XL, Nano Banana, Seedream 4, GPT Image 2, HiDream, and Qwen Image. Lower tiers include Flux 2 Klein and Z-Image Turbo; premium models like Nano Banana, Seedream 4, and Flux.2 sit on top tiers ([NightCafe updates](https://nightcafe.studio/blogs/blog/updates-flux-forever-luma-dream-machine-more)).
 
 **Can I sell art made with NightCafe?**
 Yes on paid plans. Free tier has more restrictive commercial use rights. NightCafe does not offer IP indemnification; users are responsible for copyright exposure. Adobe Firefly provides indemnification if that matters.

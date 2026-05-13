@@ -8,11 +8,11 @@ category: ai-automation
 company: make-formerly-integromat
 url: 'https://www.make.com'
 pricing_model: freemium
-price_range: $0-$34.12+/month
+price_range: $0-$29+/month
 status: active
 launched: 2012-01
-last_updated: 2026-05-03
-last_verified: 2026-05-03
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -34,16 +34,16 @@ facts:
     source: "https://www.make.com/en/help"
     source_label: "Make Help Center"
     source_id: make-help
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: low
     confidence: high
   pricing_anchor:
-    value: "Make pricing is credit-based, so cost governance should model scenario frequency, module count, and AI-module usage rather than only the number of workflows."
+    value: "Make pricing is credit-based, so cost governance should model scenario frequency, module count, and AI-module usage rather than only the number of workflows. Headline rates dropped in May 2026 (Core to $9, Pro to $16, Teams to $29)."
     source: "https://www.make.com/en/pricing"
     source_label: "Make pricing"
     source_id: make-pricing
-    verified_at: 2026-05-03
-    next_review_at: 2026-08-03
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: high
   integration_surface:
@@ -51,7 +51,7 @@ facts:
     source: "https://www.make.com/en/integrations"
     source_label: "Make app integrations"
     source_id: make-apps
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   ai_agent_surface:
@@ -59,8 +59,8 @@ facts:
     source: "https://www.make.com/en/ai-agents"
     source_label: "Make AI Agents"
     source_id: make-ai-agents
-    verified_at: 2026-05-03
-    next_review_at: 2026-08-03
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: medium
     confidence: high
   watch_out_for:
@@ -68,14 +68,14 @@ facts:
     source: "https://www.make.com/en/pricing"
     source_label: "Make pricing"
     source_id: make-pricing
-    verified_at: 2026-05-03
-    next_review_at: 2026-08-03
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: medium
     confidence: high
 tags: [automation, workflow, integrations, no-code, visual-builder, integromat, api, operations]
-seo_title: 'Make (Integromat): Features, Pricing & Review (April 2026)'
+seo_title: 'Make (Integromat): Features, Pricing & Review (May 2026)'
 meta_description: >-
-  Make (formerly Integromat) is a visual workflow automation platform with 2,000+ integrations, native LLM modules, and operations-based billing. Free tier plus paid plans from $10.59 to $34.12+/month.
+  Make (formerly Integromat) is a visual workflow automation platform with 2,000+ integrations, native LLM modules, and credit-based billing. Free tier plus paid plans from $9 to $29+/month after the May 2026 price drop.
 author: aipedia.wiki Editorial
 best_for:
   - complex multi-step workflows with branching and loops
@@ -103,21 +103,28 @@ price_history:
     source_label: "Source"
     source_id: make-pricing
     note: "Verified unchanged"
+  - date: 2026-05-13
+    plan: "Core / Pro / Teams"
+    price: "$9 / $16 / $29 per month"
+    source: "https://www.make.com/en/pricing"
+    source_label: "Source"
+    source_id: make-pricing
+    note: "Headline price drop. Core $10.59 to $9, Pro $18.82 to $16, Teams $34.12 to $29. Credits and tier features otherwise unchanged."
 ---
 
 # Make
 
 Make is the visual workflow automation platform built by the team formerly known as Integromat. Scenarios combine drag-and-drop modules into flows with routers, iterators, aggregators, and error handlers. 2,000+ integrations, plus HTTP and webhook modules for anything else.
 
-Pricing runs $0 to $34.12+/month. Credits replaced operations as the billing unit in August 2025 to reflect AI-module cost.
+Pricing runs $0 to $29+/month after a May 2026 price drop. Credits replaced operations as the billing unit in August 2025 to reflect AI-module cost.
 
 ## System Verdict
 
-> **Pick Make if workflows branch, loop, or run at volume.** Operations-based billing costs roughly a third of [Zapier](/tools/zapier/) at equivalent workloads. The canvas handles routers and iterators natively instead of bolting them on. Native modules for GPT, Claude, and Gemini sit alongside SaaS connectors in one scenario.
+> **Pick Make if workflows branch, loop, or run at volume.** Credit-based billing costs roughly a third of [Zapier](/tools/zapier/) at equivalent workloads, and the May 2026 price drop widened the gap. The canvas handles routers and iterators natively instead of bolting them on. Native modules for GPT, Claude, and Gemini sit alongside SaaS connectors in one scenario.
 >
 > **Skip it if the integration library matters more than the canvas.** [Zapier](/tools/zapier/) ships 9,000+ connectors to Make's 2,000+. Non-technical users land faster on Zapier. Regulated teams needing self-host belong on [n8n](/tools/n8n/).
 >
-> **Who pays which tier:** Free for 1,000-credit testing, Core $10.59/mo for most teams, Pro $18.82/mo for priority execution and custom variables, Teams $34.12/mo for collaboration, Enterprise custom for governance and scale.
+> **Who pays which tier:** Free for 1,000-credit testing, Core $9/mo for most teams, Pro $16/mo for priority execution and custom variables, Teams $29/mo for collaboration, Enterprise custom for governance and scale.
 
 ## Key Facts
 
@@ -125,15 +132,15 @@ Pricing runs $0 to $34.12+/month. Credits replaced operations as the billing uni
 |---|---|
 | **Core product** | Scenarios (visual multi-step workflows) |
 | **Integration count** | 2,000+ apps |
-| **AI modules** | OpenAI OpenAI frontier models · Claude Opus 4.7 · Gemini 3.1 Pro · Stability AI |
+| **AI modules** | OpenAI frontier models · Claude Opus 4.7 · Gemini 3.1 Pro · Stability AI |
 | **Billing unit** | Credits (replaced operations, August 2025) |
-| **Pricing** | Free · Core $10.59 · Pro $18.82 · Teams $34.12 · Enterprise custom |
+| **Pricing** | Free · Core $9 · Pro $16 · Teams $29 · Enterprise custom |
 | **Free tier** | 1,000 credits/mo · 2 active scenarios · 15-min interval |
 | **Self-host** | None |
 | **Logic support** | Routers, iterators, aggregators, error handlers, filters |
 | **Template library** | 10,000+ community and official |
 
-Every data point above was verified against vendor documentation on 2026-04-17. See Sources.
+Every data point above was verified against vendor documentation on 2026-05-13. See Sources.
 
 ## What it actually is
 
@@ -146,10 +153,10 @@ The moat is the pricing model, not the tool itself. Where [Zapier](/tools/zapier
 ## When to pick Make
 
 - **Workflows loop or branch more than twice.** Routers and iterators are first-class. [Zapier](/tools/zapier/) Paths feel bolted on past 3-4 branches.
-- **Monthly task volume passes 5,000.** [Zapier](/tools/zapier/) task pricing inflates fast. Make's Core plan covers 10,000 operations for $10.59.
+- **Monthly task volume passes 5,000.** [Zapier](/tools/zapier/) task pricing inflates fast. Make's Core plan covers 10,000 credits for $9 after the May 2026 cut.
 - **AI sits inside the workflow.** Native OpenAI frontier models, Claude Opus 4.7, and Gemini 3.1 Pro modules handle text generation, classification, and extraction without webhook gymnastics.
 - **The operator is technical but not a developer.** The canvas assumes comfort with data structures and conditional logic, not code.
-- **Predictable cost matters.** Operations pricing stays flat as the workflow grows. Per-task models punish every new step.
+- **Predictable cost matters.** Credit pricing stays flat as the workflow grows. Per-task models punish every new step.
 
 ## When to pick something else
 
@@ -166,20 +173,20 @@ Subscription pricing via [make.com/pricing](https://www.make.com/en/pricing). An
 | Plan | Monthly | Credits | Key limits | Who's it for |
 |------|---------|---------|-----------|--------------|
 | Free | $0 | 1,000/mo | 2 active scenarios, 15-min interval | Testing |
-| Core | $10.59 | 10,000/mo | Unlimited scenarios, 1-min interval | **Most teams land here** |
-| Pro | $18.82 | 10,000/mo | Priority execution, custom variables, full-text log search | Growing ops |
-| Teams | $34.12 | 10,000/mo | Team management, shared scenarios, roles | Collaborative teams |
-| Enterprise | Custom | Custom | SSO, 24/7 support, enterprise apps, governance | Regulated orgs |
+| Core | $9 | 10,000/mo | Unlimited scenarios, 1-min interval | **Most teams land here** |
+| Pro | $16 | 10,000/mo | Priority execution, custom variables, full-text log search | Growing ops |
+| Teams | $29 | 10,000/mo | Team management, shared scenarios, roles | Collaborative teams |
+| Enterprise | Custom | Custom | SSO, 24/7 support, enterprise apps, governance, Value Engineering team | Regulated orgs |
 
-*Prices verified 2026-04-17 via [Make pricing](https://www.make.com/en/pricing). Additional credits available as add-ons. Credits replaced operations as the billing unit in August 2025.*
+*Prices verified 2026-05-13 via [Make pricing](https://www.make.com/en/pricing). May 2026 cut: Core $10.59 to $9, Pro $18.82 to $16, Teams $34.12 to $29. Additional credits remain available as add-ons. Credits replaced operations as the billing unit in August 2025.*
 
 ## Against the alternatives
 
 | | Make | [Zapier](/tools/zapier/) | [n8n](/tools/n8n/) |
 |---|---|---|---|
 | **Integration count** | 2,000+ | 9,000+ | 500+ |
-| **Pricing model** | Credits (per operation) | Tasks (per action) | Executions (cloud) or free (self-host) |
-| **Cost at 10,000 ops** | ~$10.59/mo Core | ~$103.50+/mo Company | Free self-host |
+| **Pricing model** | Credits (per module action) | Tasks (per action) | Executions (cloud) or free (self-host) |
+| **Cost at 10,000 ops** | ~$9/mo Core | ~$103.50+/mo Company | Free self-host |
 | **Branching and loops** | Native routers and iterators | Paths on Professional | Native |
 | **Self-host** | None | None | Yes, free |
 | **AI integration** | Modules for GPT, Claude, Gemini | Agents + Central | Native AI Agent nodes |
@@ -198,7 +205,7 @@ Subscription pricing via [make.com/pricing](https://www.make.com/en/pricing). An
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against the [Make pricing page](https://www.make.com/en/pricing) and Make's [help center billing notes](https://help.make.com/adjustments-to-plans-and-pricing).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against the [Make pricing page](https://www.make.com/en/pricing) and Make's [help center billing notes](https://help.make.com/adjustments-to-plans-and-pricing).
 
 ## FAQ
 
@@ -206,7 +213,7 @@ This page was produced by the aipedia.wiki editorial pipeline, an automated syst
 Yes. The Free plan includes 1,000 credits/month, 2 active scenarios, and 15-minute scheduling intervals. Suitable for testing and light personal automations ([Make pricing](https://www.make.com/en/pricing)).
 
 **How much does Make cost at scale?**
-Core is $10.59/mo for 10,000 credits. Pro is $18.82/mo adding priority execution and custom variables. Teams is $34.12/mo for collaboration. Enterprise is custom ([Make pricing](https://www.make.com/en/pricing)).
+Core is $9/mo for 10,000 credits after the May 2026 price cut. Pro is $16/mo adding priority execution and custom variables. Teams is $29/mo for collaboration. Enterprise is custom ([Make pricing](https://www.make.com/en/pricing)).
 
 **Make vs Zapier?**
 Make costs roughly a third of Zapier at equivalent volume. Zapier ships 9,000+ integrations vs Make's 2,000+. Pick Make for complex workflows and cost efficiency, [Zapier](/tools/zapier/) for maximum app coverage and simpler setup.

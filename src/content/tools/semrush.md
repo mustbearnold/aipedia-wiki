@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$139.95-$499.95/month"
 status: active
 launched: 2008-01
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -33,7 +33,7 @@ facts:
     source: "https://www.semrush.com/features/"
     source_label: "Semrush features"
     source_id: semrush-features
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: low
     confidence: high
   pricing_anchor:
@@ -41,8 +41,8 @@ facts:
     source: "https://www.semrush.com/pricing/"
     source_label: "Semrush pricing"
     source_id: semrush-pricing
-    verified_at: 2026-05-03
-    next_review_at: 2026-08-03
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: high
   suite_scope:
@@ -50,7 +50,7 @@ facts:
     source: "https://www.semrush.com/features/"
     source_label: "Semrush features"
     source_id: semrush-features
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   competitive_position:
@@ -58,7 +58,7 @@ facts:
     source: "https://www.semrush.com/features/"
     source_label: "Semrush features"
     source_id: semrush-features
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   watch_out_for:
@@ -66,11 +66,11 @@ facts:
     source: "https://www.semrush.com/pricing/"
     source_label: "Semrush pricing"
     source_id: semrush-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
 tags: [seo, keyword-research, backlinks, site-audit, competitor-analysis, ppc, ai-visibility, semrush-copilot, contentshake, ai-visibility-toolkit]
-seo_title: "Semrush: Features, Pricing & Review (April 2026)"
+seo_title: "Semrush: Features, Pricing & Review (May 2026)"
 meta_description: "Semrush is the broadest SEO platform with 55+ tools spanning keyword research, backlinks, site audit, PPC, social, and AI Visibility tracking. Pro $139.95, Guru $249.95, Business $499.95. Copilot included free."
 author: "aipedia.wiki Editorial"
 best_for:
@@ -99,6 +99,13 @@ price_history:
     source_label: "Source"
     source_id: semrush-pricing
     note: "Verified unchanged. Annual billing saves ~17%."
+  - date: 2026-05-13
+    plan: "Pro"
+    price: "$139.95/mo"
+    source: "https://www.semrush.com/pricing/"
+    source_label: "Source"
+    source_id: semrush-pricing
+    note: "Re-verified May 2026. Pro $139.95, Guru $249.95, Business $499.95 all unchanged. AI Visibility Toolkit holds at $99/mo add-on."
 ---
 
 # Semrush
@@ -130,7 +137,7 @@ Semrush Copilot, AI Visibility Toolkit, and ContentShake AI bring generative AI 
 | **Tool count** | 55+ across SEO · PPC · social · content · competitive intelligence |
 | **Pricing** | Pro $139.95 · Guru $249.95 · Business $499.95 · Enterprise custom |
 
-Every data point above was verified against vendor sources on 2026-04-17. See Sources.
+Every data point above was verified against vendor sources on 2026-05-13. See Sources.
 
 ## What it actually is
 
@@ -178,7 +185,7 @@ Subscription pricing via [semrush.com/pricing](https://www.semrush.com/pricing/)
 | ContentShake AI (on Pro) | $60 | Article generation + Chrome extension (included in Guru+) |
 | Semrush Copilot | Free | AI advisor included on all paid tiers |
 
-*Prices verified 2026-04-17 via [semrush.com/pricing](https://www.semrush.com/pricing/) and [Semrush AI SEO overview](https://www.semrush.com/ai-seo/overview/). Annual billing saves ~17%.*
+*Prices verified 2026-05-13 via [semrush.com/pricing](https://www.semrush.com/pricing/) and [Semrush AI SEO overview](https://www.semrush.com/ai-seo/overview/). Annual billing saves ~17%.*
 
 ## Against the alternatives
 
@@ -206,7 +213,7 @@ Subscription pricing via [semrush.com/pricing](https://www.semrush.com/pricing/)
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [semrush.com/pricing](https://www.semrush.com/pricing/), [Semrush AI SEO overview](https://www.semrush.com/ai-seo/overview/), and [Semrush investor filings](https://investors.semrush.com).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-05-13 against [semrush.com/pricing](https://www.semrush.com/pricing/), [Semrush AI SEO overview](https://www.semrush.com/ai-seo/overview/), and [Semrush investor filings](https://investors.semrush.com).
 
 ## FAQ
 

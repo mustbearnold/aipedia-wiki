@@ -11,8 +11,8 @@ pricing_model: free
 price_range: "Free (Sync add-on $5/mo)"
 status: active
 launched: 2020-06
-last_updated: 2026-05-03
-last_verified: 2026-05-03
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,48 +31,48 @@ facts:
     source: https://logseq.com/
     source_label: Logseq official site
     source_id: logseq-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   pricing_anchor:
     value: "The app is open source and local-first; paid evaluation usually centers on sync/publishing/services rather than the core editor."
     source: https://logseq.com/pricing
     source_label: Source
     source_id: logseq-pricing
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-08-13'
   knowledge_model:
     value: "Logseq is block/outliner-first, so it fits users who think in daily notes, backlinks, and nested bullets more than document-centric writing."
     source: https://docs.logseq.com/
     source_label: Logseq documentation
     source_id: logseq-docs
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   open_source:
     value: "The GitHub repository is the best source for current license, release activity, issues, and community plugin/development posture."
     source: https://github.com/logseq/logseq
     source_label: Logseq GitHub repository
     source_id: logseq-repository
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   watch_out_for:
     value: "Teams needing polished collaborative docs, strict admin controls, or AI-native knowledge workflows may outgrow Logseq's personal/local-first orientation."
     source: https://docs.logseq.com/
     source_label: Logseq documentation
     source_id: logseq-docs
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
 tags: [notes, outliner, local-first, markdown, knowledge-base, zettelkasten, pkm, open-source, block-level, graph-view]
-seo_title: "Logseq: Features, Pricing & Review (April 2026)"
+seo_title: "Logseq: Features, Pricing & Review (May 2026)"
 meta_description: "Logseq is a free open-source outliner knowledge base. Plain-text markdown on disk, block-level references, graph view, PDF annotation. Core app free; Sync add-on $5/mo."
 author: "aipedia.wiki Editorial"
 best_for:
@@ -103,6 +103,13 @@ price_history:
     source_label: "Source"
     source_id: logseq-pricing
     note: "Verified unchanged. AGPL-3.0 license."
+  - date: 2026-05-13
+    plan: "Core app + Sync"
+    price: "Free / $5/mo"
+    source: "https://logseq.com/pricing"
+    source_label: "Source"
+    source_id: logseq-pricing
+    note: "Verified unchanged. Core AGPL-3.0; Sync still $5/mo for E2E cross-device."
 ---
 
 # Logseq
@@ -135,7 +142,7 @@ Core app free under AGPL-3.0. Optional Sync add-on at $5/month delivers end-to-e
 | **Sync** | $5/mo Logseq Sync · or roll-your-own (iCloud, Syncthing, git) |
 | **AI** | Plugin ecosystem (e.g., logseq-ai-assistant); bring your own LLM API keys |
 
-Every data point verified 2026-04-17 against [logseq.com](https://logseq.com) and the [GitHub repo](https://github.com/logseq/logseq).
+Every data point verified 2026-05-13 against [logseq.com](https://logseq.com) and the [GitHub repo](https://github.com/logseq/logseq).
 
 ## What it actually is
 
@@ -168,7 +175,7 @@ Files stay Markdown (`.md`) or Org-mode (`.org`) on disk, your choice. The vault
 | Logseq (core) | $0 | All users; full features, no caps |
 | Logseq Sync | $5/mo | Anyone syncing across devices; E2E encrypted |
 
-*Prices verified 2026-04-17 via [logseq.com/pricing](https://logseq.com/pricing). Sync is optional; iCloud Drive, Syncthing, or git work fine for power users.*
+*Prices verified 2026-05-13 via [logseq.com/pricing](https://logseq.com/pricing). Sync is optional; iCloud Drive, Syncthing, or git work fine for power users.*
 
 ## Against the alternatives
 
@@ -194,7 +201,7 @@ Files stay Markdown (`.md`) or Org-mode (`.org`) on disk, your choice. The vault
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline. Last verified 2026-04-23 against [logseq.com](https://logseq.com), the [GitHub repo](https://github.com/logseq/logseq), and community plugin registry.
+This page was produced by the aipedia.wiki editorial pipeline. Last verified 2026-05-13 against [logseq.com](https://logseq.com), the [GitHub repo](https://github.com/logseq/logseq), and community plugin registry.
 
 ## FAQ
 

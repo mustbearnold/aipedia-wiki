@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$20/seat/month"
 status: active
 launched: 2023-05
-last_updated: 2026-05-03
-last_verified: 2026-05-03
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,16 +31,16 @@ facts:
     source: "https://docs.continue.dev/"
     source_label: "Continue docs"
     source_id: continue-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: low
     confidence: high
   pricing_anchor:
-    value: "Continue has paid Team pricing for shared collaboration and included credits, but the core buyer decision is often BYOK/model-control versus bundled proprietary coding agents."
+    value: "Continue's published self-serve tiers are Starter (pay-as-you-go at $3 per million tokens), Team ($20/seat with $10 of bundled credits), and Company (custom). The extension itself is free under MIT; the buyer decision is BYOK/model-control versus bundled proprietary coding agents."
     source: "https://www.continue.dev/pricing"
     source_label: "Continue pricing"
     source_id: continue-pricing
-    verified_at: 2026-05-03
-    next_review_at: 2026-08-03
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: high
   model_control:
@@ -48,7 +48,7 @@ facts:
     source: "https://docs.continue.dev/"
     source_label: "Continue docs"
     source_id: continue-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   team_distribution:
@@ -56,7 +56,7 @@ facts:
     source: "https://hub.continue.dev/"
     source_label: "Continue Hub"
     source_id: continue-hub
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   watch_out_for:
@@ -64,7 +64,7 @@ facts:
     source: "https://docs.continue.dev/"
     source_label: "Continue docs"
     source_id: continue-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
 tags: [open-source, byok, local-model, ai-coding, vscode, jetbrains, self-hosted, continue-hub]
@@ -82,11 +82,11 @@ not_best_for:
   - users wanting bundled frontier models
   - individuals who just want autocomplete
 quick_answer: >-
-  Continue.dev is the open-source Copilot alternative for developers who want BYOK model choice across VS Code, JetBrains, and Vim. Pick it for local Ollama workflows, Bedrock/Azure/Vertex routing, or team-shared agents. Skip it if you want the easiest first-day setup, where GitHub Copilot or Cursor is simpler.
+  Continue.dev is the open-source Copilot alternative for developers who want BYOK model choice across VS Code, JetBrains, and Vim. Pick it for local Ollama workflows, Bedrock/Azure/Vertex routing, or team-shared agents. Skip it if you want the easiest first-day setup, where GitHub Copilot or Cursor is simpler. Continue shipped Claude Opus 4.7 support within 24 hours of the April 16, 2026 release, keeping pace with Cursor, Windsurf, and Zed.
 decision_brief:
   items:
     - label: Start here
-      value: "Solo + BYOK"
+      value: "Free OSS + BYOK"
       detail: "Best for developers who already have model keys or want local Ollama."
     - label: Upgrade when
       value: "Agents need governance"
@@ -109,6 +109,13 @@ price_history:
     source_label: "Source"
     source_id: continue-pricing
     note: "Solo remains free with full open-source extension access"
+  - date: 2026-05-13
+    plan: "Starter"
+    price: "$3/M tokens"
+    source: "https://www.continue.dev/pricing"
+    source_label: "Source"
+    source_id: continue-pricing
+    note: "Verified pay-as-you-go Starter tier at $3 per million tokens (input and output) with Slack, Sentry, and Snyk integrations. Team holds at $20/seat with $10 bundled credits; Company stays custom."
 ---
 
 # Continue
@@ -121,11 +128,11 @@ Claude Opus 4.7, OpenAI frontier models, Gemini 3.1 Pro, Mistral Large, or local
 
 ## System Verdict
 
-> **Pick Continue for maximum model choice with zero vendor lock-in.** Extension is free. Solo tier stays BYOK. Team tier at $20/seat/mo adds shared agents, centralized governance, and $10 of frontier-model credits per seat. Company tier covers custom SSO, BYOK for API keys, and SLAs.
+> **Pick Continue for maximum model choice with zero vendor lock-in.** The extension is free under MIT and stays BYOK. Starter pay-as-you-go at $3 per million tokens covers solo developers who want managed billing and integrations without a seat fee. Team at $20/seat/mo adds shared agents, centralized governance, and $10 of frontier-model credits per seat. Company tier covers custom SSO, BYOK for API keys, and SLAs.
 >
 > **Skip it for out-of-the-box plug-and-play.** [GitHub Copilot](/tools/github-copilot/) at $10/mo works from day one with less configuration. [Cursor](/tools/cursor/) at $20/mo bundles models and visual polish.
 >
-> **Who pays what:** Solo stays free with your own keys. Team $20/seat/mo is right for small teams wanting shared agents and governance. Company custom covers enterprise compliance.
+> **Who pays what:** Free OSS extension stays free with your own keys. Starter $3/M tokens is the smallest paid step for solo devs who want integrations and managed credits. Team $20/seat/mo is right for small teams wanting shared agents and governance. Company custom covers enterprise compliance.
 
 ## Key Facts
 
@@ -138,11 +145,12 @@ Claude Opus 4.7, OpenAI frontier models, Gemini 3.1 Pro, Mistral Large, or local
 | **@codebase context** | Project indexing with embeddings |
 | **Custom slash commands** | Yes, defined in config |
 | **Agentic tools** | `@terminal`, `@edit`, custom functions |
-| **Solo pricing** | $0, full OSS extension |
+| **Free OSS extension** | $0, full BYOK use of your own keys |
+| **Starter pricing** | $3 per million tokens, pay-as-you-go, includes Slack/Sentry/Snyk integrations |
 | **Team pricing** | $20/seat/mo with $10/seat frontier-model credits |
 | **Company pricing** | Custom with SSO, BYOK keys, SLAs |
 
-Every data point above was verified against vendor documentation on 2026-04-17. See Sources.
+Every data point above was verified against vendor documentation on 2026-05-13. See Sources.
 
 ## What it actually is
 
@@ -176,16 +184,16 @@ Pricing via [continue.dev/pricing](https://www.continue.dev/pricing).
 
 | Plan | Price | Features | Who's it for |
 |------|-------|----------|--------------|
-| Solo | $0 | Full open-source extension · BYOK any provider | **Individuals on BYOK** |
-| Starter | $3/MTok input + output | Pay-as-you-go · create and run agents · Slack/Sentry/Snyk integrations | Pay-as-you-go users |
+| Free OSS extension | $0 | Full open-source extension · BYOK any provider | **Individuals on BYOK** |
+| Starter | $3 per million tokens | Pay-as-you-go input and output · create and run agents · Slack/Sentry/Snyk integrations · purchase frontier-model credits | Pay-as-you-go solo developers |
 | Team | $20/seat/mo | $10/seat frontier credits · team agent management · private agent sharing · usage controls · Gmail/GitHub SSO | Small teams |
 | Company | Custom | Custom SSO (SAML/OIDC) · BYOK API keys · commitment options · invoicing · SLAs | Compliance-heavy orgs |
 
-*Prices verified 2026-04-17 via [Continue pricing](https://www.continue.dev/pricing). Solo stays free and BYOK; model costs are paid directly to the chosen provider, or eliminated entirely with a local Ollama model.*
+*Prices verified 2026-05-13 via [Continue pricing](https://www.continue.dev/pricing). The OSS extension stays free and BYOK; model costs are paid directly to the chosen provider, or eliminated entirely with a local Ollama model. Starter is the smallest paid tier and bills $3 per million tokens on input and output.*
 
 ## Against the alternatives
 
-| | Continue Solo | GitHub Copilot | Cursor Pro |
+| | Continue (Free OSS) | GitHub Copilot | Cursor Pro |
 |---|---|---|---|
 | **Price** | Free + BYOK | $10/mo bundled | $20/mo bundled |
 | **Model choice** | Any BYOK provider | GitHub-hosted models | Mostly bundled |
@@ -207,12 +215,12 @@ Pricing via [continue.dev/pricing](https://www.continue.dev/pricing).
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [Continue pricing](https://www.continue.dev/pricing), [Continue docs](https://docs.continue.dev), and the [Continue GitHub repo](https://github.com/continuedev/continue).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [Continue pricing](https://www.continue.dev/pricing), [Continue docs](https://docs.continue.dev), and the [Continue GitHub repo](https://github.com/continuedev/continue).
 
 ## FAQ
 
 **Does Continue cost anything?**
-The extension is free under MIT. Solo tier stays BYOK: you pay your provider directly. Team at $20/seat/mo adds governance and $10/seat of frontier-model credits. Company tier covers SSO, BYOK keys, and SLAs.
+The OSS extension is free under MIT and stays BYOK: you pay your provider directly. Starter at $3 per million tokens is the smallest paid step, with Slack, Sentry, and Snyk integrations. Team at $20/seat/mo adds governance and $10/seat of frontier-model credits. Company tier covers SSO, BYOK keys, and SLAs.
 
 **Can I use Continue fully offline?**
 Yes. Configure a local Ollama, LM Studio, or vLLM model and code never leaves the machine. This is one of Continue's strongest compliance stories.
@@ -228,7 +236,7 @@ A shared registry for agents, slash commands, rules, and MCP servers. Publish on
 
 ## Sources
 
-- [Continue pricing](https://www.continue.dev/pricing): Solo, Team, Company plans verified 2026-04-17
+- [Continue pricing](https://www.continue.dev/pricing): Starter, Team, Company plans verified 2026-05-13
 - [Continue docs](https://docs.continue.dev): configuration, context providers, models
 - [GitHub: continuedev/continue](https://github.com/continuedev/continue): source code and releases
 - [continue.dev](https://continue.dev): product overview

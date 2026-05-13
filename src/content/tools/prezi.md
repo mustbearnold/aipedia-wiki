@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: $0-$39/user/month
 status: active
 launched: 2009-01
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -35,7 +35,7 @@ facts:
     source: "https://prezi.com/"
     source_label: "Prezi homepage"
     source_id: prezi-official
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: medium
     confidence: medium
   pricing_anchor:
@@ -43,8 +43,8 @@ facts:
     source: "https://prezi.com/pricing/"
     source_label: "Source"
     source_id: prezi-pricing
-    verified_at: 2026-05-03
-    next_review_at: 2026-08-03
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: medium
   watch_out_for:
@@ -52,8 +52,8 @@ facts:
     source: "https://prezi.com/pricing/"
     source_label: "Source"
     source_id: prezi-pricing
-    verified_at: 2026-05-03
-    next_review_at: 2026-08-03
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: medium
 tags: [presentations, non-linear-presentation, prezi-ai, prezi-video, zoom-pan, storytelling, ai-presentation]
@@ -95,13 +95,20 @@ price_history:
     source_label: "Source"
     source_id: prezi-pricing
     note: "Business team tier with collaboration, analytics, custom brand kit, and SSO features."
+  - date: 2026-05-13
+    plan: "All tiers"
+    price: "Unchanged"
+    source: "https://prezi.com/pricing/"
+    source_label: "Source"
+    source_id: prezi-pricing
+    note: "Re-verified May 13, 2026. Standard $7, Plus $19, Premium $29 individual annual rates plus $39/user/mo Teams hold steady. Prezi AI features include image generation, animated slide creation from bullets, and document upload (PDF/PPT/Word)."
 ---
 
 # Prezi
 
 Prezi is the non-linear presentation platform that has defined the "zoom-and-pan" category since 2009. Instead of building linear slides, Prezi users build a single canvas with sections; the presenter zooms into each section in sequence or out of sequence, giving presentations a spatial and narrative structure that linear decks cannot match.
 
-The 2024-2026 era brought **Prezi AI**, a prompt-to-deck generator that builds a full presentation from a text description plus uploaded source material (PDFs, Word docs, PowerPoint). Prezi Video puts the presenter on-camera alongside their content for recorded or live streaming use. The platform also hosts 1M+ images, GIFs, and media for filling presentations.
+The AI era brought **Prezi AI**, a prompt-to-deck generator that builds a full presentation from a text description plus uploaded source material (PDFs, Word docs, PowerPoint). It now ships AI image generation and animated slide creation from bullet points. Prezi Video puts the presenter on-camera alongside their content for recorded or live streaming use. The platform also hosts 1M+ images, GIFs, and media for filling presentations.
 
 ## System Verdict
 
@@ -130,13 +137,13 @@ The 2024-2026 era brought **Prezi AI**, a prompt-to-deck generator that builds a
 | **Accessibility** | Collaborative editing, commenting, presentation sharing |
 | **Team controls** | Brand kit · SSO · admin controls on Teams/Business |
 
-Every data point above verified against Prezi's published pricing and support sources on 2026-05-02. Exact checkout totals can vary by country, currency, tax, billing cycle, and promotional treatment.
+Every data point above verified against Prezi's published pricing and support sources on 2026-05-13. Exact checkout totals can vary by country, currency, tax, billing cycle, and promotional treatment.
 
 ## What it actually is
 
 A cloud-based presentation platform built on a fundamentally different metaphor than slides. A Prezi is a single infinite canvas: zoom in to a section, present it, zoom back out, zoom into a different section. The presenter can follow a pre-set path or jump around based on audience questions, which matters for sales pitches, workshops, and Q&A-heavy talks.
 
-**Prezi AI** is the 2024 AI-era product. Describe what the presentation should cover, upload any source material (PDF, Word doc, PowerPoint file), and Prezi generates the structure, content, and design. Users then edit in the zoom-pan canvas.
+**Prezi AI** is the AI-era flagship. Describe what the presentation should cover, upload any source material (PDF, Word doc, PowerPoint file), and Prezi generates the structure, content, and design. Recent additions include AI image generation and animated slides from bullet lists. Users then edit in the zoom-pan canvas.
 
 **Prezi Video** is the unique-to-Prezi product. While presenting on Zoom, Teams, Meet, or any video tool, Prezi Video places the presenter's webcam feed on the same screen as the content, with the content animating around the presenter. Watching a Prezi Video presentation is meaningfully different from watching the usual "small webcam window + screen-shared slides" configuration.
 
@@ -177,7 +184,7 @@ Subscription pricing via [prezi.com/pricing](https://prezi.com/pricing):
 
 Actual checkout rates can vary with monthly billing, annual billing, region, taxes, and promotional periods. Verify current exact rates against [prezi.com/pricing](https://prezi.com/pricing) before major pricing citations.
 
-Prices verified 2026-05-02 via Prezi's public pricing pages and support materials.
+Prices verified 2026-05-13 via Prezi's public pricing pages and support materials.
 
 ## Against the alternatives
 
@@ -206,7 +213,7 @@ Prices verified 2026-05-02 via Prezi's public pricing pages and support material
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-02 against the [Prezi homepage](https://prezi.com/), [Prezi pricing](https://prezi.com/pricing/), and Prezi support materials.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against the [Prezi homepage](https://prezi.com/), [Prezi pricing](https://prezi.com/pricing/), and Prezi support materials.
 
 ## FAQ
 

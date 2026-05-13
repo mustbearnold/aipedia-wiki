@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$30/seat/month"
 status: active
 launched: 2019-01
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -27,11 +27,11 @@ scores:
   longevity: 7
 facts:
   best_for:
-    value: "Pitch is best for teams that want collaborative presentations with brand-consistent templates, real-time editing, and sharing/analytics rather than a one-off AI deck generator."
+    value: "Pitch is best for teams that want collaborative presentations with brand-consistent templates, real-time editing, co-present mode, and sharing/analytics rather than a one-off AI deck generator."
     source: "https://pitch.com/features"
     source_label: "Pitch features"
     source_id: pitch-features
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: low
     confidence: high
   pricing_anchor:
@@ -39,8 +39,8 @@ facts:
     source: "https://pitch.com/pricing/us"
     source_label: "Pitch pricing"
     source_id: pitch-official
-    verified_at: 2026-05-03
-    next_review_at: 2026-08-03
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: high
   ai_surface:
@@ -48,15 +48,15 @@ facts:
     source: "https://pitch.com/ai-presentation-maker"
     source_label: "Pitch AI"
     source_id: pitch-ai
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   collaboration_model:
-    value: "Real-time collaboration, comments, presentation sharing, and analytics make Pitch stronger for team workflows than personal slide drafting."
+    value: "Real-time collaboration, comments, presentation sharing, co-present slides, and analytics make Pitch stronger for team workflows than personal slide drafting."
     source: "https://pitch.com/features"
     source_label: "Pitch features"
     source_id: pitch-features
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: low
     confidence: high
   watch_out_for:
@@ -64,12 +64,12 @@ facts:
     source: "https://pitch.com/pricing/us"
     source_label: "Pitch pricing"
     source_id: pitch-official
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
 tags: [presentations, collaboration, slides, ai-writing, team-workflows, pitch-decks, real-time-editing]
-seo_title: "Pitch: Features, Pricing & Review (April 2026)"
-meta_description: "Pitch ships real-time multi-user editing, AI copy help, and unlimited decks on a free tier with 5 members. Plus $15, Team $23/seat, Business $30/seat. Verified April 2026."
+seo_title: "Pitch: Features, Pricing & Review (May 2026)"
+meta_description: "Pitch ships real-time multi-user editing, co-present slides, AI copy help, and unlimited decks on a free tier with 5 members. Plus $15, Team $23/seat, Business $30/seat. Verified May 2026."
 author: "aipedia.wiki Editorial"
 best_for:
   - distributed teams iterating on decks daily
@@ -83,11 +83,19 @@ not_best_for:
   - pixel-perfect PPTX round-trip
 quick_answer: >-
   Pitch is the strongest collaboration layer in AI presentation tools. The free tier supports unlimited decks for 5 members. Pick it for distributed teams that iterate daily. Skip it for solo prompt-to-deck speed, where Gamma wins.
+price_history:
+  - date: 2026-05-13
+    plan: "All tiers"
+    price: "Unchanged"
+    source: "https://pitch.com/pricing/us"
+    source_label: "Pitch pricing"
+    source_id: pitch-official
+    note: "Free, Plus $15/$13, Team $23/$19, Business $30/$25 verified unchanged. Co-present slides confirmed live on Team."
 ---
 
 # Pitch
 
-Pitch Software GmbH's collaborative deck tool, built out of Berlin. Real-time multi-user editing, a curated template library, and AI copy and image help sit on top of a collaboration-first product.
+Pitch Software GmbH's collaborative deck tool, built out of Berlin. Real-time multi-user editing, co-present slides, a curated template library, and AI copy and image help sit on top of a collaboration-first product.
 
 Free tier supports unlimited decks with up to 5 members. Paid tiers run $13 to $30 per seat per month on annual billing.
 
@@ -104,16 +112,20 @@ Free tier supports unlimited decks with up to 5 members. Paid tiers run $13 to $
 | | |
 |---|---|
 | **Company** | Pitch Software GmbH (founded 2019, Berlin) |
-| **Free tier** | Unlimited decks · 5 members · 100 one-time AI credits |
-| **Plus (solo)** | $15/mo monthly · $13/mo annual · 3,000 AI credits/yr |
-| **Team** | $23/seat/mo monthly · $19/seat/mo annual · 6,000 credits/seat/yr · 25 members max |
-| **Business** | $30/seat/mo monthly · $25/seat/mo annual · 9,000 credits/seat/yr · 200 members max |
+| **Free tier** | Unlimited decks · 5 members · 100 one-time AI credits · 2 external guests |
+| **Plus (solo)** | $15/mo monthly · $13/mo annual · 3,000 AI credits/yr · 5 guests |
+| **Team** | $23/seat/mo monthly · $19/seat/mo annual · 6,000 credits/seat/yr · 25 members · 2 pitch rooms · 30-day version history · co-present slides |
+| **Business** | $30/seat/mo monthly · $25/seat/mo annual · 9,000 credits/seat/yr · 200 members · unlimited rooms · unlimited version history |
 | **Enterprise** | Custom pricing · SAML SSO · dedicated success manager |
 | **AI features** | Generator (layout), copy rewrite, brand-voice matching, image enhance |
 | **Credit pricing** | Extra credits at $0.004 per credit |
 | **Live sharing** | Browser URL with view analytics |
 
-Every data point above was verified against vendor documentation on 2026-04-17. See Sources.
+Every data point above was verified against vendor documentation on 2026-05-13. See Sources.
+
+## Recent changes
+
+- **2026-05-13:** Pricing, member caps, and credit allowances verified unchanged. Co-present slides confirmed as a Team-tier feature for seamless presentation handoff between collaborators. Free tier still uniquely uncapped on deck count in the category.
 
 ## What it actually is
 
@@ -121,7 +133,7 @@ A browser-based deck editor with real-time multi-user editing, analytics, and an
 
 The Generator AI tool drafts layouts and content inside the collaboration flow. It does not compete with [Gamma](/tools/gamma/) on pure prompt-to-deck speed. AI credits are consumable: paid plans ship a yearly quota, credits reset with the subscription, and the free tier's 100 credits are one-time.
 
-The moat is workflow. Pitch rooms, custom domains, interactive embeds, co-present mode, and content variables are all collaboration-era features that solo AI tools do not match. The free-tier unlimited-decks model is also a genuine wedge against competitors who cap presentations on free.
+The moat is workflow. Pitch rooms, custom domains, interactive embeds, co-present slides, and content variables are all collaboration-era features that solo AI tools do not match. The free-tier unlimited-decks model is also a genuine wedge against competitors who cap presentations on free.
 
 ## When to pick Pitch
 
@@ -150,7 +162,7 @@ Subscription pricing via [pitch.com/pricing/us](https://pitch.com/pricing/us).
 | Business | $30/seat | $25/seat | 2-200 | 9,000/seat/yr | Larger orgs, batch creation, unlimited guests |
 | Enterprise | Custom | Custom | 30+ | Custom | SSO, success manager, invoiced billing |
 
-*Prices verified 2026-04-17 via [Pitch pricing](https://pitch.com/pricing/us). Annual billing saves roughly 15-20%. Extra AI credits at $0.004 each.*
+*Prices verified 2026-05-13 via [Pitch pricing](https://pitch.com/pricing/us). Annual billing saves roughly 15 to 20%. Extra AI credits at $0.004 each. Team plan ships co-present slides; Business unlocks unlimited rooms, guests, and version history.*
 
 ## Against the alternatives
 
@@ -175,7 +187,7 @@ Subscription pricing via [pitch.com/pricing/us](https://pitch.com/pricing/us).
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [Pitch pricing](https://pitch.com/pricing/us) and the [Free plan help center article](https://help.pitch.com/en/articles/9364575-pitch-s-free-plan).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-05-13 against [Pitch pricing](https://pitch.com/pricing/us) and the [Free plan help center article](https://help.pitch.com/en/articles/9364575-pitch-s-free-plan).
 
 ## FAQ
 

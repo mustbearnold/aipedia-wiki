@@ -11,8 +11,8 @@ pricing_model: paid
 price_range: $89-$899+/month
 status: active
 launched: 2024-01
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -35,7 +35,7 @@ facts:
     source: "https://omniseo.com"
     source_label: "OmniSEO homepage"
     source_id: omniseo-official
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: medium
     confidence: medium
   pricing_anchor:
@@ -43,8 +43,8 @@ facts:
     source: "https://omniseo.com/pricing/"
     source_label: "Source"
     source_id: omniseo-pricing
-    verified_at: 2026-05-03
-    next_review_at: 2026-08-03
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: medium
   watch_out_for:
@@ -52,8 +52,8 @@ facts:
     source: "https://omniseo.com/pricing/"
     source_label: "Source"
     source_id: omniseo-pricing
-    verified_at: 2026-05-03
-    next_review_at: 2026-08-03
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: medium
 tags: [ai-seo, ai-visibility, aeo, llm-visibility, geo, brand-monitoring, ai-search, citation-tracking]
@@ -96,6 +96,13 @@ price_history:
     source_label: "Source"
     source_id: omniseo-pricing
     note: "10+ channels, custom regions/model cohorts, 500+ saved prompts/month, monthly AEO/GEO consultations, unlimited seats."
+  - date: 2026-05-13
+    plan: "All tiers"
+    price: "Unchanged"
+    source: "https://omniseo.com/pricing/"
+    source_label: "Source"
+    source_id: omniseo-pricing
+    note: "Pricing verified unchanged. Annual billing remains two months free ($890/yr Essentials, $3,490/yr Professional). 50% first-month promo still live."
 ---
 
 # OmniSEO
@@ -124,10 +131,15 @@ The product category is still young. The practical question is not "does OmniSEO
 | **Core workflows** | Prompt tracking · competitor analysis · citation analytics · placement recommendations · AI Brand Research |
 | **Pricing** | Essentials $89/mo · Professional $349/mo · Enterprise $899+/mo |
 | **Annual billing** | Two months free listed on public pricing page |
-| **First-month promo** | 50% off Essentials and Professional shown on 2026-05-02 |
+| **First-month promo** | 50% off Essentials and Professional, verified live on 2026-05-13 |
+| **Annual billing** | Two months free ($890/yr Essentials, $3,490/yr Professional) |
 | **Free tool** | AI Brand Research lookup |
 
-Every data point above was verified against OmniSEO's published pages on 2026-05-02. See Sources.
+Every data point above was verified against OmniSEO's published pages on 2026-05-13. See Sources.
+
+## Recent changes
+
+- **2026-05-13:** Pricing, channel coverage, and promo terms verified unchanged. The 10-channel set still maps cleanly to the major frontier surfaces tracked by buyers (ChatGPT, Claude, Gemini, Perplexity, Copilot, plus Google AI Overviews/AI Mode). Annual billing terms confirmed as two months free.
 
 ## What it actually is
 
@@ -169,7 +181,7 @@ Subscription pricing via [omniseo.com/pricing](https://omniseo.com/pricing/):
 | Professional | $349/mo | 10 AI channels, 100 saved prompts/month, 5 competitors, 10 seats |
 | Enterprise | $899+/mo | 10+ channels, custom regions/model cohorts, 500+ saved prompts/month, monthly AEO/GEO consultations, unlimited seats |
 
-The public pricing page showed 50% off the first month for Essentials ($45) and Professional ($175) on 2026-05-02. Annual billing is listed as two months free. Verify checkout totals before purchase because promotions can change.
+The public pricing page showed 50% off the first month for Essentials ($45) and Professional ($175), verified again on 2026-05-13. Annual billing is listed as two months free ($890/yr Essentials, $3,490/yr Professional). Verify checkout totals before purchase because promotions can change.
 
 ## Against the alternatives
 
@@ -185,7 +197,7 @@ The public pricing page showed 50% off the first month for Essentials ($45) and 
 
 ## Failure modes
 
-- **The category is early.** AEO/GEO/AI visibility is still a 2024-2026-era budget line, and ROI benchmarks are not as mature as SEO.
+- **The category is early.** AEO/GEO/AI visibility is still a budget line that emerged in 2024 and is maturing through 2026, and ROI benchmarks are not as established as classic SEO.
 - **AI answers are noisy.** Prompt outputs vary by model, date, region, and product surface. Repeated monitoring helps, but it does not make AI answers deterministic.
 - **The full channel set is not entry-tier.** Essentials covers 4 channels; Professional is the practical tier for teams that need all 10.
 - **Citation data depends on discoverable sources.** If your brand reputation lives in private communities, sales calls, or dark social, OmniSEO will not see all of it.
@@ -195,7 +207,7 @@ The public pricing page showed 50% off the first month for Essentials ($45) and 
 
 This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average).
 
-Last verified 2026-05-02 against OmniSEO's homepage, pricing page, and AI Brand Research page.
+Last verified 2026-05-13 against OmniSEO's homepage, pricing page, and AI Brand Research page.
 
 ## FAQ
 

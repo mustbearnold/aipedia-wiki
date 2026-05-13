@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$60/month"
 status: active
 launched: 2024-05
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://hyper3d.ai/pricing"
     source_label: "Source"
     source_id: rodin-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: medium
     confidence: medium
   pricing_anchor:
@@ -38,8 +38,8 @@ facts:
     source: "https://hyper3d.ai/pricing"
     source_label: "Source"
     source_id: rodin-pricing
-    verified_at: 2026-05-03
-    next_review_at: 2026-08-03
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: medium
   watch_out_for:
@@ -47,8 +47,8 @@ facts:
     source: "https://hyper3d.ai/pricing"
     source_label: "Source"
     source_id: rodin-pricing
-    verified_at: 2026-05-03
-    next_review_at: 2026-08-03
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: medium
 tags: [3d-generation, text-to-3d, image-to-3d, pbr-materials, part-segmentation, auto-rigging, photoreal, api, glb, fbx, usdz]
@@ -80,11 +80,19 @@ price_history:
     source_label: "Source"
     source_id: rodin-pricing
     note: "Verified unchanged. Pro stays $60/mo. Credits refresh monthly on paid tiers."
+  - date: 2026-05-13
+    plan: "All tiers"
+    price: "Unchanged"
+    source: "https://hyper3d.ai/pricing"
+    source_label: "Source"
+    source_id: rodin-pricing
+    verified_at: 2026-05-13
+    note: "Re-verified May 13, 2026. Plus $15/mo, Pro $60/mo, Enterprise custom. Gen-2 (10B params, released Nov 6, 2025) remains the production default; fal.ai mirror still active under tripo3d publisher namespace."
 ---
 
 # Rodin
 
-Deemos Tech's high-detail 3D generator. **Rodin Gen-2**, a 10B-parameter model, is the production default as of April 2026. The workspace covers text-to-3D, image-to-3D, PBR material generation, part-segmentation, and auto-rigging.
+Deemos Tech's high-detail 3D generator. **Rodin Gen-2**, a 10B-parameter model released November 6, 2025, is still the production default as of May 2026. The workspace covers text-to-3D, image-to-3D, PBR material generation, part-segmentation, and auto-rigging.
 
 Outputs export to GLB, FBX, USDZ, and OBJ. The API runs on [hyper3d.ai](https://hyper3d.ai) and is mirrored on [fal.ai](https://fal.ai/models/tripo3d/rodin) for teams that already standardize on that platform.
 
@@ -109,7 +117,7 @@ Outputs export to GLB, FBX, USDZ, and OBJ. The API runs on [hyper3d.ai](https://
 | **Platforms** | Web app · Blender plugin · REST API |
 | **Detail axis** | Strongest sculpted microstructure in a GA 3D model |
 
-Every data point above was verified against vendor sources on 2026-04-15. See Sources.
+Every data point above was verified against vendor sources on 2026-05-13. See Sources.
 
 ## What it actually is
 
@@ -147,7 +155,7 @@ Subscription pricing via [hyper3d.ai/pricing](https://hyper3d.ai/pricing). Credi
 | Pro | $60/mo | ~6,000/mo | Yes | **Working artists and small studios land here** |
 | Enterprise | Custom | Custom | Yes | Volume API, SAML SSO, negotiated credit pools |
 
-*Prices verified 2026-04-17 via [hyper3d.ai pricing](https://hyper3d.ai/pricing), the [docs.hyper3d.ai reference](https://docs.hyper3d.ai), and the [fal.ai Rodin listing](https://fal.ai/models/tripo3d/rodin). API credits are shared with the web plan.*
+*Prices verified 2026-05-13 via [hyper3d.ai pricing](https://hyper3d.ai/pricing), the [docs.hyper3d.ai reference](https://docs.hyper3d.ai), and the [fal.ai Rodin listing](https://fal.ai/models/tripo3d/rodin). API credits are shared with the web plan.*
 
 ## Against the alternatives
 
@@ -176,7 +184,7 @@ Subscription pricing via [hyper3d.ai/pricing](https://hyper3d.ai/pricing). Credi
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [hyper3d.ai pricing](https://hyper3d.ai/pricing), the [Deemos homepage](https://www.deemos.com), the [docs.hyper3d.ai reference](https://docs.hyper3d.ai), and the [fal.ai Rodin listing](https://fal.ai/models/tripo3d/rodin).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [hyper3d.ai pricing](https://hyper3d.ai/pricing), the [Deemos homepage](https://www.deemos.com), the [docs.hyper3d.ai reference](https://docs.hyper3d.ai), and the [fal.ai Rodin listing](https://fal.ai/models/tripo3d/rodin).
 
 ## FAQ
 
@@ -184,7 +192,7 @@ This page was produced by the aipedia.wiki editorial pipeline, an automated syst
 A free tier exists with a monthly credit allowance, watermarked outputs, and a non-commercial license. Serious evaluation usually means upgrading to Plus at $15/mo, which removes the watermark and adds commercial rights.
 
 **What is the current Rodin model?**
-Rodin Gen-2 is the production default as of April 2026. It was released November 6, 2025 at 10B parameters and produces sharper surface detail, native PBR materials, and improved part-segmentation versus Gen-1. Gen-1 remains selectable for users who prefer its style.
+Rodin Gen-2 is the production default as of May 2026. It was released November 6, 2025 at 10B parameters and produces sharper surface detail, native PBR materials, and improved part-segmentation versus Gen-1. Gen-1 remains selectable for users who prefer its style.
 
 **Does Rodin have an API?**
 Yes. The API is generally available via [hyper3d.ai](https://hyper3d.ai) and mirrored on [fal.ai](https://fal.ai/models/tripo3d/rodin) under the Tripo3D publisher namespace. Credits on the Deemos account and the fal.ai account are separate.

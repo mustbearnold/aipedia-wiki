@@ -7,11 +7,11 @@ category: ai-notes
 company: Readwise
 url: https://readwise.io/read
 pricing_model: freemium
-price_range: "$4.99-$12.99/month"
+price_range: "$5.59-$12.99/month"
 status: active
 launched: 2018-01
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://readwise.io/read"
     source_label: "Readwise Reader official site"
     source_id: readwise-reader
-    verified_at: 2026-05-04
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   knowledge_surface:
@@ -38,7 +38,7 @@ facts:
     source: "https://readwise.io/read"
     source_label: "Readwise Reader official site"
     source_id: readwise-reader
-    verified_at: 2026-05-04
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -46,8 +46,8 @@ facts:
     source: "https://readwise.io/pricing"
     source_label: "Readwise pricing"
     source_id: readwise-pricing
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: high
   integration_surface:
@@ -55,7 +55,7 @@ facts:
     source: "https://readwise.io/read"
     source_label: "Readwise Reader official site"
     source_id: readwise-reader
-    verified_at: 2026-05-04
+    verified_at: 2026-05-13
     volatility: medium
     confidence: medium
   watch_out_for:
@@ -63,12 +63,12 @@ facts:
     source: "https://readwise.io/read"
     source_label: "Readwise Reader official site"
     source_id: readwise-reader
-    verified_at: 2026-05-04
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
 tags: [ai-notes, reading, highlights, spaced-repetition, pkm, newsletters, rss]
-seo_title: "Readwise Reader Review: AI Reading App (April 2026)"
-meta_description: "Readwise Reader unifies articles, newsletters, PDFs, ebooks, and YouTube into one inbox with Ghostreader AI and spaced-repetition review. $9.99/mo annual bundles the full Readwise system."
+seo_title: "Readwise Reader Review: AI Reading App (May 2026)"
+meta_description: "Readwise Reader unifies articles, newsletters, PDFs, ebooks, and YouTube into one inbox with Ghostreader AI and spaced-repetition review. Lite at $5.59/mo annual, Full at $9.99/mo annual ($12.99 monthly) bundles the system."
 author: aipedia.wiki Editorial
 best_for:
   - heavy readers handling 10+ documents weekly
@@ -80,7 +80,7 @@ not_best_for:
   - teams needing shared libraries
   - users who won't pay after the trial
 quick_answer: >-
-  Readwise Reader bundles a unified reading inbox, Ghostreader AI, and spaced-repetition review. Pick it for active retention across articles, PDFs, and ebooks. Skip it for casual reading or team use.
+  Readwise Reader bundles a unified reading inbox, Ghostreader AI, and spaced-repetition review. Lite is $5.59/mo annual, the full bundle is $9.99/mo annual ($12.99 monthly). Pick it for active retention across articles, PDFs, and ebooks. Skip it for casual reading or team use.
 price_history:
   - date: 2025-08-01
     plan: "Reader + Readwise"
@@ -96,13 +96,21 @@ price_history:
     source_label: "Source"
     source_id: readwise-pricing
     note: "Verified unchanged"
+  - date: 2026-05-13
+    plan: "Lite (annual)"
+    price: "$5.59/mo"
+    source: "https://readwise.io/pricing"
+    source_label: "Source"
+    source_id: readwise-pricing
+    verified_at: 2026-05-13
+    note: "Lite annual rate now displayed at $5.59/mo on the pricing page; monthly rate stays $12.99 with a 24% annual discount. Full bundle (Reader + Readwise) holds at $9.99/mo annual. 30-day full trial unchanged."
 ---
 
 # Readwise Reader
 
 A read-later and retention system from Readwise. Unifies articles, newsletters, PDFs, ebooks, YouTube, Twitter threads, and podcast audio into one inbox. Ghostreader AI handles document Q&A, summaries, and custom prompts. The Readwise highlight review system resurfaces every highlight on a spaced-repetition schedule.
 
-$9.99/mo annual bundles Reader plus the full Readwise system. No perpetual free tier after the 30-day trial.
+$9.99/mo annual bundles Reader plus the full Readwise system; Lite drops to $5.59/mo annual ($12.99 monthly) for the reading inbox alone. No perpetual free tier after the 30-day trial.
 
 ## System Verdict
 
@@ -110,7 +118,7 @@ $9.99/mo annual bundles Reader plus the full Readwise system. No perpetual free 
 >
 > **Skip it for casual reading or team workflows.** Pocket and Matter handle light save-for-later at lower cost. Readwise has no team libraries or shared highlights. Everything is personal.
 >
-> **Who pays which tier:** Reader + Readwise at $9.99/mo annual for heavy readers and knowledge-base builders, Reader Lite at $4.99/mo for users who only want the reading inbox without spaced-repetition review.
+> **Who pays which tier:** Reader + Readwise at $9.99/mo annual for heavy readers and knowledge-base builders, Lite at $5.59/mo annual (or $12.99 monthly) for users who only want the reading inbox without spaced-repetition review.
 
 ## Key Facts
 
@@ -125,9 +133,9 @@ $9.99/mo annual bundles Reader plus the full Readwise system. No perpetual free 
 | **Platforms** | Web, iOS, Android, browser extension |
 | **Offline** | Full on mobile and web |
 | **Free tier** | 30-day trial only, no perpetual free |
-| **Price floor** | $4.99/mo (Reader Lite) |
+| **Price floor** | $5.59/mo annual (Lite); $12.99/mo monthly |
 
-Every data point was verified against vendor docs on 2026-04-17. See Sources.
+Every data point was verified against vendor docs on 2026-05-13. See Sources.
 
 ## What it actually is
 
@@ -141,7 +149,7 @@ The Readwise review layer is the retention engine. Highlights resurface daily wi
 
 ## When to pick Readwise Reader
 
-- **You read 10+ articles, PDFs, or chapters weekly.** The unified inbox is the moat. Pocket plus Kindle plus Anki costs more in friction than the $9.99 bundle.
+- **You read 10+ articles, PDFs, or chapters weekly.** The unified inbox is the moat. Pocket plus Kindle plus Anki costs more in friction than the $9.99/mo annual bundle.
 - **You build a knowledge base in Obsidian or Notion.** Official plugins and a full API keep highlights flowing in both directions.
 - **Retention is the point, not just saving.** Spaced repetition turns passive highlighting into active recall. Memory research says this works.
 - **You listen as much as you read.** Text-to-speech at 5x with synced highlighting covers commutes and workouts.
@@ -160,16 +168,16 @@ The Readwise review layer is the retention engine. Highlights resurface daily wi
 | Plan | Price | Notes |
 |------|-------|-------|
 | Free trial | 30 days | Full access to all features |
-| Reader Lite | $4.99/mo | Reading inbox only, no spaced repetition |
-| Reader + Readwise | $9.99/mo ($99/yr) | Everything: Ghostreader AI, spaced repetition, all exports |
+| Lite | $5.59/mo annual ($12.99 monthly) | Reading inbox and daily email, no spaced repetition |
+| Reader + Readwise (Full) | $9.99/mo annual | Everything: Ghostreader AI, spaced repetition, all exports |
 
-*Prices verified 2026-04-17 via [readwise.io/pricing](https://readwise.io/pricing). Annual billing discount applied. No perpetual free tier after trial.*
+*Prices verified 2026-05-13 via [readwise.io/pricing](https://readwise.io/pricing). Annual billing saves roughly 24% versus monthly. No perpetual free tier after the 30-day trial.*
 
 ## Against the alternatives
 
 | | Readwise Reader | Pocket | NotebookLM | Matter |
 |---|---|---|---|---|
-| **Price** | $9.99/mo | Free / $4.99 | Free | Free / $7.99 |
+| **Price** | $5.59-$9.99/mo annual | Free / $4.99 | Free | Free / $7.99 |
 | **Ingestion breadth** | **Widest** (articles, newsletters, PDFs, ebooks, YouTube, Twitter) | Articles only | Uploads only | Articles, newsletters |
 | **AI Q&A** | Ghostreader, full docs | None | Gemini 3.1, cited | Limited |
 | **Spaced repetition** | **Native** | None | None | None |
@@ -179,7 +187,7 @@ The Readwise review layer is the retention engine. Highlights resurface daily wi
 
 ## Failure modes
 
-- **No perpetual free tier.** After the 30-day trial, $9.99/mo is required. Casual readers bounce here.
+- **No perpetual free tier.** After the 30-day trial, $5.59/mo Lite or $9.99/mo Full is required (annual rates). Casual readers bounce here.
 - **Ghostreader AI consumes credits.** Heavy document Q&A can hit caps before the monthly reset.
 - **Kindle sync requires periodic re-auth.** Amazon's API forces occasional re-authorization that can interrupt the highlight pipeline.
 - **No team workspaces or shared libraries.** Individual-only by design.
@@ -190,12 +198,12 @@ The Readwise review layer is the retention engine. Highlights resurface daily wi
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [readwise.io/pricing](https://readwise.io/pricing), [readwise.io/read](https://readwise.io/read), and the [Ghostreader docs](https://docs.readwise.io/reader/docs/faqs/ghostreader).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [readwise.io/pricing](https://readwise.io/pricing), [readwise.io/read](https://readwise.io/read), and the [Ghostreader docs](https://docs.readwise.io/reader/docs/faqs/ghostreader).
 
 ## FAQ
 
 **Does Readwise Reader have a free tier?**
-No perpetual free tier. A 30-day full-featured trial is available. After that, Reader Lite is $4.99/mo or the full Reader + Readwise bundle is $9.99/mo annual ($99/yr).
+No perpetual free tier. A 30-day full-featured trial is available. After that, Lite is $5.59/mo annual ($12.99 monthly) or the full Reader + Readwise bundle is $9.99/mo annual.
 
 **What AI powers Ghostreader?**
 Frontier LLMs with automatic routing per query ([Ghostreader docs](https://docs.readwise.io/reader/docs/faqs/ghostreader)). Capabilities include document Q&A, term definitions, plain-language rewrites, summaries, and custom prompts.
