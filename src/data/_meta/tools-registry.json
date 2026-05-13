@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generated": "2026-05-13T05:15:14.625Z",
-  "total_active": 217,
-  "total_dead": 8,
+  "generated": "2026-05-13T05:33:18.249069Z",
+  "total_active": 215,
+  "total_dead": 11,
   "tools": {
     "activepieces": {
       "slug": "activepieces",
@@ -635,6 +635,16 @@
       },
       "page_path": "wikis/ai-tools/pages/tools/beehiiv.md"
     },
+    "bing-chat": {
+      "slug": "bing-chat",
+      "status": "dead",
+      "title": "Microsoft Bing Chat",
+      "category": "ai-search",
+      "company": "Microsoft",
+      "last_updated": "2026-04-15T00:00:00.000Z",
+      "last_verified": null,
+      "page_path": "wikis/ai-tools/pages/dead/bing-chat.md"
+    },
     "bolt": {
       "slug": "bolt",
       "status": "active",
@@ -872,6 +882,53 @@
       },
       "page_path": "wikis/ai-tools/pages/tools/cartesia.md"
     },
+    "castmagic": {
+      "slug": "castmagic",
+      "status": "active",
+      "title": "Castmagic",
+      "category": "ai-writing",
+      "secondary_categories": [
+        "ai-voice",
+        "ai-automation"
+      ],
+      "company": "Castmagic",
+      "url": "https://www.castmagic.io",
+      "pricing_model": "freemium",
+      "price_range": "$0-$790/month",
+      "launched": "2022-07",
+      "last_updated": "2026-05-13T00:00:00.000Z",
+      "last_verified": "2026-05-13T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 9,
+        "value": 7,
+        "moat": 6,
+        "longevity": 7
+      },
+      "tags": [
+        "podcast",
+        "content-creation",
+        "transcription",
+        "show-notes",
+        "blog-generation",
+        "social-posts",
+        "newsletter",
+        "repurposing",
+        "ai-writing"
+      ],
+      "affiliate": {
+        "has_program": null,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null,
+        "application_status": "none",
+        "applied_date": null,
+        "approved_date": null,
+        "notes": null
+      },
+      "page_path": "/tools/castmagic/"
+    },
     "character-ai": {
       "slug": "character-ai",
       "status": "active",
@@ -992,6 +1049,53 @@
       },
       "page_path": "wikis/ai-tools/pages/tools/chatpdf.md"
     },
+    "claude": {
+      "slug": "claude",
+      "status": "active",
+      "title": "Claude",
+      "category": "ai-chatbots",
+      "secondary_categories": [
+        "ai-writing",
+        "ai-coding",
+        "ai-design"
+      ],
+      "company": "anthropic",
+      "url": "https://claude.ai",
+      "pricing_model": "freemium",
+      "price_range": "$0-$200/month",
+      "launched": "2023-03",
+      "last_updated": "2026-04-22T00:00:00.000Z",
+      "last_verified": "2026-04-22T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 10,
+        "value": 9,
+        "moat": 9,
+        "longevity": 10
+      },
+      "tags": [
+        "chatbot",
+        "ai-assistant",
+        "writing",
+        "coding",
+        "reasoning",
+        "analysis",
+        "long-context",
+        "artifacts",
+        "claude-code",
+        "claude-design",
+        "extended-thinking",
+        "computer-use"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/claude.md"
+    },
     "claude-code": {
       "slug": "claude-code",
       "status": "active",
@@ -1077,53 +1181,6 @@
         "link": null
       },
       "page_path": "wikis/ai-tools/pages/tools/claude-design.md"
-    },
-    "claude": {
-      "slug": "claude",
-      "status": "active",
-      "title": "Claude",
-      "category": "ai-chatbots",
-      "secondary_categories": [
-        "ai-writing",
-        "ai-coding",
-        "ai-design"
-      ],
-      "company": "anthropic",
-      "url": "https://claude.ai",
-      "pricing_model": "freemium",
-      "price_range": "$0-$200/month",
-      "launched": "2023-03",
-      "last_updated": "2026-04-22T00:00:00.000Z",
-      "last_verified": "2026-04-22T00:00:00.000Z",
-      "update_frequency": "monthly",
-      "scores": {
-        "utility": 10,
-        "value": 9,
-        "moat": 9,
-        "longevity": 10
-      },
-      "tags": [
-        "chatbot",
-        "ai-assistant",
-        "writing",
-        "coding",
-        "reasoning",
-        "analysis",
-        "long-context",
-        "artifacts",
-        "claude-code",
-        "claude-design",
-        "extended-thinking",
-        "computer-use"
-      ],
-      "affiliate": {
-        "has_program": false,
-        "commission": null,
-        "cookie_days": null,
-        "network": null,
-        "link": null
-      },
-      "page_path": "wikis/ai-tools/pages/tools/claude.md"
     },
     "clay": {
       "slug": "clay",
@@ -2842,6 +2899,16 @@
       },
       "page_path": "wikis/ai-tools/pages/tools/glm.md"
     },
+    "google-bard": {
+      "slug": "google-bard",
+      "status": "dead",
+      "title": "Google Bard",
+      "category": "ai-search",
+      "company": "Google",
+      "last_updated": "2026-04-15T00:00:00.000Z",
+      "last_verified": null,
+      "page_path": "wikis/ai-tools/pages/dead/google-bard.md"
+    },
     "google-stitch": {
       "slug": "google-stitch",
       "status": "active",
@@ -2926,6 +2993,16 @@
         "link": null
       },
       "page_path": "wikis/ai-tools/pages/tools/goose.md"
+    },
+    "gpt-3-api": {
+      "slug": "gpt-3-api",
+      "status": "dead",
+      "title": "GPT-3 API (text-davinci models)",
+      "category": "ai-writing",
+      "company": "OpenAI",
+      "last_updated": "2026-04-15T00:00:00.000Z",
+      "last_verified": null,
+      "page_path": "wikis/ai-tools/pages/dead/gpt-3-api.md"
     },
     "gpt-image-2": {
       "slug": "gpt-image-2",
@@ -4978,6 +5055,16 @@
       },
       "page_path": "wikis/ai-tools/pages/tools/meshy.md"
     },
+    "meta-imagine": {
+      "slug": "meta-imagine",
+      "status": "dead",
+      "title": "Meta Imagine",
+      "category": "ai-image",
+      "company": "Meta",
+      "last_updated": "2026-04-15T00:00:00.000Z",
+      "last_verified": null,
+      "page_path": "wikis/ai-tools/pages/dead/meta-imagine.md"
+    },
     "microsoft-agent-framework": {
       "slug": "microsoft-agent-framework",
       "status": "active",
@@ -5056,46 +5143,6 @@
       },
       "page_path": "wikis/ai-tools/pages/tools/midjourney.md"
     },
-    "minimax-speech": {
-      "slug": "minimax-speech",
-      "status": "active",
-      "title": "MiniMax Speech",
-      "category": "ai-voice",
-      "secondary_categories": [
-        "ai-research"
-      ],
-      "company": "MiniMax",
-      "url": "https://www.minimax.io/audio",
-      "pricing_model": "freemium",
-      "price_range": "$0 free tier / $0.03-$0.05 per 1K chars",
-      "launched": "2025-04",
-      "last_updated": "2026-04-17T00:00:00.000Z",
-      "last_verified": "2026-04-17T00:00:00.000Z",
-      "update_frequency": "quarterly",
-      "scores": {
-        "utility": 8,
-        "value": 9,
-        "moat": 4,
-        "longevity": 6
-      },
-      "tags": [
-        "tts",
-        "voice-cloning",
-        "chinese-ai",
-        "multilingual",
-        "minimax",
-        "speech-02",
-        "api"
-      ],
-      "affiliate": {
-        "has_program": false,
-        "commission": null,
-        "cookie_days": null,
-        "network": null,
-        "link": null
-      },
-      "page_path": "wikis/ai-tools/pages/tools/minimax-speech.md"
-    },
     "minimax": {
       "slug": "minimax",
       "status": "active",
@@ -5138,6 +5185,46 @@
         "link": null
       },
       "page_path": "wikis/ai-tools/pages/tools/minimax.md"
+    },
+    "minimax-speech": {
+      "slug": "minimax-speech",
+      "status": "active",
+      "title": "MiniMax Speech",
+      "category": "ai-voice",
+      "secondary_categories": [
+        "ai-research"
+      ],
+      "company": "MiniMax",
+      "url": "https://www.minimax.io/audio",
+      "pricing_model": "freemium",
+      "price_range": "$0 free tier / $0.03-$0.05 per 1K chars",
+      "launched": "2025-04",
+      "last_updated": "2026-04-17T00:00:00.000Z",
+      "last_verified": "2026-04-17T00:00:00.000Z",
+      "update_frequency": "quarterly",
+      "scores": {
+        "utility": 8,
+        "value": 9,
+        "moat": 4,
+        "longevity": 6
+      },
+      "tags": [
+        "tts",
+        "voice-cloning",
+        "chinese-ai",
+        "multilingual",
+        "minimax",
+        "speech-02",
+        "api"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/minimax-speech.md"
     },
     "mistral-ai": {
       "slug": "mistral-ai",
@@ -5710,6 +5797,16 @@
       },
       "page_path": "wikis/ai-tools/pages/tools/open-webui.md"
     },
+    "openai-codex": {
+      "slug": "openai-codex",
+      "status": "dead",
+      "title": "OpenAI Codex",
+      "category": "ai-coding",
+      "company": "OpenAI",
+      "last_updated": "2026-04-15T00:00:00.000Z",
+      "last_verified": null,
+      "page_path": "wikis/ai-tools/pages/dead/openai-codex.md"
+    },
     "openclaw": {
       "slug": "openclaw",
       "status": "active",
@@ -6146,6 +6243,16 @@
       },
       "page_path": "wikis/ai-tools/pages/tools/pixverse.md"
     },
+    "play-ht": {
+      "slug": "play-ht",
+      "status": "dead",
+      "title": "Play.ht (Discontinued)",
+      "category": null,
+      "company": null,
+      "last_updated": "2026-04-15T00:00:00.000Z",
+      "last_verified": null,
+      "page_path": "wikis/ai-tools/pages/dead/play-ht.md"
+    },
     "playground-ai": {
       "slug": "playground-ai",
       "status": "active",
@@ -6419,6 +6526,52 @@
         "link": null
       },
       "page_path": "wikis/ai-tools/pages/tools/readwise.md"
+    },
+    "reclaim-ai": {
+      "slug": "reclaim-ai",
+      "status": "active",
+      "title": "Reclaim.ai",
+      "category": "ai-automation",
+      "secondary_categories": [
+        "ai-notes"
+      ],
+      "company": "Reclaim.ai",
+      "url": "https://reclaim.ai",
+      "pricing_model": "freemium",
+      "price_range": "$0-$22/seat/month",
+      "launched": "2019-06",
+      "last_updated": "2026-05-13T00:00:00.000Z",
+      "last_verified": "2026-05-13T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 9,
+        "value": 8,
+        "moat": 7,
+        "longevity": 8
+      },
+      "tags": [
+        "scheduling",
+        "calendar",
+        "productivity",
+        "time-blocking",
+        "focus-time",
+        "habits",
+        "meetings",
+        "google-calendar",
+        "task-management"
+      ],
+      "affiliate": {
+        "has_program": null,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null,
+        "application_status": "none",
+        "applied_date": null,
+        "approved_date": null,
+        "notes": null
+      },
+      "page_path": "/tools/reclaim-ai/"
     },
     "recraft": {
       "slug": "recraft",
@@ -7051,6 +7204,16 @@
       },
       "page_path": "wikis/ai-tools/pages/tools/semrush.md"
     },
+    "sora": {
+      "slug": "sora",
+      "status": "dead",
+      "title": "Sora (Discontinued)",
+      "category": null,
+      "company": null,
+      "last_updated": "2026-04-15T00:00:00.000Z",
+      "last_verified": null,
+      "page_path": "wikis/ai-tools/pages/dead/sora.md"
+    },
     "speechify": {
       "slug": "speechify",
       "status": "active",
@@ -7130,6 +7293,16 @@
         "link": null
       },
       "page_path": "wikis/ai-tools/pages/tools/spellbook.md"
+    },
+    "stability-ai-clipdrop": {
+      "slug": "stability-ai-clipdrop",
+      "status": "dead",
+      "title": "Clipdrop",
+      "category": "ai-image",
+      "company": "Stability AI",
+      "last_updated": "2026-04-15T00:00:00.000Z",
+      "last_verified": null,
+      "page_path": "wikis/ai-tools/pages/dead/stability-ai-clipdrop.md"
     },
     "stable-audio": {
       "slug": "stable-audio",
@@ -8630,86 +8803,6 @@
         "link": null
       },
       "page_path": "wikis/ai-tools/pages/tools/zed.md"
-    },
-    "bing-chat": {
-      "slug": "bing-chat",
-      "status": "dead",
-      "title": "Microsoft Bing Chat",
-      "category": "ai-search",
-      "company": "Microsoft",
-      "last_updated": "2026-04-15T00:00:00.000Z",
-      "last_verified": null,
-      "page_path": "wikis/ai-tools/pages/dead/bing-chat.md"
-    },
-    "google-bard": {
-      "slug": "google-bard",
-      "status": "dead",
-      "title": "Google Bard",
-      "category": "ai-search",
-      "company": "Google",
-      "last_updated": "2026-04-15T00:00:00.000Z",
-      "last_verified": null,
-      "page_path": "wikis/ai-tools/pages/dead/google-bard.md"
-    },
-    "gpt-3-api": {
-      "slug": "gpt-3-api",
-      "status": "dead",
-      "title": "GPT-3 API (text-davinci models)",
-      "category": "ai-writing",
-      "company": "OpenAI",
-      "last_updated": "2026-04-15T00:00:00.000Z",
-      "last_verified": null,
-      "page_path": "wikis/ai-tools/pages/dead/gpt-3-api.md"
-    },
-    "meta-imagine": {
-      "slug": "meta-imagine",
-      "status": "dead",
-      "title": "Meta Imagine",
-      "category": "ai-image",
-      "company": "Meta",
-      "last_updated": "2026-04-15T00:00:00.000Z",
-      "last_verified": null,
-      "page_path": "wikis/ai-tools/pages/dead/meta-imagine.md"
-    },
-    "openai-codex": {
-      "slug": "openai-codex",
-      "status": "dead",
-      "title": "OpenAI Codex",
-      "category": "ai-coding",
-      "company": "OpenAI",
-      "last_updated": "2026-04-15T00:00:00.000Z",
-      "last_verified": null,
-      "page_path": "wikis/ai-tools/pages/dead/openai-codex.md"
-    },
-    "play-ht": {
-      "slug": "play-ht",
-      "status": "dead",
-      "title": "Play.ht (Discontinued)",
-      "category": null,
-      "company": null,
-      "last_updated": "2026-04-15T00:00:00.000Z",
-      "last_verified": null,
-      "page_path": "wikis/ai-tools/pages/dead/play-ht.md"
-    },
-    "sora": {
-      "slug": "sora",
-      "status": "dead",
-      "title": "Sora (Discontinued)",
-      "category": null,
-      "company": null,
-      "last_updated": "2026-04-15T00:00:00.000Z",
-      "last_verified": null,
-      "page_path": "wikis/ai-tools/pages/dead/sora.md"
-    },
-    "stability-ai-clipdrop": {
-      "slug": "stability-ai-clipdrop",
-      "status": "dead",
-      "title": "Clipdrop",
-      "category": "ai-image",
-      "company": "Stability AI",
-      "last_updated": "2026-04-15T00:00:00.000Z",
-      "last_verified": null,
-      "page_path": "wikis/ai-tools/pages/dead/stability-ai-clipdrop.md"
     }
   }
 }
