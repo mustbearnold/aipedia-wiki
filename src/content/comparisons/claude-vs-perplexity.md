@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Claude vs Perplexity: Which Is Better for Research in 2026?"
 meta_description: "Claude vs Perplexity, verified May 10, 2026: compare Claude Opus 4.7 reasoning, Perplexity cited search, pricing, research workflows, and who should pick each."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-10
-last_verified: 2026-05-10
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 canonical_fact_table: true
 ---

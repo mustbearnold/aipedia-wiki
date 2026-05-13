@@ -8,8 +8,8 @@ winner: depends
 seo_title: "ChatGPT vs GitHub Copilot: Which Is Better in 2026?"
 meta_description: "Updated May 10, 2026: compare ChatGPT and GitHub Copilot for broad AI work, Codex, IDE coding, GitHub cloud agent, GPT-5.5, pricing, and June 2026 AI Credits billing."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-10
-last_verified: 2026-05-10
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: quarterly
 canonical_fact_table: true
 ---

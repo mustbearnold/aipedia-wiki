@@ -8,8 +8,8 @@ winner: gamma
 seo_title: "Decktopus AI vs Gamma: Interactive Presentations or Multi-Format AI Content? (May 2026)"
 meta_description: "Decktopus AI vs Gamma for AI presentations. Gamma wins multi-format decks, docs, websites, exports, analytics, and API workflows; Decktopus wins interactive presentation funnels. Verified May 2026."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-08
-last_verified: 2026-05-08
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: quarterly
 canonical_fact_table: true
 ---

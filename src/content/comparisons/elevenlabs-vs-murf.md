@@ -8,8 +8,8 @@ winner: elevenlabs
 seo_title: "ElevenLabs vs Murf: Which Is Better in 2026?"
 meta_description: "ElevenLabs leads on voice quality and cloning with a generous free tier. Murf wins on studio UX for non-technical teams. Full 2026 breakdown."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-30
-last_verified: 2026-04-30
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: quarterly
 canonical_fact_table: true
 ---

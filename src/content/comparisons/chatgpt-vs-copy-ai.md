@@ -8,8 +8,8 @@ winner: depends
 seo_title: "ChatGPT vs Copy.ai: General Assistant or GTM Workflow?"
 meta_description: "ChatGPT vs Copy.ai for teams: compare general AI assistance, branded marketing workflows, outbound copy, campaign operations, and procurement fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-05
-last_verified: 2026-05-05
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: quarterly
 canonical_fact_table: true
 ---

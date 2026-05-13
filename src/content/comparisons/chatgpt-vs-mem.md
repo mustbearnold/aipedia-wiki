@@ -8,8 +8,8 @@ winner: depends
 seo_title: "ChatGPT vs Mem: AI Assistant or AI Notes App? (May 2026)"
 meta_description: "ChatGPT vs Mem, verified May 10, 2026: choose ChatGPT for broad AI work and Mem for AI-assisted recall across your own notes."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-10
-last_verified: 2026-05-10
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 canonical_fact_table: true
 ---

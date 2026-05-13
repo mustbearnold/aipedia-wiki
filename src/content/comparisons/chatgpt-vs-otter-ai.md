@@ -8,8 +8,8 @@ winner: depends
 seo_title: "ChatGPT vs Otter.ai: AI Assistant or Meeting Notetaker? (May 2026)"
 meta_description: "ChatGPT vs Otter.ai, verified May 10, 2026: choose ChatGPT for broad AI work and Otter for live meeting capture, transcripts, summaries, and searchable meeting archives."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-10
-last_verified: 2026-05-10
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 canonical_fact_table: true
 ---

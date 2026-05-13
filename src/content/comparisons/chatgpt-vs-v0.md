@@ -8,8 +8,8 @@ winner: depends
 seo_title: "ChatGPT vs v0: General AI Assistant or AI App Builder? (May 2026)"
 meta_description: "ChatGPT is the broad AI assistant. v0 is Vercel's AI app builder. Current May 8, 2026 buyer comparison covers pricing, use cases, coding, UI, and CTAs."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-08
-last_verified: 2026-05-08
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 canonical_fact_table: true
 ---

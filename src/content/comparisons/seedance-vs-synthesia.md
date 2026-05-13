@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Seedance 2.0 vs Synthesia: Video Model or Avatar Platform? (May 2026)"
 meta_description: "Seedance 2.0 vs Synthesia for buyers: compare current multimodal video generation, avatar presenter workflows, pricing routes, source quality, and production fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-08
-last_verified: 2026-05-08
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 canonical_fact_table: true
 ---

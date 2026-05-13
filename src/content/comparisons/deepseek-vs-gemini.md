@@ -8,8 +8,8 @@ winner: depends
 seo_title: "DeepSeek vs Gemini: Which Is Better in 2026?"
 meta_description: "DeepSeek vs Gemini, verified May 10, 2026: V4 API pricing, 1M context, Gemini 3.1 Pro, Google AI plans, media tools, and which model stack fits your workflow."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-10
-last_verified: 2026-05-10
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: quarterly
 canonical_fact_table: true
 ---

@@ -8,8 +8,8 @@ winner: depends
 seo_title: "n8n vs Make vs Zapier: Best Automation Tool (2026)"
 meta_description: "n8n leads for AI agents and self-hosting. Zapier offers the most integrations. Make provides the lowest cloud pricing. Full comparison updated April 2026."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-05
-last_verified: 2026-05-05
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: quarterly
 canonical_fact_table: true
 ---

@@ -8,8 +8,8 @@ winner: pitch
 seo_title: "Pitch vs Tome: Tome Is Dead, Use Pitch for Team Decks (May 2026)"
 meta_description: "Pitch vs Tome for presentations. Tome Slides sunset April 30, 2025; Pitch is the active pick for collaborative decks, guests, analytics, and pitch rooms. Verified May 2026."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-08
-last_verified: 2026-05-08
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: quarterly
 canonical_fact_table: true
 ---

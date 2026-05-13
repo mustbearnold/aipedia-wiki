@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Cody vs Cursor: Which Is Better in 2026?"
 meta_description: "Honest head-to-head of Cody and Cursor as of April 2026. Flagship models, current pricing, and which tool fits your workflow."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-03
-last_verified: 2026-05-03
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: quarterly
 canonical_fact_table: true
 ---

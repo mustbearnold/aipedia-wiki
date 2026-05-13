@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Mubert vs Udio: Background Music or Full Songs?"
 meta_description: "Mubert vs Udio for creators, producers, and teams: compare background music licensing, full-song generation, vocals, editing control, and workflow fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-05
-last_verified: 2026-05-05
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: quarterly
 canonical_fact_table: true
 ---

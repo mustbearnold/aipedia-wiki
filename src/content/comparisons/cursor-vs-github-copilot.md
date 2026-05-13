@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Cursor vs GitHub Copilot: Which Is Better in 2026?"
 meta_description: "Cursor vs GitHub Copilot, verified May 10, 2026: pricing, agent workflows, AI Credits, IDE support, and which coding assistant fits your team."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-10
-last_verified: 2026-05-10
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: quarterly
 canonical_fact_table: true
 ---

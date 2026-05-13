@@ -8,8 +8,8 @@ winner: runway
 seo_title: "Pika Labs vs Runway: Social Video App or Production AI Video Workspace? (May 2026)"
 meta_description: "Pika Labs vs Runway, updated May 8, 2026. Pika is better for quick social effects; Runway wins for production workflow, teams, editing, and API access."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-08
-last_verified: 2026-05-08
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: weekly
 canonical_fact_table: true
 ---

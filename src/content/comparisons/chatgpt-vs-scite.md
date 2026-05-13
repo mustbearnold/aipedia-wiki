@@ -8,8 +8,8 @@ winner: depends
 seo_title: "ChatGPT vs Scite: AI assistant or citation evidence checker? (May 2026)"
 meta_description: "ChatGPT vs Scite, verified May 10, 2026. Compare GPT-5.5 for general research work with Scite Smart Citations, pricing, and evidence-checking fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-10
-last_verified: 2026-05-10
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 canonical_fact_table: true
 ---

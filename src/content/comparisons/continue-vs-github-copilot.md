@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Continue vs GitHub Copilot: Open AI Stack or GitHub-Native Copilot?"
 meta_description: "Continue vs GitHub Copilot, verified May 2026: compare pricing, agents, models, BYOK control, GitHub workflow fit, team governance, and who should choose each."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-10
-last_verified: 2026-05-10
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 canonical_fact_table: true
 ---

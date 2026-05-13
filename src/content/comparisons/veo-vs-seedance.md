@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Google Veo 3.1 vs Seedance 2.0: Which AI Video Model Should You Test? (May 2026)"
 meta_description: "Google Veo 3.1 vs Seedance 2.0, updated May 8, 2026. Veo wins for Google API/provenance; Seedance is the first raw model-quality test."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-08
-last_verified: 2026-05-08
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: weekly
 canonical_fact_table: true
 ---

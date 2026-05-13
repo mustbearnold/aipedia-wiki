@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Runway vs Kling vs Seedance vs Veo: Best AI Video Model (2026)"
 meta_description: "Updated May 8, 2026: compare Seedance 2.0, Kling 3.0, Google Veo 3.1, and Runway by raw model quality, API access, production workflow, pricing risk, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-08
-last_verified: 2026-05-08
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: weekly
 canonical_fact_table: true
 ---

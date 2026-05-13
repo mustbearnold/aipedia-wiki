@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Claude vs Mistral AI: Which Should You Use in 2026?"
 meta_description: "Claude vs Mistral AI, verified May 2026: compare Claude's hosted reasoning assistant with Mistral's open-weight, EU-oriented model platform."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-10
-last_verified: 2026-05-10
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 canonical_fact_table: true
 ---

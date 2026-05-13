@@ -8,8 +8,8 @@ winner: depends
 seo_title: "ChatGPT vs Qwen: ChatGPT app or Qwen open models? (May 2026)"
 meta_description: "ChatGPT vs Qwen, verified May 10, 2026. Compare GPT-5.5 in ChatGPT with Alibaba Qwen's open-weight models, hosted API, pricing, and developer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-10
-last_verified: 2026-05-10
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 canonical_fact_table: true
 ---

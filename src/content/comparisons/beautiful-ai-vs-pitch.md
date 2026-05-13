@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Beautiful.ai vs Pitch: Smart Slides or Team Deck Workflow? (May 2026)"
 meta_description: "Beautiful.ai vs Pitch for AI presentations. Beautiful.ai wins design-controlled Smart Slides; Pitch wins collaboration, analytics, guests, and deck distribution. Verified May 2026."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-08
-last_verified: 2026-05-08
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: quarterly
 canonical_fact_table: true
 ---

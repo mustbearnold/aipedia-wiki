@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Aider vs Cursor: Which Is Better in 2026?"
 meta_description: "Aider vs Cursor, verified May 2026: terminal-native open-source BYOK coding agent versus GUI-first AI IDE. Compare pricing, workflow fit, model control, agent features, and buyer watch-outs."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-10
-last_verified: 2026-05-10
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: quarterly
 canonical_fact_table: true
 ---

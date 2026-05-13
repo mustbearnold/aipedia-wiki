@@ -8,8 +8,8 @@ winner: depends
 seo_title: "HeyGen vs Seedance 2.0: Avatar Platform or Video Model? (May 2026)"
 meta_description: "HeyGen is for avatar-led business video. Seedance 2.0 is ByteDance's multimodal AI video model. Current buyer guidance verified May 8, 2026."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-08
-last_verified: 2026-05-08
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 canonical_fact_table: true
 ---

@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Bolt.new vs Cursor: Which Is Better in 2026?"
 meta_description: "Updated May 10, 2026: compare Bolt.new and Cursor by app-builder workflow, AI IDE fit, pricing, tokens, agents, production risk, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-10
-last_verified: 2026-05-10
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: quarterly
 canonical_fact_table: true
 ---

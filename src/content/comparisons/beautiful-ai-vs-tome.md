@@ -8,8 +8,8 @@ winner: beautiful-ai
 seo_title: "Beautiful.ai vs Tome: Tome Is Dead, Use Smart Slides (May 2026)"
 meta_description: "Beautiful.ai vs Tome for presentations. Tome Slides sunset April 30, 2025; Beautiful.ai is the active pick for Smart Slides, brand control, and polished decks. Verified May 2026."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-08
-last_verified: 2026-05-08
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: quarterly
 canonical_fact_table: true
 ---

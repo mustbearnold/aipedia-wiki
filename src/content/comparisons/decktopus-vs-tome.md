@@ -8,8 +8,8 @@ winner: decktopus
 seo_title: "Decktopus AI vs Tome: Tome Is Dead, Use Decktopus (May 2026)"
 meta_description: "Decktopus AI vs Tome for AI presentations. Tome Slides sunset April 30, 2025; Decktopus is the active pick for fast AI decks and interactive sharing. Verified May 2026."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-08
-last_verified: 2026-05-08
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: quarterly
 canonical_fact_table: true
 ---

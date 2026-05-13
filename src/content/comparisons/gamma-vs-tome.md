@@ -8,8 +8,8 @@ winner: gamma
 seo_title: "Gamma vs Tome: Tome Is Dead, Use Gamma for AI Decks (May 2026)"
 meta_description: "Gamma vs Tome for AI presentations. Tome Slides sunset April 30, 2025; Gamma is the active choice for narrative AI decks, docs, and shareable pages. Verified May 2026."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-08
-last_verified: 2026-05-08
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: quarterly
 canonical_fact_table: true
 ---

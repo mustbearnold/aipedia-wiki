@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Midjourney vs Flux: Which AI Image Workflow Should You Use in 2026?"
 meta_description: "Midjourney vs Flux, checked May 10, 2026: aesthetic image generation versus API/open-weight production workflows, FLUX.2 pricing, Midjourney plans, rights, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-10
-last_verified: 2026-05-10
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: quarterly
 canonical_fact_table: true
 ---

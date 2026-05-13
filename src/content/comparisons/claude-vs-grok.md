@@ -6,15 +6,17 @@ tools: [claude, grok]
 category: ai-chatbots
 winner: depends
 seo_title: "Claude vs Grok: Which Is Better in 2026?"
-meta_description: "Updated May 10, 2026: compare Claude and Grok for writing, coding, X search, web search, Grok 4.3, Claude Opus 4.7, pricing, media generation, and buyer fit."
+meta_description: "Updated May 13, 2026: compare Claude and Grok for writing, coding, X search, web search, Grok 4.3, Claude Opus 4.7, pricing, media generation, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-10
-last_verified: 2026-05-10
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: quarterly
 canonical_fact_table: true
 ---
 
 # Claude vs Grok
+
+> **Model lineup update (2026-05-15):** Grok Code Fast 1 (`grok-code-fast-1`) was deprecated on May 15, 2026, along with `grok-4-1-fast`, `grok-4-fast`, `grok-4`, and `grok-imagine-image-pro`. The default Grok coding path is now full Grok 4.3.
 
 [Claude](/tools/claude/) and [Grok](/tools/grok/) are both premium assistants, but they are built for different kinds of trust. Claude is designed for careful reasoning, long writing, enterprise controls, and code workflows. Grok is designed around xAI, X-native context, web/X search tools, image/video/voice APIs, and fast-moving paid/API surfaces.
 
@@ -50,7 +52,7 @@ Grok also has a broader native media/API story than Claude. xAI's May 2026 docs 
 
 Claude has a free tier, Pro at $20/mo or $17/mo annually, Max from $100/mo, Team seats from $25/mo or $20/mo annually, and Enterprise at $20/seat plus usage at API rates. Opus 4.7 API pricing starts at $5 per 1M input tokens and $25 per 1M output tokens, with prompt caching, batch discounts, and US-only inference at 1.1x.
 
-xAI's current model page recommends `grok-4.3` for chat API callers, lists a 1M-token context window, and prices it at $1.25 per 1M input tokens and $2.50 per 1M output tokens. Older Grok 4.20 and 4.1 Fast variants still appear on the pricing table, but the same page says several older models, including `grok-4-1-fast`, `grok-4-fast`, `grok-4`, `grok-code-fast-1`, and `grok-imagine-image-pro`, retire on May 15, 2026.
+xAI's current model page recommends `grok-4.3` for chat API callers, lists a 1M-token context window, and prices it at $1.25 per 1M input tokens and $2.50 per 1M output tokens. As of May 15, 2026, several older models retired, including `grok-4-1-fast`, `grok-4-fast`, `grok-4`, `grok-code-fast-1`, and `grok-imagine-image-pro`. Coding callers who used to default to Grok Code Fast 1 should now use full Grok 4.3.
 
 Grok tool calls can add cost: xAI lists Web Search, X Search, and Code Execution at $5 per 1,000 calls, file attachment search at $10 per 1,000 calls, and collections/file search at $2.50 per 1,000 calls. Its Imagine API starts at $0.02/image and $0.05/sec for video; Voice API lists realtime at $3/hr, TTS at $4.20 per 1M characters, and STT at $0.10/hr for REST.
 
@@ -58,7 +60,7 @@ Grok tool calls can add cost: xAI lists Web Search, X Search, and Code Execution
 
 Anthropic's signal is Opus 4.7 plus deeper Claude Code adoption. Anthropic positions Opus 4.7 as its most capable generally available model for coding, agents, and complex professional work, with availability across Claude, the Claude API, Bedrock, Vertex AI, and Microsoft Foundry.
 
-xAI's signal is Grok 4.3 as the recommended API/chat model, plus a more complete tool and media layer around search, code execution, files, image/video generation, and voice. A critical caveat: xAI says Grok does not have realtime-event knowledge unless search tools are enabled, so "live Grok" is really "Grok with Web Search or X Search configured."
+xAI's signal is Grok 4.3 as the recommended API/chat model, plus a more complete tool and media layer around search, code execution, files, image/video generation, and voice. With the May 15, 2026 retirements (including Grok Code Fast 1), Grok 4.3 is now the single recommended coding and general-purpose Grok endpoint. A critical caveat: xAI says Grok does not have realtime-event knowledge unless search tools are enabled, so "live Grok" is really "Grok with Web Search or X Search configured."
 
 ## Best Choice by User Type
 
@@ -90,6 +92,8 @@ A common mistake is treating Grok's social awareness as a universal advantage. I
 
 Another mistake is treating Grok as "live" without configuring search tools. xAI's own model page says realtime data requires server-side Web Search or X Search; without those tools, the model has a training-data cutoff.
 
+A third mistake (post-May-15-2026) is still calling `grok-code-fast-1`. That endpoint is deprecated; coding workloads should target full Grok 4.3.
+
 Teams should run separate evaluations for document work and social work. A single generic prompt set will blur the very difference that makes this comparison useful.
 
 ## Buying Checklist
@@ -110,7 +114,7 @@ For API use, Grok 4.3 is cheaper than Claude Opus 4.7 on the current official to
 
 ### Which is better for coding?
 
-Claude is better if you want a mature packaged coding workflow through Claude Code. Grok can execute code and use tools through the xAI API, but it is not a direct replacement for a terminal coding agent.
+Claude is better if you want a mature packaged coding workflow through Claude Code. Grok can execute code and use tools through the xAI API; since Grok Code Fast 1 retired on May 15, 2026, the recommended Grok coding endpoint is full Grok 4.3.
 
 ### Does Grok have live X data?
 

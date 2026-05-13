@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Claude vs DeepSeek: Which Is Better in 2026?"
 meta_description: "Updated May 10, 2026: compare Claude and DeepSeek for writing, coding, long context, Claude Opus 4.7, DeepSeek V4, API pricing, open weights, governance, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-10
-last_verified: 2026-05-10
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: quarterly
 canonical_fact_table: true
 ---

@@ -8,8 +8,8 @@ winner: lovable
 seo_title: "Lovable vs Bolt.new vs v0: Best AI App Builder (May 2026)"
 meta_description: "Updated May 8, 2026: compare Lovable, Bolt.new, and v0 by buyer fit, current pricing, backend path, deployment workflow, Vercel fit, and production risk."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-08
-last_verified: 2026-05-08
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 canonical_fact_table: true
 ---

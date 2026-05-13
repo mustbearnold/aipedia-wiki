@@ -8,8 +8,8 @@ winner: depends
 seo_title: "ChatGPT vs Gamma: AI Assistant or AI Presentation Maker? (May 2026)"
 meta_description: "ChatGPT vs Gamma for May 2026. ChatGPT wins thinking, research, writing, and coding; Gamma wins turning prompts, PDFs, and outlines into decks, docs, and webpages."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-10
-last_verified: 2026-05-10
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: quarterly
 canonical_fact_table: true
 ---

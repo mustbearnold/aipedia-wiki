@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Google Veo 3.1 vs Kling 3.0: Google API or Cinematic Creator Model? (May 2026)"
 meta_description: "Google Veo 3.1 vs Kling 3.0, updated May 8, 2026. Veo wins for Google API/provenance; Kling is the creator-value challenger."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-08
-last_verified: 2026-05-08
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: weekly
 canonical_fact_table: true
 ---

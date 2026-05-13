@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Beautiful.ai vs Gamma: Brand-Controlled Slides or Multi-Format AI Content? (May 2026)"
 meta_description: "Beautiful.ai vs Gamma for AI presentations. Beautiful.ai wins governed brand decks; Gamma wins fast multi-format decks, docs, websites, exports, analytics, and API workflows. Verified May 2026."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-08
-last_verified: 2026-05-08
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: quarterly
 canonical_fact_table: true
 ---

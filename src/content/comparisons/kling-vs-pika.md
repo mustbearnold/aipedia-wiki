@@ -8,8 +8,8 @@ winner: kling
 seo_title: "Kling 3.0 vs Pika Labs: Cinematic Video or Social Effects? (May 2026)"
 meta_description: "Kling 3.0 vs Pika Labs, updated May 8, 2026. Kling is the stronger cinematic model test; Pika is better for fast social effects and creator clips."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-08
-last_verified: 2026-05-08
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: weekly
 canonical_fact_table: true
 ---

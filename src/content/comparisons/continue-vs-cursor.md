@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Continue vs Cursor: Open AI Coding Stack or Managed AI IDE?"
 meta_description: "Continue vs Cursor, verified May 2026: compare pricing, agents, BYOK control, IDE fit, team controls, and which AI coding workflow is better."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-10
-last_verified: 2026-05-10
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 canonical_fact_table: true
 ---

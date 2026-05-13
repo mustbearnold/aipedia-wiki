@@ -8,8 +8,8 @@ winner: presentations-ai
 seo_title: "Presentations.AI vs Tome: Tome Is Dead, Use Presentations.AI (May 2026)"
 meta_description: "Presentations.AI vs Tome for AI decks. Tome Slides sunset April 30, 2025; Presentations.AI is the active option for branded AI presentations and teams. Verified May 2026."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-08
-last_verified: 2026-05-08
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: quarterly
 canonical_fact_table: true
 ---

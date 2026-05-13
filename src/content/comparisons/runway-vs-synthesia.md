@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Runway vs Synthesia: Creative Video Workspace or Avatar Training Platform? (May 2026)"
 meta_description: "Runway vs Synthesia, updated May 8, 2026. Pick Runway for production AI video and editing; pick Synthesia for avatar-led training, onboarding, and SCORM-ready business video."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-08
-last_verified: 2026-05-08
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: weekly
 canonical_fact_table: true
 ---

@@ -8,8 +8,8 @@ winner: depends
 seo_title: "HeyGen vs Runway: Avatar Videos or Production AI Video? (May 2026)"
 meta_description: "HeyGen vs Runway, updated May 8, 2026. HeyGen wins for avatar-led business video; Runway wins for cinematic generation, editing, and production workflow."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-08
-last_verified: 2026-05-08
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: weekly
 canonical_fact_table: true
 ---

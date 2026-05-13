@@ -8,8 +8,8 @@ winner: depends
 seo_title: "ChatGPT vs Elicit: Which Research Tool Should You Use in 2026?"
 meta_description: "Updated May 10, 2026: compare ChatGPT and Elicit for academic research, literature reviews, evidence extraction, pricing, sources, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-10
-last_verified: 2026-05-10
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: quarterly
 canonical_fact_table: true
 ---

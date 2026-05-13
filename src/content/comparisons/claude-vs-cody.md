@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Claude vs Cody: Claude assistant or Sourcegraph coding AI? (May 2026)"
 meta_description: "Claude vs Cody, verified May 2026: when to choose Anthropic's hosted assistant and when Sourcegraph Cody makes sense for enterprise codebases."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-10
-last_verified: 2026-05-10
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 canonical_fact_table: true
 ---

@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Perplexity vs ChatGPT: Which Is Better for Research in 2026?"
 meta_description: "Perplexity Enterprise excels at cited research and fact-checking; ChatGPT with GPT-5.5 wins as a general assistant. Full 2026 comparison of features, pricing, and use cases."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-30
-last_verified: 2026-04-30
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: quarterly
 canonical_fact_table: true
 ---

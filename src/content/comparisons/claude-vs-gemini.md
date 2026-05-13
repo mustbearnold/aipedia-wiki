@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Claude vs Gemini: Which Is Better in 2026?"
 meta_description: "Updated May 10, 2026: compare Claude and Gemini for writing, coding, Google Workspace, long context, Claude Opus 4.7, Gemini 3.1 Pro, pricing, image/video, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-10
-last_verified: 2026-05-10
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: quarterly
 canonical_fact_table: true
 ---

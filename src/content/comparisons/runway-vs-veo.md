@@ -8,8 +8,8 @@ winner: runway
 seo_title: "Runway vs Google Veo 3.1: Production Workspace or Google Video Model? (May 2026)"
 meta_description: "Runway vs Google Veo 3.1, updated May 8, 2026. Runway wins for production workflow; Veo wins for Google API, Vertex AI, and provenance."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-08
-last_verified: 2026-05-08
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: weekly
 canonical_fact_table: true
 ---
