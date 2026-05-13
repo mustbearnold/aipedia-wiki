@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "Free + demo pricing"
 status: active
 launched: 2015-01
-last_updated: 2026-05-08
-last_verified: 2026-05-08
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -38,8 +38,8 @@ facts:
     source: "https://www.marketmuse.com/pricing"
     source_label: "MarketMuse Pricing"
     source_id: marketmuse-official
-    verified_at: 2026-05-08
-    next_review_at: 2026-08-08
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: high
   content_briefs:
@@ -67,7 +67,7 @@ facts:
     volatility: medium
     confidence: high
 tags: [seo, content-strategy, topical-authority, content-planning, ai-seo, content-audit, inventory]
-seo_title: "MarketMuse: Features, Pricing & Review (May 2026)"
+seo_title: "MarketMuse: Features, Pricing and Review (May 2026)"
 meta_description: "MarketMuse plans topical authority across a site with Free, Optimize, Research, and Strategy tiers. Current public pricing is demo-led; verify terms before buying."
 author: "aipedia.wiki Editorial"
 best_for:
@@ -115,7 +115,7 @@ The current public pricing page lists Free, Optimize, Research, and Strategy tie
 | **Strategy** | 1 site inventory, 5 users, 10K tracked topics, 20 briefs/month, 5 strategy documents/month |
 | **Native article generation** | None (briefs feed external drafting) |
 
-Every data point above was verified against vendor documentation on 2026-05-08. See Sources.
+Every data point above was verified against vendor documentation on 2026-05-13. See Sources.
 
 ## What it actually is
 
@@ -154,7 +154,7 @@ Subscription pricing via [marketmuse.com/pricing](https://www.marketmuse.com/pri
 | Research | Verify with MarketMuse | 3 | 1000 tracked topics, 10 briefs/month, 3 strategy documents/month |
 | Strategy | Verify with MarketMuse | 5 | 10K tracked topics, 20 briefs/month, 5 strategy documents/month |
 
-*Tier names and limits verified 2026-05-08 via [MarketMuse pricing](https://www.marketmuse.com/pricing). Current monthly dollar pricing was not exposed in this crawl, so buyers should verify commercial terms directly before procurement.*
+*Tier names and limits verified 2026-05-13 via [MarketMuse pricing](https://www.marketmuse.com/pricing). Current monthly dollar pricing was not exposed in this crawl, so buyers should verify commercial terms directly before procurement.*
 
 ## Against the alternatives
 
@@ -180,7 +180,7 @@ Subscription pricing via [marketmuse.com/pricing](https://www.marketmuse.com/pri
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-05-08 against [MarketMuse pricing](https://www.marketmuse.com/pricing).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-05-13 against [MarketMuse pricing](https://www.marketmuse.com/pricing).
 
 ## FAQ
 

@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "Free + paid plans from $12/user/month billed annually; API credits at $0.01/credit"
 status: active
 launched: 2023-03
-last_updated: 2026-05-08
-last_verified: 2026-05-08
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: weekly
 affiliate:
   has_program: false
@@ -31,88 +31,88 @@ facts:
     source: "https://runwayml.com/pricing"
     source_label: "Runway pricing"
     source_id: runway-pricing
-    verified_at: 2026-05-08
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-05-22
+    next_review_at: 2026-05-27
   context_window:
     value: "Not applicable - Runway is a video-generation, editing, and API platform, not a chat model with a token context window"
     source: "https://help.runwayml.com/hc/en-us/articles/37327109429011-Creating-with-Gen-4-Video"
     source_label: "Runway Gen-4 help docs"
     source_id: runway-help
-    verified_at: 2026-05-08
+    verified_at: 2026-05-13
     volatility: low
     confidence: high
-    next_review_at: 2026-06-08
+    next_review_at: 2026-06-13
   pricing_anchor:
     value: "Free plan, Standard $12/user/month billed annually, Pro $28/user/month billed annually, Unlimited $76/user/month billed annually, Enterprise custom"
     source: "https://runwayml.com/pricing"
     source_label: "Runway pricing"
     source_id: runway-pricing
-    verified_at: 2026-05-08
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-05-22
+    next_review_at: 2026-05-27
   free_plan:
     value: "Yes - Free includes 125 one-time credits, Gen-4 Turbo image-to-video, 3 video editor projects, 5GB asset storage, and no Gen-4 Video"
     source: "https://runwayml.com/pricing"
     source_label: "Runway pricing"
     source_id: runway-pricing
-    verified_at: 2026-05-08
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-05-22
+    next_review_at: 2026-05-27
   best_paid_tier:
     value: "Standard is the sensible first paid tier; Pro adds more credits/storage and custom voices; Unlimited is for relaxed Explore Mode volume"
     source: "https://runwayml.com/pricing"
     source_label: "Runway pricing"
     source_id: runway-pricing
-    verified_at: 2026-05-08
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-05-22
+    next_review_at: 2026-05-27
   api_available:
     value: "Yes - Runway API exposes video models including gen4.5, gen4_turbo, gen4_aleph, act_two, veo3, veo3.1, and veo3.1_fast"
     source: "https://docs.dev.runwayml.com/guides/models/"
     source_label: "Runway API models"
     source_id: runway-api-models
-    verified_at: 2026-05-08
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-05-22
+    next_review_at: 2026-05-27
   image_generation:
     value: "Yes - includes Gen-4 image tools and third-party image models on paid plans"
     source: "https://runwayml.com/pricing"
     source_label: "Runway pricing"
     source_id: runway-pricing
-    verified_at: 2026-05-08
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-05-22
+    next_review_at: 2026-05-27
   video_generation:
     value: "Gen-4.5, Gen-4, Gen-4 Turbo, Aleph, Act-Two, Veo 3.1/Veo 3, Seedance 2.0, Kling 3.0 Pro, and more depending on plan/model availability"
     source: "https://runwayml.com/pricing"
     source_label: "Runway pricing"
     source_id: runway-pricing
-    verified_at: 2026-05-08
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-05-22
+    next_review_at: 2026-05-27
   real_time_voice:
     value: "No primary real-time voice-agent product; Runway has audio and custom voice features for creation workflows"
     source: "https://runwayml.com/pricing"
     source_label: "Runway pricing"
     source_id: runway-pricing
-    verified_at: 2026-05-08
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
-    next_review_at: 2026-06-08
+    next_review_at: 2026-06-13
   web_browsing:
     value: "No web-browsing assistant; Runway is creative video, image, audio, workflow, and API software"
     source: "https://docs.dev.runwayml.com/"
     source_label: "Runway API docs"
     source_id: runway-api-docs
-    verified_at: 2026-05-08
+    verified_at: 2026-05-13
     volatility: low
     confidence: high
   coding_agent:
@@ -120,7 +120,7 @@ facts:
     source: "https://docs.dev.runwayml.com/"
     source_label: "Runway API docs"
     source_id: runway-api-docs
-    verified_at: 2026-05-08
+    verified_at: 2026-05-13
     volatility: low
     confidence: high
   enterprise_controls:
@@ -128,25 +128,25 @@ facts:
     source: "https://runwayml.com/pricing"
     source_label: "Runway pricing"
     source_id: runway-pricing
-    verified_at: 2026-05-08
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-05-22
+    next_review_at: 2026-05-27
   data_retention_or_privacy:
     value: "Runway says users retain rights to uploaded/generated content; enterprise pages emphasize no training on enterprise data and SOC 2 Type II"
     source: "https://help.runwayml.com/hc/en-us/articles/18927776141715-Usage-rights"
     source_label: "Runway usage rights"
     source_id: runway-usage-rights
-    verified_at: 2026-05-08
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
-    next_review_at: 2026-06-08
+    next_review_at: 2026-06-13
   open_source_or_local:
     value: "No - Runway is proprietary and hosted"
     source: "https://runwayml.com"
     source_label: "Runway official site"
     source_id: runway-help
-    verified_at: 2026-05-08
+    verified_at: 2026-05-13
     volatility: low
     confidence: high
   best_for:
@@ -154,7 +154,7 @@ facts:
     source: "https://runwayml.com/pricing"
     source_label: "Runway pricing"
     source_id: runway-pricing
-    verified_at: 2026-05-08
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   watch_out_for:
@@ -162,13 +162,13 @@ facts:
     source: "https://docs.dev.runwayml.com/guides/pricing/"
     source_label: "Runway API pricing"
     source_id: runway-api-pricing
-    verified_at: 2026-05-08
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-05-22
+    next_review_at: 2026-05-27
 tags: [ai-video, video-generation, text-to-video, image-to-video, video-editing, filmmaking, runway, gen-4-5, gen-4, aleph, act-two, veo, seedance, kling, api, production-workflow]
-seo_title: "Runway Review: Pricing, Models, API & Best Use Cases (May 2026)"
-meta_description: "Runway is the best production AI video workspace, not always the raw model winner. Updated May 8, 2026 with Gen-4.5, Aleph, Act-Two, Veo 3.1, Seedance 2.0, Kling 3.0 Pro, pricing, and API guidance."
+seo_title: "Runway Review: Pricing, Models, API and Best Use Cases (May 2026)"
+meta_description: "Runway is the best production AI video workspace, not always the raw model winner. Updated May 13, 2026 with Gen-4.5, Aleph, Act-Two, Veo 3.1, Seedance 2.0, Kling 3.0 Pro, pricing, and API guidance."
 author: "aipedia.wiki Editorial"
 best_for:
   - video production teams
@@ -217,7 +217,7 @@ price_history:
 
 # Runway
 
-Runway is a production AI video workspace and API platform. Its value is not just one model. As of May 8, 2026, Runway gives creators and teams a single workspace for Gen-4.5 text-to-video, Gen-4 image-to-video, Gen-4 Turbo iteration, Aleph video editing, Act-Two performance capture, Veo 3.1/Veo 3, and third-party video models such as Seedance 2.0 and Kling 3.0 Pro.
+Runway is a production AI video workspace and API platform. Its value is not just one model. As of May 13, 2026, Runway gives creators and teams a single workspace for Gen-4.5 text-to-video, Gen-4 image-to-video, Gen-4 Turbo iteration, Aleph video editing, Act-Two performance capture, Veo 3.1/Veo 3, and third-party video models such as Seedance 2.0 and Kling 3.0 Pro.
 
 That makes Runway strategically important even when another model wins a raw-output shootout. If you only need the best single clip from a prompt, test [Seedance 2.0](/tools/seedance/), [Kling 3.0](/tools/kling/), and [Google Veo 3.1](/tools/veo/) beside Runway. If you need to edit, export, iterate, hand off to a team, or build an API pipeline, Runway moves back to the top of the shortlist.
 
@@ -225,7 +225,7 @@ That makes Runway strategically important even when another model wins a raw-out
 
 > **Pick Runway when the job is production.** It is the strongest route for creators, agencies, and product teams that need model switching, video editor projects, Aleph edits, Act-Two character performance capture, commercial outputs, team storage, and API access in one account.
 >
-> **Do not pick Runway just because a guide says "best AI video model."** That framing is now too blunt. Seedance 2.0, Kling 3.0, and Veo 3.1 are the models AiPedia would test first for raw quality on May 8, 2026. Runway wins when workflow, editing, procurement, and shipping matter.
+> **Do not pick Runway just because a guide says "best AI video model."** That framing is now too blunt. Seedance 2.0, Kling 3.0, and Veo 3.1 are the models AiPedia would test first for raw quality on May 13, 2026. Runway wins when workflow, editing, procurement, and shipping matter.
 >
 > **Best paid starting point:** Standard is the first serious paid tier because it unlocks the current production model/workflow bundle. Pro is for heavier individual/team use and custom voices. Unlimited is for high-volume Explore Mode work. Enterprise is the right route when SSO, custom credits, workspace analytics, support, and enterprise data terms matter.
 

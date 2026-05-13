@@ -11,8 +11,8 @@ pricing_model: paid
 price_range: $99-$299+/month
 status: active
 launched: 2019-06
-last_updated: 2026-05-08
-last_verified: 2026-05-08
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -30,47 +30,56 @@ scores:
   longevity: 8
 facts:
   best_for:
-    value: "SEO teams that want content optimization and AI search visibility tracking in one workflow, with Standard, Pro, and Peace of Mind tiers scaling documents, prompts, seats, and workspaces."
+    value: "SEO teams that want content optimization and AI search visibility tracking in one workflow, with Standard, Pro, and Peace of Mind tiers scaling documents, tracked pages, AI prompts, seats, and workspaces."
     source: "https://surferseo.com/pricing/"
     source_label: "Surfer SEO pricing"
     source_id: surfer-seo-pricing
-    verified_at: 2026-05-08
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   pricing_anchor:
-    value: "Current public pricing emphasizes Standard at $99/mo, Pro at $182/mo, and Peace of Mind at $299/mo when billed yearly, with enterprise/custom needs handled by sales; document, AI prompt, seat, and workspace limits materially affect cost."
+    value: "Current public pricing lists Discovery at $49/mo (annual), Standard at $99/mo, Pro at $182/mo, Peace of Mind at $299/mo when billed yearly, and Enterprise from around $999/mo custom; document, tracked-page, AI prompt, seat, and workspace limits materially affect cost."
     source: "https://surferseo.com/pricing/"
     source_label: "Surfer SEO pricing"
     source_id: surfer-seo-pricing
-    verified_at: 2026-05-08
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-08-03
+    next_review_at: 2026-08-13
   content_optimizer:
     value: "Surfer remains strongest when the buyer wants content optimization and AI-visibility prompt tracking rather than generic AI writing alone."
     source: "https://surferseo.com/pricing/"
     source_label: "Surfer SEO pricing"
     source_id: surfer-seo-pricing
-    verified_at: 2026-05-08
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   ai_search_visibility:
-    value: "Current pricing page explicitly positions Surfer around visibility in Google, Gemini, ChatGPT, Perplexity, and beyond, with AI prompt tracking scaling by tier."
+    value: "Current pricing page explicitly positions Surfer around visibility in Google, Gemini, ChatGPT, Perplexity, and beyond, with AI prompt tracking scaling by tier (25/week Standard, 50/day Pro, 100/day Peace of Mind)."
     source: "https://surferseo.com/pricing/"
     source_label: "Surfer SEO pricing"
     source_id: surfer-seo-pricing
-    verified_at: 2026-05-08
+    verified_at: 2026-05-13
     volatility: medium
-    confidence: medium
+    confidence: high
+  tracked_pages:
+    value: "Tracked-page caps grow with tier: 10 on Discovery, 25 on Standard, 50 on Pro, and 500 on Peace of Mind, alongside seat and workspace ladders."
+    source: "https://surferseo.com/pricing/"
+    source_label: "Surfer SEO pricing"
+    source_id: surfer-seo-pricing
+    verified_at: 2026-05-13
+    volatility: high
+    confidence: high
+    next_review_at: 2026-08-13
   watch_out_for:
     value: "SERP scores are directional, not editorial truth. Avoid optimizing away originality, expertise, and brand voice just to satisfy a content score."
     source: "https://surferseo.com"
     source_label: "Surfer SEO official site"
     source_id: surfer-official
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-08-03
+    next_review_at: 2026-08-13
 tags: [seo, content-optimization, on-page-seo, content-editor, serp-analysis, keyword-research, ai-tracker, nlp, multilingual]
 seo_title: 'Surfer SEO: Features, Pricing & Review (May 2026)'
 meta_description: >-
@@ -89,6 +98,41 @@ not_best_for:
 quick_answer: >-
   Surfer SEO is a SERP-driven content optimization and AI visibility platform. Current public pricing starts with Standard at $99/mo when billed yearly, then Pro at $182/mo and Peace of Mind at $299/mo. Pick it for granular on-page work plus AI-search tracking; skip it if the real need is backlink intelligence or an all-in-one marketing suite.
 price_history:
+  - date: 2026-05-13
+    plan: "Discovery"
+    price: "$49/mo annual"
+    source: "https://surferseo.com/pricing/"
+    source_label: "Source"
+    source_id: surfer-seo-pricing
+    note: "120 documents, 10 pages tracked, 1 seat, 1 workspace, no AI prompt tracking."
+  - date: 2026-05-13
+    plan: "Standard"
+    price: "$99/mo annual"
+    source: "https://surferseo.com/pricing/"
+    source_label: "Source"
+    source_id: surfer-seo-pricing
+    note: "360 documents, 25 pages tracked, 3 seats, 1 workspace, AI Tracker (25 prompts/week), Content Audit, Topical Map."
+  - date: 2026-05-13
+    plan: "Pro"
+    price: "$182/mo annual"
+    source: "https://surferseo.com/pricing/"
+    source_label: "Source"
+    source_id: surfer-seo-pricing
+    note: "360 documents, 50 pages tracked, 5 seats, 5 workspaces, AI Tracker (50 prompts/day), internal linking, content ideas, cannibalization reports."
+  - date: 2026-05-13
+    plan: "Peace of Mind"
+    price: "$299/mo annual"
+    source: "https://surferseo.com/pricing/"
+    source_label: "Source"
+    source_id: surfer-seo-pricing
+    note: "Unlimited documents, 500 pages tracked, 10 seats, unlimited workspaces, AI Tracker (100 prompts/day), API access, dedicated success manager."
+  - date: 2026-05-13
+    plan: "Enterprise"
+    price: "From ~$999/mo custom"
+    source: "https://surferseo.com/pricing/"
+    source_label: "Source"
+    source_id: surfer-seo-pricing
+    note: "SSO, white-label options, advisory program, priority support, annual contract."
   - date: 2026-05-08
     plan: "Standard"
     price: "$99/mo annual"
@@ -116,7 +160,7 @@ price_history:
 
 Surfer SEO is a content optimization platform built around real-time SERP scoring. The Content Editor analyzes the top 10 to 50 SERP results for a keyword and scores drafts on NLP entities, keyword density, heading structure, word count, and image usage as users type.
 
-The current pricing page positions Surfer around AI search visibility as well as classic content optimization. It lists Standard at $99/month when billed yearly, Pro at $182/month when billed yearly, Peace of Mind at $299/month when billed yearly, and an enterprise sales route for larger teams.
+The current pricing page positions Surfer around AI search visibility as well as classic content optimization. It lists Discovery at $49/month, Standard at $99/month, Pro at $182/month, and Peace of Mind at $299/month when billed yearly, with Enterprise starting from around $999/month for custom needs.
 
 ## System Verdict
 
@@ -132,17 +176,18 @@ The current pricing page positions Surfer around AI search visibility as well as
 |---|---|
 | **Core function** | Real-time SERP content scoring · SERP Analyzer · native keyword research · Surfy AI writer |
 | **AI Tracker (beta)** | Brand visibility monitoring across Google · Gemini · ChatGPT · Perplexity |
-| **Tiers** | Standard $99 · Pro $182 · Peace of Mind $299 · Enterprise custom (annual billing) |
-| **Content documents / mo** | 360 Standard · 360 Pro · unlimited-style Peace of Mind · custom Enterprise |
-| **Team seats** | 3 Standard · 5 Pro · 10 Peace of Mind · custom Enterprise |
-| **Brand workspaces** | Standard workspace support · 5 Pro · expanded Peace of Mind |
-| **AI Tracker prompts** | 25/week Standard · 50/day Pro · 100/day Peace of Mind |
+| **Tiers** | Discovery $49 · Standard $99 · Pro $182 · Peace of Mind $299 · Enterprise from ~$999 custom (annual billing) |
+| **Content documents / mo** | 120 Discovery · 360 Standard · 360 Pro · unlimited Peace of Mind · custom Enterprise |
+| **Pages tracked** | 10 Discovery · 25 Standard · 50 Pro · 500 Peace of Mind |
+| **Team seats** | 1 Discovery · 3 Standard · 5 Pro · 10 Peace of Mind · custom Enterprise |
+| **Brand workspaces** | 1 Discovery · 1 Standard · 5 Pro · unlimited Peace of Mind |
+| **AI Tracker prompts** | None on Discovery · 25/week Standard · 50/day Pro · 100/day Peace of Mind |
 | **Native keyword research** | Included in the current Surfer workflow |
 | **Multilingual editor** | EN · ES · FR · DE · NL · SV · DA · PL |
 | **Integrations** | WordPress · Google Docs · ChatGPT · Zapier · Contentful · Surfer API (Enterprise) |
 | **Annual discount** | ~15-20% vs monthly |
 
-Every data point above verified against vendor sources on 2026-05-08. See Sources.
+Every data point above verified against vendor sources on 2026-05-13. See Sources.
 
 ## What it actually is
 
@@ -167,7 +212,7 @@ A content optimization editor with a SERP intelligence layer, now extended with 
 
 ## When to pick something else
 
-- **Sub-$50 budget:** [NeuronWriter](/tools/neuronwriter/). Silver at $37/month annually delivers budget semantic optimization without Surfer's current starting price.
+- **Sub-$50 budget:** [NeuronWriter](/tools/neuronwriter/). Silver at $37/month annually delivers budget semantic optimization below Discovery's $49 entry point, with deeper NLP term coverage on a single workspace.
 - **Brief-first workflow with PAA extraction:** [Frase](/tools/frase/). Faster brief generation, lighter scoring depth.
 - **Topic authority for enterprise content planning:** [MarketMuse](/tools/marketmuse/). Planning-first, higher price.
 - **Deep backlink audits + rank tracking across thousands of keywords:** [Ahrefs](/tools/ahrefs/) or [Semrush](/tools/semrush/). Surfer's keyword research covers content-ops needs, not full SEO-team rank-tracker breadth.
@@ -176,14 +221,15 @@ A content optimization editor with a SERP intelligence layer, now extended with 
 
 | Plan | Monthly (annual) | Documents | Seats | Workspaces | AI Tracker | Pages Tracked | Who's it for |
 |------|---|---|---|---|---|---|---|
-| Standard | $99 | 360 | 3 | Included | 25/week | Check current limits | **Small content teams land here** |
-| Pro | $182 | 360 | 5 | 5 | 50/day | Check current limits | Agencies, multi-brand operators |
-| Peace of Mind | $299 | Unlimited-style | 10 | Expanded | 100/day | Check current limits | In-house SEO leads at scale |
-| Enterprise | Custom (annual only) | Custom | Custom | Custom | Custom | Custom | SSO, white-label, API, dedicated CSM |
+| Discovery | $49 | 120 | 1 | 1 | None | 10 | Solo dabblers running their first audits |
+| Standard | $99 | 360 | 3 | 1 | 25/week | 25 | **Small content teams land here** |
+| Pro | $182 | 360 | 5 | 5 | 50/day | 50 | Agencies, multi-brand operators |
+| Peace of Mind | $299 | Unlimited | 10 | Unlimited | 100/day | 500 | In-house SEO leads at scale |
+| Enterprise | From ~$999 (annual only) | Custom | Custom | Custom | Custom | Custom | SSO, white-label, API, dedicated CSM |
 
-All tiers include Surfy AI writer, Content Score, SERP Analyzer, Content Audit, Topical Map, Internal Linking, Keyword Research, Plagiarism check, and AI Detector + Humanizer. Enterprise adds SSO, white-label, API access, custom limits, and a dedicated success manager.
+All paid tiers include Surfy AI writer, Content Score, SERP Analyzer, Content Audit, Topical Map, Internal Linking, Keyword Research, Plagiarism check, and AI Detector + Humanizer. Pro adds internal linking automation, content ideas, and cannibalization reports. Peace of Mind unlocks API access and a dedicated success manager. Enterprise adds SSO, white-label, advisory programs, custom limits, and priority support.
 
-Prices verified 2026-05-08 via [Surfer SEO pricing](https://surferseo.com/pricing/). The public page currently foregrounds annual-billed monthly prices for Standard, Pro, and Peace of Mind; verify any monthly-billing toggle, enterprise terms, and current usage limits before procurement.
+Prices verified 2026-05-13 via [Surfer SEO pricing](https://surferseo.com/pricing/). The public page currently foregrounds annual-billed monthly prices for Discovery, Standard, Pro, and Peace of Mind; verify any monthly-billing toggle, enterprise terms, and current usage limits before procurement.
 
 ## Against the alternatives
 
@@ -206,13 +252,13 @@ Prices verified 2026-05-08 via [Surfer SEO pricing](https://surferseo.com/pricin
 - **Surfy drafts need editing.** Usable scaffolding, not production copy. Read the output before publishing.
 - **AI Tracker is beta.** Prompt-tracking quality on Gemini and Perplexity is still catching up to Google. Expect iteration through mid-2026.
 - **Learning curve on the editor.** Two to three projects to calibrate which guidelines to follow and which to ignore.
-- **Standard is the current visible starting point.** Older Discovery pricing should not be quoted unless Surfer re-surfaces it on the current public pricing page.
+- **Discovery is the new visible entry tier.** Surfer re-surfaced Discovery at $49/month (annual) for solo dabblers; AI Tracker is excluded and document/page limits are tight, so most paid-traffic users will still land on Standard or above.
 - **Enterprise is annual-only.** No monthly option on the top tier.
 - **Usage caps still matter.** Documents, AI prompt tracking, pages, seats, and workspaces should be checked against the current pricing table before procurement.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-05-08 against [Surfer SEO pricing](https://surferseo.com/pricing/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-05-13 against [Surfer SEO pricing](https://surferseo.com/pricing/).
 
 ## FAQ
 

@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "Free app access plus paid creator plans; MiniMax video API packages from $1,000"
 status: active
 launched: 2024-03
-last_updated: 2026-05-08
-last_verified: 2026-05-08
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: weekly
 affiliate:
   has_program: false
@@ -30,49 +30,49 @@ facts:
     source: "https://hailuoai.video/"
     source_label: "Hailuo AI official site"
     source_id: hailuo-official
-    verified_at: 2026-05-08
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-06-08
+    next_review_at: 2026-06-13
   current_model:
     value: "MiniMax lists Hailuo 2.3 and Hailuo 2.3 Fast as current video models, with improvements in body movement, facial expressions, physical realism, prompt adherence, stylization, and lower-cost Fast generation."
     source: "https://www.minimax.io/news/minimax-hailuo-23"
     source_label: "MiniMax Hailuo 2.3 launch"
     source_id: hailuo-23-launch
-    verified_at: 2026-05-08
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-06-08
+    next_review_at: 2026-06-13
   api_available:
     value: "MiniMax video generation API docs support text, image, first-frame, last-frame, and reference-image video tasks using Hailuo video models."
     source: "https://platform.minimax.io/docs/api-reference/video-generation-intro"
     source_label: "MiniMax video generation API docs"
     source_id: minimax-video-api
-    verified_at: 2026-05-08
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-06-08
+    next_review_at: 2026-06-13
   pricing_anchor:
     value: "MiniMax video packages currently start at $1,000 for 3,760 units over one month, with unit deductions varying by model, resolution, and duration."
     source: "https://platform.minimax.io/docs/guides/pricing-video"
     source_label: "MiniMax video package pricing"
     source_id: minimax-video-packages
-    verified_at: 2026-05-08
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-06-08
+    next_review_at: 2026-06-13
   watch_out_for:
     value: "Consumer subscription prices, model access, watermarks, credit rules, commercial rights, and regional availability can change quickly; verify the current Hailuo account screen before buying volume."
     source: "https://hailuoai.video/subscribe"
     source_label: "Hailuo AI pricing"
     source_id: hailuo-pricing
-    verified_at: 2026-05-08
+    verified_at: 2026-05-13
     volatility: high
     confidence: medium
-    next_review_at: 2026-06-08
+    next_review_at: 2026-06-13
 tags: [ai-video, text-to-video, image-to-video, hailuo, minimax, chinese-ai, video-generation, api-video]
 seo_title: "Hailuo AI Review: Pricing, Models & Best Uses (May 2026)"
-meta_description: "Hailuo AI review updated May 8, 2026. Compare Hailuo 2.3, Hailuo 2.3 Fast, MiniMax API pricing, best use cases, risks, and alternatives."
+meta_description: "Hailuo AI review updated May 13, 2026. Compare Hailuo 2.3, Hailuo 2.3 Fast, MiniMax API pricing, best use cases, risks, and alternatives."
 author: "aipedia.wiki Editorial"
 best_for:
   - low-cost short-form social video experiments
@@ -90,7 +90,7 @@ quick_answer: >-
 
 # Hailuo AI
 
-Hailuo AI is MiniMax's creator-facing AI video product. As of May 8, 2026, the current MiniMax video story is **Hailuo 2.3** and **Hailuo 2.3 Fast**, with product access through the Hailuo app and developer access through the MiniMax video generation API.
+Hailuo AI is MiniMax's creator-facing AI video product. As of May 13, 2026, the current MiniMax video story is **Hailuo 2.3** and **Hailuo 2.3 Fast**, with product access through the Hailuo app and developer access through the MiniMax video generation API.
 
 The buyer frame is simple: Hailuo is a good place to test short, fast, lower-cost clips. It should not be treated as the guaranteed best video model on the market without comparing current outputs against [Seedance](/tools/seedance/), [Kling](/tools/kling/), [Veo](/tools/veo/), and [Runway](/tools/runway/).
 
@@ -100,7 +100,7 @@ The buyer frame is simple: Hailuo is a good place to test short, fast, lower-cos
 >
 > **Skip Hailuo as your default if raw model quality is the only goal.** In the current AI video market, Seedance, Kling, Veo, and Runway deserve side-by-side testing before you decide. Hailuo's strongest role is value, speed, stylized clips, social concepts, and API experimentation, not a blanket "best video generator" claim.
 >
-> **Buyer warning:** Hailuo's consumer pricing and credit rules are dynamic. AiPedia can verify the official product and MiniMax API pricing pages on May 8, 2026, but exact consumer-plan allowances should be checked inside the current Hailuo account screen before any high-volume purchase.
+> **Buyer warning:** Hailuo's consumer pricing and credit rules are dynamic. AiPedia can verify the official product and MiniMax API pricing pages on May 13, 2026, but exact consumer-plan allowances should be checked inside the current Hailuo account screen before any high-volume purchase.
 
 ## Key Facts
 
@@ -138,7 +138,7 @@ The current official MiniMax API docs say the video API supports videos generate
 
 Do not buy Hailuo only because an old review quotes a low monthly price. The consumer product can show promotional pricing, credit bundles, watermarks, model-specific access, and plan limits that change by account, region, and date.
 
-For developers, the clearer anchor is MiniMax's video package pricing. On May 8, 2026, the official docs list:
+For developers, the clearer anchor is MiniMax's video package pricing. On May 13, 2026, the official docs list:
 
 - **Standard:** $1,000 for 3,760 units, valid one month.
 - **Pro:** $2,500 for 9,920 units, valid one month.
@@ -171,7 +171,7 @@ MiniMax also publishes unit deductions by model, resolution, and duration. That 
 
 ## Methodology
 
-AiPedia re-verified this page on **May 8, 2026** using official MiniMax and Hailuo sources. The editorial score prioritizes buyer utility, value, moat, and longevity. Claims about current models, API access, and package pricing are anchored to primary sources, while consumer-plan specifics are treated as volatile because the official app pricing surface is dynamic.
+AiPedia re-verified this page on **May 13, 2026** using official MiniMax and Hailuo sources. The editorial score prioritizes buyer utility, value, moat, and longevity. Claims about current models, API access, and package pricing are anchored to primary sources, while consumer-plan specifics are treated as volatile because the official app pricing surface is dynamic.
 
 ## FAQ
 

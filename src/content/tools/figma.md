@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$90/mo per Full seat"
 status: active
 launched: 2016-09
-last_updated: 2026-05-08
-last_verified: 2026-05-08
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://help.figma.com/hc/en-us/articles/360040328273-Figma-plans-and-features"
     source_label: "Figma plans and features"
     source_id: figma-plans-features
-    verified_at: 2026-05-08
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -38,43 +38,43 @@ facts:
     source: "https://www.figma.com/pricing/"
     source_label: "Figma pricing"
     source_id: figma-pricing
-    verified_at: 2026-05-08
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-06-08
+    next_review_at: 2026-06-13
   best_paid_tier:
     value: "Professional Full seat at $16/month is the right first paid tier for most small product teams; Organization and Enterprise are governance and scale upgrades."
     source: "https://www.figma.com/pricing/"
     source_label: "Figma pricing"
     source_id: figma-pricing
-    verified_at: 2026-05-08
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-06-08
+    next_review_at: 2026-06-13
   ai_credits:
     value: "AI credits reset monthly, do not roll over, and currently include 500 credits on Starter, 3,000 on Professional Full seats, 3,500 on Organization Full seats, and 4,250 on Enterprise Full seats."
     source: "https://help.figma.com/hc/en-us/articles/33459875669015-How-AI-credits-work"
     source_label: "Figma AI credits"
     source_id: figma-ai-credits
-    verified_at: 2026-05-08
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-06-08
+    next_review_at: 2026-06-13
   flagship_model:
     value: "Figma Make exposes a model selector with options including Gemini 3 Flash, Gemini 3.1 Pro, Claude Sonnet 4.6, and Claude Opus 4.7; Figma says the default model may change over time."
     source: "https://help.figma.com/hc/en-us/articles/36400680326551-Select-an-AI-model-to-use-in-Figma-Make"
     source_label: "Figma Make model selection"
     source_id: figma-make-models
-    verified_at: 2026-05-08
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-06-08
+    next_review_at: 2026-06-13
   figma_make_scope:
     value: "Figma Make creates functional prototypes, web apps, and interactive UI from prompts, attached Figma designs, style libraries, backend instructions, and MCP connectors."
     source: "https://help.figma.com/hc/en-us/articles/31304485164695-Create-and-edit-a-Figma-Make-file"
     source_label: "Figma Make creation docs"
     source_id: figma-make-create
-    verified_at: 2026-05-08
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   code_handoff:
@@ -82,7 +82,7 @@ facts:
     source: "https://help.figma.com/hc/en-us/articles/35710574222487-Beyond-the-basics-Using-Figma-Make"
     source_label: "Figma Make advanced docs"
     source_id: figma-make-advanced
-    verified_at: 2026-05-08
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   watch_out_for:
@@ -90,7 +90,7 @@ facts:
     source: "https://help.figma.com/hc/en-us/articles/29717597009431-Guide-to-billing-at-Figma"
     source_label: "Figma billing guide"
     source_id: figma-billing
-    verified_at: 2026-05-08
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
 hero_glance:
@@ -123,7 +123,7 @@ decision_brief:
       tone: negative
 tags: [design, ui-ux, prototyping, collaboration, design-system, figma-make, figma-sites, figma-slides, figma-buzz, dev-mode]
 seo_title: "Figma Review: Pricing, AI Credits, Make & Sites (May 2026)"
-meta_description: "Updated May 8, 2026: Figma pricing, Full seats, AI credits, Figma Make models, Sites, Dev Mode, best plan, alternatives, and buyer risks."
+meta_description: "Updated May 13, 2026: Figma pricing, Full seats, AI credits, Figma Make models, Sites, Dev Mode, best plan, alternatives, and buyer risks."
 author: "aipedia.wiki Editorial"
 primary_cta_label: "Start with Figma free"
 best_plan: "Professional Full seat at $16/month"
@@ -154,11 +154,18 @@ price_history:
     source_label: "Figma pricing"
     source_id: figma-pricing
     note: "Current public pricing page lists Starter free, Professional Full seat $16/mo, Organization Full seat $55/mo, and Enterprise Full seat $90/mo."
+  - date: 2026-05-13
+    plan: "Professional Full seat"
+    price: "$16/mo"
+    source: "https://www.figma.com/pricing/"
+    source_label: "Figma pricing"
+    source_id: figma-pricing
+    note: "Reverified after Anthropic May 12 Claude for Legal launch; Figma pricing ladder unchanged at Starter free, Professional $16/mo Full seat, Organization $55/mo, Enterprise $90/mo."
 ---
 
 # Figma
 
-Figma is the default product-design platform for teams that build software interfaces together. As verified on May 8, 2026, the platform now spans Figma Design, Dev Mode, FigJam, Slides, Draw, Buzz, Sites, Make, AI credits, design-system administration, and seat-based billing. The practical buying question is no longer "Can Figma do AI?" It can. The better question is whether the buyer needs AI inside a shared design system, or whether a prompt-first app builder would ship the first version faster.
+Figma is the default product-design platform for teams that build software interfaces together. As verified on May 13, 2026, the platform now spans Figma Design, Dev Mode, FigJam, Slides, Draw, Buzz, Sites, Make, AI credits, design-system administration, and seat-based billing. The practical buying question is no longer "Can Figma do AI?" It can. The better question is whether the buyer needs AI inside a shared design system, or whether a prompt-first app builder would ship the first version faster.
 
 AiPedia's answer: Figma is the strongest choice when the design file is the source of truth. Lovable, Bolt.new, v0, and Replit Agent are better when the source of truth is a working app and the design layer can be rougher at first.
 
@@ -172,11 +179,12 @@ The best first paid plan for most professional teams is **Professional Full seat
 
 ## Recent Developments
 
-- **May 8, 2026 verification:** Figma's current pricing page lists Starter free, Professional Full seat $16/month, Organization Full seat $55/month, Enterprise Full seat $90/month, and separate Dev/Collab seat pricing.
+- **May 13, 2026 verification:** Figma's current pricing page lists Starter free, Professional Full seat $16/month, Organization Full seat $55/month, Enterprise Full seat $90/month, and separate Dev/Collab seat pricing.
+- **May 12, 2026 enterprise pressure:** [Anthropic launched Claude for Legal](/news/2026-05-12-anthropic-claude-for-legal-plugins-microsoft-365/) with 12 practice-area plugins and a Microsoft 365 integration. Adjacent enterprise AI buying patterns are accelerating, and Anthropic's Claude Design product (the direct competitor that hit Figma stock in April) remains tied to the same Pro/Max/Team/Enterprise distribution.
 - **AI credits are now a buying constraint:** Figma's AI credit docs say credits reset monthly, do not roll over, and vary by plan and seat. Heavy Figma Make users need to watch credit burn.
 - **Figma Make model wording changed from older pages:** Current docs list selectable models such as Gemini 3 Flash, Gemini 3.1 Pro, Claude Sonnet 4.6, and Claude Opus 4.7, but they also say the default model may change over time. AiPedia should not describe one model as a permanent default.
 - **Figma Make is broader than a mockup generator:** Current docs describe prompt creation, attached designs, style-library context, backend instructions, MCP connectors, preview editing, direct code editing, code ZIP download, and GitHub push.
-- **April 17, 2026 competitive signal:** [Anthropic launched Claude Design and Figma stock dropped 7%](/news/2026-04-17-anthropic-launches-claude-design/), which reinforces why AiPedia separates Figma's durable design-system moat from prompt-first design and app tools.
+- **April 17, 2026 competitive signal:** [Anthropic launched Claude Design](/tools/claude-design/) and Figma stock dropped about 7% on the day ([launch coverage](/news/2026-04-17-anthropic-launches-claude-design/)). Claude Design is now the most direct prompt-to-prototype competitor: it reads a company's codebase to extract the existing design system, exports to PDF, PPTX, URL, or Canva, and hands off to Claude Code for production builds. AiPedia separates Figma's durable design-system moat from prompt-first design and app tools.
 - **AI app-builder competition is stronger:** [Lovable](/tools/lovable/) now has a clearer app-builder and backend story, [Bolt.new](/tools/bolt/) is stronger for browser-native build/run/debug sessions, and [v0](/tools/v0/) is strongest when the buyer already wants Vercel-native React/Next work.
 
 ## Key Facts
@@ -195,7 +203,7 @@ The best first paid plan for most professional teams is **Professional Full seat
 | Code handoff | Download code ZIP or push to GitHub; outside code changes do not automatically sync back |
 | Main watch-out | Seat costs plus AI-credit burn can outrun value if the buyer only needs one prompt-built app |
 
-Every fact above was checked against official Figma sources on 2026-05-08. See Sources.
+Every fact above was checked against official Figma sources on 2026-05-13. See Sources.
 
 ## What Figma Actually Is
 
@@ -218,6 +226,7 @@ The important limitation is ownership flow. Code can leave Figma Make, but chang
 
 ## When To Pick Something Else
 
+- **Pick [Claude Design](/tools/claude-design/) for prompt-to-prototype work.** Bundled with Claude Pro and higher tiers, it produces slide decks, app mockups, and pitch materials from prompts, reads codebases to extract the design system, and exports to PDF, PPTX, URL, or Canva before handing off to Claude Code.
 - **Pick [Lovable](/tools/lovable/) for founder MVPs.** Lovable is better when the buyer wants a working app, backend path, publishing flow, and GitHub handoff from product prompts.
 - **Pick [v0](/tools/v0/) for Vercel-native UI and app work.** v0 is stronger when the output should be React, Next.js, Tailwind, shadcn, and Vercel-aligned from the beginning.
 - **Pick [Bolt.new](/tools/bolt/) for browser-native coding sessions.** Bolt is better when the buyer wants to run, inspect, and debug the app in a browser development workspace.
@@ -226,7 +235,7 @@ The important limitation is ownership flow. Code can leave Figma Make, but chang
 
 ## Pricing
 
-Pricing was checked against [Figma pricing](https://www.figma.com/pricing/) on 2026-05-08. Figma's current public page is seat based, not a flat "AI design app" subscription.
+Pricing was checked against [Figma pricing](https://www.figma.com/pricing/) on 2026-05-13. Figma's current public page is seat based, not a flat "AI design app" subscription.
 
 | Plan | Current public price | Buyer fit |
 |---|---:|---|
@@ -275,7 +284,7 @@ The short version: Figma wins when design quality, shared systems, and handoff m
 
 AiPedia scores Figma as a buyer decision page, not as a benchmark claim. Utility is high because Figma remains central to product design, Dev Mode, design systems, Make, Sites, and cross-functional collaboration. Value is strong for teams that use the suite daily, but weaker for solos who only need one generated app. Moat is high because shared design systems and team workflows are hard to migrate. Longevity is high because Figma has expanded from design canvas to multi-product workflow, but prompt-first app builders are attacking the early-prototype use case.
 
-This page was updated on 2026-05-08 against official Figma pricing, AI credit, Make model, Make creation, Make advanced, and plans/features documentation. Unsupported permanent default-model language was removed.
+This page was updated on 2026-05-13 against official Figma pricing, AI credit, Make model, Make creation, Make advanced, and plans/features documentation. Unsupported permanent default-model language was removed.
 
 ## FAQ
 
@@ -293,7 +302,7 @@ Figma Make can create functional prototypes, web apps, and interactive UI from p
 
 **What models does Figma Make use?**
 
-As verified on May 8, 2026, Figma's model-selection docs list Gemini 3 Flash, Gemini 3.1 Pro, Claude Sonnet 4.6, and Claude Opus 4.7 as selectable options, and say the default model may change over time.
+As verified on May 13, 2026, Figma's model-selection docs list Gemini 3 Flash, Gemini 3.1 Pro, Claude Sonnet 4.6, and Claude Opus 4.7 as selectable options, and say the default model may change over time.
 
 **Is Figma better than Lovable?**
 
@@ -305,13 +314,13 @@ No. It can help design, prototype, generate, inspect, and hand off code. Product
 
 ## Sources
 
-- [Figma pricing](https://www.figma.com/pricing/) - current plan, seat, AI-credit, Make, Sites, and feature matrix. Verified 2026-05-08.
-- [Figma AI credits](https://help.figma.com/hc/en-us/articles/33459875669015-How-AI-credits-work) - credit allowances, monthly reset, non-rollover rules, daily caps, and model/complexity consumption notes. Verified 2026-05-08.
-- [Figma Make model selection](https://help.figma.com/hc/en-us/articles/36400680326551-Select-an-AI-model-to-use-in-Figma-Make) - selectable models and default-model caveat. Verified 2026-05-08.
-- [Create and edit a Figma Make file](https://help.figma.com/hc/en-us/articles/31304485164695-Create-and-edit-a-Figma-Make-file) - prompt workflow, attached designs, backend instructions, MCP connectors, preview, and code editing. Verified 2026-05-08.
-- [Beyond the basics: Using Figma Make](https://help.figma.com/hc/en-us/articles/35710574222487-Beyond-the-basics-Using-Figma-Make) - Supabase support, code ZIP download, and GitHub push. Verified 2026-05-08.
-- [Figma plans and features](https://help.figma.com/hc/en-us/articles/360040328273-Figma-plans-and-features) - product lineup, plan features, and governance features. Verified 2026-05-08.
-- [Figma billing guide](https://help.figma.com/hc/en-us/articles/29717597009431-Guide-to-billing-at-Figma) - seat types and product access by role. Verified 2026-05-08.
+- [Figma pricing](https://www.figma.com/pricing/) - current plan, seat, AI-credit, Make, Sites, and feature matrix. Verified 2026-05-13.
+- [Figma AI credits](https://help.figma.com/hc/en-us/articles/33459875669015-How-AI-credits-work) - credit allowances, monthly reset, non-rollover rules, daily caps, and model/complexity consumption notes. Verified 2026-05-13.
+- [Figma Make model selection](https://help.figma.com/hc/en-us/articles/36400680326551-Select-an-AI-model-to-use-in-Figma-Make) - selectable models and default-model caveat. Verified 2026-05-13.
+- [Create and edit a Figma Make file](https://help.figma.com/hc/en-us/articles/31304485164695-Create-and-edit-a-Figma-Make-file) - prompt workflow, attached designs, backend instructions, MCP connectors, preview, and code editing. Verified 2026-05-13.
+- [Beyond the basics: Using Figma Make](https://help.figma.com/hc/en-us/articles/35710574222487-Beyond-the-basics-Using-Figma-Make) - Supabase support, code ZIP download, and GitHub push. Verified 2026-05-13.
+- [Figma plans and features](https://help.figma.com/hc/en-us/articles/360040328273-Figma-plans-and-features) - product lineup, plan features, and governance features. Verified 2026-05-13.
+- [Figma billing guide](https://help.figma.com/hc/en-us/articles/29717597009431-Guide-to-billing-at-Figma) - seat types and product access by role. Verified 2026-05-13.
 
 ## Related
 

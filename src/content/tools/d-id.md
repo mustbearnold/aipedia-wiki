@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "Free trial; paid Studio and API plans"
 status: active
 launched: 2017-01
-last_updated: 2026-05-08
-last_verified: 2026-05-08
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: weekly
 affiliate:
   has_program: true
@@ -30,46 +30,55 @@ facts:
     source: https://www.d-id.com/ai-agents/
     source_label: D-ID AI Agents
     source_id: d-id-agents
-    verified_at: '2026-05-08'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-08-08'
+    next_review_at: '2026-08-13'
   pricing_anchor:
-    value: D-ID publishes Studio and API pricing pages, but public plan cards can be dynamic; verify current Studio minutes, API packaging, watermarks, and agent usage before budgeting.
+    value: D-ID publishes Studio and API pricing pages, but public plan cards remain dynamic; verify current Studio minutes, API packaging, watermarks, and agent usage before budgeting. Trial and Lite tiers carry watermarks, and minutes round up to 15-second intervals.
     source: https://www.d-id.com/pricing/studio/
     source_label: D-ID Studio pricing
     source_id: d-id-studio-pricing
-    verified_at: '2026-05-08'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
-    next_review_at: '2026-06-08'
+    next_review_at: '2026-06-13'
   api_available:
     value: D-ID developer docs cover real-time conversational agents, agent sessions, knowledge bases, LLM configuration, avatar video APIs, video translation, and SDK/embed surfaces.
     source: https://docs.d-id.com/
     source_label: D-ID docs
     source_id: d-id-docs
-    verified_at: '2026-05-08'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-08-08'
+    next_review_at: '2026-08-13'
   real_time_avatar:
-    value: D-ID's Visual AI Agents product combines language models, custom knowledge, expressive avatars, webhooks, and embeddable deployment for real-time avatar interactions.
+    value: D-ID's V4 Expressive Visual Agents combine language models, custom knowledge bases (up to 5 documents at 500K characters each via RAG), expressive avatars, webhooks, and embeddable deployment, with response latency under two seconds and over 90 percent accuracy claimed by D-ID. Agents support Hindi, Spanish, French, German, Portuguese, and other major languages with voice cloning.
     source: https://www.d-id.com/ai-agents/
     source_label: D-ID AI Agents
     source_id: d-id-agents
-    verified_at: '2026-05-08'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-08-08'
+    next_review_at: '2026-08-13'
+  agentic_videos:
+    value: D-ID now positions Agentic Videos as a hybrid surface that merges scripted storytelling with interactive agent capability, sitting alongside V4 Expressive Visual Agents in the Visual AI Agents product family.
+    source: https://www.d-id.com/ai-agents/
+    source_label: D-ID AI Agents
+    source_id: d-id-agents
+    verified_at: '2026-05-13'
+    volatility: high
+    confidence: medium
+    next_review_at: '2026-06-13'
   watch_out_for:
     value: Treat D-ID as a visual-agent and avatar API platform first; for high-volume scripted videos, compare current minute economics against HeyGen, Synthesia, and Tavus before buying.
     source: https://www.d-id.com/pricing/studio/
     source_label: D-ID Studio pricing
     source_id: d-id-studio-pricing
-    verified_at: '2026-05-08'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
-    next_review_at: '2026-06-08'
+    next_review_at: '2026-06-13'
 tags: [ai-avatar, talking-head, ai-video, digital-human, real-time-avatar, streaming-api, visual-agents]
 best_for:
   - live conversational avatars for support, education, kiosks, sales, and training
@@ -90,7 +99,7 @@ quick_answer: >-
 
 # D-ID
 
-D-ID is an AI avatar platform for two related jobs: generating talking-avatar videos and deploying real-time visual AI agents. Its current product navigation centers on Visual AI Agents, Creative Reality Studio, AI Avatars, AI Videos, Video Translate, mobile, integrations, and API access.
+D-ID is an AI avatar platform for two related jobs: generating talking-avatar videos and deploying real-time visual AI agents. Its current product navigation centers on Visual AI Agents (now headlined by V4 Expressive Visual Agents and Agentic Videos), Creative Reality Studio, AI Avatars, AI Videos, Video Translate, mobile, integrations, and API access.
 
 ## System Verdict
 
@@ -103,13 +112,16 @@ D-ID is an AI avatar platform for two related jobs: generating talking-avatar vi
 ## Current Key Facts
 
 - **Primary use case:** real-time visual AI agents and avatar video generation.
-- **Agent workflow:** choose or create an avatar, select a voice, define role/personality, add knowledge, assign webhooks, and publish/embed the agent.
+- **Agent product family:** V4 Expressive Visual Agents for natural live conversation, plus Agentic Videos that blend scripted storytelling with interactive agent behavior.
+- **Agent workflow:** choose or create an avatar, select a voice, define role/personality, attach a knowledge base (up to 5 documents at 500K characters each via RAG over PDF/TXT/PPTX or URL), wire webhooks, and publish/embed.
+- **Latency claim:** D-ID states response latency under two seconds with over 90 percent accuracy for visual agents.
+- **Language coverage:** agents support Hindi, Spanish, French, German, Portuguese, and other major languages, with standard and high-quality voices plus voice cloning.
 - **Developer surface:** D-ID docs cover realtime agents, agent sessions, knowledge, LLM configuration, avatar APIs, video translate, and an agents embed SDK.
 - **Pricing model:** Studio and API pricing are separate public surfaces; minutes are deducted from plan balances and rounded up to the nearest 15-second interval on Studio.
 - **Watermark caveat:** D-ID states that Trial and Lite videos carry watermarks, including full-screen watermarking for trial users.
 - **Buyer watch-out:** old exact self-serve prices should not be treated as current unless the live pricing page or logged-in checkout confirms them on the purchase date.
 
-Verified against D-ID official pages on 2026-05-08.
+Verified against D-ID official pages on 2026-05-13.
 
 ## What It Actually Is
 
@@ -117,7 +129,7 @@ D-ID has a no-code Studio side and a developer/API side.
 
 The Studio side is for creating talking-avatar videos, video translations, AI avatars, and short presenter assets. This can work for lightweight explainers, customer education, sales demos, and social clips, but it should be priced against minute-based competitors before being scaled.
 
-The Visual AI Agents side is more distinctive. D-ID positions agents as real-time avatars connected to language models, custom knowledge, behavior instructions, voices, and webhooks. That makes D-ID more relevant for product teams, support teams, learning teams, and kiosk-style deployments than for creators who only need weekly TikTok clips.
+The Visual AI Agents side is more distinctive. D-ID positions V4 Expressive Visual Agents as real-time avatars connected to language models, custom knowledge bases, behavior instructions, voices, and webhooks, with sub-two-second response latency. Agentic Videos extend the same surface into scripted storytelling that can still react interactively. That makes D-ID more relevant for product teams, support teams, learning teams, and kiosk-style deployments than for creators who only need weekly TikTok clips.
 
 ## When To Pick D-ID
 
@@ -142,7 +154,7 @@ Use [D-ID Studio pricing](https://www.d-id.com/pricing/studio/) and [D-ID API pr
 - **Free trial:** available through Studio; trial output can include a full-screen watermark.
 - **Studio paid plans:** usage is minute based, and generated video duration is rounded up to 15-second increments.
 - **API:** D-ID maintains a separate API pricing page and developer hub; production agent/video usage should be verified against API packaging, not only Studio packaging.
-- **What AiPedia no longer repeats:** old Lite/Pro/Advanced dollar figures, old credit counts, and old per-minute estimates. The public page available on 2026-05-08 did not safely expose those static claims.
+- **What AiPedia no longer repeats:** old Lite/Pro/Advanced dollar figures, old credit counts, and old per-minute estimates. The public Studio pricing page available on 2026-05-13 still does not statically expose those plan cards in a scrape-safe way; check the live page or in-app checkout on the day of purchase.
 
 ## Best Plan Guidance
 
@@ -161,7 +173,7 @@ Use [D-ID Studio pricing](https://www.d-id.com/pricing/studio/) and [D-ID API pr
 
 ## Methodology
 
-AiPedia refreshed this page on 2026-05-08 against primary D-ID sources only: the official AI Agents page, Studio pricing page, API pricing page, and developer docs. Older price, latency, language, and LLM-name claims were removed where the current official sources did not support them clearly.
+AiPedia refreshed this page on 2026-05-13 against primary D-ID sources only: the official AI Agents page, Studio pricing page, API pricing page, and developer docs. V4 Expressive Visual Agents, Agentic Videos, the sub-two-second latency and over-90-percent-accuracy claims, the 5-document / 500K-character knowledge-base limits, and the current supported language list were added from the live AI Agents page. Older price, latency, language, and LLM-name claims that the official sources no longer support clearly remain out.
 
 ## FAQ
 
@@ -175,10 +187,10 @@ Not for every buyer. D-ID is strongest when interaction matters. For standard pr
 Yes. D-ID's developer hub includes realtime agents, agent sessions, knowledge, LLM configuration, avatar video APIs, video translate, and embed documentation.
 
 **How much does D-ID cost?**
-AiPedia is not repeating old exact prices because the live public pricing page on 2026-05-08 was dynamic. Use D-ID Studio pricing and API pricing for the current plan, minute, watermark, and API details before buying.
+AiPedia is not repeating old exact prices because the live public pricing page on 2026-05-13 still does not expose Studio plan cards statically. Use D-ID Studio pricing and API pricing for the current plan, minute, watermark, and API details before buying.
 
 **Does D-ID support live conversational avatars?**
-Yes. D-ID's Visual AI Agents product is specifically positioned for real-time avatar interactions, with customizable appearance, voice, personality, knowledge, webhooks, and embeddable deployment.
+Yes. D-ID's V4 Expressive Visual Agents product is specifically positioned for real-time avatar interactions, with customizable appearance, voice, personality, RAG knowledge bases, webhooks, and embeddable deployment. D-ID claims sub-two-second response latency. Agentic Videos add a scripted-plus-interactive hybrid mode in the same product family.
 
 **Who should avoid D-ID?**
 Avoid D-ID if you only need cheap, high-volume pre-rendered social clips or enterprise training templates. HeyGen, Synthesia, Tavus, and Captions.ai are usually better first comparisons for those jobs.

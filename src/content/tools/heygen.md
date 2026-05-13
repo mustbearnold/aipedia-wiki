@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0, Creator $29/mo, Pro $99/mo, Business $149/mo plus seats, Enterprise custom; API pay-as-you-go is separate"
 status: active
 launched: 2022-11
-last_updated: 2026-05-08
-last_verified: 2026-05-08
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: weekly
 affiliate:
   has_program: true
@@ -63,14 +63,14 @@ facts:
     confidence: high
     next_review_at: 2026-06-08
   free_plan:
-    value: "Free lists $0/mo, 1 video per month, videos up to 3 minutes, 1 Custom Digital Twin, 500+ stock photo avatars, 720p export, share/download support, and trial access to premium features."
+    value: "Free lists $0/mo, 3 videos per month up to 1 minute each, 720p export, 500+ stock photo avatars, and trial access to premium features."
     source: "https://www.heygen.com/pricing"
     source_label: "HeyGen pricing"
     source_id: heygen-pricing
-    verified_at: 2026-05-08
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-06-08
+    next_review_at: 2026-06-13
   best_paid_tier:
     value: "Creator is the default first paid tier for solo avatar-video work; Pro adds 4K and 10x premium usage; Business is the team tier with SAML/SSO, collaboration, SCORM, LMS integrations, and $20/seat add-ons."
     source: "https://www.heygen.com/pricing"
@@ -185,6 +185,23 @@ facts:
     volatility: high
     confidence: high
     next_review_at: 2026-06-08
+price_history:
+  - date: 2026-05-08
+    plan: "Free"
+    price: "$0/mo, 1 video per month, videos up to 3 minutes, 720p"
+    source: "https://www.heygen.com/pricing"
+    source_label: "HeyGen pricing"
+    source_id: heygen-pricing
+    verified_at: 2026-05-08
+    note: "Prior public Free plan structure."
+  - date: 2026-05-13
+    plan: "Free"
+    price: "$0/mo, 3 videos per month up to 1 minute each, 720p"
+    source: "https://www.heygen.com/pricing"
+    source_label: "HeyGen pricing"
+    source_id: heygen-pricing
+    verified_at: 2026-05-13
+    note: "Current Free plan: more videos, shorter per-video cap."
 tags: [ai-video, ai-avatar, talking-head, video-marketing, sales-videos, training-videos, heygen, lip-sync, video-translation, avatar-v, avatar-iv-api]
 best_for:
   - marketing, sales, enablement, and training teams making avatar-led videos
@@ -197,10 +214,10 @@ not_best_for:
   - strict enterprise deployments without avatar-consent and brand-safety review
   - teams whose main need is LMS governance rather than marketing/localization speed
 seo_title: "HeyGen Review: Avatar V, Pricing & Best Uses (May 2026)"
-meta_description: "HeyGen review updated May 8, 2026. See Avatar V, Avatar IV API pricing, Creator/Pro/Business plans, best use cases, risks, and alternatives."
+meta_description: "HeyGen review updated May 13, 2026. See Avatar V, Avatar IV API pricing, Creator/Pro/Business plans, best use cases, risks, and alternatives."
 author: "aipedia.wiki Editorial"
 quick_answer: >-
-  HeyGen is the best AI video shortlist pick when the deliverable is avatar-led business video: sales clips, training, localization, digital twins, and presenter templates. As of May 8, 2026, Avatar V is the current headline avatar model, while Avatar IV API is the important programmatic route. Do not rank HeyGen as a general cinematic AI video model; compare it against Synthesia, Tavus, and D-ID for avatar workflows, and against Seedance, Kling, Veo, or Runway only when you also need scene generation.
+  HeyGen is the best AI video shortlist pick when the deliverable is avatar-led business video: sales clips, training, localization, digital twins, and presenter templates. As of May 13, 2026, Avatar V is the current headline avatar model, while Avatar IV API is the important programmatic route. Do not rank HeyGen as a general cinematic AI video model; compare it against Synthesia, Tavus, and D-ID for avatar workflows, and against Seedance, Kling, Veo, or Runway only when you also need scene generation.
 ---
 
 # HeyGen
@@ -216,6 +233,10 @@ The current buyer correction is important: **Avatar V is now HeyGen's newest ava
 > **Skip HeyGen if you want cinematic scene generation.** HeyGen can sit beside a scene model in a workflow, but it should not be ranked as a better raw video model than [Seedance](/tools/seedance/), [Kling](/tools/kling/), [Veo](/tools/veo/), or [Runway](/tools/runway/).
 >
 > **Best plan logic:** Creator is the natural solo starting point. Pro is for heavier premium usage and 4K exports. Business is for teams that need seats, collaboration, SCORM/LMS workflows, and SAML/SSO. Enterprise is for governance and custom commercial terms. API usage is a separate pay-as-you-go buying surface.
+
+## Recent changes
+
+- **May 13, 2026 verification:** HeyGen restructured the Free plan to 3 videos per month up to 1 minute each (was 1 video per month up to 3 minutes). Creator, Pro, Business, and Enterprise tiers, plus Avatar V positioning and Avatar IV API pricing, remain unchanged.
 
 ## Key Facts
 
@@ -255,9 +276,9 @@ This separation matters for purchasing. A plan that looks cheap for manual video
 
 ## Pricing And Buying Advice
 
-As of May 8, 2026, HeyGen's public app pricing lists:
+As of May 13, 2026, HeyGen's public app pricing lists:
 
-- **Free:** $0, 1 video per month, videos up to 3 minutes, 1 Custom Digital Twin, 500+ stock photo avatars, 720p export, share/download support, and trial access to premium features.
+- **Free:** $0, 3 videos per month up to 1 minute each, 720p export, 500+ stock photo avatars, and trial access to premium features.
 - **Creator:** $29/mo, videos up to 30 minutes, one Custom Digital Twin, 700+ Stock Video Avatars, 175+ languages/dialects, 1080p export, brand kit, and watermark removal.
 - **Pro:** $99/mo, more premium usage, faster processing, translation-script editing/proofreading, and 4K export.
 - **Business:** $149/mo plus $20/seat, videos up to 60 minutes, 4K export, SAML/SSO, collaboration, SCORM export, LMS integrations, and workflow integrations.
@@ -286,7 +307,7 @@ For API use, do not use the app subscription table as your whole budget. HeyGen'
 
 ## Methodology
 
-AiPedia re-verified this page on **May 8, 2026** against HeyGen's pricing page, pricing help center, API pricing help, API docs, Avatar V launch post, Avatar V technical report, and Avatar IV API announcement. Claims about pricing and model availability should be reviewed weekly because HeyGen is shipping avatar and API changes quickly.
+AiPedia re-verified this page on **May 13, 2026** against HeyGen's pricing page, pricing help center, API pricing help, API docs, Avatar V launch post, Avatar V technical report, and Avatar IV API announcement. Claims about pricing and model availability should be reviewed weekly because HeyGen is shipping avatar and API changes quickly.
 
 ## FAQ
 
@@ -294,7 +315,7 @@ AiPedia re-verified this page on **May 8, 2026** against HeyGen's pricing page, 
 Yes. HeyGen's Avatar V launch says Avatar V is its next-generation avatar model and the foundation for its current avatar direction. Avatar IV remains important because HeyGen is actively promoting Avatar IV API for programmatic talking-video generation.
 
 **Is HeyGen free?**
-Yes, but the free plan is for evaluation. It currently lists 1 video per month, videos up to 3 minutes, 720p export, and trial access to premium features.
+Yes, but the free plan is for evaluation. It currently lists 3 videos per month up to 1 minute each, 720p export, and trial access to premium features.
 
 **Which HeyGen plan should most buyers start with?**
 Creator for solo avatar-video work, Pro for heavier usage and 4K, Business for seats, SSO, SCORM/LMS, and collaboration, Enterprise for governance and custom terms.

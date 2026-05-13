@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$29-$249/month; $22-$187/month annual"
 status: active
 launched: 2009-08
-last_updated: 2026-05-08
-last_verified: 2026-05-08
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -34,7 +34,7 @@ facts:
     source: "https://unbounce.com/product/features/"
     source_label: "Unbounce features"
     source_id: unbounce-features
-    verified_at: 2026-05-08
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -42,8 +42,8 @@ facts:
     source: "https://unbounce.com/compare-plan-features/"
     source_label: "Unbounce plan comparison"
     source_id: unbounce-pricing
-    verified_at: 2026-05-08
-    next_review_at: 2026-08-08
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: high
   best_paid_tier:
@@ -51,8 +51,8 @@ facts:
     source: "https://unbounce.com/compare-plan-features/"
     source_label: "Unbounce plan comparison"
     source_id: unbounce-pricing
-    verified_at: 2026-05-08
-    next_review_at: 2026-08-08
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: high
   smart_traffic:
@@ -60,7 +60,7 @@ facts:
     source: "https://unbounce.com/product/features/"
     source_label: "Unbounce features"
     source_id: unbounce-features
-    verified_at: 2026-05-08
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   watch_out_for:
@@ -68,8 +68,8 @@ facts:
     source: "https://unbounce.com/compare-plan-features/"
     source_label: "Unbounce plan comparison"
     source_id: unbounce-pricing
-    verified_at: 2026-05-08
-    next_review_at: 2026-08-08
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: high
 tags: [landing-pages, conversion-optimization, a-b-testing, smart-traffic, smart-copy, marketing, ai-copy, paid-campaigns]
@@ -90,28 +90,28 @@ not_best_for:
 quick_answer: >-
   Unbounce is worth considering when landing pages directly affect paid-media ROI. Build is the practical floor for active campaigns, Experiment is the better fit for A/B testing, and Optimize is the tier to inspect if Smart Traffic is the reason you are buying. Skip it for simple websites, personal pages, or teams already locked into a website/CRM builder.
 price_history:
-  - date: 2026-05-08
+  - date: 2026-05-13
     plan: "Starter"
     price: "$29/mo ($22/mo annual)"
     source: "https://unbounce.com/compare-plan-features/"
     source_label: "Unbounce plan comparison"
     source_id: unbounce-pricing
     note: "5 pages, 500 monthly visitors, 1 user, 1 root domain. Best treated as a low-volume starting point."
-  - date: 2026-05-08
+  - date: 2026-05-13
     plan: "Build"
     price: "$99/mo ($74/mo annual)"
     source: "https://unbounce.com/compare-plan-features/"
     source_label: "Unbounce plan comparison"
     source_id: unbounce-pricing
     note: "Unlimited pages, 20,000 monthly visitors, 1 user, 1 root domain. Practical floor for active campaigns."
-  - date: 2026-05-08
+  - date: 2026-05-13
     plan: "Experiment"
     price: "$149/mo ($112/mo annual)"
     source: "https://unbounce.com/compare-plan-features/"
     source_label: "Unbounce plan comparison"
     source_id: unbounce-pricing
     note: "Unlimited pages, 30,000 monthly visitors, 3 users, 2 root domains, and unlimited A/B testing."
-  - date: 2026-05-08
+  - date: 2026-05-13
     plan: "Optimize"
     price: "$249/mo ($187/mo annual)"
     source: "https://unbounce.com/compare-plan-features/"
@@ -124,7 +124,7 @@ price_history:
 
 Unbounce is a landing page platform for marketers who need campaign pages, popups, sticky bars, A/B testing, AI copy assistance, and conversion optimization without waiting on a developer for every launch. It is not a general AI design toy. Its real buyer is a team spending money to acquire traffic and trying to convert more of that traffic into leads, trials, demos, signups, or purchases.
 
-As of 2026-05-08, AiPedia sees Unbounce as a strong paid-campaign tool with one important caveat: the attractive $29 Starter tier is not the tier most serious buyers will live on. Build, Experiment, and Optimize are the tiers that matter for active campaigns.
+As of 2026-05-13, AiPedia sees Unbounce as a strong paid-campaign tool with one important caveat: the attractive $29 Starter tier is not the tier most serious buyers will live on. Build, Experiment, and Optimize are the tiers that matter for active campaigns.
 
 ## System Verdict
 
@@ -151,7 +151,7 @@ As of 2026-05-08, AiPedia sees Unbounce as a strong paid-campaign tool with one 
 
 ## Pricing And Access
 
-Unbounce has a clear public plan ladder as of 2026-05-08:
+Unbounce has a clear public plan ladder as of 2026-05-13:
 
 - **Starter: $29/month or $22/month annually.** 5 pages, 500 monthly visitors, 1 user, 1 root domain.
 - **Build: $99/month or $74/month annually.** Unlimited pages, 20,000 monthly visitors, 1 user, 1 root domain.
@@ -220,13 +220,13 @@ If those are true, inspect Build, Experiment, and Optimize in that order. If the
 ## FAQ
 
 **Is Unbounce free?**
-Unbounce offers a free trial path, but the public paid tiers start at $29/month as of 2026-05-08.
+Unbounce offers a free trial path, but the public paid tiers start at $29/month as of 2026-05-13.
 
 **Which Unbounce plan should most teams inspect first?**
 Build is the practical floor for active campaigns. Experiment is the better first serious tier if A/B testing is required. Optimize is for teams that specifically want Smart Traffic.
 
 **Does Unbounce include A/B testing?**
-The official plan comparison lists unlimited A/B testing on Experiment and higher tiers as of 2026-05-08.
+The official plan comparison lists unlimited A/B testing on Experiment and higher tiers as of 2026-05-13.
 
 **What is Smart Traffic?**
 Unbounce describes Smart Traffic as AI optimization that routes visitors to the landing page variant most likely to convert for them. The current plan comparison places it on Optimize and higher tiers.
@@ -239,9 +239,9 @@ No. It can connect to lead and marketing systems, but it is a landing page and c
 
 ## Sources
 
-- [Unbounce pricing](https://unbounce.com/pricing/): plan ladder, trial language, plan positioning, and pricing checked 2026-05-08.
-- [Unbounce plan comparison](https://unbounce.com/compare-plan-features/): monthly/annual prices, visitor limits, users, domains, A/B testing, and Smart Traffic plan availability checked 2026-05-08.
-- [Unbounce features](https://unbounce.com/product/features/): landing page builder, AI optimization, AI copywriting, A/B testing, popups, sticky bars, integrations, and performance/security features checked 2026-05-08.
+- [Unbounce pricing](https://unbounce.com/pricing/): plan ladder, trial language, plan positioning, and pricing checked 2026-05-13.
+- [Unbounce plan comparison](https://unbounce.com/compare-plan-features/): monthly/annual prices, visitor limits, users, domains, A/B testing, and Smart Traffic plan availability checked 2026-05-13.
+- [Unbounce features](https://unbounce.com/product/features/): landing page builder, AI optimization, AI copywriting, A/B testing, popups, sticky bars, integrations, and performance/security features checked 2026-05-13.
 
 ## Related
 

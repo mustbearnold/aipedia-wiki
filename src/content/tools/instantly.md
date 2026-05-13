@@ -7,11 +7,11 @@ category: ai-automation
 company: Instantly AI Inc.
 url: https://instantly.ai
 pricing_model: paid
-price_range: "$30-$286+/month"
+price_range: "$47-$358+/month outreach; Lead Finder priced separately"
 status: active
 launched: 2021-10
-last_updated: 2026-05-08
-last_verified: 2026-05-08
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -30,32 +30,33 @@ facts:
     source: "https://instantly.ai/products/email-outreach"
     source_label: "Instantly email outreach"
     source_id: instantly-email
-    verified_at: 2026-05-08
+    verified_at: 2026-05-13
     volatility: low
     confidence: high
   pricing_anchor:
-    value: "Instantly pricing should be checked across product modules, because sending/outreach, lead database access, and deliverability features can be packaged separately."
+    value: "Instantly Outreach plans list Growth $47/mo, Hypergrowth $97/mo, Light Speed $358/mo, and Enterprise custom; Lead Finder is priced separately from Growth $47/mo through Enterprise custom."
     source: "https://instantly.ai/pricing?lng=en"
     source_label: "Instantly Pricing"
     source_id: instantly-official
-    verified_at: 2026-05-08
-    next_review_at: 2026-08-08
+    verified_at: 2026-05-13
+    next_review_at: 2026-06-13
     volatility: high
     confidence: high
   lead_database:
-    value: "Instantly Lead Finder is a distinct buyer consideration for teams that want prospecting data bundled with the outbound workflow rather than imported from Apollo, Clay, or a CRM."
+    value: "Instantly Lead Finder is sold separately from Outreach plans, with Growth at $47/mo (1,500-2,000 credits), Supersonic at $97/mo (5,000-7,500 credits), Hyper Credits from $197/mo (10K-200K credits), and Enterprise custom (200K+ credits) against a 450M+ B2B leads database."
     source: "https://instantly.ai/products/lead-finder"
     source_label: "Instantly Lead Finder"
     source_id: instantly-leads
-    verified_at: 2026-05-08
-    volatility: medium
+    verified_at: 2026-05-13
+    next_review_at: 2026-06-13
+    volatility: high
     confidence: high
   deliverability_focus:
     value: "The platform emphasizes deliverability and warmup/network features, making it more sales-outreach-specific than generic marketing automation tools."
     source: "https://instantly.ai/products/deliverability-network"
     source_label: "Instantly deliverability"
     source_id: instantly-deliverability
-    verified_at: 2026-05-08
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   watch_out_for:
@@ -63,11 +64,44 @@ facts:
     source: "https://instantly.ai/products/deliverability-network"
     source_label: "Instantly deliverability"
     source_id: instantly-deliverability
-    verified_at: 2026-05-08
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
+price_history:
+  - date: 2026-05-13
+    plan: "Outreach Growth"
+    price: "$47/mo: 1,000 uploaded contacts, 5,000 emails/mo, unlimited email accounts and warmup"
+    source: "https://instantly.ai/pricing?lng=en"
+    source_label: "Instantly Pricing"
+    source_id: instantly-official
+    verified_at: 2026-05-13
+    note: "Current entry Outreach plan; replaces prior $30 starter pricing."
+  - date: 2026-05-13
+    plan: "Outreach Hypergrowth"
+    price: "$97/mo: 25,000 contacts, 100,000 emails/mo, premium live support"
+    source: "https://instantly.ai/pricing?lng=en"
+    source_label: "Instantly Pricing"
+    source_id: instantly-official
+    verified_at: 2026-05-13
+    note: "Mid-tier Outreach plan."
+  - date: 2026-05-13
+    plan: "Outreach Light Speed"
+    price: "$358/mo: 100,000 contacts, 500,000 emails/mo, SISR system"
+    source: "https://instantly.ai/pricing?lng=en"
+    source_label: "Instantly Pricing"
+    source_id: instantly-official
+    verified_at: 2026-05-13
+    note: "Top public Outreach plan before Enterprise."
+  - date: 2026-05-13
+    plan: "Lead Finder Growth"
+    price: "$47/mo: 1,500-2,000 lead credits"
+    source: "https://instantly.ai/products/lead-finder"
+    source_label: "Instantly Lead Finder"
+    source_id: instantly-leads
+    verified_at: 2026-05-13
+    note: "Lead Finder is now a distinct buying surface, not bundled with Outreach."
 tags: [cold-email, sales-automation, email-outreach, lead-generation, email-deliverability]
-seo_title: "Instantly Review (May 2026): Cold Email, Warmup, Lead Finder"
+seo_title: "Instantly Review (May 2026): Pricing, Warmup, Lead Finder"
 meta_description: "Instantly is a cold-email outreach platform for sending accounts, warmup, campaigns, deliverability, unified inbox, and Lead Finder. Best for teams that already know outbound is the motion."
 author: "aipedia.wiki Editorial"
 best_for:
@@ -87,7 +121,11 @@ quick_answer: >-
 
 Instantly is a cold-email outreach platform. It focuses on sending accounts, warmup, deliverability, campaigns, reply handling, and a unified inbox. It also offers Lead Finder as a separate buyer consideration for teams that want prospect data inside the same ecosystem.
 
-As of May 8, 2026, Instantly is AiPedia's budget/outbound execution pick for sales teams that already know cold email is the motion and need sender infrastructure more than a full sales database or GTM enrichment workspace.
+As of May 13, 2026, Instantly is AiPedia's budget/outbound execution pick for sales teams that already know cold email is the motion and need sender infrastructure more than a full sales database or GTM enrichment workspace.
+
+## Recent changes
+
+- **May 13, 2026 verification:** Instantly now publishes Outreach plans at Growth $47/mo, Hypergrowth $97/mo, Light Speed $358/mo, and Enterprise custom. Lead Finder is sold separately from Growth $47/mo to Enterprise custom across the 450M+ B2B leads database. The prior $30 starter price is no longer the public entry point.
 
 ## System Verdict
 
@@ -112,7 +150,7 @@ Skip Instantly if you need one tool for database, enrichment, dialer, sequences,
 
 ## Pricing And Access
 
-Instantly publishes pricing on its official pricing page and separates some buyer considerations across product modules. Before paying, buyers should model:
+Instantly publishes Outreach pricing at Growth $47/mo, Hypergrowth $97/mo, Light Speed $358/mo, and Enterprise custom. Lead Finder is priced separately from Growth $47/mo through Enterprise custom. Before paying, buyers should model:
 
 - outreach plan needs
 - active contact limits
