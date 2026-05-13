@@ -3,19 +3,19 @@ type: trend
 slug: ai-coding-model-arms-race
 title: "AI Coding Tools Become Model Marketplaces"
 seo_title: "AI Coding Tools Become Model Marketplaces, Not Single-Model Assistants"
-meta_description: "Updated May 10, 2026: Copilot, Cursor, Claude Code, Codex, and coding agents are turning into model-routing marketplaces where budget control matters as much as model quality."
+meta_description: "Updated May 13, 2026: Copilot, Cursor, Claude Code, Codex, and coding agents are turning into model-routing marketplaces where budget control, security defaults, and consolidation matter as much as model quality."
 author: "aipedia.wiki Editorial"
 description: Coding assistants are becoming model marketplaces. The winning workflow routes routine work to cheaper lanes and reserves premium frontier models for hard repo tasks.
-timeframe: Accelerated through May 2026 as GPT-5.5, Copilot AI Credits, BYOK, Claude Code extra usage, Cursor usage controls, and Codex token pricing reshaped coding-agent buying.
+timeframe: Accelerated through May 2026 as GPT-5.5 (Apr 23), Claude Opus 4.7 (Apr 16), OpenAI Daybreak plus Codex Security (May 11), Codex Chrome extension (May 7), Copilot AI Credits, BYOK, Claude Code extra usage, Cursor usage controls, and Codex token pricing reshaped coding-agent buying. Codeium retired; Grok Code Fast 1 was deprecated.
 impact: high
-last_updated: 2026-05-10
-last_verified: 2026-05-10
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 ---
 
-AI coding tools are no longer just autocomplete products. They are becoming model marketplaces inside the editor, terminal, pull request, cloud agent, and code-review loop.
+AI coding tools are no longer just autocomplete products. They are becoming model marketplaces inside the editor, terminal, pull request, cloud agent, browser, and code-review loop.
 
-**AiPedia verdict, verified May 10, 2026:** the buyer question has changed from "which coding assistant is smartest?" to "which workflow routes the right task to the right model without surprising the budget?"
+**AiPedia verdict, verified May 13, 2026:** the buyer question has changed from "which coding assistant is smartest?" to "which workflow routes the right task to the right model without surprising the budget, and does it scan for secrets and risky code before commit?"
 
 ## What Is Happening
 
@@ -27,9 +27,9 @@ GitHub Copilot, Cursor, Claude Code, Codex, Windsurf-style editors, and terminal
 
 GitHub made the shift visible. Copilot added GPT-5.5 across its model picker for Pro+, Business, and Enterprise users, while also announcing that Copilot moves to GitHub AI Credits on June 1, 2026. GitHub's billing docs define those credits as token-based units that account for input, output, and cached tokens. Its VS Code BYOK release also lets Business and Enterprise users bring keys for providers such as Anthropic, Gemini, OpenAI, OpenRouter, Azure, Ollama, and Foundry Local.
 
-OpenAI pushed the same direction with Codex. OpenAI's GPT-5.5 launch says GPT-5.5 is rolling out in ChatGPT and Codex, and the Codex rate card now aligns most customers to token-based credit usage instead of old per-message pricing. Anthropic's Claude Code docs expose usage and cost reporting, while Claude's extra-usage help page says paid Claude users can continue after plan limits by switching to consumption-based pricing. Cursor's pricing page says every plan includes a set amount of model usage, with on-demand usage billed after the included amount is consumed.
+OpenAI pushed the same direction with Codex. The April 23, 2026 GPT-5.5 launch rolled the model into ChatGPT and Codex, and the Codex rate card now aligns most customers to token-based credit usage instead of old per-message pricing. On May 7, OpenAI shipped a Codex Chrome extension that lets Codex inspect open tabs, fill forms, and execute web flows alongside repo work. On May 11, OpenAI released Daybreak, a long-context planning model targeted at multi-file refactors and migrations, and Codex Security, a Codex variant that runs vulnerability checks, secret scans, and dependency audits inline with code edits. Anthropic shipped Claude Opus 4.7 on April 16, 2026, and Claude Code docs expose usage and cost reporting, while Claude's extra-usage help page says paid Claude users can continue after plan limits by switching to consumption-based pricing. Cursor's pricing page says every plan includes a set amount of model usage, with on-demand usage billed after the included amount is consumed.
 
-The trend is not just "better coding models." It is coding tools becoming routing, context, governance, and billing layers.
+Two market exits clarified the consolidation picture. Codeium was retired after its acquisition path closed, and xAI deprecated Grok Code Fast 1 in favor of newer reasoning models. The story is not just "better coding models." It is coding tools becoming routing, context, governance, billing, security, and now browser layers, with the long tail of single-purpose autocomplete tools getting compressed.
 
 ## Why It Matters
 
@@ -53,9 +53,9 @@ A weak default model can be offset by strong model choice and workflow control. 
 
 **Claude Code** wins when terminal-native repo work matters. It is strong for deliberate multi-file investigation, test repair, and longer command-driven sessions. The watch-out is usage governance: Pro/Max users get plan usage, API users need workspace limits, and extra usage can turn long agent sessions into variable spend.
 
-**Codex** wins when the user wants a long-running project agent that can inspect files, edit, run checks, and preserve a work log in one local workflow. The watch-out is model and speed choice: GPT-5.5, GPT-5.4, GPT-5.3-Codex, fast mode, and code-review routes have different credit costs.
+**Codex** wins when the user wants a long-running project agent that can inspect files, edit, run checks, and preserve a work log in one local workflow. The May 7 Chrome extension extends that reach to browser tabs, and the May 11 Codex Security variant adds vulnerability scanning, secret detection, and dependency audits inline with edits. Daybreak, also released May 11, targets long-context planning for multi-file refactors. The watch-out is model and speed choice: Daybreak, GPT-5.5, GPT-5.4, GPT-5.3-Codex, Codex Security, fast mode, and code-review routes all have different credit costs and SLAs.
 
-The strongest products will look less like autocomplete extensions and more like controlled engineering workbenches.
+The strongest products will look less like autocomplete extensions and more like controlled engineering workbenches that include security scanning, browser actions, and outcome tracking.
 
 ## What Buyers Should Do Now
 
@@ -82,6 +82,9 @@ Watch these signals through the next month:
 - Whether Cursor, Claude Code, Codex, and Copilot expose cleaner per-task usage reporting.
 - Whether cloud agents can summarize spend by branch, PR, repository, or workflow.
 - Whether teams set model routing policies instead of relying on individual developer habits.
+- Whether Codex Security and competing inline scanners (GitHub MCP secret and dependency scanning) become defaults rather than opt-ins.
+- Whether Daybreak-style long-context planning models reduce migration costs enough to justify their premium token rates.
+- Whether the next wave of consolidation pulls in surviving editor extensions or pushes them into BYOK-only modes.
 
 ## How This Affects You
 
@@ -103,14 +106,18 @@ AI coding is becoming a model-routing market. The tool that feels smartest in on
 
 ## Sources
 
-- [GitHub Copilot is moving to usage-based billing](https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/), verified 2026-05-10
-- [GitHub Docs: usage-based billing for Copilot individuals](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals), verified 2026-05-10
-- [GitHub Changelog: GPT-5.5 is generally available for GitHub Copilot](https://github.blog/changelog/2026-04-24-gpt-5-5-is-generally-available-for-github-copilot/), verified 2026-05-10
-- [GitHub Changelog: BYOK in VS Code](https://github.blog/changelog/2026-04-22-bring-your-own-language-model-key-in-vs-code-now-available/), verified 2026-05-10
-- [OpenAI: Introducing GPT-5.5](https://openai.com/index/introducing-gpt-5-5/), verified 2026-05-10
-- [OpenAI Help: Codex rate card](https://help.openai.com/en/articles/20001106-codex-rate-card), verified 2026-05-10
-- [Claude Code docs: manage costs effectively](https://code.claude.com/docs/en/costs), verified 2026-05-10
-- [Claude Help: manage extra usage for paid Claude plans](https://support.claude.com/en/articles/12429409-manage-extra-usage-for-paid-claude-plans), verified 2026-05-10
-- [Cursor pricing](https://cursor.com/pricing), verified 2026-05-10
+- [OpenAI Daybreak and Codex Security launch](/news/2026-05-11-openai-daybreak-codex-security/), verified 2026-05-13
+- [OpenAI Codex Chrome extension](/news/2026-05-07-openai-codex-chrome-extension/), verified 2026-05-13
+- [Anthropic Claude Opus 4.7 launch](/news/2026-04-16-anthropic-claude-opus-4-7/), verified 2026-05-13
+- [OpenAI GPT-5.5 launch](/news/2026-04-23-openai-gpt-5-5/), verified 2026-05-13
+- [GitHub Copilot is moving to usage-based billing](https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/), verified 2026-05-13
+- [GitHub Docs: usage-based billing for Copilot individuals](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals), verified 2026-05-13
+- [GitHub Changelog: GPT-5.5 is generally available for GitHub Copilot](https://github.blog/changelog/2026-04-24-gpt-5-5-is-generally-available-for-github-copilot/), verified 2026-05-13
+- [GitHub Changelog: BYOK in VS Code](https://github.blog/changelog/2026-04-22-bring-your-own-language-model-key-in-vs-code-now-available/), verified 2026-05-13
+- [OpenAI: Introducing GPT-5.5](https://openai.com/index/introducing-gpt-5-5/), verified 2026-05-13
+- [OpenAI Help: Codex rate card](https://help.openai.com/en/articles/20001106-codex-rate-card), verified 2026-05-13
+- [Claude Code docs: manage costs effectively](https://code.claude.com/docs/en/costs), verified 2026-05-13
+- [Claude Help: manage extra usage for paid Claude plans](https://support.claude.com/en/articles/12429409-manage-extra-usage-for-paid-claude-plans), verified 2026-05-13
+- [Cursor pricing](https://cursor.com/pricing), verified 2026-05-13
 - [Daily agentic coding workflow](/workflows/agentic-coding-workflow/)
 - [Best AI coding tool answer](/answers/best-ai-coding-tool-2026/)

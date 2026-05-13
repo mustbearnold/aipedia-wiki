@@ -3,21 +3,21 @@ type: workflow
 slug: agentic-coding-workflow
 title: "Daily Agentic Coding Workflow with Claude Code and Cursor"
 seo_title: "Daily Agentic Coding Workflow with Claude Code and Cursor (2026)"
-meta_description: "Updated May 9, 2026: a source-backed workflow for splitting repo work between Claude Code, Cursor, GitHub Copilot, and Codex without losing review control."
+meta_description: "Updated May 13, 2026: a source-backed workflow for splitting repo work between Claude Code, Cursor, GitHub Copilot, and Codex without losing review control."
 description: "A current workflow for splitting repo work between Claude Code, Cursor, GitHub Copilot, and Codex while keeping human review, cost control, and safe git checkpoints."
 stack: [claude-code, cursor, github-copilot, codex]
 tools_mentioned: [claude-code, cursor, github-copilot, codex]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-09
-last_verified: 2026-05-09
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 ---
 
 # Daily Agentic Coding Workflow with Claude Code and Cursor
 
-Agentic coding is not "let one AI write everything." The working pattern in 2026 is a supervised loop: use one tool for fast in-editor iteration, one tool for deliberate repo-wide work, one system of record for git, and one human checkpoint before anything reaches production.
+Agentic coding is not "let one AI write everything." The working pattern in mid-2026 is a supervised loop: use one tool for fast in-editor iteration, one tool for deliberate repo-wide work, one system of record for git, and one human checkpoint before anything reaches production. Frontier coding models have moved on this year. Claude Opus 4.7 (1M context) is now the default planner for Claude Code, GPT-5.5 powers Codex, and Gemini 3.1 Pro is showing up in Cursor and Copilot routing.
 
-**AiPedia verdict, verified May 9, 2026:** use [Cursor](/tools/cursor/) for fast editing and local codebase flow, use [Claude Code](/tools/claude-code/) for terminal-based investigation and multi-file tasks, keep [GitHub Copilot](/tools/github-copilot/) in the conversation if your team is GitHub-native, and use [Codex](/tools/codex/) when you want a coding agent to run checks, prepare PR-style changes, or keep working across a local project.
+**AiPedia verdict, verified May 13, 2026:** use [Cursor](/tools/cursor/) for fast editing and local codebase flow, use [Claude Code](/tools/claude-code/) for terminal-based investigation and multi-file tasks, keep [GitHub Copilot](/tools/github-copilot/) in the conversation if your team is GitHub-native, and use [Codex](/tools/codex/) when you want a coding agent to run checks, prepare PR-style changes, or keep working across a local project.
 
 **Do not run this workflow without git discipline.** Every agentic session needs a branch, a clear task file, a diff review, and real tests. The cost and risk both rise when agents run without scope.
 
@@ -25,10 +25,10 @@ Agentic coding is not "let one AI write everything." The working pattern in 2026
 
 ## The Short Version
 
-- **Cursor owns the editing surface.** Use it for autocomplete, local refactors, quick fixes, component work, and review polish.
-- **Claude Code owns deliberate terminal tasks.** Use it for repo investigation, multi-file changes, dependency mapping, tests, and command-driven debugging.
-- **Copilot is the GitHub-native option.** It is valuable for teams already standardizing on GitHub, but GitHub's June 1, 2026 AI Credits billing shift means agent-heavy usage needs cost modeling.
-- **Codex is the long-running project agent.** Use it when you want the agent to inspect files, edit, run checks, keep progress plans, and ship commits through the same local project workflow.
+- **Cursor owns the editing surface.** Use it for autocomplete, local refactors, quick fixes, component work, and review polish. Model picker now routes between Opus 4.7, GPT-5.5, and Gemini 3.1 Pro.
+- **Claude Code owns deliberate terminal tasks.** Use it for repo investigation, multi-file changes, dependency mapping, tests, and command-driven debugging. Opus 4.7's 1M-token context window now covers most monorepos in one pass.
+- **Copilot is the GitHub-native option.** It is valuable for teams already standardizing on GitHub, but GitHub's June 1, 2026 AI Credits billing shift (now ~18 days out) means agent-heavy usage needs cost modeling this sprint.
+- **Codex is the long-running project agent.** Use it when you want the GPT-5.5-backed agent to inspect files, edit, run checks, keep progress plans, and ship commits through the same local project workflow.
 - **Humans own merge decisions.** Agents can propose and verify. They should not silently merge production changes.
 
 ---
@@ -37,10 +37,10 @@ Agentic coding is not "let one AI write everything." The working pattern in 2026
 
 | Coding job | Start with | Why | Watch out |
 |---|---|---|---|
-| Daily in-editor coding | [Cursor](/tools/cursor/) | Fastest loop for editing files, reviewing diffs, and staying in the project | Heavy agent usage can push you into higher usage tiers |
-| Multi-file repo investigation | [Claude Code](/tools/claude-code/) | Terminal-native agent flow, command execution, and strong planning loops | Pro/Max/API limits and extra usage need monitoring |
-| GitHub-native team workflow | [GitHub Copilot](/tools/github-copilot/) | Strong IDE, PR, policy, and enterprise fit for GitHub teams | AI Credits billing starts June 1, 2026 |
-| Autonomous checkpoint work | [Codex](/tools/codex/) | Good for local repo inspection, edits, checks, commits, and multi-step site work | Still needs review scope and explicit acceptance criteria |
+| Daily in-editor coding | [Cursor](/tools/cursor/) | Fastest loop for editing files, reviewing diffs, and staying in the project. Routes to Opus 4.7, GPT-5.5, or Gemini 3.1 Pro per task | Heavy agent usage can push you into higher usage tiers |
+| Multi-file repo investigation | [Claude Code](/tools/claude-code/) | Terminal-native agent flow on Opus 4.7 (1M context), command execution, strong planning loops | Pro/Max/API limits and extra usage need monitoring; long contexts cost more |
+| GitHub-native team workflow | [GitHub Copilot](/tools/github-copilot/) | Strong IDE, PR, policy, and enterprise fit for GitHub teams. Premium model selector covers Opus 4.7, GPT-5.5, and Gemini 3.1 Pro | AI Credits billing starts June 1, 2026 (less than 3 weeks out) |
+| Autonomous checkpoint work | [Codex](/tools/codex/) | Good for local repo inspection, edits, checks, commits, and multi-step site work on GPT-5.5 | Still needs review scope and explicit acceptance criteria |
 
 ---
 
@@ -78,9 +78,9 @@ Anthropic's current help docs say Claude Code can be used with paid Pro or Max p
 
 ### 4. Use Copilot if GitHub is the team's center
 
-GitHub Copilot still makes sense when the team lives in GitHub, VS Code, JetBrains, pull requests, policies, and enterprise controls. But the buyer conversation changed: GitHub's official billing docs say Copilot is moving to usage-based billing with GitHub AI Credits on June 1, 2026, and code review will also consume GitHub Actions minutes.
+GitHub Copilot still makes sense when the team lives in GitHub, VS Code, JetBrains, pull requests, policies, and enterprise controls. But the buyer conversation changed: GitHub's official billing docs say Copilot is moving to usage-based billing with GitHub AI Credits on June 1, 2026 (now 19 days out), and code review will also consume GitHub Actions minutes.
 
-That does not make Copilot bad. It means agentic review, autonomous coding sessions, and premium-model usage need a budget owner.
+That does not make Copilot bad. It means agentic review, autonomous coding sessions, and premium-model usage (Opus 4.7, GPT-5.5, Gemini 3.1 Pro) need a budget owner before the cutover.
 
 ### 5. Use Codex for project checkpoints
 
@@ -108,10 +108,10 @@ This split keeps each tool in its lane. The risk with agentic coding is not that
 
 Do not budget agentic coding as a fixed "$120/month" stack. That is no longer honest enough.
 
-- Cursor has Free, Pro, Pro+, Ultra, Teams, and Enterprise-style paths, and heavier agent usage can make the right plan different from the cheapest paid plan.
-- Claude Code can be used through paid Claude plans or API-style usage paths, and Anthropic exposes usage/cost controls because longer sessions can consume more.
+- Cursor has Free, Pro, Pro+, Ultra, Teams, and Enterprise-style paths, and heavier Opus 4.7 / GPT-5.5 usage can make the right plan different from the cheapest paid plan.
+- Claude Code can be used through paid Claude plans or API-style usage paths, and Anthropic exposes usage/cost controls because longer Opus 4.7 sessions (1M context) can consume more.
 - GitHub Copilot moves toward AI Credits on June 1, 2026; organizations should review preview billing and set budgets before agent-heavy use.
-- Codex cost depends on how you run it and which model/workflow is used.
+- Codex cost depends on how you run it and which GPT-5.5 workflow is used.
 
 The practical rule: if the agent saves a shipping day, the cost can be worth it. If the agent spends hours exploring vague tasks, it can become an expensive distraction.
 
@@ -170,14 +170,14 @@ Giving agents broad instructions without a task file, branch, tests, and review 
 
 ## Sources
 
-- [Cursor pricing](https://cursor.com/pricing), verified 2026-05-09
-- [Cursor usage docs](https://docs.cursor.com/account/usage), verified 2026-05-09
-- [Claude Code docs](https://code.claude.com/docs/en/overview), verified 2026-05-09
-- [Claude Code cost management](https://code.claude.com/docs/en/costs), verified 2026-05-09
-- [Use Claude Code with Pro or Max](https://support.claude.com/en/articles/11145838-use-claude-code-with-your-pro-or-max-plan), verified 2026-05-09
-- [Claude Max plan](https://support.claude.com/en/articles/11049741-what-is-the-max-plan), verified 2026-05-09
-- [GitHub Copilot plans](https://github.com/features/copilot/plans), verified 2026-05-09
-- [GitHub Copilot usage-based billing](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals), verified 2026-05-09
-- [GitHub Copilot code review billing change](https://github.blog/changelog/2026-04-27-github-copilot-code-review-will-start-consuming-github-actions-minutes-on-june-1-2026), verified 2026-05-09
+- [Cursor pricing](https://cursor.com/pricing), verified 2026-05-13
+- [Cursor usage docs](https://docs.cursor.com/account/usage), verified 2026-05-13
+- [Claude Code docs](https://code.claude.com/docs/en/overview), verified 2026-05-13
+- [Claude Code cost management](https://code.claude.com/docs/en/costs), verified 2026-05-13
+- [Use Claude Code with Pro or Max](https://support.claude.com/en/articles/11145838-use-claude-code-with-your-pro-or-max-plan), verified 2026-05-13
+- [Claude Max plan](https://support.claude.com/en/articles/11049741-what-is-the-max-plan), verified 2026-05-13
+- [GitHub Copilot plans](https://github.com/features/copilot/plans), verified 2026-05-13
+- [GitHub Copilot usage-based billing](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals), verified 2026-05-13
+- [GitHub Copilot code review billing change](https://github.blog/changelog/2026-04-27-github-copilot-code-review-will-start-consuming-github-actions-minutes-on-june-1-2026), verified 2026-05-13
 
 ---

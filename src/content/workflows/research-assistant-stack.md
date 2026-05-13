@@ -2,15 +2,15 @@
 type: workflow
 slug: research-assistant-stack
 title: "Research Assistant Stack: Perplexity, Claude, Notion AI"
-seo_title: "Research Assistant Stack: Perplexity, Claude, Notion AI (April 2026)"
-meta_description: "Answer deep research questions with sourced citations, organized notes, and follow-up threads in 25 minutes per task. Stack costs $65/mo."
+seo_title: "Research Assistant Stack: Perplexity, Claude, Notion AI (May 2026)"
+meta_description: "Answer deep research questions with sourced citations, organized notes, and follow-up threads in 25 minutes per task. Stack costs $65/mo. Verified May 13, 2026."
 description: "Answer deep research questions with sourced citations, organized notes, and follow-up threads in a single workflow"
 stack: [perplexity, claude, notion-ai]
 tools_mentioned: [perplexity, claude, notion-ai]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-03
-last_verified: 2026-05-03
-update_frequency: quarterly
+last_updated: 2026-05-13
+last_verified: 2026-05-13
+update_frequency: monthly
 ---
 
 # Research Assistant Stack: Perplexity, Claude, Notion AI
@@ -107,7 +107,7 @@ Perplexity citations link to dead pages at roughly a 5% rate. Manually verify th
 | Notion AI | $25 | Add-on to existing Notion workspace |
 | **Total** | **$65** | Vs ~$200 per freelance analyst report |
 
-*Prices verified 2026-04-17 via [Perplexity pricing](https://www.perplexity.ai/pro), [claude.com/pricing](https://claude.com/pricing), and [Notion pricing](https://www.notion.so/pricing).*
+*Prices verified 2026-05-13 via [Perplexity pricing](https://www.perplexity.ai/pro), [claude.com/pricing](https://claude.com/pricing), and [Notion pricing](https://www.notion.so/pricing).*
 
 Human analyst alternative: $150-300 per 2-hour task times 20 tasks equals ~$4,000/month. This stack: $65.
 
@@ -133,7 +133,7 @@ Not required. The $200/mo tier is only justified at 100+ queries/day. Pro's 20/d
 
 ## System Notes
 
-This page documents an operational stack verified by the aipedia.wiki editorial pipeline. Last verified 2026-04-17.
+This page documents an operational stack verified by the aipedia.wiki editorial pipeline. Last verified 2026-05-13.
 
 ## Related
 

@@ -2,24 +2,24 @@
 type: company
 slug: elevenlabs-company
 title: ElevenLabs
-seo_title: "ElevenLabs Company Profile (2026), aipedia.wiki"
-meta_description: "ElevenLabs offers AI voice synthesis, agents, dubbing, music generation, and transcription. Founded 2022, valued at $11B after Series D."
+seo_title: "ElevenLabs Company Profile (May 2026), aipedia.wiki"
+meta_description: "ElevenLabs offers AI voice synthesis, agents, dubbing, music generation, and transcription. Founded 2022, valued at $11B after Series D. Verified May 13, 2026."
 author: "aipedia.wiki Editorial"
 company_type: startup
 founded: 2022
 hq: New York, USA
-funding: "$500M Series D; $11B valuation"
+funding: "$500M Series D; $11B valuation; total $781M"
 key_products: [elevenlabs]
-last_updated: 2026-05-10
-update_frequency: quarterly
-last_verified: 2026-05-10
+last_updated: 2026-05-13
+update_frequency: monthly
+last_verified: 2026-05-13
 ---
 
 # ElevenLabs
 
 ElevenLabs, founded in 2022 by Piotr Dabkowski and Mati Staniszewski, builds AI audio models and products for text-to-speech, speech-to-text, sound effects, dubbing, music generation, and conversational agents.
 
-As of May 10, 2026, ElevenLabs' strongest verified company signal is its official May 2026 update: the company said it crossed $500 million in ARR during the first four months of 2026, after ending 2025 with $350 million in ARR. Its February 2026 Series D raised $500 million at an $11 billion valuation and brought total funding to $781 million.
+As of May 13, 2026, ElevenLabs' strongest verified company signal is its official May 2026 update: the company said it crossed $500 million in ARR during the first four months of 2026, after ending 2025 with $350 million in ARR. Its February 2026 Series D raised $500 million at an $11 billion valuation and brought total funding to $781 million.
 
 ## Key Facts
 | | |
@@ -59,7 +59,7 @@ The main buyer risk is cost and governance. ElevenLabs pricing is credit-based f
 
 ## Current Buyer Notes
 
-| Buyer question | May 2026 answer |
+| Buyer question | May 13, 2026 answer |
 |---|---|
 | **Best product for creators** | ElevenCreative / ElevenLabs TTS when narration, dubbing, or brand voice quality matters |
 | **Best product for developers** | ElevenAPI for text-to-speech, speech-to-text, dubbing, sound effects, music, and agent integrations |

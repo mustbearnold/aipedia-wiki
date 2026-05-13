@@ -3,19 +3,19 @@ type: trend
 slug: long-context-standard
 title: "Long Context Becomes Standard, 1M+ Tokens Everywhere"
 seo_title: "1M+ Token Context Windows Standard (2026), aipedia.wiki"
-meta_description: "Million-token context windows are standard across Gemini 3.1 Pro, Claude Opus 4.7, and Llama 4 Scout in 2026. The RAG-first pattern that defined 2023-2024 is becoming optional."
+meta_description: "Million-token context windows are standard across Gemini 3.1 Pro, Claude Opus 4.7 (1M), GPT-5.5 (1M), and Llama 4 Scout (10M) in 2026. The RAG-first pattern that defined 2023-2024 is becoming optional."
 author: "aipedia.wiki Editorial"
-description: 1M+ token context is table stakes for flagship models in 2026. Llama 4 Scout ships 10M. The RAG-first architecture pattern is no longer a default.
-timeframe: Claude 100K in 2023. Gemini 1M in 2024. Claude 1M + Llama 4 Scout 10M in 2026. Next frontier is retrieval-quality over raw window size.
+description: 1M+ token context is table stakes for flagship models in 2026. Opus 4.7 and GPT-5.5 both ship 1M. Llama 4 Scout ships 10M. The RAG-first architecture pattern is no longer a default.
+timeframe: Claude 100K in 2023. Gemini 1M in 2024. Opus 4.7 and GPT-5.5 at 1M, Gemini 3.1 Pro at 2M, Llama 4 Scout at 10M in 2026. Next frontier is retrieval quality over raw window size.
 impact: high
-last_updated: 2026-05-03
-last_verified: 2026-05-03
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 ---
 
 ## What Is Happening
 
-Million-plus token context windows are now standard on flagship models. Gemini 3.1 Pro ships a 2M-token window. Claude Opus 4.7 ships 1M tokens. OpenAI's ChatGPT tier windows are model and plan dependent, while Llama 4 Scout, released April 5 2026, ships a 10M-token context window and runs on a single H100.
+Million-plus token context windows are now standard on flagship models. Gemini 3.1 Pro ships a 2M-token window. Anthropic's Claude Opus 4.7, released April 16, 2026, ships 1M tokens. OpenAI's GPT-5.5, released April 23, 2026, also ships 1M tokens for API customers. Llama 4 Scout, released April 5, 2026, ships a 10M-token context window and runs on a single H100. Mistral Large 3, re-released under Apache 2.0 on April 28, 2026, ships 512K tokens in open weights.
 
 At 1M tokens, a single prompt can hold an entire mid-sized codebase, a full book, a year of meeting transcripts, or a complete product spec plus customer research. At 10M tokens, it can hold all of the above combined.
 
@@ -35,15 +35,17 @@ The practical effect is that retrieval-augmented generation, the dominant 2023-2
 
 **Google Gemini.** 2M tokens, well-utilized, with native multimodal input (PDFs, video, audio) has made Gemini the default for document-heavy workflows.
 
-**Anthropic Claude.** Claude Opus 4.7 at 1M tokens with strong attention over long context is the choice for code and legal work.
+**Anthropic Claude.** Claude Opus 4.7 at 1M tokens with strong attention over long context is the choice for code and legal work, and is the default engine inside Claude Code.
 
-**Meta Llama 4 Scout.** 10M tokens in an open-weight model changes the ceiling for self-hosted applications.
+**OpenAI GPT-5.5.** Caught up to the 1M frontier in April 2026 and is integrated across ChatGPT Enterprise and the API.
+
+**Meta Llama 4 Scout.** 10M tokens in an open-weight model changes the ceiling for self-hosted applications. Mistral Large 3 at 512K under Apache 2.0 broadens that choice for European and sovereign buyers.
 
 **Losers:** Pure RAG tooling companies that built moats around vector retrieval are pivoting to hybrid or getting squeezed. NotebookLM, which treats the uploaded corpus as the context, is the first-party example of the new pattern.
 
 ## What To Watch Next
 
-**Attention quality over window size.** The next race is not "larger window" but "better attention inside the window." Expect benchmarks focused on middle-of-context retrieval, cross-document reasoning, and long-horizon planning.
+**Attention quality over window size.** The next race is not "larger window" but "better attention inside the window." Expect benchmarks focused on middle-of-context retrieval, cross-document reasoning, and long-horizon planning. ICLR 2026, which opens in Rio on April 23, 2026, is showcasing several long-context attention papers that will set the next year of evaluation language.
 
 **Caching strategies.** Prompt caching (Anthropic shipped this in 2024, OpenAI and Google followed) changes the economics of long-context workloads. Loading 500K tokens once and asking 50 questions against it is now viable.
 

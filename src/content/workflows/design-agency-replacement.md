@@ -3,13 +3,13 @@ type: workflow
 slug: design-agency-replacement
 title: "Replace Some Design Agency Work with Midjourney, Figma, Canva, and Firefly"
 seo_title: "AI Design Agency Replacement Workflow (2026): Midjourney, Figma, Canva & Firefly"
-meta_description: "Updated May 9, 2026: a practical AI design workflow for marketing visuals, brand assets, social creative, and landing-page mockups using Midjourney, Figma, Canva, and Adobe Firefly."
+meta_description: "Updated May 13, 2026: a practical AI design workflow for marketing visuals, brand assets, social creative, and landing-page mockups using Midjourney, Figma, Canva, and Adobe Firefly."
 description: "A practical AI design workflow for marketing visuals, brand assets, social creative, and landing-page mockups."
-stack: [midjourney, figma, canva, adobe-firefly]
-tools_mentioned: [midjourney, figma, canva, adobe-firefly]
+stack: [midjourney, figma, canva, adobe-firefly, magnific]
+tools_mentioned: [midjourney, figma, canva, adobe-firefly, magnific]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-09
-last_verified: 2026-05-09
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 ---
 
@@ -17,21 +17,22 @@ update_frequency: monthly
 
 This workflow can replace a slice of design-agency work: campaign concepts, moodboards, social assets, landing-page mockups, simple ads, thumbnails, flyers, and rapid creative variants. It should not be sold as a full agency replacement for brand strategy, regulated claims, packaging systems, accessibility review, print production, or high-stakes client approvals.
 
-As of May 9, 2026, use [Midjourney](/tools/midjourney/) for visual concepts, [Figma](/tools/figma/) for editable layouts and handoff, [Canva](/tools/canva/) for finished social/marketing assets, and [Adobe Firefly](/tools/adobe-firefly/) when commercial creative review, Photoshop/Express workflow, or credit-governed Adobe generation matters.
+As of May 13, 2026, use [Midjourney](/tools/midjourney/) for visual concepts (V8 is current), [Figma](/tools/figma/) for editable layouts and handoff, [Canva](/tools/canva/) for finished social/marketing assets, and [Adobe Firefly](/tools/adobe-firefly/) when commercial creative review, Photoshop/Express workflow, or credit-governed Adobe generation matters. For high-fidelity hero retouching and upscales, layer [Magnific](/tools/magnific/) (formerly Freepik's upscaler line, now standalone) on top of the Midjourney pass.
 
 ## The short version
 
-- Use Midjourney for concepts, art direction, thumbnail directions, campaign hero imagery, and exploratory visuals. Use Pro or Mega if private client work requires Stealth Mode.
-- Use Figma for landing-page sections, UI mockups, reusable components, comments, dev handoff, and files a designer or developer can keep editing.
+- Use Midjourney V8 for concepts, art direction, thumbnail directions, campaign hero imagery, and exploratory visuals. Use Pro or Mega if private client work requires Stealth Mode.
+- Use Figma for landing-page sections, UI mockups, reusable components, comments, dev handoff, and files a designer or developer can keep editing. Figma Make and the May 2026 Sites builder cover light landing-page production.
 - Use Canva for publishable social posts, ads, flyers, thumbnails, resizing, brand-kit assets, and non-designer editing.
 - Use Adobe Firefly when the creative needs Adobe-native editing, generative credits, Photoshop/Express workflow, or a commercially safer review path.
-- Do not quote one universal monthly stack price. Midjourney, Figma, Canva, and Firefly all have plan, seat, region, credit, and usage differences.
+- Use Magnific for upscaling, relighting, and detail enrichment on the final hero before export.
+- Do not quote one universal monthly stack price. Midjourney, Figma, Canva, Firefly, and Magnific all have plan, seat, region, credit, and usage differences.
 
 ## The stack
 
 ### [Midjourney](/tools/midjourney/): visual direction and concepts
 
-Midjourney owns the concept phase: moodboards, hero-image directions, art-style exploration, campaign imagery, and thumbnail ideas. The current official plan comparison lists Basic, Standard, Pro, and Mega subscriptions, with Standard/Pro/Mega supporting unlimited image generations in Relax Mode and Pro/Mega adding Stealth Mode.
+Midjourney V8 owns the concept phase: moodboards, hero-image directions, art-style exploration, campaign imagery, and thumbnail ideas. The current official plan comparison lists Basic, Standard, Pro, and Mega subscriptions, with Standard/Pro/Mega supporting unlimited image generations in Relax Mode and Pro/Mega adding Stealth Mode.
 
 Use it for imagery, not final typography. Generated text, precise logos, pricing badges, legal copy, and accessibility-critical elements should be rebuilt in Figma, Canva, or Adobe tools.
 
@@ -53,11 +54,15 @@ Firefly is the safer add-on when a team already uses Photoshop, Adobe Express, o
 
 Use Firefly for production edits, object removal, expansion, Photoshop-connected revisions, and brand-sensitive creative where a pure prompt-to-image workflow is too loose.
 
+### [Magnific](/tools/magnific/): upscale, relight, enrich
+
+Magnific is the finishing step. Use it for high-resolution upscales, AI relighting, and structured detail injection on a Midjourney or Firefly base. The current plan ladder runs Free, Pro, Premium, and Business with credit-based generation. Bring the chosen hero into Magnific, lock the prompt, and only ship the enriched export to Figma or Canva once the brand check passes.
+
 ## The workflow, step by step
 
 1. Define the brief in one file: audience, offer, brand constraints, forbidden claims, required sizes, references, deadline, and approval owner. Include the exact deliverables, such as hero banner, landing-page section, Instagram ad, YouTube thumbnail, one-page flyer, and email header.
 
-2. Generate concept directions in Midjourney. Keep prompts tied to the brief and generate a small set of directions rather than hundreds of random variants. Save both winners and rejected outputs so the next round has a visible decision trail.
+2. Generate concept directions in Midjourney V8. Keep prompts tied to the brief and generate a small set of directions rather than hundreds of random variants. Save both winners and rejected outputs so the next round has a visible decision trail.
 
 3. Move the chosen visual direction into Figma. Build the landing-page section, ad layout, or component set with real text, real spacing, and reusable styles. Keep final words, pricing, disclaimers, and CTA labels editable.
 
@@ -65,9 +70,11 @@ Use Firefly for production edits, object removal, expansion, Photoshop-connected
 
 5. Use Firefly or Photoshop when the asset needs production editing: generative fill, object removal, expansion, background changes, image cleanup, or Adobe-native export. This is also the safer route when a stakeholder asks, "Can we use this commercially?"
 
-6. Run the human review: spelling, claims, logo correctness, brand colors, mobile readability, contrast, image artifacts, licensing/rights, file names, alt text, and final dimensions. Check every CTA and any price/discount language manually.
+6. Upscale and finish the hero in Magnific. Use Sharpdetail or Quality for product/editorial work, lock the creativity slider once the look is right, and keep the structured prompt the same as the Midjourney run so the upscale does not invent new geometry.
 
-7. Package the files with a clear folder structure: `/brief`, `/concepts`, `/figma-exports`, `/canva-finals`, `/firefly-edits`, and `/approved`. Include the source prompt set and approval notes for repeatability.
+7. Run the human review: spelling, claims, logo correctness, brand colors, mobile readability, contrast, image artifacts, licensing/rights, file names, alt text, and final dimensions. Check every CTA and any price/discount language manually.
+
+8. Package the files with a clear folder structure: `/brief`, `/concepts`, `/figma-exports`, `/canva-finals`, `/firefly-edits`, `/magnific-upscales`, and `/approved`. Include the source prompt set and approval notes for repeatability.
 
 ## Where it breaks
 
@@ -85,10 +92,11 @@ Agency replacement breaks hardest on strategy, taste, legal review, and final ac
 
 | Tool | Plan | Price | Notes |
 |---|---|---|---|
-| [Midjourney](/tools/midjourney/) | Standard, Pro, or Mega | $30-$120/mo | Pro/Mega if Stealth Mode or higher private-client throughput matters |
-| [Figma](/tools/figma/) | Professional, Organization, or Enterprise as needed | Verify by seat and product | Budget by editor seats, Dev Mode, Make/AI, organization controls, and collaboration needs |
+| [Midjourney](/tools/midjourney/) | Standard, Pro, or Mega (V8) | $30 to $120/mo | Pro/Mega if Stealth Mode or higher private-client throughput matters |
+| [Figma](/tools/figma/) | Professional, Organization, or Enterprise as needed | Verify by seat and product | Budget by editor seats, Dev Mode, Make/AI, Sites, organization controls, and collaboration needs |
 | [Canva](/tools/canva/) | Free, Pro, Teams, Business, or Enterprise | Verify in your region/account | Use free first; upgrade when brand kit, resizing, templates, teams, or premium assets save time |
-| [Adobe Firefly](/tools/adobe-firefly/) | Free, Standard, Pro, Pro Plus, Premium, or Creative Cloud bundle | $0-$199.99/mo list paths before discounts | Budget by credits, premium features, video/audio use, and Adobe app needs |
+| [Adobe Firefly](/tools/adobe-firefly/) | Free, Standard, Pro, Pro Plus, Premium, or Creative Cloud bundle | $0 to $199.99/mo list paths before discounts | Budget by credits, premium features, video/audio use, and Adobe app needs |
+| [Magnific](/tools/magnific/) | Free, Pro, Premium, or Business | Verify current credit packs | Credit-based; finishing-only spend, not concept exploration |
 
 ## Who this is for
 
@@ -112,13 +120,14 @@ It can beat slow agency iteration on simple production tasks, but it does not re
 
 ## Methodology
 
-This workflow page was rechecked on May 9, 2026 against current official Midjourney, Figma, Canva, and Adobe Firefly pages. Pricing, credit rules, plan names, and AI feature access can change quickly, so buyers should verify their region, account, and seat mix before committing.
+This workflow page was rechecked on May 13, 2026 against current official Midjourney, Figma, Canva, Adobe Firefly, and Magnific pages. Pricing, credit rules, plan names, and AI feature access can change quickly, so buyers should verify their region, account, and seat mix before committing.
 
 ## Sources
 
-- [Midjourney plan comparison](https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans) (verified 2026-05-09)
-- [Figma pricing](https://www.figma.com/pricing/) (verified 2026-05-09)
-- [Canva AI](https://www.canva.com/canva-ai/) (verified 2026-05-09)
-- [Canva pricing](https://www.canva.com/pricing/) (verified 2026-05-09)
-- [Adobe Firefly plans](https://www.adobe.com/products/firefly/plans.html) (verified 2026-05-09)
-- [Adobe Firefly April 2026 creative-agent update](https://news.adobe.com/news/2026/04/adobe-new-creative-agent) (verified 2026-05-09)
+- [Midjourney plan comparison](https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans) (verified 2026-05-13)
+- [Figma pricing](https://www.figma.com/pricing/) (verified 2026-05-13)
+- [Canva AI](https://www.canva.com/canva-ai/) (verified 2026-05-13)
+- [Canva pricing](https://www.canva.com/pricing/) (verified 2026-05-13)
+- [Adobe Firefly plans](https://www.adobe.com/products/firefly/plans.html) (verified 2026-05-13)
+- [Adobe Firefly April 2026 creative-agent update](https://news.adobe.com/news/2026/04/adobe-new-creative-agent) (verified 2026-05-13)
+- [Magnific pricing](https://magnific.ai/pricing) (verified 2026-05-13)

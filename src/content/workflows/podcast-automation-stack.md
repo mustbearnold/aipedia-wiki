@@ -2,15 +2,15 @@
 type: workflow
 slug: podcast-automation-stack
 title: "Podcast Automation Stack: Claude, ElevenLabs, Descript, Fish Audio"
-seo_title: "Podcast Automation Stack: Claude, ElevenLabs, Descript, Fish Audio (April 2026)"
-meta_description: "Turn a 60-minute interview into a polished episode plus five social clips in 1.5 hours of hands-on time. Stack costs $78/mo."
+seo_title: "Podcast Automation Stack: Claude, ElevenLabs, Descript, Fish Audio (May 2026)"
+meta_description: "Turn a 60-minute interview into a polished episode plus five social clips in 1.5 hours of hands-on time. Stack costs $78/mo. Verified May 13, 2026."
 description: "Turn a 60-minute interview into a polished episode plus five social clips in under 2 hours of hands-on time"
 stack: [claude, elevenlabs, descript, fish-audio]
-tools_mentioned: [claude, elevenlabs, descript, fish-audio]
+tools_mentioned: [claude, elevenlabs, descript, fish-audio, castmagic, meetgeek, riverside]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-03
-last_verified: 2026-05-03
-update_frequency: quarterly
+last_updated: 2026-05-13
+last_verified: 2026-05-13
+update_frequency: monthly
 ---
 
 # Podcast Automation Stack: Claude, ElevenLabs, Descript, Fish Audio
@@ -23,7 +23,7 @@ Hands-on time per episode: 1.5 hours, down from a conventional 8-hour manual edi
 
 > **Pick this stack for a weekly 60-minute interview podcast with social-clip repurposing.** Descript records and edits, Claude cleans transcripts and generates show notes, ElevenLabs voices the host, Fish Audio voices the shorts.
 >
-> **Skip it for live events (use Riverside) or scripted solo shows (an n8n full-auto pipeline is cheaper).** Skip also if the brand requires unmodified live audio.
+> **Skip it for live events (use [Riverside](/tools/riverside/)) or scripted solo shows (an n8n full-auto pipeline is cheaper).** Skip also if the brand requires unmodified live audio. For show-notes-only workflows without voice generation, [Castmagic](/tools/castmagic/) or [MeetGeek](/tools/meetgeek/) cover transcript-to-notes more cheaply.
 >
 > **Total cost: $78/month.** The human equivalent (editor + voice actor + editing suite + clip producer) runs ~$950/month at comparable output.
 
@@ -52,7 +52,7 @@ Hands-on time per episode: 1.5 hours, down from a conventional 8-hour manual edi
 
 Owns transcript cleanup, episode structuring, and content repurposing.
 
-Paste a raw Descript transcript; Claude removes filler, adds chapter timestamps, generates 200-word show notes, and extracts five 60-second clip scripts. OpenAI frontier models hallucinates podcast formats more often on this prompt.
+Paste a raw Descript transcript; Claude Opus 4.7 removes filler, adds chapter timestamps, generates 200-word show notes, and extracts five 60-second clip scripts. OpenAI frontier models hallucinate podcast formats more often on this prompt.
 
 ### [ElevenLabs](/tools/elevenlabs/) ($22/mo)
 
@@ -112,13 +112,13 @@ Fish Audio v1.8 glitches on clip scripts over ~90 words. Claude's prompt keeps c
 | Fish Audio | $12 | ~$100 clip production |
 | **Total** | **$78** | **~$950** |
 
-*Prices verified 2026-04-17 via vendor pricing pages.*
+*Prices verified 2026-05-13 via vendor pricing pages.*
 
 ## Who this is for
 
 Copy this stack for a solo interview podcast recording weekly with current editing time above 4 hours. Ideal for 1-2 person teams who accept ~1.5 hours of oversight per episode.
 
-Skip for scripted solo shows (a full n8n pipeline goes cheaper) or live events (Riverside is the right tool).
+Skip for scripted solo shows (a full n8n pipeline goes cheaper) or live events ([Riverside](/tools/riverside/) is the right tool). For transcript-to-notes only, [Castmagic](/tools/castmagic/) (released May 2026) and [MeetGeek](/tools/meetgeek/) cover the lighter lane.
 
 ## FAQ
 
@@ -136,7 +136,7 @@ No. Rate limits compound around ~10 episodes/week. Add OpenAI frontier models fo
 
 ## System Notes
 
-This page documents an operational stack verified by the aipedia.wiki editorial pipeline. Last verified 2026-04-17.
+This page documents an operational stack verified by the aipedia.wiki editorial pipeline. Last verified 2026-05-13.
 
 ## Related
 

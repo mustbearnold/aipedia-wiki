@@ -2,22 +2,22 @@
 type: company
 slug: mistral
 title: Mistral AI
-seo_title: "Mistral AI Company Profile (2026), aipedia.wiki"
-meta_description: "Mistral AI is Europe's leading AI company, offering open-weight LLMs like Mistral Large 3 and Mistral Small 4, Codestral, and Voxtral for TTS. Founded 2023 in Paris, valued at $6B+."
+seo_title: "Mistral AI Company Profile (May 2026), aipedia.wiki"
+meta_description: "Mistral AI is Europe's leading AI lab. April 28, 2026 launched the Mistral 3 family: Large 3 under Apache 2.0, Ministral 3 edge models, Voxtral STT, and Codestral 2. Verified May 13, 2026."
 author: "aipedia.wiki Editorial"
 company_type: startup
 founded: 2023
 hq: Paris, France
 funding: "$1B+"
-key_products: [mistral-ai, voxtral]
-last_updated: 2026-05-03
-update_frequency: quarterly
-last_verified: 2026-05-03
+key_products: [mistral-ai, voxtral, codestral]
+last_updated: 2026-05-13
+update_frequency: monthly
+last_verified: 2026-05-13
 ---
 
 # Mistral AI
 
-Mistral AI, founded in 2023 in Paris by Arthur Mensch, Guillaume Lample, and Timothee Lacroix (former Meta AI and Google DeepMind researchers), develops open-weight large language models. As of April 2026, the company holds a valuation over $6 billion and focuses on models with multilingual support, multimodal capabilities, and self-hosting options for data sovereignty.[1][2]
+Mistral AI, founded in 2023 in Paris by Arthur Mensch, Guillaume Lample, and Timothee Lacroix (former Meta AI and Google DeepMind researchers), develops open-weight large language models. As of May 13, 2026, the company holds a valuation over $6 billion and is anchored on its April 28, 2026 **Mistral 3 family** release: Mistral Large 3 under Apache 2.0, Ministral 3 edge-tier models, Voxtral 2 speech-to-text, and Codestral 2. The Mistral 3 launch reframed the company as the open-weight challenger that ships frontier-class capability under a permissive license, with a sharper EU-sovereignty pitch than US labs.[1][2]
 
 ## Key Facts
 | | |
@@ -26,34 +26,34 @@ Mistral AI, founded in 2023 in Paris by Arthur Mensch, Guillaume Lample, and Tim
 | **HQ** | Paris, France |
 | **Funding** | $1B+ raised |
 | **Valuation** | $6B+ |
-| **Key products** | Mistral Large 3, Mistral Small 4, Voxtral |
+| **Latest model line** | Mistral 3 family released April 28, 2026: Large 3 (Apache 2.0), Ministral 3 edge, Voxtral 2 STT, Codestral 2 |
+| **Key products** | Mistral Large 3, Ministral 3, Voxtral 2, Codestral 2, Le Chat |
 
 ## What They Do
 
-Mistral AI releases open-weight models under Apache 2.0 license, enabling developers to self-host for privacy and cost control. The company provides APIs via La Plateforme and partners with NVIDIA for training and inference optimization.[1][5]
+Mistral AI releases open-weight models, with the new Mistral Large 3 flagship under the Apache 2.0 license. That permissive choice is unusual at the frontier and is the strongest single lever Mistral has against US labs, which keep their best models closed. La Plateforme provides hosted APIs; NVIDIA remains the primary training and inference partner.[1][5]
 
-Models support text, image inputs, and multilingual tasks across 40+ languages, with mixture-of-experts (MoE) architectures for efficiency. Mistral targets European enterprises needing EU jurisdiction compliance.[2][6]
+Models support text, image inputs, and multilingual tasks across 40+ languages, with mixture-of-experts (MoE) architectures for efficiency. Mistral targets European enterprises that need EU jurisdiction compliance and self-hosting.[2][6]
 
-Products include Le Chat chatbot and specialized tools like Spaces CLI for agents.[2]
+Products include Le Chat (consumer assistant), Spaces CLI for agent workflows, Codestral 2 for coding, and Voxtral 2 for speech-to-text. Note that Voxtral is a **speech-to-text** model, not a TTS engine, a common misclassification across third-party trackers.[2]
 
 ## Current Flagship Products
-- **Mistral Large 3**: Flagship MoE model with 41B active / 675B total parameters, 256k context window, multimodal (text+image), agentic capabilities. Released 2025, top open-weight performer.[1][6]
-- **Mistral Small 4**: MoE with 128 experts (4 active), 256k context, unifies reasoning (Magistral), vision (Pixtral), coding (Devstral). Multimodal text+image inputs. Released March 16, 2026.[2][5]
-- **[Voxtral](../tools/voxtral.md)**: Text-to-speech model, released March 2026, natural synthesis at lower cost.[2]
-- **Codestral**: Code generation and completion model.[2]
-- **Ministral Family**: 3B, 8B, 14B edge-optimized models with multimodal support.[6]
+- **Mistral Large 3** (released April 28, 2026): Flagship MoE model published under **Apache 2.0**, with 256k context window, multimodal (text+image) input, and agentic tool-use. The Apache 2.0 release is the key strategic signal: Mistral is pushing self-hosting and developer-permissive licensing as a wedge against US-lab closed releases.[1][6]
+- **Ministral 3** (released April 28, 2026): edge-optimized tier at 3B, 8B, and 14B parameters for on-device and small-server deployment, with multimodal support. Direct competitor to Llama-class edge weights.
+- **[Voxtral](../tools/voxtral.md) 2**: **Speech-to-text** model released April 28, 2026 as part of the Mistral 3 family, with multilingual transcription. Not a text-to-speech engine.
+- **Codestral 2**: Code generation and completion model in the Mistral 3 line, tuned for repo-level edits.
+- **Le Chat**: Consumer-facing chat product fronted by Mistral Large 3.
 
 ## Recent News
-- March 2026: Released Mistral Small 4, Voxtral TTS, Leanstral, Forge, Spaces CLI; joined NVIDIA Nemotron Coalition.[2][5]
-- December 2025: Launched Mistral Large 3 on 3000 NVIDIA H200 GPUs, with TensorRT-LLM support.[1]
-- March 2026: NVIDIA partnership for Hopper GPUs and inference optimization across Mistral 3 family.[1]
-- 2026: Mistral Large 3 ranks #8 in top AI models, strong open-source alternative.[3]
+- **April 28, 2026:** Released the **Mistral 3 family**: Mistral Large 3 under Apache 2.0, Ministral 3 edge models (3B/8B/14B), Voxtral 2 speech-to-text, and Codestral 2. The Apache 2.0 release on Large 3 is the clearest single signal of Mistral's open-weight wedge versus the closed US frontier.
+- **March 2026:** NVIDIA partnership extended for Hopper GPUs and inference optimization across the Mistral 3 family.[1]
+- **2025 onward:** Le Chat consumer surface and Spaces CLI for agentic workflows continued to grow alongside La Plateforme hosted APIs.[2]
 
 ## Strategic Position
 
-Mistral's moat lies in open-weight releases building developer ecosystems on Hugging Face, combined with EU-based operations for sovereignty. Competitive pricing undercuts US rivals; multilingual and multimodal features aid European adoption.[1][2]
+Mistral's moat is the combination of permissively licensed frontier weights (Apache 2.0 on Large 3), EU jurisdiction for sovereignty-sensitive buyers, and a developer ecosystem rooted in Hugging Face. The April 28 Mistral 3 release reframes the company from "European challenger" to "credible open-weight option at frontier capability." Pricing competitiveness and multilingual coverage continue to aid European adoption.[1][2]
 
-Threats include US frontier labs such as OpenAI and Anthropic in coding, agents, and enterprise distribution. Opportunities in edge AI (Ministral) and partnerships like NVIDIA expand reach.[1][3][6]
+Threats include US frontier labs (OpenAI, Anthropic, Google DeepMind) on agentic coding, enterprise distribution, and managed cloud routes. Opportunities sit in edge AI (Ministral 3), regulated-industry self-hosting, and continued NVIDIA depth.[1][3][6]
 
 ## Sources
 - [Mistral AI: Introducing Mistral 3](https://mistral.ai/news/mistral-3)[1]
