@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated": "2026-05-13T05:33:18.249069Z",
-  "total_active": 215,
+  "generated": "2026-05-13T05:45:20.989719Z",
+  "total_active": 218,
   "total_dead": 11,
   "tools": {
     "activepieces": {
@@ -4976,6 +4976,52 @@
       },
       "page_path": "wikis/ai-tools/pages/tools/mastra.md"
     },
+    "meetgeek": {
+      "slug": "meetgeek",
+      "status": "active",
+      "title": "MeetGeek",
+      "category": "ai-notes",
+      "secondary_categories": [
+        "ai-voice",
+        "ai-automation"
+      ],
+      "company": "MeetGeek",
+      "url": "https://meetgeek.ai",
+      "pricing_model": "freemium",
+      "price_range": "$0-$17/user/month",
+      "launched": "2020-11",
+      "last_updated": "2026-05-13T00:00:00.000Z",
+      "last_verified": "2026-05-13T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 9,
+        "value": 8,
+        "moat": 6,
+        "longevity": 7
+      },
+      "tags": [
+        "meeting-notes",
+        "transcription",
+        "ai-summaries",
+        "action-items",
+        "meeting-recording",
+        "sales-coaching",
+        "multi-language",
+        "agentic-workflows"
+      ],
+      "affiliate": {
+        "has_program": null,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null,
+        "application_status": "none",
+        "applied_date": null,
+        "approved_date": null,
+        "notes": null
+      },
+      "page_path": "/tools/meetgeek/"
+    },
     "mem": {
       "slug": "mem",
       "status": "active",
@@ -7047,6 +7093,52 @@
       },
       "page_path": "wikis/ai-tools/pages/tools/same-dev.md"
     },
+    "sanebox": {
+      "slug": "sanebox",
+      "status": "active",
+      "title": "SaneBox",
+      "category": "ai-automation",
+      "secondary_categories": [
+        "ai-notes"
+      ],
+      "company": "SaneBox",
+      "url": "https://www.sanebox.com",
+      "pricing_model": "paid",
+      "price_range": "$7-$36/month",
+      "launched": "2010-06",
+      "last_updated": "2026-05-13T00:00:00.000Z",
+      "last_verified": "2026-05-13T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 8,
+        "value": 8,
+        "moat": 6,
+        "longevity": 9
+      },
+      "tags": [
+        "email",
+        "triage",
+        "inbox-management",
+        "classification",
+        "productivity",
+        "gmail",
+        "outlook",
+        "imap",
+        "focus"
+      ],
+      "affiliate": {
+        "has_program": true,
+        "commission": "$25 referral credit + 25% for new sign-ups (referral program)",
+        "cookie_days": null,
+        "network": "in-house referral",
+        "link": null,
+        "application_status": "none",
+        "applied_date": null,
+        "approved_date": null,
+        "notes": "SaneBox runs a long-standing referral program rather than a traditional affiliate network."
+      },
+      "page_path": "/tools/sanebox/"
+    },
     "scite": {
       "slug": "scite",
       "status": "active",
@@ -7743,6 +7835,52 @@
         "link": null
       },
       "page_path": "wikis/ai-tools/pages/tools/tavus.md"
+    },
+    "tidio": {
+      "slug": "tidio",
+      "status": "active",
+      "title": "Tidio",
+      "category": "ai-chatbots",
+      "secondary_categories": [
+        "ai-automation"
+      ],
+      "company": "Tidio",
+      "url": "https://www.tidio.com",
+      "pricing_model": "freemium",
+      "price_range": "$0-$2999+/month",
+      "launched": "2013-01",
+      "last_updated": "2026-05-13T00:00:00.000Z",
+      "last_verified": "2026-05-13T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 8,
+        "value": 6,
+        "moat": 5,
+        "longevity": 8
+      },
+      "tags": [
+        "chatbot",
+        "customer-support",
+        "live-chat",
+        "lyro",
+        "ai-agent",
+        "shopify",
+        "ecommerce",
+        "helpdesk",
+        "ticketing"
+      ],
+      "affiliate": {
+        "has_program": true,
+        "commission": "25% recurring (PartnerStack)",
+        "cookie_days": null,
+        "network": "PartnerStack",
+        "link": null,
+        "application_status": "none",
+        "applied_date": null,
+        "approved_date": null,
+        "notes": "PartnerStack listing seen during 2026-05-13 audit; commission terms quoted but not yet applied for."
+      },
+      "page_path": "/tools/tidio/"
     },
     "tines": {
       "slug": "tines",
