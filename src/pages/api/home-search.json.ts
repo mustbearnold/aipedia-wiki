@@ -32,6 +32,37 @@ export const GET: APIRoute = async () => {
 
   const activeTools = allTools.filter((tool) => tool.data.type === 'tool' && isActiveToolStatus(tool.data.status));
 
+  // Build the smallest searchable haystack we can. The `search` field
+  // is never shown to users; it's only used for substring matching, so
+  // we lowercase + dedupe tokens, drop common stopwords, and trim long
+  // prose that the title/tagline already cover. Cuts payload roughly
+  // in half without changing match quality.
+  const STOPWORDS = new Set([
+    'a','an','and','are','as','at','be','but','by','for','from','have',
+    'in','is','it','of','on','or','that','the','this','to','was','were',
+    'will','with','it\'s','its','you','your','our','their','they','them',
+  ]);
+  function buildHaystack(parts: Array<string | undefined | null>): string {
+    const seen = new Set<string>();
+    const tokens: string[] = [];
+    for (const part of parts) {
+      if (!part) continue;
+      for (const token of String(part).toLowerCase().split(/[^a-z0-9.+-]+/)) {
+        if (!token || token.length < 2 || STOPWORDS.has(token)) continue;
+        if (seen.has(token)) continue;
+        seen.add(token);
+        tokens.push(token);
+      }
+    }
+    return tokens.join(' ');
+  }
+
+  function trimDetail(value: string | null | undefined, max = 140): string {
+    const s = String(value || '').trim();
+    if (s.length <= max) return s;
+    return s.slice(0, max - 1).trimEnd() + '…';
+  }
+
   const items = [
     ...activeTools.map((tool) => {
       const slug = entrySlug(tool);
@@ -48,23 +79,19 @@ export const GET: APIRoute = async () => {
         href: `/tools/${slug}/`,
         logo: logoFor(slug),
         meta: `${categoryLabels[0] || 'AI tool'} · ${score.toFixed(1)}/10`,
-        detail: tool.data.tagline ?? tool.data.meta_description ?? '',
+        detail: trimDetail(tool.data.tagline ?? tool.data.meta_description),
         badge: tool.data.price_range ?? tool.data.pricing_model ?? '',
         priority: Math.round(score * 10) + 60,
-        search: [
+        search: buildHaystack([
           tool.data.title,
           tool.data.company,
           slug,
           tool.data.tagline,
-          tool.data.meta_description,
-          tool.data.price_range,
-          tool.data.pricing_model,
           ...categories,
           ...categoryLabels,
           ...(tool.data.tags ?? []),
           ...(tool.data.best_for ?? []),
-          ...(tool.data.not_best_for ?? []),
-        ].filter(Boolean).join(' ').toLowerCase(),
+        ]),
       };
     }),
     ...allComparisons.map((comparison) => {
@@ -79,16 +106,15 @@ export const GET: APIRoute = async () => {
         logo: comparedLogos[0] ?? null,
         logos: comparedLogos.slice(0, 2),
         meta: 'Comparison guide',
-        detail: comparison.data.meta_description ?? (comparedTools.length ? comparedTools.join(' vs ') : ''),
+        detail: comparedTools.length ? comparedTools.join(' vs ') : '',
         badge: comparedTools.length ? `${comparedTools.length} tools` : '',
         priority: 54,
-        search: [
+        search: buildHaystack([
           comparison.data.title,
           comparison.data.category,
           comparison.data.winner,
-          comparison.data.meta_description,
           ...comparedTools,
-        ].filter(Boolean).join(' ').toLowerCase(),
+        ]),
       };
     }),
     ...allNews.map((news) => {
@@ -99,16 +125,15 @@ export const GET: APIRoute = async () => {
         title: news.data.title,
         href: `/news/${slug}/`,
         meta: String(news.data.date),
-        detail: news.data.summary ?? news.data.description ?? '',
+        detail: trimDetail(news.data.summary ?? news.data.description, 120),
         badge: news.data.severity ?? '',
         priority: 46,
-        search: [
+        search: buildHaystack([
           news.data.title,
           news.data.summary,
-          news.data.description,
           news.data.severity,
           String(news.data.date),
-        ].filter(Boolean).join(' ').toLowerCase(),
+        ]),
       };
     }),
     ...allCategories.map((category) => {
@@ -119,15 +144,14 @@ export const GET: APIRoute = async () => {
         title: category.data.title,
         href: `/categories/${slug}/`,
         meta: 'Category',
-        detail: category.data.description ?? category.data.meta_description ?? '',
+        detail: trimDetail(category.data.description ?? category.data.meta_description),
         badge: category.data.tool_count ? `${category.data.tool_count} tools` : '',
         priority: 42,
-        search: [
+        search: buildHaystack([
           category.data.title,
           slug,
           category.data.description,
-          category.data.meta_description,
-        ].filter(Boolean).join(' ').toLowerCase(),
+        ]),
       };
     }),
   ];
@@ -135,7 +159,10 @@ export const GET: APIRoute = async () => {
   return new Response(JSON.stringify({ count: items.length, items }), {
     headers: {
       'Content-Type': 'application/json',
-      'Cache-Control': 'public, max-age=0, must-revalidate',
+      // Static index — content changes at build time, not runtime. Allow
+      // CDN + browser caching for an hour with a longer stale-while-
+      // revalidate so subsequent visitors get instant search.
+      'Cache-Control': 'public, max-age=3600, stale-while-revalidate=86400',
     },
   });
 };

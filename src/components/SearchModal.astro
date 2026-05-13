@@ -417,6 +417,25 @@ const toolsCount = allTools.filter(
     // Open from the existing trigger buttons
     document.getElementById('search-trigger')?.addEventListener('click', open);
     document.getElementById('search-trigger-mobile')?.addEventListener('click', open);
+
+    // Pre-load the search index after the page is idle so the first
+    // click on the search trigger renders instantly instead of showing
+    // a "Loading…" placeholder. The fetch is deliberately deferred to
+    // not compete with critical resources during initial page load.
+    const prefetch = () => { load(); };
+    if ('requestIdleCallback' in window) {
+      window.requestIdleCallback(prefetch, { timeout: 2500 });
+    } else {
+      setTimeout(prefetch, 1500);
+    }
+    // Also prefetch on first hover/focus of either trigger — covers the
+    // case where the user lands and immediately reaches for search
+    // before idle fires.
+    const eagerPrefetch = () => { load(); };
+    ['mouseenter', 'focus', 'touchstart'].forEach((ev) => {
+      document.getElementById('search-trigger')?.addEventListener(ev, eagerPrefetch, { once: true, passive: true });
+      document.getElementById('search-trigger-mobile')?.addEventListener(ev, eagerPrefetch, { once: true, passive: true });
+    });
   })();
 </script>
 
