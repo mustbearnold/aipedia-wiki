@@ -11,11 +11,11 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2022-11
-last_updated: 2026-05-09
-last_verified: 2026-05-09
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 seo_title: "ChatGPT: Features, Pricing & Review (May 2026)"
-meta_description: "ChatGPT now uses GPT-5.5 Instant as the default model, with GPT-5.5 Thinking on Plus and GPT-5.5 Pro on Pro, Business, and Enterprise plans. Plus is $20/mo; Pro plans at $100 and $200/mo add heavier Codex usage."
+meta_description: "ChatGPT runs GPT-5.5 Instant as the default, with GPT-5.5 Thinking on Plus and GPT-5.5 Pro on Pro, Business, and Enterprise. Plus is $20/mo. Codex Security now ships under the May 11 Daybreak initiative, and GPT-5.5-Cyber is in EU Trusted Access preview."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -57,7 +57,7 @@ facts:
     confidence: high
     next_review_at: 2026-06-03
   free_plan:
-    value: "Yes — limited GPT-5.5 Instant access, uploads, image generation, deep research, memory, context, and Codex access"
+    value: "Yes - limited GPT-5.5 Instant access, uploads, image generation, deep research, memory, context, and Codex access"
     source: "https://chatgpt.com/pricing/"
     source_label: "ChatGPT pricing"
     source_id: openai-chatgpt-pricing
@@ -75,7 +75,7 @@ facts:
     confidence: high
     next_review_at: 2026-06-03
   api_available:
-    value: "Yes — OpenAI API includes GPT-5.5, web search, file search, computer use, GPT Image, and realtime models"
+    value: "Yes - OpenAI API includes GPT-5.5, web search, file search, computer use, GPT Image, and realtime models"
     source: "https://platform.openai.com/docs/models"
     source_label: "OpenAI model docs"
     source_id: openai-model-docs
@@ -84,7 +84,7 @@ facts:
     confidence: high
     next_review_at: 2026-06-03
   image_generation:
-    value: "Yes — GPT Image 2 / gpt-image-2 generation and editing"
+    value: "Yes - GPT Image 2 / gpt-image-2 generation and editing"
     source: "https://platform.openai.com/docs/models"
     source_label: "OpenAI model docs"
     source_id: openai-model-docs
@@ -102,7 +102,7 @@ facts:
     confidence: high
     next_review_at: 2026-06-03
   real_time_voice:
-    value: "Yes — ChatGPT voice plus OpenAI realtime speech-to-speech models"
+    value: "Yes - ChatGPT voice plus OpenAI realtime speech-to-speech models"
     source: "https://platform.openai.com/docs/models"
     source_label: "OpenAI model docs"
     source_id: openai-model-docs
@@ -111,7 +111,7 @@ facts:
     confidence: high
     next_review_at: 2026-06-03
   web_browsing:
-    value: "Yes — ChatGPT browsing and OpenAI web search tools"
+    value: "Yes - ChatGPT browsing and OpenAI web search tools"
     source: "https://platform.openai.com/docs/models"
     source_label: "OpenAI model docs"
     source_id: openai-model-docs
@@ -120,23 +120,23 @@ facts:
     confidence: high
     next_review_at: 2026-06-03
   coding_agent:
-    value: "Yes — Codex is included on paid ChatGPT tiers and scales on Pro/Business/Enterprise"
+    value: "Yes - Codex is included on paid ChatGPT tiers and scales on Pro/Business/Enterprise; Codex Security now anchors the May 11, 2026 Daybreak cybersecurity initiative"
     source: "https://chatgpt.com/pricing/"
     source_label: "ChatGPT pricing"
     source_id: openai-chatgpt-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-13
   enterprise_controls:
-    value: "Business and Enterprise include SAML SSO/MFA; Enterprise adds SCIM, EKM, analytics, domain verification, RBAC, retention, residency, and SLAs"
+    value: "Business and Enterprise include SAML SSO/MFA; Enterprise adds SCIM, EKM, analytics, domain verification, RBAC, retention, residency, and SLAs; the May 11, 2026 OpenAI Deployment Company adds forward-deployed engineering as a procurement path"
     source: "https://chatgpt.com/pricing/"
     source_label: "ChatGPT pricing"
     source_id: openai-chatgpt-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-13
   data_retention_or_privacy:
     value: "Business, Enterprise, Edu, Healthcare, and API data is not trained on by default; Enterprise admins control retention"
     source: "https://openai.com/enterprise-privacy/"
@@ -147,7 +147,7 @@ facts:
     confidence: high
     next_review_at: 2026-06-03
   open_source_or_local:
-    value: "No — ChatGPT and GPT-5.5 are proprietary hosted OpenAI products"
+    value: "No - ChatGPT and GPT-5.5 are proprietary hosted OpenAI products"
     source: "https://platform.openai.com/docs/models"
     source_label: "OpenAI model docs"
     source_id: openai-model-docs
@@ -250,6 +250,38 @@ price_history:
     source_label: "ChatGPT pricing"
     verified_at: 2026-05-03
     note: "Updated ChatGPT model-access rows from OpenAI frontier models to GPT-5.5 Thinking and GPT-5.5 Pro."
+  - date: 2026-05-11
+    plan: "Daybreak + Codex Security"
+    price: "Same subscription tiers; tier-gated security access"
+    source: "/news/2026-05-11-openai-daybreak-codex-security-launch/"
+    source_id: aipedia-news
+    source_label: "AIpedia news coverage"
+    verified_at: 2026-05-13
+    note: "Daybreak wraps Codex Security with three GPT-5.5 access tiers (general, Trusted Access, GPT-5.5-Cyber preview) across 22 launch partners. Pricing not published; procurement-friendly tier packaging."
+  - date: 2026-05-11
+    plan: "OpenAI Deployment Company"
+    price: "Same ChatGPT tiers; new $4B forward-deployed engineering vehicle"
+    source: "/news/2026-05-11-openai-deployment-company-launch/"
+    source_id: aipedia-news
+    source_label: "AIpedia news coverage"
+    verified_at: 2026-05-13
+    note: "OpenAI majority-owned unit, ~$14B reported valuation, ~150 engineers from Tomoro. Direct route to integrate ChatGPT, Codex, and the OpenAI API into regulated enterprise workflows."
+  - date: 2026-05-11
+    plan: "GPT-5.5-Cyber EU preview"
+    price: "Trusted Access for Cyber, vetted only"
+    source: "/news/2026-05-11-openai-gpt-55-cyber-eu-preview/"
+    source_id: aipedia-news
+    source_label: "AIpedia news coverage"
+    verified_at: 2026-05-13
+    note: "GPT-5.5-Cyber limited preview extended to EU AI Office, member-state cyber authorities, and vetted defenders. Anthropic's Mythos has not granted equivalent EU access."
+  - date: 2026-05-13
+    plan: "Page refresh"
+    price: "Same"
+    source: "https://chatgpt.com/pricing/"
+    source_id: openai-chatgpt-pricing
+    source_label: "ChatGPT pricing"
+    verified_at: 2026-05-13
+    note: "May 13 verification pass. Pricing tiers unchanged. Codex Security, Deployment Company, and EU Cyber preview folded into Recent changes."
 ---
 
 # ChatGPT
@@ -263,14 +295,17 @@ OpenAI's general-purpose AI assistant for text, images, web browsing, sandboxed 
 | **Default model** | GPT-5.5 Instant on all tiers; Plus adds GPT-5.5 Thinking; Pro, Business, and Enterprise add GPT-5.5 Pro access |
 | **Editorial position** | Best default AI assistant overall after GPT-5.5; Claude remains a specialist for long-form writing style, Claude Code, and stricter safety posture |
 | **Best paid tier** | Plus at $20/mo for most individuals |
-| **Coding agent** | Codex is included on Plus and scales on Pro tiers |
+| **Coding agent** | Codex is included on Plus and scales on Pro tiers; Codex Security anchors the May 11 Daybreak initiative |
 | **Image generation** | GPT Image 2 |
 | **Video generation** | None; Sora shut down in March-April 2026 |
 | **Agent mode** | Operator / Agent Mode on Plus and above; workspace agents add team-level permission and audit questions |
+| **Realtime voice** | Realtime 2 voice models shipped May 7 with lower latency and richer emotion control |
+| **Cyber tier** | GPT-5.5-Cyber in limited Trusted Access preview, including EU defenders as of May 11 |
+| **Enterprise services** | OpenAI Deployment Company (May 11, $4B, ~150 engineers ex-Tomoro) for forward-deployed integration |
 | **Context window** | ChatGPT pricing lists 256K reasoning context on Go, Plus, Business, and Enterprise; Pro reaches 400K |
 | **Score** | Utility 10 · Value 8 · Moat 10 · Longevity 10 |
 
-Every data point above was last verified against OpenAI pages, local news entries, or named sources on May 9, 2026.
+Every data point above was last verified against OpenAI pages, local news entries, or named sources on May 13, 2026.
 
 ## Pricing
 
@@ -284,11 +319,15 @@ Every data point above was last verified against OpenAI pages, local news entrie
 | Business | $25/user/mo monthly; $20/user/mo annually | Flexible GPT-5.5 Thinking and GPT-5.5 Pro access | Included, with workspace controls | No | Small teams |
 | Enterprise | Custom | Flexible GPT-5.5 Thinking and GPT-5.5 Pro access | High | No | SSO, audit, SOC 2, data controls |
 
-Prices and model access were rechecked on May 7, 2026 using [ChatGPT pricing](https://chatgpt.com/pricing/), [OpenAI's GPT-5.5 Instant release note](https://openai.com/index/gpt-5-5-instant/), [OpenAI's GPT-5.5 release note](https://openai.com/index/introducing-gpt-5-5/), [OpenAI's Pro tier help article](https://help.openai.com/en/articles/9793128-what-is-chatgpt-pro), and [OpenAI's Business help article](https://help.openai.com/en/articles/8792828-what-is-chatgpt-team). The public pricing snapshot available here does not expose a fixed US dollar amount for Go, so the table lists it as regional pricing instead of repeating an unverified $8/mo figure.
+Prices and model access were rechecked on May 13, 2026 using [ChatGPT pricing](https://chatgpt.com/pricing/), [OpenAI's GPT-5.5 Instant release note](https://openai.com/index/gpt-5-5-instant/), [OpenAI's GPT-5.5 release note](https://openai.com/index/introducing-gpt-5-5/), [OpenAI's Pro tier help article](https://help.openai.com/en/articles/9793128-what-is-chatgpt-pro), and [OpenAI's Business help article](https://help.openai.com/en/articles/8792828-what-is-chatgpt-team). The public pricing snapshot available here does not expose a fixed US dollar amount for Go, so the table lists it as regional pricing instead of repeating an unverified $8/mo figure.
 
 ## Recent changes
 
-- **May 11, 2026:** [OpenAI launched Daybreak](/news/2026-05-11-openai-daybreak-codex-security-launch/), a 22-partner cybersecurity initiative that wraps Codex Security with three GPT-5.5 access tiers for vulnerability detection and patch validation. Daybreak is OpenAI's productized answer to Anthropic's Project Glasswing.
+- **May 11, 2026:** [OpenAI launched Daybreak](/news/2026-05-11-openai-daybreak-codex-security-launch/), a 22-partner cybersecurity initiative that wraps Codex Security with three GPT-5.5 access tiers (general, Trusted Access, and GPT-5.5-Cyber preview) for vulnerability detection and patch validation. Launch partners include Cloudflare, Cisco, CrowdStrike, Palo Alto Networks, Akamai, Fortinet, and Snyk. Daybreak is OpenAI's productized answer to Anthropic's Project Glasswing.
+- **May 11, 2026:** [OpenAI launched a $4B Deployment Company](/news/2026-05-11-openai-deployment-company-launch/), a majority-owned enterprise unit valued at roughly $14B that absorbed Tomoro's ~150 deployment engineers. It puts forward-deployed engineers inside enterprise buyers, putting OpenAI directly against Accenture, Deloitte, and McKinsey on AI integration work.
+- **May 11, 2026:** [GPT-5.5-Cyber expanded to EU defenders in limited Trusted Access preview](/news/2026-05-11-openai-gpt-55-cyber-eu-preview/), reaching the EU AI Office, member-state cyber authorities, and vetted private-sector defenders. Anthropic has not granted equivalent EU preview access for Mythos.
+- **May 7, 2026:** [Codex Chrome extension shipped](/news/2026-05-07-openai-codex-chrome-extension/) for in-browser repo and PR work.
+- **May 7, 2026:** [OpenAI Realtime 2 voice models launched](/news/2026-05-07-openai-realtime-2-voice-models/), lowering latency and improving emotional control across speech-to-speech agents.
 - **May 7, 2026:** [ChatGPT added trusted contact support for serious safety moments](/news/2026-05-07-chatgpt-trusted-contact-safety-feature/) on eligible adult personal accounts in supported regions. This is not a Business, Enterprise, or Edu workspace feature.
 - **May 7, 2026:** [ChatGPT Workspace Agents reached eligible Enterprise workspaces with Enterprise Key Management](/news/2026-05-07-chatgpt-enterprise-ekm-workspace-agents/), making governed agents more relevant for compliance-heavy buyers.
 - **May 7, 2026:** [OpenAI put GPT-5.5-Cyber into limited preview through Trusted Access for Cyber](/news/2026-05-07-openai-gpt-55-cyber-trusted-access/). This is gated security access, not a normal ChatGPT tier.
@@ -376,4 +415,4 @@ ChatGPT wins on breadth, image generation, and agent integrations. Claude remain
 - [OpenAI: About ChatGPT Pro tiers](https://help.openai.com/en/articles/9793128-what-is-chatgpt-pro): Pro $100, Pro $200, Codex limits, and promo details
 - [OpenAI: What is ChatGPT Business?](https://help.openai.com/en/articles/8792828-what-is-chatgpt-team): Business seat pricing and workspace controls
 
-This review follows the aipedia.wiki four-axis scoring model: Utility, Value, Moat, and Longevity. Last verified 2026-05-09.
+This review follows the aipedia.wiki four-axis scoring model: Utility, Value, Moat, and Longevity. Last verified 2026-05-13.

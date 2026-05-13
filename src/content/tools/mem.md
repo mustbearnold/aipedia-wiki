@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$12/month; Teams custom"
 status: active
 launched: 2020-09
-last_updated: 2026-05-10
-last_verified: 2026-05-10
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,48 +31,48 @@ facts:
     source: https://get.mem.ai/
     source_label: Mem product site
     source_id: mem-product
-    verified_at: '2026-05-10'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-10'
+    next_review_at: '2026-11-13'
   pricing_anchor:
     value: Mem pricing lists a limited Free tier, Pro at $12/month, and Teams as custom pricing.
     source: https://get.mem.ai/pricing
     source_label: Mem pricing
     source_id: mem-pricing
-    verified_at: '2026-05-10'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-10'
+    next_review_at: '2026-08-13'
   web_browsing:
     value: Mem is centered on your saved notes and knowledge context rather than open-ended web browsing.
     source: https://mem.ai/
     source_label: Mem official site
     source_id: mem-official
-    verified_at: '2026-05-10'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-10'
+    next_review_at: '2026-11-13'
   enterprise_controls:
     value: AIpedia does not treat Mem as an enterprise knowledge-management default; Teams is custom-priced, so buyers should
       verify workspace, admin, retention, security, and procurement controls before rollout.
     source: https://get.mem.ai/pricing
     source_label: Mem pricing
     source_id: mem-pricing
-    verified_at: '2026-05-10'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-10'
+    next_review_at: '2026-08-13'
   watch_out_for:
     value: Mem is best when users accept its opinionated, AI-first capture and retrieval model; teams needing folders, strict
       taxonomy, or compliance workflows may prefer Notion, Obsidian, or a dedicated knowledge base.
     source: https://get.mem.ai/
     source_label: Mem product site
     source_id: mem-product
-    verified_at: '2026-05-10'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-10'
+    next_review_at: '2026-11-13'
 tags: [notes, ai-notes, knowledge-management, pkm, productivity, auto-organize, second-brain]
 seo_title: "Mem: AI Notes App Review, Features & Pricing (May 2026)"
 meta_description: "Mem is an AI notes app for automatic organization, chat, deep search, and personal knowledge recall. Pro is listed at $12/mo; Teams uses custom pricing."
@@ -110,6 +110,13 @@ price_history:
     source_label: "Source"
     source_id: mem-pricing
     note: "Live pricing page lists Pro at $12/month with unlimited notes, chat, and deep searches; Teams is custom."
+  - date: 2026-05-13
+    plan: "Pro"
+    price: "$12/mo"
+    source: "https://get.mem.ai/pricing"
+    source_label: "Source"
+    source_id: mem-pricing
+    note: "Re-verified Free (25 notes/messages/PDF pages), Pro at $12/month, and Teams as custom-priced; no material changes."
 ---
 
 # Mem
@@ -141,7 +148,7 @@ Free tier is now a light trial with 25 notes and messages per month. Pro is list
 | **Pro** | $12/mo, unlimited notes, chat, and deep searches |
 | **Offline mode** | None, cloud-only |
 
-Every data point was verified against vendor docs on 2026-05-10. See Sources.
+Every data point was verified against vendor docs on 2026-05-13. See Sources.
 
 ## What it actually is
 
@@ -175,7 +182,7 @@ The moat: no other mainstream notes app commits as hard to AI-first organization
 | Pro | $12/mo | Unlimited notes, chat, and deep searches |
 | Teams | Custom | Shared/team use; verify admin, retention, security, and procurement controls |
 
-*Prices verified 2026-05-10 via [mem.ai/pricing](https://get.mem.ai/pricing).*
+*Prices verified 2026-05-13 via [mem.ai/pricing](https://get.mem.ai/pricing).*
 
 ## Against the alternatives
 
@@ -200,7 +207,7 @@ The moat: no other mainstream notes app commits as hard to AI-first organization
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-05-10 against [mem.ai](https://mem.ai) and the [Mem pricing page](https://get.mem.ai/pricing).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-05-13 against [mem.ai](https://mem.ai) and the [Mem pricing page](https://get.mem.ai/pricing).
 
 ## FAQ
 
@@ -222,7 +229,7 @@ Reflect costs less ($10/mo), adds end-to-end encryption, and relies on manual ba
 ## Sources
 
 - [mem.ai](https://mem.ai): product overview and feature list
-- [Mem pricing page](https://get.mem.ai/pricing): current Free, Pro, and Teams tiers, verified 2026-05-10
+- [Mem pricing page](https://get.mem.ai/pricing): current Free, Pro, and Teams tiers, verified 2026-05-13
 - [Mem X launch notes](https://newsletter.mem.ai/p/introducing-mem-x-and-teams): AI feature history and roadmap
 
 ## Related

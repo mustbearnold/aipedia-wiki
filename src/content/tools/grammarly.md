@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: $0-$30/user/month
 status: active
 launched: 2009-07
-last_updated: 2026-05-10
-last_verified: 2026-05-10
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -32,52 +32,52 @@ facts:
     source: "https://www.grammarly.com/ai"
     source_label: "Grammarly AI"
     source_id: grammarly-ai
-    verified_at: 2026-05-10
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-06-10
+    next_review_at: 2026-06-13
   context_window:
     value: "Not disclosed: Grammarly does not publish a token context window for its writing-assistant features"
     source: "https://www.grammarly.com/ai"
     source_label: "Grammarly AI"
     source_id: grammarly-ai
-    verified_at: 2026-05-10
+    verified_at: 2026-05-13
     volatility: low
     confidence: high
-    next_review_at: 2026-06-10
+    next_review_at: 2026-06-13
   pricing_anchor:
     value: "Free; Grammarly Pro at $30/member/mo monthly, $60/member quarterly, or $144/member/year ($12 average monthly); Enterprise custom"
     source: "https://www.grammarly.com/plans"
     source_label: "Grammarly plans"
     source_id: grammarly-plans
-    verified_at: 2026-05-10
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-06-10
+    next_review_at: 2026-06-13
   free_plan:
     value: "Yes: free writing suggestions and limited AI assistance"
     source: "https://www.grammarly.com/plans"
     source_label: "Grammarly plans"
     source_id: grammarly-plans
-    verified_at: 2026-05-10
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-06-10
+    next_review_at: 2026-06-13
   best_paid_tier:
     value: "Pro for individuals and teams up to 149 seats; Enterprise for larger teams needing SSO, data loss prevention, admin, and security controls"
     source: "https://www.grammarly.com/plans"
     source_label: "Grammarly plans"
     source_id: grammarly-plans
-    verified_at: 2026-05-10
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-06-10
+    next_review_at: 2026-06-13
   api_available:
     value: "No public general-purpose Grammarly writing API for buyers; Grammarly is primarily app, extension, and enterprise software"
     source: "https://www.grammarly.com/business"
     source_label: "Grammarly Business"
     source_id: grammarly-business
-    verified_at: 2026-05-10
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   image_generation:
@@ -85,7 +85,7 @@ facts:
     source: "https://www.grammarly.com/ai"
     source_label: "Grammarly AI"
     source_id: grammarly-ai
-    verified_at: 2026-05-10
+    verified_at: 2026-05-13
     volatility: low
     confidence: high
   video_generation:
@@ -93,7 +93,7 @@ facts:
     source: "https://www.grammarly.com/ai"
     source_label: "Grammarly AI"
     source_id: grammarly-ai
-    verified_at: 2026-05-10
+    verified_at: 2026-05-13
     volatility: low
     confidence: high
   real_time_voice:
@@ -101,7 +101,7 @@ facts:
     source: "https://www.grammarly.com/ai"
     source_label: "Grammarly AI"
     source_id: grammarly-ai
-    verified_at: 2026-05-10
+    verified_at: 2026-05-13
     volatility: low
     confidence: high
   web_browsing:
@@ -109,7 +109,7 @@ facts:
     source: "https://www.grammarly.com/business"
     source_label: "Grammarly Business"
     source_id: grammarly-business
-    verified_at: 2026-05-10
+    verified_at: 2026-05-13
     volatility: low
     confidence: high
   coding_agent:
@@ -117,7 +117,7 @@ facts:
     source: "https://www.grammarly.com/ai"
     source_label: "Grammarly AI"
     source_id: grammarly-ai
-    verified_at: 2026-05-10
+    verified_at: 2026-05-13
     volatility: low
     confidence: high
   enterprise_controls:
@@ -125,7 +125,7 @@ facts:
     source: "https://www.grammarly.com/business"
     source_label: "Grammarly Business"
     source_id: grammarly-business
-    verified_at: 2026-05-10
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   data_retention_or_privacy:
@@ -133,7 +133,7 @@ facts:
     source: "https://www.grammarly.com/business"
     source_label: "Grammarly Business"
     source_id: grammarly-business
-    verified_at: 2026-05-10
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   open_source_or_local:
@@ -141,7 +141,7 @@ facts:
     source: "https://www.grammarly.com/plans"
     source_label: "Grammarly plans"
     source_id: grammarly-plans
-    verified_at: 2026-05-10
+    verified_at: 2026-05-13
     volatility: low
     confidence: high
   best_for:
@@ -149,7 +149,7 @@ facts:
     source: "https://www.grammarly.com/business"
     source_label: "Grammarly Business"
     source_id: grammarly-business
-    verified_at: 2026-05-10
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   watch_out_for:
@@ -157,10 +157,10 @@ facts:
     source: "https://www.grammarly.com/plans"
     source_label: "Grammarly plans"
     source_id: grammarly-plans
-    verified_at: 2026-05-10
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-06-10
+    next_review_at: 2026-06-13
 tags: [ai-writing, grammar-checker, writing-assistant, productivity, chrome-extension]
 seo_title: 'Grammarly: Features, Pricing & Review (May 2026)'
 meta_description: >-
@@ -184,6 +184,7 @@ price_history:
     source: "https://grammarly.com/plans"
     source_label: "Source"
     source_id: grammarly-pricing
+    verified_at: 2026-05-13
     note: "Verified annual rate. Premium now branded Pro."
   - date: 2026-05-10
     plan: "Pro"
@@ -191,7 +192,16 @@ price_history:
     source: "https://support.grammarly.com/hc/en-us/articles/115000090011-How-much-does-Grammarly-Pro-cost"
     source_label: "Grammarly Pro pricing support"
     source_id: grammarly-pricing
+    verified_at: 2026-05-13
     note: "Grammarly support says Pro replaces the old Grammarly Business plan and supports up to 149 seats."
+  - date: 2026-05-13
+    plan: "Pro"
+    price: "$30/member/mo monthly; $60/member quarterly; $144/member/year"
+    source: "https://grammarly.com/plans"
+    source_label: "Grammarly plans"
+    source_id: grammarly-pricing
+    verified_at: 2026-05-13
+    note: "Re-verified, unchanged. Superhuman suite positioning still active."
 ---
 
 # Grammarly
@@ -221,7 +231,7 @@ Reaches 40 million daily users and 50,000 organizations. Grammarly is now positi
 | **Developer API** | No public general-purpose writing API for buyers |
 | **Recent strategic move** | Superhuman suite positioning with Superhuman Go, Grammarly, Coda, and Superhuman Mail |
 
-Every data point above was verified against official Grammarly and Superhuman documentation on 2026-05-10. See Sources.
+Every data point above was verified against official Grammarly and Superhuman documentation on 2026-05-13. See Sources.
 
 ## What it actually is
 
@@ -257,7 +267,7 @@ Subscription pricing via [grammarly.com/plans](https://grammarly.com/plans):
 | Pro | $30/member/mo monthly, $60/member quarterly, or $144/member/year | Advanced writing features, tone suggestions, full-sentence rewrites, and team features that were previously Business | **Most paying individuals and small teams land here** |
 | Enterprise | Custom | Advanced security and admin controls, SAML SSO, data loss prevention, and larger procurement needs | Larger teams or regulated industries |
 
-*Prices verified 2026-05-10 via Grammarly support and [grammarly.com/plans](https://grammarly.com/plans). Grammarly support says Pro replaces the old Grammarly Business plan and allows up to 149 seats.*
+*Prices verified 2026-05-13 via Grammarly support and [grammarly.com/plans](https://grammarly.com/plans). Grammarly support says Pro replaces the old Grammarly Business plan and allows up to 149 seats.*
 
 ## Against the alternatives
 
@@ -283,7 +293,7 @@ Subscription pricing via [grammarly.com/plans](https://grammarly.com/plans):
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-05-10 against [Grammarly Plans](https://grammarly.com/plans), Grammarly support pricing docs, [Grammarly AI](https://www.grammarly.com/ai), and the Superhuman suite support page.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-05-13 against [Grammarly Plans](https://grammarly.com/plans), Grammarly support pricing docs, [Grammarly AI](https://www.grammarly.com/ai), and the Superhuman suite support page.
 
 ## FAQ
 

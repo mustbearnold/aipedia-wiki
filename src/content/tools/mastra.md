@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: "$0-$250/month + usage add-ons / custom enterprise"
 status: active
 launched: 2024-10
-last_updated: 2026-05-10
-last_verified: 2026-05-10
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -32,58 +32,58 @@ facts:
     source: https://mastra.ai/docs
     source_label: Mastra documentation
     source_id: mastra-docs
-    verified_at: '2026-05-10'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-08-10'
+    next_review_at: '2026-08-13'
   pricing_anchor:
     value: "Mastra's Apache 2.0 framework is free; Mastra Platform currently has Starter at $0/month, Teams at $250/month, Enterprise custom pricing, and usage meters for observability events, CPU time, data egress, persistent server uptime, Memory Gateway tokens, and retrieval storage."
     source: https://mastra.ai/pricing
     source_label: Mastra pricing
     source_id: mastra-pricing
-    verified_at: '2026-05-10'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
-    next_review_at: '2026-06-10'
+    next_review_at: '2026-06-13'
   platform_scope:
     value: "Mastra Platform provides Studio for hosted testing/inspection and Server for deploying a Mastra application as an API server; teams can also deploy to Node-compatible environments, Bun, Deno, Cloudflare, and cloud providers."
     source: https://mastra.ai/docs/deployment/overview
     source_label: Mastra deployment documentation
     source_id: mastra-deployment-docs
-    verified_at: '2026-05-10'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-08-10'
+    next_review_at: '2026-08-13'
   open_source:
     value: "Mastra's public pricing page identifies the framework as Apache 2.0 licensed, and the GitHub repository describes it as a modern TypeScript stack for AI-powered applications and agents."
     source: https://github.com/mastra-ai/mastra
     source_label: Mastra GitHub repository
     source_id: mastra-github
-    verified_at: '2026-05-10'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-08-10'
+    next_review_at: '2026-08-13'
   traction:
     value: "Mastra's official site displayed 23.7k GitHub stars and its About page says the company started in 2024, came from the Gatsby team, raised $13m, and gets millions of downloads each month."
     source: https://mastra.ai/about
     source_label: Mastra about page
     source_id: mastra-about
-    verified_at: '2026-05-10'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-08-10'
+    next_review_at: '2026-08-13'
   watch_out_for:
     value: "The flat Teams price is only part of production cost; CPU hours, observability events, data egress, persistent server uptime, Memory Gateway tokens, retrieval storage, and model/API costs can all add spend."
     source: https://mastra.ai/pricing
     source_label: Mastra pricing
     source_id: mastra-pricing
-    verified_at: '2026-05-10'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
-    next_review_at: '2026-06-10'
+    next_review_at: '2026-06-13'
 tags: [agent-framework, typescript, javascript, open-source, rag, workflows, memory, observability, y-combinator, developer]
 seo_title: "Mastra: Features, Pricing & Review (May 2026)"
-meta_description: "Mastra is an Apache 2.0 TypeScript AI agent framework and platform. Current May 2026 review covers pricing, usage meters, Server, Studio, Memory Gateway, and alternatives."
+meta_description: "Mastra is an Apache 2.0 TypeScript AI agent framework and platform. Verified May 13, 2026: Starter is free, Teams is $250/month, Enterprise is custom, with usage meters for CPU, observability, egress, Memory Gateway, and 24/7 persistent server uptime."
 author: "aipedia.wiki Editorial"
 best_for:
   - TypeScript and JavaScript developers building AI agents
@@ -95,7 +95,7 @@ not_best_for:
   - non-developers who need a no-code builder
   - tiny teams that may outgrow the free tier but cannot justify platform usage add-ons
 quick_answer: >-
-  Mastra is a TypeScript-first framework and platform for agents, workflows, RAG, memory, evals, observability, and production agent APIs. The framework is Apache 2.0 and free; Mastra Platform has a $0 Starter plan, $250/month Teams plan, custom Enterprise, and usage meters for CPU, observability, egress, persistent server uptime, Memory Gateway tokens, and storage as of May 10, 2026. Pick it if your stack is TypeScript. Skip it if you are Python-first or want no-code automation.
+  Mastra is a TypeScript-first framework and platform for agents, workflows, RAG, memory, evals, observability, and production agent APIs. The framework is Apache 2.0 and free; Mastra Platform has a $0 Starter plan, $250/month Teams plan, custom Enterprise, and usage meters for CPU, observability, egress, persistent server uptime, Memory Gateway tokens, and storage as of May 13, 2026. Pick it if your stack is TypeScript. Skip it if you are Python-first or want no-code automation.
 ---
 
 # Mastra
@@ -114,7 +114,7 @@ Mastra is the TypeScript-native agent framework built by the former Gatsby team.
 
 | | |
 |---|---|
-| **Last verified** | May 10, 2026 |
+| **Last verified** | May 13, 2026 |
 | **Language** | TypeScript / JavaScript |
 | **Framework license** | Apache 2.0 |
 | **Company** | Mastra, founded in 2024 by the former Gatsby team |
@@ -131,6 +131,8 @@ Mastra is the TypeScript-native agent framework built by the former Gatsby team.
 - **Pricing is no longer just "$0 or $250."** The public page now exposes add-on rates for observability events, CPU time, data egress, persistent server uptime, Memory Gateway tokens, and retrieval storage.
 - **Memory Gateway matters beyond Mastra apps.** Mastra markets it as memory for any agent/framework, with token and storage meters.
 - **Recent May 2026 updates focused on production operations.** The blog lists Background Tasks for agents on May 7 and ClickHouse support for observability on May 5.
+- **Claude Opus 4.7 is now the most-used Anthropic model behind Mastra agents.** The April 16 release narrowly retook the agentic-coding lead, and Cursor, Windsurf, Zed, Continue, and Copilot shipped Opus 4.7 inside 24 hours. Per-token API rates are unchanged, but Anthropic's new tokenizer produces 1.0 to 1.35x more tokens per input, so any Claude-backed Mastra workflow should re-benchmark cost before migrating off Sonnet 4.6.
+- **Claude Managed Agents added dreaming, outcomes, and multiagent orchestration on May 6.** This narrows the gap between a Mastra-deployed agent and a vendor-hosted Anthropic agent harness for teams comparing managed vs framework paths.
 
 ## When to Pick Mastra
 
@@ -160,7 +162,7 @@ Mastra is the TypeScript-native agent framework built by the former Gatsby team.
 | Usage add-ons | Varies | Observability events, CPU time, data egress, Memory Gateway tokens, retrieval storage, and model-provider usage can add cost |
 | Self-hosted Enterprise | Custom annual fee | Licensed self-hosted features with data staying in the customer's VPC |
 
-Pricing verified May 10, 2026 against Mastra's public pricing page. Model-provider costs are not included in Mastra pricing.
+Pricing verified May 13, 2026 against Mastra's public pricing page. Model-provider costs (Anthropic, OpenAI, Google, and others) are not included in Mastra pricing.
 
 ## Failure Modes
 
@@ -183,7 +185,7 @@ Pricing verified May 10, 2026 against Mastra's public pricing page. Model-provid
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified May 10, 2026 against Mastra official site, documentation, pricing, platform/deployment docs, customers page, About page, GitHub repository, and recent Mastra blog/changelog surfaces.
+Produced by the aipedia.wiki editorial pipeline. Last verified May 13, 2026 against Mastra official site, documentation, pricing, platform/deployment docs, customers page, About page, GitHub repository, recent Mastra blog/changelog surfaces, [Anthropic's April 16 Claude Opus 4.7 release coverage](/news/2026-04-16-anthropic-claude-opus-47/), and the [May 6 Claude Managed Agents update](/news/2026-05-06-claude-managed-agents-dreaming-outcomes-orchestration/).
 
 ## FAQ
 
@@ -216,6 +218,7 @@ Mastra's customers page lists case studies and customer references including Rep
 
 ## Review History
 
+- 2026-05-13: Re-verified Starter, Teams, Enterprise, persistent server, CPU, observability event, data egress, Memory Gateway storage, and retention meters against the live pricing page; no material changes. Added Claude Opus 4.7 tokenizer and May 6 Managed Agents context for buyers choosing a Claude-backed agent stack.
 - 2026-05-10: Refreshed Mastra pricing, source provenance, platform/memory guidance, recent product changes, and buyer watch-outs.
 - 2026-04-18: Initial TypeScript agent-framework review.
 

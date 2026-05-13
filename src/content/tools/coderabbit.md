@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$60/developer/month"
 status: active
 launched: 2023
-last_updated: 2026-05-10
-last_verified: 2026-05-10
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 seo_title: "CodeRabbit: Features, Pricing & Review (May 2026)"
 meta_description: "CodeRabbit provides AI code reviews for pull requests, IDEs, CLI workflows, and Slack. Pro is $24/user/mo annual, Pro+ is $48/user/mo annual, and the Slack agent is usage priced."
@@ -34,22 +34,22 @@ facts:
     source: "https://docs.coderabbit.ai/management/plans"
     source_label: "CodeRabbit plans docs"
     source_id: coderabbit-best-paid-tier
-    verified_at: 2026-05-10
+    verified_at: 2026-05-13
     confidence: high
   best_paid_tier:
     value: "Pro ($24/user/month annual) for review; Pro+ ($48/user/month annual) for planning, unit tests, merge-conflict help, and higher limits"
     source: "https://docs.coderabbit.ai/management/plans"
     source_label: "CodeRabbit plans docs"
     source_id: coderabbit-best-paid-tier
-    verified_at: 2026-05-10
-    next_review_at: 2026-06-03
+    verified_at: 2026-05-13
+    next_review_at: 2026-06-13
     confidence: high
   best_for:
     value: "Teams that want a first-pass AI reviewer on pull requests before human review"
     source: "https://www.coderabbit.ai/pricing"
     source_label: "CodeRabbit pricing"
     source_id: coderabbit-best-for
-    verified_at: 2026-05-10
+    verified_at: 2026-05-13
     confidence: high
 tags: [ai-coding, code-review, pull-requests, github, gitlab, cli, vscode, sast, linters]
 best_for:
@@ -198,7 +198,7 @@ Pricing via [CodeRabbit pricing](https://www.coderabbit.ai/pricing) and [CodeRab
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-05-10 against CodeRabbit primary sources.
+This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-05-13 against CodeRabbit primary sources, including documented rate limits (Pro: 5 reviews/hour, 5 MCP connections, 1 linked repo; Pro+: 10 reviews/hour, 15 MCP connections, 10 linked repos).
 
 ## FAQ
 

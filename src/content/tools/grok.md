@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$300/month"
 status: active
 launched: 2023-11
-last_updated: 2026-05-09
-last_verified: 2026-05-09
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -72,7 +72,7 @@ facts:
     confidence: high
     next_review_at: 2026-06-03
   api_available:
-    value: "Yes — xAI API with OpenAI-compatible endpoints, Responses API, SDKs, and batch workflows"
+    value: "Yes - xAI API with OpenAI-compatible endpoints, Responses API, SDKs, and batch workflows"
     source: "https://docs.x.ai/developers/models"
     source_label: "xAI model docs"
     source_id: xai-docs
@@ -81,7 +81,7 @@ facts:
     confidence: high
     next_review_at: 2026-06-03
   image_generation:
-    value: "Yes — Grok Imagine image generation and image editing API"
+    value: "Yes - Grok Imagine image generation and image editing API"
     source: "https://docs.x.ai/developers/model-capabilities/images/generation"
     source_label: "xAI image-generation docs"
     source_id: xai-docs
@@ -90,7 +90,7 @@ facts:
     confidence: high
     next_review_at: 2026-06-03
   video_generation:
-    value: "Yes — Grok Imagine video generation and video editing API; consumer availability may vary"
+    value: "Yes - Grok Imagine video generation and video editing API; consumer availability may vary"
     source: "https://docs.x.ai/developers/model-capabilities/video/generation"
     source_label: "xAI video-generation docs"
     source_id: xai-docs
@@ -99,7 +99,7 @@ facts:
     confidence: high
     next_review_at: 2026-06-03
   real_time_voice:
-    value: "Yes — xAI Voice API includes realtime voice and text-to-speech models"
+    value: "Yes - xAI Voice API includes realtime voice and text-to-speech models"
     source: "https://docs.x.ai/developers/model-capabilities/audio/text-to-speech"
     source_label: "xAI audio docs"
     source_id: xai-docs
@@ -108,7 +108,7 @@ facts:
     confidence: high
     next_review_at: 2026-06-03
   web_browsing:
-    value: "Yes — xAI tools include web_search and X search for current web/social information"
+    value: "Yes - xAI tools include web_search and X search for current web/social information"
     source: "https://docs.x.ai/developers/tools/web-search"
     source_label: "xAI web-search docs"
     source_id: xai-docs
@@ -117,14 +117,14 @@ facts:
     confidence: high
     next_review_at: 2026-06-03
   coding_agent:
-    value: "Partial — xAI API supports code execution and MCP tools, but Grok is not a packaged IDE agent like Codex or Claude Code"
+    value: "Partial - xAI API supports code execution and MCP tools, but Grok is not a packaged IDE agent like Codex or Claude Code; GitHub will deprecate Grok Code Fast 1 from Copilot on May 15, 2026"
     source: "https://docs.x.ai/developers/tools/code-execution"
     source_label: "xAI code-execution docs"
     source_id: xai-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-13
   enterprise_controls:
     value: "API console supports spend controls and monthly invoiced billing; public docs do not list a broad SSO/SCIM enterprise suite"
     source: "https://docs.x.ai/console/billing"
@@ -144,7 +144,7 @@ facts:
     confidence: high
     next_review_at: 2026-06-03
   open_source_or_local:
-    value: "No — Grok is a proprietary hosted xAI/X product with no local open-source release"
+    value: "No - Grok is a proprietary hosted xAI/X product with no local open-source release"
     source: "https://x.ai/grok"
     source_label: "xAI Grok product page"
     source_id: xai-grok-product
@@ -221,8 +221,24 @@ price_history:
     source: "https://aipedia.wiki/news/"
     source_id: aipedia-news
     source_label: "AIpedia news coverage"
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     note: "Grok 4.3 moved into the xAI API and OpenRouter, while Custom Voices added team-scoped voice cloning for TTS and voice-agent workflows. See the [May 3 coverage](/news/2026-05-03-xai-grok-43-custom-voices-api/)."
+  - date: 2026-05-08
+    plan: "Grok Code Fast 1 deprecation in Copilot"
+    price: "n/a"
+    source: "/news/2026-05-08-github-copilot-grok-code-fast-1-deprecation/"
+    source_id: aipedia-news
+    source_label: "AIpedia news coverage"
+    verified_at: 2026-05-13
+    note: "xAI provider-side deprecation forced GitHub Copilot to retire Grok Code Fast 1 across chat, completions, and agent modes on May 15, 2026. Reinforces the platform-continuity caveat for Grok as a coding backend."
+  - date: 2026-05-13
+    plan: "Page refresh"
+    price: "Same"
+    source: "https://docs.x.ai/"
+    source_id: xai-docs
+    source_label: "xAI documentation"
+    verified_at: 2026-05-13
+    note: "May 13 verification pass. SuperGrok $30, X Premium+ ~$40, SuperGrok Heavy $300, and Grok 4.3 API pricing confirmed unchanged. Grok Code Fast 1 Copilot deprecation folded into Recent developments."
 ---
 
 # Grok
@@ -244,10 +260,13 @@ Context is now model-dependent: earlier Fast/4.20 surfaces are tracked at 2M tok
 
 ## Recent developments (April-May 2026)
 
+- **May 8:** [GitHub will deprecate Grok Code Fast 1 across Copilot on May 15](/news/2026-05-08-github-copilot-grok-code-fast-1-deprecation/) following an xAI provider-side deprecation. GitHub points users to GPT-5 mini and Claude Haiku 4.5. Teams treating Grok as a stable coding backend should re-verify the exact surface and model before relying on it.
 - **May 1:** [Grok 4.3 moved into the xAI API and OpenRouter while Custom Voices added team-scoped voice cloning](/news/2026-05-03-xai-grok-43-custom-voices-api/). The new buyer question is cost-per-completed-workflow, especially for legal/finance reasoning and voice-agent deployments.
 - **April 30:** [Musk testimony said xAI partly used OpenAI models to train Grok](/news/2026-04-30-xai-grok-openai-distillation-testimony/). Treat this as a model-provenance and governance caveat, not a feature change; the public record does not quantify the scope.
 - **April 24:** [AI Industry Roundup, April 24](/news/2026-04-24-ai-industry-roundup/) kept Grok in the broader frontier-lab watchlist alongside DeepSeek V4, GPT-5.5 in Copilot, Anthropic capital pressure, and Cohere-Aleph Alpha.
-- **April 23:** [AI Industry Roundup, April 23](/news/2026-04-23-ai-industry-roundup/) covered Grok Voice and Grok outages next to GPT-5.5 and Cloud Next announcements.
+- **April 23:** [Grok Voice Think Fast 1.0 launched](/news/2026-04-23-xai-grok-voice-think-fast-10/) as xAI's enterprise real-time voice-agent model with 25+ languages, alongside [AI Industry Roundup, April 23](/news/2026-04-23-ai-industry-roundup/) coverage of Grok Voice and Grok outages.
+- **April 19:** [Grok 4.3 beta expanded to SuperGrok ($30/mo) and X Premium+ (~$40/mo)](/news/2026-04-19-grok-4-3-beta-premium-plus-supergrok/) 48 hours after Heavy-only launch, pushing the 1T-param model into broader paid tiers.
+- **April 17:** [Grok 4.3 beta launched on SuperGrok Heavy](/news/2026-04-17-grok-4-3-beta-supergrok-heavy/) at $300/mo with the 16-agent Heavy architecture, priority rate limits, and the new PDF/PowerPoint/spreadsheet/video-input output layer.
 
 ## System Verdict
 
@@ -283,7 +302,7 @@ Context is now model-dependent: earlier Fast/4.20 surfaces are tracked at 2M tok
 | **Video generation** | Grok Imagine video generation/editing API; consumer availability may vary |
 | **Persistent memory** | **None** (frequent user complaint vs ChatGPT Memory, Gemini Saved Info, Claude Projects) |
 
-Every data point verified on 2026-05-03 against [x.ai](https://x.ai), [docs.x.ai](https://docs.x.ai), [Artificial Analysis](https://artificialanalysis.ai/models/grok-4-20/providers), and AIpedia's [Grok 4.3 API coverage](/news/2026-05-03-xai-grok-43-custom-voices-api/).
+Every data point verified on 2026-05-13 against [x.ai](https://x.ai), [docs.x.ai](https://docs.x.ai), [Artificial Analysis](https://artificialanalysis.ai/models/grok-4-20/providers), and AIpedia's [Grok 4.3 API coverage](/news/2026-05-03-xai-grok-43-custom-voices-api/).
 
 ## What it actually is
 
@@ -333,7 +352,7 @@ Consumer tier pricing for SuperGrok tiers is not uniformly disclosed on xAI's pu
 | Grok 4.20 0309 v2 (Reasoning) | $3.00 blended | Not broken out | Standard | Per third-party tracking |
 | Grok 4.3 API | $1.25 | $2.50 up to 200K | 1M reported | API and OpenRouter access added May 1, 2026 |
 
-*API rates verified 2026-05-03 via [xAI docs](https://docs.x.ai), [Artificial Analysis](https://artificialanalysis.ai/models/grok-4-20/providers), and AIpedia's [Grok 4.3 API coverage](/news/2026-05-03-xai-grok-43-custom-voices-api/). Consumer subscription rates for SuperGrok tiers are not uniformly posted on xAI public pages.*
+*API rates verified 2026-05-13 via [xAI docs](https://docs.x.ai), [Artificial Analysis](https://artificialanalysis.ai/models/grok-4-20/providers), and AIpedia's [Grok 4.3 API coverage](/news/2026-05-03-xai-grok-43-custom-voices-api/). Consumer subscription rates for SuperGrok tiers are not uniformly posted on xAI public pages.*
 
 ## Against the alternatives
 
@@ -368,7 +387,7 @@ Consumer tier pricing for SuperGrok tiers is not uniformly disclosed on xAI's pu
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-09 against [x.ai](https://x.ai), [docs.x.ai reasoning docs](https://docs.x.ai/developers/model-capabilities/text/reasoning), [Artificial Analysis](https://artificialanalysis.ai/models/grok-4-20/providers), the [May 8 GitHub Copilot Grok Code Fast 1 retirement](/news/2026-05-08-github-copilot-grok-code-fast-1-deprecation/), and the [Grok Voice Think Fast 1.0 launch](/news/2026-04-23-xai-grok-voice-think-fast-10/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [x.ai](https://x.ai), [docs.x.ai reasoning docs](https://docs.x.ai/developers/model-capabilities/text/reasoning), [Artificial Analysis](https://artificialanalysis.ai/models/grok-4-20/providers), the [May 8 GitHub Copilot Grok Code Fast 1 retirement](/news/2026-05-08-github-copilot-grok-code-fast-1-deprecation/), the [Grok 4.3 API + Custom Voices coverage](/news/2026-05-03-xai-grok-43-custom-voices-api/), and the [Grok Voice Think Fast 1.0 launch](/news/2026-04-23-xai-grok-voice-think-fast-10/).
 
 ## FAQ
 

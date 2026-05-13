@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "Free - $0.30/1M tokens (API)"
 status: active
 launched: 2021-12
-last_updated: 2026-05-09
-last_verified: 2026-05-09
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: "https://www.minimax.io/"
     source_label: "MiniMax official site"
     source_id: minimax-official
-    verified_at: 2026-05-09
+    verified_at: 2026-05-13
     volatility: medium
     confidence: medium
   pricing_anchor:
@@ -39,8 +39,8 @@ facts:
     source: "https://platform.minimax.io/docs/pricing/overview"
     source_label: "MiniMax platform pricing"
     source_id: minimax-pricing
-    verified_at: 2026-05-09
-    next_review_at: 2026-06-09
+    verified_at: 2026-05-13
+    next_review_at: 2026-06-13
     volatility: high
     confidence: medium
   watch_out_for:
@@ -48,8 +48,8 @@ facts:
     source: "https://platform.minimax.io/docs/pricing/overview"
     source_label: "MiniMax platform pricing"
     source_id: minimax-pricing
-    verified_at: 2026-05-09
-    next_review_at: 2026-06-09
+    verified_at: 2026-05-13
+    next_review_at: 2026-06-13
     volatility: high
     confidence: medium
 tags: [chinese-ai, multimodal, llm, talkie, hailuo, companion-ai, api, foundation-models]
@@ -141,7 +141,7 @@ Three product lines under one token plan.
 
 **Consumer apps:** MiniMax agent and Talkie both have free tiers with in-app paid upgrades.
 
-*Prices verified 2026-05-09 via the [MiniMax pay-as-you-go pricing docs](https://platform.minimax.io/docs/guides/pricing-paygo) and [MiniMax platform pricing overview](https://platform.minimax.io/docs/pricing/overview).*
+*Prices verified 2026-05-13 via the [MiniMax pay-as-you-go pricing docs](https://platform.minimax.io/docs/guides/pricing-paygo) and [MiniMax platform pricing overview](https://platform.minimax.io/docs/pricing/overview).*
 
 ## Against the alternatives
 
@@ -169,12 +169,12 @@ Three product lines under one token plan.
 
 ## Methodology
 
-This page was partially rechecked by the aipedia.wiki editorial workflow on May 9, 2026 while refreshing [MiniMax Speech](/tools/minimax-speech/). The current pass verified MiniMax's platform overview, pay-as-you-go pricing, T2A/voice-cloning docs, and March 2026 company results; deeper MiniMax text-model benchmarking remains a future refresh. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average).
+This page was partially rechecked by the aipedia.wiki editorial workflow on May 13, 2026 while refreshing [MiniMax Speech](/tools/minimax-speech/). The current pass verified MiniMax's platform overview, pay-as-you-go pricing, T2A/voice-cloning docs, and March 2026 company results; deeper MiniMax text-model benchmarking remains a future refresh. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average).
 
 ## FAQ
 
 **Is MiniMax free to use?**
-The consumer MiniMax agent and Talkie both have free tiers. API access can run through pay-as-you-go or subscription/token-plan routes. As of May 9, 2026, the pay-as-you-go page lists M2.5 and M2.7 at $0.30 input / $1.20 output per 1M tokens, with highspeed variants at $0.60 / $2.40.
+The consumer MiniMax agent and Talkie both have free tiers. API access can run through pay-as-you-go or subscription/token-plan routes. As of May 13, 2026, the pay-as-you-go page lists M2.5 and M2.7 at $0.30 input / $1.20 output per 1M tokens, with highspeed variants at $0.60 / $2.40.
 
 **What is the current MiniMax flagship model?**
 M2.7 is the current flagship text model called out on MiniMax's public site and pay-as-you-go docs. API pricing is listed at $0.30 input and $1.20 output per 1M tokens on MiniMax's current pay-as-you-go page.

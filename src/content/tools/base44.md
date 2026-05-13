@@ -11,11 +11,11 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2025
-last_updated: 2026-05-10
-last_verified: 2026-05-10
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 seo_title: "Base44: Features, Pricing & Review (May 2026)"
-meta_description: "Base44 is a Wix-owned AI app builder for creating apps from natural language. Free, Starter, Builder, Pro, Elite, and Enterprise pricing verified May 2026."
+meta_description: "Base44 is a Wix-owned AI app builder for creating apps from natural language. Free, Starter, Builder, Pro, Elite, and Enterprise pricing verified May 13, 2026."
 author: aipedia.wiki Editorial
 affiliate:
   has_program: true
@@ -34,22 +34,22 @@ facts:
     source: "https://docs.base44.com/developers/app-code/overview/introduction"
     source_label: "Base44 developer docs"
     source_id: base44-coding-agent
-    verified_at: 2026-05-10
+    verified_at: 2026-05-13
     confidence: high
   best_paid_tier:
     value: "Builder (listed at $40/month when billed annually; monthly equivalent remains the practical custom-domain/GitHub tier) because it unlocks custom domains, backend functions, AI model select, and GitHub integration"
     source: "https://base44.com/pricing"
     source_label: "Base44 pricing"
     source_id: base44-best-paid-tier
-    verified_at: 2026-05-10
-    next_review_at: 2026-06-10
+    verified_at: 2026-05-13
+    next_review_at: 2026-06-13
     confidence: high
   best_for:
     value: "Internal tools, portals, dashboards, and SaaS prototypes where managed backend speed beats full ownership"
     source: "https://docs.base44.com/"
     source_label: "Base44 docs"
     source_id: base44-best-for
-    verified_at: 2026-05-10
+    verified_at: 2026-05-13
     confidence: high
 tags: [app-builder, vibe-coding, no-code, ai-design, ai-coding, wix, react, vite, managed-backend, github-sync]
 best_for:
@@ -70,7 +70,7 @@ price_history:
     source: "https://base44.com/pricing"
     source_label: "Source"
     source_id: base44-best-paid-tier
-    note: "25 monthly messages and public FAQ currently states 500 integration credits"
+    note: "25 monthly messages and public FAQ previously stated 500 integration credits"
   - date: 2026-05-10
     plan: "Starter"
     price: "$16/mo when billed annually; historically $20/mo month-to-month"
@@ -99,6 +99,13 @@ price_history:
     source_label: "Source"
     source_id: base44-affiliate-program
     note: "Public affiliate page says applicants are reviewed and minimum payout threshold is $300"
+  - date: 2026-05-13
+    plan: "Free"
+    price: "$0/mo"
+    source: "https://base44.com/pricing"
+    source_label: "Source"
+    source_id: base44-best-paid-tier
+    note: "Free tier integration credits now listed at 100/month (down from 500); message cap unchanged at 25/month. Verified against live pricing page and billing docs."
 ---
 
 # Base44
@@ -181,11 +188,11 @@ That history does not make Base44 unusable. It does mean buyers should treat sec
 
 ## Pricing
 
-Pricing via Base44's live pricing page, verified May 10, 2026. The page foregrounds annual billing; older monthly equivalents remain useful for buyer budgeting but should be checked at checkout.
+Pricing via Base44's live pricing page, verified May 13, 2026. The page foregrounds annual billing; older monthly equivalents remain useful for buyer budgeting but should be checked at checkout.
 
 | Plan | Monthly | Annual equivalent | Key limits |
 |---|---:|---:|---|
-| Free | $0 | $0 | 25 messages, FAQ states 500 integration credits, core app/auth/database features |
+| Free | $0 | $0 | 25 messages, 100 integration credits/month, core app/auth/database features |
 | Starter | Historically $20/mo | $16/mo | 100 messages, 2,000 integration credits, unlimited apps, in-app code edits, new private apps |
 | Builder | Historically $50/mo | $40/mo | 250 messages, 10,000 integration credits, backend functions, AI model select, custom domains, GitHub integration |
 | Pro | Historically $100/mo | $80/mo | 500 messages, 20,000 integration credits, GitHub integration, early beta access |
@@ -217,7 +224,7 @@ Base44 backend service pricing is documented separately as beta and free to use,
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-05-10 against Base44, Wix, and Wiz primary sources.
+This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-05-13 against Base44, Wix, and Wiz primary sources.
 
 ## FAQ
 

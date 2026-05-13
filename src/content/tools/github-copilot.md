@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$39/user/month"
 status: active
 launched: 2021-06
-last_updated: 2026-05-09
-last_verified: 2026-05-09
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -26,14 +26,14 @@ scores:
   longevity: 10
 facts:
   flagship_model:
-    value: "GPT-5.5 and Claude Opus 4.7 on Pro+, Business, and Enterprise"
+    value: "GPT-5.5 and Claude Opus 4.7 on Pro+, Business, and Enterprise; OpenAI Daybreak (May 11, 2026) integrates Codex Security into the same GitHub-native flow"
     source: "https://github.blog/changelog/2026-04-24-gpt-5-5-is-generally-available-for-github-copilot"
     source_label: "Copilot GPT-5.5 rollout coverage"
     source_id: company-newsrooms
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-13
   context_window:
     value: "Model-dependent and IDE/workspace-dependent"
     source: "https://docs.github.com/en/copilot"
@@ -53,7 +53,7 @@ facts:
     confidence: high
     next_review_at: 2026-06-03
   free_plan:
-    value: "Yes — GitHub Copilot Free is available with monthly limits"
+    value: "Yes - GitHub Copilot Free is available with monthly limits"
     source: "https://github.com/features/copilot/plans"
     source_label: "GitHub Copilot plans"
     source_id: github-copilot-plans
@@ -103,7 +103,7 @@ facts:
     volatility: low
     confidence: high
   web_browsing:
-    value: "Limited — Copilot works from repository, IDE, GitHub, and configured tool context rather than general web browsing"
+    value: "Limited - Copilot works from repository, IDE, GitHub, and configured tool context rather than general web browsing"
     source: "https://docs.github.com/en/copilot/reference/copilot-feature-matrix"
     source_label: "GitHub Copilot feature matrix"
     source_id: github-copilot-feature-matrix
@@ -111,23 +111,23 @@ facts:
     volatility: medium
     confidence: high
   coding_agent:
-    value: "Agent mode and GitHub Coding Agent"
+    value: "Agent mode, GitHub Coding Agent (cloud), and Copilot CLI Rubber Duck (cross-model review)"
     source: "https://docs.github.com/en/copilot"
     source_label: "GitHub Copilot documentation"
     source_id: github-copilot-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-13
   enterprise_controls:
-    value: "Business and Enterprise plans add organizational controls, policy management, and enterprise governance features"
+    value: "Business and Enterprise plans add organizational controls, policy management, and enterprise governance features; May 8 update added dedicated Agents secrets and variables for the cloud Coding Agent, plus comment-type breakdowns in code-review metrics"
     source: "https://docs.github.com/en/copilot/reference/copilot-feature-matrix"
     source_label: "GitHub Copilot feature matrix"
     source_id: github-copilot-feature-matrix
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-13
   data_retention_or_privacy:
     value: "Enterprise posture depends on GitHub plan and Copilot policy settings; review GitHub Copilot docs before regulated use"
     source: "https://docs.github.com/en/copilot"
@@ -137,7 +137,7 @@ facts:
     volatility: medium
     confidence: high
   open_source_or_local:
-    value: "No — GitHub Copilot is a proprietary hosted service"
+    value: "No - GitHub Copilot is a proprietary hosted service"
     source: "https://github.com/features/copilot"
     source_label: "GitHub Copilot product page"
     source_id: github-copilot-docs
@@ -161,7 +161,7 @@ facts:
     volatility: medium
     confidence: high
 tags: [ide, autocomplete, ai-coding, vscode, jetbrains, xcode, neovim, github, microsoft, agent-mode, coding-agent, mcp, gpt-5-5, claude-opus-4-7]
-seo_title: "GitHub Copilot: Features, Pricing & Review (April 2026)"
+seo_title: "GitHub Copilot: Features, Pricing & Review (May 2026)"
 meta_description: "GitHub Copilot runs GPT-5.5 and Claude Opus 4.7 on Pro+/Business/Enterprise, plus GPT-5-Codex and Gemini 3.1 Pro across VS Code, Visual Studio, JetBrains, Xcode, and Neovim. Free, Pro $10, Pro+ $39, Business $19/seat, Enterprise $39/seat."
 author: "aipedia.wiki Editorial"
 best_for:
@@ -212,6 +212,30 @@ price_history:
     source_label: "Source"
     source_id: github-copilot-plans
     note: "GitHub begins using Copilot interaction data from individual tiers for model training unless users opt out. Business and Enterprise are excluded."
+  - date: 2026-05-08
+    plan: "Grok Code Fast 1 deprecation"
+    price: "Same"
+    source: "/news/2026-05-08-github-copilot-grok-code-fast-1-deprecation/"
+    source_label: "AIpedia coverage"
+    source_id: aipedia-news
+    verified_at: 2026-05-13
+    note: "GitHub will deprecate Grok Code Fast 1 across Copilot on May 15, 2026 because of an xAI provider-side deprecation. Suggested alternatives are GPT-5 mini and Claude Haiku 4.5."
+  - date: 2026-05-08
+    plan: "Coding Agent secrets and variables"
+    price: "Included on paid tiers"
+    source: "/news/2026-05-08-github-copilot-cloud-agent-secrets-variables/"
+    source_label: "AIpedia coverage"
+    source_id: aipedia-news
+    verified_at: 2026-05-13
+    note: "Cloud Coding Agent gained dedicated Agents secrets and variables with organization-level sharing."
+  - date: 2026-05-13
+    plan: "Page refresh"
+    price: "Same"
+    source: "https://github.com/features/copilot/plans"
+    source_label: "GitHub Copilot plans"
+    source_id: github-copilot-plans
+    verified_at: 2026-05-13
+    note: "May 13 verification pass. Pricing tiers (Free, Pro $10, Pro+ $39, Business $19/seat, Enterprise $39/seat) confirmed unchanged. May 11 Daybreak / Codex Security integration folded into Recent changes."
 ---
 
 # GitHub Copilot
@@ -328,6 +352,7 @@ Prices verified 2026-04-17 via [GitHub Copilot plans](https://github.com/feature
 
 ## Recent changes
 
+- **May 11, 2026:** [OpenAI launched Daybreak](/news/2026-05-11-openai-daybreak-codex-security-launch/), pulling Codex Security into a 22-partner cyber initiative. Copilot teams now have a productized OpenAI security-scanning surface that competes with Anthropic's Project Glasswing and Claude Security.
 - **May 8, 2026:** [GitHub will deprecate Grok Code Fast 1 across Copilot on May 15](/news/2026-05-08-github-copilot-grok-code-fast-1-deprecation/). Teams using it should switch model policies to GPT-5 mini, Claude Haiku 4.5, or another supported model before the deadline.
 - **May 8, 2026:** [Copilot cloud agent gained dedicated Agents secrets and variables](/news/2026-05-08-github-copilot-cloud-agent-secrets-variables/), including organization-level sharing for agent configuration.
 - **May 8, 2026:** [Copilot code-review metrics now include comment-type breakdowns](/news/2026-05-08-github-copilot-code-review-metrics-comment-types/), giving admins a better view of security, bug-risk, and other suggestion categories.
@@ -351,7 +376,7 @@ Prices verified 2026-04-17 via [GitHub Copilot plans](https://github.com/feature
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, normalizes factual claims, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-09 against [github.com/features/copilot](https://github.com/features/copilot), [github.com/features/copilot/plans](https://github.com/features/copilot/plans), [docs.github.com/en/copilot](https://docs.github.com/en/copilot), the [May 8 Grok Code Fast 1 retirement](/news/2026-05-08-github-copilot-grok-code-fast-1-deprecation/), the [May 8 cloud-agent secrets update](/news/2026-05-08-github-copilot-cloud-agent-secrets-variables/), the [May 8 code-review metrics update](/news/2026-05-08-github-copilot-code-review-metrics-comment-types/), the [May 7 Rubber Duck update](/news/2026-05-07-github-copilot-rubber-duck-cross-model-review/), and the [May 7 model retirement notices](/news/2026-05-07-github-copilot-gpt41-claude-sonnet4-deprecations/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, normalizes factual claims, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [github.com/features/copilot](https://github.com/features/copilot), [github.com/features/copilot/plans](https://github.com/features/copilot/plans), [docs.github.com/en/copilot](https://docs.github.com/en/copilot), the [May 11 OpenAI Daybreak launch](/news/2026-05-11-openai-daybreak-codex-security-launch/), the [May 8 Grok Code Fast 1 retirement](/news/2026-05-08-github-copilot-grok-code-fast-1-deprecation/), the [May 8 cloud-agent secrets update](/news/2026-05-08-github-copilot-cloud-agent-secrets-variables/), the [May 8 code-review metrics update](/news/2026-05-08-github-copilot-code-review-metrics-comment-types/), the [May 7 Rubber Duck update](/news/2026-05-07-github-copilot-rubber-duck-cross-model-review/), and the [May 7 model retirement notices](/news/2026-05-07-github-copilot-gpt41-claude-sonnet4-deprecations/).
 
 ## FAQ
 
