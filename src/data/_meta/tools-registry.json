@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-04-23T08:49:06.119Z",
+  "generated": "2026-05-13T05:15:14.625Z",
   "total_active": 217,
   "total_dead": 8,
   "tools": {
@@ -15,8 +15,8 @@
       "pricing_model": "open-source",
       "price_range": "Free self-host / $5 per active flow (cloud)",
       "launched": "2022-06",
-      "last_updated": "2026-04-23T00:00:00.000Z",
-      "last_verified": "2026-04-23T00:00:00.000Z",
+      "last_updated": "2026-05-13T00:00:00.000Z",
+      "last_verified": "2026-05-13T00:00:00.000Z",
       "update_frequency": "monthly",
       "scores": {
         "utility": 8,
@@ -34,11 +34,14 @@
         "mcp"
       ],
       "affiliate": {
-        "has_program": false,
-        "commission": null,
+        "has_program": true,
+        "commission": "Up to $17.5k/yr per enterprise customer (3-year payout)",
         "cookie_days": null,
-        "network": null,
-        "link": null
+        "network": "PartnerStack",
+        "link": null,
+        "application_status": "applied",
+        "applied_date": "2026-05-13T00:00:00.000Z",
+        "notes": "Applied via PartnerStack 2026-05-13 to Activepieces partner certification program."
       },
       "page_path": "wikis/ai-tools/pages/tools/activepieces.md"
     },
@@ -1531,8 +1534,8 @@
       "pricing_model": "freemium",
       "price_range": "$0-$11.99/month",
       "launched": "2021-11",
-      "last_updated": "2026-04-17T00:00:00.000Z",
-      "last_verified": "2026-04-17T00:00:00.000Z",
+      "last_updated": "2026-05-13T00:00:00.000Z",
+      "last_verified": "2026-05-13T00:00:00.000Z",
       "update_frequency": "monthly",
       "scores": {
         "utility": 8,
@@ -1549,11 +1552,15 @@
         "consensus-meter"
       ],
       "affiliate": {
-        "has_program": false,
-        "commission": null,
+        "has_program": true,
+        "commission": "30% on paid signups, first 12 months (~$36 avg per signup)",
         "cookie_days": null,
-        "network": null,
-        "link": null
+        "network": "PartnerStack",
+        "link": "https://get.consensus.app/zqm1pbf16aj2",
+        "application_status": "approved",
+        "applied_date": "2026-05-13T00:00:00.000Z",
+        "approved_date": "2026-05-13T00:00:00.000Z",
+        "notes": "Instant approval via PartnerStack 2026-05-13."
       },
       "page_path": "wikis/ai-tools/pages/tools/consensus.md"
     },
@@ -2587,8 +2594,8 @@
       "pricing_model": "freemium",
       "price_range": "$0-$100/month",
       "launched": "2020-01",
-      "last_updated": "2026-04-17T00:00:00.000Z",
-      "last_verified": "2026-04-17T00:00:00.000Z",
+      "last_updated": "2026-05-13T00:00:00.000Z",
+      "last_verified": "2026-05-13T00:00:00.000Z",
       "update_frequency": "monthly",
       "scores": {
         "utility": 9,
@@ -2606,11 +2613,14 @@
         "prompt-to-deck"
       ],
       "affiliate": {
-        "has_program": false,
-        "commission": null,
+        "has_program": true,
+        "commission": "30% first year",
         "cookie_days": null,
-        "network": null,
-        "link": null
+        "network": "PartnerStack",
+        "link": null,
+        "application_status": "applied",
+        "applied_date": "2026-05-13T00:00:00.000Z",
+        "notes": "Applied via PartnerStack 2026-05-13; direct URL submitted: https://aipedia.wiki/tools/gamma/."
       },
       "page_path": "wikis/ai-tools/pages/tools/gamma.md"
     },
@@ -4426,8 +4436,8 @@
       "pricing_model": "freemium",
       "price_range": "$0-$199.99/month",
       "launched": "2022-12",
-      "last_updated": "2026-04-17T00:00:00.000Z",
-      "last_verified": "2026-04-17T00:00:00.000Z",
+      "last_updated": "2026-05-13T00:00:00.000Z",
+      "last_verified": "2026-05-13T00:00:00.000Z",
       "update_frequency": "monthly",
       "scores": {
         "utility": 8,
@@ -4443,11 +4453,14 @@
         "lindy"
       ],
       "affiliate": {
-        "has_program": false,
-        "commission": null,
+        "has_program": true,
+        "commission": "30% Y1 + 15% Y2 recurring",
         "cookie_days": null,
-        "network": null,
-        "link": null
+        "network": "PartnerStack",
+        "link": null,
+        "application_status": "applied",
+        "applied_date": "2026-05-13T00:00:00.000Z",
+        "notes": "Applied via PartnerStack 2026-05-13; direct URL submitted: https://aipedia.wiki/tools/lindy/."
       },
       "page_path": "wikis/ai-tools/pages/tools/lindy.md"
     },
@@ -5260,8 +5273,8 @@
       "pricing_model": "freemium",
       "price_range": "$0-$99/month",
       "launched": "2020-10",
-      "last_updated": "2026-04-17T00:00:00.000Z",
-      "last_verified": "2026-04-17T00:00:00.000Z",
+      "last_updated": "2026-05-13T00:00:00.000Z",
+      "last_verified": "2026-05-13T00:00:00.000Z",
       "update_frequency": "monthly",
       "scores": {
         "utility": 8,
@@ -5284,7 +5297,10 @@
         "commission": "20%",
         "cookie_days": null,
         "network": "ShareASale",
-        "link": null
+        "link": null,
+        "application_status": "applied",
+        "applied_date": "2026-05-13T00:00:00.000Z",
+        "notes": "Applied via ShareASale 2026-05-13; direct URL submitted: https://aipedia.wiki/tools/murf/."
       },
       "page_path": "wikis/ai-tools/pages/tools/murf.md"
     },
@@ -6294,8 +6310,8 @@
       "pricing_model": "freemium",
       "price_range": "$0-$19.95/month",
       "launched": "2017-10",
-      "last_updated": "2026-04-17T00:00:00.000Z",
-      "last_verified": "2026-04-17T00:00:00.000Z",
+      "last_updated": "2026-05-13T00:00:00.000Z",
+      "last_verified": "2026-05-13T00:00:00.000Z",
       "update_frequency": "monthly",
       "scores": {
         "utility": 8,
@@ -6313,10 +6329,13 @@
       ],
       "affiliate": {
         "has_program": true,
-        "commission": "20%",
+        "commission": "10% monthly / 15% semi-annual / 20% annual plans",
         "cookie_days": 30,
-        "network": null,
-        "link": null
+        "network": "PartnerStack",
+        "link": null,
+        "application_status": "applied",
+        "applied_date": "2026-05-13T00:00:00.000Z",
+        "notes": "Applied via PartnerStack 2026-05-13; review time quoted >5 days."
       },
       "page_path": "wikis/ai-tools/pages/tools/quillbot.md"
     },

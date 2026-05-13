@@ -10,15 +10,18 @@ pricing_model: freemium
 price_range: "$0-$19.95/month"
 status: active
 launched: 2017-10
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: true
-  commission: "20%"
+  commission: "10% monthly / 15% semi-annual / 20% annual plans"
   cookie_days: 30
-  network: null
+  network: PartnerStack
   link: null
+  application_status: applied
+  applied_date: 2026-05-13
+  notes: "Applied via PartnerStack 2026-05-13; QuillBot affiliate program review time >5 days."
 scores:
   utility: 8
   value: 9
@@ -68,7 +71,7 @@ facts:
     confidence: high
     next_review_at: 2026-08-03
 tags: [ai-writing, paraphrasing, grammar-checker, summarizer, plagiarism-checker, student-tools]
-seo_title: "QuillBot: Features, Pricing & Review (April 2026)"
+seo_title: "QuillBot: Features, Pricing & Review (May 2026)"
 meta_description: "QuillBot is the dominant AI paraphraser with 200M+ users, nine rewrite modes, grammar, summarizer, Co-Writer, and plagiarism. Premium $8.33/mo annual or $19.95 monthly."
 author: "aipedia.wiki Editorial"
 best_for:
@@ -119,7 +122,7 @@ Passes 200 million registered users as of 2026. Acquired by Course Hero in 2021 
 | **Extensions** | Chrome, Edge, Word, Google Docs |
 | **Refund policy** | 3-day money-back guarantee on Premium |
 
-Every data point above was verified against vendor documentation on 2026-04-17. See Sources.
+Every data point above was verified against vendor documentation on 2026-05-13. See Sources.
 
 ## What it actually is
 
@@ -156,7 +159,7 @@ Subscription pricing via [quillbot.com/upgrade](https://quillbot.com/upgrade):
 | Premium Semi-Annual | $13.33/mo (effective) | Billed $79.95 every 6 months |
 | Premium Annual | $8.33/mo (effective) | Billed $99.95/year · 58% saving vs monthly |
 
-*Prices verified 2026-04-17 via [quillbot.com/upgrade](https://quillbot.com/upgrade). All paid tiers share the same feature set. Premium carries a 3-day money-back guarantee.*
+*Prices verified 2026-05-13 via [quillbot.com/upgrade](https://quillbot.com/upgrade). All paid tiers share the same feature set. Premium carries a 3-day money-back guarantee.*
 
 ## Against the alternatives
 
@@ -183,7 +186,7 @@ Subscription pricing via [quillbot.com/upgrade](https://quillbot.com/upgrade):
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [quillbot.com/upgrade](https://quillbot.com/upgrade) and [quillbot.com/premium](https://quillbot.com/premium).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [quillbot.com/upgrade](https://quillbot.com/upgrade) and [quillbot.com/premium](https://quillbot.com/premium).
 
 ## FAQ
 

@@ -11,15 +11,18 @@ pricing_model: freemium
 price_range: $0-$100/month
 status: active
 launched: 2020-01
-last_updated: 2026-05-10
-last_verified: 2026-05-10
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
-  has_program: false
-  commission: null
+  has_program: true
+  commission: 30% first year
   cookie_days: null
-  network: null
+  network: PartnerStack
   link: null
+  application_status: applied
+  applied_date: 2026-05-13
+  notes: "Applied via PartnerStack 2026-05-13; direct URL submitted: https://aipedia.wiki/tools/gamma/."
 scores:
   utility: 9
   value: 8
@@ -115,7 +118,7 @@ The free tier supports simple projects, imports, and exports. Paid tiers add bra
 | **PPTX export** | Available, lossy on complex layouts |
 | **Offline mode** | None |
 
-Every data point above was verified against official Gamma documentation on 2026-05-10. See Sources.
+Every data point above was verified against official Gamma documentation on 2026-05-13. See Sources.
 
 ## What it actually is
 
@@ -152,7 +155,7 @@ Subscription and team pricing are managed via [gamma.app/pricing](https://gamma.
 | Ultra | Everything in Pro; substantially more AI usage; up to 75 cards per prompt; access to advanced text, image, and video models; up to 100 custom domains; early feature access | Power users, agencies, and heavy generators |
 | Team / Sales | Contact-sales path for teams evaluating Gamma | Shared workspace and organization needs |
 
-*Plan gates verified 2026-05-10 via [gamma.app/pricing](https://gamma.app/pricing). Check the live pricing page for current dollar amounts and billing options before purchase.*
+*Plan gates verified 2026-05-13 via [gamma.app/pricing](https://gamma.app/pricing). Check the live pricing page for current dollar amounts and billing options before purchase.*
 
 ## Against the alternatives
 
@@ -176,7 +179,7 @@ Subscription and team pricing are managed via [gamma.app/pricing](https://gamma.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [Gamma pricing](https://gamma.app/pricing) and vendor documentation.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [Gamma pricing](https://gamma.app/pricing) and vendor documentation.
 
 ## FAQ
 

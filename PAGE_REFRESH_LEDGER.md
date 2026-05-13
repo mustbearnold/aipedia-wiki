@@ -1,6 +1,6 @@
 # AiPedia Page Refresh Ledger
 
-Ledger updated through: 2026-05-12
+Ledger updated through: 2026-05-13
 Tracked public pages and crawl surfaces: 705
 
 Hard rule: every time a tracked website page is edited, refreshed, materially re-ranked, or has volatile facts re-verified, update that page row in this file on the same change. If a child page update affects a parent hub, archive, internal-link block, sitemap, or LLM surface, update those affected rows too.
@@ -41,7 +41,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-02 | /tools/capacities/ | Tool | Yes | frontmatter | src/content/tools/capacities.md |
 | 2026-05-02 | /tools/cartesia/ | Tool | Yes | frontmatter | src/content/tools/cartesia.md |
 | 2026-05-02 | /tools/connected-papers/ | Tool | Yes | frontmatter | src/content/tools/connected-papers.md |
-| 2026-05-02 | /tools/consensus/ | Tool | Yes | frontmatter | src/content/tools/consensus.md |
 | 2026-05-02 | /tools/decktopus/ | Tool | Yes | frontmatter | src/content/tools/decktopus.md |
 | 2026-05-02 | /tools/devin/ | Tool | Yes | frontmatter | src/content/tools/devin.md |
 | 2026-05-02 | /tools/dext/ | Tool | Yes | frontmatter | src/content/tools/dext.md |
@@ -65,7 +64,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-02 | /tools/pitch/ | Tool | Yes | frontmatter | src/content/tools/pitch.md |
 | 2026-05-02 | /tools/presentations-ai/ | Tool | Yes | frontmatter | src/content/tools/presentations-ai.md |
 | 2026-05-02 | /tools/prezi/ | Tool | Yes | frontmatter | src/content/tools/prezi.md |
-| 2026-05-02 | /tools/quillbot/ | Tool | Yes | frontmatter | src/content/tools/quillbot.md |
 | 2026-05-02 | /tools/readwise/ | Tool | Yes | frontmatter | src/content/tools/readwise.md |
 | 2026-05-02 | /tools/replit-agent/ | Tool | Yes | frontmatter | src/content/tools/replit-agent.md |
 | 2026-05-02 | /tools/rodin/ | Tool | Yes | frontmatter | src/content/tools/rodin.md |
@@ -96,7 +94,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-03 | /tools/deepseek/ | Tool | Yes | frontmatter | src/content/tools/deepseek.md |
 | 2026-05-03 | /tools/hyperwrite/ | Tool | Yes | frontmatter | src/content/tools/hyperwrite.md |
 | 2026-05-03 | /tools/langflow/ | Tool | Yes | frontmatter | src/content/tools/langflow.md |
-| 2026-05-03 | /tools/lindy/ | Tool | Yes | frontmatter | src/content/tools/lindy.md |
 | 2026-05-03 | /tools/lm-studio/ | Tool | Yes | frontmatter | src/content/tools/lm-studio.md |
 | 2026-05-03 | /tools/logseq/ | Tool | Yes | frontmatter | src/content/tools/logseq.md |
 | 2026-05-03 | /tools/make/ | Tool | Yes | frontmatter | src/content/tools/make.md |
@@ -133,7 +130,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-03 | /workflows/newsletter-stack/ | Workflow | Yes | frontmatter | src/content/workflows/newsletter-stack.md |
 | 2026-05-03 | /workflows/podcast-automation-stack/ | Workflow | Yes | frontmatter | src/content/workflows/podcast-automation-stack.md |
 | 2026-05-03 | /workflows/research-assistant-stack/ | Workflow | Yes | frontmatter | src/content/workflows/research-assistant-stack.md |
-| 2026-05-04 | /tools/activepieces/ | Tool | Yes | frontmatter | src/content/tools/activepieces.md |
 | 2026-05-04 | /tools/ada/ | Tool | Yes | frontmatter | src/content/tools/ada.md |
 | 2026-05-04 | /tools/aider/ | Tool | Yes | frontmatter | src/content/tools/aider.md |
 | 2026-05-04 | /tools/aiva/ | Tool | Yes | frontmatter | src/content/tools/aiva.md |
@@ -183,7 +179,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-04 | /tools/kokoro/ | Tool | Yes | frontmatter | src/content/tools/kokoro.md |
 | 2026-05-04 | /tools/krea/ | Tool | Yes | frontmatter | src/content/tools/krea.md |
 | 2026-05-04 | /tools/mubert/ | Tool | Yes | frontmatter | src/content/tools/mubert.md |
-| 2026-05-04 | /tools/murf/ | Tool | Yes | frontmatter | src/content/tools/murf.md |
 | 2026-05-04 | /tools/pieces/ | Tool | Yes | frontmatter | src/content/tools/pieces.md |
 | 2026-05-04 | /tools/reflect/ | Tool | Yes | frontmatter | src/content/tools/reflect.md |
 | 2026-05-04 | /tools/resemble-ai/ | Tool | Yes | frontmatter | src/content/tools/resemble-ai.md |
@@ -657,7 +652,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-10 | /tools/elicit/ | Tool | Yes | frontmatter | src/content/tools/elicit.md |
 | 2026-05-10 | /tools/factory/ | Tool | Yes | frontmatter | src/content/tools/factory.md |
 | 2026-05-10 | /tools/flux/ | Tool | Yes | frontmatter | src/content/tools/flux.md |
-| 2026-05-10 | /tools/gamma/ | Tool | Yes | frontmatter | src/content/tools/gamma.md |
 | 2026-05-10 | /tools/gemini/ | Tool | Yes | frontmatter | src/content/tools/gemini.md |
 | 2026-05-10 | /tools/grammarly/ | Tool | Yes | frontmatter | src/content/tools/grammarly.md |
 | 2026-05-10 | /tools/jasper/ | Tool | Yes | frontmatter | src/content/tools/jasper.md |
@@ -696,7 +690,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-11 | /tools/paradox/ | Tool | Yes | frontmatter | src/content/tools/paradox.md |
 | 2026-05-11 | /tools/perplexity/ | Tool | Yes | frontmatter | src/content/tools/perplexity.md |
 | 2026-05-11 | /tools/qwen/ | Tool | Yes | frontmatter | src/content/tools/qwen.md |
-| 2026-05-12 | / | Static page | Yes | git | src/pages/index.astro |
 | 2026-05-12 | /404/ | Static page | No | git | src/pages/404.astro |
 | 2026-05-12 | /about/ | Static page | Yes | git | src/pages/about/index.astro |
 | 2026-05-12 | /answers/ | Static page | Yes | git | src/pages/answers/index.astro |
@@ -716,3 +709,10 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-12 | /tools/ | Static page | Yes | git | src/pages/tools/index.astro |
 | 2026-05-12 | /trends/ | Static page | Yes | git | src/pages/trends/index.astro |
 | 2026-05-12 | /workflows/ | Static page | Yes | git | src/pages/workflows/index.astro |
+| 2026-05-13 | / | Static page | Yes | git | src/pages/index.astro |
+| 2026-05-13 | /tools/activepieces/ | Tool | Yes | working tree | src/content/tools/activepieces.md |
+| 2026-05-13 | /tools/consensus/ | Tool | Yes | working tree | src/content/tools/consensus.md |
+| 2026-05-13 | /tools/gamma/ | Tool | Yes | working tree | src/content/tools/gamma.md |
+| 2026-05-13 | /tools/lindy/ | Tool | Yes | working tree | src/content/tools/lindy.md |
+| 2026-05-13 | /tools/murf/ | Tool | Yes | working tree | src/content/tools/murf.md |
+| 2026-05-13 | /tools/quillbot/ | Tool | Yes | working tree | src/content/tools/quillbot.md |

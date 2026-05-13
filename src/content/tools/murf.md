@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: $0-$99/month
 status: active
 launched: 2020-10
-last_updated: 2026-05-04
-last_verified: 2026-05-04
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -21,6 +21,9 @@ affiliate:
   cookie_days: null
   network: ShareASale
   link: null
+  application_status: applied
+  applied_date: 2026-05-13
+  notes: "Applied via ShareASale 2026-05-13; direct URL submitted: https://aipedia.wiki/tools/murf/."
 scores:
   utility: 8
   value: 7
@@ -87,11 +90,11 @@ facts:
     confidence: high
     next_review_at: '2026-08-04'
 tags: [text-to-speech, tts, ai-voice, e-learning, corporate-narration, voice-cloning, translation, dubbing]
-seo_title: 'Murf AI: Features, Pricing & Review (April 2026)'
+seo_title: 'Murf AI: Features, Pricing & Review (May 2026)'
 meta_description: >-
   Murf AI delivers 200+ studio voices, voice cloning, translation, and AI
   dubbing in 44 languages. Free, Creator $29, Business $99. Pricing verified
-  April 2026.
+  May 2026.
 author: "aipedia.wiki Editorial"
 best_for:
   - e-learning and corporate training
@@ -136,7 +139,7 @@ Free, Creator $29, Business $99, Enterprise custom. Annual billing drops Creator
 | **Pricing (monthly)** | Free · Creator $29 · Business $99 · Enterprise custom |
 | **Pricing (annual)** | Creator $19 · Business $66 |
 
-Every data point verified against vendor documentation on 2026-04-17. See Sources.
+Every data point verified against vendor documentation on 2026-05-13. See Sources.
 
 ## What it actually is
 
@@ -174,7 +177,7 @@ Subscription pricing via [murf.ai/pricing](https://murf.ai/pricing).
 | Business | $66/mo | $99/mo | 96 hrs/year | Collaboration, 30+ languages, priority rendering |
 | Enterprise | Custom | Custom | Unlimited | Voice cloning, API, dubbing, SOC 2, SSO, HIPAA |
 
-*Prices verified 2026-04-17 via [Murf pricing](https://murf.ai/pricing). Voice cloning is Enterprise-only as of the 2025 repricing. Translation API runs $0.02 per 1000 chars.*
+*Prices verified 2026-05-13 via [Murf pricing](https://murf.ai/pricing). Voice cloning is Enterprise-only as of the 2025 repricing. Translation API runs $0.02 per 1000 chars.*
 
 ## Against the alternatives
 
@@ -200,7 +203,7 @@ Subscription pricing via [murf.ai/pricing](https://murf.ai/pricing).
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against the [Murf pricing page](https://murf.ai/pricing) and the [Murf official site](https://murf.ai).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against the [Murf pricing page](https://murf.ai/pricing) and the [Murf official site](https://murf.ai).
 
 ## FAQ
 

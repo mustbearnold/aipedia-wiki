@@ -11,18 +11,21 @@ pricing_model: freemium
 price_range: "$0-$199.99/month"
 status: active
 launched: 2022-12
-last_updated: 2026-05-03
-last_verified: 2026-05-03
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
-seo_title: "Lindy: Features, Pricing & Review (2026)"
+seo_title: "Lindy: Features, Pricing & Review (May 2026)"
 meta_description: "Lindy is a no-code AI agent builder for SMB workflows. Free tier with 400 credits, Plus $49.99/mo (5,000 credits), Pro $99.99/mo (3x Plus), Max $199.99/mo (7x Plus). Runs on GPT plus Claude. Strongest on inbox triage, meeting notes, and CRM updates."
 author: "aipedia.wiki Editorial"
 affiliate:
-  has_program: false
-  commission: null
+  has_program: true
+  commission: "30% Y1 + 15% Y2 recurring"
   cookie_days: null
-  network: null
+  network: PartnerStack
   link: null
+  application_status: applied
+  applied_date: 2026-05-13
+  notes: "Applied via PartnerStack 2026-05-13; direct URL submitted: https://aipedia.wiki/tools/lindy/."
 scores:
   utility: 8
   value: 6
@@ -178,7 +181,7 @@ Current plans via [lindy.ai/pricing](https://www.lindy.ai/pricing):
 
 Add-on credits cost **$10 per 1,000**. Credits do not roll over between billing cycles. A reply-to-email task costs 3 credits. A phone call costs 265 credits. Premium actions and model tax can push any step higher.
 
-Prices verified 2026-04-18 via [Lindy pricing page](https://www.lindy.ai/pricing) and the [Ringg AI 2026 pricing guide](https://www.ringg.ai/blogs/lindy-ai-pricing).
+Prices verified 2026-05-13 via [Lindy pricing page](https://www.lindy.ai/pricing) and the [Ringg AI 2026 pricing guide](https://www.ringg.ai/blogs/lindy-ai-pricing).
 
 ## Against the alternatives
 
@@ -201,7 +204,7 @@ Prices verified 2026-04-18 via [Lindy pricing page](https://www.lindy.ai/pricing
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-04-18 against [lindy.ai/pricing](https://www.lindy.ai/pricing), the [Ringg AI 2026 Lindy pricing guide](https://www.ringg.ai/blogs/lindy-ai-pricing), and the [Lindy LLM Call documentation](https://docs.lindy.ai/skills/lindy-utilities/llm-call).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-05-13 against [lindy.ai/pricing](https://www.lindy.ai/pricing), the [Ringg AI 2026 Lindy pricing guide](https://www.ringg.ai/blogs/lindy-ai-pricing), and the [Lindy LLM Call documentation](https://docs.lindy.ai/skills/lindy-utilities/llm-call).
 
 ## FAQ
 

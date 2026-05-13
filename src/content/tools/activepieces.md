@@ -13,15 +13,18 @@ pricing_model: open-source
 price_range: Free self-host / $5 per active flow (cloud)
 status: active
 launched: 2022-06
-last_updated: 2026-05-04
-last_verified: 2026-05-04
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
-  has_program: false
-  commission: null
+  has_program: true
+  commission: "Up to $17.5k/yr per enterprise customer (3-year payout)"
   cookie_days: null
-  network: null
+  network: PartnerStack
   link: null
+  application_status: applied
+  applied_date: 2026-05-13
+  notes: "Applied via PartnerStack 2026-05-13 to the Activepieces partner certification program."
 scores:
   utility: 8
   value: 9
@@ -88,11 +91,11 @@ facts:
     confidence: high
     next_review_at: '2026-11-04'
 tags: [automation, open-source, zapier-alternative, no-code, workflow, self-hosted, mcp]
-seo_title: 'Activepieces Review: Open-Source Zapier Alternative (April 2026)'
+seo_title: 'Activepieces Review: Open-Source Zapier Alternative (May 2026)'
 meta_description: >-
   Activepieces is an MIT-licensed no-code automation platform with AI agents and
   native MCP support. Free to self-host; cloud Standard free for 10 flows, then
-  $5/flow/month. Verified April 2026.
+  $5/flow/month. Verified May 2026.
 author: aipedia.wiki Editorial
 best_for:
   - teams leaving Zapier on cost
@@ -151,7 +154,7 @@ Two deployment paths: self-host free on your own infrastructure, or use the clou
 | **Code steps** | JavaScript (Node-based) |
 | **Enterprise deploy** | Custom annual contract (SSO, audit, Git sync, private pieces) |
 
-Every data point above was verified against vendor documentation on 2026-04-17. See Sources.
+Every data point above was verified against vendor documentation on 2026-05-13. See Sources.
 
 ## What it actually is
 
@@ -188,7 +191,7 @@ Pricing via [activepieces.com/pricing](https://www.activepieces.com/pricing):
 | Cloud Unlimited | Custom (annual) | SSO, audit logs, role permissions, centralized AI billing, Git sync, private pieces |
 | Embed | From $30,000/yr | Embedded builder and agents, JS SDK, custom templates, white-label |
 
-*Prices verified 2026-04-17 via [activepieces.com/pricing](https://www.activepieces.com/pricing). Pricing shifted from per-task to per-active-flow in early 2026.*
+*Prices verified 2026-05-13 via [activepieces.com/pricing](https://www.activepieces.com/pricing). Pricing shifted from per-task to per-active-flow in early 2026.*
 
 ## Against the alternatives
 
@@ -214,7 +217,7 @@ Pricing via [activepieces.com/pricing](https://www.activepieces.com/pricing):
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis shown. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [activepieces.com/pricing](https://www.activepieces.com/pricing) and the [Activepieces GitHub repository](https://github.com/activepieces/activepieces).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis shown. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [activepieces.com/pricing](https://www.activepieces.com/pricing) and the [Activepieces GitHub repository](https://github.com/activepieces/activepieces).
 
 ## FAQ
 

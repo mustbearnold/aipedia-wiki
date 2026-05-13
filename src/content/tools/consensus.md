@@ -10,15 +10,19 @@ pricing_model: freemium
 price_range: "$0-$11.99/month"
 status: active
 launched: 2021-11
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
-  has_program: false
-  commission: null
+  has_program: true
+  commission: "30% on paid signups, first 12 months (~$36 avg per signup)"
   cookie_days: null
-  network: null
-  link: null
+  network: PartnerStack
+  link: "https://get.consensus.app/zqm1pbf16aj2"
+  application_status: approved
+  applied_date: 2026-05-13
+  approved_date: 2026-05-13
+  notes: "Instant approval via PartnerStack 2026-05-13."
 scores:
   utility: 8
   value: 8
@@ -67,7 +71,7 @@ facts:
     volatility: medium
     confidence: high
 tags: [research, academic-search, peer-review, evidence-synthesis, science, consensus-meter]
-seo_title: "Consensus: Academic AI Search Review & Pricing (April 2026)"
+seo_title: "Consensus: Academic AI Search Review & Pricing (May 2026)"
 meta_description: "Consensus searches 200M+ peer-reviewed papers with a Consensus Meter showing study agreement. Free tier capped; Premium $11.99/mo ($8.99/mo annual) for unlimited Pro Analysis. Enterprise custom."
 author: "aipedia.wiki Editorial"
 best_for:
@@ -112,7 +116,7 @@ Over 5 million students and researchers across 10,000+ universities use it. Biom
 | **User base** | 5M+ users across 10,000+ universities |
 | **Coverage bias** | Strongest in biomedical and social science |
 
-Every data point above was verified against vendor documentation on 2026-04-17. See Sources.
+Every data point above was verified against vendor documentation on 2026-05-13. See Sources.
 
 ## What it actually is
 
@@ -150,7 +154,7 @@ Pricing via [consensus.app/pricing](https://consensus.app/pricing):
 | Teams | Custom | Centralized billing for research groups and labs |
 | Enterprise | Custom | 200+ seat institutions, SSO, team analytics |
 
-Prices verified 2026-04-17 via [Consensus pricing](https://consensus.app/pricing) and [Consensus subscription plans](https://help.consensus.app/en/articles/10087865-subscription-plans).
+Prices verified 2026-05-13 via [Consensus pricing](https://consensus.app/pricing) and [Consensus subscription plans](https://help.consensus.app/en/articles/10087865-subscription-plans).
 
 ## Against the alternatives
 
@@ -174,7 +178,7 @@ Prices verified 2026-04-17 via [Consensus pricing](https://consensus.app/pricing
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-04-17 against [Consensus pricing](https://consensus.app/pricing), [Consensus subscription plans](https://help.consensus.app/en/articles/10087865-subscription-plans), and [Consensus for university libraries](https://consensus.app/home/blog/consensus-for-university-libraries/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-05-13 against [Consensus pricing](https://consensus.app/pricing), [Consensus subscription plans](https://help.consensus.app/en/articles/10087865-subscription-plans), and [Consensus for university libraries](https://consensus.app/home/blog/consensus-for-university-libraries/).
 
 ## FAQ
 
