@@ -2,7 +2,7 @@
 type: tool
 slug: recraft
 title: Recraft
-tagline: Vector-native AI image generator with brand-style consistency and the cleanest typography-in-image output on the market. Recraft V3 leads the Hugging Face text-to-image benchmark as of April 2026.
+tagline: Vector-native AI image generator with brand-style consistency and the cleanest typography-in-image output on the market. Recraft V3 leads the Hugging Face text-to-image benchmark as of May 2026.
 category: ai-image
 secondary_categories: [ai-design]
 company: Recraft AI
@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$48/month"
 status: active
 launched: 2022-12
-last_updated: 2026-05-03
-last_verified: 2026-05-03
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 seo_title: "Recraft: Features, Pricing & Review (2026)"
 meta_description: "Recraft V3 is the vector-native AI image generator with best-in-market legible text rendering. Free tier with 50 daily credits. Paid plans $10 to $48/month. API at $0.04 per raster image, $0.08 per vector."
@@ -30,11 +30,11 @@ scores:
   longevity: 8
 facts:
   best_for:
-    value: "Vector-native AI image generator with brand-style consistency and the cleanest typography-in-image output on the market. Recraft V3 leads the Hugging Face text-to-image benchmark as of April 2026. Best for image generation, editing, and visual-production workflows."
+    value: "Vector-native AI image generator with brand-style consistency and the cleanest typography-in-image output on the market. Recraft V3 leads the Hugging Face text-to-image benchmark as of May 2026. Best for image generation, editing, and visual-production workflows."
     source: "https://www.recraft.ai/pricing"
     source_label: "Source"
     source_id: recraft-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: medium
     confidence: medium
   pricing_anchor:
@@ -42,7 +42,7 @@ facts:
     source: "https://www.recraft.ai/pricing"
     source_label: "Source"
     source_id: recraft-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     next_review_at: 2026-08-03
     volatility: high
     confidence: medium
@@ -51,7 +51,7 @@ facts:
     source: "https://www.recraft.ai/pricing"
     source_label: "Source"
     source_id: recraft-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     next_review_at: 2026-08-03
     volatility: high
     confidence: medium
@@ -88,7 +88,7 @@ price_history:
 
 # Recraft
 
-Recraft is a **vector-first AI image platform** built around brand-style consistency, on-canvas editing, and native SVG output. The current flagship model, **Recraft V3**, sits at the top of the Hugging Face text-to-image leaderboard (ELO 1172) as of April 2026, ahead of Midjourney and OpenAI's GPT Image on that benchmark.
+Recraft is a **vector-first AI image platform** built around brand-style consistency, on-canvas editing, and native SVG output. The current flagship model, **Recraft V3**, sits at the top of the Hugging Face text-to-image leaderboard (ELO 1172) as of May 2026, ahead of Midjourney and OpenAI's GPT Image on that benchmark.
 
 The company is **Recraft AI Limited**, registered in London and operating with a San Francisco presence, founded in December 2022 by Anna Veronika Dorogush. Recraft's differentiators are narrow and real: it outputs true SVG with actual paths and anchor points, not raster wrapped in a container, and it renders legible text inside generated images better than any other generally-available model.
 
@@ -106,7 +106,7 @@ The Agentic Mode turns Recraft into a conversational design assistant on an infi
 
 | | |
 |---|---|
-| **Flagship model** | Recraft V3 (leads Hugging Face text-to-image ELO as of April 2026) |
+| **Flagship model** | Recraft V3 (leads Hugging Face text-to-image ELO as of May 2026) |
 | **Vector output** | Native SVG with real paths and anchor points |
 | **Text rendering** | Best-in-class legible text inside generated images |
 | **Agentic Mode** | Conversational canvas assistant, context-aware edits |
@@ -165,7 +165,7 @@ API pricing via [recraft.ai/api](https://www.recraft.ai/api):
 | Raster image | $0.04 | All non-vector styles |
 | Vector image | $0.08 | SVG output with real paths |
 
-Prices verified 2026-04-18 via [Recraft pricing](https://www.recraft.ai/pricing) and [Recraft API docs](https://www.recraft.ai/api).
+Prices verified 2026-05-13 via [Recraft pricing](https://www.recraft.ai/pricing) and [Recraft API docs](https://www.recraft.ai/api).
 
 ## Against the alternatives
 
@@ -191,7 +191,7 @@ Prices verified 2026-04-18 via [Recraft pricing](https://www.recraft.ai/pricing)
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-18 against [Recraft pricing](https://www.recraft.ai/pricing), [Recraft API](https://www.recraft.ai/api), the Hugging Face text-to-image leaderboard, and [Recraft company registration](https://find-and-update.company-information.service.gov.uk/company/14525957).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [Recraft pricing](https://www.recraft.ai/pricing), [Recraft API](https://www.recraft.ai/api), the Hugging Face text-to-image leaderboard, and [Recraft company registration](https://find-and-update.company-information.service.gov.uk/company/14525957).
 
 ## FAQ
 

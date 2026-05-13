@@ -11,11 +11,11 @@ pricing_model: paid
 price_range: "$0.05-$6/MTok"
 status: active
 launched: 2022
-last_updated: 2026-05-03
-last_verified: 2026-05-03
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: quarterly
-seo_title: "Reka: Features, Pricing & Review (2026)"
-meta_description: "Reka ships Core, Flash, Edge, and Spark multimodal LLMs with native video, image, and audio. Core is $2/$6 per MTok. Edge (7B) launched March 2026 for on-device physical AI. API-only with on-prem deployment options. Unicorn valuation after $110M round."
+seo_title: "Reka: Features, Pricing & Review (May 2026)"
+meta_description: "Reka ships Core, Flash, Edge, and Spark multimodal LLMs with native video, image, and audio. Core is $2/$6 per MTok. Edge (7B) launched March 5, 2026 for on-device physical AI; now listed publicly at $0.10/$0.10 per MTok. On-prem deployment options. Unicorn valuation after $110M round."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -30,31 +30,31 @@ scores:
   longevity: 7
 facts:
   best_for:
-    value: "Multimodal LLM family with native long-context video understanding. Core is flagship; Flash and Edge serve cheaper and on-device use cases. $110M unicorn round in 2025 backed by NVIDIA and Snowflake. Best for chat, research, assistant, and model-access workflows."
+    value: "Multimodal LLM family with native long-context video understanding. Core is flagship; Flash, Edge, and Spark serve cheaper, on-device, and ultra-low-latency use cases. Reka Edge (7B) launched March 5, 2026 for physical AI. $110M unicorn round in 2025 backed by NVIDIA and Snowflake."
     source: "https://docs.reka.ai/pricing"
     source_label: "Source"
     source_id: reka-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: medium
-    confidence: medium
+    confidence: high
   pricing_anchor:
-    value: "Reka Core API; $2 / $6 per MTok; Verified via docs.reka.ai/pricing. Image $0.02, video $0.08/min, audio $0.02/min."
+    value: "Reka Core API; $2 / $6 per MTok; Edge now publicly listed at $0.10 / $0.10 per MTok. Flash $0.80 / $2. Image $0.02, video $0.08/min, audio $0.02/min."
     source: "https://docs.reka.ai/pricing"
     source_label: "Source"
     source_id: reka-pricing
-    verified_at: 2026-05-03
-    next_review_at: 2026-08-03
-    volatility: high
-    confidence: medium
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
+    volatility: medium
+    confidence: high
   watch_out_for:
-    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    value: "Spark (1B) pricing is no longer listed in current docs; Edge is the new entry-point public API model. Verify on-prem and dedicated deployment terms direct with Reka sales."
     source: "https://docs.reka.ai/pricing"
     source_label: "Source"
     source_id: reka-pricing
-    verified_at: 2026-05-03
-    next_review_at: 2026-08-03
-    volatility: high
-    confidence: medium
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
+    volatility: medium
+    confidence: high
 tags: [multimodal-llm, video-understanding, enterprise-ai, reka, foundation-model]
 best_for:
   - long-context video analysis and question answering
@@ -76,41 +76,48 @@ price_history:
     source_label: "Source"
     source_id: reka-pricing
     note: "Verified via docs.reka.ai/pricing. Image $0.02, video $0.08/min, audio $0.02/min."
-  - date: 2026-03-01
+  - date: 2026-03-05
     plan: "Reka Edge (7B)"
     price: "On-device pricing via partners"
+    source: "https://reka.ai/news/reka-edge-frontier-level-edge-intelligence-for-physical-ai"
+    source_label: "Source"
+    source_id: reka-edge-launch
+    note: "Reka Edge launched March 5, 2026 for physical AI and on-device vision-language."
+  - date: 2026-05-13
+    plan: "Reka Edge API"
+    price: "$0.10 / $0.10 per MTok"
     source: "https://docs.reka.ai/pricing"
     source_label: "Source"
     source_id: reka-pricing
-    note: "New Edge model announced March 2026 for physical AI and on-device vision-language."
+    note: "Edge now publicly listed in Reka API pricing alongside Flash and Core. Replaces Spark as the entry-point tier in public docs."
 ---
 
 # Reka
 
 Reka is a multimodal LLM research lab founded in 2022 by veterans from DeepMind, Google Brain, Meta, and Baidu. The flagship Core model accepts text, image, audio, and video in one unified stack. Reka ships Flash, Edge, and Spark as smaller variants covering cost-sensitive API, on-device, and ultra-low-latency use cases.
 
-Reka's real moat is native long-context video understanding. Where most LLMs rely on chunked frame extraction, Reka models process hours of video directly. On published benchmarks, Core beats Gemini Ultra 59.3% to 54.7% on video perception (Perception-Test), and the March 2026 Edge release outperforms other 7B vision-language models on MLVU and MMVU.
+Reka's real moat is native long-context video understanding. Where most LLMs rely on chunked frame extraction, Reka models process hours of video directly. On published benchmarks, Core beats Gemini Ultra 59.3% to 54.7% on video perception (Perception-Test), and the March 5, 2026 Edge release outperforms other 7B vision-language models on MLVU and MMVU. As of mid-May 2026 Edge is also publicly listed on Reka's API price card at $0.10 per MTok for both input and output, replacing Spark as the entry-point public-API tier.
 
 The company hit unicorn status in 2025 with a $110M round led by NVIDIA and Snowflake. That backing signals hyperscaler interest in Reka's on-prem and dedicated deployment story, which sets it apart from API-only rivals.
 
 ## System Verdict
 
-> **Pick Reka if your workload centers on video understanding, on-device multimodal inference, or enterprise deployments that must stay on-prem.** Core's four-modality context window handles hours of video natively at prices well below Claude Opus. Edge (7B, March 2026) runs on-device for physical AI, robotics, and privacy-sensitive embedded use. The on-prem and dedicated-deployment option is genuinely rare among frontier labs.
+> **Pick Reka if your workload centers on video understanding, on-device multimodal inference, or enterprise deployments that must stay on-prem.** Core's four-modality context window handles hours of video natively at prices well below Claude Opus. Edge (7B, launched March 5, 2026) runs on-device for physical AI, robotics, and privacy-sensitive embedded use, and is now also available via the public API at $0.10 / $0.10 per MTok. The on-prem and dedicated-deployment option is genuinely rare among frontier labs.
 >
 > **Skip it if you need consumer-grade chat, top-of-benchmark reasoning, or image/video generation.** Reka has no ChatGPT-style consumer product. On pure text reasoning, [Claude](/tools/claude/) Opus 4.7 and OpenAI frontier models lead. Reka also understands media but does not generate it, so image and video creation workflows need a separate tool.
 >
-> **Who pays which tier:** Spark at $0.05 per MTok for high-volume embedded use, Flash at $0.80 input / $2 output per MTok for balanced production workloads, Core at $2 input / $6 output per MTok for the heaviest multimodal reasoning, Edge via on-device licensing through partners, Research via flat $25-$60 per 1,000 request pricing for grounded search workflows.
+> **Who pays which tier:** Edge at $0.10 / $0.10 per MTok for high-volume cheap multimodal API workloads (also licensed on-device through partners), Flash at $0.80 input / $2 output per MTok for balanced production workloads, Core at $2 input / $6 output per MTok for the heaviest multimodal reasoning, Research via flat $25-$60 per 1,000 request pricing for grounded search workflows.
 
 ## Key Facts
 
 | | |
 |---|---|
 | **Flagship model** | Reka Core (67B, multimodal: text + image + audio + video) |
-| **Model lineup** | Core · Flash (21B) · Edge (7B, March 2026) · Spark (1B) |
+| **Model lineup** | Core · Flash (21B) · Edge (7B, launched March 5, 2026) · Spark (1B, partner-only) |
 | **Research product** | Reka Research (flat-rate per 1,000 requests) |
 | **Video understanding** | Native long-context, hours of video without chunking |
-| **Benchmark leads** | Core beats Gemini Ultra on Perception-Test video QA |
-| **API pricing** | Core: $2 in / $6 out per MTok · Flash: $0.80 / $2 · Spark: $0.05 / $0.05 |
+| **Benchmark leads** | Core beats Gemini Ultra on Perception-Test video QA; Edge tops 7B vision-language MLVU/MMVU |
+| **API pricing** | Core: $2 in / $6 out per MTok · Flash: $0.80 / $2 · Edge: $0.10 / $0.10 |
 | **Multimodal surcharges** | Image $0.005-$0.02 · Video $0.01-$0.08/min · Audio $0.005-$0.02/min |
 | **Research pricing** | $25 per 1,000 standard requests · $35-$60 with Parallel Thinking |
 | **Deployment options** | API, Python SDK, HTTP · dedicated and on-prem available |
@@ -120,7 +127,7 @@ The company hit unicorn status in 2025 with a $110M round led by NVIDIA and Snow
 
 ## What it actually is
 
-A four-tier foundation-model family sold primarily through API. Core handles heavy multimodal reasoning, Flash targets balanced cost and quality, Edge fits in 7B for on-device inference, and Spark runs at 1B for ultra-low-latency embedded work.
+A four-tier foundation-model family sold primarily through API. Core handles heavy multimodal reasoning, Flash targets balanced cost and quality, Edge fits in 7B for on-device inference and is now publicly priced via the API as well, and Spark runs at 1B for ultra-low-latency embedded work through partner channels.
 
 Reka Research is a separate product. It charges a flat rate per 1,000 requests and ships a Parallel Thinking mode for higher-quality answers at premium pricing. Think of it as a grounded search layer sitting on top of the chat models.
 
@@ -129,7 +136,7 @@ The deployment story is the real differentiator. Reka offers on-prem and dedicat
 ## When to pick Reka
 
 - **Long-context video analysis.** Hours of video in one forward pass, no manual frame extraction or chunked summarization scaffolding. Core leads Gemini Ultra on Perception-Test.
-- **On-device and physical AI.** Edge (7B) is optimized for robotics, cameras, and embedded systems where cloud round-trips are unacceptable. Announced March 2026.
+- **On-device and physical AI.** Edge (7B) is optimized for robotics, cameras, and embedded systems where cloud round-trips are unacceptable. Launched March 5, 2026; now also available via Reka's public API at $0.10 / $0.10 per MTok.
 - **Enterprise on-prem deployment.** Regulated industries that cannot ship data to a third-party API get dedicated or on-prem options here. Rare among frontier-class labs.
 - **Cost-sensitive multimodal API workloads.** Core at $2 in / $6 out per MTok sits well below [Claude](/tools/claude/) Opus 4.7's $5/$25 for comparable multimodal tasks.
 - **Grounded research workflows.** Reka Research's flat per-1,000-request pricing can be more predictable than token-based chat billing for research agents.
@@ -148,9 +155,11 @@ Chat API pricing via [docs.reka.ai/pricing](https://docs.reka.ai/pricing):
 
 | Model | Input ($/MTok) | Output ($/MTok) | Image | Video | Audio |
 |---|---|---|---|---|---|
-| Reka Spark (1B) | $0.05 | $0.05 | $0.005 | $0.01/min | $0.005/min |
+| Reka Edge (7B) | $0.10 | $0.10 | $0.005 | $0.01/min | $0.005/min |
 | Reka Flash (21B) | $0.80 | $2.00 | $0.01 | $0.06/min | $0.015/min |
 | Reka Core (67B) | $2.00 | $6.00 | $0.02 | $0.08/min | $0.02/min |
+
+Reka Spark (1B) is no longer listed on the public price card. Spark and on-device Edge deployments route through partner channels.
 
 Research pricing:
 
@@ -159,9 +168,9 @@ Research pricing:
 | Reka Research (standard) | $25 per 1,000 requests |
 | Reka Research (Parallel Thinking) | $35 to $60 per 1,000 requests |
 
-Edge (7B) and dedicated on-prem deployments price through direct contact with Reka sales.
+Dedicated on-prem deployments and Spark licensing price through direct contact with Reka sales.
 
-Prices verified 2026-04-18 via [docs.reka.ai/pricing](https://docs.reka.ai/pricing) and the [Reka Edge launch announcement](https://reka.ai/news/reka-edge-frontier-level-edge-intelligence-for-physical-ai).
+Prices verified 2026-05-13 via [docs.reka.ai/pricing](https://docs.reka.ai/pricing) and the [Reka Edge launch announcement](https://reka.ai/news/reka-edge-frontier-level-edge-intelligence-for-physical-ai).
 
 **No free tier is documented.** Reka runs pay-as-you-go with no upfront commitment. Usage is billed after consumption.
 
@@ -184,13 +193,13 @@ Prices verified 2026-04-18 via [docs.reka.ai/pricing](https://docs.reka.ai/prici
 - **Smaller ecosystem.** Fewer third-party tools, SDKs, and community templates than OpenAI, Anthropic, or Google. Integration work is more DIY.
 - **Behind on pure text reasoning benchmarks.** Core's multimodal strength does not translate to chart-topping text-only scores. Claude Opus 4.7 and OpenAI frontier models lead those categories.
 - **No open weights.** If you need to fine-tune or self-host from model weights, Reka is not the answer. Use [Llama](/tools/llama/), [Qwen](/tools/qwen/), or [Mistral AI](/tools/mistral-ai/).
-- **Edge licensing is partner-gated.** The March 2026 Edge 7B model routes through partner integrations for on-device deployment. Direct self-serve access is less mature than the main API.
+- **Edge on-device licensing is partner-gated.** The March 5, 2026 Edge 7B model still routes through partner integrations for on-device deployment, even though the cloud API is now self-serve at $0.10 / $0.10 per MTok.
 - **No documented free tier.** Unlike OpenAI, Anthropic, or Google, there is no free monthly quota to evaluate Core before billing begins. Expect to set up billing from day one.
 - **Research product pricing can surprise.** Parallel Thinking scales from $35 to $60 per 1,000 requests based on depth. Budget for the high end when enabling the feature.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-18 against [docs.reka.ai/pricing](https://docs.reka.ai/pricing), the [Reka Edge launch announcement](https://reka.ai/news/reka-edge-frontier-level-edge-intelligence-for-physical-ai), the [Reka Core tech report](https://publications.reka.ai/reka-core-tech-report.pdf), and the [$110M funding coverage](https://techfundingnews.com/reka-110-million-funding-multimodal-ai-enterprise/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [docs.reka.ai/pricing](https://docs.reka.ai/pricing), the [Reka Edge launch announcement](https://reka.ai/news/reka-edge-frontier-level-edge-intelligence-for-physical-ai), the [Reka Core tech report](https://publications.reka.ai/reka-core-tech-report.pdf), and the [$110M funding coverage](https://techfundingnews.com/reka-110-million-funding-multimodal-ai-enterprise/).
 
 ## FAQ
 
@@ -201,7 +210,7 @@ No free tier is currently documented. Reka runs pay-as-you-go API pricing with n
 Reka Core (67B parameters), a multimodal model that accepts text, image, audio, and video. It beats Gemini Ultra on Perception-Test video question answering and ships at $2 input / $6 output per MTok.
 
 **What is Reka Edge?**
-A 7B vision-language model announced March 2026, optimized for on-device physical AI, robotics, and embedded systems. It outperforms other 7B vision-language models on MLVU and MMVU video benchmarks. Pricing routes through partners for on-device licensing.
+A 7B vision-language model launched March 5, 2026, optimized for on-device physical AI, robotics, and embedded systems. It outperforms other 7B vision-language models on MLVU and MMVU video benchmarks. On-device deployment routes through partners; as of May 2026 the model is also priced publicly via Reka's API at $0.10 per MTok for both input and output.
 
 **How does Reka compare to Claude or Gemini?**
 Reka's strength is native long-context video understanding and on-prem deployment. [Claude](/tools/claude/) Opus 4.7 leads agentic coding and text reasoning. [Gemini](/tools/gemini/) 3.1 Pro integrates deeply with Google Workspace. Pick Reka when video is central and you need on-prem or dedicated infrastructure.

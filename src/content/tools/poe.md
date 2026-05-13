@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0 free / $4.99-$249.99/mo"
 status: active
 launched: 2023-02
-last_updated: 2026-05-03
-last_verified: 2026-05-03
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://poe.com/about"
     source_label: "Poe about page"
     source_id: poe-about
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
     next_review_at: 2026-06-03
@@ -39,7 +39,7 @@ facts:
     source: "https://poe.com/about"
     source_label: "Poe about page"
     source_id: poe-about
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
     next_review_at: 2026-06-03
@@ -48,7 +48,7 @@ facts:
     source: "https://poe.com/about"
     source_label: "Poe about page"
     source_id: poe-about
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
     next_review_at: 2026-06-03
@@ -57,7 +57,7 @@ facts:
     source: "https://poe.com"
     source_label: "Poe product site"
     source_id: poe-product
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
     next_review_at: 2026-06-03
@@ -66,7 +66,7 @@ facts:
     source: "https://poe.com/about"
     source_label: "Poe about page"
     source_id: poe-about
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
     next_review_at: 2026-06-03
@@ -75,7 +75,7 @@ facts:
     source: "https://poe.com/api_docs"
     source_label: "Poe API docs"
     source_id: poe-api-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   image_generation:
@@ -83,7 +83,7 @@ facts:
     source: "https://poe.com/about"
     source_label: "Poe about page"
     source_id: poe-about
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
     next_review_at: 2026-06-03
@@ -92,7 +92,7 @@ facts:
     source: "https://poe.com/about"
     source_label: "Poe about page"
     source_id: poe-about
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   real_time_voice:
@@ -100,7 +100,7 @@ facts:
     source: "https://poe.com/about"
     source_label: "Poe about page"
     source_id: poe-about
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: low
     confidence: high
   web_browsing:
@@ -108,7 +108,7 @@ facts:
     source: "https://poe.com/about"
     source_label: "Poe about page"
     source_id: poe-about
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   coding_agent:
@@ -116,7 +116,7 @@ facts:
     source: "https://poe.com/about"
     source_label: "Poe about page"
     source_id: poe-about
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   enterprise_controls:
@@ -124,7 +124,7 @@ facts:
     source: "https://poe.com/about"
     source_label: "Poe about page"
     source_id: poe-about
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   data_retention_or_privacy:
@@ -132,7 +132,7 @@ facts:
     source: "https://poe.com/about"
     source_label: "Poe about page"
     source_id: poe-about
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   open_source_or_local:
@@ -140,7 +140,7 @@ facts:
     source: "https://poe.com/about"
     source_label: "Poe about page"
     source_id: poe-about
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: low
     confidence: high
   best_for:
@@ -148,7 +148,7 @@ facts:
     source: "https://poe.com/about"
     source_label: "Poe about page"
     source_id: poe-about
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   watch_out_for:
@@ -156,12 +156,12 @@ facts:
     source: "https://poe.com/about"
     source_label: "Poe about page"
     source_id: poe-about
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
     next_review_at: 2026-06-03
 tags: [ai-chat, aggregator, multi-model, quora, points-based, developer-api]
-seo_title: "Poe: Features, Pricing & Review (April 2026)"
+seo_title: "Poe: Features, Pricing & Review (May 2026)"
 meta_description: "Poe is Quora's multi-model AI chatbot aggregator. Access GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro, and dozens more through one subscription. Plans $4.99-$249.99/month on a points system."
 author: "aipedia.wiki Editorial"
 best_for:
@@ -226,7 +226,7 @@ Quora's multi-model AI chatbot platform. One account, one subscription, dozens o
 | Premium | $99.99/mo | 5,000,000 points/month | Frontier-model heavy use |
 | Unlimited | $249.99/mo | 12,500,000 points/month | Very heavy or expensive models (GPT-5.5 Pro, o1-pro equivalents) |
 
-Developer point packs: $30 for 1M additional tokens. Prices verified 2026-04-18 via [Poe help center](https://help.poe.com).
+Developer point packs: $30 for 1M additional tokens. Prices verified 2026-05-13 via [Poe help center](https://help.poe.com).
 
 ## Failure modes
 
@@ -237,7 +237,7 @@ Developer point packs: $30 for 1M additional tokens. Prices verified 2026-04-18 
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified 2026-04-18 against the [Poe purchases FAQ](https://help.poe.com/hc/en-us/articles/19945140063636-Poe-Purchases-FAQs) and [TechCrunch coverage of the $5/mo tier](https://techcrunch.com/2025/03/25/quoras-poe-now-offers-an-affordable-subscription-plan-for-5-month/).
+Produced by the aipedia.wiki editorial pipeline. Last verified 2026-05-13 against the [Poe purchases FAQ](https://help.poe.com/hc/en-us/articles/19945140063636-Poe-Purchases-FAQs) and [TechCrunch coverage of the $5/mo tier](https://techcrunch.com/2025/03/25/quoras-poe-now-offers-an-affordable-subscription-plan-for-5-month/).
 
 ## FAQ
 

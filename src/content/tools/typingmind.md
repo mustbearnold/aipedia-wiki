@@ -2,16 +2,16 @@
 type: tool
 slug: typingmind
 title: TypingMind
-tagline: Power-user ChatGPT alternative. Bring your own API key, one-time $49 license, and you get a professional UI for OpenAI frontier models, Claude Opus 4.7, Gemini 3.1 Pro, and open-weight models in one place.
+tagline: Power-user ChatGPT alternative. Bring your own API key, one-time license from $39, and you get a professional UI for OpenAI frontier models, Claude Opus 4.7, Gemini 3.1 Pro, and open-weight models in one place.
 category: ai-chatbots
 company: typingmind
 url: https://www.typingmind.com
 pricing_model: paid
-price_range: "$49 one-time / $99-$299/mo teams"
+price_range: "$39-$99 one-time / $395+ team bulk"
 status: active
 launched: 2023-04
-last_updated: 2026-05-03
-last_verified: 2026-05-03
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -26,34 +26,34 @@ scores:
   longevity: 7
 facts:
   best_for:
-    value: "Power-user ChatGPT alternative. Bring your own API key, one-time $49 license, and you get a professional UI for OpenAI frontier models, Claude Opus 4.7, Gemini 3.1 Pro, and open-weight models in one place. Best for chat, research, assistant, and model-access workflows."
+    value: "Power-user ChatGPT alternative. Bring your own API key, one-time license from $39, and you get a professional UI for OpenAI frontier models, Claude Opus 4.7, Gemini 3.1 Pro, and open-weight models in one place. Best for chat, research, assistant, and model-access workflows."
     source: "https://www.typingmind.com/buy"
     source_label: "typingmind.com/buy"
     source_id: typingmind-official
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: medium
-    confidence: medium
+    confidence: high
   pricing_anchor:
-    value: "Pricing should be checked on the current TypingMind source before purchase; AIpedia has not promoted this page to a full Tier 1 pricing profile yet"
+    value: "Personal license tiers Standard $39, Extended $79, Premium $99 (one-time). Bulk License $395 for up to 10 users across 50 devices. Team plan custom pricing."
     source: "https://www.typingmind.com/buy"
     source_label: "typingmind.com/buy"
     source_id: typingmind-official
-    verified_at: 2026-05-03
-    next_review_at: 2026-08-03
-    volatility: high
-    confidence: medium
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
+    volatility: medium
+    confidence: high
   watch_out_for:
-    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    value: "Personal license is now tiered (Standard, Extended, Premium) rather than a single $49 SKU. Confirm the tier covers the features you need (image generation, multi-model chats, projects) before purchasing. API costs always billed by the provider separately."
     source: "https://www.typingmind.com/buy"
     source_label: "typingmind.com/buy"
     source_id: typingmind-official
-    verified_at: 2026-05-03
-    next_review_at: 2026-08-03
-    volatility: high
-    confidence: medium
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
+    volatility: medium
+    confidence: high
 tags: [byok, chatgpt-alternative, multi-model, power-user, one-time-purchase, api-based]
-seo_title: "TypingMind: Features, Pricing & Review (April 2026)"
-meta_description: "TypingMind is a BYOK (bring-your-own-key) power-user UI for OpenAI frontier models, Claude Opus 4.7, Gemini Pro, and open-weight models. One-time $49 license; teams $99-$299/mo. API calls billed by provider."
+seo_title: "TypingMind: Features, Pricing & Review (May 2026)"
+meta_description: "TypingMind is a BYOK (bring-your-own-key) power-user UI for OpenAI frontier models, Claude Opus 4.7, Gemini Pro, and open-weight models. One-time personal licenses from $39 (Standard), $79 (Extended), $99 (Premium). Bulk team license $395 for 10 users. API calls billed by provider."
 author: "aipedia.wiki Editorial"
 best_for:
   - power users who hit ChatGPT rate limits
@@ -65,38 +65,57 @@ not_best_for:
   - users who don't want to manage API keys
   - workflows requiring ChatGPT-specific features (Custom GPTs, memory, Canvas)
 quick_answer: >-
-  TypingMind is a one-time-purchase UI that wraps any LLM API in a professional chat interface. Buy a $49 license, paste your OpenAI / Anthropic / Google API key, and access OpenAI frontier models, Claude Opus 4.7, Gemini 3.1 Pro side by side. Team tier $99-$299/mo for 5 seats. Pick it to avoid multi-subscription sprawl. Skip it for casual use or ChatGPT-specific features.
+  TypingMind is a one-time-purchase UI that wraps any LLM API in a professional chat interface. Buy a personal license (Standard $39, Extended $79, Premium $99), paste your OpenAI, Anthropic, or Google API key, and access OpenAI frontier models, Claude Opus 4.7, Gemini 3.1 Pro side by side. Bulk License $395 covers up to 10 users across 50 devices. Pick it to avoid multi-subscription sprawl. Skip it for casual use or ChatGPT-specific features.
+price_history:
+  - date: 2026-05-13
+    plan: "Personal (tiered)"
+    price: "$39 / $79 / $99 one-time"
+    source: "https://www.typingmind.com/buy"
+    source_label: "typingmind.com/buy"
+    source_id: typingmind-official
+    note: "Personal license restructured to three tiers: Standard ($39, basic chat + agents + voice input), Extended ($79, adds image gen, web search, TTS, vision, document upload), Premium ($99, adds multi-model chats, unlimited plugins, projects, artifacts). Replaces the prior single $49 SKU."
+  - date: 2026-05-13
+    plan: "Bulk License"
+    price: "$395 one-time (10 users / 50 devices)"
+    source: "https://www.typingmind.com/buy"
+    source_label: "typingmind.com/buy"
+    source_id: typingmind-official
+    note: "Shared key for up to 10 users across 50 devices with Premium-equivalent features. Currently listed at half price ($395 from $790)."
 ---
 
 # TypingMind
 
-A chat UI for power users who already have API keys for the major providers. One-time $49 license, then every message routes through your own OpenAI, Anthropic, Google, or other provider account. The app itself charges no per-token fee; you pay the underlying APIs directly.
+A chat UI for power users who already have API keys for the major providers. Buy a one-time personal license, then every message routes through your own OpenAI, Anthropic, Google, or other provider account. The app itself charges no per-token fee; you pay the underlying APIs directly.
 
 ## System Verdict
 
-> **Pick TypingMind if you use multiple LLMs heavily and want one interface.** The one-time $49 license is a rare pricing model in 2026 and pays back quickly if you'd otherwise stack ChatGPT Plus + Claude Pro + Gemini Advanced ($20 × 3 = $60/month). BYOK means you control costs granularly, organize workspaces properly, and never hit consumer-tier rate limits.
+> **Pick TypingMind if you use multiple LLMs heavily and want one interface.** The one-time license model is a rare pricing structure in 2026 and pays back quickly if you would otherwise stack ChatGPT Plus + Claude Pro + Gemini Advanced ($20 x 3 = $60/month). BYOK means you control costs granularly, organize workspaces properly, and never hit consumer-tier rate limits. The Premium tier at $99 unlocks multi-model side-by-side chats, projects, and unlimited plugins.
 >
-> **Skip it if you're a casual user or need ChatGPT-specific features.** ChatGPT Plus includes Custom GPTs, persistent memory, Canvas, Advanced Voice, and the GPT Store. TypingMind can't replicate those. If those features matter, pay for ChatGPT direct.
+> **Skip it if you're a casual user or need ChatGPT-specific features.** ChatGPT Plus includes Custom GPTs, persistent memory, Canvas, Advanced Voice, and the GPT Store. TypingMind cannot replicate those. If those features matter, pay for ChatGPT direct.
 >
-> **Who picks which:** Solo power users on $49 one-time for personal use. TypingMind Team at $99/mo (5 users, one workspace) for small teams. $299/mo Team for larger teams with more fine-grained controls. Team pricing stays economical vs per-seat ChatGPT Team ($30/user/mo) past ~3-4 users.
+> **Who picks which:** Standard at $39 for casual API users who just want a clean UI. Extended at $79 for users who need image generation, web search, and document upload. Premium at $99 for power users who want multi-model chats and the full plugin system. Bulk License at $395 covers up to 10 users with Premium features. TypingMind for Teams (custom pricing) for full private-portal deployments.
 
 ## Key Facts
 
 | | |
 |---|---|
 | **Pricing model** | BYOK (bring your own key). App license is one-time; API calls billed by provider. |
-| **Personal license** | $49 one-time |
-| **Team plans** | $99-$299/month for 5 users (feature tiers vary) |
-| **LLMs supported** | OpenAI (OpenAI frontier models, o1-pro), Anthropic (Claude Opus 4.7, Sonnet 4.6), Google (Gemini 3.1 Pro), xAI (Grok 4.20), open-weight via OpenAI-compatible endpoints |
+| **Standard license** | $39 one-time, basic chat + AI agents + voice input |
+| **Extended license** | $79 one-time, adds image gen + web search + TTS + vision + document upload |
+| **Premium license** | $99 one-time, adds multi-model chats + unlimited plugins + projects + artifacts |
+| **Bulk License** | $395 one-time for 10 users across 50 devices (Premium-equivalent) |
+| **TypingMind for Teams** | Custom pricing, private AI portal with admin controls, knowledge base, analytics, custom branding, advanced auth |
+| **LLMs supported** | OpenAI (frontier models, o1-pro), Anthropic (Claude Opus 4.7, Sonnet 4.6), Google (Gemini 3.1 Pro), xAI (Grok 4.20), open-weight via OpenAI-compatible endpoints |
 | **Platforms** | Web, desktop (Electron) |
 | **Key features** | Folders, tags, search, prompt library, custom instructions per workspace, plugin system, chat training data upload |
+| **Money-back guarantee** | 14 days on all personal licenses; tier upgrades allowed anytime |
 
 ## When to pick TypingMind
 
 - **API-first users.** You already have an OpenAI or Anthropic API account for other work. TypingMind turns it into a proper chat app.
-- **Multi-model comparison.** Run the same prompt through OpenAI frontier models and Claude Opus 4.7 in separate tabs. Faster iteration than re-pasting into each provider's app.
+- **Multi-model comparison.** Premium tier runs the same prompt through OpenAI frontier models and Claude Opus 4.7 in side-by-side panels. Faster iteration than re-pasting into each provider's app.
 - **Heavy usage.** No rate limits beyond what the provider enforces. Frontier-quality access at API-call prices rather than $20/mo subscription ceilings.
-- **Team workspaces.** $99/mo Team tier covers 5 users on a shared workspace with per-user settings. Cheaper than 5× ChatGPT Team seats past ~3 users.
+- **Small team license sharing.** $395 Bulk License covers 10 users across 50 devices with Premium features, cheaper than five ChatGPT Team seats past month 2.
 
 ## When to pick something else
 
@@ -109,14 +128,15 @@ A chat UI for power users who already have API keys for the major providers. One
 
 | Plan | Price | What's included |
 |---|---|---|
-| Personal | $49 one-time | All models via BYOK, web + desktop, forever |
-| Team (5 users) | $99/mo | Shared workspace, team features |
-| Team Pro (5 users) | $299/mo | Admin controls, advanced security, priority |
-| Enterprise | Custom | SSO, audit logs, compliance |
+| Standard | $39 one-time | Basic chat features, AI agents, voice input, share chats, ad-free |
+| Extended | $79 one-time | Standard plus image generation, web search, TTS, vision, document upload |
+| Premium | $99 one-time | Extended plus multi-model chats, unlimited plugins, projects + folders, artifacts |
+| Bulk License | $395 one-time | Shared key for up to 10 users across 50 devices, Premium features |
+| TypingMind for Teams | Custom | Private AI portal, admin controls, knowledge base, analytics, custom branding |
 
-**Note on BYOK billing:** TypingMind never bills you for API calls. You pay OpenAI, Anthropic, or Google directly based on your usage, at their standard rates.
+**Note on BYOK billing:** TypingMind never bills you for API calls. You pay OpenAI, Anthropic, or Google directly based on your usage, at their standard rates. All personal licenses include a 14-day money-back guarantee and allow free upgrades between tiers anytime.
 
-Prices verified 2026-04-18 via [typingmind.com/buy](https://www.typingmind.com/buy).
+Prices verified 2026-05-13 via [typingmind.com/buy](https://www.typingmind.com/buy).
 
 ## Failure modes
 
@@ -128,24 +148,27 @@ Prices verified 2026-04-18 via [typingmind.com/buy](https://www.typingmind.com/b
 
 ## Against the alternatives
 
-| | TypingMind | ChatGPT Plus | Poe | Claude Pro |
+| | TypingMind Premium | ChatGPT Plus | Poe | Claude Pro |
 |---|---|---|---|---|
-| **Price** | $49 once + API usage | $20/mo flat | $5-$250/mo flat | $20/mo flat |
+| **Price** | $99 once + API usage | $20/mo flat | $5-$250/mo flat | $20/mo flat |
 | **Models** | Any (BYOK) | OpenAI only | 20+ aggregated | Anthropic only |
 | **Rate limits** | Provider's API limits | Consumer tier | Poe's points | Consumer tier |
 | **Best for** | Multi-model power users | General ChatGPT users | Model comparison | Claude-heavy users |
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified 2026-04-18 against [typingmind.com/buy](https://www.typingmind.com/buy) and [G2 TypingMind alternatives](https://www.g2.com/products/typingmind-typingmind/competitors/alternatives).
+Produced by the aipedia.wiki editorial pipeline. Last verified 2026-05-13 against [typingmind.com/buy](https://www.typingmind.com/buy) and [G2 TypingMind alternatives](https://www.g2.com/products/typingmind-typingmind/competitors/alternatives).
 
 ## FAQ
 
 **Is TypingMind really a one-time purchase?**
-Yes for personal use. $49 one-time grants perpetual license. Team tiers are monthly because they include ongoing workspace sync and admin features.
+Yes for personal use. Standard ($39), Extended ($79), and Premium ($99) all grant perpetual license. Free upgrades between tiers. TypingMind for Teams is a separate custom-priced subscription because it bundles ongoing workspace sync and admin features.
 
 **Does TypingMind charge per message?**
 No. The app is free to use after license purchase. You pay the underlying API provider (OpenAI, Anthropic, Google) for tokens consumed.
+
+**Which license tier should most people buy?**
+Premium at $99 unlocks the multi-model chat panels, projects, and unlimited plugins that make TypingMind worth picking over ChatGPT Plus. Standard and Extended are for users who know they only need a single model and a single feature set.
 
 **Can TypingMind replace ChatGPT Plus?**
 For power users who only use base chat, yes, and cheaper in the long run. For users who need Custom GPTs, Canvas, persistent memory, Advanced Voice, or the GPT Store, no; those are ChatGPT-exclusive.

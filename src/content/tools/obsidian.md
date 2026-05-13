@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$8/month (add-ons) + $50/year commercial"
 status: active
 launched: 2020-03
-last_updated: 2026-05-03
-last_verified: 2026-05-03
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://help.obsidian.md/"
     source_label: "Obsidian Help"
     source_id: obsidian-help
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: low
     confidence: high
   pricing_anchor:
@@ -38,8 +38,8 @@ facts:
     source: "https://obsidian.md/pricing"
     source_label: "Obsidian pricing"
     source_id: obsidian-pricing
-    verified_at: 2026-05-03
-    next_review_at: 2026-08-03
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: high
   plugin_surface:
@@ -47,7 +47,7 @@ facts:
     source: "https://obsidian.md/plugins"
     source_label: "Obsidian community plugins"
     source_id: obsidian-plugins
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   data_model:
@@ -55,7 +55,7 @@ facts:
     source: "https://help.obsidian.md/"
     source_label: "Obsidian Help"
     source_id: obsidian-help
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: low
     confidence: high
   watch_out_for:
@@ -63,11 +63,11 @@ facts:
     source: "https://help.obsidian.md/"
     source_label: "Obsidian Help"
     source_id: obsidian-help
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
 tags: [notes, markdown, local-first, knowledge-base, pkm, zettelkasten, graph-view, plugins, ai-plugins, privacy]
-seo_title: 'Obsidian: Features, Pricing & Review (April 2026)'
+seo_title: 'Obsidian: Features, Pricing & Review (May 2026)'
 meta_description: "Obsidian is a free local-first markdown note app with 2,690+ community plugins. AI via Smart Connections and Copilot using your own API keys. Sync $4/mo, Publish $8/mo, Commercial $50/yr."
 author: aipedia.wiki Editorial
 best_for:
@@ -96,6 +96,13 @@ price_history:
     source_label: "Source"
     source_id: obsidian-pricing
     note: "Verified unchanged"
+  - date: 2026-05-13
+    plan: "Sync · Publish · Commercial · Catalyst"
+    price: "$4/$5 mo · $8/$10 mo · $50/yr · $25 one-time"
+    source: "https://obsidian.md/pricing"
+    source_label: "Source"
+    source_id: obsidian-pricing
+    note: "Verified at obsidian.md/pricing. All tiers unchanged. Publish monthly billing is $10/mo. 40% educational and nonprofit discount on Sync and Publish. Catalyst remains a $25 one-time supporter license (early beta + community badges)."
 ---
 
 # Obsidian
@@ -124,14 +131,16 @@ Core app is free for personal use. Optional add-ons: Sync ($4/mo annual), Publis
 | **AI model access** | Bring your own API key · Claude · OpenAI frontier models · Gemini · local Ollama · OpenRouter |
 | **Core pricing** | Free for personal use · no feature restrictions |
 | **Sync add-on** | $4/mo (annual) · $5/mo (monthly) · end-to-end encrypted · 10GB |
-| **Publish add-on** | $8/mo · publishes vault as a website |
+| **Publish add-on** | $8/mo (annual) · $10/mo (monthly) · publishes vault as a website |
+| **Catalyst** | $25 one-time supporter license · early beta access · community badges |
 | **Commercial license** | $50/user/year · required for business use |
+| **Edu/nonprofit discount** | 40% off Sync and Publish |
 | **Platforms** | Windows · macOS · Linux · iOS · Android · web vault |
 | **Graph view · backlinks · canvas** | All core features · no plugin required |
 | **Dataview plugin** | SQL-like queries over note frontmatter and content |
 | **Collaboration** | None native · single-user focus |
 
-Every data point verified on 2026-04-17 against [obsidian.md/pricing](https://obsidian.md/pricing) and [obsidian.md/plugins](https://obsidian.md/plugins).
+Every data point verified on 2026-05-13 against [obsidian.md/pricing](https://obsidian.md/pricing) and [obsidian.md/plugins](https://obsidian.md/plugins).
 
 ## What it actually is
 
@@ -167,10 +176,11 @@ Pricing via [obsidian.md/pricing](https://obsidian.md/pricing).
 |---|---|---|
 | Personal | $0 | Any user · full app · unlimited notes · all community plugins |
 | Sync | $4/mo (annual) · $5/mo (monthly) | Anyone syncing across devices · E2E encrypted · 10GB |
-| Publish | $8/mo | Bloggers · researchers · anyone turning notes into a site |
+| Publish | $8/mo (annual) · $10/mo (monthly) | Bloggers · researchers · anyone turning notes into a site |
+| Catalyst | $25 one-time | Supporters wanting early beta + community badges |
 | Commercial | $50/user/year | Any business use · same features as Personal |
 
-*Prices verified 2026-04-17 via [obsidian.md/pricing](https://obsidian.md/pricing). AI plugin costs are separate: most plugins are free, but LLM API usage (Claude, OpenAI frontier models, Gemini) is billed by the model provider.*
+*Prices verified 2026-05-13 via [obsidian.md/pricing](https://obsidian.md/pricing). Educational and nonprofit users get 40% off Sync and Publish. AI plugin costs are separate: most plugins are free, but LLM API usage (Claude, OpenAI frontier models, Gemini) is billed by the model provider.*
 
 ## Against the alternatives
 
@@ -198,12 +208,12 @@ Pricing via [obsidian.md/pricing](https://obsidian.md/pricing).
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [obsidian.md/pricing](https://obsidian.md/pricing), [obsidian.md/plugins](https://obsidian.md/plugins), and [help.obsidian.md](https://help.obsidian.md).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [obsidian.md/pricing](https://obsidian.md/pricing), [obsidian.md/plugins](https://obsidian.md/plugins), and [help.obsidian.md](https://help.obsidian.md).
 
 ## FAQ
 
 **Is Obsidian free?**
-Yes for personal use. All 2,690+ community plugins are free. Paid add-ons are Sync ($4/mo annual), Publish ($8/mo), and the Commercial license ($50/user/year) for business use.
+Yes for personal use. All 2,690+ community plugins are free. Paid add-ons are Sync ($4/mo annual or $5/mo monthly), Publish ($8/mo annual or $10/mo monthly), Catalyst ($25 one-time supporter license with early beta access), and the Commercial license ($50/user/year) for business use. Educational and nonprofit users get 40% off Sync and Publish.
 
 **Does Obsidian have built-in AI?**
 No. AI arrives through community plugins. Smart Connections provides semantic search and RAG chat. Copilot provides vault-wide LLM chat. Text Generator handles AI writing. All use your own API keys from providers like Anthropic (Claude), OpenAI (OpenAI frontier models), Google (Gemini), or local Ollama models.

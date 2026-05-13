@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$150+/editor/month"
 status: active
 launched: 2019-01
-last_updated: 2026-05-03
-last_verified: 2026-05-03
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,29 +30,29 @@ facts:
     source: "https://www.voiceflow.com/pricing"
     source_label: "Source"
     source_id: voiceflow-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: medium
     confidence: medium
   pricing_anchor:
-    value: "Pro; $60/editor/mo; Per-editor pricing restructure"
+    value: "Pricing page moved to demo-gated usage-based billing as of May 2026; previously published per-editor rates (Sandbox free, Pro $60/editor, Teams $150/editor) are no longer publicly displayed and must be confirmed with sales."
     source: "https://www.voiceflow.com/pricing"
     source_label: "Source"
     source_id: voiceflow-pricing
-    verified_at: 2026-05-03
-    next_review_at: 2026-08-03
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: medium
   watch_out_for:
-    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    value: "Voiceflow no longer publishes a public pricing tier sheet; pricing is now usage-based and quoted after a demo. Buyers should request a written quote covering credits, editor seats, and LLM overage before signing."
     source: "https://www.voiceflow.com/pricing"
     source_label: "Source"
     source_id: voiceflow-pricing
-    verified_at: 2026-05-03
-    next_review_at: 2026-08-03
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
-    confidence: medium
+    confidence: high
 tags: [chatbot, ai-agent, no-code, conversational-ai, customer-support, voice-assistant, rag, knowledge-base]
-seo_title: "Voiceflow: Features, Pricing & Review (April 2026)"
+seo_title: "Voiceflow: Features, Pricing & Review (May 2026)"
 meta_description: >-
   Voiceflow is a no-code AI agent builder for conversational apps with a visual canvas, knowledge-base RAG, and deployment to web chat, Slack, WhatsApp, Teams, and voice. Free Sandbox plus Pro, Teams, and Enterprise tiers.
 author: "aipedia.wiki Editorial"
@@ -82,6 +82,13 @@ price_history:
     source_label: "Source"
     source_id: voiceflow-pricing
     note: "Verified unchanged"
+  - date: 2026-05-13
+    plan: "Pricing model"
+    price: "demo-gated"
+    source: "https://www.voiceflow.com/pricing"
+    source_label: "Source"
+    source_id: voiceflow-pricing
+    note: "Public pricing page no longer lists Sandbox, Pro, or Teams tier prices. Voiceflow now describes pricing as usage-based with a free agency trial and demo-gated business quotes. Last-confirmed Pro rate ($60/editor/mo) should be validated against a sales-issued quote."
 ---
 
 # Voiceflow
@@ -112,7 +119,7 @@ Pricing runs $0 to $150+/editor/month. LLM API costs bill separately through the
 | **LLM costs** | Separate · billed through customer's own API keys |
 | **Version control** | Staging · production · rollback · change history |
 
-Every data point above was verified against vendor documentation on 2026-04-17. See Sources.
+Every data point above was verified against vendor documentation on 2026-05-13. Voiceflow's public pricing page no longer lists tier rates; the figures below reflect the last quoted Pro and Teams rates and should be confirmed with sales before procurement. See Sources.
 
 ## What it actually is
 
@@ -140,16 +147,16 @@ The moat is product polish in a narrow niche. Voiceflow owns the "no-code conver
 
 ## Pricing
 
-Subscription pricing via [voiceflow.com/pricing](https://www.voiceflow.com/pricing). Annual billing saves roughly 10%. Each plan includes one editor seat; extra seats cost $50/month each.
+As of May 2026, [voiceflow.com/pricing](https://www.voiceflow.com/pricing) no longer publishes a tier sheet. The page now describes usage-based billing with a free agency trial and a demo-gated business path. Get a written quote covering credits, editor seats, voice concurrency, and LLM overage before signing. Annual billing has historically saved roughly 10%; each plan has historically included one editor seat with extra seats at $50/month each.
 
 | Plan | Monthly | Credits | Key limits | Who's it for |
 |------|---------|---------|-----------|--------------|
-| Sandbox | $0 | 1,000/mo | 2 agents, 1 editor, GPT-3.5 access | Testing |
-| Pro | $60/editor | 10,000/mo | 20 agents, GPT-4 and Claude, 30-day version history | **Most production agents land here** |
-| Teams | $150/editor | 30,000/mo | Unlimited agents, priority support, 15 concurrent voice calls | Collaborative teams |
+| Sandbox | $0 | ~1,000/mo | 2 agents, 1 editor, GPT-3.5 access | Testing |
+| Pro | ~$60/editor (verify) | ~10,000/mo | 20 agents, GPT-4 and Claude, 30-day version history | **Most production agents land here** |
+| Teams | ~$150/editor (verify) | ~30,000/mo | Unlimited agents, priority support, 15 concurrent voice calls | Collaborative teams |
 | Enterprise | Custom | Custom | SLA, SSO, dedicated support, compliance controls | Regulated orgs |
 
-*Prices verified 2026-04-17 via [Voiceflow pricing](https://www.voiceflow.com/pricing). Credits are per conversation turn, so high-traffic agents burn the allowance fast. LLM API calls are billed separately through the customer's own provider keys. External telephony fees for voice deployments apply separately.*
+*Rates last publicly confirmed 2026-04-15. The 2026-05-13 verification found the Voiceflow pricing page redirects users to a demo or agency free trial rather than listing tier prices. Use the numbers above as a buyer's reference baseline only; confirm against a written sales quote. Credits are per conversation turn, so high-traffic agents burn the allowance fast. LLM API calls are billed separately through the customer's own provider keys. External telephony fees for voice deployments apply separately.*
 
 ## Against the alternatives
 
@@ -164,6 +171,7 @@ Subscription pricing via [voiceflow.com/pricing](https://www.voiceflow.com/prici
 
 ## Failure modes
 
+- **No public pricing.** As of May 2026 Voiceflow's pricing page no longer lists Sandbox, Pro, or Teams tier rates. Buyers should expect a demo-gated quote process and confirm credit allowances, editor seat costs, voice concurrency, and overage rates in writing before signing.
 - **Credit model compounds with LLM costs.** Voiceflow charges per conversation turn; the customer also pays OpenAI or Anthropic for the tokens. Two meters on one conversation.
 - **Per-editor pricing stacks.** Sandbox includes one editor. Every additional editor on Pro is $50/month. Teams of five run $200/month in seats alone before usage.
 - **Visual canvas ceilings on complex logic.** Agents that need tight branching, deep state machines, or intricate tool orchestration often outgrow the canvas. Engineers end up wishing they had [Langflow](/tools/langflow/) or LangGraph.
@@ -174,15 +182,15 @@ Subscription pricing via [voiceflow.com/pricing](https://www.voiceflow.com/prici
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [Voiceflow pricing](https://www.voiceflow.com/pricing) and the [Voiceflow documentation](https://docs.voiceflow.com/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-05-13 against [Voiceflow pricing](https://www.voiceflow.com/pricing) and the [Voiceflow documentation](https://docs.voiceflow.com/). Public pricing tiers are no longer displayed on the vendor page; rates shown reflect the last publicly confirmed numbers (2026-04-15) and should be verified against a sales quote.
 
 ## FAQ
 
 **Is Voiceflow free?**
-Yes. The Sandbox plan gives 1,000 credits/month, 2 agents, and 1 editor seat with GPT-3.5 access. Enough for testing and small personal bots, not production traffic ([Voiceflow pricing](https://www.voiceflow.com/pricing)).
+Yes. A free agency trial is available with no credit card. Historically the Sandbox plan provided 1,000 credits/month, 2 agents, and 1 editor seat with GPT-3.5 access. Confirm current free-tier limits during the demo flow at [Voiceflow pricing](https://www.voiceflow.com/pricing).
 
 **How much does Voiceflow cost?**
-Pro is $60/editor/month with 10,000 credits. Teams is $150/editor/month with 30,000 credits and unlimited agents. Enterprise is custom. Extra seats are $50/month each. LLM API costs bill separately ([Voiceflow pricing](https://www.voiceflow.com/pricing)).
+Pricing is no longer published on the vendor's public page as of May 2026; Voiceflow has shifted to demo-gated, usage-based quotes. Last publicly confirmed rates (April 2026): Pro at $60/editor/month with 10,000 credits and Teams at $150/editor/month with 30,000 credits. Extra editor seats historically ran $50/month. LLM API costs bill separately ([Voiceflow pricing](https://www.voiceflow.com/pricing)).
 
 **How does Voiceflow's knowledge base work?**
 Upload documents, PDFs, or URLs. When a user asks a question, Voiceflow retrieves relevant chunks and uses an LLM to generate a grounded answer. Retrieval-augmented generation reduces hallucination compared to pure LLM responses.

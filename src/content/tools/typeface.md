@@ -11,10 +11,10 @@ pricing_model: enterprise
 price_range: "Enterprise custom (contact sales)"
 status: active
 launched: 2022-02
-last_updated: 2026-05-03
-last_verified: 2026-05-03
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: quarterly
-seo_title: "Typeface: Enterprise AI Content Platform Review (2026)"
+seo_title: "Typeface: Enterprise AI Content Platform Review (May 2026)"
 meta_description: "Typeface is the Arc platform for enterprise marketing AI: Arc Agents (specialized marketing agents), Arc Graph (brand grounding), Arc Spaces (workflows), Arc Forge (custom agents via MCP). $165M+ raised at $1B valuation. Enterprise-only pricing."
 author: "aipedia.wiki Editorial"
 affiliate:
@@ -34,7 +34,7 @@ facts:
     source: "https://www.typeface.ai/platform"
     source_label: "Typeface's own platform page"
     source_id: typeface-official
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: medium
     confidence: medium
   pricing_anchor:
@@ -42,8 +42,8 @@ facts:
     source: "https://www.typeface.ai"
     source_label: "Source"
     source_id: typeface-pricing
-    verified_at: 2026-05-03
-    next_review_at: 2026-08-03
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: medium
   watch_out_for:
@@ -51,8 +51,8 @@ facts:
     source: "https://www.typeface.ai"
     source_label: "Source"
     source_id: typeface-pricing
-    verified_at: 2026-05-03
-    next_review_at: 2026-08-03
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: medium
 tags: [enterprise-content, brand-ai, ai-writing, typeface, content-automation]
@@ -77,6 +77,13 @@ price_history:
     source_label: "Source"
     source_id: typeface-pricing
     note: "No public tier sheet. Contact-sales only. Deal size varies by seat count, brand complexity, and integration scope."
+  - date: 2026-05-13
+    plan: "Enterprise (contact sales)"
+    price: "Custom"
+    source: "https://www.typeface.ai/platform"
+    source_label: "Source"
+    source_id: typeface-pricing
+    note: "Re-verified May 13, 2026. Still enterprise contact-sales only. Arc platform unchanged: Arc Graph, Arc Agents, Arc Spaces, Arc Forge. Cognizant partnership (Jan 2026) remains active. New customer-win callouts on the platform page now include Tradestation and Google Cloud alongside Asics, Post Holdings, and Johnson Controls."
 ---
 
 # Typeface
@@ -85,7 +92,7 @@ Typeface is an enterprise AI content platform built around the **Arc** marketing
 
 The company was founded in 2022 by Abhay Parasnis, former CTO of Adobe. Typeface has raised $165M+ across Series A and B at a $1B valuation, with Salesforce Ventures leading the Series B. Other investors include Lightspeed, Madrona, GV, Menlo Ventures, and M12 (Microsoft's venture arm). Strategic acquisitions of Treat (visual harmonization AI) and Narrato (collaboration and workflow engine) expanded the platform beyond its original text focus.
 
-Customers include Google, Microsoft, Salesforce, Asics, Johnson Controls, Medibank, Sally Beauty, State Farm, P&G, AB InBev, and Post Holdings. Typeface is Microsoft's Copilot launch partner for enterprise content and sits inside Salesforce Marketing Cloud via a deep first-party integration. A January 2026 partnership with Cognizant bundles Arc with global systems-integrator delivery services.
+Customers include Google, Microsoft, Salesforce, Asics, Johnson Controls, Medibank, Sally Beauty, State Farm, P&G, AB InBev, Post Holdings, Tradestation, and Google Cloud. Typeface is Microsoft's Copilot launch partner for enterprise content and sits inside Salesforce Marketing Cloud via a deep first-party integration. A January 2026 partnership with Cognizant bundles Arc with global systems-integrator delivery services. A 2026 Typeface Signal Report found 82% of marketing leaders have deployed AI somewhere in their stack, though most remain stuck in experimentation due to compliance, data, and governance gaps.
 
 ## System Verdict
 
@@ -110,7 +117,7 @@ Customers include Google, Microsoft, Salesforce, Asics, Johnson Controls, Mediba
 | **MCP support** | Yes, through Arc Forge |
 | **Strategic acquisitions** | Treat (visual harmonization AI) · Narrato (workflow engine) |
 | **Partnerships** | Microsoft Copilot launch partner · Salesforce first-party integration · Cognizant (Jan 2026) |
-| **Notable customers** | Google · Microsoft · Salesforce · P&G · AB InBev · State Farm · Asics · Medibank · Johnson Controls |
+| **Notable customers** | Google · Microsoft · Salesforce · P&G · AB InBev · State Farm · Asics · Medibank · Johnson Controls · Tradestation · Post Holdings |
 | **Pricing model** | Enterprise contact-sales |
 | **Funding** | $165M+ raised at $1B valuation (Series B, 2023) |
 | **Investors** | Salesforce Ventures (lead) · Lightspeed · Madrona · GV · Menlo Ventures · M12 |
@@ -160,7 +167,7 @@ Typeface publishes no pricing tiers. Deals are quoted per enterprise deployment 
 
 Typical deals include professional services from Typeface or partner integrators (most visibly Cognizant after the January 2026 partnership) for brand-guideline encoding, workflow setup, and Salesforce Marketing Cloud or Microsoft 365 integration.
 
-Prices verified 2026-04-18 via [Typeface's own platform page](https://www.typeface.ai/platform), [Salesforce Ventures Series B coverage in Reuters](https://www.reuters.com/technology/ai-startup-typeface-valued-1-bln-after-salesforce-led-fundraise-2023-06-29/), and [PitchBook's company profile](https://pitchbook.com/profiles/company/520808-59).
+Prices verified 2026-05-13 via [Typeface's own platform page](https://www.typeface.ai/platform), [Salesforce Ventures Series B coverage in Reuters](https://www.reuters.com/technology/ai-startup-typeface-valued-1-bln-after-salesforce-led-fundraise-2023-06-29/), and [PitchBook's company profile](https://pitchbook.com/profiles/company/520808-59).
 
 ## Against the alternatives
 
@@ -187,7 +194,7 @@ Prices verified 2026-04-18 via [Typeface's own platform page](https://www.typefa
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-18 against [Typeface's platform page](https://www.typeface.ai/platform), [the Arc Agent launch announcement](https://www.typeface.ai/blog/accelerating-ai-content-lifecycle-transformation-unveiling-typeface-arc-agent-strategic-acquisitions-and-multimodal-product-innovation), [Salesforce Marketing Cloud integration docs](https://www.typeface.ai/integrations/salesforce-marketing-cloud), [Reuters coverage of the Series B](https://www.reuters.com/technology/ai-startup-typeface-valued-1-bln-after-salesforce-led-fundraise-2023-06-29/), and [the Cognizant partnership announcement](https://news.cognizant.com/2026-01-26-Cognizant-and-Typeface-Partner-to-Modernize-Enterprise-Marketing-Through-Agentic-AI-Orchestration).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [Typeface's platform page](https://www.typeface.ai/platform), [the Arc Agent launch announcement](https://www.typeface.ai/blog/accelerating-ai-content-lifecycle-transformation-unveiling-typeface-arc-agent-strategic-acquisitions-and-multimodal-product-innovation), [Salesforce Marketing Cloud integration docs](https://www.typeface.ai/integrations/salesforce-marketing-cloud), [Reuters coverage of the Series B](https://www.reuters.com/technology/ai-startup-typeface-valued-1-bln-after-salesforce-led-fundraise-2023-06-29/), and [the Cognizant partnership announcement](https://news.cognizant.com/2026-01-26-Cognizant-and-Typeface-Partner-to-Modernize-Enterprise-Marketing-Through-Agentic-AI-Orchestration).
 
 ## FAQ
 

@@ -11,10 +11,10 @@ pricing_model: freemium
 price_range: "$0-$100/month"
 status: active
 launched: 2025-01
-last_updated: 2026-05-03
-last_verified: 2026-05-03
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
-seo_title: "Trae: ByteDance's AI IDE Review & Pricing (2026)"
+seo_title: "Trae: ByteDance's AI IDE Review & Pricing (May 2026)"
 meta_description: "Trae is ByteDance's VS Code fork with SOLO agent mode, Claude, GPT, DeepSeek and Gemini models, and token-based pricing from $0 free through $100 Ultra. Lite at $3/mo is the cheapest way to reach Claude and GPT inside an IDE."
 author: "aipedia.wiki Editorial"
 affiliate:
@@ -34,16 +34,16 @@ facts:
     source: "https://www.trae.ai/pricing"
     source_label: "Source"
     source_id: trae-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: medium
     confidence: medium
   pricing_anchor:
-    value: "Pricing model; Shift to token-based plans; Trae moved from fully-free Pro features to tiered token allowances in February 2026."
+    value: "Token-based plans since the February 18, 2026 pricing revamp. Free $0 (5,000 autocompletes, 2 concurrent tasks), Lite $3, Pro $10 with SOLO included, Pro+ $30, Ultra $100. Re-verified May 13, 2026."
     source: "https://www.trae.ai/pricing"
     source_label: "Source"
     source_id: trae-pricing
-    verified_at: 2026-05-03
-    next_review_at: 2026-08-03
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: medium
   watch_out_for:
@@ -51,8 +51,8 @@ facts:
     source: "https://www.trae.ai/pricing"
     source_label: "Source"
     source_id: trae-pricing
-    verified_at: 2026-05-03
-    next_review_at: 2026-08-03
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: medium
 tags: [ai-coding, ide, bytedance, trae, agentic-coding, vscode-fork, solo-mode, builder-mode]
@@ -68,13 +68,13 @@ not_best_for:
 quick_answer: >-
   Trae is ByteDance's VS Code fork with an autonomous SOLO agent and multi-model backbone. Pick it for the cheapest path to Claude and GPT inside a full IDE. Skip it for strict enterprise data-residency work or if Claude Code's CLI already covers the workflow.
 price_history:
-  - date: 2026-02
+  - date: 2026-02-18
     plan: "Pricing model"
     price: "Shift to token-based plans"
     source: "https://www.trae.ai/pricing"
     source_label: "Source"
     source_id: trae-pricing
-    note: "Trae moved from fully-free Pro features to tiered token allowances in February 2026."
+    note: "Trae moved from fully-free Pro features to tiered token allowances on February 18, 2026."
   - date: 2026-04-18
     plan: "Lite"
     price: "$3/mo"
@@ -89,13 +89,20 @@ price_history:
     source_label: "Source"
     source_id: trae-pricing
     note: "Verified, SOLO mode included."
+  - date: 2026-05-13
+    plan: "All tiers"
+    price: "Unchanged"
+    source: "https://www.trae.ai/pricing"
+    source_label: "Source"
+    source_id: trae-pricing
+    note: "Re-verified May 13, 2026. Free $0 (5k autocompletes, 2 concurrent tasks), Lite $3/mo ($5 basic + bonus usage, 2 concurrent), Pro $10/mo ($20 basic + bonus, SOLO included, 10 concurrent, 7-day free trial), Pro+ $30/mo (3.5x Pro usage, 15 concurrent), Ultra $100/mo (20x Pro usage, model early access, 20 concurrent). Multi-model backbone unchanged: Claude, OpenAI, DeepSeek, Gemini."
 ---
 
 # Trae
 
 ByteDance's **AI-first IDE**, shipped as a VS Code fork with extensions and keybindings that transfer in one import. Flagship agent is **SOLO mode**, which plans, edits files across the project, and shows live preview without step-by-step approvals. The multi-model backbone covers Claude, OpenAI, DeepSeek, and Gemini routes on a single token-metered bill.
 
-Pricing went from fully free through 2025 to token-based tiers in February 2026. Entry paid plan is **$3/mo Lite**, roughly an order of magnitude under Cursor and Windsurf. Free tier still exists with 5,000 autocompletes and 2 concurrent cloud tasks.
+Pricing went from fully free through 2025 to token-based tiers on **February 18, 2026**. Entry paid plan is **$3/mo Lite**, roughly an order of magnitude under Cursor and Windsurf. Free tier still exists with 5,000 autocompletes and 2 concurrent cloud tasks.
 
 ByteDance's wider AI stack (Doubao, Jimeng, Seedance, Kling) sits behind the same wallet. Trae is best read as a loss-leader play for developer mindshare, not a pure standalone product.
 
@@ -113,7 +120,7 @@ ByteDance's wider AI stack (Doubao, Jimeng, Seedance, Kling) sits behind the sam
 |---|---|
 | **Company** | ByteDance (also ships Doubao, Jimeng, Seedance, Kling) |
 | **Launched** | January 2025 (public preview) |
-| **Pricing shift** | Token-based tiers since February 2026 |
+| **Pricing shift** | Token-based tiers since February 18, 2026 |
 | **Platforms** | Windows, macOS, Linux (VS Code fork) |
 | **Models supported** | Claude · OpenAI · DeepSeek · Gemini routes |
 | **Agent mode** | SOLO (autonomous planner, multi-file edits, live preview) |
@@ -152,7 +159,7 @@ A VS Code fork with ByteDance's AI layer bolted in at the editor level. Users im
 
 ## Pricing
 
-Subscription pricing verified 2026-04-18 via [trae.ai/pricing](https://www.trae.ai/pricing):
+Subscription pricing verified 2026-05-13 via [trae.ai/pricing](https://www.trae.ai/pricing):
 
 | Plan | Price | What's included | Who's it for |
 |---|---|---|---|
@@ -166,9 +173,9 @@ Subscription pricing verified 2026-04-18 via [trae.ai/pricing](https://www.trae.
 
 Models available across paid tiers span Claude, OpenAI, DeepSeek, and Gemini routes. Free tier has limited model selection.
 
-Usage is metered on a token pool per tier, not unlimited. This shifted in February 2026 from the prior fully-free Pro feature set.
+Usage is metered on a token pool per tier, not unlimited. This shifted on February 18, 2026 from the prior fully-free Pro feature set.
 
-Prices verified 2026-04-18 via [Trae pricing page](https://www.trae.ai/pricing) and [ohaiknow Trae review 2026](https://ohaiknow.com/reviews/trae/).
+Prices verified 2026-05-13 via [Trae pricing page](https://www.trae.ai/pricing) and [ohaiknow Trae review 2026](https://ohaiknow.com/reviews/trae/).
 
 ## Against the alternatives
 
@@ -185,7 +192,7 @@ Prices verified 2026-04-18 via [Trae pricing page](https://www.trae.ai/pricing) 
 ## Failure modes
 
 - **Telemetry concerns.** Security researchers have flagged continued data collection even with settings disabled. Regulated codebases should avoid.
-- **Token pool limits surprise users.** The February 2026 shift from fully-free Pro to token-based tiers caught heavy users mid-workflow. Budget the month.
+- **Token pool limits surprise users.** The February 18, 2026 shift from fully-free Pro to token-based tiers caught heavy users mid-workflow. Budget the month.
 - **ByteDance geopolitical exposure.** US enterprise buyers in defence, finance, or government-adjacent work may be blocked by procurement policy regardless of the tool's merits.
 - **Model versions lag frontier.** Some currently verified routing targets lag current frontier model versions. Frontier users running Claude Opus 4.7 or OpenAI frontier models on direct subscriptions will notice the gap.
 - **SOLO mode drifts on complex codebases.** Autonomous agents still over-edit unrelated files when the spec is vague. Keep scope tight on legacy projects.
@@ -194,7 +201,7 @@ Prices verified 2026-04-18 via [Trae pricing page](https://www.trae.ai/pricing) 
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-18 against [trae.ai/pricing](https://www.trae.ai/pricing) and [ohaiknow Trae review](https://ohaiknow.com/reviews/trae/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [trae.ai/pricing](https://www.trae.ai/pricing) and [ohaiknow Trae review](https://ohaiknow.com/reviews/trae/).
 
 ## FAQ
 

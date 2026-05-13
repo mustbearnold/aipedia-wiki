@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$10-$59/month"
 status: active
 launched: 2020-11
-last_updated: 2026-05-03
-last_verified: 2026-05-03
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://sudowrite.com/pricing"
     source_label: "Sudowrite Pricing"
     source_id: sudowrite-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -38,25 +38,25 @@ facts:
     source: "https://sudowrite.com/pricing"
     source_label: "Sudowrite Pricing"
     source_id: sudowrite-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-08-03
+    next_review_at: 2026-08-13
   flagship_model:
-    value: "Sudowrite markets Muse as its custom-trained fiction model and routes some workflows across multiple model options."
+    value: "Sudowrite markets Muse as its custom-trained fiction model and routes some workflows across multiple model options including Claude 4.x and GPT-5."
     source: "https://sudowrite.framer.website/muse"
     source_label: "Sudowrite Muse overview"
     source_id: sudowrite-muse
-    verified_at: 2026-05-03
-    next_review_at: 2026-08-03
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: medium
     confidence: high
   model_routing:
-    value: "The docs expose guidance for choosing models by writing task, which matters because output style and credit use vary by model."
+    value: "The docs expose guidance for choosing models by writing task. Excellent mode uses Claude 3.7 Sonnet; Basic uses GPT-4o Mini; experimental routing covers Claude 4.x, GPT-5 suite, Gemini 3, DeepSeek, Grok 4, Kimi K2, and Mistral Large 2."
     source: "https://docs.sudowrite.com/using-sudowrite/1ow1qkGqof9rtcyGnrWUBS/which-ai-model-should-i-use/veMq9xRH6KLCQPFm5XkQx7"
     source_label: "Sudowrite model routing documentation"
     source_id: sudowrite-model-routing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   watch_out_for:
@@ -64,12 +64,12 @@ facts:
     source: "https://sudowrite.com/pricing"
     source_label: "Sudowrite Pricing"
     source_id: sudowrite-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-08-03
+    next_review_at: 2026-08-13
 tags: [ai-writing, fiction, creative-writing, novel-writing, storytelling, muse-model]
-seo_title: "Sudowrite: Features, Pricing & Review (April 2026)"
+seo_title: "Sudowrite: Features, Pricing & Review (May 2026)"
 meta_description: "Sudowrite is the fiction-first AI writing tool with the custom-trained Muse model. Hobby $10/mo annual, Professional $22/mo, Max $44/mo. Story Engine, Describe, Expand, Rewrite."
 author: "aipedia.wiki Editorial"
 best_for:
@@ -99,13 +99,20 @@ price_history:
     source_label: "Source"
     source_id: sudowrite-pricing
     note: "Annual rate; monthly $59. 2M credits/mo with rollover."
+  - date: 2026-05-13
+    plan: "All tiers"
+    price: "Unchanged"
+    source: "https://sudowrite.com/pricing"
+    source_label: "Source"
+    source_id: sudowrite-pricing
+    note: "Re-verified May 13, 2026. Hobby & Student $10/mo annual ($19 monthly, 225k credits), Professional $22/mo annual ($29 monthly, 1M credits on annual / 450k on monthly), Max $44/mo annual ($59 monthly, 2M credits with rollover). Model picker now exposes Claude 4.x (Sonnet 4.5, Opus, Haiku 4.5), GPT-5 suite, Gemini 3 Pro/Flash, DeepSeek V3/R1, Grok 4, Kimi K2, and Mistral Large 2 alongside Muse."
 ---
 
 # Sudowrite
 
 Fiction-first AI writing tool founded in 2020 by Amit Gupta and James Yu. Runs on the custom-trained **Muse** model: a proprietary LLM built on a dataset of published novels and stories, tuned for long-form creative prose.
 
-Routes fallback to Claude Opus 4.7 and OpenAI frontier models for specific tasks. Runs unfiltered, meaning it handles romance, violence, horror, and intense themes that general assistants refuse.
+Routes fallback across Claude 4.x (Sonnet 4.5, Opus, Haiku 4.5), the GPT-5 suite, Gemini 3, DeepSeek V3/R1, Grok 4, Kimi K2, and Mistral Large 2 for task-specific work. Runs unfiltered, meaning it handles romance, violence, horror, and intense themes that general assistants refuse.
 
 ## System Verdict
 
@@ -120,15 +127,16 @@ Routes fallback to Claude Opus 4.7 and OpenAI frontier models for specific tasks
 | | |
 |---|---|
 | **Primary model** | **Muse** · custom-trained LLM built exclusively for fiction |
-| **Fallback models** | Claude Opus 4.7 · OpenAI frontier models (task-dependent routing) |
+| **Fallback models** | Claude 4.x (Sonnet 4.5, Opus, Haiku 4.5) · GPT-5 suite · Gemini 3 · DeepSeek · Grok 4 · Kimi K2 · Mistral Large 2 |
 | **Core modes** | Write · Describe · Expand · Rewrite · Brainstorm · Feedback |
 | **Structure tool** | Story Engine · builds outline, characters, world, chapters |
 | **Editor** | Canvas · organizes chapters, scenes, notes, story elements |
 | **Content filter** | Unfiltered · handles romance, violence, horror themes general LLMs refuse |
 | **Style matching** | Generation adapts to surrounding prose style |
 | **Free trial** | 10,000 credits · full feature access · no ongoing free tier |
+| **Languages** | 30+ supported |
 
-Every data point above was verified against vendor documentation on 2026-04-17. See Sources.
+Every data point above was verified against vendor documentation on 2026-05-13. See Sources.
 
 ## What it actually is
 
@@ -136,7 +144,7 @@ One fiction-writing workspace built around the Muse model. Users draft in the Ca
 
 The Story Engine handles full novel structure. Writers input characters, world, and premise; the engine outputs outline and chapter drafts in the writer's voice. Style matching ensures generated passages read continuously with the surrounding prose.
 
-Muse is the moat. A custom LLM trained on published fiction outperforms general models on narrative rhythm, scene pacing, and sensory detail. Fallback routing to Claude and GPT handles tasks where general reasoning matters more than narrative voice.
+Muse is the moat. A custom LLM trained on published fiction outperforms general models on narrative rhythm, scene pacing, and sensory detail. Fallback routing now spans Claude 4.x, GPT-5, Gemini 3, DeepSeek, Grok 4, Kimi K2, and Mistral Large 2 for tasks where general reasoning matters more than narrative voice.
 
 The unfiltered policy is the second moat. Fiction workflows that general assistants refuse (on-page romance, graphic violence, morally complex antagonists) run cleanly on Sudowrite.
 
@@ -144,7 +152,7 @@ The unfiltered policy is the second moat. Fiction workflows that general assista
 
 - **Drafting novel-length fiction.** Story Engine plus Canvas manages 80k-150k word projects the way general chat tools cannot.
 - **Genre fiction with intense themes.** Muse handles romance, thriller, horror, and dark fantasy without the refusal rate of [Claude](/tools/claude/) or [ChatGPT](/tools/chatgpt/).
-- **NaNoWriMo participation.** Professional tier's 1M credits comfortably cover a 50k draft plus revision.
+- **NaNoWriMo participation.** Professional tier's 1M annual credits (450k on monthly billing) comfortably cover a 50k draft plus revision.
 - **Screenwriting and dialogue generation.** Brainstorm and Rewrite cover scene beats and alternate dialogue paths.
 - **Scene blockers.** Describe and Expand unstick stuck sentences faster than prompt engineering in a general chatbot.
 
@@ -160,19 +168,19 @@ The unfiltered policy is the second moat. Fiction workflows that general assista
 
 Subscription pricing via [sudowrite.com/pricing](https://sudowrite.com/pricing):
 
-| Plan | Annual (effective/mo) | Monthly | Credits | Who's it for |
+| Plan | Annual (effective/mo) | Monthly | Credits (annual / monthly) | Who's it for |
 |------|-----------------------|---------|---------|--------------|
 | Hobby & Student | $10 | $19 | 225,000/mo | NaNoWriMo dabblers, students |
-| Professional | $22 | $29 | 1,000,000/mo | **Most working novelists should land here** |
+| Professional | $22 | $29 | 1,000,000 / 450,000 per mo | **Most working novelists should land here** |
 | Max | $44 | $59 | 2,000,000/mo + rollover | Heavy drafters on 100k+ manuscripts |
 
-*Prices verified 2026-04-17 via [sudowrite.com/pricing](https://sudowrite.com/pricing). Annual billing saves 24-47% across tiers. Free trial includes 10,000 credits with full feature access. Credits are consumed by AI generation, not by user-typed words.*
+*Prices verified 2026-05-13 via [sudowrite.com/pricing](https://sudowrite.com/pricing). Annual billing saves up to 50% across tiers and doubles credits on the Professional plan. Free trial includes 10,000 credits with full feature access. Credits are consumed by AI generation, not by user-typed words.*
 
 ## Against the alternatives
 
 | | Sudowrite Pro | Claude Pro | ChatGPT Plus |
 |---|---|---|---|
-| **Primary model** | **Muse (fiction-trained)** | Claude Opus 4.7 | GPT-5.3/5.4 |
+| **Primary model** | **Muse (fiction-trained)** | Claude Opus 4.7 | GPT-5.5 |
 | **Fiction workflow** | **Story Engine, Canvas, Describe, Expand** | Generic chat | Generic chat |
 | **Content filter** | **Unfiltered** | Conservative | Moderate |
 | **Style matching** | **Matches surrounding prose** | Prompt-dependent | Prompt-dependent |
@@ -182,7 +190,7 @@ Subscription pricing via [sudowrite.com/pricing](https://sudowrite.com/pricing):
 
 ## Failure modes
 
-- **Credit economics punish non-fiction use.** Credits are consumed by generation, not words typed. Business writing burns credits at the same rate as fiction for far less value. Professional tier's 1M credits go fast on mixed-use days.
+- **Credit economics punish non-fiction use.** Credits are consumed by generation, not words typed. Business writing burns credits at the same rate as fiction for far less value. Professional tier's 1M annual credits (450k on monthly billing) go fast on mixed-use days.
 - **Muse still needs editing.** Generated prose is drafting material, not publishable copy. Expect heavy revision on every output.
 - **Fiction-only tuning hurts outside narrative work.** Style matching, sensory bias, and scene structure defaults actively fight SEO, business, and academic output.
 - **No free ongoing tier.** 10,000-credit trial only. Users who drop out of their paid plan lose access; pay-as-you-go is not offered.
@@ -192,7 +200,7 @@ Subscription pricing via [sudowrite.com/pricing](https://sudowrite.com/pricing):
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [sudowrite.com/pricing](https://sudowrite.com/pricing), the [Muse model documentation](https://sudowrite.framer.website/muse), and the [Sudowrite model routing docs](https://docs.sudowrite.com/using-sudowrite/1ow1qkGqof9rtcyGnrWUBS/which-ai-model-should-i-use/veMq9xRH6KLCQPFm5XkQx7).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [sudowrite.com/pricing](https://sudowrite.com/pricing), the [Muse model documentation](https://sudowrite.framer.website/muse), and the [Sudowrite model routing docs](https://docs.sudowrite.com/using-sudowrite/1ow1qkGqof9rtcyGnrWUBS/which-ai-model-should-i-use/veMq9xRH6KLCQPFm5XkQx7).
 
 ## FAQ
 
@@ -203,10 +211,10 @@ No ongoing free tier. A one-time free trial includes 10,000 credits with full fe
 Sudowrite's custom-trained large language model, built on a proprietary dataset of published novels and stories. Tuned for long-form fiction and available exclusively inside Sudowrite. Muse runs unfiltered on romance, violence, horror, and other themes general LLMs refuse.
 
 **What AI models does Sudowrite use?**
-Muse is the primary model for fiction generation. The platform routes fallback tasks to Claude Opus 4.7 and OpenAI GPT-family based on task type. Users do not select the model directly; Sudowrite routes automatically.
+Muse is the primary model for fiction generation. The Excellent mode runs Claude 3.7 Sonnet and Basic uses GPT-4o Mini. Experimental routing exposes Claude 4.x (Sonnet 4.5, Opus, Haiku 4.5), the GPT-5 suite, Gemini 3 Pro/Flash, DeepSeek V3/R1, Grok 4, Kimi K2, and Mistral Large 2. Users can pick per-task or let Sudowrite route automatically.
 
 **Does Sudowrite work for NaNoWriMo?**
-Yes. The Professional tier's 1M credits comfortably cover a 50k draft plus revisions. Story Engine structures projects and Write mode extends scenes in the writer's voice for daily word count support.
+Yes. The Professional tier's 1M annual credits (450k on monthly billing) comfortably cover a 50k draft plus revisions. Story Engine structures projects and Write mode extends scenes in the writer's voice for daily word count support.
 
 **Sudowrite vs Claude for fiction?**
 Sudowrite wraps Muse plus fiction workflow tools (Story Engine, Canvas, Describe, Expand). [Claude](/tools/claude/) Pro is a general chat assistant; fiction output depends on prompt quality. Novelists writing long-form typically prefer Sudowrite for the workflow scaffolding; writers doing short stories or prompt-driven pieces often prefer Claude direct.

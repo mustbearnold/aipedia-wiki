@@ -11,10 +11,10 @@ pricing_model: enterprise
 price_range: "$30K-$500K+/year"
 status: active
 launched: 2016-01
-last_updated: 2026-05-04
-last_verified: 2026-05-04
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: quarterly
-seo_title: "Ada (ada.cx): AI Customer Service Platform Review (2026)"
+seo_title: "Ada (ada.cx): AI Customer Service Platform Review (May 2026)"
 meta_description: "Ada runs the ACX Platform for enterprise AI customer support: 80%+ autoresolution, voice + chat + email, Reasoning Engine, Playbooks. Contact-sales pricing from ~$30K/year. 350+ customers including Verizon, Monday.com, Pinterest, Square."
 author: "aipedia.wiki Editorial"
 affiliate:
@@ -31,54 +31,52 @@ scores:
 facts:
   best_for:
     value: Best for enterprise support teams evaluating AI customer-service automation across chat, email, voice, and agent-assist
-      workflows.
+      workflows. Ada now describes the ACX Platform as a 4-component system (Reasoning Engine, Conversation Hub, Performance Center, Developer Toolkit) deployed across 9+ channels.
     source: https://www.ada.cx/platform
     source_label: Ada platform
     source_id: ada-platform
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   pricing_anchor:
     value: Ada does not expose a simple public tier sheet in the current source set; pricing should be validated with sales
       and the official agent-pricing explainer.
     source: https://www.ada.cx/blog/unpacking-ai-agent-pricing-resolution-based-vs-conversation-based-models/
     source_label: Ada AI agent pricing explainer
     source_id: ada-pricing
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-08-13'
   enterprise_controls:
     value: Ada is an enterprise platform decision, so security, routing, omnichannel support, reporting, and handoff workflows
-      matter as much as model quality.
+      matter as much as model quality. SOC 2, HIPAA, GDPR, AIUC-1, zero-retention LLM policies, and continuous accuracy monitoring are documented on the platform page.
     source: https://www.ada.cx/platform
     source_label: Ada platform
     source_id: ada-platform
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   api_available:
-    value: AIpedia treats Ada primarily as a customer-service automation platform; integration depth should be checked during
-      enterprise evaluation.
+    value: Ada's Developer Toolkit (APIs, SDKs, and MCP integration) supports custom deployment alongside the platform's Salesforce, Zendesk, Twilio, and Shopify direct integrations. Integration depth should still be checked during enterprise evaluation.
     source: https://www.ada.cx/platform
     source_label: Ada platform
     source_id: ada-platform
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   watch_out_for:
-    value: Ada’s pricing pages are frequently protected from automated checks, so use live browser or sales confirmation before
-      quoting exact price ranges.
+    value: Ada's pricing pages remain demo-gated and are frequently protected from automated checks, so use live browser or sales confirmation before quoting exact price ranges. The customer count is now disclosed as 350+ across 85+ countries.
     source: https://www.ada.cx/blog/unpacking-ai-agent-pricing-resolution-based-vs-conversation-based-models/
     source_label: Ada AI agent pricing explainer
     source_id: ada-pricing
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-08-13'
 tags: [customer-support, ai-agent, chatbot, voice-ai, enterprise, ada]
 best_for:
   - enterprise CX teams with 300K+ annual conversations
@@ -101,13 +99,20 @@ price_history:
     source_label: "Source"
     source_id: ada-pricing
     note: "Verified contact-sales model; resolution-based and conversation-based options both offered; no public tier sheet."
+  - date: 2026-05-13
+    plan: "Enterprise (contact sales)"
+    price: "~$30K+/year (entry) to $500K+ (large deployments)"
+    source: "https://www.ada.cx/blog/unpacking-ai-agent-pricing-resolution-based-vs-conversation-based-models/"
+    source_label: "Source"
+    source_id: ada-pricing
+    note: "Reverified May 2026. Pricing model unchanged; ACX Platform components reorganized into 4 named modules (Reasoning Engine, Conversation Hub, Performance Center, Developer Toolkit). 350+ customers across 85+ countries confirmed."
 ---
 
 # Ada
 
-Ada is an enterprise AI customer service platform built around the **ACX Platform**, an AI-native operating system that resolves customer conversations across chat, voice, email, SMS, social, and in-app channels. The platform combines a unified **Reasoning Engine** (shared across every channel) with **Playbooks** (structured SOP automation) and outcome-testing tools to run 80%+ autoresolution at enterprise scale.
+Ada is an enterprise AI customer service platform built around the **ACX Platform**, an AI-native operating system that resolves customer conversations across chat, voice, email, SMS, social, and in-app channels. The platform now ships as four named components: the **Reasoning Engine** (shared cross-channel intelligence), **Conversation Hub** (9+ channel deployment surface), **Performance Center** (monitoring and optimization), and **Developer Toolkit** (APIs, SDKs, and MCP integration). Combined with **Playbooks** (structured SOP automation) and Coaching feedback loops, the platform targets 80%+ autoresolution at enterprise scale.
 
-The company was founded in 2016 in Toronto and hit unicorn status in a $130M Series C at a $1.2B valuation. Ada now serves 350+ enterprise customers including Verizon, Monday.com, Square, Pinterest, Sky, Malaysia Airlines, Barnes & Noble, Grab, and ZoomInfo. Pricing is contact-sales only, with third-party sources citing entry deals near $30K per year and large six-figure ACVs on the top end.
+The company was founded in 2016 in Toronto and hit unicorn status in a $130M Series C at a $1.2B valuation. Ada now serves 350+ enterprise customers across 85+ countries, including Verizon, Monday.com, Square, Pinterest, Sky, Malaysia Airlines, Barnes & Noble, Grab, IPSY, Cebu Pacific, and ZoomInfo. Pricing is contact-sales only, with third-party sources citing entry deals near $30K per year and large six-figure ACVs on the top end.
 
 Ada sits squarely in the enterprise CX lane. It is not a self-serve chatbot builder. It is a reasoning and orchestration layer for large support operations that want one AI system running every channel.
 
@@ -124,18 +129,21 @@ Ada sits squarely in the enterprise CX lane. It is not a self-serve chatbot buil
 | | |
 |---|---|
 | **Flagship product** | Ada ACX Platform (AI-native customer experience operating system) |
-| **Channels** | Chat · Voice · Email · SMS · WhatsApp · Instagram · In-app |
-| **Core engine** | Unified Reasoning Engine (shared across every channel) |
-| **Automation primitive** | Playbooks (structured SOP automation) |
+| **Platform components** | Reasoning Engine · Conversation Hub · Performance Center · Developer Toolkit |
+| **Channels** | Chat · Voice · Email · SMS · WhatsApp · Messenger · Instagram · In-app (9+) |
+| **Core engine** | Unified Reasoning Engine with multi-layer safeguards and adaptive reasoning |
+| **Automation primitive** | Playbooks (structured SOP automation) plus Coaching feedback loops |
 | **Languages** | Multilingual out of the box |
 | **Reported autoresolution** | 80%+ on customer case studies |
-| **Integrations** | Salesforce · Zendesk · Twilio · Shopify · open APIs + SDKs |
-| **Compliance** | SOC 2 · HIPAA · GDPR · AIUC-1 |
+| **Response time** | Sub-60-second on the platform marketing materials |
+| **CSAT lift** | 50%+ improvement claimed in customer-success references |
+| **Integrations** | Salesforce · Zendesk · Twilio · Shopify · MCP · open APIs + SDKs |
+| **Compliance** | SOC 2 · HIPAA · GDPR · AIUC-1 · zero-retention LLM policy |
 | **Pricing model** | Enterprise contact-sales (no public tier sheet) |
 | **Entry price signal** | ~$30K/year (third-party reports) |
 | **Typical deployment** | 300K+ annual conversations |
-| **Customer count** | 350+ enterprise accounts |
-| **Notable customers** | Verizon · Monday.com · Square · Pinterest · Sky · Malaysia Airlines · Barnes & Noble · Grab |
+| **Customer count** | 350+ enterprise accounts across 85+ countries |
+| **Notable customers** | Verizon · Monday.com · Square · Pinterest · Sky · Malaysia Airlines · Barnes & Noble · Grab · IPSY · Cebu Pacific |
 | **Funding** | $190M+ total · $1.2B valuation (2021 Series C) |
 | **HQ** | Toronto, Canada |
 | **Founded** | 2016 |
@@ -179,7 +187,7 @@ Ada publishes no pricing tiers. Deals are quoted per deployment based on convers
 
 Ada originally pushed outcome-based pricing (per resolved conversation), then shifted toward conversation-based annual commitments after enterprise buyers asked for budget predictability. Both models are still on the table. Large accounts typically negotiate multi-year deals with professional-services components.
 
-Prices verified 2026-04-18 via [Ada's own pricing-model blog post](https://www.ada.cx/blog/unpacking-ai-agent-pricing-resolution-based-vs-conversation-based-models/) and third-party pricing analyses.
+Prices verified 2026-05-13 via [Ada's own pricing-model blog post](https://www.ada.cx/blog/unpacking-ai-agent-pricing-resolution-based-vs-conversation-based-models/) and third-party pricing analyses. Ada has not published a public tier sheet; the pricing model and entry-deal signals are unchanged from the April 2026 verification.
 
 ## Against the alternatives
 
@@ -205,7 +213,7 @@ Prices verified 2026-04-18 via [Ada's own pricing-model blog post](https://www.a
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-18 against [Ada's homepage](https://www.ada.cx), the [Ada ACX Platform overview](https://www.ada.cx/platform/), [Ada's voice product page](https://www.ada.cx/platform/voice/), [Ada's pricing-model blog](https://www.ada.cx/blog/unpacking-ai-agent-pricing-resolution-based-vs-conversation-based-models/), and third-party reviews from [Featurebase](https://www.featurebase.app/blog/ada-cx-pricing) and [MyAskAI](https://myaskai.com/blog/ada-ai-agent-complete-guide-2026).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-05-13 against [Ada's homepage](https://www.ada.cx), the [Ada ACX Platform overview](https://www.ada.cx/platform/), [Ada's voice product page](https://www.ada.cx/platform/voice/), [Ada's pricing-model blog](https://www.ada.cx/blog/unpacking-ai-agent-pricing-resolution-based-vs-conversation-based-models/), and third-party reviews from [Featurebase](https://www.featurebase.app/blog/ada-cx-pricing) and [MyAskAI](https://myaskai.com/blog/ada-ai-agent-complete-guide-2026).
 
 ## FAQ
 

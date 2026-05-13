@@ -12,8 +12,8 @@ pricing_model: paid
 price_range: $19-$97/month
 status: active
 launched: 2021-01
-last_updated: 2026-05-03
-last_verified: 2026-05-03
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -40,8 +40,8 @@ facts:
     source: "https://neuronwriter.com/pricing-neuron/"
     source_label: "NeuronWriter pricing"
     source_id: neuronwriter-official
-    verified_at: 2026-05-03
-    next_review_at: 2026-08-03
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: high
   workflow_surface:
@@ -57,7 +57,7 @@ facts:
     source: "https://neuronwriter.com/pricing-neuron/"
     source_label: "NeuronWriter pricing"
     source_id: neuronwriter-official
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   watch_out_for:
@@ -69,7 +69,7 @@ facts:
     volatility: medium
     confidence: high
 tags: [seo, content-optimization, nlp, content-editor, serp-analysis, ai-writing, semantic-seo]
-seo_title: 'NeuronWriter: Features, Pricing & Review (April 2026)'
+seo_title: 'NeuronWriter: Features, Pricing & Review (May 2026)'
 meta_description: >-
   NeuronWriter is an NLP-driven SEO content optimization tool. Plans run $19-$97/mo
   across Bronze, Silver, Gold, Platinum, and Diamond tiers. Budget alternative to
@@ -88,6 +88,14 @@ quick_answer: >-
   NeuronWriter is an NLP-driven SEO content optimizer. It scrapes top SERP entities
   and scores drafts in real time. Five tiers run $19 to $97 per month. Pick it for
   budget Surfer-style scoring. Skip for full SEO suites.
+price_history:
+  - date: 2026-05-13
+    plan: "All tiers"
+    price: "$19 / $37 / $57 / $77 / $97 annual"
+    source: "https://neuronwriter.com/pricing-neuron/"
+    source_label: "Source"
+    source_id: neuronwriter-official
+    note: "Verified unchanged. Per-tier query and project limits confirmed (Bronze 25/2 · Silver 50/5 · Gold 75/10 · Platinum 100/25 · Diamond 150/50)."
 ---
 
 # NeuronWriter
@@ -111,8 +119,9 @@ Five subscription tiers: Bronze, Silver, Gold, Platinum, Diamond. Pricing runs $
 | **Core function** | NLP content scoring against top 30 SERP results |
 | **Tiers** | Bronze $19 · Silver $37 · Gold $57 · Platinum $77 · Diamond $97 (annual) |
 | **AI credits** | 15K Bronze · 30K Silver · 45K Gold · 60K Platinum · 75K Diamond |
-| **Content queries** | 25 Bronze · 50 Silver · scales up through tiers |
-| **Projects** | 2 Bronze · 5 Silver · more on higher tiers |
+| **Content queries** | 25 Bronze · 50 Silver · 75 Gold · 100 Platinum · 150 Diamond |
+| **Projects** | 2 Bronze · 5 Silver · 10 Gold · 25 Platinum · 50 Diamond |
+| **Plagiarism checks** | None on Bronze/Silver · 75 Gold · 100 Platinum · 150 Diamond |
 | **AI writing** | Fine-tuned OpenAI frontier models and Claude Opus 4.7 for SEO-calibrated drafts |
 | **Integrations** | Chrome extension, WordPress, Google Docs, Google Search Console |
 | **Native keyword research** | None. Pair with Ahrefs or Semrush |
@@ -120,7 +129,7 @@ Five subscription tiers: Bronze, Silver, Gold, Platinum, Diamond. Pricing runs $
 | **Billing** | USD on current pricing page; listed historically in EUR |
 | **Free trial** | 7-day Gold trial |
 
-Every data point above was verified against vendor sources on 2026-04-17. See Sources.
+Every data point above was verified against vendor sources on 2026-05-13. See Sources.
 
 ## What it actually is
 
@@ -151,11 +160,11 @@ The moat is thin. The core scoring engine is commodity NLP applied to SERP scrap
 |------|---|---|---|---|---|
 | Bronze | $19 | 25 | 15K | 2 | Solo affiliate or freelance writers |
 | Silver | $37 | 50 | 30K | 5 | **Most working SEO writers land here** |
-| Gold | $57 | Higher | 45K | More | Small agencies needing plagiarism + integrations |
-| Platinum | $77 | Higher | 60K | More | Mid-agencies with API access |
-| Diamond | $97 | Highest | 75K | Most | Large agencies with custom branding |
+| Gold | $57 | 75 | 45K | 10 | Small agencies needing plagiarism + integrations |
+| Platinum | $77 | 100 | 60K | 25 | Mid-agencies with API access |
+| Diamond | $97 | 150 | 75K | 50 | Large agencies with custom branding |
 
-*Prices verified 2026-04-17 via [NeuronWriter pricing](https://neuronwriter.com/pricing-neuron/). Annual billing shown; monthly billing runs roughly 20% higher. Bronze monthly lists at $23. A 7-day Gold trial is available.*
+*Prices verified 2026-05-13 via [NeuronWriter pricing](https://neuronwriter.com/pricing-neuron/). Annual billing shown; monthly billing runs roughly 20% higher (Bronze $23, Silver $45, Gold $69, Platinum $93, Diamond $117). A 7-day Gold trial is available.*
 
 ## Against the alternatives
 
@@ -180,7 +189,7 @@ The moat is thin. The core scoring engine is commodity NLP applied to SERP scrap
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [NeuronWriter pricing](https://neuronwriter.com/pricing-neuron/) and the [pricing FAQ](https://neuronwriter.com/faqs/how-many-pricing-plans-does-neuronwriter-have/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [NeuronWriter pricing](https://neuronwriter.com/pricing-neuron/) and the [pricing FAQ](https://neuronwriter.com/faqs/how-many-pricing-plans-does-neuronwriter-have/).
 
 ## FAQ
 

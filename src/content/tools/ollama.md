@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0 local / $20-$100/mo cloud"
 status: active
 launched: 2023-07
-last_updated: 2026-05-03
-last_verified: 2026-05-03
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -27,31 +27,31 @@ scores:
   longevity: 9
 facts:
   best_for:
-    value: "The default way to run open-weight LLMs locally. Free desktop runtime with OpenAI-compatible API, model library, and Ollama Cloud ($20-100/mo) for teams that want managed inference. Best for chat, research, assistant, and model-access workflows."
-    source: "https://groq.com"
-    source_label: "Groq"
+    value: "The default way to run open-weight LLMs locally. Free desktop runtime with OpenAI-compatible API, model library, and Ollama Cloud (Pro $20/mo or $200/yr, Max $100/mo) for teams that want managed inference. Best for chat, research, assistant, and model-access workflows."
+    source: "https://ollama.com/"
+    source_label: "Ollama"
     source_id: ollama-official
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: medium
-    confidence: medium
+    confidence: high
   pricing_anchor:
-    value: "Pricing should be checked on the current Ollama source before purchase; AIpedia has not promoted this page to a full Tier 1 pricing profile yet"
-    source: "https://pooya.blog/blog/local-ai-ollama-benchmarks-cost-2026/"
-    source_label: "independent benchmarks"
+    value: "Local runtime is free. Ollama Cloud Pro is $20/mo or $200/yr (3 cloud models, 50x more cloud usage); Max is $100/mo (10 cloud models, 5x more usage than Pro). Enterprise via sales for on-premises deployments."
+    source: "https://ollama.com/"
+    source_label: "Ollama"
     source_id: ollama-pricing
-    verified_at: 2026-05-03
-    next_review_at: 2026-08-03
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
-    confidence: medium
+    confidence: high
   watch_out_for:
-    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
-    source: "https://pooya.blog/blog/local-ai-ollama-benchmarks-cost-2026/"
-    source_label: "independent benchmarks"
+    value: "Local-only mode keeps data on-device, but Cloud tiers send prompts to managed inference. Confirm data policy before routing regulated workflows through Ollama Cloud."
+    source: "https://ollama.com/"
+    source_label: "Ollama"
     source_id: ollama-pricing
-    verified_at: 2026-05-03
-    next_review_at: 2026-08-03
-    volatility: high
-    confidence: medium
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
+    volatility: medium
+    confidence: high
 tags: [local-llm, open-source, inference, llm-runtime, privacy, self-hosted, developer, infrastructure]
 seo_title: "Ollama Review: Run Local LLMs, Pricing, Setup and LM Studio Comparison"
 meta_description: "Ollama runs open-weight LLMs locally with one command and an OpenAI-compatible API. Compare setup, hardware needs, Ollama Cloud pricing, LM Studio, and llama.cpp."
@@ -78,6 +78,14 @@ decision_brief:
     - label: Compare against
       value: "LM Studio"
       detail: "Ollama is CLI/API-first; LM Studio is friendlier for desktop users."
+price_history:
+  - date: 2026-05-13
+    plan: "Cloud Pro / Cloud Max"
+    price: "$20/mo or $200/yr · $100/mo"
+    source: "https://ollama.com/"
+    source_label: "Source"
+    source_id: ollama-pricing
+    note: "Verified at ollama.com. Pro adds annual billing at $200/yr; Max stays at $100/mo. Local runtime remains free. v0.23.3 shipped May 12, 2026 with Claude Desktop integration and Gemma 4 MTP."
 ---
 
 # Ollama
@@ -96,20 +104,26 @@ The most-downloaded local LLM runtime of 2026. Ollama is a single desktop binary
 
 | | |
 |---|---|
-| **Current version** | 0.18.x (April 2026 build) |
+| **Current version** | v0.23.3 (May 12, 2026) |
 | **Platforms** | macOS (Apple Silicon + Intel), Windows (including native ARM64), Linux |
 | **Cost to run locally** | $0 |
 | **API surface** | OpenAI-compatible HTTP (`/v1/chat/completions`, `/v1/embeddings`), native REST |
-| **Model library** | 150+ open-weight models. Llama 4 Maverick, Llama 4 Scout, Qwen 3, DeepSeek V3.2, Poolside Laguna XS.2, Gemma 4, Mistral, Phi-4, and reasoning models like DeepSeek R1 |
-| **Multimodal** | Vision + text models supported (Llama 4 Scout, Qwen-VL) |
+| **Model library** | 150+ open-weight models. Llama 4 Maverick, Llama 4 Scout, Qwen 3, Qwen3.6-35B-A3B, DeepSeek V3.2, Poolside Laguna XS.2, Nemotron 3 Omni (NVIDIA), Gemma 4, Gemma 4 MTP, Mistral, Phi-4, and reasoning models like DeepSeek R1 |
+| **Multimodal** | Vision + text models supported (Llama 4 Scout, Qwen-VL, Nemotron 3 Omni) |
 | **Quantization** | Automatic Q4_K_M by default; Q2 through Q8 selectable |
 | **Monthly downloads** | 52M as of Q1 2026 (520× growth from 100k in Q1 2023) |
-| **Ollama Cloud tiers** | Free · Pro $20/mo · Max $100/mo |
+| **Ollama Cloud tiers** | Free · Pro $20/mo or $200/yr · Max $100/mo |
+| **Claude Desktop integration** | Claude Cowork and Claude Code surfaces inside the Claude Desktop App (v0.23.0, May 2026) |
 
 ## Recent developments
 
+- **May 12, 2026:** Ollama v0.23.3 ships, focused on MLX performance and stability fixes after a model-heavy April and May.
+- **May 2026:** Ollama v0.23.1 adds **Gemma 4 MTP** (Multi-token Processing) with speculative decoding, yielding more than a 2x speed increase on the Gemma 4 31B model for coding tasks.
+- **May 2026:** Ollama v0.23.0 ships a **Claude Desktop integration** that exposes Claude Cowork and Claude Code surfaces inside the Claude Desktop App, routing local Ollama models alongside Anthropic's hosted ones.
 - **April 30, 2026:** [Apple said AI and agentic tools helped drive unexpected Mac demand](/news/2026-04-30-apple-mac-ai-agent-demand/). More high-memory Apple Silicon machines in circulation expands the practical install base for local inference stacks such as Ollama.
 - **April 30, 2026:** [Poolside released Laguna XS.2 (33B MoE, Apache 2.0) for local agentic coding](/news/2026-04-30-poolside-laguna-xs2-open-model-local-agentic-coding/), trained from scratch using a Muon optimizer. Available through Ollama for local inference alongside the existing model library.
+- **April 2026:** Ollama v0.22.0 added **Nemotron 3 Omni** from NVIDIA (multimodal) and **Laguna XS.2** by Poolside. v0.21.0 added **Gemma 4** support on MLX with mixed-precision quantization.
+- **April 16, 2026:** [Qwen3.6-35B-A3B](/news/2026-04-16-qwen-3-6-35b-a3b-release/) released open-source. Aggregate ~82% of Opus 4.7 at zero cost; runs through Ollama for local inference.
 
 ## When to pick Ollama
 
@@ -131,11 +145,13 @@ Local Ollama is free. Ollama Cloud (released late 2025) offers hosted inference:
 
 | Plan | Price | What's included |
 |---|---|---|
-| Free | $0 | Local runtime, all models, no cloud inference |
-| Pro | $20/mo | Cloud inference quota, priority queue, managed hosting |
-| Max | $100/mo | Higher quota, team seats, SLAs |
+| Free | $0 | Local runtime, all models, cloud access at standard usage limits |
+| Pro | $20/mo or $200/yr | Run 3 cloud models at a time, 50x more cloud usage than Free |
+| Max | $100/mo | Run 10 cloud models at a time, 5x more usage than Pro |
 
 Enterprise pricing via sales for on-premises deployments.
+
+*Prices verified 2026-05-13 via [ollama.com](https://ollama.com/).*
 
 ## Failure modes
 
@@ -157,7 +173,7 @@ Enterprise pricing via sales for on-premises deployments.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/). Last verified 2026-04-18 against the [Ollama official site](https://ollama.com/), [Ollama library](https://ollama.com/library), and [independent benchmarks](https://pooya.blog/blog/local-ai-ollama-benchmarks-cost-2026/).
+This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/). Last verified 2026-05-13 against the [Ollama official site](https://ollama.com/), [Ollama library](https://ollama.com/library), the [Ollama release notes on GitHub](https://github.com/ollama/ollama/releases), and [independent benchmarks](https://pooya.blog/blog/local-ai-ollama-benchmarks-cost-2026/).
 
 ## FAQ
 

@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0 self-hosted / $9.99+ managed"
 status: active
 launched: 2023-11
-last_updated: 2026-05-03
-last_verified: 2026-05-03
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -27,34 +27,34 @@ scores:
   longevity: 8
 facts:
   best_for:
-    value: "Self-hosted ChatGPT-style interface that runs entirely offline. Ships enterprise features (RBAC, SSO, LDAP) free. Costs $0-$5/month self-hosted or $9.99+/month managed. Best for chat, research, assistant, and model-access workflows."
+    value: "Self-hosted ChatGPT-style interface that runs entirely offline. Ships enterprise features (RBAC, SSO, LDAP) free for standard internal use. Costs $0-$5/month self-hosted or $9.99+/month managed. Best for chat, research, assistant, and model-access workflows."
     source: "https://openwebui.com"
     source_label: "openwebui.com"
     source_id: open-webui-official
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: medium
-    confidence: medium
+    confidence: high
   pricing_anchor:
-    value: "Pricing should be checked on the current Open WebUI source before purchase; AIpedia has not promoted this page to a full Tier 1 pricing profile yet"
-    source: "https://openwebui.com"
-    source_label: "openwebui.com"
-    source_id: open-webui-official
-    verified_at: 2026-05-03
-    next_review_at: 2026-08-03
-    volatility: high
-    confidence: medium
+    value: "Open WebUI software is free for standard internal use under its source-available license. White-labeling, rebranding, or commercial redistribution require an Enterprise License via sales@openwebui.com (no public price list). Managed hosting starts at $9.99/mo (Agntable) or 9 EUR/mo (Sliplane)."
+    source: "https://docs.openwebui.com/enterprise/"
+    source_label: "docs.openwebui.com/enterprise"
+    source_id: open-webui-enterprise
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
+    volatility: medium
+    confidence: high
   watch_out_for:
-    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
-    source: "https://openwebui.com"
-    source_label: "openwebui.com"
-    source_id: open-webui-official
-    verified_at: 2026-05-03
-    next_review_at: 2026-08-03
-    volatility: high
-    confidence: medium
+    value: "The free license covers internal use with original branding intact. Rebranding, white-labeling, or modifications for distribution require a paid Enterprise License. Verify the license terms before commercial deployment."
+    source: "https://docs.openwebui.com/enterprise/"
+    source_label: "docs.openwebui.com/enterprise"
+    source_id: open-webui-enterprise
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
+    volatility: medium
+    confidence: high
 tags: [self-hosted, open-source, chat-ui, ollama, rag, enterprise, rbac, sso]
-seo_title: "Open WebUI: Features, Pricing & Review (April 2026)"
-meta_description: "Open WebUI is a self-hosted ChatGPT alternative. Free open source with RBAC, SSO, LDAP, 15+ search providers, 9+ vector DBs. Managed hosting from $9.99/mo. HIPAA/GDPR/SOC2-ready."
+seo_title: "Open WebUI: Features, Pricing & Review (May 2026)"
+meta_description: "Open WebUI is a self-hosted ChatGPT alternative. Free for standard internal use with RBAC, SSO, LDAP, 15+ search providers, 9+ vector DBs. Managed hosting from $9.99/mo. Enterprise License via sales for white-label deployments. HIPAA/GDPR/SOC2-ready."
 author: "aipedia.wiki Editorial"
 best_for:
   - teams self-hosting AI chat with enterprise features
@@ -85,15 +85,17 @@ A self-hosted, open-source AI chat interface that operates entirely offline. Pai
 
 | | |
 |---|---|
-| **License** | Open source |
+| **License** | Source-available, free for standard internal use |
 | **Self-hosted cost** | $0 software + $0-$5/mo VPS (your infra choice) |
-| **Managed hosting** | From $9.99/mo (Agntable or similar), €9+ (Sliplane) |
-| **Enterprise** | Custom SLA, LTS, branding |
+| **Managed hosting** | From $9.99/mo (Agntable or similar), 9 EUR/mo (Sliplane) |
+| **Enterprise** | Custom (sales@openwebui.com) for white-label, multi-node HA, on-prem/air-gapped, SLAs, custom integrations |
 | **Enterprise features free** | RBAC, SSO, LDAP, multi-user workspaces |
 | **Compliance-ready** | HIPAA, GDPR, SOC 2, FedRAMP, ISO 27001 frameworks supported |
-| **LLM backends** | Ollama (local), OpenAI-compatible APIs, remote providers |
+| **LLM backends** | Ollama (local), OpenAI-compatible APIs, remote providers including Opus 4.7, GPT-5.5, Gemini 3.1 Pro |
 | **RAG capabilities** | 15+ search providers, 9+ vector databases |
 | **Deployment** | Docker, docker-compose, Kubernetes, VPS |
+
+Verified 2026-05-13 via [openwebui.com](https://openwebui.com) and [docs.openwebui.com/enterprise](https://docs.openwebui.com/enterprise/).
 
 ## When to pick Open WebUI
 
@@ -114,12 +116,12 @@ A self-hosted, open-source AI chat interface that operates entirely offline. Pai
 
 | Tier | Price | What you get |
 |---|---|---|
-| Self-hosted | $0 software + hosting | Everything, MIT-like license |
+| Self-hosted | $0 software + hosting | Everything for standard internal use, source-available license |
 | Managed (Agntable) | From $9.99/mo | One-click deploy, SSL, backups |
-| Managed (Sliplane) | From €9/mo | EU hosting |
-| Enterprise | Custom | Branding, SLA, LTS, dedicated support |
+| Managed (Sliplane) | From 9 EUR/mo | EU hosting |
+| Enterprise | Custom (sales) | White-label, multi-node HA, on-prem/air-gapped, dedicated support, SLAs, custom AI model integration |
 
-Verified 2026-04-18 via [openwebui.com](https://openwebui.com) and [docs.openwebui.com/enterprise](https://docs.openwebui.com/enterprise/).
+Verified 2026-05-13 via [openwebui.com](https://openwebui.com) and [docs.openwebui.com/enterprise](https://docs.openwebui.com/enterprise/).
 
 ## Failure modes
 
@@ -141,12 +143,12 @@ Verified 2026-04-18 via [openwebui.com](https://openwebui.com) and [docs.openweb
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified 2026-04-18 against [openwebui.com](https://openwebui.com/), [docs.openwebui.com/enterprise](https://docs.openwebui.com/enterprise/), and [Dev|Journal's 2026 Open WebUI vs ChatGPT comparison](https://earezki.com/ai-news/2026-04-17-open-webui-vs-chatgpt-which-one-is-right-for-you-in-2026/).
+Produced by the aipedia.wiki editorial pipeline. Last verified 2026-05-13 against [openwebui.com](https://openwebui.com/), [docs.openwebui.com/enterprise](https://docs.openwebui.com/enterprise/), and [Dev|Journal's 2026 Open WebUI vs ChatGPT comparison](https://earezki.com/ai-news/2026-04-17-open-webui-vs-chatgpt-which-one-is-right-for-you-in-2026/).
 
 ## FAQ
 
 **Is Open WebUI really free?**
-Yes, the software is open source. You pay only for your own infrastructure (a $5/mo VPS is fine for small teams) and for LLM API usage if you use cloud models. Managed hosting starts at $9.99/mo if you don't want to run it yourself.
+Yes for standard internal use with original branding intact. You pay only for your own infrastructure (a $5/mo VPS is fine for small teams) and for LLM API usage if you use cloud models. Managed hosting starts at $9.99/mo if you don't want to run it yourself. White-labeling, rebranding, or commercial redistribution require a paid Enterprise License from openwebui.com.
 
 **Does Open WebUI work with frontier models like OpenAI frontier models or Claude Opus 4.7?**
 Yes. Configure OpenAI or Anthropic as providers and you're chatting with those models through your self-hosted UI.

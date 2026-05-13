@@ -8,11 +8,11 @@ company: n8n-gmbh
 url: https://n8n.io
 github_url: https://github.com/n8n-io/n8n
 pricing_model: freemium
-price_range: "$0 (self-host) - $800+/month (Business cloud)"
+price_range: "$0 (self-host) - €667+/month (Business cloud)"
 status: active
 launched: 2019-06
-last_updated: 2026-05-03
-last_verified: 2026-05-03
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -34,52 +34,52 @@ facts:
     source: "https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/"
     source_label: "n8n AI Agent node docs"
     source_id: n8n-agent-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-13
   context_window:
     value: "Model-dependent: n8n connects to external LLM providers and local models rather than publishing a single context window"
     source: "https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/"
     source_label: "n8n AI Agent node docs"
     source_id: n8n-agent-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-13
   pricing_anchor:
-    value: "Community self-host free; cloud Starter €24/mo, Pro €60/mo, Business €800/mo, Enterprise custom"
+    value: "Community self-host free; cloud Starter €20/mo, Pro €50/mo, Business €667/mo, Enterprise custom (annual billing; all tiers ship unlimited users)"
     source: "https://n8n.io/pricing"
     source_label: "n8n pricing"
     source_id: n8n-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-13
   free_plan:
     value: "Yes: Community self-host is free with unlimited workflows and executions"
     source: "https://n8n.io/pricing"
     source_label: "n8n pricing"
     source_id: n8n-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-13
   best_paid_tier:
     value: "Community self-host for technical teams; Pro cloud for active production; Business/Enterprise for SSO and scale"
     source: "https://n8n.io/pricing"
     source_label: "n8n pricing"
     source_id: n8n-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-13
   api_available:
     value: "Yes: HTTP nodes, code nodes, webhooks, credentials, and workflow APIs support programmatic automation"
     source: "https://docs.n8n.io"
     source_label: "n8n documentation"
     source_id: n8n-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   image_generation:
@@ -87,7 +87,7 @@ facts:
     source: "https://docs.n8n.io"
     source_label: "n8n documentation"
     source_id: n8n-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   video_generation:
@@ -95,7 +95,7 @@ facts:
     source: "https://docs.n8n.io"
     source_label: "n8n documentation"
     source_id: n8n-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   real_time_voice:
@@ -103,7 +103,7 @@ facts:
     source: "https://docs.n8n.io"
     source_label: "n8n documentation"
     source_id: n8n-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: low
     confidence: high
   web_browsing:
@@ -111,7 +111,7 @@ facts:
     source: "https://docs.n8n.io"
     source_label: "n8n documentation"
     source_id: n8n-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   coding_agent:
@@ -119,7 +119,7 @@ facts:
     source: "https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/"
     source_label: "n8n AI Agent node docs"
     source_id: n8n-agent-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   enterprise_controls:
@@ -127,16 +127,16 @@ facts:
     source: "https://n8n.io/pricing"
     source_label: "n8n pricing"
     source_id: n8n-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-13
   data_retention_or_privacy:
     value: "Self-hosting gives full infrastructure and data-residency control; cloud tiers use n8n managed infrastructure"
     source: "https://docs.n8n.io"
     source_label: "n8n documentation"
     source_id: n8n-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   open_source_or_local:
@@ -144,7 +144,7 @@ facts:
     source: "https://github.com/n8n-io/n8n"
     source_label: "n8n GitHub repository"
     source_id: n8n-github
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   best_for:
@@ -152,7 +152,7 @@ facts:
     source: "https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/"
     source_label: "n8n AI Agent node docs"
     source_id: n8n-agent-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
   watch_out_for:
@@ -160,12 +160,12 @@ facts:
     source: "https://docs.n8n.io"
     source_label: "n8n documentation"
     source_id: n8n-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-05-13
     volatility: medium
     confidence: high
 tags: [automation, workflows, ai-agents, no-code, open-source, integrations, zapier-alternative, self-host]
-seo_title: "n8n: Features, Pricing & Review (April 2026)"
-meta_description: "n8n is the open-source workflow automation platform with native AI Agent nodes. Free to self-host with unlimited executions. Cloud plans from €24/mo."
+seo_title: "n8n: Features, Pricing & Review (May 2026)"
+meta_description: "n8n is the open-source workflow automation platform with native AI Agent nodes. Free to self-host with unlimited executions. Cloud Starter €20/mo, Pro €50/mo, Business €667/mo (annual). Unlimited users on every paid tier."
 author: "aipedia.wiki Editorial"
 best_for:
   - developers and agencies avoiding vendor lock-in
@@ -177,7 +177,7 @@ not_best_for:
   - teams needing 9,000+ pre-built integrations
   - organizations mandating SaaS-only procurement
 quick_answer: >-
-  n8n is the open-source automation platform with native AI Agent nodes. Self-host for free with unlimited executions. Pick it for developer control, data residency, and AI agents. Skip for non-technical teams or long-tail SaaS coverage.
+  n8n is the open-source automation platform with native AI Agent nodes. Self-host for free with unlimited executions. Cloud Starter is €20/mo, Pro €50/mo, Business €667/mo (annual billing); every paid tier now ships unlimited users. Pick it for developer control, data residency, and AI agents. Skip for non-technical teams or long-tail SaaS coverage.
 price_history:
   - date: 2025-10-15
     plan: "Cloud Starter"
@@ -193,19 +193,30 @@ price_history:
     source_label: "Source"
     source_id: n8n-pricing
     note: "Free self-host verified unchanged"
+  - date: 2026-05-13
+    plan: "Cloud Starter · Pro · Business"
+    price: "Starter €20/mo · Pro €50/mo · Business €667/mo (annual)"
+    source: "https://n8n.io/pricing"
+    source_label: "Source"
+    source_id: n8n-pricing
+    note: "Cloud pricing cut and restructured to annual billing; unlimited users added across all paid tiers"
 ---
 
 # n8n
 
-n8n is the open-source workflow automation platform built by n8n GmbH. Visual canvas, 500+ integrations, native AI Agent nodes, and JavaScript or Python code nodes when the visual layer runs out. Self-host for free with unlimited executions, or run managed cloud from €24/month.
+n8n is the open-source workflow automation platform built by n8n GmbH. Visual canvas, 500+ integrations, native AI Agent nodes with multiple architectures (Tools Agent, Conversational, OpenAI Functions, Plan and Execute, ReAct, SQL), and JavaScript or Python code nodes when the visual layer runs out. Self-host for free with unlimited executions, or run managed cloud from €20/month on annual billing.
+
+## Recent developments
+
+- **May 2026:** Cloud pricing restructured. Starter dropped from €24 to €20/month, Pro from €60 to €50, and Business from €800 to €667 (all annual billing). Every paid tier now includes unlimited users; tiers separate primarily on workflow-execution caps, concurrent executions, and admin features.
 
 ## System Verdict
 
-> **Pick n8n if the automation layer needs to be owned, not rented.** Self-hosting is free with unlimited workflows and unlimited executions. The AI Agent node ships autonomous multi-step agents with tool calling out of the box. JavaScript and Python code nodes close any gap the visual canvas leaves.
+> **Pick n8n if the automation layer needs to be owned, not rented.** Self-hosting is free with unlimited workflows and unlimited executions. The AI Agent node ships autonomous multi-step agents with tool calling across six agent architectures out of the box. JavaScript and Python code nodes close any gap the visual canvas leaves.
 >
 > **Skip it if onboarding speed outweighs control.** [Zapier](/tools/zapier/) ships 9,000+ integrations to n8n's 500+. Non-technical operators land faster on Zapier or [Make](/tools/make/). Teams that refuse server ops work belong on managed platforms.
 >
-> **Who pays which tier:** Community self-host for engineers and agencies, Starter €24/mo for small cloud use, Pro €60/mo for active production, Business €800/mo for SSO and scale, Enterprise custom for on-prem and dedicated support.
+> **Who pays which tier:** Community self-host for engineers and agencies, Starter €20/mo for small cloud use, Pro €50/mo for active production, Business €667/mo for SSO and scale, Enterprise custom for on-prem and dedicated support. All paid tiers now ship unlimited users; pricing scales on workflow-execution volume.
 
 ## Key Facts
 
@@ -214,14 +225,15 @@ n8n is the open-source workflow automation platform built by n8n GmbH. Visual ca
 | **License** | Fair-code (source-available, self-host permitted) |
 | **Core product** | Visual workflow canvas with code fallback |
 | **Integration count** | 500+ apps |
-| **AI Agent node** | Native · connects to Claude Opus 4.7, OpenAI frontier models, Gemini 3.1 Pro, Llama 4, local models |
+| **AI Agent node** | Native · six architectures (Tools, Conversational, OpenAI Functions, Plan and Execute, ReAct, SQL) · connects to Claude Opus 4.7, OpenAI frontier models, Gemini 3.1 Pro, Mistral Large 3, Cohere, AWS Bedrock, Azure OpenAI, Ollama, and more |
 | **Code nodes** | JavaScript · Python |
-| **Cloud pricing** | Starter €24 · Pro €60 · Business €800 · Enterprise custom |
-| **Self-host** | Free · unlimited workflows · unlimited executions |
+| **Cloud pricing (annual)** | Starter €20 · Pro €50 · Business €667 · Enterprise custom |
+| **Cloud users** | Unlimited on every paid tier (May 2026 update) |
+| **Self-host** | Free · unlimited workflows · unlimited executions · GitHub repo at 187k+ stars |
 | **Deployment** | Docker · Kubernetes · VPS · Railway · any Node.js host |
 | **Data residency** | Full control in self-host |
 
-Every data point above was verified against vendor documentation on 2026-04-17. See Sources.
+Every data point above was verified against vendor documentation on 2026-05-13. See Sources.
 
 ## What it actually is
 
@@ -249,17 +261,17 @@ The moat is the license and the agent stack. Source-available with self-host per
 
 ## Pricing
 
-Subscription pricing via [n8n.io/pricing](https://n8n.io/pricing).
+Subscription pricing via [n8n.io/pricing](https://n8n.io/pricing). All cloud tiers below are quoted at annual billing.
 
-| Plan | Monthly | Executions | Key limits | Who's it for |
-|------|---------|------------|-----------|--------------|
-| Community (self-host) | $0 | Unlimited | Self-managed infrastructure | **Developers and agencies land here** |
-| Starter (cloud) | €24 | 2,500 | Unlimited workflows, 5 users | Small teams, light cloud use |
-| Pro (cloud) | €60 | 10,000 | Admin features, priority support | Active production |
-| Business (cloud) | €800 | 40,000 | SSO, audit logs, dedicated resources | Enterprise scale |
-| Enterprise | Custom | Unlimited | On-prem option, dedicated support, SLA | Regulated orgs |
+| Plan | Monthly | Executions | Concurrent | Users | Shared projects | Who's it for |
+|------|---------|------------|-----------|-------|-----------------|--------------|
+| Community (self-host) | $0 | Unlimited | Self-tuned | Self-managed | Self-managed | **Developers and agencies land here** |
+| Starter (cloud) | €20 | 2,500 | 5 | Unlimited | 1 | Small teams, light cloud use |
+| Pro (cloud) | €50 | 10,000 | 20 | Unlimited | 3 | Active production |
+| Business (cloud) | €667 | 40,000 | Higher | Unlimited | 6 | SSO / SAML / LDAP, self-hosted option, enterprise scale |
+| Enterprise | Custom | Custom | 200+ | Unlimited | Unlimited | On-prem option, dedicated support, SLA |
 
-*Prices verified 2026-04-17 via [n8n pricing](https://n8n.io/pricing). Qualifying startups get 50% off the Business plan. Self-hosted Community Edition has no feature caps; hosting cost is the VPS bill (typically $5 to $20/month).*
+*Prices verified 2026-05-13 via [n8n pricing](https://n8n.io/pricing). All tiers now include unlimited users and every integration. Pricing is based on monthly workflow executions, not per-step cost. Qualifying startups get 50% off the Business plan. Self-hosted Community Edition has no feature caps; hosting cost is the VPS bill (typically $5 to $20/month).*
 
 ## Against the alternatives
 
@@ -284,15 +296,15 @@ Subscription pricing via [n8n.io/pricing](https://n8n.io/pricing).
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [n8n pricing](https://n8n.io/pricing), [n8n documentation](https://docs.n8n.io), and the [n8n AI Agent node docs](https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-05-13 against [n8n pricing](https://n8n.io/pricing), [n8n documentation](https://docs.n8n.io), and the [n8n AI Agent node docs](https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/).
 
 ## FAQ
 
 **Is n8n free?**
-Yes, self-hosted. The Community Edition runs on any Node.js host with unlimited workflows and unlimited executions. Hosting cost is the VPS bill (typically $5 to $20/month). Cloud plans start at €24/month ([n8n pricing](https://n8n.io/pricing)).
+Yes, self-hosted. The Community Edition runs on any Node.js host with unlimited workflows and unlimited executions. Hosting cost is the VPS bill (typically $5 to $20/month). Cloud plans start at €20/month on annual billing ([n8n pricing](https://n8n.io/pricing)).
 
 **What does the AI Agent node do?**
-It runs autonomous multi-step reasoning with tool calling. Connect any LLM (Claude Opus 4.7, OpenAI frontier models, Gemini 3.1 Pro, local models), define tools, and the agent plans and executes tasks inside a workflow ([n8n Agent docs](https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/)).
+It runs autonomous multi-step reasoning with tool calling. The node ships six agent architectures (Tools, Conversational, OpenAI Functions, Plan and Execute, ReAct, SQL) and connects to OpenAI, Anthropic, Google Gemini, Mistral, Cohere, AWS Bedrock, Azure OpenAI, Ollama, and more. Define tools, and the agent plans and executes tasks inside a workflow ([n8n Agent docs](https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/)).
 
 **n8n vs Zapier?**
 n8n wins on self-host, native AI agents, and cost at volume. [Zapier](/tools/zapier/) wins on integration breadth (9,000+ vs 500+) and onboarding speed for non-technical users.
