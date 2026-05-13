@@ -575,7 +575,7 @@ function newsDateFmt(iso: string): string {
       position: relative;
       overflow: hidden;
       margin: 0 -18px;
-      padding: 4px 0;
+      padding: 4px 18px;
       -webkit-mask-image: linear-gradient(
         to right,
         transparent 0,
@@ -592,6 +592,13 @@ function newsDateFmt(iso: string): string {
       );
     }
 
+    /* Seamless loop requires the translation to equal exactly one copy of
+       the list. Using flex `gap` would leave a half-gap discrepancy at
+       the -50% reset point (the gap between the two copies is half-
+       attributed to each), producing a visible stutter on loop. So we
+       give every item a uniform `margin-right` instead — each item now
+       carries its own trailing spacing, the two copies abut at the same
+       margin, and -50% lands precisely on the duplicate's first item. */
     @keyframes gt-weekly-scroll {
       from { transform: translateX(0); }
       to   { transform: translateX(-50%); }
@@ -599,12 +606,12 @@ function newsDateFmt(iso: string): string {
 
     .gt-weekly-track {
       display: flex;
-      gap: 10px;
       list-style: none;
-      padding: 0 18px;
+      padding: 0;
       margin: 0;
       width: max-content;
       animation: gt-weekly-scroll 50s linear infinite;
+      will-change: transform;
     }
     .gt-weekly-marquee[data-pause-on-hover]:hover .gt-weekly-track {
       animation-play-state: paused;
@@ -613,6 +620,7 @@ function newsDateFmt(iso: string): string {
     .gt-weekly-item {
       flex: 0 0 auto;
       width: 280px;
+      margin-right: 10px;
       border-radius: var(--gt-radius-sm);
       border: 1px solid var(--gt-line);
       background: var(--gt-surface);
