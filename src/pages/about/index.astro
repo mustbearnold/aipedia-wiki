@@ -14,9 +14,9 @@ const allCategories = await getCollection('categories');
 const allDead = await getCollection('dead');
 const allUseCases = await getCollection('use-cases');
 
-// Freshness signal — update when editorial policy materially changes
-const LAST_REVIEWED = '2026-04-15';
-const LAST_REVIEWED_HUMAN = 'April 15, 2026';
+// Freshness signal: update when editorial policy materially changes
+const LAST_REVIEWED = '2026-05-13';
+const LAST_REVIEWED_HUMAN = 'May 13, 2026';
 
 const stats = [
   { value: activeTools.length, label: 'Active tool reviews' },
@@ -244,7 +244,7 @@ const pageDesc = `aipedia.wiki is an independent AI tools encyclopedia covering 
     ))}
   </div>
 
-  <!-- Corrections & Contact — prominent CTA -->
+  <!-- Corrections & Contact: prominent CTA -->
   <div
     id="corrections--contact"
     class="not-prose mt-[var(--site-section-gap)] bg-gradient-to-br from-[rgba(249, 115, 22,0.08)] to-[rgba(251, 146, 60,0.06)] border border-[rgba(249, 115, 22,0.25)] rounded-[var(--site-radius-card)] p-[var(--site-card-padding)] scroll-mt-24"

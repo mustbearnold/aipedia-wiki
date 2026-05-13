@@ -1,6 +1,6 @@
 ---
 /**
- * Custom 404 — god-tier 10/10 mobile-first.
+ * Custom 404: god-tier 10/10 mobile-first.
  */
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
@@ -53,7 +53,7 @@ const latestNews = allNews
         <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M10.8 18.1a7.3 7.3 0 1 1 0-14.6 7.3 7.3 0 0 1 0 14.6Zm5.1-2 4.6 4.6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
         </svg>
-        <input id="gt-404-search-input" name="q" type="search" autocomplete="off" placeholder="Search 253 AI tools" />
+        <input id="gt-404-search-input" name="q" type="search" autocomplete="off" placeholder={`Search ${allTools.filter((t: any) => t.data.status !== 'dead' && t.data.status !== 'retired' && t.data.status !== 'acquired').length} AI tools`} />
         <button type="submit" class="gt-search-submit">Search</button>
       </div>
     </form>
