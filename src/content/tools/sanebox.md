@@ -55,7 +55,7 @@ facts:
     volatility: low
     confidence: high
   ml_approach:
-    value: "SaneBox uses an ML model trained per-user on your historical email engagement patterns (open/reply/move/star) to predict importance — closer to a personal classifier than a single generative LLM."
+    value: "SaneBox uses an ML model trained per-user on your historical email engagement patterns (open/reply/move/star) to predict importance. It is closer to a personal classifier than a single generative LLM."
     source: "https://www.sanebox.com/"
     source_label: "SaneBox overview"
     source_id: sanebox-overview
@@ -71,7 +71,7 @@ facts:
     volatility: low
     confidence: high
   watch_out_for:
-    value: "SaneBox does not write or generate email content (no AI replies or summaries), it only triages — buyers expecting generative LLM features like Superhuman AI or Shortwave should pick a different tool."
+    value: "SaneBox does not write or generate email content (no AI replies or summaries); it only triages. Buyers expecting generative LLM features like Superhuman AI or Shortwave should pick a different tool."
     source: "https://www.sanebox.com/"
     source_label: "SaneBox overview"
     source_id: sanebox-overview
@@ -95,7 +95,7 @@ not_best_for:
   - enterprises needing centralized admin / SSO
   - free-only users (no free tier; 14-day trial only)
 quick_answer: >-
-  SaneBox is server-side email triage. It moves unimportant mail to SaneLater, kills senders with SaneBlackHole, and ships a daily digest — all inside any IMAP client. Pick it if you want clean classification without changing your email setup. Skip it if you want AI-drafted replies (use Superhuman or Shortwave instead).
+  SaneBox is server-side email triage. It moves unimportant mail to SaneLater, kills senders with SaneBlackHole, and ships a daily digest, all from inside any IMAP client. Pick it if you want clean classification without changing your email setup. Skip it if you want AI-drafted replies (use Superhuman or Shortwave instead).
 price_history:
   - date: 2026-05-13
     plan: "Snack"
@@ -119,13 +119,13 @@ price_history:
 
 # SaneBox
 
-A server-side email triage layer that hooks into your IMAP inbox and sorts incoming mail by predicted importance — no extension, no new email client, no provider change. It's the oldest and most quietly durable productivity tool in the email-AI category, founded in 2010 and still running.
+A server-side email triage layer that hooks into your IMAP inbox and sorts incoming mail by predicted importance. No extension, no new email client, no provider change. It's the oldest and most quietly durable productivity tool in the email-AI category, founded in 2010 and still running.
 
 Where modern AI email tools like Superhuman AI, Shortwave, and ChatGPT for Gmail focus on **generating** email content, SaneBox focuses on **triaging** it. The product is intentionally narrow: classify what comes in, route it to the right folder, and let your existing email client be the front-end.
 
 ## System Verdict
 
-> **Pick SaneBox if you want server-side email triage that works inside whatever client you already use** — Outlook, Apple Mail, Thunderbird, Gmail web, Spark, anything that speaks IMAP. The classifier is genuinely good after 2–3 weeks of training, the signature features (SaneLater, SaneBlackHole, Daily Digest, Reply Reminders) are sharp and well-designed, and the cost is well below any AI-first email replacement.
+> **Pick SaneBox if you want server-side email triage that works inside whatever client you already use:** Outlook, Apple Mail, Thunderbird, Gmail web, Spark, or anything else that speaks IMAP. The classifier is genuinely good after 2–3 weeks of training, the signature features (SaneLater, SaneBlackHole, Daily Digest, Reply Reminders) are sharp and well-designed, and the cost is well below any AI-first email replacement.
 >
 > **Skip it if you want AI to *write* email for you.** SaneBox is classification, not generation. [Superhuman](https://superhuman.com) ($30/mo) and [Shortwave](https://www.shortwave.com) ($10–$40/mo) ship AI drafting, summarization, and reply suggestions. ChatGPT-for-Gmail and Apple Intelligence Mail also cover that lane. SaneBox does not.
 >
@@ -142,7 +142,7 @@ Where modern AI email tools like Superhuman AI, Shortwave, and ChatGPT for Gmail
 | **Plans** | Snack $7/mo (1 account) · Lunch $12/mo (2) · Dinner $36/mo (4) · annual ~20% off |
 | **Discounts** | 25% off Education / Non-profit / Government |
 | **Free tier** | None · 14-day free trial · no credit card required |
-| **AI writes email?** | No — triage only |
+| **AI writes email?** | No, triage only |
 | **Mobile** | Works because IMAP works · no native app needed |
 | **Data residency** | Server-side processing · review security docs before deploying in regulated industries |
 
@@ -152,17 +152,17 @@ Every data point above was verified against SaneBox pricing and product document
 
 SaneBox sits between your email provider (Gmail, Outlook/365, iCloud, FastMail, Zoho, anything IMAP) and your inbox. Incoming messages get classified by the per-user model, and SaneBox creates folders inside your IMAP account:
 
-- **Inbox** — what actually matters
-- **SaneLater** — low-priority mail that doesn't need real-time attention
-- **SaneNews** — newsletters and broadcasts
-- **SaneBlackHole** — drop messages here to never see that sender again
-- **SaneNoReplies** — emails you sent that haven't gotten a response
+- **Inbox**, what actually matters
+- **SaneLater**, low-priority mail that doesn't need real-time attention
+- **SaneNews**, newsletters and broadcasts
+- **SaneBlackHole**, drop messages here to never see that sender again
+- **SaneNoReplies**, emails you sent that haven't gotten a response
 
 Because everything happens at the IMAP layer, your existing email client (Outlook, Apple Mail, Spark, Gmail web, Thunderbird) just shows the folders SaneBox manages. No extension to install. No browser dependency. The Daily Digest is a single end-of-day email summarizing what landed in SaneLater so you can scan in 60 seconds whether anything actually mattered.
 
 The ML classifier learns from your behavior: which senders you open, who you reply to, what you move out of SaneLater into Inbox. After 2–3 weeks the predictions are quietly accurate. Power users add **per-folder rules**, **Reply Reminders** (nudge you if a sent email doesn't get an answer in N days), and **Snooze** (re-deliver an email at a later time).
 
-What SaneBox is *not*: a generative AI tool. It does not draft replies, summarize threads, or answer questions about your inbox in chat. For those features, you want Superhuman, Shortwave, or Apple Intelligence Mail. The two tool categories are complementary — many users run SaneBox plus a generative tool.
+What SaneBox is *not*: a generative AI tool. It does not draft replies, summarize threads, or answer questions about your inbox in chat. For those features, you want Superhuman, Shortwave, or Apple Intelligence Mail. The two tool categories are complementary; many users run SaneBox plus a generative tool.
 
 ## When to pick SaneBox
 
@@ -178,7 +178,7 @@ What SaneBox is *not*: a generative AI tool. It does not draft replies, summariz
 - **Gmail Priority Inbox is enough:** If you're already happy with Gmail's "Important" markers, SaneBox is incremental. Most Gmail-only users *can* skip it.
 - **You're hunting unsubscribe automation:** Unroll.me (free, ad-supported) or Hey's screener cover that ground for free.
 - **Enterprise admin + SSO + DLP:** SaneBox is consumer-flavored. Enterprise email security and DLP needs a different vendor stack.
-- **You want a chat over your inbox:** Use [Claude](/tools/claude/) or [ChatGPT](/tools/chatgpt/) with the Gmail/Outlook integration — they're better at conversational inbox queries.
+- **You want a chat over your inbox:** Use [Claude](/tools/claude/) or [ChatGPT](/tools/chatgpt/) with the Gmail/Outlook integration, they're better at conversational inbox queries.
 
 ## Pricing
 
@@ -194,7 +194,7 @@ Subscription pricing is managed via [sanebox.com/pricing](https://www.sanebox.co
 
 **Trial:** 14 days free, no credit card required.
 
-Prices verified 2026-05-13 via [sanebox.com/pricing](https://www.sanebox.com/pricing). The pricing page sometimes renders dynamic numbers — confirm the live page before purchase.
+Prices verified 2026-05-13 via [sanebox.com/pricing](https://www.sanebox.com/pricing). The pricing page sometimes renders dynamic numbers, confirm the live page before purchase.
 
 ## Against the alternatives
 

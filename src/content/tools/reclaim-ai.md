@@ -126,7 +126,7 @@ The free Lite plan runs one user with capped features. Paid plans unlock unlimit
 
 > **Pick Reclaim.ai if you live in Google Calendar, are tired of manually re-arranging focus blocks every time a meeting shifts, and want one app to coordinate meetings, habits, and a task list at once.** The auto-defending focus time and the round-the-clock task-fitting are the headline features; no other tool in this category combines them cleanly.
 >
-> **Skip it if your org runs on Microsoft 365 / Outlook**, where Reclaim does not work. Also skip if you only need an external booking link — [Cal.com](https://cal.com) and Calendly are simpler and cheaper for that single job. Reclaim earns its price by also defending what is *already* on your calendar.
+> **Skip it if your org runs on Microsoft 365 / Outlook**, where Reclaim does not work. Also skip if you only need an external booking link. [Cal.com](https://cal.com) and Calendly are simpler and cheaper for that single job. Reclaim earns its price by also defending what is *already* on your calendar.
 >
 > **Who pays which tier:** Free Lite for personal use, Starter $10/seat for solo professionals who need unlimited habits + Smart Meetings + the full task-integration list, Business $15/seat when team analytics, OOO calendars, and delegated access matter, Enterprise $22/seat (annual only) for SSO/SCIM and 100+ seats.
 
@@ -152,18 +152,18 @@ Every data point above was verified against Reclaim.ai pricing and product docum
 
 Most "AI calendar" tools either (a) defend a fixed block (focus apps), or (b) book external meetings (Calendly-class). Reclaim does both and adds a third axis: it actively rearranges flexible things on your week as the unmovable ones land.
 
-The unit of work is a **habit** (recurring, e.g. "Deep work 9–11am") or a **task** (one-shot, e.g. "Draft Q3 OKRs by Friday"). Reclaim places these on your calendar, then continuously reshuffles them as meetings drop in or move. A new meeting at 9:30am does not collide with your deep-work block — the deep-work block moves automatically, the same day or the next available slot, respecting priorities.
+The unit of work is a **habit** (recurring, e.g. "Deep work 9–11am") or a **task** (one-shot, e.g. "Draft Q3 OKRs by Friday"). Reclaim places these on your calendar, then continuously reshuffles them as meetings drop in or move. A new meeting at 9:30am does not collide with your deep-work block, the deep-work block moves automatically, the same day or the next available slot, respecting priorities.
 
 **Smart Meetings** read attendees' Reclaim priorities and calendar load to suggest a time that minimizes disruption across the group. When everyone is on Reclaim, it is materially better than basic Find-a-Time. When only one attendee is on it, the value drops to roughly Calendly-class link booking.
 
 Task syncing pulls from Todoist, Asana, ClickUp, Jira, Linear, and Google Tasks. Tasks with due dates and priorities get auto-scheduled around live events. Completing them in either system propagates back.
 
-The product is decisively Google Calendar-native. Microsoft Outlook support has been on the roadmap for years and is not generally available as of May 2026 — that is the hardest disqualifier for many enterprise buyers.
+The product is decisively Google Calendar-native. Microsoft Outlook support has been on the roadmap for years and is not generally available as of May 2026, which is the hardest disqualifier for many enterprise buyers.
 
 ## When to pick Reclaim.ai
 
 - **You run on Google Workspace and your calendar is full of meetings you didn't ask for.** Reclaim's focus-time defense is the single biggest reason to adopt it.
-- **You have habits you want to actually happen.** Recurring deep work, lunch, exercise, planning blocks — Reclaim keeps them on the calendar instead of letting them get overwritten silently.
+- **You have habits you want to actually happen.** Recurring deep work, lunch, exercise, planning blocks, Reclaim keeps them on the calendar instead of letting them get overwritten silently.
 - **Your task list lives in Todoist / Asana / ClickUp / Jira / Linear**, not in your calendar. Reclaim makes the two work as one surface.
 - **You schedule a lot of internal meetings across the same team.** Smart Meetings work best when most attendees are also on Reclaim.
 - **You're a small Google Workspace team** of fewer than ~30 people, where the per-seat cost is manageable and adoption can spread by word of mouth.
@@ -178,7 +178,7 @@ The product is decisively Google Calendar-native. Microsoft Outlook support has 
 
 ## Pricing
 
-Subscription and team pricing are managed via [reclaim.ai/pricing](https://reclaim.ai/pricing). The published page is reliable for plan gates, but exact prices render by region, billing toggle, and account state — confirm the live page before purchase.
+Subscription and team pricing are managed via [reclaim.ai/pricing](https://reclaim.ai/pricing). The published page is reliable for plan gates, but exact prices render by region, billing toggle, and account state, confirm the live page before purchase.
 
 | Plan | Monthly | Annual (effective monthly) | Seat cap | Who's it for |
 |------|---------|----------------------------|----------|--------------|
@@ -220,7 +220,7 @@ This page was produced by the aipedia.wiki editorial pipeline, an automated syst
 ## FAQ
 
 **Does Reclaim.ai work with Microsoft Outlook?**
-No. Reclaim.ai is Google Calendar–only as of May 2026. Outlook support has been on the roadmap but is not generally available. If your organization runs on Microsoft 365, Reclaim is not a viable choice — look at [Clockwise](https://www.getclockwise.com) or [Motion](https://usemotion.com) instead.
+No. Reclaim.ai is Google Calendar–only as of May 2026. Outlook support has been on the roadmap but is not generally available. If your organization runs on Microsoft 365, Reclaim is not a viable choice, look at [Clockwise](https://www.getclockwise.com) or [Motion](https://usemotion.com) instead.
 
 **What's the difference between a habit and a task?**
 A **habit** is a recurring block (e.g. "Deep work 9–11am every weekday"). A **task** is a one-shot to-do with a due date and duration (e.g. "Draft Q3 OKRs by Friday, 2 hours"). Reclaim schedules both, but only tasks get marked complete and disappear; habits regenerate every period.
@@ -232,10 +232,10 @@ Movable items (habits, tasks, focus blocks) get re-scheduled. Meetings on your c
 Yes for 1 user on the Lite plan. The free tier caps Smart Meetings, scheduling links, and the calendar-sync horizon. Most professional users will outgrow it within a few weeks and need the $10/seat Starter tier.
 
 **Does Reclaim have an API?**
-Yes — a public API is documented and available on paid plans. The most common use case is automating task creation from external systems beyond the supported integrations list.
+Yes, a public API is documented and available on paid plans. The most common use case is automating task creation from external systems beyond the supported integrations list.
 
 **How is Reclaim different from Calendly?**
-Calendly is an external booking link — it shares your availability with people outside your org. Reclaim does include scheduling links, but its primary job is managing what's already on your internal calendar: focus blocks, habits, and tasks. The two products solve adjacent problems and many users run both.
+Calendly is an external booking link, it shares your availability with people outside your org. Reclaim does include scheduling links, but its primary job is managing what's already on your internal calendar: focus blocks, habits, and tasks. The two products solve adjacent problems and many users run both.
 
 **Does Reclaim use OpenAI / Claude / Gemini under the hood?**
 Reclaim does not publicly document a specific LLM dependency. The "AI" in the product is primarily a constraint-satisfaction scheduling engine plus priority-aware time blocking, not a generative chat layer. Treat the "AI" branding as scheduling intelligence rather than a model-driven assistant.

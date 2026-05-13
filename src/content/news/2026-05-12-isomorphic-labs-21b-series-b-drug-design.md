@@ -24,9 +24,9 @@ sources:
 
 **Isomorphic Labs**, the DeepMind drug-discovery spinout founded in 2021, announced on May 12, 2026 that it has closed a **$2.1 billion Series B** led by **Thrive Capital**, with **Alphabet, GV, MGX, Temasek, CapitalG, and the UK Sovereign AI Fund** all participating. The round is one of the largest private financings ever for AI-led drug discovery and lifts Isomorphic's cumulative funding to roughly **$2.6 billion**.
 
-The capital is earmarked for **IsoDDE** — the company's unified drug-design engine that extends AlphaFold's protein-structure prediction into a single computational platform spanning protein-ligand interaction modeling, binding-affinity prediction, and binding-pocket identification. Isomorphic also maintains strategic discovery partnerships with **Novartis, Eli Lilly, and Johnson & Johnson**.
+The capital is earmarked for **IsoDDE**, the company's unified drug-design engine that extends AlphaFold's protein-structure prediction into a single computational platform spanning protein-ligand interaction modeling, binding-affinity prediction, and binding-pocket identification. Isomorphic also maintains strategic discovery partnerships with **Novartis, Eli Lilly, and Johnson & Johnson**.
 
-The target is first-in-human trials for AI-designed drugs by year-end 2026 — a date that slipped from an earlier "by end of 2025" promise but is now backed by enough capital to fund the regulatory work.
+The target is first-in-human trials for AI-designed drugs by year-end 2026, a date that slipped from an earlier "by end of 2025" promise but is now backed by enough capital to fund the regulatory work.
 
 ## Why this matters
 
@@ -36,7 +36,7 @@ The investor list also says something specific about how the market is structuri
 
 - **Thrive Capital leading** signals that this is now a top-tier growth-equity asset, not a science-stage venture bet.
 - **Alphabet, GV, CapitalG all participating** keeps Isomorphic firmly inside the Google orbit even as the round dilutes its position.
-- **MGX (Abu Dhabi) and the UK Sovereign AI Fund** put sovereign capital onto the cap table. That is consistent with the broader 2026 pattern — sovereigns funding AI infrastructure and frontier biology as strategic assets, not just venture diversification.
+- **MGX (Abu Dhabi) and the UK Sovereign AI Fund** put sovereign capital onto the cap table. That is consistent with the broader 2026 pattern, sovereigns funding AI infrastructure and frontier biology as strategic assets, not just venture diversification.
 
 For Novartis, Lilly, and J&J, this is the right kind of pressure. Their existing partnerships with Isomorphic are now backed by a balance sheet that can fund late-stage candidate development without forcing Isomorphic to license out at the asset level. That keeps the relationship a partnership rather than a vendor contract.
 

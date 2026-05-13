@@ -46,7 +46,7 @@ facts:
     volatility: high
     confidence: high
   output_count:
-    value: "Castmagic generates a stated 40+ content assets per upload — transcripts, timestamped show notes, blog posts, Twitter/LinkedIn/Instagram posts, email newsletters, quote pulls, guest bios, and SEO metadata — from one source recording."
+    value: "Castmagic generates a stated 40+ content assets per upload, transcripts, timestamped show notes, blog posts, Twitter/LinkedIn/Instagram posts, email newsletters, quote pulls, guest bios, and SEO metadata, from one source recording."
     source: "https://www.castmagic.io/"
     source_label: "Castmagic overview"
     source_id: castmagic-overview
@@ -118,17 +118,17 @@ price_history:
 
 # Castmagic
 
-A one-upload-many-outputs content factory for podcasters, video creators, and B2B teams. Drop in an audio or video file (or a meeting recording, or an interview), and the system returns a structured content package — timestamped show notes, blog draft, social posts for LinkedIn / Twitter / Instagram, an email newsletter, quote pulls, a guest bio, SEO metadata — all generated against custom prompts you control.
+A one-upload-many-outputs content factory for podcasters, video creators, and B2B teams. Drop in an audio or video file (or a meeting recording, or an interview), and the system returns a structured content package: timestamped show notes, blog draft, social posts for LinkedIn / Twitter / Instagram, an email newsletter, quote pulls, a guest bio, and SEO metadata, all generated against custom prompts you control.
 
 Castmagic is not a transcription tool with extras bolted on. The transcript is a means to an end; the value sits in the **prompt library** and the **per-episode content package** that drops out the other side.
 
 ## System Verdict
 
-> **Pick Castmagic if you record long-form content regularly and your post-production bottleneck is writing, not editing.** A 60-minute episode in, a publish-ready content pack out — show notes, blog, threads, newsletter — in roughly the time it takes to grab a coffee. For podcasters running on a content-marketing budget, this replaces a part-time VA.
+> **Pick Castmagic if you record long-form content regularly and your post-production bottleneck is writing, not editing.** A 60-minute episode in, a publish-ready content pack out (show notes, blog, threads, newsletter) in roughly the time it takes to grab a coffee. For podcasters running on a content-marketing budget, this replaces a part-time VA.
 >
 > **Skip it if your bottleneck is video, not text.** [OpusClip](/tools/opusclip/) does short-form vertical clips with virality scoring better; [Descript](/tools/descript/) does the actual cut better; [Riverside](/tools/riverside/) does the recording better. Castmagic generates *text from audio*, not video clips.
 >
-> **Who pays which tier:** Hobby for testing or one show a month, Starter when you're shipping weekly and need real audio-hour headroom, Business when a team is involved and you need the API to wire generation into a CMS or marketing automation. The Starter-to-Business jump is large — quota math matters.
+> **Who pays which tier:** Hobby for testing or one show a month, Starter when you're shipping weekly and need real audio-hour headroom, Business when a team is involved and you need the API to wire generation into a CMS or marketing automation. The Starter-to-Business jump is large; quota math matters.
 
 ## Key Facts
 
@@ -158,9 +158,9 @@ Most "podcast AI" tools fall into one of three camps:
 
 Castmagic is the fourth camp: **content packaging as the primary product**. The transcript exists to feed downstream generation. The Prompt Builder lets each show codify its own voice and structure (your intro template, your sponsor read format, your social-post style), and then every episode runs through the same prompts automatically.
 
-**Magic Chat** is the conversational layer over the transcript — ask "what were the three best quotes?" or "draft a follow-up email to the guest" without leaving the transcript view. It's the same UX pattern as asking ChatGPT about a document, but pre-wired to the episode you just uploaded.
+**Magic Chat** is the conversational layer over the transcript, ask "what were the three best quotes?" or "draft a follow-up email to the guest" without leaving the transcript view. It's the same UX pattern as asking ChatGPT about a document, but pre-wired to the episode you just uploaded.
 
-**Longform AI** (10 pages/month on all plans) extends the system into long-form blog generation with editing and regeneration support. It's intentionally capped — Castmagic is not pitching itself as a general-purpose writing tool, it's pitching itself as a content-derivative factory anchored to the source recording.
+**Longform AI** (10 pages/month on all plans) extends the system into long-form blog generation with editing and regeneration support. It's intentionally capped. Castmagic is not pitching itself as a general-purpose writing tool; it's pitching itself as a content-derivative factory anchored to the source recording.
 
 The underlying LLM isn't publicly named. Treat Castmagic as a closed-pipeline vendor: you bring the audio, they handle the model selection, prompt orchestration, and output rendering.
 
@@ -168,9 +168,9 @@ The underlying LLM isn't publicly named. Treat Castmagic as a closed-pipeline ve
 
 - **You run a weekly or twice-weekly podcast** and the writing of show notes, social posts, and newsletters is eating your post-production time.
 - **You publish a CEO/founder interview series** for marketing, and you want each episode to ship with a polished blog, LinkedIn post, and email blurb without a copywriter in the loop.
-- **You record long-form meetings, interviews, or workshops** where the value isn't the video itself — it's the transcript-derived assets.
+- **You record long-form meetings, interviews, or workshops** where the value isn't the video itself; it's the transcript-derived assets.
 - **Your team needs shared workspaces** with consistent voice/style applied automatically across episodes via custom prompts.
-- **You publish in a non-English language** — 60+ language support beats most US-focused competitors.
+- **You publish in a non-English language**, 60+ language support beats most US-focused competitors.
 
 ## When to pick something else
 
@@ -193,7 +193,7 @@ Subscription pricing is managed via [castmagic.io/pricing](https://www.castmagic
 
 All plans include Magic Chat, Longform AI (10 pages/month), custom + community prompts, audiogram/clip generation, and the full output library. The differences are quota, team, storage, and API.
 
-Prices verified 2026-05-13 via [castmagic.io/pricing](https://www.castmagic.io/pricing). Audio-hour overage requires a plan upgrade — there is no published per-hour overage rate.
+Prices verified 2026-05-13 via [castmagic.io/pricing](https://www.castmagic.io/pricing). Audio-hour overage requires a plan upgrade; there is no published per-hour overage rate.
 
 ## Against the alternatives
 
@@ -212,7 +212,7 @@ The honest framing: **Castmagic + OpusClip + Descript stacks as one show's post-
 
 ## Failure modes
 
-- **Audio-hour pricing punishes batch recording.** If you sit down for a 4-hour interview marathon, Hobby's 5 hours/mo gets used up in one session. Plan upgrades are steep — Hobby → Starter is 4x the quota for 4x the price, Starter → Business is 4x the quota for 10x the price.
+- **Audio-hour pricing punishes batch recording.** If you sit down for a 4-hour interview marathon, Hobby's 5 hours/mo gets used up in one session. Plan upgrades are steep: Hobby to Starter is 4x the quota for 4x the price, and Starter to Business is 4x the quota for 10x the price.
 - **Output quality depends heavily on prompt setup.** Out-of-the-box prompts produce serviceable but generic content. The real value unlocks when you write custom prompts for your show's voice. Budget time for the prompt-tuning phase.
 - **The model is a black box.** Castmagic does not publicly name the underlying LLM. If your compliance team requires named model disclosure, that's a procurement blocker.
 - **Magic Chat is per-episode, not cross-show.** You can't query across your whole catalog at once. For library-level analysis, you'd need to export and feed into a separate RAG system.
@@ -230,13 +230,13 @@ This page was produced by the aipedia.wiki editorial pipeline, an automated syst
 Approximately 40+ assets per episode: full transcript, timestamped show notes / chapter markers, episode summary, blog post draft, X/LinkedIn/Instagram posts, email newsletter draft, quote pulls, guest bio, SEO metadata, and any custom outputs defined in your Prompt Builder.
 
 **Is Castmagic free?**
-Hobby is the cheapest paid tier at $21/mo (annual) for 5 audio hours/month. There is no perpetual free tier on the published pricing as of May 2026 — search results referencing a 3-file free plan appear to reflect an older pricing structure.
+Hobby is the cheapest paid tier at $21/mo (annual) for 5 audio hours/month. There is no perpetual free tier on the published pricing as of May 2026, search results referencing a 3-file free plan appear to reflect an older pricing structure.
 
 **Can Castmagic transcribe non-English content?**
-Yes — 60+ languages are supported. Content generation prompts work across languages, though English typically has the most accurate output quality on stock prompts.
+Yes, 60+ languages are supported. Content generation prompts work across languages, though English typically has the most accurate output quality on stock prompts.
 
 **Does Castmagic record audio too?**
-No. Castmagic is post-only — bring audio from Riverside, Zoom, Squadcast, or a local recorder.
+No. Castmagic is post-only. Bring audio from Riverside, Zoom, Squadcast, or a local recorder.
 
 **How is Castmagic different from Descript?**
 [Descript](/tools/descript/) is an audio/video editor with AI features bolted on; Castmagic is a content-packaging factory with audio as the input. Descript lets you cut, edit, and produce the recording itself; Castmagic generates derivative *text* assets from a finished recording. Many shows run both: Descript for the edit, Castmagic for the post-write.

@@ -114,13 +114,13 @@ price_history:
 
 A calendar-aware meeting assistant. MeetGeek joins your Google Meet, Zoom, or Teams meetings as a bot, records and transcribes them, generates a summary plus action items, and lands everything in a searchable team library with optional auto-share to your CRM, project tool, or wiki.
 
-The product sits between **Otter** (which leans personal) and **Gong/Chorus** (which lean enterprise sales-coaching). MeetGeek is the team-meeting-knowledge-base play — most useful for sales, customer success, and ops teams that run 5+ meetings a day and need that volume to become a searchable surface, not a folder of forgotten recordings.
+The product sits between **Otter** (which leans personal) and **Gong/Chorus** (which lean enterprise sales-coaching). MeetGeek is the team-meeting-knowledge-base play, most useful for sales, customer success, and ops teams that run 5+ meetings a day and need that volume to become a searchable surface, not a folder of forgotten recordings.
 
 ## System Verdict
 
 > **Pick MeetGeek if your team runs a lot of meetings and you want one searchable library with AI summaries, action items, and chat across the corpus, at SMB pricing.** Business tier at $17/user/month is dramatically cheaper than Gong or Chorus and covers the 80% use case that doesn't need CRM-native scorecards.
 >
-> **Skip it if you need on-prem transcription** (enterprise compliance lockup), CRM-native call-coaching workflows (Gong is still the leader), or solo personal note-taking ([Granola](/tools/granola/) or [Fathom](/tools/fathom/) ship a tighter solo UX). Also skip if you mostly need vertical-clip output for content marketing — that's [OpusClip](/tools/opusclip/)'s lane.
+> **Skip it if you need on-prem transcription** (enterprise compliance lockup), CRM-native call-coaching workflows (Gong is still the leader), or solo personal note-taking ([Granola](/tools/granola/) or [Fathom](/tools/fathom/) ship a tighter solo UX). Also skip if you mostly need vertical-clip output for content marketing; that's [OpusClip](/tools/opusclip/)'s lane.
 >
 > **Who pays which tier:** Basic free for individuals testing the product, Pro $9.99/user when one person needs 20 hours/month, Business $17/user the moment you have a team + need unlimited transcription, video recording, or AI Chat with your meeting library, Enterprise when security review and custom retention windows are deal-blockers.
 
@@ -144,7 +144,7 @@ Every data point above was verified against MeetGeek pricing and product documen
 
 ## What it actually is
 
-The unit of value isn't the transcript — it's the **library**. A single meeting gives you a recording, a transcript, a summary, and action items. A hundred meetings give you a searchable knowledge base of every customer conversation, sales call, and internal sync your team has had.
+The unit of value isn't the transcript, it's the **library**. A single meeting gives you a recording, a transcript, a summary, and action items. A hundred meetings give you a searchable knowledge base of every customer conversation, sales call, and internal sync your team has had.
 
 The product surface:
 
@@ -152,14 +152,14 @@ The product surface:
 - **Summaries + action items.** AI-generated, editable, attributable to speakers. Action items can sync to Asana, ClickUp, Notion, or your CRM via Zapier.
 - **AI Chat over library.** Ask "what did we promise the Acme team in the last three calls?" across your entire meeting history.
 - **Custom summary templates.** Business+ tier lets you define output shape (e.g. discovery-call template, account-review template).
-- **Agentic workflows.** Trigger downstream automations from meeting outcomes — e.g. "if the call mentions Q3 renewal, create a Salesforce task."
-- **Speaking analytics.** Talk-listen ratios, filler-word counts, sentiment — useful for sales coaching but not a CRM-grade scorecard.
+- **Agentic workflows.** Trigger downstream automations from meeting outcomes, e.g. "if the call mentions Q3 renewal, create a Salesforce task."
+- **Speaking analytics.** Talk-listen ratios, filler-word counts, sentiment, useful for sales coaching but not a CRM-grade scorecard.
 
 The transcription engine handles 100+ languages with automatic speaker detection. Quality is competitive with AssemblyAI / Whisper on English; non-English performance is usable but not best-in-class for every language.
 
 ## When to pick MeetGeek
 
-- **Your team runs 5+ meetings a day** and the bottleneck is "where do those meetings go?" — not just transcription.
+- **Your team runs 5+ meetings a day** and the bottleneck is "where do those meetings go?", not just transcription.
 - **Sales / customer success / ops team** that needs a meeting library plus action-item flow to CRM or task tracker, without paying for Gong.
 - **Distributed team meeting in many languages.** 100+ language transcription beats most US-focused competitors.
 - **You want one source of truth** for meeting notes across the org instead of fragmented personal Otter accounts.
@@ -216,13 +216,13 @@ This page was produced by the aipedia.wiki editorial pipeline, an automated syst
 ## FAQ
 
 **Does MeetGeek work with Google Meet, Zoom, and Teams?**
-Yes — all three are supported. The MeetGeek bot auto-joins meetings on your calendar from any of these platforms once you authorize calendar access.
+Yes, all three are supported. The MeetGeek bot auto-joins meetings on your calendar from any of these platforms once you authorize calendar access.
 
 **What's the difference between Pro and Business?**
 Pro caps at 20 hours of transcription per month, no video recording, and 1-year storage. Business is unlimited transcription, includes video recording with 12-month retention, adds AI Chat across your library, custom summary templates, and agentic workflows. The Pro → Business jump is the main "team adoption" upgrade.
 
 **Is the free Basic plan worth it?**
-For 3 hours a month, yes — it's enough to test the product and cover light personal use. Most professional users will outgrow it within a week.
+For 3 hours a month, yes, it's enough to test the product and cover light personal use. Most professional users will outgrow it within a week.
 
 **How does MeetGeek compare to Otter?**
 Both auto-join meetings and transcribe. MeetGeek's team library + AI Chat + workflow automation is more team-oriented; Otter has stronger solo polish and a larger free tier. Pricing is comparable at the entry level.

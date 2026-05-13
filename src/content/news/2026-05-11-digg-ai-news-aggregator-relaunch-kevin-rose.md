@@ -20,7 +20,7 @@ sources:
 
 # Digg relaunches as an AI-only news aggregator using X social-graph signals to rank stories
 
-**Digg** is back — for the second time in 2026 — this time as an AI-news aggregator. Founder **Kevin Rose** previewed the new product on May 8 and the alpha opened on **May 11, 2026** at **di.gg**. The earlier Reddit-style relaunch shut down in March after the team concluded it could not differentiate fast enough or manage bot traffic on the social-link surface.
+**Digg** is back, for the second time in 2026, this time as an AI-news aggregator. Founder **Kevin Rose** previewed the new product on May 8 and the alpha opened on **May 11, 2026** at **di.gg**. The earlier Reddit-style relaunch shut down in March after the team concluded it could not differentiate fast enough or manage bot traffic on the social-link surface.
 
 The new Digg's pitch is narrow and specific:
 
@@ -35,7 +35,7 @@ The site lives at di.gg during alpha; Rose says it will move back to digg.com wh
 The news-aggregator category has spent a decade fragmenting. Memorandum, Hacker News, Reddit, X itself, and a long tail of newsletter roundups have each captured a slice of what Digg-the-original did in the late 2000s. Generative AI raises the stakes on aggregation in two specific ways:
 
 1. **Content volume is exploding.** AI-generated SEO content, model-output news posts, and rapid press-release distribution all push the volume of "story-shaped artifacts" past what any individual can scan. A ranking layer that filters at the signal level rather than the link level becomes more valuable, not less.
-2. **The X social graph is the de-facto AI industry water cooler.** A small number of accounts — labs, VC partners, individual researchers, founder-influencers — drive what becomes consensus narrative on a given day. Digg's bet is that tapping that graph directly is a better proxy for "important" than vote counts, follow counts, or recency.
+2. **The X social graph is the de-facto AI industry water cooler.** A small number of accounts, labs, VC partners, individual researchers, founder-influencers, drive what becomes consensus narrative on a given day. Digg's bet is that tapping that graph directly is a better proxy for "important" than vote counts, follow counts, or recency.
 
 The narrowness of the launch is also a meaningful product choice. Rose's last Reddit-style attempt failed in part because it tried to be a horizontal forum at the same time it was being overrun by bots. Starting with one vertical, one curated source list, and one ranking model is the right diet after that misfire.
 
@@ -47,7 +47,7 @@ The risks are equally specific:
 
 ## Buyer take
 
-If you read AI news for a job — analyst, VC, founder, journalist, comms — Digg is worth bookmarking but not yet treating as your primary surface:
+If you read AI news for a job, analyst, VC, founder, journalist, comms, Digg is worth bookmarking but not yet treating as your primary surface:
 
 - **The alpha is for signal discovery, not for the news of record.** Use it as a "what is the AI-X graph paying attention to today" radar, then verify against primary sources (lab blog posts, SEC filings, the underlying papers).
 - **Watch the source list when it goes public.** Curated lists are partisan by construction. If Digg eventually publishes the 1,000 accounts, the political and aesthetic biases of the corpus will be readable from the list itself.
@@ -57,4 +57,4 @@ For competing aggregators (Memorandum, Tldraw, AI newsletter networks, the AI se
 
 ## What is still unclear
 
-Digg has not published the 1,000-account source list, the explicit ranking weights, retention metrics for the alpha cohort, or the monetization model. The relationship to X is essential to the product but has no disclosed terms — whether Digg pays for an enterprise API tier, whether it has a special arrangement, or whether it is operating on standard API limits. No revenue or fundraising disclosures accompanied the relaunch.
+Digg has not published the 1,000-account source list, the explicit ranking weights, retention metrics for the alpha cohort, or the monetization model. The relationship to X is essential to the product but has no disclosed terms, whether Digg pays for an enterprise API tier, whether it has a special arrangement, or whether it is operating on standard API limits. No revenue or fundraising disclosures accompanied the relaunch.

@@ -38,7 +38,7 @@ facts:
     volatility: low
     confidence: high
   pricing_anchor:
-    value: "Tidio's pricing is multi-axis and complex: a base plan (Starter $24.17, Growth $49.17+, Plus $749/mo annual), plus Lyro AI ($32.50/mo for 50 conversations) and Flows ($24.17/mo) billed separately — real cost often runs 1.5-2x the base plan."
+    value: "Tidio's pricing is multi-axis and complex: a base plan (Starter $24.17, Growth $49.17+, Plus $749/mo annual), plus Lyro AI ($32.50/mo for 50 conversations) and Flows ($24.17/mo) billed separately. Real cost often runs 1.5-2x the base plan."
     source: "https://www.tidio.com/pricing/"
     source_label: "Tidio pricing"
     source_id: tidio-pricing
@@ -63,7 +63,7 @@ facts:
     volatility: medium
     confidence: high
   customer_count:
-    value: "Tidio reports being used by 300,000+ businesses worldwide — a large SMB customer base concentrated in ecommerce and direct-to-consumer brands."
+    value: "Tidio reports being used by 300,000+ businesses worldwide, a large SMB customer base concentrated in ecommerce and direct-to-consumer brands."
     source: "https://www.tidio.com/"
     source_label: "Tidio overview"
     source_id: tidio-overview
@@ -95,7 +95,7 @@ not_best_for:
   - cost-sensitive customers running high-volume support (separate AI billing punishes them)
   - regulated industries needing detailed model governance
 quick_answer: >-
-  Tidio is a live-chat widget + Lyro AI agent for SMB ecommerce and SaaS. Lyro deflects up to 67% of common questions before a human sees them. Pick it if you're on Shopify or have a small support team and want to ship AI deflection fast. Skip it if you're enterprise-scale or cost-sensitive — separate AI billing stacks fast.
+  Tidio is a live-chat widget + Lyro AI agent for SMB ecommerce and SaaS. Lyro deflects up to 67% of common questions before a human sees them. Pick it if you're on Shopify or have a small support team and want to ship AI deflection fast. Skip it if you're enterprise-scale or cost-sensitive, separate AI billing stacks fast.
 price_history:
   - date: 2026-05-13
     plan: "Starter"
@@ -133,7 +133,7 @@ The product sits between **free chat widgets** (Crisp, the old Intercom Free) an
 
 > **Pick Tidio if you run a Shopify store or a small SaaS support team** and you want a live-chat widget with an AI agent that ships in a day, costs a few hundred dollars per month, and deflects the common 60-70% of questions without escalating to a human. The Lyro auto-flow setup is fast, and the multi-channel inbox (chat + email + Instagram + WhatsApp + Messenger) is a real time-saver versus stitching tools.
 >
-> **Skip it if you're enterprise-scale or genuinely cost-sensitive on high volume.** Plus is $749/mo and Premium starts at $2,999/mo — and that's *before* Lyro and Flows add-ons stack on top. At enterprise volume, Intercom, Zendesk AI, or Salesforce Service Cloud usually win on per-conversation economics and richer tooling. At budget volume, separate AI billing makes Tidio expensive per resolved ticket.
+> **Skip it if you're enterprise-scale or genuinely cost-sensitive on high volume.** Plus is $749/mo and Premium starts at $2,999/mo, and that's *before* Lyro and Flows add-ons stack on top. At enterprise volume, Intercom, Zendesk AI, or Salesforce Service Cloud usually win on per-conversation economics and richer tooling. At budget volume, separate AI billing makes Tidio expensive per resolved ticket.
 >
 > **Who pays which tier:** Free for shops with under 50 conversations/month, Starter $24.17 for the smallest paid setup, Growth $49.17+ for active support teams, Plus $749 when you need multi-project, custom branding, and OpenAPI, Premium for enterprise with the guaranteed 50% resolution SLA.
 
@@ -160,13 +160,13 @@ Three products bolted together:
 
 1. **Live chat + multichannel inbox.** Standard widget on your site, with email, Messenger, Instagram, and WhatsApp routed into one agent view.
 2. **Lyro AI Agent.** Reads your knowledge base, FAQs, and Shopify product catalog. Answers customer questions in conversation. Hands off to a human when it doesn't know.
-3. **Flows.** Visual no-code chatbot builder for explicit branching flows (e.g. "if customer asks about returns, show this; if about sizing, show that"). Distinct from Lyro — Flows is rule-based, Lyro is LLM-based.
+3. **Flows.** Visual no-code chatbot builder for explicit branching flows (e.g. "if customer asks about returns, show this; if about sizing, show that"). Distinct from Lyro: Flows is rule-based, Lyro is LLM-based.
 
 The pricing model is the friction point. Every customer pays for **conversations** on the base plan, **Lyro AI conversations** as a separate add-on, and (often) **Flows visitors** as a third line item. Real monthly bills are typically 1.5–2x what the base-plan number suggests.
 
 **Lyro Copilot** assists human agents during live chats by drafting AI replies in the same window. It's the "agent assist" pattern (similar to Intercom's Fin AI Copilot or Zendesk's AI suggestions). Useful on Plus and above for human agent productivity.
 
-**Lyro Actions** lets you create custom flows triggered by intent — e.g. "if customer asks about order status, look up the order via the Shopify API and respond with tracking info." This is the most defensible part of the product: it turns Lyro from a Q&A bot into a transactional agent.
+**Lyro Actions** lets you create custom flows triggered by intent, e.g. "if customer asks about order status, look up the order via the Shopify API and respond with tracking info." This is the most defensible part of the product: it turns Lyro from a Q&A bot into a transactional agent.
 
 ## When to pick Tidio
 
@@ -241,7 +241,7 @@ Yes, the Free plan covers 50 billable conversations per month and basic features
 Tidio is SMB-first; Intercom is mid-market / enterprise. Tidio is cheaper at entry, more complex per-conversation billing. Intercom's Fin AI agent has a per-resolution pricing model that's cleaner at scale. For a 20-seat support team, Intercom usually wins on tooling depth; for a 2-seat Shopify store, Tidio wins on time-to-value and price.
 
 **Does Lyro work with Shopify?**
-Yes — native Shopify integration is one of Tidio's main go-to-market wedges. Lyro can read product catalog data, order status, and inventory to answer customer questions in real time.
+Yes, native Shopify integration is one of Tidio's main go-to-market wedges. Lyro can read product catalog data, order status, and inventory to answer customer questions in real time.
 
 **Can Lyro do more than answer FAQs?**
 Yes, via Lyro Actions. You can wire it to look up an order, apply a discount code, share store-specific info, or trigger downstream automations. Without Actions, Lyro is essentially Q&A over your knowledge base.
@@ -253,7 +253,7 @@ Tidio does not publicly document the underlying model. Treat Lyro as a closed pi
 OpenAPI access is on the Plus tier and above; Mobile SDK is on Premium only. For lower tiers, Zapier and native integrations are the main extensibility surface.
 
 **What's the difference between Lyro and Flows?**
-Lyro is the LLM-driven AI agent — it generates responses dynamically from your knowledge base. Flows is a visual no-code chatbot builder for rule-based branching. They're complementary; many Tidio customers use both.
+Lyro is the LLM-driven AI agent, it generates responses dynamically from your knowledge base. Flows is a visual no-code chatbot builder for rule-based branching. They're complementary; many Tidio customers use both.
 
 ## Sources
 

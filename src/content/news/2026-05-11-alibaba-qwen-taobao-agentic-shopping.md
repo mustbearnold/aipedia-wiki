@@ -26,11 +26,11 @@ sources:
 
 Alibaba announced on May 11, 2026 that it is integrating its Qwen AI platform with the Taobao and Tmall marketplaces, making the **entire 4-billion-plus product catalog** addressable from inside the Qwen app via conversational shopping. Users will browse, compare, and purchase by chatting with the Qwen agent instead of running keyword searches; the integration is backed by a "skills library" that handles logistics and after-sales workflows.
 
-Inside Taobao, Alibaba is launching a Qwen-powered shopping assistant with **virtual try-ons** and **30-day price tracking** built directly into the product surface. Recommendations are personalized off order history and stated preferences, and the assistant can act as an agent — placing orders, coordinating returns, and handling post-purchase support — rather than acting purely as a recommender.
+Inside Taobao, Alibaba is launching a Qwen-powered shopping assistant with **virtual try-ons** and **30-day price tracking** built directly into the product surface. Recommendations are personalized off order history and stated preferences, and the assistant can act as an agent, placing orders, coordinating returns, and handling post-purchase support, rather than acting purely as a recommender.
 
 ## Why this matters
 
-This is the first frontier-scale deployment of "agentic commerce" running against a real Western-or-equivalent marketplace at billion-product scale. Amazon's Rufus is a shopping assistant but still routes most flows back to the search results page. Walmart's AI shopper is in pilot. Shopify's storefront agents are merchant-level. Alibaba is doing the full thing — the catalog, the recommendations, the transaction, the after-sales — and putting it behind a chat interface that consumers already use for general AI tasks.
+This is the first frontier-scale deployment of "agentic commerce" running against a real Western-or-equivalent marketplace at billion-product scale. Amazon's Rufus is a shopping assistant but still routes most flows back to the search results page. Walmart's AI shopper is in pilot. Shopify's storefront agents are merchant-level. Alibaba is doing the full thing, the catalog, the recommendations, the transaction, the after-sales, and putting it behind a chat interface that consumers already use for general AI tasks.
 
 It also highlights a structural advantage Chinese platforms have over US ones: **single-company verticality**. Alibaba owns the model (Qwen), the marketplace (Taobao + Tmall), the logistics network (Cainiao), the payments rails (Alipay), and a substantial slice of the cloud (Alibaba Cloud). That is a control surface no Western competitor can match without explicit cross-company partnerships, which are slower to ship and harder to keep secure.
 
@@ -48,4 +48,4 @@ For Western brands not on Alibaba, treat this as a benchmark for what your AI co
 
 ## What is still unclear
 
-Alibaba has not published rollout dates beyond "soon," merchant-facing controls, advertising integration, or how the new shopping flow interacts with the Tmall live-commerce surface. Pricing for any premium Qwen capabilities inside the shopping flow has not been disclosed. The privacy and data-portability picture — particularly for users who may not realize their general Qwen conversations are now flowing into a transactional marketplace — is also unaddressed publicly.
+Alibaba has not published rollout dates beyond "soon," merchant-facing controls, advertising integration, or how the new shopping flow interacts with the Tmall live-commerce surface. Pricing for any premium Qwen capabilities inside the shopping flow has not been disclosed. The privacy and data-portability picture, particularly for users who may not realize their general Qwen conversations are now flowing into a transactional marketplace, is also unaddressed publicly.

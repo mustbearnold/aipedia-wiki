@@ -22,27 +22,27 @@ sources:
 
 # Amp raises $1.3B from Andreessen Horowitz and Y Combinator to build a shared AI compute 'grid' targeting 1.9 GW over five years
 
-**Amp**, a new compute-infrastructure startup founded by ex-Andreessen Horowitz partner **Anjney Midha**, announced on May 12, 2026 that it has raised more than **$1.3 billion** to build what the company calls an AI compute "grid" — a pool of GPU capacity acquired from data-center operators and resold to startups, universities, and research labs that cannot otherwise compete with the hyperscalers for chip access.
+**Amp**, a new compute-infrastructure startup founded by ex-Andreessen Horowitz partner **Anjney Midha**, announced on May 12, 2026 that it has raised more than **$1.3 billion** to build what the company calls an AI compute "grid", a pool of GPU capacity acquired from data-center operators and resold to startups, universities, and research labs that cannot otherwise compete with the hyperscalers for chip access.
 
 Lead investor **Andreessen Horowitz** is joined by **Y Combinator** and a syndicate of other backers. Amp's stated targets:
 
 - **200 megawatts online by end of 2026**.
 - **1.9 gigawatts pooled over the next five years**.
 
-The pitch is that demand for AI training capacity is no longer constrained only by chip supply — it is constrained by the small number of buyers that can negotiate multi-gigawatt offtake commitments directly with operators. Amp's model is to be that buyer at scale, then break the capacity down into smaller increments that long-tail users can actually consume.
+The pitch is that demand for AI training capacity is no longer constrained only by chip supply; it is constrained by the small number of buyers that can negotiate multi-gigawatt offtake commitments directly with operators. Amp's model is to be that buyer at scale, then break the capacity down into smaller increments that long-tail users can actually consume.
 
 ## Why this matters
 
 The structural problem Amp is targeting is real. As of mid-2026 the AI compute market is bifurcated:
 
 - **Hyperscalers and frontier labs** (Microsoft + OpenAI, Google + Anthropic, AWS, Meta, xAI) have multi-year, multi-gigawatt offtake commitments that lock up the vast majority of new builds.
-- **Everyone else** — including most academic researchers, mid-tier startups, and non-frontier labs — competes for the residual capacity at meaningfully worse prices and longer queue times.
+- **Everyone else**, including most academic researchers, mid-tier startups, and non-frontier labs, competes for the residual capacity at meaningfully worse prices and longer queue times.
 
 A $1.3B aggregator like Amp can theoretically smooth that out by acting as the matchmaker between operators with spare nights/weekends/regions and buyers who need bursty access. The model is closer to a power-grid balancing authority than to a traditional cloud reseller.
 
-The $1.3B raise also re-prices the "compute middleman" category. CoreWeave, Lambda, Crusoe, and others have been building variants of the same idea — aggregate GPU capacity, resell to startups — but Amp's structural pitch (spare capacity, not greenfield data centers) and the Andreessen Horowitz lead position with Midha at the helm sets it up as a serious challenger.
+The $1.3B raise also re-prices the "compute middleman" category. CoreWeave, Lambda, Crusoe, and others have been building variants of the same idea, aggregate GPU capacity, resell to startups, but Amp's structural pitch (spare capacity, not greenfield data centers) and the Andreessen Horowitz lead position with Midha at the helm sets it up as a serious challenger.
 
-The political subtext matters too. Sovereign and academic AI policy in the US, UK, and EU has spent the past 18 months trying to figure out how to give domestic researchers access to compute that the hyperscalers have already absorbed. An Amp-shaped layer is a market answer to a policy problem — if it works, governments will subsidize buyer access; if it doesn't, the case for sovereign-cloud build-outs will get louder.
+The political subtext matters too. Sovereign and academic AI policy in the US, UK, and EU has spent the past 18 months trying to figure out how to give domestic researchers access to compute that the hyperscalers have already absorbed. An Amp-shaped layer is a market answer to a policy problem, if it works, governments will subsidize buyer access; if it doesn't, the case for sovereign-cloud build-outs will get louder.
 
 ## Buyer take
 
@@ -56,4 +56,4 @@ For data-center operators, this is mostly a positive. A buyer that aggregates de
 
 ## What is still unclear
 
-Amp has not disclosed its target pricing relative to hyperscalers, the first set of partner operators, the geographic split of the 1.9 GW target, or whether the company will run its own scheduler and orchestration stack or rely on operator-native tooling. The relationship between Amp and Andreessen Horowitz's existing AI portfolio — many of which are themselves compute buyers — is not described publicly. Customer disclosures beyond the "startups, universities, research labs" descriptor are also still ahead.
+Amp has not disclosed its target pricing relative to hyperscalers, the first set of partner operators, the geographic split of the 1.9 GW target, or whether the company will run its own scheduler and orchestration stack or rely on operator-native tooling. The relationship between Amp and Andreessen Horowitz's existing AI portfolio, many of which are themselves compute buyers, is not described publicly. Customer disclosures beyond the "startups, universities, research labs" descriptor are also still ahead.
