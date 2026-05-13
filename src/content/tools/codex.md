@@ -252,6 +252,7 @@ Prices verified 2026-04-18 via [OpenAI Codex pricing](https://developers.openai.
 
 ## Recent changes
 
+- **May 11, 2026:** [OpenAI launched Daybreak](/news/2026-05-11-openai-daybreak-codex-security-launch/), wrapping Codex Security with GPT-5.5 / Trusted Access / GPT-5.5-Cyber tiers and onboarding 22 partners (Cloudflare, Cisco, CrowdStrike, Palo Alto Networks, Snyk, Semgrep, Socket, and more). Codex Security is now the operational center of OpenAI's defensive-cyber play.
 - **May 7, 2026:** [OpenAI added Codex for Chrome](/news/2026-05-07-openai-codex-chrome-extension/) so Codex can inspect, test, and operate across signed-in Chrome tabs while keeping control in the desktop app.
 - **May 7, 2026:** [OpenAI put GPT-5.5-Cyber into limited preview through Trusted Access for Cyber](/news/2026-05-07-openai-gpt-55-cyber-trusted-access/). The same announcement also introduced Codex Security for open source maintainers and a Codex Security plugin for moving from threat modeling to discovery, validation, attack-path analysis, and verified fixes.
 - **May 3, 2026:** [Codex Desktop added Pets, Hatch, and config imports](/news/2026-05-03-openai-codex-pets-config-imports/), a small but visible sign that OpenAI is turning Codex into a persistent desktop workbench.

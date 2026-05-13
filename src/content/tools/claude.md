@@ -215,6 +215,7 @@ Anthropic's AI assistant. **Opus 4.7** is the flagship as of **April 16, 2026**,
 
 ## Recent developments
 
+- **May 12:** [Anthropic launched Claude for Legal](/news/2026-05-12-anthropic-claude-for-legal-plugins-microsoft-365/) with 12 practice-area plugins, 20-plus MCP connectors (Harvey, Relativity, Everlaw, Thomson Reuters CoCounsel, DocuSign, Box), and a Microsoft 365 integration that embeds Claude across Word, Outlook, Excel, and PowerPoint. Freshfields, Quinn Emanuel, Holland & Knight, and Crosby joined as launch customers.
 - **May 10:** [Reports tied Anthropic to Akamai's $1.8B frontier-model cloud commitment](/news/2026-05-10-anthropic-akamai-cloud-deal/). The reporting reinforces that Claude capacity is becoming an infrastructure-market story, not just a model-quality story.
 - **May 9:** [FIS and Anthropic are developing a Claude-powered financial-crimes agent for banks](/news/2026-05-09-anthropic-fis-financial-crimes-agent/). The project pushes Claude deeper into regulated, evidence-heavy enterprise workflows where auditability matters as much as reasoning quality.
 - **May 6:** [Claude Managed Agents added dreaming, outcomes, and multiagent orchestration](/news/2026-05-06-claude-managed-agents-dreaming-outcomes-orchestration/). The release pushes Claude further into hosted agent infrastructure, with memory refinement, rubric-based outcomes, and parallel subagent work.

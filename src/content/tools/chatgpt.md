@@ -288,6 +288,7 @@ Prices and model access were rechecked on May 7, 2026 using [ChatGPT pricing](ht
 
 ## Recent changes
 
+- **May 11, 2026:** [OpenAI launched Daybreak](/news/2026-05-11-openai-daybreak-codex-security-launch/), a 22-partner cybersecurity initiative that wraps Codex Security with three GPT-5.5 access tiers for vulnerability detection and patch validation. Daybreak is OpenAI's productized answer to Anthropic's Project Glasswing.
 - **May 7, 2026:** [ChatGPT added trusted contact support for serious safety moments](/news/2026-05-07-chatgpt-trusted-contact-safety-feature/) on eligible adult personal accounts in supported regions. This is not a Business, Enterprise, or Edu workspace feature.
 - **May 7, 2026:** [ChatGPT Workspace Agents reached eligible Enterprise workspaces with Enterprise Key Management](/news/2026-05-07-chatgpt-enterprise-ekm-workspace-agents/), making governed agents more relevant for compliance-heavy buyers.
 - **May 7, 2026:** [OpenAI put GPT-5.5-Cyber into limited preview through Trusted Access for Cyber](/news/2026-05-07-openai-gpt-55-cyber-trusted-access/). This is gated security access, not a normal ChatGPT tier.

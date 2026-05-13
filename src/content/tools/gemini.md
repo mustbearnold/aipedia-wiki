@@ -218,6 +218,8 @@ Google DeepMind's multimodal AI assistant. **Gemini 3.1 Pro** is the flagship as
 
 ## Recent developments (April-May 2026)
 
+- **May 12:** [Google rebranded Android around Gemini Intelligence and launched Googlebook](/news/2026-05-12-google-gemini-intelligence-googlebook-android-show/) at the Android Show: I/O Edition. Gemini Intelligence reads the screen and completes cross-app tasks; Googlebook is a new premium AI-laptop line shipping fall 2026 with Acer, Asus, Dell, HP, and Lenovo.
+- **May 11:** [Google Threat Intelligence Group disclosed it caught the first AI-authored zero-day exploit](/news/2026-05-11-google-ai-generated-zero-day-thwarted/) before mass deployment. The attacker used an AI model to write a 2FA bypass for a popular sysadmin tool; Google has not named the model or the tool.
 - **May 5:** [Google released MTP drafters to make Gemma 4 inference up to 3x faster](/news/2026-05-05-gemma-4-mtp-drafters-inference/). Gemma is the open-weight sibling to Gemini, and the drafter release improves Google's local and self-hosted model story.
 - **May 5:** [Gemini API File Search adds multimodal RAG, metadata filters, and page citations](/news/2026-05-05-gemini-api-file-search-multimodal-rag/), tightening Google's managed retrieval story for agents and assistants that mix documents and visual assets.
 - **May 2:** [A reported Gemini UI string points to a possible Omni video-generation surface ahead of Google I/O](/news/2026-05-03-google-gemini-omni-video-generation-test/). Treat Omni as speculative until Google confirms it; the strategic watch item is whether Gemini unifies Veo video and Nano Banana image generation under one media workflow.
