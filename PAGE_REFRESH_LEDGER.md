@@ -1,7 +1,7 @@
 # AiPedia Page Refresh Ledger
 
 Ledger updated through: 2026-05-13
-Tracked public pages and crawl surfaces: 705
+Tracked public pages and crawl surfaces: 710
 
 Hard rule: every time a tracked website page is edited, refreshed, materially re-ranked, or has volatile facts re-verified, update that page row in this file on the same change. If a child page update affects a parent hub, archive, internal-link block, sitemap, or LLM surface, update those affected rows too.
 
@@ -710,9 +710,14 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-12 | /trends/ | Static page | Yes | git | src/pages/trends/index.astro |
 | 2026-05-12 | /workflows/ | Static page | Yes | git | src/pages/workflows/index.astro |
 | 2026-05-13 | / | Static page | Yes | git | src/pages/index.astro |
-| 2026-05-13 | /tools/activepieces/ | Tool | Yes | working tree | src/content/tools/activepieces.md |
-| 2026-05-13 | /tools/consensus/ | Tool | Yes | working tree | src/content/tools/consensus.md |
-| 2026-05-13 | /tools/gamma/ | Tool | Yes | working tree | src/content/tools/gamma.md |
-| 2026-05-13 | /tools/lindy/ | Tool | Yes | working tree | src/content/tools/lindy.md |
-| 2026-05-13 | /tools/murf/ | Tool | Yes | working tree | src/content/tools/murf.md |
-| 2026-05-13 | /tools/quillbot/ | Tool | Yes | working tree | src/content/tools/quillbot.md |
+| 2026-05-13 | /tools/activepieces/ | Tool | Yes | frontmatter | src/content/tools/activepieces.md |
+| 2026-05-13 | /tools/castmagic/ | Tool | Yes | frontmatter | src/content/tools/castmagic.md |
+| 2026-05-13 | /tools/consensus/ | Tool | Yes | frontmatter | src/content/tools/consensus.md |
+| 2026-05-13 | /tools/gamma/ | Tool | Yes | frontmatter | src/content/tools/gamma.md |
+| 2026-05-13 | /tools/lindy/ | Tool | Yes | frontmatter | src/content/tools/lindy.md |
+| 2026-05-13 | /tools/meetgeek/ | Tool | Yes | frontmatter | src/content/tools/meetgeek.md |
+| 2026-05-13 | /tools/murf/ | Tool | Yes | frontmatter | src/content/tools/murf.md |
+| 2026-05-13 | /tools/quillbot/ | Tool | Yes | frontmatter | src/content/tools/quillbot.md |
+| 2026-05-13 | /tools/reclaim-ai/ | Tool | Yes | frontmatter | src/content/tools/reclaim-ai.md |
+| 2026-05-13 | /tools/sanebox/ | Tool | Yes | frontmatter | src/content/tools/sanebox.md |
+| 2026-05-13 | /tools/tidio/ | Tool | Yes | frontmatter | src/content/tools/tidio.md |
