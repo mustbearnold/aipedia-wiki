@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: "$0-$449/month"
 status: active
 launched: 2022-03
-last_updated: 2026-05-04
-last_verified: 2026-05-04
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -32,8 +32,8 @@ facts:
     source: "https://exa.ai/docs/reference/search-api-guide"
     source_label: "Exa Search API guide"
     source_id: exa-docs
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -41,8 +41,8 @@ facts:
     source: "https://exa.ai/pricing"
     source_label: "Exa pricing"
     source_id: exa-official
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: high
   best_for:
@@ -50,8 +50,8 @@ facts:
     source: "https://exa.ai/"
     source_label: "Exa homepage"
     source_id: exa-official
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: medium
     confidence: high
   watch_out_for:
@@ -59,14 +59,14 @@ facts:
     source: "https://exa.ai/docs/reference/search-api-guide"
     source_label: "Exa Search API guide"
     source_id: exa-docs
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: medium
     confidence: high
 tags: [search-api, semantic-search, llm-tools, developer-tools, rag, web-search, embeddings, websets]
-seo_title: 'Exa AI: Neural Search API Review & Pricing (April 2026)'
+seo_title: 'Exa AI: Neural Search API Review & Pricing (May 2026)'
 meta_description: >-
-  Exa AI is a neural search API for LLM agents and RAG. Free tier covers 1,000 requests/month. Core search from $7 per 1,000 requests. Websets starts $49/mo for B2B lead research.
+  Exa AI is a neural search API for LLM agents and RAG. Free tier covers 1,000 requests/month. Search $7, Deep Search $12-15, Monitors $15, Answer $5 per 1,000. Websets B2B research is now on a separate Starter/Pro track.
 author: aipedia.wiki Editorial
 best_for:
   - AI agents needing live semantic web retrieval
@@ -78,7 +78,36 @@ not_best_for:
   - workloads that need full Google index breadth
   - non-developer teams without API capability
 quick_answer: >-
-  Exa AI is a neural search API for LLM apps and agents. Free tier covers 1,000 requests/month. Core search runs $7 per 1,000 requests. Websets starts at $49/mo. Pick it for semantic retrieval in RAG or agent pipelines. Skip for consumer UIs or Google-scale index breadth.
+  Exa AI is a neural search API for LLM apps and agents. Free tier covers 1,000 requests/month. Core Search runs $7 per 1,000 requests; Deep Search lands at $12 (or $15 with reasoning); Monitors $15; Answer $5. Websets starts at $49/mo. Pick it for semantic retrieval in RAG or agent pipelines. Skip for consumer UIs or Google-scale index breadth.
+price_history:
+  - date: 2026-03-03
+    plan: "Search (with contents bundled)"
+    price: "$7 per 1,000 requests"
+    source: "https://exa.ai/docs/changelog/pricing-update"
+    source_label: "Source"
+    source_id: exa-pricing-update
+    note: "Contents now included free with first 10 results"
+  - date: 2026-03-03
+    plan: "Deep Search"
+    price: "$12 per 1,000 requests"
+    source: "https://exa.ai/docs/changelog/pricing-update"
+    source_label: "Source"
+    source_id: exa-pricing-update
+    note: "20% reduction at simplification update"
+  - date: 2026-03-03
+    plan: "Deep Search (Reasoning)"
+    price: "$15 per 1,000 requests"
+    source: "https://exa.ai/docs/changelog/pricing-update"
+    source_label: "Source"
+    source_id: exa-pricing-update
+    note: "New reasoning tier"
+  - date: 2026-05-13
+    plan: "Search / Deep Search / Monitors / Answer"
+    price: "$7 / $12-15 / $15 / $5 per 1,000 requests"
+    source: "https://exa.ai/pricing"
+    source_label: "Source"
+    source_id: exa-official
+    note: "May 2026 refresh - all endpoints verified, AI Page Summaries at $1/1K added separately"
 ---
 
 # Exa AI
@@ -86,6 +115,11 @@ quick_answer: >-
 Exa AI ships a neural search API built for LLM applications, AI agents, and RAG pipelines. Queries retrieve pages by meaning rather than keyword density. The Websets product layers B2B lead research on top of the same search infrastructure.
 
 No consumer interface. Developer-only product.
+
+## Recent developments
+
+- **May 12, 2026:** [Anthropic launched Claude for Legal with Microsoft 365 plug-ins and 20-plus practice-area MCP connectors](/news/2026-05-12-anthropic-claude-for-legal-plugins-microsoft-365/). For Exa, the read is that enterprise retrieval is increasingly bundled into the chat assistant via MCP, not procured separately. Exa benefits when teams want a generic neural retrieval primitive across providers, and loses to bundled retrieval when the workflow lives entirely inside one assistant.
+- **March 3, 2026:** [Exa simplified search pricing](https://exa.ai/docs/changelog/pricing-update): contents for the first 10 results are now included with `search` at no extra charge, Deep Search dropped 20% to $12 per 1,000, and a new Deep Search (Reasoning) tier landed at $15 per 1,000. Most agent stacks no longer pay a separate contents charge for primary searches.
 
 ## System Verdict
 
@@ -100,24 +134,29 @@ No consumer interface. Developer-only product.
 | | |
 |---|---|
 | **Product type** | Neural search API for developers |
-| **Core search pricing** | $7 per 1,000 requests (10 results, includes text + highlights) |
+| **Search** | $7 per 1,000 requests (10 results, contents + highlights bundled) |
+| **Deep Search** | $12 per 1,000 requests (multi-step research) |
+| **Deep Search (Reasoning)** | $15 per 1,000 requests |
+| **Monitors** | $15 per 1,000 requests (long-running watch jobs) |
+| **Answer** | $5 per 1,000 requests (cited answer endpoint) |
+| **AI Page Summaries** | $1 per 1,000 pages across all endpoints |
 | **Additional results** | $1 per 1,000 results beyond 10 |
-| **Free tier** | 1,000 requests/month |
+| **Free tier** | 1,000 requests/month, full API access |
 | **Websets Starter** | $49/mo: 8,000 credits, 1 seat, 100 results/Webset |
 | **Websets Pro** | $449/mo: 100,000 credits, 10 seats, 1,000 results/Webset |
 | **Enterprise** | Custom volume pricing, SLA, security |
-| **Framework integrations** | LangChain, LlamaIndex (native connectors) |
+| **Framework integrations** | LangChain, LlamaIndex (native connectors), MCP-compatible |
 | **Funding** | Series B, $85M (2025) |
 
-Every data point above was verified against vendor documentation on 2026-04-17. See Sources.
+Every data point above was verified against vendor documentation on 2026-05-13. See Sources.
 
 ## What it actually is
 
-One developer product with two surfaces. The core API returns neural search results, full page text via the contents endpoint, and highlights for token-efficient summarization. Websets sits on top and uses the same index for B2B research, verifying every row against user-specified criteria.
+One developer product with two surfaces. The core API now ships five paid endpoints (`search`, `deep_search`, `answer`, `monitors`, `contents`) plus an AI Page Summaries add-on. Search returns neural results with full page text and highlights bundled for the first 10 hits. Deep Search runs multi-step research with optional reasoning. Monitors watches a query and fires when new matches appear. Answer ships cited responses for question-style retrieval. Websets sits on top and uses the same index for B2B research, verifying every row against user-specified criteria.
 
-March 2026 pricing bundled content extraction into base search cost. Most agents no longer pay a separate scrape fee.
+The March 3, 2026 pricing update bundled content extraction into base search cost. Most agents no longer pay a separate scrape fee.
 
-The moats: a neural index trained for LLM-style queries, native framework integrations, and Websets as a second revenue surface that locks research teams in. The weakness is index breadth. Exa is narrower than Google on obscure domains and very recent pages.
+The moats: a neural index trained for LLM-style queries, native framework integrations, MCP compatibility, and Websets as a second revenue surface that locks research teams in. The weakness is index breadth. Exa is narrower than Google on obscure domains and very recent pages.
 
 ## When to pick Exa
 
@@ -139,15 +178,21 @@ The moats: a neural index trained for LLM-style queries, native framework integr
 
 Pricing via [exa.ai/pricing](https://exa.ai/pricing):
 
-| Plan | Price | What you get |
+| Plan / Endpoint | Price | What you get |
 |---|---|---|
 | Free | $0 | 1,000 requests/month, full API access |
-| Core API (PAYG) | $7 / 1K requests | 10 results with text + highlights, $1/1K for extra results |
+| Search | $7 / 1K requests | 10 neural results with contents + highlights bundled; $1/1K for extra results |
+| Deep Search | $12 / 1K requests | Multi-step neural research |
+| Deep Search (Reasoning) | $15 / 1K requests | Adds reasoning over multi-step results |
+| Answer | $5 / 1K requests | Cited answer endpoint |
+| Monitors | $15 / 1K requests | Long-running watch jobs |
+| Contents endpoint | $1 / 1K pages | Standalone page retrieval |
+| AI Page Summaries | $1 / 1K pages | Cross-endpoint summary add-on |
 | Websets Starter | $49/mo | 8,000 credits, 1 seat, 100 results/Webset, 2 concurrent |
 | Websets Pro | $449/mo | 100,000 credits, 10 seats, 1,000 results/Webset, 10 concurrent |
 | Enterprise | Custom | Volume pricing, SLA, security review |
 
-Prices verified 2026-04-17 via [Exa pricing](https://exa.ai/pricing) and [Exa pricing update](https://exa.ai/docs/changelog/pricing-update). Startups and education projects can apply for $1,000 in free credits.
+Prices verified 2026-05-13 via [Exa pricing](https://exa.ai/pricing) and [Exa pricing update](https://exa.ai/docs/changelog/pricing-update). Startups and education projects can apply for $1,000 in free credits.
 
 ## Against the alternatives
 
@@ -172,12 +217,12 @@ Prices verified 2026-04-17 via [Exa pricing](https://exa.ai/pricing) and [Exa pr
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-04-17 against [Exa pricing](https://exa.ai/pricing), [Exa pricing update](https://exa.ai/docs/changelog/pricing-update), and [Exa Series B announcement](https://exa.ai/blog/announcing-series-b).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-05-13 against [Exa pricing](https://exa.ai/pricing), [Exa pricing update](https://exa.ai/docs/changelog/pricing-update), and [Exa Series B announcement](https://exa.ai/blog/announcing-series-b).
 
 ## FAQ
 
 **Is Exa free?**
-Yes, for prototyping. The free tier includes 1,000 requests per month with full API access. Pay-as-you-go core search starts at $7 per 1,000 requests.
+Yes, for prototyping. The free tier includes 1,000 requests per month with full API access. Pay-as-you-go Search starts at $7 per 1,000 requests, Deep Search at $12, Answer at $5, and Monitors at $15. AI Page Summaries are $1 per 1,000 pages across endpoints.
 
 **What is Websets?**
 A B2B research product built on the Exa index. Users describe criteria in natural language. AI agents verify each result before returning it. Starter is $49/mo; Pro is $449/mo.

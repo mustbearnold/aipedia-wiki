@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0 free / $19.99/mo Plus"
 status: active
 launched: 2023-03
-last_updated: 2026-05-04
-last_verified: 2026-05-04
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,52 +30,52 @@ facts:
     source: https://www.chatpdf.com/
     source_label: ChatPDF official site
     source_id: chatpdf-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   pricing_anchor:
     value: ChatPDF exposes its core free/product limits on the official site; the old /pricing path is not a reliable source
       and should not be used blindly.
     source: https://www.chatpdf.com/
     source_label: ChatPDF official site pricing surface
     source_id: chatpdf-pricing
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-08-13'
   workflow_surface:
     value: The product surface is narrow document chat over PDFs, not a full research suite, vector database, or knowledge-management
       system.
     source: https://www.chatpdf.com/
     source_label: ChatPDF official site
     source_id: chatpdf-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   api_available:
     value: AIpedia should treat ChatPDF as UI-first unless current official docs expose an API surface; prior /api probes were
       unavailable.
     source: https://www.chatpdf.com/
     source_label: ChatPDF official site
     source_id: chatpdf-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-08-13'
   watch_out_for:
     value: For teams, evaluate file size, daily upload limits, data handling, citation reliability, and whether a broader RAG
       tool like NotebookLM or AnythingLLM is a better fit.
     source: https://www.chatpdf.com/
     source_label: ChatPDF official site
     source_id: chatpdf-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
 tags: [pdf, document-chat, research, rag, citations, study-aid]
-seo_title: "ChatPDF: Features, Pricing & Review (April 2026)"
+seo_title: "ChatPDF: Features, Pricing & Review (May 2026)"
 meta_description: "ChatPDF lets you chat with any PDF. Free tier 2 PDFs/day + 120-page cap. Plus $19.99/mo unlocks unlimited uploads and 2,000-page files. Page-level citations make it good for study and research."
 author: "aipedia.wiki Editorial"
 best_for:
@@ -137,7 +137,7 @@ The first tool to make "talk to your PDF" a viable workflow. Upload a PDF, get a
 | Plus | $19.99/mo | Unlimited PDFs, 2,000-page files, 32 MB file size, API access, priority |
 | Team | Custom | SSO, admin console, bulk seats |
 
-Prices verified 2026-04-18 via [chatpdf.com pricing](https://www.chatpdf.com).
+Prices verified 2026-05-13 via [chatpdf.com](https://www.chatpdf.com).
 
 ## Failure modes
 
@@ -149,7 +149,7 @@ Prices verified 2026-04-18 via [chatpdf.com pricing](https://www.chatpdf.com).
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified 2026-04-18 against [chatpdf.com](https://www.chatpdf.com) and [PaperGuide 2026 PDF AI tool roundup](https://paperguide.ai/blog/ai-tools-to-chat-with-pdf/).
+Produced by the aipedia.wiki editorial pipeline. Last verified 2026-05-13 against [chatpdf.com](https://www.chatpdf.com) and [PaperGuide 2026 PDF AI tool roundup](https://paperguide.ai/blog/ai-tools-to-chat-with-pdf/).
 
 ## FAQ
 

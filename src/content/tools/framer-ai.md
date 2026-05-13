@@ -2,16 +2,16 @@
 type: tool
 slug: framer-ai
 title: Framer AI
-tagline: AI-native website builder with text-to-site generation, smart components, one-click translation, and built-in SEO tooling.
+tagline: AI-native website builder with Wireframer text-to-site generation, Workshop visual components, one-click AI Translate, and the new AEO Scanner for answer-engine optimization.
 category: ai-design
 company: framer
 url: https://framer.com
 pricing_model: freemium
-price_range: "$0-$150/month+"
+price_range: "$0-$100/month+ (annual billing)"
 status: active
 launched: 2013-01
-last_updated: 2026-05-04
-last_verified: 2026-05-04
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: https://www.framer.com/ai/
     source_label: Framer AI
     source_id: framer-ai
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
     next_review_at: '2026-08-04'
@@ -41,7 +41,7 @@ facts:
     source: https://www.framer.com/pricing/
     source_label: Framer pricing
     source_id: framer-pricing
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
     next_review_at: '2026-08-04'
@@ -51,7 +51,7 @@ facts:
     source: https://www.framer.com/ai/
     source_label: Framer AI
     source_id: framer-ai
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
     next_review_at: '2026-08-04'
@@ -61,7 +61,7 @@ facts:
     source: https://www.framer.com/help/
     source_label: Framer help
     source_id: framer-help
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-04'
@@ -71,13 +71,13 @@ facts:
     source: https://www.framer.com/
     source_label: Framer official site
     source_id: framer-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-04'
-tags: [ai-design, website-builder, no-code, framer, text-to-website, ai-generate, smart-components, seo, design-tools]
-seo_title: "Framer AI: Features, Pricing & Review (April 2026)"
-meta_description: "Framer is the AI-native website builder. Generate a full site from a text prompt, translate with one click, and ship production-grade responsive design. Plans from Free to Enterprise."
+tags: [ai-design, website-builder, no-code, framer, text-to-website, ai-generate, smart-components, seo, design-tools, aeo-scanner]
+seo_title: "Framer AI: Features, Pricing & Review (May 2026)"
+meta_description: "Framer is the AI-native website builder. Wireframer drafts a full site from a text prompt, AI Translate ships locale pages in one click, and the AEO Scanner audits answer-engine optimization. Plans: Free, Basic $10/mo, Pro $30/mo, Scale $100/mo + Enterprise."
 author: "aipedia.wiki Editorial"
 best_for:
   - founders shipping marketing sites without devs
@@ -97,52 +97,76 @@ price_history:
     source: "https://framer.com/pricing"
     source_label: "Source"
     source_id: framer-ai-pricing
-    note: "Site-level tier verified"
+    note: "Site-level tier verified at $15/mo (annual billing). Superseded by 2026-05-13 restructure."
+  - date: 2026-05-13
+    plan: "Basic"
+    price: "$10/mo (annual)"
+    source: "https://framer.com/pricing"
+    source_label: "Source"
+    source_id: framer-ai-pricing
+    note: "Framer restructured tiers: Mini and Business retired. New lineup is Free / Basic $10 / Pro $30 / Scale $100+usage / Enterprise. All paid pricing is annual-billing first."
+  - date: 2026-05-13
+    plan: "Pro"
+    price: "$30/mo (annual)"
+    source: "https://framer.com/pricing"
+    source_label: "Source"
+    source_id: framer-ai-pricing
+    note: "Pro covers 150 pages, 10 CMS collections, 2,500 CMS items, 100 GB bandwidth, 90-day analytics history, $40/mo extra editors."
+  - date: 2026-05-13
+    plan: "Scale"
+    price: "$100/mo + usage (annual)"
+    source: "https://framer.com/pricing"
+    source_label: "Source"
+    source_id: framer-ai-pricing
+    note: "New flagship tier replacing Business. Starts at 300 pages, 20 CMS collections, 10,000 CMS items, 200 GB bandwidth. Overage fees apply (+$20/100 pages, +$40/10 collections, +$20/10K items, +$40/100 GB)."
 ---
 
 # Framer AI
 
 Framer is a web design and publishing platform from Framer B.V. The AI layer covers text-to-website generation, smart components that adapt to brand inputs, one-click translation across 100+ languages, and generative SEO metadata.
 
-The product ships a full site from a single prompt. Webflow still has no equivalent AI generation path in April 2026.
+The product ships a full site from a single prompt. Webflow still has no equivalent AI generation path in May 2026. Framer also restructured plans in early May, retiring the old Mini and Business tiers in favor of a tighter Free / Basic / Pro / Scale / Enterprise ladder, and shipped a new AEO Scanner for answer-engine optimization auditing alongside the existing AI surface.
 
 ## System Verdict
 
-> **Pick Framer when the deliverable is a marketing site, landing page, or portfolio that needs to ship this week.** AI Generate produces a full multi-page site from a prompt, smart components handle responsive and brand variants, and the CMS plus animation tooling sits in the same editor. Faster than Webflow for iteration and cleaner output than Wix Studio.
+> **Pick Framer when the deliverable is a marketing site, landing page, or portfolio that needs to ship this week.** Wireframer produces a full multi-page site from a chat-style prompt, Workshop handles custom visual components without code, AI Translate ships locale pages in one click, and the new AEO Scanner audits answer-engine readiness in the same editor. Faster than Webflow for iteration and cleaner output than Wix Studio.
 >
 > **Skip it for web apps that need auth, payments, or database logic.** Framer is a site builder, not an application platform. Skip it when a project is already locked into a Figma-to-code pipeline with a dev team: [v0](/tools/v0/) or [Bolt](/tools/bolt/) fit that workflow. Skip it for content-first publishers running tens of thousands of CMS entries: Webflow still wins on CMS scale.
 >
-> **Who pays which tier:** Free for hobby projects and Framer-subdomain sites. Mini $5/mo for one-page custom-domain sites. Basic $15/mo for standard marketing sites. Pro $30/mo for CMS-heavy or animation-heavy work. Business $75/mo when multiple sites or higher bandwidth are required. Enterprise custom for SSO, audit, and compliance.
+> **Who pays which tier (May 2026 lineup):** Free for hobby projects and Framer-subdomain sites. Basic $10/mo (annual) for one-site marketing builds up to 30 pages. Pro $30/mo (annual) for CMS-heavy or animation-heavy work (150 pages, 10 CMS collections, 2,500 items). Scale $100/mo + usage (annual) when sites need 300+ pages, 10,000+ CMS items, or 200+ GB bandwidth. Enterprise custom for SSO, audit, and compliance.
 
 ## Key Facts
 
 | | |
 |---|---|
 | **Core capability** | AI-native website design and publishing |
-| **AI Generate** | Text-to-full-website from a single prompt |
-| **Smart components** | AI-assisted responsive variants with brand inputs |
-| **Translation** | One-click multi-language across 100+ languages |
+| **Wireframer** | Chat-style text-to-full-website from a single prompt |
+| **Workshop** | Visual component builder for custom effects, banners, tabs (no code) |
+| **AI Translate** | One-click multi-language across 100+ languages |
+| **AEO Scanner** | New (May 2026). Audits answer-engine optimization for AI search |
+| **Third-party AI** | OpenAI, Anthropic, Gemini plugins for image gen, text rewrites, alt text |
 | **SEO** | Generative meta tags, structured data, sitemap handling |
 | **CMS** | Built-in collections, dynamic pages, structured content |
-| **Hosting** | Included across all paid tiers, custom domains from Mini |
-| **Tiers** | Free · Mini · Basic · Pro · Business · Enterprise |
+| **Hosting** | Included across all paid tiers, custom domains from Basic |
+| **Tiers (post-May 2026)** | Free · Basic $10 · Pro $30 · Scale $100+usage · Enterprise (all annual billing) |
 
-Every data point above was verified against vendor documentation on 2026-04-17. See Sources.
+Every data point above was verified against vendor documentation on 2026-05-13. See Sources.
 
 ## What it actually is
 
 One design-and-publish platform with an AI generation layer on top. Users type a prompt, Framer produces a full multi-page site with navigation, hero, feature blocks, CMS-ready templates, and SEO scaffolding. Editing happens visually on the same canvas.
 
-The moat is AI parity at the full-site level. v0 ships React components; Framer ships a deployable site. Webflow ships no AI generation path at all in April 2026. Wix Studio has AI, but the output is visibly thinner on animation, CMS depth, and responsive fidelity.
+The moat is AI parity at the full-site level. v0 ships React components; Framer ships a deployable site. Webflow ships no AI generation path at all in May 2026. Wix Studio has AI, but the output is visibly thinner on animation, CMS depth, and responsive fidelity.
 
 Production output is clean HTML and CSS with Framer's own runtime. Sites deploy on Framer hosting by default. Custom domains, SSL, and CDN come built in.
 
 ## When to pick Framer AI
 
-- **You ship marketing sites or landing pages as the primary deliverable.** AI Generate collapses the from-zero build time from days to under an hour.
-- **You iterate on ad-test landing pages.** Generate five prompt variants, A/B test, kill the losers. Webflow's manual build cycle cannot match the throughput.
-- **You need multi-language coverage without a translation vendor.** One-click translate ships native per-locale pages, not query-string overlays.
+- **You ship marketing sites or landing pages as the primary deliverable.** Wireframer collapses the from-zero build time from days to under an hour.
+- **You iterate on ad-test landing pages.** Generate prompt variants in Wireframer, A/B test through the built-in Convert add-on, kill the losers. Webflow's manual build cycle cannot match the throughput.
+- **You need multi-language coverage without a translation vendor.** AI Translate ships native per-locale pages, not query-string overlays.
 - **You want CMS, animation, and publishing in one tool.** Framer covers collections, interactions, and hosting without stitching together Contentful plus Webflow plus Lottie.
+- **You need to audit AEO and AI search readiness.** The new AEO Scanner (May 2026) flags pages that LLMs and AI search engines will not surface cleanly.
 - **You work solo or on a small team without dedicated devs.** The visual editor is learnable in a day, and generated output reads cleanly on edit.
 
 ## When to pick something else
@@ -155,18 +179,19 @@ Production output is clean HTML and CSS with Framer's own runtime. Sites deploy 
 
 ## Pricing
 
-Subscription pricing via [framer.com/pricing](https://framer.com/pricing). Tiers apply per site; workspace-level pricing covers multi-site teams.
+Subscription pricing via [framer.com/pricing](https://framer.com/pricing). Framer restructured plans in early May 2026: the old Mini and Business tiers retired, replaced by a tighter Free / Basic / Pro / Scale / Enterprise ladder. All paid pricing below is **annual billing**.
 
-| Plan | Price | Who's it for |
-|------|-------|--------------|
-| Free | $0 | Framer-subdomain sites, learning and hobby projects |
-| Mini | $5/mo | One-page custom-domain sites, link-in-bio style |
-| Basic | $15/mo | Standard marketing sites and portfolios |
-| Pro | $30/mo | CMS-heavy or animation-heavy sites |
-| Business | $75/mo | Multi-site teams, higher bandwidth |
-| Enterprise | Custom | SSO, audit logs, compliance |
+| Plan | Price | Pages | CMS items | Bandwidth | Editors | Who's it for |
+|------|-------|-------|-----------|-----------|---------|--------------|
+| Free | $0 | Framer-subdomain only | Limited | Shared | 1 owner | Hobby, learning, prototypes |
+| Basic | $10/mo | 30 | 1,000 | 10 GB | +$20/editor | One-site marketing builds and portfolios |
+| Pro | $30/mo | 150 | 2,500 (10 collections) | 100 GB | +$40/editor | CMS-heavy or animation-heavy sites |
+| Scale | $100/mo + usage | 300 (+$20/100) | 10,000 (+$20/10K) | 200 GB (+$40/100GB) | Flexible | Multi-site shops, agencies, high-traffic builds |
+| Enterprise | Custom | Negotiated | Negotiated | Negotiated | SSO + SCIM | Compliance, audit logs, dedicated support |
 
-*Prices verified 2026-04-17 via [framer.com/pricing](https://framer.com/pricing). Site-level tiers cover most solo and small-team use. Workspace pricing layers on top for shops running many sites.*
+Add-ons: Translation locales $20/locale · Convert A/B testing $50 per 500K events · Advanced Hosting $200/mo.
+
+*Prices verified 2026-05-13 via [framer.com/pricing](https://framer.com/pricing). Tiers reflect the post-May restructure that retired Mini ($5) and Business ($75). Free analytics history is 30 days on Basic, 90 days on Pro, unlimited on Scale.*
 
 ## Against the alternatives
 
@@ -184,26 +209,30 @@ Subscription pricing via [framer.com/pricing](https://framer.com/pricing). Tiers
 - **Not a web-app platform.** Auth, payments, server logic, and database-backed state do not fit Framer. Users who try to push it into that territory hit ceilings fast.
 - **CMS depth caps below Webflow.** Tens of thousands of CMS entries with complex editorial workflows still fit Webflow better. Framer handles most marketing-site CMS needs and tops out there.
 - **Framer runtime is proprietary.** Sites ship on Framer hosting by default. Exporting clean code to host elsewhere is not the primary path.
-- **AI Generate output needs cleanup.** First-pass sites read well but need brand tuning, copy edits, and image swaps. The tool speeds the build; it does not eliminate the design pass.
-- **Pricing stacks per site.** Multi-site shops pay per site plus workspace fees. Costs rise faster than a flat Webflow workspace for shops running 10+ sites.
-- **SEO basics are covered, advanced is manual.** Meta, sitemap, and structured data ship cleanly. Advanced schema, programmatic SEO, and edge-cached redirects take hand work.
-- **Mini tier is one-page only.** The $5 tier does not scale to multi-page sites. Basic at $15/mo is the realistic marketing-site floor.
+- **Wireframer output needs cleanup.** First-pass sites read well but need brand tuning, copy edits, and image swaps. The tool speeds the build; it does not eliminate the design pass.
+- **Scale overage fees stack fast.** Heavy multi-site shops pay $100/mo + $20 per 100 pages + $40 per 10 CMS collections + $20 per 10K CMS items + $40 per 100 GB bandwidth. Audit usage before committing.
+- **No more $5 Mini tier.** Framer retired the one-page Mini and the $75 Business tier in early May 2026. Basic at $10/mo (annual) is now the entry custom-domain floor; Scale at $100/mo replaces Business for multi-site work.
+- **SEO basics are covered, advanced is manual.** Meta, sitemap, and structured data ship cleanly. The AEO Scanner flags answer-engine readiness issues, but advanced schema, programmatic SEO, and edge-cached redirects still take hand work.
 - **E-commerce is basic.** Framer handles simple product pages and Stripe links. Serious catalog commerce belongs on Shopify.
+- **Annual-billing-first pricing.** The headline rates above are annual. Monthly billing carries a premium not displayed in the comparison tables.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [framer.com/pricing](https://framer.com/pricing), [framer.com/ai](https://framer.com/ai), [framer.com/features](https://framer.com/features), and the Framer blog.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-05-13 against [framer.com/pricing](https://framer.com/pricing), [framer.com/ai](https://framer.com/ai), [framer.com/features](https://framer.com/features), and the Framer blog. Pricing reflects the early-May 2026 restructure that retired Mini and Business in favor of a Free / Basic $10 / Pro $30 / Scale $100+usage / Enterprise ladder.
 
 ## FAQ
 
 **Is Framer free?**
-Yes. The Free tier covers Framer-subdomain sites for hobby and learning projects. Custom domains start at Mini $5/mo for one-page sites or Basic $15/mo for standard multi-page marketing sites.
+Yes. The Free tier covers Framer-subdomain sites for hobby and learning projects. After the May 2026 restructure, custom domains now start at Basic $10/mo (annual) for one-site marketing builds up to 30 pages. The previous $5 Mini tier was retired.
 
 **What does Framer AI actually generate?**
-A full multi-page website from a text prompt. Navigation, hero, feature sections, CMS-ready templates, and SEO scaffolding all ship on first pass. Users then tune copy, imagery, and brand details.
+A full multi-page website from a text prompt via Wireframer. Navigation, hero, feature sections, CMS-ready templates, and SEO scaffolding all ship on first pass. Workshop layers on custom visual components, AI Translate ships locale pages, and the new AEO Scanner audits answer-engine readiness. Users then tune copy, imagery, and brand details.
 
-**Framer vs Webflow in April 2026?**
+**Framer vs Webflow in May 2026?**
 Framer ships text-to-site generation; Webflow has no AI parity. Webflow still wins on CMS scale and editorial workflow depth for content-first publishers. For marketing sites and landing pages, Framer is the faster builder.
+
+**What changed in Framer's May 2026 pricing?**
+The $5 Mini tier and the $75 Business tier retired. The new lineup is Free, Basic at $10/mo (annual), Pro at $30/mo (annual), Scale at $100/mo + usage (annual), and Enterprise (custom). All headline prices are annual-billing-first; monthly billing carries a premium.
 
 **Framer vs v0?**
 Different categories. v0 generates React components that devs integrate into apps. Framer generates deployable sites. Pick [v0](/tools/v0/) for app-level component work; Framer for publishable marketing sites.

@@ -11,10 +11,10 @@ pricing_model: free
 price_range: "$0 (free in Google Labs beta)"
 status: active
 launched: 2023-02
-last_updated: 2026-05-04
-last_verified: 2026-05-04
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: quarterly
-seo_title: "Galileo AI: Now Google Stitch. Features, Pricing & Review (April 2026)"
+seo_title: "Galileo AI: Now Google Stitch. Features, Pricing & Review (May 2026)"
 meta_description: "Galileo AI was acquired by Google in May 2025 and relaunched as Google Stitch, now powered by Gemini. Stitch is free through Google Labs with 350 standard and 200 experimental generations per month. The standalone Galileo product is retired."
 author: "aipedia.wiki Editorial"
 affiliate:
@@ -35,7 +35,7 @@ facts:
     source: https://www.usegalileo.ai/
     source_label: Galileo / Stitch official site
     source_id: galileo-ai-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
     next_review_at: '2026-08-04'
@@ -45,7 +45,7 @@ facts:
     source: https://www.usegalileo.ai/pricing
     source_label: Galileo / Stitch pricing surface
     source_id: galileo-ai-pricing
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
     next_review_at: '2026-08-04'
@@ -55,7 +55,7 @@ facts:
     source: https://www.usegalileo.ai/features
     source_label: Galileo / Stitch features
     source_id: galileo-ai-features
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
     next_review_at: '2026-08-04'
@@ -65,7 +65,7 @@ facts:
     source: https://www.usegalileo.ai/
     source_label: Galileo / Stitch official site
     source_id: galileo-ai-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
     next_review_at: '2026-08-04'
@@ -75,7 +75,7 @@ facts:
     source: https://www.usegalileo.ai/
     source_label: Galileo / Stitch official site
     source_id: galileo-ai-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
     next_review_at: '2026-08-04'
@@ -107,6 +107,13 @@ price_history:
     source_label: "Source"
     source_id: galileo-ai-pricing
     note: "350 standard + 200 experimental generations per month."
+  - date: 2026-05-13
+    plan: "Google Stitch beta"
+    price: "$0/mo"
+    source: "https://stitch.withgoogle.com"
+    source_label: "Source"
+    source_id: galileo-ai-pricing
+    note: "Re-verified May 13, 2026. Stitch remains free in Google Labs beta with the same 350 standard + 200 experimental cap. No paid tier has been announced."
 ---
 
 # Galileo AI
@@ -138,7 +145,7 @@ Google acquired Galileo AI in May 2025. The team and the product relaunched as G
 | **Legacy pricing** | Free (3 exports), Standard $19/mo, Pro $39/mo (retired 2025) |
 | **API** | None publicly available |
 
-Every data point above was verified against vendor and third-party sources on 2026-04-15. See Sources.
+Every data point above was re-verified against vendor and third-party sources on 2026-05-13. See Sources.
 
 ## What it actually is
 
@@ -166,7 +173,7 @@ The legacy Galileo brand exists only as a historical reference. Search traffic s
 
 ## Pricing
 
-Google Stitch is free through [Google Labs](https://stitch.withgoogle.com) as of April 2026. No paid tier exists yet.
+Google Stitch is free through [Google Labs](https://stitch.withgoogle.com) as of May 2026. No paid tier exists yet.
 
 | Plan | Price | Generations per month | Who's it for |
 |------|-------|-----------------------|--------------|
@@ -181,7 +188,7 @@ Legacy Galileo AI plans (all retired after the Google acquisition in May 2025):
 | Pro | $39/mo (3,000 credits) | Retired |
 | Enterprise | Custom | Retired |
 
-*Pricing verified 2026-04-17 via [Google Stitch](https://stitch.withgoogle.com), the [founders' acquisition announcement](https://x.com/arnaudai/status/1924942577545195982), and independent reviews at [LogRocket](https://blog.logrocket.com/ux-design/i-tried-google-stitch-heres-what-i-loved-hated/) and [Banani](https://www.banani.co/blog/galileo-ai-features-and-alternatives).*
+*Pricing re-verified 2026-05-13 via [Google Stitch](https://stitch.withgoogle.com), the [founders' acquisition announcement](https://x.com/arnaudai/status/1924942577545195982), and independent reviews at [LogRocket](https://blog.logrocket.com/ux-design/i-tried-google-stitch-heres-what-i-loved-hated/) and [Banani](https://www.banani.co/blog/galileo-ai-features-and-alternatives). Free pricing and the 350+200 generation cap have held since the March 2026 Stitch 2.0 release.*
 
 ## Against the alternatives
 
@@ -202,12 +209,12 @@ Legacy Galileo AI plans (all retired after the Google acquisition in May 2025):
 - **Generation quality varies with prompt.** Vague prompts produce generic screens. Specific prompts with named components and layout cues produce better output.
 - **Design systems are not respected.** Stitch generates from Gemini's prior, not from an uploaded brand kit. Output needs a designer pass to match existing visual language.
 - **Data terms differ from paid SaaS.** Labs beta programs typically permit input use for model improvement. Teams with contractual data restrictions should validate terms before using Stitch on client work.
-- **No public API.** Automating Stitch into a CI pipeline or custom design system is not supported as of April 2026.
+- **No public API.** Automating Stitch into a CI pipeline or custom design system is not supported as of May 2026.
 - **Multi-screen output is not a multi-flow output.** Five screens per prompt looks similar by default; reaching a coherent app-wide flow takes multiple prompts and manual stitching.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis shown here. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-04-17 against [Google Stitch](https://stitch.withgoogle.com), the [founders' acquisition announcement on X](https://x.com/arnaudai/status/1924942577545195982), and independent reviews at [Banani](https://www.banani.co/blog/galileo-ai-features-and-alternatives), [LogRocket](https://blog.logrocket.com/ux-design/i-tried-google-stitch-heres-what-i-loved-hated/), and [Moda](https://moda.app/blog/google-stitch-review).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis shown here. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-05-13 against [Google Stitch](https://stitch.withgoogle.com), the [founders' acquisition announcement on X](https://x.com/arnaudai/status/1924942577545195982), and independent reviews at [Banani](https://www.banani.co/blog/galileo-ai-features-and-alternatives), [LogRocket](https://blog.logrocket.com/ux-design/i-tried-google-stitch-heres-what-i-loved-hated/), and [Moda](https://moda.app/blog/google-stitch-review).
 
 ## FAQ
 
@@ -215,7 +222,7 @@ This page was produced by the aipedia.wiki editorial pipeline, an automated syst
 No. Galileo AI was acquired by Google in May 2025 and fully relaunched as Google Stitch, powered by Gemini. The standalone Galileo product and its paid tiers are retired.
 
 **What does Google Stitch cost?**
-Stitch is free through Google Labs as of April 2026. Usage is capped at 350 standard generations and 200 experimental generations per month.
+Stitch is free through Google Labs as of May 2026. Usage is capped at 350 standard generations and 200 experimental generations per month. Re-verified May 13, 2026.
 
 **What happened to my Galileo AI subscription?**
 Legacy paid subscriptions were wound down after the acquisition. Current and former users are directed to [stitch.withgoogle.com](https://stitch.withgoogle.com), which is free.

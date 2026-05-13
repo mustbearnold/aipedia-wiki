@@ -11,8 +11,8 @@ pricing_model: free
 price_range: "$0 + API costs"
 status: active
 launched: 2023-05
-last_updated: 2026-05-04
-last_verified: 2026-05-04
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,8 +31,8 @@ facts:
     source: "https://aider.chat/"
     source_label: "Aider homepage"
     source_id: aider-official
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: medium
     confidence: high
   model_choice:
@@ -40,17 +40,17 @@ facts:
     source: "https://aider.chat/docs/"
     source_label: "Aider docs"
     source_id: aider-pricing
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: medium
     confidence: high
   open_source_or_local:
-    value: "Yes — source is available on GitHub and the workflow runs in your local repo."
+    value: "Yes. Source is available on GitHub and the workflow runs in your local repo."
     source: "https://github.com/Aider-AI/aider"
     source_label: "Aider GitHub repository"
     source_id: aider-repository
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: medium
     confidence: high
   best_for:
@@ -58,8 +58,8 @@ facts:
     source: "https://aider.chat/docs/"
     source_label: "Aider docs"
     source_id: aider-pricing
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: medium
     confidence: high
   watch_out_for:
@@ -67,13 +67,13 @@ facts:
     source: "https://aider.chat/docs/"
     source_label: "Aider docs"
     source_id: aider-pricing
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: medium
     confidence: medium
 tags: [ai-coding, open-source, cli, git-integration, agentic-coding, byok, architect-mode, repo-map]
-seo_title: "Aider: Open-Source AI Coding Assistant Review (April 2026)"
-meta_description: "Aider is a free open-source CLI pair-programmer that edits real files in your git repo, auto-commits each change, and supports Claude Opus 4.7, OpenAI frontier models, Gemini, and Ollama via BYOK. Architect mode, repo-map, /ask /edit /architect chat modes. Verified April 2026."
+seo_title: "Aider: Open-Source AI Coding Assistant Review (May 2026)"
+meta_description: "Aider is a free open-source CLI pair-programmer that edits real files in your git repo, auto-commits each change, and supports Claude Opus 4.7, OpenAI frontier models, Gemini, and Ollama via BYOK. Architect mode, repo-map, /ask /edit /architect chat modes. Verified May 2026."
 author: "aipedia.wiki Editorial"
 best_for:
   - CLI-comfortable developers
@@ -103,6 +103,13 @@ price_history:
     source_label: "Source"
     source_id: aider-pricing
     note: "Verified unchanged. BYOK API costs remain the only spend."
+  - date: 2026-05-13
+    plan: "License"
+    price: "Free (Apache 2.0)"
+    source: "https://aider.chat/docs/"
+    source_label: "Source"
+    source_id: aider-pricing
+    note: "Re-verified May 2026. License unchanged. Claude Opus 4.7 (April 16) is the recommended architect-mode model; BYOK API costs are still the only spend."
 ---
 
 # Aider
@@ -134,7 +141,7 @@ Supports any LLM via API key: Claude Opus 4.7, OpenAI frontier models, Gemini 3.
 | **Voice coding** | Yes, via local speech-to-text |
 | **Watch mode** | Yes, auto-applies suggestions as files change |
 
-Every data point above was verified against vendor documentation on 2026-04-17. See Sources.
+Every data point above was verified against vendor documentation on 2026-05-13. See Sources.
 
 ## What it actually is
 
@@ -174,7 +181,7 @@ Aider itself is free under Apache 2.0. You pay LLM API costs directly.
 | Claude Opus 4.7 (full sessions) | $0.50-$2.00/hr | Highest quality, expensive on large codebases |
 | Ollama (local) | $0 | Fully offline; quality below frontier models |
 
-*Costs verified 2026-04-17. Cost varies with codebase size (repo-map token overhead) and session length. Bug fixes cost pennies; large features spanning many files can cost $1-$5 on Opus.*
+*Costs verified 2026-05-13. Cost varies with codebase size (repo-map token overhead) and session length. Bug fixes cost pennies; large features spanning many files can cost $1-$5 on Opus.*
 
 ## Against the alternatives
 
@@ -200,7 +207,7 @@ Aider itself is free under Apache 2.0. You pay LLM API costs directly.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [aider.chat docs](https://aider.chat/docs/), the [chat modes reference](https://aider.chat/docs/usage/modes.html), the [repo-map docs](https://aider.chat/docs/repomap.html), and the [Aider GitHub repo](https://github.com/Aider-AI/aider).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-05-13 against [aider.chat docs](https://aider.chat/docs/), the [chat modes reference](https://aider.chat/docs/usage/modes.html), the [repo-map docs](https://aider.chat/docs/repomap.html), and the [Aider GitHub repo](https://github.com/Aider-AI/aider).
 
 ## FAQ
 

@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "Bundled with Claude Pro ($20/mo) and up"
 status: beta
 launched: 2026-04
-last_updated: 2026-05-04
-last_verified: 2026-05-04
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -32,50 +32,50 @@ facts:
     source: https://claude.ai/design
     source_label: Claude Design product page
     source_id: claude-design-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-08-13'
   pricing_anchor:
     value: Treat Claude Design packaging as bundled with Claude plan access until Anthropic publishes a separate SKU; verify
       on Claude pricing before quoting.
     source: https://www.anthropic.com/pricing
     source_label: Claude plans and pricing
     source_id: anthropic-pricing
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-08-13'
   code_handoff:
     value: The strongest buyer story is prototype-to-build handoff inside the Claude/Claude Code ecosystem rather than a standalone
       Figma replacement.
     source: https://support.anthropic.com/en/articles/11145838-using-claude-design
     source_label: Claude Design support page
     source_id: claude-design-support
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-08-13'
   workflow_surface:
     value: Claude Design belongs in design prototyping and creative-production workflows, but production readiness still depends
       on export quality and engineering review.
     source: https://claude.ai/design
     source_label: Claude Design product page
     source_id: claude-design-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-08-13'
   watch_out_for:
     value: Because Claude Design is new and access can change quickly, avoid hard claims about exports, model versions, or tier
       availability without rechecking Anthropic and Claude support pages.
     source: https://www.anthropic.com/pricing
     source_label: Claude plans and pricing
     source_id: anthropic-pricing
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-08-13'
 tags: [design, prototyping, prompt-to-prototype, slide-decks, mockups, claude, anthropic, opus-4-7, non-designer, research-preview]
 seo_title: "Claude Design Review: Release Date, Pricing, Figma Comparison and Use Cases"
 meta_description: "Claude Design is Anthropic's prompt-to-prototype tool for mockups, decks, and one-pagers. Compare release date, Claude Pro pricing, codebase-aware design, and Figma alternatives."
@@ -122,6 +122,9 @@ The differentiator: Claude Design reads your **existing codebase and design file
 
 ## Recent developments
 
+- **May 12, 2026:** [Anthropic launched Claude for Legal](/news/2026-05-12-anthropic-claude-for-legal-plugins-microsoft-365/) with 12 practice-area plugins and a Microsoft 365 integration. Reinforces that Anthropic is shipping verticalized Claude surfaces on top of the same Opus 4.7 plumbing that powers Claude Design.
+- **May 6, 2026:** [Claude Managed Agents added dreaming, outcomes, and multiagent orchestration](/news/2026-05-06-claude-managed-agents-dreaming-outcomes-orchestration/). Useful context if you want a Claude Design prototype handed to a managed agent for follow-on build, review, or content production.
+- **April 30, 2026:** [Sources: Anthropic could raise $50B at $900B valuation](/news/2026-04-30-anthropic-50b-900b-valuation-round/). Capital depth behind Claude Design's compute and roadmap looks stable through 2026.
 - **April 29, 2026:** [Anthropic updated its Responsible Scaling Policy around external review](/news/2026-04-29-anthropic-rsp-external-review-update/). Claude Design is not a high-risk deployment surface by itself, but it inherits the broader Claude governance story that enterprise design and product teams will ask about.
 - **April 28, 2026:** [Claude for Creative Work adds connectors for Adobe, Blender, Ableton, Autodesk, and more](/news/2026-04-28-claude-creative-tool-connectors/). Claude Design remains the prompt-to-prototype surface, while the new connectors widen Claude's reach into the tools where finished creative assets and production scripts live.
 - **April 25, 2026:** [AI News Desk, April 25](/news/2026-04-25-ai-news-catchup/) tracked Project Deal and Google-Anthropic financing signals around Claude's broader product ecosystem.
@@ -154,7 +157,7 @@ The differentiator: Claude Design reads your **existing codebase and design file
 | **Availability** | Global, rolled out with Claude itself |
 | **Closed-loop build path** | Prompt to prototype to production code via Claude Code |
 
-Every data point verified against Anthropic announcements and multi-source coverage on 2026-04-18. See Sources.
+Every data point verified against Anthropic announcements and multi-source coverage on 2026-05-13. See Sources.
 
 ## What it actually is
 
@@ -199,7 +202,7 @@ Claude Design is **bundled with every paid Claude tier**. No separate subscripti
 | Team | $30/user/mo | Full access for all seats |
 | Enterprise | Custom | Full access + admin controls |
 
-Prices verified 2026-04-18 against [Anthropic pricing](https://claude.com/pricing). The research-preview label means usage limits may adjust as Anthropic learns how people use it.
+Prices verified 2026-05-13 against [Anthropic pricing](https://claude.com/pricing). The research-preview label means usage limits may adjust as Anthropic learns how people use it.
 
 **No API pricing.** Claude Design is a consumer-facing product. Developers who want design automation through code still use the [Claude API](/tools/claude/) with Opus 4.7 directly.
 
@@ -229,7 +232,7 @@ Prices verified 2026-04-18 against [Anthropic pricing](https://claude.com/pricin
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation and multi-source news coverage, verifies facts against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-04-18 against Anthropic's launch materials and multi-source coverage including TechCrunch, VentureBeat, Gizmodo, The Register, SiliconANGLE, and MacRumors.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation and multi-source news coverage, verifies facts against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-05-13 against Anthropic's launch materials and multi-source coverage including TechCrunch, VentureBeat, Gizmodo, The Register, SiliconANGLE, and MacRumors.
 
 ## FAQ
 

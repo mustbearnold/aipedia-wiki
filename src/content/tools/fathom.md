@@ -11,10 +11,10 @@ pricing_model: freemium
 price_range: "$0-$34/user/month"
 status: active
 launched: 2020-01
-last_updated: 2026-05-04
-last_verified: 2026-05-04
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
-seo_title: "Fathom: Features, Pricing & Review (April 2026)"
+seo_title: "Fathom: Features, Pricing & Review (May 2026)"
 meta_description: "Fathom is a free AI meeting assistant with unlimited recordings, transcriptions, and instant summaries. Plans run Free, Premium $20/mo, Team $19/user/mo, Business $34/user/mo. CRM sync with HubSpot and Salesforce on Business."
 author: "aipedia.wiki Editorial"
 affiliate:
@@ -35,7 +35,7 @@ facts:
     source: https://fathom.video/
     source_label: Fathom official site
     source_id: fathom-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-04'
@@ -45,7 +45,7 @@ facts:
     source: https://fathom.video/pricing
     source_label: Fathom pricing
     source_id: fathom-pricing
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
     next_review_at: '2026-08-04'
@@ -55,7 +55,7 @@ facts:
     source: https://fathom.video/
     source_label: Fathom official site
     source_id: fathom-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-04'
@@ -65,7 +65,7 @@ facts:
     source: https://help.fathom.video/
     source_label: Fathom help center
     source_id: fathom-help
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-04'
@@ -75,7 +75,7 @@ facts:
     source: https://help.fathom.video/
     source_label: Fathom help center
     source_id: fathom-help
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-04'
@@ -113,6 +113,13 @@ price_history:
     source_label: "Source"
     source_id: fathom-pricing
     note: "Verified on fathom.ai/pricing. Adds CRM Field sync, Deal View, AI scorecards"
+  - date: 2026-05-13
+    plan: "All tiers"
+    price: "Unchanged"
+    source: "https://fathom.ai/pricing"
+    source_label: "Source"
+    source_id: fathom-pricing
+    note: "Re-verified May 13, 2026. Free / Premium $20 ($16 annual) / Team $19 ($15 annual) / Business $34 ($25 annual) all stable. Free tier still 5 advanced AI summaries/mo cap."
 ---
 
 # Fathom
@@ -187,7 +194,7 @@ Pricing via [fathom.ai/pricing](https://fathom.ai/pricing):
 
 All paid plans include a 90-day money-back guarantee. Team and Business require a 2-user minimum. CRM sync features cap at 3 users per domain on Team and below.
 
-Prices verified 2026-04-18 via [fathom.ai/pricing](https://fathom.ai/pricing) and cross-checked against the [Alfred Fathom pricing breakdown](https://get-alfred.ai/blog/fathom-pricing).
+Prices re-verified 2026-05-13 via [fathom.ai/pricing](https://fathom.ai/pricing) and cross-checked against the [Alfred Fathom pricing breakdown](https://get-alfred.ai/blog/fathom-pricing). No tier moved between April 18 and May 13.
 
 **Note on the 2026 price move:** Premium was $15/mo as of late 2025; it moved to $20/mo monthly (or $16/mo annual) in early 2026. The free tier terms tightened at the same time: advanced summary templates dropped from unlimited to 5 per month.
 
@@ -215,7 +222,7 @@ Prices verified 2026-04-18 via [fathom.ai/pricing](https://fathom.ai/pricing) an
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-18 against [fathom.ai/pricing](https://fathom.ai/pricing), the [TechCrunch Series A announcement](https://techcrunch.com/2024/09/19/ai-notetaker-fathom-raises-17m/), and cross-referenced with third-party pricing trackers including [Alfred](https://get-alfred.ai/blog/fathom-pricing) and [AISO Tools](https://aisotools.com/pricing/fathom).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [fathom.ai/pricing](https://fathom.ai/pricing), the [TechCrunch Series A announcement](https://techcrunch.com/2024/09/19/ai-notetaker-fathom-raises-17m/), and cross-referenced with third-party pricing trackers including [Alfred](https://get-alfred.ai/blog/fathom-pricing) and [AISO Tools](https://aisotools.com/pricing/fathom). For a head-to-head pick against the newly tracked meeting-notes contender, see [MeetGeek](/tools/meetgeek/).
 
 ## FAQ
 
@@ -240,4 +247,4 @@ Fathom Notetaker Inc., a private company headquartered in San Francisco. Founded
 ## Related
 
 - **Category:** [AI Notes](/categories/ai-notes/) · [AI Automation](/categories/ai-automation/)
-- **Alternatives:** [Fireflies](/tools/fireflies/) · [Otter.ai](/tools/otter-ai/) · [Tactiq](/tools/tactiq/) · [Descript](/tools/descript/)
+- **Alternatives:** [Fireflies](/tools/fireflies/) · [Otter.ai](/tools/otter-ai/) · [MeetGeek](/tools/meetgeek/) · [Tactiq](/tools/tactiq/) · [Descript](/tools/descript/)

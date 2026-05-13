@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "Free (consumer); API from ~$0.47/M input tokens"
 status: active
 launched: 2023-08
-last_updated: 2026-05-04
-last_verified: 2026-05-04
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,51 +30,51 @@ facts:
     source: https://www.doubao.com/
     source_label: Doubao official site
     source_id: doubao-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-08-13'
   pricing_anchor:
     value: Doubao API pricing should be treated as high-volatility and verified against Volcengine’s model-price documentation
       before quoting token costs.
     source: https://www.volcengine.com/docs/82379/1099320
     source_label: Volcengine Doubao model pricing
     source_id: doubao-pricing
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-08-13'
   model_control:
     value: Volcengine is the relevant enterprise/developer product surface for Doubao model access, deployment, and API documentation.
     source: https://www.volcengine.com/product/doubao
     source_label: Volcengine Doubao product page
     source_id: doubao-volcengine-product
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-08-13'
   api_available:
     value: Volcengine docs are the source of truth for Doubao API/model integration assumptions.
     source: https://www.volcengine.com/docs/82379
     source_label: Volcengine Doubao docs
     source_id: doubao-docs
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-08-13'
   watch_out_for:
     value: Separate consumer Doubao claims from Volcengine API procurement; availability, compliance, pricing, model names,
       and regional access can change quickly.
     source: https://www.volcengine.com/docs/82379/1099320
     source_label: Volcengine Doubao model pricing
     source_id: doubao-pricing
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-08-13'
 tags: [chinese-ai, bytedance, ai-chatbot, multimodal, doubao, consumer-ai, china]
-seo_title: "Doubao: Features, Pricing & Review (April 2026)"
-meta_description: "Doubao runs on Seed 2.0 as of April 2026, ByteDance's consumer AI app with 200M+ users. Free in China, Cici/Dola abroad, Volcano Engine API from ~$0.47/M tokens. No direct US app store access."
+seo_title: "Doubao: Features, Pricing & Review (May 2026)"
+meta_description: "Doubao runs on Seed 2.0 as of May 2026, ByteDance's consumer AI app with 200M+ users. Free in China, Cici/Dola abroad, Volcano Engine API from ~$0.47/M tokens. No direct US app store access."
 author: "aipedia.wiki Editorial"
 best_for:
   - Chinese-language consumer use
@@ -90,12 +90,13 @@ quick_answer: >-
 
 # Doubao
 
-ByteDance's consumer AI assistant, launched August 2023 and the most-used AI product in China by daily active users. Runs **Doubao Seed 2.0** as of February 14, 2026, with text, image (Seedream), video (Seedance), voice, and document analysis in one app.
+ByteDance's consumer AI assistant, launched August 2023 and the most-used AI product in China by daily active users. Runs **Doubao Seed 2.0** as of February 14, 2026, with text, image (Seedream), video (Seedance), voice, and document analysis in one app. Seed 2.0 remains the current flagship through the May 2026 refresh.
 
 No direct US app store presence. International users access similar capability through the Cici / Dola app in supported markets. API access runs through ByteDance's Volcano Engine cloud.
 
 ## Recent developments
 
+- **May 12, 2026:** [Anthropic launched Claude for Legal](/news/2026-05-12-anthropic-claude-for-legal-plugins-microsoft-365/) with a Microsoft 365 plug-in surface and 20-plus practice-area connectors. The competitive read for Doubao: regulated Western enterprise procurement keeps moving deeper into Claude and ChatGPT, narrowing the slice of global buyers willing to push tokens through Volcano Engine.
 - **April 21, 2026:** [ByteDance profit down more than 70% on AI infrastructure capex](/news/2026-04-21-bytedance-profit-drop-ai-capex/). Doubao's aggressive free-tier and low-cost Volcano Engine pricing were enabled by ad-revenue subsidy; profit pressure may tighten free-tier caps and push toward usage-based monetization through 2026.
 
 ## System Verdict
@@ -121,7 +122,7 @@ No direct US app store presence. International users access similar capability t
 | **China market share** | 46.4% of China public cloud LLM service market (IDC) |
 | **Western app store** | Not available as "Doubao" · use Cici / Dola abroad |
 
-Every data point above was verified against vendor and press coverage on 2026-04-17. See Sources.
+Every data point above was verified against vendor and press coverage on 2026-05-13. See Sources.
 
 ## What it actually is
 
@@ -159,7 +160,7 @@ Consumer tiers are free. API pricing is pay-as-you-go on [Volcano Engine](https:
 | Volcano Engine API - Seed 2.0 Lite / Mini | Lower | Bulk-volume tier, rates below Pro |
 | Enterprise contracts | Custom | Through ByteDance / Volcano Engine sales |
 
-*Prices verified 2026-04-17 via [ByteDance API Pricing reference](https://aipricing.org/brands/bytedance), [evolink.ai Doubao Seed 2.0 review](https://evolink.ai/blog/doubao-seed-2-0-review-benchmarks-pricing), and [TechNode Seed 2.0 launch coverage](https://technode.com/2026/02/14/bytedance-releases-doubao-seed-2-0-positions-pro-model-against-gpt-5-2-and-gemini-3-pro/). Volcano Engine signup requires a Chinese phone number and real-name verification.*
+*Prices verified 2026-05-13 via [ByteDance API Pricing reference](https://aipricing.org/brands/bytedance), [evolink.ai Doubao Seed 2.0 review](https://evolink.ai/blog/doubao-seed-2-0-review-benchmarks-pricing), and [TechNode Seed 2.0 launch coverage](https://technode.com/2026/02/14/bytedance-releases-doubao-seed-2-0-positions-pro-model-against-gpt-5-2-and-gemini-3-pro/). Volcano Engine signup requires a Chinese phone number and real-name verification.*
 
 ## Against the alternatives
 
@@ -185,7 +186,7 @@ Consumer tiers are free. API pricing is pay-as-you-go on [Volcano Engine](https:
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-04-17 against [ByteDance Seed 2.0 launch coverage](https://technode.com/2026/02/14/bytedance-releases-doubao-seed-2-0-positions-pro-model-against-gpt-5-2-and-gemini-3-pro/), [evolink.ai benchmark review](https://evolink.ai/blog/doubao-seed-2-0-review-benchmarks-pricing), [36Kr DAU reporting](https://eu.36kr.com/en/p/3609313072153862), and [Volcano Engine documentation](https://www.volcengine.com/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-05-13 against [ByteDance Seed 2.0 launch coverage](https://technode.com/2026/02/14/bytedance-releases-doubao-seed-2-0-positions-pro-model-against-gpt-5-2-and-gemini-3-pro/), [evolink.ai benchmark review](https://evolink.ai/blog/doubao-seed-2-0-review-benchmarks-pricing), [36Kr DAU reporting](https://eu.36kr.com/en/p/3609313072153862), [ByteDance profit-pressure coverage](/news/2026-04-21-bytedance-profit-drop-ai-capex/), and [Volcano Engine documentation](https://www.volcengine.com/).
 
 ## FAQ
 

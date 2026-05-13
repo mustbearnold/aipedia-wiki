@@ -2,17 +2,17 @@
 type: tool
 slug: anythingllm
 title: AnythingLLM
-tagline: Open-source all-in-one AI desktop app with document chat, agents, and multi-user support. Free self-hosted; cloud from $25/mo. Best enterprise-grade local-first RAG option.
+tagline: Open-source all-in-one AI desktop app with document chat, agents, and multi-user support. Free self-hosted; cloud from $50/mo. Best enterprise-grade local-first RAG option.
 category: ai-chatbots
 company: mintplex-labs
 url: https://anythingllm.com
 github_url: https://github.com/Mintplex-Labs/anything-llm
 pricing_model: freemium
-price_range: "$0 self-hosted / $25-$99/mo cloud"
+price_range: "$0 self-hosted / $50-$99/mo cloud"
 status: active
 launched: 2023-06
-last_updated: 2026-05-04
-last_verified: 2026-05-04
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -32,52 +32,52 @@ facts:
     source: https://anythingllm.com/
     source_label: AnythingLLM official site
     source_id: anythingllm-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   pricing_anchor:
     value: AnythingLLM has hosted cloud pricing, but self-hosting changes the real cost model to infrastructure, model/API spend,
       and admin time.
     source: https://anythingllm.com/pricing
     source_label: AnythingLLM hosted cloud pricing
     source_id: anythingllm-pricing
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-08-13'
   open_source_or_local:
     value: The GitHub repository is the key proof point for open-source/self-managed evaluation.
     source: https://github.com/Mintplex-Labs/anything-llm
     source_label: AnythingLLM GitHub repository
     source_id: anythingllm-repository
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   runtime_architecture:
     value: Docs should be checked for connector, workspace, vector database, agent, and deployment assumptions before enterprise
       rollout.
     source: https://docs.anythingllm.com/
     source_label: AnythingLLM docs
     source_id: anythingllm-docs
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   watch_out_for:
     value: AnythingLLM is attractive when data locality matters, but buyers must own model selection, retrieval quality, permissions,
       backups, and security hardening if self-hosting.
     source: https://docs.anythingllm.com/
     source_label: AnythingLLM docs
     source_id: anythingllm-docs
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
 tags: [rag, self-hosted, open-source, document-chat, agents, privacy, enterprise, mit-licensed]
-seo_title: "AnythingLLM: Features, Pricing & Review (April 2026)"
-meta_description: "AnythingLLM is an MIT-licensed open-source AI desktop + server app with document chat, agents, and multi-user support. Free self-hosted; cloud $25-$99/mo. Best for privacy-first enterprise RAG."
+seo_title: "AnythingLLM: Features, Pricing & Review (May 2026)"
+meta_description: "AnythingLLM is an MIT-licensed open-source AI desktop + server app with document chat, agents, and multi-user support. Free self-hosted; cloud $50-$99/mo. Best for privacy-first enterprise RAG."
 author: "aipedia.wiki Editorial"
 best_for:
   - teams that need self-hosted document chat
@@ -89,7 +89,15 @@ not_best_for:
   - teams that don't want to manage infrastructure
   - users without Docker or self-hosting experience
 quick_answer: >-
-  AnythingLLM is an open-source MIT-licensed desktop and server app for chat-with-your-documents workflows. Free self-hosted, or cloud tiers at $25/mo (small teams) and $99/mo (large teams). Handles document chat, AI agents, and multi-user workspaces. Pick it for privacy-first or enterprise self-hosted deployments. Skip it for casual single-user PDF chat where ChatPDF is simpler.
+  AnythingLLM is an open-source MIT-licensed desktop and server app for chat-with-your-documents workflows. Free self-hosted, or cloud tiers at $50/mo (Basic, under 5 users / under 100 docs) and $99/mo (Pro, with 72-hour support SLA). Handles document chat, AI agents, and multi-user workspaces. Pick it for privacy-first or enterprise self-hosted deployments. Skip it for casual single-user PDF chat where ChatPDF is simpler.
+price_history:
+  - date: 2026-05-13
+    plan: "Cloud Basic / Pro"
+    price: "$50 / $99 per mo"
+    source: "https://anythingllm.com/pricing"
+    source_label: "Source"
+    source_id: anythingllm-pricing
+    note: "Cloud tiers verified. Basic ($50/mo) is for individuals or teams under 5 users with under 100 documents. Pro ($99/mo) adds a 72-hour support SLA. Enterprise is custom (on-prem option)."
 ---
 
 # AnythingLLM
@@ -102,7 +110,7 @@ Built by Mintplex Labs (YC). An MIT-licensed open-source application that combin
 >
 > **Skip it if you're a solo user with a single PDF.** [ChatPDF](/tools/chatpdf/) is one click. If you just need "talk to this one document," AnythingLLM is over-engineered for the task.
 >
-> **Who pays for cloud:** Small teams who want AnythingLLM's workspace model without running Docker. Large teams buying $99/mo with SSO and compliance needs. Most cost-conscious teams should self-host the free open-source version.
+> **Who pays for cloud:** Individuals or small teams (under 5 users, under 100 documents) take Basic at $50/mo for a private hosted instance. Startups and larger teams buy Pro at $99/mo with a 72-hour support SLA. Enterprise (on-premise install, custom SLA, custom domain, custom integration) is by contract. Most cost-conscious teams should still self-host the free open-source version.
 
 ## Key Facts
 
@@ -111,7 +119,7 @@ Built by Mintplex Labs (YC). An MIT-licensed open-source application that combin
 | **License** | MIT (fully open source) |
 | **Platforms** | Desktop (macOS, Windows, Linux), Docker, cloud |
 | **Self-hosted cost** | $0 |
-| **Cloud tiers** | Small team $25/mo (4GB storage), Large team $99/mo, Enterprise custom |
+| **Cloud tiers** | Basic $50/mo (under 5 users, under 100 docs), Pro $99/mo (72-hour support SLA), Enterprise custom (on-prem) |
 | **LLM support** | OpenAI, Anthropic, Google, Ollama (local), Groq, Together, and any OpenAI-compatible endpoint |
 | **Vector DB support** | LanceDB (default), Pinecone, Weaviate, Chroma, Qdrant, and more |
 | **Document formats** | PDF, DOCX, TXT, MD, HTML, CSV, JSON, many more |
@@ -120,7 +128,7 @@ Built by Mintplex Labs (YC). An MIT-licensed open-source application that combin
 ## When to pick AnythingLLM
 
 - **Regulated industries.** Legal, medical, financial, government workflows where documents cannot leave your infrastructure. Self-host + Ollama locally = fully air-gapped.
-- **Small-to-mid team RAG.** Per-seat SaaS pricing gets expensive fast. $25/mo AnythingLLM Cloud covers a small team cheaper than ChatGPT Team ($30/user).
+- **Small-to-mid team RAG.** Per-seat SaaS pricing gets expensive fast. $50/mo AnythingLLM Cloud Basic covers a team of under 5 cheaper than ChatGPT Team ($30/user) once seat count crosses two.
 - **Developer RAG prototypes.** Open source + extensible = fast iteration. Build your production RAG on top of AnythingLLM's workspace model.
 - **Multi-model workflows.** Point the same app at OpenAI for deep analysis, Ollama for cheap bulk, and Claude for reasoning tasks. No subscription juggling.
 
@@ -135,11 +143,11 @@ Built by Mintplex Labs (YC). An MIT-licensed open-source application that combin
 | Plan | Price | What's included |
 |---|---|---|
 | Self-hosted | $0 | Everything. MIT license. Bring your own LLM + vector DB. |
-| Cloud Small | $25/mo | 4GB storage, small team, hosted by Mintplex |
-| Cloud Large | $99/mo | Larger storage, more users, priority support |
-| Enterprise | Custom | SSO, SAML, compliance, dedicated infra |
+| Cloud Basic | $50/mo | Private instance, custom subdomain, RAG and agents. Individuals or teams under 5 users with under 100 documents. |
+| Cloud Pro | $99/mo | Private instance, RAG and agents, 72-hour support SLA. Startups and larger teams. |
+| Enterprise | Custom | On-premise install, custom SLA, custom domain, custom integration. Large companies. |
 
-Prices verified 2026-04-18 via [anythingllm.com/cloud](https://anythingllm.com/cloud).
+Prices verified 2026-05-13 via [anythingllm.com/pricing](https://anythingllm.com/pricing).
 
 ## Failure modes
 
@@ -157,12 +165,12 @@ Prices verified 2026-04-18 via [anythingllm.com/cloud](https://anythingllm.com/c
 | **Self-hosted** | Yes | No | No | Enterprise only |
 | **Multi-document** | Yes | Plus only | Yes | Yes |
 | **Agent framework** | Yes | No | No | Limited |
-| **Pricing model** | Free or $25-99/mo | $19.99/mo | Free (gated by Google account) | Enterprise sales |
+| **Pricing model** | Free or $50-99/mo | $19.99/mo | Free (gated by Google account) | Enterprise sales |
 | **Best for** | Self-hosted RAG | Quick PDF chat | Google-aligned research | Enterprise search |
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified 2026-04-18 against [anythingllm.com/cloud](https://anythingllm.com/cloud) and [GitHub repo](https://github.com/Mintplex-Labs/anything-llm).
+Produced by the aipedia.wiki editorial pipeline. Last verified 2026-05-13 against [anythingllm.com/pricing](https://anythingllm.com/pricing) and the [GitHub repo](https://github.com/Mintplex-Labs/anything-llm).
 
 ## FAQ
 

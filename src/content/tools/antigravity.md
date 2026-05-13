@@ -10,10 +10,10 @@ pricing_model: freemium
 price_range: "$0-$249.99/month"
 status: active
 launched: 2025-11
-last_updated: 2026-05-04
-last_verified: 2026-05-04
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
-seo_title: "Antigravity: Features, Pricing & Review (April 2026)"
+seo_title: "Antigravity: Features, Pricing & Review (May 2026)"
 meta_description: "Google Antigravity is an agent-first IDE built on a VS Code fork. Gemini 3.1 Pro default, Claude Sonnet 4.6, Opus 4.6, and GPT-OSS 120B supported. Free tier with rate limits, AI Pro $20/mo, AI Ultra $249.99/mo, plus 2,500 credits for $25. Manager view runs parallel agents with Artifacts."
 author: "aipedia.wiki Editorial"
 affiliate:
@@ -29,54 +29,54 @@ scores:
   longevity: 8
 facts:
   best_for:
-    value: Best for developers testing Google’s agent-first IDE concept, especially manager-view orchestration across editor,
+    value: Best for developers testing Google's agent-first IDE concept, especially manager-view orchestration across editor,
       terminal, and browser tasks.
     source: https://antigravity.google/
     source_label: Google Antigravity official site
     source_id: antigravity-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-08-13'
   pricing_anchor:
     value: Antigravity and Gemini subscription packaging are high-volatility; verify whether preview access, Gemini plan limits,
       and model access have changed before quoting pricing.
     source: https://gemini.google/subscriptions/
     source_label: Gemini subscriptions
     source_id: google-gemini-subscriptions
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-08-13'
   coding_agent:
     value: The product positioning is agent-first coding, not only autocomplete, with docs as the key source for workflow assumptions.
     source: https://antigravity.google/docs
     source_label: Google Antigravity docs
     source_id: antigravity-docs
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-08-13'
   model_control:
     value: Model access should be treated as volatile because Gemini subscriptions and preview limits can change faster than
       the page narrative.
     source: https://gemini.google/subscriptions/
     source_label: Gemini subscriptions
     source_id: google-gemini-subscriptions
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-08-13'
   watch_out_for:
     value: Because Antigravity is a fast-moving Google developer product, avoid durable claims about default models, free limits,
       or third-party model access without rechecking official pages.
     source: https://antigravity.google/
     source_label: Google Antigravity official site
     source_id: antigravity-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-08-13'
 tags: [agentic-coding, ide, google, gemini, antigravity, vscode-fork, parallel-agents, artifacts, browser-control]
 best_for:
   - parallel-agent orchestration across editor, terminal, and browser
@@ -184,7 +184,7 @@ Subscription pricing via [gemini.google/subscriptions](https://gemini.google/sub
 | AI Ultra | $249.99/mo | 20x-ish built-in credits, highest rate limits | Sustained multi-agent workloads |
 | Pay-as-you-go | $25 per 2,500 credits | Supplemental top-up when subscription credits exhaust | Spillover on heavy weeks |
 
-Prices verified 2026-04-18 via [Google AI subscriptions](https://gemini.google/subscriptions/), [vibecoding.app Antigravity pricing](https://vibecoding.app/blog/google-antigravity-pricing-2026), and [The Register's March 2026 pricing report](https://www.theregister.com/2026/03/12/users_protest_as_google_antigravity/).
+Prices verified 2026-05-13 via [Google AI subscriptions](https://gemini.google/subscriptions/), [vibecoding.app Antigravity pricing](https://vibecoding.app/blog/google-antigravity-pricing-2026), and [The Register's March 2026 pricing report](https://www.theregister.com/2026/03/12/users_protest_as_google_antigravity/).
 
 **Credit opacity warning:** Google does not publish the credit-to-token conversion rate. Community reporting in March 2026 flagged AI Pro subscribers hitting weekly rate limits at a fraction of their prior daily quota. Budget-sensitive workloads should benchmark their own weekly consumption before committing.
 
@@ -212,21 +212,21 @@ Prices verified 2026-04-18 via [Google AI subscriptions](https://gemini.google/s
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-04-18 against the [Google Developers Antigravity launch post](https://developers.googleblog.com/build-with-google-antigravity-our-new-agentic-development-platform/), the [Antigravity Wikipedia entry](https://en.wikipedia.org/wiki/Google_Antigravity), the [Releasebot Antigravity changelog summary](https://releasebot.io/updates/google/antigravity), the [Gemini 3.1 Pro announcement](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/), and [The Register's March 2026 pricing report](https://www.theregister.com/2026/03/12/users_protest_as_google_antigravity/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-05-13 against the [Google Developers Antigravity launch post](https://developers.googleblog.com/build-with-google-antigravity-our-new-agentic-development-platform/), the [Antigravity Wikipedia entry](https://en.wikipedia.org/wiki/Google_Antigravity), the [Releasebot Antigravity changelog summary](https://releasebot.io/updates/google/antigravity), the [Gemini 3.1 Pro announcement](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/), and [The Register's March 2026 pricing report](https://www.theregister.com/2026/03/12/users_protest_as_google_antigravity/).
 
 ## FAQ
 
 **Is Antigravity free to use?**
 Yes, with rate limits. The free tier grants ~20 requests per day and 5 per minute on Gemini 3.1 Pro. Paid tiers (AI Pro $20/mo, AI Ultra $249.99/mo) bundle into the Google AI Pro and AI Ultra subscriptions and lift those limits. Additional credits cost $25 per 2,500.
 
-**What changed in April 2026?**
-v1.23.2 (April 16, 2026) fixed MCP server loading and workspace-specific settings. v1.22.2 (April 7) introduced a unified permissions system for controlling agent actions. Gemini 3.1 Pro (released Feb 19, 2026) replaced both Gemini 3 Pro High and Low as the default reasoning model.
+**What changed in April-May 2026?**
+v1.23.2 (April 16, 2026) fixed MCP server loading and workspace-specific settings. v1.22.2 (April 7) introduced a unified permissions system for controlling agent actions. Gemini 3.1 Pro (released Feb 19, 2026) replaced both Gemini 3 Pro High and Low as the default reasoning model. As of May 13, 2026, Antigravity still routes Anthropic traffic to Opus 4.6; no Opus 4.7 adoption date has been published.
 
 **How is Antigravity different from Cursor or Windsurf?**
 All three are VS Code forks with AI coding agents. Antigravity leans hardest into the agent-first framing with its Manager view for parallel agent orchestration and native Chrome integration for visual verification. Cursor is broader on model choice and has transparent API-rate billing. Windsurf sits between them with Cascade and cleaner credit accounting.
 
 **Does Antigravity support Claude Opus 4.7?**
-Not yet as of April 18, 2026. The supported Anthropic lineup is Claude Sonnet 4.6 and Claude Opus 4.6. Cursor and Claude Code added Opus 4.7 within minutes of Anthropic's April 16 release; Antigravity has not published an Opus 4.7 availability date.
+Not yet as of May 13, 2026. The supported Anthropic lineup is Claude Sonnet 4.6 and Claude Opus 4.6. Cursor and Claude Code added Opus 4.7 within minutes of Anthropic's April 16 release; Antigravity has not published an Opus 4.7 availability date.
 
 ## Related
 

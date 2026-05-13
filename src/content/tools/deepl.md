@@ -11,11 +11,11 @@ pricing_model: freemium
 price_range: "$0-$69/month"
 status: active
 launched: 2017-08
-last_updated: 2026-05-04
-last_verified: 2026-05-04
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
-seo_title: "DeepL: Features, Pricing & Review (April 2026)"
-meta_description: "DeepL Translator and DeepL Write run on a proprietary next-gen LLM as of April 2026. Free tier, Starter $10.49/mo, Advanced $34.49/mo, Ultimate $68.99/mo. API Free at 500K chars; API Pro pay-as-you-go. EU-based, no training on user data."
+seo_title: "DeepL: Features, Pricing & Review (May 2026)"
+meta_description: "DeepL Translator and DeepL Write run on a proprietary next-gen LLM as of May 2026. Free tier, Starter $10.49/mo, Advanced $34.49/mo, Ultimate $68.99/mo. API Free at 500K chars; API Pro pay-as-you-go. EU-based, no training on user data."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -35,50 +35,50 @@ facts:
     source: https://www.deepl.com/en/translator
     source_label: DeepL Translator
     source_id: deepl-translator
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   pricing_anchor:
     value: DeepL plan details differ across Free, Pro, Teams, Enterprise, and API usage; verify current plan features and regional
       pricing before recommending.
     source: https://support.deepl.com/hc/en-us/articles/360019924499-About-DeepL-plans
     source_label: DeepL plans help center
     source_id: deepl-pricing
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-08-13'
   api_available:
     value: DeepL has developer docs for API integration, so product/API procurement should be separated from consumer Translator/Write
       plans.
     source: https://developers.deepl.com/docs
     source_label: DeepL developer documentation
     source_id: deepl-docs
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   workflow_surface:
     value: DeepL Pro is the business workflow surface for secure text and document translation rather than general AI assistant
       tasks.
     source: https://www.deepl.com/en/pro
     source_label: DeepL Pro
     source_id: deepl-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   watch_out_for:
     value: Check document limits, glossary support, data confidentiality, API quotas, and supported languages; DeepL is a specialist
       translation stack, not a broad LLM workspace.
     source: https://www.deepl.com/en/pro
     source_label: DeepL Pro
     source_id: deepl-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
 tags: [translation, writing, localization, api, glossary, document-translation, gdpr, llm, enterprise, proofreading]
 best_for:
   - EU/GDPR-sensitive translation workloads
@@ -113,6 +113,13 @@ price_history:
     source_label: "Source"
     source_id: deepl-pricing
     note: "Verified unchanged"
+  - date: 2026-05-13
+    plan: "Starter / Advanced / Ultimate"
+    price: "$10.49 / $34.49 / $68.99 per month"
+    source: "https://www.deepl.com/en/pro"
+    source_label: "Source"
+    source_id: deepl-pricing
+    note: "Verified unchanged at May 2026 refresh"
 ---
 
 # DeepL
@@ -123,6 +130,7 @@ The moat is narrow but real. DeepL shows lower edit-distance than GPT-4 or Googl
 
 ## Recent developments
 
+- **May 12, 2026:** [Anthropic launched Claude for Legal with Microsoft 365 plugins](/news/2026-05-12-anthropic-claude-for-legal-plugins-microsoft-365/). Embeds Claude across Word, Outlook, Excel, and PowerPoint with practice-area legal connectors. The competitive read for DeepL: regulated-industry buyers can now route translation through a single trust-vetted enterprise assistant, narrowing the GDPR moat DeepL relies on for legal localisation work.
 - **April 28, 2026:** [Google Translate added AI pronunciation practice on Android](/news/2026-04-28-google-translate-ai-pronunciation-practice/). It is a consumer-language feature rather than a DeepL product change, but it raises the bar for translation tools that now compete on coaching, live conversation, and learning workflows, not only text conversion.
 
 ## System Verdict
@@ -148,7 +156,7 @@ The moat is narrow but real. DeepL shows lower edit-distance than GPT-4 or Googl
 | **CAT tool integrations** | Trados, memoQ, Across, Phrase, Wordfast, and others |
 | **Voice translation** | DeepL Voice for real-time meeting captions (Enterprise) |
 
-Every data point above was verified against vendor documentation on 2026-04-17. See Sources.
+Every data point above was verified against vendor documentation on 2026-05-13. See Sources.
 
 ## What it actually is
 
@@ -195,7 +203,7 @@ API pricing via [DeepL API plans](https://support.deepl.com/hc/en-us/articles/36
 | API Free | $0 | Included | 500,000 / month | 2 | 1 |
 | API Pro | $5.49/mo | $25 per 1M chars | Unlimited | 25 | 1,000 |
 
-*Prices verified 2026-04-17 via [DeepL pricing](https://www.deepl.com/en/pro), [About DeepL plans](https://support.deepl.com/hc/en-us/articles/360019924499-About-DeepL-plans), and [DeepL API plans](https://support.deepl.com/hc/en-us/articles/360021200939-DeepL-API-plans). Annual billing saves ~33% across tiers.*
+*Prices verified 2026-05-13 via [DeepL pricing](https://www.deepl.com/en/pro), [About DeepL plans](https://support.deepl.com/hc/en-us/articles/360019924499-About-DeepL-plans), and [DeepL API plans](https://support.deepl.com/hc/en-us/articles/360021200939-DeepL-API-plans). Annual billing saves ~33% across tiers.*
 
 ## Against the alternatives
 
@@ -222,7 +230,7 @@ API pricing via [DeepL API plans](https://support.deepl.com/hc/en-us/articles/36
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [DeepL pricing](https://www.deepl.com/en/pro), [About DeepL plans](https://support.deepl.com/hc/en-us/articles/360019924499-About-DeepL-plans), [DeepL API plans](https://support.deepl.com/hc/en-us/articles/360021200939-DeepL-API-plans), and the [Next-gen LLM announcement](https://www.deepl.com/en/blog/next-gen-language-model).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [DeepL pricing](https://www.deepl.com/en/pro), [About DeepL plans](https://support.deepl.com/hc/en-us/articles/360019924499-About-DeepL-plans), [DeepL API plans](https://support.deepl.com/hc/en-us/articles/360021200939-DeepL-API-plans), and the [Next-gen LLM announcement](https://www.deepl.com/en/blog/next-gen-language-model).
 
 ## FAQ
 
@@ -233,7 +241,7 @@ Yes. The free web tier covers short text snippets and limited document translati
 Translator converts text across languages. Write refines grammar, tone, and clarity within the same language. Both ship under the same Pro subscription and share the next-gen LLM backbone.
 
 **How many languages does DeepL support?**
-33 stable languages for Translator plus 80+ beta languages, covering roughly 118 total as of April 2026. DeepL Write covers 19 languages. Vietnamese, Hebrew, and Thai were added in 2025.
+33 stable languages for Translator plus 80+ beta languages, covering roughly 118 total as of May 2026. DeepL Write covers 19 languages. Vietnamese, Hebrew, and Thai were added in 2025.
 
 **Does DeepL train on my data?**
 Not on paid plans. Pro, Starter, Advanced, Ultimate, Enterprise, and API Pro all default to no training on user content. Free tier inputs may be used for improvement unless opted out. EU hosting is standard across tiers ([DeepL Pro](https://www.deepl.com/en/pro)).

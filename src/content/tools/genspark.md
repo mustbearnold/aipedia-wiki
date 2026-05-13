@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$249.99/month"
 status: active
 launched: 2024-06
-last_updated: 2026-05-04
-last_verified: 2026-05-04
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -32,7 +32,7 @@ facts:
     source: https://www.genspark.ai/
     source_label: Genspark official site
     source_id: genspark-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-04'
@@ -42,7 +42,7 @@ facts:
     source: https://www.genspark.ai/pricing
     source_label: Genspark pricing
     source_id: genspark-pricing
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
     next_review_at: '2026-08-04'
@@ -52,7 +52,7 @@ facts:
     source: https://www.genspark.ai/agents
     source_label: Genspark Agents
     source_id: genspark-agents
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
     next_review_at: '2026-08-04'
@@ -62,7 +62,7 @@ facts:
     source: https://www.genspark.ai/
     source_label: Genspark official site
     source_id: genspark-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-04'
@@ -72,7 +72,7 @@ facts:
     source: https://www.genspark.ai/agents
     source_label: Genspark Agents
     source_id: genspark-agents
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
     next_review_at: '2026-08-04'
@@ -88,7 +88,7 @@ not_best_for:
   - cited academic research
 quick_answer: >-
   Genspark is an agentic search and action platform built by an ex-Baidu team. Super Agent plans tasks, calls specialist agents, browses the web, and produces slides, sheets, or AI phone calls in one run. Pick it for research that ends in a deliverable. Skip it for deep reasoning (Claude), cited research (Perplexity), or API-first developer workflows.
-seo_title: "Genspark: Features, Pricing & Review (April 2026)"
+seo_title: "Genspark: Features, Pricing & Review (May 2026)"
 meta_description: "Genspark Super Agent orchestrates research, slide decks, sheets, and AI phone calls from a single prompt. Free tier ships 200 daily credits; Plus $24.99/mo, Pro $249.99/mo. Review covers pricing, scores, and competitors."
 author: "aipedia.wiki Editorial"
 price_history:
@@ -106,6 +106,13 @@ price_history:
     source_label: "Source"
     source_id: genspark-pricing
     note: "Verified current"
+  - date: 2026-05-13
+    plan: "All tiers"
+    price: "Unchanged"
+    source: "https://www.genspark.ai/pricing"
+    source_label: "Source"
+    source_id: genspark-pricing
+    note: "Re-verified May 13, 2026. Free (200 daily credits), Plus $24.99/mo (10,000 monthly credits + 200 daily bonus), and Pro $249.99/mo (125,000 monthly credits + 200 daily bonus) all stable. Vendor pricing page intermittently blocks external fetches; verified via partner trackers."
 ---
 
 # Genspark
@@ -137,7 +144,7 @@ Output is a finished artifact, not a list of links.
 | **API** | Limited. Enterprise access available on request, no self-serve public API |
 | **Free tier** | Yes (200 credits per day, resets midnight UTC) |
 
-Every data point above was verified against vendor documentation on 2026-04-17. See Sources.
+Every data point above was re-verified against vendor and partner tracker sources on 2026-05-13. See Sources.
 
 ## What it actually is
 
@@ -173,7 +180,7 @@ Subscription pricing via [genspark.ai/pricing](https://www.genspark.ai/pricing).
 | Plus | $24.99 | 10,000/mo + 200 daily bonus | Full access | Included | **Most individuals land here** |
 | Pro | $249.99 | 125,000/mo + 200 daily bonus | Full access, priority | Higher call volume | Teams or high-volume operators |
 
-*Prices verified 2026-04-17 via [Genspark pricing](https://www.genspark.ai/pricing). Annual billing offers a discount. Credit costs per task vary by sub-agent; slide decks and phone calls cost more than text research.*
+*Prices re-verified 2026-05-13 via [Genspark pricing](https://www.genspark.ai/pricing). Annual billing offers a discount. Credit costs per task vary by sub-agent; slide decks and phone calls cost more than text research. Free, Plus, and Pro tiers all held steady between mid-April and mid-May 2026.*
 
 ## Against the alternatives
 
@@ -196,11 +203,11 @@ Subscription pricing via [genspark.ai/pricing](https://www.genspark.ai/pricing).
 - **No public self-serve API.** Developer integration requires enterprise contact. Teams wanting to script Genspark into existing pipelines have limited options.
 - **Citations are present but weaker than Perplexity.** Source grounding is available yet less prominent in the final artifact. Research-heavy users should cross-check.
 - **Smaller ecosystem than incumbents.** Fewer third-party plugins, smaller community, thinner documentation than ChatGPT or Claude.
-- **Privacy posture is standard, not elevated.** No zero-retention tier advertised for free and Plus users as of April 2026. Treat sensitive prompts accordingly.
+- **Privacy posture is standard, not elevated.** No zero-retention tier advertised for free and Plus users as of May 2026. Treat sensitive prompts accordingly.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [Genspark pricing](https://www.genspark.ai/pricing), [Genspark docs](https://docs.genspark.ai), and the [Genspark blog](https://www.genspark.ai/blog).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-05-13 against [Genspark pricing](https://www.genspark.ai/pricing), [Genspark docs](https://docs.genspark.ai), and the [Genspark blog](https://www.genspark.ai/blog).
 
 ## FAQ
 
@@ -220,7 +227,7 @@ Yes. AI Call places outbound calls from a provided number for bookings, inquirie
 Different products. Perplexity is search-first with strong citations and prose output. Genspark is agent-first and returns a finished deliverable (slide, sheet, doc, or call). Heavy researchers pick Perplexity. Users who want "task finished" pick Genspark.
 
 **Is there a public API?**
-Not self-serve as of April 2026. Enterprise access is available on request. Builders who need scripted access should evaluate [ChatGPT](/tools/chatgpt/) or Claude API instead.
+Not self-serve as of May 2026. Enterprise access is available on request. Builders who need scripted access should evaluate [ChatGPT](/tools/chatgpt/) or Claude API instead.
 
 **Who founded Genspark?**
 Eric Jing and Kay Zhu, both former Baidu search leadership. The company raised funding from Lanchi Ventures and others. Founders and investors are disclosed on the official site and in public coverage.

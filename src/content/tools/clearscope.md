@@ -11,11 +11,11 @@ pricing_model: paid
 price_range: "$129-$399/month"
 status: active
 launched: 2016-01
-last_updated: 2026-05-04
-last_verified: 2026-05-04
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: quarterly
 seo_title: "Clearscope: Features, Pricing & Review (2026)"
-meta_description: "Clearscope is the premium SEO content optimization tool. Essentials $129/mo, Business $399/mo, Enterprise custom. A-F grading, Google Docs integration, and new generative-engine-visibility features for tracking brand mentions in AI answers."
+meta_description: "Clearscope is the premium SEO content optimization tool. Essentials $129/mo, Business $399/mo, Enterprise custom. A-F grading, Google Docs integration, and Prompt Tracking across ChatGPT and Gemini for AI-answer visibility, included on every plan."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -35,50 +35,49 @@ facts:
     source: https://www.clearscope.io/
     source_label: Clearscope official site
     source_id: clearscope-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   pricing_anchor:
     value: Clearscope is priced as a premium SEO workflow product; verify report limits, user seats, AI visibility features,
       and add-ons on the current pricing page.
     source: https://www.clearscope.io/pricing
     source_label: Clearscope pricing
     source_id: clearscope-pricing
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-08-13'
   workflow_surface:
     value: The useful surface is content research, brief creation, grading, and optimization around target queries rather than
       generic AI writing.
     source: https://www.clearscope.io/
     source_label: Clearscope official site
     source_id: clearscope-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   ai_search:
-    value: Clearscope’s current positioning includes Google and AI-search discovery, so track whether generative-answer visibility
-      features are included in the tier being bought.
-    source: https://www.clearscope.io/
-    source_label: Clearscope official site
-    source_id: clearscope-official
-    verified_at: '2026-05-04'
+    value: Clearscope now ships "Prompt Tracking" across all plans to monitor how a brand appears in ChatGPT and Gemini responses, plus brand visibility tracking and query fan-out awareness for AI search.
+    source: https://www.clearscope.io/pricing
+    source_label: Clearscope pricing
+    source_id: clearscope-pricing
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-08-13'
   watch_out_for:
     value: Do not compare Clearscope only by monthly price; compare content-report limits, SERP data quality, editorial adoption,
       and whether AI-search reporting materially changes rankings work.
     source: https://www.clearscope.io/pricing
     source_label: Clearscope pricing
     source_id: clearscope-pricing
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-08-13'
 tags: [seo, content-optimization, enterprise-seo, keyword-research, clearscope]
 best_for:
   - enterprise in-house content teams
@@ -108,6 +107,20 @@ price_history:
     source_label: "Source"
     source_id: clearscope-pricing
     note: "Verified; includes dedicated account manager"
+  - date: 2026-05-13
+    plan: "Essentials"
+    price: "$129/mo"
+    source: "https://www.clearscope.io/pricing"
+    source_label: "Source"
+    source_id: clearscope-pricing
+    note: "Re-verified May 2026. Prompt Tracking (ChatGPT and Gemini) now included on every plan."
+  - date: 2026-05-13
+    plan: "Business"
+    price: "$399/mo"
+    source: "https://www.clearscope.io/pricing"
+    source_label: "Source"
+    source_id: clearscope-pricing
+    note: "Re-verified May 2026. Now lists 50 monthly topic explorations on Business tier alongside 50 tracked topics, 300 pages, 20 drafts, and a dedicated account manager."
 ---
 
 # Clearscope
@@ -116,7 +129,7 @@ Clearscope is the premium SEO content optimization platform used by enterprise i
 
 The core loop is a draft-to-grade feedback cycle. A writer pastes or composes a draft inside Clearscope or Google Docs. The platform returns an A-F grade against top-ranking pages for the target query, a list of missing terms with recommended frequency, and an estimated content grade lift from each edit. Briefs, outlines, and drafts all run through the same engine.
 
-As of 2026, Clearscope has added generative-engine-optimization features. The platform now tracks brand mentions and citations inside AI-generated answers (ChatGPT, Google AI Overviews, Perplexity), with query fan-out awareness for understanding how a single user intent splits into multiple subqueries downstream.
+As of 2026, Clearscope has added generative-engine-optimization features. The platform now ships "Prompt Tracking" across every plan to monitor how a brand appears in ChatGPT and Gemini responses, paired with brand visibility tracking across AI search and query fan-out awareness for understanding how a single user intent splits into multiple subqueries downstream.
 
 ## System Verdict
 
@@ -133,10 +146,10 @@ As of 2026, Clearscope has added generative-engine-optimization features. The pl
 | **Owner** | Mushi Labs (independent, founder-led) |
 | **Flagship feature** | A-F content grading against top-ranking SERP pages |
 | **Editor integration** | Google Docs (native add-on), WordPress, on-platform editor |
-| **AI visibility** | Brand-mention tracking in ChatGPT, Google AI Overviews, Perplexity |
+| **AI visibility** | Prompt Tracking (ChatGPT and Gemini), brand visibility across AI search, query fan-out awareness; included on all plans |
 | **Query fan-out** | Awareness of subquery distribution for a given user intent |
 | **Essentials** | $129/mo, 20 tracked topics, 50 pages, 20 topic explorations, 20 drafts |
-| **Business** | $399/mo, 50 tracked topics, 300 pages, dedicated account manager |
+| **Business** | $399/mo, 50 tracked topics, 300 pages, 50 topic explorations, 20 drafts, dedicated account manager |
 | **Enterprise** | Custom pricing, custom credits, SSO, crawler whitelisting |
 | **User seats** | Unlimited on all tiers |
 | **Public API** | Enterprise tier only |
@@ -150,14 +163,14 @@ The grading engine ingests the top-ranking pages for a target query, extracts re
 
 The Google Docs add-on is the main differentiator against web-only competitors. Writers grade drafts inside their normal editor without copy-paste. For teams handing briefs to outside writers, Clearscope also produces shareable content briefs with target terms, word count, and readability targets embedded.
 
-The 2025-2026 updates added generative-engine-optimization (GEO) tracking. The platform now monitors whether a brand is cited in answers generated by ChatGPT, Google AI Overviews, and Perplexity for tracked topics. This is a genuinely new category, and Clearscope shipped it earlier than most direct competitors.
+The 2025-2026 updates added generative-engine-optimization (GEO) tracking. The platform now ships "Prompt Tracking" across every plan, monitoring whether a brand is cited in answers generated by ChatGPT and Gemini for tracked topics, with brand visibility reporting and query fan-out awareness layered on top. This is a genuinely new category, and Clearscope shipped it earlier than most direct competitors.
 
 ## When to pick Clearscope
 
 - **Enterprise in-house content team with ranking as a revenue driver.** When a single ranking position is worth tens of thousands per month, Clearscope's higher correlation with wins pays for itself.
 - **SEO agency producing client briefs at scale.** Clearscope briefs are the de facto industry format. Outside writers recognize them and price them in.
 - **Google Docs is your primary editor.** Writers grade inline without leaving their workflow. Surfer requires a separate editor or Chrome extension.
-- **You need AI visibility tracking alongside traditional SEO.** Clearscope's brand-mention tracking in ChatGPT and Google AI Overviews is a 2025 addition that most competitors have not yet shipped.
+- **You need AI visibility tracking alongside traditional SEO.** Clearscope's Prompt Tracking for ChatGPT and Gemini, plus brand visibility reporting and query fan-out awareness, ships on every plan and most direct competitors still have not matched it.
 - **You have an account manager relationship expectation.** Business tier includes a dedicated AM; agencies use this as a vendor-management shortcut.
 
 ## When to pick something else
@@ -174,13 +187,13 @@ Pricing via [clearscope.io/pricing](https://www.clearscope.io/pricing):
 
 | Plan | Price | Tracked topics | Pages | Drafts/mo | Extras |
 |---|---|---|---|---|---|
-| Essentials | $129/mo | 20 | 50 | 20 | 20 topic explorations, unlimited users |
-| Business | $399/mo | 50 | 300 | 20 | Dedicated account manager, priority support |
+| Essentials | $129/mo | 20 | 50 | 20 | 20 topic explorations, unlimited users, Prompt Tracking included |
+| Business | $399/mo | 50 | 300 | 20 | 50 topic explorations, dedicated account manager, priority support, Prompt Tracking included |
 | Enterprise | Custom | Custom | Custom | Custom | SSO, crawler whitelisting, API access, custom credits |
 
-Add-ons: extra Pages at $15-25/mo tiered, extra Drafts at $20-50 tiered. All tiers include unlimited user seats (unusual at this price point) and cover both traditional SEO and AI-generated-answer visibility.
+Add-ons: extra Pages at $15-25/mo tiered, extra Drafts at $20-50 per batch tiered. All tiers include unlimited user seats (unusual at this price point) and cover both traditional SEO and AI-generated-answer visibility (Prompt Tracking, brand visibility, query fan-out). Monthly subscriptions, cancel anytime.
 
-Prices verified 2026-04-18 via [Clearscope pricing page](https://www.clearscope.io/pricing).
+Prices verified 2026-05-13 via [Clearscope pricing page](https://www.clearscope.io/pricing).
 
 ## Against the alternatives
 
@@ -207,7 +220,7 @@ Prices verified 2026-04-18 via [Clearscope pricing page](https://www.clearscope.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature claims against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-18 against [Clearscope pricing](https://www.clearscope.io/pricing) and published third-party reviews including the [SelectSoftware Reviews 2026 report](https://www.selectsoftwarereviews.com/reviews/clearscope).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature claims against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [Clearscope pricing](https://www.clearscope.io/pricing) and published third-party reviews including the [SelectSoftware Reviews 2026 report](https://www.selectsoftwarereviews.com/reviews/clearscope).
 
 ## FAQ
 
@@ -215,7 +228,7 @@ This page was produced by the aipedia.wiki editorial pipeline, an automated syst
 For enterprise in-house content teams and serious agencies, usually yes. Clearscope grades correlate more tightly with ranking wins in published third-party evaluations, and the Google Docs integration saves meaningful writer time. For solo creators or small teams, the price premium is rarely justified; Surfer or Frase cover the core workflow at one-third the cost.
 
 **Does Clearscope help with AI-answer visibility?**
-Yes. As of 2025-2026, Clearscope tracks brand mentions and citations inside generative AI answers from ChatGPT, Google AI Overviews, and Perplexity for your tracked topics. Query fan-out awareness shows how a single user intent distributes across subqueries. This is a newer feature set and worth testing on trial topics before committing full budget.
+Yes. As of 2026, Clearscope ships "Prompt Tracking" on every plan to monitor how your brand appears in ChatGPT and Gemini responses, alongside brand visibility reporting across AI search and query fan-out awareness showing how a single user intent distributes across subqueries. This is a newer feature set and worth testing on trial topics before committing full budget.
 
 **What does Clearscope not do?**
 Keyword research (use [Ahrefs](/tools/ahrefs/) or [Semrush](/tools/semrush/)), backlink analysis, technical SEO auditing, rank tracking, and programmatic ad creative (use [AdCreative](/tools/adcreative/)). Clearscope is focused on content optimization and grading, not the full SEO stack.

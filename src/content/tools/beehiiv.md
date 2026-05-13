@@ -14,8 +14,8 @@ pricing_model: freemium
 price_range: "$0-$99+/month"
 status: active
 launched: 2021-11
-last_updated: 2026-05-04
-last_verified: 2026-05-04
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -35,51 +35,51 @@ facts:
     source: https://www.beehiiv.com/
     source_label: beehiiv official site
     source_id: beehiiv-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   pricing_anchor:
     value: beehiiv pricing depends on subscriber count, publication count, automation, monetization, and API needs; verify the
       current tier grid before recommending it.
     source: https://www.beehiiv.com/pricing
     source_label: beehiiv pricing
     source_id: beehiiv-pricing
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-08-13'
   api_available:
     value: beehiiv publishes developer documentation, so it can fit teams that need newsletter data and publishing automation
       beyond the UI.
     source: https://developers.beehiiv.com/
     source_label: beehiiv developer docs
     source_id: beehiiv-developer-docs
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   workflow_surface:
     value: The workflow surface is newsletter growth and monetization rather than general-purpose AI writing.
     source: https://www.beehiiv.com/
     source_label: beehiiv official site
     source_id: beehiiv-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   watch_out_for:
     value: Choose beehiiv for the newsletter operating system, not just AI copy; teams needing full marketing automation may
       still need HubSpot, Customer.io, or a CRM stack.
     source: https://www.beehiiv.com/pricing
     source_label: beehiiv pricing
     source_id: beehiiv-pricing
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-08-13'
 tags: [newsletter, email-marketing, ai-writer, monetization, content-creation, publishing, audience-growth, referrals]
-seo_title: "Beehiiv: Features, Pricing & Review (April 2026)"
+seo_title: "Beehiiv: Features, Pricing & Review (May 2026)"
 meta_description: >-
   Beehiiv is the newsletter platform built by ex-Morning Brew operators. AI Writer, auto-translation,
   referral program, ad network, Boosts, and premium subscriptions in one stack. Launch tier free
@@ -114,6 +114,13 @@ price_history:
     source_label: "Source"
     source_id: beehiiv-pricing
     note: "Paid tiers verified against beehiiv.com/pricing. Price scales with subscriber count."
+  - date: 2026-05-13
+    plan: "Scale / Max"
+    price: "From $43 / $96 per mo"
+    source: "https://www.beehiiv.com/pricing"
+    source_label: "Source"
+    source_id: beehiiv-pricing
+    note: "Repricing verified 2026-05-13. Scale now $43/mo ($517/yr), Max $96/mo ($1,151/yr); both tiers cap at 100,000 subscribers. Beehiiv now advertises a 0% take rate on paid subscription revenue and bundles Boosts plus Ad Network into Scale. Max-only adds branding removal, audio newsletters, up to 10 publications, unlimited team seats."
 ---
 
 # Beehiiv
@@ -124,11 +131,11 @@ The pitch is creator-economy first: the operator owns the subscriber list, the m
 
 ## System Verdict
 
-> **Pick Beehiiv if a newsletter is the business.** The combined ad network, Boosts (paid cross-promotion), native referral program, premium subscriptions, and AI drafting tools make it the most complete creator-economy newsletter stack in April 2026. Operators scaling past 2,500 subscribers get access to monetization surfaces that a hosted Substack or Mailchimp account does not expose.
+> **Pick Beehiiv if a newsletter is the business.** The combined ad network, Boosts (paid cross-promotion), native referral program, 0% take rate on paid subscriptions, and AI drafting tools make it the most complete creator-economy newsletter stack in May 2026. Operators scaling past 2,500 subscribers get access to monetization surfaces that a hosted Substack or Mailchimp account does not expose.
 >
 > **Skip Beehiiv if the newsletter is not the business.** Marketing teams that need deep CRM integration, multi-step drip campaigns, and automated segmentation off a CRM belong on a classic ESP. Hobbyists who want a free list with no revenue pressure can stay on Substack's discovery network. Writers with an existing Substack following and no plan to monetize aggressively have little reason to migrate.
 >
-> **Who pays which tier:** Launch is free for up to 2,500 subscribers with the full editor and referral program. Scale starts at $39/mo and adds the ad network, A/B testing, and removes Beehiiv branding. Max starts at $99/mo and unlocks multi-publication, premium subscriptions, and Boosts on the earning side. Enterprise is priced per seat with custom SLAs.
+> **Who pays which tier:** Launch is free for up to 2,500 subscribers with the full editor and referral program. Scale starts at $43/mo (up to 100,000 subscribers), bundles the Ad Network, Boosts, automations, surveys, advanced analytics, 3-person teams, and a 0% take rate on paid subscriptions. Max starts at $96/mo (also capped at 100,000 subscribers) and adds branding removal, audio newsletters, up to 10 publications, unlimited team seats, priority support, and dynamic content. Enterprise (100,000+ subscribers) is custom and adds dedicated IP, Send API, SSO, and VIP support.
 
 ## Key Facts
 
@@ -139,13 +146,14 @@ The pitch is creator-economy first: the operator owns the subscriber list, the m
 | **AI features** | Beehiiv AI Writer, AI content recommendations, auto-translation, AI summaries, segmentation suggestions |
 | **Monetization surfaces** | Ad network (Beehiiv Ad Network) · Boosts (paid newsletter-to-newsletter promotion) · premium subscriptions · tipping |
 | **Referral program** | Native referral tracking with automated reward tiers |
-| **Pricing shape** | Launch (Free) · Scale · Max · Enterprise. Pricing scales by subscriber count. |
+| **Pricing shape** | Launch (Free) · Scale (from $43/mo) · Max (from $96/mo) · Enterprise. Scale and Max both cap at 100,000 subscribers. |
 | **Free tier ceiling** | 2,500 subscribers |
-| **Custom domain** | Yes on paid tiers |
+| **Paid-subscription take rate** | 0% on Scale, Max, and Enterprise |
+| **Custom domain** | Yes (Launch and up) |
 | **Deliverability** | Dedicated sending infrastructure; strong creator-economy reputation |
-| **Public API** | Yes (Max and Enterprise tiers) |
+| **Public API** | Send API on Enterprise; developer docs available across paid tiers |
 
-Every data point above was verified against vendor documentation on 2026-04-15. See Sources.
+Every data point above was verified against vendor documentation on 2026-05-13. See Sources.
 
 ## What it actually is
 
@@ -177,22 +185,23 @@ Subscription pricing via [beehiiv.com/pricing](https://www.beehiiv.com/pricing).
 
 | Plan | Starting price | Subscriber ceiling | Core features | Monetization | Who's it for |
 |------|----------------|--------------------|---------------|--------------|--------------|
-| Launch | $0/mo | Up to 2,500 | Editor, referral program, analytics, up to 3 posts/day | None | Hobbyists and starting newsletters |
-| Scale | from $39/mo | Scales with list size | Adds A/B testing, removes Beehiiv branding, custom domain, ad network | Ad network | Newsletters crossing 2,500 subscribers |
-| Max | from $99/mo | Scales with list size | Multi-publication, premium subs, Boosts earnings, API, advanced analytics | Ads + Boosts + premium subs | **Creators running newsletters as a business** |
-| Enterprise | Custom | Custom | Dedicated IP, SLA, SSO, migration support | Full stack | Publishing teams and media studios |
+| Launch | $0/mo | Up to 2,500 | Newsletters, website, podcast, unlimited sends, custom domains, basic analytics | None | Hobbyists and starting newsletters |
+| Scale | from $43/mo ($517/yr) | Up to 100,000 | Adds Ad Network, Boosts, automations, surveys, advanced analytics, 3-person teams, 0% paid-sub take rate | Ads + Boosts + premium subs | Newsletters crossing 2,500 subscribers |
+| Max | from $96/mo ($1,151/yr) | Up to 100,000 | Removes Beehiiv branding, audio newsletters, up to 10 publications, unlimited team seats, priority support, dynamic content | Full stack | **Creators running newsletters as a business** |
+| Enterprise | Custom | 100,000+ | Concierge onboarding, dedicated account manager, dedicated IPs, Send API, SSO, VIP support | Full stack | Publishing teams and media studios |
 
-*Prices verified 2026-04-15 via [Beehiiv pricing](https://www.beehiiv.com/pricing). Annual billing saves roughly 20% across Scale and Max. Pricing on Scale and Max rises with subscriber count; run the calculator on the pricing page for an exact number.*
+*Prices verified 2026-05-13 via [Beehiiv pricing](https://www.beehiiv.com/pricing). Annual billing saves roughly 20% across Scale and Max. Both Scale and Max prices rise with subscriber count up to a 100,000-subscriber ceiling; lists above that move to Enterprise. Run the calculator on the pricing page for an exact number at your list size.*
 
-The right default for a serious operator is Max at $99/mo. Boosts earnings alone often recover the subscription once a list crosses 10,000 engaged subscribers. Scale is a bridge tier; most newsletters that outgrow Launch move straight to Max within a year.
+The right default for a serious operator is now Max at $96/mo. Scale already unlocks Ads, Boosts, and premium subs in 2026, so the upgrade case for Max is branding removal, multi-publication, audio newsletters, and unlimited team seats. Boosts earnings often recover either subscription once a list crosses 10,000 engaged subscribers.
 
 ## Against the alternatives
 
 | | Beehiiv Max | Substack | Kit (ConvertKit) | Ghost Pro |
 |---|---|---|---|---|
-| **Cost shape** | Subscription scales with list size | 10% of paid subscription revenue | Subscription scales with list size | Subscription scales with list size |
+| **Cost shape** | Subscription scales with list size (cap 100k) | 10% of paid subscription revenue | Subscription scales with list size | Subscription scales with list size |
+| **Take rate on paid subs** | **0%** (Scale and up) | 10% | 0% | 0% |
 | **Ad network** | **Native** | None | None | None |
-| **Boosts / paid cross-promo** | **Yes** | Recommendations (unpaid) | Sparkloop integration | None native |
+| **Boosts / paid cross-promo** | **Yes (Scale and up)** | Recommendations (unpaid) | Sparkloop integration | None native |
 | **Premium subscriptions** | Yes | Yes (core feature) | Yes | Yes |
 | **Referral program** | **Native** | None | Via third-party | None native |
 | **AI drafting** | Beehiiv AI Writer built-in | None | None built-in | None built-in |
@@ -202,18 +211,17 @@ The right default for a serious operator is Max at $99/mo. Boosts earnings alone
 
 ## Failure modes
 
-- **Pricing climbs hard at scale.** Max starts at $99/mo but can push past $300/mo once a list crosses 100,000 subscribers. Run the calculator before committing.
+- **Pricing climbs hard at scale.** Scale starts at $43/mo and Max at $96/mo, but both rise sharply with subscriber count up to a 100,000 cap; large lists land on Enterprise quotes. Run the calculator before committing.
 - **AI Writer output is generic.** It drafts usable copy, but the voice-match is thin. Most professional writers use it for outlines and first drafts, not finished prose. [ChatGPT](/tools/chatgpt/) and [Claude](/tools/claude/) produce better prose for the same task.
 - **Ad network pays in aggregate, not per send.** Revenue from Beehiiv's native ad network depends on subscriber count, open rates, and advertiser demand. Small lists earn very little.
-- **Boosts only pay on Max.** Ad network revenue is available on Scale, but Boosts earnings (the higher-margin revenue surface) are Max-tier only.
 - **Limited automation depth.** Beehiiv ships segmentation and basic automations, but not the full drip-campaign toolkit a marketing team expects from Customer.io or Klaviyo.
 - **Discovery network is thinner than Substack.** Substack's Notes and recommendation graph still drive organic subscribers better than Beehiiv's tools do. Beehiiv's growth bet is Boosts, which costs money.
-- **API is Max and Enterprise only.** Scale-tier users cannot automate publishing or subscriber management programmatically.
+- **Send API is Enterprise-only.** Scale and Max users get developer docs, but the high-throughput Send API and SSO remain Enterprise gates.
 - **Migration friction from Substack.** Importing subscribers works cleanly; moving paid subscribers requires coordination with Stripe and re-prompting readers to re-authorize payment.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-04-15 against [beehiiv.com](https://www.beehiiv.com), [beehiiv.com/pricing](https://www.beehiiv.com/pricing), and [blog.beehiiv.com](https://blog.beehiiv.com).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-05-13 against [beehiiv.com](https://www.beehiiv.com), [beehiiv.com/pricing](https://www.beehiiv.com/pricing), and [blog.beehiiv.com](https://blog.beehiiv.com).
 
 ## FAQ
 
@@ -230,7 +238,7 @@ Different products for different goals. Beehiiv is a monetization stack: native 
 Kit is an email-first marketer tool focused on sequences, landing pages, and commerce integration. Beehiiv is focused on newsletters as a product, with ads, Boosts, and a referral program that Kit does not ship natively. Marketers running product launches and opt-in funnels often prefer Kit; newsletter operators prefer Beehiiv.
 
 **Does Beehiiv have an API?**
-Yes, on the Max and Enterprise tiers. The API supports publishing, subscriber management, segment creation, and automation.
+Developer documentation is published and used across paid tiers, but the high-throughput Send API is currently an Enterprise feature alongside SSO and dedicated IPs.
 
 **Who owns my subscriber list?**
 The operator. Beehiiv allows clean subscriber export at any tier. The list is portable, which is a deliberate product choice to keep leverage with writers.

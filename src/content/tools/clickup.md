@@ -11,10 +11,10 @@ pricing_model: freemium
 price_range: $0-$40/user/month
 status: active
 launched: 2017-01
-last_updated: 2026-05-04
-last_verified: 2026-05-04
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
-seo_title: 'ClickUp: Features, Pricing & Review (April 2026)'
+seo_title: 'ClickUp: Features, Pricing & Review (May 2026)'
 meta_description: >-
   ClickUp bundles tasks, docs, chat, whiteboards, goals, and ClickUp Brain AI into one workspace. Free tier is genuinely usable; Unlimited $7/user/mo annual, Business $12, Brain AI $9/user/mo add-on, Everything AI $28/user/mo.
 author: aipedia.wiki Editorial
@@ -38,50 +38,50 @@ facts:
     source: https://clickup.com/
     source_label: ClickUp official site
     source_id: clickup-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   pricing_anchor:
     value: ClickUp pricing is seat and plan based, with AI features potentially tied to plan/add-on packaging; verify current
       annual/monthly rates and ClickUp Brain availability.
     source: https://clickup.com/pricing
     source_label: ClickUp pricing
     source_id: clickup-pricing
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-08-13'
   ai_workflow:
     value: ClickUp Brain is positioned as AI across the workspace, so evaluation should test whether answers, writing, summaries,
-      automations, and task context work on the buyer’s real data.
+      automations, and task context work on the buyer's real data.
     source: https://clickup.com/ai
     source_label: ClickUp Brain product page
     source_id: clickup-brain
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-08-13'
   integration_surface:
     value: The main implementation surface is migrating or connecting work-management objects, automations, docs, chat, and
-      reporting—not simply enabling a chatbot.
+      reporting, not simply enabling a chatbot.
     source: https://clickup.com/
     source_label: ClickUp official site
     source_id: clickup-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   watch_out_for:
     value: 'ClickUp can replace multiple tools, but rollout risk is workspace complexity: permissions, notification noise, hierarchy
       design, and user adoption matter more than the AI demo.'
     source: https://clickup.com/pricing
     source_label: ClickUp pricing
     source_id: clickup-pricing
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-08-13'
 tags: [project-management, productivity, workspace, tasks, docs, whiteboards, ai-agents, automations, clickup-brain]
 best_for:
   - small-to-mid teams consolidating tasks + docs + chat in one tool
@@ -117,6 +117,13 @@ price_history:
     source_label: "Source"
     source_id: clickup-pricing
     note: "AI add-on. Unlimited assistant, @Brain Agent, premium model routing (ChatGPT/Gemini/Claude), 1,500 AI Super Credits."
+  - date: 2026-05-13
+    plan: "All tiers"
+    price: "Unchanged"
+    source: "https://clickup.com/pricing"
+    source_label: "Source"
+    source_id: clickup-pricing
+    note: "Re-verified May 13, 2026: Free, Unlimited ($7), Business ($12), Enterprise (custom), Brain ($9), Everything AI ($28) all hold. AI Super Credits $0.001 to $10 per 10,000 credits. 5K automations on Business, 250K on Enterprise."
 ---
 
 # ClickUp
@@ -150,7 +157,7 @@ ClickUp is the productivity workspace that bundles tasks, docs, chat, whiteboard
 | **Data residency** | US (default) · EU · AU (Enterprise) |
 | **Mobile** | iOS and Android apps |
 
-Every data point above verified against ClickUp's published sources on 2026-04-19.
+Every data point above verified against ClickUp's published sources on 2026-05-13.
 
 ## What it actually is
 
@@ -195,7 +202,7 @@ AI add-ons (sit on top of any paid plan):
 | Everything AI | $28/user/mo | Brain + ambient answers, talk-to-text, AI notetaker, image generation, AI fields, AI automations, AI dashboards, 5,000 AI Super Credits |
 | AI Super Credits | Pay-as-you-go | $0.001 to $10 per 10,000 credits (depends on model used) |
 
-Prices verified 2026-04-19 via [ClickUp pricing](https://clickup.com/pricing) and [ClickUp Brain](https://clickup.com/brain). Annual billing saves up to 30% vs monthly. 100% money-back guarantee advertised on the public pricing page.
+Prices verified 2026-05-13 via [ClickUp pricing](https://clickup.com/pricing) and [ClickUp Brain](https://clickup.com/brain). Annual billing saves up to 30% vs monthly. 100% money-back guarantee advertised on the public pricing page.
 
 ## Against the alternatives
 
@@ -222,7 +229,7 @@ Prices verified 2026-04-19 via [ClickUp pricing](https://clickup.com/pricing) an
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-19 against [ClickUp pricing](https://clickup.com/pricing), [ClickUp Brain](https://clickup.com/brain), and the [ClickUp Everything App overview](https://clickup.com/everything-app).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [ClickUp pricing](https://clickup.com/pricing), [ClickUp Brain](https://clickup.com/brain), and the [ClickUp Everything App overview](https://clickup.com/everything-app).
 
 ## FAQ
 

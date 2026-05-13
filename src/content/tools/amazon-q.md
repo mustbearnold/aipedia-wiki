@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$19/user/month"
 status: active
 launched: 2023-11
-last_updated: 2026-05-04
-last_verified: 2026-05-04
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,52 +31,52 @@ facts:
     source: https://aws.amazon.com/q/developer/
     source_label: Amazon Q Developer official site
     source_id: amazon-q-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   pricing_anchor:
-    value: Amazon Q Developer has a free tier and paid Pro pricing; check AWS pricing for current seat, usage, and feature limits.
+    value: 'Amazon Q Developer has a perpetual Free tier (50 agentic requests/mo, 1,000 LOC transformation/mo) and Pro at $19/user/mo (pooled allocations: 4,000 LOC transformation per user per month at account level, increased agentic limits, admin controls, IP indemnity).'
     source: https://aws.amazon.com/q/developer/pricing/
     source_label: Amazon Q Developer pricing
     source_id: amazon-q-pricing
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-08-13'
   coding_agent:
     value: Amazon Q Developer is a coding and software-development assistant with AWS-specific features, not a general chatbot
       replacement.
     source: https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/what-is.html
     source_label: Amazon Q Developer docs
     source_id: amazon-q-docs
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   enterprise_controls:
     value: Enterprise fit is strongest when IAM, AWS admin controls, and cloud-development workflows are already central to
       the team.
     source: https://aws.amazon.com/q/developer/features/
     source_label: Amazon Q Developer features
     source_id: amazon-q-features
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   watch_out_for:
     value: Amazon Q Developer is less compelling as a standalone editor assistant for teams outside AWS; compare against GitHub
       Copilot, Cursor, Windsurf, and Claude Code by IDE and cloud context.
     source: https://aws.amazon.com/q/developer/
     source_label: Amazon Q Developer official site
     source_id: amazon-q-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
 tags: [ai-coding, aws, cloud, autocomplete, ide-plugin, codewhisperer, enterprise, iam, cloudformation, cdk]
-seo_title: "Amazon Q Developer: Review & Pricing (April 2026)"
-meta_description: "Amazon Q Developer is AWS's AI coding assistant. Free tier 50 agentic chat interactions per month; Pro $19/user/mo for 1,000 agentic requests and 4,000 LOC transformation. Best on AWS-heavy stacks."
+seo_title: "Amazon Q Developer: Review & Pricing (May 2026)"
+meta_description: "Amazon Q Developer is AWS's AI coding assistant. Free tier 50 agentic requests per month plus 1,000 LOC transformation; Pro $19/user/mo with increased agentic limits and 4,000 LOC transformation pooled at account level. Best on AWS-heavy stacks."
 author: "aipedia.wiki Editorial"
 best_for:
   - teams building on AWS (IAM, CDK, CloudFormation, Lambda)
@@ -88,7 +88,7 @@ not_best_for:
   - general-purpose coding where Copilot is stronger
   - IDE-first autonomous multi-file editing (Cursor wins)
 quick_answer: >-
-  Amazon Q Developer is AWS's AI coding assistant, evolved from CodeWhisperer. Free tier caps agentic chat at 50 per month plus 1,000 LOC transformation; Pro is $19/user/month for 1,000 agentic requests and 4,000 LOC transformation. Pick it for AWS-native work (IAM, CDK, CloudFormation); skip for general coding where GitHub Copilot at $10/month wins.
+  Amazon Q Developer is AWS's AI coding assistant, evolved from CodeWhisperer. Free tier caps agentic requests at 50 per month plus 1,000 LOC transformation; Pro is $19/user/month with increased agentic limits and 4,000 LOC transformation per user pooled at the account level. Pick it for AWS-native work (IAM, CDK, CloudFormation); skip for general coding where GitHub Copilot at $10/month wins.
 price_history:
   - date: 2024-04-30
     plan: "Pro"
@@ -104,23 +104,30 @@ price_history:
     source_label: "Source"
     source_id: amazon-q-pricing
     note: "Verified unchanged."
+  - date: 2026-05-13
+    plan: "Pro"
+    price: "$19/user/mo"
+    source: "https://aws.amazon.com/q/developer/pricing/"
+    source_label: "Source"
+    source_id: amazon-q-pricing
+    note: "Re-verified May 2026. Pricing unchanged. Free tier confirmed at 50 agentic requests/mo plus 1,000 LOC transformation/mo. Pro 4,000 LOC transformation per user is pooled at the account level (10 Pro users = 40,000 LOC pool). Overage $0.003/LOC."
 ---
 
 # Amazon Q Developer
 
 AWS's AI coding assistant, evolved from CodeWhisperer in April 2024. Available inside VS Code, JetBrains IDEs, the AWS Management Console, and the AWS CLI. Provides inline code completion, codebase-aware chat, security scanning, and automated Java and .NET modernization.
 
-Free tier is perpetual with a monthly cap. Pro tier is $19 per user per month with higher limits and enterprise controls.
+Free tier is perpetual with a 50 agentic-request monthly cap plus 1,000 LOC of transformation. Pro tier is $19 per user per month with increased agentic limits, 4,000 LOC of transformation per user pooled at the account level, admin controls, and IP indemnification.
 
 ## System Verdict
 
 > **Pick Amazon Q Developer if AWS is the core of the stack.** No other assistant matches its native understanding of IAM policies, CloudFormation templates, CDK constructs, and the AWS SDK. The AWS Console chat answers service-specific questions without tab-switching to docs.
 >
-> Security scanning flags OWASP Top 10 issues and hardcoded credentials with fix suggestions. Code transformation automates Java version upgrades (Java 8 or 11 to 17 or 21) and .NET modernization to AWS patterns.
+> Security scanning flags OWASP Top 10 issues and hardcoded credentials with fix suggestions. Code transformation automates Java version upgrades (Java 8 or 11 to 17 or 21) and .NET modernization to AWS patterns. As of April 28, 2026, [OpenAI's GPT-5.5 family is also addressable through AWS Bedrock](/news/2026-04-28-openai-models-aws-bedrock/), which broadens the foundation-model options available alongside Q Developer for AWS-native teams.
 >
 > **Skip it if the codebase lives outside AWS.** [GitHub Copilot](/tools/github-copilot/) at $10 per user per month remains stronger for general coding across languages, frameworks, and non-AWS infrastructure. [Cursor](/tools/cursor/) still leads on multi-file autonomous edits.
 >
-> **Who pays which tier:** Free for casual exploration (50 agentic chats per month), Pro $19 per user per month for serious AWS work with security scanning and transformation, Enterprise via AWS contract for volume and admin controls.
+> **Who pays which tier:** Free for casual exploration (50 agentic requests per month plus 1,000 LOC transformation), Pro $19 per user per month for serious AWS work with security scanning and pooled 4,000 LOC transformation, Enterprise via AWS contract for volume and admin controls.
 
 ## Key Facts
 
@@ -128,14 +135,14 @@ Free tier is perpetual with a monthly cap. Pro tier is $19 per user per month wi
 |---|---|
 | **Lineage** | Replaced CodeWhisperer in April 2024 |
 | **IDE support** | VS Code, JetBrains family, AWS Console, AWS CLI |
-| **Free tier** | 50 agentic chat interactions/mo, 1,000 LOC transformation/mo, unlimited autocomplete |
-| **Pro tier** | $19/user/mo. 1,000 agentic requests/mo, 4,000 LOC transformation/mo, admin controls, IAM Identity Center SSO |
+| **Free tier** | 50 agentic requests/mo, 1,000 LOC transformation/mo, unlimited autocomplete |
+| **Pro tier** | $19/user/mo. Increased agentic-request limits, 4,000 LOC transformation per user (pooled at account level), admin controls, IAM Identity Center SSO |
 | **Transformation overage** | $0.003 per LOC above Pro allocation |
 | **Security scanning** | OWASP Top 10, hardcoded credentials, fix suggestions |
 | **IP indemnification** | Yes, matching GitHub Copilot's policy |
-| **Underlying models** | Undisclosed by AWS |
+| **Underlying models** | Undisclosed by AWS. GPT-5.5 family is separately accessible through AWS Bedrock since April 28, 2026 |
 
-Every data point above was verified against vendor documentation on 2026-04-17. See Sources.
+Every data point above was verified against vendor documentation on 2026-05-13. See Sources.
 
 ## What it actually is
 
@@ -166,11 +173,11 @@ The moat is AWS-native context. IAM policy drafting, CDK construct patterns, Lam
 
 | Plan | Price | Key limits |
 |------|-------|-----------|
-| Free | $0 | 50 agentic chat interactions/mo, 1,000 LOC transformation/mo, unlimited autocomplete |
-| Pro | $19/user/mo | 1,000 agentic requests/mo, 4,000 LOC transformation/mo, admin controls, SSO (IAM Identity Center), data isolation, IP indemnity |
-| Transformation overage (Pro) | $0.003/LOC | Beyond the 4,000 LOC monthly allocation |
+| Free | $0 | 50 agentic requests/mo, 1,000 LOC transformation/mo, unlimited autocomplete |
+| Pro | $19/user/mo | Increased agentic-request allocation, 4,000 LOC transformation per user per month (pooled at account level), admin controls, SSO (IAM Identity Center), data isolation, IP indemnity |
+| Transformation overage (Pro) | $0.003/LOC | Beyond the 4,000 LOC monthly pooled allocation |
 
-*Prices verified 2026-04-17 via [aws.amazon.com/q/developer/pricing](https://aws.amazon.com/q/developer/pricing/) and the [Q Developer tiers docs](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/q-tiers.html).*
+*Prices verified 2026-05-13 via [aws.amazon.com/q/developer/pricing](https://aws.amazon.com/q/developer/pricing/) and the [Q Developer tiers docs](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/q-tiers.html). Transformation LOC is pooled across all Pro seats in the account, so 10 Pro subscribers share a 40,000 LOC monthly budget.*
 
 ## Against the alternatives
 
@@ -187,17 +194,17 @@ The moat is AWS-native context. IAM policy drafting, CDK construct patterns, Lam
 
 ## Failure modes
 
-- **Free tier caps hit fast.** 50 agentic chats per month is one or two days of real usage. Free is a trial, not a production tier.
+- **Free tier caps hit fast.** 50 agentic requests per month is one or two days of real usage. Free is a trial, not a production tier.
 - **Weaker outside AWS.** General-purpose coding quality trails [GitHub Copilot](/tools/github-copilot/) on non-AWS code.
 - **Transformation overage bills separately.** Heavy Java or .NET migration workloads can exceed 4,000 LOC per user per month and trigger $0.003 per extra LOC charges.
 - **JetBrains support trails VS Code.** Parity is close but updates land on VS Code first.
-- **Underlying models are undisclosed.** AWS does not publish which foundation model powers Q Developer, making behavior changes hard to predict.
+- **Underlying models are undisclosed.** AWS does not publish which foundation model powers Q Developer, making behavior changes hard to predict. As a workaround, teams that want to compare model behaviors can hit GPT-5.5 and Claude Opus 4.7 directly via Bedrock since the April 28, 2026 expansion.
 - **Multi-file autonomous editing is limited.** [Cursor](/tools/cursor/) Composer and Claude Code both handle bigger refactors.
 - **Console chat quality varies by service.** Mature AWS services have better coverage than new or niche offerings.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis shown. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [Amazon Q Developer pricing](https://aws.amazon.com/q/developer/pricing/), the [Q Developer tiers docs](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/q-tiers.html), and the [Amazon Q Developer FAQ](https://aws.amazon.com/q/developer/faqs/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis shown. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-05-13 against [Amazon Q Developer pricing](https://aws.amazon.com/q/developer/pricing/), the [Q Developer tiers docs](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/q-tiers.html), the [Amazon Q Developer FAQ](https://aws.amazon.com/q/developer/faqs/), and the [April 28 OpenAI-on-Bedrock coverage](/news/2026-04-28-openai-models-aws-bedrock/).
 
 ## FAQ
 
@@ -205,7 +212,7 @@ This page was produced by the aipedia.wiki editorial pipeline, an automated syst
 Q Developer replaced CodeWhisperer in April 2024. It adds chat, code transformation, and AWS Console integration on top of the autocomplete and security scanning CodeWhisperer offered. Existing users migrated automatically.
 
 **Does the free tier support real usage?**
-For casual exploration, yes. For daily work, no. 50 agentic chat interactions per month is one or two days of real development.
+For casual exploration, yes. For daily work, no. 50 agentic requests per month is one or two days of real development; the 1,000 LOC monthly transformation budget barely covers a small library migration.
 
 **Does Q Developer work outside AWS?**
 Yes. Autocomplete and chat function on any codebase. The AWS-specific advantage (IAM, CDK, CloudFormation, Lambda) is absent on non-AWS work, so [GitHub Copilot](/tools/github-copilot/) at $10 per month delivers better value there.
