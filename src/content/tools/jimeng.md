@@ -11,10 +11,10 @@ pricing_model: freemium
 price_range: "$9.60-$84/month"
 status: active
 launched: 2024-08
-last_updated: 2026-05-04
-last_verified: 2026-05-04
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
-seo_title: "Jimeng AI: Features, Pricing & Review (April 2026)"
+seo_title: "Jimeng AI: Features, Pricing & Review (May 2026)"
 meta_description: "Jimeng (即梦) is ByteDance's Chinese-market creative app for image and video, powered by Seedream 5.0 and Seedance 2.0. Dreamina is the international rebrand. China tier from 69 RMB/mo (~$9.60), international from $18/mo. CapCut integrated."
 author: "aipedia.wiki Editorial"
 affiliate:
@@ -34,50 +34,50 @@ facts:
     source: https://jimeng.jianying.com/
     source_label: Jimeng AI official site
     source_id: jimeng-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   pricing_anchor:
     value: Jimeng access/pricing can be region and app-account dependent; verify live official surfaces before publishing durable
       plan or credit claims.
     source: https://jimeng.jianying.com/
     source_label: Jimeng AI official site
     source_id: jimeng-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-08-13'
   workflow_surface:
     value: The product is oriented around creative image/video generation, not a general business chatbot or developer model
       platform.
     source: https://jimeng.jianying.com/
     source_label: Jimeng AI official site
     source_id: jimeng-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   platform_context:
     value: Volcengine media infrastructure is relevant background for ByteDance/Tencent-style cloud media workflows but should
       not be conflated with consumer Jimeng pricing.
     source: https://www.volcengine.com/product/veImageX
     source_label: Volcengine image/video infrastructure
     source_id: jimeng-volcengine
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   watch_out_for:
     value: Check region availability, account requirements, export rights, watermarking, language UX, and commercial-use terms
       before recommending Jimeng outside China.
     source: https://jimeng.jianying.com/
     source_label: Jimeng AI official site
     source_id: jimeng-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-08-13'
 tags: [ai-image, ai-video, jimeng, dreamina, bytedance, seedream, seedance, capcut, chinese-ai, consumer-app]
 best_for:
   - Chinese-market creators already on Douyin and CapCut
@@ -100,7 +100,7 @@ price_history:
     source: "https://dreamina.capcut.com"
     source_label: "Source"
     source_id: jimeng-pricing
-    note: "International launch credit plans span $18-$84/mo."
+    note: "International launch credit plans span $18 to $84/mo."
   - date: 2026-04-15
     plan: "Jimeng (China)"
     price: "69 RMB/mo"
@@ -108,6 +108,13 @@ price_history:
     source_label: "Source"
     source_id: jimeng-pricing
     note: "China pricing floor confirmed at ~$9.60 USD equivalent."
+  - date: 2026-05-13
+    plan: "Dreamina (international)"
+    price: "$18/mo"
+    source: "https://dreamina.capcut.com"
+    source_label: "Source"
+    source_id: jimeng-pricing
+    note: "Re-verified May 2026; Seedream 5.0-Preview and Seedance 2.0 remain the current model stack."
 ---
 
 # Jimeng AI
@@ -141,7 +148,7 @@ The engine is two ByteDance model families. **Seedream 5.0-Preview** handles ima
 | **International markets** | Initial Seedance 2.0 rollout in Brazil, Indonesia, Malaysia, Mexico, Philippines, Thailand, Vietnam |
 | **CLI** | Jimeng AI CLI for terminal image and video generation |
 
-Every data point above was verified on 2026-04-17. See Sources.
+Every data point above was verified on 2026-05-13. See Sources.
 
 ## What it actually is
 
@@ -189,7 +196,7 @@ China and international split. Credits do not carry between cycles.
 | Mid | Variable | Regular users in supported markets |
 | Top | $84/mo | Heaviest credit consumption tier |
 
-*Prices verified 2026-04-17 via third-party pricing coverage and the [Dreamina CapCut portal](https://dreamina.capcut.com). Direct rate cards move between Jimeng RMB tiers and Dreamina USD tiers; exact credit counts per plan change with model release cadence. Check the live pricing page before subscribing.*
+*Prices verified 2026-05-13 via third-party pricing coverage and the [Dreamina CapCut portal](https://dreamina.capcut.com). Direct rate cards move between Jimeng RMB tiers and Dreamina USD tiers; exact credit counts per plan change with model release cadence. Check the live pricing page before subscribing.*
 
 ## Against the alternatives
 
@@ -218,7 +225,7 @@ China and international split. Credits do not carry between cycles.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies model and pricing claims against primary sources, and generates the editorial analysis readers see. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against the [Dreamina CapCut portal](https://dreamina.capcut.com), [TechCrunch coverage of Seedance 2.0 in CapCut](https://techcrunch.com/2026/03/26/bytedances-new-ai-video-generation-model-dreamina-seedance-2-0-comes-to-capcut/), [Pandaily's Seedream 5.0-Preview launch report](https://pandaily.com/byte-dance-s-cap-cut-launches-seedream-5-0-preview-image-model-with-real-time-web-search-capability), and the [ByteDance Seed models page](https://seed.bytedance.com/en/models).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies model and pricing claims against primary sources, and generates the editorial analysis readers see. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-05-13 against the [Dreamina CapCut portal](https://dreamina.capcut.com), [TechCrunch coverage of Seedance 2.0 in CapCut](https://techcrunch.com/2026/03/26/bytedances-new-ai-video-generation-model-dreamina-seedance-2-0-comes-to-capcut/), [Pandaily's Seedream 5.0-Preview launch report](https://pandaily.com/byte-dance-s-cap-cut-launches-seedream-5-0-preview-image-model-with-real-time-web-search-capability), and the [ByteDance Seed models page](https://seed.bytedance.com/en/models).
 
 ## FAQ
 

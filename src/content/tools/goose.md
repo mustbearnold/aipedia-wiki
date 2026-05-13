@@ -11,8 +11,8 @@ pricing_model: open-source
 price_range: "Free (Apache-2.0; BYOK LLM costs)"
 status: active
 launched: 2025-01
-last_updated: 2026-05-04
-last_verified: 2026-05-04
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: frequent
 affiliate:
   has_program: false
@@ -32,51 +32,51 @@ facts:
     source: https://github.com/block/goose
     source_label: Goose GitHub repository
     source_id: goose-repository
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-08-13'
   pricing_anchor:
     value: Goose itself is open source; practical cost comes from chosen model providers, local/remote execution, and any surrounding
       infrastructure.
     source: https://github.com/block/goose
     source_label: Goose GitHub repository
     source_id: goose-repository
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-08-13'
   open_source_or_local:
     value: The repository is the authoritative source for license, installation, releases, extensions, and project activity.
     source: https://github.com/block/goose
     source_label: Goose GitHub repository
     source_id: goose-repository
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   runtime_architecture:
     value: Goose should be evaluated as an extensible agent runtime; check provider setup, extension permissions, MCP/tooling
       behavior, and local security posture.
     source: https://block.github.io/goose/
     source_label: Goose official site
     source_id: goose-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-08-13'
   watch_out_for:
     value: 'Open-source agent power comes with risk: require sandboxing, secrets hygiene, review checkpoints, and clear provider-cost
       controls before daily-driver use.'
     source: https://github.com/block/goose
     source_label: Goose GitHub repository
     source_id: goose-repository
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-08-13'
 tags: [open-source, agent, cli, desktop-app, multi-llm, mcp, automation, coding, block, linux-foundation, rust, aaif, apache-2]
-seo_title: "Goose AI Agent: Features, Review & Alternatives (April 2026)"
+seo_title: "Goose AI Agent: Features, Review & Alternatives (May 2026)"
 meta_description: "Goose is the free Apache-2.0 AI agent from Block, contributed to the Linux Foundation's Agentic AI Foundation in December 2025. Desktop, CLI, and API with 15+ LLM providers and 70+ MCP extensions."
 author: "aipedia.wiki Editorial"
 best_for:
@@ -105,6 +105,13 @@ price_history:
     source_label: "Source"
     source_id: goose-pricing
     note: "Verified unchanged. Apache-2.0, BYOK LLM costs."
+  - date: 2026-05-13
+    plan: "Open-source"
+    price: "Free"
+    source: "https://github.com/block/goose"
+    source_label: "Source"
+    source_id: goose-pricing
+    note: "Verified unchanged. Apache-2.0, BYOK LLM costs. AAIF governance continuing."
 ---
 
 # Goose
@@ -137,7 +144,7 @@ Runs as a native desktop app, CLI, and API on macOS, Linux, and Windows. Support
 | **GitHub stars** | 29,000+ as of April 2026 |
 | **Pricing** | Free. Users pay their own LLM costs |
 
-Every data point above was verified against vendor documentation on 2026-04-17. See Sources.
+Every data point above was verified against vendor documentation on 2026-05-13. See Sources.
 
 ## What it actually is
 
@@ -172,7 +179,7 @@ Provider flexibility is the architectural commitment. Swap LLMs via config; work
 | CLI | Free |
 | API (self-host) | Free |
 
-*Goose itself is Apache-2.0 and free. Users pay the LLM provider directly. Verified 2026-04-17 via [GitHub](https://github.com/block/goose) and the [official docs](https://block.github.io/goose/).*
+*Goose itself is Apache-2.0 and free. Users pay the LLM provider directly. Verified 2026-05-13 via [GitHub](https://github.com/block/goose) and the [official docs](https://block.github.io/goose/).*
 
 ## Against the alternatives
 
@@ -199,7 +206,7 @@ Provider flexibility is the architectural commitment. Swap LLMs via config; work
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis shown. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against [Goose documentation](https://block.github.io/goose/), the [block/goose GitHub repository](https://github.com/block/goose), and the [Block open-source announcement](https://block.xyz/inside/block-open-source-introduces-codename-goose).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis shown. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [Goose documentation](https://block.github.io/goose/), the [block/goose GitHub repository](https://github.com/block/goose), and the [Block open-source announcement](https://block.xyz/inside/block-open-source-introduces-codename-goose).
 
 ## FAQ
 

@@ -11,11 +11,11 @@ pricing_model: enterprise
 price_range: "Contact sales (reported ~$1,000-$1,200 per lawyer/month)"
 status: active
 launched: 2022-07
-last_updated: 2026-05-04
-last_verified: 2026-05-04
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: quarterly
-seo_title: "Harvey AI: Features, Pricing & Review (2026)"
-meta_description: "Harvey is the enterprise AI platform for law firms. Workflows, Vault, Assistant, and Agents ground LLM output on firm documents. Used by majority of AmLaw 100. $11B valuation after March 2026 raise. Pricing is enterprise-only, reported around $1,000-$1,200 per lawyer/month."
+seo_title: "Harvey AI: Features, Pricing & Review (May 2026)"
+meta_description: "Harvey is the enterprise AI platform for law firms. Workflows, Vault, Assistant, Agents, and Harvey Mobile ground LLM output on firm documents. 142,000+ professionals across 60 AmLaw 100 firms. $11B valuation after March 2026 raise. Now an MCP connector in Anthropic's Claude for Legal."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -31,53 +31,57 @@ scores:
 facts:
   best_for:
     value: Best for law firms and professional-services organizations that need domain-specific AI workflows for legal research,
-      drafting, analysis, and matter work.
+      drafting, analysis, and matter work. As of May 12, 2026, Harvey is also a first-party MCP connector inside Anthropic's
+      Claude for Legal, putting Vault-grounded retrieval inside the Word, Outlook, Excel, and PowerPoint surfaces Claude now
+      embeds in.
     source: https://www.harvey.ai/
     source_label: Harvey official site
     source_id: harvey-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   pricing_anchor:
     value: Harvey is enterprise-sales led; buyers should expect custom pricing tied to firm size, deployment scope, security
-      review, and professional-services workflows.
+      review, and professional-services workflows. Reported third-party ACV held around $1,000 to $1,200 per lawyer per month
+      through May 2026.
     source: https://www.harvey.ai/platform
     source_label: Harvey platform
     source_id: harvey-platform
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-08-13'
   workflow_surface:
-    value: Harvey’s platform is built for legal and professional services rather than generic consumer productivity.
+    value: Harvey's platform is built for legal and professional services rather than generic consumer productivity, with
+      Harvey Mobile now extending Assistant, Vault, and Workflows access for remote work.
     source: https://www.harvey.ai/platform
     source_label: Harvey platform
     source_id: harvey-platform
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   enterprise_controls:
     value: Security and confidentiality review is central because Harvey targets sensitive matters and professional-services
-      data.
+      data; SOC 2 Type II, ISO 27001, GDPR, CCPA, SAML SSO, audit logs, and IP allow-listing are baseline controls.
     source: https://www.harvey.ai/security
     source_label: Harvey security
     source_id: harvey-security
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   watch_out_for:
     value: Adoption should be evaluated by matter-level workflow fit, citation/verification discipline, confidentiality controls,
-      and lawyer review—not just model benchmark claims.
+      and lawyer review, not just model benchmark claims.
     source: https://www.harvey.ai/blog
     source_label: Harvey blog
     source_id: harvey-blog
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
 tags: [legal-ai, law-firms, enterprise, document-drafting, workflows, harvey]
 best_for:
   - contract analysis, due diligence, and M&A document review
@@ -91,8 +95,22 @@ not_best_for:
   - firms that need fully on-prem deployment (Harvey is cloud-native)
   - anyone wanting self-serve signup or published pricing
 quick_answer: >-
-  Harvey is the legal-specialist AI platform most AmLaw 100 firms have already bought. Pick it if the firm is large enough to justify a six-figure contract and wants Vault-grounded drafting plus pre-built legal Workflows. Skip it for solo practice or general writing needs.
+  Harvey is the legal-specialist AI platform most AmLaw 100 firms have already bought. 142,000+ professionals across 60 AmLaw 100 firms, 500+ in-house legal teams, and 50 asset managers run on Assistant, Vault, Workflows, Knowledge, Agents, and Harvey Mobile. $11B valuation after the $200M March 30 raise; ARR $190M as of January 2026. As of May 12, 2026, Harvey is also a first-party MCP connector inside Anthropic's Claude for Legal. Pick it if the firm is large enough to justify a six-figure contract and wants Vault-grounded drafting plus pre-built legal Workflows. Skip it for solo practice or general writing needs.
 price_history:
+  - date: 2026-05-13
+    plan: "Enterprise"
+    price: "Contact sales"
+    source: "https://harvey.ai"
+    source_label: "Harvey"
+    source_id: harvey-pricing
+    note: "Verified; reported third-party ACV still roughly $1,000-$1,200 per lawyer per month with no public list price. Customer count now stated at 142,000+ professionals across 60 AmLaw 100 firms."
+  - date: 2026-05-12
+    plan: "Distribution"
+    price: "MCP connector in Claude for Legal"
+    source: "/news/2026-05-12-anthropic-claude-for-legal-plugins-microsoft-365/"
+    source_label: "Anthropic Claude for Legal launch"
+    source_id: harvey-pricing
+    note: "Harvey shipped as a first-party MCP connector in Anthropic's Claude for Legal, alongside Relativity, Everlaw, Thomson Reuters CoCounsel, DocuSign, and Box. Extends Vault retrieval into Word, Outlook, Excel, and PowerPoint via the Claude Microsoft 365 integration."
   - date: 2026-04-18
     plan: "Enterprise"
     price: "Contact sales"
@@ -118,19 +136,21 @@ price_history:
 
 # Harvey
 
-Harvey is the enterprise AI platform built specifically for law firms and in-house legal teams. The product suite covers **Assistant** (legal chat), **Vault** (secure document storage and retrieval-grounded drafting), **Workflows** (pre-built legal task agents), **Knowledge** (firm-wide regulatory research), and **Agents** (end-to-end execution of multi-step legal work). All of it runs on models customized for legal use, with OpenAI as an early partner and seed investor.
+Harvey is the enterprise AI platform built specifically for law firms and in-house legal teams. The product suite covers **Assistant** (legal chat and drafting), **Vault** (secure document storage and retrieval-grounded drafting), **Workflows** (pre-built legal task agents), **Knowledge** (firm-wide regulatory research), **Agents** (end-to-end execution of multi-step legal work), and **Harvey Mobile** (mobile access for remote work). All of it runs on models customized for legal use, with OpenAI as an early partner and seed investor and Anthropic as a 2026 distribution surface via MCP.
 
 The company was founded in 2022 by Winston Weinberg, a former O'Melveny litigator, and Gabriel Pereyra, a former Google DeepMind and Meta researcher. By January 2026 Harvey hit $190M in annual recurring revenue. In March 2026 it raised $200M at an $11B valuation led by GIC and Sequoia, bringing total funding above $1B.
 
-As of April 2026, Harvey lists the majority of the AmLaw 100, over 500 in-house legal teams, and 50 asset managers across 60 countries as customers. More than 25,000 custom agents run on the platform.
+As of May 2026, Harvey reports **142,000+ professionals** using the platform across 60 AmLaw 100 firms, over 500 in-house legal teams, and 50 asset managers. More than 25,000 custom agents run on Harvey today.
 
 ## Recent developments
 
+- **May 12, 2026:** [Anthropic launched Claude for Legal with Harvey as a first-party MCP connector](/news/2026-05-12-anthropic-claude-for-legal-plugins-microsoft-365/). The integration puts Vault-grounded retrieval and Harvey Workflows inside the Word, Outlook, Excel, and PowerPoint surfaces Claude now embeds in via Microsoft 365. Freshfields, Quinn Emanuel, Holland & Knight, and Crosby joined as launch customers. The move pairs Harvey's legal-domain grounding with Claude Opus 4.7 reasoning on lawyer-controlled workflows.
 - **April 30, 2026:** [Legora added $50M from NVentures and Atlassian, reaching a $5.6B valuation](/news/2026-04-30-legora-56b-valuation-nvidia-atlassian/). Harvey remains the larger legal-AI platform by reported valuation, but Legora is now the clearest scaled challenger.
+- **March 30, 2026:** [Harvey closed a $200M Series E at an $11B valuation](/news/2026-03-30-harvey-200m-at-11b-valuation/) led by GIC and Sequoia, taking total funding above $1B and confirming category-leader status.
 
 ## System Verdict
 
-> **Pick Harvey if the firm is an AmLaw 100 or equivalent and needs legal-domain AI with retrieval grounded on firm documents.** Vault keeps drafting tied to the firm's own precedent and client files. Workflows covers the recurring heavy lifting: M&A due diligence, contract review, fund formation. Shared Spaces coordinates work across in-house teams and external counsel. The $11B valuation, $190M ARR, and 60+ AmLaw 100 adoption are the clearest signals that the category leader has been chosen.
+> **Pick Harvey if the firm is an AmLaw 100 or equivalent and needs legal-domain AI with retrieval grounded on firm documents.** Vault keeps drafting tied to the firm's own precedent and client files. Workflows covers the recurring heavy lifting: M&A due diligence, contract review, fund formation. Shared Spaces coordinates work across in-house teams and external counsel. The $11B valuation, $190M ARR, 60 AmLaw 100 firms, and 142,000+ professional users are the clearest signals that the category leader has been chosen. The May 12 [Anthropic Claude for Legal](/news/2026-05-12-anthropic-claude-for-legal-plugins-microsoft-365/) launch also positions Harvey as the legal-grounding layer Anthropic chose to embed inside Microsoft 365, which strengthens the case that the platform now spans both Harvey's own surfaces and the Claude assistant surface.
 >
 > **Skip it if the firm is too small to justify a six-figure contract or needs a general-purpose assistant.** Harvey has no published self-serve tier. Reported ACV sits around $1,000 to $1,200 per lawyer per month before any custom-model work, which prices out most boutiques and solo practitioners. For general drafting, [ChatGPT](/tools/chatgpt/) or [Claude](/tools/claude/) cost a fraction.
 >
@@ -140,22 +160,24 @@ As of April 2026, Harvey lists the majority of the AmLaw 100, over 500 in-house 
 
 | | |
 |---|---|
-| **Flagship products** | Assistant · Vault · Workflows · Knowledge · Agents |
-| **Model partners** | OpenAI (primary, also a seed investor) · Anthropic · Google · custom fine-tunes |
-| **Customers** | 60+ AmLaw 100 firms · 500+ in-house legal teams · 50 asset managers · 100,000+ professionals |
-| **Named customers** | A&O Shearman · Reed Smith · Vinson & Elkins · O'Melveny · CMS · Dentons · BakerHostetler · Deutsche Telekom · HSBC · NBCUniversal · Repsol · Syngenta · DLA Piper |
+| **Flagship products** | Assistant · Vault · Workflows · Knowledge · Agents · Harvey Mobile · Ecosystem |
+| **Model partners** | OpenAI (primary, also a seed investor) · Anthropic (Claude for Legal MCP) · Google · custom fine-tunes |
+| **Customers** | 60 AmLaw 100 firms · 500+ in-house legal teams · 50 asset managers · 142,000+ professionals |
+| **Named customers** | A&O Shearman · Reed Smith · Vinson & Elkins · O'Melveny · CMS · Cuatrecasas · Dentons · BakerHostetler · Deutsche Telekom · HSBC · NBCUniversal · Repsol · Syngenta · DLA Piper · Freshfields (Claude for Legal) · Quinn Emanuel (Claude for Legal) · Holland & Knight (Claude for Legal) · Crosby (Claude for Legal) |
 | **Pricing model** | Enterprise only · no self-serve tier · no published list price |
 | **Reported ACV** | Roughly $1,000-$1,200 per lawyer per month (third-party coverage, not official) |
 | **Free trial** | None public. Pilots are sales-qualified. |
-| **Compliance** | SOC 2 Type II · ISO 27001 · GDPR · CCPA |
-| **Funding** | $200M at $11B valuation (March 2026) · $1B+ total raised |
+| **Compliance** | SOC 2 Type II · ISO 27001 · GDPR · CCPA · SAML SSO · audit logs · IP allow-listing |
+| **Funding** | $200M at $11B valuation (March 30, 2026) · $1B+ total raised |
 | **ARR (Jan 2026)** | $190M, up from $100M in August 2025 |
+| **Time saved (reported)** | 20+ hours per user per month average |
+| **Distribution surfaces** | Native Harvey product · Harvey Mobile · MCP connector in Claude for Legal (Word, Outlook, Excel, PowerPoint) |
 | **Founders** | Winston Weinberg (CEO) · Gabriel Pereyra (President) |
 | **Founded** | July 2022, San Francisco |
 
 ## What it actually is
 
-Harvey is a legal-domain AI platform, not a chatbot wrapper. Four things distinguish it from using ChatGPT Enterprise or Claude for Work:
+Harvey is a legal-domain AI platform, not a chatbot wrapper. Five things distinguish it from using ChatGPT Enterprise or Claude for Work directly:
 
 First, **Vault** retrieves from a firm's own document store (precedent, client files, contracts) and grounds drafting on those documents. That is the core deliverable law firms pay for. Generic LLMs hallucinate case law; Vault pulls from files the firm already owns.
 
@@ -164,6 +186,8 @@ Second, **Workflows** are pre-built task agents tuned for legal work. M&A due di
 Third, **Shared Spaces** lets a firm's lawyers and external counsel (or in-house teams plus their outside firms) collaborate on the same matter inside Harvey with permissions and audit trails.
 
 Fourth, **custom models**. Large firms can commission Harvey to fine-tune a model on firm-specific precedent and style. That is the high-ACV tier.
+
+Fifth, **distribution inside Claude for Legal**. As of May 12, 2026, Harvey is a first-party MCP connector inside Anthropic's Claude for Legal, which embeds Claude across Word, Outlook, Excel, and PowerPoint. Lawyers can pull Vault retrieval and Harvey Workflows into Microsoft 365 surfaces without leaving the document they are working in.
 
 ## When to pick Harvey
 
@@ -189,7 +213,7 @@ Third-party coverage reports annual contract values in the range of **$1,000 to 
 
 There is no free tier and no public free trial. Pilots run through enterprise sales.
 
-Prices verified 2026-04-18 via the [Harvey website](https://www.harvey.ai/) and [CNBC coverage of the March 2026 funding round](https://www.cnbc.com/2026/03/25/legal-ai-startup-harvey-raises-200-million-at-11-billion-valuation.html).
+Prices verified 2026-05-13 via the [Harvey website](https://www.harvey.ai/) and [CNBC coverage of the March 2026 funding round](https://www.cnbc.com/2026/03/25/legal-ai-startup-harvey-raises-200-million-at-11-billion-valuation.html).
 
 **What this buys:** Assistant, Vault, Knowledge, Workflows, Agents, Shared Spaces, SOC 2 Type II and ISO 27001 compliance, and access to multiple underlying frontier models (OpenAI, Anthropic, Google) plus any custom fine-tunes.
 
@@ -212,14 +236,14 @@ Prices verified 2026-04-18 via the [Harvey website](https://www.harvey.ai/) and 
 - **Price floor excludes small firms.** At roughly $1,000+ per lawyer per month, Harvey is not a realistic purchase for most boutiques, regional firms, or solo practices.
 - **Cloud-only.** Firms with strict data-residency or air-gap requirements cannot deploy Harvey on-prem.
 - **Hallucination risk remains.** Vault grounding materially reduces hallucinations but does not eliminate them. Citations and case references still need lawyer review before filing.
-- **OpenAI dependency.** Harvey's deepest model partnership is with OpenAI, which is also a seed investor. Model-level outages or pricing shifts at OpenAI flow through to Harvey workflows.
+- **OpenAI dependency, with Anthropic as a partial hedge.** Harvey's deepest model partnership is with OpenAI, which is also a seed investor. Model-level outages or pricing shifts at OpenAI flow through to Harvey workflows. The May 12, 2026 Claude for Legal integration is the first major distribution surface where Anthropic is a peer partner, which partially diversifies the model-vendor risk on the consumption side.
 - **Opaque model routing.** Which underlying model (OpenAI, Anthropic, Google, or custom) handles a given task is not always surfaced to the end user.
 - **Long procurement cycle.** AmLaw-scale procurement, security review, and pilot design can run six to twelve months before go-live.
 - **Category competition intensifying.** New legal-AI entrants are appearing monthly. Harvey's lead is real but not unassailable on any single feature.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-18 against the [Harvey website](https://www.harvey.ai/), the [Harvey blog post on the $11B funding round](https://www.harvey.ai/blog/harvey-raises-at-dollar11-billion-valuation-to-scale-agents-across-law-firms-and-enterprises), [CNBC coverage](https://www.cnbc.com/2026/03/25/legal-ai-startup-harvey-raises-200-million-at-11-billion-valuation.html), and [Reuters reporting on the March 2026 raise](https://www.reuters.com/technology/legal-software-firm-harvey-valued-11-billion-latest-funding-round-2026-03-25/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-05-13 against the [Harvey website](https://www.harvey.ai/), the [Harvey blog post on the $11B funding round](https://www.harvey.ai/blog/harvey-raises-at-dollar11-billion-valuation-to-scale-agents-across-law-firms-and-enterprises), [CNBC coverage](https://www.cnbc.com/2026/03/25/legal-ai-startup-harvey-raises-200-million-at-11-billion-valuation.html), [Reuters reporting on the March 2026 raise](https://www.reuters.com/technology/legal-software-firm-harvey-valued-11-billion-latest-funding-round-2026-03-25/), and the [May 12 Anthropic Claude for Legal launch coverage](/news/2026-05-12-anthropic-claude-for-legal-plugins-microsoft-365/).
 
 ## FAQ
 
@@ -230,7 +254,10 @@ Enterprise contracts only. Harvey publishes no list price. Third-party reporting
 Harvey runs on a mix of frontier models (OpenAI, Anthropic, Google) plus custom fine-tunes. OpenAI was the seed investor and remains the deepest partner, though Harvey is not exclusively GPT-based.
 
 **Who uses Harvey?**
-The majority of the [AmLaw 100](https://www.harvey.ai/), over 500 in-house legal teams, and 50 asset management firms. Named clients include A&O Shearman, Reed Smith, Vinson & Elkins, O'Melveny, CMS, Dentons, BakerHostetler, DLA Piper, Deutsche Telekom, HSBC, and NBCUniversal.
+Sixty AmLaw 100 firms, over 500 in-house legal teams, 50 asset management firms, and 142,000+ professionals overall as of May 2026. Named clients include A&O Shearman, Reed Smith, Vinson & Elkins, O'Melveny, CMS, Cuatrecasas, Dentons, BakerHostetler, DLA Piper, Deutsche Telekom, HSBC, and NBCUniversal. Freshfields, Quinn Emanuel, Holland & Knight, and Crosby came in as launch customers for the Harvey-via-Claude integration on May 12, 2026.
+
+**Is Harvey integrated with Claude?**
+Yes. As of May 12, 2026, Harvey is a first-party MCP connector inside Anthropic's [Claude for Legal](/news/2026-05-12-anthropic-claude-for-legal-plugins-microsoft-365/). That puts Vault-grounded retrieval and Harvey Workflows inside Claude's Microsoft 365 integration (Word, Outlook, Excel, PowerPoint) alongside Relativity, Everlaw, Thomson Reuters CoCounsel, DocuSign, and Box. Harvey's primary product surface remains its own platform; the Claude integration is an additional distribution channel.
 
 **What is Vault?**
 A secure document store plus retrieval-grounded drafting. Upload firm precedent, client contracts, and matter files. Vault grounds LLM output on those documents, which reduces hallucinations relative to ungrounded chat.
@@ -239,7 +266,7 @@ A secure document store plus retrieval-grounded drafting. Upload firm precedent,
 Pre-built task agents tuned for recurring legal work: M&A due diligence, contract review, fund formation, litigation research, regulatory memos. Over 25,000 custom agents run on Harvey today, including long-horizon agents that span multi-day processes.
 
 **Is Harvey secure enough for privileged client data?**
-Harvey holds SOC 2 Type II and ISO 27001 certifications, and is GDPR and CCPA compliant. Major law firms including A&O Shearman, Reed Smith, and Vinson & Elkins have cleared it through procurement. On-prem deployment is not offered; the platform is cloud-native.
+Harvey holds SOC 2 Type II and ISO 27001 certifications, and is GDPR and CCPA compliant, with SAML SSO, audit logs, and IP allow-listing as baseline enterprise controls. Major law firms including A&O Shearman, Reed Smith, and Vinson & Elkins have cleared it through procurement. On-prem deployment is not offered; the platform is cloud-native.
 
 ## Related
 

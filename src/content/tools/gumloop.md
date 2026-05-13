@@ -2,20 +2,20 @@
 type: tool
 slug: gumloop
 title: Gumloop
-tagline: YC W24 drag-and-drop AI workflow builder for marketing and ops teams. Solo $37/mo · 10K credits · 5 concurrent runs · bring-your-own API keys cut AI node cost to 1 credit.
+tagline: YC W24 drag-and-drop AI workflow builder for marketing and ops teams. Free 5K credits, Pro $37/mo with 20K+ credits and unlimited seats. Bring-your-own API keys cut AI node cost to 1 credit.
 category: ai-automation
 secondary_categories: [ai-coding]
 company: Gumloop Inc.
 url: https://gumloop.com
 pricing_model: freemium
-price_range: "$0-$244/month"
+price_range: "$0-$37/month + Enterprise custom"
 status: active
 launched: 2023-04
-last_updated: 2026-05-04
-last_verified: 2026-05-04
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
-seo_title: "Gumloop: Features, Pricing & Review (2026)"
-meta_description: "Gumloop is a YC W24 AI workflow automation platform. Free tier with 2K credits, Solo $37/mo, Team $244/mo. Drag-and-drop builder, bring-your-own API keys, OpenAI/Anthropic/Gemini/DeepSeek backbones."
+seo_title: "Gumloop: Features, Pricing & Review (May 2026)"
+meta_description: "Gumloop is a YC W24 AI workflow automation platform. Free tier with 5K credits, Pro $37/mo with 20K+ credits and unlimited seats, Enterprise custom. Drag-and-drop builder, bring-your-own API keys, OpenAI/Anthropic/Gemini/DeepSeek backbones."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -31,54 +31,55 @@ scores:
 facts:
   best_for:
     value: Best for operations teams building AI automations and agentic workflows with a visual framework instead of custom
-      orchestration code.
+      orchestration code, especially after the May 2026 plan simplification that moved Pro to unlimited seats.
     source: https://www.gumloop.com/
     source_label: Gumloop official site
     source_id: gumloop-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   pricing_anchor:
-    value: Gumloop pricing depends on workflow usage, team features, and enterprise needs; verify run/credit limits, seats,
-      and automation scale on the pricing page.
+    value: Free now ships 5,000 credits with 1 seat, Pro is $37/mo with 20,000+ credits and unlimited seats (replacing the
+      old Solo and Team tiers), Enterprise is custom; 20 percent annual discount stays on Pro and bring-your-own keys keep
+      AI nodes at 1 credit.
     source: https://www.gumloop.com/pricing
     source_label: Gumloop pricing
     source_id: gumloop-pricing
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-08-13'
   workflow_surface:
-    value: The product surface is workflow automation with AI steps, integrations, and agents—not a single chatbot or document
+    value: The product surface is workflow automation with AI steps, integrations, and agents, not a single chatbot or document
       editor.
     source: https://docs.gumloop.com/
     source_label: Gumloop docs
     source_id: gumloop-docs
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   integration_surface:
     value: Implementation should test connector coverage, trigger behavior, permissions, error handling, human review steps,
       and production monitoring.
     source: https://docs.gumloop.com/
     source_label: Gumloop docs
     source_id: gumloop-docs
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   watch_out_for:
     value: No-code AI automations can hide brittle logic; require observability, rollback paths, audit logs, and clear ownership
       before replacing core processes.
     source: https://www.gumloop.com/
     source_label: Gumloop official site
     source_id: gumloop-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
 tags: [ai-automation, workflow-builder, no-code, yc-backed, gumloop]
 best_for:
   - marketing and ops teams wanting AI-first automation
@@ -90,22 +91,43 @@ not_best_for:
   - self-hosted or air-gapped deployments (n8n is better)
   - pure LLM chat or coding assistance (use ChatGPT, Claude, Copilot)
 quick_answer: >-
-  Gumloop is a YC W24 drag-and-drop AI workflow builder aimed at marketing, sales, and ops teams. Free tier gives 2,000 credits. Solo is $37/mo with 10K credits, Team is $244/mo with 60K credits and 10 seats. Pick it for AI-native no-code automation. Skip for broad SaaS connector breadth or self-hosting.
+  Gumloop is a YC W24 drag-and-drop AI workflow builder aimed at marketing, sales, and ops teams. As of May 2026 the plan structure collapses to Free (5K credits, 1 seat), Pro ($37/mo, 20K+ credits, unlimited seats, team analytics, app policies), and Enterprise (custom). Pick it for AI-native no-code automation. Skip for broad SaaS connector breadth or self-hosting.
 price_history:
+  - date: 2026-05-13
+    plan: "Free"
+    price: "$0"
+    source: "https://gumloop.com/pricing"
+    source_label: "Gumloop pricing"
+    source_id: gumloop-pricing
+    note: "Free tier credit allowance increased from 2,000 to 5,000 credits/month; still 1 seat, 2 concurrent runs"
+  - date: 2026-05-13
+    plan: "Pro"
+    price: "$37/mo"
+    source: "https://gumloop.com/pricing"
+    source_label: "Gumloop pricing"
+    source_id: gumloop-pricing
+    note: "New unified Pro tier replaces the old Solo ($37, 10K credits, 1 seat) and Team ($244, 60K credits, 10 seats) plans. Pro now ships 20K+ credits, unlimited seats, unlimited teams, team analytics, app policies, 5 concurrent runs, 25 concurrent agent interactions. 20 percent annual discount preserved."
+  - date: 2026-05-13
+    plan: "Enterprise"
+    price: "Custom"
+    source: "https://gumloop.com/pricing"
+    source_label: "Gumloop pricing"
+    source_id: gumloop-pricing
+    note: "Adds RBAC, SCIM/SAML, admin dashboard, audit logs, data retention rules, security reports, VPC, workflow queuing"
   - date: 2026-04-18
-    plan: "Solo"
+    plan: "Solo (legacy)"
     price: "$37/mo"
     source: "https://gumloop.com/pricing"
     source_label: "Source"
     source_id: gumloop-pricing
-    note: "Verified, unchanged; 20% discount on annual billing"
+    note: "Prior plan: 10K credits, 1 seat. Discontinued and rolled into Pro by May 2026."
   - date: 2026-04-18
-    plan: "Team"
+    plan: "Team (legacy)"
     price: "$244/mo"
     source: "https://gumloop.com/pricing"
     source_label: "Source"
     source_id: gumloop-pricing
-    note: "Verified; 60K credits, up to 10 seats"
+    note: "Prior plan: 60K credits, up to 10 seats. Discontinued; multi-seat usage now sits on Pro with unlimited seats or Enterprise."
 ---
 
 # Gumloop
@@ -118,13 +140,17 @@ The product targets non-developers on marketing, sales, and ops teams. Workflows
 
 The anchor moat is the bring-your-own-API-key model. Connecting your own OpenAI or Anthropic key collapses any AI node cost to 1 credit, regardless of whether it calls Haiku or Opus 4.7.
 
+## Recent changes
+
+- **May 2026 plan simplification.** The previous Solo ($37/mo, 10K credits, 1 seat) and Team ($244/mo, 60K credits, 10 seats) tiers were collapsed into a single **Pro** plan at $37/mo with 20,000+ credits and unlimited seats. Multi-seat teams now sit on Pro instead of jumping to Team. Free tier credit allowance also doubled from 2,000 to 5,000 credits per month.
+
 ## System Verdict
 
-> **Pick Gumloop if you want an AI-native no-code builder that treats LLM calls as first-class nodes.** Teams that write Claude or GPT prompts into every step, need drag-and-drop speed, and have their own API keys will get the best economics here. The BYOK discount is genuinely large on advanced-model nodes.
+> **Pick Gumloop if you want an AI-native no-code builder that treats LLM calls as first-class nodes.** Teams that write Claude or GPT prompts into every step, need drag-and-drop speed, and have their own API keys will get the best economics here. The BYOK discount is genuinely large on advanced-model nodes. The May 2026 Pro consolidation makes seat economics dramatically better: unlimited seats at $37/mo is the most aggressive small-team price in AI workflow builders.
 >
 > **Skip it if you need the biggest SaaS connector library, self-hosting, or sub-$37 paid pricing.** [Zapier](/tools/zapier/) still has more native integrations, [n8n](/tools/n8n/) wins on self-hosted deployments, and [Make](/tools/make/) is cheaper for non-AI workflows. Gumloop's value shows up when the workflow is mostly AI, not mostly SaaS glue.
 >
-> **Who pays which tier:** Free for prototyping individual agents, Solo $37/mo for one builder running regular jobs, Team $244/mo for a marketing or sales team with 10 seats, Enterprise for companies needing SSO, SCIM, audit logs, and private infrastructure.
+> **Who pays which tier:** Free for prototyping individual agents, Pro $37/mo for any team that needs unlimited seats with team analytics and app policies, Enterprise for companies needing SSO, SCIM, audit logs, and private infrastructure.
 
 ## Key Facts
 
@@ -136,12 +162,11 @@ The anchor moat is the bring-your-own-API-key model. Connecting your own OpenAI 
 | **Category** | AI workflow automation, drag-and-drop builder |
 | **LLM backbones** | OpenAI, Anthropic, Gemini, DeepSeek |
 | **Integrations** | Slack, Gmail, GitHub, Linear, Stripe, Airtable, Google Docs, HubSpot, Salesforce, Sheets, Dropbox, Asana, Zoom, Tableau |
-| **Free tier** | 2,000 credits/mo · 2 concurrent runs · forum support |
-| **Solo** | $37/mo · 10K credits · 1 seat · API keys · 5 list steps |
-| **Team** | $244/mo · 60K credits · up to 10 seats · workspaces · Slack support |
-| **Enterprise** | Custom · SSO/SCIM · audit logs · on-call · private infrastructure |
-| **API access** | Yes, Solo and above |
-| **Annual discount** | ~20% off all paid tiers |
+| **Free tier** | 5,000 credits/mo · 1 seat · 2 concurrent runs · 5 concurrent agent interactions · forum support |
+| **Pro** | $37/mo · 20K+ credits · unlimited seats · unlimited teams · unified billing · team analytics · app policies · 5 concurrent runs · 25 concurrent agent interactions |
+| **Enterprise** | Custom · RBAC · SCIM/SAML · admin dashboard · audit logs · data retention rules · security reports · VPC · workflow queuing |
+| **API access** | Yes, Pro and above |
+| **Annual discount** | ~20 percent off Pro |
 
 ## What it actually is
 
@@ -176,12 +201,11 @@ Plans via [gumloop.com/pricing](https://gumloop.com/pricing):
 
 | Plan | Price | Credits | Seats | Key features |
 |---|---|---|---|---|
-| Free | $0 | 2K/mo | 1 | 2 concurrent runs, forum support |
-| Solo | $37/mo | 10K/mo | 1 | API keys, 5 list steps, event triggers, 5 concurrent runs |
-| Team | $244/mo | 60K/mo | up to 10 | Workspaces, 15 list steps, unified billing, Slack support |
-| Enterprise | Custom | Custom | Unlimited | SSO/SCIM, audit logs, on-call, VPC, incognito mode, Gumstack add-on |
+| Free | $0 | 5K/mo | 1 | 2 concurrent runs, 5 concurrent agent interactions, forum support |
+| Pro | $37/mo | 20K+/mo | Unlimited | Unlimited teams, unified billing, team analytics, app policies, 5 concurrent runs, 25 concurrent agent interactions |
+| Enterprise | Custom | Custom | Unlimited | RBAC, SCIM/SAML, admin dashboard, audit logs, data retention rules, security reports, VPC, workflow queuing, Gumstack add-on |
 
-Annual billing shaves ~20% off Solo and Team. All tiers support Bring Your Own API Keys, which drops AI node cost from 2-30 credits to 1 credit.
+Annual billing shaves ~20 percent off Pro. All tiers support Bring Your Own API Keys, which drops AI node cost from 2-30 credits to 1 credit.
 
 Credit consumption at a glance:
 - Standard AI (GPT-4.1 Nano, Claude Haiku): 2 credits
@@ -190,13 +214,13 @@ Credit consumption at a glance:
 - Contact enrichment: 60 credits
 - Any AI node with BYOK: 1 credit
 
-Prices verified 2026-04-18 via [Gumloop pricing](https://gumloop.com/pricing) and cross-checked against [Lindy's Gumloop pricing breakdown](https://www.lindy.ai/blog/gumloop-pricing) and [CheckThat.ai's Gumloop pricing guide](https://checkthat.ai/brands/gumloop/pricing).
+Prices verified 2026-05-13 via [Gumloop pricing](https://gumloop.com/pricing) and cross-checked against [Lindy's Gumloop pricing breakdown](https://www.lindy.ai/blog/gumloop-pricing) and [CheckThat.ai's Gumloop pricing guide](https://checkthat.ai/brands/gumloop/pricing).
 
 ## Against the alternatives
 
 | | Gumloop | Zapier | n8n | Make | Relevance AI |
 |---|---|---|---|---|---|
-| **Entry price** | $0 Free, $37 Solo | $0, $19.99 Starter | $0 self-host, $20 cloud | $0, $9 Core | $0, $19 Pro |
+| **Entry price** | $0 Free, $37 Pro (unlimited seats) | $0, $19.99 Starter | $0 self-host, $20 cloud | $0, $9 Core | $0, $19 Pro |
 | **Native integrations** | ~80-100 | 8,000+ | 500+ | 1,500+ | ~50 |
 | **Self-host option** | No | No | Yes (source-available) | No | No |
 | **Drag-and-drop** | Yes | Linear zap editor | Node canvas | Node canvas | Agent-first UI |
@@ -206,22 +230,22 @@ Prices verified 2026-04-18 via [Gumloop pricing](https://gumloop.com/pricing) an
 
 ## Failure modes
 
-- **Credit math gets expensive on deep workflows without BYOK.** A 10-step flow with two expert AI nodes and one enrichment burns 120 credits per run. 10K Solo credits cover ~83 runs a month. Heavy users need BYOK, the Team tier, or Enterprise.
+- **Credit math gets expensive on deep workflows without BYOK.** A 10-step flow with two expert AI nodes and one enrichment burns 120 credits per run. 20K Pro credits cover ~166 runs a month. Heavy users need BYOK or Enterprise.
 - **Integration depth is narrower than Zapier.** Gumloop's native connectors cover the obvious SaaS apps. Long-tail tools frequently require HTTP or custom-code nodes, which costs dev time.
 - **Cloud-only.** No self-host option. Regulated industries and air-gapped environments need n8n or Activepieces instead.
-- **Gumstack is Enterprise-gated.** The governance and audit layer is not available on Team, which is the tier most mid-market buyers sit on.
+- **Gumstack is Enterprise-gated.** The governance and audit layer is not available on Pro, which is now the tier most mid-market buyers sit on after the May 2026 plan consolidation.
 - **Credits do not roll over.** Unused monthly credits expire. Bursty workloads pay for peak capacity.
 - **No explicit per-tier rate limit publication.** Concurrent run caps are documented (2, 5, custom), but per-minute or per-node throttling is not.
 - **Documentation assumes some savvy.** Templates help, but wiring up custom auth headers or non-listed APIs is closer to light scripting than pure no-code.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-18 against [Gumloop pricing](https://gumloop.com/pricing), [YC's Gumloop company profile](https://www.ycombinator.com/companies/gumloop), [BetaKit's Series B coverage](https://betakit.com/vancouver-founded-gumloop-sticks-50-million-usd-series-b-round-to-let-employees-build-their-own-ai-agents/), and the [Lindy Gumloop pricing guide](https://www.lindy.ai/blog/gumloop-pricing).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-05-13 against [Gumloop pricing](https://gumloop.com/pricing), [YC's Gumloop company profile](https://www.ycombinator.com/companies/gumloop), [BetaKit's Series B coverage](https://betakit.com/vancouver-founded-gumloop-sticks-50-million-usd-series-b-round-to-let-employees-build-their-own-ai-agents/), and the [Lindy Gumloop pricing guide](https://www.lindy.ai/blog/gumloop-pricing).
 
 ## FAQ
 
 **Is Gumloop free to use?**
-Yes. The free tier gives 2,000 credits per month, 2 concurrent runs, and forum-only support. Enough to prototype a workflow or two. Solo at $37/month unlocks API keys, higher credit limits, 5 concurrent runs, and event triggers.
+Yes. The free tier gives 5,000 credits per month, 2 concurrent runs, 5 concurrent agent interactions, and forum-only support (raised from 2,000 credits in May 2026). Enough to prototype a workflow or two. Pro at $37/month unlocks unlimited seats, 20,000+ credits, team analytics, app policies, 5 concurrent runs, and 25 concurrent agent interactions.
 
 **What LLMs does Gumloop support?**
 OpenAI, Anthropic, Gemini, and DeepSeek are first-class backbones. Each AI node lets you pick the vendor and model. Bring-your-own keys cut Gumloop credit cost per call to 1, regardless of which model you pick.

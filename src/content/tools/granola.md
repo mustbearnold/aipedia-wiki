@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0 free / $14-$35/user/month"
 status: active
 launched: 2024-05
-last_updated: 2026-05-04
-last_verified: 2026-05-04
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,53 +31,53 @@ facts:
     source: https://www.granola.ai/
     source_label: Granola official site
     source_id: granola-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   pricing_anchor:
-    value: Granola pricing has free and paid team packaging; verify current meeting limits, collaboration features, admin controls,
-      and annual/monthly plan terms.
+    value: Free at $0, Business $14/user/month, Enterprise $35/user/month verified May 2026; Business adds MCP integration
+      and personal API access alongside Notion, HubSpot, Attio, Affinity, Slack, and Zapier.
     source: https://www.granola.ai/pricing
     source_label: Granola pricing
     source_id: granola-pricing
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-08-13'
   workflow_surface:
     value: Granola is optimized for back-to-back meeting notes and summaries, not broad voice transcription APIs or project-management
       automation.
     source: https://www.granola.ai/
     source_label: Granola official site
     source_id: granola-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   privacy_security:
     value: Security review should cover recording behavior, transcript handling, calendar integrations, retention, and enterprise
       controls.
     source: https://www.granola.ai/security
     source_label: Granola security
     source_id: granola-security
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   watch_out_for:
     value: Granola works best when users actively take notes; teams wanting fully automated CRM follow-up or call-center analytics
       may need a different meeting-intelligence stack.
     source: https://www.granola.ai/
     source_label: Granola official site
     source_id: granola-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
 tags: [meeting-notes, ai-summary, productivity, notion, hubspot, integrations, macos]
-seo_title: "Granola: Features, Pricing & Review (April 2026)"
-meta_description: "Granola is the AI notepad built for back-to-back meetings. Free tier unlimited summaries, 30-day history. Business $14/user/mo adds unlimited history + Notion, HubSpot, Slack, Zapier integrations."
+seo_title: "Granola: Features, Pricing & Review (May 2026)"
+meta_description: "Granola is the AI notepad built for back-to-back meetings. Free tier unlimited summaries, 30-day history. Business $14/user/mo adds unlimited history, MCP integration, personal API, plus Notion, HubSpot, Slack, Zapier."
 author: "aipedia.wiki Editorial"
 best_for:
   - founders and execs in back-to-back meetings
@@ -89,7 +89,22 @@ not_best_for:
   - transcription-heavy workflows that need speaker ID accuracy
   - teams needing live meeting assistance (Granola records, summarizes after)
 quick_answer: >-
-  Granola is the AI meeting notepad you take into calls. Your own typed notes + AI-generated polished summary after each meeting. Free tier is unlimited summaries with 30 days of history. Business at $14/user/mo unlocks unlimited history and integrations to Notion, HubSpot, Slack, Zapier. Pick it for founder/exec workflows. Skip it if you're on Windows or need live transcription during calls.
+  Granola is the AI meeting notepad you take into calls. Your own typed notes + AI-generated polished summary after each meeting. Free tier is unlimited summaries with 30 days of history. Business at $14/user/mo unlocks unlimited history, MCP integration, personal API access, and integrations to Notion, HubSpot, Attio, Affinity, Slack, and Zapier. Pick it for founder/exec workflows. Skip it if you're on Windows or need live transcription during calls.
+price_history:
+  - date: 2026-05-13
+    plan: "Business"
+    price: "$14/user/mo"
+    source: "https://www.granola.ai/pricing"
+    source_label: "Granola pricing"
+    source_id: granola-pricing
+    note: "Verified unchanged; MCP integration and personal API access now listed on Business tier"
+  - date: 2026-05-13
+    plan: "Enterprise"
+    price: "$35/user/mo"
+    source: "https://www.granola.ai/pricing"
+    source_label: "Granola pricing"
+    source_id: granola-pricing
+    note: "Verified unchanged; adds enterprise API, usage analytics, org-wide auto-deletion"
 ---
 
 # Granola
@@ -113,7 +128,7 @@ A macOS-first AI notepad built for people who take meetings back to back. You jo
 | **Free tier** | Unlimited meeting summaries, 30 days of meeting history |
 | **Business price** | $14/user/month |
 | **Enterprise price** | $35/user/month (adds security + compliance) |
-| **Integrations** | Notion, HubSpot, Attio, Affinity, Slack, Zapier (Business+) |
+| **Integrations** | Notion, HubSpot, Attio, Affinity, Slack, Zapier, MCP, personal API (Business+) |
 | **Recent price change** | Pro ($18/mo) and Individual plans discontinued early 2026, replaced with Free + Business |
 | **Climate pledge** | 1.5% of subscription revenue to Stripe Climate CO2 removal |
 
@@ -135,11 +150,11 @@ A macOS-first AI notepad built for people who take meetings back to back. You jo
 
 | Plan | Price | What's included |
 |---|---|---|
-| Free | $0 | Unlimited summaries, 30 days history, basic AI models |
-| Business | $14/user/mo | Unlimited history, advanced AI, integrations (Notion, HubSpot, Attio, Affinity, Slack, Zapier) |
-| Enterprise | $35/user/mo | Security, compliance, SSO, admin controls |
+| Free | $0 | Unlimited summaries, 30 days history, basic AI models, shared folders, custom templates, multi-language |
+| Business | $14/user/mo | Unlimited history, advanced AI thinking models, integrations (Notion, HubSpot, Attio, Affinity, Slack, Zapier), MCP integration, personal API access, centralized billing |
+| Enterprise | $35/user/mo | Security, compliance, SSO, admin controls, enterprise API, usage analytics, org-wide auto-deletion |
 
-Prices verified 2026-04-18 via [granola.ai/pricing](https://www.granola.ai/pricing).
+Prices verified 2026-05-13 via [granola.ai/pricing](https://www.granola.ai/pricing).
 
 ## Failure modes
 
@@ -161,12 +176,12 @@ Prices verified 2026-04-18 via [granola.ai/pricing](https://www.granola.ai/prici
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified 2026-04-18 against [granola.ai/pricing](https://www.granola.ai/pricing) and [Efficient App 2026 Granola review](https://efficient.app/apps/granola).
+Produced by the aipedia.wiki editorial pipeline. Last verified 2026-05-13 against [granola.ai/pricing](https://www.granola.ai/pricing) and [Efficient App 2026 Granola review](https://efficient.app/apps/granola).
 
 ## FAQ
 
 **Does Granola work on Windows?**
-Not natively as of April 2026. macOS and iOS only. A Windows client has been discussed but not shipped.
+Not natively as of May 2026. macOS and iOS only. A Windows client has been discussed but not shipped.
 
 **Does Granola announce itself to other meeting participants?**
 No. Granola records your Mac's audio locally. No bot joins the call. This is a feature for some users (frictionless) and a compliance concern for others (check your jurisdiction's consent-to-record rules).

@@ -8,11 +8,11 @@ company: helicone
 url: https://www.helicone.ai
 github_url: https://github.com/Helicone/helicone
 pricing_model: freemium
-price_range: "Free 10k req/mo / paid tiers scale with volume"
+price_range: "Free 10k req/mo / Pro $79/mo / Team $799/mo / Enterprise custom"
 status: active
 launched: 2023-03
-last_updated: 2026-05-04
-last_verified: 2026-05-04
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -32,53 +32,52 @@ facts:
     source: https://www.helicone.ai/
     source_label: Helicone official site
     source_id: helicone-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   pricing_anchor:
-    value: Helicone pricing spans free/paid and enterprise packaging; verify event volumes, retention, gateway features, team
-      seats, and self-host/open-source tradeoffs.
+    value: Helicone pricing is Hobby free (10k req/mo), Pro $79/mo with unlimited seats and usage-based scaling, Team $799/mo with SOC-2/HIPAA and 5 orgs, and Enterprise custom with SSO and on-prem options.
     source: https://www.helicone.ai/pricing
     source_label: Helicone pricing
     source_id: helicone-pricing
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-08-13'
   open_source_or_local:
     value: Helicone is open source, so buyers can evaluate repository activity, deployment model, and self-hosting fit as part
       of procurement.
     source: https://github.com/Helicone/helicone
     source_label: Helicone GitHub repository
     source_id: helicone-repository
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   integration_surface:
     value: Docs are the source of truth for SDK/proxy setup, provider support, logging, prompt tracing, experiments, and gateway
       configuration.
     source: https://docs.helicone.ai/
     source_label: Helicone docs
     source_id: helicone-docs
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   watch_out_for:
     value: Observability tools sit in sensitive prompt/data paths; review PII handling, retention, self-host options, sampling,
       and incident response before routing production traffic.
     source: https://docs.helicone.ai/
     source_label: Helicone docs
     source_id: helicone-docs
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
 tags: [llm-observability, monitoring, ai-gateway, open-source, yc, dev-tools, langgraph]
-seo_title: "Helicone: Features, Pricing & Review (April 2026)"
-meta_description: "Helicone is an open-source LLM observability platform. Free 10k requests/mo. One-line integration. AI Gateway adds load balancing, caching, failover. Integrates with LangGraph, LiteLLM, Vercel AI SDK."
+seo_title: "Helicone: Features, Pricing & Review (May 2026)"
+meta_description: "Helicone is an open-source LLM observability platform. Free 10k requests/mo, Pro $79/mo, Team $799/mo, Enterprise custom. One-line integration. AI Gateway adds load balancing, caching, failover."
 author: "aipedia.wiki Editorial"
 best_for:
   - developers shipping LLM-powered products
@@ -90,7 +89,22 @@ not_best_for:
   - simple single-prompt prototypes (overkill)
   - non-LLM application observability (use Datadog / Sentry)
 quick_answer: >-
-  Helicone is an open-source LLM observability platform that integrates in one line of code. Free tier covers 10,000 requests/month, no credit card. YC W23. The AI Gateway adds smart load balancing across providers, intelligent caching, automatic failover, and rate limiting. Integrates natively with LangGraph, LiteLLM, and the Vercel AI SDK. Pick it for production LLM apps needing cost and quality tracking.
+  Helicone is an open-source LLM observability platform that integrates in one line of code. Free Hobby tier covers 10,000 requests/month, no credit card. Pro is $79/mo with unlimited seats, Team is $799/mo with SOC-2 and HIPAA. YC W23. The AI Gateway adds smart load balancing across providers, intelligent caching, automatic failover, and rate limiting. Integrates natively with LangGraph, LiteLLM, and the Vercel AI SDK. Pick it for production LLM apps needing cost and quality tracking.
+price_history:
+  - date: 2026-04-18
+    plan: "Free / paid"
+    price: "Free 10k req/mo + usage-based paid"
+    source: "https://www.helicone.ai/pricing"
+    source_label: "Source"
+    source_id: helicone-pricing
+    note: "Free tier 10k requests/mo, all core features. Paid usage-based for higher volume."
+  - date: 2026-05-13
+    plan: "Hobby / Pro / Team / Enterprise"
+    price: "$0 / $79/mo / $799/mo / Custom"
+    source: "https://www.helicone.ai/pricing"
+    source_label: "Source"
+    source_id: helicone-pricing
+    note: "Pricing now formalized: Hobby free (10k req, 1GB storage, 1 seat), Pro $79/mo (unlimited seats, alerts, HQL), Team $799/mo (SOC-2/HIPAA, 5 orgs, Slack support), Enterprise custom (SAML SSO, on-prem)."
 ---
 
 # Helicone
@@ -110,12 +124,15 @@ Open-source observability for LLM applications. Drop one line into your OpenAI, 
 | | |
 |---|---|
 | **License** | Open source (self-hostable) |
-| **Cloud free tier** | 10,000 requests/month, no credit card |
+| **Hobby (free)** | 10,000 requests/month, 1 GB storage, 1 seat, no credit card |
+| **Pro** | $79/mo, unlimited seats, alerts, reports, HQL, usage-based above 10K |
+| **Team** | $799/mo, SOC-2 and HIPAA, 5 organizations, dedicated Slack support |
+| **Enterprise** | Custom with SAML SSO, MSA, on-prem deployment |
 | **Integration effort** | One line of code (changes base URL or adds proxy) |
 | **Providers** | OpenAI, Anthropic, Google, Mistral, Groq, Together, any OpenAI-compatible |
 | **Core observability** | Traces, sessions, metrics (cost, latency, quality), user analytics |
-| **AI Gateway features** | Load balancing, caching, failover, rate limiting |
-| **Integrations (2026)** | LangGraph, LiteLLM, Vercel AI SDK, OpenAI Realtime API |
+| **AI Gateway features** | Load balancing, caching, automatic failover, rate limiting |
+| **Integrations (2026)** | LangGraph, LiteLLM, Vercel AI SDK, OpenAI Realtime API, Mintlify docs partnership |
 | **Backed by** | Y Combinator (W23) |
 
 ## When to pick Helicone
@@ -139,12 +156,13 @@ Helicone ships a cloud-hosted service with generous free tier plus optional self
 
 | Plan | Price | What's included |
 |---|---|---|
-| Free | $0 | 10,000 requests/month, all core features |
-| Pro / Team | Usage-based | Larger request volume, priority support |
-| Enterprise | Custom | SSO, compliance, dedicated support |
+| Hobby | $0 | 10,000 requests/month, 1 GB storage, 1 seat, 1 org |
+| Pro | $79/mo | Everything in Hobby plus unlimited seats, alerts, reports, HQL query language, usage-based scaling |
+| Team | $799/mo | Everything in Pro plus 5 organizations, SOC-2 and HIPAA compliance, dedicated Slack support |
+| Enterprise | Custom | SAML SSO, MSA agreements, on-prem deployment options |
 | Self-hosted | $0 | Run Helicone on your own infrastructure |
 
-See [helicone.ai/pricing](https://www.helicone.ai/pricing) for current paid-tier details. Verified 2026-04-18.
+Usage-based pricing applies above the 10K free tier (calculator estimates ~$0.97/month for an additional 10K requests). See [helicone.ai/pricing](https://www.helicone.ai/pricing) for current paid-tier details. Verified 2026-05-13.
 
 ## Failure modes
 
@@ -167,12 +185,12 @@ See [helicone.ai/pricing](https://www.helicone.ai/pricing) for current paid-tier
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified 2026-04-18 against [helicone.ai](https://www.helicone.ai/), [Helicone GitHub](https://github.com/Helicone/helicone), and the [2026 LLM observability guide](https://www.helicone.ai/blog/the-complete-guide-to-LLM-observability-platforms).
+Produced by the aipedia.wiki editorial pipeline. Last verified 2026-05-13 against [helicone.ai](https://www.helicone.ai/), [Helicone pricing](https://www.helicone.ai/pricing), [Helicone GitHub](https://github.com/Helicone/helicone), and the [2026 LLM observability guide](https://www.helicone.ai/blog/the-complete-guide-to-LLM-observability-platforms).
 
 ## FAQ
 
 **Is Helicone really free?**
-Cloud free tier covers 10,000 requests/month with no credit card. Self-hosting is free forever under the open-source license.
+The Hobby cloud free tier covers 10,000 requests/month with no credit card. Self-hosting is free forever under the open-source license. Pro at $79/mo unlocks unlimited seats, alerts, reports, and the HQL query language; Team at $799/mo adds SOC-2 and HIPAA compliance with 5 organizations.
 
 **How does Helicone compare to Langfuse?**
 Helicone emphasizes the AI Gateway (caching, failover, load balancing). Langfuse emphasizes prompt management and evals. Many teams use both. Both are free-tier generous.

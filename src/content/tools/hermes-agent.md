@@ -11,8 +11,8 @@ pricing_model: open-source
 price_range: "Free (MIT license; BYOK API costs)"
 status: active
 launched: 2026-02
-last_updated: 2026-05-04
-last_verified: 2026-05-04
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -32,51 +32,51 @@ facts:
     source: https://hermes-agent.nousresearch.com/
     source_label: Hermes Agent official site
     source_id: hermes-agent-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   pricing_anchor:
     value: Hermes Agent is published as open-source software; real cost depends on the LLM/API providers, hosting, and messaging
       services connected to it.
     source: https://github.com/NousResearch/hermes-agent
     source_label: Hermes Agent GitHub repository
     source_id: hermes-agent-repository
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   open_source_or_local:
     value: The repository is public and designed for self-hosted or user-controlled agent operation.
     source: https://github.com/NousResearch/hermes-agent
     source_label: Hermes Agent GitHub repository
     source_id: hermes-agent-repository
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   api_available:
     value: Docs cover the setup and extension path for an agent runtime, including tools, skills, scheduling, and provider configuration.
     source: https://hermes-agent.nousresearch.com/docs
     source_label: Hermes Agent docs
     source_id: hermes-agent-docs
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   watch_out_for:
     value: 'Hermes Agent is powerful but operator-owned: buyers need comfort managing providers, credentials, tool permissions,
       and long-running agent behavior.'
     source: https://hermes-agent.nousresearch.com/docs
     source_label: Hermes Agent docs
     source_id: hermes-agent-docs
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
 tags: [open-source, self-hosted, persistent-memory, auto-skills, multi-platform, telegram, discord, slack, whatsapp, signal, nous-research, mit-license]
-seo_title: "Hermes Agent: Features, Review & Pricing (April 2026)"
-meta_description: "Hermes Agent is Nous Research's MIT-licensed autonomous AI agent. Persistent memory, auto-generated skills, natural language cron, and Telegram/Discord/Slack/WhatsApp/Signal/CLI from one process. Free; bring your own API key."
+seo_title: "Hermes Agent: Features, Review & Pricing (May 2026)"
+meta_description: "Hermes Agent is Nous Research's MIT-licensed autonomous AI agent (v0.13). Persistent memory, auto-generated skills, natural language cron, and Telegram/Discord/Slack/WhatsApp/Signal/Email/CLI from one process. Free; bring your own API key."
 author: "aipedia.wiki Editorial"
 best_for:
   - developers wanting a self-improving self-hosted agent
@@ -104,6 +104,13 @@ price_history:
     source_label: "Source"
     source_id: hermes-agent-pricing
     note: "Verified unchanged. Self-hosted only; API costs are BYOK."
+  - date: 2026-05-13
+    plan: "Open-source"
+    price: "Free"
+    source: "https://hermes-agent.nousresearch.com/"
+    source_label: "Source"
+    source_id: hermes-agent-pricing
+    note: "Verified unchanged at v0.13.0. Self-hosted only; API costs are BYOK. Sandbox backends now five (local, Docker, SSH, Singularity, Modal); Daytona no longer listed on official site."
 ---
 
 # Hermes Agent
@@ -116,11 +123,11 @@ Three features set it apart from a standard chatbot: persistent memory across re
 
 > **Pick Hermes Agent if a self-hosted assistant that actually remembers and improves is worth setup time.** The agent writes procedural skills after multi-step tasks, stores them for reuse, and keeps full-text searchable memory across sessions. Nothing in the managed-SaaS category behaves this way.
 >
-> Six sandbox backends cover every deploy pattern: local, Docker, SSH, Daytona, Singularity, and Modal. Modal and Daytona hibernate when idle, keeping cost near zero between active conversations.
+> Five sandbox backends cover every deploy pattern as of v0.13.0 (May 2026): local, Docker, SSH, Singularity, and Modal. Modal hibernates when idle, keeping cost near zero between active conversations.
 >
 > **Skip it if the user wants plug-and-play.** There is no managed cloud. Setup means env vars, Docker, a model API key, and at least one platform integration. [ChatGPT](/tools/chatgpt/) or a hosted Zapier agent will be faster to stand up.
 >
-> **Who pays what:** Hermes itself is free under MIT. The real cost is the model API. Light use runs $5 to $30 per month through OpenRouter; frontier models from Anthropic or OpenAI can run higher on heavy workloads.
+> **Who pays what:** Hermes itself is free under MIT. The real cost is the model API. Light use runs $5 to $30 per month through OpenRouter; frontier models from Anthropic ([Opus 4.7](/tools/claude/)) or OpenAI ([GPT-5.5](/tools/chatgpt/)) can run higher on heavy workloads.
 
 ## Key Facts
 
@@ -128,15 +135,16 @@ Three features set it apart from a standard chatbot: persistent memory across re
 |---|---|
 | **License** | MIT open-source (Nous Research) |
 | **Released** | February 2026 |
-| **Deployment** | Self-hosted only (local, Docker, SSH, Daytona, Singularity, Modal) |
+| **Current version** | v0.13.0 (verified May 2026) |
+| **Deployment** | Self-hosted only (local, Docker, SSH, Singularity, Modal) |
 | **Platforms from one process** | Telegram, Discord, Slack, WhatsApp, Signal, Email, CLI |
 | **Model providers** | OpenAI, Anthropic, OpenRouter (200+ models), Nous Portal, custom endpoints |
 | **Persistent memory** | Full-text searchable across sessions and platforms |
 | **Auto-generated skills** | Yes, after multi-tool-call tasks |
 | **Scheduling** | Natural language cron ("daily digest at 7am") |
-| **Serverless hibernation** | Modal and Daytona backends |
+| **Serverless hibernation** | Modal backend |
 
-Every data point above was verified against vendor documentation on 2026-04-17. See Sources.
+Every data point above was verified against vendor documentation on 2026-05-13. See Sources.
 
 ## What it actually is
 
@@ -168,9 +176,9 @@ The skill system is emergent, not pre-authored. After a multi-step task (typical
 |---|---|
 | Hermes Agent (self-hosted) | Free, MIT license, full feature set |
 | Model API (BYOK) | Usage-based. Typical $5 to $30 per month on OpenRouter light use |
-| Modal or Daytona backend | Usage-based. Hibernates when idle, near $0 between sessions |
+| Modal backend | Usage-based. Hibernates when idle, near $0 between sessions |
 
-*Verified 2026-04-17 via the [official site](https://hermes-agent.nousresearch.com/) and [GitHub repository](https://github.com/nousresearch/hermes-agent). No subscription, no managed tier.*
+*Verified 2026-05-13 via the [official site](https://hermes-agent.nousresearch.com/) and [GitHub repository](https://github.com/nousresearch/hermes-agent). No subscription, no managed tier.*
 
 ## Against the alternatives
 
@@ -198,7 +206,7 @@ The skill system is emergent, not pre-authored. After a multi-step task (typical
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies product details against primary sources, and generates the editorial analysis shown. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-17 against the [Hermes Agent site](https://hermes-agent.nousresearch.com/), [GitHub repository](https://github.com/nousresearch/hermes-agent), and [Nous Research](https://nousresearch.com/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies product details against primary sources, and generates the editorial analysis shown. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against the [Hermes Agent site](https://hermes-agent.nousresearch.com/) (v0.13.0), [GitHub repository](https://github.com/nousresearch/hermes-agent), and [Nous Research](https://nousresearch.com/).
 
 ## FAQ
 
@@ -206,13 +214,13 @@ This page was produced by the aipedia.wiki editorial pipeline, an automated syst
 Yes. MIT license, full feature set in the open-source release. The only cost is whatever model API the operator configures.
 
 **Which models work?**
-OpenAI, Anthropic, OpenRouter (200+ models including Claude Opus 4.7 and OpenAI frontier models), Nous Portal, and custom endpoints. Switching is a config change.
+OpenAI, Anthropic, OpenRouter (200+ models including Claude Opus 4.7 and GPT-5.5), Nous Portal, and custom endpoints. Switching is a config change.
 
 **What makes it different from a Telegram bot?**
 Persistent cross-session memory, auto-generated skills that the agent writes from experience, natural language cron scheduling, and a single process that bridges Telegram, Discord, Slack, WhatsApp, Signal, Email, and CLI.
 
 **Which sandbox backends ship?**
-Six: local, Docker, SSH, Daytona, Singularity, and Modal. Modal and Daytona hibernate when idle, making them cheap for always-on personal agents.
+Five as of v0.13.0 (May 2026): local, Docker, SSH, Singularity, and Modal. Modal hibernates when idle, making it cheap for always-on personal agents. Earlier releases included Daytona; the official site no longer lists it.
 
 **Who builds Hermes Agent?**
 Nous Research, an AI research lab focused on open-weight models and agent architectures. Hermes Agent ships under the same org that publishes the Hermes model series.

@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: $0-$500/month
 status: active
 launched: 2021-01
-last_updated: 2026-05-04
-last_verified: 2026-05-04
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -34,54 +34,54 @@ facts:
     source: https://www.hume.ai/
     source_label: Hume AI official site
     source_id: hume-ai-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   pricing_anchor:
     value: Hume AI pricing is API/usage oriented with free and paid packaging; verify current credits, concurrency, voice/model
       access, and enterprise terms.
     source: https://www.hume.ai/pricing
     source_label: Hume AI pricing
     source_id: hume-ai-pricing
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-08-13'
   api_available:
     value: Developer docs are the source of truth for authentication, streaming, EVI voice behavior, expression measurement,
       and SDK integration.
     source: https://dev.hume.ai/docs
     source_label: Hume AI developer docs
     source_id: hume-ai-docs
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   model_control:
     value: Product evaluation should separate voice generation, empathic voice interface, and expression-measurement capabilities
       because each has different use cases and risk.
     source: https://www.hume.ai/products
     source_label: Hume AI products
     source_id: hume-ai-products
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   watch_out_for:
     value: Emotion AI needs extra consent, privacy, bias, and safety review; do not treat affect signals as ground-truth user
       intent without validation.
     source: https://dev.hume.ai/docs
     source_label: Hume AI developer docs
     source_id: hume-ai-docs
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
 tags: [voice-ai, empathic-voice, emotion-ai, tts, text-to-speech, speech-to-speech, evi, octave, expression-measurement]
-seo_title: 'Hume AI: Features, Pricing & Review (May 2026)'
+seo_title: 'Hume AI: Features, Pricing & Review (May 2026 update)'
 meta_description: >-
-  Hume AI ships EVI empathic speech-to-speech, Octave TTS with emotional nuance, and Expression Measurement for audio / video / text / image emotion analysis. Free through $500/mo Business, Enterprise custom.
+  Hume AI ships EVI 3 + EVI 4 mini empathic speech-to-speech, Octave 1/2 TTS with emotional nuance, and Expression Measurement for audio / video / text / image emotion analysis. Free, Starter $3, Creator $14 (first month $7), Pro $70, Scale $200, Business $500. May 2026 review.
 author: "aipedia.wiki Editorial"
 best_for:
   - voice agents needing emotional awareness
@@ -117,6 +117,20 @@ price_history:
     source_label: "Source"
     source_id: hume-ai-pricing
     note: "1M TTS chars (~1,000 min), 1,200 min EVI, 3,000 projects, 10 concurrent connections."
+  - date: 2026-05-13
+    plan: "Creator"
+    price: "$14/mo (first month $7, 50% off)"
+    source: "https://www.hume.ai/pricing"
+    source_label: "Source"
+    source_id: hume-ai-pricing
+    note: "Creator regular rate updated to $14/mo with permanent 50% first-month discount ($7). Quotas unchanged (140K TTS chars, 200 EVI minutes, 1,000 projects)."
+  - date: 2026-05-13
+    plan: "Free"
+    price: "$0"
+    source: "https://www.hume.ai/pricing"
+    source_label: "Source"
+    source_id: hume-ai-pricing
+    note: "10K TTS chars (~10 min), 5 EVI minutes, 1 concurrent, 15 RPM, 20 projects, 1 seat. Unlimited voice cloning across all tiers."
 ---
 
 # Hume AI
@@ -132,11 +146,11 @@ Supporting services: Human Feedback API (survey templates + participant pools), 
 
 ## System Verdict
 
-> **Pick Hume AI when emotion is the differentiator.** Voice agents for therapy, wellness, coaching, and customer support benefit from EVI's prosody-aware responses and interruption handling in ways that generic TTS does not deliver. Expression Measurement is the only mature API for scoring emotion across audio, video, text, and images at production scale. Starter at $3/mo and Creator at $7/mo are among the cheapest paid voice-AI entry points in the category.
+> **Pick Hume AI when emotion is the differentiator.** Voice agents for therapy, wellness, coaching, and customer support benefit from EVI's prosody-aware responses and interruption handling in ways that generic TTS does not deliver. Expression Measurement is the only mature API for scoring emotion across audio, video, text, and images at production scale. Starter at $3/mo is one of the cheapest paid voice-AI entry points in the category, and Creator at $14/mo (with a permanent 50% first-month discount to $7) remains competitive for indie developers.
 >
 > **Skip it if raw TTS quality or ultra-low latency is the goal.** [ElevenLabs](/tools/elevenlabs/) leads on voice quality ceiling; [Cartesia](/tools/cartesia/) wins on sub-40ms latency. Hume's Octave is good but not best-in-class for pure narration. Also skip if you need self-hosted weights for on-prem deployment; EVI and Octave are both cloud-only.
 >
-> **Who pays which tier:** Free for evaluation (5 min EVI, 10K TTS chars). Starter $3/mo for hobbyist voice-agent builders. Creator $7/mo for most indie developers (140K chars + 200 min EVI). Pro $70/mo when production usage crosses 1M chars/mo. Scale $200/mo for teams needing 3 seats. Business $500/mo for 5-seat orgs with higher concurrency. Enterprise custom for SOC 2 + GDPR + HIPAA, unlimited usage, and Slack support.
+> **Who pays which tier:** Free for evaluation (5 min EVI, 10K TTS chars). Starter $3/mo for hobbyist voice-agent builders. Creator $14/mo (first month $7) for indie developers (140K chars + 200 min EVI + 1,000 projects). Pro $70/mo when production usage crosses 1M chars/mo. Scale $200/mo for teams needing 3 seats. Business $500/mo for 5-seat orgs with higher concurrency. Enterprise custom for SOC 2 + GDPR + HIPAA, unlimited usage, and Slack support.
 
 ## Key Facts
 
@@ -147,7 +161,7 @@ Supporting services: Human Feedback API (survey templates + participant pools), 
 | **Languages (datasets / TTS)** | 50+ in the Data Library · multilingual TTS in Octave |
 | **Emotions measured** | 48 distinct emotions in Expression Measurement |
 | **Voice descriptors** | 600+ in the Data Library |
-| **Subscription pricing** | Free · Starter $3 · Creator $7 · Pro $70 · Scale $200 · Business $500 · Enterprise custom |
+| **Subscription pricing** | Free · Starter $3 · Creator $14 (first month $7) · Pro $70 · Scale $200 · Business $500 · Enterprise custom |
 | **Octave TTS rate** | $0.05 to $0.15 per 1,000 chars (plan-dependent) |
 | **EVI speech-to-speech** | $0.04 to $0.07 per minute overage |
 | **Expression Measurement** | Video+audio $0.0828/min · audio $0.0639/min · video $0.045/min · images $0.00204 each · text $0.00024/word |
@@ -157,7 +171,7 @@ Supporting services: Human Feedback API (survey templates + participant pools), 
 | **Voice cloning** | Included on all tiers (create + use) |
 | **Self-hosted** | None on EVI / Octave · TADA is open-source |
 
-Every data point above verified against Hume's published sources on 2026-05-02.
+Every data point above verified against Hume's published sources on 2026-05-13.
 
 ## What it actually is
 
@@ -176,7 +190,7 @@ A voice-AI platform with emotion science at the core. The company's research her
 - **Voice agents where emotion matters.** Therapy, coaching, wellness, customer support, companion apps. EVI's interruption handling and back-channeling feel conversationally different from ChatGPT Voice or ElevenLabs Conversational.
 - **Emotional nuance in narration.** Octave with emotion tags produces delivery variations that straight TTS misses. Useful for character voices, audiobook dramatization, and expressive brand voices.
 - **Emotion analytics.** Expression Measurement API is the only production-grade option for scoring emotion at scale across audio, video, text, and images. UX researchers, wellness apps, and accessibility tools land here.
-- **Budget-friendly voice-AI entry.** Starter at $3/mo and Creator at $7/mo are genuinely affordable for hobbyist and indie developers. Free tier includes 5 min EVI + 10K TTS chars for evaluation.
+- **Budget-friendly voice-AI entry.** Starter at $3/mo stays among the cheapest paid voice-AI entry points. Creator moved to $14/mo as of May 2026 with a permanent 50% first-month discount ($7), still competitive for indie developers wanting 140K TTS chars + 200 EVI minutes. Free tier includes 5 min EVI + 10K TTS chars for evaluation.
 - **External LLM flexibility.** EVI's architecture lets developers bring their own LLM for reasoning while Hume owns the voice layer. Useful for teams already committed to a specific model.
 - **Research-adjacent workflows.** Data Library, Human Feedback API, and Study Runner serve academic and commercial research teams that other voice-AI vendors do not target.
 
@@ -195,7 +209,7 @@ Subscription pricing via [hume.ai/pricing](https://www.hume.ai/pricing):
 |---|---|---|---|---|---|---|
 | Free | $0 | 10K | 5 | 1 | 20 | 1 |
 | Starter | $3 | 30K | 40 | 5 | 20 | 1 |
-| Creator | $7 (first month $3.50) | 140K | 200 | 5 | 1,000 | 1 |
+| Creator | $14 (first month $7, 50% off) | 140K | 200 | 5 | 1,000 | 1 |
 | Pro | $70 | 1M | 1,200 | 10 | 3,000 | 1 |
 | Scale | $200 | 3.3M | 5,000 | 20 | 10,000 | 3 |
 | Business | $500 | 10M | 12,500 | 30 | 20,000 | 5 |
@@ -213,7 +227,7 @@ Usage-based rates (overages or custom workflows):
 | Expression Measurement: images | $0.00204 each |
 | Expression Measurement: text | $0.00024 / word |
 
-Prices verified 2026-05-02 via [Hume pricing](https://www.hume.ai/pricing) and the [Hume homepage](https://www.hume.ai/). Voice cloning (create and use) is included on all tiers. Enterprise adds API voice access, SOC 2 / GDPR / HIPAA compliance, Slack support, and custom rate limits.
+Prices verified 2026-05-13 via [Hume pricing](https://www.hume.ai/pricing) and the [Hume homepage](https://www.hume.ai/). Voice cloning (create and use) is included on all tiers. Enterprise adds API voice access, SOC 2 / GDPR / HIPAA compliance, Slack support, and custom rate limits.
 
 ## Against the alternatives
 
@@ -226,7 +240,7 @@ Prices verified 2026-05-02 via [Hume pricing](https://www.hume.ai/pricing) and t
 | **Speech-to-speech** | **EVI (native)** | Requires Conversational AI setup | Available |
 | **Emotion analytics API** | **Yes (Expression Measurement)** | None | None |
 | **Open-source option** | TADA (partial) | None | None |
-| **Entry price** | **$3/mo Starter** | $6/mo Starter | Paid tier only |
+| **Entry price** | **$3/mo Starter** ($14 Creator) | $6/mo Starter | Paid tier only |
 | **Best viewed as** | Emotion-AI specialist | Quality + coverage leader | Latency specialist |
 
 ## Failure modes
@@ -241,7 +255,7 @@ Prices verified 2026-05-02 via [Hume pricing](https://www.hume.ai/pricing) and t
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-02 against [Hume pricing](https://www.hume.ai/pricing), the [Hume homepage](https://www.hume.ai/), and the [Hume platform docs](https://dev.hume.ai/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [Hume pricing](https://www.hume.ai/pricing), the [Hume homepage](https://www.hume.ai/), and the [Hume platform docs](https://dev.hume.ai/).
 
 ## FAQ
 

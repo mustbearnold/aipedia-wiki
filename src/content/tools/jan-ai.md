@@ -11,8 +11,8 @@ pricing_model: free
 price_range: "$0 (one optional $24 Mac voice pack)"
 status: active
 launched: 2023-10
-last_updated: 2026-05-04
-last_verified: 2026-05-04
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -32,50 +32,50 @@ facts:
     source: https://jan.ai/
     source_label: Jan official site
     source_id: jan-ai-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   pricing_anchor:
     value: Jan itself is open source; practical cost comes from hardware, local models, and any connected remote model/API providers.
     source: https://github.com/menloresearch/jan
     source_label: Jan GitHub repository
     source_id: jan-ai-repository
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   open_source_or_local:
-    value: Jan’s repository is the authoritative source for license, releases, installation, and project activity.
+    value: Jan's repository is the authoritative source for license, releases, installation, and project activity.
     source: https://github.com/menloresearch/jan
     source_label: Jan GitHub repository
     source_id: jan-ai-repository
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   runtime_architecture:
     value: Docs should be used to verify local model setup, provider connections, data paths, and desktop runtime behavior.
     source: https://jan.ai/docs
     source_label: Jan docs
     source_id: jan-ai-docs
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   watch_out_for:
     value: Local-first chat still needs model-download hygiene, hardware fit, update discipline, and clear separation of local
       versus cloud provider traffic.
     source: https://jan.ai/docs
     source_label: Jan docs
     source_id: jan-ai-docs
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
 tags: [local-llm, open-source, desktop, privacy, offline, chatgpt-alternative]
-seo_title: "Jan.ai: Features & Review (April 2026)"
-meta_description: "Jan.ai is the free open-source desktop AI that runs 100% offline. 5.3M downloads, 41k GitHub stars. Connects to local or cloud models. Best open-source ChatGPT alternative for privacy-first users."
+seo_title: "Jan.ai: Features & Review (May 2026)"
+meta_description: "Jan.ai is the free open-source desktop AI that runs 100% offline. 5.5M+ downloads, 41.9k GitHub stars. Connects to local or cloud models. Best open-source ChatGPT alternative for privacy-first users."
 author: "aipedia.wiki Editorial"
 best_for:
   - users who want local AI with a clean desktop UX
@@ -87,7 +87,7 @@ not_best_for:
   - CLI or server deployments (use Ollama)
   - non-technical users new to local AI (LM Studio has gentler onboarding)
 quick_answer: >-
-  Jan.ai is a free open-source ChatGPT alternative that runs entirely offline. Desktop app for Mac, Windows, Linux. Over 5.3 million downloads and 41,000+ GitHub stars by version 0.7.9 (March 2026). The core app is free; a Mac-only voice-to-text pack costs $24 one-time. Pick it for open-source desktop local AI. Skip it for maximum model catalog or server use (LM Studio / Ollama win there).
+  Jan.ai is a free open-source ChatGPT alternative that runs entirely offline. Desktop app for Mac, Windows, Linux. Over 5.5 million downloads and 41,900+ GitHub stars at version 0.7.9 (March 2026). The core app is free; a Mac-only voice-to-text pack costs $24 one-time. Pick it for open-source desktop local AI. Skip it for maximum model catalog or server use (LM Studio / Ollama win there).
 ---
 
 # Jan.ai
@@ -108,13 +108,15 @@ The open-source ChatGPT alternative that stays on your machine. Desktop-first, p
 |---|---|
 | **License** | Open source (permissive; MIT-style) |
 | **Latest version** | 0.7.9 (March 23, 2026) |
-| **Downloads** | 5.3M+ |
-| **GitHub stars** | 41,000+ |
+| **Downloads** | 5.5M+ |
+| **GitHub stars** | 41,900+ |
+| **Discord community** | 15,000+ members |
 | **Platforms** | macOS, Windows, Linux |
 | **Core cost** | $0 |
 | **Optional paid** | Mac voice-to-text pack: $24 one-time |
-| **Model support** | Open-weight (Llama 4, Qwen 3, Mistral, Gemma 4) via GGUF; remote APIs (OpenAI, Anthropic, Google, any OpenAI-compatible endpoint) |
+| **Model support** | Open-weight (Llama 4, Qwen 3.6, Mistral, Gemma 4, DeepSeek, Kimi K2.6) via GGUF; remote APIs (OpenAI, Anthropic Claude Opus 4.7, Google Gemini 3.1 Pro, xAI, any OpenAI-compatible endpoint) |
 | **Offline capability** | Yes, full |
+| **Memory feature** | Coming soon (announced on jan.ai) |
 
 ## When to pick Jan.ai
 
@@ -140,7 +142,7 @@ Jan.ai is fundamentally free.
 | All features, local + cloud model support | $0 |
 | Mac voice-to-text pack | $24 one-time |
 
-Verified 2026-04-18 via [jan.ai/download](https://www.jan.ai/download) and [Jan.ai GitHub](https://github.com/janhq/jan).
+Verified 2026-05-13 via [jan.ai/download](https://www.jan.ai/download) and [Jan.ai GitHub](https://github.com/menloresearch/jan).
 
 ## Failure modes
 
@@ -162,7 +164,7 @@ Verified 2026-04-18 via [jan.ai/download](https://www.jan.ai/download) and [Jan.
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified 2026-04-18 against [jan.ai](https://www.jan.ai/) and [Jan.ai GitHub releases](https://github.com/janhq/jan/releases).
+Produced by the aipedia.wiki editorial pipeline. Last verified 2026-05-13 against [jan.ai](https://www.jan.ai/) and [Jan.ai GitHub releases](https://github.com/menloresearch/jan/releases).
 
 ## FAQ
 

@@ -11,10 +11,10 @@ pricing_model: freemium
 price_range: "$20-$375/month"
 status: active
 launched: 2023-08
-last_updated: 2026-05-04
-last_verified: 2026-05-04
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
-seo_title: "Julius AI: Features, Pricing & Review (April 2026)"
+seo_title: "Julius AI: Features, Pricing & Review (May 2026)"
 meta_description: "Julius AI is a data-analysis copilot. Upload CSV, Excel, Parquet, or connect Snowflake and BigQuery, and Julius writes Python or R code, runs it, and returns charts. Free tier, Lite $20, Standard $45, Pro $60, Team $50/user, Business $375."
 author: "aipedia.wiki Editorial"
 affiliate:
@@ -35,50 +35,50 @@ facts:
     source: https://julius.ai/
     source_label: Julius AI official site
     source_id: julius-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   pricing_anchor:
     value: Julius pricing includes free and paid packaging; verify message/analysis limits, data size, model access, team features,
       and enterprise/security terms.
     source: https://julius.ai/pricing
     source_label: Julius AI pricing
     source_id: julius-pricing
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-08-13'
   workflow_surface:
     value: Julius focuses on AI data analysis over uploaded data, charts, and reports rather than general BI governance or warehouse-native
       notebooks.
     source: https://julius.ai/
     source_label: Julius AI official site
     source_id: julius-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   enterprise_controls:
     value: Business evaluation should review team controls, data handling, security posture, and deployment fit for sensitive
       datasets.
     source: https://julius.ai/for-business
     source_label: Julius AI for business
     source_id: julius-business
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   watch_out_for:
     value: For serious analytics, test reproducibility, source-data handling, statistical correctness, chart provenance, and
       whether outputs can be audited by analysts.
     source: https://julius.ai/for-business
     source_label: Julius AI for business
     source_id: julius-business
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
 tags: [data-analysis, code-interpreter, python, r, sql, csv, spreadsheet, bigquery, snowflake, claude, gpt-5, gemini]
 best_for:
   - business analysts running ad-hoc spreadsheet analysis
@@ -108,6 +108,13 @@ price_history:
     source_label: "Source"
     source_id: julius-pricing
     note: "Verified, unchanged."
+  - date: 2026-05-13
+    plan: "Standard"
+    price: "$45/mo"
+    source: "https://julius.ai/pricing"
+    source_label: "Source"
+    source_id: julius-pricing
+    note: "Reverified, unchanged."
 ---
 
 # Julius AI
@@ -139,7 +146,7 @@ Memory Boost containers reach 32GB of RAM on paid plans. That is 64x the file ca
 | **API** | None generally available |
 | **Output** | Charts, tables, the underlying Python or R code, and a written explanation |
 
-Every data point above was verified against vendor sources on 2026-04-15. See Sources.
+Every data point above was reverified against vendor sources on 2026-05-13. See Sources.
 
 ## What it actually is
 
@@ -179,7 +186,7 @@ Plans via [julius.ai/pricing](https://julius.ai/pricing). Annual billing saves 1
 | Business | $375/mo | Unlimited | 32GB, team features | All connectors | Department-level rollout |
 | Enterprise | Custom | Unlimited | Custom | All + SSO, SOC 2 | Large orgs with compliance needs |
 
-*Prices verified 2026-04-17 via [Julius pricing](https://julius.ai/pricing) and third-party reviews at [Fahim AI](https://www.fahimai.com/julius-ai) and [eesel AI](https://www.eesel.ai/blog/julius-ai-pricing).*
+*Prices reverified 2026-05-13 via [Julius pricing](https://julius.ai/pricing) and third-party reviews at [Fahim AI](https://www.fahimai.com/julius-ai) and [eesel AI](https://www.eesel.ai/blog/julius-ai-pricing).*
 
 ## Against the alternatives
 
@@ -205,7 +212,7 @@ Plans via [julius.ai/pricing](https://julius.ai/pricing). Annual billing saves 1
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis shown here. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-04-17 against [Julius pricing](https://julius.ai/pricing), [Julius capabilities](https://julius.ai/capabilities), the [Julius vs. ChatGPT comparison](https://julius.ai/articles/julius-ai-vs-chatgpt), and independent reviews at [letdataspeak](https://letdataspeak.com/julius-ai-review/) and [DataCamp](https://www.datacamp.com/tutorial/julius-ai-guide).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis shown here. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-05-13 against [Julius pricing](https://julius.ai/pricing), [Julius capabilities](https://julius.ai/capabilities), the [Julius vs. ChatGPT comparison](https://julius.ai/articles/julius-ai-vs-chatgpt), and independent reviews at [letdataspeak](https://letdataspeak.com/julius-ai-review/) and [DataCamp](https://www.datacamp.com/tutorial/julius-ai-guide).
 
 ## FAQ
 
@@ -213,19 +220,19 @@ This page was produced by the aipedia.wiki editorial pipeline, an automated syst
 Yes, with strict limits. The free tier caps monthly messages around 5 to 15 and does not include Memory Boost containers or connectors. Lite at $20/mo is the real entry point.
 
 **What models does Julius use?**
-As of April 2026, Julius exposes Claude Opus 4.7, Claude Sonnet 4.6, GPT-5.5, and Gemini 3 for user selection per task. Model availability by tier is documented on the [Julius capabilities page](https://julius.ai/capabilities).
+As of May 2026, Julius exposes Claude Opus 4.7, Claude Sonnet 4.6, GPT-5.5, and Gemini 3 for user selection per task. Model availability by tier is documented on the [Julius capabilities page](https://julius.ai/capabilities).
 
 **How large a file can Julius handle?**
 Standard and above unlock Memory Boost containers that reach 32GB of RAM, which handles most files up to that size. ChatGPT's Code Interpreter caps closer to 512MB.
 
 **Can Julius run R code?**
-Yes. Python, R, and SQL all execute inside Julius sandboxed containers. ChatGPT's Code Interpreter runs Python only as of April 2026.
+Yes. Python, R, and SQL all execute inside Julius sandboxed containers. ChatGPT's Code Interpreter runs Python only as of May 2026.
 
 **Does Julius connect to Snowflake or BigQuery?**
 Yes on Pro and Business tiers. Connectors also cover PostgreSQL, Supabase, Google Drive, OneDrive, Google Ads, and Stripe.
 
 **Is there an API?**
-No generally available API as of April 2026. Julius is a chat product, not a programmatic service.
+No generally available API as of May 2026. Julius is a chat product, not a programmatic service.
 
 **Julius or ChatGPT Code Interpreter?**
 ChatGPT Plus at $20 covers most individual analysis and ships inside a general-purpose chatbot. Pick Julius when files exceed 512MB, the workflow needs R, a warehouse is the data source, or the team wants to route tasks across Claude, GPT-5, and Gemini.

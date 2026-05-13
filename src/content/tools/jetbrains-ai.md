@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$30/month"
 status: active
 launched: 2023-12
-last_updated: 2026-05-04
-last_verified: 2026-05-04
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -26,57 +26,57 @@ scores:
   longevity: 8
 facts:
   best_for:
-    value: Best for JetBrains IDE users who want AI coding assistance integrated directly into IntelliJ-based development workflows.
+    value: Best for JetBrains IDE users who want AI coding assistance integrated directly into IntelliJ-based development workflows, with Claude Opus 4.7 available as a selectable model.
     source: https://www.jetbrains.com/ai-assistant/
     source_label: JetBrains AI Assistant
     source_id: jetbrains-ai-assistant
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   pricing_anchor:
     value: JetBrains AI access is tied to JetBrains product/subscription packaging and can change by IDE, plan, organization,
       and region; verify current account terms on official pages.
     source: https://www.jetbrains.com/ai/
     source_label: JetBrains AI official site
     source_id: jetbrains-ai-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-08-13'
   workflow_surface:
     value: The value is IDE-native assistance for code explanation, generation, refactoring, tests, docs, and project context
       rather than a standalone agent IDE.
     source: https://www.jetbrains.com/help/ai-assistant/
     source_label: JetBrains AI Assistant docs
     source_id: jetbrains-ai-docs
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   integration_surface:
     value: Docs are the source of truth for enabling AI Assistant, provider/model behavior, data sharing controls, and supported
       IDE features.
     source: https://www.jetbrains.com/help/ai-assistant/
     source_label: JetBrains AI Assistant docs
     source_id: jetbrains-ai-docs
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   watch_out_for:
     value: Evaluate JetBrains AI inside the target IDE and repo, including context quality, privacy settings, enterprise controls,
       and whether it overlaps with Copilot/Cursor seats.
     source: https://www.jetbrains.com/ai-assistant/
     source_label: JetBrains AI Assistant
     source_id: jetbrains-ai-assistant
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
 tags: [ai-coding, jetbrains, intellij, pycharm, webstorm, ide, autocomplete, junie, agent]
-seo_title: "JetBrains AI Assistant: Features, Pricing & Review (April 2026)"
-meta_description: "JetBrains AI Assistant plus Junie agent run inside IntelliJ, PyCharm, WebStorm, and the rest of the IDE family. AI Pro $10/mo, AI Ultimate $30/mo, bundled with the All Products Pack."
+seo_title: "JetBrains AI Assistant: Features, Pricing & Review (May 2026)"
+meta_description: "JetBrains AI Assistant plus Junie agent run inside IntelliJ, PyCharm, WebStorm, and the rest of the IDE family with Claude Opus 4.7, GPT-5.5, and Gemini 3.1 Pro selectable. AI Pro $10/mo, AI Ultimate $30/mo, bundled with the All Products Pack."
 author: "aipedia.wiki Editorial"
 best_for:
   - existing JetBrains IDE users
@@ -105,6 +105,13 @@ price_history:
     source_label: "Source"
     source_id: jetbrains-ai-pricing
     note: "Individual tier; 10 credits/mo; bundled free with All Products Pack."
+  - date: 2026-05-13
+    plan: "AI Pro"
+    price: "$10/mo"
+    source: "https://www.jetbrains.com/help/ai-assistant/licensing-and-subscriptions.html"
+    source_label: "Source"
+    source_id: jetbrains-ai-pricing
+    note: "Re-verified May 2026; Claude Opus 4.7 added to selectable model list within 24 hours of Anthropic's April 17 IDE-wide rollout."
 ---
 
 # JetBrains AI Assistant
@@ -131,11 +138,17 @@ Two products in one SKU. AI Assistant handles chat, completion, and code actions
 | **AI Pro** | $10/mo individuals, $20/mo organizations, 10 credits/mo |
 | **AI Ultimate** | $30/mo individuals, $60/mo organizations, 35 credits/mo |
 | **All Products Pack** | $299/year, bundles AI Pro |
-| **Models** | Claude Opus 4.7, OpenAI frontier models, Gemini 3.1 Pro, JetBrains local model |
+| **Models** | Claude Opus 4.7 (added April 17, 2026), GPT-5.5 (released April 23, 2026), Gemini 3.1 Pro, JetBrains local model |
 | **Agent** | Junie, credit-metered |
 | **VS Code support** | None |
 
-Every data point above was verified against vendor sources on 2026-04-17. See Sources.
+Every data point above was verified against vendor sources on 2026-05-13. See Sources.
+
+## Recent changes
+
+- **April 17, 2026:** JetBrains AI Assistant shipped Claude Opus 4.7 as a selectable model within 24 hours of Anthropic's release, alongside Cursor, Windsurf, Zed, Continue, and GitHub Copilot. Existing AI Pro and AI Ultimate subscribers can pick it from the model dropdown without changing plan.
+- **April 16, 2026:** Anthropic released Claude Opus 4.7. Same $5/$25 per MTok API price as 4.6 with a new tokenizer that produces 1.0 to 1.35x more tokens per input, so heavy Junie users on Ultimate should re-benchmark credit burn against their old 4.6 workflows.
+- **April 23, 2026:** OpenAI released GPT-5.5. JetBrains AI keeps OpenAI frontier models in the model picker; users on either flagship can switch per-task.
 
 ## What it actually is
 
@@ -170,7 +183,7 @@ The moat is native IDE depth. AI Assistant reads inspection output directly, exp
 | AI Ultimate | $30/mo | $60/mo | 35 | Heavy Junie and chat workloads |
 | All Products Pack | $299/year | custom | 10 (via AI Pro) | Developers who use 2+ JetBrains IDEs |
 
-*Prices verified 2026-04-17 via [JetBrains AI plans](https://www.jetbrains.com/ai-ides/buy/) and [the licensing docs](https://www.jetbrains.com/help/ai-assistant/licensing-and-subscriptions.html). Annual billing saves 12% on AI Pro and 33% on AI Ultimate. Top-up credits are available when the monthly quota runs out.*
+*Prices verified 2026-05-13 via [JetBrains AI plans](https://www.jetbrains.com/ai-ides/buy/) and [the licensing docs](https://www.jetbrains.com/help/ai-assistant/licensing-and-subscriptions.html). Annual billing saves 12% on AI Pro and 33% on AI Ultimate. Top-up credits are available when the monthly quota runs out. Claude Opus 4.7 is now selectable on Pro and Ultimate; GPT-5.5 also available.*
 
 ## Against the alternatives
 
@@ -196,7 +209,7 @@ The moat is native IDE depth. AI Assistant reads inspection output directly, exp
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-04-17 against [JetBrains AI plans](https://www.jetbrains.com/ai-ides/buy/) and [JetBrains AI licensing docs](https://www.jetbrains.com/help/ai-assistant/licensing-and-subscriptions.html).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-05-13 against [JetBrains AI plans](https://www.jetbrains.com/ai-ides/buy/), [JetBrains AI licensing docs](https://www.jetbrains.com/help/ai-assistant/licensing-and-subscriptions.html), and the [Opus 4.7 day-two IDE adoption coverage](/news/2026-04-17-opus-4-7-day-two-ide-adoption/).
 
 ## FAQ
 

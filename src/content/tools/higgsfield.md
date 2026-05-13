@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$99/month"
 status: active
 launched: 2025-03
-last_updated: 2026-05-04
-last_verified: 2026-05-04
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 seo_title: "Higgsfield: Features, Pricing & Review (2026)"
 meta_description: "Higgsfield is an AI video platform with cinematic camera controls, Cinema Studio 3.5, Soul character anchoring, and Lipsync Studio. Free tier, Starter $15/mo, Plus $39/mo, Ultra $99/mo (annual). API on Ultra."
@@ -35,50 +35,50 @@ facts:
     source: https://higgsfield.ai/
     source_label: Higgsfield official site
     source_id: higgsfield-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   pricing_anchor:
     value: Higgsfield pricing is plan/credit dependent; verify current generation limits, commercial rights, export quality,
       and feature access before committing.
     source: https://higgsfield.ai/pricing
     source_label: Higgsfield pricing
     source_id: higgsfield-pricing
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-08-13'
   workflow_surface:
     value: The product is a creative AI video and image-generation surface, not a general-purpose video editor or enterprise
       MLOps platform.
     source: https://higgsfield.ai/
     source_label: Higgsfield official site
     source_id: higgsfield-official
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   company_context:
     value: Higgsfield positions around AI video/image infrastructure and creative generation; about/company pages are useful
       for product-positioning changes.
     source: https://higgsfield.ai/about
     source_label: Higgsfield about
     source_id: higgsfield-about
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-11-13'
   watch_out_for:
     value: Evaluate artifact rate, likeness/IP controls, moderation, export formats, and credit burn against Runway, Pika, Kling,
       and Hailuo before production use.
     source: https://higgsfield.ai/pricing
     source_label: Higgsfield pricing
     source_id: higgsfield-pricing
-    verified_at: '2026-05-04'
+    verified_at: '2026-05-13'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-08-13'
 tags: [video-generation, cinematic-ai, camera-control, short-form-video, higgsfield]
 best_for:
   - cinematic camera movement (dolly, orbit, push-in, crane)
@@ -115,6 +115,13 @@ price_history:
     source_label: "Source"
     source_id: higgsfield-pricing
     note: "3,000 base credits, 8 concurrent jobs, API access, one unlimited video model"
+  - date: 2026-05-13
+    plan: "Starter / Plus / Ultra"
+    price: "$15 / $39 / $99 per month annual"
+    source: "https://higgsfield.ai/pricing"
+    source_label: "Source"
+    source_id: higgsfield-pricing
+    note: "Verified unchanged. Cinema Studio 3.5, Soul ID, Seedance 2.0 remain the flagship surface; multi-model orchestration (Kling 3.0, Veo 3, Nano Banana 2, Wan 2.6, Flux.2 Pro) and Lipsync Studio still ship across paid tiers."
 ---
 
 # Higgsfield
@@ -189,7 +196,7 @@ Plans via [higgsfield.ai/pricing](https://higgsfield.ai/pricing):
 | Plus | $39/mo annual | 1,000/mo | 6 | 365-day unlimited on Seedream 5.0 Lite, Flux.2 Pro, GPT Image; 5,000 free Soul V2 and Cinema generations |
 | Ultra | $99/mo annual | 3,000/mo (scales to 9,000) | 8 | API access, one selectable unlimited video model (Nano Banana 2, Wan 2.6, Seedance 1.5 Pro, or Kling 2.6), 10,000 free Soul V2 |
 
-Prices verified 2026-04-18 via [Higgsfield pricing](https://higgsfield.ai/pricing), cross-checked against [Higgsfield's own pricing blog](https://geo.higgsfield.ai/task/blog/higgsfield-ai-pricing-plans) and the [Flowith 2026 breakdown](https://flowith.io/blog/higgsfield-pricing-2026-free-vs-creator-vs-studio/).
+Prices verified 2026-05-13 via [Higgsfield pricing](https://higgsfield.ai/pricing), cross-checked against [Higgsfield's own pricing blog](https://geo.higgsfield.ai/task/blog/higgsfield-ai-pricing-plans) and the [Flowith 2026 breakdown](https://flowith.io/blog/higgsfield-pricing-2026-free-vs-creator-vs-studio/).
 
 **Billing notes:**
 - Paid tiers list annual billing only on the main pricing page. Monthly billing exists but at a ~25% premium.
@@ -222,7 +229,7 @@ Prices verified 2026-04-18 via [Higgsfield pricing](https://higgsfield.ai/pricin
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-04-18 against [Higgsfield pricing](https://higgsfield.ai/pricing), [Higgsfield's pricing-plans post](https://geo.higgsfield.ai/task/blog/higgsfield-ai-pricing-plans), [TechCrunch's launch coverage](https://techcrunch.com/2024/04/03/former-snap-ai-chief-launches-higgsfield-to-take-on-openais-sora-video-generator/), and the [Flowith pricing breakdown](https://flowith.io/blog/higgsfield-pricing-2026-free-vs-creator-vs-studio/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [Higgsfield pricing](https://higgsfield.ai/pricing), [Higgsfield's pricing-plans post](https://geo.higgsfield.ai/task/blog/higgsfield-ai-pricing-plans), [TechCrunch's launch coverage](https://techcrunch.com/2024/04/03/former-snap-ai-chief-launches-higgsfield-to-take-on-openais-sora-video-generator/), and the [Flowith pricing breakdown](https://flowith.io/blog/higgsfield-pricing-2026-free-vs-creator-vs-studio/).
 
 ## FAQ
 

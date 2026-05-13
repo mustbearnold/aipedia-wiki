@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$199/month; one-track licenses from $19"
 status: active
 launched: 2017-01
-last_updated: 2026-05-04
-last_verified: 2026-05-04
+last_updated: 2026-05-13
+last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -31,8 +31,8 @@ facts:
     source: "https://mubert.com/"
     source_label: "Mubert homepage"
     source_id: mubert-official
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -40,17 +40,17 @@ facts:
     source: "https://mubert.com/render/pricing"
     source_label: "Mubert pricing"
     source_id: mubert-pricing
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: high
   licensing_model:
-    value: "Mubert’s buyer value depends on license fit, not just generation quality; FAQ/pricing should be checked for commercial, client, and platform rights."
+    value: "Mubert's buyer value depends on license fit, not just generation quality; FAQ/pricing should be checked for commercial, client, and platform rights."
     source: "https://mubert.com/render/faq"
     source_label: "Mubert FAQ"
     source_id: mubert-faq
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: medium
     confidence: high
   best_for:
@@ -58,8 +58,8 @@ facts:
     source: "https://mubert.com/render/pricing"
     source_label: "Mubert pricing"
     source_id: mubert-pricing
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: high
     confidence: high
   watch_out_for:
@@ -67,8 +67,8 @@ facts:
     source: "https://mubert.com/render/faq"
     source_label: "Mubert FAQ"
     source_id: mubert-faq
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-05-13
+    next_review_at: 2026-08-13
     volatility: medium
     confidence: medium
 tags: [ai-music, royalty-free, background-music, content-creation, youtube-safe]
@@ -76,6 +76,21 @@ seo_title: "Mubert Review: AI Music Pricing, Licenses & Limits (May 2026)"
 meta_description: >-
   Mubert creates instrumental AI music from licensed stems. Free, Creator, Pro, and Business plans run from $0 to $199/month, with one-track licenses from $19.
 author: "aipedia.wiki Editorial"
+price_history:
+  - date: 2026-05-02
+    plan: "Pro"
+    price: "$39/mo ($32.49 annual)"
+    source: "https://mubert.com/render/pricing"
+    source_label: "Source"
+    source_id: mubert-pricing
+    note: "Verified via public pricing API."
+  - date: 2026-05-13
+    plan: "Pro"
+    price: "$39/mo ($32.49 annual)"
+    source: "https://mubert.com/render/pricing"
+    source_label: "Source"
+    source_id: mubert-pricing
+    note: "Reverified, unchanged. One-track licenses still $19 to $499."
 best_for:
   - non-monetized personal videos on Creator
   - monetized YouTube, podcast, and social content on Pro
@@ -120,7 +135,7 @@ The important detail is licensing. Mubert can be useful for creator-safe backgro
 | **Standalone music release** | Not licensed for standalone release on streaming platforms or stock-music sites |
 | **API/custom use** | API and custom terms are handled through a sales call |
 
-Every pricing and license point above was rechecked on 2026-05-02 against Mubert's public pricing page and public pricing API.
+Every pricing and license point above was rechecked on 2026-05-13 against Mubert's public pricing page and public pricing API.
 
 ## What it actually is
 
@@ -148,7 +163,7 @@ The license model is the product. Free and Creator are narrow. Pro is where mone
 
 ## Pricing
 
-Subscription pricing is published at [mubert.com/render/pricing](https://mubert.com/render/pricing). Mubert also exposes one-track licenses on the same pricing flow. Prices below were verified from Mubert's public pricing API on 2026-05-02.
+Subscription pricing is published at [mubert.com/render/pricing](https://mubert.com/render/pricing). Mubert also exposes one-track licenses on the same pricing flow. Prices below were reverified from Mubert's public pricing API on 2026-05-13.
 
 | Plan | Monthly | Annual display | Generations | License fit |
 |---|---:|---:|---:|---|
@@ -181,7 +196,7 @@ One-track perpetual licenses start at $19 for Standard social-media use. Higher 
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that checks vendor documentation and public pricing data before publishing tool analysis. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity). Last verified 2026-05-02 against Mubert's official site, Render pricing page, and public pricing API.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that checks vendor documentation and public pricing data before publishing tool analysis. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity). Last verified 2026-05-13 against Mubert's official site, Render pricing page, and public pricing API.
 
 ## FAQ
 
