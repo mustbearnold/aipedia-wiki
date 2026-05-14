@@ -16,12 +16,14 @@ last_updated: 2026-05-13
 last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
-  has_program: null
+  has_program: true
   commission: null
   cookie_days: null
   network: null
-  link: null
-  application_status: none
+  link: "https://go.reclaim.ai/e8tci1owpeq8"
+  application_status: approved
+  approved_date: 2026-05-14
+  notes: "Affiliate link configured 2026-05-14. Internal monetization terms should not be surfaced in public editorial copy."
 scores:
   utility: 9
   value: 8

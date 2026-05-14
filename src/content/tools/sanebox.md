@@ -20,9 +20,10 @@ affiliate:
   commission: $25 referral credit + 25% for new sign-ups (referral program)
   cookie_days: null
   network: in-house referral
-  link: null
-  application_status: none
-  notes: "SaneBox runs a long-standing referral program rather than a traditional affiliate network; commission detail verified via /pricing page promo copy 2026-05-13."
+  link: "https://try.sanebox.com/itokxwzvk7c5"
+  application_status: approved
+  approved_date: 2026-05-14
+  notes: "Affiliate link configured 2026-05-14 via SaneBox's in-house referral program; commission detail verified via /pricing page promo copy 2026-05-13. Internal monetization terms should not be surfaced in public editorial copy."
 scores:
   utility: 8
   value: 8

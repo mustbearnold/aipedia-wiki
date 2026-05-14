@@ -58,6 +58,7 @@ const readingMinutes = Math.max(1, Math.round(wordCount / 230));
   lastVerified={entry.data.last_verified ? String(entry.data.last_verified) : undefined}
   readingMinutes={readingMinutes}
   noindex={entry.data.noindex === true}
+  related={(entry.data as any).related ?? []}
 >
   <Content />
 </GuideLayout>

@@ -1,0 +1,161 @@
+---
+import ArticleLayout from '../../layouts/ArticleLayout.astro';
+import { getCollection } from 'astro:content';
+
+const LAST_REVIEWED = '2026-05-14';
+const LAST_REVIEWED_HUMAN = 'May 14, 2026';
+
+const pageName = 'Tools We Actually Use, aipedia.wiki';
+const pageDesc =
+  "The short, honest list of tools the aipedia.wiki editorial team actually uses to build and maintain the site. Intentionally brief.";
+
+// Pull tool data for the two tools we actually use, so links work and titles stay in sync.
+const allTools = await getCollection('tools');
+const toolBySlug: Record<string, any> = {};
+for (const t of allTools) {
+  const slug = (t.data as any).slug ?? t.id.replace(/\.md$/, '');
+  toolBySlug[slug] = t.data;
+}
+
+type StackEntry = {
+  slug: string;
+  why: string;
+};
+
+// Honest list: only the tools the editorial team genuinely uses to build and
+// maintain aipedia.wiki. Affiliate status is irrelevant here. Neither of these
+// vendors runs an affiliate program, which is the point: this page exists to
+// be honest, not to monetize.
+const realStack: StackEntry[] = [
+  {
+    slug: 'claude-code',
+    why: 'The terminal-based agentic coding tool that handles repo-wide editing, multi-file changes, dependency mapping, and the day-to-day work of maintaining the site. Used as the primary coding surface.',
+  },
+  {
+    slug: 'codex',
+    why: 'OpenAI\'s coding agent. Used alongside Claude Code for tasks where a second model perspective catches edge cases, and for the async cloud-agent workflow when starting longer-running changes.',
+  },
+];
+
+// Tools used for infrastructure rather than editorial AI work. Included for
+// completeness, but these are platform decisions rather than recommendations.
+const infrastructure: { name: string; url: string; why: string }[] = [
+  {
+    name: 'Astro',
+    url: 'https://astro.build',
+    why: 'Static site framework that powers aipedia.wiki. Open source.',
+  },
+  {
+    name: 'Cloudflare',
+    url: 'https://www.cloudflare.com/',
+    why: 'CDN, DNS, and edge platform.',
+  },
+  {
+    name: 'GitHub',
+    url: 'https://github.com',
+    why: 'Version control and CI/CD.',
+  },
+];
+---
+
+<ArticleLayout
+  title="Tools We Actually Use"
+  seoTitle={pageName}
+  description={pageDesc}
+  eyebrow="Editorial transparency"
+  subhead="The short, honest list of tools the aipedia.wiki editorial team uses to build and maintain this site."
+  breadcrumbs={[{ label: 'About', href: '/about/' }, { label: 'Our stack' }]}
+>
+  <p class="not-prose text-xs text-[var(--text-muted)] mb-6">
+    <span class="uppercase tracking-[0.12em]">Last reviewed:</span>
+    <time datetime={LAST_REVIEWED}>{LAST_REVIEWED_HUMAN}</time>
+  </p>
+
+  <h2>What this page is</h2>
+
+  <p>
+    This page lists the tools the aipedia.wiki editorial team actually uses to build and maintain the site. It is intentionally short, because the editorial team does not personally use most of the products it reviews.
+  </p>
+
+  <p>
+    Many review sites list a long stack of tools on their "what we use" page that conveniently matches whichever affiliate programs they have approved. This page does not do that. We review hundreds of tools across dozens of categories; we use a small number of them. The list below is the truth, not the marketing copy.
+  </p>
+
+  <h2>The editorial stack</h2>
+
+  <div class="not-prose grid gap-4 my-6">
+    {realStack.map((entry) => {
+      const tool = toolBySlug[entry.slug];
+      if (!tool) return null;
+      const toolUrl = `/tools/${entry.slug}/`;
+      return (
+        <article class="rounded-lg border border-[var(--border-subtle)] p-4 sm:p-5 bg-[var(--surface-1)]">
+          <div class="flex items-start justify-between gap-4">
+            <div class="min-w-0">
+              <h4 class="text-base font-semibold leading-snug">
+                <a href={toolUrl} class="hover:underline">{tool.title}</a>
+              </h4>
+              {tool.tagline && (
+                <p class="mt-1 text-sm text-[var(--text-muted)]">{tool.tagline}</p>
+              )}
+            </div>
+            <a
+              href={toolUrl}
+              class="shrink-0 inline-flex items-center justify-center rounded-md border border-[var(--border-subtle)] text-xs font-medium px-3 py-1.5 hover:bg-[var(--surface-2)]"
+            >
+              Read the review
+            </a>
+          </div>
+          <p class="mt-3 text-sm">{entry.why}</p>
+        </article>
+      );
+    })}
+  </div>
+
+  <p class="text-sm text-[var(--text-muted)]">
+    Neither Anthropic (Claude Code) nor OpenAI (Codex) runs an affiliate program at the time of this writing. No commission is earned when readers click through to these tools from this page. They are listed because the editorial team uses them, not because they monetize.
+  </p>
+
+  <h2>Site infrastructure</h2>
+
+  <p>
+    For completeness, the platform pieces that aipedia.wiki runs on. These are infrastructure choices, not editorial recommendations.
+  </p>
+
+  <div class="not-prose grid gap-3 my-6">
+    {infrastructure.map((entry) => (
+      <article class="rounded-lg border border-[var(--border-subtle)] p-4 sm:p-5 bg-[var(--surface-1)]">
+        <h4 class="text-base font-semibold">
+          <a href={entry.url} rel="noopener" target="_blank" class="hover:underline">{entry.name}</a>
+        </h4>
+        <p class="mt-2 text-sm">{entry.why}</p>
+      </article>
+    ))}
+  </div>
+
+  <h2>What this list does not include</h2>
+
+  <p>
+    aipedia.wiki reviews hundreds of AI tools across the catalog. The editorial team uses a small handful of them. That is normal: a publication that covers a market does not consume every product in the market. Coverage is the job; usage is incidental.
+  </p>
+
+  <p>
+    For recommendations across categories, read the <a href="/guides/">buyer guides</a>, the <a href="/compare/">comparisons</a>, and the <a href="/categories/">category top picks</a>. Those pages reflect the scoring methodology at <a href="/about/scoring/">/about/scoring/</a> and apply uniformly across affiliate-active and non-affiliate tools.
+  </p>
+
+  <h2>If the stack changes</h2>
+
+  <p>
+    This page is reviewed when the editorial team adds, removes, or switches a tool. The last review date appears at the top.
+  </p>
+
+  <p>
+    Questions about the editorial stack: <a href="mailto:editorial@aipedia.wiki">editorial@aipedia.wiki</a>.
+  </p>
+
+  <h2>Honesty note</h2>
+
+  <p>
+    An earlier version of this page listed 13 tools, all of which happened to be affiliate-active. That version was wrong: it implied the editorial team uses tools it does not personally run. It has been corrected to reflect the actual stack. The <a href="/disclosure/">affiliate disclosure</a> covers the full rules on affiliate links elsewhere on the site, and the <a href="/about/editorial/">editorial policy</a> covers the principle that rankings are independent of affiliate status.
+  </p>
+</ArticleLayout>

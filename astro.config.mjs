@@ -17,6 +17,7 @@ const isFastBuild = process.env.AIPEDIA_FAST_BUILD === '1';
 const SITEMAP_EXCLUDED_PATHS = new Set([
   '/about/editor/',
   '/compare/build/',
+  '/demo-godtier/',
   '/guides/ai-content-pipeline/',
   '/guides/ai-customer-support/',
   '/guides/best-ai-for-medical-research/',

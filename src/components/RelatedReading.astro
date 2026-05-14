@@ -1,0 +1,118 @@
+---
+/**
+ * RelatedReading: visual card grid for onward navigation at the end of guide
+ * and workflow articles. Replaces the plain bulleted "Internal references"
+ * lists with a tappable card grid that lifts onward click-through.
+ */
+
+interface RelatedLink {
+  href: string;
+  title: string;
+  description?: string;
+  kind?: 'tool' | 'guide' | 'workflow' | 'comparison';
+}
+
+interface Props {
+  items: RelatedLink[];
+  heading?: string;
+}
+
+const { items, heading = 'Keep reading' } = Astro.props;
+
+const validItems = items.filter((i) => i && i.href && i.title);
+if (validItems.length === 0) return Astro.locals.skip ?? null;
+---
+
+{validItems.length > 0 && (
+  <section class="rr-section" aria-labelledby="rr-heading">
+    <h2 id="rr-heading" class="rr-heading">{heading}</h2>
+    <div class="rr-grid">
+      {validItems.map((item) => (
+        <a href={item.href} class={`rr-card rr-card-${item.kind ?? 'guide'}`}>
+          <div class="rr-card-kind">
+            {item.kind === 'tool' ? 'Tool review' :
+             item.kind === 'workflow' ? 'Workflow' :
+             item.kind === 'comparison' ? 'Comparison' :
+             'Guide'}
+          </div>
+          <strong class="rr-card-title">{item.title}</strong>
+          {item.description && <p class="rr-card-desc">{item.description}</p>}
+          <span class="rr-card-arrow" aria-hidden="true">→</span>
+        </a>
+      ))}
+    </div>
+  </section>
+)}
+
+<style>
+  .rr-section {
+    margin: 48px 0 32px;
+  }
+  .rr-heading {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin: 0 0 16px;
+    color: var(--gt-fg);
+  }
+  .rr-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  @media (min-width: 600px) {
+    .rr-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (min-width: 1024px) {
+    .rr-grid { grid-template-columns: 1fr 1fr 1fr; }
+  }
+  .rr-card {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 14px 16px 16px;
+    border-radius: var(--gt-radius);
+    border: 1px solid var(--gt-line);
+    background: var(--gt-surface);
+    color: var(--gt-fg);
+    text-decoration: none;
+    position: relative;
+    transition: border-color 160ms ease, transform 160ms ease;
+  }
+  .rr-card:hover {
+    border-color: var(--gt-accent);
+    transform: translateY(-1px);
+  }
+  .rr-card-kind {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--gt-subtle);
+  }
+  .rr-card-tool .rr-card-kind { color: var(--gt-accent); }
+  .rr-card-title {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.35;
+    color: var(--gt-fg);
+  }
+  .rr-card-desc {
+    font-size: 13px;
+    color: var(--gt-subtle);
+    margin: 0;
+    line-height: 1.45;
+  }
+  .rr-card-arrow {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    color: var(--gt-subtle);
+    font-size: 16px;
+    transition: color 160ms ease, transform 160ms ease;
+  }
+  .rr-card:hover .rr-card-arrow {
+    color: var(--gt-accent);
+    transform: translateX(2px);
+  }
+</style>

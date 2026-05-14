@@ -1,0 +1,310 @@
+---
+/**
+ * WorkflowLayout: god-tier 10/10 stack-bundle workflow pages (May 2026 onward).
+ *
+ * Mirrors GuideLayout's CTA architecture: every affiliate-active tool in the
+ * stack gets a card with its own CTA above the markdown body. Closes the
+ * biggest conversion gap workflow pages had vs guide pages.
+ */
+import BaseLayout from './BaseLayout.astro';
+import Hero from '../components/godtier/Hero.astro';
+import StickyCTA from '../components/godtier/StickyCTA.astro';
+import BreadcrumbLD from '../components/seo/BreadcrumbLD.astro';
+import ArticleLD from '../components/seo/ArticleLD.astro';
+import ShareButtons from '../components/ShareButtons.astro';
+import FAQAccordionScript from '../components/FAQAccordionScript.astro';
+import FeedbackForm from '../components/FeedbackForm.astro';
+import CommercialCTA from '../components/CommercialCTA.astro';
+import RelatedReading from '../components/RelatedReading.astro';
+import TableOfContents from '../components/TableOfContents.astro';
+
+interface ToolData {
+  slug: string;
+  title: string;
+  tagline?: string;
+  url?: string;
+  price_range?: string;
+  pricing_model?: string;
+  affiliate?: { link?: string | null; network?: string | null } | null;
+  scores?: { utility?: number; value?: number; moat?: number; longevity?: number };
+}
+
+interface RelatedItem {
+  href: string;
+  title: string;
+  description?: string;
+  kind?: 'tool' | 'guide' | 'workflow' | 'comparison';
+}
+
+interface Props {
+  title: string;
+  seoTitle?: string;
+  description?: string;
+  pageUrl: string;
+  slug: string;
+  breadcrumbs?: Array<{ label: string; href?: string }>;
+  headings?: Array<{ depth: number; slug: string; text: string }>;
+  readingMinutes?: number;
+  lastVerified?: string;
+  stack: ToolData[];
+  related?: RelatedItem[];
+}
+
+const {
+  title, seoTitle, description = '',
+  pageUrl, slug,
+  breadcrumbs,
+  headings = [],
+  readingMinutes = 0,
+  lastVerified,
+  stack,
+  related = [],
+} = Astro.props;
+
+const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
+
+const breadcrumbLdItems = breadcrumbs
+  ? [
+      { name: 'Home', url: siteBase },
+      ...breadcrumbs.map((b) => ({
+        name: b.label,
+        url: b.href ? `${siteBase}${b.href.replace(/^\//, '')}` : pageUrl,
+      })),
+    ]
+  : undefined;
+
+function parseCalendarDate(value?: string): Date | null {
+  if (!value) return null;
+  const dateOnly = /^(\d{4})-(\d{2})-(\d{2})$/.exec(value);
+  if (dateOnly) {
+    const [, y, m, d] = dateOnly;
+    return new Date(Number(y), Number(m) - 1, Number(d), 12);
+  }
+  return new Date(value);
+}
+
+const verifiedDate = parseCalendarDate(lastVerified);
+const verifiedRecently = verifiedDate && !isNaN(verifiedDate.getTime())
+  ? Math.floor((Date.now() - verifiedDate.getTime()) / 86400000) <= 90
+  : false;
+const monthShort = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const verifiedLabel = verifiedRecently && verifiedDate
+  ? `Verified ${monthShort[verifiedDate.getMonth()]} ${verifiedDate.getDate()}`
+  : undefined;
+
+const rankLabel = readingMinutes > 0 ? `${readingMinutes} min read` : undefined;
+
+const heroBreadcrumbs = breadcrumbs
+  ? [
+      { label: 'aipedia', href: '/' },
+      ...breadcrumbs.map((b) => ({ label: b.label, href: b.href })),
+    ]
+  : [{ label: 'aipedia', href: '/' }, { label: title }];
+
+const affiliateStack = stack.filter((t) => Boolean(t.affiliate?.link));
+const nonAffiliateStack = stack.filter((t) => !t.affiliate?.link);
+
+// Pick the lead affiliate tool for the sticky mobile CTA. Use the first
+// affiliate-active tool in stack order (workflow author's curated order).
+const stickyTool = affiliateStack[0];
+---
+
+<BaseLayout
+  title={seoTitle ?? title}
+  description={description}
+  ogType="article"
+  articleModifiedTime={lastVerified}
+>
+  {breadcrumbLdItems && <BreadcrumbLD items={breadcrumbLdItems} />}
+  <ArticleLD
+    headline={title}
+    description={description}
+    dateModified={lastVerified}
+    pageUrl={pageUrl}
+  />
+
+  <div class="sr-only" data-pagefind-ignore>
+    <span data-pagefind-filter="Type">Workflow</span>
+  </div>
+
+  <div class="gt-canvas">
+    <Hero
+      title={title}
+      tagline={description}
+      breadcrumbs={heroBreadcrumbs}
+      verifiedLabel={verifiedLabel}
+      rankLabel={rankLabel}
+    />
+
+    {stack.length > 0 && (
+      <section class="wf-stack" aria-labelledby="wf-stack-h">
+        <h2 id="wf-stack-h" class="gt-section-h">Try the stack</h2>
+        <p class="wf-stack-intro">Every tool in this workflow with a direct CTA. Read the full review for any of them by clicking through.</p>
+        <div class="wf-stack-grid">
+          {stack.map((t) => {
+            const isAffiliate = Boolean(t.affiliate?.link);
+            return (
+              <article class={`wf-stack-card ${isAffiliate ? 'wf-stack-card-affiliate' : ''}`}>
+                <header class="wf-stack-card-head">
+                  <div class="wf-stack-card-title-row">
+                    <h3 class="wf-stack-card-title">
+                      <a href={`/tools/${t.slug}/`}>{t.title}</a>
+                    </h3>
+                    {isAffiliate && (
+                      <span class="wf-stack-card-aff" title="Affiliate program. Rankings remain independent. See /disclosure/.">*</span>
+                    )}
+                  </div>
+                  {t.tagline && <p class="wf-stack-card-tagline">{t.tagline}</p>}
+                </header>
+                <div class="wf-stack-card-cta-row">
+                  <CommercialCTA
+                    toolName={t.title}
+                    toolSlug={t.slug}
+                    canonicalUrl={t.url ?? null}
+                    affiliateUrl={t.affiliate?.link ?? null}
+                    affiliateProgram={t.affiliate?.network ?? null}
+                    pricingModel={t.pricing_model ?? null}
+                    priceRange={t.price_range ?? null}
+                    pageType="workflow"
+                    placement="workflow_stack_card"
+                    pageSlug={slug}
+                    className="gt-btn gt-btn-primary wf-stack-cta"
+                    showDisclosure={isAffiliate}
+                    arrow="→"
+                  />
+                  <a href={`/tools/${t.slug}/`} class="gt-btn gt-btn-secondary wf-stack-secondary">Read review</a>
+                </div>
+                {t.price_range && (
+                  <p class="wf-stack-card-price"><span class="wf-stack-card-price-label">Price:</span> {t.price_range}</p>
+                )}
+              </article>
+            );
+          })}
+        </div>
+        {affiliateStack.length > 0 && (
+          <p class="wf-stack-disclosure">
+            <strong>*</strong> denotes tools where aipedia.wiki has an affiliate relationship. Rankings remain independent. See <a href="/disclosure/">the disclosure page</a>.
+          </p>
+        )}
+      </section>
+    )}
+
+    {headings && headings.length > 0 && (
+      <TableOfContents headings={headings} />
+    )}
+
+    <article class="gt-body">
+      <slot />
+    </article>
+
+    {related.length > 0 && (
+      <RelatedReading items={related} heading="Keep reading" />
+    )}
+
+    <FAQAccordionScript />
+    <ShareButtons title={title} pageUrl={pageUrl} />
+    <FeedbackForm toolName={title} />
+  </div>
+
+  {stickyTool && stickyTool.affiliate?.link && (
+    <StickyCTA
+      title={stickyTool.title}
+      price={stickyTool.price_range ?? undefined}
+      cta={{ label: `Try ${stickyTool.title}`, href: stickyTool.affiliate.link, external: true }}
+      observeSelector=".wf-stack"
+      hideSelector="footer"
+    />
+  )}
+
+  <style>
+    .wf-stack { margin-bottom: 40px; }
+    .wf-stack-intro {
+      font-size: var(--gt-text-sub);
+      color: var(--gt-subtle);
+      margin: 0 0 18px;
+    }
+    .wf-stack-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    @media (min-width: 720px) {
+      .wf-stack-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (min-width: 1024px) {
+      .wf-stack-grid { grid-template-columns: 1fr 1fr 1fr; }
+    }
+    .wf-stack-card {
+      padding: 16px 18px;
+      border-radius: var(--gt-radius);
+      border: 1px solid var(--gt-line);
+      background: var(--gt-surface);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .wf-stack-card-affiliate {
+      border-color: color-mix(in srgb, var(--gt-accent) 35%, var(--gt-line));
+    }
+    .wf-stack-card-head { display: flex; flex-direction: column; gap: 4px; }
+    .wf-stack-card-title-row { display: flex; align-items: baseline; gap: 6px; }
+    .wf-stack-card-title {
+      font-size: 17px;
+      font-weight: 600;
+      margin: 0;
+      letter-spacing: -0.005em;
+    }
+    .wf-stack-card-title a {
+      color: var(--gt-fg);
+      text-decoration: none;
+    }
+    .wf-stack-card-title a:hover { color: var(--gt-accent); }
+    .wf-stack-card-aff {
+      color: var(--gt-accent);
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1;
+    }
+    .wf-stack-card-tagline {
+      font-size: 13px;
+      color: var(--gt-subtle);
+      margin: 0;
+      line-height: 1.45;
+    }
+    .wf-stack-card-cta-row {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    @media (min-width: 480px) {
+      .wf-stack-card-cta-row { flex-direction: row; flex-wrap: wrap; }
+    }
+    .wf-stack-cta { flex: 1; min-width: 0; }
+    .wf-stack-secondary {
+      flex: 0 0 auto;
+      font-size: 13px;
+      padding: 8px 12px;
+    }
+    .wf-stack-card-price {
+      font-size: 12px;
+      color: var(--gt-subtle);
+      margin: 0;
+    }
+    .wf-stack-card-price-label {
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--gt-subtle);
+    }
+    .wf-stack-disclosure {
+      font-size: 12px;
+      color: var(--gt-subtle);
+      margin: 14px 0 0;
+      padding: 10px 12px;
+      background: var(--gt-surface);
+      border-radius: var(--gt-radius-sm);
+      border: 1px solid var(--gt-line);
+    }
+  </style>
+</BaseLayout>

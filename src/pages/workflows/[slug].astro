@@ -1,6 +1,6 @@
 ---
-import { getCollection, render } from 'astro:content';
-import ArticlePlusLayout from '../../layouts/ArticlePlusLayout.astro';
+import { getCollection, getEntry, render } from 'astro:content';
+import WorkflowLayout from '../../layouts/WorkflowLayout.astro';
 
 export async function getStaticPaths() {
   const entries = await getCollection('workflows');
@@ -18,17 +18,50 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
 
 const wordCount = entry.body ? entry.body.split(/\s+/).filter(Boolean).length : 0;
 const readingMinutes = Math.max(1, Math.round(wordCount / 230));
+
+// Pull tool data for every slug listed in the workflow's `stack` frontmatter
+// so the WorkflowLayout can render an at-a-glance card grid with affiliate
+// CTAs. Falls back gracefully when a slug points at a tool we have not yet
+// reviewed (entry is filtered out).
+const stackSlugs: string[] = entry.data.stack ?? [];
+const stackEntries = await Promise.all(
+  stackSlugs.map(async (s) => {
+    try {
+      return await getEntry('tools', s);
+    } catch {
+      return null;
+    }
+  })
+);
+
+const stack = stackEntries
+  .filter((t): t is NonNullable<typeof t> => t != null)
+  .map((t) => ({
+    slug: t.data.slug ?? t.id.replace(/\.md$/, ''),
+    title: t.data.title,
+    tagline: t.data.tagline,
+    url: t.data.url,
+    price_range: t.data.price_range,
+    pricing_model: t.data.pricing_model,
+    affiliate: t.data.affiliate,
+    scores: t.data.scores,
+  }));
+
+const related = (entry.data as any).related ?? [];
 ---
 
-<ArticlePlusLayout
+<WorkflowLayout
   title={entry.data.title}
   seoTitle={entry.data.seo_title ?? entry.data.title}
   description={entry.data.meta_description ?? entry.data.description ?? ''}
   pageUrl={`${siteBase}workflows/${slug}/`}
+  slug={slug}
   breadcrumbs={[{ label: 'Workflows', href: '/workflows/' }, { label: entry.data.title }]}
   headings={headings}
   readingMinutes={readingMinutes}
   lastVerified={entry.data.last_verified ? String(entry.data.last_verified) : (entry.data.last_updated ? String(entry.data.last_updated) : undefined)}
+  stack={stack}
+  related={related}
 >
   <Content />
-</ArticlePlusLayout>
+</WorkflowLayout>

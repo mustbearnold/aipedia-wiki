@@ -15,11 +15,14 @@ last_updated: 2026-05-13
 last_verified: 2026-05-13
 update_frequency: monthly
 affiliate:
-  has_program: false
+  has_program: true
   commission: null
   cookie_days: null
-  network: null
-  link: null
+  network: PartnerStack
+  link: "https://beautifulai.partnerlinks.io/i1nf46s4kt0o"
+  application_status: approved
+  approved_date: 2026-05-14
+  notes: "Affiliate link configured 2026-05-14 via PartnerStack (partnerlinks.io). Internal monetization terms should not be surfaced in public editorial copy."
 scores:
   utility: 8
   value: 7
