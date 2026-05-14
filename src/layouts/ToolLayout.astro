@@ -373,6 +373,17 @@ const tocItems = (headings ?? [])
     score={overall}
     price={pricingSummary}
     cta={{ label: `Try ${f.title}`, href: (affiliate?.link && affiliate.link.length > 0 ? affiliate.link : (f.url ?? '#')), external: true }}
+    toolName={f.title}
+    toolSlug={toolSlug}
+    canonicalUrl={f.url}
+    affiliateUrl={affiliate?.link}
+    affiliateProgram={affiliate?.network}
+    pricingModel={f.pricing_model}
+    priceRange={f.price_range}
+    pageType="tool"
+    placement="tool_sticky_mobile"
+    pageSlug={toolSlug}
+    categorySlug={catSlug}
   />
 
   <script is:inline define:vars={{ toolSlug, toolTitle: f.title }}>
@@ -494,6 +505,7 @@ const tocItems = (headings ?? [])
     .gt-jump {
       display: block;
       margin: 8px 0 24px;
+      overflow: hidden;
     }
     .gt-jump-label {
       display: block;
@@ -617,7 +629,7 @@ const tocItems = (headings ?? [])
     .gt-body :global(h2) {
       font-size: 24px;
       font-weight: 700;
-      letter-spacing: -0.014em;
+      letter-spacing: 0;
       margin: 48px 0 16px;
       padding-top: 24px;
       border-top: 1px solid var(--gt-line);
@@ -771,7 +783,7 @@ const tocItems = (headings ?? [])
     .gt-body :global(.gt-section-collapse-heading) {
       font-size: 24px;
       font-weight: 700;
-      letter-spacing: -0.014em;
+      letter-spacing: 0;
       color: var(--gt-fg);
       line-height: 1.2;
       display: block;

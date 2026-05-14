@@ -71,7 +71,7 @@ const {
 <header class={`gt-title-row ${logoSlug ? 'has-logo' : ''}`}>
   {logoSlug && (
     <div class="gt-title-logo">
-      <ToolLogo slug={logoSlug} title={logoTitle ?? title} size={64} />
+      <ToolLogo slug={logoSlug} title={logoTitle ?? title} size={56} />
     </div>
   )}
   <div class="gt-title-text">
@@ -91,11 +91,25 @@ const {
   }
   .gt-crumbs {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 6px;
+    max-width: 100%;
+    overflow: hidden;
     padding: 0;
     margin: 0;
     list-style: none;
+    white-space: nowrap;
+    -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 52px), transparent);
+    mask-image: linear-gradient(90deg, #000 calc(100% - 52px), transparent);
+  }
+  .gt-crumbs li {
+    display: inline-flex;
+    align-items: center;
+    flex: 0 0 auto;
+    min-width: 0;
+    max-width: min(68vw, 620px);
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .gt-crumbs li + li::before { content: '/'; margin-right: 6px; opacity: 0.5; }
   .gt-crumbs a {
@@ -104,10 +118,30 @@ const {
     min-height: 24px;
     display: inline-flex;
     align-items: center;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
   .gt-crumbs a:active { color: var(--gt-fg); }
-  .gt-crumbs [aria-current="page"] { color: var(--gt-fg); font-weight: 500; }
-  .gt-meta-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .gt-crumbs [aria-current="page"] {
+    color: var(--gt-fg);
+    font-weight: 500;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .gt-meta-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .gt-meta-row::-webkit-scrollbar { display: none; }
   .gt-meta-sep { opacity: 0.5; }
   .gt-meta-fresh {
     display: inline-flex;
@@ -115,8 +149,9 @@ const {
     gap: 6px;
     color: var(--gt-positive);
     font-weight: 600;
+    white-space: nowrap;
   }
-  .gt-meta-rank { color: #fb923c; font-weight: 600; }
+  .gt-meta-rank { color: #fb923c; font-weight: 600; white-space: nowrap; }
 
   .gt-title-row { margin-bottom: 18px; }
   .gt-title-row.has-logo {
@@ -138,7 +173,7 @@ const {
     font-size: clamp(36px, 9vw, 56px);
     font-weight: 700;
     line-height: 1.02;
-    letter-spacing: -0.022em;
+    letter-spacing: 0;
     margin: 0 0 8px;
   }
   .gt-tagline {
@@ -147,6 +182,19 @@ const {
     color: var(--gt-fg);
     margin: 0;
     font-weight: 500;
+  }
+  @media (max-width: 420px) {
+    .gt-title-row.has-logo {
+      gap: 12px;
+    }
+    .gt-title {
+      font-size: clamp(30px, 10vw, 40px);
+      line-height: 1.06;
+    }
+    .gt-tagline {
+      font-size: 16px;
+      line-height: 1.45;
+    }
   }
   @media (min-width: 900px) {
     .gt-title { font-size: 60px; }

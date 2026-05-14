@@ -75,8 +75,9 @@ function defaultLabel(): string {
   const modelFree = model === 'free' || model === 'freemium';
   const priceFree = /\$0(?!\s*\(self|\s*\(self-host)/i.test(price) || /\bfree\b/i.test(price);
   if (modelFree && priceFree) return `Try ${toolName} free`;
-  if (model === 'enterprise') return `Visit ${toolName}`;
-  return `Get ${toolName}`;
+  if (model === 'enterprise' || /custom|enterprise/.test(price)) return `See ${toolName} pricing`;
+  if (/trial/.test(price)) return `Start ${toolName} trial`;
+  return `Try ${toolName}`;
 }
 
 const resolvedLabel = label ?? defaultLabel();

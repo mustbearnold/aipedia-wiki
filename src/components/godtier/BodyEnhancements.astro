@@ -1,0 +1,162 @@
+---
+/**
+ * BodyEnhancements
+ *
+ * Lightweight, idempotent upgrades for markdown rendered inside .gt-body:
+ * - turn wide tables into mobile cards without hiding the crawlable table
+ * - lift "Sources" sections into a trust callout when present
+ *
+ * The original table remains in the DOM for desktop, accessibility, and SEO.
+ */
+interface Props {
+  tableLabel?: string;
+  enhanceSources?: boolean;
+}
+
+const {
+  tableLabel = 'Table summary',
+  enhanceSources = true,
+} = Astro.props;
+---
+
+<script is:inline define:vars={{ tableLabel, enhanceSources }}>
+  (function () {
+    function text(el) {
+      return (el && el.textContent ? el.textContent : '').replace(/\s+/g, ' ').trim();
+    }
+
+    function copyChildren(from, to) {
+      Array.prototype.slice.call(from.childNodes).forEach(function (child) {
+        to.appendChild(child.cloneNode(true));
+      });
+    }
+
+    function styleSources() {
+      if (!enhanceSources) return;
+      var heading = document.querySelector('article.gt-body #sources');
+      if (!heading || heading.dataset.gtSourcesStyled === '1') return;
+
+      var nodes = [];
+      var next = heading.nextElementSibling;
+      while (next && next.tagName !== 'H2') {
+        if (['SCRIPT', 'STYLE', 'TEMPLATE'].indexOf(next.tagName) >= 0) break;
+        if (['P', 'UL', 'OL'].indexOf(next.tagName) >= 0) {
+          nodes.push(next);
+        } else if (nodes.length > 0) {
+          break;
+        }
+        next = next.nextElementSibling;
+      }
+      if (!nodes.length) return;
+
+      var linkCount = nodes.reduce(function (sum, node) {
+        return sum + node.querySelectorAll('a').length;
+      }, 0);
+
+      var callout = document.createElement('aside');
+      callout.className = 'gt-sources-callout not-prose';
+      callout.setAttribute('aria-label', 'Sources');
+
+      var eyebrow = document.createElement('p');
+      eyebrow.className = 'gt-sources-eyebrow';
+      eyebrow.textContent = 'Cited ' + linkCount + ' source' + (linkCount === 1 ? '' : 's');
+      callout.appendChild(eyebrow);
+
+      var body = document.createElement('div');
+      body.className = 'gt-sources-body';
+      nodes.forEach(function (node) {
+        body.appendChild(node);
+      });
+      body.querySelectorAll('a').forEach(function (link) {
+        link.setAttribute('data-source-preview', '');
+        link.setAttribute('data-source-title', text(link) || link.href);
+        try {
+          link.setAttribute('data-source-host', new URL(link.href).hostname.replace(/^www\./, ''));
+        } catch (_) {}
+        link.setAttribute('data-source-kind', 'Primary source');
+      });
+      callout.appendChild(body);
+
+      heading.insertAdjacentElement('afterend', callout);
+      heading.style.display = 'none';
+      heading.dataset.gtSourcesStyled = '1';
+    }
+
+    function cardifyTable(tbl) {
+      if (!tbl || tbl.dataset.gtMobileCardified === '1' || tbl.dataset.mobileCardified === '1') return;
+
+      var rows = Array.prototype.slice.call(tbl.querySelectorAll('tbody tr'));
+      if (!rows.length) return;
+
+      var headers = Array.prototype.slice.call(tbl.querySelectorAll('thead th')).map(text);
+      var isKeyValue = rows.every(function (row) {
+        return row.querySelectorAll('td').length === 2;
+      });
+
+      var cards = document.createElement('div');
+      cards.className = isKeyValue ? 'gt-table-cards gt-table-cards-kv not-prose' : 'gt-table-cards not-prose';
+      cards.setAttribute('aria-label', tableLabel);
+
+      rows.forEach(function (row, index) {
+        var cells = Array.prototype.slice.call(row.querySelectorAll('td'));
+        if (!cells.length) return;
+
+        var card = document.createElement('article');
+        card.className = 'gt-table-card';
+
+        if (isKeyValue) {
+          var key = document.createElement('span');
+          key.className = 'gt-table-card-label';
+          key.textContent = text(cells[0]);
+          var value = document.createElement('div');
+          value.className = 'gt-table-card-value';
+          copyChildren(cells[1], value);
+          card.append(key, value);
+        } else {
+          var title = document.createElement('strong');
+          title.className = 'gt-table-card-title';
+          if (text(cells[0])) {
+            copyChildren(cells[0], title);
+          } else {
+            title.textContent = 'Row ' + (index + 1);
+          }
+          card.appendChild(title);
+
+          var fields = document.createElement('dl');
+          fields.className = 'gt-table-card-fields';
+          cells.slice(1).forEach(function (cell, cellIndex) {
+            var valueText = text(cell);
+            if (!valueText) return;
+            var dt = document.createElement('dt');
+            dt.textContent = headers[cellIndex + 1] || ('Detail ' + (cellIndex + 1));
+            var dd = document.createElement('dd');
+            copyChildren(cell, dd);
+            fields.append(dt, dd);
+          });
+          card.appendChild(fields);
+        }
+
+        cards.appendChild(card);
+      });
+
+      if (!cards.children.length) return;
+      tbl.dataset.gtMobileCardified = '1';
+      tbl.dataset.mobileCardified = '1';
+      tbl.insertAdjacentElement('afterend', cards);
+    }
+
+    function run() {
+      try { styleSources(); } catch (_) {}
+      try {
+        document.querySelectorAll('article.gt-body table').forEach(cardifyTable);
+      } catch (_) {}
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', run);
+    } else {
+      run();
+    }
+    document.addEventListener('astro:page-load', run);
+  })();
+</script>

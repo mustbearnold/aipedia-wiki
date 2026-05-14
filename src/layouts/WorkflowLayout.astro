@@ -17,6 +17,7 @@ import FeedbackForm from '../components/FeedbackForm.astro';
 import CommercialCTA from '../components/CommercialCTA.astro';
 import RelatedReading from '../components/RelatedReading.astro';
 import TableOfContents from '../components/TableOfContents.astro';
+import BodyEnhancements from '../components/godtier/BodyEnhancements.astro';
 
 interface ToolData {
   slug: string;
@@ -107,6 +108,39 @@ const nonAffiliateStack = stack.filter((t) => !t.affiliate?.link);
 // Pick the lead affiliate tool for the sticky mobile CTA. Use the first
 // affiliate-active tool in stack order (workflow author's curated order).
 const stickyTool = affiliateStack[0];
+const leadTool = stickyTool ?? stack[0];
+
+function roleFor(slug: string, title: string): string {
+  const roles: Record<string, string> = {
+    'reclaim-ai': 'Calendar',
+    sanebox: 'Email',
+    apollo: 'Outbound',
+    'beautiful-ai': 'Decks',
+    descript: 'Content',
+    consensus: 'Research',
+    unbounce: 'Landing pages',
+    adcreative: 'Paid social',
+    amplemarket: 'Prospecting',
+    dext: 'Receipts',
+    omniseo: 'SEO',
+    prezi: 'Presentations',
+    'hume-ai': 'Voice AI',
+    claude: 'Reasoning',
+    chatgpt: 'Reasoning',
+  };
+  return roles[slug] ?? title;
+}
+
+const stackOrder = stack.map((t) => roleFor(t.slug, t.title)).join(' -> ');
+const affiliateSummary = affiliateStack.length > 0
+  ? `${affiliateStack.length} affiliate link${affiliateStack.length === 1 ? '' : 's'} disclosed near the stack.`
+  : 'No affiliate-active stack tools detected.';
+const nonAffiliateSummary = nonAffiliateStack.length > 0
+  ? `${nonAffiliateStack.length} official fallback link${nonAffiliateStack.length === 1 ? '' : 's'}.`
+  : 'All stack CTAs have affiliate disclosure.';
+const leadToolCopy = leadTool
+  ? `Buy ${leadTool.title} first when ${roleFor(leadTool.slug, leadTool.title).toLowerCase()} is the bottleneck. Add the rest only after it saves time every week.`
+  : 'Buy the workflow by bottleneck, not by subscribing to every tool at once.';
 ---
 
 <BaseLayout
@@ -137,15 +171,59 @@ const stickyTool = affiliateStack[0];
     />
 
     {stack.length > 0 && (
+      <section class="wf-snapshot" aria-label="Workflow buying summary">
+        <div class="wf-snapshot-card wf-snapshot-primary">
+          <p class="wf-snapshot-kicker">Start here</p>
+          <h2>{leadTool ? leadTool.title : 'Pick the first bottleneck'}</h2>
+          <p>{leadToolCopy}</p>
+          {leadTool && (
+            <CommercialCTA
+              toolName={leadTool.title}
+              toolSlug={leadTool.slug}
+              canonicalUrl={leadTool.url ?? null}
+              affiliateUrl={leadTool.affiliate?.link ?? null}
+              affiliateProgram={leadTool.affiliate?.network ?? null}
+              label={`Start ${leadTool.title}`}
+              pricingModel={leadTool.pricing_model ?? null}
+              priceRange={leadTool.price_range ?? null}
+              pageType="workflow"
+              placement="workflow_primary_start"
+              pageSlug={slug}
+              className="gt-btn gt-btn-primary wf-snapshot-cta"
+              showDisclosure={Boolean(leadTool.affiliate?.link)}
+              arrow="→"
+            />
+          )}
+        </div>
+        <div class="wf-snapshot-card">
+          <p class="wf-snapshot-kicker">Buying order</p>
+          <p class="wf-snapshot-order">{stackOrder}</p>
+        </div>
+        <div class="wf-snapshot-card">
+          <p class="wf-snapshot-kicker">Commercial check</p>
+          <p>{affiliateSummary} {nonAffiliateSummary} Verify plan limits before committing annually.</p>
+        </div>
+        <div class="wf-snapshot-card wf-snapshot-warning">
+          <p class="wf-snapshot-kicker">Skip if</p>
+          <p>You only have one broken workflow. Start with the single matching tool, then add the rest after it proves useful.</p>
+        </div>
+      </section>
+    )}
+
+    {stack.length > 0 && (
       <section class="wf-stack" aria-labelledby="wf-stack-h">
-        <h2 id="wf-stack-h" class="gt-section-h">Try the stack</h2>
-        <p class="wf-stack-intro">Every tool in this workflow with a direct CTA. Read the full review for any of them by clicking through.</p>
+        <h2 id="wf-stack-h" class="gt-section-h">Stack order</h2>
+        <p class="wf-stack-intro">Buy by bottleneck. Each card shows the role, current price signal, direct path, and review link.</p>
         <div class="wf-stack-grid">
-          {stack.map((t) => {
+          {stack.map((t, index) => {
             const isAffiliate = Boolean(t.affiliate?.link);
             return (
               <article class={`wf-stack-card ${isAffiliate ? 'wf-stack-card-affiliate' : ''}`}>
                 <header class="wf-stack-card-head">
+                  <div class="wf-stack-role-row">
+                    <span class="wf-stack-order">{index + 1}</span>
+                    <span class="wf-stack-role">{roleFor(t.slug, t.title)}</span>
+                  </div>
                   <div class="wf-stack-card-title-row">
                     <h3 class="wf-stack-card-title">
                       <a href={`/tools/${t.slug}/`}>{t.title}</a>
@@ -163,6 +241,7 @@ const stickyTool = affiliateStack[0];
                     canonicalUrl={t.url ?? null}
                     affiliateUrl={t.affiliate?.link ?? null}
                     affiliateProgram={t.affiliate?.network ?? null}
+                    label={isAffiliate ? `Start ${t.title}` : `See ${t.title} plans`}
                     pricingModel={t.pricing_model ?? null}
                     priceRange={t.price_range ?? null}
                     pageType="workflow"
@@ -196,6 +275,7 @@ const stickyTool = affiliateStack[0];
     <article class="gt-body">
       <slot />
     </article>
+    <BodyEnhancements tableLabel={`${title} workflow table`} />
 
     {related.length > 0 && (
       <RelatedReading items={related} heading="Keep reading" />
@@ -211,12 +291,83 @@ const stickyTool = affiliateStack[0];
       title={stickyTool.title}
       price={stickyTool.price_range ?? undefined}
       cta={{ label: `Try ${stickyTool.title}`, href: stickyTool.affiliate.link, external: true }}
+      toolName={stickyTool.title}
+      toolSlug={stickyTool.slug}
+      canonicalUrl={stickyTool.url ?? null}
+      affiliateUrl={stickyTool.affiliate.link}
+      affiliateProgram={stickyTool.affiliate?.network ?? null}
+      pricingModel={stickyTool.pricing_model ?? null}
+      priceRange={stickyTool.price_range ?? null}
+      pageType="workflow"
+      placement="workflow_sticky_mobile"
+      pageSlug={slug}
       observeSelector=".wf-stack"
       hideSelector="footer"
     />
   )}
 
   <style>
+    .wf-snapshot {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin: 0 0 32px;
+    }
+    .wf-snapshot-card {
+      border: 1px solid var(--gt-line);
+      border-radius: var(--gt-radius);
+      background: var(--gt-surface);
+      padding: 16px;
+      min-width: 0;
+    }
+    .wf-snapshot-primary {
+      border-color: color-mix(in srgb, var(--gt-accent) 38%, var(--gt-line));
+      background:
+        linear-gradient(135deg, rgba(249, 115, 22, 0.12), transparent 42%),
+        var(--gt-surface);
+    }
+    .wf-snapshot-warning {
+      border-left: 3px solid var(--gt-negative);
+    }
+    .wf-snapshot-kicker {
+      color: var(--gt-accent);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      margin: 0 0 8px;
+      text-transform: uppercase;
+    }
+    .wf-snapshot-card h2 {
+      color: var(--gt-fg);
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: 0;
+      line-height: 1.15;
+      margin: 0 0 8px;
+    }
+    .wf-snapshot-card p {
+      color: var(--gt-muted);
+      font-size: 14px;
+      line-height: 1.5;
+      margin: 0;
+      text-wrap: pretty;
+    }
+    .wf-snapshot-order {
+      color: var(--gt-fg) !important;
+      font-weight: 700;
+    }
+    .wf-snapshot-cta {
+      margin-top: 14px;
+    }
+    @media (min-width: 720px) {
+      .wf-snapshot {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .wf-snapshot-primary {
+        grid-row: span 2;
+      }
+    }
+
     .wf-stack { margin-bottom: 40px; }
     .wf-stack-intro {
       font-size: var(--gt-text-sub);
@@ -247,12 +398,38 @@ const stickyTool = affiliateStack[0];
       border-color: color-mix(in srgb, var(--gt-accent) 35%, var(--gt-line));
     }
     .wf-stack-card-head { display: flex; flex-direction: column; gap: 4px; }
+    .wf-stack-role-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 4px;
+    }
+    .wf-stack-order {
+      align-items: center;
+      background: rgba(249, 115, 22, 0.12);
+      border: 1px solid rgba(249, 115, 22, 0.28);
+      border-radius: 999px;
+      color: var(--gt-accent);
+      display: inline-flex;
+      font-size: 11px;
+      font-weight: 800;
+      height: 24px;
+      justify-content: center;
+      width: 24px;
+    }
+    .wf-stack-role {
+      color: var(--gt-subtle);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
     .wf-stack-card-title-row { display: flex; align-items: baseline; gap: 6px; }
     .wf-stack-card-title {
       font-size: 17px;
       font-weight: 600;
       margin: 0;
-      letter-spacing: -0.005em;
+      letter-spacing: 0;
     }
     .wf-stack-card-title a {
       color: var(--gt-fg);

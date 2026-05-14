@@ -21,6 +21,9 @@ interface Props {
   statusActive?: boolean;
   statusLabel?: string;        // overrides default "Active"
   price?: string;
+  eyebrow?: string;
+  title?: string;
+  description?: string;
   primaryCta?: CTA;            // optional — can be replaced by <slot name="primary-cta">
   secondaryCta?: CTA;          // optional — can be replaced by <slot name="secondary-cta">
   affiliate?: boolean;
@@ -33,6 +36,9 @@ const {
   statusActive = true,
   statusLabel,
   price,
+  eyebrow,
+  title,
+  description,
   primaryCta,
   secondaryCta,
   affiliate = false,
@@ -40,9 +46,13 @@ const {
 } = Astro.props;
 
 const defaultTrust = affiliate
-  ? 'Affiliate link · disclosed below'
+  ? 'Rankings stay editorial.'
   : 'Editorial · no paid placements';
 const finalTrust = trustLine ?? defaultTrust;
+const priceParts = price
+  ? String(price).split(';').map((part) => part.trim()).filter(Boolean)
+  : [];
+const priceLabels = ['Monthly', 'Annual'];
 ---
 
 <section class="gt-card" aria-labelledby="gt-card-cta">
@@ -60,9 +70,27 @@ const finalTrust = trustLine ?? defaultTrust;
           {statusLabel ?? 'Active'}
         </span>
       )}
-      {price && <span class="gt-card-price">{price}</span>}
     </div>
   </header>
+
+  {priceParts.length > 0 && (
+    <p class="gt-card-price" aria-label={`Price: ${priceParts.join(', ')}`}>
+      {priceParts.map((part, index) => (
+        <span class="gt-card-price-part">
+          {priceParts.length > 1 && <span class="gt-card-price-label">{priceLabels[index] ?? 'Price'}</span>}
+          <span class="gt-card-price-value">{part}</span>
+        </span>
+      ))}
+    </p>
+  )}
+
+  {(eyebrow || title || description) && (
+    <div class="gt-card-copy">
+      {eyebrow && <p class="gt-card-eyebrow">{eyebrow}</p>}
+      {title && <h2 class="gt-card-title">{title}</h2>}
+      {description && <p class="gt-card-description">{description}</p>}
+    </div>
+  )}
 
   <div class="gt-card-ctas">
     {Astro.slots.has('primary-cta')
@@ -101,25 +129,25 @@ const finalTrust = trustLine ?? defaultTrust;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding: 16px;
+    padding: 18px;
     border-radius: var(--gt-radius);
     border: 1px solid var(--gt-line-strong);
     background: linear-gradient(180deg, var(--gt-surface-2), var(--gt-surface));
     margin-bottom: 24px;
   }
   .gt-card-head {
-    display: flex;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    margin-bottom: 4px;
+    gap: 14px;
+    margin-bottom: 0;
   }
   .gt-card-score { display: flex; flex-direction: column; }
   .gt-card-score-num {
     font-size: 36px;
     font-weight: 700;
     line-height: 1;
-    letter-spacing: -0.02em;
+    letter-spacing: 0;
     color: var(--gt-fg);
   }
   .gt-card-score-slash { font-size: 16px; color: var(--gt-subtle); font-weight: 500; }
@@ -153,16 +181,88 @@ const finalTrust = trustLine ?? defaultTrust;
     width: 6px; height: 6px; border-radius: 50%;
     background: var(--gt-positive);
   }
-  .gt-card-price { font-size: 13px; color: var(--gt-muted); font-weight: 500; }
+  .gt-card-price {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 4px 10px;
+    margin: -2px 0 2px;
+    padding: 9px 11px;
+    border: 1px solid var(--gt-line);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.035);
+    color: var(--gt-muted);
+    font-size: 13px;
+    font-weight: 650;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+  }
+  .gt-card-price-part {
+    display: contents;
+  }
+  .gt-card-price-label {
+    color: var(--gt-subtle);
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    line-height: 1.1;
+    text-transform: uppercase;
+  }
+  .gt-card-price-value {
+    display: block;
+    min-width: 0;
+    text-align: right;
+  }
+  .gt-card-copy {
+    display: grid;
+    gap: 5px;
+    min-width: 0;
+  }
+  .gt-card-eyebrow {
+    margin: 0;
+    color: var(--gt-accent);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+  .gt-card-title {
+    margin: 0;
+    color: var(--gt-fg);
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 0;
+    line-height: 1.18;
+    text-wrap: balance;
+  }
+  .gt-card-description {
+    margin: 0;
+    color: var(--gt-muted);
+    font-size: 14px;
+    line-height: 1.45;
+    text-wrap: pretty;
+  }
   .gt-card-ctas {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 9px;
     width: 100%;
   }
+  .gt-card-ctas :global(.commercial-cta-stack) {
+    align-self: stretch;
+    width: 100%;
+    gap: 6px;
+  }
+  .gt-card-ctas :global(.commercial-cta-disclosure) {
+    max-width: none;
+    color: var(--gt-subtle);
+    font-size: 11px;
+    line-height: 1.35;
+    text-align: center;
+  }
   .gt-card-trust {
-    margin: 4px 0 0;
-    font-size: 12px;
+    margin: 0;
+    font-size: 11px;
     color: var(--gt-subtle);
     text-align: center;
   }
@@ -174,8 +274,22 @@ const finalTrust = trustLine ?? defaultTrust;
       align-items: center;
       padding: 20px 22px;
     }
-    .gt-card-head { flex: 1 1 auto; margin: 0; }
+    .gt-card-head {
+      flex: 1 1 auto;
+      margin: 0;
+      min-width: 210px;
+    }
+    .gt-card-price {
+      flex: 1 1 220px;
+      display: grid;
+      margin: 0;
+    }
+    .gt-card-copy {
+      flex: 1 1 100%;
+      order: 2;
+    }
     .gt-card-ctas {
+      order: 3;
       flex-direction: row;
       align-items: center;
       gap: 10px;
@@ -187,6 +301,7 @@ const finalTrust = trustLine ?? defaultTrust;
       flex: 0 0 auto;
     }
     .gt-card-trust {
+      order: 4;
       flex-basis: 100%;
       margin: 6px 0 0;
       text-align: left;

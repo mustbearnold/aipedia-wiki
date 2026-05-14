@@ -9,7 +9,7 @@ const { items, class: className, ...rest } = Astro.props;
 
 <nav
   class:list={[
-    'site-breadcrumb flex items-center gap-[var(--site-chip-gap)] text-xs text-[var(--text-muted)] mb-[var(--site-content-gap)] mt-[var(--site-content-gap-sm)] flex-wrap',
+    'site-breadcrumb flex items-center gap-[var(--site-chip-gap)] text-xs text-[var(--text-muted)] mb-[var(--site-content-gap)] mt-[var(--site-content-gap-sm)] flex-nowrap overflow-hidden whitespace-nowrap',
     className,
   ]}
   aria-label="Breadcrumb"
@@ -43,6 +43,24 @@ const { items, class: className, ...rest } = Astro.props;
     </>
   ))}
 </nav>
+
+<style>
+  .site-breadcrumb {
+    max-width: 100%;
+    -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 48px), transparent);
+    mask-image: linear-gradient(90deg, #000 calc(100% - 48px), transparent);
+  }
+  .site-breadcrumb :is(a, span) {
+    flex: 0 0 auto;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .site-breadcrumb > :last-child {
+    max-width: min(68vw, 620px);
+  }
+</style>
 
 <script>
   function wireBackButton() {

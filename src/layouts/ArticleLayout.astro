@@ -10,6 +10,7 @@
 import BaseLayout from './BaseLayout.astro';
 import Hero from '../components/godtier/Hero.astro';
 import BreadcrumbLD from '../components/seo/BreadcrumbLD.astro';
+import BodyEnhancements from '../components/godtier/BodyEnhancements.astro';
 
 interface Props {
   title: string;
@@ -67,12 +68,13 @@ const rankLabel = badge?.text ?? eyebrow ?? undefined;
     <article class="gt-body">
       <slot />
     </article>
+    <BodyEnhancements tableLabel={`${title} table`} />
   </div>
 
   <style>
     .gt-body { margin-bottom: 40px; }
     .gt-body :global(h2) {
-      font-size: 22px; font-weight: 700; letter-spacing: -0.01em;
+      font-size: 22px; font-weight: 700; letter-spacing: 0;
       margin: 36px 0 14px; color: var(--gt-fg);
     }
     .gt-body :global(h3) { font-size: 17px; font-weight: 600; margin: 28px 0 10px; color: var(--gt-fg); }

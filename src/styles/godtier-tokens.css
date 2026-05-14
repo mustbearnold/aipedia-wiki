@@ -541,7 +541,7 @@
 .gt-body .gt-section-collapse-heading {
   font-size: 22px;
   font-weight: 700;
-  letter-spacing: -0.014em;
+  letter-spacing: 0;
   color: var(--gt-fg);
   line-height: 1.2;
   display: block;
@@ -716,3 +716,172 @@
   border: 1px solid var(--gt-line-strong);
 }
 .gt-btn-secondary:active { background: var(--gt-surface-2); }
+
+/* Mobile table recovery.
+   Markdown tables stay crawlable and desktop-readable. On phones, the
+   enhancement script mirrors each row into cards and hides only the cramped
+   visual table. */
+.gt-table-cards,
+.t2-table-cards,
+.t2-pricing-cards {
+  display: none;
+}
+
+.gt-sources-callout {
+  border: 1px solid color-mix(in srgb, var(--gt-accent) 32%, var(--gt-line));
+  border-radius: var(--gt-radius);
+  background:
+    linear-gradient(135deg, rgba(249, 115, 22, 0.12), transparent 44%),
+    var(--gt-surface);
+  margin: 18px 0 26px;
+  padding: 16px;
+}
+
+.gt-sources-eyebrow {
+  color: var(--gt-accent);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  margin: 0 0 10px;
+  text-transform: uppercase;
+}
+
+.gt-sources-body {
+  color: var(--gt-muted);
+  display: grid;
+  gap: 8px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.gt-sources-body :is(p, ul, ol) {
+  margin: 0;
+}
+
+.gt-sources-body a {
+  color: var(--gt-fg);
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--gt-accent) 65%, transparent);
+}
+
+@media (max-width: 760px) {
+  .gt-body table[data-mobile-cardified='1'],
+  .gt-body table[data-gt-mobile-cardified='1'],
+  .gt-body table[data-pricing-enhanced='1'] {
+    display: none !important;
+  }
+
+  .gt-table-cards,
+  .t2-table-cards,
+  .t2-pricing-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin: 16px 0 22px;
+  }
+
+  .gt-table-card,
+  .t2-table-card,
+  .t2-pricing-card {
+    border: 1px solid var(--gt-line);
+    border-radius: var(--gt-radius-sm);
+    background:
+      linear-gradient(180deg, rgba(249, 115, 22, 0.055), transparent 42%),
+      var(--gt-surface);
+    padding: 14px;
+    min-width: 0;
+  }
+
+  .t2-pricing-card.is-recommended {
+    border-color: color-mix(in srgb, var(--gt-accent) 48%, var(--gt-line));
+    box-shadow: inset 3px 0 0 var(--gt-accent);
+  }
+
+  .gt-table-cards-kv .gt-table-card,
+  .t2-table-cards-kv .t2-table-card {
+    display: grid;
+    gap: 6px;
+  }
+
+  .gt-table-card-label,
+  .t2-table-card-label,
+  .gt-table-card-fields dt,
+  .t2-table-card-fields dt,
+  .t2-pricing-card-fields dt,
+  .t2-pricing-card-kicker {
+    color: var(--gt-subtle);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    line-height: 1.25;
+    text-transform: uppercase;
+  }
+
+  .gt-table-card-title,
+  .t2-table-card-title,
+  .t2-pricing-card-title {
+    display: block;
+    color: var(--gt-fg);
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 1.35;
+    margin: 0 0 10px;
+    overflow-wrap: anywhere;
+  }
+
+  .gt-table-card-value,
+  .t2-table-card-value,
+  .gt-table-card-fields dd,
+  .t2-table-card-fields dd,
+  .t2-pricing-card-fields dd {
+    color: var(--gt-muted);
+    font-size: 13px;
+    line-height: 1.48;
+    margin: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .gt-table-card-fields,
+  .t2-table-card-fields,
+  .t2-pricing-card-fields {
+    display: grid;
+    grid-template-columns: minmax(92px, 34%) minmax(0, 1fr);
+    gap: 8px 12px;
+    margin: 0;
+  }
+
+  .t2-pricing-card-head {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  .t2-pricing-card-price {
+    color: var(--gt-accent);
+    flex: 1 1 auto;
+    font-size: 14px;
+    font-weight: 800;
+    min-width: 0;
+    overflow-wrap: anywhere;
+    text-align: right;
+    white-space: normal;
+  }
+
+  .t2-pricing-card-cta {
+    align-items: center;
+    background: var(--gt-accent);
+    border-radius: var(--gt-radius-sm);
+    color: #fff;
+    display: inline-flex;
+    font-size: 14px;
+    font-weight: 800;
+    justify-content: center;
+    margin-top: 14px;
+    min-height: 44px;
+    padding: 10px 14px;
+    text-decoration: none;
+    width: 100%;
+  }
+
+}

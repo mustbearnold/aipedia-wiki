@@ -9,6 +9,8 @@
  * Reparenting to <body> is required because <main> has z-index: 1, which
  * stacks behind <footer> (also z-index: 1, later in DOM order).
  */
+import CommercialCTA from '../CommercialCTA.astro';
+
 interface CTA {
   label: string;
   href: string;
@@ -22,6 +24,17 @@ interface Props {
   cta: CTA;
   observeSelector?: string;     // element that determines when to show
   hideSelector?: string;        // element that determines when to hide
+  toolName?: string;
+  toolSlug?: string;
+  canonicalUrl?: string | null;
+  affiliateUrl?: string | null;
+  pricingModel?: string | null;
+  priceRange?: string | null;
+  affiliateProgram?: string | null;
+  pageType?: string;
+  placement?: string;
+  pageSlug?: string | null;
+  categorySlug?: string | null;
 }
 
 const {
@@ -31,12 +44,28 @@ const {
   cta,
   observeSelector = '.gt-card',
   hideSelector = 'footer',
+  toolName,
+  toolSlug,
+  canonicalUrl,
+  affiliateUrl,
+  pricingModel,
+  priceRange,
+  affiliateProgram,
+  pageType = 'site',
+  placement = 'sticky_mobile',
+  pageSlug,
+  categorySlug,
 } = Astro.props;
 
 const infoBits = [
   score != null ? `${score}/10` : null,
   price ?? null,
 ].filter(Boolean).join(' · ');
+
+const resolvedToolName = toolName ?? title;
+const resolvedToolSlug = toolSlug ?? '';
+const resolvedCanonicalUrl = canonicalUrl ?? (!affiliateUrl ? cta.href : null);
+const resolvedAffiliateUrl = affiliateUrl ?? null;
 ---
 
 <div
@@ -50,14 +79,25 @@ const infoBits = [
     <strong>{title}</strong>
     {infoBits && <span>{infoBits}</span>}
   </div>
-  <a
-    href={cta.href}
-    class="gt-btn gt-btn-primary gt-sticky-btn"
-    {...(cta.external ? { target: '_blank', rel: 'noopener' } : {})}
-  >
-    {cta.label}
-    <span aria-hidden="true">→</span>
-  </a>
+  <CommercialCTA
+    toolName={resolvedToolName}
+    toolSlug={resolvedToolSlug}
+    canonicalUrl={resolvedCanonicalUrl}
+    affiliateUrl={resolvedAffiliateUrl}
+    affiliateProgram={affiliateProgram ?? null}
+    pricingModel={pricingModel ?? null}
+    priceRange={priceRange ?? price ?? null}
+    pageType={pageType}
+    placement={placement}
+    pageSlug={pageSlug ?? undefined}
+    categorySlug={categorySlug ?? undefined}
+    label={cta.label}
+    className="gt-btn gt-btn-primary gt-sticky-btn"
+    wrapperClass="gt-sticky-cta-wrap"
+    showDisclosure={false}
+    isStickyCta
+    arrow="→"
+  />
 </div>
 
 <script is:inline>
@@ -135,6 +175,10 @@ const infoBits = [
   }
   .gt-sticky-info strong { font-size: 14px; color: var(--gt-fg); }
   .gt-sticky-info span { font-size: 12px; color: var(--gt-subtle); }
+  .gt-sticky-cta-wrap {
+    flex: 0 0 auto;
+    display: inline-flex;
+  }
   .gt-sticky-btn {
     width: auto;
     flex: 0 0 auto;

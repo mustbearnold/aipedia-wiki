@@ -1235,11 +1235,14 @@ button.t2-cta {
 
   .t2-pricing-card-price {
     max-width: 11rem;
+    min-width: 0;
     color: var(--t2-fg);
     font-size: 13px;
     font-weight: 850;
     line-height: 1.2;
+    overflow-wrap: anywhere;
     text-align: right;
+    white-space: normal;
   }
 
   .t2-pricing-card-fields {

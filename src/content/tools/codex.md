@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "Bundled with ChatGPT Plus ($20/mo) through Pro 20x ($200/mo)"
 status: active
 launched: 2025-05
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-05-15
+last_verified: 2026-05-15
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -146,7 +146,7 @@ Bundled with every paid ChatGPT tier. Pro tiers get 5x to 20x the Codex usage of
 
 ## Recent developments (March-May 2026)
 
-- **May 13, 2026:** [Codex on Windows shipped a native sandbox](/news/2026-05-13-openai-codex-windows-sandbox-launch/) built on Windows Job Objects and AppContainer primitives, closing the macOS / Linux parity gap. Codex commands and their descendant processes now run inside a default-on isolation boundary; Windows users no longer have to pick between per-command approval and Full Access mode. Enterprise Windows fleet rollouts that were blocked on sandbox isolation can re-open.
+- **May 13, 2026:** [OpenAI detailed Codex's Windows sandbox](/news/2026-05-13-openai-codex-windows-sandbox-launch/), closing the macOS / Linux parity gap with a design based on restricted tokens, synthetic SIDs, ACL setup, dedicated sandbox users, firewall rules, and a command-runner binary. AppContainer was evaluated and rejected as too narrow for open-ended developer workflows. Enterprise Windows fleet evaluations that were blocked on isolation can re-open with a concrete design to review.
 - **May 11, 2026:** [OpenAI launched Daybreak](/news/2026-05-11-openai-daybreak-codex-security-launch/) with **Codex Security as the anchor product**. Daybreak wraps Codex Security in three model tiers (GPT-5.5, Trusted Access, GPT-5.5-Cyber) and onboards 22 launch partners across Cloudflare, Cisco, CrowdStrike, Palo Alto Networks, Snyk, Semgrep, Socket, and more. Codex Security is now the operational center of OpenAI's defensive-cyber play and the most consequential Codex announcement since the April 16 super-app update.
 - **May 11, 2026:** [OpenAI consolidated its commercial operations under an OpenAI Deployment Company](/news/2026-05-11-openai-deployment-company-formation/). The restructure cleans the path for enterprise distribution of Codex, ChatGPT, and Daybreak across hyperscalers and government customers.
 - **May 11, 2026:** [OpenAI opened a GPT-5.5-Cyber EU preview](/news/2026-05-11-openai-gpt-55-cyber-eu-preview/), bringing the cyber-permissive model to European defenders inside Trusted Access. Relevant to Codex Security customers operating under EU data-residency requirements.

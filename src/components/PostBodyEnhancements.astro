@@ -67,31 +67,20 @@ const rel = isAffiliate ? 'sponsored noopener' : 'noopener';
       });
 
       const wrap = document.createElement('aside');
-      wrap.className =
-        'sources-callout not-prose mt-[var(--site-section-gap)] rounded-[var(--site-radius-card)] p-[var(--site-card-padding)]';
+      wrap.className = 'gt-sources-callout sources-callout not-prose';
       wrap.setAttribute('aria-label', 'Sources');
-      wrap.style.border = '1px solid rgba(249, 115, 22, 0.30)';
-      wrap.style.background = 'linear-gradient(135deg, rgba(249, 115, 22, 0.12), rgba(20, 12, 8, 0.96) 42%, rgba(12, 9, 7, 0.98))';
-      wrap.style.boxShadow = '0 22px 48px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(253, 186, 116, 0.06)';
 
       const head = document.createElement('div');
-      head.className = 'flex items-center gap-[var(--site-chip-gap)] mb-[var(--site-card-gap)]';
-      const icon = document.createElement('span');
-      icon.className =
-        'inline-flex items-center justify-center w-5 h-5 rounded-md text-[10px] font-bold text-[var(--accent-primary)] bg-[rgba(249, 115, 22,0.15)] border border-[rgba(249, 115, 22,0.25)]';
-      icon.textContent = '\u00A7';
-      icon.setAttribute('aria-hidden', 'true');
+      head.className = 'gt-sources-head';
       const title = document.createElement('span');
-      title.className =
-        'text-[11px] font-semibold uppercase tracking-wider text-[var(--accent-primary)]';
+      title.className = 'gt-sources-eyebrow';
       title.textContent =
         'Cited ' + totalLinks + ' source' + (totalLinks === 1 ? '' : 's');
-      head.appendChild(icon);
       head.appendChild(title);
       wrap.appendChild(head);
 
       const body = document.createElement('div');
-      body.className = 'text-[13px] leading-relaxed text-[var(--text-secondary)] space-y-2';
+      body.className = 'gt-sources-body';
       collected.forEach((el) => body.appendChild(el));
       body.querySelectorAll('a').forEach((link) => {
         link.setAttribute('data-source-preview', '');
@@ -107,7 +96,7 @@ const rel = isAffiliate ? 'sponsored noopener' : 'noopener';
     }
 
     function enhancePricingTables() {
-      const tables = document.querySelectorAll('article.wiki-prose table, article.t2-prose table');
+      const tables = document.querySelectorAll('article.wiki-prose table, article.t2-prose table, article.gt-body table');
       tables.forEach((tbl) => {
         const headerCells = [...tbl.querySelectorAll('thead th')];
         const isPricing = headerCells.some((th) => /price|cost|plan/i.test(th.textContent || ''));

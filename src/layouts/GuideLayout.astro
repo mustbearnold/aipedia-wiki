@@ -19,6 +19,7 @@ import FeedbackForm from '../components/FeedbackForm.astro';
 import CommercialCTA from '../components/CommercialCTA.astro';
 import RelatedReading from '../components/RelatedReading.astro';
 import TableOfContents from '../components/TableOfContents.astro';
+import BodyEnhancements from '../components/godtier/BodyEnhancements.astro';
 
 interface ToolData {
   slug: string;
@@ -107,6 +108,11 @@ const featuredTool = (bestOverallSlug && sortedTools.find((t) => t.slug === best
 const featuredScore = featuredTool ? overallScore(featuredTool) : 0;
 const featuredBand = bandFor(featuredScore);
 const featuredReason = guidePicks?.best_overall?.reason ?? '';
+const featuredLabel = guidePicks?.best_overall?.label ?? 'Best overall';
+const featuredPlan = guidePicks?.best_overall?.plan;
+const featuredSummary = featuredPlan
+  ? `Best plan: ${featuredPlan}.`
+  : featuredLabel;
 
 // Optional tier picks: render their own decision cards if frontmatter
 // provided them, so each tier surfaces its own CTA at the audit-expected
@@ -128,6 +134,9 @@ const monthShort = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct',
 const verifiedLabel = verifiedRecently && verifiedDate
   ? `Verified ${monthShort[verifiedDate.getUTCMonth()]} ${verifiedDate.getUTCDate()}`
   : undefined;
+const heroRankLabel = sortedTools.length > 1
+  ? `${sortedTools.length} tools reviewed`
+  : 'Buyer guide';
 
 const robots = noindex ? 'noindex,nofollow' : undefined;
 ---
@@ -160,7 +169,7 @@ const robots = noindex ? 'noindex,nofollow' : undefined;
         { label: title },
       ]}
       verifiedLabel={verifiedLabel}
-      rankLabel={`${sortedTools.length} tools reviewed`}
+      rankLabel={heroRankLabel}
     />
 
     {featuredTool && (
@@ -171,6 +180,9 @@ const robots = noindex ? 'noindex,nofollow' : undefined;
         statusLabel="Best overall"
         price={featuredTool.price_range}
         affiliate={Boolean(featuredTool.affiliate?.link)}
+        eyebrow={featuredLabel}
+        title={featuredTool.title}
+        description={featuredSummary}
       >
         <CommercialCTA
           slot="primary-cta"
@@ -179,6 +191,7 @@ const robots = noindex ? 'noindex,nofollow' : undefined;
           canonicalUrl={featuredTool.url ?? null}
           affiliateUrl={featuredTool.affiliate?.link ?? null}
           affiliateProgram={featuredTool.affiliate?.network ?? null}
+          label={`Start with ${featuredTool.title}`}
           pricingModel={featuredTool.pricing_model ?? null}
           priceRange={featuredTool.price_range ?? null}
           pageType="guide"
@@ -214,6 +227,7 @@ const robots = noindex ? 'noindex,nofollow' : undefined;
                 canonicalUrl={budgetPickTool.url ?? null}
                 affiliateUrl={budgetPickTool.affiliate?.link ?? null}
                 affiliateProgram={budgetPickTool.affiliate?.network ?? null}
+                label={`See ${budgetPickTool.title} plans`}
                 pricingModel={budgetPickTool.pricing_model ?? null}
                 priceRange={budgetPickTool.price_range ?? null}
                 pageType="guide"
@@ -239,6 +253,7 @@ const robots = noindex ? 'noindex,nofollow' : undefined;
                 canonicalUrl={proTeamPickTool.url ?? null}
                 affiliateUrl={proTeamPickTool.affiliate?.link ?? null}
                 affiliateProgram={proTeamPickTool.affiliate?.network ?? null}
+                label={`See ${proTeamPickTool.title} plans`}
                 pricingModel={proTeamPickTool.pricing_model ?? null}
                 priceRange={proTeamPickTool.price_range ?? null}
                 pageType="guide"
@@ -287,6 +302,7 @@ const robots = noindex ? 'noindex,nofollow' : undefined;
                       canonicalUrl={t.url ?? null}
                       affiliateUrl={t.affiliate?.link ?? null}
                       affiliateProgram={t.affiliate?.network ?? null}
+                      label={isFeatured ? `Start with ${t.title}` : `Check ${t.title}`}
                       pricingModel={t.pricing_model ?? null}
                       priceRange={t.price_range ?? null}
                       pageType="guide"
@@ -313,6 +329,7 @@ const robots = noindex ? 'noindex,nofollow' : undefined;
     <article class="gt-body">
       <slot />
     </article>
+    <BodyEnhancements tableLabel={`${title} comparison table`} />
 
     {related.length > 0 && (
       <RelatedReading items={related} heading="Keep reading" />
@@ -329,6 +346,16 @@ const robots = noindex ? 'noindex,nofollow' : undefined;
       score={featuredScore || undefined}
       price={featuredTool.price_range ?? undefined}
       cta={{ label: `Try ${featuredTool.title}`, href: featuredTool.affiliate.link, external: true }}
+      toolName={featuredTool.title}
+      toolSlug={featuredTool.slug}
+      canonicalUrl={featuredTool.url ?? null}
+      affiliateUrl={featuredTool.affiliate.link}
+      affiliateProgram={featuredTool.affiliate?.network ?? null}
+      pricingModel={featuredTool.pricing_model ?? null}
+      priceRange={featuredTool.price_range ?? null}
+      pageType="guide"
+      placement="guide_sticky_mobile"
+      pageSlug={slug}
       observeSelector=".gt-card, .gt-decision-card"
       hideSelector="footer"
     />
@@ -437,10 +464,23 @@ const robots = noindex ? 'noindex,nofollow' : undefined;
     .gt-tool-price { font-size: 11px; color: var(--gt-subtle); white-space: nowrap; }
     .gt-tool-score { font-size: 16px; font-weight: 700; }
     .gt-tool-score-slash { font-size: 11px; color: var(--gt-subtle); font-weight: 500; }
+    @media (max-width: 480px) {
+      .gt-tool-link {
+        grid-template-columns: 1fr;
+        align-items: start;
+        gap: 8px;
+      }
+      .gt-tool-meta {
+        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      .gt-tool-price { white-space: normal; }
+    }
 
     .gt-body { margin-bottom: 40px; }
     .gt-body :global(h2) {
-      font-size: 22px; font-weight: 700; letter-spacing: -0.01em;
+      font-size: 22px; font-weight: 700; letter-spacing: 0;
       margin: 36px 0 14px;
     }
     .gt-body :global(h3) { font-size: 17px; font-weight: 600; margin: 28px 0 10px; }
