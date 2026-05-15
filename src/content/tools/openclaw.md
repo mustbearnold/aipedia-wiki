@@ -11,8 +11,8 @@ pricing_model: open-source
 price_range: "Free (MIT) · BYOK API costs · server hosting on you"
 status: active
 launched: 2025-11
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-05-15
+last_verified: 2026-05-15
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -77,6 +77,7 @@ It runs on your machine, controls your browser and shell, and is reachable from 
 
 ## Recent developments
 
+- **May 14, 2026:** [Anthropic created separate Claude Agent SDK credits](/news/2026-05-14-anthropic-claude-agent-sdk-credit-split/), restoring an official subscription-auth path for third-party Agent SDK tools such as OpenClaw while capping programmatic use at $20-$200/month depending on the Claude plan. OpenClaw remains free and self-hosted, but heavy Claude-backed automation now needs explicit model-spend budgeting.
 - **May 13, 2026:** Star count updated to 371K+. Channel coverage now spans 22 messaging apps including QQ, Nextcloud Talk, and WebChat. Active development continues with 49K+ commits, with recent emphasis on Voice Wake for macOS and iOS, Live Canvas with A2UI, multi-agent routing, and sandbox security modes for group and channel safety.
 - **April 30, 2026:** [Apple said AI and agentic tools helped drive unexpected Mac demand](/news/2026-04-30-apple-mac-ai-agent-demand/). OpenClaw was named in coverage of Mac mini and Mac Studio demand, reinforcing the hardware reality behind local-first personal agents.
 - **April 30, 2026:** [Stripe turned Link into an agent wallet for approved AI purchases](/news/2026-04-30-stripe-link-agent-wallet/), explicitly naming personal AI agents such as OpenClaw as a use case. This gives OpenClaw-style local agents a safer payment path than exposing raw card details.

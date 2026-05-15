@@ -2,7 +2,7 @@
 type: tool
 slug: runway
 title: Runway
-tagline: Production AI video workspace with Gen-4.5, Gen-4 Turbo, Aleph editing, Act-Two performance capture, third-party video models, and a developer API.
+tagline: Production AI video workspace with Runway Agent, Gen-4.5, Gen-4 Turbo, Aleph editing, Act-Two performance capture, third-party video models, and a developer API.
 category: ai-video
 secondary_categories: [ai-video]
 company: runway
@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "Free + paid plans from $12/user/month billed annually; API credits at $0.01/credit"
 status: active
 launched: 2023-03
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-05-15
+last_verified: 2026-05-15
 update_frequency: weekly
 affiliate:
   has_program: false
@@ -168,7 +168,7 @@ facts:
     next_review_at: 2026-05-27
 tags: [ai-video, video-generation, text-to-video, image-to-video, video-editing, filmmaking, runway, gen-4-5, gen-4, aleph, act-two, veo, seedance, kling, api, production-workflow]
 seo_title: "Runway Review: Pricing, Models, API and Best Use Cases (May 2026)"
-meta_description: "Runway is the best production AI video workspace, not always the raw model winner. Updated May 13, 2026 with Gen-4.5, Aleph, Act-Two, Veo 3.1, Seedance 2.0, Kling 3.0 Pro, pricing, and API guidance."
+meta_description: "Runway is the best production AI video workspace, not always the raw model winner. Updated May 15, 2026 with Runway Agent, Gen-4.5, Aleph, Act-Two, Veo 3.1, Seedance 2.0, Kling 3.0 Pro, pricing, and API guidance."
 author: "aipedia.wiki Editorial"
 best_for:
   - video production teams
@@ -183,8 +183,15 @@ not_best_for:
   - users avoiding credit-based costs
   - fully local or open-source video generation
 quick_answer: >-
-  Runway is the best AI video production workspace: use it when you need Gen-4.5/Gen-4, Aleph editing, Act-Two performance capture, third-party model access, exports, teams, and API paths in one place. Do not treat it as the automatic raw model-quality winner; Seedance 2.0, Kling 3.0, and Veo 3.1 deserve side-by-side testing when output quality is the only question.
+  Runway is the best AI video production workspace: use it when you need Runway Agent for brief-to-finished-video workflows, Gen-4.5/Gen-4, Aleph editing, Act-Two performance capture, third-party model access, exports, teams, and API paths in one place. Do not treat it as the automatic raw model-quality winner; Seedance 2.0, Kling 3.0, and Veo 3.1 deserve side-by-side testing when output quality is the only question.
 price_history:
+  - date: 2026-05-13
+    plan: "Runway Agent"
+    price: "Available now; verify plan and credit behavior in account"
+    source: "https://runwayml.com/news/introducing-runway-agent"
+    source_label: "Runway Agent announcement"
+    source_id: runway-agent
+    note: "Runway Agent turns a brief into a multi-shot finished video through a conversational workflow, then hands the timeline back for final edits."
   - date: 2026-05-08
     plan: "Standard"
     price: "$12/user/mo billed annually"
@@ -217,13 +224,17 @@ price_history:
 
 # Runway
 
-Runway is a production AI video workspace and API platform. Its value is not just one model. As of May 13, 2026, Runway gives creators and teams a single workspace for Gen-4.5 text-to-video, Gen-4 image-to-video, Gen-4 Turbo iteration, Aleph video editing, Act-Two performance capture, Veo 3.1/Veo 3, and third-party video models such as Seedance 2.0 and Kling 3.0 Pro.
+Runway is a production AI video workspace and API platform. Its value is not just one model. As of May 15, 2026, Runway gives creators and teams Runway Agent for conversational finished-video creation, plus a single workspace for Gen-4.5 text-to-video, Gen-4 image-to-video, Gen-4 Turbo iteration, Aleph video editing, Act-Two performance capture, Veo 3.1/Veo 3, and third-party video models such as Seedance 2.0 and Kling 3.0 Pro.
 
 That makes Runway strategically important even when another model wins a raw-output shootout. If you only need the best single clip from a prompt, test [Seedance 2.0](/tools/seedance/), [Kling 3.0](/tools/kling/), and [Google Veo 3.1](/tools/veo/) beside Runway. If you need to edit, export, iterate, hand off to a team, or build an API pipeline, Runway moves back to the top of the shortlist.
 
+## Recent developments
+
+- **May 13, 2026:** [Runway launched Runway Agent](/news/2026-05-13-runway-agent-conversational-video-launch/), a conversational creative agent that moves from brief to concept, story beats, visual direction, multi-shot video, voiceover, dialogue, music, and a final timeline-editing handoff. This reinforces Runway's best use case as a production workflow, not just a raw video model.
+
 ## System Verdict
 
-> **Pick Runway when the job is production.** It is the strongest route for creators, agencies, and product teams that need model switching, video editor projects, Aleph edits, Act-Two character performance capture, commercial outputs, team storage, and API access in one account.
+> **Pick Runway when the job is production.** It is the strongest route for creators, agencies, and product teams that need Runway Agent, model switching, video editor projects, Aleph edits, Act-Two character performance capture, commercial outputs, team storage, and API access in one account.
 >
 > **Do not pick Runway just because a guide says "best AI video model."** That framing is now too blunt. Seedance 2.0, Kling 3.0, and Veo 3.1 are the models AiPedia would test first for raw quality on May 13, 2026. Runway wins when workflow, editing, procurement, and shipping matter.
 >
@@ -234,6 +245,7 @@ That makes Runway strategically important even when another model wins a raw-out
 | | |
 |---|---|
 | **Best viewed as** | AI video production workspace plus media API |
+| **Runway Agent** | Conversational creative agent for going from brief to multi-shot finished video, then final timeline edits |
 | **Primary proprietary models** | Gen-4.5, Gen-4, Gen-4 Turbo, Gen-4 Aleph, Act-Two |
 | **Third-party model access** | Runway pricing lists Veo 3.1, Veo 3, Seedance 2.0, Kling 3.0 Pro, and more |
 | **Free tier** | 125 one-time credits, Gen-4 Turbo image-to-video, 3 editor projects, 5GB storage, no Gen-4 Video |

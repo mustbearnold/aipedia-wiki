@@ -475,11 +475,8 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /tools/cartesia/ | Tool | Yes | frontmatter | src/content/tools/cartesia.md |
 | 2026-05-13 | /tools/castmagic/ | Tool | Yes | frontmatter | src/content/tools/castmagic.md |
 | 2026-05-13 | /tools/character-ai/ | Tool | Yes | frontmatter | src/content/tools/character-ai.md |
-| 2026-05-13 | /tools/chatgpt/ | Tool | Yes | frontmatter | src/content/tools/chatgpt.md |
 | 2026-05-13 | /tools/chatpdf/ | Tool | Yes | frontmatter | src/content/tools/chatpdf.md |
-| 2026-05-13 | /tools/claude-code/ | Tool | Yes | frontmatter | src/content/tools/claude-code.md |
 | 2026-05-13 | /tools/claude-design/ | Tool | Yes | frontmatter | src/content/tools/claude-design.md |
-| 2026-05-13 | /tools/claude/ | Tool | Yes | frontmatter | src/content/tools/claude.md |
 | 2026-05-13 | /tools/clay/ | Tool | Yes | frontmatter | src/content/tools/clay.md |
 | 2026-05-13 | /tools/clearscope/ | Tool | Yes | frontmatter | src/content/tools/clearscope.md |
 | 2026-05-13 | /tools/clickup/ | Tool | Yes | frontmatter | src/content/tools/clickup.md |
@@ -611,7 +608,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /tools/ollama/ | Tool | Yes | frontmatter | src/content/tools/ollama.md |
 | 2026-05-13 | /tools/omniseo/ | Tool | Yes | frontmatter | src/content/tools/omniseo.md |
 | 2026-05-13 | /tools/open-webui/ | Tool | Yes | frontmatter | src/content/tools/open-webui.md |
-| 2026-05-13 | /tools/openclaw/ | Tool | Yes | frontmatter | src/content/tools/openclaw.md |
 | 2026-05-13 | /tools/openhands/ | Tool | Yes | frontmatter | src/content/tools/openhands.md |
 | 2026-05-13 | /tools/openrouter/ | Tool | Yes | frontmatter | src/content/tools/openrouter.md |
 | 2026-05-13 | /tools/opusclip/ | Tool | Yes | frontmatter | src/content/tools/opusclip.md |
@@ -647,7 +643,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /tools/rodin/ | Tool | Yes | frontmatter | src/content/tools/rodin.md |
 | 2026-05-13 | /tools/rork/ | Tool | Yes | frontmatter | src/content/tools/rork.md |
 | 2026-05-13 | /tools/rows/ | Tool | Yes | frontmatter | src/content/tools/rows.md |
-| 2026-05-13 | /tools/runway/ | Tool | Yes | frontmatter | src/content/tools/runway.md |
 | 2026-05-13 | /tools/rytr/ | Tool | Yes | frontmatter | src/content/tools/rytr.md |
 | 2026-05-13 | /tools/same-dev/ | Tool | Yes | frontmatter | src/content/tools/same-dev.md |
 | 2026-05-13 | /tools/sanebox/ | Tool | Yes | frontmatter | src/content/tools/sanebox.md |
@@ -740,6 +735,11 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-14 | /workflows/seo-content-pipeline/ | Workflow | Yes | frontmatter | src/content/workflows/seo-content-pipeline.md |
 | 2026-05-14 | /workflows/solo-founder-stack/ | Workflow | Yes | frontmatter | src/content/workflows/solo-founder-stack.md |
 | 2026-05-15 | /about/our-stack/ | Static page | Yes | git | src/pages/about/our-stack.astro |
-| 2026-05-15 | /guides/best-ai-landing-page-builder-for-ab-testing/ | Guide | Yes | working tree | src/content/use-cases/best-ai-landing-page-builder-for-ab-testing.md |
+| 2026-05-15 | /guides/best-ai-landing-page-builder-for-ab-testing/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-landing-page-builder-for-ab-testing.md |
 | 2026-05-15 | /sitemap-index.xml | Crawl surface | No | git | astro.config.mjs |
+| 2026-05-15 | /tools/chatgpt/ | Tool | Yes | working tree | src/content/tools/chatgpt.md |
+| 2026-05-15 | /tools/claude-code/ | Tool | Yes | working tree | src/content/tools/claude-code.md |
+| 2026-05-15 | /tools/claude/ | Tool | Yes | working tree | src/content/tools/claude.md |
 | 2026-05-15 | /tools/codex/ | Tool | Yes | working tree | src/content/tools/codex.md |
+| 2026-05-15 | /tools/openclaw/ | Tool | Yes | working tree | src/content/tools/openclaw.md |
+| 2026-05-15 | /tools/runway/ | Tool | Yes | working tree | src/content/tools/runway.md |

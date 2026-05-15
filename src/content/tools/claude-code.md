@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$20-$200/month"
 status: active
 launched: 2025-02
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-05-15
+last_verified: 2026-05-15
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -78,7 +78,7 @@ facts:
     next_review_at: 2026-06-13
 tags: [cli, agentic-coding, terminal, codebase-wide, autonomous, anthropic, claude-opus, ultraplan, monitor, mcp, skills]
 seo_title: "Claude Code: Features, Pricing & Review (May 2026)"
-meta_description: "Claude Code is Anthropic's CLI agentic coding tool for repo-wide terminal work. Verified May 2026: Pro $20/mo includes Claude Code; Max 5x $100/mo and Max 20x $200/mo scale usage."
+meta_description: "Claude Code is Anthropic's CLI agentic coding tool for repo-wide terminal work. Updated May 15, 2026: interactive Claude Code remains on subscription limits; claude -p, GitHub Actions, and Agent SDK usage move to separate monthly credits June 15."
 author: "aipedia.wiki Editorial"
 best_for:
   - professional backend developers
@@ -90,8 +90,15 @@ not_best_for:
   - free-tier developers
   - beginners uncomfortable with the terminal
 quick_answer: >-
-  Claude Code is Anthropic's terminal-based agentic coding CLI for repo-wide work. Pick Max 5x at $100/mo for sustained coding; Pro at $20/mo covers lighter use and now has doubled five-hour Claude Code limits after Anthropic's May 6 compute update. Skip for IDE workflows (Cursor, Copilot) or free tooling (Cline).
+  Claude Code is Anthropic's terminal-based agentic coding CLI for repo-wide work. Pick Max 5x at $100/mo for sustained interactive coding; Pro at $20/mo covers lighter use. Starting June 15, 2026, claude -p, Claude Code GitHub Actions, and Agent SDK programmatic use draw from separate monthly credits rather than normal subscription limits.
 price_history:
+  - date: 2026-05-14
+    plan: "Agent SDK / claude -p credits"
+    price: "Pro $20 credit · Max 5x $100 credit · Max 20x $200 credit"
+    source: "https://support.claude.com/en/articles/15036540-use-the-claude-agent-sdk-with-your-claude-plan"
+    source_label: "Claude Agent SDK credit help"
+    source_id: claude-agent-sdk-credit
+    note: "Starting June 15, 2026, Claude Agent SDK, claude -p, Claude Code GitHub Actions, and third-party Agent SDK apps draw from separate monthly credits; interactive Claude Code remains on normal subscription usage limits."
   - date: 2026-05-13
     plan: "Plan pricing reverified"
     price: "Pro $20/mo · Max 5x $100/mo · Max 20x $200/mo (unchanged)"
@@ -151,6 +158,7 @@ Claude Opus 4.7 (released April 16, 2026) is the default backing model. Access i
 
 ## Recent developments (April-May 2026)
 
+- **May 14:** [Anthropic moved Claude Agent SDK, `claude -p`, and Claude Code GitHub Actions into separate monthly credits](/news/2026-05-14-anthropic-claude-agent-sdk-credit-split/) starting June 15. Interactive Claude Code remains on normal subscription limits; non-interactive automation now needs budget discipline because credits are per-user, non-pooled, and do not roll over.
 - **May 13:** [Anthropic passed OpenAI in US business adoption per Ramp's May 2026 AI Index](/news/2026-05-13-anthropic-surpasses-openai-business-adoption-ramp/), with Claude Code named explicitly as the wedge. Ramp's analyst said engineering coding workloads are the segment where Claude has been winning enterprise procurement for months; the broader business adoption flip (34.4% vs. 32.3% for OpenAI) is the first month it shows up at the macro level. Claude Code seat budgets that have been bottom-up shadow-purchases are likely up for procurement consolidation this quarter.
 - **May 12:** [Anthropic launched Claude for Legal](/news/2026-05-12-anthropic-claude-for-legal-plugins-microsoft-365/). Claude Code sits next to 12 practice-area plugins and 20+ MCP connectors (Harvey, Relativity, Everlaw, Thomson Reuters CoCounsel, DocuSign, Box), so legal-engineering teams can wire repo automation into the same agent surface lawyers use in Word and Outlook.
 - **May 10:** [Reports tied Anthropic to Akamai's $1.8B frontier-model cloud commitment](/news/2026-05-10-anthropic-akamai-cloud-deal/). More serving capacity behind Claude Code lowers the odds of rate-limit pain on sustained agent runs.

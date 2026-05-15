@@ -2,7 +2,7 @@
 type: tool
 slug: codex
 title: OpenAI Codex
-tagline: OpenAI's agentic coding product. Cloud-async coding agent, Codex Desktop app (macOS first, Windows rolling), CLI, IDE extensions, and a Chrome extension for signed-in browser workflows. GPT-5.5 rolled into Codex on April 23, 2026; Codex Security became the anchor of OpenAI's May 11 Daybreak defensive-cyber launch.
+tagline: OpenAI's agentic coding product. Cloud-async coding agent, Codex Desktop app, CLI, IDE extensions, Chrome extension, and now ChatGPT mobile control for active coding-agent work.
 category: ai-coding
 secondary_categories: [ai-chatbots]
 company: openai
@@ -78,7 +78,7 @@ facts:
     next_review_at: '2026-08-11'
 tags: [agentic-coding, cloud-agent, desktop-app, cli, openai, gpt-5, computer-use, memory, plugins, multi-agent]
 seo_title: "OpenAI Codex: Features, Pricing & Review (May 2026)"
-meta_description: "OpenAI Codex is the cloud-async coding agent bundled with ChatGPT. GPT-5.5 rolled into Codex April 23, 2026, Codex for Chrome added signed-in browser workflows on May 7, and Codex Security anchors the May 11 Daybreak defensive-cyber launch. Plans $20-$200/mo via ChatGPT tiers."
+meta_description: "OpenAI Codex is the cloud-async coding agent bundled with ChatGPT. Updated May 15, 2026: Codex now runs through ChatGPT mobile preview on iOS and Android, with live approvals, diffs, terminal output, and remote-environment control."
 author: "aipedia.wiki Editorial"
 best_for:
   - async background coding (fire a task, return to a PR)
@@ -94,6 +94,13 @@ not_best_for:
 quick_answer: >-
   Codex is OpenAI's agentic coding product. Works async in the cloud or locally via CLI and Codex Desktop. Best for fire-and-forget tasks, multi-file refactors, and teams already inside the OpenAI ecosystem. Bundled with ChatGPT Plus and up; Pro tiers get 5-20x Codex usage. Skip it if you need a Linux desktop GUI or want the tightest IDE daily driver (Cursor) or tightest terminal agent (Claude Code).
 price_history:
+  - date: 2026-05-14
+    plan: "ChatGPT mobile preview"
+    price: "Bundled with ChatGPT plans"
+    source: "https://openai.com/index/work-with-codex-from-anywhere/"
+    source_label: "OpenAI Codex mobile announcement"
+    source_id: openai-codex-mobile
+    note: "Codex entered the ChatGPT mobile app on iOS and Android in preview. Users can monitor active work, review outputs, approve commands, change models, and start new threads while Codex runs on a connected machine or remote environment."
   - date: 2026-04-02
     plan: "API-aligned billing"
     price: "Credits per MTok"
@@ -146,6 +153,7 @@ Bundled with every paid ChatGPT tier. Pro tiers get 5x to 20x the Codex usage of
 
 ## Recent developments (March-May 2026)
 
+- **May 14, 2026:** [OpenAI put Codex inside the ChatGPT mobile app](/news/2026-05-14-openai-codex-chatgpt-mobile-app/). The preview lets users monitor active Codex work, review terminal output and diffs, approve commands, change models, and start new tasks from iOS or Android while files, credentials, and repo context stay on a connected machine or remote environment. Remote SSH and Hooks are now generally available as part of the same Codex push.
 - **May 13, 2026:** [OpenAI detailed Codex's Windows sandbox](/news/2026-05-13-openai-codex-windows-sandbox-launch/), closing the macOS / Linux parity gap with a design based on restricted tokens, synthetic SIDs, ACL setup, dedicated sandbox users, firewall rules, and a command-runner binary. AppContainer was evaluated and rejected as too narrow for open-ended developer workflows. Enterprise Windows fleet evaluations that were blocked on isolation can re-open with a concrete design to review.
 - **May 11, 2026:** [OpenAI launched Daybreak](/news/2026-05-11-openai-daybreak-codex-security-launch/) with **Codex Security as the anchor product**. Daybreak wraps Codex Security in three model tiers (GPT-5.5, Trusted Access, GPT-5.5-Cyber) and onboards 22 launch partners across Cloudflare, Cisco, CrowdStrike, Palo Alto Networks, Snyk, Semgrep, Socket, and more. Codex Security is now the operational center of OpenAI's defensive-cyber play and the most consequential Codex announcement since the April 16 super-app update.
 - **May 11, 2026:** [OpenAI consolidated its commercial operations under an OpenAI Deployment Company](/news/2026-05-11-openai-deployment-company-formation/). The restructure cleans the path for enterprise distribution of Codex, ChatGPT, and Daybreak across hyperscalers and government customers.

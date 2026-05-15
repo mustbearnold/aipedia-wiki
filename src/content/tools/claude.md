@@ -11,11 +11,11 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2023-03
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-05-15
+last_verified: 2026-05-15
 update_frequency: monthly
 seo_title: "Claude: Features, Pricing & Review (2026)"
-meta_description: "Claude runs Opus 4.7 (April 16, 2026) as flagship, Sonnet 4.6, Haiku 4.5. Claude Design (April 17) added for prompt-to-prototype. 1M context, $5/$25 per MTok API. Free tier; Pro $20/mo."
+meta_description: "Claude runs Opus 4.7 as flagship with 1M context, Claude Code, Claude Design, Claude Cowork, and new May 2026 Small Business workflows. Agent SDK and claude -p move to separate credits June 15."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -48,11 +48,11 @@ facts:
     confidence: high
     next_review_at: 2026-06-11
   pricing_anchor:
-    value: "Free; Pro $20/mo or $17/mo annual; Max from $100/mo (5x) or $200/mo (20x); Team standard seat $20/mo annual ($25 monthly) or premium $100/mo annual ($125 monthly); Enterprise $20/seat plus API-rate usage; API Opus 4.7 is $5 input / $25 output per MTok"
+    value: "Free; Pro $20/mo or $17/mo annual; Max from $100/mo (5x) or $200/mo (20x); Team standard seat $20/mo annual ($25 monthly) or premium $100/mo annual ($125 monthly); Enterprise $20/seat plus API-rate usage; API Opus 4.7 is $5 input / $25 output per MTok. Starting June 15, 2026, eligible plans can claim separate Agent SDK monthly credits for programmatic usage."
     source: "https://claude.com/pricing"
     source_label: "Claude pricing"
     source_id: claude-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-05-15
     volatility: high
     confidence: high
     next_review_at: 2026-06-13
@@ -231,10 +231,13 @@ Anthropic's AI assistant. **Opus 4.7** is the flagship as of **April 16, 2026**,
 
 ## Recent developments
 
+- **May 14:** [Anthropic split Claude Agent SDK and `claude -p` into separate monthly credits](/news/2026-05-14-anthropic-claude-agent-sdk-credit-split/). Starting June 15, programmatic usage leaves normal subscription limits and draws from credits worth $20 on Pro, $100 on Max 5x, and $200 on Max 20x before API-rate extra usage. Interactive Claude Code and Claude chat remain on normal subscription limits.
+- **May 13:** [Anthropic launched Claude for Small Business](/news/2026-05-13-anthropic-claude-small-business-launch/) with QuickBooks, PayPal, HubSpot, Canva, Docusign, Google Workspace, and Microsoft 365 connectors. It packages 15 ready-to-run agentic workflows across finance, operations, sales, marketing, HR, and customer service through Claude Cowork.
 - **May 14:** [Mythos, Claude Opus 4.7, and GPT-5.5-Cyber drove a "vulnpocalypse"](/news/2026-05-14-vulnpocalypse-mythos-gpt-cyber-mdash-patch-tuesday/) of new CVEs in May. Palo Alto Networks found 75 holes / 26 CVEs in its own codebase with help from Mythos and Opus 4.7; Microsoft's MDASH agentic system contributed to a record 30-critical-CVE Patch Tuesday; Mozilla shipped 423 Firefox bugs in April, 20x its prior monthly average. Project Glasswing members got patch lead time; the broader market has 3-5 months before parity.
 - **May 13:** [Anthropic is in talks for a $30-50B round at a $950B valuation](/news/2026-05-13-anthropic-50b-round-950b-valuation-eclipses-openai/), per the New York Times. The mark would put Anthropic ahead of OpenAI's $825B and represent a 1,445% lift in 12 months. Dario Amodei told Code with Claude attendees the company has crossed a $30B annualized revenue run rate. Round not yet signed.
 - **May 13:** [Anthropic passed OpenAI in US business AI adoption for the first time](/news/2026-05-13-anthropic-surpasses-openai-business-adoption-ramp/) per Ramp's May 2026 AI Index. 34.4% of surveyed US businesses pay for Anthropic vs. 32.3% for OpenAI. Anthropic's share went from ~9% in May 2025 to 35%+ today, a 26-point year-over-year jump driven by Claude Code and the Microsoft 365 Claude embedment.
 - **May 12:** [Anthropic launched Claude for Legal](/news/2026-05-12-anthropic-claude-for-legal-plugins-microsoft-365/) with 12 practice-area plugins, 20-plus MCP connectors (Harvey, Relativity, Everlaw, Thomson Reuters CoCounsel, DocuSign, Box), and a Microsoft 365 integration that embeds Claude across Word, Outlook, Excel, and PowerPoint. Freshfields, Quinn Emanuel, Holland & Knight, and Crosby joined as launch customers.
+- **May 11:** [Google said it caught the first AI-generated zero-day exploit before mass deployment](/news/2026-05-11-google-ai-generated-zero-day-thwarted/). Google did not name the model used by the attacker. The buyer implication for Claude and Mythos is clear: defensive AI security claims now need explicit offensive-uplift, access-control, and disclosure evidence.
 - **May 10:** [Reports tied Anthropic to Akamai's $1.8B frontier-model cloud commitment](/news/2026-05-10-anthropic-akamai-cloud-deal/). The reporting reinforces that Claude capacity is becoming an infrastructure-market story, not just a model-quality story.
 - **May 9:** [FIS and Anthropic are developing a Claude-powered financial-crimes agent for banks](/news/2026-05-09-anthropic-fis-financial-crimes-agent/). The project pushes Claude deeper into regulated, evidence-heavy enterprise workflows where auditability matters as much as reasoning quality.
 - **May 6:** [Claude Managed Agents added dreaming, outcomes, and multiagent orchestration](/news/2026-05-06-claude-managed-agents-dreaming-outcomes-orchestration/). The release pushes Claude further into hosted agent infrastructure, with memory refinement, rubric-based outcomes, and parallel subagent work.

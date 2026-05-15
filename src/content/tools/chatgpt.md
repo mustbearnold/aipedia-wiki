@@ -11,11 +11,11 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2022-11
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-05-15
+last_verified: 2026-05-15
 update_frequency: monthly
 seo_title: "ChatGPT: Features, Pricing & Review (May 2026)"
-meta_description: "ChatGPT runs GPT-5.5 Instant as the default, with GPT-5.5 Thinking on Plus and GPT-5.5 Pro on Pro, Business, and Enterprise. Plus is $20/mo. Codex Security now ships under the May 11 Daybreak initiative, and GPT-5.5-Cyber is in EU Trusted Access preview."
+meta_description: "ChatGPT runs GPT-5.5 Instant as the default, with GPT-5.5 Thinking on Plus and GPT-5.5 Pro on Pro, Business, and Enterprise. Plus is $20/mo. Codex is now in the ChatGPT mobile app for iOS and Android preview."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -323,9 +323,11 @@ Prices and model access were rechecked on May 13, 2026 using [ChatGPT pricing](h
 
 ## Recent changes
 
+- **May 14, 2026:** [OpenAI put Codex inside the ChatGPT mobile app](/news/2026-05-14-openai-codex-chatgpt-mobile-app/), turning ChatGPT mobile into a control surface for active coding-agent work. Users can monitor Codex threads, review outputs, approve commands, change models, and start new work from iOS or Android while Codex keeps running on a connected laptop, devbox, or remote environment.
 - **May 14, 2026:** [GPT-5.5-Cyber, Anthropic's Mythos, and Microsoft's MDASH drove a vulnpocalypse](/news/2026-05-14-vulnpocalypse-mythos-gpt-cyber-mdash-patch-tuesday/) of AI-found vulnerabilities. Palo Alto Networks found 75 holes / 26 CVEs in its products in one month. Microsoft Patch Tuesday hit 30 critical CVEs. Mozilla shipped 423 Firefox bugs in April. For ChatGPT enterprise buyers: AI bug-finding is now production-scale on both defender and attacker sides; tighten patch cadence accordingly.
 - **May 13, 2026:** [Anthropic passed OpenAI in US business AI adoption for the first time](/news/2026-05-13-anthropic-surpasses-openai-business-adoption-ramp/) per Ramp's May 2026 AI Index, with 34.4% of US businesses paying for Anthropic vs. 32.3% for OpenAI. The flip is concentrated in finance, tech, and professional services where Claude has led for months. ChatGPT remains the broader consumer leader; the data point is specifically about US business adoption tracked through corporate-card spend.
 - **May 11, 2026:** [OpenAI launched Daybreak](/news/2026-05-11-openai-daybreak-codex-security-launch/), a 22-partner cybersecurity initiative that wraps Codex Security with three GPT-5.5 access tiers (general, Trusted Access, and GPT-5.5-Cyber preview) for vulnerability detection and patch validation. Launch partners include Cloudflare, Cisco, CrowdStrike, Palo Alto Networks, Akamai, Fortinet, and Snyk. Daybreak is OpenAI's productized answer to Anthropic's Project Glasswing.
+- **May 11, 2026:** [Google said it caught the first AI-generated zero-day exploit before mass deployment](/news/2026-05-11-google-ai-generated-zero-day-thwarted/). Google did not name the model used by the attacker, but the incident raises the procurement bar for ChatGPT/GPT-5.5-Cyber customers: ask for offensive-cyber uplift testing, access controls, and disclosure procedures.
 - **May 11, 2026:** [OpenAI launched a $4B Deployment Company](/news/2026-05-11-openai-deployment-company-launch/), a majority-owned enterprise unit valued at roughly $14B that absorbed Tomoro's ~150 deployment engineers. It puts forward-deployed engineers inside enterprise buyers, putting OpenAI directly against Accenture, Deloitte, and McKinsey on AI integration work.
 - **May 11, 2026:** [GPT-5.5-Cyber expanded to EU defenders in limited Trusted Access preview](/news/2026-05-11-openai-gpt-55-cyber-eu-preview/), reaching the EU AI Office, member-state cyber authorities, and vetted private-sector defenders. Anthropic has not granted equivalent EU preview access for Mythos.
 - **May 7, 2026:** [Codex Chrome extension shipped](/news/2026-05-07-openai-codex-chrome-extension/) for in-browser repo and PR work.
