@@ -20,6 +20,8 @@
 
 const COLLAPSIBLE_TEXT_PREFIXES = [
   'recent developments',
+  'recent changes',
+  'what changed recently',
   'system verdict',          // redundant with the Quick Answer card above
   'failure modes',
   'methodology',

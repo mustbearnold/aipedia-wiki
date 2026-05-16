@@ -456,6 +456,53 @@ const tocItems = (headings ?? [])
     })();
   </script>
 
+  <!-- Fallback for update-log headings that may be missed by cached
+       markdown renders. Uses the same native <details> pattern as the
+       build-time rehype collapse plugin. -->
+  <script is:inline>
+    (function () {
+      function wrapMissedUpdateSections() {
+        var body = document.getElementById('gt-body');
+        if (!body) return;
+        ['recent-changes', 'what-changed-recently'].forEach(function (id) {
+          var heading = document.getElementById(id);
+          if (!heading || heading.tagName !== 'H2') return;
+          if (heading.closest('details.gt-section-collapse')) return;
+          if (heading.parentElement !== body) return;
+
+          var details = document.createElement('details');
+          details.className = 'gt-section-collapse';
+          details.setAttribute('data-section-id', id);
+
+          var summary = document.createElement('summary');
+          summary.className = 'gt-section-collapse-summary';
+          heading.classList.add('gt-section-collapse-heading');
+
+          var sectionNodes = [];
+          var next = heading.nextSibling;
+          while (next) {
+            var current = next;
+            next = next.nextSibling;
+            if (current.nodeType === 1 && current.tagName === 'H2') break;
+            sectionNodes.push(current);
+          }
+
+          body.insertBefore(details, heading);
+          details.appendChild(summary);
+          summary.appendChild(heading);
+          sectionNodes.forEach(function (node) { details.appendChild(node); });
+        });
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', wrapMissedUpdateSections);
+      } else {
+        wrapMissedUpdateSections();
+      }
+      document.addEventListener('astro:page-load', wrapMissedUpdateSections);
+    })();
+  </script>
+
   <!-- Open the parent <details> when an in-page anchor is followed so
        collapsed sections expand correctly when navigating from the
        sidebar TOC / Jump-to chips / FAQ JSON-LD anchors. -->
