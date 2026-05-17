@@ -40,6 +40,7 @@ facts:
     verified_at: 2026-05-13
     volatility: high
     confidence: medium
+    next_review_at: 2026-08-13
   watch_out_for:
     value: "Eightfold is not a lightweight recruiter assistant; ROI depends on enterprise data readiness, HR process maturity, and cross-functional adoption."
     source: "https://eightfold.ai/products/"

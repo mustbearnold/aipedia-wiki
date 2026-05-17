@@ -92,7 +92,7 @@ The category winners will not be the vendors with the biggest memory claims. The
 - [Gemini Apps personalization help](https://support.google.com/gemini/answer/16598623?hl=en) - Gemini personalization from past chats, connected apps, and preferences.
 - [Claude release notes](https://support.claude.com/en/articles/12138966-release-notes) - Memory from chat history available to Claude users.
 - [Claude API memory tool](https://platform.claude.com/docs/en/agents-and-tools/tool-use/memory-tool) - Persistent memory files across API conversations.
-- [Claude Managed Agents dreaming and outcomes](/news/2026-05-06-claude-managed-agents-dreaming-outcomes/) - Offline session review and outcome logging, verified 2026-05-13.
+- [Claude Managed Agents dreaming and outcomes](/news/2026-05-06-claude-managed-agents-dreaming-outcomes-orchestration/) - Offline session review and outcome logging, verified 2026-05-13.
 - [Pinecone 2026 release notes](https://docs.pinecone.io/assistant-release-notes/2026) - Assistant Marketplace, connectors, evaluation, analytics, versioning, and rollback.
 - [Qdrant](https://qdrant.tech/) - Vector search for AI agents with persistent memory positioning.
 - [Memory for Autonomous LLM Agents survey](https://arxiv.org/abs/2603.07670) - March 2026 survey of memory mechanisms, evaluation, and governance issues.

@@ -5,10 +5,10 @@ title: "Ship a Micro-SaaS Weekend MVP with Cursor, Supabase, Vercel, and Stripe"
 seo_title: "Ship a Micro-SaaS Weekend MVP with AI Coding Tools (2026)"
 meta_description: "Updated May 13, 2026: a source-backed weekend MVP workflow using Cursor, Supabase, Vercel, and Stripe without fake fixed-cost or time-saved claims."
 description: "Build a small authenticated, billable MVP with AI-assisted coding, Supabase, Vercel, and Stripe while keeping scope, security, and billing risk under control."
-stack: [cursor, supabase, vercel, stripe]
-tools_mentioned: [cursor, supabase, vercel, stripe]
+stack: [cursor]
+tools_mentioned: [cursor]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-13
+last_updated: 2026-05-17
 last_verified: 2026-05-13
 update_frequency: monthly
 ---

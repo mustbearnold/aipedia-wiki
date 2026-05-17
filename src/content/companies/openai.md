@@ -9,8 +9,8 @@ company_type: startup
 founded: 2015
 hq: San Francisco, USA
 funding: "$133B+"
-key_products: [chatgpt, codex, gpt-image-2, daybreak]
-last_updated: 2026-05-13
+key_products: [chatgpt, codex, gpt-image-2]
+last_updated: 2026-05-17
 update_frequency: monthly
 last_verified: 2026-05-13
 ---

@@ -16,6 +16,10 @@ last_verified: 2026-05-13
 price_history:
   - date: 2026-05-13
     price: "see note"
+    source: https://deepgram.com/pricing
+    source_label: Deepgram pricing
+    source_id: deepgram-pricing
+    verified_at: '2026-05-13'
     note: "Public pricing page now lists explicit per-minute rates: Flux English STT $0.0065/min streaming PAYG ($0.0057/min Growth); Nova-3 Monolingual STT $0.0048/min streaming PAYG; Aura-2 TTS $0.030/1k characters PAYG; Voice Agent API tiered $0.050 to $0.163/min depending on bring-your-own LLM/TTS configuration."
 update_frequency: monthly
 affiliate:

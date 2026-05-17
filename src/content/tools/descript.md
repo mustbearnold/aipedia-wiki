@@ -15,6 +15,10 @@ last_verified: 2026-05-13
 price_history:
   - date: 2026-05-13
     price: "see note"
+    source: "https://www.descript.com/pricing"
+    source_label: "Descript pricing"
+    source_id: descript-pricing
+    verified_at: 2026-05-13
     note: "Plan restructure verified: Hobbyist $16/mo annual ($24 monthly), Creator $24/mo annual ($35 monthly, replaces the prior $12 Creator tier), Business $50/mo annual ($65 monthly, replaces the prior $24 Pro tier). Allowances shifted from transcription hours to media hours plus AI credits."
 update_frequency: monthly
 affiliate:

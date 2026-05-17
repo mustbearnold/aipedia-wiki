@@ -60,8 +60,9 @@ test('category pages preserve primary-category tools ahead of secondary matches'
 
   assert.match(routeSource, /category_match_type:\s*primaryMatch \? 'primary' : 'secondary'/);
   assert.match(layoutSource, /categoryMatchRank\(t: ToolData\)/);
+  assert.match(layoutSource, /configuredPickCards/);
   assert.match(layoutSource, /reason: typeof raw === 'object' && raw\.reason/);
-  assert.match(layoutSource, /t2-cat-toppick-reason/);
+  assert.match(layoutSource, /gt-category-tier-reason/);
 
   const tools = loadTools();
   const aiDesignTools = tools

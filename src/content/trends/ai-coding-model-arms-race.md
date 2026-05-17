@@ -106,10 +106,10 @@ AI coding is becoming a model-routing market. The tool that feels smartest in on
 
 ## Sources
 
-- [OpenAI Daybreak and Codex Security launch](/news/2026-05-11-openai-daybreak-codex-security/), verified 2026-05-13
+- [OpenAI Daybreak and Codex Security launch](/news/2026-05-11-openai-daybreak-codex-security-launch/), verified 2026-05-13
 - [OpenAI Codex Chrome extension](/news/2026-05-07-openai-codex-chrome-extension/), verified 2026-05-13
-- [Anthropic Claude Opus 4.7 launch](/news/2026-04-16-anthropic-claude-opus-4-7/), verified 2026-05-13
-- [OpenAI GPT-5.5 launch](/news/2026-04-23-openai-gpt-5-5/), verified 2026-05-13
+- [Anthropic Claude Opus 4.7 launch](/news/2026-04-16-anthropic-claude-opus-47/), verified 2026-05-13
+- [OpenAI GPT-5.5 launch](/news/2026-04-23-openai-gpt-55-release/), verified 2026-05-13
 - [GitHub Copilot is moving to usage-based billing](https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/), verified 2026-05-13
 - [GitHub Docs: usage-based billing for Copilot individuals](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals), verified 2026-05-13
 - [GitHub Changelog: GPT-5.5 is generally available for GitHub Copilot](https://github.blog/changelog/2026-04-24-gpt-5-5-is-generally-available-for-github-copilot/), verified 2026-05-13

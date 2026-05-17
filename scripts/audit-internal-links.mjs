@@ -103,5 +103,5 @@ if (tBroken + nBroken === 0) {
   process.exit(0);
 } else {
   console.log(`[audit-internal-links] ${tBroken + nBroken} unique broken slug(s) found.`);
-  process.exit(0); // exit 0 so run surfaces diagnostics without blocking CI
+  process.exit(1);
 }

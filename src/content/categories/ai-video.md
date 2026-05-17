@@ -4,11 +4,11 @@ slug: ai-video
 title: AI Video Generation
 description: Current AI video tools for model-quality testing, production workflows, budget social clips, avatar videos, localization, and business training.
 tool_count: 26
-seo_title: "Best AI Video Tools (May 2026): Seedance, Kling, Veo, Sora 2 Pro & Runway"
-meta_description: "Updated May 13, 2026: compare Seedance 2.0, Kling 3.0, Veo 3.1, Hailuo 2.3, Sora 2 Pro, Runway, Pika, HeyGen, Synthesia, and other AI video tools by model quality, workflow, pricing, and buyer fit."
+seo_title: "Best AI Video Tools (May 2026): Seedance, Kling, Veo & Runway"
+meta_description: "Updated May 17, 2026: compare Seedance 2.0, Kling 3.0, Veo 3.1, Hailuo 2.3, Runway, Pika, HeyGen, Synthesia, and Sora sunset caveats by model quality, workflow, pricing, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-05-17
+last_verified: 2026-05-17
 update_frequency: weekly
 top_picks:
   best_overall: seedance
@@ -18,7 +18,7 @@ top_picks:
 
 ## Quick Decision
 
-AI video is no longer one clean product category. On May 13, 2026, the useful buyer split is:
+AI video is no longer one clean product category. On May 17, 2026, the useful buyer split is:
 
 **Test [Seedance 2.0](/tools/seedance/) first for raw model quality.** ByteDance says Seedance 2.0 supports text, image, audio, and video inputs with multimodal references, editing, extension, 15-second multi-shot audio-video output, motion stability, and director-level control. That makes it the first model AiPedia would test when the only question is "which model can make the best shot?"
 
@@ -26,7 +26,7 @@ AI video is no longer one clean product category. On May 13, 2026, the useful bu
 
 **Use [Google Veo 3.1](/tools/veo/) when API, Google governance, vertical mobile output, or provenance matters.** Google lists Veo 3.1 through the Gemini API with landscape and portrait output, video extension, first/last-frame generation, up to three reference images, native audio, and paid per-second pricing. It is the cleanest enterprise/API route in the current model set.
 
-**Test [Sora 2 Pro](/tools/sora/) alongside the frontier set when OpenAI-native procurement or ChatGPT workflow integration matters.** Sora 2 Pro runs alongside Seedance 2.0, Kling 3.0, and Veo 3.1 as a frontier comparator in May 2026; include it in the same prompt sweep before settling on a model.
+**Do not treat Sora 2 Pro as a fresh buying route.** OpenAI says the Sora web and app experiences were discontinued on April 26, 2026, and the Sora API will be discontinued on September 24, 2026. Use Sora only for legacy exports, migration planning, or a short API sunset comparison; do not build a new video workflow around it.
 
 **Test [Hailuo 2.3](/tools/hailuo/) as the current budget challenger.** Hailuo 2.3 is the current generation buyers should benchmark against Pika and Luma for low-cost social and ideation work, not the older 2.x branches still mentioned in stale lists.
 
@@ -78,7 +78,7 @@ Do not make a wide comparison table the mobile experience. Mobile buyers need st
 
 ## Buyer Paths
 
-**Solo creator testing raw quality:** start with Seedance 2.0, then Kling 3.0, then Veo 3.1, then Sora 2 Pro. Keep prompts identical and save both good and bad outputs.
+**Solo creator testing raw quality:** start with Seedance 2.0, then Kling 3.0, then Veo 3.1. Keep prompts identical and save both good and bad outputs. Treat Sora as a sunset/export check, not a new-workflow default.
 
 **Creator trying to publish this week:** start in Runway so generation, editing, exports, and model switching live in one workspace.
 
@@ -110,7 +110,7 @@ Every monetizable AI video page should tell readers:
 ## FAQ
 
 **What is the best AI video generator right now?**
-For raw model testing on May 13, 2026, start with Seedance 2.0, Kling 3.0, Veo 3.1, and Sora 2 Pro. For a finished production workflow, start with Runway. For budget testing, benchmark against Hailuo 2.3.
+For raw model testing on May 17, 2026, start with Seedance 2.0, Kling 3.0, and Veo 3.1. For a finished production workflow, start with Runway. For budget testing, benchmark against Hailuo 2.3. Sora belongs in migration and API-sunset checks, not a default new purchase path.
 
 **Why is Runway still a top pick if Seedance, Kling, and Veo are stronger models to test?**
 Because buyers do not only buy model output. They also buy editing, exports, team workflow, storage, support, API paths, and a way to ship finished work. Runway is strongest there.
@@ -135,6 +135,7 @@ Yes, but with honest positioning. They are useful for budget testing, effects, o
 - [Google DeepMind Veo](https://deepmind.google/models/veo/)
 - [Veo 3.1 Gemini API docs](https://ai.google.dev/gemini-api/docs/video)
 - [Veo 3.1 Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing)
+- [OpenAI Sora discontinuation help](https://help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation) (verified 2026-05-17)
 - [Runway pricing](https://runwayml.com/pricing)
 - [Runway API models](https://docs.dev.runwayml.com/guides/models/)
 - [Pika pricing](https://pika.art/pricing)

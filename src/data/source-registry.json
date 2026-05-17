@@ -7114,6 +7114,374 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium"
+    },
+    {
+      "id": "ag2-releases",
+      "label": "AG2 releases",
+      "url": "https://github.com/ag2ai/ag2/releases",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "browserbase-changelog",
+      "label": "Browserbase changelog",
+      "url": "https://www.browserbase.com/changelog",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "browserbase-pricing",
+      "label": "Browserbase pricing",
+      "url": "https://www.browserbase.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "castmagic-overview",
+      "label": "Castmagic overview",
+      "url": "https://www.castmagic.io/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "castmagic-pricing",
+      "label": "Castmagic pricing",
+      "url": "https://www.castmagic.io/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "claude-agent-sdk-credit",
+      "label": "Claude Agent SDK credit help",
+      "url": "https://support.claude.com/en/articles/15036540-use-the-claude-agent-sdk-with-your-claude-plan",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "cohere-transcribe",
+      "label": "Cohere Transcribe",
+      "url": "https://cohere.com/transcribe",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "dia-security",
+      "label": "Dia security",
+      "url": "https://www.diabrowser.com/security",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "exa-pricing-update",
+      "label": "Exa pricing update",
+      "url": "https://exa.ai/docs/changelog/pricing-update",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "google-android-show-2026",
+      "label": "Android Show: I/O Edition 2026",
+      "url": "https://blog.google/products/android/android-show-io-edition-2026/",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "grok-code-fast-pricing",
+      "label": "xAI model docs",
+      "url": "https://docs.x.ai/docs/models",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "hunyuan-hy3",
+      "label": "Tencent Hunyuan Hy3-preview Hugging Face",
+      "url": "https://huggingface.co/tencent/Hy3-preview",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "hunyuan-hyworld",
+      "label": "Tencent Hunyuan HY-World 2.0 Hugging Face",
+      "url": "https://huggingface.co/tencent/HY-World-2.0",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "hunyuan-omniweaving",
+      "label": "Tencent Hunyuan HY-OmniWeaving Hugging Face",
+      "url": "https://huggingface.co/tencent/HY-OmniWeaving",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "imagen-subscriptions",
+      "label": "Google AI subscriptions",
+      "url": "https://gemini.google/subscriptions/",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "intercom-copilot-faqs",
+      "label": "Copilot FAQs",
+      "url": "https://www.intercom.com/help/en/articles/9121381-copilot-faqs",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "letta-code-pricing",
+      "label": "Letta Code pricing",
+      "url": "https://docs.letta.com/letta-code/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "letta-pricing-legacy",
+      "label": "Letta pricing (legacy)",
+      "url": "https://www.letta.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "maf-github",
+      "label": "Microsoft Agent Framework GitHub",
+      "url": "https://github.com/microsoft/agent-framework",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "maf-overview",
+      "label": "Microsoft Agent Framework overview",
+      "url": "https://learn.microsoft.com/en-us/agent-framework/overview/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "meetgeek-overview",
+      "label": "MeetGeek overview",
+      "url": "https://meetgeek.ai/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "low"
+    },
+    {
+      "id": "meetgeek-pricing",
+      "label": "MeetGeek pricing",
+      "url": "https://meetgeek.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "midjourney-v81-update",
+      "label": "Midjourney V8.1 update",
+      "url": "https://updates.midjourney.com/v8-1-updates",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "mistral-3-launch",
+      "label": "Mistral 3 launch",
+      "url": "https://mistral.ai/news/mistral-3",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "mistral-security-advisories",
+      "label": "Mistral AI security advisories",
+      "url": "https://docs.mistral.ai/resources/security-advisories",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "morphic-github",
+      "label": "miurla/morphic on GitHub",
+      "url": "https://github.com/miurla/morphic",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "open-webui-enterprise",
+      "label": "docs.openwebui.com/enterprise",
+      "url": "https://docs.openwebui.com/enterprise/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "openai-codex-mobile",
+      "label": "OpenAI Codex mobile announcement",
+      "url": "https://openai.com/index/work-with-codex-from-anywhere/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "reclaim-overview",
+      "label": "Reclaim.ai overview",
+      "url": "https://reclaim.ai/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "reclaim-pricing",
+      "label": "Reclaim.ai pricing",
+      "url": "https://reclaim.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "reka-edge-launch",
+      "label": "Reka Edge launch",
+      "url": "https://reka.ai/news/reka-edge-frontier-level-edge-intelligence-for-physical-ai",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "runway-agent",
+      "label": "Runway Agent announcement",
+      "url": "https://runwayml.com/news/introducing-runway-agent",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "sanebox-overview",
+      "label": "SaneBox overview",
+      "url": "https://www.sanebox.com/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "sanebox-pricing",
+      "label": "SaneBox pricing",
+      "url": "https://www.sanebox.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "servicenow-action-fabric-2026",
+      "label": "ServiceNow Action Fabric coverage",
+      "url": "https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-opens-its-full-system-of-action-to-every-AI-Agent-in-the-enterprise/default.aspx",
+      "type": "newsroom",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "servicenow-aws-kiro-2026",
+      "label": "ServiceNow + AWS AgentCore + Kiro coverage",
+      "url": "https://www.barchart.com/story/news/1747462/servicenow-hits-1-billion-in-aws-marketplace-transactions-as-enterprises-rapidly-adopt-ai-at-scale",
+      "type": "third_party",
+      "trust_tier": "secondary",
+      "volatility": "high"
+    },
+    {
+      "id": "servicenow-build-agent-2026",
+      "label": "ServiceNow Build Agent coverage",
+      "url": "https://www.stocktitan.net/news/NOW/service-now-build-agent-now-works-inside-every-major-ai-coding-tool-kqlr2db2b4zm.html",
+      "type": "third_party",
+      "trust_tier": "secondary",
+      "volatility": "high"
+    },
+    {
+      "id": "servicenow-data-foundation-2026",
+      "label": "ServiceNow real-time data foundation coverage",
+      "url": "https://www.barchart.com/story/news/1747515/servicenow-launches-the-real-time-data-foundation-that-puts-autonomous-ai-to-work-across-the-enterprise",
+      "type": "third_party",
+      "trust_tier": "secondary",
+      "volatility": "high"
+    },
+    {
+      "id": "taskade-ai",
+      "label": "Taskade AI",
+      "url": "https://www.taskade.com/ai",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "tidio-lyro",
+      "label": "Tidio AI agent (Lyro)",
+      "url": "https://www.tidio.com/ai-agent/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "tidio-overview",
+      "label": "Tidio overview",
+      "url": "https://www.tidio.com/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "tidio-pricing",
+      "label": "Tidio pricing",
+      "url": "https://www.tidio.com/pricing/",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "tines-pricing-explainer",
+      "label": "Tines pricing explainer",
+      "url": "https://explained.tines.com/en/articles/9620399-understanding-tines-pricing-and-packaging",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "tripo3d-site",
+      "label": "Tripo3D site",
+      "url": "https://www.tripo3d.ai",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "weaviate-add-ons",
+      "label": "Weaviate pricing",
+      "url": "https://weaviate.io/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "wispr-funding-260m",
+      "label": "Bloomberg: Wispr funding talks",
+      "url": "https://www.bloomberg.com/news/articles/2026-05-12/ai-dictation-startup-wispr-in-funding-talks-at-2-billion-value",
+      "type": "third_party",
+      "trust_tier": "secondary",
+      "volatility": "high"
     }
   ]
 }

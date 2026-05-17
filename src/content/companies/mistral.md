@@ -9,8 +9,8 @@ company_type: startup
 founded: 2023
 hq: Paris, France
 funding: "$1B+"
-key_products: [mistral-ai, voxtral, codestral]
-last_updated: 2026-05-13
+key_products: [mistral-ai, voxtral]
+last_updated: 2026-05-17
 update_frequency: monthly
 last_verified: 2026-05-13
 ---

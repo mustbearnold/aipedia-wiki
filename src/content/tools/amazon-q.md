@@ -123,7 +123,7 @@ Free tier is perpetual with a 50 agentic-request monthly cap plus 1,000 LOC of t
 
 > **Pick Amazon Q Developer if AWS is the core of the stack.** No other assistant matches its native understanding of IAM policies, CloudFormation templates, CDK constructs, and the AWS SDK. The AWS Console chat answers service-specific questions without tab-switching to docs.
 >
-> Security scanning flags OWASP Top 10 issues and hardcoded credentials with fix suggestions. Code transformation automates Java version upgrades (Java 8 or 11 to 17 or 21) and .NET modernization to AWS patterns. As of April 28, 2026, [OpenAI's GPT-5.5 family is also addressable through AWS Bedrock](/news/2026-04-28-openai-models-aws-bedrock/), which broadens the foundation-model options available alongside Q Developer for AWS-native teams.
+> Security scanning flags OWASP Top 10 issues and hardcoded credentials with fix suggestions. Code transformation automates Java version upgrades (Java 8 or 11 to 17 or 21) and .NET modernization to AWS patterns. As of April 28, 2026, [OpenAI's GPT-5.5 family is also addressable through AWS Bedrock](/news/2026-04-28-openai-models-codex-managed-agents-aws/), which broadens the foundation-model options available alongside Q Developer for AWS-native teams.
 >
 > **Skip it if the codebase lives outside AWS.** [GitHub Copilot](/tools/github-copilot/) at $10 per user per month remains stronger for general coding across languages, frameworks, and non-AWS infrastructure. [Cursor](/tools/cursor/) still leads on multi-file autonomous edits.
 >
@@ -204,7 +204,7 @@ The moat is AWS-native context. IAM policy drafting, CDK construct patterns, Lam
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis shown. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-05-13 against [Amazon Q Developer pricing](https://aws.amazon.com/q/developer/pricing/), the [Q Developer tiers docs](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/q-tiers.html), the [Amazon Q Developer FAQ](https://aws.amazon.com/q/developer/faqs/), and the [April 28 OpenAI-on-Bedrock coverage](/news/2026-04-28-openai-models-aws-bedrock/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis shown. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-05-13 against [Amazon Q Developer pricing](https://aws.amazon.com/q/developer/pricing/), the [Q Developer tiers docs](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/q-tiers.html), the [Amazon Q Developer FAQ](https://aws.amazon.com/q/developer/faqs/), and the [April 28 OpenAI-on-AWS coverage](/news/2026-04-28-openai-models-codex-managed-agents-aws/).
 
 ## FAQ
 

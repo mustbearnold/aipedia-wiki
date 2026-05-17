@@ -166,17 +166,17 @@ const rankLabel = featured ? `Winner: ${featured.title}` : undefined;
         />
         <a
           slot="secondary-cta"
-          href={`/tools/${featured.slug}/`}
+          href="#full-comparison"
           class="gt-btn gt-btn-secondary"
-          data-analytics-event="related_tool_click"
+          data-analytics-event="internal_cta_click"
           data-analytics-source-module="comparison_winner_card"
-          data-analytics-destination-type="tool"
-          data-analytics-destination-slug={`tools/${featured.slug}`}
+          data-analytics-destination-type="section"
+          data-analytics-destination-slug="full-comparison"
           data-analytics-tool-slug={featured.slug}
           data-analytics-comparison-slug={slug}
           data-analytics-position="top"
-          data-analytics-label={`Read ${featured.title} review`}
-        >Read {featured.title} review</a>
+          data-analytics-label="See full comparison"
+        >See full comparison</a>
       </DecisionCard>
     )}
 
@@ -262,16 +262,18 @@ const rankLabel = featured ? `Winner: ${featured.title}` : undefined;
       </section>
     )}
 
-    {canonicalFactTable && tools.length >= 2 && (
-      <section class="gt-compare-table">
-        <h2 class="gt-section-h">Head to head</h2>
-        <ComparisonFactTable tools={tools} />
-      </section>
-    )}
+    <div id="full-comparison" class="gt-full-comparison">
+      {canonicalFactTable && tools.length >= 2 && (
+        <section class="gt-compare-table">
+          <h2 class="gt-section-h">Head to head</h2>
+          <ComparisonFactTable tools={tools} />
+        </section>
+      )}
 
-    <article class="gt-body">
-      <slot />
-    </article>
+      <article class="gt-body">
+        <slot />
+      </article>
+    </div>
 
     <FAQAccordionScript />
     <ShareButtons title={title} pageUrl={`${siteBase}compare/${slug}/`} />

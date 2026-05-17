@@ -16,9 +16,17 @@ last_verified: 2026-05-13
 price_history:
   - date: 2026-05-13
     price: "see note"
+    source: "https://openrouter.ai/pricing"
+    source_label: "OpenRouter pricing"
+    source_id: openrouter-official
+    verified_at: 2026-05-13
     change: "Public tiers verified: Free (25+ models, 50 requests/day), Pay-as-you-go (5.5% platform fee, 400+ models), Enterprise (custom volume pricing with SSO/SAML and regional routing). Zero Completion Insurance covers failed requests."
   - date: 2026-04-28
     price: "see note"
+    source: "https://openrouter.ai/models"
+    source_label: "OpenRouter models"
+    source_id: openrouter-official
+    verified_at: 2026-04-28
     change: "Model menu verified to include Claude Opus 4.7, GPT-5.5, Gemini 3.1 Pro, Grok 4.3, DeepSeek V4, Kimi K2.6, Qwen 3.6, Mistral 3, Llama 4, Nemotron 3 Nano Omni, and Poolside Laguna XS.2 and M.1."
 update_frequency: monthly
 affiliate:

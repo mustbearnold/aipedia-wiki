@@ -41,6 +41,7 @@ facts:
     verified_at: 2026-05-13
     volatility: high
     confidence: medium
+    next_review_at: 2026-08-13
   watch_out_for:
     value: "The platform is broad, so ROI depends on adoption across sourcing, CRM, rediscovery, applicant matching, analytics, scheduling, and data hygiene."
     source: "https://www.hireez.com/platform/"

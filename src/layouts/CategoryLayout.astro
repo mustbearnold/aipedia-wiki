@@ -19,6 +19,7 @@ import ItemListLD from '../components/seo/ItemListLD.astro';
 import ShareButtons from '../components/ShareButtons.astro';
 import FeedbackForm from '../components/FeedbackForm.astro';
 import CommercialCTA from '../components/CommercialCTA.astro';
+import BodyEnhancements from '../components/godtier/BodyEnhancements.astro';
 
 interface ToolData {
   slug: string;
@@ -66,6 +67,13 @@ function categoryMatchRank(t: ToolData): number {
   return t.category_match_type === 'secondary' ? 0 : 1;
 }
 
+function bandFor(score: number): string {
+  if (score >= 9) return 'Top-tier';
+  if (score >= 8) return 'Strong';
+  if (score >= 6.5) return 'Useful';
+  return 'Niche';
+}
+
 const sorted = [...tools]
   .filter((t) => t.status !== 'dead' && t.status !== 'retired' && t.status !== 'acquired')
   .sort((a, b) => {
@@ -76,15 +84,38 @@ const sorted = [...tools]
     return a.title.localeCompare(b.title);
   });
 
-const topPick = sorted[0];
+const configuredPickDefs = [
+  { key: 'best_overall', label: 'Best overall', placement: 'category_top_pick' },
+  { key: 'budget', label: 'Best free or budget', placement: 'category_decision_budget' },
+  { key: 'pro_team', label: 'Best pro or team', placement: 'category_decision_pro_team' },
+] as const;
+const toolBySlug = new Map(sorted.map((tool) => [tool.slug, tool]));
+const usedConfiguredPickSlugs = new Set<string>();
+const configuredPickCards = configuredTopPicks
+  ? configuredPickDefs
+      .map(({ key, label, placement }) => {
+        const raw = configuredTopPicks?.[key];
+        const pickSlug = typeof raw === 'string' ? raw : raw?.tool;
+        const tool = pickSlug ? toolBySlug.get(pickSlug) : undefined;
+        if (!tool || usedConfiguredPickSlugs.has(tool.slug)) return undefined;
+        usedConfiguredPickSlugs.add(tool.slug);
+        return {
+          label: typeof raw === 'object' && raw.label ? raw.label : label,
+          reason: typeof raw === 'object' && raw.reason ? raw.reason : undefined,
+          placement,
+          tool,
+        };
+      })
+      .filter(Boolean) as Array<{ label: string; reason?: string; placement: string; tool: ToolData }>
+  : [];
+
+const topPick = configuredPickCards[0]?.tool ?? sorted[0];
 const topPickScore = topPick ? overallScore(topPick) : 0;
-const topScoreBand = topPickScore >= 9
-  ? 'Top-tier'
-  : topPickScore >= 8
-    ? 'Strong'
-    : topPickScore >= 6.5
-      ? 'Useful'
-      : 'Niche';
+const topScoreBand = bandFor(topPickScore);
+const topPickCard = configuredPickCards.find((pick) => pick.tool.slug === topPick?.slug);
+const tierPickCards = configuredPickCards
+  .filter((pick) => pick.tool.slug !== topPick?.slug)
+  .slice(0, 2);
 
 const breadcrumbLdItems = [
   { name: 'Home', url: siteBase },
@@ -141,9 +172,12 @@ const rankLabel = sorted.length > 0 ? `${sorted.length} tools verified` : undefi
         scoreOverall={topPickScore}
         scoreBand={topScoreBand}
         statusActive={true}
-        statusLabel="Top pick"
+        statusLabel={topPickCard?.label ?? 'Top pick'}
         price={topPick.price_range}
         affiliate={Boolean(topPick.affiliate?.link)}
+        eyebrow={topPickCard?.label}
+        title={topPick.title}
+        description={topPickCard?.reason}
       >
         <CommercialCTA
           slot="primary-cta"
@@ -177,6 +211,42 @@ const rankLabel = sorted.length > 0 ? `${sorted.length} tools verified` : undefi
           data-analytics-label={`Read ${topPick.title} review`}
         >Read {topPick.title} review</a>
       </DecisionCard>
+    )}
+
+    {tierPickCards.length > 0 && (
+      <section class="gt-category-tiers" aria-labelledby="gt-category-tiers-h">
+        <h2 id="gt-category-tiers-h" class="gt-section-h">Best by buyer path</h2>
+        <div class="gt-category-tier-grid">
+          {tierPickCards.map((pick) => {
+            const isAffiliate = Boolean(pick.tool.affiliate?.link);
+            return (
+              <article class="gt-category-tier-card">
+                <p class="gt-category-tier-kicker">{pick.label}</p>
+                <strong class="gt-category-tier-title">{pick.tool.title}</strong>
+                {pick.reason && <p class="gt-category-tier-reason">{pick.reason}</p>}
+                <CommercialCTA
+                  toolName={pick.tool.title}
+                  toolSlug={pick.tool.slug}
+                  canonicalUrl={pick.tool.url ?? null}
+                  affiliateUrl={pick.tool.affiliate?.link ?? null}
+                  affiliateProgram={pick.tool.affiliate?.network ?? null}
+                  label={`See ${pick.tool.title} plans`}
+                  pricingModel={pick.tool.pricing_model ?? null}
+                  priceRange={pick.tool.price_range ?? null}
+                  pageType="category"
+                  placement={pick.placement}
+                  pageSlug={slug}
+                  categorySlug={slug}
+                  className="gt-btn gt-btn-secondary gt-category-tier-cta"
+                  showDisclosure={isAffiliate}
+                  categoryCtaMarker
+                  arrow="→"
+                />
+              </article>
+            );
+          })}
+        </div>
+      </section>
     )}
 
     <section class="gt-tools" aria-labelledby="gt-tools-h">
@@ -242,11 +312,56 @@ const rankLabel = sorted.length > 0 ? `${sorted.length} tools verified` : undefi
       </ol>
     </section>
 
+    <article class="gt-body">
+      <slot />
+    </article>
+    <BodyEnhancements tableLabel={`${title} comparison table`} />
+
     <ShareButtons title={`${title} — AI Tools`} pageUrl={`${siteBase}categories/${slug}/`} />
     <FeedbackForm toolName={title} />
   </div>
 
   <style>
+    .gt-category-tiers { margin-bottom: 40px; }
+    .gt-category-tier-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    .gt-category-tier-card {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding: 16px 18px;
+      border-radius: var(--gt-radius);
+      border: 1px solid var(--gt-line);
+      border-left: 3px solid var(--gt-accent);
+      background: var(--gt-surface);
+    }
+    .gt-category-tier-kicker {
+      margin: 0;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gt-subtle);
+    }
+    .gt-category-tier-title { font-size: 17px; font-weight: 700; }
+    .gt-category-tier-reason {
+      margin: 0;
+      color: var(--gt-muted);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+    .gt-category-tier-cta {
+      margin-top: 4px;
+      width: 100%;
+      min-height: 44px;
+    }
+    @media (min-width: 700px) {
+      .gt-category-tier-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
     .gt-tools { margin-bottom: 40px; }
     .gt-tool-list {
       list-style: none;
@@ -268,7 +383,7 @@ const rankLabel = sorted.length > 0 ? `${sorted.length} tools verified` : undefi
     .gt-tool-row-negative { border-left: 3px solid var(--gt-negative); }
     .gt-tool-link {
       display: grid;
-      grid-template-columns: 24px 40px 1fr auto;
+      grid-template-columns: 24px 40px minmax(0, 1fr);
       align-items: center;
       gap: 12px;
       padding: 14px 14px;
@@ -296,13 +411,20 @@ const rankLabel = sorted.length > 0 ? `${sorted.length} tools verified` : undefi
       line-height: 1.4;
     }
     .gt-tool-meta {
+      grid-column: 3;
       display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 2px;
-      flex-shrink: 0;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 4px 10px;
+      min-width: 0;
     }
-    .gt-tool-price { font-size: 11px; color: var(--gt-subtle); white-space: nowrap; }
+    .gt-tool-price {
+      min-width: 0;
+      color: var(--gt-subtle);
+      font-size: 11px;
+      line-height: 1.35;
+      overflow-wrap: anywhere;
+    }
     .gt-tool-score { font-size: 16px; font-weight: 700; color: var(--gt-fg); }
     .gt-tool-score-slash { font-size: 11px; color: var(--gt-subtle); font-weight: 500; }
 
@@ -317,8 +439,9 @@ const rankLabel = sorted.length > 0 ? `${sorted.length} tools verified` : undefi
       font-size: 13px;
     }
     @media (min-width: 600px) {
+      .gt-tool-link { grid-template-columns: 24px 40px minmax(0, 1fr) minmax(120px, auto); }
       .gt-tool-link { padding: 16px 18px; gap: 18px; }
-      .gt-tool-meta { flex-direction: row; align-items: baseline; gap: 16px; }
+      .gt-tool-meta { grid-column: 4; justify-content: flex-end; gap: 16px; }
       .gt-tool-cta-row { padding: 0 18px 16px; }
     }
   </style>

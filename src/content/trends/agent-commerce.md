@@ -50,9 +50,9 @@ Builders should prioritize agent-accessible APIs and clean, scrapable product pa
 ## Sources
 - [Alibaba Qwen Taobao agentic shopping launch](/news/2026-05-11-alibaba-qwen-taobao-agentic-shopping/), verified 2026-05-13
 - [OpenAI Codex Chrome extension](/news/2026-05-07-openai-codex-chrome-extension/), verified 2026-05-13
-- [Claude Managed Agents dreaming and outcomes](/news/2026-05-06-claude-managed-agents-dreaming-outcomes/), verified 2026-05-13
-- [Claude Opus 4.7 launch](/news/2026-04-16-anthropic-claude-opus-4-7/), verified 2026-05-13
-- [GPT-5.5 launch](/news/2026-04-23-openai-gpt-5-5/), verified 2026-05-13
+- [Claude Managed Agents dreaming and outcomes](/news/2026-05-06-claude-managed-agents-dreaming-outcomes-orchestration/), verified 2026-05-13
+- [Claude Opus 4.7 launch](/news/2026-04-16-anthropic-claude-opus-47/), verified 2026-05-13
+- [GPT-5.5 launch](/news/2026-04-23-openai-gpt-55-release/), verified 2026-05-13
 - [MIT Sloan: Five Trends in AI and Data Science for 2026](https://sloanreview.mit.edu/article/five-trends-in-ai-and-data-science-for-2026/), verified 2026-05-13
 - [Stripe Agent Toolkit](https://docs.stripe.com/agents), verified 2026-05-13
 - [Anthropic Claude Agent SDK](https://docs.anthropic.com/en/docs/agents), verified 2026-05-13

@@ -9,8 +9,8 @@ company_type: bigtech
 founded: 2023
 hq: London, UK / Mountain View, USA
 funding: "Alphabet-funded (no external rounds)"
-key_products: [gemini, notebooklm, google-stitch, googlebook, veo]
-last_updated: 2026-05-13
+key_products: [gemini, notebooklm, google-stitch, veo]
+last_updated: 2026-05-17
 update_frequency: monthly
 last_verified: 2026-05-13
 ---

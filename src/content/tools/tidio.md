@@ -78,6 +78,7 @@ facts:
     verified_at: 2026-05-13
     volatility: high
     confidence: high
+    next_review_at: 2026-08-13
 tags: [chatbot, customer-support, live-chat, lyro, ai-agent, shopify, ecommerce, helpdesk, ticketing]
 seo_title: 'Tidio: Features, Pricing & Review (May 2026)'
 meta_description: >-

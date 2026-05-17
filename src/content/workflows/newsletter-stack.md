@@ -5,10 +5,10 @@ title: "Newsletter Stack: Claude, Perplexity, and Substack"
 seo_title: "Newsletter Stack: Claude, Perplexity, and Substack (May 2026)"
 meta_description: "Updated May 13, 2026: publish a weekly research-backed newsletter in 3 hours of hands-on time. Stack costs $40/mo. Exact prompts, steps, and failure modes."
 description: "Publish a weekly research-backed newsletter in 3 hours of hands-on time"
-stack: [claude, perplexity, substack]
-tools_mentioned: [claude, perplexity, substack]
+stack: [claude, perplexity]
+tools_mentioned: [claude, perplexity]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-13
+last_updated: 2026-05-17
 last_verified: 2026-05-13
 update_frequency: monthly
 ---

@@ -59,6 +59,7 @@ facts:
     verified_at: 2026-05-13
     volatility: high
     confidence: medium
+    next_review_at: 2026-06-13
 tags: [ai-voice, dictation, speech-to-text, writing, notes, productivity, mac, windows, ios, android]
 best_for:
   - people who write faster by speaking than typing

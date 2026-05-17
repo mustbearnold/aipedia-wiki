@@ -41,6 +41,7 @@ facts:
     verified_at: 2026-05-13
     volatility: high
     confidence: high
+    next_review_at: 2026-08-13
   enterprise_controls:
     value: "LinkedIn positions Hiring Assistant as recruiter-controlled AI with ATS/CRM integrations and responsible AI principles aligned with Microsoft."
     source: "https://business.linkedin.com/hire/recruiter"

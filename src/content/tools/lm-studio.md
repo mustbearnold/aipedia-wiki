@@ -94,7 +94,7 @@ A desktop application that wraps llama.cpp in a visual interface. Download from 
 
 ## Recent developments
 
-- **May 4, 2026:** [Mistral 3 shipped as an open-weight release](/news/2026-05-04-mistral-3-open-model-release/). The new weights appear in the LM Studio model browser alongside Llama 4, Qwen 3, Gemma 4, and GPT-OSS, broadening the GGUF options worth benchmarking on consumer hardware.
+- **April 28, 2026:** [Mistral 3 shipped as an open-weight release](/news/2026-04-28-mistral-3-open-model-release/). The new weights appear in the LM Studio model browser alongside Llama 4, Qwen 3, Gemma 4, and GPT-OSS, broadening the GGUF options worth benchmarking on consumer hardware.
 - **April 30, 2026:** [Apple said AI and agentic tools helped drive unexpected Mac demand](/news/2026-04-30-apple-mac-ai-agent-demand/). If more users buy Macs for local AI, GUI-first model runners like LM Studio become the easier on-ramp than terminal-only stacks.
 
 ## System Verdict

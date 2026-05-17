@@ -97,7 +97,7 @@ The AI supply chain now includes the model, the tool host, every MCP server, eve
 
 ## Sources
 
-- [OpenAI Codex Security launch](/news/2026-05-11-openai-daybreak-codex-security/), verified 2026-05-13
+- [OpenAI Codex Security launch](/news/2026-05-11-openai-daybreak-codex-security-launch/), verified 2026-05-13
 - [GitHub brings secret and dependency scanning into MCP developer workflows](/news/2026-05-05-github-mcp-secret-dependency-scanning/), verified 2026-05-13
 - [MCP STDIO command-execution flaw disclosure](/news/2026-05-03-mcp-stdio-command-execution-flaw/), verified 2026-05-13
 - [MCP vulnerability exposes 200,000 servers](/news/2026-04-16-mcp-vulnerability-200k-servers/), verified 2026-05-13

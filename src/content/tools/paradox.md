@@ -40,6 +40,7 @@ facts:
     verified_at: 2026-05-13
     volatility: high
     confidence: medium
+    next_review_at: 2026-08-13
   watch_out_for:
     value: "Paradox is strongest for candidate conversion and high-volume workflows, not passive sourcing or enterprise-wide skills intelligence."
     source: "https://www.paradox.ai/solutions/recruiters"
