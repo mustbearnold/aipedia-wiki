@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: "$0-$24.99/month"
 status: active
 launched: 2023-09
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-05-17
+last_verified: 2026-05-17
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -156,14 +156,14 @@ facts:
     volatility: medium
     confidence: high
   watch_out_for:
-    value: "Model lineup changes quickly, consumer Le Chat features differ from API capabilities, and open-weight versus hosted model terms vary by model"
-    source: "https://docs.mistral.ai/models/overview"
-    source_label: "Mistral AI model docs"
-    source_id: mistral-model-docs
-    verified_at: 2026-05-13
+    value: "Model lineup changes quickly, consumer Le Chat features differ from API capabilities, open-weight versus hosted model terms vary by model, and May 2026 SDK package compromise means teams should pin and audit dependencies"
+    source: "https://docs.mistral.ai/resources/security-advisories"
+    source_label: "Mistral AI security advisories"
+    source_id: mistral-security-advisories
+    verified_at: 2026-05-17
     volatility: high
     confidence: high
-    next_review_at: 2026-06-13
+    next_review_at: 2026-06-17
 tags: [llm, open-source-ai, european-ai, ai-api, mistral, ai-models, mistral-3, mistral-large-3, ministral-3, mistral-small-4, voxtral, forge]
 seo_title: 'Mistral AI: Features, Pricing & Review (May 2026)'
 meta_description: "Mistral AI ships Mistral 3 (April 28, 2026) with Apache 2.0 Large 3 and Ministral 3 edge models, Medium 3.5 for agentic coding, Small 4 with 256K context, and Voxtral TTS. Le Chat Pro is $14.99/mo, Team $24.99/mo. GDPR-native EU hosting is the moat."
@@ -201,6 +201,14 @@ price_history:
     source_label: "Source"
     source_id: mistral-pricing
     note: "Consumer pricing moved to USD; Team tier ($24.99/mo per seat, 30GB/user, domain verification) added"
+  - date: 2026-05-12
+    plan: "SDK supply-chain advisory"
+    price: "No pricing change"
+    source: "/news/2026-05-12-mistral-ai-sdk-supply-chain-advisory/"
+    source_label: "AIpedia coverage"
+    source_id: aipedia-news
+    verified_at: 2026-05-17
+    note: "Mistral advisory says compromised npm and PyPI SDK versions were briefly published after a TanStack-linked supply-chain incident; developers should remove affected versions and rotate exposed secrets."
 ---
 
 # Mistral AI
@@ -213,8 +221,9 @@ The April 2026 release of Mistral 3 was the biggest open-weight drop of the year
 
 ## Recent developments
 
-- **April 28, 2026:** [Mistral 3 shipped with Mistral Large 3 and new Ministral edge models](/news/2026-04-28-mistral-3-open-model-release/). The Apache 2.0 release made Large 3 a 41B-active / 675B-total MoE flagship, added Ministral 3 at 3B/8B/14B with base, instruct, and reasoning variants, and went live across Mistral AI Studio, Amazon Bedrock, Azure Foundry, Hugging Face, OpenRouter, Fireworks, Together AI, Modal, IBM watsonx, and Unsloth AI on day one.
 - **May 13, 2026:** le Chat consumer pricing migrated to USD and added a **Team tier at $24.99/mo per seat** (30GB storage per user, domain verification, data export). Pro held at $14.99/mo; Enterprise remains custom.
+- **May 12, 2026:** [Mistral published an SDK supply-chain advisory tied to the TanStack incident](/news/2026-05-12-mistral-ai-sdk-supply-chain-advisory/). Mistral says its infrastructure was not compromised, but compromised npm and PyPI package versions were briefly published. Teams using Mistral SDKs should check lockfiles, images, caches, and deployed artifacts for affected versions and rotate exposed secrets where needed.
+- **April 28, 2026:** [Mistral 3 shipped with Mistral Large 3 and new Ministral edge models](/news/2026-04-28-mistral-3-open-model-release/). The Apache 2.0 release made Large 3 a 41B-active / 675B-total MoE flagship, added Ministral 3 at 3B/8B/14B with base, instruct, and reasoning variants, and went live across Mistral AI Studio, Amazon Bedrock, Azure Foundry, Hugging Face, OpenRouter, Fireworks, Together AI, Modal, IBM watsonx, and Unsloth AI on day one.
 
 ## System Verdict
 
@@ -242,7 +251,7 @@ The April 2026 release of Mistral 3 was the biggest open-weight drop of the year
 | **Open-weight lineup** | Mistral 7B · Mixtral 8x7B · Mistral 8x22B · Small 4 · **Large 3 · Ministral 3 family** |
 | **Distribution** | Mistral AI Studio, Amazon Bedrock, Azure Foundry, Hugging Face, OpenRouter, Fireworks, Together AI, Modal, IBM watsonx, Unsloth AI; OpenAI-API compatible |
 
-Every data point verified on 2026-05-13 against [mistral.ai/pricing](https://mistral.ai/pricing) and [docs.mistral.ai](https://docs.mistral.ai/models/overview).
+Every data point verified on 2026-05-17 against [mistral.ai/pricing](https://mistral.ai/pricing), [docs.mistral.ai](https://docs.mistral.ai/models/overview), and [Mistral security advisories](https://docs.mistral.ai/resources/security-advisories).
 
 ## What it actually is
 

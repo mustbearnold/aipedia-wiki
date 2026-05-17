@@ -21,6 +21,17 @@ const { items, heading = 'Keep reading' } = Astro.props;
 
 const validItems = items.filter((i) => i && i.href && i.title);
 if (validItems.length === 0) return Astro.locals.skip ?? null;
+
+function eventFor(kind?: string): string {
+  if (kind === 'tool') return 'related_tool_click';
+  if (kind === 'comparison') return 'related_comparison_click';
+  if (kind === 'guide') return 'related_guide_click';
+  return 'internal_cta_click';
+}
+
+function slugFromHref(href: string): string {
+  return href.replace(/^https?:\/\/[^/]+/i, '').replace(/^\/+|\/+$/g, '');
+}
 ---
 
 {validItems.length > 0 && (
@@ -28,7 +39,17 @@ if (validItems.length === 0) return Astro.locals.skip ?? null;
     <h2 id="rr-heading" class="rr-heading">{heading}</h2>
     <div class="rr-grid">
       {validItems.map((item) => (
-        <a href={item.href} class={`rr-card rr-card-${item.kind ?? 'guide'}`}>
+        <a
+          href={item.href}
+          class={`rr-card rr-card-${item.kind ?? 'guide'}`}
+          data-analytics-event={eventFor(item.kind)}
+          data-analytics-source-module="related_reading"
+          data-analytics-destination-type={item.kind ?? 'guide'}
+          data-analytics-destination-slug={slugFromHref(item.href)}
+          data-analytics-destination-url={item.href}
+          data-analytics-position="bottom"
+          data-analytics-label={item.title}
+        >
           <div class="rr-card-kind">
             {item.kind === 'tool' ? 'Tool review' :
              item.kind === 'workflow' ? 'Workflow' :

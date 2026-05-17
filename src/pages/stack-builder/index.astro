@@ -1152,21 +1152,30 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
       return {
         page_type: 'stack_builder',
         page_slug: 'stack-builder',
+        page_title: document.title || '',
+        source_module: extra.source_module || 'stack_builder',
         roles: state.roles.join(','),
         role_count: state.roles.length,
         budget: state.budget || '',
         swap_count: Object.keys(state.swaps).length,
+        position: extra.position || 'inline',
+        destination_type: extra.destination_type || '',
         device_type: deviceType(),
+        device_context: deviceType(),
         viewport_width: window.innerWidth || document.documentElement.clientWidth || 0,
         ...extra,
       };
     }
 
     function flushFunnelEvents() {
-      if (!window.gtag) return;
+      if (!window.aipediaAnalytics && !window.gtag) return;
       while (pendingEvents.length > 0) {
         const item = pendingEvents.shift();
-        window.gtag('event', item.name, item.payload);
+        if (window.aipediaAnalytics) {
+          window.aipediaAnalytics.track(item.name, item.payload);
+        } else if (window.gtag) {
+          window.gtag('event', item.name, item.payload);
+        }
       }
     }
 
@@ -1175,7 +1184,9 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
       window.dispatchEvent(new CustomEvent('aipedia:stack-builder', {
         detail: { event: name, payload },
       }));
-      if (window.gtag) {
+      if (window.aipediaAnalytics) {
+        window.aipediaAnalytics.track(name, payload);
+      } else if (window.gtag) {
         window.gtag('event', name, payload);
       } else {
         pendingEvents.push({ name, payload });
@@ -1185,10 +1196,30 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
     function trackStarted(trigger) {
       if (builderStarted) return;
       builderStarted = true;
-      trackFunnel('stack_builder_started', { trigger });
+      trackFunnel('stack_builder_start', { trigger, source_module: 'stack_builder_controls', position: 'top' });
     }
 
     window.addEventListener('aipedia:analytics-ready', flushFunnelEvents);
+
+    function trackBuilderImpression() {
+      const root = document.querySelector('.stack-builder-page-root');
+      if (!root) return;
+      const send = () => trackFunnel('stack_builder_impression', {
+        source_module: 'stack_builder_page',
+        position: 'top',
+      });
+      if (!('IntersectionObserver' in window)) {
+        send();
+        return;
+      }
+      const io = new IntersectionObserver((entries) => {
+        if (!entries.some((entry) => entry.isIntersecting)) return;
+        send();
+        io.disconnect();
+      }, { threshold: 0.25 });
+      io.observe(root);
+    }
+    trackBuilderImpression();
 
     // ---------- URL sync ----------
     function readURL() {
@@ -1299,9 +1330,13 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
       paintRoleButtons();
       writeURL();
       renderStack();
-      trackFunnel('stack_builder_role_selected', {
+      trackFunnel('stack_builder_step_complete', {
+        step_name: 'role',
         selected_role: role,
+        step_value: role,
         selected: state.roles.includes(role),
+        source_module: 'stack_builder_role_grid',
+        position: 'top',
       });
     }
     function setBudget(budget) {
@@ -1310,7 +1345,13 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
       paintBudgetButtons();
       writeURL();
       renderStack();
-      trackFunnel('stack_builder_budget_selected', { selected_budget: budget });
+      trackFunnel('stack_builder_step_complete', {
+        step_name: 'budget',
+        selected_budget: budget,
+        step_value: budget,
+        source_module: 'stack_builder_budget_grid',
+        position: 'top',
+      });
     }
 
     document.querySelectorAll('.sb-role-btn').forEach(b => {
@@ -1471,7 +1512,7 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
                 const tryUrl = t.affiliateLink || t.vendorUrl || '';
                 const tryRel = t.affiliateLink ? 'noopener nofollow sponsored' : 'noopener';
                 const tryLabel = 'Try';
-                const tryAttrs = commercialCtaAttrs(t, 'stack_builder_tool_row', 'stack_builder_try_tool');
+        const tryAttrs = commercialCtaAttrs(t, 'stack_builder_tool_row', 'stack_builder_tool_click');
                 return `
                   <article class="sb-stack-row home-surface-inner">
                     <a href="${t.url}" class="sb-stack-icon" aria-label="Open ${escapeHtml(t.title)} review">
@@ -1533,7 +1574,7 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
         const tryUrl = t.affiliateLink || t.vendorUrl || '';
         if (!tryUrl) return '';
         const rel = t.affiliateLink ? 'noopener nofollow sponsored' : 'noopener';
-        const tryAttrs = commercialCtaAttrs(t, 'stack_builder_try_stack_grid', 'stack_builder_try_stack');
+        const tryAttrs = commercialCtaAttrs(t, 'stack_builder_try_stack_grid', 'stack_builder_tool_click');
         return `
           <a href="${escapeHtml(tryUrl)}" target="_blank" rel="${rel}" class="sb-cta-chip home-surface-inner" title="Open ${escapeHtml(t.title)} in a new tab" ${tryAttrs}>
             ${renderCategoryIcon(t.category)}
@@ -1584,7 +1625,7 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
 
       if (!completedKeys.has(completionKey)) {
         completedKeys.add(completionKey);
-        trackFunnel('stack_builder_completed', {
+        trackFunnel('stack_builder_complete', {
           tool_count: toolCount,
           category_count: catCount,
           estimated_monthly_low: Math.round(totalLow),
@@ -1652,12 +1693,14 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
       } else {
         state.swaps[k] = targetSlug;
       }
-      trackFunnel('stack_builder_tool_swapped', {
+      trackFunnel('stack_builder_swap_click', {
         role: swapRole,
         category_name: swapCat,
         original_tool_slug: swapSlug,
         replacement_tool_slug: targetSlug === '__reset' ? '' : targetSlug,
         reset_swap: targetSlug === '__reset',
+        source_module: 'stack_builder_swap_modal',
+        position: 'modal',
       });
       closeSwap();
       writeURL();
@@ -1678,13 +1721,6 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
       if (choose) {
         chooseSwap(choose.getAttribute('data-choose'));
         return;
-      }
-      const compareBtn = e.target.closest && e.target.closest('[data-compare-add]');
-      if (compareBtn) {
-        trackFunnel('internal_compare_click', {
-          tool_slug: compareBtn.getAttribute('data-compare-add') || '',
-          cta_placement: 'stack_builder_compare_add',
-        });
       }
       if (e.target === swapBackdrop) closeSwap();
     });

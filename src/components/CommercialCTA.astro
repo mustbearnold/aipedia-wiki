@@ -82,8 +82,10 @@ function defaultLabel(): string {
 
 const resolvedLabel = label ?? defaultLabel();
 const resolvedAriaLabel = ariaLabel ?? `${resolvedLabel} on the official site`;
-const resolvedViewEvent = viewEvent ?? (isAffiliate ? 'affiliate_cta_view' : 'official_cta_view');
-const resolvedClickEvent = clickEvent ?? (isAffiliate ? 'affiliate_cta_click' : 'official_cta_click');
+const resolvedViewEvent = viewEvent ?? (isAffiliate ? 'affiliate_cta_view' : 'tool_cta_view');
+const resolvedClickEvent = clickEvent ?? (isStickyCta ? 'mobile_sticky_cta_click' : isAffiliate ? 'affiliate_click' : 'tool_cta_click');
+const comparisonSlug = pageType === 'comparison' ? pageSlug : undefined;
+const guideSlug = pageType === 'guide' ? pageSlug : undefined;
 ---
 
 {hasUrl && (
@@ -106,6 +108,8 @@ const resolvedClickEvent = clickEvent ?? (isAffiliate ? 'affiliate_cta_click' : 
       data-cta-is-affiliate={String(isAffiliate)}
       data-cta-page-slug={pageSlug ?? undefined}
       data-cta-category-slug={categorySlug ?? undefined}
+      data-cta-comparison-slug={comparisonSlug ?? undefined}
+      data-cta-guide-slug={guideSlug ?? undefined}
       data-cta-comparison-pair={comparisonPair ?? undefined}
       data-cta-affiliate-program={affiliateProgram ?? undefined}
       data-cta-price-range={priceRange ?? undefined}

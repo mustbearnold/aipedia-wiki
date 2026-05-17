@@ -11,11 +11,11 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2022-11
-last_updated: 2026-05-15
-last_verified: 2026-05-15
+last_updated: 2026-05-17
+last_verified: 2026-05-17
 update_frequency: monthly
 seo_title: "ChatGPT: Features, Pricing & Review (May 2026)"
-meta_description: "ChatGPT runs GPT-5.5 Instant as the default, with GPT-5.5 Thinking on Plus and GPT-5.5 Pro on Pro, Business, and Enterprise. Plus is $20/mo. Codex is now in the ChatGPT mobile app for iOS and Android preview."
+meta_description: "ChatGPT runs GPT-5.5 Instant as the default, with GPT-5.5 Thinking on Plus and GPT-5.5 Pro on Pro, Business, and Enterprise. May 2026 added Codex mobile preview, Pro finances, and File Library for Free and Go."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -282,6 +282,14 @@ price_history:
     source_label: "ChatGPT pricing"
     verified_at: 2026-05-13
     note: "May 13 verification pass. Pricing tiers unchanged. Codex Security, Deployment Company, and EU Cyber preview folded into Recent changes."
+  - date: 2026-05-15
+    plan: "Finances + File Library"
+    price: "Pro finance rollout; File Library on Free, Go, Plus, Business, and Pro"
+    source: "/news/2026-05-15-chatgpt-finances-file-library-rollout/"
+    source_id: aipedia-news
+    source_label: "AIpedia coverage"
+    verified_at: 2026-05-17
+    note: "U.S. Pro users get gradual personal-finance dashboard rollout through Plaid; Library expands to Free and Go, including EEA users, with storage from 500 MB on Free to 100 GB on Pro."
 ---
 
 # ChatGPT
@@ -303,9 +311,10 @@ OpenAI's general-purpose AI assistant for text, images, web browsing, sandboxed 
 | **Cyber tier** | GPT-5.5-Cyber in limited Trusted Access preview, including EU defenders as of May 11 |
 | **Enterprise services** | OpenAI Deployment Company (May 11, $4B, ~150 engineers ex-Tomoro) for forward-deployed integration |
 | **Context window** | ChatGPT pricing lists 256K reasoning context on Go, Plus, Business, and Enterprise; Pro reaches 400K |
+| **File Library** | Free 500 MB · Go 4 GB · Plus/Business 20 GB · Pro 100 GB; expanded to Free and Go on May 15, 2026 |
 | **Score** | Utility 10 · Value 8 · Moat 10 · Longevity 10 |
 
-Every data point above was last verified against OpenAI pages, local news entries, or named sources on May 13, 2026.
+Every data point above was last verified against OpenAI pages, local news entries, or named sources on May 17, 2026.
 
 ## Pricing
 
@@ -323,6 +332,7 @@ Prices and model access were rechecked on May 13, 2026 using [ChatGPT pricing](h
 
 ## Recent changes
 
+- **May 15, 2026:** [ChatGPT added a U.S. Pro personal-finance experience and expanded File Library to Free and Go users](/news/2026-05-15-chatgpt-finances-file-library-rollout/). Finances connects supported accounts through Plaid and is for planning, not payments, trading, taxes, or regulated advice. Library now spans Free, Go, Plus, Business, and Pro with storage limits from 500 MB to 100 GB.
 - **May 14, 2026:** [OpenAI put Codex inside the ChatGPT mobile app](/news/2026-05-14-openai-codex-chatgpt-mobile-app/), turning ChatGPT mobile into a control surface for active coding-agent work. Users can monitor Codex threads, review outputs, approve commands, change models, and start new work from iOS or Android while Codex keeps running on a connected laptop, devbox, or remote environment.
 - **May 14, 2026:** [GPT-5.5-Cyber, Anthropic's Mythos, and Microsoft's MDASH drove a vulnpocalypse](/news/2026-05-14-vulnpocalypse-mythos-gpt-cyber-mdash-patch-tuesday/) of AI-found vulnerabilities. Palo Alto Networks found 75 holes / 26 CVEs in its products in one month. Microsoft Patch Tuesday hit 30 critical CVEs. Mozilla shipped 423 Firefox bugs in April. For ChatGPT enterprise buyers: AI bug-finding is now production-scale on both defender and attacker sides; tighten patch cadence accordingly.
 - **May 13, 2026:** [Anthropic passed OpenAI in US business AI adoption for the first time](/news/2026-05-13-anthropic-surpasses-openai-business-adoption-ramp/) per Ramp's May 2026 AI Index, with 34.4% of US businesses paying for Anthropic vs. 32.3% for OpenAI. The flip is concentrated in finance, tech, and professional services where Claude has led for months. ChatGPT remains the broader consumer leader; the data point is specifically about US business adoption tracked through corporate-card spend.
@@ -418,5 +428,6 @@ ChatGPT wins on breadth, image generation, and agent integrations. Claude remain
 - [OpenAI: Introducing GPT-5.5](https://openai.com/index/introducing-gpt-5-5/): April 23, 2026 model rollout details
 - [OpenAI: About ChatGPT Pro tiers](https://help.openai.com/en/articles/9793128-what-is-chatgpt-pro): Pro $100, Pro $200, Codex limits, and promo details
 - [OpenAI: What is ChatGPT Business?](https://help.openai.com/en/articles/8792828-what-is-chatgpt-team): Business seat pricing and workspace controls
+- [OpenAI: File storage and Library in ChatGPT](https://help.openai.com/en/articles/20001052-file-storage-and-library-in-chatgpt): Library availability, saved-file behavior, and storage limits
 
-This review follows the aipedia.wiki four-axis scoring model: Utility, Value, Moat, and Longevity. Last verified 2026-05-13.
+This review follows the aipedia.wiki four-axis scoring model: Utility, Value, Moat, and Longevity. Last verified 2026-05-17.

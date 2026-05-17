@@ -107,7 +107,16 @@ const collectionItems = sorted.map((c) => ({
       <ol class="gt-compare-cards">
         {sorted.map((c) => (
           <li class="gt-compare-card">
-            <a href={`/compare/${c.slug}/`}>
+            <a
+              href={`/compare/${c.slug}/`}
+              data-analytics-event="comparison_open"
+              data-analytics-source-module="comparison_index"
+              data-analytics-destination-type="comparison"
+              data-analytics-destination-slug={`compare/${c.slug}`}
+              data-analytics-comparison-slug={c.slug}
+              data-analytics-position="middle"
+              data-analytics-label={c.title}
+            >
               <strong class="gt-compare-card-title">{c.title}</strong>
               {c.description && <p class="gt-compare-card-desc">{c.description}</p>}
               <div class="gt-compare-card-meta">

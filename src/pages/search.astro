@@ -162,16 +162,29 @@ const totalTools = tools.length;
 
       const normalize = (v) => String(v || '').trim().toLowerCase();
 
-      function trackSearch(name, extra = {}) {
-        const payload = { page_type: 'search', search_surface: 'catalog_page', ...extra };
+      function trackSearchIntent(name, extra = {}) {
+        const payload = {
+          page_type: 'search',
+          page_slug: 'search',
+          page_title: document.title || '',
+          source_module: 'catalog_search',
+          search_surface: 'catalog_page',
+          position: 'top',
+          device_type: window.innerWidth < 768 ? 'mobile' : window.innerWidth < 1024 ? 'tablet' : 'desktop',
+          device_context: window.innerWidth < 768 ? 'mobile' : window.innerWidth < 1024 ? 'tablet' : 'desktop',
+          viewport_width: window.innerWidth || document.documentElement.clientWidth || 0,
+          ...extra,
+        };
         window.dispatchEvent(new CustomEvent('aipedia:search', { detail: { event: name, payload } }));
-        if (window.gtag) window.gtag('event', name, payload);
+        if (window.aipediaAnalytics) window.aipediaAnalytics.track(name, payload);
+        else if (window.gtag) window.gtag('event', name, payload);
         else pendingSearchEvents.push({ name, payload });
       }
       window.addEventListener('aipedia:analytics-ready', () => {
         while (pendingSearchEvents.length) {
           const e = pendingSearchEvents.shift();
-          if (window.gtag) window.gtag('event', e.name, e.payload);
+          if (window.aipediaAnalytics) window.aipediaAnalytics.track(e.name, e.payload);
+          else if (window.gtag) window.gtag('event', e.name, e.payload);
         }
       });
 
@@ -183,8 +196,12 @@ const totalTools = tools.length;
           const key = `${query}|${resultCount}|${source}`;
           if (key === lastTrackedSearchKey) return;
           lastTrackedSearchKey = key;
-          trackSearch('search_performed', { query, result_count: resultCount, search_source: source });
-          if (resultCount === 0) trackSearch('search_zero_results', { query, result_count: 0, search_source: source });
+          trackSearchIntent('site_search_query', {
+            query,
+            result_count: resultCount,
+            search_source: source,
+            zero_results: resultCount === 0,
+          });
         }, 350);
       }
 
@@ -224,7 +241,11 @@ const totalTools = tools.length;
           input.value = term;
           input.focus();
           applyFilter(term, true, 'quick_term');
-          trackSearch('search_quick_term_clicked', { query: term });
+          trackSearchIntent('site_search_query', {
+            query: term,
+            search_source: 'quick_term',
+            source_module: 'catalog_search_quick_terms',
+          });
         });
       });
 
@@ -233,14 +254,18 @@ const totalTools = tools.length;
         if (!link) return;
         const visible = cards.filter((c) => !c.hidden);
         const idx = visible.findIndex((c) => c.contains(link));
-        trackSearch('search_result_clicked', {
+        trackSearchIntent('site_search_result_click', {
           query: input?.value.trim() || '',
           result_position: idx >= 0 ? idx + 1 : '',
           result_type: link.dataset.resultType || 'tool',
           result_title: link.dataset.resultTitle || link.textContent.trim(),
           result_url: link.dataset.resultUrl || link.getAttribute('href') || '',
+          destination_type: link.dataset.resultType || 'tool',
+          destination_url: link.dataset.resultUrl || link.getAttribute('href') || '',
+          destination_slug: (link.dataset.resultUrl || link.getAttribute('href') || '').replace(/^\/+|\/+$/g, ''),
           tool_slug: link.dataset.toolSlug || '',
           category_slug: link.dataset.categorySlug || '',
+          position: 'search',
         });
       });
 
@@ -249,6 +274,7 @@ const totalTools = tools.length;
           event.preventDefault();
           input.focus();
           input.select();
+          trackSearchIntent('site_search_open', { trigger: 'keyboard', source_module: 'catalog_search_input' });
         }
       });
 

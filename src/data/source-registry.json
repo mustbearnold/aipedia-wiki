@@ -5201,8 +5201,32 @@
     },
     {
       "id": "quillbot-pricing",
-      "label": "Source",
+      "label": "QuillBot Upgrade pricing",
       "url": "https://quillbot.com/upgrade",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "quillbot-pricing-help",
+      "label": "QuillBot Premium pricing help",
+      "url": "https://help.quillbot.com/hc/en-us/articles/36491424881943-What-is-the-price-of-QuillBot-Premium",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "quillbot-affiliate-program",
+      "label": "QuillBot Affiliate Program",
+      "url": "https://quillbot.com/affiliates",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "quillbot-partnerstack-listing",
+      "label": "PartnerStack QuillBot listing",
+      "url": "https://market.partnerstack.com/page/quillbot",
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium"

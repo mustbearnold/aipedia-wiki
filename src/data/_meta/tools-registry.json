@@ -2651,8 +2651,8 @@
       "pricing_model": "freemium",
       "price_range": "$0-$100/month",
       "launched": "2020-01",
-      "last_updated": "2026-05-13T00:00:00.000Z",
-      "last_verified": "2026-05-13T00:00:00.000Z",
+      "last_updated": "2026-05-17T00:00:00.000Z",
+      "last_verified": "2026-05-17T00:00:00.000Z",
       "update_frequency": "monthly",
       "scores": {
         "utility": 9,
@@ -2674,10 +2674,11 @@
         "commission": "30% first year",
         "cookie_days": null,
         "network": "PartnerStack",
-        "link": null,
-        "application_status": "applied",
+        "link": "https://try.gamma.app/iv1cuq3h7gcd",
+        "application_status": "approved",
         "applied_date": "2026-05-13T00:00:00.000Z",
-        "notes": "Applied via PartnerStack 2026-05-13; direct URL submitted: https://aipedia.wiki/tools/gamma/."
+        "approved_date": "2026-05-17T00:00:00.000Z",
+        "notes": "Approved affiliate link supplied by site owner on 2026-05-17; Gamma's help center confirms the affiliate program is managed via PartnerStack and issues unique referral links after approval."
       },
       "page_path": "wikis/ai-tools/pages/tools/gamma.md"
     },
@@ -6458,13 +6459,13 @@
       "title": "QuillBot",
       "category": "ai-writing",
       "secondary_categories": [],
-      "company": "Course Hero (QuillBot)",
+      "company": "Learneo, Inc. (QuillBot)",
       "url": "https://quillbot.com",
       "pricing_model": "freemium",
-      "price_range": "$0-$19.95/month",
+      "price_range": "$0-$8.33/month billed annually in US checkout; varies by region",
       "launched": "2017-10",
-      "last_updated": "2026-05-13T00:00:00.000Z",
-      "last_verified": "2026-05-13T00:00:00.000Z",
+      "last_updated": "2026-05-17T00:00:00.000Z",
+      "last_verified": "2026-05-17T00:00:00.000Z",
       "update_frequency": "monthly",
       "scores": {
         "utility": 8,
@@ -6485,10 +6486,11 @@
         "commission": "10% monthly / 15% semi-annual / 20% annual plans",
         "cookie_days": 30,
         "network": "PartnerStack",
-        "link": null,
-        "application_status": "applied",
+        "link": "https://try.quillbot.com/kh3m4q3r0ggy",
+        "application_status": "approved",
         "applied_date": "2026-05-13T00:00:00.000Z",
-        "notes": "Applied via PartnerStack 2026-05-13; review time quoted >5 days."
+        "approved_date": "2026-05-17T00:00:00.000Z",
+        "notes": "Approved affiliate link supplied by site owner on 2026-05-17; QuillBot's affiliate page and PartnerStack listing confirm 10%-20% commissions, 30-day cookie tracking, and unique referral links for approved partners."
       },
       "page_path": "wikis/ai-tools/pages/tools/quillbot.md"
     },

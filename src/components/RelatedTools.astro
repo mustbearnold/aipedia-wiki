@@ -70,6 +70,14 @@ const categoryLabel = category.replace('ai-', '').replace(/-/g, ' ')
           <a
             href={`/tools/${slug}/`}
             class="flex items-center gap-[var(--site-card-gap)] py-1.5 group no-underline"
+            data-analytics-event="related_tool_click"
+            data-analytics-source-module="related_tools"
+            data-analytics-destination-type="tool"
+            data-analytics-destination-slug={`tools/${slug}`}
+            data-analytics-tool-slug={slug}
+            data-analytics-category-slug={category}
+            data-analytics-position="bottom"
+            data-analytics-label={tool.data.title}
           >
             <ToolLogo slug={slug} title={tool.data.title} size={20} className="shrink-0" />
             <span class="flex-1 text-sm text-[var(--text-secondary)] group-hover:text-[var(--text-primary)] transition-colors truncate">

@@ -12,6 +12,10 @@
       return path.replace(/^\/+|\/+$/g, '') || 'home';
     }
 
+    function pageTitle() {
+      return document.title || '';
+    }
+
     function deviceType() {
       var width = window.innerWidth || document.documentElement.clientWidth || 0;
       if (width < 768) return 'mobile';
@@ -27,22 +31,61 @@
       }
     }
 
+    function slugFromUrl(url) {
+      try {
+        var u = new URL(url, window.location.href);
+        if (u.origin !== window.location.origin) return '';
+        return u.pathname.replace(/^\/+|\/+$/g, '') || 'home';
+      } catch (_) {
+        return '';
+      }
+    }
+
+    function positionFromPlacement(placement) {
+      var p = String(placement || '').toLowerCase();
+      if (p.indexOf('sticky') >= 0) return 'sticky';
+      if (p.indexOf('hero') >= 0 || p.indexOf('top') >= 0 || p.indexOf('decision') >= 0) return 'top';
+      if (p.indexOf('footer') >= 0 || p.indexOf('bottom') >= 0 || p.indexOf('post_body') >= 0) return 'bottom';
+      if (p.indexOf('sidebar') >= 0) return 'sidebar';
+      if (p.indexOf('modal') >= 0) return 'modal';
+      if (p.indexOf('search') >= 0) return 'search';
+      if (p.indexOf('inline') >= 0 || p.indexOf('table') >= 0 || p.indexOf('card') >= 0) return 'inline';
+      return 'middle';
+    }
+
+    function normalizeEventName(name, payload) {
+      if (name === 'affiliate_cta_click') return 'affiliate_click';
+      if (name === 'official_cta_click') return payload.is_sticky_cta ? 'mobile_sticky_cta_click' : 'tool_cta_click';
+      if (name === 'sticky_cta_click') return 'mobile_sticky_cta_click';
+      if (name === 'stack_builder_try_tool' || name === 'stack_builder_try_stack') return 'stack_builder_tool_click';
+      return name;
+    }
+
     function eventPayload(el) {
       var linkUrl = el.href || '';
+      var placement = el.dataset.ctaPlacement || '';
       return {
         page_type: el.dataset.ctaPageType || '',
         page_slug: el.dataset.ctaPageSlug || pageSlug(),
+        page_title: pageTitle(),
+        source_module: placement || 'commercial_cta',
         placement: el.dataset.ctaPlacement || '',
         cta_placement: el.dataset.ctaPlacement || '',
         tool_slug: el.dataset.ctaToolSlug || '',
         tool_name: el.dataset.ctaToolName || '',
         category_slug: el.dataset.ctaCategorySlug || '',
+        comparison_slug: el.dataset.ctaComparisonSlug || '',
+        guide_slug: el.dataset.ctaGuideSlug || '',
         comparison_pair: el.dataset.ctaComparisonPair || '',
         cta_label: el.dataset.ctaLabel || (el.textContent || '').trim(),
         affiliate_program: el.dataset.ctaAffiliateProgram || '',
         destination_type: el.dataset.ctaDestinationType || '',
+        destination_slug: slugFromUrl(linkUrl),
+        destination_url: linkUrl,
         destination_url_domain: urlDomain(linkUrl),
         price_range: el.dataset.ctaPriceRange || '',
+        position: positionFromPlacement(placement),
+        device_context: deviceType(),
         device_type: deviceType(),
         viewport_width: window.innerWidth || document.documentElement.clientWidth || 0,
         is_sticky_cta: boolValue(el.dataset.ctaIsSticky) || (el.dataset.ctaPlacement || '').indexOf('sticky') >= 0,
@@ -52,23 +95,45 @@
     }
 
     function flushPending() {
-      if (!window.gtag) return;
+      if (!window.aipediaAnalytics && !window.gtag) return;
       while (pending.length > 0) {
         var item = pending.shift();
-        window.gtag('event', item.name, item.payload);
+        if (window.aipediaAnalytics) {
+          window.aipediaAnalytics.track(item.name, item.payload);
+        } else if (window.gtag) {
+          window.gtag('event', item.name, item.payload);
+        }
+      }
+    }
+
+    function send(eventName, payload) {
+      if (window.aipediaAnalytics) {
+        window.aipediaAnalytics.track(eventName, payload);
+      } else if (window.gtag) {
+        window.gtag('event', eventName, payload);
+      } else {
+        pending.push({ name: eventName, payload: payload });
       }
     }
 
     function track(name, el) {
       if (!name || !el) return;
       var payload = eventPayload(el);
+      var eventName = normalizeEventName(name, payload);
+      var isClickEvent = /(^|_)click$/.test(name) || /(^|_)click$/.test(eventName);
       window.dispatchEvent(new CustomEvent('aipedia:commercial-cta', {
-        detail: { event: name, payload: payload },
+        detail: { event: eventName, payload: payload },
       }));
-      if (window.gtag) {
-        window.gtag('event', name, payload);
-      } else {
-        pending.push({ name: name, payload: payload });
+      send(eventName, payload);
+
+      if (isClickEvent && el.dataset.guideCta && eventName !== 'guide_pick_click') {
+        send('guide_pick_click', payload);
+      }
+      if (isClickEvent && payload.is_sticky_cta && eventName !== 'mobile_sticky_cta_click') {
+        send('mobile_sticky_cta_click', payload);
+      }
+      if (isClickEvent && payload.is_affiliate && eventName !== 'affiliate_click') {
+        send('affiliate_click', payload);
       }
     }
 

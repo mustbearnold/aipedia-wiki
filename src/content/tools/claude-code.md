@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$20-$200/month"
 status: active
 launched: 2025-02
-last_updated: 2026-05-15
-last_verified: 2026-05-15
+last_updated: 2026-05-17
+last_verified: 2026-05-17
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -99,6 +99,13 @@ price_history:
     source_label: "Claude Agent SDK credit help"
     source_id: claude-agent-sdk-credit
     note: "Starting June 15, 2026, Claude Agent SDK, claude -p, Claude Code GitHub Actions, and third-party Agent SDK apps draw from separate monthly credits; interactive Claude Code remains on normal subscription usage limits."
+  - date: 2026-05-14
+    plan: "Microsoft internal tooling report"
+    price: "No public Claude Code price change"
+    source: "/news/2026-05-14-microsoft-claude-code-github-copilot-cli-shift/"
+    source_label: "AIpedia coverage"
+    source_id: aipedia-news
+    note: "The Verge reported Microsoft is winding down most internal Claude Code licenses in Experiences and Devices by the end of June and steering engineers toward GitHub Copilot CLI; this does not change public Claude Code availability."
   - date: 2026-05-13
     plan: "Plan pricing reverified"
     price: "Pro $20/mo · Max 5x $100/mo · Max 20x $200/mo (unchanged)"
@@ -159,6 +166,8 @@ Claude Opus 4.7 (released April 16, 2026) is the default backing model. Access i
 ## Recent developments (April-May 2026)
 
 - **May 14:** [Anthropic moved Claude Agent SDK, `claude -p`, and Claude Code GitHub Actions into separate monthly credits](/news/2026-05-14-anthropic-claude-agent-sdk-credit-split/) starting June 15. Interactive Claude Code remains on normal subscription limits; non-interactive automation now needs budget discipline because credits are per-user, non-pooled, and do not roll over.
+- **May 14:** [Anthropic expanded Claude through PwC's enterprise rollout and a $200M Gates Foundation partnership](/news/2026-05-14-anthropic-pwc-gates-claude-expansion/). The PwC deal matters for Claude Code because PwC will roll out Claude Code and Cowork starting with U.S. teams and train 30,000 professionals, giving Anthropic a larger services bench for governed client deployments.
+- **May 14:** [Microsoft reportedly started canceling most internal Claude Code licenses in its Experiences and Devices division and pushing engineers toward GitHub Copilot CLI](/news/2026-05-14-microsoft-claude-code-github-copilot-cli-shift/) by the end of June. Treat it as a reported Microsoft tooling-convergence decision, not a public Claude Code deprecation; it still matters because large enterprises are deciding whether to standardize on developer-loved agents or platform-governed agents.
 - **May 13:** [Anthropic passed OpenAI in US business adoption per Ramp's May 2026 AI Index](/news/2026-05-13-anthropic-surpasses-openai-business-adoption-ramp/), with Claude Code named explicitly as the wedge. Ramp's analyst said engineering coding workloads are the segment where Claude has been winning enterprise procurement for months; the broader business adoption flip (34.4% vs. 32.3% for OpenAI) is the first month it shows up at the macro level. Claude Code seat budgets that have been bottom-up shadow-purchases are likely up for procurement consolidation this quarter.
 - **May 12:** [Anthropic launched Claude for Legal](/news/2026-05-12-anthropic-claude-for-legal-plugins-microsoft-365/). Claude Code sits next to 12 practice-area plugins and 20+ MCP connectors (Harvey, Relativity, Everlaw, Thomson Reuters CoCounsel, DocuSign, Box), so legal-engineering teams can wire repo automation into the same agent surface lawyers use in Word and Outlook.
 - **May 10:** [Reports tied Anthropic to Akamai's $1.8B frontier-model cloud commitment](/news/2026-05-10-anthropic-akamai-cloud-deal/). More serving capacity behind Claude Code lowers the odds of rate-limit pain on sustained agent runs.
@@ -211,7 +220,7 @@ Claude Opus 4.7 (released April 16, 2026) is the default backing model. Access i
 | **Checkpointing** | Save and restore session state during long runs |
 | **Pricing** | Pro $20 · Max 5x $100 · Max 20x $200 · API pay-per-token |
 
-Every data point above was verified against vendor sources on 2026-05-13. See Sources.
+Every data point above was verified against vendor sources and current reporting on 2026-05-17. See Sources.
 The enterprise partnership surface was refreshed on 2026-04-24 after Anthropic's NEC announcement.
 
 ## What it actually is
@@ -287,7 +296,7 @@ Subscription pricing via [claude.com/pricing](https://claude.com/pricing). Claud
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [Claude Code docs](https://code.claude.com/docs/en/overview), [Claude Code cost management](https://code.claude.com/docs/en/costs), [Anthropic pricing](https://claude.com/pricing), [Claude Code usage limits](https://support.claude.com/en/articles/14552983-models-usage-and-limits-in-claude-code), the [May 12 Claude for Legal launch](/news/2026-05-12-anthropic-claude-for-legal-plugins-microsoft-365/), the [May 6 Managed Agents update](/news/2026-05-06-claude-managed-agents-dreaming-outcomes-orchestration/), the [May 6 usage-limit update](https://www.anthropic.com/news/higher-limits-spacex), and the [Opus 4.7 release coverage](https://www.anthropic.com/news/claude-opus-4-7).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-17 against [Claude Code docs](https://code.claude.com/docs/en/overview), [Claude Code cost management](https://code.claude.com/docs/en/costs), [Anthropic pricing](https://claude.com/pricing), [Claude Code usage limits](https://support.claude.com/en/articles/14552983-models-usage-and-limits-in-claude-code), the [May 14 Microsoft internal tooling report](/news/2026-05-14-microsoft-claude-code-github-copilot-cli-shift/), the [May 14 Agent SDK credit split](/news/2026-05-14-anthropic-claude-agent-sdk-credit-split/), the [May 12 Claude for Legal launch](/news/2026-05-12-anthropic-claude-for-legal-plugins-microsoft-365/), the [May 6 Managed Agents update](/news/2026-05-06-claude-managed-agents-dreaming-outcomes-orchestration/), the [May 6 usage-limit update](https://www.anthropic.com/news/higher-limits-spacex), and the [Opus 4.7 release coverage](https://www.anthropic.com/news/claude-opus-4-7).
 
 ## FAQ
 

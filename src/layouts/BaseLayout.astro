@@ -6,6 +6,7 @@ import CookieConsent from '../components/CookieConsent.astro';
 import MoatLayer from '../components/MoatLayer.astro';
 import GlobalToolPreview from '../components/GlobalToolPreview.astro';
 import SourcePreviewLayer from '../components/SourcePreviewLayer.astro';
+import AnalyticsLayer from '../components/AnalyticsLayer.astro';
 import CommercialAnalytics from '../components/CommercialAnalytics.astro';
 import CompareTray from '../components/CompareTray.astro';
 import Analytics from '@vercel/analytics/astro';
@@ -138,6 +139,7 @@ const ogImageUrl = ogImage
     <Footer transition:persist="footer" />
     <CompareTray transition:persist="compare-tray" />
     <CookieConsent transition:persist="cookie-consent" />
+    <AnalyticsLayer transition:persist="analytics-layer" />
     <CommercialAnalytics />
     <Analytics />
     <SpeedInsights />

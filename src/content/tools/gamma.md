@@ -11,18 +11,19 @@ pricing_model: freemium
 price_range: $0-$100/month
 status: active
 launched: 2020-01
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-05-17
+last_verified: 2026-05-17
 update_frequency: monthly
 affiliate:
   has_program: true
   commission: 30% first year
   cookie_days: null
   network: PartnerStack
-  link: null
-  application_status: applied
+  link: https://try.gamma.app/iv1cuq3h7gcd
+  application_status: approved
   applied_date: 2026-05-13
-  notes: "Applied via PartnerStack 2026-05-13; direct URL submitted: https://aipedia.wiki/tools/gamma/."
+  approved_date: 2026-05-17
+  notes: "Approved affiliate link supplied by site owner on 2026-05-17; Gamma's help center confirms the affiliate program is managed via PartnerStack and issues unique referral links after approval."
 scores:
   utility: 9
   value: 8
@@ -34,7 +35,7 @@ facts:
     source: "https://gamma.app/features"
     source_label: "Gamma features"
     source_id: gamma-features
-    verified_at: 2026-05-10
+    verified_at: 2026-05-17
     volatility: low
     confidence: high
   pricing_anchor:
@@ -42,8 +43,8 @@ facts:
     source: "https://gamma.app/pricing"
     source_label: "Gamma pricing"
     source_id: gamma-official
-    verified_at: 2026-05-10
-    next_review_at: 2026-08-10
+    verified_at: 2026-05-17
+    next_review_at: 2026-08-17
     volatility: high
     confidence: high
   generation_surface:
@@ -51,7 +52,7 @@ facts:
     source: "https://gamma.app/ai-presentation-maker"
     source_label: "Gamma AI presentation maker"
     source_id: gamma-ai-presentation
-    verified_at: 2026-05-10
+    verified_at: 2026-05-17
     volatility: medium
     confidence: high
   output_model:
@@ -59,7 +60,7 @@ facts:
     source: "https://gamma.app/features"
     source_label: "Gamma features"
     source_id: gamma-features
-    verified_at: 2026-05-10
+    verified_at: 2026-05-17
     volatility: low
     confidence: high
   watch_out_for:
@@ -67,7 +68,7 @@ facts:
     source: "https://gamma.app/pricing"
     source_label: "Gamma pricing"
     source_id: gamma-official
-    verified_at: 2026-05-10
+    verified_at: 2026-05-17
     volatility: medium
     confidence: high
 tags: [presentations, slides, ai-generation, documents, web-pages, pitch-decks, prompt-to-deck]
@@ -118,7 +119,7 @@ The free tier supports simple projects, imports, and exports. Paid tiers add bra
 | **PPTX export** | Available, lossy on complex layouts |
 | **Offline mode** | None |
 
-Every data point above was verified against official Gamma documentation on 2026-05-13. See Sources.
+Every data point above was verified against official Gamma documentation on 2026-05-17. See Sources.
 
 ## What it actually is
 
@@ -155,7 +156,7 @@ Subscription and team pricing are managed via [gamma.app/pricing](https://gamma.
 | Ultra | Everything in Pro; substantially more AI usage; up to 75 cards per prompt; access to advanced text, image, and video models; up to 100 custom domains; early feature access | Power users, agencies, and heavy generators |
 | Team / Sales | Contact-sales path for teams evaluating Gamma | Shared workspace and organization needs |
 
-*Plan gates verified 2026-05-13 via [gamma.app/pricing](https://gamma.app/pricing). Check the live pricing page for current dollar amounts and billing options before purchase.*
+*Plan gates verified 2026-05-17 via [gamma.app/pricing](https://gamma.app/pricing). Check the live pricing page for current dollar amounts and billing options before purchase.*
 
 ## Against the alternatives
 
@@ -179,7 +180,7 @@ Subscription and team pricing are managed via [gamma.app/pricing](https://gamma.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [Gamma pricing](https://gamma.app/pricing) and vendor documentation.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-17 against [Gamma pricing](https://gamma.app/pricing), vendor documentation, and Gamma's affiliate-program help page.
 
 ## FAQ
 
@@ -201,11 +202,15 @@ Gamma's public pricing page describes advanced text, image, and video model acce
 **Does Gamma have an API?**
 Yes. Gamma says its Generate API v1.0 is generally available and accessible on Pro, Ultra, Team, and Business accounts. It can generate presentations, documents, webpages, and social posts programmatically.
 
+**Does AiPedia have a Gamma affiliate link?**
+Yes. Gamma's help center says its affiliate program is managed through PartnerStack and approved partners receive unique referral links. AiPedia added an approved Gamma tracking link on 2026-05-17. Affiliate status does not affect the rating or recommendation.
+
 ## Sources
 
 - [Gamma pricing](https://gamma.app/pricing): Current plans, credits, and tier features
 - [Gamma AI presentation maker](https://gamma.app/ai-presentation-maker): Presentation generation positioning and usage claims
 - [Gamma API documentation](https://help.gamma.app/en/articles/11962420-does-gamma-have-an-api): API availability and access requirements
+- [Gamma affiliate program help](https://help.gamma.app/en/articles/11048092-how-do-i-join-the-gamma-affiliate-program): PartnerStack management and referral-link process
 
 ## Related
 

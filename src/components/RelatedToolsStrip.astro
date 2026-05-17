@@ -60,6 +60,13 @@ const resolved: ResolvedTool[] = slugs
         <a
           href={`/tools/${t.slug}/`}
           class="home-surface-card related-tools-strip-card"
+          data-analytics-event="news_related_tool_click"
+          data-analytics-source-module="news_related_tools_strip"
+          data-analytics-destination-type="tool"
+          data-analytics-destination-slug={`tools/${t.slug}`}
+          data-analytics-tool-slug={t.slug}
+          data-analytics-position="top"
+          data-analytics-label={t.title}
         >
           <ToolLogo slug={t.slug} title={t.title} size={28} />
           <div class="related-tools-strip-main">

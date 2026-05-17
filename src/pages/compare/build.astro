@@ -157,6 +157,13 @@ const popularComparisons = [
         <a
           href={`/compare/build/?tools=${comparison.slugs.join(',')}`}
           class="group block rounded-[var(--site-radius-card)] border border-[var(--border)] bg-[linear-gradient(135deg,rgba(255,255,255,0.045),rgba(249, 115, 22,0.055))] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(249, 115, 22,0.45)] p-[var(--site-card-padding)] no-underline transition-colors"
+          data-analytics-event="comparison_open"
+          data-analytics-source-module="compare_builder_popular"
+          data-analytics-destination-type="comparison"
+          data-analytics-destination-slug={`compare/build?tools=${comparison.slugs.join(',')}`}
+          data-analytics-comparison-slug={comparison.slugs.join('-vs-')}
+          data-analytics-position="bottom"
+          data-analytics-label={comparison.title}
         >
           <div class="flex items-start justify-between gap-3 mb-5">
             <div class="min-w-0">
@@ -197,6 +204,33 @@ const popularComparisons = [
       const copyLabel = document.getElementById('copy-url-label');
 
       let selected = [];
+
+      function deviceType() {
+        const width = window.innerWidth || document.documentElement.clientWidth || 0;
+        if (width < 768) return 'mobile';
+        if (width < 1024) return 'tablet';
+        return 'desktop';
+      }
+
+      function trackCompareBuilder(eventName, extra = {}) {
+        const payload = {
+          page_type: 'compare_builder',
+          page_slug: 'compare/build',
+          page_title: document.title || '',
+          source_module: 'compare_builder',
+          position: 'inline',
+          selected_tools: selected.join(','),
+          selected_tool_count: selected.length,
+          device_context: deviceType(),
+          viewport_width: window.innerWidth || document.documentElement.clientWidth || 0,
+          ...extra,
+        };
+        window.dispatchEvent(new CustomEvent('aipedia:compare-builder', {
+          detail: { event: eventName, payload },
+        }));
+        if (window.aipediaAnalytics) window.aipediaAnalytics.track(eventName, payload);
+        else if (window.gtag) window.gtag('event', eventName, payload);
+      }
 
       function readSelectionFromURL() {
         const p = new URLSearchParams(location.search);
@@ -421,6 +455,15 @@ const popularComparisons = [
         input.value = '';
         results.classList.add('hidden');
         updateAll();
+        if (selected.length >= 2) {
+          trackCompareBuilder('comparison_open', {
+            comparison_slug: selected.join('-vs-'),
+            destination_type: 'comparison',
+            destination_url: location.href,
+            destination_slug: 'compare/build',
+            tool_slug: slug,
+          });
+        }
       }
       function removeSlug(slug) {
         selected = selected.filter((s) => s !== slug);

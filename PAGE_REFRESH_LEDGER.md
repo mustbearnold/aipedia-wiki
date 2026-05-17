@@ -1,6 +1,6 @@
 # AiPedia Page Refresh Ledger
 
-Ledger updated through: 2026-05-15
+Ledger updated through: 2026-05-17
 Tracked public pages and crawl surfaces: 732
 
 Hard rule: every time a tracked website page is edited, refreshed, materially re-ranked, or has volatile facts re-verified, update that page row in this file on the same change. If a child page update affects a parent hub, archive, internal-link block, sitemap, or LLM surface, update those affected rows too.
@@ -24,7 +24,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-05 | /tools/dalle/ | Tool | Yes | frontmatter | src/content/tools/dalle.md |
 | 2026-05-08 | /about/editorial/ | Static page | Yes | git | src/pages/about/editorial.astro |
 | 2026-05-08 | /admin/reviews/ | Static page | No | git | src/pages/admin/reviews.astro |
-| 2026-05-08 | /compare/build/ | Static page | No | git | src/pages/compare/build.astro |
 | 2026-05-08 | /tool-finder/ | Static page | No | git | src/pages/tool-finder.astro |
 | 2026-05-09 | /answers/best-ai-chatbot-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-chatbot-2026.astro |
 | 2026-05-09 | /answers/best-ai-coding-tool-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-coding-tool-2026.astro |
@@ -47,16 +46,12 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-12 | /answers/ | Static page | Yes | git | src/pages/answers/index.astro |
 | 2026-05-12 | /categories/ | Static page | Yes | git | src/pages/categories/index.astro |
 | 2026-05-12 | /companies/ | Static page | Yes | git | src/pages/companies/index.astro |
-| 2026-05-12 | /compare/ | Static page | Yes | git | src/pages/compare/index.astro |
 | 2026-05-12 | /dead/ | Static page | Yes | git | src/pages/dead/index.astro |
 | 2026-05-12 | /demo-godtier/ | Static page | Yes | git | src/pages/demo-godtier.astro |
 | 2026-05-12 | /explore/ | Static page | Yes | git | src/pages/explore/index.astro |
 | 2026-05-12 | /glossary/ | Static page | Yes | git | src/pages/glossary/index.astro |
 | 2026-05-12 | /guides/ | Static page | Yes | git | src/pages/guides/index.astro |
-| 2026-05-12 | /news/ | Static page | Yes | git | src/pages/news/index.astro |
 | 2026-05-12 | /reports/ | Static page | Yes | git | src/pages/reports/index.astro |
-| 2026-05-12 | /search/ | Static page | No | git | src/pages/search.astro |
-| 2026-05-12 | /stack-builder/ | Static page | Yes | git | src/pages/stack-builder/index.astro |
 | 2026-05-12 | /tools/ | Static page | Yes | git | src/pages/tools/index.astro |
 | 2026-05-12 | /trends/ | Static page | Yes | git | src/pages/trends/index.astro |
 | 2026-05-12 | /workflows/ | Static page | Yes | git | src/pages/workflows/index.astro |
@@ -520,11 +515,9 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /tools/frase/ | Tool | Yes | frontmatter | src/content/tools/frase.md |
 | 2026-05-13 | /tools/freepik/ | Tool | Yes | frontmatter | src/content/tools/freepik.md |
 | 2026-05-13 | /tools/galileo-ai/ | Tool | Yes | frontmatter | src/content/tools/galileo-ai.md |
-| 2026-05-13 | /tools/gamma/ | Tool | Yes | frontmatter | src/content/tools/gamma.md |
 | 2026-05-13 | /tools/gemini/ | Tool | Yes | frontmatter | src/content/tools/gemini.md |
 | 2026-05-13 | /tools/genspark/ | Tool | Yes | frontmatter | src/content/tools/genspark.md |
 | 2026-05-13 | /tools/getresponse/ | Tool | Yes | frontmatter | src/content/tools/getresponse.md |
-| 2026-05-13 | /tools/github-copilot/ | Tool | Yes | frontmatter | src/content/tools/github-copilot.md |
 | 2026-05-13 | /tools/glean/ | Tool | Yes | frontmatter | src/content/tools/glean.md |
 | 2026-05-13 | /tools/glm/ | Tool | Yes | frontmatter | src/content/tools/glm.md |
 | 2026-05-13 | /tools/google-stitch/ | Tool | Yes | frontmatter | src/content/tools/google-stitch.md |
@@ -592,7 +585,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /tools/midjourney/ | Tool | Yes | frontmatter | src/content/tools/midjourney.md |
 | 2026-05-13 | /tools/minimax-speech/ | Tool | Yes | frontmatter | src/content/tools/minimax-speech.md |
 | 2026-05-13 | /tools/minimax/ | Tool | Yes | frontmatter | src/content/tools/minimax.md |
-| 2026-05-13 | /tools/mistral-ai/ | Tool | Yes | frontmatter | src/content/tools/mistral-ai.md |
 | 2026-05-13 | /tools/modal/ | Tool | Yes | frontmatter | src/content/tools/modal.md |
 | 2026-05-13 | /tools/morphic/ | Tool | Yes | frontmatter | src/content/tools/morphic.md |
 | 2026-05-13 | /tools/mubert/ | Tool | Yes | frontmatter | src/content/tools/mubert.md |
@@ -626,7 +618,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /tools/prezi/ | Tool | Yes | frontmatter | src/content/tools/prezi.md |
 | 2026-05-13 | /tools/qdrant/ | Tool | Yes | frontmatter | src/content/tools/qdrant.md |
 | 2026-05-13 | /tools/qodo/ | Tool | Yes | frontmatter | src/content/tools/qodo.md |
-| 2026-05-13 | /tools/quillbot/ | Tool | Yes | frontmatter | src/content/tools/quillbot.md |
 | 2026-05-13 | /tools/qwen/ | Tool | Yes | frontmatter | src/content/tools/qwen.md |
 | 2026-05-13 | /tools/read-ai/ | Tool | Yes | frontmatter | src/content/tools/read-ai.md |
 | 2026-05-13 | /tools/readwise/ | Tool | Yes | frontmatter | src/content/tools/readwise.md |
@@ -737,9 +728,18 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-15 | /about/our-stack/ | Static page | Yes | git | src/pages/about/our-stack.astro |
 | 2026-05-15 | /guides/best-ai-landing-page-builder-for-ab-testing/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-landing-page-builder-for-ab-testing.md |
 | 2026-05-15 | /sitemap-index.xml | Crawl surface | No | git | astro.config.mjs |
-| 2026-05-15 | /tools/chatgpt/ | Tool | Yes | working tree | src/content/tools/chatgpt.md |
-| 2026-05-15 | /tools/claude-code/ | Tool | Yes | working tree | src/content/tools/claude-code.md |
-| 2026-05-15 | /tools/claude/ | Tool | Yes | working tree | src/content/tools/claude.md |
-| 2026-05-15 | /tools/codex/ | Tool | Yes | working tree | src/content/tools/codex.md |
-| 2026-05-15 | /tools/openclaw/ | Tool | Yes | working tree | src/content/tools/openclaw.md |
-| 2026-05-15 | /tools/runway/ | Tool | Yes | working tree | src/content/tools/runway.md |
+| 2026-05-15 | /tools/codex/ | Tool | Yes | frontmatter | src/content/tools/codex.md |
+| 2026-05-15 | /tools/openclaw/ | Tool | Yes | frontmatter | src/content/tools/openclaw.md |
+| 2026-05-15 | /tools/runway/ | Tool | Yes | frontmatter | src/content/tools/runway.md |
+| 2026-05-17 | /compare/ | Static page | Yes | working tree | src/pages/compare/index.astro |
+| 2026-05-17 | /compare/build/ | Static page | No | working tree | src/pages/compare/build.astro |
+| 2026-05-17 | /news/ | Static page | Yes | working tree | src/pages/news/index.astro |
+| 2026-05-17 | /search/ | Static page | No | working tree | src/pages/search.astro |
+| 2026-05-17 | /stack-builder/ | Static page | Yes | working tree | src/pages/stack-builder/index.astro |
+| 2026-05-17 | /tools/chatgpt/ | Tool | Yes | working tree | src/content/tools/chatgpt.md |
+| 2026-05-17 | /tools/claude-code/ | Tool | Yes | working tree | src/content/tools/claude-code.md |
+| 2026-05-17 | /tools/claude/ | Tool | Yes | working tree | src/content/tools/claude.md |
+| 2026-05-17 | /tools/gamma/ | Tool | Yes | working tree | src/content/tools/gamma.md |
+| 2026-05-17 | /tools/github-copilot/ | Tool | Yes | working tree | src/content/tools/github-copilot.md |
+| 2026-05-17 | /tools/mistral-ai/ | Tool | Yes | working tree | src/content/tools/mistral-ai.md |
+| 2026-05-17 | /tools/quillbot/ | Tool | Yes | working tree | src/content/tools/quillbot.md |

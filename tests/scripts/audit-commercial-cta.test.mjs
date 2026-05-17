@@ -194,8 +194,8 @@ function cta(pageType, index, placement = `${pageType}_test_${index}`, options =
       href="${href}"
       rel="${rel}"
       data-commercial-cta
-      data-cta-view-event="${isAffiliate ? 'affiliate_cta_view' : 'official_cta_view'}"
-      data-cta-click-event="${isAffiliate ? 'affiliate_cta_click' : 'official_cta_click'}"
+      data-cta-view-event="${isAffiliate ? 'affiliate_cta_view' : 'tool_cta_view'}"
+      data-cta-click-event="${isAffiliate ? 'affiliate_click' : 'tool_cta_click'}"
       data-cta-page-type="${pageType}"
       data-cta-page-slug="${pageType}-page"
       data-cta-placement="${placement}"

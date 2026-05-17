@@ -69,7 +69,7 @@ for (const item of sorted) {
 }
 
 const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
-const description = `AI tools news verified against primary sources. Model releases, pricing changes, acquisitions, shutdowns, and funding rounds affecting the aipedia.wiki tool catalog.`;
+const description = `AI tools news verified against primary sources and named reporting. Model releases, pricing changes, security advisories, acquisitions, shutdowns, and funding rounds affecting the aipedia.wiki tool catalog.`;
 
 const topStory = sorted[0];
 ---
@@ -90,7 +90,7 @@ const topStory = sorted[0];
   <div class="gt-canvas">
     <Hero
       title="AI tools news"
-      tagline="Model releases, pricing changes, acquisitions, shutdowns, and funding rounds affecting the AI tools catalog. Verified against primary sources."
+      tagline="Model releases, pricing changes, security advisories, acquisitions, shutdowns, funding rounds, and enterprise shifts affecting the AI tools catalog. Verified against primary sources and named reporting."
       breadcrumbs={[
         { label: 'aipedia', href: '/' },
         { label: 'News' },

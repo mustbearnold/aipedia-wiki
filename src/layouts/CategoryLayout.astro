@@ -163,7 +163,19 @@ const rankLabel = sorted.length > 0 ? `${sorted.length} tools verified` : undefi
           categoryCtaMarker
           arrow="→"
         />
-        <a slot="secondary-cta" href={`/tools/${topPick.slug}/`} class="gt-btn gt-btn-secondary">Read {topPick.title} review</a>
+        <a
+          slot="secondary-cta"
+          href={`/tools/${topPick.slug}/`}
+          class="gt-btn gt-btn-secondary"
+          data-analytics-event="internal_cta_click"
+          data-analytics-source-module="category_top_pick"
+          data-analytics-destination-type="tool"
+          data-analytics-destination-slug={`tools/${topPick.slug}`}
+          data-analytics-tool-slug={topPick.slug}
+          data-analytics-category-slug={slug}
+          data-analytics-position="top"
+          data-analytics-label={`Read ${topPick.title} review`}
+        >Read {topPick.title} review</a>
       </DecisionCard>
     )}
 
@@ -180,7 +192,18 @@ const rankLabel = sorted.length > 0 ? `${sorted.length} tools verified` : undefi
           const showInlineCta = true;
           return (
             <li class={`gt-tool-row gt-tool-row-${tone}`}>
-              <a href={`/tools/${t.slug}/`} class="gt-tool-link">
+              <a
+                href={`/tools/${t.slug}/`}
+                class="gt-tool-link"
+                data-analytics-event="related_tool_click"
+                data-analytics-source-module="category_ranked_list"
+                data-analytics-destination-type="tool"
+                data-analytics-destination-slug={`tools/${t.slug}`}
+                data-analytics-tool-slug={t.slug}
+                data-analytics-category-slug={slug}
+                data-analytics-position="middle"
+                data-analytics-label={t.title}
+              >
                 <span class="gt-tool-rank">{i + 1}</span>
                 <ToolLogo slug={t.slug} title={t.title} size={40} />
                 <div class="gt-tool-main">

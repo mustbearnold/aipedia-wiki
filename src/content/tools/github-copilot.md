@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$39/user/month"
 status: active
 launched: 2021-06
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-05-17
+last_verified: 2026-05-17
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -111,14 +111,14 @@ facts:
     volatility: medium
     confidence: high
   coding_agent:
-    value: "Agent mode, GitHub Coding Agent (cloud), and Copilot CLI Rubber Duck (cross-model review)"
-    source: "https://docs.github.com/en/copilot"
-    source_label: "GitHub Copilot documentation"
+    value: "Agent mode, GitHub Coding Agent (cloud), Copilot CLI Rubber Duck, and the Copilot App technical preview for isolated GitHub-native agent sessions"
+    source: "https://github.blog/changelog/2026-05-14-github-copilot-app-is-now-available-in-technical-preview/"
+    source_label: "GitHub Copilot App technical preview"
     source_id: github-copilot-docs
-    verified_at: 2026-05-13
+    verified_at: 2026-05-17
     volatility: high
     confidence: high
-    next_review_at: 2026-06-13
+    next_review_at: 2026-06-17
   enterprise_controls:
     value: "Business and Enterprise plans add organizational controls, policy management, and enterprise governance features; May 8 update added dedicated Agents secrets and variables for the cloud Coding Agent, plus comment-type breakdowns in code-review metrics"
     source: "https://docs.github.com/en/copilot/reference/copilot-feature-matrix"
@@ -236,6 +236,22 @@ price_history:
     source_id: github-copilot-plans
     verified_at: 2026-05-13
     note: "May 13 verification pass. Pricing tiers (Free, Pro $10, Pro+ $39, Business $19/seat, Enterprise $39/seat) confirmed unchanged. May 11 Daybreak / Codex Security integration folded into Recent changes."
+  - date: 2026-05-14
+    plan: "Copilot App technical preview"
+    price: "Included preview access for eligible Copilot plans"
+    source: "/news/2026-05-14-github-copilot-app-technical-preview/"
+    source_label: "AIpedia coverage"
+    source_id: aipedia-news
+    verified_at: 2026-05-17
+    note: "GitHub-native desktop app starts agent sessions from issues, PRs, prompts, or prior sessions; keeps work isolated; validates changes; and can open PRs or use Agent Merge."
+  - date: 2026-05-14
+    plan: "Microsoft internal tooling report"
+    price: "No public price change"
+    source: "/news/2026-05-14-microsoft-claude-code-github-copilot-cli-shift/"
+    source_label: "AIpedia coverage"
+    source_id: aipedia-news
+    verified_at: 2026-05-17
+    note: "The Verge reported Microsoft is winding down most internal Claude Code licenses in Experiences and Devices and moving engineers toward Copilot CLI by the end of June."
 ---
 
 # GitHub Copilot
@@ -245,6 +261,10 @@ GitHub's AI pair programmer, built by Microsoft and GitHub on top of the largest
 Claude Opus 4.7 went generally available inside Copilot on April 16, 2026, within hours of Anthropic's release. GPT-5.5 followed on April 24 for Pro+, Business, and Enterprise users at a 7.5x premium-request multiplier.
 
 On April 24, 2026, GitHub's Copilot interaction-data policy took effect for Free, Pro, and Pro+ accounts: prompts, outputs, code snippets, and associated context may be used for model training unless individual users opt out. Copilot Business and Enterprise remain excluded from that training path.
+
+On May 14, 2026, [GitHub put the Copilot App into technical preview](/news/2026-05-14-github-copilot-app-technical-preview/). The desktop app starts agent sessions from GitHub issues, pull requests, prompts, or prior sessions; keeps each task in its own branch/files/conversation space; and lets users validate, review, open PRs, and use Agent Merge from the same workflow.
+
+Also on May 14, [The Verge reported that Microsoft is canceling most internal Claude Code licenses in its Experiences and Devices division and pushing engineers toward GitHub Copilot CLI](/news/2026-05-14-microsoft-claude-code-github-copilot-cli-shift/) by the end of June. Treat this as a reported internal Microsoft tooling shift, not a public Claude Code deprecation; the buyer signal is that Microsoft is converging its own agentic CLI work around Copilot.
 
 On May 6, 2026, [ServiceNow Build Agent reached GitHub Copilot, Cursor, Windsurf, and Claude Code](/news/2026-05-06-servicenow-build-agent-coding-tools/), giving ServiceNow developers a path to work from Copilot while retaining ServiceNow platform context and governance.
 
@@ -291,7 +311,7 @@ April 30 security coverage added another practical caveat: [recent coding-agent 
 | **Premium request caps** | Free 50 · Pro 300 · Pro+ 1,500 · Business 300/seat · Enterprise 1,000/seat · overage $0.04 each |
 | **Copilot Spaces** | Context-scoping feature accessible via the GitHub MCP server |
 | **Data-training policy** | Free / Pro / Pro+ interaction data may be used for model training unless opted out; Business / Enterprise excluded |
-| **Recent shipments (12 mo)** | Agents secrets/variables · code-review metrics by comment type · Rubber Duck cross-model review · GPT-5.5 GA (Apr 24, 2026) · BYOK in VS Code · cloud-agent metrics · Jira controls · PR chat/debugging improvements · Coding Agent GA · Agent mode GA (Mar 2026) · MCP support GA · Copilot CLI GA (Apr 2026) · Opus 4.7 GA (Apr 16, 2026) · Agentic code review (Mar 2026) |
+| **Recent shipments (12 mo)** | Copilot App technical preview · Agents secrets/variables · code-review metrics by comment type · Rubber Duck cross-model review · GPT-5.5 GA (Apr 24, 2026) · BYOK in VS Code · cloud-agent metrics · Jira controls · PR chat/debugging improvements · Coding Agent GA · Agent mode GA (Mar 2026) · MCP support GA · Copilot CLI GA (Apr 2026) · Opus 4.7 GA (Apr 16, 2026) · Agentic code review (Mar 2026) |
 
 ## What it actually is
 

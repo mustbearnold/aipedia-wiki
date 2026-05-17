@@ -28,6 +28,12 @@ const items = (headings ?? []).filter(
           <a
             href={`#${h.slug}`}
             data-toc-link={h.slug}
+            data-analytics-event="table_of_contents_click"
+            data-analytics-source-module="table_of_contents"
+            data-analytics-destination-type="toc"
+            data-analytics-destination-slug={h.slug}
+            data-analytics-position="sidebar"
+            data-analytics-label={h.text}
             class="block text-[12.5px] text-[var(--text-secondary)] hover:text-[var(--text-primary)] no-underline leading-tight transition-colors border-l-2 border-transparent -ml-px pl-3 py-1"
           >
             {h.text}

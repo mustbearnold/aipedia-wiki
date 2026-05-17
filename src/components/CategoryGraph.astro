@@ -174,7 +174,16 @@ const hasLinks = comparisonLinks.length > 0 || guideLinks.length > 0 || answerLi
     <div class="category-graph-head">
       <p>Category graph</p>
       <h2 id="category-graph-heading">{categoryTitle} decision hub</h2>
-      <a href={buildTools ? `/compare/build/?tools=${buildTools}` : '/compare/build/'}>Build a comparison</a>
+      <a
+        href={buildTools ? `/compare/build/?tools=${buildTools}` : '/compare/build/'}
+        data-analytics-event="internal_cta_click"
+        data-analytics-source-module="category_graph"
+        data-analytics-destination-type="comparison"
+        data-analytics-destination-slug="compare/build"
+        data-analytics-category-slug={categorySlug}
+        data-analytics-position="middle"
+        data-analytics-label="Build a comparison"
+      >Build a comparison</a>
     </div>
 
     <div class="category-graph-grid">
@@ -185,7 +194,17 @@ const hasLinks = comparisonLinks.length > 0 || guideLinks.length > 0 || answerLi
           <ol>
             {comparisonLinks.map((item) => (
               <li>
-                <a href={`/compare/${item.slug}/`}>
+                <a
+                  href={`/compare/${item.slug}/`}
+                  data-analytics-event="related_comparison_click"
+                  data-analytics-source-module="category_graph"
+                  data-analytics-destination-type="comparison"
+                  data-analytics-destination-slug={`compare/${item.slug}`}
+                  data-analytics-comparison-slug={item.slug}
+                  data-analytics-category-slug={categorySlug}
+                  data-analytics-position="middle"
+                  data-analytics-label={item.title}
+                >
                   <span>{item.title}</span>
                   {item.description && <small>{item.description}</small>}
                 </a>
@@ -202,7 +221,17 @@ const hasLinks = comparisonLinks.length > 0 || guideLinks.length > 0 || answerLi
           <ol>
             {guideLinks.map((item) => (
               <li>
-                <a href={`/guides/${item.slug}/`}>
+                <a
+                  href={`/guides/${item.slug}/`}
+                  data-analytics-event="related_guide_click"
+                  data-analytics-source-module="category_graph"
+                  data-analytics-destination-type="guide"
+                  data-analytics-destination-slug={`guides/${item.slug}`}
+                  data-analytics-guide-slug={item.slug}
+                  data-analytics-category-slug={categorySlug}
+                  data-analytics-position="middle"
+                  data-analytics-label={item.title}
+                >
                   <span>{item.title}</span>
                   {item.description && <small>{item.description}</small>}
                 </a>
@@ -219,7 +248,16 @@ const hasLinks = comparisonLinks.length > 0 || guideLinks.length > 0 || answerLi
           <ol>
             {answerLinks.map((item) => (
               <li>
-                <a href={`/answers/${item.slug}/`}>
+                <a
+                  href={`/answers/${item.slug}/`}
+                  data-analytics-event="internal_cta_click"
+                  data-analytics-source-module="category_graph"
+                  data-analytics-destination-type="answer"
+                  data-analytics-destination-slug={`answers/${item.slug}`}
+                  data-analytics-category-slug={categorySlug}
+                  data-analytics-position="middle"
+                  data-analytics-label={item.title}
+                >
                   <span>{item.title}</span>
                   <small>{item.meta}</small>
                 </a>
@@ -236,7 +274,16 @@ const hasLinks = comparisonLinks.length > 0 || guideLinks.length > 0 || answerLi
           <ol>
             {newsLinks.map((item) => (
               <li>
-                <a href={`/news/${item.slug}/`}>
+                <a
+                  href={`/news/${item.slug}/`}
+                  data-analytics-event="internal_cta_click"
+                  data-analytics-source-module="category_graph"
+                  data-analytics-destination-type="news"
+                  data-analytics-destination-slug={`news/${item.slug}`}
+                  data-analytics-category-slug={categorySlug}
+                  data-analytics-position="middle"
+                  data-analytics-label={item.title}
+                >
                   <span>{item.title}</span>
                   <small>{shortDate(item.date)}</small>
                 </a>

@@ -202,7 +202,19 @@ const robots = noindex ? 'noindex,nofollow' : undefined;
           guideCtaMarker
           arrow="→"
         />
-        <a slot="secondary-cta" href={`/tools/${featuredTool.slug}/`} class="gt-btn gt-btn-secondary">Read {featuredTool.title} review</a>
+        <a
+          slot="secondary-cta"
+          href={`/tools/${featuredTool.slug}/`}
+          class="gt-btn gt-btn-secondary"
+          data-analytics-event="related_tool_click"
+          data-analytics-source-module="guide_featured_pick"
+          data-analytics-destination-type="tool"
+          data-analytics-destination-slug={`tools/${featuredTool.slug}`}
+          data-analytics-tool-slug={featuredTool.slug}
+          data-analytics-guide-slug={slug}
+          data-analytics-position="top"
+          data-analytics-label={`Read ${featuredTool.title} review`}
+        >Read {featuredTool.title} review</a>
       </DecisionCard>
     )}
 
@@ -284,7 +296,18 @@ const robots = noindex ? 'noindex,nofollow' : undefined;
             const showInlineCta = i < 5;
             return (
               <li class={`gt-tool-row gt-tool-row-${tone} ${isFeatured ? 'is-featured' : ''}`}>
-                <a href={`/tools/${t.slug}/`} class="gt-tool-link">
+                <a
+                  href={`/tools/${t.slug}/`}
+                  class="gt-tool-link"
+                  data-analytics-event="related_tool_click"
+                  data-analytics-source-module="guide_ranked_tools"
+                  data-analytics-destination-type="tool"
+                  data-analytics-destination-slug={`tools/${t.slug}`}
+                  data-analytics-tool-slug={t.slug}
+                  data-analytics-guide-slug={slug}
+                  data-analytics-position="middle"
+                  data-analytics-label={t.title}
+                >
                   <div class="gt-tool-main">
                     <strong class="gt-tool-title">{t.title}{isFeatured && <span class="gt-tool-badge">Pick</span>}</strong>
                     {t.tagline && <span class="gt-tool-tagline">{t.tagline}</span>}

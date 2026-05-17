@@ -224,6 +224,52 @@
     let catalogPromise = null;
     let catalog = new Map();
     let slugs = read();
+    let trayOpenTracked = slugs.length > 0;
+
+    function pageSlug() {
+      return window.location.pathname.replace(/^\/+|\/+$/g, '') || 'home';
+    }
+
+    function pageType() {
+      const first = pageSlug().split('/')[0] || 'home';
+      if (first === 'tools') return 'tool';
+      if (first === 'categories') return 'category';
+      if (first === 'compare') return 'comparison';
+      if (first === 'guides') return 'guide';
+      if (first === 'news') return 'news';
+      if (first === 'workflows') return 'workflow';
+      if (first === 'answers') return 'answer';
+      if (first === 'companies') return 'company';
+      if (first === 'stack-builder') return 'stack_builder';
+      return first || 'home';
+    }
+
+    function deviceType() {
+      const width = window.innerWidth || document.documentElement.clientWidth || 0;
+      if (width < 768) return 'mobile';
+      if (width < 1024) return 'tablet';
+      return 'desktop';
+    }
+
+    function trackTray(eventName, extra = {}) {
+      const payload = {
+        page_type: pageType(),
+        page_slug: pageSlug(),
+        page_title: document.title || '',
+        source_module: 'compare_tray',
+        position: 'sticky',
+        selected_tools: slugs.join(','),
+        selected_tool_count: slugs.length,
+        device_context: deviceType(),
+        viewport_width: window.innerWidth || document.documentElement.clientWidth || 0,
+        ...extra,
+      };
+      window.dispatchEvent(new CustomEvent('aipedia:compare-tray', {
+        detail: { event: eventName, payload },
+      }));
+      if (window.aipediaAnalytics) window.aipediaAnalytics.track(eventName, payload);
+      else if (window.gtag) window.gtag('event', eventName, payload);
+    }
 
     function read() {
       try {
@@ -257,19 +303,29 @@
       return String(value || '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
     }
 
-    function add(slug) {
+    function add(slug, sourceEl = null) {
       if (!slug) return;
       slugs = slugs.filter((item) => item !== slug);
       slugs.unshift(slug);
       slugs = slugs.slice(0, MAX);
       write();
       render();
+      trackTray('compare_tray_add', {
+        tool_slug: slug,
+        source_module: sourceEl?.dataset?.compareSourceModule || 'compare_add_button',
+        position: sourceEl?.dataset?.comparePosition || 'inline',
+      });
     }
 
-    function remove(slug) {
+    function remove(slug, sourceEl = null) {
       slugs = slugs.filter((item) => item !== slug);
       write();
       render();
+      trackTray('compare_tray_remove', {
+        tool_slug: slug,
+        source_module: sourceEl?.dataset?.compareSourceModule || 'compare_tray',
+        position: 'sticky',
+      });
     }
 
     function buttonState() {
@@ -288,6 +344,11 @@
     function render() {
       root.hidden = slugs.length === 0;
       root.classList.toggle('is-visible', slugs.length > 0);
+      if (slugs.length > 0 && !trayOpenTracked) {
+        trayOpenTracked = true;
+        trackTray('compare_tray_open', { source_module: 'compare_tray', position: 'sticky' });
+      }
+      if (slugs.length === 0) trayOpenTracked = false;
       if (countEl) countEl.textContent = String(slugs.length);
       if (openLink) openLink.href = `/compare/build/${slugs.length ? `?tools=${slugs.join(',')}` : ''}`;
       buttonState();
@@ -311,20 +372,34 @@
       const addBtn = event.target && event.target.closest ? event.target.closest('[data-compare-add]') : null;
       if (addBtn) {
         event.preventDefault();
-        add(addBtn.getAttribute('data-compare-add'));
+        add(addBtn.getAttribute('data-compare-add'), addBtn);
         return;
       }
       const removeBtn = event.target && event.target.closest ? event.target.closest('[data-compare-remove]') : null;
       if (removeBtn) {
         event.preventDefault();
-        remove(removeBtn.getAttribute('data-compare-remove'));
+        remove(removeBtn.getAttribute('data-compare-remove'), removeBtn);
       }
     });
 
     clearBtn?.addEventListener('click', () => {
+      const removed = slugs.join(',');
       slugs = [];
       write();
       render();
+      trackTray('compare_tray_remove', {
+        removed_tools: removed,
+        source_module: 'compare_tray_clear',
+      });
+    });
+
+    openLink?.addEventListener('click', () => {
+      trackTray('compare_tray_compare_click', {
+        destination_type: 'comparison',
+        destination_url: openLink.href,
+        destination_slug: 'compare/build',
+        source_module: 'compare_tray_open_button',
+      });
     });
 
     document.addEventListener('astro:page-load', buttonState);

@@ -8,11 +8,11 @@ const searchModalSource = readFileSync('src/components/SearchModal.astro', 'utf8
 test('catalog search page emits intent analytics with safe payload fields', () => {
   assert.match(searchPageSource, /function\s+trackSearchIntent/);
   assert.match(searchPageSource, /new CustomEvent\('aipedia:search'/);
-  assert.match(searchPageSource, /window\.gtag\('event', eventName, payload\)/);
-  assert.match(searchPageSource, /search_performed/);
-  assert.match(searchPageSource, /search_zero_results/);
-  assert.match(searchPageSource, /search_result_clicked/);
-  assert.match(searchPageSource, /search_quick_term_clicked/);
+  assert.match(searchPageSource, /window\.aipediaAnalytics\.track\(name, payload\)/);
+  assert.match(searchPageSource, /site_search_query/);
+  assert.match(searchPageSource, /site_search_result_click/);
+  assert.match(searchPageSource, /site_search_open/);
+  assert.match(searchPageSource, /zero_results:/);
   assert.match(searchPageSource, /query:/);
   assert.match(searchPageSource, /result_count:/);
   assert.match(searchPageSource, /categorySlug:\s*tool\.data\.category/);
@@ -25,18 +25,15 @@ test('catalog search page emits intent analytics with safe payload fields', () =
 test('global search modal emits tool and full-text search analytics', () => {
   assert.match(searchModalSource, /function\s+trackSearchIntent/);
   assert.match(searchModalSource, /new CustomEvent\('aipedia:search'/);
-  assert.match(searchModalSource, /window\.gtag\('event', eventName, payload\)/);
-  assert.match(searchModalSource, /search_modal_opened/);
-  assert.match(searchModalSource, /search_performed/);
-  assert.match(searchModalSource, /search_zero_results/);
-  assert.match(searchModalSource, /search_result_clicked/);
-  assert.match(searchModalSource, /search_tab_changed/);
-  assert.match(searchModalSource, /search_suggestion_clicked/);
+  assert.match(searchModalSource, /window\.aipediaAnalytics\.track\(eventName, payload\)/);
+  assert.match(searchModalSource, /site_search_open/);
+  assert.match(searchModalSource, /site_search_query/);
+  assert.match(searchModalSource, /site_search_result_click/);
+  assert.match(searchModalSource, /zero_results:/);
   assert.match(searchModalSource, /search_surface:/);
-  assert.match(searchModalSource, /active_tab:/);
   assert.match(searchModalSource, /result_type:/);
   assert.match(searchModalSource, /result_url:/);
   assert.match(searchModalSource, /e\.key\.toLowerCase\(\) === 'k'/);
-  assert.match(searchModalSource, /let\s+lastSearchQuery\s*=\s*''/);
-  assert.match(searchModalSource, /query:\s*input\?\.value\.trim\(\)\s*\|\|\s*lastSearchQuery/);
+  assert.match(searchModalSource, /let\s+lastQuery\s*=\s*''/);
+  assert.match(searchModalSource, /query:\s*row\.dataset\.rowQuery\s*\|\|\s*input\?\.value\.trim\(\)\s*\|\|\s*lastQuery/);
 });

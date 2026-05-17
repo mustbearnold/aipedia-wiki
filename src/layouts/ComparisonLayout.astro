@@ -164,7 +164,19 @@ const rankLabel = featured ? `Winner: ${featured.title}` : undefined;
           compareCtaMarker
           arrow="→"
         />
-        <a slot="secondary-cta" href={`/tools/${featured.slug}/`} class="gt-btn gt-btn-secondary">Read {featured.title} review</a>
+        <a
+          slot="secondary-cta"
+          href={`/tools/${featured.slug}/`}
+          class="gt-btn gt-btn-secondary"
+          data-analytics-event="related_tool_click"
+          data-analytics-source-module="comparison_winner_card"
+          data-analytics-destination-type="tool"
+          data-analytics-destination-slug={`tools/${featured.slug}`}
+          data-analytics-tool-slug={featured.slug}
+          data-analytics-comparison-slug={slug}
+          data-analytics-position="top"
+          data-analytics-label={`Read ${featured.title} review`}
+        >Read {featured.title} review</a>
       </DecisionCard>
     )}
 
@@ -177,7 +189,18 @@ const rankLabel = featured ? `Winner: ${featured.title}` : undefined;
           const isAffiliate = Boolean(t.affiliate?.link);
           return (
             <li class={`gt-compare-row ${isFeatured ? 'is-featured' : ''}`}>
-              <a href={`/tools/${t.slug}/`} class="gt-compare-link">
+              <a
+                href={`/tools/${t.slug}/`}
+                class="gt-compare-link"
+                data-analytics-event="related_tool_click"
+                data-analytics-source-module="comparison_contenders"
+                data-analytics-destination-type="tool"
+                data-analytics-destination-slug={`tools/${t.slug}`}
+                data-analytics-tool-slug={t.slug}
+                data-analytics-comparison-slug={slug}
+                data-analytics-position="middle"
+                data-analytics-label={t.title}
+              >
                 <ToolLogo slug={t.slug} title={t.title} size={44} />
                 <div class="gt-compare-main">
                   <strong class="gt-compare-title">{t.title}{isFeatured && <span class="gt-compare-badge">Winner</span>}</strong>

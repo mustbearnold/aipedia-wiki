@@ -2,26 +2,27 @@
 type: tool
 slug: quillbot
 title: QuillBot
-tagline: AI paraphraser and essay toolkit with 200M+ registered users and nine rewrite modes.
+tagline: AI paraphraser and essay toolkit with 35M+ writers, nine rewrite modes, AI Detector, Humanizer, citations, and summaries.
 category: ai-writing
-company: Course Hero (QuillBot)
+company: Learneo, Inc. (QuillBot)
 url: https://quillbot.com
 pricing_model: freemium
-price_range: "$0-$19.95/month"
+price_range: "$0-$8.33/month billed annually in US checkout; varies by region"
 status: active
 launched: 2017-10
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-05-17
+last_verified: 2026-05-17
 update_frequency: monthly
 affiliate:
   has_program: true
   commission: "10% monthly / 15% semi-annual / 20% annual plans"
   cookie_days: 30
   network: PartnerStack
-  link: null
-  application_status: applied
+  link: https://try.quillbot.com/kh3m4q3r0ggy
+  application_status: approved
   applied_date: 2026-05-13
-  notes: "Applied via PartnerStack 2026-05-13; QuillBot affiliate program review time >5 days."
+  approved_date: 2026-05-17
+  notes: "Approved affiliate link supplied by site owner on 2026-05-17; QuillBot's affiliate page and PartnerStack listing confirm 10%-20% commissions, 30-day cookie tracking, and unique referral links for approved partners."
 scores:
   utility: 8
   value: 9
@@ -33,24 +34,24 @@ facts:
     source: "https://quillbot.com/premium"
     source_label: "QuillBot Premium"
     source_id: quillbot-premium
-    verified_at: 2026-05-03
+    verified_at: 2026-05-17
     volatility: medium
     confidence: high
   pricing_anchor:
-    value: "Premium pricing varies by billing interval, with annual pricing materially cheaper than monthly access."
-    source: "https://quillbot.com/upgrade"
-    source_label: "QuillBot Upgrade"
-    source_id: quillbot-pricing
-    verified_at: 2026-05-03
+    value: "QuillBot's public Premium page can surface Premium at $8.33 per month billed annually in US checkout; the Help Center says monthly, quarterly, and annual pricing can vary by region at checkout."
+    source: "https://quillbot.com/premium"
+    source_label: "QuillBot Premium"
+    source_id: quillbot-premium
+    verified_at: 2026-05-17
     volatility: high
     confidence: high
-    next_review_at: 2026-08-03
+    next_review_at: 2026-08-17
   paraphrasing_modes:
     value: "Premium unlocks broader paraphrasing and writing-tool capacity compared with the free product, so mode and word-count limits matter for heavy users."
     source: "https://quillbot.com/premium"
     source_label: "QuillBot Premium"
     source_id: quillbot-premium
-    verified_at: 2026-05-03
+    verified_at: 2026-05-17
     volatility: medium
     confidence: high
   academic_toolkit:
@@ -58,7 +59,7 @@ facts:
     source: "https://quillbot.com/premium"
     source_label: "QuillBot Premium"
     source_id: quillbot-premium
-    verified_at: 2026-05-03
+    verified_at: 2026-05-17
     volatility: medium
     confidence: high
   watch_out_for:
@@ -66,13 +67,21 @@ facts:
     source: "https://quillbot.com/premium"
     source_label: "QuillBot Premium"
     source_id: quillbot-premium
-    verified_at: 2026-05-03
+    verified_at: 2026-05-17
     volatility: high
     confidence: high
-    next_review_at: 2026-08-03
+    next_review_at: 2026-08-17
+  affiliate_program:
+    value: "QuillBot runs an affiliate program through PartnerStack with 10%-20% commission, a 30-day cookie window, cross-device tracking, and unique URLs for approved partners."
+    source: "https://quillbot.com/affiliates"
+    source_label: "QuillBot Affiliate Program"
+    source_id: quillbot-affiliate-program
+    verified_at: 2026-05-17
+    volatility: medium
+    confidence: high
 tags: [ai-writing, paraphrasing, grammar-checker, summarizer, plagiarism-checker, student-tools]
 seo_title: "QuillBot: Features, Pricing & Review (May 2026)"
-meta_description: "QuillBot is the dominant AI paraphraser with 200M+ users, nine rewrite modes, grammar, summarizer, Co-Writer, and plagiarism. Premium $8.33/mo annual or $19.95 monthly."
+meta_description: "QuillBot is the dominant AI paraphraser with 35M+ writers, nine rewrite modes, grammar, AI Detector, Humanizer, summarizer, citations, and US annual Premium at $8.33/mo."
 author: "aipedia.wiki Editorial"
 best_for:
   - paraphrasing existing text
@@ -84,7 +93,7 @@ not_best_for:
   - heavy plagiarism scanning volume
   - long-form drafting or ideation
 quick_answer: >-
-  QuillBot is the AI paraphraser of record, with 200M+ users and nine rewrite modes plus grammar, summarizer, citation generator, and Co-Writer. Premium is $8.33/mo annual or $19.95 monthly. Pick it for transforming text; skip it for zero-to-one drafting.
+  QuillBot is the AI paraphraser of record, with 35M+ writers and nine rewrite modes plus grammar, AI Detector, Humanizer, summarizer, citations, and Co-Writer. US annual Premium can show $8.33/mo, while checkout pricing varies by region. Pick it for transforming text; skip it for zero-to-one drafting.
 price_history:
   - date: 2026-04-17
     plan: "Premium"
@@ -93,13 +102,20 @@ price_history:
     source_label: "Source"
     source_id: quillbot-pricing
     note: "Annual rate ($99.95/yr). Monthly $19.95, semi-annual $79.95."
+  - date: 2026-05-17
+    plan: "Premium Annual"
+    price: "$8.33/mo billed annually"
+    source: "https://quillbot.com/premium"
+    source_label: "QuillBot Premium"
+    source_id: quillbot-premium
+    note: "QuillBot's help center says monthly, quarterly, and annual pricing can vary by region at checkout; the annual $8.33/mo price was visible in US-oriented Premium page text during this refresh."
 ---
 
 # QuillBot
 
-Course Hero's AI paraphrasing and writing suite. Built around a core paraphraser powered by QuillBot's proprietary models, with grammar checker, summarizer, Co-Writer, citation generator, plagiarism scan, and translator bundled in one account.
+QuillBot, a Learneo, Inc. business, is an AI paraphrasing and writing suite. Built around a core paraphraser powered by QuillBot's proprietary models, it bundles grammar checking, AI detection, humanizing, summarization, Co-Writer, citation generation, plagiarism prevention, and translation in one account.
 
-Passes 200 million registered users as of 2026. Acquired by Course Hero in 2021 and integrated into its student workflow lineup.
+QuillBot's current Premium page says it is trusted by over 35 million writers worldwide, while the PartnerStack program listing describes nearly 30 million monthly active users. Course Hero acquired QuillBot in 2021; the current footer identifies QuillBot as a Learneo, Inc. business.
 
 ## System Verdict
 
@@ -107,37 +123,37 @@ Passes 200 million registered users as of 2026. Acquired by Course Hero in 2021 
 >
 > **Skip it for zero-to-one drafting.** QuillBot transforms text; it does not generate from a blank prompt. Writers who need an essay, blog post, or marketing brief from scratch belong on [ChatGPT](/tools/chatgpt/) or [Claude](/tools/claude/).
 >
-> **Who pays which tier:** Free for casual paraphrasing (125-word cap per request), Premium $8.33/mo annual for unlimited access plus the plagiarism scan, Co-Writer, and full mode set.
+> **Who pays which tier:** Free for casual paraphrasing (125-word cap per request), US annual Premium at $8.33/mo for unlimited paraphrasing, nine modes, AI Detector, Humanizer, plagiarism prevention, Co-Writer, and higher summary limits; verify localized checkout pricing before buying.
 
 ## Key Facts
 
 | | |
 |---|---|
-| **Registered users** | 200M+ |
-| **Parent company** | Course Hero (acquired QuillBot in 2021) |
+| **Audience signal** | 35M+ writers worldwide; PartnerStack lists nearly 30M monthly active users |
+| **Parent company** | Learneo, Inc. (Course Hero acquired QuillBot in 2021) |
 | **Paraphrase modes** | 9 (Standard, Fluency, Formal, Academic, Simple, Creative, Expand, Shorten, Custom) |
 | **Co-Writer** | Integrated workspace for paraphrase, summarize, cite, and grammar in one doc |
-| **Plagiarism scan** | Premium only · 20 pages per month |
-| **Summarizer** | Free tier up to 1,200 words · unlimited on Premium |
+| **Plagiarism scan** | Premium only · 25,000 words/month |
+| **Summarizer** | Free tier up to 1,200 words · Premium up to 6,000 words plus custom summaries |
 | **Extensions** | Chrome, Edge, Word, Google Docs |
 | **Refund policy** | 3-day money-back guarantee on Premium |
 
-Every data point above was verified against vendor documentation on 2026-05-13. See Sources.
+Every data point above was verified against vendor documentation on 2026-05-17. See Sources.
 
 ## What it actually is
 
-One rewriting suite accessed through a web app and browser extensions. The paraphraser is the hub; grammar check, summarizer, Co-Writer, citation generator, and plagiarism scan run against the same input.
+One rewriting suite accessed through a web app, desktop/mobile apps, browser extensions, and document add-ins. The paraphraser is the hub; grammar check, AI Detector, Humanizer, summarizer, Co-Writer, citation generator, and plagiarism prevention run against the same input.
 
-The synonym slider sets rewrite intensity. The word flipper cycles alternatives for each highlighted change. Free users get Standard and Fluency modes with a 125-word cap per request; Premium unlocks the remaining seven modes, unlimited words, and the plagiarism scan.
+The synonym slider sets rewrite intensity. The word flipper cycles alternatives for each highlighted change. Free users get Standard and Fluency modes with a 125-word cap per request; Premium unlocks nine modes, unlimited paraphrasing, unlimited AI Detector, unlimited Humanizer, 25,000 plagiarism-check words per month, and higher summary limits.
 
-The moat is speed plus price. Premium at $8.33/mo annual undercuts [Grammarly](/tools/grammarly/) Pro at $12/mo and [Wordtune](/tools/wordtune/) Plus at $24.99/mo while offering mode-based paraphrase controls neither tool matches.
+The moat is speed plus price. US annual Premium at $8.33/mo is a low-friction upgrade for students and everyday writers who primarily need to transform existing text rather than generate new drafts from scratch, but QuillBot localizes pricing by region.
 
 ## When to pick QuillBot
 
 - **ESL writers refining phrasing.** Academic and Formal modes shift tone without wholesale rewrites. Fluency mode fixes naturalness fast.
 - **Students paraphrasing sources.** Word flipper plus synonym slider gives sentence-level control the assignment requires. Citation generator covers APA, MLA, Chicago.
 - **Writers rewriting existing text for a new audience.** Simple mode for accessibility, Creative for variety, Shorten for tight space constraints.
-- **Budget-conscious individual users.** $8.33/mo annual is the cheapest serious paraphrase tool on the market.
+- **Budget-conscious individual users.** The US $8.33/mo annual Premium price is a low-friction upgrade for heavy paraphrasing and proofreading use; localized checkout prices can differ.
 - **Quick summaries of long documents.** The summarizer handles up to 1,200 words free and runs unlimited on Premium.
 
 ## When to pick something else
@@ -150,28 +166,28 @@ The moat is speed plus price. Premium at $8.33/mo annual undercuts [Grammarly](/
 
 ## Pricing
 
-Subscription pricing via [quillbot.com/upgrade](https://quillbot.com/upgrade):
+Subscription pricing via [quillbot.com/premium](https://quillbot.com/premium):
 
 | Plan | Price | Key Features |
 |------|-------|--------------|
-| Free | $0 | 125-word cap per paraphrase · Standard and Fluency modes · summarizer up to 1,200 words · grammar check · Co-Writer |
-| Premium Monthly | $19.95/mo | Unlimited words · all 9 modes · plagiarism scan (20 pages/mo) · priority processing |
-| Premium Semi-Annual | $13.33/mo (effective) | Billed $79.95 every 6 months |
-| Premium Annual | $8.33/mo (effective) | Billed $99.95/year · 58% saving vs monthly |
+| Free | $0 | 125-word cap per paraphrase · Standard and Fluency modes · basic grammar · Humanizer up to 125 words, 6 uses/day · basic summaries · limited AI Detector |
+| Premium Annual | $8.33/mo billed annually in US checkout; localized prices vary | Unlimited paraphrasing · 9 modes · advanced grammar · unlimited AI Detector · unlimited Humanizer · plagiarism prevention · custom summaries · 25,000 plagiarism-check words/month |
+| Premium Monthly / Quarterly | Varies by region and checkout state | QuillBot's Help Center says monthly and quarterly options exist; verify the live checkout for the current local price before buying |
+| Team Plan | Volume / team path | Team usage metrics · user management · centralized billing · data control · priority support |
 
-*Prices verified 2026-05-13 via [quillbot.com/upgrade](https://quillbot.com/upgrade). All paid tiers share the same feature set. Premium carries a 3-day money-back guarantee.*
+*Prices verified 2026-05-17 via [quillbot.com/premium](https://quillbot.com/premium) and QuillBot's Help Center. Check the live checkout for current monthly, quarterly, regional, and team pricing before purchase.*
 
 ## Against the alternatives
 
-| | QuillBot Premium | Wordtune Plus | Grammarly Pro |
+| | QuillBot | Wordtune | Grammarly |
 |---|---|---|---|
-| **Best monthly price (annual)** | $8.33 | $9.99 (Unlimited annual) | $12.00 |
+| **Pricing posture** | Budget annual Premium | Rewrite-focused subscription | Broader editing suite |
 | **Paraphrase modes** | **9** | 7 (rewrite styles) | Rewrite via GrammarlyGO |
 | **Voice preservation** | Mode-dependent | **Strongest** | Mid |
-| **Plagiarism scan** | 20 pages/mo | None | 16B+ sources |
+| **Plagiarism scan** | 25,000 words/mo on Premium | Not the core pitch | Dedicated originality features |
 | **Summarizer** | Yes | Yes (Plus+) | Via GrammarlyGO |
 | **Citation generator** | **Yes** | No | No |
-| **Browser inline coverage** | Extension | Extension | 500,000+ sites |
+| **Browser inline coverage** | Extension and add-ins | Extension | Broad browser coverage |
 | **Best viewed as** | Mode-based paraphrase suite | Voice-preserving rewriter | Inline writing layer |
 
 ## Failure modes
@@ -179,19 +195,19 @@ Subscription pricing via [quillbot.com/upgrade](https://quillbot.com/upgrade):
 - **No generation from a blank prompt.** QuillBot needs source text. Users mistaking it for an LLM chatbot get no output until they paste existing content.
 - **Creative mode shifts meaning.** High-aggression rewrites change intent often enough that every output needs human review, especially on academic or technical source material.
 - **AI-detection exposure.** University AI-detection tooling flags QuillBot paraphrases regularly. Institutional policies ban the tool on graded work; verify before use.
-- **Plagiarism scan capped at 20 pages per month.** Heavy academic users exhaust the cap quickly. Turnitin or dedicated plagiarism tools cover higher volume.
+- **Plagiarism scan capped at 25,000 words per month.** Heavy academic users can exhaust the cap quickly. Turnitin or dedicated plagiarism tools cover higher volume.
 - **Grammar checker lags dedicated tools.** Catches basic errors but misses stylistic issues [Grammarly](/tools/grammarly/) flags. Treat it as a second-pass check, not the primary editor.
 - **Free tier 125-word cap pushes upgrades.** Any document longer than a paragraph hits the limit. The tier is a trial surface, not a working tool.
 - **Translator and citation generator are thin.** Both features work but trail dedicated tools on edge cases. Use for convenience, not authority.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [quillbot.com/upgrade](https://quillbot.com/upgrade) and [quillbot.com/premium](https://quillbot.com/premium).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-17 against [quillbot.com/premium](https://quillbot.com/premium), QuillBot's Help Center, QuillBot's affiliate page, and PartnerStack's QuillBot listing.
 
 ## FAQ
 
 **Is QuillBot free?**
-Yes. The free tier covers 125-word paraphrases in Standard and Fluency modes, grammar checking, summaries up to 1,200 words, Co-Writer, and citation generation. Premium at $8.33/mo annual ($99.95/yr) unlocks unlimited words, all nine modes, and the plagiarism scan ([quillbot.com/upgrade](https://quillbot.com/upgrade)).
+Yes. The free tier covers 125-word paraphrases in Standard and Fluency modes, basic grammar, basic summaries, limited AI Detector access, and limited Humanizer use. US annual Premium can show $8.33/mo billed annually, while QuillBot says checkout pricing varies by region; Premium unlocks unlimited paraphrasing, nine modes, advanced grammar, unlimited AI Detector, unlimited Humanizer, custom summaries, and plagiarism prevention ([quillbot.com/premium](https://quillbot.com/premium)).
 
 **What is QuillBot Co-Writer?**
 A workspace that combines paraphrase, summarize, grammar, and citation tools in one document editor. Free and paid users access it; Premium removes word caps and unlocks all paraphrase modes inside the workspace.
@@ -205,11 +221,15 @@ QuillBot transforms existing text through nine paraphrase modes and a word flipp
 **QuillBot vs ChatGPT for paraphrasing?**
 QuillBot gives mode-based controls and a word flipper that cycles alternatives per change. ChatGPT paraphrases through free-form prompts and generates from scratch. Writers who already have text and want targeted transformations get faster output from QuillBot; writers who need flexibility or generation stay on ChatGPT.
 
+**Does AiPedia have a QuillBot affiliate link?**
+Yes. QuillBot's affiliate page says the program uses PartnerStack, 30-day cookie tracking, and unique URLs for approved partners. AiPedia added an approved QuillBot tracking link on 2026-05-17. Affiliate status does not affect the rating or recommendation.
+
 ## Sources
 
-- [QuillBot Upgrade](https://quillbot.com/upgrade): Current Premium pricing across monthly, semi-annual, and annual billing
-- [QuillBot Premium](https://quillbot.com/premium): Feature differences between Free and Premium
-- [QuillBot FAQ](https://quillbot.com/blog/frequently-asked-questions/how-much-is-quillbot-premium/): Plan-level FAQ and refund policy
+- [QuillBot Premium](https://quillbot.com/premium): Current Premium annual pricing signal and Free/Premium feature differences
+- [QuillBot Premium pricing help](https://help.quillbot.com/hc/en-us/articles/36491424881943-What-is-the-price-of-QuillBot-Premium): Monthly, quarterly, annual, and regional checkout caveats
+- [QuillBot Affiliate Program](https://quillbot.com/affiliates): Affiliate commission range, cookie window, PartnerStack tracking, and approval flow
+- [PartnerStack QuillBot listing](https://market.partnerstack.com/page/quillbot): Offer structure and monthly-active-user claim
 - [Course Hero acquires QuillBot (TechCrunch, 2021)](https://techcrunch.com/2021/07/06/course-hero-acquires-quillbot/): Ownership history
 
 ## Related

@@ -79,7 +79,17 @@ const sourceHosts = Array.from(new Set(sources.map((source) => host(source.url))
           <span>Affected tools</span>
           <div>
             {tools.map((tool) => (
-              <a class="home-surface-pill-link" href={`/tools/${tool.slug}/`}>
+              <a
+                class="home-surface-pill-link"
+                href={`/tools/${tool.slug}/`}
+                data-analytics-event="news_related_tool_click"
+                data-analytics-source-module="news_impact_box"
+                data-analytics-destination-type="tool"
+                data-analytics-destination-slug={`tools/${tool.slug}`}
+                data-analytics-tool-slug={tool.slug}
+                data-analytics-position="top"
+                data-analytics-label={tool.title}
+              >
                 <ToolLogo slug={tool.slug} title={tool.title} size={22} />
                 <span>{tool.title}</span>
               </a>
@@ -92,7 +102,17 @@ const sourceHosts = Array.from(new Set(sources.map((source) => host(source.url))
           <span>Categories</span>
           <div>
             {categories.map((category) => (
-              <a class="home-surface-pill-link" href={`/categories/${category}/`}>{labelize(category)}</a>
+              <a
+                class="home-surface-pill-link"
+                href={`/categories/${category}/`}
+                data-analytics-event="related_category_click"
+                data-analytics-source-module="news_impact_box"
+                data-analytics-destination-type="category"
+                data-analytics-destination-slug={`categories/${category}`}
+                data-analytics-category-slug={category}
+                data-analytics-position="top"
+                data-analytics-label={labelize(category)}
+              >{labelize(category)}</a>
             ))}
           </div>
         </div>

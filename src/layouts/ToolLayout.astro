@@ -266,7 +266,19 @@ const tocItems = (headings ?? [])
         toolCtaMarker
         arrow="→"
       />
-      <a slot="secondary-cta" href="/compare/" class="gt-btn gt-btn-secondary">Compare alternatives</a>
+      <a
+        slot="secondary-cta"
+        href="/compare/"
+        class="gt-btn gt-btn-secondary"
+        data-analytics-event="internal_cta_click"
+        data-analytics-source-module="tool_decision_card"
+        data-analytics-destination-type="comparison"
+        data-analytics-destination-slug="compare"
+        data-analytics-tool-slug={toolSlug}
+        data-analytics-category-slug={catSlug}
+        data-analytics-position="top"
+        data-analytics-label="Compare alternatives"
+      >Compare alternatives</a>
     </DecisionCard>
 
     {quickAnswer && (
@@ -296,7 +308,16 @@ const tocItems = (headings ?? [])
         <span class="gt-jump-label">Jump to</span>
         <div class="gt-jump-list">
           {tocItems.map((h) => (
-            <a href={`#${h.slug}`} class="gt-jump-chip">{h.text}</a>
+            <a
+              href={`#${h.slug}`}
+              class="gt-jump-chip"
+              data-analytics-event="table_of_contents_click"
+              data-analytics-source-module="tool_jump_links"
+              data-analytics-destination-type="toc"
+              data-analytics-destination-slug={h.slug}
+              data-analytics-position="top"
+              data-analytics-label={h.text}
+            >{h.text}</a>
           ))}
         </div>
       </nav>
@@ -313,7 +334,17 @@ const tocItems = (headings ?? [])
             <p class="gt-toc-label">On this page</p>
             <ol class="gt-toc-list">
               {tocItems.map((h) => (
-                <li><a href={`#${h.slug}`}>{h.text}</a></li>
+                <li>
+                  <a
+                    href={`#${h.slug}`}
+                    data-analytics-event="table_of_contents_click"
+                    data-analytics-source-module="tool_desktop_toc"
+                    data-analytics-destination-type="toc"
+                    data-analytics-destination-slug={h.slug}
+                    data-analytics-position="sidebar"
+                    data-analytics-label={h.text}
+                  >{h.text}</a>
+                </li>
               ))}
             </ol>
           </div>

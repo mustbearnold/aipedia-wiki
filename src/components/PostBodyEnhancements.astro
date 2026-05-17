@@ -189,8 +189,8 @@ const rel = isAffiliate ? 'sponsored noopener' : 'noopener';
               cta.className = 't2-pricing-card-cta';
               cta.textContent = index === popularIdx ? `Start ${plan}` : `Check ${plan}`;
               cta.setAttribute('data-commercial-cta', '');
-              cta.dataset.ctaViewEvent = isAffiliate ? 'affiliate_cta_view' : 'official_cta_view';
-              cta.dataset.ctaClickEvent = isAffiliate ? 'affiliate_cta_click' : 'official_cta_click';
+              cta.dataset.ctaViewEvent = isAffiliate ? 'affiliate_cta_view' : 'tool_cta_view';
+              cta.dataset.ctaClickEvent = isAffiliate ? 'affiliate_click' : 'tool_cta_click';
               cta.dataset.ctaPageType = pageType;
               cta.dataset.ctaPageSlug = toolSlug;
               cta.dataset.ctaPlacement = 'tool_pricing_card';
@@ -202,6 +202,12 @@ const rel = isAffiliate ? 'sponsored noopener' : 'noopener';
               cta.dataset.ctaPriceRange = priceRange;
               cta.dataset.ctaAffiliateProgram = affiliateProgram || '';
               cta.dataset.ctaIsSticky = 'false';
+              cta.dataset.analyticsEvent = 'pricing_jump_click';
+              cta.dataset.analyticsSourceModule = 'tool_pricing_card';
+              cta.dataset.analyticsDestinationType = isAffiliate ? 'affiliate' : 'official';
+              cta.dataset.analyticsDestinationUrl = outboundUrl;
+              cta.dataset.analyticsToolSlug = toolSlug;
+              cta.dataset.analyticsPosition = 'inline';
               card.appendChild(cta);
             }
 
@@ -223,8 +229,8 @@ const rel = isAffiliate ? 'sponsored noopener' : 'noopener';
           link.className =
             'text-[var(--accent-primary)] no-underline hover:underline inline-flex items-center gap-1';
           link.setAttribute('data-commercial-cta', '');
-          link.dataset.ctaViewEvent = isAffiliate ? 'affiliate_cta_view' : 'official_cta_view';
-          link.dataset.ctaClickEvent = isAffiliate ? 'affiliate_cta_click' : 'official_cta_click';
+          link.dataset.ctaViewEvent = isAffiliate ? 'affiliate_cta_view' : 'tool_cta_view';
+          link.dataset.ctaClickEvent = isAffiliate ? 'affiliate_click' : 'tool_cta_click';
           link.dataset.ctaPageType = pageType;
           link.dataset.ctaPageSlug = toolSlug;
           link.dataset.ctaPlacement = 'tool_pricing_table';
@@ -236,6 +242,12 @@ const rel = isAffiliate ? 'sponsored noopener' : 'noopener';
           link.dataset.ctaPriceRange = priceRange;
           link.dataset.ctaAffiliateProgram = affiliateProgram || '';
           link.dataset.ctaIsSticky = 'false';
+          link.dataset.analyticsEvent = 'pricing_jump_click';
+          link.dataset.analyticsSourceModule = 'tool_pricing_table';
+          link.dataset.analyticsDestinationType = isAffiliate ? 'affiliate' : 'official';
+          link.dataset.analyticsDestinationUrl = outboundUrl;
+          link.dataset.analyticsToolSlug = toolSlug;
+          link.dataset.analyticsPosition = 'inline';
           // Move all child nodes of planCell into the link (preserves the "Most Popular" badge).
           while (planCell.firstChild) link.appendChild(planCell.firstChild);
           link.append(

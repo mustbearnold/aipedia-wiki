@@ -91,6 +91,73 @@ const toolsCount = allTools.filter(
     let activeIndex = -1;
     let currentRows = [];
     let lastQuery = '';
+    let searchTrackTimer;
+    let lastTrackedSearchKey = '';
+    const pendingSearchEvents = [];
+
+    function deviceType() {
+      const width = window.innerWidth || document.documentElement.clientWidth || 0;
+      if (width < 768) return 'mobile';
+      if (width < 1024) return 'tablet';
+      return 'desktop';
+    }
+
+    function destinationType(kind) {
+      const k = String(kind || '').toLowerCase();
+      if (k === 'compare') return 'comparison';
+      if (k === 'tool' || k === 'category' || k === 'news') return k;
+      return 'internal';
+    }
+
+    function slugFromHref(href) {
+      return String(href || '').replace(/^https?:\/\/[^/]+/i, '').replace(/^\/+|\/+$/g, '');
+    }
+
+    function trackSearchIntent(eventName, extra = {}) {
+      const payload = {
+        page_type: 'site',
+        page_slug: window.location.pathname.replace(/^\/+|\/+$/g, '') || 'home',
+        page_title: document.title || '',
+        source_module: 'global_search_modal',
+        search_surface: 'global_modal',
+        position: 'modal',
+        device_context: deviceType(),
+        viewport_width: window.innerWidth || document.documentElement.clientWidth || 0,
+        ...extra,
+      };
+      window.dispatchEvent(new CustomEvent('aipedia:search', { detail: { event: eventName, payload } }));
+      if (window.aipediaAnalytics) window.aipediaAnalytics.track(eventName, payload);
+      else if (window.gtag) window.gtag('event', eventName, payload);
+      else pendingSearchEvents.push({ name: eventName, payload });
+    }
+
+    function flushSearchEvents() {
+      if (!window.aipediaAnalytics && !window.gtag) return;
+      while (pendingSearchEvents.length) {
+        const item = pendingSearchEvents.shift();
+        if (window.aipediaAnalytics) window.aipediaAnalytics.track(item.name, item.payload);
+        else if (window.gtag) window.gtag('event', item.name, item.payload);
+      }
+    }
+
+    window.addEventListener('aipedia:analytics-ready', flushSearchEvents);
+
+    function scheduleQueryAnalytics(query, resultCount, source) {
+      const q = String(query || '').trim();
+      if (!q) return;
+      window.clearTimeout(searchTrackTimer);
+      searchTrackTimer = window.setTimeout(() => {
+        const key = `${q}|${resultCount}|${source}`;
+        if (key === lastTrackedSearchKey) return;
+        lastTrackedSearchKey = key;
+        trackSearchIntent('site_search_query', {
+          query: q,
+          result_count: resultCount,
+          search_source: source,
+          zero_results: resultCount === 0,
+        });
+      }, 350);
+    }
 
     // ── platform key hint ─────────────────────────────────────────
     const isMac = /Mac|iPhone|iPad|iPod/.test(navigator.platform);
@@ -211,8 +278,9 @@ const toolsCount = allTools.filter(
     function rowHtml(item, idx) {
       const meta = item.meta || '';
       const detail = item.detail || '';
+      const kind = item.kind || '';
       return `
-        <a class="sp-row" href="${escape(item.href)}" role="option" id="sp-row-${idx}" tabindex="-1" data-row-query="${escape(input.value)}">
+        <a class="sp-row" href="${escape(item.href)}" role="option" id="sp-row-${idx}" tabindex="-1" data-row-query="${escape(input.value)}" data-result-type="${escape(kind)}" data-result-title="${escape(item.title)}" data-result-url="${escape(item.href)}">
           ${leftCellHtml(item)}
           <span class="sp-row-main">
             <strong>${escape(item.title)}</strong>
@@ -298,6 +366,7 @@ const toolsCount = allTools.filter(
         `;
         currentRows = [];
         activeIndex = -1;
+        scheduleQueryAnalytics(query, 0, 'input');
         return;
       }
 
@@ -321,6 +390,7 @@ const toolsCount = allTools.filter(
       results.innerHTML = sections.join('');
       activeIndex = 0;
       setActive(0);
+      scheduleQueryAnalytics(query, totalCount, 'input');
     }
 
     function setActive(idx) {
@@ -336,13 +406,14 @@ const toolsCount = allTools.filter(
     }
 
     // ── open / close ──────────────────────────────────────────────
-    function open() {
+    function open(trigger = 'unknown') {
       modal.classList.add('is-visible');
       requestAnimationFrame(() => modal.classList.add('is-open'));
       document.body.style.overflow = 'hidden';
       load().then(() => { if (modal.classList.contains('is-visible')) renderResults(); });
       renderResults();
       requestAnimationFrame(() => input.focus({ preventScroll: true }));
+      trackSearchIntent('site_search_open', { trigger });
     }
     function close() {
       modal.classList.remove('is-open');
@@ -356,7 +427,7 @@ const toolsCount = allTools.filter(
     document.addEventListener('keydown', (e) => {
       if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
         e.preventDefault();
-        modal.classList.contains('is-visible') ? close() : open();
+        modal.classList.contains('is-visible') ? close() : open('keyboard');
         return;
       }
       if (!modal.classList.contains('is-visible')) return;
@@ -377,10 +448,20 @@ const toolsCount = allTools.filter(
           e.preventDefault();
           const href = rows[activeIndex].getAttribute('href');
           pushRecent(input.value);
+          trackResultOpen(rows[activeIndex], activeIndex, 'keyboard');
           window.location.href = href;
         } else if (input.value.trim()) {
           e.preventDefault();
           pushRecent(input.value);
+          trackSearchIntent('site_search_result_click', {
+            query: input.value.trim(),
+            result_type: 'full_search',
+            destination_type: 'search',
+            destination_url: `/search/?q=${encodeURIComponent(input.value.trim())}`,
+            destination_slug: 'search',
+            result_position: '',
+            open_source: 'keyboard',
+          });
           window.location.href = `/search/?q=${encodeURIComponent(input.value.trim())}`;
         }
       }
@@ -411,12 +492,33 @@ const toolsCount = allTools.filter(
         return;
       }
       const row = e.target.closest('.sp-row');
-      if (row) pushRecent(input.value);
+      if (row) {
+        pushRecent(input.value);
+        const rows = Array.from(results.querySelectorAll('.sp-row'));
+        trackResultOpen(row, rows.indexOf(row), 'click');
+      }
     });
 
     // Open from the existing trigger buttons
-    document.getElementById('search-trigger')?.addEventListener('click', open);
-    document.getElementById('search-trigger-mobile')?.addEventListener('click', open);
+    function trackResultOpen(row, index, openSource) {
+      if (!row) return;
+      const href = row.dataset.resultUrl || row.getAttribute('href') || '';
+      const resultType = row.dataset.resultType || 'internal';
+      trackSearchIntent('site_search_result_click', {
+        query: row.dataset.rowQuery || input?.value.trim() || lastQuery,
+        result_position: index >= 0 ? index + 1 : '',
+        result_type: resultType,
+        result_title: row.dataset.resultTitle || row.textContent.trim(),
+        result_url: href,
+        destination_type: destinationType(resultType),
+        destination_url: href,
+        destination_slug: slugFromHref(href),
+        open_source: openSource,
+      });
+    }
+
+    document.getElementById('search-trigger')?.addEventListener('click', () => open('header'));
+    document.getElementById('search-trigger-mobile')?.addEventListener('click', () => open('mobile_header'));
 
     // Pre-load the search index after the page is idle so the first
     // click on the search trigger renders instantly instead of showing

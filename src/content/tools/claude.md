@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2023-03
-last_updated: 2026-05-15
-last_verified: 2026-05-15
+last_updated: 2026-05-17
+last_verified: 2026-05-17
 update_frequency: monthly
 seo_title: "Claude: Features, Pricing & Review (2026)"
 meta_description: "Claude runs Opus 4.7 as flagship with 1M context, Claude Code, Claude Design, Claude Cowork, and new May 2026 Small Business workflows. Agent SDK and claude -p move to separate credits June 15."
@@ -221,6 +221,14 @@ price_history:
     source_label: "Claude pricing"
     verified_at: 2026-05-13
     note: "Re-verified. Enterprise published pricing is now $20/seat plus API-rate usage rather than purely custom."
+  - date: 2026-05-14
+    plan: "PwC + Gates partnerships"
+    price: "No public plan price change"
+    source: "/news/2026-05-14-anthropic-pwc-gates-claude-expansion/"
+    source_id: aipedia-news
+    source_label: "AIpedia coverage"
+    verified_at: 2026-05-17
+    note: "PwC will roll out Claude Code and Cowork and train 30,000 professionals; Anthropic and the Gates Foundation committed $200M in grants, Claude credits, and technical support over four years."
 ---
 
 # Claude
@@ -231,6 +239,7 @@ Anthropic's AI assistant. **Opus 4.7** is the flagship as of **April 16, 2026**,
 
 ## Recent developments
 
+- **May 14:** [Anthropic expanded Claude through a PwC enterprise rollout and a $200M Gates Foundation partnership](/news/2026-05-14-anthropic-pwc-gates-claude-expansion/). PwC will roll out Claude Code and Cowork starting with U.S. teams and train 30,000 professionals; the Gates work funds Claude credits, grants, and technical support across health, life sciences, education, and economic mobility.
 - **May 14:** [Anthropic split Claude Agent SDK and `claude -p` into separate monthly credits](/news/2026-05-14-anthropic-claude-agent-sdk-credit-split/). Starting June 15, programmatic usage leaves normal subscription limits and draws from credits worth $20 on Pro, $100 on Max 5x, and $200 on Max 20x before API-rate extra usage. Interactive Claude Code and Claude chat remain on normal subscription limits.
 - **May 13:** [Anthropic launched Claude for Small Business](/news/2026-05-13-anthropic-claude-small-business-launch/) with QuickBooks, PayPal, HubSpot, Canva, Docusign, Google Workspace, and Microsoft 365 connectors. It packages 15 ready-to-run agentic workflows across finance, operations, sales, marketing, HR, and customer service through Claude Cowork.
 - **May 14:** [Mythos, Claude Opus 4.7, and GPT-5.5-Cyber drove a "vulnpocalypse"](/news/2026-05-14-vulnpocalypse-mythos-gpt-cyber-mdash-patch-tuesday/) of new CVEs in May. Palo Alto Networks found 75 holes / 26 CVEs in its own codebase with help from Mythos and Opus 4.7; Microsoft's MDASH agentic system contributed to a record 30-critical-CVE Patch Tuesday; Mozilla shipped 423 Firefox bugs in April, 20x its prior monthly average. Project Glasswing members got patch lead time; the broader market has 3-5 months before parity.
@@ -382,7 +391,7 @@ Prices verified 2026-05-13 via [Claude pricing](https://claude.com/pricing), [An
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [Claude pricing](https://claude.com/pricing), Anthropic's [pricing docs](https://platform.claude.com/docs/en/about-claude/pricing), [model docs](https://platform.claude.com/docs/en/about-claude/models), the [Opus 4.7 release coverage](https://venturebeat.com/technology/anthropic-releases-claude-opus-4-7-narrowly-retaking-lead-for-most-powerful-generally-available-llm), the [May 12 Claude for Legal launch](/news/2026-05-12-anthropic-claude-for-legal-plugins-microsoft-365/), the [May 10 reported Akamai cloud-deal coverage](/news/2026-05-10-anthropic-akamai-cloud-deal/), the [May 9 FIS financial-crimes agent coverage](/news/2026-05-09-anthropic-fis-financial-crimes-agent/), the [May 6 Managed Agents update](/news/2026-05-06-claude-managed-agents-dreaming-outcomes-orchestration/), the [May 7 GitHub Copilot Claude model notices](/news/2026-05-07-github-copilot-gpt41-claude-sonnet4-deprecations/), the [May 7 Copilot Rubber Duck update](/news/2026-05-07-github-copilot-rubber-duck-cross-model-review/), the [NEC partnership](/news/2026-04-24-anthropic-nec-ai-engineering-workforce/), and [reported Google-Anthropic investment coverage](/news/2026-04-24-google-anthropic-40b-investment/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-17 against [Claude pricing](https://claude.com/pricing), Anthropic's [pricing docs](https://platform.claude.com/docs/en/about-claude/pricing), [model docs](https://platform.claude.com/docs/en/about-claude/models), the [Opus 4.7 release coverage](https://venturebeat.com/technology/anthropic-releases-claude-opus-4-7-narrowly-retaking-lead-for-most-powerful-generally-available-llm), the [May 14 PwC/Gates expansion](/news/2026-05-14-anthropic-pwc-gates-claude-expansion/), the [May 14 Agent SDK credit split](/news/2026-05-14-anthropic-claude-agent-sdk-credit-split/), the [May 12 Claude for Legal launch](/news/2026-05-12-anthropic-claude-for-legal-plugins-microsoft-365/), the [May 10 reported Akamai cloud-deal coverage](/news/2026-05-10-anthropic-akamai-cloud-deal/), the [May 9 FIS financial-crimes agent coverage](/news/2026-05-09-anthropic-fis-financial-crimes-agent/), the [May 6 Managed Agents update](/news/2026-05-06-claude-managed-agents-dreaming-outcomes-orchestration/), the [May 7 GitHub Copilot Claude model notices](/news/2026-05-07-github-copilot-gpt41-claude-sonnet4-deprecations/), the [May 7 Copilot Rubber Duck update](/news/2026-05-07-github-copilot-rubber-duck-cross-model-review/), the [NEC partnership](/news/2026-04-24-anthropic-nec-ai-engineering-workforce/), and [reported Google-Anthropic investment coverage](/news/2026-04-24-google-anthropic-40b-investment/).
 
 ## FAQ
 
