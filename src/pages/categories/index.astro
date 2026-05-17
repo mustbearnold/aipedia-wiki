@@ -97,7 +97,16 @@ const categoryItems = sorted.map((category: any) => ({
       <ul class="gt-cat-cards">
         {sorted.map((c: any) => (
           <li class="gt-cat-card">
-            <a href={`/categories/${c.slug}/`}>
+            <a
+              href={`/categories/${c.slug}/`}
+              data-analytics-event="related_category_click"
+              data-analytics-source-module="categories_index"
+              data-analytics-destination-type="category"
+              data-analytics-destination-slug={`categories/${c.slug}`}
+              data-analytics-category-slug={c.slug}
+              data-analytics-position="middle"
+              data-analytics-label={c.title}
+            >
               <div class="gt-cat-card-head">
                 <strong class="gt-cat-card-title">{c.title}</strong>
                 <span class="gt-cat-card-count">{c.toolCount} {c.toolCount === 1 ? 'tool' : 'tools'}</span>

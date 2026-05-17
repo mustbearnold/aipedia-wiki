@@ -100,10 +100,10 @@ const topStory = sorted[0];
     />
 
     <nav class="gt-news-filters" aria-label="Filter by severity">
-      <button type="button" class="gt-chip is-active" data-filter="all">All <span>{sorted.length}</span></button>
-      {severityCounts.breaking && <button type="button" class="gt-chip gt-chip-breaking" data-filter="breaking">Breaking <span>{severityCounts.breaking}</span></button>}
-      {severityCounts.major && <button type="button" class="gt-chip gt-chip-major" data-filter="major">Major <span>{severityCounts.major}</span></button>}
-      {severityCounts.minor && <button type="button" class="gt-chip gt-chip-minor" data-filter="minor">Minor <span>{severityCounts.minor}</span></button>}
+      <button type="button" class="gt-chip is-active" data-filter="all" data-analytics-event="category_filter_click" data-analytics-source-module="news_index_filters" data-analytics-category-slug="all" data-analytics-position="top" data-analytics-label="All news">All <span>{sorted.length}</span></button>
+      {severityCounts.breaking && <button type="button" class="gt-chip gt-chip-breaking" data-filter="breaking" data-analytics-event="category_filter_click" data-analytics-source-module="news_index_filters" data-analytics-category-slug="breaking" data-analytics-position="top" data-analytics-label="Breaking news">Breaking <span>{severityCounts.breaking}</span></button>}
+      {severityCounts.major && <button type="button" class="gt-chip gt-chip-major" data-filter="major" data-analytics-event="category_filter_click" data-analytics-source-module="news_index_filters" data-analytics-category-slug="major" data-analytics-position="top" data-analytics-label="Major news">Major <span>{severityCounts.major}</span></button>}
+      {severityCounts.minor && <button type="button" class="gt-chip gt-chip-minor" data-filter="minor" data-analytics-event="category_filter_click" data-analytics-source-module="news_index_filters" data-analytics-category-slug="minor" data-analytics-position="top" data-analytics-label="Minor news">Minor <span>{severityCounts.minor}</span></button>}
     </nav>
 
     <div id="gt-news-list">
@@ -113,7 +113,16 @@ const topStory = sorted[0];
           <ol class="gt-news-cards">
             {g.items.map((n) => (
               <li class={`gt-news-card gt-news-${n.severity}`} data-severity={n.severity}>
-                <a href={`/news/${n.slug}/`}>
+                <a
+                  href={`/news/${n.slug}/`}
+                  data-analytics-event="internal_cta_click"
+                  data-analytics-source-module="news_index"
+                  data-analytics-destination-type="news"
+                  data-analytics-destination-slug={`news/${n.slug}`}
+                  data-analytics-destination-url={`/news/${n.slug}/`}
+                  data-analytics-position="middle"
+                  data-analytics-label={n.title}
+                >
                   <div class="gt-news-card-meta">
                     <time class="gt-news-date">{prettyDate(n.date)}</time>
                     <span class={`gt-news-sev gt-news-sev-${n.severity}`}>{n.severity}</span>
@@ -160,7 +169,7 @@ const topStory = sorted[0];
       flex: 0 0 auto;
       display: inline-flex; align-items: center; gap: 6px;
       padding: 6px 12px;
-      min-height: 36px;
+      min-height: 44px;
       border-radius: 999px;
       background: var(--gt-surface);
       border: 1px solid var(--gt-line);

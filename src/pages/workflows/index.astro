@@ -59,7 +59,16 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
       <ol class="gt-wf-cards">
         {sorted.map((w: any) => (
           <li class="gt-wf-card">
-            <a href={`/workflows/${w.slug}/`}>
+            <a
+              href={`/workflows/${w.slug}/`}
+              data-analytics-event="internal_cta_click"
+              data-analytics-source-module="workflows_index"
+              data-analytics-destination-type="workflow"
+              data-analytics-destination-slug={`workflows/${w.slug}`}
+              data-analytics-destination-url={`/workflows/${w.slug}/`}
+              data-analytics-position="middle"
+              data-analytics-label={w.title}
+            >
               <strong class="gt-wf-title">{w.title}</strong>
               {w.description && <p class="gt-wf-desc">{w.description}</p>}
               {w.lastVerified && <span class="gt-wf-verified">Verified {w.lastVerified}</span>}

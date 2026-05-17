@@ -142,7 +142,7 @@
   .compare-tray-clear,
   .compare-tray-open,
   [data-compare-add] {
-    min-height: 36px;
+    min-height: 44px;
     border-radius: 8px;
     font: inherit;
     font-size: 12px;
@@ -335,7 +335,7 @@
         btn.classList.toggle('is-compared', selected);
         btn.setAttribute('aria-pressed', selected ? 'true' : 'false');
         const label = btn.querySelector('[data-compare-label]');
-        if (label) label.textContent = selected ? 'In compare' : 'Compare';
+        if (label) label.textContent = selected ? 'In compare' : (btn.dataset.compareLabelDefault || 'Compare');
         const marker = btn.querySelector('.t2-cta-arrow');
         if (marker) marker.textContent = selected ? '✓' : '+';
       });

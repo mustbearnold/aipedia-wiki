@@ -141,6 +141,21 @@ const nonAffiliateSummary = nonAffiliateStack.length > 0
 const leadToolCopy = leadTool
   ? `Buy ${leadTool.title} first when ${roleFor(leadTool.slug, leadTool.title).toLowerCase()} is the bottleneck. Add the rest only after it saves time every week.`
   : 'Buy the workflow by bottleneck, not by subscribing to every tool at once.';
+const fallbackRelated: RelatedItem[] = [
+  ...stack.slice(0, 2).map((tool) => ({
+    href: `/tools/${tool.slug}/`,
+    title: `${tool.title} review`,
+    description: tool.tagline || 'Check the current review before adding it to your stack.',
+    kind: 'tool' as const,
+  })),
+  ...(stack.length >= 2 ? [{
+    href: `/compare/build/?tools=${stack.slice(0, 2).map((tool) => tool.slug).join(',')}`,
+    title: `Compare ${stack[0].title} and ${stack[1].title}`,
+    description: 'Open a custom comparison for the first tools in this workflow.',
+    kind: 'comparison' as const,
+  }] : []),
+].slice(0, 3);
+const relatedItems = related.length > 0 ? related : fallbackRelated;
 ---
 
 <BaseLayout
@@ -252,6 +267,16 @@ const leadToolCopy = leadTool
                     arrow="→"
                   />
                   <a href={`/tools/${t.slug}/`} class="gt-btn gt-btn-secondary wf-stack-secondary">Read review</a>
+                  <button
+                    type="button"
+                    class="gt-btn gt-btn-secondary wf-stack-secondary"
+                    data-compare-add={t.slug}
+                    data-compare-label-default="Add to compare"
+                    data-compare-source-module="workflow_stack_card"
+                    data-compare-position="middle"
+                    aria-pressed="false"
+                    aria-label={`Add ${t.title} to compare`}
+                  ><span data-compare-label>Add to compare</span></button>
                 </div>
                 {t.price_range && (
                   <p class="wf-stack-card-price"><span class="wf-stack-card-price-label">Price:</span> {t.price_range}</p>
@@ -277,8 +302,8 @@ const leadToolCopy = leadTool
     </article>
     <BodyEnhancements tableLabel={`${title} workflow table`} />
 
-    {related.length > 0 && (
-      <RelatedReading items={related} heading="Keep reading" />
+    {relatedItems.length > 0 && (
+      <RelatedReading items={relatedItems} heading="Keep reading" />
     )}
 
     <FAQAccordionScript />
@@ -461,6 +486,7 @@ const leadToolCopy = leadTool
       flex: 0 0 auto;
       font-size: 13px;
       padding: 8px 12px;
+      min-height: 44px;
     }
     .wf-stack-card-price {
       font-size: 12px;

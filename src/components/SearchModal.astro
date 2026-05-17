@@ -5,7 +5,7 @@
  * Opens on Ctrl/Cmd+K (and the header search button). Loads
  * /api/home-search.json on first open, caches in memory for the
  * session. Renders a single ranked list when typing, grouped by
- * kind (Tools / Comparisons / Guides / News). When the input is
+ * kind (Tools / Comparisons / Guides / Answers / Workflows / News). When the input is
  * empty, shows recent searches from localStorage plus the top
  * popular tools.
  *
@@ -35,7 +35,7 @@ const toolsCount = allTools.filter(
           inputmode="search"
           autocomplete="off"
           spellcheck="false"
-          placeholder={`Search ${toolsCount} tools, comparisons, news`}
+          placeholder={`Search ${toolsCount} tools, guides, answers, comparisons`}
           aria-label="Search"
           aria-autocomplete="list"
           aria-controls="search-results"
@@ -80,8 +80,13 @@ const toolsCount = allTools.filter(
     const RESULT_GROUPS = [
       { kind: 'Tool',     label: 'Tools',       max: 6 },
       { kind: 'Compare',  label: 'Comparisons', max: 4 },
+      { kind: 'Guide',    label: 'Guides',      max: 4 },
+      { kind: 'Answer',   label: 'Answers',     max: 3 },
+      { kind: 'Workflow', label: 'Workflows',   max: 3 },
       { kind: 'Category', label: 'Categories',  max: 3 },
+      { kind: 'Trend',    label: 'Trends',      max: 3 },
       { kind: 'News',     label: 'News',        max: 3 },
+      { kind: 'Company',  label: 'Companies',   max: 2 },
     ];
     const POPULAR_TOOL_LIMIT = 6;
 
@@ -105,7 +110,7 @@ const toolsCount = allTools.filter(
     function destinationType(kind) {
       const k = String(kind || '').toLowerCase();
       if (k === 'compare') return 'comparison';
-      if (k === 'tool' || k === 'category' || k === 'news') return k;
+      if (k === 'tool' || k === 'category' || k === 'guide' || k === 'news' || k === 'workflow' || k === 'answer' || k === 'trend' || k === 'company') return k;
       return 'internal';
     }
 
@@ -280,7 +285,7 @@ const toolsCount = allTools.filter(
       const detail = item.detail || '';
       const kind = item.kind || '';
       return `
-        <a class="sp-row" href="${escape(item.href)}" role="option" id="sp-row-${idx}" tabindex="-1" data-row-query="${escape(input.value)}" data-result-type="${escape(kind)}" data-result-title="${escape(item.title)}" data-result-url="${escape(item.href)}">
+        <a class="sp-row" href="${escape(item.href)}" role="option" id="sp-row-${idx}" tabindex="-1" data-row-query="${escape(input.value)}" data-result-type="${escape(kind)}" data-result-title="${escape(item.title)}" data-result-url="${escape(item.href)}" data-analytics-source-module="global_search_modal" data-analytics-destination-type="${escape(destinationType(kind))}" data-analytics-destination-slug="${escape(slugFromHref(item.href))}" data-analytics-destination-url="${escape(item.href)}" data-analytics-position="modal" data-analytics-label="${escape(item.title)}">
           ${leftCellHtml(item)}
           <span class="sp-row-main">
             <strong>${escape(item.title)}</strong>

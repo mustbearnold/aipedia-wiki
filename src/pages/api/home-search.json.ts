@@ -2,6 +2,7 @@ import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 import { categoryLabel, isActiveToolStatus } from '../../utils/tool-metadata';
 import logoManifest from '../../data/logo-manifest.json';
+import { ANSWER_ITEMS } from '../../data/answers';
 
 export const prerender = true;
 
@@ -29,6 +30,10 @@ export const GET: APIRoute = async () => {
   const allComparisons = await getCollection('comparisons');
   const allNews = await getCollection('news');
   const allCategories = await getCollection('categories');
+  const allGuides = await getCollection('use-cases');
+  const allWorkflows = await getCollection('workflows');
+  const allTrends = await getCollection('trends');
+  const allCompanies = await getCollection('companies');
 
   const activeTools = allTools.filter((tool) => tool.data.type === 'tool' && isActiveToolStatus(tool.data.status));
 
@@ -113,7 +118,90 @@ export const GET: APIRoute = async () => {
           comparison.data.title,
           comparison.data.category,
           comparison.data.winner,
+          comparison.data.meta_description,
           ...comparedTools,
+        ]),
+      };
+    }),
+    ...allGuides
+      .filter((guide) => guide.data.noindex !== true)
+      .map((guide) => {
+        const slug = entrySlug(guide);
+        const mentionedTools = guide.data.tools_mentioned ?? [];
+
+        return {
+          kind: 'Guide',
+          title: guide.data.title,
+          href: `/guides/${slug}/`,
+          meta: 'Buyer guide',
+          detail: trimDetail(guide.data.meta_description ?? guide.data.description, 125),
+          badge: guide.data.last_verified ? 'Verified' : '',
+          priority: 50,
+          search: buildHaystack([
+            guide.data.title,
+            slug,
+            guide.data.meta_description,
+            guide.data.description,
+            ...mentionedTools,
+          ]),
+        };
+      }),
+    ...ANSWER_ITEMS.map((answer) => ({
+      kind: 'Answer',
+      title: answer.q,
+      href: `/answers/${answer.slug}/`,
+      meta: answer.group,
+      detail: trimDetail(answer.a, 125),
+      badge: 'Fast answer',
+      priority: 49,
+      search: buildHaystack([
+        answer.q,
+        answer.a,
+        answer.slug,
+        answer.group,
+      ]),
+    })),
+    ...allWorkflows.map((workflow) => {
+      const slug = entrySlug(workflow);
+      const stack = workflow.data.stack ?? [];
+      const mentionedTools = workflow.data.tools_mentioned ?? [];
+
+      return {
+        kind: 'Workflow',
+        title: workflow.data.title,
+        href: `/workflows/${slug}/`,
+        meta: stack.length ? `${stack.length} tools` : 'Workflow',
+        detail: trimDetail(workflow.data.meta_description ?? workflow.data.description, 125),
+        badge: 'Workflow',
+        priority: 48,
+        search: buildHaystack([
+          workflow.data.title,
+          slug,
+          workflow.data.meta_description,
+          workflow.data.description,
+          ...stack,
+          ...mentionedTools,
+        ]),
+      };
+    }),
+    ...allTrends.map((trend) => {
+      const slug = entrySlug(trend);
+
+      return {
+        kind: 'Trend',
+        title: trend.data.title,
+        href: `/trends/${slug}/`,
+        meta: trend.data.timeframe ?? 'Trend analysis',
+        detail: trimDetail(trend.data.meta_description ?? trend.data.description, 125),
+        badge: trend.data.impact ? `${trend.data.impact} impact` : '',
+        priority: 47,
+        search: buildHaystack([
+          trend.data.title,
+          slug,
+          trend.data.timeframe,
+          trend.data.impact,
+          trend.data.meta_description,
+          trend.data.description,
         ]),
       };
     }),
@@ -133,6 +221,8 @@ export const GET: APIRoute = async () => {
           news.data.summary,
           news.data.severity,
           String(news.data.date),
+          ...(news.data.affects ?? []),
+          ...(news.data.categories ?? []),
         ]),
       };
     }),
@@ -151,6 +241,28 @@ export const GET: APIRoute = async () => {
           category.data.title,
           slug,
           category.data.description,
+        ]),
+      };
+    }),
+    ...allCompanies.map((company) => {
+      const slug = entrySlug(company);
+
+      return {
+        kind: 'Company',
+        title: company.data.title,
+        href: `/companies/${slug}/`,
+        meta: company.data.company_type ? `${company.data.company_type} company` : 'Company profile',
+        detail: trimDetail(company.data.meta_description, 120),
+        badge: company.data.key_products?.length ? `${company.data.key_products.length} products` : '',
+        priority: 38,
+        search: buildHaystack([
+          company.data.title,
+          slug,
+          company.data.company_type,
+          company.data.hq,
+          company.data.funding,
+          company.data.meta_description,
+          ...(company.data.key_products ?? []),
         ]),
       };
     }),

@@ -139,6 +139,21 @@ const heroRankLabel = sortedTools.length > 1
   : 'Buyer guide';
 
 const robots = noindex ? 'noindex,nofollow' : undefined;
+const fallbackRelated: RelatedItem[] = [
+  ...sortedTools.slice(0, 2).map((tool) => ({
+    href: `/tools/${tool.slug}/`,
+    title: `${tool.title} review`,
+    description: tool.tagline || 'Read the full score, pricing signal, watch-outs, and alternatives.',
+    kind: 'tool' as const,
+  })),
+  ...(sortedTools.length >= 2 ? [{
+    href: `/compare/build/?tools=${sortedTools.slice(0, 2).map((tool) => tool.slug).join(',')}`,
+    title: `Compare ${sortedTools[0].title} and ${sortedTools[1].title}`,
+    description: 'Open a custom comparison with the leading tools from this guide.',
+    kind: 'comparison' as const,
+  }] : []),
+].slice(0, 3);
+const relatedItems = related.length > 0 ? related : fallbackRelated;
 ---
 
 <BaseLayout
@@ -336,6 +351,16 @@ const robots = noindex ? 'noindex,nofollow' : undefined;
                       guideCtaMarker
                       arrow="→"
                     />
+                    <button
+                      type="button"
+                      class="gt-btn gt-btn-secondary gt-tool-cta gt-tool-compare"
+                      data-compare-add={t.slug}
+                      data-compare-label-default="Add to compare"
+                      data-compare-source-module="guide_ranked_tools"
+                      data-compare-position="middle"
+                      aria-pressed="false"
+                      aria-label={`Add ${t.title} to compare`}
+                    ><span data-compare-label>Add to compare</span></button>
                   </div>
                 )}
               </li>
@@ -354,8 +379,8 @@ const robots = noindex ? 'noindex,nofollow' : undefined;
     </article>
     <BodyEnhancements tableLabel={`${title} comparison table`} />
 
-    {related.length > 0 && (
-      <RelatedReading items={related} heading="Keep reading" />
+    {relatedItems.length > 0 && (
+      <RelatedReading items={relatedItems} heading="Keep reading" />
     )}
 
     <FAQAccordionScript />
@@ -432,9 +457,12 @@ const robots = noindex ? 'noindex,nofollow' : undefined;
     }
     .gt-tool-cta {
       width: 100%;
-      min-height: 40px;
+      min-height: 44px;
       padding: 8px 14px;
       font-size: 13px;
+    }
+    .gt-tool-compare {
+      margin-top: 8px;
     }
     @media (min-width: 600px) {
       .gt-tool-cta-row { padding: 0 16px 14px; }

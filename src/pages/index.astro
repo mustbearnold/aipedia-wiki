@@ -222,7 +222,18 @@ function newsDateFmt(iso: string): string {
           showDisclosure={false}
           arrow="→"
         />
-        <a slot="secondary-cta" href={`/tools/${topTool.slug}/`} class="gt-btn gt-btn-secondary">Read {topTool.title} review</a>
+        <a
+          slot="secondary-cta"
+          href={`/tools/${topTool.slug}/`}
+          class="gt-btn gt-btn-secondary"
+          data-analytics-event="related_tool_click"
+          data-analytics-source-module="home_top_tool_decision"
+          data-analytics-destination-type="tool"
+          data-analytics-destination-slug={`tools/${topTool.slug}`}
+          data-analytics-tool-slug={topTool.slug}
+          data-analytics-position="top"
+          data-analytics-label={`Read ${topTool.title} review`}
+        >Read {topTool.title} review</a>
       </DecisionCard>
     )}
 
@@ -238,7 +249,7 @@ function newsDateFmt(iso: string): string {
           type="search"
           autocomplete="off"
           spellcheck="false"
-          placeholder="Search 253 AI tools, comparisons, news"
+          placeholder={`Search ${toolCount} tools, guides, comparisons, news`}
           role="combobox"
           aria-autocomplete="list"
           aria-expanded="false"
@@ -282,6 +293,70 @@ function newsDateFmt(iso: string): string {
         let failed = false;
         let activeIndex = -1;
         let openMatches = [];
+        let searchTrackTimer;
+        let lastTrackedSearchKey = '';
+        const pendingSearchEvents = [];
+
+        function deviceType() {
+          const width = window.innerWidth || document.documentElement.clientWidth || 0;
+          if (width < 768) return 'mobile';
+          if (width < 1024) return 'tablet';
+          return 'desktop';
+        }
+
+        function destinationType(kind) {
+          const k = String(kind || '').toLowerCase();
+          if (k === 'compare') return 'comparison';
+          if (k === 'tool' || k === 'category' || k === 'guide' || k === 'news' || k === 'workflow' || k === 'answer' || k === 'trend' || k === 'company') return k;
+          return 'internal';
+        }
+
+        function slugFromHref(href) {
+          return String(href || '').replace(/^https?:\/\/[^/]+/i, '').replace(/^\/+|\/+$/g, '') || 'home';
+        }
+
+        function trackSearchIntent(eventName, extra = {}) {
+          const payload = {
+            page_type: 'home',
+            page_slug: 'home',
+            page_title: document.title || '',
+            source_module: 'home_search',
+            search_surface: 'homepage_typeahead',
+            position: 'top',
+            device_context: deviceType(),
+            viewport_width: window.innerWidth || document.documentElement.clientWidth || 0,
+            ...extra,
+          };
+          window.dispatchEvent(new CustomEvent('aipedia:search', { detail: { event: eventName, payload } }));
+          if (window.aipediaAnalytics) window.aipediaAnalytics.track(eventName, payload);
+          else if (window.gtag) window.gtag('event', eventName, payload);
+          else pendingSearchEvents.push({ name: eventName, payload });
+        }
+
+        window.addEventListener('aipedia:analytics-ready', () => {
+          while (pendingSearchEvents.length) {
+            const event = pendingSearchEvents.shift();
+            if (window.aipediaAnalytics) window.aipediaAnalytics.track(event.name, event.payload);
+            else if (window.gtag) window.gtag('event', event.name, event.payload);
+          }
+        });
+
+        function scheduleSearchAnalytics(value, resultCount, source) {
+          const query = String(value || '').trim();
+          if (!query) return;
+          window.clearTimeout(searchTrackTimer);
+          searchTrackTimer = window.setTimeout(() => {
+            const key = `${query}|${resultCount}|${source}`;
+            if (key === lastTrackedSearchKey) return;
+            lastTrackedSearchKey = key;
+            trackSearchIntent('site_search_query', {
+              query,
+              result_count: resultCount,
+              search_source: source,
+              zero_results: resultCount === 0,
+            });
+          }, 350);
+        }
 
         function normalize(v) {
           return String(v || '').toLowerCase().trim();
@@ -381,6 +456,7 @@ function newsDateFmt(iso: string): string {
           const hasQuery = terms(input.value).length > 0;
           heading.textContent = hasQuery ? 'Top matches' : 'Popular tools';
           count.textContent = `${matches.length} shown`;
+          if (hasQuery) scheduleSearchAnalytics(input.value, matches.length, 'home_typeahead');
           if (!matches.length) {
             results.innerHTML = '<div class="gt-search-empty">No matches. Press Search to check every page.</div>';
             open();
@@ -406,7 +482,7 @@ function newsDateFmt(iso: string): string {
             return `<span class="gt-search-result-kind">${escape(m.kind || '')}</span>`;
           }
           results.innerHTML = matches.map((m, i) => `
-            <a class="gt-search-result" href="${escape(m.href)}" role="option" id="gt-search-result-${i}" tabindex="-1">
+            <a class="gt-search-result" href="${escape(m.href)}" role="option" id="gt-search-result-${i}" tabindex="-1" data-row-query="${escape(input.value)}" data-result-type="${escape(m.kind || '')}" data-result-title="${escape(m.title)}" data-result-url="${escape(m.href)}">
               ${homeLeftCell(m)}
               <strong class="gt-search-result-title">${escape(m.title)}</strong>
               ${m.detail ? `<span class="gt-search-result-detail">${escape(m.detail)}</span>` : ''}
@@ -432,6 +508,7 @@ function newsDateFmt(iso: string): string {
           } else if (e.key === 'Enter') {
             if (activeIndex >= 0 && items[activeIndex]) {
               e.preventDefault();
+              trackResultOpen(items[activeIndex], activeIndex, 'keyboard');
               window.location.href = items[activeIndex].getAttribute('href');
             }
           } else if (e.key === 'Escape') {
@@ -450,23 +527,61 @@ function newsDateFmt(iso: string): string {
           const items = Array.from(results.querySelectorAll('.gt-search-result'));
           setActive(items.indexOf(item));
         });
+
+        results.addEventListener('click', (e) => {
+          const item = e.target.closest('.gt-search-result');
+          if (!item) return;
+          const items = Array.from(results.querySelectorAll('.gt-search-result'));
+          trackResultOpen(item, items.indexOf(item), 'click');
+        });
+
+        function trackResultOpen(row, index, openSource) {
+          const href = row.dataset.resultUrl || row.getAttribute('href') || '';
+          const resultType = row.dataset.resultType || 'internal';
+          trackSearchIntent('site_search_result_click', {
+            query: row.dataset.rowQuery || input.value.trim(),
+            result_position: index >= 0 ? index + 1 : '',
+            result_type: resultType,
+            result_title: row.dataset.resultTitle || row.textContent.trim(),
+            result_url: href,
+            destination_type: destinationType(resultType),
+            destination_url: href,
+            destination_slug: slugFromHref(href),
+            open_source: openSource,
+          });
+        }
+
+        root.addEventListener('submit', () => {
+          trackSearchIntent('site_search_result_click', {
+            query: input.value.trim(),
+            result_type: 'full_search',
+            destination_type: 'search',
+            destination_url: `/search/?q=${encodeURIComponent(input.value.trim())}`,
+            destination_slug: 'search',
+            open_source: 'submit',
+          });
+        });
+
+        input.addEventListener('focus', () => {
+          trackSearchIntent('site_search_open', { trigger: 'homepage_input' });
+        }, { once: true });
       })();
     </script>
 
     <section class="gt-stats" aria-label="Catalog summary">
-      <a href="/tools/" class="gt-stat">
+      <a href="/tools/" class="gt-stat" data-analytics-event="internal_cta_click" data-analytics-source-module="home_stats" data-analytics-destination-type="tool" data-analytics-destination-slug="tools" data-analytics-destination-url="/tools/" data-analytics-position="top" data-analytics-label="Tools scored">
         <strong>{toolCount}</strong>
         <span>tools scored</span>
       </a>
-      <a href="/compare/" class="gt-stat">
+      <a href="/compare/" class="gt-stat" data-analytics-event="internal_cta_click" data-analytics-source-module="home_stats" data-analytics-destination-type="comparison" data-analytics-destination-slug="compare" data-analytics-destination-url="/compare/" data-analytics-position="top" data-analytics-label="Comparisons">
         <strong>{comparisonCount}</strong>
         <span>comparisons</span>
       </a>
-      <a href="/news/" class="gt-stat">
+      <a href="/news/" class="gt-stat" data-analytics-event="internal_cta_click" data-analytics-source-module="home_stats" data-analytics-destination-type="news" data-analytics-destination-slug="news" data-analytics-destination-url="/news/" data-analytics-position="top" data-analytics-label="News items">
         <strong>{newsCount}</strong>
         <span>news items</span>
       </a>
-      <a href="/guides/" class="gt-stat">
+      <a href="/guides/" class="gt-stat" data-analytics-event="internal_cta_click" data-analytics-source-module="home_stats" data-analytics-destination-type="guide" data-analytics-destination-slug="guides" data-analytics-destination-url="/guides/" data-analytics-position="top" data-analytics-label="Buyer guides">
         <strong>{guideCount}</strong>
         <span>buyer guides</span>
       </a>
@@ -479,7 +594,18 @@ function newsDateFmt(iso: string): string {
           const tone = t.score >= 8 ? 'positive' : t.score >= 6.5 ? 'neutral' : 'negative';
           return (
             <li class={`gt-tool-row gt-tool-row-${tone}`}>
-              <a href={`/tools/${t.slug}/`} class="gt-tool-link">
+              <a
+                href={`/tools/${t.slug}/`}
+                class="gt-tool-link"
+                data-analytics-event="related_tool_click"
+                data-analytics-source-module="home_top_tools"
+                data-analytics-destination-type="tool"
+                data-analytics-destination-slug={`tools/${t.slug}`}
+                data-analytics-tool-slug={t.slug}
+                data-analytics-category-slug={t.category}
+                data-analytics-position="middle"
+                data-analytics-label={t.title}
+              >
                 <span class="gt-tool-rank">{i + 1}</span>
                 <ToolLogo slug={t.slug} title={t.title} size={40} />
                 <div class="gt-tool-main">
@@ -495,7 +621,7 @@ function newsDateFmt(iso: string): string {
           );
         })}
       </ol>
-      <a href="/tools/" class="gt-link-row">See all {toolCount} tools <span aria-hidden="true">→</span></a>
+      <a href="/tools/" class="gt-link-row" data-analytics-event="internal_cta_click" data-analytics-source-module="home_top_tools" data-analytics-destination-type="tool" data-analytics-destination-slug="tools" data-analytics-destination-url="/tools/" data-analytics-position="middle" data-analytics-label={`See all ${toolCount} tools`}>See all {toolCount} tools <span aria-hidden="true">→</span></a>
     </section>
 
     <section class="gt-categories" aria-labelledby="gt-cat-h">
@@ -503,7 +629,16 @@ function newsDateFmt(iso: string): string {
       <ul class="gt-cat-grid">
         {categories.map((c: any) => (
           <li class="gt-cat-card">
-            <a href={`/categories/${c.slug}/`}>
+            <a
+              href={`/categories/${c.slug}/`}
+              data-analytics-event="related_category_click"
+              data-analytics-source-module="home_categories"
+              data-analytics-destination-type="category"
+              data-analytics-destination-slug={`categories/${c.slug}`}
+              data-analytics-category-slug={c.slug}
+              data-analytics-position="middle"
+              data-analytics-label={c.label}
+            >
               <strong>{c.label}</strong>
               <span>{c.count} {c.count === 1 ? 'tool' : 'tools'}</span>
               {c.topScore > 0 && <span class="gt-cat-score">Top {c.topScore}/10</span>}
@@ -518,7 +653,16 @@ function newsDateFmt(iso: string): string {
       <ol class="gt-news-list">
         {latestNews.map((n) => (
           <li class={`gt-news-row gt-news-${n.severity}`}>
-            <a href={`/news/${n.slug}/`}>
+            <a
+              href={`/news/${n.slug}/`}
+              data-analytics-event="internal_cta_click"
+              data-analytics-source-module="home_latest_news"
+              data-analytics-destination-type="news"
+              data-analytics-destination-slug={`news/${n.slug}`}
+              data-analytics-destination-url={`/news/${n.slug}/`}
+              data-analytics-position="middle"
+              data-analytics-label={n.title}
+            >
               <time class="gt-news-date">{newsDateFmt(n.date)}</time>
               <strong class="gt-news-title">{n.title}</strong>
               {n.summary && <span class="gt-news-summary">{n.summary}</span>}
@@ -526,7 +670,7 @@ function newsDateFmt(iso: string): string {
           </li>
         ))}
       </ol>
-      <a href="/news/" class="gt-link-row">All news <span aria-hidden="true">→</span></a>
+      <a href="/news/" class="gt-link-row" data-analytics-event="internal_cta_click" data-analytics-source-module="home_latest_news" data-analytics-destination-type="news" data-analytics-destination-slug="news" data-analytics-destination-url="/news/" data-analytics-position="middle" data-analytics-label="All news">All news <span aria-hidden="true">→</span></a>
     </section>
 
     <TrustPanel

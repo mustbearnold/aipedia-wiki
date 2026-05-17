@@ -9,7 +9,7 @@ interface RelatedLink {
   href: string;
   title: string;
   description?: string;
-  kind?: 'tool' | 'guide' | 'workflow' | 'comparison';
+  kind?: 'tool' | 'guide' | 'workflow' | 'comparison' | 'news' | 'trend' | 'category' | 'answer' | 'company' | 'internal';
 }
 
 interface Props {
@@ -26,11 +26,24 @@ function eventFor(kind?: string): string {
   if (kind === 'tool') return 'related_tool_click';
   if (kind === 'comparison') return 'related_comparison_click';
   if (kind === 'guide') return 'related_guide_click';
+  if (kind === 'category') return 'related_category_click';
   return 'internal_cta_click';
 }
 
 function slugFromHref(href: string): string {
   return href.replace(/^https?:\/\/[^/]+/i, '').replace(/^\/+|\/+$/g, '');
+}
+
+function labelFor(kind?: string): string {
+  if (kind === 'tool') return 'Tool review';
+  if (kind === 'workflow') return 'Workflow';
+  if (kind === 'comparison') return 'Comparison';
+  if (kind === 'news') return 'News';
+  if (kind === 'trend') return 'Trend';
+  if (kind === 'category') return 'Category';
+  if (kind === 'answer') return 'Answer';
+  if (kind === 'company') return 'Company';
+  return 'Guide';
 }
 ---
 
@@ -41,20 +54,17 @@ function slugFromHref(href: string): string {
       {validItems.map((item) => (
         <a
           href={item.href}
-          class={`rr-card rr-card-${item.kind ?? 'guide'}`}
+          class={`rr-card rr-card-${item.kind ?? 'internal'}`}
           data-analytics-event={eventFor(item.kind)}
           data-analytics-source-module="related_reading"
-          data-analytics-destination-type={item.kind ?? 'guide'}
+          data-analytics-destination-type={item.kind ?? 'internal'}
           data-analytics-destination-slug={slugFromHref(item.href)}
           data-analytics-destination-url={item.href}
           data-analytics-position="bottom"
           data-analytics-label={item.title}
         >
           <div class="rr-card-kind">
-            {item.kind === 'tool' ? 'Tool review' :
-             item.kind === 'workflow' ? 'Workflow' :
-             item.kind === 'comparison' ? 'Comparison' :
-             'Guide'}
+            {labelFor(item.kind)}
           </div>
           <strong class="rr-card-title">{item.title}</strong>
           {item.description && <p class="rr-card-desc">{item.description}</p>}

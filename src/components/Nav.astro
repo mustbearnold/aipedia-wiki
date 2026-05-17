@@ -47,7 +47,7 @@ const activeAllTools = isActive(['/tools/']);
       <a href="/compare/" class:list={['nav-link', activeCompare && 'nav-link-active']} data-astro-prefetch="viewport">Compare</a>
       <a href="/news/" class:list={['nav-link', activeNews && 'nav-link-active']} data-astro-prefetch="viewport">News</a>
 
-      <button id="search-trigger" type="button" class="nav-search">
+      <button id="search-trigger" type="button" class="nav-search" aria-label={`Search ${liveToolCount} AI tools`}>
         <svg class="nav-search-icon" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
         </svg>

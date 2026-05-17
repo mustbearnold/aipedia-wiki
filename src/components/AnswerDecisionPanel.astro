@@ -15,12 +15,51 @@ interface Props {
 }
 
 const { verdict, winnerLabel, winner, bestFor, avoidIf, nextStep, links } = Astro.props;
+
+function destinationType(href: string): string {
+  const path = href.replace(/^https?:\/\/[^/]+/i, '').replace(/^\/+/, '');
+  const first = path.split('/')[0] || 'internal';
+  if (first === 'compare') return 'comparison';
+  if (first === 'tools') return 'tool';
+  if (first === 'categories') return 'category';
+  if (first === 'guides') return 'guide';
+  if (first === 'news') return 'news';
+  if (first === 'workflows') return 'workflow';
+  if (first === 'answers') return 'answer';
+  if (first === 'trends') return 'trend';
+  return href.startsWith('http') ? 'external' : 'internal';
+}
+
+function slugFromHref(href: string): string {
+  return href.replace(/^https?:\/\/[^/]+/i, '').replace(/^\/+|\/+$/g, '') || 'home';
+}
+
+const pageSlug = Astro.url.pathname.replace(/^\/+|\/+$/g, '') || 'answers';
 ---
 
 <section class="mb-[var(--site-section-gap)] rounded-[var(--site-radius-card)] border border-[rgba(249,115,22,0.28)] bg-[rgba(249,115,22,0.055)] p-[var(--site-card-padding)]" aria-label="Quick buyer decision">
   <div class="mb-[var(--site-card-gap)]">
     <p class="m-0 text-[11px] font-bold uppercase tracking-[0.14em] text-[var(--accent-primary)]">Quick verdict</p>
     <p class="mt-2 mb-0 text-lg font-bold leading-snug text-[var(--text-primary)]">{verdict}</p>
+  </div>
+  <div class="mb-[var(--site-card-gap)] flex flex-col gap-2 sm:flex-row sm:flex-wrap">
+    {links.map((link) => (
+      <a
+        href={link.href}
+        class="inline-flex min-h-11 items-center justify-center rounded-[var(--site-radius-button)] border border-[rgba(249,115,22,0.45)] bg-[rgba(249,115,22,0.14)] px-4 py-2 text-sm font-bold text-[var(--accent-primary)] no-underline transition hover:border-[rgba(249,115,22,0.75)] hover:bg-[rgba(249,115,22,0.2)]"
+        data-analytics-event="internal_cta_click"
+        data-analytics-page-type="answer"
+        data-analytics-page-slug={pageSlug}
+        data-analytics-source-module="answer_decision_panel"
+        data-analytics-destination-type={destinationType(link.href)}
+        data-analytics-destination-slug={slugFromHref(link.href)}
+        data-analytics-destination-url={link.href}
+        data-analytics-position="top"
+        data-analytics-label={link.label}
+      >
+        {link.label}
+      </a>
+    ))}
   </div>
   <div class="grid gap-3 sm:grid-cols-2">
     <div class="rounded-[var(--site-radius-card)] border border-[var(--border)] bg-[var(--bg-card)] p-4">
@@ -39,16 +78,6 @@ const { verdict, winnerLabel, winner, bestFor, avoidIf, nextStep, links } = Astr
       <p class="m-0 text-[10px] font-bold uppercase tracking-[0.12em] text-[var(--accent-success)]">Next click</p>
       <p class="mt-1 mb-0 text-sm leading-relaxed text-[var(--text-secondary)]">{nextStep}</p>
     </div>
-  </div>
-  <div class="mt-[var(--site-card-gap)] flex flex-col gap-2 sm:flex-row sm:flex-wrap">
-    {links.map((link) => (
-      <a
-        href={link.href}
-        class="inline-flex min-h-11 items-center justify-center rounded-[var(--site-radius-button)] border border-[rgba(249,115,22,0.45)] bg-[rgba(249,115,22,0.14)] px-4 py-2 text-sm font-bold text-[var(--accent-primary)] no-underline transition hover:border-[rgba(249,115,22,0.75)] hover:bg-[rgba(249,115,22,0.2)]"
-      >
-        {link.label}
-      </a>
-    ))}
   </div>
   <p class="mt-3 mb-0 text-xs leading-relaxed text-[var(--text-muted)]">
     AiPedia may earn from some outbound tool links. Recommendations stay editorial and source-backed.

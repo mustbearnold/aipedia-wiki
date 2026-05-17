@@ -83,20 +83,68 @@ const itemList = scoredTools.map((t) => ({
       rankLabel={`${scoredTools.length} tools · ${categoryOptions.length} categories`}
     />
 
+    <form class="gt-tools-search" role="search" onsubmit="return false">
+      <label for="tools-search-input" class="gt-sr-only">Search tools</label>
+      <input
+        id="tools-search-input"
+        type="search"
+        inputmode="search"
+        autocomplete="off"
+        spellcheck="false"
+        placeholder={`Search ${scoredTools.length} tools`}
+        data-tools-search
+      />
+    </form>
+
     <nav class="gt-cat-chips" aria-label="Filter by category">
-      <button type="button" class="gt-chip is-active" data-filter="all">All <span>{scoredTools.length}</span></button>
+      <button
+        type="button"
+        class="gt-chip is-active"
+        data-filter="all"
+        data-analytics-event="category_filter_click"
+        data-analytics-source-module="tools_index_filters"
+        data-analytics-category-slug="all"
+        data-analytics-position="top"
+        data-analytics-label="All tools"
+      >All <span>{scoredTools.length}</span></button>
       {categoryOptions.map((c) => (
-        <button type="button" class="gt-chip" data-filter={c.slug}>{c.label} <span>{c.count}</span></button>
+        <button
+          type="button"
+          class="gt-chip"
+          data-filter={c.slug}
+          data-analytics-event="category_filter_click"
+          data-analytics-source-module="tools_index_filters"
+          data-analytics-category-slug={c.slug}
+          data-analytics-position="top"
+          data-analytics-label={c.label}
+        >{c.label} <span>{c.count}</span></button>
       ))}
     </nav>
 
     <section class="gt-tools-index">
+      <p class="gt-tools-count"><strong data-visible-count>{scoredTools.length}</strong> tools shown</p>
       <ol class="gt-tool-list" id="gt-tool-list">
         {scoredTools.map((t, i) => {
           const tone = t.score >= 8 ? 'positive' : t.score >= 6.5 ? 'neutral' : 'negative';
           return (
-            <li class={`gt-tool-row gt-tool-row-${tone}`} data-category={t.category}>
-              <a href={`/tools/${t.slug}/`} class="gt-tool-link">
+            <li
+              class={`gt-tool-row gt-tool-row-${tone}`}
+              data-tool-card
+              data-category={t.category}
+              data-search-text={`${t.title} ${t.tagline} ${t.category} ${t.categoryLabel} ${t.price}`.toLowerCase()}
+            >
+              <a
+                href={`/tools/${t.slug}/`}
+                class="gt-tool-link"
+                data-analytics-event="related_tool_click"
+                data-analytics-source-module="tools_index"
+                data-analytics-destination-type="tool"
+                data-analytics-destination-slug={`tools/${t.slug}`}
+                data-analytics-tool-slug={t.slug}
+                data-analytics-category-slug={t.category}
+                data-analytics-position="middle"
+                data-analytics-label={t.title}
+              >
                 <span class="gt-tool-rank">{i + 1}</span>
                 <ToolLogo slug={t.slug} title={t.title} size={40} />
                 <div class="gt-tool-main">
@@ -112,31 +160,68 @@ const itemList = scoredTools.map((t) => ({
           );
         })}
       </ol>
+      <div class="gt-tools-empty" data-tools-empty hidden>
+        <p>No tools match that search and category. Try another keyword or choose All.</p>
+      </div>
     </section>
   </div>
 
   <script is:inline>
     (function () {
       var chips = document.querySelectorAll('.gt-chip[data-filter]');
-      var rows = document.querySelectorAll('#gt-tool-list .gt-tool-row');
+      var rows = Array.from(document.querySelectorAll('#gt-tool-list .gt-tool-row'));
+      var input = document.querySelector('[data-tools-search]');
+      var count = document.querySelector('[data-visible-count]');
+      var empty = document.querySelector('[data-tools-empty]');
+      var activeFilter = 'all';
+      function applyFilters() {
+        var terms = String(input && input.value || '').trim().toLowerCase().split(/\s+/).filter(Boolean);
+        var visible = 0;
+        rows.forEach(function (row) {
+          var categoryMatch = activeFilter === 'all' || row.dataset.category === activeFilter;
+          var haystack = row.getAttribute('data-search-text') || '';
+          var searchMatch = terms.every(function (term) { return haystack.indexOf(term) !== -1; });
+          var show = categoryMatch && searchMatch;
+          row.hidden = !show;
+          if (show) visible++;
+        });
+        if (count) count.textContent = String(visible);
+        if (empty) empty.hidden = visible !== 0;
+      }
       chips.forEach(function (chip) {
         chip.addEventListener('click', function () {
-          var filter = chip.dataset.filter;
+          activeFilter = chip.dataset.filter || 'all';
           chips.forEach(function (c) { c.classList.remove('is-active'); });
           chip.classList.add('is-active');
-          rows.forEach(function (row) {
-            if (filter === 'all' || row.dataset.category === filter) {
-              row.style.display = '';
-            } else {
-              row.style.display = 'none';
-            }
-          });
+          applyFilters();
         });
       });
+      if (input) input.addEventListener('input', applyFilters);
     })();
   </script>
 
   <style>
+    .gt-sr-only {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+    }
+    .gt-tools-search { margin: 0 0 12px; }
+    .gt-tools-search input {
+      width: 100%;
+      min-height: 48px;
+      border-radius: var(--gt-radius-sm);
+      border: 1px solid var(--gt-line-strong);
+      background: var(--gt-surface);
+      color: var(--gt-fg);
+      font: inherit;
+      font-size: 15px;
+      padding: 0 14px;
+    }
+    .gt-tools-search input:focus {
+      outline: none;
+      border-color: var(--gt-accent);
+      background: var(--gt-surface-2);
+    }
     .gt-cat-chips {
       display: flex; gap: 6px;
       overflow-x: auto;
@@ -150,7 +235,7 @@ const itemList = scoredTools.map((t) => ({
       flex: 0 0 auto;
       display: inline-flex; align-items: center; gap: 6px;
       padding: 6px 12px;
-      min-height: 36px;
+      min-height: 44px;
       border-radius: 999px;
       background: var(--gt-surface);
       border: 1px solid var(--gt-line);
@@ -170,6 +255,15 @@ const itemList = scoredTools.map((t) => ({
     .gt-chip span { font-size: 11px; opacity: 0.75; font-variant-numeric: tabular-nums; }
 
     .gt-tools-index { margin-bottom: 40px; }
+    .gt-tools-count {
+      margin: 0 0 12px;
+      color: var(--gt-subtle);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .gt-tools-count strong { color: var(--gt-fg); font-variant-numeric: tabular-nums; }
     .gt-tool-list {
       list-style: none; padding: 0; margin: 0;
       display: flex; flex-direction: column; gap: 8px;
@@ -219,5 +313,14 @@ const itemList = scoredTools.map((t) => ({
     }
     .gt-tool-score { font-size: 16px; font-weight: 700; }
     .gt-tool-score-slash { font-size: 11px; color: var(--gt-subtle); font-weight: 500; }
+    .gt-tools-empty {
+      margin-top: 16px;
+      padding: 18px;
+      border-radius: var(--gt-radius-sm);
+      border: 1px solid var(--gt-line);
+      background: var(--gt-surface);
+      color: var(--gt-muted);
+      font-size: 14px;
+    }
   </style>
 </BaseLayout>

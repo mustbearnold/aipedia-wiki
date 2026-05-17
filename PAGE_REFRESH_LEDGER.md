@@ -27,35 +27,23 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-08 | /tool-finder/ | Static page | No | git | src/pages/tool-finder.astro |
 | 2026-05-09 | /answers/best-ai-chatbot-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-chatbot-2026.astro |
 | 2026-05-09 | /answers/best-ai-coding-tool-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-coding-tool-2026.astro |
-| 2026-05-09 | /answers/best-ai-for-students/ | Static page | Yes | page metadata | src/pages/answers/best-ai-for-students.astro |
 | 2026-05-09 | /answers/best-ai-for-writing-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-for-writing-2026.astro |
 | 2026-05-09 | /answers/best-ai-image-generator-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-image-generator-2026.astro |
 | 2026-05-09 | /answers/best-ai-video-generator-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-video-generator-2026.astro |
 | 2026-05-09 | /answers/best-ai-voice-generator-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-voice-generator-2026.astro |
 | 2026-05-09 | /answers/best-free-ai-tools-2026/ | Static page | Yes | page metadata | src/pages/answers/best-free-ai-tools-2026.astro |
 | 2026-05-09 | /answers/chatgpt-alternatives-2026/ | Static page | Yes | page metadata | src/pages/answers/chatgpt-alternatives-2026.astro |
-| 2026-05-09 | /answers/chatgpt-vs-claude-which-is-better/ | Static page | Yes | page metadata | src/pages/answers/chatgpt-vs-claude-which-is-better.astro |
-| 2026-05-09 | /answers/is-cursor-worth-it/ | Static page | Yes | page metadata | src/pages/answers/is-cursor-worth-it.astro |
-| 2026-05-09 | /answers/is-midjourney-worth-it/ | Static page | Yes | page metadata | src/pages/answers/is-midjourney-worth-it.astro |
 | 2026-05-09 | /llms-full.txt | Crawl surface | No | git | src/pages/llms-full.txt.ts |
 | 2026-05-09 | /llms.txt | Crawl surface | No | git | src/pages/llms.txt.ts |
 | 2026-05-10 | /news/rss.xml | Crawl surface | No | git | src/pages/news/rss.xml.ts |
 | 2026-05-10 | /privacy/ | Static page | Yes | git | src/pages/privacy.astro |
 | 2026-05-10 | /robots.txt | Crawl surface | No | git | public/robots.txt |
 | 2026-05-10 | /terms/ | Static page | Yes | git | src/pages/terms.astro |
-| 2026-05-12 | /answers/ | Static page | Yes | git | src/pages/answers/index.astro |
-| 2026-05-12 | /categories/ | Static page | Yes | git | src/pages/categories/index.astro |
 | 2026-05-12 | /companies/ | Static page | Yes | git | src/pages/companies/index.astro |
 | 2026-05-12 | /dead/ | Static page | Yes | git | src/pages/dead/index.astro |
 | 2026-05-12 | /demo-godtier/ | Static page | Yes | git | src/pages/demo-godtier.astro |
-| 2026-05-12 | /explore/ | Static page | Yes | git | src/pages/explore/index.astro |
 | 2026-05-12 | /glossary/ | Static page | Yes | git | src/pages/glossary/index.astro |
-| 2026-05-12 | /guides/ | Static page | Yes | git | src/pages/guides/index.astro |
 | 2026-05-12 | /reports/ | Static page | Yes | git | src/pages/reports/index.astro |
-| 2026-05-12 | /tools/ | Static page | Yes | git | src/pages/tools/index.astro |
-| 2026-05-12 | /trends/ | Static page | Yes | git | src/pages/trends/index.astro |
-| 2026-05-12 | /workflows/ | Static page | Yes | git | src/pages/workflows/index.astro |
-| 2026-05-13 | / | Static page | Yes | git | src/pages/index.astro |
 | 2026-05-13 | /404/ | Static page | No | git | src/pages/404.astro |
 | 2026-05-13 | /about/ | Static page | Yes | git | src/pages/about/index.astro |
 | 2026-05-13 | /about/scoring/ | Static page | Yes | git | src/pages/about/scoring.astro |
@@ -444,6 +432,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /tools/ahrefs/ | Tool | Yes | frontmatter | src/content/tools/ahrefs.md |
 | 2026-05-13 | /tools/aider/ | Tool | Yes | frontmatter | src/content/tools/aider.md |
 | 2026-05-13 | /tools/aiva/ | Tool | Yes | frontmatter | src/content/tools/aiva.md |
+| 2026-05-13 | /tools/amazon-q/ | Tool | Yes | frontmatter | src/content/tools/amazon-q.md |
 | 2026-05-13 | /tools/amplemarket/ | Tool | Yes | frontmatter | src/content/tools/amplemarket.md |
 | 2026-05-13 | /tools/antigravity/ | Tool | Yes | frontmatter | src/content/tools/antigravity.md |
 | 2026-05-13 | /tools/anythingllm/ | Tool | Yes | frontmatter | src/content/tools/anythingllm.md |
@@ -484,12 +473,16 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /tools/cursor/ | Tool | Yes | frontmatter | src/content/tools/cursor.md |
 | 2026-05-13 | /tools/d-id/ | Tool | Yes | frontmatter | src/content/tools/d-id.md |
 | 2026-05-13 | /tools/decktopus/ | Tool | Yes | frontmatter | src/content/tools/decktopus.md |
+| 2026-05-13 | /tools/deepgram/ | Tool | Yes | frontmatter | src/content/tools/deepgram.md |
 | 2026-05-13 | /tools/deepl/ | Tool | Yes | frontmatter | src/content/tools/deepl.md |
 | 2026-05-13 | /tools/deepseek/ | Tool | Yes | frontmatter | src/content/tools/deepseek.md |
+| 2026-05-13 | /tools/descript/ | Tool | Yes | frontmatter | src/content/tools/descript.md |
 | 2026-05-13 | /tools/devin/ | Tool | Yes | frontmatter | src/content/tools/devin.md |
 | 2026-05-13 | /tools/dext/ | Tool | Yes | frontmatter | src/content/tools/dext.md |
 | 2026-05-13 | /tools/dia/ | Tool | Yes | frontmatter | src/content/tools/dia.md |
 | 2026-05-13 | /tools/doubao/ | Tool | Yes | frontmatter | src/content/tools/doubao.md |
+| 2026-05-13 | /tools/dust/ | Tool | Yes | frontmatter | src/content/tools/dust.md |
+| 2026-05-13 | /tools/eightfold-ai/ | Tool | Yes | frontmatter | src/content/tools/eightfold-ai.md |
 | 2026-05-13 | /tools/elevenlabs/ | Tool | Yes | frontmatter | src/content/tools/elevenlabs.md |
 | 2026-05-13 | /tools/elicit/ | Tool | Yes | frontmatter | src/content/tools/elicit.md |
 | 2026-05-13 | /tools/exa/ | Tool | Yes | frontmatter | src/content/tools/exa.md |
@@ -527,6 +520,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /tools/hex/ | Tool | Yes | frontmatter | src/content/tools/hex.md |
 | 2026-05-13 | /tools/heygen/ | Tool | Yes | frontmatter | src/content/tools/heygen.md |
 | 2026-05-13 | /tools/higgsfield/ | Tool | Yes | frontmatter | src/content/tools/higgsfield.md |
+| 2026-05-13 | /tools/hireez/ | Tool | Yes | frontmatter | src/content/tools/hireez.md |
 | 2026-05-13 | /tools/hugging-face/ | Tool | Yes | frontmatter | src/content/tools/hugging-face.md |
 | 2026-05-13 | /tools/humata/ | Tool | Yes | frontmatter | src/content/tools/humata.md |
 | 2026-05-13 | /tools/hume-ai/ | Tool | Yes | frontmatter | src/content/tools/hume-ai.md |
@@ -554,7 +548,9 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /tools/leonardo/ | Tool | Yes | frontmatter | src/content/tools/leonardo.md |
 | 2026-05-13 | /tools/letta/ | Tool | Yes | frontmatter | src/content/tools/letta.md |
 | 2026-05-13 | /tools/lindy/ | Tool | Yes | frontmatter | src/content/tools/lindy.md |
+| 2026-05-13 | /tools/linkedin-recruiter/ | Tool | Yes | frontmatter | src/content/tools/linkedin-recruiter.md |
 | 2026-05-13 | /tools/llama/ | Tool | Yes | frontmatter | src/content/tools/llama.md |
+| 2026-05-13 | /tools/lm-studio/ | Tool | Yes | frontmatter | src/content/tools/lm-studio.md |
 | 2026-05-13 | /tools/logseq/ | Tool | Yes | frontmatter | src/content/tools/logseq.md |
 | 2026-05-13 | /tools/lovable/ | Tool | Yes | frontmatter | src/content/tools/lovable.md |
 | 2026-05-13 | /tools/lovart/ | Tool | Yes | frontmatter | src/content/tools/lovart.md |
@@ -587,8 +583,11 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /tools/ollama/ | Tool | Yes | frontmatter | src/content/tools/ollama.md |
 | 2026-05-13 | /tools/omniseo/ | Tool | Yes | frontmatter | src/content/tools/omniseo.md |
 | 2026-05-13 | /tools/open-webui/ | Tool | Yes | frontmatter | src/content/tools/open-webui.md |
+| 2026-05-13 | /tools/openhands/ | Tool | Yes | frontmatter | src/content/tools/openhands.md |
+| 2026-05-13 | /tools/openrouter/ | Tool | Yes | frontmatter | src/content/tools/openrouter.md |
 | 2026-05-13 | /tools/opusclip/ | Tool | Yes | frontmatter | src/content/tools/opusclip.md |
 | 2026-05-13 | /tools/otter-ai/ | Tool | Yes | frontmatter | src/content/tools/otter-ai.md |
+| 2026-05-13 | /tools/paradox/ | Tool | Yes | frontmatter | src/content/tools/paradox.md |
 | 2026-05-13 | /tools/perplexity/ | Tool | Yes | frontmatter | src/content/tools/perplexity.md |
 | 2026-05-13 | /tools/pieces/ | Tool | Yes | frontmatter | src/content/tools/pieces.md |
 | 2026-05-13 | /tools/pika/ | Tool | Yes | frontmatter | src/content/tools/pika.md |
@@ -602,6 +601,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /tools/prezi/ | Tool | Yes | frontmatter | src/content/tools/prezi.md |
 | 2026-05-13 | /tools/qdrant/ | Tool | Yes | frontmatter | src/content/tools/qdrant.md |
 | 2026-05-13 | /tools/qodo/ | Tool | Yes | frontmatter | src/content/tools/qodo.md |
+| 2026-05-13 | /tools/qwen/ | Tool | Yes | frontmatter | src/content/tools/qwen.md |
 | 2026-05-13 | /tools/read-ai/ | Tool | Yes | frontmatter | src/content/tools/read-ai.md |
 | 2026-05-13 | /tools/readwise/ | Tool | Yes | frontmatter | src/content/tools/readwise.md |
 | 2026-05-13 | /tools/reclaim-ai/ | Tool | Yes | frontmatter | src/content/tools/reclaim-ai.md |
@@ -638,6 +638,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /tools/tactiq/ | Tool | Yes | frontmatter | src/content/tools/tactiq.md |
 | 2026-05-13 | /tools/taskade/ | Tool | Yes | frontmatter | src/content/tools/taskade.md |
 | 2026-05-13 | /tools/tavus/ | Tool | Yes | frontmatter | src/content/tools/tavus.md |
+| 2026-05-13 | /tools/tidio/ | Tool | Yes | frontmatter | src/content/tools/tidio.md |
 | 2026-05-13 | /tools/tines/ | Tool | Yes | frontmatter | src/content/tools/tines.md |
 | 2026-05-13 | /tools/together-ai/ | Tool | Yes | frontmatter | src/content/tools/together-ai.md |
 | 2026-05-13 | /tools/trae/ | Tool | Yes | frontmatter | src/content/tools/trae.md |
@@ -659,6 +660,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /tools/wellsaid/ | Tool | Yes | frontmatter | src/content/tools/wellsaid.md |
 | 2026-05-13 | /tools/whisper/ | Tool | Yes | frontmatter | src/content/tools/whisper.md |
 | 2026-05-13 | /tools/windsurf/ | Tool | Yes | frontmatter | src/content/tools/windsurf.md |
+| 2026-05-13 | /tools/wispr-flow/ | Tool | Yes | frontmatter | src/content/tools/wispr-flow.md |
 | 2026-05-13 | /tools/wordtune/ | Tool | Yes | frontmatter | src/content/tools/wordtune.md |
 | 2026-05-13 | /tools/workato/ | Tool | Yes | frontmatter | src/content/tools/workato.md |
 | 2026-05-13 | /tools/writer/ | Tool | Yes | frontmatter | src/content/tools/writer.md |
@@ -667,6 +669,10 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /tools/you-com/ | Tool | Yes | frontmatter | src/content/tools/you-com.md |
 | 2026-05-13 | /tools/zapier/ | Tool | Yes | frontmatter | src/content/tools/zapier.md |
 | 2026-05-13 | /tools/zed/ | Tool | Yes | frontmatter | src/content/tools/zed.md |
+| 2026-05-13 | /trends/agent-commerce/ | Trend | Yes | frontmatter | src/content/trends/agent-commerce.md |
+| 2026-05-13 | /trends/ai-coding-model-arms-race/ | Trend | Yes | frontmatter | src/content/trends/ai-coding-model-arms-race.md |
+| 2026-05-13 | /trends/ai-memory-layer/ | Trend | Yes | frontmatter | src/content/trends/ai-memory-layer.md |
+| 2026-05-13 | /trends/ai-supply-chain-security/ | Trend | Yes | frontmatter | src/content/trends/ai-supply-chain-security.md |
 | 2026-05-13 | /trends/ai-voice-explosion/ | Trend | Yes | frontmatter | src/content/trends/ai-voice-explosion.md |
 | 2026-05-13 | /trends/enterprise-agent-platforms/ | Trend | Yes | frontmatter | src/content/trends/enterprise-agent-platforms.md |
 | 2026-05-13 | /trends/geo-trend/ | Trend | Yes | frontmatter | src/content/trends/geo-trend.md |
@@ -703,43 +709,37 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-15 | /about/our-stack/ | Static page | Yes | git | src/pages/about/our-stack.astro |
 | 2026-05-15 | /guides/best-ai-landing-page-builder-for-ab-testing/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-landing-page-builder-for-ab-testing.md |
 | 2026-05-15 | /sitemap-index.xml | Crawl surface | No | git | astro.config.mjs |
+| 2026-05-15 | /tools/codex/ | Tool | Yes | frontmatter | src/content/tools/codex.md |
 | 2026-05-15 | /tools/openclaw/ | Tool | Yes | frontmatter | src/content/tools/openclaw.md |
 | 2026-05-15 | /tools/runway/ | Tool | Yes | frontmatter | src/content/tools/runway.md |
-| 2026-05-17 | /categories/ai-video/ | Category | Yes | working tree | src/content/categories/ai-video.md |
-| 2026-05-17 | /companies/google-deepmind/ | Company | Yes | working tree | src/content/companies/google-deepmind.md |
-| 2026-05-17 | /companies/mistral/ | Company | Yes | working tree | src/content/companies/mistral.md |
-| 2026-05-17 | /companies/openai/ | Company | Yes | working tree | src/content/companies/openai.md |
-| 2026-05-17 | /compare/ | Static page | Yes | git | src/pages/compare/index.astro |
+| 2026-05-17 | / | Static page | Yes | working tree | src/pages/index.astro |
+| 2026-05-17 | /answers/ | Static page | Yes | working tree | src/pages/answers/index.astro |
+| 2026-05-17 | /answers/best-ai-for-students/ | Static page | Yes | working tree | src/pages/answers/best-ai-for-students.astro |
+| 2026-05-17 | /answers/chatgpt-vs-claude-which-is-better/ | Static page | Yes | working tree | src/pages/answers/chatgpt-vs-claude-which-is-better.astro |
+| 2026-05-17 | /answers/is-cursor-worth-it/ | Static page | Yes | working tree | src/pages/answers/is-cursor-worth-it.astro |
+| 2026-05-17 | /answers/is-midjourney-worth-it/ | Static page | Yes | working tree | src/pages/answers/is-midjourney-worth-it.astro |
+| 2026-05-17 | /categories/ | Static page | Yes | working tree | src/pages/categories/index.astro |
+| 2026-05-17 | /categories/ai-video/ | Category | Yes | frontmatter | src/content/categories/ai-video.md |
+| 2026-05-17 | /companies/google-deepmind/ | Company | Yes | frontmatter | src/content/companies/google-deepmind.md |
+| 2026-05-17 | /companies/mistral/ | Company | Yes | frontmatter | src/content/companies/mistral.md |
+| 2026-05-17 | /companies/openai/ | Company | Yes | frontmatter | src/content/companies/openai.md |
+| 2026-05-17 | /compare/ | Static page | Yes | working tree | src/pages/compare/index.astro |
 | 2026-05-17 | /compare/build/ | Static page | No | git | src/pages/compare/build.astro |
-| 2026-05-17 | /guides/notion-ai-alternatives/ | Guide | No | working tree | src/content/use-cases/notion-ai-alternatives.md |
-| 2026-05-17 | /news/ | Static page | Yes | git | src/pages/news/index.astro |
-| 2026-05-17 | /search/ | Static page | No | git | src/pages/search.astro |
+| 2026-05-17 | /explore/ | Static page | Yes | working tree | src/pages/explore/index.astro |
+| 2026-05-17 | /guides/ | Static page | Yes | working tree | src/pages/guides/index.astro |
+| 2026-05-17 | /guides/notion-ai-alternatives/ | Guide | No | frontmatter | src/content/use-cases/notion-ai-alternatives.md |
+| 2026-05-17 | /news/ | Static page | Yes | working tree | src/pages/news/index.astro |
+| 2026-05-17 | /search/ | Static page | No | working tree | src/pages/search.astro |
 | 2026-05-17 | /stack-builder/ | Static page | Yes | git | src/pages/stack-builder/index.astro |
-| 2026-05-17 | /tools/amazon-q/ | Tool | Yes | working tree | src/content/tools/amazon-q.md |
+| 2026-05-17 | /tools/ | Static page | Yes | working tree | src/pages/tools/index.astro |
 | 2026-05-17 | /tools/chatgpt/ | Tool | Yes | frontmatter | src/content/tools/chatgpt.md |
 | 2026-05-17 | /tools/claude-code/ | Tool | Yes | frontmatter | src/content/tools/claude-code.md |
 | 2026-05-17 | /tools/claude/ | Tool | Yes | frontmatter | src/content/tools/claude.md |
-| 2026-05-17 | /tools/codex/ | Tool | Yes | working tree | src/content/tools/codex.md |
-| 2026-05-17 | /tools/deepgram/ | Tool | Yes | working tree | src/content/tools/deepgram.md |
-| 2026-05-17 | /tools/descript/ | Tool | Yes | working tree | src/content/tools/descript.md |
-| 2026-05-17 | /tools/dust/ | Tool | Yes | working tree | src/content/tools/dust.md |
-| 2026-05-17 | /tools/eightfold-ai/ | Tool | Yes | working tree | src/content/tools/eightfold-ai.md |
 | 2026-05-17 | /tools/gamma/ | Tool | Yes | frontmatter | src/content/tools/gamma.md |
 | 2026-05-17 | /tools/github-copilot/ | Tool | Yes | frontmatter | src/content/tools/github-copilot.md |
-| 2026-05-17 | /tools/hireez/ | Tool | Yes | working tree | src/content/tools/hireez.md |
-| 2026-05-17 | /tools/linkedin-recruiter/ | Tool | Yes | working tree | src/content/tools/linkedin-recruiter.md |
-| 2026-05-17 | /tools/lm-studio/ | Tool | Yes | working tree | src/content/tools/lm-studio.md |
 | 2026-05-17 | /tools/mistral-ai/ | Tool | Yes | frontmatter | src/content/tools/mistral-ai.md |
-| 2026-05-17 | /tools/openhands/ | Tool | Yes | working tree | src/content/tools/openhands.md |
-| 2026-05-17 | /tools/openrouter/ | Tool | Yes | working tree | src/content/tools/openrouter.md |
-| 2026-05-17 | /tools/paradox/ | Tool | Yes | working tree | src/content/tools/paradox.md |
 | 2026-05-17 | /tools/quillbot/ | Tool | Yes | frontmatter | src/content/tools/quillbot.md |
-| 2026-05-17 | /tools/qwen/ | Tool | Yes | working tree | src/content/tools/qwen.md |
-| 2026-05-17 | /tools/tidio/ | Tool | Yes | working tree | src/content/tools/tidio.md |
-| 2026-05-17 | /tools/wispr-flow/ | Tool | Yes | working tree | src/content/tools/wispr-flow.md |
-| 2026-05-17 | /trends/agent-commerce/ | Trend | Yes | working tree | src/content/trends/agent-commerce.md |
-| 2026-05-17 | /trends/ai-coding-model-arms-race/ | Trend | Yes | working tree | src/content/trends/ai-coding-model-arms-race.md |
-| 2026-05-17 | /trends/ai-memory-layer/ | Trend | Yes | working tree | src/content/trends/ai-memory-layer.md |
-| 2026-05-17 | /trends/ai-supply-chain-security/ | Trend | Yes | working tree | src/content/trends/ai-supply-chain-security.md |
-| 2026-05-17 | /workflows/micro-saas-weekend-build/ | Workflow | Yes | working tree | src/content/workflows/micro-saas-weekend-build.md |
-| 2026-05-17 | /workflows/newsletter-stack/ | Workflow | Yes | working tree | src/content/workflows/newsletter-stack.md |
+| 2026-05-17 | /trends/ | Static page | Yes | working tree | src/pages/trends/index.astro |
+| 2026-05-17 | /workflows/ | Static page | Yes | working tree | src/pages/workflows/index.astro |
+| 2026-05-17 | /workflows/micro-saas-weekend-build/ | Workflow | Yes | frontmatter | src/content/workflows/micro-saas-weekend-build.md |
+| 2026-05-17 | /workflows/newsletter-stack/ | Workflow | Yes | frontmatter | src/content/workflows/newsletter-stack.md |

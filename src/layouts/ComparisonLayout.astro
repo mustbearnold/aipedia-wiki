@@ -18,6 +18,7 @@ import FAQAccordionScript from '../components/FAQAccordionScript.astro';
 import FeedbackForm from '../components/FeedbackForm.astro';
 import ComparisonFactTable from '../components/comparison/ComparisonFactTable.astro';
 import CommercialCTA from '../components/CommercialCTA.astro';
+import RelatedReading from '../components/RelatedReading.astro';
 
 interface ToolData {
   slug: string;
@@ -64,6 +65,8 @@ const {
   winner,
   lastVerified,
   canonicalFactTable = false,
+  relatedNews = [],
+  relatedComparisons = [],
 } = Astro.props;
 
 const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
@@ -104,6 +107,26 @@ const verifiedLabel = verifiedRecently && verifiedDate
   : undefined;
 
 const rankLabel = featured ? `Winner: ${featured.title}` : undefined;
+const relatedItems = [
+  ...relatedComparisons.slice(0, 2).map((item) => ({
+    href: `/compare/${item.slug}/`,
+    title: item.title,
+    description: item.description || (item.sharedToolNames?.length ? `Another comparison sharing ${item.sharedToolNames.join(', ')}.` : 'Related head-to-head buyer path.'),
+    kind: 'comparison' as const,
+  })),
+  ...relatedNews.slice(0, 1).map((item) => ({
+    href: `/news/${item.slug}/`,
+    title: item.title,
+    description: item.summary || 'Recent news that may change this buying decision.',
+    kind: 'news' as const,
+  })),
+  ...(tools.length >= 2 ? [{
+    href: `/compare/build/?tools=${tools.slice(0, 2).map((tool) => tool.slug).join(',')}`,
+    title: 'Build your own comparison',
+    description: 'Start from these contenders and adjust the tool set.',
+    kind: 'comparison' as const,
+  }] : []),
+].slice(0, 3);
 ---
 
 <BaseLayout
@@ -229,6 +252,16 @@ const rankLabel = featured ? `Winner: ${featured.title}` : undefined;
                   compareCtaMarker
                   arrow="→"
                 />
+                <button
+                  type="button"
+                  class="gt-btn gt-btn-secondary gt-compare-cta gt-compare-add"
+                  data-compare-add={t.slug}
+                  data-compare-label-default="Add to compare"
+                  data-compare-source-module="comparison_contenders"
+                  data-compare-position="middle"
+                  aria-pressed="false"
+                  aria-label={`Add ${t.title} to compare`}
+                ><span data-compare-label>Add to compare</span></button>
               </div>
             </li>
           );
@@ -274,6 +307,10 @@ const rankLabel = featured ? `Winner: ${featured.title}` : undefined;
         <slot />
       </article>
     </div>
+
+    {relatedItems.length > 0 && (
+      <RelatedReading items={relatedItems} heading="Compare next" />
+    )}
 
     <FAQAccordionScript />
     <ShareButtons title={title} pageUrl={`${siteBase}compare/${slug}/`} />
@@ -392,7 +429,8 @@ const rankLabel = featured ? `Winner: ${featured.title}` : undefined;
       border-top: 1px solid var(--gt-line);
       padding-top: 12px;
     }
-    .gt-compare-cta { width: 100%; min-height: 40px; padding: 8px 14px; font-size: 13px; }
+    .gt-compare-cta { width: 100%; min-height: 44px; padding: 8px 14px; font-size: 13px; }
+    .gt-compare-add { margin-top: 8px; }
     .gt-compare-row:hover .gt-compare-cta { background: var(--gt-surface-2); }
 
     .gt-compare-use-case { margin-bottom: 40px; }

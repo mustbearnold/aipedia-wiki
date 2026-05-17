@@ -61,7 +61,16 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
           const impact = t.impact === 'high' ? 'high' : t.impact === 'low' ? 'low' : 'medium';
           return (
             <li class={`gt-trend-card gt-trend-card-${impact}`}>
-              <a href={`/trends/${t.slug}/`}>
+              <a
+                href={`/trends/${t.slug}/`}
+                data-analytics-event="internal_cta_click"
+                data-analytics-source-module="trends_index"
+                data-analytics-destination-type="trend"
+                data-analytics-destination-slug={`trends/${t.slug}`}
+                data-analytics-destination-url={`/trends/${t.slug}/`}
+                data-analytics-position="middle"
+                data-analytics-label={t.title}
+              >
                 <span class={`gt-trend-impact gt-trend-impact-${impact}`}>{t.impact} impact</span>
                 <strong class="gt-trend-card-title">{t.title}</strong>
                 {t.description && <p class="gt-trend-card-desc">{t.description}</p>}

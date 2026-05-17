@@ -57,6 +57,11 @@ const guides = allGuides
   .filter((g: any) => !g.noindex)
   .sort((a: any, b: any) => (b.lastVerifiedIso || '').localeCompare(a.lastVerifiedIso || ''));
 
+const typeCounts = guides.reduce<Record<string, number>>((acc, guide: any) => {
+  acc[guide.type] = (acc[guide.type] ?? 0) + 1;
+  return acc;
+}, {});
+
 const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
 const description = `Browse ${guides.length} AI tool buyer guides organized by workflow, role, and budget. Best-of rankings, alternatives, stacks, and head-to-head comparisons. Updated May 2026.`;
 
@@ -98,11 +103,42 @@ const collectionItems = guides.map((g: any) => ({
       rankLabel={`${guides.length} guides`}
     />
 
+    <section class="gt-guide-controls" aria-label="Find guides">
+      <form class="gt-guide-search" role="search" onsubmit="return false">
+        <label for="guide-search-input" class="gt-sr-only">Search guides</label>
+        <input
+          id="guide-search-input"
+          type="search"
+          inputmode="search"
+          autocomplete="off"
+          spellcheck="false"
+          placeholder={`Search ${guides.length} guides`}
+          data-guide-search
+        />
+      </form>
+      <nav class="gt-guide-filters" aria-label="Filter guides by type">
+        <button type="button" class="gt-chip is-active" data-filter="all" data-analytics-event="category_filter_click" data-analytics-source-module="guides_index_filters" data-analytics-category-slug="all" data-analytics-position="top" data-analytics-label="All guides">All <span>{guides.length}</span></button>
+        {(Object.keys(typeLabel) as GuideType[]).filter((type) => typeCounts[type]).map((type) => (
+          <button type="button" class="gt-chip" data-filter={type} data-analytics-event="category_filter_click" data-analytics-source-module="guides_index_filters" data-analytics-category-slug={type} data-analytics-position="top" data-analytics-label={typeLabel[type]}>{typeLabel[type]} <span>{typeCounts[type]}</span></button>
+        ))}
+      </nav>
+    </section>
+
     <section class="gt-guide-index" aria-label="All guides">
+      <p class="gt-guide-count"><strong data-visible-count>{guides.length}</strong> guides shown</p>
       <ol class="gt-guide-cards">
         {guides.map((g: any) => (
-          <li class="gt-guide-card">
-            <a href={`/guides/${g.slug}/`}>
+          <li class="gt-guide-card" data-guide-card data-guide-type={g.type} data-search-text={`${g.title} ${g.description} ${typeLabel[g.type as GuideType]}`.toLowerCase()}>
+            <a
+              href={`/guides/${g.slug}/`}
+              data-analytics-event="related_guide_click"
+              data-analytics-source-module="guides_index"
+              data-analytics-destination-type="guide"
+              data-analytics-destination-slug={`guides/${g.slug}`}
+              data-analytics-guide-slug={g.slug}
+              data-analytics-position="middle"
+              data-analytics-label={g.title}
+            >
               <span class="gt-guide-card-type">{typeLabel[g.type as GuideType]}</span>
               <strong class="gt-guide-card-title">{g.title}</strong>
               {g.description && <p class="gt-guide-card-desc">{g.description}</p>}
@@ -112,11 +148,110 @@ const collectionItems = guides.map((g: any) => ({
           </li>
         ))}
       </ol>
+      <div class="gt-guide-empty" data-guide-empty hidden>
+        <p>No guides match that search and filter. Try another keyword or choose All.</p>
+      </div>
     </section>
   </div>
 
+  <script is:inline>
+    (function () {
+      var input = document.querySelector('[data-guide-search]');
+      var chips = document.querySelectorAll('.gt-guide-filters .gt-chip[data-filter]');
+      var cards = Array.from(document.querySelectorAll('[data-guide-card]'));
+      var count = document.querySelector('[data-visible-count]');
+      var empty = document.querySelector('[data-guide-empty]');
+      var activeFilter = 'all';
+      function applyFilters() {
+        var terms = String(input && input.value || '').trim().toLowerCase().split(/\s+/).filter(Boolean);
+        var visible = 0;
+        cards.forEach(function (card) {
+          var typeMatch = activeFilter === 'all' || card.dataset.guideType === activeFilter;
+          var haystack = card.getAttribute('data-search-text') || '';
+          var searchMatch = terms.every(function (term) { return haystack.indexOf(term) !== -1; });
+          var show = typeMatch && searchMatch;
+          card.hidden = !show;
+          if (show) visible++;
+        });
+        if (count) count.textContent = String(visible);
+        if (empty) empty.hidden = visible !== 0;
+      }
+      chips.forEach(function (chip) {
+        chip.addEventListener('click', function () {
+          activeFilter = chip.dataset.filter || 'all';
+          chips.forEach(function (item) { item.classList.remove('is-active'); });
+          chip.classList.add('is-active');
+          applyFilters();
+        });
+      });
+      if (input) input.addEventListener('input', applyFilters);
+    })();
+  </script>
+
   <style>
+    .gt-sr-only {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+    }
+    .gt-guide-controls { margin: 0 0 18px; }
+    .gt-guide-search { margin: 0 0 10px; }
+    .gt-guide-search input {
+      width: 100%;
+      min-height: 48px;
+      border-radius: var(--gt-radius-sm);
+      border: 1px solid var(--gt-line-strong);
+      background: var(--gt-surface);
+      color: var(--gt-fg);
+      font: inherit;
+      font-size: 15px;
+      padding: 0 14px;
+    }
+    .gt-guide-search input:focus {
+      outline: none;
+      border-color: var(--gt-accent);
+      background: var(--gt-surface-2);
+    }
+    .gt-guide-filters {
+      display: flex;
+      gap: 6px;
+      overflow-x: auto;
+      padding: 4px 18px 10px;
+      margin: 0 -18px;
+      scrollbar-width: none;
+    }
+    .gt-guide-filters::-webkit-scrollbar { display: none; }
+    .gt-chip {
+      flex: 0 0 auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      min-height: 44px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--gt-line);
+      background: var(--gt-surface);
+      color: var(--gt-muted);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .gt-chip.is-active {
+      background: var(--gt-accent);
+      color: #fff;
+      border-color: var(--gt-accent);
+    }
+    .gt-chip span { font-size: 11px; opacity: 0.75; font-variant-numeric: tabular-nums; }
     .gt-guide-index { margin-bottom: 40px; }
+    .gt-guide-count {
+      margin: 0 0 12px;
+      color: var(--gt-subtle);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .gt-guide-count strong { color: var(--gt-fg); font-variant-numeric: tabular-nums; }
     .gt-guide-cards {
       list-style: none; padding: 0; margin: 0;
       display: grid; grid-template-columns: 1fr; gap: 10px;
@@ -163,6 +298,15 @@ const collectionItems = guides.map((g: any) => ({
       font-size: 11px;
       color: var(--gt-subtle);
       font-variant-numeric: tabular-nums;
+    }
+    .gt-guide-empty {
+      margin-top: 16px;
+      padding: 18px;
+      border-radius: var(--gt-radius-sm);
+      border: 1px solid var(--gt-line);
+      background: var(--gt-surface);
+      color: var(--gt-muted);
+      font-size: 14px;
     }
 
     @media (min-width: 600px) {

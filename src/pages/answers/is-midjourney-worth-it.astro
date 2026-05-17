@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Hero from '../../components/godtier/Hero.astro';
 import AnswerContent from '../../components/AnswerContent.astro';
+import AnswerDecisionPanel from '../../components/AnswerDecisionPanel.astro';
 
 const answerContent = `
 [Midjourney](/tools/midjourney/) is worth paying for in May 2026 if you create stylized images regularly: concept art, moodboards, social visuals, game art, editorial illustration, or campaign exploration.
@@ -20,7 +21,7 @@ const answerLD = JSON.stringify({
   author: { '@type': 'Organization', name: 'aipedia.wiki Editorial', url: 'https://aipedia.wiki/about/editorial/' },
   publisher: { '@id': 'https://aipedia.wiki/#organization' },
   datePublished: '2026-04-16',
-  dateModified: '2026-05-09',
+  dateModified: '2026-05-17',
   mainEntityOfPage: 'https://aipedia.wiki/answers/is-midjourney-worth-it/',
 });
 ---
@@ -36,15 +37,29 @@ const answerLD = JSON.stringify({
         { label: 'Answers', href: '/answers/' },
         { label: "Is Midjourney worth it in 2026?" },
       ]}
-      verifiedLabel="Verified May 9, 2026"
+      verifiedLabel="Verified May 17, 2026"
     />
 
     <article class="gt-body" id="gt-body">
 
+    <AnswerDecisionPanel
+      verdict="Midjourney is worth it for frequent stylized image work, but weak for one-off prompts and precise brand layouts."
+      winnerLabel="Worth it for"
+      winner="Regular visual exploration"
+      bestFor="Creators making concept art, moodboards, campaign visuals, social images, game art, editorial illustration, or visual style exploration."
+      avoidIf="You need exact product accuracy, text-heavy graphics, brand-layout precision, or a general assistant that also writes and analyzes."
+      nextStep="Check image-generator alternatives if text rendering, convenience, or local control matters more than style."
+      links={[
+        { href: '/tools/midjourney/', label: 'Review Midjourney' },
+        { href: '/answers/best-ai-image-generator-2026/', label: 'Compare image generators' },
+        { href: '/guides/midjourney-alternatives/', label: 'See alternatives' },
+      ]}
+    />
+
     <AnswerContent content={answerContent} />
 
     <div class="mt-[var(--site-section-gap)] pt-[var(--site-content-gap)] border-t border-[var(--border)] text-sm text-[var(--text-muted)]">
-      <p>This answer was checked against current vendor sources on May 9, 2026, including <a href="https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans" class="text-[var(--accent-primary)] no-underline hover:underline">Midjourney plans</a>, <a href="https://openai.com/index/introducing-chatgpt-images-2-0/" class="text-[var(--accent-primary)] no-underline hover:underline">OpenAI ChatGPT Images 2.0</a>, and <a href="https://docs.ideogram.ai/plans-and-pricing/plans-and-pricing" class="text-[var(--accent-primary)] no-underline hover:underline">Ideogram plans</a>. See our <a href="/about/scoring/" class="text-[var(--accent-primary)] no-underline hover:underline">scoring methodology</a>.</p>
+      <p>This answer was checked against current vendor sources on May 17, 2026, including <a href="https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans" class="text-[var(--accent-primary)] no-underline hover:underline">Midjourney plans</a>, <a href="https://openai.com/index/introducing-chatgpt-images-2-0/" class="text-[var(--accent-primary)] no-underline hover:underline">OpenAI ChatGPT Images 2.0</a>, and <a href="https://docs.ideogram.ai/plans-and-pricing/plans-and-pricing" class="text-[var(--accent-primary)] no-underline hover:underline">Ideogram plans</a>. See our <a href="/about/scoring/" class="text-[var(--accent-primary)] no-underline hover:underline">scoring methodology</a>.</p>
     </div>
   </article>
   </div>

@@ -26,6 +26,26 @@ const badgeColor = impactColors[impact] ?? 'gray';
 
 const wordCount = entry.body ? entry.body.split(/\s+/).filter(Boolean).length : 0;
 const readingMinutes = Math.max(1, Math.round(wordCount / 230));
+const relatedItems = [
+  {
+    href: '/tools/',
+    title: 'Browse ranked AI tools',
+    description: 'Turn this trend into a shortlist of scored, source-backed tool reviews.',
+    kind: 'tool' as const,
+  },
+  {
+    href: '/compare/',
+    title: 'Compare tools affected by this trend',
+    description: 'Use head-to-head pages when the trend changes a buying decision.',
+    kind: 'comparison' as const,
+  },
+  {
+    href: '/guides/',
+    title: 'Find buyer guides',
+    description: 'Start from a workflow, budget, or role and follow the recommended next click.',
+    kind: 'guide' as const,
+  },
+];
 ---
 
 <ArticlePlusLayout
@@ -39,6 +59,7 @@ const readingMinutes = Math.max(1, Math.round(wordCount / 230));
   readingMinutes={readingMinutes}
   lastVerified={entry.data.last_updated ? String(entry.data.last_updated) : undefined}
   metaExtra={entry.data.timeframe}
+  relatedItems={relatedItems}
   homeSurfaceCards
 >
   <Content />

@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Hero from '../../components/godtier/Hero.astro';
 import AnswerContent from '../../components/AnswerContent.astro';
+import AnswerDecisionPanel from '../../components/AnswerDecisionPanel.astro';
 
 const answerContent = `
 [Cursor Pro](/tools/cursor/) is worth it in May 2026 for developers who code most days and want AI help inside the editor. It is less compelling for occasional coding, terminal-first workflows, or teams already standardized on another IDE and [GitHub Copilot](/tools/github-copilot/).
@@ -20,7 +21,7 @@ const answerLD = JSON.stringify({
   author: { '@type': 'Organization', name: 'aipedia.wiki Editorial', url: 'https://aipedia.wiki/about/editorial/' },
   publisher: { '@id': 'https://aipedia.wiki/#organization' },
   datePublished: '2026-04-16',
-  dateModified: '2026-05-09',
+  dateModified: '2026-05-17',
   mainEntityOfPage: 'https://aipedia.wiki/answers/is-cursor-worth-it/',
 });
 ---
@@ -36,15 +37,29 @@ const answerLD = JSON.stringify({
         { label: 'Answers', href: '/answers/' },
         { label: "Is Cursor worth the money?" },
       ]}
-      verifiedLabel="Verified May 9, 2026"
+      verifiedLabel="Verified May 17, 2026"
     />
 
     <article class="gt-body" id="gt-body">
 
+    <AnswerDecisionPanel
+      verdict="Cursor Pro is worth it when editor-integrated AI saves time every week; occasional coders can wait."
+      winnerLabel="Worth it for"
+      winner="Daily IDE coding"
+      bestFor="Developers who live in a VS Code-style editor and want autocomplete, inline edits, chat, and agent-assisted code changes in one workspace."
+      avoidIf="You code sporadically, prefer terminal-first agents, dislike VS Code-style editors, or already have a team-standard Copilot workflow."
+      nextStep="Compare Cursor with Copilot if rollout, governance, or GitHub-native team adoption matters."
+      links={[
+        { href: '/tools/cursor/', label: 'Review Cursor' },
+        { href: '/compare/cursor-vs-github-copilot/', label: 'Compare with Copilot' },
+        { href: '/guides/best-ai-coding-assistant/', label: 'See coding assistant guide' },
+      ]}
+    />
+
     <AnswerContent content={answerContent} />
 
     <div class="mt-[var(--site-section-gap)] pt-[var(--site-content-gap)] border-t border-[var(--border)] text-sm text-[var(--text-muted)]">
-      <p>This answer was checked against current vendor sources on May 9, 2026, including <a href="https://cursor.com/terms/pricing" class="text-[var(--accent-primary)] no-underline hover:underline">Cursor pricing policy</a>, <a href="https://github.com/features/copilot/plans" class="text-[var(--accent-primary)] no-underline hover:underline">GitHub Copilot plans</a>, and <a href="https://docs.anthropic.com/en/release-notes/claude-code" class="text-[var(--accent-primary)] no-underline hover:underline">Claude Code release notes</a>. See our <a href="/about/scoring/" class="text-[var(--accent-primary)] no-underline hover:underline">scoring methodology</a>.</p>
+      <p>This answer was checked against current vendor sources on May 17, 2026, including <a href="https://cursor.com/terms/pricing" class="text-[var(--accent-primary)] no-underline hover:underline">Cursor pricing policy</a>, <a href="https://github.com/features/copilot/plans" class="text-[var(--accent-primary)] no-underline hover:underline">GitHub Copilot plans</a>, and <a href="https://docs.anthropic.com/en/release-notes/claude-code" class="text-[var(--accent-primary)] no-underline hover:underline">Claude Code release notes</a>. See our <a href="/about/scoring/" class="text-[var(--accent-primary)] no-underline hover:underline">scoring methodology</a>.</p>
     </div>
   </article>
   </div>

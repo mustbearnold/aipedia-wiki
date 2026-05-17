@@ -1070,6 +1070,10 @@ a, button, [role="button"], .tool-card, .category-pill, .helpful-btn, .copy-btn 
 
 /* Brand lockup */
 .nav-brand {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  flex: none;
   text-decoration: none;
   color: var(--text-primary);
   position: relative;
@@ -1123,6 +1127,9 @@ a, button, [role="button"], .tool-card, .category-pill, .helpful-btn, .copy-btn 
 
 /* Desktop nav links with underline-slide + active accent */
 .nav-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   position: relative;
   font-size: 13.5px;
   font-weight: 500;
@@ -1162,9 +1169,11 @@ a, button, [role="button"], .tool-card, .category-pill, .helpful-btn, .copy-btn 
 .nav-search {
   display: inline-flex;
   align-items: center;
+  flex: none;
   gap: 8px;
   margin-left: 4px;
-  padding: 6px 8px 6px 10px;
+  min-height: 44px;
+  padding: 8px 10px 8px 12px;
   font-size: 13px;
   color: var(--text-muted);
   background: var(--bg-card);
@@ -1206,6 +1215,18 @@ html.light .nav-search:hover {
   border: 1px solid var(--border);
   border-radius: 5px;
   flex: none;
+}
+
+@media (min-width: 640px) and (max-width: 900px) {
+  .nav-search {
+    width: 44px;
+    justify-content: center;
+    padding: 0;
+  }
+  .nav-search-text,
+  .nav-search-kbd {
+    display: none;
+  }
 }
 
 /* Mobile icon buttons */

@@ -46,6 +46,25 @@ const more: Hub[] = [
 
 const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
 const totalRoutes = browse.length + more.length;
+
+function destinationType(href: string): string {
+  const first = href.replace(/^\/+/, '').split('/')[0] || 'home';
+  if (first === 'compare') return 'comparison';
+  if (first === 'tools') return 'tool';
+  if (first === 'categories') return 'category';
+  if (first === 'guides') return 'guide';
+  if (first === 'news') return 'news';
+  if (first === 'trends') return 'trend';
+  if (first === 'workflows') return 'workflow';
+  if (first === 'answers') return 'answer';
+  if (first === 'companies') return 'company';
+  if (first === 'stack-builder') return 'stack_builder';
+  return 'internal';
+}
+
+function destinationSlug(href: string): string {
+  return href.replace(/^\/+|\/+$/g, '') || 'home';
+}
 ---
 
 <BaseLayout
@@ -77,7 +96,16 @@ const totalRoutes = browse.length + more.length;
       <ul class="gt-hub-cards">
         {browse.map((item) => (
           <li class="gt-hub-card">
-            <a href={item.href}>
+            <a
+              href={item.href}
+              data-analytics-event="internal_cta_click"
+              data-analytics-source-module="explore_index"
+              data-analytics-destination-type={destinationType(item.href)}
+              data-analytics-destination-slug={destinationSlug(item.href)}
+              data-analytics-destination-url={item.href}
+              data-analytics-position="middle"
+              data-analytics-label={item.title}
+            >
               <strong class="gt-hub-card-title">{item.title}</strong>
               <p class="gt-hub-card-desc">{item.description}</p>
               <span class="gt-hub-card-meta">{item.meta}</span>
@@ -92,7 +120,16 @@ const totalRoutes = browse.length + more.length;
       <ul class="gt-hub-cards">
         {more.map((item) => (
           <li class="gt-hub-card">
-            <a href={item.href}>
+            <a
+              href={item.href}
+              data-analytics-event="internal_cta_click"
+              data-analytics-source-module="explore_index"
+              data-analytics-destination-type={destinationType(item.href)}
+              data-analytics-destination-slug={destinationSlug(item.href)}
+              data-analytics-destination-url={item.href}
+              data-analytics-position="middle"
+              data-analytics-label={item.title}
+            >
               <strong class="gt-hub-card-title">{item.title}</strong>
               <p class="gt-hub-card-desc">{item.description}</p>
               <span class="gt-hub-card-meta">{item.meta}</span>

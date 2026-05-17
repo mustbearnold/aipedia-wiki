@@ -69,10 +69,14 @@ export type DestinationType =
   | 'guide'
   | 'news'
   | 'workflow'
+  | 'answer'
+  | 'trend'
+  | 'company'
   | 'stack_builder'
   | 'search'
   | 'toc'
   | 'pricing'
+  | 'section'
   | 'external';
 
 export type AnalyticsPosition =

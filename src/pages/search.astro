@@ -2,7 +2,7 @@
 /**
  * /search/ — god-tier 10/10 mobile-first.
  *
- * Hero + .gt-search input + popular term chips + filterable tool list.
+ * Hero + .gt-search input + popular term chips + filterable site-local index.
  * Same client-side Pagefind-style filtering + Ctrl/Cmd K shortcut +
  * analytics tracking as legacy.
  *
@@ -12,37 +12,221 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/godtier/Hero.astro';
 import ToolLogo from '../components/ToolLogo.astro';
-import { categoryLabel, overallScore } from '../utils/tool-metadata';
+import { ANSWER_ITEMS } from '../data/answers';
+import { categoryLabel, isActiveToolStatus, overallScore } from '../utils/tool-metadata';
 
 const allTools = await getCollection('tools');
+const allComparisons = await getCollection('comparisons');
+const allCategories = await getCollection('categories');
+const allGuides = await getCollection('use-cases');
+const allNews = await getCollection('news');
+const allWorkflows = await getCollection('workflows');
+const allTrends = await getCollection('trends');
+const allCompanies = await getCollection('companies');
 
-const tools = allTools
-  .filter((tool: any) => tool.data.status !== 'dead')
+type SearchKind = 'tool' | 'comparison' | 'guide' | 'answer' | 'workflow' | 'trend' | 'news' | 'category' | 'company';
+
+interface SearchItem {
+  slug: string;
+  title: string;
+  href: string;
+  kind: SearchKind;
+  kindLabel: string;
+  detail: string;
+  meta: string;
+  score?: number;
+  categorySlug?: string;
+  category?: string;
+  tags?: string[];
+  priority: number;
+}
+
+function entrySlug(entry: any): string {
+  return String(entry.data.slug || entry.id.replace(/\.md$/, '').replace(/\\/g, '/'));
+}
+
+function trimDetail(value: unknown, max = 150): string {
+  const text = String(value || '').trim();
+  if (text.length <= max) return text;
+  return `${text.slice(0, max - 1).trimEnd()}…`;
+}
+
+const toolTitleBySlug = new Map<string, string>();
+allTools.forEach((tool: any) => {
+  const slug = entrySlug(tool);
+  toolTitleBySlug.set(slug, tool.data.title || slug);
+});
+
+const tools: SearchItem[] = allTools
+  .filter((tool: any) => isActiveToolStatus(tool.data.status))
   .map((tool: any) => {
-    const slug = tool.data.slug || tool.id.replace(/\.md$/, '').replace(/\\/g, '/');
+    const slug = entrySlug(tool);
+    const score = overallScore(tool.data.scores ?? {});
     return {
       slug,
       title: tool.data.title,
+      href: `/tools/${slug}/`,
+      kind: 'tool' as const,
+      kindLabel: 'Tool',
       categorySlug: tool.data.category ?? '',
       category: categoryLabel(tool.data.category ?? ''),
-      company: tool.data.company ?? '',
-      tagline: tool.data.tagline ?? tool.data.meta_description ?? '',
-      priceRange: tool.data.price_range ?? '',
-      pricingModel: tool.data.pricing_model ?? '',
-      status: tool.data.status ?? 'active',
-      score: overallScore(tool.data.scores ?? {}),
+      detail: trimDetail(tool.data.tagline ?? tool.data.meta_description),
+      meta: `${categoryLabel(tool.data.category ?? '') || 'AI tool'} · ${score}/10`,
+      score,
       tags: tool.data.tags ?? [],
+      priority: Math.round(score * 10) + 90,
     };
-  })
-  .sort((a: any, b: any) => b.score - a.score || a.title.localeCompare(b.title));
+  });
 
-const quickTerms = ['ChatGPT', 'Claude', 'Cursor', 'Midjourney', 'ElevenLabs', 'automation', 'free'];
+function comparisonDetail(toolsInComparison: string[]): string {
+  const names = toolsInComparison.map((slug) => toolTitleBySlug.get(slug) ?? slug);
+  if (names.length === 0) return 'Head-to-head comparison with scored facts.';
+  if (names.length === 1) return `Where ${names[0]} wins, loses, and what to compare next.`;
+  return `${names.join(' vs ')} on pricing, strengths, and buyer fit.`;
+}
+
+const comparisonItems: SearchItem[] = allComparisons.map((comparison: any) => {
+  const slug = entrySlug(comparison);
+  const toolsInComparison = Array.isArray(comparison.data.tools) ? comparison.data.tools.map(String) : [];
+  return {
+    slug,
+    title: comparison.data.title,
+    href: `/compare/${slug}/`,
+    kind: 'comparison',
+    kindLabel: 'Compare',
+    detail: trimDetail(comparison.data.meta_description ?? comparisonDetail(toolsInComparison)),
+    meta: `${toolsInComparison.length || 2} tools`,
+    priority: 76,
+    tags: [comparison.data.category, comparison.data.winner, ...toolsInComparison].filter(Boolean),
+  };
+});
+
+const guideItems: SearchItem[] = allGuides
+  .filter((guide: any) => guide.data.noindex !== true)
+  .map((guide: any) => {
+    const slug = entrySlug(guide);
+    return {
+      slug,
+      title: guide.data.title,
+      href: `/guides/${slug}/`,
+      kind: 'guide',
+      kindLabel: 'Guide',
+      detail: trimDetail(guide.data.meta_description ?? guide.data.description),
+      meta: 'Buyer guide',
+      priority: 74,
+      tags: guide.data.tools_mentioned ?? [],
+    };
+  });
+
+const answerItems: SearchItem[] = ANSWER_ITEMS.map((answer) => ({
+  slug: answer.slug,
+  title: answer.q,
+  href: `/answers/${answer.slug}/`,
+  kind: 'answer',
+  kindLabel: 'Answer',
+  detail: trimDetail(answer.a),
+  meta: answer.group,
+  priority: 73,
+  tags: [answer.group],
+}));
+
+const workflowItems: SearchItem[] = allWorkflows.map((workflow: any) => {
+  const slug = entrySlug(workflow);
+  const stack = Array.isArray(workflow.data.stack) ? workflow.data.stack : [];
+  return {
+    slug,
+    title: workflow.data.title,
+    href: `/workflows/${slug}/`,
+    kind: 'workflow',
+    kindLabel: 'Workflow',
+    detail: trimDetail(workflow.data.meta_description ?? workflow.data.description),
+    meta: stack.length ? `${stack.length} tools` : 'Workflow',
+    priority: 70,
+    tags: [...stack, ...(workflow.data.tools_mentioned ?? [])],
+  };
+});
+
+const trendItems: SearchItem[] = allTrends.map((trend: any) => {
+  const slug = entrySlug(trend);
+  return {
+    slug,
+    title: trend.data.title,
+    href: `/trends/${slug}/`,
+    kind: 'trend',
+    kindLabel: 'Trend',
+    detail: trimDetail(trend.data.meta_description ?? trend.data.description),
+    meta: trend.data.timeframe ?? 'Trend analysis',
+    priority: 66,
+    tags: [trend.data.impact, trend.data.timeframe].filter(Boolean),
+  };
+});
+
+const newsItems: SearchItem[] = allNews.map((news: any) => {
+  const slug = entrySlug(news);
+  return {
+    slug,
+    title: news.data.title,
+    href: `/news/${slug}/`,
+    kind: 'news',
+    kindLabel: 'News',
+    detail: trimDetail(news.data.summary ?? news.data.description, 130),
+    meta: String(news.data.date),
+    priority: 64,
+    tags: [news.data.severity, ...(news.data.affects ?? []), ...(news.data.categories ?? [])].filter(Boolean),
+  };
+});
+
+const categoryItems: SearchItem[] = allCategories.map((category: any) => {
+  const slug = entrySlug(category);
+  return {
+    slug,
+    title: category.data.title,
+    href: `/categories/${slug}/`,
+    kind: 'category',
+    kindLabel: 'Category',
+    detail: trimDetail(category.data.description ?? category.data.meta_description),
+    meta: 'Category hub',
+    priority: 60,
+    categorySlug: slug,
+    tags: [slug],
+  };
+});
+
+const companyItems: SearchItem[] = allCompanies.map((company: any) => {
+  const slug = entrySlug(company);
+  return {
+    slug,
+    title: company.data.title,
+    href: `/companies/${slug}/`,
+    kind: 'company',
+    kindLabel: 'Company',
+    detail: trimDetail(company.data.meta_description),
+    meta: company.data.company_type ? `${company.data.company_type} company` : 'Company profile',
+    priority: 56,
+    tags: [company.data.company_type, company.data.hq, company.data.funding, ...(company.data.key_products ?? [])].filter(Boolean),
+  };
+});
+
+const catalogItems = [
+  ...tools,
+  ...comparisonItems,
+  ...guideItems,
+  ...answerItems,
+  ...workflowItems,
+  ...trendItems,
+  ...newsItems,
+  ...categoryItems,
+  ...companyItems,
+].sort((a, b) => b.priority - a.priority || a.title.localeCompare(b.title));
+
+const quickTerms = ['ChatGPT', 'Claude', 'Cursor', 'students', 'presentation', 'automation', 'free'];
 const totalTools = tools.length;
+const totalItems = catalogItems.length;
 ---
 
 <BaseLayout
   title="Search aipedia.wiki"
-  description={`Search and browse all ${totalTools} AI tools reviewed on aipedia.wiki.`}
+  description={`Search and browse ${totalItems} AiPedia tools, comparisons, guides, answers, workflows, trends, news, categories, and company profiles.`}
   robots="noindex, follow"
 >
   <div class="sr-only" data-pagefind-ignore>
@@ -57,7 +241,7 @@ const totalTools = tools.length;
         { label: 'aipedia', href: '/' },
         { label: 'Search' },
       ]}
-      rankLabel={`${totalTools} tools indexed`}
+      rankLabel={`${totalItems} local results`}
     />
 
     <form class="gt-search" role="search" onsubmit="return false">
@@ -72,7 +256,7 @@ const totalTools = tools.length;
           inputmode="search"
           autocomplete="off"
           spellcheck="false"
-          placeholder={`Search ${totalTools} tools`}
+          placeholder={`Search ${totalItems} local pages`}
           data-tool-search
         />
         <kbd class="gt-kbd" data-search-kbd aria-hidden="true">Ctrl K</kbd>
@@ -86,47 +270,51 @@ const totalTools = tools.length;
     </nav>
 
     <p class="gt-search-count">
-      <strong data-visible-count>{totalTools}</strong> <span data-search-noun>tools</span>
+      <strong data-visible-count>{totalItems}</strong> <span data-search-noun>results</span>
     </p>
 
     <ol class="gt-tool-list" data-tool-grid>
-      {tools.map((tool: any, i: number) => {
+      {catalogItems.map((item: SearchItem, i: number) => {
         const searchText = [
-          tool.title,
-          tool.company,
-          tool.categorySlug,
-          tool.category,
-          tool.tagline,
-          tool.priceRange,
-          tool.status,
-          ...tool.tags,
+          item.title,
+          item.kind,
+          item.kindLabel,
+          item.slug,
+          item.categorySlug,
+          item.category,
+          item.detail,
+          item.meta,
+          ...(item.tags ?? []),
         ].join(' ').toLowerCase();
-        const tone = tool.score >= 8 ? 'positive' : tool.score >= 6.5 ? 'neutral' : 'negative';
+        const tone = item.kind !== 'tool' ? 'neutral' : (item.score ?? 0) >= 8 ? 'positive' : (item.score ?? 0) >= 6.5 ? 'neutral' : 'negative';
         return (
           <li
             class={`gt-tool-row gt-tool-row-${tone}`}
-            data-tool-card
+            data-search-card
+            data-result-kind={item.kind}
             data-search-text={searchText}
           >
             <a
-              href={`/tools/${tool.slug}/`}
+              href={item.href}
               class="gt-tool-link"
               data-search-result
-              data-result-type="tool"
-              data-result-title={tool.title}
-              data-result-url={`/tools/${tool.slug}/`}
-              data-tool-slug={tool.slug}
-              data-category-slug={tool.categorySlug}
+              data-result-type={item.kind}
+              data-result-title={item.title}
+              data-result-url={item.href}
+              data-tool-slug={item.kind === 'tool' ? item.slug : ''}
+              data-category-slug={item.categorySlug ?? ''}
             >
               <span class="gt-tool-rank">{i + 1}</span>
-              <ToolLogo slug={tool.slug} title={tool.title} size={40} />
+              {item.kind === 'tool'
+                ? <ToolLogo slug={item.slug} title={item.title} size={40} />
+                : <span class="gt-search-kind">{item.kindLabel}</span>}
               <div class="gt-tool-main">
-                <strong class="gt-tool-title">{tool.title}</strong>
-                {tool.tagline && <span class="gt-tool-tagline">{tool.tagline}</span>}
+                <strong class="gt-tool-title">{item.title}</strong>
+                {item.detail && <span class="gt-tool-tagline">{item.detail}</span>}
               </div>
               <div class="gt-tool-meta">
-                <span class="gt-tool-category">{tool.category}</span>
-                {tool.score > 0 && <span class="gt-tool-score tabular-nums">{tool.score}<span class="gt-tool-score-slash">/10</span></span>}
+                <span class="gt-tool-category">{item.meta}</span>
+                {item.kind === 'tool' && item.score && item.score > 0 && <span class="gt-tool-score tabular-nums">{item.score}<span class="gt-tool-score-slash">/10</span></span>}
               </div>
             </a>
           </li>
@@ -135,7 +323,7 @@ const totalTools = tools.length;
     </ol>
 
     <div class="gt-search-empty" data-search-empty hidden>
-      <p>No tools match that search. Try a different keyword or <a href="/tools/">browse all tools</a>.</p>
+      <p>No local pages match that search. Try a different keyword or <a href="/explore/">browse the site map</a>.</p>
     </div>
   </div>
 
@@ -145,7 +333,7 @@ const totalTools = tools.length;
       if (!root) return;
 
       const input = root.querySelector('[data-tool-search]');
-      const cards = Array.from(root.querySelectorAll('[data-tool-card]'));
+      const cards = Array.from(root.querySelectorAll('[data-search-card]'));
       const counters = Array.from(root.querySelectorAll('[data-visible-count]'));
       const empty = root.querySelector('[data-search-empty]');
       const keyHint = root.querySelector('[data-search-kbd]');
@@ -223,7 +411,7 @@ const totalTools = tools.length;
           if (match) visible++;
         });
         counters.forEach((c) => { c.textContent = String(visible); });
-        if (noun) noun.textContent = visible === 1 ? 'tool' : 'tools';
+        if (noun) noun.textContent = visible === 1 ? 'result' : 'results';
         if (empty) empty.hidden = visible !== 0;
         scheduleSearchAnalytics(value, visible, source);
         if (updateUrl) {
@@ -339,7 +527,7 @@ const totalTools = tools.length;
       flex: 0 0 auto;
       display: inline-flex; align-items: center; gap: 6px;
       padding: 6px 12px;
-      min-height: 36px;
+      min-height: 44px;
       border-radius: 999px;
       background: var(--gt-surface);
       border: 1px solid var(--gt-line);
@@ -377,13 +565,34 @@ const totalTools = tools.length;
     .gt-tool-row:hover { background: var(--gt-surface-2); }
     .gt-tool-link {
       display: grid;
-      grid-template-columns: 24px 40px 1fr auto;
+      grid-template-columns: 24px minmax(40px, auto) minmax(0, 1fr) auto;
       align-items: center;
       gap: 12px;
       padding: 14px;
       text-decoration: none;
       color: var(--gt-fg);
       min-height: 60px;
+    }
+    .gt-search-kind {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 40px;
+      max-width: 76px;
+      min-height: 32px;
+      padding: 0 8px;
+      border-radius: 8px;
+      border: 1px solid rgba(249, 115, 22, 0.28);
+      background: rgba(249, 115, 22, 0.10);
+      color: var(--gt-accent);
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      line-height: 1.1;
+      text-transform: uppercase;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
     .gt-tool-rank {
       font-size: 13px; font-weight: 700;

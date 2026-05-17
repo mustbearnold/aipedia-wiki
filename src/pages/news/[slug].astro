@@ -74,6 +74,26 @@ function isoDate(value: unknown): string | undefined {
 
 const publishedIso = isoDate(entry.data.date);
 const verifiedIso = isoDate(entry.data.last_verified) ?? publishedIso;
+const relatedItems = [
+  ...affectedTools.slice(0, 2).map((tool) => ({
+    href: `/tools/${tool.slug}/`,
+    title: `${tool.title} review`,
+    description: 'Check the current score, pricing signal, alternatives, and buying guidance.',
+    kind: 'tool' as const,
+  })),
+  ...(Array.isArray(entry.data.categories) ? entry.data.categories.slice(0, 1).map((categorySlug: string) => ({
+    href: `/categories/${categorySlug}/`,
+    title: `${categorySlug.replace(/-/g, ' ')} tools`,
+    description: 'See the ranked category hub for related tools and alternatives.',
+    kind: 'category' as const,
+  })) : []),
+  {
+    href: '/news/',
+    title: 'More AI tools news',
+    description: 'Continue through recent source-backed product, pricing, model, and company updates.',
+    kind: 'news' as const,
+  },
+].slice(0, 3);
 ---
 
 <ArticlePlusLayout
@@ -91,6 +111,7 @@ const verifiedIso = isoDate(entry.data.last_verified) ?? publishedIso;
   badge={badge}
   ogImage={`/og/news/${slug}.png`}
   citations={sources}
+  relatedItems={relatedItems}
   homeSurfaceCards
 >
   {entry.data.hero ? (

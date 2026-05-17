@@ -304,6 +304,16 @@ const rankLabel = sorted.length > 0 ? `${sorted.length} tools verified` : undefi
                     categoryListCtaMarker
                     arrow="→"
                   />
+                  <button
+                    type="button"
+                    class="gt-btn gt-btn-secondary gt-tool-cta gt-tool-compare"
+                    data-compare-add={t.slug}
+                    data-compare-label-default="Add to compare"
+                    data-compare-source-module="category_ranked_list"
+                    data-compare-position="middle"
+                    aria-pressed="false"
+                    aria-label={`Add ${t.title} to compare`}
+                  ><span data-compare-label>Add to compare</span></button>
                 </div>
               )}
             </li>
@@ -434,9 +444,12 @@ const rankLabel = sorted.length > 0 ? `${sorted.length} tools verified` : undefi
     }
     .gt-tool-cta {
       width: 100%;
-      min-height: 40px;
+      min-height: 44px;
       padding: 8px 14px;
       font-size: 13px;
+    }
+    .gt-tool-compare {
+      margin-top: 8px;
     }
     @media (min-width: 600px) {
       .gt-tool-link { grid-template-columns: 24px 40px minmax(0, 1fr) minmax(120px, auto); }

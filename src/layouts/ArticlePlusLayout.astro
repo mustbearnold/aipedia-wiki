@@ -16,6 +16,14 @@ import ShareButtons from '../components/ShareButtons.astro';
 import FAQAccordionScript from '../components/FAQAccordionScript.astro';
 import FeedbackForm from '../components/FeedbackForm.astro';
 import BodyEnhancements from '../components/godtier/BodyEnhancements.astro';
+import RelatedReading from '../components/RelatedReading.astro';
+
+type RelatedItem = {
+  href: string;
+  title: string;
+  description?: string;
+  kind?: 'tool' | 'guide' | 'workflow' | 'comparison' | 'news' | 'trend' | 'category' | 'answer' | 'company' | 'internal';
+};
 
 interface Props {
   title: string;
@@ -33,6 +41,7 @@ interface Props {
   datePublished?: string;
   ogImage?: string;
   citations?: Array<{ url: string; title?: string }>;
+  relatedItems?: RelatedItem[];
   homeSurfaceCards?: boolean;
 }
 
@@ -45,6 +54,7 @@ const {
   datePublished,
   ogImage,
   citations = [],
+  relatedItems = [],
 } = Astro.props;
 
 const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
@@ -135,6 +145,10 @@ const rankLabel = badge?.text ?? metaExtra ?? (readingMinutes > 0 ? `${readingMi
       <slot />
     </article>
     <BodyEnhancements tableLabel={`${title} table`} />
+
+    {relatedItems.length > 0 && (
+      <RelatedReading items={relatedItems} heading="Read next" />
+    )}
 
     {trustSources.length > 0 && (
       <TrustPanel
