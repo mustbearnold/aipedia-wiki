@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2022-11
-last_updated: 2026-05-17
-last_verified: 2026-05-17
+last_updated: 2026-05-18
+last_verified: 2026-05-18
 update_frequency: monthly
 seo_title: "ChatGPT: Features, Pricing & Review (May 2026)"
 meta_description: "ChatGPT runs GPT-5.5 Instant as the default, with GPT-5.5 Thinking on Plus and GPT-5.5 Pro on Pro, Business, and Enterprise. May 2026 added Codex mobile preview, Pro finances, and File Library for Free and Go."
@@ -288,7 +288,7 @@ price_history:
     source: "/news/2026-05-15-chatgpt-finances-file-library-rollout/"
     source_id: aipedia-news
     source_label: "AIpedia coverage"
-    verified_at: 2026-05-17
+    verified_at: 2026-05-18
     note: "U.S. Pro users get gradual personal-finance dashboard rollout through Plaid; Library expands to Free and Go, including EEA users, with storage from 500 MB on Free to 100 GB on Pro."
 ---
 
@@ -314,7 +314,7 @@ OpenAI's general-purpose AI assistant for text, images, web browsing, sandboxed 
 | **File Library** | Free 500 MB · Go 4 GB · Plus/Business 20 GB · Pro 100 GB; expanded to Free and Go on May 15, 2026 |
 | **Score** | Utility 10 · Value 8 · Moat 10 · Longevity 10 |
 
-Every data point above was last verified against OpenAI pages, local news entries, or named sources on May 17, 2026.
+Every data point above was last verified against OpenAI pages, local news entries, or named sources on May 18, 2026.
 
 ## Pricing
 
@@ -328,10 +328,11 @@ Every data point above was last verified against OpenAI pages, local news entrie
 | Business | $25/user/mo monthly; $20/user/mo annually | Flexible GPT-5.5 Thinking and GPT-5.5 Pro access | Included, with workspace controls | No | Small teams |
 | Enterprise | Custom | Flexible GPT-5.5 Thinking and GPT-5.5 Pro access | High | No | SSO, audit, SOC 2, data controls |
 
-Prices and model access were rechecked on May 13, 2026 using [ChatGPT pricing](https://chatgpt.com/pricing/), [OpenAI's GPT-5.5 Instant release note](https://openai.com/index/gpt-5-5-instant/), [OpenAI's GPT-5.5 release note](https://openai.com/index/introducing-gpt-5-5/), [OpenAI's Pro tier help article](https://help.openai.com/en/articles/9793128-what-is-chatgpt-pro), and [OpenAI's Business help article](https://help.openai.com/en/articles/8792828-what-is-chatgpt-team). The public pricing snapshot available here does not expose a fixed US dollar amount for Go, so the table lists it as regional pricing instead of repeating an unverified $8/mo figure.
+Prices and model access were rechecked on May 18, 2026 using [ChatGPT pricing](https://chatgpt.com/pricing/), [OpenAI's GPT-5.5 Instant release note](https://openai.com/index/gpt-5-5-instant/), [OpenAI's GPT-5.5 release note](https://openai.com/index/introducing-gpt-5-5/), [OpenAI's Pro tier help article](https://help.openai.com/en/articles/9793128-what-is-chatgpt-pro), and [OpenAI's Business help article](https://help.openai.com/en/articles/8792828-what-is-chatgpt-team). The public pricing snapshot available here does not expose a fixed US dollar amount for Go, so the table lists it as regional pricing instead of repeating an unverified $8/mo figure.
 
 ## Recent changes
 
+- **May 16, 2026:** [OpenAI put Greg Brockman over product strategy as ChatGPT and Codex converge](/news/2026-05-16-openai-brockman-chatgpt-codex-product-strategy/). The reorg folds ChatGPT, Codex, and the developer API into one core product team, making Codex part of the main ChatGPT agent-platform roadmap rather than a separate developer sidecar.
 - **May 15, 2026:** [ChatGPT added a U.S. Pro personal-finance experience and expanded File Library to Free and Go users](/news/2026-05-15-chatgpt-finances-file-library-rollout/). Finances connects supported accounts through Plaid and is for planning, not payments, trading, taxes, or regulated advice. Library now spans Free, Go, Plus, Business, and Pro with storage limits from 500 MB to 100 GB.
 - **May 14, 2026:** [OpenAI put Codex inside the ChatGPT mobile app](/news/2026-05-14-openai-codex-chatgpt-mobile-app/), turning ChatGPT mobile into a control surface for active coding-agent work. Users can monitor Codex threads, review outputs, approve commands, change models, and start new work from iOS or Android while Codex keeps running on a connected laptop, devbox, or remote environment.
 - **May 14, 2026:** [GPT-5.5-Cyber, Anthropic's Mythos, and Microsoft's MDASH drove a vulnpocalypse](/news/2026-05-14-vulnpocalypse-mythos-gpt-cyber-mdash-patch-tuesday/) of AI-found vulnerabilities. Palo Alto Networks found 75 holes / 26 CVEs in its products in one month. Microsoft Patch Tuesday hit 30 critical CVEs. Mozilla shipped 423 Firefox bugs in April. For ChatGPT enterprise buyers: AI bug-finding is now production-scale on both defender and attacker sides; tighten patch cadence accordingly.
@@ -430,4 +431,4 @@ ChatGPT wins on breadth, image generation, and agent integrations. Claude remain
 - [OpenAI: What is ChatGPT Business?](https://help.openai.com/en/articles/8792828-what-is-chatgpt-team): Business seat pricing and workspace controls
 - [OpenAI: File storage and Library in ChatGPT](https://help.openai.com/en/articles/20001052-file-storage-and-library-in-chatgpt): Library availability, saved-file behavior, and storage limits
 
-This review follows the aipedia.wiki four-axis scoring model: Utility, Value, Moat, and Longevity. Last verified 2026-05-17.
+This review follows the aipedia.wiki four-axis scoring model: Utility, Value, Moat, and Longevity. Last verified 2026-05-18.

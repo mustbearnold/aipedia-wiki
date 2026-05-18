@@ -1,6 +1,6 @@
 # AiPedia Page Refresh Ledger
 
-Ledger updated through: 2026-05-17
+Ledger updated through: 2026-05-18
 Tracked public pages and crawl surfaces: 732
 
 Hard rule: every time a tracked website page is edited, refreshed, materially re-ranked, or has volatile facts re-verified, update that page row in this file on the same change. If a child page update affects a parent hub, archive, internal-link block, sitemap, or LLM surface, update those affected rows too.
@@ -33,9 +33,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-09 | /answers/best-ai-voice-generator-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-voice-generator-2026.astro |
 | 2026-05-09 | /answers/best-free-ai-tools-2026/ | Static page | Yes | page metadata | src/pages/answers/best-free-ai-tools-2026.astro |
 | 2026-05-09 | /answers/chatgpt-alternatives-2026/ | Static page | Yes | page metadata | src/pages/answers/chatgpt-alternatives-2026.astro |
-| 2026-05-09 | /llms-full.txt | Crawl surface | No | git | src/pages/llms-full.txt.ts |
-| 2026-05-09 | /llms.txt | Crawl surface | No | git | src/pages/llms.txt.ts |
-| 2026-05-10 | /news/rss.xml | Crawl surface | No | git | src/pages/news/rss.xml.ts |
 | 2026-05-10 | /privacy/ | Static page | Yes | git | src/pages/privacy.astro |
 | 2026-05-10 | /robots.txt | Crawl surface | No | git | public/robots.txt |
 | 2026-05-10 | /terms/ | Static page | Yes | git | src/pages/terms.astro |
@@ -709,37 +706,40 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-15 | /about/our-stack/ | Static page | Yes | git | src/pages/about/our-stack.astro |
 | 2026-05-15 | /guides/best-ai-landing-page-builder-for-ab-testing/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-landing-page-builder-for-ab-testing.md |
 | 2026-05-15 | /sitemap-index.xml | Crawl surface | No | git | astro.config.mjs |
-| 2026-05-15 | /tools/codex/ | Tool | Yes | frontmatter | src/content/tools/codex.md |
 | 2026-05-15 | /tools/openclaw/ | Tool | Yes | frontmatter | src/content/tools/openclaw.md |
 | 2026-05-15 | /tools/runway/ | Tool | Yes | frontmatter | src/content/tools/runway.md |
-| 2026-05-17 | / | Static page | Yes | working tree | src/pages/index.astro |
-| 2026-05-17 | /answers/ | Static page | Yes | working tree | src/pages/answers/index.astro |
-| 2026-05-17 | /answers/best-ai-for-students/ | Static page | Yes | working tree | src/pages/answers/best-ai-for-students.astro |
-| 2026-05-17 | /answers/chatgpt-vs-claude-which-is-better/ | Static page | Yes | working tree | src/pages/answers/chatgpt-vs-claude-which-is-better.astro |
-| 2026-05-17 | /answers/is-cursor-worth-it/ | Static page | Yes | working tree | src/pages/answers/is-cursor-worth-it.astro |
-| 2026-05-17 | /answers/is-midjourney-worth-it/ | Static page | Yes | working tree | src/pages/answers/is-midjourney-worth-it.astro |
-| 2026-05-17 | /categories/ | Static page | Yes | working tree | src/pages/categories/index.astro |
+| 2026-05-17 | / | Static page | Yes | git | src/pages/index.astro |
+| 2026-05-17 | /answers/ | Static page | Yes | git | src/pages/answers/index.astro |
+| 2026-05-17 | /answers/best-ai-for-students/ | Static page | Yes | page metadata | src/pages/answers/best-ai-for-students.astro |
+| 2026-05-17 | /answers/chatgpt-vs-claude-which-is-better/ | Static page | Yes | page metadata | src/pages/answers/chatgpt-vs-claude-which-is-better.astro |
+| 2026-05-17 | /answers/is-cursor-worth-it/ | Static page | Yes | page metadata | src/pages/answers/is-cursor-worth-it.astro |
+| 2026-05-17 | /answers/is-midjourney-worth-it/ | Static page | Yes | page metadata | src/pages/answers/is-midjourney-worth-it.astro |
+| 2026-05-17 | /categories/ | Static page | Yes | git | src/pages/categories/index.astro |
 | 2026-05-17 | /categories/ai-video/ | Category | Yes | frontmatter | src/content/categories/ai-video.md |
 | 2026-05-17 | /companies/google-deepmind/ | Company | Yes | frontmatter | src/content/companies/google-deepmind.md |
 | 2026-05-17 | /companies/mistral/ | Company | Yes | frontmatter | src/content/companies/mistral.md |
 | 2026-05-17 | /companies/openai/ | Company | Yes | frontmatter | src/content/companies/openai.md |
-| 2026-05-17 | /compare/ | Static page | Yes | working tree | src/pages/compare/index.astro |
+| 2026-05-17 | /compare/ | Static page | Yes | git | src/pages/compare/index.astro |
 | 2026-05-17 | /compare/build/ | Static page | No | git | src/pages/compare/build.astro |
-| 2026-05-17 | /explore/ | Static page | Yes | working tree | src/pages/explore/index.astro |
-| 2026-05-17 | /guides/ | Static page | Yes | working tree | src/pages/guides/index.astro |
+| 2026-05-17 | /explore/ | Static page | Yes | git | src/pages/explore/index.astro |
+| 2026-05-17 | /guides/ | Static page | Yes | git | src/pages/guides/index.astro |
 | 2026-05-17 | /guides/notion-ai-alternatives/ | Guide | No | frontmatter | src/content/use-cases/notion-ai-alternatives.md |
-| 2026-05-17 | /news/ | Static page | Yes | working tree | src/pages/news/index.astro |
-| 2026-05-17 | /search/ | Static page | No | working tree | src/pages/search.astro |
+| 2026-05-17 | /search/ | Static page | No | git | src/pages/search.astro |
 | 2026-05-17 | /stack-builder/ | Static page | Yes | git | src/pages/stack-builder/index.astro |
-| 2026-05-17 | /tools/ | Static page | Yes | working tree | src/pages/tools/index.astro |
-| 2026-05-17 | /tools/chatgpt/ | Tool | Yes | frontmatter | src/content/tools/chatgpt.md |
+| 2026-05-17 | /tools/ | Static page | Yes | git | src/pages/tools/index.astro |
 | 2026-05-17 | /tools/claude-code/ | Tool | Yes | frontmatter | src/content/tools/claude-code.md |
 | 2026-05-17 | /tools/claude/ | Tool | Yes | frontmatter | src/content/tools/claude.md |
 | 2026-05-17 | /tools/gamma/ | Tool | Yes | frontmatter | src/content/tools/gamma.md |
 | 2026-05-17 | /tools/github-copilot/ | Tool | Yes | frontmatter | src/content/tools/github-copilot.md |
 | 2026-05-17 | /tools/mistral-ai/ | Tool | Yes | frontmatter | src/content/tools/mistral-ai.md |
 | 2026-05-17 | /tools/quillbot/ | Tool | Yes | frontmatter | src/content/tools/quillbot.md |
-| 2026-05-17 | /trends/ | Static page | Yes | working tree | src/pages/trends/index.astro |
-| 2026-05-17 | /workflows/ | Static page | Yes | working tree | src/pages/workflows/index.astro |
+| 2026-05-17 | /trends/ | Static page | Yes | git | src/pages/trends/index.astro |
+| 2026-05-17 | /workflows/ | Static page | Yes | git | src/pages/workflows/index.astro |
 | 2026-05-17 | /workflows/micro-saas-weekend-build/ | Workflow | Yes | frontmatter | src/content/workflows/micro-saas-weekend-build.md |
 | 2026-05-17 | /workflows/newsletter-stack/ | Workflow | Yes | frontmatter | src/content/workflows/newsletter-stack.md |
+| 2026-05-18 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
+| 2026-05-18 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
+| 2026-05-18 | /news/ | Static page | Yes | working tree | src/pages/news/index.astro |
+| 2026-05-18 | /news/rss.xml | Crawl surface | No | working tree | src/pages/news/rss.xml.ts |
+| 2026-05-18 | /tools/chatgpt/ | Tool | Yes | working tree | src/content/tools/chatgpt.md |
+| 2026-05-18 | /tools/codex/ | Tool | Yes | working tree | src/content/tools/codex.md |

@@ -1,6 +1,8 @@
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 
+// Refresh metadata: 2026-05-18 news collection update.
+
 function escapeXml(s: string) {
   return String(s ?? '')
     .replace(/&/g, '&amp;')

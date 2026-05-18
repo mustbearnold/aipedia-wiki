@@ -2,6 +2,7 @@
 // Lists every active tool with category + tagline, every comparison, every
 // use-case guide. Intended for crawlers willing to ingest a larger manifest
 // to discover the full content map without parsing the sitemap.
+// Refresh metadata: 2026-05-18 news collection update.
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 
