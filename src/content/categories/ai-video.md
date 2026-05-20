@@ -2,13 +2,13 @@
 type: category
 slug: ai-video
 title: AI Video Generation
-description: Current AI video tools for model-quality testing, production workflows, budget social clips, avatar videos, localization, and business training.
-tool_count: 26
-seo_title: "Best AI Video Tools (May 2026): Seedance, Kling, Veo & Runway"
-meta_description: "Updated May 17, 2026: compare Seedance 2.0, Kling 3.0, Veo 3.1, Hailuo 2.3, Runway, Pika, HeyGen, Synthesia, and Sora sunset caveats by model quality, workflow, pricing, and buyer fit."
+description: Current AI video tools for raw model testing, conversational video editing, production workflows, budget social clips, avatar videos, localization, and business training.
+tool_count: 27
+seo_title: "Best AI Video Tools (May 2026): Gemini Omni, Seedance, Kling, Veo & Runway"
+meta_description: "Updated May 20, 2026: compare Gemini Omni, Seedance 2.0, Kling 3.0, Veo 3.1, Hailuo 2.3, Runway, Pika, HeyGen, Synthesia, and Sora sunset caveats by model quality, workflow, pricing, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-17
-last_verified: 2026-05-17
+last_updated: 2026-05-20
+last_verified: 2026-05-20
 update_frequency: weekly
 top_picks:
   best_overall: seedance
@@ -18,13 +18,15 @@ top_picks:
 
 ## Quick Decision
 
-AI video is no longer one clean product category. On May 17, 2026, the useful buyer split is:
+AI video is no longer one clean product category. On May 20, 2026, the useful buyer split is:
 
 **Test [Seedance 2.0](/tools/seedance/) first for raw model quality.** ByteDance says Seedance 2.0 supports text, image, audio, and video inputs with multimodal references, editing, extension, 15-second multi-shot audio-video output, motion stability, and director-level control. That makes it the first model AiPedia would test when the only question is "which model can make the best shot?"
 
 **Test [Kling 3.0](/tools/kling/) next for value and cinematic creator output.** Kuaishou says Kling AI 3.0 adds Video 3.0 and Video 3.0 Omni with native audio, up to 15-second clips, multi-shot storytelling, reference consistency, prompt adherence, and photorealistic output. The buyer caveat is access: verify the exact 3.0 or Omni model, credits, commercial rights, region, and watermark rules inside the app before paying.
 
 **Use [Google Veo 3.1](/tools/veo/) when API, Google governance, vertical mobile output, or provenance matters.** Google lists Veo 3.1 through the Gemini API with landscape and portrait output, video extension, first/last-frame generation, up to three reference images, native audio, and paid per-second pricing. It is the cleanest enterprise/API route in the current model set.
+
+**Use [Gemini Omni](/tools/gemini-omni/) when you want Google-native conversational video editing.** Google's May 19, 2026 launch positions Gemini Omni Flash as a Gemini-native model that takes text, images, audio, and video inputs and outputs high-resolution video with audio across Gemini, Flow, Flow Music, and YouTube. It is the new Google surface to test for reference-driven, multi-turn creative edits, but do not treat it as a mature standalone API product until Google publishes developer/enterprise availability and pricing.
 
 **Do not treat Sora 2 Pro as a fresh buying route.** OpenAI says the Sora web and app experiences were discontinued on April 26, 2026, and the Sora API will be discontinued on September 24, 2026. Use Sora only for legacy exports, migration planning, or a short API sunset comparison; do not build a new video workflow around it.
 
@@ -38,7 +40,7 @@ AI video is no longer one clean product category. On May 17, 2026, the useful bu
 
 Start with the job, not the logo.
 
-If you need the highest raw model ceiling, run the same prompt set through Seedance 2.0, Kling 3.0, and Veo 3.1. Include text-to-video, image-to-video, a character-reference prompt, a fast camera move, a multi-shot sequence, a product ad, a vertical 9:16 clip, and one audio/dialogue prompt. Score the outputs for prompt adherence, motion physics, subject consistency, text rendering, audio sync, artifact rate, editability, generation cost, and reuse in the final channel.
+If you need the highest raw model ceiling, run the same prompt set through Seedance 2.0, Kling 3.0, Veo 3.1, and Gemini Omni. Include text-to-video, image-to-video, a character-reference prompt, a fast camera move, a multi-shot sequence, a product ad, a vertical 9:16 clip, and one audio/dialogue prompt. Score the outputs for prompt adherence, motion physics, subject consistency, text rendering, audio sync, artifact rate, editability, generation cost, and reuse in the final channel.
 
 If you need a finished workflow, start with Runway. The value is consolidation: one place to test multiple video routes, edit shots, manage projects, remove watermarks on paid plans, store assets, work with a team, and move toward API or enterprise usage.
 
@@ -53,6 +55,8 @@ If you need a person on camera, use avatar tools. The [best AI avatar video gene
 **Best value/cinematic challenger:** Kling 3.0. The official 3.0 launch is strong enough to put Kling in the top testing set, but the purchase page can be harder to audit from a static crawl, so buyers should verify model access before committing.
 
 **Best Google/API pick:** Veo 3.1. It is the right shortlist entry when a team wants Gemini API, Vertex AI, SynthID/provenance expectations, Google Cloud governance, paid API pricing, or native portrait video.
+
+**Best Google conversational-editing pick:** Gemini Omni. It is the right shortlist entry when the team already uses Google AI, wants Gemini/Flow-native video edits, or needs to transform reference images, clips, audio, and text into a cohesive output. Its current weakness is procurement clarity: API pricing and exact tier limits are still less auditable than Veo 3.1.
 
 **Best production workspace:** Runway. It is the buyer route for creators and teams that want model switching, editing, team workflow, exports, API options, and a cleaner path from experiment to deliverable.
 
@@ -74,6 +78,8 @@ Do not quote Kling pricing or model access without a date and a "verify in app" 
 
 Do not use old Veo 3 language when the buyer question is now Veo 3.1. Google's Gemini API docs and pricing page are the current API reference points.
 
+Do not collapse Gemini Omni and Veo 3.1 into one recommendation. Omni is the Gemini-native conversational creation/editing surface; Veo 3.1 is still the cleaner Google API/Vertex AI route with clearer per-second pricing.
+
 Do not make a wide comparison table the mobile experience. Mobile buyers need stacked picks, quick routes, and plain-language watch-outs before they see the full ranked list.
 
 ## Buyer Paths
@@ -84,7 +90,9 @@ Do not make a wide comparison table the mobile experience. Mobile buyers need st
 
 **Agency or brand team:** shortlist Runway for production, Veo 3.1 for Google/API/provenance, and HeyGen or Synthesia for avatar-led sales/training/localization.
 
-**Developer or product team:** compare Veo 3.1 Gemini API pricing against Runway API credits and any official Seedance/Kling route available to your region. Treat video as a cost center; iteration loops get expensive quickly.
+**Developer or product team:** compare Veo 3.1 Gemini API pricing against Runway API credits and any official Seedance/Kling route available to your region. Treat Gemini Omni as a watch-and-test model until Google publishes standalone developer/enterprise pricing. Treat video as a cost center; iteration loops get expensive quickly.
+
+**Google AI subscriber testing creative edits:** start with Gemini Omni in Gemini or Flow, then compare the same reference-driven prompt set against Veo 3.1 and Runway. Upgrade Google AI tiers only when your actual Omni/Flow limits block production.
 
 **Training or L&D buyer:** start with Synthesia or HeyGen, then use the [avatar-video buyer guide](/guides/best-ai-avatar-video-generator/) to compare Tavus, D-ID, Argil, Hedra, and Captions depending on whether the need is templates, live conversation, long-form avatars, custom talking characters, or short-form social editing.
 
@@ -121,6 +129,9 @@ HeyGen is avatar video: presenter clips, translated sales videos, business templ
 **Is Veo 3.1 better than Seedance or Kling?**
 It depends on the job. Veo 3.1 is especially compelling when you need Google API access, vertical mobile output, native audio, paid per-second pricing, Google Cloud procurement, or provenance expectations.
 
+**Where does Gemini Omni fit?**
+Gemini Omni is Google's new conversational video creation and editing route inside Gemini, Flow, Flow Music, and YouTube. Test it when you need multi-turn edits from text, image, audio, or video references. Use Veo 3.1 instead when published API pricing and Google Cloud procurement matter more.
+
 **Should AiPedia still cover Pika, Luma, Wan, Hailuo, Vidu, and Pixverse?**
 Yes, but with honest positioning. They are useful for budget testing, effects, open/alternative routes, stylized output, and social clips. They should not outrank the frontier model set unless a current controlled test supports it.
 
@@ -133,6 +144,9 @@ Yes, but with honest positioning. They are useful for budget testing, effects, o
 - [Kuaishou Kling AI 3.0 launch](https://ir.kuaishou.com/news-releases/news-release-details/kling-ai-launches-30-model-ushering-era-where-everyone-can-be)
 - [Kling AI](https://klingai.com/)
 - [Google DeepMind Veo](https://deepmind.google/models/veo/)
+- [Google DeepMind Gemini Omni](https://deepmind.google/models/gemini-omni/) (verified 2026-05-20)
+- [Gemini Omni Flash model card](https://deepmind.google/models/model-cards/gemini-omni-flash/) (verified 2026-05-20)
+- [Google AI subscription updates from I/O 2026](https://blog.google/products-and-platforms/products/google-one/google-ai-subscriptions/) (verified 2026-05-20)
 - [Veo 3.1 Gemini API docs](https://ai.google.dev/gemini-api/docs/video)
 - [Veo 3.1 Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing)
 - [OpenAI Sora discontinuation help](https://help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation) (verified 2026-05-17)
@@ -155,6 +169,7 @@ Yes, but with honest positioning. They are useful for budget testing, effects, o
 - [Seedance 2.0](/tools/seedance/)
 - [Kling 3.0](/tools/kling/)
 - [Google Veo 3.1](/tools/veo/)
+- [Gemini Omni](/tools/gemini-omni/)
 - [Runway](/tools/runway/)
 - [HeyGen](/tools/heygen/)
 - [Synthesia](/tools/synthesia/)

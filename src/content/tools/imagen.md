@@ -181,7 +181,7 @@ The moat is integration depth. No other image model ships native inside Docs, Sl
 - **Open weights, LoRA fine-tuning, or self-hosting:** [Flux](/tools/flux/). Imagen 4 offers none of those.
 - **Dense text rendering for logos and posters:** [Ideogram](/tools/ideogram/) remains the safer pick for text-critical production.
 - **Image generation bundled with a chat assistant you already pay for:** GPT Image 2 inside [ChatGPT](/tools/chatgpt/).
-- **Video generation alongside images:** [Runway](/tools/runway/) for production control, or Veo 3.1 inside [Gemini](/tools/gemini/) Ultra.
+- **Video generation alongside images:** [Gemini Omni](/tools/gemini-omni/) for Google-native conversational video edits, [Runway](/tools/runway/) for production control, or [Veo 3.1](/tools/veo/) when published Google API pricing matters.
 
 ## Pricing
 
@@ -262,3 +262,4 @@ No. The model is served only through Google surfaces: Gemini app, AI Studio, Gem
 ## Related
 
 - **Category:** [AI Image Generation](/categories/ai-image/)
+- **Google media tools:** [Gemini Omni](/tools/gemini-omni/) · [Google Veo 3.1](/tools/veo/) · [Gemini](/tools/gemini/)

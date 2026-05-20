@@ -3,7 +3,7 @@
 // Copilot) at the canonical index + category hubs + editorial policy.
 //
 // See also /llms-full.txt for the verbose variant with every page listed.
-// Refresh metadata: 2026-05-20 news collection update.
+// Refresh metadata: 2026-05-20 Gemini Omni tool catalog update.
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 

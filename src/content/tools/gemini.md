@@ -262,6 +262,7 @@ The subscription story also changed. Google AI Pro remains the mainstream $19.99
 Verified 2026-05-20.
 
 - **May 19:** [Google I/O made Gemini 3.5 Flash the default AI layer for Search, apps, and subscriptions](/news/2026-05-19-google-io-gemini-35-search-ai-ultra/). Google AI Ultra now starts at $100/mo, the old top tier dropped to $200/mo, and AI Mode in Search now uses Gemini 3.5 Flash globally.
+- **May 19:** [Gemini Omni](/tools/gemini-omni/) launched as Google's Gemini-native video creation and editing model for Google AI Plus, Pro, and Ultra subscribers across Gemini, Flow, Flow Music, and YouTube. Treat it as the Google conversational-editing route; keep [Veo 3.1](/tools/veo/) as the cleaner Google API/Vertex AI pricing route until Omni API pricing is published.
 - **May 19:** [Google Antigravity 2.0 and Managed Agents turned Gemini into a developer-agent stack](/news/2026-05-19-google-antigravity-managed-agents-ai-studio/). Managed Agents in the Gemini API run the Antigravity harness in isolated Linux environments and extend Gemini from chat into agent runtime infrastructure.
 - **May 19:** [Gemini 3.5 Flash landed in GitHub Copilot](/news/2026-05-19-github-copilot-gemini-35-flash-ga/), giving Google's new model immediate distribution inside a mainstream coding assistant outside Google's own IDE stack.
 - **May 12:** [Google rebranded Android around Gemini Intelligence and launched Googlebook](/news/2026-05-12-google-gemini-intelligence-googlebook-android-show/) at the Android Show: I/O Edition. Gemini Intelligence reads the screen and completes cross-app tasks; Googlebook is a new premium AI-laptop line shipping fall 2026 with Acer, Asus, Dell, HP, and Lenovo.
@@ -314,7 +315,7 @@ Verified 2026-05-20.
 | **API pricing** | Check current Gemini API pricing for Gemini 3.5; older Gemini 3.1 Pro rates should not be reused without verification |
 | **Subscription pricing** | Free · AI Plus · AI Pro $19.99 · AI Ultra $100 · AI Ultra $200 |
 | **Image generation** | Nano Banana 2 (Pro) · Nano Banana Pro (Ultra) |
-| **Video generation** | Veo 3.1 / Flow surfaces plus Gemini Omni rollout for Google AI Plus, Pro, and Ultra subscribers |
+| **Video generation** | [Veo 3.1](/tools/veo/) / Flow surfaces plus [Gemini Omni](/tools/gemini-omni/) rollout for Google AI Plus, Pro, and Ultra subscribers |
 | **Workspace integration** | Native in Docs, Sheets, Gmail, Drive, Meet, Chrome |
 | **Deep Research / agents** | Deep Research, Daily Brief, Gemini Spark, Search agents, and Managed Agents vary by plan, region, and rollout stage |
 | **Android** | Gemini Intelligence rebrand launched May 12, 2026 with cross-app task completion and on-screen reading; default assistant since March 2026 |
@@ -327,7 +328,7 @@ Every data point above verified against vendor sources on 2026-05-20. See Source
 
 ## What it actually is
 
-A single consumer + API product spanning text chat, multimodal analysis (images, audio, video, full repos), autonomous Deep Research, native image generation, native video generation through Google media surfaces, real-time voice, and in-app workflow integration across Docs, Sheets, Gmail, Drive, Search, Android, Chrome, and Google Cloud. The subscription bundle now matters as much as the model name.
+A single consumer + API product spanning text chat, multimodal analysis (images, audio, video, full repos), autonomous Deep Research, native image generation, native video generation through [Gemini Omni](/tools/gemini-omni/) and [Veo 3.1](/tools/veo/) media surfaces, real-time voice, and in-app workflow integration across Docs, Sheets, Gmail, Drive, Search, Android, Chrome, and Google Cloud. The subscription bundle now matters as much as the model name.
 
 The real moats are ecosystem, multimodal breadth, and vertically integrated infrastructure. Gemini 3.5 Flash now sits inside Search, the Gemini app, Antigravity, and the Gemini API, while Google controls the surrounding Workspace, Android, YouTube, Cloud, TPU, and Google One surfaces. Gemini Embedding 2, Managed Agents, and TPU-backed serving make Google's case stronger for enterprise RAG and agent workloads where retrieval quality, execution environment, and per-token cost matter together.
 
@@ -419,3 +420,4 @@ Google launched Gemini 3.5 Flash broadly, made it the default model for AI Mode 
 ## Related
 
 - **Category:** [AI Chatbots](/categories/ai-chatbots/) · [AI Writing](/categories/ai-writing/) · [AI Search](/categories/ai-search/)
+- **Google media tools:** [Gemini Omni](/tools/gemini-omni/) · [Google Veo 3.1](/tools/veo/) · [Imagen 4](/tools/imagen/)

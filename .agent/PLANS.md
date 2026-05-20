@@ -335,3 +335,82 @@ Published articles:
 Updated affected tool pages: `chatgpt`, `codex`, `claude`, `github-copilot`, `gemini`, `antigravity`, `gpt-image-2`, `imagen`, and `veo`. Refreshed `/news/`, `/news/rss.xml`, `/llms.txt`, `/llms-full.txt`, and `PAGE_REFRESH_LEDGER.md`. Generated 36 matching image assets for the nine new articles across dark OG PNG, light OG PNG, dark WebP thumbnail, and light WebP thumbnail.
 
 Verification passed: `npm run check:news`, `npm run check:links`, `npm run ledger:pages:check`, `npm run test:scripts`, `npm run build:fast`, image metadata QA for all 36 generated assets, and static browser QA for `/news/`, all nine new articles, and the nine affected tool pages at 360, 390, 430, 768, and 1024 px. `npm run check` failed only at `npm run check:security` because of an existing moderate `ws` advisory inherited through Cloudflare/Wrangler; no forced dependency change was made as part of this editorial refresh.
+
+---
+
+## ExecPlan: Gemini Omni Tool Page
+
+### 1. Objective
+
+Create a source-backed, decision-oriented `/tools/gemini-omni/` page that helps buyers understand whether Google's new Gemini Omni / Gemini Omni Flash video model is worth testing, which Google plan or surface to use, and which alternative to test first. This supports organic rankings, trust, mobile UX, data quality, and editorial scalability.
+
+### 2. Current state
+
+`src/content/tools/` has Google media pages for `gemini`, `veo`, and `imagen`, but no dedicated `gemini-omni` record. `src/content/categories/ai-video.md` mentions Veo 3.1 as the Google/API video pick and is last verified 2026-05-17. `src/data/logo-manifest.json` maps `gemini` to `public/logos/tools/gemini.png`, but no Gemini Omni logo entry exists. Tool pages render through `src/layouts/ToolLayout.astro`, which uses frontmatter for hero facts, scores, CTAs, schema, compare actions, sources, and trust labels.
+
+### 3. Target state
+
+`/tools/gemini-omni/` should be a complete mobile-first buying page: trust date, score, price route, verdict, best plan, watch-outs, feature facts, pricing guidance, comparison guidance, failure modes, FAQ, sources, and related links. The page should clearly distinguish Gemini Omni from Gemini 3.5 Flash, Veo 3.1, Imagen 4, and Runway. Parent and related Google/video pages should link to the new page.
+
+### 4. Scope
+
+Included: new Gemini Omni tool content record, reused/verified Gemini logo asset for the new slug, regenerated logo manifest, generated OG image, AI video category refresh, related Gemini/Veo/Imagen cross-links where relevant, `PAGE_REFRESH_LEDGER.md`, content checks, build, and mobile/browser QA.
+
+Excluded: creating a new comparison page, adding affiliate links, changing the tool layout template, broad Google pricing refactors, and making unsupported API pricing claims for Gemini Omni.
+
+Affected top-layer pages and surfaces: `/tools/`, `/tools/gemini-omni/`, `/tools/gemini/`, `/tools/veo/`, `/tools/imagen/`, `/categories/ai-video/`, sitemap/build-generated routes, `/llms.txt`, `/llms-full.txt`, search/API generated tool inventories, logo manifest, and `PAGE_REFRESH_LEDGER.md`.
+
+### 5. Files likely affected
+
+`src/content/tools/gemini-omni.md`, `src/content/categories/ai-video.md`, `src/content/tools/gemini.md`, `src/content/tools/veo.md`, `src/content/tools/imagen.md`, `public/logos/tools/gemini-omni.png`, `src/data/logo-manifest.json`, `public/og/tools/gemini-omni.png`, `PAGE_REFRESH_LEDGER.md`, and this plan.
+
+### 6. Data model impact
+
+Add one `tools` collection record with centralized facts, source fields, scoring, price history, last verified dates, and CTA metadata. No schema changes. Because Gemini Omni pricing and API rollout are volatile, the page should state the official Gemini/Flow/YouTube distribution and Google AI plan access while avoiding unsupported standalone per-video API rates.
+
+### 7. SEO impact
+
+The new page gets a unique title, meta description, canonical route via existing Astro page generation, SoftwareApplication structured data, source-backed visible content, internal links from related Google/video pages, and inclusion in generated search/sitemap/LLM inventories.
+
+### 8. Conversion impact
+
+No affiliate program is used. The primary CTA routes to Google's official Gemini Omni / Gemini surface. Buyer guidance should recommend starting in Gemini or Flow, upgrading only when account limits justify it, and using Veo/Vertex/Runway alternatives when a different buying route is safer.
+
+### 9. Mobile UX impact
+
+The existing tool layout should surface the trust strip, score, pricing, verdict, best plan, primary CTA, and watch-out on the first mobile screen. QA should cover 360, 390, 430, 768, and desktop 1024+ widths for the new page and affected parent surfaces.
+
+### 10. Implementation steps
+
+1. Verify Gemini Omni facts against current May 2026 official sources.
+2. Add `src/content/tools/gemini-omni.md` with complete frontmatter and buyer-focused body copy.
+3. Add/verify `public/logos/tools/gemini-omni.png` and regenerate `src/data/logo-manifest.json`.
+4. Refresh AI video category and related Gemini/Veo/Imagen pages with internal links and current watch-outs.
+5. Generate the Gemini Omni OG asset and restore unrelated generated churn.
+6. Regenerate `PAGE_REFRESH_LEDGER.md`.
+7. Run logo/content/link/ledger/build checks and browser/mobile QA.
+
+### 11. Verification commands
+
+`node scripts/generate-logo-manifest.mjs`, `node scripts/audit-tool-logos.mjs`, `node scripts/generate-og-svgs.mjs`, `node scripts/optimize-og-images.mjs`, `npm run ledger:pages`, `npm run check:links`, `npm run ledger:pages:check`, `npm run check:news`, `npm run test:scripts`, `npm run build:fast`, and browser QA for `/tools/gemini-omni/`, `/categories/ai-video/`, and related Google tool pages at 360, 390, 430, 768, and 1024 px.
+
+### 12. Acceptance criteria
+
+`/tools/gemini-omni/` exists, builds, renders with a proper logo, has current official sources, avoids unsupported pricing/API claims, and gives a clear buy/skip/alternative decision. Affected parent and related pages are current, internally linked, and ledgered. Logo audit, link checks, ledger check, script tests, build, and mobile QA pass or any unrelated failures are documented.
+
+### 13. Risks and mitigations
+
+Gemini Omni facts are new and volatile; use official Google/DeepMind pages and visible caveats for rollout, plan, geography, and API availability. Google plan pages can hide regional prices; avoid quoting unverified AI Plus amounts and rely on the May 19 subscription blog for the $100/$200 Ultra facts. Generated OG scripts may touch many existing files; restore unrelated churn before finishing.
+
+### 14. Progress log
+
+2026-05-20: Plan created after source verification and repo inspection. Official sources confirm Gemini Omni / Gemini Omni Flash launched May 19, 2026 as a video-first multimodal creation/editing model for Gemini, Flow, Flow Music, and YouTube, with Google AI Plus/Pro/Ultra consumer access and API/developer evaluations promised later.
+2026-05-20: Added `src/content/tools/gemini-omni.md`, reused the Gemini logo under the new slug, added the new tool to the legacy OG registry, generated `public/og/tools/gemini-omni.png`, refreshed the AI video category and Gemini/Veo/Imagen cross-links, updated tool/category/LLM top-layer refresh markers, regenerated `PAGE_REFRESH_LEDGER.md`, and verified local rendering.
+
+### 15. Final report
+
+Completed on 2026-05-20.
+
+Published `/tools/gemini-omni/` as a source-backed Google DeepMind AI video tool page with decision-first verdict, best plan guidance, pricing caveats, API caveats, provenance notes, comparison guidance, failure modes, FAQ, and official sources. Refreshed affected parent and related surfaces: `/tools/`, `/categories/`, `/categories/ai-video/`, `/tools/gemini/`, `/tools/veo/`, `/tools/imagen/`, `/llms.txt`, `/llms-full.txt`, and `PAGE_REFRESH_LEDGER.md`.
+
+Verification passed: `node scripts/generate-logo-manifest.mjs`, `node scripts/audit-tool-logos.mjs`, `node scripts/generate-og-svgs.mjs`, `node scripts/optimize-og-images.mjs` with unrelated tracked OG churn restored, `npm run ledger:pages`, `node scripts/guard-content.mjs`, `node scripts/guard-stale-facts.mjs`, `npm run check:links`, `npm run ledger:pages:check`, `npm run check:news`, `npm run test:scripts`, `npm run build:fast`, in-app browser QA for `http://127.0.0.1:8091/tools/gemini-omni/`, and Playwright viewport QA at 360, 390, 430, 768, and 1024 px for Gemini Omni plus the affected parent/Google tool pages. `npm run check` passed all content/link/news gates and failed only at the existing moderate `ws` advisory inherited through Cloudflare/Wrangler.

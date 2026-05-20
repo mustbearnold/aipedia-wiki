@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated": "2026-05-13T09:56:00.038446Z",
-  "total_active": 218,
+  "generated": "2026-05-20T00:00:00.000000Z",
+  "total_active": 219,
   "total_dead": 11,
   "tools": {
     "activepieces": {
@@ -2727,6 +2727,51 @@
         "link": null
       },
       "page_path": "wikis/ai-tools/pages/tools/gemini.md"
+    },
+    "gemini-omni": {
+      "slug": "gemini-omni",
+      "status": "active",
+      "title": "Gemini Omni",
+      "category": "ai-video",
+      "secondary_categories": [
+        "ai-image",
+        "ai-design"
+      ],
+      "company": "Google DeepMind",
+      "url": "https://deepmind.google/models/gemini-omni/",
+      "pricing_model": "freemium",
+      "price_range": "Google AI plans + API TBD",
+      "launched": "2026-05",
+      "last_updated": "2026-05-20T00:00:00.000Z",
+      "last_verified": "2026-05-20T00:00:00.000Z",
+      "update_frequency": "weekly",
+      "scores": {
+        "utility": 9,
+        "value": 7,
+        "moat": 9,
+        "longevity": 8
+      },
+      "tags": [
+        "ai-video",
+        "video-generation",
+        "video-editing",
+        "multimodal",
+        "google",
+        "deepmind",
+        "gemini",
+        "flow",
+        "youtube",
+        "synthid",
+        "c2pa"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/gemini-omni.md"
     },
     "genspark": {
       "slug": "genspark",

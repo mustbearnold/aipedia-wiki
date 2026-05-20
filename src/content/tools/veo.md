@@ -125,7 +125,7 @@ price_history:
 
 Google Veo 3.1 is a frontier AI video model family from Google DeepMind. As of May 13, 2026, AiPedia ranks it as the best Google/API pick in AI video: strong native audio, vertical mobile output, 1080p/4K workflows, Gemini API pricing, Vertex AI access, and SynthID provenance.
 
-**May 19, 2026 update:** [Google I/O 2026 added Gemini Omni and refreshed Google AI Ultra pricing](/news/2026-05-19-google-io-gemini-35-search-ai-ultra/). Veo 3.1 remains the source-backed API/Vertex AI video model on this page, but consumer video access now also needs to be compared against Gemini Omni and the new $100/$200 Ultra tiers.
+**May 19, 2026 update:** [Google I/O 2026 added Gemini Omni and refreshed Google AI Ultra pricing](/news/2026-05-19-google-io-gemini-35-search-ai-ultra/). Veo 3.1 remains the source-backed API/Vertex AI video model on this page, but consumer video access now also needs to be compared against [Gemini Omni](/tools/gemini-omni/) and the new $100/$200 Ultra tiers.
 
 It should be tested directly against [Seedance 2.0](/tools/seedance/) and [Kling 3.0](/tools/kling/) for raw video quality. Veo's strongest advantage is not simply output quality; it is the surrounding Google ecosystem.
 
@@ -174,6 +174,7 @@ Consumer plan access can vary by country, account, and product surface. For prod
 
 - **Raw model-quality testing:** start with [Seedance 2.0](/tools/seedance/) and [Kling 3.0](/tools/kling/) as well.
 - **Production workspace:** [Runway](/tools/runway/) gives a stronger creator workflow and model switching UI.
+- **Gemini-native conversational edits:** [Gemini Omni](/tools/gemini-omni/) is the newer Google route when the job is multi-turn video creation or editing inside Gemini, Flow, Flow Music, or YouTube.
 - **Low-budget effects:** [Pika](/tools/pika/) is lighter for quick clips and playful social assets.
 - **Avatar video:** [HeyGen](/tools/heygen/) is better for presenter-led video.
 
@@ -209,4 +210,5 @@ Yes. Google's January 2026 update specifically highlights native vertical 9:16 o
 
 - **Category:** [AI Video Generation](/categories/ai-video/)
 - **Compare:** [Veo vs Seedance](/compare/veo-vs-seedance/) · [Veo vs Kling](/compare/veo-vs-kling/) · [Runway vs Veo](/compare/runway-vs-veo/) · [Runway vs Kling vs Seedance vs Veo](/compare/kling-vs-seedance-vs-runway/)
+- **Google media tools:** [Gemini Omni](/tools/gemini-omni/) · [Gemini](/tools/gemini/) · [Imagen 4](/tools/imagen/)
 - **Alternatives:** [Seedance 2.0](/tools/seedance/) · [Kling 3.0](/tools/kling/) · [Runway](/tools/runway/) · [Pika](/tools/pika/)
