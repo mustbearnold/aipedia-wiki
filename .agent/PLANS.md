@@ -246,3 +246,92 @@ Skipped duplicates already covered by existing AiPedia news: ChatGPT finance/Fil
 Affected top-layer and generated surfaces were refreshed through `/news/`, `/news/rss.xml`, `/llms.txt`, `/llms-full.txt`, and `PAGE_REFRESH_LEDGER.md`. Individual article URLs remain intentionally excluded from the page ledger, while affected tool rows for `/tools/chatgpt/` and `/tools/codex/` were refreshed.
 
 Verification passed: `npm run check:news`, `npm run check:links`, `npm run ledger:pages`, `npm run ledger:pages:check`, `npm run test:scripts`, `npm run check`, and `npm run build:fast`. Image metadata QA confirmed all four new article image sets are present at `1200x630` for OG PNGs and `960x504` for WebP thumbnails. Static browser QA against `dist-fast` passed at 360, 390, 430, 768, and 1024 px for `/news/` and all four new article pages, with no document-level horizontal overflow and no broken visible images.
+
+---
+
+## ExecPlan: May 18-19 2026 News Refresh
+
+### 1. Objective
+
+Publish source-backed AiPedia news coverage for the missing May 18 and May 19, 2026 AI and AI-tool news since the previous news pass. The goal is editorial freshness, trust, organic coverage, and buyer-useful context for affected tool pages.
+
+### 2. Current state
+
+`src/content/news/` contains news articles through `2026-05-17-apple-siri-revamp-auto-delete-chats.md`. The existing May 16-18 plan says the previous pass completed on 2026-05-18, but no May 18 or May 19 article files are present. The news route is generated from the `news` collection, `/news/` groups by month, `/news/rss.xml`, `/llms.txt`, and `/llms-full.txt` are content-driven crawl surfaces with refresh comments dated 2026-05-18. `scripts/audit-news-xrefs.mjs` requires affected tool pages to reference recent news items listed in `affects`.
+
+### 3. Target state
+
+Add non-duplicate May 18 and May 19 news articles for the high-impact verified stories: OpenAI/Dell Codex enterprise environments, Anthropic acquiring Stainless, GitHub Copilot agent and model updates, Musk v. OpenAI trial outcome, Google I/O Gemini/Antigravity/subscription changes, OpenAI/Google provenance and SynthID moves, and Anthropic/KPMG enterprise rollout. Each article must include current sources, buyer takeaways, and cautious language around rollouts and pricing.
+
+### 4. Scope
+
+Included: new news markdown, affected tool-page cross-links/fact snippets, `/news/` refresh metadata, RSS/LLM crawl-surface refresh metadata, generated OG news artwork, ledger regeneration, and content/build checks. Excluded: adding new tool records, logo sourcing for new tools, broad template redesign, affiliate changes, and speculative or single-source rumors not needed for buyer decisions.
+
+Affected top-layer pages and surfaces: `/news/`, `/tools/chatgpt/`, `/tools/codex/`, `/tools/claude/`, `/tools/github-copilot/`, `/tools/gemini/`, `/tools/antigravity/`, `/tools/gpt-image-2/`, `/tools/imagen/`, `/tools/veo/`, `/news/rss.xml`, `/llms.txt`, `/llms-full.txt`, sitemap/build-generated surfaces, and `PAGE_REFRESH_LEDGER.md`.
+
+### 5. Files likely affected
+
+`src/content/news/*.md`, selected `src/content/tools/*.md`, `src/pages/news/index.astro`, `src/pages/news/rss.xml.ts`, `src/pages/llms.txt.ts`, `src/pages/llms-full.txt.ts`, generated files under `public/og/news/`, `PAGE_REFRESH_LEDGER.md`, and this plan.
+
+### 6. Data model impact
+
+No schema changes. New news records must conform to existing frontmatter. Tool pages updated with `last_updated` and `last_verified` set to 2026-05-20 where facts or cross-links change. Gemini/Antigravity/Google media tool pricing language must reflect Google's May 19 subscription changes.
+
+### 7. SEO impact
+
+New indexable news pages get unique titles, summaries, canonical route generation, NewsArticle structured data, source lists, OG images, and internal links to affected tool/category pages. `/news/` latest label and crawl surfaces should reflect the May 19 article set.
+
+### 8. Conversion impact
+
+No new affiliate CTAs. Tool pages keep buyer guidance honest and commercial-neutral; pricing guidance is updated where Google AI Ultra changed from one $249.99 tier to $100/$200 tiers.
+
+### 9. Mobile UX impact
+
+News pages reuse `ArticlePlusLayout`. Verify representative new pages and `/news/` at 360, 390, 430, 768, and 1024 widths for overflow and image rendering after the build.
+
+### 10. Implementation steps
+
+1. Add May 18 and May 19 news records with verified sources and buyer-focused body copy.
+2. Update affected tool pages with recent-change links and necessary volatile fact corrections.
+3. Refresh top-layer/crawl-surface metadata comments.
+4. Generate news OG artwork.
+5. Regenerate `PAGE_REFRESH_LEDGER.md`.
+6. Run xref/link/ledger/tests/build checks and representative mobile QA.
+
+### 11. Verification commands
+
+`npm run check:news`, `npm run check:links`, `npm run ledger:pages`, `npm run ledger:pages:check`, `npm run test:scripts`, `npm run check`, `npm run build:fast`, and focused Playwright/browser QA for `/news/` plus representative new article pages at 360, 390, 430, 768, and 1024 px.
+
+### 12. Acceptance criteria
+
+Every new article has dated source-backed frontmatter, at least one current source, no duplicate existing coverage, and practical buyer guidance. Every article with `affects` has a corresponding affected tool-page link. Google pricing/model facts updated in touched tool pages match May 19 sources. `/news/`, RSS, and LLM surfaces are marked refreshed. Ledger and news xref checks pass, with any unrelated failures documented.
+
+### 13. Risks and mitigations
+
+Google I/O generated many announcements; group related product-platform changes instead of creating thin near-duplicate articles. Avoid overclaiming rollout availability; distinguish "available today," "rolling out," "preview," and "trusted testers." Do not touch unrelated untracked logs or spreadsheet files.
+
+### 14. Progress log
+
+2026-05-20: Plan created after repo inspection and current-source verification. Local news files stop at May 17; target coverage is missing May 18 and May 19, while the user's "today 19-05-2026" is being treated as the requested news cutoff and facts are verified on the actual current date, 2026-05-20.
+2026-05-20: Added nine May 18-19 news records covering OpenAI/Dell Codex enterprise data, Anthropic/Stainless, GitHub Copilot control-plane updates, Musk v. OpenAI verdict, Google I/O Gemini/Search/AI Ultra, Google Antigravity/Managed Agents, OpenAI/Google provenance, Anthropic/KPMG, and Gemini 3.5 Flash in GitHub Copilot. Updated affected tool pages and top-layer news/RSS/LLM refresh markers.
+2026-05-20: Generated matching news artwork, regenerated `PAGE_REFRESH_LEDGER.md`, and validated the refresh. Passing commands: `npm run check:news`, `npm run check:links`, `npm run ledger:pages:check`, `npm run test:scripts`, `npm run build:fast`, image metadata QA, and static browser QA across 360, 390, 430, 768, and 1024 px. `npm run check` passed all content/link/news gates and failed only at the existing moderate `ws` advisory surfaced by `npm audit` through Cloudflare/Wrangler.
+
+### 15. Final report
+
+Completed on 2026-05-20.
+
+Published articles:
+
+- `src/content/news/2026-05-18-openai-dell-codex-hybrid-enterprise-data.md`
+- `src/content/news/2026-05-18-anthropic-acquires-stainless-developer-platform.md`
+- `src/content/news/2026-05-18-github-copilot-agent-control-plane-updates.md`
+- `src/content/news/2026-05-18-musk-openai-lawsuit-verdict-governance-overhang.md`
+- `src/content/news/2026-05-19-google-io-gemini-35-search-ai-ultra.md`
+- `src/content/news/2026-05-19-google-antigravity-managed-agents-ai-studio.md`
+- `src/content/news/2026-05-19-openai-google-synthid-c2pa-image-provenance.md`
+- `src/content/news/2026-05-19-anthropic-kpmg-claude-276000-workers.md`
+- `src/content/news/2026-05-19-github-copilot-gemini-35-flash-ga.md`
+
+Updated affected tool pages: `chatgpt`, `codex`, `claude`, `github-copilot`, `gemini`, `antigravity`, `gpt-image-2`, `imagen`, and `veo`. Refreshed `/news/`, `/news/rss.xml`, `/llms.txt`, `/llms-full.txt`, and `PAGE_REFRESH_LEDGER.md`. Generated 36 matching image assets for the nine new articles across dark OG PNG, light OG PNG, dark WebP thumbnail, and light WebP thumbnail.
+
+Verification passed: `npm run check:news`, `npm run check:links`, `npm run ledger:pages:check`, `npm run test:scripts`, `npm run build:fast`, image metadata QA for all 36 generated assets, and static browser QA for `/news/`, all nine new articles, and the nine affected tool pages at 360, 390, 430, 768, and 1024 px. `npm run check` failed only at `npm run check:security` because of an existing moderate `ws` advisory inherited through Cloudflare/Wrangler; no forced dependency change was made as part of this editorial refresh.

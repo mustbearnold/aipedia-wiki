@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "Bundled with ChatGPT Plus ($20/mo) through Pro 20x ($200/mo)"
 status: active
 launched: 2025-05
-last_updated: 2026-05-18
-last_verified: 2026-05-18
+last_updated: 2026-05-20
+last_verified: 2026-05-20
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -153,6 +153,9 @@ Bundled with every paid ChatGPT tier. Pro tiers get 5x to 20x the Codex usage of
 
 ## Recent developments (March-May 2026)
 
+- **May 19, 2026:** [OpenAI added C2PA conformance, SynthID watermarking, and a public verification-tool preview for images generated through ChatGPT, Codex, and the API](/news/2026-05-19-openai-google-synthid-c2pa-image-provenance/). This matters for Codex because generated images and visual assets now need provenance checks, not just model-quality review.
+- **May 18, 2026:** [OpenAI and Dell announced a Codex partnership for hybrid and on-premises enterprise environments](/news/2026-05-18-openai-dell-codex-hybrid-enterprise-data/). The buyer signal is governed data proximity: Codex is being positioned closer to enterprise repositories, business systems, and internal context rather than only as a cloud coding assistant.
+- **May 18, 2026:** [Musk lost his OpenAI lawsuit](/news/2026-05-18-musk-openai-lawsuit-verdict-governance-overhang/). No Codex feature changed, but one legal overhang around OpenAI's structure is smaller while enterprise buyers should still review vendor concentration, model availability, and data-control terms.
 - **May 16, 2026:** [OpenAI put Greg Brockman over product strategy as ChatGPT and Codex converge](/news/2026-05-16-openai-brockman-chatgpt-codex-product-strategy/). ChatGPT, Codex, and the developer API are being folded into one core product team, reinforcing Codex as a central OpenAI agent surface rather than a standalone coding add-on.
 - **May 14, 2026:** [OpenAI put Codex inside the ChatGPT mobile app](/news/2026-05-14-openai-codex-chatgpt-mobile-app/). The preview lets users monitor active Codex work, review terminal output and diffs, approve commands, change models, and start new tasks from iOS or Android while files, credentials, and repo context stay on a connected machine or remote environment. Remote SSH and Hooks are now generally available as part of the same Codex push.
 - **May 13, 2026:** [OpenAI detailed Codex's Windows sandbox](/news/2026-05-13-openai-codex-windows-sandbox-launch/), closing the macOS / Linux parity gap with a design based on restricted tokens, synthetic SIDs, ACL setup, dedicated sandbox users, firewall rules, and a command-runner binary. AppContainer was evaluated and rejected as too narrow for open-ended developer workflows. Enterprise Windows fleet evaluations that were blocked on isolation can re-open with a concrete design to review.
@@ -289,6 +292,9 @@ Prices verified 2026-05-18 via [OpenAI Codex pricing](https://developers.openai.
 
 ## Recent changes
 
+- **May 19, 2026:** [OpenAI added C2PA conformance, SynthID watermarking, and a public verification-tool preview for images generated through ChatGPT, Codex, and the API](/news/2026-05-19-openai-google-synthid-c2pa-image-provenance/).
+- **May 18, 2026:** [OpenAI and Dell announced a Codex partnership for hybrid and on-premises enterprise environments](/news/2026-05-18-openai-dell-codex-hybrid-enterprise-data/).
+- **May 18, 2026:** [Musk lost his OpenAI lawsuit, reducing one governance overhang for ChatGPT and Codex buyers](/news/2026-05-18-musk-openai-lawsuit-verdict-governance-overhang/).
 - **May 16, 2026:** [OpenAI put Greg Brockman over product strategy as ChatGPT and Codex converge](/news/2026-05-16-openai-brockman-chatgpt-codex-product-strategy/), making the ChatGPT-Codex unification an official product-organization priority.
 - **May 11, 2026:** [OpenAI launched Daybreak](/news/2026-05-11-openai-daybreak-codex-security-launch/), wrapping Codex Security with GPT-5.5 / Trusted Access / GPT-5.5-Cyber tiers and onboarding 22 partners (Cloudflare, Cisco, CrowdStrike, Palo Alto Networks, Snyk, Semgrep, Socket, and more). Codex Security is now the operational center of OpenAI's defensive-cyber play.
 - **May 11, 2026:** [OpenAI formed an OpenAI Deployment Company](/news/2026-05-11-openai-deployment-company-launch/) to consolidate enterprise commercial operations for ChatGPT, Codex, and Daybreak. Cleans up multi-cloud Codex distribution after the April 30 Microsoft non-exclusivity restructure.
@@ -311,7 +317,7 @@ Prices verified 2026-05-18 via [OpenAI Codex pricing](https://developers.openai.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation and multi-source news coverage, verifies facts against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-05-18 against OpenAI's Codex docs, the Codex rate card, the [May 16 ChatGPT-Codex product strategy coverage](/news/2026-05-16-openai-brockman-chatgpt-codex-product-strategy/), the [May 11 Daybreak / Codex Security launch](/news/2026-05-11-openai-daybreak-codex-security-launch/), the [May 11 OpenAI Deployment Company launch](/news/2026-05-11-openai-deployment-company-launch/), the [May 11 GPT-5.5-Cyber EU preview](/news/2026-05-11-openai-gpt-55-cyber-eu-preview/), the [May 7 Codex for Chrome update](/news/2026-05-07-openai-codex-chrome-extension/), the [May 7 Realtime 2 voice models](/news/2026-05-07-openai-realtime-2-voice-models/), the [May 7 GPT-5.5-Cyber and Codex Security update](/news/2026-05-07-openai-gpt-55-cyber-trusted-access/), and multi-source coverage including the April 16 super-app update announcement.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation and multi-source news coverage, verifies facts against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-05-20 against OpenAI's Codex docs, the Codex rate card, the [May 19 provenance update](/news/2026-05-19-openai-google-synthid-c2pa-image-provenance/), the [May 18 Dell enterprise-data partnership](/news/2026-05-18-openai-dell-codex-hybrid-enterprise-data/), the [May 18 OpenAI lawsuit verdict](/news/2026-05-18-musk-openai-lawsuit-verdict-governance-overhang/), the [May 16 ChatGPT-Codex product strategy coverage](/news/2026-05-16-openai-brockman-chatgpt-codex-product-strategy/), the [May 11 Daybreak / Codex Security launch](/news/2026-05-11-openai-daybreak-codex-security-launch/), the [May 11 OpenAI Deployment Company launch](/news/2026-05-11-openai-deployment-company-launch/), the [May 11 GPT-5.5-Cyber EU preview](/news/2026-05-11-openai-gpt-55-cyber-eu-preview/), the [May 7 Codex for Chrome update](/news/2026-05-07-openai-codex-chrome-extension/), the [May 7 Realtime 2 voice models](/news/2026-05-07-openai-realtime-2-voice-models/), the [May 7 GPT-5.5-Cyber and Codex Security update](/news/2026-05-07-openai-gpt-55-cyber-trusted-access/), and multi-source coverage including the April 16 super-app update announcement.
 
 ## FAQ
 

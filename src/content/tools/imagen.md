@@ -7,11 +7,11 @@ category: ai-image
 company: Google DeepMind
 url: https://gemini.google.com
 pricing_model: freemium
-price_range: "$0-$249.99/month"
+price_range: "$0-$200/month"
 status: active
 launched: 2025-05
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-05-20
+last_verified: 2026-05-20
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -114,11 +114,18 @@ price_history:
     note: "Model IDs confirmed on ai.google.dev: imagen-4.0-fast-generate-001, imagen-4.0-generate-001, imagen-4.0-ultra-generate-001. Up to 4 images per request, 480 token prompt limit. Pricing unchanged from April 2026."
   - date: 2026-05-13
     plan: "Google AI Ultra"
-    price: "$249.99/mo (intro $124.99 first 3 months)"
+    price: "Historical: $249.99/mo (intro $124.99 first 3 months)"
     source: "https://gemini.google/subscriptions/"
     source_label: "Source"
     source_id: imagen-subscriptions
     note: "Max Gemini 3.1 Pro, Veo 3.1 video, 30TB storage, Project Mariner. Intro pricing of $124.99/mo for the first three months remains active."
+  - date: 2026-05-19
+    plan: "Google AI Ultra refresh"
+    price: "AI Ultra starts at $100/mo; top tier $200/mo"
+    source: "/news/2026-05-19-google-io-gemini-35-search-ai-ultra/"
+    source_label: "AIpedia coverage"
+    source_id: aipedia-news
+    note: "Google I/O 2026 reset AI Ultra pricing from the old $249.99-style tier to $100 and $200 premium tiers. Exact Imagen/Google media limits should be checked in-account."
 ---
 
 # Imagen 4
@@ -133,7 +140,7 @@ The model ships in three tiers: **Fast**, **Standard**, and **Ultra**. API prici
 >
 > **Skip it if you need aesthetic ceiling.** [Midjourney](/tools/midjourney/) still beats Imagen 4 on cinematic and stylized output. [Flux](/tools/flux/) beats it on open weights and LoRA fine-tuning. [Ideogram](/tools/ideogram/) beats it on dense text-in-image reliability for logos and posters.
 >
-> **Who pays which tier:** Google AI Studio free for experimentation, Gemini API pay-per-image for low-volume apps, Google AI Pro $19.99/mo for individuals using Gemini 3.1 Pro + Imagen 4 in Workspace, Google AI Ultra $249.99/mo for teams running Veo 3.1 video alongside image generation, Vertex AI for production with compliance needs.
+> **Who pays which tier:** Google AI Studio free for experimentation, Gemini API pay-per-image for low-volume apps, Google AI Pro $19.99/mo for individuals using Gemini + Imagen 4 in Workspace, Google AI Ultra from $100/mo or $200/mo for heavier Google media and agent workflows, Vertex AI for production with compliance needs.
 
 ## Key Facts
 
@@ -143,18 +150,18 @@ The model ships in three tiers: **Fast**, **Standard**, and **Ultra**. API prici
 | **API pricing** | Fast $0.02 · Standard $0.04 · Ultra $0.06 per image |
 | **Resolutions** | Up to 2K standard · 4K on Ultra via token-metered output |
 | **Free testing** | Google AI Studio playground (capped daily) |
-| **Consumer bundle** | Google AI Pro $19.99/mo · Google AI Ultra $249.99/mo |
+| **Consumer bundle** | Google AI Pro $19.99/mo · Google AI Ultra from $100/mo, with $200/mo top tier |
 | **Enterprise** | Vertex AI with Google Cloud billing, SSO, audit |
 | **Watermark** | SynthID embedded in every output |
 | **Text rendering** | Materially improved over Imagen 3 for signage and typography |
 | **Open weights** | None |
 | **Best-in-class for** | Workspace-embedded generation, per-image API billing |
 
-Every data point was verified against vendor documentation on 2026-05-13. Model IDs on the API surface are `imagen-4.0-fast-generate-001`, `imagen-4.0-generate-001`, and `imagen-4.0-ultra-generate-001`. See Sources.
+Every model and API-pricing data point was last verified against vendor documentation on 2026-05-13. Google AI subscription pricing was refreshed on 2026-05-20 after Google I/O. Model IDs on the API surface are `imagen-4.0-fast-generate-001`, `imagen-4.0-generate-001`, and `imagen-4.0-ultra-generate-001`. See Sources.
 
 ## What it actually is
 
-One image model served through four entry points. Consumer users hit it through the Gemini app and get Imagen 4 generations bundled with Gemini 3.1 Pro on [Google AI Pro](https://gemini.google/subscriptions/) ($19.99/mo) or Ultra ($249.99/mo).
+One image model served through four entry points. Consumer users hit it through the Gemini app and get Imagen 4 generations bundled with Google AI Pro ($19.99/mo) or the current Google AI Ultra tiers that now start at $100/mo.
 
 Developers access the same model through `ai.google.dev` (Gemini API) at per-image rates, or through AI Studio's browser playground for free testing. Enterprise runs through Vertex AI, where Imagen 4 usage appears as line items on the Google Cloud bill alongside inference, storage, and logging.
 
@@ -184,7 +191,7 @@ Consumer subscription pricing via [gemini.google/subscriptions](https://gemini.g
 |------|-------|---------------|
 | Gemini (free) | $0 | Limited daily Imagen 4 generations in the Gemini app |
 | Google AI Pro | $19.99/mo | Gemini 3.1 Pro, Imagen 4 at consumer limits, 2TB storage |
-| Google AI Ultra | $249.99/mo | Max Gemini 3.1 Pro, Veo 3.1 video, 30TB storage, Project Mariner |
+| Google AI Ultra | From $100/mo; top tier $200/mo | Higher Gemini, media, agent, and Antigravity limits; exact Imagen limits should be checked in-account |
 
 API and enterprise pricing via [ai.google.dev/gemini-api/docs/models/imagen](https://ai.google.dev/gemini-api/docs/models/imagen) and [cloud.google.com/vertex-ai/generative-ai/pricing](https://cloud.google.com/vertex-ai/generative-ai/pricing):
 
@@ -196,7 +203,7 @@ API and enterprise pricing via [ai.google.dev/gemini-api/docs/models/imagen](htt
 | Google AI Studio | $0 | Browser playground for free testing (capped) |
 | Vertex AI | Per-image + Cloud billing | Enterprise production with SLAs |
 
-*Prices verified 2026-05-13 via [Gemini API docs](https://ai.google.dev/gemini-api/docs/models/imagen), [Vertex AI pricing](https://cloud.google.com/vertex-ai/generative-ai/pricing), and [Google AI subscriptions](https://gemini.google/subscriptions/). Ultra has a $124.99/mo introductory offer for the first three months. Each Gemini API request accepts up to a 480-token prompt and returns 1 to 4 images.*
+*API prices verified 2026-05-13 via [Gemini API docs](https://ai.google.dev/gemini-api/docs/models/imagen) and [Vertex AI pricing](https://cloud.google.com/vertex-ai/generative-ai/pricing). Google AI subscription prices refreshed 2026-05-20 via [Google AI subscriptions](https://gemini.google/subscriptions/) and the [May 19 I/O subscription update](/news/2026-05-19-google-io-gemini-35-search-ai-ultra/). Each Gemini API request accepts up to a 480-token prompt and returns 1 to 4 images.*
 
 ## Against the alternatives
 
@@ -222,7 +229,7 @@ API and enterprise pricing via [ai.google.dev/gemini-api/docs/models/imagen](htt
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against the [Imagen 4 Gemini API launch post](https://developers.googleblog.com/en/imagen-4-now-available-in-the-gemini-api-and-google-ai-studio/), [Gemini API Imagen docs](https://ai.google.dev/gemini-api/docs/models/imagen), [Vertex AI generative pricing](https://cloud.google.com/vertex-ai/generative-ai/pricing), [Google AI subscriptions](https://gemini.google/subscriptions/), and the [SynthID overview](https://deepmind.google/technologies/synthid).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-20 against the [May 19 Google I/O subscription update](/news/2026-05-19-google-io-gemini-35-search-ai-ultra/), the [Imagen 4 Gemini API launch post](https://developers.googleblog.com/en/imagen-4-now-available-in-the-gemini-api-and-google-ai-studio/), [Gemini API Imagen docs](https://ai.google.dev/gemini-api/docs/models/imagen), [Vertex AI generative pricing](https://cloud.google.com/vertex-ai/generative-ai/pricing), [Google AI subscriptions](https://gemini.google/subscriptions/), and the [SynthID overview](https://deepmind.google/technologies/synthid).
 
 ## FAQ
 

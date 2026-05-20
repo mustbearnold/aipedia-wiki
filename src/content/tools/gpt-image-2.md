@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$200/month (ChatGPT) · API from $0.01/image"
 status: active
 launched: 2026-04
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-05-20
+last_verified: 2026-05-20
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -73,7 +73,7 @@ facts:
     confidence: high
 tags: [ai-image, image-generation, text-to-image, openai, gpt-image, reasoning, multilingual, 4k, infographics, api]
 seo_title: "GPT Image 2: Features, Pricing & Review (May 2026)"
-meta_description: "OpenAI's GPT Image 2 launched April 21, 2026. Native reasoning, 4K output, multilingual text rendering across 12+ languages, up to 8 variants per prompt. ChatGPT Free gets the standard model; Plus, Pro, and Business add thinking mode and web search. API from $0.01/image. Verified May 13, 2026."
+meta_description: "OpenAI's GPT Image 2 launched April 21, 2026. Native reasoning, 4K output, multilingual text rendering, and API pricing from $0.01/image. May 19 added C2PA conformance, SynthID watermarking, and OpenAI verification-tool preview."
 author: "aipedia.wiki Editorial"
 best_for:
   - infographics, slides, annotated diagrams, maps
@@ -126,6 +126,7 @@ The step change is reasoning inside the image model. GPT Image 2 thinks before i
 
 ## Recent developments
 
+- **May 19, 2026:** [OpenAI added C2PA conformance, SynthID watermarking, and a public verification-tool preview for ChatGPT, Codex, and API-generated images](/news/2026-05-19-openai-google-synthid-c2pa-image-provenance/). Treat this as a provenance workflow upgrade, not a perfect detector; metadata can still be stripped and absence of a signal is not proof that an image is human-made.
 - **May 13, 2026:** Pricing and feature set verified unchanged 3 weeks post-launch. Free, Plus $20, Pro $200; API $0.01 (low), $0.08 (medium), $0.41 (high). Token pricing also stable at $8/MTok input, $2 cached, $30/MTok output.
 - **April 23, 2026:** [GPT-5.5 rolls out](/news/2026-04-25-ai-news-catchup/) as the upstream reasoning backbone available to ChatGPT users alongside gpt-image-2 in the bundle. The combined text + image surface is still the strongest value at $20/mo.
 - **April 21, 2026:** [ChatGPT Images 2.0 and gpt-image-2 launch](/news/2026-04-21-openai-chatgpt-images-2-gpt-image-2/). Native reasoning, 4K resolution, multilingual text, up to 8 variants per prompt. Free tier gets the standard model; Plus, Pro, and Business add thinking mode and web search inside generation. API pricing starts at $0.01/image.
@@ -156,9 +157,10 @@ The step change is reasoning inside the image model. GPT Image 2 thinks before i
 | **API pricing (per image)** | $0.01 (low, 1024x768) · $0.08 (medium, 2K) · $0.41 (high, 4K) |
 | **API token pricing** | $8/MTok input · $2/MTok cached · $30/MTok output |
 | **Commercial use** | Plus, Pro, Business; Free tier terms-limited |
+| **Provenance** | C2PA Content Credentials, SynthID watermarking, and OpenAI verification-tool preview as of May 19, 2026 |
 | **Open weights** | No |
 
-Every data point above was verified on 2026-05-13. See Sources in the launch [news item](/news/2026-04-21-openai-chatgpt-images-2-gpt-image-2/).
+Every data point above was verified on 2026-05-20. See Sources in the launch [news item](/news/2026-04-21-openai-chatgpt-images-2-gpt-image-2/) and the [May 19 provenance update](/news/2026-05-19-openai-google-synthid-c2pa-image-provenance/).
 
 ## What it actually is
 
@@ -207,7 +209,7 @@ API pricing (per image):
 
 Token-based API pricing for long prompts: **$8 per MTok input, $2 cached input, $30 per MTok output**.
 
-Prices verified 2026-05-13 via the [OpenAI launch post](https://openai.com/index/introducing-chatgpt-images-2-0/) and the [OpenAI API docs](https://developers.openai.com/api/docs/models/gpt-image-2). Unchanged since launch.
+Prices were last rechecked 2026-05-13 via the [OpenAI launch post](https://openai.com/index/introducing-chatgpt-images-2-0/) and the [OpenAI API docs](https://developers.openai.com/api/docs/models/gpt-image-2). Provenance controls were updated and verified on 2026-05-20 against OpenAI's May 19 announcement.
 
 ## Against the alternatives
 
@@ -234,7 +236,7 @@ Prices verified 2026-05-13 via the [OpenAI launch post](https://openai.com/index
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-05-13 against the [OpenAI launch announcement](https://openai.com/index/introducing-chatgpt-images-2-0/), [TechCrunch coverage](https://techcrunch.com/2026/04/21/chatgpts-new-images-2-0-model-is-surprisingly-good-at-generating-text/), [VentureBeat coverage](https://venturebeat.com/technology/openais-chatgpt-images-2-0-is-here-and-it-does-multilingual-text-full-infographics-slides-maps-even-manga-seemingly-flawlessly), and the [OpenAI API model docs](https://developers.openai.com/api/docs/models/gpt-image-2).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-05-20 against the [May 19 provenance update](/news/2026-05-19-openai-google-synthid-c2pa-image-provenance/), the [OpenAI launch announcement](https://openai.com/index/introducing-chatgpt-images-2-0/), [TechCrunch coverage](https://techcrunch.com/2026/04/21/chatgpts-new-images-2-0-model-is-surprisingly-good-at-generating-text/), [VentureBeat coverage](https://venturebeat.com/technology/openais-chatgpt-images-2-0-is-here-and-it-does-multilingual-text-full-infographics-slides-maps-even-manga-seemingly-flawlessly), and the [OpenAI API model docs](https://developers.openai.com/api/docs/models/gpt-image-2).
 
 ## FAQ
 

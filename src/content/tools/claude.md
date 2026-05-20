@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2023-03
-last_updated: 2026-05-17
-last_verified: 2026-05-17
+last_updated: 2026-05-20
+last_verified: 2026-05-20
 update_frequency: monthly
 seo_title: "Claude: Features, Pricing & Review (2026)"
 meta_description: "Claude runs Opus 4.7 as flagship with 1M context, Claude Code, Claude Design, Claude Cowork, and new May 2026 Small Business workflows. Agent SDK and claude -p move to separate credits June 15."
@@ -229,6 +229,22 @@ price_history:
     source_label: "AIpedia coverage"
     verified_at: 2026-05-17
     note: "PwC will roll out Claude Code and Cowork and train 30,000 professionals; Anthropic and the Gates Foundation committed $200M in grants, Claude credits, and technical support over four years."
+  - date: 2026-05-18
+    plan: "Stainless acquisition"
+    price: "No public plan price change"
+    source: "/news/2026-05-18-anthropic-acquires-stainless-developer-platform/"
+    source_id: aipedia-news
+    source_label: "AIpedia coverage"
+    verified_at: 2026-05-20
+    note: "Anthropic acquired Stainless to strengthen official SDK generation, MCP server tooling, and Claude developer-platform connectivity."
+  - date: 2026-05-19
+    plan: "KPMG enterprise rollout"
+    price: "No public plan price change"
+    source: "/news/2026-05-19-anthropic-kpmg-claude-276000-workers/"
+    source_id: aipedia-news
+    source_label: "AIpedia coverage"
+    verified_at: 2026-05-20
+    note: "KPMG will make Claude available to 276,000+ employees and embed Claude in Digital Gateway for tax, legal, private-equity, and cybersecurity workflows."
 ---
 
 # Claude
@@ -239,6 +255,8 @@ Anthropic's AI assistant. **Opus 4.7** is the flagship as of **April 16, 2026**,
 
 ## Recent developments
 
+- **May 19:** [KPMG is making Claude available to more than 276,000 employees and embedding it inside Digital Gateway](/news/2026-05-19-anthropic-kpmg-claude-276000-workers/). The rollout strengthens Claude's enterprise-distribution story through services firms that can implement governed client workflows.
+- **May 18:** [Anthropic acquired Stainless to strengthen Claude's developer platform](/news/2026-05-18-anthropic-acquires-stainless-developer-platform/). Stainless already powered Anthropic's official SDK generation; the acquisition points to more investment in SDKs, MCP tooling, CLIs, and agent connectivity.
 - **May 14:** [Anthropic expanded Claude through a PwC enterprise rollout and a $200M Gates Foundation partnership](/news/2026-05-14-anthropic-pwc-gates-claude-expansion/). PwC will roll out Claude Code and Cowork starting with U.S. teams and train 30,000 professionals; the Gates work funds Claude credits, grants, and technical support across health, life sciences, education, and economic mobility.
 - **May 14:** [Anthropic split Claude Agent SDK and `claude -p` into separate monthly credits](/news/2026-05-14-anthropic-claude-agent-sdk-credit-split/). Starting June 15, programmatic usage leaves normal subscription limits and draws from credits worth $20 on Pro, $100 on Max 5x, and $200 on Max 20x before API-rate extra usage. Interactive Claude Code and Claude chat remain on normal subscription limits.
 - **May 13:** [Anthropic launched Claude for Small Business](/news/2026-05-13-anthropic-claude-small-business-launch/) with QuickBooks, PayPal, HubSpot, Canva, Docusign, Google Workspace, and Microsoft 365 connectors. It packages 15 ready-to-run agentic workflows across finance, operations, sales, marketing, HR, and customer service through Claude Cowork.
@@ -391,7 +409,7 @@ Prices verified 2026-05-13 via [Claude pricing](https://claude.com/pricing), [An
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-17 against [Claude pricing](https://claude.com/pricing), Anthropic's [pricing docs](https://platform.claude.com/docs/en/about-claude/pricing), [model docs](https://platform.claude.com/docs/en/about-claude/models), the [Opus 4.7 release coverage](https://venturebeat.com/technology/anthropic-releases-claude-opus-4-7-narrowly-retaking-lead-for-most-powerful-generally-available-llm), the [May 14 PwC/Gates expansion](/news/2026-05-14-anthropic-pwc-gates-claude-expansion/), the [May 14 Agent SDK credit split](/news/2026-05-14-anthropic-claude-agent-sdk-credit-split/), the [May 12 Claude for Legal launch](/news/2026-05-12-anthropic-claude-for-legal-plugins-microsoft-365/), the [May 10 reported Akamai cloud-deal coverage](/news/2026-05-10-anthropic-akamai-cloud-deal/), the [May 9 FIS financial-crimes agent coverage](/news/2026-05-09-anthropic-fis-financial-crimes-agent/), the [May 6 Managed Agents update](/news/2026-05-06-claude-managed-agents-dreaming-outcomes-orchestration/), the [May 7 GitHub Copilot Claude model notices](/news/2026-05-07-github-copilot-gpt41-claude-sonnet4-deprecations/), the [May 7 Copilot Rubber Duck update](/news/2026-05-07-github-copilot-rubber-duck-cross-model-review/), the [NEC partnership](/news/2026-04-24-anthropic-nec-ai-engineering-workforce/), and [reported Google-Anthropic investment coverage](/news/2026-04-24-google-anthropic-40b-investment/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-20 against [Claude pricing](https://claude.com/pricing), Anthropic's [pricing docs](https://platform.claude.com/docs/en/about-claude/pricing), [model docs](https://platform.claude.com/docs/en/about-claude/models), the [May 19 KPMG rollout](/news/2026-05-19-anthropic-kpmg-claude-276000-workers/), the [May 18 Stainless acquisition](/news/2026-05-18-anthropic-acquires-stainless-developer-platform/), the [May 14 PwC/Gates expansion](/news/2026-05-14-anthropic-pwc-gates-claude-expansion/), the [May 14 Agent SDK credit split](/news/2026-05-14-anthropic-claude-agent-sdk-credit-split/), the [May 12 Claude for Legal launch](/news/2026-05-12-anthropic-claude-for-legal-plugins-microsoft-365/), the [May 10 reported Akamai cloud-deal coverage](/news/2026-05-10-anthropic-akamai-cloud-deal/), the [May 9 FIS financial-crimes agent coverage](/news/2026-05-09-anthropic-fis-financial-crimes-agent/), the [May 6 Managed Agents update](/news/2026-05-06-claude-managed-agents-dreaming-outcomes-orchestration/), the [May 7 GitHub Copilot Claude model notices](/news/2026-05-07-github-copilot-gpt41-claude-sonnet4-deprecations/), the [May 7 Copilot Rubber Duck update](/news/2026-05-07-github-copilot-rubber-duck-cross-model-review/), the [NEC partnership](/news/2026-04-24-anthropic-nec-ai-engineering-workforce/), and [reported Google-Anthropic investment coverage](/news/2026-04-24-google-anthropic-40b-investment/).
 
 ## FAQ
 

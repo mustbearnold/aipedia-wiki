@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$39/user/month"
 status: active
 launched: 2021-06
-last_updated: 2026-05-17
-last_verified: 2026-05-17
+last_updated: 2026-05-20
+last_verified: 2026-05-20
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -26,7 +26,7 @@ scores:
   longevity: 10
 facts:
   flagship_model:
-    value: "GPT-5.5 and Claude Opus 4.7 on Pro+, Business, and Enterprise; OpenAI Daybreak (May 11, 2026) integrates Codex Security into the same GitHub-native flow"
+    value: "GPT-5.5, Claude Opus 4.7, GPT-5.3-Codex, and Gemini 3.5 Flash are part of the Copilot model story; model access varies by plan and enterprise policy"
     source: "https://github.blog/changelog/2026-04-24-gpt-5-5-is-generally-available-for-github-copilot"
     source_label: "Copilot GPT-5.5 rollout coverage"
     source_id: company-newsrooms
@@ -111,11 +111,11 @@ facts:
     volatility: medium
     confidence: high
   coding_agent:
-    value: "Agent mode, GitHub Coding Agent (cloud), Copilot CLI Rubber Duck, and the Copilot App technical preview for isolated GitHub-native agent sessions"
+    value: "Agent mode, GitHub Coding Agent (cloud), Copilot CLI remote control, Copilot Spaces API, repository cloud-agent configuration audit API, and the Copilot App technical preview for isolated GitHub-native agent sessions"
     source: "https://github.blog/changelog/2026-05-14-github-copilot-app-is-now-available-in-technical-preview/"
     source_label: "GitHub Copilot App technical preview"
     source_id: github-copilot-docs
-    verified_at: 2026-05-17
+    verified_at: 2026-05-20
     volatility: high
     confidence: high
     next_review_at: 2026-06-17
@@ -162,7 +162,7 @@ facts:
     confidence: high
 tags: [ide, autocomplete, ai-coding, vscode, jetbrains, xcode, neovim, github, microsoft, agent-mode, coding-agent, mcp, gpt-5-5, claude-opus-4-7]
 seo_title: "GitHub Copilot: Features, Pricing & Review (May 2026)"
-meta_description: "GitHub Copilot runs GPT-5.5 and Claude Opus 4.7 on Pro+/Business/Enterprise, plus GPT-5-Codex and Gemini 3.1 Pro across VS Code, Visual Studio, JetBrains, Xcode, and Neovim. Free, Pro $10, Pro+ $39, Business $19/seat, Enterprise $39/seat."
+meta_description: "GitHub Copilot now includes Gemini 3.5 Flash alongside GPT-5.5, Claude Opus 4.7, and GPT-5.3-Codex. May 2026 updates added remote CLI control, Spaces API GA, cheaper cloud-agent models, and repository agent-audit APIs."
 author: "aipedia.wiki Editorial"
 best_for:
   - developers already in the GitHub ecosystem
@@ -234,7 +234,7 @@ price_history:
     source: "https://github.com/features/copilot/plans"
     source_label: "GitHub Copilot plans"
     source_id: github-copilot-plans
-    verified_at: 2026-05-13
+    verified_at: 2026-05-20
     note: "May 13 verification pass. Pricing tiers (Free, Pro $10, Pro+ $39, Business $19/seat, Enterprise $39/seat) confirmed unchanged. May 11 Daybreak / Codex Security integration folded into Recent changes."
   - date: 2026-05-14
     plan: "Copilot App technical preview"
@@ -252,13 +252,31 @@ price_history:
     source_id: aipedia-news
     verified_at: 2026-05-17
     note: "The Verge reported Microsoft is winding down most internal Claude Code licenses in Experiences and Devices and moving engineers toward Copilot CLI by the end of June."
+  - date: 2026-05-18
+    plan: "Copilot agent control plane"
+    price: "Included or model-multiplier dependent by plan"
+    source: "/news/2026-05-18-github-copilot-agent-control-plane-updates/"
+    source_label: "AIpedia coverage"
+    source_id: aipedia-news
+    verified_at: 2026-05-20
+    note: "Remote control for Copilot CLI reached GA, Copilot Spaces API reached GA, cheaper cloud-agent models became available for simple tasks, and repository cloud-agent configuration auditing entered public preview."
+  - date: 2026-05-19
+    plan: "Gemini 3.5 Flash in Copilot"
+    price: "Model access varies by Copilot plan and policy"
+    source: "/news/2026-05-19-github-copilot-gemini-35-flash-ga/"
+    source_label: "AIpedia coverage"
+    source_id: aipedia-news
+    verified_at: 2026-05-20
+    note: "Gemini 3.5 Flash became generally available in GitHub Copilot, reinforcing Copilot as a multi-model coding surface."
 ---
 
 # GitHub Copilot
 
 GitHub's AI pair programmer, built by Microsoft and GitHub on top of the largest code-and-repo graph in the world. Ships as a first-party extension inside VS Code, Visual Studio, JetBrains, Xcode, and Neovim. The GA Coding Agent runs asynchronously on GitHub Actions to turn issues into pull requests.
 
-Claude Opus 4.7 went generally available inside Copilot on April 16, 2026, within hours of Anthropic's release. GPT-5.5 followed on April 24 for Pro+, Business, and Enterprise users at a 7.5x premium-request multiplier.
+Claude Opus 4.7 went generally available inside Copilot on April 16, 2026, within hours of Anthropic's release. GPT-5.5 followed on April 24 for Pro+, Business, and Enterprise users at a 7.5x premium-request multiplier. On May 19, [Gemini 3.5 Flash became generally available in GitHub Copilot](/news/2026-05-19-github-copilot-gemini-35-flash-ga/), making Copilot an even clearer multi-model coding surface.
+
+On May 18, [GitHub shipped a cluster of Copilot agent-control updates](/news/2026-05-18-github-copilot-agent-control-plane-updates/): remote control for Copilot CLI sessions reached GA, the Copilot Spaces API reached GA, lower-cost cloud-agent model options arrived for simple tasks, and repository cloud-agent configuration auditing entered public preview.
 
 On April 24, 2026, GitHub's Copilot interaction-data policy took effect for Free, Pro, and Pro+ accounts: prompts, outputs, code snippets, and associated context may be used for model training unless individual users opt out. Copilot Business and Enterprise remain excluded from that training path.
 
@@ -286,7 +304,7 @@ April 30 security coverage added another practical caveat: [recent coding-agent 
 
 ## System Verdict
 
-> **Pick GitHub Copilot if you're already inside the GitHub ecosystem and want AI inside your current IDE at the lowest credible price.** Pro at $10/mo is the cheapest entry point in serious AI coding. The paid model picker hands you GPT-5.5, Claude Opus 4.7, GPT-5-Codex, Gemini 3.1 Pro, and Grok from a single bill.
+> **Pick GitHub Copilot if you're already inside the GitHub ecosystem and want AI inside your current IDE at the lowest credible price.** Pro at $10/mo is the cheapest entry point in serious AI coding. The paid model picker now spans OpenAI, Anthropic, Google, and xAI options, with Gemini 3.5 Flash joining the Copilot surface on May 19, 2026.
 >
 > The autonomous Coding Agent accepts a GitHub issue, spins up a cloud dev environment via Actions, self-reviews the patch, and opens a PR. No direct equivalent in Cursor or Claude Code. IDE coverage is unmatched: JetBrains, Xcode, and Neovim developers have no Cursor path.
 >
@@ -301,7 +319,7 @@ April 30 security coverage added another practical caveat: [recent coding-agent 
 | | |
 |---|---|
 | **Flagship models** | GPT-5.5 (GA April 24, 2026) · Claude Opus 4.7 (GA April 16, 2026) on Pro+, Business, Enterprise |
-| **Other models in picker** | GPT-5-Codex · Claude Sonnet 4.6 · Gemini 3.1 Pro · Gemini 2.5 Pro · Grok · Claude Haiku 4.5 |
+| **Other models in picker** | GPT-5.3-Codex · GPT-5-Codex · Claude Sonnet 4.6 · Gemini 3.5 Flash · Gemini 3.1 Pro · Gemini 2.5 Pro · Grok · Claude Haiku 4.5 |
 | **Free-tier models** | Claude Sonnet 4.6 · GPT-4.1 only |
 | **Modes** | Ask · Edit · Agent · Coding Agent (autonomous, cloud) · Code Review · Copilot CLI · PR chat/debugging workflows |
 | **IDE support** | VS Code · Visual Studio · JetBrains · Xcode · Neovim (chat limited to first three) |
@@ -311,11 +329,11 @@ April 30 security coverage added another practical caveat: [recent coding-agent 
 | **Premium request caps** | Free 50 · Pro 300 · Pro+ 1,500 · Business 300/seat · Enterprise 1,000/seat · overage $0.04 each |
 | **Copilot Spaces** | Context-scoping feature accessible via the GitHub MCP server |
 | **Data-training policy** | Free / Pro / Pro+ interaction data may be used for model training unless opted out; Business / Enterprise excluded |
-| **Recent shipments (12 mo)** | Copilot App technical preview · Agents secrets/variables · code-review metrics by comment type · Rubber Duck cross-model review · GPT-5.5 GA (Apr 24, 2026) · BYOK in VS Code · cloud-agent metrics · Jira controls · PR chat/debugging improvements · Coding Agent GA · Agent mode GA (Mar 2026) · MCP support GA · Copilot CLI GA (Apr 2026) · Opus 4.7 GA (Apr 16, 2026) · Agentic code review (Mar 2026) |
+| **Recent shipments (12 mo)** | Gemini 3.5 Flash GA · remote Copilot CLI control GA · Copilot Spaces API GA · repository cloud-agent configuration audit API · cheaper cloud-agent models · Copilot App technical preview · Agents secrets/variables · code-review metrics by comment type · Rubber Duck cross-model review · GPT-5.5 GA (Apr 24, 2026) · BYOK in VS Code · cloud-agent metrics · Jira controls · PR chat/debugging improvements · Coding Agent GA · Agent mode GA (Mar 2026) · MCP support GA · Copilot CLI GA (Apr 2026) · Opus 4.7 GA (Apr 16, 2026) · Agentic code review (Mar 2026) |
 
 ## What it actually is
 
-A first-party extension bundle covering autocomplete, inline edits, chat, agentic multi-file work, and an autonomous GitHub-native agent that runs in the cloud. One subscription buys access to a curated model picker (Opus 4.7, GPT-5.5, GPT-5-Codex, Gemini 3.1 Pro, Grok, Sonnet 4.6) billed via a single premium-request pool. No per-model setup. No BYO API keys.
+A first-party extension bundle covering autocomplete, inline edits, chat, agentic multi-file work, and an autonomous GitHub-native agent that runs in the cloud. One subscription buys access to a curated model picker (Opus 4.7, GPT-5.5, GPT-5.3-Codex, Gemini 3.5 Flash, Grok, Sonnet 4.6) billed via a single premium-request pool. No per-model setup. No BYO API keys.
 
 Three moats, none easy to replicate.
 
@@ -330,7 +348,7 @@ Third, IDE breadth. JetBrains, Xcode, and Neovim developers only have Copilot am
 - **You already pay for GitHub.** Copilot inherits your OAuth, your SSO, and your repo permissions. Setup is a VS Code extension install.
 - **You use JetBrains, Xcode, or Neovim.** Cursor is a VS Code fork with no path to those editors. Copilot is the only first-tier AI coding tool shipping native extensions for all of them.
 - **You want issue-to-PR automation with governance.** Coding Agent turns an assigned GitHub issue into a self-reviewed PR autonomously, while Jira controls and cloud-agent metrics make it easier for teams to supervise work in flight. No equivalent exists in Cursor or Claude Code.
-- **You want $10/mo entry pricing with a real model picker.** Pro at $10 includes a curated model picker, Gemini 3.1 Pro, and agent mode; GPT-5.5 and Opus 4.7 require Pro+ or team tiers. Cheapest serious AI coding subscription on the market.
+- **You want $10/mo entry pricing with a real model picker.** Pro at $10 includes a curated model picker, Gemini access, and agent mode; GPT-5.5 and Opus 4.7 require Pro+ or team tiers. Cheapest serious AI coding subscription on the market.
 - **You need IP indemnification.** Business and Enterprise tiers include Microsoft-backed IP indemnity for Copilot suggestions. No direct analog from Cursor or Anthropic.
 - **You want MCP tool use without leaving the IDE.** Agent mode autonomously invokes MCP servers once configured, and the GitHub MCP server now exposes Copilot Spaces for scoped context.
 
@@ -372,6 +390,8 @@ Prices verified 2026-04-17 via [GitHub Copilot plans](https://github.com/feature
 
 ## Recent changes
 
+- **May 19, 2026:** [Gemini 3.5 Flash became generally available in GitHub Copilot](/news/2026-05-19-github-copilot-gemini-35-flash-ga/), reinforcing Copilot as a multi-model coding surface where teams need model governance instead of one-provider assumptions.
+- **May 18, 2026:** [GitHub turned Copilot into a more governable coding-agent control plane](/news/2026-05-18-github-copilot-agent-control-plane-updates/) with remote CLI control GA, Copilot Spaces API GA, cheaper cloud-agent models, and repository cloud-agent configuration audit APIs.
 - **May 11, 2026:** [OpenAI launched Daybreak](/news/2026-05-11-openai-daybreak-codex-security-launch/), pulling Codex Security into a 22-partner cyber initiative. Copilot teams now have a productized OpenAI security-scanning surface that competes with Anthropic's Project Glasswing and Claude Security.
 - **May 8, 2026:** [GitHub will deprecate Grok Code Fast 1 across Copilot on May 15](/news/2026-05-08-github-copilot-grok-code-fast-1-deprecation/). Teams using it should switch model policies to GPT-5 mini, Claude Haiku 4.5, or another supported model before the deadline.
 - **May 8, 2026:** [Copilot cloud agent gained dedicated Agents secrets and variables](/news/2026-05-08-github-copilot-cloud-agent-secrets-variables/), including organization-level sharing for agent configuration.
@@ -396,7 +416,7 @@ Prices verified 2026-04-17 via [GitHub Copilot plans](https://github.com/feature
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, normalizes factual claims, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [github.com/features/copilot](https://github.com/features/copilot), [github.com/features/copilot/plans](https://github.com/features/copilot/plans), [docs.github.com/en/copilot](https://docs.github.com/en/copilot), the [May 11 OpenAI Daybreak launch](/news/2026-05-11-openai-daybreak-codex-security-launch/), the [May 8 Grok Code Fast 1 retirement](/news/2026-05-08-github-copilot-grok-code-fast-1-deprecation/), the [May 8 cloud-agent secrets update](/news/2026-05-08-github-copilot-cloud-agent-secrets-variables/), the [May 8 code-review metrics update](/news/2026-05-08-github-copilot-code-review-metrics-comment-types/), the [May 7 Rubber Duck update](/news/2026-05-07-github-copilot-rubber-duck-cross-model-review/), and the [May 7 model retirement notices](/news/2026-05-07-github-copilot-gpt41-claude-sonnet4-deprecations/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, normalizes factual claims, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-20 against [github.com/features/copilot](https://github.com/features/copilot), [github.com/features/copilot/plans](https://github.com/features/copilot/plans), [docs.github.com/en/copilot](https://docs.github.com/en/copilot), the [May 19 Gemini 3.5 Flash GA update](/news/2026-05-19-github-copilot-gemini-35-flash-ga/), the [May 18 Copilot agent control-plane update](/news/2026-05-18-github-copilot-agent-control-plane-updates/), the [May 11 OpenAI Daybreak launch](/news/2026-05-11-openai-daybreak-codex-security-launch/), the [May 8 Grok Code Fast 1 retirement](/news/2026-05-08-github-copilot-grok-code-fast-1-deprecation/), the [May 8 cloud-agent secrets update](/news/2026-05-08-github-copilot-cloud-agent-secrets-variables/), the [May 8 code-review metrics update](/news/2026-05-08-github-copilot-code-review-metrics-comment-types/), the [May 7 Rubber Duck update](/news/2026-05-07-github-copilot-rubber-duck-cross-model-review/), and the [May 7 model retirement notices](/news/2026-05-07-github-copilot-gpt41-claude-sonnet4-deprecations/).
 
 ## FAQ
 

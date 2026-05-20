@@ -1,6 +1,6 @@
 # AiPedia Page Refresh Ledger
 
-Ledger updated through: 2026-05-18
+Ledger updated through: 2026-05-20
 Tracked public pages and crawl surfaces: 732
 
 Hard rule: every time a tracked website page is edited, refreshed, materially re-ranked, or has volatile facts re-verified, update that page row in this file on the same change. If a child page update affects a parent hub, archive, internal-link block, sitemap, or LLM surface, update those affected rows too.
@@ -431,7 +431,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /tools/aiva/ | Tool | Yes | frontmatter | src/content/tools/aiva.md |
 | 2026-05-13 | /tools/amazon-q/ | Tool | Yes | frontmatter | src/content/tools/amazon-q.md |
 | 2026-05-13 | /tools/amplemarket/ | Tool | Yes | frontmatter | src/content/tools/amplemarket.md |
-| 2026-05-13 | /tools/antigravity/ | Tool | Yes | frontmatter | src/content/tools/antigravity.md |
 | 2026-05-13 | /tools/anythingllm/ | Tool | Yes | frontmatter | src/content/tools/anythingllm.md |
 | 2026-05-13 | /tools/apollo/ | Tool | Yes | frontmatter | src/content/tools/apollo.md |
 | 2026-05-13 | /tools/argil/ | Tool | Yes | frontmatter | src/content/tools/argil.md |
@@ -495,14 +494,12 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /tools/frase/ | Tool | Yes | frontmatter | src/content/tools/frase.md |
 | 2026-05-13 | /tools/freepik/ | Tool | Yes | frontmatter | src/content/tools/freepik.md |
 | 2026-05-13 | /tools/galileo-ai/ | Tool | Yes | frontmatter | src/content/tools/galileo-ai.md |
-| 2026-05-13 | /tools/gemini/ | Tool | Yes | frontmatter | src/content/tools/gemini.md |
 | 2026-05-13 | /tools/genspark/ | Tool | Yes | frontmatter | src/content/tools/genspark.md |
 | 2026-05-13 | /tools/getresponse/ | Tool | Yes | frontmatter | src/content/tools/getresponse.md |
 | 2026-05-13 | /tools/glean/ | Tool | Yes | frontmatter | src/content/tools/glean.md |
 | 2026-05-13 | /tools/glm/ | Tool | Yes | frontmatter | src/content/tools/glm.md |
 | 2026-05-13 | /tools/google-stitch/ | Tool | Yes | frontmatter | src/content/tools/google-stitch.md |
 | 2026-05-13 | /tools/goose/ | Tool | Yes | frontmatter | src/content/tools/goose.md |
-| 2026-05-13 | /tools/gpt-image-2/ | Tool | Yes | frontmatter | src/content/tools/gpt-image-2.md |
 | 2026-05-13 | /tools/grammarly/ | Tool | Yes | frontmatter | src/content/tools/grammarly.md |
 | 2026-05-13 | /tools/granola/ | Tool | Yes | frontmatter | src/content/tools/granola.md |
 | 2026-05-13 | /tools/grok-code-fast/ | Tool | Yes | frontmatter | src/content/tools/grok-code-fast.md |
@@ -524,7 +521,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /tools/hunyuan/ | Tool | Yes | frontmatter | src/content/tools/hunyuan.md |
 | 2026-05-13 | /tools/hyperwrite/ | Tool | Yes | frontmatter | src/content/tools/hyperwrite.md |
 | 2026-05-13 | /tools/ideogram/ | Tool | Yes | frontmatter | src/content/tools/ideogram.md |
-| 2026-05-13 | /tools/imagen/ | Tool | Yes | frontmatter | src/content/tools/imagen.md |
 | 2026-05-13 | /tools/instantly/ | Tool | Yes | frontmatter | src/content/tools/instantly.md |
 | 2026-05-13 | /tools/intercom/ | Tool | Yes | frontmatter | src/content/tools/intercom.md |
 | 2026-05-13 | /tools/invideo/ | Tool | Yes | frontmatter | src/content/tools/invideo.md |
@@ -647,7 +643,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /tools/unbounce/ | Tool | Yes | frontmatter | src/content/tools/unbounce.md |
 | 2026-05-13 | /tools/v0/ | Tool | Yes | frontmatter | src/content/tools/v0.md |
 | 2026-05-13 | /tools/val-town/ | Tool | Yes | frontmatter | src/content/tools/val-town.md |
-| 2026-05-13 | /tools/veo/ | Tool | Yes | frontmatter | src/content/tools/veo.md |
 | 2026-05-13 | /tools/vidu/ | Tool | Yes | frontmatter | src/content/tools/vidu.md |
 | 2026-05-13 | /tools/voiceflow/ | Tool | Yes | frontmatter | src/content/tools/voiceflow.md |
 | 2026-05-13 | /tools/voxtral/ | Tool | Yes | frontmatter | src/content/tools/voxtral.md |
@@ -728,18 +723,23 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-17 | /stack-builder/ | Static page | Yes | git | src/pages/stack-builder/index.astro |
 | 2026-05-17 | /tools/ | Static page | Yes | git | src/pages/tools/index.astro |
 | 2026-05-17 | /tools/claude-code/ | Tool | Yes | frontmatter | src/content/tools/claude-code.md |
-| 2026-05-17 | /tools/claude/ | Tool | Yes | frontmatter | src/content/tools/claude.md |
 | 2026-05-17 | /tools/gamma/ | Tool | Yes | frontmatter | src/content/tools/gamma.md |
-| 2026-05-17 | /tools/github-copilot/ | Tool | Yes | frontmatter | src/content/tools/github-copilot.md |
 | 2026-05-17 | /tools/mistral-ai/ | Tool | Yes | frontmatter | src/content/tools/mistral-ai.md |
 | 2026-05-17 | /tools/quillbot/ | Tool | Yes | frontmatter | src/content/tools/quillbot.md |
 | 2026-05-17 | /trends/ | Static page | Yes | git | src/pages/trends/index.astro |
 | 2026-05-17 | /workflows/ | Static page | Yes | git | src/pages/workflows/index.astro |
 | 2026-05-17 | /workflows/micro-saas-weekend-build/ | Workflow | Yes | frontmatter | src/content/workflows/micro-saas-weekend-build.md |
 | 2026-05-17 | /workflows/newsletter-stack/ | Workflow | Yes | frontmatter | src/content/workflows/newsletter-stack.md |
-| 2026-05-18 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
-| 2026-05-18 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
-| 2026-05-18 | /news/ | Static page | Yes | working tree | src/pages/news/index.astro |
-| 2026-05-18 | /news/rss.xml | Crawl surface | No | working tree | src/pages/news/rss.xml.ts |
-| 2026-05-18 | /tools/chatgpt/ | Tool | Yes | working tree | src/content/tools/chatgpt.md |
-| 2026-05-18 | /tools/codex/ | Tool | Yes | working tree | src/content/tools/codex.md |
+| 2026-05-20 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
+| 2026-05-20 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
+| 2026-05-20 | /news/ | Static page | Yes | working tree | src/pages/news/index.astro |
+| 2026-05-20 | /news/rss.xml | Crawl surface | No | working tree | src/pages/news/rss.xml.ts |
+| 2026-05-20 | /tools/antigravity/ | Tool | Yes | working tree | src/content/tools/antigravity.md |
+| 2026-05-20 | /tools/chatgpt/ | Tool | Yes | working tree | src/content/tools/chatgpt.md |
+| 2026-05-20 | /tools/claude/ | Tool | Yes | working tree | src/content/tools/claude.md |
+| 2026-05-20 | /tools/codex/ | Tool | Yes | working tree | src/content/tools/codex.md |
+| 2026-05-20 | /tools/gemini/ | Tool | Yes | working tree | src/content/tools/gemini.md |
+| 2026-05-20 | /tools/github-copilot/ | Tool | Yes | working tree | src/content/tools/github-copilot.md |
+| 2026-05-20 | /tools/gpt-image-2/ | Tool | Yes | working tree | src/content/tools/gpt-image-2.md |
+| 2026-05-20 | /tools/imagen/ | Tool | Yes | working tree | src/content/tools/imagen.md |
+| 2026-05-20 | /tools/veo/ | Tool | Yes | working tree | src/content/tools/veo.md |

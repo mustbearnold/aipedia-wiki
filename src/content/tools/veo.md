@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "Google AI plans + Gemini API paid tier $0.05-$0.60/sec"
 status: active
 launched: 2025-10
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-05-20
+last_verified: 2026-05-20
 update_frequency: weekly
 affiliate:
   has_program: false
@@ -72,7 +72,7 @@ facts:
     confidence: high
 tags: [ai-video, text-to-video, image-to-video, video-generation, google, deepmind, gemini, vertex-ai, veo, native-audio]
 seo_title: "Google Veo 3.1: Features, Pricing & Review (May 2026)"
-meta_description: "Google Veo 3.1 is a frontier AI video model for Flow, Gemini API, Vertex AI, vertical video, native audio, and SynthID provenance. Pricing verified May 13, 2026 from Gemini API docs."
+meta_description: "Google Veo 3.1 is a frontier AI video model for Flow, Gemini API, Vertex AI, vertical video, native audio, and SynthID provenance. Google I/O 2026 added Gemini Omni and refreshed Google AI Ultra pricing; Veo API pricing last verified May 13."
 author: "aipedia.wiki Editorial"
 best_for:
   - Google Workspace users
@@ -124,6 +124,8 @@ price_history:
 # Google Veo 3.1
 
 Google Veo 3.1 is a frontier AI video model family from Google DeepMind. As of May 13, 2026, AiPedia ranks it as the best Google/API pick in AI video: strong native audio, vertical mobile output, 1080p/4K workflows, Gemini API pricing, Vertex AI access, and SynthID provenance.
+
+**May 19, 2026 update:** [Google I/O 2026 added Gemini Omni and refreshed Google AI Ultra pricing](/news/2026-05-19-google-io-gemini-35-search-ai-ultra/). Veo 3.1 remains the source-backed API/Vertex AI video model on this page, but consumer video access now also needs to be compared against Gemini Omni and the new $100/$200 Ultra tiers.
 
 It should be tested directly against [Seedance 2.0](/tools/seedance/) and [Kling 3.0](/tools/kling/) for raw video quality. Veo's strongest advantage is not simply output quality; it is the surrounding Google ecosystem.
 
@@ -195,6 +197,7 @@ Yes. Google's January 2026 update specifically highlights native vertical 9:16 o
 
 ## Sources
 
+- [Google I/O 2026 Gemini and subscription update](/news/2026-05-19-google-io-gemini-35-search-ai-ultra/) (verified 2026-05-20)
 - [Google DeepMind Veo](https://deepmind.google/models/veo/) (verified 2026-05-13)
 - [Veo 3.1 Gemini API video docs](https://ai.google.dev/gemini-api/docs/video) (verified 2026-05-13)
 - [Gemini API Veo 3.1 pricing](https://ai.google.dev/gemini-api/docs/pricing) (verified 2026-05-13)
