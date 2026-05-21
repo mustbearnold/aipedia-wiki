@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2023-03
-last_updated: 2026-05-20
-last_verified: 2026-05-20
+last_updated: 2026-05-21
+last_verified: 2026-05-21
 update_frequency: monthly
 seo_title: "Claude: Features, Pricing & Review (2026)"
 meta_description: "Claude runs Opus 4.7 as flagship with 1M context, Claude Code, Claude Design, Claude Cowork, and new May 2026 Small Business workflows. Agent SDK and claude -p move to separate credits June 15."
@@ -255,6 +255,8 @@ Anthropic's AI assistant. **Opus 4.7** is the flagship as of **April 16, 2026**,
 
 ## Recent developments
 
+- **May 19:** [Claude Managed Agents added self-hosted sandboxes and MCP tunnels](/news/2026-05-19-claude-managed-agents-self-hosted-sandboxes-mcp-tunnels/). Enterprises can keep agent tool execution, files, packages, and private MCP servers inside customer-controlled infrastructure while Anthropic continues to run the agent loop.
+- **May 19:** [OpenAI co-founder Andrej Karpathy joined Anthropic's pretraining team](/news/2026-05-19-andrej-karpathy-joins-anthropic-pretraining/). It is not a product launch, but it is a meaningful research-talent signal behind future Claude model development.
 - **May 19:** [KPMG is making Claude available to more than 276,000 employees and embedding it inside Digital Gateway](/news/2026-05-19-anthropic-kpmg-claude-276000-workers/). The rollout strengthens Claude's enterprise-distribution story through services firms that can implement governed client workflows.
 - **May 18:** [Anthropic acquired Stainless to strengthen Claude's developer platform](/news/2026-05-18-anthropic-acquires-stainless-developer-platform/). Stainless already powered Anthropic's official SDK generation; the acquisition points to more investment in SDKs, MCP tooling, CLIs, and agent connectivity.
 - **May 14:** [Anthropic expanded Claude through a PwC enterprise rollout and a $200M Gates Foundation partnership](/news/2026-05-14-anthropic-pwc-gates-claude-expansion/). PwC will roll out Claude Code and Cowork starting with U.S. teams and train 30,000 professionals; the Gates work funds Claude credits, grants, and technical support across health, life sciences, education, and economic mobility.

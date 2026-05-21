@@ -1,6 +1,6 @@
 # AiPedia Page Refresh Ledger
 
-Ledger updated through: 2026-05-20
+Ledger updated through: 2026-05-21
 Tracked public pages and crawl surfaces: 733
 
 Hard rule: every time a tracked website page is edited, refreshed, materially re-ranked, or has volatile facts re-verified, update that page row in this file on the same change. If a child page update affects a parent hub, archive, internal-link block, sitemap, or LLM surface, update those affected rows too.
@@ -719,7 +719,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-17 | /guides/notion-ai-alternatives/ | Guide | No | frontmatter | src/content/use-cases/notion-ai-alternatives.md |
 | 2026-05-17 | /search/ | Static page | No | git | src/pages/search.astro |
 | 2026-05-17 | /stack-builder/ | Static page | Yes | git | src/pages/stack-builder/index.astro |
-| 2026-05-17 | /tools/claude-code/ | Tool | Yes | frontmatter | src/content/tools/claude-code.md |
 | 2026-05-17 | /tools/gamma/ | Tool | Yes | frontmatter | src/content/tools/gamma.md |
 | 2026-05-17 | /tools/mistral-ai/ | Tool | Yes | frontmatter | src/content/tools/mistral-ai.md |
 | 2026-05-17 | /tools/quillbot/ | Tool | Yes | frontmatter | src/content/tools/quillbot.md |
@@ -727,20 +726,21 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-17 | /workflows/ | Static page | Yes | git | src/pages/workflows/index.astro |
 | 2026-05-17 | /workflows/micro-saas-weekend-build/ | Workflow | Yes | frontmatter | src/content/workflows/micro-saas-weekend-build.md |
 | 2026-05-17 | /workflows/newsletter-stack/ | Workflow | Yes | frontmatter | src/content/workflows/newsletter-stack.md |
-| 2026-05-20 | /categories/ | Static page | Yes | working tree | src/pages/categories/index.astro |
-| 2026-05-20 | /categories/ai-video/ | Category | Yes | working tree | src/content/categories/ai-video.md |
-| 2026-05-20 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
-| 2026-05-20 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
-| 2026-05-20 | /news/ | Static page | Yes | page metadata | src/pages/news/index.astro |
-| 2026-05-20 | /news/rss.xml | Crawl surface | No | git | src/pages/news/rss.xml.ts |
-| 2026-05-20 | /tools/ | Static page | Yes | working tree | src/pages/tools/index.astro |
+| 2026-05-20 | /categories/ | Static page | Yes | git | src/pages/categories/index.astro |
+| 2026-05-20 | /categories/ai-video/ | Category | Yes | frontmatter | src/content/categories/ai-video.md |
+| 2026-05-20 | /tools/ | Static page | Yes | git | src/pages/tools/index.astro |
 | 2026-05-20 | /tools/antigravity/ | Tool | Yes | frontmatter | src/content/tools/antigravity.md |
-| 2026-05-20 | /tools/chatgpt/ | Tool | Yes | frontmatter | src/content/tools/chatgpt.md |
-| 2026-05-20 | /tools/claude/ | Tool | Yes | frontmatter | src/content/tools/claude.md |
 | 2026-05-20 | /tools/codex/ | Tool | Yes | frontmatter | src/content/tools/codex.md |
-| 2026-05-20 | /tools/gemini-omni/ | Tool | Yes | working tree | src/content/tools/gemini-omni.md |
-| 2026-05-20 | /tools/gemini/ | Tool | Yes | working tree | src/content/tools/gemini.md |
+| 2026-05-20 | /tools/gemini-omni/ | Tool | Yes | frontmatter | src/content/tools/gemini-omni.md |
 | 2026-05-20 | /tools/github-copilot/ | Tool | Yes | frontmatter | src/content/tools/github-copilot.md |
 | 2026-05-20 | /tools/gpt-image-2/ | Tool | Yes | frontmatter | src/content/tools/gpt-image-2.md |
-| 2026-05-20 | /tools/imagen/ | Tool | Yes | working tree | src/content/tools/imagen.md |
-| 2026-05-20 | /tools/veo/ | Tool | Yes | working tree | src/content/tools/veo.md |
+| 2026-05-20 | /tools/imagen/ | Tool | Yes | frontmatter | src/content/tools/imagen.md |
+| 2026-05-20 | /tools/veo/ | Tool | Yes | frontmatter | src/content/tools/veo.md |
+| 2026-05-21 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
+| 2026-05-21 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
+| 2026-05-21 | /news/ | Static page | Yes | working tree | src/pages/news/index.astro |
+| 2026-05-21 | /news/rss.xml | Crawl surface | No | working tree | src/pages/news/rss.xml.ts |
+| 2026-05-21 | /tools/chatgpt/ | Tool | Yes | working tree | src/content/tools/chatgpt.md |
+| 2026-05-21 | /tools/claude-code/ | Tool | Yes | working tree | src/content/tools/claude-code.md |
+| 2026-05-21 | /tools/claude/ | Tool | Yes | working tree | src/content/tools/claude.md |
+| 2026-05-21 | /tools/gemini/ | Tool | Yes | working tree | src/content/tools/gemini.md |

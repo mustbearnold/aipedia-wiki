@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$20-$200/month"
 status: active
 launched: 2025-02
-last_updated: 2026-05-17
-last_verified: 2026-05-17
+last_updated: 2026-05-21
+last_verified: 2026-05-21
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -165,6 +165,7 @@ Claude Opus 4.7 (released April 16, 2026) is the default backing model. Access i
 
 ## Recent developments (April-May 2026)
 
+- **May 19:** [Claude Managed Agents added self-hosted sandboxes and MCP tunnels](/news/2026-05-19-claude-managed-agents-self-hosted-sandboxes-mcp-tunnels/). This matters for Claude Code teams because tool execution can now run inside customer-controlled infrastructure or supported providers while private MCP servers stay off the public internet.
 - **May 14:** [Anthropic moved Claude Agent SDK, `claude -p`, and Claude Code GitHub Actions into separate monthly credits](/news/2026-05-14-anthropic-claude-agent-sdk-credit-split/) starting June 15. Interactive Claude Code remains on normal subscription limits; non-interactive automation now needs budget discipline because credits are per-user, non-pooled, and do not roll over.
 - **May 14:** [Anthropic expanded Claude through PwC's enterprise rollout and a $200M Gates Foundation partnership](/news/2026-05-14-anthropic-pwc-gates-claude-expansion/). The PwC deal matters for Claude Code because PwC will roll out Claude Code and Cowork starting with U.S. teams and train 30,000 professionals, giving Anthropic a larger services bench for governed client deployments.
 - **May 14:** [Microsoft reportedly started canceling most internal Claude Code licenses in its Experiences and Devices division and pushing engineers toward GitHub Copilot CLI](/news/2026-05-14-microsoft-claude-code-github-copilot-cli-shift/) by the end of June. Treat it as a reported Microsoft tooling-convergence decision, not a public Claude Code deprecation; it still matters because large enterprises are deciding whether to standardize on developer-loved agents or platform-governed agents.

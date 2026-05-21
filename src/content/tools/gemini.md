@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2023-12
-last_updated: 2026-05-20
-last_verified: 2026-05-20
+last_updated: 2026-05-21
+last_verified: 2026-05-21
 update_frequency: monthly
 seo_title: "Gemini: Features, Pricing & Review (May 2026)"
 meta_description: "Gemini 3.5 Flash launched at Google I/O 2026 and is now the default for Gemini app and AI Mode in Search. Google AI Pro remains $19.99/mo, while AI Ultra now starts at $100/mo with a $200/mo top tier. Verified May 20, 2026."
@@ -259,8 +259,9 @@ The subscription story also changed. Google AI Pro remains the mainstream $19.99
 
 ## Recent developments (April-May 2026)
 
-Verified 2026-05-20.
+Verified 2026-05-21.
 
+- **May 20:** [Google Marketing Live turned Gemini into an ads, analytics, creative, YouTube, and commerce layer](/news/2026-05-20-google-marketing-live-gemini-ads-commerce-agents/). Marketers now need to treat Gemini as part of paid acquisition and product-discovery infrastructure, not only a chatbot or Search model.
 - **May 19:** [Google I/O made Gemini 3.5 Flash the default AI layer for Search, apps, and subscriptions](/news/2026-05-19-google-io-gemini-35-search-ai-ultra/). Google AI Ultra now starts at $100/mo, the old top tier dropped to $200/mo, and AI Mode in Search now uses Gemini 3.5 Flash globally.
 - **May 19:** [Gemini Omni](/tools/gemini-omni/) launched as Google's Gemini-native video creation and editing model for Google AI Plus, Pro, and Ultra subscribers across Gemini, Flow, Flow Music, and YouTube. Treat it as the Google conversational-editing route; keep [Veo 3.1](/tools/veo/) as the cleaner Google API/Vertex AI pricing route until Omni API pricing is published.
 - **May 19:** [Google Antigravity 2.0 and Managed Agents turned Gemini into a developer-agent stack](/news/2026-05-19-google-antigravity-managed-agents-ai-studio/). Managed Agents in the Gemini API run the Antigravity harness in isolated Linux environments and extend Gemini from chat into agent runtime infrastructure.
@@ -324,7 +325,7 @@ Verified 2026-05-20.
 | **Developer / RAG stack** | Antigravity 2.0, Managed Agents in the Gemini API, AI Studio Android support, Gemini Embedding 2 GA, and Gemini API File Search multimodal RAG |
 | **Security** | Google Threat Intelligence Group disclosed first AI-authored zero-day exploit thwarted before mass deployment on May 11, 2026 |
 
-Every data point above verified against vendor sources on 2026-05-20. See Sources.
+Every data point above verified against vendor sources on 2026-05-21. See Sources.
 
 ## What it actually is
 

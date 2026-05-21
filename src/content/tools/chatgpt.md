@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2022-11
-last_updated: 2026-05-20
-last_verified: 2026-05-20
+last_updated: 2026-05-21
+last_verified: 2026-05-21
 update_frequency: monthly
 seo_title: "ChatGPT: Features, Pricing & Review (May 2026)"
 meta_description: "ChatGPT runs GPT-5.5 Instant as the default, with GPT-5.5 Thinking on Plus and GPT-5.5 Pro on Pro, Business, and Enterprise. May 2026 added Codex mobile preview, Pro finances, and File Library for Free and Go."
@@ -332,6 +332,7 @@ Prices and model access were rechecked on May 18, 2026 using [ChatGPT pricing](h
 
 ## Recent changes
 
+- **May 20, 2026:** [OpenAI expanded its country-level AI deployment model with Singapore and Education for Countries](/news/2026-05-20-openai-singapore-education-countries-expansion/). The update reinforces ChatGPT, Codex, and API access as institutional infrastructure for governments and education systems, not just individual subscriptions.
 - **May 19, 2026:** [OpenAI added C2PA conformance, SynthID watermarking, and a public verification-tool preview for images generated through ChatGPT, Codex, and the API](/news/2026-05-19-openai-google-synthid-c2pa-image-provenance/). This improves provenance for ChatGPT image workflows, but it is not foolproof; teams still need asset logs and review workflows for high-risk commercial media.
 - **May 18, 2026:** [Musk lost his lawsuit against Sam Altman, OpenAI, and Microsoft](/news/2026-05-18-musk-openai-lawsuit-verdict-governance-overhang/). The verdict reduces one major governance overhang for ChatGPT buyers, while appeals, restructuring risk, model availability, and vendor-concentration planning remain procurement questions.
 - **May 16, 2026:** [OpenAI put Greg Brockman over product strategy as ChatGPT and Codex converge](/news/2026-05-16-openai-brockman-chatgpt-codex-product-strategy/). The reorg folds ChatGPT, Codex, and the developer API into one core product team, making Codex part of the main ChatGPT agent-platform roadmap rather than a separate developer sidecar.
