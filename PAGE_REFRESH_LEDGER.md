@@ -1,6 +1,6 @@
 # AiPedia Page Refresh Ledger
 
-Ledger updated through: 2026-05-21
+Ledger updated through: 2026-05-22
 Tracked public pages and crawl surfaces: 733
 
 Hard rule: every time a tracked website page is edited, refreshed, materially re-ranked, or has volatile facts re-verified, update that page row in this file on the same change. If a child page update affects a parent hub, archive, internal-link block, sitemap, or LLM surface, update those affected rows too.
@@ -730,17 +730,17 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-20 | /categories/ai-video/ | Category | Yes | frontmatter | src/content/categories/ai-video.md |
 | 2026-05-20 | /tools/ | Static page | Yes | git | src/pages/tools/index.astro |
 | 2026-05-20 | /tools/antigravity/ | Tool | Yes | frontmatter | src/content/tools/antigravity.md |
-| 2026-05-20 | /tools/codex/ | Tool | Yes | frontmatter | src/content/tools/codex.md |
 | 2026-05-20 | /tools/gemini-omni/ | Tool | Yes | frontmatter | src/content/tools/gemini-omni.md |
-| 2026-05-20 | /tools/github-copilot/ | Tool | Yes | frontmatter | src/content/tools/github-copilot.md |
 | 2026-05-20 | /tools/gpt-image-2/ | Tool | Yes | frontmatter | src/content/tools/gpt-image-2.md |
 | 2026-05-20 | /tools/imagen/ | Tool | Yes | frontmatter | src/content/tools/imagen.md |
 | 2026-05-20 | /tools/veo/ | Tool | Yes | frontmatter | src/content/tools/veo.md |
-| 2026-05-21 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
-| 2026-05-21 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
-| 2026-05-21 | /news/ | Static page | Yes | working tree | src/pages/news/index.astro |
-| 2026-05-21 | /news/rss.xml | Crawl surface | No | working tree | src/pages/news/rss.xml.ts |
-| 2026-05-21 | /tools/chatgpt/ | Tool | Yes | working tree | src/content/tools/chatgpt.md |
-| 2026-05-21 | /tools/claude-code/ | Tool | Yes | working tree | src/content/tools/claude-code.md |
-| 2026-05-21 | /tools/claude/ | Tool | Yes | working tree | src/content/tools/claude.md |
-| 2026-05-21 | /tools/gemini/ | Tool | Yes | working tree | src/content/tools/gemini.md |
+| 2026-05-22 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
+| 2026-05-22 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
+| 2026-05-22 | /news/ | Static page | Yes | working tree | src/pages/news/index.astro |
+| 2026-05-22 | /news/rss.xml | Crawl surface | No | working tree | src/pages/news/rss.xml.ts |
+| 2026-05-22 | /tools/chatgpt/ | Tool | Yes | working tree | src/content/tools/chatgpt.md |
+| 2026-05-22 | /tools/claude-code/ | Tool | Yes | working tree | src/content/tools/claude-code.md |
+| 2026-05-22 | /tools/claude/ | Tool | Yes | working tree | src/content/tools/claude.md |
+| 2026-05-22 | /tools/codex/ | Tool | Yes | working tree | src/content/tools/codex.md |
+| 2026-05-22 | /tools/gemini/ | Tool | Yes | working tree | src/content/tools/gemini.md |
+| 2026-05-22 | /tools/github-copilot/ | Tool | Yes | working tree | src/content/tools/github-copilot.md |

@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2022-11
-last_updated: 2026-05-21
-last_verified: 2026-05-21
+last_updated: 2026-05-22
+last_verified: 2026-05-22
 update_frequency: monthly
 seo_title: "ChatGPT: Features, Pricing & Review (May 2026)"
 meta_description: "ChatGPT runs GPT-5.5 Instant as the default, with GPT-5.5 Thinking on Plus and GPT-5.5 Pro on Pro, Business, and Enterprise. May 2026 added Codex mobile preview, Pro finances, and File Library for Free and Go."
@@ -314,7 +314,7 @@ OpenAI's general-purpose AI assistant for text, images, web browsing, sandboxed 
 | **File Library** | Free 500 MB · Go 4 GB · Plus/Business 20 GB · Pro 100 GB; expanded to Free and Go on May 15, 2026 |
 | **Score** | Utility 10 · Value 8 · Moat 10 · Longevity 10 |
 
-Every data point above was last verified against OpenAI pages, local news entries, or named sources on May 18, 2026.
+Every data point above was last verified against OpenAI pages, local news entries, or named sources on May 22, 2026.
 
 ## Pricing
 
@@ -332,6 +332,8 @@ Prices and model access were rechecked on May 18, 2026 using [ChatGPT pricing](h
 
 ## Recent changes
 
+- **May 21, 2026:** [OpenAI's AdventHealth rollout showed ChatGPT moving deeper into regulated healthcare workflows](/news/2026-05-21-openai-adventhealth-chatgpt-healthcare-rollout/). The buyer signal is that ChatGPT's enterprise value depends on adoption design, governance, and workflow measurement, not only model quality.
+- **May 20, 2026:** [OpenAI IPO reporting, Anthropic profit forecasts, and SpaceX compute costs made frontier AI economics more visible](/news/2026-05-20-openai-anthropic-spacex-frontier-ai-capital-pressure/). ChatGPT buyers should track limit stability, capacity, and public-market disclosures as part of vendor risk.
 - **May 20, 2026:** [OpenAI expanded its country-level AI deployment model with Singapore and Education for Countries](/news/2026-05-20-openai-singapore-education-countries-expansion/). The update reinforces ChatGPT, Codex, and API access as institutional infrastructure for governments and education systems, not just individual subscriptions.
 - **May 19, 2026:** [OpenAI added C2PA conformance, SynthID watermarking, and a public verification-tool preview for images generated through ChatGPT, Codex, and the API](/news/2026-05-19-openai-google-synthid-c2pa-image-provenance/). This improves provenance for ChatGPT image workflows, but it is not foolproof; teams still need asset logs and review workflows for high-risk commercial media.
 - **May 18, 2026:** [Musk lost his lawsuit against Sam Altman, OpenAI, and Microsoft](/news/2026-05-18-musk-openai-lawsuit-verdict-governance-overhang/). The verdict reduces one major governance overhang for ChatGPT buyers, while appeals, restructuring risk, model availability, and vendor-concentration planning remain procurement questions.
@@ -434,4 +436,4 @@ ChatGPT wins on breadth, image generation, and agent integrations. Claude remain
 - [OpenAI: What is ChatGPT Business?](https://help.openai.com/en/articles/8792828-what-is-chatgpt-team): Business seat pricing and workspace controls
 - [OpenAI: File storage and Library in ChatGPT](https://help.openai.com/en/articles/20001052-file-storage-and-library-in-chatgpt): Library availability, saved-file behavior, and storage limits
 
-This review follows the aipedia.wiki four-axis scoring model: Utility, Value, Moat, and Longevity. Last verified 2026-05-20.
+This review follows the aipedia.wiki four-axis scoring model: Utility, Value, Moat, and Longevity. Last verified 2026-05-22.

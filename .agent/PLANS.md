@@ -491,3 +491,79 @@ Completed on 2026-05-21.
 Published six source-backed AiPedia news articles covering Claude Managed Agents self-hosted sandboxes and MCP tunnels, Andrej Karpathy joining Anthropic, OpenAI's AI-discovered discrete geometry proof, OpenAI Singapore and Education for Countries, Google Marketing Live 2026 Gemini ads/commerce agents, and Apple Intelligence accessibility updates. Refreshed affected surfaces: `/news/`, `/tools/claude/`, `/tools/claude-code/`, `/tools/chatgpt/`, `/tools/gemini/`, `/news/rss.xml`, `/llms.txt`, `/llms-full.txt`, generated OG news assets, and `PAGE_REFRESH_LEDGER.md`.
 
 Verification passed: `npm run check:news`, `npm run check:links`, `npm run ledger:pages`, `npm run ledger:pages:check`, `npm run test:scripts`, `npm run build:fast`, image metadata QA for all 24 generated assets, and static Playwright QA for `/news/`, all six new article pages, and four affected tool pages at 360, 390, 430, 768, and 1024 px. `npm run check` failed only at the existing moderate `ws` advisory inherited through Cloudflare/Wrangler; no forced dependency downgrade or breaking `wrangler` change was made as part of this editorial refresh.
+
+---
+
+## ExecPlan: May 22 2026 News Refresh
+
+### 1. Objective
+
+Publish source-backed AiPedia news articles for verified AI and AI-tool developments since the last May 21 refresh, carrying coverage through May 22, 2026. The goal is fresher organic coverage, stronger trust signals, and better tool-page recirculation for buyers tracking AI model, agent, compliance, enterprise, and compute-market changes.
+
+### 2. Current state
+
+`src/content/news/` is current through May 20, 2026 articles covering Google Marketing Live, OpenAI discrete geometry research, and OpenAI education/country expansion. The `/news/` archive, RSS feed, `llms.txt`, and `llms-full.txt` are generated from site content but include explicit refresh metadata comments. Tool pages for Codex, ChatGPT, Claude, Claude Code, Gemini, and GitHub Copilot contain recent-development sections that must link back to any new article listed in `affects`.
+
+### 3. Target state
+
+The news section includes non-duplicate, current-source May 20-21 articles for OpenAI/Codex, ChatGPT healthcare, Claude compliance and security, Gemini/ADK/Home, GitHub Copilot, Microsoft/EY enterprise AI execution, and frontier AI capital/compute market pressure. Affected tool pages carry visible May 22 verification dates and top recent-development links. Parent/top-layer surfaces remain current and the ledger records the refresh.
+
+### 4. Scope
+
+Included: new news Markdown records, affected tool-page recent-development updates, `/news/` archive metadata, RSS metadata, LLM surface metadata, generated news artwork, page refresh ledger regeneration, content checks, build, and mobile QA. Excluded: new tool records, logo work, pricing model changes unless directly verified, affiliate CTA changes, and speculative/unverified claims.
+
+Affected top-layer pages and surfaces: `/news/`, `/tools/codex/`, `/tools/chatgpt/`, `/tools/claude/`, `/tools/claude-code/`, `/tools/gemini/`, `/tools/github-copilot/`, RSS, sitemap/build-generated pages, `/llms.txt`, `/llms-full.txt`, and `PAGE_REFRESH_LEDGER.md`.
+
+### 5. Files likely affected
+
+`src/content/news/*.md`, `src/content/tools/codex.md`, `src/content/tools/chatgpt.md`, `src/content/tools/claude.md`, `src/content/tools/claude-code.md`, `src/content/tools/gemini.md`, `src/content/tools/github-copilot.md`, `src/pages/news/index.astro`, `src/pages/news/rss.xml.ts`, `src/pages/llms.txt.ts`, `src/pages/llms-full.txt.ts`, `PAGE_REFRESH_LEDGER.md`, `public/og/news/*`, and this plan.
+
+### 6. Data model impact
+
+No schema changes. New news records must follow the existing collection frontmatter, use current source URLs, and set `last_verified: 2026-05-22`.
+
+### 7. SEO impact
+
+Each new article gets a unique title, date, summary, canonical route from the existing news template, source list, and internal links to affected tools. `/news/`, RSS, and LLM surfaces should reflect the refresh.
+
+### 8. Conversion impact
+
+No new affiliate CTAs are planned. Articles route users to relevant tool pages and comparisons without overstating commercial recommendations.
+
+### 9. Mobile UX impact
+
+Articles reuse the existing responsive news layout. Verify `/news/`, each new article, and affected tool pages at 360, 390, 430, 768, and desktop widths for no horizontal overflow, broken images, or missing primary content.
+
+### 10. Implementation steps
+
+1. Verify source set using May 2026 searches and primary/current reporting.
+2. Add article files with source-backed buyer analysis and cautious language for reported financial stories.
+3. Refresh affected tool-page frontmatter and recent-development sections.
+4. Refresh `/news/`, RSS, and LLM metadata comments.
+5. Generate article artwork and regenerate the page ledger.
+6. Run news/link/ledger/script checks, fast build, and mobile QA.
+
+### 11. Verification commands
+
+`npm run check:news`, `npm run check:links`, `node scripts/generate-og-news.mjs`, `npm run ledger:pages`, `npm run ledger:pages:check`, `npm run test:scripts`, `npm run build:fast`, `npm run check`, and Playwright/static mobile QA at 360, 390, 430, 768, and 1024px.
+
+### 12. Acceptance criteria
+
+New articles are non-duplicate, source-backed, dated accurately, and have `last_verified: 2026-05-22`. Every article with `affects` is linked from its affected tool page. Parent/news surfaces and LLM/RSS metadata are current. Ledger checks pass. Build and mobile QA pass or failures are clearly documented.
+
+### 13. Risks and mitigations
+
+Reported IPO, profitability, and compute claims can be volatile; label them as reported and cite named outlets rather than presenting them as vendor-confirmed facts. Avoid touching unrelated untracked local files. Keep tool-page claims surface-specific where vendor updates apply only to web, IDE, or enterprise products.
+
+### 14. Progress log
+
+2026-05-22: Plan created after source verification. Baseline news stops at May 20, 2026. Starting content edits for the May 22 refresh.
+2026-05-22: Added seven source-backed news records, refreshed affected Codex/ChatGPT/Claude/Claude Code/Gemini/GitHub Copilot pages, refreshed `/news/`, RSS, and LLM metadata, generated 28 new article image assets, regenerated the page ledger, and completed validation/build/mobile QA.
+
+### 15. Final report
+
+Completed on 2026-05-22.
+
+Published seven source-backed AiPedia news articles covering frontier AI capital pressure, Codex AppShots/Goal Mode/locked computer use, AdventHealth ChatGPT healthcare rollout, Claude Compliance API and Opus cybersecurity partners, Gemini ADK/Android/Home infrastructure, GitHub Copilot semantic search/auto routing/Eclipse/web model cleanup, and Microsoft/EY's $1B+ enterprise AI accelerator. Refreshed affected surfaces: `/news/`, `/tools/codex/`, `/tools/chatgpt/`, `/tools/claude/`, `/tools/claude-code/`, `/tools/gemini/`, `/tools/github-copilot/`, `/news/rss.xml`, `/llms.txt`, `/llms-full.txt`, generated OG news assets, and `PAGE_REFRESH_LEDGER.md`.
+
+Verification passed: `npm run check:news`, `npm run check:links`, `npm run ledger:pages`, `npm run ledger:pages:check`, `npm run test:scripts`, `npm run build:fast`, `git diff --check`, image metadata QA for all 28 generated assets, and static Playwright QA for `/news/`, all seven new article pages, and six affected tool pages at 360, 390, 430, 768, and 1024 px. `npm run check` passed guard/link/news gates and failed only at the existing moderate `ws` advisory inherited through Cloudflare/Wrangler.
