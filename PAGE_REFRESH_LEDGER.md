@@ -740,7 +740,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-22 | /tools/claude-code/ | Tool | Yes | frontmatter | src/content/tools/claude-code.md |
 | 2026-05-22 | /tools/gemini/ | Tool | Yes | frontmatter | src/content/tools/gemini.md |
 | 2026-05-22 | /tools/github-copilot/ | Tool | Yes | frontmatter | src/content/tools/github-copilot.md |
-| 2026-05-23 | /tools/claude/ | Tool | Yes | working tree | src/content/tools/claude.md |
-| 2026-05-23 | /tools/codex/ | Tool | Yes | working tree | src/content/tools/codex.md |
-| 2026-05-23 | /tools/cohere/ | Tool | Yes | working tree | src/content/tools/cohere.md |
-| 2026-05-23 | /tools/runway/ | Tool | Yes | working tree | src/content/tools/runway.md |
+| 2026-05-23 | /tools/claude/ | Tool | Yes | frontmatter | src/content/tools/claude.md |
+| 2026-05-23 | /tools/codex/ | Tool | Yes | frontmatter | src/content/tools/codex.md |
+| 2026-05-23 | /tools/cohere/ | Tool | Yes | frontmatter | src/content/tools/cohere.md |
+| 2026-05-23 | /tools/runway/ | Tool | Yes | frontmatter | src/content/tools/runway.md |
