@@ -11,11 +11,11 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2022-11
-last_updated: 2026-05-22
-last_verified: 2026-05-22
+last_updated: 2026-05-24
+last_verified: 2026-05-24
 update_frequency: monthly
 seo_title: "ChatGPT: Features, Pricing & Review (May 2026)"
-meta_description: "ChatGPT runs GPT-5.5 Instant as the default, with GPT-5.5 Thinking on Plus and GPT-5.5 Pro on Pro, Business, and Enterprise. May 2026 added Codex mobile preview, Pro finances, and File Library for Free and Go."
+meta_description: "Updated May 24, 2026: ChatGPT runs GPT-5.5 Instant as the default, with GPT-5.5 Thinking on paid tiers, GPT-5.5 Pro on Pro/Business/Enterprise/Edu, Codex updates, Pro finances, and File Library for Free and Go."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -31,127 +31,127 @@ scores:
 facts:
   flagship_model:
     value: "GPT-5.5"
-    source: "https://platform.openai.com/docs/models"
-    source_label: "OpenAI model docs"
-    source_id: openai-model-docs
-    verified_at: 2026-05-03
+    source: "https://help.openai.com/en/articles/11909943-gpt-55-in-chatgpt"
+    source_label: "OpenAI GPT-5.5 in ChatGPT help"
+    source_id: openai-chatgpt-gpt-55-help
+    verified_at: 2026-05-24
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-07
   context_window:
     value: "ChatGPT reasoning context varies by tier; GPT-5.5 API supports a 1M-token context window"
-    source: "https://platform.openai.com/docs/models"
-    source_label: "OpenAI model docs"
-    source_id: openai-model-docs
-    verified_at: 2026-05-03
+    source: "https://help.openai.com/en/articles/11909943-gpt-55-in-chatgpt"
+    source_label: "OpenAI GPT-5.5 in ChatGPT help"
+    source_id: openai-chatgpt-gpt-55-help
+    verified_at: 2026-05-24
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-07
   pricing_anchor:
     value: "Free, Go, Plus, Pro, Business, and Enterprise; Plus remains the default paid tier for most individuals"
     source: "https://chatgpt.com/pricing/"
     source_label: "ChatGPT pricing"
     source_id: openai-chatgpt-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-24
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-07
   free_plan:
     value: "Yes - limited GPT-5.5 Instant access, uploads, image generation, deep research, memory, context, and Codex access"
     source: "https://chatgpt.com/pricing/"
     source_label: "ChatGPT pricing"
     source_id: openai-chatgpt-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-24
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-07
   best_paid_tier:
     value: "Plus for most individuals; Pro only when high Codex, deep research, or agent usage is weekly work"
     source: "https://chatgpt.com/pricing/"
     source_label: "ChatGPT pricing"
     source_id: openai-chatgpt-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-24
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-07
   api_available:
     value: "Yes - OpenAI API includes GPT-5.5, web search, file search, computer use, GPT Image, and realtime models"
     source: "https://platform.openai.com/docs/models"
     source_label: "OpenAI model docs"
     source_id: openai-model-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-05-24
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-07
   image_generation:
     value: "Yes - GPT Image 2 / gpt-image-2 generation and editing"
     source: "https://platform.openai.com/docs/models"
     source_label: "OpenAI model docs"
     source_id: openai-model-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-05-24
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-07
   video_generation:
     value: "No first-party ChatGPT video-generation tier in the current ChatGPT pricing surface"
     source: "https://chatgpt.com/pricing/"
     source_label: "ChatGPT pricing"
     source_id: openai-chatgpt-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-24
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-07
   real_time_voice:
     value: "Yes - ChatGPT voice plus OpenAI realtime speech-to-speech models"
     source: "https://platform.openai.com/docs/models"
     source_label: "OpenAI model docs"
     source_id: openai-model-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-05-24
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-07
   web_browsing:
     value: "Yes - ChatGPT browsing and OpenAI web search tools"
     source: "https://platform.openai.com/docs/models"
     source_label: "OpenAI model docs"
     source_id: openai-model-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-05-24
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-07
   coding_agent:
-    value: "Yes - Codex is included on paid ChatGPT tiers and scales on Pro/Business/Enterprise; Codex Security now anchors the May 11, 2026 Daybreak cybersecurity initiative"
-    source: "https://chatgpt.com/pricing/"
-    source_label: "ChatGPT pricing"
-    source_id: openai-chatgpt-pricing
-    verified_at: 2026-05-13
+    value: "Yes - Codex is included across ChatGPT plans with higher usage on paid and Pro tiers; May 21 release notes added Appshots, Goal mode, browser improvements, and locked computer use"
+    source: "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+    source_label: "ChatGPT release notes"
+    source_id: openai-chatgpt-release-notes
+    verified_at: 2026-05-24
     volatility: high
     confidence: high
-    next_review_at: 2026-06-13
+    next_review_at: 2026-06-07
   enterprise_controls:
-    value: "Business and Enterprise include SAML SSO/MFA; Enterprise adds SCIM, EKM, analytics, domain verification, RBAC, retention, residency, and SLAs; the May 11, 2026 OpenAI Deployment Company adds forward-deployed engineering as a procurement path"
+    value: "Business and Enterprise include workspace controls; Enterprise adds granular GPT controls, group permissions, RBAC, analytics, compliance logs, IP allowlisting, data residency, and enterprise procurement controls"
     source: "https://chatgpt.com/pricing/"
     source_label: "ChatGPT pricing"
     source_id: openai-chatgpt-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-05-24
     volatility: high
     confidence: high
-    next_review_at: 2026-06-13
+    next_review_at: 2026-06-07
   data_retention_or_privacy:
     value: "Business, Enterprise, Edu, Healthcare, and API data is not trained on by default; Enterprise admins control retention"
     source: "https://openai.com/enterprise-privacy/"
     source_label: "OpenAI enterprise privacy"
     source_id: openai-enterprise-privacy
-    verified_at: 2026-05-03
+    verified_at: 2026-05-24
     volatility: high
     confidence: high
-    next_review_at: 2026-06-03
+    next_review_at: 2026-06-07
   open_source_or_local:
     value: "No - ChatGPT and GPT-5.5 are proprietary hosted OpenAI products"
     source: "https://platform.openai.com/docs/models"
     source_label: "OpenAI model docs"
     source_id: openai-model-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-05-24
     volatility: low
     confidence: high
   best_for:
@@ -159,7 +159,7 @@ facts:
     source: "https://chatgpt.com/pricing/"
     source_label: "ChatGPT pricing"
     source_id: openai-chatgpt-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-24
     volatility: medium
     confidence: high
   watch_out_for:
@@ -167,7 +167,7 @@ facts:
     source: "https://chatgpt.com/pricing/"
     source_label: "ChatGPT pricing"
     source_id: openai-chatgpt-pricing
-    verified_at: 2026-05-03
+    verified_at: 2026-05-24
     volatility: medium
     confidence: high
 tags: [chatbot, ai-assistant, writing, search, code-interpreter, image-generation, gpt-5, codex, agent-mode, voice, memory]
@@ -210,6 +210,14 @@ decision_brief:
       value: "Reasoning, research, or video"
       detail: "Claude, Perplexity, Midjourney, Gemini, and video tools each win on narrower jobs."
 price_history:
+  - date: 2026-05-24
+    plan: "ChatGPT pricing and model-access recheck"
+    price: "$0-$200/mo; Plus $20/mo; Pro $100/$200; Business $25 monthly or $20 annually"
+    source: "https://chatgpt.com/pricing/"
+    source_id: openai-chatgpt-pricing
+    source_label: "ChatGPT pricing"
+    verified_at: 2026-05-24
+    note: "Reverified ChatGPT plan matrix, GPT-5.5 tier access, Pro/Codex usage language, enterprise controls, and File Library storage limits against official OpenAI and ChatGPT sources."
   - date: 2026-04-15
     plan: "Plus"
     price: "$20/mo"
@@ -314,7 +322,7 @@ OpenAI's general-purpose AI assistant for text, images, web browsing, sandboxed 
 | **File Library** | Free 500 MB · Go 4 GB · Plus/Business 20 GB · Pro 100 GB; expanded to Free and Go on May 15, 2026 |
 | **Score** | Utility 10 · Value 8 · Moat 10 · Longevity 10 |
 
-Every data point above was last verified against OpenAI pages, local news entries, or named sources on May 22, 2026.
+Every data point above was last verified against OpenAI pages, local news entries, or named sources on May 24, 2026.
 
 ## Pricing
 
@@ -328,10 +336,11 @@ Every data point above was last verified against OpenAI pages, local news entrie
 | Business | $25/user/mo monthly; $20/user/mo annually | Flexible GPT-5.5 Thinking and GPT-5.5 Pro access | Included, with workspace controls | No | Small teams |
 | Enterprise | Custom | Flexible GPT-5.5 Thinking and GPT-5.5 Pro access | High | No | SSO, audit, SOC 2, data controls |
 
-Prices and model access were rechecked on May 18, 2026 using [ChatGPT pricing](https://chatgpt.com/pricing/), [OpenAI's GPT-5.5 Instant release note](https://openai.com/index/gpt-5-5-instant/), [OpenAI's GPT-5.5 release note](https://openai.com/index/introducing-gpt-5-5/), [OpenAI's Pro tier help article](https://help.openai.com/en/articles/9793128-what-is-chatgpt-pro), and [OpenAI's Business help article](https://help.openai.com/en/articles/8792828-what-is-chatgpt-team). The public pricing snapshot available here does not expose a fixed US dollar amount for Go, so the table lists it as regional pricing instead of repeating an unverified $8/mo figure.
+Prices and model access were rechecked on May 24, 2026 using [ChatGPT pricing](https://chatgpt.com/pricing/), [OpenAI's GPT-5.5 in ChatGPT help article](https://help.openai.com/en/articles/11909943-gpt-55-in-chatgpt), [OpenAI's Pro tiers help article](https://help.openai.com/en/articles/9793128-about-chatgpt-pro-plans), [ChatGPT release notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes), and [OpenAI's File storage and Library article](https://help.openai.com/en/articles/20001052-file-storage-and-library-in-chatgpt). The public pricing snapshot available here does not expose a fixed US dollar amount for Go, so the table lists it as regional pricing instead of repeating an unverified $8/mo figure.
 
 ## Recent changes
 
+- **May 21, 2026:** [OpenAI's ChatGPT release notes added Codex Appshots, Goal mode, browser improvements, and locked computer use](/news/2026-05-21-openai-codex-appshots-goal-mode-locked-computer-use/). For ChatGPT buyers, the signal is that Codex is becoming a more persistent desktop, browser, and remote-work surface inside the broader ChatGPT account.
 - **May 21, 2026:** [OpenAI's AdventHealth rollout showed ChatGPT moving deeper into regulated healthcare workflows](/news/2026-05-21-openai-adventhealth-chatgpt-healthcare-rollout/). The buyer signal is that ChatGPT's enterprise value depends on adoption design, governance, and workflow measurement, not only model quality.
 - **May 20, 2026:** [OpenAI IPO reporting, Anthropic profit forecasts, and SpaceX compute costs made frontier AI economics more visible](/news/2026-05-20-openai-anthropic-spacex-frontier-ai-capital-pressure/). ChatGPT buyers should track limit stability, capacity, and public-market disclosures as part of vendor risk.
 - **May 20, 2026:** [OpenAI expanded its country-level AI deployment model with Singapore and Education for Countries](/news/2026-05-20-openai-singapore-education-countries-expansion/). The update reinforces ChatGPT, Codex, and API access as institutional infrastructure for governments and education systems, not just individual subscriptions.
@@ -429,11 +438,11 @@ ChatGPT wins on breadth, image generation, and agent integrations. Claude remain
 
 ## Sources
 
-- [ChatGPT Official Site and Pricing](https://chatgpt.com): Current model access by tier and feature overview
-- [OpenAI Help Center](https://help.openai.com): Custom GPT retirement dates, feature limits, and policy details
-- [OpenAI: Introducing GPT-5.5](https://openai.com/index/introducing-gpt-5-5/): April 23, 2026 model rollout details
-- [OpenAI: About ChatGPT Pro tiers](https://help.openai.com/en/articles/9793128-what-is-chatgpt-pro): Pro $100, Pro $200, Codex limits, and promo details
-- [OpenAI: What is ChatGPT Business?](https://help.openai.com/en/articles/8792828-what-is-chatgpt-team): Business seat pricing and workspace controls
-- [OpenAI: File storage and Library in ChatGPT](https://help.openai.com/en/articles/20001052-file-storage-and-library-in-chatgpt): Library availability, saved-file behavior, and storage limits
+- [ChatGPT Official Site and Pricing](https://chatgpt.com/pricing/): Current model access by tier and feature overview (verified 2026-05-24)
+- [OpenAI: GPT-5.5 in ChatGPT](https://help.openai.com/en/articles/11909943-gpt-55-in-chatgpt): default model, tier access, usage limits, context windows, and tool support (verified 2026-05-24)
+- [OpenAI: ChatGPT release notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes): Codex updates, Finances, and File Library expansion (verified 2026-05-24)
+- [OpenAI: About ChatGPT Pro tiers](https://help.openai.com/en/articles/9793128-about-chatgpt-pro-plans): Pro $100, Pro $200, Codex limits, and promo details (verified 2026-05-24)
+- [OpenAI: Models](https://platform.openai.com/docs/models): API model IDs, context window, and pricing for gpt-5.5 (verified 2026-05-24)
+- [OpenAI: File storage and Library in ChatGPT](https://help.openai.com/en/articles/20001052-file-storage-and-library-in-chatgpt): Library availability, saved-file behavior, and storage limits (verified 2026-05-24)
 
-This review follows the aipedia.wiki four-axis scoring model: Utility, Value, Moat, and Longevity. Last verified 2026-05-22.
+This review follows the aipedia.wiki four-axis scoring model: Utility, Value, Moat, and Longevity. Last verified 2026-05-24.

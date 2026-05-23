@@ -1498,7 +1498,26 @@
       "url": "https://cursor.com/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-05-24"
+    },
+    {
+      "id": "cursor-changelog",
+      "label": "Cursor changelog",
+      "url": "https://cursor.com/changelog",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-05-24"
+    },
+    {
+      "id": "cursor-composer-25",
+      "label": "Cursor Composer 2.5 changelog",
+      "url": "https://cursor.com/changelog/composer-2-5",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-05-24"
     },
     {
       "id": "d-id-agents",
@@ -2511,6 +2530,33 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high"
+    },
+    {
+      "id": "gemini-omni-official",
+      "label": "Google DeepMind Gemini Omni",
+      "url": "https://deepmind.google/models/gemini-omni/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-05-24"
+    },
+    {
+      "id": "gemini-omni-flash-model-card",
+      "label": "Google DeepMind Gemini Omni Flash model card",
+      "url": "https://deepmind.google/models/model-cards/gemini-omni-flash/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-05-24"
+    },
+    {
+      "id": "google-ai-subscriptions-io-2026",
+      "label": "Google AI subscription updates from I/O 2026",
+      "url": "https://blog.google/products-and-platforms/products/google-one/google-ai-subscriptions/",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-05-24"
     },
     {
       "id": "google-gemini-docs",
@@ -4755,10 +4801,47 @@
     {
       "id": "openai-chatgpt-pricing",
       "label": "ChatGPT pricing",
-      "url": "https://openai.com/chatgpt/pricing/",
+      "url": "https://chatgpt.com/pricing/",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-05-24"
+    },
+    {
+      "id": "openai-chatgpt-gpt-55-help",
+      "label": "OpenAI GPT-5.5 in ChatGPT help article",
+      "url": "https://help.openai.com/en/articles/11909943-gpt-55-in-chatgpt",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-05-24"
+    },
+    {
+      "id": "openai-chatgpt-pro-tiers",
+      "label": "OpenAI ChatGPT Pro tiers help article",
+      "url": "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-plans",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-05-24"
+    },
+    {
+      "id": "openai-chatgpt-release-notes",
+      "label": "OpenAI ChatGPT release notes",
+      "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-05-24"
+    },
+    {
+      "id": "openai-chatgpt-file-library",
+      "label": "OpenAI File storage and Library in ChatGPT",
+      "url": "https://help.openai.com/en/articles/20001052-file-storage-and-library-in-chatgpt",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-05-24"
     },
     {
       "id": "openai-enterprise-privacy",
@@ -4766,7 +4849,8 @@
       "url": "https://openai.com/enterprise-privacy/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-05-24"
     },
     {
       "id": "openai-gpt-55-instant",
@@ -4774,7 +4858,8 @@
       "url": "https://openai.com/index/gpt-5-5-instant/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-05-24"
     },
     {
       "trust_tier": "primary",
@@ -4791,7 +4876,8 @@
       "url": "https://platform.openai.com/docs/models",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-05-24"
     },
     {
       "id": "openai-pricing",
@@ -5259,6 +5345,33 @@
       "last_checked": "2026-05-10"
     },
     {
+      "id": "qwencloud-qwen37-max",
+      "label": "Qwen Cloud Qwen3.7-Max model page",
+      "url": "https://www.qwencloud.com/models/qwen3.7-max",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-05-24"
+    },
+    {
+      "id": "qwencloud-pricing",
+      "label": "Qwen Cloud pricing docs",
+      "url": "https://docs.qwencloud.com/developer-guides/getting-started/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-05-24"
+    },
+    {
+      "id": "qwencloud-model-releases",
+      "label": "Qwen Cloud model releases changelog",
+      "url": "https://docs.qwencloud.com/changelog/models",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-05-24"
+    },
+    {
       "id": "read-ai-official",
       "label": "Read AI plans and pricing",
       "url": "https://www.read.ai/plans-pricing",
@@ -5579,7 +5692,8 @@
       "url": "https://help.runwayml.com/",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-05-24"
     },
     {
       "id": "runway-api-docs",
@@ -5587,7 +5701,8 @@
       "url": "https://docs.dev.runwayml.com/",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-05-24"
     },
     {
       "id": "runway-api-models",
@@ -5595,7 +5710,8 @@
       "url": "https://docs.dev.runwayml.com/guides/models/",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-05-24"
     },
     {
       "id": "runway-api-pricing",
@@ -5603,7 +5719,17 @@
       "url": "https://docs.dev.runwayml.com/guides/pricing/",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-05-24"
+    },
+    {
+      "id": "runway-aleph-2",
+      "label": "Runway Aleph 2.0 announcement",
+      "url": "https://runwayml.com/news/introducing-aleph-2-and-edit-studio",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-05-24"
     },
     {
       "id": "runway-enterprise",
@@ -5619,7 +5745,8 @@
       "url": "https://help.runwayml.com/hc/en-us/articles/48649877897107-Available-Models-on-Runway",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-05-24"
     },
     {
       "id": "runway-pricing",
@@ -5627,7 +5754,8 @@
       "url": "https://runwayml.com/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-05-24"
     },
     {
       "id": "runway-research",

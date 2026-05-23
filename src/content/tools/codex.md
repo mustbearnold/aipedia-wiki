@@ -11,7 +11,7 @@ pricing_model: freemium
 price_range: "Bundled with ChatGPT Plus ($20/mo) through Pro 20x ($200/mo)"
 status: active
 launched: 2025-05
-last_updated: 2026-05-23
+last_updated: 2026-05-24
 last_verified: 2026-05-23
 update_frequency: monthly
 affiliate:
@@ -292,7 +292,7 @@ Prices verified 2026-05-18 via [OpenAI Codex pricing](https://developers.openai.
 |---|---|---|---|---|
 | **Primary surface** | Desktop app + cloud + CLI | Terminal CLI | VS Code fork IDE | Web app |
 | **Async cloud execution** | Yes (sandboxed VM) | Ultraplan cloud environments | Cloud sandboxes + parallel agents | Yes, cloud-native by default |
-| **Backing model(s)** | GPT-5.5 + GPT-5.3-Codex-Spark | Claude Opus 4.7 + Sonnet 4.6 | User-selectable (Claude, GPT, Gemini, Grok, Composer 2) | Proprietary Cognition models |
+| **Backing model(s)** | GPT-5.5 + GPT-5.3-Codex-Spark | Claude Opus 4.7 + Sonnet 4.6 | User-selectable (Claude, GPT, Gemini, Grok, Composer 2.5) | Proprietary Cognition models |
 | **Computer Use** | Yes (April 16, macOS first) | Research preview in Claude Code | No native computer use | Yes, agent-native |
 | **Memory** | Yes (April 16, persistent cross-session) | Projects + session scope | Via `.cursorrules` + rules | Agent-native memory |
 | **Image generation** | gpt-image-2 bundled | None native | None native | None native |

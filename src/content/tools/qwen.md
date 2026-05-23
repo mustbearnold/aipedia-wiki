@@ -2,7 +2,7 @@
 type: tool
 slug: qwen
 title: Qwen
-tagline: Alibaba Cloud's Qwen model family spans Qwen Chat, Alibaba Cloud Model Studio APIs, and Apache 2.0 open-weight Qwen3 releases from 0.6B through 235B MoE.
+tagline: Alibaba Cloud's Qwen model family spans Qwen Chat, Qwen Cloud APIs, hosted Qwen3.7-Max, and Apache 2.0 open-weight Qwen3 releases from 0.6B through 235B MoE.
 category: ai-chatbots
 secondary_categories: [ai-coding, ai-research]
 company: Alibaba Cloud
@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "Free open-weight downloads / hosted API priced per model"
 status: active
 launched: 2023-09
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-05-24
+last_verified: 2026-05-24
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -36,21 +36,30 @@ facts:
     volatility: high
     confidence: high
   model_surface:
-    value: "Qwen should be evaluated as a model family with Qwen Chat, open-weight releases, hosted APIs, and fast-moving version changes rather than a single chatbot product."
-    source: "https://qwenlm.github.io/blog/qwen3/"
-    source_label: "Qwen3 blog"
-    source_id: qwen-blog
-    verified_at: 2026-05-13
-    next_review_at: 2026-08-13
+    value: "Qwen should be evaluated as a model family with Qwen Chat, open-weight releases, Qwen Cloud hosted APIs, and fast-moving version changes rather than a single chatbot product."
+    source: "https://docs.qwencloud.com/changelog/models"
+    source_label: "Qwen Cloud model releases"
+    source_id: qwencloud-model-releases
+    verified_at: 2026-05-24
+    next_review_at: 2026-06-07
+    volatility: high
+    confidence: high
+  latest_hosted_model:
+    value: "Qwen3.7-Max is Qwen Cloud's latest flagship text-generation model; the current alias is qwen3.7-max with snapshot qwen3.7-max-2026-05-20, 1M context, text input/output, thinking enabled by default, and built-in tools listed on the Qwen Cloud model page."
+    source: "https://www.qwencloud.com/models/qwen3.7-max"
+    source_label: "Qwen Cloud Qwen3.7-Max model page"
+    source_id: qwencloud-qwen37-max
+    verified_at: 2026-05-24
+    next_review_at: 2026-06-07
     volatility: high
     confidence: high
   pricing_anchor:
-    value: "Hosted API pricing is published through Alibaba Cloud Model Studio and depends on the selected model and token usage."
-    source: "https://www.alibabacloud.com/help/en/model-studio/model-pricing"
-    source_label: "Alibaba Cloud Model Studio pricing"
-    source_id: qwen-pricing
-    verified_at: 2026-05-13
-    next_review_at: 2026-08-13
+    value: "Hosted API pricing is published through Qwen Cloud / Alibaba Cloud docs and depends on the selected model, context tier, token usage, and temporary discounts."
+    source: "https://docs.qwencloud.com/developer-guides/getting-started/pricing"
+    source_label: "Qwen Cloud pricing docs"
+    source_id: qwencloud-pricing
+    verified_at: 2026-05-24
+    next_review_at: 2026-06-07
     volatility: high
     confidence: high
   deployment_surface:
@@ -72,6 +81,13 @@ facts:
     volatility: high
     confidence: high
 price_history:
+  - date: 2026-05-24
+    price: "qwen3.7-max list price: $2.50/M input and $7.50/M output; Qwen Cloud model page showed a 50% promotional rate at $1.25/$3.75"
+    source: "https://www.qwencloud.com/models/qwen3.7-max"
+    source_label: "Qwen Cloud Qwen3.7-Max model page"
+    source_id: qwencloud-qwen37-max
+    verified_at: 2026-05-24
+    note: "Qwen Cloud docs list qwen3.7-max for 0-991K input at $2.50/M input and $7.50/M output; the model marketplace page currently displays the 50% off price."
   - date: 2026-05-13
     price: "see note"
     source: "https://www.alibabacloud.com/help/en/model-studio/model-pricing"
@@ -86,9 +102,9 @@ price_history:
     source_id: qwen-pricing
     verified_at: 2026-05-11
     note: "qwen-max International listed at $1.60/M input and $6.40/M output on Model Studio."
-tags: [open-weights, alibaba, multilingual, coding, vision, reasoning, qwen3, api, chinese-llm]
+tags: [open-weights, alibaba, multilingual, coding, vision, reasoning, qwen3, qwen3-7-max, api, chinese-llm]
 seo_title: "Qwen: Features, Pricing & Review (May 2026)"
-meta_description: "Qwen is Alibaba Cloud's model family for Qwen Chat, hosted Model Studio APIs, and Apache 2.0 Qwen3 open weights. Verified May 2026."
+meta_description: "Qwen is Alibaba Cloud's model family for Qwen Chat, hosted Qwen Cloud APIs, Qwen3.7-Max, and Apache 2.0 Qwen3 open weights. Verified May 2026."
 author: "aipedia.wiki Editorial"
 best_for:
   - multilingual products across 119 languages
@@ -100,17 +116,19 @@ not_best_for:
   - teams needing strict Western data residency on hosted API
   - workloads sensitive to Alibaba cloud exposure
 quick_answer: >-
-  Qwen is Alibaba Cloud's fast-moving model family. Pick it for open-weight Qwen3 deployments, Alibaba Cloud Model Studio inference, multilingual products, and developer control. Skip it if you need a polished consumer assistant like ChatGPT.
+  Qwen is Alibaba Cloud's fast-moving model family. Pick it for hosted Qwen3.7-Max, open-weight Qwen3 deployments, Qwen Cloud / Model Studio inference, multilingual products, and developer control. Skip it if you need a polished consumer assistant like ChatGPT.
 ---
 
 # Qwen
 
-Alibaba Cloud's Qwen family spans a consumer-facing Qwen Chat surface, hosted API access through Alibaba Cloud Model Studio, and open-weight model releases on Hugging Face and ModelScope. The practical buyer question is not "Should I buy Qwen instead of ChatGPT?" but "Do I need a controllable model family for building, hosting, tuning, or routing AI systems?"
+Alibaba Cloud's Qwen family spans a consumer-facing Qwen Chat surface, hosted API access through Qwen Cloud / Alibaba Cloud Model Studio, the hosted Qwen3.7-Max flagship text model, and open-weight model releases on Hugging Face and ModelScope. The practical buyer question is not "Should I buy Qwen instead of ChatGPT?" but "Do I need a controllable model family for building, hosting, tuning, or routing AI systems?"
 
-The official Qwen3 release includes two open-weight MoE models, **Qwen3-235B-A22B** and **Qwen3-30B-A3B**, plus dense models from **0.6B** through **32B**, all under Apache 2.0. Qwen says Qwen3 supports 119 languages and dialects, hybrid thinking/non-thinking modes, and agentic/coding improvements. Hosted inference pricing is published through Alibaba Cloud Model Studio and varies by exact model, context, mode, and token volume.
+The official Qwen3 release includes two open-weight MoE models, **Qwen3-235B-A22B** and **Qwen3-30B-A3B**, plus dense models from **0.6B** through **32B**, all under Apache 2.0. Qwen says Qwen3 supports 119 languages and dialects, hybrid thinking/non-thinking modes, and agentic/coding improvements. The newer Qwen3.7-Max is a hosted text-only Qwen Cloud model, not part of the Apache 2.0 open-weight Qwen3 release. Hosted inference pricing is published through Qwen Cloud / Alibaba Cloud docs and varies by exact model, context, mode, discount, and token volume.
 
 ## Recent developments
 
+- **May 22, 2026:** Qwen Cloud's [model-release changelog](https://docs.qwencloud.com/changelog/models) added `qwen3.5-livetranslate-flash-realtime` and its `2026-05-19` snapshot. It is the newest specialty Qwen release AiPedia found in official sources, aimed at real-time multilingual audio/video translation.
+- **May 21, 2026:** Qwen Cloud listed [qwen3.7-max](https://www.qwencloud.com/models/qwen3.7-max) / `qwen3.7-max-2026-05-20` as the next-generation flagship in the Qwen Max series. The official model page shows text input/output, thinking enabled by default, a 1M context window, 991K max input, 65K max output, and list pricing of $2.50/M input and $7.50/M output.
 - **May 13, 2026:** AiPedia refreshed this page against official Qwen, Alibaba Cloud Model Studio, Hugging Face, and the latest Qwen ecosystem coverage. Model Studio International pricing now lists qwen-max at $1.20/M input (0-32K) and $6.00/M output (down from the May 10 list of $1.60/$6.40), with a new Qwen-Flash tier at $0.10/M input and $0.40/M output. Qwen-Turbo is no longer receiving updates; Qwen-Flash is the recommended replacement.
 - **May 11, 2026:** [Alibaba Qwen and Taobao launched a co-built agentic shopping experience](/news/2026-05-11-alibaba-qwen-taobao-agentic-shopping/). The integration is the highest-profile production deployment of Qwen agentic capabilities to date, pushing the family from developer-facing model lineup into a consumer-scale commerce surface that touches hundreds of millions of users.
 - **April 10, 2026:** [Vidu Shengshu, the Alibaba-affiliated video-model studio, raised fresh funding](/news/2026-04-10-alibaba-vidu-shengshu-funding/). Reinforces that Alibaba's AI bet now spans Qwen text/code, Qwen-VL, image, video, and embodied stacks, not just the chat model family.
@@ -131,6 +149,8 @@ The official Qwen3 release includes two open-weight MoE models, **Qwen3-235B-A22
 | | |
 |---|---|
 | **Official open-weight line** | Qwen3 series under Apache 2.0, from 0.6B dense to 235B MoE |
+| **Latest hosted flagship text model** | Qwen3.7-Max / `qwen3.7-max-2026-05-20`: text-only, thinking enabled by default, 1M context on Qwen Cloud |
+| **Latest specialty release in official changelog** | `qwen3.5-livetranslate-flash-realtime-2026-05-19` for real-time multilingual audio/video translation |
 | **Largest Qwen3 open MoE** | Qwen3-235B-A22B: 235B total parameters, 22B activated |
 | **Smaller Qwen3 open MoE** | Qwen3-30B-A3B: 30B total parameters, 3B activated |
 | **Dense Qwen3 sizes** | 0.6B, 1.7B, 4B, 8B, 14B, and 32B |
@@ -138,17 +158,17 @@ The official Qwen3 release includes two open-weight MoE models, **Qwen3-235B-A22
 | **Architecture** | Hybrid thinking / non-thinking mode switchable |
 | **Qwen3 context examples** | 32K on smaller dense models; 128K on Qwen3-8B and larger official Qwen3 models |
 | **Hosted API pricing** | Published by Alibaba Cloud Model Studio and varies by model/mode/context |
-| **Example hosted rate** | qwen-max International: $1.20/M input (0-32K) and $6.00/M output as of 2026-05-13; Qwen-Flash: $0.10/M input and $0.40/M output |
+| **Example hosted rate** | Qwen3.7-Max list: $2.50/M input and $7.50/M output; Qwen Cloud page showed a 50% promo rate at $1.25/$3.75 on 2026-05-24 |
 | **Batch invocation** | 50% off real-time pricing on supported models |
 | **Production agent surface** | Qwen and Taobao co-built agentic shopping launched May 11, 2026 |
 
-Every data point above was verified on 2026-05-13. See Sources.
+Qwen3.7-Max, Qwen Cloud pricing, and model-release rows above were verified on 2026-05-24. Older qwen-max examples retain their own source dates in price history. See Sources.
 
 ## What it actually is
 
-A multi-pronged model family covering several surfaces: Qwen Chat for direct testing, hosted API access through Alibaba Cloud Model Studio, open-weight downloads on Hugging Face and ModelScope, and third-party gateway access where providers choose to carry specific Qwen models.
+A multi-pronged model family covering several surfaces: Qwen Chat for direct testing, hosted API access through Qwen Cloud / Alibaba Cloud Model Studio, open-weight downloads on Hugging Face and ModelScope, and third-party gateway access where providers choose to carry specific Qwen models.
 
-The family splits into specialists. Core Qwen models handle general chat and reasoning. Qwen-Coder, Qwen-VL, Qwen-Audio, Qwen-Image, and QwQ-style reasoning branches appear across the broader ecosystem, but production buyers should verify the exact checkpoint, license, context window, and hosting path before choosing a model.
+The family splits into specialists. Core Qwen models handle general chat and reasoning. Qwen3.7-Max is the latest hosted flagship text model in Qwen Cloud's official changelog, while Qwen-Coder, Qwen-VL, Qwen-Audio, Qwen-Image, LiveTranslate, and QwQ-style reasoning branches appear across the broader ecosystem. Production buyers should verify the exact checkpoint, license, context window, and hosting path before choosing a model.
 
 The real moats are Apache 2.0 licensing on most open sizes, 119-language coverage no other major family matches, and Alibaba's willingness to run aggressive API pricing. Thin-margin cloud pricing combined with open weights gives teams a self-host escape valve most closed-model providers cannot offer.
 
@@ -157,6 +177,7 @@ The real moats are Apache 2.0 licensing on most open sizes, 119-language coverag
 - **Multilingual products.** 119-language training covers Chinese, Japanese, Korean, Arabic, and European languages at higher quality than English-centric families.
 - **Self-hosted deployment.** Apache 2.0 weights run from single-CPU (0.6B) to 4x A100 (72B dense) to MoE clusters (235B, 480B Coder). No licensing fees.
 - **Cost-sensitive API tests.** Model Studio publishes per-model token pricing and batch discounts for supported models.
+- **Hosted flagship Qwen tests.** Qwen3.7-Max gives teams a 1M-context hosted Qwen option for agentic coding, office workflows, and long-horizon execution before deciding whether open-weight Qwen is enough.
 - **Agentic and coding experiments.** Qwen3 includes hybrid thinking/non-thinking controls, MCP-oriented examples, and deployment guidance through SGLang and vLLM.
 - **Model-family breadth.** The Qwen ecosystem spans text, code, vision-language, image, audio, and reasoning branches.
 - **IDE and agent backends.** Use an OpenAI-compatible local or hosted endpoint after benchmarking the exact model.
@@ -172,19 +193,20 @@ The real moats are Apache 2.0 licensing on most open sizes, 119-language coverag
 
 ## Pricing
 
-Hosted pricing via [Alibaba Cloud Model Studio](https://www.alibabacloud.com/help/en/model-studio/model-pricing). Self-host for free under Apache 2.0 via [Hugging Face](https://huggingface.co/Qwen).
+Hosted pricing via [Qwen Cloud pricing docs](https://docs.qwencloud.com/developer-guides/getting-started/pricing), [Qwen Cloud model pages](https://www.qwencloud.com/models/qwen3.7-max), and Alibaba Cloud Model Studio. Self-host for free under Apache 2.0 via [Hugging Face](https://huggingface.co/Qwen).
 
 | Plan / Model | Price | Notes |
 |---|---|---|
 | Open weights (Hugging Face/ModelScope) | Free to download | Apache 2.0 across the official Qwen3 open-weight line; hosting costs are separate |
 | Qwen3 open-weight self-hosting | Infrastructure cost | Cost depends on model size, quantization, hardware, throughput, and context length |
 | Alibaba Cloud Model Studio | Model-specific token pricing | Official page lists model, mode, input/output token rates, and free quota where applicable |
+| Qwen3.7-Max | List: $2.50/M input, $7.50/M output; promo page displayed $1.25/$3.75 on May 24 | Qwen Cloud's May 21 flagship text model; 1M context, 991K max input, 65K max output |
 | qwen-max example | $1.20/M input (0-32K), $6.00/M output | Listed on Model Studio's Qwen-Max International pricing as of May 13, 2026; tiered to $2.40/$12 (32K-128K) and $3/$15 (128K-252K) |
 | qwen-plus | $0.40/M input (0-256K), $1.20/M output | Long-context tier: $1.20/M input and $3.60/M output for 256K-1M |
 | Qwen-Flash | $0.10/M input, $0.40/M output | New entry tier; Qwen-Turbo no longer receiving updates |
 | Batch invocation | 50% off real-time | Supported models only |
 
-*Prices verified 2026-05-13 via [Alibaba Cloud Model Studio pricing](https://www.alibabacloud.com/help/en/model-studio/model-pricing). Chinese Mainland deployment rates are lower than the International tiers shown here. Third-party gateways can be useful, but their rates and model availability are separate from Alibaba's official pricing.*
+*Qwen3.7-Max list pricing verified 2026-05-24 via [Qwen Cloud pricing docs](https://docs.qwencloud.com/developer-guides/getting-started/pricing) and the [Qwen3.7-Max model page](https://www.qwencloud.com/models/qwen3.7-max). Older qwen-max examples were verified 2026-05-13 via Alibaba Cloud Model Studio pricing. Chinese Mainland deployment rates can differ from International tiers. Third-party gateways can be useful, but their rates and model availability are separate from Alibaba's official pricing.*
 
 ## Against the alternatives
 
@@ -205,10 +227,12 @@ Hosted pricing via [Alibaba Cloud Model Studio](https://www.alibabacloud.com/hel
 - **Vision models lag best-in-class.** Qwen-VL and Qwen3.5-Omni are capable but trail the strongest closed vision models on independent evaluations.
 - **Hosted API rate limits vary by region.** Alibaba Cloud tier and regional load affect throughput. Production deployments should load-test.
 - **Pricing is model-specific.** Alibaba Cloud Model Studio tables change by model, mode, free quota, context, and batch eligibility.
+- **Latest does not mean open weight.** Qwen3.7-Max is a hosted Qwen Cloud flagship text model. The Apache 2.0 open-weight buyer case still rests on the official Qwen3 checkpoints.
+- **Promos can distort cost comparisons.** Qwen Cloud showed a 50% Qwen3.7-Max promotional rate during this refresh; compare on list price unless you are buying during the promo window.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-05-13 against [Alibaba Cloud Model Studio pricing](https://www.alibabacloud.com/help/en/model-studio/model-pricing), [Qwen official site](https://qwen.ai/), [Qwen3 blog](https://qwenlm.github.io/blog/qwen3/), [Hugging Face Qwen](https://huggingface.co/Qwen), the [May 11 Qwen-Taobao agentic shopping coverage](/news/2026-05-11-alibaba-qwen-taobao-agentic-shopping/), and the tracked [Qwen3.6-35B-A3B news signal](/news/2026-04-16-qwen-3-6-35b-a3b-release/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-05-24 against [Qwen Cloud model releases](https://docs.qwencloud.com/changelog/models), the [Qwen3.7-Max model page](https://www.qwencloud.com/models/qwen3.7-max), [Qwen Cloud pricing docs](https://docs.qwencloud.com/developer-guides/getting-started/pricing), [Qwen official site](https://qwen.ai/), [Qwen3 blog](https://qwenlm.github.io/blog/qwen3/), [Hugging Face Qwen](https://huggingface.co/Qwen), the [May 11 Qwen-Taobao agentic shopping coverage](/news/2026-05-11-alibaba-qwen-taobao-agentic-shopping/), and the tracked [Qwen3.6-35B-A3B news signal](/news/2026-04-16-qwen-3-6-35b-a3b-release/).
 
 ## FAQ
 
@@ -217,6 +241,9 @@ Partly. The official Qwen3 open-weight line ships under Apache 2.0 on Hugging Fa
 
 **What is the main Qwen3 open-weight release?**
 The official Qwen3 release includes two MoE models, Qwen3-235B-A22B and Qwen3-30B-A3B, plus six dense models from 0.6B through 32B. Qwen says the line supports hybrid thinking modes, 119 languages and dialects, and agentic/coding improvements.
+
+**What is the latest Qwen model?**
+As of this refresh on May 24, 2026, the latest official hosted flagship text model AiPedia found is Qwen3.7-Max / `qwen3.7-max-2026-05-20` on Qwen Cloud. The latest official specialty release in the Qwen Cloud changelog is `qwen3.5-livetranslate-flash-realtime-2026-05-19` for real-time translation. Neither changes the buyer-facing fact that the main open-weight line is still Qwen3.
 
 **How does Qwen3 compare to Claude?**
 Qwen is more compelling when you need open weights and self-hosting. Claude is usually stronger when you want a polished paid assistant or API for English writing, long-document work, and managed enterprise workflows.
@@ -228,6 +255,9 @@ Yes. Official Qwen3 sizes start at 0.6B and scale up to 235B MoE. Practical hard
 
 - [Qwen official site](https://qwen.ai/): Qwen Chat and model-family surface
 - [Qwen3 official blog](https://qwenlm.github.io/blog/qwen3/): architecture, open-weight models, training, 119-language coverage
+- [Qwen Cloud model releases](https://docs.qwencloud.com/changelog/models): Qwen3.7-Max and Qwen3.5 LiveTranslate release dates
+- [Qwen3.7-Max model page](https://www.qwencloud.com/models/qwen3.7-max): model alias, context, built-in tools, and current marketplace pricing display
+- [Qwen Cloud pricing docs](https://docs.qwencloud.com/developer-guides/getting-started/pricing): pay-as-you-go text model pricing, including Qwen3.7-Max list rates
 - [Alibaba Cloud Model Studio pricing](https://www.alibabacloud.com/help/en/model-studio/model-pricing): current hosted rates
 - [Hugging Face Qwen](https://huggingface.co/Qwen): open-weight model downloads
 
