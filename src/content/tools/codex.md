@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "Bundled with ChatGPT Plus ($20/mo) through Pro 20x ($200/mo)"
 status: active
 launched: 2025-05
-last_updated: 2026-05-22
-last_verified: 2026-05-22
+last_updated: 2026-05-23
+last_verified: 2026-05-23
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -94,6 +94,13 @@ not_best_for:
 quick_answer: >-
   Codex is OpenAI's agentic coding product. Works async in the cloud or locally via CLI and Codex Desktop. Best for fire-and-forget tasks, multi-file refactors, and teams already inside the OpenAI ecosystem. Bundled with ChatGPT Plus and up; Pro tiers get 5-20x Codex usage. Skip it if you need a Linux desktop GUI or want the tightest IDE daily driver (Cursor) or tightest terminal agent (Claude Code).
 price_history:
+  - date: 2026-05-22
+    plan: "Gartner enterprise coding-agent recognition"
+    price: "No public price change"
+    source: "/news/2026-05-22-openai-codex-gartner-enterprise-coding-agent-leader/"
+    source_label: "AIpedia coverage"
+    source_id: aipedia-news
+    note: "OpenAI said Codex was named a Leader in Gartner's 2026 Magic Quadrant for Enterprise AI Coding Agents and cited more than 4 million weekly users."
   - date: 2026-05-14
     plan: "ChatGPT mobile preview"
     price: "Bundled with ChatGPT plans"
@@ -153,6 +160,7 @@ Bundled with every paid ChatGPT tier. Pro tiers get 5x to 20x the Codex usage of
 
 ## Recent developments (March-May 2026)
 
+- **May 22, 2026:** [OpenAI said Codex was named a Leader in Gartner's enterprise coding-agent report](/news/2026-05-22-openai-codex-gartner-enterprise-coding-agent-leader/). The procurement signal is that Codex is being evaluated around governance, sandboxing, approval gates, RBAC, policy controls, and deployment surfaces, not just code-generation quality.
 - **May 21, 2026:** [OpenAI added AppShots, Goal Mode, locked computer use, and browser improvements to Codex](/news/2026-05-21-openai-codex-appshots-goal-mode-locked-computer-use/). Ramp's Codex case study adds a real engineering-team proof point for using Codex as a code-review and internal-agent layer.
 - **May 20, 2026:** [OpenAI IPO reporting, Anthropic profit forecasts, and SpaceX compute costs made frontier AI economics more visible](/news/2026-05-20-openai-anthropic-spacex-frontier-ai-capital-pressure/). For Codex buyers, the practical takeaway is to track rate limits, capacity, and model-routing changes alongside raw coding quality.
 - **May 19, 2026:** [OpenAI added C2PA conformance, SynthID watermarking, and a public verification-tool preview for images generated through ChatGPT, Codex, and the API](/news/2026-05-19-openai-google-synthid-c2pa-image-provenance/). This matters for Codex because generated images and visual assets now need provenance checks, not just model-quality review.
@@ -206,6 +214,7 @@ Bundled with every paid ChatGPT tier. Pro tiers get 5x to 20x the Codex usage of
 | | |
 |---|---|
 | **Default model** | GPT-5.5 for harder work; GPT-5.3-Codex-Spark for faster routine coding on supported surfaces |
+| **Enterprise signal** | OpenAI says Codex has 4M+ weekly users and was named a Leader in Gartner's 2026 Enterprise AI Coding Agents Magic Quadrant |
 | **Fast model** | GPT-5.3-Codex-Spark (research preview, faster daily-coding) |
 | **Primary surfaces** | Codex Desktop (macOS, Windows rolling) · ChatGPT web · Codex CLI · IDE extensions |
 | **Async cloud execution** | Yes. Sandboxed VM spins up per task; Codex returns a diff or PR |

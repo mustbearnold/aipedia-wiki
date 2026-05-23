@@ -1,6 +1,6 @@
 # AiPedia Page Refresh Ledger
 
-Ledger updated through: 2026-05-22
+Ledger updated through: 2026-05-23
 Tracked public pages and crawl surfaces: 733
 
 Hard rule: every time a tracked website page is edited, refreshed, materially re-ranked, or has volatile facts re-verified, update that page row in this file on the same change. If a child page update affects a parent hub, archive, internal-link block, sitemap, or LLM surface, update those affected rows too.
@@ -459,7 +459,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /tools/codeium/ | Tool | Yes | frontmatter | src/content/tools/codeium.md |
 | 2026-05-13 | /tools/coderabbit/ | Tool | Yes | frontmatter | src/content/tools/coderabbit.md |
 | 2026-05-13 | /tools/cody/ | Tool | Yes | frontmatter | src/content/tools/cody.md |
-| 2026-05-13 | /tools/cohere/ | Tool | Yes | frontmatter | src/content/tools/cohere.md |
 | 2026-05-13 | /tools/comet/ | Tool | Yes | frontmatter | src/content/tools/comet.md |
 | 2026-05-13 | /tools/connected-papers/ | Tool | Yes | frontmatter | src/content/tools/connected-papers.md |
 | 2026-05-13 | /tools/consensus/ | Tool | Yes | frontmatter | src/content/tools/consensus.md |
@@ -702,7 +701,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-15 | /guides/best-ai-landing-page-builder-for-ab-testing/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-landing-page-builder-for-ab-testing.md |
 | 2026-05-15 | /sitemap-index.xml | Crawl surface | No | git | astro.config.mjs |
 | 2026-05-15 | /tools/openclaw/ | Tool | Yes | frontmatter | src/content/tools/openclaw.md |
-| 2026-05-15 | /tools/runway/ | Tool | Yes | frontmatter | src/content/tools/runway.md |
 | 2026-05-17 | / | Static page | Yes | git | src/pages/index.astro |
 | 2026-05-17 | /answers/ | Static page | Yes | git | src/pages/answers/index.astro |
 | 2026-05-17 | /answers/best-ai-for-students/ | Static page | Yes | page metadata | src/pages/answers/best-ai-for-students.astro |
@@ -734,13 +732,15 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-20 | /tools/gpt-image-2/ | Tool | Yes | frontmatter | src/content/tools/gpt-image-2.md |
 | 2026-05-20 | /tools/imagen/ | Tool | Yes | frontmatter | src/content/tools/imagen.md |
 | 2026-05-20 | /tools/veo/ | Tool | Yes | frontmatter | src/content/tools/veo.md |
-| 2026-05-22 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
-| 2026-05-22 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
-| 2026-05-22 | /news/ | Static page | Yes | working tree | src/pages/news/index.astro |
-| 2026-05-22 | /news/rss.xml | Crawl surface | No | working tree | src/pages/news/rss.xml.ts |
-| 2026-05-22 | /tools/chatgpt/ | Tool | Yes | working tree | src/content/tools/chatgpt.md |
-| 2026-05-22 | /tools/claude-code/ | Tool | Yes | working tree | src/content/tools/claude-code.md |
-| 2026-05-22 | /tools/claude/ | Tool | Yes | working tree | src/content/tools/claude.md |
-| 2026-05-22 | /tools/codex/ | Tool | Yes | working tree | src/content/tools/codex.md |
-| 2026-05-22 | /tools/gemini/ | Tool | Yes | working tree | src/content/tools/gemini.md |
-| 2026-05-22 | /tools/github-copilot/ | Tool | Yes | working tree | src/content/tools/github-copilot.md |
+| 2026-05-22 | /llms-full.txt | Crawl surface | No | git | src/pages/llms-full.txt.ts |
+| 2026-05-22 | /llms.txt | Crawl surface | No | git | src/pages/llms.txt.ts |
+| 2026-05-22 | /news/ | Static page | Yes | page metadata | src/pages/news/index.astro |
+| 2026-05-22 | /news/rss.xml | Crawl surface | No | git | src/pages/news/rss.xml.ts |
+| 2026-05-22 | /tools/chatgpt/ | Tool | Yes | frontmatter | src/content/tools/chatgpt.md |
+| 2026-05-22 | /tools/claude-code/ | Tool | Yes | frontmatter | src/content/tools/claude-code.md |
+| 2026-05-22 | /tools/gemini/ | Tool | Yes | frontmatter | src/content/tools/gemini.md |
+| 2026-05-22 | /tools/github-copilot/ | Tool | Yes | frontmatter | src/content/tools/github-copilot.md |
+| 2026-05-23 | /tools/claude/ | Tool | Yes | working tree | src/content/tools/claude.md |
+| 2026-05-23 | /tools/codex/ | Tool | Yes | working tree | src/content/tools/codex.md |
+| 2026-05-23 | /tools/cohere/ | Tool | Yes | working tree | src/content/tools/cohere.md |
+| 2026-05-23 | /tools/runway/ | Tool | Yes | working tree | src/content/tools/runway.md |

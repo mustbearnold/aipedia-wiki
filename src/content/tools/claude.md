@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2023-03
-last_updated: 2026-05-22
-last_verified: 2026-05-22
+last_updated: 2026-05-23
+last_verified: 2026-05-23
 update_frequency: monthly
 seo_title: "Claude: Features, Pricing & Review (2026)"
 meta_description: "Claude runs Opus 4.7 as flagship with 1M context, Claude Code, Claude Design, Claude Cowork, and new May 2026 Small Business workflows. Agent SDK and claude -p move to separate credits June 15."
@@ -255,6 +255,7 @@ Anthropic's AI assistant. **Opus 4.7** is the flagship as of **April 16, 2026**,
 
 ## Recent developments
 
+- **May 22:** [Anthropic said Project Glasswing found 10,000+ high or critical vulnerabilities with Mythos Preview](/news/2026-05-22-anthropic-glasswing-mythos-vulnerability-results/). The buyer signal is that Claude's restricted cyber frontier is now shaping patch triage, disclosure capacity, and policy debate, not just benchmark charts.
 - **May 21:** [Claude added 28 compliance integrations while Opus security partners showed live cyber-defense use cases](/news/2026-05-21-claude-compliance-api-opus-cybersecurity-partners/). The buyer signal is that Claude's enterprise moat is shifting toward governed deployment, auditability, and specialist security channels.
 - **May 20:** [OpenAI IPO reporting, Anthropic profit forecasts, and SpaceX compute costs made frontier AI economics more visible](/news/2026-05-20-openai-anthropic-spacex-frontier-ai-capital-pressure/). Claude buyers should track capacity, limits, and compute-contract exposure alongside model quality.
 - **May 19:** [Claude Managed Agents added self-hosted sandboxes and MCP tunnels](/news/2026-05-19-claude-managed-agents-self-hosted-sandboxes-mcp-tunnels/). Enterprises can keep agent tool execution, files, packages, and private MCP servers inside customer-controlled infrastructure while Anthropic continues to run the agent loop.

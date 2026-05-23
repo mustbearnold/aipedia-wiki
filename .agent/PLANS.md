@@ -218,6 +218,85 @@ Search results may include stale, syndicated, or future-dated content; prefer of
 ### 14. Progress log
 
 2026-05-18: Plan created. Local baseline shows latest news article on May 15, 2026. Starting current-source verification for May 16-18 stories.
+
+---
+
+## ExecPlan: May 21-23 2026 News Catch-up
+
+### 1. Objective
+
+Publish source-backed, decision-oriented AiPedia news coverage for AI and AI-tool developments found after the latest local May 21 news pass, plus one high-impact missed May 20 model release. This supports editorial freshness, trust, organic rankings, data quality, and buyer decision support.
+
+### 2. Current state
+
+`src/content/news/` contains news through May 21, 2026. The latest local news item is `2026-05-21-openai-codex-appshots-goal-mode-locked-computer-use.md`. The `/news/` archive at `src/pages/news/index.astro` sorts content collection entries by date, and `src/pages/news/[slug].astro` renders article pages with source blocks, impact boxes, related tool strips, and OG images. `scripts/audit-news-xrefs.mjs` requires every recent news item with `affects: [...]` to be referenced from each affected tool page.
+
+### 3. Target state
+
+AiPedia has fresh standalone articles for the verified high-signal stories: Anthropic Project Glasswing's initial Mythos results, OpenAI Codex's Gartner enterprise-coding-agent recognition, Runway Aleph 2.0 and Edit Studio, Cohere Command A+, Starbucks retiring its AI inventory-counting tool, and the pulled White House frontier-model review order. A May 23 desk roundup summarizes the pass and routes readers to the new coverage. Affected tool pages include current cross-links and concise buyer context.
+
+### 4. Scope
+
+Included: new files under `src/content/news/`, updates to affected tool pages, `/news/` archive freshness through generated content, OG news asset generation, `PAGE_REFRESH_LEDGER.md`, and verification checks.
+
+Excluded: new tool records, logo work, affiliate changes, pricing-table rewrites beyond touched tool-page context, and unverified social-only rumors.
+
+Affected top-layer pages and crawl surfaces: `/news/`, affected tool pages for Claude, Codex, Runway, and Cohere, generated sitemap/RSS/llms surfaces, and `PAGE_REFRESH_LEDGER.md`.
+
+### 5. Files likely affected
+
+`src/content/news/2026-05-20-cohere-command-a-plus-open-source-enterprise-model.md`, `src/content/news/2026-05-21-runway-aleph-20-edit-studio.md`, `src/content/news/2026-05-21-starbucks-ai-inventory-tool-retired.md`, `src/content/news/2026-05-22-anthropic-glasswing-mythos-vulnerability-results.md`, `src/content/news/2026-05-22-openai-codex-gartner-enterprise-coding-agent-leader.md`, `src/content/news/2026-05-22-trump-ai-executive-order-frontier-model-review-pulled.md`, `src/content/news/2026-05-23-ai-news-desk.md`, `src/content/tools/claude.md`, `src/content/tools/codex.md`, `src/content/tools/cohere.md`, `src/content/tools/runway.md`, generated `public/og/news/*`, `PAGE_REFRESH_LEDGER.md`, and this plan.
+
+### 6. Data model impact
+
+No schema changes. New news records must conform to the existing `news` collection frontmatter, use exact source URLs, include `last_verified: 2026-05-23`, and set `affects` only where tool-page cascade work is completed.
+
+### 7. SEO impact
+
+New indexable news article pages receive unique titles, summaries, canonical URLs from the existing route, dates, source citations, and internal links to relevant tool/category pages. The roundup improves internal linking and recency signals for `/news/`.
+
+### 8. Conversion impact
+
+No affiliate CTA changes. Articles should guide buyers toward relevant tool pages and procurement questions without overstating vendor claims.
+
+### 9. Mobile UX impact
+
+News articles reuse the existing ArticlePlusLayout and mobile-first cards. Verify representative pages through build output; browser QA is optional unless layout or template code changes occur.
+
+### 10. Implementation steps
+
+1. Confirm local baseline and duplicate coverage.
+2. Verify candidate stories with current May 2026 source searches.
+3. Add standalone news articles with source-backed buyer analysis.
+4. Add a May 23 desk roundup linking the new coverage.
+5. Update affected tool pages so `audit-news-xrefs` passes.
+6. Regenerate page ledger and OG news assets.
+7. Run news/link/content/build checks and document any failures.
+
+### 11. Verification commands
+
+`node scripts/generate-og-news.mjs`, `npm run ledger:pages`, `npm run check:news`, `npm run check:links`, `npm run guard:check`, `npm test`, `npm run build:fast`, and `npm run check:security`.
+
+### 12. Acceptance criteria
+
+Each new article has current source URLs, accurate dates, unique titles/summaries, buyer-oriented analysis, and no unsupported claims. Affected tool pages reference each news slug declared in `affects`. `/news/` sorts the new May 23 desk roundup first. Generated ledger and OG assets reflect the refresh. Verification commands pass or failures are documented as unrelated.
+
+### 13. Risks and mitigations
+
+Search results may include stale, syndicated, speculative, or social-only claims; prefer official vendor posts, primary docs/changelogs, and named reporting. Vendor posts can be promotional; frame claims as vendor claims unless independently corroborated. Avoid broad price rewrites unless current pricing is reverified.
+
+### 14. Progress log
+
+2026-05-23: Plan created. Local baseline shows news through May 21, 2026. Verified source candidates include Anthropic Project Glasswing initial update, Runway Aleph 2.0/Edit Studio, Cohere Command A+, OpenAI Codex Gartner recognition, Reuters/Starbucks/NomadGo Automated Counting context, and the pulled White House frontier-model review order.
+2026-05-23: Added seven source-backed news records, refreshed Claude/Codex/Cohere/Runway tool-page cross-links and verification dates, generated only the new article OG asset sets, regenerated `PAGE_REFRESH_LEDGER.md`, and completed content/build/mobile validation. Restored unrelated tracked OG churn after the generator rewrote older assets.
+
+### 15. Final report
+
+Completed on 2026-05-23.
+
+Published seven source-backed AiPedia news articles covering Cohere Command A+, Runway Aleph 2.0 and Edit Studio, Starbucks retiring its Automated Counting AI inventory tool, Anthropic Project Glasswing/Mythos vulnerability results, OpenAI Codex Gartner enterprise-coding-agent recognition, the delayed White House frontier-model review order, and a May 23 AI News Desk roundup. Refreshed affected surfaces: `/tools/claude/`, `/tools/codex/`, `/tools/cohere/`, `/tools/runway/`, generated OG news assets, and `PAGE_REFRESH_LEDGER.md`.
+
+Verification passed: `npm run check:news`, `npm run check:links`, `npm run guard:check`, `npm test`, `npm run build:fast`, `git diff --check`, and browser mobile overflow/OG-thumbnail QA across `/news/`, all seven new articles, and four affected tool pages at 360, 390, 430, 768, and 1024 px. `npm run check:security` failed on an existing moderate `ws` advisory inherited through Cloudflare/Vite/Wrangler dependencies; no infrastructure dependency update was made during this editorial refresh.
 2026-05-18: Added four non-duplicate news articles covering OpenAI product strategy, arXiv AI-generated submission enforcement, Apple's reported Siri revamp direction, and Nectar Social's Series A. Updated ChatGPT and Codex recent-change cross-links, refreshed news/RSS/llms surfaces, regenerated `PAGE_REFRESH_LEDGER.md`, and completed content/build/mobile checks.
 2026-05-18: Added generated news artwork for all four new articles: canonical dark OG PNG, light-mode OG PNG, dark on-page WebP thumbnail, and light-mode on-page WebP thumbnail. Used the existing `scripts/generate-og-news.mjs` visual system and restored older tracked OG files so only the new article assets remain in scope.
 

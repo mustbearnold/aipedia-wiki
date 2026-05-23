@@ -2,7 +2,7 @@
 type: tool
 slug: cohere
 title: Cohere
-tagline: Enterprise-first LLM platform. Command A is the agentic flagship; Embed v4 and Rerank 4 power the strongest dedicated RAG stack in the industry.
+tagline: Enterprise-first LLM platform. Command A+ is the Apache 2.0 agentic flagship; Embed v4 and Rerank 4 power one of the strongest dedicated RAG stacks in the industry.
 category: ai-chatbots
 secondary_categories: [ai-search]
 company: cohere
@@ -11,11 +11,11 @@ pricing_model: freemium
 price_range: "$0-$10/1M tokens"
 status: active
 launched: 2019-06
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-05-23
+last_verified: 2026-05-23
 update_frequency: monthly
 seo_title: "Cohere: Features, Pricing & Review (May 2026)"
-meta_description: "Cohere's Command A (256K context) is the agentic flagship; Command R+ runs at $2.50/$10 per 1M tokens. North workspace and Model Vault ship private deployment. Enterprise-first LLM platform built around RAG, Rerank, and Aya multilingual."
+meta_description: "Cohere's Command A+ is a 218B sparse MoE Apache 2.0 model for enterprise agents, with 128K input context, 64K generation, vision, tool use, and 48 languages. Cohere still wins mainly on RAG, Rerank, and private deployment."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -50,12 +50,11 @@ facts:
     confidence: high
     next_review_at: '2026-08-04'
   model_control:
-    value: Command models are Cohere’s enterprise LLM family, and model choice should be validated against the target language,
-      retrieval, tool-use, and latency requirements.
-    source: https://cohere.com/command
-    source_label: Cohere Command models
+    value: Command A+ is Cohere's 218B sparse MoE flagship for reasoning, multimodal document work, tool use, and agentic tasks; model choice should still be validated against the target language, retrieval, tool-use, latency, and deployment requirements.
+    source: https://cohere.com/blog/command-a-plus
+    source_label: Cohere Command A+ announcement
     source_id: cohere-command
-    verified_at: '2026-05-13'
+    verified_at: '2026-05-23'
     volatility: high
     confidence: high
     next_review_at: '2026-08-04'
@@ -91,8 +90,15 @@ not_best_for:
   - peak reasoning vs Claude Opus 4.7
   - broad plugin or custom-agent marketplaces
 quick_answer: >-
-  Cohere is the enterprise-first LLM platform. Pick it for production RAG, multilingual retrieval, or private VPC deployment where data sovereignty outranks frontier reasoning. Skip it for consumer chat, image generation, or solo-dev use where [ChatGPT](/tools/chatgpt/) and [Claude](/tools/claude/) dominate.
+  Cohere is the enterprise-first LLM platform. Pick it for production RAG, multilingual retrieval, private deployment, or Command A+ open-model evaluations where data sovereignty and control outrank consumer-chat polish. Skip it for image/video generation or solo-dev use where [ChatGPT](/tools/chatgpt/) and [Claude](/tools/claude/) dominate.
 price_history:
+  - date: 2026-05-20
+    plan: "Command A+"
+    price: "Apache 2.0 model release; API and private deployment available"
+    source: "/news/2026-05-20-cohere-command-a-plus-open-source-enterprise-model/"
+    source_label: "AIpedia coverage"
+    source_id: aipedia-news
+    note: "Cohere released Command A+ as a 218B sparse MoE with 25B active parameters, 128K input context, 64K max generation, vision input, tool use, reasoning, and 48-language support."
   - date: 2025-03-01
     plan: "Command A"
     price: "Launched"
@@ -125,19 +131,19 @@ price_history:
 
 # Cohere
 
-Enterprise-first LLM platform. **Command A** (256K context, released March 2025) is the agentic and multilingual flagship. **Command R+** handles production RAG workloads at $2.50 input / $10 output per million tokens. **Command R7B** runs locally for edge cases. **Embed v4** and **Rerank 4** power the strongest dedicated retrieval stack in the industry.
+Enterprise-first LLM platform. **Command A+** (released May 20, 2026) is now the agentic flagship: a 218B-parameter sparse MoE with 25B active parameters, 128K input context, 64K max generation, vision input, reasoning, tool use, and 48-language support under Apache 2.0. **Command R+** handles production RAG workloads at $2.50 input / $10 output per million tokens. **Command R7B** runs locally for edge cases. **Embed v4** and **Rerank 4** power one of the strongest dedicated retrieval stacks in the industry.
 
 No consumer chat app. No image or video generation. Cohere sells to enterprise buyers: regulated industries, multilingual organizations, and teams that need private VPC, on-prem, or sovereign deployment. The reported Aleph Alpha combination turns that sovereignty angle from a side note into one of the main reasons to consider Cohere in Europe.
 
 On April 24, 2026, TechCrunch reported that Cohere is moving to acquire or merge with German AI startup Aleph Alpha. The reported deal does not change public API pricing, but it strengthens Cohere's European enterprise and sovereign-AI narrative.
 
-Related coverage: [AI Industry Roundup, April 24](/news/2026-04-24-ai-industry-roundup/) and [AI News Desk, April 25](/news/2026-04-25-ai-news-catchup/) both tracked the Cohere-Aleph Alpha report as a sovereignty and enterprise-positioning signal.
+Related coverage: [Cohere releases Command A+ as an Apache 2.0 enterprise agent model](/news/2026-05-20-cohere-command-a-plus-open-source-enterprise-model/), [AI Industry Roundup, April 24](/news/2026-04-24-ai-industry-roundup/), and [AI News Desk, April 25](/news/2026-04-25-ai-news-catchup/).
 
 ## System Verdict
 
-> **Pick Cohere if you build production RAG, need multilingual retrieval, or require a VPC / on-prem / sovereign deployment your compliance team will approve.** Embed v4 and Rerank 4 are the best dedicated retrieval models shipping. Command A's 256K context and North workspace let you stand up agentic workflows inside a SOC 2 perimeter. Model Vault runs the stack on isolated infrastructure, and the reported Aleph Alpha move strengthens Cohere's European enterprise story.
+> **Pick Cohere if you build production RAG, need multilingual retrieval, or require a VPC / on-prem / sovereign deployment your compliance team will approve.** Embed v4 and Rerank 4 are the best dedicated retrieval models shipping. Command A+ adds an Apache 2.0 flagship lane for agentic workflows, while North and Model Vault support governed enterprise deployment. Model Vault runs the stack on isolated infrastructure, and the reported Aleph Alpha move strengthens Cohere's European enterprise story.
 >
-> **Skip it if you want a consumer chat app, image or video generation, or a broad plugin ecosystem.** Cohere has no consumer UI competitive with [ChatGPT](/tools/chatgpt/) or [Claude](/tools/claude/). No image gen, no video. Smaller developer community than OpenAI or Anthropic. Command A trails [Claude Opus 4.7](/tools/claude/) and [ChatGPT](/tools/chatgpt/) on peak reasoning benchmarks.
+> **Skip it if you want a consumer chat app, image or video generation, or a broad plugin ecosystem.** Cohere has no consumer UI competitive with [ChatGPT](/tools/chatgpt/) or [Claude](/tools/claude/). No image gen, no video. Smaller developer community than OpenAI or Anthropic. Command A+ still needs workload-specific testing against Claude Opus 4.7 and ChatGPT on peak reasoning tasks.
 >
 > **Who pays which tier:** Trial API key free for prototyping, Production API pay-as-you-go for most teams, Enterprise custom pricing for bulk workloads or private deployment, Model Vault dedicated instances ($2,500-$3,250/mo) for teams who need Embed or Rerank running on isolated hardware.
 
@@ -145,12 +151,12 @@ Related coverage: [AI Industry Roundup, April 24](/news/2026-04-24-ai-industry-r
 
 | | |
 |---|---|
-| **Flagship model** | Command A (command-a-03-2025) · 256K context · agentic + multilingual |
+| **Flagship model** | Command A+ (command-a-plus-05-2026) · 218B sparse MoE · 25B active · Apache 2.0 · 128K input / 64K output |
 | **Production RAG model** | Command R+ (command-r-plus-08-2024) · 128K context |
 | **Lightweight model** | Command R7B (command-r7b-12-2024) · 7B params · 128K context |
 | **Embedding model** | Embed v4 · multimodal · 256/512/1024/1536 dims · 100+ languages |
 | **Reranker** | Rerank 4 (Fast + Pro variants) · 32K context · 100+ languages |
-| **Open-weight multilingual** | Tiny Aya (3.35B params) · 70+ languages · February 2026 |
+| **Open models** | Command A+ under Apache 2.0; Tiny Aya (3.35B params) supports 70+ languages |
 | **Speech-to-text** | Cohere Transcribe (transcribe-03-2026) · 14 languages · open-weights, edge-deployable |
 | **Enterprise agent platform** | North (GA since early 2025) · private deployment via Model Vault |
 | **Private deployment** | Model Vault (September 2025) · VPC + on-prem · isolated inference |
@@ -163,6 +169,7 @@ Every data point above was verified against vendor sources and the May 13, 2026 
 
 ## Recent changes
 
+- **May 20, 2026:** [Cohere released Command A+](/news/2026-05-20-cohere-command-a-plus-open-source-enterprise-model/), a 218B sparse MoE open under Apache 2.0 with 25B active parameters, 128K input context, 64K max generation, vision input, tool use, reasoning, and 48-language support. This materially strengthens Cohere's sovereign/open enterprise model story.
 - **May 2026:** Cohere Transcribe (transcribe-03-2026) listed as a new enterprise speech-to-text model, 14 languages, open-weights and edge-deployable, available via Hugging Face and the Cohere API. Adds an audio-input rail to the existing Command + Embed + Rerank stack.
 - **April 24, 2026:** TechCrunch reported the planned Cohere-Aleph Alpha combination. Still a sovereignty and enterprise-positioning story rather than a price or feature change.
 - **April-May 2026:** Pricing page unchanged for Command R+ ($2.50/$10 per 1M tok) and Command R ($0.50/$1.50). Model Vault tiers verified at $2,500-$3,250/mo for Embed v4 and Rerank 3.5 / 4 medium instances; Rerank 4 Pro now also lists a Large dedicated tier at $10/hr or $6,500/mo.
@@ -171,7 +178,7 @@ Every data point above was verified against vendor sources and the May 13, 2026 
 
 One enterprise LLM platform covering generation (Command family), retrieval (Embed v4), ranking (Rerank 4), and a private agent workspace (North). Cohere does not ship a consumer chat app. Buyers are compliance-aware enterprises, not solo developers or retail users.
 
-Command A is the agentic flagship: 256K context window, strong tool use, best-in-class multilingual performance across 100+ languages. Command R+ remains the production RAG workhorse at a lower price point. Command R7B runs on modest hardware for on-device or edge inference.
+Command A+ is the agentic flagship: 128K input context, 64K max generation, sparse MoE architecture, vision input, tool use, reasoning, and 48-language support under Apache 2.0. Command R+ remains the production RAG workhorse at a lower price point. Command R7B runs on modest hardware for on-device or edge inference.
 
 The retrieval stack is the real moat. Embed v4 ships as a multimodal embedding model with Matryoshka dimensions (256, 512, 1024, 1536) across 100+ languages. Rerank 4 extends context to 32K tokens and leads public benchmarks on cross-lingual retrieval. No OpenAI or Anthropic product matches Cohere's dedicated retrieval stack; the Aleph Alpha report adds a second moat around European enterprise relationships and sovereign-AI deployment credibility.
 
@@ -182,7 +189,7 @@ Tiny Aya, released by Cohere Labs in February 2026, ships 3.35B-parameter open-w
 ## When to pick Cohere
 
 - **You build production RAG and retrieval accuracy is the bottleneck.** Embed v4 and Rerank 4 outperform OpenAI embeddings on cross-lingual and long-document retrieval benchmarks.
-- **You operate in 10+ languages.** Command A and Aya are trained explicitly for multilingual use; non-English performance tops GPT and Claude on published evaluations.
+- **You operate in many languages.** Command A+ supports 48 languages, while Aya remains Cohere's open multilingual research lane.
 - **You need VPC, on-prem, or sovereign-cloud deployment.** Model Vault puts the full Command + Embed + Rerank stack inside your infrastructure. Data never crosses Cohere's network.
 - **You sell into Europe or regulated markets.** The reported Aleph Alpha combination gives Cohere a stronger European enterprise and sovereign-AI story.
 - **You build enterprise agents on internal data.** North gives HR, finance, customer support, and IT teams a workspace for deploying Cohere-powered agents against proprietary documents.
@@ -193,7 +200,7 @@ Tiny Aya, released by Cohere Labs in February 2026, ships 3.35B-parameter open-w
 - **Consumer chat or image gen:** [ChatGPT](/tools/chatgpt/). Largest ecosystem, GPT Image 2, Codex agent, custom-GPT marketplace.
 - **Peak reasoning or agentic coding:** [Claude](/tools/claude/). Opus 4.7 leads on long-form reasoning, document coherence, and Claude Code CLI.
 - **Google Workspace integration:** [Gemini](/tools/gemini/). Native Docs, Sheets, Gmail hooks Cohere cannot match.
-- **Open-weight self-hosting with permissive license:** [Llama](/tools/llama/) or [DeepSeek](/tools/deepseek/). Cohere's Command weights are not open; only Aya ships free.
+- **Open-weight self-hosting outside Cohere's stack:** [Llama](/tools/llama/), [DeepSeek](/tools/deepseek/), or [Mistral AI](/tools/mistral-ai/). Command A+ is now Apache 2.0, but teams should still compare inference cost, ecosystem support, and deployment maturity.
 - **Solo dev or hobbyist use:** [ChatGPT](/tools/chatgpt/) Plus or [Claude](/tools/claude/) Pro at $20/mo. Cohere has no consumer subscription.
 
 ## Pricing
@@ -222,13 +229,13 @@ Model Vault dedicated instances (for isolated VPC or on-prem inference):
 | Rerank 4 Pro | Medium | $5.00 | $3,250 |
 | Rerank 4 Pro | Large | $10.00 | $6,500 |
 
-Command A pricing is not listed on the public page; contact sales for rates. Enterprise pricing on Command R+ drops input to $1 and output to $3 per 1M tokens, a roughly 60-70% discount from list. Prices verified 2026-05-13 via [Cohere pricing](https://cohere.com/pricing) and [Cohere pricing docs](https://docs.cohere.com/docs/how-does-cohere-pricing-work).
+Command A+ managed pricing is not listed on the public pricing page; contact sales or check the API dashboard for current rates. Enterprise pricing on Command R+ drops input to $1 and output to $3 per 1M tokens, a roughly 60-70% discount from list. Public pricing rows last verified 2026-05-13 via [Cohere pricing](https://cohere.com/pricing) and [Cohere pricing docs](https://docs.cohere.com/docs/how-does-cohere-pricing-work); the Command A+ release itself was verified 2026-05-23.
 
 ## Against the alternatives
 
-| | Cohere (Command A + Embed v4) | OpenAI Enterprise | Anthropic Enterprise |
+| | Cohere (Command A+ + Embed v4) | OpenAI Enterprise | Anthropic Enterprise |
 |---|---|---|---|
-| **Context window** | 256K (Command A) | Undisclosed (GPT-5) | 1M (Opus / Sonnet) |
+| **Context window** | 128K input / 64K output (Command A+) | Undisclosed (GPT-5) | 1M (Opus / Sonnet) |
 | **Private deployment** | Model Vault · VPC · on-prem | Azure OpenAI VPC | AWS Bedrock VPC |
 | **Dedicated retrieval stack** | Embed v4 + Rerank 4 (strongest) | OpenAI embeddings (basic) | None (use third-party) |
 | **Multilingual** | 100+ languages (best-in-class) | Strong | Strong |
@@ -240,10 +247,10 @@ Command A pricing is not listed on the public page; contact sales for rates. Ent
 ## Failure modes
 
 - **No consumer chat app.** Cohere does not publish a user-facing assistant. Teams evaluating for solo use should look elsewhere.
-- **Command weights are closed.** Only Aya ships open under a permissive license. Teams wanting self-hosted frontier weights should pick [Llama](/tools/llama/) or [Mistral AI](/tools/mistral-ai/).
-- **Peak reasoning trails closed frontier.** Command A is strong on retrieval and tool use but trails Claude Opus 4.7 and OpenAI frontier models on third-party reasoning benchmarks.
+- **Open model does not remove deployment work.** Command A+ is Apache 2.0, but teams still need inference infrastructure, evals, monitoring, and support.
+- **Peak reasoning needs testing.** Command A+ is positioned for enterprise agents and RAG-heavy work, but buyers should benchmark it against Claude Opus 4.7 and OpenAI frontier models on their own hardest tasks.
 - **Developer ecosystem is smaller.** Fewer SDKs, fewer community integrations, and a narrower tutorial corpus than OpenAI or Anthropic.
-- **Pricing opacity on Command A.** Public pricing page lists Command R and R+ only. Command A requires sales contact, which slows prototyping.
+- **Pricing opacity on Command A+.** Public pricing page lists Command R and R+ rows more clearly than Command A+ managed usage. Confirm rates before projecting production cost.
 - **Model Vault pricing is per-instance, not per-token.** $2,500-$3,250/mo per model per tier. Economical only for workloads that justify dedicated infrastructure.
 - **No image or video output.** Workflows needing multimodal generation need a second tool alongside Cohere.
 - **Region and residency caveats.** Availability of Model Vault in specific sovereign clouds depends on partner contracts; confirm your target region before signing. The reported Aleph Alpha deal could improve the Europe story, but buyers still need written deployment terms.
@@ -258,7 +265,7 @@ This page was produced by the aipedia.wiki editorial pipeline, an automated syst
 Yes for prototyping. Trial API keys are free and rate-limited. Production API keys are pay-as-you-go starting at $0.30 per million input tokens for Command Light and $2.50 for Command R+. Enterprise discounts bring R+ down to $1 input / $3 output per million tokens.
 
 **What is the current Cohere flagship?**
-Command A (command-a-03-2025), released March 2025, with a 256K token context window, strong tool use, and best-in-class multilingual performance across 100+ languages. Command R+ remains the production RAG workhorse at a lower price point.
+Command A+ (`command-a-plus-05-2026`), released May 20, 2026. It is a 218B sparse MoE with 25B active parameters, 128K input context, 64K max generation, vision input, reasoning, tool use, 48-language support, and an Apache 2.0 license. Command R+ remains the production RAG workhorse at a lower price point.
 
 **Does Cohere have a consumer chat app?**
 No. Cohere sells to enterprise buyers and does not ship a consumer-facing assistant competitive with [ChatGPT](/tools/chatgpt/) or [Claude](/tools/claude/). North is an enterprise agent workspace, not a consumer chat product.
@@ -272,10 +279,10 @@ Cohere's dedicated retrieval stack (Embed v4 + Rerank 4) outperforms OpenAI embe
 ## Sources
 
 - [Cohere pricing](https://cohere.com/pricing): Production API rates and Model Vault pricing
-- [Cohere models docs](https://docs.cohere.com/docs/models): Command A, R+, R, R7B specifications
+- [Cohere release notes](https://docs.cohere.com/changelog): Command A+, Command R+, R, R7B, Embed, Rerank, and Transcribe updates
 - [Cohere release notes](https://docs.cohere.com/changelog): Embed v4, Rerank 4, North, Model Vault launch dates
 - [Cohere Embed v4 page](https://cohere.com/embed): Multimodal embedding model specifications
-- [Cohere Command page](https://cohere.com/command): Command A agentic features and benchmarks
+- [Cohere Command A+ announcement](https://cohere.com/blog/command-a-plus): Apache 2.0 Command A+ release and model details
 - [Cohere Transcribe page](https://cohere.com/transcribe): New 03-2026 enterprise speech-to-text model
 - [Cohere pricing docs](https://docs.cohere.com/docs/how-does-cohere-pricing-work): Token counting and billing mechanics
 - [Cohere-Aleph Alpha deal coverage](/news/2026-04-24-cohere-aleph-alpha/): Reported enterprise-AI consolidation
