@@ -42,18 +42,11 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /404/ | Static page | No | git | src/pages/404.astro |
 | 2026-05-13 | /about/ | Static page | Yes | git | src/pages/about/index.astro |
 | 2026-05-13 | /about/scoring/ | Static page | Yes | git | src/pages/about/scoring.astro |
-| 2026-05-13 | /categories/ai-automation/ | Category | Yes | frontmatter | src/content/categories/ai-automation.md |
-| 2026-05-13 | /categories/ai-design/ | Category | Yes | frontmatter | src/content/categories/ai-design.md |
-| 2026-05-13 | /categories/ai-image/ | Category | Yes | frontmatter | src/content/categories/ai-image.md |
 | 2026-05-13 | /categories/ai-infrastructure/ | Category | Yes | frontmatter | src/content/categories/ai-infrastructure.md |
 | 2026-05-13 | /categories/ai-music/ | Category | Yes | frontmatter | src/content/categories/ai-music.md |
-| 2026-05-13 | /categories/ai-notes/ | Category | Yes | frontmatter | src/content/categories/ai-notes.md |
-| 2026-05-13 | /categories/ai-presentation/ | Category | Yes | frontmatter | src/content/categories/ai-presentation.md |
 | 2026-05-13 | /categories/ai-research/ | Category | Yes | frontmatter | src/content/categories/ai-research.md |
 | 2026-05-13 | /categories/ai-search/ | Category | Yes | frontmatter | src/content/categories/ai-search.md |
-| 2026-05-13 | /categories/ai-seo/ | Category | Yes | frontmatter | src/content/categories/ai-seo.md |
 | 2026-05-13 | /categories/ai-voice/ | Category | Yes | frontmatter | src/content/categories/ai-voice.md |
-| 2026-05-13 | /categories/ai-writing/ | Category | Yes | frontmatter | src/content/categories/ai-writing.md |
 | 2026-05-13 | /companies/anthropic/ | Company | Yes | frontmatter | src/content/companies/anthropic.md |
 | 2026-05-13 | /companies/elevenlabs-company/ | Company | Yes | frontmatter | src/content/companies/elevenlabs-company.md |
 | 2026-05-13 | /compare/adobe-firefly-vs-canva/ | Comparison | Yes | frontmatter | src/content/comparisons/adobe-firefly-vs-canva.md |
@@ -543,7 +536,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /tools/luma/ | Tool | Yes | frontmatter | src/content/tools/luma.md |
 | 2026-05-13 | /tools/magnific/ | Tool | Yes | frontmatter | src/content/tools/magnific.md |
 | 2026-05-13 | /tools/make/ | Tool | Yes | frontmatter | src/content/tools/make.md |
-| 2026-05-13 | /tools/manus/ | Tool | Yes | frontmatter | src/content/tools/manus.md |
 | 2026-05-13 | /tools/marketmuse/ | Tool | Yes | frontmatter | src/content/tools/marketmuse.md |
 | 2026-05-13 | /tools/mastra/ | Tool | Yes | frontmatter | src/content/tools/mastra.md |
 | 2026-05-13 | /tools/meetgeek/ | Tool | Yes | frontmatter | src/content/tools/meetgeek.md |
@@ -561,12 +553,10 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /tools/nanochat/ | Tool | Yes | frontmatter | src/content/tools/nanochat.md |
 | 2026-05-13 | /tools/napkin-ai/ | Tool | Yes | frontmatter | src/content/tools/napkin-ai.md |
 | 2026-05-13 | /tools/neuronwriter/ | Tool | Yes | frontmatter | src/content/tools/neuronwriter.md |
-| 2026-05-13 | /tools/nightcafe/ | Tool | Yes | frontmatter | src/content/tools/nightcafe.md |
 | 2026-05-13 | /tools/notebooklm/ | Tool | Yes | frontmatter | src/content/tools/notebooklm.md |
 | 2026-05-13 | /tools/notion-ai/ | Tool | Yes | frontmatter | src/content/tools/notion-ai.md |
 | 2026-05-13 | /tools/obsidian/ | Tool | Yes | frontmatter | src/content/tools/obsidian.md |
 | 2026-05-13 | /tools/ollama/ | Tool | Yes | frontmatter | src/content/tools/ollama.md |
-| 2026-05-13 | /tools/omniseo/ | Tool | Yes | frontmatter | src/content/tools/omniseo.md |
 | 2026-05-13 | /tools/open-webui/ | Tool | Yes | frontmatter | src/content/tools/open-webui.md |
 | 2026-05-13 | /tools/openhands/ | Tool | Yes | frontmatter | src/content/tools/openhands.md |
 | 2026-05-13 | /tools/openrouter/ | Tool | Yes | frontmatter | src/content/tools/openrouter.md |
@@ -583,13 +573,10 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /tools/playground-ai/ | Tool | Yes | frontmatter | src/content/tools/playground-ai.md |
 | 2026-05-13 | /tools/poe/ | Tool | Yes | frontmatter | src/content/tools/poe.md |
 | 2026-05-13 | /tools/presentations-ai/ | Tool | Yes | frontmatter | src/content/tools/presentations-ai.md |
-| 2026-05-13 | /tools/prezi/ | Tool | Yes | frontmatter | src/content/tools/prezi.md |
 | 2026-05-13 | /tools/qdrant/ | Tool | Yes | frontmatter | src/content/tools/qdrant.md |
 | 2026-05-13 | /tools/qodo/ | Tool | Yes | frontmatter | src/content/tools/qodo.md |
-| 2026-05-13 | /tools/read-ai/ | Tool | Yes | frontmatter | src/content/tools/read-ai.md |
 | 2026-05-13 | /tools/readwise/ | Tool | Yes | frontmatter | src/content/tools/readwise.md |
 | 2026-05-13 | /tools/reclaim-ai/ | Tool | Yes | frontmatter | src/content/tools/reclaim-ai.md |
-| 2026-05-13 | /tools/recraft/ | Tool | Yes | frontmatter | src/content/tools/recraft.md |
 | 2026-05-13 | /tools/reflect/ | Tool | Yes | frontmatter | src/content/tools/reflect.md |
 | 2026-05-13 | /tools/reka/ | Tool | Yes | frontmatter | src/content/tools/reka.md |
 | 2026-05-13 | /tools/relevance-ai/ | Tool | Yes | frontmatter | src/content/tools/relevance-ai.md |
@@ -598,7 +585,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /tools/resemble-ai/ | Tool | Yes | frontmatter | src/content/tools/resemble-ai.md |
 | 2026-05-13 | /tools/retell-ai/ | Tool | Yes | frontmatter | src/content/tools/retell-ai.md |
 | 2026-05-13 | /tools/riverside/ | Tool | Yes | frontmatter | src/content/tools/riverside.md |
-| 2026-05-13 | /tools/rodin/ | Tool | Yes | frontmatter | src/content/tools/rodin.md |
 | 2026-05-13 | /tools/rork/ | Tool | Yes | frontmatter | src/content/tools/rork.md |
 | 2026-05-13 | /tools/rows/ | Tool | Yes | frontmatter | src/content/tools/rows.md |
 | 2026-05-13 | /tools/rytr/ | Tool | Yes | frontmatter | src/content/tools/rytr.md |
@@ -625,9 +611,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /tools/tidio/ | Tool | Yes | frontmatter | src/content/tools/tidio.md |
 | 2026-05-13 | /tools/tines/ | Tool | Yes | frontmatter | src/content/tools/tines.md |
 | 2026-05-13 | /tools/together-ai/ | Tool | Yes | frontmatter | src/content/tools/together-ai.md |
-| 2026-05-13 | /tools/trae/ | Tool | Yes | frontmatter | src/content/tools/trae.md |
 | 2026-05-13 | /tools/tripo3d/ | Tool | Yes | frontmatter | src/content/tools/tripo3d.md |
-| 2026-05-13 | /tools/typeface/ | Tool | Yes | frontmatter | src/content/tools/typeface.md |
 | 2026-05-13 | /tools/typingmind/ | Tool | Yes | frontmatter | src/content/tools/typingmind.md |
 | 2026-05-13 | /tools/udio/ | Tool | Yes | frontmatter | src/content/tools/udio.md |
 | 2026-05-13 | /tools/uizard/ | Tool | Yes | frontmatter | src/content/tools/uizard.md |
@@ -727,20 +711,36 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-22 | /tools/github-copilot/ | Tool | Yes | frontmatter | src/content/tools/github-copilot.md |
 | 2026-05-23 | /tools/claude/ | Tool | Yes | frontmatter | src/content/tools/claude.md |
 | 2026-05-23 | /tools/cohere/ | Tool | Yes | frontmatter | src/content/tools/cohere.md |
-| 2026-05-24 | / | Static page | Yes | working tree | src/pages/index.astro |
-| 2026-05-24 | /answers/ | Static page | Yes | working tree | src/pages/answers/index.astro |
-| 2026-05-24 | /answers/best-ai-chatbot-2026/ | Static page | Yes | working tree | src/pages/answers/best-ai-chatbot-2026.astro |
-| 2026-05-24 | /answers/best-ai-video-generator-2026/ | Static page | Yes | working tree | src/pages/answers/best-ai-video-generator-2026.astro |
+| 2026-05-24 | / | Static page | Yes | git | src/pages/index.astro |
+| 2026-05-24 | /answers/ | Static page | Yes | git | src/pages/answers/index.astro |
+| 2026-05-24 | /answers/best-ai-chatbot-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-chatbot-2026.astro |
+| 2026-05-24 | /answers/best-ai-video-generator-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-video-generator-2026.astro |
 | 2026-05-24 | /categories/ | Static page | Yes | working tree | src/pages/categories/index.astro |
-| 2026-05-24 | /categories/ai-chatbots/ | Category | Yes | working tree | src/content/categories/ai-chatbots.md |
+| 2026-05-24 | /categories/ai-automation/ | Category | Yes | working tree | src/content/categories/ai-automation.md |
+| 2026-05-24 | /categories/ai-chatbots/ | Category | Yes | frontmatter | src/content/categories/ai-chatbots.md |
 | 2026-05-24 | /categories/ai-coding/ | Category | Yes | working tree | src/content/categories/ai-coding.md |
-| 2026-05-24 | /categories/ai-video/ | Category | Yes | working tree | src/content/categories/ai-video.md |
-| 2026-05-24 | /compare/ | Static page | Yes | working tree | src/pages/compare/index.astro |
-| 2026-05-24 | /compare/chatgpt-vs-qwen/ | Comparison | Yes | working tree | src/content/comparisons/chatgpt-vs-qwen.md |
-| 2026-05-24 | /compare/cursor-vs-claude-code-vs-copilot/ | Comparison | Yes | working tree | src/content/comparisons/cursor-vs-claude-code-vs-copilot.md |
+| 2026-05-24 | /categories/ai-design/ | Category | Yes | working tree | src/content/categories/ai-design.md |
+| 2026-05-24 | /categories/ai-image/ | Category | Yes | working tree | src/content/categories/ai-image.md |
+| 2026-05-24 | /categories/ai-notes/ | Category | Yes | working tree | src/content/categories/ai-notes.md |
+| 2026-05-24 | /categories/ai-presentation/ | Category | Yes | working tree | src/content/categories/ai-presentation.md |
+| 2026-05-24 | /categories/ai-seo/ | Category | Yes | working tree | src/content/categories/ai-seo.md |
+| 2026-05-24 | /categories/ai-video/ | Category | Yes | frontmatter | src/content/categories/ai-video.md |
+| 2026-05-24 | /categories/ai-writing/ | Category | Yes | working tree | src/content/categories/ai-writing.md |
+| 2026-05-24 | /compare/ | Static page | Yes | git | src/pages/compare/index.astro |
+| 2026-05-24 | /compare/chatgpt-vs-qwen/ | Comparison | Yes | frontmatter | src/content/comparisons/chatgpt-vs-qwen.md |
+| 2026-05-24 | /compare/cursor-vs-claude-code-vs-copilot/ | Comparison | Yes | frontmatter | src/content/comparisons/cursor-vs-claude-code-vs-copilot.md |
 | 2026-05-24 | /tools/ | Static page | Yes | working tree | src/pages/tools/index.astro |
-| 2026-05-24 | /tools/chatgpt/ | Tool | Yes | working tree | src/content/tools/chatgpt.md |
-| 2026-05-24 | /tools/codex/ | Tool | Yes | working tree | src/content/tools/codex.md |
-| 2026-05-24 | /tools/cursor/ | Tool | Yes | working tree | src/content/tools/cursor.md |
-| 2026-05-24 | /tools/qwen/ | Tool | Yes | working tree | src/content/tools/qwen.md |
-| 2026-05-24 | /tools/runway/ | Tool | Yes | working tree | src/content/tools/runway.md |
+| 2026-05-24 | /tools/chatgpt/ | Tool | Yes | frontmatter | src/content/tools/chatgpt.md |
+| 2026-05-24 | /tools/codex/ | Tool | Yes | frontmatter | src/content/tools/codex.md |
+| 2026-05-24 | /tools/cursor/ | Tool | Yes | frontmatter | src/content/tools/cursor.md |
+| 2026-05-24 | /tools/manus/ | Tool | Yes | working tree | src/content/tools/manus.md |
+| 2026-05-24 | /tools/nightcafe/ | Tool | Yes | working tree | src/content/tools/nightcafe.md |
+| 2026-05-24 | /tools/omniseo/ | Tool | Yes | working tree | src/content/tools/omniseo.md |
+| 2026-05-24 | /tools/prezi/ | Tool | Yes | working tree | src/content/tools/prezi.md |
+| 2026-05-24 | /tools/qwen/ | Tool | Yes | frontmatter | src/content/tools/qwen.md |
+| 2026-05-24 | /tools/read-ai/ | Tool | Yes | working tree | src/content/tools/read-ai.md |
+| 2026-05-24 | /tools/recraft/ | Tool | Yes | working tree | src/content/tools/recraft.md |
+| 2026-05-24 | /tools/rodin/ | Tool | Yes | working tree | src/content/tools/rodin.md |
+| 2026-05-24 | /tools/runway/ | Tool | Yes | frontmatter | src/content/tools/runway.md |
+| 2026-05-24 | /tools/trae/ | Tool | Yes | working tree | src/content/tools/trae.md |
+| 2026-05-24 | /tools/typeface/ | Tool | Yes | working tree | src/content/tools/typeface.md |

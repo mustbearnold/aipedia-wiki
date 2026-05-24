@@ -2,7 +2,7 @@
 type: tool
 slug: recraft
 title: Recraft
-tagline: Vector-native AI image generator with brand-style consistency and the cleanest typography-in-image output on the market. Recraft V3 leads the Hugging Face text-to-image benchmark as of May 2026.
+tagline: Vector-native AI image generator with brand-style consistency, readable text-in-image output, and Recraft V4 raster/vector models for design-grade assets.
 category: ai-image
 secondary_categories: [ai-design]
 company: Recraft AI
@@ -11,11 +11,11 @@ pricing_model: freemium
 price_range: "$0-$48/month"
 status: active
 launched: 2022-12
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-05-24
+last_verified: 2026-05-24
 update_frequency: monthly
 seo_title: "Recraft: Features, Pricing & Review (2026)"
-meta_description: "Recraft V3 is the vector-native AI image generator with best-in-market legible text rendering. Free tier with 50 daily credits. Paid plans $10 to $48/month. API at $0.04 per raster image, $0.08 per vector."
+meta_description: "Recraft V4 is the vector-native AI image generator for design assets, readable text, SVG-style output, and brand-consistent graphics. Free tier with daily credits; paid plans start at $10/month."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -30,11 +30,11 @@ scores:
   longevity: 8
 facts:
   best_for:
-    value: "Vector-native AI image generator with brand-style consistency and the cleanest typography-in-image output on the market. Recraft V3 leads the Hugging Face text-to-image benchmark as of May 2026. Best for image generation, editing, and visual-production workflows."
+    value: "Vector-native AI image generator with brand-style consistency, readable text-in-image output, and Recraft V4 raster/vector models for design-grade assets. Best for image generation, editing, and visual-production workflows."
     source: "https://www.recraft.ai/pricing"
     source_label: "Source"
     source_id: recraft-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-05-24
     volatility: medium
     confidence: medium
   pricing_anchor:
@@ -42,17 +42,17 @@ facts:
     source: "https://www.recraft.ai/pricing"
     source_label: "Source"
     source_id: recraft-pricing
-    verified_at: 2026-05-13
-    next_review_at: 2026-08-03
+    verified_at: 2026-05-24
+    next_review_at: 2026-08-24
     volatility: high
     confidence: medium
   watch_out_for:
-    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    value: "Free-plan images are public and owned by Recraft, subscription credits do not roll over, and V4 still lacks some older workflow controls; commercial users should start on a paid plan and test export/editing constraints before standardizing."
     source: "https://www.recraft.ai/pricing"
     source_label: "Source"
     source_id: recraft-pricing
-    verified_at: 2026-05-13
-    next_review_at: 2026-08-03
+    verified_at: 2026-05-24
+    next_review_at: 2026-08-24
     volatility: high
     confidence: medium
 tags: [image-generation, vector-generation, brand-design, svg, recraft]
@@ -68,7 +68,7 @@ not_best_for:
   - free-tier heavy commercial use (public-image restriction)
   - offline or on-device generation
 quick_answer: >-
-  Recraft is the vector-native image generator that beats most competitors at legible text inside images. Pick it for logos, posters, and brand-consistent SVG asset runs. Skip it for cinematic photorealism or video, where Midjourney, Flux, and Kling lead.
+  Recraft is the vector-native image generator for readable text, brand graphics, and SVG-style assets. Pick it for logos, posters, packaging mockups, and brand-consistent asset runs. Skip it for cinematic photorealism or video, where Midjourney, Flux, and Kling lead.
 price_history:
   - date: 2026-04-18
     plan: "Basic"
@@ -84,19 +84,26 @@ price_history:
     source_label: "Source"
     source_id: recraft-pricing
     note: "$0.08 per vector image"
+  - date: 2026-05-24
+    plan: "Basic"
+    price: "$10/mo · 1,000 credits"
+    source: "https://www.recraft.ai/pricing"
+    source_label: "Source"
+    source_id: recraft-pricing
+    note: "Pricing and rights rechecked. Recraft FAQ still says subscription credits do not roll over, free outputs are public/owned by Recraft, and paid plans grant full ownership/commercial rights."
 ---
 
 # Recraft
 
-Recraft is a **vector-first AI image platform** built around brand-style consistency, on-canvas editing, and native SVG output. The current flagship model, **Recraft V3**, sits at the top of the Hugging Face text-to-image leaderboard (ELO 1172) as of May 2026, ahead of Midjourney and OpenAI's GPT Image on that benchmark.
+Recraft is a **vector-first AI image platform** built around brand-style consistency, on-canvas editing, and native SVG output. The current model family to evaluate is **Recraft V4**, which ships raster, vector, Pro raster, and Pro vector variants for design-grade image generation.
 
-The company is **Recraft AI Limited**, registered in London and operating with a San Francisco presence, founded in December 2022 by Anna Veronika Dorogush. Recraft's differentiators are narrow and real: it outputs true SVG with actual paths and anchor points, not raster wrapped in a container, and it renders legible text inside generated images better than any other generally-available model.
+The company is **Recraft AI Limited**, registered in London and operating with a San Francisco presence, founded in December 2022 by Anna Veronika Dorogush. Recraft's differentiators are narrow and real: it outputs true SVG-style vectors with editable paths, and it remains one of the most reliable tools for legible text inside generated marketing graphics.
 
 The Agentic Mode turns Recraft into a conversational design assistant on an infinite canvas. It reads context and updates designs in place. The tradeoff is that Recraft trails Midjourney and Flux on cinematic photorealism, and it does not generate video.
 
 ## System Verdict
 
-> **Pick Recraft if your work involves logos, posters, marketing graphics, or any output that needs clean vector paths or readable text.** Recraft V3 leads the Hugging Face text-to-image benchmark and handles typography-in-image reliably. The $10/mo Basic tier covers most solo designers, and the API is priced competitively at $0.04 per raster image.
+> **Pick Recraft if your work involves logos, posters, marketing graphics, or any output that needs clean vector paths or readable text.** Recraft V4 is designed for both raster and vector asset generation. The $10/mo Basic tier covers most solo designers, and the API remains useful when a workflow needs Recraft outside the web canvas.
 >
 > **Skip it if you need cinematic photorealism or video.** [Midjourney](/tools/midjourney/) and [Flux](/tools/flux/) produce richer photoreal output. [Kling](/tools/kling/) and Veo 3 handle video. Recraft's free tier also restricts commercial use and makes generated images public, so commercial workflows need a paid seat.
 >
@@ -106,7 +113,7 @@ The Agentic Mode turns Recraft into a conversational design assistant on an infi
 
 | | |
 |---|---|
-| **Flagship model** | Recraft V3 (leads Hugging Face text-to-image ELO as of May 2026) |
+| **Flagship model** | Recraft V4 raster/vector model family |
 | **Vector output** | Native SVG with real paths and anchor points |
 | **Text rendering** | Best-in-class legible text inside generated images |
 | **Agentic Mode** | Conversational canvas assistant, context-aware edits |
@@ -165,11 +172,11 @@ API pricing via [recraft.ai/api](https://www.recraft.ai/api):
 | Raster image | $0.04 | All non-vector styles |
 | Vector image | $0.08 | SVG output with real paths |
 
-Prices verified 2026-05-13 via [Recraft pricing](https://www.recraft.ai/pricing) and [Recraft API docs](https://www.recraft.ai/api).
+Prices verified 2026-05-24 via [Recraft pricing](https://www.recraft.ai/pricing), [Recraft V4 docs](https://www.recraft.ai/docs/recraft-models/recraft-V4), and Recraft FAQ language on ownership, rollovers, and API access.
 
 ## Against the alternatives
 
-| | Recraft V3 | Midjourney v7 | Flux 1.1 Pro | Ideogram 3.0 |
+| | Recraft V4 | Midjourney v7 | Flux 1.1 Pro | Ideogram 3.0 |
 |---|---|---|---|---|
 | **Vector (SVG) output** | Native paths | None | None | None |
 | **Text-in-image** | Best available | Weak | Fair | Strong |
@@ -191,7 +198,7 @@ Prices verified 2026-05-13 via [Recraft pricing](https://www.recraft.ai/pricing)
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [Recraft pricing](https://www.recraft.ai/pricing), [Recraft API](https://www.recraft.ai/api), the Hugging Face text-to-image leaderboard, and [Recraft company registration](https://find-and-update.company-information.service.gov.uk/company/14525957).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-24 against [Recraft pricing](https://www.recraft.ai/pricing), [Recraft V4 docs](https://www.recraft.ai/docs/recraft-models/recraft-V4), [Recraft API](https://www.recraft.ai/api), and [Recraft company registration](https://find-and-update.company-information.service.gov.uk/company/14525957).
 
 ## FAQ
 

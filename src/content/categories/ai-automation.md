@@ -5,9 +5,9 @@ title: AI Automation & Agents
 description: Current workflow automation, AI agent platforms, and operations tools for technical teams, non-technical operators, GTM workflows, support, sales, and internal automation.
 tool_count: 24
 seo_title: "Best AI Automation Tools & Agent Platforms (May 2026)"
-meta_description: "Updated May 13, 2026: compare n8n, Zapier, Make, Gumloop, Relevance AI, Lindy, Pipedream, CrewAI, Apollo, Clay, Intercom, and Instantly by workflow fit, pricing unit, integrations, and governance after the May n8n cloud and Make price reductions."
+meta_description: "Updated May 24, 2026: compare n8n, Zapier, Make, Gumloop, Relevance AI, Lindy, Manus, Pipedream, CrewAI, Apollo, Clay, Intercom, and Instantly by workflow fit, pricing unit, integrations, and governance."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-13
+last_updated: 2026-05-24
 last_verified: 2026-05-13
 update_frequency: weekly
 top_picks:
@@ -45,6 +45,7 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 | Visual scenario building and branching workflows | [Make](/tools/make/) | Strong visual canvas, routers, filters, credits, and 3000+ apps | Credit use depends on scenario design and frequency |
 | Agent-heavy workflows and modern automation teams | [Gumloop](/tools/gumloop/) | AI-native flows, unlimited agents/flows, policies, guardrails, and MCP support | Credit usage must be tested with real production tasks |
 | Delegated GTM, research, support, and ops agents | [Relevance AI](/tools/relevance-ai/) | AI workforces, actions, vendor credits, scheduling, escalations, and marketplace patterns | Not the cheapest generic workflow router |
+| One-off general autonomous tasks | [Manus](/tools/manus/) | Hosted VM agent for research, spreadsheets, slides, files, and browser work; official site now describes Manus as part of Meta | Credit burn and data-handling terms need direct verification before sensitive work |
 | Inbox, calendar, meeting, and follow-up assistant | [Lindy](/tools/lindy/) | Assistant-style automation for professionals who want delegation, not a blank canvas | Connected inboxes and usage tiers shape the real plan |
 | Developer API workflows and embedded integrations | [Pipedream](/tools/pipedream/) | Developer-friendly workflows, Connect, MCP servers, and credit-based compute under Workday ownership | Requires more technical judgment than Zapier or Make; ask how Workday packaging affects enterprise rollout |
 
@@ -90,6 +91,7 @@ Do not leave this category stale. Automation tools are adding MCP, agent builder
 - [Make AI Agents](https://www.make.com/en/ai-agents) (verified 2026-05-13)
 - [Gumloop pricing](https://www.gumloop.com/pricing) (verified 2026-05-13)
 - [Relevance AI pricing](https://relevanceai.com/pricing) (verified 2026-05-13)
+- [Manus pricing](https://manus.im/pricing) (verified 2026-05-24)
 - [Lindy pricing](https://www.lindy.ai/pricing) (verified 2026-05-13)
 - [Pipedream pricing docs](https://pipedream.com/docs/pricing) (verified 2026-05-13)
 - [Workday FY2026 Q4 results: Pipedream acquisition closed](https://investor.workday.com/news-and-events/press-releases/news-details/2026/Workday-Announces-Fiscal-2026-Fourth-Quarter-and-Full-Year-Financial-Results/default.aspx) (verified 2026-05-13)

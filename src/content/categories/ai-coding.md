@@ -5,7 +5,7 @@ title: AI Coding Assistants
 description: Current AI coding assistants, AI-native IDEs, terminal coding agents, PR agents, and app builders for developers, founders, teams, and non-developers.
 tool_count: 22
 seo_title: "Best AI Coding Tools & Copilot Alternatives (May 2026)"
-meta_description: "Updated May 24, 2026: compare Cursor with Composer 2.5 and Automations, Claude Code, GitHub Copilot, Windsurf, Codex, Replit Agent, Devin, Aider, Cline, Continue, Lovable, Bolt, and v0 by workflow, pricing, autonomy, and team fit."
+meta_description: "Updated May 24, 2026: compare Cursor with Composer 2.5 and Automations, Claude Code, GitHub Copilot, Windsurf, Trae, Codex, Replit Agent, Devin, Aider, Cline, Continue, Lovable, Bolt, and v0 by workflow, pricing, autonomy, and team fit."
 author: "aipedia.wiki Editorial"
 last_updated: 2026-05-24
 last_verified: 2026-05-24
@@ -44,6 +44,7 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 | GitHub-native IDE assistance and policy | [GitHub Copilot](/tools/github-copilot/) | Best fit for GitHub, VS Code, JetBrains, PRs, and enterprise controls | AI Credits and usage-based billing need modeling before heavy agent use |
 | Terminal repo agent | [Claude Code](/tools/claude-code/) | Strong for inspecting, editing, running commands, and iterating across codebases | Subscription/API limits and usage controls matter |
 | Value AI IDE alternative | [Windsurf](/tools/windsurf/) | Worth testing against Cursor when credits and team cost matter | Credit systems are not as simple as monthly sticker price |
+| Lowest-cost multi-model IDE experiment | [Trae](/tools/trae/) | Lite at $3 and Pro at $10 undercut most AI IDE plans while preserving a VS Code-like workflow | ByteDance-adjacent telemetry/procurement risk and token allowances need review before serious repo work |
 | OpenAI-native coding agent | [Codex](/tools/codex/) | Good for local repo tasks, PR-style work, and OpenAI-aligned teams | Not a pure inline autocomplete replacement |
 | Browser app building for non-devs | [Replit Agent](/tools/replit-agent/) | Useful when the buyer wants build/run/deploy in a browser | Generated apps still need review, security, and maintenance |
 | Open-source CLI/BYOK coding | [Aider](/tools/aider/) | Strong for developers who want local control and model choice | Requires comfort with terminal workflows and API cost management |
@@ -106,4 +107,5 @@ Do not publish stale model-version claims. Coding tools route models and change 
 - [Claude Code docs](https://code.claude.com/docs) (verified 2026-05-24)
 - [Claude Max plan](https://support.claude.com/en/articles/11049741-what-is-the-max-plan) (verified 2026-05-24)
 - [Windsurf plans and usage](https://docs.windsurf.com/windsurf/accounts/usage) (verified 2026-05-13)
+- [Trae pricing](https://www.trae.ai/pricing) (verified 2026-05-24)
 - [Gemini Code Assist](https://cloud.google.com/products/gemini/code-assist) (verified 2026-05-13)

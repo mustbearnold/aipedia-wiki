@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: "$0-$49.99/month"
 status: active
 launched: 2019-11
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-05-24
+last_verified: 2026-05-24
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -32,7 +32,7 @@ facts:
     source: "https://creator.nightcafe.studio/pricing"
     source_label: "Source"
     source_id: nightcafe-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-05-24
     volatility: medium
     confidence: medium
   pricing_anchor:
@@ -40,17 +40,17 @@ facts:
     source: "https://creator.nightcafe.studio/pricing"
     source_label: "Source"
     source_id: nightcafe-pricing
-    verified_at: 2026-05-13
-    next_review_at: 2026-08-13
+    verified_at: 2026-05-24
+    next_review_at: 2026-08-24
     volatility: high
     confidence: medium
   watch_out_for:
-    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    value: "NightCafe is great for model variety and community, but credit cost, commercial-use rules, model gating, and watermarks vary by plan; verify the live pricing page and terms before treating it as a production design workflow."
     source: "https://creator.nightcafe.studio/pricing"
     source_label: "Source"
     source_id: nightcafe-pricing
-    verified_at: 2026-05-13
-    next_review_at: 2026-08-13
+    verified_at: 2026-05-24
+    next_review_at: 2026-08-24
     volatility: high
     confidence: medium
 tags: [ai-image, image-generation, ai-art, community, multiple-models, flux, stable-diffusion]
@@ -94,6 +94,13 @@ price_history:
     source_label: "Source"
     source_id: nightcafe-pricing
     note: "Tiers verified unchanged. Flux 2 Klein and Z-Image Turbo added to lower-tier model access; Nano Banana, Seedream 4, and Flux.2 remain top-tier only."
+  - date: 2026-05-24
+    plan: "All tiers"
+    price: "Unchanged"
+    source: "https://creator.nightcafe.studio/pricing"
+    source_label: "Source"
+    source_id: nightcafe-pricing
+    note: "Pricing, subscription-credit behavior, and paid/free commercial-use cautions rechecked against NightCafe pricing/help/terms pages."
 ---
 
 # NightCafe
@@ -124,7 +131,7 @@ The free tier provides 5 credits per day with no expiry. Paid plans start at $5.
 | **Public API** | None |
 | **Billing cadence** | Monthly, quarterly (15% off), annual (40% off) |
 
-Every data point above was verified on 2026-05-13. See Sources.
+Every data point above was verified on 2026-05-24. See Sources.
 
 ## Recent changes
 
@@ -168,7 +175,7 @@ Subscription pricing via [creator.nightcafe.studio/pricing](https://creator.nigh
 | AI Artist | $19.99 | 500 + 5/day | + Premium models, advanced features | Heavy hobbyists |
 | Artist Pro | $49.99 | 1,400 + 5/day | + Nano Banana, Seedream 4, Flux.2, max priority | Serious hobbyists |
 
-*Prices verified 2026-05-13 via [creator.nightcafe.studio/pricing](https://creator.nightcafe.studio/pricing). Credit cost varies by model (1 to 5 credits typical). Premium models (Nano Banana, Seedream 4, Flux.2) unlock at higher tiers. Quarterly and annual billing add 15% and 40% discounts respectively.*
+*Prices verified 2026-05-24 via [creator.nightcafe.studio/pricing](https://creator.nightcafe.studio/pricing) and NightCafe help/terms pages. Credit cost varies by model and settings. Premium models are tier-gated, and commercial-use comfort is stronger on paid plans.*
 
 ## Against the alternatives
 
@@ -196,7 +203,7 @@ Subscription pricing via [creator.nightcafe.studio/pricing](https://creator.nigh
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-05-13 against [creator.nightcafe.studio/pricing](https://creator.nightcafe.studio/pricing) and the [NightCafe Flux updates](https://nightcafe.studio/blogs/blog/updates-flux-forever-luma-dream-machine-more).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-05-24 against [creator.nightcafe.studio/pricing](https://creator.nightcafe.studio/pricing), NightCafe help/terms pages, and the [NightCafe Flux updates](https://nightcafe.studio/blogs/blog/updates-flux-forever-luma-dream-machine-more).
 
 ## FAQ
 

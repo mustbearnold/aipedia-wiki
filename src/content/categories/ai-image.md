@@ -5,9 +5,9 @@ title: AI Image Generation
 description: Current AI image tools for generation, photo editing, upscaling, product visuals, text-heavy graphics, creative ideation, and commercially safer Adobe workflows.
 tool_count: 18
 seo_title: "Best AI Image Tools & Photo Editors (May 2026)"
-meta_description: "Updated May 13, 2026: compare Midjourney, ChatGPT Images 2.0, Adobe Firefly, Canva, Flux, Ideogram, and other AI image tools by image quality, photo-editing fit, pricing risk, text rendering, and workflow."
+meta_description: "Updated May 24, 2026: compare Midjourney, ChatGPT Images 2.0, Adobe Firefly, Canva, Flux, Ideogram, Recraft, NightCafe, Rodin, and other AI image tools by image quality, photo-editing fit, pricing risk, text rendering, and workflow."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-13
+last_updated: 2026-05-24
 last_verified: 2026-05-13
 update_frequency: weekly
 top_picks:
@@ -53,6 +53,7 @@ The practical question is no longer "which model can make an image?" Most major 
 - **Flux remains the open-weight workflow choice.** LoRA fine-tuning, self-hosting, ComfyUI, and hosted APIs keep it important even when closed models improve, but license terms still need checking before commercial use.
 - **Ideogram is now a focused text-in-image specialist.** It still matters for logo and marketing workflows, but GPT Image 2 reduced its underlying capability moat.
 - **Adobe Firefly wins where provenance and Creative Cloud matter.** It may not lead on raw image quality, but enterprise creative teams often care about licensing and workflow more than leaderboard wins.
+- **Specialists still matter.** Recraft V4 remains the shortlist entry for vector/text-heavy brand assets, NightCafe is the hobbyist/community multi-model playground, and Rodin is the 3D detail specialist when the output must become a mesh rather than a flat image.
 
 ## Our Picks
 
@@ -65,6 +66,7 @@ The practical question is no longer "which model can make an image?" Most major 
 - **Best free entry point:** Leonardo AI. Easy to test without committing to a paid image stack.
 - **Best commercially safer creative workflow:** Adobe Firefly. Especially for Creative Cloud teams.
 - **Best 3D asset generator:** Meshy. Best first shortlist entry when the output needs to become a GLB, FBX, OBJ, USDZ, STL, BLEND, or 3MF file instead of a flat image.
+- **Best vector/text-heavy design generator:** Recraft. Best when the asset needs readable text, SVG-style output, or brand-consistent graphic production.
 
 ## Money Guides To Keep Current
 
@@ -103,3 +105,6 @@ Image generation is approaching commodity. The real differentiation is workflow 
 - [FLUX.1 dev on Hugging Face](https://huggingface.co/black-forest-labs/FLUX.1-dev) (verified 2026-05-13)
 - [Meshy pricing](https://www.meshy.ai/pricing) (verified 2026-05-13)
 - [Meshy credit usage help](https://help.meshy.ai/en/articles/10000507-how-many-credits-does-each-generation-task-cost) (verified 2026-05-13)
+- [Recraft V4 docs](https://www.recraft.ai/docs/recraft-models/recraft-V4) (verified 2026-05-24)
+- [NightCafe pricing](https://creator.nightcafe.studio/pricing) (verified 2026-05-24)
+- [Rodin pricing](https://hyper3d.ai/pricing) (verified 2026-05-24)

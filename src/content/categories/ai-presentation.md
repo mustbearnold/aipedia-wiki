@@ -5,9 +5,9 @@ title: AI Presentation Tools
 description: AI tools for turning prompts, outlines, docs, and written ideas into decks, visual stories, and presentation assets.
 tool_count: 8
 seo_title: "Best AI Presentation Tools: Gamma, Pitch, Beautiful.ai & Prezi (May 2026)"
-meta_description: "Updated May 13, 2026: Gamma wins prompt-to-deck, Pitch wins team workflows, Beautiful.ai wins controlled business slides, and Napkin AI wins slide visuals. Claude Design now competes for prompt-to-prototype work."
+meta_description: "Updated May 24, 2026: Gamma wins prompt-to-deck, Pitch wins team workflows, Beautiful.ai wins controlled business slides, Napkin AI wins slide visuals, and Prezi remains the non-linear storytelling/video pick."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-13
+last_updated: 2026-05-24
 last_verified: 2026-05-13
 update_frequency: monthly
 top_picks:
@@ -35,7 +35,7 @@ Do not shortlist [Tome](/tools/tome/) for new presentation work. The original To
 
 For prompt-to-prototype work that overlaps deck creation, also evaluate [Claude Design](/tools/claude-design/) (launched April 17, 2026). It competes with Gamma when the buyer wants generated UI mockups, landing-page concepts, and visual design artifacts alongside slide-style output. It is not yet a full deck workflow, but it is the strongest design-generation alternative to test before locking in a presentation tool.
 
-Last verified on **May 13, 2026** against official vendor sources and current AiPedia tool records.
+Prezi plan support and AI access details were rechecked on **May 24, 2026**. The broader presentation category sweep was last fully verified on **May 13, 2026** against official vendor sources and current AiPedia tool records.
 
 ## Best Tools By Buyer Job
 
@@ -58,7 +58,7 @@ Pick Decktopus when a deck needs built-in forms, Q&A, analytics, embedded pages,
 Pick Presentations.AI when you want a simple prompt-to-deck workflow and the annual pricing model fits. Its current pricing page lists Starter, Public Beta, Pro, and Enterprise options, with Public Beta and Pro positioned around yearly pricing. The watch-out is that heavy generators may outgrow it faster than they outgrow Gamma.
 
 **Non-linear storytelling and video presentations: [Prezi](/tools/prezi/).**
-Pick Prezi when the presentation should feel like a visual journey rather than a slide stack. Prezi's support documentation lists Prezi AI features across Basic, Standard, Plus, Premium, Business, and education/team plans, plus Prezi Video and offline/presenter features on higher plans. It is best for teachers, speakers, sales storytellers, and teams that like zoom-and-pan narrative structure. It is less ideal for simple board decks or PowerPoint-first enterprise workflows.
+Pick Prezi when the presentation should feel like a visual journey rather than a slide stack. Prezi's support documentation lists Prezi AI features across Basic, Standard, Plus, Premium, Business, and education/team plans, plus Prezi Video and offline/presenter features on higher plans. As of the May 24 source check, Basic/Standard still center on limited AI credits while Plus-style plans are the safer buy for unlimited AI generation. It is best for teachers, speakers, sales storytellers, and teams that like zoom-and-pan narrative structure. It is less ideal for simple board decks or PowerPoint-first enterprise workflows.
 
 **Creative direction around deck assets: [Lovart](/tools/lovart/).**
 Lovart belongs near this category because marketing teams and founders use it for visual direction, campaign creative, and presentation-ready assets. It should not be mistaken for a canonical slide editor. Use it for creative exploration, not governed deck production.
@@ -126,5 +126,5 @@ Affiliate availability does not determine ranking. A monetizable tool can be inc
 - Decktopus pricing and feature FAQ: [https://www.decktopus.com/pricing](https://www.decktopus.com/pricing)
 - Presentations.AI pricing: [https://www.presentations.ai/pricing](https://www.presentations.ai/pricing)
 - Napkin AI pricing: [https://www.napkin.ai/pricing/](https://www.napkin.ai/pricing/)
-- Prezi pricing and plan support: [https://prezi.com/pricing/](https://prezi.com/pricing/), [https://support.prezi.com/hc/en-us/articles/360003478934-Guide-to-Prezi-plans](https://support.prezi.com/hc/en-us/articles/360003478934-Guide-to-Prezi-plans)
+- Prezi pricing and plan support: [https://prezi.com/pricing/](https://prezi.com/pricing/), [https://support.prezi.com/hc/en-us/articles/360003478934-Guide-to-Prezi-plans](https://support.prezi.com/hc/en-us/articles/360003478934-Guide-to-Prezi-plans) (verified 2026-05-24)
 - Tome/Lightfield pivot coverage: [https://venturebeat.com/technology/tomes-founders-ditch-viral-presentation-app-with-20m-users-to-build-ai](https://venturebeat.com/technology/tomes-founders-ditch-viral-presentation-app-with-20m-users-to-build-ai)

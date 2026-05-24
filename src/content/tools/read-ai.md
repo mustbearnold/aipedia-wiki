@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: Free; Pro $19.75/user/mo monthly; Enterprise $29.75/user/mo monthly; Enterprise+ $39.75/user/mo monthly
 status: active
 launched: 2021
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-05-24
+last_verified: 2026-05-24
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,25 +31,25 @@ facts:
     source: "https://www.read.ai/plans-pricing"
     source_label: "Read AI plans and pricing"
     source_id: read-ai-official
-    verified_at: 2026-05-13
+    verified_at: 2026-05-24
     volatility: medium
     confidence: medium
   pricing_anchor:
-    value: "Pricing should be checked on the current Read AI source before purchase; AIpedia has not promoted this page to a full Tier 1 pricing profile yet"
+    value: "Pro; $19.75/user/mo monthly or $15/user/mo annually; paid plans add unlimited meeting transcripts/reports, workspace access, storage, and upload credits."
     source: "https://www.read.ai/plans-pricing"
     source_label: "Read AI plans and pricing"
     source_id: read-ai-official
-    verified_at: 2026-05-13
-    next_review_at: 2026-08-11
+    verified_at: 2026-05-24
+    next_review_at: 2026-08-24
     volatility: high
     confidence: medium
   watch_out_for:
-    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    value: "Read AI can become a broad workplace search and meeting-recording layer, so buyers should verify meeting-bot consent, workspace sharing rules, upload-minute limits, retention policy, and Enterprise+ security requirements before rollout."
     source: "https://www.read.ai/plans-pricing"
     source_label: "Read AI plans and pricing"
     source_id: read-ai-official
-    verified_at: 2026-05-13
-    next_review_at: 2026-08-11
+    verified_at: 2026-05-24
+    next_review_at: 2026-08-24
     volatility: high
     confidence: medium
 tags: [meeting-ai, transcription, meeting-notes, search-copilot, productivity, summaries, coaching]
@@ -67,6 +67,14 @@ not_best_for:
   - workflows that need deep revenue intelligence
 quick_answer: >-
   Read AI is a meeting assistant plus productivity search layer. Pick it for meeting reports, transcription, coaching, Search Copilot, and integrations across Zoom, Teams, Meet, email, and work apps. Skip it if you need unlimited free transcription or no-bot capture.
+price_history:
+  - date: 2026-05-24
+    plan: "Pro"
+    price: "$19.75/user/mo monthly; $15/user/mo annually"
+    source: "https://www.read.ai/plans-pricing"
+    source_label: "Read AI plans and pricing"
+    source_id: read-ai-official
+    note: "Current entry paid plan rechecked. Enterprise is $29.75 monthly or $22.50 annually; Enterprise+ is $39.75 monthly or $29.75 annually and requires 5+ licenses on the public pricing page."
 ---
 
 # Read AI
@@ -116,7 +124,7 @@ It competes with [Fathom](/tools/fathom/), [Fireflies](/tools/fireflies/), [Otte
 
 Read AI has a free plan with 5 meeting transcripts per month, unlimited enterprise search, meeting/email/messaging summaries, coaching, basic integrations, topic readouts, 20+ languages, and desktop/mobile apps.
 
-As verified on 2026-05-13, Pro is $19.75 per user per month on monthly billing and $15 per user per month annually. It adds unlimited meeting transcripts, priority report processing, premium integrations, workspace access, unlimited meeting reports, unlimited storage, and 100 upload minutes per month. Enterprise is $29.75 monthly or $22.50 annually, adding audio/video playback, video highlights, premium support, and 200 upload minutes. Enterprise+ requires 10+ licenses and is $39.75 monthly or $29.75 annually, adding HIPAA compliance, SSO/SAML, domain capture, custom retention, workspace onboarding, and 300 upload minutes.
+As verified on 2026-05-24, Pro is $19.75 per user per month on monthly billing and $15 per user per month annually. It adds unlimited meeting transcripts, priority report processing, premium integrations, workspace access, unlimited meeting reports, unlimited storage, and 100 upload minutes per month. Enterprise is $29.75 monthly or $22.50 annually, adding audio/video playback, video highlights, premium support, and 200 upload minutes. Enterprise+ requires 5+ licenses and is $39.75 monthly or $29.75 annually, adding HIPAA compliance, SSO/SAML, domain capture, custom retention, workspace onboarding, and 300 upload minutes.
 
 Teams should compare against Fathom if unlimited free transcription is the deciding feature.
 
@@ -146,7 +154,7 @@ It is weaker when a team only wants a simple meeting recorder. The more Read AI 
 
 ## Methodology
 
-Last verified 2026-05-13 against Read AI pricing and product pages. Scoring emphasizes meeting utility, search breadth, integration depth, and free-plan limits.
+Last verified 2026-05-24 against Read AI pricing and product pages. Scoring emphasizes meeting utility, search breadth, integration depth, governance risk, and free-plan limits.
 
 ## FAQ
 

@@ -4235,7 +4235,8 @@
       "url": "https://manus.im/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-05-24"
     },
     {
       "id": "marketmuse-competitive-analysis",
@@ -4675,7 +4676,8 @@
       "url": "https://creator.nightcafe.studio/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-05-24"
     },
     {
       "id": "notebooklm-help",
@@ -4771,7 +4773,8 @@
       "url": "https://omniseo.com",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-05-24"
     },
     {
       "id": "omniseo-pricing",
@@ -4779,7 +4782,8 @@
       "url": "https://omniseo.com/pricing/",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-05-24"
     },
     {
       "id": "open-webui-official",
@@ -5211,7 +5215,8 @@
       "url": "https://prezi.com/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-05-24"
     },
     {
       "id": "prezi-pricing",
@@ -5219,7 +5224,8 @@
       "url": "https://prezi.com/pricing/",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-05-24"
     },
     {
       "id": "qdrant-best-for",
@@ -5377,7 +5383,8 @@
       "url": "https://www.read.ai/plans-pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-05-24"
     },
     {
       "id": "readwise-pricing",
@@ -5401,7 +5408,8 @@
       "url": "https://www.recraft.ai/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-05-24"
     },
     {
       "id": "reflect-official",
@@ -5604,7 +5612,8 @@
       "url": "https://hyper3d.ai/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-05-24"
     },
     {
       "id": "rork-best-for",
@@ -6424,7 +6433,8 @@
       "url": "https://www.trae.ai/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-05-24"
     },
     {
       "id": "tripo3d-pricing",
@@ -6440,7 +6450,8 @@
       "url": "https://www.typeface.ai/platform",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-05-24"
     },
     {
       "id": "typeface-pricing",
@@ -6448,7 +6459,8 @@
       "url": "https://www.typeface.ai",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-05-24"
     },
     {
       "id": "typingmind-official",

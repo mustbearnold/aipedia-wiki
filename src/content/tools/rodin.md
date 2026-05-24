@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$60/month"
 status: active
 launched: 2024-05
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-05-24
+last_verified: 2026-05-24
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://hyper3d.ai/pricing"
     source_label: "Source"
     source_id: rodin-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-05-24
     volatility: medium
     confidence: medium
   pricing_anchor:
@@ -38,17 +38,17 @@ facts:
     source: "https://hyper3d.ai/pricing"
     source_label: "Source"
     source_id: rodin-pricing
-    verified_at: 2026-05-13
-    next_review_at: 2026-08-13
+    verified_at: 2026-05-24
+    next_review_at: 2026-08-24
     volatility: high
     confidence: medium
   watch_out_for:
-    value: "Non-Tier-1 canonical profile: verify current pricing, usage limits, data policy, and integration details before procurement"
+    value: "Rodin can produce high-detail assets, but topology cleanup, credit accounting, commercial rights, export quality, and API/web credit separation need hands-on testing before a studio standardizes on it."
     source: "https://hyper3d.ai/pricing"
     source_label: "Source"
     source_id: rodin-pricing
-    verified_at: 2026-05-13
-    next_review_at: 2026-08-13
+    verified_at: 2026-05-24
+    next_review_at: 2026-08-24
     volatility: high
     confidence: medium
 tags: [3d-generation, text-to-3d, image-to-3d, pbr-materials, part-segmentation, auto-rigging, photoreal, api, glb, fbx, usdz]
@@ -88,6 +88,14 @@ price_history:
     source_id: rodin-pricing
     verified_at: 2026-05-13
     note: "Re-verified May 13, 2026. Plus $15/mo, Pro $60/mo, Enterprise custom. Gen-2 (10B params, released Nov 6, 2025) remains the production default; fal.ai mirror still active under tripo3d publisher namespace."
+  - date: 2026-05-24
+    plan: "All tiers"
+    price: "Unchanged"
+    source: "https://hyper3d.ai/pricing"
+    source_label: "Source"
+    source_id: rodin-pricing
+    verified_at: 2026-05-24
+    note: "Pricing and API/docs surface rechecked. Keep evaluating credit consumption and topology cleanup with real assets before committing production pipelines."
 ---
 
 # Rodin
@@ -117,7 +125,7 @@ Outputs export to GLB, FBX, USDZ, and OBJ. The API runs on [hyper3d.ai](https://
 | **Platforms** | Web app · Blender plugin · REST API |
 | **Detail axis** | Strongest sculpted microstructure in a GA 3D model |
 
-Every data point above was verified against vendor sources on 2026-05-13. See Sources.
+Every data point above was verified against vendor sources on 2026-05-24. See Sources.
 
 ## What it actually is
 
@@ -155,7 +163,7 @@ Subscription pricing via [hyper3d.ai/pricing](https://hyper3d.ai/pricing). Credi
 | Pro | $60/mo | ~6,000/mo | Yes | **Working artists and small studios land here** |
 | Enterprise | Custom | Custom | Yes | Volume API, SAML SSO, negotiated credit pools |
 
-*Prices verified 2026-05-13 via [hyper3d.ai pricing](https://hyper3d.ai/pricing), the [docs.hyper3d.ai reference](https://docs.hyper3d.ai), and the [fal.ai Rodin listing](https://fal.ai/models/tripo3d/rodin). API credits are shared with the web plan.*
+*Prices verified 2026-05-24 via [hyper3d.ai pricing](https://hyper3d.ai/pricing), the [docs.hyper3d.ai reference](https://docs.hyper3d.ai), and the [fal.ai Rodin listing](https://fal.ai/models/tripo3d/rodin). Test credit consumption with your own generation modes before budgeting a production workflow.*
 
 ## Against the alternatives
 
@@ -184,7 +192,7 @@ Subscription pricing via [hyper3d.ai/pricing](https://hyper3d.ai/pricing). Credi
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [hyper3d.ai pricing](https://hyper3d.ai/pricing), the [Deemos homepage](https://www.deemos.com), the [docs.hyper3d.ai reference](https://docs.hyper3d.ai), and the [fal.ai Rodin listing](https://fal.ai/models/tripo3d/rodin).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-24 against [hyper3d.ai pricing](https://hyper3d.ai/pricing), the [Deemos homepage](https://www.deemos.com), the [docs.hyper3d.ai reference](https://docs.hyper3d.ai), and the [fal.ai Rodin listing](https://fal.ai/models/tripo3d/rodin).
 
 ## FAQ
 

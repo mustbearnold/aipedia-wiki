@@ -5,9 +5,9 @@ title: AI Design & App Building
 description: Current AI design tools and app builders for social creative, product design, design systems, web prototypes, full-stack apps, and Vercel-native UI workflows.
 tool_count: 9
 seo_title: "Best AI Design & App Builder Tools (May 2026)"
-meta_description: "Updated May 13, 2026: compare Canva AI, Figma, Midjourney, Adobe Firefly, Google Stitch, Lovable, Bolt.new, and v0 by buyer fit, pricing, workflow, and production risk."
+meta_description: "Updated May 24, 2026: compare Canva AI, Figma, Midjourney, Adobe Firefly, Recraft V4, Google Stitch, Lovable, Bolt.new, and v0 by buyer fit, pricing, workflow, and production risk."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-13
+last_updated: 2026-05-24
 last_verified: 2026-05-13
 update_frequency: weekly
 top_picks:
@@ -66,6 +66,8 @@ As of May 13, 2026, start with the job:
 **Best image ideation tool: Midjourney.** Use Midjourney when a designer or creative team needs many visual directions quickly. Do not mistake it for a design system, a brand-governed production surface, or a layout handoff tool.
 
 **Best Adobe workflow AI: Adobe Firefly.** Firefly is strongest when a team already works in Adobe's creative stack and wants generative work to connect with Photoshop, Illustrator, Express, Firefly web, and plan-based credits.
+
+**Best vector and text-heavy brand asset tool: Recraft.** Recraft V4 belongs in this category when the output is a logo draft, poster, packaging mockup, icon set, or SVG-style asset where readable text and editable shapes matter more than cinematic photorealism.
 
 **Best app builder for most founders: Lovable.** Choose Lovable when "AI design" really means "I want a working SaaS, internal tool, portal, marketplace, or app." The Pro and Business tiers are priced around credits and shared users, so it can be easier for a small team to try than a seat-heavy product design suite.
 
@@ -137,5 +139,5 @@ Do not make a wide table the only mobile experience. Mobile buyers need top pick
 - [v0 pricing](https://v0.app/pricing) (verified 2026-05-13)
 - [v0 documentation](https://v0.app/docs) (verified 2026-05-13)
 - [Magnific pricing](https://magnific.ai/pricing) (verified 2026-05-13; rebranded from Freepik on May 5, 2026)
-- [Recraft V4 docs](https://www.recraft.ai/docs/recraft-models/recraft-V4) (verified 2026-05-13)
+- [Recraft V4 docs](https://www.recraft.ai/docs/recraft-models/recraft-V4) (verified 2026-05-24)
 - [Ideogram plans](https://docs.ideogram.ai/plans-and-pricing/available-plans) (verified 2026-05-13)
