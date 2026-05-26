@@ -11,8 +11,8 @@ pricing_model: paid
 price_range: "$10-$40/month; Enterprise custom"
 status: active
 launched: 2021
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-05-26
+last_verified: 2026-05-26
 update_frequency: monthly
 seo_title: "BLACKBOX AI: Features, Pricing & Review (May 2026)"
 meta_description: "BLACKBOX AI is a multi-model coding assistant and agent platform. Pro is $10/mo, Pro Plus $20/mo, Pro Max $40/mo, with credits, Minimax-M2.5 agent requests, and Enterprise controls."
@@ -23,6 +23,8 @@ affiliate:
   cookie_days: null
   network: "PartnerStack / Cuelinks listings"
   link: null
+  application_status: none
+  notes: "2026-05-26 audit found third-party Cuelinks and AffiliateOtter listings, but no first-party BLACKBOX AI affiliate application page. Treat as verify-first, not apply-now."
 scores:
   utility: 7
   value: 8
@@ -122,7 +124,7 @@ The strongest appeal is obvious: lots of AI coding features at aggressive price 
 | **Enterprise** | Custom |
 | **Security controls** | ZDR on Pro+, E2E chat encryption on Pro Plus+, SAML SSO and advanced controls on Pro Max/Enterprise |
 | **Enterprise extras** | Training opt-out commitments, custom SLAs, on-prem / VPC / air-gapped deployment options |
-| **Affiliate signal** | Third-party affiliate directories list BLACKBOX programs, but AiPedia has no direct affiliate link configured |
+| **Affiliate signal** | Third-party affiliate directories list BLACKBOX programs, but first-party terms still need verification before any monetized CTA is used |
 
 ## What It Actually Is
 
@@ -211,7 +213,7 @@ Pro Plus is the practical tier for developers because it adds App Builder, multi
 Not for pure editor polish. BLACKBOX AI is broader and cheaper; Cursor is more focused as an AI IDE.
 
 **Does BLACKBOX AI have an affiliate program?**
-Third-party affiliate directories currently list BLACKBOX AI programs through Cuelinks and PartnerStack-style listings. AiPedia has no direct affiliate link configured, so treat this as an availability signal until network approval and terms are verified.
+Third-party affiliate directories currently list BLACKBOX AI programs through Cuelinks and PartnerStack-style listings. Treat this as an availability signal until network approval and terms are verified.
 
 ## Sources
 

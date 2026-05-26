@@ -10,15 +10,16 @@ pricing_model: paid
 price_range: "$47-$358+/month outreach; Lead Finder priced separately"
 status: active
 launched: 2021-10
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-05-26
+last_verified: 2026-05-26
 update_frequency: monthly
 affiliate:
   has_program: true
-  commission: "25%"
-  cookie_days: 30
-  network: null
+  commission: "20%-40% recurring commission by tier"
+  cookie_days: null
+  network: PartnerStack
   link: null
+  notes: "Official Instantly affiliate page verified 2026-05-26: PartnerStack-managed, Silver 20%, Gold 30%, Platinum 40% recurring; paid ads not allowed."
 scores:
   utility: 8
   value: 9

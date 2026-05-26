@@ -12,15 +12,16 @@ pricing_model: freemium
 price_range: $0-$149/month
 status: active
 launched: 2019-01
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-05-26
+last_verified: 2026-05-26
 update_frequency: monthly
 affiliate:
   has_program: true
-  commission: 15%
-  cookie_days: 30
-  network: null
+  commission: "20% recurring for 24 months"
+  cookie_days: null
+  network: direct
   link: null
+  notes: "Official LOVO affiliate page verified 2026-05-26: 20% recurring commission for 24 months, monthly payouts, approval usually about a week."
 scores:
   utility: 7
   value: 7

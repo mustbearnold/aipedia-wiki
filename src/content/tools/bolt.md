@@ -332,4 +332,4 @@ Bolt is broader as a browser development workspace. v0 is better when the buyer 
 - **More comparisons:** [Bolt.new vs ChatGPT](/compare/bolt-vs-chatgpt/) · [Bolt.new vs Cursor](/compare/bolt-vs-cursor/) · [Bolt.new vs Figma AI](/compare/bolt-vs-figma/) · [Bolt.new vs Google Stitch](/compare/bolt-vs-google-stitch/)
 - **Alternatives:** [Lovable](/tools/lovable/) · [v0](/tools/v0/) · [Replit Agent](/tools/replit-agent/) · [Cursor](/tools/cursor/) · [Claude](/tools/claude/)
 
-Commercial note: AiPedia uses the official Bolt.new URL because no affiliate program is configured. Editorial ratings and recommendations do not depend on affiliate availability.
+Commercial note: AiPedia uses the official Bolt.new URL for reader CTAs. Editorial ratings and recommendations do not depend on commercial relationships.

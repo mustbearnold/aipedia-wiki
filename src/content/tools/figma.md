@@ -329,4 +329,4 @@ No. It can help design, prototype, generate, inspect, and hand off code. Product
 - **More comparisons:** [Figma vs v0](/compare/figma-vs-v0/) · [Canva vs Figma](/compare/canva-vs-figma/) · [Figma vs Google Stitch](/compare/figma-vs-google-stitch/) · [Bolt vs Figma](/compare/bolt-vs-figma/)
 - **Alternatives:** [Lovable](/tools/lovable/) · [v0](/tools/v0/) · [Bolt.new](/tools/bolt/) · [Canva](/tools/canva/) · [Google Stitch](/tools/google-stitch/)
 
-Commercial note: AiPedia is using the official Figma URL for reader CTAs. No tracked affiliate publisher link is configured for Figma, and editorial recommendations do not depend on affiliate availability.
+Commercial note: AiPedia is using the official Figma URL for reader CTAs. Editorial recommendations do not depend on commercial relationships.

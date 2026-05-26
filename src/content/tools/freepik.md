@@ -10,15 +10,16 @@ pricing_model: freemium
 price_range: "$0-$158/month"
 status: active
 launched: 2023-06
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-05-26
+last_verified: 2026-05-26
 update_frequency: monthly
 affiliate:
   has_program: true
-  commission: "15%"
-  cookie_days: 30
-  network: null
+  commission: "Commission on new paid subscriptions; public landing page does not disclose rate"
+  cookie_days: null
+  network: Impact
   link: null
+  notes: "Official Freepik affiliate page verified 2026-05-26: join at freepik.com/affiliates with an Impact account; public page confirms paid-subscription commissions but does not disclose rate or cookie window."
 scores:
   utility: 8
   value: 9

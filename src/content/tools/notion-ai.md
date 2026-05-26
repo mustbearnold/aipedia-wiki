@@ -10,15 +10,17 @@ pricing_model: freemium
 price_range: "$0-$24/user/month"
 status: active
 launched: 2023-02
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-05-26
+last_verified: 2026-05-26
 update_frequency: monthly
 affiliate:
   has_program: true
-  commission: "referral credits (not traditional affiliate)"
+  commission: "Program currently not accepting new affiliates"
   cookie_days: null
-  network: direct
+  network: PartnerStack
   link: null
+  application_status: paused
+  notes: "Official Notion affiliate page verified 2026-05-26 says the program is currently not accepting new affiliates."
 scores:
   utility: 7
   value: 6

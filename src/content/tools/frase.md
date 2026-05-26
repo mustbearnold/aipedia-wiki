@@ -12,15 +12,16 @@ pricing_model: paid
 price_range: $49-$299+/month
 status: active
 launched: 2018-01
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-05-26
+last_verified: 2026-05-26
 update_frequency: monthly
 affiliate:
   has_program: true
-  commission: 30%
-  cookie_days: 30
+  commission: "30% recurring for 12 months"
+  cookie_days: 60
   network: direct
   link: null
+  notes: "Official Frase affiliate page verified 2026-05-26: 30% monthly commission for 12 months and 60-day cookie."
 scores:
   utility: 8
   value: 8

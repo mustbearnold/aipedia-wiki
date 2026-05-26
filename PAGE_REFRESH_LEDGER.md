@@ -407,7 +407,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /tools/activepieces/ | Tool | Yes | frontmatter | src/content/tools/activepieces.md |
 | 2026-05-13 | /tools/ada/ | Tool | Yes | frontmatter | src/content/tools/ada.md |
 | 2026-05-13 | /tools/adcreative/ | Tool | Yes | frontmatter | src/content/tools/adcreative.md |
-| 2026-05-13 | /tools/adobe-firefly/ | Tool | Yes | frontmatter | src/content/tools/adobe-firefly.md |
 | 2026-05-13 | /tools/ag2/ | Tool | Yes | frontmatter | src/content/tools/ag2.md |
 | 2026-05-13 | /tools/ahrefs/ | Tool | Yes | frontmatter | src/content/tools/ahrefs.md |
 | 2026-05-13 | /tools/aider/ | Tool | Yes | frontmatter | src/content/tools/aider.md |
@@ -416,14 +415,10 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /tools/amplemarket/ | Tool | Yes | frontmatter | src/content/tools/amplemarket.md |
 | 2026-05-13 | /tools/anythingllm/ | Tool | Yes | frontmatter | src/content/tools/anythingllm.md |
 | 2026-05-13 | /tools/apollo/ | Tool | Yes | frontmatter | src/content/tools/apollo.md |
-| 2026-05-13 | /tools/argil/ | Tool | Yes | frontmatter | src/content/tools/argil.md |
 | 2026-05-13 | /tools/assemblyai/ | Tool | Yes | frontmatter | src/content/tools/assemblyai.md |
 | 2026-05-13 | /tools/augment-code/ | Tool | Yes | frontmatter | src/content/tools/augment-code.md |
 | 2026-05-13 | /tools/base44/ | Tool | Yes | frontmatter | src/content/tools/base44.md |
 | 2026-05-13 | /tools/beautiful-ai/ | Tool | Yes | frontmatter | src/content/tools/beautiful-ai.md |
-| 2026-05-13 | /tools/beehiiv/ | Tool | Yes | frontmatter | src/content/tools/beehiiv.md |
-| 2026-05-13 | /tools/blackbox-ai/ | Tool | Yes | frontmatter | src/content/tools/blackbox-ai.md |
-| 2026-05-13 | /tools/bolt/ | Tool | Yes | frontmatter | src/content/tools/bolt.md |
 | 2026-05-13 | /tools/boomy/ | Tool | Yes | frontmatter | src/content/tools/boomy.md |
 | 2026-05-13 | /tools/browserbase/ | Tool | Yes | frontmatter | src/content/tools/browserbase.md |
 | 2026-05-13 | /tools/canva/ | Tool | Yes | frontmatter | src/content/tools/canva.md |
@@ -448,7 +443,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /tools/continue/ | Tool | Yes | frontmatter | src/content/tools/continue.md |
 | 2026-05-13 | /tools/copy-ai/ | Tool | Yes | frontmatter | src/content/tools/copy-ai.md |
 | 2026-05-13 | /tools/crewai/ | Tool | Yes | frontmatter | src/content/tools/crewai.md |
-| 2026-05-13 | /tools/d-id/ | Tool | Yes | frontmatter | src/content/tools/d-id.md |
 | 2026-05-13 | /tools/decktopus/ | Tool | Yes | frontmatter | src/content/tools/decktopus.md |
 | 2026-05-13 | /tools/deepgram/ | Tool | Yes | frontmatter | src/content/tools/deepgram.md |
 | 2026-05-13 | /tools/deepl/ | Tool | Yes | frontmatter | src/content/tools/deepl.md |
@@ -466,14 +460,11 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /tools/factory/ | Tool | Yes | frontmatter | src/content/tools/factory.md |
 | 2026-05-13 | /tools/fal-ai/ | Tool | Yes | frontmatter | src/content/tools/fal-ai.md |
 | 2026-05-13 | /tools/fathom/ | Tool | Yes | frontmatter | src/content/tools/fathom.md |
-| 2026-05-13 | /tools/figma/ | Tool | Yes | frontmatter | src/content/tools/figma.md |
 | 2026-05-13 | /tools/fireflies/ | Tool | Yes | frontmatter | src/content/tools/fireflies.md |
 | 2026-05-13 | /tools/fireworks-ai/ | Tool | Yes | frontmatter | src/content/tools/fireworks-ai.md |
 | 2026-05-13 | /tools/fish-audio/ | Tool | Yes | frontmatter | src/content/tools/fish-audio.md |
 | 2026-05-13 | /tools/flux/ | Tool | Yes | frontmatter | src/content/tools/flux.md |
 | 2026-05-13 | /tools/framer-ai/ | Tool | Yes | frontmatter | src/content/tools/framer-ai.md |
-| 2026-05-13 | /tools/frase/ | Tool | Yes | frontmatter | src/content/tools/frase.md |
-| 2026-05-13 | /tools/freepik/ | Tool | Yes | frontmatter | src/content/tools/freepik.md |
 | 2026-05-13 | /tools/galileo-ai/ | Tool | Yes | frontmatter | src/content/tools/galileo-ai.md |
 | 2026-05-13 | /tools/genspark/ | Tool | Yes | frontmatter | src/content/tools/genspark.md |
 | 2026-05-13 | /tools/getresponse/ | Tool | Yes | frontmatter | src/content/tools/getresponse.md |
@@ -493,7 +484,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /tools/helicone/ | Tool | Yes | frontmatter | src/content/tools/helicone.md |
 | 2026-05-13 | /tools/hermes-agent/ | Tool | Yes | frontmatter | src/content/tools/hermes-agent.md |
 | 2026-05-13 | /tools/hex/ | Tool | Yes | frontmatter | src/content/tools/hex.md |
-| 2026-05-13 | /tools/heygen/ | Tool | Yes | frontmatter | src/content/tools/heygen.md |
 | 2026-05-13 | /tools/higgsfield/ | Tool | Yes | frontmatter | src/content/tools/higgsfield.md |
 | 2026-05-13 | /tools/hireez/ | Tool | Yes | frontmatter | src/content/tools/hireez.md |
 | 2026-05-13 | /tools/hugging-face/ | Tool | Yes | frontmatter | src/content/tools/hugging-face.md |
@@ -502,11 +492,8 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /tools/hunyuan/ | Tool | Yes | frontmatter | src/content/tools/hunyuan.md |
 | 2026-05-13 | /tools/hyperwrite/ | Tool | Yes | frontmatter | src/content/tools/hyperwrite.md |
 | 2026-05-13 | /tools/ideogram/ | Tool | Yes | frontmatter | src/content/tools/ideogram.md |
-| 2026-05-13 | /tools/instantly/ | Tool | Yes | frontmatter | src/content/tools/instantly.md |
 | 2026-05-13 | /tools/intercom/ | Tool | Yes | frontmatter | src/content/tools/intercom.md |
-| 2026-05-13 | /tools/invideo/ | Tool | Yes | frontmatter | src/content/tools/invideo.md |
 | 2026-05-13 | /tools/jan-ai/ | Tool | Yes | frontmatter | src/content/tools/jan-ai.md |
-| 2026-05-13 | /tools/jasper/ | Tool | Yes | frontmatter | src/content/tools/jasper.md |
 | 2026-05-13 | /tools/jetbrains-ai/ | Tool | Yes | frontmatter | src/content/tools/jetbrains-ai.md |
 | 2026-05-13 | /tools/jimeng/ | Tool | Yes | frontmatter | src/content/tools/jimeng.md |
 | 2026-05-13 | /tools/julius/ | Tool | Yes | frontmatter | src/content/tools/julius.md |
@@ -526,9 +513,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /tools/llama/ | Tool | Yes | frontmatter | src/content/tools/llama.md |
 | 2026-05-13 | /tools/lm-studio/ | Tool | Yes | frontmatter | src/content/tools/lm-studio.md |
 | 2026-05-13 | /tools/logseq/ | Tool | Yes | frontmatter | src/content/tools/logseq.md |
-| 2026-05-13 | /tools/lovable/ | Tool | Yes | frontmatter | src/content/tools/lovable.md |
 | 2026-05-13 | /tools/lovart/ | Tool | Yes | frontmatter | src/content/tools/lovart.md |
-| 2026-05-13 | /tools/lovo/ | Tool | Yes | frontmatter | src/content/tools/lovo.md |
 | 2026-05-13 | /tools/luma/ | Tool | Yes | frontmatter | src/content/tools/luma.md |
 | 2026-05-13 | /tools/magnific/ | Tool | Yes | frontmatter | src/content/tools/magnific.md |
 | 2026-05-13 | /tools/make/ | Tool | Yes | frontmatter | src/content/tools/make.md |
@@ -549,7 +534,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /tools/napkin-ai/ | Tool | Yes | frontmatter | src/content/tools/napkin-ai.md |
 | 2026-05-13 | /tools/neuronwriter/ | Tool | Yes | frontmatter | src/content/tools/neuronwriter.md |
 | 2026-05-13 | /tools/notebooklm/ | Tool | Yes | frontmatter | src/content/tools/notebooklm.md |
-| 2026-05-13 | /tools/notion-ai/ | Tool | Yes | frontmatter | src/content/tools/notion-ai.md |
 | 2026-05-13 | /tools/obsidian/ | Tool | Yes | frontmatter | src/content/tools/obsidian.md |
 | 2026-05-13 | /tools/ollama/ | Tool | Yes | frontmatter | src/content/tools/ollama.md |
 | 2026-05-13 | /tools/open-webui/ | Tool | Yes | frontmatter | src/content/tools/open-webui.md |
@@ -590,20 +574,16 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /tools/semantic-scholar/ | Tool | Yes | frontmatter | src/content/tools/semantic-scholar.md |
 | 2026-05-13 | /tools/semrush/ | Tool | Yes | frontmatter | src/content/tools/semrush.md |
 | 2026-05-13 | /tools/servicenow/ | Tool | Yes | frontmatter | src/content/tools/servicenow.md |
-| 2026-05-13 | /tools/speechify/ | Tool | Yes | frontmatter | src/content/tools/speechify.md |
 | 2026-05-13 | /tools/spellbook/ | Tool | Yes | frontmatter | src/content/tools/spellbook.md |
 | 2026-05-13 | /tools/stable-audio/ | Tool | Yes | frontmatter | src/content/tools/stable-audio.md |
 | 2026-05-13 | /tools/stable-diffusion/ | Tool | Yes | frontmatter | src/content/tools/stable-diffusion.md |
 | 2026-05-13 | /tools/sudowrite/ | Tool | Yes | frontmatter | src/content/tools/sudowrite.md |
-| 2026-05-13 | /tools/suno/ | Tool | Yes | frontmatter | src/content/tools/suno.md |
 | 2026-05-13 | /tools/supermaven/ | Tool | Yes | frontmatter | src/content/tools/supermaven.md |
 | 2026-05-13 | /tools/surfer-seo/ | Tool | Yes | frontmatter | src/content/tools/surfer-seo.md |
-| 2026-05-13 | /tools/synthesia/ | Tool | Yes | frontmatter | src/content/tools/synthesia.md |
 | 2026-05-13 | /tools/tabnine/ | Tool | Yes | frontmatter | src/content/tools/tabnine.md |
 | 2026-05-13 | /tools/tactiq/ | Tool | Yes | frontmatter | src/content/tools/tactiq.md |
 | 2026-05-13 | /tools/taskade/ | Tool | Yes | frontmatter | src/content/tools/taskade.md |
 | 2026-05-13 | /tools/tavus/ | Tool | Yes | frontmatter | src/content/tools/tavus.md |
-| 2026-05-13 | /tools/tidio/ | Tool | Yes | frontmatter | src/content/tools/tidio.md |
 | 2026-05-13 | /tools/tines/ | Tool | Yes | frontmatter | src/content/tools/tines.md |
 | 2026-05-13 | /tools/together-ai/ | Tool | Yes | frontmatter | src/content/tools/together-ai.md |
 | 2026-05-13 | /tools/tripo3d/ | Tool | Yes | frontmatter | src/content/tools/tripo3d.md |
@@ -611,7 +591,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /tools/udio/ | Tool | Yes | frontmatter | src/content/tools/udio.md |
 | 2026-05-13 | /tools/uizard/ | Tool | Yes | frontmatter | src/content/tools/uizard.md |
 | 2026-05-13 | /tools/unbounce/ | Tool | Yes | frontmatter | src/content/tools/unbounce.md |
-| 2026-05-13 | /tools/v0/ | Tool | Yes | frontmatter | src/content/tools/v0.md |
 | 2026-05-13 | /tools/val-town/ | Tool | Yes | frontmatter | src/content/tools/val-town.md |
 | 2026-05-13 | /tools/vidu/ | Tool | Yes | frontmatter | src/content/tools/vidu.md |
 | 2026-05-13 | /tools/voiceflow/ | Tool | Yes | frontmatter | src/content/tools/voiceflow.md |
@@ -622,14 +601,12 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /tools/wellsaid/ | Tool | Yes | frontmatter | src/content/tools/wellsaid.md |
 | 2026-05-13 | /tools/whisper/ | Tool | Yes | frontmatter | src/content/tools/whisper.md |
 | 2026-05-13 | /tools/windsurf/ | Tool | Yes | frontmatter | src/content/tools/windsurf.md |
-| 2026-05-13 | /tools/wispr-flow/ | Tool | Yes | frontmatter | src/content/tools/wispr-flow.md |
 | 2026-05-13 | /tools/wordtune/ | Tool | Yes | frontmatter | src/content/tools/wordtune.md |
 | 2026-05-13 | /tools/workato/ | Tool | Yes | frontmatter | src/content/tools/workato.md |
 | 2026-05-13 | /tools/writer/ | Tool | Yes | frontmatter | src/content/tools/writer.md |
 | 2026-05-13 | /tools/writesonic/ | Tool | Yes | frontmatter | src/content/tools/writesonic.md |
 | 2026-05-13 | /tools/yi/ | Tool | Yes | frontmatter | src/content/tools/yi.md |
 | 2026-05-13 | /tools/you-com/ | Tool | Yes | frontmatter | src/content/tools/you-com.md |
-| 2026-05-13 | /tools/zapier/ | Tool | Yes | frontmatter | src/content/tools/zapier.md |
 | 2026-05-13 | /tools/zed/ | Tool | Yes | frontmatter | src/content/tools/zed.md |
 | 2026-05-13 | /trends/agent-commerce/ | Trend | Yes | frontmatter | src/content/trends/agent-commerce.md |
 | 2026-05-13 | /trends/ai-coding-model-arms-race/ | Trend | Yes | frontmatter | src/content/trends/ai-coding-model-arms-race.md |
@@ -743,7 +720,30 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-26 | /news/ | Static page | Yes | page metadata | src/pages/news/index.astro |
 | 2026-05-26 | /news/rss.xml | Crawl surface | No | git | src/pages/news/rss.xml.ts |
 | 2026-05-26 | /tools/ | Static page | Yes | git | src/pages/tools/index.astro |
+| 2026-05-26 | /tools/adobe-firefly/ | Tool | Yes | working tree | src/content/tools/adobe-firefly.md |
+| 2026-05-26 | /tools/argil/ | Tool | Yes | working tree | src/content/tools/argil.md |
+| 2026-05-26 | /tools/beehiiv/ | Tool | Yes | working tree | src/content/tools/beehiiv.md |
+| 2026-05-26 | /tools/blackbox-ai/ | Tool | Yes | working tree | src/content/tools/blackbox-ai.md |
+| 2026-05-26 | /tools/bolt/ | Tool | Yes | working tree | src/content/tools/bolt.md |
 | 2026-05-26 | /tools/claude/ | Tool | Yes | frontmatter | src/content/tools/claude.md |
 | 2026-05-26 | /tools/cloudtalk/ | Tool | Yes | frontmatter | src/content/tools/cloudtalk.md |
 | 2026-05-26 | /tools/cursor/ | Tool | Yes | frontmatter | src/content/tools/cursor.md |
+| 2026-05-26 | /tools/d-id/ | Tool | Yes | working tree | src/content/tools/d-id.md |
+| 2026-05-26 | /tools/figma/ | Tool | Yes | working tree | src/content/tools/figma.md |
+| 2026-05-26 | /tools/frase/ | Tool | Yes | working tree | src/content/tools/frase.md |
+| 2026-05-26 | /tools/freepik/ | Tool | Yes | working tree | src/content/tools/freepik.md |
+| 2026-05-26 | /tools/heygen/ | Tool | Yes | working tree | src/content/tools/heygen.md |
+| 2026-05-26 | /tools/instantly/ | Tool | Yes | working tree | src/content/tools/instantly.md |
+| 2026-05-26 | /tools/invideo/ | Tool | Yes | working tree | src/content/tools/invideo.md |
+| 2026-05-26 | /tools/jasper/ | Tool | Yes | working tree | src/content/tools/jasper.md |
+| 2026-05-26 | /tools/lovable/ | Tool | Yes | working tree | src/content/tools/lovable.md |
+| 2026-05-26 | /tools/lovo/ | Tool | Yes | working tree | src/content/tools/lovo.md |
 | 2026-05-26 | /tools/meetgeek/ | Tool | Yes | frontmatter | src/content/tools/meetgeek.md |
+| 2026-05-26 | /tools/notion-ai/ | Tool | Yes | working tree | src/content/tools/notion-ai.md |
+| 2026-05-26 | /tools/speechify/ | Tool | Yes | working tree | src/content/tools/speechify.md |
+| 2026-05-26 | /tools/suno/ | Tool | Yes | working tree | src/content/tools/suno.md |
+| 2026-05-26 | /tools/synthesia/ | Tool | Yes | working tree | src/content/tools/synthesia.md |
+| 2026-05-26 | /tools/tidio/ | Tool | Yes | working tree | src/content/tools/tidio.md |
+| 2026-05-26 | /tools/v0/ | Tool | Yes | working tree | src/content/tools/v0.md |
+| 2026-05-26 | /tools/wispr-flow/ | Tool | Yes | working tree | src/content/tools/wispr-flow.md |
+| 2026-05-26 | /tools/zapier/ | Tool | Yes | working tree | src/content/tools/zapier.md |

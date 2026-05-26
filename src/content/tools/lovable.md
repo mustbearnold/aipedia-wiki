@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$4,300+/mo"
 status: active
 launched: 2024-09
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-05-26
+last_verified: 2026-05-26
 update_frequency: monthly
 seo_title: "Lovable Review: Pricing, Credits, Supabase & Best Plan (May 2026)"
 meta_description: "Updated May 13, 2026: Lovable pricing, credits, Lovable Cloud, Supabase, GitHub sync, best plan, alternatives, and production risks for AI app-builder buyers."
@@ -20,11 +20,11 @@ primary_cta_label: "Start with Lovable free"
 best_plan: "Pro 100 credits at $25/month"
 affiliate:
   has_program: true
-  commission: null
-  cookie_days: 60
-  network: "Lovable Affiliate Program (in-house)"
+  commission: "Up to $100 for each first-time subscriber"
+  cookie_days: null
+  network: Impact
   link: null
-  notes: "Affiliate application page found, but no tracked publisher signup link is configured. Use the official Lovable URL as the reader CTA until a tracked affiliate link is approved."
+  notes: "Official Lovable affiliate page verified 2026-05-26: application through Impact, up to $100 for each first-time subscriber, dashboard and marketing resources after approval."
 scores:
   utility: 9
   value: 8
@@ -298,4 +298,4 @@ Lovable is broader for MVPs. v0 is stronger when the buyer specifically wants Ve
 - **More comparisons:** [ChatGPT vs Lovable](/compare/chatgpt-vs-lovable/) · [Cursor vs Lovable](/compare/cursor-vs-lovable/) · [Figma AI vs Lovable](/compare/figma-vs-lovable/) · [Google Stitch vs Lovable](/compare/google-stitch-vs-lovable/)
 - **Alternatives:** [Bolt.new](/tools/bolt/) · [v0](/tools/v0/) · [Replit Agent](/tools/replit-agent/) · [Cursor](/tools/cursor/) · [Claude](/tools/claude/)
 
-Commercial note: AiPedia is using the official Lovable URL for reader CTAs until a tracked affiliate link is configured. Editorial ratings and recommendations do not depend on affiliate availability.
+Commercial note: AiPedia is using the official Lovable URL for reader CTAs. Editorial ratings and recommendations do not depend on commercial relationships.

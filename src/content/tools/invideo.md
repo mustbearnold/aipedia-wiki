@@ -10,15 +10,16 @@ pricing_model: freemium
 price_range: "$0-$100/month"
 status: active
 launched: 2019-07
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-05-26
+last_verified: 2026-05-26
 update_frequency: monthly
 affiliate:
   has_program: true
-  commission: "25%"
-  cookie_days: 30
-  network: null
+  commission: "50% on monthly plans and 25% on annual plans for the first billing cycle"
+  cookie_days: 120
+  network: Impact
   link: null
+  notes: "InVideo help center verified 2026-05-26: Impact-managed affiliate rewards, 120-day referral window, 50% monthly / 25% annual first-cycle commission."
 scores:
   utility: 8
   value: 9

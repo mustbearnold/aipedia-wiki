@@ -12,15 +12,16 @@ pricing_model: freemium
 price_range: $0-$24/month
 status: active
 launched: 2023-12
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-05-26
+last_verified: 2026-05-26
 update_frequency: monthly
 affiliate:
-  has_program: true
-  commission: ~20%
-  cookie_days: 30
+  has_program: false
+  commission: null
+  cookie_days: null
   network: null
   link: null
+  notes: "No official public Suno affiliate signup page or approved AiPedia affiliate link found during 2026-05-26 audit; keep reader CTAs on official non-affiliate links unless Suno supplies an approved partner route."
 scores:
   utility: 9
   value: 9
@@ -354,4 +355,4 @@ No official public one. Suno runs beta access for select partners only and expli
 - [Digital Music News: Universal Music + Suno impasse](https://www.digitalmusicnews.com/2026/04/09/suno-universal-music-lawsuit-settlement-impasse/) · April 2026 status of open cases
 - [MusicTech: Suno Studio review](https://musictech.com/reviews/digital-audio-workstations/suno-studio-review/) · Studio 1.2, MILO-1080 sequencer
 
-*Some links on this page are affiliate links. Commission does not influence ratings or recommendations.*
+*Editorial ratings and recommendations do not depend on commercial relationships.*

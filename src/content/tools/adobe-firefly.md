@@ -12,15 +12,16 @@ pricing_model: freemium
 price_range: $0-$199.99/month
 status: active
 launched: 2023-03
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-05-26
+last_verified: 2026-05-26
 update_frequency: monthly
 affiliate:
   has_program: true
-  commission: ~85% first month
-  cookie_days: 30
-  network: CJ Affiliate
+  commission: "85% of the first month's subscription price on eligible Adobe plans"
+  cookie_days: null
+  network: Partnerize
   link: null
+  notes: "Official Adobe affiliate page verified 2026-05-26: application via Partnerize and 85% of the first month's subscription price on eligible plans; public page did not expose a cookie window."
 scores:
   utility: 7
   value: 7

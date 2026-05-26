@@ -10,15 +10,16 @@ pricing_model: paid
 price_range: "$39-$499/month; Enterprise custom"
 status: active
 launched: 2023-06
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-05-26
+last_verified: 2026-05-26
 update_frequency: weekly
 affiliate:
   has_program: true
-  commission: null
+  commission: "Application page live; exact approved payout requires Tolt dashboard/approval"
   cookie_days: null
   network: Tolt
   link: null
+  notes: "Official Argil affiliation page verified 2026-05-26: apply via argil.tolt.io; public page shows an affiliate funnel but exact approved terms require dashboard confirmation."
 scores:
   utility: 8
   value: 8
@@ -130,7 +131,7 @@ Argil is an AI avatar and creator-video platform built for UGC ads, social video
 - **Credits:** Classic 1,600/month, Pro 6,000/month, Scale 18,000/month.
 - **Pro upgrade:** current pricing explicitly lists Seedance 2.0 videos, unlimited avatar styles, style editing, and fast generation.
 - **API:** current pricing and docs reference API access and API pricing/docs, but high-volume API licensing should still be verified directly before building automation.
-- **Affiliate opportunity:** Argil's public site links to an affiliate program through Tolt, but AiPedia does not yet have a configured buyer affiliate deep link.
+- **Affiliate opportunity:** Argil's public site links to an affiliate program through Tolt; exact dashboard terms should be confirmed before using monetized CTAs.
 
 Verified against Argil official pages on 2026-05-13.
 

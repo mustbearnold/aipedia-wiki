@@ -10,15 +10,16 @@ pricing_model: freemium
 price_range: "$0-$249/year (consumer) + separate Studio and API tiers"
 status: active
 launched: 2017-01
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-05-26
+last_verified: 2026-05-26
 update_frequency: monthly
 affiliate:
   has_program: true
-  commission: "30%"
+  commission: "40% of every referred sale"
   cookie_days: 30
-  network: null
+  network: direct
   link: null
+  notes: "Official Speechify affiliate page verified 2026-05-26: 40% of every sale with 30-day cookies; page FAQ also references paid-plan qualification after clicks, so confirm dashboard terms after approval."
 scores:
   utility: 8
   value: 7

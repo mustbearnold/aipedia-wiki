@@ -224,7 +224,7 @@ Yes. The pricing page lists Mac, Windows, iPhone, and Android support for Pro un
 No. Wispr's Command Mode help page says it requires a paid subscription or active free trial and is available on Mac and Windows.
 
 **Does Wispr Flow have an affiliate program?**
-Yes. The public Dub partner page lists 25% per sale for the first year and a 60-day cookie. AiPedia does not currently have a tracked Wispr Flow affiliate link configured, so the CTA should use the official product link unless an approved tracking link is added.
+Yes. The public Dub partner page lists 25% per sale for the first year and a 60-day cookie. Reader CTAs should use the official product link unless approved tracking is added with nearby disclosure.
 
 **Is Wispr Flow a voice agent?**
 No. Wispr Flow is a dictation and writing tool. Use a voice-agent platform for phone automation.

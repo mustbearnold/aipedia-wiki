@@ -14,15 +14,16 @@ pricing_model: freemium
 price_range: "$0-$99+/month"
 status: active
 launched: 2021-11
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-05-26
+last_verified: 2026-05-26
 update_frequency: monthly
 affiliate:
   has_program: true
-  commission: "50% first 12 months"
-  cookie_days: 30
+  commission: "Up to 60% of referral payments for 12 months"
+  cookie_days: 60
   network: "PartnerStack"
   link: null
+  notes: "Official beehiiv partner page verified 2026-05-26: up to 60% for 12 months, 60-day cookie, apply via beehiiv partner page."
 scores:
   utility: 8
   value: 8

@@ -10,16 +10,17 @@ pricing_model: freemium
 price_range: $0-$69+/month
 status: active
 launched: 2012-01
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-05-26
+last_verified: 2026-05-26
 update_frequency: monthly
 affiliate:
   has_program: true
-  commission: null
-  cookie_days: 90
-  network: In-house / PartnerStack
+  commission: "Partner/referral benefits only; no regular-user public affiliate program found"
+  cookie_days: null
+  network: Zapier Partner Program
   link: null
-  notes: "Program page found, but no tracked publisher signup link is configured. Do not use the partner-program application page as a reader CTA."
+  application_status: paused
+  notes: "Zapier partner pages and community guidance verified 2026-05-26: Zapier has integration/solution/creator partner paths and partner referral benefits, not a standard public affiliate program for regular users."
 scores:
   utility: 8
   value: 6

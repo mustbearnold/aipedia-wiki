@@ -10,16 +10,16 @@ pricing_model: freemium
 price_range: "$0, Creator $29/mo, Pro $99/mo, Business $149/mo plus seats, Enterprise custom; API pay-as-you-go is separate"
 status: active
 launched: 2022-11
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-05-26
+last_verified: 2026-05-26
 update_frequency: weekly
 affiliate:
   has_program: true
-  commission: null
+  commission: "35% recurring for the first 3 months on Creator and Team plans"
   cookie_days: 30
   network: direct
   link: null
-  notes: "Affiliate application page found, but no tracked publisher signup link is configured. Do not use the affiliate-program page as a reader CTA."
+  notes: "Official HeyGen affiliate programme page verified 2026-05-26: 35% for 3 months, 30-day last-click attribution, PayPal payouts after validation."
 scores:
   utility: 9
   value: 8

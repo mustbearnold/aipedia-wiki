@@ -12,17 +12,17 @@ pricing_model: freemium
 price_range: $0-$2999+/month
 status: active
 launched: 2013-01
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-05-26
+last_verified: 2026-05-26
 update_frequency: monthly
 affiliate:
   has_program: true
-  commission: 25% recurring (PartnerStack)
-  cookie_days: null
-  network: PartnerStack
+  commission: "Up to 30% lifetime recurring"
+  cookie_days: 30
+  network: direct
   link: null
   application_status: none
-  notes: "PartnerStack listing seen during 2026-05-13 audit; commission terms quoted but not yet applied for."
+  notes: "Official Tidio affiliate page and help article verified 2026-05-26: up to 30% recurring, 30-day cookie, $50 payout threshold, no paid-search promotion."
 scores:
   utility: 8
   value: 6

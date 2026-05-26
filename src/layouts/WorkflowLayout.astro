@@ -132,12 +132,9 @@ function roleFor(slug: string, title: string): string {
 }
 
 const stackOrder = stack.map((t) => roleFor(t.slug, t.title)).join(' -> ');
-const affiliateSummary = affiliateStack.length > 0
-  ? `${affiliateStack.length} affiliate link${affiliateStack.length === 1 ? '' : 's'} disclosed near the stack.`
-  : 'No affiliate-active stack tools detected.';
-const nonAffiliateSummary = nonAffiliateStack.length > 0
-  ? `${nonAffiliateStack.length} official fallback link${nonAffiliateStack.length === 1 ? '' : 's'}.`
-  : 'All stack CTAs have affiliate disclosure.';
+const commercialSummary = affiliateStack.length > 0
+  ? 'Commercial relationships are disclosed beside monetized CTAs.'
+  : 'Reader CTAs point to official vendor pages.';
 const leadToolCopy = leadTool
   ? `Buy ${leadTool.title} first when ${roleFor(leadTool.slug, leadTool.title).toLowerCase()} is the bottleneck. Add the rest only after it saves time every week.`
   : 'Buy the workflow by bottleneck, not by subscribing to every tool at once.';
@@ -216,7 +213,7 @@ const relatedItems = related.length > 0 ? related : fallbackRelated;
         </div>
         <div class="wf-snapshot-card">
           <p class="wf-snapshot-kicker">Commercial check</p>
-          <p>{affiliateSummary} {nonAffiliateSummary} Verify plan limits before committing annually.</p>
+          <p>{commercialSummary} Verify plan limits before committing annually.</p>
         </div>
         <div class="wf-snapshot-card wf-snapshot-warning">
           <p class="wf-snapshot-kicker">Skip if</p>

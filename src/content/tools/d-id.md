@@ -10,15 +10,16 @@ pricing_model: paid
 price_range: "Free trial; paid Studio and API plans"
 status: active
 launched: 2017-01
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-05-26
+last_verified: 2026-05-26
 update_frequency: weekly
 affiliate:
   has_program: true
-  commission: "20%"
-  cookie_days: 30
-  network: null
+  commission: "Lower of the first two complete monthly net subscription payments, minus taxes/refunds/payment fee"
+  cookie_days: null
+  network: direct
   link: null
+  notes: "Official D-ID affiliate terms verified 2026-05-26: selected-user program, payment only after two consecutive paid months, minimum $30 accumulated fee."
 scores:
   utility: 8
   value: 6

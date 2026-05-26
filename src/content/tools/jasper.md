@@ -11,8 +11,8 @@ pricing_model: paid
 price_range: '$59-$69/month (Business: custom)'
 status: active
 launched: 2021-01
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-05-26
+last_verified: 2026-05-26
 update_frequency: monthly
 seo_title: 'Jasper: Features, Pricing & Review (May 2026)'
 meta_description: >-
@@ -20,11 +20,12 @@ meta_description: >-
 author: aipedia.wiki Editorial
 affiliate:
   has_program: true
-  commission: null
+  commission: "25% recurring on commissionable plans; 30% tier requires Jasper performance milestones"
   cookie_days: 30
   network: Jasper Affiliate Program (in-house)
   link: null
-  notes: "Program page found, but no tracked publisher signup link is configured. Do not use the partner-program application page as a reader CTA."
+  application_status: paused
+  notes: "Jasper affiliate legal terms verified 2026-05-26, but partners.jasper.ai returned campaign-not-public during audit. Treat as contact/partner-route only until Jasper opens a public application."
 scores:
   utility: 6
   value: 5

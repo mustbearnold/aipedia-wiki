@@ -10,15 +10,16 @@ pricing_model: freemium
 price_range: "Basic free, Starter $29/mo monthly or $18/mo annual, Creator $89/mo monthly or $64/mo annual, Enterprise custom"
 status: active
 launched: 2017-01
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-05-26
+last_verified: 2026-05-26
 update_frequency: weekly
 affiliate:
   has_program: true
   commission: "25%"
-  cookie_days: 30
-  network: null
+  cookie_days: 60
+  network: direct
   link: null
+  notes: "Official Synthesia affiliate page verified 2026-05-26: 25% commission on Starter and Creator plan payments with a 60-day cookie."
 scores:
   utility: 8
   value: 7
