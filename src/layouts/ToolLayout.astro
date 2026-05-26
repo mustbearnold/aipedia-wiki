@@ -744,6 +744,19 @@ const tocItems = (headings ?? [])
       text-decoration: none;
       border-bottom: 1px solid currentColor;
     }
+    .gt-body :global(.not-prose a.t2-pricing-card-cta),
+    .gt-body :global(.not-prose a.gt-btn-primary),
+    .gt-body :global(.not-prose a.t2-cta-primary) {
+      color: var(--gt-on-accent);
+      -webkit-text-fill-color: var(--gt-on-accent);
+      border-bottom: none;
+    }
+    .gt-body :global(.not-prose a.t2-pricing-card-cta:hover),
+    .gt-body :global(.not-prose a.gt-btn-primary:hover),
+    .gt-body :global(.not-prose a.t2-cta-primary:hover) {
+      border-bottom: none;
+      text-decoration: none;
+    }
     .gt-body :global(blockquote) {
       margin: 18px 0;
       padding: 12px 16px;

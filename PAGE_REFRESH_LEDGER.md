@@ -726,24 +726,24 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-24 | /tools/trae/ | Tool | Yes | frontmatter | src/content/tools/trae.md |
 | 2026-05-24 | /tools/typeface/ | Tool | Yes | frontmatter | src/content/tools/typeface.md |
 | 2026-05-26 | / | Static page | Yes | git | src/pages/index.astro |
-| 2026-05-26 | /categories/ | Static page | Yes | working tree | src/pages/categories/index.astro |
-| 2026-05-26 | /categories/ai-automation/ | Category | Yes | working tree | src/content/categories/ai-automation.md |
+| 2026-05-26 | /categories/ | Static page | Yes | git | src/pages/categories/index.astro |
+| 2026-05-26 | /categories/ai-automation/ | Category | Yes | frontmatter | src/content/categories/ai-automation.md |
 | 2026-05-26 | /categories/ai-chatbots/ | Category | Yes | frontmatter | src/content/categories/ai-chatbots.md |
 | 2026-05-26 | /categories/ai-coding/ | Category | Yes | frontmatter | src/content/categories/ai-coding.md |
-| 2026-05-26 | /categories/ai-notes/ | Category | Yes | working tree | src/content/categories/ai-notes.md |
+| 2026-05-26 | /categories/ai-notes/ | Category | Yes | frontmatter | src/content/categories/ai-notes.md |
 | 2026-05-26 | /categories/ai-search/ | Category | Yes | frontmatter | src/content/categories/ai-search.md |
-| 2026-05-26 | /categories/ai-voice/ | Category | Yes | working tree | src/content/categories/ai-voice.md |
-| 2026-05-26 | /guides/ | Static page | Yes | working tree | src/pages/guides/index.astro |
-| 2026-05-26 | /guides/best-ai-for-meeting-notes/ | Guide | Yes | working tree | src/content/use-cases/best-ai-for-meeting-notes.md |
-| 2026-05-26 | /guides/best-ai-meeting-assistant-for-customer-success-teams/ | Guide | Yes | working tree | src/content/use-cases/best-ai-meeting-assistant-for-customer-success-teams.md |
-| 2026-05-26 | /guides/best-ai-phone-system-for-smb-sales-and-support-teams/ | Guide | Yes | working tree | src/content/use-cases/best-ai-phone-system-for-smb-sales-and-support-teams.md |
-| 2026-05-26 | /guides/otter-ai-alternatives/ | Guide | No | working tree | src/content/use-cases/otter-ai-alternatives.md |
-| 2026-05-26 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
-| 2026-05-26 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
+| 2026-05-26 | /categories/ai-voice/ | Category | Yes | frontmatter | src/content/categories/ai-voice.md |
+| 2026-05-26 | /guides/ | Static page | Yes | git | src/pages/guides/index.astro |
+| 2026-05-26 | /guides/best-ai-for-meeting-notes/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-meeting-notes.md |
+| 2026-05-26 | /guides/best-ai-meeting-assistant-for-customer-success-teams/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-meeting-assistant-for-customer-success-teams.md |
+| 2026-05-26 | /guides/best-ai-phone-system-for-smb-sales-and-support-teams/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-phone-system-for-smb-sales-and-support-teams.md |
+| 2026-05-26 | /guides/otter-ai-alternatives/ | Guide | No | frontmatter | src/content/use-cases/otter-ai-alternatives.md |
+| 2026-05-26 | /llms-full.txt | Crawl surface | No | git | src/pages/llms-full.txt.ts |
+| 2026-05-26 | /llms.txt | Crawl surface | No | git | src/pages/llms.txt.ts |
 | 2026-05-26 | /news/ | Static page | Yes | page metadata | src/pages/news/index.astro |
-| 2026-05-26 | /news/rss.xml | Crawl surface | No | working tree | src/pages/news/rss.xml.ts |
-| 2026-05-26 | /tools/ | Static page | Yes | working tree | src/pages/tools/index.astro |
+| 2026-05-26 | /news/rss.xml | Crawl surface | No | git | src/pages/news/rss.xml.ts |
+| 2026-05-26 | /tools/ | Static page | Yes | git | src/pages/tools/index.astro |
 | 2026-05-26 | /tools/claude/ | Tool | Yes | frontmatter | src/content/tools/claude.md |
-| 2026-05-26 | /tools/cloudtalk/ | Tool | Yes | working tree | src/content/tools/cloudtalk.md |
+| 2026-05-26 | /tools/cloudtalk/ | Tool | Yes | frontmatter | src/content/tools/cloudtalk.md |
 | 2026-05-26 | /tools/cursor/ | Tool | Yes | frontmatter | src/content/tools/cursor.md |
-| 2026-05-26 | /tools/meetgeek/ | Tool | Yes | working tree | src/content/tools/meetgeek.md |
+| 2026-05-26 | /tools/meetgeek/ | Tool | Yes | frontmatter | src/content/tools/meetgeek.md |
