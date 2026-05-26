@@ -207,7 +207,42 @@ const sourceHosts = Array.from(new Set(sources.map((source) => host(source.url))
   .news-impact-links > div.home-surface-inner > div {
     display: flex;
     flex-wrap: wrap;
-    gap: 7px;
+    gap: 8px;
+  }
+
+  .news-impact-links .home-surface-pill-link {
+    display: inline-flex;
+    align-items: center;
+    max-width: 100%;
+    min-height: 34px;
+    gap: 8px;
+    padding: 6px 10px;
+    border: 1px solid rgba(249, 115, 22, 0.22);
+    border-radius: 999px;
+    background: rgba(12, 10, 9, 0.42);
+    color: var(--home-on-card);
+    font-size: 12.5px;
+    font-weight: 780;
+    line-height: 1.1;
+    text-decoration: none;
+    box-sizing: border-box;
+  }
+
+  .news-impact-links .home-surface-pill-link:hover {
+    border-color: rgba(249, 115, 22, 0.5);
+    color: var(--home-accent);
+    background: rgba(249, 115, 22, 0.08);
+  }
+
+  .news-impact-links .home-surface-pill-link :global(.tool-logo) {
+    width: 22px !important;
+    height: 22px !important;
+    border-radius: 6px !important;
+  }
+
+  .news-impact-links .home-surface-pill-link span {
+    min-width: 0;
+    overflow-wrap: anywhere;
   }
 
   @media (max-width: 780px) {

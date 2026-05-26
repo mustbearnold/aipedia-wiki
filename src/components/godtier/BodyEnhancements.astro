@@ -33,7 +33,9 @@ const {
 
     function styleSources() {
       if (!enhanceSources) return;
-      var heading = document.querySelector('article.gt-body #sources');
+      var heading = Array.prototype.slice.call(document.querySelectorAll('article.gt-body #sources')).find(function (candidate) {
+        return !candidate.closest('.not-prose');
+      });
       if (!heading || heading.dataset.gtSourcesStyled === '1') return;
 
       var nodes = [];

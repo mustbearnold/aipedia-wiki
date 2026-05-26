@@ -2,10 +2,10 @@
 type: category
 slug: ai-automation
 title: AI Automation & Agents
-description: Current workflow automation, AI agent platforms, and operations tools for technical teams, non-technical operators, GTM workflows, support, sales, and internal automation.
-tool_count: 24
+description: Current workflow automation, AI agent platforms, meeting automation, call automation, and operations tools for technical teams, non-technical operators, GTM workflows, customer success, support, sales, and internal automation.
+tool_count: 25
 seo_title: "Best AI Automation Tools & Agent Platforms (May 2026)"
-meta_description: "Updated May 26, 2026: compare n8n, Zapier, Make, Gumloop, Relevance AI, Lindy, Manus, Pipedream, CrewAI, Microsoft agent research, Apollo, Clay, Intercom, and Instantly by workflow fit, pricing unit, integrations, and governance."
+meta_description: "Updated May 26, 2026: compare n8n, Zapier, Make, Gumloop, Relevance AI, Lindy, Manus, Pipedream, CloudTalk, MeetGeek, Apollo, Clay, Intercom, and Instantly by workflow fit, pricing unit, integrations, and governance."
 author: "aipedia.wiki Editorial"
 last_updated: 2026-05-26
 last_verified: 2026-05-26
@@ -36,6 +36,10 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 
 **Use [Relevance AI](/tools/relevance-ai/) when the purchase question is an AI workforce.** Relevance AI's current pricing page lists actions, vendor credits, workforces, unlimited agents/tools, 2000+ integrations, scheduling, escalations, and BYO LLM on paid plans.
 
+**Use [CloudTalk](/tools/cloudtalk/) when automation starts with phone operations.** CloudTalk is not a generic workflow router. It is the better fit when a sales or support team needs cloud calling, routing, dialers, CRM call logging, AI summaries, coaching analytics, and optional AI voice agents in one system.
+
+**Use [MeetGeek](/tools/meetgeek/) when automation starts with meetings.** MeetGeek is the better fit when customer success, sales, recruiting, or implementation teams need meeting transcripts, summaries, action items, AI Chat, Zapier/Make/n8n workflows, API/MCP access, and CRM/task handoff from customer calls.
+
 **Watch Microsoft's MagenticLite research if you are evaluating local or small-model agents.** The May 22 Microsoft Research release is experimental rather than a production automation platform, but it reinforces a practical buying rule: agent quality depends on harness design, sandboxing, context management, delegation, and approval points as much as raw model size.
 
 ## Buyer Paths
@@ -47,6 +51,8 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 | Visual scenario building and branching workflows | [Make](/tools/make/) | Strong visual canvas, routers, filters, credits, and 3000+ apps | Credit use depends on scenario design and frequency |
 | Agent-heavy workflows and modern automation teams | [Gumloop](/tools/gumloop/) | AI-native flows, unlimited agents/flows, policies, guardrails, and MCP support | Credit usage must be tested with real production tasks |
 | Delegated GTM, research, support, and ops agents | [Relevance AI](/tools/relevance-ai/) | AI workforces, actions, vendor credits, scheduling, escalations, and marketplace patterns | Not the cheapest generic workflow router |
+| Phone-heavy sales/support operations | [CloudTalk](/tools/cloudtalk/) | Business calling, routing, dialers, CRM sync, AI Conversation Intelligence, and AI Voice Agents in one platform | More than teams need if the job is internal-only calling or pure chat support |
+| Meeting-to-workflow automation for CS, sales, recruiting, and ops | [MeetGeek](/tools/meetgeek/) | Transcripts, summaries, AI Chat, action items, Zapier/Make/n8n workflows, API/MCP access, and CRM/task handoff from meeting content | Needs consent policy, workspace permissions, and a defined post-meeting workflow |
 | One-off general autonomous tasks | [Manus](/tools/manus/) | Hosted VM agent for research, spreadsheets, slides, files, and browser work; official site now describes Manus as part of Meta | Credit burn and data-handling terms need direct verification before sensitive work |
 | Inbox, calendar, meeting, and follow-up assistant | [Lindy](/tools/lindy/) | Assistant-style automation for professionals who want delegation, not a blank canvas | Connected inboxes and usage tiers shape the real plan |
 | Developer API workflows and embedded integrations | [Pipedream](/tools/pipedream/) | Developer-friendly workflows, Connect, MCP servers, and credit-based compute under Workday ownership | Requires more technical judgment than Zapier or Make; ask how Workday packaging affects enterprise rollout |
@@ -69,6 +75,8 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 - [AI automation agency tech stack](/guides/ai-agency-stack/) is now the agency delivery-stack page for n8n, Zapier, Make, Claude, ChatGPT, voice agents, Browserbase, and client dashboard decisions. Keep it aligned with the May 13 verified [best AI tools for agencies](/guides/best-ai-tools-for-agencies/), sales, support, and lead-generation updates.
 - [AI lead generation stack](/guides/ai-lead-generation/), the May 13 verified [cold-email buyer guide](/guides/best-ai-for-cold-email/), and the May 13 verified [sales-team AI tools guide](/guides/best-ai-tools-for-sales-teams/) now cover Apollo, Clay, Amplemarket, Instantly, and n8n as a buyer flow for prospect data, enrichment, sender handoff, deliverability, and GTM automation. Keep them synchronized with sales-team and agency pages.
 - [Best AI tools for customer support](/guides/best-ai-tools-for-customer-support/) is the support-automation buyer guide for Intercom, Voiceflow, Ada, and Retell AI. Keep it synchronized with Intercom/Fin outcome pricing, Voiceflow credit billing, Ada enterprise CX positioning, and voice-agent workflow guidance.
+- [Best AI phone system for SMB sales and support teams](/guides/best-ai-phone-system-for-smb-sales-and-support-teams/) is the CloudTalk money page for teams that need phone operations, CRM logging, AI conversation intelligence, coaching, and a path to AI voice agents.
+- [Best AI meeting assistant for customer success teams](/guides/best-ai-meeting-assistant-for-customer-success-teams/) is the MeetGeek money page for teams that need customer calls to become account memory, action items, CRM/task updates, QBR prep, and renewal context.
 - [Best AI stack for solo founders](/guides/ai-solo-founder-stack/) now gives founders the practical automation sequence: manual first, n8n once workflows repeat, Intercom only after real support volume, and no fake fixed monthly stack total.
 - [Best AI tools for small business](/guides/best-ai-tools-for-small-business/) now gives owner-operators the conservative buying sequence: general assistant first, Google-native assistant when it reduces switching, and Zapier only after workflows already work manually.
 - [n8n vs Make vs Zapier](/compare/n8n-vs-make-vs-zapier/) should be rebuilt next around workflow complexity, pricing unit, AI-agent support, and owner type.
@@ -98,3 +106,7 @@ Do not leave this category stale. Automation tools are adding MCP, agent builder
 - [Pipedream pricing docs](https://pipedream.com/docs/pricing) (verified 2026-05-13)
 - [Workday FY2026 Q4 results: Pipedream acquisition closed](https://investor.workday.com/news-and-events/press-releases/news-details/2026/Workday-Announces-Fiscal-2026-Fourth-Quarter-and-Full-Year-Financial-Results/default.aspx) (verified 2026-05-13)
 - [Microsoft Research MagenticLite, MagenticBrain, and Fara1.5](https://www.microsoft.com/en-us/research/blog/magenticlite-magenticbrain-fara1-5-an-agentic-experience-optimized-for-small-models/) (verified 2026-05-26)
+- [CloudTalk pricing](https://www.cloudtalk.io/pricing/) (verified 2026-05-26)
+- [CloudTalk official site](https://www.cloudtalk.io/) (verified 2026-05-26)
+- [MeetGeek pricing](https://meetgeek.ai/pricing) (verified 2026-05-26)
+- [MeetGeek integrations](https://meetgeek.ai/integrations) (verified 2026-05-26)

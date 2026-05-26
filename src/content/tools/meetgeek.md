@@ -2,250 +2,326 @@
 type: tool
 slug: meetgeek
 title: MeetGeek
-tagline: >-
-  AI meeting assistant that auto-joins calendars, records, transcribes in 100+ languages, and generates summaries, action items, and a chat over your meeting library.
+tagline: AI meeting assistant for teams that need recorded calls, 100+ language transcripts, summaries, action items, meeting-library chat, CRM/task automation, and customer-success follow-through.
 category: ai-notes
 secondary_categories: [ai-voice, ai-automation]
 company: MeetGeek
-url: 'https://meetgeek.ai'
+url: https://meetgeek.ai/
 pricing_model: freemium
-price_range: $0-$17/user/month
+price_range: "$0-$17/user/month billed annually; Enterprise custom"
 status: active
 launched: 2020-11
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-05-26
+last_verified: 2026-05-26
 update_frequency: monthly
+best_plan: "Business for customer-facing teams; Pro for solo professionals who can live inside 20 transcription hours per month"
 affiliate:
-  has_program: null
-  commission: null
-  cookie_days: null
-  network: null
-  link: null
-  application_status: none
+  has_program: true
+  commission: "30% recurring commission for 12 months"
+  cookie_days: 90
+  network: PartnerStack
+  link: "https://get.meetgeek.ai/3aqk23dqgmgy"
+  application_status: approved
+  approved_date: 2026-05-26
+  notes: "Affiliate link supplied by site owner on 2026-05-26; PartnerStack program directory lists 30% recurring commissions, 12-month commission duration, and a 90-day cookie."
 scores:
   utility: 9
-  value: 8
+  value: 9
   moat: 6
-  longevity: 7
+  longevity: 8
 facts:
   best_for:
-    value: "MeetGeek is best for sales, customer success, and operations teams that run a high volume of recurring meetings and need summaries, action items, and a searchable transcript library without manual note-taking."
+    value: "MeetGeek is best for customer success, implementation, sales, recruiting, and operations teams that need customer-facing meetings to become searchable records, action items, CRM updates, risk signals, and follow-up workflows."
     source: "https://meetgeek.ai/"
-    source_label: "MeetGeek overview"
-    source_id: meetgeek-overview
-    verified_at: 2026-05-13
-    volatility: low
+    source_label: "MeetGeek official site"
+    verified_at: 2026-05-26
+    volatility: medium
     confidence: high
   pricing_anchor:
-    value: "MeetGeek pricing scales by transcription hours: Basic free with 3 hours/month, Pro $9.99/user/month with 20 hours, Business $17/user/month with unlimited transcription and video recording, Enterprise custom."
+    value: "MeetGeek lists Basic free, Pro at $9.99/user/month billed annually for 20 transcription hours/month, Business at $17/user/month billed annually for unlimited transcription and team workflows, and Enterprise custom."
     source: "https://meetgeek.ai/pricing"
     source_label: "MeetGeek pricing"
     source_id: meetgeek-pricing
-    verified_at: 2026-05-13
-    next_review_at: 2026-08-13
+    verified_at: 2026-05-26
+    next_review_at: 2026-06-26
+    volatility: high
+    confidence: high
+  best_paid_tier:
+    value: "Business is the first serious team default because it adds unlimited transcription, HD video recording, team/group spaces, team analytics, AI-based team auto-sharing, unlimited AI Chat with tools, unlimited agentic workflows, private meetings by default, exclude join rules, and recording consent notifications."
+    source: "https://meetgeek.ai/pricing"
+    source_label: "MeetGeek pricing"
+    source_id: meetgeek-pricing
+    verified_at: 2026-05-26
     volatility: high
     confidence: high
   language_support:
-    value: "MeetGeek transcribes in 100+ languages with automatic speaker recognition, which makes it usable across globally distributed teams."
-    source: "https://meetgeek.ai/"
-    source_label: "MeetGeek overview"
-    source_id: meetgeek-overview
-    verified_at: 2026-05-13
-    volatility: low
-    confidence: high
-  ai_features:
-    value: "MeetGeek includes AI summaries, action-item extraction, AI Chat with your meeting library, agentic workflows, and speaking-behavior coaching on Business and above."
+    value: "MeetGeek lists transcription in 100+ languages, auto language detection, and automatic speaker recognition."
     source: "https://meetgeek.ai/pricing"
     source_label: "MeetGeek pricing"
     source_id: meetgeek-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-05-26
     volatility: medium
     confidence: high
-  integrations:
-    value: "MeetGeek connects to Zapier, Make, n8n, and 7,000+ apps from the Business tier upward; Basic users have limited integration access."
+  automation_features:
+    value: "MeetGeek pricing lists AI Chat, AI follow-up emails, AI Agents and Workflows, API and MCP access, Slack Assistant, integrations, Zapier, Make, n8n, and workflow automation from meeting content."
     source: "https://meetgeek.ai/pricing"
     source_label: "MeetGeek pricing"
     source_id: meetgeek-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-05-26
+    volatility: high
+    confidence: high
+  privacy_and_consent:
+    value: "MeetGeek lists SOC 2, GDPR, HIPAA, zero-data-training, data storage region choice, private meetings by default on Business, and recording consent notifications; its consent help page says MeetGeek does not support incognito recording or surveillance."
+    source: "https://support.meetgeek.ai/en/articles/6021904-recording-consents-notifications"
+    source_label: "MeetGeek consent help center"
+    verified_at: 2026-05-26
     volatility: medium
+    confidence: high
+  affiliate_terms:
+    value: "MeetGeek's PartnerStack directory lists 30% recurring commissions, recurring commissions for 12 months unless otherwise stated, cash-out via PayPal or Stripe, payout the month after commission is earned, and a 90-day cookie."
+    source: "https://market.partnerstack.com/page/meetgeek"
+    source_label: "MeetGeek PartnerStack program"
+    verified_at: 2026-05-26
+    volatility: high
     confidence: high
   watch_out_for:
-    value: "Video recording and unlimited transcription are gated to Business tier ($17/user) and above; the Pro plan's 20-hour cap can be tight for sales teams running 8+ meetings a day."
+    value: "Pro's 20-hour transcription cap and lack of team/video depth make Business the real default for customer-facing teams; buyer teams still need consent policy, sharing rules, CRM field ownership, and workspace separation before rollout."
     source: "https://meetgeek.ai/pricing"
     source_label: "MeetGeek pricing"
     source_id: meetgeek-pricing
-    verified_at: 2026-05-13
-    volatility: medium
+    verified_at: 2026-05-26
+    volatility: high
     confidence: high
-tags: [meeting-notes, transcription, ai-summaries, action-items, meeting-recording, sales-coaching, multi-language, agentic-workflows]
-seo_title: 'MeetGeek: Features, Pricing & Review (May 2026)'
-meta_description: >-
-  MeetGeek auto-joins meetings, records and transcribes in 100+ languages, and ships summaries, action items, and AI Chat over your meeting library. Free Basic; Pro $9.99/user, Business $17/user as of May 2026.
-author: aipedia.wiki Editorial
+tags: [meeting-notes, transcription, ai-summaries, action-items, meeting-recording, customer-success, sales-coaching, multi-language, agentic-workflows, mcp, crm]
+seo_title: "MeetGeek Review (May 2026): Pricing, Best Plan, Affiliate Verdict"
+meta_description: "MeetGeek is an AI meeting assistant for CS, sales, recruiting, and ops teams. Verified May 2026 pricing, best plan, affiliate terms, watch-outs, and alternatives."
+author: "aipedia.wiki Editorial"
 best_for:
-  - sales and customer-success teams logging high meeting volume
-  - distributed teams needing 100+ language transcription
-  - operations leads who run agentic workflows on top of meeting data
-  - searchable team meeting library with summaries and action items
-  - lightweight CRM and Notion auto-population from meetings
+  - customer success teams running onboarding calls, QBRs, renewal calls, and escalation reviews
+  - sales and implementation teams that need CRM updates from calls
+  - distributed teams that need 100+ language transcription
+  - teams that want AI Chat, MCP/API access, and workflow automation over meeting history
+  - managers who need action items, follow-up emails, team analytics, and searchable customer context
 not_best_for:
-  - one-off transcription of individual files (use AssemblyAI)
-  - solo founders who only need basic free notes (Otter free tier is comparable)
-  - enterprise compliance shops needing on-prem transcription
-  - sales teams that need deep CRM-native call coaching (Gong/Chorus)
+  - solo personal note-taking where Fathom Free is enough
+  - teams that only need a raw transcription API
+  - companies that need full Gong-grade revenue intelligence and sales methodology scorecards
+  - sensitive meeting environments without a recording-consent process
 quick_answer: >-
-  MeetGeek is a calendar-aware meeting assistant that records, transcribes, summarizes, and turns meeting content into action items + a chat-over-library. Pick it for sales/CS team meeting density at a much lower price than Gong or Chorus. Skip it if you only need solo transcription or enterprise-grade call coaching with CRM-native scorecards.
+  MeetGeek is the best fit when meetings are not just notes but customer context. It auto-records and transcribes Zoom, Google Meet, Teams, and other meetings, creates summaries and action items, supports 100+ languages, adds AI Chat over meeting history, and can push meeting outputs into CRMs, task tools, Slack, Zapier, Make, n8n, API, and MCP workflows. Start with Business for customer-facing teams; use Pro only when one person can stay inside 20 transcription hours per month.
 price_history:
-  - date: 2026-05-13
-    plan: "Pro"
-    price: "$9.99/user/mo · 20 hours transcription/mo"
+  - date: 2026-05-26
+    plan: Basic
+    price: "Free; 3 transcription hours/month; 3 months transcript storage; 1 month audio storage"
     source: "https://meetgeek.ai/pricing"
     source_label: "MeetGeek pricing"
-    verified_at: 2026-05-13
-  - date: 2026-05-13
-    plan: "Business"
-    price: "$17/user/mo · unlimited transcription + video recording"
+    verified_at: 2026-05-26
+  - date: 2026-05-26
+    plan: Pro
+    price: "$9.99/user/month billed annually; 20 transcription hours/month; 1 year transcript storage; 6 months audio storage; $0.50 per extra hour"
     source: "https://meetgeek.ai/pricing"
     source_label: "MeetGeek pricing"
-    verified_at: 2026-05-13
+    verified_at: 2026-05-26
+  - date: 2026-05-26
+    plan: Business
+    price: "$17/user/month billed annually; unlimited transcription; unlimited transcript storage; 12 months video storage"
+    source: "https://meetgeek.ai/pricing"
+    source_label: "MeetGeek pricing"
+    verified_at: 2026-05-26
+  - date: 2026-05-26
+    plan: Enterprise
+    price: "Custom; unlimited transcription; custom video storage; SSO/SCIM; custom retention; on-premise storage options"
+    source: "https://meetgeek.ai/pricing"
+    source_label: "MeetGeek pricing"
+    verified_at: 2026-05-26
 ---
 
 # MeetGeek
 
-A calendar-aware meeting assistant. MeetGeek joins your Google Meet, Zoom, or Teams meetings as a bot, records and transcribes them, generates a summary plus action items, and lands everything in a searchable team library with optional auto-share to your CRM, project tool, or wiki.
+MeetGeek is an AI meeting assistant for teams that need every customer call, sales demo, onboarding session, recruiting interview, and internal sync to become useful company memory.
 
-The product sits between **Otter** (which leans personal) and **Gong/Chorus** (which lean enterprise sales-coaching). MeetGeek is the team-meeting-knowledge-base play, most useful for sales, customer success, and ops teams that run 5+ meetings a day and need that volume to become a searchable surface, not a folder of forgotten recordings.
+The strongest way to understand it: MeetGeek is not just a transcript app. It is a meeting-to-workflow layer. It records and transcribes calls, generates summaries and next steps, lets teams search and chat across meeting history, and can push structured outputs into CRMs, task tools, Slack, Zapier, Make, n8n, API, and MCP-connected assistants.
+
+AiPedia verified this page against MeetGeek official pricing, product, integration, consent, customer-success, and PartnerStack program sources on 2026-05-26. AiPedia may earn from MeetGeek links, but the score and verdict remain editorial.
 
 ## System Verdict
 
-> **Pick MeetGeek if your team runs a lot of meetings and you want one searchable library with AI summaries, action items, and chat across the corpus, at SMB pricing.** Business tier at $17/user/month is dramatically cheaper than Gong or Chorus and covers the 80% use case that doesn't need CRM-native scorecards.
+> **Pick MeetGeek when meetings are customer context, not admin debris.** It is especially strong for customer success, implementation, sales, recruiting, and ops teams that need transcripts, summaries, action items, follow-up workflows, and searchable meeting history without jumping to a full revenue-intelligence platform.
 >
-> **Skip it if you need on-prem transcription** (enterprise compliance lockup), CRM-native call-coaching workflows (Gong is still the leader), or solo personal note-taking ([Granola](/tools/granola/) or [Fathom](/tools/fathom/) ship a tighter solo UX). Also skip if you mostly need vertical-clip output for content marketing; that's [OpusClip](/tools/opusclip/)'s lane.
+> **Best plan:** Business for customer-facing teams. Pro is good for solo professionals, but the 20-hour monthly transcription cap and weaker team/video workflow make Business the first serious CS, sales, or implementation default.
 >
-> **Who pays which tier:** Basic free for individuals testing the product, Pro $9.99/user when one person needs 20 hours/month, Business $17/user the moment you have a team + need unlimited transcription, video recording, or AI Chat with your meeting library, Enterprise when security review and custom retention windows are deal-blockers.
+> **Skip it if you only need personal notes.** [Fathom](/tools/fathom/) is cleaner as a free individual notetaker. Skip it also if you need deep Gong-style sales methodology scorecards, forecast inspection, or a raw speech-to-text API.
 
 ## Key Facts
 
 | | |
 |---|---|
-| **Company** | MeetGeek (founded 2020) |
-| **Meeting platforms** | Google Meet · Zoom · Microsoft Teams |
-| **Transcription languages** | 100+ |
-| **Plans** | Basic (free) · Pro $9.99/user · Business $17/user · Enterprise (custom) |
-| **Transcription quota** | Basic 3hr · Pro 20hr · Business unlimited |
-| **Video recording** | Business+ only · 12-month retention (Business), custom (Enterprise) |
-| **AI features** | AI summaries · action-item extraction · AI Chat over library · agentic workflows · speaking-behavior coaching (Business+) |
-| **Integrations** | Zapier · Make · n8n · 7,000+ apps from Pro upward |
-| **API** | Available from Business tier |
-| **Mobile** | iOS + Android |
-| **Storage retention** | 3 months (Basic) → 1 year (Pro) → unlimited (Business+) |
+| **Core product** | AI meeting assistant and meeting automation platform |
+| **Best buyer** | Customer-facing teams that need meetings to become follow-up, CRM, task, and knowledge workflows |
+| **Meeting capture** | Zoom, Google Meet, Microsoft Teams, no-bot recording through browser/desktop options, uploads, mobile apps |
+| **Languages** | 100+ language transcription with auto language detection |
+| **Free plan** | Basic free forever; 3 transcription hours/month |
+| **Best paid plan** | Business at $17/user/month billed annually |
+| **Business unlocks** | Unlimited transcription, HD video, team spaces, team analytics, AI auto-sharing, unlimited AI Chat, unlimited agentic workflows, consent notifications |
+| **Automation** | Zapier, Make, n8n, Slack Assistant, API, MCP access, AI Agents and Workflows |
+| **Security signals** | SOC 2, GDPR, HIPAA, zero-data-training, EU/US storage region choice listed on pricing page |
+| **Affiliate program** | PartnerStack; 30% recurring commissions, 12-month duration, 90-day cookie |
 
-Every data point above was verified against MeetGeek pricing and product documentation on 2026-05-13. See Sources.
+## Who MeetGeek Is Perfect For
 
-## What it actually is
+MeetGeek is closest to perfect for a 3-50 person customer success or implementation team where CSMs run onboarding calls, health checks, renewal calls, QBRs, escalations, customer interviews, and product feedback sessions every week.
 
-The unit of value isn't the transcript, it's the **library**. A single meeting gives you a recording, a transcript, a summary, and action items. A hundred meetings give you a searchable knowledge base of every customer conversation, sales call, and internal sync your team has had.
+That team usually has the same pain:
 
-The product surface:
+- call notes live in scattered docs or personal notebooks
+- renewals depend on what customers said months ago
+- product feedback gets lost between calls and issue trackers
+- customer risks are obvious in meetings but invisible in the CRM
+- managers cannot listen to every call
+- QBR prep burns hours because context is spread across recordings, Slack, CRM notes, and memory
 
-- **Auto-join.** MeetGeek's bot watches your calendar and joins meetings you've flagged. No manual "start recording" button.
-- **Summaries + action items.** AI-generated, editable, attributable to speakers. Action items can sync to Asana, ClickUp, Notion, or your CRM via Zapier.
-- **AI Chat over library.** Ask "what did we promise the Acme team in the last three calls?" across your entire meeting history.
-- **Custom summary templates.** Business+ tier lets you define output shape (e.g. discovery-call template, account-review template).
-- **Agentic workflows.** Trigger downstream automations from meeting outcomes, e.g. "if the call mentions Q3 renewal, create a Salesforce task."
-- **Speaking analytics.** Talk-listen ratios, filler-word counts, sentiment, useful for sales coaching but not a CRM-grade scorecard.
+MeetGeek's pitch is strong because it turns that stream of meetings into a searchable relationship record. A CSM can ask what changed since the last QBR, pull action items, share highlights with product, create follow-up tasks, and prepare a renewal brief from actual call context.
 
-The transcription engine handles 100+ languages with automatic speaker detection. Quality is competitive with AssemblyAI / Whisper on English; non-English performance is usable but not best-in-class for every language.
+## What MeetGeek Actually Does
 
-## When to pick MeetGeek
+The core workflow is simple:
 
-- **Your team runs 5+ meetings a day** and the bottleneck is "where do those meetings go?", not just transcription.
-- **Sales / customer success / ops team** that needs a meeting library plus action-item flow to CRM or task tracker, without paying for Gong.
-- **Distributed team meeting in many languages.** 100+ language transcription beats most US-focused competitors.
-- **You want one source of truth** for meeting notes across the org instead of fragmented personal Otter accounts.
-- **You're cost-sensitive** and an enterprise Gong/Chorus contract is out of budget.
+1. MeetGeek joins or records the meeting.
+2. It transcribes and labels speakers.
+3. It generates a summary, next steps, key highlights, topics, and analytics.
+4. It stores the meeting in a searchable library.
+5. It lets teams chat with meeting history.
+6. It pushes outputs into the tools that actually run the business.
 
-## When to pick something else
+The product now reaches beyond passive notes:
 
-- **Personal note-taking with the best solo UX:** [Granola](/tools/granola/) or [Fathom](/tools/fathom/) feel lighter and faster for individual use.
-- **CRM-native sales coaching with scorecards:** [Gong](https://gong.io) and [Chorus](https://www.chorus.ai) still own this. MeetGeek does basic coaching but doesn't replace them.
-- **Raw transcription as a service:** [AssemblyAI](/tools/assemblyai/) or [Deepgram](/tools/deepgram/) are cheaper and more accurate at the API level if you're building your own product.
-- **Content repurposing from meetings:** [Castmagic](/tools/castmagic/) turns meetings into blog posts, social posts, and newsletters.
-- **You need calendar/scheduling intelligence, not just notes:** [Reclaim.ai](/tools/reclaim-ai/) or [Fireflies](/tools/fireflies/) (Fireflies has its own AI-meeting suite).
+- **AI summaries and next steps** for each meeting.
+- **AI Chat** to ask questions across previous meetings.
+- **AI follow-up emails** for post-call handoff.
+- **Meeting templates and type auto-detection** so discovery, onboarding, QBR, interview, and team-sync notes do not all look the same.
+- **AI Agents and Workflows** to automate actions from meeting content.
+- **API and MCP access** so meeting context can feed ChatGPT, Claude, Cursor-style workflows, and internal systems.
+- **Sales and customer analytics** including meeting analytics, sentiment, engagement, team trends, objection detection, competitor detection, win/loss signals, coachability scores, and pipeline intelligence on higher tiers.
 
-## Pricing
+## Best Plan
 
-Subscription pricing is managed via [meetgeek.ai/pricing](https://meetgeek.ai/pricing). Annual billing gives a meaningful discount; the live page shows current numbers.
+Most customer-facing teams should shortlist Business.
 
-| Plan | Monthly | Transcription | Recording duration / meeting | Video | Storage | Who's it for |
-|------|---------|---------------|------------------------------|-------|---------|--------------|
-| Basic | Free | 3 hrs/mo | 2–3 hrs | No | 3 months | Personal trial |
-| Pro | $9.99/user | 20 hrs/mo | 2–3 hrs | No | 1 year | Solo professional / small team |
-| Business | $17/user | Unlimited | 3 hrs | Yes, 12-month retention | Unlimited | Sales, CS, ops teams |
-| Enterprise | Contact | Unlimited | 4 hrs | Yes, custom retention | Custom | Compliance-heavy orgs |
+| Buyer | Start here | Why |
+|---|---|---|
+| Solo professional testing meeting notes | Basic | Free, enough for 3 light meeting hours/month |
+| Consultant or individual CSM | Pro | $9.99/user/month annual, 20 transcription hours, templates, integrations, AI Chat with tools, exports |
+| CS, implementation, recruiting, sales, or ops team | Business | Unlimited transcription, video, team spaces, team analytics, auto-sharing, custom summaries, private meetings by default, consent notifications |
+| Regulated or large org | Enterprise | SSO/SCIM, org-wide locks, custom retention, on-premise storage options, dedicated onboarding |
 
-Prices verified 2026-05-13 via [meetgeek.ai/pricing](https://meetgeek.ai/pricing). Check the live page for current discounts and exact annual-billing rates.
+The trap is buying Pro for a team that is obviously a Business buyer. A CSM doing five 45-minute calls per day can burn through 20 monthly transcription hours quickly. Business is where MeetGeek becomes a shared team system rather than a personal note helper.
 
-## Against the alternatives
+## Pricing Reality
 
-| | MeetGeek | Fathom | Otter | Gong |
-|---|---|---|---|---|
-| **Pricing entry point** | **Free + $9.99/user** | Free + $19/user | Free + $16.99/user | Enterprise only ($1,200+/user/yr) |
-| **Auto-join calendar meetings** | **Yes** | Yes | Yes | Yes |
-| **100+ languages** | **Yes** | 28 | 30+ | 70+ |
-| **AI Chat over library** | **Yes (Business+)** | Yes | Yes (paid) | Yes |
-| **CRM-native call coaching** | Basic | Basic | Basic | **Best in class** |
-| **API access** | Business tier | Team tier | Enterprise | Enterprise |
-| **Custom summary templates** | Business+ | Team+ | Limited | Custom |
-| **Best viewed as** | Team meeting library at SMB pricing | Solo polished UX | Generalist + personal default | Enterprise sales coaching |
+MeetGeek pricing was verified from the official pricing page on 2026-05-26. The prices below are the annual-billing prices visible on the pricing page.
 
-## Failure modes
+| Plan | Price | Usage | Best for |
+|---|---:|---|---|
+| Basic | Free | 3 transcription hours/month, 3 months transcript storage, 1 month audio storage | Light personal testing |
+| Pro | $9.99/user/month | 20 transcription hours/month, 1 year transcript storage, 6 months audio storage, $0.50 per extra hour | Solo professionals and consultants |
+| Business | $17/user/month | Unlimited transcription, unlimited transcript storage, 12 months video storage | Customer-facing teams |
+| Enterprise | Custom | Unlimited transcription, custom video storage, SSO/SCIM, custom retention, on-premise storage options | Governance-heavy orgs |
 
-- **The bot is visible.** External participants see a "MeetGeek Notetaker" join the call. Some prospects are uncomfortable with that; either disclose proactively or use the upcoming bot-less recording features (still limited).
-- **20-hour Pro cap is tight for sales.** A sales rep doing 8 meetings a day at 45 minutes each hits the cap in under three weeks. Business tier upgrade is mandatory in that case.
-- **Auto-share is opt-in but easy to misconfigure.** Make sure private meetings aren't auto-shared to the broader team space. The default behaviors are reasonable, but admin review matters at scale.
-- **AI Chat is per-workspace, not multi-tenant.** If your sales team and finance team are in the same workspace, they share the AI Chat surface. Plan workspace separation accordingly.
-- **Agentic workflows are still maturing.** The marketing copy is ahead of what's reliable in production. Treat them as helpful triggers, not bulletproof automation, in 2026.
-- **Recording-duration caps per meeting.** Basic/Pro cap at 2–3 hours, Business at 3 hours, Enterprise at 4 hours. Day-long workshops need pre-planning to split.
-- **No on-prem.** Data flows through MeetGeek's infrastructure. Compliance teams in financial services or healthcare should run a security review before deployment.
+MeetGeek also advertises up to 40% savings on annual billing and a 30% discount path for startups, non-profits, and education. Verify the checkout quote before publishing a firm monthly total because monthly billing, extra hours, seat mix, and Enterprise security terms can change the real price.
 
-## Methodology
+## Where MeetGeek Beats Alternatives
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [MeetGeek pricing](https://meetgeek.ai/pricing) and the [MeetGeek product overview](https://meetgeek.ai/).
+| Need | MeetGeek fit | Better alternative |
+|---|---|---|
+| CS meeting library and follow-up workflows | Strong | Use a CS platform only if health scoring and renewal operations already live there |
+| Multilingual meeting capture | Strong | Test accuracy on real accents/languages before standardizing |
+| Personal free notes | Good | [Fathom](/tools/fathom/) is cleaner for solo free usage |
+| Team meeting intelligence | Strong | [Fireflies](/tools/fireflies/) can be stronger for broader meeting-intelligence/admin patterns |
+| Live collaborative transcript editing | Medium | [Otter.ai](/tools/otter-ai/) is more live-transcript oriented |
+| Enterprise revenue intelligence | Medium | Gong/Chorus still win for deep sales methodology and forecast workflows |
+| Post-meeting research from source packs | Medium | [NotebookLM](/tools/notebooklm/) is stronger after the transcript exists |
+| Raw STT API | Weak | [AssemblyAI](/tools/assemblyai/) or [Deepgram](/tools/deepgram/) are better developer defaults |
+
+## Conversion Angle That Actually Works
+
+The high-converting MeetGeek message is not "AI takes notes."
+
+The stronger message is:
+
+> Your customer calls already contain churn risk, expansion signals, product objections, implementation blockers, stakeholder names, promised follow-ups, and renewal language. MeetGeek makes that searchable and actionable.
+
+That is why the best buyer is not someone who wants one meeting summary. It is a customer-facing team that has too many calls to manually review and too much revenue context trapped in recordings.
+
+## Implementation Checklist
+
+1. Pick one meeting type first: onboarding, renewal call, QBR, customer interview, sales discovery, recruiting screen, or escalation.
+2. Decide the summary template before rollout.
+3. Define the CRM fields, task tool, Slack channel, or Notion database the output must update.
+4. Configure recording consent notifications, especially for external or sensitive meetings.
+5. Decide which meetings should stay private by default.
+6. Pilot with 10-20 real meetings.
+7. Review summary accuracy, action-item ownership, CRM hygiene, and search usefulness.
+8. Only then enable broader auto-sharing, AI Chat, and agentic workflows.
+
+## Where MeetGeek Can Go Wrong
+
+**No workflow owner.** A summary no one reads is just prettier meeting waste. Decide where outputs land and who acts on them.
+
+**Wrong tier.** Pro looks cheap, but teams that need video, team analytics, shared spaces, consent notifications, and unlimited transcription are Business buyers.
+
+**Consent handled casually.** MeetGeek's help center says it does not support incognito recording or surveillance and recommends explicit consent for sensitive or external meetings. Treat that as an operational requirement.
+
+**Workspace sprawl.** If customer success, sales, product, and leadership all share one space without permissions, AI Chat can surface context too broadly. Plan spaces and sharing rules.
+
+**Too much automation too early.** Start with meeting capture and CRM/task handoff before relying on AI agents or workflows to make customer-facing decisions.
+
+## AiPedia Take
+
+MeetGeek is an affiliate-worthy recommendation because it maps to a real budget line: customer-facing meeting overload. Teams already pay for CRM, task management, Slack, support, and customer success software. MeetGeek is valuable when it becomes the bridge between the calls customers actually have and the systems teams actually use.
+
+The honest recommendation is specific: use MeetGeek when meetings should become structured customer memory. If the buyer only wants personal notes, keep them on Fathom. If they need enterprise sales forecasting, compare Gong. If they need a CS meeting layer that is cheaper, multilingual, automation-friendly, and useful inside real workflows, MeetGeek is the sharper pick.
 
 ## FAQ
 
-**Does MeetGeek work with Google Meet, Zoom, and Teams?**
-Yes, all three are supported. The MeetGeek bot auto-joins meetings on your calendar from any of these platforms once you authorize calendar access.
+**What is MeetGeek?**
 
-**What's the difference between Pro and Business?**
-Pro caps at 20 hours of transcription per month, no video recording, and 1-year storage. Business is unlimited transcription, includes video recording with 12-month retention, adds AI Chat across your library, custom summary templates, and agentic workflows. The Pro → Business jump is the main "team adoption" upgrade.
+MeetGeek is an AI meeting assistant that records, transcribes, summarizes, analyzes, and automates follow-up from meetings.
 
-**Is the free Basic plan worth it?**
-For 3 hours a month, yes, it's enough to test the product and cover light personal use. Most professional users will outgrow it within a week.
+**How much does MeetGeek cost?**
 
-**How does MeetGeek compare to Otter?**
-Both auto-join meetings and transcribe. MeetGeek's team library + AI Chat + workflow automation is more team-oriented; Otter has stronger solo polish and a larger free tier. Pricing is comparable at the entry level.
+MeetGeek's official pricing page lists Basic free, Pro at $9.99/user/month billed annually, Business at $17/user/month billed annually, and Enterprise custom.
 
-**How does MeetGeek compare to Fathom?**
-Fathom has a cleaner solo UX and a stronger free tier. MeetGeek's team-library, agentic-workflow, and AI Chat features are more developed at the Business tier. Pick Fathom for individual use, MeetGeek for team-scale meeting density.
+**Which MeetGeek plan should most teams buy?**
 
-**Does MeetGeek do sales call coaching like Gong?**
-Partially. MeetGeek tracks speaking analytics (talk-listen ratio, filler words, sentiment) and can flag deal health on individual calls. It does not match Gong's CRM-native scorecards, deal-stage risk modeling, or methodology adherence tracking. For real sales coaching, Gong / Chorus still win.
+Business is the better default for customer-facing teams because it includes unlimited transcription, HD video recording, team spaces, team analytics, AI-based team auto-sharing, unlimited AI Chat with tools, unlimited agentic workflows, and recording consent notifications.
 
-**Which AI model powers MeetGeek's summaries?**
-MeetGeek does not publicly document the underlying LLM for summaries. Treat it as a closed pipeline with a frontier-class general model (commonly GPT or Claude family) handling summary generation.
+**Is MeetGeek better than Fathom?**
 
-**Does MeetGeek have an API?**
-Yes, on Business and Enterprise tiers. The API is used to push meeting data into custom internal systems, BI dashboards, or non-supported integrations.
+MeetGeek is better when the buyer needs shared team workflows, multilingual meeting coverage, integrations, AI Chat over meeting history, and meeting-to-workflow automation. Fathom is better as the cleanest free personal notetaker.
+
+**Is MeetGeek good for customer success teams?**
+
+Yes. It is strongest when onboarding, renewal, QBR, escalation, product-feedback, and support calls need to become searchable customer context, action items, CRM updates, and renewal prep.
+
+**Does MeetGeek have an affiliate program?**
+
+Yes. The MeetGeek PartnerStack program directory lists 30% recurring commissions, recurring commission duration for 12 months unless otherwise stated, and a 90-day cookie.
+
+**Does AiPedia earn from MeetGeek links?**
+
+AiPedia may earn a commission from MeetGeek affiliate links. Rankings and recommendations remain editorial and source-backed.
 
 ## Sources
 
-- [MeetGeek pricing](https://meetgeek.ai/pricing): Plan tiers, transcription quotas, feature gates
-- [MeetGeek product overview](https://meetgeek.ai/): Recording, transcription, library, integrations
-- [MeetGeek help center](https://help.meetgeek.ai/): Integration setup, admin controls, security posture
+- [MeetGeek official site](https://meetgeek.ai/) (verified 2026-05-26)
+- [MeetGeek pricing](https://meetgeek.ai/pricing) (verified 2026-05-26)
+- [MeetGeek integrations](https://meetgeek.ai/integrations) (verified 2026-05-26)
+- [MeetGeek PartnerStack program](https://market.partnerstack.com/page/meetgeek) (verified 2026-05-26)
+- [MeetGeek recording consent help center](https://support.meetgeek.ai/en/articles/6021904-recording-consents-notifications) (verified 2026-05-26)
+- [MeetGeek AI for Customer Success playbook](https://meetgeek.ai/blog/ai-for-customer-success) (verified 2026-05-26)
 
 ## Related
 
-- **Category:** [AI Notes & Meeting Tools](/categories/ai-notes/)
-- **Adjacent tools:** [Fathom](/tools/fathom/) (solo meeting notes) · [Fireflies](/tools/fireflies/) (meeting intelligence) · [Granola](/tools/granola/) (smart note-taker) · [Castmagic](/tools/castmagic/) (content repurposing from audio)
+- **Category:** [AI Note-Taking & Knowledge Management](/categories/ai-notes/) · [AI Automation](/categories/ai-automation/) · [AI Voice](/categories/ai-voice/)
+- **Guides:** [Best AI meeting assistant for customer success teams](/guides/best-ai-meeting-assistant-for-customer-success-teams/) · [Best AI for Meeting Notes](/guides/best-ai-for-meeting-notes/) · [Best Otter AI Alternatives](/guides/otter-ai-alternatives/)
+- **Alternatives:** [Fathom](/tools/fathom/) · [Fireflies](/tools/fireflies/) · [Otter.ai](/tools/otter-ai/) · [Read AI](/tools/read-ai/) · [NotebookLM](/tools/notebooklm/)
