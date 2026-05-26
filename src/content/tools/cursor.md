@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2023-03
-last_updated: 2026-05-24
-last_verified: 2026-05-24
+last_updated: 2026-05-26
+last_verified: 2026-05-26
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -220,6 +220,7 @@ Anysphere's AI-native code editor. A VS Code fork with LLMs wired into autocompl
 
 ## Recent developments
 
+- **May 22, 2026:** [Cursor said Gartner named it a Leader in the 2026 Magic Quadrant for Enterprise AI Coding Agents](/news/2026-05-22-cursor-gartner-enterprise-ai-coding-agent-leader/). Treat this as an enterprise-procurement signal, not a substitute for hands-on testing against Codex, Claude Code, and GitHub Copilot on your own repos.
 - **May 20, 2026:** Cursor 3.5 added Automations to the [Agents Window](https://cursor.com/changelog), plus multi-repo and no-repo automation setups. This makes Cursor less just an IDE and more a recurring-agent control plane.
 - **May 18, 2026:** Cursor released [Composer 2.5](https://cursor.com/changelog/composer-2-5), its latest in-house coding model. Cursor says it is substantially better than Composer 2 for sustained long-running tasks and complex instruction following; published pricing is $0.50/M input and $2.50/M output for Standard, with Fast/default at $3.00/M input and $15.00/M output.
 - **May 24, 2026:** Subscription pricing reverified at [cursor.com/pricing](https://cursor.com/pricing). Hobby free, Pro $20, Pro+ $60, Ultra $200, Teams $40/user, Enterprise custom, with Bugbot as a usage-based add-on on Individual plans.
@@ -335,7 +336,7 @@ Subscription prices verified 2026-05-24 via [cursor.com/pricing](https://cursor.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, normalizes factual claims, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-24 against [cursor.com/pricing](https://cursor.com/pricing), [cursor.com/docs/models](https://cursor.com/docs/models), the [Cursor changelog](https://cursor.com/changelog), the [Cursor Composer 2.5 changelog](https://cursor.com/changelog/composer-2-5), the [Cursor 2.0 release notes](https://cursor.com/changelog/2-0), and the [Claude Opus 4.7 Cursor docs page](https://cursor.com/docs/models/claude-opus-4-7).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, normalizes factual claims, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-26 against [cursor.com/pricing](https://cursor.com/pricing), [cursor.com/docs/models](https://cursor.com/docs/models), the [Cursor changelog](https://cursor.com/changelog), the [Cursor Composer 2.5 changelog](https://cursor.com/changelog/composer-2-5), the [Cursor Gartner recognition post](https://cursor.com/blog/cursor-leads-gartner-mq-2026), the [Cursor 2.0 release notes](https://cursor.com/changelog/2-0), and the [Claude Opus 4.7 Cursor docs page](https://cursor.com/docs/models/claude-opus-4-7).
 
 ## FAQ
 

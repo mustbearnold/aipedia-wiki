@@ -1,6 +1,6 @@
 # AiPedia Page Refresh Ledger
 
-Ledger updated through: 2026-05-24
+Ledger updated through: 2026-05-26
 Tracked public pages and crawl surfaces: 733
 
 Hard rule: every time a tracked website page is edited, refreshed, materially re-ranked, or has volatile facts re-verified, update that page row in this file on the same change. If a child page update affects a parent hub, archive, internal-link block, sitemap, or LLM surface, update those affected rows too.
@@ -45,7 +45,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /categories/ai-infrastructure/ | Category | Yes | frontmatter | src/content/categories/ai-infrastructure.md |
 | 2026-05-13 | /categories/ai-music/ | Category | Yes | frontmatter | src/content/categories/ai-music.md |
 | 2026-05-13 | /categories/ai-research/ | Category | Yes | frontmatter | src/content/categories/ai-research.md |
-| 2026-05-13 | /categories/ai-search/ | Category | Yes | frontmatter | src/content/categories/ai-search.md |
 | 2026-05-13 | /categories/ai-voice/ | Category | Yes | frontmatter | src/content/categories/ai-voice.md |
 | 2026-05-13 | /companies/anthropic/ | Company | Yes | frontmatter | src/content/companies/anthropic.md |
 | 2026-05-13 | /companies/elevenlabs-company/ | Company | Yes | frontmatter | src/content/companies/elevenlabs-company.md |
@@ -704,43 +703,44 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-20 | /tools/veo/ | Tool | Yes | frontmatter | src/content/tools/veo.md |
 | 2026-05-22 | /llms-full.txt | Crawl surface | No | git | src/pages/llms-full.txt.ts |
 | 2026-05-22 | /llms.txt | Crawl surface | No | git | src/pages/llms.txt.ts |
-| 2026-05-22 | /news/ | Static page | Yes | page metadata | src/pages/news/index.astro |
 | 2026-05-22 | /news/rss.xml | Crawl surface | No | git | src/pages/news/rss.xml.ts |
 | 2026-05-22 | /tools/claude-code/ | Tool | Yes | frontmatter | src/content/tools/claude-code.md |
 | 2026-05-22 | /tools/gemini/ | Tool | Yes | frontmatter | src/content/tools/gemini.md |
 | 2026-05-22 | /tools/github-copilot/ | Tool | Yes | frontmatter | src/content/tools/github-copilot.md |
-| 2026-05-23 | /tools/claude/ | Tool | Yes | frontmatter | src/content/tools/claude.md |
 | 2026-05-23 | /tools/cohere/ | Tool | Yes | frontmatter | src/content/tools/cohere.md |
-| 2026-05-24 | / | Static page | Yes | git | src/pages/index.astro |
 | 2026-05-24 | /answers/ | Static page | Yes | git | src/pages/answers/index.astro |
 | 2026-05-24 | /answers/best-ai-chatbot-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-chatbot-2026.astro |
 | 2026-05-24 | /answers/best-ai-video-generator-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-video-generator-2026.astro |
-| 2026-05-24 | /categories/ | Static page | Yes | working tree | src/pages/categories/index.astro |
-| 2026-05-24 | /categories/ai-automation/ | Category | Yes | working tree | src/content/categories/ai-automation.md |
-| 2026-05-24 | /categories/ai-chatbots/ | Category | Yes | frontmatter | src/content/categories/ai-chatbots.md |
-| 2026-05-24 | /categories/ai-coding/ | Category | Yes | working tree | src/content/categories/ai-coding.md |
-| 2026-05-24 | /categories/ai-design/ | Category | Yes | working tree | src/content/categories/ai-design.md |
-| 2026-05-24 | /categories/ai-image/ | Category | Yes | working tree | src/content/categories/ai-image.md |
-| 2026-05-24 | /categories/ai-notes/ | Category | Yes | working tree | src/content/categories/ai-notes.md |
-| 2026-05-24 | /categories/ai-presentation/ | Category | Yes | working tree | src/content/categories/ai-presentation.md |
-| 2026-05-24 | /categories/ai-seo/ | Category | Yes | working tree | src/content/categories/ai-seo.md |
+| 2026-05-24 | /categories/ | Static page | Yes | git | src/pages/categories/index.astro |
+| 2026-05-24 | /categories/ai-design/ | Category | Yes | frontmatter | src/content/categories/ai-design.md |
+| 2026-05-24 | /categories/ai-image/ | Category | Yes | frontmatter | src/content/categories/ai-image.md |
+| 2026-05-24 | /categories/ai-notes/ | Category | Yes | frontmatter | src/content/categories/ai-notes.md |
+| 2026-05-24 | /categories/ai-presentation/ | Category | Yes | frontmatter | src/content/categories/ai-presentation.md |
+| 2026-05-24 | /categories/ai-seo/ | Category | Yes | frontmatter | src/content/categories/ai-seo.md |
 | 2026-05-24 | /categories/ai-video/ | Category | Yes | frontmatter | src/content/categories/ai-video.md |
-| 2026-05-24 | /categories/ai-writing/ | Category | Yes | working tree | src/content/categories/ai-writing.md |
+| 2026-05-24 | /categories/ai-writing/ | Category | Yes | frontmatter | src/content/categories/ai-writing.md |
 | 2026-05-24 | /compare/ | Static page | Yes | git | src/pages/compare/index.astro |
 | 2026-05-24 | /compare/chatgpt-vs-qwen/ | Comparison | Yes | frontmatter | src/content/comparisons/chatgpt-vs-qwen.md |
 | 2026-05-24 | /compare/cursor-vs-claude-code-vs-copilot/ | Comparison | Yes | frontmatter | src/content/comparisons/cursor-vs-claude-code-vs-copilot.md |
-| 2026-05-24 | /tools/ | Static page | Yes | working tree | src/pages/tools/index.astro |
+| 2026-05-24 | /tools/ | Static page | Yes | git | src/pages/tools/index.astro |
 | 2026-05-24 | /tools/chatgpt/ | Tool | Yes | frontmatter | src/content/tools/chatgpt.md |
 | 2026-05-24 | /tools/codex/ | Tool | Yes | frontmatter | src/content/tools/codex.md |
-| 2026-05-24 | /tools/cursor/ | Tool | Yes | frontmatter | src/content/tools/cursor.md |
-| 2026-05-24 | /tools/manus/ | Tool | Yes | working tree | src/content/tools/manus.md |
-| 2026-05-24 | /tools/nightcafe/ | Tool | Yes | working tree | src/content/tools/nightcafe.md |
-| 2026-05-24 | /tools/omniseo/ | Tool | Yes | working tree | src/content/tools/omniseo.md |
-| 2026-05-24 | /tools/prezi/ | Tool | Yes | working tree | src/content/tools/prezi.md |
+| 2026-05-24 | /tools/manus/ | Tool | Yes | frontmatter | src/content/tools/manus.md |
+| 2026-05-24 | /tools/nightcafe/ | Tool | Yes | frontmatter | src/content/tools/nightcafe.md |
+| 2026-05-24 | /tools/omniseo/ | Tool | Yes | frontmatter | src/content/tools/omniseo.md |
+| 2026-05-24 | /tools/prezi/ | Tool | Yes | frontmatter | src/content/tools/prezi.md |
 | 2026-05-24 | /tools/qwen/ | Tool | Yes | frontmatter | src/content/tools/qwen.md |
-| 2026-05-24 | /tools/read-ai/ | Tool | Yes | working tree | src/content/tools/read-ai.md |
-| 2026-05-24 | /tools/recraft/ | Tool | Yes | working tree | src/content/tools/recraft.md |
-| 2026-05-24 | /tools/rodin/ | Tool | Yes | working tree | src/content/tools/rodin.md |
+| 2026-05-24 | /tools/read-ai/ | Tool | Yes | frontmatter | src/content/tools/read-ai.md |
+| 2026-05-24 | /tools/recraft/ | Tool | Yes | frontmatter | src/content/tools/recraft.md |
+| 2026-05-24 | /tools/rodin/ | Tool | Yes | frontmatter | src/content/tools/rodin.md |
 | 2026-05-24 | /tools/runway/ | Tool | Yes | frontmatter | src/content/tools/runway.md |
-| 2026-05-24 | /tools/trae/ | Tool | Yes | working tree | src/content/tools/trae.md |
-| 2026-05-24 | /tools/typeface/ | Tool | Yes | working tree | src/content/tools/typeface.md |
+| 2026-05-24 | /tools/trae/ | Tool | Yes | frontmatter | src/content/tools/trae.md |
+| 2026-05-24 | /tools/typeface/ | Tool | Yes | frontmatter | src/content/tools/typeface.md |
+| 2026-05-26 | / | Static page | Yes | working tree | src/pages/index.astro |
+| 2026-05-26 | /categories/ai-automation/ | Category | Yes | working tree | src/content/categories/ai-automation.md |
+| 2026-05-26 | /categories/ai-chatbots/ | Category | Yes | working tree | src/content/categories/ai-chatbots.md |
+| 2026-05-26 | /categories/ai-coding/ | Category | Yes | working tree | src/content/categories/ai-coding.md |
+| 2026-05-26 | /categories/ai-search/ | Category | Yes | working tree | src/content/categories/ai-search.md |
+| 2026-05-26 | /news/ | Static page | Yes | working tree | src/pages/news/index.astro |
+| 2026-05-26 | /tools/claude/ | Tool | Yes | working tree | src/content/tools/claude.md |
+| 2026-05-26 | /tools/cursor/ | Tool | Yes | working tree | src/content/tools/cursor.md |

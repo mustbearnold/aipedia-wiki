@@ -5,10 +5,10 @@ title: AI Search & Research Tools
 description: AI answer engines, private search, research notebooks, semantic search APIs, and source-backed research assistants.
 tool_count: 8
 seo_title: "Best AI Search and Research Tools (May 2026)"
-meta_description: "Updated May 13, 2026: compare Perplexity, ChatGPT Search, Google AI Mode, NotebookLM, Kagi, Exa, You.com, and Grok by citations, privacy, documents, APIs, and buyer fit."
+meta_description: "Updated May 26, 2026: compare Perplexity, ChatGPT Search, Google AI Mode, Bing AI-guided image search, NotebookLM, Kagi, Exa, You.com, and Grok by citations, privacy, documents, APIs, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-05-26
+last_verified: 2026-05-26
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -37,6 +37,8 @@ AI search is not one category anymore. Buyers now choose between **cited answer 
 **Use [Kagi](/tools/kagi/) when privacy and search control matter.** It is the paid, ad-free search choice for people who want ranking controls and optional Assistant features rather than an answer-engine-first product.
 
 **Use [Exa](/tools/exa/) when you are building AI search into a product.** It is a developer API lane for semantic search, retrieval, crawling-style workflows, and deep research APIs.
+
+**Watch Bing's AI-guided image search if visual discovery affects your workflow.** Microsoft's May 2026 opt-in Bing Image Search update groups image results into labeled sections and summarizes those groups. That matters for shopping, education, design inspiration, publishers, and ecommerce teams because visual search is becoming a guided decision surface rather than a plain thumbnail grid.
 
 ## Buyer Paths
 
@@ -99,3 +101,4 @@ Do not leave this category stale. Google AI Mode, Perplexity Pro/Max/Enterprise,
 - [Exa pricing](https://exa.ai/pricing) (verified 2026-05-13)
 - [You.com plans](https://home.you.com/plans) (verified 2026-05-13)
 - [X Premium+ pricing](https://help.x.com/en/premium-plus-price-update) (verified 2026-05-13)
+- [Bing AI-guided image search](https://blogs.bing.com/search/May-2026/A-Smarter-Way-to-Explore-Images-Has-Come-to-Bing) (verified 2026-05-26)

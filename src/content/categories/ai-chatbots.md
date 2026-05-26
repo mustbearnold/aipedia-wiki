@@ -5,10 +5,10 @@ title: AI Chatbots & LLMs
 description: General-purpose AI assistants and large language model chatbots for writing, research, coding help, analysis, multimodal work, and everyday decision support.
 tool_count: 14
 seo_title: "Best AI Chatbots & LLMs (May 2026), aipedia.wiki"
-meta_description: "Compare the best AI chatbots and LLMs in May 2026: ChatGPT (GPT-5.5), Claude Opus 4.7, Gemini 3.1 Pro, Perplexity, Grok, Mistral, and Qwen3.7-Max / Qwen3 open weights."
+meta_description: "Compare the best AI chatbots and LLMs in May 2026: ChatGPT (GPT-5.5), Claude Opus 4.7, Gemini 3.1 Pro, Perplexity, Grok, Mistral, and Qwen3.7-Max / Qwen3 open weights, with governance signals updated through May 26."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-24
-last_verified: 2026-05-24
+last_updated: 2026-05-26
+last_verified: 2026-05-26
 update_frequency: monthly
 ---
 
@@ -47,7 +47,7 @@ The wrong move is paying for three overlapping chatbots without a job for each o
 
 **Use ChatGPT if:** you want one general AI account for writing, analysis, files, voice, images, coding help, custom workflows, and business collaboration.
 
-**Use Claude if:** the work involves long documents, careful editing, nuanced writing, code explanation, critique, or high-stakes reasoning where you want a calmer second brain.
+**Use Claude if:** the work involves long documents, careful editing, nuanced writing, code explanation, critique, high-stakes reasoning, or a vendor posture that leans harder into public AI-safety debate and outside oversight. The May 25 Vatican AI encyclical appearance by Anthropic co-founder Chris Olah is a governance signal, not a product feature.
 
 **Use Gemini if:** Gmail, Docs, Drive, Search, Android, NotebookLM, Veo, Flow, or Google One storage are part of the purchase reason.
 
@@ -101,6 +101,7 @@ Do not subscribe to multiple chatbots because each one has a new model announcem
 - [OpenAI GPT-5.5 in ChatGPT](https://help.openai.com/en/articles/11909943-gpt-55-in-chatgpt) (verified 2026-05-24)
 - [Anthropic Claude models](https://docs.anthropic.com/en/docs/about-claude/models/all-models) (verified 2026-05-24)
 - [Claude pricing](https://claude.com/pricing) (verified 2026-05-24)
+- [Anthropic Chris Olah remarks on Magnifica Humanitas](https://www.anthropic.com/news/chris-olah-pope-leo-encyclical) (verified 2026-05-26)
 - [Google AI subscriptions](https://gemini.google/subscriptions/) (verified 2026-05-24)
 - [Google AI Pro benefits](https://support.google.com/googleone/answer/14534406?hl=en) (verified 2026-05-13)
 - [Perplexity Pro](https://www.perplexity.ai/pro) (verified 2026-05-24)

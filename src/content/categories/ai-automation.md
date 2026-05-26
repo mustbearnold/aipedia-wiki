@@ -5,10 +5,10 @@ title: AI Automation & Agents
 description: Current workflow automation, AI agent platforms, and operations tools for technical teams, non-technical operators, GTM workflows, support, sales, and internal automation.
 tool_count: 24
 seo_title: "Best AI Automation Tools & Agent Platforms (May 2026)"
-meta_description: "Updated May 24, 2026: compare n8n, Zapier, Make, Gumloop, Relevance AI, Lindy, Manus, Pipedream, CrewAI, Apollo, Clay, Intercom, and Instantly by workflow fit, pricing unit, integrations, and governance."
+meta_description: "Updated May 26, 2026: compare n8n, Zapier, Make, Gumloop, Relevance AI, Lindy, Manus, Pipedream, CrewAI, Microsoft agent research, Apollo, Clay, Intercom, and Instantly by workflow fit, pricing unit, integrations, and governance."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-24
-last_verified: 2026-05-13
+last_updated: 2026-05-26
+last_verified: 2026-05-26
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -35,6 +35,8 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 **Use [Gumloop](/tools/gumloop/) when the buyer wants AI-native flows, agents, triggers, MCP, policies, and guardrails.** Gumloop is a stronger fit for agent-heavy workflow building than a generic "connect two apps" use case.
 
 **Use [Relevance AI](/tools/relevance-ai/) when the purchase question is an AI workforce.** Relevance AI's current pricing page lists actions, vendor credits, workforces, unlimited agents/tools, 2000+ integrations, scheduling, escalations, and BYO LLM on paid plans.
+
+**Watch Microsoft's MagenticLite research if you are evaluating local or small-model agents.** The May 22 Microsoft Research release is experimental rather than a production automation platform, but it reinforces a practical buying rule: agent quality depends on harness design, sandboxing, context management, delegation, and approval points as much as raw model size.
 
 ## Buyer Paths
 
@@ -95,3 +97,4 @@ Do not leave this category stale. Automation tools are adding MCP, agent builder
 - [Lindy pricing](https://www.lindy.ai/pricing) (verified 2026-05-13)
 - [Pipedream pricing docs](https://pipedream.com/docs/pricing) (verified 2026-05-13)
 - [Workday FY2026 Q4 results: Pipedream acquisition closed](https://investor.workday.com/news-and-events/press-releases/news-details/2026/Workday-Announces-Fiscal-2026-Fourth-Quarter-and-Full-Year-Financial-Results/default.aspx) (verified 2026-05-13)
+- [Microsoft Research MagenticLite, MagenticBrain, and Fara1.5](https://www.microsoft.com/en-us/research/blog/magenticlite-magenticbrain-fara1-5-an-agentic-experience-optimized-for-small-models/) (verified 2026-05-26)
