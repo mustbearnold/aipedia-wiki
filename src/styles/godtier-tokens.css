@@ -768,6 +768,55 @@
   border-bottom: 1px solid color-mix(in srgb, var(--gt-accent) 65%, transparent);
 }
 
+.gt-body table[data-pricing-enhanced='1'] .t2-pricing-plan-cell {
+  min-width: 9.5rem;
+  vertical-align: middle;
+}
+
+.gt-body table[data-pricing-enhanced='1'] .t2-pricing-plan-link {
+  align-items: center;
+  border-bottom: none;
+  color: var(--gt-fg);
+  display: inline-flex;
+  font-weight: 800;
+  line-height: 1.35;
+  max-width: 100%;
+  text-decoration: none;
+  -webkit-text-fill-color: var(--gt-fg);
+  transition: color 120ms ease;
+}
+
+.gt-body table[data-pricing-enhanced='1'] .t2-pricing-plan-link:hover,
+.gt-body table[data-pricing-enhanced='1'] .t2-pricing-plan-link:focus-visible {
+  border-bottom: none;
+  color: var(--gt-accent);
+  text-decoration: none;
+  -webkit-text-fill-color: var(--gt-accent);
+}
+
+.gt-body table[data-pricing-enhanced='1'] .t2-pricing-plan-link:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--gt-accent) 70%, transparent);
+  outline-offset: 4px;
+}
+
+.gt-body table[data-pricing-enhanced='1'] .t2-pricing-popular-badge {
+  align-items: center;
+  background: var(--gt-accent);
+  border-radius: 6px;
+  color: var(--gt-on-accent);
+  display: flex;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  margin-top: 7px;
+  padding: 5px 7px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  width: max-content;
+  -webkit-text-fill-color: var(--gt-on-accent);
+}
+
 @media (max-width: 760px) {
   .gt-body table[data-mobile-cardified='1'],
   .gt-body table[data-gt-mobile-cardified='1'],

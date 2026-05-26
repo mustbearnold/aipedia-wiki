@@ -26,3 +26,13 @@ test('dynamic pricing table CTAs include full commercial tracking attributes', (
     assert.match(source, new RegExp(assignment.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')));
   }
 });
+
+test('dynamic pricing table plan links stay visually clean', () => {
+  assert.match(source, /badge\.className = 't2-pricing-popular-badge'/);
+  assert.match(source, /link\.className = 't2-pricing-plan-link'/);
+  assert.match(source, /const existingBadge = planCell\.querySelector\('\.t2-pricing-popular-badge'\)/);
+  assert.match(source, /if \(existingBadge\) existingBadge\.remove\(\)/);
+  assert.match(source, /if \(existingBadge\) planCell\.appendChild\(existingBadge\)/);
+  assert.doesNotMatch(source, /hover:underline inline-flex/);
+  assert.doesNotMatch(source, /\\u2197/);
+});

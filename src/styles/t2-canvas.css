@@ -1018,6 +1018,52 @@ button.t2-cta {
 }
 .t2-prose a:hover { border-bottom-color: currentColor; }
 
+.t2-prose table[data-pricing-enhanced='1'] .t2-pricing-plan-cell {
+  min-width: 9.5rem;
+  vertical-align: middle;
+}
+
+.t2-prose table[data-pricing-enhanced='1'] .t2-pricing-plan-link {
+  align-items: center;
+  border-bottom: none;
+  color: var(--t2-fg);
+  display: inline-flex;
+  font-weight: 800;
+  line-height: 1.35;
+  max-width: 100%;
+  text-decoration: none;
+  transition: color 120ms ease;
+}
+
+.t2-prose table[data-pricing-enhanced='1'] .t2-pricing-plan-link:hover,
+.t2-prose table[data-pricing-enhanced='1'] .t2-pricing-plan-link:focus-visible {
+  border-bottom: none;
+  color: var(--t2-accent-text);
+  text-decoration: none;
+}
+
+.t2-prose table[data-pricing-enhanced='1'] .t2-pricing-plan-link:focus-visible {
+  outline: 2px solid rgba(249, 115, 22, 0.62);
+  outline-offset: 4px;
+}
+
+.t2-prose table[data-pricing-enhanced='1'] .t2-pricing-popular-badge {
+  align-items: center;
+  background: var(--t2-accent);
+  border-radius: 6px;
+  color: #0b0a14;
+  display: flex;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  margin-top: 7px;
+  padding: 5px 7px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  width: max-content;
+}
+
 @media (max-width: 520px) {
   .t2-layout {
     gap: 22px;

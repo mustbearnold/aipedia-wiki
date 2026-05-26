@@ -4,9 +4,9 @@
  *
  *  1. Style the "Sources" h2 + the list/paragraphs that follow as a distinct
  *     "Cited X sources" callout — increases trust signal density.
- *  2. Wrap the price column in any pricing table with the page's outbound URL
+ *  2. Wrap the plan column in any pricing table with the page's outbound URL
  *     (affiliate URL when present, canonical otherwise) so each row has a
- *     clickable path to checkout. Adds a small caret to the linked cell.
+ *     clickable, tracked path to checkout.
  *
  * Both rules are idempotent (data-attributes guard re-runs across view
  * transitions).
@@ -128,8 +128,7 @@ const rel = isAffiliate ? 'sponsored noopener' : 'noopener';
         if (popularIdx >= 0 && planCells[popularIdx]) {
           const cell = planCells[popularIdx];
           const badge = document.createElement('span');
-          badge.className =
-            'ml-2 inline-flex items-center px-1.5 py-0.5 rounded text-[9px] font-bold uppercase tracking-wider text-[#0b0a14] bg-[var(--accent-primary)] align-middle';
+          badge.className = 't2-pricing-popular-badge';
           badge.textContent = 'Most Popular';
           cell.appendChild(badge);
           // Subtly emphasise the row.
@@ -222,12 +221,13 @@ const rel = isAffiliate ? 'sponsored noopener' : 'noopener';
         rows.forEach((row) => {
           const planCell = row.querySelector('td');
           if (!planCell || planCell.querySelector('a')) return;
+          const existingBadge = planCell.querySelector('.t2-pricing-popular-badge');
+          if (existingBadge) existingBadge.remove();
           const link = document.createElement('a');
           link.href = outboundUrl;
           link.target = '_blank';
           link.rel = rel;
-          link.className =
-            'text-[var(--accent-primary)] no-underline hover:underline inline-flex items-center gap-1';
+          link.className = 't2-pricing-plan-link';
           link.setAttribute('data-commercial-cta', '');
           link.dataset.ctaViewEvent = isAffiliate ? 'affiliate_cta_view' : 'tool_cta_view';
           link.dataset.ctaClickEvent = isAffiliate ? 'affiliate_click' : 'tool_cta_click';
@@ -248,16 +248,11 @@ const rel = isAffiliate ? 'sponsored noopener' : 'noopener';
           link.dataset.analyticsDestinationUrl = outboundUrl;
           link.dataset.analyticsToolSlug = toolSlug;
           link.dataset.analyticsPosition = 'inline';
-          // Move all child nodes of planCell into the link (preserves the "Most Popular" badge).
+          // Keep the tracked link clean; badges stay separate so table rows do not look underlined.
           while (planCell.firstChild) link.appendChild(planCell.firstChild);
-          link.append(
-            Object.assign(document.createElement('span'), {
-              className: 'text-[10px] opacity-70',
-              textContent: '\u2197',
-              ariaHidden: 'true',
-            })
-          );
+          planCell.classList.add('t2-pricing-plan-cell');
           planCell.appendChild(link);
+          if (existingBadge) planCell.appendChild(existingBadge);
         });
         if (isAffiliate && tbl.dataset.affiliateDisclosure !== '1') {
           tbl.dataset.affiliateDisclosure = '1';
