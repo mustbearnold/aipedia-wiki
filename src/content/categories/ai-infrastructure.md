@@ -5,10 +5,10 @@ title: AI Infrastructure & Model APIs
 description: Developer platforms for LLM routing, pay-as-you-go model APIs, hosted inference, serverless GPUs, vector databases, speech APIs, and production retrieval systems.
 tool_count: 12
 seo_title: "Best AI Infrastructure & Model API Tools (May 2026)"
-meta_description: "Updated May 13, 2026: compare OpenRouter, OpenAI API, Claude API, Gemini API, Mistral 3, Groq, Replicate, fal, Deepgram, Pinecone, Weaviate, Qdrant, and the newly open-licensed LM Studio by routing, billing, and production fit."
+meta_description: "Updated May 27, 2026: compare OpenRouter after its $113M CapitalG-led Series B, OpenAI API, Claude API, Gemini API, Mistral 3, Groq, Replicate, fal, Deepgram, Pinecone, Weaviate, Qdrant, and LM Studio by routing, billing, and production fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-05-27
+last_verified: 2026-05-27
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -28,7 +28,7 @@ AI infrastructure tools sit underneath the apps people see. They route model cal
 
 This category is for developer and platform buyers. If the user is choosing a chatbot, start with [AI Chatbots](/categories/ai-chatbots/). If the team is shipping an AI product, agent, retrieval layer, or model-backed workflow, this is the better lane.
 
-**Use [OpenRouter](/tools/openrouter/) when you need one API across many model providers.** The current pricing page lists pay-as-you-go access to 400+ models and 60+ providers, with budget controls, activity logs, prompt caching, preferred vendor selections, and model-priced token billing. It is the cleanest first stop for model comparison, routing, fallback, and spend-control experiments.
+**Use [OpenRouter](/tools/openrouter/) when you need one API across many model providers.** The current pricing page lists pay-as-you-go access to 400+ models and 60+ providers, with budget controls, activity logs, prompt caching, preferred vendor selections, and model-priced token billing. Its [May 27 funding signal](/news/2026-05-27-openrouter-series-b-model-routing/) makes the category clearer: routing, fallback, governance, and spend visibility are becoming production infrastructure, not just developer convenience.
 
 **Use direct vendor APIs when native features matter.** [OpenAI API](/tools/chatgpt/) is the default direct route for broad multimodal app work. [Claude API](/tools/claude/) is the direct route for long reasoning, writing, code, and document workflows. [Gemini API](/tools/gemini/) matters when Google Cloud, long context, multimodal inputs, or Veo video generation are part of the product.
 
@@ -82,7 +82,8 @@ Do not publish infrastructure pages with old flat monthly subscription framing. 
 
 ## Sources
 
-- [OpenRouter pricing](https://openrouter.ai/pricing) (verified 2026-05-13)
+- [OpenRouter pricing](https://openrouter.ai/pricing) (verified 2026-05-27)
+- [OpenRouter Series B announcement](https://www.businesswire.com/news/home/20260526953416/en/OpenRouter-Raises-%24113-Million-CapitalG-led-Series-B-as-Weekly-Volume-Explodes-to-25T-Tokens) (verified 2026-05-27)
 - [OpenAI API pricing](https://openai.com/api/pricing/) (verified 2026-05-13)
 - [Claude API pricing](https://platform.claude.com/docs/en/about-claude/pricing) (verified 2026-05-13)
 - [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing) (verified 2026-05-13)

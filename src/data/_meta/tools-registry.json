@@ -4555,17 +4555,17 @@
         "ai-notes"
       ],
       "company": "Lindy AI",
-      "url": "https://lindy.ai",
-      "pricing_model": "freemium",
-      "price_range": "$0-$199.99/month",
+      "url": "https://www.lindy.ai/",
+      "pricing_model": "paid",
+      "price_range": "7-day free trial; $49.99-$199.99/month + Enterprise",
       "launched": "2022-12",
-      "last_updated": "2026-05-13T00:00:00.000Z",
-      "last_verified": "2026-05-13T00:00:00.000Z",
+      "last_updated": "2026-05-27T00:00:00.000Z",
+      "last_verified": "2026-05-27T00:00:00.000Z",
       "update_frequency": "monthly",
       "scores": {
         "utility": 8,
-        "value": 6,
-        "moat": 6,
+        "value": 7,
+        "moat": 7,
         "longevity": 7
       },
       "tags": [
@@ -4577,13 +4577,14 @@
       ],
       "affiliate": {
         "has_program": true,
-        "commission": "30% Y1 + 15% Y2 recurring",
+        "commission": "30% for year one, 15% for year two",
         "cookie_days": null,
         "network": "PartnerStack",
-        "link": null,
-        "application_status": "applied",
+        "link": "https://try.lindy.ai/a1y1dlsexvk1",
+        "application_status": "approved",
         "applied_date": "2026-05-13T00:00:00.000Z",
-        "notes": "Applied via PartnerStack 2026-05-13; direct URL submitted: https://aipedia.wiki/tools/lindy/."
+        "approved_date": "2026-05-27T00:00:00.000Z",
+        "notes": "Live PartnerStack affiliate link supplied by the site owner on 2026-05-27. PartnerStack directory verified the 30% year-one / 15% year-two offer structure on 2026-05-27; cookie duration was not publicly listed."
       },
       "page_path": "wikis/ai-tools/pages/tools/lindy.md"
     },

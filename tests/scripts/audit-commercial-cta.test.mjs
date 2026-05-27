@@ -41,6 +41,17 @@ const routes = [
     }],
   },
   {
+    path: 'tools/lindy',
+    count: 2,
+    pageType: 'tool',
+    requiredAffiliateLinks: [{
+      href: 'https://try.lindy.ai/a1y1dlsexvk1',
+      toolSlug: 'lindy',
+      toolName: 'Lindy',
+      affiliateProgram: 'PartnerStack',
+    }],
+  },
+  {
     path: 'compare/chatgpt-vs-claude',
     count: 4,
     pageType: 'comparison',
@@ -108,6 +119,17 @@ const routes = [
     ],
   },
   {
+    path: 'guides/best-ai-personal-assistant-for-work',
+    count: 5,
+    pageType: 'guide',
+    requiredAffiliateLinks: [{
+      href: 'https://try.lindy.ai/a1y1dlsexvk1',
+      toolSlug: 'lindy',
+      toolName: 'Lindy',
+      affiliateProgram: 'PartnerStack',
+    }],
+  },
+  {
     path: 'guides/best-ai-tools-for-marketers',
     count: 5,
     pageType: 'guide',
@@ -144,6 +166,17 @@ const routes = [
         affiliateProgram: 'PartnerStack',
       },
     ],
+  },
+  {
+    path: 'compare/lindy-vs-zapier-vs-n8n',
+    count: 4,
+    pageType: 'comparison',
+    requiredAffiliateLinks: [{
+      href: 'https://try.lindy.ai/a1y1dlsexvk1',
+      toolSlug: 'lindy',
+      toolName: 'Lindy',
+      affiliateProgram: 'PartnerStack',
+    }],
   },
   {
     path: 'categories/ai-design',

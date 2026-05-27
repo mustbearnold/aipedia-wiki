@@ -646,3 +646,151 @@ Completed on 2026-05-22.
 Published seven source-backed AiPedia news articles covering frontier AI capital pressure, Codex AppShots/Goal Mode/locked computer use, AdventHealth ChatGPT healthcare rollout, Claude Compliance API and Opus cybersecurity partners, Gemini ADK/Android/Home infrastructure, GitHub Copilot semantic search/auto routing/Eclipse/web model cleanup, and Microsoft/EY's $1B+ enterprise AI accelerator. Refreshed affected surfaces: `/news/`, `/tools/codex/`, `/tools/chatgpt/`, `/tools/claude/`, `/tools/claude-code/`, `/tools/gemini/`, `/tools/github-copilot/`, `/news/rss.xml`, `/llms.txt`, `/llms-full.txt`, generated OG news assets, and `PAGE_REFRESH_LEDGER.md`.
 
 Verification passed: `npm run check:news`, `npm run check:links`, `npm run ledger:pages`, `npm run ledger:pages:check`, `npm run test:scripts`, `npm run build:fast`, `git diff --check`, image metadata QA for all 28 generated assets, and static Playwright QA for `/news/`, all seven new article pages, and six affected tool pages at 360, 390, 430, 768, and 1024 px. `npm run check` passed guard/link/news gates and failed only at the existing moderate `ws` advisory inherited through Cloudflare/Wrangler.
+
+---
+
+## ExecPlan: May 27 2026 News Refresh
+
+### 1. Objective
+
+Publish a current, source-backed May 27, 2026 AiPedia news refresh covering the highest-signal AI and AI-tool developments missing from the existing news archive. The goal is to turn today's volatile AI news into buyer-useful coverage that improves trust, organic freshness, recirculation into tool pages, and editorial scalability.
+
+### 2. Current state
+
+`src/content/news/` is current through the May 26 desk article and includes standalone coverage for several May 22-26 items. OpenRouter and Qwen have active tool pages with recent-development sections. There is no dedicated Microsoft 365 Copilot or Samsung enterprise-AI tool page, so those stories should use related-tool routing rather than false `affects` links.
+
+### 3. Target state
+
+The news section contains a May 27 desk article and standalone articles for verified, non-duplicate stories: OpenRouter's $113M CapitalG-led Series B and token-volume signal, Alibaba Cloud's international Qwen Conference agent stack, Microsoft's mid-2026 Ask Copilot/Click to Do Windows roadmap, and Samsung DX's planned June rollout of ChatGPT/Gemini/Claude access with security training. Affected OpenRouter and Qwen tool pages, parent category surfaces, `/news/`, RSS, LLM surfaces, OG assets, and the page refresh ledger are current.
+
+### 4. Scope
+
+Included: new news Markdown records, affected tool-page updates, affected category/top-layer freshness checks, `/news/` archive metadata, RSS metadata, LLM surface metadata, generated news artwork, page refresh ledger regeneration, content checks, build, and representative mobile QA. Excluded: new tool records, logo changes, affiliate CTA changes, and unverified speculation about rumored OpenAI, Anthropic, or Google releases that did not have current primary or named-source support.
+
+Affected top-layer pages and surfaces: `/news/`, `/tools/openrouter/`, `/tools/qwen/`, `/categories/ai-infrastructure/`, `/categories/ai-chatbots/`, RSS, sitemap/build-generated pages, `/llms.txt`, `/llms-full.txt`, generated OG images, and `PAGE_REFRESH_LEDGER.md`.
+
+### 5. Files likely affected
+
+`src/content/news/*.md`, `src/content/tools/openrouter.md`, `src/content/tools/qwen.md`, `src/content/categories/ai-infrastructure.md`, `src/content/categories/ai-chatbots.md`, `src/pages/news/index.astro`, `src/pages/news/rss.xml.ts`, `src/pages/llms.txt.ts`, `src/pages/llms-full.txt.ts`, `PAGE_REFRESH_LEDGER.md`, `public/og/news/*`, and this plan.
+
+### 6. Data model impact
+
+No schema changes. New news records must follow the existing collection schema, include source URLs, use `last_verified: 2026-05-27`, and use `affects` only where the affected tool page is updated with a reciprocal recent-development link.
+
+### 7. SEO impact
+
+Each new article gets a unique title, summary, canonical route from the existing news template, source list, and internal links to relevant tools or categories. `/news/`, RSS, LLM surfaces, and ledger rows should reflect the May 27 refresh.
+
+### 8. Conversion impact
+
+No new affiliate CTAs are planned. Articles should route readers to relevant tool pages and decision guidance while preserving trust language and avoiding promotional overclaiming.
+
+### 9. Mobile UX impact
+
+Articles reuse the existing responsive news layout. Verify `/news/`, new article pages, and affected tool pages at mobile and desktop widths for horizontal overflow, broken images, and missing primary content.
+
+### 10. Implementation steps
+
+1. Verify May 27 story set using current May 2026 searches and primary/current reporting.
+2. Add standalone articles and the daily desk with concise buyer guidance, watch-outs, and source-backed claims.
+3. Update OpenRouter and Qwen recent-development sections and relevant parent category surfaces.
+4. Refresh `/news/`, RSS, and LLM metadata comments.
+5. Generate article artwork and regenerate the page ledger.
+6. Run news/link/ledger/script checks, build, diff hygiene, and representative mobile QA.
+
+### 11. Verification commands
+
+`npm run check:news`, `npm run check:links`, `node scripts/generate-og-news.mjs`, `npm run ledger:pages`, `npm run ledger:pages:check`, `npm run test:scripts`, `npm run build:fast`, `npm run check`, `git diff --check`, image metadata QA, and Playwright/static mobile QA at 360, 390, 430, 768, and 1024 px.
+
+### 12. Acceptance criteria
+
+New articles are non-duplicate, source-backed, dated accurately, and have `last_verified: 2026-05-27`. Every article with `affects` is linked from its affected tool page. Parent/news surfaces and LLM/RSS metadata are current. Ledger checks pass. Build and mobile QA pass or failures are clearly documented.
+
+### 13. Risks and mitigations
+
+Some May 27 search results recycle May 19-26 announcements; avoid duplicate standalone pages unless the source/date and buyer angle are materially new. Samsung and Microsoft claims include rollout timing, so use cautious wording and note where timing can change. OpenRouter valuation is reported by named outlets rather than company-disclosed, so separate confirmed funding/usage from reported valuation.
+
+### 14. Progress log
+
+2026-05-27: Plan created after source verification. Baseline news stops at May 26, 2026. Starting content edits for the May 27 refresh.
+
+2026-05-27: Added five source-backed May 27 news records, refreshed affected OpenRouter/Qwen tool pages and parent category surfaces, refreshed `/news/`, RSS, and LLM metadata, generated 20 OG/thumbnail assets, regenerated `PAGE_REFRESH_LEDGER.md`, and completed checks/build/mobile QA.
+
+### 15. Final report
+
+Completed on 2026-05-27.
+
+Published the May 27 AiPedia news refresh with four standalone articles and a daily news desk covering OpenRouter's $113M Series B, Alibaba Cloud's Qwen Conference agent stack, Microsoft's mid-2026 Windows Copilot roadmap, and Samsung DX's reported June enterprise rollout of ChatGPT/Gemini/Claude access. Refreshed affected surfaces: `/news/`, `/tools/openrouter/`, `/tools/qwen/`, `/categories/ai-infrastructure/`, `/categories/ai-chatbots/`, `/news/rss.xml`, `/llms.txt`, `/llms-full.txt`, generated OG news assets, and `PAGE_REFRESH_LEDGER.md`.
+
+Verification passed: `npm run check:news`, `npm run check:links`, `npm run ledger:pages`, `npm run ledger:pages:check`, `npm run test:scripts`, `npm run guard:check`, `npm run build:fast`, `npm run check`, `git diff --check`, image metadata QA for all 20 generated assets, Browser QA on a built article, and static Playwright QA for `/news/`, all five new article pages, two affected tool pages, and two affected category pages at 360, 390, 430, 768, and 1024 px.
+
+---
+
+## ExecPlan: Lindy Affiliate Conversion Refresh
+
+### 1. Objective
+
+Turn Lindy into a current, high-trust, high-conversion AiPedia affiliate surface using the approved PartnerStack link supplied by the site owner. The work should increase qualified affiliate clicks, free-trial starts, and paid conversions without compromising editorial trust, source accuracy, or mobile UX.
+
+### 2. Current state
+
+`/tools/lindy/` already exists with a logo and a baseline review, but it is verified only through 2026-05-13, has no live affiliate URL, and still includes stale free-tier/credit phrasing. Lindy is mentioned in `/categories/ai-automation/` and the automation-platform guide, but there is no Lindy-specific comparison or high-intent assistant buyer guide that can surface a Lindy CTA above the fold.
+
+### 3. Target state
+
+`/tools/lindy/` becomes a current source-backed buying page with the live affiliate link, honest free-trial and plan guidance, clear “buy/avoid/alternative” decisions, updated facts, updated affiliate registry metadata, and verified logo/OG rendering. New money pages capture likely buyer intent: a Lindy-centered comparison against Zapier and n8n, plus a buyer guide for work AI assistants where Lindy is the editorial best pick. Affected category, guide, compare, tools, LLM, and ledger surfaces are current.
+
+### 4. Scope
+
+Included: Lindy tool-page refresh, affiliate metadata update, ToolLayout CTA label support if needed, one Lindy comparison page, one Lindy buyer guide, affected AI automation category and existing guide links, top-layer metadata comments, commercial CTA audit coverage, generated OG/tool assets if required, page ledger regeneration, content checks, build, and mobile QA.
+
+Excluded: changing Lindy’s score solely for commission, fabricating hands-on tests, claiming unverified cookie duration, adding unrelated affiliate pages, or creating duplicate low-value pages.
+
+Affected top-layer pages and surfaces: `/tools/`, `/tools/lindy/`, `/categories/`, `/categories/ai-automation/`, `/compare/`, `/guides/`, `/llms.txt`, `/llms-full.txt`, sitemap/build outputs, commercial CTA audit, source/affiliate registry metadata, logo manifest, and `PAGE_REFRESH_LEDGER.md`.
+
+### 5. Files likely affected
+
+`src/content/tools/lindy.md`, `src/content/comparisons/lindy-vs-zapier-vs-n8n.md`, `src/content/use-cases/best-ai-personal-assistant-for-work.md`, `src/content/categories/ai-automation.md`, `src/content/use-cases/best-ai-automation-platform.md`, `src/data/_meta/tools-registry.json`, `src/layouts/ToolLayout.astro`, `scripts/audit-commercial-cta.mjs`, `tests/scripts/audit-commercial-cta.test.mjs`, `src/pages/tools/index.astro`, `src/pages/categories/index.astro`, `src/pages/compare/index.astro`, `src/pages/guides/index.astro`, `src/pages/llms.txt.ts`, `src/pages/llms-full.txt.ts`, `PAGE_REFRESH_LEDGER.md`, generated OG assets, and this plan.
+
+### 6. Data model impact
+
+No schema change planned. Existing tool, comparison, guide, affiliate, and fact fields can represent the changes. Lindy’s affiliate object should move from applied/no-link to approved/live-link with source-backed PartnerStack terms and no unsupported cookie claim.
+
+### 7. SEO impact
+
+New pages should target decision-intent queries rather than thin affiliate landing intent: “Lindy vs Zapier vs n8n,” “best AI personal assistant for work,” “Lindy pricing,” and “AI assistant for inbox meetings calendar.” Titles, descriptions, canonical routes, internal links, schema, and source lists must remain unique and crawlable.
+
+### 8. Conversion impact
+
+Every monetized Lindy CTA must use the supplied affiliate URL, include placement/tool/page metadata, carry `rel="sponsored noopener"`, and show nearby disclosure. CTA labels should be user-benefit focused: “Start Lindy free trial,” “Try Lindy for inbox and meetings,” or similar. Pages should pre-qualify buyers before the click to improve conversion quality.
+
+### 9. Mobile UX impact
+
+The first mobile screen for the tool and new guide/comparison pages must answer who should try Lindy, which plan to start with, why trust the claim, and what to avoid. Verify 360, 390, 430, 768, and 1024 px for no overflow, visible CTAs, no broken logo/OG images, and readable tables.
+
+### 10. Implementation steps
+
+1. Verify Lindy pricing, feature, security, integrations, usage, and PartnerStack facts using current May 2026 sources.
+2. Rewrite `/tools/lindy/` with current plan guidance, affiliate CTA metadata, sources, FAQ, alternatives, and conversion-safe framing.
+3. Add a Lindy-centered comparison page and work-assistant buyer guide with honest use-case winners.
+4. Update affected category/guide/top-layer/LLM/commercial-audit surfaces and affiliate registry metadata.
+5. Generate/regenerate assets and the page ledger.
+6. Run link/news/ledger/content/commercial/logo/script/build checks and representative mobile QA.
+
+### 11. Verification commands
+
+`node scripts/generate-logo-manifest.mjs`, `node scripts/audit-tool-logos.mjs`, `node scripts/generate-og-svgs.mjs`, `node scripts/optimize-og-images.mjs`, `npm run ledger:pages`, `npm run ledger:pages:check`, `npm run check:links`, `npm run check:news`, `npm run test:scripts`, `npm run guard:check`, `npm run build:fast`, `npm run check`, `git diff --check`, commercial CTA route checks, and mobile/static QA at 360, 390, 430, 768, and 1024 px.
+
+### 12. Acceptance criteria
+
+Lindy pages use the supplied affiliate URL and show tracked/disclosed CTAs. All volatile facts are verified as of 2026-05-27 with May 2026 source searches. No unsupported free-tier, credit, cookie, model, or security claims remain. New pages are unique, useful, internally linked, ledgered, and build cleanly. Mobile QA and commercial CTA checks pass or any unrelated issues are documented.
+
+### 13. Risks and mitigations
+
+The old Lindy page contained stale credit/free-tier claims; replace them with current official pricing and docs language. Affiliate terms differ between Lindy’s partner page, AffiliateOtter, and PartnerStack directory; use PartnerStack for the live program terms and leave cookie duration unknown. Avoid making Lindy the universal automation winner when n8n or Zapier is better for technical or broad SaaS automation.
+
+### 14. Progress log
+
+2026-05-27: Plan created after confirming an existing Lindy page, live logo, stale affiliate/no-link metadata, and current May 2026 Lindy pricing, usage, security, integrations, and PartnerStack program facts.
+2026-05-27: Rewrote `/tools/lindy/` around the live affiliate link, current 7-day trial/Plus/Pro/Max pricing, usage limits, security, integrations, alternatives, FAQ, and source list. Added `/compare/lindy-vs-zapier-vs-n8n/` and `/guides/best-ai-personal-assistant-for-work/`, updated the AI automation category and automation-platform guide to route buyers into those pages, patched `ToolLayout.astro` so `primary_cta_label` reaches hero/footer/sticky CTAs, updated the Lindy registry affiliate metadata, and added Lindy routes to the commercial CTA audit.
+2026-05-27: Verification completed. Passed logo manifest/audit, OG generation/optimization, page ledger regeneration and check, link/news checks, script tests, guard checks, `build:fast`, full `check`, `git diff --check`, standalone commercial CTA audit against `dist-fast`, in-app browser smoke on `/tools/lindy/`, and 40 static/mobile QA checks across 8 affected routes at 360, 390, 430, 768, and 1024 px.

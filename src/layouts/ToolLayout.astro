@@ -110,6 +110,7 @@ const scoreBand = overall >= 9
 const pricingSummary = f.price_range
   ?? (f.pricing_model === 'free' ? 'Free' : f.pricing_model === 'freemium' ? 'Free + paid' : 'Paid');
 
+const primaryCtaLabel = f.primary_cta_label ? String(f.primary_cta_label) : undefined;
 const quickAnswer = f.quick_answer ?? '';
 
 function cleanSnippet(value: unknown, fallback = ''): string {
@@ -261,6 +262,7 @@ const tocItems = (headings ?? [])
         placement="tool_hero_primary"
         pageSlug={toolSlug}
         categorySlug={catSlug}
+        label={primaryCtaLabel}
         className="gt-btn gt-btn-primary"
         showDisclosure={isAffiliate}
         toolCtaMarker
@@ -364,6 +366,7 @@ const tocItems = (headings ?? [])
         placement="tool_post_body"
         pageSlug={toolSlug}
         categorySlug={catSlug}
+        label={primaryCtaLabel}
         className="gt-btn gt-btn-primary"
         showDisclosure={isAffiliate}
         toolCtaMarker
@@ -401,7 +404,7 @@ const tocItems = (headings ?? [])
     title={f.title}
     score={overall}
     price={pricingSummary}
-    cta={{ label: `Try ${f.title}`, href: (affiliate?.link && affiliate.link.length > 0 ? affiliate.link : (f.url ?? '#')), external: true }}
+    cta={{ label: primaryCtaLabel ?? `Try ${f.title}`, href: (affiliate?.link && affiliate.link.length > 0 ? affiliate.link : (f.url ?? '#')), external: true }}
     toolName={f.title}
     toolSlug={toolSlug}
     canonicalUrl={f.url}

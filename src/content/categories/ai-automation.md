@@ -5,9 +5,9 @@ title: AI Automation & Agents
 description: Current workflow automation, AI agent platforms, meeting automation, call automation, and operations tools for technical teams, non-technical operators, GTM workflows, customer success, support, sales, and internal automation.
 tool_count: 25
 seo_title: "Best AI Automation Tools & Agent Platforms (May 2026)"
-meta_description: "Updated May 26, 2026: compare n8n, Zapier, Make, Gumloop, Relevance AI, Lindy, Manus, Pipedream, CloudTalk, MeetGeek, Apollo, Clay, Intercom, and Instantly by workflow fit, pricing unit, integrations, and governance."
+meta_description: "Updated May 27, 2026: compare n8n, Zapier, Make, Gumloop, Relevance AI, Lindy, Manus, Pipedream, CloudTalk, MeetGeek, Apollo, Clay, Intercom, and Instantly by workflow fit, pricing unit, integrations, governance, and assistant-style delegation."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-26
+last_updated: 2026-05-27
 last_verified: 2026-05-26
 update_frequency: weekly
 top_picks:
@@ -40,6 +40,8 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 
 **Use [MeetGeek](/tools/meetgeek/) when automation starts with meetings.** MeetGeek is the better fit when customer success, sales, recruiting, or implementation teams need meeting transcripts, summaries, action items, AI Chat, Zapier/Make/n8n workflows, API/MCP access, and CRM/task handoff from customer calls.
 
+**Use [Lindy](/tools/lindy/) when the buyer wants an AI work assistant, not a workflow canvas.** Lindy's May 27 refresh now routes high-intent buyers into a 7-day trial, Plus-first plan guidance, and the [Lindy vs Zapier vs n8n](/compare/lindy-vs-zapier-vs-n8n/) decision path. It belongs in this category for inbox, calendar, meeting prep, meeting notes, follow-up drafting, and iMessage/SMS delegation, but not for high-volume backend automation.
+
 **Watch Microsoft's MagenticLite research if you are evaluating local or small-model agents.** The May 22 Microsoft Research release is experimental rather than a production automation platform, but it reinforces a practical buying rule: agent quality depends on harness design, sandboxing, context management, delegation, and approval points as much as raw model size.
 
 ## Buyer Paths
@@ -54,7 +56,7 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 | Phone-heavy sales/support operations | [CloudTalk](/tools/cloudtalk/) | Business calling, routing, dialers, CRM sync, AI Conversation Intelligence, and AI Voice Agents in one platform | More than teams need if the job is internal-only calling or pure chat support |
 | Meeting-to-workflow automation for CS, sales, recruiting, and ops | [MeetGeek](/tools/meetgeek/) | Transcripts, summaries, AI Chat, action items, Zapier/Make/n8n workflows, API/MCP access, and CRM/task handoff from meeting content | Needs consent policy, workspace permissions, and a defined post-meeting workflow |
 | One-off general autonomous tasks | [Manus](/tools/manus/) | Hosted VM agent for research, spreadsheets, slides, files, and browser work; official site now describes Manus as part of Meta | Credit burn and data-handling terms need direct verification before sensitive work |
-| Inbox, calendar, meeting, and follow-up assistant | [Lindy](/tools/lindy/) | Assistant-style automation for professionals who want delegation, not a blank canvas | Connected inboxes and usage tiers shape the real plan |
+| Inbox, calendar, meeting, and follow-up assistant | [Lindy](/tools/lindy/) | Assistant-style automation for professionals who want delegation, not a blank canvas; start with [the work-assistant guide](/guides/best-ai-personal-assistant-for-work/) or [Lindy vs Zapier vs n8n](/compare/lindy-vs-zapier-vs-n8n/) | Current public pricing starts with a 7-day trial; Plus is the first paid plan for most solo buyers, while usage and inbox limits must be tested |
 | Developer API workflows and embedded integrations | [Pipedream](/tools/pipedream/) | Developer-friendly workflows, Connect, MCP servers, and credit-based compute under Workday ownership | Requires more technical judgment than Zapier or Make; ask how Workday packaging affects enterprise rollout |
 
 ## Our Picks
@@ -77,9 +79,11 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 - [Best AI tools for customer support](/guides/best-ai-tools-for-customer-support/) is the support-automation buyer guide for Intercom, Voiceflow, Ada, and Retell AI. Keep it synchronized with Intercom/Fin outcome pricing, Voiceflow credit billing, Ada enterprise CX positioning, and voice-agent workflow guidance.
 - [Best AI phone system for SMB sales and support teams](/guides/best-ai-phone-system-for-smb-sales-and-support-teams/) is the CloudTalk money page for teams that need phone operations, CRM logging, AI conversation intelligence, coaching, and a path to AI voice agents.
 - [Best AI meeting assistant for customer success teams](/guides/best-ai-meeting-assistant-for-customer-success-teams/) is the MeetGeek money page for teams that need customer calls to become account memory, action items, CRM/task updates, QBR prep, and renewal context.
+- [Best AI personal assistant for work](/guides/best-ai-personal-assistant-for-work/) is the Lindy money page for buyers who want inbox, calendar, meeting, follow-up, and text-delegation help before they choose a workflow platform.
 - [Best AI stack for solo founders](/guides/ai-solo-founder-stack/) now gives founders the practical automation sequence: manual first, n8n once workflows repeat, Intercom only after real support volume, and no fake fixed monthly stack total.
 - [Best AI tools for small business](/guides/best-ai-tools-for-small-business/) now gives owner-operators the conservative buying sequence: general assistant first, Google-native assistant when it reduces switching, and Zapier only after workflows already work manually.
 - [n8n vs Make vs Zapier](/compare/n8n-vs-make-vs-zapier/) should be rebuilt next around workflow complexity, pricing unit, AI-agent support, and owner type.
+- [Lindy vs Zapier vs n8n](/compare/lindy-vs-zapier-vs-n8n/) now captures the highest-intent assistant-versus-automation fork: delegated admin work, broad no-code SaaS automation, or technical workflow ownership.
 - A new `Gumloop vs Relevance AI` comparison would capture high-intent buyers choosing between AI-native workflow building and agent workforce deployment.
 - A new `n8n vs Gumloop` comparison would separate technical workflow control from modern agent-flow UX.
 - A new `Zapier MCP vs n8n AI workflows` answer page could capture buyers asking how AI tools should connect to SaaS apps.
@@ -102,7 +106,10 @@ Do not leave this category stale. Automation tools are adding MCP, agent builder
 - [Gumloop pricing](https://www.gumloop.com/pricing) (verified 2026-05-13)
 - [Relevance AI pricing](https://relevanceai.com/pricing) (verified 2026-05-13)
 - [Manus pricing](https://manus.im/pricing) (verified 2026-05-24)
-- [Lindy pricing](https://www.lindy.ai/pricing) (verified 2026-05-13)
+- [Lindy pricing](https://www.lindy.ai/pricing) (verified 2026-05-27)
+- [Lindy quickstart docs](https://docs.lindy.ai/start-here/quickstart) (verified 2026-05-27)
+- [Lindy usage docs](https://docs.lindy.ai/account-billing/usage) (verified 2026-05-27)
+- [Lindy PartnerStack program](https://market.partnerstack.com/page/lindy) (verified 2026-05-27)
 - [Pipedream pricing docs](https://pipedream.com/docs/pricing) (verified 2026-05-13)
 - [Workday FY2026 Q4 results: Pipedream acquisition closed](https://investor.workday.com/news-and-events/press-releases/news-details/2026/Workday-Announces-Fiscal-2026-Fourth-Quarter-and-Full-Year-Financial-Results/default.aspx) (verified 2026-05-13)
 - [Microsoft Research MagenticLite, MagenticBrain, and Fara1.5](https://www.microsoft.com/en-us/research/blog/magenticlite-magenticbrain-fara1-5-an-agentic-experience-optimized-for-small-models/) (verified 2026-05-26)

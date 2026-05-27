@@ -3,7 +3,7 @@ type: use-case
 slug: best-ai-automation-platform
 title: "Best AI Automation Platform (May 2026)"
 seo_title: "Best AI Automation Platform: n8n, Zapier, Make, Gumloop & Relevance AI (May 2026)"
-meta_description: "Best AI automation platforms in May 2026 (refreshed May 13): n8n for technical teams, Zapier for no-code integrations, Make for visual operations, Gumloop for AI-native workflows, and Relevance AI for agent workforces."
+meta_description: "Best AI automation platforms in May 2026 (refreshed May 27): n8n for technical teams, Zapier for no-code integrations, Make for visual operations, Gumloop for AI-native workflows, Relevance AI for agent workforces, and Lindy for assistant-style delegation."
 author: "aipedia.wiki Editorial"
 description: "A current buyer guide to AI automation platforms, covering workflow automation, AI agents, integrations, self-hosting, pricing units, governance, and which platform to buy first."
 tools_mentioned: ["n8n", "zapier", "make", "gumloop", "relevance-ai", "lindy", "pipedream", "crewai"]
@@ -36,14 +36,14 @@ guide_picks:
     sources:
       - label: "Zapier pricing"
         url: "https://zapier.com/pricing"
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-05-27
+last_verified: 2026-05-27
 update_frequency: monthly
 ---
 
 # Best AI Automation Platform (May 2026)
 
-AiPedia verified this guide on 2026-05-13 against current official pricing, docs, and product pages. Rankings are editorial. AiPedia may earn affiliate revenue from some tool links, but paid relationships do not determine the winner.
+AiPedia verified this guide on 2026-05-27 against current official pricing, docs, and product pages. Rankings are editorial. AiPedia may earn affiliate revenue from some tool links, but paid relationships do not determine the winner.
 
 ## Quick Verdict
 
@@ -66,7 +66,7 @@ AiPedia verified this guide on 2026-05-13 against current official pricing, docs
 | Visual workflows with strong branching and low entry cost | [Make](/tools/make/) | Polished scenario builder, routers, filters, credits, 3000+ apps, and AI agents on all plans | Credit math and scenario design still need monitoring |
 | Agent-heavy workflows with modern team controls | [Gumloop](/tools/gumloop/) | Flows, agents, triggers, MCP support, app policies, guardrails, unlimited agents and flows | Credit usage and enterprise features should be reviewed before rollout |
 | Delegated AI workforce for GTM, research, support, and ops | [Relevance AI](/tools/relevance-ai/) | Agent workforces, actions, scheduling, escalations, marketplace, and BYO LLM on paid plans | Not the cheapest generic workflow router; vendor-credit model needs attention |
-| Inbox, calendar, meeting, and follow-up assistant | [Lindy](/tools/lindy/) | Best fit for professionals who want an assistant-style agent, not a blank automation canvas | Usage tiers and connected inbox limits shape the real cost |
+| Inbox, calendar, meeting, and follow-up assistant | [Lindy](/tools/lindy/) | Best fit for professionals who want assistant-style delegation, not a blank automation canvas; see [Best AI personal assistant for work](/guides/best-ai-personal-assistant-for-work/) and [Lindy vs Zapier vs n8n](/compare/lindy-vs-zapier-vs-n8n/) | Current public entry is a 7-day trial; Plus is the first paid plan for most solo buyers, while usage and inbox limits need a real pilot |
 | Developer API workflows and embedded integrations | [Pipedream](/tools/pipedream/) | Good when every step can be code and workflows need API/developer control | Credit-based compute billing requires careful estimation |
 
 ## What To Buy First
@@ -78,6 +78,8 @@ If you are not technical and the main job is connecting SaaS apps quickly, start
 If your buyer cares about visual workflow clarity and low entry price more than self-hosting, test Make before Zapier. Make can be more cost-effective for branching workflows, especially when the team can learn its scenario model.
 
 If you are building agent-style work rather than simple "when this, then that" automations, test Gumloop and Relevance AI separately. Gumloop is closer to AI-native workflow building. Relevance AI is closer to an agent workforce platform.
+
+If the job is personal admin work rather than system automation, test Lindy before a workflow platform. Lindy is the better first click when the buyer wants inbox, calendar, meetings, follow-ups, and text-based delegation handled by an assistant. Use Zapier or n8n instead when the buyer needs deterministic app-to-app workflows, logs, retries, APIs, code steps, or self-hosting.
 
 ## Top Picks
 
@@ -185,13 +187,16 @@ Use Gumloop when the work is AI-native flows and agents inside a workflow surfac
 
 ## Sources
 
-- [n8n pricing](https://n8n.io/pricing/) (verified 2026-05-13)
-- [n8n AI documentation](https://docs.n8n.io/advanced-ai/) (verified 2026-05-13)
-- [Zapier pricing](https://zapier.com/pricing) (verified 2026-05-13)
-- [Make pricing](https://www.make.com/en/pricing) (verified 2026-05-13)
-- [Make AI Agents](https://www.make.com/en/ai-agents) (verified 2026-05-13)
-- [Gumloop pricing](https://www.gumloop.com/pricing) (verified 2026-05-13)
-- [Relevance AI pricing](https://relevanceai.com/pricing) (verified 2026-05-13)
-- [Lindy pricing](https://www.lindy.ai/pricing) (verified 2026-05-13)
-- [Pipedream pricing docs](https://pipedream.com/docs/pricing) (verified 2026-05-13)
-- [CrewAI documentation](https://docs.crewai.com/en/introduction) (verified 2026-05-13)
+- [n8n pricing](https://n8n.io/pricing/) (verified 2026-05-27)
+- [n8n AI documentation](https://docs.n8n.io/advanced-ai/) (verified 2026-05-27)
+- [Zapier pricing](https://zapier.com/pricing) (verified 2026-05-27)
+- [Make pricing](https://www.make.com/en/pricing) (verified 2026-05-27)
+- [Make AI Agents](https://help.make.com/introduction-to-make-ai-agents-new) (verified 2026-05-27)
+- [Gumloop pricing](https://www.gumloop.com/pricing) (verified 2026-05-27)
+- [Relevance AI pricing](https://relevanceai.com/pricing) (verified 2026-05-27)
+- [Relevance AI plans and credits docs](https://relevanceai.com/docs/admin/subscriptions/plans) (verified 2026-05-27)
+- [Lindy pricing](https://www.lindy.ai/pricing) (verified 2026-05-27)
+- [Lindy quickstart docs](https://docs.lindy.ai/start-here/quickstart) (verified 2026-05-27)
+- [Lindy usage docs](https://docs.lindy.ai/account-billing/usage) (verified 2026-05-27)
+- [Pipedream pricing docs](https://pipedream.com/docs/pricing) (verified 2026-05-27)
+- [CrewAI documentation](https://docs.crewai.com/) (verified 2026-05-27)

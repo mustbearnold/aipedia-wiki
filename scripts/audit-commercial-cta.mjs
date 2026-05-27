@@ -40,6 +40,11 @@ const partnerLinks = {
     toolSlug: 'amplemarket',
     affiliateProgram: 'direct',
   },
+  lindy: {
+    href: 'https://try.lindy.ai/a1y1dlsexvk1',
+    toolSlug: 'lindy',
+    affiliateProgram: 'PartnerStack',
+  },
 };
 
 const requiredRoutes = [
@@ -47,6 +52,7 @@ const requiredRoutes = [
   { path: '/tools/apollo/', minCtas: 2, pageType: 'tool', requiredAffiliateLinks: [partnerLinks.apollo] },
   { path: '/tools/adcreative/', minCtas: 2, pageType: 'tool', requiredAffiliateLinks: [partnerLinks.adcreative] },
   { path: '/tools/unbounce/', minCtas: 2, pageType: 'tool', requiredAffiliateLinks: [partnerLinks.unbounce] },
+  { path: '/tools/lindy/', minCtas: 2, pageType: 'tool', requiredAffiliateLinks: [partnerLinks.lindy] },
   {
     path: '/compare/chatgpt-vs-claude/',
     minCtas: 4,
@@ -68,8 +74,10 @@ const requiredRoutes = [
   { path: '/guides/best-ai-tools-for-sales-teams/', minCtas: 5, pageType: 'guide', requiredAffiliateLinks: [partnerLinks.apollo] },
   { path: '/guides/best-ai-for-cold-email/', minCtas: 5, pageType: 'guide', requiredAffiliateLinks: [partnerLinks.apollo, partnerLinks.amplemarket] },
   { path: '/guides/ai-lead-generation/', minCtas: 5, pageType: 'guide', requiredAffiliateLinks: [partnerLinks.apollo, partnerLinks.amplemarket] },
+  { path: '/guides/best-ai-personal-assistant-for-work/', minCtas: 5, pageType: 'guide', requiredAffiliateLinks: [partnerLinks.lindy] },
   { path: '/guides/best-ai-tools-for-marketers/', minCtas: 5, pageType: 'guide', requiredAffiliateLinks: [partnerLinks.adcreative, partnerLinks.unbounce] },
   { path: '/guides/best-ai-for-ad-copy/', minCtas: 5, pageType: 'guide', requiredAffiliateLinks: [partnerLinks.adcreative, partnerLinks.unbounce] },
+  { path: '/compare/lindy-vs-zapier-vs-n8n/', minCtas: 4, pageType: 'comparison', requiredAffiliateLinks: [partnerLinks.lindy] },
   { path: '/categories/ai-design/', minCtas: 3, pageType: 'category', requiredAffiliateLinks: [partnerLinks.adcreative, partnerLinks.unbounce] },
   { path: '/categories/ai-seo/', minCtas: 3, pageType: 'category', requiredAffiliateLinks: [partnerLinks.adcreative] },
   { path: '/companies/openai/', minCtas: 1, pageType: 'company' },

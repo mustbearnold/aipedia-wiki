@@ -2,221 +2,360 @@
 type: tool
 slug: lindy
 title: Lindy
-tagline: AI agent builder for business workflows. Pre-built templates cover inbox triage, meeting notes, scheduling, and CRM updates. Model-agnostic (GPT plus Claude).
+tagline: AI work assistant for inbox, calendar, meetings, follow-ups, and custom business agents, with iMessage/SMS delegation and hundreds of app integrations.
 category: ai-automation
 secondary_categories: [ai-notes]
 company: Lindy AI
-url: https://lindy.ai
-pricing_model: freemium
-price_range: "$0-$199.99/month"
+url: https://www.lindy.ai/
+pricing_model: paid
+price_range: "7-day free trial; $49.99-$199.99/month + Enterprise"
 status: active
 launched: 2022-12
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-05-27
+last_verified: 2026-05-27
 update_frequency: monthly
-seo_title: "Lindy: Features, Pricing & Review (May 2026)"
-meta_description: "Lindy is a no-code AI agent builder for SMB workflows. Free tier with 400 credits, Plus $49.99/mo (5,000 credits), Pro $99.99/mo (3x Plus), Max $199.99/mo (7x Plus). Runs on GPT plus Claude. Strongest on inbox triage, meeting notes, and CRM updates."
+seo_title: "Lindy Review: Pricing, Trial, Best Plan & Alternatives (May 2026)"
+meta_description: "Updated May 27, 2026: Lindy pricing, free trial, best plan, use cases, usage limits, security, Zapier/n8n alternatives, and whether Lindy is worth it for inbox, meetings, calendar, and follow-up automation."
 author: "aipedia.wiki Editorial"
+primary_cta_label: "Start Lindy free trial"
+best_plan: "Plus at $49.99/month for most solo professionals; Pro only after computer use or heavier usage is proven."
 affiliate:
   has_program: true
-  commission: "30% Y1 + 15% Y2 recurring"
+  commission: "30% for year one, 15% for year two"
   cookie_days: null
   network: PartnerStack
-  link: null
-  application_status: applied
+  link: https://try.lindy.ai/a1y1dlsexvk1
+  application_status: approved
   applied_date: 2026-05-13
-  notes: "Applied via PartnerStack 2026-05-13; direct URL submitted: https://aipedia.wiki/tools/lindy/."
+  approved_date: 2026-05-27
+  notes: "Live PartnerStack affiliate link supplied by the site owner on 2026-05-27. PartnerStack directory verified the 30% year-one / 15% year-two offer structure on 2026-05-27; cookie duration was not publicly listed."
 scores:
   utility: 8
-  value: 6
-  moat: 6
+  value: 7
+  moat: 7
   longevity: 7
 facts:
   best_for:
-    value: "Best for business teams that want no-code AI agents to handle inbox, meetings, CRM updates, scheduling, customer operations, and repeatable back-office workflows."
+    value: "Best for busy professionals and small teams that want an assistant-style agent to manage inbox triage, email drafting, meeting prep, meeting notes, follow-ups, scheduling, and light CRM handoff."
     source: https://www.lindy.ai/
     source_label: Lindy official site
     source_id: lindy-official
-    verified_at: '2026-05-04'
+    verified_at: 2026-05-27
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: 2026-08-27
   pricing_anchor:
-    value: "Lindy pricing is credit and plan based; verify current monthly credits, included automations, phone/voice allowances, and team/enterprise limits before rollout."
+    value: "Lindy currently advertises a 7-day free trial, Plus at $49.99/month, Pro at $99.99/month, Max at $199.99/month, and Enterprise by sales contact."
     source: https://www.lindy.ai/pricing
-    source_label: Source
+    source_label: Lindy pricing
     source_id: lindy-pricing
-    verified_at: '2026-05-04'
+    verified_at: 2026-05-27
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: 2026-06-27
+  best_paid_tier:
+    value: "Plus is the right first paid tier for most individuals because it includes standard usage, up to two inboxes, iMessage/SMS chat, email drafting, meeting scheduling, meeting notes, meeting prep, follow-up, and 100+ integrations."
+    source: https://www.lindy.ai/pricing
+    source_label: Lindy pricing
+    source_id: lindy-pricing
+    verified_at: 2026-05-27
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-27
+  free_plan:
+    value: "AiPedia did not find a standing free plan on the current public pricing page; the current public entry is a 7-day free trial."
+    source: https://www.lindy.ai/pricing
+    source_label: Lindy pricing
+    source_id: lindy-pricing
+    verified_at: 2026-05-27
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-27
   workflow_surface:
-    value: "Lindy should be evaluated by workflow ownership, integrations, approval gates, and handoff behavior rather than by model choice alone."
-    source: https://docs.lindy.ai/
-    source_label: Lindy documentation
-    source_id: lindy-docs
-    verified_at: '2026-05-04'
+    value: "Lindy starts as a work assistant over inbox, calendar, meetings, and text delegation, while custom agents can use triggers, actions, memory, computer use, phone calls, knowledge bases, webhooks, and integrations."
+    source: https://docs.lindy.ai/start-here/quickstart
+    source_label: Lindy quickstart
+    source_id: lindy-quickstart
+    verified_at: 2026-05-27
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: 2026-08-27
+  integrations:
+    value: "Lindy's integration directory says it connects to hundreds of apps, with popular integrations including Google Sheets, Gmail, Slack, Google Drive, HubSpot, Calendly, Airtable, and Salesforce."
+    source: https://www.lindy.ai/integrations
+    source_label: Lindy integrations
+    source_id: lindy-integrations
+    verified_at: 2026-05-27
+    volatility: medium
+    confidence: high
+    next_review_at: 2026-08-27
   security_posture:
-    value: "Enterprise buyers should review Lindy's security and compliance overview for data handling, access controls, and deployment assurances."
+    value: "Lindy's security page says data is encrypted in transit and at rest, customer data is not sold or used to train models, actions are logged, and SOC 2 Type II, GDPR, HIPAA, and PIPEDA claims are listed."
     source: https://www.lindy.ai/security
-    source_label: Lindy security overview
+    source_label: Lindy security
     source_id: lindy-security
-    verified_at: '2026-05-04'
+    verified_at: 2026-05-27
     volatility: medium
-    confidence: high
-    next_review_at: '2026-11-04'
-  watch_out_for:
-    value: "Credit-based agents can create unpredictable spend if workflows loop, call tools heavily, or run without approval checkpoints."
-    source: https://www.lindy.ai/pricing
-    source_label: Source
-    source_id: lindy-pricing
-    verified_at: '2026-05-04'
+    confidence: medium
+    next_review_at: 2026-08-27
+  usage_model:
+    value: "Lindy usage resets each billing cycle, unused resources do not roll over, resource-heavy tasks can pause for confirmation, and overage usage is charged at 2x the plan's standard rate when enabled."
+    source: https://docs.lindy.ai/account-billing/usage
+    source_label: Lindy usage docs
+    source_id: lindy-usage
+    verified_at: 2026-05-27
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
-tags: [ai-agents, workflow-automation, business-automation, no-code, lindy]
+    next_review_at: 2026-06-27
+  watch_out_for:
+    value: "Do not buy Lindy as a generic high-volume workflow router. Usage-sensitive assistant work, custom-agent credit burn, and connected inbox limits need a real pilot before annual commitment."
+    source: https://docs.lindy.ai/account-billing/credits
+    source_label: Lindy credits docs
+    source_id: lindy-credits
+    verified_at: 2026-05-27
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-27
+  affiliate_program:
+    value: "The public PartnerStack directory lists Lindy's offer structure as 30% for the first year and 15% for the second year, with link-based attribution, lead forms, deal registration forms, and SubIDs."
+    source: https://market.partnerstack.com/page/lindy
+    source_label: PartnerStack Lindy program
+    source_id: lindy-partnerstack
+    verified_at: 2026-05-27
+    volatility: high
+    confidence: high
+    next_review_at: 2026-06-27
+tags: [ai-agents, ai-assistant, workflow-automation, business-automation, inbox-automation, meeting-notes, no-code, lindy]
 best_for:
-  - inbox triage and email drafting for solo operators
-  - meeting recording, notes, and follow-up scheduling
-  - sales and marketing pods automating CRM updates
-  - SMB teams wanting templates instead of raw canvases
+  - busy professionals who want inbox, calendar, and meeting work delegated
+  - founder-led teams that need follow-ups drafted and meetings prepped
+  - sales and customer-success operators who need CRM-adjacent handoff
+  - non-technical buyers who want an assistant before a blank automation canvas
 not_best_for:
-  - engineering teams needing code-level control
-  - high-volume automation (credit burn scales fast)
-  - privacy-strict workloads needing on-prem deployment
-  - teams that already run n8n or Make at scale
+  - technical teams that need deterministic workflow control and self-hosting
+  - high-volume automations where task, credit, or execution economics dominate
+  - regulated workloads that require on-prem deployment or strict data isolation
+  - teams that only need meeting transcripts, not inbox and calendar action
 quick_answer: >-
-  Lindy builds no-code AI agents for SMB workflows like inbox triage, meeting notes, and CRM updates. Free tier has 400 credits. Paid tiers run $49.99 Plus, $99.99 Pro, $199.99 Max. Pick it for templated business agents. Skip for heavy automation (n8n) or engineering control (CrewAI).
+  Lindy is worth testing if your bottleneck is inbox, calendar, meetings, and follow-up work. Start with the 7-day trial, then Plus at $49.99/month if it saves real admin time. Upgrade to Pro or Max only after usage or computer-use needs are proven. Skip it for high-volume backend automation; use n8n, Zapier, or Make instead.
 price_history:
-  - date: 2024-10
-    plan: "Pro"
-    price: "$49.99/mo"
+  - date: 2026-05-27
+    plan: "Plus / Pro / Max / Enterprise"
+    price: "$49.99 / $99.99 / $199.99 / custom"
     source: "https://www.lindy.ai/pricing"
-    source_label: "Source"
+    source_label: "Lindy pricing"
     source_id: lindy-pricing
-    note: "Earlier lineup had Pro at this tier with 5,000 credits"
-  - date: 2026-02
-    plan: "Plus / Pro / Max"
-    price: "$49.99 / $99.99 / $199.99"
-    source: "https://www.lindy.ai/pricing"
-    source_label: "Source"
-    source_id: lindy-pricing
-    note: "Lineup restructured, Pro renamed Plus, new tiers added above"
-  - date: 2026-04-18
-    plan: "All tiers"
-    price: "Unchanged"
-    source: "https://www.lindy.ai/pricing"
-    source_label: "Source"
-    source_id: lindy-pricing
-    note: "Verified via lindy.ai/pricing"
+    verified_at: 2026-05-27
+    note: "Current public pricing page advertises a 7-day free trial, Plus, Pro, Max, and Enterprise. AiPedia no longer found the old standing 400-credit free-plan framing on the public pricing page."
+  - date: 2026-05-27
+    plan: "Usage and overages"
+    price: "Plan usage resets monthly; overages 2x when enabled"
+    source: "https://docs.lindy.ai/account-billing/usage"
+    source_label: "Lindy usage docs"
+    source_id: lindy-usage
+    verified_at: 2026-05-27
+    note: "Unused resources do not roll over; resource-heavy tasks can pause for confirmation; no one-off credit purchase option was listed in the docs reviewed."
 ---
 
 # Lindy
 
-**Lindy** is a no-code AI agent builder from Lindy AI, founded by Flo Crivello in late 2022. The product ships pre-built templates for inbox triage, meeting notes, calendar scheduling, follow-up drafting, and CRM updates. Agents (called "Lindies") run in the background and text the user for approval before taking action.
+**Lindy** is an AI work assistant for people whose day is swallowed by inbox triage, calendar coordination, meeting prep, notes, and follow-up. It is not just a meeting recorder and it is not just Zapier with an LLM step. The product pitch is closer to: connect your email and calendar, then delegate work through text, iMessage/SMS, templates, and custom agents.
 
-Lindy is model-agnostic under the hood. Users can route individual steps to GPT, Claude, or other LLMs. Hundreds of integrations cover Gmail, Outlook, Google Calendar, Slack, Notion, HubSpot, and Salesforce.
+AiPedia may earn a commission if you start Lindy through our link, at no extra cost to you. The recommendation below stays editorial: Lindy is a strong buy only when assistant-style delegation is the bottleneck.
 
 ## System Verdict
 
-> **Pick Lindy if a small team needs business automation that ships with templates instead of a blank canvas.** The inbox, meeting, and CRM agents are the strongest in the SMB segment. The "approve before send" default makes it safe for customer-facing work where a bad autoreply would hurt.
+> **Pick Lindy if you want a work assistant, not a workflow platform.** Its strongest lane is inbox plus calendar plus meetings plus follow-ups. If your day is full of "reply to this, schedule that, prep me, summarize the call, follow up with the buyer," Lindy is one of the cleanest AI-agent products to test first.
 >
-> **Skip it if you need engineering-grade control or high-volume automation economics.** The credit model burns fast on AI-heavy actions. A single lead workflow with knowledge-base search plus email plus call can cost 275 credits, which depletes a Plus plan in ~18 runs. Heavier traffic belongs on [n8n](/tools/n8n/), [Make](/tools/make/), or [Relevance AI](/tools/relevance-ai/).
+> **Start with the 7-day trial, then Plus if it saves real admin time.** Plus at $49.99/month is the first serious plan for most solo professionals because it covers the core assistant surface and up to two inboxes. Pro at $99.99/month is for heavier usage and computer use. Max at $199.99/month is for the people already proving Lindy is doing daily work.
 >
-> **Who pays which tier:** Free for proof-of-concept at 400 credits. Plus $49.99/mo for a solo operator running 2 inboxes. Pro $99.99/mo for teams using computer-use features and 3 inboxes. Max $199.99/mo for power users at 5 inboxes. Enterprise for SSO, audit logs, and SCIM.
+> **Skip Lindy for high-volume backend automation.** If you need deterministic workflows, self-hosting, code steps, logs, retries, and cheap scale, use [n8n](/tools/n8n/). If you need the broadest SaaS connector catalog for non-technical teams, use [Zapier](/tools/zapier/). If you need visual scenario building at a lower starting price, use [Make](/tools/make/).
+
+## What Changed In This Refresh
+
+- **Affiliate link is now live:** AiPedia updated Lindy from applied/no-link to a live PartnerStack affiliate link supplied by the site owner on 2026-05-27.
+- **Old free-tier language was removed:** AiPedia did not find the old standing 400-credit free-plan framing on the current public pricing page. The current public entry point is a 7-day free trial.
+- **Pricing now follows the current public plan grid:** Plus $49.99/month, Pro $99.99/month, Max $199.99/month, Enterprise custom.
+- **Usage guidance was tightened:** usage resets monthly, unused resources do not roll over, heavy tasks can pause for confirmation, and overage usage is charged at 2x when enabled.
 
 ## Key Facts
 
 | | |
 |---|---|
-| **Product type** | No-code AI agent builder for business workflows |
-| **Company** | Lindy AI, founded by Flo Crivello |
-| **Launched** | December 2022 |
-| **Model backbone** | Model-agnostic: GPT plus Claude plus others, per-step routing |
-| **Free tier** | 400 credits, 400 tasks, 7-day trial on paid plans |
-| **Plus** | $49.99/mo, standard usage (~5,000 credits), 2 inboxes |
-| **Pro** | $99.99/mo, 3x Plus usage, 3 inboxes, computer use |
-| **Max** | $199.99/mo, 7x Plus usage, 5 inboxes, enhanced computer use |
-| **Enterprise** | Custom, SSO, audit logs, SCIM provisioning |
-| **Add-on credits** | $10 per 1,000 |
-| **Credit burn** | 1 credit minimum per task, 3-10 for AI actions, 265 per phone call |
-| **Integrations** | Gmail, Outlook, Google Calendar, Slack, Notion, HubSpot, Salesforce, hundreds more |
-| **Core templates** | Inbox triage, meeting scheduler, notetaker, sales follow-up, CRM updater |
+| **Product type** | AI work assistant and no-code/custom-agent builder |
+| **Best for** | Inbox, calendar, meetings, prep, notes, follow-up, and assistant delegation |
+| **Best first plan** | Plus at $49.99/month after the 7-day trial |
+| **Trial** | 7-day free trial on the current public pricing page |
+| **Pro plan** | $99.99/month, 3x Plus usage, up to 3 inboxes, computer use |
+| **Max plan** | $199.99/month, 7x Plus usage, up to 5 inboxes |
+| **Enterprise** | Custom, with dedicated support, SSO, onboarding, SCIM, HIPAA compliance, audit logs, and signed BAA listed |
+| **Core channels** | Web app, iMessage/SMS, email/calendar connections |
+| **Core workflows** | Email triage, email drafting, meeting prep, notes, scheduling, follow-up |
+| **Popular integrations** | Gmail, Google Sheets, Slack, Google Drive, HubSpot, Calendly, Airtable, Salesforce |
+| **Security signals** | Encryption in transit/at rest, no customer-data training claim, action logs, SOC 2 Type II, GDPR, HIPAA, PIPEDA claims |
+| **Main risk** | Usage and custom-agent credit burn can be hard to predict before a real pilot |
 
-## What it actually is
+## Why Lindy Converts When It Fits
 
-A visual agent builder where a "Lindy" is one agent configured from a template or a blank canvas. Each Lindy has triggers (email arrives, meeting starts, webhook fires), skills (send email, search knowledge base, make phone call), and memory.
+Lindy sells a concrete outcome: get admin time back. That is easier for a buyer to justify than "build AI agents" in the abstract.
 
-Lindy's position in the market is the templated SMB workflow, not the raw builder. The pre-built inbox, meeting, and sales agents get teams to first value in minutes, not hours. The approval-by-default posture is what separates it from a pure automation tool: the agent drafts, the user sends.
+The best-fit buyer is not trying to become an automation engineer. They are trying to stop waking up to email backlog, meetings with no prep, calls with no follow-up, and calendar coordination that wastes the middle of the day. Lindy is valuable when the buyer can point to a specific recurring job and say, "This should not require me every time."
 
-## When to pick Lindy
+The right first test is simple:
 
-- **Solo operators drowning in email.** The inbox triage template sorts, drafts replies, and surfaces the 10% that need real attention.
-- **Meeting-heavy roles.** Lindy joins calls, records, transcribes, summarizes, and drafts follow-ups automatically.
-- **Sales teams running outbound.** Templates handle CRM updates, follow-up sequences, and cold email replies with approval gates.
-- **Non-technical users who want templates, not a canvas.** Zapier feels too primitive. Make feels too engineered. Lindy lands in the middle.
-- **Teams piloting AI agents before committing to a framework.** The templated approach derisks the evaluation.
+1. Connect the inbox and calendar you actually use.
+2. Let Lindy draft replies, prep meetings, record calls, summarize decisions, and draft follow-ups.
+3. Keep human approval on anything customer-facing.
+4. Measure whether it saves at least two to three hours in the trial week.
+5. Upgrade only if the saved time is visible.
 
-## When to pick something else
+## Best Use Cases
 
-- **High-volume pure automation:** [n8n](/tools/n8n/) (self-host, cheap at scale) or [Make](/tools/make/) (hosted, visual). Credit burn on Lindy compounds fast at scale.
-- **Engineering-grade agent control:** [CrewAI](/tools/crewai/) (code-first multi-agent) or [Langflow](/tools/langflow/) (visual LLM pipelines).
-- **Conversational AI deployed to customers:** [Voiceflow](/tools/voiceflow/). Stronger at web chat, WhatsApp, and voice.
-- **Business workforce at scale:** [Relevance AI](/tools/relevance-ai/). Splits Actions from Vendor Credits, which can be cheaper on judgment-heavy workflows.
+### 1. Inbox And Email Drafting
 
-## Pricing
+Use Lindy when the problem is not just too many emails, but too many emails that require context: "What did we promise this customer?", "What is my availability?", "Did we meet before?", "What is the next step?"
 
-Current plans via [lindy.ai/pricing](https://www.lindy.ai/pricing):
+Lindy is better than a generic writing assistant here because it can sit near email and calendar context. It is not a magic send button. Keep approval on before customer, partner, or investor messages go out.
 
-| Plan | Price | Credits | Inboxes | Notes |
-|---|---|---|---|---|
-| Free | $0 | 400 | 1 | 7-day trial of Plus features |
-| Plus | $49.99/mo | ~5,000 (standard) | 2 | Meeting notes, inbox, scheduling |
-| Pro | $99.99/mo | 3x Plus | 3 | Adds computer use |
-| Max | $199.99/mo | 7x Plus | 5 | Enhanced computer use |
-| Enterprise | Custom | Custom | Custom | SSO, audit logs, SCIM |
+### 2. Meeting Prep, Notes, And Follow-Up
 
-Add-on credits cost **$10 per 1,000**. Credits do not roll over between billing cycles. A reply-to-email task costs 3 credits. A phone call costs 265 credits. Premium actions and model tax can push any step higher.
+Lindy's quickstart docs frame meeting prep, meeting notes, and follow-ups as core automatic jobs after setup. This is the high-ROI workflow: before a call, get context; during a call, capture the meeting; after the call, turn decisions and action items into follow-up.
 
-Prices verified 2026-05-13 via [Lindy pricing page](https://www.lindy.ai/pricing) and the [Ringg AI 2026 pricing guide](https://www.ringg.ai/blogs/lindy-ai-pricing).
+If you only need transcripts, compare [Fathom](/tools/fathom/), [Fireflies](/tools/fireflies/), [MeetGeek](/tools/meetgeek/), and [Otter.ai](/tools/otter-ai/). Lindy is more compelling when the meeting output should become action.
 
-## Against the alternatives
+### 3. Founder And Executive Assistant Work
 
-| | Lindy | Zapier | Make | Relevance AI |
-|---|---|---|---|---|
-| **Core strength** | Templated AI agents | SaaS plumbing | Visual automation | Business workforce |
-| **Entry paid tier** | $49.99/mo | $19.99/mo | $9/mo | $19/mo |
-| **AI-first?** | Yes, native | Bolted-on AI actions | Mixed | Yes, native |
-| **Templates for business** | Strongest | Widest SaaS catalog | Middle ground | Sales and support focus |
-| **Credit opacity** | High (AI burn varies) | Low (per-task clear) | Medium | High (dual-credit model) |
-| **Best viewed as** | SMB AI assistant stack | Durable SaaS plumbing | Power-user canvas | Scalable AI workforce |
+Lindy is strongest for founder-led businesses, executives, consultants, agencies, real estate operators, recruiters, customer success leads, and sales owners who live between inbox, calendar, and calls. The less technical the buyer is, the more Lindy's assistant metaphor matters.
 
-## Failure modes
+For a technical founder who wants backend workflow ownership, [n8n](/tools/n8n/) is still the safer default. For a non-technical founder who wants delegation from a phone, Lindy is easier to test.
 
-- **Credit burn on real workflows.** A lead generation run with knowledge-base lookup plus email plus call can hit 275 credits. At 5,000 Plus credits, that is about 18 leads before top-ups kick in at $10 per 1,000.
-- **Model tax surcharges.** Switching a step to premium OpenAI or Claude models adds multipliers on top of base credit cost. Cost control requires per-step LLM selection discipline.
-- **Phone agent is expensive.** Each call burns ~265 credits and telephony adds $10/mo per phone number. Volume voice work belongs on a specialist stack.
-- **Computer use is still rough.** Available on Pro and Max, but session drift and authentication walls break more than half of flows the first time.
-- **No on-prem option.** Regulated workloads that cannot send inbox content to a third party are stuck with Enterprise SSO and contractual SLAs rather than self-host.
+### 4. Custom Agents For Business Workflows
+
+Lindy can also build custom agents with triggers, actions, conditions, memory, knowledge bases, phone calls, webhooks, integrations, LLM calls, and computer use. This broadens it beyond personal assistant work.
+
+The caveat: custom agents are where usage risk grows. The credit docs say costs scale with model intelligence, task complexity, premium actions, and agent duration. Most tasks cost 1-3 credits on basic models and around 10 credits on large models, with a one-credit minimum. That makes workflow design and monitoring part of the purchase.
+
+## Pricing And Plan Guidance
+
+Current public pricing verified 2026-05-27:
+
+| Plan | Price | Best fit | Buyer's note |
+|---|---:|---|---|
+| Trial | 7 days | First test | Use the week to test real inbox, calendar, and meeting jobs |
+| Plus | $49.99/month | Solo professional, founder, consultant, operator | Best first paid plan for most buyers |
+| Pro | $99.99/month | Heavier usage, up to 3 inboxes, computer use | Upgrade only after Plus hits limits or computer use matters |
+| Max | $199.99/month | Heavy daily use, up to 5 inboxes | Worth it only if Lindy is already doing daily admin work |
+| Enterprise | Custom | Teams needing SSO, SCIM, audit logs, HIPAA/BAA, support | Procurement path for security and shared controls |
+
+The pricing page lists Plus with standard usage, up to two inboxes, iMessage/SMS, email drafting, meeting scheduling, meeting notes, meeting prep and follow-up, and 100+ integrations. Pro adds 3x more usage than Plus, up to three inboxes, and computer use. Max adds 7x more usage than Plus and up to five inboxes.
+
+## What The Trial Should Prove
+
+Do not judge Lindy by a demo prompt. Judge it by one workweek:
+
+| Day | Test | Success signal |
+|---|---|---|
+| 1 | Connect email and calendar | Permissions are clear, no scary data surprise |
+| 2 | Ask for meeting prep | Briefs are actually useful before calls |
+| 3 | Let it draft replies | Drafts sound close enough to edit, not rewrite |
+| 4 | Record and summarize meetings | Action items are accurate enough to forward |
+| 5 | Draft follow-ups | Follow-up quality saves time without adding risk |
+| 6 | Try one custom workflow | You can understand the trigger, action, and failure path |
+| 7 | Review usage and saved time | Upgrade only if the week saved real admin hours |
+
+If the trial only feels impressive but does not change the week, do not subscribe yet.
+
+## Lindy Vs Alternatives
+
+| Buyer question | Best first pick | Why |
+|---|---|---|
+| "Can an AI assistant run my inbox, meetings, calendar, and follow-ups?" | [Lindy](/tools/lindy/) | Assistant-style delegation is the product's center of gravity |
+| "Can we automate internal workflows with logs, code, retries, and self-hosting?" | [n8n](/tools/n8n/) | Better workflow ownership and technical control |
+| "Can non-technical teams connect a lot of SaaS apps quickly?" | [Zapier](/tools/zapier/) | Broader business-user automation catalog |
+| "Can we build a visual scenario with branching and lower entry cost?" | [Make](/tools/make/) | Strong visual canvas and credit-based pricing |
+| "Can we deploy an AI workforce across GTM/support/research?" | [Relevance AI](/tools/relevance-ai/) | Better workforce framing for multi-agent team deployment |
+| "Can we only fix email triage?" | [SaneBox](/tools/sanebox/) | Cheaper and narrower for inbox filtering |
+| "Can we only record meeting notes?" | [Fathom](/tools/fathom/) or [MeetGeek](/tools/meetgeek/) | Better when meeting capture is the only job |
+
+Read the full comparison: [Lindy vs Zapier vs n8n](/compare/lindy-vs-zapier-vs-n8n/).
+
+## Who Should Buy Lindy
+
+- **Founder-led operators** who personally own sales, customer success, hiring, fundraising, and admin.
+- **Consultants and agencies** where follow-up speed and meeting context directly affect revenue.
+- **Sales and customer-success leads** who need meeting notes, CRM-ish handoff, and follow-up drafts.
+- **Executives and managers** who want an assistant they can text, not a workflow tool they have to maintain.
+- **Real estate, recruiting, finance, and healthcare-adjacent teams** only after security, permissions, and review rules are understood.
+
+## Who Should Avoid Lindy
+
+- **Teams with a technical automation owner** should test n8n first.
+- **Teams optimizing for cheapest high-volume automation** should model n8n, Make, and Zapier before Lindy.
+- **Teams needing on-prem deployment** should not treat Lindy as a fit unless Enterprise terms solve the requirement.
+- **Teams with one narrow problem** should buy a narrow tool first: SaneBox for email triage, Fathom for meetings, Reclaim for scheduling.
+- **Teams unwilling to review AI-drafted messages** should not automate customer-facing communication yet.
+
+## Failure Modes
+
+**Usage surprises.** Lindy's docs say every action uses part of the plan, heavy tasks can trigger usage warnings, unused resources do not roll over, and overage usage costs 2x when enabled. Test real workflows before committing annually.
+
+**Over-delegation.** Lindy can draft, prep, and follow up, but approval gates should stay on for customers, candidates, investors, legal-sensitive replies, or regulated contexts.
+
+**Using it like Zapier.** Lindy is not the cheapest way to move rows between SaaS apps. If the job is deterministic automation, use a workflow tool.
+
+**Too many custom agents too soon.** Start with the assistant workflows that already have obvious value. Build custom agents after you understand usage, permissions, and failure modes.
+
+**Security assumptions.** Lindy's security page lists strong signals, but enterprise buyers should still request SOC 2 documentation, BAA terms, retention details, admin controls, and data-processing terms before connecting sensitive inboxes.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-05-13 against [lindy.ai/pricing](https://www.lindy.ai/pricing), the [Ringg AI 2026 Lindy pricing guide](https://www.ringg.ai/blogs/lindy-ai-pricing), and the [Lindy LLM Call documentation](https://docs.lindy.ai/skills/lindy-utilities/llm-call).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, affiliate metadata, pricing pages, and buyer-facing source material, then turns it into source-backed editorial analysis. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) and is not influenced by affiliate commission.
+
+Last verified 2026-05-27 against Lindy's official pricing page, homepage, quickstart docs, usage docs, credits docs, integrations directory, security overview, and PartnerStack program directory. The site owner supplied the live Lindy affiliate URL on 2026-05-27.
 
 ## FAQ
 
-**Is Lindy free to use?**
-Yes. The free tier ships 400 credits and 400 tasks. Paid plans include a 7-day free trial of Plus features. Credits do not roll over between billing cycles.
+**Is Lindy free?**
 
-**Which AI models power Lindy?**
-Lindy is model-agnostic. Individual steps route to GPT, Claude, or other LLMs via the LLM Call skill. Premium models add a credit surcharge over the base Lindy rate.
+AiPedia did not find a standing free plan on Lindy's current public pricing page during the 2026-05-27 refresh. The current public entry is a 7-day free trial, followed by Plus, Pro, Max, or Enterprise.
 
-**How does Lindy compare to Zapier?**
-Lindy is AI-native and template-first. Zapier is SaaS-plumbing-first with AI actions bolted on. Lindy wins for inbox, meeting, and CRM agents. Zapier wins for sheer integration catalog and predictable per-task economics.
+**What is the best Lindy plan?**
+
+Plus at $49.99/month is the best first paid plan for most individuals. Move to Pro only if heavier usage, three inboxes, or computer use becomes necessary.
+
+**Is Lindy better than Zapier?**
+
+For assistant-style work, yes. Lindy is better when the buyer wants inbox, meetings, calendar, and follow-up delegation. Zapier is better for broad non-technical SaaS automation across thousands of integrations.
+
+**Is Lindy better than n8n?**
+
+Only for non-technical assistant delegation. n8n is better for technical workflow automation, self-hosting, code steps, logs, retries, and scalable internal automation.
+
+**Does Lindy send emails without approval?**
+
+Lindy's public pricing FAQ says it drafts emails and messages for review and that the user stays in control of what gets sent. Buyers should still check their own account settings and keep approval gates on for customer-facing messages.
+
+**Does Lindy use my data to train models?**
+
+Lindy's pricing and security pages say customer data is not sold or used to train models. Enterprise buyers should still request current contractual terms and security documentation.
+
+**Does AiPedia earn from Lindy signups?**
+
+Yes. AiPedia uses a Lindy PartnerStack affiliate link. The disclosure is shown beside commercial CTAs, and affiliate status does not control the score or recommendation.
+
+## Sources
+
+- [Lindy pricing](https://www.lindy.ai/pricing): plan names, trial, prices, inbox limits, Enterprise features, and public FAQ verified 2026-05-27.
+- [Lindy homepage](https://www.lindy.ai/): assistant positioning, inbox/calendar/meeting claims, iMessage/SMS trial framing, and integration positioning verified 2026-05-27.
+- [Lindy quickstart docs](https://docs.lindy.ai/start-here/quickstart): setup, connected email/calendar, automatic inbox/meeting/follow-up behavior, and security statements verified 2026-05-27.
+- [Lindy usage docs](https://docs.lindy.ai/account-billing/usage): billing-cycle reset, non-rollover, usage warnings, overages, and model-cost optimization verified 2026-05-27.
+- [Lindy credits docs](https://docs.lindy.ai/account-billing/credits): custom-agent credit behavior and optimization verified 2026-05-27.
+- [Lindy integrations](https://www.lindy.ai/integrations): integration count and popular integrations verified 2026-05-27.
+- [Lindy security](https://www.lindy.ai/security): encryption, data-training, action-log, compliance, and trust-center claims verified 2026-05-27.
+- [PartnerStack Lindy program](https://market.partnerstack.com/page/lindy): affiliate program offer structure and attribution methods verified 2026-05-27.
 
 ## Related
 
-- **Category:** [AI Automation](/categories/ai-automation/)
+- **Guide:** [Best AI personal assistant for work](/guides/best-ai-personal-assistant-for-work/)
+- **Compare:** [Lindy vs Zapier vs n8n](/compare/lindy-vs-zapier-vs-n8n/)
+- **Category:** [AI Automation & Agents](/categories/ai-automation/)
