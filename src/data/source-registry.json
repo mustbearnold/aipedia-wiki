@@ -5799,7 +5799,8 @@
       "url": "https://rytr.me/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-05-28"
     },
     {
       "id": "rytr-pricing",
@@ -5807,7 +5808,17 @@
       "url": "https://rytr.me/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-05-28"
+    },
+    {
+      "id": "rytr-affiliate",
+      "label": "Rytr affiliate program",
+      "url": "https://rytr.me/affiliates",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-05-28"
     },
     {
       "id": "same-dev-official",

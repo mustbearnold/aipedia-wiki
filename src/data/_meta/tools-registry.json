@@ -15,8 +15,8 @@
       "pricing_model": "open-source",
       "price_range": "Free self-host / $5 per active flow (cloud)",
       "launched": "2022-06",
-      "last_updated": "2026-05-13T00:00:00.000Z",
-      "last_verified": "2026-05-13T00:00:00.000Z",
+      "last_updated": "2026-05-28T00:00:00.000Z",
+      "last_verified": "2026-05-28T00:00:00.000Z",
       "update_frequency": "monthly",
       "scores": {
         "utility": 8,
@@ -7106,10 +7106,13 @@
       ],
       "affiliate": {
         "has_program": true,
-        "commission": "30%",
-        "cookie_days": 30,
+        "commission": "30% recurring commission for 12 months",
+        "cookie_days": 60,
         "network": "Direct",
-        "link": "https://rytr.me?via=aipediawiki"
+        "link": "https://rytr.me/?via=wikiaipedia",
+        "application_status": "approved",
+        "approved_date": "2026-05-28T00:00:00.000Z",
+        "notes": "Approved affiliate link provided 2026-05-28. Official Rytr affiliate page lists 30% recurring commission for 12 months, 60-day cookies, paid-search brand restrictions, PayPal payouts after a 30-day transaction delay, $100 threshold, and more than one referred customer required before payout."
       },
       "page_path": "wikis/ai-tools/pages/tools/rytr.md"
     },

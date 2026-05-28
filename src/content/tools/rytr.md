@@ -10,16 +10,18 @@ pricing_model: freemium
 price_range: "$0-$29/month"
 status: active
 launched: 2021-04
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-05-28
+last_verified: 2026-05-28
 update_frequency: monthly
 affiliate:
   has_program: true
-  commission: null
-  cookie_days: 30
+  commission: "30% recurring commission for 12 months"
+  cookie_days: 60
   network: "Direct"
-  link: "https://rytr.me?via=aipediawiki"
-  notes: "Affiliate link configured. Internal monetization terms should not be surfaced in public editorial copy."
+  link: "https://rytr.me/?via=wikiaipedia"
+  application_status: approved
+  approved_date: 2026-05-28
+  notes: "Approved affiliate link provided 2026-05-28. Official Rytr affiliate page lists 30% recurring commission for 12 months, 60-day cookies, paid-search brand restrictions, PayPal payouts after a 30-day transaction delay, $100 threshold, and more than one referred customer required before payout."
 scores:
   utility: 6
   value: 8
@@ -32,53 +34,51 @@ facts:
     source: https://rytr.me/
     source_label: Rytr official site
     source_id: rytr-official
-    verified_at: '2026-05-13'
+    verified_at: '2026-05-28'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-13'
+    next_review_at: '2026-11-28'
   pricing_anchor:
-    value: Rytr keeps a low-cost pricing ladder with a free entry point and paid plans; buyers should confirm character, plagiarism,
-      and workflow limits on the live pricing page.
+    value: Rytr's pricing page lists a Free plan, Unlimited at $7.50/month when billed yearly, and Premium at $24.16/month when billed yearly; buyers should confirm monthly rates and plagiarism/tone limits on the live pricing page before upgrading.
     source: https://rytr.me/pricing
     source_label: Rytr pricing
     source_id: rytr-pricing
-    verified_at: '2026-05-13'
+    verified_at: '2026-05-28'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-13'
+    next_review_at: '2026-08-28'
   api_available:
-    value: AIpedia treats Rytr primarily as an end-user writing app; teams needing a developer API or deeply integrated content
-      workflow should verify fit directly.
-    source: https://rytr.me/pricing
-    source_label: Rytr pricing
-    source_id: rytr-pricing
-    verified_at: '2026-05-13'
+    value: Rytr links an API product surface, but AIpedia treats Rytr primarily as an end-user writing app; teams needing a deeply integrated content workflow should verify API fit directly.
+    source: https://rytr.me/
+    source_label: Rytr official site
+    source_id: rytr-official
+    verified_at: '2026-05-28'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-13'
+    next_review_at: '2026-11-28'
   enterprise_controls:
     value: Rytr is not positioned here as an enterprise content governance system; larger teams should compare approval, brand,
       and collaboration controls with Jasper or Writer.
     source: https://rytr.me/pricing
     source_label: Rytr pricing
     source_id: rytr-pricing
-    verified_at: '2026-05-13'
+    verified_at: '2026-05-28'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-13'
+    next_review_at: '2026-11-28'
   watch_out_for:
     value: Rytr is strongest for quick, inexpensive copy generation; it is weaker for brand-heavy editorial programs that need
       deep style governance and source-backed long-form workflows.
     source: https://rytr.me/
     source_label: Rytr official site
     source_id: rytr-official
-    verified_at: '2026-05-13'
+    verified_at: '2026-05-28'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-13'
+    next_review_at: '2026-11-28'
 tags: [ai-writing, copywriting, budget-tools, short-form, templates]
 seo_title: "Rytr: Features, Pricing & Review (May 2026)"
-meta_description: "Rytr is a budget AI writing tool with 40+ templates and 20+ tones. Free includes 10K chars/mo; paid plans include Unlimited and Premium, with annual pricing from $7.50/mo."
+meta_description: "Updated May 28, 2026: Rytr is a budget AI writing tool with 40+ templates and 20+ tones. Free includes 10K chars/mo; paid annual plans start at $7.50/mo."
 author: "aipedia.wiki Editorial"
 best_for:
   - high-volume short-form copy
@@ -92,12 +92,37 @@ not_best_for:
 quick_answer: >-
   Rytr is a budget template-driven AI writing tool for short-form copy. Pick it for product descriptions, ad variants, and social captions when speed and price matter more than writing quality. Skip it for long-form SEO articles, strategic content, or any task where ChatGPT or Claude's reasoning beats template speed.
 price_history:
+  - date: 2026-05-28
+    plan: "Free"
+    price: "$0/mo"
+    source: "https://rytr.me/pricing"
+    source_label: "Source"
+    source_id: rytr-pricing
+    verified_at: 2026-05-28
+    note: "Free remains listed at $0/month with 10K characters per month, no tone match, and no plagiarism checks."
+  - date: 2026-05-28
+    plan: "Unlimited"
+    price: "$7.50/mo (annual)"
+    source: "https://rytr.me/pricing"
+    source_label: "Source"
+    source_id: rytr-pricing
+    verified_at: 2026-05-28
+    note: "Annual billing. Includes unlimited generation, 1 tone match, and 50 plagiarism checks per month."
+  - date: 2026-05-28
+    plan: "Premium"
+    price: "$24.16/mo (annual)"
+    source: "https://rytr.me/pricing"
+    source_label: "Source"
+    source_id: rytr-pricing
+    verified_at: 2026-05-28
+    note: "Annual billing. Includes unlimited generation, multiple tone matches, Premium language access, higher input limits, and 100 plagiarism checks per month."
   - date: 2026-05-13
     plan: "Unlimited"
     price: "$7.50/mo (annual)"
     source: "https://rytr.me/pricing"
     source_label: "Source"
     source_id: rytr-pricing
+    verified_at: 2026-05-13
     note: "Verified unchanged. Annual billing; 50 plagiarism checks/mo, 1 tone match."
   - date: 2026-05-13
     plan: "Premium"
@@ -105,18 +130,19 @@ price_history:
     source: "https://rytr.me/pricing"
     source_label: "Source"
     source_id: rytr-pricing
+    verified_at: 2026-05-13
     note: "Verified unchanged. Annual billing; 100 plagiarism checks/mo, 35+ languages, multiple tone matches."
 ---
 
 # Rytr
 
-Rytr is a template-driven AI writing tool aimed at short-form copy: ad variations, product descriptions, email subject lines, social captions, blog outlines. Ships with 40+ use-case templates, 20+ tones, 30+ languages, and a built-in Copyscape plagiarism check on paid plans.
+Rytr is a template-driven AI writing tool aimed at short-form copy: ad variations, product descriptions, email subject lines, social captions, blog outlines. It ships with 40+ use-case templates, 20+ tones, Premium language support, My Voice tone matching, a Chrome extension, and plagiarism checks on paid plans.
 
-Pricing runs from Free to paid Unlimited and Premium plans. Free caps at 10,000 characters per month; annual paid pricing starts at $7.50/mo.
+Pricing runs from Free to paid Unlimited and Premium plans. Free caps at 10,000 characters per month; annual paid pricing starts at $7.50/month for Unlimited and $24.16/month for Premium.
 
 ## System Verdict
 
-> **Pick Rytr if volume short-form copy at the lowest price is the whole brief.** The Unlimited plan at $29/month is among the cheapest uncapped options in the category, and the template-plus-tone interface removes prompt-engineering friction for non-technical users.
+> **Pick Rytr if volume short-form copy at the lowest price is the whole brief.** The Unlimited plan at $7.50/month when billed yearly is among the cheapest uncapped options in the category, and the template-plus-tone interface removes prompt-engineering friction for non-technical users.
 >
 > **Skip it if output quality is the axis that matters.** Rytr's template model sits below current frontier chat models in [ChatGPT](/tools/chatgpt/) and [Claude](/tools/claude/). For long-form SEO work, [Frase](/tools/frase/) or [Surfer SEO](/tools/surfer-seo/) deliver article-level tooling Rytr lacks. For brand-voice enterprise work, [Jasper](/tools/jasper/) wins.
 >
@@ -129,7 +155,7 @@ Pricing runs from Free to paid Unlimited and Premium plans. Free caps at 10,000 
 | **Core product** | Template-driven short-form copy generator |
 | **Templates** | 40+ use cases (ads, subject lines, product pages, social, blog outlines) |
 | **Tones** | 20+ (casual, formal, convincing, enthusiastic, humorous) |
-| **Languages** | 30+ |
+| **Languages** | 1 on Free/Unlimited; 35+ on Premium per the current pricing page |
 | **Plagiarism checker** | Copyscape integration on paid plans |
 | **Chrome extension** | Yes, inline inside Gmail, WordPress, most browser editors |
 | **Free tier** | 10,000 characters/month |
@@ -137,7 +163,9 @@ Pricing runs from Free to paid Unlimited and Premium plans. Free caps at 10,000 
 | **Premium** | Unlimited generations · multiple tone matches · 35+ languages · 100 plagiarism checks/month |
 | **Long-form article tooling** | None meaningful |
 
-Every data point above was verified against vendor documentation on 2026-05-13. See Sources.
+Every data point above was verified against vendor documentation on 2026-05-28. See Sources.
+
+AiPedia has an approved Rytr affiliate link. The affiliate relationship does not change the ranking, plan advice, warnings, or alternatives on this page.
 
 ## What it actually is
 
@@ -173,7 +201,7 @@ Subscription pricing via [rytr.me/pricing](https://rytr.me/pricing).
 | Unlimited | $7.50/mo | Unlimited | 1 tone match, 50 plagiarism checks/mo | Individuals getting started |
 | Premium | $24.16/mo | Unlimited | Multiple tone matches, 35+ languages, 100 plagiarism checks/mo | **Freelancers and multi-brand users** |
 
-*Prices verified 2026-05-13 via [Rytr pricing](https://rytr.me/pricing). Annual billing is shown above; monthly billing may be higher. Plagiarism checks are included on paid plans only.*
+*Prices verified 2026-05-28 via [Rytr pricing](https://rytr.me/pricing). Annual billing is shown above; monthly billing is available at higher rates, so confirm the live toggle before checkout. Plagiarism checks are included on paid plans only.*
 
 ## Against the alternatives
 
@@ -197,7 +225,7 @@ Subscription pricing via [rytr.me/pricing](https://rytr.me/pricing).
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [Rytr pricing](https://rytr.me/pricing) and the [Rytr feature overview](https://rytr.me/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-28 against [Rytr pricing](https://rytr.me/pricing), the [Rytr feature overview](https://rytr.me/), and the [Rytr affiliate program](https://rytr.me/affiliates).
 
 ## FAQ
 
@@ -220,7 +248,7 @@ For drafts, yes. For published content, treat Rytr output as a first pass. Edit 
 
 - [Rytr Pricing](https://rytr.me/pricing): current plans and limits
 - [Rytr homepage](https://rytr.me/): feature summary, templates, tones
-- [G2 Rytr reviews](https://www.g2.com/products/rytr/reviews): user feedback on pricing and output
+- [Rytr affiliate program](https://rytr.me/affiliates): commission, cookie window, payout threshold, and paid-search restrictions
 
 ## Related
 

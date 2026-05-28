@@ -116,7 +116,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /compare/chatgpt-vs-otter-ai/ | Comparison | Yes | frontmatter | src/content/comparisons/chatgpt-vs-otter-ai.md |
 | 2026-05-13 | /compare/chatgpt-vs-phind/ | Comparison | Yes | frontmatter | src/content/comparisons/chatgpt-vs-phind.md |
 | 2026-05-13 | /compare/chatgpt-vs-quillbot/ | Comparison | Yes | frontmatter | src/content/comparisons/chatgpt-vs-quillbot.md |
-| 2026-05-13 | /compare/chatgpt-vs-rytr/ | Comparison | Yes | frontmatter | src/content/comparisons/chatgpt-vs-rytr.md |
 | 2026-05-13 | /compare/chatgpt-vs-scite/ | Comparison | Yes | frontmatter | src/content/comparisons/chatgpt-vs-scite.md |
 | 2026-05-13 | /compare/chatgpt-vs-sudowrite/ | Comparison | Yes | frontmatter | src/content/comparisons/chatgpt-vs-sudowrite.md |
 | 2026-05-13 | /compare/chatgpt-vs-surfer-seo/ | Comparison | Yes | frontmatter | src/content/comparisons/chatgpt-vs-surfer-seo.md |
@@ -560,7 +559,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /tools/riverside/ | Tool | Yes | frontmatter | src/content/tools/riverside.md |
 | 2026-05-13 | /tools/rork/ | Tool | Yes | frontmatter | src/content/tools/rork.md |
 | 2026-05-13 | /tools/rows/ | Tool | Yes | frontmatter | src/content/tools/rows.md |
-| 2026-05-13 | /tools/rytr/ | Tool | Yes | frontmatter | src/content/tools/rytr.md |
 | 2026-05-13 | /tools/same-dev/ | Tool | Yes | frontmatter | src/content/tools/same-dev.md |
 | 2026-05-13 | /tools/sanebox/ | Tool | Yes | frontmatter | src/content/tools/sanebox.md |
 | 2026-05-13 | /tools/scite/ | Tool | Yes | frontmatter | src/content/tools/scite.md |
@@ -676,7 +674,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-24 | /answers/best-ai-video-generator-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-video-generator-2026.astro |
 | 2026-05-24 | /categories/ai-design/ | Category | Yes | frontmatter | src/content/categories/ai-design.md |
 | 2026-05-24 | /categories/ai-image/ | Category | Yes | frontmatter | src/content/categories/ai-image.md |
-| 2026-05-24 | /categories/ai-writing/ | Category | Yes | frontmatter | src/content/categories/ai-writing.md |
 | 2026-05-24 | /compare/chatgpt-vs-qwen/ | Comparison | Yes | frontmatter | src/content/comparisons/chatgpt-vs-qwen.md |
 | 2026-05-24 | /compare/cursor-vs-claude-code-vs-copilot/ | Comparison | Yes | frontmatter | src/content/comparisons/cursor-vs-claude-code-vs-copilot.md |
 | 2026-05-24 | /tools/chatgpt/ | Tool | Yes | frontmatter | src/content/tools/chatgpt.md |
@@ -726,7 +723,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-27 | /categories/ai-automation/ | Category | Yes | frontmatter | src/content/categories/ai-automation.md |
 | 2026-05-27 | /categories/ai-chatbots/ | Category | Yes | frontmatter | src/content/categories/ai-chatbots.md |
 | 2026-05-27 | /categories/ai-infrastructure/ | Category | Yes | frontmatter | src/content/categories/ai-infrastructure.md |
-| 2026-05-27 | /compare/ | Static page | Yes | git | src/pages/compare/index.astro |
 | 2026-05-27 | /compare/lindy-vs-zapier-vs-n8n/ | Comparison | Yes | frontmatter | src/content/comparisons/lindy-vs-zapier-vs-n8n.md |
 | 2026-05-27 | /guides/best-ai-automation-platform/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-automation-platform.md |
 | 2026-05-27 | /guides/best-ai-personal-assistant-for-work/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-personal-assistant-for-work.md |
@@ -735,12 +731,15 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-27 | /tools/qwen/ | Tool | Yes | frontmatter | src/content/tools/qwen.md |
 | 2026-05-28 | /categories/ | Static page | Yes | working tree | src/pages/categories/index.astro |
 | 2026-05-28 | /categories/ai-presentation/ | Category | Yes | frontmatter | src/content/categories/ai-presentation.md |
-| 2026-05-28 | /categories/ai-seo/ | Category | Yes | working tree | src/content/categories/ai-seo.md |
+| 2026-05-28 | /categories/ai-seo/ | Category | Yes | frontmatter | src/content/categories/ai-seo.md |
 | 2026-05-28 | /categories/ai-video/ | Category | Yes | frontmatter | src/content/categories/ai-video.md |
-| 2026-05-28 | /guides/ | Static page | Yes | working tree | src/pages/guides/index.astro |
-| 2026-05-28 | /guides/best-ai-for-seo-content/ | Guide | Yes | working tree | src/content/use-cases/best-ai-for-seo-content.md |
-| 2026-05-28 | /guides/best-ai-seo-tool-replacing-surfer-frase-stack/ | Guide | Yes | working tree | src/content/use-cases/best-ai-seo-tool-replacing-surfer-frase-stack.md |
-| 2026-05-28 | /guides/best-ai-seo-tool/ | Guide | Yes | working tree | src/content/use-cases/best-ai-seo-tool.md |
+| 2026-05-28 | /categories/ai-writing/ | Category | Yes | working tree | src/content/categories/ai-writing.md |
+| 2026-05-28 | /compare/ | Static page | Yes | working tree | src/pages/compare/index.astro |
+| 2026-05-28 | /compare/chatgpt-vs-rytr/ | Comparison | Yes | working tree | src/content/comparisons/chatgpt-vs-rytr.md |
+| 2026-05-28 | /guides/ | Static page | Yes | git | src/pages/guides/index.astro |
+| 2026-05-28 | /guides/best-ai-for-seo-content/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-seo-content.md |
+| 2026-05-28 | /guides/best-ai-seo-tool-replacing-surfer-frase-stack/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-seo-tool-replacing-surfer-frase-stack.md |
+| 2026-05-28 | /guides/best-ai-seo-tool/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-seo-tool.md |
 | 2026-05-28 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
 | 2026-05-28 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
 | 2026-05-28 | /news/ | Static page | Yes | page metadata | src/pages/news/index.astro |
@@ -748,4 +747,5 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-28 | /tools/ | Static page | Yes | working tree | src/pages/tools/index.astro |
 | 2026-05-28 | /tools/argil/ | Tool | Yes | frontmatter | src/content/tools/argil.md |
 | 2026-05-28 | /tools/decktopus/ | Tool | Yes | frontmatter | src/content/tools/decktopus.md |
-| 2026-05-28 | /tools/neuronwriter/ | Tool | Yes | working tree | src/content/tools/neuronwriter.md |
+| 2026-05-28 | /tools/neuronwriter/ | Tool | Yes | frontmatter | src/content/tools/neuronwriter.md |
+| 2026-05-28 | /tools/rytr/ | Tool | Yes | working tree | src/content/tools/rytr.md |
