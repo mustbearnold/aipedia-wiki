@@ -345,7 +345,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /guides/best-ai-for-podcasters/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-podcasters.md |
 | 2026-05-13 | /guides/best-ai-for-presentations/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-presentations.md |
 | 2026-05-13 | /guides/best-ai-for-resume-writing/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-resume-writing.md |
-| 2026-05-13 | /guides/best-ai-for-seo-content/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-seo-content.md |
 | 2026-05-13 | /guides/best-ai-for-social-media-posts/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-social-media-posts.md |
 | 2026-05-13 | /guides/best-ai-for-sql-queries/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-sql-queries.md |
 | 2026-05-13 | /guides/best-ai-for-summarization/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-summarization.md |
@@ -355,7 +354,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /guides/best-ai-for-unit-tests/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-unit-tests.md |
 | 2026-05-13 | /guides/best-ai-for-youtube-creators/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-youtube-creators.md |
 | 2026-05-13 | /guides/best-ai-music-generator/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-music-generator.md |
-| 2026-05-13 | /guides/best-ai-seo-tool/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-seo-tool.md |
 | 2026-05-13 | /guides/best-ai-tools-for-accountants/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-tools-for-accountants.md |
 | 2026-05-13 | /guides/best-ai-tools-for-agencies/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-tools-for-agencies.md |
 | 2026-05-13 | /guides/best-ai-tools-for-consultants/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-tools-for-consultants.md |
@@ -530,7 +528,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /tools/n8n/ | Tool | Yes | frontmatter | src/content/tools/n8n.md |
 | 2026-05-13 | /tools/nanochat/ | Tool | Yes | frontmatter | src/content/tools/nanochat.md |
 | 2026-05-13 | /tools/napkin-ai/ | Tool | Yes | frontmatter | src/content/tools/napkin-ai.md |
-| 2026-05-13 | /tools/neuronwriter/ | Tool | Yes | frontmatter | src/content/tools/neuronwriter.md |
 | 2026-05-13 | /tools/notebooklm/ | Tool | Yes | frontmatter | src/content/tools/notebooklm.md |
 | 2026-05-13 | /tools/obsidian/ | Tool | Yes | frontmatter | src/content/tools/obsidian.md |
 | 2026-05-13 | /tools/ollama/ | Tool | Yes | frontmatter | src/content/tools/ollama.md |
@@ -629,7 +626,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-14 | /guides/best-ai-receipt-tool-for-bookkeepers/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-receipt-tool-for-bookkeepers.md |
 | 2026-05-14 | /guides/best-ai-research-tool-for-academic-citations/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-research-tool-for-academic-citations.md |
 | 2026-05-14 | /guides/best-ai-sales-platform-for-mid-market-sdr-teams/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-sales-platform-for-mid-market-sdr-teams.md |
-| 2026-05-14 | /guides/best-ai-seo-tool-replacing-surfer-frase-stack/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-seo-tool-replacing-surfer-frase-stack.md |
 | 2026-05-14 | /guides/best-ai-tool-for-conversion-rate-optimization/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-tool-for-conversion-rate-optimization.md |
 | 2026-05-14 | /guides/best-ai-tool-for-paid-social-creative-velocity/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-tool-for-paid-social-creative-velocity.md |
 | 2026-05-14 | /guides/best-podcast-editor-for-transcript-first-editing/ | Guide | Yes | frontmatter | src/content/use-cases/best-podcast-editor-for-transcript-first-editing.md |
@@ -680,7 +676,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-24 | /answers/best-ai-video-generator-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-video-generator-2026.astro |
 | 2026-05-24 | /categories/ai-design/ | Category | Yes | frontmatter | src/content/categories/ai-design.md |
 | 2026-05-24 | /categories/ai-image/ | Category | Yes | frontmatter | src/content/categories/ai-image.md |
-| 2026-05-24 | /categories/ai-seo/ | Category | Yes | frontmatter | src/content/categories/ai-seo.md |
 | 2026-05-24 | /categories/ai-writing/ | Category | Yes | frontmatter | src/content/categories/ai-writing.md |
 | 2026-05-24 | /compare/chatgpt-vs-qwen/ | Comparison | Yes | frontmatter | src/content/comparisons/chatgpt-vs-qwen.md |
 | 2026-05-24 | /compare/cursor-vs-claude-code-vs-copilot/ | Comparison | Yes | frontmatter | src/content/comparisons/cursor-vs-claude-code-vs-copilot.md |
@@ -733,19 +728,24 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-27 | /categories/ai-infrastructure/ | Category | Yes | frontmatter | src/content/categories/ai-infrastructure.md |
 | 2026-05-27 | /compare/ | Static page | Yes | git | src/pages/compare/index.astro |
 | 2026-05-27 | /compare/lindy-vs-zapier-vs-n8n/ | Comparison | Yes | frontmatter | src/content/comparisons/lindy-vs-zapier-vs-n8n.md |
-| 2026-05-27 | /guides/ | Static page | Yes | git | src/pages/guides/index.astro |
 | 2026-05-27 | /guides/best-ai-automation-platform/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-automation-platform.md |
 | 2026-05-27 | /guides/best-ai-personal-assistant-for-work/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-personal-assistant-for-work.md |
 | 2026-05-27 | /tools/lindy/ | Tool | Yes | frontmatter | src/content/tools/lindy.md |
 | 2026-05-27 | /tools/openrouter/ | Tool | Yes | frontmatter | src/content/tools/openrouter.md |
 | 2026-05-27 | /tools/qwen/ | Tool | Yes | frontmatter | src/content/tools/qwen.md |
 | 2026-05-28 | /categories/ | Static page | Yes | working tree | src/pages/categories/index.astro |
-| 2026-05-28 | /categories/ai-presentation/ | Category | Yes | working tree | src/content/categories/ai-presentation.md |
+| 2026-05-28 | /categories/ai-presentation/ | Category | Yes | frontmatter | src/content/categories/ai-presentation.md |
+| 2026-05-28 | /categories/ai-seo/ | Category | Yes | working tree | src/content/categories/ai-seo.md |
 | 2026-05-28 | /categories/ai-video/ | Category | Yes | frontmatter | src/content/categories/ai-video.md |
+| 2026-05-28 | /guides/ | Static page | Yes | working tree | src/pages/guides/index.astro |
+| 2026-05-28 | /guides/best-ai-for-seo-content/ | Guide | Yes | working tree | src/content/use-cases/best-ai-for-seo-content.md |
+| 2026-05-28 | /guides/best-ai-seo-tool-replacing-surfer-frase-stack/ | Guide | Yes | working tree | src/content/use-cases/best-ai-seo-tool-replacing-surfer-frase-stack.md |
+| 2026-05-28 | /guides/best-ai-seo-tool/ | Guide | Yes | working tree | src/content/use-cases/best-ai-seo-tool.md |
 | 2026-05-28 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
 | 2026-05-28 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
 | 2026-05-28 | /news/ | Static page | Yes | page metadata | src/pages/news/index.astro |
 | 2026-05-28 | /news/rss.xml | Crawl surface | No | git | src/pages/news/rss.xml.ts |
 | 2026-05-28 | /tools/ | Static page | Yes | working tree | src/pages/tools/index.astro |
 | 2026-05-28 | /tools/argil/ | Tool | Yes | frontmatter | src/content/tools/argil.md |
-| 2026-05-28 | /tools/decktopus/ | Tool | Yes | working tree | src/content/tools/decktopus.md |
+| 2026-05-28 | /tools/decktopus/ | Tool | Yes | frontmatter | src/content/tools/decktopus.md |
+| 2026-05-28 | /tools/neuronwriter/ | Tool | Yes | working tree | src/content/tools/neuronwriter.md |

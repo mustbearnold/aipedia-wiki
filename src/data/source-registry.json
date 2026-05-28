@@ -4660,7 +4660,8 @@
       "url": "https://neuronwriter.com/features/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-05-28"
     },
     {
       "id": "neuronwriter-official",
@@ -4668,7 +4669,17 @@
       "url": "https://neuronwriter.com/pricing-neuron/",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-05-28"
+    },
+    {
+      "id": "neuronwriter-affiliate",
+      "label": "NeuronWriter affiliate program",
+      "url": "https://neuronwriter.com/contact/affiliates/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-05-28"
     },
     {
       "id": "nightcafe-pricing",

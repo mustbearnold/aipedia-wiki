@@ -5585,8 +5585,8 @@
       "pricing_model": "paid",
       "price_range": "$19-$97/month",
       "launched": "2021-01",
-      "last_updated": "2026-05-13T00:00:00.000Z",
-      "last_verified": "2026-05-13T00:00:00.000Z",
+      "last_updated": "2026-05-28T00:00:00.000Z",
+      "last_verified": "2026-05-28T00:00:00.000Z",
       "update_frequency": "monthly",
       "scores": {
         "utility": 8,
@@ -5605,10 +5605,13 @@
       ],
       "affiliate": {
         "has_program": true,
-        "commission": "30%",
-        "cookie_days": 30,
-        "network": "direct",
-        "link": null
+        "commission": "30% of any payment processed after the referred customer's first successful payment",
+        "cookie_days": 60,
+        "network": "Direct",
+        "link": "https://app.neuronwriter.com/ar/373035cd78449c88162fd011bed54813",
+        "application_status": "approved",
+        "approved_date": "2026-05-28T00:00:00.000Z",
+        "notes": "Approved affiliate link provided 2026-05-28. Official affiliate terms list 30% commission, 60-day cookie, last-click attribution, $100 minimum payout, and restrictions on spam, misleading claims, self-referrals, and paid ads with affiliate links."
       },
       "page_path": "wikis/ai-tools/pages/tools/neuronwriter.md"
     },
