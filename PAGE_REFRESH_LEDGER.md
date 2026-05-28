@@ -729,23 +729,23 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-27 | /tools/lindy/ | Tool | Yes | frontmatter | src/content/tools/lindy.md |
 | 2026-05-27 | /tools/openrouter/ | Tool | Yes | frontmatter | src/content/tools/openrouter.md |
 | 2026-05-27 | /tools/qwen/ | Tool | Yes | frontmatter | src/content/tools/qwen.md |
-| 2026-05-28 | /categories/ | Static page | Yes | working tree | src/pages/categories/index.astro |
+| 2026-05-28 | /categories/ | Static page | Yes | git | src/pages/categories/index.astro |
 | 2026-05-28 | /categories/ai-presentation/ | Category | Yes | frontmatter | src/content/categories/ai-presentation.md |
 | 2026-05-28 | /categories/ai-seo/ | Category | Yes | frontmatter | src/content/categories/ai-seo.md |
 | 2026-05-28 | /categories/ai-video/ | Category | Yes | frontmatter | src/content/categories/ai-video.md |
-| 2026-05-28 | /categories/ai-writing/ | Category | Yes | working tree | src/content/categories/ai-writing.md |
-| 2026-05-28 | /compare/ | Static page | Yes | working tree | src/pages/compare/index.astro |
-| 2026-05-28 | /compare/chatgpt-vs-rytr/ | Comparison | Yes | working tree | src/content/comparisons/chatgpt-vs-rytr.md |
+| 2026-05-28 | /categories/ai-writing/ | Category | Yes | frontmatter | src/content/categories/ai-writing.md |
+| 2026-05-28 | /compare/ | Static page | Yes | git | src/pages/compare/index.astro |
+| 2026-05-28 | /compare/chatgpt-vs-rytr/ | Comparison | Yes | frontmatter | src/content/comparisons/chatgpt-vs-rytr.md |
 | 2026-05-28 | /guides/ | Static page | Yes | git | src/pages/guides/index.astro |
 | 2026-05-28 | /guides/best-ai-for-seo-content/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-seo-content.md |
 | 2026-05-28 | /guides/best-ai-seo-tool-replacing-surfer-frase-stack/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-seo-tool-replacing-surfer-frase-stack.md |
 | 2026-05-28 | /guides/best-ai-seo-tool/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-seo-tool.md |
-| 2026-05-28 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
-| 2026-05-28 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
+| 2026-05-28 | /llms-full.txt | Crawl surface | No | git | src/pages/llms-full.txt.ts |
+| 2026-05-28 | /llms.txt | Crawl surface | No | git | src/pages/llms.txt.ts |
 | 2026-05-28 | /news/ | Static page | Yes | page metadata | src/pages/news/index.astro |
 | 2026-05-28 | /news/rss.xml | Crawl surface | No | git | src/pages/news/rss.xml.ts |
-| 2026-05-28 | /tools/ | Static page | Yes | working tree | src/pages/tools/index.astro |
+| 2026-05-28 | /tools/ | Static page | Yes | git | src/pages/tools/index.astro |
 | 2026-05-28 | /tools/argil/ | Tool | Yes | frontmatter | src/content/tools/argil.md |
 | 2026-05-28 | /tools/decktopus/ | Tool | Yes | frontmatter | src/content/tools/decktopus.md |
 | 2026-05-28 | /tools/neuronwriter/ | Tool | Yes | frontmatter | src/content/tools/neuronwriter.md |
-| 2026-05-28 | /tools/rytr/ | Tool | Yes | working tree | src/content/tools/rytr.md |
+| 2026-05-28 | /tools/rytr/ | Tool | Yes | frontmatter | src/content/tools/rytr.md |
