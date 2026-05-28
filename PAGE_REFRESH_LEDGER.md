@@ -442,7 +442,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /tools/continue/ | Tool | Yes | frontmatter | src/content/tools/continue.md |
 | 2026-05-13 | /tools/copy-ai/ | Tool | Yes | frontmatter | src/content/tools/copy-ai.md |
 | 2026-05-13 | /tools/crewai/ | Tool | Yes | frontmatter | src/content/tools/crewai.md |
-| 2026-05-13 | /tools/decktopus/ | Tool | Yes | frontmatter | src/content/tools/decktopus.md |
 | 2026-05-13 | /tools/deepgram/ | Tool | Yes | frontmatter | src/content/tools/deepgram.md |
 | 2026-05-13 | /tools/deepl/ | Tool | Yes | frontmatter | src/content/tools/deepl.md |
 | 2026-05-13 | /tools/deepseek/ | Tool | Yes | frontmatter | src/content/tools/deepseek.md |
@@ -681,7 +680,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-24 | /answers/best-ai-video-generator-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-video-generator-2026.astro |
 | 2026-05-24 | /categories/ai-design/ | Category | Yes | frontmatter | src/content/categories/ai-design.md |
 | 2026-05-24 | /categories/ai-image/ | Category | Yes | frontmatter | src/content/categories/ai-image.md |
-| 2026-05-24 | /categories/ai-presentation/ | Category | Yes | frontmatter | src/content/categories/ai-presentation.md |
 | 2026-05-24 | /categories/ai-seo/ | Category | Yes | frontmatter | src/content/categories/ai-seo.md |
 | 2026-05-24 | /categories/ai-writing/ | Category | Yes | frontmatter | src/content/categories/ai-writing.md |
 | 2026-05-24 | /compare/chatgpt-vs-qwen/ | Comparison | Yes | frontmatter | src/content/comparisons/chatgpt-vs-qwen.md |
@@ -742,10 +740,12 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-27 | /tools/openrouter/ | Tool | Yes | frontmatter | src/content/tools/openrouter.md |
 | 2026-05-27 | /tools/qwen/ | Tool | Yes | frontmatter | src/content/tools/qwen.md |
 | 2026-05-28 | /categories/ | Static page | Yes | working tree | src/pages/categories/index.astro |
-| 2026-05-28 | /categories/ai-video/ | Category | Yes | working tree | src/content/categories/ai-video.md |
+| 2026-05-28 | /categories/ai-presentation/ | Category | Yes | working tree | src/content/categories/ai-presentation.md |
+| 2026-05-28 | /categories/ai-video/ | Category | Yes | frontmatter | src/content/categories/ai-video.md |
 | 2026-05-28 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
 | 2026-05-28 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
 | 2026-05-28 | /news/ | Static page | Yes | page metadata | src/pages/news/index.astro |
 | 2026-05-28 | /news/rss.xml | Crawl surface | No | git | src/pages/news/rss.xml.ts |
 | 2026-05-28 | /tools/ | Static page | Yes | working tree | src/pages/tools/index.astro |
-| 2026-05-28 | /tools/argil/ | Tool | Yes | working tree | src/content/tools/argil.md |
+| 2026-05-28 | /tools/argil/ | Tool | Yes | frontmatter | src/content/tools/argil.md |
+| 2026-05-28 | /tools/decktopus/ | Tool | Yes | working tree | src/content/tools/decktopus.md |

@@ -11,16 +11,18 @@ pricing_model: paid
 price_range: $14.99-$34.99/user/month
 status: active
 launched: 2018-01
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-05-28
+last_verified: 2026-05-28
 update_frequency: monthly
 affiliate:
   has_program: true
-  commission: null
-  cookie_days: null
+  commission: "50% commission; affiliate signup page describes 50% recurring commission for each sale"
+  cookie_days: 60
   network: Direct
-  link: 'https://www.decktopus.com?via=aipediawiki'
-  notes: "Affiliate link configured. Internal monetization terms should not be surfaced in public editorial copy."
+  link: 'https://www.decktopus.com/?via=wikiaipedia'
+  application_status: approved
+  approved_date: 2026-05-28
+  notes: "New approved affiliate link provided 2026-05-28. Official Decktopus affiliate page lists 50% commission and 60-day cookie; affiliate signup page describes 50% recurring commission for each sale."
 scores:
   utility: 7
   value: 6
@@ -32,7 +34,7 @@ facts:
     source: "https://www.decktopus.com"
     source_label: "Decktopus official site"
     source_id: decktopus-official
-    verified_at: 2026-05-13
+    verified_at: 2026-05-28
     volatility: medium
     confidence: high
   workflow_surface:
@@ -40,7 +42,7 @@ facts:
     source: "https://www.decktopus.com"
     source_label: "Decktopus official site"
     source_id: decktopus-official
-    verified_at: 2026-05-13
+    verified_at: 2026-05-28
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -48,8 +50,8 @@ facts:
     source: "https://www.decktopus.com/pricing"
     source_label: "Decktopus pricing"
     source_id: decktopus-pricing
-    verified_at: 2026-05-13
-    next_review_at: 2026-08-13
+    verified_at: 2026-05-28
+    next_review_at: 2026-08-28
     volatility: high
     confidence: high
   export_surface:
@@ -57,7 +59,7 @@ facts:
     source: "https://www.decktopus.com"
     source_label: "Decktopus official site"
     source_id: decktopus-official
-    verified_at: 2026-05-13
+    verified_at: 2026-05-28
     volatility: medium
     confidence: medium
   watch_out_for:
@@ -65,7 +67,7 @@ facts:
     source: "https://www.decktopus.com"
     source_label: "Decktopus official site"
     source_id: decktopus-official
-    verified_at: 2026-05-13
+    verified_at: 2026-05-28
     volatility: medium
     confidence: high
 tags: [presentations, slides, ai-generation, forms, speaker-notes, automation, prompt-to-deck]
@@ -105,14 +107,16 @@ price_history:
     source: "https://www.decktopus.com/pricing"
     source_label: "Source"
     source_id: decktopus-pricing
-    note: "Pricing unchanged. Annual billing saves 40% vs monthly ($179.99/year). Verified against vendor pricing page on 2026-05-13."
+    verified_at: 2026-05-28
+    note: "Pricing unchanged. Annual billing saves 40% vs monthly ($179.99/year). Re-verified against vendor pricing page on 2026-05-28."
   - date: 2026-05-13
     plan: "Business"
     price: "$34.99/user/mo billed annually"
     source: "https://www.decktopus.com/pricing"
     source_label: "Source"
     source_id: decktopus-pricing
-    note: "Pricing unchanged. Annual billing $419.99/user/year. Verified against vendor pricing page on 2026-05-13."
+    verified_at: 2026-05-28
+    note: "Pricing unchanged. Annual billing $419.99/user/year. Re-verified against vendor pricing page on 2026-05-28."
 ---
 
 # Decktopus AI
@@ -142,7 +146,9 @@ That makes it less of a pure Gamma competitor and more of a "presentation plus l
 | **Enterprise** | Custom, including corporate-branded slides and branded AI setup |
 | **Cloud product** | Yes, Decktopus says it works on the cloud |
 
-Every data point above was verified against Decktopus's official pricing page on 2026-05-13. See Sources.
+Every data point above was re-verified against Decktopus's official pricing page on 2026-05-28. See Sources.
+
+AiPedia has an approved Decktopus affiliate link. Decktopus' public affiliate page lists a 50% commission and 60-day cookie; rankings and recommendations remain editorial.
 
 ## What it actually is
 
@@ -177,7 +183,7 @@ Subscription pricing via [decktopus.com/pricing](https://www.decktopus.com/prici
 | Business | $34.99/user/mo | 12,000/year | Teams needing analytics, custom domain, webhook, and organization controls |
 | Enterprise | Custom | Custom | Corporate-branded decks, custom layouts, branded AI setup |
 
-Prices verified 2026-05-13. Annual billing saves 40% vs monthly (Pro $179.99/year, Business $419.99/user/year). Monthly billing, promotions, taxes, and currency localization can change checkout totals.
+Prices verified 2026-05-28. Annual billing saves 40% vs monthly (Pro $179.99/year, Business $419.99/user/year). Monthly billing, promotions, taxes, and currency localization can change checkout totals.
 
 ## Failure Modes
 
@@ -191,7 +197,7 @@ Prices verified 2026-05-13. Annual billing saves 40% vs monthly (Pro $179.99/yea
 
 This page was produced by the aipedia.wiki editorial pipeline, an automated system that verifies tool details against primary sources and then applies the site scoring rubric. Scoring follows Utility, Value, Moat, and Longevity as explained at [/about/scoring/](https://aipedia.wiki/about/scoring/).
 
-Last verified 2026-05-13 against Decktopus's official pricing page and public product materials.
+Last verified 2026-05-28 against Decktopus's official pricing page, affiliate page, and public product materials.
 
 ## FAQ
 
@@ -211,6 +217,7 @@ Yes, if the sales deck should collect lead data, feedback, or qualification resp
 
 - [Decktopus pricing](https://www.decktopus.com/pricing): plan prices, credits, deck-generation cost, Business features, Enterprise positioning
 - [Decktopus official site](https://decktopus.com): product positioning and presentation workflow
+- [Decktopus affiliate program](https://www.decktopus.com/affiliate): public affiliate commission and cookie terms
 
 ## Related
 

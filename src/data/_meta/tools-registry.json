@@ -527,8 +527,8 @@
       "pricing_model": "paid",
       "price_range": "$39-$499/month; Enterprise custom",
       "launched": "2023-06",
-      "last_updated": "2026-05-13T00:00:00.000Z",
-      "last_verified": "2026-05-13T00:00:00.000Z",
+      "last_updated": "2026-05-28T00:00:00.000Z",
+      "last_verified": "2026-05-28T00:00:00.000Z",
       "update_frequency": "monthly",
       "scores": {
         "utility": 8,
@@ -548,11 +548,14 @@
         "argil"
       ],
       "affiliate": {
-        "has_program": false,
-        "commission": null,
+        "has_program": true,
+        "commission": "30% generated revenue for each client for 12 months",
         "cookie_days": null,
-        "network": null,
-        "link": null
+        "network": "Tolt",
+        "link": "https://argil.ai/?ref=aipediawiki",
+        "application_status": "approved",
+        "approved_date": "2026-05-28T00:00:00.000Z",
+        "notes": "Approved/referral URL provided by publisher 2026-05-28."
       },
       "page_path": "wikis/ai-tools/pages/tools/argil.md"
     },
@@ -1862,8 +1865,8 @@
       "pricing_model": "freemium",
       "price_range": "$14.99-$34.99/user/month",
       "launched": "2018-01",
-      "last_updated": "2026-05-13T00:00:00.000Z",
-      "last_verified": "2026-05-13T00:00:00.000Z",
+      "last_updated": "2026-05-28T00:00:00.000Z",
+      "last_verified": "2026-05-28T00:00:00.000Z",
       "update_frequency": "monthly",
       "scores": {
         "utility": 7,
@@ -1882,10 +1885,13 @@
       ],
       "affiliate": {
         "has_program": true,
-        "commission": "25% recurring",
-        "cookie_days": null,
+        "commission": "50% commission; affiliate signup page describes 50% recurring commission for each sale",
+        "cookie_days": 60,
         "network": "Direct",
-        "link": "https://www.decktopus.com?via=aipediawiki"
+        "link": "https://www.decktopus.com/?via=wikiaipedia",
+        "application_status": "approved",
+        "approved_date": "2026-05-28T00:00:00.000Z",
+        "notes": "New approved affiliate link provided 2026-05-28. Official affiliate page lists 50% commission and 60-day cookie."
       },
       "page_path": "wikis/ai-tools/pages/tools/decktopus.md"
     },
