@@ -7,7 +7,7 @@ tool_count: 27
 seo_title: "Best AI Video Tools (May 2026): Gemini Omni, Seedance, Kling, Veo & Runway"
 meta_description: "Updated May 24, 2026: compare Gemini Omni, Seedance 2.0, Kling 3.0, Veo 3.1, Hailuo 2.3, Runway, Pika, HeyGen, Synthesia, and Sora sunset caveats by model quality, workflow, pricing, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-24
+last_updated: 2026-05-28
 last_verified: 2026-05-24
 update_frequency: weekly
 top_picks:
