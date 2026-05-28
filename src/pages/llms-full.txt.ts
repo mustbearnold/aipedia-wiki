@@ -2,7 +2,7 @@
 // Lists every active tool with category + tagline, every comparison, every
 // use-case guide. Intended for crawlers willing to ingest a larger manifest
 // to discover the full content map without parsing the sitemap.
-// Refresh metadata: 2026-05-27 Lindy affiliate/conversion refresh and news collection coverage refresh.
+// Refresh metadata: 2026-05-28 Lindy affiliate/conversion refresh and news collection coverage refresh.
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 

@@ -1,6 +1,6 @@
 # AiPedia Page Refresh Ledger
 
-Ledger updated through: 2026-05-27
+Ledger updated through: 2026-05-28
 Tracked public pages and crawl surfaces: 738
 
 Hard rule: every time a tracked website page is edited, refreshed, materially re-ranked, or has volatile facts re-verified, update that page row in this file on the same change. If a child page update affects a parent hub, archive, internal-link block, sitemap, or LLM surface, update those affected rows too.
@@ -732,20 +732,20 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-26 | /tools/tidio/ | Tool | Yes | frontmatter | src/content/tools/tidio.md |
 | 2026-05-26 | /tools/v0/ | Tool | Yes | frontmatter | src/content/tools/v0.md |
 | 2026-05-26 | /tools/zapier/ | Tool | Yes | frontmatter | src/content/tools/zapier.md |
-| 2026-05-27 | /categories/ | Static page | Yes | working tree | src/pages/categories/index.astro |
-| 2026-05-27 | /categories/ai-automation/ | Category | Yes | working tree | src/content/categories/ai-automation.md |
-| 2026-05-27 | /categories/ai-chatbots/ | Category | Yes | working tree | src/content/categories/ai-chatbots.md |
-| 2026-05-27 | /categories/ai-infrastructure/ | Category | Yes | working tree | src/content/categories/ai-infrastructure.md |
-| 2026-05-27 | /compare/ | Static page | Yes | working tree | src/pages/compare/index.astro |
-| 2026-05-27 | /compare/lindy-vs-zapier-vs-n8n/ | Comparison | Yes | working tree | src/content/comparisons/lindy-vs-zapier-vs-n8n.md |
-| 2026-05-27 | /guides/ | Static page | Yes | working tree | src/pages/guides/index.astro |
-| 2026-05-27 | /guides/best-ai-automation-platform/ | Guide | Yes | working tree | src/content/use-cases/best-ai-automation-platform.md |
-| 2026-05-27 | /guides/best-ai-personal-assistant-for-work/ | Guide | Yes | working tree | src/content/use-cases/best-ai-personal-assistant-for-work.md |
-| 2026-05-27 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
-| 2026-05-27 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
-| 2026-05-27 | /news/ | Static page | Yes | working tree | src/pages/news/index.astro |
-| 2026-05-27 | /news/rss.xml | Crawl surface | No | working tree | src/pages/news/rss.xml.ts |
-| 2026-05-27 | /tools/ | Static page | Yes | working tree | src/pages/tools/index.astro |
-| 2026-05-27 | /tools/lindy/ | Tool | Yes | working tree | src/content/tools/lindy.md |
-| 2026-05-27 | /tools/openrouter/ | Tool | Yes | working tree | src/content/tools/openrouter.md |
-| 2026-05-27 | /tools/qwen/ | Tool | Yes | working tree | src/content/tools/qwen.md |
+| 2026-05-27 | /categories/ | Static page | Yes | git | src/pages/categories/index.astro |
+| 2026-05-27 | /categories/ai-automation/ | Category | Yes | frontmatter | src/content/categories/ai-automation.md |
+| 2026-05-27 | /categories/ai-chatbots/ | Category | Yes | frontmatter | src/content/categories/ai-chatbots.md |
+| 2026-05-27 | /categories/ai-infrastructure/ | Category | Yes | frontmatter | src/content/categories/ai-infrastructure.md |
+| 2026-05-27 | /compare/ | Static page | Yes | git | src/pages/compare/index.astro |
+| 2026-05-27 | /compare/lindy-vs-zapier-vs-n8n/ | Comparison | Yes | frontmatter | src/content/comparisons/lindy-vs-zapier-vs-n8n.md |
+| 2026-05-27 | /guides/ | Static page | Yes | git | src/pages/guides/index.astro |
+| 2026-05-27 | /guides/best-ai-automation-platform/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-automation-platform.md |
+| 2026-05-27 | /guides/best-ai-personal-assistant-for-work/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-personal-assistant-for-work.md |
+| 2026-05-27 | /tools/ | Static page | Yes | git | src/pages/tools/index.astro |
+| 2026-05-27 | /tools/lindy/ | Tool | Yes | frontmatter | src/content/tools/lindy.md |
+| 2026-05-27 | /tools/openrouter/ | Tool | Yes | frontmatter | src/content/tools/openrouter.md |
+| 2026-05-27 | /tools/qwen/ | Tool | Yes | frontmatter | src/content/tools/qwen.md |
+| 2026-05-28 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
+| 2026-05-28 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
+| 2026-05-28 | /news/ | Static page | Yes | working tree | src/pages/news/index.astro |
+| 2026-05-28 | /news/rss.xml | Crawl surface | No | working tree | src/pages/news/rss.xml.ts |
