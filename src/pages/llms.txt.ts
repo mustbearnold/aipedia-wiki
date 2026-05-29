@@ -3,7 +3,7 @@
 // Copilot) at the canonical index + category hubs + editorial policy.
 //
 // See also /llms-full.txt for the verbose variant with every page listed.
-// Refresh metadata: 2026-05-28 Rytr, NeuronWriter, Decktopus, and Argil affiliate activation, Lindy affiliate/conversion refresh, and news collection coverage refresh.
+// Refresh metadata: 2026-05-29 Claude Opus 4.8, Anthropic Series H, Tencent enterprise AI, Myriad clinical AI, and news collection coverage refresh.
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 

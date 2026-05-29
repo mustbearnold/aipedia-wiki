@@ -1,6 +1,6 @@
 # AiPedia Page Refresh Ledger
 
-Ledger updated through: 2026-05-28
+Ledger updated through: 2026-05-29
 Tracked public pages and crawl surfaces: 738
 
 Hard rule: every time a tracked website page is edited, refreshed, materially re-ranked, or has volatile facts re-verified, update that page row in this file on the same change. If a child page update affects a parent hub, archive, internal-link block, sitemap, or LLM surface, update those affected rows too.
@@ -665,7 +665,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-20 | /tools/gpt-image-2/ | Tool | Yes | frontmatter | src/content/tools/gpt-image-2.md |
 | 2026-05-20 | /tools/imagen/ | Tool | Yes | frontmatter | src/content/tools/imagen.md |
 | 2026-05-20 | /tools/veo/ | Tool | Yes | frontmatter | src/content/tools/veo.md |
-| 2026-05-22 | /tools/claude-code/ | Tool | Yes | frontmatter | src/content/tools/claude-code.md |
 | 2026-05-22 | /tools/gemini/ | Tool | Yes | frontmatter | src/content/tools/gemini.md |
 | 2026-05-22 | /tools/github-copilot/ | Tool | Yes | frontmatter | src/content/tools/github-copilot.md |
 | 2026-05-23 | /tools/cohere/ | Tool | Yes | frontmatter | src/content/tools/cohere.md |
@@ -688,8 +687,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-24 | /tools/runway/ | Tool | Yes | frontmatter | src/content/tools/runway.md |
 | 2026-05-24 | /tools/trae/ | Tool | Yes | frontmatter | src/content/tools/trae.md |
 | 2026-05-24 | /tools/typeface/ | Tool | Yes | frontmatter | src/content/tools/typeface.md |
-| 2026-05-26 | / | Static page | Yes | git | src/pages/index.astro |
-| 2026-05-26 | /categories/ai-coding/ | Category | Yes | frontmatter | src/content/categories/ai-coding.md |
 | 2026-05-26 | /categories/ai-notes/ | Category | Yes | frontmatter | src/content/categories/ai-notes.md |
 | 2026-05-26 | /categories/ai-search/ | Category | Yes | frontmatter | src/content/categories/ai-search.md |
 | 2026-05-26 | /categories/ai-voice/ | Category | Yes | frontmatter | src/content/categories/ai-voice.md |
@@ -700,7 +697,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-26 | /tools/adobe-firefly/ | Tool | Yes | frontmatter | src/content/tools/adobe-firefly.md |
 | 2026-05-26 | /tools/beehiiv/ | Tool | Yes | frontmatter | src/content/tools/beehiiv.md |
 | 2026-05-26 | /tools/blackbox-ai/ | Tool | Yes | frontmatter | src/content/tools/blackbox-ai.md |
-| 2026-05-26 | /tools/claude/ | Tool | Yes | frontmatter | src/content/tools/claude.md |
 | 2026-05-26 | /tools/cloudtalk/ | Tool | Yes | frontmatter | src/content/tools/cloudtalk.md |
 | 2026-05-26 | /tools/cursor/ | Tool | Yes | frontmatter | src/content/tools/cursor.md |
 | 2026-05-26 | /tools/d-id/ | Tool | Yes | frontmatter | src/content/tools/d-id.md |
@@ -721,7 +717,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-26 | /tools/v0/ | Tool | Yes | frontmatter | src/content/tools/v0.md |
 | 2026-05-26 | /tools/zapier/ | Tool | Yes | frontmatter | src/content/tools/zapier.md |
 | 2026-05-27 | /categories/ai-automation/ | Category | Yes | frontmatter | src/content/categories/ai-automation.md |
-| 2026-05-27 | /categories/ai-chatbots/ | Category | Yes | frontmatter | src/content/categories/ai-chatbots.md |
 | 2026-05-27 | /categories/ai-infrastructure/ | Category | Yes | frontmatter | src/content/categories/ai-infrastructure.md |
 | 2026-05-27 | /compare/lindy-vs-zapier-vs-n8n/ | Comparison | Yes | frontmatter | src/content/comparisons/lindy-vs-zapier-vs-n8n.md |
 | 2026-05-27 | /guides/best-ai-automation-platform/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-automation-platform.md |
@@ -740,12 +735,17 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-28 | /guides/best-ai-for-seo-content/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-seo-content.md |
 | 2026-05-28 | /guides/best-ai-seo-tool-replacing-surfer-frase-stack/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-seo-tool-replacing-surfer-frase-stack.md |
 | 2026-05-28 | /guides/best-ai-seo-tool/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-seo-tool.md |
-| 2026-05-28 | /llms-full.txt | Crawl surface | No | git | src/pages/llms-full.txt.ts |
-| 2026-05-28 | /llms.txt | Crawl surface | No | git | src/pages/llms.txt.ts |
-| 2026-05-28 | /news/ | Static page | Yes | page metadata | src/pages/news/index.astro |
-| 2026-05-28 | /news/rss.xml | Crawl surface | No | git | src/pages/news/rss.xml.ts |
 | 2026-05-28 | /tools/ | Static page | Yes | git | src/pages/tools/index.astro |
 | 2026-05-28 | /tools/argil/ | Tool | Yes | frontmatter | src/content/tools/argil.md |
 | 2026-05-28 | /tools/decktopus/ | Tool | Yes | frontmatter | src/content/tools/decktopus.md |
 | 2026-05-28 | /tools/neuronwriter/ | Tool | Yes | frontmatter | src/content/tools/neuronwriter.md |
 | 2026-05-28 | /tools/rytr/ | Tool | Yes | frontmatter | src/content/tools/rytr.md |
+| 2026-05-29 | / | Static page | Yes | working tree | src/pages/index.astro |
+| 2026-05-29 | /categories/ai-chatbots/ | Category | Yes | working tree | src/content/categories/ai-chatbots.md |
+| 2026-05-29 | /categories/ai-coding/ | Category | Yes | working tree | src/content/categories/ai-coding.md |
+| 2026-05-29 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
+| 2026-05-29 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
+| 2026-05-29 | /news/ | Static page | Yes | working tree | src/pages/news/index.astro |
+| 2026-05-29 | /news/rss.xml | Crawl surface | No | working tree | src/pages/news/rss.xml.ts |
+| 2026-05-29 | /tools/claude-code/ | Tool | Yes | working tree | src/content/tools/claude-code.md |
+| 2026-05-29 | /tools/claude/ | Tool | Yes | working tree | src/content/tools/claude.md |

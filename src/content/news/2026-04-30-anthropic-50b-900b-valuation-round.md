@@ -8,13 +8,17 @@ summary: "TechCrunch reports Anthropic has received multiple preemptive offers f
 affects: [claude, claude-code, anthropic]
 categories: [ai-business, ai-industry, ai-infrastructure, ai-research, ai-policy, ai-model-release]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-30
-last_verified: 2026-04-30
+last_updated: 2026-05-29
+last_verified: 2026-05-29
 related_tools: [claude, claude-code, claude-design]
 sources:
   - url: "https://techcrunch.com/2026/04/29/sources-anthropic-could-raise-a-new-50b-round-at-a-valuation-of-900b/"
     title: "Sources: Anthropic could raise a new $50B round at a valuation of $900B - TechCrunch"
+  - url: "https://www.anthropic.com/news/series-h"
+    title: "Anthropic: Anthropic raises $65B in Series H funding at $965B post-money valuation"
 ---
+
+**May 29 update:** Anthropic has now made the round official. The company announced a **$65B Series H at a $965B post-money valuation** on May 28, 2026; see AiPedia's updated coverage at [Anthropic's $65B Series H turns Claude demand into a compute-and-enterprise scale test](/news/2026-05-28-anthropic-series-h-65b-965b-valuation/). The original April 30 article below is preserved as contemporaneous reporting on the pre-announcement rumors.
 
 Investor demand for Anthropic equity has reached levels that are hard to reconcile with normal venture math.
 

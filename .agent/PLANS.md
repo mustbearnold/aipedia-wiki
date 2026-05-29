@@ -82,6 +82,80 @@ Summarize changed files, behavior shipped, tests passed, unresolved risks, and r
 
 ---
 
+## ExecPlan: May 29 2026 AI News Catch-Up
+
+### 1. Objective
+
+Cover the AI and AI-tool news that AiPedia has not yet covered through May 29, 2026, including today, while correcting stale Claude buyer guidance after Anthropic's Opus 4.8 launch. This supports trust, organic freshness, data quality, editorial scalability, and mobile-first decision support.
+
+### 2. Current state
+
+`src/content/news/` has daily May 2026 coverage through May 28, 2026. The May 28 desk predates Anthropic's late May 28 Opus 4.8 and Series H announcements. There are no May 29 news pages yet. `src/content/tools/claude.md`, `src/content/tools/claude-code.md`, and `src/content/categories/ai-chatbots.md` still name Opus 4.7 as the current Claude flagship.
+
+### 3. Target state
+
+Add source-backed, non-duplicate news coverage for Anthropic Opus 4.8/dynamic workflows, Anthropic's official Series H funding, Tencent Cloud's May 29 enterprise AI stack launch, and the May 29 desk summary. Update Claude and Claude Code buyer pages so current model, pricing, context, and workflow claims are verified as of May 29, 2026.
+
+### 4. Scope
+
+Included: new news markdown records, May 28 desk correction, Claude/Claude Code tool facts, AI Chatbots and AI Coding category freshness, `/news/` archive metadata, `/news/rss.xml`, LLM crawl-surface metadata, generated news OG/thumb assets, and `PAGE_REFRESH_LEDGER.md`.
+
+Excluded: new tool records/logos, affiliate changes, unrelated pricing rewrites, and speculative/unverified rumors.
+
+Affected top-layer surfaces: homepage latest-news module (dynamic collection), `/news/`, `/news/rss.xml`, `/categories/ai-chatbots/`, `/categories/ai-coding/`, `/tools/claude/`, `/tools/claude-code/`, `/llms.txt`, `/llms-full.txt`, sitemap/build-generated surfaces, and `PAGE_REFRESH_LEDGER.md`.
+
+### 5. Files likely affected
+
+`src/content/news/*.md`, `src/content/tools/claude.md`, `src/content/tools/claude-code.md`, `src/content/categories/ai-chatbots.md`, `src/content/categories/ai-coding.md`, `src/pages/news/index.astro`, `src/pages/news/rss.xml.ts`, `src/pages/llms.txt.ts`, `src/pages/llms-full.txt.ts`, generated `public/og/news/*`, `PAGE_REFRESH_LEDGER.md`, and this plan.
+
+### 6. Data model impact
+
+No schema changes. New news records use the existing `news` frontmatter shape with `sources`, `related_tools`, `last_verified`, categories, summaries, and dates. Tool/category records update existing frontmatter fields only.
+
+### 7. SEO impact
+
+New indexable news URLs get unique titles, summaries, canonical URLs via the existing route, source blocks, related tools, and internal links. News archive and crawl surfaces get May 29 refresh metadata.
+
+### 8. Conversion impact
+
+No new affiliate CTAs. Tool pages keep commercial guidance honest by reflecting current Claude model and usage-risk facts before sending buyers toward subscription decisions.
+
+### 9. Mobile UX impact
+
+Articles reuse the existing mobile-first ArticlePlus layout and generated OG thumbs. Archive cards remain stacked on mobile and grid on wider screens.
+
+### 10. Implementation steps
+
+1. Verify current May 2026 sources and de-duplicate against existing news.
+2. Add new news records and correct the May 28 desk.
+3. Refresh Claude, Claude Code, AI Chatbots, and AI Coding facts affected by Opus 4.8/dynamic workflows.
+4. Update `/news/`, RSS, LLM metadata, and regenerate OG/thumb assets.
+5. Regenerate `PAGE_REFRESH_LEDGER.md`.
+6. Run news, link, guard, script, and build checks.
+
+### 11. Verification commands
+
+`node scripts/generate-og-news.mjs <changed-news-slugs>`, `npm run ledger:pages`, `npm run check:news`, `npm run check:links`, `npm run guard:check`, `npm run test:scripts`, `npm run check`, `npm run build:fast`, targeted mobile/browser sanity against `dist-fast`, and `git diff --check`.
+
+### 12. Acceptance criteria
+
+May 29 has at least two current, source-backed news records; late May 28 Anthropic launches are covered without duplicating older rumor coverage; Claude/Claude Code pages no longer present Opus 4.7 as flagship; affected category hubs are current; news rendering, links, ledger, tests, and build pass or unrelated failures are documented.
+
+### 13. Risks and mitigations
+
+Current-day search results can include syndicated, thin, or unverified stories. Prefer official Anthropic, Claude, Tencent, and GlobeNewswire/PRNewswire sources; do not elevate rumors or outage chatter without an official or strong named source. Avoid editing unrelated dirty files.
+
+### 14. Progress log
+
+2026-05-29: Plan created after auditing local news counts, finding no May 29 coverage, and verifying late May 28 Anthropic launches plus May 29 Tencent/Myriad sources.
+2026-05-29: Added five news records, refreshed the May 28 desk, updated the April 30 Anthropic rumor page with the official Series H follow-up, refreshed Claude/Claude Code and AI Chatbots/AI Coding pages for Opus 4.8/dynamic workflows, regenerated targeted OG assets and PAGE_REFRESH_LEDGER.md, and verified with focused audits plus full check/build/mobile sanity.
+
+### 15. Final report
+
+Completed. Shipped source-backed May 29 coverage for Anthropic/Claude, Tencent Cloud, and Myriad; added late May 28 Anthropic standalone coverage; corrected the May 28 desk; and synchronized affected buyer pages and category hubs so Opus 4.7 is no longer presented as Claude's current flagship. Verification passed: `npm run check:news`, `npm run check:links`, `npm run ledger:pages:check`, `npm run test:scripts`, `git diff --check`, `npm run check`, `npm run build:fast`, and targeted browser/mobile overflow checks for 12 affected routes at 360, 390, 430, 768, and 1024px. Remaining risk: this pass intentionally avoided speculative/social-only May 29 chatter without official or strong named sourcing.
+
+---
+
 ## ExecPlan: Engagement-Rate Fix Pass
 
 ### 1. Objective

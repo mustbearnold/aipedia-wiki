@@ -11,11 +11,11 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2023-03
-last_updated: 2026-05-26
-last_verified: 2026-05-26
+last_updated: 2026-05-29
+last_verified: 2026-05-29
 update_frequency: monthly
 seo_title: "Claude: Features, Pricing & Review (2026)"
-meta_description: "Claude runs Opus 4.7 as flagship with 1M context, Claude Code, Claude Design, Claude Cowork, and new May 2026 Small Business workflows. Agent SDK and claude -p move to separate credits June 15."
+meta_description: "Claude runs Opus 4.8 as flagship with 1M context, Claude Code dynamic workflows, Claude Design, Claude Cowork, and May 2026 enterprise updates. Agent SDK and claude -p move to separate credits June 15."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -30,32 +30,32 @@ scores:
   longevity: 10
 facts:
   flagship_model:
-    value: "Claude Opus 4.7"
-    source: "https://platform.claude.com/docs/en/about-claude/models/overview"
-    source_label: "Anthropic model docs"
-    source_id: anthropic-docs
-    verified_at: 2026-05-11
+    value: "Claude Opus 4.8"
+    source: "https://www.anthropic.com/news/claude-opus-4-8"
+    source_label: "Anthropic Claude Opus 4.8 release"
+    source_id: anthropic-opus-48
+    verified_at: 2026-05-29
     volatility: high
     confidence: high
-    next_review_at: 2026-06-11
+    next_review_at: 2026-06-29
   context_window:
-    value: "1M tokens on Opus 4.7 and Sonnet 4.6; 200K tokens on Haiku 4.5"
+    value: "1M tokens on Opus 4.8 and Sonnet 4.6; 200K tokens on Haiku 4.5"
     source: "https://platform.claude.com/docs/en/about-claude/models/overview"
     source_label: "Anthropic model docs"
     source_id: anthropic-docs
-    verified_at: 2026-05-11
+    verified_at: 2026-05-29
     volatility: high
     confidence: high
-    next_review_at: 2026-06-11
+    next_review_at: 2026-06-29
   pricing_anchor:
-    value: "Free; Pro $20/mo or $17/mo annual; Max from $100/mo (5x) or $200/mo (20x); Team standard seat $20/mo annual ($25 monthly) or premium $100/mo annual ($125 monthly); Enterprise $20/seat plus API-rate usage; API Opus 4.7 is $5 input / $25 output per MTok. Starting June 15, 2026, eligible plans can claim separate Agent SDK monthly credits for programmatic usage."
+    value: "Free; Pro $20/mo or $17/mo annual; Max from $100/mo (5x) or $200/mo (20x); Team standard seat $20/mo annual ($25 monthly) or premium $100/mo annual ($125 monthly); Enterprise $20/seat plus API-rate usage; API Opus 4.8 is $5 input / $25 output per MTok, with fast mode at $10 / $50 per MTok. Starting June 15, 2026, eligible plans can claim separate Agent SDK monthly credits for programmatic usage."
     source: "https://claude.com/pricing"
     source_label: "Claude pricing"
     source_id: claude-pricing
-    verified_at: 2026-05-15
+    verified_at: 2026-05-29
     volatility: high
     confidence: high
-    next_review_at: 2026-06-13
+    next_review_at: 2026-06-29
   free_plan:
     value: "Yes. Web, mobile, and desktop chat with writing, code/data work, image analysis, web search, memory, file creation, connectors, MCP, and limits"
     source: "https://claude.com/pricing"
@@ -179,8 +179,16 @@ not_best_for:
   - broad plugin or integration ecosystem
   - users wanting a single tool for shopping, calendar, and search
 quick_answer: >-
-  Claude is Anthropic's assistant, and Opus 4.7 remains a top specialist for long-form reasoning, writing coherence, terminal-native Claude Code workflows, and high-trust enterprise deployments. After GPT-5.5, ChatGPT is the stronger default all-purpose assistant; pick Claude when its writing style, long-context discipline, Claude Code, or conservative safety posture matters more than breadth.
+  Claude is Anthropic's assistant, and Opus 4.8 is the current flagship for long-form reasoning, writing coherence, terminal-native Claude Code workflows, and high-trust enterprise deployments. After GPT-5.5, ChatGPT is the stronger default all-purpose assistant; pick Claude when its writing style, long-context discipline, Claude Code, dynamic workflows, or conservative safety posture matters more than breadth.
 price_history:
+  - date: 2026-05-28
+    plan: "Opus 4.8"
+    price: "$5 / $25 per MTok standard; $10 / $50 per MTok fast mode"
+    source: "https://www.anthropic.com/news/claude-opus-4-8"
+    source_id: anthropic-opus-48
+    source_label: "Anthropic Claude Opus 4.8 release"
+    verified_at: 2026-05-29
+    note: "New flagship released with same standard pricing as Opus 4.7, cheaper fast mode, effort controls, Messages API instruction updates, and Claude Code dynamic workflows."
   - date: 2026-04-16
     plan: "Opus 4.7"
     price: "$5 / $25 per MTok"
@@ -249,12 +257,14 @@ price_history:
 
 # Claude
 
-Anthropic's AI assistant. **Opus 4.7** is the flagship as of **April 16, 2026**, narrowly retaking the lead for most powerful generally-available LLM on agentic coding, scaled tool use, computer use, and financial-analysis benchmarks. Sonnet 4.6 and Haiku 4.5 round out the lineup. The 1M token context window carries across Opus and Sonnet; Claude Code CLI handles agentic coding from the terminal; Constitutional AI training targets reduced sycophancy and harmful outputs. Anthropic's April 26 agent-commerce and election-safeguard coverage reinforces that Claude's product story is now as much about permissioning, accountability, and enterprise trust as raw model quality.
+Anthropic's AI assistant. **Opus 4.8** is the flagship as of **May 28, 2026**, replacing Opus 4.7 for the hardest reasoning, coding, and agentic work while keeping standard Opus API pricing at $5 input / $25 output per million tokens. Sonnet 4.6 and Haiku 4.5 round out the lineup. The 1M token context window carries across Opus and Sonnet; Claude Code CLI handles agentic coding from the terminal; Constitutional AI training targets reduced sycophancy and harmful outputs. Anthropic's May 28 Opus 4.8, dynamic workflows, and Series H announcements reinforce that Claude's product story is now as much about execution controls, capacity, and enterprise trust as raw model quality.
 
-**[Claude Design](/tools/claude-design/)** (launched April 17, 2026) is the newest product: a prompt-to-prototype tool that produces slide decks, app mockups, marketing one-pagers, and pitch materials from text prompts. Powered by Opus 4.7. Reads a company's codebase and design files to apply the existing design system automatically, then hands off to Claude Code for production builds. Exports to PDF, PPTX, URL, or Canva. Available to Claude Pro, Max, Team, and Enterprise subscribers. The launch sent Figma stock down ~7% on the day. See the [dedicated tool page](/tools/claude-design/) or the [launch coverage](/news/2026-04-17-anthropic-launches-claude-design/).
+**[Claude Design](/tools/claude-design/)** (launched April 17, 2026) is the prompt-to-prototype product in the Claude lineup: it produces slide decks, app mockups, marketing one-pagers, and pitch materials from text prompts. It reads a company's codebase and design files to apply the existing design system automatically, then hands off to Claude Code for production builds. Exports to PDF, PPTX, URL, or Canva. Available to Claude Pro, Max, Team, and Enterprise subscribers. The launch sent Figma stock down ~7% on the day. See the [dedicated tool page](/tools/claude-design/) or the [launch coverage](/news/2026-04-17-anthropic-launches-claude-design/).
 
 ## Recent developments
 
+- **May 28:** [Claude Opus 4.8 launched with dynamic workflows, effort controls, Messages API instruction updates, and cheaper fast mode](/news/2026-05-28-claude-opus-48-dynamic-workflows/). This is now the model to evaluate for serious Claude reasoning, coding, and agentic work; dynamic workflows matter most for Claude Code buyers because they let Claude fan out large jobs across parallel subagents.
+- **May 28:** [Anthropic raised $65B at a $965B post-money valuation](/news/2026-05-28-anthropic-series-h-65b-965b-valuation/). Treat the round as a capacity and enterprise-scale signal, not a buying recommendation by itself: rate limits, latency, regional availability, support, and price discipline still need workflow-specific testing.
 - **May 25:** [Pope Leo XIV released an AI encyclical while Anthropic co-founder Chris Olah called for outside checks on AI labs](/news/2026-05-25-pope-leo-magnifica-humanitas-anthropic-olah/). This is not a Claude feature launch, but it strengthens Anthropic's public-trust positioning while keeping normal buyer diligence on pricing, limits, data handling, and implementation quality essential.
 - **May 22:** [Anthropic said Project Glasswing found 10,000+ high or critical vulnerabilities with Mythos Preview](/news/2026-05-22-anthropic-glasswing-mythos-vulnerability-results/). The buyer signal is that Claude's restricted cyber frontier is now shaping patch triage, disclosure capacity, and policy debate, not just benchmark charts.
 - **May 21:** [Claude added 28 compliance integrations while Opus security partners showed live cyber-defense use cases](/news/2026-05-21-claude-compliance-api-opus-cybersecurity-partners/). The buyer signal is that Claude's enterprise moat is shifting toward governed deployment, auditability, and specialist security channels.
@@ -310,27 +320,27 @@ Anthropic's AI assistant. **Opus 4.7** is the flagship as of **April 16, 2026**,
 
 ## System Verdict
 
-> **Pick Claude if you need long-form reasoning, writing coherence, Claude Code, or a controlled enterprise workflow more than broad assistant coverage.** Opus 4.7 (released April 16) took measurable leads against the prior OpenAI frontier and Gemini 3.1 Pro on agentic coding, tool use, and financial analysis, but GPT-5.5 makes ChatGPT the stronger default all-purpose product again. Claude Code remains one of the strongest terminal coding agents on the market. The 1M context window on Opus and Sonnet is still a real advantage when you need whole-codebase or long-document work, and Anthropic is pushing harder than peers on explicit boundaries for agents that shop, transact, or interact with civic information.
+> **Pick Claude if you need long-form reasoning, writing coherence, Claude Code, or a controlled enterprise workflow more than broad assistant coverage.** Opus 4.8 (released May 28) is now Anthropic's top model for complex reasoning, long-horizon agentic coding, and high-autonomy work. GPT-5.5 still makes ChatGPT the stronger default all-purpose product for many users, but Claude Code remains one of the strongest terminal coding agents on the market. The 1M context window on Opus and Sonnet is still a real advantage when you need whole-codebase or long-document work, and Anthropic is pushing harder than peers on explicit boundaries for agents that shop, transact, or interact with civic information.
 >
 > **Skip it if your workload needs image generation, video, or a deep plugin / integration ecosystem.** Claude has no native image gen (use Midjourney or GPT Image 2), no video (Veo 3 or Kling), and a much smaller third-party tool marketplace than ChatGPT. Anthropic's conservative safety posture also refuses more requests than ChatGPT does.
 >
-> **Who pays which tier:** Free for casual Sonnet access, Pro $20/mo for most individuals needing Opus + extended thinking, Max 5x $100/mo for heavy solo coders, Max 20x $200/mo for teams or sustained agentic workloads. API developers should price against Opus 4.7's effective-token-count bump before migrating from 4.6.
+> **Who pays which tier:** Free for casual Sonnet access, Pro $20/mo for most individuals needing Opus + extended thinking, Max 5x $100/mo for heavy solo coders, Max 20x $200/mo for teams or sustained agentic workloads. API developers should benchmark Opus 4.8 standard mode and fast mode on real prompts before moving budget-sensitive workloads.
 
 ## Key Facts
 
 | | |
 |---|---|
-| **Flagship model** | Claude Opus 4.7 (released April 16, 2026) |
+| **Flagship model** | Claude Opus 4.8 (released May 28, 2026) |
 | **Other production models** | Sonnet 4.6 (speed/quality balance) · Haiku 4.5 (fast, high-volume) |
 | **Claude Design** | Prompt-to-prototype tool · launched April 17, 2026 · research preview · Pro/Max/Team/Enterprise only |
 | **Context window** | 1M tokens on Opus and Sonnet · 200K on Haiku |
 | **Max output** | 128K (Opus) · 64K (Sonnet) · 64K (Haiku) |
-| **API pricing** | Opus 4.7: $5 in / $25 out per MTok (new tokenizer = 1.0-1.35× more tokens vs 4.6) |
+| **API pricing** | Opus 4.8: $5 in / $25 out per MTok standard; $10 / $50 per MTok fast mode |
 | | Sonnet 4.6: $3 / $15 per MTok · Haiku 4.5: $1 / $5 per MTok |
 | **Subscription pricing** | Free · Pro $20 monthly or $17/mo annual · Max 5x $100 · Max 20x $200 · Team $20/seat annual ($25 monthly) standard or $100/seat annual ($125 monthly) premium · Enterprise $20/seat plus API-rate usage |
 | **Agentic coding** | Claude Code CLI · top terminal coding agent; GPT-5.5 Codex is now the main overall challenger |
 | **Enterprise distribution** | NEC partnership announced April 24, 2026 · about 30,000 NEC employees plus BluStellar and cybersecurity services |
-| **Reported infrastructure financing** | Google reportedly planning up to $40B in cash and compute investment, per April 24 Bloomberg reporting |
+| **Recent infrastructure financing** | Anthropic raised $65B at a $965B post-money valuation on May 28, 2026, citing Claude demand, compute expansion, and enterprise scaling |
 | **Design tooling** | Claude Design · prompt-to-prototype · exports PDF, PPTX, URL, Canva · hands off to Claude Code for build |
 | **Image generation** | None (use Midjourney or GPT Image 2 alongside) |
 | **Video generation** | None (use Veo 3 or Kling alongside) |
@@ -343,7 +353,7 @@ A single consumer + API product covering text chat, long-form analysis, code, an
 
 Prompt caching drops cache-hit input costs to 10% of standard. The Batch API cuts both input and output by 50%, materially cheaper than OpenAI for bulk workloads.
 
-The real moats: the 1M token context at flat per-token rates, Constitutional AI training that produces more structurally coherent output on long documents, and Claude Code CLI, which autonomously reads and writes across full codebases from the terminal.
+The real moats: the 1M token context at flat per-token rates, Constitutional AI training that produces more structurally coherent output on long documents, and Claude Code CLI, which autonomously reads and writes across full codebases from the terminal. After the May 28 update, dynamic workflows make Claude Code more credible for broad jobs that benefit from parallel subagents and independent verification.
 
 ## When to pick Claude
 
@@ -368,7 +378,7 @@ Subscription pricing via [claude.com/pricing](https://claude.com/pricing):
 | Plan | Price | Models | Who's it for |
 |---|---|---|---|
 | Free | $0 | Sonnet (capped daily messages) | Casual use, no extended thinking |
-| Pro | $20/mo or $17/mo annual | Opus 4.7 · Sonnet 4.6 · Haiku 4.5 · extended thinking · Projects | **Most individuals should land here** |
+| Pro | $20/mo or $17/mo annual | Opus 4.8 · Sonnet 4.6 · Haiku 4.5 · extended thinking · Projects | **Most individuals should land here** |
 | Max 5x | $100/mo | Full lineup, 5× Pro usage | Heavy solo coders / writers |
 | Max 20x | $200/mo | Full lineup, 20× Pro usage | Teams or sustained agentic workloads |
 | Team (Standard seat) | $20/seat annual or $25/seat monthly | Full lineup + admin + no-training-on-data; 5-150 seats | Small/mid teams |
@@ -379,19 +389,19 @@ API pricing via [platform.claude.com](https://platform.claude.com/docs/en/about-
 
 | Model | Input ($/MTok) | Output ($/MTok) | Context | Max Output |
 |---|---|---|---|---|
-| Opus 4.7 | $5 | $25 | 1M | 128K |
+| Opus 4.8 | $5 | $25 | 1M | 128K |
 | Sonnet 4.6 | $3 | $15 | 1M | 64K |
 | Haiku 4.5 | $1 | $5 | 200K | 64K |
 
-Fast Mode beta on Opus at 6× rates ($30/$150). Batch API discounts all models 50%. Prompt caching drops cache-hit input to 10% of standard.
+Fast mode on Opus 4.8 is $10 input / $50 output per MTok. Batch API discounts all models 50%. Prompt caching drops cache-hit input to 10% of standard.
 
-Prices verified 2026-05-13 via [Claude pricing](https://claude.com/pricing), [Anthropic pricing docs](https://platform.claude.com/docs/en/about-claude/pricing), and the [Opus 4.7 release coverage](https://venturebeat.com/technology/anthropic-releases-claude-opus-4-7-narrowly-retaking-lead-for-most-powerful-generally-available-llm).
+Prices verified 2026-05-29 via [Claude pricing](https://claude.com/pricing), [Anthropic model docs](https://platform.claude.com/docs/en/about-claude/models/overview), and [Anthropic's Opus 4.8 launch](https://www.anthropic.com/news/claude-opus-4-8).
 
-**Opus 4.7 cost-impact note:** the per-token rate is unchanged from 4.6, but the new tokenizer produces **1.0 to 1.35× more tokens for the same input**. Budget-sensitive API workloads should benchmark their own prompts before migrating.
+**Opus 4.8 cost-impact note:** standard pricing matches Opus 4.7, while fast mode is now $10 / $50 per MTok. Budget-sensitive API workloads should benchmark standard versus fast mode and set effort levels explicitly before migrating.
 
 ## Against the alternatives
 
-| | Claude Opus 4.7 | GPT-5.5 Pro | Gemini 3.1 Pro |
+| | Claude Opus 4.8 | GPT-5.5 Pro | Gemini 3.1 Pro |
 |---|---|---|---|
 | **Agentic coding** | Claude Code (strongest CLI) | Codex (strongest IDE integration) | No native agent |
 | **Image generation** | None | GPT Image 2 | Imagen 4 (built-in) |
@@ -406,7 +416,7 @@ Prices verified 2026-05-13 via [Claude pricing](https://claude.com/pricing), [An
 - **Copilot-hosted Claude model availability changes fast.** [GitHub retired Claude Sonnet 4 in Copilot and points users to Sonnet 4.6](/news/2026-05-07-github-copilot-gpt41-claude-sonnet4-deprecations/); [Rubber Duck in Copilot CLI can now use Claude as a cross-model critic](/news/2026-05-07-github-copilot-rubber-duck-cross-model-review/). Claude access inside third-party tools should be verified on the exact platform, not assumed from claude.ai.
 - **Conservative safety refusals.** Claude declines requests that are not actually harmful at a higher rate than ChatGPT. Noticeable on red-team research, edgy creative writing, and some analysis of adversarial content.
 - **No native image or video.** Workflows that need multimodal output need a second tool alongside Claude.
-- **Opus 4.7 tokenizer bump.** Same sticker price as 4.6, but 1.0-1.35× more effective tokens. At 1.2×+ inflation, GPT-5.5 can be as cheap or cheaper on effective cost despite Opus's lower output sticker price. API workloads need re-benchmarking before migrating.
+- **Opus 4.8 usage controls need testing.** Same standard sticker price as Opus 4.7 and cheaper fast mode, but effort settings and dynamic workflows can change real usage quickly. API and Claude Code teams need prompt-level benchmarks, usage alerts, and policy gates before broad migration.
 - **Computer Use is still a research preview.** Available inside Claude Code only, not in claude.ai chat. Not production-ready.
 - **Mythos Preview is invitation-only.** Advertised in Project Glasswing materials but most users cannot access it.
 - **Memory is session-scoped.** Cross-conversation persistent memory is available through Projects with explicit context files, but there is no implicit cross-session memory like some ChatGPT configurations.
@@ -415,21 +425,21 @@ Prices verified 2026-05-13 via [Claude pricing](https://claude.com/pricing), [An
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-26 against [Claude pricing](https://claude.com/pricing), Anthropic's [pricing docs](https://platform.claude.com/docs/en/about-claude/pricing), [model docs](https://platform.claude.com/docs/en/about-claude/models), the [May 25 Vatican AI encyclical coverage](/news/2026-05-25-pope-leo-magnifica-humanitas-anthropic-olah/), the [May 21 Claude compliance and security-partner update](/news/2026-05-21-claude-compliance-api-opus-cybersecurity-partners/), the [May 20 frontier AI capital-pressure update](/news/2026-05-20-openai-anthropic-spacex-frontier-ai-capital-pressure/), the [May 19 KPMG rollout](/news/2026-05-19-anthropic-kpmg-claude-276000-workers/), the [May 18 Stainless acquisition](/news/2026-05-18-anthropic-acquires-stainless-developer-platform/), the [May 14 PwC/Gates expansion](/news/2026-05-14-anthropic-pwc-gates-claude-expansion/), the [May 14 Agent SDK credit split](/news/2026-05-14-anthropic-claude-agent-sdk-credit-split/), the [May 12 Claude for Legal launch](/news/2026-05-12-anthropic-claude-for-legal-plugins-microsoft-365/), the [May 10 reported Akamai cloud-deal coverage](/news/2026-05-10-anthropic-akamai-cloud-deal/), the [May 9 FIS financial-crimes agent coverage](/news/2026-05-09-anthropic-fis-financial-crimes-agent/), the [May 6 Managed Agents update](/news/2026-05-06-claude-managed-agents-dreaming-outcomes-orchestration/), the [May 7 GitHub Copilot Claude model notices](/news/2026-05-07-github-copilot-gpt41-claude-sonnet4-deprecations/), the [May 7 Copilot Rubber Duck update](/news/2026-05-07-github-copilot-rubber-duck-cross-model-review/), the [NEC partnership](/news/2026-04-24-anthropic-nec-ai-engineering-workforce/), and [reported Google-Anthropic investment coverage](/news/2026-04-24-google-anthropic-40b-investment/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-29 against [Claude pricing](https://claude.com/pricing), Anthropic's [model docs](https://platform.claude.com/docs/en/about-claude/models/overview), the [Opus 4.8 launch](/news/2026-05-28-claude-opus-48-dynamic-workflows/), the [Series H funding update](/news/2026-05-28-anthropic-series-h-65b-965b-valuation/), the [May 25 Vatican AI encyclical coverage](/news/2026-05-25-pope-leo-magnifica-humanitas-anthropic-olah/), the [May 21 Claude compliance and security-partner update](/news/2026-05-21-claude-compliance-api-opus-cybersecurity-partners/), the [May 20 frontier AI capital-pressure update](/news/2026-05-20-openai-anthropic-spacex-frontier-ai-capital-pressure/), the [May 19 KPMG rollout](/news/2026-05-19-anthropic-kpmg-claude-276000-workers/), the [May 18 Stainless acquisition](/news/2026-05-18-anthropic-acquires-stainless-developer-platform/), the [May 14 PwC/Gates expansion](/news/2026-05-14-anthropic-pwc-gates-claude-expansion/), the [May 14 Agent SDK credit split](/news/2026-05-14-anthropic-claude-agent-sdk-credit-split/), the [May 12 Claude for Legal launch](/news/2026-05-12-anthropic-claude-for-legal-plugins-microsoft-365/), the [May 10 reported Akamai cloud-deal coverage](/news/2026-05-10-anthropic-akamai-cloud-deal/), the [May 9 FIS financial-crimes agent coverage](/news/2026-05-09-anthropic-fis-financial-crimes-agent/), the [May 6 Managed Agents update](/news/2026-05-06-claude-managed-agents-dreaming-outcomes-orchestration/), the [May 7 GitHub Copilot Claude model notices](/news/2026-05-07-github-copilot-gpt41-claude-sonnet4-deprecations/), the [May 7 Copilot Rubber Duck update](/news/2026-05-07-github-copilot-rubber-duck-cross-model-review/), and the [NEC partnership](/news/2026-04-24-anthropic-nec-ai-engineering-workforce/).
 
 ## FAQ
 
 <details>
 <summary>Is Claude free to use?</summary>
 
-Yes. The free tier gives capped daily access to Sonnet. [Claude Pro](https://claude.ai/upgrade) at $20/month unlocks Opus 4.7, extended thinking, Projects, and higher message limits.
+Yes. The free tier gives capped daily access to Sonnet. [Claude Pro](https://claude.ai/upgrade) at $20/month unlocks Opus 4.8, extended thinking, Projects, and higher message limits.
 
 </details>
 
 <details>
-<summary>What changed in Opus 4.7 vs 4.6?</summary>
+<summary>What changed in Opus 4.8?</summary>
 
-Same $5/$25 per MTok pricing, but a new tokenizer generates 1.0-1.35× more tokens per input. On benchmarks, 4.7 takes measurable leads on agentic coding, scaled tool use, computer use, and financial analysis over the prior OpenAI frontier and Gemini 3.1 Pro. Released [April 16, 2026](https://github.blog/changelog/2026-04-16-claude-opus-4-7-is-generally-available/).
+Opus 4.8 replaced Opus 4.7 as Anthropic's most capable model on May 28, 2026. Standard API pricing stayed at $5 input / $25 output per million tokens, fast mode dropped to $10 / $50 per million tokens, and the release added effort controls, Messages API instruction updates, and Claude Code dynamic workflows.
 
 </details>
 
@@ -457,7 +467,7 @@ A separate frontier model specialized for defensive cybersecurity, announced as 
 <details>
 <summary>How does the 1M context compare?</summary>
 
-Opus 4.7 and Sonnet 4.6 both support 1M tokens at flat per-token pricing (no long-context surcharge). Gemini 3.1 Pro also offers 1M tokens. ChatGPT plan context windows differ from OpenAI API context windows, so compare the exact surface before buying. At equivalent context lengths, Claude maintains strong coherence in published third-party evaluations.
+Opus 4.8 and Sonnet 4.6 both support 1M tokens at flat per-token pricing (no long-context surcharge). Gemini 3.1 Pro also offers 1M tokens. ChatGPT plan context windows differ from OpenAI API context windows, so compare the exact surface before buying. At equivalent context lengths, Claude maintains strong coherence in published third-party evaluations.
 
 </details>
 
