@@ -5,16 +5,18 @@ title: AI Chatbots & LLMs
 description: General-purpose AI assistants and large language model chatbots for writing, research, coding help, analysis, multimodal work, and everyday decision support.
 tool_count: 14
 seo_title: "Best AI Chatbots & LLMs (May 2026), aipedia.wiki"
-meta_description: "Compare the best AI chatbots and LLMs in May 2026: ChatGPT (GPT-5.5), Claude Opus 4.8, Gemini 3.1 Pro, Perplexity, Grok, Mistral, and Qwen3.7-Max / Qwen Cloud, with governance and agent-platform signals updated through May 29."
+meta_description: "Compare the best AI chatbots and LLMs in May 2026: ChatGPT (GPT-5.5), Claude Opus 4.8, Gemini 3.1 Pro, Perplexity, Grok, Mistral, and Qwen3.7-Max / Qwen Cloud, with governance, enterprise ChatGPT, and Copilot workspace signals updated through May 31."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-29
-last_verified: 2026-05-29
+last_updated: 2026-05-31
+last_verified: 2026-05-31
 update_frequency: monthly
 ---
 
 ## Overview
 
 AI chatbots are now the default starting point for writing, research, coding help, analysis, planning, images, voice, file work, and everyday problem solving. But the market is no longer one generic "best model" race. As of late May 2026, the right chatbot depends on the buyer's ecosystem, risk tolerance, source needs, budget, and workflow. Flagship models continue to shift: ChatGPT runs on GPT-5.5 (April 23), Claude leads with Opus 4.8 (May 28), Gemini 3.1 Pro Preview heads the Google lineup, Qwen3.7-Max is live on Qwen Cloud, and DeepSeek V4-Flash and V4-Pro are now in production for cost-sensitive workloads.
+
+The May 31 refresh adds two enterprise workspace signals: MUFG's [ChatGPT Enterprise rollout to roughly 35,000 bank employees](/news/2026-05-30-openai-mufg-chatgpt-enterprise-rollout/) and Microsoft's [redesigned Microsoft 365 Copilot experience](/news/2026-05-31-microsoft-365-copilot-redesign-work-iq/). The lesson is practical. General assistants win inside companies only when training, permission rules, visible context, app placement, and output quality make daily work safer and faster.
 
 For most people, the first paid chatbot to compare is still one of three: [ChatGPT](/tools/chatgpt/) for the broadest all-purpose AI workspace, [Claude](/tools/claude/) for writing, long analysis, and code reasoning, or [Gemini](/tools/gemini/) for Google-native work across Search, Gmail, Docs, Drive, NotebookLM, and Google AI subscription benefits. [Perplexity](/tools/perplexity/) is the better answer engine when every serious claim needs a source trail. [Grok](/tools/grok/) is most useful when X-native real-time context matters. [Mistral AI](/tools/mistral-ai/) matters more for builders and teams that care about model control, European AI infrastructure, APIs, and open-model options. [Qwen](/tools/qwen/) is the Alibaba Cloud lane: hosted Qwen3.7-Max, Qwen Chat testing, Apache 2.0 Qwen3 open weights, and a growing Qwen Cloud / agent-platform push after [Alibaba's first international Qwen Conference](/news/2026-05-27-qwen-conference-agent-cloud-suite/).
 
@@ -112,3 +114,5 @@ Do not subscribe to multiple chatbots because each one has a new model announcem
 - [Alibaba Cloud Qwen Conference coverage](https://www.eqs-news.com/news/corporate/alibaba-cloud-unveils-advanced-agentic-ai-ecosystem-for-global-customers/a191d39b-db45-48ed-b194-9cce5071b556_en) (verified 2026-05-27)
 - [Qwen3.7-Max model page](https://www.qwencloud.com/models/qwen3.7-max) (verified 2026-05-24)
 - [Qwen3 official blog](https://qwenlm.github.io/blog/qwen3/) (verified 2026-05-24)
+- [OpenAI MUFG ChatGPT Enterprise customer story](https://openai.com/index/mufg/) (verified 2026-05-31)
+- [Microsoft 365 Copilot redesign](https://www.microsoft.com/en-us/microsoft-365/blog/2026/05/28/introducing-a-new-design-for-microsoft-365-copilot/) (verified 2026-05-31)

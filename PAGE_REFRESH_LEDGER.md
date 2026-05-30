@@ -1,6 +1,6 @@
 # AiPedia Page Refresh Ledger
 
-Ledger updated through: 2026-05-29
+Ledger updated through: 2026-05-31
 Tracked public pages and crawl surfaces: 738
 
 Hard rule: every time a tracked website page is edited, refreshed, materially re-ranked, or has volatile facts re-verified, update that page row in this file on the same change. If a child page update affects a parent hub, archive, internal-link block, sitemap, or LLM surface, update those affected rows too.
@@ -43,7 +43,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /about/ | Static page | Yes | git | src/pages/about/index.astro |
 | 2026-05-13 | /about/scoring/ | Static page | Yes | git | src/pages/about/scoring.astro |
 | 2026-05-13 | /categories/ai-music/ | Category | Yes | frontmatter | src/content/categories/ai-music.md |
-| 2026-05-13 | /categories/ai-research/ | Category | Yes | frontmatter | src/content/categories/ai-research.md |
 | 2026-05-13 | /companies/anthropic/ | Company | Yes | frontmatter | src/content/companies/anthropic.md |
 | 2026-05-13 | /companies/elevenlabs-company/ | Company | Yes | frontmatter | src/content/companies/elevenlabs-company.md |
 | 2026-05-13 | /compare/adobe-firefly-vs-canva/ | Comparison | Yes | frontmatter | src/content/comparisons/adobe-firefly-vs-canva.md |
@@ -716,8 +715,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-26 | /tools/tidio/ | Tool | Yes | frontmatter | src/content/tools/tidio.md |
 | 2026-05-26 | /tools/v0/ | Tool | Yes | frontmatter | src/content/tools/v0.md |
 | 2026-05-26 | /tools/zapier/ | Tool | Yes | frontmatter | src/content/tools/zapier.md |
-| 2026-05-27 | /categories/ai-automation/ | Category | Yes | frontmatter | src/content/categories/ai-automation.md |
-| 2026-05-27 | /categories/ai-infrastructure/ | Category | Yes | frontmatter | src/content/categories/ai-infrastructure.md |
 | 2026-05-27 | /compare/lindy-vs-zapier-vs-n8n/ | Comparison | Yes | frontmatter | src/content/comparisons/lindy-vs-zapier-vs-n8n.md |
 | 2026-05-27 | /guides/best-ai-automation-platform/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-automation-platform.md |
 | 2026-05-27 | /guides/best-ai-personal-assistant-for-work/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-personal-assistant-for-work.md |
@@ -740,12 +737,15 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-28 | /tools/decktopus/ | Tool | Yes | frontmatter | src/content/tools/decktopus.md |
 | 2026-05-28 | /tools/neuronwriter/ | Tool | Yes | frontmatter | src/content/tools/neuronwriter.md |
 | 2026-05-28 | /tools/rytr/ | Tool | Yes | frontmatter | src/content/tools/rytr.md |
-| 2026-05-29 | / | Static page | Yes | working tree | src/pages/index.astro |
-| 2026-05-29 | /categories/ai-chatbots/ | Category | Yes | working tree | src/content/categories/ai-chatbots.md |
-| 2026-05-29 | /categories/ai-coding/ | Category | Yes | working tree | src/content/categories/ai-coding.md |
-| 2026-05-29 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
-| 2026-05-29 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
-| 2026-05-29 | /news/ | Static page | Yes | working tree | src/pages/news/index.astro |
-| 2026-05-29 | /news/rss.xml | Crawl surface | No | working tree | src/pages/news/rss.xml.ts |
-| 2026-05-29 | /tools/claude-code/ | Tool | Yes | working tree | src/content/tools/claude-code.md |
-| 2026-05-29 | /tools/claude/ | Tool | Yes | working tree | src/content/tools/claude.md |
+| 2026-05-29 | /categories/ai-coding/ | Category | Yes | frontmatter | src/content/categories/ai-coding.md |
+| 2026-05-29 | /tools/claude-code/ | Tool | Yes | frontmatter | src/content/tools/claude-code.md |
+| 2026-05-29 | /tools/claude/ | Tool | Yes | frontmatter | src/content/tools/claude.md |
+| 2026-05-31 | / | Static page | Yes | working tree | src/pages/index.astro |
+| 2026-05-31 | /categories/ai-automation/ | Category | Yes | working tree | src/content/categories/ai-automation.md |
+| 2026-05-31 | /categories/ai-chatbots/ | Category | Yes | working tree | src/content/categories/ai-chatbots.md |
+| 2026-05-31 | /categories/ai-infrastructure/ | Category | Yes | working tree | src/content/categories/ai-infrastructure.md |
+| 2026-05-31 | /categories/ai-research/ | Category | Yes | working tree | src/content/categories/ai-research.md |
+| 2026-05-31 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
+| 2026-05-31 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
+| 2026-05-31 | /news/ | Static page | Yes | working tree | src/pages/news/index.astro |
+| 2026-05-31 | /news/rss.xml | Crawl surface | No | working tree | src/pages/news/rss.xml.ts |

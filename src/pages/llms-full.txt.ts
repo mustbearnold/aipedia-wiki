@@ -2,7 +2,7 @@
 // Lists every active tool with category + tagline, every comparison, every
 // use-case guide. Intended for crawlers willing to ingest a larger manifest
 // to discover the full content map without parsing the sitemap.
-// Refresh metadata: 2026-05-29 Claude Opus 4.8, Anthropic Series H, Tencent enterprise AI, Myriad clinical AI, and news collection coverage refresh.
+// Refresh metadata: 2026-05-31 Asana StackAI, CoreWeave agent reliability, OpenAI Rosalind Biodefense, Geordie governance, Sysdig agent-security, and news collection coverage refresh.
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 

@@ -1,7 +1,7 @@
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 
-// Refresh metadata: 2026-05-29 news collection coverage refresh.
+// Refresh metadata: 2026-05-31 news collection coverage refresh.
 
 function escapeXml(s: string) {
   return String(s ?? '')

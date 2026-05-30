@@ -5,10 +5,10 @@ title: AI Infrastructure & Model APIs
 description: Developer platforms for LLM routing, pay-as-you-go model APIs, hosted inference, serverless GPUs, vector databases, speech APIs, and production retrieval systems.
 tool_count: 12
 seo_title: "Best AI Infrastructure & Model API Tools (May 2026)"
-meta_description: "Updated May 27, 2026: compare OpenRouter after its $113M CapitalG-led Series B, OpenAI API, Claude API, Gemini API, Mistral 3, Groq, Replicate, fal, Deepgram, Pinecone, Weaviate, Qdrant, and LM Studio by routing, billing, and production fit."
+meta_description: "Updated May 31, 2026: compare OpenRouter after its $113M Series B, OpenAI API, Claude API, Gemini API, Mistral 3, Groq, Replicate, fal, Deepgram, Pinecone, Weaviate, Qdrant, and LM Studio, with CoreWeave, GPT-Rosalind, and agent-security signals."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-27
-last_verified: 2026-05-27
+last_updated: 2026-05-31
+last_verified: 2026-05-31
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -27,6 +27,8 @@ top_picks:
 AI infrastructure tools sit underneath the apps people see. They route model calls, host open models, run GPU workloads, store embeddings, power RAG, transcribe audio, generate media, and help teams compare cost, latency, quality, and control without rebuilding the stack every month.
 
 This category is for developer and platform buyers. If the user is choosing a chatbot, start with [AI Chatbots](/categories/ai-chatbots/). If the team is shipping an AI product, agent, retrieval layer, or model-backed workflow, this is the better lane.
+
+The late-May infrastructure update is agent control. CoreWeave's [training-to-inference loop](/news/2026-05-30-coreweave-agent-improvement-loop/) pushes traces, evals, RL, inference, and W&B tooling into one reliability story. OpenAI's [Rosalind Biodefense trusted-access expansion](/news/2026-05-31-openai-rosalind-biodefense-trusted-access/) shows that specialist frontier models may ship as gated capability programs. Sysdig's [LLM-agent intrusion report](/news/2026-05-31-sysdig-llm-agent-intrusion-agent-security/) makes runtime telemetry and least-privilege design part of infrastructure buying, not only security cleanup.
 
 **Use [OpenRouter](/tools/openrouter/) when you need one API across many model providers.** The current pricing page lists pay-as-you-go access to 400+ models and 60+ providers, with budget controls, activity logs, prompt caching, preferred vendor selections, and model-priced token billing. Its [May 27 funding signal](/news/2026-05-27-openrouter-series-b-model-routing/) makes the category clearer: routing, fallback, governance, and spend visibility are becoming production infrastructure, not just developer convenience.
 
@@ -99,3 +101,7 @@ Do not publish infrastructure pages with old flat monthly subscription framing. 
 - [Pinecone pricing](https://www.pinecone.io/pricing/) (verified 2026-05-13)
 - [Weaviate pricing](https://weaviate.io/pricing) (verified 2026-05-13)
 - [Qdrant Cloud billing](https://qdrant.tech/documentation/cloud-pricing-payments/) (verified 2026-05-13)
+- [CoreWeave autonomous agent improvement launch](https://investors.coreweave.com/news/news-details/2026/CoreWeave-Closes-the-Training-to-Inference-Gap-for-Autonomous-Agent-Improvement/default.aspx) (verified 2026-05-31)
+- [OpenAI Rosalind Biodefense](https://openai.com/index/strengthening-societal-resilience-with-rosalind-biodefense/) (verified 2026-05-31)
+- [Geordie AI Series A](https://www.geordie.ai/resources/geordie-ai-raises-30m-series-a-as-enterprises-race-to-govern-autonomous-ai-agents/) (verified 2026-05-31)
+- [Sysdig LLM-agent intrusion analysis](https://www.sysdig.com/blog/ai-agent-at-the-wheel-how-an-attacker-used-llms-to-move-from-a-cve-to-an-internal-database-in-4-pivots) (verified 2026-05-31)

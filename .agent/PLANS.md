@@ -82,6 +82,80 @@ Summarize changed files, behavior shipped, tests passed, unresolved risks, and r
 
 ---
 
+## ExecPlan: May 30-31 2026 AI News Catch-Up
+
+### 1. Objective
+
+Cover the missed May 30 and May 31, 2026 AI tools and AI industry news with source-backed, decision-oriented `/news/` articles. This supports AiPedia freshness, trust, organic rankings, editorial scalability, and buyer decision quality without publishing thin or speculative weekend filler.
+
+### 2. Current state
+
+`src/content/news/` has May 2026 coverage through May 29. There are no May 30 or May 31 records, so the news audit would fail if today's date is added without at least two stories for each missed day. `/news/`, `/news/rss.xml`, `/llms.txt`, `/llms-full.txt`, the homepage news module metadata, and `PAGE_REFRESH_LEDGER.md` are refreshed through 2026-05-29. Relevant parent category hubs for the new stories are `src/content/categories/ai-automation.md`, `src/content/categories/ai-chatbots.md`, `src/content/categories/ai-infrastructure.md`, and `src/content/categories/ai-research.md`.
+
+### 3. Target state
+
+Add high-quality May 30 and May 31 news coverage that clearly distinguishes original announcement dates from AiPedia weekend catch-up dates. The new articles should explain what happened, why buyers should care, what risks to test, and which procurement questions matter. Parent surfaces and crawl surfaces should reflect a May 31 refresh.
+
+### 4. Scope
+
+Included: new news markdown records for Asana/StackAI, Robinhood agentic trading/card, MUFG ChatGPT Enterprise rollout, CoreWeave agent improvement, OpenAI Rosalind Biodefense, Geordie agent governance, Microsoft 365 Copilot redesign, Sysdig LLM-agent intrusion, and May 30/May 31 desk roundups; affected category hub freshness; `/news/` archive metadata; RSS and LLM metadata; generated OG/thumb assets; `PAGE_REFRESH_LEDGER.md`.
+
+Excluded: new tool records/logos, affiliate CTA changes, speculative rumors, and unrelated tool-pricing rewrites.
+
+Affected top-layer surfaces: homepage latest-news module, `/news/`, `/news/rss.xml`, `/categories/ai-automation/`, `/categories/ai-chatbots/`, `/categories/ai-infrastructure/`, `/categories/ai-research/`, `/llms.txt`, `/llms-full.txt`, sitemap/build-generated surfaces, and `PAGE_REFRESH_LEDGER.md`.
+
+### 5. Files likely affected
+
+`src/content/news/2026-05-30-*.md`, `src/content/news/2026-05-31-*.md`, `src/content/categories/ai-automation.md`, `src/content/categories/ai-chatbots.md`, `src/content/categories/ai-infrastructure.md`, `src/content/categories/ai-research.md`, `src/pages/news/index.astro`, `src/pages/news/rss.xml.ts`, `src/pages/llms.txt.ts`, `src/pages/llms-full.txt.ts`, `src/pages/index.astro`, `public/og/news/*`, `PAGE_REFRESH_LEDGER.md`, and this plan.
+
+### 6. Data model impact
+
+No schema changes. New news records use the existing `news` frontmatter shape: `slug`, `title`, `date`, `severity`, `summary`, `categories`, `author`, `last_updated`, `last_verified`, optional `related_tools`, and `sources`.
+
+### 7. SEO impact
+
+New indexable news URLs get unique titles, summaries, source blocks, internal links, and generated OG/thumb assets. Archive, RSS, LLM surfaces, and ledger rows receive May 31 refresh dates.
+
+### 8. Conversion impact
+
+No new affiliate CTA surfaces. The articles improve buyer trust by separating product reality from funding/security hype and pointing readers toward workflow, governance, and cost questions.
+
+### 9. Mobile UX impact
+
+The articles reuse the existing mobile-first news layout. Verification must cover `/news/`, homepage news modules, affected category hubs, and new article pages at 360, 390, 430, 768, and desktop widths.
+
+### 10. Implementation steps
+
+1. Verify current May 2026 primary sources and de-duplicate against existing news.
+2. Add May 30 and May 31 news records with source-backed analysis.
+3. Refresh affected automation, infrastructure, and research category hubs where the new news changes the current market summary.
+4. Update `/news/`, RSS, LLM metadata, homepage schema metadata, and targeted OG/thumb assets.
+5. Regenerate `PAGE_REFRESH_LEDGER.md`.
+6. Run news, link, ledger, script, typecheck, build, diff, and mobile QA gates.
+
+### 11. Verification commands
+
+`node scripts/generate-og-news.mjs <changed-news-slugs>`, `npm run ledger:pages`, `npm run check:news`, `npm run check:links`, `npm run ledger:pages:check`, `npm run test:scripts`, `npm run check`, `npm run build:fast`, targeted mobile/browser sanity against `dist-fast`, and `git diff --check`.
+
+### 12. Acceptance criteria
+
+May 30 and May 31 each have at least two current, source-backed news records; no article falsely claims an older announcement happened on the catch-up date; affected category hubs and top-layer surfaces are refreshed; news rendering, links, ledger, tests, and build pass or unrelated failures are documented.
+
+### 13. Risks and mitigations
+
+Weekend search results include aggregators, reposts, and low-quality commentary. Mitigate by relying on official/company sources and named primary reporting, using aggregators only for lead discovery. Avoid adding new tool records because the logo/data requirements would widen scope beyond a news catch-up pass.
+
+### 14. Progress log
+
+2026-05-31: Plan created after auditing local news files and confirming May 30 and May 31 were missing. Primary sources selected include Asana, CoreWeave, OpenAI, Geordie, and Sysdig.
+2026-05-31: Expanded coverage after additional current-source search surfaced Robinhood, MUFG/OpenAI, and Microsoft 365 Copilot primary-source items. Added 10 news records across May 30 and May 31, refreshed automation/chatbot/infrastructure/research hubs, regenerated OG assets and PAGE_REFRESH_LEDGER.md, and verified with content, link, ledger, script, check, build, and mobile viewport gates.
+
+### 15. Final report
+
+Completed. Shipped May 30 and May 31 catch-up coverage for Asana/StackAI, Robinhood agentic finance, MUFG/ChatGPT Enterprise, CoreWeave agent improvement, OpenAI Rosalind Biodefense, Geordie agent governance, Microsoft 365 Copilot redesign, Sysdig's LLM-agent intrusion analysis, plus daily desk roundups. Updated affected category hubs, top-layer news/home/RSS/LLM metadata, generated OG/thumb assets, and PAGE_REFRESH_LEDGER.md. Verification passed: `npm run check:news`, `npm run check:links`, `npm run ledger:pages:check`, `npm run test:scripts`, `npm run check`, `npm run build:fast`, `git diff --check`, and Playwright mobile QA for 16 routes at 360, 390, 430, 768, and 1024px.
+
+---
+
 ## ExecPlan: May 29 2026 AI News Catch-Up
 
 ### 1. Objective

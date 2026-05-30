@@ -5,10 +5,10 @@ title: AI Automation & Agents
 description: Current workflow automation, AI agent platforms, meeting automation, call automation, and operations tools for technical teams, non-technical operators, GTM workflows, customer success, support, sales, and internal automation.
 tool_count: 25
 seo_title: "Best AI Automation Tools & Agent Platforms (May 2026)"
-meta_description: "Updated May 27, 2026: compare n8n, Zapier, Make, Gumloop, Relevance AI, Lindy, Manus, Pipedream, CloudTalk, MeetGeek, Apollo, Clay, Intercom, and Instantly by workflow fit, pricing unit, integrations, governance, and assistant-style delegation."
+meta_description: "Updated May 31, 2026: compare n8n, Zapier, Make, Gumloop, Relevance AI, Lindy, Manus, Pipedream, CloudTalk, MeetGeek, Apollo, Clay, Intercom, and Instantly, with Asana/StackAI, CoreWeave, Geordie, and Sysdig agent-control signals."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-27
-last_verified: 2026-05-26
+last_updated: 2026-05-31
+last_verified: 2026-05-31
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -43,6 +43,8 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 **Use [Lindy](/tools/lindy/) when the buyer wants an AI work assistant, not a workflow canvas.** Lindy's May 27 refresh now routes high-intent buyers into a 7-day trial, Plus-first plan guidance, and the [Lindy vs Zapier vs n8n](/compare/lindy-vs-zapier-vs-n8n/) decision path. It belongs in this category for inbox, calendar, meeting prep, meeting notes, follow-up drafting, and iMessage/SMS delegation, but not for high-volume backend automation.
 
 **Watch Microsoft's MagenticLite research if you are evaluating local or small-model agents.** The May 22 Microsoft Research release is experimental rather than a production automation platform, but it reinforces a practical buying rule: agent quality depends on harness design, sandboxing, context management, delegation, and approval points as much as raw model size.
+
+**Late May control-stack signal:** Asana's [StackAI acquisition](/news/2026-05-30-asana-stackai-human-agent-workflows/), Robinhood's [agentic trading and card launch](/news/2026-05-30-robinhood-agentic-trading-credit-card/), CoreWeave's [agent-improvement loop](/news/2026-05-30-coreweave-agent-improvement-loop/), Geordie's [agent-governance Series A](/news/2026-05-31-geordie-agent-governance-series-a/), and Sysdig's [LLM-agent intrusion report](/news/2026-05-31-sysdig-llm-agent-intrusion-agent-security/) all point to the same buying rule. Do not evaluate autonomous agents only on task completion. Evaluate inventory, permissions, approvals, traces, rollback, and runtime controls before letting agents write to real systems.
 
 ## Buyer Paths
 
@@ -117,3 +119,8 @@ Do not leave this category stale. Automation tools are adding MCP, agent builder
 - [CloudTalk official site](https://www.cloudtalk.io/) (verified 2026-05-26)
 - [MeetGeek pricing](https://meetgeek.ai/pricing) (verified 2026-05-26)
 - [MeetGeek integrations](https://meetgeek.ai/integrations) (verified 2026-05-26)
+- [Asana StackAI acquisition](https://www.businesswire.com/news/home/20260528515345/en/Asana-Acquires-StackAI-Adding-Cross-System-Execution-for-Human-Agent-Teams) (verified 2026-05-31)
+- [Robinhood agentic trading and card launch](https://robinhood.com/us/en/newsroom/robinhood-is-now-open-to-agents/) (verified 2026-05-31)
+- [CoreWeave autonomous agent improvement launch](https://investors.coreweave.com/news/news-details/2026/CoreWeave-Closes-the-Training-to-Inference-Gap-for-Autonomous-Agent-Improvement/default.aspx) (verified 2026-05-31)
+- [Geordie AI Series A](https://www.geordie.ai/resources/geordie-ai-raises-30m-series-a-as-enterprises-race-to-govern-autonomous-ai-agents/) (verified 2026-05-31)
+- [Sysdig LLM-agent intrusion analysis](https://www.sysdig.com/blog/ai-agent-at-the-wheel-how-an-attacker-used-llms-to-move-from-a-cve-to-an-internal-database-in-4-pivots) (verified 2026-05-31)
