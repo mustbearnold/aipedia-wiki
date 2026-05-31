@@ -740,12 +740,12 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-29 | /categories/ai-coding/ | Category | Yes | frontmatter | src/content/categories/ai-coding.md |
 | 2026-05-29 | /tools/claude-code/ | Tool | Yes | frontmatter | src/content/tools/claude-code.md |
 | 2026-05-29 | /tools/claude/ | Tool | Yes | frontmatter | src/content/tools/claude.md |
-| 2026-05-31 | / | Static page | Yes | working tree | src/pages/index.astro |
-| 2026-05-31 | /categories/ai-automation/ | Category | Yes | working tree | src/content/categories/ai-automation.md |
-| 2026-05-31 | /categories/ai-chatbots/ | Category | Yes | working tree | src/content/categories/ai-chatbots.md |
-| 2026-05-31 | /categories/ai-infrastructure/ | Category | Yes | working tree | src/content/categories/ai-infrastructure.md |
-| 2026-05-31 | /categories/ai-research/ | Category | Yes | working tree | src/content/categories/ai-research.md |
-| 2026-05-31 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
-| 2026-05-31 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
-| 2026-05-31 | /news/ | Static page | Yes | working tree | src/pages/news/index.astro |
-| 2026-05-31 | /news/rss.xml | Crawl surface | No | working tree | src/pages/news/rss.xml.ts |
+| 2026-05-31 | / | Static page | Yes | git | src/pages/index.astro |
+| 2026-05-31 | /categories/ai-automation/ | Category | Yes | frontmatter | src/content/categories/ai-automation.md |
+| 2026-05-31 | /categories/ai-chatbots/ | Category | Yes | frontmatter | src/content/categories/ai-chatbots.md |
+| 2026-05-31 | /categories/ai-infrastructure/ | Category | Yes | frontmatter | src/content/categories/ai-infrastructure.md |
+| 2026-05-31 | /categories/ai-research/ | Category | Yes | frontmatter | src/content/categories/ai-research.md |
+| 2026-05-31 | /llms-full.txt | Crawl surface | No | git | src/pages/llms-full.txt.ts |
+| 2026-05-31 | /llms.txt | Crawl surface | No | git | src/pages/llms.txt.ts |
+| 2026-05-31 | /news/ | Static page | Yes | page metadata | src/pages/news/index.astro |
+| 2026-05-31 | /news/rss.xml | Crawl surface | No | git | src/pages/news/rss.xml.ts |
