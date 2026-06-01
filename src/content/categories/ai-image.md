@@ -4,11 +4,11 @@ slug: ai-image
 title: AI Image Generation
 description: Current AI image tools for generation, photo editing, upscaling, product visuals, text-heavy graphics, creative ideation, and commercially safer Adobe workflows.
 tool_count: 18
-seo_title: "Best AI Image Tools & Photo Editors (May 2026)"
-meta_description: "Updated June 1, 2026: compare Midjourney, ChatGPT Images 2.0, Adobe Firefly, Canva, Flux, Ideogram, Recraft, AdCreative.ai, NightCafe, Rodin, and other AI image tools by image quality, photo-editing fit, paid-media workflow, pricing risk, text rendering, and workflow."
+seo_title: "Best AI Image Tools & Photo Editors (June 2026)"
+meta_description: "Updated June 2, 2026: compare Midjourney, ChatGPT Images 2.0, Adobe Firefly, Canva, Flux, Ideogram, Recraft, AdCreative.ai, NightCafe, Rodin, and other AI image tools by image quality, photo-editing fit, paid-media workflow, pricing risk, text rendering, and workflow."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-01
-last_verified: 2026-05-13
+last_updated: 2026-06-02
+last_verified: 2026-06-02
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -24,7 +24,7 @@ top_picks:
 
 ## Overview
 
-AiPedia verified this category on May 13, 2026 while refreshing the [AI photo-editing buyer guide](/guides/best-ai-for-photo-editing/) and the [Meshy tool page](/tools/meshy/). AI image tools now split into five buyer jobs: aesthetic generation, conversational image editing, finished social/design assets, professional photo-production workflows, and 3D asset generation for games, AR/VR, printing, and prototyping. Note the May 5, 2026 Freepik rebrand to Magnific: shortlist references that previously named Freepik should now point at Magnific.
+AiPedia rechecked Canva's AI/design workflow on June 2, 2026 and keeps this category split into five buyer jobs: aesthetic generation, conversational image editing, finished social/design assets, professional photo-production workflows, and 3D asset generation for games, AR/VR, printing, and prototyping. Note the May 5, 2026 Freepik rebrand to Magnific: shortlist references that previously named Freepik should now point at Magnific.
 
 [Midjourney](/tools/midjourney/) remains the aesthetic ideation benchmark. [ChatGPT](/tools/chatgpt/) and GPT Image 2 are the best default when image generation or editing is part of a broader assistant workflow. [Adobe Firefly](/tools/adobe-firefly/) is the safer first pick for Photoshop, Creative Cloud, Generative Fill, object removal, image expansion, and credit-aware commercial review. [Canva](/tools/canva/) wins when the image needs to become a finished post, ad, thumbnail, product graphic, or presentation asset quickly.
 
@@ -48,7 +48,7 @@ The practical question is no longer "which model can make an image?" Most major 
 | **Adobe Firefly** | Free-$29.99/mo | Commercially safer Creative Cloud workflows | 7 | 7 | 8 | 9 |
 | **Meshy** | Free-$60/mo | 3D assets, game prototypes, AR/VR, 3D printing | 8 | 8 | 7 | 6 |
 
-## Market Dynamics (May 2026)
+## Market Dynamics (June 2026)
 
 - **Midjourney still owns the aesthetic lane.** It remains the reference for cinematic composition and stylized illustration.
 - **GPT Image 2 moved OpenAI back into the front tier.** It is strongest when the image needs reasoning, multilingual text, diagrams, maps, or direct ChatGPT integration.
@@ -103,7 +103,7 @@ Image generation is approaching commodity. The real differentiation is workflow 
 - [ChatGPT Images 2.0 announcement](https://openai.com/index/introducing-chatgpt-images-2-0/) (verified 2026-05-13)
 - [Adobe Firefly plans](https://www.adobe.com/products/firefly/plans.html) (verified 2026-05-13)
 - [Photoshop Generative Fill documentation](https://helpx.adobe.com/photoshop/desktop/create-open-import-images/create-images/edit-images-with-generative-fill.html) (verified 2026-05-13)
-- [Canva AI](https://www.canva.com/canva-ai/) (verified 2026-05-13)
+- [Canva AI](https://www.canva.com/canva-ai/) (verified 2026-06-02)
 - [FLUX.1 dev on Hugging Face](https://huggingface.co/black-forest-labs/FLUX.1-dev) (verified 2026-05-13)
 - [Meshy pricing](https://www.meshy.ai/pricing) (verified 2026-05-13)
 - [Meshy credit usage help](https://help.meshy.ai/en/articles/10000507-how-many-credits-does-each-generation-task-cost) (verified 2026-05-13)

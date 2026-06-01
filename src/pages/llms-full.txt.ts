@@ -2,7 +2,7 @@
 // Lists every active tool with category + tagline, every comparison, every
 // use-case guide. Intended for crawlers willing to ingest a larger manifest
 // to discover the full content map without parsing the sitemap.
-// Refresh metadata: 2026-06-01 mixed active-tool refresh (Activepieces, Ada, AdCreative.ai, AG2, Ahrefs, AIVA, Amplemarket, AnythingLLM, Apollo, AssemblyAI, Base44, Beautiful.ai, Bolt.new, Boomy, Browserbase) plus Phase 2 AI coding tool refresh and Phase 1 answer, editorial policy, glossary, and static surface refresh.
+// Refresh metadata: 2026-06-02 active-tool refresh for Canva, Capacities, Captions, Cartesia, Castmagic, Character.AI, ChatPDF, Claude Design, Clay, Clearscope, ClickUp, Clipdrop, Comet, Connected Papers, and Consensus; 2026-06-01 mixed and coding refresh retained.
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 

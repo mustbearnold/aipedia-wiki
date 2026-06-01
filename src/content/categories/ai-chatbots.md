@@ -4,11 +4,11 @@ slug: ai-chatbots
 title: AI Chatbots & LLMs
 description: General-purpose AI assistants and large language model chatbots for writing, research, coding help, analysis, multimodal work, and everyday decision support.
 tool_count: 14
-seo_title: "Best AI Chatbots & LLMs (May 2026), aipedia.wiki"
+seo_title: "Best AI Chatbots & LLMs (June 2026), aipedia.wiki"
 meta_description: "Compare the best AI chatbots and LLMs in June 2026: ChatGPT (GPT-5.5), Claude Opus 4.8, Gemini 3.1 Pro, Perplexity, Grok, Mistral, Qwen3.7-Max / Qwen Cloud, NotebookLM, and AnythingLLM, with enterprise workspace and self-hosted RAG signals."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-01
-last_verified: 2026-05-31
+last_updated: 2026-06-02
+last_verified: 2026-06-02
 update_frequency: monthly
 ---
 
@@ -21,6 +21,8 @@ The May 31 refresh adds two enterprise workspace signals: MUFG's [ChatGPT Enterp
 For most people, the first paid chatbot to compare is still one of three: [ChatGPT](/tools/chatgpt/) for the broadest all-purpose AI workspace, [Claude](/tools/claude/) for writing, long analysis, and code reasoning, or [Gemini](/tools/gemini/) for Google-native work across Search, Gmail, Docs, Drive, NotebookLM, and Google AI subscription benefits. [Perplexity](/tools/perplexity/) is the better answer engine when every serious claim needs a source trail. [Grok](/tools/grok/) is most useful when X-native real-time context matters. [Mistral AI](/tools/mistral-ai/) matters more for builders and teams that care about model control, European AI infrastructure, APIs, and open-model options. [Qwen](/tools/qwen/) is the Alibaba Cloud lane: hosted Qwen3.7-Max, Qwen Chat testing, Apache 2.0 Qwen3 open weights, and a growing Qwen Cloud / agent-platform push after [Alibaba's first international Qwen Conference](/news/2026-05-27-qwen-conference-agent-cloud-suite/).
 
 For document chat and private RAG, [AnythingLLM](/tools/anythingllm/) is the practical self-hosted app lane. The June 1 check keeps the MIT self-host path free, confirms cloud Basic at $50/month and Pro at $99/month, and keeps the recommendation model-agnostic: quality depends on the hosted or local LLM you connect.
+
+For companion-style character chat, [Character.AI](/tools/character-ai/) is a different lane from general assistants. The June 2 c.ai+ check keeps the buyer story simple: pay for ad-free chats, unlimited voice calls, no slow mode, better memory, and early-access perks when the product itself is the entertainment/social workflow, not a work assistant.
 
 The wrong move is paying for three overlapping chatbots without a job for each one. Start with the assistant closest to your daily work, then add a specialist only when it solves a real gap: citations, Google integration, long-form editing, X context, coding workflows, or enterprise controls.
 
@@ -122,3 +124,4 @@ Do not subscribe to multiple chatbots because each one has a new model announcem
 - [Microsoft 365 Copilot redesign](https://www.microsoft.com/en-us/microsoft-365/blog/2026/05/28/introducing-a-new-design-for-microsoft-365-copilot/) (verified 2026-05-31)
 - [AnythingLLM cloud pricing](https://anythingllm.com/cloud) (verified 2026-06-01)
 - [AnythingLLM GitHub releases](https://github.com/Mintplex-Labs/anything-llm/releases) (verified 2026-06-01)
+- [Character.AI c.ai+ pricing](https://character.ai/subscription/plus/pricing) (verified 2026-06-02)

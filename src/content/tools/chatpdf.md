@@ -2,16 +2,16 @@
 type: tool
 slug: chatpdf
 title: ChatPDF
-tagline: The original "chat with your PDF" tool. Upload a PDF, ask questions, get sourced answers. Free tier allows 2 PDFs per day; Plus at $19.99/mo unlocks unlimited uploads and 2,000-page files.
+tagline: The original "chat with your PDF" tool. Upload a PDF, ask questions, get sourced answers. Free tier allows 2 documents per day; Plus unlocks unlimited document analysis, while API docs confirm 2,000-page / 32MB file limits.
 category: ai-research
 company: chatpdf
 url: https://www.chatpdf.com
 pricing_model: freemium
-price_range: "$0 free / $19.99/mo Plus"
+price_range: "Free; Plus pricing is shown in-app; API available"
 status: active
 launched: 2023-03
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-02
+last_verified: 2026-06-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -29,18 +29,17 @@ facts:
     value: Best for quick PDF Q&A when the user wants a simple upload-and-ask workflow with cited answers and minimal setup.
     source: https://www.chatpdf.com/
     source_label: ChatPDF official site
-    source_id: chatpdf-official
-    verified_at: '2026-05-13'
+    source_id: chatpdf-api
+    verified_at: '2026-06-02'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
   pricing_anchor:
-    value: ChatPDF exposes its core free/product limits on the official site; the old /pricing path is not a reliable source
-      and should not be used blindly.
+    value: ChatPDF exposes its core free/product limits on the official site; the old /pricing path returns 404, so exact Plus pricing should be treated as in-app/volatile unless the live upgrade flow renders it.
     source: https://www.chatpdf.com/
     source_label: ChatPDF official site pricing surface
     source_id: chatpdf-pricing
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -50,17 +49,16 @@ facts:
     source: https://www.chatpdf.com/
     source_label: ChatPDF official site
     source_id: chatpdf-official
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
   api_available:
-    value: AIpedia should treat ChatPDF as UI-first unless current official docs expose an API surface; prior /api probes were
-      unavailable.
-    source: https://www.chatpdf.com/
-    source_label: ChatPDF official site
+    value: ChatPDF has a backend API for adding PDFs by URL or file upload and sending stateless chat messages against a source ID; docs list 2,000-page / 32MB PDF limits and optional page references.
+    source: https://www.chatpdf.com/docs/api/backend
+    source_label: ChatPDF backend API docs
     source_id: chatpdf-official
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -70,13 +68,13 @@ facts:
     source: https://www.chatpdf.com/
     source_label: ChatPDF official site
     source_id: chatpdf-official
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
 tags: [pdf, document-chat, research, rag, citations, study-aid]
-seo_title: "ChatPDF: Features, Pricing & Review (May 2026)"
-meta_description: "ChatPDF lets you chat with any PDF. Free tier 2 PDFs/day + 120-page cap. Plus $19.99/mo unlocks unlimited uploads and 2,000-page files. Page-level citations make it good for study and research."
+seo_title: "ChatPDF: Features, Pricing & Review (June 2026)"
+meta_description: "ChatPDF lets you chat with PDFs, folders, and API sources. Free tier allows 2 documents/day; Plus unlocks unlimited analysis; API docs list 2,000-page / 32MB file limits."
 author: "aipedia.wiki Editorial"
 best_for:
   - students and researchers summarizing papers
@@ -88,12 +86,14 @@ not_best_for:
   - multi-format document corpora (use NotebookLM)
   - users who already pay for ChatGPT Plus or Gemini Advanced (both handle PDFs natively)
 quick_answer: >-
-  ChatPDF is the category-defining "chat with a PDF" tool. Upload a file, ask questions, get answers with page citations. Free tier allows 2 PDFs per day up to 120 pages each. Plus at $19.99/month removes limits and handles 2,000-page files. Pick it for standalone research or study. Skip it if you already pay for ChatGPT Plus or Gemini Advanced, which include PDF chat as a feature.
+  ChatPDF is the category-defining "chat with a PDF" tool. Upload a file, ask questions, get answers with page citations. Free tier allows 2 documents per day; Plus unlocks unlimited document analysis; the backend API docs list 2,000-page / 32MB limits for API sources. Pick it for standalone research or study. Skip it if you already pay for ChatGPT Plus, Claude Pro, or Gemini Advanced and their PDF workflow is enough.
 ---
 
 # ChatPDF
 
 The first tool to make "talk to your PDF" a viable workflow. Upload a PDF, get a chat interface that answers questions against the document content with page-level citations. Launched March 2023 in the first wave of ChatGPT-powered apps; still widely used in 2026 despite frontier chatbots now handling PDFs natively.
+
+June 2, 2026 check: ChatPDF's official home page confirms the free plan allows 2 document analyses per day, Plus provides unlimited document analysis and more advanced features, folders can combine multiple PDFs in one conversation, and model routing uses GPT-4o plus GPT-4o-mini. The old `/pricing` path now returns 404, so AiPedia no longer treats the historic `$19.99/mo` Plus price as a freshly verified public quote.
 
 ## System Verdict
 
@@ -101,25 +101,25 @@ The first tool to make "talk to your PDF" a viable workflow. Upload a PDF, get a
 >
 > **Skip it if you already pay for a frontier chatbot.** [ChatGPT Plus](/tools/chatgpt/), [Claude Pro](/tools/claude/), and [Gemini Advanced](/tools/gemini/) all handle PDFs natively in 2026. If you are already on one of those, ChatPDF is redundant. The standalone case is strongest for people on free chatbot tiers hitting PDF-upload rate limits.
 >
-> **Which PDF tool wins for you:** ChatPDF for simple single-document chat. [Humata](https://humata.ai) for larger page volumes at lower price points. [NotebookLM](/tools/notebooklm/) for multi-document research (free, powered by Gemini). [AnythingLLM](/tools/anythingllm/) for self-hosted enterprise.
+> **Which PDF tool wins for you:** ChatPDF for focused PDF chat, folders, and lightweight API use. [NotebookLM](/tools/notebooklm/) for multi-source notebooks, [AnythingLLM](/tools/anythingllm/) for self-hosted enterprise, and a frontier chatbot if PDF chat is already included in the subscription you pay for.
 
 ## Key Facts
 
 | | |
 |---|---|
-| **Free tier** | 2 PDFs per day, 120-page cap per file, 10 MB size limit |
-| **Plus plan** | $19.99/mo unlimited uploads, 2,000-page files, 32 MB per PDF, unlimited questions |
+| **Free tier** | 2 document analyses per day, no sign-up required for core flow |
+| **Plus plan** | Unlimited document analysis and advanced features; exact public price not rendered on the static page in this crawl |
 | **Answer format** | Chat interface with inline page citations |
 | **Languages supported** | 100+ |
-| **API** | Available on Plus tier |
+| **API** | Backend API for adding sources by URL/file and sending stateless chat messages |
 | **Launched** | March 2023 |
-| **Underlying model** | Proprietary (abstracted). Quality roughly matches modern general-purpose chat models on document Q&A. |
+| **Underlying model** | Smart dynamic routing between GPT-4o and GPT-4o-mini, per official FAQ |
 
 ## When to pick ChatPDF
 
 - **Single-document study workflows.** Upload a textbook chapter, ask questions, learn the material faster than linear reading.
 - **Legal or contract review.** Page citations make every answer verifiable against the source. Faster than manual document search.
-- **Research paper triage.** Upload 5 papers, quickly extract which ones address your question without reading end to end.
+- **Research paper triage.** Use folders or Plus workflows to compare multiple PDFs, then verify the cited pages before citing.
 - **Quick enterprise PDF lookup.** Internal policy documents, 500-page regulatory filings, annual reports. Upload and ask.
 
 ## When to pick something else
@@ -133,23 +133,23 @@ The first tool to make "talk to your PDF" a viable workflow. Upload a PDF, get a
 
 | Plan | Price | What's included |
 |---|---|---|
-| Free | $0 | 2 PDFs/day, 120-page cap, 10 MB file size |
-| Plus | $19.99/mo | Unlimited PDFs, 2,000-page files, 32 MB file size, API access, priority |
-| Team | Custom | SSO, admin console, bulk seats |
+| Free | $0 | 2 document analyses/day, core PDF chat, no account required for the basic flow |
+| Plus | In-app / volatile | Unlimited document analysis and more advanced features |
+| API | Usage/account gated | Add PDFs by URL or file upload, ask stateless chat questions, include optional page references |
 
-Prices verified 2026-05-13 via [chatpdf.com](https://www.chatpdf.com).
+Free and Plus positioning verified 2026-06-02 via [chatpdf.com](https://www.chatpdf.com). API source limits verified via [ChatPDF backend API docs](https://www.chatpdf.com/docs/api/backend), which list 2,000 pages or 32 MB per PDF for API sources. Exact Plus price should be checked in the live upgrade flow because the old public `/pricing` route now returns 404.
 
 ## Failure modes
 
 - **Long-document accuracy drops past ~500 pages.** Like all RAG-based systems, retrieval quality degrades at extreme document lengths. Chunking strategy matters; expect occasional misses on long files.
 - **Image and figure handling is weak.** Charts, tables, and figures inside PDFs are often skipped or mis-interpreted. Pair with manual review for data-heavy documents.
-- **No multi-document support on free tier.** Each chat is scoped to one PDF. Use NotebookLM for cross-document synthesis.
+- **Multi-document workflow is account/plan shaped.** ChatPDF now promotes folders for multiple PDFs in one conversation, but buyers should verify whether the free, signed-in, and Plus limits match their workload. Use NotebookLM for broader source notebooks.
 - **Privacy posture unclear for sensitive docs.** Uploaded content is processed by third-party LLM APIs. Do not upload confidential material without reviewing the privacy policy.
-- **Feature parity with frontier chatbots shrinking.** OpenAI frontier models, Claude Opus 4.7, and Gemini 3.1 Pro now handle PDFs natively at comparable quality. The standalone value proposition is weakening year over year.
+- **Feature parity with frontier chatbots shrinking.** ChatGPT, Claude, and Gemini now handle PDFs natively for paid users. ChatPDF's standalone value is focus, folders, page citations, and API simplicity, not owning the best base model.
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified 2026-05-13 against [chatpdf.com](https://www.chatpdf.com) and [PaperGuide 2026 PDF AI tool roundup](https://paperguide.ai/blog/ai-tools-to-chat-with-pdf/).
+Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-02 against [chatpdf.com](https://www.chatpdf.com) and [ChatPDF backend API docs](https://www.chatpdf.com/docs/api/backend/).
 
 ## FAQ
 
@@ -163,7 +163,7 @@ Yes, via OCR. Quality depends on scan resolution. Text-native PDFs are more reli
 Not on the free tier. Multi-document workflows are better served by [NotebookLM](/tools/notebooklm/) (free) or AnythingLLM.
 
 **How does ChatPDF compare to ChatGPT for PDFs?**
-ChatGPT with OpenAI frontier models handles PDFs natively on the Plus plan. If you already pay for ChatGPT, it is the better choice. ChatPDF's advantage is the focused UX and lower entry price for PDF-only workflows.
+ChatGPT handles PDFs natively on paid plans. If you already pay for ChatGPT, Claude, or Gemini and only need occasional PDF Q&A, use that first. ChatPDF's advantage is the focused side-by-side UX, folders, clickable citations, and PDF-specific API docs.
 
 ## Related
 

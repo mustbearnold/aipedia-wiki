@@ -4,17 +4,17 @@ slug: ai-notes
 title: AI Note-Taking & Knowledge Management
 description: AI note-taking, customer-success meeting memory, meeting intelligence, source-grounded research notebooks, personal knowledge systems, and workspace knowledge tools.
 tool_count: 11
-seo_title: "Best AI Note-Taking Tools (May 2026), aipedia.wiki"
-meta_description: "Updated May 26, 2026: compare the best AI note-taking tools: Fathom for personal meeting notes, MeetGeek for customer-success meeting memory, Fireflies for team meeting intelligence, Otter for live transcription, Read AI for meeting reports, NotebookLM for source-grounded research, Notion for team knowledge, and Obsidian for local-first notes."
+seo_title: "Best AI Note-Taking Tools (June 2026), aipedia.wiki"
+meta_description: "Updated June 2, 2026: compare the best AI note-taking tools: Fathom for personal meeting notes, MeetGeek for customer-success meeting memory, Fireflies for team meeting intelligence, Otter for live transcription, Read AI for meeting reports, NotebookLM for source-grounded research, Notion for team knowledge, Capacities for object-based PKM, and Obsidian for local-first notes."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-26
-last_verified: 2026-05-26
+last_updated: 2026-06-02
+last_verified: 2026-06-02
 update_frequency: monthly
 ---
 
 ## Overview
 
-AI note-taking now splits into three buyer lanes. The first is **meeting capture and meeting memory**, where [Fathom](/tools/fathom/), [MeetGeek](/tools/meetgeek/), [Fireflies](/tools/fireflies/), [Otter.ai](/tools/otter-ai/), and [Read AI](/tools/read-ai/) record calls, produce transcripts, summarize decisions, extract action items, and push meeting context into team workflows. MeetGeek is now the sharper customer-success pick when onboarding, renewal, QBR, escalation, and product-feedback calls need to become searchable account context. The second is **source-grounded research**, where [NotebookLM](/tools/notebooklm/) turns documents, transcripts, and source packs into grounded Q&A, reports, study materials, and review artifacts. The third is **knowledge management**, where [Notion AI](/tools/notion-ai/) and [Obsidian](/tools/obsidian/) help teams or individuals maintain long-lived notes, wikis, docs, databases, and personal knowledge graphs.
+AI note-taking now splits into three buyer lanes. The first is **meeting capture and meeting memory**, where [Fathom](/tools/fathom/), [MeetGeek](/tools/meetgeek/), [Fireflies](/tools/fireflies/), [Otter.ai](/tools/otter-ai/), and [Read AI](/tools/read-ai/) record calls, produce transcripts, summarize decisions, extract action items, and push meeting context into team workflows. MeetGeek is now the sharper customer-success pick when onboarding, renewal, QBR, escalation, and product-feedback calls need to become searchable account context. The second is **source-grounded research**, where [NotebookLM](/tools/notebooklm/) turns documents, transcripts, and source packs into grounded Q&A, reports, study materials, and review artifacts. The third is **knowledge management**, where [Notion AI](/tools/notion-ai/), [Capacities](/tools/capacities/), and [Obsidian](/tools/obsidian/) help teams or individuals maintain long-lived notes, wikis, docs, databases, objects, and personal knowledge graphs.
 
 As of May 26, 2026, the best purchase depends less on "which AI summarizes best?" and more on where the note lives after capture: a meeting library, a CRM, a renewal brief, a research notebook, a company wiki, or a local personal vault.
 
@@ -29,6 +29,7 @@ As of May 26, 2026, the best purchase depends less on "which AI summarizes best?
 | **[Read AI](/tools/read-ai/)** | Meeting reports, coaching, and search | Best when meeting notes connect to reports, playback, coaching, Search Copilot, workplace context, integrations, upload credits, and productivity workflows. |
 | **[NotebookLM](/tools/notebooklm/)** | Source-grounded research notebooks | Best when the transcript or source documents already exist and need grounded summaries, Q&A, reports, flashcards, mind maps, or study artifacts. |
 | **[Notion AI](/tools/notion-ai/)** | Team knowledge bases and AI workspace | Best when notes, docs, projects, databases, meeting notes, enterprise search, and agents already live inside Notion. |
+| **[Capacities](/tools/capacities/)** | Object-based personal knowledge management | Best when notes need people, books, projects, meetings, and custom object types rather than a folder-first notebook. |
 | **[Obsidian](/tools/obsidian/)** | Local-first personal knowledge | Best for power users who want markdown files, local control, linking, plugins, and optional paid sync/publish layers. |
 
 ## Our Picks
@@ -40,6 +41,7 @@ As of May 26, 2026, the best purchase depends less on "which AI summarizes best?
 - **Best meeting-report layer:** [Read AI](/tools/read-ai/) because it adds reports, coaching, playback, search, integrations, and broader workplace productivity context.
 - **Best free source notebook:** [NotebookLM](/tools/notebooklm/) because it turns existing sources into grounded research and study outputs with clear upgrade paths.
 - **Best team knowledge workspace:** [Notion AI](/tools/notion-ai/) because Notion bundles docs, databases, AI, meeting notes, enterprise search, agents, and team workspace controls.
+- **Best object-based PKM:** [Capacities](/tools/capacities/) because its free tier now includes unlimited spaces, objects, blocks, and custom object types, while Pro is mainly about AI assistant access and unlimited media.
 - **Best local-first notes app:** [Obsidian](/tools/obsidian/) because it keeps notes as local markdown files and lets power users add AI through plugins and workflows.
 
 ## Choosing the Right Tool
@@ -57,6 +59,8 @@ As of May 26, 2026, the best purchase depends less on "which AI summarizes best?
 **Use NotebookLM if:** the meeting is already transcribed and you need grounded follow-up analysis from transcripts, docs, slides, reports, or source material.
 
 **Use Notion AI if:** the real system of record is a team wiki, project database, doc workspace, or company operating system.
+
+**Use Capacities if:** notes are easier to manage as typed objects with properties, backlinks, daily notes, and graph-style relationships than as folders or plain documents.
 
 **Use Obsidian if:** your priority is local-first notes, markdown ownership, backlinks, custom plugins, and long-term personal knowledge management.
 
@@ -83,4 +87,6 @@ As of May 26, 2026, the best purchase depends less on "which AI summarizes best?
 - [MeetGeek PartnerStack program](https://market.partnerstack.com/page/meetgeek) (verified 2026-05-26)
 - [NotebookLM upgrade information](https://support.google.com/notebooklm/answer/16213268) (verified 2026-05-13)
 - [Notion pricing](https://www.notion.com/pricing) (verified 2026-05-13)
+- [Capacities pricing](https://capacities.io/pricing) (verified 2026-06-02)
+- [Capacities docs](https://docs.capacities.io/) (verified 2026-06-02)
 - [Obsidian pricing](https://obsidian.md/pricing) (verified 2026-05-13)

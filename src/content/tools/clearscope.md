@@ -11,10 +11,10 @@ pricing_model: paid
 price_range: "$129-$399/month"
 status: active
 launched: 2016-01
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-02
+last_verified: 2026-06-02
 update_frequency: quarterly
-seo_title: "Clearscope: Features, Pricing & Review (2026)"
+seo_title: "Clearscope: Features, Pricing & Review (June 2026)"
 meta_description: "Clearscope is the premium SEO content optimization tool. Essentials $129/mo, Business $399/mo, Enterprise custom. A-F grading, Google Docs integration, and Prompt Tracking across ChatGPT and Gemini for AI-answer visibility, included on every plan."
 author: "aipedia.wiki Editorial"
 affiliate:
@@ -35,7 +35,7 @@ facts:
     source: https://www.clearscope.io/
     source_label: Clearscope official site
     source_id: clearscope-official
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -45,7 +45,7 @@ facts:
     source: https://www.clearscope.io/pricing
     source_label: Clearscope pricing
     source_id: clearscope-pricing
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -55,7 +55,7 @@ facts:
     source: https://www.clearscope.io/
     source_label: Clearscope official site
     source_id: clearscope-official
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -64,7 +64,7 @@ facts:
     source: https://www.clearscope.io/pricing
     source_label: Clearscope pricing
     source_id: clearscope-pricing
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -74,7 +74,7 @@ facts:
     source: https://www.clearscope.io/pricing
     source_label: Clearscope pricing
     source_id: clearscope-pricing
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -121,6 +121,13 @@ price_history:
     source_label: "Source"
     source_id: clearscope-pricing
     note: "Re-verified May 2026. Now lists 50 monthly topic explorations on Business tier alongside 50 tracked topics, 300 pages, 20 drafts, and a dedicated account manager."
+  - date: 2026-06-02
+    plan: "Essentials / Business"
+    price: "$129/mo / $399/mo"
+    source: "https://www.clearscope.io/pricing"
+    source_label: "Clearscope pricing"
+    source_id: clearscope-pricing
+    note: "Re-verified unchanged: Essentials $129, Business $399, Enterprise custom; Prompt Tracking remains included for ChatGPT and Gemini visibility."
 ---
 
 # Clearscope
@@ -193,7 +200,7 @@ Pricing via [clearscope.io/pricing](https://www.clearscope.io/pricing):
 
 Add-ons: extra Pages at $15-25/mo tiered, extra Drafts at $20-50 per batch tiered. All tiers include unlimited user seats (unusual at this price point) and cover both traditional SEO and AI-generated-answer visibility (Prompt Tracking, brand visibility, query fan-out). Monthly subscriptions, cancel anytime.
 
-Prices verified 2026-05-13 via [Clearscope pricing page](https://www.clearscope.io/pricing).
+Prices verified 2026-06-02 via [Clearscope pricing page](https://www.clearscope.io/pricing).
 
 ## Against the alternatives
 
@@ -220,7 +227,7 @@ Prices verified 2026-05-13 via [Clearscope pricing page](https://www.clearscope.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature claims against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [Clearscope pricing](https://www.clearscope.io/pricing) and published third-party reviews including the [SelectSoftware Reviews 2026 report](https://www.selectsoftwarereviews.com/reviews/clearscope).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature claims against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-02 against [Clearscope pricing](https://www.clearscope.io/pricing) and published third-party reviews including the [SelectSoftware Reviews 2026 report](https://www.selectsoftwarereviews.com/reviews/clearscope).
 
 ## FAQ
 

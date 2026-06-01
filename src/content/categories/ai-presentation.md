@@ -7,8 +7,8 @@ tool_count: 8
 seo_title: "Best AI Presentation Tools: Gamma, Pitch, Beautiful.ai & Prezi (June 2026)"
 meta_description: "Updated June 1, 2026: Gamma wins prompt-to-deck, Pitch wins team workflows, Beautiful.ai wins controlled business slides, Napkin AI wins slide visuals, and Decktopus remains the interactive proposal/funnel pick."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-01
-last_verified: 2026-05-28
+last_updated: 2026-06-02
+last_verified: 2026-06-02
 update_frequency: monthly
 top_picks:
   best_overall:
@@ -33,9 +33,9 @@ The best AI presentation tool for most buyers is [Gamma](/tools/gamma/) because 
 
 Do not shortlist [Tome](/tools/tome/) for new presentation work. The original Tome presentation product is discontinued, and AiPedia treats old Tome comparisons as historical or merge/noindex candidates, not live buyer recommendations.
 
-For prompt-to-prototype work that overlaps deck creation, also evaluate [Claude Design](/tools/claude-design/) (launched April 17, 2026). It competes with Gamma when the buyer wants generated UI mockups, landing-page concepts, and visual design artifacts alongside slide-style output. It is not yet a full deck workflow, but it is the strongest design-generation alternative to test before locking in a presentation tool.
+For prompt-to-prototype work that overlaps deck creation, also evaluate [Claude Design](/tools/claude-design/) (launched April 17, 2026). It competes with Gamma when the buyer wants generated UI mockups, landing-page concepts, and visual design artifacts alongside slide-style output. The June 2 check keeps it in the Claude Pro-and-up lane and avoids claiming a newer Design-specific backing model until Anthropic publishes that on a Claude Design source.
 
-Decktopus pricing and affiliate status were rechecked on **May 28, 2026**. Prezi plan support and AI access details were rechecked on **May 24, 2026**. The broader presentation category sweep was last fully verified on **May 13, 2026** against official vendor sources and current AiPedia tool records.
+Decktopus pricing and affiliate status were rechecked on **May 28, 2026**. Prezi plan support and AI access details were rechecked on **May 24, 2026**. Claude Design access and Claude pricing were rechecked on **June 2, 2026** against official Anthropic and Claude sources.
 
 ## Best Tools By Buyer Job
 
@@ -127,4 +127,5 @@ Affiliate availability does not determine ranking. A monetizable tool can be inc
 - Presentations.AI pricing: [https://www.presentations.ai/pricing](https://www.presentations.ai/pricing)
 - Napkin AI pricing: [https://www.napkin.ai/pricing/](https://www.napkin.ai/pricing/)
 - Prezi pricing and plan support: [https://prezi.com/pricing/](https://prezi.com/pricing/), [https://support.prezi.com/hc/en-us/articles/360003478934-Guide-to-Prezi-plans](https://support.prezi.com/hc/en-us/articles/360003478934-Guide-to-Prezi-plans) (verified 2026-05-24)
+- Claude Design launch and access: [https://www.anthropic.com/news/claude-design-anthropic-labs](https://www.anthropic.com/news/claude-design-anthropic-labs), [https://claude.com/pricing](https://claude.com/pricing) (verified 2026-06-02)
 - Tome/Lightfield pivot coverage: [https://venturebeat.com/technology/tomes-founders-ditch-viral-presentation-app-with-20m-users-to-build-ai](https://venturebeat.com/technology/tomes-founders-ditch-viral-presentation-app-with-20m-users-to-build-ai)

@@ -7,8 +7,8 @@ tool_count: 25
 seo_title: "Best AI Automation Tools & Agent Platforms (June 2026)"
 meta_description: "Updated June 1, 2026: compare n8n, Zapier, Make, Gumloop, Relevance AI, Activepieces, AG2, Browserbase, Ada, Apollo, Amplemarket, Lindy, Manus, Pipedream, CloudTalk, and MeetGeek by workflow, pricing unit, and risk."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-01
-last_verified: 2026-05-31
+last_updated: 2026-06-02
+last_verified: 2026-06-02
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -44,6 +44,10 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 
 **Use [Apollo](/tools/apollo/) or [Amplemarket](/tools/amplemarket/) when automation starts with outbound revenue.** Apollo is the broader prospect-data and sales-engagement platform, while Amplemarket is the higher-touch AI SDR suite with Duo agents and a $600/month annual Startup plan for two seats. Both need real sender, deliverability, and CRM governance before scale.
 
+**Use [Clay](/tools/clay/) when GTM automation starts with enrichment, signals, and account research.** Clay's June 2 check keeps the important distinction clear: the public cards show lower annual-billing starts, while the FAQ names higher monthly starts. Buyer advice should use the annual/monthly split rather than a single flat Clay price.
+
+**Use [ClickUp](/tools/clickup/) when work management and AI sit in the same operating system.** ClickUp is not a generic agent platform; it is the better fit when tasks, docs, project automation, ClickUp Brain, Everything AI, and workspace governance need to live together.
+
 **Use [Ada](/tools/ada/) when enterprise customer service wants AI agents for support outcomes.** Ada is now a demo-gated contact-sales page for serious service volumes, not a self-serve chatbot widget. Its June 1 source check found 550+ deployed AI agents and 5.5B+ interactions, so the buyer question is enterprise fit, resolution quality, and channel coverage.
 
 **Use [CloudTalk](/tools/cloudtalk/) when automation starts with phone operations.** CloudTalk is not a generic workflow router. It is the better fit when a sales or support team needs cloud calling, routing, dialers, CRM call logging, AI summaries, coaching analytics, and optional AI voice agents in one system.
@@ -70,6 +74,8 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 | Cloud browser automation for agents | [Browserbase](/tools/browserbase/) | Managed browsers, Web Data APIs, runtime, identity, observability, Stagehand, and MCP | Costs move with browser sessions and runtime design |
 | Enterprise customer-service AI agents | [Ada](/tools/ada/) | Strong fit for high-volume support teams that need chat, voice, email, SMS, social, and reasoning workflows | Pricing is demo-gated; verify volume, channel, and resolution economics |
 | Outbound revenue automation | [Apollo](/tools/apollo/) or [Amplemarket](/tools/amplemarket/) | Prospect data, enrichment, sequencing, and AI-assisted GTM execution | Credit systems, deliverability, and CRM hygiene decide real value |
+| Enrichment and GTM research workflows | [Clay](/tools/clay/) | Waterfalls data providers, research agents, and account enrichment before sending | Credits, action counts, and annual-vs-monthly pricing need direct plan math |
+| AI work management | [ClickUp](/tools/clickup/) | Tasks, docs, automation, Brain, and Everything AI inside one workspace | Easy to overbuy AI add-ons if the team has not standardized ClickUp usage |
 | Phone-heavy sales/support operations | [CloudTalk](/tools/cloudtalk/) | Business calling, routing, dialers, CRM sync, AI Conversation Intelligence, and AI Voice Agents in one platform | More than teams need if the job is internal-only calling or pure chat support |
 | Meeting-to-workflow automation for CS, sales, recruiting, and ops | [MeetGeek](/tools/meetgeek/) | Transcripts, summaries, AI Chat, action items, Zapier/Make/n8n workflows, API/MCP access, and CRM/task handoff from meeting content | Needs consent policy, workspace permissions, and a defined post-meeting workflow |
 | One-off general autonomous tasks | [Manus](/tools/manus/) | Hosted VM agent for research, spreadsheets, slides, files, and browser work; official site now describes Manus as part of Meta | Credit burn and data-handling terms need direct verification before sensitive work |
@@ -92,7 +98,7 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 
 - [Best AI automation platform](/guides/best-ai-automation-platform/) is the primary buyer guide and should stay current weekly while automation pricing and agent surfaces move quickly. The May 13 n8n cloud price cut and the May Make price reduction both flow into this page.
 - [AI automation agency tech stack](/guides/ai-agency-stack/) is now the agency delivery-stack page for n8n, Zapier, Make, Claude, ChatGPT, voice agents, Browserbase, and client dashboard decisions. Keep it aligned with the May 13 verified [best AI tools for agencies](/guides/best-ai-tools-for-agencies/), sales, support, and lead-generation updates.
-- [AI lead generation stack](/guides/ai-lead-generation/), the May 13 verified [cold-email buyer guide](/guides/best-ai-for-cold-email/), and the May 13 verified [sales-team AI tools guide](/guides/best-ai-tools-for-sales-teams/) now cover Apollo, Clay, Amplemarket, Instantly, and n8n as a buyer flow for prospect data, enrichment, sender handoff, deliverability, and GTM automation. Keep them synchronized with sales-team and agency pages.
+- [AI lead generation stack](/guides/ai-lead-generation/), the June 2 verified Clay refresh, the May 13 verified [cold-email buyer guide](/guides/best-ai-for-cold-email/), and the May 13 verified [sales-team AI tools guide](/guides/best-ai-tools-for-sales-teams/) now cover Apollo, Clay, Amplemarket, Instantly, and n8n as a buyer flow for prospect data, enrichment, sender handoff, deliverability, and GTM automation. Keep them synchronized with sales-team and agency pages.
 - [Best AI tools for customer support](/guides/best-ai-tools-for-customer-support/) is the support-automation buyer guide for Intercom, Voiceflow, Ada, and Retell AI. Keep it synchronized with Intercom/Fin outcome pricing, Voiceflow credit billing, Ada enterprise CX positioning, and voice-agent workflow guidance.
 - [Best AI phone system for SMB sales and support teams](/guides/best-ai-phone-system-for-smb-sales-and-support-teams/) is the CloudTalk money page for teams that need phone operations, CRM logging, AI conversation intelligence, coaching, and a path to AI voice agents.
 - [Best AI meeting assistant for customer success teams](/guides/best-ai-meeting-assistant-for-customer-success-teams/) is the MeetGeek money page for teams that need customer calls to become account memory, action items, CRM/task updates, QBR prep, and renewal context.
@@ -129,6 +135,9 @@ Do not leave this category stale. Automation tools are adding MCP, agent builder
 - [Apollo pricing](https://apollo.io/pricing) (verified 2026-06-01)
 - [Amplemarket pricing](https://www.amplemarket.com/pricing) (verified 2026-06-01)
 - [Browserbase pricing](https://www.browserbase.com/pricing) (verified 2026-06-01)
+- [Clay pricing](https://www.clay.com/pricing) (verified 2026-06-02)
+- [ClickUp pricing](https://clickup.com/pricing) (verified 2026-06-02)
+- [ClickUp Brain](https://clickup.com/ai) (verified 2026-06-02)
 - [Manus pricing](https://manus.im/pricing) (verified 2026-05-24)
 - [Lindy pricing](https://www.lindy.ai/pricing) (verified 2026-05-27)
 - [Lindy quickstart docs](https://docs.lindy.ai/start-here/quickstart) (verified 2026-05-27)

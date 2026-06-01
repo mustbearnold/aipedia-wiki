@@ -7,11 +7,11 @@ category: ai-notes
 company: Capacities GmbH
 url: https://capacities.io
 pricing_model: freemium
-price_range: "$0-$14.99/month"
+price_range: "Free; Pro/Believer pricing is region-rendered"
 status: active
 launched: 2021-06
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-02
+last_verified: 2026-06-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,16 +30,16 @@ facts:
     source: "https://capacities.io/product"
     source_label: "Capacities product"
     source_id: capacities-product
-    verified_at: 2026-05-13
+    verified_at: 2026-06-02
     volatility: low
     confidence: high
   pricing_anchor:
-    value: "Capacities pricing should be evaluated against Pro features, AI usage, sync needs, and whether the object-based model will become a daily workflow."
+    value: "Capacities pricing should be evaluated against Pro AI access, unlimited media uploads, sync needs, regional currency, and whether the object-based model will become a daily workflow. The current Free tier lists unlimited spaces, objects, blocks, and custom object types."
     source: "https://capacities.io/pricing"
     source_label: "Capacities pricing"
     source_id: capacities-pricing
-    verified_at: 2026-05-13
-    next_review_at: 2026-08-13
+    verified_at: 2026-06-02
+    next_review_at: 2026-09-02
     volatility: high
     confidence: high
   data_model:
@@ -47,7 +47,7 @@ facts:
     source: "https://docs.capacities.io/"
     source_label: "Capacities docs"
     source_id: capacities-docs
-    verified_at: 2026-05-13
+    verified_at: 2026-06-02
     volatility: low
     confidence: high
   ai_surface:
@@ -55,7 +55,7 @@ facts:
     source: "https://capacities.io/product"
     source_label: "Capacities product"
     source_id: capacities-product
-    verified_at: 2026-05-13
+    verified_at: 2026-06-02
     volatility: medium
     confidence: high
   watch_out_for:
@@ -63,12 +63,12 @@ facts:
     source: "https://docs.capacities.io/"
     source_label: "Capacities docs"
     source_id: capacities-docs
-    verified_at: 2026-05-13
+    verified_at: 2026-06-02
     volatility: medium
     confidence: high
 tags: [ai-notes, note-taking, pkm, object-based, knowledge-management]
-seo_title: "Capacities Review: Object-Based PKM with AI (May 2026)"
-meta_description: "Capacities is an object-based PKM app where every note is a typed object. Free tier is unlimited; Pro at $9.99/mo annual adds AI assistant; Believer at $12.49/mo supports the project."
+seo_title: "Capacities Review: Object-Based PKM with AI (June 2026)"
+meta_description: "Capacities is an object-based PKM app where every note is a typed object. June 2026 check: Free includes unlimited spaces, objects, blocks, and custom object types; Pro adds AI."
 author: aipedia.wiki Editorial
 best_for:
   - solo researchers and writers who think structurally
@@ -103,13 +103,20 @@ price_history:
     source_label: "Source"
     source_id: capacities-pricing
     note: "Re-verified. Release 64 added AI provider choice (ChatGPT/Claude/Cursor); Release 62 shipped AI Chat Connectors. No price change."
+  - date: 2026-06-02
+    plan: "Free / Pro / Believer"
+    price: "Region-rendered"
+    source: "https://capacities.io/pricing"
+    source_label: "Capacities pricing"
+    source_id: capacities-pricing
+    note: "Public pricing page rendered Free with unlimited spaces, objects, blocks, and custom object types; Pro adds AI assistant and unlimited media uploads. Local crawl rendered NZ$15.99/mo Pro and from NZ$18.99/mo Believer."
 ---
 
 # Capacities
 
 An object-based personal knowledge management app built by Capacities GmbH. Every note is a typed object (Book, Person, Project, Daily Note, or custom type) with defined properties that form a connected knowledge graph. The Pro tier adds an AI assistant for writing, chat over notes, and auto-tagging.
 
-Free tier is genuinely unlimited on notes and objects. Pro is $9.99/mo annual, Believer $12.49/mo annual.
+Free tier is genuinely generous: the current pricing page lists unlimited spaces, objects, blocks, and custom object types, with media uploads up to 5GB total and 100MB/month afterwards. Pro adds the AI assistant and unlimited media uploads. Pricing renders by region, so verify the live currency before buying.
 
 ## Recent changes
 
@@ -125,7 +132,7 @@ Free tier is genuinely unlimited on notes and objects. Pro is $9.99/mo annual, B
 >
 > **Skip it for team work or plain-Markdown portability.** No real-time collaboration, no shared workspaces. Export exists but the proprietary database structure loses fidelity on the way out. If you might leave, Obsidian is a safer long-term home.
 >
-> **Who pays which tier:** Free for indefinite solo use without AI, Pro $9.99/mo annual ($11.99 monthly) for the AI assistant and custom object types, Believer $12.49/mo annual for users who want to support development and get early features.
+> **Who pays which tier:** Free for indefinite solo use without AI, Pro for the AI assistant and unlimited media uploads, Believer for users who want to support development and get early features. The old Pro-only custom-object guidance is stale; the current public pricing page lists unlimited custom object types on Free.
 
 ## Key Facts
 
@@ -133,17 +140,17 @@ Free tier is genuinely unlimited on notes and objects. Pro is $9.99/mo annual, B
 |---|---|
 | **Core model** | Typed objects with custom properties |
 | **Pre-built object types** | Book, Person, Project, Daily Note, Article, Video, Podcast |
-| **Custom objects** | Pro and Believer tiers only |
+| **Custom objects** | Listed as unlimited on the current Free tier |
 | **AI assistant** | Writing, chat over notes, auto-fill properties, auto-tagging |
 | **AI backend** | Frontier LLMs (model routing varies) |
 | **Graph view** | Visual map of object connections |
 | **Platforms** | Web, macOS, Windows, iOS, Android |
 | **Offline** | Full, with sync on reconnect |
 | **Encryption** | End-to-end on sync |
-| **Free tier** | Unlimited notes/objects, 5GB media, core object types |
+| **Free tier** | Unlimited spaces, objects, blocks, and custom object types; 5GB total media, then 100MB/month |
 | **API** | None public |
 
-Every data point was verified against vendor docs on 2026-05-13. See Sources.
+Every data point was verified against vendor docs on 2026-06-02. See Sources.
 
 ## What it actually is
 
@@ -158,7 +165,7 @@ The moat: no other mainstream PKM tool enforces object typing at the capture ste
 - **You think in systems.** Researchers tracking sources, authors tracking characters, founders tracking decisions all benefit from typed objects.
 - **You want structure without Obsidian's setup cost.** Capacities ships the object system on day one. No plugin stack to assemble.
 - **Daily notes plus object links is the habit.** Daily notes auto-link mentioned objects so a journal entry becomes part of the graph.
-- **Free tier covers the need.** The unlimited free plan on notes and core objects is rare and generous for solo use.
+- **Free tier covers the need.** The unlimited free plan on spaces, objects, blocks, and custom object types is rare and generous for solo use.
 - **E2EE sync matters.** Cross-device sync is end-to-end encrypted.
 
 ## When to pick something else
@@ -173,17 +180,17 @@ The moat: no other mainstream PKM tool enforces object typing at the capture ste
 
 | Plan | Price | Key Limits |
 |------|-------|------------|
-| Free | $0 | Unlimited notes/objects, core types, 5GB media, all platforms, offline |
-| Pro | $9.99/mo annual ($11.99/mo monthly) | AI assistant, custom object types, unlimited media, advanced views |
-| Believer | $12.49/mo annual ($14.99/mo monthly) | Everything in Pro plus project support, early features |
+| Free | $0 | Unlimited spaces, objects, blocks, custom object types, offline support, 5GB total media then 100MB/month |
+| Pro | Region-rendered | AI assistant, unlimited media uploads, Pro features |
+| Believer | Region-rendered | Everything in Pro plus project support and early features |
 
-*Prices verified 2026-05-13 via [capacities.io/pricing](https://capacities.io/pricing). Annual billing applied in EUR and USD.*
+*Prices verified 2026-06-02 via [capacities.io/pricing](https://capacities.io/pricing). The page rendered local currency in this crawl, so verify your account region before budgeting.*
 
 ## Against the alternatives
 
 | | Capacities Pro | Obsidian | Notion AI | Reflect |
 |---|---|---|---|---|
-| **Price** | $9.99/mo annual | Free | $10-$20/mo | $10/mo |
+| **Price** | Region-rendered Pro | Free | $10-$20/mo | $10/mo |
 | **Storage format** | **Typed objects** | Local Markdown | Pages + databases | Markdown + backlinks |
 | **AI built-in** | Yes, Pro+ | Via plugins | Yes | Yes |
 | **Offline** | Full | Full | Limited | Full |
@@ -204,12 +211,12 @@ The moat: no other mainstream PKM tool enforces object typing at the capture ste
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [capacities.io/pricing](https://capacities.io/pricing), [capacities.io/product/ai](https://capacities.io/product/ai), and the [Capacities changelog](https://capacities.io/whats-new/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-02 against [capacities.io/pricing](https://capacities.io/pricing), [capacities.io/product/ai](https://capacities.io/product/ai), and the [Capacities changelog](https://capacities.io/whats-new/).
 
 ## FAQ
 
 **Is the free plan actually unlimited?**
-Yes. Free covers unlimited notes, unlimited objects across core types, all platforms, full offline, and 5GB media. AI and custom object types require Pro.
+Yes. Free covers unlimited spaces, objects, blocks, custom object types, offline support, and 5GB total media with 100MB/month afterwards. AI and unlimited media uploads require Pro.
 
 **Capacities vs Obsidian?**
 Obsidian stores notes as local Markdown files with manual linking. Capacities uses typed objects in a proprietary database with property-driven auto-links and built-in AI. Obsidian suits tinkerers with strong file-ownership preferences. Capacities suits structured thinkers who want the object system out of the box.
@@ -218,7 +225,7 @@ Obsidian stores notes as local Markdown files with manual linking. Capacities us
 No. Writing aids and AI Chat require internet. Core note creation, editing, and browsing all work offline with sync on reconnect.
 
 **What's the difference between Pro and Believer?**
-Both include the AI assistant and custom object types. Believer is a support tier at $12.49/mo annual that funds ongoing development and ships early features first. Functionally Pro is sufficient for most users.
+Both include the AI assistant and Pro features. Believer is a support tier that funds ongoing development and ships early features first. Functionally Pro is sufficient for most users.
 
 **Can Capacities handle teams?**
 No. Capacities is solo-focused. No shared workspaces or real-time collaboration. Notion is the right tool for team knowledge bases.

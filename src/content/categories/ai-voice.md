@@ -7,8 +7,8 @@ tool_count: 24
 seo_title: "Best AI Voice Tools 2026: TTS, Voice Agents, AI Phone Systems"
 meta_description: "Compare AI voice tools in June 2026: ElevenLabs for voice generation, MiniMax Speech for hosted TTS value, Cartesia and Retell AI for voice agents, CloudTalk for AI phone systems, MeetGeek and Fathom for meeting transcription, Descript and Castmagic for creator audio, and Deepgram or AssemblyAI for speech-to-text APIs."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-01
-last_verified: 2026-05-26
+last_updated: 2026-06-02
+last_verified: 2026-06-02
 update_frequency: monthly
 ---
 
@@ -65,8 +65,8 @@ Start with [ElevenLabs](/tools/elevenlabs/) for polished creator voice generatio
 - [MiniMax Audio Subscription pricing](https://platform.minimax.io/docs/guides/pricing-speech) (verified 2026-05-13)
 - [MiniMax pay-as-you-go pricing](https://platform.minimax.io/docs/guides/pricing-paygo) (verified 2026-05-13)
 - [MiniMax T2A API docs](https://platform.minimax.io/docs/api-reference/speech-t2a-intro) (verified 2026-05-13)
-- [Cartesia pricing](https://cartesia.ai/pricing) (verified 2026-05-13)
-- [Castmagic pricing](https://www.castmagic.io/pricing) (verified 2026-05-13)
+- [Cartesia pricing](https://cartesia.ai/pricing) (verified 2026-06-02)
+- [Castmagic pricing](https://www.castmagic.io/pricing) (verified 2026-06-02)
 - [YouTube altered or synthetic content disclosure](https://support.google.com/youtube/answer/14328491) (verified 2026-05-13)
 - [Descript pricing](https://www.descript.com/pricing) (verified 2026-05-13)
 - [Deepgram pricing](https://deepgram.com/pricing) (verified 2026-05-13)

@@ -388,7 +388,8 @@
       "url": "https://claude.com/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "anthropic-series-g-2026",
@@ -820,7 +821,8 @@
       "url": "https://www.canva.com/canva-ai/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "canva-newsroom",
@@ -828,7 +830,8 @@
       "url": "https://www.canva.com/newsroom/",
       "type": "newsroom",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "canva-pricing",
@@ -836,7 +839,8 @@
       "url": "https://www.canva.com/pricing/",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "capacities-docs",
@@ -844,7 +848,8 @@
       "url": "https://docs.capacities.io/",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "capacities-pricing",
@@ -852,7 +857,8 @@
       "url": "https://capacities.io/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "capacities-product",
@@ -860,7 +866,8 @@
       "url": "https://capacities.io/product",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "captions-official",
@@ -869,7 +876,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-08"
+      "last_checked": "2026-06-02"
     },
     {
       "id": "captions-overview",
@@ -878,7 +885,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-08"
+      "last_checked": "2026-06-02"
     },
     {
       "id": "cartesia-docs",
@@ -886,7 +893,8 @@
       "url": "https://docs.cartesia.ai/",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "cartesia-pricing",
@@ -894,7 +902,8 @@
       "url": "https://cartesia.ai/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "cartesia-sonic",
@@ -902,7 +911,8 @@
       "url": "https://cartesia.ai/sonic",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "character-ai-about",
@@ -910,7 +920,8 @@
       "url": "https://character.ai/about",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "character-ai-official",
@@ -918,7 +929,8 @@
       "url": "https://character.ai/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "character-ai-pricing",
@@ -926,7 +938,8 @@
       "url": "https://character.ai/subscription/plus/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "character-ai-support",
@@ -934,7 +947,8 @@
       "url": "https://support.character.ai/",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "chatpdf-official",
@@ -942,7 +956,8 @@
       "url": "https://www.chatpdf.com/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "chatpdf-pricing",
@@ -950,7 +965,17 @@
       "url": "https://www.chatpdf.com/",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
+    },
+    {
+      "id": "chatpdf-api",
+      "label": "ChatPDF backend API docs",
+      "url": "https://www.chatpdf.com/docs/api/backend",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "chatsonic-official",
@@ -1007,11 +1032,12 @@
     },
     {
       "id": "claude-design-official",
-      "label": "Claude Design product page",
-      "url": "https://claude.ai/design",
-      "type": "official",
+      "label": "Anthropic Claude Design launch page",
+      "url": "https://www.anthropic.com/news/claude-design-anthropic-labs",
+      "type": "blog",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "claude-design-pricing",
@@ -1027,7 +1053,8 @@
       "url": "https://support.anthropic.com/en/articles/11145838-using-claude-design",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "claude-pricing",
@@ -1036,7 +1063,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-10"
+      "last_checked": "2026-06-02"
     },
     {
       "id": "anthropic-higher-limits-spacex",
@@ -1053,7 +1080,8 @@
       "url": "https://www.clay.com",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "clay-integrations",
@@ -1061,7 +1089,8 @@
       "url": "https://www.clay.com/integrations",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "clay-official",
@@ -1069,7 +1098,8 @@
       "url": "https://www.clay.com/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "clay-university",
@@ -1077,7 +1107,8 @@
       "url": "https://www.clay.com/university",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "clearscope-official",
@@ -1085,7 +1116,8 @@
       "url": "https://www.clearscope.io/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "clearscope-pricing",
@@ -1093,7 +1125,8 @@
       "url": "https://www.clearscope.io/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "clickup-brain",
@@ -1101,7 +1134,8 @@
       "url": "https://clickup.com/ai",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "clickup-official",
@@ -1109,7 +1143,8 @@
       "url": "https://clickup.com/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "clickup-pricing",
@@ -1117,7 +1152,8 @@
       "url": "https://clickup.com/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "cline-docs",
@@ -1161,7 +1197,8 @@
       "url": "https://clipdrop.co/apis",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "clipdrop-official",
@@ -1169,7 +1206,8 @@
       "url": "https://clipdrop.co/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "clipdrop-pricing",
@@ -1178,7 +1216,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-10"
+      "last_checked": "2026-06-02"
     },
     {
       "id": "clipdrop-tools",
@@ -1186,7 +1224,8 @@
       "url": "https://clipdrop.co/tools",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "codeium-docs",
@@ -1367,7 +1406,8 @@
       "url": "https://www.perplexity.ai/comet",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "company-newsrooms",
@@ -1383,7 +1423,8 @@
       "url": "https://www.connectedpapers.com/about",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "connected-papers-main",
@@ -1391,7 +1432,8 @@
       "url": "https://www.connectedpapers.com/main",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "connected-papers-pricing",
@@ -1399,7 +1441,8 @@
       "url": "https://www.connectedpapers.com/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "consensus-official",
@@ -1407,7 +1450,8 @@
       "url": "https://consensus.app",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "consensus-pricing",
@@ -1415,7 +1459,8 @@
       "url": "https://consensus.app/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "consensus-search",
@@ -1423,7 +1468,8 @@
       "url": "https://consensus.app",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "continue-docs",
@@ -5038,7 +5084,8 @@
       "url": "https://www.perplexity.ai/pro",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "phind-official",
@@ -7338,7 +7385,8 @@
       "url": "https://www.castmagic.io/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "castmagic-pricing",
@@ -7346,7 +7394,8 @@
       "url": "https://www.castmagic.io/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "claude-agent-sdk-credit",

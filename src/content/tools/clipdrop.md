@@ -2,16 +2,16 @@
 type: tool
 slug: clipdrop
 title: Clipdrop
-tagline: Swiss-army-knife AI image editing. Background remove, upscale, relight, uncrop, text remove, Reimagine. Free tier 20 requests per 24h (limited tools); Pro unlocks 1,000/24h, HD, no watermark, skip queue.
+tagline: Swiss-army-knife AI image editing. Background remove, upscale, relight, uncrop, text remove, and Reimagine. Free tier remains limited; Pro unlocks 1,000/24h, HD, no watermark, and skip queue, with pricing rendered by region.
 category: ai-image
 company: jasper-ai
 url: https://clipdrop.co
 pricing_model: freemium
-price_range: "$0 free / $9/mo Pro"
+price_range: "Free; Pro pricing is region-rendered"
 status: active
 launched: 2020-09
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-02
+last_verified: 2026-06-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,17 +31,16 @@ facts:
     source: https://clipdrop.co/tools
     source_label: Clipdrop tools
     source_id: clipdrop-tools
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
   pricing_anchor:
-    value: Clipdrop has a self-serve pricing page, but quota, watermark, API, commercial, and credit details should be verified
-      before committing production workflows. Free tier now metered at 20 requests per 24h (not 15/month).
+    value: Clipdrop has a self-serve pricing page, but quota, watermark, API, commercial, and credit details should be verified before committing production workflows. The June 2 crawl confirmed Pro quotas at 1,000/24h across major tools, but the exact Pro price rendered by region and should not be treated as a universal $9/mo quote.
     source: https://clipdrop.co/pricing
     source_label: Clipdrop pricing
     source_id: clipdrop-pricing
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -50,7 +49,7 @@ facts:
     source: https://clipdrop.co/apis
     source_label: Clipdrop APIs
     source_id: clipdrop-apis
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -59,7 +58,7 @@ facts:
     source: https://clipdrop.co/
     source_label: Clipdrop official site
     source_id: clipdrop-official
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -69,13 +68,13 @@ facts:
     source: https://clipdrop.co/pricing
     source_label: Clipdrop pricing
     source_id: clipdrop-pricing
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
 tags: [image-editing, background-removal, upscaling, relight, uncrop, stable-diffusion, photoshop-alternative]
-seo_title: "Clipdrop: Features, Pricing & Review (May 2026)"
-meta_description: "Clipdrop bundles background remove, upscale, relight, uncrop, Reimagine, and Stable Diffusion in one app. Free tier 20 requests per 24h (limited tools); Pro unlocks 1,000/24h, HD, no watermark, skip queue."
+seo_title: "Clipdrop: Features, Pricing & Review (June 2026)"
+meta_description: "Clipdrop bundles background remove, upscale, relight, uncrop, Reimagine, and Stable Diffusion in one app. June 2026 check: Pro quotas still show 1,000/24h; exact price is region-rendered."
 author: "aipedia.wiki Editorial"
 best_for:
   - background removal at scale
@@ -87,7 +86,7 @@ not_best_for:
   - enterprise image pipelines (use direct Stability API)
   - users already paying for Adobe Creative Cloud (Firefly covers most)
 quick_answer: >-
-  Clipdrop is a bundle of AI image tools (background removal, upscale, relight, uncrop, text cleanup, Reimagine) acquired by Jasper in February 2024 and still operated under jasper.ai support. Free tier gives 20 requests per 24h across each tool with watermarks. Pro unlocks 1,000/24h, HD output, no watermark, and skip-queue priority. Pick it for quick one-off image cleanup. Skip it if Adobe Firefly or Photoshop already cover your workflow.
+  Clipdrop is a bundle of AI image tools (background removal, upscale, relight, uncrop, text cleanup, Reimagine) acquired by Jasper in February 2024 and still operated under jasper.ai support. Free tier is limited and watermarked; Pro unlocks 1,000/24h, HD output, no watermark, and skip-queue priority. Pick it for quick one-off image cleanup. Skip it if Adobe Firefly or Photoshop already cover your workflow.
 ---
 
 # Clipdrop
@@ -100,7 +99,7 @@ A Swiss-army-knife collection of AI image tools. Originally built on Stability A
 >
 > **Skip it if you already have Adobe Creative Cloud or a dedicated image pipeline.** Firefly covers background removal, generative fill, text-to-image, and Uncrop-equivalent tools inside Photoshop. If you're paying $4.99/mo for Firefly already, Clipdrop is duplicative.
 >
-> **Who picks which tier:** Free tier (20 requests per 24h per tool, watermarked) for occasional hobbyist use. Pro for anyone hitting daily quotas or needing HD output. Heavier users with API workflows should evaluate Stability AI direct or Fal.ai instead.
+> **Who picks which tier:** Free tier for occasional hobbyist use and testing. Pro for anyone hitting daily quotas or needing HD output, no watermark, and skip queue. Heavier users with API workflows should compare Clipdrop API pricing against Stability AI direct or Fal.ai.
 
 ## Key Facts
 
@@ -137,7 +136,7 @@ A Swiss-army-knife collection of AI image tools. Originally built on Stability A
 | API | Usage-based per operation | Documented at [clipdrop.co/apis](https://clipdrop.co/apis) |
 | Enterprise | Custom | Volume pricing, SLAs, dedicated support |
 
-Free tier and Pro features verified 2026-05-13 via [clipdrop.co/pricing](https://clipdrop.co/pricing). Pro headline dollar figure is not currently rendered on the public pricing page (shown only after starting the trial flow); historical price was $9/mo and remains the reference point until Clipdrop publishes a new number.
+Free tier and Pro features verified 2026-06-02 via [clipdrop.co/pricing](https://clipdrop.co/pricing). The crawl rendered region-specific currency rather than a stable global price, so verify the live checkout flow before quoting the Pro amount.
 
 ## Failure modes
 
@@ -161,7 +160,7 @@ Free tier and Pro features verified 2026-05-13 via [clipdrop.co/pricing](https:/
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified 2026-05-13 against [clipdrop.co/pricing](https://clipdrop.co/pricing) and the [Clipdrop tools index](https://clipdrop.co/tools).
+Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-02 against [clipdrop.co/pricing](https://clipdrop.co/pricing) and the [Clipdrop tools index](https://clipdrop.co/tools).
 
 ## FAQ
 

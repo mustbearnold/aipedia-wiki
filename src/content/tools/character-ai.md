@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0 free / $9.99/mo c.ai+"
 status: active
 launched: 2022-09
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-02
+last_verified: 2026-06-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,16 +30,16 @@ facts:
     source: https://character.ai/
     source_label: Character.AI official site
     source_id: character-ai-official
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
   pricing_anchor:
-    value: c.ai+ is $9.99/mo or $94.99/year (20% off vs $119.88), unchanged through May 2026. Verify current bundles before quoting.
+    value: c.ai+ is $9.99/mo or $94.99/year (20% off vs $119.88), re-verified on 2026-06-02. Verify current bundles before quoting.
     source: https://character.ai/subscription/plus/pricing
     source_label: Character.AI c.ai+ pricing
     source_id: character-ai-pricing
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -48,7 +48,7 @@ facts:
     source: https://character.ai/about
     source_label: Character.AI about
     source_id: character-ai-about
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -58,7 +58,7 @@ facts:
     source: https://support.character.ai/
     source_label: Character.AI help center
     source_id: character-ai-support
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -68,12 +68,12 @@ facts:
     source: https://character.ai/
     source_label: Character.AI official site
     source_id: character-ai-official
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
 tags: [ai-chat, roleplay, character, companion, entertainment, creative-writing, community]
-seo_title: "Character AI: Features, Pricing & Review (May 2026)"
+seo_title: "Character AI: Features, Pricing & Review (June 2026)"
 meta_description: "Character AI is the largest AI roleplay platform with 20M+ monthly users. Free tier, c.ai+ at $9.99/mo unlocks better memory, ad-free chats, Charms bonus, unlimited voice calls, no slow mode, and early access to new features."
 author: "aipedia.wiki Editorial"
 best_for:
@@ -103,6 +103,13 @@ price_history:
     source_label: "Source"
     source_id: character-ai-pricing
     note: "20% off vs $119.88 monthly equivalent. Verified May 2026."
+  - date: 2026-06-02
+    plan: "c.ai+"
+    price: "$9.99/mo or $94.99/year"
+    source: "https://character.ai/subscription/plus/pricing"
+    source_label: "Character.AI c.ai+ pricing"
+    source_id: character-ai-pricing
+    note: "Re-verified c.ai+ monthly and annual pricing plus ad-free chats, unlimited voice calls, no slow mode, better memory, early access, and community access."
 ---
 
 # Character AI
@@ -152,7 +159,7 @@ The largest user-generated AI character platform on the internet. Over 10 millio
 | c.ai+ (monthly) | $9.99/mo | Better memory, ad-free, Charms bonus, no slow mode, unlimited voice calls, latest models, early-access features |
 | c.ai+ (annual) | $94.99/year (~$7.92/mo) | Same as monthly, 20% savings vs $119.88 |
 
-Prices verified 2026-05-13 via [character.ai/subscription/plus/pricing](https://character.ai/subscription/plus/pricing).
+Prices verified 2026-06-02 via [character.ai/subscription/plus/pricing](https://character.ai/subscription/plus/pricing).
 
 ## Failure modes
 
@@ -160,11 +167,11 @@ Prices verified 2026-05-13 via [character.ai/subscription/plus/pricing](https://
 - **Content moderation has tightened.** Post-2024 lawsuits, previously-allowed content categories now trigger filters. Users report unexpected blocks on long-running roleplays.
 - **Data handling concerns.** Chats are retained for model training by default. Read the privacy policy before discussing anything sensitive.
 - **Teen user safety history.** Character AI faced lawsuits in 2024-2025 alleging insufficient safeguards for minor users. The platform has added parental controls and time-use notifications, but the reputational overhang remains.
-- **Model does not match frontier quality.** Raw intelligence trails OpenAI frontier models and Claude Opus 4.7. The moat is character library + roleplay tuning, not base model capability.
+- **Model does not match frontier quality.** Raw intelligence trails frontier general-purpose assistants. The moat is character library + roleplay tuning, not base model capability.
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified 2026-05-13 against the [character.ai pricing page](https://character.ai/subscription/plus/pricing) and [StartupHub.ai 2026 review](https://www.startuphub.ai/ai-news/reviews/2026/character-ai-review-2026). Scoring uses the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/).
+Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-02 against the [character.ai pricing page](https://character.ai/subscription/plus/pricing) and [StartupHub.ai 2026 review](https://www.startuphub.ai/ai-news/reviews/2026/character-ai-review-2026). Scoring uses the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/).
 
 ## FAQ
 

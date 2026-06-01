@@ -4,11 +4,11 @@ slug: ai-search
 title: AI Search & Research Tools
 description: AI answer engines, private search, research notebooks, semantic search APIs, and source-backed research assistants.
 tool_count: 8
-seo_title: "Best AI Search and Research Tools (May 2026)"
-meta_description: "Updated May 26, 2026: compare Perplexity, ChatGPT Search, Google AI Mode, Bing AI-guided image search, NotebookLM, Kagi, Exa, You.com, and Grok by citations, privacy, documents, APIs, and buyer fit."
+seo_title: "Best AI Search and Research Tools (June 2026)"
+meta_description: "Updated June 2, 2026: compare Perplexity, Comet, ChatGPT Search, Google AI Mode, Bing AI-guided image search, NotebookLM, Kagi, Exa, You.com, and Grok by citations, privacy, documents, APIs, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-26
-last_verified: 2026-05-26
+last_updated: 2026-06-02
+last_verified: 2026-06-02
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -28,6 +28,8 @@ AI search is not one category anymore. Buyers now choose between **cited answer 
 
 **Use [Perplexity](/tools/perplexity/) when the job is cited open-web answers.** It remains the strongest default for people who want an answer engine with source links, follow-up research, spaces, Pro/Max paths, Enterprise controls, and API surfaces like Sonar, Search API, Agent API, and embeddings.
 
+**Use [Comet](/tools/comet/) when the search workflow should live inside the browser.** Comet is the Perplexity browser lane for users who want AI search, page context, shopping/research help, and everyday web actions closer to tabs instead of a separate answer-engine page.
+
 **Use [ChatGPT](/tools/chatgpt/) when search is only one part of the workflow.** ChatGPT Search is the better Perplexity alternative when the buyer also wants writing, coding, file analysis, images, voice, data analysis, projects, and everyday assistant work.
 
 **Use [Gemini](/tools/gemini/) and Google AI Mode when the buyer already lives in Google.** Google's current AI Mode and AI Overviews updates focus on helping users find relevant websites, deep insights, and original content across the web. Google AI Plans connect Gemini, Deep Research, AI Mode, Workspace, NotebookLM, and Chrome features depending on plan and region.
@@ -45,6 +47,7 @@ AI search is not one category anymore. Buyers now choose between **cited answer 
 | Buyer job | Start with | Why | Watch out |
 |---|---|---|---|
 | Cited open-web answers | [Perplexity](/tools/perplexity/) | Best answer-engine workflow for sources, follow-ups, and research spaces | Pro/Max/Enterprise/API plan details change quickly |
+| AI browser workflow | [Comet](/tools/comet/) | Keeps Perplexity-style assistance closer to tabs, pages, and web tasks | Browser availability and plan packaging can move quickly |
 | General AI workspace with search | [ChatGPT](/tools/chatgpt/) | Search plus writing, files, code, data, image, voice, and projects | Requires source discipline for serious research |
 | Google-native search and research | [Gemini](/tools/gemini/) | AI Mode, AI Overviews, Deep Research, Workspace, NotebookLM, and Chrome fit | Google ecosystem lock-in and regional feature limits |
 | Owned-source research | [NotebookLM](/tools/notebooklm/) | Best for selected PDFs, notes, reports, calls, classes, and Drive material | Not a full web discovery engine |
@@ -88,6 +91,8 @@ Do not leave this category stale. Google AI Mode, Perplexity Pro/Max/Enterprise,
 
 ## Sources
 
+- [Perplexity Comet](https://www.perplexity.ai/comet) (verified 2026-06-02)
+- [Perplexity Pro](https://www.perplexity.ai/pro) (verified 2026-06-02)
 - [Perplexity Enterprise](https://www.perplexity.ai/enterprise) (verified 2026-05-13)
 - [Perplexity API pricing](https://docs.perplexity.ai/docs/getting-started/pricing) (verified 2026-05-13)
 - [Perplexity Enterprise pricing FAQ](https://www.perplexity.ai/help-center/en/articles/10352986-enterprise-pro-pricing-and-billing-frequently-asked-questions) (verified 2026-05-13)

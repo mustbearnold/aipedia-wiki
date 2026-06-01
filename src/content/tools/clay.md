@@ -7,11 +7,11 @@ category: ai-automation
 company: Clay Technologies Inc.
 url: https://clay.com
 pricing_model: freemium
-price_range: "$0-$446+/month; Enterprise custom"
+price_range: "$0; Launch from $167/mo annual or $185/mo monthly; Growth from $446/mo annual or $495/mo monthly; Enterprise custom"
 status: active
 launched: 2021-01
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-02
+last_verified: 2026-06-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,16 +30,16 @@ facts:
     source: "https://www.clay.com"
     source_label: "Clay overview"
     source_id: clay-home
-    verified_at: 2026-05-13
+    verified_at: 2026-06-02
     volatility: low
     confidence: high
   pricing_anchor:
-    value: "Clay's 2026-05-13 pricing lists Free ($0, 500 actions, 100 data credits), Launch from $167/mo (15K actions, 2,500 credits), Growth from $446/mo (40K actions, 6,000 credits), and Enterprise custom (200K+ actions, 100K+ credits, SSO, RBAC, data warehouse syncs). Real cost depends on chosen credits/action volume on each tier."
+    value: "Clay's 2026-06-02 pricing lists Free ($0, 500 actions/mo, 100 data credits), Launch from $167/mo on annual cards or $185/mo monthly (15K actions/mo, 2,500 credits), Growth from $446/mo annual or $495/mo monthly (40K actions/mo, 6,000 credits), and Enterprise custom (200K+ actions/mo, 100K+ credits, SSO, RBAC, data warehouse syncs). Real cost depends on chosen credits/action volume on each tier."
     source: "https://www.clay.com/pricing"
     source_label: "Clay Pricing"
     source_id: clay-official
-    verified_at: 2026-05-13
-    next_review_at: 2026-06-13
+    verified_at: 2026-06-02
+    next_review_at: 2026-09-02
     volatility: high
     confidence: high
   integration_surface:
@@ -47,7 +47,7 @@ facts:
     source: "https://www.clay.com/integrations"
     source_label: "Clay integrations"
     source_id: clay-integrations
-    verified_at: 2026-05-13
+    verified_at: 2026-06-02
     volatility: medium
     confidence: high
   ai_research_agent:
@@ -55,8 +55,8 @@ facts:
     source: "https://www.clay.com/pricing"
     source_label: "Clay Pricing"
     source_id: clay-official
-    verified_at: 2026-05-13
-    next_review_at: 2026-06-13
+    verified_at: 2026-06-02
+    next_review_at: 2026-09-02
     volatility: medium
     confidence: high
   learning_curve:
@@ -64,7 +64,7 @@ facts:
     source: "https://www.clay.com/university"
     source_label: "Clay University"
     source_id: clay-university
-    verified_at: 2026-05-13
+    verified_at: 2026-06-02
     volatility: medium
     confidence: high
   watch_out_for:
@@ -72,12 +72,12 @@ facts:
     source: "https://www.clay.com/pricing"
     source_label: "Clay Pricing"
     source_id: clay-official
-    verified_at: 2026-05-13
+    verified_at: 2026-06-02
     volatility: medium
     confidence: high
 tags: [data-enrichment, sales-automation, lead-generation, gtm-automation, outreach]
-seo_title: "Clay Review (May 2026): GTM Enrichment, Waterfalls, AI Research"
-meta_description: "Clay is a GTM enrichment workspace for waterfalling data providers, running AI account research, and pushing enriched lists into outbound systems. Best for GTM ops, ABM, and signal-based prospecting."
+seo_title: "Clay Review (June 2026): GTM Enrichment, Waterfalls, AI Research"
+meta_description: "Clay is a GTM enrichment workspace for waterfalling data providers, running AI account research, and pushing enriched lists into outbound systems. June 2026 pricing clarifies annual vs monthly starting prices."
 author: "aipedia.wiki Editorial"
 best_for:
   - GTM engineers and sales operations teams
@@ -119,13 +119,20 @@ price_history:
     source_label: "Clay pricing"
     source_id: clay-official
     note: "200K+ actions, 100K+ credits, unlimited audience rows, bulk enrichment, SSO, RBAC, data warehouse syncs."
+  - date: 2026-06-02
+    plan: "Launch / Growth monthly caveat"
+    price: "$167/$446 annual-card starts; $185/$495 monthly starts"
+    source: "https://www.clay.com/pricing"
+    source_label: "Clay pricing"
+    source_id: clay-official
+    note: "Official page shows annual plan-card starts and FAQ monthly starts. Use billing toggle/account flow before quoting total cost."
 ---
 
 # Clay
 
 Clay is a GTM enrichment and automation workspace. Teams use it to waterfall multiple data providers, enrich account/contact records, run AI-assisted research, build signal-based outbound lists, and push enriched data into CRMs or sending tools.
 
-As of May 13, 2026, Clay is AiPedia's best sales-tool pick for teams whose bottleneck is **data quality and workflow logic**, not merely sending emails. It is more powerful than a simple prospecting tool, but it also demands more operational discipline.
+As of June 2, 2026, Clay is AiPedia's best sales-tool pick for teams whose bottleneck is **data quality and workflow logic**, not merely sending emails. It is more powerful than a simple prospecting tool, but it also demands more operational discipline.
 
 ## System Verdict
 
@@ -150,13 +157,13 @@ Skip Clay if you need a simple all-in-one sales platform. [Apollo](/tools/apollo
 
 ## Pricing And Access
 
-Clay's public pricing on 2026-05-13:
+Clay's public pricing on 2026-06-02:
 
 | Plan | Starting price | Actions / mo | Data credits / mo | Notes |
 |---|---|---|---|---|
 | Free | $0 | 500 | 100 | Unlimited seats, multi-provider waterfalls, Claygent, up to 200 rows per table |
-| Launch | $167/mo | 15,000+ | 2,500+ | Phone enrichment, job-change signals, email campaign integrations, recurring enrichment, up to 50K rows per table |
-| Growth | $446/mo | 40,000+ | 6,000+ | CRM auto-sync, HTTP API, webhook automation, web intent signals, 1 ads audience, priority support |
+| Launch | $167/mo annual card; $185/mo monthly FAQ start | 15,000+ | 2,500+ | Phone enrichment, job-change signals, email campaign integrations, recurring enrichment, up to 50K rows per table |
+| Growth | $446/mo annual card; $495/mo monthly FAQ start | 40,000+ | 6,000+ | CRM auto-sync, HTTP API, webhook automation, web intent signals, 1 ads audience, priority support |
 | Enterprise | Custom (annual) | 200,000+ | 100,000+ | Unlimited audience rows, bulk enrichment, SSO, RBAC, data warehouse syncs, 2 ads audiences, dedicated growth strategist |
 
 Launch and Growth scale up from their starting prices as you raise action or credit allocations, so the real buying question is not just the plan tier. Buyers should model:
@@ -169,7 +176,7 @@ Launch and Growth scale up from their starting prices as you raise action or cre
 - CRM and sender integrations
 - whether the team can monitor usage
 
-Credit and action usage can rise quickly when a workflow calls multiple providers and AI research steps for every row. AiPedia recommends prototyping one real outbound workflow on Free or Launch before rolling Clay across a sales team.
+Credit and action usage can rise quickly when a workflow calls multiple providers and AI research steps for every row. AiPedia recommends prototyping one real outbound workflow on Free or Launch before rolling Clay across a sales team. Do not quote the `$167` or `$446` card prices without stating that those are annual-billing starts; the same official page's FAQ lists higher monthly starts.
 
 ## Workflow Fit
 
@@ -225,7 +232,7 @@ Clay pricing and packaging are volatile, so AiPedia treats it as a monthly revie
 
 ## Sources
 
-- [Clay pricing](https://www.clay.com/pricing) (verified 2026-05-13: Free, Launch $167+, Growth $446+, Enterprise custom; action and credit allocations as listed above)
+- [Clay pricing](https://www.clay.com/pricing) (verified 2026-06-02: Free, annual-card Launch $167+, annual-card Growth $446+, FAQ monthly starts $185/$495, Enterprise custom; action and credit allocations as listed above)
 - [Clay integrations](https://www.clay.com/integrations)
 - [Clay University](https://www.clay.com/university)
 - [Clay official site](https://www.clay.com/)

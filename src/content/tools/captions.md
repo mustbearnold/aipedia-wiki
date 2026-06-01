@@ -7,11 +7,11 @@ category: ai-video
 company: Captions AI Inc.
 url: 'https://www.captions.ai'
 pricing_model: freemium
-price_range: "$0-$279.99/month; Enterprise custom"
+price_range: "$0-$69.99/month public self-serve; Enterprise custom"
 status: active
 launched: 2021-01
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-02
+last_verified: 2026-06-02
 update_frequency: weekly
 affiliate:
   has_program: false
@@ -30,16 +30,16 @@ facts:
     source: "https://captions.ai/overview"
     source_label: "Captions overview"
     source_id: captions-overview
-    verified_at: 2026-05-13
+    verified_at: 2026-06-02
     next_review_at: 2026-06-13
     volatility: high
     confidence: high
   pricing_anchor:
-    value: "Captions pricing on 2026-05-13 lists free signup, Pro at $9.99/month, Max at $24.99/month, Scale at $69.99/$139.99/$279.99 per month, and Enterprise custom, with prices reflecting iOS plans only."
+    value: "Captions pricing on 2026-06-02 lists free signup, Pro at $9.99/month, Max at $24.99/month, Scale at $69.99/month with 1,400 credits, and Enterprise custom, with prices reflecting iOS plans only. Older Scale 2x/4x price cards were not rendered in this crawl."
     source: "https://captions.ai/pricing"
     source_label: "Captions pricing"
     source_id: captions-official
-    verified_at: 2026-05-13
+    verified_at: 2026-06-02
     next_review_at: 2026-06-13
     volatility: high
     confidence: high
@@ -48,7 +48,7 @@ facts:
     source: "https://captions.ai/overview"
     source_label: "Captions overview"
     source_id: captions-overview
-    verified_at: 2026-05-13
+    verified_at: 2026-06-02
     next_review_at: 2026-06-13
     volatility: high
     confidence: high
@@ -57,7 +57,7 @@ facts:
     source: "https://captions.ai/pricing"
     source_label: "Captions pricing"
     source_id: captions-official
-    verified_at: 2026-05-13
+    verified_at: 2026-06-02
     next_review_at: 2026-06-13
     volatility: high
     confidence: medium
@@ -72,8 +72,8 @@ not_best_for:
   - cinematic video generation, color grading, or VFX-heavy production
   - enterprise LMS training pipelines that need SCORM export
   - teams that need open API/model control or predictable low-cost video minutes
-seo_title: "Captions.ai Review: Pricing, AI Twin and Social Video (May 2026)"
-meta_description: "Captions.ai is a short-form AI video editor for social creators. Current May 2026 review covers Pro, Max, Scale, AI Twin, AI Creator, AI Lipdub, the Mirage Studio merger, credits, iOS-pricing caveat, and alternatives."
+seo_title: "Captions.ai Review: Pricing, AI Twin and Social Video (June 2026)"
+meta_description: "Captions.ai is a short-form AI video editor for social creators. Current June 2026 review covers Pro, Max, Scale, AI Twin, AI Creator, AI Lipdub, Mirage Studio, credits, iOS-pricing caveat, and alternatives."
 author: aipedia.wiki Editorial
 quick_answer: >-
   Captions.ai is the best-fit pick when the output is short-form social video, not cinematic generation or enterprise avatar training. Pro is for watermark-free editing and captions; Max is where generative AI, AI Twin/custom actors, and chat editing become the real reason to pay; Scale is for teams that need far more credits.
@@ -92,13 +92,13 @@ price_history:
     source_label: "Captions pricing"
     source_id: captions-official
     note: "500 credits/month; AI edit styles, AI-generated video, digital twins/custom AI actors, chat-based editing, generative assets."
-  - date: 2026-05-13
+  - date: 2026-06-02
     plan: "Scale"
-    price: "$69.99-$279.99/mo"
+    price: "$69.99/mo publicly rendered"
     source: "https://captions.ai/pricing"
     source_label: "Captions pricing"
     source_id: captions-official
-    note: "Scale 1x/2x/4x with 1,400/2,800/5,600 credits per month and higher-tier generative models."
+    note: "June 2 crawl re-verified Scale at $69.99/mo with 1,400 credits. Older Scale 2x/4x public price cards were not rendered and should be treated as unverified unless seen in the live account flow."
   - date: 2026-05-08
     plan: "Pro"
     price: "$9.99/mo"
@@ -122,16 +122,16 @@ Captions.ai is a short-form AI video editor for creators and social teams. It is
 
 ## Current Key Facts
 
-- **Current plans:** free signup, Pro, Max, Scale 1x, Scale 2x, Scale 4x, Enterprise.
-- **Current monthly pricing:** Pro $9.99, Max $24.99, Scale $69.99, Scale 2x $139.99, Scale 4x $279.99, Enterprise custom.
+- **Current plans:** free signup, Pro, Max, Scale, Enterprise.
+- **Current monthly pricing:** Pro $9.99, Max $24.99, Scale $69.99, Enterprise custom. Older Scale 2x/4x public price cards did not render in the June 2 crawl, so verify higher usage tiers in the live account flow.
 - **Important caveat:** Captions says all displayed prices are USD and reflect iOS plans only.
 - **Pro includes:** fast fixes, captions in 100+ languages, customizable caption styling, and watermark-free exports.
 - **Max adds:** curated AI Edit styles, AI-generated videos, digital twins/custom AI actors, chat-based editing, 500 credits/month, and generative B-roll/music/sound/image assets.
-- **Scale adds:** 1,400/2,800/5,600 monthly credits depending on the Scale tier, customized usage tiers, and more sophisticated generative AI models.
+- **Scale adds:** 1,400 monthly credits on the public card, customized usage tiers, and more sophisticated generative AI models.
 - **Overview claims:** Captions can transform footage into edited videos, create from prompts, add automatic subtitles, dub voiceovers into 30+ languages, generate music or sound effects, fix eye contact, and create a spokesperson from a selfie or from scratch.
 - **Mirage Studio merger:** Captions has folded Mirage Studio into the main product, consolidating both surfaces under the Captions brand.
 
-Verified against Captions official pages on 2026-05-13.
+Verified against Captions official pages on 2026-06-02.
 
 ## What It Actually Is
 
@@ -158,14 +158,12 @@ The buyer distinction is important. Captions.ai is not the tool to choose when y
 
 ## Pricing
 
-Use [Captions pricing](https://captions.ai/pricing) as the live source before buying. Current public monthly pricing on 2026-05-13:
+Use [Captions pricing](https://captions.ai/pricing) as the live source before buying. Current public monthly pricing on 2026-06-02:
 
 - **Free signup:** available, but advanced features require a subscription.
 - **Pro:** $9.99/month for basic editing, captions in 100+ languages, customizable captions, and watermark-free exports.
 - **Max:** $24.99/month for Pro plus AI Edit styles, AI-generated video, digital twins/custom AI actors, chat-based editing, 500 credits, and generative assets.
 - **Scale:** $69.99/month for 1,400 credits.
-- **Scale 2x:** $139.99/month for 2,800 credits.
-- **Scale 4x:** $279.99/month for 5,600 credits.
 - **Enterprise:** custom pricing with bulk credit discounts, custom seats, dedicated account management, training-data exclusion, onboarding, support, and early access.
 
 Captions states that displayed prices reflect iOS plans only. Verify Android, web, and regional pricing in the app before standardizing a team workflow.
@@ -187,7 +185,7 @@ Captions states that displayed prices reflect iOS plans only. Verify Android, we
 
 ## Methodology
 
-AiPedia refreshed this page on 2026-05-13 using Captions' official overview and pricing pages. The Mirage Studio merger was added to the product scope, eye contact correction and music generation were called out explicitly, prior pricing was reverified against the live page, and dated language was removed. The 2026-05-08 refresh added Scale 2x/4x, the iOS-pricing caveat, and updated credit counts.
+AiPedia refreshed this page on 2026-06-02 using Captions' official overview and pricing pages. The June crawl reverified Pro, Max, Scale, Enterprise, AI Twin, AI Creator, AI Lipdub, the Mirage Studio rename, the iOS-pricing caveat, and Scale's 1,400-credit public card. Older Scale 2x/4x price language was removed from active buyer guidance because it did not render on the current public page.
 
 ## FAQ
 
@@ -195,7 +193,7 @@ AiPedia refreshed this page on 2026-05-13 using Captions' official overview and 
 Captions.ai is best for short-form social video: talking-head edits, captions, AI edits, creator ads, AI Twin/custom actors, translation/lipdub, and mobile-first publishing.
 
 **How much does Captions.ai cost?**
-As of 2026-05-13, Captions lists Pro at $9.99/month, Max at $24.99/month, Scale at $69.99/month, Scale 2x at $139.99/month, Scale 4x at $279.99/month, and Enterprise custom. Displayed prices reflect iOS plans only.
+As of 2026-06-02, Captions lists Pro at $9.99/month, Max at $24.99/month, Scale at $69.99/month, and Enterprise custom on the public pricing page. Displayed prices reflect iOS plans only.
 
 **Which Captions.ai plan should I buy?**
 Most creators should start with Pro for watermark-free editing and captions. Upgrade to Max only if AI-generated videos, AI Twin/custom actors, chat editing, or generative assets are central.
@@ -212,7 +210,7 @@ Captions.ai is better for short-form editing and creator workflows. [HeyGen](/to
 ## Sources
 
 - [Captions.ai overview](https://captions.ai/overview): product scope, AI editing, chat editing, digital twin/custom actor, captions, dubbing, and mobile-workflow claims.
-- [Captions.ai pricing](https://captions.ai/pricing): current Pro, Max, Scale, Scale 2x, Scale 4x, Enterprise pricing, credits, features, and iOS-pricing caveat.
+- [Captions.ai pricing](https://captions.ai/pricing): current Pro, Max, Scale, Enterprise pricing, credits, features, and iOS-pricing caveat.
 
 ## Related
 

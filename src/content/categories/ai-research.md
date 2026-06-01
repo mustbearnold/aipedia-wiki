@@ -4,11 +4,11 @@ slug: ai-research
 title: AI Research Tools
 description: Source-backed AI tools for literature review, paper discovery, citation context, research notebooks, academic search, and evidence synthesis.
 tool_count: 8
-seo_title: "Best AI Research Tools: Elicit, Scite, Semantic Scholar & Perplexity (May 2026)"
-meta_description: "Updated May 31, 2026: Elicit for literature review, Semantic Scholar for free academic search, Scite for citation context, NotebookLM for source-grounded notebooks, Perplexity for cited web research, and GPT-Rosalind for gated life-sciences workflows."
+seo_title: "Best AI Research Tools: Elicit, Scite, Semantic Scholar & Perplexity (June 2026)"
+meta_description: "Updated June 2, 2026: Elicit for literature review, Semantic Scholar for free academic search, Scite for citation context, NotebookLM for source-grounded notebooks, Perplexity for cited web research, Consensus for claim-level Q&A, Connected Papers for graph mapping, and ChatPDF for quick PDF chat."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-31
-last_verified: 2026-05-31
+last_updated: 2026-06-02
+last_verified: 2026-06-02
 update_frequency: monthly
 ---
 
@@ -16,7 +16,7 @@ update_frequency: monthly
 
 AI research tools split into four buyer lanes now: **literature review**, **academic search**, **citation context**, and **source-grounded analysis**. The right purchase depends on whether the user needs to find papers, evaluate citations, analyze a fixed source set, or research current web material outside academic databases.
 
-As of May 13, 2026, **[Elicit](/tools/elicit/)** is AiPedia's best research-workflow pick because it is built around paper discovery, screening, extraction, and evidence tables. **[Semantic Scholar](/tools/semantic-scholar/)** is the free academic-search baseline. **[Scite](/tools/scite/)** is the specialist pick when citation context matters. **[NotebookLM](/tools/notebooklm/)** is best when answers must stay grounded in a chosen source library. **[Perplexity](/tools/perplexity/)** is the best cited-web add-on for current sources, documentation, policy, market, and company research.
+As of June 2, 2026, **[Elicit](/tools/elicit/)** is AiPedia's best research-workflow pick because it is built around paper discovery, screening, extraction, and evidence tables. **[Semantic Scholar](/tools/semantic-scholar/)** is the free academic-search baseline. **[Scite](/tools/scite/)** is the specialist pick when citation context matters. **[NotebookLM](/tools/notebooklm/)** is best when answers must stay grounded in a chosen source library. **[Perplexity](/tools/perplexity/)** is the best cited-web add-on for current sources, documentation, policy, market, and company research. **[Consensus](/tools/consensus/)** and **[Connected Papers](/tools/connected-papers/)** were rechecked for this refresh; **[ChatPDF](/tools/chatpdf/)** remains the quick PDF-chat route, with exact Plus pricing treated as in-app until verified from the public surface.
 
 For budget-conscious research teams running their own pipelines, [Reka Edge 7B](/tools/reka/) is now publicly priced at $0.10 per million input tokens and $0.10 per million output tokens, making it a low-cost extraction or summarization layer to evaluate alongside Elicit's structured workflow.
 
@@ -35,6 +35,7 @@ The wrong move is treating a general chatbot as a research protocol. ChatGPT and
 | Current cited web research | [Perplexity](/tools/perplexity/) | Fast source trails for current web, policy, product, and market questions | Inspect primary sources before citing |
 | Claim-level academic Q&A | [Consensus](/tools/consensus/) | Useful for quick synthesis from peer-reviewed literature | Treat as a starting point, not the conclusion |
 | Visual related-paper mapping | [Connected Papers](/tools/connected-papers/) | Helps map a field and find adjacent or foundational papers | Better for discovery than source evaluation |
+| Single-PDF chat | [ChatPDF](/tools/chatpdf/) | Fastest low-friction way to ask questions about a PDF | Not a full research workflow or citation-quality review layer |
 
 ## What To Buy First
 
@@ -70,8 +71,10 @@ Do not cite generated text. Cite the original source. Do not treat a linked sour
 - [Scite](https://scite.ai/) - verified 2026-05-13.
 - [NotebookLM](https://notebooklm.google/) - verified 2026-05-13.
 - [Perplexity Enterprise](https://www.perplexity.ai/enterprise) - verified 2026-05-13.
-- [Consensus](https://consensus.app/) - verified 2026-05-13.
-- [Connected Papers](https://www.connectedpapers.com/) - verified 2026-05-13.
+- [Consensus](https://consensus.app/) - verified 2026-06-02.
+- [Connected Papers](https://www.connectedpapers.com/) - verified 2026-06-02.
+- [ChatPDF](https://www.chatpdf.com/) - verified 2026-06-02.
+- [ChatPDF backend API docs](https://www.chatpdf.com/docs/api/backend) - verified 2026-06-02.
 - [Reka Edge 7B pricing](https://www.reka.ai/pricing) - verified 2026-05-13.
 - [OpenAI GPT-Rosalind for life sciences research](https://openai.com/index/introducing-gpt-rosalind/) - verified 2026-05-31.
 - [OpenAI Rosalind Biodefense trusted-access expansion](https://openai.com/index/strengthening-societal-resilience-with-rosalind-biodefense/) - verified 2026-05-31.

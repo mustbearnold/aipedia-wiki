@@ -4,11 +4,11 @@ slug: ai-video
 title: AI Video Generation
 description: Current AI video tools for raw model testing, conversational video editing, production workflows, budget social clips, avatar videos, localization, and business training.
 tool_count: 27
-seo_title: "Best AI Video Tools (May 2026): Gemini Omni, Seedance, Kling, Veo & Runway"
-meta_description: "Updated May 24, 2026: compare Gemini Omni, Seedance 2.0, Kling 3.0, Veo 3.1, Hailuo 2.3, Runway, Pika, HeyGen, Synthesia, and Sora sunset caveats by model quality, workflow, pricing, and buyer fit."
+seo_title: "Best AI Video Tools (June 2026): Gemini Omni, Seedance, Kling, Veo & Runway"
+meta_description: "Updated June 2, 2026: compare Gemini Omni, Seedance 2.0, Kling 3.0, Veo 3.1, Hailuo 2.3, Runway, Pika, HeyGen, Synthesia, Captions, Castmagic, and Sora sunset caveats by model quality, workflow, pricing, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-28
-last_verified: 2026-05-24
+last_updated: 2026-06-02
+last_verified: 2026-06-02
 update_frequency: weekly
 top_picks:
   best_overall: seedance
@@ -100,7 +100,7 @@ Do not make a wide comparison table the mobile experience. Mobile buyers need st
 
 **YouTube creator:** use the refreshed [YouTube creators AI guide](/guides/best-ai-for-youtube-creators/) when the buyer needs to choose between Descript editing, ChatGPT scripts, Canva or Midjourney thumbnails, ElevenLabs narration, OpusClip Shorts, and Runway B-roll.
 
-**Long-form repurposing buyer:** use [OpusClip](/tools/opusclip/) when the source is already a podcast, webinar, livestream, interview, or YouTube video and the job is finding clips, adding captions, reframing to 9:16, and scheduling Shorts/Reels/TikTok posts. It is not a text-to-video model; compare it against Descript, Captions, [Castmagic](/tools/castmagic/) (newly tracked May 13, 2026 for podcast-to-clip pipelines), and InVideo before comparing it against Seedance, Kling, Veo, or Runway.
+**Long-form repurposing buyer:** use [OpusClip](/tools/opusclip/) when the source is already a podcast, webinar, livestream, interview, or YouTube video and the job is finding clips, adding captions, reframing to 9:16, and scheduling Shorts/Reels/TikTok posts. It is not a text-to-video model; compare it against Descript, Captions, [Castmagic](/tools/castmagic/) (re-verified June 2, 2026 for podcast-to-content pipelines), and InVideo before comparing it against Seedance, Kling, Veo, or Runway.
 
 ## Review Standard
 
@@ -156,6 +156,8 @@ Yes, but with honest positioning. They are useful for budget testing, effects, o
 - [Pika pricing](https://pika.art/pricing)
 - [OpusClip pricing](https://www.opus.pro/pricing) (verified 2026-05-13)
 - [OpusClip plans and credits](https://help.opus.pro/docs/article/plans-and-credits) (verified 2026-05-13)
+- [Captions pricing](https://captions.ai/pricing) (verified 2026-06-02)
+- [Castmagic pricing](https://www.castmagic.io/pricing) (verified 2026-06-02)
 - [PixVerse Platform model pricing](https://docs.platform.pixverse.ai/model-pricing-796039m0) (verified 2026-05-13)
 - [PixVerse API subscription docs](https://docs.platform.pixverse.ai/how-to-subscribe-api-plans-882969m0) (verified 2026-05-13)
 - [HeyGen pricing](https://www.heygen.com/pricing) (verified 2026-05-13)

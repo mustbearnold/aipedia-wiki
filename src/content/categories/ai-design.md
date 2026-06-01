@@ -5,10 +5,10 @@ title: AI Design & App Building
 description: Current AI design tools and app builders for social creative, product design, design systems, web prototypes, full-stack apps, and Vercel-native UI workflows.
 tool_count: 9
 seo_title: "Best AI Design & App Builder Tools (June 2026)"
-meta_description: "Updated June 1, 2026: compare Canva AI, Figma, Midjourney, Adobe Firefly, Recraft V4, Google Stitch, Lovable, Base44, Bolt.new, and v0 by buyer fit, pricing, workflow, and production risk."
+meta_description: "Updated June 2, 2026: compare Canva AI, Figma, Midjourney, Adobe Firefly, Recraft V4, Google Stitch, Lovable, Base44, Bolt.new, and v0 by buyer fit, pricing, workflow, and production risk."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-01
-last_verified: 2026-05-13
+last_updated: 2026-06-02
+last_verified: 2026-06-02
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -26,7 +26,7 @@ top_picks:
 
 AI design is now two overlapping markets. The first is **visual creation and product design**: brand assets, social posts, presentations, UX mockups, design systems, and stakeholder review. The second is **AI app building**: prompts, screenshots, Figma context, and code turning into web apps, prototypes, deploys, or pull requests.
 
-As of May 13, 2026, start with the job:
+As of June 2, 2026, start with the job:
 
 **Use [Canva](/tools/canva/) when non-designers need finished creative fast.** Canva AI 2.0 is built across Canva's Visual Suite and supports conversational creation, editable layouts, on-brand generation, AI images, AI video, Magic Write, resizing, background tools, and business controls. It is the safest first stop for marketers, creators, teachers, small businesses, and teams that need to publish polished content without a design department.
 
@@ -96,7 +96,7 @@ Bolt.new is token-based. Its public pricing page lists Free, Pro at $25/month, T
 
 v0 is credit and token metered. Its public pricing page lists Free, Team at $30/user/month, Business at $100/user/month, Enterprise custom, plus model token rates for v0 Mini, v0 Pro, v0 Max, and v0 Max Fast.
 
-Canva pricing is more region and plan sensitive in the public experience, and AiPedia could not reliably render a durable pricing table from the official page in this crawl. The safer buyer guidance is to use Canva free to validate workflow fit, then verify Pro, Teams, Business, or Enterprise pricing directly in your region before upgrading.
+Canva pricing is region-sensitive and now presents Free, Pro, Business, and Enterprise paths in the public experience, with AI allowance multipliers and an AI Pass add-on for heavier generation. The safer buyer guidance is to use Canva Free to validate workflow fit, then verify Pro, Business, Enterprise, and AI Pass pricing directly in your region before upgrading.
 
 Midjourney pricing is subscription and generation-capacity based. Its official plans page lists Basic, Standard, Pro, and Mega plan tiers with different monthly or yearly prices and GPU-time limits.
 
@@ -136,7 +136,10 @@ Do not make a wide table the only mobile experience. Mobile buyers need top pick
 
 ## Sources
 
-- [Canva AI](https://www.canva.com/canva-ai/) (verified 2026-05-13)
+- [Canva AI](https://www.canva.com/canva-ai/) (verified 2026-06-02)
+- [Canva pricing](https://www.canva.com/pricing/) (verified 2026-06-02)
+- [Anthropic Claude Design launch](https://www.anthropic.com/news/claude-design-anthropic-labs) (verified 2026-06-02)
+- [Claude pricing](https://claude.com/pricing) (verified 2026-06-02)
 - [Figma pricing](https://www.figma.com/pricing/) (verified 2026-05-13)
 - [Midjourney plans](https://docs.midjourney.com/docs/plans) (verified 2026-05-13)
 - [Adobe Firefly plans](https://www.adobe.com/products/firefly/plans) (verified 2026-05-13)

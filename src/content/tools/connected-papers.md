@@ -7,11 +7,11 @@ category: ai-research
 company: Connected Papers Ltd.
 url: https://connectedpapers.com
 pricing_model: freemium
-price_range: "$0-$3/month"
+price_range: "$0-$10/month billed annually"
 status: active
 launched: 2020-06
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-02
+last_verified: 2026-06-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://www.connectedpapers.com/about"
     source_label: "Connected Papers about"
     source_id: connected-papers-about
-    verified_at: 2026-05-13
+    verified_at: 2026-06-02
     volatility: low
     confidence: high
   pricing_anchor:
@@ -38,8 +38,8 @@ facts:
     source: "https://www.connectedpapers.com/pricing"
     source_label: "Connected Papers pricing"
     source_id: connected-papers-pricing
-    verified_at: 2026-05-13
-    next_review_at: 2026-08-13
+    verified_at: 2026-06-02
+    next_review_at: 2026-09-02
     volatility: high
     confidence: high
   graph_workflow:
@@ -47,7 +47,7 @@ facts:
     source: "https://www.connectedpapers.com/main"
     source_label: "Connected Papers graph search"
     source_id: connected-papers-main
-    verified_at: 2026-05-13
+    verified_at: 2026-06-02
     volatility: medium
     confidence: high
   research_positioning:
@@ -55,7 +55,7 @@ facts:
     source: "https://www.connectedpapers.com/about"
     source_label: "Connected Papers about"
     source_id: connected-papers-about
-    verified_at: 2026-05-13
+    verified_at: 2026-06-02
     volatility: low
     confidence: high
   watch_out_for:
@@ -63,13 +63,13 @@ facts:
     source: "https://www.connectedpapers.com/pricing"
     source_label: "Connected Papers pricing"
     source_id: connected-papers-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-06-02
     volatility: medium
     confidence: high
 tags: [academic-search, research, visualization, citations, paper-graph, literature-review]
-seo_title: "Connected Papers: Visual Research Graph Review (May 2026)"
+seo_title: "Connected Papers: Visual Research Graph Review (June 2026)"
 meta_description: >-
-  Connected Papers builds a visual similarity graph of related academic papers from a single seed paper. Free tier gives 5 graphs/month; Academic plan is $3/month for unlimited. Verified April 2026.
+  Connected Papers builds a visual similarity graph of related academic papers from a single seed paper. Free tier gives 5 graphs/month; Academic is $36/year and Business is $120/year for unlimited graphs. Verified June 2026.
 author: "aipedia.wiki Editorial"
 quick_answer: >-
   Connected Papers generates a visual similarity graph from a single seed paper, revealing the conceptual neighborhood around it. Built on Semantic Scholar's 200M+ index. Pick it for entering unfamiliar fields. Skip it for synthesis or research Q&A.
@@ -97,6 +97,13 @@ price_history:
     source_label: "Source"
     source_id: connected-papers-pricing
     note: "Re-verified unchanged. Free tier still capped at 5 graphs/month; Academic still cheapest paid productivity upgrade in research tooling."
+  - date: 2026-06-02
+    plan: "Free / Academic / Business"
+    price: "$0 / $36 yearly / $120 yearly"
+    source: "https://www.connectedpapers.com/pricing"
+    source_label: "Connected Papers pricing"
+    source_id: connected-papers-pricing
+    note: "Re-verified current public pricing: Free 5 graphs/month; Academic and Business both unlock unlimited graphs, billed $36 and $120 annually respectively."
 ---
 
 # Connected Papers
@@ -105,7 +112,7 @@ Connected Papers Ltd.'s visual academic research graph. Paste a paper by title, 
 
 Built on [Semantic Scholar](/tools/semantic-scholar/)'s index of 200M-plus papers.
 
-Pricing: Free (5 graphs/month), Academic $3/mo billed annually for unlimited.
+Pricing: Free (5 graphs/month), Academic $36/year for unlimited graphs, Business $120/year for unlimited graphs and business/industry use.
 
 ## System Verdict
 
@@ -113,7 +120,7 @@ Pricing: Free (5 graphs/month), Academic $3/mo billed annually for unlimited.
 >
 > **Skip it when you need synthesis, Q&A, or citation sentiment.** Connected Papers finds papers. It does not read them. [Elicit](/tools/elicit/) extracts structured data across hundreds of studies. [Consensus](/tools/consensus/) synthesizes answers from abstracts. [Scite](/tools/scite/) classifies citations as supporting or contrasting.
 >
-> **Who pays which tier:** Free for occasional mapping (5 graphs/month covers casual use), Academic $3/mo billed annually for any PhD student or researcher running multiple reviews. Cheapest upgrade in the research-tool category.
+> **Who pays which tier:** Free for occasional mapping (5 graphs/month covers casual use), Academic at $36/year for students, academics, nonprofits, and personal use, Business at $120/year for business and industry use.
 
 ## Key Facts
 
@@ -125,7 +132,8 @@ Pricing: Free (5 graphs/month), Academic $3/mo billed annually for unlimited.
 | **Prior Works view** | Foundational papers the seed builds on |
 | **Derivative Works view** | Work that built on the seed paper |
 | **Free tier** | 5 graphs/month, no account required |
-| **Academic tier** | $3/mo billed annually, unlimited graphs, export |
+| **Academic tier** | $36/year, unlimited graphs |
+| **Business tier** | $120/year, unlimited graphs for business/industry use |
 | **Export** | Graph image and paper metadata |
 | **Coverage ceiling** | Inherited from Semantic Scholar |
 
@@ -159,9 +167,9 @@ The moat is thin. The similarity algorithm is proprietary but the underlying dat
 |------|-------|-------------|----------|
 | Free | $0 | 5 graphs | Basic graph, Prior/Derivative Works, no account required |
 | Academic | $3/mo (billed annually) | Unlimited | Batch operations, graph export, metadata export |
-| Business | Custom | Unlimited | Team features, institutional licensing |
+| Business | $120/year | Unlimited | Business and industry use |
 
-*Prices verified 2026-05-13 via [Connected Papers pricing](https://www.connectedpapers.com/pricing). Free tier requires no signup. Academic billed annually.*
+*Prices verified 2026-06-02 via [Connected Papers pricing](https://www.connectedpapers.com/pricing). Free tier requires no signup. Academic and Business are billed annually.*
 
 ## Against the alternatives
 
@@ -170,7 +178,7 @@ The moat is thin. The similarity algorithm is proprietary but the underlying dat
 | **Primary output** | Visual similarity graph | Paper list + TLDR | Graph + collaboration |
 | **Underlying corpus** | Semantic Scholar (200M+) | Own index (200M+) | Semantic Scholar + others |
 | **Free tier** | 5 graphs/month | Fully free, forever | Free with account |
-| **Price floor (paid)** | $3/mo Academic | $0 | Free |
+| **Price floor (paid)** | $36/year Academic | $0 | Free |
 | **Team features** | Minimal | None | Built-in |
 | **Graph speed** | Fast | N/A | Slower |
 | **Best viewed as** | Solo field-mapping tool | Free discovery layer | Team literature workflow |
@@ -187,7 +195,7 @@ The moat is thin. The similarity algorithm is proprietary but the underlying dat
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the analysis above. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [Connected Papers pricing](https://www.connectedpapers.com/pricing) and [Semantic Scholar about](https://www.semanticscholar.org/about).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the analysis above. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-02 against [Connected Papers pricing](https://www.connectedpapers.com/pricing), [Connected Papers about](https://www.connectedpapers.com/about), and [Semantic Scholar about](https://www.semanticscholar.org/about).
 
 ## FAQ
 
@@ -197,8 +205,8 @@ Google Scholar shows direct citations. Connected Papers shows conceptual similar
 **Does Connected Papers work for all fields?**
 Coverage strongest in STEM, computer science, and social sciences. Humanities and arts are sparser because the underlying [Semantic Scholar](/tools/semantic-scholar/) index is thinner there.
 
-**Is the Academic plan worth $3/month?**
-For active researchers, yes. The 5 graph/month free cap disappears fast during a real literature review. Academic is the cheapest productivity upgrade in the research-tool category.
+**Is the Academic plan worth it?**
+For active researchers, yes. The 5 graph/month free cap disappears fast during a real literature review. Academic at $36/year is one of the cheapest productivity upgrades in the research-tool category.
 
 **Can I use Connected Papers offline?**
 No. All graph generation runs server-side against Semantic Scholar's index.
