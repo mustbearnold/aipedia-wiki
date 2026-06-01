@@ -13,8 +13,8 @@ pricing_model: open-source
 price_range: Free self-host / $5 per active flow (cloud)
 status: active
 launched: 2022-06
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-01
+last_verified: 2026-06-01
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -37,7 +37,7 @@ facts:
     source: https://github.com/activepieces/activepieces
     source_label: Activepieces GitHub repository
     source_id: activepieces-repository
-    verified_at: '2026-05-04'
+    verified_at: '2026-06-01'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-04'
@@ -47,7 +47,7 @@ facts:
     source: https://www.activepieces.com/pricing
     source_label: Activepieces pricing
     source_id: activepieces-pricing
-    verified_at: '2026-05-04'
+    verified_at: '2026-06-01'
     volatility: high
     confidence: high
     next_review_at: '2026-08-04'
@@ -57,7 +57,7 @@ facts:
     source: https://github.com/activepieces/activepieces
     source_label: Activepieces GitHub repository
     source_id: activepieces-repository
-    verified_at: '2026-05-04'
+    verified_at: '2026-06-01'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-04'
@@ -66,7 +66,7 @@ facts:
     source: https://www.activepieces.com/docs
     source_label: Activepieces docs
     source_id: activepieces-docs
-    verified_at: '2026-05-04'
+    verified_at: '2026-06-01'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-04'
@@ -76,7 +76,7 @@ facts:
     source: https://www.activepieces.com/pricing
     source_label: Activepieces pricing
     source_id: activepieces-pricing
-    verified_at: '2026-05-04'
+    verified_at: '2026-06-01'
     volatility: high
     confidence: high
     next_review_at: '2026-08-04'
@@ -86,16 +86,16 @@ facts:
     source: https://www.activepieces.com/docs
     source_label: Activepieces docs
     source_id: activepieces-docs
-    verified_at: '2026-05-04'
+    verified_at: '2026-06-01'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-04'
 tags: [automation, open-source, zapier-alternative, no-code, workflow, self-hosted, mcp]
-seo_title: 'Activepieces Review: Open-Source Zapier Alternative (May 2026)'
+seo_title: 'Activepieces Review: Open-Source Zapier Alternative (June 2026)'
 meta_description: >-
   Activepieces is an MIT-licensed no-code automation platform with AI agents and
   native MCP support. Free to self-host; cloud Standard free for 10 flows, then
-  $5/flow/month. Verified May 2026.
+  $5/flow/month. Verified June 2026.
 author: aipedia.wiki Editorial
 best_for:
   - teams leaving Zapier on cost
@@ -147,14 +147,14 @@ Two deployment paths: self-host free on your own infrastructure, or use the clou
 |---|---|
 | **License** | MIT (self-host free, unlimited runs) |
 | **Cloud Standard** | 10 active flows free, then $5 per active flow per month |
-| **Connectors ("pieces")** | ~400 (Gmail, Slack, Stripe, HubSpot, Notion, plus LLM providers) |
+| **Connectors ("pieces")** | 700+ integrations on the public site; GitHub release cadence remains active |
 | **MCP servers** | Every piece exposes as MCP automatically |
-| **AI actions** | Native pieces for OpenAI frontier models, Claude Opus 4.7, Gemini 3.1 Pro |
+| **AI actions** | Native pieces for OpenAI, Anthropic Claude, Google Gemini, OpenRouter, vector stores, and agent workflows |
 | **Self-host stack** | Docker Compose, Postgres, Redis |
 | **Code steps** | JavaScript (Node-based) |
 | **Enterprise deploy** | Custom annual contract (SSO, audit, Git sync, private pieces) |
 
-Every data point above was verified against vendor documentation on 2026-05-13. See Sources.
+Every data point above was verified against vendor documentation on 2026-06-01. See Sources.
 
 ## What it actually is
 
@@ -170,7 +170,7 @@ The moats are thin. Code is MIT-licensed, so any competitor can fork. Differenti
 - **Data cannot leave on-prem.** Self-hosted deployment keeps every webhook, payload, and log on infrastructure the team controls.
 - **The agent stack uses MCP.** Pieces expose as MCP servers natively; Claude Desktop or Cursor can invoke them without custom connectors.
 - **The team has Docker and Postgres comfort.** Self-host setup runs in 20 minutes. Updates, backups, and scaling are the team's job.
-- **Workflows need AI actions inline.** Native pieces for OpenAI frontier models, Claude Opus 4.7, and Gemini 3.1 Pro remove boilerplate OpenAI and Anthropic SDK calls.
+- **Workflows need AI actions inline.** Native pieces for OpenAI, Anthropic Claude, Google Gemini, OpenRouter, vector stores, and agent workflows remove boilerplate provider SDK calls.
 
 ## When to pick something else
 
@@ -191,7 +191,7 @@ Pricing via [activepieces.com/pricing](https://www.activepieces.com/pricing):
 | Cloud Unlimited | Custom (annual) | SSO, audit logs, role permissions, centralized AI billing, Git sync, private pieces |
 | Embed | From $30,000/yr | Embedded builder and agents, JS SDK, custom templates, white-label |
 
-*Prices verified 2026-05-13 via [activepieces.com/pricing](https://www.activepieces.com/pricing). Pricing shifted from per-task to per-active-flow in early 2026.*
+*Prices verified 2026-06-01 via [activepieces.com/pricing](https://www.activepieces.com/pricing). Pricing shifted from per-task to per-active-flow in early 2026; the current GitHub releases page shows 0.84.0 shipping on May 29, 2026.*
 
 ## Against the alternatives
 
@@ -199,7 +199,7 @@ Pricing via [activepieces.com/pricing](https://www.activepieces.com/pricing):
 |---|---|---|---|---|
 | **License** | MIT open-source | Proprietary | Sustainable-Use (fair-code) | Proprietary |
 | **Self-host** | Yes, free, unlimited | No | Yes, free | No |
-| **Connector count** | ~400 | 7,000+ | 400+ | 1,500+ |
+| **Connector count** | 700+ listed integrations | 7,000+ | 400+ | 1,500+ |
 | **Native MCP** | Yes, every piece | No | No | No |
 | **Pricing model** | Per active flow | Per task | Per execution | Per operation |
 | **Entry cloud price** | Free (10 flows) | $29.99/mo | $24/mo | Free tier + $9/mo |
@@ -217,7 +217,7 @@ Pricing via [activepieces.com/pricing](https://www.activepieces.com/pricing):
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis shown. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [activepieces.com/pricing](https://www.activepieces.com/pricing) and the [Activepieces GitHub repository](https://github.com/activepieces/activepieces).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis shown. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-01 against [activepieces.com/pricing](https://www.activepieces.com/pricing), the [Activepieces GitHub repository](https://github.com/activepieces/activepieces), and the current releases page.
 
 ## FAQ
 
@@ -233,8 +233,8 @@ Yes. Every piece in the public catalog automatically exposes as a Model Context 
 **Activepieces vs Zapier in 2026?**
 Activepieces wins on cost, self-host option, and native MCP. Zapier wins on connector breadth (7,000+ vs ~400) and hands-off reliability.
 
-**Which AI models ship as native pieces?**
-OpenAI frontier models, Claude Opus 4.7, Gemini 3.1 Pro, plus OpenRouter, vector-store, and agent pieces. Switching provider is a config change.
+**Which AI providers ship as native pieces?**
+OpenAI, Anthropic Claude, Google Gemini, OpenRouter, vector-store, and agent pieces are all represented. Use the live piece catalog for exact model availability because provider model lists change faster than the workflow platform.
 
 ## Sources
 

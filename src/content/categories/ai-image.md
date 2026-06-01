@@ -5,9 +5,9 @@ title: AI Image Generation
 description: Current AI image tools for generation, photo editing, upscaling, product visuals, text-heavy graphics, creative ideation, and commercially safer Adobe workflows.
 tool_count: 18
 seo_title: "Best AI Image Tools & Photo Editors (May 2026)"
-meta_description: "Updated May 24, 2026: compare Midjourney, ChatGPT Images 2.0, Adobe Firefly, Canva, Flux, Ideogram, Recraft, NightCafe, Rodin, and other AI image tools by image quality, photo-editing fit, pricing risk, text rendering, and workflow."
+meta_description: "Updated June 1, 2026: compare Midjourney, ChatGPT Images 2.0, Adobe Firefly, Canva, Flux, Ideogram, Recraft, AdCreative.ai, NightCafe, Rodin, and other AI image tools by image quality, photo-editing fit, paid-media workflow, pricing risk, text rendering, and workflow."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-24
+last_updated: 2026-06-01
 last_verified: 2026-05-13
 update_frequency: weekly
 top_picks:
@@ -27,6 +27,8 @@ top_picks:
 AiPedia verified this category on May 13, 2026 while refreshing the [AI photo-editing buyer guide](/guides/best-ai-for-photo-editing/) and the [Meshy tool page](/tools/meshy/). AI image tools now split into five buyer jobs: aesthetic generation, conversational image editing, finished social/design assets, professional photo-production workflows, and 3D asset generation for games, AR/VR, printing, and prototyping. Note the May 5, 2026 Freepik rebrand to Magnific: shortlist references that previously named Freepik should now point at Magnific.
 
 [Midjourney](/tools/midjourney/) remains the aesthetic ideation benchmark. [ChatGPT](/tools/chatgpt/) and GPT Image 2 are the best default when image generation or editing is part of a broader assistant workflow. [Adobe Firefly](/tools/adobe-firefly/) is the safer first pick for Photoshop, Creative Cloud, Generative Fill, object removal, image expansion, and credit-aware commercial review. [Canva](/tools/canva/) wins when the image needs to become a finished post, ad, thumbnail, product graphic, or presentation asset quickly.
+
+For paid-media image production, [AdCreative.ai](/tools/adcreative/) is a narrow specialist rather than a general image model. The June 1 check found Starter at $39/month, Professional at $249/month, Ultimate at $999/month, Enterprise custom, and a seasonal discount on longer billing cycles. Use it when the image job is ad-variant production, brand-kit workflow, and creative scoring, not art direction.
 
 Flux by Black Forest Labs remains the power-user and self-hosting choice, with a strong LoRA and ComfyUI ecosystem. Ideogram is still a strong pick for English-first logos and marketing text. Leonardo AI offers one of the easiest free entry points. [Meshy](/tools/meshy/) is the 3D specialist to shortlist when the buyer needs a generated asset, not a flat image; its May 2026 risk is credit math and Free-plan download limits around Meshy 6 output.
 
@@ -106,5 +108,6 @@ Image generation is approaching commodity. The real differentiation is workflow 
 - [Meshy pricing](https://www.meshy.ai/pricing) (verified 2026-05-13)
 - [Meshy credit usage help](https://help.meshy.ai/en/articles/10000507-how-many-credits-does-each-generation-task-cost) (verified 2026-05-13)
 - [Recraft V4 docs](https://www.recraft.ai/docs/recraft-models/recraft-V4) (verified 2026-05-24)
+- [AdCreative.ai official site](https://www.adcreative.ai/) (verified 2026-06-01)
 - [NightCafe pricing](https://creator.nightcafe.studio/pricing) (verified 2026-05-24)
 - [Rodin pricing](https://hyper3d.ai/pricing) (verified 2026-05-24)

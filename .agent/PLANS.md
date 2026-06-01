@@ -1278,3 +1278,31 @@ The old Lindy page contained stale credit/free-tier claims; replace them with cu
 2026-05-27: Plan created after confirming an existing Lindy page, live logo, stale affiliate/no-link metadata, and current May 2026 Lindy pricing, usage, security, integrations, and PartnerStack program facts.
 2026-05-27: Rewrote `/tools/lindy/` around the live affiliate link, current 7-day trial/Plus/Pro/Max pricing, usage limits, security, integrations, alternatives, FAQ, and source list. Added `/compare/lindy-vs-zapier-vs-n8n/` and `/guides/best-ai-personal-assistant-for-work/`, updated the AI automation category and automation-platform guide to route buyers into those pages, patched `ToolLayout.astro` so `primary_cta_label` reaches hero/footer/sticky CTAs, updated the Lindy registry affiliate metadata, and added Lindy routes to the commercial CTA audit.
 2026-05-27: Verification completed. Passed logo manifest/audit, OG generation/optimization, page ledger regeneration and check, link/news checks, script tests, guard checks, `build:fast`, full `check`, `git diff --check`, standalone commercial CTA audit against `dist-fast`, in-app browser smoke on `/tools/lindy/`, and 40 static/mobile QA checks across 8 affected routes at 360, 390, 430, 768, and 1024 px.
+
+---
+
+## ExecPlan: Oldest Active Tool Page Refresh Slice, June 1
+
+### 1. Objective
+
+Refresh the next oldest active tool-page slice to god-tier 10/10 buyer quality for June 1, 2026, while excluding dead tool pages and individual news article pages.
+
+### 2. Scope
+
+Included: `/tools/activepieces/`, `/tools/ada/`, `/tools/adcreative/`, `/tools/ag2/`, `/tools/ahrefs/`, `/tools/aiva/`, `/tools/amplemarket/`, `/tools/anythingllm/`, `/tools/apollo/`, `/tools/assemblyai/`, `/tools/base44/`, `/tools/beautiful-ai/`, `/tools/bolt/`, `/tools/boomy/`, `/tools/browserbase/`, affected category hubs, `/tools/`, `/categories/`, homepage metadata, LLM crawl surfaces, source registry dates, and `PAGE_REFRESH_LEDGER.md`.
+
+Excluded: dead tool pages, individual news article pages, unrelated comparison rebuilds, broad template redesign, and unsupported model-version or pricing claims.
+
+### 3. Implementation Steps
+
+1. Verify June 2026 volatile facts from current official/vendor sources and release pages.
+2. Refresh each active tool page with current pricing, model/release, buyer-fit, watch-out, source, and verification language.
+3. Update affected parent category hubs and top-layer crawl/catalog surfaces without creating thin new pages.
+4. Update source-registry `last_checked` fields for the source IDs used in this slice.
+5. Regenerate the page ledger, run content/link/build checks, perform mobile static QA, then commit and push `master`.
+
+### 4. Progress Log
+
+2026-06-01: Verified current June 2026 facts for the 15-page active-tool slice from official pricing, product, docs, and release surfaces. Refreshed the tool pages and affected automation, SEO, music, chatbots, voice, design, image, presentation, coding, and infrastructure category hubs. Source registry and top-layer catalog/LLM metadata updates are in progress before ledger regeneration and QA.
+
+2026-06-01: Regenerated `PAGE_REFRESH_LEDGER.md` and completed validation. Passing commands: `npm run ledger:pages`, `npm run ledger:pages:check`, `git diff --check`, `npm run check:news`, `npm run check:links`, `npm run test:scripts`, `npm run build:fast`, `npm run check`, and static Playwright QA for 30 refreshed routes at 360, 390, 430, 768, and 1024 px. No dead tool pages or individual news article pages were edited.

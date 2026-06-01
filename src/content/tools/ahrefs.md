@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$29-$1,499/month"
 status: active
 launched: 2011-01
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-01
+last_verified: 2026-06-01
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://ahrefs.com/site-explorer"
     source_label: "Ahrefs Site Explorer"
     source_id: ahrefs-site-explorer
-    verified_at: 2026-05-13
+    verified_at: 2026-06-01
     volatility: low
     confidence: high
   pricing_anchor:
@@ -38,7 +38,7 @@ facts:
     source: "https://ahrefs.com/pricing"
     source_label: "Ahrefs pricing"
     source_id: ahrefs-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-06-01
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -47,7 +47,7 @@ facts:
     source: "https://ahrefs.com/site-explorer"
     source_label: "Ahrefs Site Explorer"
     source_id: ahrefs-site-explorer
-    verified_at: 2026-05-13
+    verified_at: 2026-06-01
     volatility: medium
     confidence: high
   ai_visibility:
@@ -55,7 +55,7 @@ facts:
     source: "https://ahrefs.com/brand-radar"
     source_label: "Ahrefs Brand Radar"
     source_id: ahrefs-brand-radar
-    verified_at: 2026-05-13
+    verified_at: 2026-06-01
     next_review_at: 2026-08-13
     volatility: medium
     confidence: high
@@ -64,12 +64,12 @@ facts:
     source: "https://ahrefs.com/pricing"
     source_label: "Ahrefs pricing"
     source_id: ahrefs-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-06-01
     volatility: medium
     confidence: high
 tags: [seo, backlinks, keyword-research, site-audit, content-explorer, rank-tracker, brand-radar, ai-content-helper, ai-visibility]
-seo_title: "Ahrefs: Features, Pricing & Review (May 2026)"
-meta_description: "Ahrefs runs the largest backlink index in SEO with Site Explorer, Keywords Explorer, Site Audit, Rank Tracker, and Content Explorer. Plans $29-$1,499/mo. Brand Radar tracks AI visibility across 6 platforms; Content Kit and Report Builder are $99/mo add-ons."
+seo_title: "Ahrefs: Features, Pricing & Review (June 2026)"
+meta_description: "Ahrefs runs the largest backlink index in SEO with Site Explorer, Keywords Explorer, Site Audit, Rank Tracker, and Content Explorer. Plans $29-$1,499/mo. Brand Radar now cites 395M+ monthly prompts; Content Kit and Report Builder are $99/mo add-ons."
 author: aipedia.wiki Editorial
 best_for:
   - link builders
@@ -104,6 +104,13 @@ price_history:
     source_label: "Source"
     source_id: ahrefs-pricing
     note: "AI Content Helper rebranded to Content Kit ($99); Report Builder ($99), Project Boost Pro ($20/project) and Max ($200/project) added; per-seat add-ons formalised at $40-$80/user."
+  - date: 2026-06-01
+    plan: "Brand Radar"
+    price: "$199 per index / $699 all indexes"
+    source: "https://ahrefs.com/brand-radar"
+    source_label: "Ahrefs Brand Radar"
+    source_id: ahrefs-brand-radar
+    note: "Brand Radar product page now cites 395M+ total monthly prompts, including Google AI Mode alongside AI Overviews, ChatGPT, Copilot, Gemini, Perplexity, and Grok."
 ---
 
 # Ahrefs
@@ -111,6 +118,7 @@ price_history:
 ## Recent changes
 
 - **May 13, 2026:** Add-on lineup formalised. AI Content Helper rebranded to **Content Kit** ($99/mo, now bundling Helper, Grader, and Inventory). New **Report Builder** ($99/mo), **Project Boost Pro/Max** ($20-$200/project), and Custom Prompt Packages ($50-$250/mo) joined Brand Radar. Per-seat fees standardised at +$40 (Lite), +$60 (Standard), +$80 (Advanced) per extra user.
+- **June 1, 2026:** Brand Radar page now cites 395M+ total monthly prompts, up from the 320M+ prompt pool used in the May review, and exposes Google AI Mode as a named index next to AI Overviews, ChatGPT, Copilot, Gemini, Perplexity, and Grok.
 
 Ahrefs runs the industry's deepest backlink index with Site Explorer, Keywords Explorer, Site Audit, Rank Tracker, and Content Explorer built on top. The Starter plan at $29/mo landed January 2026, pulling entry pricing down 70% from the old Lite-only floor.
 
@@ -131,7 +139,7 @@ Brand Radar tracks brand appearances across ChatGPT, Perplexity, Gemini, Copilot
 | **Core tools** | Site Explorer · Keywords Explorer · Site Audit · Rank Tracker · Content Explorer |
 | **Backlink index** | Largest in SEO · refreshed continuously for active crawl targets |
 | **Brand Radar coverage** | ChatGPT · Perplexity · Gemini · Copilot · Google AI Overviews · Google AI Mode |
-| **Brand Radar prompt pool** | 320M+ search-backed prompts sourced from People Also Ask |
+| **Brand Radar prompt pool** | 395M+ total monthly prompts across AI and search-answer indexes |
 | **Content Kit** | Bundles AI Content Helper, Content Grader, and Content Inventory · $99/mo |
 | **Keyword coverage** | Google · YouTube · Amazon · Bing · 10+ search engines |
 | **Starter limits** | 1 project · 750 tracked keywords · 1 user · restricted report depth |
@@ -140,7 +148,7 @@ Brand Radar tracks brand appearances across ChatGPT, Perplexity, Gemini, Copilot
 | **Per-seat fees** | +$40/user (Lite) · +$60/user (Standard) · +$80/user (Advanced) |
 | **Annual billing** | 2 months free (~17% savings) |
 
-Every data point above was verified against vendor sources on 2026-05-13. See Sources.
+Every data point above was verified against vendor sources on 2026-06-01. See Sources.
 
 ## What it actually is
 
@@ -148,7 +156,7 @@ An SEO platform from Ahrefs Pte. Ltd., founded by Dmitry Gerasimenko in Singapor
 
 Five tools drive daily use. Site Explorer reveals any domain's full backlink profile, organic keywords, top pages, and estimated traffic. Keywords Explorer supplies difficulty scores, volume, click metrics, and SERP overviews with backlink counts for ranking pages. Site Audit crawls your own properties for technical SEO issues. Rank Tracker handles daily position monitoring with desktop and mobile splits. Content Explorer indexes the most linked and shared pages on any topic.
 
-Two AI-era add-ons matter for 2026. [Brand Radar](https://ahrefs.com/brand-radar) monitors how brands appear across six AI platforms plus YouTube, TikTok, and Reddit, using a 320M+ pool of search-backed prompts. **Content Kit** (rebranded from AI Content Helper, now $99/mo bundled with Content Grader and Content Inventory) grades draft pages against top-ranking competitors, detects multi-intent searches, and includes an Ask AI rewriter inside the content editor. A separate **Report Builder** add-on ($99/mo, 50 reports, 500 widgets) handles white-label client reporting.
+Two AI-era add-ons matter for 2026. [Brand Radar](https://ahrefs.com/brand-radar) monitors how brands appear across AI answer surfaces plus YouTube, TikTok, and Reddit, using a 395M+ monthly prompt/index pool. **Content Kit** (rebranded from AI Content Helper, now $99/mo bundled with Content Grader and Content Inventory) grades draft pages against top-ranking competitors, detects multi-intent searches, and includes an Ask AI rewriter inside the content editor. A separate **Report Builder** add-on ($99/mo, 50 reports, 500 widgets) handles white-label client reporting.
 
 The moat is the index itself. The Starter tier at $29/mo (launched January 2026) broadened access but carries real report-depth limits; serious work still requires Lite or above. Per-seat add-ons ($40 to $80 per user above Lite) and Project Boost packages ($20 to $200/month per project for elevated crawl and refresh rates) reward teams that price the full deployment cost up front.
 
@@ -193,7 +201,7 @@ Subscription pricing via [ahrefs.com/pricing](https://ahrefs.com/pricing). Annua
 | Project Boost Max | $200/project | Maximum crawl and refresh capacity per tracked project |
 | Custom Prompts (Basic/Growth/Scale) | $50 / $100 / $250 | Bring-your-own prompt monitoring tiers for Brand Radar |
 
-*Prices verified 2026-05-13 via [ahrefs.com/pricing](https://ahrefs.com/pricing), [Brand Radar product page](https://ahrefs.com/brand-radar), and [January 2026 features update](https://ahrefs.com/blog/new-features-january-2026/). Annual billing is 2 months free (approximately 17% savings).*
+*Prices verified 2026-06-01 via [ahrefs.com/pricing](https://ahrefs.com/pricing), [Brand Radar product page](https://ahrefs.com/brand-radar), and [January 2026 features update](https://ahrefs.com/blog/new-features-january-2026/). Annual billing is 2 months free (approximately 17% savings).*
 
 ## Against the alternatives
 
@@ -220,7 +228,7 @@ Subscription pricing via [ahrefs.com/pricing](https://ahrefs.com/pricing). Annua
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [ahrefs.com/pricing](https://ahrefs.com/pricing), [Brand Radar product page](https://ahrefs.com/brand-radar), [January 2026 features update](https://ahrefs.com/blog/new-features-january-2026/), and [About Brand Radar help doc](https://help.ahrefs.com/en/articles/11064852-about-brand-radar).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-01 against [ahrefs.com/pricing](https://ahrefs.com/pricing), [Brand Radar product page](https://ahrefs.com/brand-radar), [January 2026 features update](https://ahrefs.com/blog/new-features-january-2026/), and [About Brand Radar help doc](https://help.ahrefs.com/en/articles/11064852-about-brand-radar).
 
 ## FAQ
 
@@ -228,7 +236,7 @@ This page was produced by the aipedia.wiki editorial pipeline, an automated syst
 For a single solo blog or hobby site, yes. The $29/mo tier covers Site Explorer and Keywords Explorer basics with 750 tracked keywords and 1 project. Link building at scale requires Lite at $129/mo for deeper reports and multi-project support.
 
 **What does Brand Radar actually track?**
-Brand appearances across ChatGPT, Perplexity, Gemini, Copilot, Google AI Overviews, and Google AI Mode, plus YouTube, TikTok, and Reddit. Uses a 320M+ prompt pool derived from People Also Ask queries. Pricing runs $199/mo per AI platform or $699/mo for the full bundle.
+Brand appearances across ChatGPT, Perplexity, Gemini, Copilot, Google AI Overviews, Google AI Mode, and Grok, plus YouTube, TikTok, and Reddit. Ahrefs now cites 395M+ total monthly prompts. Pricing runs $199/mo per AI platform/index or $699/mo for the full bundle.
 
 **What is Content Kit?**
 A $99/mo add-on that bundles AI Content Helper (content grading vs top-ranking competitors, multi-intent detection, Ask AI rephrase/summarize), Content Grader, and Content Inventory in a single line item. The Helper-only branding was retired in 2026 when Ahrefs consolidated content tooling. Not included in the base subscription on any tier.

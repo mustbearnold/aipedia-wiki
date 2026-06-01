@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: "EUR 0-33/month"
 status: active
 launched: 2016-02
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-01
+last_verified: 2026-06-01
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -33,7 +33,7 @@ facts:
     source: https://www.aiva.ai/
     source_label: AIVA official site
     source_id: aiva-official
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-01'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -42,7 +42,7 @@ facts:
     source: https://www.aiva.ai/pricing
     source_label: AIVA pricing
     source_id: aiva-pricing
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-01'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -51,7 +51,7 @@ facts:
     source: https://www.aiva.ai/
     source_label: AIVA official site
     source_id: aiva-official
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-01'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -60,7 +60,7 @@ facts:
     source: https://www.aiva.ai/legal/terms
     source_label: AIVA terms
     source_id: aiva-terms
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-01'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -70,12 +70,12 @@ facts:
     source: https://www.aiva.ai/help
     source_label: AIVA help
     source_id: aiva-help
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-01'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
 tags: [ai-music, music-generation, orchestral, cinematic, classical, midi, composition, film-scoring]
-seo_title: "AIVA: Features, Pricing & Review (May 2026)"
+seo_title: "AIVA: Features, Pricing & Review (June 2026)"
 meta_description: >-
   AIVA generates classical, orchestral, and cinematic music with MIDI and stem export for DAW
   editing. Free tier (MP3+MIDI, 3 downloads/mo), Standard EUR 11/mo annual, Pro EUR 33/mo annual.
@@ -113,18 +113,18 @@ price_history:
     note: "Standard tier verified. Annual effective rate ~$11/mo."
   - date: 2026-05-13
     plan: "Pro"
-    price: "EUR 33/mo (monthly), ~EUR 22/mo (annual, 33% off)"
+    price: "EUR 33/mo when billed annually"
     source: "https://www.aiva.ai/pricing"
     source_label: "Source"
     source_id: aiva-pricing
-    note: "Re-verified May 2026. Pricing is EUR-denominated on the live page. Pro grants full copyright ownership, 300 downloads/mo, 5:30 max track length, WAV/MP3/MIDI/stems."
+    note: "Re-verified June 2026. Pricing is EUR-denominated on the live annual page. Pro grants full copyright ownership, 300 downloads/mo, 5:30 max track length, WAV/MP3/MIDI/stems."
   - date: 2026-05-13
     plan: "Standard"
-    price: "EUR 15/mo (monthly), ~EUR 11/mo (annual, 26% off)"
+    price: "EUR 11/mo when billed annually"
     source: "https://www.aiva.ai/pricing"
     source_label: "Source"
     source_id: aiva-pricing
-    note: "Re-verified May 2026. Standard track length now 5 min (extended from 3 min). 15 downloads/mo. Monetization limited to YouTube, Twitch, TikTok, Instagram."
+    note: "Re-verified June 2026. Standard track length is 5 min, with 15 downloads/mo. Monetization limited to YouTube, Twitch, TikTok, Instagram."
   - date: 2026-05-13
     plan: "Free"
     price: "EUR 0"
@@ -132,6 +132,13 @@ price_history:
     source_label: "Source"
     source_id: aiva-pricing
     note: "Re-verified May 2026. Free tier exports MP3 and MIDI (MIDI no longer paywalled), 3 downloads/mo, 3 min max track length, non-commercial only, AIVA attribution required."
+  - date: 2026-06-01
+    plan: "Free / Standard / Pro"
+    price: "EUR 0 / EUR 11 annual effective / EUR 33 annual effective"
+    source: "https://www.aiva.ai/pricing"
+    source_label: "AIVA pricing"
+    source_id: aiva-pricing
+    note: "Rechecked against the live pricing page. Free remains 3 downloads/month with MP3+MIDI; Standard remains EUR 11/month annual; Pro remains EUR 33/month annual with full copyright ownership and 300 downloads/month."
 ---
 
 # AIVA
@@ -142,11 +149,11 @@ AIVA Technologies is Luxembourg-based. The engine was registered as a composer w
 
 ## System Verdict
 
-> **Pick AIVA when you need MIDI and orchestral stems to edit inside a DAW.** No other mainstream AI music tool hands back an editable score the way AIVA does. Film, game, trailer, and library-music composers who want a draft to customize rather than a finished vocal track get the most out of it. The May 2026 pricing page now ships MIDI export on the Free tier (still capped at 3 downloads/mo and non-commercial), which lowers the bar for evaluation.
+> **Pick AIVA when you need MIDI and orchestral stems to edit inside a DAW.** No other mainstream AI music tool hands back an editable score the way AIVA does. Film, game, trailer, and library-music composers who want a draft to customize rather than a finished vocal track get the most out of it. The June 2026 pricing page still ships MIDI export on the Free tier (capped at 3 downloads/mo and non-commercial), which lowers the bar for evaluation.
 >
-> **Skip AIVA for vocals, lyrics, or pop production.** The catalog is instrumental. [Suno](/tools/suno/) and [Udio](/tools/udio/) are built for songs with vocals. [Mubert](/tools/mubert/) wins for royalty-safe ambient loops. [Stable Audio](/tools/stable-audio/) covers sound-design and loop generation with a public API. AIVA has no public API as of May 2026.
+> **Skip AIVA for vocals, lyrics, or pop production.** The catalog is instrumental. [Suno](/tools/suno/) and [Udio](/tools/udio/) are built for songs with vocals. [Mubert](/tools/mubert/) wins for royalty-safe ambient loops. [Stable Audio](/tools/stable-audio/) covers sound-design and loop generation with a public API. AIVA has no public API as of June 2026.
 >
-> **Who pays which tier:** Free covers hobbyists testing the engine (non-commercial, 3 downloads/mo, MP3 and MIDI). Standard at EUR 15/mo (or ~EUR 11/mo annual) unlocks 15 downloads, 5 min tracks, and monetization on YouTube, Twitch, TikTok, and Instagram. Pro at EUR 33/mo (or ~EUR 22/mo annual) adds full copyright ownership, WAV plus stems, 300 monthly downloads, and 5:30 track length.
+> **Who pays which tier:** Free covers hobbyists testing the engine (non-commercial, 3 downloads/mo, MP3 and MIDI). Standard at EUR 11/mo when billed annually unlocks 15 downloads, 5 min tracks, and monetization on YouTube, Twitch, TikTok, and Instagram. Pro at EUR 33/mo when billed annually adds full copyright ownership, WAV plus stems, 300 monthly downloads, and 5:30 track length.
 
 ## Key Facts
 
@@ -165,7 +172,7 @@ AIVA Technologies is Luxembourg-based. The engine was registered as a composer w
 | **Vocals / lyrics** | None (instrumental only) |
 | **Company** | AIVA Technologies, Luxembourg. SACEM-registered composer since 2017 |
 
-Every data point above was verified against vendor documentation on 2026-05-13. See Sources.
+Every data point above was verified against vendor documentation on 2026-06-01. See Sources.
 
 ## What it actually is
 
@@ -193,15 +200,15 @@ The web editor runs a piano-roll preview, instrument track muting, and light re-
 
 ## Pricing
 
-Subscription pricing via [aiva.ai/pricing](https://www.aiva.ai/pricing). Pricing is EUR-denominated. Annual billing knocks 26% off Standard and 33% off Pro.
+Subscription pricing via [aiva.ai/pricing](https://www.aiva.ai/pricing). Pricing is EUR-denominated. The June static page exposes annual effective pricing clearly; buyers should use the live toggle for monthly checkout numbers.
 
-| Plan | Monthly | Annual (effective/mo) | Downloads/mo | Track length | Formats | Commercial rights | Who's it for |
-|------|---------|-----------------------|--------------|--------------|---------|-------------------|--------------|
-| Free | EUR 0 | EUR 0 | 3 | Up to 3 min | MP3, MIDI | Non-commercial only, AIVA attribution required | Hobbyists testing the engine |
-| Standard | EUR 15 | ~EUR 11 | 15 | Up to 5 min | MP3, MIDI | Platform monetization (YouTube, Twitch, TikTok, Instagram); AIVA retains copyright | Creators needing platform-monetized tracks |
-| Pro | EUR 33 | ~EUR 22 | 300 | Up to 5:30 min | MP3, WAV, MIDI, stems | Full copyright ownership | **Professional composers and production houses** |
+| Plan | Annual effective/mo | Downloads/mo | Track length | Formats | Commercial rights | Who's it for |
+|------|---------------------|--------------|--------------|---------|-------------------|--------------|
+| Free | EUR 0 | 3 | Up to 3 min | MP3, MIDI | Non-commercial only, AIVA attribution required | Hobbyists testing the engine |
+| Standard | EUR 11 | 15 | Up to 5 min | MP3, MIDI | Platform monetization (YouTube, Twitch, TikTok, Instagram); AIVA retains copyright | Creators needing platform-monetized tracks |
+| Pro | EUR 33 | 300 | Up to 5:30 min | MP3, WAV, MIDI, stems | Full copyright ownership | **Professional composers and production houses** |
 
-*Prices verified 2026-05-13 via [AIVA pricing](https://www.aiva.ai/pricing). The Free tier now includes MIDI download alongside MP3 (previously MP3-only). Standard track length lifted from 3 min to 5 min. Educational and enterprise licenses are quoted separately.*
+*Prices verified 2026-06-01 via [AIVA pricing](https://www.aiva.ai/pricing). The Free tier includes MIDI download alongside MP3. Standard supports 5-minute tracks. Educational and enterprise licenses are quoted separately.*
 
 The Pro tier remains the only one that makes sense for a working media composer. Standard retains copyright with AIVA and only grants monetization rights on social platforms. That distinction matters for sync licensing and library-music resale.
 
@@ -223,7 +230,7 @@ The Pro tier remains the only one that makes sense for a working media composer.
 - **No vocals, ever.** AIVA is strictly instrumental. Users looking for lyrics or sung melodies need a different tool.
 - **Output outside orchestral styles is weaker.** Jazz, electronic, and experimental presets exist, but the model was trained heavily on Western classical. Results outside that corpus feel thinner.
 - **Standard tier does not grant copyright.** Only Pro hands over full ownership. Users on Standard publishing library music can run into sync-license issues.
-- **No public API.** AIVA has not shipped a developer API as of May 2026. Automation-first workflows cannot integrate it cleanly.
+- **No public API.** AIVA has not shipped a developer API as of June 2026. Automation-first workflows cannot integrate it cleanly.
 - **MIDI needs a DAW to sound good.** AIVA's rendered preview uses stock samples. To ship studio-quality audio, users import the MIDI into a DAW and trigger a real orchestral sample library. That is the intended workflow, not a defect, but it surprises users expecting a finished master.
 - **Custom style training needs quality references.** Uploading low-variety reference material produces narrow output models. Training works, but needs curated input.
 - **Monthly download caps on free and Standard tiers.** Heavy users on Standard hit the cap before Pro's longer lengths and wider format set start to bite.
@@ -231,7 +238,7 @@ The Pro tier remains the only one that makes sense for a working media composer.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-05-13 against [aiva.ai](https://www.aiva.ai), [aiva.ai/pricing](https://www.aiva.ai/pricing), and [blog.aiva.ai](https://blog.aiva.ai).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-01 against [aiva.ai](https://www.aiva.ai), [aiva.ai/pricing](https://www.aiva.ai/pricing), and [blog.aiva.ai](https://blog.aiva.ai).
 
 ## FAQ
 
@@ -242,7 +249,7 @@ Yes. The Free tier is EUR 0 and exports MP3 plus MIDI tracks up to 3 minutes, ca
 No. AIVA is instrumental-only. For vocal songs with lyrics, [Suno](/tools/suno/) or [Udio](/tools/udio/) are the right tools.
 
 **Does AIVA export MIDI?**
-Yes. As of May 2026, every tier including Free can export MIDI. Pro adds WAV and stems on top. This is AIVA's headline differentiator against Suno and Udio, which deliver rendered audio only.
+Yes. As of June 2026, every tier including Free can export MIDI. Pro adds WAV and stems on top. This is AIVA's headline differentiator against Suno and Udio, which deliver rendered audio only.
 
 **Who owns the music I create?**
 On the Pro tier, the user owns full copyright of outputs, including commercial and sync rights. On Standard, AIVA retains copyright but grants monetization rights on YouTube, Twitch, TikTok, and Instagram. On Free, outputs are non-commercial only and AIVA attribution is required.
@@ -251,7 +258,7 @@ On the Pro tier, the user owns full copyright of outputs, including commercial a
 Yes. Pro users can upload reference MIDI or audio files to train a custom style model. The engine then composes new tracks in that style.
 
 **Does AIVA have a public API?**
-No. As of May 2026, AIVA does not ship a developer API. Automation-first workflows need a different tool.
+No. As of June 2026, AIVA does not ship a developer API. Automation-first workflows need a different tool.
 
 **AIVA vs Suno, which one should I use?**
 Different jobs. AIVA is a composition engine for orchestral and cinematic work, exporting MIDI and stems into a DAW. [Suno](/tools/suno/) is a song generator built for pop tracks with vocals, returning rendered audio. Most professional media composers use AIVA; most YouTube creators and hobbyists reach for Suno.

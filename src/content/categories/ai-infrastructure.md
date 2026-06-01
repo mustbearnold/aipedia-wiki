@@ -4,10 +4,10 @@ slug: ai-infrastructure
 title: AI Infrastructure & Model APIs
 description: Developer platforms for LLM routing, pay-as-you-go model APIs, hosted inference, serverless GPUs, vector databases, speech APIs, and production retrieval systems.
 tool_count: 12
-seo_title: "Best AI Infrastructure & Model API Tools (May 2026)"
-meta_description: "Updated May 31, 2026: compare OpenRouter after its $113M Series B, OpenAI API, Claude API, Gemini API, Mistral 3, Groq, Replicate, fal, Deepgram, Pinecone, Weaviate, Qdrant, and LM Studio, with CoreWeave, GPT-Rosalind, and agent-security signals."
+seo_title: "Best AI Infrastructure & Model API Tools (June 2026)"
+meta_description: "Updated June 1, 2026: compare OpenRouter after its $113M Series B, OpenAI API, Claude API, Gemini API, Mistral 3, Groq, Replicate, fal, Browserbase, Deepgram, Pinecone, Weaviate, Qdrant, and LM Studio, with CoreWeave, GPT-Rosalind, and agent-security signals."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-31
+last_updated: 2026-06-01
 last_verified: 2026-05-31
 update_frequency: weekly
 top_picks:
@@ -38,6 +38,8 @@ The late-May infrastructure update is agent control. CoreWeave's [training-to-in
 
 **Use [Replicate](/tools/replicate/) or [fal.ai](/tools/fal-ai/) when the job is hosted image, video, audio, 3D, or custom-model inference.** Replicate is stronger as a broad model catalog and custom-model deployment layer. fal is stronger when successful-output billing and fast media APIs are the buyer problem.
 
+**Use [Browserbase](/tools/browserbase/) when the infrastructure problem is web interaction.** The June 1 pricing check keeps Free, Developer at $20/month, Startup at $99/month, and Scale custom, while the product surface now groups Browsers, Web Data APIs, Runtime, Identity, Models, Observability, Stagehand, and MCP. It belongs here when agents need reliable browser sessions rather than just another LLM API.
+
 **Use [Deepgram](/tools/deepgram/) when speech is infrastructure.** Deepgram is a better fit for product teams adding STT, TTS, audio intelligence, or voice agents than for creators who only need a one-off transcript.
 
 ## Buyer Paths
@@ -49,6 +51,7 @@ The late-May infrastructure update is agent control. CoreWeave's [training-to-in
 | Budget/open-model API | [Mistral AI](/tools/mistral-ai/) or [Groq](/tools/groq/) | Useful for cost-sensitive and latency-sensitive workloads | Requires benchmarking against your actual prompts |
 | Hosted model catalog | [Replicate](/tools/replicate/) | Public, proprietary, and custom models without owning GPUs | Runtime billing can surprise teams if generations are slow |
 | Fast media APIs | [fal.ai](/tools/fal-ai/) | Image, video, audio, and 3D APIs with per-output or per-second pricing | Prepaid credits and per-model units need tracking |
+| Cloud browser infrastructure | [Browserbase](/tools/browserbase/) | Managed browser sessions, web data APIs, runtime, identity, observability, Stagehand, and MCP | Browser sessions and agent loops need cost, timeout, and credential controls |
 | Speech and voice infrastructure | [Deepgram](/tools/deepgram/) | STT, TTS, audio intelligence, and voice-agent APIs | Voice minutes, channels, model choice, and LLM orchestration affect cost |
 | Model discovery and endpoints | [Hugging Face](/tools/hugging-face/) | Model cards, datasets, Spaces, Inference Endpoints | License and safety checks stay with the builder |
 | Production retrieval | [Pinecone](/tools/pinecone/), [Weaviate](/tools/weaviate/), or [Qdrant](/tools/qdrant/) | Managed or open vector search for RAG | Index design and embedding cost matter as much as database pricing |
@@ -62,6 +65,7 @@ The late-May infrastructure update is agent control. CoreWeave's [training-to-in
 - **Model catalog and experiments:** Pick [Hugging Face](/tools/hugging-face/) for discovery, datasets, model cards, demos, and endpoints.
 - **Media and community models:** Pick [Replicate](/tools/replicate/) when the job is running image, video, audio, or custom models by API.
 - **Fast media APIs:** Pick [fal.ai](/tools/fal-ai/) when successful-output billing, image/video/audio/3D endpoints, and fast experimentation matter.
+- **Browser automation:** Pick [Browserbase](/tools/browserbase/) when an AI agent, scraper, QA runner, or workflow needs managed browsers, identity, observability, and Stagehand-style automation.
 - **Speech APIs:** Pick [Deepgram](/tools/deepgram/) when speech-to-text, text-to-speech, voice agents, or audio intelligence are infrastructure, not just creator utilities.
 - **Serverless GPU apps:** Pick [Modal](/tools/modal/) when you want Python jobs, endpoints, queues, and GPU workloads without Kubernetes.
 - **Local model runtime:** Pick [LM Studio](/tools/lm-studio/) when developers need a desktop GUI plus OpenAI-compatible local server for Llama, Qwen, Mistral, and other open weights. LM Studio re-licensed to an open license in May 2026, removing the prior commercial-use friction.
@@ -93,6 +97,7 @@ Do not publish infrastructure pages with old flat monthly subscription framing. 
 - [Groq pricing](https://groq.com/pricing) (verified 2026-05-13)
 - [Replicate pricing](https://replicate.com/pricing) (verified 2026-05-13)
 - [fal Model API pricing docs](https://fal.ai/docs/documentation/model-apis/pricing) (verified 2026-05-13)
+- [Browserbase pricing](https://www.browserbase.com/pricing) (verified 2026-06-01)
 - [Deepgram pricing](https://deepgram.com/pricing) (verified 2026-05-13)
 - [Together AI pricing](https://www.together.ai/pricing) (verified 2026-05-13)
 - [Hugging Face pricing](https://huggingface.co/pricing) (verified 2026-05-13)

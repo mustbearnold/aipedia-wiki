@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0 self-hosted / $50-$99/mo cloud"
 status: active
 launched: 2023-06
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-01
+last_verified: 2026-06-01
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -32,7 +32,7 @@ facts:
     source: https://anythingllm.com/
     source_label: AnythingLLM official site
     source_id: anythingllm-official
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-01'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -42,7 +42,7 @@ facts:
     source: https://anythingllm.com/pricing
     source_label: AnythingLLM hosted cloud pricing
     source_id: anythingllm-pricing
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-01'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -51,7 +51,7 @@ facts:
     source: https://github.com/Mintplex-Labs/anything-llm
     source_label: AnythingLLM GitHub repository
     source_id: anythingllm-repository
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-01'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -61,7 +61,7 @@ facts:
     source: https://docs.anythingllm.com/
     source_label: AnythingLLM docs
     source_id: anythingllm-docs
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-01'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -71,12 +71,12 @@ facts:
     source: https://docs.anythingllm.com/
     source_label: AnythingLLM docs
     source_id: anythingllm-docs
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-01'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
 tags: [rag, self-hosted, open-source, document-chat, agents, privacy, enterprise, mit-licensed]
-seo_title: "AnythingLLM: Features, Pricing & Review (May 2026)"
+seo_title: "AnythingLLM: Features, Pricing & Review (June 2026)"
 meta_description: "AnythingLLM is an MIT-licensed open-source AI desktop + server app with document chat, agents, and multi-user support. Free self-hosted; cloud $50-$99/mo. Best for privacy-first enterprise RAG."
 author: "aipedia.wiki Editorial"
 best_for:
@@ -98,6 +98,13 @@ price_history:
     source_label: "Source"
     source_id: anythingllm-pricing
     note: "Cloud tiers verified. Basic ($50/mo) is for individuals or teams under 5 users with under 100 documents. Pro ($99/mo) adds a 72-hour support SLA. Enterprise is custom (on-prem option)."
+  - date: 2026-06-01
+    plan: "Cloud Basic / Pro"
+    price: "$50 / $99 per mo"
+    source: "https://anythingllm.com/cloud"
+    source_label: "AnythingLLM cloud pricing"
+    source_id: anythingllm-pricing
+    note: "Cloud page still exposes Basic at $50/month, Pro at $99/month, and Enterprise custom. GitHub releases page shows v1.13.0 as the current release."
 ---
 
 # AnythingLLM
@@ -147,13 +154,13 @@ Built by Mintplex Labs (YC). An MIT-licensed open-source application that combin
 | Cloud Pro | $99/mo | Private instance, RAG and agents, 72-hour support SLA. Startups and larger teams. |
 | Enterprise | Custom | On-premise install, custom SLA, custom domain, custom integration. Large companies. |
 
-Prices verified 2026-05-13 via [anythingllm.com/pricing](https://anythingllm.com/pricing).
+Prices verified 2026-06-01 via [anythingllm.com/cloud](https://anythingllm.com/cloud).
 
 ## Failure modes
 
 - **Self-hosting has real ops overhead.** You manage Docker, updates, vector DB, LLM API keys, backups. If you don't have ops capacity, pay for cloud or pick a SaaS competitor.
 - **Setup is not one-click for server deployments.** Desktop app is easy; Docker server requires reading docs and configuring environment variables.
-- **Default LLM is whatever you configure.** Quality depends entirely on the backing model. Pair with a strong LLM (OpenAI frontier models, Claude Opus 4.7, or Llama 4) for good results.
+- **Default LLM is whatever you configure.** Quality depends entirely on the backing model. Pair with a strong hosted model from OpenAI, Anthropic Claude, Google Gemini, or a strong local model for good results.
 - **Community support model.** Fewer paid support options than enterprise SaaS competitors. Discord + GitHub issues for most users.
 - **Vector DB choice affects performance.** Default LanceDB is fine for small corpora. For 100k+ documents, switch to Pinecone or Qdrant.
 
@@ -170,7 +177,7 @@ Prices verified 2026-05-13 via [anythingllm.com/pricing](https://anythingllm.com
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified 2026-05-13 against [anythingllm.com/pricing](https://anythingllm.com/pricing) and the [GitHub repo](https://github.com/Mintplex-Labs/anything-llm).
+Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-01 against [anythingllm.com/cloud](https://anythingllm.com/cloud) and the [GitHub repo](https://github.com/Mintplex-Labs/anything-llm).
 
 ## FAQ
 
@@ -181,7 +188,7 @@ Yes, under MIT license. Full source on GitHub. You can use, modify, and deploy c
 Desktop app does not need Docker. Server deployments (for team workspaces) are Docker-based. Docker Compose file is published in the repo.
 
 **Which LLM should I use with it?**
-Depends on your workload. [Claude Opus 4.7](/tools/claude/) or [ChatGPT](/tools/chatgpt/) for highest quality. [Ollama](/tools/ollama/) with Llama 4 for privacy or cost. [Groq](https://groq.com) for speed. AnythingLLM lets you switch per workspace.
+Depends on your workload. [Claude](/tools/claude/) or [ChatGPT](/tools/chatgpt/) for highest hosted-model quality. [Ollama](/tools/ollama/) with a capable local model for privacy or cost. [Groq](https://groq.com) for speed. AnythingLLM lets you switch per workspace.
 
 **How does it compare to RAG frameworks like LlamaIndex or LangChain?**
 Those are libraries; AnythingLLM is an app. If you're building a custom RAG pipeline from scratch, use LlamaIndex or LangChain. If you want a working RAG product to configure and use, pick AnythingLLM.

@@ -5,9 +5,9 @@ title: AI Chatbots & LLMs
 description: General-purpose AI assistants and large language model chatbots for writing, research, coding help, analysis, multimodal work, and everyday decision support.
 tool_count: 14
 seo_title: "Best AI Chatbots & LLMs (May 2026), aipedia.wiki"
-meta_description: "Compare the best AI chatbots and LLMs in May 2026: ChatGPT (GPT-5.5), Claude Opus 4.8, Gemini 3.1 Pro, Perplexity, Grok, Mistral, and Qwen3.7-Max / Qwen Cloud, with governance, enterprise ChatGPT, and Copilot workspace signals updated through May 31."
+meta_description: "Compare the best AI chatbots and LLMs in June 2026: ChatGPT (GPT-5.5), Claude Opus 4.8, Gemini 3.1 Pro, Perplexity, Grok, Mistral, Qwen3.7-Max / Qwen Cloud, NotebookLM, and AnythingLLM, with enterprise workspace and self-hosted RAG signals."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-31
+last_updated: 2026-06-01
 last_verified: 2026-05-31
 update_frequency: monthly
 ---
@@ -19,6 +19,8 @@ AI chatbots are now the default starting point for writing, research, coding hel
 The May 31 refresh adds two enterprise workspace signals: MUFG's [ChatGPT Enterprise rollout to roughly 35,000 bank employees](/news/2026-05-30-openai-mufg-chatgpt-enterprise-rollout/) and Microsoft's [redesigned Microsoft 365 Copilot experience](/news/2026-05-31-microsoft-365-copilot-redesign-work-iq/). The lesson is practical. General assistants win inside companies only when training, permission rules, visible context, app placement, and output quality make daily work safer and faster.
 
 For most people, the first paid chatbot to compare is still one of three: [ChatGPT](/tools/chatgpt/) for the broadest all-purpose AI workspace, [Claude](/tools/claude/) for writing, long analysis, and code reasoning, or [Gemini](/tools/gemini/) for Google-native work across Search, Gmail, Docs, Drive, NotebookLM, and Google AI subscription benefits. [Perplexity](/tools/perplexity/) is the better answer engine when every serious claim needs a source trail. [Grok](/tools/grok/) is most useful when X-native real-time context matters. [Mistral AI](/tools/mistral-ai/) matters more for builders and teams that care about model control, European AI infrastructure, APIs, and open-model options. [Qwen](/tools/qwen/) is the Alibaba Cloud lane: hosted Qwen3.7-Max, Qwen Chat testing, Apache 2.0 Qwen3 open weights, and a growing Qwen Cloud / agent-platform push after [Alibaba's first international Qwen Conference](/news/2026-05-27-qwen-conference-agent-cloud-suite/).
+
+For document chat and private RAG, [AnythingLLM](/tools/anythingllm/) is the practical self-hosted app lane. The June 1 check keeps the MIT self-host path free, confirms cloud Basic at $50/month and Pro at $99/month, and keeps the recommendation model-agnostic: quality depends on the hosted or local LLM you connect.
 
 The wrong move is paying for three overlapping chatbots without a job for each one. Start with the assistant closest to your daily work, then add a specialist only when it solves a real gap: citations, Google integration, long-form editing, X context, coding workflows, or enterprise controls.
 
@@ -34,6 +36,7 @@ The wrong move is paying for three overlapping chatbots without a job for each o
 | **[Mistral AI](/tools/mistral-ai/)** | Model-control workflows, European AI infrastructure, APIs, open-model strategy | Best for builders and organizations that care about deployment and vendor-control choices. |
 | **[Qwen](/tools/qwen/)** | Alibaba Cloud, open-weight Qwen3, hosted Qwen3.7-Max, multilingual model control | Best for builders who want Qwen Cloud APIs or self-hostable Apache 2.0 Qwen3 checkpoints, not a polished consumer workspace. |
 | **[NotebookLM](/tools/notebooklm/)** | Source-grounded study and document research | Not a general chatbot replacement; excellent when answers should come from a fixed source library. |
+| **[AnythingLLM](/tools/anythingllm/)** | Self-hosted document chat and RAG app | Best when the buyer wants an MIT-licensed app, local/private documents, agents, and bring-your-own-model control instead of another hosted chatbot subscription. |
 
 ## Our Picks
 
@@ -44,6 +47,7 @@ The wrong move is paying for three overlapping chatbots without a job for each o
 - **Best for X-native context:** [Grok](/tools/grok/) when live social discourse is actually part of the job.
 - **Best for model-control strategy:** [Mistral AI](/tools/mistral-ai/) for developers and teams evaluating APIs, European infrastructure, and open-model options.
 - **Best Alibaba/open-weight lane:** [Qwen](/tools/qwen/) when hosted Qwen3.7-Max, Qwen Cloud pricing, multilingual coverage, or self-hosted Qwen3 checkpoints matter.
+- **Best self-hosted RAG app:** [AnythingLLM](/tools/anythingllm/) when document chat, local/private deployment, and bring-your-own-model flexibility matter more than polished consumer-chat features.
 
 ## Choosing the Right Chatbot
 
@@ -116,3 +120,5 @@ Do not subscribe to multiple chatbots because each one has a new model announcem
 - [Qwen3 official blog](https://qwenlm.github.io/blog/qwen3/) (verified 2026-05-24)
 - [OpenAI MUFG ChatGPT Enterprise customer story](https://openai.com/index/mufg/) (verified 2026-05-31)
 - [Microsoft 365 Copilot redesign](https://www.microsoft.com/en-us/microsoft-365/blog/2026/05/28/introducing-a-new-design-for-microsoft-365-copilot/) (verified 2026-05-31)
+- [AnythingLLM cloud pricing](https://anythingllm.com/cloud) (verified 2026-06-01)
+- [AnythingLLM GitHub releases](https://github.com/Mintplex-Labs/anything-llm/releases) (verified 2026-06-01)

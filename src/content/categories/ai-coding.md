@@ -36,7 +36,7 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 
 **Use [Codex](/tools/codex/) when the team wants OpenAI-native agent coding.** It fits local repo work, PR preparation, checks, and tasks where an agent can edit and verify code rather than only suggest completions.
 
-**June 1 maintenance note:** the open-source/BYOK and PR-agent layer has been refreshed for Aider, Cline, Continue, CodeRabbit, Devin, Amazon Q Developer, Augment Code, Sourcegraph Cody, and the Codeium-to-Windsurf migration path. The browser builders, specialist runtimes, autocomplete, privacy-first, and secondary AI IDE layer has also been rechecked for Factory, JetBrains AI, Kiro, Mastra, OpenHands, Pieces, Qodo, Replit Agent, Same.dev, Supermaven, Tabnine, Val Town, Windsurf, and Zed. The decision rule did not change: use Cursor, GitHub Copilot, or Claude Code as first stops; use Replit/Same/Bolt/Lovable when the buyer wants browser app-building; use Val Town/OpenHands/Mastra for developer-specific runtime or framework jobs; use Tabnine/Supermaven/Zed/Windsurf when privacy, autocomplete latency, native editor speed, or IDE workflow matters more than defaulting to Cursor.
+**June 1 maintenance note:** the open-source/BYOK and PR-agent layer has been refreshed for Aider, Cline, Continue, CodeRabbit, Devin, Amazon Q Developer, Augment Code, Sourcegraph Cody, and the Codeium-to-Windsurf migration path. The browser builders, specialist runtimes, autocomplete, privacy-first, and secondary AI IDE layer has also been rechecked for Factory, JetBrains AI, Kiro, Mastra, OpenHands, Pieces, Qodo, Replit Agent, Same.dev, Supermaven, Tabnine, Val Town, Windsurf, and Zed. A later June 1 pass also rechecked Base44, Bolt.new, and Browserbase where app-building and agent-browser infrastructure overlap coding. The decision rule did not change: use Cursor, GitHub Copilot, or Claude Code as first stops; use Replit/Same/Bolt/Lovable/Base44 when the buyer wants browser app-building; use Browserbase when the coding problem is reliable cloud-browser execution for agents; use Val Town/OpenHands/Mastra for developer-specific runtime or framework jobs; use Tabnine/Supermaven/Zed/Windsurf when privacy, autocomplete latency, native editor speed, or IDE workflow matters more than defaulting to Cursor.
 
 ## Buyer Paths
 
@@ -132,6 +132,9 @@ Do not publish stale model-version claims. Coding tools route models and change 
 - [Qodo pricing](https://www.qodo.ai/pricing/) (verified 2026-06-01)
 - [Replit pricing](https://replit.com/pricing) (verified 2026-06-01)
 - [Same pricing docs](https://docs.same.new/usage/pricing) (verified 2026-06-01)
+- [Base44 pricing](https://base44.com/pricing) (verified 2026-06-01)
+- [Bolt.new pricing](https://bolt.new/pricing) (verified 2026-06-01)
+- [Browserbase pricing](https://www.browserbase.com/pricing) (verified 2026-06-01)
 - [Supermaven pricing](https://supermaven.com/pricing) (verified 2026-06-01)
 - [Tabnine pricing](https://www.tabnine.com/pricing) (verified 2026-06-01)
 - [Val Town pricing](https://www.val.town/pricing) (verified 2026-06-01)

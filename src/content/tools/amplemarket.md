@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$600-$2000+/month"
 status: active
 launched: 2019-01
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-01
+last_verified: 2026-06-01
 update_frequency: quarterly
 affiliate:
   has_program: true
@@ -33,16 +33,16 @@ facts:
     source: https://www.amplemarket.com/
     source_label: Amplemarket official site
     source_id: amplemarket-official
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-01'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
   pricing_anchor:
-    value: 'Amplemarket Startup is $600/mo for 2 seats on annual billing; Growth and Elite are custom-priced. As of May 2026 the Duo agent suite on the live pricing page lists Copilot, Copywriter, Competitive Intelligence, Signals, and Voice on Startup, with Inbox reserved for Elite (or as a paid add-on on Growth).'
+    value: 'Amplemarket Startup is $600/mo for 2 seats on annual billing; Growth and Elite are custom-priced. As of June 2026 the Duo agent suite on the live pricing page lists Copilot, Copywriter, Competitive Intelligence, Signals, and Voice on Startup, with Inbox reserved for Elite (or as a paid add-on on Growth).'
     source: https://www.amplemarket.com/pricing
     source_label: Amplemarket pricing
     source_id: amplemarket-pricing
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-01'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -52,7 +52,7 @@ facts:
     source: https://www.amplemarket.com/
     source_label: Amplemarket official site
     source_id: amplemarket-official
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-01'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -62,7 +62,7 @@ facts:
     source: https://www.amplemarket.com/pricing
     source_label: Amplemarket pricing
     source_id: amplemarket-pricing
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-01'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -72,12 +72,12 @@ facts:
     source: https://www.amplemarket.com/
     source_label: Amplemarket official site
     source_id: amplemarket-official
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-01'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
 tags: [ai-sdr, sales-intelligence, lead-generation, sales-automation, cold-email, sales-engagement, outbound]
-seo_title: "Amplemarket Review: AI SDR Features, Pricing & Limits (May 2026)"
+seo_title: "Amplemarket Review: AI SDR Features, Pricing & Limits (June 2026)"
 meta_description: "Amplemarket bundles a 200M+ contact database, multichannel sequences, and the Duo AI agent suite (Copilot, Copywriter, Competitive Intelligence, Signals, Voice, Inbox). Startup plan $600/mo for 2 users on annual billing. Growth and Elite are custom-priced."
 author: "aipedia.wiki Editorial"
 best_for:
@@ -107,17 +107,24 @@ price_history:
     source_label: "Source"
     source_id: amplemarket-pricing
     note: "Re-verified May 2026. Pricing unchanged. Duo agent suite on Startup now lists Competitive Intelligence and Signals alongside Copilot and Copywriter; Voice remains gated to Growth and Elite, Inbox remains Elite-only (or paid add-on on Growth)."
+  - date: 2026-06-01
+    plan: "Startup / Growth / Elite"
+    price: "$600/mo annual term / Custom / Custom"
+    source: "https://www.amplemarket.com/pricing"
+    source_label: "Amplemarket pricing"
+    source_id: amplemarket-pricing
+    note: "Rechecked against the live pricing page. Startup remains $600/mo annual term for 2 included users and 27,000 contacts; Growth and Elite remain custom-priced with 4 and 10 included users."
 ---
 
 # Amplemarket
 
-Amplemarket is an all-in-one AI sales platform combining contact data, multichannel outreach, and the Duo AI agent suite. As of May 2026 the live pricing page lists six Duo agents: Copilot, Copywriter, Competitive Intelligence, Signals, Voice, and Inbox. The database covers 200M+ AI-verified contacts with a reported sub-3% bounce rate and 96.5% phone number accuracy.
+Amplemarket is an all-in-one AI sales platform combining contact data, multichannel outreach, and the Duo AI agent suite. As of June 2026 the live pricing page lists six Duo agents: Copilot, Copywriter, Competitive Intelligence, Signals, Voice, and Inbox. The database covers 200M+ AI-verified contacts with a reported sub-3% bounce rate and 96.5% phone number accuracy.
 
 Every plan is annual only. The entry Startup tier is $600/month for 2 users. Growth (4 users) and Elite (10 users) are custom-priced by seat count and send volume, with most teams landing in the $500 to $2,000 per month range.
 
 ## System Verdict
 
-> **Pick Amplemarket when your outbound team is large enough that AI-driven personalisation pays for itself in meetings booked.** Duo Copywriter personalises emails from prospect context. Duo Competitive Intelligence and Duo Signals (both on Startup as of May 2026) surface account context and intent triggers. Duo Voice drops AI-generated voicemails. Duo Inbox (Elite only) auto-handles replies. Combined with class-leading phone accuracy, this is one of the tightest AI SDR stacks on the market.
+> **Pick Amplemarket when your outbound team is large enough that AI-driven personalisation pays for itself in meetings booked.** Duo Copywriter personalises emails from prospect context. Duo Competitive Intelligence and Duo Signals (both on Startup as of June 2026) surface account context and intent triggers. Duo Voice drops AI-generated voicemails. Duo Inbox (Elite only) auto-handles replies. Combined with class-leading phone accuracy, this is one of the tightest AI SDR stacks on the market.
 >
 > **Skip it if you are under ten reps and on a tight budget.** [Apollo](/tools/apollo/) starts at $49/user/month annual and bundles dialer plus AI Assistant for a fraction of the commitment. **Skip it if you only need sending volume:** [Instantly](/tools/instantly/) ships unlimited inbox rotation for a fraction of the price. **Skip it if deep multi-source enrichment is the real need:** [Clay](/tools/clay/) waterfalls 50+ data providers Amplemarket alone cannot match.
 >
@@ -136,8 +143,8 @@ Every plan is annual only. The entry Startup tier is $600/month for 2 users. Gro
 | **Monthly billing** | Not offered |
 | **Duo Copilot** | Included on every plan |
 | **Duo Copywriter** | Included on every plan |
-| **Duo Competitive Intelligence** | Included on every plan (added by May 2026) |
-| **Duo Signals** | Included on every plan (added by May 2026) |
+| **Duo Competitive Intelligence** | Included on every plan (rechecked June 2026) |
+| **Duo Signals** | Included on every plan (rechecked June 2026) |
 | **Duo Voice** | Growth and Elite only |
 | **Duo Inbox** | Elite only (add-on on Growth) |
 | **Annual email credits** | Startup 15,000 · Growth 70,000 · Elite 100,000 |
@@ -147,17 +154,17 @@ Every plan is annual only. The entry Startup tier is $600/month for 2 users. Gro
 | **CRM integrations** | Salesforce, HubSpot, Pipedrive (native) |
 | **Onboarding** | Community (Startup) or personalised CSM (Growth, Elite) |
 
-Every data point above was rechecked against Amplemarket's pricing page and pricing explainer on 2026-05-13. See Sources.
+Every data point above was rechecked against Amplemarket's pricing page and pricing explainer on 2026-06-01. See Sources.
 
 ## What it actually is
 
 One annual subscription covering five jobs: contact search, multichannel sequences, a native dialer, AI agents, and a deliverability toolkit (warmup, domain health, spam checker). The platform sits between a sales database (Apollo, ZoomInfo) and a sender (Instantly, Lemlist), doing both at enterprise polish.
 
-The **Duo agent suite** is the distinctive layer. As of May 2026, six specialised agents share the same prospect and workflow context:
+The **Duo agent suite** is the distinctive layer. As of June 2026, six specialised agents share the same prospect and workflow context:
 
 - **Duo Copilot.** Surfaces high-intent leads, researches prospects, and drafts multichannel sequences a rep can review and send. Included on every plan.
 - **Duo Copywriter.** Generates personalised emails from each prospect's context (role, company, recent triggers). Included on every plan.
-- **Duo Competitive Intelligence.** Tracks account-level competitive context and surfaces battlecards inside the sequencing flow. Included on every plan as of the May 2026 pricing page.
+- **Duo Competitive Intelligence.** Tracks account-level competitive context and surfaces battlecards inside the sequencing flow. Included on every plan as of the June 2026 pricing page.
 - **Duo Signals.** Watches 100+ intent triggers (funding, job changes, product releases, hiring) and prioritises accounts for outreach. Included on every plan.
 - **Duo Voice.** AI-generated voicemails, ringless or direct. Growth and Elite.
 - **Duo Inbox.** Auto-classifies replies, books meetings, and routes objections to humans. Elite only; available as a paid add-on on Growth.
@@ -190,7 +197,7 @@ Pricing via [amplemarket.com/pricing](https://amplemarket.com/pricing). Annual o
 | Growth | Custom (typical $1-2K/mo) | 4 | 70,000 | 1,500 | + Voice | **Working mid-market SDR teams** |
 | Elite | Custom | 10 | 100,000 | 3,600 | + Inbox (auto-reply) | Formal sales orgs at scale |
 
-Prices verified 2026-05-13 via [amplemarket.com/pricing](https://amplemarket.com/pricing) and the [Amplemarket pricing explainer](https://www.amplemarket.com/blog/amplemarket-pricing). Every plan requires an annual commitment; no monthly billing. Additional seats purchasable at a per-seat rate quoted with the plan.
+Prices verified 2026-06-01 via [amplemarket.com/pricing](https://amplemarket.com/pricing) and the [Amplemarket pricing explainer](https://www.amplemarket.com/blog/amplemarket-pricing). Every plan requires an annual commitment; no monthly billing. Additional seats purchasable at a per-seat rate quoted with the plan.
 
 ## Against the alternatives
 
@@ -201,7 +208,7 @@ Prices verified 2026-05-13 via [amplemarket.com/pricing](https://amplemarket.com
 | **Billing flexibility** | Annual only | Annual or monthly | Monthly option |
 | **Contact database** | 200M+ (AI-verified) | 400M+ | None (waterfalls others) |
 | **Phone accuracy** | 96.5% (vendor-reported) | Not published | Depends on source |
-| **AI agent suite** | Duo (6 agents as of May 2026, production) | AI Assistant (newer, March 2026) | Claygent (research specialist) |
+| **AI agent suite** | Duo (6 agents as of June 2026, production) | AI Assistant (newer, March 2026) | Claygent (research specialist) |
 | **Dialer** | Included | Included (US) | None |
 | **Best viewed as** | Premium AI SDR stack | All-in-one at founder price | Enrichment specialist |
 
@@ -218,7 +225,7 @@ Prices verified 2026-05-13 via [amplemarket.com/pricing](https://amplemarket.com
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-05-13 against [Amplemarket pricing](https://amplemarket.com/pricing), the [Amplemarket pricing explainer](https://www.amplemarket.com/blog/amplemarket-pricing), and independent reviews including [MarketBetter](https://www.marketbetter.ai/blog/amplemarket-pricing-breakdown-2026/) and [G2](https://www.g2.com/products/amplemarket/reviews).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-01 against [Amplemarket pricing](https://amplemarket.com/pricing), the [Amplemarket pricing explainer](https://www.amplemarket.com/blog/amplemarket-pricing), and independent reviews including [MarketBetter](https://www.marketbetter.ai/blog/amplemarket-pricing-breakdown-2026/) and [G2](https://www.g2.com/products/amplemarket/reviews).
 
 ## FAQ
 
@@ -239,14 +246,14 @@ Amplemarket is a premium AI SDR platform; Apollo is an all-in-one at founder-fri
 <details>
 <summary>What is Duo?</summary>
 
-Duo is Amplemarket's AI agent suite. As of May 2026, six specialised agents share prospect and workflow context: Copilot (research and sequence prep), Copywriter (email personalisation), Competitive Intelligence (account context and battlecards), Signals (intent-trigger monitoring), Voice (AI voicemails), and Inbox (automated reply handling). Copilot, Copywriter, Competitive Intelligence, and Signals ship on every plan. Voice is Growth and Elite. Inbox is Elite only, or a paid add-on on Growth.
+Duo is Amplemarket's AI agent suite. As of June 2026, six specialised agents share prospect and workflow context: Copilot (research and sequence prep), Copywriter (email personalisation), Competitive Intelligence (account context and battlecards), Signals (intent-trigger monitoring), Voice (AI voicemails), and Inbox (automated reply handling). Copilot, Copywriter, Competitive Intelligence, and Signals ship on every plan. Voice is Growth and Elite. Inbox is Elite only, or a paid add-on on Growth.
 
 </details>
 
 <details>
 <summary>Does Amplemarket offer monthly billing?</summary>
 
-No. Every tier is annual-only. Monthly billing is not available at any price point as of 2026-05-13. Apollo, Instantly, and Clay all offer monthly plans if that flexibility is required.
+No. Every tier is annual-only. Monthly billing is not available at any price point as of 2026-06-01. Apollo, Instantly, and Clay all offer monthly plans if that flexibility is required.
 
 </details>
 

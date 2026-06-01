@@ -4,10 +4,10 @@ slug: ai-automation
 title: AI Automation & Agents
 description: Current workflow automation, AI agent platforms, meeting automation, call automation, and operations tools for technical teams, non-technical operators, GTM workflows, customer success, support, sales, and internal automation.
 tool_count: 25
-seo_title: "Best AI Automation Tools & Agent Platforms (May 2026)"
-meta_description: "Updated May 31, 2026: compare n8n, Zapier, Make, Gumloop, Relevance AI, Lindy, Manus, Pipedream, CloudTalk, MeetGeek, Apollo, Clay, Intercom, and Instantly, with Asana/StackAI, CoreWeave, Geordie, and Sysdig agent-control signals."
+seo_title: "Best AI Automation Tools & Agent Platforms (June 2026)"
+meta_description: "Updated June 1, 2026: compare n8n, Zapier, Make, Gumloop, Relevance AI, Activepieces, AG2, Browserbase, Ada, Apollo, Amplemarket, Lindy, Manus, Pipedream, CloudTalk, and MeetGeek by workflow, pricing unit, and risk."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-31
+last_updated: 2026-06-01
 last_verified: 2026-05-31
 update_frequency: weekly
 top_picks:
@@ -36,6 +36,16 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 
 **Use [Relevance AI](/tools/relevance-ai/) when the purchase question is an AI workforce.** Relevance AI's current pricing page lists actions, vendor credits, workforces, unlimited agents/tools, 2000+ integrations, scheduling, escalations, and BYO LLM on paid plans.
 
+**Use [Activepieces](/tools/activepieces/) when open-source workflow automation and self-hosting matter.** The June 1 check keeps the buyer story stable: MIT-licensed self-hosting is free, cloud Standard remains free for 10 flows and then $5 per active flow per month, and the public site now frames the platform around 700+ integrations plus AI agents.
+
+**Use [AG2](/tools/ag2/) when the buyer wants an open-source multi-agent framework rather than a SaaS workflow canvas.** The current release check found AG2 v0.13.2 from May 29, 2026 with agent-evaluation, client, tool, and security work. It is a developer framework, not a non-technical ops platform.
+
+**Use [Browserbase](/tools/browserbase/) when automation needs reliable cloud browsers.** Browserbase belongs in this category when agents, scraping, QA, or workflow systems need managed browser sessions, identity, web-data APIs, Stagehand, MCP, and observability instead of local Playwright infrastructure.
+
+**Use [Apollo](/tools/apollo/) or [Amplemarket](/tools/amplemarket/) when automation starts with outbound revenue.** Apollo is the broader prospect-data and sales-engagement platform, while Amplemarket is the higher-touch AI SDR suite with Duo agents and a $600/month annual Startup plan for two seats. Both need real sender, deliverability, and CRM governance before scale.
+
+**Use [Ada](/tools/ada/) when enterprise customer service wants AI agents for support outcomes.** Ada is now a demo-gated contact-sales page for serious service volumes, not a self-serve chatbot widget. Its June 1 source check found 550+ deployed AI agents and 5.5B+ interactions, so the buyer question is enterprise fit, resolution quality, and channel coverage.
+
 **Use [CloudTalk](/tools/cloudtalk/) when automation starts with phone operations.** CloudTalk is not a generic workflow router. It is the better fit when a sales or support team needs cloud calling, routing, dialers, CRM call logging, AI summaries, coaching analytics, and optional AI voice agents in one system.
 
 **Use [MeetGeek](/tools/meetgeek/) when automation starts with meetings.** MeetGeek is the better fit when customer success, sales, recruiting, or implementation teams need meeting transcripts, summaries, action items, AI Chat, Zapier/Make/n8n workflows, API/MCP access, and CRM/task handoff from customer calls.
@@ -55,6 +65,11 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 | Visual scenario building and branching workflows | [Make](/tools/make/) | Strong visual canvas, routers, filters, credits, and 3000+ apps | Credit use depends on scenario design and frequency |
 | Agent-heavy workflows and modern automation teams | [Gumloop](/tools/gumloop/) | AI-native flows, unlimited agents/flows, policies, guardrails, and MCP support | Credit usage must be tested with real production tasks |
 | Delegated GTM, research, support, and ops agents | [Relevance AI](/tools/relevance-ai/) | AI workforces, actions, vendor credits, scheduling, escalations, and marketplace patterns | Not the cheapest generic workflow router |
+| Open-source automation and self-hosting | [Activepieces](/tools/activepieces/) | MIT-licensed self-host path, cloud active-flow billing, 700+ integrations, and AI-agent support | Someone still has to own hosting, secrets, and connector maintenance |
+| Developer multi-agent framework | [AG2](/tools/ag2/) | Apache 2.0 framework for AutoGen-style agent systems with active releases | Requires Python engineering judgment; not a turnkey workflow product |
+| Cloud browser automation for agents | [Browserbase](/tools/browserbase/) | Managed browsers, Web Data APIs, runtime, identity, observability, Stagehand, and MCP | Costs move with browser sessions and runtime design |
+| Enterprise customer-service AI agents | [Ada](/tools/ada/) | Strong fit for high-volume support teams that need chat, voice, email, SMS, social, and reasoning workflows | Pricing is demo-gated; verify volume, channel, and resolution economics |
+| Outbound revenue automation | [Apollo](/tools/apollo/) or [Amplemarket](/tools/amplemarket/) | Prospect data, enrichment, sequencing, and AI-assisted GTM execution | Credit systems, deliverability, and CRM hygiene decide real value |
 | Phone-heavy sales/support operations | [CloudTalk](/tools/cloudtalk/) | Business calling, routing, dialers, CRM sync, AI Conversation Intelligence, and AI Voice Agents in one platform | More than teams need if the job is internal-only calling or pure chat support |
 | Meeting-to-workflow automation for CS, sales, recruiting, and ops | [MeetGeek](/tools/meetgeek/) | Transcripts, summaries, AI Chat, action items, Zapier/Make/n8n workflows, API/MCP access, and CRM/task handoff from meeting content | Needs consent policy, workspace permissions, and a defined post-meeting workflow |
 | One-off general autonomous tasks | [Manus](/tools/manus/) | Hosted VM agent for research, spreadsheets, slides, files, and browser work; official site now describes Manus as part of Meta | Credit burn and data-handling terms need direct verification before sensitive work |
@@ -107,6 +122,13 @@ Do not leave this category stale. Automation tools are adding MCP, agent builder
 - [Make AI Agents](https://www.make.com/en/ai-agents) (verified 2026-05-13)
 - [Gumloop pricing](https://www.gumloop.com/pricing) (verified 2026-05-13)
 - [Relevance AI pricing](https://relevanceai.com/pricing) (verified 2026-05-13)
+- [Activepieces pricing](https://www.activepieces.com/pricing) (verified 2026-06-01)
+- [Activepieces GitHub releases](https://github.com/activepieces/activepieces/releases) (verified 2026-06-01)
+- [AG2 releases](https://github.com/ag2ai/ag2/releases) (verified 2026-06-01)
+- [Ada platform](https://www.ada.cx/platform) (verified 2026-06-01)
+- [Apollo pricing](https://apollo.io/pricing) (verified 2026-06-01)
+- [Amplemarket pricing](https://www.amplemarket.com/pricing) (verified 2026-06-01)
+- [Browserbase pricing](https://www.browserbase.com/pricing) (verified 2026-06-01)
 - [Manus pricing](https://manus.im/pricing) (verified 2026-05-24)
 - [Lindy pricing](https://www.lindy.ai/pricing) (verified 2026-05-27)
 - [Lindy quickstart docs](https://docs.lindy.ai/start-here/quickstart) (verified 2026-05-27)
