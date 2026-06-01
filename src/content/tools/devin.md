@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2024-12
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-01
+last_verified: 2026-06-01
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://docs.devin.ai/get-started/devin-intro"
     source_label: "Devin docs"
     source_id: devin-docs
-    verified_at: 2026-05-13
+    verified_at: 2026-06-01
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -39,7 +39,7 @@ facts:
     source: "https://docs.devin.ai/get-started/devin-intro"
     source_label: "Devin docs"
     source_id: devin-docs
-    verified_at: 2026-05-13
+    verified_at: 2026-06-01
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -48,7 +48,7 @@ facts:
     source: "https://devin.ai/pricing"
     source_label: "Devin pricing"
     source_id: devin-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-06-01
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -57,7 +57,7 @@ facts:
     source: "https://docs.devin.ai/get-started/devin-intro"
     source_label: "Devin docs"
     source_id: devin-docs
-    verified_at: 2026-05-13
+    verified_at: 2026-06-01
     next_review_at: 2026-08-13
     volatility: high
     confidence: medium
@@ -66,13 +66,13 @@ facts:
     source: "https://docs.devin.ai/get-started/devin-intro"
     source_label: "Devin docs"
     source_id: devin-docs
-    verified_at: 2026-05-13
+    verified_at: 2026-06-01
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
 tags: [autonomous-agent, ai-coding, software-engineer, delegation, agentic-coding, cognition, mcp]
-seo_title: "Devin: Features, Pricing & Review (May 2026)"
-meta_description: "Devin is Cognition AI's autonomous coding agent. Free starter tier, Pro $20/mo with ACU overage at $2.25, Max $200/mo, Teams $80/mo, Enterprise custom. MCP Marketplace live. Reasoning now powered by Claude Opus 4.7. Verified May 2026."
+seo_title: "Devin: Features, Pricing & Review (June 2026)"
+meta_description: "Devin is Cognition AI's autonomous coding agent. Free starter tier, Pro $20/mo with ACU overage at $2.25, Max $200/mo, Teams $80/mo, Enterprise custom. MCP Marketplace live. Exact backing model mix is not treated as a stable public buying claim. Verified June 2026."
 author: "aipedia.wiki Editorial"
 best_for:
   - delegating well-scoped tickets
@@ -106,7 +106,14 @@ price_history:
     source: "https://devin.ai/pricing"
     source_label: "Source"
     source_id: devin-pricing
-    note: "Pricing unchanged. Verified against vendor pricing page on 2026-05-13. Underlying reasoning now runs on Claude Opus 4.7 (released Apr 16, 2026)."
+    note: "Pricing unchanged. Verified against vendor pricing page on 2026-05-13."
+  - date: 2026-06-01
+    plan: "Pricing refresh"
+    price: "Pro $20/mo / Max $200/mo / Teams $80/mo"
+    source: "https://devin.ai/pricing"
+    source_label: "Source"
+    source_id: devin-pricing
+    note: "Re-verified June 1, 2026. Pro/Max/Teams pricing and ACU overage remain the public anchors; exact backing model mix is not treated as a stable public buying claim."
 ---
 
 # Devin
@@ -136,9 +143,9 @@ The delegation model is the core differentiator. Assign a ticket over Slack or L
 | **Teams tier** | $80/mo · unlimited members · shared admin · centralized billing |
 | **Concurrent sessions** | Up to 10 on Pro/Max · unlimited on Teams/Enterprise |
 | **MCP support** | Yes · MCP Marketplace in Settings (Pro and above) |
-| **Underlying models** | Cognition's Devin model family plus Claude Opus 4.7 for reasoning |
+| **Underlying models** | Cognition does not publish a stable exact model mix on the pricing page; evaluate quality on real tickets |
 
-Every data point above was verified against vendor documentation on 2026-05-13. See Sources.
+Every data point above was verified against vendor documentation on 2026-06-01. See Sources.
 
 ## What it actually is
 
@@ -178,7 +185,7 @@ Pricing via [devin.ai/pricing](https://devin.ai/pricing). Individual plans use t
 | Teams | $80/mo | Shared quota | Unlimited | Teams wanting admin + centralized billing |
 | Enterprise | Custom | Custom quota + VPC option | Unlimited | SSO, SAML/OIDC, custom deployment |
 
-*Prices verified 2026-05-13 via [Devin pricing](https://devin.ai/pricing) and [Cognition's self-serve plan launch](https://cognition.ai/blog/new-self-serve-plans-for-devin). An ACU is approximately 15 minutes of active Devin work.*
+*Prices verified 2026-06-01 via [Devin pricing](https://devin.ai/pricing) and [Cognition's self-serve plan launch](https://cognition.ai/blog/new-self-serve-plans-for-devin). An ACU is approximately 15 minutes of active Devin work.*
 
 ## Against the alternatives
 
@@ -204,7 +211,7 @@ Pricing via [devin.ai/pricing](https://devin.ai/pricing). Individual plans use t
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [Devin pricing](https://devin.ai/pricing), [Cognition's self-serve plan launch](https://cognition.ai/blog/new-self-serve-plans-for-devin), the [MCP Marketplace announcement](https://cognition.ai/blog/mcp-marketplace), and the [Cognition acquisition of Windsurf](https://cognition.ai/blog/windsurf).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-01 against [Devin pricing](https://devin.ai/pricing), [Cognition's self-serve plan launch](https://cognition.ai/blog/new-self-serve-plans-for-devin), the [MCP Marketplace announcement](https://cognition.ai/blog/mcp-marketplace), and the [Cognition acquisition of Windsurf](https://cognition.ai/blog/windsurf).
 
 ## FAQ
 

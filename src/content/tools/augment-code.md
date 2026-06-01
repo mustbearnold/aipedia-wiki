@@ -10,11 +10,11 @@ pricing_model: paid
 price_range: "$20-$200/developer/month"
 status: active
 launched: 2024
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-01
+last_verified: 2026-06-01
 update_frequency: monthly
-seo_title: "Augment Code: Features, Pricing & Review (May 2026)"
-meta_description: "Augment Code is an AI coding platform for large codebases. Indie $20/mo with 40,000 credits, Standard $60/developer/mo, Max $200/developer/mo with Cosmos, Enterprise custom. Now ships Claude Opus 4.7, GPT-5.5, Kimi K2.6, and Prism smart routing. Verified May 13, 2026."
+seo_title: "Augment Code: Features, Pricing & Review (June 2026)"
+meta_description: "Augment Code is an AI coding platform for large codebases. Indie $20/mo with 40,000 credits, Standard $60/developer/mo, Max $200/developer/mo with Cosmos, Enterprise custom. Current docs list Claude Opus 4.7, GPT-5.5, Kimi K2.6, and Prism smart routing. Verified June 1, 2026."
 author: aipedia.wiki Editorial
 affiliate:
   has_program: false
@@ -33,7 +33,7 @@ facts:
     source: "https://docs.augmentcode.com/models/available-models"
     source_label: "Augment available models"
     source_id: augment-code-flagship-model
-    verified_at: 2026-05-13
+    verified_at: 2026-06-01
     next_review_at: 2026-06-13
     confidence: high
   coding_agent:
@@ -41,14 +41,14 @@ facts:
     source: "https://docs.augmentcode.com/using-augment/agent"
     source_label: "Augment Agent docs"
     source_id: augment-code-coding-agent
-    verified_at: 2026-05-13
+    verified_at: 2026-06-01
     confidence: high
   best_paid_tier:
     value: "Standard ($60/developer/month) for teams; Indie ($20/month) for solo evaluation; Max ($200/developer/month) unlocks Cosmos for sustained Opus 4.7 and GPT-5.5 agent workloads"
     source: "https://www.augmentcode.com/pricing"
     source_label: "Augment pricing"
     source_id: augment-code-best-paid-tier
-    verified_at: 2026-05-13
+    verified_at: 2026-06-01
     next_review_at: 2026-06-13
     confidence: high
   best_for:
@@ -56,7 +56,7 @@ facts:
     source: "https://docs.augmentcode.com/introduction"
     source_label: "Augment docs"
     source_id: augment-code-best-for
-    verified_at: 2026-05-13
+    verified_at: 2026-06-01
     confidence: high
 tags: [ai-coding, coding-agent, codebase-context, vscode, jetbrains, cli, mcp, code-review]
 best_for:
@@ -92,6 +92,13 @@ price_history:
     source_label: "Source"
     source_id: augment-code-best-paid-tier
     note: "Verified on augmentcode.com/pricing; now bundles Cosmos for heavier agent runs."
+  - date: 2026-06-01
+    plan: "Pricing refresh"
+    price: "$20 Indie / $60 Standard / $200 Max"
+    source: "https://www.augmentcode.com/pricing"
+    source_label: "Source"
+    source_id: augment-code-best-paid-tier
+    note: "Re-verified June 1, 2026. Public pricing and credit tiers still match the May snapshot; available-model claims are limited to Augment's current model docs."
   - date: 2026-04-28
     plan: "Indie"
     price: "$20/mo with 40,000 credits"
@@ -121,7 +128,7 @@ Augment Code is an AI coding platform built around a codebase context engine. It
 
 The positioning is different from [Cursor](/tools/cursor/) or [Windsurf](/tools/windsurf/): Augment is not trying to replace your editor. It tries to understand a large repository deeply enough to make code changes, answer questions, and review pull requests without forcing a new IDE.
 
-The model menu matters. As of May 2026 Augment documents selectable access to Anthropic Claude Opus 4.7 (April 16, 2026 release), Opus 4.6 and 4.5, Sonnet 4.6, 4.5, and 4, and Haiku 4.5, plus Google Gemini 3.1 Pro, OpenAI GPT-5.5, 5.4, 5.2, and 5.1, and Moonshot Kimi K2.6. Augment also ships Prism smart-routing presets that pick between curated Claude+Gemini and GPT+Kimi combinations on the fly. Model choice applies to Agent in the current workspace; Auggie CLI exposes the same model picker through `/model` or `--model`.
+The model menu matters. As of June 1, 2026, Augment documents selectable access to Anthropic Claude Opus 4.7 (April 16, 2026 release), Opus 4.6 and 4.5, Sonnet 4.6, 4.5, and 4, and Haiku 4.5, plus Google Gemini 3.1 Pro, OpenAI GPT-5.5, 5.4, 5.2, and 5.1, and Moonshot Kimi K2.6. Augment also ships Prism smart-routing presets that pick between curated Claude+Gemini and GPT+Kimi combinations on the fly. Model choice applies to Agent in the current workspace; Auggie CLI exposes the same model picker through `/model` or `--model`.
 
 ## System Verdict
 
@@ -141,7 +148,7 @@ The model menu matters. As of May 2026 Augment documents selectable access to An
 | **Agent scope** | Can create, edit, or delete files and use terminal and tools with reviewable diffs and checkpoints |
 | **PR review** | Available on all paid plans; Enterprise adds advanced review controls |
 | **Selectable models** | Claude Opus 4.7/4.6/4.5, Sonnet 4.6/4.5/4, Haiku 4.5, Gemini 3.1 Pro, GPT-5.5/5.4/5.2/5.1, Kimi K2.6, Prism smart routing |
-| **Cosmos** | Bundled with Max as of May 2026 for heavier agent workloads |
+| **Cosmos** | Bundled with Max as of June 2026 verification for heavier agent workloads |
 | **Billing unit** | Credits, pooled at team level |
 | **Paid data use** | Paid plans exclude AI training on customer data under commercial terms |
 | **Pricing** | Indie $20/mo (1 user), Standard $60/developer/mo (up to 20 users), Max $200/developer/mo (up to 20 users) including Cosmos, Enterprise custom |
@@ -192,7 +199,7 @@ Pricing via [Augment Code pricing](https://www.augmentcode.com/pricing):
 | Max | $200/developer/mo | 450,000 | Heavy agent usage; includes Cosmos for bigger runs |
 | Enterprise | Custom | Custom | Unlimited users, SSO, CMEK, ISO 42001, SIEM, volume-based annual discounts |
 
-Auto top-up is listed at $15 for 24,000 credits across paid tiers. Augment's pricing FAQ gives rough examples: a small task with 10 tool calls might cost around 300 credits, while a complex task with 60 tool calls might cost around 4,300 credits. Pricing verified 2026-05-13 via [augmentcode.com/pricing](https://www.augmentcode.com/pricing).
+Auto top-up is listed at $15 for 24,000 credits across paid tiers. Augment's pricing FAQ gives rough examples: a small task with 10 tool calls might cost around 300 credits, while a complex task with 60 tool calls might cost around 4,300 credits. Pricing verified 2026-06-01 via [augmentcode.com/pricing](https://www.augmentcode.com/pricing).
 
 ## Against The Alternatives
 
@@ -212,12 +219,12 @@ Auto top-up is listed at $15 for 24,000 credits across paid tiers. Augment's pri
 - **Agent quality depends on repo hygiene.** Large codebases with weak tests, sparse conventions, or fragile build steps still need careful human review.
 - **Indie is light for daily agent work.** 40,000 credits is useful for evaluation, not sustained heavy use of Opus 4.7 or GPT-5.5.
 - **Enterprise value depends on controls.** SSO, CMEK, ISO 42001, data residency, SIEM integration, and audit trails matter only if your organization will use them.
-- **Model menus change.** Augment's lineup expanded again in May 2026 (Opus 4.7, GPT-5.5, Kimi K2.6, Prism), but availability and defaults can shift. Pin a team default, track spend by model, and re-benchmark when a major model lands.
+- **Model menus change.** Augment's current docs list Opus 4.7, GPT-5.5, Kimi K2.6, and Prism, but availability and defaults can shift. Pin a team default, track spend by model, and re-benchmark when a major model lands.
 - **Cosmos is Max-only.** Teams that want the heavier agent envelope cannot mix Cosmos into Standard seats; the upgrade is a per-developer step from $60 to $200/mo.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-05-13 against primary Augment sources: the [pricing page](https://www.augmentcode.com/pricing) and the [available models page](https://docs.augmentcode.com/models/available-models).
+This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-01 against primary Augment sources: the [pricing page](https://www.augmentcode.com/pricing) and the [available models page](https://docs.augmentcode.com/models/available-models).
 
 ## FAQ
 
@@ -237,7 +244,7 @@ Augment's pricing FAQ says paid plans exclude AI training on customer data under
 Yes. Augment added Opus 4.7 to its model picker after Anthropic's [April 16, 2026 release](/news/2026-04-16-anthropic-claude-opus-47/). The available-models page lists Opus 4.7 alongside Sonnet 4.6, Haiku 4.5, Gemini 3.1 Pro, GPT-5.5, and Kimi K2.6, plus Prism smart-routing presets.
 
 **What is Cosmos?**
-Cosmos is the heavier agent envelope bundled with the Max plan as of May 2026. Standard and Indie seats can still run Agent, Next Edit, and Code Review, but the Cosmos workload tier is reserved for $200/developer/mo subscribers.
+Cosmos is the heavier agent envelope bundled with the Max plan as of the June 1, 2026 verification. Standard and Indie seats can still run Agent, Next Edit, and Code Review, but the Cosmos workload tier is reserved for $200/developer/mo subscribers.
 
 ## Sources
 

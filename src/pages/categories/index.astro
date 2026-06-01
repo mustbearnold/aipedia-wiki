@@ -3,7 +3,7 @@
  * /categories/ index — god-tier 10/10 mobile-first.
  *
  * Browse all AI tool categories. Legacy preserved at
- * Refresh metadata: 2026-05-28 Rytr ai-writing, NeuronWriter ai-seo, Decktopus ai-presentation, and Argil ai-video affiliate surface activation, plus 2026-05-27 Lindy work-assistant category routing, 2026-05-26 CloudTalk phone-system and MeetGeek meeting-memory category refresh, ChatGPT, Qwen, Runway, Gemini Omni, and baseline tool-quality category update.
+ * Refresh metadata: 2026-06-01 AI coding category/tool refresh (Aider, Amazon Q Developer, Augment Code, Cline, Codeium/Windsurf migration, CodeRabbit, Cody, Continue, Devin), plus 2026-05-28 Rytr ai-writing, NeuronWriter ai-seo, Decktopus ai-presentation, and Argil ai-video affiliate surface activation, 2026-05-27 Lindy work-assistant category routing, 2026-05-26 CloudTalk phone-system and MeetGeek meeting-memory category refresh, ChatGPT, Qwen, Runway, Gemini Omni, and baseline tool-quality category update.
  * src/legacy-pages/categories-index.legacy.astro.
  */
 import { getCollection } from 'astro:content';
@@ -54,7 +54,7 @@ const sorted = allCategories
   .sort((a: any, b: any) => b.toolCount - a.toolCount);
 
 const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
-const categoriesDescription = `Browse ${allCategories.length} AI tool category hubs for buyer research. ${activeTools.length} active tools reviewed. Updated May 2026.`;
+const categoriesDescription = `Browse ${allCategories.length} AI tool category hubs for buyer research. ${activeTools.length} active tools reviewed. Updated June 2026.`;
 
 const categoryItems = sorted.map((category: any) => ({
   name: category.title,
@@ -64,7 +64,7 @@ const categoryItems = sorted.map((category: any) => ({
 ---
 
 <BaseLayout
-  title="AI Tool Categories · May 2026 · aipedia.wiki"
+  title="AI Tool Categories · June 2026 · aipedia.wiki"
   description={categoriesDescription}
 >
   <BreadcrumbLD items={[

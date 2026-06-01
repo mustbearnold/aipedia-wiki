@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$20/seat/month"
 status: active
 launched: 2023-05
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-01
+last_verified: 2026-06-01
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: "https://docs.continue.dev/"
     source_label: "Continue docs"
     source_id: continue-docs
-    verified_at: 2026-05-13
+    verified_at: 2026-06-01
     volatility: low
     confidence: high
   pricing_anchor:
@@ -39,7 +39,7 @@ facts:
     source: "https://www.continue.dev/pricing"
     source_label: "Continue pricing"
     source_id: continue-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-06-01
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -48,7 +48,7 @@ facts:
     source: "https://docs.continue.dev/"
     source_label: "Continue docs"
     source_id: continue-docs
-    verified_at: 2026-05-13
+    verified_at: 2026-06-01
     volatility: medium
     confidence: high
   team_distribution:
@@ -56,7 +56,7 @@ facts:
     source: "https://hub.continue.dev/"
     source_label: "Continue Hub"
     source_id: continue-hub
-    verified_at: 2026-05-13
+    verified_at: 2026-06-01
     volatility: medium
     confidence: high
   watch_out_for:
@@ -64,7 +64,7 @@ facts:
     source: "https://docs.continue.dev/"
     source_label: "Continue docs"
     source_id: continue-docs
-    verified_at: 2026-05-13
+    verified_at: 2026-06-01
     volatility: medium
     confidence: high
 tags: [open-source, byok, local-model, ai-coding, vscode, jetbrains, self-hosted, continue-hub]
@@ -82,7 +82,7 @@ not_best_for:
   - users wanting bundled frontier models
   - individuals who just want autocomplete
 quick_answer: >-
-  Continue.dev is the open-source Copilot alternative for developers who want BYOK model choice across VS Code, JetBrains, and Vim. Pick it for local Ollama workflows, Bedrock/Azure/Vertex routing, or team-shared agents. Skip it if you want the easiest first-day setup, where GitHub Copilot or Cursor is simpler. Continue shipped Claude Opus 4.7 support within 24 hours of the April 16, 2026 release, keeping pace with Cursor, Windsurf, and Zed.
+  Continue.dev is the open-source Copilot alternative for developers who want BYOK model choice across VS Code, JetBrains, and Vim. Pick it for local Ollama workflows, Bedrock/Azure/Vertex routing, or team-shared agents. Skip it if you want the easiest first-day setup, where GitHub Copilot or Cursor is simpler. Its main advantage is provider control, not a bundled frontier-model subscription.
 decision_brief:
   items:
     - label: Start here
@@ -116,15 +116,22 @@ price_history:
     source_label: "Source"
     source_id: continue-pricing
     note: "Verified pay-as-you-go Starter tier at $3 per million tokens (input and output) with Slack, Sentry, and Snyk integrations. Team holds at $20/seat with $10 bundled credits; Company stays custom."
+  - date: 2026-06-01
+    plan: "Pricing refresh"
+    price: "Free OSS + Starter $3/M tokens + Team $20/seat/mo"
+    source: "https://www.continue.dev/pricing"
+    source_label: "Source"
+    source_id: continue-pricing
+    note: "Re-verified June 1, 2026. Continue remains BYOK/open-source for core IDE use; paid Continue tiers cover managed credits, integrations, shared agents, and team governance."
 ---
 
 # Continue
 
 An open-source AI coding extension for VS Code and JetBrains, developed by Continue.dev under the MIT license. Unlike Copilot or Cursor, Continue ships no model of its own. It is a flexible IDE layer that connects to any model you pick.
 
-Claude Opus 4.7, OpenAI frontier models, Gemini 3.1 Pro, Mistral Large, or local models via Ollama, LM Studio, or vLLM all route through the same extension interface.
+Current Claude, OpenAI, Gemini, Mistral, and local models via Ollama, LM Studio, or vLLM all route through the same extension interface when configured through Continue's provider settings.
 
-> **April 17, 2026:** [Continue added Claude Opus 4.7 support within 24 hours](/news/2026-04-17-opus-4-7-day-two-ide-adoption/) of Anthropic's release, alongside Cursor, Windsurf, and Zed.
+> **Historical adoption signal:** [Continue added Claude Opus 4.7 support within 24 hours](/news/2026-04-17-opus-4-7-day-two-ide-adoption/) of Anthropic's April 2026 release, alongside Cursor, Windsurf, and Zed. As of June 1, 2026, verify the current model menu in Continue docs and your provider settings before standardizing.
 
 ## System Verdict
 
@@ -150,7 +157,7 @@ Claude Opus 4.7, OpenAI frontier models, Gemini 3.1 Pro, Mistral Large, or local
 | **Team pricing** | $20/seat/mo with $10/seat frontier-model credits |
 | **Company pricing** | Custom with SSO, BYOK keys, SLAs |
 
-Every data point above was verified against vendor documentation on 2026-05-13. See Sources.
+Every data point above was verified against vendor documentation on 2026-06-01. See Sources.
 
 ## What it actually is
 
@@ -164,7 +171,7 @@ Context providers pull documentation, GitHub issues, terminal output, web search
 
 ## When to pick Continue
 
-- **You want full model choice without IDE lock-in.** Swap Opus 4.7 for Mistral Large at will. Run on-device with Ollama when compliance requires it.
+- **You want full model choice without IDE lock-in.** Swap between Claude, OpenAI, Gemini, Mistral, or local Ollama routes as your provider policy and budget change.
 - **Your team spans VS Code, JetBrains, and Vim.** Continue ships on all three; Cursor does not.
 - **You already have API access through Bedrock, Azure, or Vertex.** Route usage through existing enterprise agreements.
 - **Data residency is non-negotiable.** Local Ollama or LM Studio keeps code entirely on-device.
@@ -189,7 +196,7 @@ Pricing via [continue.dev/pricing](https://www.continue.dev/pricing).
 | Team | $20/seat/mo | $10/seat frontier credits · team agent management · private agent sharing · usage controls · Gmail/GitHub SSO | Small teams |
 | Company | Custom | Custom SSO (SAML/OIDC) · BYOK API keys · commitment options · invoicing · SLAs | Compliance-heavy orgs |
 
-*Prices verified 2026-05-13 via [Continue pricing](https://www.continue.dev/pricing). The OSS extension stays free and BYOK; model costs are paid directly to the chosen provider, or eliminated entirely with a local Ollama model. Starter is the smallest paid tier and bills $3 per million tokens on input and output.*
+*Prices verified 2026-06-01 via [Continue pricing](https://www.continue.dev/pricing). The OSS extension stays free and BYOK; model costs are paid directly to the chosen provider, or eliminated entirely with a local Ollama model. Starter is the smallest paid tier and bills $3 per million tokens on input and output.*
 
 ## Against the alternatives
 
@@ -215,7 +222,7 @@ Pricing via [continue.dev/pricing](https://www.continue.dev/pricing).
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [Continue pricing](https://www.continue.dev/pricing), [Continue docs](https://docs.continue.dev), and the [Continue GitHub repo](https://github.com/continuedev/continue).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-01 against [Continue pricing](https://www.continue.dev/pricing), [Continue docs](https://docs.continue.dev), and the [Continue GitHub repo](https://github.com/continuedev/continue).
 
 ## FAQ
 
@@ -236,7 +243,7 @@ A shared registry for agents, slash commands, rules, and MCP servers. Publish on
 
 ## Sources
 
-- [Continue pricing](https://www.continue.dev/pricing): Starter, Team, Company plans verified 2026-05-13
+- [Continue pricing](https://www.continue.dev/pricing): Starter, Team, Company plans verified 2026-06-01
 - [Continue docs](https://docs.continue.dev): configuration, context providers, models
 - [GitHub: continuedev/continue](https://github.com/continuedev/continue): source code and releases
 - [continue.dev](https://continue.dev): product overview

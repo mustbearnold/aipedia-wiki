@@ -2,7 +2,7 @@
 // Lists every active tool with category + tagline, every comparison, every
 // use-case guide. Intended for crawlers willing to ingest a larger manifest
 // to discover the full content map without parsing the sitemap.
-// Refresh metadata: 2026-06-01 Phase 1 answer, editorial policy, glossary, and static surface refresh.
+// Refresh metadata: 2026-06-01 Phase 2 AI coding tool refresh (Aider, Amazon Q, Augment, Cline, Codeium/Windsurf, CodeRabbit, Cody, Continue, Devin) plus Phase 1 answer, editorial policy, glossary, and static surface refresh.
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 

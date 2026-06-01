@@ -3,7 +3,7 @@
 // Copilot) at the canonical index + category hubs + editorial policy.
 //
 // See also /llms-full.txt for the verbose variant with every page listed.
-// Refresh metadata: 2026-06-01 Phase 1 answer, editorial policy, glossary, and static surface refresh.
+// Refresh metadata: 2026-06-01 Phase 2 AI coding tool refresh (Aider, Amazon Q, Augment, Cline, Codeium/Windsurf, CodeRabbit, Cody, Continue, Devin) plus Phase 1 answer, editorial policy, glossary, and static surface refresh.
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 

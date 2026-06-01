@@ -11,10 +11,10 @@ pricing_model: freemium
 price_range: "$0-$60/developer/month"
 status: active
 launched: 2023
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-01
+last_verified: 2026-06-01
 update_frequency: monthly
-seo_title: "CodeRabbit: Features, Pricing & Review (May 2026)"
+seo_title: "CodeRabbit: Features, Pricing & Review (June 2026)"
 meta_description: "CodeRabbit provides AI code reviews for pull requests, IDEs, CLI workflows, and Slack. Pro is $24/user/mo annual, Pro+ is $48/user/mo annual, and the Slack agent is usage priced."
 author: aipedia.wiki Editorial
 affiliate:
@@ -34,14 +34,14 @@ facts:
     source: "https://docs.coderabbit.ai/management/plans"
     source_label: "CodeRabbit plans docs"
     source_id: coderabbit-best-paid-tier
-    verified_at: 2026-05-13
+    verified_at: 2026-06-01
     confidence: high
   best_paid_tier:
     value: "Pro ($24/user/month annual) for review; Pro+ ($48/user/month annual) for planning, unit tests, merge-conflict help, and higher limits"
     source: "https://docs.coderabbit.ai/management/plans"
     source_label: "CodeRabbit plans docs"
     source_id: coderabbit-best-paid-tier
-    verified_at: 2026-05-13
+    verified_at: 2026-06-01
     next_review_at: 2026-06-13
     confidence: high
   best_for:
@@ -49,7 +49,7 @@ facts:
     source: "https://www.coderabbit.ai/pricing"
     source_label: "CodeRabbit pricing"
     source_id: coderabbit-best-for
-    verified_at: 2026-05-13
+    verified_at: 2026-06-01
     confidence: high
 tags: [ai-coding, code-review, pull-requests, github, gitlab, cli, vscode, sast, linters]
 best_for:
@@ -92,6 +92,13 @@ price_history:
     source_label: "Source"
     source_id: coderabbit-best-for
     note: "Usage-priced Slack agent for investigation, recurring tasks, planning, code generation, opening PRs, and progress summaries"
+  - date: 2026-06-01
+    plan: "Pricing refresh"
+    price: "Free / Pro $24 annual / Pro+ $48 annual / Slack agent $0.50 per active agent minute"
+    source: "https://www.coderabbit.ai/pricing"
+    source_label: "Source"
+    source_id: coderabbit-best-for
+    note: "Re-verified June 1, 2026 against CodeRabbit pricing and plan docs; public paid-seat and Slack agent anchors remain unchanged from the May snapshot."
 ---
 
 # CodeRabbit
@@ -198,7 +205,7 @@ Pricing via [CodeRabbit pricing](https://www.coderabbit.ai/pricing) and [CodeRab
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-05-13 against CodeRabbit primary sources, including documented rate limits (Pro: 5 reviews/hour, 5 MCP connections, 1 linked repo; Pro+: 10 reviews/hour, 15 MCP connections, 10 linked repos).
+This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-01 against CodeRabbit primary sources, including documented rate limits (Pro: 5 reviews/hour, 5 MCP connections, 1 linked repo; Pro+: 10 reviews/hour, 15 MCP connections, 10 linked repos).
 
 ## FAQ
 

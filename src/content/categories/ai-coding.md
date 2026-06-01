@@ -3,12 +3,12 @@ type: category
 slug: ai-coding
 title: AI Coding Assistants
 description: Current AI coding assistants, AI-native IDEs, terminal coding agents, PR agents, and app builders for developers, founders, teams, and non-developers.
-tool_count: 22
-seo_title: "Best AI Coding Tools & Copilot Alternatives (May 2026)"
-meta_description: "Updated May 29, 2026: compare Cursor with Composer 2.5, Automations, and Gartner enterprise recognition; Claude Code with Opus 4.8 dynamic workflows; GitHub Copilot, Windsurf, Trae, Codex, Replit Agent, Devin, Aider, Cline, Continue, Lovable, Bolt, and v0 by workflow, pricing, autonomy, and team fit."
+tool_count: 30
+seo_title: "Best AI Coding Tools & Copilot Alternatives (June 2026)"
+meta_description: "Updated June 1, 2026: compare Cursor, Claude Code, GitHub Copilot, Windsurf/Codeium, Trae, Codex, Replit Agent, Devin, Aider, Cline, Continue, CodeRabbit, Cody, Amazon Q Developer, and Augment by workflow, pricing, autonomy, and team fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-29
-last_verified: 2026-05-29
+last_updated: 2026-06-01
+last_verified: 2026-06-01
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -35,6 +35,8 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 **Use [Windsurf](/tools/windsurf/) when the buyer wants to compare AI IDE cost and workflow.** Windsurf's current docs describe Free, Pro, Teams, and Enterprise usage plans with usage-based self-serve plans introduced in March 2026. Codeium has now fully sunset (codeium.com 301-redirects to windsurf.com), so existing Codeium users should treat Windsurf as the inheritor product, not a separate option.
 
 **Use [Codex](/tools/codex/) when the team wants OpenAI-native agent coding.** It fits local repo work, PR preparation, checks, and tasks where an agent can edit and verify code rather than only suggest completions.
+
+**June 1 maintenance note:** the open-source/BYOK and PR-agent layer has been refreshed for Aider, Cline, Continue, CodeRabbit, Devin, Amazon Q Developer, Augment Code, Sourcegraph Cody, and the Codeium-to-Windsurf migration path. The decision rule did not change: use Cursor, GitHub Copilot, or Claude Code as first stops; use Aider/Cline/Continue when control and model routing matter; use CodeRabbit for review load; use Devin only for delegated, well-scoped tickets.
 
 ## Buyer Paths
 
@@ -109,6 +111,15 @@ Do not publish stale model-version claims. Coding tools route models and change 
 - [Claude Opus 4.8 and dynamic workflows](https://www.anthropic.com/news/claude-opus-4-8) (verified 2026-05-29)
 - [Claude dynamic workflows in Claude Code](https://claude.com/blog/introducing-dynamic-workflows-in-claude-code) (verified 2026-05-29)
 - [Claude Max plan](https://support.claude.com/en/articles/11049741-what-is-the-max-plan) (verified 2026-05-29)
-- [Windsurf plans and usage](https://docs.windsurf.com/windsurf/accounts/usage) (verified 2026-05-13)
+- [Windsurf plans and usage](https://docs.windsurf.com/windsurf/accounts/usage) (verified 2026-06-01)
+- [Aider docs](https://aider.chat/docs/) (verified 2026-06-01)
+- [Amazon Q Developer pricing](https://aws.amazon.com/q/developer/pricing/) (verified 2026-06-01)
+- [Augment Code pricing](https://www.augmentcode.com/pricing) (verified 2026-06-01)
+- [Cline homepage](https://cline.bot/) (verified 2026-06-01)
+- [CodeRabbit pricing](https://www.coderabbit.ai/pricing) (verified 2026-06-01)
+- [Continue pricing](https://www.continue.dev/pricing) (verified 2026-06-01)
+- [Devin pricing](https://devin.ai/pricing) (verified 2026-06-01)
+- [Sourcegraph pricing](https://sourcegraph.com/pricing) (verified 2026-06-01)
+- [Cognition Windsurf acquisition announcement](https://cognition.ai/blog/windsurf) (verified 2026-06-01)
 - [Trae pricing](https://www.trae.ai/pricing) (verified 2026-05-24)
 - [Gemini Code Assist](https://cloud.google.com/products/gemini/code-assist) (verified 2026-05-13)

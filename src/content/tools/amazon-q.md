@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$19/user/month"
 status: active
 launched: 2023-11
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-01
+last_verified: 2026-06-01
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: https://aws.amazon.com/q/developer/
     source_label: Amazon Q Developer official site
     source_id: amazon-q-official
-    verified_at: '2026-05-13'
+    verified_at: 2026-06-01
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -40,7 +40,7 @@ facts:
     source: https://aws.amazon.com/q/developer/pricing/
     source_label: Amazon Q Developer pricing
     source_id: amazon-q-pricing
-    verified_at: '2026-05-13'
+    verified_at: 2026-06-01
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -50,7 +50,7 @@ facts:
     source: https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/what-is.html
     source_label: Amazon Q Developer docs
     source_id: amazon-q-docs
-    verified_at: '2026-05-13'
+    verified_at: 2026-06-01
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -60,7 +60,7 @@ facts:
     source: https://aws.amazon.com/q/developer/features/
     source_label: Amazon Q Developer features
     source_id: amazon-q-features
-    verified_at: '2026-05-13'
+    verified_at: 2026-06-01
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -70,12 +70,12 @@ facts:
     source: https://aws.amazon.com/q/developer/
     source_label: Amazon Q Developer official site
     source_id: amazon-q-official
-    verified_at: '2026-05-13'
+    verified_at: 2026-06-01
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
 tags: [ai-coding, aws, cloud, autocomplete, ide-plugin, codewhisperer, enterprise, iam, cloudformation, cdk]
-seo_title: "Amazon Q Developer: Review & Pricing (May 2026)"
+seo_title: "Amazon Q Developer: Review & Pricing (June 2026)"
 meta_description: "Amazon Q Developer is AWS's AI coding assistant. Free tier 50 agentic requests per month plus 1,000 LOC transformation; Pro $19/user/mo with increased agentic limits and 4,000 LOC transformation pooled at account level. Best on AWS-heavy stacks."
 author: "aipedia.wiki Editorial"
 best_for:
@@ -110,7 +110,14 @@ price_history:
     source: "https://aws.amazon.com/q/developer/pricing/"
     source_label: "Source"
     source_id: amazon-q-pricing
-    note: "Re-verified May 2026. Pricing unchanged. Free tier confirmed at 50 agentic requests/mo plus 1,000 LOC transformation/mo. Pro 4,000 LOC transformation per user is pooled at the account level (10 Pro users = 40,000 LOC pool). Overage $0.003/LOC."
+    note: "May verification snapshot. Free tier confirmed at 50 agentic requests/mo plus 1,000 LOC transformation/mo. Pro 4,000 LOC transformation per user is pooled at the account level."
+  - date: 2026-06-01
+    plan: "Pro"
+    price: "$19/user/mo"
+    source: "https://aws.amazon.com/q/developer/pricing/"
+    source_label: "Source"
+    source_id: amazon-q-pricing
+    note: "Re-verified June 1, 2026. Pricing unchanged. Free tier remains 50 agentic requests/mo plus 1,000 LOC transformation/mo; Pro keeps pooled 4,000 LOC/user/mo transformation allocation and $0.003/LOC overage."
 ---
 
 # Amazon Q Developer
@@ -142,7 +149,7 @@ Free tier is perpetual with a 50 agentic-request monthly cap plus 1,000 LOC of t
 | **IP indemnification** | Yes, matching GitHub Copilot's policy |
 | **Underlying models** | Undisclosed by AWS. GPT-5.5 family is separately accessible through AWS Bedrock since April 28, 2026 |
 
-Every data point above was verified against vendor documentation on 2026-05-13. See Sources.
+Every data point above was verified against vendor documentation on 2026-06-01. See Sources.
 
 ## What it actually is
 
@@ -177,7 +184,7 @@ The moat is AWS-native context. IAM policy drafting, CDK construct patterns, Lam
 | Pro | $19/user/mo | Increased agentic-request allocation, 4,000 LOC transformation per user per month (pooled at account level), admin controls, SSO (IAM Identity Center), data isolation, IP indemnity |
 | Transformation overage (Pro) | $0.003/LOC | Beyond the 4,000 LOC monthly pooled allocation |
 
-*Prices verified 2026-05-13 via [aws.amazon.com/q/developer/pricing](https://aws.amazon.com/q/developer/pricing/) and the [Q Developer tiers docs](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/q-tiers.html). Transformation LOC is pooled across all Pro seats in the account, so 10 Pro subscribers share a 40,000 LOC monthly budget.*
+*Prices verified 2026-06-01 via [aws.amazon.com/q/developer/pricing](https://aws.amazon.com/q/developer/pricing/) and the [Q Developer tiers docs](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/q-tiers.html). Transformation LOC is pooled across all Pro seats in the account, so 10 Pro subscribers share a 40,000 LOC monthly budget.*
 
 ## Against the alternatives
 
@@ -198,13 +205,13 @@ The moat is AWS-native context. IAM policy drafting, CDK construct patterns, Lam
 - **Weaker outside AWS.** General-purpose coding quality trails [GitHub Copilot](/tools/github-copilot/) on non-AWS code.
 - **Transformation overage bills separately.** Heavy Java or .NET migration workloads can exceed 4,000 LOC per user per month and trigger $0.003 per extra LOC charges.
 - **JetBrains support trails VS Code.** Parity is close but updates land on VS Code first.
-- **Underlying models are undisclosed.** AWS does not publish which foundation model powers Q Developer, making behavior changes hard to predict. As a workaround, teams that want to compare model behaviors can hit GPT-5.5 and Claude Opus 4.7 directly via Bedrock since the April 28, 2026 expansion.
+- **Underlying models are undisclosed.** AWS does not publish which foundation model powers Q Developer, making behavior changes hard to predict. As a workaround, teams that want model-level control should test direct Bedrock model access alongside Q Developer instead of assuming Q's hidden model mix.
 - **Multi-file autonomous editing is limited.** [Cursor](/tools/cursor/) Composer and Claude Code both handle bigger refactors.
 - **Console chat quality varies by service.** Mature AWS services have better coverage than new or niche offerings.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis shown. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-05-13 against [Amazon Q Developer pricing](https://aws.amazon.com/q/developer/pricing/), the [Q Developer tiers docs](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/q-tiers.html), the [Amazon Q Developer FAQ](https://aws.amazon.com/q/developer/faqs/), and the [April 28 OpenAI-on-AWS coverage](/news/2026-04-28-openai-models-codex-managed-agents-aws/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis shown. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-01 against [Amazon Q Developer pricing](https://aws.amazon.com/q/developer/pricing/), the [Q Developer tiers docs](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/q-tiers.html), the [Amazon Q Developer FAQ](https://aws.amazon.com/q/developer/faqs/), and the [April 28 OpenAI-on-AWS coverage](/news/2026-04-28-openai-models-codex-managed-agents-aws/).
 
 ## FAQ
 
