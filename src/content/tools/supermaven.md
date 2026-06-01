@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$10/month"
 status: active
 launched: 2023-10
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-01
+last_verified: 2026-06-01
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: https://supermaven.com/
     source_label: Supermaven official site
     source_id: supermaven-official
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-01'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -41,7 +41,7 @@ facts:
     source: https://supermaven.com/pricing
     source_label: Supermaven pricing
     source_id: supermaven-pricing
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-01'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -50,7 +50,7 @@ facts:
     source: https://supermaven.com/
     source_label: Supermaven official site
     source_id: supermaven-official
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-01'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -60,7 +60,7 @@ facts:
     source: https://supermaven.com/
     source_label: Supermaven official site
     source_id: supermaven-official
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-01'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -70,7 +70,7 @@ facts:
     source: https://supermaven.com/pricing
     source_label: Supermaven pricing
     source_id: supermaven-pricing
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-01'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -80,13 +80,13 @@ facts:
     source: https://supermaven.com/
     source_label: Supermaven official site
     source_id: supermaven-official
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-01'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
 tags: [autocomplete, ai-coding, context-window, fast, vscode, jetbrains, neovim, babble]
-seo_title: "Supermaven: Features, Pricing & Review (May 2026)"
-meta_description: "Supermaven ships the fastest AI autocomplete in the category. Babble model runs a 1M-token context window at sub-250ms latency. Free tier, Pro at $10/month, Team at $10/user. No chat, no agent."
+seo_title: "Supermaven: Features, Pricing & Review (June 2026)"
+meta_description: "Supermaven ships latency-first AI autocomplete. Pro and Team add 1M-token context, style adaptation, $5/month in chat credits, and a 30-day Pro trial. Free tier stays useful for fast suggestions."
 author: "aipedia.wiki Editorial"
 best_for:
   - developers prioritizing completion latency
@@ -94,13 +94,20 @@ best_for:
   - Neovim users
   - buyers who already use a separate chat tool
 not_best_for:
-  - users wanting chat in the same tool
+  - users wanting a full-featured chat or agent workspace in the same tool
   - agent-mode workflows
   - enterprises needing SSO or audit logs
   - small projects where 1M context does not matter
 quick_answer: >-
   Supermaven ships the fastest AI autocomplete in the category. The Babble model runs a 1M-token context window at sub-250ms latency. Pro is $10/month, Team is $10/user/month; free tier is usable but does not include the 1M window. Pick it for latency-first completion; skip it if chat or agent mode needs to live in the same tool.
 price_history:
+  - date: 2026-06-01
+    plan: "Free / Pro / Team"
+    price: "$0 / $10 / $10 per user per month"
+    source: "https://supermaven.com/pricing"
+    source_label: "Source"
+    source_id: supermaven-pricing
+    note: "June 1 recheck: Free keeps fast suggestions and 7-day data retention; Pro and Team include 1M context, style adaptation, the largest model, $5/month in chat credits, and a 30-day Pro trial."
   - date: 2026-04-15
     plan: "Pro"
     price: "$10/mo"
@@ -128,11 +135,11 @@ price_history:
 
 Autocomplete-only AI coding tool from Jacob Jackson, the original creator of Tabnine. Two technical claims drive the product: the largest context window in the category (1M tokens via the Babble model) and the lowest completion latency.
 
-No chat. No agent. No codebase Q&A. One job.
+Chat credits exist on Pro and Team, but the product is still autocomplete-first. No autonomous agent. No broad codebase Q&A. One core job.
 
 ## System Verdict
 
-> **Pick Supermaven when completion latency is the dominant factor.** Median suggestions land under 250ms. The Babble model ships 1M tokens of context on both free and Pro tiers, which means suggestions pull patterns from distant files that [GitHub Copilot](/tools/github-copilot/) misses inside its smaller window. The free tier is genuinely usable.
+> **Pick Supermaven when completion latency is the dominant factor.** Median suggestions land under 250ms. The Babble model gives paid Pro and Team users a 1M-token context window, which means suggestions can pull patterns from distant files that [GitHub Copilot](/tools/github-copilot/) may miss inside a smaller window. The free tier is genuinely usable, but the public pricing page reserves 1M context and style adaptation for Pro.
 >
 > **Skip it if chat, agent mode, or codebase Q&A need to live in the same tool.** [Cursor](/tools/cursor/) covers everything Supermaven does plus agentic editing. [GitHub Copilot](/tools/github-copilot/) matches the $10 price point and adds chat. [Continue](/tools/continue/) is free and brings-your-own-key.
 >
@@ -143,7 +150,7 @@ No chat. No agent. No codebase Q&A. One job.
 | | |
 |---|---|
 | **Model** | Babble, 2.5x larger than the previous Supermaven model |
-| **Context window** | 1M tokens on free and Pro |
+| **Context window** | 1M tokens on Pro and Team; Free no longer advertises the 1M window |
 | **Median latency** | Under 250ms, reports hit as low as 180ms |
 | **Editors** | VS Code, JetBrains, Neovim |
 | **Free tier** | Fast suggestions on large codebases; 7-day data retention; no 1M context, no style adaptation |
@@ -153,7 +160,7 @@ No chat. No agent. No codebase Q&A. One job.
 | **Agent mode** | None |
 | **Enterprise features** | None (no SSO, no audit logs) |
 
-Every data point above was verified against vendor sources on 2026-05-13. See Sources.
+Every data point above was verified against vendor sources on 2026-06-01. See Sources.
 
 ## What it actually is
 
@@ -188,7 +195,7 @@ The project indexes locally. Code does not ship to remote servers beyond what th
 | Pro | $10/mo | 1M tokens | $5/mo included | **Most paid users land here** |
 | Team | $10/user/mo | 1M tokens | $5/user/mo included | Teams that want shared management with the Pro feature set |
 
-*Prices verified 2026-05-13 via [supermaven.com/pricing](https://supermaven.com/pricing). Pro and Team include the 1M Babble context window and coding-style adaptation; the Free tier no longer advertises either as of this verification. A 30-day Pro trial is offered. Chat is a secondary feature; heavy chat users belong on a different tool.*
+*Prices verified 2026-06-01 via [supermaven.com/pricing](https://supermaven.com/pricing). Pro and Team include the 1M Babble context window and coding-style adaptation; the Free tier no longer advertises either as of this verification. A 30-day Pro trial is offered. Chat is a secondary feature; heavy chat users belong on a different tool.*
 
 ## Against the alternatives
 
@@ -204,9 +211,9 @@ The project indexes locally. Code does not ship to remote servers beyond what th
 
 ## Failure modes
 
-- **Autocomplete only.** No chat panel, no agent, no codebase Q&A. A second tool is required for anything beyond completion.
+- **Autocomplete-first.** Chat credits are included on paid tiers, but there is no autonomous agent and no broad codebase Q&A. A second tool is required for anything beyond completion-heavy assistance.
 - **Low moat.** Autocomplete is a feature, not a category. Copilot, Cursor, and others can close the context and latency gap.
-- **Custom model, limited third-party benchmarks.** Babble is not benchmarked publicly the way OpenAI frontier models or [Claude Opus 4.7](/tools/claude/) are. Since Opus 4.7's April 16, 2026 launch took the agentic-coding lead, the contrast with Babble's single-task autocomplete focus is sharper: heavy reasoning still belongs in a separate chat or agent tool.
+- **Custom model, limited third-party benchmarks.** Babble is not benchmarked publicly the way frontier chat or coding-agent models are. Supermaven is still a single-task autocomplete specialist; heavy reasoning belongs in a separate chat or agent tool.
 - **No enterprise controls.** No SSO, no audit logs, no IP indemnification. Large enterprises cannot buy this as-is.
 - **Startup risk.** Small team, recent funding, acquisition-target profile. Roadmap continuity is not guaranteed.
 - **Chat credits burn fast.** The $5/month allotment is a courtesy, not a real chat product. Heavy chat use still needs a separate tool.
@@ -214,12 +221,12 @@ The project indexes locally. Code does not ship to remote servers beyond what th
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-05-13 against [supermaven.com/pricing](https://supermaven.com/pricing) and the [Supermaven 1.0 announcement](https://supermaven.com/blog/announcing-supermaven-1.0).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-01 against [supermaven.com/pricing](https://supermaven.com/pricing) and the [Supermaven 1.0 announcement](https://supermaven.com/blog/announcing-supermaven-1.0).
 
 ## FAQ
 
 **What is the Babble model?**
-Babble is Supermaven's in-house completion model. It is 2.5x larger than the previous Supermaven model and ships a 1M-token context window on free and Pro tiers. The team reports 100% needle-in-haystack recall across the full window.
+Babble is Supermaven's in-house completion model. It is 2.5x larger than the previous Supermaven model and ships a 1M-token context window on Pro and Team tiers. The team reports 100% needle-in-haystack recall across the full window.
 
 **Does Supermaven have a chat feature?**
 Yes, but it is secondary. Pro includes $5/month in chat credits. Heavy chat users should pair Supermaven with a dedicated chat tool like [Claude](/tools/claude/), [ChatGPT](/tools/chatgpt/), or [Continue](/tools/continue/).

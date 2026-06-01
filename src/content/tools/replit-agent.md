@@ -7,11 +7,11 @@ category: ai-coding
 company: replit
 url: https://replit.com
 pricing_model: freemium
-price_range: "$0-$100+/month"
+price_range: "$0-$100/month + usage credits; Enterprise custom"
 status: active
 launched: 2024-09
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-01
+last_verified: 2026-06-01
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://docs.replit.com/core-concepts/agent"
     source_label: "Replit Agent docs"
     source_id: replit-agent-docs
-    verified_at: 2026-05-13
+    verified_at: 2026-06-01
     volatility: high
     confidence: high
     next_review_at: 2026-06-13
@@ -39,7 +39,7 @@ facts:
     source: "https://docs.replit.com/core-concepts/agent"
     source_label: "Replit Agent docs"
     source_id: replit-agent-docs
-    verified_at: 2026-05-13
+    verified_at: 2026-06-01
     volatility: high
     confidence: high
     next_review_at: 2026-06-13
@@ -48,7 +48,7 @@ facts:
     source: "https://replit.com/pricing"
     source_label: "Replit pricing"
     source_id: replit-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-06-01
     volatility: high
     confidence: high
     next_review_at: 2026-06-13
@@ -57,16 +57,16 @@ facts:
     source: "https://replit.com/pricing"
     source_label: "Replit pricing"
     source_id: replit-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-06-01
     volatility: high
     confidence: high
     next_review_at: 2026-06-13
   best_paid_tier:
-    value: "Pro for serious individual agent use; Enterprise for teams needing governance, support, and scale"
+    value: "Core for casual solo builders; Pro for serious agent use, Turbo mode, credit rollover, and up to 10 parallel agents; Enterprise for governance and scale"
     source: "https://replit.com/pricing"
     source_label: "Replit pricing"
     source_id: replit-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-06-01
     volatility: high
     confidence: high
     next_review_at: 2026-06-13
@@ -75,7 +75,7 @@ facts:
     source: "https://docs.replit.com/core-concepts/agent"
     source_label: "Replit Agent docs"
     source_id: replit-agent-docs
-    verified_at: 2026-05-13
+    verified_at: 2026-06-01
     volatility: medium
     confidence: high
   image_generation:
@@ -83,7 +83,7 @@ facts:
     source: "https://docs.replit.com/core-concepts/agent"
     source_label: "Replit Agent docs"
     source_id: replit-agent-docs
-    verified_at: 2026-05-13
+    verified_at: 2026-06-01
     volatility: low
     confidence: high
   video_generation:
@@ -91,7 +91,7 @@ facts:
     source: "https://docs.replit.com/core-concepts/agent"
     source_label: "Replit Agent docs"
     source_id: replit-agent-docs
-    verified_at: 2026-05-13
+    verified_at: 2026-06-01
     volatility: low
     confidence: high
   real_time_voice:
@@ -99,7 +99,7 @@ facts:
     source: "https://docs.replit.com/core-concepts/agent"
     source_label: "Replit Agent docs"
     source_id: replit-agent-docs
-    verified_at: 2026-05-13
+    verified_at: 2026-06-01
     volatility: low
     confidence: high
   web_browsing:
@@ -107,7 +107,7 @@ facts:
     source: "https://docs.replit.com/core-concepts/agent"
     source_label: "Replit Agent docs"
     source_id: replit-agent-docs
-    verified_at: 2026-05-13
+    verified_at: 2026-06-01
     volatility: medium
     confidence: high
   coding_agent:
@@ -115,7 +115,7 @@ facts:
     source: "https://docs.replit.com/core-concepts/agent"
     source_label: "Replit Agent docs"
     source_id: replit-agent-docs
-    verified_at: 2026-05-13
+    verified_at: 2026-06-01
     volatility: high
     confidence: high
     next_review_at: 2026-06-13
@@ -124,7 +124,7 @@ facts:
     source: "https://replit.com/pricing"
     source_label: "Replit pricing"
     source_id: replit-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-06-01
     volatility: high
     confidence: high
     next_review_at: 2026-06-13
@@ -133,7 +133,7 @@ facts:
     source: "https://docs.replit.com/core-concepts/agent"
     source_label: "Replit Agent docs"
     source_id: replit-agent-docs
-    verified_at: 2026-05-13
+    verified_at: 2026-06-01
     volatility: medium
     confidence: high
   open_source_or_local:
@@ -141,7 +141,7 @@ facts:
     source: "https://replit.com/pricing"
     source_label: "Replit pricing"
     source_id: replit-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-06-01
     volatility: low
     confidence: high
   best_for:
@@ -149,7 +149,7 @@ facts:
     source: "https://docs.replit.com/core-concepts/agent"
     source_label: "Replit Agent docs"
     source_id: replit-agent-docs
-    verified_at: 2026-05-13
+    verified_at: 2026-06-01
     volatility: medium
     confidence: high
   watch_out_for:
@@ -157,12 +157,12 @@ facts:
     source: "https://docs.replit.com/billing/ai-billing"
     source_label: "Replit AI billing docs"
     source_id: replit-ai-billing
-    verified_at: 2026-05-13
+    verified_at: 2026-06-01
     volatility: high
     confidence: high
     next_review_at: 2026-06-13
 tags: [browser-ide, app-builder, no-local-setup, ai-coding, deployment, non-developer, replit, agent-3]
-seo_title: "Replit Agent: Features, Pricing & Review (May 2026)"
+seo_title: "Replit Agent: Features, Pricing & Review (June 2026)"
 meta_description: "Replit Agent 3 runs autonomous coding sessions up to 200 minutes, spawns subagents, tests its own code. Effort-based credits across Economy, Power, Turbo modes. Free Starter, Core $20/mo annual ($25 monthly), Pro $95/mo annual ($100 monthly) with Turbo and up to 10 parallel agents."
 author: aipedia.wiki Editorial
 quick_answer: >-
@@ -177,6 +177,35 @@ not_best_for:
   - Developers needing architectural control
   - Complex integrations or performance-critical systems
   - Teams requiring strict deployment compliance
+price_history:
+  - date: 2026-06-01
+    plan: "Starter"
+    price: "$0"
+    source: "https://replit.com/pricing"
+    source_label: "Source"
+    source_id: replit-pricing
+    note: "Free daily Agent credits, built-in database, and one published project; Agent chat/Lite build are available with daily caps."
+  - date: 2026-06-01
+    plan: "Core"
+    price: "$25 monthly or $20/month billed annually"
+    source: "https://replit.com/pricing"
+    source_label: "Source"
+    source_id: replit-pricing
+    note: "$25 monthly credits, up to 5 collaborators, up to 2 parallel agents, unlimited workspaces, and removed Replit badge."
+  - date: 2026-06-01
+    plan: "Pro"
+    price: "$100 monthly or $95/month billed annually"
+    source: "https://replit.com/pricing"
+    source_label: "Source"
+    source_id: replit-pricing
+    note: "$100 monthly credits, up to 15 collaborators, 50 viewers, up to 10 parallel agents, access to most powerful models, 28-day database rollbacks, premium support, and one-month credit rollover."
+  - date: 2026-06-01
+    plan: "Enterprise"
+    price: "Custom"
+    source: "https://replit.com/pricing"
+    source_label: "Source"
+    source_id: replit-pricing
+    note: "Custom seat limits, SSO/SAML, advanced privacy controls, design system support, data warehouse connections, dedicated support, single-tenant environments, region selection, static outbound IPs, and VPC peering."
 ---
 
 # Replit Agent
@@ -193,7 +222,7 @@ Agent 3 runs autonomous sessions up to 200 minutes (Agent 1 capped at 2 minutes,
 
 > **Pick Replit Agent if you want an autonomous agent that owns the whole app lifecycle end to end.** Agent 3's 200-minute session length and self-testing loop beats every competitor on sustained unattended work. Everything runs in the browser: editor, terminal, preview, Postgres, deployment. Zero local setup.
 >
-> **Skip it if you need production-grade code quality or architectural control.** Generated code is functional, not engineered. [Cursor](/tools/cursor/) gives a local AI-native IDE with Claude Opus 4.7 for real codebases. [Claude](/tools/claude/) Code CLI owns the terminal agent category for working developers.
+> **Skip it if you need production-grade code quality or architectural control.** Generated code is functional, not engineered. [Cursor](/tools/cursor/) gives a local AI-native IDE for real codebases. [Claude Code](/tools/claude-code/) owns the terminal-agent category for working developers.
 >
 > **Who pays which tier:** Starter free for exploration with daily AI credits, Core $20/mo annual ($25 monthly) for $25 of credits, 5 collaborators, and up to 2 parallel agents; Pro $95/mo annual ($100 monthly) for $100 of credits, 15 collaborators, up to 10 parallel agents, Turbo mode access, and 28-day database rollbacks. The old Teams tier retired in February 2026. Pro scales credit packs up to $4,000/mo for heavy usage.
 
@@ -207,14 +236,14 @@ Agent 3 runs autonomous sessions up to 200 minutes (Agent 1 capped at 2 minutes,
 | **Subagents** | Agent 3 spawns specialized subagents for isolated tasks |
 | **Runtime** | Replit browser IDE: editor, terminal, preview, database, deploy |
 | **Database** | Replit DB + integrated Postgres |
-| **Billing** | Effort-based credits. Simple changes cost under $0.25 |
+| **Billing** | Effort-based credits; plan credits also cover related cloud services like published apps, storage, and databases |
 | **Free tier** | Starter with daily AI credits, one published app |
 | **Top plan** | Pro at $95/mo annual ($100 monthly) replaced old Teams tier in February 2026 |
 | **Parallel agents** | Core runs up to 2 agents at once; Pro runs up to 10 |
 | **Database rollbacks** | 28 days on Pro |
 | **Lite mode** | Formerly Fast Mode. Quick scoped changes |
 
-Every data point above was verified against vendor sources on 2026-05-13. See Sources.
+Every data point above was verified against vendor sources on 2026-06-01. See Sources.
 
 ## What it actually is
 
@@ -234,8 +263,8 @@ The moat is the integrated hosting and database. Everything provisioned by the a
 
 ## When to pick something else
 
-- **Production-grade code on a real codebase:** [Cursor](/tools/cursor/) AI-native IDE with Claude Opus 4.7.
-- **Terminal agent for working developers:** [Claude](/tools/claude/) Code CLI, strongest on multi-file refactors.
+- **Production-grade code on a real codebase:** [Cursor](/tools/cursor/) AI-native IDE with frontier-model agent workflows.
+- **Terminal agent for working developers:** [Claude Code](/tools/claude-code/) CLI, strongest on multi-file refactors.
 - **Frontend-only in-browser prototyping:** [Bolt.new](/tools/bolt/) with WebContainers.
 - **Full-stack app with Supabase backend, non-developer friendly:** [Lovable](/tools/lovable/) provisions Postgres and auth automatically.
 - **Component-level React generation:** [v0](/tools/v0/) for shadcn/ui pieces.
@@ -252,7 +281,7 @@ Pricing via [replit.com/pricing](https://replit.com/pricing). Effort-based credi
 | Pro scaled | $100 to $4,000/mo | $100 to $4,000 credit packs | Full | Agencies and sustained production |
 | Enterprise | Custom | Custom plus SSO/SAML, VPC peering, static outbound IPs, single-tenant | Full | Compliance-heavy orgs |
 
-*Prices verified 2026-05-13 via [replit.com/pricing](https://replit.com/pricing). Agent usage consumes credits based on effort mode. Credits roll over on Pro. The old Teams tier retired in February 2026, replaced by Pro.*
+*Prices verified 2026-06-01 via [replit.com/pricing](https://replit.com/pricing) and [Replit AI billing docs](https://docs.replit.com/billing/ai-billing). Agent usage consumes credits based on effort and may include third-party API charges deducted from Replit credits. Credits roll over for one month on Pro. The old Teams tier retired in February 2026, replaced by Pro.*
 
 ## Against the alternatives
 
@@ -277,7 +306,7 @@ Pricing via [replit.com/pricing](https://replit.com/pricing). Effort-based credi
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [replit.com/pricing](https://replit.com/pricing), the [Replit Pro launch post](https://blog.replit.com/pro-plan), the [effort-based pricing post](https://blog.replit.com/effort-based-pricing), [docs.replit.com](https://docs.replit.com/billing/ai-billing), and the [May 1, 2026 Cursor-deal independence coverage](/news/2026-05-01-replit-cursor-deal-independence/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-01 against [replit.com/pricing](https://replit.com/pricing), the [Replit Pro launch post](https://blog.replit.com/pro-plan), [Replit AI billing docs](https://docs.replit.com/billing/ai-billing), and the [Agent 3 launch page](https://replit.com/agent3).
 
 ## FAQ
 

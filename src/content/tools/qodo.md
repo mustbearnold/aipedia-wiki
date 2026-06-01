@@ -11,10 +11,10 @@ pricing_model: freemium
 price_range: "$0-$38/user/month; Enterprise custom"
 status: active
 launched: 2022
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-01
+last_verified: 2026-06-01
 update_frequency: monthly
-seo_title: "Qodo: Features, Pricing & Review (May 2026)"
+seo_title: "Qodo: Features, Pricing & Review (June 2026)"
 meta_description: "Qodo is an AI code review and code quality platform. Developer is free with 250 credits/month, Teams is $38/user/month or $30 annual with 2,500 credits, and Enterprise adds CLI, SSO, MCP, dashboards, and private deployment."
 author: aipedia.wiki Editorial
 affiliate:
@@ -34,14 +34,14 @@ facts:
     source: "https://www.qodo.ai/pricing/"
     source_label: "Qodo pricing"
     source_id: qodo-best-paid-tier
-    verified_at: 2026-05-13
+    verified_at: 2026-06-01
     confidence: high
   best_paid_tier:
     value: "Teams ($38/user/month monthly or $30/user/month annual) for private teams that need PR review plus IDE and CLI credits"
     source: "https://www.qodo.ai/pricing/"
     source_label: "Qodo pricing"
     source_id: qodo-best-paid-tier
-    verified_at: 2026-05-13
+    verified_at: 2026-06-01
     next_review_at: 2026-06-13
     confidence: high
   best_for:
@@ -49,7 +49,7 @@ facts:
     source: "https://docs.qodo.ai/v1/qodo-merge"
     source_label: "Qodo Git Integration docs"
     source_id: qodo-best-for
-    verified_at: 2026-05-13
+    verified_at: 2026-06-01
     confidence: high
 tags: [ai-coding, code-review, pull-requests, ide-plugin, cli, governance, pr-review, context-engine]
 best_for:
@@ -70,7 +70,7 @@ price_history:
     source: "https://www.qodo.ai/pricing/"
     source_label: "Source"
     source_id: qodo-best-paid-tier
-    verified_at: 2026-05-13
+    verified_at: 2026-06-01
     note: "Reverified May 13, 2026. Free Developer tier unchanged at 250 credits/month with PR review and IDE plugin"
   - date: 2026-05-13
     plan: "Teams"
@@ -78,7 +78,7 @@ price_history:
     source: "https://www.qodo.ai/pricing/"
     source_label: "Source"
     source_id: qodo-best-paid-tier
-    verified_at: 2026-05-13
+    verified_at: 2026-06-01
     note: "Includes 20 PRs/user/month, IDE plugin, standard private support, no data retention/enhanced privacy, and up to 2,500 credits/month"
   - date: 2026-05-13
     plan: "Enterprise"
@@ -86,8 +86,16 @@ price_history:
     source: "https://www.qodo.ai/pricing/"
     source_label: "Source"
     source_id: qodo-best-paid-tier
-    verified_at: 2026-05-13
+    verified_at: 2026-06-01
     note: "Adds CLI tool for agentic quality workflows, context engine, dashboards, admin portal, MCP tools, SSO, priority support, SaaS single/multi-tenant, on-prem, air-gapped, and self-hosted Qodo models"
+  - date: 2026-06-01
+    plan: "Developer / Teams / Enterprise"
+    price: "$0 / $38 user-monthly or $30 annual / custom"
+    source: "https://www.qodo.ai/pricing/"
+    source_label: "Source"
+    source_id: qodo-best-paid-tier
+    verified_at: 2026-06-01
+    note: "June 1 recheck: Developer remains free; Teams remains $38/user/month or $30/user/month annually with 20 PRs/user/month; Enterprise remains custom with CLI, Context Engine, dashboards, MCP tools, SSO, and private deployment options."
 ---
 
 # Qodo
@@ -161,7 +169,7 @@ The value is highest when Qodo has enough context to understand repository patte
 
 ## Pricing
 
-Qodo pricing was verified from the official pricing page on 2026-05-13:
+Qodo pricing was verified from the official pricing page on 2026-06-01:
 
 | Plan | Price | Practical meaning |
 |---|---:|---|
@@ -193,7 +201,7 @@ Credits reset every 30 days from the first message in Qodo Gen rather than on a 
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-05-13 against Qodo primary sources.
+This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-01 against Qodo primary sources.
 
 ## FAQ
 

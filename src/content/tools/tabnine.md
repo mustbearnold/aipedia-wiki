@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$39-$59+/user/month"
 status: active
 launched: 2019-01
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-01
+last_verified: 2026-06-01
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: https://www.tabnine.com/code-privacy
     source_label: Tabnine code privacy
     source_id: tabnine-privacy
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-01'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -41,7 +41,7 @@ facts:
     source: https://www.tabnine.com/pricing
     source_label: Tabnine pricing
     source_id: tabnine-pricing
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-01'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -51,7 +51,7 @@ facts:
     source: https://www.tabnine.com/
     source_label: Tabnine official site
     source_id: tabnine-official
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-01'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -61,7 +61,7 @@ facts:
     source: https://www.tabnine.com/code-privacy
     source_label: Tabnine code privacy
     source_id: tabnine-privacy
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-01'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -71,7 +71,7 @@ facts:
     source: https://www.tabnine.com/pricing
     source_label: Tabnine pricing
     source_id: tabnine-pricing
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-01'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -81,7 +81,7 @@ facts:
     source: https://docs.tabnine.com/main/welcome/readme
     source_label: Tabnine docs
     source_id: tabnine-docs
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-01'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -96,12 +96,26 @@ not_best_for:
   - solo users who want the best free coding assistant
   - teams comfortable sending repository context to cloud frontier models
   - non-coding app generation or UI prototyping
-seo_title: "Tabnine: Features, Pricing & Review (May 2026)"
+seo_title: "Tabnine: Features, Pricing & Review (June 2026)"
 meta_description: "Tabnine is the privacy-first AI code assistant with on-device models, VPC, on-prem, and air-gapped deployment. Code Assistant Platform $39/user/mo, Agentic Platform $59/user/mo with Tabnine CLI, MCP tools, and unlimited codebase connections. Routes to Claude, GPT, Gemini, Mistral, Meta, plus Tabnine Protected models."
 author: aipedia.wiki Editorial
 quick_answer: >-
-  Tabnine is the privacy-first AI code assistant for regulated teams and air-gapped networks. Pick it for SaaS, VPC, on-prem, or fully offline deployment with IP indemnification and SOC 2, ISO 27001, GDPR compliance. Skip it if raw completion quality or agent features matter more than privacy posture (use Cursor or GitHub Copilot).
+  Tabnine is the privacy-first AI code assistant for regulated teams and air-gapped networks. Pick it for SaaS, VPC, on-prem, or fully offline deployment with license-safe AI, SOC 2, ISO 27001, and GDPR compliance language. Skip it if raw completion quality or agent features matter more than privacy posture (use Cursor or GitHub Copilot).
 price_history:
+  - date: 2026-06-01
+    plan: "Code Assistant Platform"
+    price: "$39/user/mo annual"
+    source: "https://www.tabnine.com/pricing"
+    source_label: "Source"
+    source_id: tabnine-pricing
+    note: "June 1 recheck: Code Assistant Platform remains $39 per user per month on annual subscription, with IDE completions, chat, Jira integration, deployment flexibility, zero retention, SSO, compliance, and license-safe AI language."
+  - date: 2026-06-01
+    plan: "Agentic Platform"
+    price: "$59/user/mo annual"
+    source: "https://www.tabnine.com/pricing"
+    source_label: "Source"
+    source_id: tabnine-pricing
+    note: "June 1 recheck: Agentic Platform remains $59 per user per month on annual subscription and adds autonomous agents, Tabnine CLI, Context Engine, MCP tooling, and optional Headless Agents."
   - date: 2026-04-15
     plan: "Enterprise"
     price: "$39/user/mo"
@@ -129,13 +143,13 @@ price_history:
 
 Privacy-first AI code assistant at [tabnine.com](https://www.tabnine.com). Autocomplete, chat, and agent features across 30+ IDEs and 80+ languages. Deployment options span SaaS, single-tenant VPC, on-premises Kubernetes, and fully air-gapped clusters.
 
-Models route across Claude, GPT, Gemini, Mistral, Meta, plus Tabnine's Protected models trained only on permissively licensed code. Zero code retention, no training on user code, IP indemnification on Enterprise.
+Models route across Claude, GPT, Gemini, Mistral, Meta, plus Tabnine's Protected models trained only on permissively licensed code. Zero code retention, no training on user code, and license-safe AI/IP protection language are the procurement hook.
 
 ## System Verdict
 
 > **Pick Tabnine if your team cannot ship code outside a controlled boundary.** The only mainstream AI coding assistant with turnkey air-gapped deployment, including Dell PowerEdge GPU bundles for offline clusters. Tabnine Protected models train exclusively on permissively licensed open-source code, which removes most copyright and IP risk at the training-data layer.
 >
-> **Skip it if raw completion quality or agent capability outranks privacy.** [GitHub Copilot](/tools/github-copilot/) edges Tabnine on completion accuracy and ships a mature chat surface at $10/user/mo. [Cursor](/tools/cursor/) is the category leader for AI-native IDE workflows with Claude Opus 4.7. [Claude](/tools/claude/) Code CLI handles terminal agent work that Tabnine does not touch.
+> **Skip it if raw completion quality or agent capability outranks privacy.** [GitHub Copilot](/tools/github-copilot/) edges Tabnine on completion accuracy and ships a mature chat surface at $10/user/mo. [Cursor](/tools/cursor/) is the category leader for AI-native IDE workflows with frontier-model routing. [Claude Code](/tools/claude-code/) handles terminal agent work that Tabnine does not touch.
 >
 > **Who pays which tier:** Code Assistant Platform $39/user/mo for IDE completions, chat, and full deployment flexibility (SaaS, VPC, on-prem, air-gapped). Agentic Platform $59/user/mo for autonomous agents, Tabnine CLI, unlimited Context Engine connections across GitHub/GitLab/Bitbucket/Perforce, and MCP tool integration. Annual commitment on both tiers. Tabnine retired the legacy Free and $12 Dev Pro tiers in the May 2026 pricing reset.
 
@@ -153,13 +167,14 @@ Models route across Claude, GPT, Gemini, Mistral, Meta, plus Tabnine's Protected
 | **Compliance** | SOC 2, ISO 27001, GDPR, enterprise-grade |
 | **IP indemnification** | Both paid tiers (license-safe AI) |
 | **Fine-tuning** | Available on customer's private repos |
-| **Pricing (May 2026)** | Code Assistant Platform $39/user/mo, Agentic Platform $59/user/mo |
+| **Pricing (June 2026)** | Code Assistant Platform $39/user/mo annual, Agentic Platform $59/user/mo annual |
 | **Agent tooling** | Tabnine CLI, Context Engine, MCP integration, Headless Agents add-on (Agentic Platform) |
 
-Every data point above was verified against vendor sources on 2026-05-13. See Sources.
+Every data point above was verified against vendor sources on 2026-06-01. See Sources.
 
 ## Recent changes
 
+- **2026-06-01:** Pricing still shows two annual paid tiers: Code Assistant Platform at $39/user/mo and Agentic Platform at $59/user/mo. The public page also repeats the 5% handling fee on Tabnine-provided LLM access.
 - **2026-05-13:** Tabnine consolidated pricing into two tiers. Code Assistant Platform sits at $39/user/mo (the old Enterprise price) and now includes the full deployment matrix (SaaS, VPC, on-prem, air-gapped) plus SOC 2 / ISO 27001 / GDPR posture for every paid seat. Agentic Platform at $59/user/mo adds autonomous agents with optional oversight, Tabnine CLI for terminal-driven agent work, the Context Engine with unlimited codebase connections (GitHub, GitLab, Bitbucket, Perforce), MCP tool integration, and an optional Headless Agents add-on for CI/CD.
 - **2026-05-13:** The legacy Free tier and $12/user/mo Dev Pro tier are gone. Solo developers no longer have a self-serve entry point below $39.
 - **2026-05-13:** Jira Cloud and Data Center integration now ships on the base Code Assistant Platform rather than being agent-exclusive.
@@ -183,7 +198,7 @@ The moat is compliance depth. SOC 2, ISO 27001, GDPR, IP indemnification, air-ga
 ## When to pick something else
 
 - **Best-in-class completion quality:** [GitHub Copilot](/tools/github-copilot/) at $10/user/mo, stronger on raw accuracy and chat.
-- **AI-native IDE with agent edits across files:** [Cursor](/tools/cursor/) with Claude Opus 4.7.
+- **AI-native IDE with agent edits across files:** [Cursor](/tools/cursor/) with frontier-model routing and a stronger full-editor workflow.
 - **Terminal coding agent for working developers:** [Claude](/tools/claude/) Code CLI.
 - **Free unlimited cloud completions:** Codeium.
 - **Autonomous agent that builds full apps:** [Replit Agent](/tools/replit-agent/) or [Lovable](/tools/lovable/).
@@ -197,7 +212,7 @@ Pricing via [tabnine.com/pricing](https://www.tabnine.com/pricing). Annual commi
 | Code Assistant Platform | $39/user/mo | Single- and multi-line completions, IDE chat across SDLC, Jira integration, zero retention, SSO, SOC 2 / ISO 27001 / GDPR, license-safe AI, SaaS + VPC + on-prem + air-gapped deploy | Regulated orgs and compliance-heavy teams |
 | Agentic Platform | $59/user/mo | Everything in Code Assistant plus autonomous agents with user oversight, Tabnine CLI for terminal agent workflows, Context Engine with unlimited codebase connections (GitHub, GitLab, Bitbucket, Perforce), MCP tool integration, optional Headless Agents for CI/CD | **Teams running agent-driven coding loops** |
 
-*Prices verified 2026-05-13 via [tabnine.com/pricing](https://www.tabnine.com/pricing). When using Tabnine-provided LLM access, billing is actual LLM provider price plus a 5% handling fee. Free and $12 Dev Pro tiers retired in the May 2026 reset.*
+*Prices verified 2026-06-01 via [tabnine.com/pricing](https://www.tabnine.com/pricing). When using Tabnine-provided LLM access, billing is actual LLM provider price plus a 5% handling fee. Free and $12 Dev Pro tiers retired in the May 2026 reset.*
 
 ## Against the alternatives
 
@@ -208,7 +223,7 @@ Pricing via [tabnine.com/pricing](https://www.tabnine.com/pricing). Annual commi
 | **Privacy posture** | Zero retention, IP indemnification, license-safe AI | Zero retention, indemnification on Enterprise | Zero retention on paid tiers |
 | **Completion quality** | Mid-tier, behind Copilot | Strongest on raw accuracy | Strongest in agent mode |
 | **Agent capability** | Tabnine CLI, MCP tools, unlimited Context Engine, Headless Agents | Copilot Workspace, Coding Agent | Cursor Agent, category leader |
-| **Model routing** | Claude, GPT, Gemini, Mistral, Meta, Protected | GPT family + Claude | Claude Opus 4.7, GPT, others |
+| **Model routing** | Claude, GPT, Gemini, Mistral, Meta, Protected | GPT family + Claude | Claude, GPT, Gemini, and other frontier models |
 | **Best viewed as** | Compliance-first agentic IDE | Mainstream default | Power-user IDE |
 
 ## Failure modes
@@ -223,7 +238,7 @@ Pricing via [tabnine.com/pricing](https://www.tabnine.com/pricing). Annual commi
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-05-13 against [tabnine.com/pricing](https://www.tabnine.com/pricing) and Tabnine's deployment documentation.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-01 against [tabnine.com/pricing](https://www.tabnine.com/pricing), [Tabnine code privacy](https://www.tabnine.com/code-privacy/), and Tabnine documentation.
 
 ## FAQ
 
@@ -234,7 +249,7 @@ Depends on deployment. SaaS uses Tabnine-managed infrastructure with zero code r
 Routes across Claude, GPT, Gemini, Mistral, and Meta, plus Tabnine's own Protected models trained only on permissively licensed code. When using Tabnine-provided LLM access, billing is actual provider cost plus a 5% handling fee.
 
 **Can Tabnine train on my private code?**
-Shared models exclude customer code. Enterprise fine-tuning builds private models from your own repositories, accessible only to your team. No cross-customer training.
+Shared models exclude customer code. Private enterprise deployments and custom models can use your own repositories inside your environment; confirm exact fine-tuning scope with Tabnine during procurement. No cross-customer training.
 
 **Tabnine vs GitHub Copilot?**
 Copilot edges Tabnine on raw completion quality and ships a more mature chat surface at $10/user/mo. Tabnine wins on deployment flexibility (air-gapped, on-prem, VPC), license-safe AI, and IP indemnification, which now ship on the base $39 Code Assistant Platform. Pick Copilot for default assistance, Tabnine for regulated environments.
@@ -243,7 +258,7 @@ Copilot edges Tabnine on raw completion quality and ships a more mature chat sur
 Tabnine collapsed its three legacy tiers into two paid plans. Code Assistant Platform stays at $39/user/mo with the full deployment matrix. Agentic Platform at $59/user/mo adds autonomous agents, Tabnine CLI, the Context Engine with unlimited GitHub / GitLab / Bitbucket / Perforce connections, MCP tool integration, and optional Headless Agents for CI/CD. The Free and Dev Pro tiers were retired.
 
 **Does Tabnine support air-gapped deployment?**
-Yes, on Enterprise. Turnkey Dell PowerEdge GPU bundles run offline clusters with no cloud dependency. No other mainstream AI code assistant offers this.
+Yes. Tabnine's pricing and privacy pages describe SaaS, VPC, on-premises, and fully air-gapped deployment options. Confirm hardware, support, and contract terms with Tabnine because offline deployments are procurement-led.
 
 ## Sources
 

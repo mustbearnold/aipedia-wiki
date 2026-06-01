@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$30/seat/month"
 status: active
 launched: 2024-01
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-01
+last_verified: 2026-06-01
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: "https://zed.dev/pricing"
     source_label: "Source"
     source_id: zed-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-06-01
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -39,7 +39,7 @@ facts:
     source: "https://zed.dev/pricing"
     source_label: "Source"
     source_id: zed-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-06-01
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -48,12 +48,12 @@ facts:
     source: "https://zed.dev/pricing"
     source_label: "Source"
     source_id: zed-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-06-01
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
 tags: [code-editor, rust, collaborative, ai-coding, performance, open-source, linux, macos, windows, zeta]
-seo_title: "Zed: Features, Pricing & Review (May 2026)"
+seo_title: "Zed: Features, Pricing & Review (June 2026)"
 meta_description: "Zed is a native Rust code editor with GPU rendering, real-time multiplayer, and AI via Claude Opus 4.7, OpenAI frontier models, and Gemini. Free tier runs the open-weight Zeta2.1 edit-prediction model. Pro $10/month with $5 in AI credits; Business $30/seat."
 author: "aipedia.wiki Editorial"
 best_for:
@@ -69,6 +69,13 @@ not_best_for:
 quick_answer: >-
   Zed is a native Rust code editor with GPU rendering and real-time multiplayer. The editor is free. Personal includes 2,000 accepted Zeta2.1 edit predictions plus unlimited BYOK AI. Pro at $10/month bundles $5 in hosted AI credits with API-plus-10% overage. Business at $30/seat adds org-wide policy controls. Pick it for speed and collaboration; skip it for deep extension ecosystems.
 price_history:
+  - date: 2026-06-01
+    plan: "Personal / Pro / Business"
+    price: "$0 / $10 / $30 per seat per month"
+    source: "https://zed.dev/pricing"
+    source_label: "Source"
+    source_id: zed-pricing
+    note: "June 1 recheck: Personal includes 2,000 accepted edit predictions and unlimited BYOK/external agents; Pro includes unlimited edit predictions, $5 hosted-token credit, and API list plus 10% usage; Business remains $30/seat/month with org controls and no fixed LLM credit allotment."
   - date: 2026-05-13
     plan: "Pro"
     price: "$10/mo"
@@ -128,7 +135,7 @@ The editor is free and open-source (Apache 2.0). Runs on macOS, Linux, and Windo
 | **Multiplayer** | Shared buffers, cursor presence, voice |
 | **Agent Client Protocol** | Claude Code, Codex CLI, Gemini CLI, OpenCode |
 
-Every data point above was verified against vendor sources on 2026-05-13. See Sources.
+Every data point above was verified against vendor sources on 2026-06-01. See Sources.
 
 ## What it actually is
 
@@ -164,7 +171,7 @@ The Agent Client Protocol (ACP), launched January 2026 in collaboration with Jet
 | Pro (students) | $0 | Unlimited Zeta2.1 | $5 monthly credit | Verified students |
 | Business | $30/seat/mo | Unlimited Zeta2.1 | BYOK or provider cost plus 10% | Org policy controls, billing, governance |
 
-*Prices verified 2026-05-13 via [zed.dev/pricing](https://zed.dev/pricing), the [Zed for Business launch](https://zed.dev/blog/zed-for-business), and [zed.dev/education](https://zed.dev/education). Pro was cut from $20 to $10 on May 6, 2026. Business launched the same day with org-wide AI policies, prompt-sharing and edit-prediction training off by default, token spend caps, and BYOK at no extra charge. Pro includes a two-week free trial. Overages bill at API list price plus 10%, either at month-end or per $10 of usage, whichever comes first. SSO, SAML/OIDC, SCIM, and SOC 2 certification are on the Business roadmap but not shipped yet.*
+*Prices verified 2026-06-01 via [zed.dev/pricing](https://zed.dev/pricing), the [Zed AI model docs](https://zed.dev/docs/ai/models), the [Zed for Business launch](https://zed.dev/blog/zed-for-business), and [zed.dev/education](https://zed.dev/education). Pro was cut from $20 to $10 on May 6, 2026. Business launched the same day with org-wide AI policies, prompt-sharing and edit-prediction training off by default, token spend caps, and BYOK at no extra charge. Pro includes a two-week free trial with $20 in token credits. Overages bill at API list price plus 10%, either at month-end or per $10 of usage, whichever comes first. SSO, SAML/OIDC, SCIM, and SOC 2 certification are on the Business roadmap but not shipped yet.*
 
 ## Against the alternatives
 
@@ -192,7 +199,7 @@ The Agent Client Protocol (ACP), launched January 2026 in collaboration with Jet
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-05-13 against [zed.dev/pricing](https://zed.dev/pricing), the [Zeta2.1 release post](https://zed.dev/blog/zeta2-1), the [Zed for Business launch post](https://zed.dev/blog/zed-for-business), and [zed.dev/docs/ai/edit-prediction](https://zed.dev/docs/ai/edit-prediction).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-01 against [zed.dev/pricing](https://zed.dev/pricing), [Zed AI model docs](https://zed.dev/docs/ai/models), the [Zeta2.1 release post](https://zed.dev/blog/zeta2-1), the [Zed for Business launch post](https://zed.dev/blog/zed-for-business), and [zed.dev/docs/ai/edit-prediction](https://zed.dev/docs/ai/edit-prediction).
 
 ## FAQ
 

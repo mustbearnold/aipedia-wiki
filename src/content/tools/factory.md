@@ -11,10 +11,10 @@ pricing_model: paid
 price_range: "$20-$200/month; Teams and Enterprise custom"
 status: active
 launched: 2023
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-01
+last_verified: 2026-06-01
 update_frequency: monthly
-seo_title: "Factory: Features, Pricing & Review (May 2026)"
+seo_title: "Factory: Features, Pricing & Review (June 2026)"
 meta_description: "Factory is an AI-native development platform for Droid coding agents. Pro is $20/mo, Plus is $100/mo, Max is $200/mo, and Teams/Enterprise add ZDR, SSO, audit, data-residency, and deployment controls."
 author: aipedia.wiki Editorial
 affiliate:
@@ -34,14 +34,14 @@ facts:
     source: "https://docs.factory.ai/welcome"
     source_label: "Factory docs"
     source_id: factory-best-for
-    verified_at: 2026-05-13
+    verified_at: 2026-06-01
     confidence: high
   best_paid_tier:
     value: "Pro ($20/month) for individuals; Plus ($100/month) for Droid Computers and about 5x Pro usage; Max ($200/month) for about 10x Pro usage and early access"
     source: "https://docs.factory.ai/pricing"
     source_label: "Factory plans and models"
     source_id: factory-best-paid-tier
-    verified_at: 2026-05-13
+    verified_at: 2026-06-01
     next_review_at: 2026-06-03
     confidence: high
   best_for:
@@ -49,7 +49,7 @@ facts:
     source: "https://docs.factory.ai/welcome"
     source_label: "Factory docs"
     source_id: factory-best-for
-    verified_at: 2026-05-13
+    verified_at: 2026-06-01
     confidence: high
 tags: [ai-coding, coding-agent, software-development, cli, desktop, code-review, qa, linear, slack, github]
 best_for:
@@ -99,6 +99,13 @@ price_history:
     source_label: "Source"
     source_id: factory-best-paid-tier
     note: "Unlimited team members, dedicated compute, audit logs, full admin controls, data residency/session retention/network policy controls, on-prem deployment, SLAs, and custom onboarding"
+  - date: 2026-06-01
+    plan: "All plans"
+    price: "Unchanged"
+    source: "https://docs.factory.ai/pricing"
+    source_label: "Source"
+    source_id: factory-best-paid-tier
+    note: "June 1 recheck: Pro $20, Plus $100, Max $200, Teams custom, Enterprise custom. Droid Core fallback, $10 minimum Extra Usage credits, BYOK allowances, and rolling 5-hour/weekly/monthly Standard Usage windows remain the live buying caveats."
 ---
 
 # Factory
@@ -136,7 +143,7 @@ Factory is part of the same wave as Claude Code, Cursor, Devin, and GitHub Copil
 
 Factory is best understood as an agentic software delivery layer. The docs list a CLI for terminal use, a desktop app, an SDK, Droid Exec for non-interactive CI/CD and automation workflows, and enterprise deployment paths. It also includes code review, automated QA, agent readiness, custom Droids, hooks, slash commands, plugins, MCP, and bring-your-own-key options.
 
-The May 2026 pricing model is usage-sensitive. Standard Usage is consumed first across rolling 5-hour, 7-day, and 30-day windows. When Standard Usage runs out, buyers can use Droid Core on a separate rate-limit pool at no additional cost, or enable prepaid Extra Usage credits with a $10 minimum. Missions draw from the same rolling limits as regular sessions and require Extra Usage to be enabled, so long-horizon work needs spend controls before it becomes routine.
+The June 1, 2026 pricing model is usage-sensitive. Standard Usage is consumed first across rolling 5-hour, 7-day, and 30-day windows. When Standard Usage runs out, buyers can use Droid Core on a separate rate-limit pool at no additional cost, or enable prepaid Extra Usage credits with a $10 minimum. Missions draw from the same rolling limits as regular sessions and require Extra Usage to be enabled, so long-horizon work needs spend controls before it becomes routine.
 
 The practical question is whether Factory becomes the place your team runs coding work, not just a side assistant. If a team only asks occasional questions, it is overkill. If a team wants background agents to write, test, review, document, and coordinate work, Factory fits the direction of travel.
 
@@ -170,7 +177,7 @@ The practical question is whether Factory becomes the place your team runs codin
 
 ## Pricing
 
-Factory pricing was verified from official docs on 2026-05-13:
+Factory pricing was verified from official docs on 2026-06-01:
 
 | Plan | Price | Practical meaning |
 |---|---:|---|
@@ -204,7 +211,7 @@ Factory also documents rolling Standard Usage, Droid Core fallback, prepaid Extr
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-05-13 against Factory primary documentation.
+This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-01 against Factory primary documentation.
 
 ## FAQ
 
