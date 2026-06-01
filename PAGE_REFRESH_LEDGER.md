@@ -1,6 +1,6 @@
 # AiPedia Page Refresh Ledger
 
-Ledger updated through: 2026-05-31
+Ledger updated through: 2026-06-01
 Tracked public pages and crawl surfaces: 738
 
 Hard rule: every time a tracked website page is edited, refreshed, materially re-ranked, or has volatile facts re-verified, update that page row in this file on the same change. If a child page update affects a parent hub, archive, internal-link block, sitemap, or LLM surface, update those affected rows too.
@@ -22,25 +22,8 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-02 | /tools/phind/ | Tool | Yes | frontmatter | src/content/tools/phind.md |
 | 2026-05-04 | /tools/tome/ | Tool | Yes | frontmatter | src/content/tools/tome.md |
 | 2026-05-05 | /tools/dalle/ | Tool | Yes | frontmatter | src/content/tools/dalle.md |
-| 2026-05-08 | /about/editorial/ | Static page | Yes | git | src/pages/about/editorial.astro |
-| 2026-05-08 | /admin/reviews/ | Static page | No | git | src/pages/admin/reviews.astro |
-| 2026-05-08 | /tool-finder/ | Static page | No | git | src/pages/tool-finder.astro |
-| 2026-05-09 | /answers/best-ai-coding-tool-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-coding-tool-2026.astro |
-| 2026-05-09 | /answers/best-ai-for-writing-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-for-writing-2026.astro |
-| 2026-05-09 | /answers/best-ai-image-generator-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-image-generator-2026.astro |
-| 2026-05-09 | /answers/best-ai-voice-generator-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-voice-generator-2026.astro |
-| 2026-05-09 | /answers/best-free-ai-tools-2026/ | Static page | Yes | page metadata | src/pages/answers/best-free-ai-tools-2026.astro |
-| 2026-05-09 | /answers/chatgpt-alternatives-2026/ | Static page | Yes | page metadata | src/pages/answers/chatgpt-alternatives-2026.astro |
-| 2026-05-10 | /privacy/ | Static page | Yes | git | src/pages/privacy.astro |
-| 2026-05-10 | /robots.txt | Crawl surface | No | git | public/robots.txt |
-| 2026-05-10 | /terms/ | Static page | Yes | git | src/pages/terms.astro |
-| 2026-05-12 | /companies/ | Static page | Yes | git | src/pages/companies/index.astro |
 | 2026-05-12 | /dead/ | Static page | Yes | git | src/pages/dead/index.astro |
-| 2026-05-12 | /demo-godtier/ | Static page | Yes | git | src/pages/demo-godtier.astro |
-| 2026-05-12 | /glossary/ | Static page | Yes | git | src/pages/glossary/index.astro |
-| 2026-05-12 | /reports/ | Static page | Yes | git | src/pages/reports/index.astro |
 | 2026-05-13 | /404/ | Static page | No | git | src/pages/404.astro |
-| 2026-05-13 | /about/ | Static page | Yes | git | src/pages/about/index.astro |
 | 2026-05-13 | /about/scoring/ | Static page | Yes | git | src/pages/about/scoring.astro |
 | 2026-05-13 | /categories/ai-music/ | Category | Yes | frontmatter | src/content/categories/ai-music.md |
 | 2026-05-13 | /companies/anthropic/ | Company | Yes | frontmatter | src/content/companies/anthropic.md |
@@ -667,7 +650,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-22 | /tools/gemini/ | Tool | Yes | frontmatter | src/content/tools/gemini.md |
 | 2026-05-22 | /tools/github-copilot/ | Tool | Yes | frontmatter | src/content/tools/github-copilot.md |
 | 2026-05-23 | /tools/cohere/ | Tool | Yes | frontmatter | src/content/tools/cohere.md |
-| 2026-05-24 | /answers/ | Static page | Yes | git | src/pages/answers/index.astro |
 | 2026-05-24 | /answers/best-ai-chatbot-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-chatbot-2026.astro |
 | 2026-05-24 | /answers/best-ai-video-generator-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-video-generator-2026.astro |
 | 2026-05-24 | /categories/ai-design/ | Category | Yes | frontmatter | src/content/categories/ai-design.md |
@@ -745,7 +727,25 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-31 | /categories/ai-chatbots/ | Category | Yes | frontmatter | src/content/categories/ai-chatbots.md |
 | 2026-05-31 | /categories/ai-infrastructure/ | Category | Yes | frontmatter | src/content/categories/ai-infrastructure.md |
 | 2026-05-31 | /categories/ai-research/ | Category | Yes | frontmatter | src/content/categories/ai-research.md |
-| 2026-05-31 | /llms-full.txt | Crawl surface | No | git | src/pages/llms-full.txt.ts |
-| 2026-05-31 | /llms.txt | Crawl surface | No | git | src/pages/llms.txt.ts |
 | 2026-05-31 | /news/ | Static page | Yes | page metadata | src/pages/news/index.astro |
 | 2026-05-31 | /news/rss.xml | Crawl surface | No | git | src/pages/news/rss.xml.ts |
+| 2026-06-01 | /about/ | Static page | Yes | working tree | src/pages/about/index.astro |
+| 2026-06-01 | /about/editorial/ | Static page | Yes | working tree | src/pages/about/editorial.astro |
+| 2026-06-01 | /admin/reviews/ | Static page | No | working tree | src/pages/admin/reviews.astro |
+| 2026-06-01 | /answers/ | Static page | Yes | working tree | src/pages/answers/index.astro |
+| 2026-06-01 | /answers/best-ai-coding-tool-2026/ | Static page | Yes | working tree | src/pages/answers/best-ai-coding-tool-2026.astro |
+| 2026-06-01 | /answers/best-ai-for-writing-2026/ | Static page | Yes | working tree | src/pages/answers/best-ai-for-writing-2026.astro |
+| 2026-06-01 | /answers/best-ai-image-generator-2026/ | Static page | Yes | working tree | src/pages/answers/best-ai-image-generator-2026.astro |
+| 2026-06-01 | /answers/best-ai-voice-generator-2026/ | Static page | Yes | working tree | src/pages/answers/best-ai-voice-generator-2026.astro |
+| 2026-06-01 | /answers/best-free-ai-tools-2026/ | Static page | Yes | working tree | src/pages/answers/best-free-ai-tools-2026.astro |
+| 2026-06-01 | /answers/chatgpt-alternatives-2026/ | Static page | Yes | working tree | src/pages/answers/chatgpt-alternatives-2026.astro |
+| 2026-06-01 | /companies/ | Static page | Yes | working tree | src/pages/companies/index.astro |
+| 2026-06-01 | /demo-godtier/ | Static page | Yes | working tree | src/pages/demo-godtier.astro |
+| 2026-06-01 | /glossary/ | Static page | Yes | working tree | src/pages/glossary/index.astro |
+| 2026-06-01 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
+| 2026-06-01 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
+| 2026-06-01 | /privacy/ | Static page | Yes | working tree | src/pages/privacy.astro |
+| 2026-06-01 | /reports/ | Static page | Yes | working tree | src/pages/reports/index.astro |
+| 2026-06-01 | /robots.txt | Crawl surface | No | working tree | public/robots.txt |
+| 2026-06-01 | /terms/ | Static page | Yes | working tree | src/pages/terms.astro |
+| 2026-06-01 | /tool-finder/ | Static page | No | working tree | src/pages/tool-finder.astro |

@@ -3,9 +3,9 @@ type: glossary
 slug: glossary-index
 title: AI Tools Glossary
 description: Definitions of key terms used throughout the AI Tools wiki.
-last_updated: 2026-05-03
+last_updated: 2026-06-01
 update_frequency: quarterly
-last_verified: 2026-05-03
+last_verified: 2026-06-01
 ---
 
 # AI Tools Glossary
@@ -15,7 +15,7 @@ last_verified: 2026-05-03
 ---
 ## LLM
 
-**Large Language Model (LLM)** is a deep learning neural network trained on vast text datasets to understand, generate, and process human-like natural language. LLMs underpin modern AI tools by enabling text generation, summarization, translation, and reasoning at scale. Examples include GPT-5.5, Claude Opus 4.7, and Gemini 3.1 Pro.
+**Large Language Model (LLM)** is a deep learning neural network trained on vast text datasets to understand, generate, and process human-like natural language. LLMs underpin modern AI tools by enabling text generation, summarization, translation, and reasoning at scale. Examples include GPT-5.5, Claude Opus 4.8, and Gemini 3.1 Pro.
 See also: [Foundation Model](#foundation-model), [Tokens](#tokens), [AI Writing Category](../categories/ai-writing.md)
 
 ---
@@ -26,7 +26,7 @@ A **foundation model** is a large AI model trained on broad data using self-supe
 
 These models form the base for specialized applications, enabling faster and cost-effective development.
 
-Examples include GPT-5.5, Claude Opus 4.7, and Gemini 3.1 Pro.
+Examples include GPT-5.5, Claude Opus 4.8, and Gemini 3.1 Pro.
 
 See also: [LLM](#llm), [Fine-tuning](#fine-tuning)
 
@@ -62,7 +62,7 @@ Retrieval-Augmented Generation (RAG) is a technique that enables large language 
 
 RAG grounds outputs in current, domain-specific data to produce accurate responses without retraining the model.
 
-For example, Claude Opus 4.7 uses RAG to query a company vector database for employee HR policies during a leave inquiry.
+For example, Claude Opus 4.8 uses RAG to query a company vector database for employee HR policies during a leave inquiry.
 
 See also: [Embedding](#embedding), [Vector Database](#vector-database), [Hallucination](#hallucination)
 
@@ -74,7 +74,7 @@ See also: [Embedding](#embedding), [Vector Database](#vector-database), [Halluci
 
 Prompt engineering optimizes AI performance without model retraining, enabling precise control over responses through techniques like few-shot prompting and chain-of-thought reasoning.
 
-For example, Claude Opus 4.7 generates step-by-step solutions when prompted with "Think step by step" for complex math problems.
+For example, Claude Opus 4.8 generates step-by-step solutions when prompted with "Think step by step" for complex math problems.
 
 See also: [LLM](#llm), [Fine-tuning](#fine-tuning), [Tokens](#tokens)
 
@@ -82,7 +82,7 @@ See also: [LLM](#llm), [Fine-tuning](#fine-tuning), [Tokens](#tokens)
 
 ## Agentic AI
 
-Agentic AI is an autonomous artificial intelligence system that accomplishes specific goals by reasoning, planning, and executing multi-step actions across tools and systems without continuous human intervention. This capability enables AI to operate proactively in complex, dynamic environments rather than simply responding to prompts or generating content. Claude Opus 4.7 with Computer Use, Gemini 3.1 Pro agents, and GPT-5.5-class OpenAI agents demonstrate agentic capabilities by autonomously breaking down tasks, making contextual decisions, and coordinating across multiple specialized agents to reach defined outcomes.
+Agentic AI is an autonomous artificial intelligence system that accomplishes specific goals by reasoning, planning, and executing multi-step actions across tools and systems without continuous human intervention. This capability enables AI to operate proactively in complex, dynamic environments rather than simply responding to prompts or generating content. Claude Opus 4.8 with Computer Use, Gemini 3.1 Pro agents, and GPT-5.5-class OpenAI agents demonstrate agentic capabilities by autonomously breaking down tasks, making contextual decisions, and coordinating across multiple specialized agents to reach defined outcomes.
 
 See also: [Multi-agent](#multi-agent), [Workflow Automation](#workflow-automation), [Large Language Model](#large-language-model), [Autonomous Agent](#autonomous-agent)
 
@@ -94,7 +94,7 @@ A **multi-agent system** is a computational architecture of multiple autonomous 
 
 Multi-agent systems divide tasks among specialized agents for superior efficiency, scalability, and resilience in production workflows.
 
-CrewAI 2 can orchestrate a research agent using an OpenAI model, a writing agent with Claude Opus 4.7, and a review agent for report generation.
+CrewAI 2 can orchestrate a research agent using an OpenAI model, a writing agent with Claude Opus 4.8, and a review agent for report generation.
 
 See also: [Agentic AI](#agentic-ai), [Workflow Automation](#workflow-automation)
 
@@ -106,7 +106,7 @@ Vibe coding is a software development practice where developers describe tasks i
 
 It accelerates prototyping and experimentation by shifting focus from manual coding to guiding AI outputs.
 
-Andrej Karpathy coined the term in February 2025, exemplified by using Claude Opus 4.7 or Cursor 2 to build MVPs from conversational descriptions.
+Andrej Karpathy coined the term in February 2025, exemplified by using Claude Opus 4.8 or Cursor 2 to build MVPs from conversational descriptions.
 
 See also: [Agentic Engineering](#agentic-engineering), [Software 2.0](#software-20), [AI Coding Category](../categories/ai-coding.md)
 
@@ -114,7 +114,7 @@ See also: [Agentic Engineering](#agentic-engineering), [Software 2.0](#software-
 
 ## GEO
 
-Generative Engine Optimization (GEO) is the practice of structuring content so AI systems like ChatGPT, Claude Opus 4.7, and Gemini 3.1 Pro cite it in generated responses. This shifts visibility from search rankings to direct inclusion in AI-generated answers, making brand representation dependent on LLM synthesis rather than click-through traffic. Content optimization for GEO emphasizes clear structure, authoritative citations, comprehensive topic coverage, and natural language that LLMs can easily extract and reference, distinguishing it fundamentally from traditional SEO's focus on keyword ranking and backlinks.
+Generative Engine Optimization (GEO) is the practice of structuring content so AI systems like ChatGPT, Claude Opus 4.8, and Gemini 3.1 Pro cite it in generated responses. This shifts visibility from search rankings to direct inclusion in AI-generated answers, making brand representation dependent on LLM synthesis rather than click-through traffic. Content optimization for GEO emphasizes clear structure, authoritative citations, comprehensive topic coverage, and natural language that LLMs can easily extract and reference, distinguishing it fundamentally from traditional SEO's focus on keyword ranking and backlinks.
 
 See also: [SEO](#seo), [Answer Engine Optimization](#answer-engine-optimization), [Large Language Model](#large-language-model), [AI Overviews](#ai-overviews)
 
@@ -143,7 +143,7 @@ See also: [Voice Cloning](#voice-cloning), [ElevenLabs](../tools/elevenlabs.md),
 
 ## Voice Cloning
 
-Voice cloning replicates a specific person's voice using AI trained on audio samples to synthesize realistic speech matching their tone, accent, and inflections. This technology enables scalable content creation and accessibility tools while posing risks of fraud and deepfakes without consent safeguards. ElevenLabs PVC v2 clones voices from 30 minutes of audio, while instant methods like those in Claude Opus 4.7 use seconds-long clips.
+Voice cloning replicates a specific person's voice using AI trained on audio samples to synthesize realistic speech matching their tone, accent, and inflections. This technology enables scalable content creation and accessibility tools while posing risks of fraud and deepfakes without consent safeguards. Professional voice-clone workflows can require longer consented samples, while instant voice methods in voice platforms use much shorter clips and need stricter consent controls.
 See also: [TTS](#tts-text-to-speech), [ElevenLabs](../tools/elevenlabs.md)
 
 ---
@@ -158,7 +158,7 @@ See also: [Context Window](#context-window), [Tokenization](#tokenization), [LLM
 
 ## Context Window
 
-**Context window** is the maximum number of tokens a large language model processes at once, including prompts and conversation history, acting as its working memory. Larger windows enable handling of extended documents and sustained dialogues. As of 2026, Claude Opus 4.7 supports 1M tokens, Gemini 3.1 Pro supports very long multimodal contexts, and GPT-5.5-class OpenAI API models support million-token scale contexts separate from ChatGPT plan limits.
+**Context window** is the maximum number of tokens a large language model processes at once, including prompts and conversation history, acting as its working memory. Larger windows enable handling of extended documents and sustained dialogues. As of June 2026, Claude Opus 4.8, Gemini 3.1 Pro, and GPT-5.5-class OpenAI API models all support long-context workflows, with exact limits varying by model, API, app surface, and plan.
 See also: [Tokens](#tokens), [LLM](#llm)
 
 ---
@@ -169,7 +169,7 @@ An **API** (Application Programming Interface) is a set of rules and protocols t
 
 APIs enable developers to integrate AI services into apps and workflows by sending programmatic requests for responses.
 
-The OpenAI API processes prompts to GPT-5.5-class models; the Claude API handles queries to Claude Opus 4.7.
+The OpenAI API processes prompts to GPT-5.5-class models; the Claude API handles queries to Claude Opus 4.8.
 
 See also: [SDK](#sdk), [Tokens](#tokens), [Workflow Automation](#workflow-automation)
 
@@ -181,7 +181,7 @@ See also: [SDK](#sdk), [Tokens](#tokens), [Workflow Automation](#workflow-automa
 
 SDKs accelerate development and reduce errors for developers integrating AI services.
 
-Examples include Anthropic Python SDK for Claude Opus 4.7 and the OpenAI Node SDK for GPT-5.5-class models; the Claude Agent SDK adds frameworks for autonomous AI agents.
+Examples include Anthropic Python SDK for Claude Opus 4.8 and the OpenAI Node SDK for GPT-5.5-class models; the Claude Agent SDK adds frameworks for autonomous AI agents.
 
 See also: [API](#api), [Agentic AI](#agentic-ai)
 
@@ -193,7 +193,7 @@ See also: [API](#api), [Agentic AI](#agentic-ai)
 
 Open source enables self-hosting, fine-tuning, inspection, and privacy; closed source provides superior performance, updates, security, and ease of integration.
 
-Examples include open source **Llama 4**, **DeepSeek V3.2**, and **Mixtral 2** versus closed source **GPT-5.5** and **Claude Opus 4.7**.
+Examples include open source **Llama 4**, **DeepSeek V3.2**, and **Mixtral 2** versus closed source **GPT-5.5** and **Claude Opus 4.8**.
 
 See also: Mistral, [LoRA](#lora), [Fine-tuning](#fine-tuning)
 
@@ -203,7 +203,7 @@ See also: Mistral, [LoRA](#lora), [Fine-tuning](#fine-tuning)
 
 **SaaS** is a cloud computing model where providers host and deliver applications over the internet on a subscription basis, managing all infrastructure and updates.
 This model enables AI tool users to access compute-intensive services without local installation or maintenance costs.
-Examples include ChatGPT Plus with GPT-5.5 access and Claude Pro with Claude Opus 4.7 via browser apps.
+Examples include ChatGPT Plus with GPT-5.5 access and Claude Pro or Max with Claude Opus 4.8 via browser apps.
 See also: [ARR](#arr), [API](#api), [MaaS](#maas)
 
 ---
@@ -288,7 +288,7 @@ See also: [RAG](#rag), [LLM](#llm)
 
 ## Inference
 
-Inference is the execution phase where a trained AI model analyzes new data to produce predictions, decisions, or generated outputs without learning anything new. This is where AI delivers real-world value, transforming learned patterns into actionable results at scale. When you send a prompt to Claude Opus 4.7 and receive a response, or when a GPT-5.5-class model generates text, that computational process is inference. Inference differs fundamentally from training: it requires only a forward pass through the model rather than parameter updates, making individual predictions far less computationally demanding than model development. Inference costs represent what users pay for API usage and depend on model size, input/output token length, and underlying hardware. Optimization techniques, including model quantization, prompt caching, and deploying smaller specialized models, have become critical for reducing inference expenses in production environments.
+Inference is the execution phase where a trained AI model analyzes new data to produce predictions, decisions, or generated outputs without learning anything new. This is where AI delivers real-world value, transforming learned patterns into actionable results at scale. When you send a prompt to Claude Opus 4.8 and receive a response, or when a GPT-5.5-class model generates text, that computational process is inference. Inference differs fundamentally from training: it requires only a forward pass through the model rather than parameter updates, making individual predictions far less computationally demanding than model development. Inference costs represent what users pay for API usage and depend on model size, input/output token length, and underlying hardware. Optimization techniques, including model quantization, prompt caching, and deploying smaller specialized models, have become critical for reducing inference expenses in production environments.
 
 See also: [Training](#training), [Tokens](#tokens), [Latency](#latency), [API](#api), [Quantization](#quantization)
 
@@ -296,7 +296,7 @@ See also: [Training](#training), [Tokens](#tokens), [Latency](#latency), [API](#
 
 ## Latency
 
-Latency is the time delay between when an AI system receives an input and generates the corresponding output. This metric directly impacts user experience, with low latency enabling real-time interactions in conversational interfaces and autonomous systems. In Claude Opus 4.7 and GPT-5.5-class models, latency stems from data preprocessing, mathematical computations, data transfer between processing units, and postprocessing, with larger models typically exhibiting higher latency due to increased computational overhead. Reducing latency requires model compression, optimized inference code, hardware acceleration, and lower-precision numerical formats. Streaming responses decreases perceived latency by delivering tokens incrementally rather than waiting for complete generation.
+Latency is the time delay between when an AI system receives an input and generates the corresponding output. This metric directly impacts user experience, with low latency enabling real-time interactions in conversational interfaces and autonomous systems. In Claude Opus 4.8 and GPT-5.5-class models, latency stems from data preprocessing, mathematical computations, data transfer between processing units, and postprocessing, with larger models typically exhibiting higher latency due to increased computational overhead. Reducing latency requires model compression, optimized inference code, hardware acceleration, and lower-precision numerical formats. Streaming responses decreases perceived latency by delivering tokens incrementally rather than waiting for complete generation.
 
 See also: [Inference](#inference), [TTS](#tts-text-to-speech), [API](#api), [Model Compression](#model-compression)
 
@@ -304,7 +304,7 @@ See also: [Inference](#inference), [TTS](#tts-text-to-speech), [API](#api), [Mod
 
 ## Computer Use
 
-**Computer Use** is a capability in agentic AI systems that enables models to interact directly with computer interfaces by clicking buttons, typing text, and navigating screens. This extends AI agents beyond APIs to control visual UIs and legacy software for desktop automation. Claude Opus 4.7 demonstrates Computer Use by operating browsers and applications through screen observation and mouse actions. See also: [Agentic AI](#agentic-ai), [Multi-agent](#multi-agent)
+**Computer Use** is a capability in agentic AI systems that enables models to interact directly with computer interfaces by clicking buttons, typing text, and navigating screens. This extends AI agents beyond APIs to control visual UIs and legacy software for desktop automation. Claude Opus 4.8 demonstrates Computer Use by operating browsers and applications through screen observation and mouse actions. See also: [Agentic AI](#agentic-ai), [Multi-agent](#multi-agent)
 
 ---
 
@@ -326,7 +326,7 @@ Test-Time Compute allocates additional computational resources during model infe
 
 This scales performance on complex tasks by trading inference time and hardware for superior accuracy and reasoning.
 
-Examples include GPT-5.5-class models allocating extra reasoning tokens and Claude Opus 4.7 using search-like deliberation patterns.
+Examples include GPT-5.5-class models allocating extra reasoning tokens and Claude Opus 4.8 using search-like deliberation patterns.
 
 See also: [Inference](#inference), [Reasoning Models](#reasoning-models)
 
@@ -334,6 +334,6 @@ See also: [Inference](#inference), [Reasoning Models](#reasoning-models)
 
 ## Reasoning Models
 
-**Reasoning models** are large language models trained to perform multi-step logical reasoning, breaking complex problems into chain-of-thought steps for superior accuracy on math, coding, and planning tasks. They enable reliable solutions to challenges beyond standard LLMs' pattern-matching capabilities. Examples include Claude Opus 4.7 Reasoning and Gemini 3.1 Pro Think.
+**Reasoning models** are large language models trained to perform multi-step logical reasoning, breaking complex problems into chain-of-thought steps for superior accuracy on math, coding, and planning tasks. They enable reliable solutions to challenges beyond standard LLMs' pattern-matching capabilities. Examples include Claude Opus 4.8 with extended thinking and Gemini 3.1 Pro Thinking.
 See also: [LLM](#llm), [Prompt Engineering](#prompt-engineering)
 

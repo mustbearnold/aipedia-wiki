@@ -5,11 +5,11 @@ import AnswerContent from '../../components/AnswerContent.astro';
 import AnswerDecisionPanel from '../../components/AnswerDecisionPanel.astro';
 
 const answerContent = `
-[Claude](/tools/claude/) is the best first pick for writing in May 2026 when quality, structure, and revision judgment matter. It is especially strong for long-form drafts, editing, summarization, and rewriting without making the prose feel overproduced.
+[Claude](/tools/claude/) is the best first pick for writing in June 2026 when quality, structure, and revision judgment matter. Opus 4.8 strengthens Claude's advantage on long, ambiguous knowledge work, while Sonnet remains the practical everyday model for most drafting and editing.
 
-[ChatGPT](/tools/chatgpt/) is the better writing tool when the work also needs brainstorming, images, browsing, data analysis, or Codex in the same subscription. Its breadth is the advantage, not necessarily its prose style.
+[ChatGPT](/tools/chatgpt/) is the better writing tool when the work also needs brainstorming, images, browsing, data analysis, Codex, or file-heavy work in the same subscription. GPT-5.5 is available across ChatGPT tiers, with paid tiers unlocking more predictable usage and stronger model-picker control.
 
-[Grammarly](/tools/grammarly/) is still useful when the job is editing inside existing writing surfaces rather than generating a full draft. It fits email, docs, and teams that want style guardrails.
+[Grammarly](/tools/grammarly/) is still useful when the job is editing inside existing writing surfaces rather than generating a full draft. Grammarly Pro fits email, docs, and teams that want style guardrails, plagiarism/AI checks, and managed writing suggestions.
 
 Use specialist writing tools only when the workflow is narrow: fiction, SEO briefs, localization, or brand-governed marketing copy. General assistants are now strong enough that most writers should start with Claude or ChatGPT, then add a specialist only when a specific bottleneck appears.
 
@@ -23,12 +23,12 @@ const answerLD = JSON.stringify({
   author: { '@type': 'Organization', name: 'aipedia.wiki Editorial', url: 'https://aipedia.wiki/about/editorial/' },
   publisher: { '@id': 'https://aipedia.wiki/#organization' },
   datePublished: '2026-04-16',
-  dateModified: '2026-05-09',
+  dateModified: '2026-06-01',
   mainEntityOfPage: 'https://aipedia.wiki/answers/best-ai-for-writing-2026/',
 });
 ---
 
-<BaseLayout title="Best AI for Writing (2026): Definitive Answer" description="Claude is the first pick for long-form writing in May 2026; ChatGPT wins when writing is part of a broader assistant workflow; Grammarly fits inline editing.">
+<BaseLayout title="Best AI for Writing (2026): Definitive Answer" description="Claude is the first pick for long-form writing in June 2026; ChatGPT wins when writing is part of a broader assistant workflow; Grammarly fits inline editing.">
   <script type="application/ld+json" set:html={answerLD} />
   
   <div class="gt-canvas">
@@ -39,7 +39,7 @@ const answerLD = JSON.stringify({
         { label: 'Answers', href: '/answers/' },
         { label: "What is the best AI for writing in 2026?" },
       ]}
-      verifiedLabel="Verified May 9, 2026"
+      verifiedLabel="Verified June 1, 2026"
     />
 
     <article class="gt-body" id="gt-body">
@@ -61,7 +61,7 @@ const answerLD = JSON.stringify({
     <AnswerContent content={answerContent} />
 
     <div class="mt-[var(--site-section-gap)] pt-[var(--site-content-gap)] border-t border-[var(--border)] text-sm text-[var(--text-muted)]">
-      <p>This answer was checked against current vendor sources on May 9, 2026, including <a href="https://docs.anthropic.com/en/docs/models-overview" class="text-[var(--accent-primary)] no-underline hover:underline">Anthropic model docs</a>, <a href="https://openai.com/index/introducing-gpt-5-5/" class="text-[var(--accent-primary)] no-underline hover:underline">OpenAI GPT-5.5</a>, and <a href="https://www.grammarly.com/plans" class="text-[var(--accent-primary)] no-underline hover:underline">Grammarly plans</a>. See our <a href="/about/scoring/" class="text-[var(--accent-primary)] no-underline hover:underline">scoring methodology</a>.</p>
+      <p>This answer was checked against current vendor sources on June 1, 2026, including <a href="https://www.anthropic.com/news/claude-opus-4-8" class="text-[var(--accent-primary)] no-underline hover:underline">Anthropic Claude Opus 4.8</a>, <a href="https://support.claude.com/en/articles/11049762-choosing-a-claude-ai-plan/" class="text-[var(--accent-primary)] no-underline hover:underline">Claude plan guidance</a>, <a href="https://help.openai.com/en/articles/11909943-gpt-5-5-in-chatgpt" class="text-[var(--accent-primary)] no-underline hover:underline">OpenAI GPT-5.5 in ChatGPT</a>, <a href="https://chatgpt.com/pricing/" class="text-[var(--accent-primary)] no-underline hover:underline">ChatGPT pricing</a>, and <a href="https://www.grammarly.com/plans" class="text-[var(--accent-primary)] no-underline hover:underline">Grammarly plans</a>. See our <a href="/about/scoring/" class="text-[var(--accent-primary)] no-underline hover:underline">scoring methodology</a>.</p>
     </div>
   </article>
   </div>

@@ -2,7 +2,7 @@
 // Lists every active tool with category + tagline, every comparison, every
 // use-case guide. Intended for crawlers willing to ingest a larger manifest
 // to discover the full content map without parsing the sitemap.
-// Refresh metadata: 2026-05-31 Asana StackAI, CoreWeave agent reliability, OpenAI Rosalind Biodefense, Geordie governance, Sysdig agent-security, and news collection coverage refresh.
+// Refresh metadata: 2026-06-01 Phase 1 answer, editorial policy, glossary, and static surface refresh.
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 
@@ -49,7 +49,7 @@ export const GET: APIRoute = async () => {
   lines.push('');
   lines.push('## Editorial stance');
   lines.push('');
-  lines.push('aipedia.wiki publishes no fabricated first-hand testing claims and uses no individual-author byline. Content is produced by aipedia.wiki Editorial (Organization) and verified against primary vendor sources on a recurring schedule. Prices, flagship model versions, and feature availability are cross-checked against vendor documentation weekly. Full methodology at https://aipedia.wiki/about/editorial/.');
+  lines.push('aipedia.wiki publishes no fabricated first-hand testing claims and uses no individual-author byline. Content is produced by aipedia.wiki Editorial (Organization) and verified against primary vendor sources on a recurring schedule. Prices, flagship model versions, and feature availability are cross-checked against vendor documentation weekly and rechecked against current sources on every material page refresh. Full methodology at https://aipedia.wiki/about/editorial/.');
   lines.push('');
   lines.push('## Canonical entry points');
   lines.push('');

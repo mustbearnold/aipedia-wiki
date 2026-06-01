@@ -5,13 +5,13 @@ import AnswerContent from '../../components/AnswerContent.astro';
 import AnswerDecisionPanel from '../../components/AnswerDecisionPanel.astro';
 
 const answerContent = `
-The best free AI tools in May 2026 are [ChatGPT](/tools/chatgpt/) for broad everyday work, [Claude](/tools/claude/) for writing and careful reasoning, [Gemini](/tools/gemini/) for Google-native workflows, [Perplexity](/tools/perplexity/) for cited research, and [NotebookLM](/tools/notebooklm/) for source-grounded study.
+The best free AI tools in June 2026 are [ChatGPT](/tools/chatgpt/) for broad everyday work, [Claude](/tools/claude/) for writing and careful reasoning, [Gemini](/tools/gemini/) for Google-native workflows, [Perplexity](/tools/perplexity/) for cited research, and [NotebookLM](/tools/notebooklm/) for source-grounded study.
 
-**ChatGPT is the safest all-rounder.** The free tier covers writing, brainstorming, basic coding help, and general Q&A. Paid ChatGPT is stronger, especially after GPT-5.5, but the free product is still the easiest default for casual users.
+**ChatGPT is the safest all-rounder.** The free tier covers writing, brainstorming, basic coding help, file-light analysis, and general Q&A. Paid ChatGPT is still stronger for volume and model-picker control, but the free product is the easiest default for casual users.
 
 **Claude is the strongest free writing assistant.** It is a better fit for editing, tone, structured arguments, and long-form drafting. Free usage limits can bite during busy periods, so writers who use it daily may still need a paid plan.
 
-**Gemini is best when the work already lives in Google.** Students and teams using Docs, Gmail, Drive, Android, or Search get the most value from its ecosystem hooks. It is less clean as a standalone writing tool than Claude, but much stronger as a Google workflow layer.
+**Gemini is best when the work already lives in Google.** Students and teams using Search, Android, Docs, Gmail, Drive, or NotebookLM get the most value from its ecosystem hooks. It is less clean as a standalone writing tool than Claude, but much stronger as a Google workflow layer.
 
 **Perplexity and NotebookLM solve research differently.** Perplexity is better for current web research with citations. NotebookLM is better when you already have the source documents and want answers grounded only in those files.
 
@@ -25,12 +25,12 @@ const answerLD = JSON.stringify({
   author: { '@type': 'Organization', name: 'aipedia.wiki Editorial', url: 'https://aipedia.wiki/about/editorial/' },
   publisher: { '@id': 'https://aipedia.wiki/#organization' },
   datePublished: '2026-04-16',
-  dateModified: '2026-05-09',
+  dateModified: '2026-06-01',
   mainEntityOfPage: 'https://aipedia.wiki/answers/best-free-ai-tools-2026/',
 });
 ---
 
-<BaseLayout title="Best Free AI Tools (2026): Definitive Answer" description="ChatGPT, Claude, Gemini, Perplexity, and NotebookLM are the strongest free AI tools in May 2026, with important limits to understand.">
+<BaseLayout title="Best Free AI Tools (2026): Definitive Answer" description="ChatGPT, Claude, Gemini, Perplexity, and NotebookLM are the strongest free AI tools in June 2026, with important limits to understand.">
   <script type="application/ld+json" set:html={answerLD} />
   
   <div class="gt-canvas">
@@ -41,7 +41,7 @@ const answerLD = JSON.stringify({
         { label: 'Answers', href: '/answers/' },
         { label: "What are the best free AI tools in 2026?" },
       ]}
-      verifiedLabel="Verified May 9, 2026"
+      verifiedLabel="Verified June 1, 2026"
     />
 
     <article class="gt-body" id="gt-body">
@@ -63,7 +63,7 @@ const answerLD = JSON.stringify({
     <AnswerContent content={answerContent} />
 
     <div class="mt-[var(--site-section-gap)] pt-[var(--site-content-gap)] border-t border-[var(--border)] text-sm text-[var(--text-muted)]">
-      <p>This answer was checked against current vendor sources on May 9, 2026, including <a href="https://help.openai.com/en/articles/11909943-gpt-53-and-gpt-54-in-chatgpt" class="text-[var(--accent-primary)] no-underline hover:underline">OpenAI GPT-5.3 and GPT-5.5 ChatGPT docs</a>, <a href="https://openai.com/index/gpt-5-5-instant/" class="text-[var(--accent-primary)] no-underline hover:underline">OpenAI GPT-5.5 Instant update</a>, <a href="https://docs.anthropic.com/en/docs/about-claude/models/all-models" class="text-[var(--accent-primary)] no-underline hover:underline">Anthropic model docs</a>, <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/" class="text-[var(--accent-primary)] no-underline hover:underline">Google Gemini 3.1 Pro</a>, and <a href="https://www.perplexity.ai/pro" class="text-[var(--accent-primary)] no-underline hover:underline">Perplexity Pro</a>. See our <a href="/about/scoring/" class="text-[var(--accent-primary)] no-underline hover:underline">scoring methodology</a>.</p>
+      <p>This answer was checked against current vendor sources on June 1, 2026, including <a href="https://help.openai.com/en/articles/11909943-gpt-5-5-in-chatgpt" class="text-[var(--accent-primary)] no-underline hover:underline">OpenAI GPT-5.5 in ChatGPT</a>, <a href="https://chatgpt.com/pricing/" class="text-[var(--accent-primary)] no-underline hover:underline">ChatGPT pricing</a>, <a href="https://www.anthropic.com/news/claude-opus-4-8" class="text-[var(--accent-primary)] no-underline hover:underline">Anthropic Claude Opus 4.8</a>, <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/" class="text-[var(--accent-primary)] no-underline hover:underline">Google Gemini 3.1 Pro</a>, <a href="https://notebooklm.google/" class="text-[var(--accent-primary)] no-underline hover:underline">Google NotebookLM</a>, and <a href="https://www.perplexity.ai/pro" class="text-[var(--accent-primary)] no-underline hover:underline">Perplexity Pro</a>. See our <a href="/about/scoring/" class="text-[var(--accent-primary)] no-underline hover:underline">scoring methodology</a>.</p>
     </div>
   </article>
   </div>

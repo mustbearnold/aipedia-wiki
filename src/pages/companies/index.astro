@@ -43,7 +43,7 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
 ---
 
 <BaseLayout
-  title="AI Companies · May 2026 · aipedia.wiki"
+  title="AI Companies · June 2026 · aipedia.wiki"
   description="Profiles of the companies behind the AI tools we review. Founded dates, funding, HQ, and product rollups."
 >
   <BreadcrumbLD items={[
@@ -63,6 +63,7 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
         { label: 'aipedia', href: '/' },
         { label: 'Companies' },
       ]}
+      verifiedLabel="Verified June 1, 2026"
       rankLabel={`${sorted.length} companies · ${activeToolCount} products`}
     />
 

@@ -3,6 +3,9 @@ Allow: /
 Disallow: /admin/
 Disallow: /api/
 
+# Reviewed 2026-06-01: keep public AI-search crawlers allowed while
+# keeping admin and API surfaces out of the crawl path.
+
 # OpenAI search and user-triggered access. Keep GPTBot allowed while
 # AiPedia prioritizes AI-search visibility and source citation.
 User-agent: OAI-SearchBot

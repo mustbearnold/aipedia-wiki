@@ -15,8 +15,8 @@ const allDead = await getCollection('dead');
 const allUseCases = await getCollection('use-cases');
 
 // Freshness signal: update when editorial policy materially changes
-const LAST_REVIEWED = '2026-05-13';
-const LAST_REVIEWED_HUMAN = 'May 13, 2026';
+const LAST_REVIEWED = '2026-06-01';
+const LAST_REVIEWED_HUMAN = 'June 1, 2026';
 
 const stats = [
   { value: activeTools.length, label: 'Active tool reviews' },
@@ -44,12 +44,12 @@ const processSteps = [
   {
     n: 4,
     title: 'Dated cross-references',
-    body: 'Every claim that can become outdated (pricing, context windows, feature availability) is cited inline and stamped with a verification date on every tool page.',
+    body: 'Every claim that can become outdated (pricing, context windows, feature availability, model access, affiliate terms) is cited inline and stamped with a verification date on every tool page.',
   },
   {
     n: 5,
-    title: 'Monthly re-verification',
-    body: 'High-traffic tool pages are re-checked monthly. When a tool ships a material update, changes pricing, or shuts down, we update the page the same week.',
+    title: 'Current-date re-verification',
+    body: 'High-traffic tool pages are re-checked monthly. When a page is refreshed, volatile claims are checked against current sources for the actual update date, and material launches, pricing changes, or shutdowns are updated the same week.',
   },
 ];
 
@@ -84,7 +84,7 @@ const faqs = [
   {
     question: 'How often are tool reviews updated?',
     answer:
-      'High-traffic tool pages are re-checked monthly. Every page carries a visible `last_verified` timestamp. When a tool ships a material update, changes pricing, or shuts down, the corresponding page is updated within the same week.',
+      'High-traffic tool pages are re-checked monthly. Every page carries a visible `last_verified` timestamp. When a page is refreshed, volatile claims are checked against current sources for the actual update date. When a tool ships a material update, changes pricing, or shuts down, the corresponding page is updated within the same week.',
   },
   {
     question: 'What is the aipedia.wiki scoring system?',
@@ -126,7 +126,7 @@ const pageDesc = `aipedia.wiki is an independent AI tools encyclopedia covering 
   title="About aipedia.wiki"
   seoTitle={pageName}
   description={pageDesc}
-  subhead="An agentically operated editorial pipeline scoring AI tools on four axes. Every claim sourced. Zero paid placements."
+  subhead="An agentically operated editorial pipeline scoring AI tools on four axes. Current facts sourced. Zero paid placements."
   breadcrumbs={[{ label: 'About' }]}
 >
 

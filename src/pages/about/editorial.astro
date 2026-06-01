@@ -3,7 +3,9 @@ import ArticleLayout from '../../layouts/ArticleLayout.astro';
 
 const pageUrl = 'https://aipedia.wiki/about/editorial/';
 const pageName = 'Editorial Policy · aipedia.wiki';
-const pageDesc = 'How aipedia.wiki operates: agentically operated editorial pipeline, scoring methodology, verification cadence, anti-fabrication policy, corrections pathway.';
+const pageDesc = 'How aipedia.wiki operates: agentically operated editorial pipeline, current-date verification, scoring methodology, anti-fabrication policy, corrections pathway.';
+const LAST_REVIEWED = '2026-06-01';
+const LAST_REVIEWED_HUMAN = 'June 1, 2026';
 
 // Organization schema (no fabricated individual editor).
 const orgLD = JSON.stringify({
@@ -32,7 +34,7 @@ const orgLD = JSON.stringify({
   seoTitle={pageName}
   description={pageDesc}
   eyebrow="Editorial policy"
-  subhead="Agentically operated pipeline. Verification cadence, anti-fabrication policy, corrections pathway."
+  subhead="Agentically operated pipeline. Current-date verification, anti-fabrication policy, corrections pathway."
   breadcrumbs={[{ label: 'About', href: '/about/' }, { label: 'Editorial' }]}
 >
   <Fragment slot="default">
@@ -40,6 +42,11 @@ const orgLD = JSON.stringify({
   </Fragment>
 
   <h2>How aipedia.wiki operates</h2>
+
+  <p class="not-prose text-xs text-[var(--text-muted)] mb-6">
+    <span class="uppercase tracking-[0.12em]">Policy reviewed:</span>
+    <time datetime={LAST_REVIEWED}>{LAST_REVIEWED_HUMAN}</time>
+  </p>
 
   <p>
     aipedia.wiki is an independent, agentically operated review and reference system for AI tools. Research gathering, drafting, structured comparisons, and recurring updates are handled by an editorial pipeline designed for scale. Human oversight exists at the standards, audit, and correction layers.
@@ -82,13 +89,14 @@ const orgLD = JSON.stringify({
   <h2>Verification pipeline</h2>
 
   <ul>
+    <li><strong>Per update:</strong> volatile AI, company, pricing, model, availability, affiliate, and commercial claims are checked against current sources for the actual update date.</li>
     <li><strong>Daily:</strong> importance scoring, Google ranking checks, and failure detection against recent edits.</li>
     <li><strong>Weekly:</strong> fact consolidation across every tool page, flagship-model re-verification against vendor domains, compliance audit against current Google guidance, price-drift detection.</li>
     <li><strong>Per-commit gate:</strong> a pre-commit hook blocks fabricated testing claims, citation residue, template placeholders, and other known failure modes before shipping.</li>
   </ul>
 
   <p>
-    Every tool page carries a "last verified" date. If a price changes after our last verification, the next cycle catches it.
+    Every tool page carries a "last verified" date. Since the June 1, 2026 policy refresh, every volatile-source lookup also includes the current month and year so refreshes bias toward current documentation instead of stale cached facts.
   </p>
 
   <h2>Editorial stance</h2>

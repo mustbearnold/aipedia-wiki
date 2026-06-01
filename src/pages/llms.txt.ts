@@ -3,7 +3,7 @@
 // Copilot) at the canonical index + category hubs + editorial policy.
 //
 // See also /llms-full.txt for the verbose variant with every page listed.
-// Refresh metadata: 2026-05-31 Asana StackAI, CoreWeave agent reliability, OpenAI Rosalind Biodefense, Geordie governance, Sysdig agent-security, and news collection coverage refresh.
+// Refresh metadata: 2026-06-01 Phase 1 answer, editorial policy, glossary, and static surface refresh.
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 
@@ -76,7 +76,7 @@ export const GET: APIRoute = async () => {
   lines.push('');
   lines.push('## Data freshness');
   lines.push('');
-  lines.push('Every tool page carries a last_verified date in its header and frontmatter. Flagship model versions, pricing, and feature availability are re-verified on a weekly cycle against vendor-published primary sources. See https://aipedia.wiki/sitemap-index.xml for the crawlable index.');
+  lines.push('Every tool page carries a last_verified date in its header and frontmatter. Flagship model versions, pricing, and feature availability are re-verified on a weekly cycle against vendor-published primary sources, and volatile claims are checked against current sources on every material page refresh. See https://aipedia.wiki/sitemap-index.xml for the crawlable index.');
   lines.push('');
 
   return new Response(lines.join('\n'), {

@@ -6,7 +6,7 @@
  *
  * The components used below (Hero, Visual, DecisionCard, Decision, ScoreCard,
  * FactList, TrustPanel, StickyCTA) live in src/components/godtier/ and are
- * the same ones ToolLayout.astro composes for all 253 tool pages.
+ * the same ones ToolLayout.astro composes for active tool pages.
  *
  * Editing this page lets you preview component API changes on a realistic
  * data set before they ripple through the rest of the site.
@@ -24,12 +24,12 @@ import StickyCTA from '../components/godtier/StickyCTA.astro';
 const tool = {
   title: 'Claude Code',
   tagline: "Anthropic's terminal-based agentic coding CLI",
-  subtagline: 'Reads, writes, and runs across full codebases autonomously. Included with Claude Pro at $20/mo; Max tiers scale usage up to 20x.',
+  subtagline: 'Reads, writes, and runs across full codebases. Opus 4.8 raises the ceiling for deep repo work; Max, Team, and Enterprise are the serious usage paths.',
   category: 'AI Coding',
   categorySlug: 'ai-coding',
   url: 'https://code.claude.com',
   pricing_summary: '$20 – $200 / mo',
-  last_verified: '2026-05-10',
+  last_verified: '2026-06-01',
   rank: { label: 'Top pick in AI Coding' },
   score: {
     overall: 9.0,
@@ -42,29 +42,30 @@ const tool = {
       { label: 'Longevity', value: 9,  why: 'How likely the product is to still be best-in-class 24 months out.' },
     ],
   },
-  quick_answer: "Buy Max 5x at $100/mo if you run multi-file engineering from a terminal every day. Stay on Pro at $20/mo for lighter sessions — Anthropic doubled the five-hour Claude Code limits on May 6. Skip it if you want IDE integration (use Cursor) or a free tier (use Cline).",
+  quick_answer: "Use Claude Code when hard repo-level tasks matter more than living inside an IDE. Start with Pro for light terminal sessions, move to Max 5x or Team when usage becomes daily, and use Max, Team, or Enterprise if dynamic workflows matter. Skip it if you want IDE-first diffs (use Cursor) or the cheapest GitHub-standardized path (use Copilot).",
   decision: [
     { tone: 'positive' as const, label: 'Buy if',  value: 'You run multi-file refactors or long agentic sessions from the terminal' },
-    { tone: 'positive' as const, label: 'Pick',    value: 'Max 5x at $100/mo for daily use · Pro $20/mo for light use' },
+    { tone: 'positive' as const, label: 'Pick',    value: 'Max 5x or Team for daily use · Pro for light sessions' },
     { tone: 'negative' as const, label: 'Skip if', value: 'You need an IDE, visual diffs, or a free tier' },
   ],
   facts: [
-    { label: 'Backing model',  value: 'Claude Opus 4.7 · Sonnet 4.6 · Haiku 4.5', confidence: 'high', volatility: 'medium', verified: '2026-05-10', source: 'Anthropic release notes' },
-    { label: 'Context window', value: '1M tokens (Opus, Sonnet) · 200K (Haiku)',  confidence: 'high', volatility: 'low',    verified: '2026-05-10', source: 'Claude Code docs' },
-    { label: 'Interface',      value: 'Terminal only · macOS, Linux · Windows via WSL', confidence: 'high', volatility: 'low', verified: '2026-05-10', source: 'Claude Code docs' },
-    { label: 'MCP support',    value: 'First-class Model Context Protocol',      confidence: 'high', volatility: 'medium', verified: '2026-05-10', source: 'Claude Code docs' },
-    { label: 'Pricing',        value: 'Pro $20 · Max 5x $100 · Max 20x $200 · API pay-per-token', confidence: 'high', volatility: 'high', verified: '2026-05-10', source: 'Anthropic pricing' },
+    { label: 'Backing model',  value: 'Claude Opus 4.8 with Sonnet/Haiku options by plan', confidence: 'high', volatility: 'medium', verified: '2026-06-01', source: 'Anthropic release notes' },
+    { label: 'Context window', value: 'Long-context Claude sessions; exact limits vary by model and surface',  confidence: 'medium', volatility: 'medium', verified: '2026-06-01', source: 'Claude model docs' },
+    { label: 'Interface',      value: 'Terminal workflow · macOS, Linux · Windows via WSL', confidence: 'high', volatility: 'low', verified: '2026-06-01', source: 'Claude Code docs' },
+    { label: 'MCP support',    value: 'First-class Model Context Protocol',      confidence: 'high', volatility: 'medium', verified: '2026-06-01', source: 'Claude Code docs' },
+    { label: 'Dynamic workflows', value: 'Research preview on Max, Team, and Enterprise', confidence: 'high', volatility: 'high', verified: '2026-06-01', source: 'Claude Code dynamic workflows' },
+    { label: 'Pricing',        value: 'Pro, Max, Team, Enterprise, and API paths; verify current usage limits before rollout', confidence: 'high', volatility: 'high', verified: '2026-06-01', source: 'Claude pricing' },
   ],
   primary_cta: { label: 'Try Claude Code', href: 'https://code.claude.com', external: true },
   secondary_cta: { label: 'Compare alternatives', href: '/compare/cursor-vs-claude-code-vs-copilot/' },
   affiliate: false,
   sources: [
-    { label: 'Claude Code docs',     url: 'https://code.claude.com/docs/en/overview',          verified: '2026-05-10' },
-    { label: 'Anthropic pricing',     url: 'https://claude.com/pricing',                        verified: '2026-05-10' },
-    { label: 'May 6 limits update',   url: 'https://www.anthropic.com/news/higher-limits-spacex', verified: '2026-05-10' },
-    { label: 'Opus 4.7 release',      url: 'https://www.anthropic.com/news/claude-opus-4-7',    verified: '2026-04-16' },
-    { label: 'Claude Code llms.txt',  url: 'https://code.claude.com/llms.txt',                  verified: '2026-05-10' },
-    { label: 'Max plan support',      url: 'https://support.claude.com/en/articles/11049741-what-is-the-max-plan', verified: '2026-05-10' },
+    { label: 'Claude Code docs',      url: 'https://docs.anthropic.com/en/docs/claude-code/overview', verified: '2026-06-01' },
+    { label: 'Claude pricing',        url: 'https://claude.com/pricing',                            verified: '2026-06-01' },
+    { label: 'Claude Opus 4.8',       url: 'https://www.anthropic.com/news/claude-opus-4-8',          verified: '2026-06-01' },
+    { label: 'Dynamic workflows',     url: 'https://claude.com/blog/introducing-dynamic-workflows-in-claude-code', verified: '2026-06-01' },
+    { label: 'Claude Code llms.txt',  url: 'https://code.claude.com/llms.txt',                       verified: '2026-06-01' },
+    { label: 'Claude plan guidance',  url: 'https://support.claude.com/en/articles/11049762-choosing-a-claude-ai-plan/', verified: '2026-06-01' },
   ],
 };
 ---
@@ -80,7 +81,7 @@ const tool = {
         { label: tool.category, href: `/categories/${tool.categorySlug}/` },
         { label: tool.title },
       ]}
-      verifiedLabel="Verified May 10"
+      verifiedLabel="Verified June 1"
       rankLabel={tool.rank.label}
     />
 
@@ -102,7 +103,7 @@ const tool = {
       caption="Plan, edit across files, validate via tests, report."
       lines={[
         { kind: 'prompt',  text: '~/repo $ claude' },
-        { kind: 'comment', text: 'Welcome · Opus 4.7 · 1M context' },
+        { kind: 'comment', text: 'Welcome · Opus 4.8 · repo context' },
         { kind: 'prompt',  text: '› refactor auth middleware' },
         { kind: 'agent',   text: '⏺ Reading 14 files…' },
         { kind: 'agent',   text: '⏺ Editing src/middleware/auth.ts' },
@@ -129,7 +130,7 @@ const tool = {
     <article class="gt-body">
       <h2 class="gt-section-h">What it actually is</h2>
       <p>A CLI agent that runs in your shell and treats your entire codebase as context. You describe a task; it plans, reads relevant files, edits across modules, runs tests, reads errors, and iterates until done.</p>
-      <p>Opus 4.7 is the default model. The 1M-token context on Opus and Sonnet means real-world repos load in a single session. MCP support, Skills, and Agent SDK hosting turn it into a platform for production AI pipelines, not just a coding assistant.</p>
+      <p>Opus 4.8 is the high-ceiling model for hard repo reasoning. MCP support, Skills, Agent SDK hosting, and dynamic workflows turn Claude Code into a platform for production AI pipelines, not just a coding assistant.</p>
 
       <h2 class="gt-section-h">When to pick it</h2>
       <ul>
