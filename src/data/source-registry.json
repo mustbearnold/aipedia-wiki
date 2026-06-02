@@ -2881,7 +2881,8 @@
       "url": "https://www.granola.ai/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "granola-pricing",
@@ -2889,7 +2890,8 @@
       "url": "https://www.granola.ai/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "granola-security",
@@ -2897,7 +2899,8 @@
       "url": "https://www.granola.ai/security",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "grok-code-fast-best-for",
@@ -2913,7 +2916,8 @@
       "url": "https://console.groq.com/docs/overview",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "groq-models",
@@ -2921,7 +2925,8 @@
       "url": "https://console.groq.com/docs/models",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "groq-official",
@@ -2929,7 +2934,8 @@
       "url": "https://groq.com/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "groq-pricing",
@@ -2937,7 +2943,8 @@
       "url": "https://groq.com/pricing/",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "gumloop-docs",
@@ -2945,7 +2952,8 @@
       "url": "https://docs.gumloop.com/",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "gumloop-official",
@@ -2953,7 +2961,8 @@
       "url": "https://www.gumloop.com/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "gumloop-pricing",
@@ -2961,7 +2970,8 @@
       "url": "https://www.gumloop.com/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "hailuo-official",
@@ -2969,7 +2979,8 @@
       "url": "https://hailuoai.video/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "hailuo-pricing",
@@ -2978,7 +2989,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-08"
+      "last_checked": "2026-06-02"
     },
     {
       "id": "hailuo-23-launch",
@@ -2987,7 +2998,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-08"
+      "last_checked": "2026-06-02"
     },
     {
       "id": "minimax-video-api",
@@ -2996,7 +3007,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-08"
+      "last_checked": "2026-06-02"
     },
     {
       "id": "minimax-video-packages",
@@ -3005,7 +3016,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-08"
+      "last_checked": "2026-06-02"
     },
     {
       "id": "minimax-token-plan",
@@ -3014,7 +3025,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-08"
+      "last_checked": "2026-06-02"
     },
     {
       "id": "harvey-blog",
@@ -3022,7 +3033,8 @@
       "url": "https://www.harvey.ai/blog",
       "type": "blog",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "harvey-official",
@@ -3030,7 +3042,8 @@
       "url": "https://www.harvey.ai/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "harvey-platform",
@@ -3038,15 +3051,17 @@
       "url": "https://www.harvey.ai/platform",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "harvey-pricing",
-      "label": "Source",
+      "label": "Harvey pricing / sales-led official site",
       "url": "https://harvey.ai",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "harvey-security",
@@ -3054,7 +3069,8 @@
       "url": "https://www.harvey.ai/security",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "hedra-official",
@@ -3063,7 +3079,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-05-08"
+      "last_checked": "2026-06-02"
     },
     {
       "id": "hedra-models",
@@ -3072,7 +3088,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-08"
+      "last_checked": "2026-06-02"
     },
     {
       "id": "hedra-pricing",
@@ -3081,7 +3097,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-08"
+      "last_checked": "2026-06-02"
     },
     {
       "id": "helicone-docs",
@@ -3089,7 +3105,8 @@
       "url": "https://docs.helicone.ai/",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "helicone-official",
@@ -3097,7 +3114,8 @@
       "url": "https://www.helicone.ai/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "helicone-pricing",
@@ -3105,7 +3123,8 @@
       "url": "https://www.helicone.ai/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "helicone-repository",
@@ -3113,7 +3132,8 @@
       "url": "https://github.com/Helicone/helicone",
       "type": "repository",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "hermes-agent-docs",
@@ -3121,7 +3141,8 @@
       "url": "https://hermes-agent.nousresearch.com/docs",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "hermes-agent-official",
@@ -3129,7 +3150,8 @@
       "url": "https://hermes-agent.nousresearch.com/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "hermes-agent-pricing",
@@ -3137,7 +3159,8 @@
       "url": "https://hermes-agent.nousresearch.com/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "hermes-agent-repository",
@@ -3145,7 +3168,8 @@
       "url": "https://github.com/NousResearch/hermes-agent",
       "type": "repository",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "hex-learn",
@@ -3153,7 +3177,8 @@
       "url": "https://learn.hex.tech/",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "hex-official",
@@ -3161,7 +3186,8 @@
       "url": "https://hex.tech/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "hex-pricing",
@@ -3169,7 +3195,8 @@
       "url": "https://hex.tech/pricing/",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "hex-security",
@@ -3177,7 +3204,8 @@
       "url": "https://hex.tech/security/",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "heygen-api-docs",
@@ -7340,7 +7368,8 @@
       "url": "https://help.x.com/en/using-x/x-premium",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "xai-docs",
@@ -7348,7 +7377,8 @@
       "url": "https://docs.x.ai/",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "xai-grok-product",
@@ -7356,15 +7386,17 @@
       "url": "https://x.ai/grok",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "xai-pricing",
-      "label": "xAI API pricing",
-      "url": "https://docs.x.ai/docs/models",
+      "label": "xAI pricing",
+      "url": "https://x.ai/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "yi-official",

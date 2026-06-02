@@ -93,7 +93,7 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 - [Best AI for API documentation](/guides/best-ai-for-api-documentation/) now separates hosted docs platforms, SDK/docs generators, developer portals, and repo-aware AI assistants instead of ranking generic chatbots as if they were documentation systems.
 - [Best open source AI tools](/guides/best-open-source-ai-tools/) should stay synchronized with Ollama, LM Studio, Open WebUI, Llama, Mistral, DeepSeek, and open-model licensing because developer buyers often want local or self-hosted control before paying for hosted agents.
 - [DeepSeek alternatives](/guides/deepseek-alternatives/) should stay synchronized with ChatGPT, Claude, Cursor, Gemini, Mistral, Perplexity, and the open-source AI guide because DeepSeek switching intent often overlaps with coding, model cost, and local/open-model control.
-- [Best AI for SQL queries](/guides/best-ai-for-sql-queries/) should stay current because SQL buyers split between ChatGPT for learning, Cursor for app/database code, Claude for schema reasoning, Hex for data-team notebooks, and Julius for business-user analysis.
+- [Best AI for SQL queries](/guides/best-ai-for-sql-queries/) should stay current because SQL buyers split between ChatGPT for learning, Cursor for app/database code, Claude for schema reasoning, Hex for governed data-team notebooks with Notebook/Threads/Semantic Model agents, and Julius for business-user analysis.
 - [GitHub Copilot alternatives](/guides/github-copilot-alternatives/) should be monitored through the June 1, 2026 Copilot AI Credits migration.
 - [Cursor alternatives](/guides/cursor-alternatives/) should be monitored monthly because Cursor, Windsurf, Copilot, Claude Code, and Replit all expose usage-sensitive pricing or agent limits.
 - A new `Claude Code vs Codex` comparison would capture terminal-agent and OpenAI/Anthropic agent-intent searches.
@@ -150,6 +150,8 @@ Do not publish stale model-version claims. Coding tools route models and change 
 - [Zed pricing](https://zed.dev/pricing) (verified 2026-06-01)
 - [Trae pricing](https://www.trae.ai/pricing) (verified 2026-05-24)
 - [Gemini Code Assist](https://cloud.google.com/products/gemini/code-assist) (verified 2026-05-13)
+- [Hex pricing](https://hex.tech/pricing/) (verified 2026-06-02)
+- [Hex AI docs](https://learn.hex.tech/docs/getting-started/ai-overview) (verified 2026-06-02)
 - [Goose GitHub repository](https://github.com/aaif-goose/goose) (verified 2026-06-02)
 - [Goose documentation](https://block.github.io/goose/) (verified 2026-06-02)
 - [Z.AI GLM-5.1 docs](https://docs.z.ai/guides/llm/glm-5.1) (verified 2026-06-02)

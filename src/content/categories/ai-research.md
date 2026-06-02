@@ -3,7 +3,7 @@ type: category
 slug: ai-research
 title: AI Research Tools
 description: Source-backed AI tools for literature review, paper discovery, citation context, research notebooks, academic search, and evidence synthesis.
-tool_count: 8
+tool_count: 9
 seo_title: "Best AI Research Tools: Elicit, Scite, Semantic Scholar & Perplexity (June 2026)"
 meta_description: "Updated June 2, 2026: Elicit for literature review, Semantic Scholar for free academic search, Scite for citation context, NotebookLM for source-grounded notebooks, Perplexity for cited web research, Consensus for claim-level Q&A, Connected Papers for graph mapping, and ChatPDF for quick PDF chat."
 author: "aipedia.wiki Editorial"
@@ -22,6 +22,8 @@ For budget-conscious research teams running their own pipelines, [Reka Edge 7B](
 
 The May 31 update adds an important caveat for high-stakes science. OpenAI's [Rosalind Biodefense expansion](/news/2026-05-31-openai-rosalind-biodefense-trusted-access/) shows that specialist research models can be powerful but gated. GPT-Rosalind is not a general research subscription; it is a trusted-access life-sciences model program for qualified teams and public-health or biodefense workflows. Treat that as a separate procurement lane from everyday literature review.
 
+For legal and professional-services research, [Harvey](/tools/harvey/) belongs in a separate enterprise lane from academic tools. Its June 2 refresh keeps Assistant, Vault, Knowledge, Agents, Contract Intelligence, Command Center, Harvey Mobile, and the Claude for Legal connector in scope. It is for matter-grounded legal research, drafting, contract review, and deployment governance inside large firms, not for student literature review.
+
 The wrong move is treating a general chatbot as a research protocol. ChatGPT and Claude can help read, explain, outline, and critique material, but they do not replace database selection, inclusion criteria, source inspection, citation verification, or domain expertise.
 
 ## Best Picks
@@ -36,6 +38,7 @@ The wrong move is treating a general chatbot as a research protocol. ChatGPT and
 | Claim-level academic Q&A | [Consensus](/tools/consensus/) | Useful for quick synthesis from peer-reviewed literature | Treat as a starting point, not the conclusion |
 | Visual related-paper mapping | [Connected Papers](/tools/connected-papers/) | Helps map a field and find adjacent or foundational papers | Better for discovery than source evaluation |
 | Single-PDF chat | [ChatPDF](/tools/chatpdf/) | Fastest low-friction way to ask questions about a PDF | Not a full research workflow or citation-quality review layer |
+| Enterprise legal research and matter work | [Harvey](/tools/harvey/) | Domain-specific legal AI with Vault grounding, Agents, Contract Intelligence, and Command Center | Enterprise-only; lawyer review and procurement controls are mandatory |
 
 ## What To Buy First
 
@@ -46,6 +49,8 @@ Students and analysts working from a fixed set of class readings, PDFs, intervie
 Teams checking whether evidence is supported or disputed should evaluate Scite. It is a paid specialist for citation context, not a general writing assistant.
 
 People doing current business, policy, product, or technical research should add Perplexity. It is stronger for fast cited web trails than academic-only tools.
+
+Large law firms and legal departments should evaluate Harvey separately from academic research tools when the work is privileged matter analysis, contract review, drafting, or firm-wide legal AI deployment.
 
 ## Money Guides
 
@@ -81,3 +86,6 @@ Do not cite generated text. Cite the original source. Do not treat a linked sour
 - [GLM-5.1 on Hugging Face](https://huggingface.co/zai-org/GLM-5.1) - verified 2026-06-02.
 - [OpenAI GPT-Rosalind for life sciences research](https://openai.com/index/introducing-gpt-rosalind/) - verified 2026-05-31.
 - [OpenAI Rosalind Biodefense trusted-access expansion](https://openai.com/index/strengthening-societal-resilience-with-rosalind-biodefense/) - verified 2026-05-31.
+- [Harvey official site](https://www.harvey.ai/) - verified 2026-06-02.
+- [Harvey blog](https://www.harvey.ai/blog) - verified 2026-06-02.
+- [Harvey security](https://www.harvey.ai/security) - verified 2026-06-02.

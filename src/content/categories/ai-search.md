@@ -121,5 +121,8 @@ Do not leave this category stale. Google AI Mode, Perplexity Pro/Max/Enterprise,
 - [Glean official site](https://www.glean.com/) (verified 2026-06-02)
 - [Glean developer platform](https://developers.glean.com/) (verified 2026-06-02)
 - [You.com plans](https://home.you.com/plans) (verified 2026-05-13)
+- [Grok by xAI](https://x.ai/grok) (verified 2026-06-02)
+- [xAI pricing](https://x.ai/pricing) (verified 2026-06-02)
+- [xAI model docs](https://docs.x.ai/developers/models) (verified 2026-06-02)
 - [X Premium+ pricing](https://help.x.com/en/premium-plus-price-update) (verified 2026-05-13)
 - [Bing AI-guided image search](https://blogs.bing.com/search/May-2026/A-Smarter-Way-to-Explore-Images-Has-Come-to-Bing) (verified 2026-05-26)

@@ -43,6 +43,8 @@ Start with [ElevenLabs](/tools/elevenlabs/) for polished creator voice generatio
 
 **Buy a creator editor** when the transcript needs to become edited audio or video.
 
+**Use a video-first studio like [Hedra](/tools/hedra/)** when voice is part of character video, avatar-style creative, or social/ad asset generation. Do not buy Hedra as a pure TTS platform; model and credit rates vary by video, image, character, and audio route.
+
 **Buy an STT API** when transcription is a feature inside your product, support workflow, call analysis system, or voice agent.
 
 **Do not buy by generic accuracy claims.** Test with real audio: accents, speaker overlap, background noise, jargon, mic quality, language mix, consent requirements, latency, and retention policy all matter.
@@ -69,6 +71,8 @@ Start with [ElevenLabs](/tools/elevenlabs/) for polished creator voice generatio
 - [MiniMax T2A API docs](https://platform.minimax.io/docs/api-reference/speech-t2a-intro) (verified 2026-05-13)
 - [Cartesia pricing](https://cartesia.ai/pricing) (verified 2026-06-02)
 - [Castmagic pricing](https://www.castmagic.io/pricing) (verified 2026-06-02)
+- [Hedra pricing](https://www.hedra.com/pricing) (verified 2026-06-02)
+- [Hedra models](https://www.hedra.com/models) (verified 2026-06-02)
 - [YouTube altered or synthetic content disclosure](https://support.google.com/youtube/answer/14328491) (verified 2026-05-13)
 - [Descript pricing](https://www.descript.com/pricing) (verified 2026-06-02)
 - [Deepgram pricing](https://deepgram.com/pricing) (verified 2026-06-02)

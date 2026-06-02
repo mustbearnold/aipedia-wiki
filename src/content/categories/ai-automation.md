@@ -3,7 +3,7 @@ type: category
 slug: ai-automation
 title: AI Automation & Agents
 description: Current workflow automation, AI agent platforms, meeting automation, call automation, and operations tools for technical teams, non-technical operators, GTM workflows, customer success, support, sales, and internal automation.
-tool_count: 25
+tool_count: 27
 seo_title: "Best AI Automation Tools & Agent Platforms (June 2026)"
 meta_description: "Updated June 2, 2026: compare n8n, Zapier, Make, Gumloop, Relevance AI, Activepieces, AG2, CrewAI, Dust, Glean, Goose, Genspark, GetResponse, Dext, Browserbase, Ada, Apollo, Amplemarket, Lindy, Manus, Pipedream, CloudTalk, and MeetGeek by workflow, pricing unit, and risk."
 author: "aipedia.wiki Editorial"
@@ -32,7 +32,7 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 
 **Use [Make](/tools/make/) when visual workflow clarity and low entry price matter.** Make's current pricing page lists a free plan with 1,000 credits/month and 3000+ apps, plus Core, Pro, Teams, and Enterprise tiers. The May 2026 price reduction took Core from $10.59 to $9 per month, with proportional cuts across Pro and Teams. Its AI Agents page positions Make around transparent agents across 3000+ apps.
 
-**Use [Gumloop](/tools/gumloop/) when the buyer wants AI-native flows, agents, triggers, MCP, policies, and guardrails.** Gumloop is a stronger fit for agent-heavy workflow building than a generic "connect two apps" use case.
+**Use [Gumloop](/tools/gumloop/) when the buyer wants AI-native flows, agents, triggers, MCP, policies, and guardrails.** Gumloop is a stronger fit for agent-heavy workflow building than a generic "connect two apps" use case. The June 2 check keeps credit testing central: BYOK can reduce some workflow AI-node burn, but teams should test workflow nodes and agent/model paths separately before assuming every AI step is cheap.
 
 **Use [Relevance AI](/tools/relevance-ai/) when the purchase question is an AI workforce.** Relevance AI's current pricing page lists actions, vendor credits, workforces, unlimited agents/tools, 2000+ integrations, scheduling, escalations, and BYO LLM on paid plans.
 
@@ -43,6 +43,8 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 **Use [CrewAI](/tools/crewai/) when Python developers want role-based multi-agent orchestration.** The June 2 check found CrewAI 1.14.6 as the current stable release and a public pricing split of Free Basic cloud plus custom Enterprise. It belongs here as a framework/cloud-control-plane option, not as a no-code workflow builder.
 
 **Use [Browserbase](/tools/browserbase/) when automation needs reliable cloud browsers.** Browserbase belongs in this category when agents, scraping, QA, or workflow systems need managed browser sessions, identity, web-data APIs, Stagehand, MCP, and observability instead of local Playwright infrastructure.
+
+**Use [Helicone](/tools/helicone/) when automation depends on LLM observability and gateway controls.** It is not a workflow builder; it is the control layer for AI app traffic: request logging, cost tracking, prompt/session debugging, caching, fallbacks, rate limits, 0% markup gateway credits, and bring-your-own provider keys.
 
 **Use [Apollo](/tools/apollo/) or [Amplemarket](/tools/amplemarket/) when automation starts with outbound revenue.** Apollo is the broader prospect-data and sales-engagement platform, while Amplemarket is the higher-touch AI SDR suite with Duo agents and a $600/month annual Startup plan for two seats. Both need real sender, deliverability, and CRM governance before scale.
 
@@ -55,6 +57,8 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 **Use [Glean](/tools/glean/) when automation starts with permission-aware work search and company knowledge.** Glean's June 2 source check keeps it in the enterprise Work AI lane: agents, Assistant, Search, MCP, Claude Code/Cursor plugins, and setup paths for Codex, Goose, Gemini CLI, VS Code, Windsurf, JetBrains, and related developer surfaces. Pricing remains sales-led.
 
 **Use [Goose](/tools/goose/) when the buyer wants an open-source BYOK agent that can automate local tasks.** The June 2 check confirms the active repository now resolves to `aaif-goose/goose`, with Apache-2.0 licensing and no Goose subscription fee. The cost and risk are model usage, local permissions, extensions, and secrets hygiene.
+
+**Use [Hermes Agent](/tools/hermes-agent/) when the buyer wants a self-hosted, memory-bearing ops agent across chat platforms.** The June 2 check confirms the current GitHub release stream at v0.15.2, MIT licensing, six terminal backends, 15+ messaging platforms, natural-language cron, auto-generated skills, subagents, MCP, and optional Nous Portal model/tool routing.
 
 **Use [Genspark](/tools/genspark/) when automation should produce research deliverables, calls, docs, slides, sheets, design, and media inside one AI workspace.** Plus is $24.99/month for 10,000 credits and Pro is $249.99/month for 125,000 credits on the current membership page, so credit modeling matters before high-volume team use.
 
@@ -89,6 +93,7 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 | Developer multi-agent framework | [AG2](/tools/ag2/) | Apache 2.0 framework for AutoGen-style agent systems with active releases | Requires Python engineering judgment; not a turnkey workflow product |
 | Python multi-agent orchestration | [CrewAI](/tools/crewai/) | Role-based agents, crews, flows, Studio, tracing, triggers, and an Enterprise path | Basic cloud is small; LLM costs and production controls still need engineering ownership |
 | Cloud browser automation for agents | [Browserbase](/tools/browserbase/) | Managed browsers, Web Data APIs, runtime, identity, observability, Stagehand, and MCP | Costs move with browser sessions and runtime design |
+| LLM observability and gateway control | [Helicone](/tools/helicone/) | Open-source observability, AI Gateway, caching, failovers, 0% markup credits, and BYOK provider support | Sits in sensitive prompt/data paths; review retention, PII, and proxy mode |
 | Enterprise customer-service AI agents | [Ada](/tools/ada/) | Strong fit for high-volume support teams that need chat, voice, email, SMS, social, and reasoning workflows | Pricing is demo-gated; verify volume, channel, and resolution economics |
 | Outbound revenue automation | [Apollo](/tools/apollo/) or [Amplemarket](/tools/amplemarket/) | Prospect data, enrichment, sequencing, and AI-assisted GTM execution | Credit systems, deliverability, and CRM hygiene decide real value |
 | Enrichment and GTM research workflows | [Clay](/tools/clay/) | Waterfalls data providers, research agents, and account enrichment before sending | Credits, action counts, and annual-vs-monthly pricing need direct plan math |
@@ -96,6 +101,7 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 | Internal team AI agents | [Dust](/tools/dust/) | Custom agents over company data and tools, Slack/Zendesk/API surfaces, model choice | Value depends on source hygiene, permissions, and repeated team workflows |
 | Enterprise knowledge agents | [Glean](/tools/glean/) | Permission-aware work search, agents, MCP, and developer-tool integrations over company data | Contact-sales pricing, connectors, and security review drive procurement |
 | Open-source local/BYOK agent | [Goose](/tools/goose/) | Apache-2.0 desktop/CLI/API agent with provider choice and MCP extensions | Local permissions, model costs, and extension trust need controls |
+| Self-hosted persistent ops agent | [Hermes Agent](/tools/hermes-agent/) | MIT-licensed persistent memory, auto-skills, natural-language cron, subagents, 15+ messaging platforms, and six backends | Operator owns uptime, credentials, spend limits, and tool permissions |
 | AI workspace deliverable automation | [Genspark](/tools/genspark/) | Super Agent plus docs, slides, sheets, media, meetings, calls, and AI Drive | Credit burn and enterprise/API availability need direct verification |
 | Email/webinar/course marketing automation | [GetResponse](/tools/getresponse/) | Email sends, funnels, webinars, course creator, ecommerce and marketing automation | Not a general ops agent; affiliate status does not affect ranking |
 | Bookkeeping document automation | [Dext](/tools/dext/) | Receipts, invoices, expenses, bank/supplier statements, approvals, and accounting handoff | Not a ledger, payroll, tax, or general automation platform |
@@ -150,7 +156,8 @@ Do not leave this category stale. Automation tools are adding MCP, agent builder
 - [Zapier pricing](https://zapier.com/pricing) (verified 2026-05-13)
 - [Make pricing](https://www.make.com/en/pricing) (verified 2026-05-13)
 - [Make AI Agents](https://www.make.com/en/ai-agents) (verified 2026-05-13)
-- [Gumloop pricing](https://www.gumloop.com/pricing) (verified 2026-05-13)
+- [Gumloop pricing](https://www.gumloop.com/pricing) (verified 2026-06-02)
+- [Gumloop docs](https://docs.gumloop.com/) (verified 2026-06-02)
 - [Relevance AI pricing](https://relevanceai.com/pricing) (verified 2026-05-13)
 - [Activepieces pricing](https://www.activepieces.com/pricing) (verified 2026-06-01)
 - [Activepieces GitHub releases](https://github.com/activepieces/activepieces/releases) (verified 2026-06-01)
@@ -162,6 +169,8 @@ Do not leave this category stale. Automation tools are adding MCP, agent builder
 - [Glean developer platform](https://developers.glean.com/) (verified 2026-06-02)
 - [Goose GitHub repository](https://github.com/aaif-goose/goose) (verified 2026-06-02)
 - [Goose documentation](https://block.github.io/goose/) (verified 2026-06-02)
+- [Hermes Agent docs](https://hermes-agent.nousresearch.com/docs/) (verified 2026-06-02)
+- [Hermes Agent GitHub releases](https://github.com/NousResearch/hermes-agent/releases) (verified 2026-06-02)
 - [Genspark membership benefits](https://www.genspark.ai/membership-benefits-lp) (verified 2026-06-02)
 - [GetResponse pricing](https://www.getresponse.com/pricing) (verified 2026-06-02)
 - [Dext business plans](https://help.dext.com/en/articles/647776-dext-plans-for-businesses) (verified 2026-06-02)
@@ -173,6 +182,8 @@ Do not leave this category stale. Automation tools are adding MCP, agent builder
 - [Apollo pricing](https://apollo.io/pricing) (verified 2026-06-01)
 - [Amplemarket pricing](https://www.amplemarket.com/pricing) (verified 2026-06-01)
 - [Browserbase pricing](https://www.browserbase.com/pricing) (verified 2026-06-01)
+- [Helicone pricing](https://www.helicone.ai/pricing) (verified 2026-06-02)
+- [Helicone platform docs](https://docs.helicone.ai/getting-started/platform-overview) (verified 2026-06-02)
 - [Clay pricing](https://www.clay.com/pricing) (verified 2026-06-02)
 - [ClickUp pricing](https://clickup.com/pricing) (verified 2026-06-02)
 - [ClickUp Brain](https://clickup.com/ai) (verified 2026-06-02)

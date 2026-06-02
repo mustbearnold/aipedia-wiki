@@ -2,7 +2,7 @@
 type: tool
 slug: groq
 title: Groq
-tagline: Fastest LLM inference in 2026. Custom LPU hardware pushes 300-1,000 tokens/second. Free tier 30 req/min. Llama 4 Scout at $0.11/$0.34 per M tokens. Acquired by Nvidia ($20B rumored).
+tagline: Fast LLM inference on Groq's LPU cloud. Free tier for prototyping, paid usage-based API pricing, Llama/Qwen/GPT OSS open-model routes, Batch API discounts, and prompt-caching savings.
 category: ai-chatbots
 company: groq
 url: https://groq.com
@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "Free 30 req/min / paid usage-based"
 status: active
 launched: 2020-01
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-02
+last_verified: 2026-06-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -26,23 +26,22 @@ scores:
   longevity: 8
 facts:
   best_for:
-    value: Best for developers who need very low-latency hosted inference for supported open models through an API; GPT OSS
-      20B and 120B added to the supported catalog alongside Llama 4 Scout, Llama 3.3 70B, and Qwen3 32B.
+    value: Best for developers who need very low-latency hosted inference for supported open models through an API, with current catalog checks across Llama, Qwen, Whisper, DeepSeek, and OpenAI-compatible GPT OSS routes.
     source: https://groq.com/
     source_label: Groq official site
     source_id: groq-official
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
   pricing_anchor:
-    value: As of May 2026, Llama 4 Scout runs $0.11/$0.34, Llama 3.1 8B Instant $0.05/$0.08, Llama 3.3 70B Versatile $0.59/$0.79,
+    value: As of June 2, 2026, Llama 4 Scout runs $0.11/$0.34, Llama 3.1 8B Instant $0.05/$0.08, Llama 3.3 70B Versatile $0.59/$0.79,
       Qwen3 32B $0.29/$0.59, and GPT OSS 20B $0.075/$0.30 per million tokens; prompt caching gives 50 percent off cached inputs
       and Batch API gives 50 percent off async workloads.
     source: https://groq.com/pricing/
     source_label: Groq pricing
     source_id: groq-pricing
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -52,17 +51,16 @@ facts:
     source: https://console.groq.com/docs/overview
     source_label: Groq docs
     source_id: groq-docs
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
   model_control:
-    value: As of May 2026 the catalog adds GPT OSS 20B (1,000 TPS) and GPT OSS 120B (500 TPS) and replaces Llama 3 70B with
-      Llama 3.3 70B Versatile; Mixtral is no longer listed on the pricing page.
+    value: The June 2026 supported-models page should be treated as the source of truth because model IDs, production/preview status, context windows, and deprecations move quickly.
     source: https://console.groq.com/docs/models
     source_label: Groq supported models
     source_id: groq-models
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -72,13 +70,13 @@ facts:
     source: https://console.groq.com/docs/models
     source_label: Groq supported models
     source_id: groq-models
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
-tags: [inference, lpu, fast, llama, qwen, deepseek, gpt-oss, hardware, nvidia-acquisition]
-seo_title: "Groq (LPU Inference): Features, Pricing & Review (May 2026)"
-meta_description: "Groq is the fastest LLM inference provider in 2026 (not Grok, xAI's chatbot). Custom LPU silicon pushes up to 1,000 tokens/sec on open-weight models including Llama 4 Scout, Llama 3.3 70B, Qwen3 32B, and OpenAI's GPT OSS 20B/120B. Llama 4 Scout $0.11/$0.34 per M tokens. Acquired by Nvidia for $20B."
+tags: [inference, lpu, fast, llama, qwen, deepseek, gpt-oss, hardware, api]
+seo_title: "Groq (LPU Inference): Features, Pricing & Review (June 2026)"
+meta_description: "Groq is the LPU inference provider, not xAI's Grok chatbot. Compare current June 2026 API pricing, free-tier limits, supported open models, prompt caching, Batch API discounts, and buyer fit."
 author: "aipedia.wiki Editorial"
 best_for:
   - latency-sensitive LLM workloads
@@ -86,12 +84,19 @@ best_for:
   - production apps needing consistent low-latency
   - open-weight model inference at scale
 not_best_for:
-  - users who need frontier-proprietary models (OpenAI frontier models, Claude Opus 4.7)
+  - users who need frontier-proprietary models from OpenAI, Anthropic, or Google
   - long-context or reasoning workloads (open-weight on Groq is capped)
   - users without API integration (consumer-facing UI is minimal)
 quick_answer: >-
-  Groq is the fastest LLM inference provider in 2026. Custom LPU (Language Processing Unit) hardware pushes up to 1,000 tokens/second on GPT OSS 20B, 3-10x faster than GPU-based competitors. Free tier allows 30 requests/minute and 6,000 tokens/minute. Llama 4 Scout runs $0.11/$0.34 per million tokens; GPT OSS 20B at $0.075/$0.30. Nvidia acquired Groq in early 2026 at roughly $20B. Pick it for latency-critical open-weight model workloads, including OpenAI's GPT OSS releases.
+  Groq is the LPU inference provider, not xAI's Grok chatbot. The June 2026 buyer case is still speed and predictable API economics for supported open models: free-tier prototyping, paid usage-based pricing, prompt caching, and Batch API discounts. Pick it for latency-critical open-model workloads; skip it when you need a closed frontier model from OpenAI, Anthropic, or Google.
 price_history:
+  - date: 2026-06-02
+    plan: "Model pricing"
+    price: "Usage-based by model"
+    source: "https://groq.com/pricing/"
+    source_label: "Groq pricing"
+    source_id: groq-pricing
+    note: "Reverified current public pricing table and discount surfaces; use the live pricing page because model IDs and throughput labels can move."
   - date: 2026-05-13
     plan: "Llama 4 Scout"
     price: "$0.11 input / $0.34 output per M tokens"
@@ -126,15 +131,15 @@ price_history:
 
 > **Not to be confused with [Grok](/tools/grok/)** (xAI's chatbot, different company, different product). This page is Groq, the LPU inference provider.
 
-The fastest LLM inference provider on the market in 2026. Custom silicon called the Language Processing Unit (LPU) delivers token-per-second rates that GPU-based providers (even H100 and B200) cannot match. Nvidia acquired Groq in early 2026 at a rumored $20B valuation, a 2.9× markup on the last private round.
+One of the fastest LLM inference providers on the market in 2026. Custom silicon called the Language Processing Unit (LPU) is optimized for low-latency model serving, and Groq's API exposes supported open models through an OpenAI-compatible developer surface.
 
 ## System Verdict
 
 > **Pick Groq if your workload is latency-sensitive.** Real-time voice agents, streaming chat interfaces, interactive AI applications all feel qualitatively different at 500+ tokens/second. You notice the speed the first time you try it.
 >
-> **Skip Groq if you need frontier proprietary models.** Groq serves open-weight models (Llama 4 Scout, Llama 3.3 70B, Qwen3 32B, DeepSeek V3.2, Gemma 4) plus OpenAI's GPT OSS 20B and 120B open-weight releases. For [ChatGPT](/tools/chatgpt/) frontier GPT-5.5, [Claude Opus 4.7](/tools/claude/), or [Gemini 3.1 Pro](/tools/gemini/), you go to the source.
+> **Skip Groq if you need frontier proprietary models.** Groq serves supported open and open-compatible model routes. For the newest closed frontier ChatGPT, Claude, or Gemini models, go to the source provider.
 >
-> **The 2026 context:** Open-weight flagships have closed the gap on many tasks. April 23's GPT-5.5 release reset the frontier-API bar, but for inference cost OpenAI's own GPT OSS 20B at $0.075/$0.30 per million tokens at 1,000 TPS on Groq is a genuine alternative for high-volume workloads. The Nvidia acquisition signals this economics is only getting more competitive.
+> **The 2026 context:** Open-weight flagships have closed the gap on many tasks, but quality still varies by job. Groq's edge is not "best model"; it is fast serving, simple API migration, and lower-latency economics for the open models it supports.
 
 ## Key Facts
 
@@ -150,7 +155,6 @@ The fastest LLM inference provider on the market in 2026. Custom silicon called 
 | **GPT OSS 120B** | $0.15 input / $0.60 output per M tokens (500 TPS) |
 | **Speed** | Up to 1,000 tokens/second on GPT OSS 20B; 394 to 840 TPS on Llama-family models |
 | **Hardware** | Custom LPU (Language Processing Unit) silicon |
-| **Acquired by** | Nvidia (~$20B, early 2026) |
 | **Batch API** | 50 percent discount for non-real-time workloads (24h to 7d windows) |
 | **Prompt caching** | 50 percent off cached input tokens, no extra caching fee |
 
@@ -158,7 +162,7 @@ The fastest LLM inference provider on the market in 2026. Custom silicon called 
 
 - **Real-time voice applications.** Users feel sub-200ms response times. Groq's streaming LLM inference makes this achievable with open-weight models.
 - **Streaming chat interfaces.** Token streaming that displays in real time. On Groq, the full response often lands before the user finishes reading the first line.
-- **Production apps scaling open-weight.** Cheap per-token pricing + fastest inference = best unit economics for Llama or Qwen production deployments.
+- **Production apps scaling open-weight.** Low per-token pricing plus low latency can create strong unit economics for Llama, Qwen, Whisper, DeepSeek, and compatible open-model deployments.
 - **Agent loops with tight latency budgets.** Multi-step agent workflows where each LLM call must return fast to meet overall SLA.
 
 ## When to pick something else
@@ -183,14 +187,14 @@ Pricing is per-token and predictable.
 
 Rate tiers: Free (30 req/min, 14,400/day). Developer (10x free + 25 percent off). Enterprise (custom). Batch API: 50 percent off for 24-hour to 7-day windows. Prompt caching: 50 percent off cached input tokens with no extra caching fee.
 
-Verified 2026-05-13 via [groq.com/pricing](https://groq.com/pricing).
+Verified 2026-06-02 via [groq.com/pricing](https://groq.com/pricing) and [Groq supported models](https://console.groq.com/docs/models).
 
 ## Failure modes
 
 - **Open-weight only.** Groq hosts open-weight models including OpenAI's GPT OSS 20B and 120B, but no frontier ChatGPT, no Claude, no Gemini. If your product needs a closed frontier model, Groq is complementary, not a replacement.
 - **Free tier rate limits bite.** 30 req/min is enough for prototyping, not production. Plan upgrade.
 - **Model catalog is narrower than FLUX marketplaces.** Curated selection of flagship open-weight models, not every model on Hugging Face.
-- **Nvidia acquisition = integration risk.** Post-acquisition, Nvidia may shift pricing, access, or model support. Watch for changes over 2026-2027.
+- **Model catalog changes.** Groq's supported-model table includes production and preview routes; check model IDs, deprecations, context limits, and rate limits before pinning a production workload.
 - **LPU geography is limited.** Not globally distributed in 2026 at the level of AWS or GCP. Latency is great near a Groq region, less great far from one.
 
 ## Against the alternatives
@@ -205,12 +209,12 @@ Verified 2026-05-13 via [groq.com/pricing](https://groq.com/pricing).
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified 2026-05-13 against [groq.com/pricing](https://groq.com/pricing) and [IntuitionLabs' Nvidia-Groq acquisition analysis](https://intuitionlabs.ai/articles/nvidia-groq-ai-inference-deal).
+Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-02 against [Groq pricing](https://groq.com/pricing/), [Groq docs](https://console.groq.com/docs/overview), and [Groq supported models](https://console.groq.com/docs/models).
 
 ## FAQ
 
 **Is Groq the same as Grok?**
-No. Groq (this page) is a hardware-accelerated LLM inference provider founded in 2016, now Nvidia-acquired. [Grok](/tools/grok/) is xAI's chatbot product launched 2023, owned by SpaceX post-merger. Different companies, different products, easy to confuse because of the single-letter spelling. Groq publicly complained about the naming collision in 2023 when Grok launched.
+No. Groq (this page) is a hardware-accelerated LLM inference provider founded in 2016. [Grok](/tools/grok/) is xAI's chatbot and API platform launched in 2023. Different companies, different products, easy to confuse because of the single-letter spelling.
 
 **Is Groq really 10× faster than other providers?**
 On open-weight models, the LPU hardware delivers 3-10× higher tokens/second than GPU-based providers. Real-world advantage depends on model, context length, and region.
@@ -218,8 +222,8 @@ On open-weight models, the LPU hardware delivers 3-10× higher tokens/second tha
 **What's an LPU and how is it different from a GPU?**
 Language Processing Unit is Groq's custom silicon designed specifically for LLM inference. Unlike GPUs (which are general-purpose matrix-math chips), LPUs are optimized for the specific compute patterns LLMs use. The result: higher throughput, lower latency, and lower cost per token on supported models.
 
-**Does the Nvidia acquisition affect customers?**
-As of May 2026, pricing and access are unchanged. Nvidia has historically kept acquired infra brands running separately (see NVLink or Mellanox). Keep watching for 2027-2028 changes.
+**Was Groq acquired by Nvidia?**
+AiPedia is not treating acquisition rumors as current buyer facts. Use Groq's official site, pricing page, and docs for purchase decisions unless Groq or Nvidia publish a primary-source announcement.
 
 **Can I run Llama 4 Scout's 10M context on Groq?**
 Groq supports long context on some models but not always the full 10M. Check current model specs on Groq's docs; the effective context window varies.

@@ -30,7 +30,7 @@ AI video is no longer one clean product category. On May 24, 2026, the useful bu
 
 **Do not treat Sora 2 Pro as a fresh buying route.** OpenAI says the Sora web and app experiences were discontinued on April 26, 2026, and the Sora API will be discontinued on September 24, 2026. Use Sora only for legacy exports, migration planning, or a short API sunset comparison; do not build a new video workflow around it.
 
-**Test [Hailuo 2.3](/tools/hailuo/) as the current budget challenger.** Hailuo 2.3 is the current generation buyers should benchmark against Pika and Luma for low-cost social and ideation work, not the older 2.x branches still mentioned in stale lists.
+**Test [Hailuo 2.3](/tools/hailuo/) as the current budget challenger.** Hailuo 2.3 is the current generation buyers should benchmark against Pika and Luma for low-cost social and ideation work, not the older 2.x branches still mentioned in stale lists. The June 2 check keeps MiniMax token plans and video packages as the purchase math: subscriptions can include large token buckets, while video API/package routes need unit-level cost modeling before scale.
 
 **Use [Runway](/tools/runway/) when you need to ship finished video.** Runway is the strongest production workspace because it combines Runway Agent, Gen-4.5, Gen-4, Gen-4 Turbo, Aleph 2.0/Edit Studio, Act-Two performance capture, Veo, Seedance, Kling, team storage, exports, and API paths in one workflow. It is not always the raw quality-per-dollar winner, but it is often the best product to buy when a creator, agency, or team has to deliver.
 
@@ -46,7 +46,7 @@ If you need a finished workflow, start with Runway. The value is consolidation: 
 
 If you need lower-cost social clips or effects, use [Pika](/tools/pika/), [Luma](/tools/luma/), [Wan](/tools/wan/), [Hailuo](/tools/hailuo/), [Vidu](/tools/vidu/), [Pixverse](/tools/pixverse/), or similar tools as test beds. They can be useful for ideation, short-form clips, image-to-video, and stylized effects, but do not assume they beat the frontier model set without a prompt-by-prompt test.
 
-If you need a person on camera, use avatar tools. The [best AI avatar video generator guide](/guides/best-ai-avatar-video-generator/) covers HeyGen, Synthesia, Tavus, D-ID, Argil, Hedra, and Captions-style products because they solve a different problem: generating, localizing, editing, or scaling presenter-led business video.
+If you need a person on camera, use avatar tools. The [best AI avatar video generator guide](/guides/best-ai-avatar-video-generator/) covers HeyGen, Synthesia, Tavus, D-ID, Argil, Hedra, and Captions-style products because they solve a different problem: generating, localizing, editing, or scaling presenter-led business video. Hedra now sits closer to a pooled-credit creative studio than a narrow talking-head generator, so buyers should test its character workflow and third-party model credit rates separately.
 
 ## Current Shortlist
 
@@ -154,6 +154,12 @@ Yes, but with honest positioning. They are useful for budget testing, effects, o
 - [Runway Aleph 2.0 and Edit Studio](https://runwayml.com/news/introducing-aleph-2-and-edit-studio) (verified 2026-05-24)
 - [Runway API models](https://docs.dev.runwayml.com/guides/models/) (verified 2026-05-24)
 - [Pika pricing](https://pika.art/pricing)
+- [Hailuo official site](https://hailuoai.video/) (verified 2026-06-02)
+- [MiniMax video API docs](https://platform.minimax.io/docs/api-reference/video-generation-intro) (verified 2026-06-02)
+- [MiniMax video package pricing](https://platform.minimax.io/docs/guides/pricing-video) (verified 2026-06-02)
+- [MiniMax token subscription pricing](https://platform.minimax.io/docs/guides/pricing-token-plan) (verified 2026-06-02)
+- [Hedra pricing](https://www.hedra.com/pricing) (verified 2026-06-02)
+- [Hedra models](https://www.hedra.com/models) (verified 2026-06-02)
 - [OpusClip pricing](https://www.opus.pro/pricing) (verified 2026-05-13)
 - [OpusClip plans and credits](https://help.opus.pro/docs/article/plans-and-credits) (verified 2026-05-13)
 - [Captions pricing](https://captions.ai/pricing) (verified 2026-06-02)

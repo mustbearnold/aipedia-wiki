@@ -2,17 +2,17 @@
 type: tool
 slug: grok
 title: Grok
-tagline: xAI's AI assistant and voice-agent stack. Grok 4.3 moved into the API/OpenRouter on May 1, 2026 at $1.25/M input and $2.50/M output up to 200K, while Custom Voices added team-scoped voice cloning for voice agents. Real-time X data remains the wedge.
+tagline: xAI's AI assistant, API, voice, Imagine image/video, and real-time X search stack. Grok 4.3 is the current default API model with 1M context at $1.25/M input and $2.50/M output.
 category: ai-chatbots
 secondary_categories: [ai-search, ai-voice]
-company: xAI
+company: xAI Corp.
 url: https://x.ai
 pricing_model: freemium
-price_range: "$0-$300/month"
+price_range: "$0 free / SuperGrok $30/month / API usage-based / Business and Enterprise custom"
 status: active
 launched: 2023-11
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-02
+last_verified: 2026-06-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -27,47 +27,47 @@ scores:
   longevity: 6
 facts:
   flagship_model:
-    value: "Grok 4.3 for API and paid tiers; Grok 4.20 remains part of the active long-context lineup"
+    value: "Grok 4.3 is the current default API model and xAI's docs describe it as the most intelligent and fastest model xAI has built."
     source: "https://docs.x.ai/developers/models"
     source_label: "xAI model docs"
     source_id: xai-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-06-02
     volatility: high
     confidence: high
     next_review_at: 2026-06-03
   context_window:
-    value: "Model-dependent; Grok 4.3 API reporting lists 1M context while earlier Fast/4.20 surfaces are tracked at 2M"
-    source: "/news/2026-05-03-xai-grok-43-custom-voices-api/"
-    source_label: "Grok 4.3 API coverage"
-    source_id: aipedia-news
-    verified_at: 2026-05-03
+    value: "Model-dependent; xAI's current Grok 4.3 API docs list 1 million tokens."
+    source: "https://docs.x.ai/developers/models"
+    source_label: "xAI model docs"
+    source_id: xai-docs
+    verified_at: 2026-06-02
     volatility: high
     confidence: high
     next_review_at: 2026-06-03
   pricing_anchor:
-    value: "Limited free access; SuperGrok and X Premium+ raise limits; SuperGrok Heavy targets the highest limits; API pricing is model-dependent"
-    source: "https://docs.x.ai/developers/models"
-    source_label: "xAI model docs"
-    source_id: xai-docs
-    verified_at: 2026-05-03
+    value: "xAI's public pricing page lists Free at $0/month, SuperGrok at $30/month, team and enterprise paths, and model-dependent API pricing in the developer docs."
+    source: "https://x.ai/pricing"
+    source_label: "xAI pricing"
+    source_id: xai-pricing
+    verified_at: 2026-06-02
     volatility: high
     confidence: high
     next_review_at: 2026-06-03
   free_plan:
-    value: "Yes, limited; higher limits and frontier Grok access depend on X Premium/Premium+ or SuperGrok tiers"
-    source: "https://help.x.com/en/using-x/x-premium"
-    source_label: "X Premium help"
-    source_id: x-premium-help
-    verified_at: 2026-05-03
+    value: "Yes. xAI's pricing page lists a Free plan with real-time web and X search, voice mode, connectors, and generous limits."
+    source: "https://x.ai/pricing"
+    source_label: "xAI pricing"
+    source_id: xai-pricing
+    verified_at: 2026-06-02
     volatility: high
     confidence: high
     next_review_at: 2026-06-03
   best_paid_tier:
-    value: "SuperGrok for direct Grok usage, X Premium+ for users already paying for X, Heavy only for sustained high-limit work"
-    source: "https://help.x.com/en/using-x/x-premium"
-    source_label: "X Premium help"
-    source_id: x-premium-help
-    verified_at: 2026-05-03
+    value: "SuperGrok at $30/month is the public first paid plan to verify before paying for custom team, enterprise, or higher-limit account options."
+    source: "https://x.ai/pricing"
+    source_label: "xAI pricing"
+    source_id: xai-pricing
+    verified_at: 2026-06-02
     volatility: high
     confidence: high
     next_review_at: 2026-06-03
@@ -76,7 +76,7 @@ facts:
     source: "https://docs.x.ai/developers/models"
     source_label: "xAI model docs"
     source_id: xai-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-06-02
     volatility: high
     confidence: high
     next_review_at: 2026-06-03
@@ -85,7 +85,7 @@ facts:
     source: "https://docs.x.ai/developers/model-capabilities/images/generation"
     source_label: "xAI image-generation docs"
     source_id: xai-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-06-02
     volatility: high
     confidence: high
     next_review_at: 2026-06-03
@@ -94,16 +94,16 @@ facts:
     source: "https://docs.x.ai/developers/model-capabilities/video/generation"
     source_label: "xAI video-generation docs"
     source_id: xai-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-06-02
     volatility: high
     confidence: high
     next_review_at: 2026-06-03
   real_time_voice:
-    value: "Yes - xAI Voice API includes realtime voice and text-to-speech models"
-    source: "https://docs.x.ai/developers/model-capabilities/audio/text-to-speech"
-    source_label: "xAI audio docs"
+    value: "Yes - xAI's Voice API includes real-time conversations, text-to-speech, and speech-to-text; docs list Agent $3/hour, TTS $15/M chars, STT batch $0.10/hour, and STT streaming $0.20/hour."
+    source: "https://docs.x.ai/developers/models"
+    source_label: "xAI model docs"
     source_id: xai-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-06-02
     volatility: high
     confidence: high
     next_review_at: 2026-06-03
@@ -112,25 +112,25 @@ facts:
     source: "https://docs.x.ai/developers/tools/web-search"
     source_label: "xAI web-search docs"
     source_id: xai-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-06-02
     volatility: high
     confidence: high
     next_review_at: 2026-06-03
   coding_agent:
-    value: "Partial - xAI API supports code execution and MCP tools, but Grok is not a packaged IDE agent like Codex or Claude Code; GitHub will deprecate Grok Code Fast 1 from Copilot on May 15, 2026"
+    value: "Partial - xAI API supports code execution, MCP tools, and the Grok Build coding model, but Grok is not a packaged IDE agent like Codex or Claude Code; GitHub retired Grok Code Fast 1 from Copilot on May 15, 2026."
     source: "https://docs.x.ai/developers/tools/code-execution"
     source_label: "xAI code-execution docs"
     source_id: xai-docs
-    verified_at: 2026-05-13
+    verified_at: 2026-06-02
     volatility: high
     confidence: high
     next_review_at: 2026-06-13
   enterprise_controls:
-    value: "API console supports spend controls and monthly invoiced billing; public docs do not list a broad SSO/SCIM enterprise suite"
-    source: "https://docs.x.ai/console/billing"
-    source_label: "xAI billing docs"
-    source_id: xai-docs
-    verified_at: 2026-05-03
+    value: "xAI's public pricing page lists Business and Enterprise paths with team seat management, SSO/SCIM and enterprise controls by tier; confirm exact terms with sales."
+    source: "https://x.ai/pricing"
+    source_label: "xAI pricing"
+    source_id: xai-pricing
+    verified_at: 2026-06-02
     volatility: high
     confidence: high
     next_review_at: 2026-06-03
@@ -139,7 +139,7 @@ facts:
     source: "https://docs.x.ai/developers/model-capabilities/text/generate-text"
     source_label: "xAI Responses API docs"
     source_id: xai-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-06-02
     volatility: high
     confidence: high
     next_review_at: 2026-06-03
@@ -148,7 +148,7 @@ facts:
     source: "https://x.ai/grok"
     source_label: "xAI Grok product page"
     source_id: xai-grok-product
-    verified_at: 2026-05-03
+    verified_at: 2026-06-02
     volatility: low
     confidence: high
   best_for:
@@ -156,73 +156,33 @@ facts:
     source: "https://x.ai/grok"
     source_label: "xAI Grok product page"
     source_id: xai-grok-product
-    verified_at: 2026-05-03
+    verified_at: 2026-06-02
     volatility: medium
     confidence: high
   watch_out_for:
-    value: "Platform-governance concentration, model-dependent limits/pricing, and default stateful API storage"
+    value: "Model-dependent limits/pricing, fast-moving account packaging, source discipline, and default stateful API storage"
     source: "https://docs.x.ai/developers/model-capabilities/text/generate-text"
     source_label: "xAI Responses API docs"
     source_id: xai-docs
-    verified_at: 2026-05-03
+    verified_at: 2026-06-02
     volatility: medium
     confidence: high
 tags: [ai-assistant, xai, twitter-ai, real-time-search, grok, multi-agent, long-context]
-seo_title: "Grok (xAI): Features, Pricing & Review (May 2026)"
-meta_description: "Grok is xAI's AI chatbot and voice-agent stack. Grok 4.3 is available through paid tiers and the xAI API, with web/X search tools, code execution, Grok Imagine image/video generation, realtime voice, and Custom Voices."
+seo_title: "Grok (xAI): Features, Pricing & Review (June 2026)"
+meta_description: "Grok is xAI's AI chatbot, API, voice, and Imagine stack. Grok 4.3 is the current default API model with 1M context, web/X search tools, code execution, image/video generation, and voice APIs."
 author: "aipedia.wiki Editorial"
 best_for:
   - X (Twitter) power users needing real-time feed analysis
   - trend analysts, journalists, social researchers
   - users on X Premium already paying
-  - long-context API workloads on supported Fast/4.20 surfaces
+  - long-context API workloads that fit Grok 4.3's current 1M-token context
 not_best_for:
   - users wanting predictable platform governance
-  - strongest general-purpose reasoning (Claude or GPT-5.5 better)
-  - organizations avoiding Musk-controlled infrastructure
+  - users who need a citation-first research product
+  - organizations that want slower-moving enterprise packaging and governance
 quick_answer: >-
-  Grok is xAI's AI assistant, now SpaceX-owned after the February 2026 $1.25T merger. Grok 4.3 is available through paid tiers, the xAI API, and OpenRouter, while earlier Fast/4.20 surfaces retain the strongest long-context positioning. Pick for real-time X data access and voice-agent experiments; skip for predictable governance or strongest general reasoning.
+  Grok is xAI's AI assistant, API, voice, and Imagine stack. Grok 4.3 is the current default API model with 1M context at $1.25/M input and $2.50/M output, while xAI's public pricing page lists Free, SuperGrok, Business, Enterprise, and API paths. Pick it for real-time X data, xAI API experiments, image/video generation, and voice-agent tests; skip if you need the most predictable enterprise governance or a source-first research workflow.
 price_history:
-  - date: 2026-03-16
-    plan: "TTS API"
-    price: "$4.20/M chars"
-    source: "https://docs.x.ai/"
-    source_id: xai-docs
-    source_label: "xAI documentation"
-    verified_at: 2026-05-03
-    note: "Grok Text-to-Speech API opened to developers. 5 voices, 20+ languages."
-  - date: 2026-04-17
-    plan: "SuperGrok Heavy"
-    price: "$300/mo"
-    source: "https://docs.x.ai/"
-    source_id: xai-docs
-    source_label: "xAI documentation"
-    verified_at: 2026-05-03
-    note: "Grok 4.3 beta early access gated to Heavy subscribers. 10x the $30 SuperGrok tier."
-  - date: 2026-04-19
-    plan: "SuperGrok + X Premium+"
-    price: "$30/mo and $40/mo"
-    source: "https://aipedia.wiki/news/"
-    source_id: aipedia-news
-    source_label: "AIpedia news coverage"
-    verified_at: 2026-05-03
-    note: "Grok 4.3 beta access expanded 48 hours after Heavy-only launch. Premium+ and SuperGrok users now get the 1T-param model + all six new output capabilities. Heavy retains the 16-agent Heavy architecture and priority rate limits. See the [expansion coverage](/news/2026-04-19-grok-4-3-beta-premium-plus-supergrok/)."
-  - date: 2026-04-23
-    plan: "Grok Voice Think Fast 1.0"
-    price: "Enterprise / deployment pricing not disclosed"
-    source: "https://docs.x.ai/"
-    source_id: xai-docs
-    source_label: "xAI documentation"
-    verified_at: 2026-05-03
-    note: "Real-time voice-agent model for customer support, sales, and workflows. xAI says it supports 25+ languages and powers Starlink's phone sales and support line."
-  - date: 2026-05-01
-    plan: "Grok 4.3 API + Custom Voices"
-    price: "$1.25/M input, $2.50/M output up to 200K; voice-agent speech-to-speech reported at $3/hr"
-    source: "https://aipedia.wiki/news/"
-    source_id: aipedia-news
-    source_label: "AIpedia news coverage"
-    verified_at: 2026-05-13
-    note: "Grok 4.3 moved into the xAI API and OpenRouter, while Custom Voices added team-scoped voice cloning for TTS and voice-agent workflows. See the [May 3 coverage](/news/2026-05-03-xai-grok-43-custom-voices-api/)."
   - date: 2026-05-08
     plan: "Grok Code Fast 1 deprecation in Copilot"
     price: "n/a"
@@ -231,199 +191,173 @@ price_history:
     source_label: "AIpedia news coverage"
     verified_at: 2026-05-13
     note: "xAI provider-side deprecation forced GitHub Copilot to retire Grok Code Fast 1 across chat, completions, and agent modes on May 15, 2026. Reinforces the platform-continuity caveat for Grok as a coding backend."
-  - date: 2026-05-13
-    plan: "Page refresh"
-    price: "Same"
-    source: "https://docs.x.ai/"
+  - date: 2026-06-02
+    plan: "Grok 4.3 API"
+    price: "$1.25/M input, $2.50/M output"
+    source: "https://docs.x.ai/developers/models"
     source_id: xai-docs
-    source_label: "xAI documentation"
-    verified_at: 2026-05-13
-    note: "May 13 verification pass. SuperGrok $30, X Premium+ ~$40, SuperGrok Heavy $300, and Grok 4.3 API pricing confirmed unchanged. Grok Code Fast 1 Copilot deprecation folded into Recent developments."
+    source_label: "xAI model docs"
+    verified_at: 2026-06-02
+    note: "Current model docs list Grok 4.3 with 1M context, configurable reasoning, and the recommendation to use it for most text use cases."
+  - date: 2026-06-02
+    plan: "Voice API"
+    price: "Agent $3/hr; TTS $15/M chars; STT $0.10-$0.20/hr"
+    source: "https://docs.x.ai/developers/models"
+    source_id: xai-docs
+    source_label: "xAI model docs"
+    verified_at: 2026-06-02
+    note: "Current xAI docs list real-time Agent, text-to-speech, and speech-to-text pricing in the model table."
+  - date: 2026-06-02
+    plan: "SuperGrok"
+    price: "$30/month"
+    source: "https://x.ai/pricing"
+    source_id: xai-pricing
+    source_label: "xAI pricing"
+    verified_at: 2026-06-02
+    note: "Public xAI pricing page lists Free at $0/month and SuperGrok at $30/month; Business, Enterprise, Lite, Heavy, and account-specific limits should be confirmed on the live plan chooser or with sales."
 ---
 
 # Grok
 
 > **Not to be confused with [Groq](/tools/groq/)** (the LPU inference provider, different company, different product). This page is xAI's Grok chatbot.
 
-xAI's AI assistant, tightly integrated with X (formerly Twitter) and running on the Colossus 2 supercluster. Two active flagship surfaces as of May 2026:
+xAI's AI assistant is tightly integrated with X (formerly Twitter) and now spans consumer chat, Business/Enterprise plans, the xAI API, Grok Build CLI, Grok Imagine image/video generation, and a Voice API. As of the June 2, 2026 verification pass, the safest buyer anchor is xAI's own docs:
 
-- **Grok 4.20 Beta 2** (the general-availability flagship, 4-agent architecture, ~4.2% hallucination rate vs Grok 4.1's 12.09%)
-- **Grok 4.3** (paid consumer access plus API/OpenRouter access as of May 1, 2026; 1T parameters; 16-agent Heavy architecture on Heavy; adds native PDF, PowerPoint, spreadsheet, and video-input output layer)
+- **Grok 4.3** is the current default text API model, with 1 million tokens of context, configurable reasoning, and $1.25/M input plus $2.50/M output pricing.
+- **Grok Build 0.1** is the dedicated coding model for agentic coding workflows, priced at $1/M input and $2/M output in the API docs.
+- **Voice API** pricing is listed as Agent $3/hour, TTS $15/M characters, STT batch $0.10/hour, and STT streaming $0.20/hour.
+- **Imagine API** lists image generation/editing at $0.02/image and video generation/editing at $0.05/second.
 
-Three major 2026 capability additions beyond the base models:
-- **Grok TTS API** (March 16): 5 voices, 20+ languages with auto-detect, inline speech tags, $4.20 per million characters
-- **Grok Voice Mode on X** (March 19): real-time voice chat bundled into X Premium on Android and web
-- **Grok Voice Think Fast 1.0** (April 23): enterprise real-time voice-agent model for customer support, sales, and workflows
-- **Grok Computer** (2026): autonomous desktop-agent integration, currently rolling out; Grok 4.3 routes to it
+Older third-party or news-cycle claims about Grok 4.20 variants, future Grok 5 targets, exact Heavy-tier limits, or corporate ownership should be treated as historical context unless they are still visible in xAI's current public docs or pricing page.
 
-Context is now model-dependent: earlier Fast/4.20 surfaces are tracked at 2M tokens, while Grok 4.3 API reporting lists 1M context. On February 2, 2026, SpaceX acquired xAI for $1.25 trillion in an all-stock deal (SpaceX valued at $1T, xAI at $250B). Grok now runs under Elon Musk's consolidated aerospace and technology empire. Grok 5 (6T parameters, MoE) is training on Colossus 2 with a Q2 2026 target.
-
-## Recent developments (April-May 2026)
+## Recent developments (April-June 2026)
 
 - **May 8:** [GitHub will deprecate Grok Code Fast 1 across Copilot on May 15](/news/2026-05-08-github-copilot-grok-code-fast-1-deprecation/) following an xAI provider-side deprecation. GitHub points users to GPT-5 mini and Claude Haiku 4.5. Teams treating Grok as a stable coding backend should re-verify the exact surface and model before relying on it.
-- **May 1:** [Grok 4.3 moved into the xAI API and OpenRouter while Custom Voices added team-scoped voice cloning](/news/2026-05-03-xai-grok-43-custom-voices-api/). The new buyer question is cost-per-completed-workflow, especially for legal/finance reasoning and voice-agent deployments.
+- **May 1:** [Grok 4.3 moved into the xAI API and OpenRouter while Custom Voices added team-scoped voice cloning](/news/2026-05-03-xai-grok-43-custom-voices-api/). The June 2 source check keeps the current official buyer anchor on xAI's model docs: Grok 4.3, 1M context, $1.25/M input, $2.50/M output.
 - **April 30:** [Musk testimony said xAI partly used OpenAI models to train Grok](/news/2026-04-30-xai-grok-openai-distillation-testimony/). Treat this as a model-provenance and governance caveat, not a feature change; the public record does not quantify the scope.
-- **April 24:** [AI Industry Roundup, April 24](/news/2026-04-24-ai-industry-roundup/) kept Grok in the broader frontier-lab watchlist alongside DeepSeek V4, GPT-5.5 in Copilot, Anthropic capital pressure, and Cohere-Aleph Alpha.
+- **April 24:** [AI Industry Roundup, April 24](/news/2026-04-24-ai-industry-roundup/) kept Grok in the broader frontier-lab watchlist alongside DeepSeek, OpenAI, Anthropic, and Cohere-Aleph Alpha.
 - **April 23:** [Grok Voice Think Fast 1.0 launched](/news/2026-04-23-xai-grok-voice-think-fast-10/) as xAI's enterprise real-time voice-agent model with 25+ languages, alongside [AI Industry Roundup, April 23](/news/2026-04-23-ai-industry-roundup/) coverage of Grok Voice and Grok outages.
-- **April 19:** [Grok 4.3 beta expanded to SuperGrok ($30/mo) and X Premium+ (~$40/mo)](/news/2026-04-19-grok-4-3-beta-premium-plus-supergrok/) 48 hours after Heavy-only launch, pushing the 1T-param model into broader paid tiers.
-- **April 17:** [Grok 4.3 beta launched on SuperGrok Heavy](/news/2026-04-17-grok-4-3-beta-supergrok-heavy/) at $300/mo with the 16-agent Heavy architecture, priority rate limits, and the new PDF/PowerPoint/spreadsheet/video-input output layer.
+- **April 19 and April 17:** AiPedia covered earlier Grok 4.3 paid-tier expansion and Heavy launch claims when those account surfaces were moving quickly. For June buying decisions, re-check xAI's live pricing/account page instead of relying on older tier-limit claims.
 
 ## System Verdict
 
 > **Pick Grok if you are on X Premium already or need real-time X data access.** The live X firehose is the single non-replicable capability. No other frontier assistant reads live X posts, trending topics, and breaking discussions at query time. For social intelligence, political analysis, journalism, or any workflow tied to live X data, Grok is the only serious option.
 >
-> **Skip it for predictable governance or strongest general reasoning.** The SpaceX merger concentrated Grok's roadmap, content policy, and platform continuity inside a single Musk-controlled conglomerate. That is a concentration risk users of OpenAI, Anthropic, and Alphabet-backed tools do not carry. On raw reasoning, [Claude Opus 4.7](/tools/claude/) and [GPT-5.5](/tools/chatgpt/) beat Grok 4.20 outside X-data tasks. For structured web research without X data, [Perplexity](/tools/perplexity/) produces cleaner outputs than DeepSearch.
+> **Skip it for predictable governance or source-first research.** Grok's product cadence, content policy, and account packaging can move quickly, and xAI's public pricing page does not expose every account-level limit in crawlable text. For structured web research without X data, [Perplexity](/tools/perplexity/) produces cleaner source trails than a general assistant workflow.
 >
-> **Who pays which tier:** Free for X account holders (limited daily queries), X Premium ~$8/mo for bundled Grok + Voice Mode, SuperGrok Lite $10/mo, **SuperGrok $30/mo or X Premium+ $40/mo for consumer Grok 4.3 access**, plus API/OpenRouter access for developer workflows. SuperGrok Heavy $300/mo adds the 16-agent Heavy architecture, ~4,000 msg/day, 360 min Deep Search, and max compute priority. Heavy is now justified by multi-agent architecture and priority rate limits, not access to the 1T-param model alone.
+> **Who pays which tier:** Free for users testing Grok inside xAI's generous limits, SuperGrok at $30/month for the public first paid plan, Business/Enterprise for team controls, and API usage-based pricing for developers. Verify Lite, Heavy, X Premium bundle, regional, and account-specific limits in the live plan chooser before paying.
 
 ## Key Facts
 
 | | |
 |---|---|
-| **GA flagship** | Grok 4.20 Beta 2 (also marketed as Grok 4.20 0309 v2) |
-| **API / paid flagship** | Grok 4.3 · consumer access through X Premium+ ($40/mo), SuperGrok ($30/mo), and SuperGrok Heavy ($300/mo); API and OpenRouter access added May 1, 2026 · 1T parameters |
-| **4.20 architecture** | 4-agent multi-agent · Grok · Harper · Benjamin · Lucas |
-| **4.3 architecture** | 16-agent Heavy mode · longer training run |
-| **Hallucination rate** | ~4.2% on 4.20 (down from 12.09% on Grok 4.1) |
-| **Context window** | Model-dependent: 2M on earlier Fast/4.20 surfaces; Grok 4.3 API reporting lists 1M |
-| **Grok 4.3 new capabilities** | PDF creation · PowerPoint slides · spreadsheets · video input · Grok Computer integration |
-| **Voice capabilities** | Grok TTS API (March 16) · Voice Mode on X (March 19) · 5 voices (Ara, Eve, Leo, Rex, Sal) · 20+ languages |
-| **Voice agent model** | Grok Voice Think Fast 1.0 · launched April 23, 2026 · 25+ languages claimed · enterprise voice workflows |
-| **Grok 4 Heavy benchmarks** | 100% AIME 2025 · 88.4% GPQA Diamond · 75% SWE-bench Verified |
-| **Next model** | Grok 5 · 6T parameters · MoE · training on Colossus 2 · Q2 2026 target |
-| **Ownership** | SpaceX (acquired xAI Feb 2, 2026 for $1.25T all-stock) |
-| **Compute** | Colossus 2 supercluster · 1.5GW since April 2026 |
-| **Subscription tiers** | Free (X account) · X Premium ~$8 · SuperGrok Lite $10 · SuperGrok $30 · X Premium+ ~$40 · SuperGrok Heavy **$300** |
-| **TTS API pricing** | $4.20 per 1M characters (Beta) |
-| **API pricing: Grok 4.1 Fast** | $0.20/M input · $0.50/M output · 2M context |
-| **API pricing: Grok 4.20 Reasoning** | $3.00 blended (per third-party tracking) |
-| **API pricing: Grok 4.3** | $1.25/M input · $2.50/M output up to 200K; higher-context tier above 200K |
-| **Image generation** | Aurora / Grok Imagine · restricted and geoblocked after 2026 deepfake controversies |
-| **Video generation** | Grok Imagine video generation/editing API; consumer availability may vary |
-| **Persistent memory** | **None** (frequent user complaint vs ChatGPT Memory, Gemini Saved Info, Claude Projects) |
+| **Current text API default** | Grok 4.3 |
+| **Grok 4.3 context** | 1 million tokens |
+| **Grok 4.3 API pricing** | $1.25/M input · $2.50/M output |
+| **Coding model** | Grok Build 0.1 · 256K context · $1/M input · $2/M output |
+| **Consumer pricing anchor** | Free at $0/month; SuperGrok at $30/month; Business and Enterprise paths available |
+| **Enterprise controls surfaced by xAI** | Team seat management, consolidated billing, RBAC/custom RBAC, domain verification, SSO, SCIM, audit controls, data retention, data residency, customer-managed encryption keys, dedicated data plane by tier |
+| **Voice API pricing** | Agent $3/hour · TTS $15/M characters · STT batch $0.10/hour · STT streaming $0.20/hour |
+| **Imagine API pricing** | Image generation/editing $0.02/image · video generation/editing $0.05/second |
+| **Search tools** | Web Search and X Search can be enabled for current/realtime data |
+| **Persistent memory** | Not documented as a ChatGPT-style cross-session memory feature in the current model docs |
 
-Every data point verified on 2026-05-13 against [x.ai](https://x.ai), [docs.x.ai](https://docs.x.ai), [Artificial Analysis](https://artificialanalysis.ai/models/grok-4-20/providers), and AIpedia's [Grok 4.3 API coverage](/news/2026-05-03-xai-grok-43-custom-voices-api/).
+Every data point above was verified on 2026-06-02 against [xAI pricing](https://x.ai/pricing), [xAI model docs](https://docs.x.ai/developers/models), and the [Grok product page](https://x.ai/grok).
 
 ## What it actually is
 
 A general-purpose AI assistant wired to the X platform's live data stream. Core modes cover Q&A, writing, analysis, coding, and reasoning. Real-time X access is the defining capability.
 
-DeepSearch combines live web crawl and X content into cited answers. Think mode surfaces step-by-step reasoning for complex queries. Grok 4 Heavy is the high-performance variant, tuned for advanced benchmarks and enterprise reasoning work.
+Grok combines general assistant work with live web and X search tools. Think/reasoning behavior is model-dependent in xAI's current docs, and API users can route text, coding, voice, image, video, code execution, and MCP-style tool workflows from one vendor account.
 
 Aurora / Grok Imagine handles image generation and, through xAI's Imagine API, video generation and editing. Post-2026 deepfake controversies forced restrictions: non-consensual real-person edits are blocked, and geoblocking or tier gating may apply in some jurisdictions.
 
-The real differentiator is data, not architecture. Claude Opus 4.7 and GPT-5.5 match or exceed Grok 4.20 on most general reasoning benchmarks. What none of them can replicate is the live X firehose. For social analysis, journalism, political research, or any workflow where current X discourse is the input, Grok wins by default.
+The real differentiator is data, not architecture. Many frontier assistants are strong enough for everyday reasoning, writing, and coding; what they cannot replicate is X-native context. For social analysis, journalism, political research, creator monitoring, or any workflow where current X discourse is the input, Grok is the natural first test.
 
 ## When to pick Grok
 
 - **You need live X data in the reasoning loop.** No other major assistant reads X posts at query time. This is the single unreplicable capability.
 - **You're already on X Premium.** Grok access is bundled. Incremental cost is effectively zero.
-- **You need 2M-token context at commodity API pricing.** Grok 4.1 Fast Non-Reasoning handles 2M tokens at $0.20/$0.50 per M. Nothing else hits that ratio.
+- **You need a long-context xAI API path.** Grok 4.3 lists 1M context in current docs, which is enough for large-document and agent workflows if the quality fit is there.
 - **You want a less restrictive content policy.** Grok declines fewer prompts than ChatGPT or Claude. Useful for certain research and creative workflows; also a liability for compliance-heavy deployments.
-- **You need cheap long-context enterprise tasks.** Grok 4.1 Fast handles long code, long documents, and long transcripts at a per-token rate below Claude or GPT-5.5.
+- **You want one API surface for text, coding, voice, image, video, web search, X search, code execution, and MCP tools.** xAI's docs now make that broader platform story clearer than the older chatbot-only positioning.
 
 ## When to pick something else
 
-- **Strongest general reasoning:** [Claude Opus 4.7](/tools/claude/). Takes leads on agentic coding, financial analysis, and long-form output coherence.
+- **Strongest careful writing and long-form analysis:** [Claude](/tools/claude/) remains the safer first comparison.
 - **Largest plugin and custom-GPT ecosystem:** [ChatGPT](/tools/chatgpt/). GPT Store has no Grok equivalent.
 - **Google Workspace integration:** [Gemini](/tools/gemini/). Native Docs / Sheets / Gmail hooks.
 - **Structured web research with citations:** [Perplexity](/tools/perplexity/). Cleaner source management than Grok's DeepSearch for non-X queries.
-- **Predictable platform governance:** any assistant backed by a public company or independent lab. Grok's SpaceX ownership concentrates decision-making inside one private conglomerate.
+- **Predictable platform governance:** compare against assistants with more mature enterprise packaging, clearer admin docs, or slower-moving account surfaces.
 - **Polished video generation:** Grok Imagine now supports video generation/editing through xAI APIs, but Veo via Gemini and specialist tools like [Kling](/tools/kling/) remain more proven for production video workflows.
 
 ## Pricing
 
-Consumer tier pricing for SuperGrok tiers is not uniformly disclosed on xAI's public pages. Values below reflect third-party-verified rates and published API pricing. Confirm subscription rates at [x.ai](https://x.ai) before signing up.
+Use [xAI pricing](https://x.ai/pricing) and [xAI model docs](https://docs.x.ai/developers/models) as the purchase source of truth. Verified 2026-06-02:
 
-| Plan | Price | Who's it for |
+| Plan or API surface | Current public price | Buyer note |
 |---|---|---|
-| Free (X account) | $0 | Limited daily queries via the X app; Grok 4.1 |
-| X Premium | ~$8/mo | Existing X subscribers · Grok + Voice Mode bundled · Grok 4.20 |
-| SuperGrok Lite | $10/mo | Entry paid tier, basic access |
-| **SuperGrok** | **$30/mo** | Grok 4.20 · Grok 4 Heavy · **Grok 4.3 consumer access** · DeepSearch · Think mode · ~1,000 msg/day |
-| **X Premium+** | **~$40/mo** | Everything in X Premium · **Grok 4.3 consumer access** |
-| **SuperGrok Heavy** | **$300/mo** | **Grok 4.3 with 16-agent Heavy architecture** · ~4,000 msg/day · 360 min Deep Search · max compute priority |
+| Free | $0/month | Good for testing Grok with web and X search, voice mode, connectors, and limited account usage. |
+| SuperGrok | $30/month | Public first paid plan for heavier personal use. Verify limits and bundled model access in the live account screen. |
+| Business | Custom / sales-led | Team seat management, consolidated billing, RBAC, shared chats, business agents, and data controls by tier. |
+| Enterprise | Custom / sales-led | SSO, SCIM, audit controls, data retention, data residency, customer-managed encryption keys, and dedicated data-plane options by tier. |
+| Grok 4.3 API | $1.25/M input · $2.50/M output | Current default text model, 1M context. |
+| Grok Build 0.1 API | $1/M input · $2/M output | Dedicated coding model, 256K context. |
+| Voice API | Agent $3/hour · TTS $15/M chars · STT batch $0.10/hour · STT streaming $0.20/hour | Best evaluated with real latency, barge-in, turn-taking, and language tests. |
+| Imagine API | $0.02/image · $0.05/video second | Use for experiments; compare against specialist image/video tools before production. |
 
-**API pricing (per 1M tokens):**
-
-| Model | Input | Output | Context | Notes |
-|---|---|---|---|---|
-| Grok 4.1 Fast Non-Reasoning | $0.20 | $0.50 | 2M | Long-context workhorse |
-| Grok 4.20 0309 v2 (Reasoning) | $3.00 blended | Not broken out | Standard | Per third-party tracking |
-| Grok 4.3 API | $1.25 | $2.50 up to 200K | 1M reported | API and OpenRouter access added May 1, 2026 |
-
-*API rates verified 2026-05-13 via [xAI docs](https://docs.x.ai), [Artificial Analysis](https://artificialanalysis.ai/models/grok-4-20/providers), and AIpedia's [Grok 4.3 API coverage](/news/2026-05-03-xai-grok-43-custom-voices-api/). Consumer subscription rates for SuperGrok tiers are not uniformly posted on xAI public pages.*
+Lite, Heavy, X Premium bundle, region-specific, or account-specific limits are not fully exposed in xAI's crawlable public pricing page. Check the live plan chooser before relying on them.
 
 ## Against the alternatives
 
-| | Grok 4.20 | ChatGPT (GPT-5.5) | Claude Opus 4.7 |
+| | Grok | ChatGPT | Claude |
 |---|---|---|---|
-| **Context window** | 2M tokens (largest) | Undisclosed | 1M tokens |
-| **Live X / social data** | Yes · unreplicable | No | No |
-| **General reasoning** | Strong; 4-agent cuts hallucinations | Broadest feature suite | Strongest on long-form |
-| **Image generation** | Aurora (restricted) | GPT Image 2 | None |
-| **Video generation** | Grok Imagine API | None | None |
-| **Content policy** | Less restrictive | Moderate | More restrictive |
-| **Ownership / governance** | SpaceX (Musk conglomerate) | Microsoft-backed OpenAI | Anthropic (independent) |
-| **Best viewed as** | Social-intelligence specialist | Generalist default | Reasoning specialist |
+| **Best wedge** | Live X/social context plus xAI API tools | Broad general AI workspace | Writing, analysis, code reasoning, long-form work |
+| **Current API context anchor** | Grok 4.3 at 1M | Model-dependent | Model-dependent |
+| **Image/video** | Imagine API supports image and video generation/editing | Strong image generation; video depends on OpenAI's current product lineup | No native consumer image/video generation |
+| **Source-first research** | Useful with web/X search but needs verification discipline | Good general workflow, source discipline required | Good synthesis, source discipline required |
+| **Best viewed as** | Social-intelligence and xAI platform specialist | Generalist default | Reasoning and prose specialist |
 
 ## Failure modes
 
-- **Third-party coding distribution can disappear quickly.** [GitHub will deprecate Grok Code Fast 1 across Copilot on May 15, 2026](/news/2026-05-08-github-copilot-grok-code-fast-1-deprecation/) because of a provider-side deprecation. Verify the exact Grok model and surface before treating Grok as a stable coding backend.
-- **Demand-driven outages.** On [April 23, 2026](/news/2026-04-23-grok-outages-high-demand/), Grok experienced intermittent connectivity issues and response delays across web, mobile, and X integration for several hours. Free-tier and lighter-subscription users absorbed most of the friction; SuperGrok and Premium+ subscribers noticed fewer interruptions. Second congestion episode in April 2026 after the 4.3 beta expansion to $30 and $40 tiers grew the traffic pool ~50x while Colossus 2 is still ramping to 1.5 GW.
-- **Voice-agent rollout is enterprise-first.** [Grok Voice Think Fast 1.0](/news/2026-04-23-xai-grok-voice-think-fast-10/) matters for xAI's commercial surface, but public pricing, SLA, latency distributions, and deployment limits still need more documentation.
-- **No persistent memory, full stop.** Every competitor (ChatGPT, Gemini, Claude) has had cross-session memory for 18+ months. Grok still resets every conversation. The sharpest community complaint against the $300/mo Heavy tier.
-- **SpaceX ownership is a governance concentration risk.** The February 2026 $1.25T merger placed Grok's roadmap, content policy, and platform continuity inside a single Musk-controlled conglomerate. Production dependencies on Grok carry a platform-continuity variable no major competitor does.
-- **Response latency is slow.** User reports of 10-15 second waits for responses that competitors return in 2-3. Noticeable on 4.20 Heavy; not yet measured on 4.3 beta.
-- **Creative writing is weak.** Prose is literal and robotic per user reports. Grok wins on math, logic, and coding; Claude Opus 4.7 wins on long-form writing.
-- **Heavy's 16-agent architecture is still a $300/mo paywall.** As of April 19, 2026, the Grok 4.3 model itself is available on SuperGrok ($30/mo) and X Premium+ ($40/mo), but the 16-agent Heavy orchestration and priority rate limits remain Heavy-exclusive.
-- **Content policy is inconsistent.** January 2026 tightening surprised users who switched from ChatGPT expecting fewer filters. Less restrictive overall but with no clearly documented boundary.
-- **DeepSearch is weaker than Perplexity for structured non-X research.** Grok's web search integration lacks Perplexity's source management, relevance ranking, and clean report formatting.
-- **Aurora image gen is restricted and geoblocked.** Post-2026 deepfake controversies forced restrictions that vary by jurisdiction. Less reliable than Midjourney or Ideogram for image-critical workflows.
-- **No video generation.** Gemini's Veo 3 and Kling handle that. Grok 4.3 adds video *input* but not output.
-- **Grok 5 is unreleased.** Current state is a transitional lineup between 4.x and 5. Enterprise adoption decisions should factor that in.
-- **Advertising pressure.** Musk has publicly pressured SpaceX IPO banks to buy Grok subscriptions and advertise on X. That pressure shapes the commercial roadmap in ways external users cannot see.
-- **Benchmark numbers for Grok 4 Heavy do not apply to SuperGrok.** Heavy's 100% AIME 2025 / 88.4% GPQA Diamond scores are for the top-tier variant. Default SuperGrok subscribers access Grok 4.20, not Grok 4 Heavy.
+- **Plan and model packaging can move quickly.** Treat xAI pricing and docs as the source of truth before buying, especially for Heavy, Lite, X bundle, regional, and business-tier claims.
+- **Third-party coding distribution can disappear quickly.** [GitHub deprecated Grok Code Fast 1 across Copilot on May 15, 2026](/news/2026-05-08-github-copilot-grok-code-fast-1-deprecation/) because of a provider-side deprecation. Verify the exact Grok coding surface before treating it as a stable backend.
+- **Demand-driven outages and latency still matter.** API and consumer quality should be tested with the actual workload, not just model names.
+- **Grok is not Perplexity.** For non-X research, source selection and citation trails are usually cleaner in a dedicated answer engine.
+- **Content policy and governance are less predictable than boring enterprise buyers prefer.** Sensitive teams should run policy, data-retention, regional, and audit reviews before deployment.
+- **Image/video is available but not automatically best-in-class.** Grok Imagine is useful, but brand and production teams should still compare Veo, Kling, Seedance, Midjourney, Ideogram, and Runway on the same prompt set.
+- **No documented ChatGPT-style memory replacement.** Current docs emphasize models, tools, and APIs rather than persistent personal memory as a core buying feature.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [x.ai](https://x.ai), [docs.x.ai reasoning docs](https://docs.x.ai/developers/model-capabilities/text/reasoning), [Artificial Analysis](https://artificialanalysis.ai/models/grok-4-20/providers), the [May 8 GitHub Copilot Grok Code Fast 1 retirement](/news/2026-05-08-github-copilot-grok-code-fast-1-deprecation/), the [Grok 4.3 API + Custom Voices coverage](/news/2026-05-03-xai-grok-43-custom-voices-api/), and the [Grok Voice Think Fast 1.0 launch](/news/2026-04-23-xai-grok-voice-think-fast-10/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-02 against [xAI pricing](https://x.ai/pricing), [xAI model docs](https://docs.x.ai/developers/models), [xAI Grok product page](https://x.ai/grok), [xAI text docs](https://docs.x.ai/developers/model-capabilities/text/generate-text), [xAI web search docs](https://docs.x.ai/developers/tools/web-search), [xAI image docs](https://docs.x.ai/developers/model-capabilities/images/generation), and [xAI video docs](https://docs.x.ai/developers/model-capabilities/video/generation).
 
 ## FAQ
 
 **Is Grok the same as Groq?**
-No. Grok (this page) is xAI's chatbot (launched 2023, owned by SpaceX post-merger). [Groq](/tools/groq/) is an LPU inference hardware company (founded 2016, Nvidia-acquired 2026). Different companies, different products. Groq has publicly complained about the naming confusion since Grok launched.
+No. Grok is xAI's assistant and API platform. [Groq](/tools/groq/) is the separate LPU inference provider. Different companies, different products.
 
 **Is Grok free?**
-Any X account gets limited free queries per day. X Premium (~$8/mo) bundles meaningful Grok access plus Voice Mode for existing X subscribers. SuperGrok Lite ($10/mo) is the entry paid tier. **SuperGrok ($30/mo) and X Premium+ (~$40/mo) both now include Grok 4.3 beta access as of April 19, 2026** (previously Heavy-only). SuperGrok Heavy ($300/mo) adds the 16-agent Heavy architecture, ~4,000 msg/day, 360 min Deep Search, and max compute priority.
+Yes. xAI's public pricing page lists a Free plan at $0/month. SuperGrok is the first public paid plan at $30/month. Business and Enterprise are sales-led.
 
-**What's new in Grok 4.3 beta?**
-Released April 17, 2026 to SuperGrok Heavy first, then [expanded April 19, 2026](/news/2026-04-19-grok-4-3-beta-premium-plus-supergrok/) to X Premium+ ($40/mo) and SuperGrok ($30/mo). Adds an output layer Grok 4.20 didn't have: native PDF, PowerPoint, spreadsheet generation, plus video input. 1T parameters (double Grok 4.20's ~500B). Heavy still gets the exclusive 16-agent architecture and priority rate limits. See the [original launch coverage](/news/2026-04-17-grok-4-3-beta-supergrok-heavy/) and the [expansion coverage](/news/2026-04-19-grok-4-3-beta-premium-plus-supergrok/).
+**What is the current Grok API model?**
+Grok 4.3 is the current default text API model in xAI's docs, with 1M context and $1.25/M input plus $2.50/M output pricing.
 
 **Does Grok do voice?**
-Yes, as of March 2026. Grok TTS API launched March 16 with 5 voices (Ara, Eve, Leo, Rex, Sal), 20+ languages, and inline speech tags for pauses/laughter/whispers/emphasis, priced at $4.20 per 1M characters. Grok Voice Mode went live on X for Android and web on March 19, bundled into X Premium at no extra cost.
+Yes. xAI's Voice API covers real-time voice agents, text-to-speech, and speech-to-text. Current docs list Agent at $3/hour, TTS at $15/M characters, STT batch at $0.10/hour, and STT streaming at $0.20/hour.
 
-Grok Voice Think Fast 1.0 launched April 23, 2026 as xAI's enterprise voice-agent model for phone support, sales, and workflow automation. xAI says it supports 25+ languages and is already used by Starlink's phone sales and support line.
-
-**What happened with the SpaceX acquisition?**
-SpaceX acquired xAI on February 2, 2026 in a $1.25T all-stock deal (SpaceX $1T, xAI $250B). Grok now runs under Elon Musk's consolidated aerospace and technology empire alongside X and Neuralink. Compute runs on Colossus 2 (1.5GW since April 2026). The governance implication is that product decisions and platform continuity sit inside a single private conglomerate.
-
-**What is Grok 4.20 vs Grok 4 Heavy?**
-Grok 4.20 Beta 2 (also labeled 0309 v2) is the current production flagship using the 4-agent architecture. Grok 4 Heavy is the high-performance variant tuned for advanced benchmarks (100% AIME 2025, 88.4% GPQA Diamond). Heavy is positioned for enterprise and demanding reasoning tasks, not general consumer access.
-
-**How does Grok compare to GPT-5.5 and Claude Opus 4.7?**
-Grok 4 Heavy leads on math and science reasoning benchmarks. On general-purpose reasoning and writing, Claude Opus 4.7 and GPT-5.5 are broadly competitive and often ahead. Grok's real advantages are the 2M context window (largest available), live X data access, and cheap long-context API pricing. Neither Claude nor GPT-5.5 can replicate the X data firehose.
+**Does Grok generate images or video?**
+Yes. xAI's Imagine API docs list image generation/editing and video generation/editing, with current pricing of $0.02/image and $0.05/video second.
 
 **When does Grok 5 launch?**
-Musk has publicly targeted Q2 2026. Training is in progress on Colossus 2. Architecture is 6 trillion parameters with Mixture-of-Experts. No confirmed release date at the time of writing.
+AiPedia is not publishing a launch date until xAI posts one in current primary sources. Treat roadmap claims as speculative.
 
 ## Sources
 
-- [xAI](https://x.ai): product and company information
-- [xAI reasoning docs](https://docs.x.ai/developers/model-capabilities/text/reasoning): multi-agent architecture and reasoning parameter
-- [Artificial Analysis · Grok 4.20 Providers](https://artificialanalysis.ai/models/grok-4-20/providers): API rate tracking
-- [Grok Voice Think Fast 1.0](/news/2026-04-23-xai-grok-voice-think-fast-10/): April 23, 2026 voice-agent launch
-- [CNBC · SpaceX / xAI merger](https://www.cnbc.com/2026/02/03/musk-xai-spacex-biggest-merger-ever.html): February 2026 $1.25T acquisition coverage
+- [xAI pricing](https://x.ai/pricing): Free, SuperGrok, Business, Enterprise, and account-tier positioning, verified 2026-06-02.
+- [xAI model docs](https://docs.x.ai/developers/models): Grok 4.3, Grok Build, Voice, Image, Video, and pricing table, verified 2026-06-02.
+- [xAI Grok product page](https://x.ai/grok): product positioning, verified 2026-06-02.
+- [xAI web search docs](https://docs.x.ai/developers/tools/web-search): current web/X search tool surface, verified 2026-06-02.
 
 ## Related
 

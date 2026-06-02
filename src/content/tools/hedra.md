@@ -11,11 +11,11 @@ pricing_model: freemium
 price_range: "Free signup; $15-$75/month; Enterprise custom"
 status: active
 launched: 2024-05
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-02
+last_verified: 2026-06-02
 update_frequency: weekly
-seo_title: "Hedra Review: Pricing, Models & Best Uses (May 2026)"
-meta_description: "Hedra is now a pooled-credit AI media studio for character video plus Veo, Kling, MiniMax, image, and voice models. Current May 13, 2026 review covers pricing, credits, best uses, and watch-outs."
+seo_title: "Hedra Review: Pricing, Models & Best Uses (June 2026)"
+meta_description: "Hedra is a pooled-credit AI media studio for character video plus Veo, Kling, MiniMax Hailuo, image, and voice models. Current June 2026 review covers pricing, credits, best uses, and watch-outs."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -34,16 +34,16 @@ facts:
     source: https://www.hedra.com/
     source_label: Hedra official site
     source_id: hedra-official
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: medium
     confidence: high
     next_review_at: '2026-08-13'
   pricing_anchor:
-    value: Hedra pricing on 2026-05-13 lists Basic at $15/month with 1,500 credits, Creator at $30/month with 5,400 credits, Professional and Teams at $75/month with 14,400 credits, plus Enterprise custom.
+    value: Hedra pricing on 2026-06-02 lists Basic at $15/month with 1,500 credits, Creator at $30/month with 5,400 credits, Professional and Teams at $75/month with 14,400 credits, plus Enterprise custom.
     source: https://www.hedra.com/pricing
     source_label: Hedra pricing
     source_id: hedra-pricing
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: high
     confidence: high
     next_review_at: '2026-06-13'
@@ -52,25 +52,25 @@ facts:
     source: https://www.hedra.com/models
     source_label: Hedra models
     source_id: hedra-models
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: high
     confidence: high
     next_review_at: '2026-06-13'
   model_control:
-    value: Hedra's model page says all models draw from the same credit pool and recommends Omnia or Hedra Avatar for character videos, Veo 3.1 for cinematic scenes, Kling 2.5 Turbo or MiniMax for fast iterations, and Nano Banana or Seedream for images.
+    value: Hedra's model/pricing pages say all models draw from the same credit pool and currently list character, video, image, and audio models including Hedra Character-3, Veo 3.1, Kling 2.6 Pro, Kling 2.5 Turbo, MiniMax Hailuo 2.3, Nano Banana, and Seedream.
     source: https://www.hedra.com/models
     source_label: Hedra models
     source_id: hedra-models
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: high
     confidence: high
     next_review_at: '2026-06-13'
   watch_out_for:
-    value: Credits do not roll over monthly, model costs vary sharply by model and second/generation, and high-end models like Veo 3.1 consume far more credits than Hedra Character-3.
+    value: Monthly subscription credits do not roll over, purchased credit packs are handled differently, and model costs vary sharply by model and second/generation.
     source: https://www.hedra.com/pricing
     source_label: Hedra pricing
     source_id: hedra-pricing
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: high
     confidence: high
     next_review_at: '2026-06-13'
@@ -86,8 +86,15 @@ not_best_for:
   - teams that need predictable fixed video minutes rather than variable model credits
   - users who will waste monthly credits because they do not roll over
 quick_answer: >-
-  Hedra is no longer just "one portrait plus audio becomes a talking character." As of May 13, 2026, it is better understood as a pooled-credit AI media studio: Hedra character models sit next to Veo 3.1, Kling 2.5 Turbo, MiniMax, image models, and voice generation. Pick it when you want model choice and fast creative iteration; skip it when you need predictable avatar-video minutes or enterprise training workflows.
+  Hedra is no longer just "one portrait plus audio becomes a talking character." As of June 2, 2026, it is better understood as a pooled-credit AI media studio used by 20M+ users: Hedra character models sit next to Veo 3.1, Kling 2.6 Pro, Kling 2.5 Turbo, MiniMax Hailuo 2.3, image models, and voice generation. Pick it when you want model choice and fast creative iteration; skip it when you need predictable avatar-video minutes or enterprise training workflows.
 price_history:
+  - date: 2026-06-02
+    plan: "Basic / Creator / Professional / Teams / Enterprise"
+    price: "$15/mo / $30/mo / $75/mo / $75/mo / Custom"
+    source: "https://www.hedra.com/pricing"
+    source_label: "Hedra pricing"
+    source_id: hedra-pricing
+    note: "Reverified public plan ladder and pooled-credit model rates. Pricing page now prominently says 20M+ users and lists current video rates including Hedra Character-3 at 6 credits/sec, MiniMax Hailuo 2.3 Fast Standard at 4, MiniMax Hailuo 2.3 Fast Pro at 7, Kling 2.5 Turbo at 10, Kling 2.6 Pro at 20, Veo 3.1 Fast at 20, Veo 3.1 at 55, and Sora 2 Pro at 70 credits/sec."
   - date: 2026-05-08
     plan: "Basic"
     price: "$15/mo"
@@ -124,7 +131,7 @@ Hedra is an AI creative studio for video, image, character animation, and voice 
 
 ## System Verdict
 
-> **Pick Hedra when you want model choice inside one creative workflow.** Hedra still matters for character videos, but its current models page also positions Veo, Kling, MiniMax, Nano Banana, Seedream, voice, and an AI agent workflow under the same studio and credit balance.
+> **Pick Hedra when you want model choice inside one creative workflow.** Hedra still matters for character videos, but its current pricing/model surface also positions Veo, Kling, MiniMax Hailuo, Nano Banana, Seedream, voice, and agent-assisted creative workflows under the same studio and credit balance.
 >
 > **Skip Hedra if you need predictable fixed minutes.** Credits are the currency, monthly subscription credits do not roll over, and costs vary heavily by model. A 10-second Hedra Character-3 render and a 10-second Veo 3.1 render do not cost the same.
 >
@@ -133,25 +140,26 @@ Hedra is an AI creative studio for video, image, character animation, and voice 
 ## Current Key Facts
 
 - **Studio positioning:** create consistent images and videos for social, sales, and marketing collateral.
+- **Adoption signal:** Hedra's pricing page says 20M+ users.
 - **Model access:** Hedra says video, image, character animation, and voice models all draw from one shared credit pool.
-- **Current model guidance:** Hedra recommends Omnia or Hedra Avatar for character videos, Veo 3.1 for cinematic scenes, Kling 2.5 Turbo or MiniMax for fast iterations, and Nano Banana or Seedream for images.
+- **Current model guidance:** Hedra lists Hedra Character-3, Veo 3.1, Kling 2.6 Pro, Kling 2.5 Turbo, MiniMax Hailuo 2.3, Nano Banana, Seedream, and voice models in the current studio/pricing surface.
 - **Current self-serve plans:** Basic $15/month, Creator $30/month, Professional $75/month, Teams $75/month, Enterprise custom.
-- **Current credit examples:** Hedra Character-3 is listed at 6 credits/second; Veo 3.1 Fast at 20 credits/second; Veo 3.1 at 55 credits/second; Sora 2 Pro at 70 credits/second; Kling 2.5 Turbo at 10 credits/second.
+- **Current credit examples:** Hedra Character-3 is listed at 6 credits/second; MiniMax Hailuo 2.3 Fast Standard at 4 credits/second; MiniMax Hailuo 2.3 Fast Pro at 7; Kling 2.5 Turbo at 10; Kling 2.6 Pro at 20; Veo 3.1 Fast at 20; Veo 3.1 at 55; Sora 2 Pro at 70.
 - **Credit rollover:** subscription credits reset each billing cycle; purchased credit packs can roll over.
 
-Verified against Hedra official pages on 2026-05-13.
+Verified against Hedra official pages on 2026-06-02.
 
 ## What It Actually Is
 
 Hedra started in buyer memory as a talking-character video product. The current site now frames it as a broader AI media studio: ideation, image/video generation, character/voice workflows, templates, and model routing.
 
-That matters for buyers. If you only compare Hedra to HeyGen or D-ID as a static avatar tool, you miss the new use case. Hedra is closer to a creative model hub where a marketer can test character video, Veo 3.1, Kling 2.5 Turbo, MiniMax, image models, and voice in the same credit environment.
+That matters for buyers. If you only compare Hedra to HeyGen or D-ID as a static avatar tool, you miss the newer use case. Hedra is closer to a creative model hub where a marketer can test character video, Veo 3.1, Kling 2.6 Pro, Kling 2.5 Turbo, MiniMax Hailuo 2.3, image models, and voice in the same credit environment.
 
 The downside is budgeting. Pooled credits are flexible, but they make cost less obvious than a plan promising a fixed number of video minutes.
 
 ## When To Pick Hedra
 
-- **You want to compare multiple video models quickly.** Hedra's model page explicitly includes Veo, Kling, MiniMax, Hedra character models, and other media models in one studio.
+- **You want to compare multiple video models quickly.** Hedra's current model/pricing surface explicitly includes Veo, Kling, MiniMax Hailuo, Hedra character models, and other media models in one studio.
 - **You need social/ad creative iteration.** The home page positions Hedra around social media, sales, and marketing collateral.
 - **You are comfortable budgeting by credits.** Creator and Professional provide enough monthly credits to test a real workflow.
 - **You want character video plus cinematic generation nearby.** Hedra can be used for talking characters and broader scene generation instead of forcing separate accounts.
@@ -165,7 +173,7 @@ The downside is budgeting. Pooled credits are flexible, but they make cost less 
 
 ## Pricing
 
-Use [Hedra pricing](https://www.hedra.com/pricing) as the purchase source of truth. Current public monthly pricing on 2026-05-13:
+Use [Hedra pricing](https://www.hedra.com/pricing) as the purchase source of truth. Current public monthly pricing on 2026-06-02:
 
 - **Basic:** $15/month, 1,500 credits/month, slower generations, commercial use, no monthly rollover.
 - **Creator:** $30/month, 5,400 credits/month, faster generation, commercial use, extra credits available.
@@ -173,7 +181,7 @@ Use [Hedra pricing](https://www.hedra.com/pricing) as the purchase source of tru
 - **Teams:** $75/month, 14,400 credits/month, fastest generation, commercial use, Teams plan access.
 - **Enterprise:** custom pricing, custom credits, dedicated technical support, account management, private deployment options, SSO, legal/security review, and team management.
 
-Credits are not interchangeable with minutes. Hedra lists different credit rates for different models, including Hedra Character-3 at 6 credits/second and Veo 3.1 at 55 credits/second.
+Credits are not interchangeable with minutes. Hedra lists different credit rates for different models, including Hedra Character-3 at 6 credits/second, MiniMax Hailuo 2.3 Fast Standard at 4 credits/second, Kling 2.6 Pro at 20 credits/second, and Veo 3.1 at 55 credits/second.
 
 ## Best Plan Guidance
 
@@ -192,7 +200,7 @@ Credits are not interchangeable with minutes. Hedra lists different credit rates
 
 ## Methodology
 
-AiPedia refreshed this page on 2026-05-13 using Hedra's official home page, models page, and pricing page. Older Lite/Creator/Professional pricing, free-credit counts, streaming-price claims, and unsupported long-form assertions were removed or replaced with current official plan and model-credit information.
+AiPedia refreshed this page on 2026-06-02 using Hedra's official home page, models page, and pricing page. Older Lite/Creator/Professional pricing, stale free-credit counts, streaming-price claims, and unsupported long-form assertions were removed or replaced with current official plan and model-credit information.
 
 ## FAQ
 
@@ -200,10 +208,10 @@ AiPedia refreshed this page on 2026-05-13 using Hedra's official home page, mode
 Hedra is best for creators and marketing teams that want character video plus broader AI media generation in one pooled-credit studio.
 
 **How much does Hedra cost?**
-As of 2026-05-13, Hedra lists Basic at $15/month, Creator at $30/month, Professional at $75/month, Teams at $75/month, and Enterprise at custom pricing.
+As of 2026-06-02, Hedra lists Basic at $15/month, Creator at $30/month, Professional at $75/month, Teams at $75/month, and Enterprise at custom pricing.
 
 **Does Hedra include Veo or Kling?**
-Hedra's models page says Veo and Kling models are available inside Hedra Studio, and its pricing page lists current credit rates for Veo 3.1, Veo 3.1 Fast, Kling 2.5 Turbo, and other models.
+Hedra's models/pricing surface says Veo and Kling models are available inside Hedra Studio, and its pricing page lists current credit rates for Veo 3.1, Veo 3.1 Fast, Kling 2.6 Pro, Kling 2.5 Turbo, and other models.
 
 **Do Hedra credits roll over?**
 Monthly subscription credits do not carry over. Hedra says purchased credit packs can roll over.

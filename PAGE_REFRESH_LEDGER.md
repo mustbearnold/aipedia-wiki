@@ -380,17 +380,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /guides/synthesia-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/synthesia-alternatives.md |
 | 2026-05-13 | /media-kit/ | Static page | Yes | git | src/pages/media-kit.astro |
 | 2026-05-13 | /reports/2026-04/ | Report | Yes | frontmatter | src/content/reports/2026-04.md |
-| 2026-05-13 | /tools/granola/ | Tool | Yes | frontmatter | src/content/tools/granola.md |
 | 2026-05-13 | /tools/grok-code-fast/ | Tool | Yes | frontmatter | src/content/tools/grok-code-fast.md |
-| 2026-05-13 | /tools/grok/ | Tool | Yes | frontmatter | src/content/tools/grok.md |
-| 2026-05-13 | /tools/groq/ | Tool | Yes | frontmatter | src/content/tools/groq.md |
-| 2026-05-13 | /tools/gumloop/ | Tool | Yes | frontmatter | src/content/tools/gumloop.md |
-| 2026-05-13 | /tools/hailuo/ | Tool | Yes | frontmatter | src/content/tools/hailuo.md |
-| 2026-05-13 | /tools/harvey/ | Tool | Yes | frontmatter | src/content/tools/harvey.md |
-| 2026-05-13 | /tools/hedra/ | Tool | Yes | frontmatter | src/content/tools/hedra.md |
-| 2026-05-13 | /tools/helicone/ | Tool | Yes | frontmatter | src/content/tools/helicone.md |
-| 2026-05-13 | /tools/hermes-agent/ | Tool | Yes | frontmatter | src/content/tools/hermes-agent.md |
-| 2026-05-13 | /tools/hex/ | Tool | Yes | frontmatter | src/content/tools/hex.md |
 | 2026-05-13 | /tools/higgsfield/ | Tool | Yes | frontmatter | src/content/tools/higgsfield.md |
 | 2026-05-13 | /tools/hireez/ | Tool | Yes | frontmatter | src/content/tools/hireez.md |
 | 2026-05-13 | /tools/hugging-face/ | Tool | Yes | frontmatter | src/content/tools/hugging-face.md |
@@ -690,16 +680,16 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-02 | /categories/ai-automation/ | Category | Yes | working tree | src/content/categories/ai-automation.md |
 | 2026-06-02 | /categories/ai-chatbots/ | Category | Yes | working tree | src/content/categories/ai-chatbots.md |
 | 2026-06-02 | /categories/ai-coding/ | Category | Yes | working tree | src/content/categories/ai-coding.md |
-| 2026-06-02 | /categories/ai-design/ | Category | Yes | working tree | src/content/categories/ai-design.md |
-| 2026-06-02 | /categories/ai-image/ | Category | Yes | working tree | src/content/categories/ai-image.md |
+| 2026-06-02 | /categories/ai-design/ | Category | Yes | frontmatter | src/content/categories/ai-design.md |
+| 2026-06-02 | /categories/ai-image/ | Category | Yes | frontmatter | src/content/categories/ai-image.md |
 | 2026-06-02 | /categories/ai-infrastructure/ | Category | Yes | frontmatter | src/content/categories/ai-infrastructure.md |
-| 2026-06-02 | /categories/ai-notes/ | Category | Yes | frontmatter | src/content/categories/ai-notes.md |
+| 2026-06-02 | /categories/ai-notes/ | Category | Yes | working tree | src/content/categories/ai-notes.md |
 | 2026-06-02 | /categories/ai-presentation/ | Category | Yes | frontmatter | src/content/categories/ai-presentation.md |
 | 2026-06-02 | /categories/ai-research/ | Category | Yes | working tree | src/content/categories/ai-research.md |
 | 2026-06-02 | /categories/ai-search/ | Category | Yes | working tree | src/content/categories/ai-search.md |
 | 2026-06-02 | /categories/ai-seo/ | Category | Yes | frontmatter | src/content/categories/ai-seo.md |
-| 2026-06-02 | /categories/ai-video/ | Category | Yes | frontmatter | src/content/categories/ai-video.md |
-| 2026-06-02 | /categories/ai-voice/ | Category | Yes | frontmatter | src/content/categories/ai-voice.md |
+| 2026-06-02 | /categories/ai-video/ | Category | Yes | working tree | src/content/categories/ai-video.md |
+| 2026-06-02 | /categories/ai-voice/ | Category | Yes | working tree | src/content/categories/ai-voice.md |
 | 2026-06-02 | /categories/ai-writing/ | Category | Yes | working tree | src/content/categories/ai-writing.md |
 | 2026-06-02 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
 | 2026-06-02 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
@@ -739,13 +729,23 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-02 | /tools/fireflies/ | Tool | Yes | frontmatter | src/content/tools/fireflies.md |
 | 2026-06-02 | /tools/fireworks-ai/ | Tool | Yes | frontmatter | src/content/tools/fireworks-ai.md |
 | 2026-06-02 | /tools/fish-audio/ | Tool | Yes | frontmatter | src/content/tools/fish-audio.md |
-| 2026-06-02 | /tools/flux/ | Tool | Yes | working tree | src/content/tools/flux.md |
-| 2026-06-02 | /tools/framer-ai/ | Tool | Yes | working tree | src/content/tools/framer-ai.md |
-| 2026-06-02 | /tools/galileo-ai/ | Tool | Yes | working tree | src/content/tools/galileo-ai.md |
-| 2026-06-02 | /tools/genspark/ | Tool | Yes | working tree | src/content/tools/genspark.md |
-| 2026-06-02 | /tools/getresponse/ | Tool | Yes | working tree | src/content/tools/getresponse.md |
-| 2026-06-02 | /tools/glean/ | Tool | Yes | working tree | src/content/tools/glean.md |
-| 2026-06-02 | /tools/glm/ | Tool | Yes | working tree | src/content/tools/glm.md |
-| 2026-06-02 | /tools/google-stitch/ | Tool | Yes | working tree | src/content/tools/google-stitch.md |
-| 2026-06-02 | /tools/goose/ | Tool | Yes | working tree | src/content/tools/goose.md |
-| 2026-06-02 | /tools/grammarly/ | Tool | Yes | working tree | src/content/tools/grammarly.md |
+| 2026-06-02 | /tools/flux/ | Tool | Yes | frontmatter | src/content/tools/flux.md |
+| 2026-06-02 | /tools/framer-ai/ | Tool | Yes | frontmatter | src/content/tools/framer-ai.md |
+| 2026-06-02 | /tools/galileo-ai/ | Tool | Yes | frontmatter | src/content/tools/galileo-ai.md |
+| 2026-06-02 | /tools/genspark/ | Tool | Yes | frontmatter | src/content/tools/genspark.md |
+| 2026-06-02 | /tools/getresponse/ | Tool | Yes | frontmatter | src/content/tools/getresponse.md |
+| 2026-06-02 | /tools/glean/ | Tool | Yes | frontmatter | src/content/tools/glean.md |
+| 2026-06-02 | /tools/glm/ | Tool | Yes | frontmatter | src/content/tools/glm.md |
+| 2026-06-02 | /tools/google-stitch/ | Tool | Yes | frontmatter | src/content/tools/google-stitch.md |
+| 2026-06-02 | /tools/goose/ | Tool | Yes | frontmatter | src/content/tools/goose.md |
+| 2026-06-02 | /tools/grammarly/ | Tool | Yes | frontmatter | src/content/tools/grammarly.md |
+| 2026-06-02 | /tools/granola/ | Tool | Yes | working tree | src/content/tools/granola.md |
+| 2026-06-02 | /tools/grok/ | Tool | Yes | working tree | src/content/tools/grok.md |
+| 2026-06-02 | /tools/groq/ | Tool | Yes | working tree | src/content/tools/groq.md |
+| 2026-06-02 | /tools/gumloop/ | Tool | Yes | working tree | src/content/tools/gumloop.md |
+| 2026-06-02 | /tools/hailuo/ | Tool | Yes | working tree | src/content/tools/hailuo.md |
+| 2026-06-02 | /tools/harvey/ | Tool | Yes | working tree | src/content/tools/harvey.md |
+| 2026-06-02 | /tools/hedra/ | Tool | Yes | working tree | src/content/tools/hedra.md |
+| 2026-06-02 | /tools/helicone/ | Tool | Yes | working tree | src/content/tools/helicone.md |
+| 2026-06-02 | /tools/hermes-agent/ | Tool | Yes | working tree | src/content/tools/hermes-agent.md |
+| 2026-06-02 | /tools/hex/ | Tool | Yes | working tree | src/content/tools/hex.md |

@@ -3,7 +3,7 @@ type: category
 slug: ai-chatbots
 title: AI Chatbots & LLMs
 description: General-purpose AI assistants and large language model chatbots for writing, research, coding help, analysis, multimodal work, and everyday decision support.
-tool_count: 14
+tool_count: 15
 seo_title: "Best AI Chatbots & LLMs (June 2026), aipedia.wiki"
 meta_description: "Compare the best AI chatbots and LLMs in June 2026: ChatGPT (GPT-5.5), Claude Opus 4.8, Gemini 3.1 Pro, Perplexity, Grok, Mistral, Qwen3.7-Max / Qwen Cloud, GLM-5.1, NotebookLM, and AnythingLLM, with enterprise workspace and self-hosted RAG signals."
 author: "aipedia.wiki Editorial"
@@ -22,7 +22,7 @@ For most people, the first paid chatbot to compare is still one of three: [ChatG
 
 For document chat and private RAG, [AnythingLLM](/tools/anythingllm/) is the practical self-hosted app lane. The June 1 check keeps the MIT self-host path free, confirms cloud Basic at $50/month and Pro at $99/month, and keeps the recommendation model-agnostic: quality depends on the hosted or local LLM you connect.
 
-For API-first model serving, [Fireworks AI](/tools/fireworks-ai/) is tracked in this category because it exposes LLM and multimodal model endpoints, but buyers should treat it as infrastructure rather than a chatbot subscription. The June 2 pricing check keeps serverless inference, cached-token discounts, batch discounts, B200/B300 dedicated deployments, and fine-tuning as the important purchase variables.
+For API-first model serving, [Fireworks AI](/tools/fireworks-ai/) and [Groq](/tools/groq/) are tracked in this category because they expose LLM and multimodal model endpoints, but buyers should treat them as infrastructure rather than chatbot subscriptions. The June 2 Groq check keeps the buyer story focused on LPU inference speed, pricing/model docs, and production throughput rather than acquisition rumors. The Fireworks pricing check keeps serverless inference, cached-token discounts, batch discounts, B200/B300 dedicated deployments, and fine-tuning as the important purchase variables.
 
 For companion-style character chat, [Character.AI](/tools/character-ai/) is a different lane from general assistants. The June 2 c.ai+ check keeps the buyer story simple: pay for ad-free chats, unlimited voice calls, no slow mode, better memory, and early-access perks when the product itself is the entertainment/social workflow, not a work assistant.
 
@@ -42,6 +42,7 @@ The wrong move is paying for three overlapping chatbots without a job for each o
 | **[GLM](/tools/glm/)** | Z.AI GLM-5.1, open MIT weights, long-context agentic coding/model evaluation | Best for teams testing Chinese frontier/open-weight model options, not a polished English consumer chatbot. |
 | **[DeepSeek](/tools/deepseek/)** | Low-cost API reasoning, open-weight baseline, China-origin model testing | Best when cost and self-hosting experiments matter more than Western enterprise procurement. Recheck endpoint names and token rates before production. |
 | **[Doubao](/tools/doubao/)** | China-first ByteDance assistant and Volcengine model/API evaluation | Best for Chinese-language consumer and Asia cloud evaluation, not Western regulated data residency or primary English chat. |
+| **[Groq](/tools/groq/)** | Low-latency hosted inference and API throughput | Best when inference speed, OpenAI-compatible APIs, and predictable production serving matter more than a consumer chat workspace. |
 | **[Fireworks AI](/tools/fireworks-ai/)** | Hosted inference, batch jobs, dedicated GPUs, and fine-tuning | Best when the buyer needs model APIs and deployment controls rather than a consumer chat UI. |
 | **[NotebookLM](/tools/notebooklm/)** | Source-grounded study and document research | Not a general chatbot replacement; excellent when answers should come from a fixed source library. |
 | **[AnythingLLM](/tools/anythingllm/)** | Self-hosted document chat and RAG app | Best when the buyer wants an MIT-licensed app, local/private documents, agents, and bring-your-own-model control instead of another hosted chatbot subscription. |
@@ -79,6 +80,8 @@ The wrong move is paying for three overlapping chatbots without a job for each o
 **Use DeepSeek if:** API cost, open-weight baselines, or China-origin model benchmarking are more important than polished consumer UX and Western enterprise controls.
 
 **Use Doubao if:** Chinese-language consumer use, ByteDance ecosystem fit, or Volcengine model evaluation is the purchase reason, and Chinese infrastructure is acceptable.
+
+**Use Groq if:** the job is low-latency API inference, high-throughput serving, or production model routing. Use Groq's official site, docs, and pricing pages for purchase facts; do not rely on rumor-cycle claims.
 
 **Use Fireworks AI if:** the job is hosted model inference, batch processing, deployment capacity, cached-token optimization, or fine-tuning rather than a general assistant interface.
 
@@ -129,7 +132,12 @@ Do not subscribe to multiple chatbots because each one has a new model announcem
 - [Google AI subscriptions](https://gemini.google/subscriptions/) (verified 2026-05-24)
 - [Google AI Pro benefits](https://support.google.com/googleone/answer/14534406?hl=en) (verified 2026-05-13)
 - [Perplexity Pro](https://www.perplexity.ai/pro) (verified 2026-05-24)
-- [Grok by xAI](https://x.ai/grok) (verified 2026-05-24)
+- [Grok by xAI](https://x.ai/grok) (verified 2026-06-02)
+- [xAI pricing](https://x.ai/pricing) (verified 2026-06-02)
+- [xAI model docs](https://docs.x.ai/developers/models) (verified 2026-06-02)
+- [Groq official site](https://groq.com/) (verified 2026-06-02)
+- [Groq pricing](https://groq.com/pricing/) (verified 2026-06-02)
+- [Groq model docs](https://console.groq.com/docs/models) (verified 2026-06-02)
 - [Mistral AI Le Chat](https://mistral.ai/products/le-chat) (verified 2026-05-24)
 - [Qwen Cloud model releases](https://docs.qwencloud.com/changelog/models) (verified 2026-05-27)
 - [Alibaba Cloud Qwen Conference coverage](https://www.eqs-news.com/news/corporate/alibaba-cloud-unveils-advanced-agentic-ai-ecosystem-for-global-customers/a191d39b-db45-48ed-b194-9cce5071b556_en) (verified 2026-05-27)
