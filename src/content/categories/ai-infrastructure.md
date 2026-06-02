@@ -5,10 +5,10 @@ title: AI Infrastructure & Model APIs
 description: Developer platforms for LLM routing, pay-as-you-go model APIs, hosted inference, serverless GPUs, vector databases, speech APIs, and production retrieval systems.
 tool_count: 12
 seo_title: "Best AI Infrastructure & Model API Tools (June 2026)"
-meta_description: "Updated June 1, 2026: compare OpenRouter after its $113M Series B, OpenAI API, Claude API, Gemini API, Mistral 3, Groq, Replicate, fal, Browserbase, Deepgram, Pinecone, Weaviate, Qdrant, and LM Studio, with CoreWeave, GPT-Rosalind, and agent-security signals."
+meta_description: "Updated June 2, 2026: compare OpenRouter after its $113M Series B, OpenAI API, Claude API, Gemini API, Mistral 3, Groq, Replicate, fal, Fireworks AI, Browserbase, Deepgram, Pinecone, Weaviate, Qdrant, and LM Studio, with CoreWeave, GPT-Rosalind, and agent-security signals."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-01
-last_verified: 2026-05-31
+last_updated: 2026-06-02
+last_verified: 2026-06-02
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -36,7 +36,9 @@ The late-May infrastructure update is agent control. CoreWeave's [training-to-in
 
 **Use [Mistral AI](/tools/mistral-ai/) or [Groq](/tools/groq/) when price/performance, open-model strategy, European infrastructure, or low-latency inference matters.** Mistral 3 shipped on April 28, 2026 and tightened price/performance across the chat, code, and reasoning lineups. Benchmark real prompts before switching because model quality, output length, and retries change the bill.
 
-**Use [Replicate](/tools/replicate/) or [fal.ai](/tools/fal-ai/) when the job is hosted image, video, audio, 3D, or custom-model inference.** Replicate is stronger as a broad model catalog and custom-model deployment layer. fal is stronger when successful-output billing and fast media APIs are the buyer problem.
+**Use [Replicate](/tools/replicate/) or [fal.ai](/tools/fal-ai/) when the job is hosted image, video, audio, 3D, or custom-model inference.** Replicate is stronger as a broad model catalog and custom-model deployment layer. fal is stronger when successful-output billing and fast media APIs are the buyer problem; the June 2 check keeps prepaid credits, queue behavior, failed-output billing, and the 50% batch discount as the key pricing details to model.
+
+**Use [Fireworks AI](/tools/fireworks-ai/) when the workload is production inference over open or commercial models.** Fireworks is not a consumer chatbot. It belongs here when serverless per-token inference, cached-token discounts, batch jobs, dedicated GPU deployments, fine-tuning, and B200/B300 capacity are the actual purchase.
 
 **Use [Browserbase](/tools/browserbase/) when the infrastructure problem is web interaction.** The June 1 pricing check keeps Free, Developer at $20/month, Startup at $99/month, and Scale custom, while the product surface now groups Browsers, Web Data APIs, Runtime, Identity, Models, Observability, Stagehand, and MCP. It belongs here when agents need reliable browser sessions rather than just another LLM API.
 
@@ -51,6 +53,7 @@ The late-May infrastructure update is agent control. CoreWeave's [training-to-in
 | Budget/open-model API | [Mistral AI](/tools/mistral-ai/) or [Groq](/tools/groq/) | Useful for cost-sensitive and latency-sensitive workloads | Requires benchmarking against your actual prompts |
 | Hosted model catalog | [Replicate](/tools/replicate/) | Public, proprietary, and custom models without owning GPUs | Runtime billing can surprise teams if generations are slow |
 | Fast media APIs | [fal.ai](/tools/fal-ai/) | Image, video, audio, and 3D APIs with per-output or per-second pricing | Prepaid credits and per-model units need tracking |
+| Production model inference | [Fireworks AI](/tools/fireworks-ai/) | Serverless inference, batch jobs, dedicated GPUs, fine-tuning, and cached-token discounts | Named model rates, GPU utilization, batch timing, and cached-token behavior decide the real bill |
 | Cloud browser infrastructure | [Browserbase](/tools/browserbase/) | Managed browser sessions, web data APIs, runtime, identity, observability, Stagehand, and MCP | Browser sessions and agent loops need cost, timeout, and credential controls |
 | Speech and voice infrastructure | [Deepgram](/tools/deepgram/) | STT, TTS, audio intelligence, and voice-agent APIs | Voice minutes, channels, model choice, and LLM orchestration affect cost |
 | Model discovery and endpoints | [Hugging Face](/tools/hugging-face/) | Model cards, datasets, Spaces, Inference Endpoints | License and safety checks stay with the builder |
@@ -65,6 +68,7 @@ The late-May infrastructure update is agent control. CoreWeave's [training-to-in
 - **Model catalog and experiments:** Pick [Hugging Face](/tools/hugging-face/) for discovery, datasets, model cards, demos, and endpoints.
 - **Media and community models:** Pick [Replicate](/tools/replicate/) when the job is running image, video, audio, or custom models by API.
 - **Fast media APIs:** Pick [fal.ai](/tools/fal-ai/) when successful-output billing, image/video/audio/3D endpoints, and fast experimentation matter.
+- **Production inference:** Pick [Fireworks AI](/tools/fireworks-ai/) when hosted model APIs, batch inference, dedicated GPU deployments, and fine-tuning are more important than a polished chatbot UI.
 - **Browser automation:** Pick [Browserbase](/tools/browserbase/) when an AI agent, scraper, QA runner, or workflow needs managed browsers, identity, observability, and Stagehand-style automation.
 - **Speech APIs:** Pick [Deepgram](/tools/deepgram/) when speech-to-text, text-to-speech, voice agents, or audio intelligence are infrastructure, not just creator utilities.
 - **Serverless GPU apps:** Pick [Modal](/tools/modal/) when you want Python jobs, endpoints, queues, and GPU workloads without Kubernetes.
@@ -96,7 +100,10 @@ Do not publish infrastructure pages with old flat monthly subscription framing. 
 - [Mistral AI pricing](https://mistral.ai/pricing) (verified 2026-05-13)
 - [Groq pricing](https://groq.com/pricing) (verified 2026-05-13)
 - [Replicate pricing](https://replicate.com/pricing) (verified 2026-05-13)
-- [fal Model API pricing docs](https://fal.ai/docs/documentation/model-apis/pricing) (verified 2026-05-13)
+- [fal Model API pricing docs](https://fal.ai/docs/documentation/model-apis/pricing) (verified 2026-06-02)
+- [Fireworks AI pricing](https://fireworks.ai/pricing) (verified 2026-06-02)
+- [Fireworks billing FAQ](https://docs.fireworks.ai/faq-new/billing-pricing/how-much-does-fireworks-cost) (verified 2026-06-02)
+- [Fireworks inference documentation](https://docs.fireworks.ai/guides/inference-introduction) (verified 2026-06-02)
 - [Browserbase pricing](https://www.browserbase.com/pricing) (verified 2026-06-01)
 - [Deepgram pricing](https://deepgram.com/pricing) (verified 2026-05-13)
 - [Together AI pricing](https://www.together.ai/pricing) (verified 2026-05-13)

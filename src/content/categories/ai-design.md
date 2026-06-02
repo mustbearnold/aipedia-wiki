@@ -30,7 +30,7 @@ As of June 2, 2026, start with the job:
 
 **Use [Canva](/tools/canva/) when non-designers need finished creative fast.** Canva AI 2.0 is built across Canva's Visual Suite and supports conversational creation, editable layouts, on-brand generation, AI images, AI video, Magic Write, resizing, background tools, and business controls. It is the safest first stop for marketers, creators, teachers, small businesses, and teams that need to publish polished content without a design department.
 
-**Use [Figma](/tools/figma/) when design quality, design systems, multiplayer review, and handoff matter.** Figma's pricing page now lists AI add-ons, daily/monthly AI credits by plan, Figma Make, Figma Sites, Dev Mode, MCP support, libraries, variables, governance, and enterprise seats. Pick Figma when the artifact has to survive design critique and developer handoff, not just look plausible in a generator.
+**Use [Figma](/tools/figma/) when design quality, design systems, multiplayer review, and handoff matter.** Figma's pricing page now lists AI add-ons, daily/monthly AI credits by plan, Figma Make, Figma Sites, Dev Mode, MCP support, libraries, variables, governance, and enterprise seats. The June 2 Figma Make model check lists Gemini 3 Flash, Gemini 3.1 Pro, Claude Sonnet 4.6, Claude Opus 4.7, and GPT-5.5 as selectable options, with default-model and credit-burn caveats. Pick Figma when the artifact has to survive design critique and developer handoff, not just look plausible in a generator.
 
 **Use [Midjourney](/tools/midjourney/) when the job is visual ideation, art direction, concept imagery, or campaign moodboards.** Midjourney's current official plans are subscriptions built around generation capacity and GPU time, so treat it as an ideation engine, not a product design system or layout production workflow.
 
@@ -86,7 +86,7 @@ As of June 2, 2026, start with the job:
 
 Do not rank this category on headline monthly price alone. Canva, Figma, Lovable, Bolt, v0, and Stitch bill different units.
 
-Figma is seat-based and AI-credit aware. Its public pricing page lists Starter free, Professional full seats at $16/month, Organization full seats at $55/month billed annually, and Enterprise full seats at $90/month billed annually, with AI credits varying by plan.
+Figma is seat-based and AI-credit aware. Its public pricing page lists Starter free, Professional full seats at $16/month, Organization full seats at $55/month billed annually, and Enterprise full seats at $90/month billed annually, with AI credits varying by plan. Figma Make model choice can change credit burn, so teams should avoid hardcoding one default model into procurement notes.
 
 Lovable is credit-based and team-friendly. Its pricing page lists Pro at $25/month and Business at $50/month, shared across unlimited users, with monthly credits and usage-based cloud plus AI.
 
@@ -140,7 +140,10 @@ Do not make a wide table the only mobile experience. Mobile buyers need top pick
 - [Canva pricing](https://www.canva.com/pricing/) (verified 2026-06-02)
 - [Anthropic Claude Design launch](https://www.anthropic.com/news/claude-design-anthropic-labs) (verified 2026-06-02)
 - [Claude pricing](https://claude.com/pricing) (verified 2026-06-02)
-- [Figma pricing](https://www.figma.com/pricing/) (verified 2026-05-13)
+- [Figma pricing](https://www.figma.com/pricing/) (verified 2026-06-02)
+- [Figma AI credits](https://help.figma.com/hc/en-us/articles/33459875669015-How-AI-credits-work) (verified 2026-06-02)
+- [Figma Make model selection](https://help.figma.com/hc/en-us/articles/36400680326551-Select-an-AI-model-to-use-in-Figma-Make) (verified 2026-06-02)
+- [Create and edit a Figma Make file](https://help.figma.com/hc/en-us/articles/31304485164695-Create-and-edit-a-Figma-Make-file) (verified 2026-06-02)
 - [Midjourney plans](https://docs.midjourney.com/docs/plans) (verified 2026-05-13)
 - [Adobe Firefly plans](https://www.adobe.com/products/firefly/plans) (verified 2026-05-13)
 - [Google Stitch announcement](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/) (verified 2026-05-13)

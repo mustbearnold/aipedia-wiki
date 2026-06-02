@@ -9,8 +9,8 @@ url: https://eightfold.ai/products/talent-acquisition/
 pricing_model: enterprise
 price_range: "Custom enterprise"
 status: active
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-02
+last_verified: 2026-06-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -29,29 +29,29 @@ facts:
     source: "https://eightfold.ai/products/talent-acquisition/"
     source_label: "Eightfold Talent Acquisition"
     source_id: eightfold-talent-acquisition
-    verified_at: 2026-05-13
+    verified_at: 2026-06-02
     volatility: medium
     confidence: high
   pricing_anchor:
-    value: "Eightfold is an enterprise platform with sales-led pricing; buyers should validate modules, implementation, HR data requirements, integrations, and workforce-planning scope."
+    value: "Eightfold is an enterprise platform with sales-led pricing; buyers should validate TalentForge, AI Interviewer/360 Interview, Workforce Readiness, modules, implementation, HR data requirements, integrations, and workforce-planning scope."
     source: "https://eightfold.ai/products/"
     source_label: "Eightfold products"
     source_id: eightfold-products
-    verified_at: 2026-05-13
+    verified_at: 2026-06-02
     volatility: high
     confidence: medium
-    next_review_at: 2026-08-13
+    next_review_at: 2026-09-02
   watch_out_for:
     value: "Eightfold is not a lightweight recruiter assistant; ROI depends on enterprise data readiness, HR process maturity, and cross-functional adoption."
     source: "https://eightfold.ai/products/"
     source_label: "Eightfold products"
     source_id: eightfold-products
-    verified_at: 2026-05-13
+    verified_at: 2026-06-02
     volatility: medium
     confidence: high
 tags: [talent-intelligence, recruiting, skills, workforce-planning, internal-mobility]
-seo_title: "Eightfold AI Review (May 2026): Talent Intelligence Platform"
-meta_description: "Eightfold AI is an enterprise talent intelligence platform with AI Interviewer, 360 Interview, AI Interview Companion, skills-based talent acquisition, talent management, workforce exchange, resource management, and workforce planning. Oracle Recruiting integration announced 2026."
+seo_title: "Eightfold AI Review (June 2026): Talent Intelligence Platform"
+meta_description: "Eightfold AI is an enterprise talent intelligence platform with TalentForge, AI Interviewer, 360 Interview, AI Interview Companion, Workforce Readiness, skills-based talent acquisition, talent management, workforce exchange, resource management, and workforce planning."
 author: "aipedia.wiki Editorial"
 best_for:
   - enterprise talent acquisition
@@ -71,7 +71,12 @@ quick_answer: >-
 
 Eightfold AI is an enterprise talent intelligence platform. Its product surface spans Talent Acquisition, Talent Management, Workforce Exchange, Resource Management, and broader workforce planning.
 
-As of May 13, 2026, AiPedia treats Eightfold as the best enterprise AI recruiting option when the business problem is skills-based talent intelligence rather than simple sourcing. The product surface now includes AI Interviewer (autonomous interviewing with 360 Interview collapsing multi-round evaluations into one session) and AI Interview Companion (intelligent agent for human-led interviews with skills-based and coding interview capabilities). An Oracle Recruiting integration extends Eightfold's agentic interviewing into existing Oracle workflows.
+As of June 2, 2026, AiPedia treats Eightfold as the best enterprise AI recruiting option when the business problem is skills-based talent intelligence rather than simple sourcing. The product surface now includes TalentForge for custom HR software, AI Interviewer with 360 Interview collapsing multi-round evaluations into one session, AI Interview Companion for human-led interviews, and Workforce Readiness for AI adoption and upskilling signals. Oracle Recruiting integration extends Eightfold's agentic interviewing into existing Oracle workflows.
+
+## Recent developments
+
+- **May 12, 2026:** Eightfold announced TalentForge, 360 Interview, and Workforce Readiness at Cultivate 2026. The buyer read is that Eightfold is moving beyond recruiting point tools into an agentic HR operating layer, so procurement should test whether the organization really needs custom HR workflow building and workforce-readiness analytics or just better screening.
+- **April 8, 2026:** Eightfold expanded Talent Agents with AI Interview Companion plus functional and coding interview capabilities. That strengthens the enterprise interview-lifecycle pitch, but it also raises the bar for governance, audit logs, explainability, and candidate-consent review.
 
 ## System Verdict
 
@@ -149,9 +154,11 @@ Eightfold should be evaluated like an enterprise HR platform, not like a point r
 
 ## AiPedia Trust Note
 
-This page was refreshed on May 13, 2026 using Eightfold's current Talent Acquisition and product overview pages, including the AI Interviewer, 360 Interview, AI Interview Companion, and Oracle Recruiting integration positioning. AiPedia does not list a paid affiliate program for Eightfold. Scores reflect buyer usefulness, implementation risk, defensibility, and likely durability rather than vendor hype.
+This page was refreshed on June 2, 2026 using Eightfold's current Talent Acquisition, product overview, AI Interviewer, TalentForge, and interview-lifecycle launch materials. AiPedia does not list a paid affiliate program for Eightfold. Scores reflect buyer usefulness, implementation risk, defensibility, and likely durability rather than vendor hype.
 
 ## Sources
 
 - [Eightfold Talent Acquisition](https://eightfold.ai/products/talent-acquisition/)
 - [Eightfold products](https://eightfold.ai/products/)
+- [Eightfold TalentForge launch](https://eightfold.ai/company/press/press-releases/eightfold-ushers-in-the-golden-age-of-hr-software-with-launch-of-talentforge/)
+- [Eightfold AI Interview Companion launch](https://eightfold.ai/company/press/press-releases/eightfold-ai-expands-talent-agents-across-the-full-interview-journey-introducing-ai-interview-companion-and-new-interview-capabilities/)

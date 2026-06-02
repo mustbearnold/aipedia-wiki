@@ -54,6 +54,8 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 
 **Use [Dext](/tools/dext/) when automation starts with bookkeeping document intake.** It is vertical pre-accounting automation for receipts, invoices, statements, expenses, and accounting handoff, not a general agent platform. Pricing still scales by users and document volume, with the 5-user/250-document baseline rechecked on June 2.
 
+**Use [Eightfold AI](/tools/eightfold-ai/) when automation starts with enterprise talent decisions.** Eightfold is not a simple recruiter productivity tool; the June 2 refresh keeps TalentForge, AI Interviewer/360 Interview, AI Interview Companion, Workforce Readiness, talent acquisition, talent management, workforce exchange, resource management, and workforce planning in one skills-intelligence procurement lane.
+
 **Use [Ada](/tools/ada/) when enterprise customer service wants AI agents for support outcomes.** Ada is now a demo-gated contact-sales page for serious service volumes, not a self-serve chatbot widget. Its June 1 source check found 550+ deployed AI agents and 5.5B+ interactions, so the buyer question is enterprise fit, resolution quality, and channel coverage.
 
 **Use [CloudTalk](/tools/cloudtalk/) when automation starts with phone operations.** CloudTalk is not a generic workflow router. It is the better fit when a sales or support team needs cloud calling, routing, dialers, CRM call logging, AI summaries, coaching analytics, and optional AI voice agents in one system.
@@ -85,6 +87,7 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 | AI work management | [ClickUp](/tools/clickup/) | Tasks, docs, automation, Brain, and Everything AI inside one workspace | Easy to overbuy AI add-ons if the team has not standardized ClickUp usage |
 | Internal team AI agents | [Dust](/tools/dust/) | Custom agents over company data and tools, Slack/Zendesk/API surfaces, model choice | Value depends on source hygiene, permissions, and repeated team workflows |
 | Bookkeeping document automation | [Dext](/tools/dext/) | Receipts, invoices, expenses, bank/supplier statements, approvals, and accounting handoff | Not a ledger, payroll, tax, or general automation platform |
+| Enterprise talent intelligence | [Eightfold AI](/tools/eightfold-ai/) | Skills-based hiring, internal mobility, TalentForge, AI Interviewer, Workforce Readiness, and workforce planning | Requires HR data readiness, governance, implementation scope, and change management |
 | Phone-heavy sales/support operations | [CloudTalk](/tools/cloudtalk/) | Business calling, routing, dialers, CRM sync, AI Conversation Intelligence, and AI Voice Agents in one platform | More than teams need if the job is internal-only calling or pure chat support |
 | Meeting-to-workflow automation for CS, sales, recruiting, and ops | [MeetGeek](/tools/meetgeek/) | Transcripts, summaries, AI Chat, action items, Zapier/Make/n8n workflows, API/MCP access, and CRM/task handoff from meeting content | Needs consent policy, workspace permissions, and a defined post-meeting workflow |
 | One-off general autonomous tasks | [Manus](/tools/manus/) | Hosted VM agent for research, spreadsheets, slides, files, and browser work; official site now describes Manus as part of Meta | Credit burn and data-handling terms need direct verification before sensitive work |
@@ -144,6 +147,10 @@ Do not leave this category stale. Automation tools are adding MCP, agent builder
 - [CrewAI pricing](https://crewai.com/pricing) (verified 2026-06-02)
 - [Dust pricing](https://dust.tt/home/pricing) (verified 2026-06-02)
 - [Dext business plans](https://help.dext.com/en/articles/647776-dext-plans-for-businesses) (verified 2026-06-02)
+- [Eightfold Talent Acquisition](https://eightfold.ai/products/talent-acquisition/) (verified 2026-06-02)
+- [Eightfold products](https://eightfold.ai/products/) (verified 2026-06-02)
+- [Eightfold TalentForge launch](https://eightfold.ai/company/press/press-releases/eightfold-ushers-in-the-golden-age-of-hr-software-with-launch-of-talentforge/) (verified 2026-06-02)
+- [Eightfold AI Interview Companion launch](https://eightfold.ai/company/press/press-releases/eightfold-ai-expands-talent-agents-across-the-full-interview-journey-introducing-ai-interview-companion-and-new-interview-capabilities/) (verified 2026-06-02)
 - [Ada platform](https://www.ada.cx/platform) (verified 2026-06-01)
 - [Apollo pricing](https://apollo.io/pricing) (verified 2026-06-01)
 - [Amplemarket pricing](https://www.amplemarket.com/pricing) (verified 2026-06-01)

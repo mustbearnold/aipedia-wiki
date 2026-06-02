@@ -16,15 +16,15 @@ update_frequency: monthly
 
 AI note-taking now splits into three buyer lanes. The first is **meeting capture and meeting memory**, where [Fathom](/tools/fathom/), [MeetGeek](/tools/meetgeek/), [Fireflies](/tools/fireflies/), [Otter.ai](/tools/otter-ai/), and [Read AI](/tools/read-ai/) record calls, produce transcripts, summarize decisions, extract action items, and push meeting context into team workflows. MeetGeek is now the sharper customer-success pick when onboarding, renewal, QBR, escalation, and product-feedback calls need to become searchable account context. The second is **source-grounded research**, where [NotebookLM](/tools/notebooklm/) turns documents, transcripts, and source packs into grounded Q&A, reports, study materials, and review artifacts. The third is **knowledge management**, where [Notion AI](/tools/notion-ai/), [Capacities](/tools/capacities/), and [Obsidian](/tools/obsidian/) help teams or individuals maintain long-lived notes, wikis, docs, databases, objects, and personal knowledge graphs.
 
-As of May 26, 2026, the best purchase depends less on "which AI summarizes best?" and more on where the note lives after capture: a meeting library, a CRM, a renewal brief, a research notebook, a company wiki, or a local personal vault.
+As of June 2, 2026, the best purchase depends less on "which AI summarizes best?" and more on where the note lives after capture: a meeting library, a CRM, a renewal brief, a research notebook, a company wiki, or a local personal vault.
 
 ## The Players
 
 | Tool | Best For | Buyer Note |
 |------|----------|------------|
-| **[Fathom](/tools/fathom/)** | Individual meeting notes | Best first test because the free plan includes unlimited recordings and transcriptions, with paid tiers for teams, CRM sync, SSO, retention, and coaching. |
+| **[Fathom](/tools/fathom/)** | Individual meeting notes | Best first test because the free plan includes unlimited recordings and transcriptions; June 2026 buyers should also check bot-free Mac capture beta availability and Ask Fathom history limits by plan. |
 | **[MeetGeek](/tools/meetgeek/)** | Customer-success meeting memory | Best when onboarding, renewal, QBR, escalation, and product-feedback calls need to become searchable customer context, CRM/task handoff, AI Chat, and workflow automation. |
-| **[Fireflies](/tools/fireflies/)** | Team meeting intelligence | Best when teams need searchable call history, AI summaries, integrations, analytics, admin controls, and enterprise security options. |
+| **[Fireflies](/tools/fireflies/)** | Team meeting intelligence | Best when teams need searchable call history, AI summaries, integrations, analytics, admin controls, and enterprise security options; AI credits are a shared team/account pool for advanced features, not extra transcription minutes. |
 | **[Otter.ai](/tools/otter-ai/)** | Live transcription and collaboration | Best for live transcription, speaker identification, collaborative transcripts, education, interviews, and teams that value real-time capture. |
 | **[Read AI](/tools/read-ai/)** | Meeting reports, coaching, and search | Best when meeting notes connect to reports, playback, coaching, Search Copilot, workplace context, integrations, upload credits, and productivity workflows. |
 | **[NotebookLM](/tools/notebooklm/)** | Source-grounded research notebooks | Best when the transcript or source documents already exist and need grounded summaries, Q&A, reports, flashcards, mind maps, or study artifacts. |
@@ -34,9 +34,9 @@ As of May 26, 2026, the best purchase depends less on "which AI summarizes best?
 
 ## Our Picks
 
-- **Best AI meeting notetaker:** [Fathom](/tools/fathom/) because the free plan is strong enough for most individuals and paid tiers scale into team search and CRM workflows.
+- **Best AI meeting notetaker:** [Fathom](/tools/fathom/) because the free plan is strong enough for most individuals and paid tiers scale into team search and CRM workflows, with bot-free Mac capture still best treated as a beta feature.
 - **Best customer-success meeting memory:** [MeetGeek](/tools/meetgeek/) because Business combines unlimited transcription, video, team spaces, AI Chat, workflow automation, consent notifications, and CRM/task handoff at SMB-friendly pricing.
-- **Best team meeting intelligence platform:** [Fireflies](/tools/fireflies/) because it is built around unlimited paid transcription, AI summaries, searchable meeting history, analytics, integrations, and admin controls.
+- **Best team meeting intelligence platform:** [Fireflies](/tools/fireflies/) because it is built around unlimited paid transcription, AI summaries, searchable meeting history, analytics, integrations, admin controls, and credit-gated advanced features.
 - **Best live transcription workflow:** [Otter.ai](/tools/otter-ai/) because it focuses on live transcription, speaker identification, collaborative capture, and meeting workflows.
 - **Best meeting-report layer:** [Read AI](/tools/read-ai/) because it adds reports, coaching, playback, search, integrations, and broader workplace productivity context.
 - **Best free source notebook:** [NotebookLM](/tools/notebooklm/) because it turns existing sources into grounded research and study outputs with clear upgrade paths.
@@ -46,11 +46,11 @@ As of May 26, 2026, the best purchase depends less on "which AI summarizes best?
 
 ## Choosing the Right Tool
 
-**Use Fathom if:** you need fast personal meeting notes, summaries, clips, and searchable calls with a low-friction free starting point.
+**Use Fathom if:** you need fast personal meeting notes, summaries, clips, and searchable calls with a low-friction free starting point. Validate bot-free capture and Account-Wide Ask limits before rolling it out as a team knowledge layer.
 
 **Use MeetGeek if:** customer-facing meetings need to become account memory, renewal prep, action items, CRM updates, product feedback, and searchable history across languages.
 
-**Use Fireflies if:** the team needs meeting intelligence, CRM handoff, analytics, action items, integrations, and stronger admin/security controls.
+**Use Fireflies if:** the team needs meeting intelligence, CRM handoff, analytics, action items, integrations, and stronger admin/security controls. Model credit use for Live Assist AskFred, AI Skills, custom summaries, Sales Assist, voice agents, and CRM autofill before assuming the paid plan covers every advanced feature.
 
 **Use Otter.ai if:** live transcription, speaker identification, collaborative transcripts, and education/interview workflows matter most.
 
@@ -77,8 +77,10 @@ As of May 26, 2026, the best purchase depends less on "which AI summarizes best?
 
 ## Sources
 
-- [Fathom pricing](https://www.fathom.ai/pricing) (verified 2026-05-13)
-- [Fireflies pricing](https://fireflies.ai/pricing) (verified 2026-05-13)
+- [Fathom pricing](https://www.fathom.ai/pricing) (verified 2026-06-02)
+- [Fathom Account-Wide Ask usage limits](https://help.fathom.video/en/articles/10390017) (verified 2026-06-02)
+- [Fireflies pricing](https://fireflies.ai/pricing) (verified 2026-06-02)
+- [Fireflies AI Credits guide](https://guide.fireflies.ai/articles/2114151875-learn-about-ai-credits) (verified 2026-06-02)
 - [Otter.ai pricing](https://otter.ai/pricing) (verified 2026-05-13)
 - [Read AI pricing](https://www.read.ai/plans-pricing) (verified 2026-05-24)
 - [Read AI product overview](https://www.read.ai/) (verified 2026-05-24)

@@ -1959,7 +1959,8 @@
       "url": "https://elevenlabs.io/pricing/api",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "elevenlabs-500m-arr-2026",
@@ -1975,7 +1976,8 @@
       "url": "https://elevenlabs.io/docs/overview/models",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "elevenlabs-model-help",
@@ -1991,7 +1993,8 @@
       "url": "https://elevenlabs.io/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "elevenlabs-series-d-2026",
@@ -2007,7 +2010,17 @@
       "url": "https://help.elevenlabs.io/hc/en-us/articles/29298065878929-How-much-does-ElevenAgents-cost",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
+    },
+    {
+      "id": "elevenlabs-api-payg-2026",
+      "label": "ElevenLabs API and Agents PAYG pricing update",
+      "url": "https://elevenlabs.io/blog/weve-lowered-api-agents-pricing-and-introduced-pay-as-you-go",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "elicit-plan-docs",
@@ -2015,7 +2028,8 @@
       "url": "https://support.elicit.com/en/articles/14759154-systematic-reviews-in-elicit",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "elicit-pricing",
@@ -2023,7 +2037,8 @@
       "url": "https://elicit.com/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "trust_tier": "primary",
@@ -2037,10 +2052,11 @@
     {
       "id": "exa-official",
       "label": "Exa pricing",
-      "url": "https://exa.ai/pricing",
+      "url": "https://exa.ai/pricing/api",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "factory-best-for",
@@ -2088,7 +2104,8 @@
       "url": "https://docs.fal.ai/",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "fal-ai-models",
@@ -2096,7 +2113,8 @@
       "url": "https://fal.ai/models",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "fal-ai-official",
@@ -2104,7 +2122,8 @@
       "url": "https://fal.ai/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "fal-ai-pricing",
@@ -2112,7 +2131,8 @@
       "url": "https://fal.ai/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "fathom-help",
@@ -2120,7 +2140,8 @@
       "url": "https://help.fathom.video/",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "fathom-official",
@@ -2128,15 +2149,17 @@
       "url": "https://fathom.video/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "fathom-pricing",
       "label": "Fathom pricing",
-      "url": "https://fathom.video/pricing",
+      "url": "https://fathom.ai/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "figma-ai-credits",
@@ -2144,7 +2167,8 @@
       "url": "https://help.figma.com/hc/en-us/articles/33459875669015-How-AI-credits-work",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "figma-make-models",
@@ -2152,7 +2176,8 @@
       "url": "https://help.figma.com/hc/en-us/articles/36400680326551-Select-an-AI-model-to-use-in-Figma-Make",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "figma-make-create",
@@ -2160,7 +2185,8 @@
       "url": "https://help.figma.com/hc/en-us/articles/31304485164695-Create-and-edit-a-Figma-Make-file",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "figma-make-advanced",
@@ -2168,7 +2194,8 @@
       "url": "https://help.figma.com/hc/en-us/articles/35710574222487-Beyond-the-basics-Using-Figma-Make",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "figma-plans-features",
@@ -2176,7 +2203,8 @@
       "url": "https://help.figma.com/hc/en-us/articles/360040328273-Figma-plans-and-features",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "figma-billing",
@@ -2184,7 +2212,8 @@
       "url": "https://help.figma.com/hc/en-us/articles/29717597009431-Guide-to-billing-at-Figma",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "figma-pricing",
@@ -2192,7 +2221,8 @@
       "url": "https://www.figma.com/pricing/",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "fireflies-askfred",
@@ -2200,7 +2230,8 @@
       "url": "https://fireflies.ai/askfred",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "fireflies-features",
@@ -2208,7 +2239,8 @@
       "url": "https://fireflies.ai/features",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "fireflies-integrations",
@@ -2216,7 +2248,8 @@
       "url": "https://fireflies.ai/integrations",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "fireflies-official",
@@ -2224,7 +2257,8 @@
       "url": "https://fireflies.ai/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "fireworks-ai-docs",
@@ -2232,7 +2266,8 @@
       "url": "https://docs.fireworks.ai/",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "fireworks-ai-models",
@@ -2240,7 +2275,8 @@
       "url": "https://fireworks.ai/models",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "fireworks-ai-official",
@@ -2248,7 +2284,8 @@
       "url": "https://fireworks.ai/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "fireworks-ai-pricing",
@@ -2256,7 +2293,8 @@
       "url": "https://fireworks.ai/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "fish-audio-official",
@@ -2264,15 +2302,17 @@
       "url": "https://fish.audio",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "fish-audio-pricing",
-      "label": "Fish Audio official site",
-      "url": "https://fish.audio",
-      "type": "official",
+      "label": "Fish Audio plans and pricing",
+      "url": "https://fish.audio/plan/",
+      "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "flux-docs",
@@ -7361,7 +7401,8 @@
       "url": "https://eightfold.ai/products/talent-acquisition/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "eightfold-products",
@@ -7369,7 +7410,8 @@
       "url": "https://eightfold.ai/products/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "hireez-platform",

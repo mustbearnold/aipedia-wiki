@@ -16,13 +16,13 @@ update_frequency: monthly
 
 AI voice is not one category. The market splits into **voice generation**, **voice cloning**, **dubbing**, **real-time voice agents**, **meeting transcription**, **creator transcription/editing**, **content repurposing from audio**, and **speech-to-text APIs**.
 
-Start with [ElevenLabs](/tools/elevenlabs/) for polished creator voice generation and cloning. Look at [MiniMax Speech](/tools/minimax-speech/) when hosted TTS price, Speech 2.8 API access, voice slots, RPM, and multilingual coverage matter. Use [Cartesia](/tools/cartesia/) Line or [Retell AI](/tools/retell-ai/) for low-latency voice agents. Use [CloudTalk](/tools/cloudtalk/) when the voice problem is a sales/support phone system with CRM sync, AI summaries, coaching, and optional AI voice agents. Use [MeetGeek](/tools/meetgeek/) when customer-facing meetings need 100+ language transcription, AI summaries, action items, AI Chat, and CRM/task automation; use [Fathom](/tools/fathom/) for the cleaner individual meeting-transcription default. Use [Descript](/tools/descript/) for podcast/video transcription and editing now that its June 2 feature check surfaces AI avatars and prompt-based media generation alongside AI Speech, Regenerate, Studio Sound, captions, clips, and Underlord. Use [Castmagic](/tools/castmagic/) for turning recorded audio into ready-to-publish content, and [Deepgram](/tools/deepgram/), [AssemblyAI](/tools/assemblyai/), or Cartesia Ink-Whisper when transcription is an API or product feature. Deepgram's June 2 check keeps the PAYG/Growth split clear: Growth starts with prepaid annual credits from $4K+/year and saves up to 20%. AssemblyAI's June 1 pricing check keeps the key buyer split clear: Universal-3 Pro for higher-accuracy batch transcription, Universal-3 Pro Streaming for live transcription, and Voice Agent API when speech-to-speech belongs in the product.
+Start with [ElevenLabs](/tools/elevenlabs/) for polished creator voice generation, cloning, dubbing, low-latency agents, and live STT; its May 2026 PAYG update lowered self-serve API and ElevenAgents rates, while Scribe v2 Realtime now matters for streaming transcription. Look at [MiniMax Speech](/tools/minimax-speech/) when hosted TTS price, Speech 2.8 API access, voice slots, RPM, and multilingual coverage matter. Use [Cartesia](/tools/cartesia/) Line or [Retell AI](/tools/retell-ai/) for low-latency voice agents. Use [CloudTalk](/tools/cloudtalk/) when the voice problem is a sales/support phone system with CRM sync, AI summaries, coaching, and optional AI voice agents. Use [MeetGeek](/tools/meetgeek/) when customer-facing meetings need 100+ language transcription, AI summaries, action items, AI Chat, and CRM/task automation; use [Fathom](/tools/fathom/) for the cleaner individual meeting-transcription default, while testing its bot-free Mac capture beta and Account-Wide Ask Fathom limits before team rollout. Use [Descript](/tools/descript/) for podcast/video transcription and editing now that its June 2 feature check surfaces AI avatars and prompt-based media generation alongside AI Speech, Regenerate, Studio Sound, captions, clips, and Underlord. Use [Castmagic](/tools/castmagic/) for turning recorded audio into ready-to-publish content, and [Deepgram](/tools/deepgram/), [AssemblyAI](/tools/assemblyai/), or Cartesia Ink-Whisper when transcription is an API or product feature. Deepgram's June 2 check keeps the PAYG/Growth split clear: Growth starts with prepaid annual credits from $4K+/year and saves up to 20%. AssemblyAI's June 1 pricing check keeps the key buyer split clear: Universal-3 Pro for higher-accuracy batch transcription, Universal-3 Pro Streaming for live transcription, and Voice Agent API when speech-to-speech belongs in the product.
 
 ## Best by Use Case
 
 | Use case | Start with | Why |
 |---|---|---|
-| YouTube voiceover | [ElevenLabs](/tools/elevenlabs/) | Best default for polished creator narration, cloned channel voices, dubbing, and production workflow; compare Fish Audio and MiniMax before scaling high-volume output. |
+| YouTube voiceover | [ElevenLabs](/tools/elevenlabs/) | Best default for polished creator narration, cloned channel voices, dubbing, and production workflow; compare Fish Audio's UTF-8-byte API pricing and MiniMax before scaling high-volume output. |
 | Best overall TTS quality | [ElevenLabs](/tools/elevenlabs/) | Strong creator workflow across text-to-speech, voice cloning, dubbing, speech-to-text, sound effects, music, and production tools. |
 | Hosted multilingual TTS value | [MiniMax Speech](/tools/minimax-speech/) | Strong fit when Speech 2.8 API access, pay-as-you-go character pricing, subscription credits, voice slots, RPM, and multilingual hosted output are the main constraints. |
 | Real-time voice agents | [Cartesia](/tools/cartesia/) or [Retell AI](/tools/retell-ai/) | Built for low-latency conversational turns rather than static narration. Cartesia's Line agent platform now sits alongside Sonic TTS and Ink-Whisper STT in one stack. |
@@ -33,7 +33,7 @@ Start with [ElevenLabs](/tools/elevenlabs/) for polished creator voice generatio
 | Speech-to-text API | [Deepgram](/tools/deepgram/), [AssemblyAI](/tools/assemblyai/), or Cartesia Ink-Whisper | Better fit when transcription powers an app, workflow, analytics system, or backend service. Voxtral (Mistral) is positioned as STT, not text-to-speech. |
 | Podcast/video production | [Descript](/tools/descript/) or [Riverside](/tools/riverside/) | Voice, transcript, recording, clips, captions, and publishing workflows in one surface. |
 | Corporate narration | [WellSaid](/tools/wellsaid/) or [Murf](/tools/murf/) | Safer team workflows, approvals, and brand voice management. |
-| Open-source or local TTS | [Fish Audio](/tools/fish-audio/) or [Kokoro](/tools/kokoro/) | Better when privacy, local control, or self-hosting matters. |
+| Open-source or local TTS | [Fish Audio](/tools/fish-audio/) or [Kokoro](/tools/kokoro/) | Better when privacy, local control, self-hosting, or Fish's $15 per 1M UTF-8 bytes API unit matters. |
 
 ## Buying Guidance
 
@@ -59,9 +59,11 @@ Start with [ElevenLabs](/tools/elevenlabs/) for polished creator voice generatio
 
 ## Sources
 
-- [ElevenLabs pricing](https://elevenlabs.io/pricing) (verified 2026-05-13)
-- [Fish Audio plans](https://fish.audio/plan/) (verified 2026-05-13)
-- [Fish Audio API pricing](https://docs.fish.audio/developer-guide/models-pricing/pricing-and-rate-limits) (verified 2026-05-13)
+- [ElevenLabs pricing](https://elevenlabs.io/pricing) (verified 2026-06-02)
+- [ElevenLabs API pricing](https://elevenlabs.io/pricing/api) (verified 2026-06-02)
+- [ElevenLabs API and Agents PAYG update](https://elevenlabs.io/blog/weve-lowered-api-agents-pricing-and-introduced-pay-as-you-go) (verified 2026-06-02)
+- [Fish Audio plans](https://fish.audio/plan/) (verified 2026-06-02)
+- [Fish Audio API pricing](https://docs.fish.audio/developer-guide/models-pricing/pricing-and-rate-limits) (verified 2026-06-02)
 - [MiniMax Audio Subscription pricing](https://platform.minimax.io/docs/guides/pricing-speech) (verified 2026-05-13)
 - [MiniMax pay-as-you-go pricing](https://platform.minimax.io/docs/guides/pricing-paygo) (verified 2026-05-13)
 - [MiniMax T2A API docs](https://platform.minimax.io/docs/api-reference/speech-t2a-intro) (verified 2026-05-13)
@@ -71,7 +73,8 @@ Start with [ElevenLabs](/tools/elevenlabs/) for polished creator voice generatio
 - [Descript pricing](https://www.descript.com/pricing) (verified 2026-06-02)
 - [Deepgram pricing](https://deepgram.com/pricing) (verified 2026-06-02)
 - [AssemblyAI pricing](https://www.assemblyai.com/pricing) (verified 2026-06-01)
-- [Fathom pricing](https://www.fathom.ai/pricing) (verified 2026-05-13)
+- [Fathom pricing](https://www.fathom.ai/pricing) (verified 2026-06-02)
+- [Fathom Account-Wide Ask usage limits](https://help.fathom.video/en/articles/10390017) (verified 2026-06-02)
 - [CloudTalk pricing](https://www.cloudtalk.io/pricing/) (verified 2026-05-26)
 - [CloudTalk Conversation Intelligence help center](https://help.cloudtalk.io/en/articles/9128167-conversation-intelligence) (verified 2026-05-26)
 - [MeetGeek pricing](https://meetgeek.ai/pricing) (verified 2026-05-26)

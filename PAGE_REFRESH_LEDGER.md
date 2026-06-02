@@ -380,16 +380,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /guides/synthesia-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/synthesia-alternatives.md |
 | 2026-05-13 | /media-kit/ | Static page | Yes | git | src/pages/media-kit.astro |
 | 2026-05-13 | /reports/2026-04/ | Report | Yes | frontmatter | src/content/reports/2026-04.md |
-| 2026-05-13 | /tools/eightfold-ai/ | Tool | Yes | frontmatter | src/content/tools/eightfold-ai.md |
-| 2026-05-13 | /tools/elevenlabs/ | Tool | Yes | frontmatter | src/content/tools/elevenlabs.md |
-| 2026-05-13 | /tools/elicit/ | Tool | Yes | frontmatter | src/content/tools/elicit.md |
-| 2026-05-13 | /tools/exa/ | Tool | Yes | frontmatter | src/content/tools/exa.md |
-| 2026-05-13 | /tools/fal-ai/ | Tool | Yes | frontmatter | src/content/tools/fal-ai.md |
-| 2026-05-13 | /tools/fathom/ | Tool | Yes | frontmatter | src/content/tools/fathom.md |
-| 2026-05-13 | /tools/figma/ | Tool | Yes | frontmatter | src/content/tools/figma.md |
-| 2026-05-13 | /tools/fireflies/ | Tool | Yes | frontmatter | src/content/tools/fireflies.md |
-| 2026-05-13 | /tools/fireworks-ai/ | Tool | Yes | frontmatter | src/content/tools/fireworks-ai.md |
-| 2026-05-13 | /tools/fish-audio/ | Tool | Yes | frontmatter | src/content/tools/fish-audio.md |
 | 2026-05-13 | /tools/flux/ | Tool | Yes | frontmatter | src/content/tools/flux.md |
 | 2026-05-13 | /tools/framer-ai/ | Tool | Yes | frontmatter | src/content/tools/framer-ai.md |
 | 2026-05-13 | /tools/galileo-ai/ | Tool | Yes | frontmatter | src/content/tools/galileo-ai.md |
@@ -659,7 +649,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-01 | /answers/best-free-ai-tools-2026/ | Static page | Yes | page metadata | src/pages/answers/best-free-ai-tools-2026.astro |
 | 2026-06-01 | /answers/chatgpt-alternatives-2026/ | Static page | Yes | page metadata | src/pages/answers/chatgpt-alternatives-2026.astro |
 | 2026-06-01 | /categories/ai-coding/ | Category | Yes | frontmatter | src/content/categories/ai-coding.md |
-| 2026-06-01 | /categories/ai-infrastructure/ | Category | Yes | frontmatter | src/content/categories/ai-infrastructure.md |
 | 2026-06-01 | /categories/ai-music/ | Category | Yes | frontmatter | src/content/categories/ai-music.md |
 | 2026-06-01 | /companies/ | Static page | Yes | git | src/pages/companies/index.astro |
 | 2026-06-01 | /demo-godtier/ | Static page | Yes | git | src/pages/demo-godtier.astro |
@@ -707,23 +696,24 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-01 | /tools/val-town/ | Tool | Yes | frontmatter | src/content/tools/val-town.md |
 | 2026-06-01 | /tools/windsurf/ | Tool | Yes | frontmatter | src/content/tools/windsurf.md |
 | 2026-06-01 | /tools/zed/ | Tool | Yes | frontmatter | src/content/tools/zed.md |
-| 2026-06-02 | / | Static page | Yes | working tree | src/pages/index.astro |
-| 2026-06-02 | /categories/ | Static page | Yes | working tree | src/pages/categories/index.astro |
-| 2026-06-02 | /categories/ai-automation/ | Category | Yes | working tree | src/content/categories/ai-automation.md |
-| 2026-06-02 | /categories/ai-chatbots/ | Category | Yes | working tree | src/content/categories/ai-chatbots.md |
+| 2026-06-02 | / | Static page | Yes | git | src/pages/index.astro |
+| 2026-06-02 | /categories/ | Static page | Yes | git | src/pages/categories/index.astro |
+| 2026-06-02 | /categories/ai-automation/ | Category | Yes | frontmatter | src/content/categories/ai-automation.md |
+| 2026-06-02 | /categories/ai-chatbots/ | Category | Yes | frontmatter | src/content/categories/ai-chatbots.md |
 | 2026-06-02 | /categories/ai-design/ | Category | Yes | frontmatter | src/content/categories/ai-design.md |
 | 2026-06-02 | /categories/ai-image/ | Category | Yes | frontmatter | src/content/categories/ai-image.md |
+| 2026-06-02 | /categories/ai-infrastructure/ | Category | Yes | frontmatter | src/content/categories/ai-infrastructure.md |
 | 2026-06-02 | /categories/ai-notes/ | Category | Yes | frontmatter | src/content/categories/ai-notes.md |
 | 2026-06-02 | /categories/ai-presentation/ | Category | Yes | frontmatter | src/content/categories/ai-presentation.md |
 | 2026-06-02 | /categories/ai-research/ | Category | Yes | frontmatter | src/content/categories/ai-research.md |
-| 2026-06-02 | /categories/ai-search/ | Category | Yes | working tree | src/content/categories/ai-search.md |
+| 2026-06-02 | /categories/ai-search/ | Category | Yes | frontmatter | src/content/categories/ai-search.md |
 | 2026-06-02 | /categories/ai-seo/ | Category | Yes | frontmatter | src/content/categories/ai-seo.md |
 | 2026-06-02 | /categories/ai-video/ | Category | Yes | frontmatter | src/content/categories/ai-video.md |
-| 2026-06-02 | /categories/ai-voice/ | Category | Yes | working tree | src/content/categories/ai-voice.md |
-| 2026-06-02 | /categories/ai-writing/ | Category | Yes | working tree | src/content/categories/ai-writing.md |
-| 2026-06-02 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
-| 2026-06-02 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
-| 2026-06-02 | /tools/ | Static page | Yes | working tree | src/pages/tools/index.astro |
+| 2026-06-02 | /categories/ai-voice/ | Category | Yes | frontmatter | src/content/categories/ai-voice.md |
+| 2026-06-02 | /categories/ai-writing/ | Category | Yes | frontmatter | src/content/categories/ai-writing.md |
+| 2026-06-02 | /llms-full.txt | Crawl surface | No | git | src/pages/llms-full.txt.ts |
+| 2026-06-02 | /llms.txt | Crawl surface | No | git | src/pages/llms.txt.ts |
+| 2026-06-02 | /tools/ | Static page | Yes | git | src/pages/tools/index.astro |
 | 2026-06-02 | /tools/canva/ | Tool | Yes | frontmatter | src/content/tools/canva.md |
 | 2026-06-02 | /tools/capacities/ | Tool | Yes | frontmatter | src/content/tools/capacities.md |
 | 2026-06-02 | /tools/captions/ | Tool | Yes | frontmatter | src/content/tools/captions.md |
@@ -739,13 +729,23 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-02 | /tools/comet/ | Tool | Yes | frontmatter | src/content/tools/comet.md |
 | 2026-06-02 | /tools/connected-papers/ | Tool | Yes | frontmatter | src/content/tools/connected-papers.md |
 | 2026-06-02 | /tools/consensus/ | Tool | Yes | frontmatter | src/content/tools/consensus.md |
-| 2026-06-02 | /tools/copy-ai/ | Tool | Yes | working tree | src/content/tools/copy-ai.md |
-| 2026-06-02 | /tools/crewai/ | Tool | Yes | working tree | src/content/tools/crewai.md |
-| 2026-06-02 | /tools/deepgram/ | Tool | Yes | working tree | src/content/tools/deepgram.md |
-| 2026-06-02 | /tools/deepl/ | Tool | Yes | working tree | src/content/tools/deepl.md |
-| 2026-06-02 | /tools/deepseek/ | Tool | Yes | working tree | src/content/tools/deepseek.md |
-| 2026-06-02 | /tools/descript/ | Tool | Yes | working tree | src/content/tools/descript.md |
-| 2026-06-02 | /tools/dext/ | Tool | Yes | working tree | src/content/tools/dext.md |
-| 2026-06-02 | /tools/dia/ | Tool | Yes | working tree | src/content/tools/dia.md |
-| 2026-06-02 | /tools/doubao/ | Tool | Yes | working tree | src/content/tools/doubao.md |
-| 2026-06-02 | /tools/dust/ | Tool | Yes | working tree | src/content/tools/dust.md |
+| 2026-06-02 | /tools/copy-ai/ | Tool | Yes | frontmatter | src/content/tools/copy-ai.md |
+| 2026-06-02 | /tools/crewai/ | Tool | Yes | frontmatter | src/content/tools/crewai.md |
+| 2026-06-02 | /tools/deepgram/ | Tool | Yes | frontmatter | src/content/tools/deepgram.md |
+| 2026-06-02 | /tools/deepl/ | Tool | Yes | frontmatter | src/content/tools/deepl.md |
+| 2026-06-02 | /tools/deepseek/ | Tool | Yes | frontmatter | src/content/tools/deepseek.md |
+| 2026-06-02 | /tools/descript/ | Tool | Yes | frontmatter | src/content/tools/descript.md |
+| 2026-06-02 | /tools/dext/ | Tool | Yes | frontmatter | src/content/tools/dext.md |
+| 2026-06-02 | /tools/dia/ | Tool | Yes | frontmatter | src/content/tools/dia.md |
+| 2026-06-02 | /tools/doubao/ | Tool | Yes | frontmatter | src/content/tools/doubao.md |
+| 2026-06-02 | /tools/dust/ | Tool | Yes | frontmatter | src/content/tools/dust.md |
+| 2026-06-02 | /tools/eightfold-ai/ | Tool | Yes | frontmatter | src/content/tools/eightfold-ai.md |
+| 2026-06-02 | /tools/elevenlabs/ | Tool | Yes | frontmatter | src/content/tools/elevenlabs.md |
+| 2026-06-02 | /tools/elicit/ | Tool | Yes | frontmatter | src/content/tools/elicit.md |
+| 2026-06-02 | /tools/exa/ | Tool | Yes | frontmatter | src/content/tools/exa.md |
+| 2026-06-02 | /tools/fal-ai/ | Tool | Yes | frontmatter | src/content/tools/fal-ai.md |
+| 2026-06-02 | /tools/fathom/ | Tool | Yes | frontmatter | src/content/tools/fathom.md |
+| 2026-06-02 | /tools/figma/ | Tool | Yes | frontmatter | src/content/tools/figma.md |
+| 2026-06-02 | /tools/fireflies/ | Tool | Yes | frontmatter | src/content/tools/fireflies.md |
+| 2026-06-02 | /tools/fireworks-ai/ | Tool | Yes | frontmatter | src/content/tools/fireworks-ai.md |
+| 2026-06-02 | /tools/fish-audio/ | Tool | Yes | frontmatter | src/content/tools/fish-audio.md |

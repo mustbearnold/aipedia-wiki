@@ -16,7 +16,7 @@ update_frequency: monthly
 
 AI research tools split into four buyer lanes now: **literature review**, **academic search**, **citation context**, and **source-grounded analysis**. The right purchase depends on whether the user needs to find papers, evaluate citations, analyze a fixed source set, or research current web material outside academic databases.
 
-As of June 2, 2026, **[Elicit](/tools/elicit/)** is AiPedia's best research-workflow pick because it is built around paper discovery, screening, extraction, and evidence tables. **[Semantic Scholar](/tools/semantic-scholar/)** is the free academic-search baseline. **[Scite](/tools/scite/)** is the specialist pick when citation context matters. **[NotebookLM](/tools/notebooklm/)** is best when answers must stay grounded in a chosen source library. **[Perplexity](/tools/perplexity/)** is the best cited-web add-on for current sources, documentation, policy, market, and company research. **[Consensus](/tools/consensus/)** and **[Connected Papers](/tools/connected-papers/)** were rechecked for this refresh; **[ChatPDF](/tools/chatpdf/)** remains the quick PDF-chat route, with exact Plus pricing treated as in-app until verified from the public surface.
+As of June 2, 2026, **[Elicit](/tools/elicit/)** is AiPedia's best research-workflow pick because it is built around paper discovery, screening, extraction, and evidence tables; its Basic, Plus, Pro, Scale, and Enterprise ladder still needs billing-cadence verification at purchase time because research-team packaging can move quickly. **[Semantic Scholar](/tools/semantic-scholar/)** is the free academic-search baseline. **[Scite](/tools/scite/)** is the specialist pick when citation context matters. **[NotebookLM](/tools/notebooklm/)** is best when answers must stay grounded in a chosen source library. **[Perplexity](/tools/perplexity/)** is the best cited-web add-on for current sources, documentation, policy, market, and company research. **[Consensus](/tools/consensus/)** and **[Connected Papers](/tools/connected-papers/)** were rechecked for this refresh; **[ChatPDF](/tools/chatpdf/)** remains the quick PDF-chat route, with exact Plus pricing treated as in-app until verified from the public surface.
 
 For budget-conscious research teams running their own pipelines, [Reka Edge 7B](/tools/reka/) is now publicly priced at $0.10 per million input tokens and $0.10 per million output tokens, making it a low-cost extraction or summarization layer to evaluate alongside Elicit's structured workflow.
 
@@ -66,7 +66,7 @@ Do not cite generated text. Cite the original source. Do not treat a linked sour
 
 ## Sources
 
-- [Elicit pricing](https://elicit.com/pricing) - verified 2026-05-13.
+- [Elicit pricing](https://elicit.com/pricing) - verified 2026-06-02.
 - [Semantic Scholar](https://www.semanticscholar.org/) - verified 2026-05-13.
 - [Scite](https://scite.ai/) - verified 2026-05-13.
 - [NotebookLM](https://notebooklm.google/) - verified 2026-05-13.

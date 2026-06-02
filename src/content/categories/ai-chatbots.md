@@ -22,6 +22,8 @@ For most people, the first paid chatbot to compare is still one of three: [ChatG
 
 For document chat and private RAG, [AnythingLLM](/tools/anythingllm/) is the practical self-hosted app lane. The June 1 check keeps the MIT self-host path free, confirms cloud Basic at $50/month and Pro at $99/month, and keeps the recommendation model-agnostic: quality depends on the hosted or local LLM you connect.
 
+For API-first model serving, [Fireworks AI](/tools/fireworks-ai/) is tracked in this category because it exposes LLM and multimodal model endpoints, but buyers should treat it as infrastructure rather than a chatbot subscription. The June 2 pricing check keeps serverless inference, cached-token discounts, batch discounts, B200/B300 dedicated deployments, and fine-tuning as the important purchase variables.
+
 For companion-style character chat, [Character.AI](/tools/character-ai/) is a different lane from general assistants. The June 2 c.ai+ check keeps the buyer story simple: pay for ad-free chats, unlimited voice calls, no slow mode, better memory, and early-access perks when the product itself is the entertainment/social workflow, not a work assistant.
 
 The wrong move is paying for three overlapping chatbots without a job for each one. Start with the assistant closest to your daily work, then add a specialist only when it solves a real gap: citations, Google integration, long-form editing, X context, coding workflows, or enterprise controls.
@@ -39,6 +41,7 @@ The wrong move is paying for three overlapping chatbots without a job for each o
 | **[Qwen](/tools/qwen/)** | Alibaba Cloud, open-weight Qwen3, hosted Qwen3.7-Max, multilingual model control | Best for builders who want Qwen Cloud APIs or self-hostable Apache 2.0 Qwen3 checkpoints, not a polished consumer workspace. |
 | **[DeepSeek](/tools/deepseek/)** | Low-cost API reasoning, open-weight baseline, China-origin model testing | Best when cost and self-hosting experiments matter more than Western enterprise procurement. Recheck endpoint names and token rates before production. |
 | **[Doubao](/tools/doubao/)** | China-first ByteDance assistant and Volcengine model/API evaluation | Best for Chinese-language consumer and Asia cloud evaluation, not Western regulated data residency or primary English chat. |
+| **[Fireworks AI](/tools/fireworks-ai/)** | Hosted inference, batch jobs, dedicated GPUs, and fine-tuning | Best when the buyer needs model APIs and deployment controls rather than a consumer chat UI. |
 | **[NotebookLM](/tools/notebooklm/)** | Source-grounded study and document research | Not a general chatbot replacement; excellent when answers should come from a fixed source library. |
 | **[AnythingLLM](/tools/anythingllm/)** | Self-hosted document chat and RAG app | Best when the buyer wants an MIT-licensed app, local/private documents, agents, and bring-your-own-model control instead of another hosted chatbot subscription. |
 
@@ -72,6 +75,8 @@ The wrong move is paying for three overlapping chatbots without a job for each o
 **Use DeepSeek if:** API cost, open-weight baselines, or China-origin model benchmarking are more important than polished consumer UX and Western enterprise controls.
 
 **Use Doubao if:** Chinese-language consumer use, ByteDance ecosystem fit, or Volcengine model evaluation is the purchase reason, and Chinese infrastructure is acceptable.
+
+**Use Fireworks AI if:** the job is hosted model inference, batch processing, deployment capacity, cached-token optimization, or fine-tuning rather than a general assistant interface.
 
 ## When to Pay for More Than One
 
@@ -134,3 +139,6 @@ Do not subscribe to multiple chatbots because each one has a new model announcem
 - [AnythingLLM cloud pricing](https://anythingllm.com/cloud) (verified 2026-06-01)
 - [AnythingLLM GitHub releases](https://github.com/Mintplex-Labs/anything-llm/releases) (verified 2026-06-01)
 - [Character.AI c.ai+ pricing](https://character.ai/subscription/plus/pricing) (verified 2026-06-02)
+- [Fireworks AI pricing](https://fireworks.ai/pricing) (verified 2026-06-02)
+- [Fireworks billing FAQ](https://docs.fireworks.ai/faq-new/billing-pricing/how-much-does-fireworks-cost) (verified 2026-06-02)
+- [Fireworks inference documentation](https://docs.fireworks.ai/guides/inference-introduction) (verified 2026-06-02)

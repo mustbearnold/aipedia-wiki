@@ -40,7 +40,7 @@ AI search is not one category anymore. Buyers now choose between **cited answer 
 
 **Use [Kagi](/tools/kagi/) when privacy and search control matter.** It is the paid, ad-free search choice for people who want ranking controls and optional Assistant features rather than an answer-engine-first product.
 
-**Use [Exa](/tools/exa/) when you are building AI search into a product.** It is a developer API lane for semantic search, retrieval, crawling-style workflows, and deep research APIs.
+**Use [Exa](/tools/exa/) when you are building AI search into a product.** It is a developer API lane for semantic search, retrieval, crawling-style workflows, deep research APIs, answer endpoints, monitors, and AI page summaries. Model the add-on costs before agent traffic grows.
 
 **Watch Bing's AI-guided image search if visual discovery affects your workflow.** Microsoft's May 2026 opt-in Bing Image Search update groups image results into labeled sections and summarizes those groups. That matters for shopping, education, design inspiration, publishers, and ecommerce teams because visual search is becoming a guided decision surface rather than a plain thumbnail grid.
 
@@ -55,7 +55,7 @@ AI search is not one category anymore. Buyers now choose between **cited answer 
 | Google-native search and research | [Gemini](/tools/gemini/) | AI Mode, AI Overviews, Deep Research, Workspace, NotebookLM, and Chrome fit | Google ecosystem lock-in and regional feature limits |
 | Owned-source research | [NotebookLM](/tools/notebooklm/) | Best for selected PDFs, notes, reports, calls, classes, and Drive material | Not a full web discovery engine |
 | Private paid search | [Kagi](/tools/kagi/) | Ad-free search, lenses, ranking controls, Assistant options | Paid search is a harder sell for casual users |
-| Search/retrieval API | [Exa](/tools/exa/) | Search and retrieval primitives for AI apps and agents | Value depends on integration quality and request economics |
+| Search/retrieval API | [Exa](/tools/exa/) | Search and retrieval primitives for AI apps and agents | Value depends on integration quality, request economics, extra results, AI summaries, and monitor usage |
 | Real-time social context | [Grok](/tools/grok/) | Useful when X-native context is the source of the question | Social data can be noisy, biased, or incomplete |
 | Alternative answer engine | [You.com](/tools/you-com/) | Useful to compare as a search/chat hybrid, especially for teams evaluating multiple AI search surfaces | Must verify current plans and model access before committing |
 
@@ -107,8 +107,8 @@ Do not leave this category stale. Google AI Mode, Perplexity Pro/Max/Enterprise,
 - [NotebookLM upgrade docs](https://support.google.com/notebooklm/answer/16213268) (verified 2026-05-13)
 - [Kagi Ultimate plan docs](https://help.kagi.com/kagi/plans/ultimate-plan.html) (verified 2026-05-13)
 - [Kagi Team plan docs](https://help.kagi.com/kagi/plans/team-plan.html) (verified 2026-05-13)
-- [Exa pricing update](https://exa.ai/docs/changelog/pricing-update) (verified 2026-05-13)
-- [Exa pricing](https://exa.ai/pricing) (verified 2026-05-13)
+- [Exa pricing update](https://exa.ai/docs/changelog/pricing-update) (verified 2026-06-02)
+- [Exa API pricing](https://exa.ai/pricing/api) (verified 2026-06-02)
 - [You.com plans](https://home.you.com/plans) (verified 2026-05-13)
 - [X Premium+ pricing](https://help.x.com/en/premium-plus-price-update) (verified 2026-05-13)
 - [Bing AI-guided image search](https://blogs.bing.com/search/May-2026/A-Smarter-Way-to-Explore-Images-Has-Come-to-Bing) (verified 2026-05-26)

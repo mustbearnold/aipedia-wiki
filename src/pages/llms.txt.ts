@@ -3,7 +3,7 @@
 // Copilot) at the canonical index + category hubs + editorial policy.
 //
 // See also /llms-full.txt for the verbose variant with every page listed.
-// Refresh metadata: 2026-06-02 active-tool refresh for Canva, Capacities, Captions, Cartesia, Castmagic, Character.AI, ChatPDF, Claude Design, Clay, Clearscope, ClickUp, Clipdrop, Comet, Connected Papers, Consensus, Copy.ai, CrewAI, Deepgram, DeepL, DeepSeek, Descript, Dext, Dia, Doubao, and Dust; 2026-06-01 mixed and coding refresh retained.
+// Refresh metadata: 2026-06-02 active-tool refresh for Canva, Capacities, Captions, Cartesia, Castmagic, Character.AI, ChatPDF, Claude Design, Clay, Clearscope, ClickUp, Clipdrop, Comet, Connected Papers, Consensus, Copy.ai, CrewAI, Deepgram, DeepL, DeepSeek, Descript, Dext, Dia, Doubao, Dust, Eightfold AI, ElevenLabs, Elicit, Exa, fal.ai, Fathom, Figma, Fireflies, Fireworks AI, and Fish Audio; 2026-06-01 mixed and coding refresh retained.
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 
