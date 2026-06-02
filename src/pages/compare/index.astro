@@ -2,7 +2,11 @@
 /**
  * /compare/ index — god-tier 10/10 mobile-first comparison directory.
  *
- * Refresh metadata: 2026-05-28 ChatGPT vs Rytr comparison refresh for Rytr affiliate/pricing update, plus 2026-05-27 Lindy vs Zapier vs n8n comparison addition, plus 2026-05-24 Cursor/Qwen comparison freshness update.
+ * Refresh metadata: 2026-06-02 Adobe Firefly comparison cluster refresh
+ * across Canva, Flux, Magnific/Freepik, Ideogram, Midjourney, and Stable
+ * Diffusion, plus 2026-05-28 ChatGPT vs Rytr comparison refresh for Rytr
+ * affiliate/pricing update, 2026-05-27 Lindy vs Zapier vs n8n comparison
+ * addition, and 2026-05-24 Cursor/Qwen comparison freshness update.
  *
  * Legacy preserved at src/legacy-pages/compare-index.legacy.astro.
  */
@@ -65,7 +69,7 @@ const enriched: EnrichedComparison[] = allComparisons.map((c: any) => {
 
 const sorted = enriched.sort((a, b) => b.topScore - a.topScore);
 const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
-const description = `Browse ${allComparisons.length} head-to-head AI tool comparisons. Independent scoring, verified facts. Updated May 2026.`;
+const description = `Browse ${allComparisons.length} head-to-head AI tool comparisons. Independent scoring, verified facts. Updated June 2026.`;
 
 const collectionItems = sorted.map((c) => ({
   name: c.title,
@@ -75,7 +79,7 @@ const collectionItems = sorted.map((c) => ({
 ---
 
 <BaseLayout
-  title="AI Tool Comparisons · May 2026 · aipedia.wiki"
+  title="AI Tool Comparisons · June 2026 · aipedia.wiki"
   description={description}
 >
   <BreadcrumbLD items={[

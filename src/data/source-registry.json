@@ -136,7 +136,8 @@
       "url": "https://blog.adobe.com/en/publish/2026/03/19/adobe-firefly-expands-video-image-creation-with-new-ai-capabilities-custom-models",
       "type": "blog",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "adobe-firefly-pricing",
@@ -144,7 +145,8 @@
       "url": "https://www.adobe.com/products/firefly/plans",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "adobe-firefly-creative-agent-2026",
@@ -152,7 +154,8 @@
       "url": "https://news.adobe.com/news/2026/04/adobe-new-creative-agent",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "adobe-firefly-generative-credits",
@@ -160,7 +163,8 @@
       "url": "https://helpx.adobe.com/firefly/using/generative-credits.html",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "adobe-firefly-product",
@@ -168,7 +172,8 @@
       "url": "https://firefly.adobe.com/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "adobe-genai-guidelines",
@@ -176,7 +181,8 @@
       "url": "https://www.adobe.com/legal/licenses-terms/adobe-gen-ai-user-guidelines.html",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "ag2-docs",
@@ -2514,7 +2520,8 @@
       "url": "https://www.freepik.com/ai/image-generator",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "freepik-pricing",
@@ -2522,7 +2529,8 @@
       "url": "https://www.freepik.com/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "galileo-ai-features",
@@ -4711,7 +4719,8 @@
       "url": "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "midjourney-terms",
@@ -4719,7 +4728,8 @@
       "url": "https://docs.midjourney.com/hc/en-us/articles/32083055291277-Terms-of-Service",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "midjourney-version-docs",
@@ -4727,7 +4737,8 @@
       "url": "https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "midjourney-v8-alpha-update",
@@ -4735,7 +4746,8 @@
       "url": "https://updates.midjourney.com/v8-alpha/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "minimax-official",
@@ -6305,7 +6317,7 @@
     },
     {
       "trust_tier": "primary",
-      "last_checked": "2026-05-04",
+      "last_checked": "2026-06-02",
       "id": "stability-docs",
       "label": "Stability AI platform docs",
       "url": "https://platform.stability.ai/docs",
@@ -6314,7 +6326,7 @@
     },
     {
       "trust_tier": "primary",
-      "last_checked": "2026-05-04",
+      "last_checked": "2026-06-02",
       "id": "stability-stable-image",
       "label": "Stability AI Stable Image",
       "url": "https://stability.ai/stable-image",
@@ -6359,7 +6371,8 @@
       "url": "https://stability.ai/license",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "stable-audio-open",
@@ -6375,7 +6388,8 @@
       "url": "https://stability.ai/news-updates",
       "type": "blog",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "stable-diffusion-pricing",
@@ -6383,7 +6397,8 @@
       "url": "https://platform.stability.ai/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "stackblitz-webcontainers",
@@ -7785,7 +7800,8 @@
       "url": "https://updates.midjourney.com/v8-1-updates",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "mistral-3-launch",

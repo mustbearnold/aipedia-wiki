@@ -23,12 +23,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-04 | /tools/tome/ | Tool | Yes | frontmatter | src/content/tools/tome.md |
 | 2026-05-05 | /tools/dalle/ | Tool | Yes | frontmatter | src/content/tools/dalle.md |
 | 2026-05-12 | /dead/ | Static page | Yes | git | src/pages/dead/index.astro |
-| 2026-05-13 | /compare/adobe-firefly-vs-canva/ | Comparison | Yes | frontmatter | src/content/comparisons/adobe-firefly-vs-canva.md |
-| 2026-05-13 | /compare/adobe-firefly-vs-flux/ | Comparison | Yes | frontmatter | src/content/comparisons/adobe-firefly-vs-flux.md |
-| 2026-05-13 | /compare/adobe-firefly-vs-freepik/ | Comparison | Yes | frontmatter | src/content/comparisons/adobe-firefly-vs-freepik.md |
-| 2026-05-13 | /compare/adobe-firefly-vs-ideogram/ | Comparison | Yes | frontmatter | src/content/comparisons/adobe-firefly-vs-ideogram.md |
-| 2026-05-13 | /compare/adobe-firefly-vs-midjourney/ | Comparison | Yes | frontmatter | src/content/comparisons/adobe-firefly-vs-midjourney.md |
-| 2026-05-13 | /compare/adobe-firefly-vs-stable-diffusion/ | Comparison | Yes | frontmatter | src/content/comparisons/adobe-firefly-vs-stable-diffusion.md |
 | 2026-05-13 | /compare/ahrefs-vs-frase/ | Comparison | Yes | frontmatter | src/content/comparisons/ahrefs-vs-frase.md |
 | 2026-05-13 | /compare/ahrefs-vs-marketmuse/ | Comparison | Yes | frontmatter | src/content/comparisons/ahrefs-vs-marketmuse.md |
 | 2026-05-13 | /compare/ahrefs-vs-neuronwriter/ | Comparison | Yes | frontmatter | src/content/comparisons/ahrefs-vs-neuronwriter.md |
@@ -590,7 +584,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-27 | /tools/lindy/ | Tool | Yes | frontmatter | src/content/tools/lindy.md |
 | 2026-05-27 | /tools/openrouter/ | Tool | Yes | frontmatter | src/content/tools/openrouter.md |
 | 2026-05-27 | /tools/qwen/ | Tool | Yes | frontmatter | src/content/tools/qwen.md |
-| 2026-05-28 | /compare/ | Static page | Yes | git | src/pages/compare/index.astro |
 | 2026-05-28 | /compare/chatgpt-vs-rytr/ | Comparison | Yes | frontmatter | src/content/comparisons/chatgpt-vs-rytr.md |
 | 2026-05-28 | /guides/ | Static page | Yes | git | src/pages/guides/index.astro |
 | 2026-05-28 | /guides/best-ai-for-seo-content/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-seo-content.md |
@@ -660,9 +653,9 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-01 | /tools/windsurf/ | Tool | Yes | frontmatter | src/content/tools/windsurf.md |
 | 2026-06-01 | /tools/zed/ | Tool | Yes | frontmatter | src/content/tools/zed.md |
 | 2026-06-02 | / | Static page | Yes | git | src/pages/index.astro |
-| 2026-06-02 | /404/ | Static page | No | working tree | src/pages/404.astro |
-| 2026-06-02 | /about/ | Static page | Yes | working tree | src/pages/about/index.astro |
-| 2026-06-02 | /about/scoring/ | Static page | Yes | working tree | src/pages/about/scoring.astro |
+| 2026-06-02 | /404/ | Static page | No | git | src/pages/404.astro |
+| 2026-06-02 | /about/ | Static page | Yes | git | src/pages/about/index.astro |
+| 2026-06-02 | /about/scoring/ | Static page | Yes | git | src/pages/about/scoring.astro |
 | 2026-06-02 | /categories/ | Static page | Yes | git | src/pages/categories/index.astro |
 | 2026-06-02 | /categories/ai-automation/ | Category | Yes | frontmatter | src/content/categories/ai-automation.md |
 | 2026-06-02 | /categories/ai-chatbots/ | Category | Yes | frontmatter | src/content/categories/ai-chatbots.md |
@@ -678,9 +671,16 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-02 | /categories/ai-video/ | Category | Yes | frontmatter | src/content/categories/ai-video.md |
 | 2026-06-02 | /categories/ai-voice/ | Category | Yes | frontmatter | src/content/categories/ai-voice.md |
 | 2026-06-02 | /categories/ai-writing/ | Category | Yes | frontmatter | src/content/categories/ai-writing.md |
-| 2026-06-02 | /companies/ | Static page | Yes | working tree | src/pages/companies/index.astro |
-| 2026-06-02 | /companies/anthropic/ | Company | Yes | working tree | src/content/companies/anthropic.md |
-| 2026-06-02 | /companies/elevenlabs-company/ | Company | Yes | working tree | src/content/companies/elevenlabs-company.md |
+| 2026-06-02 | /companies/ | Static page | Yes | git | src/pages/companies/index.astro |
+| 2026-06-02 | /companies/anthropic/ | Company | Yes | frontmatter | src/content/companies/anthropic.md |
+| 2026-06-02 | /companies/elevenlabs-company/ | Company | Yes | frontmatter | src/content/companies/elevenlabs-company.md |
+| 2026-06-02 | /compare/ | Static page | Yes | working tree | src/pages/compare/index.astro |
+| 2026-06-02 | /compare/adobe-firefly-vs-canva/ | Comparison | Yes | working tree | src/content/comparisons/adobe-firefly-vs-canva.md |
+| 2026-06-02 | /compare/adobe-firefly-vs-flux/ | Comparison | Yes | working tree | src/content/comparisons/adobe-firefly-vs-flux.md |
+| 2026-06-02 | /compare/adobe-firefly-vs-freepik/ | Comparison | Yes | working tree | src/content/comparisons/adobe-firefly-vs-freepik.md |
+| 2026-06-02 | /compare/adobe-firefly-vs-ideogram/ | Comparison | Yes | working tree | src/content/comparisons/adobe-firefly-vs-ideogram.md |
+| 2026-06-02 | /compare/adobe-firefly-vs-midjourney/ | Comparison | Yes | working tree | src/content/comparisons/adobe-firefly-vs-midjourney.md |
+| 2026-06-02 | /compare/adobe-firefly-vs-stable-diffusion/ | Comparison | Yes | working tree | src/content/comparisons/adobe-firefly-vs-stable-diffusion.md |
 | 2026-06-02 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
 | 2026-06-02 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
 | 2026-06-02 | /tools/ | Static page | Yes | git | src/pages/tools/index.astro |
