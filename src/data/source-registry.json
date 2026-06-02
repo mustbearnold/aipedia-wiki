@@ -3303,7 +3303,8 @@
       "url": "https://higgsfield.ai/about",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "higgsfield-official",
@@ -3311,7 +3312,8 @@
       "url": "https://higgsfield.ai/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "higgsfield-pricing",
@@ -3319,7 +3321,8 @@
       "url": "https://higgsfield.ai/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "hugging-face-docs",
@@ -3327,7 +3330,8 @@
       "url": "https://huggingface.co/docs",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "hugging-face-models",
@@ -3335,7 +3339,8 @@
       "url": "https://huggingface.co/models",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "hugging-face-official",
@@ -3343,7 +3348,8 @@
       "url": "https://huggingface.co/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "hugging-face-pricing",
@@ -3351,7 +3357,8 @@
       "url": "https://huggingface.co/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "humata-blog",
@@ -3359,7 +3366,8 @@
       "url": "https://www.humata.ai/blog",
       "type": "blog",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "humata-official",
@@ -3367,7 +3375,8 @@
       "url": "https://www.humata.ai/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "humata-pricing",
@@ -3375,7 +3384,8 @@
       "url": "https://www.humata.ai/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "humata-security",
@@ -3383,7 +3393,8 @@
       "url": "https://www.humata.ai/security",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "hume-ai-docs",
@@ -3391,7 +3402,17 @@
       "url": "https://dev.hume.ai/docs",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
+    },
+    {
+      "id": "hume-ai-expression-measurement-docs",
+      "label": "Hume Expression Measurement docs",
+      "url": "https://dev.hume.ai/docs/expression-measurement/overview",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "hume-ai-official",
@@ -3399,7 +3420,8 @@
       "url": "https://www.hume.ai/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "hume-ai-pricing",
@@ -3407,7 +3429,8 @@
       "url": "https://www.hume.ai/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "hume-ai-products",
@@ -3415,7 +3438,8 @@
       "url": "https://www.hume.ai/products",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "hunyuan-cloud",
@@ -3423,7 +3447,8 @@
       "url": "https://cloud.tencent.com/product/hunyuan",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "hunyuan-docs",
@@ -3431,7 +3456,8 @@
       "url": "https://cloud.tencent.com/document/product/1729",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "hunyuan-official",
@@ -3439,7 +3465,8 @@
       "url": "https://hunyuan.tencent.com/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "hunyuan-pricing",
@@ -3447,7 +3474,8 @@
       "url": "https://cloud.tencent.com/document/product/1729/97731",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "hyperwrite-official",
@@ -3455,7 +3483,8 @@
       "url": "https://www.hyperwriteai.com",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "hyperwrite-personal-assistant",
@@ -3463,7 +3492,8 @@
       "url": "https://www.hyperwriteai.com/personal-assistant",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "hyperwrite-pricing",
@@ -3471,7 +3501,8 @@
       "url": "https://www.hyperwriteai.com/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "ideogram-docs",
@@ -3479,7 +3510,8 @@
       "url": "https://docs.ideogram.ai/",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "ideogram-official",
@@ -3487,7 +3519,8 @@
       "url": "https://ideogram.ai/features/3.0",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "ideogram-pricing",
@@ -3495,7 +3528,8 @@
       "url": "https://ideogram.ai/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "imagen-gemini-docs",
@@ -3575,7 +3609,8 @@
       "url": "https://fin.ai/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "intercom-official",
@@ -3583,7 +3618,8 @@
       "url": "https://www.intercom.com",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "intercom-pricing",
@@ -3591,7 +3627,8 @@
       "url": "https://www.intercom.com/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "invideo-ai",
@@ -3626,12 +3663,22 @@
       "volatility": "high"
     },
     {
+      "id": "jan-ai-changelog",
+      "label": "Jan changelog",
+      "url": "https://www.jan.ai/changelog",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
+    },
+    {
       "id": "jan-ai-docs",
       "label": "Jan docs",
       "url": "https://jan.ai/docs",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "jan-ai-official",
@@ -3639,15 +3686,17 @@
       "url": "https://jan.ai/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "jan-ai-repository",
       "label": "Jan GitHub repository",
-      "url": "https://github.com/menloresearch/jan",
+      "url": "https://github.com/janhq/jan",
       "type": "repository",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "jasper-official",
@@ -7491,7 +7540,8 @@
       "url": "https://www.hireez.com/platform/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "linkedin-recruiter",
@@ -7608,7 +7658,8 @@
       "url": "https://huggingface.co/tencent/Hy3-preview",
       "type": "repository",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "hunyuan-hyworld",
@@ -7616,7 +7667,8 @@
       "url": "https://huggingface.co/tencent/HY-World-2.0",
       "type": "repository",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "hunyuan-omniweaving",
@@ -7624,7 +7676,8 @@
       "url": "https://huggingface.co/tencent/HY-OmniWeaving",
       "type": "repository",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "imagen-subscriptions",
@@ -7640,7 +7693,8 @@
       "url": "https://www.intercom.com/help/en/articles/9121381-copilot-faqs",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "letta-code-pricing",

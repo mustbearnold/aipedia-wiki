@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$44.99/month"
 status: active
 launched: 2021-06
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-02
+last_verified: 2026-06-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://www.hyperwriteai.com"
     source_label: "HyperWrite official site"
     source_id: hyperwrite-official
-    verified_at: 2026-05-13
+    verified_at: 2026-06-02
     volatility: medium
     confidence: high
   agent_surface:
@@ -38,16 +38,16 @@ facts:
     source: "https://www.hyperwriteai.com/personal-assistant"
     source_label: "HyperWrite Personal Assistant"
     source_id: hyperwrite-personal-assistant
-    verified_at: 2026-05-13
+    verified_at: 2026-06-02
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
   pricing_anchor:
-    value: "Freemium writing-assistant product with paid plans listed on the vendor pricing page."
+    value: "Freemium writing-assistant product with paid plans listed on the vendor pricing page: Premium $19.99/mo monthly or $16/mo annual equivalent; Ultra $44.99/mo monthly or $29/mo annual equivalent as of June 2, 2026."
     source: "https://www.hyperwriteai.com/pricing"
     source_label: "HyperWrite pricing"
     source_id: hyperwrite-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-06-02
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -56,7 +56,7 @@ facts:
     source: "https://www.hyperwriteai.com"
     source_label: "HyperWrite official site"
     source_id: hyperwrite-official
-    verified_at: 2026-05-13
+    verified_at: 2026-06-02
     volatility: medium
     confidence: medium
   watch_out_for:
@@ -64,12 +64,12 @@ facts:
     source: "https://www.hyperwriteai.com/personal-assistant"
     source_label: "HyperWrite Personal Assistant"
     source_id: hyperwrite-personal-assistant
-    verified_at: 2026-05-13
+    verified_at: 2026-06-02
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
 tags: [ai-writing, browser-automation, ai-assistant, chrome-extension, personal-assistant]
-seo_title: "HyperWrite: Features, Pricing & Review (May 2026)"
+seo_title: "HyperWrite: Features, Pricing & Review (June 2026)"
 meta_description: "HyperWrite pairs an inline writing suite with a Personal Assistant browser agent. Free with limited monthly credits, Premium $19.99/mo (250 AI messages, unlimited TypeAheads), Ultra $44.99/mo (unlimited AI messages). Annual saves 20%."
 author: "aipedia.wiki Editorial"
 best_for:
@@ -98,6 +98,13 @@ price_history:
     source_label: "Source"
     source_id: hyperwrite-pricing
     note: "Pricing page now publishes a 250 AI messages per month limit on Premium plus 3 custom personas and citations with real-time info. Ultra moves to unlimited AI messages, 10 custom personas, and first access to experimental features. Annual billing saves 20%: $192/yr Premium ($16/mo equivalent), $348/yr Ultra ($29/mo equivalent)."
+  - date: 2026-06-02
+    plan: "Premium / Ultra"
+    price: "$19.99 / $44.99 monthly · $16 / $29 annual"
+    source: "https://www.hyperwriteai.com/pricing"
+    source_label: "Source"
+    source_id: hyperwrite-pricing
+    note: "Pricing page rechecked after a May 20, 2026 publish timestamp. Premium remains 250 AI messages/month with unlimited TypeAheads, citations with real-time info, and 3 custom personas; Ultra remains unlimited AI messages, 10 custom personas, and first access to experimental features."
 ---
 
 # HyperWrite
@@ -110,7 +117,7 @@ Pricing runs $0 to $44.99/month on monthly billing. Annual billing saves 20% on 
 
 > **Pick HyperWrite if a single Chrome extension has to cover both inline AI writing and routine browser automation.** The Personal Assistant agent is one of the few consumer browser agents priced below $50/month, and the writing suite works inside whatever editor is already open.
 >
-> **Skip it if [ChatGPT](/tools/chatgpt/) Plus already covers the workflow.** Operator on Plus at $20/month handles browser automation with deeper model backing, and GPT-5.5 beats HyperWrite's output ceiling on raw writing quality. For grammar-first editing, [Grammarly](/tools/grammarly/) is the stronger pick.
+> **Skip it if [ChatGPT](/tools/chatgpt/) Plus already covers the workflow.** ChatGPT's browser/agent features and direct access to OpenAI's current models can beat HyperWrite's output ceiling on raw writing quality. For grammar-first editing, [Grammarly](/tools/grammarly/) is the stronger pick.
 >
 > **Who pays which tier:** Free for casual testers willing to live with limited monthly credits on basic AI, Premium $19.99/mo (or $16/mo annual) for daily inline users who want 250 AI messages a month, unlimited TypeAheads, citations with real-time info, and 3 custom personas, Ultra $44.99/mo (or $29/mo annual) for unlimited AI messages, 10 custom personas, and first access to experimental features.
 
@@ -121,7 +128,7 @@ Pricing runs $0 to $44.99/month on monthly billing. Annual billing saves 20% on 
 | **Core product** | Chrome extension + web app |
 | **Writing tools** | AutoWrite, TypeAhead, HyperChat, Scholar AI, Summarizer, Rewriter, Email Responder |
 | **Browser agent** | Personal Assistant (navigates, clicks, fills forms, extracts data) |
-| **Underlying models** | Mix of OpenAI, Anthropic, and Google frontier APIs (routed per task) |
+| **Underlying models** | Third-party model routing; verify current provider/model access directly with HyperWrite for regulated use |
 | **Free tier** | Limited monthly credits on basic AI |
 | **Premium** | $19.99/mo (or $16/mo on annual, $192/yr) · 250 AI messages per month · unlimited TypeAheads · citations with real-time info · 3 custom personas · hundreds of AI tools |
 | **Ultra** | $44.99/mo (or $29/mo on annual, $348/yr) · unlimited AI messages · unlimited TypeAheads · 10 custom personas · first access to experimental features |
@@ -129,7 +136,7 @@ Pricing runs $0 to $44.99/month on monthly billing. Annual billing saves 20% on 
 | **Integrations** | Gmail, Google Docs, LinkedIn, Notion, most browser text fields |
 | **Desktop app** | None, browser-only |
 
-Every data point above was verified against vendor documentation on 2026-05-13. See Sources.
+Every data point above was verified against vendor documentation on 2026-06-02. See Sources.
 
 ## What it actually is
 
@@ -152,8 +159,8 @@ The moats are narrow. Personal Assistant remains below ChatGPT Operator on relia
 ## When to pick something else
 
 - **Grammar-first editing:** [Grammarly](/tools/grammarly/) is stronger on sentence-level correction and brand-voice enforcement at comparable price.
-- **Raw writing quality:** [ChatGPT](/tools/chatgpt/) Plus at $20/mo with GPT-5.5 beats HyperWrite's ceiling on long-form and reasoning-heavy prose.
-- **Long-form document coherence:** [Claude](/tools/claude/) Pro at $20/mo with Opus 4.7 handles 10K-word drafts better than HyperWrite's routed models.
+- **Raw writing quality:** A direct [ChatGPT](/tools/chatgpt/) subscription beats HyperWrite's ceiling on long-form and reasoning-heavy prose when model quality matters more than inline Chrome packaging.
+- **Long-form document coherence:** A direct [Claude](/tools/claude/) subscription is usually better for 10K-word drafts than HyperWrite's routed writing tools.
 - **Heavy browser automation:** ChatGPT Operator on Plus handles complex, unfamiliar sites more reliably than Personal Assistant today.
 - **Template-driven copy at volume:** [Jasper](/tools/jasper/) for brand-voice templates, or budget plays like Rytr for short-form output.
 
@@ -167,7 +174,7 @@ Subscription pricing via [hyperwriteai.com/pricing](https://www.hyperwriteai.com
 | Premium | $19.99/mo | $192/yr (~$16/mo, saves 20%) | 250 per month | 3 custom | Included | **Most daily users land here** |
 | Ultra | $44.99/mo | $348/yr (~$29/mo, saves 20%) | Unlimited | 10 custom | Included with first access to experimental features | Heavy browser-automation workloads |
 
-*Prices verified 2026-05-13 via [HyperWrite pricing](https://www.hyperwriteai.com/pricing). Premium and Ultra both include unlimited TypeAheads and citations with real-time info. Promo codes (such as TRYHYPERWRITE for 50% off the first month) rotate. The 250-AI-messages cap on Premium is new on the current pricing page and is the main reason heavy daily users should compare against Ultra before subscribing.*
+*Prices verified 2026-06-02 via [HyperWrite pricing](https://www.hyperwriteai.com/pricing). Premium and Ultra both include unlimited TypeAheads and citations with real-time info. Promo codes rotate. The 250-AI-messages cap on Premium is the main reason heavy daily users should compare against Ultra before subscribing.*
 
 ## Against the alternatives
 
@@ -193,7 +200,7 @@ Subscription pricing via [hyperwriteai.com/pricing](https://www.hyperwriteai.com
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [HyperWrite pricing](https://www.hyperwriteai.com/pricing), the [Personal Assistant product page](https://www.hyperwriteai.com/personal-assistant), and the [AI Agent overview](https://www.hyperwriteai.com/aitools/ai-agent).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-02 against [HyperWrite pricing](https://www.hyperwriteai.com/pricing), the [Personal Assistant product page](https://www.hyperwriteai.com/personal-assistant), and the [AI Agent overview](https://www.hyperwriteai.com/aitools/ai-agent).
 
 ## FAQ
 
@@ -204,13 +211,13 @@ Yes. The free tier gives limited monthly credits on basic AI. Premium at $19.99/
 A browser agent that operates the active Chrome tab from plain-language instructions. Clicks buttons, fills forms, navigates pages, extracts data. Closest conceptual peers are ChatGPT Operator and Claude's computer-use preview.
 
 **HyperWrite or ChatGPT Plus?**
-Pick HyperWrite if inline writing plus a bundled browser agent in one Chrome extension is the workflow. Pick [ChatGPT](/tools/chatgpt/) Plus if output ceiling matters more than packaging. GPT-5.5 beats HyperWrite on raw writing, and Operator is more reliable on unfamiliar sites.
+Pick HyperWrite if inline writing plus a bundled browser agent in one Chrome extension is the workflow. Pick [ChatGPT](/tools/chatgpt/) Plus if output ceiling matters more than packaging and you prefer OpenAI's own current model/agent stack.
 
 **Does HyperWrite run on desktop apps?**
 No. Chrome extension plus web app only. Users who live in Word, Notion desktop, or native clients will not see HyperWrite inline there.
 
 **Which models power HyperWrite?**
-A mix of third-party frontier APIs routed per task. No proprietary base model. Output ceiling tracks the quality of the underlying API call, not HyperWrite's own fine-tune.
+HyperWrite routes to third-party models rather than publishing a proprietary base model. Output ceiling tracks the quality of the underlying provider/model call, so regulated teams should verify current provider details directly with HyperWrite.
 
 ## Sources
 

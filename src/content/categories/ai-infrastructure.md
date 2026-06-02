@@ -44,6 +44,8 @@ The late-May infrastructure update is agent control. CoreWeave's [training-to-in
 
 **Use [Deepgram](/tools/deepgram/) when speech is infrastructure.** Deepgram is a better fit for product teams adding STT, TTS, audio intelligence, or voice agents than for creators who only need a one-off transcript.
 
+**Use [Hugging Face](/tools/hugging-face/) when model discovery, model cards, datasets, Spaces, and managed endpoints need to live in one open-AI collaboration surface.** The June 2 pricing check keeps Pro at $9/month, Team at $20/user/month, Enterprise from $50/user/month, storage at $12/TB public and $18/TB private before volume discounts, ZeroGPU on RTX Pro 6000 Blackwell for PRO/Enterprise, and Inference Endpoints starting at $0.033/hour CPU.
+
 ## Buyer Paths
 
 | Buyer job | Start with | Why | Watch out |
@@ -65,7 +67,7 @@ The late-May infrastructure update is agent control. CoreWeave's [training-to-in
 - **Direct LLM APIs:** Pick [OpenAI](/tools/chatgpt/), [Claude](/tools/claude/), or [Gemini](/tools/gemini/) when native features, procurement, and provider-specific controls matter.
 - **Cost and latency:** Pick [Mistral AI](/tools/mistral-ai/) or [Groq](/tools/groq/) when you can benchmark quality against real prompts and need tighter unit economics.
 - **Open-model infrastructure:** Pick [Together AI](/tools/together-ai/) when you need hosted inference, tuning, and GPU capacity for open models.
-- **Model catalog and experiments:** Pick [Hugging Face](/tools/hugging-face/) for discovery, datasets, model cards, demos, and endpoints.
+- **Model catalog and experiments:** Pick [Hugging Face](/tools/hugging-face/) for discovery, datasets, model cards, demos, Spaces, ZeroGPU, and endpoints.
 - **Media and community models:** Pick [Replicate](/tools/replicate/) when the job is running image, video, audio, or custom models by API.
 - **Fast media APIs:** Pick [fal.ai](/tools/fal-ai/) when successful-output billing, image/video/audio/3D endpoints, and fast experimentation matter.
 - **Production inference:** Pick [Fireworks AI](/tools/fireworks-ai/) when hosted model APIs, batch inference, dedicated GPU deployments, and fine-tuning are more important than a polished chatbot UI.
@@ -107,7 +109,7 @@ Do not publish infrastructure pages with old flat monthly subscription framing. 
 - [Browserbase pricing](https://www.browserbase.com/pricing) (verified 2026-06-01)
 - [Deepgram pricing](https://deepgram.com/pricing) (verified 2026-05-13)
 - [Together AI pricing](https://www.together.ai/pricing) (verified 2026-05-13)
-- [Hugging Face pricing](https://huggingface.co/pricing) (verified 2026-05-13)
+- [Hugging Face pricing](https://huggingface.co/pricing) (verified 2026-06-02)
 - [Modal pricing](https://modal.com/pricing) (verified 2026-05-13)
 - [LM Studio](https://lmstudio.ai/) (verified 2026-05-13)
 - [Pinecone pricing](https://www.pinecone.io/pricing/) (verified 2026-05-13)

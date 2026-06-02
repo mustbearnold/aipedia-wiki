@@ -5,7 +5,7 @@ title: AI Automation & Agents
 description: Current workflow automation, AI agent platforms, meeting automation, call automation, and operations tools for technical teams, non-technical operators, GTM workflows, customer success, support, sales, and internal automation.
 tool_count: 27
 seo_title: "Best AI Automation Tools & Agent Platforms (June 2026)"
-meta_description: "Updated June 2, 2026: compare n8n, Zapier, Make, Gumloop, Relevance AI, Activepieces, AG2, CrewAI, Dust, Glean, Goose, Genspark, GetResponse, Dext, Browserbase, Ada, Apollo, Amplemarket, Lindy, Manus, Pipedream, CloudTalk, and MeetGeek by workflow, pricing unit, and risk."
+meta_description: "Updated June 2, 2026: compare n8n, Zapier, Make, Gumloop, Relevance AI, Activepieces, AG2, CrewAI, Dust, Glean, Goose, Genspark, GetResponse, Dext, Browserbase, Ada, Intercom, hireEZ, Apollo, Amplemarket, Lindy, Manus, Pipedream, CloudTalk, and MeetGeek by workflow, pricing unit, and risk."
 author: "aipedia.wiki Editorial"
 last_updated: 2026-06-02
 last_verified: 2026-06-02
@@ -68,7 +68,11 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 
 **Use [Eightfold AI](/tools/eightfold-ai/) when automation starts with enterprise talent decisions.** Eightfold is not a simple recruiter productivity tool; the June 2 refresh keeps TalentForge, AI Interviewer/360 Interview, AI Interview Companion, Workforce Readiness, talent acquisition, talent management, workforce exchange, resource management, and workforce planning in one skills-intelligence procurement lane.
 
+**Use [hireEZ](/tools/hireez/) when recruiting automation needs sourcing plus CRM, rediscovery, applicant match, hiring intelligence, scheduling, job distribution, and ATS workflows.** The June 2 check keeps pricing demo-led, so the purchase should separate seats, candidate volume, CRM, applicant match, analytics, scheduling, implementation, support, and renewal escalators instead of assuming a self-serve price.
+
 **Use [Ada](/tools/ada/) when enterprise customer service wants AI agents for support outcomes.** Ada is now a demo-gated contact-sales page for serious service volumes, not a self-serve chatbot widget. Its June 1 source check found 550+ deployed AI agents and 5.5B+ interactions, so the buyer question is enterprise fit, resolution quality, and channel coverage.
+
+**Use [Intercom](/tools/intercom/) when support automation is chat-first and Fin outcome pricing fits the volume model.** The June 2 check keeps Essential/Advanced/Expert annual seats at $29/$85/$132, monthly seats at $39/$99/$139, Fin at $0.99 per outcome, Copilot at $29/agent/month, and the Pro add-on at $99/month.
 
 **Use [CloudTalk](/tools/cloudtalk/) when automation starts with phone operations.** CloudTalk is not a generic workflow router. It is the better fit when a sales or support team needs cloud calling, routing, dialers, CRM call logging, AI summaries, coaching analytics, and optional AI voice agents in one system.
 
@@ -106,6 +110,8 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 | Email/webinar/course marketing automation | [GetResponse](/tools/getresponse/) | Email sends, funnels, webinars, course creator, ecommerce and marketing automation | Not a general ops agent; affiliate status does not affect ranking |
 | Bookkeeping document automation | [Dext](/tools/dext/) | Receipts, invoices, expenses, bank/supplier statements, approvals, and accounting handoff | Not a ledger, payroll, tax, or general automation platform |
 | Enterprise talent intelligence | [Eightfold AI](/tools/eightfold-ai/) | Skills-based hiring, internal mobility, TalentForge, AI Interviewer, Workforce Readiness, and workforce planning | Requires HR data readiness, governance, implementation scope, and change management |
+| Recruiting sourcing and CRM automation | [hireEZ](/tools/hireez/) | Sourcing, CRM, rediscovery, applicant match, hiring intelligence, scheduling, job distribution, and ATS workflows | Demo-led pricing and broad implementation scope need procurement discipline |
+| Chat-first customer support automation | [Intercom](/tools/intercom/) | Fin AI Agent, human inbox, Copilot, help center, workflows, and customer context in one support platform | Seat, outcome, Copilot, and add-on fees stack quickly |
 | Phone-heavy sales/support operations | [CloudTalk](/tools/cloudtalk/) | Business calling, routing, dialers, CRM sync, AI Conversation Intelligence, and AI Voice Agents in one platform | More than teams need if the job is internal-only calling or pure chat support |
 | Meeting-to-workflow automation for CS, sales, recruiting, and ops | [MeetGeek](/tools/meetgeek/) | Transcripts, summaries, AI Chat, action items, Zapier/Make/n8n workflows, API/MCP access, and CRM/task handoff from meeting content | Needs consent policy, workspace permissions, and a defined post-meeting workflow |
 | One-off general autonomous tasks | [Manus](/tools/manus/) | Hosted VM agent for research, spreadsheets, slides, files, and browser work; official site now describes Manus as part of Meta | Credit burn and data-handling terms need direct verification before sensitive work |
@@ -178,7 +184,10 @@ Do not leave this category stale. Automation tools are adding MCP, agent builder
 - [Eightfold products](https://eightfold.ai/products/) (verified 2026-06-02)
 - [Eightfold TalentForge launch](https://eightfold.ai/company/press/press-releases/eightfold-ushers-in-the-golden-age-of-hr-software-with-launch-of-talentforge/) (verified 2026-06-02)
 - [Eightfold AI Interview Companion launch](https://eightfold.ai/company/press/press-releases/eightfold-ai-expands-talent-agents-across-the-full-interview-journey-introducing-ai-interview-companion-and-new-interview-capabilities/) (verified 2026-06-02)
+- [hireEZ recruiting platform](https://www.hireez.com/platform/) (verified 2026-06-02)
 - [Ada platform](https://www.ada.cx/platform) (verified 2026-06-01)
+- [Intercom pricing](https://www.intercom.com/pricing) (verified 2026-06-02)
+- [Fin AI Agent pricing](https://fin.ai/pricing) (verified 2026-06-02)
 - [Apollo pricing](https://apollo.io/pricing) (verified 2026-06-01)
 - [Amplemarket pricing](https://www.amplemarket.com/pricing) (verified 2026-06-01)
 - [Browserbase pricing](https://www.browserbase.com/pricing) (verified 2026-06-01)

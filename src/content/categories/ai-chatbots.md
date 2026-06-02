@@ -3,9 +3,9 @@ type: category
 slug: ai-chatbots
 title: AI Chatbots & LLMs
 description: General-purpose AI assistants and large language model chatbots for writing, research, coding help, analysis, multimodal work, and everyday decision support.
-tool_count: 15
+tool_count: 17
 seo_title: "Best AI Chatbots & LLMs (June 2026), aipedia.wiki"
-meta_description: "Compare the best AI chatbots and LLMs in June 2026: ChatGPT (GPT-5.5), Claude Opus 4.8, Gemini 3.1 Pro, Perplexity, Grok, Mistral, Qwen3.7-Max / Qwen Cloud, GLM-5.1, NotebookLM, and AnythingLLM, with enterprise workspace and self-hosted RAG signals."
+meta_description: "Compare the best AI chatbots and LLMs in June 2026: ChatGPT (GPT-5.5), Claude Opus 4.8, Gemini 3.1 Pro, Perplexity, Grok, Mistral, Qwen3.7-Max / Qwen Cloud, GLM-5.1, Hunyuan, Jan.ai, NotebookLM, and AnythingLLM, with enterprise workspace, local desktop, and self-hosted RAG signals."
 author: "aipedia.wiki Editorial"
 last_updated: 2026-06-02
 last_verified: 2026-06-02
@@ -18,7 +18,7 @@ AI chatbots are now the default starting point for writing, research, coding hel
 
 The May 31 refresh adds two enterprise workspace signals: MUFG's [ChatGPT Enterprise rollout to roughly 35,000 bank employees](/news/2026-05-30-openai-mufg-chatgpt-enterprise-rollout/) and Microsoft's [redesigned Microsoft 365 Copilot experience](/news/2026-05-31-microsoft-365-copilot-redesign-work-iq/). The lesson is practical. General assistants win inside companies only when training, permission rules, visible context, app placement, and output quality make daily work safer and faster.
 
-For most people, the first paid chatbot to compare is still one of three: [ChatGPT](/tools/chatgpt/) for the broadest all-purpose AI workspace, [Claude](/tools/claude/) for writing, long analysis, and code reasoning, or [Gemini](/tools/gemini/) for Google-native work across Search, Gmail, Docs, Drive, NotebookLM, and Google AI subscription benefits. [Perplexity](/tools/perplexity/) is the better answer engine when every serious claim needs a source trail. [Grok](/tools/grok/) is most useful when X-native real-time context matters. [Mistral AI](/tools/mistral-ai/) matters more for builders and teams that care about model control, European AI infrastructure, APIs, and open-model options. [Qwen](/tools/qwen/) is the Alibaba Cloud lane: hosted Qwen3.7-Max, Qwen Chat testing, Apache 2.0 Qwen3 open weights, and a growing Qwen Cloud / agent-platform push after [Alibaba's first international Qwen Conference](/news/2026-05-27-qwen-conference-agent-cloud-suite/). [GLM](/tools/glm/) is the Z.AI lane for teams evaluating GLM-5.1's 200K context, 128K maximum output, OpenAI-compatible API examples, MCP/tool support, MIT Hugging Face weights, and $1.40/M input plus $4.40/M output API pricing.
+For most people, the first paid chatbot to compare is still one of three: [ChatGPT](/tools/chatgpt/) for the broadest all-purpose AI workspace, [Claude](/tools/claude/) for writing, long analysis, and code reasoning, or [Gemini](/tools/gemini/) for Google-native work across Search, Gmail, Docs, Drive, NotebookLM, and Google AI subscription benefits. [Perplexity](/tools/perplexity/) is the better answer engine when every serious claim needs a source trail. [Grok](/tools/grok/) is most useful when X-native real-time context matters. [Mistral AI](/tools/mistral-ai/) matters more for builders and teams that care about model control, European AI infrastructure, APIs, and open-model options. [Qwen](/tools/qwen/) is the Alibaba Cloud lane: hosted Qwen3.7-Max, Qwen Chat testing, Apache 2.0 Qwen3 open weights, and a growing Qwen Cloud / agent-platform push after [Alibaba's first international Qwen Conference](/news/2026-05-27-qwen-conference-agent-cloud-suite/). [GLM](/tools/glm/) is the Z.AI lane for teams evaluating GLM-5.1's 200K context, 128K maximum output, OpenAI-compatible API examples, MCP/tool support, MIT Hugging Face weights, and $1.40/M input plus $4.40/M output API pricing. [Hunyuan](/tools/hunyuan/) is Tencent's open-weight/model-family lane for Hy3-preview, HY-World 2.0, and HY-OmniWeaving; [Jan.ai](/tools/jan-ai/) is the free local desktop lane, with v0.8.2 now adding faster startup, AMD ROCm/HIP on Linux, and resumable downloads.
 
 For document chat and private RAG, [AnythingLLM](/tools/anythingllm/) is the practical self-hosted app lane. The June 1 check keeps the MIT self-host path free, confirms cloud Basic at $50/month and Pro at $99/month, and keeps the recommendation model-agnostic: quality depends on the hosted or local LLM you connect.
 
@@ -40,10 +40,12 @@ The wrong move is paying for three overlapping chatbots without a job for each o
 | **[Mistral AI](/tools/mistral-ai/)** | Model-control workflows, European AI infrastructure, APIs, open-model strategy | Best for builders and organizations that care about deployment and vendor-control choices. |
 | **[Qwen](/tools/qwen/)** | Alibaba Cloud, open-weight Qwen3, hosted Qwen3.7-Max, multilingual model control | Best for builders who want Qwen Cloud APIs or self-hostable Apache 2.0 Qwen3 checkpoints, not a polished consumer workspace. |
 | **[GLM](/tools/glm/)** | Z.AI GLM-5.1, open MIT weights, long-context agentic coding/model evaluation | Best for teams testing Chinese frontier/open-weight model options, not a polished English consumer chatbot. |
+| **[Hunyuan](/tools/hunyuan/)** | Tencent open-weight model family across LLMs, 3D worlds, video, image, and embodied AI | Best for China/Tencent-cloud and open-model R&D teams; not the first English consumer chatbot. |
 | **[DeepSeek](/tools/deepseek/)** | Low-cost API reasoning, open-weight baseline, China-origin model testing | Best when cost and self-hosting experiments matter more than Western enterprise procurement. Recheck endpoint names and token rates before production. |
 | **[Doubao](/tools/doubao/)** | China-first ByteDance assistant and Volcengine model/API evaluation | Best for Chinese-language consumer and Asia cloud evaluation, not Western regulated data residency or primary English chat. |
 | **[Groq](/tools/groq/)** | Low-latency hosted inference and API throughput | Best when inference speed, OpenAI-compatible APIs, and predictable production serving matter more than a consumer chat workspace. |
 | **[Fireworks AI](/tools/fireworks-ai/)** | Hosted inference, batch jobs, dedicated GPUs, and fine-tuning | Best when the buyer needs model APIs and deployment controls rather than a consumer chat UI. |
+| **[Jan.ai](/tools/jan-ai/)** | Local desktop ChatGPT-style app for local and cloud models | Best when a user wants an open-source desktop app, local-model privacy, and optional cloud providers in one UI. |
 | **[NotebookLM](/tools/notebooklm/)** | Source-grounded study and document research | Not a general chatbot replacement; excellent when answers should come from a fixed source library. |
 | **[AnythingLLM](/tools/anythingllm/)** | Self-hosted document chat and RAG app | Best when the buyer wants an MIT-licensed app, local/private documents, agents, and bring-your-own-model control instead of another hosted chatbot subscription. |
 
@@ -57,6 +59,8 @@ The wrong move is paying for three overlapping chatbots without a job for each o
 - **Best for model-control strategy:** [Mistral AI](/tools/mistral-ai/) for developers and teams evaluating APIs, European infrastructure, and open-model options.
 - **Best Alibaba/open-weight lane:** [Qwen](/tools/qwen/) when hosted Qwen3.7-Max, Qwen Cloud pricing, multilingual coverage, or self-hosted Qwen3 checkpoints matter.
 - **Best GLM-family evaluation lane:** [GLM](/tools/glm/) when Z.AI API access, GLM-5.1 open weights, long context, and coding-agent benchmarks are the purchase reason.
+- **Best Tencent/open-model family lane:** [Hunyuan](/tools/hunyuan/) when Hy3-preview, HY-World 2.0, HY-OmniWeaving, Tencent Cloud, or Chinese-language model evaluation are the purchase reason.
+- **Best open-source local desktop chatbot:** [Jan.ai](/tools/jan-ai/) when a user wants a free desktop app for local models, optional provider connections, and a more open alternative to LM Studio.
 - **Best self-hosted RAG app:** [AnythingLLM](/tools/anythingllm/) when document chat, local/private deployment, and bring-your-own-model flexibility matter more than polished consumer-chat features.
 
 ## Choosing the Right Chatbot
@@ -77,9 +81,13 @@ The wrong move is paying for three overlapping chatbots without a job for each o
 
 **Use GLM if:** Z.AI GLM-5.1, MIT-licensed open weights, 200K context, 128K maximum output, OpenAI-compatible API examples, MCP/tool support, and agentic coding evaluation are the purchase reason.
 
+**Use Hunyuan if:** Tencent Cloud fit, Chinese-language workloads, Hy3-preview open weights, HY-World 2.0 3D world generation, or HY-OmniWeaving video research are the purchase reason.
+
 **Use DeepSeek if:** API cost, open-weight baselines, or China-origin model benchmarking are more important than polished consumer UX and Western enterprise controls.
 
 **Use Doubao if:** Chinese-language consumer use, ByteDance ecosystem fit, or Volcengine model evaluation is the purchase reason, and Chinese infrastructure is acceptable.
+
+**Use Jan.ai if:** the buyer wants a local-first desktop chat app, can handle model downloads/hardware fit, and wants the option to keep some work fully offline while routing other work to connected providers.
 
 **Use Groq if:** the job is low-latency API inference, high-throughput serving, or production model routing. Use Groq's official site, docs, and pricing pages for purchase facts; do not rely on rumor-cycle claims.
 
@@ -146,6 +154,9 @@ Do not subscribe to multiple chatbots because each one has a new model announcem
 - [Z.AI GLM-5.1 docs](https://docs.z.ai/guides/llm/glm-5.1) (verified 2026-06-02)
 - [Z.AI pricing](https://docs.z.ai/guides/overview/pricing) (verified 2026-06-02)
 - [GLM-5.1 on Hugging Face](https://huggingface.co/zai-org/GLM-5.1) (verified 2026-06-02)
+- [Hy3-preview on Hugging Face](https://huggingface.co/tencent/Hy3-preview) (verified 2026-06-02)
+- [Tencent HY-World 2.0](https://huggingface.co/tencent/HY-World-2.0) (verified 2026-06-02)
+- [HY-OmniWeaving on Hugging Face](https://huggingface.co/tencent/HY-OmniWeaving) (verified 2026-06-02)
 - [DeepSeek API pricing](https://api-docs.deepseek.com/quick_start/pricing) (verified 2026-06-02)
 - [Doubao](https://www.doubao.com/) (verified 2026-06-02)
 - [Volcengine Doubao product](https://www.volcengine.com/product/doubao) (verified 2026-06-02)
@@ -157,3 +168,5 @@ Do not subscribe to multiple chatbots because each one has a new model announcem
 - [Fireworks AI pricing](https://fireworks.ai/pricing) (verified 2026-06-02)
 - [Fireworks billing FAQ](https://docs.fireworks.ai/faq-new/billing-pricing/how-much-does-fireworks-cost) (verified 2026-06-02)
 - [Fireworks inference documentation](https://docs.fireworks.ai/guides/inference-introduction) (verified 2026-06-02)
+- [Jan changelog](https://www.jan.ai/changelog) (verified 2026-06-02)
+- [Jan GitHub repository](https://github.com/janhq/jan) (verified 2026-06-02)

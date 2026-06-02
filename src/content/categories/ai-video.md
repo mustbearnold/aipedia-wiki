@@ -5,7 +5,7 @@ title: AI Video Generation
 description: Current AI video tools for raw model testing, conversational video editing, production workflows, budget social clips, avatar videos, localization, and business training.
 tool_count: 27
 seo_title: "Best AI Video Tools (June 2026): Gemini Omni, Seedance, Kling, Veo & Runway"
-meta_description: "Updated June 2, 2026: compare Gemini Omni, Seedance 2.0, Kling 3.0, Veo 3.1, Hailuo 2.3, Runway, Pika, HeyGen, Synthesia, Captions, Castmagic, and Sora sunset caveats by model quality, workflow, pricing, and buyer fit."
+meta_description: "Updated June 2, 2026: compare Gemini Omni, Seedance 2.0, Kling 3.0, Veo 3.1, Hailuo 2.3, Runway, Higgsfield, Pika, HeyGen, Synthesia, Captions, Castmagic, and Sora sunset caveats by model quality, workflow, pricing, and buyer fit."
 author: "aipedia.wiki Editorial"
 last_updated: 2026-06-02
 last_verified: 2026-06-02
@@ -31,6 +31,8 @@ AI video is no longer one clean product category. On May 24, 2026, the useful bu
 **Do not treat Sora 2 Pro as a fresh buying route.** OpenAI says the Sora web and app experiences were discontinued on April 26, 2026, and the Sora API will be discontinued on September 24, 2026. Use Sora only for legacy exports, migration planning, or a short API sunset comparison; do not build a new video workflow around it.
 
 **Test [Hailuo 2.3](/tools/hailuo/) as the current budget challenger.** Hailuo 2.3 is the current generation buyers should benchmark against Pika and Luma for low-cost social and ideation work, not the older 2.x branches still mentioned in stale lists. The June 2 check keeps MiniMax token plans and video packages as the purchase math: subscriptions can include large token buckets, while video API/package routes need unit-level cost modeling before scale.
+
+**Use [Higgsfield](/tools/higgsfield/) when the job is cinematic camera language, character consistency, and social creative in one multi-model studio.** The June 2 check puts individual annual tiers at Starter $15/mo, Plus $39/mo, Ultra $99/mo, and Teams from $59/seat/mo annual. The buyer caveat is surface-specific economics: unlimited model and free-generation allowances apply on higgsfield.ai, not MCP, CLI, Canvas, or Supercomputer.
 
 **Use [Runway](/tools/runway/) when you need to ship finished video.** Runway is the strongest production workspace because it combines Runway Agent, Gen-4.5, Gen-4, Gen-4 Turbo, Aleph 2.0/Edit Studio, Act-Two performance capture, Veo, Seedance, Kling, team storage, exports, and API paths in one workflow. It is not always the raw quality-per-dollar winner, but it is often the best product to buy when a creator, agency, or team has to deliver.
 
@@ -98,6 +100,8 @@ Do not make a wide comparison table the mobile experience. Mobile buyers need st
 
 **Short-form social creator:** use the refreshed [TikTok AI tools guide](/guides/best-ai-for-tiktok/) when the choice is hooks/scripts, CapCut-style editing, OpusClip repurposing, Runway generated B-roll, HeyGen avatar posts, or Captions.ai social editing.
 
+**Camera-control creator or agency:** test Higgsfield when shot presets, Soul character anchoring, and multi-model selection matter more than owning a single base model. Keep Runway in the comparison if edit timeline, API maturity, or team production workflow is more important.
+
 **YouTube creator:** use the refreshed [YouTube creators AI guide](/guides/best-ai-for-youtube-creators/) when the buyer needs to choose between Descript editing, ChatGPT scripts, Canva or Midjourney thumbnails, ElevenLabs narration, OpusClip Shorts, and Runway B-roll.
 
 **Long-form repurposing buyer:** use [OpusClip](/tools/opusclip/) when the source is already a podcast, webinar, livestream, interview, or YouTube video and the job is finding clips, adding captions, reframing to 9:16, and scheduling Shorts/Reels/TikTok posts. It is not a text-to-video model; compare it against Descript, Captions, [Castmagic](/tools/castmagic/) (re-verified June 2, 2026 for podcast-to-content pipelines), and InVideo before comparing it against Seedance, Kling, Veo, or Runway.
@@ -160,6 +164,8 @@ Yes, but with honest positioning. They are useful for budget testing, effects, o
 - [MiniMax token subscription pricing](https://platform.minimax.io/docs/guides/pricing-token-plan) (verified 2026-06-02)
 - [Hedra pricing](https://www.hedra.com/pricing) (verified 2026-06-02)
 - [Hedra models](https://www.hedra.com/models) (verified 2026-06-02)
+- [Higgsfield pricing](https://higgsfield.ai/pricing) (verified 2026-06-02)
+- [Higgsfield about](https://higgsfield.ai/about) (verified 2026-06-02)
 - [OpusClip pricing](https://www.opus.pro/pricing) (verified 2026-05-13)
 - [OpusClip plans and credits](https://help.opus.pro/docs/article/plans-and-credits) (verified 2026-05-13)
 - [Captions pricing](https://captions.ai/pricing) (verified 2026-06-02)

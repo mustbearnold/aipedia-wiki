@@ -5,7 +5,7 @@ title: AI Research Tools
 description: Source-backed AI tools for literature review, paper discovery, citation context, research notebooks, academic search, and evidence synthesis.
 tool_count: 9
 seo_title: "Best AI Research Tools: Elicit, Scite, Semantic Scholar & Perplexity (June 2026)"
-meta_description: "Updated June 2, 2026: Elicit for literature review, Semantic Scholar for free academic search, Scite for citation context, NotebookLM for source-grounded notebooks, Perplexity for cited web research, Consensus for claim-level Q&A, Connected Papers for graph mapping, and ChatPDF for quick PDF chat."
+meta_description: "Updated June 2, 2026: Elicit for literature review, Semantic Scholar for free academic search, Scite for citation context, NotebookLM for source-grounded notebooks, Perplexity for cited web research, Consensus for claim-level Q&A, Connected Papers for graph mapping, ChatPDF for quick PDF chat, and Humata for paid PDF/team document chat."
 author: "aipedia.wiki Editorial"
 last_updated: 2026-06-02
 last_verified: 2026-06-02
@@ -16,7 +16,7 @@ update_frequency: monthly
 
 AI research tools split into four buyer lanes now: **literature review**, **academic search**, **citation context**, and **source-grounded analysis**. The right purchase depends on whether the user needs to find papers, evaluate citations, analyze a fixed source set, or research current web material outside academic databases.
 
-As of June 2, 2026, **[Elicit](/tools/elicit/)** is AiPedia's best research-workflow pick because it is built around paper discovery, screening, extraction, and evidence tables; its Basic, Plus, Pro, Scale, and Enterprise ladder still needs billing-cadence verification at purchase time because research-team packaging can move quickly. **[Semantic Scholar](/tools/semantic-scholar/)** is the free academic-search baseline. **[Scite](/tools/scite/)** is the specialist pick when citation context matters. **[NotebookLM](/tools/notebooklm/)** is best when answers must stay grounded in a chosen source library. **[Perplexity](/tools/perplexity/)** is the best cited-web add-on for current sources, documentation, policy, market, and company research. **[Consensus](/tools/consensus/)** and **[Connected Papers](/tools/connected-papers/)** were rechecked for this refresh; **[ChatPDF](/tools/chatpdf/)** remains the quick PDF-chat route, with exact Plus pricing treated as in-app until verified from the public surface.
+As of June 2, 2026, **[Elicit](/tools/elicit/)** is AiPedia's best research-workflow pick because it is built around paper discovery, screening, extraction, and evidence tables; its Basic, Plus, Pro, Scale, and Enterprise ladder still needs billing-cadence verification at purchase time because research-team packaging can move quickly. **[Semantic Scholar](/tools/semantic-scholar/)** is the free academic-search baseline. **[Scite](/tools/scite/)** is the specialist pick when citation context matters. **[NotebookLM](/tools/notebooklm/)** is best when answers must stay grounded in a chosen source library. **[Perplexity](/tools/perplexity/)** is the best cited-web add-on for current sources, documentation, policy, market, and company research. **[Consensus](/tools/consensus/)** and **[Connected Papers](/tools/connected-papers/)** were rechecked for this refresh; **[ChatPDF](/tools/chatpdf/)** remains the quick PDF-chat route, while **[Humata](/tools/humata/)** is the paid PDF/team-document lane with Free 60 pages/month, Expert $9.99/month for 500 pages and up to 3 users, Team $49/user/month for 5,000 pages and up to 10 users, OCR, folder permissions, and SOC-2.
 
 For budget-conscious research teams running their own pipelines, [Reka Edge 7B](/tools/reka/) is now publicly priced at $0.10 per million input tokens and $0.10 per million output tokens, making it a low-cost extraction or summarization layer to evaluate alongside Elicit's structured workflow. Teams evaluating open-weight, long-context extraction or agentic coding around research corpora can also shortlist [GLM](/tools/glm/): GLM-5.1 has MIT Hugging Face weights, 200K context, 128K maximum output, and public Z.AI API pricing, but it is model infrastructure rather than a literature-review workflow.
 
@@ -38,6 +38,7 @@ The wrong move is treating a general chatbot as a research protocol. ChatGPT and
 | Claim-level academic Q&A | [Consensus](/tools/consensus/) | Useful for quick synthesis from peer-reviewed literature | Treat as a starting point, not the conclusion |
 | Visual related-paper mapping | [Connected Papers](/tools/connected-papers/) | Helps map a field and find adjacent or foundational papers | Better for discovery than source evaluation |
 | Single-PDF chat | [ChatPDF](/tools/chatpdf/) | Fastest low-friction way to ask questions about a PDF | Not a full research workflow or citation-quality review layer |
+| Paid PDF and team document chat | [Humata](/tools/humata/) | Free 60 pages/mo, Expert 500 pages, Team 5,000 pages with OCR/folder controls/SOC-2 | Verify citation quality, page caps, and GPT-5 support before high-stakes use |
 | Enterprise legal research and matter work | [Harvey](/tools/harvey/) | Domain-specific legal AI with Vault grounding, Agents, Contract Intelligence, and Command Center | Enterprise-only; lawyer review and procurement controls are mandatory |
 
 ## What To Buy First
@@ -45,6 +46,8 @@ The wrong move is treating a general chatbot as a research protocol. ChatGPT and
 Researchers doing evidence reviews should start with Elicit plus Semantic Scholar. That covers structured workflow and free academic discovery.
 
 Students and analysts working from a fixed set of class readings, PDFs, interviews, or reports should start with NotebookLM. It is safer for source-grounded study than asking a general chatbot to roam.
+
+Small teams that need a dedicated PDF chat workspace should test Humata against their actual scans, tables, contracts, papers, and page volume before paying. Its Team plan is more about OCR, folders, permissions, and SOC-2 than casual single-document Q&A.
 
 Teams checking whether evidence is supported or disputed should evaluate Scite. It is a paid specialist for citation context, not a general writing assistant.
 
@@ -80,6 +83,8 @@ Do not cite generated text. Cite the original source. Do not treat a linked sour
 - [Connected Papers](https://www.connectedpapers.com/) - verified 2026-06-02.
 - [ChatPDF](https://www.chatpdf.com/) - verified 2026-06-02.
 - [ChatPDF backend API docs](https://www.chatpdf.com/docs/api/backend) - verified 2026-06-02.
+- [Humata pricing](https://www.humata.ai/pricing) - verified 2026-06-02.
+- [Humata security](https://www.humata.ai/security) - verified 2026-06-02.
 - [Reka Edge 7B pricing](https://www.reka.ai/pricing) - verified 2026-05-13.
 - [Z.AI GLM-5.1 docs](https://docs.z.ai/guides/llm/glm-5.1) - verified 2026-06-02.
 - [Z.AI pricing](https://docs.z.ai/guides/overview/pricing) - verified 2026-06-02.

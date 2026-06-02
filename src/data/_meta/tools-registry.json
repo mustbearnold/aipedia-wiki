@@ -3582,10 +3582,10 @@
       "company": "Higgsfield AI",
       "url": "https://higgsfield.ai",
       "pricing_model": "freemium",
-      "price_range": "$0-$99/month",
+      "price_range": "$0-$99/month individual annual; Teams from $59/seat/mo annual",
       "launched": "2025-03",
-      "last_updated": "2026-05-13T00:00:00.000Z",
-      "last_verified": "2026-05-13T00:00:00.000Z",
+      "last_updated": "2026-06-02T00:00:00.000Z",
+      "last_verified": "2026-06-02T00:00:00.000Z",
       "update_frequency": "monthly",
       "scores": {
         "utility": 8,
@@ -3620,8 +3620,8 @@
       "pricing_model": "freemium",
       "price_range": "$0 free / $9.99-$49/user/mo",
       "launched": "2023-02",
-      "last_updated": "2026-05-13T00:00:00.000Z",
-      "last_verified": "2026-05-13T00:00:00.000Z",
+      "last_updated": "2026-06-02T00:00:00.000Z",
+      "last_verified": "2026-06-02T00:00:00.000Z",
       "update_frequency": "monthly",
       "scores": {
         "utility": 8,
@@ -3658,8 +3658,8 @@
       "pricing_model": "freemium",
       "price_range": "$0-$500/month",
       "launched": "2021-01",
-      "last_updated": "2026-05-13T00:00:00.000Z",
-      "last_verified": "2026-05-13T00:00:00.000Z",
+      "last_updated": "2026-06-02T00:00:00.000Z",
+      "last_verified": "2026-06-02T00:00:00.000Z",
       "update_frequency": "monthly",
       "scores": {
         "utility": 8,
@@ -3679,13 +3679,14 @@
         "expression-measurement"
       ],
       "affiliate": {
-        "has_program": false,
+        "has_program": true,
         "commission": null,
         "cookie_days": null,
-        "network": null,
-        "link": null,
-        "application_status": "none",
-        "notes": "No public affiliate program as of 2026-04-19. Coverage is editorial-only; placements do not earn commission."
+        "network": "PartnerStack",
+        "link": "https://try.hume.ai/zyy4g71xojh4",
+        "application_status": "approved",
+        "approved_date": "2026-05-02",
+        "notes": "Approved in PartnerStack per publisher dashboard/user report on 2026-05-02. Marketing-site affiliate link: https://try.hume.ai/zyy4g71xojh4. Direct signup affiliate link: https://try.hume.ai/qj7878adktnk-r9s6xi."
       },
       "page_path": "wikis/ai-tools/pages/tools/hume-ai.md"
     },
@@ -3703,8 +3704,8 @@
       "pricing_model": "freemium",
       "price_range": "Free (open weights) / Tencent Cloud API variable",
       "launched": "2023-09",
-      "last_updated": "2026-05-13T00:00:00.000Z",
-      "last_verified": "2026-05-13T00:00:00.000Z",
+      "last_updated": "2026-06-02T00:00:00.000Z",
+      "last_verified": "2026-06-02T00:00:00.000Z",
       "update_frequency": "monthly",
       "scores": {
         "utility": 8,
@@ -3743,8 +3744,8 @@
       "pricing_model": "freemium",
       "price_range": "$0-$44.99/month",
       "launched": "2021-06",
-      "last_updated": "2026-05-13T00:00:00.000Z",
-      "last_verified": "2026-05-13T00:00:00.000Z",
+      "last_updated": "2026-06-02T00:00:00.000Z",
+      "last_verified": "2026-06-02T00:00:00.000Z",
       "update_frequency": "monthly",
       "scores": {
         "utility": 7,
@@ -3777,10 +3778,10 @@
       "company": "ideogram",
       "url": "https://ideogram.ai",
       "pricing_model": "freemium",
-      "price_range": "$0-$60/month",
+      "price_range": "$0-$42/month annual; Team $20/user/mo annual; Enterprise custom",
       "launched": "2023-08",
-      "last_updated": "2026-05-13T00:00:00.000Z",
-      "last_verified": "2026-05-13T00:00:00.000Z",
+      "last_updated": "2026-06-02T00:00:00.000Z",
+      "last_verified": "2026-06-02T00:00:00.000Z",
       "update_frequency": "monthly",
       "scores": {
         "utility": 8,
@@ -3893,8 +3894,8 @@
       "pricing_model": "paid",
       "price_range": "$29-$132/seat/month",
       "launched": "2011-08",
-      "last_updated": "2026-05-13T00:00:00.000Z",
-      "last_verified": "2026-05-13T00:00:00.000Z",
+      "last_updated": "2026-06-02T00:00:00.000Z",
+      "last_verified": "2026-06-02T00:00:00.000Z",
       "update_frequency": "monthly",
       "scores": {
         "utility": 9,
@@ -3966,10 +3967,10 @@
       "company": "janhq",
       "url": "https://www.jan.ai",
       "pricing_model": "free",
-      "price_range": "$0 (one optional $24 Mac voice pack)",
+      "price_range": "$0 core app; optional cloud-provider usage/add-ons vary",
       "launched": "2023-10",
-      "last_updated": "2026-05-13T00:00:00.000Z",
-      "last_verified": "2026-05-13T00:00:00.000Z",
+      "last_updated": "2026-06-02T00:00:00.000Z",
+      "last_verified": "2026-06-02T00:00:00.000Z",
       "update_frequency": "monthly",
       "scores": {
         "utility": 8,
@@ -3992,7 +3993,8 @@
         "network": null,
         "link": null
       },
-      "page_path": "wikis/ai-tools/pages/tools/jan-ai.md"
+      "page_path": "wikis/ai-tools/pages/tools/jan-ai.md",
+      "github_url": "https://github.com/janhq/jan"
     },
     "jasper": {
       "slug": "jasper",

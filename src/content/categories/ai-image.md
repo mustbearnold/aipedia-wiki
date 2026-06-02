@@ -30,7 +30,7 @@ AiPedia rechecked Canva's AI/design workflow on June 2, 2026 and keeps this cate
 
 For paid-media image production, [AdCreative.ai](/tools/adcreative/) is a narrow specialist rather than a general image model. The June 1 check found Starter at $39/month, Professional at $249/month, Ultimate at $999/month, Enterprise custom, and a seasonal discount on longer billing cycles. Use it when the image job is ad-variant production, brand-kit workflow, and creative scoring, not art direction.
 
-Flux by Black Forest Labs remains the power-user and self-hosting choice, with a strong LoRA and ComfyUI ecosystem. The June 2 check now anchors Flux pricing to BFL's FLUX.2 table: Klein 4B starts around $0.014/image, Pro starts at $0.03/MP for text-to-image and $0.045/MP for editing, Max starts at $0.07/MP, Flex starts at $0.06/MP, and FLUX.2 dev remains the local/non-commercial lane. Ideogram is still a strong pick for English-first logos and marketing text. Leonardo AI offers one of the easiest free entry points. [Meshy](/tools/meshy/) is the 3D specialist to shortlist when the buyer needs a generated asset, not a flat image; its May 2026 risk is credit math and Free-plan download limits around Meshy 6 output. [fal.ai](/tools/fal-ai/) is the developer API lane for fast image, video, audio, and 3D generation; its June 2 pricing check keeps prepaid credits, successful-output billing, queue behavior, failed-output rules, and batch discounts in the buyer math.
+Flux by Black Forest Labs remains the power-user and self-hosting choice, with a strong LoRA and ComfyUI ecosystem. The June 2 check now anchors Flux pricing to BFL's FLUX.2 table: Klein 4B starts around $0.014/image, Pro starts at $0.03/MP for text-to-image and $0.045/MP for editing, Max starts at $0.07/MP, Flex starts at $0.06/MP, and FLUX.2 dev remains the local/non-commercial lane. Ideogram is still a strong pick for English-first logos and marketing text; its live annual pricing now lists Plus $15/month, Pro $42/month, Team $20/user/month, and Enterprise contact sales, so do not rely on old Basic-era pricing. Leonardo AI offers one of the easiest free entry points. [Meshy](/tools/meshy/) is the 3D specialist to shortlist when the buyer needs a generated asset, not a flat image; its May 2026 risk is credit math and Free-plan download limits around Meshy 6 output. [fal.ai](/tools/fal-ai/) is the developer API lane for fast image, video, audio, and 3D generation; its June 2 pricing check keeps prepaid credits, successful-output billing, queue behavior, failed-output rules, and batch discounts in the buyer math.
 
 The practical question is no longer "which model can make an image?" Most major systems can. The better question is which workflow you trust for the job: artistic direction, readable text, self-hosting, brand consistency, or integration with the rest of your AI stack.
 
@@ -41,7 +41,7 @@ The practical question is no longer "which model can make an image?" Most major 
 | **Midjourney** | $10-60/mo | Best artistic/aesthetic quality | 10 | 8 | 9 | 9 |
 | **GPT Image 2 (OpenAI)** | Included in ChatGPT; API from $0.01/image | ChatGPT users, text-heavy assets, infographics, API workflows | 10 | 9 | 9 | 9 |
 | **Flux (Black Forest Labs)** | Open-weight / hosted varies | Local workflows, self-hosting, fine-tuning | 9 | 10 | 6 | 8 |
-| **Ideogram** | Free-$20/mo | English text-in-image, logos, marketing materials | 8 | 9 | 7 | 7 |
+| **Ideogram** | Free; Plus $15/mo annual | English text-in-image, logos, marketing materials | 8 | 9 | 7 | 7 |
 | **Leonardo AI** | Free-$24/mo | Free daily generation and quick creative iteration | 8 | 10 | 5 | 7 |
 | **Google Imagen** | In Gemini Advanced ($20/mo) | Google users and photorealism | 8 | 8 | 8 | 9 |
 | **Stable Diffusion** | Free open-source | Self-hosting, no restrictions, fine-tuning | 9 | 10 | 7 | 9 |
@@ -53,7 +53,7 @@ The practical question is no longer "which model can make an image?" Most major 
 - **Midjourney still owns the aesthetic lane.** It remains the reference for cinematic composition and stylized illustration.
 - **GPT Image 2 moved OpenAI back into the front tier.** It is strongest when the image needs reasoning, multilingual text, diagrams, maps, or direct ChatGPT integration.
 - **Flux remains the open-weight workflow choice.** LoRA fine-tuning, self-hosting, ComfyUI, and hosted APIs keep it important even when closed models improve, but license terms still need checking before commercial use.
-- **Ideogram is now a focused text-in-image specialist.** It still matters for logo and marketing workflows, but GPT Image 2 reduced its underlying capability moat.
+- **Ideogram is now a focused text-in-image specialist.** It still matters for logo and marketing workflows, and the June 2 pricing check moves buyer math to Plus $15/mo annual and Pro $42/mo annual rather than old Basic-era prices.
 - **Adobe Firefly wins where provenance and Creative Cloud matter.** It may not lead on raw image quality, but enterprise creative teams often care about licensing and workflow more than leaderboard wins.
 - **Specialists still matter.** Recraft V4 remains the shortlist entry for vector/text-heavy brand assets, NightCafe is the hobbyist/community multi-model playground, and Rodin is the 3D detail specialist when the output must become a mesh rather than a flat image.
 - **Media APIs are their own buyer lane.** fal.ai is worth shortlisting when the image job is part of a product API, workflow, or batch media pipeline rather than a human-facing design app.
@@ -107,6 +107,7 @@ Image generation is approaching commodity. The real differentiation is workflow 
 - [Canva AI](https://www.canva.com/canva-ai/) (verified 2026-06-02)
 - [Black Forest Labs FLUX.2 pricing](https://docs.bfl.ai/quick_start/pricing) (verified 2026-06-02)
 - [FLUX.2 Klein 4B on Hugging Face](https://huggingface.co/black-forest-labs/FLUX.2-klein-4B) (verified 2026-06-02)
+- [Ideogram pricing](https://ideogram.ai/pricing) (verified 2026-06-02)
 - [Meshy pricing](https://www.meshy.ai/pricing) (verified 2026-05-13)
 - [Meshy credit usage help](https://help.meshy.ai/en/articles/10000507-how-many-credits-does-each-generation-task-cost) (verified 2026-05-13)
 - [Recraft V4 docs](https://www.recraft.ai/docs/recraft-models/recraft-V4) (verified 2026-05-24)

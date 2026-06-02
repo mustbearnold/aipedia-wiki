@@ -2,7 +2,7 @@
 type: tool
 slug: humata
 title: Humata
-tagline: Chat-with-your-PDF for students and teams. Free 60 pages/mo, Expert $9.99 (500 pages), Team $49/user (5,000 pages). GPT-5 powered across paid tiers as of May 2026.
+tagline: Chat-with-your-PDF for students and teams. Free 60 pages/mo, Expert $9.99 (500 pages), Team $49/user (5,000 pages). GPT-5 support remains listed in the pricing matrix.
 category: ai-research
 company: humata
 url: https://www.humata.ai
@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0 free / $9.99-$49/user/mo"
 status: active
 launched: 2023-02
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-02
+last_verified: 2026-06-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,17 +31,18 @@ facts:
     source: https://www.humata.ai/
     source_label: Humata official site
     source_id: humata-official
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
   pricing_anchor:
-    value: Humata pricing depends on plan limits and document/workspace usage; verify pages, seats, upload limits, and enterprise/security
-      features.
+    value: Humata pricing currently lists Free with 60 pages/month, Expert at $9.99/month with 500 pages and up to three users,
+      Team at $49/user/month with 5,000 pages and up to ten users, and Enterprise custom. Verify pages, seats, upload limits,
+      GPT-5 support, and enterprise/security features before buying.
     source: https://www.humata.ai/pricing
     source_label: Humata pricing
     source_id: humata-pricing
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -50,7 +51,7 @@ facts:
     source: https://www.humata.ai/
     source_label: Humata official site
     source_id: humata-official
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -60,7 +61,7 @@ facts:
     source: https://www.humata.ai/security
     source_label: Humata security
     source_id: humata-security
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -70,7 +71,7 @@ facts:
     source: https://www.humata.ai/blog
     source_label: Humata blog
     source_id: humata-blog
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -97,8 +98,15 @@ price_history:
     source_label: "Source"
     source_id: humata-pricing
     note: "60 pages/mo. No additional pages available on free tier."
-seo_title: "Humata: Features, Pricing & Review (May 2026)"
-meta_description: "Humata is a PDF chat tool with GPT-5 support. Free 60 pages/mo. Expert $9.99 (500 pages, 3 users), Team $49/user/mo (5,000 pages, OCR, SOC-2). Review for May 2026."
+  - date: 2026-06-02
+    plan: "Free / Expert / Team / Enterprise"
+    price: "$0 / $9.99 / $49 per user / custom"
+    source: "https://www.humata.ai/pricing"
+    source_label: "Source"
+    source_id: humata-pricing
+    note: "Live pricing page rechecked. Free includes 60 pages/mo; Expert includes 500 pages/mo and up to 3 users; Team includes 5,000 pages/mo, up to 10 users, OCR, folder permissions, response personalization, and SOC-2 certificate. Additional pages remain $0.02/page on Expert and $0.01/page on Team."
+seo_title: "Humata: Features, Pricing & Review (June 2026)"
+meta_description: "Humata is a PDF chat tool with GPT-5 support listed in its pricing matrix. Free 60 pages/mo. Expert $9.99 (500 pages, 3 users), Team $49/user/mo (5,000 pages, OCR, SOC-2). Review for June 2026."
 author: "aipedia.wiki Editorial"
 best_for:
   - students doing paper-heavy research
@@ -110,7 +118,7 @@ not_best_for:
   - massive document corpora (AnythingLLM or enterprise platforms)
   - users on ChatGPT Plus or Gemini Advanced (both handle PDFs natively)
 quick_answer: >-
-  Humata is a PDF chat tool pitched at students and small teams. Free 60 pages/month. Expert $9.99/mo for 500 pages and 3 users with GPT-5 support. Team $49/user/mo for 5,000 pages with folder permissions, OCR, and SOC-2. Cheaper per page than ChatPDF at moderate volume. Pick it for academic or small-team document workflows. Skip it if you already pay for ChatGPT Plus or Gemini Advanced.
+  Humata is a PDF chat tool pitched at students and small teams. Free 60 pages/month. Expert $9.99/mo for 500 pages and 3 users with GPT-5 support listed in the pricing matrix. Team $49/user/mo covers 5,000 pages with folder permissions, OCR, and SOC-2. Cheaper per page than ChatPDF at moderate volume. Pick it for academic or small-team document workflows. Skip it if you already pay for ChatGPT Plus or Gemini Advanced.
 ---
 
 # Humata
@@ -133,7 +141,7 @@ A document-chat platform aimed at research-heavy students and small teams. Uploa
 | **Expert plan** | $9.99/mo, 500 pages, 3 users, GPT-5 support, chat support |
 | **Team plan** | $49/user/mo, 5,000 pages, up to 10 users, GPT-5, OCR, folder permissions, SOC-2 certificate, response personalization |
 | **Enterprise** | Custom pricing, uptime SLA, early access, enterprise support |
-| **LLM stack (May 2026)** | GPT-5 across Expert / Team / Enterprise tiers |
+| **LLM stack (June 2026)** | GPT-5 support listed in the public pricing matrix; verify exact model access if contractual |
 | **Compliance** | SOC-2 certificate on Team and Enterprise; SHA-256 encryption |
 | **File types** | PDF, DOCX, TXT, more |
 | **Additional pages** | $0.02/page (Expert), $0.01/page (Team) |
@@ -161,7 +169,7 @@ A document-chat platform aimed at research-heavy students and small teams. Uploa
 | Team | $49/user/mo | 5,000 pages, up to 10 users, GPT-5, OCR, folder permissions, SOC-2 certificate, $0.01/page overage |
 | Enterprise | Custom | Unlimited + uptime SLA + early access + enterprise support |
 
-Prices verified 2026-05-13 via [humata.ai/pricing](https://www.humata.ai/pricing). The Student $1.99 tier was retired in 2026; Expert is now the entry paid plan.
+Prices verified 2026-06-02 via [humata.ai/pricing](https://www.humata.ai/pricing). The current public pricing page shows Free, Expert, Team, and Enterprise; it does not show a self-serve Student tier on the rendered pricing grid.
 
 ## Best plan recommendation
 
@@ -189,7 +197,7 @@ Before paying, upload the actual documents you care about: scanned PDFs, tables,
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified 2026-05-13 against [humata.ai/pricing](https://www.humata.ai/pricing) and [PaperGuide 2026 PDF AI roundup](https://paperguide.ai/blog/ai-tools-to-chat-with-pdf/).
+Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-02 against [humata.ai/pricing](https://www.humata.ai/pricing), [humata.ai](https://www.humata.ai/), and [Humata security](https://www.humata.ai/security).
 
 ## FAQ
 
@@ -200,7 +208,7 @@ At Expert tier ($9.99/mo for 500 pages), Humata is roughly half the cost of Chat
 Yes, on the Team tier. Useful for scanned contracts, historical documents, or image-based PDFs.
 
 **Which model powers Humata?**
-GPT-5 is the default reasoning backbone across paid tiers as of May 2026, confirmed on the public pricing page.
+Humata's public pricing matrix lists GPT-5 support as of June 2, 2026. Verify model access in procurement if the exact model is a hard requirement.
 
 **How accurate is Humata for legal documents?**
 Decent for direct factual questions with citation verification. Always review cited pages. Not a substitute for attorney judgment on material questions.
