@@ -259,7 +259,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-05-10"
+      "last_checked": "2026-06-02"
     },
     {
       "id": "aider-pricing",
@@ -268,7 +268,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-05-10"
+      "last_checked": "2026-06-02"
     },
     {
       "id": "aider-repository",
@@ -277,7 +277,7 @@
       "type": "repository",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-05-10"
+      "last_checked": "2026-06-02"
     },
     {
       "id": "aipedia-news",
@@ -1031,7 +1031,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-05-10"
+      "last_checked": "2026-06-02"
     },
     {
       "id": "claude-code-official",
@@ -1040,7 +1040,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-05-10"
+      "last_checked": "2026-06-02"
     },
     {
       "id": "claude-code-costs",
@@ -1049,7 +1049,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-10"
+      "last_checked": "2026-06-02"
     },
     {
       "id": "claude-code-usage-limits",
@@ -1058,7 +1058,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-10"
+      "last_checked": "2026-06-02"
     },
     {
       "id": "claude-max-plan",
@@ -1067,7 +1067,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-10"
+      "last_checked": "2026-06-02"
     },
     {
       "id": "claude-design-official",
@@ -1603,7 +1603,8 @@
       "url": "https://cursor.com/docs",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "cursor-model-docs",
@@ -1611,7 +1612,8 @@
       "url": "https://cursor.com/docs/models",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "cursor-pricing",
@@ -1620,7 +1622,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-24"
+      "last_checked": "2026-06-02"
     },
     {
       "id": "cursor-changelog",
@@ -1629,7 +1631,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-24"
+      "last_checked": "2026-06-02"
     },
     {
       "id": "cursor-composer-25",
@@ -1638,7 +1640,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-24"
+      "last_checked": "2026-06-02"
     },
     {
       "id": "d-id-agents",
@@ -2639,7 +2641,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-05-10"
+      "last_checked": "2026-06-02"
     },
     {
       "id": "github-copilot-feature-matrix",
@@ -2648,7 +2650,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-10"
+      "last_checked": "2026-06-02"
     },
     {
       "id": "github-copilot-plans",
@@ -2657,7 +2659,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-10"
+      "last_checked": "2026-06-02"
     },
     {
       "id": "github-copilot-plan-docs",
@@ -2666,7 +2668,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-10"
+      "last_checked": "2026-06-02"
     },
     {
       "id": "github-copilot-ai-credits",
@@ -2675,7 +2677,25 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-10"
+      "last_checked": "2026-06-02"
+    },
+    {
+      "id": "github-copilot-ai-credits-orgs",
+      "label": "GitHub Copilot usage-based billing for organizations and enterprises",
+      "url": "https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-organizations-and-enterprises",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-02"
+    },
+    {
+      "id": "github-copilot-ai-credits-announcement",
+      "label": "GitHub Copilot usage-based billing announcement",
+      "url": "https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "github-copilot-supported-models",
@@ -2684,7 +2704,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-10"
+      "last_checked": "2026-06-02"
     },
     {
       "id": "github-repositories",

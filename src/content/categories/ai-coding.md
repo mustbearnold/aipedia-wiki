@@ -42,7 +42,7 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 
 **Use [Glean](/tools/glean/) when coding agents need permission-aware company knowledge.** Glean's developer platform now exposes MCP and setup paths for Claude Code, Codex, Goose, Cursor, Gemini CLI, VS Code, Windsurf, JetBrains, and other developer surfaces, so it belongs in the enterprise-codebase-context lane rather than the autocomplete lane.
 
-**June 2 maintenance note:** the open-source/BYOK and PR-agent layer has been refreshed for Aider, Cline, Continue, CodeRabbit, Devin, Amazon Q Developer, Augment Code, Sourcegraph Cody, and the Codeium-to-Windsurf migration path. The browser builders, specialist runtimes, autocomplete, privacy-first, and secondary AI IDE layer has also been rechecked for Factory, JetBrains AI, Kiro, Mastra, OpenHands, Pieces, Qodo, Replit Agent, Same.dev, Supermaven, Tabnine, Val Town, Windsurf, and Zed. A June 2 pass adds Goose, GLM-5.1, and Glean developer integrations as adjacent coding-agent infrastructure. The decision rule did not change: use Cursor, GitHub Copilot, or Claude Code as first stops; use Replit/Same/Bolt/Lovable/Base44 when the buyer wants browser app-building; use Browserbase when the coding problem is reliable cloud-browser execution for agents; use Val Town/OpenHands/Mastra for developer-specific runtime or framework jobs; use Tabnine/Supermaven/Zed/Windsurf when privacy, autocomplete latency, native editor speed, or IDE workflow matters more than defaulting to Cursor.
+**June 2 maintenance note:** the open-source/BYOK and PR-agent layer has been refreshed for Aider, Cline, Continue, CodeRabbit, Devin, Amazon Q Developer, Augment Code, Sourcegraph Cody, and the Codeium-to-Windsurf migration path. A follow-up June 2 comparison pass refreshed Aider vs Claude Code, Aider vs Cursor, and Aider vs GitHub Copilot around Claude Code Opus 4.8/dynamic workflows, Cursor Composer 2.5/Automations, and GitHub Copilot AI Credits. The browser builders, specialist runtimes, autocomplete, privacy-first, and secondary AI IDE layer has also been rechecked for Factory, JetBrains AI, Kiro, Mastra, OpenHands, Pieces, Qodo, Replit Agent, Same.dev, Supermaven, Tabnine, Val Town, Windsurf, and Zed. A June 2 pass adds Goose, GLM-5.1, and Glean developer integrations as adjacent coding-agent infrastructure. The decision rule did not change: use Cursor, GitHub Copilot, or Claude Code as first stops; use Replit/Same/Bolt/Lovable/Base44 when the buyer wants browser app-building; use Browserbase when the coding problem is reliable cloud-browser execution for agents; use Val Town/OpenHands/Mastra for developer-specific runtime or framework jobs; use Tabnine/Supermaven/Zed/Windsurf when privacy, autocomplete latency, native editor speed, or IDE workflow matters more than defaulting to Cursor.
 
 ## Buyer Paths
 
@@ -110,20 +110,23 @@ Do not publish stale model-version claims. Coding tools route models and change 
 
 ## Sources
 
-- [GitHub Copilot plans](https://github.com/features/copilot/plans) (verified 2026-05-24)
-- [GitHub Copilot billing docs](https://docs.github.com/en/copilot/concepts/billing) (verified 2026-05-24)
-- [Cursor pricing](https://cursor.com/pricing) (verified 2026-05-24)
-- [Cursor Composer 2.5 changelog](https://cursor.com/changelog/composer-2-5) (verified 2026-05-26)
+- [GitHub Copilot plans](https://github.com/features/copilot/plans) (verified 2026-06-02)
+- [GitHub Copilot billing docs](https://docs.github.com/en/copilot/concepts/billing) (verified 2026-06-02)
+- [GitHub Copilot organization billing docs](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-organizations-and-enterprises) (verified 2026-06-02)
+- [Cursor pricing](https://cursor.com/pricing) (verified 2026-06-02)
+- [Cursor Composer 2.5 changelog](https://cursor.com/changelog/composer-2-5) (verified 2026-06-02)
 - [Cursor Gartner enterprise-coding-agent recognition](https://cursor.com/blog/cursor-leads-gartner-mq-2026) (verified 2026-05-26)
-- [Cursor changelog](https://cursor.com/changelog) (verified 2026-05-24)
-- [Claude Code docs](https://code.claude.com/docs) (verified 2026-05-29)
-- [Claude Opus 4.8 and dynamic workflows](https://www.anthropic.com/news/claude-opus-4-8) (verified 2026-05-29)
-- [Claude dynamic workflows in Claude Code](https://claude.com/blog/introducing-dynamic-workflows-in-claude-code) (verified 2026-05-29)
-- [Claude Max plan](https://support.claude.com/en/articles/11049741-what-is-the-max-plan) (verified 2026-05-29)
+- [Cursor changelog](https://cursor.com/changelog) (verified 2026-06-02)
+- [Claude Code docs](https://code.claude.com/docs) (verified 2026-06-02)
+- [Claude Code cost management](https://code.claude.com/docs/en/costs) (verified 2026-06-02)
+- [Claude Opus 4.8 and dynamic workflows](https://www.anthropic.com/news/claude-opus-4-8) (verified 2026-06-02)
+- [Claude dynamic workflows in Claude Code](https://claude.com/blog/introducing-dynamic-workflows-in-claude-code) (verified 2026-06-02)
+- [Claude Max plan](https://support.claude.com/en/articles/11049741-what-is-the-max-plan) (verified 2026-06-02)
 - [Windsurf plans and usage](https://docs.windsurf.com/windsurf/accounts/usage) (verified 2026-06-01)
 - [Windsurf pricing](https://windsurf.com/pricing) (verified 2026-06-01)
 - [Windsurf model docs](https://docs.windsurf.com/windsurf/models) (verified 2026-06-01)
-- [Aider docs](https://aider.chat/docs/) (verified 2026-06-01)
+- [Aider docs](https://aider.chat/docs/) (verified 2026-06-02)
+- [Aider GitHub repository](https://github.com/Aider-AI/aider) (verified 2026-06-02)
 - [Amazon Q Developer pricing](https://aws.amazon.com/q/developer/pricing/) (verified 2026-06-01)
 - [Augment Code pricing](https://www.augmentcode.com/pricing) (verified 2026-06-01)
 - [Cline homepage](https://cline.bot/) (verified 2026-06-01)

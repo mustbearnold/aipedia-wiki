@@ -23,9 +23,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-04 | /tools/tome/ | Tool | Yes | frontmatter | src/content/tools/tome.md |
 | 2026-05-05 | /tools/dalle/ | Tool | Yes | frontmatter | src/content/tools/dalle.md |
 | 2026-05-12 | /dead/ | Static page | Yes | git | src/pages/dead/index.astro |
-| 2026-05-13 | /compare/aider-vs-claude-code/ | Comparison | Yes | frontmatter | src/content/comparisons/aider-vs-claude-code.md |
-| 2026-05-13 | /compare/aider-vs-cursor/ | Comparison | Yes | frontmatter | src/content/comparisons/aider-vs-cursor.md |
-| 2026-05-13 | /compare/aider-vs-github-copilot/ | Comparison | Yes | frontmatter | src/content/comparisons/aider-vs-github-copilot.md |
 | 2026-05-13 | /compare/apollo-vs-clay/ | Comparison | Yes | frontmatter | src/content/comparisons/apollo-vs-clay.md |
 | 2026-05-13 | /compare/apollo-vs-instantly/ | Comparison | Yes | frontmatter | src/content/comparisons/apollo-vs-instantly.md |
 | 2026-05-13 | /compare/apollo-vs-intercom/ | Comparison | Yes | frontmatter | src/content/comparisons/apollo-vs-intercom.md |
@@ -530,7 +527,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-20 | /tools/imagen/ | Tool | Yes | frontmatter | src/content/tools/imagen.md |
 | 2026-05-20 | /tools/veo/ | Tool | Yes | frontmatter | src/content/tools/veo.md |
 | 2026-05-22 | /tools/gemini/ | Tool | Yes | frontmatter | src/content/tools/gemini.md |
-| 2026-05-22 | /tools/github-copilot/ | Tool | Yes | frontmatter | src/content/tools/github-copilot.md |
 | 2026-05-23 | /tools/cohere/ | Tool | Yes | frontmatter | src/content/tools/cohere.md |
 | 2026-05-24 | /answers/best-ai-chatbot-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-chatbot-2026.astro |
 | 2026-05-24 | /answers/best-ai-video-generator-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-video-generator-2026.astro |
@@ -556,7 +552,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-26 | /tools/beehiiv/ | Tool | Yes | frontmatter | src/content/tools/beehiiv.md |
 | 2026-05-26 | /tools/blackbox-ai/ | Tool | Yes | frontmatter | src/content/tools/blackbox-ai.md |
 | 2026-05-26 | /tools/cloudtalk/ | Tool | Yes | frontmatter | src/content/tools/cloudtalk.md |
-| 2026-05-26 | /tools/cursor/ | Tool | Yes | frontmatter | src/content/tools/cursor.md |
 | 2026-05-26 | /tools/d-id/ | Tool | Yes | frontmatter | src/content/tools/d-id.md |
 | 2026-05-26 | /tools/frase/ | Tool | Yes | frontmatter | src/content/tools/frase.md |
 | 2026-05-26 | /tools/freepik/ | Tool | Yes | frontmatter | src/content/tools/freepik.md |
@@ -614,7 +609,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-01 | /tools/adcreative/ | Tool | Yes | frontmatter | src/content/tools/adcreative.md |
 | 2026-06-01 | /tools/ag2/ | Tool | Yes | frontmatter | src/content/tools/ag2.md |
 | 2026-06-01 | /tools/ahrefs/ | Tool | Yes | frontmatter | src/content/tools/ahrefs.md |
-| 2026-06-01 | /tools/aider/ | Tool | Yes | frontmatter | src/content/tools/aider.md |
 | 2026-06-01 | /tools/aiva/ | Tool | Yes | frontmatter | src/content/tools/aiva.md |
 | 2026-06-01 | /tools/amazon-q/ | Tool | Yes | frontmatter | src/content/tools/amazon-q.md |
 | 2026-06-01 | /tools/amplemarket/ | Tool | Yes | frontmatter | src/content/tools/amplemarket.md |
@@ -654,7 +648,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-02 | /categories/ | Static page | Yes | git | src/pages/categories/index.astro |
 | 2026-06-02 | /categories/ai-automation/ | Category | Yes | frontmatter | src/content/categories/ai-automation.md |
 | 2026-06-02 | /categories/ai-chatbots/ | Category | Yes | frontmatter | src/content/categories/ai-chatbots.md |
-| 2026-06-02 | /categories/ai-coding/ | Category | Yes | frontmatter | src/content/categories/ai-coding.md |
+| 2026-06-02 | /categories/ai-coding/ | Category | Yes | working tree | src/content/categories/ai-coding.md |
 | 2026-06-02 | /categories/ai-design/ | Category | Yes | frontmatter | src/content/categories/ai-design.md |
 | 2026-06-02 | /categories/ai-image/ | Category | Yes | frontmatter | src/content/categories/ai-image.md |
 | 2026-06-02 | /categories/ai-infrastructure/ | Category | Yes | frontmatter | src/content/categories/ai-infrastructure.md |
@@ -662,7 +656,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-02 | /categories/ai-presentation/ | Category | Yes | frontmatter | src/content/categories/ai-presentation.md |
 | 2026-06-02 | /categories/ai-research/ | Category | Yes | frontmatter | src/content/categories/ai-research.md |
 | 2026-06-02 | /categories/ai-search/ | Category | Yes | frontmatter | src/content/categories/ai-search.md |
-| 2026-06-02 | /categories/ai-seo/ | Category | Yes | working tree | src/content/categories/ai-seo.md |
+| 2026-06-02 | /categories/ai-seo/ | Category | Yes | frontmatter | src/content/categories/ai-seo.md |
 | 2026-06-02 | /categories/ai-video/ | Category | Yes | frontmatter | src/content/categories/ai-video.md |
 | 2026-06-02 | /categories/ai-voice/ | Category | Yes | frontmatter | src/content/categories/ai-voice.md |
 | 2026-06-02 | /categories/ai-writing/ | Category | Yes | frontmatter | src/content/categories/ai-writing.md |
@@ -676,14 +670,18 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-02 | /compare/adobe-firefly-vs-ideogram/ | Comparison | Yes | frontmatter | src/content/comparisons/adobe-firefly-vs-ideogram.md |
 | 2026-06-02 | /compare/adobe-firefly-vs-midjourney/ | Comparison | Yes | frontmatter | src/content/comparisons/adobe-firefly-vs-midjourney.md |
 | 2026-06-02 | /compare/adobe-firefly-vs-stable-diffusion/ | Comparison | Yes | frontmatter | src/content/comparisons/adobe-firefly-vs-stable-diffusion.md |
-| 2026-06-02 | /compare/ahrefs-vs-frase/ | Comparison | Yes | working tree | src/content/comparisons/ahrefs-vs-frase.md |
-| 2026-06-02 | /compare/ahrefs-vs-marketmuse/ | Comparison | Yes | working tree | src/content/comparisons/ahrefs-vs-marketmuse.md |
-| 2026-06-02 | /compare/ahrefs-vs-neuronwriter/ | Comparison | Yes | working tree | src/content/comparisons/ahrefs-vs-neuronwriter.md |
-| 2026-06-02 | /compare/ahrefs-vs-surfer-seo/ | Comparison | Yes | working tree | src/content/comparisons/ahrefs-vs-surfer-seo.md |
-| 2026-06-02 | /guides/best-ai-seo-tool/ | Guide | Yes | working tree | src/content/use-cases/best-ai-seo-tool.md |
+| 2026-06-02 | /compare/ahrefs-vs-frase/ | Comparison | Yes | frontmatter | src/content/comparisons/ahrefs-vs-frase.md |
+| 2026-06-02 | /compare/ahrefs-vs-marketmuse/ | Comparison | Yes | frontmatter | src/content/comparisons/ahrefs-vs-marketmuse.md |
+| 2026-06-02 | /compare/ahrefs-vs-neuronwriter/ | Comparison | Yes | frontmatter | src/content/comparisons/ahrefs-vs-neuronwriter.md |
+| 2026-06-02 | /compare/ahrefs-vs-surfer-seo/ | Comparison | Yes | frontmatter | src/content/comparisons/ahrefs-vs-surfer-seo.md |
+| 2026-06-02 | /compare/aider-vs-claude-code/ | Comparison | Yes | working tree | src/content/comparisons/aider-vs-claude-code.md |
+| 2026-06-02 | /compare/aider-vs-cursor/ | Comparison | Yes | working tree | src/content/comparisons/aider-vs-cursor.md |
+| 2026-06-02 | /compare/aider-vs-github-copilot/ | Comparison | Yes | working tree | src/content/comparisons/aider-vs-github-copilot.md |
+| 2026-06-02 | /guides/best-ai-seo-tool/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-seo-tool.md |
 | 2026-06-02 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
 | 2026-06-02 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
 | 2026-06-02 | /tools/ | Static page | Yes | git | src/pages/tools/index.astro |
+| 2026-06-02 | /tools/aider/ | Tool | Yes | working tree | src/content/tools/aider.md |
 | 2026-06-02 | /tools/canva/ | Tool | Yes | frontmatter | src/content/tools/canva.md |
 | 2026-06-02 | /tools/capacities/ | Tool | Yes | frontmatter | src/content/tools/capacities.md |
 | 2026-06-02 | /tools/captions/ | Tool | Yes | frontmatter | src/content/tools/captions.md |
@@ -701,6 +699,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-02 | /tools/consensus/ | Tool | Yes | frontmatter | src/content/tools/consensus.md |
 | 2026-06-02 | /tools/copy-ai/ | Tool | Yes | frontmatter | src/content/tools/copy-ai.md |
 | 2026-06-02 | /tools/crewai/ | Tool | Yes | frontmatter | src/content/tools/crewai.md |
+| 2026-06-02 | /tools/cursor/ | Tool | Yes | working tree | src/content/tools/cursor.md |
 | 2026-06-02 | /tools/deepgram/ | Tool | Yes | frontmatter | src/content/tools/deepgram.md |
 | 2026-06-02 | /tools/deepl/ | Tool | Yes | frontmatter | src/content/tools/deepl.md |
 | 2026-06-02 | /tools/deepseek/ | Tool | Yes | frontmatter | src/content/tools/deepseek.md |
@@ -724,6 +723,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-02 | /tools/galileo-ai/ | Tool | Yes | frontmatter | src/content/tools/galileo-ai.md |
 | 2026-06-02 | /tools/genspark/ | Tool | Yes | frontmatter | src/content/tools/genspark.md |
 | 2026-06-02 | /tools/getresponse/ | Tool | Yes | frontmatter | src/content/tools/getresponse.md |
+| 2026-06-02 | /tools/github-copilot/ | Tool | Yes | working tree | src/content/tools/github-copilot.md |
 | 2026-06-02 | /tools/glean/ | Tool | Yes | frontmatter | src/content/tools/glean.md |
 | 2026-06-02 | /tools/glm/ | Tool | Yes | frontmatter | src/content/tools/glm.md |
 | 2026-06-02 | /tools/google-stitch/ | Tool | Yes | frontmatter | src/content/tools/google-stitch.md |

@@ -9,8 +9,24 @@ interface Props {
 const { toolSlug, toolTitle } = Astro.props;
 
 const comparisons = await getCollection('comparisons');
+const staleCardCopy = /(Opus 4\.7|GPT-5\.3|premium requests?|premium-request|7\.5x)/i;
+
+function dateKey(value: unknown): string {
+  if (!value) return '';
+  const date = value instanceof Date ? value : new Date(String(value));
+  return Number.isNaN(date.getTime()) ? String(value) : date.toISOString().slice(0, 10);
+}
+
 const matches = comparisons
   .filter((c) => Array.isArray(c.data.tools) && c.data.tools.includes(toolSlug))
+  .filter((c) => !staleCardCopy.test(c.data.meta_description ?? ''))
+  .sort((a, b) => {
+    const dateCompare = dateKey(b.data.last_verified ?? b.data.last_updated).localeCompare(
+      dateKey(a.data.last_verified ?? a.data.last_updated)
+    );
+    if (dateCompare !== 0) return dateCompare;
+    return String(a.data.title ?? '').localeCompare(String(b.data.title ?? ''));
+  })
   .slice(0, 6);
 ---
 
