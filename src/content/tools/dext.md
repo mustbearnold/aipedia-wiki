@@ -10,8 +10,8 @@ url: 'https://dext.com'
 pricing_model: paid
 price_range: 14-day free trial; paid plans scale by users, document volume, account type, and region
 status: active
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-02
+last_verified: 2026-06-02
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -33,24 +33,24 @@ facts:
     source: 'https://help.dext.com/en/articles/105688-what-is-dext-and-who-is-it-for'
     source_label: 'Dext Help: What is Dext, and who is it for?'
     source_id: dext-accounting-integrations
-    verified_at: 2026-05-13
+    verified_at: 2026-06-02
     confidence: high
   pricing:
     value: 14-day free trial; Dext Business scales by users (5-user baseline) and documents (250/mo baseline, +50/mo per added user); annual billing saves 20%; practice plans (Essentials, Advanced) are priced per client
     source: 'https://help.dext.com/en/articles/647776-dext-plans-for-businesses'
     source_label: 'Dext Help: Dext plans for businesses'
     source_id: dext-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-06-02
     confidence: high
   accounting_integrations:
     value: publishes to accounting software including Xero, QuickBooks, Sage, and other integrations
     source: 'https://help.dext.com/en/articles/105688-what-is-dext-and-who-is-it-for'
     source_label: 'Dext Help: What is Dext, and who is it for?'
     source_id: dext-accounting-integrations
-    verified_at: 2026-05-13
+    verified_at: 2026-06-02
     confidence: high
 tags: [bookkeeping, accounting, expenses, invoices, receipts, automation, document-capture, bank-statements, xero, quickbooks, sage]
-seo_title: 'Dext: Features, Pricing & Review (May 2026)'
+seo_title: 'Dext: Features, Pricing & Review (June 2026)'
 meta_description: >-
   Dext is bookkeeping automation for receipts, invoices, expenses, bank statements, and accounting handoff. Best for accountants, bookkeepers, SMB finance teams, and businesses drowning in financial paperwork.
 author: aipedia.wiki Editorial
@@ -88,6 +88,13 @@ price_history:
     source_label: "Source"
     source_id: dext-pricing
     note: "Pricing structure unchanged. Base plan: 5 users + 250 documents/month, each additional user adds 50 documents/month. Annual billing saves 20%. Verified 2026-05-13."
+  - date: 2026-06-02
+    plan: Dext Business
+    price: Region- and usage-dependent (5-user baseline / 250 docs/mo)
+    source: "https://help.dext.com/en/articles/647776-dext-plans-for-businesses"
+    source_label: "Source"
+    source_id: dext-pricing
+    note: "June 2 recheck: structure remains a 14-day trial, Business plans that scale by users and monthly document volume, 5-user/250-document baseline, +50 documents/month per additional user, and annual billing savings."
 ---
 
 # Dext
@@ -119,7 +126,7 @@ The important distinction: Dext is not trying to replace Xero, QuickBooks, Sage,
 | **Trial** | 14-day free trial for new business accounts |
 | **Self-hosted** | No |
 
-Every data point above was verified against Dext's official help and pricing pages on 2026-05-13. See Sources.
+Every data point above was verified against Dext's official help and pricing pages on 2026-06-02. See Sources.
 
 ## What it actually is
 
@@ -152,7 +159,7 @@ For businesses, the value is less admin. Receipts can arrive through the mobile 
 
 Dext pricing is region- and account-dependent, so the safest way to read it is by structure rather than a single universal price table.
 
-For businesses, Dext says Business is a single plan that scales with the number of users and documents processed each month. The base plan starts at 5 users and 250 documents per month, with each additional user adding 50 documents per month and increasing extraction allowances. Annual billing saves 20% according to the Dext help article verified on 2026-05-13. New business users can start a 14-day trial with no payment details required upfront.
+For businesses, Dext says Business is a single plan that scales with the number of users and documents processed each month. The base plan starts at 5 users and 250 documents per month, with each additional user adding 50 documents per month and increasing extraction allowances. Annual billing saves 20% according to the Dext help article verified on 2026-06-02. New business users can start a 14-day trial with no payment details required upfront.
 
 For practices, Dext separates Practice Essentials and Practice Advanced. Both are priced per client. Advanced adds more practice-management features, including tools for managing teams, tracking workflows, and monitoring practice-level performance.
 
@@ -183,7 +190,7 @@ The practical buying rule: Dext is easiest to justify when monthly document volu
 
 This page was produced by the aipedia.wiki editorial pipeline, an automated system that verifies tool details against primary sources and then applies the site scoring rubric. Scoring follows Utility, Value, Moat, and Longevity as explained at [/about/scoring/](https://aipedia.wiki/about/scoring/).
 
-Last verified 2026-05-13 against Dext's official help center, bookkeeping automation page, and business pricing page.
+Last verified 2026-06-02 against Dext's official help center, bookkeeping automation page, and business pricing page.
 
 ## FAQ
 

@@ -14,7 +14,7 @@ update_frequency: monthly
 
 ## Overview
 
-AI chatbots are now the default starting point for writing, research, coding help, analysis, planning, images, voice, file work, and everyday problem solving. But the market is no longer one generic "best model" race. As of late May 2026, the right chatbot depends on the buyer's ecosystem, risk tolerance, source needs, budget, and workflow. Flagship models continue to shift: ChatGPT runs on GPT-5.5 (April 23), Claude leads with Opus 4.8 (May 28), Gemini 3.1 Pro Preview heads the Google lineup, Qwen3.7-Max is live on Qwen Cloud, and DeepSeek V4-Flash and V4-Pro are now in production for cost-sensitive workloads.
+AI chatbots are now the default starting point for writing, research, coding help, analysis, planning, images, voice, file work, and everyday problem solving. But the market is no longer one generic "best model" race. As of late May and early June 2026, the right chatbot depends on the buyer's ecosystem, risk tolerance, source needs, budget, and workflow. Flagship models continue to shift: ChatGPT runs on GPT-5.5 (April 23), Claude leads with Opus 4.8 (May 28), Gemini 3.1 Pro Preview heads the Google lineup, Qwen3.7-Max is live on Qwen Cloud, and DeepSeek V4-Flash and V4-Pro are now in production for cost-sensitive workloads. DeepSeek's June 2 pricing check keeps V4-Pro at the adjusted quarter-price after the May promotion ended, while Doubao remains a China-first ByteDance/Volcengine lane where exact API prices should be checked in the live model table before quoting.
 
 The May 31 refresh adds two enterprise workspace signals: MUFG's [ChatGPT Enterprise rollout to roughly 35,000 bank employees](/news/2026-05-30-openai-mufg-chatgpt-enterprise-rollout/) and Microsoft's [redesigned Microsoft 365 Copilot experience](/news/2026-05-31-microsoft-365-copilot-redesign-work-iq/). The lesson is practical. General assistants win inside companies only when training, permission rules, visible context, app placement, and output quality make daily work safer and faster.
 
@@ -37,6 +37,8 @@ The wrong move is paying for three overlapping chatbots without a job for each o
 | **[Grok](/tools/grok/)** | X-native real-time context, creator/news/social signal monitoring | Useful for fast social context, but important claims still need primary-source verification. |
 | **[Mistral AI](/tools/mistral-ai/)** | Model-control workflows, European AI infrastructure, APIs, open-model strategy | Best for builders and organizations that care about deployment and vendor-control choices. |
 | **[Qwen](/tools/qwen/)** | Alibaba Cloud, open-weight Qwen3, hosted Qwen3.7-Max, multilingual model control | Best for builders who want Qwen Cloud APIs or self-hostable Apache 2.0 Qwen3 checkpoints, not a polished consumer workspace. |
+| **[DeepSeek](/tools/deepseek/)** | Low-cost API reasoning, open-weight baseline, China-origin model testing | Best when cost and self-hosting experiments matter more than Western enterprise procurement. Recheck endpoint names and token rates before production. |
+| **[Doubao](/tools/doubao/)** | China-first ByteDance assistant and Volcengine model/API evaluation | Best for Chinese-language consumer and Asia cloud evaluation, not Western regulated data residency or primary English chat. |
 | **[NotebookLM](/tools/notebooklm/)** | Source-grounded study and document research | Not a general chatbot replacement; excellent when answers should come from a fixed source library. |
 | **[AnythingLLM](/tools/anythingllm/)** | Self-hosted document chat and RAG app | Best when the buyer wants an MIT-licensed app, local/private documents, agents, and bring-your-own-model control instead of another hosted chatbot subscription. |
 
@@ -66,6 +68,10 @@ The wrong move is paying for three overlapping chatbots without a job for each o
 **Use Mistral AI if:** you are evaluating model choice, data posture, API strategy, European AI infrastructure, or open-model options rather than only a consumer chatbot.
 
 **Use Qwen if:** Alibaba Cloud integration, Qwen Cloud hosted inference, Qwen3.7-Max testing, multilingual products, or Apache 2.0 Qwen3 open-weight deployment are the purchase reason.
+
+**Use DeepSeek if:** API cost, open-weight baselines, or China-origin model benchmarking are more important than polished consumer UX and Western enterprise controls.
+
+**Use Doubao if:** Chinese-language consumer use, ByteDance ecosystem fit, or Volcengine model evaluation is the purchase reason, and Chinese infrastructure is acceptable.
 
 ## When to Pay for More Than One
 
@@ -120,6 +126,9 @@ Do not subscribe to multiple chatbots because each one has a new model announcem
 - [Alibaba Cloud Qwen Conference coverage](https://www.eqs-news.com/news/corporate/alibaba-cloud-unveils-advanced-agentic-ai-ecosystem-for-global-customers/a191d39b-db45-48ed-b194-9cce5071b556_en) (verified 2026-05-27)
 - [Qwen3.7-Max model page](https://www.qwencloud.com/models/qwen3.7-max) (verified 2026-05-24)
 - [Qwen3 official blog](https://qwenlm.github.io/blog/qwen3/) (verified 2026-05-24)
+- [DeepSeek API pricing](https://api-docs.deepseek.com/quick_start/pricing) (verified 2026-06-02)
+- [Doubao](https://www.doubao.com/) (verified 2026-06-02)
+- [Volcengine Doubao product](https://www.volcengine.com/product/doubao) (verified 2026-06-02)
 - [OpenAI MUFG ChatGPT Enterprise customer story](https://openai.com/index/mufg/) (verified 2026-05-31)
 - [Microsoft 365 Copilot redesign](https://www.microsoft.com/en-us/microsoft-365/blog/2026/05/28/introducing-a-new-design-for-microsoft-365-copilot/) (verified 2026-05-31)
 - [AnythingLLM cloud pricing](https://anythingllm.com/cloud) (verified 2026-06-01)

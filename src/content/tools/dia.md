@@ -2,7 +2,7 @@
 type: tool
 slug: dia
 title: Dia
-tagline: AI-native browser from The Browser Company, built around tab context, proactive suggestions, connected work apps, and assistant browsing workflows.
+tagline: AI-native browser from The Browser Company, now part of Atlassian, built around tab context, proactive suggestions, connected work apps, and assistant browsing workflows.
 category: ai-search
 secondary_categories: [ai-automation, ai-chatbots]
 company: the-browser-company
@@ -11,11 +11,11 @@ pricing_model: freemium
 price_range: "Free download; account required for AI usage"
 status: active
 launched: 2025
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-02
+last_verified: 2026-06-02
 update_frequency: monthly
-seo_title: "Dia Browser: Features, Pricing & Review (2026)"
-meta_description: "Dia is The Browser Company's AI-native browser for contextual search, page-aware chat, and agentic browsing. Best for researchers and operators who want AI inside the browser, not a separate tab."
+seo_title: "Dia Browser: Features, Pricing & Review (June 2026)"
+meta_description: "Dia is The Browser Company's Atlassian-owned AI-native browser for contextual search, page-aware chat, and agentic browsing. Best for researchers and operators who want AI inside the browser, not a separate tab."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -34,34 +34,34 @@ facts:
     source: "https://www.diabrowser.com"
     source_label: "Dia website"
     source_id: dia-best-for
-    verified_at: 2026-05-13
+    verified_at: 2026-06-02
     confidence: high
   best_for:
     value: "Contextual research, tab-aware browsing, and AI-assisted web workflows"
     source: "https://www.diabrowser.com"
     source_label: "Dia website"
     source_id: dia-best-for
-    verified_at: 2026-05-13
+    verified_at: 2026-06-02
     confidence: high
   best_paid_tier:
-    value: "Free download; pricing for higher-volume AI usage is not published on the public site as of 2026-05-13"
+    value: "Free download remains the public entry path; the public site does not expose a stable team or higher-volume pricing table as of 2026-06-02"
     source: "https://www.diabrowser.com"
     source_id: dia-best-for
-    verified_at: 2026-05-13
-    next_review_at: 2026-06-13
+    verified_at: 2026-06-02
+    next_review_at: 2026-07-02
     confidence: high
   coding_agent:
     value: "No dedicated coding agent"
     source: "https://aipedia.wiki/tools/dia/"
     source_id: dia-coding-agent
-    verified_at: 2026-05-13
+    verified_at: 2026-06-02
     confidence: high
   enterprise_controls:
-    value: "SOC 2 Type II audit covering security, confidentiality, and privacy for 2025 calendar year, final report issued in 2026; report details available at trust.diabrowser.com. Partner AI providers (Anthropic, OpenAI, Gemini, Azure, AWS) contractually restricted from training on Dia user data."
+    value: "Dia is now part of Atlassian; the security page lists SSO, MDM controls, admin-managed profiles, SOC 2 Type II coverage, and contractual restrictions preventing partner AI providers from training on Dia user data."
     source: "https://www.diabrowser.com/security"
     source_label: "Dia security"
     source_id: dia-security
-    verified_at: 2026-05-13
+    verified_at: 2026-06-02
     volatility: medium
     confidence: high
     next_review_at: 2026-08-13
@@ -81,15 +81,15 @@ quick_answer: >-
 
 # Dia
 
-Dia is an AI-native browser from The Browser Company, the team behind Arc. As of 2026-05-13, the public site positions Dia as a browser that "works with you": it reads across tabs, can create Morning Briefs from calendar, inbox, and links, surfaces proactive suggestions, and can answer using context from GSuite, Slack, tabs, and connected work apps.
+Dia is an AI-native browser from The Browser Company, the team behind Arc and now part of Atlassian. As of 2026-06-02, the public site positions Dia as a browser that "works with you": it reads across tabs, can create Morning Briefs from calendar, inbox, and links, surfaces proactive suggestions, and can answer using context from GSuite, Slack, tabs, and connected work apps.
 
-It is currently available for Apple macOS 14 or later on M1 chips or later. No Windows or Linux build is advertised on the public site. The security page says Dia is Chromium-based, disables several Google and Chromium telemetry and sync integrations, includes native ad blocking, completed a SOC 2 Type II examination covering security, confidentiality, and privacy for calendar year 2025 (final report issued in 2026), and uses layered controls for prompt-injection risk. Partner AI providers (Anthropic, OpenAI, Gemini, Azure, AWS) are contractually restricted from retaining or using Dia user data to train their own models.
+It is currently available for Apple macOS 14 or later on M1 chips or later. No Windows or Linux build is advertised on the public site. The security page says Dia is Chromium-based, disables several Google and Chromium telemetry and sync integrations, includes native ad blocking, completed a SOC 2 Type II examination covering security, confidentiality, and privacy for calendar year 2025 (final report issued in 2026), supports SSO, MDM controls, and admin-managed profiles, and uses layered controls for prompt-injection risk. Partner AI providers are contractually restricted from retaining or using Dia user data to train their own models.
 
 ## System Verdict
 
 > **Pick Dia if your AI workflow starts in the browser and your work context is scattered across tabs and apps.** It is most useful for research, meetings, planning, shopping, product comparison, documentation lookup, and reading-heavy work where page context matters.
 >
-> **Skip it if you need enterprise controls, deterministic scraping, or a stable automation API.** Dia is a user-facing AI browser, not a headless browser platform like Browserbase or a workflow automation tool like n8n.
+> **Skip it if you need deterministic scraping, Windows/Linux coverage, or a stable automation API.** Dia is a user-facing AI browser, not a headless browser platform like Browserbase or a workflow automation tool like n8n. Enterprise controls improved under Atlassian, but IT teams should still test extension behavior, policy coverage, and connected-app permissions before replacing Chrome or Edge.
 
 ## Key facts
 
@@ -97,9 +97,10 @@ It is currently available for Apple macOS 14 or later on M1 chips or later. No W
 |---|---|
 | Category | AI browser / search |
 | Company | The Browser Company |
+| Ownership | Part of Atlassian |
 | Best for | Contextual web research, work context, meetings, and page-aware chat |
 | Availability | macOS 14+ with Apple Silicon |
-| Pricing | Free/beta access; paid details depend on rollout |
+| Pricing | Free download; stable paid/team pricing table not public on the site |
 | Main competitors | [Perplexity Comet](/tools/comet/), ChatGPT browsing, [Perplexity](/tools/perplexity/) |
 
 ## Where it fits
@@ -127,7 +128,7 @@ Before switching, test platform fit, extension compatibility, account boundaries
 
 ## Security and privacy notes
 
-Dia is unusually explicit about browser-agent risk. Its security page (verified 2026-05-13) says conversations, history, bookmarks, and files are encrypted and stored locally by default; Sync uses end-to-end encryption so servers cannot read it; AI providers are contractually restricted from retaining or training on Dia user data; content shared for improvement is unlinked from accounts and deleted after 30 days; and user data is never sold. SOC 2 Type II coverage extends to security, confidentiality, and privacy for calendar year 2025, with the report issued in 2026 and obtainable through trust.diabrowser.com.
+Dia is unusually explicit about browser-agent risk. Its security page (verified 2026-06-02) says conversations, history, bookmarks, and files are encrypted and stored locally by default; Sync uses end-to-end encryption so servers cannot read it; AI providers are contractually restricted from retaining or training on Dia user data; content shared for improvement is unlinked from accounts and deleted after 30 days; and user data is never sold. SOC 2 Type II coverage extends to security, confidentiality, and privacy for calendar year 2025, with the report issued in 2026 and obtainable through trust.diabrowser.com.
 
 For prompt injection, Dia says the assistant will not automatically open or follow LLM-generated URLs, requires user approval before granting tab access or write actions, blocks insertion of data into third-party sites without consent, holds calendar events and sensitive actions in draft until the user confirms, restricts agentic-mode navigation to prevent cross-site attacks, and masks sensitive form fields from the agent. Dia acknowledges that prompt injections can still cause style shifts, introduce misinformation, or trigger unintended searches.
 
@@ -139,7 +140,9 @@ For teams, the decision is slower. Test extension behavior, profile separation, 
 
 ## Recent changes
 
-- **SOC 2 Type II finalized (verified 2026-05-13).** The 2025 audit covers security, confidentiality, and privacy; the final report was issued in 2026 and is available via trust.diabrowser.com. That gives enterprise reviewers a primary-source posture document for the first time.
+- **Atlassian ownership surfaced (verified 2026-06-02).** Dia's security page now states that The Browser Company is part of Atlassian, shifting the enterprise read from indie AI browser to a likely Atlassian work-browser lane.
+- **Enterprise controls surfaced.** The security page lists SSO, MDM controls, admin-managed profiles, and customer support alongside SOC 2 Type II coverage.
+- **SOC 2 Type II finalized (reverified 2026-06-02).** The 2025 audit covers security, confidentiality, and privacy; the final report was issued in 2026 and is available via trust.diabrowser.com. That gives enterprise reviewers a primary-source posture document.
 - **AI provider training restrictions surfaced.** Dia's security page now explicitly names Anthropic, OpenAI, Gemini, Azure, and AWS as partner providers contractually restricted from training on user data.
 - **Prompt-injection controls itemized.** The page enumerates specific behaviors: no auto-opening LLM-generated URLs, draft-only sensitive actions, restricted agentic navigation, and masked sensitive form fields. Useful posture detail for buyers comparing AI-native browsers.
 
@@ -154,7 +157,7 @@ For teams, the decision is slower. Test extension behavior, profile separation, 
 
 ## Methodology
 
-Last verified 2026-05-13 against the Dia website and security page. Scoring emphasizes browser utility, AI workflow value, moat (work-context surface), and longevity.
+Last verified 2026-06-02 against the Dia website and security page. Scoring emphasizes browser utility, AI workflow value, moat (work-context surface), and longevity.
 
 ## Sources
 

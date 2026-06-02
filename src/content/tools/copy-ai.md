@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$29-$3,000+/month"
 status: active
 launched: 2020-10
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-02
+last_verified: 2026-06-02
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -30,15 +30,15 @@ facts:
     source: "https://www.copy.ai/workflows"
     source_label: "Copy.ai workflows"
     source_id: copy-ai-workflows
-    verified_at: 2026-05-13
+    verified_at: 2026-06-02
     volatility: low
     confidence: high
   pricing_anchor:
-    value: "Copy.ai's published self-serve plans are now Chat ($29/mo, 5 seats), Growth ($1,000/mo annual, 75 seats, 20K workflow credits), Expansion ($2,000/mo annual, 150 seats, 45K credits), and Scale ($3,000/mo annual, 200 seats, 75K credits), plus custom Enterprise. The earlier Free trial, Starter ($49/mo), and Advanced ($249/mo) tiers are no longer listed on the pricing page."
+    value: "Copy.ai's published self-serve plans remain Chat ($29/mo, 5 seats), Growth ($1,000/mo annual, 75 seats, 20K workflow credits), Expansion ($2,000/mo annual, 150 seats, 45K credits), and Scale ($3,000/mo annual, 200 seats, 75K credits), plus custom Enterprise. The earlier Free trial, Starter ($49/mo), and Advanced ($249/mo) tiers are still not listed on the pricing page as of the June 2, 2026 check."
     source: "https://www.copy.ai/prices"
     source_label: "Copy.ai Pricing"
     source_id: copy-ai-official
-    verified_at: 2026-05-13
+    verified_at: 2026-06-02
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -47,7 +47,7 @@ facts:
     source: "https://www.copy.ai/workflows"
     source_label: "Copy.ai workflows"
     source_id: copy-ai-workflows
-    verified_at: 2026-05-13
+    verified_at: 2026-06-02
     volatility: medium
     confidence: high
   platform_positioning:
@@ -55,20 +55,20 @@ facts:
     source: "https://www.copy.ai/platform"
     source_label: "Copy.ai platform"
     source_id: copy-ai-platform
-    verified_at: 2026-05-13
+    verified_at: 2026-06-02
     volatility: medium
     confidence: high
   watch_out_for:
-    value: "After the May 2026 pricing reshape, the gap between the $29/mo Chat tier and the $1,000/mo annual Growth tier is large. Small teams that previously fit the retired Starter or Advanced tiers should map workflow volume against the four-figure Growth, Expansion, and Scale plans before committing."
+    value: "After the 2026 pricing reshape, the gap between the $29/mo Chat tier and the $1,000/mo annual Growth tier remains large. Small teams that previously fit the retired Starter or Advanced tiers should map workflow volume against the four-figure Growth, Expansion, and Scale plans before committing."
     source: "https://www.copy.ai/prices"
     source_label: "Copy.ai Pricing"
     source_id: copy-ai-official
-    verified_at: 2026-05-13
+    verified_at: 2026-06-02
     volatility: medium
     confidence: high
 tags: [ai-writing, copywriting, gtm-automation, sales-copy, marketing-copy, workflows]
-seo_title: "Copy.ai: Features, Pricing & Review (May 2026)"
-meta_description: "Copy.ai is a GTM AI platform with CRM-connected workflows. Chat $29/mo, Growth $1,000/mo, Expansion $2,000/mo, Scale $3,000/mo, plus Enterprise. Full review for May 2026."
+seo_title: "Copy.ai: Features, Pricing & Review (June 2026)"
+meta_description: "Copy.ai is a GTM AI platform with CRM-connected workflows. Chat $29/mo, Growth $1,000/mo, Expansion $2,000/mo, Scale $3,000/mo, plus Enterprise. Full review for June 2026."
 author: aipedia.wiki Editorial
 best_for:
   - sales teams running CRM-connected outreach workflows
@@ -80,7 +80,7 @@ not_best_for:
   - teams that only need raw writing output
   - small teams priced out of the new Growth, Expansion, and Scale workflow tiers
 quick_answer: >-
-  Copy.ai is a GTM AI platform built around CRM-connected workflows, not standalone copywriting. As of May 2026 the self-serve lineup is Chat at $29/mo plus four-figure Growth ($1,000), Expansion ($2,000), and Scale ($3,000) annual workflow tiers. Pick it when sales outreach and marketing automation sit on HubSpot or Salesforce and you can fill at least 20,000 workflow credits a month. Skip it for solo use where ChatGPT Plus covers the job.
+  Copy.ai is a GTM AI platform built around CRM-connected workflows, not standalone copywriting. As of June 2, 2026 the self-serve lineup is Chat at $29/mo plus four-figure Growth ($1,000), Expansion ($2,000), and Scale ($3,000) annual workflow tiers. Pick it when sales outreach and marketing automation sit on HubSpot or Salesforce and you can fill at least 20,000 workflow credits a month. Skip it for solo use where a general assistant covers the job.
 price_history:
   - date: 2026-04-17
     plan: "Advanced"
@@ -96,19 +96,26 @@ price_history:
     source_label: "Source"
     source_id: copy-ai-official
     note: "Pricing page now lists only Chat ($29/mo), Growth ($1,000/mo annual, 20K credits, 75 seats), Expansion ($2,000/mo annual, 45K credits, 150 seats), Scale ($3,000/mo annual, 75K credits, 200 seats), plus Enterprise. Free trial, Starter ($49/mo), and Advanced ($249/mo) tiers are no longer surfaced."
+  - date: 2026-06-02
+    plan: "Lineup recheck"
+    price: "$29-$3,000/mo"
+    source: "https://www.copy.ai/prices"
+    source_label: "Source"
+    source_id: copy-ai-official
+    note: "June 2 source check found the same published Chat, Growth, Expansion, Scale, and Enterprise lineup. Chat remains $29/mo monthly or $24/mo annually; workflow tiers remain annual-billed at $1,000, $2,000, and $3,000 per month."
 ---
 
 # Copy.ai
 
 Copy.ai is an AI go-to-market automation platform. It started as a template-based copywriting tool in 2020, and the 2025 pivot reframed the product around sales outreach and marketing workflows connected to CRMs, not standalone generation. Ships with 100+ templates, CRM integrations for HubSpot, Salesforce, and Pipedrive, multi-LLM routing across OpenAI, Anthropic, and Google, plus 2,000+ integrations via Zapier.
 
-As of May 2026 the public pricing page lists Chat at $29/month, then jumps to annual-billed Growth ($1,000/month, 75 seats, 20K workflow credits), Expansion ($2,000/month, 150 seats, 45K credits), Scale ($3,000/month, 200 seats, 75K credits), and custom Enterprise. The previously visible Free trial, Starter ($49/month), and Advanced ($249/month) tiers are no longer surfaced on the pricing page.
+As of June 2, 2026 the public pricing page still lists Chat at $29/month, then jumps to annual-billed Growth ($1,000/month, 75 seats, 20K workflow credits), Expansion ($2,000/month, 150 seats, 45K credits), Scale ($3,000/month, 200 seats, 75K credits), and custom Enterprise. The previously visible Free trial, Starter ($49/month), and Advanced ($249/month) tiers are no longer surfaced on the pricing page.
 
 ## System Verdict
 
 > **Pick Copy.ai if GTM automation is the reason to buy, not copywriting alone.** Growth at $1,000/month (annual) is now the entry workflow tier with CRM chaining at scale: 20,000 workflow credits and 75 seats. Expansion at $2,000/month and Scale at $3,000/month carry larger GTM motions with 45K and 75K workflow credits and 150 to 200 seats. Chat at $29/month covers shared chat with five seats but does not include the workflow runtime.
 >
-> **Skip it if the workflow is one person generating copy.** [ChatGPT](/tools/chatgpt/) Plus at $20/month delivers stronger raw output, and [Jasper](/tools/jasper/) wins on brand-voice enforcement for pure copywriting shops. For grammar and correction layers, [Grammarly](/tools/grammarly/) fits better at the individual level.
+> **Skip it if the workflow is one person generating copy.** A general assistant such as [ChatGPT](/tools/chatgpt/) delivers stronger raw drafting breadth, and [Jasper](/tools/jasper/) wins on brand-voice enforcement for pure copywriting shops. For grammar and correction layers, [Grammarly](/tools/grammarly/) fits better at the individual level.
 >
 > **Who pays which tier:** Chat $29/month for teams that only need shared unlimited-word chat with five seats. Growth $1,000/month (annual) when CRM workflows have to carry a GTM motion across roughly 75 seats. Expansion $2,000/month or Scale $3,000/month when seat counts and workflow-credit volume push past Growth's caps. Enterprise for SSO, custom models, and priority support.
 
@@ -128,9 +135,9 @@ As of May 2026 the public pricing page lists Chat at $29/month, then jumps to an
 | **Expansion plan** | $2,000/mo billed annually ($24,000/yr) · 150 seats · 45K workflow credits/mo |
 | **Scale plan** | $3,000/mo billed annually ($36,000/yr) · 200 seats · 75K workflow credits/mo |
 | **Enterprise** | Custom · guided implementation, API access, 20+ integrations, unlimited workflows, dedicated support, enterprise security |
-| **Retired tiers** | Free trial, Starter ($49/mo), and Advanced ($249/mo) are no longer listed on the pricing page as of May 13, 2026 |
+| **Retired tiers** | Free trial, Starter ($49/mo), and Advanced ($249/mo) are still not listed on the pricing page as of June 2, 2026 |
 
-Every data point above was verified against vendor documentation on 2026-05-13. See Sources.
+Every data point above was verified against vendor documentation on 2026-06-02. See Sources.
 
 ## What it actually is
 
@@ -152,10 +159,10 @@ The moats are workflow-specific: SOC 2 Type II certification, CRM integration de
 
 ## When to pick something else
 
-- **Solo copywriting:** [ChatGPT](/tools/chatgpt/) Plus at $20/month beats Copy.ai Starter on raw output at less than half the price.
+- **Solo copywriting:** [ChatGPT](/tools/chatgpt/) beats Copy.ai on raw drafting breadth when the buyer does not need GTM workflows.
 - **Pure brand-voice content:** [Jasper](/tools/jasper/) is still the stronger enterprise-copy suite with deeper brand-voice governance.
 - **Grammar and editing layer:** [Grammarly](/tools/grammarly/) for correction and polish, not generation.
-- **Direct frontier-model team use:** [Claude](/tools/claude/) Team at $30/user or ChatGPT Teams at $25/user for unmediated access to Opus 4.7 or GPT-5.5.
+- **Direct frontier-model team use:** [Claude](/tools/claude/) or [ChatGPT](/tools/chatgpt/) if the team wants first-party assistant access instead of a GTM workflow layer.
 - **Data enrichment first, copy second:** Clay is the stronger specialist for prospect enrichment; pair with Copy.ai workflows or handle both inside Clay itself.
 
 ## Pricing
@@ -170,7 +177,7 @@ Subscription pricing via [copy.ai/prices](https://www.copy.ai/prices). Annual bi
 | Scale | $3,000 ($36,000/yr) | 200 | 75,000/mo | Expansion features plus largest published self-serve seat and credit pool |
 | Enterprise | Custom | Custom | Custom | Guided implementation, API access, 20+ integrations, unlimited workflows, dedicated support, enterprise security |
 
-*Prices verified 2026-05-13 via [Copy.ai pricing](https://www.copy.ai/prices). Workflow features now gate at Growth, not at the retired Advanced tier. Growth, Expansion, and Scale are billed annually only. The Free trial, Starter ($49/mo), and Advanced ($249/mo) plans are no longer listed; existing customers on those plans should verify their status directly with Copy.ai. SOC 2 Type II certification applies across paid tiers.*
+*Prices verified 2026-06-02 via [Copy.ai pricing](https://www.copy.ai/prices). Workflow features now gate at Growth, not at the retired Advanced tier. Growth, Expansion, and Scale are billed annually only. The Free trial, Starter ($49/mo), and Advanced ($249/mo) plans are no longer listed; existing customers on those plans should verify their status directly with Copy.ai. SOC 2 Type II certification applies across paid tiers.*
 
 ## Against the alternatives
 
@@ -187,21 +194,25 @@ Subscription pricing via [copy.ai/prices](https://www.copy.ai/prices). Annual bi
 ## Failure modes
 
 - **Mid-market tier gap widened.** With Starter and Advanced retired, the only step below Growth's $1,000/month annual workflow tier is Chat at $29/month, which carries no workflow runtime. Two-to-fifteen-person teams that previously fit the $49 or $249 plans need to either commit to Growth or move to a different platform.
-- **Solo users overpay.** Growth at $1,000/month annual makes no sense for one-person shops. Chat at $29/month covers shared chat but does not unlock workflows, and ChatGPT Plus still beats it on raw quality.
+- **Solo users overpay.** Growth at $1,000/month annual makes no sense for one-person shops. Chat at $29/month covers shared chat but does not unlock workflows, and first-party general assistants still beat it on raw drafting breadth.
 - **Workflows demand real setup.** CRM chaining requires mapping fields, building approval gates, and testing personalization quality. Not a weekend rollout.
 - **Personalization hallucination risk.** AI-generated outreach that cites incorrect company details or misreads role data damages credibility. Monitor accuracy on the first 100 messages before scaling.
 - **No proprietary model.** Routed OpenAI, Anthropic, and Google APIs. Output ceiling tracks whatever underlying model handles the call.
 - **Template library is commoditized.** Custom GPTs on ChatGPT Teams replicate most Copy.ai templates at lower cost. The defense is the workflow layer, not the templates.
 - **Model access trails direct API.** Copy.ai lags behind Anthropic and OpenAI first-party products on new-model availability by days or weeks.
 
+## Recent changes
+
+- **June 2, 2026 pricing recheck.** Copy.ai's published self-serve lineup remains Chat, Growth, Expansion, Scale, and Enterprise. The main buyer risk is unchanged: workflow automation starts at the annual-billed $1,000/month Growth tier, not at the $29/month Chat tier.
+
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [Copy.ai pricing](https://www.copy.ai/prices), the [Copy.ai homepage](https://www.copy.ai/), and the [Copy.ai blog](https://www.copy.ai/blog).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-02 against [Copy.ai pricing](https://www.copy.ai/prices), the [Copy.ai homepage](https://www.copy.ai/), and Copy.ai workflow documentation.
 
 ## FAQ
 
 **Does Copy.ai have a free plan?**
-Not as of May 13, 2026. The earlier 2-week free trial is no longer surfaced on the [Copy.ai pricing page](https://www.copy.ai/prices). The entry plan is Chat at $29/month (or $24/month on annual billing) with five seats and unlimited words in chat.
+Not as of June 2, 2026. The earlier 2-week free trial is no longer surfaced on the [Copy.ai pricing page](https://www.copy.ai/prices). The entry plan is Chat at $29/month (or $24/month on annual billing) with five seats and unlimited words in chat.
 
 **What models power Copy.ai?**
 Routed third-party frontier APIs from OpenAI, Anthropic, and Google. The platform selects per task; outputs track direct model quality with Copy.ai's formatting and brand-voice layer applied.

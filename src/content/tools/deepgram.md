@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: $200 free credit, then pay-as-you-go; Growth saves up to 20%; Enterprise custom
 status: active
 launched: 2015
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-02
+last_verified: 2026-06-02
 price_history:
   - date: 2026-05-13
     price: "see note"
@@ -21,6 +21,13 @@ price_history:
     source_id: deepgram-pricing
     verified_at: '2026-05-13'
     note: "Public pricing page now lists explicit per-minute rates: Flux English STT $0.0065/min streaming PAYG ($0.0057/min Growth); Nova-3 Monolingual STT $0.0048/min streaming PAYG; Aura-2 TTS $0.030/1k characters PAYG; Voice Agent API tiered $0.050 to $0.163/min depending on bring-your-own LLM/TTS configuration."
+  - date: 2026-06-02
+    price: "see note"
+    source: https://deepgram.com/pricing
+    source_label: Deepgram pricing
+    source_id: deepgram-pricing
+    verified_at: '2026-06-02'
+    note: "June 2 pricing check keeps Free $200 Credit, Pay As You Go, Growth with prepaid annual credits from $4K+/year and up to 20% savings, Enterprise custom, plus the same Flux/Nova/Aura/Voice Agent per-unit pricing."
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -40,18 +47,18 @@ facts:
     source: https://deepgram.com/
     source_label: Deepgram official site
     source_id: deepgram-official
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
   pricing_anchor:
-    value: 'Free $200 credit; Pay As You Go (no minimums); Growth (annual prepaid, save up to 20%); Enterprise custom. STT
+    value: 'Free $200 credit; Pay As You Go (no minimums); Growth (annual prepaid credits from $4K+/year, save up to 20%); Enterprise custom. STT
       Flux English $0.0065/min streaming PAYG, Nova-3 Monolingual $0.0048/min streaming PAYG. TTS Aura-2 $0.030/1k characters
       PAYG. Voice Agent API $0.050 to $0.163/min depending on configuration.'
     source: https://deepgram.com/pricing
     source_label: Deepgram pricing
     source_id: deepgram-pricing
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -61,7 +68,7 @@ facts:
     source: https://developers.deepgram.com/docs
     source_label: Deepgram docs
     source_id: deepgram-docs
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -71,7 +78,7 @@ facts:
     source: https://deepgram.com/product/voice-agent-api
     source_label: Deepgram Voice Agent API
     source_id: deepgram-voice-agent
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -81,7 +88,7 @@ facts:
     source: https://deepgram.com/pricing
     source_label: Deepgram pricing
     source_id: deepgram-pricing
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -126,10 +133,10 @@ It competes with [AssemblyAI](/tools/assemblyai/), OpenAI Whisper, Google Speech
 | **Voice Agent API** | Real-time conversational voice agents · tiered pricing |
 | **Audio intelligence** | Summarization, topic, sentiment, intent features |
 | **Free credit** | $200 credit for new projects |
-| **STT pricing (verified 2026-05-13)** | Flux English $0.0065/min streaming PAYG ($0.0057/min Growth); Nova-3 Monolingual $0.0048/min streaming PAYG |
-| **TTS pricing (verified 2026-05-13)** | Aura-2 $0.030/1k characters PAYG; Aura-1 $0.0150/1k characters PAYG |
-| **Voice Agent pricing (verified 2026-05-13)** | $0.050 to $0.163/min depending on tier and bring-your-own LLM/TTS |
-| **Growth plan** | Annual prepaid credits, save up to 20% |
+| **STT pricing (verified 2026-06-02)** | Flux English $0.0065/min streaming PAYG ($0.0057/min Growth); Nova-3 Monolingual $0.0048/min streaming PAYG |
+| **TTS pricing (verified 2026-06-02)** | Aura-2 $0.030/1k characters PAYG; Aura-1 $0.0150/1k characters PAYG |
+| **Voice Agent pricing (verified 2026-06-02)** | $0.050 to $0.163/min depending on tier and bring-your-own LLM/TTS |
+| **Growth plan** | Annual prepaid credits from $4K+/year, save up to 20% |
 | **Best fit** | Voice products, call centers, agents, audio analytics |
 
 ## When to pick Deepgram
@@ -152,7 +159,7 @@ It competes with [AssemblyAI](/tools/assemblyai/), OpenAI Whisper, Google Speech
 
 Deepgram offers a free $200 credit, then pay-as-you-go pricing. Growth plans use annual prepaid credit commitments and save up to 20% versus PAYG rates, and Enterprise is custom. Pricing varies by endpoint: speech-to-text, text-to-speech, Voice Agent API, and audio intelligence all have separate meters.
 
-As verified on 2026-05-13, the pricing page lists explicit per-minute and per-character rates by model family.
+As verified on 2026-06-02, the pricing page lists explicit per-minute and per-character rates by model family.
 
 | Surface | Model | Streaming (PAYG) | Streaming (Growth) | Pre-recorded (PAYG) | Pre-recorded (Growth) |
 |---------|-------|------------------|--------------------|---------------------|------------------------|
@@ -199,13 +206,13 @@ It is less attractive for occasional transcription. If a team only uploads a few
 
 ## Recent changes
 
-- **Pricing transparency (verified 2026-05-13).** Deepgram's pricing page now publishes explicit per-minute and per-character rates for Flux, Nova-3, and Aura model families across both PAYG and Growth plans, with Growth saving up to 20%. Earlier pages described pricing as usage-based without surfacing the per-model rates.
+- **Pricing transparency (reverified 2026-06-02).** Deepgram's pricing page publishes explicit per-minute and per-character rates for Flux, Nova-3, and Aura model families across both PAYG and Growth plans, with Growth starting at $4K+/year in prepaid credits and saving up to 20%.
 - **Voice Agent API pricing surfaced.** The Voice Agent API now lists a $0.050 to $0.163 per-minute range, with the upper end reserved for bundled STT, TTS, and LLM and the lower end for bring-your-own-LLM/TTS configurations.
 - **Model lineup confirmed.** Flux remains the real-time voice-agent STT model; Nova-3 covers general transcription; Aura-2 is the current premium TTS family.
 
 ## Methodology
 
-Last verified 2026-05-13 against Deepgram pricing and product documentation. Scoring emphasizes API utility, real-time performance fit, voice-agent breadth, and implementation complexity.
+Last verified 2026-06-02 against Deepgram pricing and product documentation. Scoring emphasizes API utility, real-time performance fit, voice-agent breadth, and implementation complexity.
 
 ## FAQ
 

@@ -2,20 +2,20 @@
 type: tool
 slug: crewai
 title: CrewAI
-tagline: Open-source Python framework for orchestrating role-based multi-agent teams, plus a paid Enterprise platform for deployment and monitoring. CrewAI 1.14.4 (stable, April 30, 2026); 1.14.5 in alpha.
+tagline: Open-source Python framework for orchestrating role-based multi-agent teams, plus Basic cloud and custom Enterprise deployment/monitoring. CrewAI 1.14.6 is the current stable release as of June 2, 2026.
 category: ai-automation
 company: crewai
 url: 'https://www.crewai.com'
 github_url: https://github.com/crewAIInc/crewAI
 pricing_model: open-source
-price_range: "Free (MIT) · Enterprise from $99/mo"
+price_range: "Free Basic and MIT core · Enterprise custom"
 status: active
 launched: 2023-12
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-02
+last_verified: 2026-06-02
 update_frequency: monthly
-seo_title: "CrewAI: Features, Pricing & Review (May 2026)"
-meta_description: "CrewAI 1.14.4 is the current stable release (1.14.5 in alpha). Framework is free under MIT; Enterprise plans start at $99/mo and scale to a $120K/year Ultra tier. Role-based multi-agent orchestration for Python teams; native support for Claude Opus 4.7, GPT-5.5, and Gemini 3.1 Pro."
+seo_title: "CrewAI: Features, Pricing & Review (June 2026)"
+meta_description: "CrewAI 1.14.6 is the current stable release as of June 2, 2026. The core framework is open source; CrewAI Basic is free with 50 executions, and Enterprise is custom for production deployment, SSO, RBAC, and managed infrastructure."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -31,51 +31,51 @@ scores:
 facts:
   best_for:
     value: Best for Python teams prototyping and operating role-based multi-agent workflows with an open-source framework and
-      optional enterprise platform. Native support for Claude Opus 4.7, GPT-5.5, Gemini 3.1 Pro, and any LiteLLM endpoint.
+      optional cloud/enterprise platform for deployment, observability, triggers, and team controls.
     source: https://www.crewai.com/
     source_label: CrewAI official site
     source_id: crewai-official
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
   pricing_anchor:
-    value: CrewAI spans open-source framework use and paid platform/enterprise packaging. Enterprise tier is "Custom" on the
-      public site; the entry-tier $99/mo and Ultra ~$120K/yr numbers come from third-party guides and earlier pricing pages.
+    value: CrewAI spans open-source framework use, a Free Basic cloud plan with 50 included/maximum executions, and an Enterprise
+      plan with custom pricing sized to workflow. The live pricing page no longer publishes the older $99/mo entry or Ultra dollar figures.
     source: https://www.crewai.com/pricing
     source_label: CrewAI pricing
     source_id: crewai-pricing
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
   open_source_or_local:
-    value: GitHub repository is the proof point for open-source evaluation. Current stable is 1.14.4 (April 30, 2026); 1.14.5
-      alpha train shows active development (1.14.5a5 on May 12, 2026).
+    value: GitHub repository is the proof point for open-source evaluation. Current stable is 1.14.6, released May 28, 2026,
+      after the 1.14.5 stable release on May 18.
     source: https://github.com/crewAIInc/crewAI/releases
     source_label: CrewAI GitHub releases
     source_id: crewai-repository
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
   runtime_architecture:
-    value: Docs drive implementation assumptions around crews, agents, tasks, tools, flows, memory, and deployment. Recent alpha
-      releases deprecated CrewAgentExecutor in favor of newer execution paths.
+    value: Docs drive implementation assumptions around agents, crews, flows, tasks, triggers, tools, memory, knowledge, guardrails,
+      deployment, observability, and Enterprise console workflows.
     source: https://docs.crewai.com/
     source_label: CrewAI documentation
     source_id: crewai-docs
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
   watch_out_for:
     value: CrewAI is not a turnkey business outcome by itself; teams still need tool permissions, evals, observability, error
-      handling, cost controls, and human review. Multi-agent token spend on Opus 4.7 (with the new tokenizer) can climb fast.
+      handling, cost controls, and human review. Multi-agent runs multiply LLM calls quickly even when the framework license is free.
     source: https://docs.crewai.com/
     source_label: CrewAI documentation
     source_id: crewai-docs
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -91,14 +91,22 @@ not_best_for:
   - production workflows requiring guaranteed output consistency
   - teams needing a no-code visual builder
 quick_answer: >-
-  CrewAI is the leading role-based multi-agent framework for Python. Current stable is 1.14.4 (April 30, 2026), with the 1.14.5 alpha train iterating actively. Free and open-source under MIT, with Enterprise plans starting at $99/mo for deployment and monitoring. Native support for Claude Opus 4.7, GPT-5.5, and Gemini 3.1 Pro through LiteLLM. Pick it for fast multi-agent prototypes; skip for cost-capped production or non-Python stacks.
+  CrewAI is a leading role-based multi-agent framework for Python. Current stable is 1.14.6 (May 28, 2026). The core framework is free and open-source, while the public cloud pricing page now shows Basic as Free with 50 included/maximum executions and Enterprise as custom. Pick it for fast multi-agent prototypes and Python-first agent workflows; skip for cost-capped production or non-Python stacks.
+price_history:
+  - date: 2026-06-02
+    plan: "Basic / Enterprise"
+    price: "Basic Free; Enterprise Custom"
+    source: "https://crewai.com/pricing"
+    source_label: "Source"
+    source_id: crewai-pricing
+    note: "Public pricing page now shows Basic as Free with 50 included/maximum executions and Enterprise as Custom. Earlier third-party $99/mo and Ultra dollar figures were removed from AiPedia buyer guidance."
 ---
 
 # CrewAI
 
-CrewAI is an open-source Python framework for orchestrating role-based AI agent teams. The MIT-licensed core is free; a paid Enterprise platform adds deployment, monitoring, and SOC 2 / HIPAA compliance.
+CrewAI is an open-source Python framework for orchestrating role-based AI agent teams. The MIT-licensed core is free; CrewAI's hosted surface adds Studio, deployment, tracing, OpenTelemetry, triggers, workflow chat, and an Enterprise path for SSO, RBAC, dedicated support, and customer-managed infrastructure.
 
-Current stable release is [CrewAI 1.14.4](https://github.com/crewAIInc/crewAI/releases) (April 30, 2026). The 1.14.5 alpha train is iterating actively (latest 1.14.5a5 on May 12, 2026). LLM API costs are billed separately by the provider; Claude Opus 4.7, GPT-5.5, Gemini 3.1 Pro, and any other LiteLLM endpoint work out of the box.
+Current stable release is [CrewAI 1.14.6](https://github.com/crewAIInc/crewAI/releases) (May 28, 2026). LLM API costs are billed separately by the provider, so the framework can be free while a badly scoped multi-agent run is still expensive.
 
 ## System Verdict
 
@@ -106,24 +114,24 @@ Current stable release is [CrewAI 1.14.4](https://github.com/crewAIInc/crewAI/re
 >
 > **Skip it for production-critical workloads, tight cost caps, or non-Python stacks.** Multi-agent LLM calls multiply quickly. Debugging handoffs still means combing verbose logs, not inspecting a visual graph.
 >
-> **Who pays which tier:** Free open-source for prototypes and internal tools. Enterprise from $99/mo for monitoring and deployment. Ultra at roughly $120K/year for regulated enterprises needing SOC 2, HIPAA, and dedicated support.
+> **Who pays which tier:** Free open-source for prototypes and internal tools. Basic cloud is free when 50 executions are enough. Enterprise is custom when production automations need larger execution volumes, SSO, RBAC, customer-managed infrastructure, dedicated support, or compliance review.
 
 ## Key Facts
 
 | | |
 |---|---|
-| **Current stable version** | CrewAI 1.14.4 (released April 30, 2026) |
-| **Active alpha train** | 1.14.5a5 (May 12, 2026) deprecating CrewAgentExecutor, improving Daytona sandbox tools |
+| **Current stable version** | CrewAI 1.14.6 (released May 28, 2026) |
+| **Recent stable version** | 1.14.5 (May 18, 2026), following the 1.14.5 alpha train |
 | **License** | MIT (core framework) |
 | **Language** | Python only (no JS/TS SDK) |
 | **Process types** | Sequential · Hierarchical · Consensual |
-| **Deployment paths** | Self-host free · Enterprise platform |
-| **Enterprise entry price** | From $99/mo (per third-party pricing guides; live page lists "Custom") |
-| **Ultra tier** | ~$120K/year (unlimited scale, SOC 2, HIPAA) |
-| **Model support** | Claude Opus 4.7 / Sonnet 4.6 / Haiku 4.5 · GPT-5.5 · Gemini 3.1 Pro · Ollama · any LiteLLM endpoint |
-| **GitHub stars** | 30K+ as of May 2026 |
+| **Deployment paths** | Self-host free · Basic cloud · custom Enterprise platform |
+| **Basic plan** | Free · 50 included/maximum executions on the hosted pricing page |
+| **Enterprise tier** | Custom · sized to workflow · SSO, RBAC, dedicated support, customer-managed infrastructure options |
+| **Model support** | Bring API keys/providers through the framework and supported integrations; LLM spend is separate |
+| **GitHub releases** | 1.14.6 marked latest on June 2, 2026 source check |
 
-Every data point above was verified against vendor sources on 2026-05-13. See Sources.
+Every data point above was verified against vendor sources on 2026-06-02. See Sources.
 
 ## What it actually is
 
@@ -155,13 +163,12 @@ The moat is thin. The role-based pattern is easy to copy and competing framework
 | Plan | Price | Key limits |
 |------|-------|------------|
 | Open Source | Free | Full framework, self-host, community support |
-| Enterprise (entry) | From $99/mo | Hosted deployment, monitoring, limited executions |
-| Enterprise (scale) | Tiered | More crews, more executions per month, priority support |
-| Ultra | ~$120K/yr | 10K+ executions/mo, SOC 2, HIPAA, dedicated CSM, 50 hours of development per month, private infrastructure |
+| Basic | Free | CrewAI cloud, Studio visual editor, standard tools/triggers, GitHub integration, private agent/tool repositories, 50 included and maximum executions |
+| Enterprise | Custom | Sized-to-workflow executions, enterprise connectors, SSO, RBAC, customer or CrewAI infrastructure, dedicated support, onboarding, deployment, and development help |
 
-*Prices verified 2026-05-13 via [CrewAI pricing](https://crewai.com/pricing) and [Lindy CrewAI pricing breakdown](https://www.lindy.ai/blog/crew-ai-pricing). The public pricing page now lists Enterprise as "Custom" with no inline dollar figures; the $99/mo entry and ~$120K/yr Ultra numbers come from third-party guides and earlier published cards. Full Enterprise tier cards require account signup.*
+*Pricing verified 2026-06-02 via [CrewAI pricing](https://crewai.com/pricing). The public page now shows Basic as Free and Enterprise as Custom; earlier third-party $99/mo and ~$120K/year Ultra figures should not be treated as current public pricing.*
 
-LLM API costs are separate. A complex crew running Claude Opus 4.7 (with the new tokenizer producing 1.0-1.35x more tokens per input) or GPT-5.5 frontier models can burn several dollars per execution without tight caps. Default to Haiku 4.5, Sonnet 4.6, or GPT-5.5 Mini on inner-loop agents and reserve Opus 4.7 for planner roles.
+LLM API costs are separate. A complex crew can burn several dollars per execution without tight caps because planners, workers, tools, retries, and review loops all add calls. Default to cheaper or smaller models for inner-loop agents and reserve expensive frontier reasoning models for planner or final-review roles.
 
 ## Against the alternatives
 
@@ -177,24 +184,24 @@ LLM API costs are separate. A complex crew running Claude Opus 4.7 (with the new
 
 ## Failure modes
 
-- **LLM cost amplification.** Multiple agents, multiple calls per task. A four-agent crew can 10x the tokens of a single-agent pipeline. Budget controls are the user's responsibility. With Claude Opus 4.7's new tokenizer producing 1.0-1.35x more tokens per input than 4.6, re-benchmark before migrating production crews.
+- **LLM cost amplification.** Multiple agents, multiple calls per task. A four-agent crew can 10x the tokens of a single-agent pipeline. Budget controls are the user's responsibility.
 - **Output inconsistency.** Agents loop, drift from roles, or produce malformed outputs. Pydantic output schemas help, not a full fix.
 - **Debugging is log-archaeology.** No visual execution graph. Traces are verbose and force human parsing.
 - **Python only.** Teams on JS, Go, or Rust must wrap CrewAI behind a Python service.
-- **Enterprise pricing is gated.** Detailed Enterprise tiers require account signup, which frustrates procurement comparisons.
+- **Enterprise pricing is gated.** Enterprise is custom on the public page, which frustrates procurement comparisons.
 - **Moat is thin.** The role-based pattern is documented and copyable. Competing frameworks are converging.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against the [CrewAI GitHub releases](https://github.com/crewAIInc/crewAI/releases), [CrewAI pricing page](https://crewai.com/pricing), and third-party pricing breakdowns.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-02 against the [CrewAI GitHub releases](https://github.com/crewAIInc/crewAI/releases), [CrewAI pricing page](https://crewai.com/pricing), and [CrewAI documentation](https://docs.crewai.com/).
 
 ## FAQ
 
 **Is CrewAI free?**
-Yes. The core framework is MIT-licensed and fully free to self-host. You supply LLM API keys and pay the provider directly. Enterprise plans (hosted deployment, monitoring, SOC 2, HIPAA) start at $99/month.
+Yes. The core framework is MIT-licensed and fully free to self-host. The hosted Basic plan is also listed as Free on the public pricing page, with 50 included/maximum executions. You still supply LLM API keys or pay provider/model costs separately. Enterprise is custom.
 
 **What is the current CrewAI version?**
-CrewAI 1.14.4 is the latest stable release (April 30, 2026), which added custom persistence keys, Azure OpenAI support, and sandbox tool integrations. The 1.14.5 alpha train is iterating actively (1.14.5a5 on May 12, 2026) and deprecates CrewAgentExecutor in favor of newer execution paths. See [releases](https://github.com/crewAIInc/crewAI/releases).
+CrewAI 1.14.6 is the latest stable release shown on GitHub as of June 2, 2026. It shipped on May 28, 2026 after the 1.14.5 stable release. See [releases](https://github.com/crewAIInc/crewAI/releases).
 
 **CrewAI vs LangGraph?**
 CrewAI uses role-based agents with goals and backstories. Faster to prototype. LangGraph uses explicit state graphs. More control over production behavior. CrewAI wins on time-to-first-crew; LangGraph wins on deterministic production flows.
@@ -203,14 +210,13 @@ CrewAI uses role-based agents with goals and backstories. Faster to prototype. L
 Yes. CrewAI is model-agnostic through LiteLLM, so Ollama, vLLM, and local OpenAI-compatible endpoints all work without code changes.
 
 **How expensive does a CrewAI run get?**
-A four-agent crew on OpenAI reasoning models or Claude Opus 4.7 can hit several dollars per run without token budgets. With Opus 4.7's new tokenizer running 1.0-1.35x heavier than 4.6 at the same sticker price, costs that looked fine in March can creep in May. Put hard caps on `max_iter`, enforce timeouts, and tier model assignment (Haiku 4.5 or GPT-5.5 Mini on workers, Opus 4.7 only on planners) before shipping anything production-adjacent.
+A four-agent crew on expensive reasoning models can hit several dollars per run without token budgets. Put hard caps on `max_iter`, enforce timeouts, and tier model assignment before shipping anything production-adjacent.
 
 ## Sources
 
 - [CrewAI pricing page](https://crewai.com/pricing): Enterprise tiers and execution limits
 - [CrewAI GitHub releases](https://github.com/crewAIInc/crewAI/releases): Current version and changelog
-- [Lindy: CrewAI Pricing Guide 2026](https://www.lindy.ai/blog/crew-ai-pricing): Entry-tier and Ultra pricing breakdowns
-- [ZenML: CrewAI Pricing Guide](https://www.zenml.io/blog/crewai-pricing): Plan comparison
+- [CrewAI documentation](https://docs.crewai.com/): agents, crews, flows, triggers, observability, and Enterprise workflows
 
 ## Related
 

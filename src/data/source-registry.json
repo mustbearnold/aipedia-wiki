@@ -1501,7 +1501,8 @@
       "url": "https://www.copy.ai/prices",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "copy-ai-platform",
@@ -1509,7 +1510,8 @@
       "url": "https://www.copy.ai/platform",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "copy-ai-workflows",
@@ -1517,7 +1519,8 @@
       "url": "https://www.copy.ai/workflows",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "crewai-docs",
@@ -1525,7 +1528,8 @@
       "url": "https://docs.crewai.com/",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "crewai-official",
@@ -1533,7 +1537,8 @@
       "url": "https://www.crewai.com/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "crewai-pricing",
@@ -1541,7 +1546,8 @@
       "url": "https://www.crewai.com/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "crewai-repository",
@@ -1549,7 +1555,8 @@
       "url": "https://github.com/crewAIInc/crewAI",
       "type": "repository",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "cursor-docs",
@@ -1685,7 +1692,8 @@
       "url": "https://developers.deepgram.com/docs",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "deepgram-official",
@@ -1693,7 +1701,8 @@
       "url": "https://deepgram.com/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "deepgram-pricing",
@@ -1701,7 +1710,8 @@
       "url": "https://deepgram.com/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "deepgram-voice-agent",
@@ -1709,7 +1719,8 @@
       "url": "https://deepgram.com/product/voice-agent-api",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "deepl-docs",
@@ -1717,7 +1728,8 @@
       "url": "https://developers.deepl.com/docs",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "deepl-official",
@@ -1725,7 +1737,8 @@
       "url": "https://www.deepl.com/en/pro",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "deepl-pricing",
@@ -1733,7 +1746,17 @@
       "url": "https://support.deepl.com/hc/en-us/articles/360019924499-About-DeepL-plans",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
+    },
+    {
+      "id": "deepl-api-plans",
+      "label": "DeepL API plans",
+      "url": "https://support.deepl.com/hc/en-us/articles/360021200939-DeepL-API-plans",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "deepl-translator",
@@ -1741,7 +1764,8 @@
       "url": "https://www.deepl.com/en/translator",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "deepseek-api-pricing",
@@ -1749,7 +1773,8 @@
       "url": "https://api-docs.deepseek.com/quick_start/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "deepseek-chat",
@@ -1757,7 +1782,8 @@
       "url": "https://chat.deepseek.com",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "deepseek-huggingface",
@@ -1765,7 +1791,8 @@
       "url": "https://huggingface.co/deepseek-ai",
       "type": "repository",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "descript-changelog",
@@ -1773,7 +1800,8 @@
       "url": "https://www.descript.com/changelog",
       "type": "blog",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "descript-help",
@@ -1781,7 +1809,8 @@
       "url": "https://help.descript.com",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "descript-pricing",
@@ -1789,7 +1818,8 @@
       "url": "https://www.descript.com/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "devin-docs",
@@ -1821,7 +1851,8 @@
       "url": "https://help.dext.com/en/articles/105688-what-is-dext-and-who-is-it-for",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "dext-pricing",
@@ -1829,7 +1860,8 @@
       "url": "https://help.dext.com/en/articles/647776-dext-plans-for-businesses",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "dia-best-for",
@@ -1837,15 +1869,17 @@
       "url": "https://www.diabrowser.com",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "dia-coding-agent",
-      "label": "dia source",
-      "url": "https://aipedia.wiki/tools/dia/",
+      "label": "Dia website",
+      "url": "https://www.diabrowser.com",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "doubao-docs",
@@ -1853,7 +1887,8 @@
       "url": "https://www.volcengine.com/docs/82379",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "doubao-official",
@@ -1861,7 +1896,8 @@
       "url": "https://www.doubao.com/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "doubao-pricing",
@@ -1869,7 +1905,8 @@
       "url": "https://www.volcengine.com/docs/82379/1099320",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "doubao-volcengine-product",
@@ -1877,7 +1914,8 @@
       "url": "https://www.volcengine.com/product/doubao",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "dust-docs",
@@ -1885,7 +1923,8 @@
       "url": "https://docs.dust.tt/",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "dust-official",
@@ -1893,15 +1932,17 @@
       "url": "https://dust.tt/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "dust-pricing",
       "label": "Dust pricing",
-      "url": "https://dust.tt/pricing",
+      "url": "https://dust.tt/home/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "dust-security",
@@ -1909,7 +1950,8 @@
       "url": "https://dust.tt/security",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "elevenlabs-api-pricing",
@@ -7419,7 +7461,8 @@
       "url": "https://www.diabrowser.com/security",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "exa-pricing-update",

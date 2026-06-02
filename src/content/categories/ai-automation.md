@@ -5,7 +5,7 @@ title: AI Automation & Agents
 description: Current workflow automation, AI agent platforms, meeting automation, call automation, and operations tools for technical teams, non-technical operators, GTM workflows, customer success, support, sales, and internal automation.
 tool_count: 25
 seo_title: "Best AI Automation Tools & Agent Platforms (June 2026)"
-meta_description: "Updated June 1, 2026: compare n8n, Zapier, Make, Gumloop, Relevance AI, Activepieces, AG2, Browserbase, Ada, Apollo, Amplemarket, Lindy, Manus, Pipedream, CloudTalk, and MeetGeek by workflow, pricing unit, and risk."
+meta_description: "Updated June 2, 2026: compare n8n, Zapier, Make, Gumloop, Relevance AI, Activepieces, AG2, CrewAI, Dust, Dext, Browserbase, Ada, Apollo, Amplemarket, Lindy, Manus, Pipedream, CloudTalk, and MeetGeek by workflow, pricing unit, and risk."
 author: "aipedia.wiki Editorial"
 last_updated: 2026-06-02
 last_verified: 2026-06-02
@@ -40,6 +40,8 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 
 **Use [AG2](/tools/ag2/) when the buyer wants an open-source multi-agent framework rather than a SaaS workflow canvas.** The current release check found AG2 v0.13.2 from May 29, 2026 with agent-evaluation, client, tool, and security work. It is a developer framework, not a non-technical ops platform.
 
+**Use [CrewAI](/tools/crewai/) when Python developers want role-based multi-agent orchestration.** The June 2 check found CrewAI 1.14.6 as the current stable release and a public pricing split of Free Basic cloud plus custom Enterprise. It belongs here as a framework/cloud-control-plane option, not as a no-code workflow builder.
+
 **Use [Browserbase](/tools/browserbase/) when automation needs reliable cloud browsers.** Browserbase belongs in this category when agents, scraping, QA, or workflow systems need managed browser sessions, identity, web-data APIs, Stagehand, MCP, and observability instead of local Playwright infrastructure.
 
 **Use [Apollo](/tools/apollo/) or [Amplemarket](/tools/amplemarket/) when automation starts with outbound revenue.** Apollo is the broader prospect-data and sales-engagement platform, while Amplemarket is the higher-touch AI SDR suite with Duo agents and a $600/month annual Startup plan for two seats. Both need real sender, deliverability, and CRM governance before scale.
@@ -47,6 +49,10 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 **Use [Clay](/tools/clay/) when GTM automation starts with enrichment, signals, and account research.** Clay's June 2 check keeps the important distinction clear: the public cards show lower annual-billing starts, while the FAQ names higher monthly starts. Buyer advice should use the annual/monthly split rather than a single flat Clay price.
 
 **Use [ClickUp](/tools/clickup/) when work management and AI sit in the same operating system.** ClickUp is not a generic agent platform; it is the better fit when tasks, docs, project automation, ClickUp Brain, Everything AI, and workspace governance need to live together.
+
+**Use [Dust](/tools/dust/) when teams want internal AI agents over company knowledge and actions.** Dust Pro remains 29 EUR/user/month as of June 2, and Enterprise stays custom from 100 members. It is strongest when connected data sources, Slack/Zendesk/API surfaces, and permissioned agents replace repeated internal questions.
+
+**Use [Dext](/tools/dext/) when automation starts with bookkeeping document intake.** It is vertical pre-accounting automation for receipts, invoices, statements, expenses, and accounting handoff, not a general agent platform. Pricing still scales by users and document volume, with the 5-user/250-document baseline rechecked on June 2.
 
 **Use [Ada](/tools/ada/) when enterprise customer service wants AI agents for support outcomes.** Ada is now a demo-gated contact-sales page for serious service volumes, not a self-serve chatbot widget. Its June 1 source check found 550+ deployed AI agents and 5.5B+ interactions, so the buyer question is enterprise fit, resolution quality, and channel coverage.
 
@@ -71,11 +77,14 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 | Delegated GTM, research, support, and ops agents | [Relevance AI](/tools/relevance-ai/) | AI workforces, actions, vendor credits, scheduling, escalations, and marketplace patterns | Not the cheapest generic workflow router |
 | Open-source automation and self-hosting | [Activepieces](/tools/activepieces/) | MIT-licensed self-host path, cloud active-flow billing, 700+ integrations, and AI-agent support | Someone still has to own hosting, secrets, and connector maintenance |
 | Developer multi-agent framework | [AG2](/tools/ag2/) | Apache 2.0 framework for AutoGen-style agent systems with active releases | Requires Python engineering judgment; not a turnkey workflow product |
+| Python multi-agent orchestration | [CrewAI](/tools/crewai/) | Role-based agents, crews, flows, Studio, tracing, triggers, and an Enterprise path | Basic cloud is small; LLM costs and production controls still need engineering ownership |
 | Cloud browser automation for agents | [Browserbase](/tools/browserbase/) | Managed browsers, Web Data APIs, runtime, identity, observability, Stagehand, and MCP | Costs move with browser sessions and runtime design |
 | Enterprise customer-service AI agents | [Ada](/tools/ada/) | Strong fit for high-volume support teams that need chat, voice, email, SMS, social, and reasoning workflows | Pricing is demo-gated; verify volume, channel, and resolution economics |
 | Outbound revenue automation | [Apollo](/tools/apollo/) or [Amplemarket](/tools/amplemarket/) | Prospect data, enrichment, sequencing, and AI-assisted GTM execution | Credit systems, deliverability, and CRM hygiene decide real value |
 | Enrichment and GTM research workflows | [Clay](/tools/clay/) | Waterfalls data providers, research agents, and account enrichment before sending | Credits, action counts, and annual-vs-monthly pricing need direct plan math |
 | AI work management | [ClickUp](/tools/clickup/) | Tasks, docs, automation, Brain, and Everything AI inside one workspace | Easy to overbuy AI add-ons if the team has not standardized ClickUp usage |
+| Internal team AI agents | [Dust](/tools/dust/) | Custom agents over company data and tools, Slack/Zendesk/API surfaces, model choice | Value depends on source hygiene, permissions, and repeated team workflows |
+| Bookkeeping document automation | [Dext](/tools/dext/) | Receipts, invoices, expenses, bank/supplier statements, approvals, and accounting handoff | Not a ledger, payroll, tax, or general automation platform |
 | Phone-heavy sales/support operations | [CloudTalk](/tools/cloudtalk/) | Business calling, routing, dialers, CRM sync, AI Conversation Intelligence, and AI Voice Agents in one platform | More than teams need if the job is internal-only calling or pure chat support |
 | Meeting-to-workflow automation for CS, sales, recruiting, and ops | [MeetGeek](/tools/meetgeek/) | Transcripts, summaries, AI Chat, action items, Zapier/Make/n8n workflows, API/MCP access, and CRM/task handoff from meeting content | Needs consent policy, workspace permissions, and a defined post-meeting workflow |
 | One-off general autonomous tasks | [Manus](/tools/manus/) | Hosted VM agent for research, spreadsheets, slides, files, and browser work; official site now describes Manus as part of Meta | Credit burn and data-handling terms need direct verification before sensitive work |
@@ -131,6 +140,10 @@ Do not leave this category stale. Automation tools are adding MCP, agent builder
 - [Activepieces pricing](https://www.activepieces.com/pricing) (verified 2026-06-01)
 - [Activepieces GitHub releases](https://github.com/activepieces/activepieces/releases) (verified 2026-06-01)
 - [AG2 releases](https://github.com/ag2ai/ag2/releases) (verified 2026-06-01)
+- [CrewAI releases](https://github.com/crewAIInc/crewAI/releases) (verified 2026-06-02)
+- [CrewAI pricing](https://crewai.com/pricing) (verified 2026-06-02)
+- [Dust pricing](https://dust.tt/home/pricing) (verified 2026-06-02)
+- [Dext business plans](https://help.dext.com/en/articles/647776-dext-plans-for-businesses) (verified 2026-06-02)
 - [Ada platform](https://www.ada.cx/platform) (verified 2026-06-01)
 - [Apollo pricing](https://apollo.io/pricing) (verified 2026-06-01)
 - [Amplemarket pricing](https://www.amplemarket.com/pricing) (verified 2026-06-01)

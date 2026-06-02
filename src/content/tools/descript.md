@@ -2,7 +2,7 @@
 type: tool
 slug: descript
 title: Descript
-tagline: Transcript-based audio and video editor with Overdub voice cloning, Studio Sound, and filler-word removal.
+tagline: Transcript-based audio and video editor with AI Speech voice cloning, Studio Sound, filler-word removal, AI avatars, and prompt-based media generation.
 category: ai-voice
 company: Descript Inc.
 url: 'https://descript.com'
@@ -10,16 +10,23 @@ pricing_model: freemium
 price_range: "$0-$50/editor/month"
 status: active
 launched: 2017-01
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-02
+last_verified: 2026-06-02
 price_history:
   - date: 2026-05-13
     price: "see note"
     source: "https://www.descript.com/pricing"
     source_label: "Descript pricing"
     source_id: descript-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-06-02
     note: "Plan restructure verified: Hobbyist $16/mo annual ($24 monthly), Creator $24/mo annual ($35 monthly, replaces the prior $12 Creator tier), Business $50/mo annual ($65 monthly, replaces the prior $24 Pro tier). Allowances shifted from transcription hours to media hours plus AI credits."
+  - date: 2026-06-02
+    price: "see note"
+    source: "https://www.descript.com/pricing"
+    source_label: "Descript pricing"
+    source_id: descript-pricing
+    verified_at: 2026-06-02
+    note: "Pricing remains Free, Hobbyist $16/mo annual ($24 monthly), Creator $24/mo annual ($35 monthly), Business $50/mo annual ($65 monthly), and Enterprise custom. Public feature list now surfaces AI avatars and prompt-based media generation alongside AI Speech, Regenerate, Studio Sound, captions, clips, and Underlord."
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -41,7 +48,7 @@ facts:
     source: "https://www.descript.com/changelog"
     source_label: "Descript changelog"
     source_id: descript-changelog
-    verified_at: 2026-05-13
+    verified_at: 2026-06-02
     volatility: high
     confidence: high
     next_review_at: 2026-06-13
@@ -50,7 +57,7 @@ facts:
     source: "https://help.descript.com"
     source_label: "Descript help center"
     source_id: descript-help
-    verified_at: 2026-05-13
+    verified_at: 2026-06-02
     volatility: low
     confidence: high
     next_review_at: 2026-06-13
@@ -59,7 +66,7 @@ facts:
     source: "https://www.descript.com/pricing"
     source_label: "Descript pricing"
     source_id: descript-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-06-02
     volatility: high
     confidence: high
     next_review_at: 2026-06-13
@@ -68,7 +75,7 @@ facts:
     source: "https://www.descript.com/pricing"
     source_label: "Descript pricing"
     source_id: descript-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-06-02
     volatility: high
     confidence: high
     next_review_at: 2026-06-13
@@ -77,7 +84,7 @@ facts:
     source: "https://www.descript.com/pricing"
     source_label: "Descript pricing"
     source_id: descript-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-06-02
     volatility: high
     confidence: high
     next_review_at: 2026-06-13
@@ -86,15 +93,15 @@ facts:
     source: "https://help.descript.com"
     source_label: "Descript help center"
     source_id: descript-help
-    verified_at: 2026-05-13
+    verified_at: 2026-06-02
     volatility: medium
     confidence: high
   image_generation:
-    value: "No primary native still-image generation; Descript focuses on audio, video, transcription, and editing"
+    value: "Yes, but as an editing/creation support feature rather than a specialist image model: Descript's pricing page now lists prompt-based media generation and custom images/videos."
     source: "https://www.descript.com/pricing"
     source_label: "Descript pricing"
     source_id: descript-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-06-02
     volatility: low
     confidence: high
   video_generation:
@@ -102,7 +109,7 @@ facts:
     source: "https://www.descript.com/changelog"
     source_label: "Descript changelog"
     source_id: descript-changelog
-    verified_at: 2026-05-13
+    verified_at: 2026-06-02
     volatility: high
     confidence: high
     next_review_at: 2026-06-13
@@ -111,7 +118,7 @@ facts:
     source: "https://help.descript.com"
     source_label: "Descript help center"
     source_id: descript-help
-    verified_at: 2026-05-13
+    verified_at: 2026-06-02
     volatility: medium
     confidence: high
   web_browsing:
@@ -119,7 +126,7 @@ facts:
     source: "https://www.descript.com/pricing"
     source_label: "Descript pricing"
     source_id: descript-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-06-02
     volatility: low
     confidence: high
   coding_agent:
@@ -127,7 +134,7 @@ facts:
     source: "https://www.descript.com/pricing"
     source_label: "Descript pricing"
     source_id: descript-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-06-02
     volatility: low
     confidence: high
   enterprise_controls:
@@ -135,7 +142,7 @@ facts:
     source: "https://www.descript.com/pricing"
     source_label: "Descript pricing"
     source_id: descript-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-06-02
     volatility: high
     confidence: high
     next_review_at: 2026-06-13
@@ -144,7 +151,7 @@ facts:
     source: "https://help.descript.com"
     source_label: "Descript help center"
     source_id: descript-help
-    verified_at: 2026-05-13
+    verified_at: 2026-06-02
     volatility: medium
     confidence: high
   open_source_or_local:
@@ -152,7 +159,7 @@ facts:
     source: "https://www.descript.com/pricing"
     source_label: "Descript pricing"
     source_id: descript-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-06-02
     volatility: low
     confidence: high
   best_for:
@@ -160,7 +167,7 @@ facts:
     source: "https://www.descript.com/pricing"
     source_label: "Descript pricing"
     source_id: descript-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-06-02
     volatility: medium
     confidence: high
   watch_out_for:
@@ -168,7 +175,7 @@ facts:
     source: "https://www.descript.com/pricing"
     source_label: "Descript pricing"
     source_id: descript-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-06-02
     volatility: high
     confidence: high
     next_review_at: 2026-06-13
@@ -183,18 +190,18 @@ not_best_for:
   - synthetic avatar video production
   - music production that needs a full DAW
   - teams that require frame-accurate NLE control
-seo_title: "Descript: Features, Pricing & Review (May 2026)"
-meta_description: "Descript edits audio and video by editing the transcript. Current public pricing shows Free, Hobbyist $16/mo annual, Creator $24/mo annual, Business $50/mo annual, and Enterprise custom."
+seo_title: "Descript: Features, Pricing & Review (June 2026)"
+meta_description: "Descript edits audio and video by editing the transcript. Current public pricing shows Free, Hobbyist $16/mo annual, Creator $24/mo annual, Business $50/mo annual, and Enterprise custom, with AI Speech, Regenerate, Studio Sound, AI avatars, and media generation."
 author: aipedia.wiki Editorial
 quick_answer: >-
-  Descript is the transcript-first audio and video editor. Delete a word from the text, it disappears from the recording. AI Speech (formerly Overdub) clones a voice for typed fixes; Regenerate repairs audio in surrounding tone; Studio Sound cleans noisy recordings to broadcast quality; filler detection strips ums in bulk. Pick it for podcast and creator post-production; skip it for multi-cam or complex VFX.
+  Descript is the transcript-first audio and video editor. Delete a word from the text, it disappears from the recording. AI Speech (formerly Overdub) clones a voice for typed fixes; Regenerate repairs audio in surrounding tone; Studio Sound cleans noisy recordings to broadcast quality; filler detection strips ums in bulk; AI avatars and prompt-based media generation help rough in creator assets. Pick it for podcast and creator post-production; skip it for multi-cam or complex VFX.
 ---
 
 # Descript
 
 Descript is the transcript-first audio and video editor built by Descript Inc., backed by Andreessen Horowitz. The core paradigm sticks: the transcript is the timeline. Deleting a word from the text deletes it from the recording.
 
-**AI Speech** (formerly Overdub) clones a voice from training audio so creators fix stumbled sentences by typing. **Regenerate** repairs audio and re-synthesizes voices to match surrounding tone. **Studio Sound** runs one-click noise reduction and EQ. Automatic filler detection strips ums and pauses across an entire project. **Underlord** bundles 20-plus AI tools across the editor.
+**AI Speech** (formerly Overdub) clones a voice from training audio so creators fix stumbled sentences by typing. **Regenerate** repairs audio and re-synthesizes voices to match surrounding tone. **Studio Sound** runs one-click noise reduction and EQ. Automatic filler detection strips ums and pauses across an entire project. **Underlord** bundles 20-plus AI tools across the editor, and the current pricing page now groups AI avatars and prompt-based media generation into the broader creator toolkit.
 
 ## System Verdict
 
@@ -214,13 +221,14 @@ Descript is the transcript-first audio and video editor built by Descript Inc., 
 | **Studio Sound** | One-click noise reduction, compression, EQ |
 | **Filler removal** | Automatic detection of ums, uhs, pauses across full project |
 | **Underlord** | 20-plus AI tools: clips, summaries, captions, social posts from transcript |
+| **Generate media** | AI avatars plus prompt-based custom images and videos for creator workflows |
 | **Eye contact correction** | Adjusts video frame to simulate direct camera gaze |
 | **Tiers** | Free · Hobbyist $24 ($16 annual) · Creator $35 ($24 annual) · Business $65 ($50 annual) · Enterprise custom |
 | **4K export** | Creator and Business |
 | **Media hours** | Free 60 min/mo · Hobbyist 10 hr/mo · Creator 30 hr/mo (+5 bonus) · Business 40 hr/mo (+10 bonus) |
 | **AI credits** | Free 100 one-time · Hobbyist 400/mo · Creator 800/mo (+500 bonus) · Business 1500/mo (+1000 bonus) |
 
-Every data point above was verified against vendor documentation on 2026-05-13. See Sources.
+Every data point above was verified against vendor documentation on 2026-06-02. See Sources.
 
 ## What it actually is
 
@@ -248,7 +256,7 @@ Collaboration runs through shared projects with real-time editing and comments. 
 
 ## Pricing
 
-Subscription pricing via [descript.com/pricing](https://www.descript.com/pricing). Annual billing saves up to 35% against monthly on the public pricing page verified on 2026-05-13. Descript restructured plans in 2026: the prior Creator $12 and Pro $24 annual tiers were replaced with Hobbyist, Creator, and Business, and allowances shifted from transcription hours to a combination of media hours and AI credits.
+Subscription pricing via [descript.com/pricing](https://www.descript.com/pricing). Annual billing saves up to 35% against monthly on the public pricing page verified on 2026-06-02. Descript restructured plans in 2026: the prior Creator $12 and Pro $24 annual tiers were replaced with Hobbyist, Creator, and Business, and allowances shifted from transcription hours to a combination of media hours and AI credits.
 
 | Plan | Monthly | Annual (effective/mo) | Media hours | AI credits | Notable limits |
 |------|---------|-----------------------|-------------|------------|----------------|
@@ -258,7 +266,7 @@ Subscription pricing via [descript.com/pricing](https://www.descript.com/pricing
 | Business | $65/editor | $50/editor | 40 hr/mo (+10 bonus) | 1500/mo (+1000 bonus) | Brand Studio, translation/dubbing in 30-plus languages, priority SLA, up to 5 seats |
 | Enterprise | Custom | Custom | Custom | Custom | Advanced security, SSO/SCIM, flexible licensing |
 
-*Prices verified 2026-05-13 via [Descript pricing](https://www.descript.com/pricing). Monthly billing is shown separately from the annual effective price. Legacy Creator/Pro plans may differ for existing customers.*
+*Prices verified 2026-06-02 via [Descript pricing](https://www.descript.com/pricing). Monthly billing is shown separately from the annual effective price. Legacy Creator/Pro plans may differ for existing customers.*
 
 ## Against the alternatives
 
@@ -274,7 +282,8 @@ Subscription pricing via [descript.com/pricing](https://www.descript.com/pricing
 
 ## Recent changes
 
-- **2026 plan restructure (verified 2026-05-13).** Descript replaced the prior Creator $12 and Pro $24 annual tiers with Hobbyist $16, Creator $24, and Business $50. Allowances shifted from transcription hours to media hours plus AI credits, so frequent creators should re-check whether the new Creator pool covers their workload before renewal.
+- **June 2, 2026 feature check.** Prices remain stable, and the public pricing page now surfaces AI avatars and prompt-based media generation alongside AI Speech, Regenerate, Studio Sound, captions, clips, and Underlord.
+- **2026 plan restructure (reverified 2026-06-02).** Descript replaced the prior Creator $12 and Pro $24 annual tiers with Hobbyist $16, Creator $24, and Business $50. Allowances shifted from transcription hours to media hours plus AI credits, so frequent creators should re-check whether the new Creator pool covers their workload before renewal.
 - **Feature naming refresh.** Overdub now appears on the pricing page as AI Speech; Regenerate is positioned alongside it as a tone-matched repair tool. Underlord packages 20-plus AI tools across the editor.
 - **Business tier replaces Pro.** Business adds Brand Studio, translation and dubbing in 30-plus languages, priority SLA support, and up to 5 seats; the prior Pro feature set is no longer the top self-serve plan.
 
@@ -291,7 +300,7 @@ Subscription pricing via [descript.com/pricing](https://www.descript.com/pricing
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [Descript pricing](https://www.descript.com/pricing) and the [Descript help center](https://help.descript.com).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-02 against [Descript pricing](https://www.descript.com/pricing), [Descript release notes](https://www.descript.com/changelog), and the [Descript help center](https://help.descript.com).
 
 ## FAQ
 
@@ -314,7 +323,7 @@ Yes on Creator and Business. 4K import and export are supported with proxy editi
 Different roles in the same pipeline. Riverside captures cleaner remote recordings with per-speaker tracks. Descript is the editor downstream. Many podcasters run both.
 
 **What does Studio Sound actually do?**
-One-click noise reduction, compression, and EQ. It lifts mobile and untreated-room recordings into broadcast quality, with consumption tracked against the AI credit pool on the 2026 plans verified on 2026-05-13.
+One-click noise reduction, compression, and EQ. It lifts mobile and untreated-room recordings into broadcast quality, with consumption tracked against the AI credit pool on the 2026 plans verified on 2026-06-02.
 
 ## Sources
 

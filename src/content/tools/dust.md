@@ -11,16 +11,23 @@ pricing_model: paid
 price_range: Pro 29 EUR/user/month; Enterprise custom
 status: active
 launched: 2023
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-02
+last_verified: 2026-06-02
 price_history:
   - date: 2026-05-13
     price: "see note"
     source: https://dust.tt/pricing
     source_label: Dust pricing
     source_id: dust-pricing
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     note: "Pro plan remains 29 EUR/user/month (excl. tax) from 1 user with 14-day trial. Enterprise stays custom from 100 members. No price change since 2026-05-05; advanced-model lineup now explicitly lists GPT-5, Claude, Gemini, and Mistral on the pricing page."
+  - date: 2026-06-02
+    price: "see note"
+    source: https://dust.tt/home/pricing
+    source_label: Dust pricing
+    source_id: dust-pricing
+    verified_at: '2026-06-02'
+    note: "June 2 recheck: Pro remains 29 EUR/user/month excluding tax with a 14-day trial from 1 user, and Enterprise remains custom from 100 members with SSO, SCIM, US/EU hosting, larger limits, and Salesforce tooling."
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -39,10 +46,10 @@ facts:
     source: https://dust.tt/
     source_label: Dust official site
     source_id: dust-official
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-13'
+    next_review_at: '2026-12-02'
   pricing_anchor:
     value: 'Pro 29 EUR/user/month (excl. tax) from 1 user, 14-day trial, fair-use unlimited messages, up to 1GB per user data
       sources, one private space; Enterprise custom from 100 members with SSO (Okta, Entra ID, Jumpcloud), SCIM, larger limits,
@@ -50,42 +57,42 @@ facts:
     source: https://dust.tt/pricing
     source_label: Dust pricing
     source_id: dust-pricing
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-13'
+    next_review_at: '2026-09-02'
   workflow_surface:
     value: Dust's surface is custom workplace agents and shared assistant workflows, not a generic consumer chatbot.
     source: https://docs.dust.tt/
     source_label: Dust docs
     source_id: dust-docs
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-13'
+    next_review_at: '2026-12-02'
   enterprise_controls:
     value: 'Pro covers SOC 2 and zero data retention positioning; Enterprise adds SSO (Okta, Entra ID, Jumpcloud), SCIM provisioning,
       US/EU data hosting, larger storage and file limits, custom programmatic pricing, priority support, and Salesforce Tool.'
     source: https://dust.tt/security
     source_label: Dust security
     source_id: dust-security
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-13'
+    next_review_at: '2026-12-02'
   watch_out_for:
     value: Dust creates value when agents are grounded in real company systems; weak connector hygiene or unclear permissions
       can turn it into another chat UI.
     source: https://docs.dust.tt/
     source_label: Dust docs
     source_id: dust-docs
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-13'
+    next_review_at: '2026-12-02'
 tags: [ai-agents, enterprise-ai, internal-tools, slack, data-sources, automation, assistants]
-seo_title: "Dust Review: Team AI Agents, Data Sources & Pricing (2026)"
-meta_description: "Dust is a team AI agent platform for custom assistants that search company data, execute actions, connect tools, and run in Slack, Chrome, Zendesk, APIs, and more."
+seo_title: "Dust Review: Team AI Agents, Data Sources & Pricing (June 2026)"
+meta_description: "Dust is a team AI agent platform for custom assistants that search company data, execute actions, connect tools, and run in Slack, Chrome, Zendesk, APIs, and more. Pro remains 29 EUR/user/month."
 author: aipedia.wiki Editorial
 best_for:
   - teams building internal AI assistants
@@ -123,7 +130,7 @@ It sits between no-code automation and enterprise search. Compared with [Glean](
 | **Data sources** | GitHub, Google Drive, Notion, Slack, and more |
 | **Integrations** | Slack, Zendesk, Chrome Extension, API, GSheet, Zapier |
 | **Security** | SOC 2, zero data retention positioning, private spaces |
-| **Pricing (verified 2026-05-13)** | Pro 29 EUR/user/month excl. tax; Enterprise custom from 100 members |
+| **Pricing (verified 2026-06-02)** | Pro 29 EUR/user/month excl. tax; Enterprise custom from 100 members |
 | **Pro limits** | Fair-use unlimited messages, programmatic credits, up to 1GB/user data sources, one private space |
 | **Enterprise extras** | SSO (Okta, Entra ID, Jumpcloud), SCIM, US/EU hosting, Salesforce Tool, priority support |
 | **Best fit** | Internal agents for teams |
@@ -146,7 +153,7 @@ It sits between no-code automation and enterprise search. Compared with [Glean](
 
 ## Pricing
 
-Dust publishes a Pro plan at 29 EUR per user per month, excluding tax, with a 14-day trial. As verified on 2026-05-13, Pro starts from one user and includes advanced models (GPT-5, Claude, Gemini, Mistral), custom action-capable agents, core connections, native integrations, privacy/security features, fair-use unlimited messages, programmatic credits, fixed pricing on additional programmatic usage, up to 1GB per user of data sources, and one private space.
+Dust publishes a Pro plan at 29 EUR per user per month, excluding tax, with a 14-day trial. As verified on 2026-06-02, Pro starts from one user and includes advanced models (GPT-5, Claude, Gemini, Mistral), custom action-capable agents, core connections, native integrations, privacy/security features, fair-use unlimited messages, programmatic credits, fixed pricing on additional programmatic usage, up to 1GB per user of data sources, and one private space.
 
 Enterprise is custom and starts from 100 members. It adds advanced security and controls, larger storage and file limits, custom programmatic pricing, SSO (Okta, Entra ID, Jumpcloud), flexible payment options, priority support and account management, priority access to new features, US/EU data hosting, SCIM provisioning, and the Salesforce Tool.
 
@@ -178,13 +185,13 @@ It is weaker when the organization only wants a general chatbot. The value depen
 
 ## Recent changes
 
-- **Model lineup confirmed (verified 2026-05-13).** The Dust pricing page now explicitly names GPT-5, Claude, Gemini, and Mistral as available advanced models for Pro and Enterprise.
+- **Model lineup rechecked (verified 2026-06-02).** The Dust pricing page explicitly names GPT-5, Claude, Gemini, and Mistral as available advanced models for Pro and Enterprise.
 - **Enterprise SSO providers named.** Okta, Entra ID, and Jumpcloud are now listed by name on the Enterprise tier, alongside SCIM provisioning, US/EU data hosting, and the Salesforce Tool.
 - **Pro pricing unchanged.** 29 EUR/user/month excluding tax, from 1 user, 14-day trial. The fair-use message policy and 1GB-per-user data-source cap also persist.
 
 ## Methodology
 
-Last verified 2026-05-13 against Dust pricing, product, and documentation pages. Scoring emphasizes team utility, action-capable agents, integrations, pricing, and enterprise readiness.
+Last verified 2026-06-02 against Dust pricing, product, and documentation pages. Scoring emphasizes team utility, action-capable agents, integrations, pricing, and enterprise readiness.
 
 ## FAQ
 

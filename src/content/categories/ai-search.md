@@ -30,6 +30,8 @@ AI search is not one category anymore. Buyers now choose between **cited answer 
 
 **Use [Comet](/tools/comet/) when the search workflow should live inside the browser.** Comet is the Perplexity browser lane for users who want AI search, page context, shopping/research help, and everyday web actions closer to tabs instead of a separate answer-engine page.
 
+**Use [Dia](/tools/dia/) when browser context, tabs, meetings, and connected work apps are the AI surface.** The June 2 check found Dia explicitly positioned as part of Atlassian, with SSO, MDM controls, admin-managed profiles, SOC 2 Type II coverage, and provider no-training restrictions now surfaced on the security page. It is still a user browser, not a programmable browser automation API.
+
 **Use [ChatGPT](/tools/chatgpt/) when search is only one part of the workflow.** ChatGPT Search is the better Perplexity alternative when the buyer also wants writing, coding, file analysis, images, voice, data analysis, projects, and everyday assistant work.
 
 **Use [Gemini](/tools/gemini/) and Google AI Mode when the buyer already lives in Google.** Google's current AI Mode and AI Overviews updates focus on helping users find relevant websites, deep insights, and original content across the web. Google AI Plans connect Gemini, Deep Research, AI Mode, Workspace, NotebookLM, and Chrome features depending on plan and region.
@@ -48,6 +50,7 @@ AI search is not one category anymore. Buyers now choose between **cited answer 
 |---|---|---|---|
 | Cited open-web answers | [Perplexity](/tools/perplexity/) | Best answer-engine workflow for sources, follow-ups, and research spaces | Pro/Max/Enterprise/API plan details change quickly |
 | AI browser workflow | [Comet](/tools/comet/) | Keeps Perplexity-style assistance closer to tabs, pages, and web tasks | Browser availability and plan packaging can move quickly |
+| Work-context AI browser | [Dia](/tools/dia/) | Page-aware assistance over tabs and connected apps, now under Atlassian with more enterprise posture detail | macOS-only and not a deterministic automation API |
 | General AI workspace with search | [ChatGPT](/tools/chatgpt/) | Search plus writing, files, code, data, image, voice, and projects | Requires source discipline for serious research |
 | Google-native search and research | [Gemini](/tools/gemini/) | AI Mode, AI Overviews, Deep Research, Workspace, NotebookLM, and Chrome fit | Google ecosystem lock-in and regional feature limits |
 | Owned-source research | [NotebookLM](/tools/notebooklm/) | Best for selected PDFs, notes, reports, calls, classes, and Drive material | Not a full web discovery engine |
@@ -92,6 +95,8 @@ Do not leave this category stale. Google AI Mode, Perplexity Pro/Max/Enterprise,
 ## Sources
 
 - [Perplexity Comet](https://www.perplexity.ai/comet) (verified 2026-06-02)
+- [Dia website](https://www.diabrowser.com) (verified 2026-06-02)
+- [Dia security](https://www.diabrowser.com/security) (verified 2026-06-02)
 - [Perplexity Pro](https://www.perplexity.ai/pro) (verified 2026-06-02)
 - [Perplexity Enterprise](https://www.perplexity.ai/enterprise) (verified 2026-05-13)
 - [Perplexity API pricing](https://docs.perplexity.ai/docs/getting-started/pricing) (verified 2026-05-13)

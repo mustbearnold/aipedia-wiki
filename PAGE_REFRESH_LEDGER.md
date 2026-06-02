@@ -380,16 +380,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /guides/synthesia-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/synthesia-alternatives.md |
 | 2026-05-13 | /media-kit/ | Static page | Yes | git | src/pages/media-kit.astro |
 | 2026-05-13 | /reports/2026-04/ | Report | Yes | frontmatter | src/content/reports/2026-04.md |
-| 2026-05-13 | /tools/copy-ai/ | Tool | Yes | frontmatter | src/content/tools/copy-ai.md |
-| 2026-05-13 | /tools/crewai/ | Tool | Yes | frontmatter | src/content/tools/crewai.md |
-| 2026-05-13 | /tools/deepgram/ | Tool | Yes | frontmatter | src/content/tools/deepgram.md |
-| 2026-05-13 | /tools/deepl/ | Tool | Yes | frontmatter | src/content/tools/deepl.md |
-| 2026-05-13 | /tools/deepseek/ | Tool | Yes | frontmatter | src/content/tools/deepseek.md |
-| 2026-05-13 | /tools/descript/ | Tool | Yes | frontmatter | src/content/tools/descript.md |
-| 2026-05-13 | /tools/dext/ | Tool | Yes | frontmatter | src/content/tools/dext.md |
-| 2026-05-13 | /tools/dia/ | Tool | Yes | frontmatter | src/content/tools/dia.md |
-| 2026-05-13 | /tools/doubao/ | Tool | Yes | frontmatter | src/content/tools/doubao.md |
-| 2026-05-13 | /tools/dust/ | Tool | Yes | frontmatter | src/content/tools/dust.md |
 | 2026-05-13 | /tools/eightfold-ai/ | Tool | Yes | frontmatter | src/content/tools/eightfold-ai.md |
 | 2026-05-13 | /tools/elevenlabs/ | Tool | Yes | frontmatter | src/content/tools/elevenlabs.md |
 | 2026-05-13 | /tools/elicit/ | Tool | Yes | frontmatter | src/content/tools/elicit.md |
@@ -644,7 +634,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-27 | /tools/lindy/ | Tool | Yes | frontmatter | src/content/tools/lindy.md |
 | 2026-05-27 | /tools/openrouter/ | Tool | Yes | frontmatter | src/content/tools/openrouter.md |
 | 2026-05-27 | /tools/qwen/ | Tool | Yes | frontmatter | src/content/tools/qwen.md |
-| 2026-05-28 | /categories/ai-writing/ | Category | Yes | frontmatter | src/content/categories/ai-writing.md |
 | 2026-05-28 | /compare/ | Static page | Yes | git | src/pages/compare/index.astro |
 | 2026-05-28 | /compare/chatgpt-vs-rytr/ | Comparison | Yes | frontmatter | src/content/comparisons/chatgpt-vs-rytr.md |
 | 2026-05-28 | /guides/ | Static page | Yes | git | src/pages/guides/index.astro |
@@ -722,30 +711,41 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-02 | /categories/ | Static page | Yes | working tree | src/pages/categories/index.astro |
 | 2026-06-02 | /categories/ai-automation/ | Category | Yes | working tree | src/content/categories/ai-automation.md |
 | 2026-06-02 | /categories/ai-chatbots/ | Category | Yes | working tree | src/content/categories/ai-chatbots.md |
-| 2026-06-02 | /categories/ai-design/ | Category | Yes | working tree | src/content/categories/ai-design.md |
-| 2026-06-02 | /categories/ai-image/ | Category | Yes | working tree | src/content/categories/ai-image.md |
-| 2026-06-02 | /categories/ai-notes/ | Category | Yes | working tree | src/content/categories/ai-notes.md |
-| 2026-06-02 | /categories/ai-presentation/ | Category | Yes | working tree | src/content/categories/ai-presentation.md |
-| 2026-06-02 | /categories/ai-research/ | Category | Yes | working tree | src/content/categories/ai-research.md |
+| 2026-06-02 | /categories/ai-design/ | Category | Yes | frontmatter | src/content/categories/ai-design.md |
+| 2026-06-02 | /categories/ai-image/ | Category | Yes | frontmatter | src/content/categories/ai-image.md |
+| 2026-06-02 | /categories/ai-notes/ | Category | Yes | frontmatter | src/content/categories/ai-notes.md |
+| 2026-06-02 | /categories/ai-presentation/ | Category | Yes | frontmatter | src/content/categories/ai-presentation.md |
+| 2026-06-02 | /categories/ai-research/ | Category | Yes | frontmatter | src/content/categories/ai-research.md |
 | 2026-06-02 | /categories/ai-search/ | Category | Yes | working tree | src/content/categories/ai-search.md |
-| 2026-06-02 | /categories/ai-seo/ | Category | Yes | working tree | src/content/categories/ai-seo.md |
-| 2026-06-02 | /categories/ai-video/ | Category | Yes | working tree | src/content/categories/ai-video.md |
+| 2026-06-02 | /categories/ai-seo/ | Category | Yes | frontmatter | src/content/categories/ai-seo.md |
+| 2026-06-02 | /categories/ai-video/ | Category | Yes | frontmatter | src/content/categories/ai-video.md |
 | 2026-06-02 | /categories/ai-voice/ | Category | Yes | working tree | src/content/categories/ai-voice.md |
+| 2026-06-02 | /categories/ai-writing/ | Category | Yes | working tree | src/content/categories/ai-writing.md |
 | 2026-06-02 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
 | 2026-06-02 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
 | 2026-06-02 | /tools/ | Static page | Yes | working tree | src/pages/tools/index.astro |
-| 2026-06-02 | /tools/canva/ | Tool | Yes | working tree | src/content/tools/canva.md |
-| 2026-06-02 | /tools/capacities/ | Tool | Yes | working tree | src/content/tools/capacities.md |
-| 2026-06-02 | /tools/captions/ | Tool | Yes | working tree | src/content/tools/captions.md |
-| 2026-06-02 | /tools/cartesia/ | Tool | Yes | working tree | src/content/tools/cartesia.md |
-| 2026-06-02 | /tools/castmagic/ | Tool | Yes | working tree | src/content/tools/castmagic.md |
-| 2026-06-02 | /tools/character-ai/ | Tool | Yes | working tree | src/content/tools/character-ai.md |
-| 2026-06-02 | /tools/chatpdf/ | Tool | Yes | working tree | src/content/tools/chatpdf.md |
-| 2026-06-02 | /tools/claude-design/ | Tool | Yes | working tree | src/content/tools/claude-design.md |
-| 2026-06-02 | /tools/clay/ | Tool | Yes | working tree | src/content/tools/clay.md |
-| 2026-06-02 | /tools/clearscope/ | Tool | Yes | working tree | src/content/tools/clearscope.md |
-| 2026-06-02 | /tools/clickup/ | Tool | Yes | working tree | src/content/tools/clickup.md |
-| 2026-06-02 | /tools/clipdrop/ | Tool | Yes | working tree | src/content/tools/clipdrop.md |
-| 2026-06-02 | /tools/comet/ | Tool | Yes | working tree | src/content/tools/comet.md |
-| 2026-06-02 | /tools/connected-papers/ | Tool | Yes | working tree | src/content/tools/connected-papers.md |
-| 2026-06-02 | /tools/consensus/ | Tool | Yes | working tree | src/content/tools/consensus.md |
+| 2026-06-02 | /tools/canva/ | Tool | Yes | frontmatter | src/content/tools/canva.md |
+| 2026-06-02 | /tools/capacities/ | Tool | Yes | frontmatter | src/content/tools/capacities.md |
+| 2026-06-02 | /tools/captions/ | Tool | Yes | frontmatter | src/content/tools/captions.md |
+| 2026-06-02 | /tools/cartesia/ | Tool | Yes | frontmatter | src/content/tools/cartesia.md |
+| 2026-06-02 | /tools/castmagic/ | Tool | Yes | frontmatter | src/content/tools/castmagic.md |
+| 2026-06-02 | /tools/character-ai/ | Tool | Yes | frontmatter | src/content/tools/character-ai.md |
+| 2026-06-02 | /tools/chatpdf/ | Tool | Yes | frontmatter | src/content/tools/chatpdf.md |
+| 2026-06-02 | /tools/claude-design/ | Tool | Yes | frontmatter | src/content/tools/claude-design.md |
+| 2026-06-02 | /tools/clay/ | Tool | Yes | frontmatter | src/content/tools/clay.md |
+| 2026-06-02 | /tools/clearscope/ | Tool | Yes | frontmatter | src/content/tools/clearscope.md |
+| 2026-06-02 | /tools/clickup/ | Tool | Yes | frontmatter | src/content/tools/clickup.md |
+| 2026-06-02 | /tools/clipdrop/ | Tool | Yes | frontmatter | src/content/tools/clipdrop.md |
+| 2026-06-02 | /tools/comet/ | Tool | Yes | frontmatter | src/content/tools/comet.md |
+| 2026-06-02 | /tools/connected-papers/ | Tool | Yes | frontmatter | src/content/tools/connected-papers.md |
+| 2026-06-02 | /tools/consensus/ | Tool | Yes | frontmatter | src/content/tools/consensus.md |
+| 2026-06-02 | /tools/copy-ai/ | Tool | Yes | working tree | src/content/tools/copy-ai.md |
+| 2026-06-02 | /tools/crewai/ | Tool | Yes | working tree | src/content/tools/crewai.md |
+| 2026-06-02 | /tools/deepgram/ | Tool | Yes | working tree | src/content/tools/deepgram.md |
+| 2026-06-02 | /tools/deepl/ | Tool | Yes | working tree | src/content/tools/deepl.md |
+| 2026-06-02 | /tools/deepseek/ | Tool | Yes | working tree | src/content/tools/deepseek.md |
+| 2026-06-02 | /tools/descript/ | Tool | Yes | working tree | src/content/tools/descript.md |
+| 2026-06-02 | /tools/dext/ | Tool | Yes | working tree | src/content/tools/dext.md |
+| 2026-06-02 | /tools/dia/ | Tool | Yes | working tree | src/content/tools/dia.md |
+| 2026-06-02 | /tools/doubao/ | Tool | Yes | working tree | src/content/tools/doubao.md |
+| 2026-06-02 | /tools/dust/ | Tool | Yes | working tree | src/content/tools/dust.md |
