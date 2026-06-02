@@ -4,8 +4,8 @@ import OrganizationLD from '../../components/seo/OrganizationLD.astro';
 import HowToLD from '../../components/seo/HowToLD.astro';
 import FAQPageLD from '../../components/seo/FAQPageLD.astro';
 
-const LAST_REVIEWED = '2026-05-13';
-const LAST_REVIEWED_HUMAN = 'May 13, 2026';
+const LAST_REVIEWED = '2026-06-02';
+const LAST_REVIEWED_HUMAN = 'June 2, 2026';
 
 const dimensions = [
   {
@@ -100,7 +100,7 @@ const notList = [
 const howToSteps = [
   {
     name: 'Research the tool from primary sources',
-    text: "Read the tool's official pricing page, product documentation, changelog, and API reference. Note exact tier names, prices, feature claims, and launch date.",
+    text: "Read the tool's official pricing page, product documentation, changelog, API reference, and relevant company announcements. Note exact tier names, prices, feature claims, model names, launch dates, and source IDs.",
   },
   {
     name: 'Cross-reference against vendor documentation',
@@ -128,7 +128,7 @@ const howToSteps = [
   },
   {
     name: 'Cite sources and stamp verification date',
-    text: 'Every score must be backed by cited sources on the tool page, and the page carries a visible last_verified timestamp.',
+    text: 'Every score must be backed by cited sources on the tool page, the source registry must know the primary source used, and the page carries a visible last_verified timestamp.',
   },
 ];
 
@@ -196,7 +196,7 @@ const pageDesc =
   <!-- AEO lede: first 60 words answer "how does aipedia.wiki score tools" directly -->
   <p class="text-base text-[var(--text-secondary)] leading-relaxed">
     <strong class="text-[var(--text-primary)]">aipedia.wiki scores every AI tool on four dimensions (Utility, Value, Moat, and Longevity) on a 1 to 10 scale.</strong>
-    The Overall Score is the average of the four, rounded to one decimal place. Scores are editorial judgments based on primary-source research, vendor documentation, and published benchmark data. Never user votes, paid rankings, or affiliate influence.
+    The Overall Score is the average of the four, rounded to one decimal place. Scores are editorial judgments based on primary-source research, vendor documentation, current pricing/model verification, and published benchmark data. Never user votes, paid rankings, or affiliate influence.
   </p>
 
   <p class="not-prose text-xs text-[var(--text-muted)] mt-2 mb-0">
@@ -300,10 +300,10 @@ const pageDesc =
 
   <p>Every score is based on:</p>
   <ol>
-    <li><strong>Primary-source research</strong> across the vendor's pricing page, product documentation, changelog, and API reference</li>
-    <li><strong>Verified pricing</strong> checked against official pricing pages and noted with a verification date</li>
+    <li><strong>Primary-source research</strong> across the vendor's pricing page, product documentation, changelog, API reference, and company announcements</li>
+    <li><strong>Current-date verification</strong> for volatile pricing, model, availability, affiliate, and commercial claims before a page is materially refreshed</li>
     <li><strong>Competitive context</strong>. Scores are calibrated against the current best alternatives in the category</li>
-    <li><strong>Named sources</strong>. Factual claims include inline links to official pages or credible third-party sources</li>
+    <li><strong>Named sources</strong>. Factual claims include inline links or registered source IDs tied to official pages or credible third-party sources</li>
   </ol>
   <p class="text-sm text-[var(--text-muted)]">
     See the <code>last_verified</code> date on each tool page to understand when the information was last checked.

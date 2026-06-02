@@ -94,7 +94,7 @@ const verifiedLabel = verifiedRecently && verifiedDate
 const metaBits = [
   founded ? `Founded ${founded}` : null,
   hq,
-  funding ? `${funding} raised` : null,
+  funding,
 ].filter(Boolean);
 const tagline = metaBits.length > 0 ? metaBits.join(' · ') : description;
 ---

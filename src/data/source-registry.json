@@ -371,7 +371,17 @@
       "url": "https://docs.anthropic.com/",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
+    },
+    {
+      "id": "anthropic-opus-48",
+      "label": "Anthropic Claude Opus 4.8 release",
+      "url": "https://www.anthropic.com/news/claude-opus-4-8",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "anthropic-opus-47",
@@ -397,7 +407,26 @@
       "url": "https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
+    },
+    {
+      "id": "anthropic-series-h-2026",
+      "label": "Anthropic Series H announcement",
+      "url": "https://www.anthropic.com/news/series-h",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-02"
+    },
+    {
+      "id": "anthropic-confidential-s1-2026",
+      "label": "Anthropic confidential draft S-1 announcement",
+      "url": "https://www.anthropic.com/news/confidential-draft-s1-sec",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "anthropic-model-overview",
@@ -405,7 +434,8 @@
       "url": "https://platform.claude.com/docs/en/about-claude/models/overview",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "anthropic-spacex-limits-2026",
@@ -413,7 +443,8 @@
       "url": "https://www.anthropic.com/news/higher-limits-spacex",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "anthropic-news",
@@ -421,7 +452,8 @@
       "url": "https://www.anthropic.com/news",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "antigravity-docs",
@@ -1968,7 +2000,8 @@
       "url": "https://elevenlabs.io/blog/500m-arr-and-new-investors",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "elevenlabs-model-docs",
@@ -1985,7 +2018,8 @@
       "url": "https://help.elevenlabs.io/hc/en-us/articles/17883183930129-What-models-do-you-offer-and-what-is-the-difference-between-them",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "elevenlabs-pricing",
@@ -2002,7 +2036,8 @@
       "url": "https://elevenlabs.io/blog/series-d",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "elevenlabs-agents-cost",

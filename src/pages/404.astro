@@ -9,6 +9,8 @@ import { overallScore } from '../utils/tool-metadata';
 
 const allTools = await getCollection('tools');
 const allNews = await getCollection('news');
+const LAST_REVIEWED = '2026-06-02';
+const LAST_REVIEWED_HUMAN = 'June 2, 2026';
 
 const topTools = allTools
   .map((t: any) => ({
@@ -46,6 +48,10 @@ const latestNews = allNews
         { label: '404' },
       ]}
     />
+
+    <p class="gt-404-reviewed">
+      Recovery map reviewed <time datetime={LAST_REVIEWED}>{LAST_REVIEWED_HUMAN}</time>
+    </p>
 
     <form class="gt-404-search" role="search" action="/search/" method="get">
       <label for="gt-404-search-input" class="gt-sr-only">Search aipedia.wiki</label>
@@ -97,6 +103,11 @@ const latestNews = allNews
     .gt-sr-only {
       position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
       overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+    }
+    .gt-404-reviewed {
+      margin: -8px 0 18px;
+      color: var(--gt-subtle);
+      font-size: 12px;
     }
     .gt-404-search { margin-bottom: 32px; }
     .gt-search-row {

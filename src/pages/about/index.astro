@@ -15,8 +15,8 @@ const allDead = await getCollection('dead');
 const allUseCases = await getCollection('use-cases');
 
 // Freshness signal: update when editorial policy materially changes
-const LAST_REVIEWED = '2026-06-01';
-const LAST_REVIEWED_HUMAN = 'June 1, 2026';
+const LAST_REVIEWED = '2026-06-02';
+const LAST_REVIEWED_HUMAN = 'June 2, 2026';
 
 const stats = [
   { value: activeTools.length, label: 'Active tool reviews' },
@@ -29,7 +29,7 @@ const processSteps = [
   {
     n: 1,
     title: 'Primary-source research',
-    body: "Pricing, feature claims, company information, and launch dates are pulled from each tool's official website, changelog, and API documentation. Third-party blog summaries and aggregator listings are not treated as primary sources.",
+    body: "Pricing, feature claims, company information, launch dates, and model names are pulled from each tool's official website, changelog, API documentation, and company announcements. Third-party blog summaries and aggregator listings are not treated as primary sources.",
   },
   {
     n: 2,
@@ -44,7 +44,7 @@ const processSteps = [
   {
     n: 4,
     title: 'Dated cross-references',
-    body: 'Every claim that can become outdated (pricing, context windows, feature availability, model access, affiliate terms) is cited inline and stamped with a verification date on every tool page.',
+    body: 'Every claim that can become outdated (pricing, context windows, feature availability, model access, affiliate terms, company funding, or buyer guidance) is cited inline or tied to a source registry entry and stamped with a verification date on every tool page.',
   },
   {
     n: 5,
