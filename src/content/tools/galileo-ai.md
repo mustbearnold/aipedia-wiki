@@ -11,11 +11,11 @@ pricing_model: free
 price_range: "$0 (free in Google Labs beta)"
 status: active
 launched: 2023-02
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-02
+last_verified: 2026-06-02
 update_frequency: quarterly
-seo_title: "Galileo AI: Now Google Stitch. Features, Pricing & Review (May 2026)"
-meta_description: "Galileo AI was acquired by Google in May 2025 and relaunched as Google Stitch, now powered by Gemini. Stitch is free through Google Labs with 350 standard and 200 experimental generations per month. The standalone Galileo product is retired."
+seo_title: "Galileo AI: Now Google Stitch. Features, Pricing & Review (June 2026)"
+meta_description: "Galileo AI was acquired by Google in May 2025 and relaunched as Google Stitch. The standalone Galileo product is retired; Stitch is free in Google Labs, but public Google pages do not publish durable quotas or paid-tier timing."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -32,50 +32,50 @@ facts:
   best_for:
     value: Best for teams evaluating Google Stitch-style AI UI design generation from prompts and screenshots, especially for
       fast concept exploration.
-    source: https://www.usegalileo.ai/
-    source_label: Galileo / Stitch official site
+    source: https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/
+    source_label: Google Stitch announcement
     source_id: galileo-ai-official
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: high
     confidence: high
     next_review_at: '2026-08-04'
   pricing_anchor:
-    value: The Galileo/Stitch surface is high-volatility; verify whether pricing, access, branding, and account requirements
-      have changed before recommending.
-    source: https://www.usegalileo.ai/pricing
-    source_label: Galileo / Stitch pricing surface
+    value: Google Stitch is free in Labs as of June 2, 2026, but public Google pages do not publish durable quota, billing, SLA,
+      or paid-tier timing terms.
+    source: https://stitch.withgoogle.com
+    source_label: Google Stitch official site
     source_id: galileo-ai-pricing
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: high
     confidence: high
     next_review_at: '2026-08-04'
   workflow_surface:
-    value: The core workflow is AI-assisted UI design ideation, not a full design system, product-management, or production-code
-      environment.
-    source: https://www.usegalileo.ai/features
-    source_label: Galileo / Stitch features
+    value: The current Stitch workflow is AI-native UI ideation and prototyping, not a full design system, product-management,
+      or production-code environment.
+    source: https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/
+    source_label: Google Stitch announcement
     source_id: galileo-ai-features
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: high
     confidence: high
     next_review_at: '2026-08-04'
   code_handoff:
     value: Treat any handoff claims as design/prototype acceleration until export quality and developer workflow are tested
       in the current product.
-    source: https://www.usegalileo.ai/
-    source_label: Galileo / Stitch official site
+    source: https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/
+    source_label: Google Stitch announcement
     source_id: galileo-ai-official
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: high
     confidence: high
     next_review_at: '2026-08-04'
   watch_out_for:
-    value: Because the product surface appears rebranded/volatile, avoid durable claims about plan names, exports, ownership,
-      or model behavior without checking the live official pages.
-    source: https://www.usegalileo.ai/
-    source_label: Galileo / Stitch official site
+    value: Because the legacy Galileo brand is retired and the current product is a Google Labs experiment, avoid durable claims
+      about quotas, paid tiers, exports, or data terms without checking the live official pages.
+    source: https://stitch.withgoogle.com
+    source_label: Google Stitch official site
     source_id: galileo-ai-official
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: high
     confidence: high
     next_review_at: '2026-08-04'
@@ -91,7 +91,7 @@ not_best_for:
   - teams locked into the legacy Galileo subscription
   - users avoiding Google Labs data terms
 quick_answer: >-
-  Galileo AI is now Google Stitch. Google acquired Galileo in May 2025 and folded it into Labs as a free Gemini-powered UI generator. Pick it for fast text-to-UI mockups exported to Figma. Skip it when v0 or Figma Make fit the workflow better.
+  Galileo AI is now Google Stitch. Google acquired Galileo in May 2025 and folded the workflow into Labs as an AI-native UI design canvas. Pick the current Stitch product for fast UI exploration and prototyping. Skip it when v0, Figma, or a production design system fits the workflow better.
 price_history:
   - date: 2025-05-15
     plan: "Legacy Galileo paid plans"
@@ -106,14 +106,14 @@ price_history:
     source: "https://stitch.withgoogle.com"
     source_label: "Source"
     source_id: galileo-ai-pricing
-    note: "350 standard + 200 experimental generations per month."
-  - date: 2026-05-13
+    note: "Free Google Labs transition. Historical quota numbers came from product/account observations and third-party coverage, not durable Google public pricing terms."
+  - date: 2026-06-02
     plan: "Google Stitch beta"
     price: "$0/mo"
     source: "https://stitch.withgoogle.com"
     source_label: "Source"
     source_id: galileo-ai-pricing
-    note: "Re-verified May 13, 2026. Stitch remains free in Google Labs beta with the same 350 standard + 200 experimental cap. No paid tier has been announced."
+    note: "Re-verified June 2, 2026. Stitch remains free in Google Labs. Google public pages do not publish stable quota, billing, SLA, or paid-tier timing terms."
 ---
 
 # Galileo AI
@@ -124,11 +124,11 @@ Google acquired Galileo AI in May 2025. The team and the product relaunched as G
 
 ## System Verdict
 
-> **Pick the current product, Google Stitch, if text-to-UI at zero cost is the goal.** Stitch is free through Google Labs, supports 350 standard and 200 experimental generations per month, generates five screens at once, handles voice input, and exports to Figma and Claude Code. That is a wider feature set than the legacy Galileo subscription delivered at $19-$39/mo.
+> **Pick the current product, Google Stitch, if AI-native UI exploration at zero public cost is the goal.** Stitch is free through Google Labs and now centers on a design canvas, natural-language UI creation, images/text/code as context, design agents, voice critique, interactive prototypes, DESIGN.md, MCP/SDK, and exports to developer tools. That is a wider direction than the legacy Galileo subscription delivered at $19-$39/mo.
 >
 > **Skip it if the workflow favors a coder-first route.** v0 converts prompts to production React. Figma's own Figma Make generates components inside an existing Figma file. Stitch generates independent design output that still needs hand-off into code.
 >
-> **About the legacy brand:** the standalone Galileo product at usegalileo.ai is retired. New users should land on [stitch.withgoogle.com](https://stitch.withgoogle.com). Historical Galileo subscriptions have been wound down. See the founders' own [acquisition note](https://x.com/arnaudai/status/1924942577545195982) and [Google Stitch announcement](https://stitch.withgoogle.com).
+> **About the legacy brand:** the standalone Galileo product is retired. New users should land on [stitch.withgoogle.com](https://stitch.withgoogle.com). Historical Galileo subscriptions have been wound down. See the founders' own [acquisition note](https://x.com/arnaudai/status/1924942577545195982) and Google's current [Stitch announcement](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/).
 
 ## Key Facts
 
@@ -138,30 +138,30 @@ Google acquired Galileo AI in May 2025. The team and the product relaunched as G
 | **Previous product** | Galileo AI (standalone text-to-UI tool) |
 | **Acquisition** | Google, May 2025 |
 | **Founders** | Arnaud Benard, Helen Zhou |
-| **Generation mode** | Text-to-UI, 5 screens at once, voice input (Stitch 2.0, March 2026) |
-| **Export targets** | Figma, Claude Code (front-end output) |
+| **Generation mode** | Natural-language UI creation, images/text/code as context, voice critique, interactive prototypes |
+| **Handoff targets** | DESIGN.md, MCP server, SDK, Skills, and developer-tool exports |
 | **Pricing today** | Free through Google Labs |
-| **Usage cap** | 350 standard generations/mo, 200 experimental generations/mo |
+| **Usage cap** | Not published as a durable public Google pricing term |
 | **Legacy pricing** | Free (3 exports), Standard $19/mo, Pro $39/mo (retired 2025) |
 | **API** | None publicly available |
 
-Every data point above was re-verified against vendor and third-party sources on 2026-05-13. See Sources.
+Every data point above was re-verified against vendor and third-party sources on 2026-06-02. See Sources.
 
 ## What it actually is
 
-A text-to-UI generator. Users type a prompt like "sign-up screen for a fitness app." The model returns editable UI mockups. Output exports to Figma as layered frames and, in the current Stitch version, to Claude Code as front-end components.
+A text-to-UI and vibe-design canvas. Users type a prompt or business objective, add examples or context, and Stitch returns high-fidelity UI directions that can be refined on an infinite canvas and stitched into prototypes.
 
-The underlying engine changed when Google acquired the team in May 2025. Galileo's original models were replaced by Gemini. Stitch inherits Google's infrastructure: faster generation, multi-screen output, and voice input added in the March 2026 Stitch 2.0 update.
+The product direction changed when Google acquired the team in May 2025. Stitch inherits Google's Labs and Gemini-era infrastructure, with a March 2026 expansion around AI-native canvas work, design agents, voice interaction, DESIGN.md, MCP, SDK, and developer-tool handoff.
 
 The legacy Galileo brand exists only as a historical reference. Search traffic still lands on "Galileo AI" queries, but the product itself is Google Stitch now.
 
 ## When to pick Galileo AI (Google Stitch)
 
-- **Early-stage UI mockups cost nothing.** Free through Google Labs beats any paid generator on price. 350 standard generations per month covers meaningful exploration.
-- **Voice input fits on-the-go ideation.** Describing a screen verbally skips the formal prompt-writing step.
-- **Five screens per prompt cuts iteration time.** Competitor tools often generate one screen at a time.
-- **Figma export is clean.** Output lands as layered frames ready for designer cleanup, not a flat image.
-- **Claude Code export covers the design-to-code gap.** Stitch 2.0 sends front-end scaffolding directly to Claude Code for further work.
+- **Early-stage UI mockups cost nothing on the public Labs surface.** Free Labs access beats paid generators for exploration, while quota and account limits still need live verification.
+- **Voice input fits on-the-go ideation.** Describing a screen verbally skips the formal prompt-writing step and supports critique-style iteration.
+- **Interactive prototypes cut iteration time.** Stitch can connect screens and generate next-screen directions so teams can test a flow before rebuilding it in Figma or code.
+- **DESIGN.md and MCP matter for handoff.** The current Google direction is not just screenshots; it is agent-friendly design context that can move into developer tools.
+- **Developer-tool exports cover the design-to-code gap.** Treat the output as scaffolding to review, not production code to ship automatically.
 
 ## When to pick something else
 
@@ -173,11 +173,11 @@ The legacy Galileo brand exists only as a historical reference. Search traffic s
 
 ## Pricing
 
-Google Stitch is free through [Google Labs](https://stitch.withgoogle.com) as of May 2026. No paid tier exists yet.
+Google Stitch is free through [Google Labs](https://stitch.withgoogle.com) as of June 2, 2026. No Google-published paid tier, durable quota table, SLA, or billing schedule is public.
 
 | Plan | Price | Generations per month | Who's it for |
 |------|-------|-----------------------|--------------|
-| Google Stitch (beta) | $0 | 350 standard + 200 experimental | Everyone, today |
+| Google Stitch (Labs) | $0 | Not published as a durable public Google quota | Everyone testing the current Labs product |
 
 Legacy Galileo AI plans (all retired after the Google acquisition in May 2025):
 
@@ -188,18 +188,18 @@ Legacy Galileo AI plans (all retired after the Google acquisition in May 2025):
 | Pro | $39/mo (3,000 credits) | Retired |
 | Enterprise | Custom | Retired |
 
-*Pricing re-verified 2026-05-13 via [Google Stitch](https://stitch.withgoogle.com), the [founders' acquisition announcement](https://x.com/arnaudai/status/1924942577545195982), and independent reviews at [LogRocket](https://blog.logrocket.com/ux-design/i-tried-google-stitch-heres-what-i-loved-hated/) and [Banani](https://www.banani.co/blog/galileo-ai-features-and-alternatives). Free pricing and the 350+200 generation cap have held since the March 2026 Stitch 2.0 release.*
+*Pricing re-verified 2026-06-02 via [Google Stitch](https://stitch.withgoogle.com), Google's [March 2026 Stitch announcement](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/), and the founders' acquisition announcement. Third-party quota reports are intentionally not treated as stable Google public pricing terms.*
 
 ## Against the alternatives
 
 | | Google Stitch (ex-Galileo) | v0 | Figma Make |
 |---|---|---|---|
 | **Price** | Free (Labs beta) | Free tier + paid | Included in Figma paid plans |
-| **Primary output** | Figma frames, Claude Code scaffolding | React + shadcn/ui components | Native Figma layers |
-| **Multi-screen generation** | 5 screens per prompt | Single-page focus | Component-level |
+| **Primary output** | UI concepts, prototypes, DESIGN.md/MCP/SDK/export handoff | React + shadcn/ui components | Native Figma layers |
+| **Multi-screen generation** | Interactive prototype and next-screen exploration | Single-page focus | Component-level |
 | **Voice input** | Yes (Stitch 2.0) | No | No |
 | **Runs inside existing Figma file** | No | No | Yes |
-| **Production code output** | Indirect via Claude Code | Direct React | Indirect via dev mode |
+| **Production code output** | Indirect via developer-tool handoff | Direct React | Indirect via dev mode |
 | **Best viewed as** | Free design prototyping | Prompt-to-app for coders | AI inside Figma canvas |
 
 ## Failure modes
@@ -209,12 +209,12 @@ Legacy Galileo AI plans (all retired after the Google acquisition in May 2025):
 - **Generation quality varies with prompt.** Vague prompts produce generic screens. Specific prompts with named components and layout cues produce better output.
 - **Design systems are not respected.** Stitch generates from Gemini's prior, not from an uploaded brand kit. Output needs a designer pass to match existing visual language.
 - **Data terms differ from paid SaaS.** Labs beta programs typically permit input use for model improvement. Teams with contractual data restrictions should validate terms before using Stitch on client work.
-- **No public API.** Automating Stitch into a CI pipeline or custom design system is not supported as of May 2026.
+- **No mature procurement surface.** Automating Stitch into a CI pipeline or custom design system should wait for stable account, quota, API, data, and support terms.
 - **Multi-screen output is not a multi-flow output.** Five screens per prompt looks similar by default; reaching a coherent app-wide flow takes multiple prompts and manual stitching.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis shown here. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-05-13 against [Google Stitch](https://stitch.withgoogle.com), the [founders' acquisition announcement on X](https://x.com/arnaudai/status/1924942577545195982), and independent reviews at [Banani](https://www.banani.co/blog/galileo-ai-features-and-alternatives), [LogRocket](https://blog.logrocket.com/ux-design/i-tried-google-stitch-heres-what-i-loved-hated/), and [Moda](https://moda.app/blog/google-stitch-review).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis shown here. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-02 against [Google Stitch](https://stitch.withgoogle.com), Google's [Stitch announcement](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/), and the [founders' acquisition announcement on X](https://x.com/arnaudai/status/1924942577545195982).
 
 ## FAQ
 
@@ -222,7 +222,7 @@ This page was produced by the aipedia.wiki editorial pipeline, an automated syst
 No. Galileo AI was acquired by Google in May 2025 and fully relaunched as Google Stitch, powered by Gemini. The standalone Galileo product and its paid tiers are retired.
 
 **What does Google Stitch cost?**
-Stitch is free through Google Labs as of May 2026. Usage is capped at 350 standard generations and 200 experimental generations per month. Re-verified May 13, 2026.
+Stitch is free through Google Labs as of June 2, 2026. Public Google pages do not publish a durable quota, SLA, billing table, or paid-tier schedule, so check the live account screen before building a paid workflow around it.
 
 **What happened to my Galileo AI subscription?**
 Legacy paid subscriptions were wound down after the acquisition. Current and former users are directed to [stitch.withgoogle.com](https://stitch.withgoogle.com), which is free.
@@ -234,7 +234,7 @@ Gemini. Google replaced the original Galileo models after the acquisition. Model
 Yes. Output exports as layered Figma frames ready for designer cleanup.
 
 **Can Stitch export to code?**
-Yes. Stitch 2.0, released in March 2026, exports directly to Claude Code for front-end scaffolding. Output still requires developer review before production use.
+It can hand off designs into developer workflows through DESIGN.md, MCP, SDK, Skills, and developer-tool exports. Output still requires developer review before production use.
 
 **Stitch or v0 for prompt-to-app?**
 v0 for coder-first workflows that need React components today. Stitch for design-first workflows that start from a visual concept and hand off to developers later.
@@ -249,10 +249,7 @@ No. That is Figma Make's territory. Stitch generates standalone output that land
 
 ## Sources
 
-- [Google Stitch](https://stitch.withgoogle.com): current product, features, free tier
+- [Google Stitch](https://stitch.withgoogle.com): current product and Labs surface
+- [Google Labs Stitch announcement](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/): March 2026 design canvas, agents, DESIGN.md, MCP, SDK, voice, prototype, and export details
 - [Arnaud Benard acquisition announcement on X](https://x.com/arnaudai/status/1924942577545195982): May 2025 Google acquisition and Stitch rebrand
-- [Banani: Galileo AI is now Google Stitch](https://www.banani.co/blog/galileo-ai-features-and-alternatives): 2026 updated review
-- [LogRocket: I tried Google Stitch](https://blog.logrocket.com/ux-design/i-tried-google-stitch-heres-what-i-loved-hated/): independent UX review
-- [Moda: Google Stitch Review](https://moda.app/blog/google-stitch-review): honest look at the tool
-- [FindSkill.ai: Stitch 2.0 March 2026 update](https://findskill.ai/blog/google-stitch-2-march-2026-update/): voice input, 5-screen generation, Claude Code export
 - [Canvas Business Model: Galileo AI history](https://canvasbusinessmodel.com/blogs/brief-history/galileo-ai-brief-history): company founding and funding timeline

@@ -2,18 +2,18 @@
 type: tool
 slug: glm
 title: GLM (ChatGLM)
-tagline: Zhipu AI's open-source LLM family, with GLM-5.1 topping SWE-Bench Pro at 58.4% as of April 2026.
+tagline: Z.AI's GLM model family, with GLM-5.1 positioned for long-horizon agentic engineering, 200K context, open MIT weights, and API pricing from $1.40/M input tokens.
 category: ai-chatbots
 secondary_categories: [ai-coding, ai-research]
 company: Zhipu AI (Z.ai)
-url: https://www.zhipuai.cn/en
-github_url: https://github.com/zai-org/GLM-4.5
+url: https://z.ai
+github_url: https://huggingface.co/zai-org/GLM-5.1
 pricing_model: freemium
-price_range: "Free (GLM-4.7-Flash) / API from $1.00/M tokens (GLM-5)"
+price_range: "Free Flash models / GLM-5.1 API $1.40/M input, $4.40/M output"
 status: active
 launched: 2022-08
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-02
+last_verified: 2026-06-02
 update_frequency: quarterly
 affiliate:
   has_program: false
@@ -28,132 +28,132 @@ scores:
   longevity: 7
 facts:
   best_for:
-    value: Best for teams comparing Chinese frontier/open-weight model options, especially when Z.ai/BigModel platform access
-      and GLM open releases matter.
-    source: https://www.zhipuai.cn/en
-    source_label: Z.ai official site
-    source_id: glm-official
-    verified_at: '2026-05-13'
+    value: Best for teams comparing Chinese frontier/open-weight model options, especially when Z.AI API access, GLM-5.1 open
+      weights, long context, and agentic coding workflows matter.
+    source: https://docs.z.ai/guides/llm/glm-5.1
+    source_label: Z.AI GLM-5.1 docs
+    source_id: glm-docs
+    verified_at: '2026-06-02'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
   flagship_model:
-    value: GLM-5 is the current public anchor in AIpedia source coverage, with model information available through Z.ai and
-      Hugging Face.
-    source: https://huggingface.co/zai-org/GLM-5
-    source_label: GLM-5 on Hugging Face
+    value: GLM-5.1 is Z.AI's current flagship model in public documentation, with 200K context, 128K maximum output, and an
+      MIT-licensed Hugging Face release.
+    source: https://docs.z.ai/guides/llm/glm-5.1
+    source_label: Z.AI GLM-5.1 docs
     source_id: glm-huggingface
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
   pricing_anchor:
-    value: API pricing lives on the Zhipu AI Open Platform and should be checked by model because token pricing and free Flash
-      tiers can change.
-    source: https://open.bigmodel.cn/pricing
-    source_label: Zhipu AI Open Platform pricing
+    value: Z.AI pricing lists GLM-5.1 at $1.40/M input tokens and $4.40/M output tokens; GLM-5 at $1.00/M input and $3.20/M
+      output; GLM-4.7-Flash and GLM-4.5-Flash are free.
+    source: https://docs.z.ai/guides/overview/pricing
+    source_label: Z.AI pricing
     source_id: glm-pricing
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
   api_available:
-    value: BigModel provides hosted API access and documentation for GLM-family models.
-    source: https://docs.bigmodel.cn/
-    source_label: Zhipu AI Open Platform docs
+    value: Z.AI provides hosted API access, OpenAI-compatible examples, official SDK examples, tool/function calling, context
+      caching, structured output, and MCP support for GLM-family models.
+    source: https://docs.z.ai/guides/llm/glm-5.1
+    source_label: Z.AI GLM-5.1 docs
     source_id: glm-docs
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
   open_source_or_local:
-    value: Some GLM releases are available as model repositories, but production use still requires checking the specific model
-      license and deployment constraints.
-    source: https://huggingface.co/zai-org/GLM-5
-    source_label: GLM-5 on Hugging Face
+    value: GLM-5.1 is available on Hugging Face under an MIT license and can be served locally through supported frameworks
+      such as vLLM, SGLang, Transformers, KTransformers, and compatible quantization routes.
+    source: https://huggingface.co/zai-org/GLM-5.1
+    source_label: GLM-5.1 on Hugging Face
     source_id: glm-huggingface
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
   watch_out_for:
     value: International teams should validate language coverage, API availability, compliance, and documentation fit before
       treating GLM as a drop-in OpenAI or Anthropic alternative.
-    source: https://docs.bigmodel.cn/
-    source_label: Zhipu AI Open Platform docs
+    source: https://docs.z.ai/guides/llm/glm-5.1
+    source_label: Z.AI GLM-5.1 docs
     source_id: glm-docs
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
 tags: [open-source, chinese-llm, coding, agentic, glm-5, zhipu-ai, z-ai, swe-bench, api]
-seo_title: "GLM (ChatGLM): Features, Pricing & Review (May 2026)"
-meta_description: "GLM-5.1 from Zhipu AI (Z.ai) open-sourced April 2026 under MIT. Topped SWE-Bench Pro at 58.4%. Free GLM-4.7-Flash tier, API from $1/M tokens. Trained on Huawei Ascend. Verified May 13, 2026."
+seo_title: "GLM (ChatGLM): Features, Pricing & Review (June 2026)"
+meta_description: "GLM-5.1 from Z.AI is a long-horizon agentic engineering model with 200K context, 128K max output, MIT Hugging Face weights, and API pricing at $1.40/M input and $4.40/M output."
 author: "aipedia.wiki Editorial"
 best_for:
   - agentic coding and SWE-bench-style tasks
-  - developers wanting open-weight frontier coding models
+  - developers wanting open MIT frontier coding weights
   - bilingual Chinese-English professional workflows
-  - teams evaluating domestic-hardware-trained models
+  - teams evaluating Chinese frontier-model APIs and open releases
 not_best_for:
   - polished English consumer chat
   - teams needing Western data residency on hosted API
   - users prioritizing writing quality over coding
 quick_answer: >-
-  GLM is Zhipu AI's open LLM family, rebranded Z.ai in 2026. GLM-5.1 (April 7) opens under MIT and tops SWE-Bench Pro at 58.4%. Free Flash models, paid API from $1/M input. Pick it for open-weight agentic coding. Skip for English writing polish or cheapest reasoning API.
+  GLM is Z.AI's LLM family. GLM-5.1 is the current flagship in public docs: 200K context, 128K max output, long-horizon agentic engineering positioning, MIT Hugging Face weights, and API pricing at $1.40/M input and $4.40/M output. Pick it for open-weight agentic coding evaluation; skip for polished English consumer chat or lowest-cost API work.
 ---
 
 # GLM (ChatGLM)
 
-Zhipu AI's open-source LLM family, developed in Beijing as a 2019 spinoff of Tsinghua University's KEG Lab. The consumer product rebranded to **Z.ai** in early 2026. The current flagship is **GLM-5.1**, released open-source under MIT license on April 7, 2026, and trained entirely on Huawei Ascend 910B chips with no Nvidia hardware.
+Zhipu AI's GLM LLM family now surfaces publicly through **Z.AI**. The current flagship in Z.AI's public documentation is **GLM-5.1**, a long-horizon agentic engineering model with 200K context, 128K maximum output, tool/function calling, MCP support, OpenAI-compatible API examples, and an MIT-licensed Hugging Face release.
 
-GLM-5.1 topped SWE-Bench Pro at 58.4% at launch. The proprietary GLM-5 (February 2026) scored 77.8% on SWE-bench Verified, ahead of Gemini 3 Pro at 76.2% and within reach of Claude Opus 4.6 at 80.9%.
+Z.AI's documentation and Hugging Face model card report GLM-5.1 at 58.4 on SWE-Bench Pro and position it as aligned with Claude Opus 4.6 overall, with stronger long-horizon execution claims for complex engineering tasks.
 
 ## System Verdict
 
-> **Pick GLM if you need an open-weight coding model near the SWE-Bench frontier.** GLM-5.1 is freely downloadable under MIT, runs on consumer Hugging Face hardware or enterprise Ascend clusters, and matches or edges past Claude Opus 4.6 on specific coding benchmarks. OpenAI and Anthropic API compatibility makes it a drop-in backend for Cursor, Cline, and Continue.dev.
+> **Pick GLM if you need an open-weight coding model near the SWE-Bench frontier.** GLM-5.1 is downloadable under MIT, exposes OpenAI-compatible API examples, supports local serving routes such as vLLM/SGLang/Transformers, and is explicitly tuned for long-horizon agentic engineering tasks.
 >
-> **Skip it if you want a polished English consumer product or the cheapest API.** Z.ai chat is functional but secondary to the Chinese-language experience. [DeepSeek](/tools/deepseek/) undercuts GLM-5 by 3-4x on pure API cost for non-coding chat. Zhipu raised prices 30% at GLM-5's launch and another 10% at GLM-5.1, so cost predictability trails [Qwen](/tools/qwen/) and DeepSeek.
+> **Skip it if you want a polished English consumer product or the cheapest API.** Z.AI chat is functional but secondary to API/open-weight evaluation. [DeepSeek](/tools/deepseek/) and [Qwen](/tools/qwen/) can be cheaper or broader depending on the model and region.
 >
-> **Who uses which surface:** Free Flash models for hobbyists and light tasks, GLM-5 API for production coding workloads, Coding Plan subscription (~$10 to $80/month) for IDE users, self-hosted GLM-5.1 weights for teams avoiding vendor lock-in.
+> **Who uses which surface:** GLM-4.7-Flash or GLM-4.5-Flash for free/light tests, GLM-5.1 API for long-context and agentic engineering experiments, and self-hosted GLM-5.1 weights when MIT licensing and local control matter.
 
 ## Key Facts
 
 | | |
 |---|---|
 | **Flagship model** | GLM-5.1 (open-sourced April 7, 2026 under MIT) |
-| **Proprietary flagship** | GLM-5 (released February 11, 2026) |
-| **Architecture** | 744-754B MoE, ~40B active parameters per token |
+| **Previous flagship** | GLM-5 |
+| **Architecture** | MoE; Hugging Face lists GLM-5.1 at 754B parameters |
 | **Context window** | 200K tokens |
 | **Max output** | 128K tokens per response |
 | **SWE-Bench Pro** | 58.4% (GLM-5.1) · above the cited OpenAI frontier baseline at 57.7% and Claude Opus 4.6 at 57.3% |
 | **SWE-bench Verified** | 77.8% (GLM-5) |
-| **Training hardware** | Huawei Ascend 910B, MindSpore framework, zero Nvidia |
-| **API pricing** | GLM-5 $1.00/M input · GLM-4.7 $0.60/M input |
-| **Free tier** | GLM-4.7-Flash (203K context) and GLM-4.5-Flash, registered users |
+| **API pricing** | GLM-5.1 $1.40/M input and $4.40/M output · GLM-5 $1.00/M input and $3.20/M output |
+| **Free tier** | GLM-4.7-Flash and GLM-4.5-Flash free in the Z.AI pricing table |
 | **License** | MIT on GLM-5.1 weights |
 
-Every data point above was verified on 2026-05-13. See Sources.
+Every data point above was verified on 2026-06-02. See Sources.
 
 ## What it actually is
 
 A single LLM family covering two audiences: developers calling the API or self-hosting weights, and consumers chatting at z.ai or chatglm.cn. The model family is optimized for agentic engineering and long-horizon coding, not generalist chat.
 
-GLM-5.1 ships as open weights under MIT on [Hugging Face](https://huggingface.co/zai-org/GLM-5). That combination, MIT license plus frontier SWE-Bench scores, is rare. Most labs at this benchmark tier keep weights closed.
+GLM-5.1 ships as open weights under MIT on [Hugging Face](https://huggingface.co/zai-org/GLM-5.1). That combination, MIT license plus frontier SWE-Bench scores, is rare. Most labs at this benchmark tier keep weights closed.
 
-The real moats are the open-weight coding lead and the Huawei Ascend training stack. GLM is the first Chinese frontier model trained without Nvidia, which matters for customers evaluating supply-chain independence. The consumer chat product is secondary to that positioning.
+The real moat is the open-weight, long-horizon coding-and-agent positioning. The consumer chat product is secondary to API, local serving, and agentic engineering evaluation.
 
 ## When to pick GLM
 
-- **Agentic coding workloads.** GLM-5.1's 58.4% SWE-Bench Pro score is the current open-weight leader, edging past closed frontier models on that specific benchmark.
-- **Cursor, Cline, or Continue.dev backend swap.** GLM supports OpenAI-compatible and Anthropic-compatible API formats. Drop-in replacement against paid Claude or GPT endpoints.
+- **Agentic coding workloads.** Z.AI reports GLM-5.1 at 58.4 on SWE-Bench Pro and emphasizes long-running engineering loops, tool use, and iterative optimization.
+- **Cursor, Cline, or Continue.dev backend swap.** GLM supports OpenAI-compatible API examples and tool/function calling, so it can slot into editors and agents that accept custom OpenAI-style endpoints.
 - **Self-hosted frontier coding.** MIT-licensed weights permit local deployment, fine-tuning, and commercial use without licensing fees.
-- **Huawei Ascend infrastructure.** Enterprises on domestic Chinese compute get a native-stack option that does not require Nvidia.
+- **Long-context engineering and office tasks.** Z.AI lists 200K context, 128K max output, MCP/tool support, structured output, and improvements across front-end development, documents, slides, PDFs, and spreadsheets.
 - **Bilingual Chinese-English technical work.** Legal, finance, and engineering teams operating across both languages get trained-in-parallel fluency.
 
 ## When to pick something else
 
-- **Cheapest API for general chat:** [DeepSeek](/tools/deepseek/) at ~$0.28/M input is 3-4x cheaper than GLM-5.
+- **Cheapest API for general chat:** [DeepSeek](/tools/deepseek/) or [Qwen](/tools/qwen/), depending on current endpoint and region.
 - **Polished English writing:** [Claude](/tools/claude/) Opus 4.7 or [ChatGPT](/tools/chatgpt/). GLM's English is functional, not best-in-class.
 - **Broadest open-weight coverage:** [Qwen](/tools/qwen/). Apache 2.0 across more sizes, wider language coverage, more active monthly releases.
 - **Google Workspace integration:** [Gemini](/tools/gemini/). GLM has no Workspace hooks.
@@ -161,71 +161,62 @@ The real moats are the open-weight coding lead and the Huawei Ascend training st
 
 ## Pricing
 
-Subscription pricing via [Zhipu AI Open Platform](https://open.bigmodel.cn/pricing) and [bigmodel.cn pricing](https://bigmodel.cn/pricing).
+Usage pricing via [Z.AI pricing](https://docs.z.ai/guides/overview/pricing). Z.AI also lists free Flash models for lightweight tests; teams still need to verify regional availability, account limits, and any private-contract terms before committing production traffic.
 
 | Plan / Model | Price | Notes |
 |---|---|---|
-| GLM-4.7-Flash | Free | 203K context, registered users, lightweight tasks |
-| GLM-4.5-Flash | Free | General-purpose lightweight |
-| GLM-5 API | $1.00/M input | Flagship, 30% increase at Feb 2026 launch, +10% on GLM-5.1 |
-| GLM-4.7 API | $0.60/M input | Previous flagship, still available |
-| Coding Plan Lite | ~$10/month | Entry IDE access, Q2 2026 discount to $27/quarter |
-| Coding Plan Pro | ~$30/month | GLM-5 access, higher limits, $81/quarter discounted |
-| Coding Plan Max | ~$80/month | Highest limits, $216/quarter discounted |
+| GLM-5.1 | $1.40/M input, $4.40/M output | Current flagship for long-horizon agentic engineering |
+| GLM-5 | $1.00/M input, $3.20/M output | Previous flagship in the Z.AI price table |
+| GLM-5-Air | $0.10/M input, $1.00/M output | Lower-cost GLM-5 family endpoint |
+| GLM-5-Flash | Free | Lightweight/free endpoint in the current price table |
+| GLM-4.7-Flash | Free | Legacy free Flash endpoint |
+| GLM-4.5-Flash | Free | Legacy free Flash endpoint |
 
-*Prices verified 2026-05-13 via [Zhipu AI Open Platform pricing](https://open.bigmodel.cn/pricing) and [Vibecoding pricing breakdown](https://vibecoding.app/blog/zhipu-ai-glm-pricing-2026). Zhipu raised GLM prices 30% in February 2026 and another 10% on the GLM-5.1 release. No further rate changes reported through May 13, 2026.*
+*Prices verified 2026-06-02 via [Z.AI pricing](https://docs.z.ai/guides/overview/pricing). Self-hosting GLM-5.1 weights can avoid hosted API usage fees, but it shifts cost to GPUs, serving infrastructure, monitoring, and security review.*
 
 ## Against the alternatives
 
-| | GLM-5.1 | Claude Opus 4.7 | DeepSeek V3 | Qwen3.6 Plus |
+| | GLM-5.1 | Claude | DeepSeek | Qwen |
 |---|---|---|---|---|
-| **Open weights** | MIT | Closed | Partial (V3 open) | Apache 2.0 |
-| **SWE-Bench Pro** | 58.4% | 57.3% on 4.6 | Strong reasoning | Strong coding |
-| **API input price** | $1.00/M | $5.00/M | ~$0.28/M | ~$0.325/M |
-| **Context window** | 200K | 1M | 64K | 1M |
-| **Training hardware** | Huawei Ascend | Nvidia | Nvidia | Nvidia + Alibaba silicon |
+| **Open weights** | MIT for GLM-5.1 | Closed for frontier Claude models | Open and hosted options vary by model | Broad open-weight family coverage |
+| **Coding/agent angle** | Long-horizon agentic engineering, tool use, MCP | Polished reasoning and coding assistant experience | Cost-efficient reasoning and coding alternatives | Strong multilingual and open-model coverage |
+| **API input price** | $1.40/M on GLM-5.1 | Higher frontier-model pricing | Often cheaper, depending on endpoint | Varies by model and region |
+| **Context window** | 200K | Larger Claude windows on selected plans/models | Varies by model | Varies by model |
 | **English polish** | Functional | Strongest | Moderate | Moderate |
 | **Best viewed as** | Open-weight coding leader | Reasoning specialist | Cheap capable API | Open-weight multilingual |
 
 ## Failure modes
 
-- **Price increases at each major release.** Zhipu raised API rates 30% at GLM-5 and 10% at GLM-5.1. Cost predictability is lower than at DeepSeek or Qwen.
+- **Not the cheapest general API.** GLM-5.1 pricing is attractive for open-weight frontier coding evaluation, but general chat workloads should still compare DeepSeek, Qwen, and other lower-cost endpoints.
 - **Z.ai consumer UX lags.** The chat interface is functional in English but built for a Chinese-first audience. Menu labels, error messages, and onboarding trail ChatGPT or Claude.
 - **Thin competitive moat.** SWE-Bench leaderboard positions shift monthly. DeepSeek, Qwen, and Kimi are all active challengers with comparable release cadence.
-- **API cost undercut by DeepSeek.** At $1/M input, GLM-5 is ~3.5x DeepSeek's rate. The benchmark advantage is coding-specific; on general chat, DeepSeek wins on value.
-- **Huawei Ascend training is a signal, not a benefit.** For most Western developers, it does not change the product. For Chinese enterprises it matters materially.
+- **Output-heavy tasks can get expensive.** GLM-5.1 output is $4.40/M tokens in the public price table, so agent loops that emit long plans, patches, logs, or reports need caps.
 - **Third-party tutorials are thinner.** Smaller global developer community than ChatGPT or Claude. Fewer Stack Overflow threads, fewer YouTube walkthroughs.
-- **Hosted API runs on Chinese infrastructure.** Western teams with strict data residency rules cannot use bigmodel.cn. Self-hosted weights are the workaround.
+- **Hosted API may not satisfy every compliance program.** International teams should review data residency, account availability, logging, and procurement terms. Self-hosted weights are the workaround when local control matters.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-05-13 against [GLM-5.1 on Hugging Face](https://huggingface.co/zai-org/GLM-5), [Zhipu AI Open Platform pricing](https://open.bigmodel.cn/pricing), [Modem Guides GLM-5.1 benchmark coverage](https://www.modemguides.com/blogs/ai-news/glm-5-1-open-source-benchmarks-local-ai), and [TrendForce price-hike coverage](https://www.trendforce.com/news/2026/02/16/news-rising-costs-and-demand-drive-chinas-llm-price-jump-zhipu-glm%E2%80%915-hikes-30-in-first-2026-increase/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-02 against [Z.AI GLM-5.1 docs](https://docs.z.ai/guides/llm/glm-5.1), [Z.AI pricing](https://docs.z.ai/guides/overview/pricing), and [GLM-5.1 on Hugging Face](https://huggingface.co/zai-org/GLM-5.1).
 
 ## FAQ
 
 **Is GLM free to use?**
-Partially. GLM-4.7-Flash and GLM-4.5-Flash are free for registered users on the Zhipu AI platform. GLM-5 and GLM-5.1, the SWE-Bench leaders, require either a paid API ($1/M input) or a Coding Plan subscription starting at ~$10/month.
+Partially. Z.AI lists GLM-5-Flash, GLM-4.7-Flash, and GLM-4.5-Flash as free in the public pricing table. GLM-5.1 is paid on the hosted API at $1.40/M input and $4.40/M output, or can be self-hosted from MIT-licensed weights if the team has infrastructure.
 
 **What changed between GLM-5 and GLM-5.1?**
-GLM-5 launched February 11, 2026 as a proprietary API. GLM-5.1 shipped April 7, 2026 with a 10% price increase and full open-source release under MIT license. GLM-5.1 also took the SWE-Bench Pro lead at 58.4%.
+Z.AI's current public docs position GLM-5.1 as the flagship long-horizon agentic engineering model. Compared with GLM-5, GLM-5.1 adds the MIT Hugging Face release, public GLM-5.1 pricing, 200K context, 128K maximum output, MCP/tool support, and the 58.4 SWE-Bench Pro claim.
 
 **Can I use GLM with Cursor or VS Code?**
-Yes. GLM exposes OpenAI-compatible and Anthropic-compatible API formats. Set a custom endpoint in Cursor, Cline, Continue.dev, or any editor that accepts a custom OpenAI endpoint, using your Zhipu API key.
-
-**What does "trained on Huawei Ascend" mean in practice?**
-GLM-5 and GLM-5.1 were trained end-to-end on Huawei Ascend 910B chips with the MindSpore framework, with no Nvidia hardware. For most users the output is indistinguishable. For Chinese enterprises and compliance buyers, it is a supply-chain independence signal.
+Usually, yes. GLM docs include OpenAI-compatible examples. Use a custom endpoint in Cursor, Cline, Continue.dev, or any editor that accepts a custom OpenAI-style endpoint, then verify tool-calling behavior before relying on it for autonomous edits.
 
 **Is GLM faster or slower than Claude or GPT?**
 Inference latency depends on the deployment. Self-hosted GLM-5.1 on modern hardware runs within the same range as hosted Claude Sonnet or GPT-5.3. Hosted Z.ai API performance varies with regional load.
 
 ## Sources
 
-- [GLM-5 / GLM-5.1 on Hugging Face](https://huggingface.co/zai-org/GLM-5): open-weight release, MIT license, benchmarks
-- [Zhipu AI Open Platform pricing](https://open.bigmodel.cn/pricing): current API and Coding Plan rates
-- [Modem Guides: GLM-5.1 Open Source](https://www.modemguides.com/blogs/ai-news/glm-5-1-open-source-benchmarks-local-ai): SWE-Bench Pro leaderboard details
-- [TrendForce: China LLM price jump](https://www.trendforce.com/news/2026/02/16/news-rising-costs-and-demand-drive-chinas-llm-price-jump-zhipu-glm%E2%80%915-hikes-30-in-first-2026-increase/): 30% price increase at GLM-5 launch
-- [Lushbinary GLM-5 developer guide](https://lushbinary.com/blog/glm-5-developer-guide-zhipu-ai-huawei-ascend-open-weight/): Huawei Ascend training stack
-- [Z.AI Developer Documentation](https://docs.z.ai/guides/llm/glm-5): API and model reference
+- [Z.AI GLM-5.1 docs](https://docs.z.ai/guides/llm/glm-5.1): flagship model details, context, max output, tool calling, MCP, benchmarks
+- [Z.AI pricing](https://docs.z.ai/guides/overview/pricing): hosted API prices and free Flash model entries
+- [GLM-5.1 on Hugging Face](https://huggingface.co/zai-org/GLM-5.1): open-weight release, MIT license, local serving notes
 
 ## Related
 

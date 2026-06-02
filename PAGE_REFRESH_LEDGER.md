@@ -380,16 +380,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /guides/synthesia-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/synthesia-alternatives.md |
 | 2026-05-13 | /media-kit/ | Static page | Yes | git | src/pages/media-kit.astro |
 | 2026-05-13 | /reports/2026-04/ | Report | Yes | frontmatter | src/content/reports/2026-04.md |
-| 2026-05-13 | /tools/flux/ | Tool | Yes | frontmatter | src/content/tools/flux.md |
-| 2026-05-13 | /tools/framer-ai/ | Tool | Yes | frontmatter | src/content/tools/framer-ai.md |
-| 2026-05-13 | /tools/galileo-ai/ | Tool | Yes | frontmatter | src/content/tools/galileo-ai.md |
-| 2026-05-13 | /tools/genspark/ | Tool | Yes | frontmatter | src/content/tools/genspark.md |
-| 2026-05-13 | /tools/getresponse/ | Tool | Yes | frontmatter | src/content/tools/getresponse.md |
-| 2026-05-13 | /tools/glean/ | Tool | Yes | frontmatter | src/content/tools/glean.md |
-| 2026-05-13 | /tools/glm/ | Tool | Yes | frontmatter | src/content/tools/glm.md |
-| 2026-05-13 | /tools/google-stitch/ | Tool | Yes | frontmatter | src/content/tools/google-stitch.md |
-| 2026-05-13 | /tools/goose/ | Tool | Yes | frontmatter | src/content/tools/goose.md |
-| 2026-05-13 | /tools/grammarly/ | Tool | Yes | frontmatter | src/content/tools/grammarly.md |
 | 2026-05-13 | /tools/granola/ | Tool | Yes | frontmatter | src/content/tools/granola.md |
 | 2026-05-13 | /tools/grok-code-fast/ | Tool | Yes | frontmatter | src/content/tools/grok-code-fast.md |
 | 2026-05-13 | /tools/grok/ | Tool | Yes | frontmatter | src/content/tools/grok.md |
@@ -648,7 +638,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-01 | /answers/best-ai-voice-generator-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-voice-generator-2026.astro |
 | 2026-06-01 | /answers/best-free-ai-tools-2026/ | Static page | Yes | page metadata | src/pages/answers/best-free-ai-tools-2026.astro |
 | 2026-06-01 | /answers/chatgpt-alternatives-2026/ | Static page | Yes | page metadata | src/pages/answers/chatgpt-alternatives-2026.astro |
-| 2026-06-01 | /categories/ai-coding/ | Category | Yes | frontmatter | src/content/categories/ai-coding.md |
 | 2026-06-01 | /categories/ai-music/ | Category | Yes | frontmatter | src/content/categories/ai-music.md |
 | 2026-06-01 | /companies/ | Static page | Yes | git | src/pages/companies/index.astro |
 | 2026-06-01 | /demo-godtier/ | Static page | Yes | git | src/pages/demo-godtier.astro |
@@ -696,24 +685,25 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-01 | /tools/val-town/ | Tool | Yes | frontmatter | src/content/tools/val-town.md |
 | 2026-06-01 | /tools/windsurf/ | Tool | Yes | frontmatter | src/content/tools/windsurf.md |
 | 2026-06-01 | /tools/zed/ | Tool | Yes | frontmatter | src/content/tools/zed.md |
-| 2026-06-02 | / | Static page | Yes | git | src/pages/index.astro |
-| 2026-06-02 | /categories/ | Static page | Yes | git | src/pages/categories/index.astro |
-| 2026-06-02 | /categories/ai-automation/ | Category | Yes | frontmatter | src/content/categories/ai-automation.md |
-| 2026-06-02 | /categories/ai-chatbots/ | Category | Yes | frontmatter | src/content/categories/ai-chatbots.md |
-| 2026-06-02 | /categories/ai-design/ | Category | Yes | frontmatter | src/content/categories/ai-design.md |
-| 2026-06-02 | /categories/ai-image/ | Category | Yes | frontmatter | src/content/categories/ai-image.md |
+| 2026-06-02 | / | Static page | Yes | working tree | src/pages/index.astro |
+| 2026-06-02 | /categories/ | Static page | Yes | working tree | src/pages/categories/index.astro |
+| 2026-06-02 | /categories/ai-automation/ | Category | Yes | working tree | src/content/categories/ai-automation.md |
+| 2026-06-02 | /categories/ai-chatbots/ | Category | Yes | working tree | src/content/categories/ai-chatbots.md |
+| 2026-06-02 | /categories/ai-coding/ | Category | Yes | working tree | src/content/categories/ai-coding.md |
+| 2026-06-02 | /categories/ai-design/ | Category | Yes | working tree | src/content/categories/ai-design.md |
+| 2026-06-02 | /categories/ai-image/ | Category | Yes | working tree | src/content/categories/ai-image.md |
 | 2026-06-02 | /categories/ai-infrastructure/ | Category | Yes | frontmatter | src/content/categories/ai-infrastructure.md |
 | 2026-06-02 | /categories/ai-notes/ | Category | Yes | frontmatter | src/content/categories/ai-notes.md |
 | 2026-06-02 | /categories/ai-presentation/ | Category | Yes | frontmatter | src/content/categories/ai-presentation.md |
-| 2026-06-02 | /categories/ai-research/ | Category | Yes | frontmatter | src/content/categories/ai-research.md |
-| 2026-06-02 | /categories/ai-search/ | Category | Yes | frontmatter | src/content/categories/ai-search.md |
+| 2026-06-02 | /categories/ai-research/ | Category | Yes | working tree | src/content/categories/ai-research.md |
+| 2026-06-02 | /categories/ai-search/ | Category | Yes | working tree | src/content/categories/ai-search.md |
 | 2026-06-02 | /categories/ai-seo/ | Category | Yes | frontmatter | src/content/categories/ai-seo.md |
 | 2026-06-02 | /categories/ai-video/ | Category | Yes | frontmatter | src/content/categories/ai-video.md |
 | 2026-06-02 | /categories/ai-voice/ | Category | Yes | frontmatter | src/content/categories/ai-voice.md |
-| 2026-06-02 | /categories/ai-writing/ | Category | Yes | frontmatter | src/content/categories/ai-writing.md |
-| 2026-06-02 | /llms-full.txt | Crawl surface | No | git | src/pages/llms-full.txt.ts |
-| 2026-06-02 | /llms.txt | Crawl surface | No | git | src/pages/llms.txt.ts |
-| 2026-06-02 | /tools/ | Static page | Yes | git | src/pages/tools/index.astro |
+| 2026-06-02 | /categories/ai-writing/ | Category | Yes | working tree | src/content/categories/ai-writing.md |
+| 2026-06-02 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
+| 2026-06-02 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
+| 2026-06-02 | /tools/ | Static page | Yes | working tree | src/pages/tools/index.astro |
 | 2026-06-02 | /tools/canva/ | Tool | Yes | frontmatter | src/content/tools/canva.md |
 | 2026-06-02 | /tools/capacities/ | Tool | Yes | frontmatter | src/content/tools/capacities.md |
 | 2026-06-02 | /tools/captions/ | Tool | Yes | frontmatter | src/content/tools/captions.md |
@@ -749,3 +739,13 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-02 | /tools/fireflies/ | Tool | Yes | frontmatter | src/content/tools/fireflies.md |
 | 2026-06-02 | /tools/fireworks-ai/ | Tool | Yes | frontmatter | src/content/tools/fireworks-ai.md |
 | 2026-06-02 | /tools/fish-audio/ | Tool | Yes | frontmatter | src/content/tools/fish-audio.md |
+| 2026-06-02 | /tools/flux/ | Tool | Yes | working tree | src/content/tools/flux.md |
+| 2026-06-02 | /tools/framer-ai/ | Tool | Yes | working tree | src/content/tools/framer-ai.md |
+| 2026-06-02 | /tools/galileo-ai/ | Tool | Yes | working tree | src/content/tools/galileo-ai.md |
+| 2026-06-02 | /tools/genspark/ | Tool | Yes | working tree | src/content/tools/genspark.md |
+| 2026-06-02 | /tools/getresponse/ | Tool | Yes | working tree | src/content/tools/getresponse.md |
+| 2026-06-02 | /tools/glean/ | Tool | Yes | working tree | src/content/tools/glean.md |
+| 2026-06-02 | /tools/glm/ | Tool | Yes | working tree | src/content/tools/glm.md |
+| 2026-06-02 | /tools/google-stitch/ | Tool | Yes | working tree | src/content/tools/google-stitch.md |
+| 2026-06-02 | /tools/goose/ | Tool | Yes | working tree | src/content/tools/goose.md |
+| 2026-06-02 | /tools/grammarly/ | Tool | Yes | working tree | src/content/tools/grammarly.md |

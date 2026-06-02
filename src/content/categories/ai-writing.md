@@ -16,7 +16,7 @@ update_frequency: monthly
 
 AI writing has split into four buyer lanes. The first lane is **general writing and research**, where [ChatGPT](/tools/chatgpt/) and [Claude](/tools/claude/) cover most individual drafting, rewriting, analysis, and content planning work. The second lane is **marketing workflow**, where [Jasper](/tools/jasper/) and [Copy.ai](/tools/copy-ai/) matter because they package brand voice, audiences, content pipelines, templates, workflows, and GTM operations around model output. The third lane is **translation and localization**, where [DeepL](/tools/deepl/) remains the specialist for document fidelity, glossary/CAT workflows, and API localization. The fourth lane is **content operations**, where [Surfer SEO](/tools/surfer-seo/) handles search and AI-visibility optimization while [Writer](/tools/writer/) and [Typeface](/tools/typeface/) are bought for agents, governance, approvals, integrations, data controls, and campaign orchestration.
 
-As of June 2, 2026, the wrong question is "which AI writes best?" The better question is "which writing workflow needs to be governed, repeated, translated, measured, or connected to revenue?" Copy.ai's June recheck keeps its big buyer caveat intact: workflow automation starts at the annual-billed $1,000/month Growth tier, not the $29/month Chat tier. DeepL's June recheck changes API buyer guidance because new developers should evaluate Developer, Growth, or Enterprise API plans rather than old API Free/API Pro purchase paths. Rytr pricing and affiliate status were rechecked on May 28, 2026; its affiliate relationship does not affect category ranking or plan advice.
+As of June 2, 2026, the wrong question is "which AI writes best?" The better question is "which writing workflow needs to be governed, repeated, translated, measured, or connected to revenue?" Copy.ai's June recheck keeps its big buyer caveat intact: workflow automation starts at the annual-billed $1,000/month Growth tier, not the $29/month Chat tier. DeepL's June recheck changes API buyer guidance because new developers should evaluate Developer, Growth, or Enterprise API plans rather than old API Free/API Pro purchase paths. Grammarly's June recheck keeps Pro anchored to support pricing at $30/member/month monthly or $144/member/year, while warning that the public plans page can be locale-sensitive. Rytr pricing and affiliate status were rechecked on May 28, 2026; its affiliate relationship does not affect category ranking or plan advice.
 
 ## The Players
 
@@ -29,7 +29,7 @@ As of June 2, 2026, the wrong question is "which AI writes best?" The better que
 | **[Surfer SEO](/tools/surfer-seo/)** | SEO and AI-search content optimization | Best when blog writing needs content briefs, optimization, AI visibility tracking, and SERP-led coverage gaps rather than only drafting. |
 | **[Writer](/tools/writer/)** | Governed enterprise AI and content operations | Best for IT-approved agents, guardrails, data controls, regulated teams, and enterprise trust requirements. |
 | **[Typeface](/tools/typeface/)** | Enterprise marketing orchestration | Best for large marketing teams that need brand-safe campaigns across agents, creative workflows, approvals, and systems. |
-| **[Grammarly](/tools/grammarly/)** | Editing, grammar, and tone layer | Best as a polish layer, not a full content operating system. |
+| **[Grammarly](/tools/grammarly/)** | Editing, grammar, and tone layer | Best as a polish layer, not a full content operating system; verify locale-specific checkout and Pro/Enterprise seat needs. |
 | **[DeepL](/tools/deepl/)** | Translation, rewrite, API localization | Best when translation, document round-trip, glossary, CAT tools, and regional data posture matter more than broad assistant features. |
 | **[Beehiiv](/tools/beehiiv/)** | Newsletter publishing, growth, and monetization | Best when the newsletter is a business and needs publishing, referrals, ads, paid subscriptions, AI credits, API, and growth surfaces rather than only draft generation. |
 | **[Sudowrite](/tools/sudowrite/)** | Fiction, novels, and creative-writing workflow | Best when the work is scenes, characters, sensory detail, story continuity, and fiction-specific rewrite/expansion rather than business or SEO content. |
@@ -103,6 +103,8 @@ As of June 2, 2026, the wrong question is "which AI writes best?" The better que
 - [Surfer SEO pricing](https://surferseo.com/pricing/) (verified 2026-05-13)
 - [Writer](https://writer.com/) (verified 2026-05-13)
 - [Typeface](https://www.typeface.ai/) (verified 2026-05-24)
+- [Grammarly Pro pricing support](https://support.grammarly.com/hc/en-us/articles/115000090011-How-much-does-Grammarly-Pro-cost) (verified 2026-06-02)
+- [Grammarly plans](https://www.grammarly.com/plans) (verified 2026-06-02)
 - [beehiiv pricing](https://www.beehiiv.com/pricing) (verified 2026-05-13)
 - [Sudowrite pricing](https://sudowrite.com/pricing) (verified 2026-05-13)
 - [Mistral AI pricing](https://mistral.ai/pricing) (verified 2026-05-13)

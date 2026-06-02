@@ -2,19 +2,19 @@
 type: tool
 slug: google-stitch
 title: Google Stitch
-tagline: Google Labs AI UI design tool. Generates Material Design 3 UIs and multi-screen flows from text prompts; exports to Figma and code.
+tagline: Google Labs AI-native software design canvas for high-fidelity UI ideas, prototypes, DESIGN.md workflows, MCP/SDK handoff, and developer-tool export.
 category: ai-design
 company: google
 url: https://stitch.withgoogle.com/
 pricing_model: free
-price_range: "Free while in Google Labs (350 Standard + 200 Pro generations/mo)"
+price_range: "Free while in Google Labs; public quotas and paid-tier timing not guaranteed"
 status: active
 launched: 2025-05
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-02
+last_verified: 2026-06-02
 update_frequency: monthly
-seo_title: "Google Stitch: Features, Pricing & Review (May 2026)"
-meta_description: "Google Stitch is Google Labs' AI-native UI design tool. Generates Material Design 3 UIs from text prompts. Currently free: 350 Standard + 200 Pro (Gemini 2.5 Pro) generations per month. Paid tiers expected Q4 2026."
+seo_title: "Google Stitch: Features, Pricing & Review (June 2026)"
+meta_description: "Google Stitch is Google Labs' AI-native UI design canvas for prompt, image, text, and code-based interface exploration. Free in Labs; Google has not published durable public quotas or paid-tier timing."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -29,11 +29,11 @@ scores:
   longevity: 7
 facts:
   best_for:
-    value: "Product designers and builders who want Google Labs text-to-UI generation for early interface exploration, especially Material-style app screens."
-    source: "https://stitch.withgoogle.com/"
-    source_label: "Google Stitch official site"
-    source_id: google-stitch-official
-    verified_at: 2026-05-13
+    value: "Product designers, founders, and builders who want Google Labs' AI-native design canvas for early UI exploration, interactive prototypes, and handoff into developer tools."
+    source: "https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/"
+    source_label: "Google Stitch announcement"
+    source_id: google-stitch-pricing
+    verified_at: 2026-06-02
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -42,16 +42,16 @@ facts:
     source: "https://labs.google/stitch/"
     source_label: "Google Labs Stitch"
     source_id: google-stitch-labs
-    verified_at: 2026-05-13
+    verified_at: 2026-06-02
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
   pricing_anchor:
-    value: "Free inside Google Labs as of 2026-05-13: 350 Standard generations on Gemini 2.5 Flash and 200 Pro generations on Gemini 2.5 Pro per month. Paid tiers expected Q4 2026 when Stitch exits Labs."
+    value: "Free inside Google Labs as of 2026-06-02, but Google public pages do not publish durable quota, billing, SLA, or paid-tier timing terms for procurement."
     source: "https://stitch.withgoogle.com/"
     source_label: "Google Stitch official site"
     source_id: google-stitch-official
-    verified_at: 2026-05-13
+    verified_at: 2026-06-02
     next_review_at: 2026-08-13
     volatility: high
     confidence: medium
@@ -60,7 +60,7 @@ facts:
     source: "https://labs.google/stitch/"
     source_label: "Google Labs Stitch"
     source_id: google-stitch-labs
-    verified_at: 2026-05-13
+    verified_at: 2026-06-02
     next_review_at: 2026-08-13
     volatility: high
     confidence: medium
@@ -69,7 +69,7 @@ facts:
     source: "https://labs.google/stitch/"
     source_label: "Google Labs Stitch"
     source_id: google-stitch-labs
-    verified_at: 2026-05-13
+    verified_at: 2026-06-02
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -77,7 +77,7 @@ tags: [design-tool, ui-design, prompt-to-ui, prototyping, figma-alternative, goo
 best_for:
   - rapid UI mockups from text prompts
   - founders and PMs building investor-ready prototypes
-  - Material Design 3 workflows for Android or Flutter
+  - early design exploration before Figma or code
   - developers who want Figma export without Figma skills
 not_best_for:
   - pixel-perfect production design systems
@@ -85,85 +85,84 @@ not_best_for:
   - motion prototyping or animation
   - non-Material brand systems
 quick_answer: >-
-  Google Stitch is Google Labs' AI UI design tool. Prompt it, get Material Design 3 UIs and multi-screen flows, export to Figma or Flutter. Free in Labs: 350 Standard plus 200 Pro (Gemini 2.5 Pro) generations per month. Pick it for fast mockups; skip for production design systems where Figma wins.
+  Google Stitch is Google Labs' AI-native UI design canvas. Prompt it, add images/text/code context, explore high-fidelity UI directions, stitch screens into interactive prototypes, and hand off through DESIGN.md, MCP/SDK, or developer-tool exports. Pick it for fast design exploration; skip for production design systems where Figma still wins.
 price_history:
   - date: 2025-05-20
     plan: "Labs release"
     price: "Free"
-    source: "https://www.nxcode.io/resources/news/google-stitch-pricing-plans-complete-guide-2026"
-    source_label: "Source"
+    source: "https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/"
+    source_label: "Google Stitch announcement"
     source_id: google-stitch-pricing
-    note: "Launched at Google I/O 2025 as a Google Labs experiment."
+    note: "Google announced Stitch as a Google Labs experiment; public Google sources do not publish durable procurement terms."
   - date: 2026-04-17
     plan: "Labs"
     price: "Free"
-    source: "https://www.nxcode.io/resources/news/google-stitch-pricing-plans-complete-guide-2026"
-    source_label: "Source"
+    source: "https://stitch.withgoogle.com/"
+    source_label: "Google Stitch official site"
     source_id: google-stitch-pricing
-    note: "Verified free. 350 Standard + 200 Pro generations per month. Paid tiers expected Q4 2026."
-  - date: 2026-05-13
+    note: "Rechecked the public Google surface; do not treat third-party quota or paid-tier predictions as stable Google-published procurement terms."
+  - date: 2026-06-02
     plan: "Labs"
     price: "Free"
     source: "https://stitch.withgoogle.com/"
-    source_label: "Source"
+    source_label: "Google Stitch official site"
     source_id: google-stitch-pricing
-    note: "Reconfirmed free at carry-over limits. Standard mode runs on Gemini 2.5 Flash, Pro mode on Gemini 2.5 Pro. Multi-screen flows still count as one generation. No paid-tier announcement yet."
+    note: "Reconfirmed free Labs access from public Google surfaces. Google public pages do not publish stable quota, paid-tier timing, SLA, or billing terms."
 ---
 
 # Google Stitch
 
-Google Labs' AI-native UI design tool. Launched at Google I/O 2025. Generates UI mockups and multi-screen flows from natural language prompts, following Material Design 3 guidelines ([stitch.withgoogle.com](https://stitch.withgoogle.com/)).
+Google Labs' AI-native software design canvas. Launched at Google I/O 2025 and expanded in March 2026 into a vibe-design workspace for high-fidelity UI from natural language, images, text, or code context ([stitch.withgoogle.com](https://stitch.withgoogle.com/)).
 
-Currently free while inside Labs. Standard mode gives 350 generations per month; Pro mode (backed by Gemini 2.5 Pro) adds 200 higher-quality generations per month. Paid tiers are expected once the product exits Labs, projected Q4 2026.
+It is free while inside Google Labs, but Google has not published stable public quota, billing, SLA, or paid-tier timing terms. Treat any quoted generation allowance as an in-product or third-party observation to re-check before procurement.
 
 ## System Verdict
 
-> **Pick Google Stitch for fast UI mockups when Material Design 3 fits the brief.** Prompt-to-UI in seconds, coherent multi-screen flows, and Figma export make it the fastest way from idea to clickable prototype.
+> **Pick Google Stitch for fast UI exploration when the buyer needs many interface directions before Figma or code.** Natural-language prompting, image/text/code context, an AI-native canvas, design agents, interactive prototypes, voice critique, DESIGN.md, MCP/SDK, and developer-tool exports make it a useful idea-to-prototype accelerator.
 >
-> The design system lock-in is real. Material 3 is the only native output. Teams on iOS-first brands, custom design systems, or non-Material look-and-feel will fight the defaults.
+> The Labs risk is real. Access, quotas, export behavior, data terms, and enterprise readiness can change faster than a procurement cycle.
 >
 > **Skip it for production design work.** [Figma](/tools/figma/) still owns pixel-level control, component variants, auto-layout, design tokens, and team review. Stitch is a prototype accelerator, not a replacement.
 >
-> **Who pays what:** nobody pays yet. Everything inside the Labs window is free. Budget planning for Q4 2026 is the right time to revisit.
+> **Who pays what:** nobody pays yet on the public Labs surface. Budget planning should wait for Google-published commercial terms rather than third-party paid-tier predictions.
 
 ## Key Facts
 
 | | |
 |---|---|
-| **Status** | Google Labs experiment (free) |
+| **Status** | Google Labs experiment (free public surface) |
 | **URL** | [stitch.withgoogle.com](https://stitch.withgoogle.com/) |
 | **Launched** | May 2025 (Google I/O) |
-| **Standard mode** | 350 generations/mo, Gemini 2.5 Flash |
-| **Pro mode** | 200 generations/mo, Gemini 2.5 Pro |
-| **Multi-screen flow** | A 5-screen flow counts as 1 generation |
-| **Design system** | Material Design 3 |
-| **Export formats** | Figma, HTML/CSS, Flutter code, design specs |
-| **Responsive** | Mobile, tablet, desktop breakpoints auto-generated |
-| **Paid tier ETA** | Q4 2026 (per Google Labs signals) |
+| **Current public positioning** | AI-native software design canvas for natural-language UI creation |
+| **Canvas context** | Images, text, and code can be used as design context |
+| **Agent layer** | Design agent, agent manager, and voice critique/update workflows |
+| **Prototype layer** | Interactive prototypes and auto-generated next screens |
+| **Handoff** | DESIGN.md, MCP server, SDK, Skills, and exports to developer tools |
+| **Pricing caveat** | No durable public quota, SLA, billing, or paid-tier schedule published |
 
-Every data point above was verified against vendor sources on 2026-05-13. See Sources.
+Every data point above was verified against vendor sources on 2026-06-02. See Sources.
 
 ## What it actually is
 
-A prompt-driven UI generator. Users describe an interface ("mobile banking app, dark theme, transaction history with swipeable cards") and Stitch produces a Material 3 compliant design across phone, tablet, and desktop breakpoints.
+A prompt-driven UI design canvas. Users describe an interface or business objective, add examples or context, and Stitch turns that intent into high-fidelity interface directions that can be refined on the canvas.
 
 Iteration is conversational. Follow-up prompts ("add bottom nav", "make the CTA larger", "switch to light theme") refine the output without redrawing from scratch.
 
-Export paths are functional, not decorative. Flutter code compiles without manual cleanup in most cases. Figma export opens real editable layers. HTML/CSS is clean enough to hand off to a frontend developer.
+Export paths are part of the point, but they are still handoff surfaces, not production guarantees. Google describes DESIGN.md, MCP, SDK, Skills, and exports to developer tools like AI Studio and Antigravity; teams should test exact downstream quality before treating Stitch as production design infrastructure.
 
 ## When to pick Google Stitch
 
 - **Mockups need to ship in minutes, not days.** Prompt-to-UI beats Figma's click-to-design speed by an order of magnitude.
-- **The target stack is Android or Flutter.** Material 3 compliance ships by default, Flutter export ships real code.
-- **Design handoff goes to a non-designer.** Founders, PMs, and developers can produce investor-ready prototypes without Figma fluency.
-- **Conversational iteration is preferred over manual editing.** "Add a loading skeleton" takes a sentence, not menu navigation.
-- **Responsive variants are required cheaply.** Mobile, tablet, and desktop outputs generate together from one prompt.
+- **The target is early design exploration.** Stitch is strongest before a team commits to a production design system.
+- **Design handoff goes to a non-designer.** Founders, PMs, and developers can produce concept prototypes without Figma fluency.
+- **Conversational or voice iteration is preferred over manual editing.** "Show me three menu options" or "try different color palettes" fits the current product direction.
+- **The team wants agent-friendly design context.** DESIGN.md, MCP, SDK, and tool exports matter when a prototype must move into developer workflows.
 
 ## When to pick something else
 
 - **Pixel-perfect production design:** [Figma](/tools/figma/). Variants, auto-layout, component libraries, dev-mode handoff.
-- **iOS-first brand work:** SwiftUI-native tools or Figma with iOS kits. Stitch output is Material, not HIG.
-- **Custom or non-Material design systems:** Figma plus a custom library. Stitch fights any non-Material brief.
+- **iOS-first or deeply custom brand work:** Figma plus the relevant design system. Stitch is a concept accelerator, not a replacement for mature component governance.
+- **Custom production design systems:** Figma plus a custom library. Use Stitch for exploration, then rebuild the winning direction in the governed system.
 - **Full-app prototype with working data:** [Lovable](/tools/lovable/) or [v0 by Vercel](/tools/v0/). Stitch produces UI, not functional apps.
 - **Animation and motion prototyping:** Figma, ProtoPie, or Framer. Stitch output is static.
 
@@ -171,28 +170,28 @@ Export paths are functional, not decorative. Flutter code compiles without manua
 
 | Plan | Price | Limits |
 |---|---|---|
-| Google Labs (current) | Free | 350 Standard generations/mo (Gemini 2.5 Flash), 200 Pro generations/mo (Gemini 2.5 Pro), Figma and code exports |
-| Paid tiers | Expected Q4 2026 | Not announced. Analysts expect a free floor plus paid plans priced below Figma. |
+| Google Labs (current) | Free | Public Google pages do not publish durable quota, SLA, billing, or paid-tier timing terms |
+| Paid tiers | Not announced | Wait for Google-published commercial terms before budget planning |
 
-*Verified 2026-05-13 via [Google Stitch](https://stitch.withgoogle.com/) and the [Google Labs announcement](https://blog.google/technology/ai/google-stitch-ai-ui-design/). All pricing caveated to the Labs window. Pricing competition tightened in April 2026 when [Anthropic launched Claude Design](/news/2026-04-17-anthropic-launches-claude-design/), a prompt-to-prototype tool bundled with Claude Pro+ that pushed Figma stock down ~7% on the day.*
+*Verified 2026-06-02 via [Google Stitch](https://stitch.withgoogle.com/) and the [Google Labs announcement](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/). Third-party quota and paid-tier claims are intentionally not treated as Google-published procurement facts.*
 
 ## Against the alternatives
 
 | | Google Stitch | Figma | Claude Design | Lovable | v0 by Vercel |
 |---|---|---|---|---|---|
 | **Input mode** | Text prompt | Click to draw | Text prompt + codebase context | Text prompt to app | Text prompt to React |
-| **Design system** | Material 3 | Any (user-built) | Auto-extracts from your codebase | Any | React + Tailwind defaults |
-| **Output** | UI mockup, Figma, Flutter, HTML | Editable design file | Slide decks, mockups, one-pagers, pitch decks | Full web app | React components |
+| **Design system** | Experimental canvas and DESIGN.md context | Any (user-built) | Auto-extracts from your codebase | Any | React + Tailwind defaults |
+| **Output** | UI directions, prototypes, DESIGN.md/MCP/SDK/export handoff | Editable design file | Slide decks, mockups, one-pagers, pitch decks | Full web app | React components |
 | **Pixel control** | Limited | **Full** | Limited | Limited | Limited |
-| **Code export** | Flutter, HTML/CSS | Dev Mode only | Hands off to Claude Code for build | Full app | React/Next.js |
+| **Code export** | Developer-tool handoff and exports | Dev Mode only | Hands off to Claude Code for build | Full app | React/Next.js |
 | **Collaboration** | Basic | **Industry standard** | Pro+ accounts | Basic | GitHub-native |
 | **Best viewed as** | Prompt-to-prototype | Design-system home | Prompt-to-pitch on your brand | Prompt-to-app | Prompt-to-React |
 
 ## Failure modes
 
-- **Material 3 lock-in.** Brand systems that are not Material will fight the defaults. Customization is limited.
+- **Labs volatility.** Access, quotas, export paths, and data terms can change. Re-check the live product before using Stitch for client or enterprise work.
 - **Pixel control is weak.** No auto-layout equivalent, no component variants, no design tokens in the Figma sense. Mockup, not production.
-- **iOS fidelity trails Android.** Human Interface Guidelines output is thinner than Material coverage.
+- **Production-system fidelity is still unproven.** High-fidelity output can be useful, but mature brand systems and component variants still need design-team ownership.
 - **No motion or animation.** Static outputs only. Interactions have to be built elsewhere.
 - **Labs status means no SLA.** Google Labs products can shut down, pivot, or add paid gates with short notice.
 - **Complex prompts need iteration.** Highly specific interactions still require multiple rounds of refinement.
@@ -201,23 +200,23 @@ Export paths are functional, not decorative. Flutter code compiles without manua
 
 ## Recent changes
 
-- **2026-05-13:** Carry-over confirmed inside Google Labs. Standard mode (350 generations/mo) remains on Gemini 2.5 Flash and Pro mode (200 generations/mo) on Gemini 2.5 Pro. Paid-tier timing still tracking toward Q4 2026.
-- **2026-04-17:** Competition tightened when [Anthropic launched Claude Design](/news/2026-04-17-anthropic-launches-claude-design/), a Pro+ prompt-to-prototype product that hands off to Claude Code for build. Stitch keeps an edge on pure Material 3 UI exploration; Claude Design pulls ahead when the brief is a slide deck, one-pager, or codebase-aware mockup.
+- **2026-06-02:** Public Google surfaces reconfirm Stitch as a free Labs product and March 2026 AI-native design canvas. Removed third-party quota and Q4 paid-tier predictions from AiPedia's durable buyer facts until Google publishes commercial terms.
+- **2026-04-17:** Competition tightened when [Anthropic launched Claude Design](/news/2026-04-17-anthropic-launches-claude-design/), a Pro+ prompt-to-prototype product that hands off to Claude Code for build. Stitch keeps an edge on Google's AI-native design-canvas direction; Claude Design pulls ahead when the brief is a slide deck, one-pager, or codebase-aware mockup.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis shown. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [stitch.withgoogle.com](https://stitch.withgoogle.com/) and the [Google Labs announcement](https://blog.google/technology/ai/google-stitch-ai-ui-design/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis shown. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-02 against [stitch.withgoogle.com](https://stitch.withgoogle.com/) and the [Google Labs announcement](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/).
 
 ## FAQ
 
 **Is Google Stitch free?**
-Yes, while it remains in Google Labs. Current limits are 350 Standard generations and 200 Pro generations per month. Paid tiers are expected when Stitch exits Labs, projected Q4 2026.
+Yes, while it remains in Google Labs on the public surface. Google does not publish a durable public quota, SLA, billing table, or paid-tier schedule, so check the live account screen before using it in a paid workflow.
 
 **Where is Google Stitch hosted?**
 [stitch.withgoogle.com](https://stitch.withgoogle.com/). The stitch.google.com URL is not the official home during the Labs phase.
 
 **Can Stitch export real code?**
-Yes. Flutter export produces code that typically compiles without manual cleanup. HTML/CSS and design tokens are also available. Figma import/export preserves editable layers.
+It can hand off designs into developer workflows. Google describes DESIGN.md, an MCP server, SDK, Skills, and exports to tools like AI Studio and Antigravity. Treat the result as scaffolding to review, not production code to ship without inspection.
 
 **Stitch vs Figma in 2026?**
 Stitch is a prompt-to-prototype accelerator. Figma is the production design system home. Different jobs. Teams often use Stitch for the first draft and move to Figma for handoff.
@@ -230,9 +229,8 @@ Gemini-powered prompt handling is reliable for layout, theme, and component-leve
 
 ## Sources
 
-- [Google Stitch official site](https://stitch.withgoogle.com/): product demos, generation limits, sign-up
-- [Google Labs announcement](https://blog.google/technology/ai/google-stitch-ai-ui-design/): launch context and feature overview
-- [Google Stitch pricing coverage (NxCode)](https://www.nxcode.io/resources/news/google-stitch-pricing-plans-complete-guide-2026): generation caps, Labs status, expected paid-tier timing
+- [Google Stitch official site](https://stitch.withgoogle.com/): current Labs product surface and sign-up
+- [Google Labs Stitch announcement](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/): March 2026 canvas, design agent, DESIGN.md, MCP, SDK, voice, prototype, and export details
 
 ## Related
 

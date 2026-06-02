@@ -5,7 +5,7 @@ title: AI Automation & Agents
 description: Current workflow automation, AI agent platforms, meeting automation, call automation, and operations tools for technical teams, non-technical operators, GTM workflows, customer success, support, sales, and internal automation.
 tool_count: 25
 seo_title: "Best AI Automation Tools & Agent Platforms (June 2026)"
-meta_description: "Updated June 2, 2026: compare n8n, Zapier, Make, Gumloop, Relevance AI, Activepieces, AG2, CrewAI, Dust, Dext, Browserbase, Ada, Apollo, Amplemarket, Lindy, Manus, Pipedream, CloudTalk, and MeetGeek by workflow, pricing unit, and risk."
+meta_description: "Updated June 2, 2026: compare n8n, Zapier, Make, Gumloop, Relevance AI, Activepieces, AG2, CrewAI, Dust, Glean, Goose, Genspark, GetResponse, Dext, Browserbase, Ada, Apollo, Amplemarket, Lindy, Manus, Pipedream, CloudTalk, and MeetGeek by workflow, pricing unit, and risk."
 author: "aipedia.wiki Editorial"
 last_updated: 2026-06-02
 last_verified: 2026-06-02
@@ -52,6 +52,14 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 
 **Use [Dust](/tools/dust/) when teams want internal AI agents over company knowledge and actions.** Dust Pro remains 29 EUR/user/month as of June 2, and Enterprise stays custom from 100 members. It is strongest when connected data sources, Slack/Zendesk/API surfaces, and permissioned agents replace repeated internal questions.
 
+**Use [Glean](/tools/glean/) when automation starts with permission-aware work search and company knowledge.** Glean's June 2 source check keeps it in the enterprise Work AI lane: agents, Assistant, Search, MCP, Claude Code/Cursor plugins, and setup paths for Codex, Goose, Gemini CLI, VS Code, Windsurf, JetBrains, and related developer surfaces. Pricing remains sales-led.
+
+**Use [Goose](/tools/goose/) when the buyer wants an open-source BYOK agent that can automate local tasks.** The June 2 check confirms the active repository now resolves to `aaif-goose/goose`, with Apache-2.0 licensing and no Goose subscription fee. The cost and risk are model usage, local permissions, extensions, and secrets hygiene.
+
+**Use [Genspark](/tools/genspark/) when automation should produce research deliverables, calls, docs, slides, sheets, design, and media inside one AI workspace.** Plus is $24.99/month for 10,000 credits and Pro is $249.99/month for 125,000 credits on the current membership page, so credit modeling matters before high-volume team use.
+
+**Use [GetResponse](/tools/getresponse/) when automation is email marketing, webinars, course funnels, and ecommerce nurture.** The June 2 check keeps Starter $19/month, Marketer $59/month, Creator $69/month, Enterprise custom, unlimited monthly email sends, and a 14-day free trial. It is a marketing automation tool, not a general agent platform.
+
 **Use [Dext](/tools/dext/) when automation starts with bookkeeping document intake.** It is vertical pre-accounting automation for receipts, invoices, statements, expenses, and accounting handoff, not a general agent platform. Pricing still scales by users and document volume, with the 5-user/250-document baseline rechecked on June 2.
 
 **Use [Eightfold AI](/tools/eightfold-ai/) when automation starts with enterprise talent decisions.** Eightfold is not a simple recruiter productivity tool; the June 2 refresh keeps TalentForge, AI Interviewer/360 Interview, AI Interview Companion, Workforce Readiness, talent acquisition, talent management, workforce exchange, resource management, and workforce planning in one skills-intelligence procurement lane.
@@ -86,6 +94,10 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 | Enrichment and GTM research workflows | [Clay](/tools/clay/) | Waterfalls data providers, research agents, and account enrichment before sending | Credits, action counts, and annual-vs-monthly pricing need direct plan math |
 | AI work management | [ClickUp](/tools/clickup/) | Tasks, docs, automation, Brain, and Everything AI inside one workspace | Easy to overbuy AI add-ons if the team has not standardized ClickUp usage |
 | Internal team AI agents | [Dust](/tools/dust/) | Custom agents over company data and tools, Slack/Zendesk/API surfaces, model choice | Value depends on source hygiene, permissions, and repeated team workflows |
+| Enterprise knowledge agents | [Glean](/tools/glean/) | Permission-aware work search, agents, MCP, and developer-tool integrations over company data | Contact-sales pricing, connectors, and security review drive procurement |
+| Open-source local/BYOK agent | [Goose](/tools/goose/) | Apache-2.0 desktop/CLI/API agent with provider choice and MCP extensions | Local permissions, model costs, and extension trust need controls |
+| AI workspace deliverable automation | [Genspark](/tools/genspark/) | Super Agent plus docs, slides, sheets, media, meetings, calls, and AI Drive | Credit burn and enterprise/API availability need direct verification |
+| Email/webinar/course marketing automation | [GetResponse](/tools/getresponse/) | Email sends, funnels, webinars, course creator, ecommerce and marketing automation | Not a general ops agent; affiliate status does not affect ranking |
 | Bookkeeping document automation | [Dext](/tools/dext/) | Receipts, invoices, expenses, bank/supplier statements, approvals, and accounting handoff | Not a ledger, payroll, tax, or general automation platform |
 | Enterprise talent intelligence | [Eightfold AI](/tools/eightfold-ai/) | Skills-based hiring, internal mobility, TalentForge, AI Interviewer, Workforce Readiness, and workforce planning | Requires HR data readiness, governance, implementation scope, and change management |
 | Phone-heavy sales/support operations | [CloudTalk](/tools/cloudtalk/) | Business calling, routing, dialers, CRM sync, AI Conversation Intelligence, and AI Voice Agents in one platform | More than teams need if the job is internal-only calling or pure chat support |
@@ -146,6 +158,12 @@ Do not leave this category stale. Automation tools are adding MCP, agent builder
 - [CrewAI releases](https://github.com/crewAIInc/crewAI/releases) (verified 2026-06-02)
 - [CrewAI pricing](https://crewai.com/pricing) (verified 2026-06-02)
 - [Dust pricing](https://dust.tt/home/pricing) (verified 2026-06-02)
+- [Glean official site](https://www.glean.com/) (verified 2026-06-02)
+- [Glean developer platform](https://developers.glean.com/) (verified 2026-06-02)
+- [Goose GitHub repository](https://github.com/aaif-goose/goose) (verified 2026-06-02)
+- [Goose documentation](https://block.github.io/goose/) (verified 2026-06-02)
+- [Genspark membership benefits](https://www.genspark.ai/membership-benefits-lp) (verified 2026-06-02)
+- [GetResponse pricing](https://www.getresponse.com/pricing) (verified 2026-06-02)
 - [Dext business plans](https://help.dext.com/en/articles/647776-dext-plans-for-businesses) (verified 2026-06-02)
 - [Eightfold Talent Acquisition](https://eightfold.ai/products/talent-acquisition/) (verified 2026-06-02)
 - [Eightfold products](https://eightfold.ai/products/) (verified 2026-06-02)

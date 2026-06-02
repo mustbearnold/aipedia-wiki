@@ -5,7 +5,7 @@ title: AI Chatbots & LLMs
 description: General-purpose AI assistants and large language model chatbots for writing, research, coding help, analysis, multimodal work, and everyday decision support.
 tool_count: 14
 seo_title: "Best AI Chatbots & LLMs (June 2026), aipedia.wiki"
-meta_description: "Compare the best AI chatbots and LLMs in June 2026: ChatGPT (GPT-5.5), Claude Opus 4.8, Gemini 3.1 Pro, Perplexity, Grok, Mistral, Qwen3.7-Max / Qwen Cloud, NotebookLM, and AnythingLLM, with enterprise workspace and self-hosted RAG signals."
+meta_description: "Compare the best AI chatbots and LLMs in June 2026: ChatGPT (GPT-5.5), Claude Opus 4.8, Gemini 3.1 Pro, Perplexity, Grok, Mistral, Qwen3.7-Max / Qwen Cloud, GLM-5.1, NotebookLM, and AnythingLLM, with enterprise workspace and self-hosted RAG signals."
 author: "aipedia.wiki Editorial"
 last_updated: 2026-06-02
 last_verified: 2026-06-02
@@ -18,7 +18,7 @@ AI chatbots are now the default starting point for writing, research, coding hel
 
 The May 31 refresh adds two enterprise workspace signals: MUFG's [ChatGPT Enterprise rollout to roughly 35,000 bank employees](/news/2026-05-30-openai-mufg-chatgpt-enterprise-rollout/) and Microsoft's [redesigned Microsoft 365 Copilot experience](/news/2026-05-31-microsoft-365-copilot-redesign-work-iq/). The lesson is practical. General assistants win inside companies only when training, permission rules, visible context, app placement, and output quality make daily work safer and faster.
 
-For most people, the first paid chatbot to compare is still one of three: [ChatGPT](/tools/chatgpt/) for the broadest all-purpose AI workspace, [Claude](/tools/claude/) for writing, long analysis, and code reasoning, or [Gemini](/tools/gemini/) for Google-native work across Search, Gmail, Docs, Drive, NotebookLM, and Google AI subscription benefits. [Perplexity](/tools/perplexity/) is the better answer engine when every serious claim needs a source trail. [Grok](/tools/grok/) is most useful when X-native real-time context matters. [Mistral AI](/tools/mistral-ai/) matters more for builders and teams that care about model control, European AI infrastructure, APIs, and open-model options. [Qwen](/tools/qwen/) is the Alibaba Cloud lane: hosted Qwen3.7-Max, Qwen Chat testing, Apache 2.0 Qwen3 open weights, and a growing Qwen Cloud / agent-platform push after [Alibaba's first international Qwen Conference](/news/2026-05-27-qwen-conference-agent-cloud-suite/).
+For most people, the first paid chatbot to compare is still one of three: [ChatGPT](/tools/chatgpt/) for the broadest all-purpose AI workspace, [Claude](/tools/claude/) for writing, long analysis, and code reasoning, or [Gemini](/tools/gemini/) for Google-native work across Search, Gmail, Docs, Drive, NotebookLM, and Google AI subscription benefits. [Perplexity](/tools/perplexity/) is the better answer engine when every serious claim needs a source trail. [Grok](/tools/grok/) is most useful when X-native real-time context matters. [Mistral AI](/tools/mistral-ai/) matters more for builders and teams that care about model control, European AI infrastructure, APIs, and open-model options. [Qwen](/tools/qwen/) is the Alibaba Cloud lane: hosted Qwen3.7-Max, Qwen Chat testing, Apache 2.0 Qwen3 open weights, and a growing Qwen Cloud / agent-platform push after [Alibaba's first international Qwen Conference](/news/2026-05-27-qwen-conference-agent-cloud-suite/). [GLM](/tools/glm/) is the Z.AI lane for teams evaluating GLM-5.1's 200K context, 128K maximum output, OpenAI-compatible API examples, MCP/tool support, MIT Hugging Face weights, and $1.40/M input plus $4.40/M output API pricing.
 
 For document chat and private RAG, [AnythingLLM](/tools/anythingllm/) is the practical self-hosted app lane. The June 1 check keeps the MIT self-host path free, confirms cloud Basic at $50/month and Pro at $99/month, and keeps the recommendation model-agnostic: quality depends on the hosted or local LLM you connect.
 
@@ -39,6 +39,7 @@ The wrong move is paying for three overlapping chatbots without a job for each o
 | **[Grok](/tools/grok/)** | X-native real-time context, creator/news/social signal monitoring | Useful for fast social context, but important claims still need primary-source verification. |
 | **[Mistral AI](/tools/mistral-ai/)** | Model-control workflows, European AI infrastructure, APIs, open-model strategy | Best for builders and organizations that care about deployment and vendor-control choices. |
 | **[Qwen](/tools/qwen/)** | Alibaba Cloud, open-weight Qwen3, hosted Qwen3.7-Max, multilingual model control | Best for builders who want Qwen Cloud APIs or self-hostable Apache 2.0 Qwen3 checkpoints, not a polished consumer workspace. |
+| **[GLM](/tools/glm/)** | Z.AI GLM-5.1, open MIT weights, long-context agentic coding/model evaluation | Best for teams testing Chinese frontier/open-weight model options, not a polished English consumer chatbot. |
 | **[DeepSeek](/tools/deepseek/)** | Low-cost API reasoning, open-weight baseline, China-origin model testing | Best when cost and self-hosting experiments matter more than Western enterprise procurement. Recheck endpoint names and token rates before production. |
 | **[Doubao](/tools/doubao/)** | China-first ByteDance assistant and Volcengine model/API evaluation | Best for Chinese-language consumer and Asia cloud evaluation, not Western regulated data residency or primary English chat. |
 | **[Fireworks AI](/tools/fireworks-ai/)** | Hosted inference, batch jobs, dedicated GPUs, and fine-tuning | Best when the buyer needs model APIs and deployment controls rather than a consumer chat UI. |
@@ -54,6 +55,7 @@ The wrong move is paying for three overlapping chatbots without a job for each o
 - **Best for X-native context:** [Grok](/tools/grok/) when live social discourse is actually part of the job.
 - **Best for model-control strategy:** [Mistral AI](/tools/mistral-ai/) for developers and teams evaluating APIs, European infrastructure, and open-model options.
 - **Best Alibaba/open-weight lane:** [Qwen](/tools/qwen/) when hosted Qwen3.7-Max, Qwen Cloud pricing, multilingual coverage, or self-hosted Qwen3 checkpoints matter.
+- **Best GLM-family evaluation lane:** [GLM](/tools/glm/) when Z.AI API access, GLM-5.1 open weights, long context, and coding-agent benchmarks are the purchase reason.
 - **Best self-hosted RAG app:** [AnythingLLM](/tools/anythingllm/) when document chat, local/private deployment, and bring-your-own-model flexibility matter more than polished consumer-chat features.
 
 ## Choosing the Right Chatbot
@@ -71,6 +73,8 @@ The wrong move is paying for three overlapping chatbots without a job for each o
 **Use Mistral AI if:** you are evaluating model choice, data posture, API strategy, European AI infrastructure, or open-model options rather than only a consumer chatbot.
 
 **Use Qwen if:** Alibaba Cloud integration, Qwen Cloud hosted inference, Qwen3.7-Max testing, multilingual products, or Apache 2.0 Qwen3 open-weight deployment are the purchase reason.
+
+**Use GLM if:** Z.AI GLM-5.1, MIT-licensed open weights, 200K context, 128K maximum output, OpenAI-compatible API examples, MCP/tool support, and agentic coding evaluation are the purchase reason.
 
 **Use DeepSeek if:** API cost, open-weight baselines, or China-origin model benchmarking are more important than polished consumer UX and Western enterprise controls.
 
@@ -131,6 +135,9 @@ Do not subscribe to multiple chatbots because each one has a new model announcem
 - [Alibaba Cloud Qwen Conference coverage](https://www.eqs-news.com/news/corporate/alibaba-cloud-unveils-advanced-agentic-ai-ecosystem-for-global-customers/a191d39b-db45-48ed-b194-9cce5071b556_en) (verified 2026-05-27)
 - [Qwen3.7-Max model page](https://www.qwencloud.com/models/qwen3.7-max) (verified 2026-05-24)
 - [Qwen3 official blog](https://qwenlm.github.io/blog/qwen3/) (verified 2026-05-24)
+- [Z.AI GLM-5.1 docs](https://docs.z.ai/guides/llm/glm-5.1) (verified 2026-06-02)
+- [Z.AI pricing](https://docs.z.ai/guides/overview/pricing) (verified 2026-06-02)
+- [GLM-5.1 on Hugging Face](https://huggingface.co/zai-org/GLM-5.1) (verified 2026-06-02)
 - [DeepSeek API pricing](https://api-docs.deepseek.com/quick_start/pricing) (verified 2026-06-02)
 - [Doubao](https://www.doubao.com/) (verified 2026-06-02)
 - [Volcengine Doubao product](https://www.volcengine.com/product/doubao) (verified 2026-06-02)

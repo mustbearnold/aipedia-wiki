@@ -18,7 +18,7 @@ AI research tools split into four buyer lanes now: **literature review**, **acad
 
 As of June 2, 2026, **[Elicit](/tools/elicit/)** is AiPedia's best research-workflow pick because it is built around paper discovery, screening, extraction, and evidence tables; its Basic, Plus, Pro, Scale, and Enterprise ladder still needs billing-cadence verification at purchase time because research-team packaging can move quickly. **[Semantic Scholar](/tools/semantic-scholar/)** is the free academic-search baseline. **[Scite](/tools/scite/)** is the specialist pick when citation context matters. **[NotebookLM](/tools/notebooklm/)** is best when answers must stay grounded in a chosen source library. **[Perplexity](/tools/perplexity/)** is the best cited-web add-on for current sources, documentation, policy, market, and company research. **[Consensus](/tools/consensus/)** and **[Connected Papers](/tools/connected-papers/)** were rechecked for this refresh; **[ChatPDF](/tools/chatpdf/)** remains the quick PDF-chat route, with exact Plus pricing treated as in-app until verified from the public surface.
 
-For budget-conscious research teams running their own pipelines, [Reka Edge 7B](/tools/reka/) is now publicly priced at $0.10 per million input tokens and $0.10 per million output tokens, making it a low-cost extraction or summarization layer to evaluate alongside Elicit's structured workflow.
+For budget-conscious research teams running their own pipelines, [Reka Edge 7B](/tools/reka/) is now publicly priced at $0.10 per million input tokens and $0.10 per million output tokens, making it a low-cost extraction or summarization layer to evaluate alongside Elicit's structured workflow. Teams evaluating open-weight, long-context extraction or agentic coding around research corpora can also shortlist [GLM](/tools/glm/): GLM-5.1 has MIT Hugging Face weights, 200K context, 128K maximum output, and public Z.AI API pricing, but it is model infrastructure rather than a literature-review workflow.
 
 The May 31 update adds an important caveat for high-stakes science. OpenAI's [Rosalind Biodefense expansion](/news/2026-05-31-openai-rosalind-biodefense-trusted-access/) shows that specialist research models can be powerful but gated. GPT-Rosalind is not a general research subscription; it is a trusted-access life-sciences model program for qualified teams and public-health or biodefense workflows. Treat that as a separate procurement lane from everyday literature review.
 
@@ -76,5 +76,8 @@ Do not cite generated text. Cite the original source. Do not treat a linked sour
 - [ChatPDF](https://www.chatpdf.com/) - verified 2026-06-02.
 - [ChatPDF backend API docs](https://www.chatpdf.com/docs/api/backend) - verified 2026-06-02.
 - [Reka Edge 7B pricing](https://www.reka.ai/pricing) - verified 2026-05-13.
+- [Z.AI GLM-5.1 docs](https://docs.z.ai/guides/llm/glm-5.1) - verified 2026-06-02.
+- [Z.AI pricing](https://docs.z.ai/guides/overview/pricing) - verified 2026-06-02.
+- [GLM-5.1 on Hugging Face](https://huggingface.co/zai-org/GLM-5.1) - verified 2026-06-02.
 - [OpenAI GPT-Rosalind for life sciences research](https://openai.com/index/introducing-gpt-rosalind/) - verified 2026-05-31.
 - [OpenAI Rosalind Biodefense trusted-access expansion](https://openai.com/index/strengthening-societal-resilience-with-rosalind-biodefense/) - verified 2026-05-31.

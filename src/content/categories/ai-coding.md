@@ -5,10 +5,10 @@ title: AI Coding Assistants
 description: Current AI coding assistants, AI-native IDEs, terminal coding agents, PR agents, and app builders for developers, founders, teams, and non-developers.
 tool_count: 30
 seo_title: "Best AI Coding Tools & Copilot Alternatives (June 2026)"
-meta_description: "Updated June 1, 2026: compare Cursor, Claude Code, GitHub Copilot, Windsurf/Codeium, Trae, Codex, Replit Agent, Devin, Aider, Cline, Continue, CodeRabbit, Cody, Amazon Q Developer, and Augment by workflow, pricing, autonomy, and team fit."
+meta_description: "Updated June 2, 2026: compare Cursor, Claude Code, GitHub Copilot, Windsurf/Codeium, Trae, Codex, Goose, GLM, Glean, Replit Agent, Devin, Aider, Cline, Continue, CodeRabbit, Cody, Amazon Q Developer, and Augment by workflow, pricing, autonomy, and team fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-01
-last_verified: 2026-06-01
+last_updated: 2026-06-02
+last_verified: 2026-06-02
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -36,7 +36,13 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 
 **Use [Codex](/tools/codex/) when the team wants OpenAI-native agent coding.** It fits local repo work, PR preparation, checks, and tasks where an agent can edit and verify code rather than only suggest completions.
 
-**June 1 maintenance note:** the open-source/BYOK and PR-agent layer has been refreshed for Aider, Cline, Continue, CodeRabbit, Devin, Amazon Q Developer, Augment Code, Sourcegraph Cody, and the Codeium-to-Windsurf migration path. The browser builders, specialist runtimes, autocomplete, privacy-first, and secondary AI IDE layer has also been rechecked for Factory, JetBrains AI, Kiro, Mastra, OpenHands, Pieces, Qodo, Replit Agent, Same.dev, Supermaven, Tabnine, Val Town, Windsurf, and Zed. A later June 1 pass also rechecked Base44, Bolt.new, and Browserbase where app-building and agent-browser infrastructure overlap coding. The decision rule did not change: use Cursor, GitHub Copilot, or Claude Code as first stops; use Replit/Same/Bolt/Lovable/Base44 when the buyer wants browser app-building; use Browserbase when the coding problem is reliable cloud-browser execution for agents; use Val Town/OpenHands/Mastra for developer-specific runtime or framework jobs; use Tabnine/Supermaven/Zed/Windsurf when privacy, autocomplete latency, native editor speed, or IDE workflow matters more than defaulting to Cursor.
+**Use [Goose](/tools/goose/) when the buyer wants an open-source local/BYOK agent that crosses coding and general automation.** The active repository now resolves to `aaif-goose/goose`, Goose itself is Apache-2.0/free, and the real cost is the configured LLM plus local permission/security controls.
+
+**Use [GLM](/tools/glm/) when the coding question is model backend evaluation.** Z.AI's GLM-5.1 docs list 200K context, 128K maximum output, OpenAI-compatible API examples, MCP/tool support, and MIT Hugging Face weights, with public API pricing at $1.40/M input and $4.40/M output.
+
+**Use [Glean](/tools/glean/) when coding agents need permission-aware company knowledge.** Glean's developer platform now exposes MCP and setup paths for Claude Code, Codex, Goose, Cursor, Gemini CLI, VS Code, Windsurf, JetBrains, and other developer surfaces, so it belongs in the enterprise-codebase-context lane rather than the autocomplete lane.
+
+**June 2 maintenance note:** the open-source/BYOK and PR-agent layer has been refreshed for Aider, Cline, Continue, CodeRabbit, Devin, Amazon Q Developer, Augment Code, Sourcegraph Cody, and the Codeium-to-Windsurf migration path. The browser builders, specialist runtimes, autocomplete, privacy-first, and secondary AI IDE layer has also been rechecked for Factory, JetBrains AI, Kiro, Mastra, OpenHands, Pieces, Qodo, Replit Agent, Same.dev, Supermaven, Tabnine, Val Town, Windsurf, and Zed. A June 2 pass adds Goose, GLM-5.1, and Glean developer integrations as adjacent coding-agent infrastructure. The decision rule did not change: use Cursor, GitHub Copilot, or Claude Code as first stops; use Replit/Same/Bolt/Lovable/Base44 when the buyer wants browser app-building; use Browserbase when the coding problem is reliable cloud-browser execution for agents; use Val Town/OpenHands/Mastra for developer-specific runtime or framework jobs; use Tabnine/Supermaven/Zed/Windsurf when privacy, autocomplete latency, native editor speed, or IDE workflow matters more than defaulting to Cursor.
 
 ## Buyer Paths
 
@@ -48,6 +54,9 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 | Value AI IDE alternative | [Windsurf](/tools/windsurf/) | Worth testing against Cursor when credits and team cost matter | Credit systems are not as simple as monthly sticker price |
 | Lowest-cost multi-model IDE experiment | [Trae](/tools/trae/) | Lite at $3 and Pro at $10 undercut most AI IDE plans while preserving a VS Code-like workflow | ByteDance-adjacent telemetry/procurement risk and token allowances need review before serious repo work |
 | OpenAI-native coding agent | [Codex](/tools/codex/) | Good for local repo tasks, PR-style work, and OpenAI-aligned teams | Not a pure inline autocomplete replacement |
+| Open-source local/BYOK agent | [Goose](/tools/goose/) | Desktop, CLI, and API agent with model choice, MCP extensions, and Apache-2.0 code | Needs provider-cost controls, secrets hygiene, and local-permission review |
+| Coding model backend evaluation | [GLM](/tools/glm/) | GLM-5.1 open weights, OpenAI-compatible API examples, MCP/tool support, and long context | Verify endpoint behavior, region, compliance, and output-heavy costs |
+| Enterprise code/context search | [Glean](/tools/glean/) | Permission-aware work search and MCP/IDE integrations for developer tools | Sales-led pricing and connector/security review are required |
 | Browser app building for non-devs | [Replit Agent](/tools/replit-agent/) | Useful when the buyer wants build/run/deploy in a browser | Generated apps still need review, security, and maintenance |
 | Open-source CLI/BYOK coding | [Aider](/tools/aider/) | Strong for developers who want local control and model choice | Requires comfort with terminal workflows and API cost management |
 
@@ -141,3 +150,9 @@ Do not publish stale model-version claims. Coding tools route models and change 
 - [Zed pricing](https://zed.dev/pricing) (verified 2026-06-01)
 - [Trae pricing](https://www.trae.ai/pricing) (verified 2026-05-24)
 - [Gemini Code Assist](https://cloud.google.com/products/gemini/code-assist) (verified 2026-05-13)
+- [Goose GitHub repository](https://github.com/aaif-goose/goose) (verified 2026-06-02)
+- [Goose documentation](https://block.github.io/goose/) (verified 2026-06-02)
+- [Z.AI GLM-5.1 docs](https://docs.z.ai/guides/llm/glm-5.1) (verified 2026-06-02)
+- [Z.AI pricing](https://docs.z.ai/guides/overview/pricing) (verified 2026-06-02)
+- [GLM-5.1 on Hugging Face](https://huggingface.co/zai-org/GLM-5.1) (verified 2026-06-02)
+- [Glean developer platform](https://developers.glean.com/) (verified 2026-06-02)

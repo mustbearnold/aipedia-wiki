@@ -5,7 +5,7 @@ title: AI Design & App Building
 description: Current AI design tools and app builders for social creative, product design, design systems, web prototypes, full-stack apps, and Vercel-native UI workflows.
 tool_count: 9
 seo_title: "Best AI Design & App Builder Tools (June 2026)"
-meta_description: "Updated June 2, 2026: compare Canva AI, Figma, Midjourney, Adobe Firefly, Recraft V4, Google Stitch, Lovable, Base44, Bolt.new, and v0 by buyer fit, pricing, workflow, and production risk."
+meta_description: "Updated June 2, 2026: compare Canva AI, Figma, Midjourney, Adobe Firefly, Recraft V4, Google Stitch, Framer, Lovable, Base44, Bolt.new, and v0 by buyer fit, pricing, workflow, and production risk."
 author: "aipedia.wiki Editorial"
 last_updated: 2026-06-02
 last_verified: 2026-06-02
@@ -46,6 +46,8 @@ As of June 2, 2026, start with the job:
 
 **Use [Google Stitch](/tools/google-stitch/) as an experimental vibe-design canvas, not a procurement-safe design system yet.** Google's March 2026 Stitch update describes an AI-native software design canvas with natural-language UI creation, an infinite canvas, design agents, voice interaction, interactive prototypes, DESIGN.md, MCP, SDK, and developer-tool exports. Treat access, quotas, and production fit as moving Google Labs facts that should be verified in the product before a team depends on them.
 
+**Use [Framer AI](/tools/framer-ai/) when the job is a marketing site, landing page, portfolio, or polished web presence rather than a full app.** Framer's June 2 pricing check keeps Free, Basic at $10/month annual, Pro at $30/month annual, Scale at $100/month annual, and Enterprise custom. The important buyer split is website publishing and CMS limits, not app backend generation.
+
 ## Buyer Paths
 
 | Buyer job | Start with | Why | Watch out |
@@ -59,6 +61,7 @@ As of June 2, 2026, start with the job:
 | Vercel-native app or UI workflow | [v0](/tools/v0/) | Strong web artifact loop: prompt, files, Figma, design mode, GitHub, deploys, PRs | Credit/token usage and generated code quality can surprise teams |
 | Browser-based app prototyping | [Bolt.new](/tools/bolt/) | Runs app-building work in the browser with generous free token limits | Larger projects use more tokens because file-system context is part of prompts |
 | Experimental AI-native design canvas | [Google Stitch](/tools/google-stitch/) | Best place to test Google's vibe-design direction and voice/canvas workflow | Labs product: verify access, quotas, export path, and enterprise fit before relying on it |
+| AI-assisted marketing site design | [Framer AI](/tools/framer-ai/) | Strong for fast sites, CMS-backed pages, AEO scanning, and designer-friendly publishing | Not a full-stack app builder; page, CMS, and bandwidth limits matter |
 
 ## Current Shortlist
 
@@ -104,6 +107,8 @@ Adobe Firefly pricing is plan and credit based. Its official plans page separate
 
 Google Stitch's official March 2026 announcement is product-focused, not a durable pricing table. Treat its access and quotas as volatile until Google publishes stable commercial terms.
 
+Framer is site-plan based. The June 2 public pricing check lists Free, Basic, Pro, Scale, and Enterprise, with Basic at $10/month annual, Pro at $30/month annual, and Scale at $100/month annual. Verify page, CMS collection, CMS item, bandwidth, and collaboration needs before moving a client site.
+
 ## What Hurts Trust
 
 Do not call every app builder a design tool. Lovable, Bolt, and v0 can generate interfaces, but the purchase question is app-building scope, code ownership, deployment, backend, and review workflow.
@@ -146,7 +151,9 @@ Do not make a wide table the only mobile experience. Mobile buyers need top pick
 - [Create and edit a Figma Make file](https://help.figma.com/hc/en-us/articles/31304485164695-Create-and-edit-a-Figma-Make-file) (verified 2026-06-02)
 - [Midjourney plans](https://docs.midjourney.com/docs/plans) (verified 2026-05-13)
 - [Adobe Firefly plans](https://www.adobe.com/products/firefly/plans) (verified 2026-05-13)
-- [Google Stitch announcement](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/) (verified 2026-05-13)
+- [Google Stitch official site](https://stitch.withgoogle.com/) (verified 2026-06-02)
+- [Google Stitch announcement](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/) (verified 2026-06-02)
+- [Framer pricing](https://www.framer.com/pricing) (verified 2026-06-02)
 - [Lovable pricing](https://lovable.dev/pricing) (verified 2026-05-13)
 - [Base44 pricing](https://base44.com/pricing) (verified 2026-06-01)
 - [Bolt.new pricing](https://bolt.new/pricing) (verified 2026-06-01)

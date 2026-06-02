@@ -8,11 +8,11 @@ category: ai-automation
 company: getresponse
 url: 'https://www.getresponse.com'
 pricing_model: paid
-price_range: $15-$69/month
+price_range: $19-$69/month+
 status: active
 launched: 1998-09
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-02
+last_verified: 2026-06-02
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -36,7 +36,7 @@ facts:
     source: https://www.getresponse.com/
     source_label: GetResponse official site
     source_id: getresponse-official
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -46,7 +46,7 @@ facts:
     source: https://www.getresponse.com/pricing
     source_label: GetResponse pricing
     source_id: getresponse-pricing
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -55,7 +55,7 @@ facts:
     source: https://www.getresponse.com/
     source_label: GetResponse official site
     source_id: getresponse-official
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -65,7 +65,7 @@ facts:
     source: https://www.getresponse.com/
     source_label: GetResponse official site
     source_id: getresponse-official
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -75,14 +75,14 @@ facts:
     source: https://www.getresponse.com/pricing
     source_label: GetResponse pricing
     source_id: getresponse-pricing
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
 tags: [email-marketing, marketing-automation, landing-pages, webinars, ecommerce, course-creator, ai-email, newsletter]
-seo_title: 'GetResponse: Features, Pricing & Review (May 2026)'
+seo_title: 'GetResponse: Features, Pricing & Review (June 2026)'
 meta_description: >-
-  GetResponse is the 25+ year all-in-one marketing platform with email marketing, automation, landing pages, webinars, ecommerce, and a built-in course creator. Starter $19/mo ($15.58 annual), Marketer $59, Creator $69, Enterprise custom. 40-60% recurring affiliate.
+  GetResponse is the 25+ year all-in-one marketing platform with email marketing, automation, landing pages, webinars, ecommerce, and a built-in course creator. Starter $19/mo ($15.58 annual), Marketer $59, Creator $69, Enterprise custom. 14-day trial; affiliate application declined.
 author: "aipedia.wiki Editorial"
 best_for:
   - solopreneurs building newsletters plus course sales
@@ -124,7 +124,7 @@ price_history:
 
 GetResponse is the 25+ year all-in-one email marketing and automation platform. What started as a single-feature email marketing tool in 1998 is now a full stack: email marketing, autoresponders, landing pages, marketing automation workflows, webinars, ecommerce tools, a website builder, and a course creator with up to 40,000 students on Enterprise.
 
-The May 2026 pricing ladder runs Starter $19/mo, Marketer $59/mo, Creator $69/mo (Most Popular), and Enterprise custom. All tiers include unlimited monthly email sends. The Creator plan adds webinars and a built-in course creator, making it uniquely positioned for solopreneurs selling digital products via email.
+As verified in June 2026, the pricing ladder runs Starter $19/mo, Marketer $59/mo, Creator $69/mo (Most Popular), and Enterprise custom. All tiers include unlimited monthly email sends. The Creator plan adds webinars and a built-in course creator, making it uniquely positioned for solopreneurs selling digital products via email.
 
 ## System Verdict
 
@@ -152,7 +152,7 @@ The May 2026 pricing ladder runs Starter $19/mo, Marketer $59/mo, Creator $69/mo
 | **Compliance** | GDPR · CAN-SPAM · CASL · transactional email compliant |
 | **Free custom domain** | Included with yearly billing |
 
-Every data point above verified against GetResponse's published sources on 2026-05-13.
+Every data point above verified against GetResponse's published sources on 2026-06-02.
 
 ## What it actually is
 
@@ -199,7 +199,7 @@ Subscription pricing for a 1,000-contact list via [getresponse.com/pricing](http
 
 All tiers include unlimited monthly email sends, unlimited landing pages, 24/7 support, and free custom domain on annual billing. Contact-list pricing scales: a 10,000-contact list runs roughly 2x the 1K price; 100K contacts moves into Enterprise territory.
 
-Prices verified 2026-05-13 via [GetResponse pricing](https://www.getresponse.com/pricing). 18% annual discount across every tier.
+Prices verified 2026-06-02 via [GetResponse pricing](https://www.getresponse.com/pricing). 18% annual discount across every tier.
 
 ## Against the alternatives
 
@@ -227,12 +227,12 @@ Prices verified 2026-05-13 via [GetResponse pricing](https://www.getresponse.com
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [GetResponse pricing](https://www.getresponse.com/pricing) and the [GetResponse homepage](https://www.getresponse.com/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-02 against [GetResponse pricing](https://www.getresponse.com/pricing) and the [GetResponse homepage](https://www.getresponse.com/).
 
 ## FAQ
 
 **Is GetResponse free to use?**
-GetResponse offers a 30-day free trial (no credit card required) but does not have a permanent free tier. The lowest paid entry is Starter at $19/mo ($15.58 annual) for a 1,000-contact list.
+GetResponse offers a 14-day free trial (no credit card required) but does not have a permanent free tier. The lowest paid entry is Starter at $19/mo ($15.58 annual) for a 1,000-contact list.
 
 **How does GetResponse compare to Mailchimp?**
 GetResponse wins when webinars, courses, or marketing automation beyond basics matter. Mailchimp is cheaper for pure email marketing on small lists and has a permanent free tier up to 500 contacts. Serious creators selling digital products typically land on GetResponse; casual email senders stay with Mailchimp.

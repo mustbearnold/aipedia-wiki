@@ -11,8 +11,8 @@ pricing_model: enterprise
 price_range: Custom enterprise pricing
 status: active
 launched: 2019
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-02
+last_verified: 2026-06-02
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -32,7 +32,7 @@ facts:
     source: https://www.glean.com/
     source_label: Glean official site
     source_id: glean-official
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -42,7 +42,7 @@ facts:
     source: https://www.glean.com/pricing
     source_label: Glean pricing surface
     source_id: glean-pricing
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -51,16 +51,17 @@ facts:
     source: https://www.glean.com/
     source_label: Glean official site
     source_id: glean-official
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
   developer_platform:
-    value: The developer platform matters for custom apps, agents, APIs, and integration work beyond out-of-box search.
+    value: The developer platform matters for custom apps, agents, APIs, MCP access, and IDE/coding-agent integrations beyond
+      out-of-box search.
     source: https://developers.glean.com/
     source_label: Glean developer platform
     source_id: glean-developers
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -70,13 +71,13 @@ facts:
     source: https://www.glean.com/
     source_label: Glean official site
     source_id: glean-official
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-02'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
 tags: [enterprise-search, work-ai, agents, connectors, mcp, knowledge-management, rag]
 seo_title: "Glean Review: Enterprise Search, Work AI Agents & Pricing (2026)"
-meta_description: "Glean is an enterprise Work AI platform for permission-aware search, assistant workflows, AI agents, connectors, APIs, and MCP access to company knowledge."
+meta_description: "Glean is an enterprise Work AI platform for permission-aware search, assistant workflows, AI agents, connectors, APIs, and secure MCP access to company knowledge."
 author: aipedia.wiki Editorial
 best_for:
   - large companies with fragmented SaaS knowledge
@@ -115,7 +116,7 @@ Its core bet is simple: enterprise AI is only useful if it can safely retrieve t
 | **Agents** | Agent Builder, orchestration, governance, library |
 | **Graph** | Enterprise Graph, Personal Graph, and system of context |
 | **Connectors** | App connectors, actions, and custom connector support |
-| **Developer access** | APIs, SDKs, MCP endpoint, Claude Code and Cursor plugins |
+| **Developer access** | APIs, SDKs, MCP endpoint, Claude Code/Cursor plugins, and setup paths for Codex, Goose, Gemini CLI, VS Code, Windsurf, and other MCP hosts |
 | **Pricing** | Custom enterprise contract |
 
 ## When to pick Glean
@@ -123,7 +124,7 @@ Its core bet is simple: enterprise AI is only useful if it can safely retrieve t
 - **Knowledge is fragmented.** Glean is built for Slack, Drive, Confluence, Jira, GitHub, Salesforce, ServiceNow, and more.
 - **Permissions matter.** Search and AI answers must respect source-system access controls.
 - **Employees need one answer layer.** Search, assistant, and agents share the same company context.
-- **Developers need company context in AI tools.** Glean's developer platform supports MCP hosts and IDE integrations.
+- **Developers need company context in AI tools.** Glean's developer platform supports an MCP endpoint, official Claude Code and Cursor plugins, and configuration paths for many MCP-compatible hosts.
 - **Governance is required.** Enterprise agent deployment needs controls, not just prompts.
 - **AI needs to live where employees work.** Glean surfaces in Slack, Microsoft Teams, Zoom, Service Cloud, ServiceNow, Zendesk, GitHub, Miro, and browser workflows.
 
@@ -167,7 +168,7 @@ The platform is less compelling when the corpus is small, permissions are simple
 
 ## Methodology
 
-Last verified 2026-05-13 against Glean product, connector, and developer documentation. The public pricing surface still routes all buyers to a sales contact rather than published tiers. Scoring emphasizes enterprise utility, defensibility of the data and connectors layer, and cost and implementation risk.
+Last verified 2026-06-02 against Glean product, connector, and developer documentation. The public pricing surface still routes buyers to a sales-led enterprise motion rather than published self-serve tiers. Scoring emphasizes enterprise utility, defensibility of the data and connectors layer, and cost and implementation risk.
 
 ## FAQ
 
@@ -175,7 +176,7 @@ Last verified 2026-05-13 against Glean product, connector, and developer documen
 Both. Glean started from enterprise search and now packages assistant and agent workflows on top.
 
 **Does Glean support MCP?**
-Yes. Glean's developer platform describes a secure MCP endpoint and integrations with tools such as Claude Code and Cursor.
+Yes. Glean's developer platform describes a secure MCP endpoint and setup paths for Claude Code, Cursor, Codex, Goose, Gemini CLI, VS Code, Windsurf, JetBrains AI Assistant, and other MCP-compatible tools.
 
 **Does Glean publish pricing?**
 Not as a simple self-serve price. Buyers should expect custom enterprise pricing.
@@ -185,6 +186,7 @@ Not as a simple self-serve price. Buyers should expect custom enterprise pricing
 - [Glean product overview](https://www.glean.com/)
 - [Glean connectors docs](https://docs.glean.com/connectors/about)
 - [Glean developer platform](https://developers.glean.com/)
+- [Glean MCP endpoint](https://developers.glean.com/mcp)
 
 ## Related
 

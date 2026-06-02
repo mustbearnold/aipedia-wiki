@@ -2320,7 +2320,8 @@
       "url": "https://docs.bfl.ai/quick_start/introduction",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "flux-2-github",
@@ -2328,7 +2329,8 @@
       "url": "https://github.com/black-forest-labs/flux2",
       "type": "repository",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "flux-2-klein-huggingface",
@@ -2336,7 +2338,8 @@
       "url": "https://huggingface.co/black-forest-labs/FLUX.2-klein-4B",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "flux-2-models",
@@ -2344,7 +2347,8 @@
       "url": "https://help.bfl.ai/articles/9364115800-flux-models-overview",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "flux-2-pricing",
@@ -2352,7 +2356,8 @@
       "url": "https://docs.bfl.ai/quick_start/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "flux-official",
@@ -2360,7 +2365,8 @@
       "url": "https://bfl.ai",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "flux-pricing",
@@ -2368,7 +2374,8 @@
       "url": "https://fal.ai/flux-2",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "flux-licensing",
@@ -2376,7 +2383,8 @@
       "url": "https://help.bfl.ai/articles/9272590838-self-serve-dev-license-overview-pricing",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "flux-replicate-pricing",
@@ -2384,7 +2392,8 @@
       "url": "https://replicate.com/blog/run-flux-2-on-replicate/",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "flux-cloudflare-workers",
@@ -2392,7 +2401,8 @@
       "url": "https://developers.cloudflare.com/changelog/product-group/ai/3/",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "framer-ai",
@@ -2400,15 +2410,17 @@
       "url": "https://www.framer.com/ai/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "framer-ai-pricing",
-      "label": "Source",
-      "url": "https://framer.com/pricing",
+      "label": "Framer pricing",
+      "url": "https://www.framer.com/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "framer-help",
@@ -2416,7 +2428,8 @@
       "url": "https://www.framer.com/help/",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "framer-official",
@@ -2424,7 +2437,8 @@
       "url": "https://www.framer.com/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "framer-pricing",
@@ -2432,7 +2446,8 @@
       "url": "https://www.framer.com/pricing/",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "frase-features",
@@ -2476,27 +2491,30 @@
     },
     {
       "id": "galileo-ai-features",
-      "label": "Galileo / Stitch features",
-      "url": "https://www.usegalileo.ai/features",
-      "type": "official",
+      "label": "Google Stitch announcement",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/",
+      "type": "blog",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "galileo-ai-official",
-      "label": "Galileo / Stitch official site",
-      "url": "https://www.usegalileo.ai/",
+      "label": "Google Stitch official site",
+      "url": "https://stitch.withgoogle.com/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "galileo-ai-pricing",
-      "label": "Galileo / Stitch pricing surface",
-      "url": "https://www.usegalileo.ai/pricing",
-      "type": "pricing",
+      "label": "Google Stitch official site",
+      "url": "https://stitch.withgoogle.com/",
+      "type": "official",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "gamma-ai-presentation",
@@ -2528,7 +2546,8 @@
       "url": "https://www.genspark.ai/agents",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "genspark-official",
@@ -2536,15 +2555,17 @@
       "url": "https://www.genspark.ai/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "genspark-pricing",
-      "label": "Genspark pricing",
-      "url": "https://www.genspark.ai/pricing",
+      "label": "Genspark membership benefits",
+      "url": "https://www.genspark.ai/membership-benefits-lp",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "getresponse-official",
@@ -2552,7 +2573,8 @@
       "url": "https://www.getresponse.com/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "getresponse-pricing",
@@ -2560,7 +2582,8 @@
       "url": "https://www.getresponse.com/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "github-copilot-docs",
@@ -2630,7 +2653,8 @@
       "url": "https://developers.glean.com/",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "glean-official",
@@ -2638,7 +2662,8 @@
       "url": "https://www.glean.com/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "glean-pricing",
@@ -2646,39 +2671,44 @@
       "url": "https://www.glean.com/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "glm-docs",
-      "label": "Zhipu AI Open Platform docs",
-      "url": "https://docs.bigmodel.cn/",
+      "label": "Z.AI GLM-5.1 docs",
+      "url": "https://docs.z.ai/guides/llm/glm-5.1",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "glm-huggingface",
-      "label": "GLM-5 on Hugging Face",
-      "url": "https://huggingface.co/zai-org/GLM-5",
+      "label": "GLM-5.1 on Hugging Face",
+      "url": "https://huggingface.co/zai-org/GLM-5.1",
       "type": "repository",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "glm-official",
-      "label": "Z.ai official site",
-      "url": "https://www.zhipuai.cn/en",
+      "label": "Z.AI official site",
+      "url": "https://z.ai/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "glm-pricing",
-      "label": "Zhipu AI Open Platform pricing",
-      "url": "https://open.bigmodel.cn/pricing",
+      "label": "Z.AI pricing",
+      "url": "https://docs.z.ai/guides/overview/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "google-ai-pricing",
@@ -2734,10 +2764,11 @@
     {
       "id": "google-stitch-labs",
       "label": "Google Labs Stitch",
-      "url": "https://labs.google/stitch/",
+      "url": "https://stitch.withgoogle.com/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "google-stitch-official",
@@ -2745,15 +2776,17 @@
       "url": "https://stitch.withgoogle.com/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "google-stitch-pricing",
-      "label": "Source",
-      "url": "https://www.nxcode.io/resources/news/google-stitch-pricing-plans-complete-guide-2026",
-      "type": "pricing",
+      "label": "Google Stitch official site",
+      "url": "https://stitch.withgoogle.com/",
+      "type": "official",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "google-workspace-ai",
@@ -2769,23 +2802,26 @@
       "url": "https://block.github.io/goose/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "goose-pricing",
-      "label": "Source",
-      "url": "https://github.com/block/goose",
+      "label": "Goose GitHub repository",
+      "url": "https://github.com/aaif-goose/goose",
       "type": "repository",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "goose-repository",
       "label": "Goose GitHub repository",
-      "url": "https://github.com/block/goose",
+      "url": "https://github.com/aaif-goose/goose",
       "type": "repository",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "gpt-image-2-official",
@@ -2809,7 +2845,8 @@
       "url": "https://www.grammarly.com/ai",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "grammarly-business",
@@ -2817,7 +2854,8 @@
       "url": "https://www.grammarly.com/business",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "grammarly-plans",
@@ -2825,7 +2863,8 @@
       "url": "https://www.grammarly.com/plans",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "grammarly-pricing",
@@ -2833,7 +2872,8 @@
       "url": "https://support.grammarly.com/hc/en-us/articles/115000090011-How-much-does-Grammarly-Pro-cost",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "granola-official",
