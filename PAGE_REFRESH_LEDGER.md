@@ -23,10 +23,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-04 | /tools/tome/ | Tool | Yes | frontmatter | src/content/tools/tome.md |
 | 2026-05-05 | /tools/dalle/ | Tool | Yes | frontmatter | src/content/tools/dalle.md |
 | 2026-05-12 | /dead/ | Static page | Yes | git | src/pages/dead/index.astro |
-| 2026-05-13 | /compare/ahrefs-vs-frase/ | Comparison | Yes | frontmatter | src/content/comparisons/ahrefs-vs-frase.md |
-| 2026-05-13 | /compare/ahrefs-vs-marketmuse/ | Comparison | Yes | frontmatter | src/content/comparisons/ahrefs-vs-marketmuse.md |
-| 2026-05-13 | /compare/ahrefs-vs-neuronwriter/ | Comparison | Yes | frontmatter | src/content/comparisons/ahrefs-vs-neuronwriter.md |
-| 2026-05-13 | /compare/ahrefs-vs-surfer-seo/ | Comparison | Yes | frontmatter | src/content/comparisons/ahrefs-vs-surfer-seo.md |
 | 2026-05-13 | /compare/aider-vs-claude-code/ | Comparison | Yes | frontmatter | src/content/comparisons/aider-vs-claude-code.md |
 | 2026-05-13 | /compare/aider-vs-cursor/ | Comparison | Yes | frontmatter | src/content/comparisons/aider-vs-cursor.md |
 | 2026-05-13 | /compare/aider-vs-github-copilot/ | Comparison | Yes | frontmatter | src/content/comparisons/aider-vs-github-copilot.md |
@@ -588,7 +584,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-28 | /guides/ | Static page | Yes | git | src/pages/guides/index.astro |
 | 2026-05-28 | /guides/best-ai-for-seo-content/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-seo-content.md |
 | 2026-05-28 | /guides/best-ai-seo-tool-replacing-surfer-frase-stack/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-seo-tool-replacing-surfer-frase-stack.md |
-| 2026-05-28 | /guides/best-ai-seo-tool/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-seo-tool.md |
 | 2026-05-28 | /tools/argil/ | Tool | Yes | frontmatter | src/content/tools/argil.md |
 | 2026-05-28 | /tools/decktopus/ | Tool | Yes | frontmatter | src/content/tools/decktopus.md |
 | 2026-05-28 | /tools/neuronwriter/ | Tool | Yes | frontmatter | src/content/tools/neuronwriter.md |
@@ -667,7 +662,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-02 | /categories/ai-presentation/ | Category | Yes | frontmatter | src/content/categories/ai-presentation.md |
 | 2026-06-02 | /categories/ai-research/ | Category | Yes | frontmatter | src/content/categories/ai-research.md |
 | 2026-06-02 | /categories/ai-search/ | Category | Yes | frontmatter | src/content/categories/ai-search.md |
-| 2026-06-02 | /categories/ai-seo/ | Category | Yes | frontmatter | src/content/categories/ai-seo.md |
+| 2026-06-02 | /categories/ai-seo/ | Category | Yes | working tree | src/content/categories/ai-seo.md |
 | 2026-06-02 | /categories/ai-video/ | Category | Yes | frontmatter | src/content/categories/ai-video.md |
 | 2026-06-02 | /categories/ai-voice/ | Category | Yes | frontmatter | src/content/categories/ai-voice.md |
 | 2026-06-02 | /categories/ai-writing/ | Category | Yes | frontmatter | src/content/categories/ai-writing.md |
@@ -675,12 +670,17 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-02 | /companies/anthropic/ | Company | Yes | frontmatter | src/content/companies/anthropic.md |
 | 2026-06-02 | /companies/elevenlabs-company/ | Company | Yes | frontmatter | src/content/companies/elevenlabs-company.md |
 | 2026-06-02 | /compare/ | Static page | Yes | working tree | src/pages/compare/index.astro |
-| 2026-06-02 | /compare/adobe-firefly-vs-canva/ | Comparison | Yes | working tree | src/content/comparisons/adobe-firefly-vs-canva.md |
-| 2026-06-02 | /compare/adobe-firefly-vs-flux/ | Comparison | Yes | working tree | src/content/comparisons/adobe-firefly-vs-flux.md |
-| 2026-06-02 | /compare/adobe-firefly-vs-freepik/ | Comparison | Yes | working tree | src/content/comparisons/adobe-firefly-vs-freepik.md |
-| 2026-06-02 | /compare/adobe-firefly-vs-ideogram/ | Comparison | Yes | working tree | src/content/comparisons/adobe-firefly-vs-ideogram.md |
-| 2026-06-02 | /compare/adobe-firefly-vs-midjourney/ | Comparison | Yes | working tree | src/content/comparisons/adobe-firefly-vs-midjourney.md |
-| 2026-06-02 | /compare/adobe-firefly-vs-stable-diffusion/ | Comparison | Yes | working tree | src/content/comparisons/adobe-firefly-vs-stable-diffusion.md |
+| 2026-06-02 | /compare/adobe-firefly-vs-canva/ | Comparison | Yes | frontmatter | src/content/comparisons/adobe-firefly-vs-canva.md |
+| 2026-06-02 | /compare/adobe-firefly-vs-flux/ | Comparison | Yes | frontmatter | src/content/comparisons/adobe-firefly-vs-flux.md |
+| 2026-06-02 | /compare/adobe-firefly-vs-freepik/ | Comparison | Yes | frontmatter | src/content/comparisons/adobe-firefly-vs-freepik.md |
+| 2026-06-02 | /compare/adobe-firefly-vs-ideogram/ | Comparison | Yes | frontmatter | src/content/comparisons/adobe-firefly-vs-ideogram.md |
+| 2026-06-02 | /compare/adobe-firefly-vs-midjourney/ | Comparison | Yes | frontmatter | src/content/comparisons/adobe-firefly-vs-midjourney.md |
+| 2026-06-02 | /compare/adobe-firefly-vs-stable-diffusion/ | Comparison | Yes | frontmatter | src/content/comparisons/adobe-firefly-vs-stable-diffusion.md |
+| 2026-06-02 | /compare/ahrefs-vs-frase/ | Comparison | Yes | working tree | src/content/comparisons/ahrefs-vs-frase.md |
+| 2026-06-02 | /compare/ahrefs-vs-marketmuse/ | Comparison | Yes | working tree | src/content/comparisons/ahrefs-vs-marketmuse.md |
+| 2026-06-02 | /compare/ahrefs-vs-neuronwriter/ | Comparison | Yes | working tree | src/content/comparisons/ahrefs-vs-neuronwriter.md |
+| 2026-06-02 | /compare/ahrefs-vs-surfer-seo/ | Comparison | Yes | working tree | src/content/comparisons/ahrefs-vs-surfer-seo.md |
+| 2026-06-02 | /guides/best-ai-seo-tool/ | Guide | Yes | working tree | src/content/use-cases/best-ai-seo-tool.md |
 | 2026-06-02 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
 | 2026-06-02 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
 | 2026-06-02 | /tools/ | Static page | Yes | git | src/pages/tools/index.astro |

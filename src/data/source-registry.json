@@ -224,7 +224,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-01"
+      "last_checked": "2026-06-02"
     },
     {
       "id": "ahrefs-pricing",
@@ -233,7 +233,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-01"
+      "last_checked": "2026-06-02"
     },
     {
       "id": "ahrefs-site-explorer",
@@ -241,7 +241,8 @@
       "url": "https://ahrefs.com/site-explorer",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "ai21-official",
@@ -2496,7 +2497,8 @@
       "url": "https://www.frase.io/features",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "frase-official",
@@ -2504,7 +2506,8 @@
       "url": "https://www.frase.io",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "frase-pricing",
@@ -2512,7 +2515,8 @@
       "url": "https://www.frase.io/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "freepik-official",
@@ -4561,7 +4565,8 @@
       "url": "https://www.marketmuse.com/competitive-analysis/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "marketmuse-content-briefs",
@@ -4569,7 +4574,8 @@
       "url": "https://www.marketmuse.com/content-briefs/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "marketmuse-inventory",
@@ -4577,7 +4583,8 @@
       "url": "https://www.marketmuse.com/inventory/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "marketmuse-official",
@@ -4585,7 +4592,8 @@
       "url": "https://www.marketmuse.com/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "mastra-about",
@@ -4982,7 +4990,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-05-28"
+      "last_checked": "2026-06-02"
     },
     {
       "id": "neuronwriter-official",
@@ -4991,7 +4999,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-28"
+      "last_checked": "2026-06-02"
     },
     {
       "id": "neuronwriter-affiliate",
@@ -5000,7 +5008,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-28"
+      "last_checked": "2026-06-02"
     },
     {
       "id": "nightcafe-pricing",
@@ -6486,7 +6494,8 @@
       "url": "https://surferseo.com/changelog",
       "type": "blog",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "surfer-official",
@@ -6494,7 +6503,8 @@
       "url": "https://surferseo.com",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "surfer-seo-pricing",
@@ -6502,7 +6512,8 @@
       "url": "https://surferseo.com/pricing/",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-02"
     },
     {
       "id": "synthesia-help",

@@ -29,7 +29,7 @@ top_picks:
 
 As of June 1, 2026, **AI SEO** is not one market. It is four buying jobs that are often confused:
 
-**Use [Ahrefs](/tools/ahrefs/) when the buyer needs the best SEO data suite for links, keywords, audits, competitive research, and durable search strategy.** Ahrefs is the safest overall pick when the team will actually use backlink and keyword data every week. Its June 1 check keeps the Lite, Standard, Advanced, and Enterprise ladder intact while Brand Radar now cites a 395M+ monthly prompt pool across AI Overviews, AI Mode, ChatGPT, Perplexity, Copilot, Gemini, Claude, and Grok. Do not buy Ahrefs only to score one article draft.
+**Use [Ahrefs](/tools/ahrefs/) when the buyer needs the best SEO data suite for links, keywords, audits, competitive research, and durable search strategy.** Ahrefs is the safest overall pick when the team will actually use backlink and keyword data every week. Its June 2 check keeps the Lite, Standard, Advanced, and Enterprise ladder intact while Brand Radar cites a 395M+ total monthly prompt pool across AI Overviews, AI Mode, ChatGPT, Copilot, Gemini, Perplexity, and Grok. Do not buy Ahrefs only to score one article draft.
 
 **Use [Semrush](/tools/semrush/) when the buyer wants a broad agency or marketing suite.** Semrush is strongest when SEO sits beside PPC, competitive research, reporting, content, and client-account workflows. Its current official Semrush One comparison says the AI Visibility Toolkit is bundled with Semrush One tiers and tracks discovery across AI Overviews, ChatGPT, Gemini, and Perplexity.
 
@@ -59,7 +59,7 @@ As of June 1, 2026, **AI SEO** is not one market. It is four buying jobs that ar
 
 **Best agency suite: Semrush.** Semrush is the better default when the buyer needs one account for more than SEO. The current Semrush One comparison separates classic SEO Toolkit pricing from Semrush One tiers that add AI visibility tracking. That matters because agencies now need to explain both Google rankings and AI-answer visibility to clients.
 
-**Best content optimizer: Surfer SEO.** Surfer is the practical first shortlist pick when writers need scoring, content optimization, AI search visibility prompts, and page-refresh workflows. Its current pricing page positions the product around AI search visibility, not just old-school content scoring. Surfer now offers a Discovery tier at $49/month, which lowers the entry price for solo operators who previously bounced to NeuronWriter on price alone.
+**Best content optimizer: Surfer SEO.** Surfer is the practical first shortlist pick when writers need scoring, content optimization, AI search visibility prompts, and page-refresh workflows. Its June 2 pricing check keeps the product positioned around AI search visibility, not just old-school content scoring. Surfer offers a Discovery tier at $49/month billed yearly, while Standard at $99/month billed yearly is the practical floor for serious content teams.
 
 **Best premium editorial optimizer: Clearscope.** Clearscope still makes sense when the value is writer adoption, simple scoring, sharing/exporting, onboarding, and premium editorial workflow. The June 2 crawl shows Essentials at $129/month, Business at $399/month, and Enterprise custom.
 
@@ -102,14 +102,14 @@ Do not rank AdCreative.ai as an SEO winner. It can help search marketers improve
 
 ## Sources
 
-- [Ahrefs pricing](https://ahrefs.com/pricing) (verified 2026-06-01)
-- [Ahrefs Brand Radar](https://ahrefs.com/brand-radar) (verified 2026-06-01)
+- [Ahrefs pricing](https://ahrefs.com/pricing) (verified 2026-06-02)
+- [Ahrefs Brand Radar](https://ahrefs.com/brand-radar) (verified 2026-06-02)
 - [Semrush One vs SEO Toolkit comparison](https://www.semrush.com/kb/1624-semrush-one-vs-seo-toolkit) (verified 2026-05-13)
-- [Surfer SEO pricing](https://surferseo.com/pricing/) (verified 2026-05-13)
+- [Surfer SEO pricing](https://surferseo.com/pricing/) (verified 2026-06-02)
 - [Clearscope pricing](https://www.clearscope.io/pricing) (verified 2026-06-02)
-- [Frase pricing](https://www.frase.io/pricing) (verified 2026-05-13)
-- [NeuronWriter pricing](https://neuronwriter.com/pricing-neuron/) (verified 2026-05-28)
-- [NeuronWriter affiliate program](https://neuronwriter.com/contact/affiliates/) (verified 2026-05-28)
+- [Frase pricing](https://www.frase.io/pricing) (verified 2026-06-02)
+- [NeuronWriter pricing](https://neuronwriter.com/pricing-neuron/) (verified 2026-06-02)
+- [NeuronWriter affiliate program](https://neuronwriter.com/contact/affiliates/) (verified 2026-06-02)
 - [OmniSEO pricing](https://omniseo.com/pricing/) (verified 2026-05-24)
-- [MarketMuse pricing](https://www.marketmuse.com/pricing/) (verified 2026-05-13)
+- [MarketMuse pricing](https://www.marketmuse.com/pricing/) (verified 2026-06-02)
 - [AdCreative.ai official site](https://www.adcreative.ai/) (verified 2026-06-01)
