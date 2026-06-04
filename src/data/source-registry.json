@@ -1230,7 +1230,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-05-10"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "cline-pricing",
@@ -1239,7 +1239,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-05-10"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "cline-repository",
@@ -1248,7 +1248,7 @@
       "type": "repository",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-05-10"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "cline-vscode-marketplace",
@@ -1408,7 +1408,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-05-10"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "cody-pricing",
@@ -1417,7 +1417,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-10"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "cody-plan-changes",
@@ -1426,7 +1426,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-05-10"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "cody-model-provider",
@@ -1435,7 +1435,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-05-10"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "cody-model-configuration",
@@ -1664,7 +1664,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "cursor-pricing-policy",
@@ -1682,7 +1682,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "cursor-composer-25",
@@ -1866,7 +1866,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "deepseek-api-changelog",
@@ -1893,7 +1893,7 @@
       "type": "repository",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "descript-changelog",
@@ -2145,7 +2145,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "elicit-pricing",
@@ -2154,7 +2154,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-04"
     },
     {
       "trust_tier": "primary",
@@ -2938,7 +2938,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "google-gemini-drive-sharing",
@@ -2956,7 +2956,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "google-one-ai-plans",
@@ -2965,7 +2965,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "google-gemini-api-pricing",
@@ -2974,7 +2974,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "google-stitch-labs",

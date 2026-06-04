@@ -20,6 +20,8 @@ As of June 4, 2026, **[Elicit](/tools/elicit/)** is AiPedia's best research-work
 
 The June 4 [ChatGPT vs Scite](/compare/chatgpt-vs-scite/) refresh keeps the buyer split explicit: ChatGPT is the broad research assistant for drafting, explaining, and planning, while Scite is the citation-context layer for checking whether later literature supports, contrasts, or merely mentions a claim.
 
+The June 4 [Claude vs Elicit](/compare/claude-vs-elicit/) refresh adds the matching research-buyer boundary: Claude is the better writing, critique, and synthesis assistant, while Elicit is the dedicated literature-review workflow for paper discovery, screening, extraction tables, and systematic-review-style evidence work.
+
 For budget-conscious research teams running their own pipelines, [Reka Edge 7B](/tools/reka/) is now publicly priced at $0.10 per million input tokens and $0.10 per million output tokens, making it a low-cost extraction or summarization layer to evaluate alongside Elicit's structured workflow. Teams evaluating open-weight, long-context extraction or agentic coding around research corpora can also shortlist [GLM](/tools/glm/): GLM-5.1 has MIT Hugging Face weights, 200K context, 128K maximum output, and public Z.AI API pricing, but it is model infrastructure rather than a literature-review workflow.
 
 The May 31 update adds an important caveat for high-stakes science. OpenAI's [Rosalind Biodefense expansion](/news/2026-05-31-openai-rosalind-biodefense-trusted-access/) shows that specialist research models can be powerful but gated. GPT-Rosalind is not a general research subscription; it is a trusted-access life-sciences model program for qualified teams and public-health or biodefense workflows. Treat that as a separate procurement lane from everyday literature review.
@@ -76,7 +78,7 @@ Do not cite generated text. Cite the original source. Do not treat a linked sour
 
 ## Sources
 
-- [Elicit pricing](https://elicit.com/pricing) - verified 2026-06-03.
+- [Elicit pricing](https://elicit.com/pricing) - verified 2026-06-04.
 - [Semantic Scholar](https://www.semanticscholar.org/) - verified 2026-05-13.
 - [Scite](https://scite.ai/) - verified 2026-06-04.
 - [NotebookLM](https://notebooklm.google/) - verified 2026-05-13.

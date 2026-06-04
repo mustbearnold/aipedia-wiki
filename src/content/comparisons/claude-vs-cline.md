@@ -5,114 +5,114 @@ title: "Claude vs Cline"
 tools: [claude, cline]
 category: ai-coding
 winner: depends
-seo_title: "Claude vs Cline: AI assistant or coding agent? (May 2026)"
-meta_description: "Claude vs Cline, verified May 2026: when to use Anthropic's hosted assistant and when to use Cline's free open-source BYOK coding agent."
+seo_title: "Claude vs Cline: Claude assistant or open-source coding agent? (June 2026)"
+meta_description: "Claude vs Cline, verified June 4, 2026: choose Anthropic's hosted assistant for broad reasoning and Claude Code, or Cline for open-source BYOK IDE and CLI coding."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-04
+last_verified: 2026-06-04
 update_frequency: monthly
 canonical_fact_table: true
 ---
 
 # Claude vs Cline
 
-[Claude](/tools/claude/) is Anthropic's hosted general-purpose assistant for writing, research, analysis, coding help, projects, artifacts, web search, Claude Code access, and team collaboration. [Cline](/tools/cline/) is a free open-source coding agent that runs in VS Code, JetBrains, and the CLI with bring-your-own-key model routing, Plan/Act approvals, terminal execution, browser use, checkpoints, and MCP extensibility.
+[Claude](/tools/claude/) is Anthropic's hosted AI assistant for writing, research, long-document analysis, coding help, Claude Code, Claude Cowork, Projects, Artifacts, connectors, and team/enterprise deployment. [Cline](/tools/cline/) is an open-source coding agent runtime that works in the editor, terminal, and SDK with model choice, Plan/Act-style control, project edits, terminal commands, MCP, checkpoints, and BYOK or local-model routing.
 
-**Quick answer:** pick Claude when you want one managed assistant for mixed knowledge work and coding help. Pick Cline when you want an IDE-native agent that can edit a repo, run commands, use any supported model provider, and keep approval gates close to the codebase.
+**Quick answer:** choose Claude when the buyer needs a managed assistant across writing, analysis, files, coding, and team collaboration. Choose Cline when the buyer is a developer who wants an open-source agent inside the repo with provider choice and explicit local approvals. Serious developers may use both: Claude for thinking and review, Cline for controlled codebase execution.
 
 ## Decision Table
 
 | Need | Better choice | Why |
 |---|---|---|
-| General writing, research, analysis, and coding questions | Claude | Hosted assistant with mobile, desktop, web, Projects, Artifacts, search, file analysis, and paid team plans. |
-| Repo edits inside an existing IDE | Cline | Cline reads files, edits code, runs terminal commands, and shows approval steps in the developer workspace. |
-| No fixed monthly coding-agent subscription | Cline | The extension is free; model spend comes from your API provider or local model setup. |
-| Managed subscription with no API-key setup | Claude | Claude Free, Pro, Max, Team, and Enterprise are packaged as hosted plans. |
-| Long-context Claude model access | Claude | Opus 4.7 is available across Claude products and the API, with 1M context in Anthropic's pricing docs. |
-| Open-source auditability and local-provider choice | Cline | The public repo is Apache-2.0 licensed and supports Anthropic, OpenAI, Google, OpenRouter, cloud providers, and local models. |
+| One managed assistant for mixed work | Claude | Claude covers chat, files, web/mobile/desktop, Projects, Research, Artifacts, connectors, memory, Claude Code, and team controls. |
+| Open-source repo agent inside the dev workflow | Cline | Cline is an open-source agent runtime for editor, terminal, and SDK workflows, with project edits and command execution near the code. |
+| No separate API-key setup | Claude | Free, Pro, Max, Team, and Enterprise are packaged subscriptions. |
+| Full model-provider choice | Cline | Cline can route to Claude, OpenAI, Google, OpenRouter, cloud providers, OpenAI-compatible endpoints, and local models. |
+| Premium Claude model and enterprise controls | Claude | Opus 4.8, Sonnet 4.6, Team seats, Enterprise usage controls, SSO, SCIM, audit logs, and HIPAA-ready options are Anthropic surfaces. |
+| Lowest fixed coding-agent cost | Cline | Cline itself is free/open source; the real cost is the selected model, provider, and task length. |
 
 ## Where Claude Wins
 
-Claude is the better first purchase for people who need one assistant across writing, analysis, research, spreadsheet-style reasoning, coding questions, and team collaboration. Anthropic's May 2026 pricing page lists Claude Free, Pro, Max, Team, and Enterprise plans, with Pro at $20/month and Max starting at $100/month.
+Claude wins when coding is only one part of the job. A product manager, analyst, founder, legal team, researcher, or engineering lead can use the same Claude account for specs, summaries, code review, writing, artifacts, web research, and longer strategic work. Cline is not built to replace that general assistant surface.
 
-Claude also wins when the buyer wants Anthropic-hosted product features rather than an IDE extension. Its plan table includes Claude Code, web/mobile/desktop chat, text and image analysis, web search, voice mode, Artifacts, Projects, memory, skills, connectors, and enterprise security features. That makes Claude easier to roll out for non-developers and mixed teams.
+Claude also has the cleaner purchase path. Anthropic's June 4 pricing page lists Free, Pro at $20/month or $17/month annually, Max from $100/month, Team standard seats at $20/seat/month annually or $25 monthly, Team premium seats at $100/seat/month annually or $125 monthly, and Enterprise at $20/seat plus usage at API rates. Claude Code and Claude Cowork are included in Pro and higher plans, though limits and credit rules still matter.
 
-For model-specific work, Anthropic says Claude Opus 4.7 is available across Claude products, its API, Amazon Bedrock, Google Cloud Vertex AI, and Microsoft Foundry. Anthropic's API pricing keeps Opus 4.7 at $5 per million input tokens and $25 per million output tokens, with 1M context covered at standard pricing in the API docs.
+For model buyers, Claude's current API docs list Opus 4.8 at $5 per million input tokens and $25 per million output tokens, Sonnet 4.6 at $3/$15, and Haiku 4.5 at $1/$5. Opus 4.8 and Sonnet 4.6 list 1M token context, while Haiku 4.5 lists 200K. That makes Claude the stronger default when the task needs frontier Claude quality, long-context reasoning, or enterprise procurement.
 
 ## Where Cline Wins
 
-Cline is the better fit when the work starts and ends in a codebase. Its docs describe Plan mode as read-only exploration and Act mode as implementation. The GitHub repo describes file editing, terminal execution, browser automation, provider choice, and permissioned workspace changes directly inside the IDE.
+Cline wins when the work belongs in a repo and the buyer wants local control. Its public site describes one open-source agent runtime for editor, terminal, and SDK use. The practical value is that a developer can keep the agent near files, tests, terminal output, browser steps, checkpoints, and permissions instead of copying code between a browser chat and an IDE.
 
-The commercial shape is different from Claude. Cline itself is free, but it is not free frontier model usage. Developers bring an Anthropic, OpenAI, Google, OpenRouter, Bedrock, Azure, Vertex, Cerebras, Groq, OpenAI-compatible, Ollama, or LM Studio setup and pay the provider bill. That is attractive for teams that already manage API keys or want local-model experiments, but it adds setup and cost-control responsibility.
+Cline's commercial shape is also different. It is not a paid Claude competitor with a monthly model bundle. Cline is the agent shell; the buyer brings the model. That can be cheaper if a team uses local models, low-cost models, or strict routing. It can be more expensive if a long-running agent reads many files and uses premium Claude or other frontier models without budget controls.
 
-Cline is also the stronger choice for developers who want transparent agent steps. Its docs emphasize visibility into file reads, decisions, token usage, checkpoints, and local client-side execution. The VS Code Marketplace listing shows Cline as a free extension with about 3.9M installs as of May 10, 2026, while GitHub shows about 61.6K stars and a May 1, 2026 v3.82.0 release.
+Cline also wins for teams that want inspectability and customization. The homepage says Cline is Apache 2.0 open source, built with more than 250 contributors, and designed for open model choice, Plan-and-Act workflows, and no vendor lock-in. That matters for teams that need to audit agent behavior, build internal MCP tools, or avoid standardizing every developer on a proprietary editor.
 
 ## Pricing Reality
 
-| Product | May 2026 pricing signal | Practical implication |
+| Product | June 2026 pricing signal | Practical implication |
 |---|---|---|
-| Claude Free | Free hosted assistant | Good for testing Claude, but usage limits are lower than paid plans. |
-| Claude Pro | $20/month | Best first paid Claude plan for heavy individual use. |
-| Claude Max | From $100/month | Higher usage limits and advanced-feature access for power users. |
-| Claude Team / Enterprise | Team and enterprise packaging | Better for managed collaboration, admin, and organization controls. |
-| Cline extension | Free | No fixed Cline subscription for the extension. |
-| Cline model usage | BYOK or local-model cost | Spend depends on the model, provider, context size, and task length. |
+| Claude Free | $0 | Good for testing, with lower usage capacity. |
+| Claude Pro | $20/month or $17/month annual | Best first paid Claude plan for most individuals. |
+| Claude Max | From $100/month | Higher usage and early-feature access for heavy users. |
+| Claude Team | Standard $20 annual / $25 monthly; Premium $100 annual / $125 monthly | Better for shared admin, collaboration, and team rollout. |
+| Claude Enterprise | $20/seat plus API-rate usage | Procurement path for security, retention, audit, spend, and compliance controls. |
+| Cline runtime | Free/open source | No fixed Cline subscription for the runtime itself. |
+| Cline model usage | BYOK/local-model cost | Cost depends on provider, model, context, tool use, and task length. |
 
-Do not compare Claude Pro's $20/month directly to Cline's free extension as if they buy the same thing. Claude Pro buys hosted Claude usage. Cline buys an open-source agent shell; the model spend is still on your provider account unless you use a local model.
+The mistake is comparing Claude Pro's $20/month to Cline's free runtime as if they buy the same thing. Claude Pro buys a managed assistant and Claude product access. Cline gives a coding-agent runtime; model spend and permission design are still the buyer's responsibility.
 
 ## Best Combined Workflow
 
-Use Claude for problem framing, requirements, architecture tradeoffs, and long-form review. Use Cline for implementation inside the repo when you want the agent to inspect files, propose a plan, make edits, run tests, and checkpoint changes.
+Use Claude for planning, architecture, requirements, documentation, review, and higher-level critique. Use Cline when the next step is a real repo change: inspect files, make an edit, run tests, fix errors, and checkpoint the workspace.
 
-That pairing is especially strong if you use Claude Opus or Sonnet through Cline for code execution, but monitor token spend carefully. Anthropic's API docs show Opus 4.7 pricing and tool-use overhead; long coding sessions can cost more than a simple chat subscription when the agent reads many files, runs tools, and produces large diffs.
+That combination is especially strong if Cline routes to Claude models for hard implementation steps and cheaper/local models for routine edits. The workflow needs guardrails: set provider budgets, review MCP tools, scope repo access, and keep terminal permissions deliberate.
 
 ## Watch-Outs
 
-- **Cline is not Claude Code.** Claude Code is Anthropic's own coding agent surface. Cline is a separate open-source coding agent that can use Claude models among many providers.
-- **Cline is not terminal-only.** The main workflow is IDE-native, with terminal and browser actions available by permission.
-- **Free extension does not mean free model usage.** Budget API keys, model routing, context size, and per-task cost tracking before team rollout.
-- **Claude is broader but less codebase-native.** Claude can help with code, but Cline is built around workspace edits, shell commands, checkpoints, and approval loops.
-- **BYOK raises security responsibility.** With Cline, review provider retention terms, local secrets, MCP servers, terminal permissions, and repo access before broad use.
+- **Cline is not Claude Code.** Claude Code is Anthropic's own coding-agent product. Cline is a separate open-source agent runtime that can use Claude models.
+- **Cline is not free frontier inference.** The runtime is free; premium model calls still cost money unless the team uses local models.
+- **Claude is broader but less editor-native.** Claude can reason about code, but Cline is built around repo-local edits and commands.
+- **BYOK shifts responsibility to the buyer.** Secrets handling, provider retention, MCP server safety, and terminal permissions need policy before team rollout.
+- **Claude limits are not only sticker price.** Heavy Claude Code, Agent SDK, and API-style usage should be modeled from current Anthropic limits and credit rules.
 
 ## Who Should Choose Claude
 
-Choose Claude if the buyer needs a managed AI assistant for mixed work: writing, research, customer docs, data analysis, planning, lightweight coding help, and team collaboration. It is the cleaner default for non-developers, executives, analysts, writers, and teams that want admin-backed hosted plans.
+Choose Claude if the buyer needs one high-quality assistant for writing, research, analysis, documents, code review, Claude Code, and team collaboration. It is the safer first purchase for non-developers and mixed teams.
 
-Choose Claude first if you do not want to manage API keys or local models. Pro at $20/month is simpler than configuring provider keys, watching token costs, and explaining IDE-agent permissions to every user.
+Choose Claude if procurement matters. Team and Enterprise expose the security, admin, and compliance controls a local extension does not provide by itself.
 
 ## Who Should Choose Cline
 
-Choose Cline if the buyer is a developer who wants an agent inside VS Code, JetBrains, or the CLI. It is strongest for repo-level implementation, refactors, debugging loops, test runs, and teams that already know how to manage API keys and local development permissions.
+Choose Cline if the buyer is a developer who wants open-source agentic coding inside an existing workflow. It fits VS Code/editor users, terminal users, BYOK teams, and organizations that want model flexibility more than a bundled subscription.
 
-Choose Cline first if model flexibility matters more than a bundled subscription. It can route to Claude, OpenAI, Gemini, cloud-hosted providers, OpenRouter, and local models, while keeping the code workflow in the editor.
+Choose Cline if the team already knows how to control model spend, local permissions, API keys, and repo safety. It is powerful precisely because it is less packaged.
 
 ## Bottom Line
 
-Claude is the better general AI assistant and the cleaner paid plan for most mixed teams. Cline is the better developer tool when the goal is open-source, BYOK, IDE-native agentic coding with approval gates. Many serious coding teams will use both: Claude for thinking and review, Cline for controlled repo execution.
+Claude is the better managed assistant and the better first paid plan for mixed work. Cline is the better open-source coding-agent runtime when the job is repo execution with model choice. Most serious coding teams should not frame this as either/or: use Claude for reasoning and Cline for controlled implementation when BYOK flexibility matters.
 
 ## FAQ
 
 **Is Cline owned by Anthropic?**
-No. Cline is a separate open-source coding agent. It can use Anthropic models, but it also supports OpenAI, Google, OpenRouter, cloud providers, and local models.
+No. Cline is independent and open source. It can use Anthropic models, but it also supports other providers and local models.
 
 **Is Cline cheaper than Claude?**
-The Cline extension is free, but API usage is not. Cline can be cheaper if you use low-cost or local models; it can cost more if long tasks run on premium models such as Claude Opus 4.7.
+It can be, but only if model usage is controlled. The Cline runtime is free; provider API usage is not.
 
 **Should I use Claude Code instead of Cline?**
-Use [Claude Code](/tools/claude-code/) if you want Anthropic's own coding-agent experience and Claude-plan integration. Use Cline if you want an open-source IDE agent with model-provider choice.
+Use Claude Code if you want Anthropic's own Claude-backed coding agent. Use Cline if you want open-source editor/terminal control and provider choice.
 
 ## Sources
 
-- [Anthropic: Claude Opus 4.7 announcement](https://www.anthropic.com/news/claude-opus-4-7)
+- [Claude pricing](https://claude.com/pricing)
 - [Anthropic API pricing](https://platform.claude.com/docs/en/about-claude/pricing)
-- [Claude plans and pricing](https://claude.com/pricing)
+- [Anthropic model docs](https://platform.claude.com/docs/en/about-claude/models/overview)
 - [Cline homepage](https://cline.bot/)
-- [Cline docs: What is Cline?](https://docs.cline.bot/getting-started/what-is-cline)
+- [Cline docs](https://docs.cline.bot/getting-started/what-is-cline)
 - [Cline GitHub repository](https://github.com/cline/cline)
-- [Cline VS Code Marketplace listing](https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev)
 
 ## Related
 
-- **Tool pages:** [Claude](/tools/claude/) · [Cline](/tools/cline/) · [Claude Code](/tools/claude-code/)
+- **Tool pages:** [Claude](/tools/claude/) | [Cline](/tools/cline/) | [Claude Code](/tools/claude-code/)
 - **Category:** [AI Coding](/categories/ai-coding/)
-- **Comparisons:** [Claude vs Cursor](/compare/claude-vs-cursor/) · [Cline vs Cursor](/compare/cline-vs-cursor/) · [Claude Code vs GitHub Copilot](/compare/claude-code-vs-github-copilot/)
+- **Comparisons:** [Claude vs Cursor](/compare/claude-vs-cursor/) | [Cline vs Cursor](/compare/cline-vs-cursor/) | [Claude Code vs GitHub Copilot](/compare/claude-code-vs-github-copilot/)

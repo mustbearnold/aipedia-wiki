@@ -44,7 +44,7 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 
 **Use [Glean](/tools/glean/) when coding agents need permission-aware company knowledge.** Glean's developer platform now exposes MCP and setup paths for Claude Code, Codex, Goose, Cursor, Gemini CLI, VS Code, Windsurf, JetBrains, and other developer surfaces, so it belongs in the enterprise-codebase-context lane rather than the autocomplete lane.
 
-**June 4 maintenance note:** the Claude Code comparison layer has been refreshed against current Anthropic, GitHub, Continue, Cognition, and Val Town sources. Continue remains the open-source BYOK IDE layer, Devin is the async autonomous-ticket worker with ACU and seat billing, GitHub Copilot is the GitHub-native platform governed by AI Credits and SDK usage, and Val Town is a hosted TypeScript runtime rather than a direct coding-agent substitute. Earlier June 2 maintenance remains in force for Aider, Cline, CodeRabbit, Amazon Q Developer, Augment Code, Sourcegraph Cody, Factory, JetBrains AI, Kiro, Mastra, OpenHands, Pieces, Qodo, Replit Agent, Same.dev, Supermaven, Tabnine, Windsurf, Zed, Goose, GLM-5.1, and Glean.
+**June 4 maintenance note:** the Claude Code comparison layer has been refreshed against current Anthropic, GitHub, Continue, Cognition, and Val Town sources. Continue remains the open-source BYOK IDE layer, Devin is the async autonomous-ticket worker with ACU and seat billing, GitHub Copilot is the GitHub-native platform governed by AI Credits and SDK usage, and Val Town is a hosted TypeScript runtime rather than a direct coding-agent substitute. The same June 4 pass refreshed [Claude vs Cline](/compare/claude-vs-cline/), [Claude vs Cody](/compare/claude-vs-cody/), and [Claude vs Cursor](/compare/claude-vs-cursor/) so this hub now separates Claude as the broad assistant/Claude Code lane, Cline as the open-source BYOK repo agent, Cody as the Sourcegraph Enterprise code-context lane, and Cursor as the GUI-first AI-native IDE. Earlier June 2 maintenance remains in force for Aider, Cline, CodeRabbit, Amazon Q Developer, Augment Code, Sourcegraph Cody, Factory, JetBrains AI, Kiro, Mastra, OpenHands, Pieces, Qodo, Replit Agent, Same.dev, Supermaven, Tabnine, Windsurf, Zed, Goose, GLM-5.1, and Glean.
 
 ## Buyer Paths
 
@@ -122,13 +122,13 @@ Do not publish stale model-version claims. Coding tools route models and change 
 - [GitHub Copilot organization billing docs](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-organizations-and-enterprises) (verified 2026-06-04)
 - [GitHub Copilot billing and plans changelog](https://github.blog/changelog/2026-06-01-updates-to-github-copilot-billing-and-plans) (verified 2026-06-03)
 - [GitHub Copilot SDK GA](https://github.blog/changelog/2026-06-02-copilot-sdk-is-now-generally-available/) (verified 2026-06-04)
-- [Cursor pricing](https://cursor.com/pricing) (verified 2026-06-03)
+- [Cursor pricing](https://cursor.com/pricing) (verified 2026-06-04)
 - [Cursor Composer 2.5 changelog](https://cursor.com/changelog/composer-2-5) (verified 2026-06-03)
 - [Cursor Gartner enterprise-coding-agent recognition](https://cursor.com/blog/cursor-leads-gartner-mq-2026) (verified 2026-05-26)
-- [Cursor changelog](https://cursor.com/changelog) (verified 2026-06-03)
+- [Cursor changelog](https://cursor.com/changelog) (verified 2026-06-04)
 - [Claude Code docs](https://code.claude.com/docs) (verified 2026-06-04)
 - [Claude Code cost management](https://code.claude.com/docs/en/costs) (verified 2026-06-04)
-- [Claude Opus 4.8 and dynamic workflows](https://www.anthropic.com/news/claude-opus-4-8) (verified 2026-06-03)
+- [Claude Opus 4.8 and dynamic workflows](https://www.anthropic.com/news/claude-opus-4-8) (verified 2026-06-04)
 - [Claude dynamic workflows in Claude Code](https://claude.com/blog/introducing-dynamic-workflows-in-claude-code) (verified 2026-06-02)
 - [Claude Max plan](https://support.claude.com/en/articles/11049741-what-is-the-max-plan) (verified 2026-06-04)
 - [Windsurf plans and usage](https://docs.windsurf.com/windsurf/accounts/usage) (verified 2026-06-01)
@@ -138,11 +138,11 @@ Do not publish stale model-version claims. Coding tools route models and change 
 - [Aider GitHub repository](https://github.com/Aider-AI/aider) (verified 2026-06-02)
 - [Amazon Q Developer pricing](https://aws.amazon.com/q/developer/pricing/) (verified 2026-06-01)
 - [Augment Code pricing](https://www.augmentcode.com/pricing) (verified 2026-06-01)
-- [Cline homepage](https://cline.bot/) (verified 2026-06-01)
+- [Cline homepage](https://cline.bot/) (verified 2026-06-04)
 - [CodeRabbit pricing](https://www.coderabbit.ai/pricing) (verified 2026-06-01)
 - [Continue pricing](https://www.continue.dev/pricing) (verified 2026-06-04)
 - [Devin pricing](https://devin.ai/pricing) (verified 2026-06-04)
-- [Sourcegraph pricing](https://sourcegraph.com/pricing) (verified 2026-06-01)
+- [Sourcegraph pricing](https://sourcegraph.com/pricing) (verified 2026-06-04)
 - [Cognition Windsurf acquisition announcement](https://cognition.ai/blog/windsurf) (verified 2026-06-01)
 - [Factory pricing](https://docs.factory.ai/pricing) (verified 2026-06-01)
 - [JetBrains AI pricing](https://www.jetbrains.com/help/ai-assistant/licensing-and-subscriptions.html) (verified 2026-06-01)
