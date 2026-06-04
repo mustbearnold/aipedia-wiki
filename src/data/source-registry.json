@@ -1646,7 +1646,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "cursor-model-docs",
@@ -1655,7 +1655,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "cursor-pricing",
@@ -1673,7 +1673,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "cursor-changelog",
@@ -1691,7 +1691,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "d-id-agents",

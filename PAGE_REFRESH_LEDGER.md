@@ -25,9 +25,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-12 | /dead/ | Static page | Yes | git | src/pages/dead/index.astro |
 | 2026-05-13 | /compare/beautiful-ai-vs-tome/ | Comparison | Yes | frontmatter | src/content/comparisons/beautiful-ai-vs-tome.md |
 | 2026-05-13 | /compare/chatgpt-vs-phind/ | Comparison | Yes | frontmatter | src/content/comparisons/chatgpt-vs-phind.md |
-| 2026-05-13 | /compare/cline-vs-cursor/ | Comparison | Yes | frontmatter | src/content/comparisons/cline-vs-cursor.md |
 | 2026-05-13 | /compare/codeium-vs-github-copilot/ | Comparison | Yes | frontmatter | src/content/comparisons/codeium-vs-github-copilot.md |
-| 2026-05-13 | /compare/cody-vs-cursor/ | Comparison | Yes | frontmatter | src/content/comparisons/cody-vs-cursor.md |
 | 2026-05-13 | /compare/connected-papers-vs-consensus/ | Comparison | Yes | frontmatter | src/content/comparisons/connected-papers-vs-consensus.md |
 | 2026-05-13 | /compare/connected-papers-vs-elicit/ | Comparison | Yes | frontmatter | src/content/comparisons/connected-papers-vs-elicit.md |
 | 2026-05-13 | /compare/connected-papers-vs-nanochat/ | Comparison | Yes | frontmatter | src/content/comparisons/connected-papers-vs-nanochat.md |
@@ -688,9 +686,9 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-03 | /tools/voxtral/ | Tool | Yes | frontmatter | src/content/tools/voxtral.md |
 | 2026-06-04 | / | Static page | Yes | working tree | src/pages/index.astro |
 | 2026-06-04 | /categories/ | Static page | Yes | working tree | src/pages/categories/index.astro |
-| 2026-06-04 | /categories/ai-automation/ | Category | Yes | working tree | src/content/categories/ai-automation.md |
+| 2026-06-04 | /categories/ai-automation/ | Category | Yes | frontmatter | src/content/categories/ai-automation.md |
 | 2026-06-04 | /categories/ai-chatbots/ | Category | Yes | frontmatter | src/content/categories/ai-chatbots.md |
-| 2026-06-04 | /categories/ai-coding/ | Category | Yes | frontmatter | src/content/categories/ai-coding.md |
+| 2026-06-04 | /categories/ai-coding/ | Category | Yes | working tree | src/content/categories/ai-coding.md |
 | 2026-06-04 | /categories/ai-design/ | Category | Yes | frontmatter | src/content/categories/ai-design.md |
 | 2026-06-04 | /categories/ai-notes/ | Category | Yes | frontmatter | src/content/categories/ai-notes.md |
 | 2026-06-04 | /categories/ai-research/ | Category | Yes | frontmatter | src/content/categories/ai-research.md |
@@ -726,20 +724,22 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-04 | /compare/claude-vs-perplexity/ | Comparison | Yes | frontmatter | src/content/comparisons/claude-vs-perplexity.md |
 | 2026-06-04 | /compare/claude-vs-qwen/ | Comparison | Yes | frontmatter | src/content/comparisons/claude-vs-qwen.md |
 | 2026-06-04 | /compare/claude-vs-sudowrite/ | Comparison | Yes | frontmatter | src/content/comparisons/claude-vs-sudowrite.md |
-| 2026-06-04 | /compare/clay-vs-instantly/ | Comparison | Yes | working tree | src/content/comparisons/clay-vs-instantly.md |
-| 2026-06-04 | /compare/clay-vs-intercom/ | Comparison | Yes | working tree | src/content/comparisons/clay-vs-intercom.md |
-| 2026-06-04 | /compare/clay-vs-make/ | Comparison | Yes | working tree | src/content/comparisons/clay-vs-make.md |
-| 2026-06-04 | /compare/clay-vs-zapier/ | Comparison | Yes | working tree | src/content/comparisons/clay-vs-zapier.md |
+| 2026-06-04 | /compare/clay-vs-instantly/ | Comparison | Yes | frontmatter | src/content/comparisons/clay-vs-instantly.md |
+| 2026-06-04 | /compare/clay-vs-intercom/ | Comparison | Yes | frontmatter | src/content/comparisons/clay-vs-intercom.md |
+| 2026-06-04 | /compare/clay-vs-make/ | Comparison | Yes | frontmatter | src/content/comparisons/clay-vs-make.md |
+| 2026-06-04 | /compare/clay-vs-zapier/ | Comparison | Yes | frontmatter | src/content/comparisons/clay-vs-zapier.md |
+| 2026-06-04 | /compare/cline-vs-cursor/ | Comparison | Yes | working tree | src/content/comparisons/cline-vs-cursor.md |
+| 2026-06-04 | /compare/cody-vs-cursor/ | Comparison | Yes | working tree | src/content/comparisons/cody-vs-cursor.md |
 | 2026-06-04 | /explore/ | Static page | Yes | git | src/pages/explore/index.astro |
 | 2026-06-04 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
 | 2026-06-04 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
 | 2026-06-04 | /news/rss.xml | Crawl surface | No | git | src/pages/news/rss.xml.ts |
-| 2026-06-04 | /tools/ | Static page | Yes | working tree | src/pages/tools/index.astro |
+| 2026-06-04 | /tools/ | Static page | Yes | git | src/pages/tools/index.astro |
 | 2026-06-04 | /tools/claude-code/ | Tool | Yes | frontmatter | src/content/tools/claude-code.md |
 | 2026-06-04 | /tools/continue/ | Tool | Yes | frontmatter | src/content/tools/continue.md |
 | 2026-06-04 | /tools/devin/ | Tool | Yes | frontmatter | src/content/tools/devin.md |
 | 2026-06-04 | /tools/github-copilot/ | Tool | Yes | frontmatter | src/content/tools/github-copilot.md |
-| 2026-06-04 | /tools/make/ | Tool | Yes | working tree | src/content/tools/make.md |
+| 2026-06-04 | /tools/make/ | Tool | Yes | frontmatter | src/content/tools/make.md |
 | 2026-06-04 | /tools/scite/ | Tool | Yes | frontmatter | src/content/tools/scite.md |
 | 2026-06-04 | /tools/sudowrite/ | Tool | Yes | frontmatter | src/content/tools/sudowrite.md |
 | 2026-06-04 | /tools/surfer-seo/ | Tool | Yes | frontmatter | src/content/tools/surfer-seo.md |
