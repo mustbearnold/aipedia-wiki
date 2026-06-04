@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$25/month individual; Business from $167/month yearly, Enterprise custom"
 status: active
 launched: 2023-01
-last_updated: 2026-06-01
-last_verified: 2026-06-01
+last_updated: 2026-06-04
+last_verified: 2026-06-04
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://www.val.town/"
     source_label: "Val Town homepage"
     source_id: val-town-official
-    verified_at: 2026-06-01
+    verified_at: 2026-06-04
     next_review_at: 2026-08-13
     volatility: medium
     confidence: high
@@ -39,7 +39,7 @@ facts:
     source: "https://docs.val.town/"
     source_label: "Val Town docs"
     source_id: val-town-docs
-    verified_at: 2026-06-01
+    verified_at: 2026-06-04
     next_review_at: 2026-08-13
     volatility: medium
     confidence: high
@@ -48,7 +48,7 @@ facts:
     source: "https://www.val.town/pricing"
     source_label: "Val Town pricing"
     source_id: val-town-pricing
-    verified_at: 2026-06-01
+    verified_at: 2026-06-04
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -57,7 +57,7 @@ facts:
     source: "https://docs.val.town/"
     source_label: "Val Town docs"
     source_id: val-town-docs
-    verified_at: 2026-06-01
+    verified_at: 2026-06-04
     next_review_at: 2026-08-13
     volatility: medium
     confidence: high
@@ -66,7 +66,7 @@ facts:
     source: "https://www.val.town/pricing"
     source_label: "Val Town pricing"
     source_id: val-town-pricing
-    verified_at: 2026-06-01
+    verified_at: 2026-06-04
     next_review_at: 2026-08-13
     volatility: high
     confidence: medium
@@ -87,6 +87,13 @@ not_best_for:
 quick_answer: >-
   Val Town runs TypeScript in the browser and deploys each val as a live HTTP endpoint or cron job. Free tier for public vals, Pro with $10 Townie AI credits, Business with $100/month in credits. Pick it for fast serverless automations; skip it for complex apps or non-JS work.
 price_history:
+  - date: 2026-06-04
+    plan: "Claude Code comparison recheck"
+    price: "$21/mo Pro yearly-billed headline; Business from $167/mo yearly-billed headline"
+    source: "https://www.val.town/pricing"
+    source_label: "Source"
+    source_id: val-town-pricing
+    note: "Re-verified for Claude Code vs Val Town. The buyer boundary remains coding agent versus hosted TypeScript runtime; no plan-name change found."
   - date: 2026-06-01
     plan: "Pro"
     price: "$21/mo yearly-billed headline"
@@ -167,7 +174,7 @@ Townie, the AI agent that writes vals from natural-language prompts, bills on cr
 | **Standard library** | Email, blob storage, SQLite, HTTP utilities |
 | **Community registry** | Public vals, fork and remix, 100k+ scripts |
 
-Every data point above was verified against vendor sources on 2026-06-01. See Sources.
+Every data point above was verified against vendor sources on 2026-06-04. See Sources.
 
 ## Recent changes
 
@@ -210,7 +217,7 @@ The moats are narrow but real. The community val registry, the browser-first wor
 | Business | From $167/mo yearly-billed headline | $100/mo included | unlimited | 5M runs/day, unlimited custom domains, team accounts, Slack Connect | Small teams, shared workspaces |
 | Enterprise | Custom | Flexible allocation | unlimited | No published runtime caps, log export, SOC 2 | Compliance-heavy orgs |
 
-*Prices verified 2026-06-01 via [val.town/pricing](https://www.val.town/pricing). The public page showed the yearly toggle with two months free during verification; confirm the monthly toggle before quoting month-to-month procurement numbers. Townie runs on a pay-per-use credit model; top-ups are available on every tier.*
+*Prices verified 2026-06-04 via [val.town/pricing](https://www.val.town/pricing). The public page showed the yearly toggle with two months free during verification; confirm the monthly toggle before quoting month-to-month procurement numbers. Townie runs on a pay-per-use credit model; top-ups are available on every tier.*
 
 ## Against the alternatives
 
@@ -228,15 +235,15 @@ The moats are narrow but real. The community val registry, the browser-first wor
 
 - **TypeScript only.** Python, Go, Rust, Ruby are out of scope. Mixed-language workflows need a second platform.
 - **Public-by-default leaks secrets.** New users paste API keys into public vals and publish them. The UI warns; the warning gets ignored.
-- **Execution caps on every tier.** Free tops at 1 minute and Pro at 10 minutes. Long-running tasks need external compute or splitting into jobs. Teams and Enterprise raise the ceiling but do not eliminate it.
+- **Execution caps on every tier.** Free tops at 1 minute and Pro at 10 minutes. Long-running tasks need external compute or splitting into jobs. Business and Enterprise raise the ceiling but do not eliminate it.
 - **Debugger is thin.** Console logs and request logs cover most cases. No breakpoints, no step-through.
-- **Credit-metered AI usage.** Townie burns credits on every generation. Heavy users move to Teams or top-ups fast.
+- **Credit-metered AI usage.** Townie burns credits on every generation. Heavy users move to Business or top-ups fast.
 - **Not an IDE replacement.** Complex apps with many files, tests, and dependencies feel cramped in the browser editor.
 - **Vendor risk.** Val Town is a well-funded startup, not a public cloud. Buy-out, pivot, or shutdown are real scenarios to plan for.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-01 against [val.town/pricing](https://www.val.town/pricing), [Val Town docs](https://docs.val.town), and current Val Town pricing/limits surfaces.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-04 against [val.town/pricing](https://www.val.town/pricing), [Val Town docs](https://docs.val.town), and current Val Town pricing/limits surfaces.
 
 ## FAQ
 

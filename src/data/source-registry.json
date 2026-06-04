@@ -398,7 +398,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "anthropic-opus-48",
@@ -407,7 +407,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "anthropic-opus-47",
@@ -425,7 +425,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "anthropic-project-glasswing-expansion",
@@ -1060,7 +1060,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "claude-code-official",
@@ -1069,7 +1069,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "claude-code-costs",
@@ -1078,7 +1078,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "claude-code-usage-limits",
@@ -1087,7 +1087,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "claude-max-plan",
@@ -1096,7 +1096,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "claude-design-official",
@@ -1131,7 +1131,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "anthropic-higher-limits-spacex",
@@ -1555,7 +1555,8 @@
       "url": "https://docs.continue.dev/",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-04"
     },
     {
       "id": "continue-hub",
@@ -1563,7 +1564,8 @@
       "url": "https://hub.continue.dev/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-04"
     },
     {
       "id": "continue-pricing",
@@ -1571,7 +1573,8 @@
       "url": "https://www.continue.dev/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-04"
     },
     {
       "id": "copy-ai-official",
@@ -1925,7 +1928,8 @@
       "url": "https://docs.devin.ai/get-started/devin-intro",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-04"
     },
     {
       "id": "devin-official",
@@ -1933,7 +1937,8 @@
       "url": "https://devin.ai",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-04"
     },
     {
       "id": "devin-pricing",
@@ -1941,7 +1946,8 @@
       "url": "https://devin.ai/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-04"
     },
     {
       "id": "dext-accounting-integrations",
@@ -2736,7 +2742,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "github-copilot-feature-matrix",
@@ -2745,7 +2751,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "github-copilot-plans",
@@ -2754,7 +2760,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "github-copilot-plan-docs",
@@ -2763,7 +2769,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "github-copilot-ai-credits",
@@ -2772,7 +2778,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "github-copilot-ai-credits-orgs",
@@ -2781,7 +2787,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "github-copilot-ai-credits-announcement",
@@ -2790,7 +2796,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "github-copilot-ai-credits-changelog",
@@ -2799,7 +2805,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "github-copilot-sdk-ga",
@@ -2808,7 +2814,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "github-copilot-supported-models",
@@ -2817,7 +2823,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "github-repositories",
@@ -7267,7 +7273,7 @@
     },
     {
       "trust_tier": "primary",
-      "last_checked": "2026-05-04",
+      "last_checked": "2026-06-04",
       "id": "val-town-docs",
       "label": "Val Town docs",
       "url": "https://docs.val.town/",
@@ -7276,7 +7282,7 @@
     },
     {
       "trust_tier": "primary",
-      "last_checked": "2026-05-04",
+      "last_checked": "2026-06-04",
       "id": "val-town-official",
       "label": "Val Town homepage",
       "url": "https://www.val.town/",
@@ -7289,7 +7295,8 @@
       "url": "https://www.val.town/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-04"
     },
     {
       "id": "veo-official",

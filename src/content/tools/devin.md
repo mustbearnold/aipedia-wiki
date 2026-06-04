@@ -7,11 +7,11 @@ category: ai-coding
 company: cognition-ai
 url: https://devin.ai
 pricing_model: freemium
-price_range: "$0-$200/month"
+price_range: "$0-$200/month individual; Team from $80/month plus full-dev seats"
 status: active
 launched: 2024-12
-last_updated: 2026-06-01
-last_verified: 2026-06-01
+last_updated: 2026-06-04
+last_verified: 2026-06-04
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://docs.devin.ai/get-started/devin-intro"
     source_label: "Devin docs"
     source_id: devin-docs
-    verified_at: 2026-06-01
+    verified_at: 2026-06-04
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -39,16 +39,16 @@ facts:
     source: "https://docs.devin.ai/get-started/devin-intro"
     source_label: "Devin docs"
     source_id: devin-docs
-    verified_at: 2026-06-01
+    verified_at: 2026-06-04
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
   pricing_anchor:
-    value: "Free tier exists. Pro $20/mo with ACU overage at $2.25, Max $200/mo, Teams $80/mo with unlimited members, Enterprise custom. Pro/Max cap at 10 concurrent sessions; Teams/Enterprise unlimited."
+    value: "Free tier exists. Pro $20/mo with ACU overage at $2.25, Max $200/mo, Team base $80/mo with full-dev seats at $40/mo, Enterprise custom. Pro/Max cap at 10 concurrent sessions; Team/Enterprise can scale concurrent sessions."
     source: "https://devin.ai/pricing"
     source_label: "Devin pricing"
     source_id: devin-pricing
-    verified_at: 2026-06-01
+    verified_at: 2026-06-04
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -57,7 +57,7 @@ facts:
     source: "https://docs.devin.ai/get-started/devin-intro"
     source_label: "Devin docs"
     source_id: devin-docs
-    verified_at: 2026-06-01
+    verified_at: 2026-06-04
     next_review_at: 2026-08-13
     volatility: high
     confidence: medium
@@ -66,13 +66,13 @@ facts:
     source: "https://docs.devin.ai/get-started/devin-intro"
     source_label: "Devin docs"
     source_id: devin-docs
-    verified_at: 2026-06-01
+    verified_at: 2026-06-04
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
 tags: [autonomous-agent, ai-coding, software-engineer, delegation, agentic-coding, cognition, mcp]
 seo_title: "Devin: Features, Pricing & Review (June 2026)"
-meta_description: "Devin is Cognition AI's autonomous coding agent. Free starter tier, Pro $20/mo with ACU overage at $2.25, Max $200/mo, Teams $80/mo, Enterprise custom. MCP Marketplace live. Exact backing model mix is not treated as a stable public buying claim. Verified June 2026."
+meta_description: "Devin is Cognition AI's autonomous coding agent. Free starter tier, Pro $20/mo with ACU overage at $2.25, Max $200/mo, Team from $80/mo plus full-dev seats, Enterprise custom. Verified June 2026."
 author: "aipedia.wiki Editorial"
 best_for:
   - delegating well-scoped tickets
@@ -84,8 +84,15 @@ not_best_for:
   - ambiguous architectural decisions
   - solo devs on fixed budgets
 quick_answer: >-
-  Pick Devin to delegate well-scoped tickets end-to-end like a junior engineer. Skip it for interactive pair-programming or architectural work, where Cursor or Claude Code win on speed and reliability. Pro is $20/mo with ACU overage at $2.25; Free tier exists for trials.
+  Pick Devin to delegate well-scoped tickets end-to-end like a junior engineer. Skip it for interactive pair-programming or architectural work, where Cursor or Claude Code win on speed and reliability. Pro is $20/mo with ACU overage at $2.25; Team starts at $80/mo before full-dev-seat add-ons.
 price_history:
+  - date: 2026-06-04
+    plan: "Team billing wording"
+    price: "Team base $80/mo plus $40/mo per full dev seat"
+    source: "https://devin.ai/pricing"
+    source_label: "Devin pricing"
+    source_id: devin-pricing
+    note: "Corrected team-plan wording after June 4 recheck. Team is not a simple unlimited-full-developer $80 plan; full dev seats add to the base subscription."
   - date: 2025-04-03
     plan: "Pro"
     price: "$20/mo"
@@ -128,7 +135,7 @@ The delegation model is the core differentiator. Assign a ticket over Slack or L
 >
 > **Skip it for interactive coding or architectural decisions.** [Cursor](/tools/cursor/) or [Claude Code](/tools/claude/) are faster and more reliable on ambiguous work. Devin burns Agent Compute Units on exploration, which is expensive when specs are fuzzy.
 >
-> **Who pays which tier:** Free for evaluation, Pro $20/mo for solo devs with small queues, Max $200/mo for heavier individual workloads, Teams $80/mo for shared admin and collaboration, Enterprise for SSO and custom deployment.
+> **Who pays which tier:** Free for evaluation, Pro $20/mo for solo devs with small queues, Max $200/mo for heavier individual workloads, Team from $80/mo when shared admin and collaboration matter, Enterprise for SSO and custom deployment. Budget full-dev-seat add-ons separately before team rollout.
 
 ## Key Facts
 
@@ -140,12 +147,12 @@ The delegation model is the core differentiator. Assign a ticket over Slack or L
 | **Billing unit** | Agent Compute Unit (ACU), roughly 15 minutes of active work |
 | **Pro tier** | $20/mo with usage quota · pay-as-you-go at $2.25/ACU over quota |
 | **Max tier** | $200/mo with increased Devin and Windsurf IDE quotas |
-| **Teams tier** | $80/mo · unlimited members · shared admin · centralized billing |
-| **Concurrent sessions** | Up to 10 on Pro/Max · unlimited on Teams/Enterprise |
+| **Team tier** | $80/mo base · full dev seats add cost · shared admin · centralized billing |
+| **Concurrent sessions** | Up to 10 on Pro/Max · higher team and enterprise concurrency depends on seats/plan |
 | **MCP support** | Yes · MCP Marketplace in Settings (Pro and above) |
 | **Underlying models** | Cognition does not publish a stable exact model mix on the pricing page; evaluate quality on real tickets |
 
-Every data point above was verified against vendor documentation on 2026-06-01. See Sources.
+Every data point above was verified against vendor documentation on 2026-06-04. See Sources.
 
 ## What it actually is
 
@@ -175,17 +182,17 @@ The moat sits in the sandbox plus MCP Marketplace. No other mainstream agent cou
 
 ## Pricing
 
-Pricing via [devin.ai/pricing](https://devin.ai/pricing). Individual plans use the tier quota plus overage; business plans add unlimited seats and admin.
+Pricing via [devin.ai/pricing](https://devin.ai/pricing). Individual plans use the tier quota plus overage; team plans add shared admin, collaboration, and full-dev-seat billing.
 
 | Plan | Price | ACU Model | Concurrency | Who's it for |
 |------|-------|-----------|-------------|--------------|
 | Free | $0 | Limited trial access | Low | Evaluating Devin on small tasks |
 | Pro | $20/mo | Included quota + $2.25/ACU overage | Up to 10 sessions | Solo devs with light queues |
 | Max | $200/mo | Larger quota + overage | Up to 10 sessions | **Heavy individual workloads** |
-| Teams | $80/mo | Shared quota | Unlimited | Teams wanting admin + centralized billing |
+| Team | $80/mo base plus full-dev seats | Shared quota | Plan/seat dependent | Teams wanting admin + centralized billing |
 | Enterprise | Custom | Custom quota + VPC option | Unlimited | SSO, SAML/OIDC, custom deployment |
 
-*Prices verified 2026-06-01 via [Devin pricing](https://devin.ai/pricing) and [Cognition's self-serve plan launch](https://cognition.ai/blog/new-self-serve-plans-for-devin). An ACU is approximately 15 minutes of active Devin work.*
+*Prices verified 2026-06-04 via [Devin pricing](https://devin.ai/pricing) and [Cognition's self-serve plan launch](https://cognition.ai/blog/new-self-serve-plans-for-devin). An ACU is approximately 15 minutes of active Devin work. Team pricing should be quoted with the full-dev-seat add-on, not just the base workspace price.*
 
 ## Against the alternatives
 
@@ -205,13 +212,13 @@ Pricing via [devin.ai/pricing](https://devin.ai/pricing). Individual plans use t
 - **ACU cost compounds on large tasks.** A feature spanning many files can run 10 to 20 ACUs. Budget carefully before running parallel sessions.
 - **Hallucinated APIs on refactors.** Devin occasionally references deprecated libraries on legacy codebases. Always run the test suite before merging.
 - **Slower than interactive tools.** Tasks take 10 to 60 minutes. Not useful for tight iteration loops.
-- **Concurrency cap on individual plans.** Pro and Max cap at 10 concurrent sessions. Teams is needed for fleet-scale parallelism.
+- **Concurrency cap on individual plans.** Pro and Max cap at 10 concurrent sessions. Team or Enterprise is needed for fleet-scale parallelism.
 - **No offline or self-hosted option on Pro.** Enterprise offers VPC deployment. Individual tiers run only on Cognition's cloud.
 - **ACU overage meter can surprise.** Over-quota usage bills at $2.25/ACU. Heavy weeks on Pro climb fast without a usage cap.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-01 against [Devin pricing](https://devin.ai/pricing), [Cognition's self-serve plan launch](https://cognition.ai/blog/new-self-serve-plans-for-devin), the [MCP Marketplace announcement](https://cognition.ai/blog/mcp-marketplace), and the [Cognition acquisition of Windsurf](https://cognition.ai/blog/windsurf).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-04 against [Devin pricing](https://devin.ai/pricing), [Cognition's self-serve plan launch](https://cognition.ai/blog/new-self-serve-plans-for-devin), the [MCP Marketplace announcement](https://cognition.ai/blog/mcp-marketplace), and the [Cognition acquisition of Windsurf](https://cognition.ai/blog/windsurf).
 
 ## FAQ
 
@@ -228,7 +235,7 @@ Yes. The MCP Marketplace launched in 2026 and is accessible from Settings on Pro
 Devin delegates full tickets asynchronously and returns a PR. Cursor and Claude Code are interactive: you code alongside them in real time. Choose Devin for queues of well-scoped work, Cursor for pair-programming, Claude Code for terminal-first agentic runs.
 
 **What happened to the $500 plan?**
-Cognition replaced the old $500 Team-only tier with self-serve Pro at $20/mo in April 2025. Teams is now $80/mo with unlimited seats, and Max sits at $200/mo for heavy individual use.
+Cognition replaced the old $500 Team-only tier with self-serve Pro at $20/mo in April 2025. Team now starts at an $80/mo base with full-dev-seat add-ons, and Max sits at $200/mo for heavy individual use.
 
 ## Sources
 

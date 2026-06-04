@@ -5,7 +5,7 @@ title: AI Coding Assistants
 description: Current AI coding assistants, AI-native IDEs, terminal coding agents, PR agents, and app builders for developers, founders, teams, and non-developers.
 tool_count: 30
 seo_title: "Best AI Coding Tools & Copilot Alternatives (June 2026)"
-meta_description: "Updated June 4, 2026: compare Cursor, Claude Code, GitHub Copilot, Windsurf/Codeium, Trae, Codex, v0, Goose, GLM, Glean, Replit Agent, Devin, Aider, Cline, Continue, CodeRabbit, Cody, Amazon Q Developer, and Augment by workflow, pricing, autonomy, app-building, and team fit."
+meta_description: "Updated June 4, 2026: compare Cursor, Claude Code, GitHub Copilot, Continue, Devin, Val Town, Windsurf/Codeium, Codex, v0, Goose, GLM, Glean, Replit Agent, Aider, Cline, CodeRabbit, Cody, Amazon Q Developer, and Augment by workflow, pricing, autonomy, app-building, and team fit."
 author: "aipedia.wiki Editorial"
 last_updated: 2026-06-04
 last_verified: 2026-06-04
@@ -30,7 +30,7 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 
 **Use [GitHub Copilot](/tools/github-copilot/) when the team already lives in GitHub and wants a safe default.** GitHub's official billing docs and June 1 changelog now make usage-based billing with GitHub AI Credits the active model, and the June 2 [Copilot SDK GA](/news/2026-06-02-github-copilot-ai-credits-sdk-ga/) turns Copilot into an embeddable agent runtime. It remains a strong value for GitHub-native teams that value IDE coverage, policy, pull requests, and enterprise governance, but heavy agentic, SDK, code-review, Spaces, Spark, and cloud-agent use needs modeling.
 
-**Use [Claude Code](/tools/claude-code/) when the buyer wants a terminal coding agent.** It is better for repo investigation, multi-file work, command execution, debugging loops, and senior-engineer-style delegation than for inline autocomplete. The May 28 Opus 4.8 and dynamic workflows update makes it more credible for large bug hunts, migrations, audits, and modernization tasks that benefit from parallel subagents, but teams should model usage before broad rollout.
+**Use [Claude Code](/tools/claude-code/) when the buyer wants a Claude-backed coding agent for serious repo work.** The June 4 comparison pass refreshes [Claude Code vs Continue](/compare/claude-code-vs-continue/), [Claude Code vs Devin](/compare/claude-code-vs-devin/), [Claude Code vs GitHub Copilot](/compare/claude-code-vs-github-copilot/), and [Claude Code vs Val Town](/compare/claude-code-vs-val-town/) around the real buyer split: specialist Claude agent, open-source BYOK IDE layer, async ticket delegation, GitHub-native AI platform, or hosted TypeScript runtime. Claude Code is better for repo investigation, multi-file work, command execution, debugging loops, and senior-engineer-style delegation than for passive autocomplete.
 
 **Use [Windsurf](/tools/windsurf/) when the buyer wants to compare AI IDE cost and workflow.** Windsurf's current docs describe Free, Pro, Teams, and Enterprise usage plans with usage-based self-serve plans introduced in March 2026. Codeium has now fully sunset (codeium.com 301-redirects to windsurf.com), so existing Codeium users should treat Windsurf as the inheritor product, not a separate option.
 
@@ -44,7 +44,7 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 
 **Use [Glean](/tools/glean/) when coding agents need permission-aware company knowledge.** Glean's developer platform now exposes MCP and setup paths for Claude Code, Codex, Goose, Cursor, Gemini CLI, VS Code, Windsurf, JetBrains, and other developer surfaces, so it belongs in the enterprise-codebase-context lane rather than the autocomplete lane.
 
-**June 2 maintenance note:** the open-source/BYOK and PR-agent layer has been refreshed for Aider, Cline, Continue, CodeRabbit, Devin, Amazon Q Developer, Augment Code, Sourcegraph Cody, and the Codeium-to-Windsurf migration path. A follow-up June 2 comparison pass refreshed Aider vs Claude Code, Aider vs Cursor, and Aider vs GitHub Copilot around Claude Code Opus 4.8/dynamic workflows, Cursor Composer 2.5/Automations, and GitHub Copilot AI Credits. The browser builders, specialist runtimes, autocomplete, privacy-first, and secondary AI IDE layer has also been rechecked for Factory, JetBrains AI, Kiro, Mastra, OpenHands, Pieces, Qodo, Replit Agent, Same.dev, Supermaven, Tabnine, Val Town, Windsurf, and Zed. A June 2 pass adds Goose, GLM-5.1, and Glean developer integrations as adjacent coding-agent infrastructure. The decision rule did not change: use Cursor, GitHub Copilot, or Claude Code as first stops; use Replit/Same/Bolt/Lovable/Base44 when the buyer wants browser app-building; use Browserbase when the coding problem is reliable cloud-browser execution for agents; use Val Town/OpenHands/Mastra for developer-specific runtime or framework jobs; use Tabnine/Supermaven/Zed/Windsurf when privacy, autocomplete latency, native editor speed, or IDE workflow matters more than defaulting to Cursor.
+**June 4 maintenance note:** the Claude Code comparison layer has been refreshed against current Anthropic, GitHub, Continue, Cognition, and Val Town sources. Continue remains the open-source BYOK IDE layer, Devin is the async autonomous-ticket worker with ACU and seat billing, GitHub Copilot is the GitHub-native platform governed by AI Credits and SDK usage, and Val Town is a hosted TypeScript runtime rather than a direct coding-agent substitute. Earlier June 2 maintenance remains in force for Aider, Cline, CodeRabbit, Amazon Q Developer, Augment Code, Sourcegraph Cody, Factory, JetBrains AI, Kiro, Mastra, OpenHands, Pieces, Qodo, Replit Agent, Same.dev, Supermaven, Tabnine, Windsurf, Zed, Goose, GLM-5.1, and Glean.
 
 ## Buyer Paths
 
@@ -52,15 +52,18 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 |---|---|---|---|
 | Daily AI-native IDE coding | [Cursor](/tools/cursor/) | Strongest full-editor Copilot replacement, now with Composer 2.5 and Automations | Editor migration can disrupt teams |
 | GitHub-native IDE assistance and policy | [GitHub Copilot](/tools/github-copilot/) | Best fit for GitHub, VS Code, JetBrains, PRs, and enterprise controls | AI Credits and usage-based billing need modeling before heavy agent use |
-| Terminal repo agent | [Claude Code](/tools/claude-code/) | Strong for inspecting, editing, running commands, iterating across codebases, and using dynamic workflows for broad tasks | Subscription/API limits, effort settings, and workflow usage controls matter |
+| Claude-backed repo agent | [Claude Code](/tools/claude-code/) | Strong for inspecting, editing, running commands, iterating across codebases, and using dynamic workflows for broad tasks | Subscription/API limits, effort settings, permissions, and workflow usage controls matter |
 | Value AI IDE alternative | [Windsurf](/tools/windsurf/) | Worth testing against Cursor when credits and team cost matter | Credit systems are not as simple as monthly sticker price |
 | Lowest-cost multi-model IDE experiment | [Trae](/tools/trae/) | Lite at $3 and Pro at $10 undercut most AI IDE plans while preserving a VS Code-like workflow | ByteDance-adjacent telemetry/procurement risk and token allowances need review before serious repo work |
 | OpenAI-native coding agent | [Codex](/tools/codex/) | Good for local repo tasks, PR-style work, and OpenAI-aligned teams | Not a pure inline autocomplete replacement |
 | Vercel-native app builder | [v0](/tools/v0/) | Turns prompts, screenshots, Figma context, and code context into previewable web apps and PR-ready changes | Credit/token usage, accessibility, security, and generated code quality need review |
 | Open-source local/BYOK agent | [Goose](/tools/goose/) | Desktop, CLI, and API agent with model choice, MCP extensions, and Apache-2.0 code | Needs provider-cost controls, secrets hygiene, and local-permission review |
+| Open-source BYOK IDE layer | [Continue](/tools/continue/) | Best fit when teams want VS Code/JetBrains/Vim support with model-provider control and shared agents | More setup than Copilot/Cursor; model costs still apply |
 | Coding model backend evaluation | [GLM](/tools/glm/) | GLM-5.1 open weights, OpenAI-compatible API examples, MCP/tool support, and long context | Verify endpoint behavior, region, compliance, and output-heavy costs |
 | Enterprise code/context search | [Glean](/tools/glean/) | Permission-aware work search and MCP/IDE integrations for developer tools | Sales-led pricing and connector/security review are required |
 | Browser app building for non-devs | [Replit Agent](/tools/replit-agent/) | Useful when the buyer wants build/run/deploy in a browser | Generated apps still need review, security, and maintenance |
+| Async ticket delegation | [Devin](/tools/devin/) | Sandbox sessions, playback, and PR output fit well-scoped backlog work | ACU and full-dev-seat costs need modeling before team rollout |
+| Tiny serverless TypeScript jobs | [Val Town](/tools/val-town/) | Fastest path for vals, cron jobs, webhooks, and small internal utilities | Not a full coding assistant or general app platform |
 | Open-source CLI/BYOK coding | [Aider](/tools/aider/) | Strong for developers who want local control and model choice | Requires comfort with terminal workflows and API cost management |
 
 ## Our Picks
@@ -114,20 +117,20 @@ Do not publish stale model-version claims. Coding tools route models and change 
 
 ## Sources
 
-- [GitHub Copilot plans](https://github.com/features/copilot/plans) (verified 2026-06-03)
-- [GitHub Copilot billing docs](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals) (verified 2026-06-03)
-- [GitHub Copilot organization billing docs](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-organizations-and-enterprises) (verified 2026-06-03)
+- [GitHub Copilot plans](https://github.com/features/copilot/plans) (verified 2026-06-04)
+- [GitHub Copilot billing docs](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals) (verified 2026-06-04)
+- [GitHub Copilot organization billing docs](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-organizations-and-enterprises) (verified 2026-06-04)
 - [GitHub Copilot billing and plans changelog](https://github.blog/changelog/2026-06-01-updates-to-github-copilot-billing-and-plans) (verified 2026-06-03)
-- [GitHub Copilot SDK GA](https://github.blog/changelog/2026-06-02-copilot-sdk-is-now-generally-available/) (verified 2026-06-03)
+- [GitHub Copilot SDK GA](https://github.blog/changelog/2026-06-02-copilot-sdk-is-now-generally-available/) (verified 2026-06-04)
 - [Cursor pricing](https://cursor.com/pricing) (verified 2026-06-03)
 - [Cursor Composer 2.5 changelog](https://cursor.com/changelog/composer-2-5) (verified 2026-06-03)
 - [Cursor Gartner enterprise-coding-agent recognition](https://cursor.com/blog/cursor-leads-gartner-mq-2026) (verified 2026-05-26)
 - [Cursor changelog](https://cursor.com/changelog) (verified 2026-06-03)
-- [Claude Code docs](https://code.claude.com/docs) (verified 2026-06-02)
-- [Claude Code cost management](https://code.claude.com/docs/en/costs) (verified 2026-06-02)
+- [Claude Code docs](https://code.claude.com/docs) (verified 2026-06-04)
+- [Claude Code cost management](https://code.claude.com/docs/en/costs) (verified 2026-06-04)
 - [Claude Opus 4.8 and dynamic workflows](https://www.anthropic.com/news/claude-opus-4-8) (verified 2026-06-03)
 - [Claude dynamic workflows in Claude Code](https://claude.com/blog/introducing-dynamic-workflows-in-claude-code) (verified 2026-06-02)
-- [Claude Max plan](https://support.claude.com/en/articles/11049741-what-is-the-max-plan) (verified 2026-06-02)
+- [Claude Max plan](https://support.claude.com/en/articles/11049741-what-is-the-max-plan) (verified 2026-06-04)
 - [Windsurf plans and usage](https://docs.windsurf.com/windsurf/accounts/usage) (verified 2026-06-01)
 - [Windsurf pricing](https://windsurf.com/pricing) (verified 2026-06-01)
 - [Windsurf model docs](https://docs.windsurf.com/windsurf/models) (verified 2026-06-01)
@@ -137,8 +140,8 @@ Do not publish stale model-version claims. Coding tools route models and change 
 - [Augment Code pricing](https://www.augmentcode.com/pricing) (verified 2026-06-01)
 - [Cline homepage](https://cline.bot/) (verified 2026-06-01)
 - [CodeRabbit pricing](https://www.coderabbit.ai/pricing) (verified 2026-06-01)
-- [Continue pricing](https://www.continue.dev/pricing) (verified 2026-06-01)
-- [Devin pricing](https://devin.ai/pricing) (verified 2026-06-01)
+- [Continue pricing](https://www.continue.dev/pricing) (verified 2026-06-04)
+- [Devin pricing](https://devin.ai/pricing) (verified 2026-06-04)
 - [Sourcegraph pricing](https://sourcegraph.com/pricing) (verified 2026-06-01)
 - [Cognition Windsurf acquisition announcement](https://cognition.ai/blog/windsurf) (verified 2026-06-01)
 - [Factory pricing](https://docs.factory.ai/pricing) (verified 2026-06-01)
@@ -155,7 +158,7 @@ Do not publish stale model-version claims. Coding tools route models and change 
 - [Browserbase pricing](https://www.browserbase.com/pricing) (verified 2026-06-01)
 - [Supermaven pricing](https://supermaven.com/pricing) (verified 2026-06-01)
 - [Tabnine pricing](https://www.tabnine.com/pricing) (verified 2026-06-01)
-- [Val Town pricing](https://www.val.town/pricing) (verified 2026-06-01)
+- [Val Town pricing](https://www.val.town/pricing) (verified 2026-06-04)
 - [Zed pricing](https://zed.dev/pricing) (verified 2026-06-01)
 - [Trae pricing](https://www.trae.ai/pricing) (verified 2026-05-24)
 - [Gemini Code Assist](https://cloud.google.com/products/gemini/code-assist) (verified 2026-05-13)

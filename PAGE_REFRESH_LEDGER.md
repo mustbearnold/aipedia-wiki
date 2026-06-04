@@ -25,10 +25,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-12 | /dead/ | Static page | Yes | git | src/pages/dead/index.astro |
 | 2026-05-13 | /compare/beautiful-ai-vs-tome/ | Comparison | Yes | frontmatter | src/content/comparisons/beautiful-ai-vs-tome.md |
 | 2026-05-13 | /compare/chatgpt-vs-phind/ | Comparison | Yes | frontmatter | src/content/comparisons/chatgpt-vs-phind.md |
-| 2026-05-13 | /compare/claude-code-vs-continue/ | Comparison | Yes | frontmatter | src/content/comparisons/claude-code-vs-continue.md |
-| 2026-05-13 | /compare/claude-code-vs-devin/ | Comparison | Yes | frontmatter | src/content/comparisons/claude-code-vs-devin.md |
-| 2026-05-13 | /compare/claude-code-vs-github-copilot/ | Comparison | Yes | frontmatter | src/content/comparisons/claude-code-vs-github-copilot.md |
-| 2026-05-13 | /compare/claude-code-vs-val-town/ | Comparison | Yes | frontmatter | src/content/comparisons/claude-code-vs-val-town.md |
 | 2026-05-13 | /compare/claude-vs-cline/ | Comparison | Yes | frontmatter | src/content/comparisons/claude-vs-cline.md |
 | 2026-05-13 | /compare/claude-vs-cody/ | Comparison | Yes | frontmatter | src/content/comparisons/claude-vs-cody.md |
 | 2026-05-13 | /compare/claude-vs-cursor/ | Comparison | Yes | frontmatter | src/content/comparisons/claude-vs-cursor.md |
@@ -504,7 +500,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-28 | /tools/decktopus/ | Tool | Yes | frontmatter | src/content/tools/decktopus.md |
 | 2026-05-28 | /tools/neuronwriter/ | Tool | Yes | frontmatter | src/content/tools/neuronwriter.md |
 | 2026-05-28 | /tools/rytr/ | Tool | Yes | frontmatter | src/content/tools/rytr.md |
-| 2026-05-29 | /tools/claude-code/ | Tool | Yes | frontmatter | src/content/tools/claude-code.md |
 | 2026-06-01 | /about/editorial/ | Static page | Yes | git | src/pages/about/editorial.astro |
 | 2026-06-01 | /admin/reviews/ | Static page | No | git | src/pages/admin/reviews.astro |
 | 2026-06-01 | /answers/ | Static page | Yes | git | src/pages/answers/index.astro |
@@ -543,8 +538,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-01 | /tools/codeium/ | Tool | Yes | frontmatter | src/content/tools/codeium.md |
 | 2026-06-01 | /tools/coderabbit/ | Tool | Yes | frontmatter | src/content/tools/coderabbit.md |
 | 2026-06-01 | /tools/cody/ | Tool | Yes | frontmatter | src/content/tools/cody.md |
-| 2026-06-01 | /tools/continue/ | Tool | Yes | frontmatter | src/content/tools/continue.md |
-| 2026-06-01 | /tools/devin/ | Tool | Yes | frontmatter | src/content/tools/devin.md |
 | 2026-06-01 | /tools/factory/ | Tool | Yes | frontmatter | src/content/tools/factory.md |
 | 2026-06-01 | /tools/jetbrains-ai/ | Tool | Yes | frontmatter | src/content/tools/jetbrains-ai.md |
 | 2026-06-01 | /tools/kiro/ | Tool | Yes | frontmatter | src/content/tools/kiro.md |
@@ -556,7 +549,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-01 | /tools/same-dev/ | Tool | Yes | frontmatter | src/content/tools/same-dev.md |
 | 2026-06-01 | /tools/supermaven/ | Tool | Yes | frontmatter | src/content/tools/supermaven.md |
 | 2026-06-01 | /tools/tabnine/ | Tool | Yes | frontmatter | src/content/tools/tabnine.md |
-| 2026-06-01 | /tools/val-town/ | Tool | Yes | frontmatter | src/content/tools/val-town.md |
 | 2026-06-01 | /tools/windsurf/ | Tool | Yes | frontmatter | src/content/tools/windsurf.md |
 | 2026-06-01 | /tools/zed/ | Tool | Yes | frontmatter | src/content/tools/zed.md |
 | 2026-06-02 | /404/ | Static page | No | git | src/pages/404.astro |
@@ -712,7 +704,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-03 | /tools/chatgpt/ | Tool | Yes | frontmatter | src/content/tools/chatgpt.md |
 | 2026-06-03 | /tools/claude/ | Tool | Yes | frontmatter | src/content/tools/claude.md |
 | 2026-06-03 | /tools/gemini/ | Tool | Yes | frontmatter | src/content/tools/gemini.md |
-| 2026-06-03 | /tools/github-copilot/ | Tool | Yes | frontmatter | src/content/tools/github-copilot.md |
 | 2026-06-03 | /tools/jasper/ | Tool | Yes | frontmatter | src/content/tools/jasper.md |
 | 2026-06-03 | /tools/microsoft-agent-framework/ | Tool | Yes | frontmatter | src/content/tools/microsoft-agent-framework.md |
 | 2026-06-03 | /tools/mistral-ai/ | Tool | Yes | frontmatter | src/content/tools/mistral-ai.md |
@@ -720,32 +711,41 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-03 | /tools/voxtral/ | Tool | Yes | frontmatter | src/content/tools/voxtral.md |
 | 2026-06-04 | / | Static page | Yes | working tree | src/pages/index.astro |
 | 2026-06-04 | /categories/ | Static page | Yes | working tree | src/pages/categories/index.astro |
-| 2026-06-04 | /categories/ai-automation/ | Category | Yes | working tree | src/content/categories/ai-automation.md |
+| 2026-06-04 | /categories/ai-automation/ | Category | Yes | frontmatter | src/content/categories/ai-automation.md |
 | 2026-06-04 | /categories/ai-coding/ | Category | Yes | working tree | src/content/categories/ai-coding.md |
-| 2026-06-04 | /categories/ai-design/ | Category | Yes | working tree | src/content/categories/ai-design.md |
-| 2026-06-04 | /categories/ai-research/ | Category | Yes | working tree | src/content/categories/ai-research.md |
-| 2026-06-04 | /categories/ai-search/ | Category | Yes | working tree | src/content/categories/ai-search.md |
-| 2026-06-04 | /categories/ai-seo/ | Category | Yes | working tree | src/content/categories/ai-seo.md |
-| 2026-06-04 | /categories/ai-writing/ | Category | Yes | working tree | src/content/categories/ai-writing.md |
+| 2026-06-04 | /categories/ai-design/ | Category | Yes | frontmatter | src/content/categories/ai-design.md |
+| 2026-06-04 | /categories/ai-research/ | Category | Yes | frontmatter | src/content/categories/ai-research.md |
+| 2026-06-04 | /categories/ai-search/ | Category | Yes | frontmatter | src/content/categories/ai-search.md |
+| 2026-06-04 | /categories/ai-seo/ | Category | Yes | frontmatter | src/content/categories/ai-seo.md |
+| 2026-06-04 | /categories/ai-writing/ | Category | Yes | frontmatter | src/content/categories/ai-writing.md |
 | 2026-06-04 | /compare/ | Static page | Yes | working tree | src/pages/compare/index.astro |
-| 2026-06-04 | /compare/chatgpt-vs-scite/ | Comparison | Yes | working tree | src/content/comparisons/chatgpt-vs-scite.md |
-| 2026-06-04 | /compare/chatgpt-vs-sudowrite/ | Comparison | Yes | working tree | src/content/comparisons/chatgpt-vs-sudowrite.md |
-| 2026-06-04 | /compare/chatgpt-vs-surfer-seo/ | Comparison | Yes | working tree | src/content/comparisons/chatgpt-vs-surfer-seo.md |
-| 2026-06-04 | /compare/chatgpt-vs-v0/ | Comparison | Yes | working tree | src/content/comparisons/chatgpt-vs-v0.md |
-| 2026-06-04 | /compare/chatgpt-vs-wordtune/ | Comparison | Yes | working tree | src/content/comparisons/chatgpt-vs-wordtune.md |
-| 2026-06-04 | /compare/chatgpt-vs-writesonic/ | Comparison | Yes | working tree | src/content/comparisons/chatgpt-vs-writesonic.md |
-| 2026-06-04 | /compare/chatgpt-vs-you-com/ | Comparison | Yes | working tree | src/content/comparisons/chatgpt-vs-you-com.md |
-| 2026-06-04 | /compare/chatgpt-vs-zapier/ | Comparison | Yes | working tree | src/content/comparisons/chatgpt-vs-zapier.md |
+| 2026-06-04 | /compare/chatgpt-vs-scite/ | Comparison | Yes | frontmatter | src/content/comparisons/chatgpt-vs-scite.md |
+| 2026-06-04 | /compare/chatgpt-vs-sudowrite/ | Comparison | Yes | frontmatter | src/content/comparisons/chatgpt-vs-sudowrite.md |
+| 2026-06-04 | /compare/chatgpt-vs-surfer-seo/ | Comparison | Yes | frontmatter | src/content/comparisons/chatgpt-vs-surfer-seo.md |
+| 2026-06-04 | /compare/chatgpt-vs-v0/ | Comparison | Yes | frontmatter | src/content/comparisons/chatgpt-vs-v0.md |
+| 2026-06-04 | /compare/chatgpt-vs-wordtune/ | Comparison | Yes | frontmatter | src/content/comparisons/chatgpt-vs-wordtune.md |
+| 2026-06-04 | /compare/chatgpt-vs-writesonic/ | Comparison | Yes | frontmatter | src/content/comparisons/chatgpt-vs-writesonic.md |
+| 2026-06-04 | /compare/chatgpt-vs-you-com/ | Comparison | Yes | frontmatter | src/content/comparisons/chatgpt-vs-you-com.md |
+| 2026-06-04 | /compare/chatgpt-vs-zapier/ | Comparison | Yes | frontmatter | src/content/comparisons/chatgpt-vs-zapier.md |
+| 2026-06-04 | /compare/claude-code-vs-continue/ | Comparison | Yes | working tree | src/content/comparisons/claude-code-vs-continue.md |
+| 2026-06-04 | /compare/claude-code-vs-devin/ | Comparison | Yes | working tree | src/content/comparisons/claude-code-vs-devin.md |
+| 2026-06-04 | /compare/claude-code-vs-github-copilot/ | Comparison | Yes | working tree | src/content/comparisons/claude-code-vs-github-copilot.md |
+| 2026-06-04 | /compare/claude-code-vs-val-town/ | Comparison | Yes | working tree | src/content/comparisons/claude-code-vs-val-town.md |
 | 2026-06-04 | /explore/ | Static page | Yes | git | src/pages/explore/index.astro |
 | 2026-06-04 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
 | 2026-06-04 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
 | 2026-06-04 | /news/rss.xml | Crawl surface | No | git | src/pages/news/rss.xml.ts |
 | 2026-06-04 | /tools/ | Static page | Yes | working tree | src/pages/tools/index.astro |
-| 2026-06-04 | /tools/scite/ | Tool | Yes | working tree | src/content/tools/scite.md |
-| 2026-06-04 | /tools/sudowrite/ | Tool | Yes | working tree | src/content/tools/sudowrite.md |
-| 2026-06-04 | /tools/surfer-seo/ | Tool | Yes | working tree | src/content/tools/surfer-seo.md |
-| 2026-06-04 | /tools/v0/ | Tool | Yes | working tree | src/content/tools/v0.md |
-| 2026-06-04 | /tools/wordtune/ | Tool | Yes | working tree | src/content/tools/wordtune.md |
-| 2026-06-04 | /tools/writesonic/ | Tool | Yes | working tree | src/content/tools/writesonic.md |
-| 2026-06-04 | /tools/you-com/ | Tool | Yes | working tree | src/content/tools/you-com.md |
-| 2026-06-04 | /tools/zapier/ | Tool | Yes | working tree | src/content/tools/zapier.md |
+| 2026-06-04 | /tools/claude-code/ | Tool | Yes | working tree | src/content/tools/claude-code.md |
+| 2026-06-04 | /tools/continue/ | Tool | Yes | working tree | src/content/tools/continue.md |
+| 2026-06-04 | /tools/devin/ | Tool | Yes | working tree | src/content/tools/devin.md |
+| 2026-06-04 | /tools/github-copilot/ | Tool | Yes | working tree | src/content/tools/github-copilot.md |
+| 2026-06-04 | /tools/scite/ | Tool | Yes | frontmatter | src/content/tools/scite.md |
+| 2026-06-04 | /tools/sudowrite/ | Tool | Yes | frontmatter | src/content/tools/sudowrite.md |
+| 2026-06-04 | /tools/surfer-seo/ | Tool | Yes | frontmatter | src/content/tools/surfer-seo.md |
+| 2026-06-04 | /tools/v0/ | Tool | Yes | frontmatter | src/content/tools/v0.md |
+| 2026-06-04 | /tools/val-town/ | Tool | Yes | working tree | src/content/tools/val-town.md |
+| 2026-06-04 | /tools/wordtune/ | Tool | Yes | frontmatter | src/content/tools/wordtune.md |
+| 2026-06-04 | /tools/writesonic/ | Tool | Yes | frontmatter | src/content/tools/writesonic.md |
+| 2026-06-04 | /tools/you-com/ | Tool | Yes | frontmatter | src/content/tools/you-com.md |
+| 2026-06-04 | /tools/zapier/ | Tool | Yes | frontmatter | src/content/tools/zapier.md |
