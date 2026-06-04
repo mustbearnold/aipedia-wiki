@@ -26,10 +26,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /compare/beautiful-ai-vs-tome/ | Comparison | Yes | frontmatter | src/content/comparisons/beautiful-ai-vs-tome.md |
 | 2026-05-13 | /compare/chatgpt-vs-phind/ | Comparison | Yes | frontmatter | src/content/comparisons/chatgpt-vs-phind.md |
 | 2026-05-13 | /compare/codeium-vs-github-copilot/ | Comparison | Yes | frontmatter | src/content/comparisons/codeium-vs-github-copilot.md |
-| 2026-05-13 | /compare/continue-vs-cursor/ | Comparison | Yes | frontmatter | src/content/comparisons/continue-vs-cursor.md |
-| 2026-05-13 | /compare/continue-vs-devin/ | Comparison | Yes | frontmatter | src/content/comparisons/continue-vs-devin.md |
-| 2026-05-13 | /compare/continue-vs-github-copilot/ | Comparison | Yes | frontmatter | src/content/comparisons/continue-vs-github-copilot.md |
-| 2026-05-13 | /compare/continue-vs-val-town/ | Comparison | Yes | frontmatter | src/content/comparisons/continue-vs-val-town.md |
 | 2026-05-13 | /compare/copy-ai-vs-grammarly/ | Comparison | Yes | frontmatter | src/content/comparisons/copy-ai-vs-grammarly.md |
 | 2026-05-13 | /compare/copy-ai-vs-hyperwrite/ | Comparison | Yes | frontmatter | src/content/comparisons/copy-ai-vs-hyperwrite.md |
 | 2026-05-13 | /compare/copy-ai-vs-quillbot/ | Comparison | Yes | frontmatter | src/content/comparisons/copy-ai-vs-quillbot.md |
@@ -677,10 +673,10 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-04 | /categories/ | Static page | Yes | working tree | src/pages/categories/index.astro |
 | 2026-06-04 | /categories/ai-automation/ | Category | Yes | frontmatter | src/content/categories/ai-automation.md |
 | 2026-06-04 | /categories/ai-chatbots/ | Category | Yes | frontmatter | src/content/categories/ai-chatbots.md |
-| 2026-06-04 | /categories/ai-coding/ | Category | Yes | frontmatter | src/content/categories/ai-coding.md |
+| 2026-06-04 | /categories/ai-coding/ | Category | Yes | working tree | src/content/categories/ai-coding.md |
 | 2026-06-04 | /categories/ai-design/ | Category | Yes | frontmatter | src/content/categories/ai-design.md |
 | 2026-06-04 | /categories/ai-notes/ | Category | Yes | frontmatter | src/content/categories/ai-notes.md |
-| 2026-06-04 | /categories/ai-research/ | Category | Yes | working tree | src/content/categories/ai-research.md |
+| 2026-06-04 | /categories/ai-research/ | Category | Yes | frontmatter | src/content/categories/ai-research.md |
 | 2026-06-04 | /categories/ai-search/ | Category | Yes | frontmatter | src/content/categories/ai-search.md |
 | 2026-06-04 | /categories/ai-seo/ | Category | Yes | frontmatter | src/content/categories/ai-seo.md |
 | 2026-06-04 | /categories/ai-writing/ | Category | Yes | frontmatter | src/content/categories/ai-writing.md |
@@ -719,28 +715,32 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-04 | /compare/clay-vs-zapier/ | Comparison | Yes | frontmatter | src/content/comparisons/clay-vs-zapier.md |
 | 2026-06-04 | /compare/cline-vs-cursor/ | Comparison | Yes | frontmatter | src/content/comparisons/cline-vs-cursor.md |
 | 2026-06-04 | /compare/cody-vs-cursor/ | Comparison | Yes | frontmatter | src/content/comparisons/cody-vs-cursor.md |
-| 2026-06-04 | /compare/connected-papers-vs-consensus/ | Comparison | Yes | working tree | src/content/comparisons/connected-papers-vs-consensus.md |
-| 2026-06-04 | /compare/connected-papers-vs-elicit/ | Comparison | Yes | working tree | src/content/comparisons/connected-papers-vs-elicit.md |
-| 2026-06-04 | /compare/connected-papers-vs-nanochat/ | Comparison | Yes | working tree | src/content/comparisons/connected-papers-vs-nanochat.md |
-| 2026-06-04 | /compare/connected-papers-vs-scite/ | Comparison | Yes | working tree | src/content/comparisons/connected-papers-vs-scite.md |
-| 2026-06-04 | /compare/connected-papers-vs-semantic-scholar/ | Comparison | Yes | working tree | src/content/comparisons/connected-papers-vs-semantic-scholar.md |
-| 2026-06-04 | /compare/consensus-vs-elicit/ | Comparison | Yes | working tree | src/content/comparisons/consensus-vs-elicit.md |
-| 2026-06-04 | /compare/consensus-vs-nanochat/ | Comparison | Yes | working tree | src/content/comparisons/consensus-vs-nanochat.md |
-| 2026-06-04 | /compare/consensus-vs-scite/ | Comparison | Yes | working tree | src/content/comparisons/consensus-vs-scite.md |
-| 2026-06-04 | /compare/consensus-vs-semantic-scholar/ | Comparison | Yes | working tree | src/content/comparisons/consensus-vs-semantic-scholar.md |
+| 2026-06-04 | /compare/connected-papers-vs-consensus/ | Comparison | Yes | frontmatter | src/content/comparisons/connected-papers-vs-consensus.md |
+| 2026-06-04 | /compare/connected-papers-vs-elicit/ | Comparison | Yes | frontmatter | src/content/comparisons/connected-papers-vs-elicit.md |
+| 2026-06-04 | /compare/connected-papers-vs-nanochat/ | Comparison | Yes | frontmatter | src/content/comparisons/connected-papers-vs-nanochat.md |
+| 2026-06-04 | /compare/connected-papers-vs-scite/ | Comparison | Yes | frontmatter | src/content/comparisons/connected-papers-vs-scite.md |
+| 2026-06-04 | /compare/connected-papers-vs-semantic-scholar/ | Comparison | Yes | frontmatter | src/content/comparisons/connected-papers-vs-semantic-scholar.md |
+| 2026-06-04 | /compare/consensus-vs-elicit/ | Comparison | Yes | frontmatter | src/content/comparisons/consensus-vs-elicit.md |
+| 2026-06-04 | /compare/consensus-vs-nanochat/ | Comparison | Yes | frontmatter | src/content/comparisons/consensus-vs-nanochat.md |
+| 2026-06-04 | /compare/consensus-vs-scite/ | Comparison | Yes | frontmatter | src/content/comparisons/consensus-vs-scite.md |
+| 2026-06-04 | /compare/consensus-vs-semantic-scholar/ | Comparison | Yes | frontmatter | src/content/comparisons/consensus-vs-semantic-scholar.md |
+| 2026-06-04 | /compare/continue-vs-cursor/ | Comparison | Yes | working tree | src/content/comparisons/continue-vs-cursor.md |
+| 2026-06-04 | /compare/continue-vs-devin/ | Comparison | Yes | working tree | src/content/comparisons/continue-vs-devin.md |
+| 2026-06-04 | /compare/continue-vs-github-copilot/ | Comparison | Yes | working tree | src/content/comparisons/continue-vs-github-copilot.md |
+| 2026-06-04 | /compare/continue-vs-val-town/ | Comparison | Yes | working tree | src/content/comparisons/continue-vs-val-town.md |
 | 2026-06-04 | /explore/ | Static page | Yes | git | src/pages/explore/index.astro |
 | 2026-06-04 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
 | 2026-06-04 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
 | 2026-06-04 | /news/rss.xml | Crawl surface | No | git | src/pages/news/rss.xml.ts |
 | 2026-06-04 | /tools/ | Static page | Yes | working tree | src/pages/tools/index.astro |
 | 2026-06-04 | /tools/claude-code/ | Tool | Yes | frontmatter | src/content/tools/claude-code.md |
-| 2026-06-04 | /tools/continue/ | Tool | Yes | frontmatter | src/content/tools/continue.md |
+| 2026-06-04 | /tools/continue/ | Tool | Yes | working tree | src/content/tools/continue.md |
 | 2026-06-04 | /tools/devin/ | Tool | Yes | frontmatter | src/content/tools/devin.md |
 | 2026-06-04 | /tools/github-copilot/ | Tool | Yes | frontmatter | src/content/tools/github-copilot.md |
 | 2026-06-04 | /tools/make/ | Tool | Yes | frontmatter | src/content/tools/make.md |
-| 2026-06-04 | /tools/nanochat/ | Tool | Yes | working tree | src/content/tools/nanochat.md |
+| 2026-06-04 | /tools/nanochat/ | Tool | Yes | frontmatter | src/content/tools/nanochat.md |
 | 2026-06-04 | /tools/scite/ | Tool | Yes | frontmatter | src/content/tools/scite.md |
-| 2026-06-04 | /tools/semantic-scholar/ | Tool | Yes | working tree | src/content/tools/semantic-scholar.md |
+| 2026-06-04 | /tools/semantic-scholar/ | Tool | Yes | frontmatter | src/content/tools/semantic-scholar.md |
 | 2026-06-04 | /tools/sudowrite/ | Tool | Yes | frontmatter | src/content/tools/sudowrite.md |
 | 2026-06-04 | /tools/surfer-seo/ | Tool | Yes | frontmatter | src/content/tools/surfer-seo.md |
 | 2026-06-04 | /tools/v0/ | Tool | Yes | frontmatter | src/content/tools/v0.md |

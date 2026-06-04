@@ -44,7 +44,7 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 
 **Use [Glean](/tools/glean/) when coding agents need permission-aware company knowledge.** Glean's developer platform now exposes MCP and setup paths for Claude Code, Codex, Goose, Cursor, Gemini CLI, VS Code, Windsurf, JetBrains, and other developer surfaces, so it belongs in the enterprise-codebase-context lane rather than the autocomplete lane.
 
-**June 4 maintenance note:** the oldest live coding-ledger rows now refresh [Cline vs Cursor](/compare/cline-vs-cursor/) and [Cody vs Cursor](/compare/cody-vs-cursor/) around the current split: Cline is the open-source BYOK agent runtime, Cody is the Sourcegraph Enterprise code-context lane after Free/Pro sunset, and Cursor is the managed AI-native IDE for daily implementation. The Claude Code comparison layer has also been refreshed against current Anthropic, GitHub, Continue, Cognition, and Val Town sources. Continue remains the open-source BYOK IDE layer, Devin is the async autonomous-ticket worker with ACU and seat billing, GitHub Copilot is the GitHub-native platform governed by AI Credits and SDK usage, and Val Town is a hosted TypeScript runtime rather than a direct coding-agent substitute. The same June 4 pass refreshed [Claude vs Cline](/compare/claude-vs-cline/), [Claude vs Cody](/compare/claude-vs-cody/), [Claude vs Cursor](/compare/claude-vs-cursor/), and [Claude vs GitHub Copilot](/compare/claude-vs-github-copilot/) so this hub now separates Claude as the broad assistant/Claude Code lane, Cline as the open-source BYOK repo agent, Cody as the Sourcegraph Enterprise code-context lane, Cursor as the GUI-first AI-native IDE, and Copilot as the GitHub-native AI Credits/model-picker lane. Earlier June 2 maintenance remains in force for Aider, Cline, CodeRabbit, Amazon Q Developer, Augment Code, Sourcegraph Cody, Factory, JetBrains AI, Kiro, Mastra, OpenHands, Pieces, Qodo, Replit Agent, Same.dev, Supermaven, Tabnine, Windsurf, Zed, Goose, GLM-5.1, and Glean.
+**June 4 maintenance note:** the oldest live coding-ledger rows now refresh [Continue vs Cursor](/compare/continue-vs-cursor/), [Continue vs Devin](/compare/continue-vs-devin/), [Continue vs GitHub Copilot](/compare/continue-vs-github-copilot/), and [Continue vs Val Town](/compare/continue-vs-val-town/) around the current split: Continue is source-controlled AI PR checks and agent governance, Cursor is the managed AI-native IDE, Devin is async ticket delegation, GitHub Copilot is the GitHub-native AI Credits platform, and Val Town is a hosted TypeScript runtime. The earlier June 4 live coding rows refreshed [Cline vs Cursor](/compare/cline-vs-cursor/) and [Cody vs Cursor](/compare/cody-vs-cursor/) around Cline as the open-source BYOK agent runtime, Cody as the Sourcegraph Enterprise code-context lane after Free/Pro sunset, and Cursor as the managed AI-native IDE for daily implementation. The Claude Code comparison layer has also been refreshed against current Anthropic, GitHub, Continue, Cognition, and Val Town sources. The same June 4 pass refreshed [Claude vs Cline](/compare/claude-vs-cline/), [Claude vs Cody](/compare/claude-vs-cody/), [Claude vs Cursor](/compare/claude-vs-cursor/), and [Claude vs GitHub Copilot](/compare/claude-vs-github-copilot/) so this hub now separates Claude as the broad assistant/Claude Code lane, Cline as the open-source BYOK repo agent, Cody as the Sourcegraph Enterprise code-context lane, Cursor as the GUI-first AI-native IDE, and Copilot as the GitHub-native AI Credits/model-picker lane. Earlier June 2 maintenance remains in force for Aider, Cline, CodeRabbit, Amazon Q Developer, Augment Code, Sourcegraph Cody, Factory, JetBrains AI, Kiro, Mastra, OpenHands, Pieces, Qodo, Replit Agent, Same.dev, Supermaven, Tabnine, Windsurf, Zed, Goose, GLM-5.1, and Glean.
 
 ## Buyer Paths
 
@@ -58,11 +58,11 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 | OpenAI-native coding agent | [Codex](/tools/codex/) | Good for local repo tasks, PR-style work, and OpenAI-aligned teams | Not a pure inline autocomplete replacement |
 | Vercel-native app builder | [v0](/tools/v0/) | Turns prompts, screenshots, Figma context, and code context into previewable web apps and PR-ready changes | Credit/token usage, accessibility, security, and generated code quality need review |
 | Open-source local/BYOK agent | [Goose](/tools/goose/) | Desktop, CLI, and API agent with model choice, MCP extensions, and Apache-2.0 code | Needs provider-cost controls, secrets hygiene, and local-permission review |
-| Open-source BYOK IDE layer | [Continue](/tools/continue/) | Best fit when teams want VS Code/JetBrains/Vim support with model-provider control and shared agents | More setup than Copilot/Cursor; model costs still apply |
+| Source-controlled AI PR checks | [Continue](/tools/continue/) | Best fit when teams want repo-owned checks, private agents, and explicit standards-as-code review | Weak prompts create noisy checks; humans still own merge decisions |
 | Coding model backend evaluation | [GLM](/tools/glm/) | GLM-5.1 open weights, OpenAI-compatible API examples, MCP/tool support, and long context | Verify endpoint behavior, region, compliance, and output-heavy costs |
 | Enterprise code/context search | [Glean](/tools/glean/) | Permission-aware work search and MCP/IDE integrations for developer tools | Sales-led pricing and connector/security review are required |
 | Browser app building for non-devs | [Replit Agent](/tools/replit-agent/) | Useful when the buyer wants build/run/deploy in a browser | Generated apps still need review, security, and maintenance |
-| Async ticket delegation | [Devin](/tools/devin/) | Sandbox sessions, playback, and PR output fit well-scoped backlog work | ACU and full-dev-seat costs need modeling before team rollout |
+| Async ticket delegation | [Devin](/tools/devin/) | Sandbox sessions, playback, and PR output fit well-scoped backlog work | Quotas, on-demand credits, and full-seat costs need modeling before team rollout |
 | Tiny serverless TypeScript jobs | [Val Town](/tools/val-town/) | Fastest path for vals, cron jobs, webhooks, and small internal utilities | Not a full coding assistant or general app platform |
 | Open-source CLI/BYOK coding | [Aider](/tools/aider/) | Strong for developers who want local control and model choice | Requires comfort with terminal workflows and API cost management |
 
@@ -141,6 +141,8 @@ Do not publish stale model-version claims. Coding tools route models and change 
 - [Cline homepage](https://cline.bot/) (verified 2026-06-04)
 - [CodeRabbit pricing](https://www.coderabbit.ai/pricing) (verified 2026-06-01)
 - [Continue pricing](https://www.continue.dev/pricing) (verified 2026-06-04)
+- [Continue docs](https://docs.continue.dev/) (verified 2026-06-04)
+- [Continue GitHub repository](https://github.com/continuedev/continue) (verified 2026-06-04)
 - [Devin pricing](https://devin.ai/pricing) (verified 2026-06-04)
 - [Sourcegraph pricing](https://sourcegraph.com/pricing) (verified 2026-06-04)
 - [Cognition Windsurf acquisition announcement](https://cognition.ai/blog/windsurf) (verified 2026-06-01)
@@ -160,8 +162,8 @@ Do not publish stale model-version claims. Coding tools route models and change 
 - [Tabnine pricing](https://www.tabnine.com/pricing) (verified 2026-06-01)
 - [Val Town pricing](https://www.val.town/pricing) (verified 2026-06-04)
 - [Zed pricing](https://zed.dev/pricing) (verified 2026-06-01)
-- [Trae pricing](https://www.trae.ai/pricing) (verified 2026-05-24)
-- [Gemini Code Assist](https://cloud.google.com/products/gemini/code-assist) (verified 2026-05-13)
+- [Trae plans and billing](https://docs.trae.ai/ide/new-plans-and-billing) (verified 2026-06-04)
+- [Gemini Code Assist](https://cloud.google.com/products/gemini/code-assist) (verified 2026-06-04)
 - [Hex pricing](https://hex.tech/pricing/) (verified 2026-06-02)
 - [Hex AI docs](https://learn.hex.tech/docs/getting-started/ai-overview) (verified 2026-06-02)
 - [Goose GitHub repository](https://github.com/aaif-goose/goose) (verified 2026-06-02)

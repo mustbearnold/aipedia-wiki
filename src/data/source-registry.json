@@ -2905,6 +2905,15 @@
       "volatility": "high"
     },
     {
+      "id": "gemini-code-assist-business",
+      "label": "Gemini Code Assist for teams and businesses",
+      "url": "https://cloud.google.com/products/gemini/code-assist",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-04"
+    },
+    {
       "id": "gemini-omni-official",
       "label": "Google DeepMind Gemini Omni",
       "url": "https://deepmind.google/models/gemini-omni/",
@@ -7127,7 +7136,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-24"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "tripo3d-pricing",
