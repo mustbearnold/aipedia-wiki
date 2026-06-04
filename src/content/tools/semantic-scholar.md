@@ -2,7 +2,7 @@
 type: tool
 slug: semantic-scholar
 title: Semantic Scholar
-tagline: Free AI-powered academic search engine from Allen Institute for AI, indexing 200M+ papers with TLDR summaries and a free public API.
+tagline: Free AI-powered academic search engine from Ai2 with 214M papers, citation trails, recommendations, datasets, and the Academic Graph API.
 category: ai-research
 company: Allen Institute for AI (AI2)
 url: https://www.semanticscholar.org
@@ -10,8 +10,8 @@ pricing_model: free
 price_range: "Free"
 status: active
 launched: 2015-11
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-04
+last_verified: 2026-06-04
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -26,54 +26,54 @@ scores:
   longevity: 9
 facts:
   corpus_scale:
-    value: "Free AI research search across more than 200M scholarly papers, with TLDRs, citation graph context, and paper discovery tools."
+    value: "Free AI research search and API infrastructure across 214M papers, 2.49B citations, and 79M authors as listed on the Semantic Scholar API overview."
     source: "https://www.semanticscholar.org/"
     source_label: "Semantic Scholar homepage"
     source_id: semantic-scholar-official
-    verified_at: 2026-05-13
-    next_review_at: 2026-08-13
+    verified_at: 2026-06-04
+    next_review_at: 2026-09-04
     volatility: medium
     confidence: high
   api_available:
-    value: "Yes. Semantic Scholar exposes public API endpoints for paper search, recommendations, author data, citations, and datasets."
+    value: "Yes. Semantic Scholar exposes Academic Graph, Recommendations, and Datasets API services for papers, authors, citations, venues, SPECTER2 embeddings, similar-paper recommendations, and downloadable graph datasets."
     source: "https://www.semanticscholar.org/product/api"
     source_label: "Semantic Scholar API"
     source_id: semantic-scholar-api
-    verified_at: 2026-05-13
-    next_review_at: 2026-08-13
+    verified_at: 2026-06-04
+    next_review_at: 2026-09-04
     volatility: medium
     confidence: high
   pricing_anchor:
-    value: "Free for the core scholar search product; API use is public but rate limits and key requirements should be checked before production use."
+    value: "Free for the core scholar search product. Most API endpoints are public but rate-limited; some endpoints require an API key and authenticated users can receive higher limits."
     source: "https://www.semanticscholar.org/product/api"
     source_label: "Semantic Scholar API"
     source_id: semantic-scholar-api
-    verified_at: 2026-05-13
-    next_review_at: 2026-08-13
+    verified_at: 2026-06-04
+    next_review_at: 2026-09-04
     volatility: medium
     confidence: high
   best_for:
-    value: "Literature discovery, citation chasing, paper summaries, and academic search workflows where free breadth matters more than closed-source answer synthesis."
+    value: "Literature discovery, citation chasing, related-paper recommendations, datasets, and academic search workflows where free breadth matters more than closed-source answer synthesis."
     source: "https://www.semanticscholar.org/"
     source_label: "Semantic Scholar homepage"
     source_id: semantic-scholar-official
-    verified_at: 2026-05-13
-    next_review_at: 2026-08-13
+    verified_at: 2026-06-04
+    next_review_at: 2026-09-04
     volatility: medium
     confidence: high
   watch_out_for:
-    value: "Not a general chatbot or paid research workspace; teams needing conversational synthesis, file Q&A, or private libraries should pair it with NotebookLM, Elicit, or internal RAG."
+    value: "Not a general chatbot or paid research workspace; teams needing systematic extraction, conversational synthesis, file Q&A, or private libraries should pair it with Elicit, Consensus, NotebookLM, or internal RAG."
     source: "https://www.semanticscholar.org/product/api"
     source_label: "Semantic Scholar API"
     source_id: semantic-scholar-api
-    verified_at: 2026-05-13
-    next_review_at: 2026-08-13
+    verified_at: 2026-06-04
+    next_review_at: 2026-09-04
     volatility: medium
     confidence: medium
 tags: [academic-search, research, free, open-access, ai-research, citations]
-seo_title: "Semantic Scholar: Free AI Academic Search Engine (May 2026)"
+seo_title: "Semantic Scholar: Free AI Academic Search Engine (June 2026)"
 meta_description: >-
-  Semantic Scholar is a free AI-powered academic search engine from Allen Institute for AI, indexing 200M+ papers with TLDR summaries, influential-citation signals, and a free public API. No paid tier. Verified May 2026.
+  Semantic Scholar is a free AI-powered academic search engine from Ai2 with 214M papers, 2.49B citations, recommendations, datasets, and a public Academic Graph API. Verified June 2026.
 author: "aipedia.wiki Editorial"
 best_for:
   - academic research
@@ -86,7 +86,7 @@ not_best_for:
   - citation-sentiment analysis
   - humanities-heavy research
 quick_answer: >-
-  Semantic Scholar is a free academic search engine from Allen Institute for AI covering 200M+ papers. TLDR summaries, influential-citation signals, and a free public API. No paid tier. Pick it as the default starting point. Skip it when you need cross-paper synthesis.
+  Semantic Scholar is a free academic search engine from Ai2 with 214M papers, 2.49B citations, related-paper recommendations, and a public Academic Graph API. Pick it as the default free search/API starting point. Skip it when you need systematic extraction or conversational synthesis.
 price_history:
   - date: 2026-04-17
     plan: "Free"
@@ -95,20 +95,20 @@ price_history:
     source_label: "Source"
     source_id: semantic-scholar-pricing
     note: "Verified fully free. No paid tier exists."
-  - date: 2026-05-13
+  - date: 2026-06-04
     plan: "Free"
     price: "$0"
     source: "https://www.semanticscholar.org/about"
     source_label: "Source"
     source_id: semantic-scholar-pricing
-    note: "Re-verified. Still fully free; no paid tier introduced. AI2 non-profit funding model unchanged."
+    note: "Re-verified. Core Semantic Scholar search remains free; API access is free but rate-limited and some endpoints require an API key."
 ---
 
 # Semantic Scholar
 
-Allen Institute for AI (AI2)'s free academic search engine. The S2AG index covers 205 million publications, 121 million authors, and nearly 2.5 billion citation edges, with roughly 60 million full-text papers. No paid tier. No account required for basic search.
+Allen Institute for AI (AI2)'s free academic search engine. The API overview lists 214 million papers, 2.49 billion citations, and 79 million authors. Basic search is free. API use is also free, but public endpoints are rate-limited and some endpoints require an API key.
 
-An AI layer generates TLDR one-sentence summaries, distinguishes influential citations from casual mentions, and powers a free public API used by hundreds of third-party research tools.
+An AI layer generates TLDR one-sentence summaries, highlights influential citations, recommends related papers, and powers public Academic Graph, Recommendations, and Datasets APIs used by third-party research tools.
 
 ## System Verdict
 
@@ -122,12 +122,12 @@ An AI layer generates TLDR one-sentence summaries, distinguishes influential cit
 
 | | |
 |---|---|
-| **Corpus size** | 205M+ publications, 121M+ authors, ~2.5B citation edges |
-| **Full-text coverage** | ~60M papers |
+| **Corpus size** | 214M papers, 2.49B citations, 79M authors on the API overview |
+| **Full-text coverage** | PDF URLs and abstract metadata are exposed where available; paywalled papers remain limited |
 | **Signature feature** | TLDR one-sentence AI summaries per paper |
 | **Influential citations** | Separates high-signal citations from casual mentions |
 | **Semantic Reader** | In-browser reading assistant for open-access papers |
-| **API** | Free public API with registration, generous rate limits |
+| **API** | Academic Graph, Recommendations, and Datasets APIs; free, rate-limited, with API-key paths |
 | **Backing organization** | Allen Institute for AI (non-profit, Paul Allen legacy) |
 | **Models** | In-house SciBERT-family, not general-purpose LLMs |
 | **Account requirement** | None for basic search |
@@ -139,14 +139,14 @@ A single product with a web search interface and a free public API. The S2AG (Se
 
 Search ranks by citation-graph analysis: papers cited by important papers rank higher. Each result shows a TLDR summary, citation count, influential-citation count, and direct references. Semantic Reader overlays highlighting and summaries on open-access papers.
 
-The Research Feed recommends new papers based on reading history and saved papers. Export supports RIS and BibTeX for citation manager integration.
+The Research Feed recommends new papers based on reading history and saved papers. Export supports citation-manager workflows, and the API exposes paper, author, citation, venue, embedding, recommendation, and dataset access patterns for developers.
 
 The moat is institutional. AI2 is a non-profit with permanent funding, which removes the venture-backed shutdown risk that kills commercial research tools. The API's hundreds of downstream applications ([Connected Papers](/tools/connected-papers/), academic apps, citation managers) further entrench it.
 
 ## When to pick Semantic Scholar
 
 - **You need a free starting point for any academic search.** No signup friction, no paywall, no credit cap.
-- **You are a developer building research tools.** The free API covers 200M+ papers with generous rate limits. Commercial alternatives charge per query.
+- **You are a developer building research tools.** The API overview lists 214M papers, 2.49B citations, and 79M authors, with public and API-key access paths.
 - **You work on interdisciplinary research.** Coverage spans STEM, social sciences, and medicine at one query.
 - **You want influential-citation filtering.** Distinguishes papers that shaped a field from those with many casual mentions.
 - **You need a citation-graph view.** Built-in visualization of how a paper connects to its references and descendants.
@@ -163,16 +163,16 @@ The moat is institutional. AI2 is a non-profit with permanent funding, which rem
 
 | Plan | Price | Access |
 |------|-------|--------|
-| Free | $0 | Full search, TLDR, Semantic Reader, Research Feed, API (with registration) |
+| Free | $0 | Core search, TLDR, Semantic Reader, Research Feed, and API access with public rate limits or API key where required |
 
-*Verified 2026-05-13. Semantic Scholar is fully free with no paid tier. Maintained by Allen Institute for AI, a non-profit research organization. Bulk dataset access available to institutions at no cost on request.*
+*Verified 2026-06-04. Semantic Scholar's core search is free. API access is free but rate-limited, and some endpoints require an API key.*
 
 ## Against the alternatives
 
 | | Semantic Scholar | Consensus | Elicit |
 |---|---|---|---|
 | **Price** | Free | $0-$10.99/mo | $0-$79/user/mo |
-| **Corpus** | 205M+ papers | 200M+ papers | 125M+ papers |
+| **Corpus** | 214M papers on the API overview | 200M+ papers | 138M+ papers |
 | **AI summary per paper** | TLDR (1 sentence) | Full paper answer synthesis | Extraction columns |
 | **Cross-paper synthesis** | No | Yes | Yes (structured) |
 | **Free public API** | Yes | No | Enterprise only |
@@ -191,18 +191,18 @@ The moat is institutional. AI2 is a non-profit with permanent funding, which rem
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies corpus and feature details against primary sources, and generates the analysis above. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [Semantic Scholar](https://www.semanticscholar.org), [Allen Institute for AI](https://allenai.org), the [Semantic Scholar Academic Graph paper](https://dl.acm.org/doi/fullHtml/10.1145/3487553.3527147), and the [S2ORC GitHub repo](https://github.com/allenai/s2orc).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies corpus and feature details against primary sources, and generates the analysis above. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-04 against [Semantic Scholar](https://www.semanticscholar.org) and the [Semantic Scholar API overview](https://www.semanticscholar.org/product/api).
 
 ## FAQ
 
 **Is Semantic Scholar really free?**
-Yes. Fully free with no paid tier. Maintained by Allen Institute for AI, a non-profit. Registration is optional for basic search and required for API access.
+Yes for the core search product. Maintained by Allen Institute for AI, a non-profit. Registration is optional for basic search; API use may be public, rate-limited, or API-key based depending on the endpoint.
 
 **Is Semantic Scholar better than Google Scholar?**
 They are complementary. Google Scholar has broader full-text search. Semantic Scholar has better AI features (TLDR, influential citations, citation graph) and cleaner metadata. Most researchers use both.
 
 **Is the API really free?**
-Yes. Register for an API key and access is free with generous rate limits ([S2ORC GitHub](https://github.com/allenai/s2orc)). Hundreds of academic tools and citation managers are built on it.
+Yes, with rate limits. Most endpoints are publicly available but rate-limited, some require an API key, and authenticated users can receive higher limits ([Semantic Scholar API](https://www.semanticscholar.org/product/api)).
 
 **What models does Semantic Scholar use?**
 In-house AI2 models including the SciBERT family, focused on academic text processing. Not GPT-5, not Claude, not a general-purpose LLM.
@@ -216,6 +216,7 @@ No. It finds and summarizes individual papers. For cross-paper synthesis or meta
 ## Sources
 
 - [Semantic Scholar](https://www.semanticscholar.org): product site and TLDR feature
+- [Semantic Scholar API](https://www.semanticscholar.org/product/api): 214M papers, 2.49B citations, 79M authors, API access, and rate-limit guidance
 - [Allen Institute for AI](https://allenai.org): organization, funding, and mission
 - [Semantic Scholar Academic Graph (ACM)](https://dl.acm.org/doi/fullHtml/10.1145/3487553.3527147): corpus size and structure
 - [S2ORC GitHub](https://github.com/allenai/s2orc): open research corpus and API access

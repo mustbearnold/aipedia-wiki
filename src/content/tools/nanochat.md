@@ -2,17 +2,17 @@
 type: tool
 slug: nanochat
 title: nanochat
-tagline: Andrej Karpathy's minimal, readable LLM training framework. Learn the full pipeline from tokenization to RLHF in ~8K lines of Python.
+tagline: Andrej Karpathy's minimal, readable LLM training harness for building a small ChatGPT-like model end to end on a single GPU node.
 category: ai-research
 company: karpathy
 url: https://github.com/karpathy/nanochat
 github_url: https://github.com/karpathy/nanochat
 pricing_model: open-source
-price_range: "Free (MIT open-source)"
+price_range: "Free MIT code; compute cost varies"
 status: active
 launched: 2025-10
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-04
+last_verified: 2026-06-04
 update_frequency: occasional
 affiliate:
   has_program: false
@@ -27,48 +27,48 @@ scores:
   longevity: 8
 facts:
   best_for:
-    value: "Engineers and students who want to understand the full LLM training pipeline from readable source code rather than a production training platform."
+    value: "Engineers and students who want to understand the full LLM training pipeline from readable source code rather than a production model-training platform."
     source: "https://github.com/karpathy/nanochat"
     source_label: "nanochat GitHub repository"
     source_id: nanochat-official
-    verified_at: 2026-05-13
+    verified_at: 2026-06-04
     volatility: medium
     confidence: high
   learning_surface:
-    value: "nanochat is valuable because it compresses tokenization, pretraining, supervised tuning, and RL-style alignment ideas into an inspectable educational codebase."
+    value: "nanochat is valuable because it compresses tokenization, pretraining, supervised tuning, evaluation, inference, and chat UI ideas into an inspectable educational codebase."
     source: "https://github.com/karpathy/nanochat/blob/master/README.md"
     source_label: "nanochat README"
     source_id: nanochat-readme
-    verified_at: 2026-05-13
+    verified_at: 2026-06-04
     volatility: medium
     confidence: high
   pricing_anchor:
-    value: "The repository is open source; real cost comes from compute, data, and experiment time rather than a SaaS subscription."
+    value: "The repository is MIT-licensed open source; real cost comes from compute, data, and experiment time rather than a SaaS subscription."
     source: "https://github.com/karpathy/nanochat"
     source_label: "nanochat GitHub repository"
     source_id: nanochat-official
-    verified_at: 2026-05-13
+    verified_at: 2026-06-04
     volatility: low
     confidence: high
   workflow_surface:
-    value: "Use it for education, small experiments, and code reading. For serious model training, graduate to hardened tooling with distributed training, evaluation, and data governance."
+    value: "Use it for education, small experiments, and code reading. For serious model training, graduate to hardened tooling with distributed training, evaluation, data governance, and deployment controls."
     source: "https://github.com/karpathy/nanochat/blob/master/README.md"
     source_label: "nanochat README"
     source_id: nanochat-readme
-    verified_at: 2026-05-13
+    verified_at: 2026-06-04
     volatility: medium
     confidence: high
   watch_out_for:
-    value: "Do not mistake minimal code for production readiness. It intentionally omits many operational features needed for secure, repeatable, large-scale training."
+    value: "Do not mistake minimal code for production readiness. It intentionally omits many operational features needed for secure, repeatable, large-scale training and is not an academic paper search product."
     source: "https://github.com/karpathy/nanochat"
     source_label: "nanochat GitHub repository"
     source_id: nanochat-official
-    verified_at: 2026-05-13
+    verified_at: 2026-06-04
     volatility: medium
     confidence: high
 tags: [education, llm-training, open-source, python, karpathy, pretraining, fine-tuning, rlhf, gpt, research, minimal]
-seo_title: "nanochat by Karpathy: Full LLM Pipeline in ~8K Lines (May 2026)"
-meta_description: "nanochat is Andrej Karpathy's minimal, MIT-licensed LLM training framework covering tokenization, pretraining, fine-tuning, RLHF, and inference in ~8K lines of Python."
+seo_title: "nanochat by Karpathy: Minimal LLM Training Harness (June 2026)"
+meta_description: "nanochat is Andrej Karpathy's MIT-licensed LLM training harness for learning tokenization, pretraining, tuning, evaluation, inference, and a chat UI. Verified June 2026."
 author: "aipedia.wiki Editorial"
 best_for:
   - ML engineers learning the full LLM training pipeline end-to-end
@@ -79,14 +79,14 @@ not_best_for:
   - anyone who needs a production chatbot or deployed AI assistant
   - teams looking for a framework to train custom models at scale
 quick_answer: >-
-  nanochat is Karpathy's MIT-licensed LLM training framework. The full pipeline (tokenizer, pretraining, SFT, RLHF, inference, chat UI) fits in ~8K lines of Python. Reproducing a GPT-2-grade run costs about $100 on an 8xH100 node. Best for learning, not production.
+  nanochat is Karpathy's MIT-licensed LLM training harness. It covers tokenization, pretraining, supervised tuning, reinforcement-learning-style alignment, evaluation, inference, and a chat UI. Best for learning and experiments, not production search or academic literature review.
 ---
 
 # nanochat
 
 Andrej Karpathy's open-source reference for the full LLM training pipeline. The repo covers tokenization, pretraining, supervised fine-tuning, RLHF, evaluation, inference, and a minimal chat UI in roughly 8,000 lines of Python.
 
-Released October 2025. MIT licensed. Past 53k GitHub stars by May 2026 (7.2k forks), with the speedrun leaderboard down to **1.65 hours** for the GPT-2-grade run (vs 168 hours in 2019).
+Released in 2025. MIT licensed. The GitHub repository showed 54.6k stars and 7.4k forks on June 4, 2026. Its README frames the project as a minimal experimental harness for training LLMs on a single GPU node, with the current example claiming GPT-2-capability training for about $48 on an 8xH100 node in roughly two hours, or closer to $15 on a spot instance.
 
 ## System Verdict
 
@@ -105,11 +105,11 @@ Released October 2025. MIT licensed. Past 53k GitHub stars by May 2026 (7.2k for
 | **License** | MIT |
 | **Lines of code** | ~8,000 Python |
 | **Pipeline coverage** | Tokenizer, pretraining, SFT, RLHF, eval, inference, chat UI |
-| **Reference reproduction run** | GPT-2-grade model on 8xH100 node, ~1.65 hours leaderboard best, ~$100 |
+| **Reference reproduction run** | GPT-2-capability model in about two hours on an 8xH100 node, with the README citing about $48 or about $15 on spot |
 | **Hyperparameter control** | Single `--depth` flag; other hparams auto-computed |
 | **Eval suite included** | MMLU, GSM8K, HumanEval |
 | **Hardware floor** | CPU or Apple MPS for toy runs. 8xH100 for the speedrun. |
-| **Stars** | 53,400+ (7.2k forks) as of May 2026 |
+| **Stars** | 54.6k stars and 7.4k forks as of June 4, 2026 |
 | **Recent experiments** | FP8 precision, batch-size tweaks, NVIDIA ClimbMix data, autoresearch loops |
 
 ## What it actually is
@@ -118,14 +118,14 @@ A single-repo walk-through of the LLM stack. The core library ships the tokenize
 
 The design dial is `--depth`. That one flag sets transformer layer count and auto-derives the rest for compute-optimal training. No hundred-parameter config files.
 
-The GPT-2 speedrun is the headline benchmark. Reproducing 2019's $43,000 training result costs roughly $100 in 2026 rental GPU time, with the community leaderboard currently sitting at 1.65 hours for a CORE score of 0.2626 (March 2026 entry). That gap is the seven-year compounding of algorithmic and hardware efficiency gains, plus a steady drip of FP8 precision and ClimbMix data tricks from contributors.
+The GPT-2-capability example is the headline benchmark. The README contrasts the original 2019 GPT-2 training cost with a modern single-node run: about two hours on an 8xH100 node for roughly $48, or closer to $15 on spot. Treat those as illustrative compute examples, not a production budget. The point is educational clarity: a reader can see the tokenizer, transformer, training loop, tuning, evaluation, inference, and chat UI without a production framework hiding the mechanics.
 
 ## When to pick nanochat
 
 - **Learning how language models are built.** The codebase does not hide mechanics behind abstractions.
 - **Teaching LLM internals.** Educators get a complete, citable, modern reference implementation in one repo.
 - **Research ablations on a small budget.** Minimal baseline makes architecture experiments fast to iterate.
-- **Understanding what pretraining actually costs in 2026.** The $100 speedrun is the clearest number in the literature.
+- **Understanding what small-scale pretraining costs in 2026.** The README's $48/spot-cost examples are concrete enough to make the tradeoff visible.
 - **Companion reading to a theory course.** Hugging Face and Stanford CS224N cover the math; nanochat is the working code.
 
 ## When to pick something else
@@ -141,11 +141,11 @@ The GPT-2 speedrun is the headline benchmark. Reproducing 2019's $43,000 trainin
 | Component | Cost |
 |---|---|
 | nanochat codebase | Free (MIT) |
-| GPU speedrun reproduction | ~$100 (8xH100 node, ~2 hours) |
+| GPU example run | About $48 on an 8xH100 node for about two hours, with the README citing about $15 on spot |
 | CPU or MPS experimentation | Free on existing hardware |
 | Inference after training | User's choice of provider or self-host |
 
-*Verified 2026-05-13 via the [nanochat GitHub README](https://github.com/karpathy/nanochat) and the speedrun leaderboard.*
+*Verified 2026-06-04 via the [nanochat GitHub README](https://github.com/karpathy/nanochat) and repository metadata.*
 
 ## Against the alternatives
 
@@ -163,14 +163,14 @@ The GPT-2 speedrun is the headline benchmark. Reproducing 2019's $43,000 trainin
 
 - **Not a deployable chatbot.** Models trained here are GPT-2-scale research artifacts. Quality is nowhere near a production assistant.
 - **Not a production training framework.** No multi-node distribution, no production data pipelines, no inference safety rails.
-- **Hardware requirement for meaningful runs.** The $100 speedrun needs an 8xH100 node. CPU and MPS paths exist but produce toy models.
+- **Hardware requirement for meaningful runs.** The headline example still assumes an 8xH100 node. CPU and MPS paths exist but produce toy models.
 - **Scope is intentionally narrow.** Multimodal, mixture-of-experts, and vision-language models are out of the design remit.
 - **Pedagogical value depends on the author.** Karpathy's commentary in release notes and videos is part of the learning loop. Without that context the code alone teaches less.
 - **Speedrun leaderboard implies competition the code was not built for.** Community entries favor efficiency tricks that can obscure the teaching value of the default path.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies claims against primary sources, and generates the editorial analysis shown here. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against the [nanochat GitHub repo](https://github.com/karpathy/nanochat), the speedrun leaderboard, and [Karpathy's release thread](https://x.com/karpathy/status/1977755427569111362).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies claims against primary sources, and generates the editorial analysis shown here. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-04 against the [nanochat GitHub repo](https://github.com/karpathy/nanochat) and README.
 
 ## FAQ
 
@@ -181,7 +181,7 @@ No. The repo includes a minimal chat interface as an inference demo. Models trai
 About 8,000 across the core library and scripts ([GitHub](https://github.com/karpathy/nanochat)). The design goal is a codebase a competent reader can walk end-to-end in a day.
 
 **What hardware is needed?**
-For learning and small experiments, a laptop with CPU or Apple MPS runs the code at toy scale. For the headline GPT-2 speedrun, an 8xH100 rented node costs roughly $100 for two hours of compute.
+For learning and small experiments, a laptop with CPU or Apple MPS runs the code at toy scale. For the headline GPT-2-capability example, the README cites roughly two hours on an 8xH100 node, about $48 on on-demand compute, and closer to $15 on spot.
 
 **What changed vs nanoGPT?**
 nanoGPT covers pretraining only. nanochat adds the tokenizer, SFT, RLHF, eval suite, inference, and a chat UI in the same repo. Pick nanoGPT for pretraining theory, nanochat for the complete pipeline.
@@ -191,8 +191,7 @@ Not in the modern assistant sense. The speedrun output is a GPT-2-grade model su
 
 ## Sources
 
-- [nanochat GitHub (karpathy/nanochat)](https://github.com/karpathy/nanochat): README, architecture, speedrun leaderboard
-- [Karpathy's nanochat release thread](https://x.com/karpathy/status/1977755427569111362): design intent and scope
+- [nanochat GitHub (karpathy/nanochat)](https://github.com/karpathy/nanochat): README, architecture, license, stars, forks, and current training-cost example
 - [nanoGPT reference](https://github.com/karpathy/nanoGPT): companion repo for pretraining-only study
 
 ## Related

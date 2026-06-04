@@ -1502,7 +1502,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "connected-papers-main",
@@ -1511,7 +1511,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "connected-papers-pricing",
@@ -1520,7 +1520,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "consensus-official",
@@ -1529,7 +1529,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "consensus-pricing",
@@ -1538,7 +1538,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "consensus-search",
@@ -1547,7 +1547,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "continue-docs",
@@ -5182,7 +5182,8 @@
       "url": "https://github.com/karpathy/nanochat",
       "type": "repository",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-04"
     },
     {
       "id": "nanochat-readme",
@@ -5190,7 +5191,8 @@
       "url": "https://github.com/karpathy/nanochat/blob/master/README.md",
       "type": "repository",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-04"
     },
     {
       "id": "nvidia-alpamayo-2-super",
@@ -5297,7 +5299,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "notebooklm-official",
@@ -5306,7 +5308,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "notebooklm-pricing",
@@ -5315,7 +5317,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "notion-ai",
@@ -6093,7 +6095,8 @@
       "url": "https://docs.reka.ai/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-04"
     },
     {
       "id": "relevance-ai-official",
@@ -6571,7 +6574,7 @@
     },
     {
       "trust_tier": "primary",
-      "last_checked": "2026-05-04",
+      "last_checked": "2026-06-04",
       "id": "semantic-scholar-api",
       "label": "Semantic Scholar API",
       "url": "https://www.semanticscholar.org/product/api",
@@ -6580,7 +6583,7 @@
     },
     {
       "trust_tier": "primary",
-      "last_checked": "2026-05-04",
+      "last_checked": "2026-06-04",
       "id": "semantic-scholar-official",
       "label": "Semantic Scholar homepage",
       "url": "https://www.semanticscholar.org/",
@@ -6593,7 +6596,8 @@
       "url": "https://www.semanticscholar.org/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-04"
     },
     {
       "id": "semrush-features",
@@ -8267,7 +8271,8 @@
       "url": "https://reka.ai/news/reka-edge-frontier-level-edge-intelligence-for-physical-ai",
       "type": "blog",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-04"
     },
     {
       "id": "runway-agent",

@@ -22,6 +22,8 @@ The June 4 [ChatGPT vs Scite](/compare/chatgpt-vs-scite/) refresh keeps the buye
 
 The June 4 [Claude vs Elicit](/compare/claude-vs-elicit/) refresh adds the matching research-buyer boundary: Claude is the better writing, critique, and synthesis assistant, while Elicit is the dedicated literature-review workflow for paper discovery, screening, extraction tables, and systematic-review-style evidence work.
 
+The June 4 research-discovery comparison pass refreshed [Connected Papers vs Consensus](/compare/connected-papers-vs-consensus/), [Connected Papers vs Elicit](/compare/connected-papers-vs-elicit/), [Connected Papers vs nanochat](/compare/connected-papers-vs-nanochat/), [Connected Papers vs Scite](/compare/connected-papers-vs-scite/), [Connected Papers vs Semantic Scholar](/compare/connected-papers-vs-semantic-scholar/), [Consensus vs Elicit](/compare/consensus-vs-elicit/), [Consensus vs nanochat](/compare/consensus-vs-nanochat/), [Consensus vs Scite](/compare/consensus-vs-scite/), and [Consensus vs Semantic Scholar](/compare/consensus-vs-semantic-scholar/). The buyer split is now explicit: Connected Papers maps a field, Consensus answers focused academic questions, Elicit manages systematic-review workflow, Scite checks citation context, Semantic Scholar is the free academic-search/API baseline, and [nanochat](/tools/nanochat/) is an educational LLM training harness rather than a paper-search product.
+
 For budget-conscious research teams running their own pipelines, [Reka Edge 7B](/tools/reka/) is now publicly priced at $0.10 per million input tokens and $0.10 per million output tokens, making it a low-cost extraction or summarization layer to evaluate alongside Elicit's structured workflow. Teams evaluating open-weight, long-context extraction or agentic coding around research corpora can also shortlist [GLM](/tools/glm/): GLM-5.1 has MIT Hugging Face weights, 200K context, 128K maximum output, and public Z.AI API pricing, but it is model infrastructure rather than a literature-review workflow.
 
 The May 31 update adds an important caveat for high-stakes science. OpenAI's [Rosalind Biodefense expansion](/news/2026-05-31-openai-rosalind-biodefense-trusted-access/) shows that specialist research models can be powerful but gated. GPT-Rosalind is not a general research subscription; it is a trusted-access life-sciences model program for qualified teams and public-health or biodefense workflows. Treat that as a separate procurement lane from everyday literature review.
@@ -79,17 +81,21 @@ Do not cite generated text. Cite the original source. Do not treat a linked sour
 ## Sources
 
 - [Elicit pricing](https://elicit.com/pricing) - verified 2026-06-04.
-- [Semantic Scholar](https://www.semanticscholar.org/) - verified 2026-05-13.
+- [Semantic Scholar](https://www.semanticscholar.org/) - verified 2026-06-04.
+- [Semantic Scholar API](https://www.semanticscholar.org/product/api) - verified 2026-06-04.
 - [Scite](https://scite.ai/) - verified 2026-06-04.
-- [NotebookLM](https://notebooklm.google/) - verified 2026-05-13.
-- [Perplexity Enterprise](https://www.perplexity.ai/enterprise) - verified 2026-05-13.
-- [Consensus](https://consensus.app/) - verified 2026-06-02.
-- [Connected Papers](https://www.connectedpapers.com/) - verified 2026-06-02.
+- [NotebookLM](https://notebooklm.google/) - verified 2026-06-04.
+- [Perplexity Enterprise](https://www.perplexity.ai/enterprise/pricing) - verified 2026-06-04.
+- [Consensus](https://consensus.app/) - verified 2026-06-04.
+- [Consensus pricing](https://consensus.app/pricing) - verified 2026-06-04.
+- [Connected Papers](https://www.connectedpapers.com/) - verified 2026-06-04.
+- [Connected Papers pricing](https://www.connectedpapers.com/pricing) - verified 2026-06-04.
+- [nanochat GitHub repository](https://github.com/karpathy/nanochat) - verified 2026-06-04.
 - [ChatPDF](https://www.chatpdf.com/) - verified 2026-06-02.
 - [ChatPDF backend API docs](https://www.chatpdf.com/docs/api/backend) - verified 2026-06-02.
 - [Humata pricing](https://www.humata.ai/pricing) - verified 2026-06-02.
 - [Humata security](https://www.humata.ai/security) - verified 2026-06-02.
-- [Reka Edge 7B pricing](https://www.reka.ai/pricing) - verified 2026-05-13.
+- [Reka Edge 7B pricing](https://docs.reka.ai/pricing) - verified 2026-06-04.
 - [Z.AI GLM-5.1 docs](https://docs.z.ai/guides/llm/glm-5.1) - verified 2026-06-02.
 - [Z.AI pricing](https://docs.z.ai/guides/overview/pricing) - verified 2026-06-02.
 - [GLM-5.1 on Hugging Face](https://huggingface.co/zai-org/GLM-5.1) - verified 2026-06-02.

@@ -5,77 +5,99 @@ title: "Consensus vs Scite"
 tools: [consensus, scite]
 category: ai-research
 winner: depends
-seo_title: "Consensus vs Scite: Which Is Better in 2026?"
-meta_description: "Honest head-to-head of Consensus and Scite as of April 2026. Flagship models, current pricing, and which tool fits your workflow."
+seo_title: "Consensus vs Scite: Evidence Answers or Citation Context? (June 2026)"
+meta_description: "Updated June 4, 2026: Consensus gives paper-backed answers and study-agreement signals; Scite checks whether citations support, contrast, or mention claims."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-13
-last_verified: 2026-05-13
-update_frequency: quarterly
+last_updated: 2026-06-04
+last_verified: 2026-06-04
+update_frequency: monthly
 canonical_fact_table: true
 ---
 
 # Consensus vs Scite
 
-[Consensus](../tools/consensus.md) and [Scite](../tools/scite.md) are AI research tools that analyze scientific literature, with Consensus using AI to summarize findings across papers and Scite focusing on citation statements to classify support or contradiction. As of April 2026, Consensus runs on OpenAI frontier models for query synthesis, while Scite employs a proprietary classification system integrated with recent LLMs like Claude Opus 4.7.
+[Consensus](/tools/consensus/) and [Scite](/tools/scite/) both help users reason over scientific literature, but they sit on different sides of the evidence workflow. Consensus gives fast paper-backed answers to focused questions. Scite classifies citation contexts as Supporting, Contrasting, or Mentioning so users can see whether later literature reinforces or challenges a claim.
 
 ## Quick Answer
 
-Scite edges out for citation-specific analysis in academic workflows; Consensus leads for quick evidence summaries from broad literature searches. Choice depends on whether you prioritize citation context or synthesized answers.
+Use **Consensus** when the buyer wants a quick answer with cited papers. Use **Scite** when the buyer already has papers or claims and needs citation-context validation. Consensus is better for asking. Scite is better for checking.
 
 ## Decision Snapshot
+
 | | Consensus | Scite |
 |---|---|---|
-| **Flagship** | OpenAI frontier models | Claude Opus 4.7 integration |
-| **Price** | Free / Pro $8.99/mo | Free / Essential $20/mo |
-| **Context Window** | 2M tokens | 1M tokens |
-| **Best For** | Evidence synthesis, quick answers | Citation classification, smart citations |
+| **Primary job** | Academic Q&A, study snapshots, evidence orientation | Citation-context classification and credibility checks |
+| **Best buyer** | Student, clinician, journalist, analyst, policy researcher | Researcher, peer reviewer, editor, science journalist, evidence team |
+| **Current pricing signal** | Freemium Pro/Deep ladder; verify plan limits at checkout | Basic $20/mo, Pro $50/mo, Organization/Developer custom |
+| **Best output** | Cited answer, Consensus Meter, Deep review | Supporting/Contrasting/Mentioning citation contexts, dashboards, reports |
+| **Main risk** | Answer synthesis can flatten nuance | Citation labels are triage signals, not final judgments |
 
 ## Where Consensus Wins
 
-- Delivers synthesized yes/no/maybe answers from 200M+ papers using OpenAI models for natural language summaries.
-- Free tier includes unlimited searches and core features, suitable for individual researchers.
-- Processes large contexts up to 2M tokens for handling extensive literature reviews.
-- Integrates real-time web data alongside papers for broader query resolution.
-- Outputs structured formats like tables for study results and p-values.
+Consensus wins when the question comes first. It is designed for users who want to ask a research question, get cited papers, and quickly understand the direction of evidence.
+
+Choose Consensus when:
+
+- the buyer needs a fast answer before deeper reading
+- the question is narrow enough for academic search
+- study agreement is useful as an orientation signal
+- the work is biomedical, clinical, education, psychology, or policy adjacent
+- the user is writing a source-backed note, article, or briefing
 
 ## Where Scite Wins
 
-- Classifies 1.6B+ citation statements as supporting, contradicting, or mentioning, with Claude Opus 4.7 enhancements.
-- Smart Citations link directly to evidence in papers, aiding precise verification.
-- Essential plan at $20/mo unlocks full exports, API access, and team collaboration.
-- Tracks citation trends over time for impact analysis.
-- Supports DOI uploads for custom analysis of specific papers.
+Scite wins when the paper or claim comes first. Its official pricing page lists Smart Citation workflows, Scite Assistant, Full-Text Search, Custom Dashboards, Paper Citation Reports, Citation Alerts, and custom Organization/Developer access. The key differentiator is citation context at scale.
+
+Choose Scite when:
+
+- the user needs to know whether a paper is supported or disputed
+- a peer reviewer is checking references
+- a systematic reviewer wants contested claims surfaced
+- citation alerts or paper reports matter
+- API/MCP/data access is part of an institutional workflow
 
 ## Key Differences
 
-Consensus emphasizes AI-generated summaries and answers drawn from full-text analysis of papers, making it faster for broad questions like "Does X cause Y?" with outputs including key excerpts and study counts. Scite centers on citation networks, revealing how papers reference each other (e.g., 70% supporting vs. 30% contradicting), which suits deep validation but requires more navigation. Consensus Pro at $8.99/mo offers priority access during peak times; Scite scales to $40/mo for teams with advanced reporting. Both handle multimodal inputs, but Consensus leverages OpenAI models' 2M token window for longer docs, while Scite's 1M token Claude integration excels in precise classification tasks.
+Consensus synthesizes across papers to answer a question. Scite classifies how papers cite each other. Consensus is usually faster at the start of a research question. Scite is usually stronger when credibility, replication, disagreement, or citation framing matters.
 
-## Who should choose Consensus
+For high-stakes work, use both only as triage. Read methods, populations, effect sizes, limitations, and source text before drawing conclusions.
 
-Researchers needing fast, synthesized insights from literature without deep citation diving. Students and clinicians benefit from its free tier and answer-focused interface.
+## Who Should Choose Consensus
 
-## Who should choose Scite
+Choose Consensus if the buyer needs fast evidence orientation and cited answers. It is better for students, writers, clinicians, and analysts who are starting with a question.
 
-Academics and reviewers focused on citation quality and controversy detection. Teams requiring exports and API for systematic reviews.
+## Who Should Choose Scite
+
+Choose Scite if the buyer needs citation-context assurance. It is better for reviewers, editors, evidence teams, and researchers checking whether influential claims have held up.
+
+## Can You Use Both?
+
+Yes. Use Consensus to identify a plausible answer and source papers. Use Scite to check whether the key papers are supported, contrasted, or merely mentioned by later literature. Add Elicit if extraction tables are required.
 
 ## Bottom Line
 
-Use Consensus for efficient evidence extraction in daily research; opt for Scite when citation context drives decisions. Many workflows combine both: Consensus for discovery, Scite for validation.
+Pick **Consensus** for quick academic answers. Pick **Scite** for citation-context validation. If the buyer asks "what does the literature say?", start with Consensus. If the buyer asks "can I trust this citation?", start with Scite.
 
 ## FAQ
 
-**Which is cheaper?**
-Consensus Pro at $8.99/mo undercuts Scite Essential at $20/mo, with both offering capable free tiers.
+**Which is better for citation checking?**
+Scite. Its core product is citation-context classification.
 
-**Which has better output quality?**
-Scite provides verifiable citation classifications; Consensus offers broader synthesis via OpenAI models, better for interpretive summaries.
+**Which is better for answering research questions?**
+Consensus. It is built around paper-backed answers and study-agreement signals.
 
-**Can I use both?**
-Yes, they complement each other: Consensus for initial scans, Scite for citation deep dives.
+**Can Scite replace a systematic review?**
+No. It can highlight support and contrast patterns, but a systematic review still needs protocol, screening, extraction, and expert judgment.
 
 ## Sources
 
-- [Consensus](https://consensus.app/pricing)
-- [Scite](https://scite.ai/pricing)
-- [Consensus Features](https://consensus.app/home/blog/consensus-now-powered-by-gpt-5-4-2026/)
-- [Scite Updates](https://scite.ai/blog/scite-integrates-claude-opus-4-6-april-2026/)
+- [Consensus](https://consensus.app/) (verified 2026-06-04)
+- [Consensus pricing](https://consensus.app/pricing) (verified 2026-06-04)
+- [Scite pricing](https://scite.ai/pricing) (verified 2026-06-04)
+- [Scite](https://scite.ai/) (verified 2026-06-04)
+
+## Related
+
+- **Tool pages:** [Consensus](/tools/consensus/) | [Scite](/tools/scite/)
+- **Category:** [AI Research Tools](/categories/ai-research/)
+- **Comparisons:** [Connected Papers vs Scite](/compare/connected-papers-vs-scite/) | [ChatGPT vs Scite](/compare/chatgpt-vs-scite/) | [Consensus vs Elicit](/compare/consensus-vs-elicit/)

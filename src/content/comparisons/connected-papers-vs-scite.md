@@ -5,78 +5,99 @@ title: "Connected Papers vs Scite"
 tools: [connected-papers, scite]
 category: ai-research
 winner: depends
-seo_title: "Connected Papers vs Scite: Which Is Better in 2026?"
-meta_description: "Honest head-to-head of Connected Papers and Scite as of April 2026. Flagship models, current pricing, and which tool fits your workflow."
+seo_title: "Connected Papers vs Scite: Map Papers or Check Citations? (June 2026)"
+meta_description: "Updated June 4, 2026: Connected Papers maps related literature from a seed paper; Scite classifies citation contexts as Supporting, Contrasting, or Mentioning."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-13
-last_verified: 2026-05-13
-update_frequency: quarterly
+last_updated: 2026-06-04
+last_verified: 2026-06-04
+update_frequency: monthly
 canonical_fact_table: true
 ---
 
 # Connected Papers vs Scite
 
-[Connected Papers](../tools/connected-papers.md) and [Scite](../tools/scite.md) are visualization and citation analysis tools for academic research as of April 2026. Connected Papers generates graph-based maps of related papers from a seed paper; Scite classifies citations as supporting, contrasting, or mentioning across 1.3 billion citations.
+[Connected Papers](/tools/connected-papers/) and [Scite](/tools/scite/) both use citation structure, but they answer different research questions. Connected Papers helps users discover related papers around a seed work. Scite helps users evaluate whether later papers support, contrast, or merely mention a claim or cited work.
 
 ## Quick Answer
 
-Scite suits citation verification and evidence synthesis; Connected Papers fits visual exploration of paper networks. Choice depends on whether you prioritize citation context or similarity graphs.
+Use **Connected Papers** when you need to find the literature neighborhood. Use **Scite** when you need to judge citation context and credibility. Connected Papers is better before you know what to read. Scite is better after you have candidate papers or claims to verify.
 
 ## Decision Snapshot
+
 | | Connected Papers | Scite |
 |---|---|---|
-| **Flagship** | Visual graph explorer (no LLM backend) | Smart Citations 2.0 with Assistant |
-| **Price** | Free (30 graphs/month); Pro $3/month (unlimited) | Free (basic); Standard $20/month; Premium $40/month |
-| **Context Window/Output Specs** | Unlimited graph size; 200 papers max per view | 1.3B citations; AI summaries up to 10k words |
-| **Best For** | Discovering similar papers visually | Analyzing citation context and reliability |
+| **Primary job** | Visual related-paper mapping | Citation-context classification and evidence checking |
+| **Best buyer** | Student, researcher, analyst, grant writer | Researcher, reviewer, editor, science journalist, evidence team |
+| **Current pricing signal** | Free limited graph tier plus paid annual plans; verify limits at checkout | Basic $20/mo, Pro $50/mo, Organization/Developer custom |
+| **Best output** | Similarity graph, prior works, derivative works | Supporting, Contrasting, Mentioning citation contexts; reports; alerts |
+| **Main risk** | Discovery can look authoritative without evaluating evidence quality | Citation labels require source reading and coverage varies by field |
 
 ## Where Connected Papers Wins
 
-- Builds interactive graphs showing paper similarity based on co-citations and references for quick topic overviews.
-- Free tier allows 30 graphs per month, sufficient for occasional use by students or independent researchers.
-- No login required for basic searches; exports to BibTeX, RIS for easy reference management.
-- Focuses on semantic similarity without citation sentiment, ideal for broad literature mapping.
-- Simple interface loads graphs in seconds for papers with 500+ related works.
+Connected Papers wins when the task is orientation. Its graph makes field structure visible: clusters, foundational papers, newer derivative work, and papers that might not appear from keyword search alone.
+
+Choose Connected Papers when:
+
+- the buyer has one known paper and needs adjacent literature
+- visual mapping will speed up literature review scoping
+- the output is a reading list or paper map
+- the user wants a lighter tool than a citation database
+- the question is "what else should I read?"
 
 ## Where Scite Wins
 
-- Classifies citations as supporting (83%), contrasting (12%), or mentioning (5%) with evidence snippets for nuanced analysis.
-- AI Assistant answers questions on paper collections using full-text context and citation data.
-- Tracks how papers are cited over time with trend graphs and journal impact metrics.
-- Integrates with ORCID, PubMed, and Zotero for workflow embedding in academic publishing.
-- Premium tier includes report generation and API access for systematic reviews.
+Scite wins when trust and citation quality matter. Its June 2026 pricing page lists Basic at $20/month, Pro at $50/month, and Organization/Developer paths as custom-priced. The same page describes Scite's platform as research evaluation through Smart Citations, with support/contrast/mention context as the differentiator.
+
+Choose Scite when:
+
+- a high-citation paper may be disputed
+- a reviewer needs to check whether claims held up
+- citation context matters more than citation count
+- Reference Check, alerts, dashboards, or API/data access are valuable
+- the work is biomedical, social-science, editorial, or evidence-review heavy
 
 ## Key Differences
 
-Connected Papers emphasizes visual discovery through similarity graphs built from paper overlap, making it faster for initial exploration but limited to network views without citation details. Scite provides granular citation statements with AI-driven classification and querying, better for validating claims but slower for broad searches due to its database focus. Pricing reflects this: Connected Papers Pro at $3/month for unlimited use versus Scite Standard at $20/month for core citation tools.
+Connected Papers is about neighborhood discovery. Scite is about citation meaning. Connected Papers may reveal that two papers are related; Scite can show how one paper cites another and whether the citation context is supportive, contrasting, or merely mentioning.
 
-## Who should choose Connected Papers
+The practical sequence is simple: use Connected Papers to find papers, then use Scite to test whether key claims and citations are supported or contested. Neither replaces reading the methods and results.
 
-Researchers scanning literature for related works benefit from its graph interface and low cost. It works well for grant writing or thesis planning where visual overviews speed up navigation.
+## Who Should Choose Connected Papers
 
-## Who should choose Scite
+Choose Connected Papers if the buyer is still exploring. It is a fast, visual way to avoid missing foundational or adjacent work before drafting a related-work section.
 
-Authors checking citation context or conducting meta-analyses gain from its classification and AI summaries. Teams in evidence-based fields like medicine or policy use its depth for reliability assessments.
+## Who Should Choose Scite
+
+Choose Scite if the buyer is validating evidence. It is a better fit for systematic reviewers, journal editors, peer reviewers, science journalists, and researchers checking whether a cited claim is stable.
+
+## Can You Use Both?
+
+Yes. Connected Papers and Scite pair well: one maps the field, the other tests citation context. Add Elicit if the review also needs extraction tables.
 
 ## Bottom Line
 
-Both tools complement each other in research pipelines: use Connected Papers to map a field, then Scite to verify key citations. Scite edges out for precision tasks given its citation scale; Connected Papers wins on accessibility for discovery.
+Pick **Connected Papers** for discovery. Pick **Scite** for evidence validation. If the buyer asks "what papers are nearby?", use Connected Papers. If the buyer asks "is this claim supported or disputed?", use Scite.
 
 ## FAQ
 
-**Which is cheaper?**  
-Connected Papers Pro at $3/month undercuts Scite Standard ($20/month), though Scite's free tier covers basic searches.
+**Does Connected Papers show supporting and contrasting citations?**
+No. It maps related papers and prior/derivative work. Scite is the specialist for citation-context labels.
 
-**Which has better output quality?**  
-Scite delivers higher precision for citation analysis via classified statements; Connected Papers excels in visual clarity for paper relationships.
+**Is Scite worth paying for if I already have Semantic Scholar?**
+It can be, if support/contrast context changes your decisions. For free paper discovery alone, Semantic Scholar is usually enough.
 
-**Can I use both?**  
-Yes, export graphs from Connected Papers to seed Scite searches for combined discovery and validation.
+**Which is better for systematic reviews?**
+Scite is better for citation-context checks. Connected Papers is better for early discovery. Elicit is stronger than both for structured extraction.
 
 ## Sources
 
-- [Connected Papers Pricing](https://www.connectedpapers.com/pricing)
-- [Scite Pricing](https://scite.ai/pricing)
-- [Connected Papers About](https://www.connectedpapers.com/about)
-- [Scite Features](https://scite.ai/features)
-- [Scite Citation Stats](https://scite.ai/blog/1-billion-citations)
+- [Connected Papers pricing](https://www.connectedpapers.com/pricing) (verified 2026-06-04)
+- [Connected Papers about](https://www.connectedpapers.com/about) (verified 2026-06-04)
+- [Scite pricing](https://scite.ai/pricing) (verified 2026-06-04)
+- [Scite](https://scite.ai/) (verified 2026-06-04)
+
+## Related
+
+- **Tool pages:** [Connected Papers](/tools/connected-papers/) | [Scite](/tools/scite/)
+- **Category:** [AI Research Tools](/categories/ai-research/)
+- **Comparisons:** [Consensus vs Scite](/compare/consensus-vs-scite/) | [Connected Papers vs Semantic Scholar](/compare/connected-papers-vs-semantic-scholar/) | [ChatGPT vs Scite](/compare/chatgpt-vs-scite/)

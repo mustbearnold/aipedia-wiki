@@ -5,82 +5,99 @@ title: "Connected Papers vs nanochat"
 tools: [connected-papers, nanochat]
 category: ai-research
 winner: depends
-seo_title: "Connected Papers vs nanochat: Which Is Better in 2026?"
-meta_description: "Honest head-to-head of Connected Papers and nanochat as of April 2026. Flagship models, current pricing, and which tool fits your workflow."
+seo_title: "Connected Papers vs nanochat: Research App or LLM Training Harness? (June 2026)"
+meta_description: "Updated June 4, 2026: Connected Papers is a visual academic-paper discovery app; nanochat is Andrej Karpathy's MIT-licensed LLM training harness for education and experiments."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-13
-last_verified: 2026-05-13
-update_frequency: quarterly
+last_updated: 2026-06-04
+last_verified: 2026-06-04
+update_frequency: monthly
 canonical_fact_table: true
 ---
 
 # Connected Papers vs nanochat
 
-[Connected Papers](../tools/connected-papers.md) and [nanochat](../tools/nanochat.md) both help people understand research, but they solve very different jobs. Connected Papers is a literature-discovery product: give it a seed paper and it maps related work, prior work, and derivative work. nanochat is Andrej Karpathy's open-source LLM training reference: a readable codebase for learning how tokenization, pretraining, supervised tuning, RLHF, evaluation, inference, and a minimal chat UI fit together.
-
-That means this is not a normal "which research assistant is better?" comparison. Pick Connected Papers when the problem is finding the right papers. Pick nanochat when the problem is understanding how language models are trained.
+[Connected Papers](/tools/connected-papers/) and [nanochat](/tools/nanochat/) are not substitutes. Connected Papers is a hosted research-discovery product for mapping academic papers around a seed work. nanochat is Andrej Karpathy's MIT-licensed codebase for learning how to train a small ChatGPT-like language model end to end.
 
 ## Quick Answer
 
-Choose Connected Papers for literature review scoping, citation-neighborhood mapping, and quickly finding foundational or adjacent papers from one known seed. Choose nanochat if you are an engineer, student, or educator trying to learn the full LLM training pipeline from inspectable Python code. Connected Papers is a usable research discovery app. nanochat is a learning and experimentation repo, not a hosted research assistant.
+Use **Connected Papers** if the user needs to find, map, or explain academic literature. Use **nanochat** if the user wants to read or run an educational LLM training pipeline. Connected Papers helps with research discovery. nanochat helps with model-building literacy.
 
 ## Decision Snapshot
+
 | | Connected Papers | nanochat |
 |---|---|---|
-| **Primary job** | Visual paper discovery from a seed paper | End-to-end LLM training education |
-| **Output** | Similarity graph, prior works, derivative works | Source code, scripts, toy models, chat demo |
-| **Price** | Free tier; Academic plan around $3/month billed annually | Free MIT open source; compute is the real cost |
-| **Best For** | Literature review scoping and related-work mapping | ML education, small experiments, code reading |
-| **Avoid If** | You need synthesis, extraction, or Q&A across papers | You need a production chatbot or research app |
+| **Primary job** | Visual paper discovery from a seed paper | Minimal end-to-end LLM training harness |
+| **Best buyer** | Researcher, student, analyst, grant writer | ML engineer, student, educator, researcher learning training internals |
+| **Current pricing signal** | Free limited graph tier plus paid annual graph plans; verify limits at checkout | Free MIT code; real cost is compute, data, and experiment time |
+| **Best output** | Paper graph, prior works, derivative works, metadata list | Source code, scripts, toy training runs, evaluation, chat UI |
+| **Main risk** | It does not synthesize or evaluate paper quality | It is not a literature-search tool or production training platform |
 
 ## Where Connected Papers Wins
 
-- **It is an actual research workflow tool.** Paste a DOI, title, URL, or arXiv ID and get a graph you can use immediately during literature review.
-- **It reveals the shape of a field.** Prior Works and Derivative Works help separate foundational papers from newer follow-on work.
-- **It is easier for non-engineers.** No local setup, no GPU rental, no Python environment, and no model-training knowledge required.
-- **It pairs well with other research tools.** Use it before Elicit, Consensus, Scite, or Semantic Scholar when you need to understand what to search next.
-- **Its paid tier is inexpensive.** The main reason to upgrade is graph volume, not a complicated platform bundle.
+Connected Papers wins every normal academic-discovery job. It is the practical choice when the buyer needs paper recommendations, related-work coverage, visual field mapping, or a quick way to see how a known paper connects to prior and later work.
+
+Choose Connected Papers when:
+
+- a thesis, grant, article, or report needs related papers
+- the buyer wants a browser-based tool, not a codebase
+- visual graph navigation will speed up discovery
+- the user has a DOI, title, URL, or arXiv ID to start from
+- the deliverable is a reading list, literature map, or related-work section
 
 ## Where nanochat Wins
 
-- **It teaches the machinery.** nanochat exposes the full LLM pipeline in a compact repo instead of hiding training behind a managed product.
-- **It is free and inspectable.** The license and source make it useful for courses, workshops, and serious self-study.
-- **It covers more than pretraining.** The repo includes tokenization, pretraining, supervised fine-tuning, RLHF-style alignment, evaluation, inference, and a minimal chat surface.
-- **It is better for experiments.** Researchers can modify code paths directly, run ablations, and see how choices affect small models.
-- **It complements nanoGPT.** nanoGPT is the smaller pretraining reference; nanochat is the broader system walkthrough.
+nanochat wins when the research question is about how language models are trained. The GitHub README describes tokenization, pretraining, finetuning, evaluation, inference, and a chat UI in one minimal experimental harness. GitHub showed 54.6k stars and 7.4k forks on June 4, 2026, which is a strong signal that the codebase has become a reference learning artifact.
+
+Choose nanochat when:
+
+- the user wants to understand LLM training mechanics
+- a course or workshop needs readable end-to-end code
+- a researcher wants a small baseline for experiments
+- compute-cost tradeoffs are part of the learning goal
+- the buyer is technical enough to manage Python, GPUs, and local runs
 
 ## Key Differences
 
-The most important difference is product shape. Connected Papers is a hosted application for people doing literature review. It assumes you already have at least one relevant paper and want to map the surrounding neighborhood. The value comes from visual structure: clusters, influence, prior work, and derivative work that may not surface through keyword search alone.
+Connected Papers is an application. nanochat is a repository. Connected Papers consumes academic metadata to help users discover papers. nanochat consumes data and compute to train a small model. One belongs in a literature-review toolkit; the other belongs in an ML education or experimentation toolkit.
 
-nanochat is not trying to help you find papers. It is a reference implementation for building and studying small language-model systems. The value comes from readability and completeness: you can trace the path from tokenizer to training loop to alignment step to inference without jumping across a production-scale framework. That is powerful for learning, but it is the wrong tool if your deadline is "find me the best papers on this topic by Friday."
+The naming overlap comes from the "AI research" category, but the user jobs are separate. Do not buy Connected Papers to learn model training. Do not open nanochat to find papers.
 
-Pricing also works differently. Connected Papers has a normal SaaS-like free and paid graph workflow. nanochat is free open source, but meaningful training experiments still cost compute, setup time, and engineering attention. The sticker price is lower; the operational effort is higher.
+## Who Should Choose Connected Papers
 
-## Who should choose Connected Papers
+Choose Connected Papers if the user is a student, academic, analyst, writer, or product researcher trying to understand a research area. It is the only one of the two with a usable paper-discovery interface.
 
-Choose Connected Papers if you are entering an unfamiliar research area, preparing a related-work section, checking whether a paper sits in the right conceptual neighborhood, or building a reading list from one trusted seed. It is especially useful for researchers who think visually and want a quick map before deeper extraction or synthesis.
+## Who Should Choose nanochat
 
-## Who should choose nanochat
+Choose nanochat if the user is an engineer, educator, or ML learner who wants to inspect the mechanics of training a small language model. It is best treated as curriculum and lab material, not software to deploy.
 
-Choose nanochat if your goal is educational or technical: learning LLM internals, teaching a model-training course, running small ablations, or comparing the clean reference code against heavier training stacks. It is best for engineers and students who want to understand systems, not for general researchers who want a polished app.
+## Can You Use Both?
+
+Yes, but only in different phases. Use Connected Papers to find papers about LLM training, then use nanochat as a practical code companion. They do not share a workflow by default.
 
 ## Bottom Line
 
-Connected Papers is the practical pick for literature discovery. nanochat is the practical pick for learning how LLM training works. They can coexist in a technical research workflow, but they are not substitutes: one maps papers, the other teaches model-building.
+Pick **Connected Papers** for literature discovery. Pick **nanochat** for LLM training education. If the buyer wants papers, choose Connected Papers. If the buyer wants code and compute experiments, choose nanochat.
 
 ## FAQ
 
-**Which is cheaper?**
-Connected Papers has a free tier and a low-cost Academic plan. nanochat is free open source, but meaningful experiments may require paid GPU time. Treat nanochat's real cost as compute plus learning time, not subscription price.
+**Is nanochat an academic search engine?**
+No. It is an open-source LLM training harness, not a search or literature-review product.
 
-**Which has better output quality?**
-They produce different outputs. Connected Papers is judged by whether its graph surfaces useful related papers. nanochat is judged by whether its code clearly teaches the LLM pipeline and supports small experiments.
+**Can Connected Papers train or evaluate models?**
+No. It maps academic papers. It does not train models, run experiments, or provide a model-development stack.
 
-**Can I use both?**
-Yes, but usually for different phases. A researcher might use Connected Papers to map the literature around LLM training, then use nanochat to understand and modify a training pipeline.
+**Which is better for students?**
+Research students should start with Connected Papers for literature discovery. ML students studying model internals should use nanochat.
 
 ## Sources
 
-- [Connected Papers website](https://www.connectedpapers.com/)
-- [nanochat documentation](../tools/nanochat.md)
+- [Connected Papers pricing](https://www.connectedpapers.com/pricing) (verified 2026-06-04)
+- [Connected Papers about](https://www.connectedpapers.com/about) (verified 2026-06-04)
+- [nanochat GitHub repository](https://github.com/karpathy/nanochat) (verified 2026-06-04)
+- [nanochat README](https://github.com/karpathy/nanochat/blob/master/README.md) (verified 2026-06-04)
+
+## Related
+
+- **Tool pages:** [Connected Papers](/tools/connected-papers/) | [nanochat](/tools/nanochat/)
+- **Category:** [AI Research Tools](/categories/ai-research/)
+- **Comparisons:** [Consensus vs nanochat](/compare/consensus-vs-nanochat/) | [Connected Papers vs Elicit](/compare/connected-papers-vs-elicit/) | [Connected Papers vs Semantic Scholar](/compare/connected-papers-vs-semantic-scholar/)
