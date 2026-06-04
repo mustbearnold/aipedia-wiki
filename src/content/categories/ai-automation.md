@@ -32,7 +32,7 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 
 **Use [Zapier](/tools/zapier/) when non-technical teams need the fastest SaaS connection path.** Zapier's current pricing and AI pages frame the platform around Zaps, Tables, Forms, MCP, Copilot, Agents, and more than 9,000 apps. The June 4 [ChatGPT vs Zapier](/compare/chatgpt-vs-zapier/) refresh keeps the distinction explicit: ChatGPT is the thinking and drafting assistant; Zapier is the workflow execution layer when SaaS actions need to run repeatedly. It is still the cleanest recommendation when app coverage and speed matter more than self-hosting or code-level control.
 
-**Use [Make](/tools/make/) when visual workflow clarity and low entry price matter.** Make's current pricing page lists a free plan with 1,000 credits/month and 3000+ apps, plus Core, Pro, Teams, and Enterprise tiers. The May 2026 price reduction took Core from $10.59 to $9 per month, with proportional cuts across Pro and Teams. Its AI Agents page positions Make around transparent agents across 3000+ apps.
+**Use [Make](/tools/make/) when visual workflow clarity and low entry price matter.** Make's current pricing page lists a free plan with 1,000 credits/month and 3,000+ apps, plus Core, Pro, Teams, and Enterprise tiers. The May 2026 price reduction took Core from $10.59 to $9 per month, with proportional cuts across Pro and Teams. Its AI Agents page positions Make around transparent agents, MCP, AI Toolkit, AI Web Search, and 350+ AI apps across 3,000+ app connectors.
 
 **Use [Gumloop](/tools/gumloop/) when the buyer wants AI-native flows, agents, triggers, MCP, policies, and guardrails.** Gumloop is a stronger fit for agent-heavy workflow building than a generic "connect two apps" use case. The June 2 check keeps credit testing central: BYOK can reduce some workflow AI-node burn, but teams should test workflow nodes and agent/model paths separately before assuming every AI step is cheap.
 
@@ -50,7 +50,7 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 
 **Use [Apollo](/tools/apollo/) or [Amplemarket](/tools/amplemarket/) when automation starts with outbound revenue.** Apollo is the broader prospect-data and sales-engagement platform, while Amplemarket is the higher-touch AI SDR suite with Duo agents and a $600/month annual Startup plan for two seats. Both need real sender, deliverability, and CRM governance before scale.
 
-**Use [Clay](/tools/clay/) when GTM automation starts with enrichment, signals, and account research.** Clay's June 2 check keeps the important distinction clear: the public cards show lower annual-billing starts, while the FAQ names higher monthly starts. Buyer advice should use the annual/monthly split rather than a single flat Clay price.
+**Use [Clay](/tools/clay/) when GTM automation starts with enrichment, signals, and account research.** The June 4 Clay comparison refresh now separates the four common buyer forks: [Clay vs Instantly](/compare/clay-vs-instantly/) for enrichment versus cold-email execution, [Clay vs Intercom](/compare/clay-vs-intercom/) for outbound GTM versus AI support, [Clay vs Make](/compare/clay-vs-make/) for GTM tables versus visual automation, and [Clay vs Zapier](/compare/clay-vs-zapier/) for revenue-data prep versus no-code SaaS orchestration. Clay's current pricing still requires action/data-credit modeling rather than a single flat price.
 
 **Use [ClickUp](/tools/clickup/) when work management and AI sit in the same operating system.** ClickUp is not a generic agent platform; it is the better fit when tasks, docs, project automation, ClickUp Brain, Everything AI, and workspace governance need to live together.
 
@@ -165,8 +165,9 @@ Do not leave this category stale. Automation tools are adding MCP, agent builder
 - [n8n AI documentation](https://docs.n8n.io/advanced-ai/) (verified 2026-05-13)
 - [Zapier pricing](https://zapier.com/pricing) (verified 2026-06-04)
 - [Zapier AI](https://zapier.com/ai) (verified 2026-06-04)
-- [Make pricing](https://www.make.com/en/pricing) (verified 2026-05-13)
-- [Make AI Agents](https://www.make.com/en/ai-agents) (verified 2026-05-13)
+- [Make pricing](https://www.make.com/en/pricing) (verified 2026-06-04)
+- [Make AI Agents](https://www.make.com/en/ai-agents) (verified 2026-06-04)
+- [Make pricing adjustments](https://help.make.com/adjustments-to-plans-and-pricing) (verified 2026-06-04)
 - [Gumloop pricing](https://www.gumloop.com/pricing) (verified 2026-06-02)
 - [Gumloop docs](https://docs.gumloop.com/) (verified 2026-06-02)
 - [Relevance AI pricing](https://relevanceai.com/pricing) (verified 2026-05-13)
@@ -191,8 +192,8 @@ Do not leave this category stale. Automation tools are adding MCP, agent builder
 - [Eightfold AI Interview Companion launch](https://eightfold.ai/company/press/press-releases/eightfold-ai-expands-talent-agents-across-the-full-interview-journey-introducing-ai-interview-companion-and-new-interview-capabilities/) (verified 2026-06-02)
 - [hireEZ recruiting platform](https://www.hireez.com/platform/) (verified 2026-06-02)
 - [Ada platform](https://www.ada.cx/platform) (verified 2026-06-01)
-- [Intercom pricing](https://www.intercom.com/pricing) (verified 2026-06-02)
-- [Fin AI Agent pricing](https://fin.ai/pricing) (verified 2026-06-02)
+- [Intercom pricing](https://www.intercom.com/pricing) (verified 2026-06-04)
+- [Fin AI Agent pricing](https://fin.ai/pricing) (verified 2026-06-04)
 - [Microsoft Build 2026 Work IQ and Foundry agent stack](https://blogs.microsoft.com/blog/2026/06/02/microsoft-build-2026-be-yourself-at-work/) (verified 2026-06-03)
 - [Microsoft Work IQ APIs](https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/02/announcing-the-new-work-iq-apis/) (verified 2026-06-03)
 - [GitHub Copilot SDK GA](https://github.blog/changelog/2026-06-02-copilot-sdk-is-now-generally-available/) (verified 2026-06-03)
@@ -207,7 +208,10 @@ Do not leave this category stale. Automation tools are adding MCP, agent builder
 - [Browserbase pricing](https://www.browserbase.com/pricing) (verified 2026-06-01)
 - [Helicone pricing](https://www.helicone.ai/pricing) (verified 2026-06-02)
 - [Helicone platform docs](https://docs.helicone.ai/getting-started/platform-overview) (verified 2026-06-02)
-- [Clay pricing](https://www.clay.com/pricing) (verified 2026-06-02)
+- [Clay pricing](https://www.clay.com/pricing) (verified 2026-06-04)
+- [Clay integrations](https://www.clay.com/integrations) (verified 2026-06-04)
+- [Instantly pricing](https://instantly.ai/pricing) (verified 2026-06-04)
+- [Instantly SuperSearch help](https://help.instantly.ai/en/articles/11364248-supersearch) (verified 2026-06-04)
 - [ClickUp pricing](https://clickup.com/pricing) (verified 2026-06-02)
 - [ClickUp Brain](https://clickup.com/ai) (verified 2026-06-02)
 - [Manus pricing](https://manus.im/pricing) (verified 2026-05-24)

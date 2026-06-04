@@ -1149,7 +1149,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "clay-integrations",
@@ -1158,7 +1158,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "clay-official",
@@ -1167,7 +1167,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "clay-university",
@@ -1176,7 +1176,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "clearscope-official",
@@ -3792,7 +3792,8 @@
       "url": "https://instantly.ai/products/deliverability-network",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-04"
     },
     {
       "id": "instantly-email",
@@ -3800,7 +3801,8 @@
       "url": "https://instantly.ai/products/email-outreach",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-04"
     },
     {
       "id": "instantly-leads",
@@ -3808,7 +3810,8 @@
       "url": "https://instantly.ai/products/lead-finder",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-04"
     },
     {
       "id": "instantly-official",
@@ -3816,7 +3819,8 @@
       "url": "https://instantly.ai/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-04"
     },
     {
       "id": "intercom-fin",
@@ -3825,7 +3829,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "intercom-official",
@@ -3834,7 +3838,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "intercom-pricing",
@@ -3843,7 +3847,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "invideo-ai",
@@ -4711,7 +4715,8 @@
       "url": "https://www.make.com/en/ai-agents",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-04"
     },
     {
       "id": "make-apps",
@@ -4719,7 +4724,8 @@
       "url": "https://www.make.com/en/integrations",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-04"
     },
     {
       "id": "make-help",
@@ -4727,7 +4733,8 @@
       "url": "https://www.make.com/en/help",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-04"
     },
     {
       "id": "make-pricing",
@@ -4735,7 +4742,17 @@
       "url": "https://www.make.com/en/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-04"
+    },
+    {
+      "id": "make-pricing-adjustments",
+      "label": "Make pricing adjustments",
+      "url": "https://help.make.com/adjustments-to-plans-and-pricing",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-04"
     },
     {
       "id": "manus-pricing",
@@ -8099,7 +8116,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "letta-code-pricing",

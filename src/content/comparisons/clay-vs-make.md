@@ -5,77 +5,106 @@ title: "Clay vs Make"
 tools: [clay, make]
 category: ai-automation
 winner: depends
-seo_title: "Clay vs Make: Which Is Better in 2026?"
-meta_description: "Honest head-to-head of Clay and Make as of April 2026. Flagship models, current pricing, and which tool fits your workflow."
+seo_title: "Clay vs Make: GTM Enrichment or Visual Automation? (June 2026)"
+meta_description: "Updated June 4, 2026: Clay is the GTM enrichment and account-research workspace; Make is the visual automation builder with credits, 3,000+ apps, MCP, and AI Agents."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-13
-last_verified: 2026-05-13
-update_frequency: quarterly
+last_updated: 2026-06-04
+last_verified: 2026-06-04
+update_frequency: monthly
 canonical_fact_table: true
 ---
 
 # Clay vs Make
 
-[Clay](../tools/clay.md) and [Make](../tools/make.md) are automation platforms that integrate AI models for data enrichment, workflow building, and task execution as of April 2026. Clay focuses on sales and marketing teams enriching leads with AI agents, while Make (formerly Integromat) handles general app integrations with scenario-based automations.
+[Clay](/tools/clay/) and [Make](/tools/make/) both automate work, but the center of gravity is different. Clay is a GTM enrichment and AI research workspace for prospect data, account signals, and outbound preparation. Make is a visual automation platform for connecting apps, routing data, running scenarios, using credits, and now building transparent AI Agents across 3,000+ apps.
 
 ## Quick Answer
 
-Clay suits sales teams needing AI-driven lead enrichment; Make fits general automation across apps. Choice depends on whether your work centers on CRM data or broad integrations.
+Use **Clay** when the automation starts with lead, account, or company data that must be enriched and researched before sales action. Use **Make** when the automation starts with an event in one app and needs to branch, transform, route, or trigger work across other apps. Clay is a specialist GTM table. Make is a general-purpose visual workflow canvas.
 
 ## Decision Snapshot
+
 | | Clay | Make |
 |---|---|---|
-| **Flagship** | Clay 3.0 with Claude Sonnet 4.6 / GPT-5.3 | Make Enterprise with Gemini 3.1 Pro integration |
-| **Price** | Free; Pro $149/user/mo; Enterprise custom | Free; Core $10.59/mo; Pro $18.89/mo; Enterprise $72+/mo[1][2] |
-| **Best For** | Lead enrichment, sales AI agents | App integrations, scenario automations |
+| **Primary job** | Enrichment, Claygent research, lead/account workflow logic | Visual workflow automation, app routing, scenarios, AI Agents |
+| **Best buyer** | GTM engineer, RevOps, SDR ops, ABM team | Ops builder, automation agency, technical operator, no-code power user |
+| **Current pricing signal** | Free; Launch/Growth scale by actions and data credits; Enterprise custom | Free 1,000 credits; Core $9, Pro $16, Teams $29 at 10K credits/mo; Enterprise custom |
+| **AI surface** | Claygent, AI columns, fixed or token-based model pricing, BYO API keys | Make AI Agents beta, Make MCP, AI Toolkit, AI Web Search, 350+ AI apps, BYO LLM key on paid plans |
+| **Data model** | Spreadsheet-like enriched prospect/account tables | Scenario graph with modules, routers, iterators, webhooks, APIs |
+| **Main risk** | Workflow/credit complexity before list quality is proven | Credit burn from high-frequency, branched, or AI-heavy scenarios |
 
 ## Where Clay Wins
 
-- AI agents pull structured data from 100+ sources like LinkedIn, GitHub into tables for sales pipelines.[Clay pricing page](https://www.clay.com/pricing)
-- Table-based interface lets non-technical users build enrichment workflows visually.
-- Integrates Claude Sonnet 4.6 for reasoning over large datasets in one interface.
-- Higher limits on credits (50k/mo Pro) support heavy enrichment volumes.
-- Built-in sales templates reduce setup for outbound campaigns.
+Clay wins when the workflow begins with "build me a better target list." Its current pricing page says Clay combines actions, data credits, Claygent, multi-provider waterfalls, 150+ data providers, BYO API keys, and table-based enrichment. That makes it a stronger fit than Make when each row needs account research, provider fallback, confidence scoring, and outbound-ready personalization.
+
+Choose Clay when:
+
+- the work is prospect/account enrichment rather than generic app routing
+- sales and marketing teams need repeatable GTM research workflows
+- provider waterfalls and Claygent research are central to data quality
+- the final output is an approved list for CRM, sender, ads, or sales review
+- the operator can QA data quality before sending
 
 ## Where Make Wins
 
-- Connects 2,000+ apps via drag-and-drop scenarios for general automations.
-- Lower entry pricing (Core $10.59/mo) for basic integrations without AI focus.
-- Execution logs and error handling scale for production workflows.
-- Teams module enables collaboration on shared scenarios.
-- HTTP modules allow custom API calls beyond pre-built integrations.
+Make wins when the workflow is broader than GTM enrichment. Its current pricing page lists Free, Core, Pro, Teams, and Enterprise tiers with credit-based billing, 3,000+ apps, routers, filters, API access, MCP, Make AI Agents, AI Toolkit, and AI Web Search. It is better when the workflow spans finance, support, operations, marketing, internal alerts, approvals, docs, and many SaaS tools.
+
+Choose Make when:
+
+- the work needs branching logic, loops, and many app connectors
+- the buyer wants a visual canvas instead of a GTM table
+- workflows are repeated operational processes, not one-off lead research
+- the team wants lower entry pricing than a Clay GTM stack
+- AI should sit inside deterministic workflows or Make AI Agents
 
 ## Key Differences
 
-Clay centers on AI-powered data tables for enrichment, using models like Claude Sonnet 4.6 (1M context) to analyze and append leads from web sources; it excels in sales but lacks Make's breadth in app connections. Make builds linear scenarios across apps like Google Sheets, Slack, with optional Gemini 3.1 Pro (2M context) for data processing; its strength is integration volume over deep AI reasoning. Clay charges per user with credit-based AI usage ($149/mo Pro), while Make tiers by operations (starting $10.59/mo).[1][2]
+Clay is row-first. Make is flow-first.
 
-## Who should choose Clay
+In Clay, each row is usually a person, account, or company. The workflow enriches, researches, scores, and prepares that row for a GTM action. In Make, each module passes data to the next module. The workflow might update a CRM, send Slack alerts, parse forms, route invoices, enrich a spreadsheet, call an AI model, or trigger an agent.
 
-Sales and marketing teams that enrich thousands of leads weekly with AI agents. It streamlines CRM updates without coding.
+That difference matters more than feature overlap. Clay can connect to other tools, but it is not a general automation control plane. Make can call AI and enrich data, but it is not a purpose-built prospecting research table with Clay's GTM provider ecosystem.
 
-## Who should choose Make
+## Who Should Choose Clay
 
-Developers or ops teams automating across apps like Zapier-style but with more modules. It handles high-volume triggers reliably.
+Choose Clay if outbound data quality is the bottleneck. It is the better fit for narrow high-value prospecting, account-based marketing, custom enrichment, signal-based lists, and sales/revenue operations.
+
+## Who Should Choose Make
+
+Choose Make if the company needs repeatable cross-app automation. It is the better fit for business operations, agencies, low-cost visual workflows, and teams that need routers, iterators, APIs, MCP, and AI tools across departments.
+
+## Can You Use Both?
+
+Yes. Clay can produce the enriched and approved list; Make can handle downstream routing, alerts, CRM cleanup, enrichment side quests, approval workflows, or reporting. But if the first problem is only "connect form to CRM," Clay is too specialized. If the first problem is "find the right accounts and personalize outreach," Make is too generic.
 
 ## Bottom Line
 
-Clay leads for AI-centric sales enrichment; Make for versatile app automations. Test free tiers: Clay for table-based agents, Make for scenario testing. Most users pick one based on primary apps (Salesforce vs multi-tool).
+Pick **Clay** for GTM enrichment and account research. Pick **Make** for visual cross-app automation. For many teams, Make is the better first automation platform; Clay becomes worth it when sales data quality is the revenue lever.
 
 ## FAQ
 
 **Which is cheaper?**  
-Make Core at $10.59/mo beats Clay Pro ($149/mo) for basics; Clay free tier covers light use.[1][2]
+Make is cheaper to start: Free includes 1,000 credits/month, Core starts at $9/month for 10K credits, and Pro/Teams start at $16/$29. Clay has a free plan, but serious Launch/Growth workflows scale by actions and data credits.
 
-**Which has better output quality?**  
-Clay's Claude Sonnet 4.6 integration yields higher accuracy for data reasoning; Make relies on user-configured models.[1]
+**Does Make replace Clay?**
+Not for GTM enrichment. Make can move data and call APIs, but Clay is stronger for provider waterfalls, account research, and outbound list creation.
 
-**Can I use both?**  
-Yes, via webhooks; Clay exports to Make for downstream automations.
+**Does Clay replace Make?**
+Not for broad operations. Clay is not the right home for company-wide workflow automation, routers, approval flows, or multi-department app plumbing.
+
+**Best first purchase?**
+Buy Make first for general automation. Buy Clay first only when GTM enrichment is the urgent workflow and someone owns RevOps implementation.
 
 ## Sources
 
-- [Clay pricing](https://www.clay.com/pricing)
-- [Make pricing](https://www.make.com/en/pricing)
-- [Clay docs](../tools/clay.md)
-- [Make docs](../tools/make.md)
-- [AI models 2026](https://designforonline.com/the-best-ai-models-so-far-in-2026/)[1]
+- [Clay pricing](https://www.clay.com/pricing) (verified 2026-06-04)
+- [Clay integrations](https://www.clay.com/integrations) (verified 2026-06-04)
+- [Make pricing](https://www.make.com/en/pricing) (verified 2026-06-04)
+- [Make AI Agents](https://www.make.com/en/ai-agents) (verified 2026-06-04)
+- [Make pricing adjustments](https://help.make.com/adjustments-to-plans-and-pricing) (verified 2026-06-04)
+
+## Related
+
+- **Tool pages:** [Clay](/tools/clay/) | [Make](/tools/make/)
+- **Category:** [AI Automation](/categories/ai-automation/)
+- **Comparisons:** [n8n vs Make vs Zapier](/compare/n8n-vs-make-vs-zapier/) | [Clay vs Zapier](/compare/clay-vs-zapier/) | [Apollo vs Clay](/compare/apollo-vs-clay/)
