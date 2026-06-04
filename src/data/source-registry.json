@@ -3061,7 +3061,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "grammarly-business",
@@ -3070,7 +3070,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "grammarly-plans",
@@ -3079,7 +3079,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "grammarly-pricing",
@@ -3088,7 +3088,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "granola-official",
@@ -3920,7 +3920,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "jasper-platform",
@@ -3929,7 +3929,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "jasper-pricing",
@@ -3938,7 +3938,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "jasper-credits-pricing",
@@ -3947,7 +3947,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "jetbrains-ai-assistant",
@@ -4063,7 +4063,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "kimi-official",
@@ -4072,7 +4072,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "kimi-pricing",
@@ -4081,7 +4081,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "kiro-best-for",
@@ -5005,7 +5005,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "mistral-huggingface",
@@ -5023,11 +5023,11 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-04"
     },
     {
       "trust_tier": "primary",
-      "last_checked": "2026-06-03",
+      "last_checked": "2026-06-04",
       "id": "mistral-models-docs",
       "label": "Mistral model overview",
       "url": "https://docs.mistral.ai/models/overview",
@@ -5041,7 +5041,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "mistral-search-toolkit",
@@ -5050,7 +5050,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "modal-official",
@@ -5303,11 +5303,11 @@
     {
       "id": "notion-ai",
       "label": "Notion AI product page",
-      "url": "https://www.notion.so/product/ai",
+      "url": "https://www.notion.com/product/ai",
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "notion-help",
@@ -5321,11 +5321,11 @@
     {
       "id": "notion-pricing",
       "label": "Notion pricing",
-      "url": "https://www.notion.so/pricing",
+      "url": "https://www.notion.com/pricing",
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "notion-custom-agent-pricing",
@@ -5334,7 +5334,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "notion-ai-meeting-notes",
@@ -5343,7 +5343,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "obsidian-help",
@@ -5595,7 +5595,8 @@
       "url": "https://docs.perplexity.ai/",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-04"
     },
     {
       "id": "perplexity-enterprise-pricing",
@@ -5603,7 +5604,8 @@
       "url": "https://www.perplexity.ai/enterprise/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-04"
     },
     {
       "id": "perplexity-pricing",
@@ -5611,7 +5613,8 @@
       "url": "https://www.perplexity.ai/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-04"
     },
     {
       "id": "perplexity-pro-pricing",
@@ -5620,7 +5623,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "phind-official",
@@ -5975,7 +5978,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-10"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "qwen-pricing",
@@ -5984,7 +5987,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-10"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "qwencloud-qwen37-max",
@@ -5993,7 +5996,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-24"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "qwencloud-pricing",
@@ -6002,7 +6005,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-24"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "qwencloud-model-releases",
@@ -6011,7 +6014,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-24"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "read-ai-official",
@@ -7836,7 +7839,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "xai-pricing",
@@ -8051,7 +8054,8 @@
       "url": "https://docs.x.ai/docs/models",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-04"
     },
     {
       "id": "hunyuan-hy3",
@@ -8189,7 +8193,8 @@
       "url": "https://mistral.ai/news/mistral-3",
       "type": "blog",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-04"
     },
     {
       "id": "mistral-security-advisories",

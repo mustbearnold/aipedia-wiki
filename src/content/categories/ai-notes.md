@@ -5,10 +5,10 @@ title: AI Note-Taking & Knowledge Management
 description: AI note-taking, customer-success meeting memory, meeting intelligence, source-grounded research notebooks, personal knowledge systems, and workspace knowledge tools.
 tool_count: 13
 seo_title: "Best AI Note-Taking Tools (June 2026), aipedia.wiki"
-meta_description: "Updated June 3, 2026: compare the best AI note-taking tools: Fathom for personal meeting notes, MeetGeek for customer-success meeting memory, Fireflies for team meeting intelligence, Otter for live transcription, Mem for AI note memory, Readwise for reading retention, NotebookLM for source-grounded research, Capacities for object-based PKM, and Obsidian for local-first notes."
+meta_description: "Updated June 4, 2026: compare the best AI note-taking tools: Fathom for personal meeting notes, MeetGeek for customer-success meeting memory, Fireflies for team meeting intelligence, Otter for live transcription, Notion AI for workspace AI, Mem for AI note memory, NotebookLM for source-grounded research, and Obsidian for local-first notes."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-03
-last_verified: 2026-06-03
+last_updated: 2026-06-04
+last_verified: 2026-06-04
 update_frequency: monthly
 ---
 
@@ -16,7 +16,7 @@ update_frequency: monthly
 
 AI note-taking now splits into five buyer lanes. The first is **meeting capture and meeting memory**, where [Fathom](/tools/fathom/), [MeetGeek](/tools/meetgeek/), [Fireflies](/tools/fireflies/), [Otter.ai](/tools/otter-ai/), [Read AI](/tools/read-ai/), and [Granola](/tools/granola/) record or capture calls, produce transcripts/summaries, extract action items, and push meeting context into team workflows. Granola is the no-bot Mac-first lane for people who want private desktop capture and post-call notes rather than a meeting participant bot. MeetGeek is now the sharper customer-success pick when onboarding, renewal, QBR, escalation, and product-feedback calls need to become searchable account context. The second is **source-grounded research**, where [NotebookLM](/tools/notebooklm/) turns documents, transcripts, and source packs into grounded Q&A, reports, study materials, and review artifacts. The third is **knowledge management**, where [Notion AI](/tools/notion-ai/), [Capacities](/tools/capacities/), [Obsidian](/tools/obsidian/), and [Mem](/tools/mem/) help teams or individuals maintain long-lived notes, wikis, docs, databases, objects, personal memory, and personal knowledge graphs. The fourth is **reading capture and retention**, where [Readwise Reader](/tools/readwise/) captures articles, newsletters, PDFs, ebooks, highlights, Ghostreader prompts, exports, and daily review. The fifth is **analytics notebooks and data-team knowledge**, where [Hex](/tools/hex/) brings SQL, Python, apps, Threads, semantic-model-aware agents, and paid-seat AI credits into one governed workspace.
 
-As of June 3, 2026, the best purchase depends less on "which AI summarizes best?" and more on where the note lives after capture: a meeting library, a CRM, a renewal brief, a research notebook, a reading-retention loop, an object-based PKM system, an AI note memory system, or a local personal vault. The refreshed [ChatGPT vs Notion AI](/compare/chatgpt-vs-notion-ai/) page separates broad assistant work from Notion-native docs, databases, AI Meeting Notes, Enterprise Search, Notion Agent, and Custom Agent credits. The refreshed [ChatGPT vs Otter.ai](/compare/chatgpt-vs-otter-ai/) page separates broad post-meeting synthesis from live transcription, searchable archives, Otter MCP, and team meeting workflows. The refreshed [ChatGPT vs Mem](/compare/chatgpt-vs-mem/) page separates broad assistant work from persistent AI notes and saved-knowledge chat. The refreshed Capacities comparison set still separates object-based PKM from meeting capture, source-grounded research, local-first Markdown, and reading/highlight retention.
+As of June 4, 2026, the best purchase depends less on "which AI summarizes best?" and more on where the note lives after capture: a meeting library, a CRM, a renewal brief, a research notebook, a reading-retention loop, an object-based PKM system, an AI note memory system, or a local personal vault. The refreshed [Claude vs Notion AI](/compare/claude-vs-notion-ai/) page now separates Claude's standalone assistant and Claude Code value from Notion-native docs, databases, AI Meeting Notes, Enterprise Search, Notion Agent, and Custom Agent credits. The refreshed [ChatGPT vs Notion AI](/compare/chatgpt-vs-notion-ai/) page keeps the broad-assistant-versus-workspace split aligned for ChatGPT buyers. The refreshed [ChatGPT vs Otter.ai](/compare/chatgpt-vs-otter-ai/) page separates broad post-meeting synthesis from live transcription, searchable archives, Otter MCP, and team meeting workflows. The refreshed [ChatGPT vs Mem](/compare/chatgpt-vs-mem/) page separates broad assistant work from persistent AI notes and saved-knowledge chat. The refreshed Capacities comparison set still separates object-based PKM from meeting capture, source-grounded research, local-first Markdown, and reading/highlight retention.
 
 ## The Players
 
@@ -106,8 +106,10 @@ As of June 3, 2026, the best purchase depends less on "which AI summarizes best?
 - [Granola pricing](https://www.granola.ai/pricing) (verified 2026-06-02)
 - [Granola security](https://www.granola.ai/security) (verified 2026-06-02)
 - [NotebookLM upgrade information](https://support.google.com/notebooklm/answer/16213268) (verified 2026-06-03)
-- [Notion pricing](https://www.notion.com/pricing) (verified 2026-06-03)
-- [Notion Custom Agent pricing](https://www.notion.com/help/custom-agent-pricing) (verified 2026-06-03)
+- [Notion pricing](https://www.notion.com/pricing) (verified 2026-06-04)
+- [Notion Custom Agent pricing](https://www.notion.com/help/custom-agent-pricing) (verified 2026-06-04)
+- [Notion AI product page](https://www.notion.com/product/ai) (verified 2026-06-04)
+- [Notion AI Meeting Notes](https://www.notion.com/help/ai-meeting-notes) (verified 2026-06-04)
 - [Capacities pricing](https://capacities.io/pricing) (verified 2026-06-03)
 - [Capacities docs](https://docs.capacities.io/) (verified 2026-06-03)
 - [Mem pricing](https://get.mem.ai/pricing) (verified 2026-06-03)

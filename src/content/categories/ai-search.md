@@ -26,7 +26,7 @@ top_picks:
 
 AI search is not one category anymore. Buyers now choose between **cited answer engines**, **Google-native AI search**, **owned-document research**, **private paid search**, **developer search APIs**, and **real-time social/current-events context**.
 
-**Use [Perplexity](/tools/perplexity/) when the job is cited open-web answers.** It remains the strongest default for people who want an answer engine with source links, follow-up research, spaces, Pro/Max paths, Enterprise controls, and API surfaces like Sonar, Search API, Agent API, and embeddings.
+**Use [Perplexity](/tools/perplexity/) when the job is cited open-web answers.** It remains the strongest default for people who want an answer engine with source links, follow-up research, spaces, Pro/Max paths, Enterprise controls, and API surfaces like Sonar, Search API, Agent API, and embeddings. The June 4 [Claude vs Perplexity](/compare/claude-vs-perplexity/) refresh now keeps the boundary clear: Perplexity is the source-discovery and cited-brief layer; Claude is the final reasoning, writing, coding, and synthesis layer.
 
 **Use [Comet](/tools/comet/) when the search workflow should live inside the browser.** Comet is the Perplexity browser lane for users who want AI search, page context, shopping/research help, and everyday web actions closer to tabs instead of a separate answer-engine page.
 
@@ -110,10 +110,10 @@ Do not leave this category stale. Google AI Mode, Perplexity Pro/Max/Enterprise,
 - [Perplexity Comet](https://www.perplexity.ai/comet) (verified 2026-06-02)
 - [Dia website](https://www.diabrowser.com) (verified 2026-06-02)
 - [Dia security](https://www.diabrowser.com/security) (verified 2026-06-02)
-- [Perplexity Pro](https://www.perplexity.ai/pro) (verified 2026-06-02)
-- [Perplexity Enterprise](https://www.perplexity.ai/enterprise) (verified 2026-05-13)
-- [Perplexity API pricing](https://docs.perplexity.ai/docs/getting-started/pricing) (verified 2026-05-13)
-- [Perplexity Enterprise pricing FAQ](https://www.perplexity.ai/help-center/en/articles/10352986-enterprise-pro-pricing-and-billing-frequently-asked-questions) (verified 2026-05-13)
+- [Perplexity Pro](https://www.perplexity.ai/pro) (verified 2026-06-04)
+- [Perplexity Enterprise](https://www.perplexity.ai/enterprise) (verified 2026-06-04)
+- [Perplexity API pricing](https://docs.perplexity.ai/docs/getting-started/pricing) (verified 2026-06-04)
+- [Perplexity Enterprise pricing](https://www.perplexity.ai/enterprise/pricing) (verified 2026-06-04)
 - [ChatGPT Search Help](https://help.openai.com/en/articles/9237897-chatgpt-search) (verified 2026-05-13)
 - [Google AI Mode and AI Overviews updates](https://blog.google/products-and-platforms/products/search/explore-web-generative-ai-search/) (verified 2026-05-13)
 - [Google AI Plans](https://one.google.com/about/google-ai-plans/) (verified 2026-05-13)

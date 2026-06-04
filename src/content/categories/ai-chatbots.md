@@ -20,7 +20,7 @@ The May 31 refresh adds two enterprise workspace signals: MUFG's [ChatGPT Enterp
 
 The June 3 catch-up adds three active chatbot signals. OpenAI's [ChatGPT o3 and GPT-4.5 retirement notice](/news/2026-06-03-openai-chatgpt-o3-gpt45-retirements/) makes model churn a buyer-maintenance issue. Anthropic's [Project Glasswing expansion](/news/2026-06-02-anthropic-project-glasswing-expansion/) keeps restricted cyberdefense access separate from normal Claude tiers. Google's [Gemini Drive sharing rollout](/news/2026-06-03-google-gemini-drive-sharing/) makes AI chats, canvases, and generated media easier to govern as Workspace assets.
 
-The June 4 comparison refresh adds two direct buyer checks under this hub: [Claude vs DeepSeek](/compare/claude-vs-deepseek/) now separates Claude's managed assistant and Claude Code value from DeepSeek's low-cost API/model-evaluation lane, while [Claude vs Gemini](/compare/claude-vs-gemini/) separates Claude's deep-work writing and coding judgment from Gemini's Google-native subscription, media, Search, Workspace, and API ecosystem.
+The June 4 comparison refresh adds a full Claude specialist slice under this hub: [Claude vs DeepSeek](/compare/claude-vs-deepseek/) separates Claude's managed assistant and Claude Code value from DeepSeek's low-cost API/model-evaluation lane; [Claude vs Gemini](/compare/claude-vs-gemini/) separates Claude's deep-work writing and coding judgment from Gemini's Google-native subscription, media, Search, Workspace, and API ecosystem; [Claude vs Grok](/compare/claude-vs-grok/) separates Claude's careful assistant lane from xAI's X-native Grok 4.3, Imagine, Voice, and API stack; [Claude vs Kimi](/compare/claude-vs-kimi/) keeps Kimi K2.6 as a Moonshot API/model-evaluation path; [Claude vs Mistral AI](/compare/claude-vs-mistral-ai/) keeps Mistral as the open-weight/EU/model-control path; and [Claude vs Qwen](/compare/claude-vs-qwen/) keeps Qwen as the Alibaba/Qwen Cloud model-family path.
 
 For most people, the first paid chatbot to compare is still one of three: [ChatGPT](/tools/chatgpt/) for the broadest all-purpose AI workspace, [Claude](/tools/claude/) for writing, long analysis, and code reasoning, or [Gemini](/tools/gemini/) for Google-native work across Search, Gmail, Docs, Drive, NotebookLM, and Google AI subscription benefits. [Perplexity](/tools/perplexity/) is the better answer engine when every serious claim needs a source trail. [Grok](/tools/grok/) is most useful when X-native real-time context matters. [Mistral AI](/tools/mistral-ai/) matters more for builders and teams that care about model control, European AI infrastructure, APIs, Vibe for Code, Search Toolkit, and open-model options; the June 3 [ChatGPT vs Mistral AI](/compare/chatgpt-vs-mistral-ai/) refresh frames this as a finished-assistant versus model-platform decision. [Qwen](/tools/qwen/) is the Alibaba Cloud lane: hosted Qwen3.7-Max, Qwen Chat testing, Apache 2.0 Qwen3 open weights, and a growing Qwen Cloud / agent-platform push after [Alibaba's first international Qwen Conference](/news/2026-05-27-qwen-conference-agent-cloud-suite/). [GLM](/tools/glm/) is the Z.AI lane for teams evaluating GLM-5.1's 200K context, 128K maximum output, OpenAI-compatible API examples, MCP/tool support, MIT Hugging Face weights, and $1.40/M input plus $4.40/M output API pricing. [Kimi](/tools/kimi/) is the Moonshot lane for builders evaluating Kimi K2.6, 256K context, multimodal input, usage-based API pricing, and a post-K2-retirement model path; the June 3 [ChatGPT vs Kimi](/compare/chatgpt-vs-kimi/) refresh keeps ChatGPT as the better finished assistant and Kimi as the model/API alternative. [Hunyuan](/tools/hunyuan/) is Tencent's open-weight/model-family lane for Hy3-preview, HY-World 2.0, and HY-OmniWeaving; [Jan.ai](/tools/jan-ai/) is the free local desktop lane, with v0.8.2 now adding faster startup, AMD ROCm/HIP on Linux, and resumable downloads.
 
@@ -149,25 +149,25 @@ Do not subscribe to multiple chatbots because each one has a new model announcem
 - [Google One AI plans](https://one.google.com/about/google-ai-plans/) (verified 2026-06-04)
 - [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing) (verified 2026-06-04)
 - [Perplexity Pro](https://www.perplexity.ai/pro) (verified 2026-05-24)
-- [Grok by xAI](https://x.ai/grok) (verified 2026-06-03)
-- [xAI pricing](https://x.ai/pricing) (verified 2026-06-03)
-- [xAI model docs](https://docs.x.ai/developers/models) (verified 2026-06-03)
+- [Grok by xAI](https://x.ai/grok) (verified 2026-06-04)
+- [xAI pricing](https://x.ai/pricing) (verified 2026-06-04)
+- [xAI model docs](https://docs.x.ai/developers/models) (verified 2026-06-04)
 - [Groq official site](https://groq.com/) (verified 2026-06-02)
 - [Groq pricing](https://groq.com/pricing/) (verified 2026-06-02)
 - [Groq model docs](https://console.groq.com/docs/models) (verified 2026-06-02)
-- [Mistral AI pricing](https://mistral.ai/pricing) (verified 2026-06-03)
-- [Mistral model docs](https://docs.mistral.ai/models/overview) (verified 2026-06-03)
-- [Mistral Search Toolkit](https://mistral.ai/news/search-toolkit) (verified 2026-06-03)
-- [Qwen Cloud model releases](https://docs.qwencloud.com/changelog/models) (verified 2026-05-27)
+- [Mistral AI pricing](https://mistral.ai/pricing) (verified 2026-06-04)
+- [Mistral model docs](https://docs.mistral.ai/models/overview) (verified 2026-06-04)
+- [Mistral Search Toolkit](https://mistral.ai/news/search-toolkit) (verified 2026-06-04)
+- [Qwen Cloud model releases](https://docs.qwencloud.com/changelog/models) (verified 2026-06-04)
 - [Alibaba Cloud Qwen Conference coverage](https://www.eqs-news.com/news/corporate/alibaba-cloud-unveils-advanced-agentic-ai-ecosystem-for-global-customers/a191d39b-db45-48ed-b194-9cce5071b556_en) (verified 2026-05-27)
-- [Qwen3.7-Max model page](https://www.qwencloud.com/models/qwen3.7-max) (verified 2026-05-24)
+- [Qwen3.7-Max model page](https://www.qwencloud.com/models/qwen3.7-max) (verified 2026-06-04)
 - [Qwen3 official blog](https://qwenlm.github.io/blog/qwen3/) (verified 2026-05-24)
 - [Z.AI GLM-5.1 docs](https://docs.z.ai/guides/llm/glm-5.1) (verified 2026-06-03)
 - [Z.AI pricing](https://docs.z.ai/guides/overview/pricing) (verified 2026-06-03)
 - [GLM-5.1 on Hugging Face](https://huggingface.co/zai-org/GLM-5.1) (verified 2026-06-03)
-- [Kimi API platform](https://platform.moonshot.ai/) (verified 2026-06-03)
-- [Kimi K2.6 pricing docs](https://platform.kimi.ai/docs/pricing/chat-k26) (verified 2026-06-03)
-- [Legacy Kimi K2 pricing notice](https://platform.kimi.ai/docs/pricing/chat-k2) (verified 2026-06-03)
+- [Kimi API platform](https://platform.moonshot.ai/) (verified 2026-06-04)
+- [Kimi K2.6 pricing docs](https://platform.kimi.ai/docs/pricing/chat-k26) (verified 2026-06-04)
+- [Legacy Kimi K2 pricing notice](https://platform.kimi.ai/docs/pricing/chat-k2) (verified 2026-06-04)
 - [Hy3-preview on Hugging Face](https://huggingface.co/tencent/Hy3-preview) (verified 2026-06-02)
 - [Tencent HY-World 2.0](https://huggingface.co/tencent/HY-World-2.0) (verified 2026-06-02)
 - [HY-OmniWeaving on Hugging Face](https://huggingface.co/tencent/HY-OmniWeaving) (verified 2026-06-02)
