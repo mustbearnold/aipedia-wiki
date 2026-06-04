@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$79-$399/mo plus custom Enterprise"
 status: active
 launched: 2020-12
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-04
+last_verified: 2026-06-04
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -30,57 +30,57 @@ facts:
     source: https://writesonic.com/pricing
     source_label: Writesonic pricing
     source_id: writesonic-pricing
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-04'
     volatility: medium
     confidence: high
-    next_review_at: '2026-08-13'
+    next_review_at: '2026-09-04'
   pricing_anchor:
     value: "Writesonic restructured to four GEO-first tiers in 2026: Starter $79, Basic $199, Growth $399 (most popular), Enterprise custom. Annual billing saves 20%. The old free tier is no longer published."
     source: https://writesonic.com/pricing
     source_label: Writesonic pricing
     source_id: writesonic-pricing
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-04'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-13'
+    next_review_at: '2026-09-04'
   api_available:
     value: Writesonic publishes API and workflow integration docs, but the 2026 buyer story is AI search visibility tracking and on/off-page Action Center workflows, not raw text generation.
     source: https://docs.writesonic.com/
     source_label: Writesonic docs
     source_id: writesonic-docs
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-04'
     volatility: medium
     confidence: high
-    next_review_at: '2026-08-13'
+    next_review_at: '2026-09-04'
   web_browsing:
     value: Chatsonic remains Writesonic's conversational AI surface for marketing research, sitting alongside the AI article writer and AI search visibility tracker.
     source: https://writesonic.com/chatsonic
     source_label: Chatsonic official page
     source_id: chatsonic-official
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-04'
     volatility: medium
     confidence: high
-    next_review_at: '2026-08-13'
+    next_review_at: '2026-09-04'
   enterprise_controls:
     value: Enterprise tier carries SOC 2 Type II, HIPAA, and GDPR coverage, full 10-platform AI search tracking, complete Action Center access, and a dedicated AI search strategist.
     source: https://writesonic.com/pricing
     source_label: Writesonic pricing
     source_id: writesonic-pricing
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-04'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-13'
+    next_review_at: '2026-09-04'
   watch_out_for:
     value: Writesonic is now a GEO/AI-search-visibility platform first; the entry price jumped from $0 to $79/mo and feature gates moved up. Compare it against Semrush AI Search, Surfer AI, and Profound by workflow before buying.
     source: https://writesonic.com/pricing
     source_label: Writesonic pricing
     source_id: writesonic-pricing
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-04'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-13'
+    next_review_at: '2026-09-04'
 tags: [ai-writing, blog-generator, chatsonic, content-marketing, seo-writing, geo]
-seo_title: "Writesonic: Features, Pricing & Review (May 2026)"
+seo_title: "Writesonic: Features, Pricing & Review (June 2026)"
 meta_description: "Writesonic pivoted to a GEO-first stack in 2026. Plans $79-$399/mo plus custom Enterprise. Starter tracks ChatGPT only; Growth ($399) tracks ChatGPT, Gemini, and Google AI Overviews with the Action Center."
 author: aipedia.wiki Editorial
 best_for:
@@ -93,28 +93,28 @@ not_best_for:
   - teams that just want raw long-form drafts (ChatGPT Plus or Claude Pro is cheaper)
   - workflows requiring enterprise-grade factual guarantees
 price_history:
-  - date: 2026-05-13
+  - date: 2026-06-04
     plan: Starter
     price: $79/mo
     source: https://writesonic.com/pricing
     source_label: Source
     source_id: writesonic-pricing
     note: Tracks ChatGPT only, 50 prompts and 50 answers/day, 15 AI articles/mo, 10 site audits, 10 agentic workflow trial runs
-  - date: 2026-05-13
+  - date: 2026-06-04
     plan: Basic
     price: $199/mo
     source: https://writesonic.com/pricing
     source_label: Source
     source_id: writesonic-pricing
     note: Adds Gemini and Google AI Overviews tracking, 100 prompts and 300 answers/day, 25 articles, 20 site audits, 50 workflow trial runs
-  - date: 2026-05-13
+  - date: 2026-06-04
     plan: Growth
     price: $399/mo
     source: https://writesonic.com/pricing
     source_label: Source
     source_id: writesonic-pricing
     note: Most popular tier; 200 prompts and 600 answers/day, sentiment analysis, Action Center trial (5 off-page + 5 on-page/mo), 50 articles, 50 audits
-  - date: 2026-05-13
+  - date: 2026-06-04
     plan: Enterprise
     price: Custom
     source: https://writesonic.com/pricing
@@ -140,7 +140,7 @@ Pricing now runs $79 to $399/mo plus custom Enterprise. The old free tier and th
 
 ## Recent changes
 
-- **2026-05-13:** Verified the four-tier pricing structure (Starter $79, Basic $199, Growth $399, Enterprise custom) and the new GEO-first feature gating. The legacy six-tier ladder (Free / Lite / Standard / Professional / Advanced / Enterprise) has been retired. Annual billing saves 20%.
+- **2026-06-04:** Reverified the four-tier pricing structure (Starter $79, Basic $199, Growth $399, Enterprise custom) and the GEO-first feature gating. The legacy six-tier ladder (Free / Lite / Standard / Professional / Advanced / Enterprise) remains retired. Annual billing saves 20%.
 
 ## System Verdict
 
@@ -157,7 +157,7 @@ Pricing now runs $79 to $399/mo plus custom Enterprise. The old free tier and th
 | **Core products** | AI Search Visibility tracker, Action Center, AI Article Writer, site audits, Chatsonic, Botsonic |
 | **Models** | Routed third-party frontier (GPT, Claude, Gemini) plus Google AI Overviews monitoring |
 | **AI platforms tracked** | Starter: ChatGPT only · Basic and Growth: ChatGPT, Gemini, Google AI Overviews · Enterprise: all 10 supported platforms |
-| **Pricing floor** | $79/mo Starter; no free tier as of 2026-05-13 |
+| **Pricing floor** | $79/mo Starter; no free tier as of 2026-06-04 |
 | **Pricing ceiling** | $399/mo Growth (most popular); Enterprise is custom |
 | **Action Center** | Trial (5 off-page + 5 on-page actions/mo) starts at Growth; full access at Enterprise |
 | **Site audits** | Starter 10/mo · Basic 20/mo · Growth 50/mo · Enterprise custom |
@@ -166,7 +166,7 @@ Pricing now runs $79 to $399/mo plus custom Enterprise. The old free tier and th
 | **Compliance** | SOC 2 Type II, HIPAA, GDPR on Enterprise |
 | **Separate chatbot builder** | Botsonic (embeddable, trains on site or PDFs) |
 
-Every data point above was verified against vendor documentation on 2026-05-13. See Sources.
+Every data point above was verified against vendor sources on 2026-06-04. See Sources.
 
 ## What it actually is
 
@@ -204,7 +204,7 @@ Subscription pricing via [writesonic.com/pricing](https://writesonic.com/pricing
 | Growth | $399 | Most popular. 200 prompts and 600 answers/day, sentiment analysis, Action Center trial (5 off-page + 5 on-page actions/mo), 50 articles, 50 audits |
 | Enterprise | Custom | All 10 AI platforms tracked, full Action Center, custom limits, dedicated AI search strategist, SOC 2 Type II, HIPAA, GDPR |
 
-*Prices verified 2026-05-13 via [Writesonic pricing](https://writesonic.com/pricing). The old free tier and the $1,499 Enterprise cap have been retired. The Human + AI SEO concierge service still ships as a separate engagement on request.*
+*Prices verified 2026-06-04 via [Writesonic pricing](https://writesonic.com/pricing). The old free tier and the $1,499 Enterprise cap have been retired. The Human + AI SEO concierge service still ships as a separate engagement on request.*
 
 ## Against the alternatives
 
@@ -231,12 +231,12 @@ Subscription pricing via [writesonic.com/pricing](https://writesonic.com/pricing
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [Writesonic pricing](https://writesonic.com/pricing), the [Writesonic homepage](https://writesonic.com/), and the [Writesonic subscription plans docs](https://docs.writesonic.com/docs/different-subscription-plans-of-writesonic).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-04 against [Writesonic pricing](https://writesonic.com/pricing), the [Writesonic homepage](https://writesonic.com/), and the [Writesonic subscription plans docs](https://docs.writesonic.com/docs/different-subscription-plans-of-writesonic).
 
 ## FAQ
 
 **Is there still a free Writesonic plan?**
-No. As of 2026-05-13 the lowest published tier is Starter at $79/mo. Annual billing saves 20% ([Writesonic pricing](https://writesonic.com/pricing)).
+No. As of 2026-06-04 the lowest published tier is Starter at $79/mo. Annual billing saves 20% ([Writesonic pricing](https://writesonic.com/pricing)).
 
 **Which models power Chatsonic and the AI Article Writer?**
 Routed third-party frontier APIs from OpenAI, Anthropic, and Google. No proprietary base model. Model quality tracks whatever underlying API handles the call on the day.

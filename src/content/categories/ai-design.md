@@ -5,10 +5,10 @@ title: AI Design & App Building
 description: Current AI design tools and app builders for social creative, product design, design systems, web prototypes, full-stack apps, and Vercel-native UI workflows.
 tool_count: 9
 seo_title: "Best AI Design & App Builder Tools (June 2026)"
-meta_description: "Updated June 3, 2026: compare Canva AI, Figma, Midjourney, Adobe Firefly, Recraft V4, Google Stitch, Framer, Lovable, Base44, Bolt.new, and v0 by buyer fit, pricing, workflow, and production risk."
+meta_description: "Updated June 4, 2026: compare Canva AI, Figma, Midjourney, Adobe Firefly, Recraft V4, Google Stitch, Framer, Lovable, Base44, Bolt.new, and v0 by buyer fit, pricing, workflow, and production risk."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-03
-last_verified: 2026-06-03
+last_updated: 2026-06-04
+last_verified: 2026-06-04
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -26,7 +26,7 @@ top_picks:
 
 AI design is now two overlapping markets. The first is **visual creation and product design**: brand assets, social posts, presentations, UX mockups, design systems, and stakeholder review. The second is **AI app building**: prompts, screenshots, Figma context, and code turning into web apps, prototypes, deploys, or pull requests.
 
-As of June 3, 2026, start with the job:
+As of June 4, 2026, start with the job:
 
 **Use [Canva](/tools/canva/) when non-designers need finished creative fast.** Canva AI 2.0 is built across Canva's Visual Suite and supports conversational creation, editable layouts, on-brand generation, AI images, AI video, Magic Write, resizing, background tools, and business controls. It is the safest first stop for marketers, creators, teachers, small businesses, and teams that need to publish polished content without a design department.
 
@@ -40,7 +40,7 @@ As of June 3, 2026, start with the job:
 
 **Use [Base44](/tools/base44/) when the buyer wants a Wix-owned AI app builder with an all-in-one app path.** Base44's June 1 pricing check keeps the Free, Starter, Builder, Pro, Elite, and Enterprise ladder intact, but also found a Free integration-credit inconsistency between the plan card and FAQ. Treat credit and integration limits as the first thing to verify before a serious build.
 
-**Use [v0 by Vercel](/tools/v0/) when the buyer wants a Vercel-native web artifact.** The current v0 docs describe an AI agent for real code, full-stack apps, agents, backend connections, deployments, and PRs. The current public pricing page lists Free, Team at $30/user/month, Business at $100/user/month, Enterprise custom pricing, and model token pricing. Do not buy v0 expecting retired legacy pricing.
+**Use [v0 by Vercel](/tools/v0/) when the buyer wants a Vercel-native web artifact.** The current v0 docs describe an AI agent for real code, full-stack apps, agents, backend connections, deployments, and PRs. The current public pricing page lists Free, Team at $30/user/month, Business at $100/user/month, Enterprise custom pricing, and model token pricing. The June 4 [ChatGPT vs v0](/compare/chatgpt-vs-v0/) refresh keeps v0 in the app-building lane, not the broad assistant lane. Do not buy v0 expecting retired legacy pricing.
 
 **Use [Bolt.new](/tools/bolt/) when the buyer wants a browser app builder with an execution environment.** Bolt's June 1 pricing check lists Free with 300K daily tokens and 1M monthly tokens, Pro at $25/month, Teams at $30/month per member, and Enterprise custom. It is useful when the buyer wants to build and run in the browser, but token usage and production cleanup still matter.
 
@@ -160,8 +160,8 @@ Do not make a wide table the only mobile experience. Mobile buyers need top pick
 - [Lovable Cloud docs](https://docs.lovable.dev/integrations/cloud) (verified 2026-06-03)
 - [Base44 pricing](https://base44.com/pricing) (verified 2026-06-01)
 - [Bolt.new pricing](https://bolt.new/pricing) (verified 2026-06-01)
-- [v0 pricing](https://v0.app/pricing) (verified 2026-05-13)
-- [v0 documentation](https://v0.app/docs) (verified 2026-05-13)
+- [v0 pricing](https://v0.app/pricing) (verified 2026-06-04)
+- [v0 documentation](https://v0.app/docs) (verified 2026-06-04)
 - [Magnific pricing](https://magnific.ai/pricing) (verified 2026-05-13; rebranded from Freepik on May 5, 2026)
 - [Recraft V4 docs](https://www.recraft.ai/docs/recraft-models/recraft-V4) (verified 2026-05-24)
 - [Ideogram plans](https://docs.ideogram.ai/plans-and-pricing/available-plans) (verified 2026-05-13)

@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: $0-$9.99/month
 status: active
 launched: 2020-10
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-04
+last_verified: 2026-06-04
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: "https://wordtune.com/plans"
     source_label: "Wordtune Plans"
     source_id: wordtune-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-06-04
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -39,25 +39,25 @@ facts:
     source: "https://wordtune.com/plans"
     source_label: "Wordtune Plans"
     source_id: wordtune-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-06-04
     volatility: high
     confidence: high
-    next_review_at: 2026-08-13
+    next_review_at: 2026-09-04
   plan_limits:
     value: "Free covers 10 rewrites per day and 3 summaries per month. Advanced raises that to 30 rewrites per day and 15 summaries per month. Unlimited removes rewrite, suggestion, and summary caps."
     source: "https://wordtune.com/plans"
     source_label: "Wordtune Plans"
     source_id: wordtune-plan-docs
-    verified_at: 2026-05-13
+    verified_at: 2026-06-04
     volatility: high
     confidence: high
-    next_review_at: 2026-08-13
+    next_review_at: 2026-09-04
   company_context:
     value: "Wordtune is part of AI21 Labs, which matters for buyers evaluating vendor stability and model-provider context. AI21's strategic focus has shifted to the enterprise Maestro platform; the May 2026 consumer pricing ladder reads as a simplification of the Wordtune SKU set."
     source: "https://www.ai21.com/"
     source_label: "AI21 Labs official site"
     source_id: ai21-official
-    verified_at: 2026-05-13
+    verified_at: 2026-06-04
     volatility: low
     confidence: high
   watch_out_for:
@@ -65,14 +65,14 @@ facts:
     source: "https://wordtune.com/plans"
     source_label: "Wordtune Plans"
     source_id: wordtune-plan-docs
-    verified_at: 2026-05-13
+    verified_at: 2026-06-04
     volatility: high
     confidence: high
-    next_review_at: 2026-08-13
+    next_review_at: 2026-09-04
 tags: [ai-writing, paraphrasing, rewriting, editing, ai21-labs]
-seo_title: 'Wordtune: Features, Pricing & Review (May 2026)'
+seo_title: 'Wordtune: Features, Pricing & Review (June 2026)'
 meta_description: >-
-  Wordtune is AI21 Labs' voice-preserving rewriter. Free tier 10 rewrites/day; Advanced $6.99/mo ($4.89 annual); Unlimited $9.99/mo ($6.99 annual). Verified May 13, 2026.
+  Wordtune is AI21 Labs' voice-preserving rewriter. Free tier 10 rewrites/day; Advanced $6.99/mo ($4.89 annual); Unlimited $9.99/mo ($6.99 annual). Verified June 4, 2026.
 author: aipedia.wiki Editorial
 best_for:
   - voice-preserving sentence rewrites
@@ -108,6 +108,13 @@ price_history:
     source_label: "Source"
     source_id: wordtune-pricing
     note: "Unlimited rewrites, suggestions, and summaries. Annual rate cut from $9.99 to $6.99/mo."
+  - date: 2026-06-04
+    plan: "Current consumer ladder"
+    price: "$0-$9.99/mo"
+    source: "https://wordtune.com/plans"
+    source_label: "Source"
+    source_id: wordtune-pricing
+    note: "Reverified Basic, Advanced, and Unlimited pricing plus daily rewrite and monthly summary limits."
   - date: 2026-04-17
     plan: "Unlimited"
     price: "$19.99/mo"
@@ -153,7 +160,7 @@ Runs through a web app and browser extension that works inside Google Docs, Gmai
 | **Plus and Teams** | Retired in the May 2026 rebuild |
 | **Strategic note** | AI21 has pivoted toward the enterprise Maestro platform; consumer Wordtune still live as of May 2026 |
 
-Every data point above was verified against vendor documentation on 2026-05-13. See Sources.
+Every data point above was verified against vendor sources on 2026-06-04. See Sources.
 
 ## What it actually is
 
@@ -189,7 +196,7 @@ Subscription pricing via [wordtune.com/plans](https://wordtune.com/plans):
 | Advanced | $6.99 | $4.89 | 30 rewrites per day, 15 summaries per month, unlimited spelling and grammar |
 | Unlimited | $9.99 | $6.99 | Unlimited rewrites and summaries, vocabulary enrichment, clarity and fluency tools, priority support |
 
-*Prices verified 2026-05-13 via [wordtune.com/plans](https://wordtune.com/plans). Annual billing carries roughly a 30 percent discount; monthly billing matches the Monthly column. A 3-day free trial is available for paid plans (card required, no charge during trial). Wordtune retired the $24.99 Plus and $15.99 Teams SKUs in the May 2026 rebuild; multi-seat buyers needing admin or SSO should contact AI21 directly.*
+*Prices verified 2026-06-04 via [wordtune.com/plans](https://wordtune.com/plans). Annual billing carries roughly a 30 percent discount; monthly billing matches the Monthly column. A 3-day free trial is available for paid plans (card required, no charge during trial). Wordtune retired the $24.99 Plus and $15.99 Teams SKUs in the May 2026 rebuild; multi-seat buyers needing admin or SSO should contact AI21 directly.*
 
 ## Against the alternatives
 
@@ -217,7 +224,7 @@ Subscription pricing via [wordtune.com/plans](https://wordtune.com/plans):
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-05-13 against [wordtune.com/plans](https://wordtune.com/plans) and the [Wordtune Help Center pricing article](https://support.wordtune.com/en/articles/8262930-wordtune-s-plans-pricing).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-04 against [wordtune.com/plans](https://wordtune.com/plans) and the [Wordtune Help Center pricing article](https://support.wordtune.com/en/articles/8262930-wordtune-s-plans-pricing).
 
 ## FAQ
 
@@ -241,7 +248,7 @@ Yes. The May 2026 rebuild collapsed the four-tier ladder into Basic, Advanced ($
 
 ## Sources
 
-- [Wordtune Plans](https://wordtune.com/plans): Current pricing for Basic, Advanced, and Unlimited tiers (May 2026)
+- [Wordtune Plans](https://wordtune.com/plans): Current pricing for Basic, Advanced, and Unlimited tiers (verified 2026-06-04)
 - [Wordtune Help Center Pricing](https://support.wordtune.com/en/articles/8262930-wordtune-s-plans-pricing): Plan-level feature breakdown
 - [AI21 Labs company site](https://www.ai21.com/): Parent company and model backbone
 - [AI21 Wordtune upgrade coverage (Reworked)](https://www.reworked.co/the-wire/ai21-labs-rolls-out-wordtune-upgrade-expanding-its-generative-ai-offering-with-all-in-one-platform/): Feature history

@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$10-$59/month"
 status: active
 launched: 2020-11
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-04
+last_verified: 2026-06-04
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://sudowrite.com/pricing"
     source_label: "Sudowrite Pricing"
     source_id: sudowrite-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-06-04
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -38,17 +38,17 @@ facts:
     source: "https://sudowrite.com/pricing"
     source_label: "Sudowrite Pricing"
     source_id: sudowrite-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-06-04
     volatility: high
     confidence: high
-    next_review_at: 2026-08-13
+    next_review_at: 2026-09-04
   flagship_model:
     value: "Sudowrite markets Muse as its custom-trained fiction model and routes some workflows across multiple model options including Claude 4.x and GPT-5."
     source: "https://sudowrite.framer.website/muse"
     source_label: "Sudowrite Muse overview"
     source_id: sudowrite-muse
-    verified_at: 2026-05-13
-    next_review_at: 2026-08-13
+    verified_at: 2026-06-04
+    next_review_at: 2026-09-04
     volatility: medium
     confidence: high
   model_routing:
@@ -56,7 +56,7 @@ facts:
     source: "https://docs.sudowrite.com/using-sudowrite/1ow1qkGqof9rtcyGnrWUBS/which-ai-model-should-i-use/veMq9xRH6KLCQPFm5XkQx7"
     source_label: "Sudowrite model routing documentation"
     source_id: sudowrite-model-routing
-    verified_at: 2026-05-13
+    verified_at: 2026-06-04
     volatility: medium
     confidence: high
   watch_out_for:
@@ -64,12 +64,12 @@ facts:
     source: "https://sudowrite.com/pricing"
     source_label: "Sudowrite Pricing"
     source_id: sudowrite-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-06-04
     volatility: high
     confidence: high
-    next_review_at: 2026-08-13
+    next_review_at: 2026-09-04
 tags: [ai-writing, fiction, creative-writing, novel-writing, storytelling, muse-model]
-seo_title: "Sudowrite: Features, Pricing & Review (May 2026)"
+seo_title: "Sudowrite: Features, Pricing & Review (June 2026)"
 meta_description: "Sudowrite is the fiction-first AI writing tool with the custom-trained Muse model. Hobby $10/mo annual, Professional $22/mo, Max $44/mo. Story Engine, Describe, Expand, Rewrite."
 author: "aipedia.wiki Editorial"
 best_for:
@@ -99,13 +99,13 @@ price_history:
     source_label: "Source"
     source_id: sudowrite-pricing
     note: "Annual rate; monthly $59. 2M credits/mo with rollover."
-  - date: 2026-05-13
+  - date: 2026-06-04
     plan: "All tiers"
     price: "Unchanged"
     source: "https://sudowrite.com/pricing"
     source_label: "Source"
     source_id: sudowrite-pricing
-    note: "Re-verified May 13, 2026. Hobby & Student $10/mo annual ($19 monthly, 225k credits), Professional $22/mo annual ($29 monthly, 1M credits on annual / 450k on monthly), Max $44/mo annual ($59 monthly, 2M credits with rollover). Model picker now exposes Claude 4.x (Sonnet 4.5, Opus, Haiku 4.5), GPT-5 suite, Gemini 3 Pro/Flash, DeepSeek V3/R1, Grok 4, Kimi K2, and Mistral Large 2 alongside Muse."
+    note: "Hobby & Student $10/mo annual ($19 monthly, 225k credits), Professional $22/mo annual ($29 monthly, 1M credits on annual / 450k on monthly), Max $44/mo annual ($59 monthly, 2M credits with rollover). Model picker exposes Claude 4.x (Sonnet 4.5, Opus, Haiku 4.5), GPT-5 suite, Gemini 3 Pro/Flash, DeepSeek V3/R1, Grok 4, Kimi K2, and Mistral Large 2 alongside Muse."
 ---
 
 # Sudowrite
@@ -136,7 +136,7 @@ Routes fallback across Claude 4.x (Sonnet 4.5, Opus, Haiku 4.5), the GPT-5 suite
 | **Free trial** | 10,000 credits · full feature access · no ongoing free tier |
 | **Languages** | 30+ supported |
 
-Every data point above was verified against vendor documentation on 2026-05-13. See Sources.
+Every data point above was verified against vendor sources on 2026-06-04. See Sources.
 
 ## What it actually is
 
@@ -174,7 +174,7 @@ Subscription pricing via [sudowrite.com/pricing](https://sudowrite.com/pricing):
 | Professional | $22 | $29 | 1,000,000 / 450,000 per mo | **Most working novelists should land here** |
 | Max | $44 | $59 | 2,000,000/mo + rollover | Heavy drafters on 100k+ manuscripts |
 
-*Prices verified 2026-05-13 via [sudowrite.com/pricing](https://sudowrite.com/pricing). Annual billing saves up to 50% across tiers and doubles credits on the Professional plan. Free trial includes 10,000 credits with full feature access. Credits are consumed by AI generation, not by user-typed words.*
+*Prices verified 2026-06-04 via [sudowrite.com/pricing](https://sudowrite.com/pricing). Annual billing saves up to 50% across tiers and doubles credits on the Professional plan. Free trial includes 10,000 credits with full feature access. Credits are consumed by AI generation, not by user-typed words.*
 
 ## Against the alternatives
 
@@ -200,7 +200,7 @@ Subscription pricing via [sudowrite.com/pricing](https://sudowrite.com/pricing):
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [sudowrite.com/pricing](https://sudowrite.com/pricing), the [Muse model documentation](https://sudowrite.framer.website/muse), and the [Sudowrite model routing docs](https://docs.sudowrite.com/using-sudowrite/1ow1qkGqof9rtcyGnrWUBS/which-ai-model-should-i-use/veMq9xRH6KLCQPFm5XkQx7).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-04 against [sudowrite.com/pricing](https://sudowrite.com/pricing), the [Muse model documentation](https://sudowrite.framer.website/muse), and the [Sudowrite model routing docs](https://docs.sudowrite.com/using-sudowrite/1ow1qkGqof9rtcyGnrWUBS/which-ai-model-should-i-use/veMq9xRH6KLCQPFm5XkQx7).
 
 ## FAQ
 

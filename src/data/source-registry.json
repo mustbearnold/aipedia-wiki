@@ -268,7 +268,8 @@
       "url": "https://www.ai21.com/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "low"
+      "volatility": "low",
+      "last_checked": "2026-06-04"
     },
     {
       "id": "aider-official",
@@ -1049,7 +1050,8 @@
       "url": "https://writesonic.com/chatsonic",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-04"
     },
     {
       "id": "claude-code-llms",
@@ -6481,7 +6483,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-05-10"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "scite-pricing",
@@ -6490,7 +6492,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-10"
+      "last_checked": "2026-06-04"
     },
     {
       "trust_tier": "primary",
@@ -6722,7 +6724,8 @@
       "url": "https://docs.sudowrite.com/using-sudowrite/1ow1qkGqof9rtcyGnrWUBS/which-ai-model-should-i-use/veMq9xRH6KLCQPFm5XkQx7",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-04"
     },
     {
       "id": "sudowrite-muse",
@@ -6730,7 +6733,8 @@
       "url": "https://sudowrite.framer.website/muse",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-04"
     },
     {
       "id": "sudowrite-pricing",
@@ -6738,7 +6742,8 @@
       "url": "https://sudowrite.com/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-04"
     },
     {
       "id": "suno-model-timeline",
@@ -6804,7 +6809,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "surfer-seo-pricing",
@@ -6813,7 +6818,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "synthesia-help",
@@ -7230,7 +7235,8 @@
       "url": "https://v0.app/changelog",
       "type": "blog",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-04"
     },
     {
       "id": "v0-docs",
@@ -7238,7 +7244,8 @@
       "url": "https://v0.app/docs",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-04"
     },
     {
       "id": "v0-official",
@@ -7246,7 +7253,8 @@
       "url": "https://v0.app/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-04"
     },
     {
       "id": "v0-pricing-blog",
@@ -7254,7 +7262,8 @@
       "url": "https://vercel.com/blog/updated-v0-pricing",
       "type": "blog",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-04"
     },
     {
       "trust_tier": "primary",
@@ -7665,7 +7674,8 @@
       "url": "https://support.wordtune.com/en/articles/8262930-wordtune-s-plans-pricing",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-04"
     },
     {
       "id": "wordtune-pricing",
@@ -7673,7 +7683,8 @@
       "url": "https://wordtune.com/plans",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-04"
     },
     {
       "id": "workato-pricing",
@@ -7773,7 +7784,8 @@
       "url": "https://docs.writesonic.com/",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-04"
     },
     {
       "id": "writesonic-official",
@@ -7789,7 +7801,8 @@
       "url": "https://writesonic.com/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-04"
     },
     {
       "id": "x-premium-help",
@@ -7837,7 +7850,7 @@
     },
     {
       "trust_tier": "primary",
-      "last_checked": "2026-05-04",
+      "last_checked": "2026-06-04",
       "id": "you-com-docs",
       "label": "You.com API docs",
       "url": "https://you.com/docs/welcome",
@@ -7850,7 +7863,8 @@
       "url": "https://you.com/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-04"
     },
     {
       "id": "zapier-agents-guide",
@@ -7859,7 +7873,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-05-10"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "zapier-ai",
@@ -7868,7 +7882,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-10"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "zapier-apps",
@@ -7877,7 +7891,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-05-10"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "zapier-pricing",
@@ -7886,7 +7900,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-10"
+      "last_checked": "2026-06-04"
     },
     {
       "id": "zed-pricing",

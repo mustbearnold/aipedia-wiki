@@ -5,10 +5,10 @@ title: AI Automation & Agents
 description: Current workflow automation, AI agent platforms, meeting automation, call automation, and operations tools for technical teams, non-technical operators, GTM workflows, customer success, support, sales, and internal automation.
 tool_count: 27
 seo_title: "Best AI Automation Tools & Agent Platforms (June 2026)"
-meta_description: "Updated June 3, 2026: compare n8n, Zapier, Make, Gumloop, Relevance AI, Activepieces, AG2, CrewAI, Dust, Glean, Goose, Hermes Agent, Genspark, GetResponse, Dext, Browserbase, Ada, Intercom, hireEZ, Apollo, Amplemarket, Lindy, Manus, Pipedream, CloudTalk, and MeetGeek by workflow, pricing unit, and risk."
+meta_description: "Updated June 4, 2026: compare n8n, Zapier, Make, Gumloop, Relevance AI, Activepieces, AG2, CrewAI, Dust, Glean, Goose, Hermes Agent, Genspark, GetResponse, Dext, Browserbase, Ada, Intercom, hireEZ, Apollo, Amplemarket, Lindy, Manus, Pipedream, CloudTalk, and MeetGeek by workflow, pricing unit, AI orchestration, and risk."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-03
-last_verified: 2026-06-03
+last_updated: 2026-06-04
+last_verified: 2026-06-04
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -30,7 +30,7 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 
 **Use [n8n](/tools/n8n/) when a technical founder, ops engineer, or agency wants control.** n8n's current pricing page says cloud plans include unlimited users, unlimited workflows, every integration, and monthly workflow-execution billing rather than per-step billing. As of May 2026 the EU cloud Starter tier dropped from EU24 to EU20 per month, with reductions across higher tiers, while the self-hosted Community Edition path remains free. This makes n8n the strongest default for complex AI workflows when someone can own credentials, logs, retries, and security.
 
-**Use [Zapier](/tools/zapier/) when non-technical teams need the fastest SaaS connection path.** Zapier's current pricing page frames the platform around Zaps, Tables, Interfaces, Canvas, AI workflow tools, Zapier MCP, and more than 8,000 apps. It is still the cleanest recommendation when app coverage and speed matter more than self-hosting or code-level control.
+**Use [Zapier](/tools/zapier/) when non-technical teams need the fastest SaaS connection path.** Zapier's current pricing and AI pages frame the platform around Zaps, Tables, Forms, MCP, Copilot, Agents, and more than 9,000 apps. The June 4 [ChatGPT vs Zapier](/compare/chatgpt-vs-zapier/) refresh keeps the distinction explicit: ChatGPT is the thinking and drafting assistant; Zapier is the workflow execution layer when SaaS actions need to run repeatedly. It is still the cleanest recommendation when app coverage and speed matter more than self-hosting or code-level control.
 
 **Use [Make](/tools/make/) when visual workflow clarity and low entry price matter.** Make's current pricing page lists a free plan with 1,000 credits/month and 3000+ apps, plus Core, Pro, Teams, and Enterprise tiers. The May 2026 price reduction took Core from $10.59 to $9 per month, with proportional cuts across Pro and Teams. Its AI Agents page positions Make around transparent agents across 3000+ apps.
 
@@ -163,7 +163,8 @@ Do not leave this category stale. Automation tools are adding MCP, agent builder
 
 - [n8n pricing](https://n8n.io/pricing/) (verified 2026-05-13)
 - [n8n AI documentation](https://docs.n8n.io/advanced-ai/) (verified 2026-05-13)
-- [Zapier pricing](https://zapier.com/pricing) (verified 2026-05-13)
+- [Zapier pricing](https://zapier.com/pricing) (verified 2026-06-04)
+- [Zapier AI](https://zapier.com/ai) (verified 2026-06-04)
 - [Make pricing](https://www.make.com/en/pricing) (verified 2026-05-13)
 - [Make AI Agents](https://www.make.com/en/ai-agents) (verified 2026-05-13)
 - [Gumloop pricing](https://www.gumloop.com/pricing) (verified 2026-06-02)

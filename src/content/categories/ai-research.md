@@ -5,10 +5,10 @@ title: AI Research Tools
 description: Source-backed AI tools for literature review, paper discovery, citation context, research notebooks, academic search, and evidence synthesis.
 tool_count: 9
 seo_title: "Best AI Research Tools: Elicit, Scite, Semantic Scholar & Perplexity (June 2026)"
-meta_description: "Updated June 3, 2026: Elicit for literature review, Semantic Scholar for free academic search, Scite for citation context, NotebookLM for source-grounded notebooks, Perplexity for cited web research, Consensus for claim-level Q&A, Connected Papers for graph mapping, ChatPDF for quick PDF chat, and Humata for paid PDF/team document chat."
+meta_description: "Updated June 4, 2026: Elicit for literature review, Semantic Scholar for free academic search, Scite for citation context, NotebookLM for source-grounded notebooks, Perplexity for cited web research, Consensus for claim-level Q&A, Connected Papers for graph mapping, ChatPDF for quick PDF chat, and Humata for paid PDF/team document chat."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-03
-last_verified: 2026-06-03
+last_updated: 2026-06-04
+last_verified: 2026-06-04
 update_frequency: monthly
 ---
 
@@ -16,7 +16,9 @@ update_frequency: monthly
 
 AI research tools split into four buyer lanes now: **literature review**, **academic search**, **citation context**, and **source-grounded analysis**. The right purchase depends on whether the user needs to find papers, evaluate citations, analyze a fixed source set, or research current web material outside academic databases.
 
-As of June 3, 2026, **[Elicit](/tools/elicit/)** is AiPedia's best research-workflow pick because it is built around paper discovery, screening, extraction, and evidence tables; its Basic, Plus, Pro, Scale, and Enterprise ladder still needs billing-cadence verification at purchase time because research-team packaging can move quickly. **[Semantic Scholar](/tools/semantic-scholar/)** is the free academic-search baseline. **[Scite](/tools/scite/)** is the specialist pick when citation context matters. **[NotebookLM](/tools/notebooklm/)** is best when answers must stay grounded in a chosen source library. **[Perplexity](/tools/perplexity/)** is the best cited-web add-on for current sources, documentation, policy, market, and company research. **[Consensus](/tools/consensus/)** and **[Connected Papers](/tools/connected-papers/)** were rechecked for this refresh; **[ChatPDF](/tools/chatpdf/)** remains the quick PDF-chat route, while **[Humata](/tools/humata/)** is the paid PDF/team-document lane with Free 60 pages/month, Expert $9.99/month for 500 pages and up to 3 users, Team $49/user/month for 5,000 pages and up to 10 users, OCR, folder permissions, and SOC-2.
+As of June 4, 2026, **[Elicit](/tools/elicit/)** is AiPedia's best research-workflow pick because it is built around paper discovery, screening, extraction, and evidence tables; its Basic, Plus, Pro, Scale, and Enterprise ladder still needs billing-cadence verification at purchase time because research-team packaging can move quickly. **[Semantic Scholar](/tools/semantic-scholar/)** is the free academic-search baseline. **[Scite](/tools/scite/)** is the specialist pick when citation context matters, with Basic still verified at $20/month, Pro at $50/month, and Organization/Developer on custom terms. **[NotebookLM](/tools/notebooklm/)** is best when answers must stay grounded in a chosen source library. **[Perplexity](/tools/perplexity/)** is the best cited-web add-on for current sources, documentation, policy, market, and company research. **[Consensus](/tools/consensus/)** and **[Connected Papers](/tools/connected-papers/)** were rechecked for this refresh; **[ChatPDF](/tools/chatpdf/)** remains the quick PDF-chat route, while **[Humata](/tools/humata/)** is the paid PDF/team-document lane with Free 60 pages/month, Expert $9.99/month for 500 pages and up to 3 users, Team $49/user/month for 5,000 pages and up to 10 users, OCR, folder permissions, and SOC-2.
+
+The June 4 [ChatGPT vs Scite](/compare/chatgpt-vs-scite/) refresh keeps the buyer split explicit: ChatGPT is the broad research assistant for drafting, explaining, and planning, while Scite is the citation-context layer for checking whether later literature supports, contrasts, or merely mentions a claim.
 
 For budget-conscious research teams running their own pipelines, [Reka Edge 7B](/tools/reka/) is now publicly priced at $0.10 per million input tokens and $0.10 per million output tokens, making it a low-cost extraction or summarization layer to evaluate alongside Elicit's structured workflow. Teams evaluating open-weight, long-context extraction or agentic coding around research corpora can also shortlist [GLM](/tools/glm/): GLM-5.1 has MIT Hugging Face weights, 200K context, 128K maximum output, and public Z.AI API pricing, but it is model infrastructure rather than a literature-review workflow.
 
@@ -76,7 +78,7 @@ Do not cite generated text. Cite the original source. Do not treat a linked sour
 
 - [Elicit pricing](https://elicit.com/pricing) - verified 2026-06-03.
 - [Semantic Scholar](https://www.semanticscholar.org/) - verified 2026-05-13.
-- [Scite](https://scite.ai/) - verified 2026-05-13.
+- [Scite](https://scite.ai/) - verified 2026-06-04.
 - [NotebookLM](https://notebooklm.google/) - verified 2026-05-13.
 - [Perplexity Enterprise](https://www.perplexity.ai/enterprise) - verified 2026-05-13.
 - [Consensus](https://consensus.app/) - verified 2026-06-02.
