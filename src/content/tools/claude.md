@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2023-03
-last_updated: 2026-05-29
-last_verified: 2026-05-29
+last_updated: 2026-06-03
+last_verified: 2026-06-03
 update_frequency: monthly
 seo_title: "Claude: Features, Pricing & Review (2026)"
 meta_description: "Claude runs Opus 4.8 as flagship with 1M context, Claude Code dynamic workflows, Claude Design, Claude Cowork, and May 2026 enterprise updates. Agent SDK and claude -p move to separate credits June 15."
@@ -181,6 +181,14 @@ not_best_for:
 quick_answer: >-
   Claude is Anthropic's assistant, and Opus 4.8 is the current flagship for long-form reasoning, writing coherence, terminal-native Claude Code workflows, and high-trust enterprise deployments. After GPT-5.5, ChatGPT is the stronger default all-purpose assistant; pick Claude when its writing style, long-context discipline, Claude Code, dynamic workflows, or conservative safety posture matters more than breadth.
 price_history:
+  - date: 2026-06-03
+    plan: "Project Glasswing expansion"
+    price: "No public Claude price change; restricted defensive-cyber access remains programmatic and invitation-led"
+    source: "https://www.anthropic.com/news/expanding-project-glasswing"
+    source_id: anthropic-project-glasswing-expansion
+    source_label: "Anthropic Project Glasswing expansion"
+    verified_at: 2026-06-03
+    note: "Anthropic expanded Project Glasswing toward more essential infrastructure providers, critical open-source maintainers, and safety testers. Treat it as a trust/security signal, not as normal Claude subscription access."
   - date: 2026-05-28
     plan: "Opus 4.8"
     price: "$5 / $25 per MTok standard; $10 / $50 per MTok fast mode"
@@ -263,6 +271,7 @@ Anthropic's AI assistant. **Opus 4.8** is the flagship as of **May 28, 2026**, r
 
 ## Recent developments
 
+- **June 2:** [Anthropic expanded Project Glasswing](/news/2026-06-02-anthropic-project-glasswing-expansion/) toward more essential infrastructure providers, critical open-source maintainers, and safety testers. This is a restricted cyberdefense program and a trust signal, not a normal Claude subscription feature.
 - **May 28:** [Claude Opus 4.8 launched with dynamic workflows, effort controls, Messages API instruction updates, and cheaper fast mode](/news/2026-05-28-claude-opus-48-dynamic-workflows/). This is now the model to evaluate for serious Claude reasoning, coding, and agentic work; dynamic workflows matter most for Claude Code buyers because they let Claude fan out large jobs across parallel subagents.
 - **May 28:** [Anthropic raised $65B at a $965B post-money valuation](/news/2026-05-28-anthropic-series-h-65b-965b-valuation/). Treat the round as a capacity and enterprise-scale signal, not a buying recommendation by itself: rate limits, latency, regional availability, support, and price discipline still need workflow-specific testing.
 - **May 25:** [Pope Leo XIV released an AI encyclical while Anthropic co-founder Chris Olah called for outside checks on AI labs](/news/2026-05-25-pope-leo-magnifica-humanitas-anthropic-olah/). This is not a Claude feature launch, but it strengthens Anthropic's public-trust positioning while keeping normal buyer diligence on pricing, limits, data handling, and implementation quality essential.
@@ -395,7 +404,7 @@ API pricing via [platform.claude.com](https://platform.claude.com/docs/en/about-
 
 Fast mode on Opus 4.8 is $10 input / $50 output per MTok. Batch API discounts all models 50%. Prompt caching drops cache-hit input to 10% of standard.
 
-Prices verified 2026-05-29 via [Claude pricing](https://claude.com/pricing), [Anthropic model docs](https://platform.claude.com/docs/en/about-claude/models/overview), and [Anthropic's Opus 4.8 launch](https://www.anthropic.com/news/claude-opus-4-8).
+Prices and current security-program context verified 2026-06-03 via [Claude pricing](https://claude.com/pricing), [Anthropic model docs](https://platform.claude.com/docs/en/about-claude/models/overview), [Anthropic's Opus 4.8 launch](https://www.anthropic.com/news/claude-opus-4-8), and [Anthropic's Project Glasswing expansion](https://www.anthropic.com/news/expanding-project-glasswing).
 
 **Opus 4.8 cost-impact note:** standard pricing matches Opus 4.7, while fast mode is now $10 / $50 per MTok. Budget-sensitive API workloads should benchmark standard versus fast mode and set effort levels explicitly before migrating.
 
@@ -425,7 +434,7 @@ Prices verified 2026-05-29 via [Claude pricing](https://claude.com/pricing), [An
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-29 against [Claude pricing](https://claude.com/pricing), Anthropic's [model docs](https://platform.claude.com/docs/en/about-claude/models/overview), the [Opus 4.8 launch](/news/2026-05-28-claude-opus-48-dynamic-workflows/), the [Series H funding update](/news/2026-05-28-anthropic-series-h-65b-965b-valuation/), the [May 25 Vatican AI encyclical coverage](/news/2026-05-25-pope-leo-magnifica-humanitas-anthropic-olah/), the [May 21 Claude compliance and security-partner update](/news/2026-05-21-claude-compliance-api-opus-cybersecurity-partners/), the [May 20 frontier AI capital-pressure update](/news/2026-05-20-openai-anthropic-spacex-frontier-ai-capital-pressure/), the [May 19 KPMG rollout](/news/2026-05-19-anthropic-kpmg-claude-276000-workers/), the [May 18 Stainless acquisition](/news/2026-05-18-anthropic-acquires-stainless-developer-platform/), the [May 14 PwC/Gates expansion](/news/2026-05-14-anthropic-pwc-gates-claude-expansion/), the [May 14 Agent SDK credit split](/news/2026-05-14-anthropic-claude-agent-sdk-credit-split/), the [May 12 Claude for Legal launch](/news/2026-05-12-anthropic-claude-for-legal-plugins-microsoft-365/), the [May 10 reported Akamai cloud-deal coverage](/news/2026-05-10-anthropic-akamai-cloud-deal/), the [May 9 FIS financial-crimes agent coverage](/news/2026-05-09-anthropic-fis-financial-crimes-agent/), the [May 6 Managed Agents update](/news/2026-05-06-claude-managed-agents-dreaming-outcomes-orchestration/), the [May 7 GitHub Copilot Claude model notices](/news/2026-05-07-github-copilot-gpt41-claude-sonnet4-deprecations/), the [May 7 Copilot Rubber Duck update](/news/2026-05-07-github-copilot-rubber-duck-cross-model-review/), and the [NEC partnership](/news/2026-04-24-anthropic-nec-ai-engineering-workforce/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-03 against [Claude pricing](https://claude.com/pricing), Anthropic's [model docs](https://platform.claude.com/docs/en/about-claude/models/overview), the [Project Glasswing expansion](/news/2026-06-02-anthropic-project-glasswing-expansion/), the [Opus 4.8 launch](/news/2026-05-28-claude-opus-48-dynamic-workflows/), the [Series H funding update](/news/2026-05-28-anthropic-series-h-65b-965b-valuation/), the [May 25 Vatican AI encyclical coverage](/news/2026-05-25-pope-leo-magnifica-humanitas-anthropic-olah/), the [May 21 Claude compliance and security-partner update](/news/2026-05-21-claude-compliance-api-opus-cybersecurity-partners/), the [May 20 frontier AI capital-pressure update](/news/2026-05-20-openai-anthropic-spacex-frontier-ai-capital-pressure/), the [May 19 KPMG rollout](/news/2026-05-19-anthropic-kpmg-claude-276000-workers/), the [May 18 Stainless acquisition](/news/2026-05-18-anthropic-acquires-stainless-developer-platform/), the [May 14 PwC/Gates expansion](/news/2026-05-14-anthropic-pwc-gates-claude-expansion/), the [May 14 Agent SDK credit split](/news/2026-05-14-anthropic-claude-agent-sdk-credit-split/), the [May 12 Claude for Legal launch](/news/2026-05-12-anthropic-claude-for-legal-plugins-microsoft-365/), the [May 10 reported Akamai cloud-deal coverage](/news/2026-05-10-anthropic-akamai-cloud-deal/), the [May 9 FIS financial-crimes agent coverage](/news/2026-05-09-anthropic-fis-financial-crimes-agent/), the [May 6 Managed Agents update](/news/2026-05-06-claude-managed-agents-dreaming-outcomes-orchestration/), the [May 7 GitHub Copilot Claude model notices](/news/2026-05-07-github-copilot-gpt41-claude-sonnet4-deprecations/), the [May 7 Copilot Rubber Duck update](/news/2026-05-07-github-copilot-rubber-duck-cross-model-review/), and the [NEC partnership](/news/2026-04-24-anthropic-nec-ai-engineering-workforce/).
 
 ## FAQ
 

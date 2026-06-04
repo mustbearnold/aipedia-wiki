@@ -5,99 +5,85 @@ title: "Cartesia vs Voxtral"
 tools: [cartesia, voxtral]
 category: ai-voice
 winner: depends
-seo_title: "Cartesia vs Voxtral: Which Is Better in 2026?"
-meta_description: "Honest head-to-head of Cartesia (real-time TTS) and Voxtral (Mistral STT) as of May 2026. Flagship models, current pricing, and which tool fits your workflow."
+seo_title: "Cartesia vs Voxtral: Hosted Voice Agents or Mistral Audio Stack? (June 2026)"
+meta_description: "Cartesia vs Voxtral, verified June 2026: choose Cartesia for hosted low-latency voice agents; choose Voxtral for Mistral-native TTS, transcription, and open-weight experimentation."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-13
-last_verified: 2026-05-13
-update_frequency: quarterly
+last_updated: 2026-06-03
+last_verified: 2026-06-03
+update_frequency: monthly
 canonical_fact_table: true
 ---
 
 # Cartesia vs Voxtral
 
-> **Category correction (2026-05-13):** Voxtral is a speech-to-text family (Mini Transcribe V2, Realtime), not a text-to-speech product. The comparison below treats Cartesia as the real-time TTS vendor and Voxtral as the Mistral-native STT path, not as a TTS-vs-TTS shootout.
-
-[Cartesia](../tools/cartesia.md) and [Voxtral](../tools/voxtral.md) both sit in AI audio, but they are not the same kind of product choice. Cartesia is a real-time text-to-speech API built for voice agents and interactive products. Voxtral is Mistral's speech-to-text family (Mini Transcribe V2, Realtime) for teams that need transcription, audio understanding, or multilingual speech recognition inside a Mistral-aligned stack.
+[Cartesia](/tools/cartesia/) and [Voxtral](/tools/voxtral/) are now both relevant to voice-agent stacks, but they come from different directions. Cartesia is a hosted low-latency voice platform built around Sonic TTS, Ink-Whisper STT, and Line agents. Voxtral is Mistral AI's audio family: Voxtral TTS v26.03 for speech generation, Voxtral Mini Transcribe 2 for batch transcription, and Voxtral Realtime for live transcription.
 
 ## Quick Answer
 
-Choose Cartesia when the product needs low-latency spoken output (TTS). Choose Voxtral when the priority is transcribing or understanding incoming speech (STT) inside a Mistral-native pipeline. In many real systems, both are used together: Voxtral on the input side, Cartesia on the output side.
+Choose Cartesia if you want a managed real-time voice stack for production agents, telephony, and interactive products. Choose Voxtral if you want a Mistral-native audio stack, lower published TTS API pricing, open-model experimentation, or transcription that stays close to Mistral's text-model workflow.
 
 ## Decision Snapshot
+
 | | Cartesia | Voxtral |
 |---|---|---|
-| **Primary job** | Real-time TTS and voice agent output | Speech-to-text, transcription, audio understanding |
-| **Best fit** | Telephony, live agents, interactive apps | Call analytics, multilingual transcription, voice-agent input |
-| **Workflow style** | Streaming speech generation | Streaming/batch transcription and audio comprehension |
-| **Main risk** | Cost and quality under real call traffic | Accuracy on accents, noisy audio, and domain terms |
+| **Primary job** | Managed real-time TTS, STT, and voice agents | Mistral-native TTS plus STT/audio understanding |
+| **Best plan to test** | Free or Pro, then Startup for production pilots | La Plateforme/API for hosted use; open weights for experimentation |
+| **June 2026 price anchor** | Free; Pro $4/mo annual; Startup $39/mo annual; Scale $239/mo annual; Line from $0.06/min | Voxtral TTS v26.03 listed at $0.016 per 1k characters; Transcribe 2 listed from $0.002/min |
+| **Best for** | Voice agents, IVR, live app speech, managed deployment | Mistral-stack speech generation, transcription, audio understanding, open testing |
+| **Main watch-out** | Production cost has several moving parts | TTS open weights are CC BY-NC; production licensing/API path must be checked |
 
 ## Where Cartesia Wins
 
-- Better for live conversation, voice agents, phone systems, and interactive product experiences.
-- Latency, streaming, and telephony-style integration are the core buying reasons.
-- Easier to evaluate with end-to-end call tests: time to first audio, interruption handling, and perceived responsiveness.
-- Stronger when the output is speech from text and the user hears it immediately.
-- Purpose-built for developers shipping production voice-agent features.
+- **Managed voice-agent stack.** Cartesia packages the output path, input path, and Line orchestration around live agents.
+- **Production telephony fit.** It is a clearer first test for IVR, support bots, call automation, and app speech where response timing matters.
+- **Deployment simplicity.** Teams can build against a hosted provider instead of owning model hosting and license review.
+- **Compliance posture.** Cartesia's public positioning includes SOC 2 Type II, HIPAA, and PCI Level 1 claims for regulated buyers to validate.
+- **Voice-agent cost modeling.** The pricing page separates plan credits, Line minutes, professional voice cloning, and phone-number minutes.
 
 ## Where Voxtral Wins
 
-- Built for the opposite half of the voice loop: turning audio into text, not text into audio.
-- Voxtral Realtime targets low-latency streaming transcription for live agents and meeting use cases.
-- Voxtral Mini Transcribe V2 handles batch transcription, multilingual audio, and audio-understanding workflows.
-- Useful for teams already standardizing on Mistral for text and reasoning, so STT lives on the same provider.
-- Worth testing if the workflow includes call analytics, voice-agent ASR, or compliance transcription.
+- **Mistral-native audio.** Voxtral keeps TTS, transcription, and audio understanding closer to teams already using Mistral models and La Plateforme.
+- **Published API unit price.** Mistral pricing lists Voxtral TTS v26.03 at $0.016 per 1k characters, which is attractive for hosted TTS experiments.
+- **Open experimentation.** Mistral's Voxtral TTS announcement describes open weights under CC BY-NC 4.0, while Voxtral Realtime STT has been documented as Apache 2.0.
+- **Input-side voice stack.** Voxtral Mini Transcribe 2 and Voxtral Realtime cover batch and live STT alongside TTS.
+- **Research and edge testing.** Voxtral is the more interesting path when the team wants to inspect, test, or adapt an open audio model before choosing a commercial architecture.
 
-## Key Differences
+## Key Difference
 
-Cartesia is a specialized TTS product. Voxtral is a Mistral-native STT family. The two are not substitutes; they sit on opposite sides of a voice-agent loop. If you are building a live agent, Cartesia handles speech output and Voxtral handles speech input.
+Cartesia is the managed agent platform. Voxtral is the Mistral audio model family.
 
-Do not choose either from generic audio benchmarks alone. Run the real script, language, latency target, infrastructure path, and cost model you expect in production.
+For Cartesia, run an end-to-end call and evaluate latency, interruptions, audio quality, fallback behavior, and total cost per completed session. For Voxtral, evaluate TTS naturalness, Transcribe 2 accuracy, Realtime latency, language coverage, license fit, and whether Mistral's hosted API or open-weight route makes sense for production.
 
-## Practical Evaluation
+## Who Should Choose Cartesia
 
-Test Cartesia with:
+Choose Cartesia for production voice agents, phone systems, customer-support automation, interactive products, and teams that want a hosted, voice-agent-first platform.
 
-- A live or simulated call flow.
-- Interruptions, pauses, retries, and noisy user behavior.
-- The exact voice-agent stack, telephony layer, and latency budget.
-- Your expected language mix and traffic volume.
-- Fallback behavior when generation fails or takes too long.
+## Who Should Choose Voxtral
 
-Test Voxtral with:
-
-- Real recorded calls, meetings, or voice notes from production traffic.
-- Multilingual speech samples, accents, and domain-specific terms.
-- Streaming Realtime mode for live agent ASR; Mini Transcribe V2 for batch jobs.
-- Word error rate, diarization quality (where supported), and tail-latency.
-- Comparisons against other ASR providers on the same audio files.
-
-If a human is waiting for the next spoken response, Cartesia owns the output path. If you also need to capture what the user just said, Voxtral is the more natural input path inside a Mistral stack.
-
-## Who should choose Cartesia
-
-Choose Cartesia for real-time agents, voice interfaces, call automation, interactive apps, and products where delays in spoken output damage the experience.
-
-## Who should choose Voxtral
-
-Choose Voxtral if you need Mistral-native speech-to-text: transcription, live ASR for voice agents, multilingual audio understanding, or call/meeting analytics inside a broader Mistral workflow.
+Choose Voxtral if you are already on Mistral, need both TTS and transcription in the same model ecosystem, want a lower published hosted TTS unit price, or need open-model experimentation before production.
 
 ## Bottom Line
 
-Cartesia is the real-time TTS specialist. Voxtral is the Mistral-native STT family. Pick Cartesia when the hard requirement is spoken output; pick Voxtral when the hard requirement is turning speech into text. Many production voice agents end up using both.
+Cartesia is the safer managed choice for production real-time voice agents. Voxtral is the more flexible Mistral-native audio stack for teams that care about open models, hosted unit pricing, transcription, and model control.
 
 ## FAQ
 
-**Which is cheaper?**
-Use current vendor pages for pricing. Costs are not directly comparable: Cartesia bills on characters/audio for TTS, while Voxtral bills on transcribed audio duration for STT.
+**Is Voxtral still speech-to-text only?**
+No. As of the June 2026 check, Mistral publishes Voxtral TTS v26.03 for text-to-speech and also documents Voxtral Mini Transcribe 2 plus Voxtral Realtime for speech-to-text.
 
-**Which has better output quality?**
-Cartesia should be judged on live speech responsiveness and naturalness. Voxtral should be judged on transcription accuracy (WER), latency, and multilingual coverage on your own audio.
+**Which is cheaper?**
+Mistral pricing lists Voxtral TTS v26.03 at $0.016 per 1k characters. Cartesia pricing is tied to plan credits, generated audio seconds, Line minutes, phone minutes, and voice-clone costs. Compare against real traffic rather than list prices alone.
 
 **Can I use both?**
-Yes, and that is the most common pattern: Voxtral for STT on the user side, Cartesia for TTS on the agent side, with the LLM in between.
+Yes. A production voice agent could use Voxtral or Mistral for transcription/audio understanding and Cartesia for managed low-latency speech output, though teams should test end-to-end latency before committing.
 
 ## Sources
 
-- [Cartesia](../tools/cartesia.md)
-- [Voxtral](../tools/voxtral.md)
+- [Cartesia pricing](https://cartesia.ai/pricing)
+- [Cartesia docs](https://docs.cartesia.ai/)
+- [Cartesia Sonic](https://cartesia.ai/sonic)
+- [Mistral pricing](https://mistral.ai/pricing)
+- [Voxtral TTS model card](https://docs.mistral.ai/models/voxtral-tts-26-03)
+- [Mistral Voxtral TTS announcement](https://mistral.ai/news/voxtral-tts)
+- [Mistral audio speech-to-text docs](https://docs.mistral.ai/studio-api/audio/speech_to_text)
+- [Mistral model overview](https://docs.mistral.ai/models/overview)

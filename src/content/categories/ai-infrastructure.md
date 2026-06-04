@@ -5,10 +5,10 @@ title: AI Infrastructure & Model APIs
 description: Developer platforms for LLM routing, pay-as-you-go model APIs, hosted inference, serverless GPUs, vector databases, speech APIs, and production retrieval systems.
 tool_count: 12
 seo_title: "Best AI Infrastructure & Model API Tools (June 2026)"
-meta_description: "Updated June 2, 2026: compare OpenRouter after its $113M Series B, OpenAI API, Claude API, Gemini API, Mistral 3, Groq, Replicate, fal, Fireworks AI, Browserbase, Deepgram, Pinecone, Weaviate, Qdrant, and LM Studio, with CoreWeave, GPT-Rosalind, and agent-security signals."
+meta_description: "Updated June 3, 2026: compare OpenRouter after its $113M Series B, OpenAI API, Claude API, Gemini API, Mistral 3, Groq, Replicate, fal, Fireworks AI, Browserbase, Deepgram, Pinecone, Weaviate, Qdrant, LM Studio, and the June 3 agent-infrastructure wave from NVIDIA, Microsoft, Postman, RelationalAI, 7AI, and the White House."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-02
-last_verified: 2026-06-02
+last_updated: 2026-06-03
+last_verified: 2026-06-03
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -29,6 +29,8 @@ AI infrastructure tools sit underneath the apps people see. They route model cal
 This category is for developer and platform buyers. If the user is choosing a chatbot, start with [AI Chatbots](/categories/ai-chatbots/). If the team is shipping an AI product, agent, retrieval layer, or model-backed workflow, this is the better lane.
 
 The late-May infrastructure update is agent control. CoreWeave's [training-to-inference loop](/news/2026-05-30-coreweave-agent-improvement-loop/) pushes traces, evals, RL, inference, and W&B tooling into one reliability story. OpenAI's [Rosalind Biodefense trusted-access expansion](/news/2026-05-31-openai-rosalind-biodefense-trusted-access/) shows that specialist frontier models may ship as gated capability programs. Sysdig's [LLM-agent intrusion report](/news/2026-05-31-sysdig-llm-agent-intrusion-agent-security/) makes runtime telemetry and least-privilege design part of infrastructure buying, not only security cleanup.
+
+The June 3 update widens that control story. Microsoft Build put Work IQ and Foundry around enterprise agents; GitHub made the Copilot SDK generally available while AI Credits became the agent-usage meter; NVIDIA pushed enterprise agents, Cosmos 3, open physical-AI agent skills, Alpamayo 2 Super, RTX Spark, and DGX Station for Windows; Postman launched AI Engineer for API work; RelationalAI moved agentic decision intelligence deeper into Snowflake; 7AI kept security agents in the proactive-hunting lane; and the White House AI cybersecurity order put advanced AI cyber capability into public-sector and critical-infrastructure policy. Infrastructure buyers should evaluate agent stacks by context access, runtime isolation, traces, evals, spend controls, simulation/data pipelines, local-vs-cloud compute, and write-action approvals.
 
 **Use [OpenRouter](/tools/openrouter/) when you need one API across many model providers.** The current pricing page lists pay-as-you-go access to 400+ models and 60+ providers, with budget controls, activity logs, prompt caching, preferred vendor selections, and model-priced token billing. Its [May 27 funding signal](/news/2026-05-27-openrouter-series-b-model-routing/) makes the category clearer: routing, fallback, governance, and spend visibility are becoming production infrastructure, not just developer convenience.
 
@@ -119,3 +121,15 @@ Do not publish infrastructure pages with old flat monthly subscription framing. 
 - [OpenAI Rosalind Biodefense](https://openai.com/index/strengthening-societal-resilience-with-rosalind-biodefense/) (verified 2026-05-31)
 - [Geordie AI Series A](https://www.geordie.ai/resources/geordie-ai-raises-30m-series-a-as-enterprises-race-to-govern-autonomous-ai-agents/) (verified 2026-05-31)
 - [Sysdig LLM-agent intrusion analysis](https://www.sysdig.com/blog/ai-agent-at-the-wheel-how-an-attacker-used-llms-to-move-from-a-cve-to-an-internal-database-in-4-pivots) (verified 2026-05-31)
+- [Microsoft Build 2026 Work IQ and Foundry agent stack](https://blogs.microsoft.com/blog/2026/06/02/microsoft-build-2026-be-yourself-at-work/) (verified 2026-06-03)
+- [GitHub Copilot SDK GA](https://github.blog/changelog/2026-06-02-copilot-sdk-is-now-generally-available/) (verified 2026-06-03)
+- [NVIDIA enterprise software agents](https://investor.nvidia.com/news/press-release-details/2026/Enterprise-Software-Leaders-Build-AI-Agents-With-NVIDIA/default.aspx) (verified 2026-06-03)
+- [NVIDIA Cosmos 3 physical AI model](https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Launches-Cosmos-3-the-Open-Frontier-Foundation-Model-for-Physical-AI/default.aspx) (verified 2026-06-03)
+- [NVIDIA physical AI agent tools and skills](https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Releases-Major-Collection-of-Open-Source-Agent-Tools-and-Skills-for-Physical-AI/default.aspx) (verified 2026-06-03)
+- [NVIDIA Alpamayo 2 Super](https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Launches-Alpamayo-2-Super-Open-Reasoning-Model-for-Robotaxis/default.aspx) (verified 2026-06-03)
+- [NVIDIA RTX Spark Windows AI PCs](https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-and-Microsoft-Reinvent-Windows-PCs-for-the-Age-of-Personal-AI/default.aspx) (verified 2026-06-03)
+- [NVIDIA DGX Station for Windows](https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-DGX-Station-for-Windows-Puts-a-Trillion-Parameter-AI-Supercomputer-on-Every-Enterprise-Desk/default.aspx) (verified 2026-06-03)
+- [Postman AI Engineer](https://blog.postman.com/introducing-the-ai-engineer/) (verified 2026-06-03)
+- [RelationalAI Snowflake agentic decision intelligence](https://www.globenewswire.com/news-release/2026/06/02/3305546/0/en/RelationalAI-Closes-the-AI-Value-Gap-with-New-Agentic-Decision-Intelligence-Capabilities-for-the-Snowflake-AI-Data-Cloud.html) (verified 2026-06-03)
+- [7AI Agentic Security Platform](https://7ai.com/platform) (verified 2026-06-03)
+- [White House AI cybersecurity order](https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security/) (verified 2026-06-03)

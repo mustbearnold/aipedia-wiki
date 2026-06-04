@@ -2,16 +2,16 @@
 type: tool
 slug: voxtral
 title: Voxtral
-tagline: Mistral AI's open-weight speech understanding family. Voxtral Mini Transcribe V2 for batch and Voxtral Realtime for sub-200ms live transcription with native semantic understanding.
+tagline: Mistral AI's open audio family for TTS, transcription, and realtime speech understanding. Voxtral TTS v26.03 lists at $0.016 per 1k characters, while Voxtral Mini Transcribe 2 and Realtime cover STT.
 category: ai-voice
 company: Mistral AI
-url: https://mistral.ai/news/voxtral
+url: https://mistral.ai/news/voxtral-tts
 pricing_model: freemium
-price_range: "Free open weights (Apache 2.0 / Realtime) / API from $0.001 per minute"
+price_range: "Open weights for eligible use; hosted TTS $0.016/1k chars; Transcribe 2 from $0.002/min"
 status: active
 launched: 2025-07
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-03
+last_verified: 2026-06-03
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -21,219 +21,229 @@ affiliate:
   link: null
 scores:
   utility: 8
-  value: 10
-  moat: 6
+  value: 9
+  moat: 7
   longevity: 8
 facts:
   model_family:
-    value: "Voxtral is Mistral's open-weight speech understanding (STT) family. As of May 2026 the API exposes Voxtral Mini Transcribe V2 for batch transcription and Voxtral Realtime for sub-200ms live transcription. Voxtral Realtime is published under Apache 2.0 and is deployable on edge devices."
-    source: "https://mistral.ai/news/voxtral"
-    source_label: "Mistral Voxtral launch"
-    source_id: voxtral-pricing
-    verified_at: 2026-05-13
-    next_review_at: 2026-08-13
+    value: "Voxtral is now Mistral AI's broader audio family: Voxtral TTS v26.03 for speech generation, Voxtral Mini Transcribe 2 for batch transcription, and Voxtral Realtime for live speech-to-text/audio understanding."
+    source: "https://docs.mistral.ai/models/voxtral-tts-26-03"
+    source_label: "Voxtral TTS model card"
+    source_id: voxtral-tts-docs
+    verified_at: 2026-06-03
+    next_review_at: 2026-07-03
     volatility: high
     confidence: high
   api_available:
-    value: "Yes. Mistral exposes hosted speech-to-text APIs through La Plateforme covering both batch transcription (Voxtral Mini Transcribe V2) and live transcription (Voxtral Realtime). The full Realtime weights also ship under Apache 2.0 for self-hosting."
+    value: "Yes. Mistral exposes hosted Voxtral TTS and transcription APIs through La Plateforme; Voxtral Mini Transcribe 2 and Voxtral Realtime are documented in the speech-to-text API docs."
     source: "https://docs.mistral.ai/studio-api/audio/speech_to_text"
-    source_label: "Mistral audio docs"
+    source_label: "Mistral speech-to-text docs"
     source_id: voxtral-docs
-    verified_at: 2026-05-13
-    next_review_at: 2026-08-13
+    verified_at: 2026-06-03
+    next_review_at: 2026-07-03
     volatility: high
     confidence: high
   pricing_anchor:
-    value: "Voxtral API pricing starts at about $0.001 per minute via La Plateforme, which Mistral positions as less than half the price of Whisper and ElevenLabs Scribe. Confirm current rates on the Mistral pricing page before production rollout."
-    source: "https://docs.mistral.ai/models/overview"
-    source_label: "Mistral model overview"
-    source_id: mistral-models-docs
-    verified_at: 2026-05-13
-    next_review_at: 2026-08-13
-    volatility: high
-    confidence: medium
-  best_for:
-    value: "Teams running transcription, voice-agent, or audio-understanding pipelines at scale that need cheap per-minute STT, edge deployment via Apache 2.0 weights, or native semantic understanding alongside raw transcripts. Not a TTS tool."
-    source: "https://docs.mistral.ai/studio-api/audio/speech_to_text"
-    source_label: "Mistral audio docs"
-    source_id: voxtral-docs
-    verified_at: 2026-05-13
-    next_review_at: 2026-08-13
+    value: "Mistral pricing lists Voxtral TTS v26.03 at $0.016 per 1k characters and Voxtral Mini Transcribe 2 from $0.002 per minute; check Mistral pricing before production rollout because audio model pricing is volatile."
+    source: "https://mistral.ai/pricing"
+    source_label: "Mistral pricing"
+    source_id: mistral-pricing
+    verified_at: 2026-06-03
+    next_review_at: 2026-07-03
     volatility: high
     confidence: high
+  best_for:
+    value: "Teams already using Mistral that want speech generation, transcription, realtime audio understanding, lower hosted TTS unit pricing, or open-model experimentation in the same ecosystem."
+    source: "https://mistral.ai/news/voxtral-tts"
+    source_label: "Mistral Voxtral TTS announcement"
+    source_id: voxtral-tts-launch
+    verified_at: 2026-06-03
+    next_review_at: 2026-07-03
+    volatility: medium
+    confidence: high
   watch_out_for:
-    value: "Voxtral is a speech-to-text and audio-understanding family, not a text-to-speech engine. Do not pick it for voice generation, voice cloning, narration, or dubbing workflows. Pair it with a dedicated TTS provider (ElevenLabs, Fish Audio, Cartesia) if you need voice output."
+    value: "Voxtral TTS open weights are published under CC BY-NC 4.0, so commercial teams should use the hosted API or confirm license terms. It is not a polished creator studio, and production voice-agent buyers should benchmark latency against Cartesia, ElevenLabs, and Deepgram on real traffic."
+    source: "https://mistral.ai/news/voxtral-tts"
+    source_label: "Mistral Voxtral TTS announcement"
+    source_id: voxtral-tts-launch
+    verified_at: 2026-06-03
+    next_review_at: 2026-07-03
+    volatility: high
+    confidence: high
+tags: [text-to-speech, speech-to-text, stt, tts, audio-understanding, open-weight, api, mistral, multilingual, voice-agent, realtime]
+seo_title: "Voxtral (Mistral AI): Features, Pricing & Review (June 2026)"
+meta_description: "Voxtral is Mistral AI's audio family for TTS and transcription. June 2026 check: Voxtral TTS v26.03 at $0.016/1k chars, Mini Transcribe 2 from $0.002/min, Realtime for live STT."
+author: "aipedia.wiki Editorial"
+best_for:
+  - teams already building on Mistral AI and La Plateforme
+  - developers who need both TTS and speech-to-text in one model ecosystem
+  - hosted TTS experiments where $0.016 per 1k characters is attractive
+  - transcription and realtime speech understanding workloads
+  - researchers testing open audio models before commercial deployment
+not_best_for:
+  - creators who want a polished voiceover studio
+  - teams that need commercial use of non-commercial open weights without using the hosted API
+  - enterprise dubbing pipelines with lip-sync, review, watermarking, and approval workflows
+  - voice-agent teams that have not benchmarked realtime latency end to end
+quick_answer: >-
+  Voxtral is no longer an STT-only buyer note. Mistral's current audio lineup includes Voxtral TTS v26.03 for speech generation, Voxtral Mini Transcribe 2 for batch STT, and Voxtral Realtime for live transcription/audio understanding. Pick it when you want a Mistral-native audio stack, low published hosted TTS pricing, or open-model experimentation. Skip it for a creator-first studio like ElevenLabs, a managed low-latency agent stack like Cartesia, or governed enterprise dubbing like Resemble AI.
+price_history:
+  - date: 2025-07-15
+    plan: "Voxtral STT launch"
+    price: "From about $0.001/min"
     source: "https://mistral.ai/news/voxtral"
     source_label: "Mistral Voxtral launch"
     source_id: voxtral-pricing
-    verified_at: 2026-05-13
-    next_review_at: 2026-08-13
-    volatility: high
-    confidence: high
-tags: [speech-to-text, stt, transcription, audio-understanding, open-weight, api, mistral, multilingual, voice-agent, edge]
-seo_title: "Voxtral (Mistral AI): Features, Pricing & Review (May 2026)"
-meta_description: "Voxtral is Mistral AI's open-weight speech understanding family. Voxtral Mini Transcribe V2 for batch and Voxtral Realtime (Apache 2.0, sub-200ms) for live transcription. From $0.001 per minute via API."
-author: "aipedia.wiki Editorial"
-best_for:
-  - developers running transcription at scale and on a budget
-  - real-time voice agents needing sub-200ms STT
-  - teams already using Mistral text models
-  - self-hosting on edge devices under Apache 2.0 (Voxtral Realtime)
-  - multilingual speech understanding across 13 languages with auto language detection
-not_best_for:
-  - text-to-speech, narration, dubbing, or voice cloning workloads
-  - creator workflows needing a polished voiceover studio
-  - languages outside the documented set
-  - heavy expressive synthesis where Fish Audio or ElevenLabs lead
-quick_answer: >-
-  Voxtral is Mistral AI's open-weight speech understanding family (STT, not TTS). Voxtral Mini Transcribe V2 handles batch transcription with speaker ID, custom vocab, and word-level timing across 13 languages; Voxtral Realtime ships under Apache 2.0 with sub-200ms latency for live voice agents and edge deployment. API pricing starts around $0.001/min, well under half of Whisper and ElevenLabs Scribe. Skip it for TTS, voice cloning, or narration.
-price_history:
-  - date: 2025-07-15
-    plan: "API launch"
-    price: "From $0.001/min"
-    source: "https://mistral.ai/news/voxtral"
-    source_label: "Source"
-    source_id: voxtral-pricing
-    note: "Voxtral speech understanding launched July 15, 2025 with Voxtral (24B) and Voxtral Mini (3B) open weights and a per-minute API priced at less than half of Whisper and ElevenLabs Scribe."
+    note: "Original Voxtral launch positioned the family as open-weight speech understanding with hosted transcription pricing materially below Whisper and ElevenLabs Scribe."
   - date: 2026-05-13
-    plan: "API (current model lineup)"
-    price: "From $0.001/min"
-    source: "https://docs.mistral.ai/capabilities/audio/"
-    source_label: "Source"
+    plan: "Mini Transcribe V2 / Realtime"
+    price: "From about $0.001/min"
+    source: "https://docs.mistral.ai/studio-api/audio/speech_to_text"
+    source_label: "Mistral speech-to-text docs"
     source_id: voxtral-docs
-    note: "Voxtral Mini Transcribe V2 (batch, up to 3-hour recordings, speaker ID, custom vocabulary, word-level timestamps, 13 languages) and Voxtral Realtime (sub-200ms latency, Apache 2.0 weights, edge-deployable) are the documented production models. API pricing remains at around $0.001/min on La Plateforme."
+    note: "Production STT lineup documented as Voxtral Mini Transcribe V2 for batch and Voxtral Realtime for live transcription."
+  - date: 2026-06-03
+    plan: "Voxtral TTS v26.03"
+    price: "$0.016 per 1k characters"
+    source: "https://mistral.ai/pricing"
+    source_label: "Mistral pricing"
+    source_id: mistral-pricing
+    note: "Mistral pricing now lists Voxtral TTS v26.03 as an audio generation model with $0 input and $16/M output characters, equivalent to $0.016 per 1k characters."
+  - date: 2026-06-03
+    plan: "Voxtral Mini Transcribe 2"
+    price: "From $0.002/min"
+    source: "https://mistral.ai/pricing"
+    source_label: "Mistral pricing"
+    source_id: mistral-pricing
+    note: "Mistral pricing lists Mini Transcribe 2 as the current transcription price anchor; verify before production because audio prices can move quickly."
 ---
 
 # Voxtral
 
-Mistral AI's open-weight speech understanding family. Voxtral launched July 15, 2025 with two open-weight models (Voxtral 24B for scale and Voxtral Mini 3B for edge), positioned as frontier STT plus native semantic understanding rather than raw transcription.
+Voxtral is Mistral AI's audio family. It now spans **text-to-speech**, **speech-to-text**, and **audio understanding** inside the Mistral ecosystem.
 
-As of May 2026 the production API lineup is Voxtral Mini Transcribe V2 for batch and Voxtral Realtime for live transcription. Voxtral Realtime ships under Apache 2.0 and can be deployed on edge devices. API pricing starts around $0.001 per minute on La Plateforme. Voxtral is a speech-to-text family. It does not generate speech.
+The June 2026 correction is important: older AiPedia copy treated Voxtral as STT-only. That was accurate for the original July 2025 launch and the May 2026 Transcribe/Realtime docs, but it is no longer enough. Mistral now publishes **Voxtral TTS v26.03** as a text-to-speech model, alongside **Voxtral Mini Transcribe 2** and **Voxtral Realtime** for transcription and live audio understanding.
 
 ## System Verdict
 
-> **Pick Voxtral if you need cheap, fast multilingual STT and Mistral-stack consolidation.** Voxtral Realtime delivers sub-200ms latency for live voice agents and is one of the few production-grade STT systems shipped under Apache 2.0. Voxtral Mini Transcribe V2 handles up to 3-hour recordings with speaker identification, custom vocabulary, and word-level timestamps across 13 languages.
+> **Pick Voxtral if you already build on Mistral and want audio in the same stack.** The hosted API now covers speech generation and transcription, while the open-model posture makes Voxtral more interesting for experimentation than closed voice platforms.
 >
-> **Skip it if you need text-to-speech, voice cloning, or narration.** Voxtral is an understanding and transcription family. For voice output pick [ElevenLabs](/tools/elevenlabs/), [Fish Audio](/tools/fish-audio/), or [Cartesia](/tools/cartesia/). Also skip it if your language coverage falls outside the documented set or you want a polished consumer creator UI.
+> **Skip it if you want the easiest creator workflow.** [ElevenLabs](/tools/elevenlabs/) is still the safer default for polished narration, cloning, dubbing, and non-developer voice work. [Cartesia](/tools/cartesia/) remains cleaner for managed, low-latency voice agents. [Resemble AI](/tools/resemble-ai/) is stronger when localization, watermarking, approval workflow, and deepfake detection are procurement requirements.
 >
-> **Who pays which tier:** Free tier on La Plateforme for testing. API at about $0.001 per minute for developers at scale. Voxtral Realtime weights ship under Apache 2.0 for production self-hosting and edge deployment. Enterprise self-hosting for the Mini Transcribe stack runs through Mistral commercial agreements.
+> **Who pays which path:** Use La Plateforme/API for commercial hosted production. Use open weights for research and eligible experimentation after reviewing the license. Mistral pricing lists Voxtral TTS v26.03 at $0.016 per 1k characters and Mini Transcribe 2 from $0.002/min, but production buyers should re-check the pricing page before rollout.
 
 ## Key Facts
 
 | | |
 |---|---|
-| **Family** | Voxtral (Mistral AI, launched July 15, 2025) |
-| **Capabilities** | Speech-to-text and speech understanding (no TTS) |
-| **Production API models (May 2026)** | Voxtral Mini Transcribe V2 (batch) and Voxtral Realtime (live) |
-| **Open-weight launch models** | Voxtral 24B and Voxtral Mini 3B |
-| **License** | Apache 2.0 on Voxtral Realtime; commercial-friendly |
-| **Languages** | 13 with automatic language detection (English, Spanish, French, Portuguese, Hindi, German, Dutch, Italian, plus additional V2 languages) |
-| **Latency** | Sub-200ms on Voxtral Realtime |
-| **Batch capacity** | Up to 3-hour recordings on Mini Transcribe V2 |
-| **Context window** | 32k tokens; up to 30 minutes transcription / 40 minutes understanding per call |
-| **Features** | Speaker identification, custom vocabulary, word-level timestamps, semantic understanding |
-| **Roadmap** | Speaker segmentation, emotion detection, non-speech audio recognition (per Mistral docs) |
-| **API pricing** | From about $0.001 per minute on La Plateforme; Mistral positions it as less than half the price of Whisper and ElevenLabs Scribe |
+| **Family** | Voxtral by Mistral AI |
+| **TTS model** | Voxtral TTS v26.03 |
+| **STT models** | Voxtral Mini Transcribe 2 and Voxtral Realtime |
+| **TTS pricing anchor** | $0.016 per 1k characters on Mistral pricing |
+| **Transcription pricing anchor** | Mini Transcribe 2 from $0.002/min on Mistral pricing |
+| **Open TTS weights** | Announced under CC BY-NC 4.0 |
+| **Realtime STT** | Voxtral Realtime for live transcription/audio understanding |
+| **Hosted path** | La Plateforme API |
+| **Best fit** | Mistral-native speech generation, transcription, and audio understanding |
+| **Not a full creator studio** | No ElevenLabs-style voice library, Studio workflow, or dubbing UI |
 
-Every data point above was verified against vendor sources on 2026-05-13. See Sources.
+Every data point above was verified against vendor sources on 2026-06-03. See Sources.
 
-## Recent changes
+## What It Actually Is
 
-- **2026-05-13:** Mistral docs now list Voxtral Mini Transcribe V2 (batch, up to 3-hour recordings, speaker ID, custom vocabulary, word-level timestamps, 13 languages) and Voxtral Realtime (sub-200ms latency, Apache 2.0 weights, edge-deployable) as the production audio surface.
-- **2026-05-13:** Voxtral Realtime confirmed Apache 2.0, which removes the prior CC BY-NC commercial-use concern for the live transcription path.
-- **2026-05-13:** Original July 15, 2025 launch corrected on this page; earlier copy describing a "March 2026 TTS launch beating ElevenLabs Flash v2.5" was inaccurate. Voxtral has always been STT-first, not TTS.
+Voxtral is an audio model family, not a consumer voiceover app. The hosted API is the practical commercial path for most teams. The open-weight angle is the strategic draw for researchers, local testers, and teams that need to evaluate model behavior more deeply before committing.
 
-## What it actually is
+Voxtral TTS v26.03 turns text into speech. Mistral's model card positions it as a text-to-speech model and the pricing page lists the hosted rate at $16 per million output characters. Voxtral Mini Transcribe 2 and Voxtral Realtime turn audio into text and structured understanding, covering the input side of a voice-agent loop.
 
-A Mistral-native speech understanding family that ships through the same La Plateforme stack as Mistral's text models. One account, one API key, one invoice for text plus audio.
+The stronger buyer case is ecosystem consolidation: one Mistral account, one model provider, one API surface for text models plus audio generation and transcription.
 
-Voxtral handles both raw transcription and semantic understanding of the underlying audio. Voxtral Mini Transcribe V2 is the batch path, with up to 3-hour recordings, speaker identification, custom vocabulary biasing, and word-level timestamps. Voxtral Realtime is the live path, with sub-200ms latency and an Apache 2.0 license that lets teams self-host the model on edge devices.
+## When To Pick Voxtral
 
-The differentiator is the pricing-plus-license combination. At roughly $0.001 per minute the API is materially cheaper than Whisper API and ElevenLabs Scribe at the same workload, and the Apache 2.0 weights on Voxtral Realtime remove most of the licensing friction that previously sent commercial self-hosters elsewhere.
+- **You already use Mistral.** It keeps text, TTS, STT, and audio understanding closer to the same provider and billing system.
+- **Hosted TTS unit price matters.** $0.016 per 1k characters is a strong published rate for API-based TTS experiments.
+- **You need STT and TTS together.** Voxtral covers both sides of the voice loop, though production teams should still benchmark a dedicated TTS or STT vendor.
+- **You want open-model experimentation.** Voxtral's open weights are useful for research, evaluation, and architecture exploration.
+- **You are building audio understanding.** Transcribe 2 and Realtime are a better fit than creator TTS tools when the primary job is understanding incoming speech.
 
-## When to pick Voxtral
+## When To Pick Something Else
 
-- **You already use Mistral for text generation.** One vendor, one billing line, one SDK covers text plus speech-to-text.
-- **Cost at scale drives unit economics.** ~$0.001 per minute undercuts most commercial transcription alternatives.
-- **You need a real-time STT path for voice agents.** Sub-200ms latency on Voxtral Realtime is competitive with the tightest speech-understanding APIs on the market.
-- **Edge deployment matters.** Voxtral Realtime weights ship under Apache 2.0 and can run on edge hardware.
-- **Audio understanding alongside transcripts.** Voxtral pairs raw transcripts with native semantic understanding, which simplifies downstream RAG and agent workflows.
-
-## When to pick something else
-
-- **Text-to-speech, narration, or voice cloning:** Voxtral does not generate speech. Pick [ElevenLabs](/tools/elevenlabs/), [Fish Audio](/tools/fish-audio/), or [Cartesia](/tools/cartesia/).
-- **Top-tier transcription accuracy for clean enterprise audio:** Deepgram Nova-3 and AssemblyAI Universal-2 still post strong benchmark numbers on US-English broadcast and call-center audio.
-- **Polished consumer creator UI:** Whisper-based tools like Otter and Descript are built around end-user workflows.
-- **Languages outside the documented set:** Whisper and Deepgram cover wider language menus on the commercial API.
-- **Enterprise voice cloning with compliance:** [Resemble AI](/tools/resemble-ai/) bundles watermarking, deepfake detection, and on-premise deployment for voice generation, which Voxtral does not do.
+- **Creator narration and voice cloning:** [ElevenLabs](/tools/elevenlabs/) is still the cleaner default for voice library, cloning, dubbing, Studio, and commercial creator workflow.
+- **Managed low-latency agents:** [Cartesia](/tools/cartesia/) has the stronger voice-agent product surface with Sonic, Ink-Whisper, and Line.
+- **Open-weight expressive TTS:** [Fish Audio](/tools/fish-audio/) remains a better first test when the question is self-hosted expressive speech quality.
+- **Enterprise voice governance:** [Resemble AI](/tools/resemble-ai/) adds watermarking, deepfake detection, localization, deployment options, and approval workflow.
+- **Meeting transcription app:** Otter, Fireflies, Fathom, and MeetGeek are user-facing meeting products; Voxtral is an API/model family.
 
 ## Pricing
 
 | Access | Cost | Notes |
-|--------|------|-------|
-| Open weights (Voxtral Realtime) | Free under Apache 2.0 | Edge-deployable; commercial self-hosting permitted |
-| Open weights (Voxtral 24B / Mini 3B, July 2025 launch models) | Free download | Hugging Face; check current license terms before commercial use |
-| La Plateforme free tier | Free | Testing and evaluation |
-| Mistral API (transcription / understanding) | From about $0.001/min | Mistral positions it as less than half the price of Whisper and ElevenLabs Scribe |
+|---|---|---|
+| Voxtral TTS v26.03 API | $0.016 per 1k characters | Mistral pricing lists $0 input and $16/M output characters |
+| Voxtral Mini Transcribe 2 API | From $0.002/min | Current transcription anchor on Mistral pricing |
+| Voxtral Realtime | Check current Mistral pricing/docs | Live transcription/audio understanding path |
+| Open TTS weights | Free for eligible use | Mistral announcement says CC BY-NC 4.0; commercial teams need hosted API or license review |
+| Enterprise | Custom | Use Mistral procurement for volume, private deployment, or commercial-license questions |
 
-*Prices verified 2026-05-13 via [Mistral Voxtral announcement](https://mistral.ai/news/voxtral) and [Mistral audio docs](https://docs.mistral.ai/capabilities/audio/). Whisper API list price ($0.006/min) and ElevenLabs Scribe pricing cited for comparison.*
+*Prices verified 2026-06-03 via [Mistral pricing](https://mistral.ai/pricing), [Voxtral TTS model card](https://docs.mistral.ai/models/voxtral-tts-26-03), and [Mistral speech-to-text docs](https://docs.mistral.ai/studio-api/audio/speech_to_text).*
 
-## Against the alternatives
+## Against The Alternatives
 
-Voxtral is an STT family, so the natural peers are speech-to-text APIs, not TTS engines.
-
-| | Voxtral (Realtime + Mini Transcribe V2) | OpenAI Whisper API | Deepgram Nova-3 | AssemblyAI Universal-2 |
+| | Voxtral | Cartesia | ElevenLabs | Fish Audio |
 |---|---|---|---|---|
-| **API price per minute** | From ~$0.001 | $0.006 | $0.0043 streaming | $0.0085 streaming |
-| **Real-time latency** | Sub-200ms (Realtime) | Batch-only API | Sub-300ms streaming | Sub-300ms streaming |
-| **Languages** | 13 with auto-detect | 50+ | 36 | 12 |
-| **Open weights for self-hosting** | Yes, Apache 2.0 on Realtime | No | No | No |
-| **Semantic understanding alongside transcripts** | Native | No | No | Add-on LeMUR |
-| **Speaker ID, custom vocab, word timing** | Yes (Mini Transcribe V2) | Word-level timing only | Yes | Yes |
-| **Best viewed as** | Mistral-stack STT plus understanding | General-purpose batch transcription | Streaming-first STT | Workflow-first STT |
+| **Best viewed as** | Mistral audio model family | Managed voice-agent stack | Creator and platform voice suite | Open-weight expressive TTS |
+| **TTS** | Yes, Voxtral TTS v26.03 | Yes, Sonic | Yes, Eleven v3/Flash | Yes, OpenAudio S1/S2 Pro |
+| **STT** | Yes, Transcribe 2/Realtime | Yes, Ink-Whisper | Yes, Scribe | Yes, transcribe-1 |
+| **Open weights** | Yes, with license caveats | No | No | Yes, MIT |
+| **Creator UI** | Limited | Limited | Strong | Basic |
+| **Voice-agent posture** | Useful input/output model stack | Strongest managed agent path | Broad platform with agents | Model/deployment path |
+| **Best buyer** | Mistral-stack developers | Agent builders | Creators and audio teams | Open/self-host teams |
 
-## Failure modes
+## Failure Modes
 
-- **No text-to-speech.** Voxtral does not synthesize voices. Workflows that need narration, dubbing, or voice cloning must pair Voxtral with a TTS engine.
-- **Language coverage trails Whisper.** Mistral docs cite 13 languages with auto-detect on Voxtral Mini Transcribe V2. Whisper covers 50+. Languages outside the documented set should be tested before commitment.
-- **Real-time depends on Voxtral Realtime.** Voxtral Mini Transcribe V2 is batch-oriented and not suitable for live voice agents.
-- **Per-call duration caps.** Up to 30 minutes for transcription and 40 minutes for understanding per call; longer recordings need chunking.
-- **Younger production lineup than peers.** Voxtral Mini Transcribe V2 and Voxtral Realtime are the second-generation lineup after the July 2025 open-weight launch. Community tooling around Whisper and Deepgram is still broader.
-- **Vendor-published benchmarks.** Mistral positions Voxtral as less than half the price of Whisper and Scribe and ahead on aggregate quality in its own evaluations. Independent blind tests should be checked before standardizing on it for accuracy-sensitive domains (medical, legal, finance).
-- **No native consumer UI.** API-only product. Creators wanting a polished transcription studio should consider Otter, Descript, or third-party UIs built on Voxtral.
+- **License mismatch risk.** Voxtral TTS open weights are CC BY-NC 4.0. Commercial buyers should use the hosted API or secure the right license instead of assuming open equals production-safe.
+- **Not a creator studio.** There is no ElevenLabs-style creator workflow, large voice library, Studio surface, or polished dubbing pipeline.
+- **Realtime still needs testing.** Do not assume a model card or vendor claim means the full phone path is fast enough. Test mic input, STT, LLM, TTS, telephony, and fallback latency together.
+- **Language and voice quality vary.** Evaluate your own scripts, languages, accents, reference voices, and target device speakers.
+- **Young product surface.** Community wrappers, benchmarks, and production playbooks are thinner than Whisper, Deepgram, ElevenLabs, or Cartesia.
+- **Pricing can move.** Audio pricing is volatile. Re-check Mistral pricing before committing budget or publishing public claims.
+
+## Recent Changes
+
+- **2026-06-03:** Page corrected from the older STT-only framing. Voxtral now covers TTS via Voxtral TTS v26.03 as well as STT via Voxtral Mini Transcribe 2 and Realtime.
+- **2026-06-03:** Mistral pricing check added hosted TTS at $0.016 per 1k characters and Mini Transcribe 2 from $0.002/min.
+- **2026-05-13:** AiPedia previously corrected Voxtral away from a fake TTS-vs-TTS framing and toward STT-only. That correction is now superseded by Mistral's newer Voxtral TTS release.
+- **2025-07-15:** Original Voxtral launch positioned the family around speech understanding, transcription, and open weights.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-05-13 against the [Mistral Voxtral announcement](https://mistral.ai/news/voxtral), [Mistral audio docs](https://docs.mistral.ai/capabilities/audio/), and [Mistral model overview](https://docs.mistral.ai/models/overview).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-03 against [Mistral pricing](https://mistral.ai/pricing), [Voxtral TTS model card](https://docs.mistral.ai/models/voxtral-tts-26-03), [Mistral Voxtral TTS announcement](https://mistral.ai/news/voxtral-tts), [Mistral speech-to-text docs](https://docs.mistral.ai/studio-api/audio/speech_to_text), and [Mistral model overview](https://docs.mistral.ai/models/overview).
 
 ## FAQ
 
+**Does Voxtral do text-to-speech now?**
+Yes. Mistral now publishes Voxtral TTS v26.03 as a text-to-speech model. Older pages that described Voxtral as STT-only are stale.
+
 **Is Voxtral free?**
-Partially. Voxtral Realtime weights are free under Apache 2.0 and can be self-hosted commercially. The La Plateforme free tier covers testing. Production API workloads pay from about $0.001 per minute.
+There are open weights for eligible use, but license terms matter. Voxtral TTS open weights are announced under CC BY-NC 4.0, so commercial teams should use the hosted API or confirm licensing. Hosted API use is paid.
 
-**Does Voxtral do text-to-speech?**
-No. Voxtral is a speech-to-text and audio-understanding family. For TTS, pair it with [ElevenLabs](/tools/elevenlabs/), [Fish Audio](/tools/fish-audio/), or [Cartesia](/tools/cartesia/).
+**How much does Voxtral TTS cost?**
+Mistral pricing lists Voxtral TTS v26.03 at $16 per million output characters, equivalent to $0.016 per 1k characters, verified 2026-06-03.
 
-**Can I self-host Voxtral commercially?**
-Yes for Voxtral Realtime, which ships under Apache 2.0 and is designed for edge deployment. Check current license terms on the July 2025 launch models (Voxtral 24B and Mini 3B) on Hugging Face before commercial use.
+**Does Voxtral handle transcription?**
+Yes. Voxtral Mini Transcribe 2 handles batch transcription and Voxtral Realtime handles live transcription/audio understanding.
 
-**What languages does Voxtral support?**
-Voxtral Mini Transcribe V2 lists 13 languages with automatic language detection, including English, Spanish, French, Portuguese, Hindi, German, Dutch, and Italian.
-
-**How fast is Voxtral Realtime?**
-Sub-200ms latency, fast enough for live voice agents.
-
-**How does Voxtral compare to Whisper API?**
-Mistral positions Voxtral at less than half the price of Whisper API at the same workload, with native semantic understanding alongside transcripts. Whisper still wins on raw language breadth.
+**How does Voxtral compare to Cartesia?**
+Cartesia is stronger for managed, low-latency production voice agents. Voxtral is stronger when the team wants Mistral-native TTS/STT, lower hosted TTS unit pricing, and open-model experimentation.
 
 ## Sources
 
-- [Mistral Voxtral announcement](https://mistral.ai/news/voxtral): model family overview and July 15, 2025 launch
-- [Mistral audio docs](https://docs.mistral.ai/capabilities/audio/): Voxtral Mini Transcribe V2 and Voxtral Realtime production specifications
-- [Mistral model overview](https://docs.mistral.ai/models/overview): current Voxtral lineup and identifiers
-- [Mistral Studio API: speech-to-text](https://docs.mistral.ai/studio-api/audio/speech_to_text): API endpoints and parameters
+- [Mistral pricing](https://mistral.ai/pricing): Voxtral TTS and Mini Transcribe 2 pricing anchors
+- [Voxtral TTS model card](https://docs.mistral.ai/models/voxtral-tts-26-03): model identifier, TTS positioning, hosted model details
+- [Mistral Voxtral TTS announcement](https://mistral.ai/news/voxtral-tts): open weights and release context
+- [Mistral speech-to-text docs](https://docs.mistral.ai/studio-api/audio/speech_to_text): Voxtral Mini Transcribe 2 and Realtime STT API docs
+- [Mistral model overview](https://docs.mistral.ai/models/overview): current model lineup
+- [Original Voxtral launch](https://mistral.ai/news/voxtral): original speech-understanding launch context
 
 ## Related
 
 - **Category:** [AI Voice / Speech](/categories/ai-voice/)
-- **Comparisons:** [ElevenLabs vs Voxtral](/compare/elevenlabs-vs-voxtral/), [Cartesia vs Voxtral](/compare/cartesia-vs-voxtral/), [Fish Audio vs Voxtral](/compare/fish-audio-vs-voxtral/), [Resemble AI vs Voxtral](/compare/resemble-ai-vs-voxtral/)
+- **Comparisons:** [Cartesia vs Voxtral](/compare/cartesia-vs-voxtral/), [ElevenLabs vs Voxtral](/compare/elevenlabs-vs-voxtral/), [Fish Audio vs Voxtral](/compare/fish-audio-vs-voxtral/), [Resemble AI vs Voxtral](/compare/resemble-ai-vs-voxtral/)

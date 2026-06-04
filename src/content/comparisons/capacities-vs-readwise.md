@@ -5,78 +5,107 @@ title: "Capacities vs Readwise Reader"
 tools: [capacities, readwise]
 category: ai-notes
 winner: depends
-seo_title: "Capacities vs Readwise Reader: Which Is Better in 2026?"
-meta_description: "Honest head-to-head of Capacities and Readwise Reader as of April 2026. Flagship models, current pricing, and which tool fits your workflow."
+seo_title: "Capacities vs Readwise Reader: PKM or Reading Retention? (June 2026)"
+meta_description: "Updated June 3, 2026: choose Capacities for object-based PKM and Readwise Reader for reading capture, highlights, Ghostreader AI, exports, and spaced-repetition review."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-13
-last_verified: 2026-05-13
-update_frequency: quarterly
+last_updated: 2026-06-03
+last_verified: 2026-06-03
+update_frequency: monthly
 canonical_fact_table: true
 ---
 
 # Capacities vs Readwise Reader
 
-[Capacities](../tools/capacities.md) and [Readwise Reader](../tools/readwise.md) are two options in the notes category as of April 2026. Capacities focuses on object-based note-taking with AI-assisted organization, while Readwise Reader emphasizes highlights import and reading workflow integration.
+[Capacities](/tools/capacities/) and [Readwise Reader](/tools/readwise/) both help knowledge workers turn scattered inputs into usable notes, but they sit at different points in the workflow. Readwise Reader captures and reviews what you read. Capacities organizes what you know.
 
 ## Quick Answer
 
-Capacities suits users needing customizable object types and daily note workflows; Readwise Reader fits those prioritizing highlight management across books, articles, and newsletters. Choice depends on whether structured knowledge bases or reading capture matter more.
+Choose **Readwise Reader** if your main problem is reading capture: web articles, newsletters, PDFs, ebooks, highlights, exports, daily review, and Ghostreader AI inside documents.
+
+Choose **Capacities** if your main problem is knowledge structure: projects, people, books, meetings, sources, tasks, properties, backlinks, daily notes, and object-based organization.
+
+The cleanest combined workflow is Readwise for ingestion and retention, then Capacities for durable synthesis.
 
 ## Decision Snapshot
-| | Capacities | Readwise Reader |
+
+| Buyer question | Capacities | Readwise Reader |
 |---|---|---|
-| **Flagship** | Capacities Pro with Claude Sonnet 4.6 integration | Readwise Reader with GPT-5.3 Codex processing |
-| **Price** | $16/user/month (annual), free tier limited to 3 objects | $8/month (annual), $10/month (monthly), free tier with 100 highlights/month |
-| **Context Window/Output Specs** | 1M token context via Claude Sonnet 4.6, unlimited daily AI queries on Pro | Processes up to 100k tokens per highlight via GPT-5.3 Codex, unlimited searches |
-| **Best For** | Building interconnected knowledge graphs | Capturing and reviewing reading highlights |
+| **Primary job** | Object-based personal knowledge management | Reading capture, highlight review, and document-level reading assistance |
+| **Best first plan** | Basic for free PKM; Pro when AI assistant and advanced workflow features matter | 30-day trial, then Lite or Full depending whether Reader/full Readwise is needed |
+| **June 2026 price signal** | Basic is free; Pro adds AI assistant, smart queries, calendar integrations, task actions, and unlimited media uploads | Readwise pricing lists Lite at $5.59/mo billed annually and Full at $9.99/mo billed annually; Full monthly checkout shows $12.99/mo |
+| **Best output** | Linked objects, properties, daily notes, AI chats, and project memory | Highlights, reading inbox, daily review, exports, document chat, and Ghostreader prompts |
+| **Main watch-out** | Requires active organization habits | No perpetual free tier after trial; not a team knowledge base |
 
 ## Where Capacities Wins
 
-- Supports custom object types like books, people, projects for structured data linking beyond linear notes.
-- Daily Notes feature auto-populates with AI-generated summaries and links to existing objects.
-- Embed diagrams, PDFs, and web clips directly into objects with AI tagging via Claude Sonnet 4.6.
-- Offline access to all notes on desktop and mobile apps.
-- Calendar integration pulls events into notes for context-aware planning.
+- It is better for turning many input types into a durable system of objects and relationships.
+- Books, people, meetings, projects, sources, tasks, and custom object types can all become first-class records.
+- The AI assistant can search notes, read relevant content, save chats as objects, and help rewrite or summarize selected blocks.
+- Pro users can connect Capacities to external AI tools through MCP-style AI Chat Connectors.
+- It is stronger after the reading is done, when you need to connect highlights to decisions, research, writing, or projects.
 
 ## Where Readwise Reader Wins
 
-- Imports highlights from Kindle, Apple Books, PDFs, articles, Twitter, YouTube with one-click.
-- Spaced repetition flashcards review highlights across sources automatically.
-- Ghostreader AI chats with full library using GPT-5.3 Codex for synthesis.
-- Distraction-free reading view with text-to-speech and font customization.
-- Syncs across web, iOS, Android with search over 100+ sources.
+- It is built for reading capture across articles, newsletters, PDFs, ebooks, web highlights, and other reading inputs.
+- The Readwise pricing page explicitly includes Reader in the Full plan, making it the better all-in reading-and-review bundle.
+- Ghostreader is integrated into Reader's Chat interface and can work on full documents or selected passages with preset and custom prompts.
+- Readwise exports highlights to tools such as Notion, Obsidian, and other PKM workflows.
+- The daily review habit is the point: Readwise is designed to resurface highlights rather than let them sit unused.
 
-## Key Differences
+## Plan Guidance
 
-Capacities structures notes around reusable objects (e.g., link a "Project" object to multiple "Task" and "Person" objects), enabling graph-like queries and AI-assisted expansion with Claude Sonnet 4.6's 1M token context. Readwise Reader centers on importing and resurfacing highlights from reading sources, using GPT-5.3 Codex for processing but prioritizing review over creation; its free tier handles basic capture, while Capacities limits free users to 3 object types. Capacities pricing targets teams at $16/user/month annually, higher than Readwise's $8/month, but includes unlimited storage; Readwise caps free storage at 100 highlights/month.
+Start with **Readwise** if your pile of reading is the bottleneck. Use the 30-day trial to test whether you actually review highlights, use Ghostreader, and export notes into your downstream system. Lite is the cheaper reading/review path; Full is the better pick when Reader plus the full Readwise system is the product you need.
 
-## Who should choose Capacities
+Start with **Capacities Basic** if your inputs already come from many places and the bigger issue is structure. Upgrade to Pro when AI assistant access, smart queries, task actions, calendar integrations, and media limits become meaningful.
 
-Users building long-term knowledge bases with interconnected data, such as researchers or teams tracking projects. It excels when custom schemas and daily AI organization reduce manual linking.
+Do not buy both on day one unless you already know the workflow. Test Readwise as the capture layer and Capacities as the system of record; if either habit fails, the stack becomes expensive clutter.
 
-## Who should choose Readwise Reader
+## Workflow Fit
 
-Readers consuming books, articles, and newsletters who want automated highlight import and review. It fits individuals focused on retention via spaced repetition without needing object hierarchies.
+| Workflow | Better fit | Why |
+|---|---|---|
+| Reading articles and PDFs | Readwise Reader | The inbox, highlights, and Ghostreader are native. |
+| Building a second brain | Capacities | Objects and backlinks create long-term structure. |
+| Daily highlight review | Readwise Reader | Spaced review is part of the product value. |
+| Turning highlights into projects | Capacities | Projects, people, sources, and decisions can be linked. |
+| Exporting highlights to another PKM tool | Readwise Reader | Export workflows are a core reason to buy. |
+| Organizing all knowledge, not just reading | Capacities | The system is broader than reading capture. |
+
+## Current Fact Check
+
+Verified June 3, 2026 against official Capacities pricing/docs, Readwise pricing, and Readwise Ghostreader docs. The old comparison's exact AI model claims were removed because Readwise's current docs describe Ghostreader behavior and prompts without requiring a fixed public model-version claim.
+
+## Who Should Choose Capacities
+
+Choose Capacities if your real job is building a knowledge system from reading, meetings, projects, people, and writing. It is better once information needs structure.
+
+## Who Should Choose Readwise Reader
+
+Choose Readwise Reader if your real job is capturing and remembering what you read. It is better before and during the reading workflow.
 
 ## Bottom Line
 
-Both tools handle AI notes, but Capacities builds toward scalable knowledge systems, while Readwise Reader optimizes reading capture. Test free tiers: Capacities for object workflows, Readwise for highlight sync. Combine them if reading feeds into broader notes.
+Readwise Reader is the better reading capture and retention layer. Capacities is the better object-based knowledge system. They are complementary if you read heavily and need a separate place to synthesize the work.
 
 ## FAQ
 
-**Which is cheaper?**  
-Readwise Reader at $8/month annual billing; Capacities Pro costs $16/user/month but offers more storage and objects.
+**Which is cheaper?**
+Capacities Basic is free, but Readwise is purpose-built for reading. After the 30-day trial, Readwise pricing is a paid subscription, with Lite and Full annual options shown on the official pricing page.
 
-**Which has better output quality?**  
-Capacities leverages Claude Sonnet 4.6 for structured analysis; Readwise uses GPT-5.3 Codex for highlight synthesis. Benchmarks favor Sonnet 4.6 on reasoning tasks.[1]
+**Does Capacities replace Readwise Reader?**
+No. Capacities can store book and article notes, but it does not replace Reader's ingestion, highlighting, daily review, and Ghostreader workflow.
 
-**Can I use both?**  
-Yes; export Readwise highlights to Capacities as objects for combined reading capture and knowledge building.
+**Does Readwise Reader replace Capacities?**
+No. Readwise is not an object-based knowledge base. It is strongest as a reading and highlight system.
+
+**Can I use both?**
+Yes. Capture and review reading in Readwise, then move important themes, decisions, quotes, and source notes into Capacities.
 
 ## Sources
 
-- [Capacities Pricing](https://capacities.io/pricing)
-- [Readwise Reader Pricing](https://readwise.io/pricing)
-- [Capacities Features](https://capacities.io/features)
-- [Readwise Reader Docs](https://docs.readwise.io/reader)
-- [AI Models 2026](https://designforonline.com/the-best-ai-models-so-far-in-2026/)[1]
+- [Capacities pricing](https://capacities.io/pricing/)
+- [Capacities AI assistant docs](https://docs.capacities.io/reference/ai-assistant)
+- [Capacities AI Chat Connectors docs](https://docs.capacities.io/reference/ai-chat-connectors)
+- [Readwise pricing](https://readwise.io/pricing)
+- [Readwise Reader overview](https://readwise.io/read)
+- [Readwise Ghostreader docs](https://docs.readwise.io/reader/guides/ghostreader/overview)

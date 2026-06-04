@@ -7,11 +7,11 @@ category: ai-coding
 company: microsoft-github
 url: https://github.com/features/copilot
 pricing_model: freemium
-price_range: "$0-$39/user/month"
+price_range: "$0-$100/user/month"
 status: active
 launched: 2021-06
-last_updated: 2026-06-02
-last_verified: 2026-06-02
+last_updated: 2026-06-03
+last_verified: 2026-06-03
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -71,12 +71,12 @@ facts:
     confidence: high
     next_review_at: 2026-06-16
   api_available:
-    value: "No standalone general Copilot model API; Copilot features are delivered through GitHub, IDEs, CLI, and enterprise integrations"
-    source: "https://docs.github.com/en/copilot/reference/copilot-feature-matrix"
-    source_label: "GitHub Copilot feature matrix"
-    source_id: github-copilot-feature-matrix
-    verified_at: 2026-06-02
-    volatility: medium
+    value: "Yes for Copilot-powered agent applications via the Copilot SDK; no raw general-purpose Copilot model API"
+    source: "https://github.blog/changelog/2026-06-02-copilot-sdk-is-now-generally-available/"
+    source_label: "GitHub Copilot SDK GA"
+    source_id: github-copilot-sdk-ga
+    verified_at: 2026-06-03
+    volatility: high
     confidence: high
   image_generation:
     value: "No native image generation; Copilot is focused on software development"
@@ -111,11 +111,11 @@ facts:
     volatility: medium
     confidence: high
   coding_agent:
-    value: "Agent mode, GitHub Coding Agent (cloud), Copilot CLI remote control, Copilot Spaces API, semantic issue search in Copilot Chat, auto model selection in VS Code, repository cloud-agent configuration audit API, and the Copilot App technical preview"
-    source: "https://github.blog/changelog/2026-05-20-semantic-issue-search-in-copilot-chat/"
-    source_label: "GitHub Copilot semantic issue search"
-    source_id: github-copilot-docs
-    verified_at: 2026-06-02
+    value: "Agent mode, GitHub Coding Agent (cloud), Copilot CLI remote control, Copilot Spaces API, Copilot SDK GA, semantic issue search in Copilot Chat, auto model selection in VS Code, repository cloud-agent configuration audit API, and the Copilot App technical preview"
+    source: "https://github.blog/changelog/2026-06-02-copilot-sdk-is-now-generally-available/"
+    source_label: "GitHub Copilot SDK GA"
+    source_id: github-copilot-sdk-ga
+    verified_at: 2026-06-03
     volatility: high
     confidence: high
     next_review_at: 2026-06-16
@@ -176,8 +176,16 @@ not_best_for:
   - individual users who do not want Copilot Free, Pro, or Pro+ interaction data used for model training
   - GitLab or Bitbucket-centric teams
 quick_answer: >-
-  GitHub Copilot is the default GitHub-native AI coding stack, native to VS Code, Visual Studio, JetBrains, Xcode, Neovim, GitHub.com, and CLI workflows. Pro $10/mo is the entry paid path, while Pro+, Max, Business, and Enterprise matter when chat, agent, code-review, Spark, Spaces, and cloud-agent usage consumes AI Credits. Skip it for pure CLI autonomous loops (Claude Code) or a GUI multi-agent workbench (Cursor).
+  GitHub Copilot is the default GitHub-native AI coding stack, native to VS Code, Visual Studio, JetBrains, Xcode, Neovim, GitHub.com, CLI workflows, and now embeddable through the generally available Copilot SDK. Pro $10/mo is the entry paid path, while Pro+, Max, Business, and Enterprise matter when chat, agent, code-review, Spark, Spaces, SDK, and cloud-agent usage consumes AI Credits. Skip it for pure CLI autonomous loops (Claude Code) or a GUI multi-agent workbench (Cursor).
 price_history:
+  - date: 2026-06-03
+    plan: "Copilot SDK generally available"
+    price: "Available to existing Copilot subscribers, including Copilot Free for personal use, and to non-Copilot users via BYOK"
+    source: "https://github.blog/changelog/2026-06-02-copilot-sdk-is-now-generally-available/"
+    source_label: "GitHub Copilot SDK GA"
+    source_id: github-copilot-sdk-ga
+    verified_at: 2026-06-03
+    note: "The SDK exposes Copilot's agent runtime for custom applications, tools, and services. Budget SDK and agent workflows through AI Credits or BYOK provider costs."
   - date: 2026-06-02
     plan: "GitHub AI Credits"
     price: "Pro 1,500 credits; Pro+ 7,000; Max 20,000; Business 1,900/user; Enterprise 3,900/user; 1 credit = $0.01 USD"
@@ -343,11 +351,11 @@ April 30 security coverage added another practical caveat: [recent coding-agent 
 | **IDE support** | VS Code · Visual Studio · JetBrains · Xcode · Neovim (chat limited to first three) |
 | **Agent mode status** | GA on VS Code and JetBrains since March 2026; MCP tool use supported |
 | **Coding Agent status** | GA for all paid Copilot subscribers; runs in GitHub Actions sandbox, self-reviews, runs security scans |
-| **Subscription pricing** | Free · Pro $10 · Pro+ $39 · Business $19/seat · Enterprise $39/seat |
+| **Subscription pricing** | Free · Pro $10 · Pro+ $39 · Max $100 · Business $19/seat · Enterprise $39/seat |
 | **Usage system** | GitHub AI Credits for most non-completion AI interactions; 1 credit = $0.01 USD |
 | **Copilot Spaces** | Context-scoping feature accessible via the GitHub MCP server |
 | **Data-training policy** | Free / Pro / Pro+ interaction data may be used for model training unless opted out; Business / Enterprise excluded |
-| **Recent shipments (12 mo)** | AI Credits migration · Semantic issue search · Auto model selection in VS Code · Copilot for Eclipse open-sourced · GitHub-owned report URLs · Copilot Chat on GitHub.com model cleanup · remote Copilot CLI control GA · Copilot Spaces API GA · repository cloud-agent configuration audit API · cheaper cloud-agent models · Copilot App technical preview · Agents secrets/variables · code-review metrics by comment type · Rubber Duck cross-model review · BYOK in VS Code · cloud-agent metrics · Jira controls · PR chat/debugging improvements · Coding Agent GA · Agent mode GA · MCP support GA · Copilot CLI GA · Agentic code review |
+| **Recent shipments (12 mo)** | Copilot SDK GA · AI Credits migration · Semantic issue search · Auto model selection in VS Code · Copilot for Eclipse open-sourced · GitHub-owned report URLs · Copilot Chat on GitHub.com model cleanup · remote Copilot CLI control GA · Copilot Spaces API GA · repository cloud-agent configuration audit API · cheaper cloud-agent models · Copilot App technical preview · Agents secrets/variables · code-review metrics by comment type · Rubber Duck cross-model review · BYOK in VS Code · cloud-agent metrics · Jira controls · PR chat/debugging improvements · Coding Agent GA · Agent mode GA · MCP support GA · Copilot CLI GA · Agentic code review |
 
 ## What it actually is
 
@@ -381,7 +389,7 @@ Third, IDE breadth. JetBrains, Xcode, and Neovim developers only have Copilot am
 
 ## Pricing
 
-Subscription tiers verified June 2, 2026 via [GitHub Copilot plans](https://docs.github.com/en/copilot/get-started/plans), [individual AI Credits billing](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals), [organization AI Credits billing](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-organizations-and-enterprises), and [models and pricing](https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing):
+Subscription tiers verified June 3, 2026 via [GitHub Copilot plans](https://docs.github.com/en/copilot/get-started/plans), [individual AI Credits billing](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals), [organization AI Credits billing](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-organizations-and-enterprises), [models and pricing](https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing), and the [Copilot SDK GA changelog](https://github.blog/changelog/2026-06-02-copilot-sdk-is-now-generally-available/):
 
 | Plan | Price | Included AI Credits | Model access | Who's it for |
 |---|---|---|---|---|
@@ -407,6 +415,8 @@ One GitHub AI Credit equals $0.01 USD. Chat, agent mode, cloud Coding Agent, Cop
 
 ## Recent changes
 
+- **June 2, 2026:** [GitHub made the Copilot SDK generally available](/news/2026-06-02-github-copilot-ai-credits-sdk-ga/). Teams can embed Copilot's agent runtime into applications and internal tools, but SDK and agent usage should be budgeted through AI Credits or BYOK provider costs.
+- **June 1, 2026:** [GitHub Copilot's AI Credits migration became the active billing model](/news/2026-06-01-github-copilot-ai-credits-billing/). Heavy chat, code review, Spaces, Spark, CLI, SDK, and cloud-agent usage now needs spend controls rather than flat-subscription assumptions.
 - **May 20-21, 2026:** [GitHub Copilot added semantic issue search, auto model routing, Eclipse transparency, GitHub-owned report URLs, and web model cleanup](/news/2026-05-21-github-copilot-semantic-search-auto-model-eclipse/). Teams should treat model availability as surface-specific, especially because Gemini models were removed from Copilot Chat on GitHub.com on May 20.
 - **May 19, 2026:** [Gemini 3.5 Flash became generally available in GitHub Copilot](/news/2026-05-19-github-copilot-gemini-35-flash-ga/), reinforcing Copilot as a multi-model coding surface where teams need model governance instead of one-provider assumptions.
 - **May 18, 2026:** [GitHub turned Copilot into a more governable coding-agent control plane](/news/2026-05-18-github-copilot-agent-control-plane-updates/) with remote CLI control GA, Copilot Spaces API GA, cheaper cloud-agent models, and repository cloud-agent configuration audit APIs.
@@ -435,7 +445,7 @@ One GitHub AI Credit equals $0.01 USD. Chat, agent mode, cloud Coding Agent, Cop
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, normalizes factual claims, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-02 against [GitHub Copilot plans](https://docs.github.com/en/copilot/get-started/plans), [individual AI Credits billing](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals), [organization AI Credits billing](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-organizations-and-enterprises), [models and pricing](https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing), [supported models](https://docs.github.com/en/copilot/reference/ai-models/supported-models), [github.com/features/copilot](https://github.com/features/copilot), and recent AiPedia coverage linked above.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, normalizes factual claims, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-03 against [GitHub Copilot plans](https://docs.github.com/en/copilot/get-started/plans), [individual AI Credits billing](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals), [organization AI Credits billing](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-organizations-and-enterprises), [models and pricing](https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing), [supported models](https://docs.github.com/en/copilot/reference/ai-models/supported-models), [github.com/features/copilot](https://github.com/features/copilot), the [Copilot SDK GA changelog](https://github.blog/changelog/2026-06-02-copilot-sdk-is-now-generally-available/), and recent AiPedia coverage linked above.
 
 ## FAQ
 

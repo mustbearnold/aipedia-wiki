@@ -1,82 +1,88 @@
 ---
 type: comparison
 slug: cartesia-vs-fish-audio
-title: "Cartesia vs Fish Audio / Fish Speech S2"
+title: "Cartesia vs Fish Audio"
 tools: [cartesia, fish-audio]
 category: ai-voice
 winner: depends
-seo_title: "Cartesia vs Fish Audio / Fish Speech S2: Which Is Better in 2026?"
-meta_description: "Honest head-to-head of Cartesia and Fish Audio / Fish Speech S2 as of April 2026. Flagship models, current pricing, and which tool fits your workflow."
+seo_title: "Cartesia vs Fish Audio: Voice Agents or Open TTS? (June 2026)"
+meta_description: "Cartesia vs Fish Audio, verified June 2026: choose Cartesia for real-time voice agents; choose Fish Audio for open-weight TTS, expressive narration, and low-cost hosted API workloads."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-13
-last_verified: 2026-05-13
-update_frequency: quarterly
+last_updated: 2026-06-03
+last_verified: 2026-06-03
+update_frequency: monthly
 canonical_fact_table: true
 ---
 
-# Cartesia vs Fish Audio / Fish Speech S2
+# Cartesia vs Fish Audio
 
-[Cartesia](../tools/cartesia.md) and [Fish Audio / Fish Speech S2](../tools/fish-audio.md) lead the AI voice synthesis category as of April 2026. This comparison details their flagship models, pricing, and use case fit based on current data.
+[Cartesia](/tools/cartesia/) and [Fish Audio](/tools/fish-audio/) are both serious AI voice options, but the decision is less about "best TTS" and more about deployment posture. Cartesia is a hosted real-time voice stack for agents and interactive products. Fish Audio is the open-weight TTS path for expressive generation, self-hosting, and lower-cost API experimentation.
 
 ## Quick Answer
 
-Cartesia suits real-time applications with low latency; Fish Audio / Fish Speech S2 excels in multilingual expressiveness. Choice depends on latency needs versus voice variety.
+Choose Cartesia for live voice agents where latency, streaming behavior, telephony, and production reliability are the hard constraints. Choose Fish Audio if you want open-weight control, expressive narration, self-hosting, or hosted API pricing around OpenAudio S1 and S2 Pro.
 
 ## Decision Snapshot
-| | Cartesia | Fish Audio / Fish Speech S2 |
+
+| | Cartesia | Fish Audio |
 |---|---|---|
-| **Flagship** | Sonic 2.0 | Fish Speech 2.1 |
-| **Price** | $0.25 per 1,000 seconds | $0.10 per 1,000 characters |
-| **Context window/output specs** | 200ms latency, 48kHz output | 500ms latency, 44.1kHz output, 100+ languages |
-| **Best For** | Real-time voice agents | Multilingual TTS projects |
+| **Primary job** | Real-time TTS, STT, and agent infrastructure | Open-weight and hosted expressive TTS |
+| **Best plan to test** | Free or Pro, then Startup for production pilots | Free/Plus for creators; API or self-host for developers |
+| **June 2026 price anchor** | Free; Pro $4/mo annual; Startup $39/mo annual; Scale $239/mo annual; TTS 15 credits/sec | Plus $11/mo; Pro $75/mo; Max $749/mo; API $15 per 1M UTF-8 bytes |
+| **Best for** | Voice agents, IVR, live app speech | Expressive narration, multilingual TTS, open-weight control |
+| **Main watch-out** | Production cost includes generated audio, Line minutes, phone minutes, and retries | Self-hosting needs GPU/ops; hosted credit math varies by model |
 
 ## Where Cartesia Wins
 
-- Delivers 200ms end-to-end latency for live conversational AI[1].
-- Supports 48kHz high-fidelity output suitable for professional audio production[2].
-- Offers stable performance in streaming scenarios without interruptions[3].
-- Includes API for easy integration into apps and voice platforms[4].
-- Provides consistent voice cloning from short samples[5].
+- **Voice agents.** Cartesia is the better first test when the user waits in a live conversation.
+- **Agent stack.** Sonic TTS, Ink-Whisper STT, and Line orchestration are built to sit inside production voice products.
+- **Telephony fit.** It is more natural for IVR, call automation, support agents, and real-time app speech.
+- **Compliance posture.** The Cartesia page surfaces SOC 2 Type II, HIPAA, and PCI Level 1 claims that matter for regulated voice deployments.
+- **Hosted reliability.** Teams that do not want GPU operations get a managed path with plan tiers and API docs.
 
-## Where Fish Audio / Fish Speech S2 Wins
+## Where Fish Audio Wins
 
-- Handles over 100 languages with natural intonation[6].
-- Costs less at $0.10 per 1,000 characters for high-volume use[7].
-- Generates expressive speech with emotion controls.
-- Supports zero-shot voice cloning across languages.
-- Open-weight elements allow local deployment options.
+- **Open-weight control.** Fish Audio is the stronger choice when the team wants to self-host or experiment with model internals.
+- **Expressive narration.** OpenAudio S2 Pro is positioned for quality, emotion, character voices, and long-form speech.
+- **Cost leverage.** High-volume teams can compare $15 per 1M UTF-8 bytes API pricing against self-hosting and other providers.
+- **Creator minutes.** Plus, Pro, and Max tiers are easier to reason about for creators producing batches of generated voice.
+- **No vendor lock-in for self-hosters.** MIT-licensed weights make it attractive where infrastructure ownership matters.
 
-## Key Differences
+## Key Difference
 
-Cartesia prioritizes speed with 200ms latency and higher 48kHz audio quality, making it ideal for interactive tools like voice assistants where delays disrupt flow. Fish Audio / Fish Speech S2 focuses on breadth, covering 100+ languages and adding emotion parameters, which fits global content creation but at 500ms latency. Pricing reflects usage: Cartesia charges per second of audio ($0.25/1k seconds), while Fish Audio uses per-character ($0.10/1k chars), favoring text-heavy workloads.
+Cartesia is an infrastructure decision. Fish Audio is a model-control and voice-quality decision.
 
-## Who should choose Cartesia
+For Cartesia, test real call traffic, interruption handling, tail latency, and Line minute economics. For Fish Audio, test your own scripts, target languages, emotional style, voice-clone quality, GPU deployment path, and the exact API unit cost at your text volume.
 
-Choose Cartesia for applications needing instant response, such as customer support bots or live narration.
+## Who Should Choose Cartesia
 
-## Who should choose Fish Audio / Fish Speech S2
+Choose Cartesia for voice agents, phone systems, live product speech, game dialogue, and any workflow where response timing matters more than open weights.
 
-Choose Fish Audio / Fish Speech S2 for projects requiring diverse languages or emotional depth, like dubbed videos or international audiobooks.
+## Who Should Choose Fish Audio
+
+Choose Fish Audio for open-source or self-hosted TTS, expressive narration, multilingual generation, character voices, and high-volume hosted API output.
 
 ## Bottom Line
 
-Both tools advance TTS capabilities in 2026; Cartesia leads for latency-critical tasks, Fish Audio for versatile multilingual output. Test via free tiers to match your workflow. Winner depends on priorities like speed or language support.
+Cartesia is the real-time agent specialist. Fish Audio is the open TTS and expressive-generation specialist. The winner depends on whether latency or model control is the harder requirement.
 
 ## FAQ
 
 **Which is cheaper?**  
-Fish Audio at $0.10 per 1,000 characters undercuts Cartesia's $0.25 per 1,000 seconds for long texts; Cartesia costs less for short clips.
+Fish Audio can be cheaper for high-volume text generation or self-hosting. Cartesia can be more appropriate when the cost is tied to a revenue-bearing live voice agent. Price both against the actual seconds, bytes, minutes, retries, and infrastructure you expect.
 
-**Which has better output quality?**  
-Cartesia offers superior fidelity at 48kHz; Fish Audio matches in expressiveness for multilingual use.
+**Which sounds better?**
+Fish Audio is usually the stronger expressive narration test. Cartesia should be judged by whether the voice remains natural while responding quickly in a live interaction.
 
 **Can I use both?**  
-Yes, combine Cartesia for real-time and Fish Audio for batch multilingual generation in hybrid workflows.
+Yes. Use Cartesia where live latency matters and Fish Audio for generated assets, open-weight experimentation, or self-hosted speech.
 
 ## Sources
 
-- [Cartesia](../tools/cartesia.md)
-- [Fish Audio / Fish Speech S2](../tools/fish-audio.md)
-- [Cartesia Pricing](https://cartesia.ai/pricing)
-- [Fish Audio Docs](https://fish.audio/docs)
-- [TTS Benchmarks April 2026](https://huggingface.co/spaces/lmsys/chatbot-arena-leaderboard)
+- [Cartesia pricing](https://cartesia.ai/pricing)
+- [Cartesia docs](https://docs.cartesia.ai/)
+- [Cartesia Sonic](https://cartesia.ai/sonic)
+- [Fish Audio plan page](https://fish.audio/plan/)
+- [Fish Audio API pricing docs](https://docs.fish.audio/developer-guide/models-pricing/pricing-and-rate-limits)
+- [OpenAudio S2 page](https://fish.audio/s2/)
+- [Fish Speech GitHub](https://github.com/fishaudio/fish-speech)

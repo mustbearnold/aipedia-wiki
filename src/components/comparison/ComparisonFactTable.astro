@@ -244,8 +244,15 @@ const rows = rowConfigs
     color: var(--gt-fg);
     border-bottom: 1px solid var(--gt-line);
     background: var(--gt-surface-2);
+    min-width: 0;
   }
-  .gt-cft-card-head strong { font-size: 15px; font-weight: 700; }
+  .gt-cft-card-head strong {
+    min-width: 0;
+    overflow-wrap: anywhere;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.25;
+  }
 
   .gt-cft-list {
     margin: 0;
@@ -271,11 +278,13 @@ const rows = rowConfigs
     display: flex;
     flex-direction: column;
     gap: 4px;
+    min-width: 0;
   }
   .gt-cft-value {
     font-size: 14px;
     line-height: 1.45;
     color: var(--gt-fg);
+    overflow-wrap: anywhere;
   }
   .gt-cft-meta {
     display: flex;
@@ -351,6 +360,12 @@ const rows = rowConfigs
       text-decoration: none;
       color: var(--gt-fg);
       font-weight: 600;
+      min-width: 0;
+    }
+    .gt-cft-table-tool span {
+      min-width: 0;
+      overflow-wrap: anywhere;
+      line-height: 1.25;
     }
     .gt-cft-table-tool:hover { color: var(--gt-accent); }
     .gt-cft-table td .gt-cft-value {

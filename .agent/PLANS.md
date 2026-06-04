@@ -1328,3 +1328,120 @@ Excluded: dead tool pages, individual news article pages, unrelated comparison r
 2026-06-02: Continued oldest-to-newest ledger pass after the pushed Firefly comparison slice. Selected the next live non-news comparison cluster: `/compare/ahrefs-vs-frase/`, `/compare/ahrefs-vs-marketmuse/`, `/compare/ahrefs-vs-neuronwriter/`, and `/compare/ahrefs-vs-surfer-seo/`. Verified current June 2026 facts from official Ahrefs pricing/Brand Radar, Frase pricing, MarketMuse pricing/content strategy pages, NeuronWriter pricing/features, and Surfer pricing/homepage sources. Rebuilt the comparisons around SEO data vs content workflow buyer jobs, pricing/plan caveats, AI visibility positioning, and when to pair tools. Updated the AI SEO hub, best AI SEO tool guide, `/compare/`, LLM metadata comments, and source registry checks; ledger regeneration and QA are next.
 
 2026-06-02: Continued oldest-to-newest ledger pass after the pushed Ahrefs comparison slice. Selected the next live non-news comparison cluster: `/compare/aider-vs-claude-code/`, `/compare/aider-vs-cursor/`, and `/compare/aider-vs-github-copilot/`. Verified current June 2026 facts from official Aider docs/repository, Claude Code docs/costs/usage limits, Claude pricing and Max help, Anthropic Opus 4.8 and dynamic-workflows sources, Cursor pricing/changelog/Composer 2.5 sources, and GitHub Copilot plans, AI Credits, organization billing, supported models, and usage-based billing announcement. Rebuilt the comparisons around terminal/BYOK control vs managed Claude agent, AI-native IDE, and GitHub-native Copilot workflows. Updated the AI Coding hub, `/compare/`, LLM metadata comments, and source registry checks; ledger regeneration and QA are next.
+
+2026-06-03: Continued oldest-to-newest ledger pass after the in-progress Apollo, Beautiful.ai, and Bolt comparison clusters, skipping dead tool pages, the Tome dead-tool comparison, and individual news articles. Selected the next active comparison cluster: `/compare/canva-vs-chatgpt/`, `/compare/canva-vs-figma/`, `/compare/canva-vs-google-stitch/`, `/compare/canva-vs-lovable/`, `/compare/canva-vs-midjourney/`, and `/compare/canva-vs-v0/`. Verified current June 2026 facts from official Canva, ChatGPT/OpenAI, Figma, Google Stitch/Labs, Lovable, Midjourney, v0, and Vercel sources. Rebuilt the comparisons around finished-design production vs general AI assistant, product-design system, Labs UI prototyping, prompt-to-app builder, raw image/video generation, and Vercel-native app-building buyer jobs. Updated `/compare/` and LLM metadata comments; ledger regeneration and QA are next.
+
+2026-06-03: Regenerated `PAGE_REFRESH_LEDGER.md` and completed validation for the Canva comparison cluster. Passing commands: `npm run ledger:pages`, `npm run ledger:pages:check`, `npm run check:news`, `npm run guard:check`, `git diff --check`, `npm run check:links`, `npm run test:scripts`, `npm run build:fast`, `npm run check`, and targeted Playwright static/mobile QA for the six Canva comparison routes at 360, 390, 430, 768, and 1024 px. No dead tool pages or individual news article pages were edited.
+
+2026-06-03: Continued oldest-to-newest ledger pass after the Canva comparison cluster, skipping dead tool pages and individual news articles. Selected the next active Capacities comparison cluster: `/compare/capacities-vs-fireflies/`, `/compare/capacities-vs-notebooklm/`, `/compare/capacities-vs-obsidian/`, `/compare/capacities-vs-otter-ai/`, and `/compare/capacities-vs-readwise/`. Verified current June 2026 facts from official Capacities pricing/docs, Fireflies pricing/help and AI Credits docs, NotebookLM Help limits, Obsidian pricing/community pages, Otter.ai pricing, and Readwise pricing/Ghostreader docs. Rebuilt the comparisons around object-based PKM versus meeting intelligence, source-grounded research, local-first Markdown, live transcription, and reading-retention buyer jobs. Updated the AI Notes hub, `/compare/`, LLM metadata comments, and source registry checks; ledger regeneration and QA are next.
+
+2026-06-03: Regenerated `PAGE_REFRESH_LEDGER.md` and completed validation for the Capacities comparison cluster. Passing commands: `npm run ledger:pages`, `npm run ledger:pages:check`, `git diff --check`, `npm run check:news`, `npm run guard:check`, `npm run check:links`, `npm run test:scripts`, `npm run build:fast`, `npm run check`, and targeted Playwright static/mobile QA for the five Capacities comparison routes at 360, 390, 430, 768, and 1024 px. No dead tool pages or individual news article pages were edited.
+
+2026-06-03: Continued oldest-to-newest ledger pass after Capacities, skipping the dead Tome comparison and individual news articles. Selected the next live Cartesia comparison cluster: `/compare/cartesia-vs-descript/`, `/compare/cartesia-vs-elevenlabs/`, `/compare/cartesia-vs-fish-audio/`, `/compare/cartesia-vs-resemble-ai/`, and `/compare/cartesia-vs-voxtral/`. Verified current June 2026 facts from official Cartesia, Descript, ElevenLabs, Fish Audio, Resemble AI, and Mistral/Voxtral sources; corrected Voxtral from an STT-only framing to Mistral's current TTS, transcription, and realtime audio family. Updated the Voxtral tool page, AI Voice hub, compare/top-layer/LLM metadata surfaces, source registry, canonical comparison fact-table wrapping, and `PAGE_REFRESH_LEDGER.md`. Passing commands: `npm run ledger:pages`, `npm run ledger:pages:check`, `git diff --check`, `npm run check`, `npm run test:scripts`, `npm run build:fast`, and targeted Playwright static/mobile QA for the five Cartesia comparison routes plus `/tools/voxtral/` and `/categories/ai-voice/` at 360, 390, 430, 768, and 1024 px. No dead tool pages or individual news article pages were edited.
+
+2026-06-03: Continued oldest-to-newest ledger pass after Cartesia, skipping dead tool pages and individual news articles. Selected the next live ChatGPT comparison cluster: `/compare/chatgpt-vs-claude/`, `/compare/chatgpt-vs-copy-ai/`, `/compare/chatgpt-vs-cursor/`, `/compare/chatgpt-vs-deepseek/`, and `/compare/chatgpt-vs-elicit/`. Verified current June 2026 facts from official OpenAI/ChatGPT, Anthropic/Claude, Copy.ai, Cursor, DeepSeek, and Elicit sources. Rebuilt the comparisons around broad assistant vs writing/code/research/GTM/API-specialist buyer jobs, refreshed the ChatGPT tool page and AI Chatbots/AI Writing/AI Coding/AI Research hubs, updated `/compare/`, homepage, tools/categories indexes, LLM metadata comments, and source registry checks. Ledger regeneration and QA are next.
+
+2026-06-03: Regenerated `PAGE_REFRESH_LEDGER.md` and completed validation for the ChatGPT comparison cluster. Passing commands: `npm run ledger:pages`, `npm run ledger:pages:check`, `git diff --check`, `npm run check:news`, `npm run guard:check`, `npm run audit:sources`, `npm run check:links`, `npm run check`, `npm run test:scripts`, `npm run build:fast`, static viewport QA for 15 refreshed/top-layer routes across 360, 390, 430, 768, and 1024 px, and an in-app browser smoke check for `/compare/chatgpt-vs-claude/`. No dead tool pages or individual news article pages were edited.
+
+2026-06-03: Continued oldest-to-newest ledger pass after the first ChatGPT comparison cluster, skipping dead tool pages, dead Tome comparison intent, and individual news articles. Selected the next live ChatGPT comparison cluster: `/compare/chatgpt-vs-figma/`, `/compare/chatgpt-vs-fireflies/`, `/compare/chatgpt-vs-gamma/`, `/compare/chatgpt-vs-gemini/`, and `/compare/chatgpt-vs-github-copilot/`. Verified current June 2026 facts from official OpenAI/ChatGPT, Figma, Fireflies.ai, Gamma, Google/Gemini, and GitHub Copilot sources. Rebuilt the comparisons around broad assistant vs design workspace, meeting capture, deck generation, Google-native assistant, and GitHub-native coding buyer jobs. Updated AI Design, AI Presentation, AI Chatbots, and AI Coding hubs plus `/compare/`, `/categories/`, LLM metadata comments, and source registry checks. Ledger regeneration and QA are next.
+
+2026-06-03: Continued oldest-to-newest ledger pass after the second ChatGPT comparison cluster, skipping dead tool pages, dead tool comparisons, and individual news articles. Selected the next live ChatGPT comparison cluster: `/compare/chatgpt-vs-glm/`, `/compare/chatgpt-vs-grammarly/`, `/compare/chatgpt-vs-grok/`, `/compare/chatgpt-vs-hermes-agent/`, and `/compare/chatgpt-vs-jasper/`. Verified current June 2026 facts from official OpenAI/ChatGPT, Z.AI GLM-5.1, Grammarly, xAI/Grok, Hermes Agent, and Jasper sources. Rebuilt the comparisons around broad assistant vs open-weight/API model, inline writing assistant, xAI-native research/media assistant, self-hosted operator agent, and marketing-workflow platform buyer jobs. Refreshed the Jasper tool record, AI Chatbots, AI Writing, and AI Automation hubs, `/compare/`, `/categories/`, LLM metadata comments, and source registry checks; ledger regeneration and QA are next.
+
+2026-06-03: Regenerated `PAGE_REFRESH_LEDGER.md` and completed validation for the GLM/Grammarly/Grok/Hermes Agent/Jasper ChatGPT comparison slice. Passing commands: `npm run ledger:pages`, `npm run ledger:pages:check`, `git diff --check`, `npm run check:news`, `npm run guard:check`, `npm run audit:sources`, `npm run check:links`, `npm run test:scripts`, `npm run check`, `npm run build:fast`, static/mobile QA for 11 refreshed/top-layer HTML routes plus `/llms.txt` and `/llms-full.txt` at 360, 390, 430, 768, and 1024 px, and an in-app browser smoke check for `/compare/chatgpt-vs-jasper/`. No dead tool pages or individual news article pages were edited.
+
+2026-06-03: Continued oldest-to-newest ledger pass after the GLM/Grammarly/Grok/Hermes Agent/Jasper slice, skipping dead tool pages, the dead Tome comparison, and individual news articles. Selected the next live ChatGPT comparison cluster: `/compare/chatgpt-vs-kagi/`, `/compare/chatgpt-vs-kimi/`, `/compare/chatgpt-vs-lovable/`, `/compare/chatgpt-vs-marketmuse/`, and `/compare/chatgpt-vs-mem/`. Verified current June 2026 facts from official OpenAI/ChatGPT, Kagi, Moonshot/Kimi, Lovable, MarketMuse, and Mem sources. Rebuilt the comparisons around broad assistant vs private paid search, K2.6 API/model evaluation, prompt-to-app building, SEO content strategy, and AI note memory buyer jobs. Updated AI Search, AI Chatbots, AI Design, AI SEO, AI Notes, `/compare/`, `/categories/`, LLM metadata comments, source registry checks, and `PAGE_REFRESH_LEDGER.md`. Passing commands: `npm run ledger:pages`, `npm run ledger:pages:check`, `git diff --check`, `npm run check:news`, `npm run guard:check`, `npm run audit:sources`, `npm run check:links`, `npm run test:scripts`, `npm run check`, `npm run build:fast`, static/mobile QA for 12 refreshed/top-layer HTML routes plus `/llms.txt` and `/llms-full.txt` at 360, 390, 430, 768, and 1024 px, and an in-app browser smoke check for `/compare/chatgpt-vs-kimi/`. No dead tool pages or individual news article pages were edited.
+
+2026-06-03: Continued oldest-to-newest ledger pass after the Kagi/Kimi/Lovable/MarketMuse/Mem ChatGPT slice, skipping dead `/compare/chatgpt-vs-phind/` and individual news articles. Selected the next live ChatGPT comparison cluster: `/compare/chatgpt-vs-mistral-ai/`, `/compare/chatgpt-vs-neuronwriter/`, `/compare/chatgpt-vs-notion-ai/`, `/compare/chatgpt-vs-otter-ai/`, and `/compare/chatgpt-vs-quillbot/`. Verified current June 2026 facts from official OpenAI/ChatGPT, Mistral pricing/model/Search Toolkit sources, NeuronWriter pricing/features, Notion pricing/product/custom-agent/meeting-note docs, Otter pricing/product sources, and QuillBot Premium/help sources. Rebuilt the comparisons around broad assistant vs model platform, SEO content optimizer, Notion workspace AI, meeting capture/archive, and paraphrasing utility buyer jobs. Refreshed Mistral AI and Otter.ai tool records, AI Chatbots, AI SEO, AI Notes, AI Writing, `/compare/`, `/categories/`, homepage/tools index comments, LLM metadata comments, and source registry checks; ledger regeneration and QA are next.
+
+2026-06-03: Regenerated `PAGE_REFRESH_LEDGER.md` and completed validation for the Mistral/NeuronWriter/Notion/Otter/QuillBot ChatGPT comparison slice. Passing commands: `npm run ledger:pages`, `npm run ledger:pages:check`, `git diff --check`, `npm run check:news`, `npm run guard:check`, `npm run audit:sources`, `npm run check:links`, `npm run test:scripts`, `npm run check`, `npm run build:fast`, static/mobile QA for 14 refreshed/top-layer HTML routes plus `/llms.txt` and `/llms-full.txt` at 360, 390, 430, 768, and 1024 px, and an in-app browser smoke check for `/compare/chatgpt-vs-mistral-ai/`. No dead tool pages or individual news article pages were edited.
+
+---
+
+## ExecPlan: June 3 2026 AI News Catch-Up
+
+### 1. Objective
+
+Cover the material AI tool and AI industry news published from June 1, 2026 through the current June 3 catch-up window, using current primary or high-trust sources. The goal is to improve trust, organic freshness, buyer usefulness, and editorial scalability without adding thin or unsupported news.
+
+### 2. Current state
+
+The newest existing news articles are dated May 31, 2026. `/news/` still carries May 2026 metadata. The relevant tool pages already refreshed recently include ChatGPT, GitHub Copilot, Claude, Gemini, and Microsoft Agent Framework, but new June 1-3 sources affect their recent-change guidance.
+
+### 3. Target state
+
+Publish a June 3 news desk and focused June 3 news articles covering Microsoft Build/Work IQ, GitHub Copilot AI Credits and SDK GA, Anthropic Project Glasswing expansion, ChatGPT model retirements, Google Workspace Gemini Drive sharing, NVIDIA agent/physical-AI announcements, and enterprise-agent/security/policy launches from Postman, RelationalAI, 7AI, and the White House AI cybersecurity order.
+
+### 4. Scope
+
+Included: `src/content/news/`, affected tool records (`github-copilot`, `microsoft-agent-framework`, `chatgpt`, `claude`, `gemini`), affected category hubs (`ai-coding`, `ai-automation`, `ai-chatbots`, `ai-infrastructure`), `/news/`, homepage/news modules, `/tools/`, `/categories/`, LLM manifests, source registry, and `PAGE_REFRESH_LEDGER.md`.
+
+Excluded: dead tool pages, individual stale article rewrites outside this catch-up window, unverified rumors, net-new tool records for vendors without enough catalog-ready data, and unrelated design/template rebuilds.
+
+### 5. Files likely affected
+
+- `src/content/news/2026-06-03-*.md`
+- `src/content/tools/github-copilot.md`
+- `src/content/tools/microsoft-agent-framework.md`
+- `src/content/tools/chatgpt.md`
+- `src/content/tools/claude.md`
+- `src/content/tools/gemini.md`
+- `src/content/categories/ai-coding.md`
+- `src/content/categories/ai-automation.md`
+- `src/content/categories/ai-chatbots.md`
+- `src/content/categories/ai-infrastructure.md`
+- `src/pages/news/index.astro`
+- `src/pages/index.astro`
+- `src/pages/tools/index.astro`
+- `src/pages/categories/index.astro`
+- `src/pages/llms.txt.ts`
+- `src/pages/llms-full.txt.ts`
+- `src/data/source-registry.json`
+- `PAGE_REFRESH_LEDGER.md`
+
+### 6. Data model impact
+
+No schema migration. Existing news frontmatter, tool `last_updated` / `last_verified`, `price_history`, `facts`, and source registry IDs are sufficient.
+
+### 7. SEO impact
+
+New indexable news pages must have unique titles, summaries, source lists, related tools where applicable, and crawlable decision-oriented body copy. `/news/` title/meta freshness moves from May 2026 to June 2026.
+
+### 8. Conversion impact
+
+No new affiliate CTAs are planned. Tool updates should preserve existing CTA tracking and avoid overstating commercial recommendations from news alone.
+
+### 9. Mobile UX impact
+
+News pages use the existing mobile-first news article template. QA must cover 360, 390, 430, 768, and desktop widths for the new news routes and affected hubs.
+
+### 10. Implementation steps
+
+1. Verify current June 2026 facts from official/vendor/government sources.
+2. Add June 3 catch-up news files with clear buyer implications and source lists.
+3. Refresh affected tool and category pages with concise recent-change entries.
+4. Update top-layer surfaces, source registry, and page ledger.
+5. Run news, source, link, type/build, and mobile QA checks.
+
+### 11. Verification commands
+
+`npm run ledger:pages`, `npm run ledger:pages:check`, `git diff --check`, `npm run check:news`, `npm run guard:check`, `npm run audit:sources`, `npm run check:links`, `npm run test:scripts`, `npm run check`, `npm run build:fast`, targeted static Playwright mobile QA, and in-app browser smoke for `/news/2026-06-03-ai-news-desk/`.
+
+### 12. Acceptance criteria
+
+Every new news page is source-backed, current to June 3, 2026, and useful to buyers. Affected parent hubs and top-layer crawl surfaces are current and internally linked. Ledger and validation commands pass or unrelated failures are documented.
+
+### 13. Risks and mitigations
+
+Risk: over-covering low-quality press releases. Mitigation: use the news desk and roundup format for lower-catalog-impact items, and reserve standalone articles for high-impact product/platform updates.
+
+Risk: volatile pricing/model facts drifting. Mitigation: use primary sources, update `last_verified`, and avoid unverified plan claims.
+
+### 14. Progress log
+
+2026-06-03: Plan created after verifying the May 31 last-news cutoff and source sweep for June 1-3 material AI tool/news updates. Published nine source-backed June 1-3 news items, generated required news OG/thumb assets, refreshed affected ChatGPT, Claude, Gemini, GitHub Copilot, and Microsoft Agent Framework tool pages, updated AI Coding, AI Automation, AI Chatbots, and AI Infrastructure hubs, refreshed `/news/`, RSS, Explore, homepage, tools/categories indexes, LLM surfaces, source registry, and `PAGE_REFRESH_LEDGER.md`.
+
+2026-06-04: Resumed after interruption. Ran a focused June 4 official-source sweep and found no additional clear official product release requiring a new article before finalizing this catch-up. Validation passed: `npm run ledger:pages`, `npm run ledger:pages:check`, `git diff --check`, `npm run audit:sources`, `npm run check:news`, `npm run guard:check`, `npm run check:links`, `npm run test:scripts`, `npm run check`, `npm run build:fast`, targeted Playwright mobile QA across 23 routes at 360/390/430/768/1024, and in-app browser DOM smoke for `/news/2026-06-03-ai-news-desk/`.
+
+### 15. Final report
+
+The June AI news catch-up is complete for the verified June 1-3 window, with June 4 checked before final QA. The work adds daily coverage, current source citations, related-tool links, buyer implications, parent-surface maintenance, generated news imagery, and ledger/source-registry updates. Individual news article rows remain intentionally excluded from `PAGE_REFRESH_LEDGER.md`; the news hub and RSS rows are tracked and current.

@@ -5,10 +5,10 @@ title: AI Automation & Agents
 description: Current workflow automation, AI agent platforms, meeting automation, call automation, and operations tools for technical teams, non-technical operators, GTM workflows, customer success, support, sales, and internal automation.
 tool_count: 27
 seo_title: "Best AI Automation Tools & Agent Platforms (June 2026)"
-meta_description: "Updated June 2, 2026: compare n8n, Zapier, Make, Gumloop, Relevance AI, Activepieces, AG2, CrewAI, Dust, Glean, Goose, Genspark, GetResponse, Dext, Browserbase, Ada, Intercom, hireEZ, Apollo, Amplemarket, Lindy, Manus, Pipedream, CloudTalk, and MeetGeek by workflow, pricing unit, and risk."
+meta_description: "Updated June 3, 2026: compare n8n, Zapier, Make, Gumloop, Relevance AI, Activepieces, AG2, CrewAI, Dust, Glean, Goose, Hermes Agent, Genspark, GetResponse, Dext, Browserbase, Ada, Intercom, hireEZ, Apollo, Amplemarket, Lindy, Manus, Pipedream, CloudTalk, and MeetGeek by workflow, pricing unit, and risk."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-02
-last_verified: 2026-06-02
+last_updated: 2026-06-03
+last_verified: 2026-06-03
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -25,6 +25,8 @@ top_picks:
 ## Quick Decision
 
 AI automation now splits into four buyer jobs: deterministic workflow automation, AI-assisted workflow building, delegated agent workforces, and vertical revenue/support automation. Do not buy by hype. Start with the workflow owner, the billing unit, and the failure risk.
+
+**June 3 agent-stack update:** Microsoft's [Build 2026 Work IQ and Foundry announcements](/news/2026-06-02-microsoft-build-work-iq-agent-stack/), GitHub's [Copilot SDK GA plus AI Credits migration](/news/2026-06-02-github-copilot-ai-credits-sdk-ga/), NVIDIA's [enterprise and physical-AI agent stack](/news/2026-06-01-nvidia-agents-physical-ai-gtc-taipei/), and the [enterprise-agent roundup](/news/2026-06-02-enterprise-agent-roundup-postman-relationalai-7ai-white-house/) make one rule sharper: agents are safest when they inherit permissioned context, log actions, expose spend, and route risky writes through review. Generic "autonomous" claims are weaker than tenant boundaries, tool scopes, audit logs, budget controls, and task-specific runtime evidence.
 
 **Use [n8n](/tools/n8n/) when a technical founder, ops engineer, or agency wants control.** n8n's current pricing page says cloud plans include unlimited users, unlimited workflows, every integration, and monthly workflow-execution billing rather than per-step billing. As of May 2026 the EU cloud Starter tier dropped from EU24 to EU20 per month, with reductions across higher tiers, while the self-hosted Community Edition path remains free. This makes n8n the strongest default for complex AI workflows when someone can own credentials, logs, retries, and security.
 
@@ -58,7 +60,7 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 
 **Use [Goose](/tools/goose/) when the buyer wants an open-source BYOK agent that can automate local tasks.** The June 2 check confirms the active repository now resolves to `aaif-goose/goose`, with Apache-2.0 licensing and no Goose subscription fee. The cost and risk are model usage, local permissions, extensions, and secrets hygiene.
 
-**Use [Hermes Agent](/tools/hermes-agent/) when the buyer wants a self-hosted, memory-bearing ops agent across chat platforms.** The June 2 check confirms the current GitHub release stream at v0.15.2, MIT licensing, six terminal backends, 15+ messaging platforms, natural-language cron, auto-generated skills, subagents, MCP, and optional Nous Portal model/tool routing.
+**Use [Hermes Agent](/tools/hermes-agent/) when the buyer wants a self-hosted, memory-bearing ops agent across chat platforms.** The June 3 [ChatGPT vs Hermes Agent](/compare/chatgpt-vs-hermes-agent/) refresh keeps the split clean: ChatGPT is the hosted assistant; Hermes is the operator-owned agent stack. Current GitHub and docs checks keep Hermes at the v0.15.x release stream, MIT licensing, six terminal backends, 15+ messaging platforms, natural-language cron, auto-generated skills, subagents, MCP, and optional Nous Portal model/tool routing.
 
 **Use [Genspark](/tools/genspark/) when automation should produce research deliverables, calls, docs, slides, sheets, design, and media inside one AI workspace.** Plus is $24.99/month for 10,000 credits and Pro is $249.99/month for 125,000 credits on the current membership page, so credit modeling matters before high-volume team use.
 
@@ -83,6 +85,8 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 **Watch Microsoft's MagenticLite research if you are evaluating local or small-model agents.** The May 22 Microsoft Research release is experimental rather than a production automation platform, but it reinforces a practical buying rule: agent quality depends on harness design, sandboxing, context management, delegation, and approval points as much as raw model size.
 
 **Late May control-stack signal:** Asana's [StackAI acquisition](/news/2026-05-30-asana-stackai-human-agent-workflows/), Robinhood's [agentic trading and card launch](/news/2026-05-30-robinhood-agentic-trading-credit-card/), CoreWeave's [agent-improvement loop](/news/2026-05-30-coreweave-agent-improvement-loop/), Geordie's [agent-governance Series A](/news/2026-05-31-geordie-agent-governance-series-a/), and Sysdig's [LLM-agent intrusion report](/news/2026-05-31-sysdig-llm-agent-intrusion-agent-security/) all point to the same buying rule. Do not evaluate autonomous agents only on task completion. Evaluate inventory, permissions, approvals, traces, rollback, and runtime controls before letting agents write to real systems.
+
+**June 3 production-agent signal:** [Postman's AI Engineer](/news/2026-06-02-enterprise-agent-roundup-postman-relationalai-7ai-white-house/), RelationalAI's Snowflake-native decision agents, 7AI's proactive threat-hunting agents, and the White House AI cybersecurity order all reinforce the same split. Real agents are becoming domain operators, not generic chat windows. They need system context, identity, evidence, and approval paths.
 
 ## Buyer Paths
 
@@ -175,8 +179,8 @@ Do not leave this category stale. Automation tools are adding MCP, agent builder
 - [Glean developer platform](https://developers.glean.com/) (verified 2026-06-02)
 - [Goose GitHub repository](https://github.com/aaif-goose/goose) (verified 2026-06-02)
 - [Goose documentation](https://block.github.io/goose/) (verified 2026-06-02)
-- [Hermes Agent docs](https://hermes-agent.nousresearch.com/docs/) (verified 2026-06-02)
-- [Hermes Agent GitHub releases](https://github.com/NousResearch/hermes-agent/releases) (verified 2026-06-02)
+- [Hermes Agent docs](https://hermes-agent.nousresearch.com/docs/) (verified 2026-06-03)
+- [Hermes Agent GitHub releases](https://github.com/NousResearch/hermes-agent/releases) (verified 2026-06-03)
 - [Genspark membership benefits](https://www.genspark.ai/membership-benefits-lp) (verified 2026-06-02)
 - [GetResponse pricing](https://www.getresponse.com/pricing) (verified 2026-06-02)
 - [Dext business plans](https://help.dext.com/en/articles/647776-dext-plans-for-businesses) (verified 2026-06-02)
@@ -188,6 +192,15 @@ Do not leave this category stale. Automation tools are adding MCP, agent builder
 - [Ada platform](https://www.ada.cx/platform) (verified 2026-06-01)
 - [Intercom pricing](https://www.intercom.com/pricing) (verified 2026-06-02)
 - [Fin AI Agent pricing](https://fin.ai/pricing) (verified 2026-06-02)
+- [Microsoft Build 2026 Work IQ and Foundry agent stack](https://blogs.microsoft.com/blog/2026/06/02/microsoft-build-2026-be-yourself-at-work/) (verified 2026-06-03)
+- [Microsoft Work IQ APIs](https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/02/announcing-the-new-work-iq-apis/) (verified 2026-06-03)
+- [GitHub Copilot SDK GA](https://github.blog/changelog/2026-06-02-copilot-sdk-is-now-generally-available/) (verified 2026-06-03)
+- [NVIDIA enterprise software agents](https://investor.nvidia.com/news/press-release-details/2026/Enterprise-Software-Leaders-Build-AI-Agents-With-NVIDIA/default.aspx) (verified 2026-06-03)
+- [NVIDIA physical AI agent tools and skills](https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Releases-Major-Collection-of-Open-Source-Agent-Tools-and-Skills-for-Physical-AI/default.aspx) (verified 2026-06-03)
+- [Postman AI Engineer](https://blog.postman.com/introducing-the-ai-engineer/) (verified 2026-06-03)
+- [RelationalAI Snowflake agentic decision intelligence](https://www.globenewswire.com/news-release/2026/06/02/3305546/0/en/RelationalAI-Closes-the-AI-Value-Gap-with-New-Agentic-Decision-Intelligence-Capabilities-for-the-Snowflake-AI-Data-Cloud.html) (verified 2026-06-03)
+- [7AI Agentic Security Platform](https://7ai.com/platform) (verified 2026-06-03)
+- [White House AI cybersecurity order](https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security/) (verified 2026-06-03)
 - [Apollo pricing](https://apollo.io/pricing) (verified 2026-06-01)
 - [Amplemarket pricing](https://www.amplemarket.com/pricing) (verified 2026-06-01)
 - [Browserbase pricing](https://www.browserbase.com/pricing) (verified 2026-06-01)

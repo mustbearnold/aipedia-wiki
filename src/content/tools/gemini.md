@@ -11,11 +11,11 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2023-12
-last_updated: 2026-05-22
-last_verified: 2026-05-22
+last_updated: 2026-06-03
+last_verified: 2026-06-03
 update_frequency: monthly
-seo_title: "Gemini: Features, Pricing & Review (May 2026)"
-meta_description: "Gemini 3.5 Flash launched at Google I/O 2026 and is now the default for Gemini app and AI Mode in Search. Google AI Pro remains $19.99/mo, while AI Ultra now starts at $100/mo with a $200/mo top tier. Verified May 22, 2026."
+seo_title: "Gemini: Features, Pricing & Review (June 2026)"
+meta_description: "Gemini 3.5 Flash is the broad default across the Gemini app and AI Mode in Search. Updated June 3, 2026 for Drive-governed sharing of Gemini chats, canvases, and generated media."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -138,11 +138,11 @@ facts:
     confidence: high
     next_review_at: 2026-06-20
   enterprise_controls:
-    value: "Workspace and Gemini Enterprise provide admin controls, agent management, data controls, and Google Cloud security layers such as Model Armor"
-    source: "https://workspace.google.com/solutions/ai/"
-    source_label: "Google Workspace AI"
-    source_id: google-workspace-ai
-    verified_at: 2026-05-13
+    value: "Workspace and Gemini Enterprise provide admin controls, agent management, data controls, Drive-governed Gemini asset sharing, and Google Cloud security layers such as Model Armor"
+    source: "https://workspaceupdates.googleblog.com/2026/04/share-chats-canvases-and-generated-media-from-the-Gemini-app-securely-via-Google-Drive.html"
+    source_label: "Google Workspace Gemini Drive sharing"
+    source_id: google-gemini-drive-sharing
+    verified_at: 2026-06-03
     volatility: high
     confidence: high
     next_review_at: 2026-06-13
@@ -193,6 +193,14 @@ not_best_for:
 quick_answer: >-
   Gemini is the widest multimodal bundle at a single subscription. Pick it for Google Workspace depth, bundled 5TB storage, native Veo 3.1 video, and Nano Banana 2 image gen inside AI Pro at $19.99/mo. Skip it for agentic coding (Claude Code leads) or distinctive long-form writing (Claude Opus 4.7 leads).
 price_history:
+  - date: 2026-06-03
+    plan: "Workspace Gemini Drive sharing"
+    price: "No public subscription price change"
+    source: "https://workspaceupdates.googleblog.com/2026/04/share-chats-canvases-and-generated-media-from-the-Gemini-app-securely-via-Google-Drive.html"
+    source_id: google-gemini-drive-sharing
+    source_label: "Google Workspace Gemini Drive sharing"
+    verified_at: 2026-06-03
+    note: "Workspace users can share Gemini app chats, canvases, and generated media using Drive-backed sharing controls. Admin controls began May 28; end-user visibility starts June 3, 2026."
   - date: 2026-02-19
     plan: "AI Pro"
     price: "$19.99/mo"
@@ -257,10 +265,11 @@ Google DeepMind's multimodal AI assistant. **Gemini 3.5 Flash** became the broad
 
 The subscription story also changed. Google AI Pro remains the mainstream $19.99/mo tier, while Google AI Ultra now starts at **$100/mo** and the previous top tier is now **$200/mo** instead of the old $249.99 price point. Gemini is best understood as a Google bundle: Search, Workspace, Android, Veo/Imagen media tools, Antigravity, AI Studio, and Google One benefits all affect the buying decision.
 
-## Recent developments (April-May 2026)
+## Recent developments (April-June 2026)
 
-Verified 2026-05-22.
+Verified 2026-06-03.
 
+- **June 3:** [Google Workspace started rolling out Drive-governed sharing for Gemini chats, canvases, and generated media](/news/2026-06-03-google-gemini-drive-sharing/). This makes Gemini outputs easier to manage as Workspace assets rather than throwaway chat history.
 - **May 21:** [Google expanded Gemini into Android agents and smart-home partner infrastructure](/news/2026-05-21-google-adk-kotlin-gemini-home/). ADK for Kotlin, ADK for Android, and Gemini for Home show Gemini spreading into developer orchestration, on-device agents, home APIs, cameras, speakers, and provider bundles.
 - **May 20:** [Google Marketing Live turned Gemini into an ads, analytics, creative, YouTube, and commerce layer](/news/2026-05-20-google-marketing-live-gemini-ads-commerce-agents/). Marketers now need to treat Gemini as part of paid acquisition and product-discovery infrastructure, not only a chatbot or Search model.
 - **May 19:** [Google I/O made Gemini 3.5 Flash the default AI layer for Search, apps, and subscriptions](/news/2026-05-19-google-io-gemini-35-search-ai-ultra/). Google AI Ultra now starts at $100/mo, the old top tier dropped to $200/mo, and AI Mode in Search now uses Gemini 3.5 Flash globally.
@@ -318,7 +327,7 @@ Verified 2026-05-22.
 | **Subscription pricing** | Free · AI Plus · AI Pro $19.99 · AI Ultra $100 · AI Ultra $200 |
 | **Image generation** | Nano Banana 2 (Pro) · Nano Banana Pro (Ultra) |
 | **Video generation** | [Veo 3.1](/tools/veo/) / Flow surfaces plus [Gemini Omni](/tools/gemini-omni/) rollout for Google AI Plus, Pro, and Ultra subscribers |
-| **Workspace integration** | Native in Docs, Sheets, Gmail, Drive, Meet, Chrome |
+| **Workspace integration** | Native in Docs, Sheets, Gmail, Drive, Meet, Chrome; Drive-governed sharing for Gemini chats, canvases, and generated media starts June 3, 2026 |
 | **Deep Research / agents** | Deep Research, Daily Brief, Gemini Spark, Search agents, and Managed Agents vary by plan, region, and rollout stage |
 | **Android** | Gemini Intelligence rebrand launched May 12, 2026 with cross-app task completion and on-screen reading; default assistant since March 2026 |
 | **Hardware** | Googlebook AI-laptop line announced May 12, 2026 with Acer, Asus, Dell, HP, Lenovo; ships fall 2026 |
@@ -326,7 +335,7 @@ Verified 2026-05-22.
 | **Developer / RAG stack** | Antigravity 2.0, Managed Agents in the Gemini API, AI Studio Android support, Gemini Embedding 2 GA, and Gemini API File Search multimodal RAG |
 | **Security** | Google Threat Intelligence Group disclosed first AI-authored zero-day exploit thwarted before mass deployment on May 11, 2026 |
 
-Every data point above verified against vendor sources on 2026-05-22. See Sources.
+Every data point above verified against vendor sources on 2026-06-03. See Sources.
 
 ## What it actually is
 
@@ -400,7 +409,7 @@ Subscription prices and I/O changes verified 2026-05-20 via [Google AI plans](ht
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-05-22 against Google's [Gemini 3.5 announcement](https://blog.google/intl/en-africa/products/explore-get-answers/gemini-3-5/), the [May 21 Gemini ADK and Home infrastructure update](/news/2026-05-21-google-adk-kotlin-gemini-home/), the [May 20 Marketing Live update](/news/2026-05-20-google-marketing-live-gemini-ads-commerce-agents/), the [May 19 I/O subscription update](/news/2026-05-19-google-io-gemini-35-search-ai-ultra/), the [May 19 Antigravity and Managed Agents update](/news/2026-05-19-google-antigravity-managed-agents-ai-studio/), [Google AI plans](https://one.google.com/about/google-ai-plans/), [Gemini subscriptions](https://gemini.google/subscriptions/), [Gemini API pricing docs](https://ai.google.dev/gemini-api/docs/pricing), and the [May 12 Android Show: I/O Edition coverage](/news/2026-05-12-google-gemini-intelligence-googlebook-android-show/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-03 against Google's [Gemini 3.5 announcement](https://blog.google/intl/en-africa/products/explore-get-answers/gemini-3-5/), the [June 3 Gemini Drive sharing update](/news/2026-06-03-google-gemini-drive-sharing/), the [May 21 Gemini ADK and Home infrastructure update](/news/2026-05-21-google-adk-kotlin-gemini-home/), the [May 20 Marketing Live update](/news/2026-05-20-google-marketing-live-gemini-ads-commerce-agents/), the [May 19 I/O subscription update](/news/2026-05-19-google-io-gemini-35-search-ai-ultra/), the [May 19 Antigravity and Managed Agents update](/news/2026-05-19-google-antigravity-managed-agents-ai-studio/), [Google AI plans](https://one.google.com/about/google-ai-plans/), [Gemini subscriptions](https://gemini.google/subscriptions/), [Gemini API pricing docs](https://ai.google.dev/gemini-api/docs/pricing), and the [May 12 Android Show: I/O Edition coverage](/news/2026-05-12-google-gemini-intelligence-googlebook-android-show/).
 
 ## FAQ
 

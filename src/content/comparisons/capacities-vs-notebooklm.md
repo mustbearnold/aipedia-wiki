@@ -1,82 +1,109 @@
 ---
 type: comparison
 slug: capacities-vs-notebooklm
-title: "Capacities vs Google NotebookLM"
+title: "Capacities vs NotebookLM"
 tools: [capacities, notebooklm]
 category: ai-notes
 winner: depends
-seo_title: "Capacities vs Google NotebookLM: Which Is Better in 2026?"
-meta_description: "Honest head-to-head of Capacities and Google NotebookLM as of April 2026. Flagship models, current pricing, and which tool fits your workflow."
+seo_title: "Capacities vs NotebookLM: PKM or Source-Grounded Research? (June 2026)"
+meta_description: "Updated June 3, 2026: choose Capacities for object-based personal knowledge management and NotebookLM for source-grounded Q&A, reports, study outputs, and Audio Overviews."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-13
-last_verified: 2026-05-13
-update_frequency: quarterly
+last_updated: 2026-06-03
+last_verified: 2026-06-03
+update_frequency: monthly
 canonical_fact_table: true
 ---
 
-# Capacities vs Google NotebookLM
+# Capacities vs NotebookLM
 
-[Capacities](../tools/capacities.md) and [Google NotebookLM](../tools/notebooklm.md) are two options in the AI notes category as of April 2026. Capacities offers an object-based note-taking system with AI features, while NotebookLM focuses on document-based question answering and summarization.
+[Capacities](/tools/capacities/) and [Google NotebookLM](/tools/notebooklm/) are both useful for knowledge work, but they answer different buyer questions. Capacities asks, "How should my notes become an organized system over time?" NotebookLM asks, "What can I safely extract from this bounded set of sources right now?"
 
 ## Quick Answer
 
-NotebookLM suits users needing AI analysis on personal documents; Capacities fits structured knowledge management with customizable objects.
+Choose **Capacities** if you want a long-lived, object-based personal knowledge base with daily notes, typed objects, backlinks, properties, collections, and an AI assistant that can work across your space.
+
+Choose **NotebookLM** if you want source-grounded Q&A, summaries, study guides, reports, flashcards, mind maps, slide outputs, and Audio Overviews from uploaded sources.
+
+The best workflow is often sequential: use NotebookLM to interrogate source packs, then move durable conclusions, decisions, and links into Capacities.
 
 ## Decision Snapshot
-| | Capacities | Google NotebookLM |
+
+| Buyer question | Capacities | NotebookLM |
 |---|---|---|
-| **Flagship** | Capacities AI (Gemini 3.1 Pro integration) | NotebookLM (Gemini 3.1 Pro) [2][6] |
-| **Price** | $15/user/month (Pro plan) | Free (with Gemini Advanced at $19.99/month for full features) [2][3] |
-| **Context Window** | 1M tokens via Gemini | 2M tokens [3] |
-| **Best For** | Object-based workflows, daily notes | Document Q&A, research summaries |
+| **Primary job** | Build and maintain an object-based knowledge system | Analyze a bounded set of documents and source material |
+| **Best first plan** | Basic for free PKM; Pro when AI assistant and advanced features matter | Standard is free; paid Google AI Plans raise limits |
+| **June 2026 limit signal** | Capacities pricing focuses on plan features, AI assistant access, and media limits | Google Help lists Standard at 50 sources/notebook, Plus at 100, Pro at 300, and Ultra at 500 or 600 depending plan |
+| **Best output** | Linked notes, typed objects, AI chat objects, daily notes, and durable context | Cited answers, Audio Overviews, reports, flashcards, quizzes, mind maps, infographics, and slides |
+| **Main watch-out** | You must commit to object-first organization | NotebookLM is strongest inside uploaded sources, not as a general PKM system |
 
 ## Where Capacities Wins
 
-- Supports object-based notes like people, tasks, and projects for linked knowledge bases.
-- Includes daily notes, kanban boards, and calendar views for personal productivity.
-- Allows custom AI prompts for object generation and querying.
-- Offline access and mobile apps for on-the-go editing.
-- Export options to Markdown and PDF for portability.
+- It gives every note a place in a durable system through objects, properties, backlinks, tags, collections, and daily notes.
+- It works better when knowledge accumulates across months, not just inside one research notebook.
+- The AI assistant can search notes, read note content, save AI chats as objects, use commands, and work with selected context.
+- Pro users can connect Capacities to AI tools through MCP-style AI Chat Connectors.
+- It is better for people who want a living knowledge graph rather than temporary source analysis.
 
-## Where Google NotebookLM Wins
+## Where NotebookLM Wins
 
-- Free core access processes up to 50 sources per notebook for Q&A [2][6].
-- Generates audio overviews, study guides, and timelines from uploaded documents.
-- 2M token context handles large PDFs, videos, and datasets [3].
-- Tight Google Workspace integration for Gmail, Drive users.
-- Multimodal input supports audio, video alongside text [3].
+- It is purpose-built for source-grounded Q&A over uploaded material.
+- The free Standard tier is strong for students, researchers, analysts, and anyone with a bounded source set.
+- Paid Google AI Plans raise notebook/source/chat/artifact limits, with Google explicitly noting that limits are subject to change.
+- It generates study artifacts and communication outputs from the same sources: Audio Overviews, Video Overviews, reports, flashcards, quizzes, mind maps, data tables, infographics, and slide decks.
+- Google Help states that NotebookLM uses Gemini models, with higher or highest access on paid tiers, without requiring buyers to manage a separate AI provider.
 
-## Key Differences
+## Plan Guidance
 
-Capacities emphasizes a structured, object-oriented system where notes link as entities (e.g., a project object connects tasks and people), with AI assisting in creation and queries. NotebookLM centers on uploading sources into notebooks for AI-driven outputs like summaries or FAQs, without persistent object structures. Pricing differs: Capacities requires a $15/month Pro subscription for full AI, while NotebookLM offers free basics but ties advanced Gemini features to a $19.99/month plan [2][3]. Context handling favors NotebookLM's 2M tokens for massive inputs, versus Capacities' 1M via integration [3].
+Start with **NotebookLM Standard** when the work is source-first: class notes, PDFs, call transcripts, policy docs, research packs, customer interviews, or long reports. Upgrade only when the 50-source cap, daily chat limit, Audio Overview limit, or artifact limit blocks real work.
 
-## Who should choose Capacities
+Start with **Capacities Basic** when the work is system-first: daily notes, projects, people, books, research streams, meeting notes, and ideas that need to stay connected after the immediate source question is answered. Upgrade to Pro when AI assistant access, smart queries, calendar integrations, task actions, media limits, or AI Chat Connectors matter.
 
-Users building interconnected knowledge bases with custom objects and daily planning tools. Teams needing structured PKM beyond simple Q&A.
+## Workflow Fit
 
-## Who should choose Google NotebookLM
+| Workflow | Better fit | Why |
+|---|---|---|
+| Ask questions over a PDF pack | NotebookLM | It is built around grounded answers from uploaded sources. |
+| Maintain a long-term PKM system | Capacities | Objects and backlinks are the core architecture. |
+| Generate Audio Overviews | NotebookLM | Audio Overviews are a native NotebookLM artifact. |
+| Track people, projects, books, and decisions | Capacities | Typed objects make those entities durable. |
+| Study for a course | NotebookLM | Flashcards, quizzes, reports, and source Q&A are stronger. |
+| Convert research into future writing | Capacities | The notes stay linked beyond the source notebook. |
 
-Researchers or students analyzing document sets for insights, summaries, or audio reviews. Google ecosystem users prioritizing free access and large context.
+## Current Fact Check
+
+Verified June 3, 2026 against official Capacities pricing/docs and Google's NotebookLM Help page. NotebookLM limits now need specific plan wording: Standard, Plus, Pro, and Ultra have different source and artifact caps, and Ultra has separate 20 TB and 30 TB plan limits in Google's current table.
+
+## Who Should Choose Capacities
+
+Choose Capacities if your key question is how to keep knowledge organized after a document session ends. It is better for second-brain workflows, long-running research, writing systems, and object-based notes.
+
+## Who Should Choose NotebookLM
+
+Choose NotebookLM if your key question is what the source material says. It is better for reading packs, study workflows, reports, grounded summaries, and citations back to uploaded material.
 
 ## Bottom Line
 
-Choose NotebookLM for document-focused AI analysis at low or no cost; select Capacities for object-based note organization. Both leverage Gemini 3.1 Pro, so workflow needs determine the fit[1][2][3].
+NotebookLM is the better source analysis tool. Capacities is the better persistent knowledge system. Use NotebookLM for source-grounded extraction and Capacities for long-term organization.
 
 ## FAQ
 
-**Which is cheaper?**  
-NotebookLM offers free core use; Capacities Pro costs $15/month[2][3].
+**Is NotebookLM cheaper than Capacities?**
+For source-grounded research, yes: NotebookLM Standard is free. Capacities Basic is also free, but its value is PKM structure rather than source-artifact generation.
 
-**Which has better output quality?**  
-NotebookLM edges on large-document tasks with 2M context; Capacities matches for structured queries via same Gemini model[1][3].
+**Does Capacities have NotebookLM-style source limits?**
+Not in the same way. Capacities is organized around spaces, objects, media, and AI assistant usage, while NotebookLM publishes notebook/source/artifact limits.
 
-**Can I use both?**  
-Yes, combine NotebookLM for research synthesis and Capacities for organizing outputs into objects.
+**Can NotebookLM replace Capacities?**
+Only if your notes are temporary research notebooks. It does not replace a full object-based PKM system.
+
+**Can I use both?**
+Yes. A strong workflow is NotebookLM for source Q&A, then Capacities for permanent notes, decisions, and project context.
 
 ## Sources
 
-- [Capacities](../tools/capacities.md)
-- [Google NotebookLM](../tools/notebooklm.md)
-- [Best AI Models 2026](https://designforonline.com/the-best-ai-models-so-far-in-2026/)[1]
-- [Synthesia AI Tools](https://www.synthesia.io/post/ai-tools)[2]
-- [NxCode AI Tools](https://www.nxcode.io/resources/news/best-ai-tools-2026-complete-ranking-guide)[3]
+- [Capacities pricing](https://capacities.io/pricing/)
+- [Capacities AI assistant docs](https://docs.capacities.io/reference/ai-assistant)
+- [Capacities AI Chat Connectors docs](https://docs.capacities.io/reference/ai-chat-connectors)
+- [NotebookLM upgrade information](https://support.google.com/notebooklm/answer/16213268)
+- [NotebookLM app](https://notebooklm.google.com/)
+- [Google AI Plans](https://one.google.com/about/google-ai-plans)

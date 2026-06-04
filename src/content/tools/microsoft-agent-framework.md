@@ -2,7 +2,7 @@
 type: tool
 slug: microsoft-agent-framework
 title: Microsoft Agent Framework
-tagline: Microsoft's open-source agentic AI engine, merging Semantic Kernel and AutoGen. .NET 1.5.0 shipped May 8, 2026. Free, production-ready, and tightly integrated with Microsoft Foundry.
+tagline: Microsoft's open-source agentic AI engine, merging Semantic Kernel and AutoGen, now sitting beside the June 2026 Work IQ and Microsoft Foundry agent stack.
 category: ai-automation
 company: microsoft
 url: https://learn.microsoft.com/en-us/agent-framework/overview/
@@ -11,8 +11,8 @@ pricing_model: open-source
 price_range: "Free (open source)"
 status: active
 launched: 2026-04
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-03
+last_verified: 2026-06-03
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -27,11 +27,11 @@ scores:
   longevity: 9
 facts:
   best_for:
-    value: "Microsoft's open-source agentic AI engine, merging Semantic Kernel and AutoGen. .NET 1.5.0 shipped May 8, 2026 with 82 total releases since 1.0. Free, production-ready, and tightly integrated with Microsoft Foundry. Best for .NET and Python agentic workflows, multi-agent orchestration, and enterprise business-process automation."
-    source: "https://learn.microsoft.com/en-us/agent-framework/overview/"
-    source_label: "Microsoft Agent Framework overview"
-    source_id: maf-overview
-    verified_at: 2026-05-13
+    value: "Microsoft's open-source agentic AI engine, merging Semantic Kernel and AutoGen. Free, production-ready, and tightly integrated with Microsoft Foundry; June 2026 Build updates make Work IQ, Foundry IQ, and Microsoft 365 tenant-bound context the adjacent enterprise-agent layer. Best for .NET and Python agentic workflows, multi-agent orchestration, and Microsoft-aligned business-process automation."
+    source: "https://blogs.microsoft.com/blog/2026/06/02/microsoft-build-2026-be-yourself-at-work/"
+    source_label: "Microsoft Build 2026 agent stack"
+    source_id: microsoft-build-2026-work-iq
+    verified_at: 2026-06-03
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -39,22 +39,22 @@ facts:
     source: "https://github.com/microsoft/agent-framework"
     source_label: "Microsoft Agent Framework GitHub"
     source_id: maf-github
-    verified_at: 2026-05-13
+    verified_at: 2026-06-03
     next_review_at: 2026-08-13
     volatility: low
     confidence: high
   watch_out_for:
-    value: "Active 1.x release cadence (dotnet-1.5.0 on May 8, 2026); ecosystem still maturing relative to LangChain Python. Verify current docs and provider support before architecting around any single client"
-    source: "https://github.com/microsoft/agent-framework"
-    source_label: "Microsoft Agent Framework GitHub"
-    source_id: maf-github
-    verified_at: 2026-05-13
+    value: "Active 1.x framework cadence plus fast-moving Microsoft Build/Work IQ/Foundry surfaces. Verify current docs, Work IQ availability, Copilot Credit costs, and provider support before architecting around any single client."
+    source: "https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/02/announcing-the-new-work-iq-apis/"
+    source_label: "Microsoft Work IQ APIs"
+    source_id: microsoft-work-iq-apis
+    verified_at: 2026-06-03
     next_review_at: 2026-06-13
     volatility: medium
     confidence: high
 tags: [agent-framework, microsoft, open-source, autogen-successor, semantic-kernel, azure, microsoft-foundry, enterprise, dotnet, python]
-seo_title: "Microsoft Agent Framework: Features & Review (May 2026)"
-meta_description: "Microsoft Agent Framework .NET 1.5.0 (May 8, 2026) is the successor to Semantic Kernel and AutoGen. Free, open source, production-ready. Native support for Microsoft Foundry, Anthropic, Azure OpenAI, OpenAI, and Ollama. The default for .NET and Python agentic apps."
+seo_title: "Microsoft Agent Framework: Features & Review (June 2026)"
+meta_description: "Microsoft Agent Framework is the open-source successor to Semantic Kernel and AutoGen. Updated June 2026 for Microsoft Build, Work IQ APIs, Foundry IQ, Copilot Credits, and enterprise agent-stack guidance."
 author: "aipedia.wiki Editorial"
 best_for:
   - Azure and Microsoft Foundry enterprises building AI agents
@@ -67,18 +67,20 @@ not_best_for:
   - solo devs without Azure infrastructure
   - simple agent use cases (framework is heavy)
 quick_answer: >-
-  Microsoft Agent Framework 1.0 shipped April 2026 as the production-ready successor to both Semantic Kernel and AutoGen. By May 2026 it is on .NET 1.5.0 (released May 8) with 82 total releases. Open source, free, native support for Microsoft Foundry, Anthropic, Azure OpenAI, OpenAI, and Ollama. The default for .NET and Python agentic deployments. AutoGen is now in maintenance mode; new projects should start here. Pick it for Microsoft-aligned enterprise. Skip it for TypeScript-first or lightweight use cases.
+  Microsoft Agent Framework 1.0 shipped April 2026 as the production-ready successor to both Semantic Kernel and AutoGen. Its current release stream is dotnet-1.8.0 (June 2) and python-1.7.0 (May 28). It is open source, free, and aligned with Microsoft Foundry, Anthropic, Azure OpenAI, OpenAI, and Ollama. After Microsoft Build 2026, evaluate it beside Work IQ APIs, Foundry IQ, Microsoft 365 tenant context, and Copilot Credits. Pick it for Microsoft-aligned enterprise agent deployments. Skip it for TypeScript-first or lightweight use cases.
 ---
 
 # Microsoft Agent Framework
 
-Microsoft's consolidated answer to the agent-framework fragmentation of 2024-2025. Merges the orchestration strengths of Semantic Kernel with the multi-agent patterns of AutoGen into one framework. Version 1.0 shipped April 2026; the .NET 1.5.0 release on May 8, 2026 is the current stable, with 82 total releases logged across the .NET and Python tracks.
+Microsoft's consolidated answer to the agent-framework fragmentation of 2024-2025. Merges the orchestration strengths of Semantic Kernel with the multi-agent patterns of AutoGen into one framework. Version 1.0 shipped April 2026; by the June 3 check, the release stream had moved to dotnet-1.8.0 and python-1.7.0. The June 2026 Build update also makes the surrounding Microsoft stack clearer: Agent Framework for code, Microsoft Foundry for model/app development, and Work IQ APIs for Microsoft 365 work context.
 
 The current docs lean on **Microsoft Foundry** (renamed from Azure AI Foundry) as the reference platform, but the framework speaks directly to Microsoft Foundry, Anthropic, Azure OpenAI, OpenAI, Ollama, and a growing list of providers.
 
 ## Recent developments
 
-- **May 8, 2026:** [`microsoft/agent-framework`](https://github.com/microsoft/agent-framework) shipped **dotnet-1.5.0**, the latest stable .NET release. Active 1.x cadence since the April 1.0 launch keeps the framework on a monthly minor-release rhythm.
+- **June 2, 2026:** [Microsoft Build 2026 put Work IQ APIs, Foundry IQ, Fabric IQ, Copilot Credits, and new Microsoft AI models around the enterprise-agent stack](/news/2026-06-02-microsoft-build-work-iq-agent-stack/). Agent Framework remains the open-source code layer, but Microsoft-aligned buyers should evaluate it with Work IQ and Foundry rather than in isolation.
+- **June 2, 2026:** [`microsoft/agent-framework`](https://github.com/microsoft/agent-framework/releases) shipped **dotnet-1.8.0** after python-1.7.0 landed on May 28. The framework is still moving quickly; pin tested versions before production rollout.
+- **May 8, 2026:** `dotnet-1.5.0` was the May baseline release. It has now been superseded by the June release stream.
 - **May 1, 2026:** [Microsoft put a legal AI agent directly inside Word through its Frontier program](/news/2026-05-03-microsoft-word-legal-agent-frontier/). That is not the open-source Agent Framework itself, but it shows the same Microsoft pattern: domain-specific agents wrapped in structured workflows, approvals, and familiar enterprise surfaces.
 
 ## System Verdict
@@ -93,7 +95,7 @@ The current docs lean on **Microsoft Foundry** (renamed from Azure AI Foundry) a
 
 | | |
 |---|---|
-| **Current version** | .NET 1.5.0 (May 8, 2026); 82 total releases across .NET and Python tracks |
+| **Current version** | dotnet-1.8.0 (June 2, 2026) and python-1.7.0 (May 28, 2026) on the public GitHub releases page |
 | **License** | Open source |
 | **Languages** | .NET (C#) + Python |
 | **Cost** | Free |
@@ -107,7 +109,7 @@ The current docs lean on **Microsoft Foundry** (renamed from Azure AI Foundry) a
 
 - **Azure or Microsoft Foundry enterprises.** Deep integration with Microsoft Foundry, Azure OpenAI, Copilot Studio, Entra ID, Azure Monitor. Migration path from existing Copilot Studio agents is the cleanest.
 - **Existing Semantic Kernel or AutoGen users.** Migration guides shipped with 1.0 and remain current through the 1.5 line. Most existing code ports with modest refactoring.
-- **.NET / C# shops.** The best .NET-native agent framework available in 2026. First-party AOT support, strong tooling, and the May 8 .NET 1.5.0 cadence reinforces that .NET is a first-class target, not an afterthought.
+- **.NET / C# shops.** The best .NET-native agent framework available in 2026. First-party AOT support, strong tooling, and the June 2 dotnet-1.8.0 release reinforce that .NET is a first-class target, not an afterthought.
 - **Graph-based multi-agent orchestration.** Workflows give explicit control over execution order, type-safe routing, checkpointing, and human-in-the-loop pauses. Compare to LangGraph for the Python equivalent.
 - **Production SLAs matter.** Microsoft-backed framework with commercial support options through Azure. Compare to community-maintained alternatives.
 
@@ -128,14 +130,14 @@ Microsoft Agent Framework is free and open source. You pay for:
 
 No framework licensing fees.
 
-Verified 2026-05-13 via [Microsoft Agent Framework overview](https://learn.microsoft.com/en-us/agent-framework/overview/) and the [agent-framework GitHub releases](https://github.com/microsoft/agent-framework/releases).
+Verified 2026-06-03 via [Microsoft Agent Framework overview](https://learn.microsoft.com/en-us/agent-framework/overview/), the [agent-framework GitHub releases](https://github.com/microsoft/agent-framework/releases), [Microsoft Build 2026](https://blogs.microsoft.com/blog/2026/06/02/microsoft-build-2026-be-yourself-at-work/), and the [Work IQ API announcement](https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/02/announcing-the-new-work-iq-apis/).
 
 ## Failure modes
 
 - **Azure gravity.** The framework works outside Azure, but the reference architecture, documentation, and observability story all assume Microsoft Foundry. Non-Azure users do more setup.
 - **Complexity vs simple use cases.** A single-agent script that just calls an LLM with a few tools doesn't need this framework. Use a provider SDK directly.
 - **Migration work from AutoGen.** Not drop-in. Some multi-agent patterns need rewriting to match the new primitives.
-- **Active 1.x cadence.** dotnet-1.5.0 in May 2026 is the fifth minor release in two months. Pin the version you tested against; do not assume patches between minors are non-breaking.
+- **Active 1.x cadence.** dotnet-1.8.0 shipped June 2, only weeks after dotnet-1.5.0. Pin the version you tested against; do not assume patches between minors are non-breaking.
 - **Third-party model and tool risk.** Microsoft explicitly notes in the docs that any non-Azure-direct model or third-party tool is your responsibility for data flow, compliance, and cost. Review before wiring up Anthropic, OpenAI, or Ollama in regulated workloads.
 - **Documentation is Microsoft-style.** Extensive but dense. Easier to onboard via Microsoft Foundry's guided experience than raw docs.
 
@@ -151,7 +153,7 @@ Verified 2026-05-13 via [Microsoft Agent Framework overview](https://learn.micro
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified 2026-05-13 against the [Microsoft Agent Framework overview](https://learn.microsoft.com/en-us/agent-framework/overview/) and the [agent-framework GitHub releases page](https://github.com/microsoft/agent-framework/releases) (current stable: dotnet-1.5.0, May 8, 2026).
+Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-03 against the [Microsoft Agent Framework overview](https://learn.microsoft.com/en-us/agent-framework/overview/), the [agent-framework GitHub releases page](https://github.com/microsoft/agent-framework/releases), [Microsoft Build 2026](https://blogs.microsoft.com/blog/2026/06/02/microsoft-build-2026-be-yourself-at-work/), and the [Work IQ API announcement](https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/02/announcing-the-new-work-iq-apis/).
 
 ## FAQ
 

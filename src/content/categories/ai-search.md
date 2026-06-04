@@ -5,10 +5,10 @@ title: AI Search & Research Tools
 description: AI answer engines, private search, research notebooks, semantic search APIs, and source-backed research assistants.
 tool_count: 8
 seo_title: "Best AI Search and Research Tools (June 2026)"
-meta_description: "Updated June 2, 2026: compare Perplexity, Comet, ChatGPT Search, Google AI Mode, Bing AI-guided image search, NotebookLM, Kagi, Exa, Genspark, Glean, You.com, and Grok by citations, privacy, documents, APIs, and buyer fit."
+meta_description: "Updated June 3, 2026: compare Perplexity, Comet, ChatGPT Search, Google AI Mode, Bing AI-guided image search, NotebookLM, Kagi, Exa, Genspark, Glean, You.com, and Grok by citations, privacy, documents, APIs, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-02
-last_verified: 2026-06-02
+last_updated: 2026-06-03
+last_verified: 2026-06-03
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -38,7 +38,7 @@ AI search is not one category anymore. Buyers now choose between **cited answer 
 
 **Use [NotebookLM](/tools/notebooklm/) when the source set is already known.** It is a research notebook for documents, reports, transcripts, Drive files, and study materials, not a pure open-web search replacement.
 
-**Use [Kagi](/tools/kagi/) when privacy and search control matter.** It is the paid, ad-free search choice for people who want ranking controls and optional Assistant features rather than an answer-engine-first product.
+**Use [Kagi](/tools/kagi/) when privacy and search control matter.** It is the paid, ad-free search choice for people who want ranking controls and Assistant features rather than an answer-engine-first product. The June 3 [ChatGPT vs Kagi](/compare/chatgpt-vs-kagi/) refresh keeps the split clear: ChatGPT is the broader AI workspace, while Kagi is the search-first product for paid private discovery.
 
 **Use [Exa](/tools/exa/) when you are building AI search into a product.** It is a developer API lane for semantic search, retrieval, crawling-style workflows, deep research APIs, answer endpoints, monitors, and AI page summaries. Model the add-on costs before agent traffic grows.
 
@@ -89,6 +89,7 @@ AI search is not one category anymore. Buyers now choose between **cited answer 
 - [Best AI tools for journalists](/guides/best-ai-tools-for-journalists/) should stay aligned because journalists need source discipline, not AI "fact-checking" theater.
 - [Best AI Tools for Freelancers](/guides/best-ai-tools-for-freelancers/) should stay aligned because freelance consultants, writers, developers, and strategists often use Perplexity for billable source-backed research before drafting in ChatGPT or Claude.
 - A new `Perplexity vs ChatGPT Search` comparison would capture high-intent buyers deciding whether to keep Perplexity or consolidate into ChatGPT.
+- [ChatGPT vs Kagi](/compare/chatgpt-vs-kagi/) should stay current because privacy-first search buyers often want to know whether ChatGPT Search can replace paid search or whether Kagi still deserves its own subscription.
 - A new `Perplexity vs Google AI Mode` answer page would capture search behavior changes caused by Google's AI Overviews and AI Mode.
 - A new `Exa vs Perplexity API` comparison would capture developer buyers choosing between search/retrieval primitives and Perplexity-style answer APIs.
 
@@ -113,8 +114,10 @@ Do not leave this category stale. Google AI Mode, Perplexity Pro/Max/Enterprise,
 - [Google AI Mode and AI Overviews updates](https://blog.google/products-and-platforms/products/search/explore-web-generative-ai-search/) (verified 2026-05-13)
 - [Google AI Plans](https://one.google.com/about/google-ai-plans/) (verified 2026-05-13)
 - [NotebookLM upgrade docs](https://support.google.com/notebooklm/answer/16213268) (verified 2026-05-13)
-- [Kagi Ultimate plan docs](https://help.kagi.com/kagi/plans/ultimate-plan.html) (verified 2026-05-13)
-- [Kagi Team plan docs](https://help.kagi.com/kagi/plans/team-plan.html) (verified 2026-05-13)
+- [Kagi pricing](https://kagi.com/pricing) (verified 2026-06-03)
+- [Kagi Assistant docs](https://help.kagi.com/kagi/ai/assistant.html) (verified 2026-06-03)
+- [Kagi Ultimate plan docs](https://help.kagi.com/kagi/plans/ultimate-plan.html) (verified 2026-06-03)
+- [Kagi Team plan docs](https://help.kagi.com/kagi/plans/team-plan.html) (verified 2026-06-03)
 - [Exa pricing update](https://exa.ai/docs/changelog/pricing-update) (verified 2026-06-02)
 - [Exa API pricing](https://exa.ai/pricing/api) (verified 2026-06-02)
 - [Genspark membership benefits](https://www.genspark.ai/membership-benefits-lp) (verified 2026-06-02)

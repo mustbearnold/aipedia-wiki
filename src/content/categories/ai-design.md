@@ -5,10 +5,10 @@ title: AI Design & App Building
 description: Current AI design tools and app builders for social creative, product design, design systems, web prototypes, full-stack apps, and Vercel-native UI workflows.
 tool_count: 9
 seo_title: "Best AI Design & App Builder Tools (June 2026)"
-meta_description: "Updated June 2, 2026: compare Canva AI, Figma, Midjourney, Adobe Firefly, Recraft V4, Google Stitch, Framer, Lovable, Base44, Bolt.new, and v0 by buyer fit, pricing, workflow, and production risk."
+meta_description: "Updated June 3, 2026: compare Canva AI, Figma, Midjourney, Adobe Firefly, Recraft V4, Google Stitch, Framer, Lovable, Base44, Bolt.new, and v0 by buyer fit, pricing, workflow, and production risk."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-02
-last_verified: 2026-06-02
+last_updated: 2026-06-03
+last_verified: 2026-06-03
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -26,17 +26,17 @@ top_picks:
 
 AI design is now two overlapping markets. The first is **visual creation and product design**: brand assets, social posts, presentations, UX mockups, design systems, and stakeholder review. The second is **AI app building**: prompts, screenshots, Figma context, and code turning into web apps, prototypes, deploys, or pull requests.
 
-As of June 2, 2026, start with the job:
+As of June 3, 2026, start with the job:
 
 **Use [Canva](/tools/canva/) when non-designers need finished creative fast.** Canva AI 2.0 is built across Canva's Visual Suite and supports conversational creation, editable layouts, on-brand generation, AI images, AI video, Magic Write, resizing, background tools, and business controls. It is the safest first stop for marketers, creators, teachers, small businesses, and teams that need to publish polished content without a design department.
 
-**Use [Figma](/tools/figma/) when design quality, design systems, multiplayer review, and handoff matter.** Figma's pricing page now lists AI add-ons, daily/monthly AI credits by plan, Figma Make, Figma Sites, Dev Mode, MCP support, libraries, variables, governance, and enterprise seats. The June 2 Figma Make model check lists Gemini 3 Flash, Gemini 3.1 Pro, Claude Sonnet 4.6, Claude Opus 4.7, and GPT-5.5 as selectable options, with default-model and credit-burn caveats. Pick Figma when the artifact has to survive design critique and developer handoff, not just look plausible in a generator.
+**Use [Figma](/tools/figma/) when design quality, design systems, multiplayer review, and handoff matter.** Figma's pricing page now lists AI add-ons, daily/monthly AI credits by plan, Figma Make, Figma Sites, Dev Mode, MCP support, libraries, variables, governance, and enterprise seats. The June 3 Figma Make model check lists Gemini 3 Flash, Gemini 3.1 Pro, Claude Sonnet 4.6, Claude Opus 4.7, and GPT-5.5 as selectable options, with default-model and credit-burn caveats. Pick Figma when the artifact has to survive design critique and developer handoff, not just look plausible in a generator.
 
 **Use [Midjourney](/tools/midjourney/) when the job is visual ideation, art direction, concept imagery, or campaign moodboards.** Midjourney's current official plans are subscriptions built around generation capacity and GPU time, so treat it as an ideation engine, not a product design system or layout production workflow.
 
 **Use [Adobe Firefly](/tools/adobe-firefly/) when Adobe-native image, vector, and Creative Cloud production matters.** Firefly plans and Creative Cloud bundles are credit-aware, so the buying question is not just "Can it generate an image?" but whether it fits Photoshop, Illustrator, Express, team review, and commercial creative workflows.
 
-**Use [Lovable](/tools/lovable/) when the buyer wants a full-stack app from a prompt.** Lovable's public pricing page lists Pro at $25/month and Business at $50/month, both shared across unlimited users, with credits, custom domains, roles, permissions, SSO, and security controls depending on tier. It is the cleanest shortlist entry when the buyer wants backend, auth, database, and a live app path from one product.
+**Use [Lovable](/tools/lovable/) when the buyer wants a full-stack app from a prompt.** Lovable's public pricing page lists Pro at $25/month and Business at $50/month, both shared across unlimited users at the visible base tier, with credits, custom domains, roles, permissions, SSO, and security controls depending on tier. The June 3 [ChatGPT vs Lovable](/compare/chatgpt-vs-lovable/) refresh keeps ChatGPT in the strategy/planning lane and Lovable in the prompt-to-app lane.
 
 **Use [Base44](/tools/base44/) when the buyer wants a Wix-owned AI app builder with an all-in-one app path.** Base44's June 1 pricing check keeps the Free, Starter, Builder, Pro, Elite, and Enterprise ladder intact, but also found a Free integration-credit inconsistency between the plan card and FAQ. Treat credit and integration limits as the first thing to verify before a serious build.
 
@@ -126,6 +126,7 @@ Do not make a wide table the only mobile experience. Mobile buyers need top pick
 ## Money Pages To Build Next
 
 - [Lovable vs Bolt.new vs v0](/compare/lovable-vs-bolt-vs-v0/) should be rebuilt first because it is the highest-intent app-builder comparison in this category and still has stale pricing and scope language.
+- [ChatGPT vs Lovable](/compare/chatgpt-vs-lovable/) should stay current because founders often confuse the planning assistant with the app-builder workspace.
 - [Best Canva AI Alternatives](/guides/canva-ai-alternatives/) is now refreshed and should stay in the design money-page rotation because it separates Canva replacement intent by buyer job: Figma for product design, Firefly for Adobe production, Midjourney for ideation, Magnific (the Freepik successor brand as of May 5) for creator assets, and Recraft/Ideogram for text and vector-heavy brand work.
 - [Figma AI vs v0](/compare/figma-vs-v0/) should be rebuilt around design-system workflow versus Vercel-native implementation.
 - [Canva AI vs v0](/compare/canva-vs-v0/) should be rebuilt around non-designer creative production versus web-app output.
@@ -145,16 +146,18 @@ Do not make a wide table the only mobile experience. Mobile buyers need top pick
 - [Canva pricing](https://www.canva.com/pricing/) (verified 2026-06-02)
 - [Anthropic Claude Design launch](https://www.anthropic.com/news/claude-design-anthropic-labs) (verified 2026-06-02)
 - [Claude pricing](https://claude.com/pricing) (verified 2026-06-02)
-- [Figma pricing](https://www.figma.com/pricing/) (verified 2026-06-02)
-- [Figma AI credits](https://help.figma.com/hc/en-us/articles/33459875669015-How-AI-credits-work) (verified 2026-06-02)
-- [Figma Make model selection](https://help.figma.com/hc/en-us/articles/36400680326551-Select-an-AI-model-to-use-in-Figma-Make) (verified 2026-06-02)
-- [Create and edit a Figma Make file](https://help.figma.com/hc/en-us/articles/31304485164695-Create-and-edit-a-Figma-Make-file) (verified 2026-06-02)
+- [Figma pricing](https://www.figma.com/pricing/) (verified 2026-06-03)
+- [Figma AI credits](https://help.figma.com/hc/en-us/articles/33459875669015-How-AI-credits-work) (verified 2026-06-03)
+- [Figma Make model selection](https://help.figma.com/hc/en-us/articles/36400680326551-Select-an-AI-model-to-use-in-Figma-Make) (verified 2026-06-03)
+- [Create and edit a Figma Make file](https://help.figma.com/hc/en-us/articles/31304485164695-Create-and-edit-a-Figma-Make-file) (verified 2026-06-03)
 - [Midjourney plans](https://docs.midjourney.com/docs/plans) (verified 2026-05-13)
 - [Adobe Firefly plans](https://www.adobe.com/products/firefly/plans) (verified 2026-05-13)
 - [Google Stitch official site](https://stitch.withgoogle.com/) (verified 2026-06-02)
 - [Google Stitch announcement](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/) (verified 2026-06-02)
 - [Framer pricing](https://www.framer.com/pricing) (verified 2026-06-02)
-- [Lovable pricing](https://lovable.dev/pricing) (verified 2026-05-13)
+- [Lovable pricing](https://lovable.dev/pricing) (verified 2026-06-03)
+- [Lovable plans and credits](https://docs.lovable.dev/introduction/plans-and-credits) (verified 2026-06-03)
+- [Lovable Cloud docs](https://docs.lovable.dev/integrations/cloud) (verified 2026-06-03)
 - [Base44 pricing](https://base44.com/pricing) (verified 2026-06-01)
 - [Bolt.new pricing](https://bolt.new/pricing) (verified 2026-06-01)
 - [v0 pricing](https://v0.app/pricing) (verified 2026-05-13)

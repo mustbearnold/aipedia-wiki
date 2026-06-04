@@ -184,6 +184,23 @@ const {
     font-weight: 500;
   }
   @media (max-width: 420px) {
+    .gt-crumbs {
+      flex-wrap: wrap;
+      overflow: visible;
+      white-space: normal;
+      -webkit-mask-image: none;
+      mask-image: none;
+    }
+    .gt-crumbs li {
+      flex: 1 1 auto;
+      max-width: 100%;
+      white-space: normal;
+    }
+    .gt-crumbs a,
+    .gt-crumbs [aria-current="page"] {
+      white-space: normal;
+      overflow-wrap: anywhere;
+    }
     .gt-title-row.has-logo {
       gap: 12px;
     }
