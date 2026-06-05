@@ -2,6 +2,7 @@
 // Lists every active tool with category + tagline, every comparison, every
 // use-case guide. Intended for crawlers willing to ingest a larger manifest
 // to discover the full content map without parsing the sitemap.
+// Refresh metadata: 2026-06-05 GitHub Copilot comparison follow-up across Supermaven, Tabnine, and Val Town plus AI Coding, tools, comparison, category, homepage, source registry, and LLM maintenance.
 // Refresh metadata: 2026-06-05 Gemini comparison slice across GitHub Copilot, Grok, Mistral AI, Perplexity, and Qwen plus AI Chatbots, AI Coding, AI Search, tools, comparison, category, homepage, and LLM maintenance.
 // Refresh metadata: 2026-06-05 Gamma/Pitch/Presentations.AI comparison slice plus Pitch source URL, AI Presentation, tools, comparison, category, homepage, source registry, and LLM maintenance.
 // Refresh metadata: 2026-06-05 Frase SEO comparison slice plus adjacent MarketMuse, NeuronWriter, Semrush, Surfer SEO, and Ahrefs comparison-card cleanup across AI SEO, tools, comparison, category, homepage, source registry, and LLM maintenance.

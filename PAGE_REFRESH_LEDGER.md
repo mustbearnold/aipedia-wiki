@@ -28,9 +28,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /compare/decktopus-vs-tome/ | Comparison | Yes | frontmatter | src/content/comparisons/decktopus-vs-tome.md |
 | 2026-05-13 | /compare/exa-vs-phind/ | Comparison | Yes | frontmatter | src/content/comparisons/exa-vs-phind.md |
 | 2026-05-13 | /compare/gamma-vs-tome/ | Comparison | Yes | frontmatter | src/content/comparisons/gamma-vs-tome.md |
-| 2026-05-13 | /compare/github-copilot-vs-supermaven/ | Comparison | Yes | frontmatter | src/content/comparisons/github-copilot-vs-supermaven.md |
-| 2026-05-13 | /compare/github-copilot-vs-tabnine/ | Comparison | Yes | frontmatter | src/content/comparisons/github-copilot-vs-tabnine.md |
-| 2026-05-13 | /compare/github-copilot-vs-val-town/ | Comparison | Yes | frontmatter | src/content/comparisons/github-copilot-vs-val-town.md |
 | 2026-05-13 | /compare/google-stitch-vs-lovable/ | Comparison | Yes | frontmatter | src/content/comparisons/google-stitch-vs-lovable.md |
 | 2026-05-13 | /compare/google-stitch-vs-v0/ | Comparison | Yes | frontmatter | src/content/comparisons/google-stitch-vs-v0.md |
 | 2026-05-13 | /compare/grammarly-vs-hyperwrite/ | Comparison | Yes | frontmatter | src/content/comparisons/grammarly-vs-hyperwrite.md |
@@ -612,14 +609,14 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-04 | /tools/zapier/ | Tool | Yes | frontmatter | src/content/tools/zapier.md |
 | 2026-06-05 | / | Static page | Yes | working tree | src/pages/index.astro |
 | 2026-06-05 | /categories/ | Static page | Yes | working tree | src/pages/categories/index.astro |
-| 2026-06-05 | /categories/ai-chatbots/ | Category | Yes | working tree | src/content/categories/ai-chatbots.md |
+| 2026-06-05 | /categories/ai-chatbots/ | Category | Yes | frontmatter | src/content/categories/ai-chatbots.md |
 | 2026-06-05 | /categories/ai-coding/ | Category | Yes | working tree | src/content/categories/ai-coding.md |
 | 2026-06-05 | /categories/ai-design/ | Category | Yes | frontmatter | src/content/categories/ai-design.md |
 | 2026-06-05 | /categories/ai-image/ | Category | Yes | frontmatter | src/content/categories/ai-image.md |
 | 2026-06-05 | /categories/ai-notes/ | Category | Yes | frontmatter | src/content/categories/ai-notes.md |
 | 2026-06-05 | /categories/ai-presentation/ | Category | Yes | frontmatter | src/content/categories/ai-presentation.md |
 | 2026-06-05 | /categories/ai-research/ | Category | Yes | frontmatter | src/content/categories/ai-research.md |
-| 2026-06-05 | /categories/ai-search/ | Category | Yes | working tree | src/content/categories/ai-search.md |
+| 2026-06-05 | /categories/ai-search/ | Category | Yes | frontmatter | src/content/categories/ai-search.md |
 | 2026-06-05 | /categories/ai-seo/ | Category | Yes | frontmatter | src/content/categories/ai-seo.md |
 | 2026-06-05 | /categories/ai-voice/ | Category | Yes | frontmatter | src/content/categories/ai-voice.md |
 | 2026-06-05 | /categories/ai-writing/ | Category | Yes | frontmatter | src/content/categories/ai-writing.md |
@@ -688,11 +685,14 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-05 | /compare/freepik-vs-stable-diffusion/ | Comparison | Yes | frontmatter | src/content/comparisons/freepik-vs-stable-diffusion.md |
 | 2026-06-05 | /compare/gamma-vs-pitch/ | Comparison | Yes | frontmatter | src/content/comparisons/gamma-vs-pitch.md |
 | 2026-06-05 | /compare/gamma-vs-presentations-ai/ | Comparison | Yes | frontmatter | src/content/comparisons/gamma-vs-presentations-ai.md |
-| 2026-06-05 | /compare/gemini-vs-github-copilot/ | Comparison | Yes | working tree | src/content/comparisons/gemini-vs-github-copilot.md |
-| 2026-06-05 | /compare/gemini-vs-grok/ | Comparison | Yes | working tree | src/content/comparisons/gemini-vs-grok.md |
-| 2026-06-05 | /compare/gemini-vs-mistral-ai/ | Comparison | Yes | working tree | src/content/comparisons/gemini-vs-mistral-ai.md |
-| 2026-06-05 | /compare/gemini-vs-perplexity/ | Comparison | Yes | working tree | src/content/comparisons/gemini-vs-perplexity.md |
-| 2026-06-05 | /compare/gemini-vs-qwen/ | Comparison | Yes | working tree | src/content/comparisons/gemini-vs-qwen.md |
+| 2026-06-05 | /compare/gemini-vs-github-copilot/ | Comparison | Yes | frontmatter | src/content/comparisons/gemini-vs-github-copilot.md |
+| 2026-06-05 | /compare/gemini-vs-grok/ | Comparison | Yes | frontmatter | src/content/comparisons/gemini-vs-grok.md |
+| 2026-06-05 | /compare/gemini-vs-mistral-ai/ | Comparison | Yes | frontmatter | src/content/comparisons/gemini-vs-mistral-ai.md |
+| 2026-06-05 | /compare/gemini-vs-perplexity/ | Comparison | Yes | frontmatter | src/content/comparisons/gemini-vs-perplexity.md |
+| 2026-06-05 | /compare/gemini-vs-qwen/ | Comparison | Yes | frontmatter | src/content/comparisons/gemini-vs-qwen.md |
+| 2026-06-05 | /compare/github-copilot-vs-supermaven/ | Comparison | Yes | working tree | src/content/comparisons/github-copilot-vs-supermaven.md |
+| 2026-06-05 | /compare/github-copilot-vs-tabnine/ | Comparison | Yes | working tree | src/content/comparisons/github-copilot-vs-tabnine.md |
+| 2026-06-05 | /compare/github-copilot-vs-val-town/ | Comparison | Yes | working tree | src/content/comparisons/github-copilot-vs-val-town.md |
 | 2026-06-05 | /compare/ideogram-vs-stable-diffusion/ | Comparison | Yes | frontmatter | src/content/comparisons/ideogram-vs-stable-diffusion.md |
 | 2026-06-05 | /compare/marketmuse-vs-neuronwriter/ | Comparison | Yes | frontmatter | src/content/comparisons/marketmuse-vs-neuronwriter.md |
 | 2026-06-05 | /compare/marketmuse-vs-semrush/ | Comparison | Yes | frontmatter | src/content/comparisons/marketmuse-vs-semrush.md |

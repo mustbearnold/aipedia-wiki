@@ -6992,7 +6992,8 @@
       "url": "https://supermaven.com/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-05"
     },
     {
       "id": "surfer-changelog",
