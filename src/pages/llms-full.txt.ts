@@ -2,6 +2,7 @@
 // Lists every active tool with category + tagline, every comparison, every
 // use-case guide. Intended for crawlers willing to ingest a larger manifest
 // to discover the full content map without parsing the sitemap.
+// Refresh metadata: 2026-06-05 Midjourney image comparison follow-up across Ideogram and Flux plus AI Image, tools, comparison, category, homepage, source registry, and LLM maintenance.
 // Refresh metadata: 2026-06-05 AI video comparison slice across Hailuo, HeyGen, Kling, Pika, Runway, Seedance, and Synthesia plus HeyGen/Runway tool corrections, AI Video, tools, comparison, category, homepage, source registry, and LLM maintenance.
 // Refresh metadata: 2026-06-05 Grammarly comparison follow-up across HyperWrite, QuillBot, Sudowrite, and Wordtune plus AI Writing, tools, comparison, category, homepage, source registry, and LLM maintenance.
 // Refresh metadata: 2026-06-05 HyperWrite comparison follow-up across QuillBot, Sudowrite, and Wordtune plus HyperWrite tool verification, AI Writing, tools, comparison, category, homepage, source registry, and LLM maintenance.
