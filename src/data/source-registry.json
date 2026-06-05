@@ -2380,7 +2380,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "fireflies-features",
@@ -2389,7 +2389,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "fireflies-integrations",
@@ -2398,7 +2398,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "fireflies-official",
@@ -5427,7 +5427,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "notebooklm-official",
@@ -5436,7 +5436,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "notebooklm-pricing",
@@ -5445,7 +5445,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "notion-ai",
@@ -5499,16 +5499,16 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "obsidian-plugins",
       "label": "Obsidian community plugins",
-      "url": "https://obsidian.md/plugins",
+      "url": "https://community.obsidian.md/",
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "obsidian-pricing",
@@ -5517,7 +5517,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "ollama-official",
@@ -6211,7 +6211,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "readwise-reader",
@@ -6220,7 +6220,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "recraft-pricing",

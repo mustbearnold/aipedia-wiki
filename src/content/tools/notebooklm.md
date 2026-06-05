@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$250/month"
 status: active
 launched: 2023-07
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-05
+last_verified: 2026-06-05
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: "https://notebooklm.google.com"
     source_label: "Google NotebookLM official app"
     source_id: notebooklm-official
-    verified_at: 2026-05-13
+    verified_at: 2026-06-05
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -40,7 +40,7 @@ facts:
     source: "https://support.google.com/notebooklm/"
     source_label: "NotebookLM Help"
     source_id: notebooklm-help
-    verified_at: 2026-05-13
+    verified_at: 2026-06-05
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -48,7 +48,7 @@ facts:
     source: "https://notebooklm.google.com"
     source_label: "Google NotebookLM official app"
     source_id: notebooklm-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-06-05
     next_review_at: 2026-08-13
     volatility: high
     confidence: medium
@@ -57,7 +57,7 @@ facts:
     source: "https://support.google.com/notebooklm/"
     source_label: "NotebookLM Help"
     source_id: notebooklm-help
-    verified_at: 2026-05-13
+    verified_at: 2026-06-05
     volatility: medium
     confidence: high
   watch_out_for:
@@ -65,12 +65,12 @@ facts:
     source: "https://support.google.com/notebooklm/"
     source_label: "NotebookLM Help"
     source_id: notebooklm-help
-    verified_at: 2026-05-13
+    verified_at: 2026-06-05
     volatility: medium
     confidence: high
 tags: [research, document-qa, summarization, podcast, audio-overview, google, rag, source-grounding, free]
-seo_title: "NotebookLM: Features, Pricing & Review (May 2026)"
-meta_description: "Google NotebookLM runs on Gemini 3.1 with source-grounded Q&A, Audio Overviews, and Studio outputs. Standard tier is free, Plus / Pro / Ultra now sit inside Google AI Plans with 50/100/300/600-source caps and 3/6/20/200 Audio Overviews per day."
+seo_title: "NotebookLM: Features, Pricing & Review (June 2026)"
+meta_description: "Google NotebookLM is a Gemini-backed source notebook with Q&A, Audio Overviews, Video Overviews, reports, quizzes, flashcards, mind maps, and upgrade tiers through Google AI Plans."
 author: "aipedia.wiki Editorial"
 best_for:
   - source-grounded document Q&A
@@ -98,20 +98,20 @@ price_history:
     source_label: "Source"
     source_id: notebooklm-pricing
     note: "Free tier kept at 100 notebooks, 50 sources each, 3 Audio Overviews/day"
-  - date: 2026-05-13
+  - date: 2026-06-05
     plan: "Tier structure"
-    price: "Standard $0 / Plus / Pro / Ultra"
+    price: "Standard $0 / Plus / Pro / Ultra 20 TB / Ultra 30 TB"
     source: "https://support.google.com/notebooklm/answer/16213268"
     source_label: "NotebookLM Help"
     source_id: notebooklm-help
-    note: "Four-tier ladder live: source caps 50/100/300/600, Audio Overviews 3/6/20/200 per day. Google One AI Premium renamed Google AI Pro."
+    note: "Five-column help table live: source caps 50/100/300/500/600 and Audio Overviews 3/6/20/100/200 per day across Standard, Plus, Pro, Ultra 20 TB, and Ultra 30 TB. Google One AI Premium is now Google AI Pro."
 ---
 
 # Google NotebookLM
 
-Google's source-grounded research assistant, powered by **Gemini 3.1**. Ingests PDFs, Google Docs, web URLs, YouTube videos, and audio, then answers questions with inline citations to specific passages. The Studio panel generates Audio Overviews, study guides, FAQs, timelines, and briefing docs from the same sources.
+Google's source-grounded research assistant, backed by Gemini model access. It ingests PDFs, Google Docs, web URLs, YouTube videos, audio, and other sources, then answers questions with inline citations to specific passages. The Studio panel generates Audio Overviews, Video Overviews, study guides, FAQs, timelines, briefing docs, quizzes, flashcards, mind maps, and reports from the same sources.
 
-Standard tier (free) covers most individual use. As of May 2026, Google's consumer ladder has four NotebookLM tiers: **Standard** (free), **Plus**, **Pro**, and **Ultra**, attached to the renamed Google AI Plans (Google One AI Premium is now branded Google AI Pro). Source caps and Audio Overview limits scale as 50/100/300/600 sources per notebook and 3/6/20/200 Audio Overviews per day.
+Standard tier (free) covers most individual use. As of June 2026, Google's public help table separates **Standard**, **Plus**, **Pro**, **Ultra (20 TB)**, and **Ultra (30 TB)** access through Google AI Plans, Google Cloud, or qualifying Workspace plans. Source caps and Audio Overview limits scale as 50/100/300/500/600 sources per notebook and 3/6/20/100/200 Audio Overviews per day.
 
 ## System Verdict
 
@@ -119,30 +119,31 @@ Standard tier (free) covers most individual use. As of May 2026, Google's consum
 >
 > **Skip it if you need cross-domain reasoning, an API, or bulk export.** NotebookLM refuses to extrapolate beyond the uploaded material. That is a feature for compliance review and a wall for exploratory research.
 >
-> **Who pays which tier:** Standard (free) is enough for most students and researchers. Plus or Pro (inside Google AI Plans) is worth it only when the 50-source cap or 3 daily Audio Overviews bottleneck actual work; Ultra is an enterprise-scale line item with 600-source notebooks and 200 Audio Overviews per day.
+> **Who pays which tier:** Standard (free) is enough for most students and researchers. Plus or Pro is worth it when the 50-source cap, 50 chats/day, or 3 daily Audio Overviews bottleneck actual work. Ultra is an enterprise-scale line item when 500-600 sources per notebook, 100-200 Audio Overviews/day, and higher artifact limits matter.
 
 ## Key Facts
 
 | | |
 |---|---|
-| **Backing model** | Gemini 3.1 with RAG grounding |
+| **Backing model** | Gemini-backed source grounding |
 | **Source formats** | PDF, Google Docs/Slides, web URLs, YouTube, audio, pasted text |
 | **Standard (free)** | 50 sources per notebook, 500K tokens/source, 3 Audio Overviews/day |
 | **Plus** | 100 sources per notebook, 6 Audio Overviews/day, more model access |
 | **Pro** | 300 sources per notebook, 20 Audio Overviews/day, higher Gemini access |
-| **Ultra** | 600 sources per notebook, 200 Audio Overviews/day, watermark removal on infographics and slides |
-| **Plan packaging** | Standard via Google account · Plus / Pro / Ultra via Google AI Plans (Google AI Premium was renamed Google AI Pro) |
+| **Ultra 20 TB** | 500 sources per notebook, 100 Audio Overviews/day, watermark removal |
+| **Ultra 30 TB** | 600 sources per notebook, 200 Audio Overviews/day, watermark removal on infographics and slides |
+| **Plan packaging** | Standard via Google account · Plus / Pro / Ultra via Google AI Plans, Google Cloud, or qualifying Workspace plans |
 | **Audio Overview** | Two-host podcast-style audio, 5-15 min, fixed format |
 | **Studio outputs** | Study guides, FAQs, timelines, briefing docs, tables, infographics, slide decks |
 | **Integrations** | Google Drive auto-sync, public sharing links |
 | **API access** | None |
 | **Grounding** | Strictly to uploaded sources, no open-web answers |
 
-Every data point was verified against vendor docs on 2026-05-13. See Sources.
+Every data point was verified against vendor docs on 2026-06-05. See Sources.
 
 ## What it actually is
 
-A retrieval-augmented Q&A layer over your own uploads. Users load up to 50 sources on Standard (100 / 300 / 600 on Plus / Pro / Ultra) into a notebook, then query them in natural language. Answers ship with numbered citations linking to exact source passages.
+A retrieval-augmented Q&A layer over your own uploads. Users load up to 50 sources on Standard, 100 on Plus, 300 on Pro, 500 on Ultra 20 TB, or 600 on Ultra 30 TB into a notebook, then query them in natural language. Answers ship with numbered citations linking to exact source passages.
 
 The Studio panel spins the same sources into derived outputs. Audio Overview is the headline feature: two AI voices discuss the notebook in a 5-15 minute podcast. Study guides, timelines, FAQs, briefing docs, infographics, and slide decks round out the set; Ultra removes the AI-generated watermark from infographic and slide exports.
 
@@ -171,18 +172,19 @@ The moat: citation precision plus Audio Overview in one free product. No competi
 | Standard | 50 / notebook | 3 | Free with any Google account |
 | Plus | 100 / notebook | 6 | Inside Google AI Plus |
 | Pro | 300 / notebook | 20 | Inside Google AI Pro (formerly Google One AI Premium) |
-| Ultra | 600 / notebook | 200 | Inside Google AI Ultra |
+| Ultra 20 TB | 500 / notebook | 100 | Inside Google AI Ultra |
+| Ultra 30 TB | 600 / notebook | 200 | Inside Google AI Ultra |
 
-The four-tier ladder went live in early 2026 alongside the broader Google AI Plans rebrand; Google AI Premium is now branded Google AI Pro. Pro and Ultra also lift watermarks on infographic and slide-deck exports.
+The current help table also lists daily chat, Video Overview, report, quiz, flashcard, mind-map, Deep Research, data-table, infographic, and slide-deck limits. Google notes that usage limits are subject to change, so institutional buyers should verify the live help page before rollout.
 
-*Verified 2026-05-13 via the [NotebookLM Help Center](https://support.google.com/notebooklm/answer/16213268), [Google AI Plans](https://one.google.com/about/google-ai-plans), and [NotebookLM](https://notebooklm.google.com).*
+*Verified 2026-06-05 via the [NotebookLM Help Center](https://support.google.com/notebooklm/answer/16213268), [Google AI Plans](https://one.google.com/about/google-ai-plans), and [NotebookLM](https://notebooklm.google.com).*
 
 ## Against the alternatives
 
 | | NotebookLM | ChatGPT Plus | Claude Pro |
 |---|---|---|---|
 | **Citation precision** | **Strongest** · inline passage links | Good when browsing is on | Good with Projects |
-| **Source limit** | 50 (Standard) · 100 (Plus) · 300 (Pro) · 600 (Ultra) | ~20 attachments per chat | ~20 per Project |
+| **Source limit** | 50 (Standard) · 100 (Plus) · 300 (Pro) · 500/600 (Ultra) | ~20 attachments per chat | ~20 per Project |
 | **Audio output** | Audio Overview native | Voice mode only | None |
 | **Cross-domain reasoning** | None, strictly sources | Full open-web | Full (training cutoff) |
 | **API** | None | OpenAI API | Anthropic API |
@@ -201,15 +203,15 @@ The four-tier ladder went live in early 2026 alongside the broader Google AI Pla
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against the [NotebookLM Help Center plan comparison](https://support.google.com/notebooklm/answer/16213268), [Google AI Plans](https://one.google.com/about/google-ai-plans), [NotebookLM](https://notebooklm.google.com), and the [Google Blog NotebookLM + Gemini update](https://blog.google/technology/ai/notebooklm-gemini-2-0/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-05 against the [NotebookLM Help Center plan comparison](https://support.google.com/notebooklm/answer/16213268), [Google AI Plans](https://one.google.com/about/google-ai-plans), [NotebookLM](https://notebooklm.google.com), and the [Google Blog NotebookLM + Gemini update](https://blog.google/technology/ai/notebooklm-gemini-2-0/).
 
 ## FAQ
 
 **Is NotebookLM free?**
-Yes. The Standard tier covers 100 notebooks, 50 sources per notebook (500K tokens each), and 3 Audio Overviews per day. Paid tiers (Plus, Pro, Ultra) sit inside Google AI Plans and raise caps to 100 / 300 / 600 sources per notebook and 6 / 20 / 200 Audio Overviews per day. Google AI Premium has been renamed Google AI Pro.
+Yes. The Standard tier covers 100 notebooks, 50 sources per notebook, 50 chats/day, and 3 Audio Overviews per day. Paid tiers sit inside Google AI Plans and raise caps through Plus, Pro, Ultra 20 TB, and Ultra 30 TB; the current help page lists up to 600 sources per notebook and 200 Audio Overviews/day on the top Ultra column.
 
 **What powers NotebookLM?**
-Gemini 3.1 with retrieval-augmented generation strictly grounded to uploaded sources ([Google Blog](https://blog.google/technology/ai/notebooklm-gemini-2-0/)).
+Google describes NotebookLM as using Gemini model access with retrieval-augmented generation grounded to uploaded sources. Google AI Plans separately expose higher Gemini access by plan.
 
 **Can Audio Overviews be customized?**
 No. The podcast format is fixed at two hosts and 5-15 minutes. Voice selection, topic steering, and length controls are not exposed.

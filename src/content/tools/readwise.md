@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$5.59-$12.99/month"
 status: active
 launched: 2018-01
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-05
+last_verified: 2026-06-05
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://readwise.io/read"
     source_label: "Readwise Reader official site"
     source_id: readwise-reader
-    verified_at: 2026-05-13
+    verified_at: 2026-06-05
     volatility: medium
     confidence: high
   knowledge_surface:
@@ -38,7 +38,7 @@ facts:
     source: "https://readwise.io/read"
     source_label: "Readwise Reader official site"
     source_id: readwise-reader
-    verified_at: 2026-05-13
+    verified_at: 2026-06-05
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -46,7 +46,7 @@ facts:
     source: "https://readwise.io/pricing"
     source_label: "Readwise pricing"
     source_id: readwise-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-06-05
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -55,7 +55,7 @@ facts:
     source: "https://readwise.io/read"
     source_label: "Readwise Reader official site"
     source_id: readwise-reader
-    verified_at: 2026-05-13
+    verified_at: 2026-06-05
     volatility: medium
     confidence: medium
   watch_out_for:
@@ -63,11 +63,11 @@ facts:
     source: "https://readwise.io/read"
     source_label: "Readwise Reader official site"
     source_id: readwise-reader
-    verified_at: 2026-05-13
+    verified_at: 2026-06-05
     volatility: medium
     confidence: high
 tags: [ai-notes, reading, highlights, spaced-repetition, pkm, newsletters, rss]
-seo_title: "Readwise Reader Review: AI Reading App (May 2026)"
+seo_title: "Readwise Reader Review: AI Reading App (June 2026)"
 meta_description: "Readwise Reader unifies articles, newsletters, PDFs, ebooks, and YouTube into one inbox with Ghostreader AI and spaced-repetition review. Lite at $5.59/mo annual, Full at $9.99/mo annual ($12.99 monthly) bundles the system."
 author: aipedia.wiki Editorial
 best_for:
@@ -96,13 +96,13 @@ price_history:
     source_label: "Source"
     source_id: readwise-pricing
     note: "Verified unchanged"
-  - date: 2026-05-13
+  - date: 2026-06-05
     plan: "Lite (annual)"
     price: "$5.59/mo"
     source: "https://readwise.io/pricing"
     source_label: "Source"
     source_id: readwise-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-06-05
     note: "Lite annual rate now displayed at $5.59/mo on the pricing page; monthly rate stays $12.99 with a 24% annual discount. Full bundle (Reader + Readwise) holds at $9.99/mo annual. 30-day full trial unchanged."
 ---
 
@@ -135,7 +135,7 @@ $9.99/mo annual bundles Reader plus the full Readwise system; Lite drops to $5.5
 | **Free tier** | 30-day trial only, no perpetual free |
 | **Price floor** | $5.59/mo annual (Lite); $12.99/mo monthly |
 
-Every data point was verified against vendor docs on 2026-05-13. See Sources.
+Every data point was verified against vendor docs on 2026-06-05. See Sources.
 
 ## What it actually is
 
@@ -143,7 +143,7 @@ Three tools fused into one subscription: a read-later inbox, a document-level AI
 
 Ingestion covers nearly every format readers actually encounter. Newsletters forward to a personal @readwise.io address. Kindle highlights sync automatically. PDFs upload directly. YouTube transcripts become highlightable text. Podcast audio enters the same inbox.
 
-Ghostreader works inside the reader. Highlight a passage for summary, definition, or plain-language rewrite. Chat with a full PDF. Build custom prompts for recurring patterns (extract quotes, generate study questions).
+Ghostreader works inside Reader's Chat interface on web and desktop, with preset prompts available for whole documents or selected passages. Highlight a passage for summary, definition, translation, or plain-language rewrite. Chat with a full PDF. Build custom prompts for recurring patterns such as extracting quotes or generating study questions.
 
 The Readwise review layer is the retention engine. Highlights resurface daily with multiple-choice quizzes, cloze deletions, and spaced scheduling that adapts to self-rated recall. Exports sync bidirectionally into Obsidian, Notion, Logseq, and Evernote.
 
@@ -171,7 +171,7 @@ The Readwise review layer is the retention engine. Highlights resurface daily wi
 | Lite | $5.59/mo annual ($12.99 monthly) | Reading inbox and daily email, no spaced repetition |
 | Reader + Readwise (Full) | $9.99/mo annual | Everything: Ghostreader AI, spaced repetition, all exports |
 
-*Prices verified 2026-05-13 via [readwise.io/pricing](https://readwise.io/pricing). Annual billing saves roughly 24% versus monthly. No perpetual free tier after the 30-day trial.*
+*Prices verified 2026-06-05 via [readwise.io/pricing](https://readwise.io/pricing). Annual billing saves roughly 24% versus monthly. No perpetual free tier after the 30-day trial.*
 
 ## Against the alternatives
 
@@ -198,7 +198,7 @@ The Readwise review layer is the retention engine. Highlights resurface daily wi
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [readwise.io/pricing](https://readwise.io/pricing), [readwise.io/read](https://readwise.io/read), and the [Ghostreader docs](https://docs.readwise.io/reader/docs/faqs/ghostreader).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-05 against [readwise.io/pricing](https://readwise.io/pricing), [readwise.io/read](https://readwise.io/read), and the [Ghostreader docs](https://docs.readwise.io/reader/guides/ghostreader/overview).
 
 ## FAQ
 
@@ -206,7 +206,7 @@ This page was produced by the aipedia.wiki editorial pipeline, an automated syst
 No perpetual free tier. A 30-day full-featured trial is available. After that, Lite is $5.59/mo annual ($12.99 monthly) or the full Reader + Readwise bundle is $9.99/mo annual.
 
 **What AI powers Ghostreader?**
-Frontier LLMs with automatic routing per query ([Ghostreader docs](https://docs.readwise.io/reader/docs/faqs/ghostreader)). Capabilities include document Q&A, term definitions, plain-language rewrites, summaries, and custom prompts.
+Frontier LLMs with automatic routing per query ([Ghostreader docs](https://docs.readwise.io/reader/guides/ghostreader/overview)). Capabilities include document Q&A, term definitions, plain-language rewrites, summaries, translations, follow-up chat, and custom prompts.
 
 **Can Readwise integrate with Obsidian?**
 Yes. The official Obsidian plugin creates daily highlight notes in the vault with bidirectional sync. Notion, Logseq, and Evernote integrations ship through official plugins or the Readwise API.
@@ -221,7 +221,7 @@ For active knowledge-base builders, yes. Passive highlighting rarely survives pa
 
 - [readwise.io/pricing](https://readwise.io/pricing): current Lite and full bundle pricing
 - [readwise.io/read](https://readwise.io/read): Reader product overview and ingestion list
-- [Ghostreader docs](https://docs.readwise.io/reader/docs/faqs/ghostreader): AI assistant feature scope
+- [Ghostreader docs](https://docs.readwise.io/reader/guides/ghostreader/overview): AI assistant feature scope, presets, and Chat integration
 
 ## Related
 

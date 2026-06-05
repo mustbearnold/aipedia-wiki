@@ -27,10 +27,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /compare/chatgpt-vs-phind/ | Comparison | Yes | frontmatter | src/content/comparisons/chatgpt-vs-phind.md |
 | 2026-05-13 | /compare/decktopus-vs-tome/ | Comparison | Yes | frontmatter | src/content/comparisons/decktopus-vs-tome.md |
 | 2026-05-13 | /compare/exa-vs-phind/ | Comparison | Yes | frontmatter | src/content/comparisons/exa-vs-phind.md |
-| 2026-05-13 | /compare/fireflies-vs-notebooklm/ | Comparison | Yes | frontmatter | src/content/comparisons/fireflies-vs-notebooklm.md |
-| 2026-05-13 | /compare/fireflies-vs-obsidian/ | Comparison | Yes | frontmatter | src/content/comparisons/fireflies-vs-obsidian.md |
-| 2026-05-13 | /compare/fireflies-vs-otter-ai/ | Comparison | Yes | frontmatter | src/content/comparisons/fireflies-vs-otter-ai.md |
-| 2026-05-13 | /compare/fireflies-vs-readwise/ | Comparison | Yes | frontmatter | src/content/comparisons/fireflies-vs-readwise.md |
 | 2026-05-13 | /compare/fish-audio-vs-resemble-ai/ | Comparison | Yes | frontmatter | src/content/comparisons/fish-audio-vs-resemble-ai.md |
 | 2026-05-13 | /compare/fish-audio-vs-voxtral/ | Comparison | Yes | frontmatter | src/content/comparisons/fish-audio-vs-voxtral.md |
 | 2026-05-13 | /compare/flux-vs-freepik/ | Comparison | Yes | frontmatter | src/content/comparisons/flux-vs-freepik.md |
@@ -245,8 +241,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /tools/mubert/ | Tool | Yes | frontmatter | src/content/tools/mubert.md |
 | 2026-05-13 | /tools/n8n/ | Tool | Yes | frontmatter | src/content/tools/n8n.md |
 | 2026-05-13 | /tools/napkin-ai/ | Tool | Yes | frontmatter | src/content/tools/napkin-ai.md |
-| 2026-05-13 | /tools/notebooklm/ | Tool | Yes | frontmatter | src/content/tools/notebooklm.md |
-| 2026-05-13 | /tools/obsidian/ | Tool | Yes | frontmatter | src/content/tools/obsidian.md |
 | 2026-05-13 | /tools/ollama/ | Tool | Yes | frontmatter | src/content/tools/ollama.md |
 | 2026-05-13 | /tools/open-webui/ | Tool | Yes | frontmatter | src/content/tools/open-webui.md |
 | 2026-05-13 | /tools/opusclip/ | Tool | Yes | frontmatter | src/content/tools/opusclip.md |
@@ -258,7 +252,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /tools/playground-ai/ | Tool | Yes | frontmatter | src/content/tools/playground-ai.md |
 | 2026-05-13 | /tools/poe/ | Tool | Yes | frontmatter | src/content/tools/poe.md |
 | 2026-05-13 | /tools/qdrant/ | Tool | Yes | frontmatter | src/content/tools/qdrant.md |
-| 2026-05-13 | /tools/readwise/ | Tool | Yes | frontmatter | src/content/tools/readwise.md |
 | 2026-05-13 | /tools/reclaim-ai/ | Tool | Yes | frontmatter | src/content/tools/reclaim-ai.md |
 | 2026-05-13 | /tools/reflect/ | Tool | Yes | frontmatter | src/content/tools/reflect.md |
 | 2026-05-13 | /tools/reka/ | Tool | Yes | frontmatter | src/content/tools/reka.md |
@@ -502,7 +495,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-02 | /tools/eightfold-ai/ | Tool | Yes | frontmatter | src/content/tools/eightfold-ai.md |
 | 2026-06-02 | /tools/fal-ai/ | Tool | Yes | frontmatter | src/content/tools/fal-ai.md |
 | 2026-06-02 | /tools/fathom/ | Tool | Yes | frontmatter | src/content/tools/fathom.md |
-| 2026-06-02 | /tools/fireflies/ | Tool | Yes | frontmatter | src/content/tools/fireflies.md |
 | 2026-06-02 | /tools/fireworks-ai/ | Tool | Yes | frontmatter | src/content/tools/fireworks-ai.md |
 | 2026-06-02 | /tools/flux/ | Tool | Yes | frontmatter | src/content/tools/flux.md |
 | 2026-06-02 | /tools/framer-ai/ | Tool | Yes | frontmatter | src/content/tools/framer-ai.md |
@@ -594,9 +586,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-03 | /tools/claude/ | Tool | Yes | frontmatter | src/content/tools/claude.md |
 | 2026-06-03 | /tools/jasper/ | Tool | Yes | frontmatter | src/content/tools/jasper.md |
 | 2026-06-03 | /tools/microsoft-agent-framework/ | Tool | Yes | frontmatter | src/content/tools/microsoft-agent-framework.md |
-| 2026-06-03 | /tools/otter-ai/ | Tool | Yes | frontmatter | src/content/tools/otter-ai.md |
 | 2026-06-04 | /categories/ai-automation/ | Category | Yes | frontmatter | src/content/categories/ai-automation.md |
-| 2026-06-04 | /categories/ai-notes/ | Category | Yes | frontmatter | src/content/categories/ai-notes.md |
 | 2026-06-04 | /categories/ai-seo/ | Category | Yes | frontmatter | src/content/categories/ai-seo.md |
 | 2026-06-04 | /compare/chatgpt-vs-scite/ | Comparison | Yes | frontmatter | src/content/comparisons/chatgpt-vs-scite.md |
 | 2026-06-04 | /compare/chatgpt-vs-sudowrite/ | Comparison | Yes | frontmatter | src/content/comparisons/chatgpt-vs-sudowrite.md |
@@ -664,8 +654,9 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-05 | /categories/ | Static page | Yes | working tree | src/pages/categories/index.astro |
 | 2026-06-05 | /categories/ai-chatbots/ | Category | Yes | frontmatter | src/content/categories/ai-chatbots.md |
 | 2026-06-05 | /categories/ai-coding/ | Category | Yes | frontmatter | src/content/categories/ai-coding.md |
-| 2026-06-05 | /categories/ai-design/ | Category | Yes | working tree | src/content/categories/ai-design.md |
-| 2026-06-05 | /categories/ai-image/ | Category | Yes | working tree | src/content/categories/ai-image.md |
+| 2026-06-05 | /categories/ai-design/ | Category | Yes | frontmatter | src/content/categories/ai-design.md |
+| 2026-06-05 | /categories/ai-image/ | Category | Yes | frontmatter | src/content/categories/ai-image.md |
+| 2026-06-05 | /categories/ai-notes/ | Category | Yes | working tree | src/content/categories/ai-notes.md |
 | 2026-06-05 | /categories/ai-presentation/ | Category | Yes | frontmatter | src/content/categories/ai-presentation.md |
 | 2026-06-05 | /categories/ai-research/ | Category | Yes | frontmatter | src/content/categories/ai-research.md |
 | 2026-06-05 | /categories/ai-search/ | Category | Yes | frontmatter | src/content/categories/ai-search.md |
@@ -713,10 +704,14 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-05 | /compare/exa-vs-kagi/ | Comparison | Yes | frontmatter | src/content/comparisons/exa-vs-kagi.md |
 | 2026-06-05 | /compare/exa-vs-perplexity/ | Comparison | Yes | frontmatter | src/content/comparisons/exa-vs-perplexity.md |
 | 2026-06-05 | /compare/exa-vs-you-com/ | Comparison | Yes | frontmatter | src/content/comparisons/exa-vs-you-com.md |
-| 2026-06-05 | /compare/figma-vs-google-stitch/ | Comparison | Yes | working tree | src/content/comparisons/figma-vs-google-stitch.md |
-| 2026-06-05 | /compare/figma-vs-lovable/ | Comparison | Yes | working tree | src/content/comparisons/figma-vs-lovable.md |
-| 2026-06-05 | /compare/figma-vs-midjourney/ | Comparison | Yes | working tree | src/content/comparisons/figma-vs-midjourney.md |
-| 2026-06-05 | /compare/figma-vs-v0/ | Comparison | Yes | working tree | src/content/comparisons/figma-vs-v0.md |
+| 2026-06-05 | /compare/figma-vs-google-stitch/ | Comparison | Yes | frontmatter | src/content/comparisons/figma-vs-google-stitch.md |
+| 2026-06-05 | /compare/figma-vs-lovable/ | Comparison | Yes | frontmatter | src/content/comparisons/figma-vs-lovable.md |
+| 2026-06-05 | /compare/figma-vs-midjourney/ | Comparison | Yes | frontmatter | src/content/comparisons/figma-vs-midjourney.md |
+| 2026-06-05 | /compare/figma-vs-v0/ | Comparison | Yes | frontmatter | src/content/comparisons/figma-vs-v0.md |
+| 2026-06-05 | /compare/fireflies-vs-notebooklm/ | Comparison | Yes | working tree | src/content/comparisons/fireflies-vs-notebooklm.md |
+| 2026-06-05 | /compare/fireflies-vs-obsidian/ | Comparison | Yes | working tree | src/content/comparisons/fireflies-vs-obsidian.md |
+| 2026-06-05 | /compare/fireflies-vs-otter-ai/ | Comparison | Yes | working tree | src/content/comparisons/fireflies-vs-otter-ai.md |
+| 2026-06-05 | /compare/fireflies-vs-readwise/ | Comparison | Yes | working tree | src/content/comparisons/fireflies-vs-readwise.md |
 | 2026-06-05 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
 | 2026-06-05 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
 | 2026-06-05 | /tools/ | Static page | Yes | working tree | src/pages/tools/index.astro |
@@ -728,21 +723,26 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-05 | /tools/elevenlabs/ | Tool | Yes | frontmatter | src/content/tools/elevenlabs.md |
 | 2026-06-05 | /tools/elicit/ | Tool | Yes | frontmatter | src/content/tools/elicit.md |
 | 2026-06-05 | /tools/exa/ | Tool | Yes | frontmatter | src/content/tools/exa.md |
-| 2026-06-05 | /tools/figma/ | Tool | Yes | working tree | src/content/tools/figma.md |
+| 2026-06-05 | /tools/figma/ | Tool | Yes | frontmatter | src/content/tools/figma.md |
+| 2026-06-05 | /tools/fireflies/ | Tool | Yes | working tree | src/content/tools/fireflies.md |
 | 2026-06-05 | /tools/fish-audio/ | Tool | Yes | frontmatter | src/content/tools/fish-audio.md |
 | 2026-06-05 | /tools/gamma/ | Tool | Yes | frontmatter | src/content/tools/gamma.md |
 | 2026-06-05 | /tools/gemini/ | Tool | Yes | frontmatter | src/content/tools/gemini.md |
-| 2026-06-05 | /tools/google-stitch/ | Tool | Yes | working tree | src/content/tools/google-stitch.md |
+| 2026-06-05 | /tools/google-stitch/ | Tool | Yes | frontmatter | src/content/tools/google-stitch.md |
 | 2026-06-05 | /tools/kagi/ | Tool | Yes | frontmatter | src/content/tools/kagi.md |
 | 2026-06-05 | /tools/lovable/ | Tool | Yes | frontmatter | src/content/tools/lovable.md |
-| 2026-06-05 | /tools/midjourney/ | Tool | Yes | working tree | src/content/tools/midjourney.md |
+| 2026-06-05 | /tools/midjourney/ | Tool | Yes | frontmatter | src/content/tools/midjourney.md |
 | 2026-06-05 | /tools/mistral-ai/ | Tool | Yes | frontmatter | src/content/tools/mistral-ai.md |
 | 2026-06-05 | /tools/murf/ | Tool | Yes | frontmatter | src/content/tools/murf.md |
+| 2026-06-05 | /tools/notebooklm/ | Tool | Yes | working tree | src/content/tools/notebooklm.md |
+| 2026-06-05 | /tools/obsidian/ | Tool | Yes | working tree | src/content/tools/obsidian.md |
+| 2026-06-05 | /tools/otter-ai/ | Tool | Yes | working tree | src/content/tools/otter-ai.md |
 | 2026-06-05 | /tools/perplexity/ | Tool | Yes | frontmatter | src/content/tools/perplexity.md |
 | 2026-06-05 | /tools/pitch/ | Tool | Yes | frontmatter | src/content/tools/pitch.md |
 | 2026-06-05 | /tools/presentations-ai/ | Tool | Yes | frontmatter | src/content/tools/presentations-ai.md |
 | 2026-06-05 | /tools/quillbot/ | Tool | Yes | frontmatter | src/content/tools/quillbot.md |
 | 2026-06-05 | /tools/qwen/ | Tool | Yes | frontmatter | src/content/tools/qwen.md |
+| 2026-06-05 | /tools/readwise/ | Tool | Yes | working tree | src/content/tools/readwise.md |
 | 2026-06-05 | /tools/resemble-ai/ | Tool | Yes | frontmatter | src/content/tools/resemble-ai.md |
 | 2026-06-05 | /tools/val-town/ | Tool | Yes | frontmatter | src/content/tools/val-town.md |
 | 2026-06-05 | /tools/voxtral/ | Tool | Yes | frontmatter | src/content/tools/voxtral.md |

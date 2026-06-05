@@ -2,7 +2,7 @@
 type: tool
 slug: obsidian
 title: Obsidian
-tagline: Local-first markdown knowledge base with 2,690+ community plugins. AI arrives via Smart Connections and Copilot using your own API keys.
+tagline: Local-first markdown knowledge base with 4,468 community plugins, including 489 AI-category plugins. AI arrives via Smart Connections, Copilot, and other bring-your-own-key workflows.
 category: ai-notes
 company: obsidian
 url: 'https://obsidian.md'
@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$8/month (add-ons) + $50/year commercial"
 status: active
 launched: 2020-03
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-05
+last_verified: 2026-06-05
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://help.obsidian.md/"
     source_label: "Obsidian Help"
     source_id: obsidian-help
-    verified_at: 2026-05-13
+    verified_at: 2026-06-05
     volatility: low
     confidence: high
   pricing_anchor:
@@ -38,7 +38,7 @@ facts:
     source: "https://obsidian.md/pricing"
     source_label: "Obsidian pricing"
     source_id: obsidian-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-06-05
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -47,7 +47,7 @@ facts:
     source: "https://obsidian.md/plugins"
     source_label: "Obsidian community plugins"
     source_id: obsidian-plugins
-    verified_at: 2026-05-13
+    verified_at: 2026-06-05
     volatility: medium
     confidence: high
   data_model:
@@ -55,7 +55,7 @@ facts:
     source: "https://help.obsidian.md/"
     source_label: "Obsidian Help"
     source_id: obsidian-help
-    verified_at: 2026-05-13
+    verified_at: 2026-06-05
     volatility: low
     confidence: high
   watch_out_for:
@@ -63,12 +63,12 @@ facts:
     source: "https://help.obsidian.md/"
     source_label: "Obsidian Help"
     source_id: obsidian-help
-    verified_at: 2026-05-13
+    verified_at: 2026-06-05
     volatility: medium
     confidence: high
 tags: [notes, markdown, local-first, knowledge-base, pkm, zettelkasten, graph-view, plugins, ai-plugins, privacy]
-seo_title: 'Obsidian: Features, Pricing & Review (May 2026)'
-meta_description: "Obsidian is a free local-first markdown note app with 2,690+ community plugins. AI via Smart Connections and Copilot using your own API keys. Sync $4/mo, Publish $8/mo, Commercial $50/yr."
+seo_title: 'Obsidian: Features, Pricing & Review (June 2026)'
+meta_description: "Obsidian is a free local-first markdown note app with 4,468 community plugins, including 489 AI plugins. Sync $4/mo, Publish $8/mo, Commercial $50/yr."
 author: aipedia.wiki Editorial
 best_for:
   - solo knowledge workers valuing data ownership
@@ -80,7 +80,7 @@ not_best_for:
   - users wanting AI that works zero-config
   - casual note-takers unwilling to tune plugins
 quick_answer: >-
-  Obsidian is a free local-first markdown note app that stores every note as a plain .md file on your device. AI arrives via community plugins (Smart Connections, Copilot) using your own API keys. Pick for data ownership and the 2,690-plugin ecosystem; skip for team collaboration or zero-config AI (use Notion AI).
+  Obsidian is a free local-first markdown note app that stores every note as a plain .md file on your device. AI arrives via community plugins using your own API keys. Pick for data ownership and the 4,468-plugin ecosystem; skip for cloud meeting capture or zero-config AI workspace workflows.
 price_history:
   - date: 2024-01-15
     plan: "Sync"
@@ -96,7 +96,7 @@ price_history:
     source_label: "Source"
     source_id: obsidian-pricing
     note: "Verified unchanged"
-  - date: 2026-05-13
+  - date: 2026-06-05
     plan: "Sync · Publish · Commercial · Catalyst"
     price: "$4/$5 mo · $8/$10 mo · $50/yr · $25 one-time"
     source: "https://obsidian.md/pricing"
@@ -109,7 +109,7 @@ price_history:
 
 Local-first markdown note-taking application. Every note is a plain `.md` file on your filesystem. No cloud requirement, no proprietary format, no vendor lock-in.
 
-The community plugin ecosystem hit 2,690+ entries by April 2026. AI is not built in; it arrives through plugins like Smart Connections and Copilot, which run against your own API keys (Claude, OpenAI frontier models, Gemini, or local models via Ollama).
+The community plugin ecosystem lists 4,468 plugins and 544 themes in June 2026, including 489 plugins in the AI category. AI is not built in; it arrives through plugins like Smart Connections, Copilot, Codex Panel, and other bring-your-own-key or local-model workflows.
 
 Core app is free for personal use. Optional add-ons: Sync ($4/mo annual), Publish ($8/mo), Commercial license ($50/user/year).
 
@@ -126,7 +126,7 @@ Core app is free for personal use. Optional add-ons: Sync ($4/mo annual), Publis
 | | |
 |---|---|
 | **Storage model** | Local plain-text `.md` files · any filesystem, any cloud drive |
-| **Plugin ecosystem** | 2,690+ community plugins (April 2026) · all free |
+| **Plugin ecosystem** | 4,468 community plugins (June 2026), including 489 AI-category plugins · all free |
 | **Top AI plugins** | Smart Connections (semantic search + RAG chat) · Copilot (vault-wide LLM chat) · Text Generator (writing) |
 | **AI model access** | Bring your own API key · Claude · OpenAI frontier models · Gemini · local Ollama · OpenRouter |
 | **Core pricing** | Free for personal use · no feature restrictions |
@@ -140,7 +140,7 @@ Core app is free for personal use. Optional add-ons: Sync ($4/mo annual), Publis
 | **Dataview plugin** | SQL-like queries over note frontmatter and content |
 | **Collaboration** | None native · single-user focus |
 
-Every data point verified on 2026-05-13 against [obsidian.md/pricing](https://obsidian.md/pricing) and [obsidian.md/plugins](https://obsidian.md/plugins).
+Every data point verified on 2026-06-05 against [obsidian.md/pricing](https://obsidian.md/pricing) and [obsidian.md/plugins](https://obsidian.md/plugins).
 
 ## What it actually is
 
@@ -180,7 +180,7 @@ Pricing via [obsidian.md/pricing](https://obsidian.md/pricing).
 | Catalyst | $25 one-time | Supporters wanting early beta + community badges |
 | Commercial | $50/user/year | Any business use · same features as Personal |
 
-*Prices verified 2026-05-13 via [obsidian.md/pricing](https://obsidian.md/pricing). Educational and nonprofit users get 40% off Sync and Publish. AI plugin costs are separate: most plugins are free, but LLM API usage (Claude, OpenAI frontier models, Gemini) is billed by the model provider.*
+*Prices verified 2026-06-05 via [obsidian.md/pricing](https://obsidian.md/pricing). Educational and nonprofit users get 40% off Sync and Publish. AI plugin costs are separate: most plugins are free, but LLM API usage (Claude, OpenAI frontier models, Gemini) is billed by the model provider.*
 
 ## Against the alternatives
 
@@ -189,7 +189,7 @@ Pricing via [obsidian.md/pricing](https://obsidian.md/pricing).
 | **Storage** | Local `.md` files | Cloud workspace | Cloud source sets |
 | **AI access** | Plugin + your API key | Bundled at $20/user/mo (Business) | Free Google account |
 | **Team collaboration** | None | Real-time + permissions | Single-user Q&A |
-| **Plugin ecosystem** | 2,690+ · all free | Limited | None |
+| **Plugin ecosystem** | 4,468 · all free | Limited | None |
 | **Graph view / backlinks** | Strongest | Basic backlinks | None |
 | **Data ownership** | Full (plain files) | Vendor-hosted | Vendor-hosted |
 | **Learning curve** | Steep | Gentle | Minimal |
@@ -202,18 +202,18 @@ Pricing via [obsidian.md/pricing](https://obsidian.md/pricing).
 - **No real-time collaboration.** Single-user by design. Team workflows need a separate tool or a shared git repo with conflict-management discipline.
 - **Mobile apps trail desktop.** iOS and Android function but plugin support and performance lag the desktop experience, especially on large vaults.
 - **Sync costs money.** Official Sync is $4/mo (annual). Free alternatives like iCloud or Syncthing cause markdown file conflicts on concurrent edits.
-- **Plugin quality is uneven.** 2,690 plugins means long-tail abandonment. Plugins with active maintenance should be the baseline; check last-commit dates before adopting.
+- **Plugin quality is uneven.** 4,468 plugins means long-tail abandonment. Plugins with active maintenance should be the baseline; check last-commit dates before adopting.
 - **Dataview is not a database.** Query plugin is powerful but slow on vaults above ~10,000 notes. Real knowledge-base workloads benefit from external tools like SQLite bridges.
 - **Commercial license enforcement is honor-based.** No technical block on business use, but using Personal commercially violates the license. Budget for $50/user/year if the vault is for work.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [obsidian.md/pricing](https://obsidian.md/pricing), [obsidian.md/plugins](https://obsidian.md/plugins), and [help.obsidian.md](https://help.obsidian.md).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-05 against [obsidian.md/pricing](https://obsidian.md/pricing), [obsidian.md/plugins](https://obsidian.md/plugins), and [help.obsidian.md](https://help.obsidian.md).
 
 ## FAQ
 
 **Is Obsidian free?**
-Yes for personal use. All 2,690+ community plugins are free. Paid add-ons are Sync ($4/mo annual or $5/mo monthly), Publish ($8/mo annual or $10/mo monthly), Catalyst ($25 one-time supporter license with early beta access), and the Commercial license ($50/user/year) for business use. Educational and nonprofit users get 40% off Sync and Publish.
+Yes for personal use. All community plugins are free; Obsidian's current community page lists 4,468 plugins, including 489 in the AI category. Paid add-ons are Sync ($4/mo annual or $5/mo monthly), Publish ($8/mo annual or $10/mo monthly), Catalyst ($25 one-time supporter license with early beta access), and the Commercial license ($50/user/year) for business use. Educational and nonprofit users get 40% off Sync and Publish.
 
 **Does Obsidian have built-in AI?**
 No. AI arrives through community plugins. Smart Connections provides semantic search and RAG chat. Copilot provides vault-wide LLM chat. Text Generator handles AI writing. All use your own API keys from providers like Anthropic (Claude), OpenAI (OpenAI frontier models), Google (Gemini), or local Ollama models.
@@ -230,7 +230,7 @@ Yes, if you use Obsidian for business purposes and your organization has more th
 ## Sources
 
 - [Obsidian pricing](https://obsidian.md/pricing): current tiers and add-on rates
-- [Obsidian plugins](https://obsidian.md/plugins): community plugin directory (2,690+)
+- [Obsidian community plugins](https://community.obsidian.md/): community plugin directory (4,468 plugins, including 489 AI-category plugins, verified 2026-06-05)
 - [Obsidian help](https://help.obsidian.md): documentation
 - [Obsidian forum](https://forum.obsidian.md): community discussions
 

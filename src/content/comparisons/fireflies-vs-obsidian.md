@@ -5,99 +5,93 @@ title: "Fireflies.ai vs Obsidian"
 tools: [fireflies, obsidian]
 category: ai-notes
 winner: depends
-seo_title: "Fireflies.ai vs Obsidian: Which Is Better in 2026?"
-meta_description: "Honest head-to-head of Fireflies.ai and Obsidian as of April 2026. Flagship models, current pricing, and which tool fits your workflow."
+seo_title: "Fireflies.ai vs Obsidian: Meeting Capture or Local Knowledge Base?"
+meta_description: "Fireflies.ai vs Obsidian, refreshed June 2026: choose Fireflies for AI meeting capture and searchable call history; choose Obsidian for local-first markdown notes, plugins, and long-term PKM."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-05
+last_verified: 2026-06-05
 update_frequency: quarterly
 canonical_fact_table: true
 ---
 
 # Fireflies.ai vs Obsidian
 
-[Fireflies.ai](../tools/fireflies.md) and [Obsidian](../tools/obsidian.md) both help with notes, but they solve different note problems. Fireflies.ai captures meetings automatically, turns conversations into transcripts, and creates summaries or action items. Obsidian is a local-first markdown knowledge base for long-term thinking, linking, writing, and personal knowledge management.
+[Fireflies.ai](/tools/fireflies/) captures meetings. [Obsidian](/tools/obsidian/) organizes knowledge. That difference matters more than feature checklists: Fireflies is for getting spoken information into a transcript library; Obsidian is for turning selected information into durable local Markdown notes.
 
 ## Quick Answer
 
-Obsidian suits offline note linking and customization; Fireflies.ai fits automated meeting capture. Choice depends on need for transcription versus personal knowledge management.
+Choose Fireflies.ai when nobody wants to take notes during calls and the team needs searchable meeting memory. Choose Obsidian when the buyer wants local-first notes, Markdown ownership, backlinks, Canvas, community plugins, and optional Sync/Publish add-ons.
 
-## Decision Snapshot
-| | Fireflies.ai | Obsidian |
-|---|---|---|
-| **Primary job** | Capture and summarize meetings | Organize and connect knowledge |
-| **Best fit** | Sales, support, recruiting, customer calls | Researchers, writers, developers, personal knowledge |
-| **Workflow style** | Cloud meeting recorder and transcript library | Local markdown vault and links |
-| **Main risk** | Meeting privacy and consent | Manual capture discipline required |
+The best combined workflow is selective: let Fireflies capture calls, then move only decisions, commitments, customer language, and reusable insights into Obsidian.
 
-## Where Fireflies.ai Wins
+## Mobile Decision
 
-- Auto-transcribes video calls and creates searchable meeting records.
-- Generates AI summaries, action items, keywords from recordings instantly.
-- Searches across meeting history; integrates with Slack, Notion.
-- Scales for teams with shared libraries, analytics.
-- Handles live captions during calls.
+**Winner for capture: Fireflies.ai.** It records meetings, transcribes 100+ languages, summarizes calls, offers AskFred search, and integrates with team workflows.
+
+**Winner for knowledge ownership: Obsidian.** The core app is free without limits, stores notes locally, and has 4,468 community plugins including 489 AI-category plugins as of the current Obsidian community page.
+
+**Best combined workflow:** Fireflies transcript for raw source, Obsidian note for distilled knowledge.
+
+## What Changed Since The Old Page
+
+- Fireflies' public pricing now lists Desktop App, Live Assist, AI Skills, Voice Agents, AI credits, and 100+ language transcription.
+- Obsidian's plugin ecosystem is much larger than the old page stated: the community page lists 4,468 plugins and 544 themes, with 489 plugins in the AI category.
+- Obsidian Sync now explicitly includes shared-vault collaboration on the pricing page, but Obsidian is still not a cloud meeting-intelligence platform.
+
+## Where Fireflies Wins
+
+- **No manual note-taking.** Fred can join or capture meetings, then produce transcript, summary, action items, and searchable history.
+- **Team-ready meeting library.** Channels, comments, bookmarks, clips, tasks, integrations, and analytics make it easier to share meeting output.
+- **CRM and workflow handoff.** Fireflies is built to push meeting context into revenue, support, recruiting, and ops workflows.
+- **Meeting search.** AskFred answers questions over transcript history; Obsidian requires the user to import and structure notes first.
+- **Admin and compliance controls.** Paid tiers expose SSO/SCIM, audit logs, custom retention, private storage, HIPAA support, and related enterprise controls.
 
 ## Where Obsidian Wins
 
-- Runs locally on desktop and mobile for core note-taking.
-- Builds bidirectional note links, graph views for knowledge networks.
-- Supports 1,000+ plugins for customization like calendars, kanban.
-- Markdown files stay portable across devices, future-proof.
-- Better for long-term notes that need to outlive any one meeting platform.
+- **Local-first ownership.** Notes are plain Markdown files on the user's device. Fireflies is a cloud meeting service.
+- **Long-term thinking.** Backlinks, graph views, Canvas, tags, folders, and templates make Obsidian better for durable ideas.
+- **Plugin flexibility.** Community plugins cover AI, automation, editing, links, commands, integrations, and custom workflows.
+- **Lower personal cost.** Obsidian's core app is free; Sync is $4/user/month annual or $5 monthly, Publish is $8/site/month annual or $10 monthly, and commercial use is $50/user/year.
+- **No meeting bot.** Obsidian does not appear in a meeting or record participants.
 
-## Key Differences
+## Pricing Reality
 
-Fireflies.ai is a capture system. Obsidian is a knowledge system. Fireflies is better at getting raw meeting information into text without human note-taking. Obsidian is better at turning selected notes into durable ideas, project references, and linked thinking.
+Fireflies is priced around meeting capture and team storage: Free, Pro $10/seat/month annual, Business $19/seat/month annual, and Enterprise $39/seat/month annual. Pro and Business monthly billing costs more. Advanced AI features can consume AI credits.
 
-The best combined workflow is to let Fireflies capture calls, then move only the useful decisions, commitments, and insights into Obsidian. Dumping every transcript into a vault usually creates clutter rather than knowledge.
+Obsidian is free without limits for personal use. Optional paid layers are Sync, Publish, Catalyst, and the Commercial license. AI usually comes through community plugins plus the user's own model/API costs, not an Obsidian AI subscription.
 
-## Practical Workflow
+## Who Should Choose Fireflies.ai
 
-Use Fireflies.ai when:
+Pick Fireflies if meetings are the source of truth: customer calls, sales discovery, recruiting screens, product interviews, weekly team updates, or support escalations. It is the tool for capturing what was said without relying on a human note-taker.
 
-- Nobody can reliably take notes during the call.
-- Sales, support, or research teams need searchable conversation history.
-- Action items and ownership need to be visible after meetings.
-- Managers need to review customer or team conversations later.
-- Meeting summaries need to be shared with people who were absent.
+## Who Should Choose Obsidian
 
-Use Obsidian when:
+Pick Obsidian if the goal is long-lived personal or team knowledge that should stay portable. It is stronger for writers, researchers, developers, founders, and PKM users who want to curate what matters rather than preserve every transcript.
 
-- Notes need to become durable knowledge, not just records.
-- You want to connect meeting decisions to projects, research, or writing.
-- Privacy, markdown ownership, and offline access matter.
-- You prefer manual curation over automated capture.
-- You are building a personal or team knowledge base over time.
+## Watch-Outs
 
-The best handoff is selective: capture in Fireflies, decide what matters, then write a clean linked note in Obsidian.
-
-## Who should choose Fireflies.ai
-
-Teams in sales, support, or remote work needing automated meeting notes. Users who join 10+ calls weekly benefit from search and sharing.
-
-## Who should choose Obsidian
-
-Solo researchers, writers, developers building second brains. Those prioritizing privacy, offline access, long-term note ownership.
+- Fireflies creates recording, consent, retention, and data-access questions. Set policy before auto-joining external calls.
+- Obsidian does not magically turn raw transcripts into knowledge. Someone still needs to summarize, link, tag, and maintain notes.
+- Obsidian plugin quality varies. Evaluate maintenance and permissions before building a business workflow on a plugin.
+- Do not dump every Fireflies transcript into Obsidian. Curate or the vault becomes a searchable landfill.
 
 ## Bottom Line
 
-Fireflies.ai captures meetings. Obsidian organizes knowledge. Use Fireflies for spoken source material and Obsidian for the selected ideas that need to last.
+Fireflies is the meeting capture layer. Obsidian is the knowledge curation layer. Teams that care about both should use Fireflies for raw meeting memory and Obsidian for the clean, linked notes worth keeping.
 
 ## FAQ
 
 **Which is cheaper?**
-Check current vendor pages for pricing. Obsidian is usually cheaper for personal notes; Fireflies is priced around automated meeting capture and team use.
+Obsidian is cheaper for personal notes because the core app is free. Fireflies costs more because it records, transcribes, stores, summarizes, and shares meetings.
 
-**Which has better output quality?**
-Fireflies.ai is better at capturing what was said. Obsidian is better at turning chosen notes into a durable knowledge system.
+**Can Obsidian transcribe meetings?**
+Not as a native meeting assistant. You can add plugins or imports, but Fireflies is the purpose-built capture tool.
 
-**Can I use both?**
-Yes; export Fireflies.ai summaries to Obsidian for linking into knowledge graphs.
+**Can Fireflies replace Obsidian?**
+No. Fireflies stores meeting records. Obsidian is better for long-term writing, research, links, and personal knowledge management.
 
 ## Sources
 
-- [Fireflies.ai Pricing](https://fireflies.ai/pricing)
-- [Obsidian Pricing](https://obsidian.md/pricing)
-- [Fireflies.ai](../tools/fireflies.md)
-- [Obsidian](../tools/obsidian.md)
+- [Fireflies.ai pricing](https://fireflies.ai/pricing) (verified 2026-06-05)
+- [Obsidian pricing](https://obsidian.md/pricing) (verified 2026-06-05)
+- [Obsidian community plugins](https://community.obsidian.md/) (verified 2026-06-05)

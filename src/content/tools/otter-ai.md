@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$30/user/month"
 status: active
 launched: 2016-02
-last_updated: 2026-06-03
-last_verified: 2026-06-03
+last_updated: 2026-06-05
+last_verified: 2026-06-05
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -30,7 +30,7 @@ facts:
     source: "https://otter.ai/otterpilot"
     source_label: "OtterPilot overview"
     source_id: otter-otterpilot
-    verified_at: 2026-06-03
+    verified_at: 2026-06-05
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -38,7 +38,7 @@ facts:
     source: "https://otter.ai/pricing"
     source_label: "Otter.ai pricing"
     source_id: otter-ai-pricing
-    verified_at: 2026-06-03
+    verified_at: 2026-06-05
     volatility: high
     confidence: high
     next_review_at: 2026-08-10
@@ -47,7 +47,7 @@ facts:
     source: "https://otter.ai/pricing"
     source_label: "Otter.ai pricing"
     source_id: otter-ai-pricing
-    verified_at: 2026-06-03
+    verified_at: 2026-06-05
     volatility: medium
     confidence: high
   enterprise_controls:
@@ -55,7 +55,7 @@ facts:
     source: "https://otter.ai/pricing"
     source_label: "Otter.ai pricing"
     source_id: otter-ai-pricing
-    verified_at: 2026-06-03
+    verified_at: 2026-06-05
     volatility: high
     confidence: medium
     next_review_at: 2026-08-10
@@ -64,14 +64,14 @@ facts:
     source: "https://otter.ai/otterpilot"
     source_label: "OtterPilot overview"
     source_id: otter-otterpilot
-    verified_at: 2026-06-03
+    verified_at: 2026-06-05
     volatility: high
     confidence: high
     next_review_at: 2026-08-10
 tags: [meeting-transcription, ai-notes, zoom-integration, meeting-summary, productivity, otterpilot]
 seo_title: "Otter.ai: Features, Pricing & Review (June 2026)"
 meta_description: >-
-  Otter.ai captures meetings, transcribes, summarizes, searches archives, and exposes Otter MCP. Basic has 300 minutes/month; Pro starts at $16.99/user/month before live discounts. Verified 2026-06-03.
+  Otter.ai captures meetings, transcribes, summarizes, searches archives, and exposes Otter MCP. Basic has 300 minutes/month; Pro starts at $16.99/user/month before live discounts. Verified 2026-06-05.
 author: "aipedia.wiki Editorial"
 quick_answer: >-
   Otter.ai joins meetings via OtterPilot, transcribes in real time, and summarizes with action items. Full-text search across every past transcript is the real differentiator. Pick it for heavy meeting loads. Skip it if Fathom's free tier covers the basics.
@@ -106,13 +106,13 @@ price_history:
     source_label: "Source"
     source_id: otter-ai-pricing
     note: "Live pricing page lists Business at $30 monthly or $19.99/user/month annually, with unlimited meetings and 6,000 imported-file minutes."
-  - date: 2026-06-03
+  - date: 2026-06-05
     plan: "Pricing page refresh"
     price: "Pro $16.99/user/mo · Business $30/user/mo before live discount states"
     source: "https://otter.ai/pricing"
     source_label: "Source"
     source_id: otter-ai-pricing
-    verified_at: 2026-06-03
+    verified_at: 2026-06-05
     note: "Pricing page now lists Otter MCP, AI meeting workflows, advanced templates, annual/intro discount states, and Enterprise API/webhook access."
 ---
 
@@ -181,7 +181,7 @@ Subscription pricing via [otter.ai/pricing](https://otter.ai/pricing).
 | Business | $30/user/mo before current discount states | Unlimited meetings; unlimited imports | 4 hrs | Video recording, team workspaces, analytics, priority support, 3 concurrent OtterPilots |
 | Enterprise | Custom | Unlimited | Unlimited | SSO, SCIM, compliance, OtterPilot for Sales, video replay |
 
-*Prices verified 2026-06-03 via [otter.ai/pricing](https://otter.ai/pricing). The live pricing page can render annual and introductory discount states; confirm the current checkout state before quoting a final per-seat annual price. Free tier hits the 300-minute cap fast for anyone in more than 2 long weekly meetings.*
+*Prices verified 2026-06-05 via [otter.ai/pricing](https://otter.ai/pricing). The live pricing page can render annual and introductory discount states; confirm the current checkout state before quoting a final per-seat annual price. Free tier hits the 300-minute cap fast for anyone in more than 2 long weekly meetings.*
 
 ## Against the alternatives
 
@@ -209,7 +209,7 @@ Subscription pricing via [otter.ai/pricing](https://otter.ai/pricing).
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the analysis above. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-03 against [Otter.ai pricing](https://otter.ai/pricing), [Otter.ai product pages](https://otter.ai/), and [Otter.ai Help Center](https://help.otter.ai).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the analysis above. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-05 against [Otter.ai pricing](https://otter.ai/pricing), [Otter.ai product pages](https://otter.ai/), and [Otter.ai Help Center](https://help.otter.ai).
 
 ## FAQ
 
@@ -233,8 +233,8 @@ Only on Business and Enterprise. Basic and Pro capture audio transcripts only.
 
 ## Sources
 
-- [Otter.ai pricing](https://otter.ai/pricing): current tier prices, limits, Otter MCP, workflow features, and Enterprise controls, verified 2026-06-03
-- [Otter.ai product overview](https://otter.ai/): bot features and meeting platforms, verified 2026-06-03
+- [Otter.ai pricing](https://otter.ai/pricing): current tier prices, limits, Otter MCP, workflow features, and Enterprise controls, verified 2026-06-05
+- [Otter.ai product overview](https://otter.ai/): bot features and meeting platforms, verified 2026-06-05
 - [Otter.ai Help Center](https://help.otter.ai): feature documentation and limits
 
 ## Related
