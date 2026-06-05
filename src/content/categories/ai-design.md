@@ -46,6 +46,8 @@ As of June 4, 2026, start with the job:
 
 **Use [Google Stitch](/tools/google-stitch/) as an experimental vibe-design canvas, not a procurement-safe design system yet.** Google's March 2026 Stitch update describes an AI-native software design canvas with natural-language UI creation, an infinite canvas, design agents, voice interaction, interactive prototypes, DESIGN.md, MCP, SDK, and developer-tool exports. Google's May 19 update adds real-time Stitch Agent design, AI Studio links, Antigravity export, and Netlify publishing paths. Treat access, quotas, and production fit as moving Google Labs facts that should be verified in the product before a team depends on them.
 
+**June 5 Stitch comparison follow-up:** the refreshed [Google Stitch vs Lovable](/compare/google-stitch-vs-lovable/) and [Google Stitch vs v0](/compare/google-stitch-vs-v0/) pages now separate the buyer jobs cleanly: Stitch is the Google Labs UI exploration canvas, Lovable is the founder MVP builder with credits, Cloud, Supabase, and GitHub sync, and v0 is the Vercel-native app-building workflow with deploys, PRs, and token-metered models.
+
 **Use [Framer AI](/tools/framer-ai/) when the job is a marketing site, landing page, portfolio, or polished web presence rather than a full app.** Framer's June 2 pricing check keeps Free, Basic at $10/month annual, Pro at $30/month annual, Scale at $100/month annual, and Enterprise custom. The important buyer split is website publishing and CMS limits, not app backend generation.
 
 ## Buyer Paths
@@ -130,7 +132,7 @@ Do not make a wide table the only mobile experience. Mobile buyers need top pick
 - [Best Canva AI Alternatives](/guides/canva-ai-alternatives/) is now refreshed and should stay in the design money-page rotation because it separates Canva replacement intent by buyer job: Figma for product design, Firefly for Adobe production, Midjourney for ideation, Freepik AI Suite / Magnific for creator assets, and Recraft/Ideogram for text and vector-heavy brand work.
 - [Figma vs v0](/compare/figma-vs-v0/) is now refreshed around design-system workflow versus Vercel-native implementation, and should stay current because it captures high-intent design-to-code buyers.
 - [Canva AI vs v0](/compare/canva-vs-v0/) should be rebuilt around non-designer creative production versus web-app output.
-- [Google Stitch vs v0](/compare/google-stitch-vs-v0/) should be rebuilt around vibe-design exploration versus Vercel app-building workflow.
+- [Google Stitch vs v0](/compare/google-stitch-vs-v0/) is now refreshed around vibe-design exploration versus Vercel app-building workflow and should stay monitored while Stitch remains a Labs product.
 - A new guide for "best AI app builder" should separate founder MVP, Vercel-native UI, browser IDE, design-to-code, and enterprise governance paths.
 - [Best AI Tools for Designers](/guides/best-ai-tools-for-designers/) should stay current because it now separates pro design, fast-production creative, image ideation, Adobe workflows, and UI/app prototyping.
 - [Best AI Tools for Product Managers](/guides/best-ai-tools-for-product-managers/) should stay current because PMs need a different buying path from designers: ChatGPT or Claude for docs, Perplexity for cited research, Figma for design review and handoff, Notion for team knowledge, and Fathom for customer-interview evidence.
