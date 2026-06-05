@@ -7358,7 +7358,7 @@
     },
     {
       "id": "val-town-pricing",
-      "label": "Source",
+      "label": "Val Town pricing",
       "url": "https://www.val.town/pricing",
       "type": "pricing",
       "trust_tier": "primary",

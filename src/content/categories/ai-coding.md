@@ -38,6 +38,8 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 
 **June 5 Codeium lineage update:** the old [Codeium vs GitHub Copilot](/compare/codeium-vs-github-copilot/) buyer page now treats Codeium as historical search intent, not a live checkout. Current buyers should compare Devin Desktop against Copilot: Cognition-stack IDE and local/cloud agent management versus GitHub-native IDE coverage, PRs, policy, SDK access, and AI Credits governance.
 
+**June 5 Devin comparison follow-up:** the refreshed [Devin vs GitHub Copilot](/compare/devin-vs-github-copilot/) and [Devin vs Val Town](/compare/devin-vs-val-town/) pages now separate three buyer lanes cleanly: Devin for async ticket delegation, GitHub Copilot for GitHub-native IDE/PR/SDK/governance workflows, and Val Town for instant hosted TypeScript endpoints, cron jobs, and small automations.
+
 **Use [Codex](/tools/codex/) when the team wants OpenAI-native agent coding.** It fits local repo work, PR preparation, checks, and tasks where an agent can edit and verify code rather than only suggest completions.
 
 **Use [v0 by Vercel](/tools/v0/) when the coding deliverable is a Vercel-native web artifact.** The June 4 [ChatGPT vs v0](/compare/chatgpt-vs-v0/) refresh keeps the boundary clear: ChatGPT is broader for requirements, architecture, debugging, and code review, while v0 is better for generating previewable React/Next/Tailwind interfaces, deploys, GitHub sync, and PR workflows.
