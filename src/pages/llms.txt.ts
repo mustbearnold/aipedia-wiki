@@ -3,6 +3,7 @@
 // Copilot) at the canonical index + category hubs + editorial policy.
 //
 // See also /llms-full.txt for the verbose variant with every page listed.
+// Refresh metadata: 2026-06-05 Grammarly comparison follow-up across HyperWrite, QuillBot, Sudowrite, and Wordtune plus AI Writing, tools, comparison, category, homepage, source registry, and LLM maintenance.
 // Refresh metadata: 2026-06-05 Google Stitch comparison follow-up across Lovable and v0 plus AI Design, tools, comparison, category, homepage, source registry, and LLM maintenance.
 // Refresh metadata: 2026-06-05 GitHub Copilot comparison follow-up across Supermaven, Tabnine, and Val Town plus AI Coding, tools, comparison, category, homepage, source registry, and LLM maintenance.
 // Refresh metadata: 2026-06-05 Gemini comparison slice across GitHub Copilot, Grok, Mistral AI, Perplexity, and Qwen plus AI Chatbots, AI Coding, AI Search, tools, comparison, category, homepage, and LLM maintenance.
