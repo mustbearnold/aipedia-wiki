@@ -1,17 +1,17 @@
 ---
 type: tool
 slug: windsurf
-title: Windsurf
-tagline: AI-native code editor owned by Cognition AI. Cascade agent, SWE-1.6 model family, usage-based plans, and multi-provider model access inside a VS Code fork.
+title: Windsurf / Devin Desktop
+tagline: Cognition's AI-native IDE surface formerly branded Windsurf. Now presented publicly as Devin Desktop with Cascade-style editing, SWE-1.6 models, adaptive routing, and Devin stack integration.
 category: ai-coding
 company: cognition-ai
 url: https://windsurf.com
 pricing_model: freemium
-price_range: "$0-$200/month"
+price_range: "$0-$200/month individual via Devin pricing; Team from $80/month plus full-dev seats"
 status: active
 launched: 2024-11
-last_updated: 2026-06-01
-last_verified: 2026-06-01
+last_updated: 2026-06-05
+last_verified: 2026-06-05
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -21,239 +21,216 @@ affiliate:
   link: null
 scores:
   utility: 8
-  value: 8
+  value: 7
   moat: 7
   longevity: 7
 facts:
   best_for:
-    value: Best for developers who want an agentic code editor with Cascade workflows, built-in models, and a VS Code-style
-      environment.
-    source: https://windsurf.com/
-    source_label: Windsurf official site
-    source_id: windsurf-official
-    verified_at: '2026-06-01'
-    volatility: medium
+    value: Best for developers who want Cognition's IDE surface beside Devin Cloud, especially existing Windsurf users or teams evaluating Devin Desktop rather than a standalone AI IDE.
+    source: https://windsurf.com/pricing
+    source_label: Devin pricing
+    source_id: windsurf-pricing
+    verified_at: '2026-06-05'
+    volatility: high
     confidence: high
-    next_review_at: '2026-11-04'
+    next_review_at: '2026-07-05'
   pricing_anchor:
-    value: Windsurf pricing changes frequently around free usage, paid developer plans, credits, and enterprise tiers, so the
-      live pricing page should drive procurement copy.
+    value: windsurf.com/pricing now redirects to Devin pricing. Current public pricing lists Free, Pro $20/mo, Max $200/mo, Teams $80/mo plus $40/mo per full dev seat, and Enterprise custom.
     source: https://windsurf.com/pricing
-    source_label: Windsurf pricing
+    source_label: Devin pricing
     source_id: windsurf-pricing
-    verified_at: '2026-06-01'
+    verified_at: '2026-06-05'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-07-05'
   coding_agent:
-    value: Windsurf is explicitly positioned as an agentic developer environment rather than only autocomplete.
-    source: https://docs.windsurf.com/
-    source_label: Windsurf docs
+    value: Devin Desktop model docs describe SWE-1.6, SWE-1.6 Fast, SWE-1.5, SWE-1-mini, swe-grep, Adaptive routing, and selected BYOK Claude 4 options.
+    source: https://docs.devin.ai/desktop/models
+    source_label: Devin Desktop model docs
     source_id: windsurf-docs
-    verified_at: '2026-06-01'
+    verified_at: '2026-06-05'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-07-05'
   enterprise_controls:
-    value: Enterprise evaluation should focus on admin controls, model access, usage governance, and data policy.
-    source: https://windsurf.com/pricing
-    source_label: Windsurf pricing
-    source_id: windsurf-pricing
-    verified_at: '2026-06-01'
+    value: Enterprise evaluation should now happen through Cognition/Devin procurement, including admin controls, model access, usage governance, SSO, and deployment options.
+    source: https://devin.ai/pricing
+    source_label: Devin pricing
+    source_id: devin-pricing
+    verified_at: '2026-06-05'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
+    next_review_at: '2026-07-05'
   watch_out_for:
-    value: The main risk is churn in ownership, packaging, credits, and model access, so comparisons should be rechecked before
-      claiming durable pricing advantages.
-    source: https://windsurf.com/blog/windsurf-pricing-plans
-    source_label: Windsurf pricing plans blog
-    source_id: windsurf-pricing-blog
-    verified_at: '2026-06-01'
+    value: The main risk is rebrand and packaging churn. Do not quote old standalone Windsurf or Codeium prices unless the current Devin/Windsurf account screen confirms them.
+    source: https://windsurf.com/pricing
+    source_label: Devin pricing
+    source_id: windsurf-pricing
+    verified_at: '2026-06-05'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-04'
-tags: [code-editor, ide, autocomplete, ai-coding, vscode-fork, agentic-coding, cascade, swe-1-6, cognition]
-seo_title: "Windsurf: Features, Pricing & Review (June 2026)"
-meta_description: "Windsurf is Cognition AI's VS Code fork with Cascade agent and SWE-1.6 model family. Free, Light, Pro $20/mo, Max $200/mo, Teams $40/user, and Enterprise. Verified June 2026."
+    next_review_at: '2026-07-05'
+tags: [code-editor, ide, autocomplete, ai-coding, vscode-fork, agentic-coding, cascade, swe-1-6, cognition, devin-desktop]
+seo_title: "Windsurf / Devin Desktop: Features, Pricing & Review (June 2026)"
+meta_description: "Windsurf is now publicly presented as Devin Desktop. Current pricing redirects to Devin plans: Free, Pro $20/mo, Max $200/mo, Teams from $80/mo plus full-dev seats, Enterprise custom. Verified June 2026."
 author: aipedia.wiki Editorial
 best_for:
-  - Cursor-style agentic editing
-  - multi-provider model swapping
-  - VS Code-native workflows
-  - Cognition-ecosystem users (Devin + Windsurf)
+  - existing Windsurf users evaluating the Devin Desktop path
+  - Cognition-stack teams using Devin plus an IDE
+  - developers testing SWE-1.6 and adaptive model routing
+  - teams that want IDE work tied to autonomous Devin workflows
 not_best_for:
-  - the biggest extension ecosystem
+  - buyers wanting the cleanest standalone AI IDE procurement story
   - developers already happy in Cursor
   - teams needing only autocomplete
+  - buyers comparing old Codeium or Windsurf pricing screenshots
 quick_answer: >-
-  Windsurf is Cognition AI's AI-native code editor. Pick it for Cascade's agentic multi-file editing with frontier-model choice and tight Devin integration. Skip it if Cursor's polish or the broader VS Code extension ecosystem matters more.
+  Windsurf is not dead, but the public product path has moved into Devin Desktop. Choose it if Cognition's Devin stack, SWE-1.6 family, and IDE-to-cloud-agent handoff matter. Choose Cursor if you want a cleaner standalone AI-native IDE decision with less rebrand and packaging uncertainty.
 price_history:
+  - date: 2026-06-05
+    plan: "Windsurf becomes Devin Desktop public path"
+    price: "Free / Pro $20 / Max $200 / Teams $80 base + $40 per full dev seat / Enterprise custom"
+    source: "https://windsurf.com/pricing"
+    source_label: "Devin pricing"
+    source_id: windsurf-pricing
+    note: "June 5 recheck: windsurf.com/pricing redirects to devin.ai/pricing, whose banner says Windsurf is now Devin Desktop. Treat old standalone Windsurf pricing as stale unless the account screen confirms it."
   - date: 2026-06-01
-    plan: "Free / Light / Pro / Max / Teams / Enterprise"
-    price: "$0 / unlimited / $20 / $200 / $40 per user / custom"
+    plan: "Old standalone Windsurf pricing check"
+    price: "Free / Light / Pro / Max / Teams / Enterprise"
     source: "https://windsurf.com/pricing"
     source_label: "Source"
     source_id: windsurf-pricing
-    note: "June 1 recheck: pricing page lists Free with daily and weekly usage allowance, Light as unlimited, Pro $20/month standard usage plus extra usage at API price, Max $200/month heavy usage plus API-price extra usage, Teams $40/user/month, and Enterprise custom."
-  - date: 2025-07-15
-    plan: "ownership"
-    price: "acquired by Cognition"
-    source: "https://windsurf.com/pricing"
-    source_label: "Source"
-    source_id: windsurf-pricing
-    note: "Cognition AI acquired Windsurf after Google licensing deal and OpenAI acquisition collapse"
-  - date: 2026-03-01
-    plan: "Pro"
-    price: "$20/mo"
-    source: "https://windsurf.com/pricing"
-    source_label: "Source"
-    source_id: windsurf-pricing
-    note: "Pro re-priced to $20 to match Cursor; SWE-1.5 became default"
-  - date: 2026-05-13
-    plan: "Light + SWE-1.6"
-    price: "Unlimited / model upgrade"
-    source: "https://windsurf.com/pricing"
-    source_label: "Source"
-    source_id: windsurf-pricing
-    note: "SWE-1.6 is now Cognition's latest model and surfaces across paid tiers. Pricing page now lists a Light plan with unlimited usage alongside Free, Pro $20, and Max $200."
+    note: "Superseded by the June 5 redirect check."
+  - date: 2025-07-14
+    plan: "Ownership"
+    price: "Acquired by Cognition"
+    source: "https://cognition.ai/blog/windsurf"
+    source_label: "Cognition acquisition announcement"
+    source_id: cognition-windsurf-acquisition
+    note: "Cognition announced a definitive agreement to acquire Windsurf's IP, product, trademark, brand, team, and business."
 ---
 
-# Windsurf
+# Windsurf / Devin Desktop
 
-Cognition AI's AI-native code editor. A VS Code fork with inline autocomplete, a command bar, and Cascade: a multi-file agentic editor with full codebase context.
+Windsurf is Cognition's AI-native IDE surface formerly sold as a standalone Windsurf product. As of the June 5, 2026 verification, the public path has shifted: `windsurf.com/pricing` redirects to Devin pricing, and the pricing page banner says **"Windsurf is now Devin Desktop."**
 
-Owned by Cognition since July 2025, after Google took a licensing deal and an earlier OpenAI acquisition collapsed. Now a sibling product to [Devin](/tools/devin/) inside the Cognition stack.
+That makes this page active, not dead. The correct buyer framing is no longer "Windsurf versus Cursor as two clean standalone AI IDEs." It is now **Devin Desktop versus Cursor**: Cognition's IDE surface attached to the broader Devin autonomous-engineering stack.
 
-> **June 1, 2026:** Windsurf pricing still lists Free, Light, Pro $20/month, Max $200/month, Teams $40/user/month, and Enterprise. The model docs list SWE-1.6 as the latest in-house software-engineering model family and tell buyers to confirm current model pricing and availability inside the IDE model selector.
+## Recent Developments
 
-> **May 6, 2026:** [ServiceNow Build Agent reached Windsurf and other major AI coding tools](/news/2026-05-06-servicenow-build-agent-coding-tools/), bringing ServiceNow platform context into agentic coding workflows while keeping ServiceNow governance and deployment controls in scope.
-
-> **May 1, 2026:** [The MCP STDIO command-execution disclosure named Windsurf in the highest-risk IDE bucket](/news/2026-05-03-mcp-stdio-command-execution-flaw/), with a reported zero-click prompt-injection path to local RCE. Treat MCP auto-registration and third-party servers as privileged shell access until patched and sandboxed.
-
-> **April 17, 2026:** Windsurf was part of the fast IDE-adoption wave for new Claude coding models, alongside Cursor, Zed, and Continue. Treat named-model access as volatile and verify inside the current model selector.
+- **June 5, 2026:** Windsurf pricing now redirects to [Devin pricing](https://devin.ai/pricing). Current public plans are Free, Pro $20/month, Max $200/month, Teams $80/month plus $40/month per full dev seat, and Enterprise custom. Paid plans include usage allowances and extra usage at API pricing.
+- **June 5, 2026:** Windsurf model docs now resolve to [Devin Desktop model docs](https://docs.devin.ai/desktop/models), which list SWE-1.6, SWE-1.6 Fast, SWE-1.5, SWE-1-mini, swe-grep, Adaptive routing, and selected BYOK Claude 4 options.
+- **July 14, 2025:** Cognition announced the acquisition of Windsurf's IP, product, trademark, brand, people, and business. The integration path is now visible in the Devin Desktop positioning.
+- **May 1, 2026:** [The MCP STDIO command-execution disclosure named Windsurf in the high-risk IDE bucket](/news/2026-05-03-mcp-stdio-command-execution-flaw/). Treat MCP servers as privileged shell-adjacent integrations and sandbox them.
 
 ## System Verdict
 
-> **Pick Windsurf for agentic multi-file editing with real model choice and Cognition-stack integration.** Cascade reads the repo, plans cross-file edits, runs terminal commands, and ships with access to Cognition's SWE model family plus third-party model providers.
+> **Pick Windsurf / Devin Desktop if you are buying into Cognition.** The appeal is not a cheap Cursor clone. It is the combination of Devin Cloud, Devin Desktop, SWE-1.6 models, adaptive routing, and an IDE surface designed to sit beside autonomous task delegation.
 >
-> SWE-1.6 is Cognition's latest proprietary coding model, succeeding SWE-1.5 as the default. It targets the same fast iterative-editing workload while extending agentic depth on multi-file refactors.
+> **Skip it if you want the cleanest standalone AI IDE.** [Cursor](/tools/cursor/) is easier to evaluate as an independent editor with direct public pricing and a larger community. Windsurf now has more packaging and naming churn.
 >
-> **Skip it if Cursor already fits.** Cursor has more polish, a larger extension community, and comparable agent depth. Windsurf's edge is the Cognition ecosystem: tickets delegated to Devin flow back into the IDE cleanly.
->
-> **Who pays which tier:** Free for evaluation, Pro $20/mo for most individuals, Max $200/mo for sustained heavy use, Teams $40/user for shared admin, Enterprise for SSO and hybrid deployment.
+> **Who pays which tier:** Free for evaluation, Pro $20/month for individuals, Max $200/month for heavy individual use, Teams from $80/month plus full-dev-seat add-ons for shared admin, Enterprise for SSO and custom deployment.
 
 ## Key Facts
 
 | | |
 |---|---|
-| **Vendor** | Cognition AI (acquired July 2025) |
-| **Product class** | VS Code fork, AI-native IDE |
-| **Flagship agent** | Cascade, multi-file editor with repo awareness |
-| **Default model** | SWE-1.6, Cognition proprietary, latest as of May 2026 |
-| **Other models** | Claude, GPT, Gemini, BYOK/local options; exact availability and pricing live in the IDE model selector |
-| **Pro pricing** | $20/mo, unlimited at API price |
-| **Max pricing** | $200/mo, priority support, unlimited at API price |
-| **Light plan** | Unlimited usage tier listed on the pricing page (verify entitlements before standardizing) |
-| **Teams pricing** | $40/user/mo with admin dashboard |
-| **Enterprise** | Custom with SSO, RBAC, hybrid deployment |
-| **Free tier** | Yes, with daily and weekly refresh quotas |
+| **Vendor** | Cognition AI |
+| **Current public product path** | Windsurf is now presented as Devin Desktop |
+| **Product class** | AI-native IDE / VS Code-like coding surface inside Cognition's stack |
+| **Flagship model family** | SWE-1.6, SWE-1.6 Fast, SWE-1.5, SWE-1-mini, swe-grep |
+| **Model routing** | Adaptive recommended for most users in the Devin Desktop docs |
+| **BYOK** | Selected Claude 4 BYOK options listed for individual users |
+| **Current pricing route** | windsurf.com/pricing -> devin.ai/pricing |
+| **Individual pricing** | Free, Pro $20/month, Max $200/month |
+| **Team pricing** | Teams $80/month plus $40/month per full dev seat |
+| **Enterprise** | Custom |
+| **Main risk** | Rebrand/packaging churn and stale old Windsurf pricing claims |
 
-Every data point above was verified against vendor documentation on 2026-06-01. See Sources.
+Every data point above was verified against current public Cognition, Devin, and Windsurf sources on 2026-06-05.
 
-## What it actually is
+## What It Actually Is
 
-A VS Code fork with AI baked into the editor shell. Tab autocomplete handles inline suggestions. A command bar (Cmd+I) takes natural-language edit requests. Cascade handles multi-file agentic edits with full codebase context.
+Devin Desktop is the current public successor path for Windsurf. It keeps the IDE story alive, but the commercial context is now Cognition's Devin product family. The current docs position SWE-1.6 as Cognition's latest agentic software-engineering model, with SWE-1.6 Fast for paying users, SWE-1.5 as the previous frontier model, SWE-1-mini for passive suggestions, and `swe-grep` for retrieval/Fast Context.
 
-Model selection is global or per-session. SWE-1.6 is the latest Cognition software-engineering model family in the docs, with SWE-1.6 Fast available to paying users. Heavy reasoning can route to third-party Claude, GPT, or Gemini models when available. Ollama/BYOK-style paths cover local or direct-provider setups where supported.
+The docs also recommend **Adaptive** for most users, meaning the product routes model choice based on task fit. That is useful, but it also means buyers should verify exact model availability, costs, and BYOK options in the live model selector before procurement.
 
-The Cognition acquisition closed the loop with Devin. Tickets delegated to Devin can round-trip through Windsurf. The IDE also consumes the MCP Marketplace from the Cognition platform.
+## When To Pick Windsurf / Devin Desktop
 
-VS Code extension compatibility holds. Keybindings, themes, and most extensions transfer from a standard VS Code install.
+- **You already want Devin.** The IDE surface makes more sense when autonomous Devin work and interactive code editing are both in scope.
+- **You want to test SWE-1.6.** Cognition's proprietary coding model family is the differentiator versus generic model-router editors.
+- **You are an existing Windsurf user.** Follow the Devin Desktop migration path before assuming you need to switch tools.
+- **You want IDE plus cloud-agent handoff.** Cognition's buyer story is stronger when Devin and the IDE are evaluated together.
+- **You can tolerate packaging churn.** The current route is active, but naming and plan language have clearly changed.
 
-## When to pick Windsurf
+## When To Pick Something Else
 
-- **You want agentic multi-file edits with real model choice.** Cascade plans and executes across files. SWE-1.6 is fast; Claude, GPT, Gemini, and BYOK/local options cover heavier or specialized work when available.
-- **You already use or plan to use Devin.** Cognition's Devin-to-Windsurf handoff is tighter than any competing IDE's third-party agent integration.
-- **You want VS Code compatibility with deeper AI than Copilot.** Extensions and keybindings port cleanly. Cascade outruns Copilot's agent mode on multi-file refactors.
-- **You value SWE-1.6's speed on iterative edits.** The proprietary model prioritizes latency for fast-turn refactors.
-- **You are cost-conscious.** Free tier with daily and weekly refresh quotas is generous enough to test realistic workflows.
-
-## When to pick something else
-
-- **Maximum IDE polish and community:** [Cursor](/tools/cursor/). More extensions, larger community, comparable agent depth.
-- **Terminal-first agentic coding:** [Claude Code](/tools/claude/). Strongest CLI agent, flat $100/mo on Max 5x.
-- **Open-source BYOK inside VS Code:** [Cline](/tools/cline/) with Plan/Act modes. No subscription floor.
-- **Inline autocomplete only, cheapest option:** [GitHub Copilot](/tools/github-copilot/) at $10/mo.
-- **Async ticket delegation:** [Devin](/tools/devin/) (same owner). Hand work off, review the PR.
+- **Cleaner standalone AI IDE:** [Cursor](/tools/cursor/) has the simpler procurement story and a stronger standalone editor community.
+- **GitHub-native team rollout:** [GitHub Copilot](/tools/github-copilot/) fits existing IDEs, PRs, policies, and GitHub AI Credits governance.
+- **Terminal-first repo agent:** [Claude Code](/tools/claude-code/) is the better CLI coding-agent path.
+- **Open-source BYOK VS Code agent:** [Cline](/tools/cline/) is better when local control matters more than a hosted IDE stack.
+- **Async task delegation without IDE focus:** [Devin](/tools/devin/) is the parent autonomous-agent decision.
 
 ## Pricing
 
-Pricing via [windsurf.com/pricing](https://windsurf.com/pricing). Paid tiers move to unlimited usage billed at API price with tier-specific features and support.
+Use [windsurf.com/pricing](https://windsurf.com/pricing), but understand that it currently redirects to [devin.ai/pricing](https://devin.ai/pricing). Do not use old Windsurf pricing screenshots or old Codeium/Windsurf plan names as current facts.
 
-| Plan | Price | Usage | Features | Who's it for |
-|------|-------|-------|----------|--------------|
-| Free | $0 | Daily/weekly refresh | Basic Cascade, Tab autocomplete | Evaluation |
-| Light | Listed | Unlimited usage | Newer tier; verify exact entitlements on pricing page | Light agentic users |
-| Pro | $20/mo | Unlimited at API price | Premium models · Fast Context · SWE-1.6 | **Most individuals** |
-| Max | $200/mo | Unlimited at API price | All Pro features plus priority support | Sustained heavy workloads |
-| Teams | $40/user/mo | Unlimited at API price | Admin dashboard · analytics | Small teams |
-| Enterprise | Custom | Unlimited | SSO · RBAC · hybrid deployment | Compliance-heavy orgs |
+| Plan | Price | Current buyer note |
+|---|---:|---|
+| Free | $0 | Evaluation and light usage |
+| Pro | $20/month | Individual paid plan with increased quotas and frontier model access |
+| Max | $200/month | Higher individual quota for heavy usage |
+| Teams | $80/month base plus $40/month per full dev seat | Shared admin, collaboration, centralized billing |
+| Enterprise | Custom | SSO, enterprise controls, custom deployment/support |
 
-*Prices verified 2026-06-01 via [Windsurf pricing](https://windsurf.com/pricing), [plans and usage docs](https://docs.windsurf.com/windsurf/accounts/usage), and [model docs](https://docs.windsurf.com/windsurf/models). SWE-1.6 is Cognition's latest generally available software-engineering model family in the docs; current third-party model pricing and availability should be checked inside the IDE.*
+Paid-plan usage language now centers on included allowances that refresh daily/weekly plus extra usage at API pricing.
 
-## Against the alternatives
+## Against The Alternatives
 
-| | Windsurf Pro | Cursor Pro | Cline (open source) |
+| | Windsurf / Devin Desktop | Cursor | GitHub Copilot |
 |---|---|---|---|
-| **Price** | $20/mo | $20/mo | Free (BYOK API costs) |
-| **Form factor** | VS Code fork | VS Code fork | VS Code extension |
-| **Flagship agent** | Cascade | Composer / Agent | Plan/Act modes |
-| **Model choice** | SWE-1.6 · Claude/GPT/Gemini · BYOK/local options | Mostly bundled | Any BYOK provider |
-| **Extension ecosystem** | VS Code compatible | VS Code compatible | Native VS Code |
-| **Best viewed as** | Cognition-stack IDE | Polished default IDE | Free agentic extension |
+| **Best viewed as** | Cognition-stack IDE | Standalone AI-native IDE | GitHub-native AI platform |
+| **Pricing anchor** | Devin pricing | Cursor pricing | Copilot plans + AI Credits |
+| **Core reason to buy** | Devin handoff, SWE-1.6, Adaptive routing | Day-to-day AI IDE speed | Existing editors, GitHub PRs, org policy |
+| **Main risk** | Rebrand/packaging churn | Editor migration | AI Credits spend for heavy agent use |
 
-## Failure modes
+## Failure Modes
 
-- **UI lags behind Cursor on polish.** Occasional 3-5 second agent pauses on context-heavy refactors. Cursor often handles the same work in under 2 seconds.
-- **Smaller third-party ecosystem than Cursor.** Niche extensions sometimes ship for Cursor first.
-- **Cognition dependency.** Windsurf's roadmap now tracks Cognition's priorities. Devin-IDE integration is a feature, vendor-lock is the trade-off.
-- **SWE-1.6 quality is workload-dependent.** Fast on iterative edits. Frontier models still beat it on novel reasoning-heavy tasks; published 1.6-vs-1.5 deltas are still vendor-reported.
-- **Free tier quotas are daily and weekly.** Heavy evaluation hits the ceiling quickly. Budget a Pro month to run a real benchmark.
-- **MCP zero-click risk is a watch item.** The May 1 [MCP STDIO report](/news/2026-05-03-mcp-stdio-command-execution-flaw/) says Windsurf had a reported zero-click path from prompt injection to local RCE. Disable auto-registration, review active MCP configs, and sandbox servers.
-- **Teams pricing is not bundled with Devin.** The two products bill separately. Multi-product teams should model total cost before switching.
-- **Post-acquisition leadership churn.** Founding leads moved to Google in 2025. Release cadence is stable so far but remains a watch item.
-- **Model pricing variance.** "At API price" means heavy users on premium third-party models can see real model costs land on their Cognition invoice.
+- **Old plan claims are stale.** Any page claiming durable standalone Windsurf Free/Light/Pro/Teams pricing needs a fresh check.
+- **Name confusion.** Buyers may still search for Windsurf, Codeium, or Devin Desktop and expect one product. Explain the lineage before recommending a plan.
+- **Model availability is account-specific.** The docs list SWE and BYOK options, but the current in-product model selector is the source of truth for a buyer.
+- **Cognition dependency.** The product roadmap is tied to Devin's priorities, not only IDE competition with Cursor.
+- **MCP risk remains relevant.** Treat MCP integrations as privileged local or cloud tooling and restrict them before production use.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-01 against [Windsurf pricing](https://windsurf.com/pricing), [Windsurf model docs](https://docs.windsurf.com/windsurf/models), [Windsurf plans and usage docs](https://docs.windsurf.com/windsurf/accounts/usage), and the [Cognition acquisition announcement](https://cognition.ai/blog/windsurf).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-05 against [Windsurf pricing](https://windsurf.com/pricing), [Devin pricing](https://devin.ai/pricing), [Devin Desktop model docs](https://docs.devin.ai/desktop/models), and the [Cognition acquisition announcement](https://cognition.ai/blog/windsurf).
 
 ## FAQ
 
-**Who owns Windsurf?**
-Cognition AI acquired Windsurf in July 2025 after Google secured a licensing deal for Windsurf's technology and an earlier OpenAI acquisition attempt collapsed over Microsoft IP-rights disputes. Cognition owns the IP, product, brand, and team.
+**Is Windsurf dead?**
+No. The public product path now presents Windsurf as Devin Desktop. That is an active rebrand/integration path, not a shutdown.
+
+**Is Windsurf still Codeium?**
+Windsurf inherited the Codeium lineage, and Cognition acquired Windsurf in 2025. Current buyers should evaluate the Devin Desktop path rather than old Codeium branding.
+
+**Is Windsurf cheaper than Cursor?**
+Do not assume that from old pricing. The current public route lands on Devin pricing: Pro $20/month and Max $200/month for individuals, with Teams pricing starting at $80/month plus full-dev-seat add-ons.
 
 **What is SWE-1.6?**
-Cognition's proprietary coding model, succeeding SWE-1.5 as the default in May 2026. Optimized for speed on iterative edits; the predecessor SWE-1.5 was claimed roughly 13× faster than Sonnet 4.5 at near Claude 4.5-level coding-benchmark performance. Published 1.6-vs-1.5 deltas remain vendor-reported.
+Cognition's current software-engineering model family in the Devin Desktop docs. The docs also list SWE-1.6 Fast, SWE-1.5, SWE-1-mini, and swe-grep.
 
-**Which external models does Windsurf support?**
-Claude, GPT, Gemini, Cognition SWE models, and local/BYOK options where available. Selectable per session or globally, but exact model names, prices, and availability are volatile; see [Windsurf model docs](https://docs.windsurf.com/windsurf/models) and the in-IDE selector.
-
-**How does Windsurf compare to Cursor?**
-Same $20/mo Pro price. Cursor has more polish and a larger community; Windsurf has tighter Cognition-stack integration (Devin hand-off) and broader model choice inside Cascade. Most individuals see comparable agent depth on multi-file work.
-
-**Can I keep my VS Code extensions?**
-Yes. Windsurf retains VS Code extension compatibility, keybindings, and settings sync. Most extensions install without modification.
+**Should I choose Cursor or Windsurf / Devin Desktop?**
+Choose Cursor for the cleaner standalone AI IDE. Choose Windsurf / Devin Desktop if Cognition's Devin stack is part of the purchase.
 
 ## Sources
 
-- [Windsurf pricing](https://windsurf.com/pricing): current plans and usage model
-- [Windsurf model docs](https://docs.windsurf.com/windsurf/models): supported models and configuration
-- [Cognition: acquisition of Windsurf](https://cognition.ai/blog/windsurf): ownership and acquisition details
-- [CNBC: Cognition valued at $10.2B post-Windsurf](https://www.cnbc.com/2025/09/08/cognition-valued-at-10point2-billion-two-months-after-windsurf-.html): post-acquisition valuation
+- [Windsurf pricing redirect](https://windsurf.com/pricing): current route into Devin pricing
+- [Devin pricing](https://devin.ai/pricing): current plans and Devin Desktop banner
+- [Devin Desktop model docs](https://docs.devin.ai/desktop/models): SWE-1.6, Adaptive, BYOK, and model selector notes
+- [Cognition acquisition of Windsurf](https://cognition.ai/blog/windsurf): ownership and integration context
 
 ## Related
 
 - **Category:** [AI Coding](/categories/ai-coding/)
-- **Comparisons:** [Cursor vs Windsurf](/compare/cursor-vs-windsurf/)
+- **Comparisons:** [Cursor vs Windsurf](/compare/cursor-vs-windsurf/) · [Cursor vs Devin](/compare/cursor-vs-devin/)

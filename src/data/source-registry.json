@@ -1673,7 +1673,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "cursor-changelog",
@@ -1682,7 +1682,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "cursor-composer-25",
@@ -1691,7 +1691,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "d-id-agents",
@@ -1929,7 +1929,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "devin-official",
@@ -1938,7 +1938,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "devin-pricing",
@@ -1947,7 +1947,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "dext-accounting-integrations",
@@ -2742,7 +2742,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "github-copilot-feature-matrix",
@@ -2751,7 +2751,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "github-copilot-plans",
@@ -2760,7 +2760,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "github-copilot-plan-docs",
@@ -2769,7 +2769,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "github-copilot-ai-credits",
@@ -2778,7 +2778,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "github-copilot-ai-credits-orgs",
@@ -2787,7 +2787,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "github-copilot-ai-credits-announcement",
@@ -2796,7 +2796,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "github-copilot-ai-credits-changelog",
@@ -2805,7 +2805,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "github-copilot-sdk-ga",
@@ -2814,7 +2814,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "github-copilot-supported-models",
@@ -2823,7 +2823,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "github-repositories",
@@ -2911,7 +2911,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "gemini-omni-official",
@@ -2947,7 +2947,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "google-gemini-drive-sharing",
@@ -2965,7 +2965,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "google-one-ai-plans",
@@ -2974,7 +2974,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "google-gemini-api-pricing",
@@ -2983,7 +2983,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "google-stitch-labs",
@@ -4607,7 +4607,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "lovable-plans-credits",
@@ -4616,7 +4616,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "lovable-cloud",
@@ -4625,7 +4625,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "lovable-github",
@@ -4634,7 +4634,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "lovable-official",
@@ -4643,7 +4643,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "lovable-supabase",
@@ -4652,7 +4652,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "lovart-best-for",
@@ -6946,7 +6946,8 @@
       "url": "https://docs.tabnine.com/main/welcome/readme",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-05"
     },
     {
       "id": "tabnine-official",
@@ -6954,7 +6955,8 @@
       "url": "https://www.tabnine.com/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-05"
     },
     {
       "id": "tabnine-pricing",
@@ -6962,7 +6964,8 @@
       "url": "https://www.tabnine.com/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-05"
     },
     {
       "id": "tabnine-privacy",
@@ -6970,7 +6973,8 @@
       "url": "https://www.tabnine.com/code-privacy",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-05"
     },
     {
       "id": "tactiq-official",
@@ -7275,7 +7279,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "v0-docs",
@@ -7284,7 +7288,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "v0-official",
@@ -7293,7 +7297,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "v0-pricing-blog",
@@ -7302,11 +7306,11 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "trust_tier": "primary",
-      "last_checked": "2026-06-04",
+      "last_checked": "2026-06-05",
       "id": "val-town-docs",
       "label": "Val Town docs",
       "url": "https://docs.val.town/",
@@ -7315,7 +7319,7 @@
     },
     {
       "trust_tier": "primary",
-      "last_checked": "2026-06-04",
+      "last_checked": "2026-06-05",
       "id": "val-town-official",
       "label": "Val Town homepage",
       "url": "https://www.val.town/",
@@ -7329,7 +7333,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "veo-official",
@@ -7638,11 +7642,12 @@
     },
     {
       "id": "windsurf-docs",
-      "label": "Windsurf docs",
-      "url": "https://docs.windsurf.com/",
+      "label": "Devin Desktop model docs",
+      "url": "https://docs.devin.ai/desktop/models",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "high",
+      "last_checked": "2026-06-05"
     },
     {
       "id": "windsurf-official",
@@ -7650,15 +7655,17 @@
       "url": "https://windsurf.com/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "high",
+      "last_checked": "2026-06-05"
     },
     {
       "id": "windsurf-pricing",
-      "label": "Windsurf pricing",
+      "label": "Windsurf pricing redirect to Devin pricing",
       "url": "https://windsurf.com/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-05"
     },
     {
       "id": "windsurf-pricing-blog",
@@ -7667,6 +7674,15 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "high"
+    },
+    {
+      "id": "cognition-windsurf-acquisition",
+      "label": "Cognition acquisition of Windsurf",
+      "url": "https://cognition.ai/blog/windsurf",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-05"
     },
     {
       "id": "wispr-flow-best-for",

@@ -5,10 +5,10 @@ title: AI Coding Assistants
 description: Current AI coding assistants, AI-native IDEs, terminal coding agents, PR agents, and app builders for developers, founders, teams, and non-developers.
 tool_count: 30
 seo_title: "Best AI Coding Tools & Copilot Alternatives (June 2026)"
-meta_description: "Updated June 4, 2026: compare Cursor, Claude Code, GitHub Copilot, Continue, Devin, Val Town, Windsurf/Codeium, Codex, v0, Goose, GLM, Glean, Replit Agent, Aider, Cline, CodeRabbit, Cody, Amazon Q Developer, and Augment by workflow, pricing, autonomy, app-building, and team fit."
+meta_description: "Updated June 5, 2026: compare Cursor, Claude Code, GitHub Copilot, Continue, Devin, Val Town, Windsurf/Devin Desktop, Codex, v0, Goose, GLM, Glean, Replit Agent, Aider, Cline, CodeRabbit, Cody, Amazon Q Developer, and Augment by workflow, pricing, autonomy, app-building, and team fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-04
-last_verified: 2026-06-04
+last_updated: 2026-06-05
+last_verified: 2026-06-05
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -28,11 +28,13 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 
 **Use [Cursor](/tools/cursor/) when a developer wants a full AI-native IDE.** The June 3 recheck keeps it the best default for daily coding when the buyer wants Composer 2.5, repo-aware chat, multi-file edits, the Agents Window, Cloud Agents, Automations, and a VS Code-like surface built around AI rather than an extension. Cursor's May 22 Gartner enterprise-coding-agent recognition is a procurement signal, but teams should still test it on their own repositories against Codex, Claude Code, and GitHub Copilot.
 
+**June 5 Cursor-cluster update:** the oldest live Cursor comparison rows now separate [Cursor vs Devin](/compare/cursor-vs-devin/), [Cursor vs Gemini](/compare/cursor-vs-gemini/), [Cursor vs GitHub Copilot](/compare/cursor-vs-github-copilot/), [Cursor vs Lovable](/compare/cursor-vs-lovable/), [Cursor vs Tabnine](/compare/cursor-vs-tabnine/), [Cursor vs v0](/compare/cursor-vs-v0/), [Cursor vs Val Town](/compare/cursor-vs-val-town/), and [Cursor vs Windsurf](/compare/cursor-vs-windsurf/) against current primary sources. The buyer split is now clearer: Cursor is the hands-on AI-native IDE; Devin is asynchronous task delegation; Gemini is the broader Google AI ecosystem; Copilot is GitHub-native AI Credits/governance; Lovable and v0 are app-builder lanes; Tabnine is privacy-first enterprise code assistance; Val Town is an instant TypeScript runtime; and Windsurf is now best understood as Devin Desktop inside Cognition's stack.
+
 **Use [GitHub Copilot](/tools/github-copilot/) when the team already lives in GitHub and wants a safe default.** GitHub's official billing docs and June 1 changelog now make usage-based billing with GitHub AI Credits the active model, and the June 2 [Copilot SDK GA](/news/2026-06-02-github-copilot-ai-credits-sdk-ga/) turns Copilot into an embeddable agent runtime. It remains a strong value for GitHub-native teams that value IDE coverage, policy, pull requests, and enterprise governance, but heavy agentic, SDK, code-review, Spaces, Spark, and cloud-agent use needs modeling. The June 4 [Claude vs GitHub Copilot](/compare/claude-vs-github-copilot/) refresh now separates Claude as the broad reasoning/Claude Code lane from Copilot as the GitHub-native IDE, AI Credits, model-picker, and agent-platform lane.
 
 **Use [Claude Code](/tools/claude-code/) when the buyer wants a Claude-backed coding agent for serious repo work.** The June 4 comparison pass refreshes [Claude Code vs Continue](/compare/claude-code-vs-continue/), [Claude Code vs Devin](/compare/claude-code-vs-devin/), [Claude Code vs GitHub Copilot](/compare/claude-code-vs-github-copilot/), and [Claude Code vs Val Town](/compare/claude-code-vs-val-town/) around the real buyer split: specialist Claude agent, open-source BYOK IDE layer, async ticket delegation, GitHub-native AI platform, or hosted TypeScript runtime. Claude Code is better for repo investigation, multi-file work, command execution, debugging loops, and senior-engineer-style delegation than for passive autocomplete.
 
-**Use [Windsurf](/tools/windsurf/) when the buyer wants to compare AI IDE cost and workflow.** Windsurf's current docs describe Free, Pro, Teams, and Enterprise usage plans with usage-based self-serve plans introduced in March 2026. Codeium has now fully sunset (codeium.com 301-redirects to windsurf.com), so existing Codeium users should treat Windsurf as the inheritor product, not a separate option.
+**Use [Windsurf / Devin Desktop](/tools/windsurf/) when the buyer wants Cognition's IDE surface beside Devin.** The June 5 check found `windsurf.com/pricing` redirecting to Devin pricing and the public page saying Windsurf is now Devin Desktop. Treat old standalone Windsurf/Codeium pricing claims as stale unless the current Cognition account screen confirms them.
 
 **Use [Codex](/tools/codex/) when the team wants OpenAI-native agent coding.** It fits local repo work, PR preparation, checks, and tasks where an agent can edit and verify code rather than only suggest completions.
 
@@ -44,7 +46,7 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 
 **Use [Glean](/tools/glean/) when coding agents need permission-aware company knowledge.** Glean's developer platform now exposes MCP and setup paths for Claude Code, Codex, Goose, Cursor, Gemini CLI, VS Code, Windsurf, JetBrains, and other developer surfaces, so it belongs in the enterprise-codebase-context lane rather than the autocomplete lane.
 
-**June 4 maintenance note:** the oldest live coding-ledger rows now refresh [Continue vs Cursor](/compare/continue-vs-cursor/), [Continue vs Devin](/compare/continue-vs-devin/), [Continue vs GitHub Copilot](/compare/continue-vs-github-copilot/), and [Continue vs Val Town](/compare/continue-vs-val-town/) around the current split: Continue is source-controlled AI PR checks and agent governance, Cursor is the managed AI-native IDE, Devin is async ticket delegation, GitHub Copilot is the GitHub-native AI Credits platform, and Val Town is a hosted TypeScript runtime. The earlier June 4 live coding rows refreshed [Cline vs Cursor](/compare/cline-vs-cursor/) and [Cody vs Cursor](/compare/cody-vs-cursor/) around Cline as the open-source BYOK agent runtime, Cody as the Sourcegraph Enterprise code-context lane after Free/Pro sunset, and Cursor as the managed AI-native IDE for daily implementation. The Claude Code comparison layer has also been refreshed against current Anthropic, GitHub, Continue, Cognition, and Val Town sources. The same June 4 pass refreshed [Claude vs Cline](/compare/claude-vs-cline/), [Claude vs Cody](/compare/claude-vs-cody/), [Claude vs Cursor](/compare/claude-vs-cursor/), and [Claude vs GitHub Copilot](/compare/claude-vs-github-copilot/) so this hub now separates Claude as the broad assistant/Claude Code lane, Cline as the open-source BYOK repo agent, Cody as the Sourcegraph Enterprise code-context lane, Cursor as the GUI-first AI-native IDE, and Copilot as the GitHub-native AI Credits/model-picker lane. Earlier June 2 maintenance remains in force for Aider, Cline, CodeRabbit, Amazon Q Developer, Augment Code, Sourcegraph Cody, Factory, JetBrains AI, Kiro, Mastra, OpenHands, Pieces, Qodo, Replit Agent, Same.dev, Supermaven, Tabnine, Windsurf, Zed, Goose, GLM-5.1, and Glean.
+**June 4 maintenance note:** the previous live coding-ledger rows refreshed [Continue vs Cursor](/compare/continue-vs-cursor/), [Continue vs Devin](/compare/continue-vs-devin/), [Continue vs GitHub Copilot](/compare/continue-vs-github-copilot/), and [Continue vs Val Town](/compare/continue-vs-val-town/) around the current split: Continue is source-controlled AI PR checks and agent governance, Cursor is the managed AI-native IDE, Devin is async ticket delegation, GitHub Copilot is the GitHub-native AI Credits platform, and Val Town is a hosted TypeScript runtime. The earlier June 4 live coding rows refreshed [Cline vs Cursor](/compare/cline-vs-cursor/) and [Cody vs Cursor](/compare/cody-vs-cursor/) around Cline as the open-source BYOK agent runtime, Cody as the Sourcegraph Enterprise code-context lane after Free/Pro sunset, and Cursor as the managed AI-native IDE for daily implementation. The Claude Code comparison layer has also been refreshed against current Anthropic, GitHub, Continue, Cognition, and Val Town sources. The same June 4 pass refreshed [Claude vs Cline](/compare/claude-vs-cline/), [Claude vs Cody](/compare/claude-vs-cody/), [Claude vs Cursor](/compare/claude-vs-cursor/), and [Claude vs GitHub Copilot](/compare/claude-vs-github-copilot/) so this hub now separates Claude as the broad assistant/Claude Code lane, Cline as the open-source BYOK repo agent, Cody as the Sourcegraph Enterprise code-context lane, Cursor as the GUI-first AI-native IDE, and Copilot as the GitHub-native AI Credits/model-picker lane. Earlier June 2 maintenance remains in force for Aider, Cline, CodeRabbit, Amazon Q Developer, Augment Code, Sourcegraph Cody, Factory, JetBrains AI, Kiro, Mastra, OpenHands, Pieces, Qodo, Replit Agent, Same.dev, Supermaven, Tabnine, Windsurf/Devin Desktop, Zed, Goose, GLM-5.1, and Glean.
 
 ## Buyer Paths
 
@@ -53,7 +55,7 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 | Daily AI-native IDE coding | [Cursor](/tools/cursor/) | Strongest full-editor Copilot replacement, now with Composer 2.5 and Automations | Editor migration can disrupt teams |
 | GitHub-native IDE assistance and policy | [GitHub Copilot](/tools/github-copilot/) | Best fit for GitHub, VS Code, JetBrains, PRs, and enterprise controls | AI Credits and usage-based billing need modeling before heavy agent use |
 | Claude-backed repo agent | [Claude Code](/tools/claude-code/) | Strong for inspecting, editing, running commands, iterating across codebases, and using dynamic workflows for broad tasks | Subscription/API limits, effort settings, permissions, and workflow usage controls matter |
-| Value AI IDE alternative | [Windsurf](/tools/windsurf/) | Worth testing against Cursor when credits and team cost matter | Credit systems are not as simple as monthly sticker price |
+| Cognition-stack IDE alternative | [Windsurf / Devin Desktop](/tools/windsurf/) | Worth testing against Cursor when Devin handoff, SWE-1.6, and Cognition's stack matter | Old Windsurf-only plan claims are stale; verify current Devin pricing and account entitlements |
 | Lowest-cost multi-model IDE experiment | [Trae](/tools/trae/) | Lite at $3 and Pro at $10 undercut most AI IDE plans while preserving a VS Code-like workflow | ByteDance-adjacent telemetry/procurement risk and token allowances need review before serious repo work |
 | OpenAI-native coding agent | [Codex](/tools/codex/) | Good for local repo tasks, PR-style work, and OpenAI-aligned teams | Not a pure inline autocomplete replacement |
 | Vercel-native app builder | [v0](/tools/v0/) | Turns prompts, screenshots, Figma context, and code context into previewable web apps and PR-ready changes | Credit/token usage, accessibility, security, and generated code quality need review |
@@ -104,7 +106,7 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 - [GitHub Copilot alternatives](/guides/github-copilot-alternatives/) should be monitored through the June 1, 2026 Copilot AI Credits migration and June 2 Copilot SDK GA.
 - [Cursor alternatives](/guides/cursor-alternatives/) should be monitored monthly because Cursor, Windsurf, Copilot, Claude Code, and Replit all expose usage-sensitive pricing or agent limits.
 - A new `Claude Code vs Codex` comparison would capture terminal-agent and OpenAI/Anthropic agent-intent searches.
-- A new `Cursor vs Windsurf` comparison would capture buyer intent around AI IDE price, credits, and workflow.
+- [Cursor vs Windsurf](/compare/cursor-vs-windsurf/) should stay monitored because Windsurf now routes through Devin Desktop, not a clean standalone pricing page.
 - A new `best AI coding agent` guide should separate terminal agents, PR agents, browser builders, and autonomous software-engineering products.
 
 ## What Hurts Trust
@@ -117,23 +119,22 @@ Do not publish stale model-version claims. Coding tools route models and change 
 
 ## Sources
 
-- [GitHub Copilot plans](https://github.com/features/copilot/plans) (verified 2026-06-04)
-- [GitHub Copilot billing docs](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals) (verified 2026-06-04)
-- [GitHub Copilot organization billing docs](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-organizations-and-enterprises) (verified 2026-06-04)
+- [GitHub Copilot plans](https://github.com/features/copilot/plans) (verified 2026-06-05)
+- [GitHub Copilot billing docs](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals) (verified 2026-06-05)
+- [GitHub Copilot organization billing docs](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-organizations-and-enterprises) (verified 2026-06-05)
 - [GitHub Copilot billing and plans changelog](https://github.blog/changelog/2026-06-01-updates-to-github-copilot-billing-and-plans) (verified 2026-06-03)
-- [GitHub Copilot SDK GA](https://github.blog/changelog/2026-06-02-copilot-sdk-is-now-generally-available/) (verified 2026-06-04)
-- [Cursor pricing](https://cursor.com/pricing) (verified 2026-06-04)
-- [Cursor Composer 2.5 changelog](https://cursor.com/changelog/composer-2-5) (verified 2026-06-04)
+- [GitHub Copilot SDK GA](https://github.blog/changelog/2026-06-02-copilot-sdk-is-now-generally-available/) (verified 2026-06-05)
+- [Cursor pricing](https://cursor.com/pricing) (verified 2026-06-05)
+- [Cursor Composer 2.5 changelog](https://cursor.com/changelog/composer-2-5) (verified 2026-06-05)
 - [Cursor Gartner enterprise-coding-agent recognition](https://cursor.com/blog/cursor-leads-gartner-mq-2026) (verified 2026-05-26)
-- [Cursor changelog](https://cursor.com/changelog) (verified 2026-06-04)
+- [Cursor changelog](https://cursor.com/changelog) (verified 2026-06-05)
 - [Claude Code docs](https://code.claude.com/docs) (verified 2026-06-04)
 - [Claude Code cost management](https://code.claude.com/docs/en/costs) (verified 2026-06-04)
 - [Claude Opus 4.8 and dynamic workflows](https://www.anthropic.com/news/claude-opus-4-8) (verified 2026-06-04)
 - [Claude dynamic workflows in Claude Code](https://claude.com/blog/introducing-dynamic-workflows-in-claude-code) (verified 2026-06-02)
 - [Claude Max plan](https://support.claude.com/en/articles/11049741-what-is-the-max-plan) (verified 2026-06-04)
-- [Windsurf plans and usage](https://docs.windsurf.com/windsurf/accounts/usage) (verified 2026-06-01)
-- [Windsurf pricing](https://windsurf.com/pricing) (verified 2026-06-01)
-- [Windsurf model docs](https://docs.windsurf.com/windsurf/models) (verified 2026-06-01)
+- [Windsurf pricing redirect to Devin pricing](https://windsurf.com/pricing) (verified 2026-06-05)
+- [Devin Desktop model docs](https://docs.devin.ai/desktop/models) (verified 2026-06-05)
 - [Aider docs](https://aider.chat/docs/) (verified 2026-06-02)
 - [Aider GitHub repository](https://github.com/Aider-AI/aider) (verified 2026-06-02)
 - [Amazon Q Developer pricing](https://aws.amazon.com/q/developer/pricing/) (verified 2026-06-01)
@@ -143,9 +144,9 @@ Do not publish stale model-version claims. Coding tools route models and change 
 - [Continue pricing](https://www.continue.dev/pricing) (verified 2026-06-04)
 - [Continue docs](https://docs.continue.dev/) (verified 2026-06-04)
 - [Continue GitHub repository](https://github.com/continuedev/continue) (verified 2026-06-04)
-- [Devin pricing](https://devin.ai/pricing) (verified 2026-06-04)
+- [Devin pricing](https://devin.ai/pricing) (verified 2026-06-05)
 - [Sourcegraph pricing](https://sourcegraph.com/pricing) (verified 2026-06-04)
-- [Cognition Windsurf acquisition announcement](https://cognition.ai/blog/windsurf) (verified 2026-06-01)
+- [Cognition Windsurf acquisition announcement](https://cognition.ai/blog/windsurf) (verified 2026-06-05)
 - [Factory pricing](https://docs.factory.ai/pricing) (verified 2026-06-01)
 - [JetBrains AI pricing](https://www.jetbrains.com/help/ai-assistant/licensing-and-subscriptions.html) (verified 2026-06-01)
 - [Kiro pricing](https://kiro.dev/pricing) (verified 2026-06-01)
@@ -159,11 +160,13 @@ Do not publish stale model-version claims. Coding tools route models and change 
 - [Bolt.new pricing](https://bolt.new/pricing) (verified 2026-06-01)
 - [Browserbase pricing](https://www.browserbase.com/pricing) (verified 2026-06-01)
 - [Supermaven pricing](https://supermaven.com/pricing) (verified 2026-06-01)
-- [Tabnine pricing](https://www.tabnine.com/pricing) (verified 2026-06-01)
-- [Val Town pricing](https://www.val.town/pricing) (verified 2026-06-04)
+- [Tabnine pricing](https://www.tabnine.com/pricing) (verified 2026-06-05)
+- [Val Town pricing](https://www.val.town/pricing) (verified 2026-06-05)
 - [Zed pricing](https://zed.dev/pricing) (verified 2026-06-01)
 - [Trae plans and billing](https://docs.trae.ai/ide/new-plans-and-billing) (verified 2026-06-04)
-- [Gemini Code Assist](https://cloud.google.com/products/gemini/code-assist) (verified 2026-06-04)
+- [Gemini Code Assist](https://cloud.google.com/products/gemini/code-assist) (verified 2026-06-05)
+- [Google AI subscriptions](https://gemini.google/subscriptions/) (verified 2026-06-05)
+- [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing) (verified 2026-06-05)
 - [Hex pricing](https://hex.tech/pricing/) (verified 2026-06-02)
 - [Hex AI docs](https://learn.hex.tech/docs/getting-started/ai-overview) (verified 2026-06-02)
 - [Goose GitHub repository](https://github.com/aaif-goose/goose) (verified 2026-06-02)
@@ -172,5 +175,5 @@ Do not publish stale model-version claims. Coding tools route models and change 
 - [Z.AI pricing](https://docs.z.ai/guides/overview/pricing) (verified 2026-06-02)
 - [GLM-5.1 on Hugging Face](https://huggingface.co/zai-org/GLM-5.1) (verified 2026-06-02)
 - [Glean developer platform](https://developers.glean.com/) (verified 2026-06-02)
-- [v0 pricing](https://v0.app/pricing) (verified 2026-06-04)
-- [v0 documentation](https://v0.app/docs) (verified 2026-06-04)
+- [v0 pricing](https://v0.app/pricing) (verified 2026-06-05)
+- [v0 documentation](https://v0.app/docs) (verified 2026-06-05)

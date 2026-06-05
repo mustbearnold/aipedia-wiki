@@ -26,14 +26,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /compare/beautiful-ai-vs-tome/ | Comparison | Yes | frontmatter | src/content/comparisons/beautiful-ai-vs-tome.md |
 | 2026-05-13 | /compare/chatgpt-vs-phind/ | Comparison | Yes | frontmatter | src/content/comparisons/chatgpt-vs-phind.md |
 | 2026-05-13 | /compare/codeium-vs-github-copilot/ | Comparison | Yes | frontmatter | src/content/comparisons/codeium-vs-github-copilot.md |
-| 2026-05-13 | /compare/cursor-vs-devin/ | Comparison | Yes | frontmatter | src/content/comparisons/cursor-vs-devin.md |
-| 2026-05-13 | /compare/cursor-vs-gemini/ | Comparison | Yes | frontmatter | src/content/comparisons/cursor-vs-gemini.md |
-| 2026-05-13 | /compare/cursor-vs-github-copilot/ | Comparison | Yes | frontmatter | src/content/comparisons/cursor-vs-github-copilot.md |
-| 2026-05-13 | /compare/cursor-vs-lovable/ | Comparison | Yes | frontmatter | src/content/comparisons/cursor-vs-lovable.md |
-| 2026-05-13 | /compare/cursor-vs-tabnine/ | Comparison | Yes | frontmatter | src/content/comparisons/cursor-vs-tabnine.md |
-| 2026-05-13 | /compare/cursor-vs-v0/ | Comparison | Yes | frontmatter | src/content/comparisons/cursor-vs-v0.md |
-| 2026-05-13 | /compare/cursor-vs-val-town/ | Comparison | Yes | frontmatter | src/content/comparisons/cursor-vs-val-town.md |
-| 2026-05-13 | /compare/cursor-vs-windsurf/ | Comparison | Yes | frontmatter | src/content/comparisons/cursor-vs-windsurf.md |
 | 2026-05-13 | /compare/decktopus-vs-gamma/ | Comparison | Yes | frontmatter | src/content/comparisons/decktopus-vs-gamma.md |
 | 2026-05-13 | /compare/decktopus-vs-pitch/ | Comparison | Yes | frontmatter | src/content/comparisons/decktopus-vs-pitch.md |
 | 2026-05-13 | /compare/decktopus-vs-presentations-ai/ | Comparison | Yes | frontmatter | src/content/comparisons/decktopus-vs-presentations-ai.md |
@@ -434,7 +426,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-26 | /tools/heygen/ | Tool | Yes | frontmatter | src/content/tools/heygen.md |
 | 2026-05-26 | /tools/instantly/ | Tool | Yes | frontmatter | src/content/tools/instantly.md |
 | 2026-05-26 | /tools/invideo/ | Tool | Yes | frontmatter | src/content/tools/invideo.md |
-| 2026-05-26 | /tools/lovable/ | Tool | Yes | frontmatter | src/content/tools/lovable.md |
 | 2026-05-26 | /tools/lovo/ | Tool | Yes | frontmatter | src/content/tools/lovo.md |
 | 2026-05-26 | /tools/meetgeek/ | Tool | Yes | frontmatter | src/content/tools/meetgeek.md |
 | 2026-05-26 | /tools/notion-ai/ | Tool | Yes | frontmatter | src/content/tools/notion-ai.md |
@@ -505,7 +496,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-01 | /tools/same-dev/ | Tool | Yes | frontmatter | src/content/tools/same-dev.md |
 | 2026-06-01 | /tools/supermaven/ | Tool | Yes | frontmatter | src/content/tools/supermaven.md |
 | 2026-06-01 | /tools/tabnine/ | Tool | Yes | frontmatter | src/content/tools/tabnine.md |
-| 2026-06-01 | /tools/windsurf/ | Tool | Yes | frontmatter | src/content/tools/windsurf.md |
 | 2026-06-01 | /tools/zed/ | Tool | Yes | frontmatter | src/content/tools/zed.md |
 | 2026-06-02 | /404/ | Static page | No | git | src/pages/404.astro |
 | 2026-06-02 | /about/ | Static page | Yes | git | src/pages/about/index.astro |
@@ -665,8 +655,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-03 | /tools/voxtral/ | Tool | Yes | frontmatter | src/content/tools/voxtral.md |
 | 2026-06-04 | /categories/ai-automation/ | Category | Yes | frontmatter | src/content/categories/ai-automation.md |
 | 2026-06-04 | /categories/ai-chatbots/ | Category | Yes | frontmatter | src/content/categories/ai-chatbots.md |
-| 2026-06-04 | /categories/ai-coding/ | Category | Yes | frontmatter | src/content/categories/ai-coding.md |
-| 2026-06-04 | /categories/ai-design/ | Category | Yes | frontmatter | src/content/categories/ai-design.md |
 | 2026-06-04 | /categories/ai-notes/ | Category | Yes | frontmatter | src/content/categories/ai-notes.md |
 | 2026-06-04 | /categories/ai-research/ | Category | Yes | frontmatter | src/content/categories/ai-research.md |
 | 2026-06-04 | /categories/ai-search/ | Category | Yes | frontmatter | src/content/categories/ai-search.md |
@@ -722,7 +710,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-04 | /news/rss.xml | Crawl surface | No | git | src/pages/news/rss.xml.ts |
 | 2026-06-04 | /tools/claude-code/ | Tool | Yes | frontmatter | src/content/tools/claude-code.md |
 | 2026-06-04 | /tools/continue/ | Tool | Yes | frontmatter | src/content/tools/continue.md |
-| 2026-06-04 | /tools/devin/ | Tool | Yes | frontmatter | src/content/tools/devin.md |
 | 2026-06-04 | /tools/github-copilot/ | Tool | Yes | frontmatter | src/content/tools/github-copilot.md |
 | 2026-06-04 | /tools/make/ | Tool | Yes | frontmatter | src/content/tools/make.md |
 | 2026-06-04 | /tools/nanochat/ | Tool | Yes | frontmatter | src/content/tools/nanochat.md |
@@ -738,14 +725,27 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-04 | /tools/zapier/ | Tool | Yes | frontmatter | src/content/tools/zapier.md |
 | 2026-06-05 | / | Static page | Yes | working tree | src/pages/index.astro |
 | 2026-06-05 | /categories/ | Static page | Yes | working tree | src/pages/categories/index.astro |
-| 2026-06-05 | /categories/ai-writing/ | Category | Yes | working tree | src/content/categories/ai-writing.md |
+| 2026-06-05 | /categories/ai-coding/ | Category | Yes | working tree | src/content/categories/ai-coding.md |
+| 2026-06-05 | /categories/ai-design/ | Category | Yes | working tree | src/content/categories/ai-design.md |
+| 2026-06-05 | /categories/ai-writing/ | Category | Yes | frontmatter | src/content/categories/ai-writing.md |
 | 2026-06-05 | /compare/ | Static page | Yes | working tree | src/pages/compare/index.astro |
-| 2026-06-05 | /compare/copy-ai-vs-grammarly/ | Comparison | Yes | working tree | src/content/comparisons/copy-ai-vs-grammarly.md |
-| 2026-06-05 | /compare/copy-ai-vs-hyperwrite/ | Comparison | Yes | working tree | src/content/comparisons/copy-ai-vs-hyperwrite.md |
-| 2026-06-05 | /compare/copy-ai-vs-quillbot/ | Comparison | Yes | working tree | src/content/comparisons/copy-ai-vs-quillbot.md |
-| 2026-06-05 | /compare/copy-ai-vs-sudowrite/ | Comparison | Yes | working tree | src/content/comparisons/copy-ai-vs-sudowrite.md |
-| 2026-06-05 | /compare/copy-ai-vs-wordtune/ | Comparison | Yes | working tree | src/content/comparisons/copy-ai-vs-wordtune.md |
+| 2026-06-05 | /compare/copy-ai-vs-grammarly/ | Comparison | Yes | frontmatter | src/content/comparisons/copy-ai-vs-grammarly.md |
+| 2026-06-05 | /compare/copy-ai-vs-hyperwrite/ | Comparison | Yes | frontmatter | src/content/comparisons/copy-ai-vs-hyperwrite.md |
+| 2026-06-05 | /compare/copy-ai-vs-quillbot/ | Comparison | Yes | frontmatter | src/content/comparisons/copy-ai-vs-quillbot.md |
+| 2026-06-05 | /compare/copy-ai-vs-sudowrite/ | Comparison | Yes | frontmatter | src/content/comparisons/copy-ai-vs-sudowrite.md |
+| 2026-06-05 | /compare/copy-ai-vs-wordtune/ | Comparison | Yes | frontmatter | src/content/comparisons/copy-ai-vs-wordtune.md |
+| 2026-06-05 | /compare/cursor-vs-devin/ | Comparison | Yes | working tree | src/content/comparisons/cursor-vs-devin.md |
+| 2026-06-05 | /compare/cursor-vs-gemini/ | Comparison | Yes | working tree | src/content/comparisons/cursor-vs-gemini.md |
+| 2026-06-05 | /compare/cursor-vs-github-copilot/ | Comparison | Yes | working tree | src/content/comparisons/cursor-vs-github-copilot.md |
+| 2026-06-05 | /compare/cursor-vs-lovable/ | Comparison | Yes | working tree | src/content/comparisons/cursor-vs-lovable.md |
+| 2026-06-05 | /compare/cursor-vs-tabnine/ | Comparison | Yes | working tree | src/content/comparisons/cursor-vs-tabnine.md |
+| 2026-06-05 | /compare/cursor-vs-v0/ | Comparison | Yes | working tree | src/content/comparisons/cursor-vs-v0.md |
+| 2026-06-05 | /compare/cursor-vs-val-town/ | Comparison | Yes | working tree | src/content/comparisons/cursor-vs-val-town.md |
+| 2026-06-05 | /compare/cursor-vs-windsurf/ | Comparison | Yes | working tree | src/content/comparisons/cursor-vs-windsurf.md |
 | 2026-06-05 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
 | 2026-06-05 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
 | 2026-06-05 | /tools/ | Static page | Yes | working tree | src/pages/tools/index.astro |
-| 2026-06-05 | /tools/quillbot/ | Tool | Yes | working tree | src/content/tools/quillbot.md |
+| 2026-06-05 | /tools/devin/ | Tool | Yes | working tree | src/content/tools/devin.md |
+| 2026-06-05 | /tools/lovable/ | Tool | Yes | working tree | src/content/tools/lovable.md |
+| 2026-06-05 | /tools/quillbot/ | Tool | Yes | frontmatter | src/content/tools/quillbot.md |
+| 2026-06-05 | /tools/windsurf/ | Tool | Yes | working tree | src/content/tools/windsurf.md |

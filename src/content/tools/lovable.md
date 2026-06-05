@@ -10,11 +10,11 @@ pricing_model: freemium
 price_range: "$0-$4,300+/mo"
 status: active
 launched: 2024-09
-last_updated: 2026-05-26
-last_verified: 2026-05-26
+last_updated: 2026-06-05
+last_verified: 2026-06-05
 update_frequency: monthly
-seo_title: "Lovable Review: Pricing, Credits, Supabase & Best Plan (May 2026)"
-meta_description: "Updated May 13, 2026: Lovable pricing, credits, Lovable Cloud, Supabase, GitHub sync, best plan, alternatives, and production risks for AI app-builder buyers."
+seo_title: "Lovable Review: Pricing, Credits, Supabase & Best Plan (June 2026)"
+meta_description: "Updated June 5, 2026: Lovable pricing, credits, Lovable Cloud, Supabase, GitHub sync, best plan, alternatives, and production risks for AI app-builder buyers."
 author: "aipedia.wiki Editorial"
 primary_cta_label: "Start with Lovable free"
 best_plan: "Pro 100 credits at $25/month"
@@ -36,7 +36,7 @@ facts:
     source: "https://docs.lovable.dev/introduction/getting-started"
     source_label: "Lovable quick start"
     source_id: lovable-docs
-    verified_at: 2026-05-13
+    verified_at: 2026-06-05
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -44,8 +44,8 @@ facts:
     source: "https://docs.lovable.dev/introduction/plans-and-credits"
     source_label: "Lovable plans and credits"
     source_id: lovable-plans-credits
-    verified_at: 2026-05-13
-    next_review_at: 2026-06-13
+    verified_at: 2026-06-05
+    next_review_at: 2026-07-05
     volatility: high
     confidence: high
   free_plan:
@@ -53,8 +53,8 @@ facts:
     source: "https://docs.lovable.dev/introduction/plans-and-credits"
     source_label: "Lovable plans and credits"
     source_id: lovable-plans-credits
-    verified_at: 2026-05-13
-    next_review_at: 2026-06-13
+    verified_at: 2026-06-05
+    next_review_at: 2026-07-05
     volatility: high
     confidence: high
   best_paid_tier:
@@ -62,8 +62,8 @@ facts:
     source: "https://lovable.dev/pricing"
     source_label: "Lovable pricing"
     source_id: lovable-official
-    verified_at: 2026-05-13
-    next_review_at: 2026-06-13
+    verified_at: 2026-06-05
+    next_review_at: 2026-07-05
     volatility: high
     confidence: high
   backend_path:
@@ -71,7 +71,7 @@ facts:
     source: "https://docs.lovable.dev/introduction/getting-started"
     source_label: "Lovable quick start"
     source_id: lovable-docs
-    verified_at: 2026-05-13
+    verified_at: 2026-06-05
     volatility: medium
     confidence: high
   cloud_backend:
@@ -79,7 +79,7 @@ facts:
     source: "https://docs.lovable.dev/integrations/cloud"
     source_label: "Lovable Cloud docs"
     source_id: lovable-cloud
-    verified_at: 2026-05-13
+    verified_at: 2026-06-05
     volatility: medium
     confidence: high
   code_handoff:
@@ -87,7 +87,7 @@ facts:
     source: "https://docs.lovable.dev/integrations/github"
     source_label: "Lovable GitHub integration"
     source_id: lovable-github
-    verified_at: 2026-05-13
+    verified_at: 2026-06-05
     volatility: medium
     confidence: high
   watch_out_for:
@@ -95,7 +95,7 @@ facts:
     source: "https://docs.lovable.dev/integrations/supabase"
     source_label: "Lovable Supabase integration"
     source_id: lovable-supabase
-    verified_at: 2026-05-13
+    verified_at: 2026-06-05
     volatility: medium
     confidence: high
 hero_glance:
@@ -143,7 +143,7 @@ quick_answer: >-
 
 # Lovable
 
-Lovable is an AI app builder at [lovable.dev](https://lovable.dev) for turning product descriptions into deployed web apps. As of May 13, 2026, the buying question is not "Can it make a demo?" It can. The better question is whether Lovable is the right place to spend credits, add backend logic, connect a database, and move toward a real launch without losing control of the code.
+Lovable is an AI app builder at [lovable.dev](https://lovable.dev) for turning product descriptions into deployed web apps. As of June 5, 2026, the buying question is not "Can it make a demo?" It can. The better question is whether Lovable is the right place to spend credits, add backend logic, connect a database, and move toward a real launch without losing control of the code.
 
 AiPedia's answer: Lovable is one of the strongest tools in the AI app-builder category for nontechnical founders and small teams. It earns that position because it combines prompt-based app generation, Lovable Cloud, native Supabase integration, GitHub sync, visual editing, and Code mode. It is weaker when the buyer only needs components, wants full stack choice from day one, or expects generated code to be production-grade without review.
 
@@ -157,7 +157,7 @@ The best first paid plan for most serious builders is **Pro 100 credits at $25/m
 
 ## Recent Developments
 
-- **May 13, 2026 verification:** Lovable's current public pricing and docs continue to show Free, Pro from $25/month, Business from $50/month, and Enterprise. Pro 100 credits at $25/month remains the cleanest first paid plan.
+- **June 5, 2026 verification:** Lovable's current public pricing and docs continue to show Free, Pro from $25/month, Business from $50/month, and Enterprise. Free remains 5 daily credits up to 30/month; Pro 100 credits at $25/month adds 100 monthly credits plus 5 daily credits up to 150/month and remains the cleanest first paid plan.
 - **Lovable Cloud is now central to the buyer story:** Current docs describe Lovable Cloud as the built-in full-stack hosting/backend path, while the quick start also keeps native Supabase integration available for backend capabilities.
 - **April 28, 2026:** [Lovable launched mobile apps for iOS and Android](/news/2026-04-28-lovable-mobile-app-ios-android/), which matters for founders capturing and iterating on product ideas away from a desktop setup.
 - **April 17, 2026:** [Anthropic launched Claude Design](/news/2026-04-17-anthropic-launches-claude-design/), giving design-to-code buyers another path to compare against Lovable's prompt-to-app workflow.
@@ -178,7 +178,7 @@ The best first paid plan for most serious builders is **Pro 100 credits at $25/m
 | Code handoff | GitHub sync for backup, collaboration, local IDE work, and outside deployment |
 | Main risk | Credit/cloud burn plus production-readiness gaps if no engineer reviews the app |
 
-Every fact above was checked against official Lovable sources on 2026-05-13. See Sources.
+Every fact above was checked against official Lovable sources on 2026-06-05. See Sources.
 
 ## What Lovable Actually Is
 
@@ -206,7 +206,7 @@ The tradeoff is that the same breadth can hide real costs. Credits are usage-bas
 
 ## Pricing
 
-Pricing was checked against [Lovable pricing](https://lovable.dev/pricing) and [Lovable plans and credits](https://docs.lovable.dev/introduction/plans-and-credits) on 2026-05-13.
+Pricing was checked against [Lovable pricing](https://lovable.dev/pricing) and [Lovable plans and credits](https://docs.lovable.dev/introduction/plans-and-credits) on 2026-06-05.
 
 | Plan | Current public price | Credits and buyer fit |
 |---|---:|---|
@@ -254,13 +254,13 @@ The short version: Lovable wins when the buyer wants a fast MVP with backend and
 
 AiPedia scores Lovable as a buyer decision page, not as a benchmark claim. Utility is high because Lovable solves a real purchase-intent job: getting from idea to deployed app quickly. Value is strong at the first Pro tier, but less clear at high credit volumes unless the buyer monitors usage. Moat improves because Lovable combines generation, cloud/backend paths, visual edits, and GitHub sync. Longevity is strong but depends on how defensible the app-builder workflow remains as Bolt.new, v0, Replit, Figma, and cloud IDEs converge.
 
-This page was updated on 2026-05-13 against official Lovable pricing and documentation. Unsupported model claims were removed because AiPedia could not verify a current public default-model statement from the official sources used for this update.
+This page was updated on 2026-06-05 against official Lovable pricing and documentation. Unsupported model claims remain excluded because AiPedia could not verify a current public default-model statement from the official sources used for this update.
 
 ## FAQ
 
 **Is Lovable free?**
 
-Lovable has a free plan. As verified on 2026-05-13, the docs describe 5 daily credits capped at 30 credits per month. Active builders should expect to hit that ceiling quickly.
+Lovable has a free plan. As verified on 2026-06-05, the docs describe 5 daily credits capped at 30 credits per month. Active builders should expect to hit that ceiling quickly.
 
 **What Lovable plan should I buy first?**
 
@@ -284,12 +284,12 @@ Lovable is broader for MVPs. v0 is stronger when the buyer specifically wants Ve
 
 ## Sources
 
-- [Lovable pricing](https://lovable.dev/pricing) - Pro, Business, Enterprise, student, and enterprise pricing information. Verified 2026-05-13.
-- [Lovable plans and credits](https://docs.lovable.dev/introduction/plans-and-credits) - Free plan, paid plan bundles, credit usage, top-ups, and rollovers. Verified 2026-05-13.
-- [Lovable quick start](https://docs.lovable.dev/introduction/getting-started) - project workflow, GitHub, backend, publish, and custom-domain paths. Verified 2026-05-13.
-- [Lovable Cloud docs](https://docs.lovable.dev/integrations/cloud) - full-stack cloud, Supabase foundation, usage categories, secrets, logs, and the temporary $25 monthly free usage note. Verified 2026-05-13.
-- [Lovable Supabase integration](https://docs.lovable.dev/integrations/supabase) - native Supabase integration and database/auth/backend cautions. Verified 2026-05-13.
-- [Lovable GitHub integration](https://docs.lovable.dev/integrations/github) - code backup, collaboration, local IDE work, pull requests, and outside deployment. Verified 2026-05-13.
+- [Lovable pricing](https://lovable.dev/pricing) - Pro, Business, Enterprise, student, and enterprise pricing information. Verified 2026-06-05.
+- [Lovable plans and credits](https://docs.lovable.dev/introduction/plans-and-credits) - Free plan, paid plan bundles, credit usage, top-ups, and rollovers. Verified 2026-06-05.
+- [Lovable quick start](https://docs.lovable.dev/introduction/getting-started) - project workflow, GitHub, backend, publish, and custom-domain paths. Verified 2026-06-05.
+- [Lovable Cloud docs](https://docs.lovable.dev/integrations/cloud) - full-stack cloud, Supabase foundation, usage categories, secrets, logs, and the temporary $25 monthly free usage note. Verified 2026-06-05.
+- [Lovable Supabase integration](https://docs.lovable.dev/integrations/supabase) - native Supabase integration and database/auth/backend cautions. Verified 2026-06-05.
+- [Lovable GitHub integration](https://docs.lovable.dev/integrations/github) - code backup, collaboration, local IDE work, pull requests, and outside deployment. Verified 2026-06-05.
 
 ## Related
 
