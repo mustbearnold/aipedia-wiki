@@ -5,87 +5,97 @@ title: "n8n vs Make vs Zapier"
 tools: [n8n, make, zapier]
 category: ai-automation
 winner: depends
-seo_title: "n8n vs Make vs Zapier: Best Automation Tool (2026)"
-meta_description: "n8n leads for AI agents and self-hosting. Zapier offers the most integrations. Make provides the lowest cloud pricing. Full comparison updated April 2026."
+seo_title: "n8n vs Make vs Zapier: Best Automation Tool in 2026"
+meta_description: "n8n vs Make vs Zapier, refreshed June 5, 2026: compare self-hosting, execution pricing, Make credits, Zapier tasks, AI Agents, MCP, app coverage, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-13
-last_verified: 2026-05-13
-update_frequency: quarterly
+last_updated: 2026-06-05
+last_verified: 2026-06-05
+update_frequency: monthly
 canonical_fact_table: true
 ---
 
 # n8n vs Make vs Zapier
 
-n8n, Make, and Zapier remain the leading workflow automation platforms as of April 2026. n8n provides open-source self-hosting with unlimited executions at no cost, cloud plans from $20 monthly for 2,500 executions, and native AI agent support including tool use and RAG ([n8n Pricing](https://n8n.io/pricing)). Make delivers visual workflow design starting at $9 monthly for 10,000 operations ([Make Pricing](https://www.make.com/en/pricing)). Zapier maintains over 6,000 integrations with plans from $20 monthly for 750 tasks up to $299 for higher volumes ([Zapier Pricing](https://zapier.com/pricing)).
+[n8n](/tools/n8n/), [Make](/tools/make/), and [Zapier](/tools/zapier/) are the three automation platforms most buyers compare first. The right choice depends less on "which is best" and more on who owns the workflow, how the platform bills, whether self-hosting matters, and how much AI-agent behavior you actually want in production.
 
 ## Quick Answer
-Select n8n for AI agents or self-hosting with unlimited automations. Select Zapier for broad integrations and simple use. Select Make for visual design at the lowest cloud cost.
 
-## Decision Snapshot
-| | n8n | Make | Zapier |
-|---|---|---|---|
-| **Price** | Free self-host / $20-50/mo cloud | $9-145/mo | Free-$299+/mo |
-| **Best for** | AI agents, self-hosting, complex workflows | Visual design, moderate complexity | Integrations, simple automations |
-| **Utility** | 9/10 | 8/10 | 8/10 |
-| **Value** | 10/10 | 8/10 | 6/10 |
-| **Moat** | 7/10 | 7/10 | 9/10 |
-| **Longevity** | 9/10 | 8/10 | 9/10 |
+Choose **n8n** if a technical owner wants self-hosting, execution-based pricing, code steps, AI Agent nodes, and control over credentials, logs, and infrastructure.
+
+Choose **Make** if the team wants a visual canvas for branching workflows, routers, iterators, API calls, AI Agents, MCP, and lower-cost cloud automation without self-hosting.
+
+Choose **Zapier** if non-technical users need the fastest path across the widest SaaS catalog, including 9,000+ apps, Zaps, Tables, Forms, Agents, MCP, SDK, and AI orchestration.
+
+## Buyer Snapshot
+
+- **Best technical/control pick:** n8n.
+- **Best visual workflow value:** Make.
+- **Best non-technical SaaS coverage:** Zapier.
+- **Best self-hosting path:** n8n.
+- **Best app breadth:** Zapier.
+- **Best cost model for complex visual cloud flows:** Make, if credit usage is modeled correctly.
+- **Main hidden cost:** n8n needs operations ownership, Make needs credit forecasting, Zapier needs task-volume governance.
+
+## Pricing Units Matter
+
+Do not compare only the first paid tier:
+
+- **n8n:** cloud pricing is based on monthly workflow executions, and its pricing page says all plans include unlimited users, unlimited workflows, and every integration. Community self-host remains the control path for teams that can own infrastructure.
+- **Make:** pricing is credit-based. Core starts at $9/mo for 10K credits; scenario design, routes, AI steps, code execution, retries, and frequency decide real cost.
+- **Zapier:** pricing is task-based. Professional starts at $19.99/mo annually and Team at $69/mo annually; every action in a multi-step Zap can consume tasks.
+
+The cheapest option changes by workflow shape. A simple two-step SaaS automation may be easiest in Zapier. A many-branch visual process may be cheaper in Make. A high-volume internal workflow may be cheapest self-hosted in n8n.
 
 ## Where n8n Wins
-- Self-hosting allows unlimited workflows and executions on user infrastructure at zero cost ([n8n Docs](https://docs.n8n.io/hosting/)).
-- Native AI agent nodes support tool use, memory, RAG pipelines, and multi-agent setups with models like OpenAI GPT-5.3, Anthropic Claude Opus 4.7, and Ollama.
-- Full code access with JavaScript and Python nodes handles complex logic, loops, and error handling.
-- Git integration enables version control for workflows.
-- Active open-source community contributes over 900 nodes.
+
+n8n wins when control matters. It has self-hosting, workflow APIs, code nodes, AI Agent nodes, HTTP/webhook flexibility, and a developer-friendly data model. Current AI Agent docs say all AI Agent nodes work as a Tools Agent, which simplifies the older agent-type spread.
+
+Choose n8n when the team can own credentials, secrets, upgrades, logs, queue behavior, and security review.
 
 ## Where Make Wins
-- Lowest cloud entry at $9 monthly for 10,000 operations and 2 scenarios.
-- Visual canvas supports branching, sub-scenarios, and moderate complexity without code.
-- Over 700 native integrations cover common SaaS tools.
-- Unlimited scenarios on Pro plan from $16 monthly.
-- Good documentation and template library for quick starts.
+
+Make wins when workflow clarity matters. The visual scenario builder handles routers, iterators, filters, aggregators, error handling, custom API calls, and AI steps in a way many operators can understand after training. Its current AI Agents, MCP Server, AI Toolkit, AI Web Search, and 3,000+ app surface make it stronger than older "Integromat-style" comparisons suggest.
+
+Choose Make when you want a powerful cloud canvas without taking on self-hosted operations.
 
 ## Where Zapier Wins
-- Largest catalog with 6,000+ native app integrations for niche tools.
-- Simplest interface for non-technical users with abundant templates.
-- Extensive community and documentation.
-- Paths and filters handle basic branching.
-- Established enterprise adoption reduces switching costs.
 
-## Key Differences
-n8n excels in technical flexibility and AI features but requires coding skills; its self-hosting avoids per-execution fees, unlike cloud-only Make and Zapier. Make balances visual design and cost for mid-level needs, with more operations per dollar than Zapier. Zapier prioritizes integration breadth and ease, though task limits make it costlier at scale. AI support is strongest in n8n, basic in others. Workflow complexity peaks with n8n's debugging and code, followed by Make, then Zapier.
+Zapier wins when adoption speed and app breadth matter. The current platform spans 9,000+ integrations plus Zaps, Tables, Forms, Canvas, Agents, Chatbots, MCP, SDK, and AI orchestration. It is usually the best first automation tool for non-technical teams.
 
-## Who should choose n8n
-Technical users building AI agents, needing self-hosting for privacy or unlimited scale, or handling complex code-based workflows.
+Choose Zapier when workflow owners need to ship automations quickly and the budget can tolerate task-based billing.
 
-## Who should choose Make
-Users seeking visual builders for moderate complexity at low cloud cost, with standard integrations.
+## Which Should You Buy?
 
-## Who should choose Zapier
-Non-technical users requiring maximum app connections and simple trigger-action setups.
+Buy **n8n Community or Pro Cloud** if a technical person will own workflow reliability. Self-host for privacy, control, and high-volume economics. Use cloud when you want n8n's model without running servers.
+
+Buy **Make Core or Pro** when visual complexity is the main requirement and you can estimate credits from real scenarios.
+
+Buy **Zapier Professional or Team** when app coverage, onboarding speed, and non-technical ownership matter more than lowest possible cost.
 
 ## Bottom Line
-n8n suits AI and technical automation due to self-hosting and agent tools. Make offers value for visual cloud workflows. Zapier fits broad, easy integrations despite higher costs. Trends favor n8n for AI growth, Zapier for no-code markets.
+
+n8n is the control platform. Make is the visual automation canvas. Zapier is the broad no-code automation incumbent. Pick by owner and billing unit, not by generic "best automation app" rankings.
 
 ## FAQ
 
 **Is n8n better than Zapier?**
-n8n serves technical needs with AI agents, self-hosting, and complexity. Zapier fits non-technical users with 6,000+ integrations.
+For technical teams, often yes. For non-technical teams that need broad app coverage quickly, Zapier is usually easier.
 
-**Is n8n or Make cheaper?**
-n8n self-hosts free with unlimited use; cloud starts at $20 for 2,500 executions. Make cloud begins at $9 for 10,000 operations.
+**Is Make cheaper than Zapier?**
+Often for multi-step or high-volume visual workflows, but only after modeling credits and scenario design.
 
-**Which handles AI agents best?**
-n8n, with native support for tool calling, RAG, memory, and models like GPT-5.3 or Claude Opus 4.7. Others offer basic LLM steps.
+**Which is best for AI agents?**
+n8n is best for technical AI-agent workflows, Make is strong for transparent agentic automation across visual scenarios, and Zapier is best when agents need access to a broad SaaS app catalog.
 
 ## Sources
-- n8n official site: [https://n8n.io](https://n8n.io)
-- Make official site: [https://make.com](https://make.com)
-- Zapier official site: [https://zapier.com](https://zapier.com)
 
-## Related
-- [n8n](../tools/n8n.md)
-- [Make](../tools/make.md)
-- [Zapier](../tools/zapier.md)
-- [AI Automation Category](../categories/ai-automation.md)
----
+- [n8n review](/tools/n8n/)
+- [Make review](/tools/make/)
+- [Zapier review](/tools/zapier/)
+- [n8n pricing](https://n8n.io/pricing) (verified 2026-06-05)
+- [n8n AI Agent node docs](https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/) (verified 2026-06-05)
+- [Make pricing](https://www.make.com/en/pricing) (verified 2026-06-05)
+- [Make AI Agents](https://www.make.com/en/ai-agents) (verified 2026-06-05)
+- [Zapier pricing](https://zapier.com/pricing) (verified 2026-06-05)
+- [Zapier AI](https://zapier.com/ai) (verified 2026-06-05)
+- [AI Automation category](/categories/ai-automation/)

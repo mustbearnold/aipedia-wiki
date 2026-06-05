@@ -5,10 +5,10 @@ title: AI Automation & Agents
 description: Current workflow automation, AI agent platforms, meeting automation, call automation, and operations tools for technical teams, non-technical operators, GTM workflows, customer success, support, sales, and internal automation.
 tool_count: 27
 seo_title: "Best AI Automation Tools & Agent Platforms (June 2026)"
-meta_description: "Updated June 4, 2026: compare n8n, Zapier, Make, Gumloop, Relevance AI, Activepieces, AG2, CrewAI, Dust, Glean, Goose, Hermes Agent, Genspark, GetResponse, Dext, Browserbase, Ada, Intercom, hireEZ, Apollo, Amplemarket, Lindy, Manus, Pipedream, CloudTalk, and MeetGeek by workflow, pricing unit, AI orchestration, and risk."
+meta_description: "Updated June 5, 2026: compare n8n, Zapier, Make, Instantly, Intercom, Gumloop, Relevance AI, Activepieces, AG2, CrewAI, Dust, Glean, Goose, Hermes Agent, Genspark, GetResponse, Dext, Browserbase, Ada, hireEZ, Apollo, Amplemarket, Lindy, Manus, Pipedream, CloudTalk, and MeetGeek by workflow, pricing unit, AI orchestration, and risk."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-04
-last_verified: 2026-06-04
+last_updated: 2026-06-05
+last_verified: 2026-06-05
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -28,11 +28,13 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 
 **June 3 agent-stack update:** Microsoft's [Build 2026 Work IQ and Foundry announcements](/news/2026-06-02-microsoft-build-work-iq-agent-stack/), GitHub's [Copilot SDK GA plus AI Credits migration](/news/2026-06-02-github-copilot-ai-credits-sdk-ga/), NVIDIA's [enterprise and physical-AI agent stack](/news/2026-06-01-nvidia-agents-physical-ai-gtc-taipei/), and the [enterprise-agent roundup](/news/2026-06-02-enterprise-agent-roundup-postman-relationalai-7ai-white-house/) make one rule sharper: agents are safest when they inherit permissioned context, log actions, expose spend, and route risky writes through review. Generic "autonomous" claims are weaker than tenant boundaries, tool scopes, audit logs, budget controls, and task-specific runtime evidence.
 
-**Use [n8n](/tools/n8n/) when a technical founder, ops engineer, or agency wants control.** n8n's current pricing page says cloud plans include unlimited users, unlimited workflows, every integration, and monthly workflow-execution billing rather than per-step billing. As of May 2026 the EU cloud Starter tier dropped from EU24 to EU20 per month, with reductions across higher tiers, while the self-hosted Community Edition path remains free. This makes n8n the strongest default for complex AI workflows when someone can own credentials, logs, retries, and security.
+**June 5 automation comparison update:** AiPedia rebuilt the high-intent automation fork across [Instantly vs Intercom](/compare/instantly-vs-intercom/), [Instantly vs Make](/compare/instantly-vs-make/), [Instantly vs Zapier](/compare/instantly-vs-zapier/), [Intercom vs Make](/compare/intercom-vs-make/), [Intercom vs Zapier](/compare/intercom-vs-zapier/), and [n8n vs Make vs Zapier](/compare/n8n-vs-make-vs-zapier/). The practical split is sharper now: outbound sending, customer support, visual workflow orchestration, broad no-code app automation, and self-hosted technical AI workflows are different buying jobs.
+
+**Use [n8n](/tools/n8n/) when a technical founder, ops engineer, or agency wants control.** n8n's current pricing page says cloud plans include unlimited users, unlimited workflows, every integration, and monthly workflow-execution billing rather than per-step billing. As of May 2026 the EU cloud Starter tier dropped from EU24 to EU20 per month, with reductions across higher tiers, while the self-hosted Community Edition path remains free. The June 5 check also confirms current AI Agent docs now standardize AI Agent nodes around Tools Agent behavior. This makes n8n the strongest default for complex AI workflows when someone can own credentials, logs, retries, and security.
 
 **Use [Zapier](/tools/zapier/) when non-technical teams need the fastest SaaS connection path.** Zapier's current pricing and AI pages frame the platform around Zaps, Tables, Forms, MCP, Copilot, Agents, and more than 9,000 apps. The June 4 [ChatGPT vs Zapier](/compare/chatgpt-vs-zapier/) refresh keeps the distinction explicit: ChatGPT is the thinking and drafting assistant; Zapier is the workflow execution layer when SaaS actions need to run repeatedly. It is still the cleanest recommendation when app coverage and speed matter more than self-hosting or code-level control.
 
-**Use [Make](/tools/make/) when visual workflow clarity and low entry price matter.** Make's current pricing page lists a free plan with 1,000 credits/month and 3,000+ apps, plus Core, Pro, Teams, and Enterprise tiers. The May 2026 price reduction took Core from $10.59 to $9 per month, with proportional cuts across Pro and Teams. Its AI Agents page positions Make around transparent agents, MCP, AI Toolkit, AI Web Search, and 350+ AI apps across 3,000+ app connectors.
+**Use [Make](/tools/make/) when visual workflow clarity and low entry price matter.** Make's current pricing page lists a free plan with 1,000 credits/month and 3,000+ apps, plus Core, Pro, Teams, and Enterprise tiers. The May 2026 price reduction took Core from $10.59 to $9 per month, with proportional cuts across Pro and Teams. Its AI Agents page positions Make around transparent agents, MCP, AI Toolkit, AI Web Search, and 350+ AI apps across 3,000+ app connectors. The refreshed June 5 comparisons keep Make separate from Instantly-style sending and Intercom-style support: Make should orchestrate those systems, not replace their domain workflows.
 
 **Use [Gumloop](/tools/gumloop/) when the buyer wants AI-native flows, agents, triggers, MCP, policies, and guardrails.** Gumloop is a stronger fit for agent-heavy workflow building than a generic "connect two apps" use case. The June 2 check keeps credit testing central: BYOK can reduce some workflow AI-node burn, but teams should test workflow nodes and agent/model paths separately before assuming every AI step is cheap.
 
@@ -74,7 +76,7 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 
 **Use [Ada](/tools/ada/) when enterprise customer service wants AI agents for support outcomes.** Ada is now a demo-gated contact-sales page for serious service volumes, not a self-serve chatbot widget. Its June 1 source check found 550+ deployed AI agents and 5.5B+ interactions, so the buyer question is enterprise fit, resolution quality, and channel coverage.
 
-**Use [Intercom](/tools/intercom/) when support automation is chat-first and Fin outcome pricing fits the volume model.** The June 2 check keeps Essential/Advanced/Expert annual seats at $29/$85/$132, monthly seats at $39/$99/$139, Fin at $0.99 per outcome, Copilot at $29/agent/month, and the Pro add-on at $99/month.
+**Use [Intercom](/tools/intercom/) when support automation is chat-first and Fin outcome pricing fits the volume model.** The June 5 check keeps Essential/Advanced/Expert annual seats at $29/$85/$132, Fin at $0.99 per outcome, and the core buyer risk around seats, outcome volume, Copilot, and add-ons. The refreshed comparisons separate Intercom's support platform from Make/Zapier orchestration and Instantly outbound sending.
 
 **Use [CloudTalk](/tools/cloudtalk/) when automation starts with phone operations.** CloudTalk is not a generic workflow router. It is the better fit when a sales or support team needs cloud calling, routing, dialers, CRM call logging, AI summaries, coaching analytics, and optional AI voice agents in one system.
 
@@ -145,7 +147,7 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 - [Best AI personal assistant for work](/guides/best-ai-personal-assistant-for-work/) is the Lindy money page for buyers who want inbox, calendar, meeting, follow-up, and text-delegation help before they choose a workflow platform.
 - [Best AI stack for solo founders](/guides/ai-solo-founder-stack/) now gives founders the practical automation sequence: manual first, n8n once workflows repeat, Intercom only after real support volume, and no fake fixed monthly stack total.
 - [Best AI tools for small business](/guides/best-ai-tools-for-small-business/) now gives owner-operators the conservative buying sequence: general assistant first, Google-native assistant when it reduces switching, and Zapier only after workflows already work manually.
-- [n8n vs Make vs Zapier](/compare/n8n-vs-make-vs-zapier/) should be rebuilt next around workflow complexity, pricing unit, AI-agent support, and owner type.
+- [n8n vs Make vs Zapier](/compare/n8n-vs-make-vs-zapier/) is now the primary automation-platform fork for workflow complexity, pricing unit, AI-agent support, self-hosting, and owner type.
 - [Lindy vs Zapier vs n8n](/compare/lindy-vs-zapier-vs-n8n/) now captures the highest-intent assistant-versus-automation fork: delegated admin work, broad no-code SaaS automation, or technical workflow ownership.
 - A new `Gumloop vs Relevance AI` comparison would capture high-intent buyers choosing between AI-native workflow building and agent workforce deployment.
 - A new `n8n vs Gumloop` comparison would separate technical workflow control from modern agent-flow UX.
@@ -157,16 +159,17 @@ Do not claim that one automation platform is universally cheapest. n8n bills wor
 
 Do not recommend AI agent platforms without failure planning. Production workflows need owners, logs, alerts, credentials hygiene, approvals, retry behavior, and a rollback plan.
 
-Do not leave this category stale. Automation tools are adding MCP, agent builders, AI workflow credits, and new pricing units quickly. A page with April 2026 prices or old "6,000 apps" language can mislead buyers.
+Do not leave this category stale. Automation tools are adding MCP, agent builders, AI workflow credits, and new pricing units quickly. A page with old prices or stale app-count language can mislead buyers.
 
 ## Sources
 
-- [n8n pricing](https://n8n.io/pricing/) (verified 2026-05-13)
-- [n8n AI documentation](https://docs.n8n.io/advanced-ai/) (verified 2026-05-13)
-- [Zapier pricing](https://zapier.com/pricing) (verified 2026-06-04)
-- [Zapier AI](https://zapier.com/ai) (verified 2026-06-04)
-- [Make pricing](https://www.make.com/en/pricing) (verified 2026-06-04)
-- [Make AI Agents](https://www.make.com/en/ai-agents) (verified 2026-06-04)
+- [n8n pricing](https://n8n.io/pricing/) (verified 2026-06-05)
+- [n8n AI documentation](https://docs.n8n.io/advanced-ai/) (verified 2026-06-05)
+- [n8n AI Agent node documentation](https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/) (verified 2026-06-05)
+- [Zapier pricing](https://zapier.com/pricing) (verified 2026-06-05)
+- [Zapier AI](https://zapier.com/ai) (verified 2026-06-05)
+- [Make pricing](https://www.make.com/en/pricing) (verified 2026-06-05)
+- [Make AI Agents](https://www.make.com/en/ai-agents) (verified 2026-06-05)
 - [Make pricing adjustments](https://help.make.com/adjustments-to-plans-and-pricing) (verified 2026-06-04)
 - [Gumloop pricing](https://www.gumloop.com/pricing) (verified 2026-06-02)
 - [Gumloop docs](https://docs.gumloop.com/) (verified 2026-06-02)
@@ -192,8 +195,8 @@ Do not leave this category stale. Automation tools are adding MCP, agent builder
 - [Eightfold AI Interview Companion launch](https://eightfold.ai/company/press/press-releases/eightfold-ai-expands-talent-agents-across-the-full-interview-journey-introducing-ai-interview-companion-and-new-interview-capabilities/) (verified 2026-06-02)
 - [hireEZ recruiting platform](https://www.hireez.com/platform/) (verified 2026-06-02)
 - [Ada platform](https://www.ada.cx/platform) (verified 2026-06-01)
-- [Intercom pricing](https://www.intercom.com/pricing) (verified 2026-06-04)
-- [Fin AI Agent pricing](https://fin.ai/pricing) (verified 2026-06-04)
+- [Intercom pricing](https://www.intercom.com/pricing) (verified 2026-06-05)
+- [Fin AI Agent pricing](https://fin.ai/pricing) (verified 2026-06-05)
 - [Microsoft Build 2026 Work IQ and Foundry agent stack](https://blogs.microsoft.com/blog/2026/06/02/microsoft-build-2026-be-yourself-at-work/) (verified 2026-06-03)
 - [Microsoft Work IQ APIs](https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/02/announcing-the-new-work-iq-apis/) (verified 2026-06-03)
 - [GitHub Copilot SDK GA](https://github.blog/changelog/2026-06-02-copilot-sdk-is-now-generally-available/) (verified 2026-06-03)
@@ -210,8 +213,8 @@ Do not leave this category stale. Automation tools are adding MCP, agent builder
 - [Helicone platform docs](https://docs.helicone.ai/getting-started/platform-overview) (verified 2026-06-02)
 - [Clay pricing](https://www.clay.com/pricing) (verified 2026-06-04)
 - [Clay integrations](https://www.clay.com/integrations) (verified 2026-06-04)
-- [Instantly pricing](https://instantly.ai/pricing) (verified 2026-06-04)
-- [Instantly SuperSearch help](https://help.instantly.ai/en/articles/11364248-supersearch) (verified 2026-06-04)
+- [Instantly pricing](https://instantly.ai/pricing) (verified 2026-06-05)
+- [Instantly SuperSearch help](https://help.instantly.ai/en/articles/11364248-supersearch) (verified 2026-06-05)
 - [ClickUp pricing](https://clickup.com/pricing) (verified 2026-06-02)
 - [ClickUp Brain](https://clickup.com/ai) (verified 2026-06-02)
 - [Manus pricing](https://manus.im/pricing) (verified 2026-05-24)

@@ -3863,7 +3863,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "instantly-email",
@@ -3872,7 +3872,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "instantly-leads",
@@ -3881,7 +3881,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "instantly-official",
@@ -3890,7 +3890,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "intercom-fin",
@@ -3899,7 +3899,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "intercom-official",
@@ -3908,7 +3908,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "intercom-pricing",
@@ -3917,7 +3917,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "invideo-ai",
@@ -4797,7 +4797,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "make-apps",
@@ -4824,7 +4824,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "make-pricing-adjustments",
@@ -5280,7 +5280,8 @@
       "url": "https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-05"
     },
     {
       "id": "n8n-docs",
@@ -5288,7 +5289,8 @@
       "url": "https://docs.n8n.io",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-05"
     },
     {
       "id": "n8n-github",
@@ -5296,7 +5298,8 @@
       "url": "https://github.com/n8n-io/n8n",
       "type": "repository",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-05"
     },
     {
       "id": "n8n-pricing",
@@ -5304,7 +5307,8 @@
       "url": "https://n8n.io/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-05"
     },
     {
       "id": "nanochat-official",
@@ -8123,7 +8127,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "zapier-apps",
@@ -8132,7 +8136,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "zapier-pricing",
@@ -8141,7 +8145,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "zed-pricing",
