@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "Free (chat) / Usage-based (V4-Flash from $0.14/M input; V4-Pro quarter-price from $0.435/M input)"
 status: active
 launched: 2023-07
-last_updated: 2026-06-02
-last_verified: 2026-06-02
+last_updated: 2026-06-05
+last_verified: 2026-06-05
 update_frequency: quarterly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: "https://api-docs.deepseek.com/quick_start/pricing"
     source_label: "DeepSeek API pricing docs"
     source_id: deepseek-api-pricing
-    verified_at: 2026-06-02
+    verified_at: 2026-06-05
     volatility: high
     confidence: high
     next_review_at: 2026-07-02
@@ -40,7 +40,7 @@ facts:
     source: "https://api-docs.deepseek.com/quick_start/pricing"
     source_label: "DeepSeek API pricing docs"
     source_id: deepseek-api-pricing
-    verified_at: 2026-06-02
+    verified_at: 2026-06-05
     volatility: high
     confidence: high
     next_review_at: 2026-07-02
@@ -49,7 +49,7 @@ facts:
     source: "https://api-docs.deepseek.com/quick_start/pricing"
     source_label: "DeepSeek API pricing docs"
     source_id: deepseek-api-pricing
-    verified_at: 2026-06-02
+    verified_at: 2026-06-05
     volatility: high
     confidence: high
     next_review_at: 2026-07-02
@@ -58,7 +58,7 @@ facts:
     source: "https://chat.deepseek.com"
     source_label: "DeepSeek Chat"
     source_id: deepseek-chat
-    verified_at: 2026-06-02
+    verified_at: 2026-06-05
     volatility: high
     confidence: high
     next_review_at: 2026-07-02
@@ -67,7 +67,7 @@ facts:
     source: "https://api-docs.deepseek.com/quick_start/pricing"
     source_label: "DeepSeek API pricing docs"
     source_id: deepseek-api-pricing
-    verified_at: 2026-06-02
+    verified_at: 2026-06-05
     volatility: high
     confidence: high
     next_review_at: 2026-07-02
@@ -76,7 +76,7 @@ facts:
     source: "https://api-docs.deepseek.com/quick_start/pricing"
     source_label: "DeepSeek API pricing docs"
     source_id: deepseek-api-pricing
-    verified_at: 2026-06-02
+    verified_at: 2026-06-05
     volatility: high
     confidence: high
     next_review_at: 2026-07-02
@@ -85,7 +85,7 @@ facts:
     source: "https://chat.deepseek.com"
     source_label: "DeepSeek Chat"
     source_id: deepseek-chat
-    verified_at: 2026-06-02
+    verified_at: 2026-06-05
     volatility: low
     confidence: high
   video_generation:
@@ -93,7 +93,7 @@ facts:
     source: "https://chat.deepseek.com"
     source_label: "DeepSeek Chat"
     source_id: deepseek-chat
-    verified_at: 2026-06-02
+    verified_at: 2026-06-05
     volatility: low
     confidence: high
   real_time_voice:
@@ -101,7 +101,7 @@ facts:
     source: "https://chat.deepseek.com"
     source_label: "DeepSeek Chat"
     source_id: deepseek-chat
-    verified_at: 2026-06-02
+    verified_at: 2026-06-05
     volatility: low
     confidence: high
   web_browsing:
@@ -109,7 +109,7 @@ facts:
     source: "https://chat.deepseek.com"
     source_label: "DeepSeek Chat"
     source_id: deepseek-chat
-    verified_at: 2026-06-02
+    verified_at: 2026-06-05
     volatility: high
     confidence: high
     next_review_at: 2026-07-02
@@ -118,7 +118,7 @@ facts:
     source: "https://api-docs.deepseek.com/quick_start/pricing"
     source_label: "DeepSeek API pricing docs"
     source_id: deepseek-api-pricing
-    verified_at: 2026-06-02
+    verified_at: 2026-06-05
     volatility: medium
     confidence: high
   enterprise_controls:
@@ -126,7 +126,7 @@ facts:
     source: "https://api-docs.deepseek.com/quick_start/pricing"
     source_label: "DeepSeek API pricing docs"
     source_id: deepseek-api-pricing
-    verified_at: 2026-06-02
+    verified_at: 2026-06-05
     volatility: medium
     confidence: high
   data_retention_or_privacy:
@@ -134,7 +134,7 @@ facts:
     source: "https://chat.deepseek.com"
     source_label: "DeepSeek Chat"
     source_id: deepseek-chat
-    verified_at: 2026-06-02
+    verified_at: 2026-06-05
     volatility: medium
     confidence: high
   open_source_or_local:
@@ -142,7 +142,7 @@ facts:
     source: "https://huggingface.co/deepseek-ai"
     source_label: "DeepSeek Hugging Face organization"
     source_id: deepseek-huggingface
-    verified_at: 2026-06-02
+    verified_at: 2026-06-05
     volatility: medium
     confidence: high
   best_for:
@@ -150,7 +150,7 @@ facts:
     source: "https://api-docs.deepseek.com/quick_start/pricing"
     source_label: "DeepSeek API pricing docs"
     source_id: deepseek-api-pricing
-    verified_at: 2026-06-02
+    verified_at: 2026-06-05
     volatility: medium
     confidence: high
   watch_out_for:
@@ -158,7 +158,7 @@ facts:
     source: "https://api-docs.deepseek.com/quick_start/pricing"
     source_label: "DeepSeek API pricing docs"
     source_id: deepseek-api-pricing
-    verified_at: 2026-06-02
+    verified_at: 2026-06-05
     volatility: high
     confidence: high
     next_review_at: 2026-07-02
@@ -227,6 +227,13 @@ price_history:
     source_label: "Source"
     source_id: deepseek-api-pricing
     note: "DeepSeek pricing docs now say the V4-Pro promo ended May 31 and the official price was adjusted to one-quarter of the original price starting June 1, leaving $0.435/M cache-miss input, $0.003625/M cache-hit input, and $0.87/M output as the current listed rates."
+  - date: 2026-06-05
+    plan: "V4 API recheck"
+    price: "V4-Flash $0.14/$0.28; V4-Pro $0.435/$0.87 per MTok"
+    source: "https://api-docs.deepseek.com/quick_start/pricing"
+    source_label: "Source"
+    source_id: deepseek-api-pricing
+    note: "Rechecked after the DeepSeek vs Gemini/Mistral/Qwen comparison refresh. Official docs still list V4-Flash and V4-Pro with 1M context, 384K max output, cache-hit pricing, and July 24 deprecation for legacy deepseek-chat/deepseek-reasoner aliases."
 ---
 
 # DeepSeek
@@ -263,7 +270,7 @@ Related coverage: [AI Industry Roundup, April 24](/news/2026-04-24-ai-industry-r
 | **Open weights** | V3, V3.2, and R1 on Hugging Face · Apache-compatible for V3 family. V4 weights status not confirmed on the pricing page. |
 | **Compliance posture** | Chinese company · GDPR concerns flagged by Berlin DPA · U.S. export-control scrutiny ongoing |
 
-Every data point above was verified on 2026-06-02 against [DeepSeek API docs](https://api-docs.deepseek.com/quick_start/pricing).
+Every data point above was verified on 2026-06-05 against [DeepSeek API docs](https://api-docs.deepseek.com/quick_start/pricing).
 
 ## What it actually is
 
@@ -302,7 +309,7 @@ API pricing via [api-docs.deepseek.com](https://api-docs.deepseek.com/quick_star
 | `deepseek-v4-pro` (quarter-price after June 1 adjustment) | $0.435/M | $0.003625/M | $0.87/M | Premium reasoning runs and large agentic workloads |
 | New account credit | 5M free tokens | n/a | n/a | One-time grant on registration |
 
-*Prices verified 2026-06-02 via [DeepSeek API pricing](https://api-docs.deepseek.com/quick_start/pricing). V4-Pro pricing now reflects DeepSeek's June 1 adjustment to one-quarter of the original price after the May promotion ended. Cache-hit input was cut to one-tenth of launch pricing on April 26, 2026. Thinking mode is supported by default on both V4 models and generates additional reasoning tokens, so effective cost per task is higher than the raw input figure suggests.*
+*Prices verified 2026-06-05 via [DeepSeek API pricing](https://api-docs.deepseek.com/quick_start/pricing). V4-Pro pricing now reflects DeepSeek's June 1 adjustment to one-quarter of the original price after the May promotion ended. Cache-hit input was cut to one-tenth of launch pricing on April 26, 2026. Thinking mode is supported by default on both V4 models and generates additional reasoning tokens, so effective cost per task is higher than the raw input figure suggests.*
 
 ## Against the alternatives
 
@@ -332,7 +339,7 @@ API pricing via [api-docs.deepseek.com](https://api-docs.deepseek.com/quick_star
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-02 against [DeepSeek API docs](https://api-docs.deepseek.com/quick_start/pricing), the [DeepSeek-R1 paper](https://arxiv.org/abs/2501.12948), [chat.deepseek.com](https://chat.deepseek.com), [V4 preview coverage](/news/2026-04-24-deepseek-v4-preview-release/), and [DeepSeek V4-Pro price-cut coverage](/news/2026-04-27-deepseek-v4-pro-price-cut/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-05 against [DeepSeek API docs](https://api-docs.deepseek.com/quick_start/pricing), the [DeepSeek-R1 paper](https://arxiv.org/abs/2501.12948), [chat.deepseek.com](https://chat.deepseek.com), [V4 preview coverage](/news/2026-04-24-deepseek-v4-preview-release/), and [DeepSeek V4-Pro price-cut coverage](/news/2026-04-27-deepseek-v4-pro-price-cut/).
 
 ## FAQ
 
@@ -353,7 +360,7 @@ For regulated industries, no. The Berlin DPA flagged the app as non-compliant wi
 
 ## Sources
 
-- [DeepSeek API Pricing Docs](https://api-docs.deepseek.com/quick_start/pricing): current per-token rates, V4-Flash and V4-Pro models, and cache discounts verified 2026-06-02
+- [DeepSeek API Pricing Docs](https://api-docs.deepseek.com/quick_start/pricing): current per-token rates, V4-Flash and V4-Pro models, and cache discounts verified 2026-06-05
 - [DeepSeek-R1 ArXiv paper](https://arxiv.org/abs/2501.12948): benchmark results and architecture
 - [chat.deepseek.com](https://chat.deepseek.com): consumer chat interface
 - [DeepSeek V4 preview coverage](/news/2026-04-24-deepseek-v4-preview-release/): April 24, 2026 preview release note

@@ -1868,7 +1868,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "deepseek-api-changelog",
@@ -1895,7 +1895,7 @@
       "type": "repository",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "descript-changelog",
@@ -2942,6 +2942,15 @@
       "trust_tier": "primary",
       "volatility": "high",
       "last_checked": "2026-05-24"
+    },
+    {
+      "id": "google-gemini-35-announcement",
+      "label": "Google Gemini 3.5 announcement",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-05"
     },
     {
       "id": "google-gemini-docs",
@@ -5043,7 +5052,7 @@
       "type": "repository",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "mistral-model-docs",
@@ -5052,11 +5061,11 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "trust_tier": "primary",
-      "last_checked": "2026-06-04",
+      "last_checked": "2026-06-05",
       "id": "mistral-models-docs",
       "label": "Mistral model overview",
       "url": "https://docs.mistral.ai/models/overview",
@@ -5070,7 +5079,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "mistral-search-toolkit",
@@ -5079,7 +5088,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "modal-official",
@@ -6005,7 +6014,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-10"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "qwen-official",
@@ -6014,7 +6023,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "qwen-pricing",
@@ -6023,7 +6032,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "qwencloud-qwen37-max",
@@ -6032,7 +6041,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "qwencloud-pricing",
@@ -6041,7 +6050,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "qwencloud-model-releases",
@@ -6050,7 +6059,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "read-ai-official",
