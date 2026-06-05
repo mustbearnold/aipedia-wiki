@@ -30,9 +30,9 @@ As of June 4, 2026, start with the job:
 
 **Use [Canva](/tools/canva/) when non-designers need finished creative fast.** Canva AI 2.0 is built across Canva's Visual Suite and supports conversational creation, editable layouts, on-brand generation, AI images, AI video, Magic Write, resizing, background tools, and business controls. It is the safest first stop for marketers, creators, teachers, small businesses, and teams that need to publish polished content without a design department.
 
-**Use [Figma](/tools/figma/) when design quality, design systems, multiplayer review, and handoff matter.** Figma's pricing page now lists AI add-ons, daily/monthly AI credits by plan, Figma Make, Figma Sites, Dev Mode, MCP support, libraries, variables, governance, and enterprise seats. The June 3 Figma Make model check lists Gemini 3 Flash, Gemini 3.1 Pro, Claude Sonnet 4.6, Claude Opus 4.7, and GPT-5.5 as selectable options, with default-model and credit-burn caveats. Pick Figma when the artifact has to survive design critique and developer handoff, not just look plausible in a generator.
+**Use [Figma](/tools/figma/) when design quality, design systems, multiplayer review, and handoff matter.** Figma's June 5 pricing check lists AI add-ons, daily/monthly AI credits by plan, Figma Make, Figma Sites, Dev Mode, MCP support, libraries, variables, governance, and enterprise seats. The June 5 model-selection check confirms Figma Make has multiple selectable non-default models, a default-model caveat, and credit-burn caveats. Pick Figma when the artifact has to survive design critique and developer handoff, not just look plausible in a generator.
 
-**Use [Midjourney](/tools/midjourney/) when the job is visual ideation, art direction, concept imagery, or campaign moodboards.** Midjourney's current official plans are subscriptions built around generation capacity and GPU time, so treat it as an ideation engine, not a product design system or layout production workflow.
+**Use [Midjourney](/tools/midjourney/) when the job is visual ideation, art direction, concept imagery, or campaign moodboards.** Midjourney's June 5 official plan check keeps Basic, Standard, Pro, and Mega as subscriptions built around generation capacity and GPU time, with V8.1 documented as the current newer image model. Treat it as an ideation engine, not a product design system or layout production workflow.
 
 **Use [Adobe Firefly](/tools/adobe-firefly/) when Adobe-native image, vector, and Creative Cloud production matters.** Firefly plans and Creative Cloud bundles are credit-aware, so the buying question is not just "Can it generate an image?" but whether it fits Photoshop, Illustrator, Express, team review, and commercial creative workflows.
 
@@ -44,7 +44,7 @@ As of June 4, 2026, start with the job:
 
 **Use [Bolt.new](/tools/bolt/) when the buyer wants a browser app builder with an execution environment.** Bolt's June 1 pricing check lists Free with 300K daily tokens and 1M monthly tokens, Pro at $25/month, Teams at $30/month per member, and Enterprise custom. It is useful when the buyer wants to build and run in the browser, but token usage and production cleanup still matter.
 
-**Use [Google Stitch](/tools/google-stitch/) as an experimental vibe-design canvas, not a procurement-safe design system yet.** Google's March 2026 Stitch update describes an AI-native software design canvas with natural-language UI creation, an infinite canvas, design agents, voice interaction, interactive prototypes, DESIGN.md, MCP, SDK, and developer-tool exports. Treat access, quotas, and production fit as moving Google Labs facts that should be verified in the product before a team depends on them.
+**Use [Google Stitch](/tools/google-stitch/) as an experimental vibe-design canvas, not a procurement-safe design system yet.** Google's March 2026 Stitch update describes an AI-native software design canvas with natural-language UI creation, an infinite canvas, design agents, voice interaction, interactive prototypes, DESIGN.md, MCP, SDK, and developer-tool exports. Google's May 19 update adds real-time Stitch Agent design, AI Studio links, Antigravity export, and Netlify publishing paths. Treat access, quotas, and production fit as moving Google Labs facts that should be verified in the product before a team depends on them.
 
 **Use [Framer AI](/tools/framer-ai/) when the job is a marketing site, landing page, portfolio, or polished web presence rather than a full app.** Framer's June 2 pricing check keeps Free, Basic at $10/month annual, Pro at $30/month annual, Scale at $100/month annual, and Enterprise custom. The important buyer split is website publishing and CMS limits, not app backend generation.
 
@@ -105,7 +105,7 @@ Midjourney pricing is subscription and generation-capacity based. Its official p
 
 Adobe Firefly pricing is plan and credit based. Its official plans page separates free access, Firefly plans, and Creative Cloud Pro paths, so verify the current credit rules and bundle before buying for a team.
 
-Google Stitch's official March 2026 announcement is product-focused, not a durable pricing table. Treat its access and quotas as volatile until Google publishes stable commercial terms.
+Google Stitch's official March and May 2026 updates are product-focused, not durable pricing tables. Treat its access and quotas as volatile until Google publishes stable commercial terms.
 
 Framer is site-plan based. The June 2 public pricing check lists Free, Basic, Pro, Scale, and Enterprise, with Basic at $10/month annual, Pro at $30/month annual, and Scale at $100/month annual. Verify page, CMS collection, CMS item, bandwidth, and collaboration needs before moving a client site.
 
@@ -117,7 +117,7 @@ Do not call every design tool an app builder. Canva and Figma can produce AI-ass
 
 Do not quote retired v0 public pricing. The current public v0 pricing page lists Free, Team, Business, and Enterprise plus token pricing.
 
-Do not claim Stitch has a stable buyer plan or fixed quota unless the current official product surface says so. Google's current public source for this refresh is the March 2026 Stitch article, not a pricing table.
+Do not claim Stitch has a stable buyer plan or fixed quota unless the current official product surface says so. Google's current public sources for this refresh are the March 2026 Stitch article, the May 19 real-time design update, and the Labs product surface, not a pricing table.
 
 Do not publish unsourced model-routing or model-version claims as if they are confirmed product facts for this category. Model routing changes quickly and should be sourced per tool page, not invented in category copy.
 
@@ -128,7 +128,7 @@ Do not make a wide table the only mobile experience. Mobile buyers need top pick
 - [Lovable vs Bolt.new vs v0](/compare/lovable-vs-bolt-vs-v0/) should be rebuilt first because it is the highest-intent app-builder comparison in this category and still has stale pricing and scope language.
 - [ChatGPT vs Lovable](/compare/chatgpt-vs-lovable/) should stay current because founders often confuse the planning assistant with the app-builder workspace.
 - [Best Canva AI Alternatives](/guides/canva-ai-alternatives/) is now refreshed and should stay in the design money-page rotation because it separates Canva replacement intent by buyer job: Figma for product design, Firefly for Adobe production, Midjourney for ideation, Magnific (the Freepik successor brand as of May 5) for creator assets, and Recraft/Ideogram for text and vector-heavy brand work.
-- [Figma AI vs v0](/compare/figma-vs-v0/) should be rebuilt around design-system workflow versus Vercel-native implementation.
+- [Figma vs v0](/compare/figma-vs-v0/) is now refreshed around design-system workflow versus Vercel-native implementation, and should stay current because it captures high-intent design-to-code buyers.
 - [Canva AI vs v0](/compare/canva-vs-v0/) should be rebuilt around non-designer creative production versus web-app output.
 - [Google Stitch vs v0](/compare/google-stitch-vs-v0/) should be rebuilt around vibe-design exploration versus Vercel app-building workflow.
 - A new guide for "best AI app builder" should separate founder MVP, Vercel-native UI, browser IDE, design-to-code, and enterprise governance paths.
@@ -146,14 +146,16 @@ Do not make a wide table the only mobile experience. Mobile buyers need top pick
 - [Canva pricing](https://www.canva.com/pricing/) (verified 2026-06-02)
 - [Anthropic Claude Design launch](https://www.anthropic.com/news/claude-design-anthropic-labs) (verified 2026-06-02)
 - [Claude pricing](https://claude.com/pricing) (verified 2026-06-02)
-- [Figma pricing](https://www.figma.com/pricing/) (verified 2026-06-03)
-- [Figma AI credits](https://help.figma.com/hc/en-us/articles/33459875669015-How-AI-credits-work) (verified 2026-06-03)
-- [Figma Make model selection](https://help.figma.com/hc/en-us/articles/36400680326551-Select-an-AI-model-to-use-in-Figma-Make) (verified 2026-06-03)
-- [Create and edit a Figma Make file](https://help.figma.com/hc/en-us/articles/31304485164695-Create-and-edit-a-Figma-Make-file) (verified 2026-06-03)
-- [Midjourney plans](https://docs.midjourney.com/docs/plans) (verified 2026-05-13)
+- [Figma pricing](https://www.figma.com/pricing/) (verified 2026-06-05)
+- [Figma AI credits](https://help.figma.com/hc/en-us/articles/33459875669015-How-AI-credits-work) (verified 2026-06-05)
+- [Figma Make model selection](https://help.figma.com/hc/en-us/articles/36400680326551-Select-an-AI-model-to-use-in-Figma-Make) (verified 2026-06-05)
+- [Create and edit a Figma Make file](https://help.figma.com/hc/en-us/articles/31304485164695-Create-and-edit-a-Figma-Make-file) (verified 2026-06-05)
+- [Midjourney plans](https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans) (verified 2026-06-05)
+- [Midjourney version docs](https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version) (verified 2026-06-05)
 - [Adobe Firefly plans](https://www.adobe.com/products/firefly/plans) (verified 2026-05-13)
-- [Google Stitch official site](https://stitch.withgoogle.com/) (verified 2026-06-02)
-- [Google Stitch announcement](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/) (verified 2026-06-02)
+- [Google Stitch official site](https://stitch.withgoogle.com/) (verified 2026-06-05)
+- [Google Stitch announcement](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/) (verified 2026-06-05)
+- [Google Stitch real-time update](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-updates/) (verified 2026-06-05)
 - [Framer pricing](https://www.framer.com/pricing) (verified 2026-06-02)
 - [Lovable pricing](https://lovable.dev/pricing) (verified 2026-06-05)
 - [Lovable plans and credits](https://docs.lovable.dev/introduction/plans-and-credits) (verified 2026-06-05)

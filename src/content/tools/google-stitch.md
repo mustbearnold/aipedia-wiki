@@ -10,8 +10,8 @@ pricing_model: free
 price_range: "Free while in Google Labs; public quotas and paid-tier timing not guaranteed"
 status: active
 launched: 2025-05
-last_updated: 2026-06-02
-last_verified: 2026-06-02
+last_updated: 2026-06-05
+last_verified: 2026-06-05
 update_frequency: monthly
 seo_title: "Google Stitch: Features, Pricing & Review (June 2026)"
 meta_description: "Google Stitch is Google Labs' AI-native UI design canvas for prompt, image, text, and code-based interface exploration. Free in Labs; Google has not published durable public quotas or paid-tier timing."
@@ -33,7 +33,7 @@ facts:
     source: "https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/"
     source_label: "Google Stitch announcement"
     source_id: google-stitch-pricing
-    verified_at: 2026-06-02
+    verified_at: 2026-06-05
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -42,16 +42,16 @@ facts:
     source: "https://labs.google/stitch/"
     source_label: "Google Labs Stitch"
     source_id: google-stitch-labs
-    verified_at: 2026-06-02
+    verified_at: 2026-06-05
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
   pricing_anchor:
-    value: "Free inside Google Labs as of 2026-06-02, but Google public pages do not publish durable quota, billing, SLA, or paid-tier timing terms for procurement."
+    value: "Accessible through Google Labs as of 2026-06-05, but Google public pages do not publish durable quota, billing, SLA, or paid-tier timing terms for procurement."
     source: "https://stitch.withgoogle.com/"
     source_label: "Google Stitch official site"
     source_id: google-stitch-official
-    verified_at: 2026-06-02
+    verified_at: 2026-06-05
     next_review_at: 2026-08-13
     volatility: high
     confidence: medium
@@ -60,7 +60,7 @@ facts:
     source: "https://labs.google/stitch/"
     source_label: "Google Labs Stitch"
     source_id: google-stitch-labs
-    verified_at: 2026-06-02
+    verified_at: 2026-06-05
     next_review_at: 2026-08-13
     volatility: high
     confidence: medium
@@ -69,7 +69,7 @@ facts:
     source: "https://labs.google/stitch/"
     source_label: "Google Labs Stitch"
     source_id: google-stitch-labs
-    verified_at: 2026-06-02
+    verified_at: 2026-06-05
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -85,7 +85,7 @@ not_best_for:
   - motion prototyping or animation
   - non-Material brand systems
 quick_answer: >-
-  Google Stitch is Google Labs' AI-native UI design canvas. Prompt it, add images/text/code context, explore high-fidelity UI directions, stitch screens into interactive prototypes, and hand off through DESIGN.md, MCP/SDK, or developer-tool exports. Pick it for fast design exploration; skip for production design systems where Figma still wins.
+  Google Stitch is Google Labs' AI-native UI design canvas. Prompt it, add images/text/code context, explore high-fidelity UI directions, stitch screens into interactive prototypes, and hand off through DESIGN.md, MCP/SDK, AI Studio links, Antigravity export, Netlify publishing, or developer-tool exports. Pick it for fast design exploration; skip for production design systems where Figma still wins.
 price_history:
   - date: 2025-05-20
     plan: "Labs release"
@@ -101,18 +101,18 @@ price_history:
     source_label: "Google Stitch official site"
     source_id: google-stitch-pricing
     note: "Rechecked the public Google surface; do not treat third-party quota or paid-tier predictions as stable Google-published procurement terms."
-  - date: 2026-06-02
+  - date: 2026-06-05
     plan: "Labs"
     price: "Free"
     source: "https://stitch.withgoogle.com/"
     source_label: "Google Stitch official site"
     source_id: google-stitch-pricing
-    note: "Reconfirmed free Labs access from public Google surfaces. Google public pages do not publish stable quota, paid-tier timing, SLA, or billing terms."
+    note: "Reconfirmed Labs access and the May 19 real-time design update from public Google surfaces. Google public pages do not publish stable quota, paid-tier timing, SLA, or billing terms."
 ---
 
 # Google Stitch
 
-Google Labs' AI-native software design canvas. Launched at Google I/O 2025 and expanded in March 2026 into a vibe-design workspace for high-fidelity UI from natural language, images, text, or code context ([stitch.withgoogle.com](https://stitch.withgoogle.com/)).
+Google Labs' AI-native software design canvas. Launched at Google I/O 2025, expanded in March 2026 into a vibe-design workspace for high-fidelity UI from natural language, images, text, or code context, and updated on May 19, 2026 with real-time Stitch Agent design, AI Studio links, Antigravity export, and Netlify publishing paths.
 
 It is free while inside Google Labs, but Google has not published stable public quota, billing, SLA, or paid-tier timing terms. Treat any quoted generation allowance as an in-product or third-party observation to re-check before procurement.
 
@@ -140,7 +140,7 @@ It is free while inside Google Labs, but Google has not published stable public 
 | **Handoff** | DESIGN.md, MCP server, SDK, Skills, and exports to developer tools |
 | **Pricing caveat** | No durable public quota, SLA, billing, or paid-tier schedule published |
 
-Every data point above was verified against vendor sources on 2026-06-02. See Sources.
+Every data point above was verified against vendor sources on 2026-06-05. See Sources.
 
 ## What it actually is
 
@@ -148,7 +148,7 @@ A prompt-driven UI design canvas. Users describe an interface or business object
 
 Iteration is conversational. Follow-up prompts ("add bottom nav", "make the CTA larger", "switch to light theme") refine the output without redrawing from scratch.
 
-Export paths are part of the point, but they are still handoff surfaces, not production guarantees. Google describes DESIGN.md, MCP, SDK, Skills, and exports to developer tools like AI Studio and Antigravity; teams should test exact downstream quality before treating Stitch as production design infrastructure.
+Export paths are part of the point, but they are still handoff surfaces, not production guarantees. Google describes DESIGN.md, MCP, SDK, Skills, AI Studio links, Antigravity export, Netlify publishing, and developer-tool exports; teams should test exact downstream quality before treating Stitch as production design infrastructure.
 
 ## When to pick Google Stitch
 
@@ -173,7 +173,7 @@ Export paths are part of the point, but they are still handoff surfaces, not pro
 | Google Labs (current) | Free | Public Google pages do not publish durable quota, SLA, billing, or paid-tier timing terms |
 | Paid tiers | Not announced | Wait for Google-published commercial terms before budget planning |
 
-*Verified 2026-06-02 via [Google Stitch](https://stitch.withgoogle.com/) and the [Google Labs announcement](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/). Third-party quota and paid-tier claims are intentionally not treated as Google-published procurement facts.*
+*Verified 2026-06-05 via [Google Stitch](https://stitch.withgoogle.com/), the [March Google Labs announcement](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/), and the [May real-time design update](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-updates/). Third-party quota and paid-tier claims are intentionally not treated as Google-published procurement facts.*
 
 ## Against the alternatives
 
@@ -200,12 +200,12 @@ Export paths are part of the point, but they are still handoff surfaces, not pro
 
 ## Recent changes
 
-- **2026-06-02:** Public Google surfaces reconfirm Stitch as a free Labs product and March 2026 AI-native design canvas. Removed third-party quota and Q4 paid-tier predictions from AiPedia's durable buyer facts until Google publishes commercial terms.
+- **2026-06-05:** Public Google surfaces reconfirm Stitch as a Labs product with the March AI-native design canvas and May 19 real-time Stitch Agent update. Removed third-party quota and Q4 paid-tier predictions from AiPedia's durable buyer facts until Google publishes commercial terms.
 - **2026-04-17:** Competition tightened when [Anthropic launched Claude Design](/news/2026-04-17-anthropic-launches-claude-design/), a Pro+ prompt-to-prototype product that hands off to Claude Code for build. Stitch keeps an edge on Google's AI-native design-canvas direction; Claude Design pulls ahead when the brief is a slide deck, one-pager, or codebase-aware mockup.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis shown. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-02 against [stitch.withgoogle.com](https://stitch.withgoogle.com/) and the [Google Labs announcement](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis shown. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-05 against [stitch.withgoogle.com](https://stitch.withgoogle.com/), the [Google Labs announcement](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/), and the [Google Labs real-time design update](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-updates/).
 
 ## FAQ
 
@@ -216,7 +216,7 @@ Yes, while it remains in Google Labs on the public surface. Google does not publ
 [stitch.withgoogle.com](https://stitch.withgoogle.com/). The stitch.google.com URL is not the official home during the Labs phase.
 
 **Can Stitch export real code?**
-It can hand off designs into developer workflows. Google describes DESIGN.md, an MCP server, SDK, Skills, and exports to tools like AI Studio and Antigravity. Treat the result as scaffolding to review, not production code to ship without inspection.
+It can hand off designs into developer workflows. Google describes DESIGN.md, an MCP server, SDK, Skills, AI Studio links, Antigravity export, Netlify publishing, and developer-tool exports. Treat the result as scaffolding to review, not production code to ship without inspection.
 
 **Stitch vs Figma in 2026?**
 Stitch is a prompt-to-prototype accelerator. Figma is the production design system home. Different jobs. Teams often use Stitch for the first draft and move to Figma for handoff.
@@ -231,6 +231,7 @@ Gemini-powered prompt handling is reliable for layout, theme, and component-leve
 
 - [Google Stitch official site](https://stitch.withgoogle.com/): current Labs product surface and sign-up
 - [Google Labs Stitch announcement](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/): March 2026 canvas, design agent, DESIGN.md, MCP, SDK, voice, prototype, and export details
+- [Google Labs Stitch real-time update](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-updates/): May 19, 2026 Stitch Agent, AI Studio link, Antigravity export, and Netlify publishing update
 
 ## Related
 

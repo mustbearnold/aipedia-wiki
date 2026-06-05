@@ -5,10 +5,10 @@ title: AI Image Generation
 description: Current AI image tools for generation, photo editing, upscaling, product visuals, text-heavy graphics, creative ideation, and commercially safer Adobe workflows.
 tool_count: 18
 seo_title: "Best AI Image Tools & Photo Editors (June 2026)"
-meta_description: "Updated June 2, 2026: compare Midjourney, ChatGPT Images 2.0, Adobe Firefly, Canva, Flux, Ideogram, Recraft, AdCreative.ai, NightCafe, Rodin, and other AI image tools by image quality, photo-editing fit, paid-media workflow, pricing risk, text rendering, and workflow."
+meta_description: "Updated June 5, 2026: compare Midjourney, ChatGPT Images 2.0, Adobe Firefly, Canva, Flux, Ideogram, Recraft, AdCreative.ai, NightCafe, Rodin, and other AI image tools by image quality, photo-editing fit, paid-media workflow, pricing risk, text rendering, and workflow."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-02
-last_verified: 2026-06-02
+last_updated: 2026-06-05
+last_verified: 2026-06-05
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -26,7 +26,7 @@ top_picks:
 
 AiPedia rechecked Canva's AI/design workflow on June 2, 2026 and keeps this category split into five buyer jobs: aesthetic generation, conversational image editing, finished social/design assets, professional photo-production workflows, and 3D asset generation for games, AR/VR, printing, and prototyping. Note the May 5, 2026 Freepik rebrand to Magnific: shortlist references that previously named Freepik should now point at Magnific.
 
-[Midjourney](/tools/midjourney/) remains the aesthetic ideation benchmark. [ChatGPT](/tools/chatgpt/) and GPT Image 2 are the best default when image generation or editing is part of a broader assistant workflow. [Adobe Firefly](/tools/adobe-firefly/) is the safer first pick for Photoshop, Creative Cloud, Generative Fill, object removal, image expansion, and credit-aware commercial review. [Canva](/tools/canva/) wins when the image needs to become a finished post, ad, thumbnail, product graphic, or presentation asset quickly.
+[Midjourney](/tools/midjourney/) remains the aesthetic ideation benchmark, and the June 5 check keeps the buyer math anchored to Basic, Standard, Pro, and Mega subscriptions plus current V8.1 version docs. [ChatGPT](/tools/chatgpt/) and GPT Image 2 are the best default when image generation or editing is part of a broader assistant workflow. [Adobe Firefly](/tools/adobe-firefly/) is the safer first pick for Photoshop, Creative Cloud, Generative Fill, object removal, image expansion, and credit-aware commercial review. [Canva](/tools/canva/) wins when the image needs to become a finished post, ad, thumbnail, product graphic, or presentation asset quickly.
 
 For paid-media image production, [AdCreative.ai](/tools/adcreative/) is a narrow specialist rather than a general image model. The June 1 check found Starter at $39/month, Professional at $249/month, Ultimate at $999/month, Enterprise custom, and a seasonal discount on longer billing cycles. Use it when the image job is ad-variant production, brand-kit workflow, and creative scoring, not art direction.
 
@@ -50,7 +50,7 @@ The practical question is no longer "which model can make an image?" Most major 
 
 ## Market Dynamics (June 2026)
 
-- **Midjourney still owns the aesthetic lane.** It remains the reference for cinematic composition and stylized illustration.
+- **Midjourney still owns the aesthetic lane.** It remains the reference for cinematic composition and stylized illustration, with V8.1 now the current newer model documented in Midjourney's version docs.
 - **GPT Image 2 moved OpenAI back into the front tier.** It is strongest when the image needs reasoning, multilingual text, diagrams, maps, or direct ChatGPT integration.
 - **Flux remains the open-weight workflow choice.** LoRA fine-tuning, self-hosting, ComfyUI, and hosted APIs keep it important even when closed models improve, but license terms still need checking before commercial use.
 - **Ideogram is now a focused text-in-image specialist.** It still matters for logo and marketing workflows, and the June 2 pricing check moves buyer math to Plus $15/mo annual and Pro $42/mo annual rather than old Basic-era prices.
@@ -100,7 +100,8 @@ Image generation is approaching commodity. The real differentiation is workflow 
 
 ## Sources
 
-- [Midjourney plans](https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans) (verified 2026-05-13)
+- [Midjourney plans](https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans) (verified 2026-06-05)
+- [Midjourney version docs](https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version) (verified 2026-06-05)
 - [ChatGPT Images 2.0 announcement](https://openai.com/index/introducing-chatgpt-images-2-0/) (verified 2026-05-13)
 - [Adobe Firefly plans](https://www.adobe.com/products/firefly/plans.html) (verified 2026-05-13)
 - [Photoshop Generative Fill documentation](https://helpx.adobe.com/photoshop/desktop/create-open-import-images/create-images/edit-images-with-generative-fill.html) (verified 2026-05-13)

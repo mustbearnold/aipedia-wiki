@@ -2,6 +2,7 @@
 // Lists every active tool with category + tagline, every comparison, every
 // use-case guide. Intended for crawlers willing to ingest a larger manifest
 // to discover the full content map without parsing the sitemap.
+// Refresh metadata: 2026-06-05 Figma design comparison slice across Google Stitch, Lovable, Midjourney, and v0 plus Figma, Google Stitch, Midjourney, AI Design, AI Image, tools, comparison, category, homepage, source registry, and LLM maintenance.
 // Refresh metadata: 2026-06-05 Exa search API comparison slice across Kagi, Perplexity, and You.com plus Exa, Kagi, You.com, AI Search, tools, comparison, category, homepage, source registry, and LLM maintenance.
 // Refresh metadata: 2026-06-05 Elicit research comparison slice across nanochat, Perplexity, Scite, and Semantic Scholar plus Elicit, Perplexity, AI Research, AI Search, tools, comparison, category, homepage, source registry, and LLM maintenance.
 // Refresh metadata: 2026-06-05 ElevenLabs voice comparison slice across Fish Audio, HeyGen, Murf, Otter.ai, Resemble AI, Synthesia, Voxtral, and WellSaid plus Murf, WellSaid, AI Voice, tools, comparison, category, homepage, source registry, and LLM maintenance.

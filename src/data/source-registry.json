@@ -2317,7 +2317,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "figma-make-models",
@@ -2326,7 +2326,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "figma-make-create",
@@ -2335,7 +2335,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "figma-make-advanced",
@@ -2344,7 +2344,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "figma-plans-features",
@@ -2353,7 +2353,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "figma-billing",
@@ -2362,7 +2362,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "figma-pricing",
@@ -2371,7 +2371,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "fireflies-askfred",
@@ -3035,7 +3035,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "google-stitch-official",
@@ -3044,7 +3044,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "google-stitch-pricing",
@@ -3053,7 +3053,16 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-05"
+    },
+    {
+      "id": "google-stitch-realtime-update",
+      "label": "Google Stitch real-time design update",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-updates/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-05"
     },
     {
       "id": "google-workspace-ai",
@@ -5002,7 +5011,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "midjourney-terms",
@@ -5011,7 +5020,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "midjourney-version-docs",
@@ -5020,7 +5029,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "midjourney-v8-alpha-update",
@@ -5029,7 +5038,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "minimax-official",
@@ -8368,7 +8377,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "microsoft-build-2026-work-iq",
