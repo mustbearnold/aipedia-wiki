@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$30/seat/month"
 status: active
 launched: 2019-01
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-05
+last_verified: 2026-06-05
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: "https://pitch.com/features"
     source_label: "Pitch features"
     source_id: pitch-features
-    verified_at: 2026-05-13
+    verified_at: 2026-06-05
     volatility: low
     confidence: high
   pricing_anchor:
@@ -39,8 +39,8 @@ facts:
     source: "https://pitch.com/pricing/us"
     source_label: "Pitch pricing"
     source_id: pitch-official
-    verified_at: 2026-05-13
-    next_review_at: 2026-08-13
+    verified_at: 2026-06-05
+    next_review_at: 2026-09-05
     volatility: high
     confidence: high
   ai_surface:
@@ -48,7 +48,7 @@ facts:
     source: "https://pitch.com/ai-presentation-maker"
     source_label: "Pitch AI"
     source_id: pitch-ai
-    verified_at: 2026-05-13
+    verified_at: 2026-06-05
     volatility: medium
     confidence: high
   collaboration_model:
@@ -56,7 +56,7 @@ facts:
     source: "https://pitch.com/features"
     source_label: "Pitch features"
     source_id: pitch-features
-    verified_at: 2026-05-13
+    verified_at: 2026-06-05
     volatility: low
     confidence: high
   watch_out_for:
@@ -64,12 +64,12 @@ facts:
     source: "https://pitch.com/pricing/us"
     source_label: "Pitch pricing"
     source_id: pitch-official
-    verified_at: 2026-05-13
+    verified_at: 2026-06-05
     volatility: medium
     confidence: high
 tags: [presentations, collaboration, slides, ai-writing, team-workflows, pitch-decks, real-time-editing]
-seo_title: "Pitch: Features, Pricing & Review (May 2026)"
-meta_description: "Pitch ships real-time multi-user editing, co-present slides, AI copy help, and unlimited decks on a free tier with 5 members. Plus $15, Team $23/seat, Business $30/seat. Verified May 2026."
+seo_title: "Pitch: Features, Pricing & Review (June 2026)"
+meta_description: "Pitch ships real-time multi-user editing, co-present slides, AI help, pitch rooms, and unlimited decks on free. Plus $15, Team $23/seat, Business $30/seat. Verified June 2026."
 author: "aipedia.wiki Editorial"
 best_for:
   - distributed teams iterating on decks daily
@@ -91,6 +91,14 @@ price_history:
     source_label: "Pitch pricing"
     source_id: pitch-official
     note: "Free, Plus $15/$13, Team $23/$19, Business $30/$25 verified unchanged. Co-present slides confirmed live on Team."
+  - date: 2026-06-05
+    plan: "All tiers"
+    price: "Unchanged"
+    source: "https://pitch.com/pricing/us"
+    source_label: "Pitch pricing"
+    source_id: pitch-official
+    verified_at: 2026-06-05
+    note: "Official pricing still lists Free, Plus $15 monthly/$13 yearly, Team $23 monthly/$19 yearly, Business $30 monthly/$25 yearly, and Enterprise contact-sales. AI credits rechecked against pricing and help-center docs."
 ---
 
 # Pitch
@@ -103,7 +111,7 @@ Free tier supports unlimited decks with up to 5 members. Paid tiers run $13 to $
 
 > **Pick Pitch if your deck work is a team sport.** The collaboration layer (live cursors, pinned comments, slide assignments, version history, analytics) is the deepest in this category. The free tier's unlimited decks and 5-member limit covers most small-team workflows before any upgrade decision.
 >
-> **Skip it if you are solo.** [Gamma](/tools/gamma/) ships faster prompt-to-deck generation at $10/mo for individual users, and the collaboration features Pitch charges for go unused.
+> **Skip it if you are solo.** [Gamma](/tools/gamma/) ships faster prompt-to-deck generation and browser-native URL output, and the collaboration features Pitch charges for may go unused.
 >
 > **Who pays which tier:** Free for small teams and founders, Plus $13/mo annual for solo pros who want unbranded exports, Team $19/seat/mo annual for 2-25 seat teams with shared pitch rooms and analytics, Business $25/seat/mo annual for larger orgs needing batch creation and unlimited guests.
 
@@ -121,10 +129,11 @@ Free tier supports unlimited decks with up to 5 members. Paid tiers run $13 to $
 | **Credit pricing** | Extra credits at $0.004 per credit |
 | **Live sharing** | Browser URL with view analytics |
 
-Every data point above was verified against vendor documentation on 2026-05-13. See Sources.
+Every data point above was verified against vendor documentation on 2026-06-05. See Sources.
 
-## Recent changes
+## Recent Changes
 
+- **2026-06-05:** Pricing, member caps, guest limits, pitch rooms, credit allowances, and $0.004 extra-credit pricing rechecked while refreshing the Decktopus vs Pitch comparison. Free remains $0 with up to 5 members and 100 one-time AI credits; Plus, Team, Business, and Enterprise positioning remains materially unchanged.
 - **2026-05-13:** Pricing, member caps, and credit allowances verified unchanged. Co-present slides confirmed as a Team-tier feature for seamless presentation handoff between collaborators. Free tier still uniquely uncapped on deck count in the category.
 
 ## What it actually is
@@ -144,7 +153,7 @@ The moat is workflow. Pitch rooms, custom domains, interactive embeds, co-presen
 
 ## When to pick something else
 
-- **Solo prompt-to-deck generation:** [Gamma](/tools/gamma/) at $10/mo ships a faster first draft and a browser-native URL output.
+- **Solo prompt-to-deck generation:** [Gamma](/tools/gamma/) ships a faster first draft and a browser-native URL output; confirm current live pricing before purchase.
 - **Pixel-clean PPTX export for enterprise delivery:** [Beautiful.ai](/tools/beautiful-ai/) exports cleaner on round-trip.
 - **Narrative-first long-form decks:** [Tome](/tools/tome/) was the reference point; Tome is shut down, so [Gamma](/tools/gamma/) is the working substitute.
 - **Design-system integration with a product team:** [Figma](/tools/figma/) Slides uses the same tokens the product uses.
@@ -162,7 +171,7 @@ Subscription pricing via [pitch.com/pricing/us](https://pitch.com/pricing/us).
 | Business | $30/seat | $25/seat | 2-200 | 9,000/seat/yr | Larger orgs, batch creation, unlimited guests |
 | Enterprise | Custom | Custom | 30+ | Custom | SSO, success manager, invoiced billing |
 
-*Prices verified 2026-05-13 via [Pitch pricing](https://pitch.com/pricing/us). Annual billing saves roughly 15 to 20%. Extra AI credits at $0.004 each. Team plan ships co-present slides; Business unlocks unlimited rooms, guests, and version history.*
+*Prices verified 2026-06-05 via [Pitch pricing](https://pitch.com/pricing/us). Annual billing saves roughly 15 to 20%. Extra AI credits at $0.004 each. Team plan ships co-present slides; Business unlocks unlimited rooms, guests, and version history.*
 
 ## Against the alternatives
 
@@ -187,7 +196,7 @@ Subscription pricing via [pitch.com/pricing/us](https://pitch.com/pricing/us).
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-05-13 against [Pitch pricing](https://pitch.com/pricing/us) and the [Free plan help center article](https://help.pitch.com/en/articles/9364575-pitch-s-free-plan).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-05 against [Pitch pricing](https://pitch.com/pricing/us), Pitch AI-credit documentation, and the [Free plan help center article](https://help.pitch.com/en/articles/9364575-pitch-s-free-plan).
 
 ## FAQ
 
@@ -218,4 +227,4 @@ Yes. Overage credits run $0.004 per credit across all paid plans.
 ## Related
 
 - **Category:** [AI Presentation Tools](/categories/ai-presentation/)
-- **Comparisons:** [Gamma vs Pitch](/compare/gamma-vs-pitch/) · [Beautiful.ai vs Pitch](/compare/beautiful-ai-vs-pitch/) · [Pitch vs Tome](/compare/pitch-vs-tome/) · [Pitch vs Presentations.AI](/compare/pitch-vs-presentations-ai/) · [Decktopus AI vs Pitch](/compare/decktopus-vs-pitch/)
+- **Comparisons:** [Decktopus AI vs Pitch](/compare/decktopus-vs-pitch/) · [Gamma vs Pitch](/compare/gamma-vs-pitch/) · [Beautiful.ai vs Pitch](/compare/beautiful-ai-vs-pitch/) · [Pitch vs Presentations.AI](/compare/pitch-vs-presentations-ai/)

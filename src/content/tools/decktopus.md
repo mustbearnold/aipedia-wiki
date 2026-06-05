@@ -11,8 +11,8 @@ pricing_model: paid
 price_range: $14.99-$34.99/user/month
 status: active
 launched: 2018-01
-last_updated: 2026-05-28
-last_verified: 2026-05-28
+last_updated: 2026-06-05
+last_verified: 2026-06-05
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -34,7 +34,7 @@ facts:
     source: "https://www.decktopus.com"
     source_label: "Decktopus official site"
     source_id: decktopus-official
-    verified_at: 2026-05-28
+    verified_at: 2026-06-05
     volatility: medium
     confidence: high
   workflow_surface:
@@ -42,7 +42,7 @@ facts:
     source: "https://www.decktopus.com"
     source_label: "Decktopus official site"
     source_id: decktopus-official
-    verified_at: 2026-05-28
+    verified_at: 2026-06-05
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -50,8 +50,8 @@ facts:
     source: "https://www.decktopus.com/pricing"
     source_label: "Decktopus pricing"
     source_id: decktopus-pricing
-    verified_at: 2026-05-28
-    next_review_at: 2026-08-28
+    verified_at: 2026-06-05
+    next_review_at: 2026-09-05
     volatility: high
     confidence: high
   export_surface:
@@ -59,7 +59,7 @@ facts:
     source: "https://www.decktopus.com"
     source_label: "Decktopus official site"
     source_id: decktopus-official
-    verified_at: 2026-05-28
+    verified_at: 2026-06-05
     volatility: medium
     confidence: medium
   watch_out_for:
@@ -67,11 +67,11 @@ facts:
     source: "https://www.decktopus.com"
     source_label: "Decktopus official site"
     source_id: decktopus-official
-    verified_at: 2026-05-28
+    verified_at: 2026-06-05
     volatility: medium
     confidence: high
 tags: [presentations, slides, ai-generation, forms, speaker-notes, automation, prompt-to-deck]
-seo_title: 'Decktopus AI: Features, Pricing & Review (May 2026)'
+seo_title: 'Decktopus AI: Features, Pricing & Review (June 2026)'
 meta_description: >-
   Decktopus AI generates presentations from prompts and adds forms, Q&A, analytics, custom domains, and AI credits. Pro is $14.99/mo annually; Business is $34.99/user/mo annually.
 author: aipedia.wiki Editorial
@@ -117,6 +117,22 @@ price_history:
     source_id: decktopus-pricing
     verified_at: 2026-05-28
     note: "Pricing unchanged. Annual billing $419.99/user/year. Re-verified against vendor pricing page on 2026-05-28."
+  - date: 2026-06-05
+    plan: "Pro"
+    price: "$14.99/mo billed annually"
+    source: "https://www.decktopus.com/pricing"
+    source_label: "Decktopus pricing"
+    source_id: decktopus-pricing
+    verified_at: 2026-06-05
+    note: "Pricing unchanged in the June 5 refresh. Official page lists 9,000 AI credits/year, about 300 AI presentations/year, and $179.99 billed annually."
+  - date: 2026-06-05
+    plan: "Business"
+    price: "$34.99/user/mo billed annually"
+    source: "https://www.decktopus.com/pricing"
+    source_label: "Decktopus pricing"
+    source_id: decktopus-pricing
+    verified_at: 2026-06-05
+    note: "Pricing unchanged in the June 5 refresh. Official page lists 12,000 AI credits/year, about 400 AI presentations/year for the organization, custom domain, slide analytics, webhook, and $419.99 billed annually."
 ---
 
 # Decktopus AI
@@ -146,9 +162,14 @@ That makes it less of a pure Gamma competitor and more of a "presentation plus l
 | **Enterprise** | Custom, including corporate-branded slides and branded AI setup |
 | **Cloud product** | Yes, Decktopus says it works on the cloud |
 
-Every data point above was re-verified against Decktopus's official pricing page on 2026-05-28. See Sources.
+Every data point above was re-verified against Decktopus's official pricing page on 2026-06-05. See Sources.
 
 AiPedia has an approved Decktopus affiliate link. Decktopus' public affiliate page lists a 50% commission and 60-day cookie; rankings and recommendations remain editorial.
+
+## Recent Changes
+
+- **2026-06-05:** Rechecked Decktopus pricing and FAQ while refreshing the Decktopus vs Gamma, Pitch, and Presentations.AI comparison slice. Pro remains $14.99/month billed annually with 9,000 AI credits/year. Business remains $34.99/user/month billed annually with 12,000 AI credits/year, custom domain, slide analytics, webhook, and organization features. The pricing FAQ still says AI deck creation costs 30 credits.
+- **2026-05-28:** Affiliate status and public affiliate terms were rechecked. AiPedia has an approved Decktopus affiliate link; editorial ranking remains independent.
 
 ## What it actually is
 
@@ -183,7 +204,7 @@ Subscription pricing via [decktopus.com/pricing](https://www.decktopus.com/prici
 | Business | $34.99/user/mo | 12,000/year | Teams needing analytics, custom domain, webhook, and organization controls |
 | Enterprise | Custom | Custom | Corporate-branded decks, custom layouts, branded AI setup |
 
-Prices verified 2026-05-28. Annual billing saves 40% vs monthly (Pro $179.99/year, Business $419.99/user/year). Monthly billing, promotions, taxes, and currency localization can change checkout totals.
+Prices verified 2026-06-05. Annual billing saves 40% vs monthly (Pro $179.99/year, Business $419.99/user/year). Monthly billing, promotions, taxes, and currency localization can change checkout totals.
 
 ## Failure Modes
 
@@ -197,7 +218,7 @@ Prices verified 2026-05-28. Annual billing saves 40% vs monthly (Pro $179.99/yea
 
 This page was produced by the aipedia.wiki editorial pipeline, an automated system that verifies tool details against primary sources and then applies the site scoring rubric. Scoring follows Utility, Value, Moat, and Longevity as explained at [/about/scoring/](https://aipedia.wiki/about/scoring/).
 
-Last verified 2026-05-28 against Decktopus's official pricing page, affiliate page, and public product materials.
+Last verified 2026-06-05 against Decktopus's official pricing page, affiliate page, and public product materials.
 
 ## FAQ
 

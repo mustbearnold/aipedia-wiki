@@ -1768,7 +1768,8 @@
       "url": "https://www.decktopus.com",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-05"
     },
     {
       "id": "decktopus-pricing",
@@ -1776,7 +1777,8 @@
       "url": "https://www.decktopus.com/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-05"
     },
     {
       "id": "deepgram-docs",
@@ -2136,7 +2138,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "elicit-plan-docs",
@@ -2670,7 +2672,8 @@
       "url": "https://gamma.app/features",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-05"
     },
     {
       "id": "gamma-official",
@@ -2679,7 +2682,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "gamma-api-docs",
@@ -2688,7 +2691,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "genspark-agents",
@@ -5734,7 +5737,8 @@
       "url": "https://pitch.com/ai-presentation-maker",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-05"
     },
     {
       "id": "pitch-features",
@@ -5742,7 +5746,8 @@
       "url": "https://pitch.com/features",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-05"
     },
     {
       "id": "pitch-official",
@@ -5750,7 +5755,8 @@
       "url": "https://pitch.com/pricing/us",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-05"
     },
     {
       "id": "pixverse-official",
@@ -5861,7 +5867,8 @@
       "url": "https://www.presentations.ai",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-05"
     },
     {
       "id": "presentations-ai-pricing",
@@ -5869,7 +5876,8 @@
       "url": "https://www.presentations.ai/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-05"
     },
     {
       "id": "prezi-official",

@@ -599,10 +599,8 @@ const tocItems = (headings ?? [])
       display: flex;
       gap: 6px;
       overflow-x: auto;
-      padding-bottom: 8px;
-      margin: 0 -18px;
-      padding-left: 18px;
-      padding-right: 18px;
+      margin: 0;
+      padding: 0 0 8px;
       scrollbar-width: none;
       -ms-overflow-style: none;
     }
@@ -611,6 +609,8 @@ const tocItems = (headings ?? [])
       flex: 0 0 auto;
       display: inline-flex;
       align-items: center;
+      justify-content: center;
+      max-width: min(260px, calc(100vw - 36px));
       padding: 6px 12px;
       min-height: 32px;
       border-radius: 999px;
@@ -620,7 +620,10 @@ const tocItems = (headings ?? [])
       font-size: 12.5px;
       font-weight: 500;
       text-decoration: none;
-      white-space: nowrap;
+      line-height: 1.2;
+      text-align: center;
+      white-space: normal;
+      overflow-wrap: anywhere;
       scroll-margin: 12px;
     }
     .gt-jump-chip:hover { background: var(--gt-surface-2); color: var(--gt-fg); }
