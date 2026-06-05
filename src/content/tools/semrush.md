@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$139.95-$499.95/month"
 status: active
 launched: 2008-01
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-05
+last_verified: 2026-06-05
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -33,7 +33,7 @@ facts:
     source: "https://www.semrush.com/features/"
     source_label: "Semrush features"
     source_id: semrush-features
-    verified_at: 2026-05-13
+    verified_at: 2026-06-05
     volatility: low
     confidence: high
   pricing_anchor:
@@ -41,7 +41,7 @@ facts:
     source: "https://www.semrush.com/pricing/"
     source_label: "Semrush pricing"
     source_id: semrush-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-06-05
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -50,7 +50,7 @@ facts:
     source: "https://www.semrush.com/features/"
     source_label: "Semrush features"
     source_id: semrush-features
-    verified_at: 2026-05-13
+    verified_at: 2026-06-05
     volatility: medium
     confidence: high
   competitive_position:
@@ -58,7 +58,7 @@ facts:
     source: "https://www.semrush.com/features/"
     source_label: "Semrush features"
     source_id: semrush-features
-    verified_at: 2026-05-13
+    verified_at: 2026-06-05
     volatility: medium
     confidence: high
   watch_out_for:
@@ -66,11 +66,11 @@ facts:
     source: "https://www.semrush.com/pricing/"
     source_label: "Semrush pricing"
     source_id: semrush-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-06-05
     volatility: medium
     confidence: high
 tags: [seo, keyword-research, backlinks, site-audit, competitor-analysis, ppc, ai-visibility, semrush-copilot, contentshake, ai-visibility-toolkit]
-seo_title: "Semrush: Features, Pricing & Review (May 2026)"
+seo_title: "Semrush: Features, Pricing & Review (June 2026)"
 meta_description: "Semrush is the broadest SEO platform with 55+ tools spanning keyword research, backlinks, site audit, PPC, social, and AI Visibility tracking. Pro $139.95, Guru $249.95, Business $499.95. Copilot included free."
 author: "aipedia.wiki Editorial"
 best_for:
@@ -83,7 +83,7 @@ not_best_for:
   - pure link-building specialists
   - users who want ContentShake AI at Pro tier
 quick_answer: >-
-  Semrush is the broadest SEO platform on the market. Pick Pro at $139.95 for most pros, Guru at $249.95 when you need ContentShake AI and historical data. Skip for backlink-first work (Ahrefs), budget solos, or single-channel tools.
+  Semrush is the broadest SEO platform on the market. Pick the classic SEO Toolkit when keyword, backlink, audit, and reporting workflows are enough; price Semrush One or AI Visibility Toolkit when AI-search visibility must sit beside SEO data. Skip for backlink-first work (Ahrefs), budget solos, or single-channel content optimizers.
 price_history:
   - date: 2026-03-15
     plan: "AI Visibility Toolkit"
@@ -105,14 +105,14 @@ price_history:
     source: "https://www.semrush.com/pricing/"
     source_label: "Source"
     source_id: semrush-pricing
-    note: "Re-verified May 2026. Pro $139.95, Guru $249.95, Business $499.95 all unchanged. AI Visibility Toolkit holds at $99/mo add-on."
+    note: "Historic May 2026 price checkpoint; June 5, 2026 refresh now treats Semrush One, AI Visibility Toolkit, and toolkit packaging as buyer-specific checkout items."
 ---
 
 # Semrush
 
 Semrush is the broadest SEO and digital marketing platform on the market. The suite spans 55+ tools across keyword research, backlink analysis, site audits, rank tracking, competitor intelligence, PPC research, and social.
 
-Semrush Copilot, AI Visibility Toolkit, and ContentShake AI bring generative AI into core workflows. The platform maintains 26.8B+ keywords and tens of trillions of backlinks indexed globally.
+Semrush Copilot, AI Visibility Toolkit, Semrush One, and ContentShake AI bring generative AI into core workflows. Current Semrush documentation separates classic SEO Toolkit, Semrush One, AI Visibility Toolkit, Content Toolkit, and other toolkits, so buyers should price the bundle that matches their actual workflow.
 
 ## System Verdict
 
@@ -137,7 +137,7 @@ Semrush Copilot, AI Visibility Toolkit, and ContentShake AI bring generative AI 
 | **Tool count** | 55+ across SEO · PPC · social · content · competitive intelligence |
 | **Pricing** | Pro $139.95 · Guru $249.95 · Business $499.95 · Enterprise custom |
 
-Every data point above was verified against vendor sources on 2026-05-13. See Sources.
+Every data point above was verified against vendor sources on 2026-06-05. See Sources.
 
 ## What it actually is
 
@@ -145,7 +145,7 @@ A publicly traded digital marketing platform (NYSE: SEMR) that bundles 55+ tools
 
 Core workflows run through Keyword Magic Tool (long-tail discovery), Backlink Analytics, Site Audit (up to 1M pages on Business), Position Tracking, Traffic Analytics, and the SEO Writing Assistant. PPC research spans keyword gap analysis, ad copy review, and display advertising insights across 150+ countries.
 
-AI integration sits across three layers. Semrush Copilot is a free AI advisor that monitors your projects and surfaces insights proactively across every paid tier. [AI Visibility Toolkit](https://www.semrush.com/ai-seo/overview/) tracks brand mentions in ChatGPT, Perplexity, Claude, Gemini, and Google AI Overviews as a $99/mo add-on, undercutting Ahrefs Brand Radar's per-platform pricing. ContentShake AI handles automated article generation, topic research, and includes a Chrome extension for writing SEO-optimized content directly in Google Docs.
+AI integration sits across several layers. Semrush One combines SEO and AI visibility for buyers who want one connected workflow. AI Visibility Toolkit can be evaluated separately from the classic SEO Toolkit. Content Toolkit handles topic ideas, briefs, article generation, optimization, Chrome extension workflow, and CMS publishing. Buyers should verify current pricing and limits before assuming a classic SEO plan includes every AI visibility feature they need.
 
 The moat is surface area. Ahrefs beats it on backlinks. Surfer beats it on content optimization depth. No competitor matches the total breadth.
 
@@ -185,7 +185,7 @@ Subscription pricing via [semrush.com/pricing](https://www.semrush.com/pricing/)
 | ContentShake AI (on Pro) | $60 | Article generation + Chrome extension (included in Guru+) |
 | Semrush Copilot | Free | AI advisor included on all paid tiers |
 
-*Prices verified 2026-05-13 via [semrush.com/pricing](https://www.semrush.com/pricing/) and [Semrush AI SEO overview](https://www.semrush.com/ai-seo/overview/). Annual billing saves ~17%.*
+*Classic SEO Toolkit prices last verified 2026-05-13. Semrush One, toolkit packaging, and AI visibility access were rechecked against current Semrush documentation on 2026-06-05; buyers should verify the live checkout and toolkit mix before procurement.*
 
 ## Against the alternatives
 
@@ -206,14 +206,14 @@ Subscription pricing via [semrush.com/pricing](https://www.semrush.com/pricing/)
 - **Backlink data lags Ahrefs.** Improved over time but still second in completeness and refresh cadence.
 - **Pro tier limits bite fast.** 500 keywords tracked and 5 projects constrain agencies or multi-site operators. Move to Guru or Business early.
 - **ContentShake AI is Guru+ or $60 add-on.** Pro users miss the full content-generation suite unless they pay extra.
-- **AI visibility is an add-on, not included.** $99/mo on top of the base plan to track ChatGPT, Perplexity, Claude, Gemini, and Google AI Overviews.
+- **AI visibility packaging needs verification.** AI visibility can be evaluated through Semrush One or the AI Visibility Toolkit; confirm the live toolkit mix, prompts, domains, and user limits before buying.
 - **API access locked to Business+.** Pro and Guru users cannot integrate data into custom reporting or internal dashboards.
 - **Pricing is in constant motion.** Semrush adjusts tier prices more frequently than Ahrefs. Long-term budgeting should assume ~10% annual increases.
 - **Dashboard density.** Reports and filters run deep. New users often cannot locate the specific view they need without training.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-05-13 against [semrush.com/pricing](https://www.semrush.com/pricing/), [Semrush AI SEO overview](https://www.semrush.com/ai-seo/overview/), and [Semrush investor filings](https://investors.semrush.com).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-05 against [Semrush One pricing](https://www.semrush.com/pricing/semrush-one/), [Semrush subscription plans and toolkits](https://www.semrush.com/kb/1011-subscriptions), and [Semrush AI Visibility features](https://www.semrush.com/kb/1626-ai-visibility-features).
 
 ## FAQ
 

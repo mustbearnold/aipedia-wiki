@@ -27,10 +27,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /compare/chatgpt-vs-phind/ | Comparison | Yes | frontmatter | src/content/comparisons/chatgpt-vs-phind.md |
 | 2026-05-13 | /compare/decktopus-vs-tome/ | Comparison | Yes | frontmatter | src/content/comparisons/decktopus-vs-tome.md |
 | 2026-05-13 | /compare/exa-vs-phind/ | Comparison | Yes | frontmatter | src/content/comparisons/exa-vs-phind.md |
-| 2026-05-13 | /compare/frase-vs-marketmuse/ | Comparison | Yes | frontmatter | src/content/comparisons/frase-vs-marketmuse.md |
-| 2026-05-13 | /compare/frase-vs-neuronwriter/ | Comparison | Yes | frontmatter | src/content/comparisons/frase-vs-neuronwriter.md |
-| 2026-05-13 | /compare/frase-vs-semrush/ | Comparison | Yes | frontmatter | src/content/comparisons/frase-vs-semrush.md |
-| 2026-05-13 | /compare/frase-vs-surfer-seo/ | Comparison | Yes | frontmatter | src/content/comparisons/frase-vs-surfer-seo.md |
 | 2026-05-13 | /compare/gamma-vs-pitch/ | Comparison | Yes | frontmatter | src/content/comparisons/gamma-vs-pitch.md |
 | 2026-05-13 | /compare/gamma-vs-presentations-ai/ | Comparison | Yes | frontmatter | src/content/comparisons/gamma-vs-presentations-ai.md |
 | 2026-05-13 | /compare/gamma-vs-tome/ | Comparison | Yes | frontmatter | src/content/comparisons/gamma-vs-tome.md |
@@ -70,9 +66,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /compare/kling-vs-seedance-vs-runway/ | Comparison | Yes | frontmatter | src/content/comparisons/kling-vs-seedance-vs-runway.md |
 | 2026-05-13 | /compare/kling-vs-synthesia/ | Comparison | Yes | frontmatter | src/content/comparisons/kling-vs-synthesia.md |
 | 2026-05-13 | /compare/lovable-vs-bolt-vs-v0/ | Comparison | Yes | frontmatter | src/content/comparisons/lovable-vs-bolt-vs-v0.md |
-| 2026-05-13 | /compare/marketmuse-vs-neuronwriter/ | Comparison | Yes | frontmatter | src/content/comparisons/marketmuse-vs-neuronwriter.md |
-| 2026-05-13 | /compare/marketmuse-vs-semrush/ | Comparison | Yes | frontmatter | src/content/comparisons/marketmuse-vs-semrush.md |
-| 2026-05-13 | /compare/marketmuse-vs-surfer-seo/ | Comparison | Yes | frontmatter | src/content/comparisons/marketmuse-vs-surfer-seo.md |
 | 2026-05-13 | /compare/midjourney-vs-flux/ | Comparison | Yes | frontmatter | src/content/comparisons/midjourney-vs-flux.md |
 | 2026-05-13 | /compare/mistral-ai-vs-qwen/ | Comparison | Yes | frontmatter | src/content/comparisons/mistral-ai-vs-qwen.md |
 | 2026-05-13 | /compare/mubert-vs-suno/ | Comparison | Yes | frontmatter | src/content/comparisons/mubert-vs-suno.md |
@@ -80,8 +73,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /compare/n8n-vs-make-vs-zapier/ | Comparison | Yes | frontmatter | src/content/comparisons/n8n-vs-make-vs-zapier.md |
 | 2026-05-13 | /compare/nanochat-vs-scite/ | Comparison | Yes | frontmatter | src/content/comparisons/nanochat-vs-scite.md |
 | 2026-05-13 | /compare/nanochat-vs-semantic-scholar/ | Comparison | Yes | frontmatter | src/content/comparisons/nanochat-vs-semantic-scholar.md |
-| 2026-05-13 | /compare/neuronwriter-vs-semrush/ | Comparison | Yes | frontmatter | src/content/comparisons/neuronwriter-vs-semrush.md |
-| 2026-05-13 | /compare/neuronwriter-vs-surfer-seo/ | Comparison | Yes | frontmatter | src/content/comparisons/neuronwriter-vs-surfer-seo.md |
 | 2026-05-13 | /compare/notebooklm-vs-obsidian/ | Comparison | Yes | frontmatter | src/content/comparisons/notebooklm-vs-obsidian.md |
 | 2026-05-13 | /compare/notebooklm-vs-otter-ai/ | Comparison | Yes | frontmatter | src/content/comparisons/notebooklm-vs-otter-ai.md |
 | 2026-05-13 | /compare/notebooklm-vs-readwise/ | Comparison | Yes | frontmatter | src/content/comparisons/notebooklm-vs-readwise.md |
@@ -106,10 +97,8 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /compare/runway-vs-veo/ | Comparison | Yes | frontmatter | src/content/comparisons/runway-vs-veo.md |
 | 2026-05-13 | /compare/scite-vs-semantic-scholar/ | Comparison | Yes | frontmatter | src/content/comparisons/scite-vs-semantic-scholar.md |
 | 2026-05-13 | /compare/seedance-vs-synthesia/ | Comparison | Yes | frontmatter | src/content/comparisons/seedance-vs-synthesia.md |
-| 2026-05-13 | /compare/semrush-vs-surfer-seo/ | Comparison | Yes | frontmatter | src/content/comparisons/semrush-vs-surfer-seo.md |
 | 2026-05-13 | /compare/sudowrite-vs-wordtune/ | Comparison | Yes | frontmatter | src/content/comparisons/sudowrite-vs-wordtune.md |
 | 2026-05-13 | /compare/suno-vs-udio/ | Comparison | Yes | frontmatter | src/content/comparisons/suno-vs-udio.md |
-| 2026-05-13 | /compare/surfer-vs-semrush-vs-ahrefs/ | Comparison | Yes | frontmatter | src/content/comparisons/surfer-vs-semrush-vs-ahrefs.md |
 | 2026-05-13 | /compare/veo-vs-kling/ | Comparison | Yes | frontmatter | src/content/comparisons/veo-vs-kling.md |
 | 2026-05-13 | /compare/veo-vs-seedance/ | Comparison | Yes | frontmatter | src/content/comparisons/veo-vs-seedance.md |
 | 2026-05-13 | /disclosure/ | Static page | Yes | git | src/pages/disclosure.astro |
@@ -221,7 +210,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /tools/lovart/ | Tool | Yes | frontmatter | src/content/tools/lovart.md |
 | 2026-05-13 | /tools/luma/ | Tool | Yes | frontmatter | src/content/tools/luma.md |
 | 2026-05-13 | /tools/magnific/ | Tool | Yes | frontmatter | src/content/tools/magnific.md |
-| 2026-05-13 | /tools/marketmuse/ | Tool | Yes | frontmatter | src/content/tools/marketmuse.md |
 | 2026-05-13 | /tools/mem/ | Tool | Yes | frontmatter | src/content/tools/mem.md |
 | 2026-05-13 | /tools/meshy/ | Tool | Yes | frontmatter | src/content/tools/meshy.md |
 | 2026-05-13 | /tools/minimax-speech/ | Tool | Yes | frontmatter | src/content/tools/minimax-speech.md |
@@ -253,7 +241,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /tools/rows/ | Tool | Yes | frontmatter | src/content/tools/rows.md |
 | 2026-05-13 | /tools/sanebox/ | Tool | Yes | frontmatter | src/content/tools/sanebox.md |
 | 2026-05-13 | /tools/seedance/ | Tool | Yes | frontmatter | src/content/tools/seedance.md |
-| 2026-05-13 | /tools/semrush/ | Tool | Yes | frontmatter | src/content/tools/semrush.md |
 | 2026-05-13 | /tools/servicenow/ | Tool | Yes | frontmatter | src/content/tools/servicenow.md |
 | 2026-05-13 | /tools/spellbook/ | Tool | Yes | frontmatter | src/content/tools/spellbook.md |
 | 2026-05-13 | /tools/stable-audio/ | Tool | Yes | frontmatter | src/content/tools/stable-audio.md |
@@ -362,7 +349,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-26 | /tools/blackbox-ai/ | Tool | Yes | frontmatter | src/content/tools/blackbox-ai.md |
 | 2026-05-26 | /tools/cloudtalk/ | Tool | Yes | frontmatter | src/content/tools/cloudtalk.md |
 | 2026-05-26 | /tools/d-id/ | Tool | Yes | frontmatter | src/content/tools/d-id.md |
-| 2026-05-26 | /tools/frase/ | Tool | Yes | frontmatter | src/content/tools/frase.md |
 | 2026-05-26 | /tools/heygen/ | Tool | Yes | frontmatter | src/content/tools/heygen.md |
 | 2026-05-26 | /tools/instantly/ | Tool | Yes | frontmatter | src/content/tools/instantly.md |
 | 2026-05-26 | /tools/invideo/ | Tool | Yes | frontmatter | src/content/tools/invideo.md |
@@ -383,7 +369,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-28 | /guides/best-ai-for-seo-content/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-seo-content.md |
 | 2026-05-28 | /guides/best-ai-seo-tool-replacing-surfer-frase-stack/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-seo-tool-replacing-surfer-frase-stack.md |
 | 2026-05-28 | /tools/argil/ | Tool | Yes | frontmatter | src/content/tools/argil.md |
-| 2026-05-28 | /tools/neuronwriter/ | Tool | Yes | frontmatter | src/content/tools/neuronwriter.md |
 | 2026-05-28 | /tools/rytr/ | Tool | Yes | frontmatter | src/content/tools/rytr.md |
 | 2026-06-01 | /about/editorial/ | Static page | Yes | git | src/pages/about/editorial.astro |
 | 2026-06-01 | /admin/reviews/ | Static page | No | git | src/pages/admin/reviews.astro |
@@ -572,7 +557,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-03 | /tools/jasper/ | Tool | Yes | frontmatter | src/content/tools/jasper.md |
 | 2026-06-03 | /tools/microsoft-agent-framework/ | Tool | Yes | frontmatter | src/content/tools/microsoft-agent-framework.md |
 | 2026-06-04 | /categories/ai-automation/ | Category | Yes | frontmatter | src/content/categories/ai-automation.md |
-| 2026-06-04 | /categories/ai-seo/ | Category | Yes | frontmatter | src/content/categories/ai-seo.md |
 | 2026-06-04 | /compare/chatgpt-vs-scite/ | Comparison | Yes | frontmatter | src/content/comparisons/chatgpt-vs-scite.md |
 | 2026-06-04 | /compare/chatgpt-vs-sudowrite/ | Comparison | Yes | frontmatter | src/content/comparisons/chatgpt-vs-sudowrite.md |
 | 2026-06-04 | /compare/chatgpt-vs-surfer-seo/ | Comparison | Yes | frontmatter | src/content/comparisons/chatgpt-vs-surfer-seo.md |
@@ -630,7 +614,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-04 | /tools/scite/ | Tool | Yes | frontmatter | src/content/tools/scite.md |
 | 2026-06-04 | /tools/semantic-scholar/ | Tool | Yes | frontmatter | src/content/tools/semantic-scholar.md |
 | 2026-06-04 | /tools/sudowrite/ | Tool | Yes | frontmatter | src/content/tools/sudowrite.md |
-| 2026-06-04 | /tools/surfer-seo/ | Tool | Yes | frontmatter | src/content/tools/surfer-seo.md |
 | 2026-06-04 | /tools/v0/ | Tool | Yes | frontmatter | src/content/tools/v0.md |
 | 2026-06-04 | /tools/wordtune/ | Tool | Yes | frontmatter | src/content/tools/wordtune.md |
 | 2026-06-04 | /tools/writesonic/ | Tool | Yes | frontmatter | src/content/tools/writesonic.md |
@@ -639,16 +622,17 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-05 | /categories/ | Static page | Yes | working tree | src/pages/categories/index.astro |
 | 2026-06-05 | /categories/ai-chatbots/ | Category | Yes | frontmatter | src/content/categories/ai-chatbots.md |
 | 2026-06-05 | /categories/ai-coding/ | Category | Yes | frontmatter | src/content/categories/ai-coding.md |
-| 2026-06-05 | /categories/ai-design/ | Category | Yes | working tree | src/content/categories/ai-design.md |
-| 2026-06-05 | /categories/ai-image/ | Category | Yes | working tree | src/content/categories/ai-image.md |
+| 2026-06-05 | /categories/ai-design/ | Category | Yes | frontmatter | src/content/categories/ai-design.md |
+| 2026-06-05 | /categories/ai-image/ | Category | Yes | frontmatter | src/content/categories/ai-image.md |
 | 2026-06-05 | /categories/ai-notes/ | Category | Yes | frontmatter | src/content/categories/ai-notes.md |
 | 2026-06-05 | /categories/ai-presentation/ | Category | Yes | frontmatter | src/content/categories/ai-presentation.md |
 | 2026-06-05 | /categories/ai-research/ | Category | Yes | frontmatter | src/content/categories/ai-research.md |
 | 2026-06-05 | /categories/ai-search/ | Category | Yes | frontmatter | src/content/categories/ai-search.md |
+| 2026-06-05 | /categories/ai-seo/ | Category | Yes | working tree | src/content/categories/ai-seo.md |
 | 2026-06-05 | /categories/ai-voice/ | Category | Yes | frontmatter | src/content/categories/ai-voice.md |
 | 2026-06-05 | /categories/ai-writing/ | Category | Yes | frontmatter | src/content/categories/ai-writing.md |
 | 2026-06-05 | /compare/ | Static page | Yes | working tree | src/pages/compare/index.astro |
-| 2026-06-05 | /compare/adobe-firefly-vs-freepik/ | Comparison | Yes | working tree | src/content/comparisons/adobe-firefly-vs-freepik.md |
+| 2026-06-05 | /compare/adobe-firefly-vs-freepik/ | Comparison | Yes | frontmatter | src/content/comparisons/adobe-firefly-vs-freepik.md |
 | 2026-06-05 | /compare/codeium-vs-github-copilot/ | Comparison | Yes | frontmatter | src/content/comparisons/codeium-vs-github-copilot.md |
 | 2026-06-05 | /compare/copy-ai-vs-grammarly/ | Comparison | Yes | frontmatter | src/content/comparisons/copy-ai-vs-grammarly.md |
 | 2026-06-05 | /compare/copy-ai-vs-hyperwrite/ | Comparison | Yes | frontmatter | src/content/comparisons/copy-ai-vs-hyperwrite.md |
@@ -700,14 +684,25 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-05 | /compare/fireflies-vs-readwise/ | Comparison | Yes | frontmatter | src/content/comparisons/fireflies-vs-readwise.md |
 | 2026-06-05 | /compare/fish-audio-vs-resemble-ai/ | Comparison | Yes | frontmatter | src/content/comparisons/fish-audio-vs-resemble-ai.md |
 | 2026-06-05 | /compare/fish-audio-vs-voxtral/ | Comparison | Yes | frontmatter | src/content/comparisons/fish-audio-vs-voxtral.md |
-| 2026-06-05 | /compare/flux-vs-freepik/ | Comparison | Yes | working tree | src/content/comparisons/flux-vs-freepik.md |
-| 2026-06-05 | /compare/flux-vs-ideogram/ | Comparison | Yes | working tree | src/content/comparisons/flux-vs-ideogram.md |
-| 2026-06-05 | /compare/flux-vs-stable-diffusion/ | Comparison | Yes | working tree | src/content/comparisons/flux-vs-stable-diffusion.md |
-| 2026-06-05 | /compare/freepik-vs-ideogram/ | Comparison | Yes | working tree | src/content/comparisons/freepik-vs-ideogram.md |
-| 2026-06-05 | /compare/freepik-vs-midjourney/ | Comparison | Yes | working tree | src/content/comparisons/freepik-vs-midjourney.md |
-| 2026-06-05 | /compare/freepik-vs-stable-diffusion/ | Comparison | Yes | working tree | src/content/comparisons/freepik-vs-stable-diffusion.md |
-| 2026-06-05 | /compare/ideogram-vs-stable-diffusion/ | Comparison | Yes | working tree | src/content/comparisons/ideogram-vs-stable-diffusion.md |
-| 2026-06-05 | /compare/midjourney-vs-stable-diffusion/ | Comparison | Yes | working tree | src/content/comparisons/midjourney-vs-stable-diffusion.md |
+| 2026-06-05 | /compare/flux-vs-freepik/ | Comparison | Yes | frontmatter | src/content/comparisons/flux-vs-freepik.md |
+| 2026-06-05 | /compare/flux-vs-ideogram/ | Comparison | Yes | frontmatter | src/content/comparisons/flux-vs-ideogram.md |
+| 2026-06-05 | /compare/flux-vs-stable-diffusion/ | Comparison | Yes | frontmatter | src/content/comparisons/flux-vs-stable-diffusion.md |
+| 2026-06-05 | /compare/frase-vs-marketmuse/ | Comparison | Yes | working tree | src/content/comparisons/frase-vs-marketmuse.md |
+| 2026-06-05 | /compare/frase-vs-neuronwriter/ | Comparison | Yes | working tree | src/content/comparisons/frase-vs-neuronwriter.md |
+| 2026-06-05 | /compare/frase-vs-semrush/ | Comparison | Yes | working tree | src/content/comparisons/frase-vs-semrush.md |
+| 2026-06-05 | /compare/frase-vs-surfer-seo/ | Comparison | Yes | working tree | src/content/comparisons/frase-vs-surfer-seo.md |
+| 2026-06-05 | /compare/freepik-vs-ideogram/ | Comparison | Yes | frontmatter | src/content/comparisons/freepik-vs-ideogram.md |
+| 2026-06-05 | /compare/freepik-vs-midjourney/ | Comparison | Yes | frontmatter | src/content/comparisons/freepik-vs-midjourney.md |
+| 2026-06-05 | /compare/freepik-vs-stable-diffusion/ | Comparison | Yes | frontmatter | src/content/comparisons/freepik-vs-stable-diffusion.md |
+| 2026-06-05 | /compare/ideogram-vs-stable-diffusion/ | Comparison | Yes | frontmatter | src/content/comparisons/ideogram-vs-stable-diffusion.md |
+| 2026-06-05 | /compare/marketmuse-vs-neuronwriter/ | Comparison | Yes | working tree | src/content/comparisons/marketmuse-vs-neuronwriter.md |
+| 2026-06-05 | /compare/marketmuse-vs-semrush/ | Comparison | Yes | working tree | src/content/comparisons/marketmuse-vs-semrush.md |
+| 2026-06-05 | /compare/marketmuse-vs-surfer-seo/ | Comparison | Yes | working tree | src/content/comparisons/marketmuse-vs-surfer-seo.md |
+| 2026-06-05 | /compare/midjourney-vs-stable-diffusion/ | Comparison | Yes | frontmatter | src/content/comparisons/midjourney-vs-stable-diffusion.md |
+| 2026-06-05 | /compare/neuronwriter-vs-semrush/ | Comparison | Yes | working tree | src/content/comparisons/neuronwriter-vs-semrush.md |
+| 2026-06-05 | /compare/neuronwriter-vs-surfer-seo/ | Comparison | Yes | working tree | src/content/comparisons/neuronwriter-vs-surfer-seo.md |
+| 2026-06-05 | /compare/semrush-vs-surfer-seo/ | Comparison | Yes | working tree | src/content/comparisons/semrush-vs-surfer-seo.md |
+| 2026-06-05 | /compare/surfer-vs-semrush-vs-ahrefs/ | Comparison | Yes | working tree | src/content/comparisons/surfer-vs-semrush-vs-ahrefs.md |
 | 2026-06-05 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
 | 2026-06-05 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
 | 2026-06-05 | /tools/ | Static page | Yes | working tree | src/pages/tools/index.astro |
@@ -722,17 +717,20 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-05 | /tools/figma/ | Tool | Yes | frontmatter | src/content/tools/figma.md |
 | 2026-06-05 | /tools/fireflies/ | Tool | Yes | frontmatter | src/content/tools/fireflies.md |
 | 2026-06-05 | /tools/fish-audio/ | Tool | Yes | frontmatter | src/content/tools/fish-audio.md |
-| 2026-06-05 | /tools/flux/ | Tool | Yes | working tree | src/content/tools/flux.md |
-| 2026-06-05 | /tools/freepik/ | Tool | Yes | working tree | src/content/tools/freepik.md |
+| 2026-06-05 | /tools/flux/ | Tool | Yes | frontmatter | src/content/tools/flux.md |
+| 2026-06-05 | /tools/frase/ | Tool | Yes | working tree | src/content/tools/frase.md |
+| 2026-06-05 | /tools/freepik/ | Tool | Yes | frontmatter | src/content/tools/freepik.md |
 | 2026-06-05 | /tools/gamma/ | Tool | Yes | frontmatter | src/content/tools/gamma.md |
 | 2026-06-05 | /tools/gemini/ | Tool | Yes | frontmatter | src/content/tools/gemini.md |
 | 2026-06-05 | /tools/google-stitch/ | Tool | Yes | frontmatter | src/content/tools/google-stitch.md |
-| 2026-06-05 | /tools/ideogram/ | Tool | Yes | working tree | src/content/tools/ideogram.md |
+| 2026-06-05 | /tools/ideogram/ | Tool | Yes | frontmatter | src/content/tools/ideogram.md |
 | 2026-06-05 | /tools/kagi/ | Tool | Yes | frontmatter | src/content/tools/kagi.md |
 | 2026-06-05 | /tools/lovable/ | Tool | Yes | frontmatter | src/content/tools/lovable.md |
+| 2026-06-05 | /tools/marketmuse/ | Tool | Yes | working tree | src/content/tools/marketmuse.md |
 | 2026-06-05 | /tools/midjourney/ | Tool | Yes | frontmatter | src/content/tools/midjourney.md |
 | 2026-06-05 | /tools/mistral-ai/ | Tool | Yes | frontmatter | src/content/tools/mistral-ai.md |
 | 2026-06-05 | /tools/murf/ | Tool | Yes | frontmatter | src/content/tools/murf.md |
+| 2026-06-05 | /tools/neuronwriter/ | Tool | Yes | working tree | src/content/tools/neuronwriter.md |
 | 2026-06-05 | /tools/notebooklm/ | Tool | Yes | frontmatter | src/content/tools/notebooklm.md |
 | 2026-06-05 | /tools/obsidian/ | Tool | Yes | frontmatter | src/content/tools/obsidian.md |
 | 2026-06-05 | /tools/otter-ai/ | Tool | Yes | frontmatter | src/content/tools/otter-ai.md |
@@ -743,7 +741,9 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-05 | /tools/qwen/ | Tool | Yes | frontmatter | src/content/tools/qwen.md |
 | 2026-06-05 | /tools/readwise/ | Tool | Yes | frontmatter | src/content/tools/readwise.md |
 | 2026-06-05 | /tools/resemble-ai/ | Tool | Yes | frontmatter | src/content/tools/resemble-ai.md |
-| 2026-06-05 | /tools/stable-diffusion/ | Tool | Yes | working tree | src/content/tools/stable-diffusion.md |
+| 2026-06-05 | /tools/semrush/ | Tool | Yes | working tree | src/content/tools/semrush.md |
+| 2026-06-05 | /tools/stable-diffusion/ | Tool | Yes | frontmatter | src/content/tools/stable-diffusion.md |
+| 2026-06-05 | /tools/surfer-seo/ | Tool | Yes | working tree | src/content/tools/surfer-seo.md |
 | 2026-06-05 | /tools/val-town/ | Tool | Yes | frontmatter | src/content/tools/val-town.md |
 | 2026-06-05 | /tools/voxtral/ | Tool | Yes | frontmatter | src/content/tools/voxtral.md |
 | 2026-06-05 | /tools/wellsaid/ | Tool | Yes | frontmatter | src/content/tools/wellsaid.md |

@@ -3,6 +3,7 @@
 // Copilot) at the canonical index + category hubs + editorial policy.
 //
 // See also /llms-full.txt for the verbose variant with every page listed.
+// Refresh metadata: 2026-06-05 Frase SEO comparison slice plus adjacent MarketMuse, NeuronWriter, Semrush, Surfer SEO, and Ahrefs comparison-card cleanup across AI SEO, tools, comparison, category, homepage, source registry, and LLM maintenance.
 // Refresh metadata: 2026-06-05 Flux image comparison slice across Freepik, Ideogram, and Stable Diffusion plus Flux, Freepik, Ideogram, Stable Diffusion, AI Image, AI Design, tools, comparison, category, homepage, source registry, and LLM maintenance.
 // Refresh metadata: 2026-06-05 Fish Audio voice comparison slice across Resemble AI and Voxtral plus AI Voice, tools, comparison, category, homepage, source registry, and LLM maintenance.
 // Refresh metadata: 2026-06-05 Fireflies notes comparison slice across NotebookLM, Obsidian, Otter.ai, and Readwise plus Fireflies, NotebookLM, Obsidian, Otter.ai, Readwise, AI Notes, tools, comparison, category, homepage, source registry, and LLM maintenance.

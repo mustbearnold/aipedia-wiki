@@ -164,7 +164,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "adobe-firefly-creative-agent-2026",
@@ -2623,7 +2623,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "frase-official",
@@ -2632,7 +2632,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "frase-pricing",
@@ -2641,7 +2641,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "freepik-official",
@@ -4849,7 +4849,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "marketmuse-content-briefs",
@@ -4858,7 +4858,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "marketmuse-inventory",
@@ -4867,7 +4867,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "marketmuse-official",
@@ -4876,7 +4876,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "mastra-about",
@@ -5391,7 +5391,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "neuronwriter-official",
@@ -5400,7 +5400,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "neuronwriter-affiliate",
@@ -5409,7 +5409,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "nightcafe-pricing",
@@ -6774,7 +6774,8 @@
       "url": "https://www.semrush.com/features/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-05"
     },
     {
       "id": "semrush-pricing",
@@ -6782,7 +6783,8 @@
       "url": "https://www.semrush.com/pricing/",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-05"
     },
     {
       "id": "speechify-pricing",
@@ -7008,7 +7010,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "surfer-seo-pricing",
@@ -7017,7 +7019,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "synthesia-help",
