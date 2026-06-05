@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: $0-$169/user/month
 status: active
 launched: 2021-01
-last_updated: 2026-06-02
-last_verified: 2026-06-02
+last_updated: 2026-06-05
+last_verified: 2026-06-05
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://elicit.com/pricing"
     source_label: "Elicit pricing"
     source_id: elicit-pricing
-    verified_at: 2026-06-02
+    verified_at: 2026-06-05
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -38,16 +38,16 @@ facts:
     source: "https://elicit.com/pricing"
     source_label: "Elicit pricing"
     source_id: elicit-pricing
-    verified_at: 2026-06-02
+    verified_at: 2026-06-05
     volatility: high
     confidence: high
-    next_review_at: 2026-09-02
+    next_review_at: 2026-07-05
   research_corpus:
     value: "Elicit's pricing page cites unlimited search across more than 138 million papers."
     source: "https://elicit.com/pricing"
     source_label: "Elicit pricing"
     source_id: elicit-pricing
-    verified_at: 2026-06-02
+    verified_at: 2026-06-05
     volatility: medium
     confidence: high
   systematic_review_workflow:
@@ -55,7 +55,7 @@ facts:
     source: "https://support.elicit.com/en/articles/14759154-systematic-reviews-in-elicit"
     source_label: "Elicit systematic review documentation"
     source_id: elicit-plan-docs
-    verified_at: 2026-06-02
+    verified_at: 2026-06-05
     volatility: medium
     confidence: high
   watch_out_for:
@@ -63,14 +63,14 @@ facts:
     source: "https://support.elicit.com/en/articles/14759154-systematic-reviews-in-elicit"
     source_label: "Elicit systematic review documentation"
     source_id: elicit-plan-docs
-    verified_at: 2026-06-02
+    verified_at: 2026-06-05
     volatility: high
     confidence: high
-    next_review_at: 2026-09-02
+    next_review_at: 2026-07-05
 tags: [academic-research, literature-review, systematic-review, paper-search, data-extraction, rct, evidence-synthesis]
 seo_title: 'Elicit: Features, Pricing & Review (June 2026)'
 meta_description: >-
-  Elicit automates systematic literature review with AI-powered paper search and structured data extraction across 138M+ papers. Basic is free; Pro starts at $29/user/mo billed yearly or $49 monthly. Verified June 2, 2026.
+  Elicit automates systematic literature review with AI-powered paper search and structured data extraction across 138M+ papers. Basic is free; Pro starts at $29/user/mo billed yearly or $49 monthly. Verified June 5, 2026.
 author: aipedia.wiki Editorial
 best_for:
   - academic researchers
@@ -84,6 +84,13 @@ not_best_for:
 quick_answer: >-
   Elicit automates systematic literature review across 138M+ papers. Structured extraction pulls sample size, population, intervention, outcomes, and effect sizes into evidence tables. Pick it for formal reviews and meta-analyses. Skip it for casual questions or news research.
 price_history:
+  - date: 2026-06-05
+    plan: "Research Agent / API / Systematic Review"
+    price: "Basic free; Pro $49/mo monthly or $29/mo billed yearly; Scale $169/mo monthly or $49/mo billed yearly"
+    source: "https://elicit.com/pricing"
+    source_label: "Elicit pricing"
+    source_id: elicit-pricing
+    note: "June 5 refresh rechecked the pricing page, Elicit product site, API terms, and API launch post. Pro remains the practical systematic-review/API entry tier; Scale adds collaboration and figure interpretation; Enterprise adds larger screening/extraction scale and unlimited API access."
   - date: 2026-05-13
     plan: "Pro"
     price: "$49/mo monthly; $29/mo billed yearly"
@@ -164,7 +171,7 @@ Subscription pricing via [elicit.com/pricing](https://elicit.com/pricing).
 | Scale | $169/user/mo monthly or $49/user/mo billed yearly | 240 reports or systematic reviews/year | Figure extraction, collaboration, admin controls, 30 columns, up to 200 data sources per report | Research teams and labs |
 | Enterprise | Custom | Custom / unlimited | SSO/SAML, 2FA, single-tenancy options, custom sources/templates, unlimited Search API | Institutions and funded review programs |
 
-Prices verified 2026-06-02 via [Elicit pricing](https://elicit.com/pricing) and [Systematic Reviews in Elicit](https://support.elicit.com/en/articles/14759154-systematic-reviews-in-elicit). Elicit shows different monthly and yearly surfaces, so buyers should confirm billing cadence before purchase.
+Prices verified 2026-06-05 via [Elicit pricing](https://elicit.com/pricing), [Elicit's product site](https://elicit.com/), [Elicit API announcement](https://elicit.com/blog/elicit-api), and [Elicit API terms](https://elicit.com/operations/api-terms). Elicit shows different monthly and yearly surfaces, so buyers should confirm billing cadence before purchase.
 
 ## Against The Alternatives
 
@@ -190,7 +197,7 @@ Prices verified 2026-06-02 via [Elicit pricing](https://elicit.com/pricing) and 
 
 ## Methodology
 
-This page was refreshed by the aipedia.wiki editorial pipeline against current vendor sources. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-02 against [Elicit pricing](https://elicit.com/pricing), [Systematic Reviews in Elicit](https://support.elicit.com/en/articles/14759154-systematic-reviews-in-elicit), and [Elicit's product site](https://elicit.com/).
+This page was refreshed by the aipedia.wiki editorial pipeline against current vendor sources. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-05 against [Elicit pricing](https://elicit.com/pricing), [Systematic Reviews in Elicit](https://support.elicit.com/en/articles/14759154-systematic-reviews-in-elicit), [Elicit's product site](https://elicit.com/), [Elicit API announcement](https://elicit.com/blog/elicit-api), and [Elicit API terms](https://elicit.com/operations/api-terms).
 
 ## FAQ
 
@@ -217,6 +224,8 @@ No. It compresses search, screening, and extraction. Final inclusion decisions, 
 - [Elicit pricing](https://elicit.com/pricing): current tier prices, paper corpus, reports, extraction, API, and enterprise limits
 - [Systematic Reviews in Elicit](https://support.elicit.com/en/articles/14759154-systematic-reviews-in-elicit): protocol, search, screening, extraction, and report workflow
 - [Elicit product site](https://elicit.com/): product positioning and research-assistant surface
+- [Elicit API announcement](https://elicit.com/blog/elicit-api): API preview and research-report/search positioning
+- [Elicit API terms](https://elicit.com/operations/api-terms): API eligibility and internal-use constraints
 
 ## Related
 

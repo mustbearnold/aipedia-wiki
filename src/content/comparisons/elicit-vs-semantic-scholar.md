@@ -5,78 +5,97 @@ title: "Elicit vs Semantic Scholar"
 tools: [elicit, semantic-scholar]
 category: ai-research
 winner: depends
-seo_title: "Elicit vs Semantic Scholar: Which Is Better in 2026?"
-meta_description: "Honest head-to-head of Elicit and Semantic Scholar as of April 2026. Flagship models, current pricing, and which tool fits your workflow."
+seo_title: "Elicit vs Semantic Scholar: Paid Review Workflow or Free Discovery? (June 2026)"
+meta_description: "Updated June 5, 2026: Elicit is best for systematic-review screening and extraction; Semantic Scholar is the free AI-powered discovery and Academic Graph API baseline."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-13
-last_verified: 2026-05-13
-update_frequency: quarterly
+last_updated: 2026-06-05
+last_verified: 2026-06-05
+update_frequency: monthly
 canonical_fact_table: true
 ---
 
 # Elicit vs Semantic Scholar
 
-[Elicit](../tools/elicit.md) and [Semantic Scholar](../tools/semantic-scholar.md) are two leading options in the research category as of April 2026. Elicit provides AI-assisted literature review and search with paid tiers starting at $12 per month, while Semantic Scholar offers free AI-powered academic search from the Allen Institute for AI.[https://elicit.com/pricing](https://elicit.com/pricing) [https://www.semanticscholar.org/product/overview](https://www.semanticscholar.org/product/overview)
+[Elicit](/tools/elicit/) and [Semantic Scholar](/tools/semantic-scholar/) are both serious research tools, but they are not the same purchase decision. Elicit is a paid workflow layer for literature review, screening, extraction, reports, and teams. Semantic Scholar is a free AI-powered academic search engine from Ai2 with a large scholarly corpus and a widely used Academic Graph API.
 
 ## Quick Answer
 
-Semantic Scholar suits free, broad academic search needs; Elicit fits paid workflows requiring AI summarization and extraction from papers.
+Choose **Semantic Scholar** for free paper discovery, citation exploration, alerts, library workflows, and developer access to scholarly metadata. Choose **Elicit** when the work needs structured extraction, screening workflow, reports, exports, or systematic-review traceability. Semantic Scholar finds and orients. Elicit processes and extracts.
 
-## Decision Snapshot
-| | Elicit | Semantic Scholar |
-|---|---|---|
-| **Flagship** | Elicit 3.0 (Claude Sonnet 4.6 backend) | Semantic Scholar 2026 (open models) |
-| **Price** | Free / Plus $12/mo / Pro $25/mo | Free |
-| **Context Window/Output Specs** | 200K tokens input, PDF uploads, table extraction | 1M+ papers indexed, TL;DR summaries, citation graphs |
-| **Best For** | Literature reviews, data extraction | Free paper discovery, citation analysis |
+## Mobile Decision Card
+
+- **Best free discovery layer:** Semantic Scholar
+- **Best systematic-review workflow:** Elicit
+- **Best developer baseline:** Semantic Scholar Academic Graph API
+- **Best paid research workflow:** Elicit Pro/Scale/Enterprise
+- **Main watch-out:** Semantic Scholar does not replace extraction workflow; Elicit is overkill for simple paper lookup
 
 ## Where Elicit Wins
 
-- Automates extraction of data like methods, results into tables from 100+ papers at once.[https://elicit.com/](https://elicit.com/)
-- Uses Claude Sonnet 4.6 for brainstorming questions and synthesizing findings across uploads.[1]
-- Plus tier ($12/mo) unlocks unlimited searches, PDF analysis, and notebook exports.[https://elicit.com/pricing](https://elicit.com/pricing)
-- Tracks workflow with saved searches, themes, and collaboration features for teams.
-- Handles systematic reviews by ranking papers on custom criteria like study design.
+Elicit wins when the user already knows that papers need to become structured evidence. Its current pricing page lists 138M+ paper search, Research Agent access, automated reports, extraction columns, systematic-review workflow, exports, API access, collaboration, and enterprise controls.
+
+Choose Elicit when:
+
+- a review needs inclusion/exclusion criteria
+- the team needs extraction columns across many papers
+- a report or evidence table is the deliverable
+- paid exports, alerts, and collaboration will save researcher time
+- the buyer needs a repeatable review workflow, not just search results
 
 ## Where Semantic Scholar Wins
 
-- Completely free with no limits on searches or paper views.[https://www.semanticscholar.org/](https://www.semanticscholar.org/)
-- Indexes over 200 million papers with AI-generated TL;DR, highlights, and citation networks.
-- Integrates with tools like Zotero, Papers, and ORCID for seamless reference management.
-- Provides paper recommendations based on reading history and co-citation patterns.
-- Offers API access for free, enabling custom research pipelines without subscription costs.
+Semantic Scholar wins as the no-cost discovery and infrastructure layer. Its API page says the Academic Graph API covers papers, authors, citations, venues, SPECTER2 embeddings, recommendations, and datasets. The same page lists a continually updating corpus of 214 million papers, 2.49 billion citations, and 79 million authors, with many endpoints public and unauthenticated, though rate-limited.
+
+Choose Semantic Scholar when:
+
+- the buyer wants free academic search
+- the task is discovering papers, authors, venues, citations, or related work
+- a developer needs scholarly metadata or recommendations
+- the user needs a starting point before deciding whether a paid review workflow is worth it
+- budget is zero and the output is orientation, not extracted evidence
 
 ## Key Differences
 
-Elicit focuses on active literature synthesis through uploads and AI agents powered by Claude Sonnet 4.6, with pricing from $12 per month for Plus (unlimited searches, 100 PDF analyses monthly) to $25 per month for Pro (team features, advanced exports).[https://elicit.com/pricing](https://elicit.com/pricing) Semantic Scholar emphasizes passive discovery across its vast corpus using open-weight models for summaries and graphs, remaining fully free with no paid tiers.[https://www.semanticscholar.org/product/overview](https://www.semanticscholar.org/product/overview) Elicit excels in targeted extraction (e.g., pulling PICO elements from clinical trials), while Semantic Scholar prioritizes broad exploration and metrics like influence scores.
+Semantic Scholar is the map and data layer. Elicit is the workbench. Semantic Scholar helps users find papers and understand citation neighborhoods. Elicit helps users screen those papers, extract comparable fields, and generate review outputs.
 
-## Who should choose Elicit
+The old question "which is better?" is too broad. For a student finding papers tonight, Semantic Scholar usually wins. For a funded review team that needs traceable screening and extraction, Elicit is the better investment.
 
-Researchers conducting systematic reviews or needing structured data from specific papers benefit from Elicit's automation and Claude integration. Teams synthesizing evidence for grants or meta-analyses find the Pro tier ($25/mo) supports collaboration effectively.
+## Who Should Choose Elicit
 
-## Who should choose Semantic Scholar
+Choose Elicit for systematic reviews, scoping reviews, evidence maps, policy research, clinical research, extraction-heavy literature work, or team reports where time saved justifies a paid workflow.
 
-Students, independent scholars, or anyone seeking free access to 200M+ papers with AI aids like TL;DRs prefer Semantic Scholar. Users building citation-based workflows or needing API integration get full value without costs.
+## Who Should Choose Semantic Scholar
+
+Choose Semantic Scholar for free paper discovery, citation graph exploration, author lookup, API-based scholarly metadata, alerts, and early-stage literature scanning.
+
+## Can You Use Both?
+
+Yes. Start with Semantic Scholar to orient around papers and citation neighborhoods. Move the important paper set into Elicit when screening, extraction, exports, and repeatable evidence work become necessary.
 
 ## Bottom Line
 
-Choose Semantic Scholar for no-cost paper discovery and citation tools; opt for Elicit if your work demands AI-driven extraction and synthesis worth $12+ monthly. Many combine both: Semantic Scholar for initial search, Elicit for deep analysis.
+Pick **Semantic Scholar** for free discovery and scholarly metadata. Pick **Elicit** for paid systematic-review workflow and extraction. Most serious researchers can use Semantic Scholar as the front door and Elicit as the evidence workbench.
 
 ## FAQ
 
-**Which is cheaper?**  
-Semantic Scholar is free with unlimited use; Elicit starts at $12/mo for Plus.[https://elicit.com/pricing](https://elicit.com/pricing) [https://www.semanticscholar.org/](https://www.semanticscholar.org/)
+**Is Semantic Scholar free?**
+Yes. Semantic Scholar is a free AI-powered research tool from Ai2. Its API has public unauthenticated endpoints, with rate limits and optional API-key access.
 
-**Which has better output quality?**  
-Elicit delivers higher-quality structured outputs like tables via Claude Sonnet 4.6; Semantic Scholar provides reliable free summaries across more papers.[1] [https://elicit.com/](https://elicit.com/)
+**Is Elicit worth paying for if Semantic Scholar is free?**
+Only if extraction, screening, reports, exports, or team workflow save meaningful time. For casual discovery, start free.
 
-**Can I use both?**  
-Yes, export Semantic Scholar results to Elicit for analysis; both support common formats like RIS and BibTeX.
+**Which has the bigger corpus?**
+Semantic Scholar's API page lists 214 million papers. Elicit's current pricing page lists search across more than 138 million papers. Corpus size is not the only decision point: workflow depth matters more for systematic reviews.
 
 ## Sources
 
-- [Elicit](../tools/elicit.md)
-- [Semantic Scholar](../tools/semantic-scholar.md)
-- [https://elicit.com/pricing](https://elicit.com/pricing)
-- [https://www.semanticscholar.org/product/overview](https://www.semanticscholar.org/product/overview)
-- [1]
+- [Elicit pricing](https://elicit.com/pricing) (verified 2026-06-05)
+- [Elicit product site](https://elicit.com/) (verified 2026-06-05)
+- [Semantic Scholar Academic Graph API](https://www.semanticscholar.org/product/api) (verified 2026-06-05)
+- [Semantic Scholar homepage](https://www.semanticscholar.org/) (verified 2026-06-05)
+
+## Related
+
+- **Tool pages:** [Elicit](/tools/elicit/) | [Semantic Scholar](/tools/semantic-scholar/)
+- **Category:** [AI Research Tools](/categories/ai-research/)
+- **Comparisons:** [Scite vs Semantic Scholar](/compare/scite-vs-semantic-scholar/) | [Consensus vs Semantic Scholar](/compare/consensus-vs-semantic-scholar/) | [Elicit vs Scite](/compare/elicit-vs-scite/)

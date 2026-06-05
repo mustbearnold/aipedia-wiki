@@ -5,10 +5,10 @@ title: AI Research Tools
 description: Source-backed AI tools for literature review, paper discovery, citation context, research notebooks, academic search, and evidence synthesis.
 tool_count: 9
 seo_title: "Best AI Research Tools: Elicit, Scite, Semantic Scholar & Perplexity (June 2026)"
-meta_description: "Updated June 4, 2026: Elicit for literature review, Semantic Scholar for free academic search, Scite for citation context, NotebookLM for source-grounded notebooks, Perplexity for cited web research, Consensus for claim-level Q&A, Connected Papers for graph mapping, ChatPDF for quick PDF chat, and Humata for paid PDF/team document chat."
+meta_description: "Updated June 5, 2026: Elicit for systematic-review workflow, Semantic Scholar for free academic search/API, Scite for citation context/MCP, Perplexity for cited web research/API, NotebookLM for source-grounded notebooks, Consensus for claim-level Q&A, Connected Papers for graph mapping, ChatPDF and Humata for PDF workflows."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-04
-last_verified: 2026-06-04
+last_updated: 2026-06-05
+last_verified: 2026-06-05
 update_frequency: monthly
 ---
 
@@ -16,7 +16,9 @@ update_frequency: monthly
 
 AI research tools split into four buyer lanes now: **literature review**, **academic search**, **citation context**, and **source-grounded analysis**. The right purchase depends on whether the user needs to find papers, evaluate citations, analyze a fixed source set, or research current web material outside academic databases.
 
-As of June 4, 2026, **[Elicit](/tools/elicit/)** is AiPedia's best research-workflow pick because it is built around paper discovery, screening, extraction, and evidence tables; its Basic, Plus, Pro, Scale, and Enterprise ladder still needs billing-cadence verification at purchase time because research-team packaging can move quickly. **[Semantic Scholar](/tools/semantic-scholar/)** is the free academic-search baseline. **[Scite](/tools/scite/)** is the specialist pick when citation context matters, with Basic still verified at $20/month, Pro at $50/month, and Organization/Developer on custom terms. **[NotebookLM](/tools/notebooklm/)** is best when answers must stay grounded in a chosen source library. **[Perplexity](/tools/perplexity/)** is the best cited-web add-on for current sources, documentation, policy, market, and company research. **[Consensus](/tools/consensus/)** and **[Connected Papers](/tools/connected-papers/)** were rechecked for this refresh; **[ChatPDF](/tools/chatpdf/)** remains the quick PDF-chat route, while **[Humata](/tools/humata/)** is the paid PDF/team-document lane with Free 60 pages/month, Expert $9.99/month for 500 pages and up to 3 users, Team $49/user/month for 5,000 pages and up to 10 users, OCR, folder permissions, and SOC-2.
+As of June 5, 2026, **[Elicit](/tools/elicit/)** is AiPedia's best research-workflow pick because it is built around paper discovery, screening, extraction, evidence tables, reports, API access, and systematic-review workflow; its Basic, Plus, Pro, Scale, and Enterprise ladder still needs billing-cadence verification at purchase time because research-team packaging can move quickly. **[Semantic Scholar](/tools/semantic-scholar/)** is the free academic-search/API baseline, with its API page listing 214 million papers, 2.49 billion citations, and 79 million authors. **[Scite](/tools/scite/)** is the specialist pick when citation context matters, with Basic still verified at $20/month, Pro at $50/month, Organization/Developer on custom terms, and Scite MCP now relevant for teams grounding ChatGPT, Claude, Copilot, Cursor, Claude Code, or other MCP clients in Smart Citations. **[NotebookLM](/tools/notebooklm/)** is best when answers must stay grounded in a chosen source library. **[Perplexity](/tools/perplexity/)** is the best cited-web add-on for current sources, documentation, policy, market, company research, and Search/Sonar API workflows. **[Consensus](/tools/consensus/)** and **[Connected Papers](/tools/connected-papers/)** were rechecked for this refresh; **[ChatPDF](/tools/chatpdf/)** remains the quick PDF-chat route, while **[Humata](/tools/humata/)** is the paid PDF/team-document lane with Free 60 pages/month, Expert $9.99/month for 500 pages and up to 3 users, Team $49/user/month for 5,000 pages and up to 10 users, OCR, folder permissions, and SOC-2.
+
+The June 5 Elicit comparison pass refreshed [Elicit vs nanochat](/compare/elicit-vs-nanochat/), [Elicit vs Perplexity](/compare/elicit-vs-perplexity/), [Elicit vs Scite](/compare/elicit-vs-scite/), and [Elicit vs Semantic Scholar](/compare/elicit-vs-semantic-scholar/). The decision split is now cleaner: Elicit is the evidence-workflow layer, nanochat is LLM training education, Perplexity is current cited web research, Scite is citation-context verification, and Semantic Scholar is free discovery plus scholarly metadata/API infrastructure.
 
 The June 4 [ChatGPT vs Scite](/compare/chatgpt-vs-scite/) refresh keeps the buyer split explicit: ChatGPT is the broad research assistant for drafting, explaining, and planning, while Scite is the citation-context layer for checking whether later literature supports, contrasts, or merely mentions a claim.
 
@@ -80,17 +82,21 @@ Do not cite generated text. Cite the original source. Do not treat a linked sour
 
 ## Sources
 
-- [Elicit pricing](https://elicit.com/pricing) - verified 2026-06-04.
-- [Semantic Scholar](https://www.semanticscholar.org/) - verified 2026-06-04.
-- [Semantic Scholar API](https://www.semanticscholar.org/product/api) - verified 2026-06-04.
-- [Scite](https://scite.ai/) - verified 2026-06-04.
+- [Elicit pricing](https://elicit.com/pricing) - verified 2026-06-05.
+- [Elicit API announcement](https://elicit.com/blog/elicit-api) - verified 2026-06-05.
+- [Semantic Scholar](https://www.semanticscholar.org/) - verified 2026-06-05.
+- [Semantic Scholar API](https://www.semanticscholar.org/product/api) - verified 2026-06-05.
+- [Scite](https://scite.ai/) - verified 2026-06-05.
+- [Scite pricing](https://scite.ai/pricing) - verified 2026-06-05.
+- [Research Solutions Scite MCP announcement](https://www.nasdaq.com/press-release/research-solutions-launches-scite-mcp-connecting-chatgpt-claude-other-ai-tools) - verified 2026-06-05.
 - [NotebookLM](https://notebooklm.google/) - verified 2026-06-04.
-- [Perplexity Enterprise](https://www.perplexity.ai/enterprise/pricing) - verified 2026-06-04.
+- [Perplexity Enterprise](https://www.perplexity.ai/enterprise/pricing) - verified 2026-06-05.
+- [Perplexity API pricing](https://docs.perplexity.ai/docs/getting-started/pricing) - verified 2026-06-05.
 - [Consensus](https://consensus.app/) - verified 2026-06-04.
 - [Consensus pricing](https://consensus.app/pricing) - verified 2026-06-04.
 - [Connected Papers](https://www.connectedpapers.com/) - verified 2026-06-04.
 - [Connected Papers pricing](https://www.connectedpapers.com/pricing) - verified 2026-06-04.
-- [nanochat GitHub repository](https://github.com/karpathy/nanochat) - verified 2026-06-04.
+- [nanochat GitHub repository](https://github.com/karpathy/nanochat) - verified 2026-06-05.
 - [ChatPDF](https://www.chatpdf.com/) - verified 2026-06-02.
 - [ChatPDF backend API docs](https://www.chatpdf.com/docs/api/backend) - verified 2026-06-02.
 - [Humata pricing](https://www.humata.ai/pricing) - verified 2026-06-02.

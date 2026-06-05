@@ -5,10 +5,10 @@ title: AI Search & Research Tools
 description: AI answer engines, private search, research notebooks, semantic search APIs, and source-backed research assistants.
 tool_count: 8
 seo_title: "Best AI Search and Research Tools (June 2026)"
-meta_description: "Updated June 4, 2026: compare Perplexity, Comet, ChatGPT Search, Google AI Mode, Bing AI-guided image search, NotebookLM, Kagi, Exa, Genspark, Glean, You.com APIs, and Grok by citations, privacy, documents, APIs, and buyer fit."
+meta_description: "Updated June 5, 2026: compare Perplexity, Comet, ChatGPT Search, Google AI Mode, Bing AI-guided image search, NotebookLM, Kagi, Exa, Genspark, Glean, You.com APIs, and Grok by citations, privacy, documents, APIs, paid media limits, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-04
-last_verified: 2026-06-04
+last_updated: 2026-06-05
+last_verified: 2026-06-05
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -26,7 +26,7 @@ top_picks:
 
 AI search is not one category anymore. Buyers now choose between **cited answer engines**, **Google-native AI search**, **owned-document research**, **private paid search**, **developer search APIs**, and **real-time social/current-events context**.
 
-**Use [Perplexity](/tools/perplexity/) when the job is cited open-web answers.** It remains the strongest default for people who want an answer engine with source links, follow-up research, spaces, Pro/Max paths, Enterprise controls, and API surfaces like Sonar, Search API, Agent API, and embeddings. The June 4 [Claude vs Perplexity](/compare/claude-vs-perplexity/) refresh now keeps the boundary clear: Perplexity is the source-discovery and cited-brief layer; Claude is the final reasoning, writing, coding, and synthesis layer.
+**Use [Perplexity](/tools/perplexity/) when the job is cited open-web answers.** It remains the strongest default for people who want an answer engine with source links, follow-up research, spaces, Pro/Max paths, Enterprise controls, Comet/Computer, limited paid asset/video generation for research outputs, and API surfaces like Sonar, Search API, Agent API, tools, embeddings, and media responses. The June 5 [Elicit vs Perplexity](/compare/elicit-vs-perplexity/) refresh keeps the buyer boundary clear: Perplexity is for current cited web research; Elicit is for paper screening, extraction, and systematic-review workflow.
 
 **Use [Comet](/tools/comet/) when the search workflow should live inside the browser.** Comet is the Perplexity browser lane for users who want AI search, page context, shopping/research help, and everyday web actions closer to tabs instead of a separate answer-engine page.
 
@@ -110,10 +110,13 @@ Do not leave this category stale. Google AI Mode, Perplexity Pro/Max/Enterprise,
 - [Perplexity Comet](https://www.perplexity.ai/comet) (verified 2026-06-02)
 - [Dia website](https://www.diabrowser.com) (verified 2026-06-02)
 - [Dia security](https://www.diabrowser.com/security) (verified 2026-06-02)
-- [Perplexity Pro](https://www.perplexity.ai/pro) (verified 2026-06-04)
-- [Perplexity Enterprise](https://www.perplexity.ai/enterprise) (verified 2026-06-04)
-- [Perplexity API pricing](https://docs.perplexity.ai/docs/getting-started/pricing) (verified 2026-06-04)
-- [Perplexity Enterprise pricing](https://www.perplexity.ai/enterprise/pricing) (verified 2026-06-04)
+- [Perplexity Pro](https://www.perplexity.ai/pro) (verified 2026-06-05)
+- [Perplexity Max help](https://www.perplexity.ai/help-center/en/articles/11680686-perplexity-max) (verified 2026-06-05)
+- [Perplexity Enterprise](https://www.perplexity.ai/enterprise) (verified 2026-06-05)
+- [Perplexity API pricing](https://docs.perplexity.ai/docs/getting-started/pricing) (verified 2026-06-05)
+- [Perplexity Agent API tools](https://docs.perplexity.ai/docs/agent-api/tools) (verified 2026-06-05)
+- [Perplexity Sonar media docs](https://docs.perplexity.ai/docs/sonar/media) (verified 2026-06-05)
+- [Perplexity Enterprise pricing](https://www.perplexity.ai/enterprise/pricing) (verified 2026-06-05)
 - [ChatGPT Search Help](https://help.openai.com/en/articles/9237897-chatgpt-search) (verified 2026-05-13)
 - [Google AI Mode and AI Overviews updates](https://blog.google/products-and-platforms/products/search/explore-web-generative-ai-search/) (verified 2026-05-13)
 - [Google AI Plans](https://one.google.com/about/google-ai-plans/) (verified 2026-05-13)

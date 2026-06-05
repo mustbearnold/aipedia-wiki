@@ -2160,7 +2160,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "elicit-pricing",
@@ -2169,7 +2169,25 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
+    },
+    {
+      "id": "elicit-api-announcement",
+      "label": "Elicit API announcement",
+      "url": "https://elicit.com/blog/elicit-api",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-05"
+    },
+    {
+      "id": "elicit-api-terms",
+      "label": "Elicit API terms",
+      "url": "https://elicit.com/operations/api-terms",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-05"
     },
     {
       "trust_tier": "primary",
@@ -5275,7 +5293,7 @@
       "type": "repository",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "nanochat-readme",
@@ -5284,7 +5302,7 @@
       "type": "repository",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "nvidia-alpamayo-2-super",
@@ -5707,7 +5725,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "perplexity-enterprise-pricing",
@@ -5716,7 +5734,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "perplexity-pricing",
@@ -5725,7 +5743,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "perplexity-pro-pricing",
@@ -5734,7 +5752,34 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
+    },
+    {
+      "id": "perplexity-max-help",
+      "label": "Perplexity Max help",
+      "url": "https://www.perplexity.ai/help-center/en/articles/11680686-perplexity-max",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-05"
+    },
+    {
+      "id": "perplexity-media-docs",
+      "label": "Perplexity Sonar media docs",
+      "url": "https://docs.perplexity.ai/docs/sonar/media",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-05"
+    },
+    {
+      "id": "perplexity-agent-tools",
+      "label": "Perplexity Agent API tools",
+      "url": "https://docs.perplexity.ai/docs/agent-api/tools",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-05"
     },
     {
       "id": "phind-official",
@@ -6609,7 +6654,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "scite-pricing",
@@ -6618,7 +6663,16 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
+    },
+    {
+      "id": "scite-mcp-announcement",
+      "label": "Research Solutions Scite MCP announcement",
+      "url": "https://www.nasdaq.com/press-release/research-solutions-launches-scite-mcp-connecting-chatgpt-claude-other-ai-tools",
+      "type": "newsroom",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-05"
     },
     {
       "trust_tier": "primary",
@@ -6671,7 +6725,7 @@
     },
     {
       "trust_tier": "primary",
-      "last_checked": "2026-06-04",
+      "last_checked": "2026-06-05",
       "id": "semantic-scholar-api",
       "label": "Semantic Scholar API",
       "url": "https://www.semanticscholar.org/product/api",
@@ -6680,7 +6734,7 @@
     },
     {
       "trust_tier": "primary",
-      "last_checked": "2026-06-04",
+      "last_checked": "2026-06-05",
       "id": "semantic-scholar-official",
       "label": "Semantic Scholar homepage",
       "url": "https://www.semanticscholar.org/",
