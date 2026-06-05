@@ -7,8 +7,8 @@ tool_count: 24
 seo_title: "Best AI Voice Tools 2026: TTS, Voice Agents, AI Phone Systems"
 meta_description: "Compare AI voice tools in June 2026: ElevenLabs for creator voice, MiniMax Speech and Voxtral for hosted TTS value, Cartesia, Retell AI, and Hume for voice agents, CloudTalk for AI phone systems, and Deepgram, AssemblyAI, or Voxtral for STT APIs."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-03
-last_verified: 2026-06-03
+last_updated: 2026-06-05
+last_verified: 2026-06-05
 update_frequency: monthly
 ---
 
@@ -16,7 +16,7 @@ update_frequency: monthly
 
 AI voice is not one category. The market splits into **voice generation**, **voice cloning**, **dubbing**, **real-time voice agents**, **meeting transcription**, **creator transcription/editing**, **content repurposing from audio**, and **speech-to-text APIs**.
 
-Start with [ElevenLabs](/tools/elevenlabs/) for polished creator voice generation, cloning, dubbing, low-latency agents, and live STT; its May 2026 PAYG update lowered self-serve API and ElevenAgents rates, while Scribe v2 Realtime now matters for streaming transcription. Look at [MiniMax Speech](/tools/minimax-speech/) when hosted TTS price, Speech 2.8 API access, voice slots, RPM, and multilingual coverage matter. Add [Voxtral](/tools/voxtral/) to the shortlist when you already use Mistral and want hosted TTS at a published $0.016 per 1k characters plus Voxtral Mini Transcribe 2 and Realtime STT in the same model ecosystem. Use [Cartesia](/tools/cartesia/) Line or [Retell AI](/tools/retell-ai/) for low-latency voice agents; use [Hume AI](/tools/hume-ai/) when empathic voice behavior and Octave emotional TTS matter more than raw latency. Do not buy Hume for a new Expression Measurement project without a migration path: Hume docs say those endpoints were deprecated May 14, 2026 and become inaccessible June 14, 2026. Use [CloudTalk](/tools/cloudtalk/) when the voice problem is a sales/support phone system with CRM sync, AI summaries, coaching, and optional AI voice agents. Use [MeetGeek](/tools/meetgeek/) when customer-facing meetings need 100+ language transcription, AI summaries, action items, AI Chat, and CRM/task automation; use [Fathom](/tools/fathom/) for the cleaner individual meeting-transcription default, while testing its bot-free Mac capture beta and Account-Wide Ask Fathom limits before team rollout. Use [Descript](/tools/descript/) for podcast/video transcription and editing now that its June 2 feature check surfaces AI avatars and prompt-based media generation alongside AI Speech, Regenerate, Studio Sound, captions, clips, and Underlord. Use [Castmagic](/tools/castmagic/) for turning recorded audio into ready-to-publish content, and [Deepgram](/tools/deepgram/), [AssemblyAI](/tools/assemblyai/), Voxtral Mini Transcribe 2, or Cartesia Ink-Whisper when transcription is an API or product feature. Deepgram's June 2 check keeps the PAYG/Growth split clear: Growth starts with prepaid annual credits from $4K+/year and saves up to 20%. AssemblyAI's June 1 pricing check keeps the key buyer split clear: Universal-3 Pro for higher-accuracy batch transcription, Universal-3 Pro Streaming for live transcription, and Voice Agent API when speech-to-speech belongs in the product.
+Start with [ElevenLabs](/tools/elevenlabs/) for polished creator voice generation, cloning, dubbing, low-latency agents, and live STT; its May 2026 PAYG update lowered self-serve API and ElevenAgents rates, while Scribe v2 Realtime now matters for streaming transcription. Look at [MiniMax Speech](/tools/minimax-speech/) when hosted TTS price, Speech 2.8 API access, voice slots, RPM, and multilingual coverage matter. Add [Voxtral](/tools/voxtral/) to the shortlist when you already use Mistral and want hosted TTS at a published $0.016 per 1k characters plus Voxtral Mini Transcribe 2 and Realtime STT in the same model ecosystem. Use [Cartesia](/tools/cartesia/) Line or [Retell AI](/tools/retell-ai/) for low-latency voice agents; use [Hume AI](/tools/hume-ai/) when empathic voice behavior and Octave emotional TTS matter more than raw latency. Do not buy Hume for a new Expression Measurement project without a migration path: Hume docs say those endpoints were deprecated May 14, 2026 and become inaccessible June 14, 2026. Use [CloudTalk](/tools/cloudtalk/) when the voice problem is a sales/support phone system with CRM sync, AI summaries, coaching, and optional AI voice agents. Use [MeetGeek](/tools/meetgeek/) when customer-facing meetings need 100+ language transcription, AI summaries, action items, AI Chat, and CRM/task automation; use [Fathom](/tools/fathom/) for the cleaner individual meeting-transcription default, while testing its bot-free Mac capture beta and Account-Wide Ask Fathom limits before team rollout. Use [Descript](/tools/descript/) for podcast/video transcription and editing: the June 5 comparison refresh confirms it beats ElevenLabs, Fish Audio, Resemble AI, and Voxtral when the job is transcript-first post-production rather than standalone TTS, open-weight generation, enterprise voice governance, or Mistral-native audio APIs. Use [Castmagic](/tools/castmagic/) for turning recorded audio into ready-to-publish content, and [Deepgram](/tools/deepgram/), [AssemblyAI](/tools/assemblyai/), Voxtral Mini Transcribe 2, or Cartesia Ink-Whisper when transcription is an API or product feature. Deepgram's June 2 check keeps the PAYG/Growth split clear: Growth starts with prepaid annual credits from $4K+/year and saves up to 20%. AssemblyAI's June 1 pricing check keeps the key buyer split clear: Universal-3 Pro for higher-accuracy batch transcription, Universal-3 Pro Streaming for live transcription, and Voice Agent API when speech-to-speech belongs in the product.
 
 ## Best by Use Case
 
@@ -63,25 +63,27 @@ Start with [ElevenLabs](/tools/elevenlabs/) for polished creator voice generatio
 
 ## Sources
 
-- [ElevenLabs pricing](https://elevenlabs.io/pricing) (verified 2026-06-03)
-- [ElevenLabs API pricing](https://elevenlabs.io/pricing/api) (verified 2026-06-03)
-- [ElevenLabs API and Agents PAYG update](https://elevenlabs.io/blog/weve-lowered-api-agents-pricing-and-introduced-pay-as-you-go) (verified 2026-06-03)
-- [Fish Audio plans](https://fish.audio/plan/) (verified 2026-06-03)
-- [Fish Audio API pricing](https://docs.fish.audio/developer-guide/models-pricing/pricing-and-rate-limits) (verified 2026-06-03)
+- [ElevenLabs pricing](https://elevenlabs.io/pricing) (verified 2026-06-05)
+- [ElevenLabs API pricing](https://elevenlabs.io/pricing/api) (verified 2026-06-05)
+- [ElevenLabs API and Agents PAYG update](https://elevenlabs.io/blog/weve-lowered-api-agents-pricing-and-introduced-pay-as-you-go) (verified 2026-06-05)
+- [Fish Audio plans](https://fish.audio/plan/) (verified 2026-06-05)
+- [Fish Audio API pricing](https://docs.fish.audio/developer-guide/models-pricing/pricing-and-rate-limits) (verified 2026-06-05)
 - [MiniMax Audio Subscription pricing](https://platform.minimax.io/docs/guides/pricing-speech) (verified 2026-05-13)
 - [MiniMax pay-as-you-go pricing](https://platform.minimax.io/docs/guides/pricing-paygo) (verified 2026-05-13)
 - [MiniMax T2A API docs](https://platform.minimax.io/docs/api-reference/speech-t2a-intro) (verified 2026-05-13)
 - [Cartesia pricing](https://cartesia.ai/pricing) (verified 2026-06-03)
-- [Mistral pricing](https://mistral.ai/pricing) (verified 2026-06-03)
-- [Voxtral TTS model card](https://docs.mistral.ai/models/voxtral-tts-26-03) (verified 2026-06-03)
-- [Mistral speech-to-text docs](https://docs.mistral.ai/studio-api/audio/speech_to_text) (verified 2026-06-03)
+- [Mistral pricing](https://mistral.ai/pricing) (verified 2026-06-05)
+- [Voxtral TTS model card](https://docs.mistral.ai/models/voxtral-tts-26-03) (verified 2026-06-05)
+- [Mistral speech-to-text docs](https://docs.mistral.ai/studio-api/audio/speech_to_text) (verified 2026-06-05)
 - [Castmagic pricing](https://www.castmagic.io/pricing) (verified 2026-06-02)
 - [Hedra pricing](https://www.hedra.com/pricing) (verified 2026-06-02)
 - [Hedra models](https://www.hedra.com/models) (verified 2026-06-02)
 - [Hume AI pricing](https://www.hume.ai/pricing) (verified 2026-06-02)
 - [Hume Expression Measurement docs](https://dev.hume.ai/docs/expression-measurement/overview) (verified 2026-06-02)
 - [YouTube altered or synthetic content disclosure](https://support.google.com/youtube/answer/14328491) (verified 2026-05-13)
-- [Descript pricing](https://www.descript.com/pricing) (verified 2026-06-03)
+- [Descript pricing](https://www.descript.com/pricing) (verified 2026-06-05)
+- [Resemble AI pricing](https://www.resemble.ai/pricing/) (verified 2026-06-05)
+- [Resemble AI products overview](https://www.resemble.ai/products) (verified 2026-06-05)
 - [Deepgram pricing](https://deepgram.com/pricing) (verified 2026-06-02)
 - [AssemblyAI pricing](https://www.assemblyai.com/pricing) (verified 2026-06-01)
 - [Fathom pricing](https://www.fathom.ai/pricing) (verified 2026-06-02)
