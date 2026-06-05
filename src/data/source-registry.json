@@ -2488,7 +2488,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "flux-2-github",
@@ -2497,7 +2497,7 @@
       "type": "repository",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "flux-2-klein-huggingface",
@@ -2506,7 +2506,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "flux-2-models",
@@ -2515,7 +2515,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "flux-2-pricing",
@@ -2524,7 +2524,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "flux-official",
@@ -2533,7 +2533,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "flux-pricing",
@@ -2542,7 +2542,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "flux-licensing",
@@ -2551,7 +2551,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "flux-replicate-pricing",
@@ -2560,7 +2560,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "flux-cloudflare-workers",
@@ -2650,7 +2650,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "freepik-pricing",
@@ -2659,7 +2659,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "galileo-ai-features",
@@ -3796,7 +3796,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "ideogram-official",
@@ -3805,7 +3805,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "ideogram-pricing",
@@ -3814,7 +3814,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "imagen-gemini-docs",
@@ -6826,7 +6826,7 @@
     },
     {
       "trust_tier": "primary",
-      "last_checked": "2026-06-02",
+      "last_checked": "2026-06-05",
       "id": "stability-docs",
       "label": "Stability AI platform docs",
       "url": "https://platform.stability.ai/docs",
@@ -6835,7 +6835,7 @@
     },
     {
       "trust_tier": "primary",
-      "last_checked": "2026-06-02",
+      "last_checked": "2026-06-05",
       "id": "stability-stable-image",
       "label": "Stability AI Stable Image",
       "url": "https://stability.ai/stable-image",
@@ -6898,7 +6898,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "stable-diffusion-pricing",
@@ -6907,7 +6907,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "stackblitz-webcontainers",

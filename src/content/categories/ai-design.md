@@ -127,7 +127,7 @@ Do not make a wide table the only mobile experience. Mobile buyers need top pick
 
 - [Lovable vs Bolt.new vs v0](/compare/lovable-vs-bolt-vs-v0/) should be rebuilt first because it is the highest-intent app-builder comparison in this category and still has stale pricing and scope language.
 - [ChatGPT vs Lovable](/compare/chatgpt-vs-lovable/) should stay current because founders often confuse the planning assistant with the app-builder workspace.
-- [Best Canva AI Alternatives](/guides/canva-ai-alternatives/) is now refreshed and should stay in the design money-page rotation because it separates Canva replacement intent by buyer job: Figma for product design, Firefly for Adobe production, Midjourney for ideation, Magnific (the Freepik successor brand as of May 5) for creator assets, and Recraft/Ideogram for text and vector-heavy brand work.
+- [Best Canva AI Alternatives](/guides/canva-ai-alternatives/) is now refreshed and should stay in the design money-page rotation because it separates Canva replacement intent by buyer job: Figma for product design, Firefly for Adobe production, Midjourney for ideation, Freepik AI Suite / Magnific for creator assets, and Recraft/Ideogram for text and vector-heavy brand work.
 - [Figma vs v0](/compare/figma-vs-v0/) is now refreshed around design-system workflow versus Vercel-native implementation, and should stay current because it captures high-intent design-to-code buyers.
 - [Canva AI vs v0](/compare/canva-vs-v0/) should be rebuilt around non-designer creative production versus web-app output.
 - [Google Stitch vs v0](/compare/google-stitch-vs-v0/) should be rebuilt around vibe-design exploration versus Vercel app-building workflow.
@@ -164,6 +164,6 @@ Do not make a wide table the only mobile experience. Mobile buyers need top pick
 - [Bolt.new pricing](https://bolt.new/pricing) (verified 2026-06-01)
 - [v0 pricing](https://v0.app/pricing) (verified 2026-06-05)
 - [v0 documentation](https://v0.app/docs) (verified 2026-06-05)
-- [Magnific pricing](https://magnific.ai/pricing) (verified 2026-05-13; rebranded from Freepik on May 5, 2026)
+- [Freepik plans and pricing docs](https://www.freepik.com/ai/docs/plans-and-pricing) (verified 2026-06-05; public plan docs still use Freepik plan names while Magnific branding appears across AI creative features)
 - [Recraft V4 docs](https://www.recraft.ai/docs/recraft-models/recraft-V4) (verified 2026-05-24)
-- [Ideogram plans](https://docs.ideogram.ai/plans-and-pricing/available-plans) (verified 2026-05-13)
+- [Ideogram plans](https://docs.ideogram.ai/plans-and-pricing/available-plans) (verified 2026-06-05)

@@ -24,13 +24,13 @@ top_picks:
 
 ## Overview
 
-AiPedia rechecked Canva's AI/design workflow on June 2, 2026 and keeps this category split into five buyer jobs: aesthetic generation, conversational image editing, finished social/design assets, professional photo-production workflows, and 3D asset generation for games, AR/VR, printing, and prototyping. Note the May 5, 2026 Freepik rebrand to Magnific: shortlist references that previously named Freepik should now point at Magnific.
+AiPedia rechecked the Flux image-model comparison slice on June 5, 2026 and keeps this category split into five buyer jobs: aesthetic generation, conversational image editing, finished social/design assets, professional photo-production workflows, and 3D asset generation for games, AR/VR, printing, and prototyping. Freepik/Magnific naming remains mixed across public surfaces: use Freepik AI Suite / Magnific for buyer guidance, but verify the live Freepik pricing/model table before claiming a specific credit-free model or plan entitlement.
 
 [Midjourney](/tools/midjourney/) remains the aesthetic ideation benchmark, and the June 5 check keeps the buyer math anchored to Basic, Standard, Pro, and Mega subscriptions plus current V8.1 version docs. [ChatGPT](/tools/chatgpt/) and GPT Image 2 are the best default when image generation or editing is part of a broader assistant workflow. [Adobe Firefly](/tools/adobe-firefly/) is the safer first pick for Photoshop, Creative Cloud, Generative Fill, object removal, image expansion, and credit-aware commercial review. [Canva](/tools/canva/) wins when the image needs to become a finished post, ad, thumbnail, product graphic, or presentation asset quickly.
 
 For paid-media image production, [AdCreative.ai](/tools/adcreative/) is a narrow specialist rather than a general image model. The June 1 check found Starter at $39/month, Professional at $249/month, Ultimate at $999/month, Enterprise custom, and a seasonal discount on longer billing cycles. Use it when the image job is ad-variant production, brand-kit workflow, and creative scoring, not art direction.
 
-Flux by Black Forest Labs remains the power-user and self-hosting choice, with a strong LoRA and ComfyUI ecosystem. The June 2 check now anchors Flux pricing to BFL's FLUX.2 table: Klein 4B starts around $0.014/image, Pro starts at $0.03/MP for text-to-image and $0.045/MP for editing, Max starts at $0.07/MP, Flex starts at $0.06/MP, and FLUX.2 dev remains the local/non-commercial lane. Ideogram is still a strong pick for English-first logos and marketing text; its live annual pricing now lists Plus $15/month, Pro $42/month, Team $20/user/month, and Enterprise contact sales, so do not rely on old Basic-era pricing. Leonardo AI offers one of the easiest free entry points. [Meshy](/tools/meshy/) is the 3D specialist to shortlist when the buyer needs a generated asset, not a flat image; its May 2026 risk is credit math and Free-plan download limits around Meshy 6 output. [fal.ai](/tools/fal-ai/) is the developer API lane for fast image, video, audio, and 3D generation; its June 2 pricing check keeps prepaid credits, successful-output billing, queue behavior, failed-output rules, and batch discounts in the buyer math.
+Flux by Black Forest Labs remains the power-user and self-hosting choice, with a strong LoRA and ComfyUI ecosystem. The June 5 check now anchors Flux pricing to BFL's FLUX.2 table: Klein 4B starts around $0.014/image, Pro starts at $0.03/MP for text-to-image and $0.045/MP for editing, Max starts at $0.07/MP, Flex starts at $0.06/MP, and FLUX.2 dev remains the local/non-commercial lane. Ideogram is still a strong pick for English-first logos and marketing text; its live annual pricing lists Plus $15/month, Pro $42/month, Team $20/user/month, and Enterprise contact sales, so do not rely on old Basic-era pricing. Freepik AI Suite / Magnific belongs in the production-suite lane: Premium+ and Pro include unlimited generation with most image models, but premium models, upscalers, video, audio, training, and advanced tools can still consume credits. Leonardo AI offers one of the easiest free entry points. [Meshy](/tools/meshy/) is the 3D specialist to shortlist when the buyer needs a generated asset, not a flat image; its May 2026 risk is credit math and Free-plan download limits around Meshy 6 output. [fal.ai](/tools/fal-ai/) is the developer API lane for fast image, video, audio, and 3D generation; its June 2 pricing check keeps prepaid credits, successful-output billing, queue behavior, failed-output rules, and batch discounts in the buyer math.
 
 The practical question is no longer "which model can make an image?" Most major systems can. The better question is which workflow you trust for the job: artistic direction, readable text, self-hosting, brand consistency, or integration with the rest of your AI stack.
 
@@ -75,7 +75,7 @@ The practical question is no longer "which model can make an image?" Most major 
 
 - [Best AI for photo editing](/guides/best-ai-for-photo-editing/) now separates Adobe production edits, ChatGPT conversational image edits, Canva social assets, and Midjourney creative variation.
 - [Best AI tools for YouTube creators](/guides/best-ai-for-youtube-creators/) now routes thumbnail buyers toward Canva for finished assets and Midjourney for stronger visual concepts, while keeping video, voice, and Shorts tools separate.
-- [Midjourney alternatives](/guides/midjourney-alternatives/) should stay current because it captures high-intent switching searches for Ideogram, Firefly, Recraft, Magnific (formerly Freepik), and GPT Image workflows.
+- [Midjourney alternatives](/guides/midjourney-alternatives/) should stay current because it captures high-intent switching searches for Ideogram, Firefly, Recraft, Freepik AI Suite / Magnific, and GPT Image workflows.
 - [Canva AI alternatives](/guides/canva-ai-alternatives/) should stay in the design/image rotation because many users do not actually need a raw image model; they need a publishable design workflow.
 
 ## For YouTube Thumbnails Specifically
@@ -106,9 +106,10 @@ Image generation is approaching commodity. The real differentiation is workflow 
 - [Adobe Firefly plans](https://www.adobe.com/products/firefly/plans.html) (verified 2026-05-13)
 - [Photoshop Generative Fill documentation](https://helpx.adobe.com/photoshop/desktop/create-open-import-images/create-images/edit-images-with-generative-fill.html) (verified 2026-05-13)
 - [Canva AI](https://www.canva.com/canva-ai/) (verified 2026-06-02)
-- [Black Forest Labs FLUX.2 pricing](https://docs.bfl.ai/quick_start/pricing) (verified 2026-06-02)
-- [FLUX.2 Klein 4B on Hugging Face](https://huggingface.co/black-forest-labs/FLUX.2-klein-4B) (verified 2026-06-02)
-- [Ideogram pricing](https://ideogram.ai/pricing) (verified 2026-06-02)
+- [Black Forest Labs FLUX.2 pricing](https://docs.bfl.ai/quick_start/pricing) (verified 2026-06-05)
+- [FLUX.2 Klein 4B on Hugging Face](https://huggingface.co/black-forest-labs/FLUX.2-klein-4B) (verified 2026-06-05)
+- [Ideogram pricing](https://ideogram.ai/pricing) (verified 2026-06-05)
+- [Freepik plans and pricing docs](https://www.freepik.com/ai/docs/plans-and-pricing) (verified 2026-06-05)
 - [Meshy pricing](https://www.meshy.ai/pricing) (verified 2026-05-13)
 - [Meshy credit usage help](https://help.meshy.ai/en/articles/10000507-how-many-credits-does-each-generation-task-cost) (verified 2026-05-13)
 - [Recraft V4 docs](https://www.recraft.ai/docs/recraft-models/recraft-V4) (verified 2026-05-24)
