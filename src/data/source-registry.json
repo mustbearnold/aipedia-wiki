@@ -242,7 +242,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "ahrefs-pricing",
@@ -260,7 +260,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "ai21-official",
@@ -398,7 +398,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "anthropic-opus-48",
@@ -425,7 +425,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "anthropic-project-glasswing-expansion",
@@ -443,7 +443,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "anthropic-series-h-2026",
@@ -488,7 +488,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "antigravity-docs",
@@ -907,7 +907,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "capacities-docs",
@@ -943,7 +943,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "captions-overview",
@@ -979,7 +979,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "character-ai-about",
@@ -1078,7 +1078,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "claude-code-usage-limits",
@@ -1131,7 +1131,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "anthropic-higher-limits-spacex",
@@ -1382,7 +1382,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "openai-codex-chatgpt-plan-help",
@@ -1583,7 +1583,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "copy-ai-platform",
@@ -1592,16 +1592,16 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "copy-ai-workflows",
       "label": "Copy.ai workflows",
-      "url": "https://www.copy.ai/workflows",
+      "url": "https://www.copy.ai/platform/building-workflows",
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "crewai-docs",
@@ -3065,12 +3065,12 @@
     },
     {
       "id": "grammarly-ai",
-      "label": "Grammarly AI",
-      "url": "https://www.grammarly.com/ai",
+      "label": "Grammarly product page",
+      "url": "https://superhuman.com/products/grammarly",
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "grammarly-business",
@@ -3083,12 +3083,12 @@
     },
     {
       "id": "grammarly-plans",
-      "label": "Grammarly plans",
-      "url": "https://www.grammarly.com/plans",
+      "label": "Grammarly and Superhuman plans",
+      "url": "https://superhuman.com/plans",
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "grammarly-pricing",
@@ -3097,7 +3097,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "granola-official",
@@ -3708,7 +3708,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "hyperwrite-personal-assistant",
@@ -3717,7 +3717,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "hyperwrite-pricing",
@@ -3726,7 +3726,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "ideogram-docs",
@@ -5952,7 +5952,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "quillbot-pricing",
@@ -5961,7 +5961,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "quillbot-pricing-help",
@@ -5970,7 +5970,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "quillbot-affiliate-program",
@@ -5979,7 +5979,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "quillbot-partnerstack-listing",
@@ -6764,7 +6764,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "sudowrite-muse",
@@ -6782,7 +6782,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "suno-model-timeline",
@@ -7715,7 +7715,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "wordtune-pricing",
@@ -7724,7 +7724,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "workato-pricing",
