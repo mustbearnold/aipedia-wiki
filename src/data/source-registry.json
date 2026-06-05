@@ -2191,7 +2191,7 @@
     },
     {
       "trust_tier": "primary",
-      "last_checked": "2026-05-04",
+      "last_checked": "2026-06-05",
       "id": "exa-docs",
       "label": "Exa Search API guide",
       "url": "https://exa.ai/docs/reference/search-api-guide",
@@ -2205,7 +2205,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "factory-best-for",
@@ -2407,7 +2407,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "fireflies-pricing-guide",
@@ -2416,7 +2416,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "fireflies-ai-credits",
@@ -2425,7 +2425,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "fireworks-ai-docs",
@@ -4101,7 +4101,16 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-05"
+    },
+    {
+      "id": "kagi-research-docs",
+      "label": "Kagi Research Assistants",
+      "url": "https://help.kagi.com/kagi/ai/kagi-research.html",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-05"
     },
     {
       "id": "kagi-official",
@@ -4110,7 +4119,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "kagi-pricing",
@@ -4119,7 +4128,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "kimi-homepage",
@@ -8061,7 +8070,7 @@
     },
     {
       "trust_tier": "primary",
-      "last_checked": "2026-06-04",
+      "last_checked": "2026-06-05",
       "id": "you-com-docs",
       "label": "You.com API docs",
       "url": "https://you.com/docs/welcome",
@@ -8075,7 +8084,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "zapier-agents-guide",

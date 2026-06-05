@@ -38,11 +38,11 @@ AI search is not one category anymore. Buyers now choose between **cited answer 
 
 **Use [NotebookLM](/tools/notebooklm/) when the source set is already known.** It is a research notebook for documents, reports, transcripts, Drive files, and study materials, not a pure open-web search replacement.
 
-**Use [Kagi](/tools/kagi/) when privacy and search control matter.** It is the paid, ad-free search choice for people who want ranking controls and Assistant features rather than an answer-engine-first product. The June 3 [ChatGPT vs Kagi](/compare/chatgpt-vs-kagi/) refresh keeps the split clear: ChatGPT is the broader AI workspace, while Kagi is the search-first product for paid private discovery.
+**Use [Kagi](/tools/kagi/) when privacy and search control matter.** It is the paid, ad-free search choice for people who want ranking controls and Assistant features rather than an answer-engine-first product. The June 5 [Exa vs Kagi](/compare/exa-vs-kagi/) refresh keeps the boundary clear: Kagi is the human-facing paid search product; Exa is the developer retrieval API.
 
-**Use [Exa](/tools/exa/) when you are building AI search into a product.** It is a developer API lane for semantic search, retrieval, crawling-style workflows, deep research APIs, answer endpoints, monitors, and AI page summaries. Model the add-on costs before agent traffic grows.
+**Use [Exa](/tools/exa/) when you are building AI search into a product.** It is a developer API lane for semantic search, retrieval, crawling-style workflows, deep research APIs, answer endpoints, monitors, AI page summaries, and beta Agent runs. Model result counts, summaries, monitor cadence, enrichment, and Agent effort before traffic grows.
 
-**Use [You.com](/tools/you-com/) when the buyer wants grounding and research APIs rather than a consumer chat UI.** The June 4 [ChatGPT vs You.com](/compare/chatgpt-vs-you-com/) refresh reflects the current API-first surface: Search at $5/1K calls, Contents at $1/1K pages, Research at $12/1K calls, Finance Research from $110/1K calls, $100 free credit, and custom Enterprise terms.
+**Use [You.com](/tools/you-com/) when the buyer wants grounding and research APIs rather than a consumer chat UI.** The June 5 [Exa vs You.com](/compare/exa-vs-you-com/) refresh reflects the current API-first surface: Search at $5/1K calls, Contents at $1/1K pages, Research at $12/1K calls, Finance Research from $110/1K calls, $100 free credit, and custom Enterprise terms.
 
 **Use [Genspark](/tools/genspark/) when search should become work output.** The June 2 membership check frames Genspark as an AI workspace with Plus at $24.99/month for 10,000 credits and Pro at $249.99/month for 125,000 credits, built around Super Agent, documents, slides, sheets, calls, meetings, media, and AI Drive storage rather than a pure citation-first answer engine.
 
@@ -61,7 +61,7 @@ AI search is not one category anymore. Buyers now choose between **cited answer 
 | Google-native search and research | [Gemini](/tools/gemini/) | AI Mode, AI Overviews, Deep Research, Workspace, NotebookLM, and Chrome fit | Google ecosystem lock-in and regional feature limits |
 | Owned-source research | [NotebookLM](/tools/notebooklm/) | Best for selected PDFs, notes, reports, calls, classes, and Drive material | Not a full web discovery engine |
 | Private paid search | [Kagi](/tools/kagi/) | Ad-free search, lenses, ranking controls, Assistant options | Paid search is a harder sell for casual users |
-| Search/retrieval API | [Exa](/tools/exa/) | Search and retrieval primitives for AI apps and agents | Value depends on integration quality, request economics, extra results, AI summaries, and monitor usage |
+| Search/retrieval API | [Exa](/tools/exa/) | Search, contents, answer, monitors, summaries, and Agent primitives for AI apps | Value depends on integration quality, request economics, extra results, summaries, monitor usage, enrichment, and Agent effort |
 | Search-to-deliverable AI workspace | [Genspark](/tools/genspark/) | Turns research into docs, slides, sheets, calls, media, and agent outputs | Credit burn and enterprise/API availability need direct verification |
 | Enterprise work search | [Glean](/tools/glean/) | Permission-aware search and agents over company apps and knowledge | Contact-sales pricing and connector/security review are mandatory |
 | Real-time social context | [Grok](/tools/grok/) | Useful when X-native context is the source of the question | Social data can be noisy, biased, or incomplete |
@@ -95,7 +95,7 @@ AI search is not one category anymore. Buyers now choose between **cited answer 
 - A new `Perplexity vs ChatGPT Search` comparison would capture high-intent buyers deciding whether to keep Perplexity or consolidate into ChatGPT.
 - [ChatGPT vs Kagi](/compare/chatgpt-vs-kagi/) should stay current because privacy-first search buyers often want to know whether ChatGPT Search can replace paid search or whether Kagi still deserves its own subscription.
 - A new `Perplexity vs Google AI Mode` answer page would capture search behavior changes caused by Google's AI Overviews and AI Mode.
-- A new `Exa vs Perplexity API` comparison would capture developer buyers choosing between search/retrieval primitives and Perplexity-style answer APIs.
+- [Exa AI vs Perplexity](/compare/exa-vs-perplexity/) now captures developer buyers choosing between search/retrieval primitives and Perplexity-style answer, search, Sonar, and Agent APIs.
 
 ## What Hurts Trust
 
@@ -103,7 +103,7 @@ Do not call AI search "fact checking" unless the cited sources actually support 
 
 Do not rank AI search tools by monthly price alone. Real value depends on citation quality, source controls, file limits, model access, API request economics, enterprise privacy, and whether the output can be audited.
 
-Do not leave this category stale. Google AI Mode, Perplexity Pro/Max/Enterprise, ChatGPT Search, NotebookLM plan limits, and AI search APIs are moving quickly enough that old April 2026 copy can mislead buyers.
+Do not leave this category stale. Google AI Mode, Perplexity Pro/Max/Enterprise, ChatGPT Search, NotebookLM plan limits, and AI search APIs are moving quickly enough that old copy can mislead buyers.
 
 ## Sources
 
@@ -121,17 +121,18 @@ Do not leave this category stale. Google AI Mode, Perplexity Pro/Max/Enterprise,
 - [Google AI Mode and AI Overviews updates](https://blog.google/products-and-platforms/products/search/explore-web-generative-ai-search/) (verified 2026-05-13)
 - [Google AI Plans](https://one.google.com/about/google-ai-plans/) (verified 2026-05-13)
 - [NotebookLM upgrade docs](https://support.google.com/notebooklm/answer/16213268) (verified 2026-05-13)
-- [Kagi pricing](https://kagi.com/pricing) (verified 2026-06-03)
-- [Kagi Assistant docs](https://help.kagi.com/kagi/ai/assistant.html) (verified 2026-06-03)
-- [Kagi Ultimate plan docs](https://help.kagi.com/kagi/plans/ultimate-plan.html) (verified 2026-06-03)
-- [Kagi Team plan docs](https://help.kagi.com/kagi/plans/team-plan.html) (verified 2026-06-03)
-- [Exa pricing update](https://exa.ai/docs/changelog/pricing-update) (verified 2026-06-02)
-- [Exa API pricing](https://exa.ai/pricing/api) (verified 2026-06-02)
+- [Kagi pricing](https://kagi.com/pricing) (verified 2026-06-05)
+- [Kagi Assistant docs](https://help.kagi.com/kagi/ai/assistant.html) (verified 2026-06-05)
+- [Kagi Ultimate plan docs](https://help.kagi.com/kagi/plans/ultimate-plan.html) (verified 2026-06-05)
+- [Kagi Team plan docs](https://help.kagi.com/kagi/plans/team-plan.html) (verified 2026-06-05)
+- [Kagi Research Assistants](https://help.kagi.com/kagi/ai/kagi-research.html) (verified 2026-06-05)
+- [Exa pricing update](https://exa.ai/docs/changelog/pricing-update) (verified 2026-06-05)
+- [Exa API pricing](https://exa.ai/pricing/api) (verified 2026-06-05)
 - [Genspark membership benefits](https://www.genspark.ai/membership-benefits-lp) (verified 2026-06-02)
 - [Glean official site](https://www.glean.com/) (verified 2026-06-02)
 - [Glean developer platform](https://developers.glean.com/) (verified 2026-06-02)
-- [You.com pricing](https://you.com/pricing) (verified 2026-06-04)
-- [You.com API docs](https://you.com/docs/get-started/quickstart) (verified 2026-06-04)
+- [You.com pricing](https://you.com/pricing) (verified 2026-06-05)
+- [You.com API docs](https://you.com/docs/get-started/quickstart) (verified 2026-06-05)
 - [Grok by xAI](https://x.ai/grok) (verified 2026-06-02)
 - [xAI pricing](https://x.ai/pricing) (verified 2026-06-02)
 - [xAI model docs](https://docs.x.ai/developers/models) (verified 2026-06-02)

@@ -26,10 +26,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /compare/beautiful-ai-vs-tome/ | Comparison | Yes | frontmatter | src/content/comparisons/beautiful-ai-vs-tome.md |
 | 2026-05-13 | /compare/chatgpt-vs-phind/ | Comparison | Yes | frontmatter | src/content/comparisons/chatgpt-vs-phind.md |
 | 2026-05-13 | /compare/decktopus-vs-tome/ | Comparison | Yes | frontmatter | src/content/comparisons/decktopus-vs-tome.md |
-| 2026-05-13 | /compare/exa-vs-kagi/ | Comparison | Yes | frontmatter | src/content/comparisons/exa-vs-kagi.md |
-| 2026-05-13 | /compare/exa-vs-perplexity/ | Comparison | Yes | frontmatter | src/content/comparisons/exa-vs-perplexity.md |
 | 2026-05-13 | /compare/exa-vs-phind/ | Comparison | Yes | frontmatter | src/content/comparisons/exa-vs-phind.md |
-| 2026-05-13 | /compare/exa-vs-you-com/ | Comparison | Yes | frontmatter | src/content/comparisons/exa-vs-you-com.md |
 | 2026-05-13 | /compare/figma-vs-google-stitch/ | Comparison | Yes | frontmatter | src/content/comparisons/figma-vs-google-stitch.md |
 | 2026-05-13 | /compare/figma-vs-lovable/ | Comparison | Yes | frontmatter | src/content/comparisons/figma-vs-lovable.md |
 | 2026-05-13 | /compare/figma-vs-midjourney/ | Comparison | Yes | frontmatter | src/content/comparisons/figma-vs-midjourney.md |
@@ -226,7 +223,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /tools/grok-code-fast/ | Tool | Yes | frontmatter | src/content/tools/grok-code-fast.md |
 | 2026-05-13 | /tools/jimeng/ | Tool | Yes | frontmatter | src/content/tools/jimeng.md |
 | 2026-05-13 | /tools/julius/ | Tool | Yes | frontmatter | src/content/tools/julius.md |
-| 2026-05-13 | /tools/kagi/ | Tool | Yes | frontmatter | src/content/tools/kagi.md |
 | 2026-05-13 | /tools/kimi/ | Tool | Yes | frontmatter | src/content/tools/kimi.md |
 | 2026-05-13 | /tools/kling/ | Tool | Yes | frontmatter | src/content/tools/kling.md |
 | 2026-05-13 | /tools/kokoro/ | Tool | Yes | frontmatter | src/content/tools/kokoro.md |
@@ -510,7 +506,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-02 | /tools/doubao/ | Tool | Yes | frontmatter | src/content/tools/doubao.md |
 | 2026-06-02 | /tools/dust/ | Tool | Yes | frontmatter | src/content/tools/dust.md |
 | 2026-06-02 | /tools/eightfold-ai/ | Tool | Yes | frontmatter | src/content/tools/eightfold-ai.md |
-| 2026-06-02 | /tools/exa/ | Tool | Yes | frontmatter | src/content/tools/exa.md |
 | 2026-06-02 | /tools/fal-ai/ | Tool | Yes | frontmatter | src/content/tools/fal-ai.md |
 | 2026-06-02 | /tools/fathom/ | Tool | Yes | frontmatter | src/content/tools/fathom.md |
 | 2026-06-02 | /tools/figma/ | Tool | Yes | frontmatter | src/content/tools/figma.md |
@@ -672,7 +667,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-04 | /tools/v0/ | Tool | Yes | frontmatter | src/content/tools/v0.md |
 | 2026-06-04 | /tools/wordtune/ | Tool | Yes | frontmatter | src/content/tools/wordtune.md |
 | 2026-06-04 | /tools/writesonic/ | Tool | Yes | frontmatter | src/content/tools/writesonic.md |
-| 2026-06-04 | /tools/you-com/ | Tool | Yes | frontmatter | src/content/tools/you-com.md |
 | 2026-06-04 | /tools/zapier/ | Tool | Yes | frontmatter | src/content/tools/zapier.md |
 | 2026-06-05 | / | Static page | Yes | working tree | src/pages/index.astro |
 | 2026-06-05 | /categories/ | Static page | Yes | working tree | src/pages/categories/index.astro |
@@ -680,7 +674,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-05 | /categories/ai-coding/ | Category | Yes | frontmatter | src/content/categories/ai-coding.md |
 | 2026-06-05 | /categories/ai-design/ | Category | Yes | frontmatter | src/content/categories/ai-design.md |
 | 2026-06-05 | /categories/ai-presentation/ | Category | Yes | frontmatter | src/content/categories/ai-presentation.md |
-| 2026-06-05 | /categories/ai-research/ | Category | Yes | working tree | src/content/categories/ai-research.md |
+| 2026-06-05 | /categories/ai-research/ | Category | Yes | frontmatter | src/content/categories/ai-research.md |
 | 2026-06-05 | /categories/ai-search/ | Category | Yes | working tree | src/content/categories/ai-search.md |
 | 2026-06-05 | /categories/ai-voice/ | Category | Yes | frontmatter | src/content/categories/ai-voice.md |
 | 2026-06-05 | /categories/ai-writing/ | Category | Yes | frontmatter | src/content/categories/ai-writing.md |
@@ -719,10 +713,13 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-05 | /compare/elevenlabs-vs-synthesia/ | Comparison | Yes | frontmatter | src/content/comparisons/elevenlabs-vs-synthesia.md |
 | 2026-06-05 | /compare/elevenlabs-vs-voxtral/ | Comparison | Yes | frontmatter | src/content/comparisons/elevenlabs-vs-voxtral.md |
 | 2026-06-05 | /compare/elevenlabs-vs-wellsaid/ | Comparison | Yes | frontmatter | src/content/comparisons/elevenlabs-vs-wellsaid.md |
-| 2026-06-05 | /compare/elicit-vs-nanochat/ | Comparison | Yes | working tree | src/content/comparisons/elicit-vs-nanochat.md |
-| 2026-06-05 | /compare/elicit-vs-perplexity/ | Comparison | Yes | working tree | src/content/comparisons/elicit-vs-perplexity.md |
-| 2026-06-05 | /compare/elicit-vs-scite/ | Comparison | Yes | working tree | src/content/comparisons/elicit-vs-scite.md |
-| 2026-06-05 | /compare/elicit-vs-semantic-scholar/ | Comparison | Yes | working tree | src/content/comparisons/elicit-vs-semantic-scholar.md |
+| 2026-06-05 | /compare/elicit-vs-nanochat/ | Comparison | Yes | frontmatter | src/content/comparisons/elicit-vs-nanochat.md |
+| 2026-06-05 | /compare/elicit-vs-perplexity/ | Comparison | Yes | frontmatter | src/content/comparisons/elicit-vs-perplexity.md |
+| 2026-06-05 | /compare/elicit-vs-scite/ | Comparison | Yes | frontmatter | src/content/comparisons/elicit-vs-scite.md |
+| 2026-06-05 | /compare/elicit-vs-semantic-scholar/ | Comparison | Yes | frontmatter | src/content/comparisons/elicit-vs-semantic-scholar.md |
+| 2026-06-05 | /compare/exa-vs-kagi/ | Comparison | Yes | working tree | src/content/comparisons/exa-vs-kagi.md |
+| 2026-06-05 | /compare/exa-vs-perplexity/ | Comparison | Yes | working tree | src/content/comparisons/exa-vs-perplexity.md |
+| 2026-06-05 | /compare/exa-vs-you-com/ | Comparison | Yes | working tree | src/content/comparisons/exa-vs-you-com.md |
 | 2026-06-05 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
 | 2026-06-05 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
 | 2026-06-05 | /tools/ | Static page | Yes | working tree | src/pages/tools/index.astro |
@@ -732,14 +729,16 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-05 | /tools/descript/ | Tool | Yes | frontmatter | src/content/tools/descript.md |
 | 2026-06-05 | /tools/devin/ | Tool | Yes | frontmatter | src/content/tools/devin.md |
 | 2026-06-05 | /tools/elevenlabs/ | Tool | Yes | frontmatter | src/content/tools/elevenlabs.md |
-| 2026-06-05 | /tools/elicit/ | Tool | Yes | working tree | src/content/tools/elicit.md |
+| 2026-06-05 | /tools/elicit/ | Tool | Yes | frontmatter | src/content/tools/elicit.md |
+| 2026-06-05 | /tools/exa/ | Tool | Yes | working tree | src/content/tools/exa.md |
 | 2026-06-05 | /tools/fish-audio/ | Tool | Yes | frontmatter | src/content/tools/fish-audio.md |
 | 2026-06-05 | /tools/gamma/ | Tool | Yes | frontmatter | src/content/tools/gamma.md |
 | 2026-06-05 | /tools/gemini/ | Tool | Yes | frontmatter | src/content/tools/gemini.md |
+| 2026-06-05 | /tools/kagi/ | Tool | Yes | working tree | src/content/tools/kagi.md |
 | 2026-06-05 | /tools/lovable/ | Tool | Yes | frontmatter | src/content/tools/lovable.md |
 | 2026-06-05 | /tools/mistral-ai/ | Tool | Yes | frontmatter | src/content/tools/mistral-ai.md |
 | 2026-06-05 | /tools/murf/ | Tool | Yes | frontmatter | src/content/tools/murf.md |
-| 2026-06-05 | /tools/perplexity/ | Tool | Yes | working tree | src/content/tools/perplexity.md |
+| 2026-06-05 | /tools/perplexity/ | Tool | Yes | frontmatter | src/content/tools/perplexity.md |
 | 2026-06-05 | /tools/pitch/ | Tool | Yes | frontmatter | src/content/tools/pitch.md |
 | 2026-06-05 | /tools/presentations-ai/ | Tool | Yes | frontmatter | src/content/tools/presentations-ai.md |
 | 2026-06-05 | /tools/quillbot/ | Tool | Yes | frontmatter | src/content/tools/quillbot.md |
@@ -749,3 +748,4 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-05 | /tools/voxtral/ | Tool | Yes | frontmatter | src/content/tools/voxtral.md |
 | 2026-06-05 | /tools/wellsaid/ | Tool | Yes | frontmatter | src/content/tools/wellsaid.md |
 | 2026-06-05 | /tools/windsurf/ | Tool | Yes | frontmatter | src/content/tools/windsurf.md |
+| 2026-06-05 | /tools/you-com/ | Tool | Yes | working tree | src/content/tools/you-com.md |

@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$5-$25/month"
 status: active
 launched: 2017-06
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-05
+last_verified: 2026-06-05
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,23 +30,23 @@ facts:
     source: "https://kagi.com"
     source_label: "Kagi official site"
     source_id: kagi-official
-    verified_at: 2026-05-13
+    verified_at: 2026-06-05
     volatility: medium
     confidence: high
   ai_search:
-    value: "Kagi Assistant ships across all paid tiers in 2026: Starter and Professional get Quick mode, Ultimate adds Research mode plus frontier models (Claude, GPT, Gemini)."
+    value: "Kagi Assistant ships across paid tiers in 2026: Starter, Professional, and Ultimate have Quick mode allowances, while Ultimate adds Research mode and flagship model access listed on the live pricing page."
     source: "https://help.kagi.com/kagi/ai/assistant.html"
     source_label: "Kagi Assistant docs"
     source_id: kagi-assistant-docs
-    verified_at: 2026-05-13
+    verified_at: 2026-06-05
     volatility: medium
     confidence: high
   pricing_anchor:
-    value: "Paid search plans (Starter $5, Professional $10, Ultimate $25) verified on the live pricing page in May 2026. No tier changes since 2025."
+    value: "Paid search plans (Starter $5, Professional $10, Ultimate $25) verified on the live pricing page on June 5, 2026. Annual billing still shows 10% off."
     source: "https://kagi.com/pricing"
     source_label: "Kagi pricing"
     source_id: kagi-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-06-05
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -55,7 +55,7 @@ facts:
     source: "https://kagi.com"
     source_label: "Kagi official site"
     source_id: kagi-official
-    verified_at: 2026-05-13
+    verified_at: 2026-06-05
     volatility: medium
     confidence: medium
   watch_out_for:
@@ -63,13 +63,13 @@ facts:
     source: "https://kagi.com/pricing"
     source_label: "Kagi pricing"
     source_id: kagi-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-06-05
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
 tags: [search-engine, privacy, ad-free, ai-summarization, paid-search, kagi-assistant, no-tracking]
-seo_title: "Kagi: Ad-Free Search Review & Pricing (May 2026)"
-meta_description: "Kagi is paid, ad-free search with user ranking controls and Kagi Assistant. Starter $5/mo (300 searches), Professional $10/mo unlimited, Ultimate $25/mo adds Research mode and frontier models (Claude, GPT, Gemini). No free tier; 100-search trial only."
+seo_title: "Kagi: Ad-Free Search Review & Pricing (June 2026)"
+meta_description: "Kagi is paid, ad-free search with user ranking controls and Kagi Assistant. Starter $5/mo (300 searches), Professional $10/mo unlimited, Ultimate $25/mo adds Research mode and flagship model access. No free tier; 100-search trial only."
 author: "aipedia.wiki Editorial"
 best_for:
   - privacy-focused users who want zero tracking
@@ -81,7 +81,7 @@ not_best_for:
   - workflows needing the absolute widest index
   - users who prefer auto-routed AI search over manual controls
 quick_answer: >-
-  Kagi is paid, ad-free search. Starter $5/mo (300 searches), Professional $10/mo (unlimited), Ultimate $25/mo adds Kagi Assistant Research mode with frontier models (Claude, GPT, Gemini). No free tier; 100-search trial only. Pick it for clean results and domain controls. Skip it if free alternatives are good enough.
+  Kagi is paid, ad-free search. Starter $5/mo (300 searches), Professional $10/mo (unlimited), Ultimate $25/mo adds Kagi Assistant Research mode with flagship model access. No free tier; 100-search trial only. Pick it for clean results and domain controls. Skip it if free alternatives are good enough.
 price_history:
   - date: 2026-04-17
     plan: "Starter / Professional / Ultimate"
@@ -97,13 +97,20 @@ price_history:
     source_label: "Kagi pricing"
     source_id: kagi-pricing
     note: "Re-verified. Starter and Professional now both get Quick mode Assistant; Ultimate adds Research mode with Claude, GPT, Gemini frontier models. Annual discount steady at 10%."
+  - date: 2026-06-05
+    plan: "Starter / Professional / Ultimate"
+    price: "$5 / $10 / $25 per month"
+    source: "https://kagi.com/pricing"
+    source_label: "Kagi pricing"
+    source_id: kagi-pricing
+    note: "June 2026 comparison refresh: pricing unchanged; Kagi remains a human-facing paid search product, not a developer retrieval API like Exa."
 ---
 
 # Kagi
 
 Kagi is a paid search engine funded entirely by subscriptions. No ads, no third-party tracking, no behavioral profiles. Users can boost, block, or pin domains, and those preferences personalize ranking without training on private data.
 
-Kagi Assistant is the integrated AI chat layer. Quick mode Assistant is now available across all paid tiers, including the $5 Starter plan. Ultimate adds Research mode and the frontier models (Claude, GPT, Gemini top tier) for deep multi-source synthesis.
+Kagi Assistant is the integrated AI chat layer. Quick mode Assistant is now available across paid tiers, including the $5 Starter plan. Ultimate adds Research mode and flagship model access for deep multi-source synthesis.
 
 ## System Verdict
 
@@ -111,7 +118,7 @@ Kagi Assistant is the integrated AI chat layer. Quick mode Assistant is now avai
 >
 > **Skip it if Google or Perplexity free tier already does the job.** Index breadth is narrower than Google on niche and very recent queries. Assistant on Ultimate is capable but trails dedicated [Perplexity](/tools/perplexity/) for depth of cited research.
 >
-> **Who pays which tier:** Starter $5/mo for light searchers (300/month cap), Professional $10/mo for most users (unlimited search, basic Assistant), Ultimate $25/mo for power researchers who want premium AI models alongside unlimited search.
+> **Who pays which tier:** Starter $5/mo for light searchers (300/month cap), Professional $10/mo for most users (unlimited search, basic Assistant), Ultimate $25/mo for power researchers who want Research mode and flagship model access alongside unlimited search.
 
 ## Key Facts
 
@@ -121,20 +128,20 @@ Kagi Assistant is the integrated AI chat layer. Quick mode Assistant is now avai
 | **Free tier** | None. 100-search trial for new users |
 | **Starter** | $5/mo: 300 searches/mo, Assistant Quick mode |
 | **Professional** | $10/mo: unlimited searches, Assistant Quick mode |
-| **Ultimate** | $25/mo: unlimited + Assistant Research mode + frontier models (Claude, GPT, Gemini) |
+| **Ultimate** | $25/mo: unlimited + Assistant Research mode + flagship model access |
 | **Annual discount** | 10% off all tiers |
 | **Fair pricing** | Unused Starter searches auto-credit the next billing cycle |
 | **Personalization** | Domain block, boost, pin, Lenses (community filters) |
 | **Privacy** | No behavioral tracking, no ad profiles, subscription-funded |
 | **Index** | Proprietary crawl + licensed third-party indexes |
 
-Every data point above was verified against vendor documentation on 2026-05-13. See Sources.
+Every data point above was verified against vendor documentation on 2026-06-05. See Sources.
 
 ## What it actually is
 
 One search product with three subscription tiers. Every result is organic. Every user has personal block, boost, and pin controls that persist across sessions.
 
-Kagi Assistant is an AI chat layer with web access. Quick mode ships across all paid tiers (Starter, Professional, Ultimate); Ultimate alone unlocks Research mode and frontier models (Claude, GPT, Gemini top tier) for deeper multi-source synthesis. Universal Summarizer collapses any page or video to a short brief on demand.
+Kagi Assistant is an AI chat layer with web access. Quick mode ships across paid tiers (Starter, Professional, Ultimate); Ultimate alone unlocks Research mode and flagship model access for deeper multi-source synthesis. Universal Summarizer collapses any page or video to a short brief on demand.
 
 The moat: subscription economics. Because Kagi earns no ad revenue, its ranking incentive is user retention, not click maximization. That shows up most clearly on high-commercial-intent queries where Google surfaces shopping carousels and SEO farms.
 
@@ -144,7 +151,7 @@ The moat: subscription economics. Because Kagi earns no ad revenue, its ranking 
 - **Personal ranking control matters.** Block domains forever, boost trusted sources, pin favorites. Preferences stay private and do not train models.
 - **Privacy is non-negotiable.** Zero behavioral tracking, no ad profile, no data sold. Subscription model removes the conflict-of-interest.
 - **Power users want Lenses and Summarizer.** Community-curated Lenses filter to academic, developer, or small-web sources. Universal Summarizer handles long pages and video.
-- **Ultimate subscribers want frontier AI in one tab.** Claude (Opus 4.7), GPT-5.5, and Gemini 3.1 Pro inside Kagi Assistant Research mode without a second subscription.
+- **Ultimate subscribers want flagship AI in one tab.** Kagi's pricing page lists flagship model access inside Kagi Assistant Research mode without a separate AI-search subscription.
 
 ## When to pick something else
 
@@ -152,7 +159,8 @@ The moat: subscription economics. Because Kagi earns no ad revenue, its ranking 
 - **Developer API for semantic retrieval:** [Exa](/tools/exa/). Kagi has no production developer API.
 - **General-purpose AI assistant with image gen:** [ChatGPT](/tools/chatgpt/). Broader feature surface at $20/mo.
 - **Academic paper search with evidence synthesis:** [Consensus](/tools/consensus/) or [Elicit](/tools/elicit/).
-- **Enterprise research agent:** [You.com](/tools/you-com/) ARI on Max or Enterprise tiers.
+- **Grounding and research APIs:** [You.com](/tools/you-com/). Its public pricing page now emphasizes Search, Contents, Research, and Finance Research APIs rather than consumer chat plans.
+- **Semantic retrieval API:** [Exa](/tools/exa/). Kagi is for human search; Exa is for app and agent builders.
 
 ## Pricing
 
@@ -162,9 +170,9 @@ Pricing via [kagi.com/pricing](https://kagi.com/pricing):
 |---|---|---|---|---|
 | Starter | $5 | 300/mo | Quick mode | Light searchers testing the product |
 | Professional | $10 | Unlimited | Quick mode | **Most paying users land here** |
-| Ultimate | $25 | Unlimited | Research mode + frontier models | Power researchers + AI power users |
+| Ultimate | $25 | Unlimited | Research mode + flagship models | Power researchers + AI power users |
 
-Annual billing saves 10% across all tiers. Fair pricing policy: unused Starter searches auto-credit the next cycle. Prices verified 2026-05-13 via [Kagi pricing](https://kagi.com/pricing) and [Kagi plan types docs](https://help.kagi.com/kagi/plans/plan-types.html).
+Annual billing saves 10% across all tiers. Fair pricing policy: unused Starter searches auto-credit the next cycle. Prices verified 2026-06-05 via [Kagi pricing](https://kagi.com/pricing) and [Kagi plan types docs](https://help.kagi.com/kagi/plans/plan-types.html).
 
 No free tier. New users get a 100-search trial before subscribing.
 
@@ -175,7 +183,7 @@ No free tier. New users get a 100-search trial before subscribing.
 | **Price** | $25/mo | $20/mo | Free |
 | **Ads** | None | None | Yes (Google) / limited (DDG) |
 | **Personalization** | Block, boost, pin, Lenses | None | None (private) |
-| **AI layer** | Assistant Research mode + frontier models | Auto-routed models | Separate tools |
+| **AI layer** | Assistant Research mode + flagship models | Auto-routed models | Separate tools |
 | **Privacy** | Zero tracking | No ad targeting | Google tracks, DDG does not |
 | **Index breadth** | Narrower than Google | Uses web index + AI | Widest |
 | **Best viewed as** | Premium research toolkit | Cited AI research engine | Free baseline |
@@ -191,22 +199,23 @@ No free tier. New users get a 100-search trial before subscribing.
 
 ## Recent changes
 
-- **2026-05-13:** Pricing re-verified on the live page. Quick mode Assistant confirmed available on Starter and Professional; Research mode and frontier-model access (Claude Opus 4.7, GPT-5.5, Gemini 3.1 Pro) remain Ultimate-only.
+- **2026-06-05:** Pricing re-verified on the live page during the Exa comparison refresh. Kagi remains the paid private search choice for humans; Exa is the developer retrieval API lane.
+- **2026-05-13:** Pricing re-verified on the live page. Quick mode Assistant confirmed available on paid tiers; Research mode and flagship-model access remain Ultimate-only.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-05-13 against [Kagi pricing](https://kagi.com/pricing), [Kagi plan types docs](https://help.kagi.com/kagi/plans/plan-types.html), and [Kagi Assistant for all](https://blog.kagi.com/assistant-for-all).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-05 against [Kagi pricing](https://kagi.com/pricing), [Kagi plan types docs](https://help.kagi.com/kagi/plans/plan-types.html), [Kagi Research Assistants](https://help.kagi.com/kagi/ai/kagi-research.html), and [Kagi Assistant for all](https://blog.kagi.com/assistant-for-all).
 
 ## FAQ
 
 **Is Kagi worth $25/month?**
-For users running 20+ searches per day who want frontier AI models and Research mode bundled, yes. For lighter users, Professional at $10/mo with unlimited search and Quick mode Assistant is the sweet spot.
+For users running 20+ searches per day who want flagship AI model access and Research mode bundled, yes. For lighter users, Professional at $10/mo with unlimited search and Quick mode Assistant is the sweet spot.
 
 **Is there a free trial?**
 Yes. New users get 100 free searches before being asked to subscribe. Enough to evaluate whether result quality justifies paying.
 
 **What changed with Kagi Assistant?**
-Quick mode Assistant rolled out to all paid tiers, including the $5 Starter plan. Ultimate at $25/mo still holds Research mode and the frontier models (Claude Opus 4.7, GPT-5.5, Gemini 3.1 Pro).
+Quick mode Assistant rolled out to paid tiers, including the $5 Starter plan. Ultimate at $25/mo still holds Research mode and flagship model access.
 
 **Kagi vs Perplexity?**
 Kagi is a search engine with an AI layer. Perplexity is an AI answer engine with search underneath. Kagi gives finer control over ranking; Perplexity gives deeper research synthesis. Pick Kagi for daily search replacement, Perplexity for research tasks.
@@ -220,8 +229,9 @@ No behavioral tracking, no ad profiles, no data sold to third parties. IP is not
 - [Kagi plan types docs](https://help.kagi.com/kagi/plans/plan-types.html): detailed plan features
 - [Kagi Assistant for all](https://blog.kagi.com/assistant-for-all): Assistant tier expansion
 - [Kagi Ultimate plan docs](https://help.kagi.com/kagi/plans/ultimate-plan.html): premium model access
+- [Kagi Research Assistants](https://help.kagi.com/kagi/ai/kagi-research.html): Research mode workflow
 
 ## Related
 
 - **Category:** [AI Search](/categories/ai-search/)
-- **Comparisons:** [ChatGPT vs Kagi](/compare/chatgpt-vs-kagi/) | [Exa AI vs Kagi](/compare/exa-vs-kagi/) | [Kagi vs Perplexity](/compare/kagi-vs-perplexity/) | [Kagi vs Phind](/compare/kagi-vs-phind/) | [Kagi vs You.com](/compare/kagi-vs-you-com/)
+- **Comparisons:** [ChatGPT vs Kagi](/compare/chatgpt-vs-kagi/) | [Exa AI vs Kagi](/compare/exa-vs-kagi/) | [Kagi vs Perplexity](/compare/kagi-vs-perplexity/) | [Kagi vs You.com](/compare/kagi-vs-you-com/)
