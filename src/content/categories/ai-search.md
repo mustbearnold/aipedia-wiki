@@ -36,6 +36,8 @@ AI search is not one category anymore. Buyers now choose between **cited answer 
 
 **Use [Gemini](/tools/gemini/) and Google AI Mode when the buyer already lives in Google.** Google's current AI Mode and AI Overviews updates focus on helping users find relevant websites, deep insights, and original content across the web. Google AI Plans connect Gemini, Deep Research, AI Mode, Workspace, NotebookLM, and Chrome features depending on plan and region.
 
+**June 5 Gemini vs Perplexity update:** [Gemini vs Perplexity](/compare/gemini-vs-perplexity/) now keeps the boundary clean: Gemini is the Google-native research and productivity workspace, while Perplexity is the cited open-web answer engine. Buyers who need Google files, NotebookLM, Workspace, and AI Mode should start with Gemini; buyers who need visible source trails for every serious web answer should start with Perplexity.
+
 **Use [NotebookLM](/tools/notebooklm/) when the source set is already known.** It is a research notebook for documents, reports, transcripts, Drive files, and study materials, not a pure open-web search replacement.
 
 **Use [Kagi](/tools/kagi/) when privacy and search control matter.** It is the paid, ad-free search choice for people who want ranking controls and Assistant features rather than an answer-engine-first product. The June 5 [Exa vs Kagi](/compare/exa-vs-kagi/) refresh keeps the boundary clear: Kagi is the human-facing paid search product; Exa is the developer retrieval API.

@@ -3,6 +3,7 @@
 // Copilot) at the canonical index + category hubs + editorial policy.
 //
 // See also /llms-full.txt for the verbose variant with every page listed.
+// Refresh metadata: 2026-06-05 Gemini comparison slice across GitHub Copilot, Grok, Mistral AI, Perplexity, and Qwen plus AI Chatbots, AI Coding, AI Search, tools, comparison, category, homepage, and LLM maintenance.
 // Refresh metadata: 2026-06-05 Gamma/Pitch/Presentations.AI comparison slice plus Pitch source URL, AI Presentation, tools, comparison, category, homepage, source registry, and LLM maintenance.
 // Refresh metadata: 2026-06-05 Frase SEO comparison slice plus adjacent MarketMuse, NeuronWriter, Semrush, Surfer SEO, and Ahrefs comparison-card cleanup across AI SEO, tools, comparison, category, homepage, source registry, and LLM maintenance.
 // Refresh metadata: 2026-06-05 Flux image comparison slice across Freepik, Ideogram, and Stable Diffusion plus Flux, Freepik, Ideogram, Stable Diffusion, AI Image, AI Design, tools, comparison, category, homepage, source registry, and LLM maintenance.
