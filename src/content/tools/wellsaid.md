@@ -2,17 +2,17 @@
 type: tool
 slug: wellsaid
 title: WellSaid Labs
-tagline: AI voice platform for enterprise e-learning and corporate narration, with 120+ voice avatars and SCORM exports.
+tagline: AI voice platform for enterprise e-learning and corporate narration, with Studio, Trial, Creative, Business, Enterprise, and API routes.
 category: ai-voice
 secondary_categories: [ai-voice]
 company: WellSaid Labs
 url: https://wellsaidlabs.com
 pricing_model: freemium
-price_range: $50-$160+/user/month
+price_range: "$50-$160+/user/month"
 status: active
 launched: 2018
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-05
+last_verified: 2026-06-05
 update_frequency: quarterly
 affiliate:
   has_program: false
@@ -27,248 +27,218 @@ scores:
   longevity: 7
 facts:
   best_for:
-    value: Best for enterprise learning, corporate narration, and brand-safe voiceover workflows that need polished voices,
-      controls, and procurement-friendly positioning.
+    value: Best for enterprise learning, compliance training, corporate narration, and brand-safe voiceover workflows that need controlled voices and team-friendly production.
     source: https://wellsaidlabs.com/enterprise
     source_label: WellSaid enterprise
     source_id: wellsaid-enterprise
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-05'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-13'
+    next_review_at: '2026-12-05'
   pricing_anchor:
-    value: WellSaid pricing is plan-based for Studio and enterprise-oriented for larger teams; check voice/avatar, project,
-      API, and seat limits before rollout.
+    value: WellSaid Studio lists Creative at $50/user/month billed annually, Business at $160/user/month billed annually for growing teams up to 5 seats, plus Trial, Enterprise, and API routes.
     source: https://wellsaidlabs.com/pricing
     source_label: WellSaid pricing
     source_id: wellsaid-pricing
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-05'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-13'
+    next_review_at: '2026-09-05'
   api_available:
-    value: WellSaid publishes API documentation, so it can be evaluated for product voice integrations as well as studio narration.
+    value: WellSaid publishes API documentation and pricing/help pages reference API as a distinct buying route; evaluate API access through procurement before building around it.
     source: https://docs.wellsaidlabs.com/
     source_label: WellSaid API docs
     source_id: wellsaid-docs
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-05'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-13'
+    next_review_at: '2026-12-05'
   enterprise_controls:
-    value: The enterprise page is the main source for security, collaboration, and brand-control evaluation.
+    value: Enterprise is the route for larger-seat governance, custom voices, security review, onboarding, and advanced support requirements.
     source: https://wellsaidlabs.com/enterprise
     source_label: WellSaid enterprise
     source_id: wellsaid-enterprise
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-05'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-13'
+    next_review_at: '2026-12-05'
   real_time_voice:
-    value: WellSaid is strongest for generated narration and studio/API voice production; do not assume it is a real-time conversational
-      voice agent without API latency testing.
+    value: WellSaid is strongest for generated narration and Studio/API voice production; do not assume it is a live conversational voice-agent platform without API latency testing.
     source: https://docs.wellsaidlabs.com/
     source_label: WellSaid API docs
     source_id: wellsaid-docs
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-05'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-13'
+    next_review_at: '2026-12-05'
   watch_out_for:
-    value: WellSaid is usually a fit decision around enterprise voice quality, rights, approval workflows, and API needs rather
-      than the lowest monthly price.
+    value: WellSaid is a fit decision around L&D narration quality, downloads, seats, export formats, API access, and enterprise controls rather than the lowest monthly price.
     source: https://wellsaidlabs.com/pricing
     source_label: WellSaid pricing
     source_id: wellsaid-pricing
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-05'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-13'
-tags: [tts, enterprise, e-learning, corporate-narration, scorm, articulate]
-seo_title: "WellSaid Labs: Features, Pricing & Review (May 2026)"
+    next_review_at: '2026-09-05'
+tags: [tts, enterprise, e-learning, corporate-narration, scorm, articulate, api]
+seo_title: "WellSaid Labs: Features, Pricing & Review (June 2026)"
 meta_description: >-
-  WellSaid Labs runs Studio for enterprise L&D narration with 120+ voice
-  avatars. 7-day Trial, Creative $50/user/mo annual ($55 monthly), Business $160/user/mo annual for 1-5 seats, Enterprise custom. Pricing verified May 2026.
+  WellSaid Labs is an enterprise AI voice platform for L&D narration. Trial,
+  Creative $50/user/mo annual, Business $160/user/mo annual, Enterprise and
+  API routes. Verified June 2026.
 author: "aipedia.wiki Editorial"
 best_for:
   - enterprise L&D teams
   - instructional designers
   - compliance training narration
-  - SCORM and Articulate exports
+  - brand-safe corporate voiceovers
 not_best_for:
-  - podcasting
+  - podcasts
   - character or emotional voice work
-  - free users
-  - developers needing deep self-serve API
+  - low-cost creator experimentation
+  - teams needing live voice-agent tooling by default
 quick_answer: >-
-  WellSaid Labs is an enterprise TTS platform tuned for L&D narration with 120+ voice avatars and SCORM/Articulate exports. A 7-day Trial replaced the prior $49 Maker tier. Creative is $50/user/mo annual ($55 monthly), Business is $160/user/mo annual for 1-5 seats, Enterprise is custom. Pick it for compliance training at scale. Skip it for podcasts, character work, or API-first workflows.
+  WellSaid Labs is best for enterprise L&D narration and controlled corporate
+  voiceovers. Pick it for training scripts, brand-safe narration, commercial
+  rights, and procurement-friendly Studio/API routes. Skip it for podcasts,
+  character voices, or the broad creative range of ElevenLabs.
 price_history:
   - date: 2026-04-15
     plan: "Maker"
     price: "$49/mo"
-    source: "https://www.wellsaid.io/pricing"
-    source_label: "Source"
+    source: "https://wellsaidlabs.com/pricing"
+    source_label: "WellSaid pricing"
     source_id: wellsaid-pricing
     note: "Prior Maker $49 / Creative $99 / Business $179 structure."
   - date: 2026-05-13
     plan: "Creative"
-    price: "$50/user/mo annual ($55 monthly)"
-    source: "https://www.wellsaid.io/pricing"
-    source_label: "Source"
+    price: "$50/user/mo annual"
+    source: "https://wellsaidlabs.com/pricing"
+    source_label: "WellSaid pricing"
     source_id: wellsaid-pricing
-    note: "WellSaid retired the Maker plan and rebuilt the entry tier around Creative. 720 downloads/year, 20 active projects/month, MP3 only, 1 seat, all English voices."
+    note: "WellSaid retired the Maker plan and rebuilt the entry tier around Creative."
   - date: 2026-05-13
     plan: "Business"
     price: "$160/user/mo annual"
-    source: "https://www.wellsaid.io/pricing"
-    source_label: "Source"
+    source: "https://wellsaidlabs.com/pricing"
+    source_label: "WellSaid pricing"
     source_id: wellsaid-pricing
-    note: "Business now scopes 1-5 user seats per organization, 1,300 downloads/year, 100 active projects/month, MP3/WAV/OGG/TXT, SRT and VTT closed-caption exports, team workspace, live chat support."
-  - date: 2026-05-13
+    note: "Business became the team tier for growing teams up to 5 seats."
+  - date: 2026-06-05
     plan: "Trial"
-    price: "$0 for 7 days"
-    source: "https://www.wellsaid.io/pricing"
-    source_label: "Source"
-    source_id: wellsaid-pricing
-    note: "New self-serve Trial replaces the prior 'no free tier' stance. No credit card, 1 seat, full voice catalog access, no downloads."
-  - date: 2026-05-13
-    plan: "Enterprise"
-    price: "Custom annual"
-    source: "https://www.wellsaid.io/pricing"
-    source_label: "Source"
-    source_id: wellsaid-pricing
-    note: "4,300 downloads/year, unlimited seats and projects, 96 kHz sampling, all global languages, dedicated onboarding, SOC 2 certification."
+    price: "$0 trial"
+    source: "https://help.wellsaid.io/hc/en-us/articles/39149441616531-How-Much-Does-WellSaid-Studio-Cost"
+    source_label: "WellSaid pricing help"
+    source_id: wellsaid-pricing-help
+    note: "WellSaid help confirms buyers can preview voices with a Free Trial."
 ---
 
 # WellSaid Labs
 
-WellSaid Labs runs Studio, an enterprise-focused AI voice platform built for L&D, instructional design, and corporate narration. The voice catalog covers 120+ avatars across US, UK, and AU accents. Exports push direct to Articulate Rise, Adobe Captivate, SCORM, and xAPI.
+WellSaid Labs runs WellSaid Studio, an enterprise-oriented AI voice platform for L&D teams, instructional designers, compliance training, product education, and corporate narration. It is narrower than broad creator voice tools by design: the point is controlled, repeatable, brand-safe narration rather than maximum character range.
 
-A 7-day self-serve Trial now covers full voice access for evaluation. Paid entry starts at $50/user/mo on annual billing ($55 month-to-month). Business is $160/user/mo on annual for 1-5 seats. Enterprise is custom.
+The June 5, 2026 buyer correction: WellSaid should not be described as having no trial. WellSaid pricing help confirms buyers can preview voices with a Free Trial. Paid plans are still where exportable commercial production starts.
 
 ## System Verdict
 
-> **Pick WellSaid Labs if enterprise L&D is the workload.** The 120+ voice library is narrow on purpose, tuned for training and compliance narration rather than character work. Adobe Premiere, Canva, Articulate, and Captivate integrations ship native.
+> **Pick WellSaid Labs if enterprise L&D is the workload.** The platform fits training scripts, compliance narration, product education, and brand-approved voiceovers where consistency matters more than dramatic performance.
 >
-> **Skip it if the job is anything else.** [ElevenLabs](/tools/elevenlabs/) has 10x the voice catalog and better emotional range for podcasts, audiobooks, and ads. [Fish Audio](/tools/fish-audio/) beats it on open-weight flexibility for developers. No free tier means evaluation requires a paid commitment or an enterprise demo.
+> **Use the Trial for voice fit, not final production.** The trial is for previewing voices and evaluating fit. Paid Creative, Business, Enterprise, or API routes decide real publishing.
 >
-> **Who pays which tier:** Free 7-day Trial for evaluators (full voice access, no downloads), Creative $50/user/mo annual or $55 monthly for solo instructional designers (720 downloads/yr, MP3 only), Business $160/user/mo annual for 1-5 seat L&D teams running Articulate pipelines (1,300 downloads/yr, multi-format including SRT/VTT, team workspace), Enterprise custom for SOC 2 certification, unlimited seats, 96 kHz audio, all global languages, and custom brand voices.
+> **Skip it for creator audio.** [ElevenLabs](/tools/elevenlabs/) has broader voice range, stronger creative experimentation, and easier creator/developer workflows. [Murf](/tools/murf/) can be more flexible for presentation narration and business dubbing.
 
 ## Key Facts
 
-| | |
-|---|---|
-| **Product** | WellSaid Studio |
-| **Voice library** | 120+ avatars · US, UK, AU accents |
-| **Languages** | English-first · 18 accent variants |
-| **Target workflow** | L&D, compliance, corporate narration |
-| **Integrations** | Articulate Rise · Adobe Captivate · Premiere · Canva · SCORM · xAPI |
-| **Voice cloning** | Enterprise only · Custom Voice Director service |
-| **API access** | Enterprise tier |
-| **Free tier** | 7-day self-serve Trial (no card, no downloads, full voice access) |
-| **Pricing (May 2026)** | Trial $0 · Creative $50/user/mo annual ($55 monthly) · Business $160/user/mo annual for 1-5 seats · Enterprise custom |
-| **Downloads** | Creative 720/yr (~72 hrs) · Business 1,300/yr (~144 hrs) · Enterprise 4,300/yr (~480 hrs) |
-| **Output formats** | Creative MP3 only · Business MP3, WAV, OGG, TXT plus SRT/VTT captions · Enterprise adds 96 kHz |
-| **Compliance** | SOC 2 (Enterprise) |
+- **Primary product:** WellSaid Studio for corporate narration.
+- **Best fit:** L&D, compliance training, instructional design, product education, and controlled brand voiceovers.
+- **Plan routes:** Trial, Creative, Business, Enterprise, and API.
+- **Creative anchor:** $50/user/month billed annually.
+- **Business anchor:** $160/user/month billed annually for growing teams up to 5 seats.
+- **Commercial rights:** WellSaid pricing help says paid subscriptions may use created audio commercially under WellSaid's terms.
+- **API:** WellSaid publishes API documentation; confirm access and terms before building.
+- **Main watch-out:** Great fit for enterprise narration, weak fit for emotional creator content.
 
-Every data point verified against vendor documentation on 2026-05-13. See Sources.
+Every current data point was verified against WellSaid vendor pages and help documentation on 2026-06-05.
 
-## Recent changes
+## What It Actually Is
 
-- **2026-05-13:** WellSaid retired the $49 Maker plan. Creative is now the entry paid tier at $50/user/mo on annual billing or $55/user/mo monthly, with 720 downloads/year and 20 active projects/month.
-- **2026-05-13:** Business dropped from a flat $179 to $160/user/mo on annual billing, but it now scopes 1-5 user seats inside a single team workspace with 1,300 downloads/year, 100 active projects/month, MP3/WAV/OGG/TXT outputs, and SRT/VTT closed-caption exports.
-- **2026-05-13:** A self-serve 7-day Trial replaced the prior "no free tier" posture. No credit card required, 1 seat, full voice catalog access, no downloads.
-- **2026-05-13:** Enterprise is now positioned around 4,300 downloads/year (~480 hours of audio), unlimited seats and projects, 96 kHz output, all global languages, and SOC 2 certification.
-- **2026-05-13:** WellSaid's primary domain on the pricing page is now wellsaid.io (legacy wellsaidlabs.com still redirects).
+WellSaid is a browser-based AI voice studio for organizations that need polished narration repeatedly. Users prepare scripts, choose approved voices, adjust pronunciation and pacing, and export production audio for training, sales enablement, internal comms, and customer education.
 
-## What it actually is
+The product is intentionally focused. It does not compete on the biggest public voice catalog or the wildest emotional range. It competes on professional narration, commercial rights, team-friendly packaging, and enterprise buying routes.
 
-A browser-based enterprise TTS studio. Users paste scripts, pick from 120+ voice avatars, adjust pacing and pronunciation via an SSML-style editor, and export WAV, MP3, or direct-to-LMS files.
+## When To Pick WellSaid Labs
 
-The product is deliberately narrow. It does not compete on voice count or emotional nuance. It competes on L&D workflow fit: SCORM exports, Adobe Premiere and Canva integrations, shared team libraries, and custom brand voices spun up by the Voice Director service from 30-minute actor samples.
+- **Enterprise training is the main output.** WellSaid is a natural fit when scripts become compliance modules, onboarding content, or product education.
+- **Voice consistency matters.** The platform is stronger when stakeholders need repeatable, approved narration rather than creative experimentation.
+- **Commercial usage needs clear procurement.** WellSaid help says paid subscriptions include commercial use under its terms.
+- **Business or Enterprise controls matter.** Evaluate Business for team needs and Enterprise for deeper governance, custom voices, support, and procurement.
+- **API is part of the roadmap.** WellSaid has API docs, but buyers should confirm API access, limits, and pricing before engineering work begins.
 
-The moat is enterprise trust. SOC 2 Type II, role-based access, and direct Articulate and Captivate hooks make it the default pick for Fortune 500 L&D departments. That same positioning makes it the wrong pick for a solo YouTuber.
+## When To Pick Something Else
 
-## When to pick WellSaid Labs
-
-- **Enterprise compliance training is the primary output.** SCORM, xAPI, and Captivate exports remove the audio-to-LMS gap.
-- **Brand voice consistency matters.** The Custom Voice Director service builds proprietary actor-cloned voices for multi-year campaigns.
-- **The team already lives in Articulate or Captivate.** Direct integrations cut handoff time compared to generic TTS exports.
-- **SOC 2 and SSO are required.** Enterprise tier covers compliance baselines most consumer TTS tools do not offer.
-- **Narration is flat by design.** Training modules and compliance videos need consistent, professional delivery, not dramatic range.
-
-## When to pick something else
-
-- **Voice variety and emotional range:** [ElevenLabs](/tools/elevenlabs/) ships 1000+ voices and v3 expressive delivery. Better for podcasts, ads, and fiction.
-- **Open-weight flexibility or self-hosting:** [Fish Audio](/tools/fish-audio/) releases S1 and S2 weights with documented APIs.
-- **Bundled video editor:** [LOVO](/tools/lovo/) pairs TTS with a Genny video timeline. Better for solo creators.
-- **Budget-conscious presentation narration:** [Murf](/tools/murf/) starts at $19/month with Google Slides integration.
-- **Music, not voice:** [Mubert](/tools/mubert/) for royalty-safe background beds. [Udio](/tools/udio/) for full licensed songs.
+- **Creative or emotional narration:** [ElevenLabs](/tools/elevenlabs/) is a better first test.
+- **Presentation narration and dubbing flexibility:** [Murf](/tools/murf/) is often easier to evaluate.
+- **Open or local model experimentation:** [Fish Audio](/tools/fish-audio/) or [Kokoro](/tools/kokoro/) fit better.
+- **Full creator video timeline:** [LOVO](/tools/lovo/) may be more practical for solo creators.
+- **Voice-agent platform:** Evaluate [Cartesia](/tools/cartesia/), [Retell AI](/tools/retell-ai/), [Hume AI](/tools/hume-ai/), or [ElevenLabs](/tools/elevenlabs/) before assuming WellSaid is the live-agent fit.
 
 ## Pricing
 
-Subscription pricing via [wellsaid.io/pricing](https://www.wellsaid.io/pricing). All paid plans include full commercial usage rights.
+Current WellSaid pricing should be evaluated by plan route:
 
-| Plan | Price | Seats | Downloads/yr | Active projects/mo | Formats | Who's it for |
-|------|-------|-------|--------------|--------------------|---------|--------------|
-| Trial | $0 (7 days, no card) | 1 | None | Evaluation | Listen only | Buyers vetting voices |
-| Creative | $50/user/mo annual · $55 monthly | 1 | 720 (~72 hrs) | 20 | MP3 | Solo instructional designers |
-| Business | $160/user/mo annual | 1-5 | 1,300 (~144 hrs) | 100 | MP3, WAV, OGG, TXT, SRT, VTT | Small-to-mid L&D teams |
-| Enterprise | Custom annual | Unlimited | 4,300 (~480 hrs) | Unlimited | All formats plus 96 kHz | SOC 2, SSO, API, custom voices |
+- **Trial:** Free voice preview route for evaluation.
+- **Creative:** $50/user/month billed annually; individual and content-creator route.
+- **Business:** $160/user/month billed annually; growing-team route up to 5 seats.
+- **Enterprise:** Custom; evaluate custom voices, advanced support, security, and larger governance requirements.
+- **API:** Separate route; confirm API access, usage, and support directly before building.
 
-*Prices verified 2026-05-13 via [WellSaid pricing](https://www.wellsaid.io/pricing). Annual billing required for the headline rates above; Creative also offers a $55/user/mo month-to-month option. The legacy Maker $49 tier was retired in the May 2026 reset.*
+Prices and plan routes were verified 2026-06-05 against WellSaid pricing and pricing-help pages. Because WellSaid sells Studio, Enterprise, and API routes, confirm download limits, seats, export formats, custom voice requirements, and API terms before signing.
 
-## Against the alternatives
+## Against The Alternatives
 
-| | WellSaid Studio | ElevenLabs | Murf | LOVO |
-|---|---|---|---|---|
-| **Voice count** | 120+ | 1000+ | 200+ | 500+ |
-| **L&D exports (SCORM/xAPI)** | **Native** | No | Limited | No |
-| **Articulate/Captivate integration** | **Native** | No | No | No |
-| **Voice cloning floor** | Enterprise | Starter $5/mo | Enterprise only | Basic $24 |
-| **Emotional range** | Flat by design | Strongest | Corporate | Solid |
-| **Free tier** | 7-day Trial (no downloads) | Yes | Yes | Yes |
-| **Best viewed as** | Enterprise L&D specialist | Voice quality leader | Presentation narration tool | Creator video suite |
+- **WellSaid vs ElevenLabs:** WellSaid wins on controlled corporate narration. ElevenLabs wins on expressive creator voice, cloning, dubbing, music, sound effects, and voice agents.
+- **WellSaid vs Murf:** WellSaid is more focused on enterprise narration. Murf is broader across Studio narration, dubbing, and Falcon/Gen2 APIs.
+- **WellSaid vs Fish Audio:** WellSaid is a business Studio product. Fish Audio is a technical value/model-control path.
+- **WellSaid vs LOVO:** WellSaid is more enterprise L&D. LOVO is more creator video and voice production.
 
-## Failure modes
+## Failure Modes
 
-- **Trial blocks downloads.** The new 7-day self-serve Trial gives full voice access for evaluation but produces no exportable audio. Real testing still requires a Creative seat.
-- **Creative is single-seat and MP3-only.** Solo plan caps you at MP3 outputs and a single user. Multi-format outputs and team workspaces are gated behind Business at $160/user/mo annual.
-- **Business is per-seat, not flat.** Teams pay $160/user/mo on annual billing for each of up to 5 seats. The headline cost scales fast versus seat-flat competitors.
-- **Voice count trails competitors.** 120 avatars is thin against ElevenLabs' 1000+ catalog. The gap matters for ad and character work.
-- **Voice cloning sits at Enterprise.** Solo users and small teams cannot access custom voices without a Voice Director engagement.
-- **API is not self-serve.** Business gets no API. Enterprise unlocks full access. Developers pick elsewhere.
-- **Flat delivery by design.** Voices avoid the expressive range needed for storytelling. This is a feature for compliance content and a failure for fiction.
-- **Pricing has shifted again.** Maker $49 was retired, Creative settled at $50 on annual ($55 monthly), and Business consolidated at $160 on annual with a 1-5 seat ceiling. Negotiate annual terms before signing.
+- **Trial confusion.** The Free Trial is for preview and evaluation; production exports require paid routes.
+- **Wrong use case.** Podcasts, fiction, ads, and character voices expose the platform's narrower creative range.
+- **Seat cost climbs quickly.** Business is priced per user per month on annual billing, so team expansion should be modeled carefully.
+- **API assumptions.** WellSaid publishes API docs, but API availability, pricing, and support should be confirmed before product planning.
+- **Enterprise requirements.** Custom voices, advanced governance, security review, and high-volume needs may require Enterprise or API procurement.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-05-13 against the [WellSaid pricing page](https://www.wellsaid.io/pricing) and the [WellSaid Labs official site](https://wellsaidlabs.com).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that checks vendor documentation, pricing pages, help-center pages, and product documentation before generating editorial analysis. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-05 against WellSaid pricing, pricing help, enterprise, and API documentation.
 
 ## FAQ
 
 **Does WellSaid Labs offer a free trial?**
-Yes. A self-serve 7-day Trial is now available with no credit card. It includes 1 seat and full voice catalog access for evaluation but does not allow downloads. Paid plans start at Creative $50/user/mo on annual ($55 month-to-month).
+Yes. WellSaid pricing help says buyers can preview voices with a Free Trial. Treat it as evaluation, not full production.
 
-**How does Studio compare to ElevenLabs for corporate training?**
-Studio wins on native SCORM, Articulate, and Captivate exports plus enterprise compliance. ElevenLabs wins on voice count, emotional range, and self-serve API. L&D shops pick WellSaid. Podcast and ad shops pick ElevenLabs.
+**How much does WellSaid cost?**
+Current public pricing lists Creative at $50/user/month billed annually and Business at $160/user/month billed annually. Enterprise and API routes require closer procurement review.
 
-**Is the API included on lower tiers?**
-No. Business tier excludes API access entirely. Enterprise unlocks the full API. Heavy programmatic use requires Enterprise sales.
+**Is WellSaid better than ElevenLabs?**
+For enterprise L&D narration, sometimes. For creative voice generation, voice cloning, dubbing, and voice agents, ElevenLabs is usually stronger.
 
-**Can I clone my voice?**
-Only through the Enterprise Custom Voice Director service. The service requires a 30-minute actor sample and a setup fee. Self-serve cloning is not offered.
+**Does WellSaid have an API?**
+Yes. WellSaid publishes API documentation and references API as a buying route. Confirm exact access, pricing, and limits before building.
 
 **Is WellSaid good for podcasts?**
-No. The voice catalog is tuned for narration, not conversational or character work. [ElevenLabs](/tools/elevenlabs/) and [Fish Audio](/tools/fish-audio/) produce more natural podcast delivery.
+No. It is tuned for corporate narration. Use ElevenLabs, Fish Audio, or another creator voice tool for podcasts and character work.
 
 ## Sources
 
-- [WellSaid Labs official site](https://wellsaidlabs.com): product overview
-- [WellSaid pricing](https://www.wellsaid.io/pricing): current tier pricing and feature splits
-- [G2 WellSaid Studio reviews](https://www.g2.com/products/wellsaid-studio/pricing): independent pricing verification
+- [WellSaid Labs official site](https://wellsaidlabs.com) (verified 2026-06-05)
+- [WellSaid pricing](https://wellsaidlabs.com/pricing) (verified 2026-06-05)
+- [WellSaid pricing help](https://help.wellsaid.io/hc/en-us/articles/39149441616531-How-Much-Does-WellSaid-Studio-Cost) (verified 2026-06-05)
+- [WellSaid API docs](https://docs.wellsaidlabs.com/) (verified 2026-06-05)
+- [WellSaid enterprise](https://wellsaidlabs.com/enterprise) (verified 2026-06-05)
 
 ## Related
 
-- **Category:** [AI Voice](/categories/ai-voice/)
-- **Comparisons:** [ElevenLabs vs WellSaid](/compare/elevenlabs-vs-wellsaid/)
+- **Category:** [AI Voice Tools](/categories/ai-voice/)
+- **Comparisons:** [ElevenLabs vs WellSaid Labs](/compare/elevenlabs-vs-wellsaid/)

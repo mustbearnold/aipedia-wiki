@@ -26,14 +26,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /compare/beautiful-ai-vs-tome/ | Comparison | Yes | frontmatter | src/content/comparisons/beautiful-ai-vs-tome.md |
 | 2026-05-13 | /compare/chatgpt-vs-phind/ | Comparison | Yes | frontmatter | src/content/comparisons/chatgpt-vs-phind.md |
 | 2026-05-13 | /compare/decktopus-vs-tome/ | Comparison | Yes | frontmatter | src/content/comparisons/decktopus-vs-tome.md |
-| 2026-05-13 | /compare/elevenlabs-vs-fish-audio/ | Comparison | Yes | frontmatter | src/content/comparisons/elevenlabs-vs-fish-audio.md |
-| 2026-05-13 | /compare/elevenlabs-vs-heygen/ | Comparison | Yes | frontmatter | src/content/comparisons/elevenlabs-vs-heygen.md |
-| 2026-05-13 | /compare/elevenlabs-vs-murf/ | Comparison | Yes | frontmatter | src/content/comparisons/elevenlabs-vs-murf.md |
-| 2026-05-13 | /compare/elevenlabs-vs-otter-ai/ | Comparison | Yes | frontmatter | src/content/comparisons/elevenlabs-vs-otter-ai.md |
-| 2026-05-13 | /compare/elevenlabs-vs-resemble-ai/ | Comparison | Yes | frontmatter | src/content/comparisons/elevenlabs-vs-resemble-ai.md |
-| 2026-05-13 | /compare/elevenlabs-vs-synthesia/ | Comparison | Yes | frontmatter | src/content/comparisons/elevenlabs-vs-synthesia.md |
-| 2026-05-13 | /compare/elevenlabs-vs-voxtral/ | Comparison | Yes | frontmatter | src/content/comparisons/elevenlabs-vs-voxtral.md |
-| 2026-05-13 | /compare/elevenlabs-vs-wellsaid/ | Comparison | Yes | frontmatter | src/content/comparisons/elevenlabs-vs-wellsaid.md |
 | 2026-05-13 | /compare/elicit-vs-nanochat/ | Comparison | Yes | frontmatter | src/content/comparisons/elicit-vs-nanochat.md |
 | 2026-05-13 | /compare/elicit-vs-perplexity/ | Comparison | Yes | frontmatter | src/content/comparisons/elicit-vs-perplexity.md |
 | 2026-05-13 | /compare/elicit-vs-scite/ | Comparison | Yes | frontmatter | src/content/comparisons/elicit-vs-scite.md |
@@ -264,7 +256,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /tools/modal/ | Tool | Yes | frontmatter | src/content/tools/modal.md |
 | 2026-05-13 | /tools/morphic/ | Tool | Yes | frontmatter | src/content/tools/morphic.md |
 | 2026-05-13 | /tools/mubert/ | Tool | Yes | frontmatter | src/content/tools/mubert.md |
-| 2026-05-13 | /tools/murf/ | Tool | Yes | frontmatter | src/content/tools/murf.md |
 | 2026-05-13 | /tools/n8n/ | Tool | Yes | frontmatter | src/content/tools/n8n.md |
 | 2026-05-13 | /tools/napkin-ai/ | Tool | Yes | frontmatter | src/content/tools/napkin-ai.md |
 | 2026-05-13 | /tools/notebooklm/ | Tool | Yes | frontmatter | src/content/tools/notebooklm.md |
@@ -313,7 +304,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /tools/wan/ | Tool | Yes | frontmatter | src/content/tools/wan.md |
 | 2026-05-13 | /tools/watsonx-orchestrate/ | Tool | Yes | frontmatter | src/content/tools/watsonx-orchestrate.md |
 | 2026-05-13 | /tools/weaviate/ | Tool | Yes | frontmatter | src/content/tools/weaviate.md |
-| 2026-05-13 | /tools/wellsaid/ | Tool | Yes | frontmatter | src/content/tools/wellsaid.md |
 | 2026-05-13 | /tools/whisper/ | Tool | Yes | frontmatter | src/content/tools/whisper.md |
 | 2026-05-13 | /tools/wispr-flow/ | Tool | Yes | frontmatter | src/content/tools/wispr-flow.md |
 | 2026-05-13 | /tools/workato/ | Tool | Yes | frontmatter | src/content/tools/workato.md |
@@ -695,10 +685,10 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-05 | / | Static page | Yes | working tree | src/pages/index.astro |
 | 2026-06-05 | /categories/ | Static page | Yes | working tree | src/pages/categories/index.astro |
 | 2026-06-05 | /categories/ai-chatbots/ | Category | Yes | frontmatter | src/content/categories/ai-chatbots.md |
-| 2026-06-05 | /categories/ai-coding/ | Category | Yes | working tree | src/content/categories/ai-coding.md |
+| 2026-06-05 | /categories/ai-coding/ | Category | Yes | frontmatter | src/content/categories/ai-coding.md |
 | 2026-06-05 | /categories/ai-design/ | Category | Yes | frontmatter | src/content/categories/ai-design.md |
 | 2026-06-05 | /categories/ai-presentation/ | Category | Yes | frontmatter | src/content/categories/ai-presentation.md |
-| 2026-06-05 | /categories/ai-voice/ | Category | Yes | frontmatter | src/content/categories/ai-voice.md |
+| 2026-06-05 | /categories/ai-voice/ | Category | Yes | working tree | src/content/categories/ai-voice.md |
 | 2026-06-05 | /categories/ai-writing/ | Category | Yes | frontmatter | src/content/categories/ai-writing.md |
 | 2026-06-05 | /compare/ | Static page | Yes | working tree | src/pages/compare/index.astro |
 | 2026-06-05 | /compare/codeium-vs-github-copilot/ | Comparison | Yes | frontmatter | src/content/comparisons/codeium-vs-github-copilot.md |
@@ -725,8 +715,16 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-05 | /compare/descript-vs-fish-audio/ | Comparison | Yes | frontmatter | src/content/comparisons/descript-vs-fish-audio.md |
 | 2026-06-05 | /compare/descript-vs-resemble-ai/ | Comparison | Yes | frontmatter | src/content/comparisons/descript-vs-resemble-ai.md |
 | 2026-06-05 | /compare/descript-vs-voxtral/ | Comparison | Yes | frontmatter | src/content/comparisons/descript-vs-voxtral.md |
-| 2026-06-05 | /compare/devin-vs-github-copilot/ | Comparison | Yes | working tree | src/content/comparisons/devin-vs-github-copilot.md |
-| 2026-06-05 | /compare/devin-vs-val-town/ | Comparison | Yes | working tree | src/content/comparisons/devin-vs-val-town.md |
+| 2026-06-05 | /compare/devin-vs-github-copilot/ | Comparison | Yes | frontmatter | src/content/comparisons/devin-vs-github-copilot.md |
+| 2026-06-05 | /compare/devin-vs-val-town/ | Comparison | Yes | frontmatter | src/content/comparisons/devin-vs-val-town.md |
+| 2026-06-05 | /compare/elevenlabs-vs-fish-audio/ | Comparison | Yes | working tree | src/content/comparisons/elevenlabs-vs-fish-audio.md |
+| 2026-06-05 | /compare/elevenlabs-vs-heygen/ | Comparison | Yes | working tree | src/content/comparisons/elevenlabs-vs-heygen.md |
+| 2026-06-05 | /compare/elevenlabs-vs-murf/ | Comparison | Yes | working tree | src/content/comparisons/elevenlabs-vs-murf.md |
+| 2026-06-05 | /compare/elevenlabs-vs-otter-ai/ | Comparison | Yes | working tree | src/content/comparisons/elevenlabs-vs-otter-ai.md |
+| 2026-06-05 | /compare/elevenlabs-vs-resemble-ai/ | Comparison | Yes | working tree | src/content/comparisons/elevenlabs-vs-resemble-ai.md |
+| 2026-06-05 | /compare/elevenlabs-vs-synthesia/ | Comparison | Yes | working tree | src/content/comparisons/elevenlabs-vs-synthesia.md |
+| 2026-06-05 | /compare/elevenlabs-vs-voxtral/ | Comparison | Yes | working tree | src/content/comparisons/elevenlabs-vs-voxtral.md |
+| 2026-06-05 | /compare/elevenlabs-vs-wellsaid/ | Comparison | Yes | working tree | src/content/comparisons/elevenlabs-vs-wellsaid.md |
 | 2026-06-05 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
 | 2026-06-05 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
 | 2026-06-05 | /tools/ | Static page | Yes | working tree | src/pages/tools/index.astro |
@@ -741,11 +739,13 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-05 | /tools/gemini/ | Tool | Yes | frontmatter | src/content/tools/gemini.md |
 | 2026-06-05 | /tools/lovable/ | Tool | Yes | frontmatter | src/content/tools/lovable.md |
 | 2026-06-05 | /tools/mistral-ai/ | Tool | Yes | frontmatter | src/content/tools/mistral-ai.md |
+| 2026-06-05 | /tools/murf/ | Tool | Yes | working tree | src/content/tools/murf.md |
 | 2026-06-05 | /tools/pitch/ | Tool | Yes | frontmatter | src/content/tools/pitch.md |
 | 2026-06-05 | /tools/presentations-ai/ | Tool | Yes | frontmatter | src/content/tools/presentations-ai.md |
 | 2026-06-05 | /tools/quillbot/ | Tool | Yes | frontmatter | src/content/tools/quillbot.md |
 | 2026-06-05 | /tools/qwen/ | Tool | Yes | frontmatter | src/content/tools/qwen.md |
 | 2026-06-05 | /tools/resemble-ai/ | Tool | Yes | frontmatter | src/content/tools/resemble-ai.md |
-| 2026-06-05 | /tools/val-town/ | Tool | Yes | working tree | src/content/tools/val-town.md |
+| 2026-06-05 | /tools/val-town/ | Tool | Yes | frontmatter | src/content/tools/val-town.md |
 | 2026-06-05 | /tools/voxtral/ | Tool | Yes | frontmatter | src/content/tools/voxtral.md |
+| 2026-06-05 | /tools/wellsaid/ | Tool | Yes | working tree | src/content/tools/wellsaid.md |
 | 2026-06-05 | /tools/windsurf/ | Tool | Yes | frontmatter | src/content/tools/windsurf.md |
