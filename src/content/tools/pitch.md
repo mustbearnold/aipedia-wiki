@@ -45,7 +45,7 @@ facts:
     confidence: high
   ai_surface:
     value: "Pitch AI is positioned around generating and refining presentation drafts, but the enduring product value remains collaborative editing and distribution."
-    source: "https://pitch.com/ai-presentation-maker"
+    source: "https://pitch.com/use-cases/ai-presentation-maker"
     source_label: "Pitch AI"
     source_id: pitch-ai
     verified_at: 2026-06-05

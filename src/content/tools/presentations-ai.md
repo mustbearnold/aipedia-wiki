@@ -78,7 +78,7 @@ best_for:
   - teams that want brand customization and presentation analytics
   - enterprise buyers evaluating API, data-refresh, white-label, and compliance workflows
 not_best_for:
-  - users looking for the old $40/year Public Beta offer
+  - users looking for superseded Public Beta annual pricing
   - buyers who only need the cheapest occasional AI slide draft
   - sales teams that need forms, voice recording, webhooks, and presenter-funnel delivery
   - teams that need deep real-time deck collaboration before generation
@@ -87,7 +87,7 @@ quick_answer: >-
 price_history:
   - date: 2026-05-13
     plan: "Legacy self-serve ladder"
-    price: "Starter $0, Public Beta $40/yr, Pro $198/yr"
+    price: "Superseded legacy annual self-serve pricing"
     source: "https://www.presentations.ai/pricing"
     source_label: "Presentations.AI pricing"
     source_id: presentations-ai-pricing
