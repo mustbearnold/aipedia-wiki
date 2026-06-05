@@ -5,10 +5,10 @@ title: AI Video Generation
 description: Current AI video tools for raw model testing, conversational video editing, production workflows, budget social clips, avatar videos, localization, and business training.
 tool_count: 27
 seo_title: "Best AI Video Tools (June 2026): Gemini Omni, Seedance, Kling, Veo & Runway"
-meta_description: "Updated June 2, 2026: compare Gemini Omni, Seedance 2.0, Kling 3.0, Veo 3.1, Hailuo 2.3, Runway, Higgsfield, Pika, HeyGen, Synthesia, Captions, Castmagic, and Sora sunset caveats by model quality, workflow, pricing, and buyer fit."
+meta_description: "Updated June 5, 2026: compare Gemini Omni, Seedance 2.0, Kling 3.0, Veo 3.1, Hailuo 2.3, Runway Max, Pika, HeyGen, Synthesia, and Sora sunset caveats by model quality, workflow, pricing, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-02
-last_verified: 2026-06-02
+last_updated: 2026-06-05
+last_verified: 2026-06-05
 update_frequency: weekly
 top_picks:
   best_overall: seedance
@@ -18,7 +18,7 @@ top_picks:
 
 ## Quick Decision
 
-AI video is no longer one clean product category. On May 24, 2026, the useful buyer split is:
+AI video is no longer one clean product category. On June 5, 2026, the useful buyer split is:
 
 **Test [Seedance 2.0](/tools/seedance/) first for raw model quality.** ByteDance says Seedance 2.0 supports text, image, audio, and video inputs with multimodal references, editing, extension, 15-second multi-shot audio-video output, motion stability, and director-level control. That makes it the first model AiPedia would test when the only question is "which model can make the best shot?"
 
@@ -34,7 +34,7 @@ AI video is no longer one clean product category. On May 24, 2026, the useful bu
 
 **Use [Higgsfield](/tools/higgsfield/) when the job is cinematic camera language, character consistency, and social creative in one multi-model studio.** The June 2 check puts individual annual tiers at Starter $15/mo, Plus $39/mo, Ultra $99/mo, and Teams from $59/seat/mo annual. The buyer caveat is surface-specific economics: unlimited model and free-generation allowances apply on higgsfield.ai, not MCP, CLI, Canvas, or Supercomputer.
 
-**Use [Runway](/tools/runway/) when you need to ship finished video.** Runway is the strongest production workspace because it combines Runway Agent, Gen-4.5, Gen-4, Gen-4 Turbo, Aleph 2.0/Edit Studio, Act-Two performance capture, Veo, Seedance, Kling, team storage, exports, and API paths in one workflow. It is not always the raw quality-per-dollar winner, but it is often the best product to buy when a creator, agency, or team has to deliver.
+**Use [Runway](/tools/runway/) when you need to ship finished video.** Runway is the strongest production workspace because it combines Gen-4.5, Gen-4, Gen-4 Turbo, Aleph, Act-Two performance capture, Veo, Seedance, Kling, team storage, exports, and API paths in one workflow. The June 5 check updates the heavy self-serve plan language from Unlimited to Max: $76/user/month billed annually with 9,500 monthly credits and one-month rollover. It is not always the raw quality-per-dollar winner, but it is often the best product to buy when a creator, agency, or team has to deliver.
 
 **Use [the avatar-video guide](/guides/best-ai-avatar-video-generator/), [HeyGen](/tools/heygen/), or [Synthesia](/tools/synthesia/) for avatar video, not cinematic generation.** These tools are for presenter videos, sales outreach, corporate training, dubbing, localization, templates, SCORM/LMS workflows, and business collaboration. They should not be ranked against Seedance, Kling, Veo, or Runway for scene generation.
 
@@ -66,7 +66,7 @@ If you need a person on camera, use avatar tools. The [best AI avatar video gene
 
 **Best PixVerse use case:** treat [PixVerse](/tools/pixverse/) as a budget/stylized test bed and API-credit route, not as a default enterprise video system. Its official Platform docs publish V6/C1/V5.6 credit rates and make clear API memberships are separate from PixVerse Web memberships, so buyers should verify web-plan pricing, watermark rules, commercial rights, and upload/data policy before paying.
 
-**Best avatar-video pick:** [HeyGen](/tools/heygen/) for creator/business presenter video, sales video, localization, digital twins, and fast templates. [Synthesia](/tools/synthesia/) is the stronger enterprise training/L&D shortlist when SCORM, LMS, workplace governance, and structured training workflows matter. Use the May 9 verified [avatar-video buyer guide](/guides/best-ai-avatar-video-generator/) when the choice is between HeyGen, Synthesia, Tavus, D-ID, Hedra, Argil, and Captions. If Synthesia is already the incumbent, use the refreshed [Synthesia alternatives guide](/guides/synthesia-alternatives/) to decide whether switching is worth the migration cost.
+**Best avatar-video pick:** [HeyGen](/tools/heygen/) for creator/business presenter video, sales video, localization, digital twins, and fast templates. The June 5 check corrects HeyGen Pro to $49/month on the public pricing page and keeps API pricing separate for Avatar IV & V. [Synthesia](/tools/synthesia/) is the stronger enterprise training/L&D shortlist when SCORM, LMS, workplace governance, and structured training workflows matter. Use the May 9 verified [avatar-video buyer guide](/guides/best-ai-avatar-video-generator/) when the choice is between HeyGen, Synthesia, Tavus, D-ID, Hedra, Argil, and Captions. If Synthesia is already the incumbent, use the refreshed [Synthesia alternatives guide](/guides/synthesia-alternatives/) to decide whether switching is worth the migration cost.
 
 ## What Hurts Trust
 
@@ -122,7 +122,7 @@ Every monetizable AI video page should tell readers:
 ## FAQ
 
 **What is the best AI video generator right now?**
-For raw model testing on May 24, 2026, start with Seedance 2.0, Kling 3.0, and Veo 3.1. For a finished production workflow, start with Runway. For budget testing, benchmark against Hailuo 2.3. Sora belongs in migration and API-sunset checks, not a default new purchase path.
+For raw model testing on June 5, 2026, start with Seedance 2.0, Kling 3.0, and Veo 3.1. For a finished production workflow, start with Runway. For budget testing, benchmark against Hailuo 2.3. Sora belongs in migration and API-sunset checks, not a default new purchase path.
 
 **Why is Runway still a top pick if Seedance, Kling, and Veo are stronger models to test?**
 Because buyers do not only buy model output. They also buy editing, exports, team workflow, storage, support, API paths, and a way to ship finished work. Runway is strongest there.
@@ -154,10 +154,10 @@ Yes, but with honest positioning. They are useful for budget testing, effects, o
 - [Veo 3.1 Gemini API docs](https://ai.google.dev/gemini-api/docs/video) (verified 2026-05-24)
 - [Veo 3.1 Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing) (verified 2026-05-24)
 - [OpenAI Sora discontinuation help](https://help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation) (verified 2026-05-17)
-- [Runway pricing](https://runwayml.com/pricing) (verified 2026-05-24)
+- [Runway pricing](https://runwayml.com/pricing) (verified 2026-06-05)
 - [Runway Aleph 2.0 and Edit Studio](https://runwayml.com/news/introducing-aleph-2-and-edit-studio) (verified 2026-05-24)
-- [Runway API models](https://docs.dev.runwayml.com/guides/models/) (verified 2026-05-24)
-- [Pika pricing](https://pika.art/pricing)
+- [Runway API models](https://docs.dev.runwayml.com/guides/models/) (verified 2026-06-05)
+- [Pika pricing](https://pika.art/pricing) (verified 2026-06-05)
 - [Hailuo official site](https://hailuoai.video/) (verified 2026-06-02)
 - [MiniMax video API docs](https://platform.minimax.io/docs/api-reference/video-generation-intro) (verified 2026-06-02)
 - [MiniMax video package pricing](https://platform.minimax.io/docs/guides/pricing-video) (verified 2026-06-02)
@@ -172,8 +172,9 @@ Yes, but with honest positioning. They are useful for budget testing, effects, o
 - [Castmagic pricing](https://www.castmagic.io/pricing) (verified 2026-06-02)
 - [PixVerse Platform model pricing](https://docs.platform.pixverse.ai/model-pricing-796039m0) (verified 2026-05-13)
 - [PixVerse API subscription docs](https://docs.platform.pixverse.ai/how-to-subscribe-api-plans-882969m0) (verified 2026-05-13)
-- [HeyGen pricing](https://www.heygen.com/pricing) (verified 2026-05-13)
-- [Synthesia pricing](https://www.synthesia.io/pricing) (verified 2026-05-13)
+- [HeyGen pricing](https://www.heygen.com/pricing) (verified 2026-06-05)
+- [HeyGen self-serve API pricing](https://developers.heygen.com/docs/pricing) (verified 2026-06-05)
+- [Synthesia pricing](https://www.synthesia.io/pricing) (verified 2026-06-05)
 
 ## Related
 

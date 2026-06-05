@@ -3292,7 +3292,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "minimax-token-plan",
@@ -3530,8 +3530,8 @@
     },
     {
       "id": "heygen-api-pricing",
-      "label": "HeyGen API pricing help",
-      "url": "https://help.heygen.com/en/articles/10060327-heygen-api-pricing-explained",
+      "label": "HeyGen self-serve API pricing",
+      "url": "https://developers.heygen.com/docs/pricing",
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
@@ -4204,7 +4204,8 @@
       "url": "https://klingai.com/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-05"
     },
     {
       "id": "kling-30-launch",
@@ -4212,7 +4213,8 @@
       "url": "https://ir.kuaishou.com/news-releases/news-release-details/kling-ai-launches-30-model-ushering-era-where-everyone-can-be",
       "type": "newsroom",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-05"
     },
     {
       "id": "kokoro-model",
@@ -5839,7 +5841,8 @@
       "url": "https://pika.art",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-05"
     },
     {
       "id": "pika-pricing",
@@ -5847,7 +5850,8 @@
       "url": "https://pika.art/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-05"
     },
     {
       "id": "pinecone-official",
@@ -6543,7 +6547,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-24"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "runway-api-models",
@@ -6552,7 +6556,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-24"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "runway-api-pricing",
@@ -6561,7 +6565,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-24"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "runway-aleph-2",
@@ -6596,7 +6600,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-24"
+      "last_checked": "2026-06-05"
     },
     {
       "id": "runway-research",
@@ -6694,7 +6698,7 @@
     },
     {
       "trust_tier": "primary",
-      "last_checked": "2026-05-04",
+      "last_checked": "2026-06-05",
       "id": "seedance-byteplus-modelark",
       "label": "BytePlus ModelArk",
       "url": "https://www.byteplus.com/en/product/modelark",
@@ -6707,7 +6711,8 @@
       "url": "https://seed.bytedance.com/en/seedance2_0",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-05"
     },
     {
       "id": "seedance-pricing",
@@ -6715,7 +6720,8 @@
       "url": "https://docs.byteplus.com/api/docs/ModelArk/2191775",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-05"
     },
     {
       "id": "seedance-bytedance-launch",
@@ -6723,7 +6729,8 @@
       "url": "https://seed.bytedance.com/blog/seedance-2-0-official-launch",
       "type": "blog",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-05"
     },
     {
       "id": "seedance-byteplus-api",
@@ -6731,7 +6738,8 @@
       "url": "https://docs.byteplus.com/api/docs/ModelArk/1520757",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-05"
     },
     {
       "id": "seedance-ai-independent-disclosure",
@@ -6739,7 +6747,8 @@
       "url": "https://www.seedance.ai/",
       "type": "official",
       "trust_tier": "secondary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-05"
     },
     {
       "trust_tier": "primary",
