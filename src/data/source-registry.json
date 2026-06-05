@@ -1297,27 +1297,39 @@
     },
     {
       "id": "codeium-docs",
-      "label": "Windsurf docs",
-      "url": "https://docs.windsurf.com/",
+      "label": "Devin Desktop docs",
+      "url": "https://docs.devin.ai/desktop/getting-started",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "high",
+      "last_checked": "2026-06-05"
+    },
+    {
+      "id": "codeium-devin-desktop",
+      "label": "Devin Desktop announcement",
+      "url": "https://devin.ai/blog/windsurf-is-now-devin-desktop",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-05"
     },
     {
       "id": "codeium-official",
-      "label": "Windsurf official site",
+      "label": "Windsurf official site redirect",
       "url": "https://windsurf.com/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "high",
+      "last_checked": "2026-06-05"
     },
     {
       "id": "codeium-pricing",
-      "label": "Windsurf pricing",
+      "label": "Windsurf pricing redirect to Devin pricing",
       "url": "https://windsurf.com/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-05"
     },
     {
       "id": "codeium-pricing-blog",
@@ -1325,7 +1337,8 @@
       "url": "https://windsurf.com/blog/windsurf-pricing-plans",
       "type": "blog",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-05"
     },
     {
       "id": "coderabbit-best-for",

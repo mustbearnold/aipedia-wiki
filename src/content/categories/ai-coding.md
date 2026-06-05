@@ -36,6 +36,8 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 
 **Use [Windsurf / Devin Desktop](/tools/windsurf/) when the buyer wants Cognition's IDE surface beside Devin.** The June 5 check found `windsurf.com/pricing` redirecting to Devin pricing and the public page saying Windsurf is now Devin Desktop. Treat old standalone Windsurf/Codeium pricing claims as stale unless the current Cognition account screen confirms them.
 
+**June 5 Codeium lineage update:** the old [Codeium vs GitHub Copilot](/compare/codeium-vs-github-copilot/) buyer page now treats Codeium as historical search intent, not a live checkout. Current buyers should compare Devin Desktop against Copilot: Cognition-stack IDE and local/cloud agent management versus GitHub-native IDE coverage, PRs, policy, SDK access, and AI Credits governance.
+
 **Use [Codex](/tools/codex/) when the team wants OpenAI-native agent coding.** It fits local repo work, PR preparation, checks, and tasks where an agent can edit and verify code rather than only suggest completions.
 
 **Use [v0 by Vercel](/tools/v0/) when the coding deliverable is a Vercel-native web artifact.** The June 4 [ChatGPT vs v0](/compare/chatgpt-vs-v0/) refresh keeps the boundary clear: ChatGPT is broader for requirements, architecture, debugging, and code review, while v0 is better for generating previewable React/Next/Tailwind interfaces, deploys, GitHub sync, and PR workflows.

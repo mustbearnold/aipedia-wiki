@@ -1,87 +1,133 @@
 ---
 type: comparison
 slug: codeium-vs-github-copilot
-title: "Codeium (retired, now Windsurf) vs GitHub Copilot"
+title: "Codeium vs GitHub Copilot"
 tools: [codeium, github-copilot]
 category: ai-coding
 winner: depends
-seo_title: "Codeium vs GitHub Copilot: Which Is Better in 2026?"
-meta_description: "Honest head-to-head of Codeium (retired; codeium.com now redirects to windsurf.com) and GitHub Copilot as of May 2026. Flagship models, current pricing, and which tool fits your workflow."
+seo_title: "Codeium vs GitHub Copilot: What To Choose Now (June 2026)"
+meta_description: "Codeium is no longer a separate product: it became Windsurf, and Windsurf is now Devin Desktop. Compare the Codeium lineage with GitHub Copilot's June 2026 AI Credits, plans, models, and team fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-13
-last_verified: 2026-05-13
-update_frequency: quarterly
+last_updated: 2026-06-05
+last_verified: 2026-06-05
+update_frequency: monthly
 canonical_fact_table: true
 ---
 
-# Codeium (retired, now Windsurf) vs GitHub Copilot
+# Codeium vs GitHub Copilot
 
-> **Brand status (2026-05-13):** The Codeium product was retired and `codeium.com` now issues a 301 redirect to `windsurf.com`. Existing Codeium users were migrated to Windsurf. If you are evaluating "Codeium" today, you are effectively evaluating Windsurf; this comparison preserves the historical framing while noting the redirect throughout. For a current head-to-head, see [Cursor vs Windsurf](./cursor-vs-windsurf.md).
+[Codeium](/tools/codeium/) and [GitHub Copilot](/tools/github-copilot/) are no longer a clean two-product choice. Codeium is historical search intent. The product path became [Windsurf / Devin Desktop](/tools/windsurf/), while Copilot is GitHub's live coding-assistant and agent platform.
 
-[Codeium](../tools/codeium.md) (now Windsurf) and [GitHub Copilot](../tools/github-copilot.md) provided AI code completion and chat features in IDEs. Codeium was free for individuals with optional paid tiers before the Windsurf transition, while GitHub Copilot charges $10 per user per month for individuals and offers enterprise plans, both using OpenAI and Anthropic frontier models as of May 2026[3][4].
+The practical June 2026 question is:
+
+- Choose **GitHub Copilot** if the team wants AI help inside existing IDEs, GitHub pull requests, issues, policy controls, model selection, SDK access, and AI Credits governance.
+- Choose **Devin Desktop / Windsurf** if the team wants Cognition's IDE surface, SWE model family, Agent Command Center, local/cloud agent handoff, Spaces, and Devin stack integration.
+- Do **not** buy "Codeium" as a separate product. Use the name only to understand old reviews, old plugins, and migration paths.
 
 ## Quick Answer
 
-Codeium's spiritual successor is Windsurf, which still offers a free tier for solo developers and small teams plus paid plans at $15/mo Pro. GitHub Copilot fits larger teams and GitHub users needing deep repository context and enterprise controls. If you land on codeium.com today, you will be sent to windsurf.com automatically.
+For most buyers searching "Codeium vs Copilot" in June 2026, **GitHub Copilot is the safer default** because it is the active product with clearer GitHub-native procurement, existing-editor coverage, organization policy, and current plan docs. The Codeium lineage is still relevant, but the live product to evaluate is Devin Desktop, not Codeium.
 
+Pick Devin Desktop when Cognition's agent workflow is the reason to buy. Pick Copilot when GitHub workflow, existing IDEs, compliance controls, and predictable organization rollout matter more.
 
+## Decision Snapshot
+
+| Buyer question | Better pick | Why |
 |---|---|---|
-| **Flagship** | OpenAI frontier models, Claude Sonnet 4.6, Gemini 3.1 Pro (now served via Windsurf) | OpenAI Codex models, Claude Opus 4.7 |
-| **Price** | Windsurf Free; Pro $15/user/mo; Teams/Enterprise custom (Codeium plans grandfathered) | $10/user/mo (individuals); Business $19/user/mo; Enterprise custom |
-| **Context Window** | 1M tokens | 2M tokens |
-| **Best For** | Cost-free coding in any IDE (via Windsurf continuity) | GitHub-integrated teams |
+| I just want the old Codeium free autocomplete idea | Devin Desktop Free, but verify current limits | The Codeium brand is gone; the current free path is through Devin Desktop/Windsurf. |
+| I use GitHub issues, PRs, Actions, and org policy every day | GitHub Copilot | Copilot is strongest when GitHub is the system of record. |
+| I want an AI-native IDE tied to autonomous cloud agents | Devin Desktop | Cognition now positions Windsurf as Devin Desktop with local and cloud agents in one surface. |
+| I want a cheap individual coding assistant in existing IDEs | GitHub Copilot Pro | Pro remains $10/month, but agentic usage is governed by AI Credits. |
+| I want the least confusing procurement story | GitHub Copilot | Devin Desktop is active, but Codeium/Windsurf/Devin naming churn creates buyer confusion. |
+| I need heavy agent sessions | Depends after budget modeling | Copilot uses AI Credits; Devin Desktop uses plan quotas and extra usage. Model real tasks before rollout. |
 
-## Where Codeium / Windsurf Wins
+## Current Pricing
 
-- Free tier (now under Windsurf) includes unlimited basic autocompletions and chat with OpenAI and Gemini model options[3].
-- Supports 70+ IDEs and editors including VS Code, JetBrains, Vim without GitHub dependency.
-- Windsurf Pro at $15 per user per month replaces the old Codeium Teams plan and adds Cascade multi-file agents.
-- Faster index-free autocomplete reduces latency in large codebases.
-- Privacy mode processes code only on-device for sensitive projects.
+| | Codeium lineage / Devin Desktop | GitHub Copilot |
+|---|---|---|
+| **Current product path** | Codeium -> Windsurf -> Devin Desktop | GitHub Copilot |
+| **Free plan** | Free tier for light Devin Desktop use | Copilot Free for limited individual use |
+| **Individual paid entry** | Pro $20/month | Pro $10/month |
+| **Power individual plan** | Max $200/month | Pro+ $39/month; Max $100/month for existing-plan upgrades |
+| **Team plan** | Teams $80/month base plus $40/month per full dev seat | Business $19/user/month |
+| **Enterprise plan** | Custom | Enterprise $39/user/month |
+| **Usage model** | Quotas plus extra usage at API pricing on paid plans | GitHub AI Credits active for all plans as of June 1, 2026 |
 
 ## Where GitHub Copilot Wins
 
-- 2 million token context window handles full repositories and long chat histories[3].
-- Tight GitHub integration pulls context from issues, PRs, and repos for relevant suggestions.
-- Business plan at $19 per user per month includes IP indemnity and advanced security scans.
-- GPT-5.3 Codex variant excels in multi-file edits and agentic coding tasks[2].
-- Enterprise features support SAML SSO, usage analytics, and custom model fine-tuning.
+- **GitHub-native context.** Copilot fits teams already working in GitHub repositories, pull requests, issues, Actions, security review, and organization policy.
+- **Existing IDE rollout.** It works across common editors without asking teams to standardize on a new AI-native IDE.
+- **Clearer buyer path.** The current Copilot plan docs list Free, Pro, Pro+, Max, Business, and Enterprise with AI Credits. New sign-ups were still temporarily paused on the docs check, so procurement still needs a live-account check.
+- **Agent platform direction.** The June 2 Copilot SDK GA makes Copilot embeddable in developer tools and internal software, not only an IDE extension.
+- **Governance knobs.** Business and Enterprise buyers get centralized policy, organization controls, pooled credits/budgets, and GitHub-native admin paths.
 
-## Key Differences
+## Where Devin Desktop Wins
 
-Codeium (before retirement) prioritized broad IDE support and zero cost for individuals, routing requests to a mix of OpenAI frontier models, Claude Sonnet 4.6, and Gemini 3.1 Pro without requiring a GitHub account[1][2][3]. That same offering now lives inside Windsurf, including the free tier, the JetBrains/VS Code/Vim plugin family, and the on-device privacy mode. GitHub Copilot embeds deeply in VS Code and GitHub workflows, using specialized models like OpenAI Codex models and Claude Opus 4.7 with 2M token context for repository-aware completions; its paid structure funds enterprise-grade policy controls[2][3][4]. The Codeium plugin family loads quicker in non-GitHub setups, while Copilot reduces errors in team environments by 55% via repo context per GitHub benchmarks.
+- **Cognition-stack workflow.** Devin Desktop is strongest when the buyer wants the IDE, local agent, cloud Devin, CLI, review, and agent management together.
+- **Agent Command Center.** Cognition says Devin Desktop puts local and cloud agents, PRs, sessions, files, and context into one command surface.
+- **ACP support.** Devin Desktop launched with Agent Client Protocol support so compatible agents can run in the same editor surface.
+- **Backwards compatibility.** Cognition says the editor, extensions, keybindings, LSPs, terminal, and workflows remain backwards-compatible with Windsurf.
+- **SWE model lane.** The current Windsurf/Devin path is also a bet on Cognition's SWE model family and adaptive routing.
 
-## Who should choose Codeium (now Windsurf)
+## Where Codeium Used To Win
 
-Solo developers or small teams in diverse IDEs benefit from its free tier and wide compatibility. Since Codeium retired, "choosing Codeium" today means installing Windsurf or the Windsurf-branded IDE plugins.
+Codeium's original appeal was broad editor support, generous autocomplete, and low-friction developer onboarding. That is useful historical context, but it is not a current purchase path. If a vendor list still says "Codeium Pro $15" or "Codeium Teams $12," treat it as stale until a current Cognition/Devin page or account console confirms it.
 
-## Who should choose GitHub Copilot
+## Buyer Guidance
 
-Organizations in the GitHub ecosystem need its repo integration and compliance tools. Teams over 10 users gain from business features like indemnity.
+Use **GitHub Copilot** when:
+
+- the team is already standardized on GitHub;
+- policy, pull requests, issue context, auditability, and admin controls matter;
+- users want AI help inside existing IDEs;
+- finance can model AI Credits before heavy agent rollout;
+- SDK embedding or GitHub-native agent workflows are part of the roadmap.
+
+Use **Devin Desktop / Windsurf** when:
+
+- the team wants Cognition's IDE and Devin stack together;
+- local plus cloud agent coordination is more important than staying in existing editors;
+- SWE model access and adaptive routing are part of the evaluation;
+- existing Windsurf users need the migration path;
+- the team can tolerate naming and packaging churn while the product consolidates.
+
+Avoid **Codeium as a product choice** when:
+
+- you are writing a 2026 procurement shortlist;
+- you are quoting old pricing screenshots;
+- you need a current plan, SLA, admin, or security review;
+- the buyer actually means either Devin Desktop or GitHub Copilot.
 
 ## Bottom Line
 
-Pick the Codeium-to-Windsurf path to avoid costs and IDE lock-in; the free access still matches paid tools on benchmarks. Choose GitHub Copilot for GitHub-heavy workflows where context and enterprise support justify $10 monthly. Most users start with Windsurf's free plan and upgrade if team scale demands Copilot.
+**Copilot wins the old Codeium head-to-head for most current buyers because Codeium is no longer a separate product.** The live contest is Copilot versus Devin Desktop. Copilot is safer for GitHub-native teams and existing-editor rollout. Devin Desktop is worth testing when Cognition's autonomous-engineering stack is the strategic bet.
 
 ## FAQ
 
 **Is Codeium still available?**
-No, codeium.com 301-redirects to windsurf.com and the Codeium brand has been retired. The team, models, and product live on under Windsurf.
-
-**Can I use both?**
-Yes, install both Windsurf and Copilot extensions in VS Code; disable one via settings to avoid conflicts.
+Not as a separate product. Codeium became Windsurf, and Windsurf is now publicly presented as Devin Desktop.
 
 **Which is cheaper?**
-Windsurf (the Codeium continuity) for individuals (free vs $10/mo); Copilot Business at $19/user/mo exceeds Windsurf Pro at $15/user/mo for groups.
+Copilot Pro is cheaper at $10/month than Devin Desktop Pro at $20/month. That does not settle total cost: Copilot uses AI Credits for many chat and agent workflows, while Devin Desktop uses quotas and extra usage.
 
-**Which one should I pick first?**
-Try Windsurf's free tier; switch to Copilot if GitHub context improves your pull requests.
+**Can I still compare old Codeium with Copilot?**
+Only historically. For a real buying decision, compare Copilot with Devin Desktop, Cursor, Claude Code, Codex, or another active coding tool.
+
+**Which is better for teams?**
+Copilot is better for GitHub-native organizations. Devin Desktop is better when the team wants Cognition's local/cloud agent workflow and is willing to adopt its IDE surface.
+
+**What should former Codeium users do first?**
+Check the current Devin Desktop/Windsurf account and pricing path, then benchmark it against Copilot on the same repository tasks.
 
 ## Sources
 
-- [Codeium (redirects to Windsurf)](https://www.codeium.com/pricing)
-- [Windsurf pricing](https://windsurf.com/pricing)
-- [GitHub Copilot](https://github.com/features/copilot/plans)
-- [AI Tools 2026 Rankings](https://www.nxcode.io/resources/news/best-ai-tools-2026-complete-ranking-guide)[3]
-- [Generative AI Tools 2026](https://almcorp.com/blog/top-generative-ai-tools-2026/)[4]
-- [Model Releases April 2026](https://blog.mean.ceo/new-ai-model-releases-news-april-2026/)[1]
+- [Codeium](/tools/codeium/)
+- [Windsurf / Devin Desktop](/tools/windsurf/)
+- [GitHub Copilot](/tools/github-copilot/)
+- [Windsurf pricing redirect](https://windsurf.com/pricing): current public route into Devin pricing
+- [Devin pricing](https://devin.ai/pricing): current Devin Desktop plans
+- [Devin Desktop announcement](https://devin.ai/blog/windsurf-is-now-devin-desktop): June 2, 2026 product path
+- [GitHub Copilot plans](https://docs.github.com/en/copilot/get-started/plans): current plans and model catalog
+- [GitHub Copilot usage-based billing announcement](https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/): June 1 AI Credits transition
+- [GitHub Copilot billing and plans changelog](https://github.blog/changelog/2026-06-01-updates-to-github-copilot-billing-and-plans/): billing live as of June 1
+- [GitHub Copilot SDK GA](https://github.blog/changelog/2026-06-02-copilot-sdk-is-now-generally-available/): SDK availability and agent-runtime scope
