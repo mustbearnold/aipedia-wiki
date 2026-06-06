@@ -29,17 +29,10 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /compare/exa-vs-phind/ | Comparison | Yes | frontmatter | src/content/comparisons/exa-vs-phind.md |
 | 2026-05-13 | /compare/gamma-vs-tome/ | Comparison | Yes | frontmatter | src/content/comparisons/gamma-vs-tome.md |
 | 2026-05-13 | /compare/kagi-vs-phind/ | Comparison | Yes | frontmatter | src/content/comparisons/kagi-vs-phind.md |
-| 2026-05-13 | /compare/perplexity-vs-chatgpt/ | Comparison | Yes | frontmatter | src/content/comparisons/perplexity-vs-chatgpt.md |
 | 2026-05-13 | /compare/perplexity-vs-phind/ | Comparison | Yes | frontmatter | src/content/comparisons/perplexity-vs-phind.md |
 | 2026-05-13 | /compare/phind-vs-you-com/ | Comparison | Yes | frontmatter | src/content/comparisons/phind-vs-you-com.md |
 | 2026-05-13 | /compare/pitch-vs-tome/ | Comparison | Yes | frontmatter | src/content/comparisons/pitch-vs-tome.md |
 | 2026-05-13 | /compare/presentations-ai-vs-tome/ | Comparison | Yes | frontmatter | src/content/comparisons/presentations-ai-vs-tome.md |
-| 2026-05-13 | /compare/quillbot-vs-sudowrite/ | Comparison | Yes | frontmatter | src/content/comparisons/quillbot-vs-sudowrite.md |
-| 2026-05-13 | /compare/quillbot-vs-wordtune/ | Comparison | Yes | frontmatter | src/content/comparisons/quillbot-vs-wordtune.md |
-| 2026-05-13 | /compare/resemble-ai-vs-voxtral/ | Comparison | Yes | frontmatter | src/content/comparisons/resemble-ai-vs-voxtral.md |
-| 2026-05-13 | /compare/scite-vs-semantic-scholar/ | Comparison | Yes | frontmatter | src/content/comparisons/scite-vs-semantic-scholar.md |
-| 2026-05-13 | /compare/sudowrite-vs-wordtune/ | Comparison | Yes | frontmatter | src/content/comparisons/sudowrite-vs-wordtune.md |
-| 2026-05-13 | /compare/suno-vs-udio/ | Comparison | Yes | frontmatter | src/content/comparisons/suno-vs-udio.md |
 | 2026-05-13 | /disclosure/ | Static page | Yes | git | src/pages/disclosure.astro |
 | 2026-05-13 | /guides/ai-agency-stack/ | Guide | Yes | frontmatter | src/content/use-cases/ai-agency-stack.md |
 | 2026-05-13 | /guides/ai-content-creator-stack/ | Guide | Yes | frontmatter | src/content/use-cases/ai-content-creator-stack.md |
@@ -540,8 +533,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-05 | /categories/ai-image/ | Category | Yes | frontmatter | src/content/categories/ai-image.md |
 | 2026-06-05 | /categories/ai-presentation/ | Category | Yes | frontmatter | src/content/categories/ai-presentation.md |
 | 2026-06-05 | /categories/ai-seo/ | Category | Yes | frontmatter | src/content/categories/ai-seo.md |
-| 2026-06-05 | /categories/ai-voice/ | Category | Yes | frontmatter | src/content/categories/ai-voice.md |
-| 2026-06-05 | /categories/ai-writing/ | Category | Yes | frontmatter | src/content/categories/ai-writing.md |
 | 2026-06-05 | /compare/adobe-firefly-vs-freepik/ | Comparison | Yes | frontmatter | src/content/comparisons/adobe-firefly-vs-freepik.md |
 | 2026-06-05 | /compare/codeium-vs-github-copilot/ | Comparison | Yes | frontmatter | src/content/comparisons/codeium-vs-github-copilot.md |
 | 2026-06-05 | /compare/copy-ai-vs-grammarly/ | Comparison | Yes | frontmatter | src/content/comparisons/copy-ai-vs-grammarly.md |
@@ -688,11 +679,13 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-06 | /categories/ | Static page | Yes | working tree | src/pages/categories/index.astro |
 | 2026-06-06 | /categories/ai-chatbots/ | Category | Yes | frontmatter | src/content/categories/ai-chatbots.md |
 | 2026-06-06 | /categories/ai-design/ | Category | Yes | frontmatter | src/content/categories/ai-design.md |
-| 2026-06-06 | /categories/ai-music/ | Category | Yes | frontmatter | src/content/categories/ai-music.md |
-| 2026-06-06 | /categories/ai-notes/ | Category | Yes | working tree | src/content/categories/ai-notes.md |
-| 2026-06-06 | /categories/ai-research/ | Category | Yes | frontmatter | src/content/categories/ai-research.md |
-| 2026-06-06 | /categories/ai-search/ | Category | Yes | frontmatter | src/content/categories/ai-search.md |
+| 2026-06-06 | /categories/ai-music/ | Category | Yes | working tree | src/content/categories/ai-music.md |
+| 2026-06-06 | /categories/ai-notes/ | Category | Yes | frontmatter | src/content/categories/ai-notes.md |
+| 2026-06-06 | /categories/ai-research/ | Category | Yes | working tree | src/content/categories/ai-research.md |
+| 2026-06-06 | /categories/ai-search/ | Category | Yes | working tree | src/content/categories/ai-search.md |
 | 2026-06-06 | /categories/ai-video/ | Category | Yes | frontmatter | src/content/categories/ai-video.md |
+| 2026-06-06 | /categories/ai-voice/ | Category | Yes | working tree | src/content/categories/ai-voice.md |
+| 2026-06-06 | /categories/ai-writing/ | Category | Yes | working tree | src/content/categories/ai-writing.md |
 | 2026-06-06 | /compare/ | Static page | Yes | working tree | src/pages/compare/index.astro |
 | 2026-06-06 | /compare/kagi-vs-perplexity/ | Comparison | Yes | frontmatter | src/content/comparisons/kagi-vs-perplexity.md |
 | 2026-06-06 | /compare/kagi-vs-you-com/ | Comparison | Yes | frontmatter | src/content/comparisons/kagi-vs-you-com.md |
@@ -705,20 +698,27 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-06 | /compare/mubert-vs-udio/ | Comparison | Yes | frontmatter | src/content/comparisons/mubert-vs-udio.md |
 | 2026-06-06 | /compare/nanochat-vs-scite/ | Comparison | Yes | frontmatter | src/content/comparisons/nanochat-vs-scite.md |
 | 2026-06-06 | /compare/nanochat-vs-semantic-scholar/ | Comparison | Yes | frontmatter | src/content/comparisons/nanochat-vs-semantic-scholar.md |
-| 2026-06-06 | /compare/notebooklm-vs-obsidian/ | Comparison | Yes | working tree | src/content/comparisons/notebooklm-vs-obsidian.md |
-| 2026-06-06 | /compare/notebooklm-vs-otter-ai/ | Comparison | Yes | working tree | src/content/comparisons/notebooklm-vs-otter-ai.md |
-| 2026-06-06 | /compare/notebooklm-vs-readwise/ | Comparison | Yes | working tree | src/content/comparisons/notebooklm-vs-readwise.md |
-| 2026-06-06 | /compare/notion-ai-vs-obsidian/ | Comparison | Yes | working tree | src/content/comparisons/notion-ai-vs-obsidian.md |
-| 2026-06-06 | /compare/obsidian-vs-otter-ai/ | Comparison | Yes | working tree | src/content/comparisons/obsidian-vs-otter-ai.md |
-| 2026-06-06 | /compare/obsidian-vs-readwise/ | Comparison | Yes | working tree | src/content/comparisons/obsidian-vs-readwise.md |
-| 2026-06-06 | /compare/otter-ai-vs-readwise/ | Comparison | Yes | working tree | src/content/comparisons/otter-ai-vs-readwise.md |
+| 2026-06-06 | /compare/notebooklm-vs-obsidian/ | Comparison | Yes | frontmatter | src/content/comparisons/notebooklm-vs-obsidian.md |
+| 2026-06-06 | /compare/notebooklm-vs-otter-ai/ | Comparison | Yes | frontmatter | src/content/comparisons/notebooklm-vs-otter-ai.md |
+| 2026-06-06 | /compare/notebooklm-vs-readwise/ | Comparison | Yes | frontmatter | src/content/comparisons/notebooklm-vs-readwise.md |
+| 2026-06-06 | /compare/notion-ai-vs-obsidian/ | Comparison | Yes | frontmatter | src/content/comparisons/notion-ai-vs-obsidian.md |
+| 2026-06-06 | /compare/obsidian-vs-otter-ai/ | Comparison | Yes | frontmatter | src/content/comparisons/obsidian-vs-otter-ai.md |
+| 2026-06-06 | /compare/obsidian-vs-readwise/ | Comparison | Yes | frontmatter | src/content/comparisons/obsidian-vs-readwise.md |
+| 2026-06-06 | /compare/otter-ai-vs-readwise/ | Comparison | Yes | frontmatter | src/content/comparisons/otter-ai-vs-readwise.md |
+| 2026-06-06 | /compare/perplexity-vs-chatgpt/ | Comparison | Yes | working tree | src/content/comparisons/perplexity-vs-chatgpt.md |
 | 2026-06-06 | /compare/perplexity-vs-you-com/ | Comparison | Yes | frontmatter | src/content/comparisons/perplexity-vs-you-com.md |
 | 2026-06-06 | /compare/pika-vs-runway/ | Comparison | Yes | frontmatter | src/content/comparisons/pika-vs-runway.md |
 | 2026-06-06 | /compare/pika-vs-seedance/ | Comparison | Yes | frontmatter | src/content/comparisons/pika-vs-seedance.md |
 | 2026-06-06 | /compare/pika-vs-synthesia/ | Comparison | Yes | frontmatter | src/content/comparisons/pika-vs-synthesia.md |
+| 2026-06-06 | /compare/quillbot-vs-sudowrite/ | Comparison | Yes | working tree | src/content/comparisons/quillbot-vs-sudowrite.md |
+| 2026-06-06 | /compare/quillbot-vs-wordtune/ | Comparison | Yes | working tree | src/content/comparisons/quillbot-vs-wordtune.md |
+| 2026-06-06 | /compare/resemble-ai-vs-voxtral/ | Comparison | Yes | working tree | src/content/comparisons/resemble-ai-vs-voxtral.md |
 | 2026-06-06 | /compare/runway-vs-synthesia/ | Comparison | Yes | frontmatter | src/content/comparisons/runway-vs-synthesia.md |
 | 2026-06-06 | /compare/runway-vs-veo/ | Comparison | Yes | frontmatter | src/content/comparisons/runway-vs-veo.md |
+| 2026-06-06 | /compare/scite-vs-semantic-scholar/ | Comparison | Yes | working tree | src/content/comparisons/scite-vs-semantic-scholar.md |
 | 2026-06-06 | /compare/seedance-vs-synthesia/ | Comparison | Yes | frontmatter | src/content/comparisons/seedance-vs-synthesia.md |
+| 2026-06-06 | /compare/sudowrite-vs-wordtune/ | Comparison | Yes | working tree | src/content/comparisons/sudowrite-vs-wordtune.md |
+| 2026-06-06 | /compare/suno-vs-udio/ | Comparison | Yes | working tree | src/content/comparisons/suno-vs-udio.md |
 | 2026-06-06 | /compare/veo-vs-kling/ | Comparison | Yes | frontmatter | src/content/comparisons/veo-vs-kling.md |
 | 2026-06-06 | /compare/veo-vs-seedance/ | Comparison | Yes | frontmatter | src/content/comparisons/veo-vs-seedance.md |
 | 2026-06-06 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
@@ -731,14 +731,14 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-06 | /tools/mistral-ai/ | Tool | Yes | frontmatter | src/content/tools/mistral-ai.md |
 | 2026-06-06 | /tools/mubert/ | Tool | Yes | frontmatter | src/content/tools/mubert.md |
 | 2026-06-06 | /tools/nanochat/ | Tool | Yes | frontmatter | src/content/tools/nanochat.md |
-| 2026-06-06 | /tools/notebooklm/ | Tool | Yes | working tree | src/content/tools/notebooklm.md |
-| 2026-06-06 | /tools/notion-ai/ | Tool | Yes | working tree | src/content/tools/notion-ai.md |
-| 2026-06-06 | /tools/obsidian/ | Tool | Yes | working tree | src/content/tools/obsidian.md |
-| 2026-06-06 | /tools/otter-ai/ | Tool | Yes | working tree | src/content/tools/otter-ai.md |
+| 2026-06-06 | /tools/notebooklm/ | Tool | Yes | frontmatter | src/content/tools/notebooklm.md |
+| 2026-06-06 | /tools/notion-ai/ | Tool | Yes | frontmatter | src/content/tools/notion-ai.md |
+| 2026-06-06 | /tools/obsidian/ | Tool | Yes | frontmatter | src/content/tools/obsidian.md |
+| 2026-06-06 | /tools/otter-ai/ | Tool | Yes | frontmatter | src/content/tools/otter-ai.md |
 | 2026-06-06 | /tools/perplexity/ | Tool | Yes | frontmatter | src/content/tools/perplexity.md |
 | 2026-06-06 | /tools/pika/ | Tool | Yes | frontmatter | src/content/tools/pika.md |
 | 2026-06-06 | /tools/qwen/ | Tool | Yes | frontmatter | src/content/tools/qwen.md |
-| 2026-06-06 | /tools/readwise/ | Tool | Yes | working tree | src/content/tools/readwise.md |
+| 2026-06-06 | /tools/readwise/ | Tool | Yes | frontmatter | src/content/tools/readwise.md |
 | 2026-06-06 | /tools/runway/ | Tool | Yes | frontmatter | src/content/tools/runway.md |
 | 2026-06-06 | /tools/scite/ | Tool | Yes | frontmatter | src/content/tools/scite.md |
 | 2026-06-06 | /tools/seedance/ | Tool | Yes | frontmatter | src/content/tools/seedance.md |

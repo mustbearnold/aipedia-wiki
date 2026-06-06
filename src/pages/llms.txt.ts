@@ -3,6 +3,7 @@
 // Copilot) at the canonical index + category hubs + editorial policy.
 //
 // See also /llms-full.txt for the verbose variant with every page listed.
+// Refresh metadata: 2026-06-06 cross-category May 13 live comparison follow-up across Perplexity/ChatGPT, QuillBot/Sudowrite/Wordtune, Resemble AI/Voxtral, Scite/Semantic Scholar, and Suno/Udio plus AI Search, AI Writing, AI Voice, AI Research, AI Music, tools, comparison, category, homepage, source registry, and LLM maintenance.
 // Refresh metadata: 2026-06-06 AI Notes comparison follow-up across NotebookLM, Obsidian, Otter.ai, Readwise, and Notion AI plus AI Notes, tools, comparison, category, homepage, source registry, and LLM maintenance.
 // Refresh metadata: 2026-06-06 AI Research comparison follow-up across nanochat, Scite, and Semantic Scholar plus AI Research, tools, comparison, category, homepage, source registry, and LLM maintenance.
 // Refresh metadata: 2026-06-06 AI Music comparison follow-up across Mubert, Suno, and Udio plus AI Music, tools, comparison, category, homepage, source registry, and LLM maintenance.

@@ -3,6 +3,10 @@
  * /tools/ index — god-tier 10/10 mobile-first.
  *
  * Full catalog of active AI tools sorted by score, with category filter chips.
+ * Refresh metadata: 2026-06-06 active-tool/source alignment for
+ * Perplexity, ChatGPT, QuillBot, Sudowrite, Wordtune, Resemble AI, Voxtral,
+ * Scite, Semantic Scholar, Suno, and Udio while refreshing live May 13
+ * comparison rows across search, writing, voice, research, and music;
  * Refresh metadata: 2026-06-06 active-tool/source verification for
  * NotebookLM, Obsidian, Otter.ai, Readwise, and Notion AI while refreshing
  * AI Notes comparison rows against current source-notebook, local-first PKM,
@@ -346,8 +350,9 @@ const itemList = scoredTools.map((t) => ({
     .gt-cat-chips {
       display: flex; gap: 6px;
       overflow-x: auto;
-      padding: 4px 18px 12px;
-      margin: 0 -18px 18px;
+      max-width: 100%;
+      padding: 4px 0 12px;
+      margin: 0 0 18px;
       scrollbar-width: none;
       -ms-overflow-style: none;
     }

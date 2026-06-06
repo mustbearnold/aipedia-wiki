@@ -451,6 +451,28 @@ const rankLabel = sorted.length > 0 ? `${sorted.length} tools verified` : undefi
     .gt-tool-compare {
       margin-top: 8px;
     }
+    .gt-body :global(table) {
+      width: 100%;
+      max-width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      margin: 18px 0;
+      display: block;
+      overflow-x: auto;
+    }
+    .gt-body :global(th),
+    .gt-body :global(td) {
+      text-align: left;
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--gt-line);
+    }
+    .gt-body :global(th) {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gt-subtle);
+    }
     @media (min-width: 600px) {
       .gt-tool-link { grid-template-columns: 24px 40px minmax(0, 1fr) minmax(120px, auto); }
       .gt-tool-link { padding: 16px 18px; gap: 18px; }
