@@ -96,6 +96,8 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 
 **Best code review guide:** [Best AI for code review](/guides/best-ai-for-code-review/) is the June 6 verified review-buyer guide for CodeRabbit, Qodo, GitHub Copilot, Cursor Bugbot, Claude Code, and Codex, with Copilot's now-live AI Credits plus Actions-minutes review billing called out before teams enable broad private-repo review.
 
+**Best unit-test guide:** [Best AI for unit tests](/guides/best-ai-for-unit-tests/) is the June 6 verified testing workflow guide for Cursor, GitHub Copilot, Claude, Claude Code, Codex, and Aider, with current Cursor usage billing, Copilot AI Credits, Claude Code cost controls, and assertion-quality guardrails separated from generic coverage chasing.
+
 ## Money Pages To Build Next
 
 - [Cursor vs GitHub Copilot](/compare/cursor-vs-github-copilot/) should be kept current around Cursor's AI-native IDE fit versus Copilot's GitHub-native governance.
@@ -107,6 +109,7 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 - [Best AI Tools for Freelancers](/guides/best-ai-tools-for-freelancers/) should stay aligned because coding freelancers need Cursor pricing, client-data controls, tests, and delivery-review cautions that differ from team procurement pages.
 - [Best AI for debugging](/guides/best-ai-for-debugging/) is now synchronized with Cursor model-usage billing, GitHub Copilot's active AI Credits model, Claude Code plan-sharing, Codex plan/API costs, and test-driven bug-fix workflow guidance.
 - [Best AI for code review](/guides/best-ai-for-code-review/) is the June 6 verified adjacent guide for dedicated PR review, enterprise code-quality governance, GitHub-native review billing, Cursor Bugbot usage-based review, Claude Code checkpoints, and Codex patch review.
+- [Best AI for unit tests](/guides/best-ai-for-unit-tests/) is the June 6 verified test-generation guide for IDE loops, GitHub-native assistants, Claude-backed edge-case planning, terminal agents, local test commands, and AI-credit-aware usage controls.
 - [Best AI for API documentation](/guides/best-ai-for-api-documentation/) is the June 6 verified docs/agent buyer guide: Mintlify for hosted docs, Stainless for SDK/docs/MCP generation, Speakeasy for SDK/Terraform/MCP automation, ReadMe for developer portals, and Cursor/ChatGPT/Claude/Gemini only as support tools.
 - [Best open source AI tools](/guides/best-open-source-ai-tools/) should stay synchronized with Ollama, LM Studio, Open WebUI, Llama, Mistral, DeepSeek, and open-model licensing because developer buyers often want local or self-hosted control before paying for hosted agents.
 - [DeepSeek alternatives](/guides/deepseek-alternatives/) should stay synchronized with ChatGPT, Claude, Cursor, Gemini, Mistral, Perplexity, and the open-source AI guide because DeepSeek switching intent often overlaps with coding, model cost, and local/open-model control.

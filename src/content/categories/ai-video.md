@@ -104,7 +104,7 @@ Do not make a wide comparison table the mobile experience. Mobile buyers need st
 
 **Camera-control creator or agency:** test Higgsfield when shot presets, Soul character anchoring, and multi-model selection matter more than owning a single base model. Keep Runway in the comparison if edit timeline, API maturity, or team production workflow is more important.
 
-**YouTube creator:** use the refreshed [YouTube creators AI guide](/guides/best-ai-for-youtube-creators/) when the buyer needs to choose between Descript editing, ChatGPT scripts, Canva or Midjourney thumbnails, ElevenLabs narration, OpusClip Shorts, and Runway B-roll.
+**YouTube creator:** use the refreshed [YouTube creators AI guide](/guides/best-ai-for-youtube-creators/) when the buyer needs to choose between Descript editing, ChatGPT scripts, Canva or Midjourney thumbnails, ElevenLabs narration, OpusClip Shorts, and Runway B-roll. The June 6 guide adds current media-hour, AI-credit, voice-consent, music-rights, generated-video credit, and YouTube altered/synthetic disclosure checks before creators stack subscriptions.
 
 **Long-form repurposing buyer:** use [OpusClip](/tools/opusclip/) when the source is already a podcast, webinar, livestream, interview, or YouTube video and the job is finding clips, adding captions, reframing to 9:16, and scheduling Shorts/Reels/TikTok posts. It is not a text-to-video model; compare it against Descript, Captions, [Castmagic](/tools/castmagic/) (re-verified June 2, 2026 for podcast-to-content pipelines), and InVideo before comparing it against Seedance, Kling, Veo, or Runway.
 
