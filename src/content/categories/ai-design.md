@@ -5,10 +5,10 @@ title: AI Design & App Building
 description: Current AI design tools and app builders for social creative, product design, design systems, web prototypes, full-stack apps, and Vercel-native UI workflows.
 tool_count: 9
 seo_title: "Best AI Design & App Builder Tools (June 2026)"
-meta_description: "Updated June 5, 2026: compare Canva AI, Figma, Midjourney, Adobe Firefly, Recraft V4, Google Stitch, Framer, Lovable, Base44, Bolt.new, and v0 by buyer fit, pricing, workflow, credits, and production risk."
+meta_description: "Updated June 6, 2026: compare Canva AI, Figma, Midjourney, Adobe Firefly, Recraft V4, Google Stitch, Framer, Lovable, Base44, Bolt.new, and v0 by buyer fit, pricing, workflow, credits, and production risk."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-06
+last_verified: 2026-06-06
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -26,7 +26,7 @@ top_picks:
 
 AI design is now two overlapping markets. The first is **visual creation and product design**: brand assets, social posts, presentations, UX mockups, design systems, and stakeholder review. The second is **AI app building**: prompts, screenshots, Figma context, and code turning into web apps, prototypes, deploys, or pull requests.
 
-As of June 4, 2026, start with the job:
+As of June 6, 2026, start with the job:
 
 **Use [Canva](/tools/canva/) when non-designers need finished creative fast.** Canva AI 2.0 is built across Canva's Visual Suite and supports conversational creation, editable layouts, on-brand generation, AI images, AI video, Magic Write, resizing, background tools, and business controls. It is the safest first stop for marketers, creators, teachers, small businesses, and teams that need to publish polished content without a design department.
 
@@ -36,13 +36,13 @@ As of June 4, 2026, start with the job:
 
 **Use [Adobe Firefly](/tools/adobe-firefly/) when Adobe-native image, vector, and Creative Cloud production matters.** Firefly plans and Creative Cloud bundles are credit-aware, so the buying question is not just "Can it generate an image?" but whether it fits Photoshop, Illustrator, Express, team review, and commercial creative workflows.
 
-**Use [Lovable](/tools/lovable/) when the buyer wants a full-stack app from a prompt.** Lovable's public pricing and docs list Free with 5 daily credits capped at 30/month, Pro at $25/month with 100 monthly credits plus 5 daily credits up to 150/month, Business from $50/month, and Enterprise platform-fee pricing. The June 5 [Cursor vs Lovable](/compare/cursor-vs-lovable/) refresh makes the handoff clear: Lovable is the fast app-builder lane, while Cursor is the production-hardening IDE lane.
+**Use [Lovable](/tools/lovable/) when the buyer wants a full-stack app from a prompt.** Lovable's June 6 public pricing and docs check lists Free with 5 daily credits capped at 30/month, Pro at $25/month with 100 monthly credits plus 5 daily credits up to 150/month, Business from $50/month, Enterprise platform-fee pricing, and temporary included Cloud + AI balances. The refreshed [Lovable vs Bolt.new vs v0](/compare/lovable-vs-bolt-vs-v0/) page keeps Lovable as the default founder MVP lane.
 
 **Use [Base44](/tools/base44/) when the buyer wants a Wix-owned AI app builder with an all-in-one app path.** Base44's June 1 pricing check keeps the Free, Starter, Builder, Pro, Elite, and Enterprise ladder intact, but also found a Free integration-credit inconsistency between the plan card and FAQ. Treat credit and integration limits as the first thing to verify before a serious build.
 
-**Use [v0 by Vercel](/tools/v0/) when the buyer wants a Vercel-native web artifact.** The current v0 docs describe an AI agent for real code, full-stack apps, agents, backend connections, deployments, and PRs. The June 5 pricing check lists Free with $5 monthly credits and a 7-message/day limit, Team at $30/user/month, Business at $100/user/month, Enterprise custom pricing, and model token pricing. The June 5 [Cursor vs v0](/compare/cursor-vs-v0/) refresh keeps v0 in the first-web-artifact lane and Cursor in the durable-code lane. Do not buy v0 expecting retired legacy pricing.
+**Use [v0 by Vercel](/tools/v0/) when the buyer wants a Vercel-native web artifact.** The current v0 docs describe an AI agent for real code, full-stack apps, agents, backend connections, deployments, and PRs. The June 6 pricing check lists Free with $5 monthly credits and a 7-message/day limit, Team at $30/user/month, Business at $100/user/month, Enterprise custom pricing, and model token pricing, including the corrected v0 Max Fast rate of $10 input and $50 output per 1M tokens. Do not buy v0 expecting retired legacy pricing.
 
-**Use [Bolt.new](/tools/bolt/) when the buyer wants a browser app builder with an execution environment.** Bolt's June 1 pricing check lists Free with 300K daily tokens and 1M monthly tokens, Pro at $25/month, Teams at $30/month per member, and Enterprise custom. It is useful when the buyer wants to build and run in the browser, but token usage and production cleanup still matter.
+**Use [Bolt.new](/tools/bolt/) when the buyer wants a browser app builder with an execution environment.** Bolt's June 6 pricing check lists Free with 300K daily tokens and 1M monthly tokens, Pro at $25/month, Teams at $30/month per member, and Enterprise custom. It is useful when the buyer wants to build and run in the browser, but token usage and production cleanup still matter.
 
 **Use [Google Stitch](/tools/google-stitch/) as an experimental vibe-design canvas, not a procurement-safe design system yet.** Google's March 2026 Stitch update describes an AI-native software design canvas with natural-language UI creation, an infinite canvas, design agents, voice interaction, interactive prototypes, DESIGN.md, MCP, SDK, and developer-tool exports. Google's May 19 update adds real-time Stitch Agent design, AI Studio links, Antigravity export, and Netlify publishing paths. Treat access, quotas, and production fit as moving Google Labs facts that should be verified in the product before a team depends on them.
 
@@ -159,13 +159,13 @@ Do not make a wide table the only mobile experience. Mobile buyers need top pick
 - [Google Stitch announcement](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/) (verified 2026-06-05)
 - [Google Stitch real-time update](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-updates/) (verified 2026-06-05)
 - [Framer pricing](https://www.framer.com/pricing) (verified 2026-06-02)
-- [Lovable pricing](https://lovable.dev/pricing) (verified 2026-06-05)
-- [Lovable plans and credits](https://docs.lovable.dev/introduction/plans-and-credits) (verified 2026-06-05)
-- [Lovable Cloud docs](https://docs.lovable.dev/integrations/cloud) (verified 2026-06-05)
+- [Lovable pricing](https://lovable.dev/pricing) (verified 2026-06-06)
+- [Lovable plans and credits](https://docs.lovable.dev/introduction/plans-and-credits) (verified 2026-06-06)
+- [Lovable Cloud docs](https://docs.lovable.dev/integrations/cloud) (verified 2026-06-06)
 - [Base44 pricing](https://base44.com/pricing) (verified 2026-06-01)
-- [Bolt.new pricing](https://bolt.new/pricing) (verified 2026-06-01)
-- [v0 pricing](https://v0.app/pricing) (verified 2026-06-05)
-- [v0 documentation](https://v0.app/docs) (verified 2026-06-05)
+- [Bolt.new pricing](https://bolt.new/pricing) (verified 2026-06-06)
+- [v0 pricing](https://v0.app/pricing) (verified 2026-06-06)
+- [v0 documentation](https://v0.app/docs) (verified 2026-06-06)
 - [Freepik plans and pricing docs](https://www.freepik.com/ai/docs/plans-and-pricing) (verified 2026-06-05; public plan docs still use Freepik plan names while Magnific branding appears across AI creative features)
 - [Recraft V4 docs](https://www.recraft.ai/docs/recraft-models/recraft-V4) (verified 2026-05-24)
 - [Ideogram plans](https://docs.ideogram.ai/plans-and-pricing/available-plans) (verified 2026-06-05)

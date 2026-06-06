@@ -29,7 +29,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /compare/exa-vs-phind/ | Comparison | Yes | frontmatter | src/content/comparisons/exa-vs-phind.md |
 | 2026-05-13 | /compare/gamma-vs-tome/ | Comparison | Yes | frontmatter | src/content/comparisons/gamma-vs-tome.md |
 | 2026-05-13 | /compare/kagi-vs-phind/ | Comparison | Yes | frontmatter | src/content/comparisons/kagi-vs-phind.md |
-| 2026-05-13 | /compare/lovable-vs-bolt-vs-v0/ | Comparison | Yes | frontmatter | src/content/comparisons/lovable-vs-bolt-vs-v0.md |
 | 2026-05-13 | /compare/mistral-ai-vs-qwen/ | Comparison | Yes | frontmatter | src/content/comparisons/mistral-ai-vs-qwen.md |
 | 2026-05-13 | /compare/mubert-vs-suno/ | Comparison | Yes | frontmatter | src/content/comparisons/mubert-vs-suno.md |
 | 2026-05-13 | /compare/mubert-vs-udio/ | Comparison | Yes | frontmatter | src/content/comparisons/mubert-vs-udio.md |
@@ -344,7 +343,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-01 | /tools/augment-code/ | Tool | Yes | frontmatter | src/content/tools/augment-code.md |
 | 2026-06-01 | /tools/base44/ | Tool | Yes | frontmatter | src/content/tools/base44.md |
 | 2026-06-01 | /tools/beautiful-ai/ | Tool | Yes | frontmatter | src/content/tools/beautiful-ai.md |
-| 2026-06-01 | /tools/bolt/ | Tool | Yes | frontmatter | src/content/tools/bolt.md |
 | 2026-06-01 | /tools/boomy/ | Tool | Yes | frontmatter | src/content/tools/boomy.md |
 | 2026-06-01 | /tools/browserbase/ | Tool | Yes | frontmatter | src/content/tools/browserbase.md |
 | 2026-06-01 | /tools/cline/ | Tool | Yes | frontmatter | src/content/tools/cline.md |
@@ -554,14 +552,12 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-04 | /tools/scite/ | Tool | Yes | frontmatter | src/content/tools/scite.md |
 | 2026-06-04 | /tools/semantic-scholar/ | Tool | Yes | frontmatter | src/content/tools/semantic-scholar.md |
 | 2026-06-04 | /tools/sudowrite/ | Tool | Yes | frontmatter | src/content/tools/sudowrite.md |
-| 2026-06-04 | /tools/v0/ | Tool | Yes | frontmatter | src/content/tools/v0.md |
 | 2026-06-04 | /tools/wordtune/ | Tool | Yes | frontmatter | src/content/tools/wordtune.md |
 | 2026-06-04 | /tools/writesonic/ | Tool | Yes | frontmatter | src/content/tools/writesonic.md |
 | 2026-06-04 | /tools/zapier/ | Tool | Yes | frontmatter | src/content/tools/zapier.md |
 | 2026-06-05 | /categories/ai-automation/ | Category | Yes | frontmatter | src/content/categories/ai-automation.md |
 | 2026-06-05 | /categories/ai-chatbots/ | Category | Yes | frontmatter | src/content/categories/ai-chatbots.md |
 | 2026-06-05 | /categories/ai-coding/ | Category | Yes | frontmatter | src/content/categories/ai-coding.md |
-| 2026-06-05 | /categories/ai-design/ | Category | Yes | frontmatter | src/content/categories/ai-design.md |
 | 2026-06-05 | /categories/ai-image/ | Category | Yes | frontmatter | src/content/categories/ai-image.md |
 | 2026-06-05 | /categories/ai-notes/ | Category | Yes | frontmatter | src/content/categories/ai-notes.md |
 | 2026-06-05 | /categories/ai-presentation/ | Category | Yes | frontmatter | src/content/categories/ai-presentation.md |
@@ -695,7 +691,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-05 | /tools/hyperwrite/ | Tool | Yes | frontmatter | src/content/tools/hyperwrite.md |
 | 2026-06-05 | /tools/ideogram/ | Tool | Yes | frontmatter | src/content/tools/ideogram.md |
 | 2026-06-05 | /tools/instantly/ | Tool | Yes | frontmatter | src/content/tools/instantly.md |
-| 2026-06-05 | /tools/lovable/ | Tool | Yes | frontmatter | src/content/tools/lovable.md |
 | 2026-06-05 | /tools/marketmuse/ | Tool | Yes | frontmatter | src/content/tools/marketmuse.md |
 | 2026-06-05 | /tools/midjourney/ | Tool | Yes | frontmatter | src/content/tools/midjourney.md |
 | 2026-06-05 | /tools/mistral-ai/ | Tool | Yes | frontmatter | src/content/tools/mistral-ai.md |
@@ -720,32 +715,37 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-05 | /tools/windsurf/ | Tool | Yes | frontmatter | src/content/tools/windsurf.md |
 | 2026-06-06 | / | Static page | Yes | working tree | src/pages/index.astro |
 | 2026-06-06 | /categories/ | Static page | Yes | working tree | src/pages/categories/index.astro |
+| 2026-06-06 | /categories/ai-design/ | Category | Yes | working tree | src/content/categories/ai-design.md |
 | 2026-06-06 | /categories/ai-search/ | Category | Yes | frontmatter | src/content/categories/ai-search.md |
-| 2026-06-06 | /categories/ai-video/ | Category | Yes | working tree | src/content/categories/ai-video.md |
+| 2026-06-06 | /categories/ai-video/ | Category | Yes | frontmatter | src/content/categories/ai-video.md |
 | 2026-06-06 | /compare/ | Static page | Yes | working tree | src/pages/compare/index.astro |
 | 2026-06-06 | /compare/kagi-vs-perplexity/ | Comparison | Yes | frontmatter | src/content/comparisons/kagi-vs-perplexity.md |
 | 2026-06-06 | /compare/kagi-vs-you-com/ | Comparison | Yes | frontmatter | src/content/comparisons/kagi-vs-you-com.md |
-| 2026-06-06 | /compare/kling-vs-pika/ | Comparison | Yes | working tree | src/content/comparisons/kling-vs-pika.md |
-| 2026-06-06 | /compare/kling-vs-seedance-vs-runway/ | Comparison | Yes | working tree | src/content/comparisons/kling-vs-seedance-vs-runway.md |
-| 2026-06-06 | /compare/kling-vs-synthesia/ | Comparison | Yes | working tree | src/content/comparisons/kling-vs-synthesia.md |
+| 2026-06-06 | /compare/kling-vs-pika/ | Comparison | Yes | frontmatter | src/content/comparisons/kling-vs-pika.md |
+| 2026-06-06 | /compare/kling-vs-seedance-vs-runway/ | Comparison | Yes | frontmatter | src/content/comparisons/kling-vs-seedance-vs-runway.md |
+| 2026-06-06 | /compare/kling-vs-synthesia/ | Comparison | Yes | frontmatter | src/content/comparisons/kling-vs-synthesia.md |
+| 2026-06-06 | /compare/lovable-vs-bolt-vs-v0/ | Comparison | Yes | working tree | src/content/comparisons/lovable-vs-bolt-vs-v0.md |
 | 2026-06-06 | /compare/perplexity-vs-you-com/ | Comparison | Yes | frontmatter | src/content/comparisons/perplexity-vs-you-com.md |
-| 2026-06-06 | /compare/pika-vs-runway/ | Comparison | Yes | working tree | src/content/comparisons/pika-vs-runway.md |
-| 2026-06-06 | /compare/pika-vs-seedance/ | Comparison | Yes | working tree | src/content/comparisons/pika-vs-seedance.md |
-| 2026-06-06 | /compare/pika-vs-synthesia/ | Comparison | Yes | working tree | src/content/comparisons/pika-vs-synthesia.md |
-| 2026-06-06 | /compare/runway-vs-synthesia/ | Comparison | Yes | working tree | src/content/comparisons/runway-vs-synthesia.md |
-| 2026-06-06 | /compare/runway-vs-veo/ | Comparison | Yes | working tree | src/content/comparisons/runway-vs-veo.md |
-| 2026-06-06 | /compare/seedance-vs-synthesia/ | Comparison | Yes | working tree | src/content/comparisons/seedance-vs-synthesia.md |
-| 2026-06-06 | /compare/veo-vs-kling/ | Comparison | Yes | working tree | src/content/comparisons/veo-vs-kling.md |
-| 2026-06-06 | /compare/veo-vs-seedance/ | Comparison | Yes | working tree | src/content/comparisons/veo-vs-seedance.md |
+| 2026-06-06 | /compare/pika-vs-runway/ | Comparison | Yes | frontmatter | src/content/comparisons/pika-vs-runway.md |
+| 2026-06-06 | /compare/pika-vs-seedance/ | Comparison | Yes | frontmatter | src/content/comparisons/pika-vs-seedance.md |
+| 2026-06-06 | /compare/pika-vs-synthesia/ | Comparison | Yes | frontmatter | src/content/comparisons/pika-vs-synthesia.md |
+| 2026-06-06 | /compare/runway-vs-synthesia/ | Comparison | Yes | frontmatter | src/content/comparisons/runway-vs-synthesia.md |
+| 2026-06-06 | /compare/runway-vs-veo/ | Comparison | Yes | frontmatter | src/content/comparisons/runway-vs-veo.md |
+| 2026-06-06 | /compare/seedance-vs-synthesia/ | Comparison | Yes | frontmatter | src/content/comparisons/seedance-vs-synthesia.md |
+| 2026-06-06 | /compare/veo-vs-kling/ | Comparison | Yes | frontmatter | src/content/comparisons/veo-vs-kling.md |
+| 2026-06-06 | /compare/veo-vs-seedance/ | Comparison | Yes | frontmatter | src/content/comparisons/veo-vs-seedance.md |
 | 2026-06-06 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
 | 2026-06-06 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
 | 2026-06-06 | /tools/ | Static page | Yes | working tree | src/pages/tools/index.astro |
+| 2026-06-06 | /tools/bolt/ | Tool | Yes | working tree | src/content/tools/bolt.md |
 | 2026-06-06 | /tools/kagi/ | Tool | Yes | frontmatter | src/content/tools/kagi.md |
-| 2026-06-06 | /tools/kling/ | Tool | Yes | working tree | src/content/tools/kling.md |
+| 2026-06-06 | /tools/kling/ | Tool | Yes | frontmatter | src/content/tools/kling.md |
+| 2026-06-06 | /tools/lovable/ | Tool | Yes | working tree | src/content/tools/lovable.md |
 | 2026-06-06 | /tools/perplexity/ | Tool | Yes | frontmatter | src/content/tools/perplexity.md |
-| 2026-06-06 | /tools/pika/ | Tool | Yes | working tree | src/content/tools/pika.md |
-| 2026-06-06 | /tools/runway/ | Tool | Yes | working tree | src/content/tools/runway.md |
-| 2026-06-06 | /tools/seedance/ | Tool | Yes | working tree | src/content/tools/seedance.md |
-| 2026-06-06 | /tools/synthesia/ | Tool | Yes | working tree | src/content/tools/synthesia.md |
-| 2026-06-06 | /tools/veo/ | Tool | Yes | working tree | src/content/tools/veo.md |
+| 2026-06-06 | /tools/pika/ | Tool | Yes | frontmatter | src/content/tools/pika.md |
+| 2026-06-06 | /tools/runway/ | Tool | Yes | frontmatter | src/content/tools/runway.md |
+| 2026-06-06 | /tools/seedance/ | Tool | Yes | frontmatter | src/content/tools/seedance.md |
+| 2026-06-06 | /tools/synthesia/ | Tool | Yes | frontmatter | src/content/tools/synthesia.md |
+| 2026-06-06 | /tools/v0/ | Tool | Yes | working tree | src/content/tools/v0.md |
+| 2026-06-06 | /tools/veo/ | Tool | Yes | frontmatter | src/content/tools/veo.md |
 | 2026-06-06 | /tools/you-com/ | Tool | Yes | frontmatter | src/content/tools/you-com.md |

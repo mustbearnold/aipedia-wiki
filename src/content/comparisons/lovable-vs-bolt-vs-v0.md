@@ -5,18 +5,18 @@ title: "Lovable vs Bolt.new vs v0"
 tools: [lovable, bolt, v0]
 category: ai-design
 winner: lovable
-seo_title: "Lovable vs Bolt.new vs v0: Best AI App Builder (May 2026)"
-meta_description: "Updated May 8, 2026: compare Lovable, Bolt.new, and v0 by buyer fit, current pricing, backend path, deployment workflow, Vercel fit, and production risk."
+seo_title: "Lovable vs Bolt.new vs v0: Best AI App Builder (June 2026)"
+meta_description: "Updated June 6, 2026: compare Lovable, Bolt.new, and v0 by buyer fit, current pricing, backend path, deployment workflow, Vercel fit, and production risk."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-06
+last_verified: 2026-06-06
 update_frequency: monthly
 canonical_fact_table: true
 ---
 
 # Lovable vs Bolt.new vs v0
 
-As of May 8, 2026, [Lovable](/tools/lovable/), [Bolt.new](/tools/bolt/), and [v0 by Vercel](/tools/v0/) are no longer interchangeable "AI design" toys. They are three different buying paths for people trying to turn an idea into working software.
+As of June 6, 2026, [Lovable](/tools/lovable/), [Bolt.new](/tools/bolt/), and [v0 by Vercel](/tools/v0/) are no longer interchangeable "AI design" toys. They are three different buying paths for people trying to turn an idea into working software.
 
 The clean decision: **Lovable is the best default for most founder-style app-builder buyers**, because its official docs frame it as a full-stack AI development platform for building, iterating on, and deploying web apps with frontend, backend, database, authentication, integrations, editable code, and GitHub workflow. **Bolt.new is the better pick when the buyer wants the whole build/run/debug loop in the browser**, especially for JavaScript-based websites, web apps, and mobile app starts. **v0 is the better pick when the buyer is already in the Vercel, React, Next.js, Tailwind, or shadcn/ui lane** and needs a high-fidelity web artifact, deploy, or pull request.
 
@@ -50,9 +50,9 @@ Do not compare these tools by a retired flat-price app-builder shortcut. That is
 
 | Tool | Current public pricing signal | Buyer warning |
 |---|---|---|
-| Lovable | Pro at $25/month and Business at $50/month, both shared across unlimited users; Enterprise platform fee based on company size | Credit usage, Cloud + AI usage, workspace needs, SSO, roles, and enterprise controls matter more than the headline price |
+| Lovable | Pro at $25/month and Business at $50/month, both shared across unlimited users; Enterprise platform fee based on company size | Credit usage, temporary Cloud + AI included usage, workspace needs, SSO, roles, and enterprise controls matter more than the headline price |
 | Bolt.new | Free with 300K daily tokens and 1M monthly tokens; Pro at $25/month; Teams at $30/month per member; Enterprise custom | Token burn scales with project size because Bolt reads, syncs, and reasons over files; paid tokens can roll over, but free tokens do not |
-| v0 | Free with $5 monthly credits; Team at $30/user/month; Business at $100/user/month; Enterprise custom; model token pricing for v0 Mini, Pro, Max, and Max Fast | Larger prompts, screenshots, source files, chat history, and high-output models consume more credits than small component prompts |
+| v0 | Free with $5 monthly credits; Team at $30/user/month; Business at $100/user/month; Enterprise custom; model token pricing for v0 Mini, Pro, Max, and Max Fast | Larger prompts, screenshots, source files, chat history, cache usage, and high-output models consume more credits than small component prompts |
 
 The best first purchase for most solo founders is still not automatic. If you need a quick working SaaS-ish app, test Lovable first. If you need a browser development environment with running code and files, test Bolt first. If you already deploy on Vercel or want UI-to-code speed, test v0 first. Paying for all three at once is usually wasteful until a real workflow proves the need.
 
@@ -100,7 +100,7 @@ Pick v0 when the buyer needs a landing page, dashboard, ecommerce flow, AI app, 
 
 **Buy v0 Team first** when v0 is part of a real team workflow. Team is $30/user/month with $30 of monthly credits per user, free daily login credits, shared purchased credits, centralized billing, shared chats, and collaboration.
 
-**Buy v0 Business** when training opt-out by default and business controls justify $100/user/month. Enterprise is the procurement path for SAML SSO, role-based access control, priority performance, support SLAs, and no training on customer data.
+**Buy v0 Business** when training opt-out by default and business controls justify $100/user/month. Enterprise is the procurement path for SAML SSO, role-based access control, priority performance, support SLAs, and no training on customer data. The June 6 pricing check also corrected v0 Max Fast to $10 input and $50 output per 1M tokens, not the older higher figures that appeared in some stale summaries.
 
 ## What Not To Buy Yet
 
@@ -150,16 +150,17 @@ None should be trusted blindly for production. Lovable, Bolt, and v0 can all acc
 
 ## Sources
 
-- [Lovable pricing](https://lovable.dev/pricing) (verified 2026-05-08)
-- [Lovable documentation](https://docs.lovable.dev/) (verified 2026-05-08)
-- [Bolt.new pricing](https://bolt.new/pricing) (verified 2026-05-08)
-- [Bolt introduction docs](https://support.bolt.new/building/intro-bolt) (verified 2026-05-08)
-- [Bolt database docs](https://support.bolt.new/cloud/database) (verified 2026-05-08)
-- [Bolt token docs](https://support.bolt.new/account-and-subscription/tokens) (verified 2026-05-08)
-- [Bolt supported technologies](https://support.bolt.new/building/supported-technologies) (verified 2026-05-08)
-- [v0 pricing](https://v0.app/pricing) (verified 2026-05-08)
-- [v0 documentation](https://v0.app/docs) (verified 2026-05-08)
-- [Vercel updated v0 pricing](https://vercel.com/blog/updated-v0-pricing) (verified 2026-05-08)
+- [Lovable pricing](https://lovable.dev/pricing) (verified 2026-06-06)
+- [Lovable plans and credits](https://docs.lovable.dev/introduction/plans-and-credits) (verified 2026-06-06)
+- [Lovable Cloud docs](https://docs.lovable.dev/integrations/cloud) (verified 2026-06-06)
+- [Bolt.new pricing](https://bolt.new/pricing) (verified 2026-06-06)
+- [Bolt introduction docs](https://support.bolt.new/building/intro-bolt) (verified 2026-06-06)
+- [Bolt database docs](https://support.bolt.new/cloud/database) (verified 2026-06-06)
+- [Bolt token docs](https://support.bolt.new/account-and-subscription/tokens) (verified 2026-06-06)
+- [Bolt supported technologies](https://support.bolt.new/building/supported-technologies) (verified 2026-06-06)
+- [v0 pricing](https://v0.app/pricing) (verified 2026-06-06)
+- [v0 documentation](https://v0.app/docs) (verified 2026-06-06)
+- [Vercel updated v0 pricing](https://vercel.com/blog/updated-v0-pricing) (verified 2026-06-06)
 
 ## Related
 

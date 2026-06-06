@@ -803,7 +803,8 @@
       "url": "https://support.bolt.new/building/intro-bolt",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-06"
     },
     {
       "id": "bolt-database",
@@ -811,7 +812,8 @@
       "url": "https://support.bolt.new/cloud/database",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-06"
     },
     {
       "id": "bolt-hosting",
@@ -819,7 +821,8 @@
       "url": "https://support.bolt.new/cloud/hosting",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-06"
     },
     {
       "id": "bolt-tokens",
@@ -828,7 +831,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-01"
+      "last_checked": "2026-06-06"
     },
     {
       "id": "bolt-supported-technologies",
@@ -836,7 +839,8 @@
       "url": "https://support.bolt.new/building/supported-technologies",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-06"
     },
     {
       "id": "bolt-official",
@@ -845,7 +849,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-01"
+      "last_checked": "2026-06-06"
     },
     {
       "id": "boomy-official",
@@ -4680,7 +4684,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-05"
+      "last_checked": "2026-06-06"
     },
     {
       "id": "lovable-plans-credits",
@@ -4689,7 +4693,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-05"
+      "last_checked": "2026-06-06"
     },
     {
       "id": "lovable-cloud",
@@ -4698,7 +4702,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-05"
+      "last_checked": "2026-06-06"
     },
     {
       "id": "lovable-github",
@@ -4707,7 +4711,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-05"
+      "last_checked": "2026-06-06"
     },
     {
       "id": "lovable-official",
@@ -4716,7 +4720,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-05"
+      "last_checked": "2026-06-06"
     },
     {
       "id": "lovable-supabase",
@@ -4725,7 +4729,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-05"
+      "last_checked": "2026-06-06"
     },
     {
       "id": "lovart-best-for",
@@ -7457,7 +7461,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-05"
+      "last_checked": "2026-06-06"
     },
     {
       "id": "v0-docs",
@@ -7466,7 +7470,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-05"
+      "last_checked": "2026-06-06"
     },
     {
       "id": "v0-official",
@@ -7475,7 +7479,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-05"
+      "last_checked": "2026-06-06"
     },
     {
       "id": "v0-pricing-blog",
@@ -7484,7 +7488,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-05"
+      "last_checked": "2026-06-06"
     },
     {
       "trust_tier": "primary",
