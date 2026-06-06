@@ -5331,7 +5331,7 @@
       "type": "repository",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-05"
+      "last_checked": "2026-06-06"
     },
     {
       "id": "nanochat-readme",
@@ -5340,7 +5340,7 @@
       "type": "repository",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-05"
+      "last_checked": "2026-06-06"
     },
     {
       "id": "nvidia-alpamayo-2-super",
@@ -6704,7 +6704,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-05"
+      "last_checked": "2026-06-06"
     },
     {
       "id": "scite-pricing",
@@ -6713,7 +6713,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-05"
+      "last_checked": "2026-06-06"
     },
     {
       "id": "scite-mcp-announcement",
@@ -6780,7 +6780,7 @@
     },
     {
       "trust_tier": "primary",
-      "last_checked": "2026-06-05",
+      "last_checked": "2026-06-06",
       "id": "semantic-scholar-api",
       "label": "Semantic Scholar API",
       "url": "https://www.semanticscholar.org/product/api",
@@ -6789,7 +6789,7 @@
     },
     {
       "trust_tier": "primary",
-      "last_checked": "2026-06-05",
+      "last_checked": "2026-06-06",
       "id": "semantic-scholar-official",
       "label": "Semantic Scholar homepage",
       "url": "https://www.semanticscholar.org/",
@@ -6803,7 +6803,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-06"
     },
     {
       "id": "semrush-features",

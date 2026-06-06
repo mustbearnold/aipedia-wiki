@@ -2,6 +2,7 @@
 // Lists every active tool with category + tagline, every comparison, every
 // use-case guide. Intended for crawlers willing to ingest a larger manifest
 // to discover the full content map without parsing the sitemap.
+// Refresh metadata: 2026-06-06 AI Research comparison follow-up across nanochat, Scite, and Semantic Scholar plus AI Research, tools, comparison, category, homepage, source registry, and LLM maintenance.
 // Refresh metadata: 2026-06-06 AI Music comparison follow-up across Mubert, Suno, and Udio plus AI Music, tools, comparison, category, homepage, source registry, and LLM maintenance.
 // Refresh metadata: 2026-06-06 Mistral AI vs Qwen model-platform comparison follow-up plus AI Chatbots, tools, comparison, category, homepage, source registry, and LLM maintenance.
 // Refresh metadata: 2026-06-06 Lovable vs Bolt.new vs v0 app-builder comparison follow-up plus AI Design, tools, comparison, category, homepage, source registry, and LLM maintenance.
