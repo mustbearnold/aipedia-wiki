@@ -3,6 +3,7 @@
 // Copilot) at the canonical index + category hubs + editorial policy.
 //
 // See also /llms-full.txt for the verbose variant with every page listed.
+// Refresh metadata: 2026-06-06 Mistral AI vs Qwen model-platform comparison follow-up plus AI Chatbots, tools, comparison, category, homepage, source registry, and LLM maintenance.
 // Refresh metadata: 2026-06-06 Lovable vs Bolt.new vs v0 app-builder comparison follow-up plus AI Design, tools, comparison, category, homepage, source registry, and LLM maintenance.
 // Refresh metadata: 2026-06-06 AI Video comparison follow-up across Kling, Pika, Runway, Seedance, Synthesia, and Veo plus AI Video, tools, comparison, category, homepage, source registry, and LLM maintenance.
 // Refresh metadata: 2026-06-06 AI Search comparison follow-up across Kagi, Perplexity, and You.com plus AI Search, tools, comparison, category, homepage, source registry, and LLM maintenance.
