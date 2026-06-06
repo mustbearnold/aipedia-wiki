@@ -1,12 +1,11 @@
 ---
 import ArticleLayout from '../layouts/ArticleLayout.astro';
 
-const LAST_UPDATED = '2026-05-13';
-const LAST_UPDATED_HUMAN = 'May 13, 2026';
+const LAST_UPDATED_HUMAN = 'June 6, 2026';
 
 const pageName = 'Affiliate Disclosure, aipedia.wiki';
 const pageDesc =
-  'How affiliate links work on aipedia.wiki. FTC-compliant disclosure. Editorial independence from commission rates. Network list.';
+  'How affiliate links work on aipedia.wiki. Clear disclosure near commercial CTAs, editorial independence from commission rates, and current affiliate-network context.';
 ---
 
 <ArticleLayout
@@ -14,28 +13,40 @@ const pageDesc =
   seoTitle={pageName}
   description={pageDesc}
   eyebrow="Trust + transparency"
-  subhead="FTC-compliant disclosure. Editorial independence from commission rates."
+  subhead="Some outbound links can earn commission. Scores, rankings, and recommendations stay editorial."
   breadcrumbs={[{ label: 'Affiliate Disclosure' }]}
 >
   <p class="not-prose text-xs text-[var(--text-muted)] mb-6">
     <span class="uppercase tracking-[0.12em]">Last updated:</span>
-    <time datetime={LAST_UPDATED}>{LAST_UPDATED_HUMAN}</time>
+    <time datetime="2026-06-06">{LAST_UPDATED_HUMAN}</time>
   </p>
 
   <h2>The short version</h2>
 
   <p>
-    <strong>Some outbound links on aipedia.wiki are affiliate links.</strong> When a reader clicks through and makes a purchase, the site may receive a commission at no extra cost to the reader. Commission rates do not influence scores, rankings, ordering, or written assessments.
+    <strong>Some outbound links on aipedia.wiki are affiliate links.</strong> If you click one of those links and buy a paid plan, aipedia.wiki may receive a commission at no extra cost to you.
   </p>
+
+  <p>
+    Affiliate status does <strong>not</strong> influence scores, rankings, winner picks, alternative recommendations, warnings, pricing notes, or written assessments. When a commercial CTA uses an affiliate link, the CTA system can show a nearby disclosure such as "Affiliate link; no extra cost to you" at the decision point.
+  </p>
+
+  <h2>What changed in this refresh</h2>
+
+  <ul>
+    <li>Re-checked the page against current FTC endorsement guidance and ASA/CAP affiliate-marketing guidance on June 6, 2026.</li>
+    <li>Clarified that site-wide disclosure is not a substitute for stronger inline disclosure when a specific placement, paid test, sponsored post, or non-editorial commercial arrangement exists.</li>
+    <li>Aligned the wording with the live commercial CTA system: affiliate CTAs carry `rel="sponsored"` and analytics metadata, while non-affiliate official links remain marked as official destinations.</li>
+  </ul>
 
   <h2>How affiliate links work</h2>
 
   <p>
-    When you click an outbound link to a tool's website, the destination site may record that the visit originated from aipedia.wiki. If you then sign up for a paid plan or make a purchase within the network's cookie window, the operator of that program credits aipedia.wiki with a commission. You pay the same price you would have paid arriving directly.
+    When you click an outbound link to a tool's website, the destination site or affiliate network may record that the visit originated from aipedia.wiki. If you then sign up for a paid plan or make a purchase within that program's attribution window, the program may credit aipedia.wiki with a commission. You should pay the same public price you would have paid arriving directly.
   </p>
 
   <p>
-    Affiliate tracking is typically handled by a third-party network. Networks currently used or applied to include Impact, PartnerStack, Rewardful, FirstPromoter, ShareASale, Awin, and CJ Affiliate, along with direct in-house programs for specific tools. The full technical chain (click, cookie, attribution) is governed by each network's own privacy policy.
+    Affiliate tracking is typically handled by a third-party network or by a vendor's in-house program. Networks currently used, applied to, or under evaluation include Impact, PartnerStack, Rewardful, FirstPromoter, ShareASale, Awin, and CJ Affiliate, along with direct programs for specific tools. The technical chain for click attribution, cookies, and partner dashboards is governed by each network's or vendor's own privacy policy.
   </p>
 
   <h2>Editorial independence</h2>
@@ -49,8 +60,8 @@ const pageDesc =
   </p>
 
   <ul>
-    <li>Given low scores to tools that pay the highest commissions.</li>
-    <li>Recommended tools that pay zero commission when they are the best pick for a job.</li>
+    <li>Given lower scores to tools with affiliate programs when the product, pricing, moat, or long-term outlook did not justify a stronger recommendation.</li>
+    <li>Recommended tools that pay zero commission when they are the best pick for a buyer job.</li>
     <li>Called out overpriced or stagnant products even while affiliate programs were active.</li>
     <li>Archived products in <a href="/dead/">the dead tools section</a> when they shut down, even when that removed revenue.</li>
   </ul>
@@ -58,7 +69,7 @@ const pageDesc =
   <h2>What you will never see</h2>
 
   <ul>
-    <li>An affiliate program mentioned inside an editorial review, in a pricing table, or in a comparison. Commission rates are internal metadata only.</li>
+    <li>Affiliate commission rates used as an editorial reason to rank, score, recommend, or criticize a tool.</li>
     <li>A tool ranked higher because it paid more.</li>
     <li>A "sponsored post" disguised as an independent review.</li>
     <li>A "featured partner" carve-out that bumps a paying vendor above a better alternative.</li>
@@ -68,11 +79,11 @@ const pageDesc =
   <h2>Identifying affiliate links</h2>
 
   <p>
-    Per FTC guidance, aipedia.wiki maintains a site-wide affiliate disclosure (this page and the footer notice on every page) that applies to all outbound links to tools covered by the site. Commercial CTAs that use affiliate links may also include a short nearby note such as "Affiliate link; no extra cost to you" at the decision point.
+    aipedia.wiki maintains a site-wide affiliate disclosure through this page and the footer notice on every page. Commercial CTAs that use affiliate links may also include a short nearby note such as "Affiliate link; no extra cost to you" at the point where a reader is deciding whether to click.
   </p>
 
   <p>
-    If a specific partnership warrants stronger disclosure (sponsored content, a paid test, or a non-editorial placement), it is called out inline on the page in question. None currently exist.
+    If a specific relationship warrants stronger disclosure, such as sponsored content, a paid test, a vendor-provided trial that materially affects the review, or a non-editorial placement, it must be called out inline on the page in question. As of this June 6, 2026 refresh, aipedia.wiki does not publish sponsored reviews or paid placement rankings.
   </p>
 
   <h2>If a commission were to change editorial behaviour</h2>
@@ -84,7 +95,11 @@ const pageDesc =
   <h2>Regulatory compliance</h2>
 
   <p>
-    This disclosure is designed to satisfy the U.S. FTC "Guides Concerning the Use of Endorsements and Testimonials in Advertising" (16 CFR Part 255), the U.K. Advertising Standards Authority guidance on affiliate marketing, and the equivalent national frameworks where the site is accessible. If a regulator or affiliate network identifies a gap, correction is welcome.
+    This disclosure is designed around the U.S. FTC <a href="https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking">Endorsement Guides staff guidance</a>, the FTC's <a href="https://www.ftc.gov/news-events/topics/truth-advertising/advertisement-endorsements">advertisement endorsement guidance</a>, and the U.K. ASA/CAP <a href="https://www.asa.org.uk/advice-online/affiliate-marketing.html">online affiliate marketing guidance</a>. The practical standard is simple: if a commercial connection could affect how a reader evaluates a recommendation, disclose it clearly, plainly, and close enough to the decision that it is hard to miss.
+  </p>
+
+  <p>
+    This page is not legal advice. If a regulator, reader, affiliate network, or vendor identifies a disclosure gap, correction is welcome and should be sent to the editorial address below.
   </p>
 
   <h2>Contact</h2>
