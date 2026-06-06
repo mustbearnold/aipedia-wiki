@@ -34,6 +34,8 @@ The May 31 update adds an important caveat for high-stakes science. OpenAI's [Ro
 
 For legal and professional-services research, [Harvey](/tools/harvey/) belongs in a separate enterprise lane from academic tools. Its June 2 refresh keeps Assistant, Vault, Knowledge, Agents, Contract Intelligence, Command Center, Harvey Mobile, and the Claude for Legal connector in scope. It is for matter-grounded legal research, drafting, contract review, and deployment governance inside large firms, not for student literature review.
 
+The June 6 [interview-prep guide](/guides/best-ai-for-interview-prep/) refresh adds a practical source-grounded research use case: use NotebookLM for a resume/job-description/source packet, Perplexity or Gemini for current company research, and a general assistant only after primary sources are opened. That keeps interview research in the low-stakes preparation lane rather than pretending a chatbot can own evidence judgment.
+
 The wrong move is treating a general chatbot as a research protocol. ChatGPT and Claude can help read, explain, outline, and critique material, but they do not replace database selection, inclusion criteria, source inspection, citation verification, or domain expertise.
 
 ## Best Picks
@@ -72,7 +74,7 @@ Large law firms and legal departments should evaluate Harvey separately from aca
 - [Best AI for Citations and References](/guides/best-ai-for-citations/) is the June 6 verified citation-integrity guide for Scite, Semantic Scholar, Elicit, Perplexity, NotebookLM, and Consensus, with mobile-friendly buyer paths for citation context, fixed-source notebooks, cited web research, and literature-review workflows.
 - [Best AI Tools for Students](/guides/best-ai-tools-for-students/)
 - [Best AI for Data Analysis](/guides/best-ai-for-data-analysis/) is the June 6 verified adjacent guide for ChatGPT file analysis, Gemini/Google Sheets workflows, Claude analytical critique, Hex governed data-team notebooks, Julius no-code data agents, Rows spreadsheet AI, and Perplexity cited market research.
-- [Best AI for Interview Prep](/guides/best-ai-for-interview-prep/)
+- [Best AI for Interview Prep](/guides/best-ai-for-interview-prep/) is the June 6 verified adjacent guide for ethical prep, source-grounded resume/job-description research, spoken roleplay, company-source checking, and technical mock practice.
 - [Best AI Tools for Consultants](/guides/best-ai-tools-for-consultants/)
 - [Best AI Tools for Journalists](/guides/best-ai-tools-for-journalists/)
 
@@ -92,6 +94,10 @@ Do not cite generated text. Cite the original source. Do not treat a linked sour
 - [Scite pricing](https://scite.ai/pricing) - verified 2026-06-06.
 - [Research Solutions Scite MCP announcement](https://www.nasdaq.com/press-release/research-solutions-launches-scite-mcp-connecting-chatgpt-claude-other-ai-tools) - verified 2026-06-05.
 - [NotebookLM](https://notebooklm.google/) - verified 2026-06-04.
+- [NotebookLM upgrade help](https://support.google.com/notebooklm/answer/16213268) - verified 2026-06-06.
+- [Yoodli pricing](https://yoodli.ai/pricing) - verified 2026-06-06.
+- [Yoodli interview practice support](https://support.yoodli.ai/en/articles/9550465-practice-with-yoodli) - verified 2026-06-06.
+- [Interviewing.io](https://interviewing.io/) - verified 2026-06-06.
 - [Perplexity Enterprise](https://www.perplexity.ai/enterprise/pricing) - verified 2026-06-05.
 - [Perplexity API pricing](https://docs.perplexity.ai/docs/getting-started/pricing) - verified 2026-06-05.
 - [Consensus](https://consensus.app/) - verified 2026-06-04.

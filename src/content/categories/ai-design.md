@@ -75,7 +75,7 @@ As of June 6, 2026, start with the job:
 
 **Best Adobe workflow AI: Adobe Firefly.** Firefly is strongest when a team already works in Adobe's creative stack and wants generative work to connect with Photoshop, Illustrator, Express, Firefly web, and plan-based credits.
 
-**Best vector and text-heavy brand asset tool: Recraft.** Recraft V4 belongs in this category when the output is a logo draft, poster, packaging mockup, icon set, or SVG-style asset where readable text and editable shapes matter more than cinematic photorealism.
+**Best logo and brand-asset concepting path: Ideogram plus Recraft.** The June 6 [logo-design guide](/guides/best-ai-for-logo-design/) now separates the jobs cleanly: use Ideogram when readable words, initials, badges, or labels matter; use Recraft when the buyer needs vector-style marks, icons, packaging, or SVG-style asset families; use Midjourney for visual taste; use Firefly for Adobe-native production. Generated marks still need vector redraw, small-size testing, and trademark review.
 
 **Best app builder for most founders: Lovable.** Choose Lovable when "AI design" really means "I want a working SaaS, internal tool, portal, marketplace, or app." The Pro and Business tiers are priced around credits and shared users, so it can be easier for a small team to try than a seat-heavy product design suite.
 
@@ -130,6 +130,7 @@ Do not make a wide table the only mobile experience. Mobile buyers need top pick
 - [Lovable vs Bolt.new vs v0](/compare/lovable-vs-bolt-vs-v0/) should be rebuilt first because it is the highest-intent app-builder comparison in this category and still has stale pricing and scope language.
 - [ChatGPT vs Lovable](/compare/chatgpt-vs-lovable/) should stay current because founders often confuse the planning assistant with the app-builder workspace.
 - [Best Canva AI Alternatives](/guides/canva-ai-alternatives/) is now refreshed and should stay in the design money-page rotation because it separates Canva replacement intent by buyer job: Figma for product design, Firefly for Adobe production, Midjourney for ideation, Freepik AI Suite / Magnific for creator assets, and Recraft/Ideogram for text and vector-heavy brand work.
+- [Best AI for Logo Design](/guides/best-ai-for-logo-design/) is the June 6 verified logo concepting guide for Ideogram, Recraft, Midjourney, Adobe Firefly, Canva, and ChatGPT, with stronger vector cleanup, commercial-rights, small-size, and trademark-review warnings.
 - [Figma vs v0](/compare/figma-vs-v0/) is now refreshed around design-system workflow versus Vercel-native implementation, and should stay current because it captures high-intent design-to-code buyers.
 - [Canva AI vs v0](/compare/canva-vs-v0/) should be rebuilt around non-designer creative production versus web-app output.
 - [Google Stitch vs v0](/compare/google-stitch-vs-v0/) is now refreshed around vibe-design exploration versus Vercel app-building workflow and should stay monitored while Stitch remains a Labs product.
@@ -155,7 +156,7 @@ Do not make a wide table the only mobile experience. Mobile buyers need top pick
 - [Create and edit a Figma Make file](https://help.figma.com/hc/en-us/articles/31304485164695-Create-and-edit-a-Figma-Make-file) (verified 2026-06-05)
 - [Midjourney plans](https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans) (verified 2026-06-05)
 - [Midjourney version docs](https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version) (verified 2026-06-05)
-- [Adobe Firefly plans](https://www.adobe.com/products/firefly/plans) (verified 2026-05-13)
+- [Adobe Firefly plans](https://www.adobe.com/products/firefly/plans) (verified 2026-06-06)
 - [Google Stitch official site](https://stitch.withgoogle.com/) (verified 2026-06-05)
 - [Google Stitch announcement](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/) (verified 2026-06-05)
 - [Google Stitch real-time update](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-updates/) (verified 2026-06-05)
@@ -168,5 +169,6 @@ Do not make a wide table the only mobile experience. Mobile buyers need top pick
 - [v0 pricing](https://v0.app/pricing) (verified 2026-06-06)
 - [v0 documentation](https://v0.app/docs) (verified 2026-06-06)
 - [Freepik plans and pricing docs](https://www.freepik.com/ai/docs/plans-and-pricing) (verified 2026-06-05; public plan docs still use Freepik plan names while Magnific branding appears across AI creative features)
-- [Recraft V4 docs](https://www.recraft.ai/docs/recraft-models/recraft-V4) (verified 2026-05-24)
-- [Ideogram plans](https://docs.ideogram.ai/plans-and-pricing/available-plans) (verified 2026-06-05)
+- [Recraft V4 docs](https://www.recraft.ai/docs/recraft-models/recraft-V4) (verified 2026-06-06)
+- [Recraft V4 announcement](https://www.recraft.ai/blog/introducing-recraft-v4-design-taste-meets-image-generation) (verified 2026-06-06)
+- [Ideogram plans](https://docs.ideogram.ai/plans-and-pricing/available-plans) (verified 2026-06-06)
