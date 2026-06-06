@@ -79,6 +79,8 @@ Large law firms and legal departments should evaluate Harvey separately from aca
 - [Best AI for Interview Prep](/guides/best-ai-for-interview-prep/) is the June 6 verified adjacent guide for ethical prep, source-grounded resume/job-description research, spoken roleplay, company-source checking, and technical mock practice.
 - [Best AI Tools for Consultants](/guides/best-ai-tools-for-consultants/) is the June 6 verified adjacent guide for source-backed market, company, vendor, meeting, deck, and memo workflows.
 - [Best AI Tools for Journalists](/guides/best-ai-tools-for-journalists/) is the June 6 verified research-safety guide for cited web research, fixed source packs, source logs, academic claim checks, account security, and primary-source verification.
+- [Best AI Tools for Lawyers](/guides/best-ai-tools-for-lawyers/) is the June 6 verified legal-research and drafting buyer guide for Harvey, Claude, Spellbook, CoCounsel Legal, and Lexis+ with Protege, with authority, citation, privilege, and matter-data checks foregrounded.
+- [Best AI Tools for Nonprofits](/guides/best-ai-tools-for-nonprofits/) is the June 6 verified nonprofit research and reporting guide for NotebookLM source packs, Google Workspace AI, ChatGPT discounts, Claude nonprofit pricing, grant workflows, and donor/beneficiary data safety.
 
 AiPedia is intentionally not promoting the old medical-research guide until it is rebuilt with medical-specific sources, privacy guidance, regulator context, high-stakes safety caveats, and current life-sciences AI coverage.
 

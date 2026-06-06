@@ -129,10 +129,12 @@ Do not subscribe to multiple chatbots because each one has a new model announcem
 - [Best Free AI Tools](/guides/best-free-ai-tools/)
 - [Best AI Tools Under $20/month](/guides/best-ai-tools-under-20-month/)
 - [Best Open Source AI Tools](/guides/best-open-source-ai-tools/)
-- [Best AI Tools for Product Managers](/guides/best-ai-tools-for-product-managers/)
+- [Best AI Tools for Product Managers](/guides/best-ai-tools-for-product-managers/) is the June 6 verified PM guide for ChatGPT, Claude, Perplexity, Figma, Notion AI, Fathom, and Gemini, with source trails, design handoff, meeting capture, and roadmap-data guardrails.
 - [Best AI Tools for Consultants](/guides/best-ai-tools-for-consultants/) is the June 6 verified consulting workflow guide for ChatGPT, Claude, Perplexity, Gamma, Fathom, and client-data safety.
 - [Best AI Tools for Journalists](/guides/best-ai-tools-for-journalists/) is the June 6 verified guide for using broad assistants only with source logs, source-pack notebooks, primary-source checks, account security, and newsroom policy.
 - [Best AI Tools for Freelancers](/guides/best-ai-tools-for-freelancers/) is the June 6 verified guide for using ChatGPT and Claude beside Perplexity, Cursor, and Midjourney without subscription bloat or client-data shortcuts.
+- [Best AI Tools for Lawyers](/guides/best-ai-tools-for-lawyers/) is the June 6 verified legal AI guide that keeps ChatGPT and Claude in a governed assistant lane beside Harvey, Spellbook, CoCounsel, and Lexis+ with Protege.
+- [Best AI Tools for Nonprofits](/guides/best-ai-tools-for-nonprofits/) is the June 6 verified nonprofit guide for Gemini/Workspace, ChatGPT nonprofit discounts, Claude nonprofit pricing, Canva, NotebookLM, and sensitive-data policy.
 - [Best AI Tools for Small Business](/guides/best-ai-tools-for-small-business/) should stay current because small-business buyers need a conservative first-purchase path across ChatGPT, Gemini, Zapier, and Claude before they buy a bigger stack.
 - [Best AI for Blog Writing](/guides/best-ai-for-blog-writing/)
 

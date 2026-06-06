@@ -87,9 +87,10 @@ The June 6 [summarization guide](/guides/best-ai-for-summarization/) refresh kee
 - [Best AI Meeting Assistant for Customer Success Teams](/guides/best-ai-meeting-assistant-for-customer-success-teams/)
 - [Best AI for Meeting Notes](/guides/best-ai-for-meeting-notes/)
 - [Best AI for Summarization](/guides/best-ai-for-summarization/) is the June 6 verified buyer guide for ChatGPT, Claude, Gemini, NotebookLM, Fathom, Fireflies, Otter.ai, and Readwise, with everyday summaries, long-document synthesis, source-grounded notebooks, meeting capture, and reading-retention lanes separated.
-- [Best AI Tools for Product Managers](/guides/best-ai-tools-for-product-managers/)
+- [Best AI Tools for Product Managers](/guides/best-ai-tools-for-product-managers/) is the June 6 verified adjacent guide for customer-interview capture, stakeholder notes, source-backed research, PRD synthesis, and product evidence trails.
 - [Best AI Tools for Consultants](/guides/best-ai-tools-for-consultants/) is the June 6 verified adjacent guide for meeting capture, client-call source material, cited research, and memo synthesis.
 - [Best AI Tools for Journalists](/guides/best-ai-tools-for-journalists/) is the June 6 verified adjacent guide for source-pack notebooks, transcript review, consented interview capture, and newsroom retention/safety guardrails.
+- [Best AI Tools for Nonprofits](/guides/best-ai-tools-for-nonprofits/) is the June 6 verified adjacent guide for NotebookLM source packs, board packets, grant guidance, program reports, and donor/beneficiary data boundaries.
 - [Best Free AI Tools](/guides/best-free-ai-tools/)
 - [Best AI Tools for Students](/guides/best-ai-tools-for-students/)
 

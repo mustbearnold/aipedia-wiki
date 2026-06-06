@@ -33,10 +33,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /compare/phind-vs-you-com/ | Comparison | Yes | frontmatter | src/content/comparisons/phind-vs-you-com.md |
 | 2026-05-13 | /compare/pitch-vs-tome/ | Comparison | Yes | frontmatter | src/content/comparisons/pitch-vs-tome.md |
 | 2026-05-13 | /compare/presentations-ai-vs-tome/ | Comparison | Yes | frontmatter | src/content/comparisons/presentations-ai-vs-tome.md |
-| 2026-05-13 | /guides/best-ai-tools-for-lawyers/ | Guide | No | frontmatter | src/content/use-cases/best-ai-tools-for-lawyers.md |
-| 2026-05-13 | /guides/best-ai-tools-for-marketers/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-tools-for-marketers.md |
-| 2026-05-13 | /guides/best-ai-tools-for-nonprofits/ | Guide | No | frontmatter | src/content/use-cases/best-ai-tools-for-nonprofits.md |
-| 2026-05-13 | /guides/best-ai-tools-for-product-managers/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-tools-for-product-managers.md |
 | 2026-05-13 | /guides/best-ai-tools-for-real-estate-agents/ | Guide | No | frontmatter | src/content/use-cases/best-ai-tools-for-real-estate-agents.md |
 | 2026-05-13 | /guides/best-ai-tools-for-recruiters/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-tools-for-recruiters.md |
 | 2026-05-13 | /guides/best-ai-tools-for-researchers/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-tools-for-researchers.md |
@@ -175,7 +171,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-14 | /workflows/solo-founder-stack/ | Workflow | Yes | frontmatter | src/content/workflows/solo-founder-stack.md |
 | 2026-05-15 | /about/our-stack/ | Static page | Yes | git | src/pages/about/our-stack.astro |
 | 2026-05-15 | /guides/best-ai-landing-page-builder-for-ab-testing/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-landing-page-builder-for-ab-testing.md |
-| 2026-05-15 | /sitemap-index.xml | Crawl surface | No | git | astro.config.mjs |
 | 2026-05-15 | /tools/openclaw/ | Tool | Yes | frontmatter | src/content/tools/openclaw.md |
 | 2026-05-17 | /answers/best-ai-for-students/ | Static page | Yes | page metadata | src/pages/answers/best-ai-for-students.astro |
 | 2026-05-17 | /answers/chatgpt-vs-claude-which-is-better/ | Static page | Yes | page metadata | src/pages/answers/chatgpt-vs-claude-which-is-better.astro |
@@ -354,6 +349,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-02 | /tools/hunyuan/ | Tool | Yes | frontmatter | src/content/tools/hunyuan.md |
 | 2026-06-02 | /tools/intercom/ | Tool | Yes | frontmatter | src/content/tools/intercom.md |
 | 2026-06-02 | /tools/jan-ai/ | Tool | Yes | frontmatter | src/content/tools/jan-ai.md |
+| 2026-06-03 | /categories/ai-infrastructure/ | Category | Yes | frontmatter | src/content/categories/ai-infrastructure.md |
 | 2026-06-03 | /compare/apollo-vs-clay/ | Comparison | Yes | frontmatter | src/content/comparisons/apollo-vs-clay.md |
 | 2026-06-03 | /compare/apollo-vs-instantly/ | Comparison | Yes | frontmatter | src/content/comparisons/apollo-vs-instantly.md |
 | 2026-06-03 | /compare/apollo-vs-intercom/ | Comparison | Yes | frontmatter | src/content/comparisons/apollo-vs-intercom.md |
@@ -618,15 +614,14 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-06 | /answers/ | Static page | Yes | git | src/pages/answers/index.astro |
 | 2026-06-06 | /answers/best-ai-for-writing-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-for-writing-2026.astro |
 | 2026-06-06 | /categories/ | Static page | Yes | working tree | src/pages/categories/index.astro |
-| 2026-06-06 | /categories/ai-automation/ | Category | Yes | working tree | src/content/categories/ai-automation.md |
+| 2026-06-06 | /categories/ai-automation/ | Category | Yes | frontmatter | src/content/categories/ai-automation.md |
 | 2026-06-06 | /categories/ai-chatbots/ | Category | Yes | working tree | src/content/categories/ai-chatbots.md |
-| 2026-06-06 | /categories/ai-coding/ | Category | Yes | working tree | src/content/categories/ai-coding.md |
+| 2026-06-06 | /categories/ai-coding/ | Category | Yes | frontmatter | src/content/categories/ai-coding.md |
 | 2026-06-06 | /categories/ai-design/ | Category | Yes | working tree | src/content/categories/ai-design.md |
 | 2026-06-06 | /categories/ai-image/ | Category | Yes | frontmatter | src/content/categories/ai-image.md |
-| 2026-06-06 | /categories/ai-infrastructure/ | Category | Yes | working tree | src/content/categories/ai-infrastructure.md |
 | 2026-06-06 | /categories/ai-music/ | Category | Yes | frontmatter | src/content/categories/ai-music.md |
 | 2026-06-06 | /categories/ai-notes/ | Category | Yes | working tree | src/content/categories/ai-notes.md |
-| 2026-06-06 | /categories/ai-presentation/ | Category | Yes | frontmatter | src/content/categories/ai-presentation.md |
+| 2026-06-06 | /categories/ai-presentation/ | Category | Yes | working tree | src/content/categories/ai-presentation.md |
 | 2026-06-06 | /categories/ai-research/ | Category | Yes | working tree | src/content/categories/ai-research.md |
 | 2026-06-06 | /categories/ai-search/ | Category | Yes | working tree | src/content/categories/ai-search.md |
 | 2026-06-06 | /categories/ai-video/ | Category | Yes | frontmatter | src/content/categories/ai-video.md |
@@ -717,12 +712,17 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-06 | /guides/best-ai-tools-for-consultants/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-tools-for-consultants.md |
 | 2026-06-06 | /guides/best-ai-tools-for-customer-support/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-tools-for-customer-support.md |
 | 2026-06-06 | /guides/best-ai-tools-for-designers/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-tools-for-designers.md |
-| 2026-06-06 | /guides/best-ai-tools-for-developers/ | Guide | Yes | working tree | src/content/use-cases/best-ai-tools-for-developers.md |
-| 2026-06-06 | /guides/best-ai-tools-for-ecommerce/ | Guide | Yes | working tree | src/content/use-cases/best-ai-tools-for-ecommerce.md |
-| 2026-06-06 | /guides/best-ai-tools-for-freelancers/ | Guide | Yes | working tree | src/content/use-cases/best-ai-tools-for-freelancers.md |
-| 2026-06-06 | /guides/best-ai-tools-for-journalists/ | Guide | Yes | working tree | src/content/use-cases/best-ai-tools-for-journalists.md |
+| 2026-06-06 | /guides/best-ai-tools-for-developers/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-tools-for-developers.md |
+| 2026-06-06 | /guides/best-ai-tools-for-ecommerce/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-tools-for-ecommerce.md |
+| 2026-06-06 | /guides/best-ai-tools-for-freelancers/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-tools-for-freelancers.md |
+| 2026-06-06 | /guides/best-ai-tools-for-journalists/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-tools-for-journalists.md |
+| 2026-06-06 | /guides/best-ai-tools-for-lawyers/ | Guide | Yes | working tree | src/content/use-cases/best-ai-tools-for-lawyers.md |
+| 2026-06-06 | /guides/best-ai-tools-for-marketers/ | Guide | Yes | working tree | src/content/use-cases/best-ai-tools-for-marketers.md |
+| 2026-06-06 | /guides/best-ai-tools-for-nonprofits/ | Guide | Yes | working tree | src/content/use-cases/best-ai-tools-for-nonprofits.md |
+| 2026-06-06 | /guides/best-ai-tools-for-product-managers/ | Guide | Yes | working tree | src/content/use-cases/best-ai-tools-for-product-managers.md |
 | 2026-06-06 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
 | 2026-06-06 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
+| 2026-06-06 | /sitemap-index.xml | Crawl surface | No | working tree | astro.config.mjs |
 | 2026-06-06 | /tools/ | Static page | Yes | git | src/pages/tools/index.astro |
 | 2026-06-06 | /tools/bolt/ | Tool | Yes | frontmatter | src/content/tools/bolt.md |
 | 2026-06-06 | /tools/kagi/ | Tool | Yes | frontmatter | src/content/tools/kagi.md |
