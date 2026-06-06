@@ -7,17 +7,17 @@ meta_description: "This old AI content pipeline guide is archived and merged int
 author: "aipedia.wiki Editorial"
 description: Archived merge page for an older AI content pipeline guide that overlapped with stronger current buyer guides.
 tools_mentioned: [claude, chatgpt, jasper, surfer-seo, n8n, canva, descript, perplexity]
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-06
+last_verified: 2026-06-06
 update_frequency: monthly
 noindex: true
 ---
 
 # AI Content Pipeline Guide (Archived)
 
-This route is archived and noindexed as of **May 13, 2026**. AiPedia is merging it into stronger, current buyer guides instead of keeping a duplicate content-pipeline page with stale model labels, brittle monthly totals, and unsupported product claims.
+This route remains archived and noindexed as of **June 6, 2026**. AiPedia is keeping it merged into stronger, current buyer guides instead of reviving a duplicate content-pipeline page with brittle monthly totals, unstable model labels, and unsupported product claims.
 
-The previous version mixed content strategy, SEO writing, automation, design, and newsletter workflows into one broad guide. That made the page weaker than the focused guides below, especially on mobile where buyers need a fast answer about what to buy first.
+The previous version mixed content strategy, SEO writing, automation, design, and newsletter workflows into one broad guide. The June 6 check found no reason to reindex it: the focused guides below are still better on mobile because they answer what to buy first, what to delay, and where fact-checking or human approval belongs.
 
 ## Where to go instead
 
@@ -60,4 +60,4 @@ AiPedia should only rebuild this route if it becomes a real implementation playb
 
 ## Current source trail
 
-This merge decision was checked against AiPedia's current May 13 guide cluster and current vendor source pages for [Claude pricing](https://www.anthropic.com/pricing), [ChatGPT plans](https://chatgpt.com/pricing/), [Surfer pricing](https://surferseo.com/pricing/), [n8n pricing](https://n8n.io/pricing/), and [Canva AI](https://www.canva.com/magic/).
+This merge decision was rechecked on 2026-06-06 against AiPedia's current guide cluster and current vendor source pages for [Claude pricing](https://www.anthropic.com/pricing), [ChatGPT plans](https://chatgpt.com/pricing/), [Surfer pricing](https://surferseo.com/pricing/), [n8n pricing](https://n8n.io/pricing/), and [Canva AI](https://www.canva.com/magic/).

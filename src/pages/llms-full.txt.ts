@@ -2,6 +2,7 @@
 // Lists every active tool with category + tagline, every comparison, every
 // use-case guide. Intended for crawlers willing to ingest a larger manifest
 // to discover the full content map without parsing the sitemap.
+// Refresh metadata: 2026-06-06 guide stack refresh across AI agency stack, content creator stack, archived merge guides, /guides/, AI Automation, homepage, and LLM maintenance after current June 2026 official source checks.
 // Refresh metadata: 2026-06-06 affiliate disclosure refresh after current FTC/ASA guidance checks, commercial CTA disclosure alignment, homepage trust-link maintenance, and LLM manifest maintenance.
 // Refresh metadata: 2026-06-06 cross-category May 13 live comparison follow-up across Perplexity/ChatGPT, QuillBot/Sudowrite/Wordtune, Resemble AI/Voxtral, Scite/Semantic Scholar, and Suno/Udio plus AI Search, AI Writing, AI Voice, AI Research, AI Music, tools, comparison, category, homepage, source registry, and LLM maintenance.
 // Refresh metadata: 2026-06-06 AI Notes comparison follow-up across NotebookLM, Obsidian, Otter.ai, Readwise, and Notion AI plus AI Notes, tools, comparison, category, homepage, source registry, and LLM maintenance.

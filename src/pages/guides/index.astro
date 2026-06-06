@@ -2,7 +2,12 @@
 /**
  * /guides/ index — god-tier 10/10 mobile-first.
  *
- * Problem-first use-case library. Refresh metadata: 2026-05-28 NeuronWriter SEO money-guide affiliate activation, plus 2026-05-27 Lindy work-assistant money guide addition, 2026-05-26 CloudTalk phone-system and MeetGeek customer-success money guide additions. Legacy preserved at
+ * Problem-first use-case library. Refresh metadata: 2026-06-06 stack-guide
+ * ledger pass covering AI automation agency, content creator, and archived
+ * merge routes after current June 2026 official source checks; 2026-05-28
+ * NeuronWriter SEO money-guide affiliate activation, plus 2026-05-27 Lindy
+ * work-assistant money guide addition, 2026-05-26 CloudTalk phone-system and
+ * MeetGeek customer-success money guide additions. Legacy preserved at
  * src/legacy-pages/guides-index.legacy.astro.
  */
 import { getCollection } from 'astro:content';
@@ -63,7 +68,7 @@ const typeCounts = guides.reduce<Record<string, number>>((acc, guide: any) => {
 }, {});
 
 const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
-const description = `Browse ${guides.length} AI tool buyer guides organized by workflow, role, and budget. Best-of rankings, alternatives, stacks, and head-to-head comparisons. Updated May 2026.`;
+const description = `Browse ${guides.length} AI tool buyer guides organized by workflow, role, and budget. Best-of rankings, alternatives, stacks, and head-to-head comparisons. Updated June 2026.`;
 
 const collectionItems = guides.map((g: any) => ({
   name: g.title,
@@ -73,7 +78,7 @@ const collectionItems = guides.map((g: any) => ({
 ---
 
 <BaseLayout
-  title="AI Tool Buyer Guides · May 2026 · aipedia.wiki"
+  title="AI Tool Buyer Guides · June 2026 · aipedia.wiki"
   description={description}
 >
   <BreadcrumbLD items={[
@@ -100,7 +105,7 @@ const collectionItems = guides.map((g: any) => ({
         { label: 'aipedia', href: '/' },
         { label: 'Guides' },
       ]}
-      rankLabel={`${guides.length} guides`}
+      rankLabel={`${guides.length} guides · Updated June 2026`}
     />
 
     <section class="gt-guide-controls" aria-label="Find guides">

@@ -1,9 +1,9 @@
 ---
 type: use-case
 slug: ai-agency-stack
-title: "AI Automation Agency Tech Stack (May 2026)"
+title: "AI Automation Agency Tech Stack (June 2026)"
 seo_title: "AI Automation Agency Tech Stack: n8n, Zapier, Make, Claude, ChatGPT, Voice Agents and Client Dashboards"
-meta_description: "Updated May 13, 2026: a practical AI automation agency stack for discovery, workflow orchestration, LLM calls, voice agents, browser automation, client dashboards, QA, monitoring, and handoff."
+meta_description: "Updated June 6, 2026: a practical AI automation agency stack for discovery, workflow orchestration, LLM calls, voice agents, browser automation, client dashboards, QA, monitoring, and handoff."
 description: "A source-backed AI automation agency stack for selling reliable client workflows without overbuying agent platforms or hiding failure modes."
 tools_mentioned: [n8n, zapier, make, claude, chatgpt, elevenlabs, retell-ai, browserbase, lovable, v0]
 guide_picks:
@@ -38,16 +38,16 @@ guide_picks:
       - label: "Zapier plan help"
         url: "https://help.zapier.com/hc/en-us/articles/16051471305357-How-to-select-your-plan"
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-06
+last_verified: 2026-06-06
 update_frequency: monthly
 ---
 
-# AI Automation Agency Tech Stack (May 2026)
+# AI Automation Agency Tech Stack (June 2026)
 
 An AI automation agency does not win by selling the flashiest "agent" demo. It wins by shipping client workflows that survive real inputs, API failures, messy CRM data, permissions, human review, and handoff.
 
-This stack was refreshed on **May 13, 2026** against current official n8n, Zapier, Make, OpenAI, Anthropic, ElevenLabs, Retell AI, Browserbase, Lovable, and Vercel v0 sources.
+This stack was refreshed on **June 6, 2026** against current official n8n, Zapier, Make, OpenAI, Anthropic, ElevenLabs, Retell AI, Browserbase, Lovable, and Vercel v0 sources. The June check also folds in Anthropic's official June 15 Agent SDK and `claude -p` billing change so agencies do not sell Claude subscription limits as a background-automation pool.
 
 ## Quick Verdict
 
@@ -57,7 +57,7 @@ This stack was refreshed on **May 13, 2026** against current official n8n, Zapie
 
 **Best visual agency starter:** [Make](/tools/make/). Use it when a client or junior operator needs to understand scenarios visually. Make currently frames its plans around credits, AI apps, MCP Server, Make Code App, scenario execution, teams, and enterprise security.
 
-**Best model layer:** [Claude](/tools/claude/) plus [ChatGPT](/tools/chatgpt/). Claude is the stronger review and reasoning layer for strategy, extraction rules, policies, and QA. ChatGPT is the broader general workbench and API option when the workflow also needs drafting, files, images, or internal operations docs.
+**Best model layer:** [Claude](/tools/claude/) plus [ChatGPT](/tools/chatgpt/). Claude is the stronger review and reasoning layer for strategy, extraction rules, policies, and QA. ChatGPT is the broader general workbench and API option when the workflow also needs drafting, files, images, or internal operations docs. Do not price headless Claude agent work from a normal subscription: Anthropic says Agent SDK and `claude -p` usage stop counting toward standard Claude plan limits on June 15, 2026.
 
 **Best voice-agent lane:** [Retell AI](/tools/retell-ai/) or [ElevenLabs](/tools/elevenlabs/) only when phone, voice, or interactive audio is part of the actual client problem. Retell's current pricing surface shows pay-as-you-go voice AI with per-minute cost components; ElevenLabs says ElevenAgents costs depend on voice, multimodal, or text-only calls, with LLM costs passed through separately.
 
@@ -93,13 +93,13 @@ Use [Make](/tools/make/) when the visual scenario map is part of the deliverable
 
 Use [Claude](/tools/claude/) for structured extraction, long-form strategy, policy review, prompt QA, and second-pass checks. Use [ChatGPT](/tools/chatgpt/) when the workflow needs broader drafting, files, data analysis, images, or OpenAI API routing.
 
-For client work, the model prompt is not enough. Store examples, rules, approval thresholds, fallback instructions, and test cases beside the workflow.
+For client work, the model prompt is not enough. Store examples, rules, approval thresholds, fallback instructions, and test cases beside the workflow. If the workflow runs without a human at the keyboard, model the cost as API, credit, or extra-usage spend rather than assuming the agency's chat subscription will cover it.
 
 ### 4. Voice, Calls, And Audio
 
 Use voice only when it is core to the client value. [ElevenLabs](/tools/elevenlabs/) is strong for voice quality and ElevenAgents-style conversational work. [Retell AI](/tools/retell-ai/) is more directly framed around AI phone agents, call minutes, telephony, LLM, speech, add-ons, knowledge base, safety guardrails, PII removal, and QA options.
 
-Do not quote voice-agent projects without usage math. Call duration, LLM choice, speech provider, telephony, SMS, retries, and QA all affect cost.
+Do not quote voice-agent projects without usage math. Call duration, LLM choice, speech provider, telephony, SMS, retries, and QA all affect cost. Current ElevenAgents pricing separates voice-only, multimodal, and text-only behavior and passes through LLM costs separately, so a "per minute" quote can still miss material spend.
 
 ### 5. Browser Automation
 
@@ -169,7 +169,7 @@ Avoid universal agency packages like "$997 setup + $497/month" unless the actual
 - **No owner:** automations decay when nobody checks failed runs.
 - **Bad source data:** AI can summarize bad CRM fields, but it cannot make them true.
 - **Too much autonomy too soon:** keep human review until real-world accuracy is proven.
-- **Hidden costs:** model calls, workflow executions, tasks, credits, browser sessions, voice minutes, SMS, retries, and QA can compound.
+- **Hidden costs:** model calls, workflow executions, tasks, credits, browser sessions, voice minutes, SMS, retries, Agent SDK credits, and QA can compound.
 - **No rollback plan:** workflows that update customer records need audit logs and manual correction paths.
 - **Client-data leakage:** agencies must separate client workspaces, prompts, credentials, files, and logs.
 
@@ -198,22 +198,23 @@ Use n8n when control, AI nodes, code, self-hosting, and complex workflow design 
 Only if the agency understands call compliance, opt-out handling, transcripts, QA, escalation, and usage-based cost. Voice can convert well, but it is riskier than internal prep workflows.
 
 **How often should this stack be refreshed?**
-Monthly at minimum, and faster when n8n, Zapier, Make, OpenAI, Anthropic, ElevenLabs, Retell AI, Browserbase, Lovable, or v0 pricing or plan mechanics change.
+Monthly at minimum, and faster when n8n, Zapier, Make, OpenAI, Anthropic, ElevenLabs, Retell AI, Browserbase, Lovable, or v0 pricing, credits, plan mechanics, or agent-billing rules change.
 
 ## Sources
 
-- [n8n pricing](https://n8n.io/pricing/) (verified 2026-05-13)
-- [n8n AI documentation](https://docs.n8n.io/advanced-ai/) (verified 2026-05-13)
-- [Zapier pricing](https://zapier.com/pricing) (verified 2026-05-13)
-- [Zapier plan help](https://help.zapier.com/hc/en-us/articles/16051471305357-How-to-select-your-plan) (verified 2026-05-13)
-- [Make pricing](https://www.make.com/en/pricing) (verified 2026-05-13)
-- [Make AI Agents](https://www.make.com/en/ai-agents) (verified 2026-05-13)
-- [OpenAI API pricing](https://openai.com/api/pricing/) (verified 2026-05-13)
-- [ChatGPT Business help](https://help.openai.com/en/articles/8792828-what-is-chatgpt-business) (verified 2026-05-13)
-- [Claude pricing](https://claude.com/pricing) (verified 2026-05-13)
-- [Claude plan help](https://support.claude.com/en/articles/11049762-choosing-a-claude-ai-plan) (verified 2026-05-13)
-- [ElevenLabs ElevenAgents cost](https://help.elevenlabs.io/hc/en-us/articles/29298065878929-How-much-does-ElevenAgents-cost) (verified 2026-05-13)
-- [Retell AI pricing](https://www.retellai.com/pricing) (verified 2026-05-13)
-- [Browserbase pricing](https://www.browserbase.com/pricing) (verified 2026-05-13)
-- [Lovable billing FAQ](https://lovable.dev/faq/billing/plans) (verified 2026-05-13)
-- [Vercel v0 pricing update](https://vercel.com/blog/updated-v0-pricing) (verified 2026-05-13)
+- [n8n pricing](https://n8n.io/pricing/) (verified 2026-06-06)
+- [n8n AI documentation](https://docs.n8n.io/advanced-ai/) (verified 2026-06-06)
+- [Zapier pricing](https://zapier.com/pricing) (verified 2026-06-06)
+- [Zapier plan updates: Tables, Interfaces, and MCP](https://help.zapier.com/hc/en-us/articles/39645433045773-Zapier-plan-updates-Tables-Interfaces-and-MCP-now-included) (verified 2026-06-06)
+- [Make pricing](https://www.make.com/en/pricing) (verified 2026-06-06)
+- [Make AI Agents](https://www.make.com/en/ai-agents) (verified 2026-06-06)
+- [OpenAI API pricing](https://openai.com/api/pricing/) (verified 2026-06-06)
+- [ChatGPT Business help](https://help.openai.com/en/articles/8792828-what-is-chatgpt-business) (verified 2026-06-06)
+- [Claude pricing](https://claude.com/pricing) (verified 2026-06-06)
+- [Claude plan help](https://support.claude.com/en/articles/11049762-choosing-a-claude-ai-plan) (verified 2026-06-06)
+- [Claude Agent SDK with a Claude plan](https://support.claude.com/en/articles/15036540-use-the-claude-agent-sdk-with-your-claude-plan) (verified 2026-06-06)
+- [ElevenLabs ElevenAgents cost](https://help.elevenlabs.io/hc/en-us/articles/29298065878929-How-much-does-ElevenAgents-cost) (verified 2026-06-06)
+- [Retell AI pricing](https://www.retellai.com/pricing) (verified 2026-06-06)
+- [Browserbase pricing](https://www.browserbase.com/pricing) (verified 2026-06-06)
+- [Lovable billing FAQ](https://lovable.dev/faq/billing/plans) (verified 2026-06-06)
+- [Vercel v0 pricing update](https://vercel.com/blog/updated-v0-pricing) (verified 2026-06-06)

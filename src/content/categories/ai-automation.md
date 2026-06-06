@@ -5,10 +5,10 @@ title: AI Automation & Agents
 description: Current workflow automation, AI agent platforms, meeting automation, call automation, and operations tools for technical teams, non-technical operators, GTM workflows, customer success, support, sales, and internal automation.
 tool_count: 27
 seo_title: "Best AI Automation Tools & Agent Platforms (June 2026)"
-meta_description: "Updated June 5, 2026: compare n8n, Zapier, Make, Instantly, Intercom, Gumloop, Relevance AI, Activepieces, AG2, CrewAI, Dust, Glean, Goose, Hermes Agent, Genspark, GetResponse, Dext, Browserbase, Ada, hireEZ, Apollo, Amplemarket, Lindy, Manus, Pipedream, CloudTalk, and MeetGeek by workflow, pricing unit, AI orchestration, and risk."
+meta_description: "Updated June 6, 2026: compare n8n, Zapier, Make, Instantly, Intercom, Gumloop, Relevance AI, Activepieces, AG2, CrewAI, Dust, Glean, Goose, Hermes Agent, Genspark, GetResponse, Dext, Browserbase, Ada, hireEZ, Apollo, Amplemarket, Lindy, Manus, Pipedream, CloudTalk, and MeetGeek by workflow, pricing unit, AI orchestration, and risk."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-06
+last_verified: 2026-06-06
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -139,7 +139,7 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 ## Money Pages To Build Next
 
 - [Best AI automation platform](/guides/best-ai-automation-platform/) is the primary buyer guide and should stay current weekly while automation pricing and agent surfaces move quickly. The May 13 n8n cloud price cut and the May Make price reduction both flow into this page.
-- [AI automation agency tech stack](/guides/ai-agency-stack/) is now the agency delivery-stack page for n8n, Zapier, Make, Claude, ChatGPT, voice agents, Browserbase, and client dashboard decisions. Keep it aligned with the May 13 verified [best AI tools for agencies](/guides/best-ai-tools-for-agencies/), sales, support, and lead-generation updates.
+- [AI automation agency tech stack](/guides/ai-agency-stack/) is now the June 6 verified agency delivery-stack page for n8n, Zapier, Make, Claude, ChatGPT, voice agents, Browserbase, and client dashboard decisions, including the June 15 Claude Agent SDK billing split. Keep it aligned with [best AI tools for agencies](/guides/best-ai-tools-for-agencies/), sales, support, and lead-generation updates.
 - [AI lead generation stack](/guides/ai-lead-generation/), the June 2 verified Clay refresh, the May 13 verified [cold-email buyer guide](/guides/best-ai-for-cold-email/), and the May 13 verified [sales-team AI tools guide](/guides/best-ai-tools-for-sales-teams/) now cover Apollo, Clay, Amplemarket, Instantly, and n8n as a buyer flow for prospect data, enrichment, sender handoff, deliverability, and GTM automation. Keep them synchronized with sales-team and agency pages.
 - [Best AI tools for customer support](/guides/best-ai-tools-for-customer-support/) is the support-automation buyer guide for Intercom, Voiceflow, Ada, and Retell AI. Keep it synchronized with Intercom/Fin outcome pricing, Voiceflow credit billing, Ada enterprise CX positioning, and voice-agent workflow guidance.
 - [Best AI phone system for SMB sales and support teams](/guides/best-ai-phone-system-for-smb-sales-and-support-teams/) is the CloudTalk money page for teams that need phone operations, CRM logging, AI conversation intelligence, coaching, and a path to AI voice agents.
@@ -166,6 +166,7 @@ Do not leave this category stale. Automation tools are adding MCP, agent builder
 - [n8n pricing](https://n8n.io/pricing/) (verified 2026-06-05)
 - [n8n AI documentation](https://docs.n8n.io/advanced-ai/) (verified 2026-06-05)
 - [n8n AI Agent node documentation](https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/) (verified 2026-06-05)
+- [Claude Agent SDK with a Claude plan](https://support.claude.com/en/articles/15036540-use-the-claude-agent-sdk-with-your-claude-plan) (verified 2026-06-06)
 - [Zapier pricing](https://zapier.com/pricing) (verified 2026-06-05)
 - [Zapier AI](https://zapier.com/ai) (verified 2026-06-05)
 - [Make pricing](https://www.make.com/en/pricing) (verified 2026-06-05)
