@@ -90,7 +90,7 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 
 **Best full buyer guide:** [Best AI coding assistant](/guides/best-ai-coding-assistant/) is now the June 6 verified category money page for Cursor pricing, Claude Code and Agent SDK budgeting, GitHub Copilot AI Credits, Codex agent workflows, Windsurf/Devin Desktop lineage, and Devin delegation risk.
 
-**Best developer buyer guide:** [Best AI tools for developers](/guides/best-ai-tools-for-developers/) now separates AI-native IDEs, GitHub-native assistants, terminal agents, OpenAI-native agents, browser app builders, and open-source CLI workflows for developer buyers.
+**Best developer buyer guide:** [Best AI tools for developers](/guides/best-ai-tools-for-developers/) is the June 6 verified developer workflow guide for Cursor, GitHub Copilot, Claude Code, Codex, Replit Agent, and Aider, with AI Credits, shared Claude Code limits, Codex token credits, and API-cost control separated from generic IDE hype.
 
 **Best debugging guide:** [Best AI for debugging](/guides/best-ai-for-debugging/) is the June 6 verified debugging money page for reproducible bug loops, Cursor IDE fixes, GitHub Copilot inside existing IDEs, Claude Code terminal investigation, Codex checkpoints, Aider BYOK control, and now-live Copilot AI Credits plus Actions-minutes review billing.
 
@@ -105,8 +105,8 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 - [Best AI stack for solo founders](/guides/ai-solo-founder-stack/) is now the June 6 verified founder build path: Cursor for technical founders, Lovable/Bolt for non-technical MVPs, ChatGPT as the low-friction generalist, and explicit budgeting for GitHub Copilot AI Credits plus the June 15 Claude Agent SDK credit split.
 - [Daily agentic coding workflow](/workflows/agentic-coding-workflow/) now separates Cursor, Claude Code, GitHub Copilot, and Codex by job while warning teams to model Claude usage and Copilot AI Credits before broad rollout.
 - [Micro-SaaS weekend MVP workflow](/workflows/micro-saas-weekend-build/) now shows how to use Cursor with Supabase, Vercel, Stripe, Lemon Squeezy, and Cloudflare without pretending a weekend prototype is a production SaaS.
-- [Best AI tools for developers](/guides/best-ai-tools-for-developers/) should stay aligned with Cursor, Copilot, Claude Code, Codex, Windsurf, Replit Agent, and Aider usage/pricing changes.
-- [Best AI Tools for Freelancers](/guides/best-ai-tools-for-freelancers/) should stay aligned because coding freelancers need Cursor pricing, client-data controls, tests, and delivery-review cautions that differ from team procurement pages.
+- [Best AI tools for developers](/guides/best-ai-tools-for-developers/) is the June 6 verified AI developer buyer guide for AI-native IDE, GitHub-native assistant, terminal-agent, OpenAI-native agent, browser app-builder, and open-source CLI decisions.
+- [Best AI Tools for Freelancers](/guides/best-ai-tools-for-freelancers/) is the June 6 verified freelance stack guide for ChatGPT, Perplexity, Cursor, Claude, and Midjourney, with billable-margin, client-data, source-discipline, and AI-agent usage cautions.
 - [Best AI for debugging](/guides/best-ai-for-debugging/) is now synchronized with Cursor model-usage billing, GitHub Copilot's active AI Credits model, Claude Code plan-sharing, Codex plan/API costs, and test-driven bug-fix workflow guidance.
 - [Best AI for code review](/guides/best-ai-for-code-review/) is the June 6 verified adjacent guide for dedicated PR review, enterprise code-quality governance, GitHub-native review billing, Cursor Bugbot usage-based review, Claude Code checkpoints, and Codex patch review.
 - [Best AI for unit tests](/guides/best-ai-for-unit-tests/) is the June 6 verified test-generation guide for IDE loops, GitHub-native assistants, Claude-backed edge-case planning, terminal agents, local test commands, and AI-credit-aware usage controls.

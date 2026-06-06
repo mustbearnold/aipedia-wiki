@@ -131,8 +131,8 @@ Do not subscribe to multiple chatbots because each one has a new model announcem
 - [Best Open Source AI Tools](/guides/best-open-source-ai-tools/)
 - [Best AI Tools for Product Managers](/guides/best-ai-tools-for-product-managers/)
 - [Best AI Tools for Consultants](/guides/best-ai-tools-for-consultants/) is the June 6 verified consulting workflow guide for ChatGPT, Claude, Perplexity, Gamma, Fathom, and client-data safety.
-- [Best AI Tools for Journalists](/guides/best-ai-tools-for-journalists/)
-- [Best AI Tools for Freelancers](/guides/best-ai-tools-for-freelancers/) should stay current because freelancers often need one broad assistant, one cited research tool, and one specialist subscription rather than a bloated stack.
+- [Best AI Tools for Journalists](/guides/best-ai-tools-for-journalists/) is the June 6 verified guide for using broad assistants only with source logs, source-pack notebooks, primary-source checks, account security, and newsroom policy.
+- [Best AI Tools for Freelancers](/guides/best-ai-tools-for-freelancers/) is the June 6 verified guide for using ChatGPT and Claude beside Perplexity, Cursor, and Midjourney without subscription bloat or client-data shortcuts.
 - [Best AI Tools for Small Business](/guides/best-ai-tools-for-small-business/) should stay current because small-business buyers need a conservative first-purchase path across ChatGPT, Gemini, Zapier, and Claude before they buy a bigger stack.
 - [Best AI for Blog Writing](/guides/best-ai-for-blog-writing/)
 

@@ -84,7 +84,7 @@ The June 3 update widens that control story. Microsoft Build put Work IQ and Fou
 
 - [Best pay-as-you-go AI tools and APIs](/guides/best-pay-as-you-go-ai-tools/) now separates true metered API usage from flat subscriptions and should stay synchronized with OpenAI, Claude, Gemini, OpenRouter, Mistral, Groq, Replicate, fal, Deepgram, ElevenLabs, and Fish Audio pricing.
 - [Best open source AI tools](/guides/best-open-source-ai-tools/) should stay aligned because open-model buyers often compare local control against hosted pay-as-you-go APIs.
-- [Best AI tools for developers](/guides/best-ai-tools-for-developers/) should keep warning buyers about usage-based agent and API costs.
+- [Best AI tools for developers](/guides/best-ai-tools-for-developers/) is the June 6 verified developer guide for separating Cursor, GitHub Copilot AI Credits, Claude Code shared limits/API credits, Codex token credits, Replit Agent, and Aider BYOK API costs.
 - A new `OpenRouter vs direct APIs` comparison would capture buyers choosing between a model router and direct OpenAI/Anthropic/Google contracts.
 - A new `Replicate vs fal.ai` comparison would capture image/video/API buyers choosing between broad model catalog and fast media-generation infrastructure.
 

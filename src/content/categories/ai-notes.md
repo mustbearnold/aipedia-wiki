@@ -89,7 +89,7 @@ The June 6 [summarization guide](/guides/best-ai-for-summarization/) refresh kee
 - [Best AI for Summarization](/guides/best-ai-for-summarization/) is the June 6 verified buyer guide for ChatGPT, Claude, Gemini, NotebookLM, Fathom, Fireflies, Otter.ai, and Readwise, with everyday summaries, long-document synthesis, source-grounded notebooks, meeting capture, and reading-retention lanes separated.
 - [Best AI Tools for Product Managers](/guides/best-ai-tools-for-product-managers/)
 - [Best AI Tools for Consultants](/guides/best-ai-tools-for-consultants/) is the June 6 verified adjacent guide for meeting capture, client-call source material, cited research, and memo synthesis.
-- [Best AI Tools for Journalists](/guides/best-ai-tools-for-journalists/)
+- [Best AI Tools for Journalists](/guides/best-ai-tools-for-journalists/) is the June 6 verified adjacent guide for source-pack notebooks, transcript review, consented interview capture, and newsroom retention/safety guardrails.
 - [Best Free AI Tools](/guides/best-free-ai-tools/)
 - [Best AI Tools for Students](/guides/best-ai-tools-for-students/)
 
