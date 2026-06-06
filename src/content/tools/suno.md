@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: $0-$24/month
 status: active
 launched: 2023-12
-last_updated: 2026-05-26
-last_verified: 2026-05-26
+last_updated: 2026-06-06
+last_verified: 2026-06-06
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -33,52 +33,52 @@ facts:
     source: "https://suno.com/blog/v5-5"
     source_label: "Suno v5.5 announcement"
     source_id: suno-v55
-    verified_at: 2026-05-13
+    verified_at: 2026-06-06
     volatility: high
     confidence: high
-    next_review_at: 2026-06-13
+    next_review_at: 2026-07-06
   context_window:
     value: "Not applicable: Suno is a music-generation platform, not a text chat model with a published token context window"
     source: "https://help.suno.com/en/articles/5782721"
     source_label: "Suno model timeline"
     source_id: suno-model-timeline
-    verified_at: 2026-05-13
+    verified_at: 2026-06-06
     volatility: low
     confidence: high
-    next_review_at: 2026-06-13
+    next_review_at: 2026-07-06
   pricing_anchor:
     value: "Free; Pro $8/mo ($6.40 annual); Premier $24/mo ($19.20 annual); credits and commercial rights vary by tier"
     source: "https://suno.com/pricing"
     source_label: "Suno pricing"
     source_id: suno-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-06-06
     volatility: high
     confidence: high
-    next_review_at: 2026-06-13
+    next_review_at: 2026-07-06
   free_plan:
     value: "Yes: free tier for non-commercial generation with limited credits"
     source: "https://suno.com/pricing"
     source_label: "Suno pricing"
     source_id: suno-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-06-06
     volatility: high
     confidence: high
-    next_review_at: 2026-06-13
+    next_review_at: 2026-07-06
   best_paid_tier:
     value: "Pro for creators needing commercial rights; Premier for heavy users needing larger credit pools, Studio, and advanced exports"
     source: "https://suno.com/pricing"
     source_label: "Suno pricing"
     source_id: suno-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-06-06
     volatility: high
     confidence: high
-    next_review_at: 2026-06-13
+    next_review_at: 2026-07-06
   api_available:
     value: "No broadly available self-serve public API is positioned as the main buyer product; Suno is primarily a web/app music creation platform"
     source: "https://suno.com/pricing"
     source_label: "Suno pricing"
     source_id: suno-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-06-06
     volatility: medium
     confidence: high
   image_generation:
@@ -86,7 +86,7 @@ facts:
     source: "https://suno.com/pricing"
     source_label: "Suno pricing"
     source_id: suno-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-06-06
     volatility: low
     confidence: high
   video_generation:
@@ -94,7 +94,7 @@ facts:
     source: "https://suno.com/pricing"
     source_label: "Suno pricing"
     source_id: suno-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-06-06
     volatility: low
     confidence: high
   real_time_voice:
@@ -102,7 +102,7 @@ facts:
     source: "https://suno.com/blog/v5-5"
     source_label: "Suno v5.5 announcement"
     source_id: suno-v55
-    verified_at: 2026-05-13
+    verified_at: 2026-06-06
     volatility: medium
     confidence: high
   web_browsing:
@@ -110,7 +110,7 @@ facts:
     source: "https://suno.com/pricing"
     source_label: "Suno pricing"
     source_id: suno-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-06-06
     volatility: low
     confidence: high
   coding_agent:
@@ -118,7 +118,7 @@ facts:
     source: "https://suno.com/pricing"
     source_label: "Suno pricing"
     source_id: suno-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-06-06
     volatility: low
     confidence: high
   enterprise_controls:
@@ -126,16 +126,16 @@ facts:
     source: "https://suno.com/pricing"
     source_label: "Suno pricing"
     source_id: suno-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-06-06
     volatility: high
     confidence: high
-    next_review_at: 2026-06-13
+    next_review_at: 2026-07-06
   data_retention_or_privacy:
     value: "Creators should review rights, training, and commercial-use terms before uploading voices, stems, or client material"
     source: "https://suno.com/pricing"
     source_label: "Suno pricing"
     source_id: suno-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-06-06
     volatility: medium
     confidence: high
   open_source_or_local:
@@ -143,7 +143,7 @@ facts:
     source: "https://suno.com/pricing"
     source_label: "Suno pricing"
     source_id: suno-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-06-06
     volatility: low
     confidence: high
   best_for:
@@ -151,7 +151,7 @@ facts:
     source: "https://suno.com/blog/suno-studio"
     source_label: "Suno Studio announcement"
     source_id: suno-studio
-    verified_at: 2026-05-13
+    verified_at: 2026-06-06
     volatility: medium
     confidence: high
   watch_out_for:
@@ -159,10 +159,10 @@ facts:
     source: "https://suno.com/pricing"
     source_label: "Suno pricing"
     source_id: suno-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-06-06
     volatility: high
     confidence: high
-    next_review_at: 2026-06-13
+    next_review_at: 2026-07-06
 tags: [ai-music, music-generation, text-to-music, song-generation, vocal-ai]
 seo_title: "Suno AI Review: v5.5 Pricing, Voice Cloning, Stems and Udio Comparison"
 meta_description: >-
@@ -212,15 +212,23 @@ price_history:
     source_label: "Source"
     source_id: suno-pricing
     note: "Monthly defaults dropped from $10/$30 to $8/$24; annual $6.40/$19.20."
+  - date: 2026-06-06
+    plan: "Pro / Premier"
+    price: "$8 / $24 per mo"
+    source: "https://suno.com/pricing"
+    source_label: "Source"
+    source_id: suno-pricing
+    note: "Rechecked against official pricing; Pro and Premier still show v5.5, commercial rights, stems, Voices, custom models, and Premier Studio."
 ---
 
 # Suno
 
 ## Recent changes
 
+- **June 6, 2026:** Rechecked Suno pricing and the v5.5 source trail. Public pricing still shows Free, Pro at $8/month with annual-billing language, and Premier at $24/month with annual-billing language. Pro/Premier still list v5.5 access, commercial rights for new songs, 12-stem splitting, Voices, and custom v5.5 tuning; Premier still adds Suno Studio.
 - **May 13, 2026:** Monthly pricing cut. Pro fell from $10 to $8/mo; Premier from $30 to $24/mo. Annual rates moved to $6.40 and $19.20 respectively. Credits, model access, and feature gating are unchanged.
 
-Suno is the default AI music generator as of May 2026. The current model is **v5.5**, released **March 26, 2026**, adding voice cloning (Voices), custom style models, and the My Taste preference engine. The Premier tier bundles **Suno Studio**, an AI-native DAW with multitrack timeline editing, 12-stem separation, and MIDI export. Commercial rights require Pro or Premier. Warner Music Group settled its training-data lawsuit in November 2025 and is now a licensed partner; Sony Music and Universal Music Group cases remain open. Pricing dropped in May 2026: monthly Pro fell from $10 to $8 and Premier from $30 to $24.
+Suno is the default AI music generator as of June 2026. The current model is **v5.5**, released **March 26, 2026**, adding voice cloning (Voices), custom style models, and the My Taste preference engine. The Premier tier bundles **Suno Studio**, an AI-native DAW with multitrack timeline editing, 12-stem separation, and MIDI export. Commercial rights require Pro or Premier. Warner Music Group settled its training-data lawsuit in November 2025 and is now a licensed partner; Sony Music and Universal Music Group cases remain open. Pricing dropped in May 2026 and remained visible on June 6: Pro at $8/month with annual-billing display and Premier at $24/month with annual-billing display.
 
 ## System Verdict
 
@@ -249,7 +257,7 @@ Suno is the default AI music generator as of May 2026. The current model is **v5
 | **Licensed label partners** | Warner Music Group (settled Nov 2025) |
 | **Open litigation** | Sony Music · UMG / Concord / ABKCO ($3B+ case filed Jan 2026) |
 
-Every data point above was verified against vendor sources on 2026-05-13. See Sources.
+Every current pricing, model-access, credits, stems, and commercial-rights point above was verified against vendor sources on 2026-06-06. See Sources.
 
 ## What it actually is
 
@@ -272,7 +280,7 @@ What is *not* a moat: the generation model itself. Udio's audio fidelity is comp
 - **Raw audio fidelity and inpainting precision:** [Udio](/tools/udio/). Consistently cited as the producer's choice for editing specific sections of a generated track.
 - **Royalty-free ambient / background beds without vocals:** [Mubert](/tools/mubert/). Tag-based generation, different licensing posture, no vocal generation to worry about.
 - **AI video with music:** [Kling](/tools/kling/) handles video generation but does not produce standalone songs; pair with Suno for the soundtrack.
-- **Catalog work that touches Sony or UMG-signed artists:** Hold. Both lawsuits are open as of May 2026. Warner is the only major currently licensed.
+- **Catalog work that touches Sony or UMG-signed artists:** Hold. Both lawsuits are still active in early June 2026. Warner is the only major currently licensed.
 - **Developers needing a stable official API:** There is no sanctioned public Suno API. Third-party providers exist but violate Suno ToS.
 
 ## Pricing
@@ -286,7 +294,7 @@ Via [suno.com/pricing](https://suno.com/pricing):
 | Premier | $24/mo | $19.20/mo | 10,000 / mo | ~833 v5 | **Yes** | **12 stems** | **Yes** | **Yes** + MIDI export | Producers replacing part of a DAW workflow |
 | Enterprise | Custom | · | Custom | Custom | Yes | 12 stems | Yes | Yes | Labels, agencies, licensed partners |
 
-Prices verified 2026-05-13 via [suno.com/pricing](https://suno.com/pricing). May 2026 pricing pulled monthly Pro from $10 to $8 and Premier from $30 to $24; annual rates moved correspondingly. Commercial use rights attach to songs generated **while subscribed**. If Pro / Premier lapses, new songs lose commercial rights (songs previously exported under an active plan retain them). Voices costs 4 credits per track during beta, below the standard 12-credit v5 rate.
+Prices verified 2026-06-06 via [suno.com/pricing](https://suno.com/pricing). May 2026 pricing pulled Pro from $10 to $8 and Premier from $30 to $24 in the public pricing display; annual rates moved correspondingly. Commercial use rights attach to songs generated **while subscribed**. If Pro / Premier lapses, new songs lose commercial rights (songs previously exported under an active plan retain them). Voices costs 4 credits per track during beta, below the standard 12-credit v5 rate.
 
 ## Against the alternatives
 
@@ -304,7 +312,7 @@ Prices verified 2026-05-13 via [suno.com/pricing](https://suno.com/pricing). May
 
 - **Niche genres get mangled.** Metal solos, jazz phrasing, orchestral classical, and some folk styles still drop into generic AI-pop defaults. Prompt engineering helps only partially.
 - **Lyric hallucinations on complex structures.** Multi-syllable rhymes, internal alliteration, and narrative verses get flattened into filler. Custom Lyrics mode is the workaround but still requires editing.
-- **Open UMG and Sony litigation.** The January 2026 UMG / Concord / ABKCO case targets 20,000+ songs and $3B+ damages. A bad ruling could force Suno to remove models, change training, or restrict commercial output. Warner is settled and licensed; Sony and UMG remain unresolved as of May 2026.
+- **Open UMG and Sony litigation.** June 2026 coverage still shows Sony and UMG litigating against Suno, including disputes over Warner settlement terms and additional claimed recordings. A bad ruling could force Suno to remove models, change training, or restrict commercial output.
 - **Commercial rights disappear when a subscription lapses.** New songs generated after cancellation are non-commercial by default. Retroactive commercial clawback of already-downloaded tracks is not documented, but active-subscription gating is explicit in ToS.
 - **Credit exhaustion on v5.** At 12 credits per song, Pro's 2,500 credits per month = ~208 songs. Sounds like plenty until iterative prompt testing eats through it in days.
 - **Voices verification is strict and accents break it.** Phrase-matching verification blocks unverified uploads; generated output glitches on strong regional accents, falsetto, and whisper vocals.
@@ -314,7 +322,7 @@ Prices verified 2026-05-13 via [suno.com/pricing](https://suno.com/pricing). May
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Moat and longevity scores reflect the open Sony / UMG litigation and the lack of a defensible API moat. Last verified 2026-05-13 against Suno's [pricing page](https://suno.com/pricing), the [v5.5 announcement](https://suno.com/blog/v5-5), the [Suno Studio launch post](https://suno.com/blog/suno-studio), and coverage of the [Warner Music settlement](https://www.rollingstone.com/music/music-features/suno-warner-music-group-ai-music-settlement-lawsuit-1235472868/) and [UMG impasse](https://www.digitalmusicnews.com/2026/04/09/suno-universal-music-lawsuit-settlement-impasse/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Moat and longevity scores reflect the open Sony / UMG litigation and the lack of a defensible API moat. Last verified 2026-06-06 against Suno's [pricing page](https://suno.com/pricing), the [v5.5 announcement](https://suno.com/blog/v5-5), the [Suno Studio launch post](https://suno.com/blog/suno-studio), and coverage of the [Warner Music settlement](https://www.rollingstone.com/music/music-features/suno-warner-music-group-ai-music-settlement-lawsuit-1235472868/) and [June 2026 court filings](https://www.musicbusinessworldwide.com/suno-moves-to-keep-size-of-its-ai-training-data-sealed-in-umg-and-sonys-copyright-case-citing-competitive-harm/).
 
 ## FAQ
 
@@ -322,7 +330,7 @@ This page was produced by the aipedia.wiki editorial pipeline, an automated syst
 Suno v5.5, released March 26, 2026. It adds Voices (voice cloning, Pro+), Custom Models (up to 3 personal style models, Pro+), and My Taste (preference learning, free). v5, v4.5, and v4.5-All remain accessible on the model selector. v4.5-All is the default on free.
 
 **How much does Suno cost?**
-Free ($0, 50 credits/day, non-commercial, v4.5-All only), Pro ($8/mo or $6.40/mo annual: 2,500 credits, commercial rights, 12 stems, voice cloning), Premier ($24/mo or $19.20/mo annual: 10,000 credits, Suno Studio DAW, MIDI export). Enterprise is custom. Prices verified May 13, 2026; the monthly defaults dropped from $10/$30 to $8/$24 in May.
+Free ($0, 50 credits/day, non-commercial, v4.5-All only), Pro ($8/mo or $6.40/mo annual: 2,500 credits, commercial rights, 12 stems, voice cloning), Premier ($24/mo or $19.20/mo annual: 10,000 credits, Suno Studio DAW, MIDI export). Enterprise is custom. Prices verified June 6, 2026; the public display dropped from $10/$30 to $8/$24 in May.
 
 **Can I use Suno music commercially?**
 Yes on Pro and Premier, and only while the subscription is active. Songs generated during an active Pro / Premier subscription retain commercial rights; new songs generated after cancellation revert to non-commercial. Free tier output is personal / non-commercial only.
@@ -334,7 +342,7 @@ Yes on Pro and Premier. Any song can be split into up to 12 vocal and instrument
 Up to 8 minutes in a single v5 / v4.5 generation on Pro or Premier (2 minutes on free). Extensions can chain the total to 12+ minutes on Premier, though audio quality degrades after 2-3 extension passes.
 
 **What happened with the RIAA lawsuits?**
-Warner Music Group settled and partnered with Suno on November 26, 2025, becoming the first major label to license for a next-gen Suno model. Sony Music and Universal Music Group cases remain open as of May 2026. A $3B+ UMG / Concord / ABKCO case targeting 20,000+ songs was filed in January 2026; settlement talks with UMG reportedly hit an impasse in April 2026. Commercial output from Pro / Premier users is not directly implicated, but the underlying training-data questions are unresolved.
+Warner Music Group settled and partnered with Suno on November 26, 2025, becoming the first major label to license for a next-gen Suno model. Sony Music and Universal Music Group cases remain active as of early June 2026, with recent court coverage focused on Warner settlement discovery and expanded claimed recordings. Commercial output from Pro / Premier users is not directly implicated, but the underlying training-data questions are unresolved.
 
 **Is there a Suno API?**
 No official public one. Suno runs beta access for select partners only and explicitly prohibits automated scraping in its ToS. Third-party "Suno APIs" (sunoapi.org, PiAPI, and others) are reverse-engineered and violate Suno's terms. Production use risks account termination.
@@ -347,12 +355,12 @@ No official public one. Suno runs beta access for select partners only and expli
 
 ## Sources
 
-- [Suno pricing](https://suno.com/pricing) · current tiers, credits, commercial rights (verified 2026-05-13)
+- [Suno pricing](https://suno.com/pricing) · current tiers, credits, commercial rights (verified 2026-06-06)
 - [Suno v5.5 announcement](https://suno.com/blog/v5-5) · voice cloning, custom models, release date
 - [Introducing Suno Studio](https://suno.com/blog/suno-studio) · AI-native DAW, MIDI export, Premier exclusivity
 - [Suno Model Timeline](https://help.suno.com/en/articles/5782721) · v4.5 / v5 / v5.5 availability
 - [Rolling Stone: Warner Music Group settlement](https://www.rollingstone.com/music/music-features/suno-warner-music-group-ai-music-settlement-lawsuit-1235472868/) · November 2025 licensing deal
-- [Digital Music News: Universal Music + Suno impasse](https://www.digitalmusicnews.com/2026/04/09/suno-universal-music-lawsuit-settlement-impasse/) · April 2026 status of open cases
+- [Music Business Worldwide: Suno asks court to seal training-data scale](https://www.musicbusinessworldwide.com/suno-moves-to-keep-size-of-its-ai-training-data-sealed-in-umg-and-sonys-copyright-case-citing-competitive-harm/) · June 2026 litigation status
 - [MusicTech: Suno Studio review](https://musictech.com/reviews/digital-audio-workstations/suno-studio-review/) · Studio 1.2, MILO-1080 sequencer
 
 *Editorial ratings and recommendations do not depend on commercial relationships.*

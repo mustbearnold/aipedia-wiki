@@ -29,8 +29,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /compare/exa-vs-phind/ | Comparison | Yes | frontmatter | src/content/comparisons/exa-vs-phind.md |
 | 2026-05-13 | /compare/gamma-vs-tome/ | Comparison | Yes | frontmatter | src/content/comparisons/gamma-vs-tome.md |
 | 2026-05-13 | /compare/kagi-vs-phind/ | Comparison | Yes | frontmatter | src/content/comparisons/kagi-vs-phind.md |
-| 2026-05-13 | /compare/mubert-vs-suno/ | Comparison | Yes | frontmatter | src/content/comparisons/mubert-vs-suno.md |
-| 2026-05-13 | /compare/mubert-vs-udio/ | Comparison | Yes | frontmatter | src/content/comparisons/mubert-vs-udio.md |
 | 2026-05-13 | /compare/nanochat-vs-scite/ | Comparison | Yes | frontmatter | src/content/comparisons/nanochat-vs-scite.md |
 | 2026-05-13 | /compare/nanochat-vs-semantic-scholar/ | Comparison | Yes | frontmatter | src/content/comparisons/nanochat-vs-semantic-scholar.md |
 | 2026-05-13 | /compare/notebooklm-vs-obsidian/ | Comparison | Yes | frontmatter | src/content/comparisons/notebooklm-vs-obsidian.md |
@@ -165,7 +163,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /tools/minimax/ | Tool | Yes | frontmatter | src/content/tools/minimax.md |
 | 2026-05-13 | /tools/modal/ | Tool | Yes | frontmatter | src/content/tools/modal.md |
 | 2026-05-13 | /tools/morphic/ | Tool | Yes | frontmatter | src/content/tools/morphic.md |
-| 2026-05-13 | /tools/mubert/ | Tool | Yes | frontmatter | src/content/tools/mubert.md |
 | 2026-05-13 | /tools/napkin-ai/ | Tool | Yes | frontmatter | src/content/tools/napkin-ai.md |
 | 2026-05-13 | /tools/ollama/ | Tool | Yes | frontmatter | src/content/tools/ollama.md |
 | 2026-05-13 | /tools/open-webui/ | Tool | Yes | frontmatter | src/content/tools/open-webui.md |
@@ -197,7 +194,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /tools/together-ai/ | Tool | Yes | frontmatter | src/content/tools/together-ai.md |
 | 2026-05-13 | /tools/tripo3d/ | Tool | Yes | frontmatter | src/content/tools/tripo3d.md |
 | 2026-05-13 | /tools/typingmind/ | Tool | Yes | frontmatter | src/content/tools/typingmind.md |
-| 2026-05-13 | /tools/udio/ | Tool | Yes | frontmatter | src/content/tools/udio.md |
 | 2026-05-13 | /tools/uizard/ | Tool | Yes | frontmatter | src/content/tools/uizard.md |
 | 2026-05-13 | /tools/unbounce/ | Tool | Yes | frontmatter | src/content/tools/unbounce.md |
 | 2026-05-13 | /tools/vidu/ | Tool | Yes | frontmatter | src/content/tools/vidu.md |
@@ -298,7 +294,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-26 | /tools/meetgeek/ | Tool | Yes | frontmatter | src/content/tools/meetgeek.md |
 | 2026-05-26 | /tools/notion-ai/ | Tool | Yes | frontmatter | src/content/tools/notion-ai.md |
 | 2026-05-26 | /tools/speechify/ | Tool | Yes | frontmatter | src/content/tools/speechify.md |
-| 2026-05-26 | /tools/suno/ | Tool | Yes | frontmatter | src/content/tools/suno.md |
 | 2026-05-26 | /tools/tidio/ | Tool | Yes | frontmatter | src/content/tools/tidio.md |
 | 2026-05-27 | /compare/lindy-vs-zapier-vs-n8n/ | Comparison | Yes | frontmatter | src/content/comparisons/lindy-vs-zapier-vs-n8n.md |
 | 2026-05-27 | /guides/best-ai-automation-platform/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-automation-platform.md |
@@ -320,7 +315,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-01 | /answers/best-ai-voice-generator-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-voice-generator-2026.astro |
 | 2026-06-01 | /answers/best-free-ai-tools-2026/ | Static page | Yes | page metadata | src/pages/answers/best-free-ai-tools-2026.astro |
 | 2026-06-01 | /answers/chatgpt-alternatives-2026/ | Static page | Yes | page metadata | src/pages/answers/chatgpt-alternatives-2026.astro |
-| 2026-06-01 | /categories/ai-music/ | Category | Yes | frontmatter | src/content/categories/ai-music.md |
 | 2026-06-01 | /demo-godtier/ | Static page | Yes | git | src/pages/demo-godtier.astro |
 | 2026-06-01 | /glossary/ | Static page | Yes | git | src/pages/glossary/index.astro |
 | 2026-06-01 | /privacy/ | Static page | Yes | git | src/pages/privacy.astro |
@@ -711,8 +705,9 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-05 | /tools/windsurf/ | Tool | Yes | frontmatter | src/content/tools/windsurf.md |
 | 2026-06-06 | / | Static page | Yes | working tree | src/pages/index.astro |
 | 2026-06-06 | /categories/ | Static page | Yes | working tree | src/pages/categories/index.astro |
-| 2026-06-06 | /categories/ai-chatbots/ | Category | Yes | working tree | src/content/categories/ai-chatbots.md |
+| 2026-06-06 | /categories/ai-chatbots/ | Category | Yes | frontmatter | src/content/categories/ai-chatbots.md |
 | 2026-06-06 | /categories/ai-design/ | Category | Yes | frontmatter | src/content/categories/ai-design.md |
+| 2026-06-06 | /categories/ai-music/ | Category | Yes | working tree | src/content/categories/ai-music.md |
 | 2026-06-06 | /categories/ai-search/ | Category | Yes | frontmatter | src/content/categories/ai-search.md |
 | 2026-06-06 | /categories/ai-video/ | Category | Yes | frontmatter | src/content/categories/ai-video.md |
 | 2026-06-06 | /compare/ | Static page | Yes | working tree | src/pages/compare/index.astro |
@@ -722,7 +717,9 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-06 | /compare/kling-vs-seedance-vs-runway/ | Comparison | Yes | frontmatter | src/content/comparisons/kling-vs-seedance-vs-runway.md |
 | 2026-06-06 | /compare/kling-vs-synthesia/ | Comparison | Yes | frontmatter | src/content/comparisons/kling-vs-synthesia.md |
 | 2026-06-06 | /compare/lovable-vs-bolt-vs-v0/ | Comparison | Yes | frontmatter | src/content/comparisons/lovable-vs-bolt-vs-v0.md |
-| 2026-06-06 | /compare/mistral-ai-vs-qwen/ | Comparison | Yes | working tree | src/content/comparisons/mistral-ai-vs-qwen.md |
+| 2026-06-06 | /compare/mistral-ai-vs-qwen/ | Comparison | Yes | frontmatter | src/content/comparisons/mistral-ai-vs-qwen.md |
+| 2026-06-06 | /compare/mubert-vs-suno/ | Comparison | Yes | working tree | src/content/comparisons/mubert-vs-suno.md |
+| 2026-06-06 | /compare/mubert-vs-udio/ | Comparison | Yes | working tree | src/content/comparisons/mubert-vs-udio.md |
 | 2026-06-06 | /compare/perplexity-vs-you-com/ | Comparison | Yes | frontmatter | src/content/comparisons/perplexity-vs-you-com.md |
 | 2026-06-06 | /compare/pika-vs-runway/ | Comparison | Yes | frontmatter | src/content/comparisons/pika-vs-runway.md |
 | 2026-06-06 | /compare/pika-vs-seedance/ | Comparison | Yes | frontmatter | src/content/comparisons/pika-vs-seedance.md |
@@ -739,13 +736,16 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-06 | /tools/kagi/ | Tool | Yes | frontmatter | src/content/tools/kagi.md |
 | 2026-06-06 | /tools/kling/ | Tool | Yes | frontmatter | src/content/tools/kling.md |
 | 2026-06-06 | /tools/lovable/ | Tool | Yes | frontmatter | src/content/tools/lovable.md |
-| 2026-06-06 | /tools/mistral-ai/ | Tool | Yes | working tree | src/content/tools/mistral-ai.md |
+| 2026-06-06 | /tools/mistral-ai/ | Tool | Yes | frontmatter | src/content/tools/mistral-ai.md |
+| 2026-06-06 | /tools/mubert/ | Tool | Yes | working tree | src/content/tools/mubert.md |
 | 2026-06-06 | /tools/perplexity/ | Tool | Yes | frontmatter | src/content/tools/perplexity.md |
 | 2026-06-06 | /tools/pika/ | Tool | Yes | frontmatter | src/content/tools/pika.md |
-| 2026-06-06 | /tools/qwen/ | Tool | Yes | working tree | src/content/tools/qwen.md |
+| 2026-06-06 | /tools/qwen/ | Tool | Yes | frontmatter | src/content/tools/qwen.md |
 | 2026-06-06 | /tools/runway/ | Tool | Yes | frontmatter | src/content/tools/runway.md |
 | 2026-06-06 | /tools/seedance/ | Tool | Yes | frontmatter | src/content/tools/seedance.md |
+| 2026-06-06 | /tools/suno/ | Tool | Yes | working tree | src/content/tools/suno.md |
 | 2026-06-06 | /tools/synthesia/ | Tool | Yes | frontmatter | src/content/tools/synthesia.md |
+| 2026-06-06 | /tools/udio/ | Tool | Yes | working tree | src/content/tools/udio.md |
 | 2026-06-06 | /tools/v0/ | Tool | Yes | frontmatter | src/content/tools/v0.md |
 | 2026-06-06 | /tools/veo/ | Tool | Yes | frontmatter | src/content/tools/veo.md |
 | 2026-06-06 | /tools/you-com/ | Tool | Yes | frontmatter | src/content/tools/you-com.md |

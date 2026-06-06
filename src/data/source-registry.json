@@ -2149,6 +2149,15 @@
       "last_checked": "2026-06-05"
     },
     {
+      "id": "elevenlabs-music-v2",
+      "label": "ElevenLabs Music v2 announcement",
+      "url": "https://elevenlabs.io/blog/introducing-music-v2",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-06"
+    },
+    {
       "id": "elicit-official",
       "label": "Elicit official site",
       "url": "https://elicit.com/",
@@ -5178,7 +5187,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-05-04"
+      "last_checked": "2026-06-06"
     },
     {
       "id": "mubert-official",
@@ -5187,7 +5196,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-05-04"
+      "last_checked": "2026-06-06"
     },
     {
       "id": "mubert-pricing",
@@ -5196,7 +5205,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-04"
+      "last_checked": "2026-06-06"
     },
     {
       "id": "murf-api",
@@ -6878,7 +6887,8 @@
       "url": "https://stableaudio.com/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-06"
     },
     {
       "id": "stable-audio-official",
@@ -6886,7 +6896,8 @@
       "url": "https://stability.ai/stable-audio",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-06"
     },
     {
       "id": "stable-audio-api-pricing",
@@ -6980,7 +6991,8 @@
       "url": "https://help.suno.com/en/articles/5782721",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-06"
     },
     {
       "id": "suno-pricing",
@@ -6988,7 +7000,8 @@
       "url": "https://suno.com/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-06"
     },
     {
       "id": "suno-studio",
@@ -6996,7 +7009,8 @@
       "url": "https://suno.com/blog/suno-studio",
       "type": "blog",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-06"
     },
     {
       "id": "suno-v55",
@@ -7004,7 +7018,8 @@
       "url": "https://suno.com/blog/v5-5",
       "type": "blog",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-06"
     },
     {
       "id": "supermaven-official",
@@ -7373,7 +7388,8 @@
       "url": "https://www.udio.com/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-06"
     },
     {
       "id": "udio-product",
@@ -7381,7 +7397,35 @@
       "url": "https://www.udio.com/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-06"
+    },
+    {
+      "id": "udio-credit-limits",
+      "label": "Udio credits and credit limits",
+      "url": "https://help.udio.com/en/articles/10739134-credits-and-credit-limits",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-06"
+    },
+    {
+      "id": "udio-umg-partnership-changes",
+      "label": "Udio UMG partnership changes",
+      "url": "https://help.udio.com/en/articles/12683565-changes-associated-with-the-universal-music-group-umg-partnership",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-06"
+    },
+    {
+      "id": "udio-warner-partnership",
+      "label": "Udio with Warner Music Group",
+      "url": "https://www.udio.com/blog/udio-warner",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-06"
     },
     {
       "id": "uizard-pricing",
