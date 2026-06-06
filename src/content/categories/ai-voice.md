@@ -56,6 +56,7 @@ Start with [ElevenLabs](/tools/elevenlabs/) for polished creator voice generatio
 - [Best AI for Transcription](/guides/best-ai-for-transcription/) is the June 6 verified STT buyer guide for Fathom, Descript, Deepgram, AssemblyAI, and ElevenLabs, with meeting, creator-editing, developer API, speech-understanding, and wider voice-platform lanes separated.
 - [Best AI Tools for Podcasters](/guides/best-ai-for-podcasters/) is the June 6 verified creator workflow guide for Descript, Castmagic, ElevenLabs, and Riverside, with consent, synthetic voice, disclosure, recording-quality, and repurposing guardrails tightened.
 - [Best AI Voice Generator for YouTube](/guides/best-ai-voice-youtube/)
+- [Best AI Tools Under $20/month](/guides/best-ai-tools-under-20-month/) is the June 6 verified budget guide that treats ElevenLabs Starter as a low-cost voice test, not a blanket production answer, because credits, model choice, agents, dubbing, music, and API usage can change real cost quickly.
 - [Best AI Tools for YouTube Creators](/guides/best-ai-for-youtube-creators/) is the June 6 verified creator-stack guide for Descript editing, ChatGPT scripts, Canva/Midjourney thumbnails, ElevenLabs narration, OpusClip Shorts, Runway B-roll, and YouTube altered/synthetic disclosure checks.
 - [Best AI Avatar Video Generator](/guides/best-ai-avatar-video-generator/)
 - [Best AI for Meeting Notes](/guides/best-ai-for-meeting-notes/)

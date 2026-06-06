@@ -75,6 +75,7 @@ The practical question is no longer "which model can make an image?" Most major 
 
 - [Best AI for photo editing](/guides/best-ai-for-photo-editing/) is the June 6 verified guide separating Adobe production edits, ChatGPT conversational image edits, Canva social assets, and Midjourney creative variation, with a production checklist for text, logos, product detail, rights, and client approval.
 - [Best AI tools for YouTube creators](/guides/best-ai-for-youtube-creators/) is the June 6 verified creator-stack guide that routes thumbnail buyers toward Canva for finished assets and Midjourney for stronger visual concepts, while keeping video, voice, Shorts, music-rights, and YouTube disclosure checks separate.
+- [Best AI Tools Under $20/month](/guides/best-ai-tools-under-20-month/) is the June 6 verified budget guide that keeps Freepik Essential in the low-cost creative-suite lane while warning that premium image models, upscalers, video, audio, training, and advanced tools can still consume credits.
 - [Midjourney alternatives](/guides/midjourney-alternatives/) should stay current because it captures high-intent switching searches for Ideogram, Firefly, Recraft, Freepik AI Suite / Magnific, and GPT Image workflows.
 - [Canva AI alternatives](/guides/canva-ai-alternatives/) should stay in the design/image rotation because many users do not actually need a raw image model; they need a publishable design workflow.
 

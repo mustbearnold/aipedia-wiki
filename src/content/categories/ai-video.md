@@ -40,6 +40,8 @@ AI video is no longer one clean product category. On June 6, 2026, the useful bu
 
 **June 6 model-route refresh:** AiPedia rechecked the old Kling/Pika/Runway/Seedance/Synthesia/Veo comparison rows against official vendor sources. The current hub logic still holds: Seedance first for raw model tests, Kling as the value/cinematic challenger, Veo for Google/API/provenance, Runway for production workflow, Pika for social effects, and Synthesia for avatar-led business video.
 
+The June 6 [best AI video generator guide](/guides/best-ai-video-generator/) refresh now mirrors this hub on mobile: no wide comparison table as the primary experience, Seedance/Kling/Veo/Runway/Pika/HeyGen kept in separate buying lanes, and explicit rights, credit, region, procurement, and production-workflow checks before CTAs.
+
 ## How To Choose
 
 Start with the job, not the logo.
