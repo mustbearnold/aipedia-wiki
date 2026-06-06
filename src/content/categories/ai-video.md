@@ -100,7 +100,7 @@ Do not make a wide comparison table the mobile experience. Mobile buyers need st
 
 **Training or L&D buyer:** start with Synthesia or HeyGen, then use the [avatar-video buyer guide](/guides/best-ai-avatar-video-generator/) to compare Tavus, D-ID, Argil, Hedra, and Captions depending on whether the need is templates, live conversation, long-form avatars, custom talking characters, or short-form social editing.
 
-**Short-form social creator:** use the refreshed [TikTok AI tools guide](/guides/best-ai-for-tiktok/) when the choice is hooks/scripts, CapCut-style editing, OpusClip repurposing, Runway generated B-roll, HeyGen avatar posts, or Captions.ai social editing.
+**Short-form social creator:** use the refreshed [TikTok AI tools guide](/guides/best-ai-for-tiktok/) when the choice is hooks/scripts, CapCut-style editing, OpusClip repurposing, Runway generated B-roll, Captions.ai creator polish, HeyGen avatar posts, or InVideo prompt-to-video. The June 6 guide keeps ChatGPT as the planning layer, OpusClip as the long-form clipper, Runway as the generated-video workspace, and consent/disclosure/music-rights checks as the trust layer before publishing.
 
 **Camera-control creator or agency:** test Higgsfield when shot presets, Soul character anchoring, and multi-model selection matter more than owning a single base model. Keep Runway in the comparison if edit timeline, API maturity, or team production workflow is more important.
 
@@ -168,13 +168,16 @@ Yes, but with honest positioning. They are useful for budget testing, effects, o
 - [Hedra models](https://www.hedra.com/models) (verified 2026-06-02)
 - [Higgsfield pricing](https://higgsfield.ai/pricing) (verified 2026-06-02)
 - [Higgsfield about](https://higgsfield.ai/about) (verified 2026-06-02)
-- [OpusClip pricing](https://www.opus.pro/pricing) (verified 2026-05-13)
-- [OpusClip plans and credits](https://help.opus.pro/docs/article/plans-and-credits) (verified 2026-05-13)
-- [Captions pricing](https://captions.ai/pricing) (verified 2026-06-02)
+- [ChatGPT pricing](https://chatgpt.com/pricing/) (verified 2026-06-06)
+- [OpusClip pricing](https://www.opus.pro/pricing) (verified 2026-06-06)
+- [OpusClip plans and credits](https://help.opus.pro/docs/article/plans-and-credits) (verified 2026-06-06)
+- [Captions pricing](https://captions.ai/pricing) (verified 2026-06-06)
 - [Castmagic pricing](https://www.castmagic.io/pricing) (verified 2026-06-02)
 - [PixVerse Platform model pricing](https://docs.platform.pixverse.ai/model-pricing-796039m0) (verified 2026-05-13)
 - [PixVerse API subscription docs](https://docs.platform.pixverse.ai/how-to-subscribe-api-plans-882969m0) (verified 2026-05-13)
-- [HeyGen pricing](https://www.heygen.com/pricing) (verified 2026-06-05)
+- [HeyGen pricing](https://www.heygen.com/pricing) (verified 2026-06-06)
+- [InVideo pricing](https://invideo.io/pricing/) (verified 2026-06-06)
+- [CapCut](https://www.capcut.com/) (verified 2026-06-06)
 - [HeyGen self-serve API pricing](https://developers.heygen.com/docs/pricing) (verified 2026-06-05)
 - [Synthesia pricing](https://www.synthesia.io/pricing) (verified 2026-06-06)
 

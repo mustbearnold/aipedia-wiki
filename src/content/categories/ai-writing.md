@@ -20,6 +20,8 @@ As of June 6, 2026, the wrong question is "which AI writes best?" The better que
 
 The June 6 [newsletter-writers guide](/guides/best-ai-for-newsletter-writers/) refresh keeps ChatGPT as the default issue-drafting workspace, Claude as the long-form edit pass, beehiiv as the newsletter operating system with AI credits/API/MCP/growth and monetization features, NotebookLM as the source-pack research layer, and Fathom as the interview-to-transcript source capture tool with June 1 Ask Fathom limit caveats. The June 6 [resume-writing guide](/guides/best-ai-for-resume-writing/) now frames ChatGPT as the tailoring workspace, Gemini as the budget Google Docs path, Claude as the careful editor, and Grammarly as the polish layer while warning against fake metrics, invented credentials, and careless private-data sharing. The June 6 [social-media-posts guide](/guides/best-ai-for-social-media-posts/) keeps Canva as the finished-asset lane, ChatGPT as the caption/calendar lane, AdCreative.ai as the paid-social creative lane, Jasper as the brand-team lane, Copy.ai as the GTM workflow lane, and OpusClip as the long-video repurposing lane.
 
+The June 6 summarization and translation guide refresh adds two writing-adjacent decisions that generic "best writer" pages usually blur. [Best AI for Summarization](/guides/best-ai-for-summarization/) now keeps ChatGPT as the everyday workbench, Claude as the careful long-document synthesis lane, Gemini as the Google-native budget path, and NotebookLM as the source-grounded notebook lane, with meeting-summary tools separated from chat assistants. [Best AI for Translation](/guides/best-ai-for-translation/) now keeps DeepL as the specialist translation and API-localization pick, ChatGPT as the context-heavy localization editor, Gemini as the casual Google-native lane, and Google Cloud Translation as a product/API route that must be priced by characters, documents, model route, glossary needs, and review workflow.
+
 ## The Players
 
 | Tool | Best For | Buyer Note |
@@ -101,6 +103,8 @@ The June 6 [newsletter-writers guide](/guides/best-ai-for-newsletter-writers/) r
 - [Best AI for Email Writing](/guides/best-ai-for-email-writing/) is the June 6 verified email-workflow guide for ChatGPT, Gemini, Claude, and Grammarly, with stale model-source claims removed and stronger guidance around Gmail-native drafting, high-stakes replies, polish layers, and outbound compliance boundaries.
 - [Best AI for Cover Letters](/guides/best-ai-for-cover-letters/) is the June 6 verified job-application guide for ChatGPT, Claude, Gemini, and Grammarly, with stronger privacy, unsupported-claim, and Google Docs workflow guidance.
 - [Best AI for Brainstorming](/guides/best-ai-for-brainstorming/) is the June 6 verified ideation guide for ChatGPT, Claude, Gemini, and NotebookLM, with stale model-name claims removed and plan-fit guidance focused on files, projects, source-grounded work, and Google-native context.
+- [Best AI for Summarization](/guides/best-ai-for-summarization/) is the June 6 verified summarization guide for ChatGPT, Claude, Gemini, NotebookLM, Fathom, Fireflies, Otter.ai, and Readwise, with everyday, long-document, Google-native, source-grounded, meeting, and reading-retention lanes separated.
+- [Best AI for Translation](/guides/best-ai-for-translation/) is the June 6 verified translation guide for DeepL, ChatGPT, Gemini, DeepL API, and Google Cloud Translation, with specialist translation, context-heavy localization, casual Google-native, and product API routes separated.
 - [Best AI Tools for LinkedIn](/guides/best-ai-for-linkedin/) is the June 6 verified LinkedIn guide for ChatGPT, Claude, Canva, LinkedIn Premium AI writing, Apollo, and Grammarly, with current authenticity, profile-assist, visual-production, and B2B outreach cautions.
 - [Best AI for Book Writing](/guides/best-ai-for-book-writing/) is the June 6 verified author workflow guide for Claude, ChatGPT, Gemini, Sudowrite, and Grammarly, with current usage-limit, Agent SDK, Google-source, fiction-workflow, and polish-layer cautions.
 - [Best AI Tools for Writers](/guides/best-ai-tools-for-writers/)
@@ -116,8 +120,8 @@ The June 6 [newsletter-writers guide](/guides/best-ai-for-newsletter-writers/) r
 
 ## Sources
 
-- [ChatGPT pricing](https://chatgpt.com/pricing/) (verified 2026-06-03)
-- [Claude pricing](https://claude.com/pricing) (verified 2026-06-04)
+- [ChatGPT pricing](https://chatgpt.com/pricing/) (verified 2026-06-06)
+- [Claude pricing](https://claude.com/pricing) (verified 2026-06-06)
 - [Jasper pricing](https://www.jasper.ai/pricing) (verified 2026-06-04)
 - [Jasper platform](https://www.jasper.ai/platform) (verified 2026-06-04)
 - [Jasper Brand Voice help](https://help.jasper.ai/hc/en-us/articles/27419540851995-Brand-Voice) (verified 2026-06-06)
@@ -127,8 +131,11 @@ The June 6 [newsletter-writers guide](/guides/best-ai-for-newsletter-writers/) r
 - [AdCreative.ai social media ads](https://www.adcreative.ai/social-media-ads) (verified 2026-06-06)
 - [OpusClip pricing](https://www.opus.pro/pricing) (verified 2026-06-06)
 - [Google AI subscriptions](https://gemini.google/subscriptions/) (verified 2026-06-06)
-- [DeepL API plans](https://support.deepl.com/hc/en-us/articles/360021200939-DeepL-API-plans) (verified 2026-06-02)
-- [DeepL Translator languages](https://support.deepl.com/hc/en-us/articles/360019925219-DeepL-Translator-languages) (verified 2026-06-02)
+- [DeepL Pro](https://www.deepl.com/en/pro) (verified 2026-06-06)
+- [About DeepL plans](https://support.deepl.com/hc/en-us/articles/360019924499-About-DeepL-plans) (verified 2026-06-06)
+- [DeepL API plans](https://support.deepl.com/hc/en-us/articles/360021200939-DeepL-API-plans) (verified 2026-06-06)
+- [DeepL Translator languages](https://support.deepl.com/hc/en-us/articles/360019925219-DeepL-Translator-languages) (verified 2026-06-06)
+- [Google Cloud Translation pricing](https://cloud.google.com/translate/pricing) (verified 2026-06-06)
 - [Surfer SEO pricing](https://surferseo.com/pricing/) (verified 2026-06-04)
 - [Writesonic pricing](https://writesonic.com/pricing) (verified 2026-06-04)
 - [Writer](https://writer.com/) (verified 2026-05-13)

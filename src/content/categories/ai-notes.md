@@ -18,6 +18,8 @@ AI note-taking now splits into five buyer lanes. The first is **meeting capture 
 
 As of June 6, 2026, the best purchase depends less on "which AI summarizes best?" and more on where the note lives after capture: a meeting library, a CRM, a renewal brief, a research notebook, a reading-retention loop, an object-based PKM system, an AI note memory system, a cloud team workspace, or a local personal vault. The refreshed NotebookLM/Obsidian/Otter/Readwise/Notion comparison set separates source-grounded research notebooks, local-first Markdown ownership, live meeting transcription, reading retention, and Notion-native team workspace AI instead of treating every note tool as a generic summarizer. The refreshed Fireflies comparison set still separates Fireflies' live meeting capture, 100+ language transcription, AskFred search, team workflows, and AI-credit-gated advanced features from adjacent source notebooks and reading pipelines. The refreshed [Claude vs Notion AI](/compare/claude-vs-notion-ai/) page separates Claude's standalone assistant and Claude Code value from Notion-native docs, databases, AI Meeting Notes, Enterprise Search, Notion Agent, and Custom Agent credits. The refreshed [ChatGPT vs Otter.ai](/compare/chatgpt-vs-otter-ai/) page separates broad post-meeting synthesis from live transcription, searchable archives, Otter MCP, and team meeting workflows.
 
+The June 6 [summarization guide](/guides/best-ai-for-summarization/) refresh keeps that boundary explicit: ChatGPT is the everyday summary workbench, Claude is the careful long-document synthesis lane, Gemini is the Google-native path, NotebookLM is the source-grounded notebook, Fathom/Fireflies/Otter.ai are meeting-capture routes, and Readwise is the reading-retention summary lane. That means this category should not rank every summary feature as a note-taking product; the source, capture method, retention model, and review risk decide the right tool.
+
 ## The Players
 
 | Tool | Best For | Buyer Note |
@@ -84,7 +86,7 @@ As of June 6, 2026, the best purchase depends less on "which AI summarizes best?
 
 - [Best AI Meeting Assistant for Customer Success Teams](/guides/best-ai-meeting-assistant-for-customer-success-teams/)
 - [Best AI for Meeting Notes](/guides/best-ai-for-meeting-notes/)
-- [Best AI for Summarization](/guides/best-ai-for-summarization/)
+- [Best AI for Summarization](/guides/best-ai-for-summarization/) is the June 6 verified buyer guide for ChatGPT, Claude, Gemini, NotebookLM, Fathom, Fireflies, Otter.ai, and Readwise, with everyday summaries, long-document synthesis, source-grounded notebooks, meeting capture, and reading-retention lanes separated.
 - [Best AI Tools for Product Managers](/guides/best-ai-tools-for-product-managers/)
 - [Best AI Tools for Consultants](/guides/best-ai-tools-for-consultants/)
 - [Best AI Tools for Journalists](/guides/best-ai-tools-for-journalists/)
@@ -93,8 +95,8 @@ As of June 6, 2026, the best purchase depends less on "which AI summarizes best?
 
 ## Sources
 
-- [Fathom pricing](https://www.fathom.ai/pricing) (verified 2026-06-02)
-- [Fathom Account-Wide Ask usage limits](https://help.fathom.video/en/articles/10390017) (verified 2026-06-02)
+- [Fathom pricing](https://www.fathom.ai/pricing) (verified 2026-06-06)
+- [Fathom Account-Wide Ask usage limits](https://help.fathom.video/en/articles/10390017) (verified 2026-06-06)
 - [Fireflies pricing](https://fireflies.ai/pricing) (verified 2026-06-05)
 - [Fireflies pricing guide](https://guide.fireflies.ai/articles/3734844560-learn-about-the-fireflies-pricing-plans) (verified 2026-06-05)
 - [Fireflies AI Credits guide](https://guide.fireflies.ai/articles/2114151875-learn-about-ai-credits) (verified 2026-06-05)
@@ -108,6 +110,8 @@ As of June 6, 2026, the best purchase depends less on "which AI summarizes best?
 - [Granola security](https://www.granola.ai/security) (verified 2026-06-02)
 - [NotebookLM upgrade information](https://support.google.com/notebooklm/answer/16213268) (verified 2026-06-06)
 - [Google AI Plans](https://one.google.com/about/google-ai-plans/) (verified 2026-06-06)
+- [ChatGPT pricing](https://chatgpt.com/pricing/) (verified 2026-06-06)
+- [Claude pricing](https://claude.com/pricing) (verified 2026-06-06)
 - [Notion pricing](https://www.notion.com/pricing) (verified 2026-06-06)
 - [Notion Custom Agent pricing](https://www.notion.com/help/custom-agent-pricing) (verified 2026-06-06)
 - [Notion AI product page](https://www.notion.com/product/ai) (verified 2026-06-06)
