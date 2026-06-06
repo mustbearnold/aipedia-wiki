@@ -140,12 +140,12 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 
 - [Best AI automation platform](/guides/best-ai-automation-platform/) is the primary buyer guide and should stay current weekly while automation pricing and agent surfaces move quickly. The May 13 n8n cloud price cut and the May Make price reduction both flow into this page.
 - [AI automation agency tech stack](/guides/ai-agency-stack/) is now the June 6 verified agency delivery-stack page for n8n, Zapier, Make, Claude, ChatGPT, voice agents, Browserbase, and client dashboard decisions, including the June 15 Claude Agent SDK billing split. Keep it aligned with [best AI tools for agencies](/guides/best-ai-tools-for-agencies/), sales, support, and lead-generation updates.
-- [AI lead generation stack](/guides/ai-lead-generation/), the June 2 verified Clay refresh, the May 13 verified [cold-email buyer guide](/guides/best-ai-for-cold-email/), and the May 13 verified [sales-team AI tools guide](/guides/best-ai-tools-for-sales-teams/) now cover Apollo, Clay, Amplemarket, Instantly, and n8n as a buyer flow for prospect data, enrichment, sender handoff, deliverability, and GTM automation. Keep them synchronized with sales-team and agency pages.
+- [AI lead generation stack](/guides/ai-lead-generation/) is now the June 6 verified buyer flow for Apollo, Clay, Amplemarket, Instantly, and n8n across prospect data, enrichment, AI research, sender handoff, deliverability, and GTM automation. Keep it synchronized with the June 2 Clay refresh, the [cold-email buyer guide](/guides/best-ai-for-cold-email/), and the [sales-team AI tools guide](/guides/best-ai-tools-for-sales-teams/).
 - [Best AI tools for customer support](/guides/best-ai-tools-for-customer-support/) is the support-automation buyer guide for Intercom, Voiceflow, Ada, and Retell AI. Keep it synchronized with Intercom/Fin outcome pricing, Voiceflow credit billing, Ada enterprise CX positioning, and voice-agent workflow guidance.
 - [Best AI phone system for SMB sales and support teams](/guides/best-ai-phone-system-for-smb-sales-and-support-teams/) is the CloudTalk money page for teams that need phone operations, CRM logging, AI conversation intelligence, coaching, and a path to AI voice agents.
 - [Best AI meeting assistant for customer success teams](/guides/best-ai-meeting-assistant-for-customer-success-teams/) is the MeetGeek money page for teams that need customer calls to become account memory, action items, CRM/task updates, QBR prep, and renewal context.
 - [Best AI personal assistant for work](/guides/best-ai-personal-assistant-for-work/) is the Lindy money page for buyers who want inbox, calendar, meeting, follow-up, and text-delegation help before they choose a workflow platform.
-- [Best AI stack for solo founders](/guides/ai-solo-founder-stack/) now gives founders the practical automation sequence: manual first, n8n once workflows repeat, Intercom only after real support volume, and no fake fixed monthly stack total.
+- [Best AI stack for solo founders](/guides/ai-solo-founder-stack/) is now the June 6 verified founder sequence: manual first, n8n once workflows repeat, Intercom only after real support volume, and explicit budgeting for Copilot AI Credits, Claude Agent SDK credits, app-builder credits, Fin outcomes, and workflow executions.
 - [Best AI tools for small business](/guides/best-ai-tools-for-small-business/) now gives owner-operators the conservative buying sequence: general assistant first, Google-native assistant when it reduces switching, and Zapier only after workflows already work manually.
 - [n8n vs Make vs Zapier](/compare/n8n-vs-make-vs-zapier/) is now the primary automation-platform fork for workflow complexity, pricing unit, AI-agent support, self-hosting, and owner type.
 - [Lindy vs Zapier vs n8n](/compare/lindy-vs-zapier-vs-n8n/) now captures the highest-intent assistant-versus-automation fork: delegated admin work, broad no-code SaaS automation, or technical workflow ownership.
@@ -174,7 +174,7 @@ Do not leave this category stale. Automation tools are adding MCP, agent builder
 - [Make pricing adjustments](https://help.make.com/adjustments-to-plans-and-pricing) (verified 2026-06-04)
 - [Gumloop pricing](https://www.gumloop.com/pricing) (verified 2026-06-02)
 - [Gumloop docs](https://docs.gumloop.com/) (verified 2026-06-02)
-- [Relevance AI pricing](https://relevanceai.com/pricing) (verified 2026-05-13)
+- [Relevance AI pricing](https://relevanceai.com/pricing) (verified 2026-06-06)
 - [Activepieces pricing](https://www.activepieces.com/pricing) (verified 2026-06-01)
 - [Activepieces GitHub releases](https://github.com/activepieces/activepieces/releases) (verified 2026-06-01)
 - [AG2 releases](https://github.com/ag2ai/ag2/releases) (verified 2026-06-01)
@@ -223,8 +223,8 @@ Do not leave this category stale. Automation tools are adding MCP, agent builder
 - [Lindy quickstart docs](https://docs.lindy.ai/start-here/quickstart) (verified 2026-05-27)
 - [Lindy usage docs](https://docs.lindy.ai/account-billing/usage) (verified 2026-05-27)
 - [Lindy PartnerStack program](https://market.partnerstack.com/page/lindy) (verified 2026-05-27)
-- [Pipedream pricing docs](https://pipedream.com/docs/pricing) (verified 2026-05-13)
-- [Workday FY2026 Q4 results: Pipedream acquisition closed](https://investor.workday.com/news-and-events/press-releases/news-details/2026/Workday-Announces-Fiscal-2026-Fourth-Quarter-and-Full-Year-Financial-Results/default.aspx) (verified 2026-05-13)
+- [Pipedream pricing docs](https://pipedream.com/docs/pricing) (verified 2026-06-06)
+- [Workday FY2026 Q4 results: Pipedream acquisition closed](https://investor.workday.com/news-and-events/press-releases/news-details/2026/Workday-Announces-Fiscal-2026-Fourth-Quarter-and-Full-Year-Financial-Results/default.aspx) (verified 2026-06-06)
 - [Microsoft Research MagenticLite, MagenticBrain, and Fara1.5](https://www.microsoft.com/en-us/research/blog/magenticlite-magenticbrain-fara1-5-an-agentic-experience-optimized-for-small-models/) (verified 2026-05-26)
 - [CloudTalk pricing](https://www.cloudtalk.io/pricing/) (verified 2026-05-26)
 - [CloudTalk official site](https://www.cloudtalk.io/) (verified 2026-05-26)
