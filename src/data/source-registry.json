@@ -5447,7 +5447,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-05"
+      "last_checked": "2026-06-06"
     },
     {
       "id": "notebooklm-official",
@@ -5456,7 +5456,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-05"
+      "last_checked": "2026-06-06"
     },
     {
       "id": "notebooklm-pricing",
@@ -5465,7 +5465,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-05"
+      "last_checked": "2026-06-06"
     },
     {
       "id": "notion-ai",
@@ -5474,7 +5474,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-06"
     },
     {
       "id": "notion-help",
@@ -5483,7 +5483,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-06"
     },
     {
       "id": "notion-pricing",
@@ -5492,7 +5492,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-06"
     },
     {
       "id": "notion-custom-agent-pricing",
@@ -5501,7 +5501,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-06"
     },
     {
       "id": "notion-ai-meeting-notes",
@@ -5510,7 +5510,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-06"
     },
     {
       "id": "obsidian-help",
@@ -5519,7 +5519,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-05"
+      "last_checked": "2026-06-06"
     },
     {
       "id": "obsidian-plugins",
@@ -5528,7 +5528,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-05"
+      "last_checked": "2026-06-06"
     },
     {
       "id": "obsidian-pricing",
@@ -5537,7 +5537,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-05"
+      "last_checked": "2026-06-06"
     },
     {
       "id": "ollama-official",
@@ -5745,7 +5745,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-05"
+      "last_checked": "2026-06-06"
     },
     {
       "id": "otter-otterpilot",
@@ -5754,7 +5754,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-05"
+      "last_checked": "2026-06-06"
     },
     {
       "id": "perplexity-docs",
@@ -6242,7 +6242,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-05"
+      "last_checked": "2026-06-06"
     },
     {
       "id": "readwise-reader",
@@ -6251,7 +6251,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-05"
+      "last_checked": "2026-06-06"
     },
     {
       "id": "recraft-pricing",

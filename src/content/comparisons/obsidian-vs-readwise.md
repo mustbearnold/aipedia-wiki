@@ -5,81 +5,90 @@ title: "Obsidian vs Readwise Reader"
 tools: [obsidian, readwise]
 category: ai-notes
 winner: depends
-seo_title: "Obsidian vs Readwise Reader: Which Is Better in 2026?"
-meta_description: "Honest head-to-head of Obsidian and Readwise Reader as of April 2026. Flagship models, current pricing, and which tool fits your workflow."
+seo_title: "Obsidian vs Readwise Reader: Local PKM or Reading Pipeline?"
+meta_description: "Obsidian is better for owning a local Markdown knowledge base. Readwise Reader is better for capture, highlighting, Ghostreader AI, exports, and spaced review. Verified June 2026."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-06
+last_verified: 2026-06-06
 update_frequency: quarterly
 canonical_fact_table: true
 ---
 
 # Obsidian vs Readwise Reader
 
-[Obsidian](../tools/obsidian.md) and [Readwise Reader](../tools/readwise.md) are two options in the notes category as of April 2026. Obsidian offers a free, local-first knowledge base with plugins for AI integration, while Readwise Reader provides a subscription-based reader for highlights and articles with AI summarization.
+[Obsidian](/tools/obsidian/) and [Readwise Reader](/tools/readwise/) are better together than apart. Obsidian is the long-term knowledge base. Readwise Reader is the intake, highlighting, AI-reading, export, and review layer that feeds a knowledge base.
 
 ## Quick Answer
 
-Obsidian suits users wanting a customizable, free note-taking vault with local storage and plugin extensibility. Readwise Reader fits those needing a unified inbox for reading, highlighting, and AI-assisted processing of web content.
+Choose **Obsidian** if you want local Markdown files, backlinks, graph view, Canvas, plugins, and control over your vault. Choose **Readwise Reader** if you need one inbox for articles, newsletters, PDFs, ebooks, YouTube, Twitter/X threads, podcasts, highlights, Ghostreader prompts, exports, and daily review.
 
 ## Decision Snapshot
+
 | | Obsidian | Readwise Reader |
 |---|---|---|
-| **Flagship** | Obsidian 1.8.0 (with AI plugins like Copilot using OpenAI models, Claude Opus 4.7) | Readwise Reader (AI summaries via GPT-5.3, Claude Sonnet 4.6) |
-| **Price** | Free core; Sync $5/month; Publish $8/month; AI plugins $20-200/month via providers | $8/month or $72/year |
-| **Context Window/Output Specs** | Local Markdown files; AI context up to 2M tokens via Gemini 3.1 Pro plugins | Article processing; AI outputs up to 200K tokens via integrated models |
-| **Best For** | Long-term knowledge graphs, developer workflows | Reading highlights, quick article digestion |
+| **Best job** | Long-term local knowledge base | Reading capture and retention |
+| **Primary input** | Notes you write or import | Reading and media you save/highlight |
+| **AI layer** | Plugin-based, BYO provider/model | Ghostreader prompts and Chat inside Reader |
+| **Retention layer** | User-built through notes/plugins | Native daily review and spaced repetition |
+| **Price floor** | Free core app for personal use | 30-day trial, then paid subscription |
+| **Watch-out** | Capture/review workflow is manual without plugins | Cloud service, no local-first vault |
+| **Winner for most people** | Obsidian for final notes | Readwise for reading-heavy intake |
 
 ## Where Obsidian Wins
 
-- Free desktop app with no limits on notes or storage, runs entirely offline.[Obsidian site]
-- Plugin ecosystem supports graph views, Dataview queries, and AI integrations like Obsidian Copilot for local LLMs or cloud models such as OpenAI frontier models.[Obsidian plugins]
-- Local-first Markdown storage enables version control with Git and portability across devices without vendor lock-in.[Obsidian docs]
-- Canvas feature for visual note linking and mind-mapping outperforms Reader's linear organization.[Obsidian release notes]
-- Extensive community themes and templates for customized interfaces.
+- **Own the archive.** The vault is local Markdown, readable by any editor.
+- **Better synthesis space.** Long-form writing, linking, refactoring, and graph work are stronger in Obsidian.
+- **Plugin depth.** Dataview, Canvas, templates, Smart Connections, Copilot, and thousands of community plugins make it highly configurable.
+- **Offline and private by default.** Content stays local unless you choose Sync, a cloud drive, or AI plugins.
+- **Lower cost for note-taking.** The core app is free for personal use.
 
 ## Where Readwise Reader Wins
 
-- Unified inbox auto-saves highlights from articles, PDFs, tweets, and newsletters with one-click import.[Readwise site]
-- AI-powered summaries, ghostreader Q&A on content, and spaced repetition for retention of key points.[Readwise features]
-- Seamless export to Obsidian, Notion, or Evernote keeps it as a lightweight front-end reader.[Readwise integrations]
-- Mobile apps optimized for on-the-go reading and annotation with voice input support.
-- Single subscription covers Reader plus legacy Readwise highlight syncing.
+- **Capture without friction.** Reader is built for saving articles, newsletters, PDFs, ebooks, YouTube transcripts, Twitter/X threads, and podcasts into one reading queue.
+- **Highlight management.** Tags, notes, document metadata, and export workflows are native.
+- **Ghostreader AI.** It can summarize, define, translate, rewrite, ask questions, run preset prompts, and chat over documents in the reading interface.
+- **Daily review.** The full Readwise system resurfaces highlights so useful ideas do not disappear after clipping.
+- **Obsidian export.** Readwise is one of the cleanest ways to feed highlights into an Obsidian vault.
 
 ## Key Differences
 
-Obsidian functions as a full knowledge base built on linked Markdown files stored locally, emphasizing extensibility through 1,000+ plugins that add AI capabilities via APIs to models like Claude Opus 4.7 or Gemini 3.1 Pro with 2M token contexts. Readwise Reader, by contrast, centers on content ingestion and processing, using AI from GPT-5.3 Codex for summaries and analysis within a browser or app interface priced at $8/month. Obsidian requires setup for AI features, often adding $20/month for provider access, while Reader bundles them. Obsidian excels in static, evergreen note organization; Reader prioritizes dynamic reading workflows.
+Obsidian is the **destination**. Readwise Reader is the **pipeline**. Obsidian is where you connect highlights with your own notes, projects, drafts, and ideas. Reader is where you save, read, annotate, and review source material before it reaches the vault.
 
-## Who should choose Obsidian
+If you only pick one, choose based on your bottleneck. If you already have a messy reading queue and forgotten highlights, Reader solves the intake problem. If you already have good capture but no durable thinking system, Obsidian solves the archive problem.
 
-Users building personal knowledge systems with bidirectional links and custom queries should choose Obsidian for its free core and plugin flexibility.
+## Who Should Choose Obsidian
 
-Teams needing offline access and Git integration benefit from its local storage model.
+- Writers, researchers, students, and developers who want a permanent notes vault.
+- Users who care about local files, offline access, and backup control.
+- PKM power users who like backlinks, graph view, Canvas, and Dataview.
+- Anyone who wants AI to be optional and configured on their own terms.
 
-## Who should choose Readwise Reader
+## Who Should Choose Readwise Reader
 
-Readers consuming high volumes of web content who want automated highlights and AI digests should pick Readwise Reader for its streamlined import.
-
-Professionals seeking quick retention tools with spaced repetition find its $8/month plan direct value.
+- Heavy readers saving 10+ articles, PDFs, newsletters, or chapters weekly.
+- People who want highlights to appear in daily review.
+- Users who need Ghostreader inside the reading flow.
+- Obsidian users who need a better front end for capture and export.
 
 ## Bottom Line
 
-Choose Obsidian if you prioritize ownership, customization, and long-term note accumulation in a free local vault. Opt for Readwise Reader if your focus is efficient reading, highlighting, and AI-assisted review of incoming content. Many users combine both, feeding Reader highlights into Obsidian vaults.
+Obsidian is the better **knowledge base**. Readwise Reader is the better **reading workflow**. Most serious readers should not frame this as either/or: use Reader to capture and review, then export the keepers into Obsidian.
 
 ## FAQ
 
 **Which is cheaper?**
-Obsidian core is free, though AI adds provider costs of $20/month; Readwise Reader is $8/month all-in.[Pricing pages]
+Obsidian's core app is free for personal use. Readwise has a 30-day trial and then paid plans, with the full Readwise bundle listed at $9.99/month billed annually or $12.99 billed monthly.
 
-**Which has better output quality?**
-Obsidian leverages any model via plugins for tailored outputs; Reader's integrated AI suits article summaries well but lacks broad extensibility.
+**Does Readwise replace Obsidian?**
+No. It can store highlights and notes, but it is not a local-first Markdown vault with Obsidian's graph, plugins, and long-form organization.
 
-**Can I use both?**
-Yes, Readwise exports directly to Obsidian vaults, creating a reader-to-notes pipeline used by many.[Integration docs]
+**Does Obsidian replace Readwise?**
+Only if you are willing to manually build capture, clipping, highlighting, review, and export workflows.
 
 ## Sources
 
-- [Obsidian](https://obsidian.md/)
-- [Readwise Reader](https://readwise.io/read)
-- [Obsidian Plugins](https://obsidian.md/plugins)
-- [AI Model Benchmarks 2026](https://designforonline.com/the-best-ai-models-so-far-in-2026/)
+- [Obsidian pricing](https://obsidian.md/pricing) (verified 2026-06-06)
+- [Obsidian Help](https://help.obsidian.md/) (verified 2026-06-06)
+- [Readwise Reader pricing](https://readwise.io/pricing/reader) (verified 2026-06-06)
+- [Readwise Reader official site](https://readwise.io/read) (verified 2026-06-06)
+- [Ghostreader docs](https://docs.readwise.io/reader/guides/ghostreader/overview) (verified 2026-06-06)

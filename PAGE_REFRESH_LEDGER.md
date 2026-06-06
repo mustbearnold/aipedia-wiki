@@ -29,13 +29,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /compare/exa-vs-phind/ | Comparison | Yes | frontmatter | src/content/comparisons/exa-vs-phind.md |
 | 2026-05-13 | /compare/gamma-vs-tome/ | Comparison | Yes | frontmatter | src/content/comparisons/gamma-vs-tome.md |
 | 2026-05-13 | /compare/kagi-vs-phind/ | Comparison | Yes | frontmatter | src/content/comparisons/kagi-vs-phind.md |
-| 2026-05-13 | /compare/notebooklm-vs-obsidian/ | Comparison | Yes | frontmatter | src/content/comparisons/notebooklm-vs-obsidian.md |
-| 2026-05-13 | /compare/notebooklm-vs-otter-ai/ | Comparison | Yes | frontmatter | src/content/comparisons/notebooklm-vs-otter-ai.md |
-| 2026-05-13 | /compare/notebooklm-vs-readwise/ | Comparison | Yes | frontmatter | src/content/comparisons/notebooklm-vs-readwise.md |
-| 2026-05-13 | /compare/notion-ai-vs-obsidian/ | Comparison | Yes | frontmatter | src/content/comparisons/notion-ai-vs-obsidian.md |
-| 2026-05-13 | /compare/obsidian-vs-otter-ai/ | Comparison | Yes | frontmatter | src/content/comparisons/obsidian-vs-otter-ai.md |
-| 2026-05-13 | /compare/obsidian-vs-readwise/ | Comparison | Yes | frontmatter | src/content/comparisons/obsidian-vs-readwise.md |
-| 2026-05-13 | /compare/otter-ai-vs-readwise/ | Comparison | Yes | frontmatter | src/content/comparisons/otter-ai-vs-readwise.md |
 | 2026-05-13 | /compare/perplexity-vs-chatgpt/ | Comparison | Yes | frontmatter | src/content/comparisons/perplexity-vs-chatgpt.md |
 | 2026-05-13 | /compare/perplexity-vs-phind/ | Comparison | Yes | frontmatter | src/content/comparisons/perplexity-vs-phind.md |
 | 2026-05-13 | /compare/phind-vs-you-com/ | Comparison | Yes | frontmatter | src/content/comparisons/phind-vs-you-com.md |
@@ -290,7 +283,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-26 | /tools/invideo/ | Tool | Yes | frontmatter | src/content/tools/invideo.md |
 | 2026-05-26 | /tools/lovo/ | Tool | Yes | frontmatter | src/content/tools/lovo.md |
 | 2026-05-26 | /tools/meetgeek/ | Tool | Yes | frontmatter | src/content/tools/meetgeek.md |
-| 2026-05-26 | /tools/notion-ai/ | Tool | Yes | frontmatter | src/content/tools/notion-ai.md |
 | 2026-05-26 | /tools/speechify/ | Tool | Yes | frontmatter | src/content/tools/speechify.md |
 | 2026-05-26 | /tools/tidio/ | Tool | Yes | frontmatter | src/content/tools/tidio.md |
 | 2026-05-27 | /compare/lindy-vs-zapier-vs-n8n/ | Comparison | Yes | frontmatter | src/content/comparisons/lindy-vs-zapier-vs-n8n.md |
@@ -546,7 +538,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-05 | /categories/ai-automation/ | Category | Yes | frontmatter | src/content/categories/ai-automation.md |
 | 2026-06-05 | /categories/ai-coding/ | Category | Yes | frontmatter | src/content/categories/ai-coding.md |
 | 2026-06-05 | /categories/ai-image/ | Category | Yes | frontmatter | src/content/categories/ai-image.md |
-| 2026-06-05 | /categories/ai-notes/ | Category | Yes | frontmatter | src/content/categories/ai-notes.md |
 | 2026-06-05 | /categories/ai-presentation/ | Category | Yes | frontmatter | src/content/categories/ai-presentation.md |
 | 2026-06-05 | /categories/ai-seo/ | Category | Yes | frontmatter | src/content/categories/ai-seo.md |
 | 2026-06-05 | /categories/ai-voice/ | Category | Yes | frontmatter | src/content/categories/ai-voice.md |
@@ -682,13 +673,9 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-05 | /tools/murf/ | Tool | Yes | frontmatter | src/content/tools/murf.md |
 | 2026-06-05 | /tools/n8n/ | Tool | Yes | frontmatter | src/content/tools/n8n.md |
 | 2026-06-05 | /tools/neuronwriter/ | Tool | Yes | frontmatter | src/content/tools/neuronwriter.md |
-| 2026-06-05 | /tools/notebooklm/ | Tool | Yes | frontmatter | src/content/tools/notebooklm.md |
-| 2026-06-05 | /tools/obsidian/ | Tool | Yes | frontmatter | src/content/tools/obsidian.md |
-| 2026-06-05 | /tools/otter-ai/ | Tool | Yes | frontmatter | src/content/tools/otter-ai.md |
 | 2026-06-05 | /tools/pitch/ | Tool | Yes | frontmatter | src/content/tools/pitch.md |
 | 2026-06-05 | /tools/presentations-ai/ | Tool | Yes | frontmatter | src/content/tools/presentations-ai.md |
 | 2026-06-05 | /tools/quillbot/ | Tool | Yes | frontmatter | src/content/tools/quillbot.md |
-| 2026-06-05 | /tools/readwise/ | Tool | Yes | frontmatter | src/content/tools/readwise.md |
 | 2026-06-05 | /tools/resemble-ai/ | Tool | Yes | frontmatter | src/content/tools/resemble-ai.md |
 | 2026-06-05 | /tools/semrush/ | Tool | Yes | frontmatter | src/content/tools/semrush.md |
 | 2026-06-05 | /tools/stable-diffusion/ | Tool | Yes | frontmatter | src/content/tools/stable-diffusion.md |
@@ -702,7 +689,8 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-06 | /categories/ai-chatbots/ | Category | Yes | frontmatter | src/content/categories/ai-chatbots.md |
 | 2026-06-06 | /categories/ai-design/ | Category | Yes | frontmatter | src/content/categories/ai-design.md |
 | 2026-06-06 | /categories/ai-music/ | Category | Yes | frontmatter | src/content/categories/ai-music.md |
-| 2026-06-06 | /categories/ai-research/ | Category | Yes | working tree | src/content/categories/ai-research.md |
+| 2026-06-06 | /categories/ai-notes/ | Category | Yes | working tree | src/content/categories/ai-notes.md |
+| 2026-06-06 | /categories/ai-research/ | Category | Yes | frontmatter | src/content/categories/ai-research.md |
 | 2026-06-06 | /categories/ai-search/ | Category | Yes | frontmatter | src/content/categories/ai-search.md |
 | 2026-06-06 | /categories/ai-video/ | Category | Yes | frontmatter | src/content/categories/ai-video.md |
 | 2026-06-06 | /compare/ | Static page | Yes | working tree | src/pages/compare/index.astro |
@@ -715,8 +703,15 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-06 | /compare/mistral-ai-vs-qwen/ | Comparison | Yes | frontmatter | src/content/comparisons/mistral-ai-vs-qwen.md |
 | 2026-06-06 | /compare/mubert-vs-suno/ | Comparison | Yes | frontmatter | src/content/comparisons/mubert-vs-suno.md |
 | 2026-06-06 | /compare/mubert-vs-udio/ | Comparison | Yes | frontmatter | src/content/comparisons/mubert-vs-udio.md |
-| 2026-06-06 | /compare/nanochat-vs-scite/ | Comparison | Yes | working tree | src/content/comparisons/nanochat-vs-scite.md |
-| 2026-06-06 | /compare/nanochat-vs-semantic-scholar/ | Comparison | Yes | working tree | src/content/comparisons/nanochat-vs-semantic-scholar.md |
+| 2026-06-06 | /compare/nanochat-vs-scite/ | Comparison | Yes | frontmatter | src/content/comparisons/nanochat-vs-scite.md |
+| 2026-06-06 | /compare/nanochat-vs-semantic-scholar/ | Comparison | Yes | frontmatter | src/content/comparisons/nanochat-vs-semantic-scholar.md |
+| 2026-06-06 | /compare/notebooklm-vs-obsidian/ | Comparison | Yes | working tree | src/content/comparisons/notebooklm-vs-obsidian.md |
+| 2026-06-06 | /compare/notebooklm-vs-otter-ai/ | Comparison | Yes | working tree | src/content/comparisons/notebooklm-vs-otter-ai.md |
+| 2026-06-06 | /compare/notebooklm-vs-readwise/ | Comparison | Yes | working tree | src/content/comparisons/notebooklm-vs-readwise.md |
+| 2026-06-06 | /compare/notion-ai-vs-obsidian/ | Comparison | Yes | working tree | src/content/comparisons/notion-ai-vs-obsidian.md |
+| 2026-06-06 | /compare/obsidian-vs-otter-ai/ | Comparison | Yes | working tree | src/content/comparisons/obsidian-vs-otter-ai.md |
+| 2026-06-06 | /compare/obsidian-vs-readwise/ | Comparison | Yes | working tree | src/content/comparisons/obsidian-vs-readwise.md |
+| 2026-06-06 | /compare/otter-ai-vs-readwise/ | Comparison | Yes | working tree | src/content/comparisons/otter-ai-vs-readwise.md |
 | 2026-06-06 | /compare/perplexity-vs-you-com/ | Comparison | Yes | frontmatter | src/content/comparisons/perplexity-vs-you-com.md |
 | 2026-06-06 | /compare/pika-vs-runway/ | Comparison | Yes | frontmatter | src/content/comparisons/pika-vs-runway.md |
 | 2026-06-06 | /compare/pika-vs-seedance/ | Comparison | Yes | frontmatter | src/content/comparisons/pika-vs-seedance.md |
@@ -735,14 +730,19 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-06 | /tools/lovable/ | Tool | Yes | frontmatter | src/content/tools/lovable.md |
 | 2026-06-06 | /tools/mistral-ai/ | Tool | Yes | frontmatter | src/content/tools/mistral-ai.md |
 | 2026-06-06 | /tools/mubert/ | Tool | Yes | frontmatter | src/content/tools/mubert.md |
-| 2026-06-06 | /tools/nanochat/ | Tool | Yes | working tree | src/content/tools/nanochat.md |
+| 2026-06-06 | /tools/nanochat/ | Tool | Yes | frontmatter | src/content/tools/nanochat.md |
+| 2026-06-06 | /tools/notebooklm/ | Tool | Yes | working tree | src/content/tools/notebooklm.md |
+| 2026-06-06 | /tools/notion-ai/ | Tool | Yes | working tree | src/content/tools/notion-ai.md |
+| 2026-06-06 | /tools/obsidian/ | Tool | Yes | working tree | src/content/tools/obsidian.md |
+| 2026-06-06 | /tools/otter-ai/ | Tool | Yes | working tree | src/content/tools/otter-ai.md |
 | 2026-06-06 | /tools/perplexity/ | Tool | Yes | frontmatter | src/content/tools/perplexity.md |
 | 2026-06-06 | /tools/pika/ | Tool | Yes | frontmatter | src/content/tools/pika.md |
 | 2026-06-06 | /tools/qwen/ | Tool | Yes | frontmatter | src/content/tools/qwen.md |
+| 2026-06-06 | /tools/readwise/ | Tool | Yes | working tree | src/content/tools/readwise.md |
 | 2026-06-06 | /tools/runway/ | Tool | Yes | frontmatter | src/content/tools/runway.md |
-| 2026-06-06 | /tools/scite/ | Tool | Yes | working tree | src/content/tools/scite.md |
+| 2026-06-06 | /tools/scite/ | Tool | Yes | frontmatter | src/content/tools/scite.md |
 | 2026-06-06 | /tools/seedance/ | Tool | Yes | frontmatter | src/content/tools/seedance.md |
-| 2026-06-06 | /tools/semantic-scholar/ | Tool | Yes | working tree | src/content/tools/semantic-scholar.md |
+| 2026-06-06 | /tools/semantic-scholar/ | Tool | Yes | frontmatter | src/content/tools/semantic-scholar.md |
 | 2026-06-06 | /tools/suno/ | Tool | Yes | frontmatter | src/content/tools/suno.md |
 | 2026-06-06 | /tools/synthesia/ | Tool | Yes | frontmatter | src/content/tools/synthesia.md |
 | 2026-06-06 | /tools/udio/ | Tool | Yes | frontmatter | src/content/tools/udio.md |

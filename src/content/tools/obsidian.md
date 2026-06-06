@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$8/month (add-ons) + $50/year commercial"
 status: active
 launched: 2020-03
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-06
+last_verified: 2026-06-06
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://help.obsidian.md/"
     source_label: "Obsidian Help"
     source_id: obsidian-help
-    verified_at: 2026-06-05
+    verified_at: 2026-06-06
     volatility: low
     confidence: high
   pricing_anchor:
@@ -38,7 +38,7 @@ facts:
     source: "https://obsidian.md/pricing"
     source_label: "Obsidian pricing"
     source_id: obsidian-pricing
-    verified_at: 2026-06-05
+    verified_at: 2026-06-06
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -47,7 +47,7 @@ facts:
     source: "https://obsidian.md/plugins"
     source_label: "Obsidian community plugins"
     source_id: obsidian-plugins
-    verified_at: 2026-06-05
+    verified_at: 2026-06-06
     volatility: medium
     confidence: high
   data_model:
@@ -55,7 +55,7 @@ facts:
     source: "https://help.obsidian.md/"
     source_label: "Obsidian Help"
     source_id: obsidian-help
-    verified_at: 2026-06-05
+    verified_at: 2026-06-06
     volatility: low
     confidence: high
   watch_out_for:
@@ -63,7 +63,7 @@ facts:
     source: "https://help.obsidian.md/"
     source_label: "Obsidian Help"
     source_id: obsidian-help
-    verified_at: 2026-06-05
+    verified_at: 2026-06-06
     volatility: medium
     confidence: high
 tags: [notes, markdown, local-first, knowledge-base, pkm, zettelkasten, graph-view, plugins, ai-plugins, privacy]
@@ -96,7 +96,7 @@ price_history:
     source_label: "Source"
     source_id: obsidian-pricing
     note: "Verified unchanged"
-  - date: 2026-06-05
+  - date: 2026-06-06
     plan: "Sync · Publish · Commercial · Catalyst"
     price: "$4/$5 mo · $8/$10 mo · $50/yr · $25 one-time"
     source: "https://obsidian.md/pricing"
@@ -140,7 +140,7 @@ Core app is free for personal use. Optional add-ons: Sync ($4/mo annual), Publis
 | **Dataview plugin** | SQL-like queries over note frontmatter and content |
 | **Collaboration** | None native · single-user focus |
 
-Every data point verified on 2026-06-05 against [obsidian.md/pricing](https://obsidian.md/pricing) and [obsidian.md/plugins](https://obsidian.md/plugins).
+Every data point verified on 2026-06-06 against [obsidian.md/pricing](https://obsidian.md/pricing) and [obsidian.md/plugins](https://obsidian.md/plugins).
 
 ## What it actually is
 
@@ -180,7 +180,7 @@ Pricing via [obsidian.md/pricing](https://obsidian.md/pricing).
 | Catalyst | $25 one-time | Supporters wanting early beta + community badges |
 | Commercial | $50/user/year | Any business use · same features as Personal |
 
-*Prices verified 2026-06-05 via [obsidian.md/pricing](https://obsidian.md/pricing). Educational and nonprofit users get 40% off Sync and Publish. AI plugin costs are separate: most plugins are free, but LLM API usage (Claude, OpenAI frontier models, Gemini) is billed by the model provider.*
+*Prices verified 2026-06-06 via [obsidian.md/pricing](https://obsidian.md/pricing). Educational and nonprofit users get 40% off Sync and Publish. AI plugin costs are separate: most plugins are free, but LLM API usage (Claude, OpenAI frontier models, Gemini) is billed by the model provider.*
 
 ## Against the alternatives
 
@@ -208,7 +208,7 @@ Pricing via [obsidian.md/pricing](https://obsidian.md/pricing).
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-05 against [obsidian.md/pricing](https://obsidian.md/pricing), [obsidian.md/plugins](https://obsidian.md/plugins), and [help.obsidian.md](https://help.obsidian.md).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-06 against [obsidian.md/pricing](https://obsidian.md/pricing), [obsidian.md/plugins](https://obsidian.md/plugins), and [help.obsidian.md](https://help.obsidian.md).
 
 ## FAQ
 
@@ -230,7 +230,7 @@ Yes, if you use Obsidian for business purposes and your organization has more th
 ## Sources
 
 - [Obsidian pricing](https://obsidian.md/pricing): current tiers and add-on rates
-- [Obsidian community plugins](https://community.obsidian.md/): community plugin directory (4,468 plugins, including 489 AI-category plugins, verified 2026-06-05)
+- [Obsidian community plugins](https://community.obsidian.md/): community plugin directory (4,468 plugins, including 489 AI-category plugins, verified 2026-06-06)
 - [Obsidian help](https://help.obsidian.md): documentation
 - [Obsidian forum](https://forum.obsidian.md): community discussions
 

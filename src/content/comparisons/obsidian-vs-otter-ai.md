@@ -5,77 +5,89 @@ title: "Obsidian vs Otter.ai"
 tools: [obsidian, otter-ai]
 category: ai-notes
 winner: depends
-seo_title: "Obsidian vs Otter.ai: Which Is Better in 2026?"
-meta_description: "Honest head-to-head of Obsidian and Otter.ai as of April 2026. Flagship models, current pricing, and which tool fits your workflow."
+seo_title: "Obsidian vs Otter.ai: Local Notes or Meeting Transcription?"
+meta_description: "Obsidian wins for private local Markdown and PKM. Otter.ai wins for live transcription, speaker ID, meeting summaries, workflows, and searchable call archives. Verified June 2026."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-06
+last_verified: 2026-06-06
 update_frequency: quarterly
 canonical_fact_table: true
 ---
 
 # Obsidian vs Otter.ai
 
-[Obsidian](../tools/obsidian.md) and [Otter.ai](../tools/otter-ai.md) serve notes workflows, with Obsidian focused on local markdown files and Otter.ai on AI transcription and meeting summaries as of April 2026. Obsidian remains free and offline-first; Otter.ai integrates live AI models for voice-to-text.
+[Obsidian](/tools/obsidian/) and [Otter.ai](/tools/otter-ai/) both produce notes, but they are not substitutes. Obsidian is where notes live and connect over time. Otter.ai is how spoken meetings become transcripts, summaries, action items, and searchable records.
 
 ## Quick Answer
 
-Obsidian suits offline knowledge management and custom linking; Otter.ai fits real-time meeting transcription. Choice depends on whether you prioritize file control or automated audio capture.
+Choose **Obsidian** if you want a local-first Markdown vault, backlinks, graph view, Canvas, plugins, and optional AI on your own keys. Choose **Otter.ai** if you need live transcription, speaker identification, meeting summaries, AI meeting workflows, OtterPilot, Otter MCP, and searchable call archives.
 
 ## Decision Snapshot
+
 | | Obsidian | Otter.ai |
 |---|---|---|
-| **Flagship** | Core 1.8.0 (local-first PKM) | Otter 3.0 (OpenAI model integration) |
-| **Price** | Free; Sync $5/mo | Free; Pro $17/mo; Business $30/mo |
-| **Context Window/Output Specs** | Unlimited local files; 1M token plugin support | 2M tokens via API; real-time transcripts |
-| **Best For** | Personal vaults, graph views | Meeting notes, speaker ID |
+| **Best job** | Own and organize knowledge | Capture and search meetings |
+| **Primary input** | Written notes, files, links, Markdown | Live calls, in-person audio, uploads |
+| **AI layer** | Plugin-based, BYO model/provider | Built into meeting capture and archive workflows |
+| **Price floor** | Free core app for personal use | Basic tier with 300 monthly transcription minutes |
+| **Paid trigger** | Sync, Publish, commercial support | Regular meetings, imports, admin controls, workflows |
+| **Watch-out** | No native live transcription | Bot/recording consent and compliance |
+| **Winner for most people** | Obsidian for personal vaults | Otter.ai for meetings |
 
 ## Where Obsidian Wins
 
-- Free core app with no usage limits or API costs.
-- Full local control over markdown files; works offline without cloud dependency.
-- Plugin ecosystem enables custom graphs, kanban, and Dataview queries.
-- Privacy via end-to-end encryption in Sync; no data sent to external AI by default.
-- Lifetime access model avoids subscription creep.
+- **Ownership and portability.** Notes are local Markdown files, not entries in a hosted meeting database.
+- **Long-term organization.** Backlinks, graph view, folders, tags, Canvas, templates, and Dataview let a vault compound over years.
+- **Offline use.** The core app works without a network connection.
+- **AI flexibility.** Community plugins can connect to different providers or local models, but the user controls the setup.
+- **Cheaper for writing.** Core Obsidian is free for personal use; paid Sync and Publish are optional.
 
 ## Where Otter.ai Wins
 
-- Real-time transcription from Zoom, Teams, or audio uploads with 95% accuracy.
-- AI summaries, action items, and speaker identification in seconds post-meeting.
-- Searchable transcripts across conversations; integrates with calendars.
-- Collaboration features like shared notebooks and real-time editing.
-- Mobile apps capture voice notes on the go with instant AI processing.
+- **Live capture.** Obsidian does not join Zoom, Teams, or Google Meet. OtterPilot does.
+- **Speaker labels and summaries.** Otter is designed for who said what, what changed, and which action items remain.
+- **Searchable archives.** Meeting history is the product, especially for managers, sales, education, interviews, and customer work.
+- **Workflow features.** Current pricing emphasizes AI meeting workflows, templates, imports, team vocabulary, search/export/playback, concurrent meeting capture, Otter MCP, and Enterprise API/webhooks.
+- **Mobile/in-person recording.** Otter is much stronger for voice capture in the moment.
 
 ## Key Differences
 
-Obsidian stores notes as plain markdown files in a local vault, enabling bi-directional links and graph visualization for personal knowledge bases; it lacks built-in transcription but supports AI via plugins like Text Generator (using models such as OpenAI frontier models or Claude Opus 4.7). Otter.ai centers on automated transcription using integrated LLMs (now OpenAI frontier models), producing searchable, shareable outputs optimized for teams; it exports to markdown but prioritizes cloud storage over local files. Obsidian excels in customization and ownership; Otter.ai in speed for audio-heavy workflows.
+Obsidian is a **vault**. It shines after information is already written, clipped, exported, or summarized. Otter is a **capture layer**. It shines while people are talking.
 
-## Who should choose Obsidian
+The products pair naturally: Otter records the meeting, then you export the useful transcript or summary into Obsidian for long-term linking. Trying to use Obsidian as a transcription tool creates manual work; trying to use Otter as a permanent knowledge base creates lock-in and weak linking.
 
-Individuals or researchers building long-term knowledge graphs from text notes and files. Teams needing offline access or strict data control.
+## Who Should Choose Obsidian
 
-## Who should choose Otter.ai
+- Solo knowledge workers, writers, researchers, and developers.
+- Users who want local files, Git backups, and offline-first notes.
+- Teams with strict control over where notes are stored.
+- Power users willing to build their own AI and plugin workflow.
 
-Professionals in meetings, sales, or lectures requiring fast transcripts and summaries. Groups collaborating on spoken content across devices.
+## Who Should Choose Otter.ai
+
+- Teams with recurring calls, interviews, lectures, or sales meetings.
+- Managers who need searchable action-item history.
+- Users who want live transcription more than a permanent PKM system.
+- Organizations that can manage meeting consent, storage, and sharing defaults.
 
 ## Bottom Line
 
-Use Obsidian for structured, private note-taking with linking; select Otter.ai for transcribing and summarizing audio. Many combine both: Otter for capture, Obsidian for organization.
+Use Otter.ai to **capture spoken work**. Use Obsidian to **own the durable knowledge**. For a high-trust workflow, treat Otter as the intake layer and Obsidian as the archive.
 
 ## FAQ
 
 **Which is cheaper?**
-Obsidian core is free forever; Otter.ai Pro at $17/mo adds unlimited transcription over the free tier.
+Obsidian is cheaper if you mainly write notes: the core app is free. Otter becomes worth paying for when meetings are frequent enough that manual notes cost more than transcription.
 
-**Which has better output quality?**
-Obsidian offers perfect file fidelity; Otter.ai delivers AI-enhanced summaries with speaker labels, though transcripts may need minor edits.
+**Can Obsidian transcribe meetings?**
+Not natively. Plugins and external tools can help, but Otter is purpose-built for live transcription.
 
-**Can I use both?**
-Yes; export Otter transcripts to Obsidian vaults for linking and long-term storage.
+**Can Otter replace Obsidian?**
+No for PKM. Otter is a meeting archive; Obsidian is a general knowledge system.
 
 ## Sources
 
-- [Obsidian](https://obsidian.md/pricing)
-- [Otter.ai](https://otter.ai/pricing)
-- [Obsidian Forum](https://forum.obsidian.md)
-- [Otter.ai Changelog](https://otter.ai/changelog)
+- [Obsidian pricing](https://obsidian.md/pricing) (verified 2026-06-06)
+- [Obsidian Help](https://help.obsidian.md/) (verified 2026-06-06)
+- [Otter.ai pricing](https://otter.ai/pricing) (verified 2026-06-06)
+- [OtterPilot overview](https://otter.ai/otterpilot) (verified 2026-06-06)

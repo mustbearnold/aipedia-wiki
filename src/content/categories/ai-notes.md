@@ -5,10 +5,10 @@ title: AI Note-Taking & Knowledge Management
 description: AI note-taking, customer-success meeting memory, meeting intelligence, source-grounded research notebooks, personal knowledge systems, and workspace knowledge tools.
 tool_count: 13
 seo_title: "Best AI Note-Taking Tools (June 2026), aipedia.wiki"
-meta_description: "Updated June 5, 2026: compare the best AI note-taking tools: Fireflies for team meeting intelligence, Otter for live transcription, NotebookLM for source-grounded research, Obsidian for local-first notes, and Readwise for reading retention."
+meta_description: "Updated June 6, 2026: compare the best AI note-taking tools: Fireflies for team meeting intelligence, Otter for live transcription, NotebookLM for source-grounded research, Obsidian for local-first notes, Readwise for reading retention, and Notion AI for team workspaces."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-06
+last_verified: 2026-06-06
 update_frequency: monthly
 ---
 
@@ -16,7 +16,7 @@ update_frequency: monthly
 
 AI note-taking now splits into five buyer lanes. The first is **meeting capture and meeting memory**, where [Fathom](/tools/fathom/), [MeetGeek](/tools/meetgeek/), [Fireflies](/tools/fireflies/), [Otter.ai](/tools/otter-ai/), [Read AI](/tools/read-ai/), and [Granola](/tools/granola/) record or capture calls, produce transcripts/summaries, extract action items, and push meeting context into team workflows. Granola is the no-bot Mac-first lane for people who want private desktop capture and post-call notes rather than a meeting participant bot. MeetGeek is now the sharper customer-success pick when onboarding, renewal, QBR, escalation, and product-feedback calls need to become searchable account context. The second is **source-grounded research**, where [NotebookLM](/tools/notebooklm/) turns documents, transcripts, and source packs into grounded Q&A, reports, study materials, and review artifacts. The third is **knowledge management**, where [Notion AI](/tools/notion-ai/), [Capacities](/tools/capacities/), [Obsidian](/tools/obsidian/), and [Mem](/tools/mem/) help teams or individuals maintain long-lived notes, wikis, docs, databases, objects, personal memory, and personal knowledge graphs. The fourth is **reading capture and retention**, where [Readwise Reader](/tools/readwise/) captures articles, newsletters, PDFs, ebooks, highlights, Ghostreader prompts, exports, and daily review. The fifth is **analytics notebooks and data-team knowledge**, where [Hex](/tools/hex/) brings SQL, Python, apps, Threads, semantic-model-aware agents, and paid-seat AI credits into one governed workspace.
 
-As of June 5, 2026, the best purchase depends less on "which AI summarizes best?" and more on where the note lives after capture: a meeting library, a CRM, a renewal brief, a research notebook, a reading-retention loop, an object-based PKM system, an AI note memory system, or a local personal vault. The refreshed Fireflies comparison set now separates Fireflies' live meeting capture, 100+ language transcription, AskFred search, team workflows, and AI-credit-gated advanced features from NotebookLM source notebooks, Obsidian local-first Markdown, Otter live transcription/Otter MCP, and Readwise reading retention. The refreshed [Claude vs Notion AI](/compare/claude-vs-notion-ai/) page separates Claude's standalone assistant and Claude Code value from Notion-native docs, databases, AI Meeting Notes, Enterprise Search, Notion Agent, and Custom Agent credits. The refreshed [ChatGPT vs Otter.ai](/compare/chatgpt-vs-otter-ai/) page separates broad post-meeting synthesis from live transcription, searchable archives, Otter MCP, and team meeting workflows.
+As of June 6, 2026, the best purchase depends less on "which AI summarizes best?" and more on where the note lives after capture: a meeting library, a CRM, a renewal brief, a research notebook, a reading-retention loop, an object-based PKM system, an AI note memory system, a cloud team workspace, or a local personal vault. The refreshed NotebookLM/Obsidian/Otter/Readwise/Notion comparison set separates source-grounded research notebooks, local-first Markdown ownership, live meeting transcription, reading retention, and Notion-native team workspace AI instead of treating every note tool as a generic summarizer. The refreshed Fireflies comparison set still separates Fireflies' live meeting capture, 100+ language transcription, AskFred search, team workflows, and AI-credit-gated advanced features from adjacent source notebooks and reading pipelines. The refreshed [Claude vs Notion AI](/compare/claude-vs-notion-ai/) page separates Claude's standalone assistant and Claude Code value from Notion-native docs, databases, AI Meeting Notes, Enterprise Search, Notion Agent, and Custom Agent credits. The refreshed [ChatGPT vs Otter.ai](/compare/chatgpt-vs-otter-ai/) page separates broad post-meeting synthesis from live transcription, searchable archives, Otter MCP, and team meeting workflows.
 
 ## The Players
 
@@ -98,7 +98,7 @@ As of June 5, 2026, the best purchase depends less on "which AI summarizes best?
 - [Fireflies pricing](https://fireflies.ai/pricing) (verified 2026-06-05)
 - [Fireflies pricing guide](https://guide.fireflies.ai/articles/3734844560-learn-about-the-fireflies-pricing-plans) (verified 2026-06-05)
 - [Fireflies AI Credits guide](https://guide.fireflies.ai/articles/2114151875-learn-about-ai-credits) (verified 2026-06-05)
-- [Otter.ai pricing](https://otter.ai/pricing) (verified 2026-06-05)
+- [Otter.ai pricing](https://otter.ai/pricing) (verified 2026-06-06)
 - [Read AI pricing](https://www.read.ai/plans-pricing) (verified 2026-05-24)
 - [Read AI product overview](https://www.read.ai/) (verified 2026-05-24)
 - [MeetGeek pricing](https://meetgeek.ai/pricing) (verified 2026-05-26)
@@ -106,20 +106,20 @@ As of June 5, 2026, the best purchase depends less on "which AI summarizes best?
 - [MeetGeek PartnerStack program](https://market.partnerstack.com/page/meetgeek) (verified 2026-05-26)
 - [Granola pricing](https://www.granola.ai/pricing) (verified 2026-06-02)
 - [Granola security](https://www.granola.ai/security) (verified 2026-06-02)
-- [NotebookLM upgrade information](https://support.google.com/notebooklm/answer/16213268) (verified 2026-06-05)
-- [Google AI Plans](https://one.google.com/about/google-ai-plans/) (verified 2026-06-05)
-- [Notion pricing](https://www.notion.com/pricing) (verified 2026-06-04)
-- [Notion Custom Agent pricing](https://www.notion.com/help/custom-agent-pricing) (verified 2026-06-04)
-- [Notion AI product page](https://www.notion.com/product/ai) (verified 2026-06-04)
-- [Notion AI Meeting Notes](https://www.notion.com/help/ai-meeting-notes) (verified 2026-06-04)
+- [NotebookLM upgrade information](https://support.google.com/notebooklm/answer/16213268) (verified 2026-06-06)
+- [Google AI Plans](https://one.google.com/about/google-ai-plans/) (verified 2026-06-06)
+- [Notion pricing](https://www.notion.com/pricing) (verified 2026-06-06)
+- [Notion Custom Agent pricing](https://www.notion.com/help/custom-agent-pricing) (verified 2026-06-06)
+- [Notion AI product page](https://www.notion.com/product/ai) (verified 2026-06-06)
+- [Notion AI Meeting Notes](https://www.notion.com/help/ai-meeting-notes) (verified 2026-06-06)
 - [Capacities pricing](https://capacities.io/pricing) (verified 2026-06-03)
 - [Capacities docs](https://docs.capacities.io/) (verified 2026-06-03)
 - [Mem pricing](https://get.mem.ai/pricing) (verified 2026-06-03)
 - [Mem product site](https://get.mem.ai/) (verified 2026-06-03)
-- [Obsidian pricing](https://obsidian.md/pricing) (verified 2026-06-05)
-- [Obsidian community plugins](https://community.obsidian.md/) (verified 2026-06-05)
-- [Readwise pricing](https://readwise.io/pricing) (verified 2026-06-05)
-- [Readwise Reader pricing](https://readwise.io/pricing/reader) (verified 2026-06-05)
-- [Readwise Ghostreader docs](https://docs.readwise.io/reader/guides/ghostreader/overview) (verified 2026-06-05)
+- [Obsidian pricing](https://obsidian.md/pricing) (verified 2026-06-06)
+- [Obsidian community plugins](https://community.obsidian.md/) (verified 2026-06-06)
+- [Readwise pricing](https://readwise.io/pricing) (verified 2026-06-06)
+- [Readwise Reader pricing](https://readwise.io/pricing/reader) (verified 2026-06-06)
+- [Readwise Ghostreader docs](https://docs.readwise.io/reader/guides/ghostreader/overview) (verified 2026-06-06)
 - [Hex pricing](https://hex.tech/pricing/) (verified 2026-06-02)
 - [Hex AI docs](https://learn.hex.tech/docs/getting-started/ai-overview) (verified 2026-06-02)
