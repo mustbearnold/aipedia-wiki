@@ -144,6 +144,8 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 - [Best AI tools for agencies](/guides/best-ai-tools-for-agencies/) is now the June 6 verified role guide for ChatGPT, Claude, Zapier, n8n, Make, Copy.ai, and client-data guardrails. Keep it aligned with [AI automation agency tech stack](/guides/ai-agency-stack/), sales, support, and lead-generation updates.
 - [AI automation agency tech stack](/guides/ai-agency-stack/) is now the June 6 verified agency delivery-stack page for n8n, Zapier, Make, Claude, ChatGPT, voice agents, Browserbase, and client dashboard decisions, including the June 15 Claude Agent SDK billing split. Keep it aligned with agency role guidance, sales, support, and lead-generation updates.
 - [AI lead generation stack](/guides/ai-lead-generation/) is now the June 6 verified buyer flow for Apollo, Clay, Amplemarket, Instantly, and n8n across prospect data, enrichment, AI research, sender handoff, deliverability, and GTM automation. Keep it synchronized with the June 6 verified [cold-email buyer guide](/guides/best-ai-for-cold-email/) because Apollo trial/credit rules, Instantly Outreach versus Credits packaging, Clay Actions/Data Credits, and Amplemarket AI SDR packaging all affect outbound-automation advice.
+- [Best AI tools for sales teams](/guides/best-ai-tools-for-sales-teams/) is the June 6 verified sales-stack guide for Apollo, Instantly, Clay, Amplemarket, and ChatGPT across prospect data, outbound execution, GTM enrichment, AI SDR workflow, CRM hygiene, and credit/export modeling.
+- [Best AI tools for recruiters](/guides/best-ai-tools-for-recruiters/) is the June 6 verified hiring-automation guide for LinkedIn Recruiter + Hiring Assistant, hireEZ, Paradox, Eightfold AI, and ChatGPT, with human-in-the-loop, candidate-data, ATS/CRM, screening, and scheduling cautions.
 - [Best AI tools for customer support](/guides/best-ai-tools-for-customer-support/) is the June 6 verified support-automation buyer guide for Intercom/Fin, Voiceflow, Ada, and Retell AI. Keep it synchronized with Intercom seats/outcomes, Voiceflow builder ownership, Ada enterprise CX positioning, Retell minute billing, and escalation governance.
 - [Best AI phone system for SMB sales and support teams](/guides/best-ai-phone-system-for-smb-sales-and-support-teams/) is the CloudTalk money page for teams that need phone operations, CRM logging, AI conversation intelligence, coaching, and a path to AI voice agents.
 - [Best AI meeting assistant for customer success teams](/guides/best-ai-meeting-assistant-for-customer-success-teams/) is the MeetGeek money page for teams that need customer calls to become account memory, action items, CRM/task updates, QBR prep, and renewal context.
@@ -200,6 +202,13 @@ Do not leave this category stale. Automation tools are adding MCP, agent builder
 - [Eightfold TalentForge launch](https://eightfold.ai/company/press/press-releases/eightfold-ushers-in-the-golden-age-of-hr-software-with-launch-of-talentforge/) (verified 2026-06-02)
 - [Eightfold AI Interview Companion launch](https://eightfold.ai/company/press/press-releases/eightfold-ai-expands-talent-agents-across-the-full-interview-journey-introducing-ai-interview-companion-and-new-interview-capabilities/) (verified 2026-06-02)
 - [hireEZ recruiting platform](https://www.hireez.com/platform/) (verified 2026-06-02)
+- [LinkedIn Recruiter + Hiring Assistant](https://business.linkedin.com/hire/recruiter) (verified 2026-06-06)
+- [LinkedIn Hiring Assistant](https://business.linkedin.com/hire/hiring-assistant) (verified 2026-06-06)
+- [Paradox recruiting solution](https://www.paradox.ai/solutions/recruiters) (verified 2026-06-06)
+- [Apollo pricing](https://www.apollo.io/pricing) (verified 2026-06-06)
+- [Instantly pricing](https://instantly.ai/pricing) (verified 2026-06-06)
+- [Clay pricing](https://www.clay.com/pricing) (verified 2026-06-06)
+- [Amplemarket pricing](https://www.amplemarket.com/pricing) (verified 2026-06-06)
 - [Ada platform](https://www.ada.cx/platform) (verified 2026-06-01)
 - [Intercom pricing](https://www.intercom.com/pricing) (verified 2026-06-05)
 - [Fin AI Agent pricing](https://fin.ai/pricing) (verified 2026-06-05)

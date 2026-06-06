@@ -22,7 +22,6 @@ const SITEMAP_EXCLUDED_PATHS = new Set([
   '/guides/ai-customer-support/',
   '/guides/best-ai-for-medical-research/',
   '/guides/best-ai-for-legal-research/',
-  '/guides/best-ai-tools-for-real-estate-agents/',
   '/guides/best-ai-tools-under-10-month/',
   '/guides/best-ai-tools-under-50-month/',
   '/guides/notion-ai-alternatives/',

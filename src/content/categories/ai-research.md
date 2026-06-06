@@ -71,7 +71,7 @@ Large law firms and legal departments should evaluate Harvey separately from aca
 
 ## Money Guides
 
-- [Best AI Tools for Researchers](/guides/best-ai-tools-for-researchers/)
+- [Best AI Tools for Researchers](/guides/best-ai-tools-for-researchers/) is the June 6 verified research buyer guide for Elicit, Semantic Scholar, Perplexity, Claude, NotebookLM, Scite, and Consensus across literature review, free academic search, current cited web research, close reading, source notebooks, citation context, and research-integrity rules.
 - [Best AI for Academic Writing](/guides/best-ai-for-academic-writing/) is the June 6 verified adjacent guide for source-grounded writing, literature-review workflows, citation discovery, and academic-integrity-safe AI use.
 - [Best AI for Citations and References](/guides/best-ai-for-citations/) is the June 6 verified citation-integrity guide for Scite, Semantic Scholar, Elicit, Perplexity, NotebookLM, and Consensus, with mobile-friendly buyer paths for citation context, fixed-source notebooks, cited web research, and literature-review workflows.
 - [Best AI Tools for Students](/guides/best-ai-tools-for-students/)
@@ -90,7 +90,7 @@ Do not cite generated text. Cite the original source. Do not treat a linked sour
 
 ## Sources
 
-- [Elicit pricing](https://elicit.com/pricing) - verified 2026-06-05.
+- [Elicit pricing](https://elicit.com/pricing) - verified 2026-06-06.
 - [Elicit API announcement](https://elicit.com/blog/elicit-api) - verified 2026-06-05.
 - [Semantic Scholar](https://www.semanticscholar.org/) - verified 2026-06-06.
 - [Semantic Scholar API](https://www.semanticscholar.org/product/api) - verified 2026-06-06.

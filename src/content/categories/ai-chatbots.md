@@ -135,6 +135,10 @@ Do not subscribe to multiple chatbots because each one has a new model announcem
 - [Best AI Tools for Freelancers](/guides/best-ai-tools-for-freelancers/) is the June 6 verified guide for using ChatGPT and Claude beside Perplexity, Cursor, and Midjourney without subscription bloat or client-data shortcuts.
 - [Best AI Tools for Lawyers](/guides/best-ai-tools-for-lawyers/) is the June 6 verified legal AI guide that keeps ChatGPT and Claude in a governed assistant lane beside Harvey, Spellbook, CoCounsel, and Lexis+ with Protege.
 - [Best AI Tools for Nonprofits](/guides/best-ai-tools-for-nonprofits/) is the June 6 verified nonprofit guide for Gemini/Workspace, ChatGPT nonprofit discounts, Claude nonprofit pricing, Canva, NotebookLM, and sensitive-data policy.
+- [Best AI Tools for Real Estate Agents](/guides/best-ai-tools-for-real-estate-agents/) is the June 6 verified live rebuild that keeps ChatGPT in the assistant lane, Canva in listing creative, Jasper in brokerage marketing workflow, and Zillow/Follow Up Boss context outside generic chatbot claims.
+- [Best AI Tools for Recruiters](/guides/best-ai-tools-for-recruiters/) is the June 6 verified hiring guide that keeps ChatGPT as a drafting assistant beside LinkedIn Recruiter + Hiring Assistant, hireEZ, Paradox, and Eightfold AI rather than an autonomous hiring system.
+- [Best AI Tools for Researchers](/guides/best-ai-tools-for-researchers/) is the June 6 verified guide for pairing Claude and general assistants with Elicit, Semantic Scholar, NotebookLM, Perplexity, Scite, and Consensus without replacing source inspection.
+- [Best AI Tools for Sales Teams](/guides/best-ai-tools-for-sales-teams/) is the June 6 verified guide that keeps ChatGPT as a sales-prep helper beside Apollo, Instantly, Clay, and Amplemarket, with verified data and CRM discipline ahead of AI-written outreach.
 - [Best AI Tools for Small Business](/guides/best-ai-tools-for-small-business/) should stay current because small-business buyers need a conservative first-purchase path across ChatGPT, Gemini, Zapier, and Claude before they buy a bigger stack.
 - [Best AI for Blog Writing](/guides/best-ai-for-blog-writing/)
 

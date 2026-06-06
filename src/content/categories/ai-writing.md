@@ -120,6 +120,9 @@ The June 6 summarization and translation guide refresh adds two writing-adjacent
 - [Best AI Tools for Lawyers](/guides/best-ai-tools-for-lawyers/) is the June 6 verified legal-writing and review guide for Harvey, Claude, Spellbook, CoCounsel, and Lexis+ with Protege, with citation, privilege, matter-data, and lawyer-review cautions.
 - [Best AI Tools for Marketers](/guides/best-ai-tools-for-marketers/) is the June 6 verified buyer guide for the practical marketing stack: ChatGPT for strategy, AdCreative.ai for paid-social creative volume, Unbounce for conversion pages, Jasper for brand workflow, and Gemini for Google-heavy teams.
 - [Best AI Tools for Ecommerce](/guides/best-ai-tools-for-ecommerce/) is the June 6 verified buyer guide for product copy, store creative, brand-governed campaigns, sourced competitor research, and ecommerce handoff automation.
+- [Best AI Tools for Real Estate Agents](/guides/best-ai-tools-for-real-estate-agents/) is the June 6 verified live rebuild for listing descriptions, seller updates, client education, Canva listing creative, Jasper brokerage marketing, Zillow lead/CRM context, fair-housing checks, and transaction-data safety.
+- [Best AI Tools for Recruiters](/guides/best-ai-tools-for-recruiters/) is the June 6 verified recruiting-writing guide for job descriptions, outreach, intake notes, interview rubrics, candidate-summary QA, and human-in-the-loop hiring language.
+- [Best AI Tools for Sales Teams](/guides/best-ai-tools-for-sales-teams/) is the June 6 verified sales-writing and GTM workflow guide for Apollo, Instantly, Clay, Amplemarket, and ChatGPT, with personalization, compliance, deliverability, and CRM-source-of-truth guardrails.
 - [Best AI Tools for Designers](/guides/best-ai-tools-for-designers/) is the June 6 verified adjacent creative-production guide for Figma, Canva, Midjourney, Adobe Firefly, Stitch, and v0 when writing meets design briefs, brand assets, and client-ready creative review.
 - [Best AI Tools for Nonprofits](/guides/best-ai-tools-for-nonprofits/) is the June 6 verified nonprofit guide for grant drafts, donor communications, board reports, Canva creative, Google Workspace AI, ChatGPT discounts, Claude nonprofit pricing, and sensitive-data guardrails.
 - [Best Jasper Alternatives](/guides/jasper-alternatives/)
@@ -136,6 +139,9 @@ The June 6 summarization and translation guide refresh adds two writing-adjacent
 - [Jasper credits-based pricing](https://help.jasper.ai/hc/en-us/articles/46644376016923-Credits-Based-Pricing) (verified 2026-06-04)
 - [Copy.ai pricing](https://www.copy.ai/prices) (verified 2026-06-05)
 - [Canva AI social media post generator](https://www.canva.com/features/ai-social-media-post-generator/) (verified 2026-06-06)
+- [Zillow AI Mode announcement](https://www.zillow.com/news/zillow-debuts-ai-mode/) (verified 2026-06-06)
+- [Zillow Premier Agent FAQ](https://zillow.zendesk.com/hc/en-us/articles/360000985228-Premier-Agent-FAQ) (verified 2026-06-06)
+- [LinkedIn Recruiter + Hiring Assistant](https://business.linkedin.com/hire/recruiter) (verified 2026-06-06)
 - [AdCreative.ai social media ads](https://www.adcreative.ai/social-media-ads) (verified 2026-06-06)
 - [OpusClip pricing](https://www.opus.pro/pricing) (verified 2026-06-06)
 - [Google AI subscriptions](https://gemini.google/subscriptions/) (verified 2026-06-06)

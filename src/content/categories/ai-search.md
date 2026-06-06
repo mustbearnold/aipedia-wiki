@@ -96,7 +96,8 @@ AI search is not one category anymore. Buyers now choose between **cited answer 
 ## Money Pages To Keep Current
 
 - [Perplexity alternatives](/guides/perplexity-alternatives/) now separates answer engines, general assistants, Google AI Search, owned-document research, private search, and developer APIs.
-- [Best AI tools for researchers](/guides/best-ai-tools-for-researchers/) should stay synchronized because research buyers often move between Perplexity, NotebookLM, Elicit, Semantic Scholar, Scite, Consensus, Claude, and ChatGPT.
+- [Best AI tools for researchers](/guides/best-ai-tools-for-researchers/) is the June 6 verified research workflow guide and should stay synchronized because research buyers often move between Perplexity, NotebookLM, Elicit, Semantic Scholar, Scite, Consensus, Claude, and ChatGPT for current web research, owned-source notebooks, literature review, and citation context.
+- [Best AI tools for real estate agents](/guides/best-ai-tools-for-real-estate-agents/) now separates Perplexity-style cited market/vendor research from listing copy, listing creative, Zillow lead context, and broker-reviewed client advice.
 - [Best AI Tools for Consultants](/guides/best-ai-tools-for-consultants/) is the June 6 verified adjacent guide for Perplexity-led source trails, ChatGPT drafting, Claude memo review, Gamma decks, and Fathom meeting capture.
 - [Best AI for citations](/guides/best-ai-for-citations/) should stay current because citation trust is the biggest risk in AI search.
 - [Best AI tools for journalists](/guides/best-ai-tools-for-journalists/) is the June 6 verified newsroom guide for Perplexity source trails, NotebookLM source packs, ChatGPT reporting support, Claude editing, Fathom consented calls, and Grok as X-only signal.
