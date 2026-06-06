@@ -33,10 +33,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /compare/phind-vs-you-com/ | Comparison | Yes | frontmatter | src/content/comparisons/phind-vs-you-com.md |
 | 2026-05-13 | /compare/pitch-vs-tome/ | Comparison | Yes | frontmatter | src/content/comparisons/pitch-vs-tome.md |
 | 2026-05-13 | /compare/presentations-ai-vs-tome/ | Comparison | Yes | frontmatter | src/content/comparisons/presentations-ai-vs-tome.md |
-| 2026-05-13 | /guides/best-ai-for-academic-writing/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-academic-writing.md |
-| 2026-05-13 | /guides/best-ai-for-ad-copy/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-ad-copy.md |
-| 2026-05-13 | /guides/best-ai-for-api-documentation/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-api-documentation.md |
-| 2026-05-13 | /guides/best-ai-for-blog-writing/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-blog-writing.md |
 | 2026-05-13 | /guides/best-ai-for-book-writing/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-book-writing.md |
 | 2026-05-13 | /guides/best-ai-for-brainstorming/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-brainstorming.md |
 | 2026-05-13 | /guides/best-ai-for-citations/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-citations.md |
@@ -281,9 +277,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-28 | /tools/rytr/ | Tool | Yes | frontmatter | src/content/tools/rytr.md |
 | 2026-06-01 | /about/editorial/ | Static page | Yes | git | src/pages/about/editorial.astro |
 | 2026-06-01 | /admin/reviews/ | Static page | No | git | src/pages/admin/reviews.astro |
-| 2026-06-01 | /answers/ | Static page | Yes | git | src/pages/answers/index.astro |
 | 2026-06-01 | /answers/best-ai-coding-tool-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-coding-tool-2026.astro |
-| 2026-06-01 | /answers/best-ai-for-writing-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-for-writing-2026.astro |
 | 2026-06-01 | /answers/best-ai-image-generator-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-image-generator-2026.astro |
 | 2026-06-01 | /answers/best-ai-voice-generator-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-voice-generator-2026.astro |
 | 2026-06-01 | /answers/best-free-ai-tools-2026/ | Static page | Yes | page metadata | src/pages/answers/best-free-ai-tools-2026.astro |
@@ -664,18 +658,20 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-05 | /tools/wellsaid/ | Tool | Yes | frontmatter | src/content/tools/wellsaid.md |
 | 2026-06-05 | /tools/windsurf/ | Tool | Yes | frontmatter | src/content/tools/windsurf.md |
 | 2026-06-06 | / | Static page | Yes | working tree | src/pages/index.astro |
-| 2026-06-06 | /categories/ | Static page | Yes | git | src/pages/categories/index.astro |
+| 2026-06-06 | /answers/ | Static page | Yes | working tree | src/pages/answers/index.astro |
+| 2026-06-06 | /answers/best-ai-for-writing-2026/ | Static page | Yes | working tree | src/pages/answers/best-ai-for-writing-2026.astro |
+| 2026-06-06 | /categories/ | Static page | Yes | working tree | src/pages/categories/index.astro |
 | 2026-06-06 | /categories/ai-automation/ | Category | Yes | frontmatter | src/content/categories/ai-automation.md |
 | 2026-06-06 | /categories/ai-chatbots/ | Category | Yes | frontmatter | src/content/categories/ai-chatbots.md |
 | 2026-06-06 | /categories/ai-coding/ | Category | Yes | working tree | src/content/categories/ai-coding.md |
 | 2026-06-06 | /categories/ai-design/ | Category | Yes | frontmatter | src/content/categories/ai-design.md |
 | 2026-06-06 | /categories/ai-music/ | Category | Yes | frontmatter | src/content/categories/ai-music.md |
 | 2026-06-06 | /categories/ai-notes/ | Category | Yes | frontmatter | src/content/categories/ai-notes.md |
-| 2026-06-06 | /categories/ai-research/ | Category | Yes | frontmatter | src/content/categories/ai-research.md |
+| 2026-06-06 | /categories/ai-research/ | Category | Yes | working tree | src/content/categories/ai-research.md |
 | 2026-06-06 | /categories/ai-search/ | Category | Yes | frontmatter | src/content/categories/ai-search.md |
-| 2026-06-06 | /categories/ai-video/ | Category | Yes | working tree | src/content/categories/ai-video.md |
+| 2026-06-06 | /categories/ai-video/ | Category | Yes | frontmatter | src/content/categories/ai-video.md |
 | 2026-06-06 | /categories/ai-voice/ | Category | Yes | frontmatter | src/content/categories/ai-voice.md |
-| 2026-06-06 | /categories/ai-writing/ | Category | Yes | frontmatter | src/content/categories/ai-writing.md |
+| 2026-06-06 | /categories/ai-writing/ | Category | Yes | working tree | src/content/categories/ai-writing.md |
 | 2026-06-06 | /compare/ | Static page | Yes | git | src/pages/compare/index.astro |
 | 2026-06-06 | /compare/kagi-vs-perplexity/ | Comparison | Yes | frontmatter | src/content/comparisons/kagi-vs-perplexity.md |
 | 2026-06-06 | /compare/kagi-vs-you-com/ | Comparison | Yes | frontmatter | src/content/comparisons/kagi-vs-you-com.md |
@@ -719,8 +715,12 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-06 | /guides/ai-customer-support/ | Guide | No | frontmatter | src/content/use-cases/ai-customer-support.md |
 | 2026-06-06 | /guides/ai-lead-generation/ | Guide | Yes | frontmatter | src/content/use-cases/ai-lead-generation.md |
 | 2026-06-06 | /guides/ai-solo-founder-stack/ | Guide | Yes | frontmatter | src/content/use-cases/ai-solo-founder-stack.md |
-| 2026-06-06 | /guides/best-ai-avatar-video-generator/ | Guide | Yes | working tree | src/content/use-cases/best-ai-avatar-video-generator.md |
-| 2026-06-06 | /guides/best-ai-coding-assistant/ | Guide | Yes | working tree | src/content/use-cases/best-ai-coding-assistant.md |
+| 2026-06-06 | /guides/best-ai-avatar-video-generator/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-avatar-video-generator.md |
+| 2026-06-06 | /guides/best-ai-coding-assistant/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-coding-assistant.md |
+| 2026-06-06 | /guides/best-ai-for-academic-writing/ | Guide | Yes | working tree | src/content/use-cases/best-ai-for-academic-writing.md |
+| 2026-06-06 | /guides/best-ai-for-ad-copy/ | Guide | Yes | working tree | src/content/use-cases/best-ai-for-ad-copy.md |
+| 2026-06-06 | /guides/best-ai-for-api-documentation/ | Guide | Yes | working tree | src/content/use-cases/best-ai-for-api-documentation.md |
+| 2026-06-06 | /guides/best-ai-for-blog-writing/ | Guide | Yes | working tree | src/content/use-cases/best-ai-for-blog-writing.md |
 | 2026-06-06 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
 | 2026-06-06 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
 | 2026-06-06 | /tools/ | Static page | Yes | git | src/pages/tools/index.astro |

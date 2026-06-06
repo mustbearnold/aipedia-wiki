@@ -3,6 +3,7 @@
 // Copilot) at the canonical index + category hubs + editorial policy.
 //
 // See also /llms-full.txt for the verbose variant with every page listed.
+// Refresh metadata: 2026-06-06 academic writing, ad copy, API documentation, and blog writing guide refresh across Claude, ChatGPT, NotebookLM, Elicit, Semantic Scholar, Scite, Grammarly, QuillBot, AdCreative.ai, Jasper, Copy.ai, Unbounce, Mintlify, Stainless, Speakeasy, ReadMe, Cursor, Gemini, Surfer SEO, AI Writing, AI Research, AI Coding, Answers, /guides/, homepage, and LLM maintenance.
 // Refresh metadata: 2026-06-06 avatar-video and coding-assistant guide refresh across HeyGen, Synthesia, Tavus, D-ID, Hedra, Argil, Captions, Cursor, Claude Code, Copilot AI Credits, Codex, Windsurf/Devin Desktop, Devin, AI Video, AI Coding, /guides/, homepage, and LLM maintenance.
 // Refresh metadata: 2026-06-06 lead-generation and solo-founder guide refresh across Apollo, Clay, Amplemarket, Instantly, n8n, Cursor, ChatGPT, Claude Agent SDK, Copilot AI Credits, Lovable, Bolt, Intercom, Notion, Gamma, /guides/, AI Automation, AI Coding, homepage, and LLM maintenance.
 // Refresh metadata: 2026-06-06 guide stack refresh across AI agency stack, content creator stack, archived merge guides, /guides/, AI Automation, homepage, and LLM maintenance after current June 2026 official source checks.
@@ -65,7 +66,7 @@ export const GET: APIRoute = async () => {
   lines.push('');
   lines.push(`> Independent AI tools encyclopedia maintained by aipedia.wiki Editorial. ${activeTools.length} active tool pages across ${activeCategories.length} categories, ${comparisons.length} head-to-head comparisons, ${useCases.length} buyer guides. Public pages carry verification metadata and editorial sourcing controls.`);
   lines.push('');
-  lines.push('Recent maintenance: June 6, 2026 refreshed the avatar-video and coding-assistant buyer guides plus AI Video, AI Coding, /guides/, homepage, and LLM surfaces around HeyGen/Synthesia/Tavus credit economics, Claude Agent SDK credits, GitHub Copilot AI Credits, Codex, and Windsurf/Devin Desktop lineage.');
+  lines.push('Recent maintenance: June 6, 2026 refreshed the academic-writing, ad-copy, API-documentation, blog-writing, avatar-video, and coding-assistant buyer guides plus AI Writing, AI Research, AI Coding, AI Video, Answers, /guides/, homepage, and LLM surfaces around source-grounded academic workflows, ad creative credits, docs/SDK/MCP tooling, Jasper credits, Surfer SEO positioning, Claude Agent SDK credits, GitHub Copilot AI Credits, Codex, and Windsurf/Devin Desktop lineage.');
   lines.push('');
   lines.push('Editorial positioning: no individual-author bylines, no fabricated hands-on testing claims. Pages cite vendor-published sources. Scoring is four-dimension (utility, value, moat, longevity) and is not influenced by affiliate commissions.');
   lines.push('');

@@ -95,15 +95,15 @@ As of June 6, 2026, the wrong question is "which AI writes best?" The better que
 
 ## Money Guides
 
-- [Best AI for Blog Writing](/guides/best-ai-for-blog-writing/)
+- [Best AI for Blog Writing](/guides/best-ai-for-blog-writing/) is the June 6 verified buyer guide for ChatGPT, Claude, Jasper, and Surfer SEO, with updated plan-credit cautions and a cleaner "writer vs governance vs SEO layer" split.
 - [Best AI for Email Writing](/guides/best-ai-for-email-writing/)
 - [Best AI for Brainstorming](/guides/best-ai-for-brainstorming/)
 - [Best AI Tools for LinkedIn](/guides/best-ai-for-linkedin/)
 - [Best AI for Book Writing](/guides/best-ai-for-book-writing/)
 - [Best AI Tools for Writers](/guides/best-ai-tools-for-writers/)
-- [Best AI for Academic Writing](/guides/best-ai-for-academic-writing/)
+- [Best AI for Academic Writing](/guides/best-ai-for-academic-writing/) is the June 6 verified source-discipline guide for Claude, ChatGPT, NotebookLM, Elicit, Semantic Scholar, Scite, Grammarly, and QuillBot.
 - [Best AI for Social Media Posts](/guides/best-ai-for-social-media-posts/)
-- [Best AI for Ad Copy](/guides/best-ai-for-ad-copy/) is the May 13 verified buyer guide for ChatGPT, AdCreative.ai, Jasper, Copy.ai, and Unbounce.
+- [Best AI for Ad Copy](/guides/best-ai-for-ad-copy/) is the June 6 verified buyer guide for ChatGPT, AdCreative.ai, Jasper, Copy.ai, and Unbounce, with current credit, workflow, Smart Traffic, and brand-governance cautions.
 - [Best AI Tools for Marketers](/guides/best-ai-tools-for-marketers/) is the May 13 verified buyer guide for the practical marketing stack: ChatGPT for strategy, AdCreative.ai for paid-social creative volume, Unbounce for conversion pages, Jasper for brand workflow, and Gemini for Google-heavy teams.
 - [Best AI Tools for Ecommerce](/guides/best-ai-tools-for-ecommerce/) is the May 13 verified buyer guide for product copy, store creative, brand-governed campaigns, sourced competitor research, and ecommerce handoff automation.
 - [Best Jasper Alternatives](/guides/jasper-alternatives/)
