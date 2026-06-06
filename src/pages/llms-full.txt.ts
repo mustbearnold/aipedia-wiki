@@ -2,6 +2,7 @@
 // Lists every active tool with category + tagline, every comparison, every
 // use-case guide. Intended for crawlers willing to ingest a larger manifest
 // to discover the full content map without parsing the sitemap.
+// Refresh metadata: 2026-06-06 cold email, cover letters, data analysis, and debugging guide refresh across Apollo, Instantly, Clay, Amplemarket, ChatGPT, Claude, Gemini, Grammarly, Hex, Julius, Rows, Perplexity, Cursor, GitHub Copilot AI Credits, Claude Code, Codex, Aider, AI Automation, AI Writing, AI Research, AI Coding, /guides/, homepage, and LLM maintenance.
 // Refresh metadata: 2026-06-06 book writing, brainstorming, citations, and code review guide refresh across Claude, ChatGPT, Gemini, Sudowrite, Grammarly, NotebookLM, Scite, Semantic Scholar, Elicit, Perplexity, Consensus, CodeRabbit, Qodo, GitHub Copilot, Cursor, Claude Code, Codex, AI Writing, AI Research, AI Coding, /guides/, homepage, and LLM maintenance.
 // Refresh metadata: 2026-06-06 academic writing, ad copy, API documentation, and blog writing guide refresh across Claude, ChatGPT, NotebookLM, Elicit, Semantic Scholar, Scite, Grammarly, QuillBot, AdCreative.ai, Jasper, Copy.ai, Unbounce, Mintlify, Stainless, Speakeasy, ReadMe, Cursor, Gemini, Surfer SEO, AI Writing, AI Research, AI Coding, Answers, /guides/, homepage, and LLM maintenance.
 // Refresh metadata: 2026-06-06 avatar-video and coding-assistant guide refresh across HeyGen, Synthesia, Tavus, D-ID, Hedra, Argil, Captions, Cursor, Claude Code, Copilot AI Credits, Codex, Windsurf/Devin Desktop, Devin, AI Video, AI Coding, /guides/, homepage, and LLM maintenance.
@@ -78,7 +79,7 @@ export const GET: APIRoute = async () => {
   lines.push('');
   lines.push('> Extended LLM-friendly site manifest. Enumerates every active page across tools, categories, comparisons, buyer guides, and companies. See /llms.txt for the concise version.');
   lines.push('');
-  lines.push('Recent maintenance: June 6, 2026 refreshed the book-writing, brainstorming, citations, code-review, academic-writing, ad-copy, API-documentation, and blog-writing buyer guides plus AI Writing, AI Research, AI Coding, Answers, /guides/, homepage, and LLM surfaces around manuscript workflow limits, source-grounded brainstorming, citation integrity, PR review billing, ad creative credits, docs/SDK/MCP tooling, Jasper credits, and Surfer SEO positioning.');
+  lines.push('Recent maintenance: June 6, 2026 refreshed the cold-email, cover-letter, data-analysis, debugging, book-writing, brainstorming, citations, code-review, academic-writing, ad-copy, API-documentation, and blog-writing buyer guides plus AI Automation, AI Writing, AI Research, AI Coding, Answers, /guides/, homepage, and LLM surfaces around outbound credits, job-application privacy, data-workflow reproducibility, Copilot AI Credits, manuscript workflow limits, source-grounded brainstorming, citation integrity, PR review billing, ad creative credits, docs/SDK/MCP tooling, Jasper credits, and Surfer SEO positioning.');
   lines.push('');
   lines.push('## Editorial stance');
   lines.push('');
