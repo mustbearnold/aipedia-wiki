@@ -33,10 +33,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /compare/phind-vs-you-com/ | Comparison | Yes | frontmatter | src/content/comparisons/phind-vs-you-com.md |
 | 2026-05-13 | /compare/pitch-vs-tome/ | Comparison | Yes | frontmatter | src/content/comparisons/pitch-vs-tome.md |
 | 2026-05-13 | /compare/presentations-ai-vs-tome/ | Comparison | Yes | frontmatter | src/content/comparisons/presentations-ai-vs-tome.md |
-| 2026-05-13 | /guides/best-ai-for-medical-research/ | Guide | No | frontmatter | src/content/use-cases/best-ai-for-medical-research.md |
-| 2026-05-13 | /guides/best-ai-for-newsletter-writers/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-newsletter-writers.md |
-| 2026-05-13 | /guides/best-ai-for-photo-editing/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-photo-editing.md |
-| 2026-05-13 | /guides/best-ai-for-podcasters/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-podcasters.md |
 | 2026-05-13 | /guides/best-ai-for-presentations/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-presentations.md |
 | 2026-05-13 | /guides/best-ai-for-resume-writing/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-resume-writing.md |
 | 2026-05-13 | /guides/best-ai-for-social-media-posts/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-social-media-posts.md |
@@ -496,7 +492,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-04 | /tools/wordtune/ | Tool | Yes | frontmatter | src/content/tools/wordtune.md |
 | 2026-06-04 | /tools/writesonic/ | Tool | Yes | frontmatter | src/content/tools/writesonic.md |
 | 2026-06-04 | /tools/zapier/ | Tool | Yes | frontmatter | src/content/tools/zapier.md |
-| 2026-06-05 | /categories/ai-image/ | Category | Yes | frontmatter | src/content/categories/ai-image.md |
 | 2026-06-05 | /categories/ai-presentation/ | Category | Yes | frontmatter | src/content/categories/ai-presentation.md |
 | 2026-06-05 | /categories/ai-seo/ | Category | Yes | frontmatter | src/content/categories/ai-seo.md |
 | 2026-06-05 | /compare/adobe-firefly-vs-freepik/ | Comparison | Yes | frontmatter | src/content/comparisons/adobe-firefly-vs-freepik.md |
@@ -648,13 +643,14 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-06 | /categories/ai-automation/ | Category | Yes | frontmatter | src/content/categories/ai-automation.md |
 | 2026-06-06 | /categories/ai-chatbots/ | Category | Yes | frontmatter | src/content/categories/ai-chatbots.md |
 | 2026-06-06 | /categories/ai-coding/ | Category | Yes | frontmatter | src/content/categories/ai-coding.md |
-| 2026-06-06 | /categories/ai-design/ | Category | Yes | working tree | src/content/categories/ai-design.md |
+| 2026-06-06 | /categories/ai-design/ | Category | Yes | frontmatter | src/content/categories/ai-design.md |
+| 2026-06-06 | /categories/ai-image/ | Category | Yes | working tree | src/content/categories/ai-image.md |
 | 2026-06-06 | /categories/ai-music/ | Category | Yes | frontmatter | src/content/categories/ai-music.md |
 | 2026-06-06 | /categories/ai-notes/ | Category | Yes | frontmatter | src/content/categories/ai-notes.md |
 | 2026-06-06 | /categories/ai-research/ | Category | Yes | working tree | src/content/categories/ai-research.md |
 | 2026-06-06 | /categories/ai-search/ | Category | Yes | frontmatter | src/content/categories/ai-search.md |
 | 2026-06-06 | /categories/ai-video/ | Category | Yes | frontmatter | src/content/categories/ai-video.md |
-| 2026-06-06 | /categories/ai-voice/ | Category | Yes | frontmatter | src/content/categories/ai-voice.md |
+| 2026-06-06 | /categories/ai-voice/ | Category | Yes | working tree | src/content/categories/ai-voice.md |
 | 2026-06-06 | /categories/ai-writing/ | Category | Yes | working tree | src/content/categories/ai-writing.md |
 | 2026-06-06 | /compare/ | Static page | Yes | git | src/pages/compare/index.astro |
 | 2026-06-06 | /compare/kagi-vs-perplexity/ | Comparison | Yes | frontmatter | src/content/comparisons/kagi-vs-perplexity.md |
@@ -717,10 +713,14 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-06 | /guides/best-ai-for-excel/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-excel.md |
 | 2026-06-06 | /guides/best-ai-for-headshots/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-headshots.md |
 | 2026-06-06 | /guides/best-ai-for-instagram/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-instagram.md |
-| 2026-06-06 | /guides/best-ai-for-interview-prep/ | Guide | Yes | working tree | src/content/use-cases/best-ai-for-interview-prep.md |
-| 2026-06-06 | /guides/best-ai-for-legal-research/ | Guide | No | working tree | src/content/use-cases/best-ai-for-legal-research.md |
-| 2026-06-06 | /guides/best-ai-for-linkedin/ | Guide | Yes | working tree | src/content/use-cases/best-ai-for-linkedin.md |
-| 2026-06-06 | /guides/best-ai-for-logo-design/ | Guide | Yes | working tree | src/content/use-cases/best-ai-for-logo-design.md |
+| 2026-06-06 | /guides/best-ai-for-interview-prep/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-interview-prep.md |
+| 2026-06-06 | /guides/best-ai-for-legal-research/ | Guide | No | frontmatter | src/content/use-cases/best-ai-for-legal-research.md |
+| 2026-06-06 | /guides/best-ai-for-linkedin/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-linkedin.md |
+| 2026-06-06 | /guides/best-ai-for-logo-design/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-logo-design.md |
+| 2026-06-06 | /guides/best-ai-for-medical-research/ | Guide | No | working tree | src/content/use-cases/best-ai-for-medical-research.md |
+| 2026-06-06 | /guides/best-ai-for-newsletter-writers/ | Guide | Yes | working tree | src/content/use-cases/best-ai-for-newsletter-writers.md |
+| 2026-06-06 | /guides/best-ai-for-photo-editing/ | Guide | Yes | working tree | src/content/use-cases/best-ai-for-photo-editing.md |
+| 2026-06-06 | /guides/best-ai-for-podcasters/ | Guide | Yes | working tree | src/content/use-cases/best-ai-for-podcasters.md |
 | 2026-06-06 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
 | 2026-06-06 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
 | 2026-06-06 | /tools/ | Static page | Yes | git | src/pages/tools/index.astro |

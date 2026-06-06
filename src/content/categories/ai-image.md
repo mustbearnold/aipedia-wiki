@@ -5,10 +5,10 @@ title: AI Image Generation
 description: Current AI image tools for generation, photo editing, upscaling, product visuals, text-heavy graphics, creative ideation, and commercially safer Adobe workflows.
 tool_count: 18
 seo_title: "Best AI Image Tools & Photo Editors (June 2026)"
-meta_description: "Updated June 5, 2026: compare Midjourney, ChatGPT Images 2.0, Adobe Firefly, Canva, Flux, Ideogram, Recraft, AdCreative.ai, NightCafe, Rodin, and other AI image tools by image quality, photo-editing fit, paid-media workflow, pricing risk, text rendering, and workflow."
+meta_description: "Updated June 6, 2026: compare Midjourney, ChatGPT Images, Adobe Firefly, Canva, Flux, Ideogram, Recraft, AdCreative.ai, NightCafe, Rodin, and other AI image tools by image quality, photo-editing fit, paid-media workflow, pricing risk, text rendering, and workflow."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-06
+last_verified: 2026-06-06
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -24,9 +24,9 @@ top_picks:
 
 ## Overview
 
-AiPedia rechecked the Midjourney, Ideogram, and Flux image-model comparison slice on June 5, 2026 and keeps this category split into five buyer jobs: aesthetic generation, conversational image editing, finished social/design assets, professional photo-production workflows, and 3D asset generation for games, AR/VR, printing, and prototyping. Freepik/Magnific naming remains mixed across public surfaces: use Freepik AI Suite / Magnific for buyer guidance, but verify the live Freepik pricing/model table before claiming a specific credit-free model or plan entitlement.
+AiPedia rechecked the photo-editing buyer guide on June 6, 2026 after the June 5 Midjourney, Ideogram, and Flux image-model comparison slice. This category now splits into five buyer jobs: aesthetic generation, conversational image editing, finished social/design assets, professional photo-production workflows, and 3D asset generation for games, AR/VR, printing, and prototyping. Freepik/Magnific naming remains mixed across public surfaces: use Freepik AI Suite / Magnific for buyer guidance, but verify the live Freepik pricing/model table before claiming a specific credit-free model or plan entitlement.
 
-[Midjourney](/tools/midjourney/) remains the aesthetic ideation benchmark, and the June 5 check keeps the buyer math anchored to Basic, Standard, Pro, and Mega subscriptions plus current V8.1 version docs. [ChatGPT](/tools/chatgpt/) and GPT Image 2 are the best default when image generation or editing is part of a broader assistant workflow. [Adobe Firefly](/tools/adobe-firefly/) is the safer first pick for Photoshop, Creative Cloud, Generative Fill, object removal, image expansion, and credit-aware commercial review. [Canva](/tools/canva/) wins when the image needs to become a finished post, ad, thumbnail, product graphic, or presentation asset quickly.
+[Midjourney](/tools/midjourney/) remains the aesthetic ideation benchmark, and the June 6 check keeps the buyer math anchored to Basic, Standard, Pro, and Mega subscriptions plus current V8.1 docs. [ChatGPT](/tools/chatgpt/) is the best default when image generation or editing is part of a broader assistant workflow, especially after current ChatGPT release notes added ImageGen 2.0 and image-prompt editing updates. [Adobe Firefly](/tools/adobe-firefly/) is the safer first pick for Photoshop, Creative Cloud, Generative Fill, object removal, image expansion, partner-model-aware Adobe workflows, and credit-aware commercial review. [Canva](/tools/canva/) wins when the image needs to become a finished post, ad, thumbnail, product graphic, or presentation asset quickly.
 
 For paid-media image production, [AdCreative.ai](/tools/adcreative/) is a narrow specialist rather than a general image model. The June 1 check found Starter at $39/month, Professional at $249/month, Ultimate at $999/month, Enterprise custom, and a seasonal discount on longer billing cycles. Use it when the image job is ad-variant production, brand-kit workflow, and creative scoring, not art direction.
 
@@ -73,7 +73,7 @@ The practical question is no longer "which model can make an image?" Most major 
 
 ## Money Guides To Keep Current
 
-- [Best AI for photo editing](/guides/best-ai-for-photo-editing/) now separates Adobe production edits, ChatGPT conversational image edits, Canva social assets, and Midjourney creative variation.
+- [Best AI for photo editing](/guides/best-ai-for-photo-editing/) is the June 6 verified guide separating Adobe production edits, ChatGPT conversational image edits, Canva social assets, and Midjourney creative variation, with a production checklist for text, logos, product detail, rights, and client approval.
 - [Best AI tools for YouTube creators](/guides/best-ai-for-youtube-creators/) now routes thumbnail buyers toward Canva for finished assets and Midjourney for stronger visual concepts, while keeping video, voice, and Shorts tools separate.
 - [Midjourney alternatives](/guides/midjourney-alternatives/) should stay current because it captures high-intent switching searches for Ideogram, Firefly, Recraft, Freepik AI Suite / Magnific, and GPT Image workflows.
 - [Canva AI alternatives](/guides/canva-ai-alternatives/) should stay in the design/image rotation because many users do not actually need a raw image model; they need a publishable design workflow.
@@ -100,12 +100,13 @@ Image generation is approaching commodity. The real differentiation is workflow 
 
 ## Sources
 
-- [Midjourney plans](https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans) (verified 2026-06-05)
-- [Midjourney version docs](https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version) (verified 2026-06-05)
-- [ChatGPT Images 2.0 announcement](https://openai.com/index/introducing-chatgpt-images-2-0/) (verified 2026-05-13)
-- [Adobe Firefly plans](https://www.adobe.com/products/firefly/plans.html) (verified 2026-05-13)
-- [Photoshop Generative Fill documentation](https://helpx.adobe.com/photoshop/desktop/create-open-import-images/create-images/edit-images-with-generative-fill.html) (verified 2026-05-13)
-- [Canva AI](https://www.canva.com/canva-ai/) (verified 2026-06-02)
+- [Midjourney plans](https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans) (verified 2026-06-06)
+- [Midjourney docs](https://docs.midjourney.com/) (verified 2026-06-06)
+- [OpenAI image generation API](https://openai.com/index/image-generation-api/) (verified 2026-06-06)
+- [ChatGPT release notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes) (verified 2026-06-06)
+- [Adobe Firefly plans](https://www.adobe.com/products/firefly/plans.html) (verified 2026-06-06)
+- [Photoshop Generative Fill](https://www.adobe.com/products/photoshop/generative-fill.html) (verified 2026-06-06)
+- [Canva AI](https://www.canva.com/canva-ai/) (verified 2026-06-06)
 - [Black Forest Labs FLUX.2 pricing](https://docs.bfl.ai/quick_start/pricing) (verified 2026-06-05)
 - [FLUX.2 Klein 4B on Hugging Face](https://huggingface.co/black-forest-labs/FLUX.2-klein-4B) (verified 2026-06-05)
 - [Ideogram pricing](https://ideogram.ai/pricing) (verified 2026-06-05)

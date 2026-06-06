@@ -36,6 +36,8 @@ For legal and professional-services research, [Harvey](/tools/harvey/) belongs i
 
 The June 6 [interview-prep guide](/guides/best-ai-for-interview-prep/) refresh adds a practical source-grounded research use case: use NotebookLM for a resume/job-description/source packet, Perplexity or Gemini for current company research, and a general assistant only after primary sources are opened. That keeps interview research in the low-stakes preparation lane rather than pretending a chatbot can own evidence judgment.
 
+The June 6 [medical-research archive](/guides/best-ai-for-medical-research/) recheck keeps that route noindexed. Current FDA, NIH, and OpenAI GPT-Rosalind/Rosalind Biodefense sources make the editorial bar higher, not lower: a live medical-research guide needs medical-specific evidence standards, privacy/PHI/IRB caveats, regulator context, clear separation from clinical decision support, and specialist life-sciences model coverage before AiPedia should rank tools for that intent.
+
 The wrong move is treating a general chatbot as a research protocol. ChatGPT and Claude can help read, explain, outline, and critique material, but they do not replace database selection, inclusion criteria, source inspection, citation verification, or domain expertise.
 
 ## Best Picks
@@ -78,7 +80,7 @@ Large law firms and legal departments should evaluate Harvey separately from aca
 - [Best AI Tools for Consultants](/guides/best-ai-tools-for-consultants/)
 - [Best AI Tools for Journalists](/guides/best-ai-tools-for-journalists/)
 
-AiPedia is intentionally not promoting the old medical-research guide until it is rebuilt with medical-specific sources, privacy guidance, regulator context, and high-stakes safety caveats.
+AiPedia is intentionally not promoting the old medical-research guide until it is rebuilt with medical-specific sources, privacy guidance, regulator context, high-stakes safety caveats, and current life-sciences AI coverage.
 
 ## Trust Rules for Research AI
 
@@ -115,6 +117,9 @@ Do not cite generated text. Cite the original source. Do not treat a linked sour
 - [GLM-5.1 on Hugging Face](https://huggingface.co/zai-org/GLM-5.1) - verified 2026-06-02.
 - [OpenAI GPT-Rosalind for life sciences research](https://openai.com/index/introducing-gpt-rosalind/) - verified 2026-05-31.
 - [OpenAI Rosalind Biodefense trusted-access expansion](https://openai.com/index/strengthening-societal-resilience-with-rosalind-biodefense/) - verified 2026-05-31.
+- [OpenAI new GPT-Rosalind capabilities](https://openai.com/index/introducing-new-capabilities-to-gpt-rosalind/) - verified 2026-06-06.
+- [NIH reminder on research integrity when using AI](https://grants.nih.gov/news-events/nih-extramural-nexus-news/2026/05/helpful-reminders-to-ensure-integrity-of-nih-supported-research-when-using-artificial-intelligence) - verified 2026-06-06.
+- [FDA AI-enabled device software lifecycle recommendations](https://www.fda.gov/media/184856/download) - verified 2026-06-06.
 - [Harvey official site](https://www.harvey.ai/) - verified 2026-06-02.
 - [Harvey blog](https://www.harvey.ai/blog) - verified 2026-06-02.
 - [Harvey security](https://www.harvey.ai/security) - verified 2026-06-02.
