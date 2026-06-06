@@ -139,7 +139,10 @@ Do not subscribe to multiple chatbots because each one has a new model announcem
 - [Best AI Tools for Recruiters](/guides/best-ai-tools-for-recruiters/) is the June 6 verified hiring guide that keeps ChatGPT as a drafting assistant beside LinkedIn Recruiter + Hiring Assistant, hireEZ, Paradox, and Eightfold AI rather than an autonomous hiring system.
 - [Best AI Tools for Researchers](/guides/best-ai-tools-for-researchers/) is the June 6 verified guide for pairing Claude and general assistants with Elicit, Semantic Scholar, NotebookLM, Perplexity, Scite, and Consensus without replacing source inspection.
 - [Best AI Tools for Sales Teams](/guides/best-ai-tools-for-sales-teams/) is the June 6 verified guide that keeps ChatGPT as a sales-prep helper beside Apollo, Instantly, Clay, and Amplemarket, with verified data and CRM discipline ahead of AI-written outreach.
-- [Best AI Tools for Small Business](/guides/best-ai-tools-for-small-business/) should stay current because small-business buyers need a conservative first-purchase path across ChatGPT, Gemini, Zapier, and Claude before they buy a bigger stack.
+- [Best AI Tools for Small Business](/guides/best-ai-tools-for-small-business/) is the June 6 verified guide for ChatGPT, Gemini, Zapier, Claude, Canva, and Perplexity, with current OpenAI, Google AI, Zapier MCP/task, Claude, source-trail, and customer-data cautions.
+- [Best AI Tools for Students](/guides/best-ai-tools-for-students/) is the June 6 verified student guide that keeps ChatGPT as the all-purpose tutor, NotebookLM as assigned-source study, Perplexity as cited web research, Claude as writing feedback, Cursor as coding-student help, and Gemini as the Google-native lane.
+- [Best AI Tools for Teachers](/guides/best-ai-tools-for-teachers/) is the June 6 verified education guide that separates ChatGPT for Teachers, Google AI Pro for Education, NotebookLM class-source work, Claude feedback drafts, Canva visuals, and classroom data-safety rules.
+- [Best AI Tools for Writers](/guides/best-ai-tools-for-writers/) is the June 6 verified writer guide that keeps general drafting, long-form editing, fiction, brand workflow, inline polish, source-pack writing, and Google-native writing in separate lanes.
 - [Best AI for Blog Writing](/guides/best-ai-for-blog-writing/)
 
 ## Related Categories

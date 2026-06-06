@@ -92,7 +92,7 @@ The June 6 [summarization guide](/guides/best-ai-for-summarization/) refresh kee
 - [Best AI Tools for Journalists](/guides/best-ai-tools-for-journalists/) is the June 6 verified adjacent guide for source-pack notebooks, transcript review, consented interview capture, and newsroom retention/safety guardrails.
 - [Best AI Tools for Nonprofits](/guides/best-ai-tools-for-nonprofits/) is the June 6 verified adjacent guide for NotebookLM source packs, board packets, grant guidance, program reports, and donor/beneficiary data boundaries.
 - [Best Free AI Tools](/guides/best-free-ai-tools/)
-- [Best AI Tools for Students](/guides/best-ai-tools-for-students/)
+- [Best AI Tools for Students](/guides/best-ai-tools-for-students/) is the June 6 verified student stack guide that keeps NotebookLM as the assigned-source study lane while separating ChatGPT tutoring, Perplexity cited research, Claude writing feedback, Cursor coding help, Gemini Google-native workflows, and Semantic Scholar paper discovery.
 
 ## Sources
 
