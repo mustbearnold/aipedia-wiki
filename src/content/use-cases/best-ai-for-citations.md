@@ -1,9 +1,9 @@
 ---
 type: use-case
 slug: best-ai-for-citations
-title: "Best AI for Citations and References (May 2026)"
-seo_title: "Best AI for Citations: Scite, Perplexity, NotebookLM & Elicit (May 2026)"
-meta_description: "Updated May 13, 2026: Scite is best for citation context, Perplexity for cited web answers, NotebookLM for source-grounded notes, and Elicit for literature-review references."
+title: "Best AI for Citations and References (June 2026)"
+seo_title: "Best AI for Citations: Scite, Perplexity, NotebookLM & Elicit (June 2026)"
+meta_description: "Updated June 6, 2026: Scite is best for citation context, Perplexity for cited web answers, NotebookLM for source-grounded notes, and Elicit for literature-review references."
 description: "A current buyer guide to AI tools for citation context, cited research answers, source-grounded notebooks, literature review references, and bibliography workflows."
 tools_mentioned: ["scite", "perplexity", "notebooklm", "elicit", "semantic-scholar", "consensus"]
 guide_picks:
@@ -32,14 +32,20 @@ guide_picks:
       - label: "Elicit pricing"
         url: "https://elicit.com/pricing"
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-06
+last_verified: 2026-06-06
 update_frequency: monthly
 ---
 
-# Best AI for Citations and References (May 2026)
+# Best AI for Citations and References (June 2026)
 
-AiPedia verified this guide on 2026-05-13 against current official Scite, Semantic Scholar, Elicit, Perplexity, NotebookLM, and Consensus sources. Rankings are editorial. AiPedia may earn affiliate revenue from some outbound links, but citation integrity is the priority.
+AiPedia verified this guide on 2026-06-06 against current official Scite, Semantic Scholar, Elicit, Perplexity, NotebookLM, and Consensus sources. Rankings are editorial. AiPedia may earn affiliate revenue from some outbound links, but citation integrity is the priority.
+
+## June 6 Citation Integrity Update
+
+The safest citation stack is still workflow-based: use Semantic Scholar for free discovery, Scite when citation context changes the argument, Elicit when references belong inside a literature-review workflow, NotebookLM when the answer must stay grounded in a fixed source pack, and Perplexity for current cited web or company-source trails. Do not treat a generic chatbot as a citation authority unless every source is opened and checked.
+
+For June 2026 buying decisions, the main risk is hidden scope. Citation context, literature-review screening, cited web search, source-grounded note synthesis, and final reference formatting are different jobs. Buy the tool that matches the bottleneck instead of paying for a broad research assistant and hoping it handles all of them.
 
 ## Quick Verdict
 
@@ -55,14 +61,12 @@ AiPedia verified this guide on 2026-05-13 against current official Scite, Semant
 
 ## Best Picks by Citation Job
 
-| Citation job | Start with | Why | Watch out |
-|---|---|---|---|
-| Evaluate whether a paper is supported or disputed | [Scite](/tools/scite/) | Citation context is the product, not an add-on | Still read the citing papers before making a strong claim |
-| Find citation trails for free | [Semantic Scholar](/tools/semantic-scholar/) | Strong free academic search and related-paper discovery | It does not replace a formal search protocol |
-| Produce cited web summaries | [Perplexity](/tools/perplexity/) | Fast answers with linked source trails | Source quality varies; prefer primary sources |
-| Work from a fixed source library | [NotebookLM](/tools/notebooklm/) | Answers stay grounded in uploaded sources | It cannot cite what you did not provide |
-| Build a review bibliography | [Elicit](/tools/elicit/) | Links citations to screening and extraction workflows | Extraction fields and inclusion criteria need human review |
-| Quick peer-reviewed claim synthesis | [Consensus](/tools/consensus/) | Useful for starting with academic claims | Do not cite the summary without opening the studies |
+- **Evaluate whether a paper is supported or disputed:** start with [Scite](/tools/scite/) because citation context is the product, not an add-on. Still read the citing papers before making a strong claim.
+- **Find citation trails for free:** start with [Semantic Scholar](/tools/semantic-scholar/) because it is a strong free academic search and related-paper discovery baseline. It does not replace a formal search protocol.
+- **Produce cited web summaries:** start with [Perplexity](/tools/perplexity/) because it is fast for linked source trails across current web sources. Source quality varies, so prefer primary sources.
+- **Work from a fixed source library:** start with [NotebookLM](/tools/notebooklm/) because answers stay grounded in uploaded or selected sources. It cannot cite what you did not provide.
+- **Build a review bibliography:** start with [Elicit](/tools/elicit/) because citations connect to screening, extraction, and evidence-table workflows. Extraction fields and inclusion criteria still need human review.
+- **Run quick peer-reviewed claim synthesis:** start with [Consensus](/tools/consensus/) as a discovery aid. Do not cite the summary without opening the underlying studies.
 
 ## What To Buy First
 
@@ -82,7 +86,7 @@ Best for: citation context, evidence confidence, disputed claims, and literature
 
 Not ideal for: general homework help, essay drafting, or non-academic web citations.
 
-Best plan: check current individual, team, or institution pricing before adopting it across a lab, class, or research group.
+Best plan: check current individual, team, organization, developer, or institution pricing before adopting it across a lab, class, or research group.
 
 ### Semantic Scholar
 
@@ -102,7 +106,7 @@ Best for: cited web research, source discovery, and quick checks outside academi
 
 Not ideal for: formal academic references without source inspection.
 
-Best plan: free for light use; compare Pro or Enterprise Pro for heavier research teams.
+Best plan: free for light use; compare Pro, Max, Enterprise, or Enterprise Max only after checking current research limits and team controls.
 
 ### NotebookLM
 
@@ -112,7 +116,7 @@ Best for: fixed-source Q&A, source summaries, study guides, and note-grounded ci
 
 Not ideal for: discovering new papers or searching the wider web.
 
-Best plan: start with the free product and evaluate Google AI plan benefits only if your account shows limits that matter to your workflow.
+Best plan: start with the free product and evaluate Google AI or Workspace benefits only if your account shows limits or integrations that matter to your workflow.
 
 ### Elicit
 
@@ -122,7 +126,7 @@ Best for: review bibliographies, evidence tables, screening, and extraction.
 
 Not ideal for: casual citation formatting or broad web research.
 
-Best plan: start free, then compare Plus or Team against review volume.
+Best plan: start free, then compare Plus, Pro, Scale, Team, or Enterprise packaging against review volume, screening depth, and collaboration needs.
 
 ## Citation Safety Rules
 
@@ -141,9 +145,10 @@ NotebookLM is safest for a fixed class source pack, Semantic Scholar is best for
 
 ## Sources
 
-- [Scite](https://scite.ai/) - citation context and Smart Citations product reference, verified 2026-05-13.
-- [Semantic Scholar](https://www.semanticscholar.org/) - free academic search and citation graph reference, verified 2026-05-13.
-- [Elicit pricing](https://elicit.com/pricing) - research workflow and plan reference, verified 2026-05-13.
-- [Perplexity Enterprise](https://www.perplexity.ai/enterprise) - cited research/search and team plan reference, verified 2026-05-13.
-- [NotebookLM](https://notebooklm.google/) - source-grounded notebook reference, verified 2026-05-13.
-- [Consensus](https://consensus.app/) - academic answer engine reference, verified 2026-05-13.
+- [Scite](https://scite.ai/) - citation context and Smart Citations product reference, verified 2026-06-06.
+- [Scite pricing](https://scite.ai/pricing) - individual, team, organization, and developer plan reference, verified 2026-06-06.
+- [Semantic Scholar](https://www.semanticscholar.org/) - free academic search and citation graph reference, verified 2026-06-06.
+- [Elicit pricing](https://elicit.com/pricing) - research workflow and plan reference, verified 2026-06-06.
+- [Perplexity Enterprise pricing](https://www.perplexity.ai/enterprise/pricing) - cited research/search and team plan reference, verified 2026-06-06.
+- [NotebookLM](https://notebooklm.google/) - source-grounded notebook reference, verified 2026-06-06.
+- [Consensus](https://consensus.app/) - academic answer engine reference, verified 2026-06-06.

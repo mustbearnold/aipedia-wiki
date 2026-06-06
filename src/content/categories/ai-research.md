@@ -69,7 +69,7 @@ Large law firms and legal departments should evaluate Harvey separately from aca
 
 - [Best AI Tools for Researchers](/guides/best-ai-tools-for-researchers/)
 - [Best AI for Academic Writing](/guides/best-ai-for-academic-writing/) is the June 6 verified adjacent guide for source-grounded writing, literature-review workflows, citation discovery, and academic-integrity-safe AI use.
-- [Best AI for Citations and References](/guides/best-ai-for-citations/)
+- [Best AI for Citations and References](/guides/best-ai-for-citations/) is the June 6 verified citation-integrity guide for Scite, Semantic Scholar, Elicit, Perplexity, NotebookLM, and Consensus, with mobile-friendly buyer paths for citation context, fixed-source notebooks, cited web research, and literature-review workflows.
 - [Best AI Tools for Students](/guides/best-ai-tools-for-students/)
 - [Best AI for Data Analysis](/guides/best-ai-for-data-analysis/)
 - [Best AI for Interview Prep](/guides/best-ai-for-interview-prep/)
