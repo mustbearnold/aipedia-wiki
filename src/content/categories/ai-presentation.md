@@ -4,11 +4,11 @@ slug: ai-presentation
 title: AI Presentation Tools
 description: AI tools for turning prompts, outlines, docs, and written ideas into decks, visual stories, and presentation assets.
 tool_count: 8
-seo_title: "Best AI Presentation Tools: Gamma, Pitch, Beautiful.ai & Prezi (June 2026)"
-meta_description: "Updated June 5, 2026: Gamma wins prompt-to-deck, Pitch wins team workflows, Decktopus wins interactive presenter funnels, and Presentations.AI pricing was corrected."
+seo_title: "Best AI Presentation Tools: Gamma, Canva, Pitch & Beautiful.ai (June 2026)"
+meta_description: "Updated June 6, 2026: Gamma wins prompt-to-deck, Canva wins easy assets, Pitch wins team workflow, and deck export, AI credits, and trial caveats were rechecked."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-06
+last_verified: 2026-06-06
 update_frequency: monthly
 top_picks:
   best_overall:
@@ -35,7 +35,7 @@ Do not shortlist [Tome](/tools/tome/) for new presentation work. The original To
 
 For prompt-to-prototype work that overlaps deck creation, also evaluate [Claude Design](/tools/claude-design/) (launched April 17, 2026). It competes with Gamma when the buyer wants generated UI mockups, landing-page concepts, and visual design artifacts alongside slide-style output. The June 2 check keeps it in the Claude Pro-and-up lane and avoids claiming a newer Design-specific backing model until Anthropic publishes that on a Claude Design source.
 
-Decktopus, Pitch, Gamma, and Presentations.AI were rechecked on **June 5, 2026** while refreshing the live Gamma/Pitch/Presentations.AI comparison cluster. The important correction: Presentations.AI's current English pricing page now shows Starter at $0, Pro at $20/month billed annually, and Gold at $100/month billed annually; older Public Beta and $198/year Pro claims should be treated as stale unless they appear in a buyer's live regional checkout. Prezi plan support and AI access details were rechecked on **May 24, 2026**. Claude Design access and Claude pricing were rechecked on **June 2, 2026** against official Anthropic and Claude sources.
+The June 6 [Best AI for Presentations](/guides/best-ai-for-presentations/) refresh keeps Gamma as the default prompt-to-deck winner, Canva as the budget/easy-asset lane, Pitch as the team workflow pick, and Beautiful.ai as the controlled business-slide option. The same pass rechecked Decktopus, Presentations.AI, Napkin AI, Prezi, and Gemini in Slides for PowerPoint export, AI credits, card-required trials, presentation visuals, and Google Workspace caveats. Presentations.AI's current English pricing page shows Starter at $0, Pro at $20/month billed annually, and Gold at $100/month billed annually; older beta-era and $198/year Pro claims should be treated as stale unless they appear in a buyer's live regional checkout. Claude Design access and Claude pricing were rechecked on **June 2, 2026** against official Anthropic and Claude sources.
 
 ## Best Tools By Buyer Job
 
@@ -122,13 +122,15 @@ Affiliate availability does not determine ranking. A monetizable tool can be inc
 
 ## Sources
 
-- Gamma AI presentation maker: [https://gamma.app/ai-presentation-maker](https://gamma.app/ai-presentation-maker) (verified 2026-06-05)
-- Gamma pricing, API, and subscription docs: [Gamma pricing](https://gamma.app/pricing), [Gamma API documentation](https://help.gamma.app/en/articles/11962420-does-gamma-have-an-api), [Gamma workspace upgrade docs](https://help.gamma.app/en/articles/8077107-i-want-to-know-more-about-upgrading-my-workspace-to-gamma-s-paid-plans) (pricing/API verified 2026-06-05)
-- Beautiful.ai AI presentations and pricing: [https://www.beautiful.ai/ai-presentations](https://www.beautiful.ai/ai-presentations), [https://www.beautiful.ai/pricing](https://www.beautiful.ai/pricing) (verified 2026-06-01)
-- Pitch AI presentation maker, pricing, and AI credits: [https://pitch.com/use-cases/ai-presentation-maker](https://pitch.com/use-cases/ai-presentation-maker), [https://pitch.com/pricing/us](https://pitch.com/pricing/us), [https://help.pitch.com/en/articles/12755590-guide-to-ai-credits](https://help.pitch.com/en/articles/12755590-guide-to-ai-credits) (verified 2026-06-05)
-- Decktopus pricing and feature FAQ: [https://www.decktopus.com/pricing](https://www.decktopus.com/pricing) (verified 2026-06-05)
-- Presentations.AI pricing and product site: [https://www.presentations.ai/pricing](https://www.presentations.ai/pricing), [https://www.presentations.ai/](https://www.presentations.ai/) (verified 2026-06-05)
-- Napkin AI pricing: [https://www.napkin.ai/pricing/](https://www.napkin.ai/pricing/)
-- Prezi pricing and plan support: [https://prezi.com/pricing/](https://prezi.com/pricing/), [https://support.prezi.com/hc/en-us/articles/360003478934-Guide-to-Prezi-plans](https://support.prezi.com/hc/en-us/articles/360003478934-Guide-to-Prezi-plans) (verified 2026-05-24)
+- Gamma AI presentation maker: [https://gamma.app/ai-presentation-maker](https://gamma.app/ai-presentation-maker) (verified 2026-06-06)
+- Gamma pricing, API, and subscription docs: [Gamma pricing](https://gamma.app/pricing), [Gamma API documentation](https://help.gamma.app/en/articles/11962420-does-gamma-have-an-api), [Gamma workspace upgrade docs](https://help.gamma.app/en/articles/8077107-i-want-to-know-more-about-upgrading-my-workspace-to-gamma-s-paid-plans) (pricing/API verified 2026-06-06)
+- Canva AI presentation maker and Canva AI: [https://www.canva.com/ai-presentation-maker/](https://www.canva.com/ai-presentation-maker/), [https://www.canva.com/canva-ai/](https://www.canva.com/canva-ai/) (verified 2026-06-06)
+- Beautiful.ai AI presentations and pricing: [https://www.beautiful.ai/ai-presentations](https://www.beautiful.ai/ai-presentations), [https://www.beautiful.ai/pricing](https://www.beautiful.ai/pricing) (verified 2026-06-06)
+- Pitch AI presentation maker, pricing, and AI credits: [https://pitch.com/use-cases/ai-presentation-maker](https://pitch.com/use-cases/ai-presentation-maker), [https://pitch.com/pricing/us](https://pitch.com/pricing/us), [https://help.pitch.com/en/articles/12755590-guide-to-ai-credits](https://help.pitch.com/en/articles/12755590-guide-to-ai-credits) (verified 2026-06-06)
+- Decktopus pricing and feature FAQ: [https://www.decktopus.com/pricing](https://www.decktopus.com/pricing) (verified 2026-06-06)
+- Presentations.AI pricing and product site: [https://www.presentations.ai/pricing](https://www.presentations.ai/pricing), [https://www.presentations.ai/](https://www.presentations.ai/) (verified 2026-06-06)
+- Napkin AI pricing: [https://www.napkin.ai/pricing/](https://www.napkin.ai/pricing/) (verified 2026-06-06)
+- Prezi pricing and plan support: [https://prezi.com/pricing/](https://prezi.com/pricing/), [https://support.prezi.com/hc/en-us/articles/360003478934-Guide-to-Prezi-plans](https://support.prezi.com/hc/en-us/articles/360003478934-Guide-to-Prezi-plans) (verified 2026-06-06)
+- Gemini in Slides help: [https://support.google.com/docs/answer/14355071](https://support.google.com/docs/answer/14355071) (verified 2026-06-06)
 - Claude Design launch and access: [https://www.anthropic.com/news/claude-design-anthropic-labs](https://www.anthropic.com/news/claude-design-anthropic-labs), [https://claude.com/pricing](https://claude.com/pricing) (verified 2026-06-02)
 - Tome/Lightfield pivot coverage: [https://venturebeat.com/technology/tomes-founders-ditch-viral-presentation-app-with-20m-users-to-build-ai](https://venturebeat.com/technology/tomes-founders-ditch-viral-presentation-app-with-20m-users-to-build-ai)

@@ -138,7 +138,7 @@ Do not make a wide table the only mobile experience. Mobile buyers need top pick
 - [Best AI Tools for Designers](/guides/best-ai-tools-for-designers/) should stay current because it now separates pro design, fast-production creative, image ideation, Adobe workflows, and UI/app prototyping.
 - [Best AI Tools for Product Managers](/guides/best-ai-tools-for-product-managers/) should stay current because PMs need a different buying path from designers: ChatGPT or Claude for docs, Perplexity for cited research, Figma for design review and handoff, Notion for team knowledge, and Fathom for customer-interview evidence.
 - [Best AI Tools for Marketers](/guides/best-ai-tools-for-marketers/) should stay current because marketing buyers often enter through creative production but need the complete stack split: ChatGPT for strategy, AdCreative.ai for paid-social variants, Unbounce for landing pages, Jasper for brand governance, and Gemini for Google Workspace teams.
-- [Best AI for Social Media Posts](/guides/best-ai-for-social-media-posts/) should stay current because broad social buyers need a first-purchase split between Canva for finished social assets, ChatGPT for captions and calendars, AdCreative.ai for paid-social variants, Jasper for brand governance, and OpusClip for video repurposing.
+- [Best AI for Social Media Posts](/guides/best-ai-for-social-media-posts/) is the June 6 verified social creative guide for Canva, ChatGPT, AdCreative.ai, Jasper, Copy.ai, and OpusClip, with explicit cautions around paid-social conversion tracking, brand governance, AI-image rights, and testing clips on real source videos before subscribing.
 - [Best AI Tools for Instagram](/guides/best-ai-for-instagram/) is the June 6 verified Instagram workflow guide for Canva, ChatGPT, AdCreative.ai, Runway, Meta Edits, and Midjourney, with the organic-production, caption, paid-social, Reels, and visual-direction split rechecked against current official sources.
 - [Best AI for Professional Headshots](/guides/best-ai-for-headshots/) is the June 6 verified trust-sensitive portrait guide for Midjourney, ChatGPT, and Gemini, with likeness, consent, disclosure, regulated-profile, and real-photography watch-outs tightened for buyer safety.
 - [Best AI Tools for Ecommerce](/guides/best-ai-tools-for-ecommerce/) should stay current because ecommerce buyers need a practical split between ChatGPT for product/catalog work, Canva for publishable store creative, Jasper for governed campaign workflow, Perplexity for sourced research, and Zapier for order/support handoffs.
@@ -148,6 +148,11 @@ Do not make a wide table the only mobile experience. Mobile buyers need top pick
 
 - [Canva AI](https://www.canva.com/canva-ai/) (verified 2026-06-02)
 - [Canva pricing](https://www.canva.com/pricing/) (verified 2026-06-02)
+- [Canva AI social media post generator](https://www.canva.com/features/ai-social-media-post-generator/) (verified 2026-06-06)
+- [AdCreative.ai social media ads](https://www.adcreative.ai/social-media-ads) (verified 2026-06-06)
+- [Jasper pricing](https://www.jasper.ai/pricing) (verified 2026-06-06)
+- [Jasper Brand Voice help](https://help.jasper.ai/hc/en-us/articles/27419540851995-Brand-Voice) (verified 2026-06-06)
+- [OpusClip pricing](https://www.opus.pro/pricing) (verified 2026-06-06)
 - [Anthropic Claude Design launch](https://www.anthropic.com/news/claude-design-anthropic-labs) (verified 2026-06-02)
 - [Claude pricing](https://claude.com/pricing) (verified 2026-06-02)
 - [Figma pricing](https://www.figma.com/pricing/) (verified 2026-06-05)

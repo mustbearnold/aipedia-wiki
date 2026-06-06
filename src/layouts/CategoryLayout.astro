@@ -460,6 +460,10 @@ const rankLabel = sorted.length > 0 ? `${sorted.length} tools verified` : undefi
       display: block;
       overflow-x: auto;
     }
+    .gt-body :global(a) {
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
     .gt-body :global(th),
     .gt-body :global(td) {
       text-align: left;

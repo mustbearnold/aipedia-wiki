@@ -110,7 +110,7 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 - [Best AI for API documentation](/guides/best-ai-for-api-documentation/) is the June 6 verified docs/agent buyer guide: Mintlify for hosted docs, Stainless for SDK/docs/MCP generation, Speakeasy for SDK/Terraform/MCP automation, ReadMe for developer portals, and Cursor/ChatGPT/Claude/Gemini only as support tools.
 - [Best open source AI tools](/guides/best-open-source-ai-tools/) should stay synchronized with Ollama, LM Studio, Open WebUI, Llama, Mistral, DeepSeek, and open-model licensing because developer buyers often want local or self-hosted control before paying for hosted agents.
 - [DeepSeek alternatives](/guides/deepseek-alternatives/) should stay synchronized with ChatGPT, Claude, Cursor, Gemini, Mistral, Perplexity, and the open-source AI guide because DeepSeek switching intent often overlaps with coding, model cost, and local/open-model control.
-- [Best AI for SQL queries](/guides/best-ai-for-sql-queries/) should stay current because SQL buyers split between ChatGPT for learning, Cursor for app/database code, Claude for schema reasoning, Hex for governed data-team notebooks with Notebook/Threads/Semantic Model agents, and Julius for business-user analysis.
+- [Best AI for SQL queries](/guides/best-ai-for-sql-queries/) is the June 6 verified SQL workflow guide for ChatGPT, Cursor, Claude, Hex, and Julius, with the buyer split tightened around learning/drafting, codebase-aware database work, schema reasoning, governed Hex notebooks/Threads/Semantic Models, Julius credits/connectors, and mandatory query verification before shipping business decisions.
 - [GitHub Copilot alternatives](/guides/github-copilot-alternatives/) should be monitored through the June 1, 2026 Copilot AI Credits migration and June 2 Copilot SDK GA.
 - [Cursor alternatives](/guides/cursor-alternatives/) should be monitored monthly because Cursor, Windsurf, Copilot, Claude Code, and Replit all expose usage-sensitive pricing or agent limits.
 - A new `Claude Code vs Codex` comparison would capture terminal-agent and OpenAI/Anthropic agent-intent searches.
@@ -133,6 +133,7 @@ Do not publish stale model-version claims. Coding tools route models and change 
 - [GitHub Copilot billing and plans changelog](https://github.blog/changelog/2026-06-01-updates-to-github-copilot-billing-and-plans) (verified 2026-06-03)
 - [GitHub Copilot SDK GA](https://github.blog/changelog/2026-06-02-copilot-sdk-is-now-generally-available/) (verified 2026-06-05)
 - [Cursor pricing](https://cursor.com/pricing) (verified 2026-06-05)
+- [Cursor Teams pricing update](https://cursor.com/blog/teams-pricing-june-2026) (verified 2026-06-06)
 - [Cursor Composer 2.5 changelog](https://cursor.com/changelog/composer-2-5) (verified 2026-06-05)
 - [Cursor Gartner enterprise-coding-agent recognition](https://cursor.com/blog/cursor-leads-gartner-mq-2026) (verified 2026-05-26)
 - [Cursor changelog](https://cursor.com/changelog) (verified 2026-06-05)
@@ -175,8 +176,12 @@ Do not publish stale model-version claims. Coding tools route models and change 
 - [Gemini Code Assist](https://cloud.google.com/products/gemini/code-assist) (verified 2026-06-05)
 - [Google AI subscriptions](https://gemini.google/subscriptions/) (verified 2026-06-05)
 - [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing) (verified 2026-06-05)
-- [Hex pricing](https://hex.tech/pricing/) (verified 2026-06-02)
-- [Hex AI docs](https://learn.hex.tech/docs/getting-started/ai-overview) (verified 2026-06-02)
+- [Hex pricing](https://hex.tech/pricing/) (verified 2026-06-06)
+- [Hex AI docs](https://learn.hex.tech/docs/getting-started/ai-overview) (verified 2026-06-06)
+- [Hex agent credits usage blog](https://hex.tech/blog/agent-credits-usage/) (verified 2026-06-06)
+- [Julius AI pricing](https://julius.ai/pricing) (verified 2026-06-06)
+- [Julius credit billing update](https://julius.ai/content/billing-update-messages-to-usage-credits) (verified 2026-06-06)
+- [Julius data connector overview](https://julius.ai/docs/data-connectors/overview) (verified 2026-06-06)
 - [Goose GitHub repository](https://github.com/aaif-goose/goose) (verified 2026-06-02)
 - [Goose documentation](https://block.github.io/goose/) (verified 2026-06-02)
 - [Z.AI GLM-5.1 docs](https://docs.z.ai/guides/llm/glm-5.1) (verified 2026-06-02)
