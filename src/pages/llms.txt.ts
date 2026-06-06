@@ -3,6 +3,7 @@
 // Copilot) at the canonical index + category hubs + editorial policy.
 //
 // See also /llms-full.txt for the verbose variant with every page listed.
+// Refresh metadata: 2026-06-06 AI Video comparison follow-up across Kling, Pika, Runway, Seedance, Synthesia, and Veo plus AI Video, tools, comparison, category, homepage, source registry, and LLM maintenance.
 // Refresh metadata: 2026-06-06 AI Search comparison follow-up across Kagi, Perplexity, and You.com plus AI Search, tools, comparison, category, homepage, source registry, and LLM maintenance.
 // Refresh metadata: 2026-06-05 automation comparison follow-up across Instantly, Intercom, Make, Zapier, and n8n plus AI Automation, tools, comparison, category, homepage, source registry, and LLM maintenance.
 // Refresh metadata: 2026-06-05 Midjourney image comparison follow-up across Ideogram and Flux plus AI Image, tools, comparison, category, homepage, source registry, and LLM maintenance.

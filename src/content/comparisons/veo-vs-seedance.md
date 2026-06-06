@@ -5,18 +5,18 @@ title: "Google Veo 3.1 vs Seedance 2.0"
 tools: [veo, seedance]
 category: ai-video
 winner: depends
-seo_title: "Google Veo 3.1 vs Seedance 2.0: Which AI Video Model Should You Test? (May 2026)"
-meta_description: "Google Veo 3.1 vs Seedance 2.0, updated May 8, 2026. Veo wins for Google API/provenance; Seedance is the first raw model-quality test."
+seo_title: "Google Veo 3.1 vs Seedance 2.0: Which AI Video Model Should You Test? (June 2026)"
+meta_description: "Google Veo 3.1 vs Seedance 2.0, updated June 6, 2026. Veo wins for Google API/provenance; Seedance is the first raw model-quality test."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-06
+last_verified: 2026-06-06
 update_frequency: weekly
 canonical_fact_table: true
 ---
 
 # Google Veo 3.1 vs Seedance 2.0
 
-[Google Veo 3.1](../tools/veo.md) and [Seedance 2.0](../tools/seedance.md) belong in the first testing set for serious AI video buyers in May 2026. They are not the same buying decision. Veo is the stronger route when the buyer needs Google, Gemini API, Vertex AI, Flow, Google Vids, SynthID-style provenance, visible per-second pricing, and procurement clarity. Seedance is the stronger first test when the buyer is asking which current model can produce the best raw generated footage.
+[Google Veo 3.1](/tools/veo/) and [Seedance 2.0](/tools/seedance/) belong in the first testing set for serious AI video buyers in June 2026. They are not the same buying decision. Veo is the stronger route when the buyer needs Google, Gemini API, Vertex AI, Flow, Google Vids, SynthID-style provenance, visible per-second pricing, and procurement clarity. Seedance is the stronger first test when the buyer is asking which current model can produce the best raw generated footage.
 
 AiPedia's current answer is a split decision: **test Seedance 2.0 first for raw model quality; choose Veo 3.1 first when the buyer needs Google's API, governance, vertical output, or auditable pricing.**
 
@@ -60,7 +60,7 @@ Veo is also especially relevant for vertical mobile video. Google's January 2026
 
 Seedance wins when the question is pure model quality. ByteDance's official page says Seedance 2.0 supports text, image, audio, and video inputs in a unified multimodal audio-video architecture. Its launch copy emphasizes motion stability, audio-video joint generation, multimodal reference generation, video editing, video continuation, complex motion, and physical realism.
 
-That makes Seedance the stronger first model to test if the buyer is making ads, cinematic scenes, high-end social clips, product motion, or prompt-heavy creative experiments. It should be compared directly with [Kling 3.0](../tools/kling.md), [Veo 3.1](../tools/veo.md), and [Runway](../tools/runway.md) using the same prompt set.
+That makes Seedance the stronger first model to test if the buyer is making ads, cinematic scenes, high-end social clips, product motion, or prompt-heavy creative experiments. It should be compared directly with [Kling 3.0](/tools/kling/), [Veo 3.1](/tools/veo/), and [Runway](/tools/runway/) using the same prompt set.
 
 The watch-out is source and access discipline. AiPedia should not treat independent Seedance-branded pages as official ByteDance evidence. Use ByteDance Seed for model identity and BytePlus ModelArk for API/resource-pack access.
 
@@ -112,12 +112,12 @@ Veo is usually cleaner for teams already approved for Google Cloud or Vertex AI.
 
 ## Sources
 
-- [Google DeepMind Veo](https://deepmind.google/models/veo/), verified 2026-05-08
-- [Veo 3.1 Gemini API video docs](https://ai.google.dev/gemini-api/docs/video), verified 2026-05-08
-- [Gemini API Veo 3.1 pricing](https://ai.google.dev/gemini-api/docs/pricing), verified 2026-05-08
-- [Veo 3.1 Ingredients to Video update](https://blog.google/innovation-and-ai/technology/ai/veo-3-1-ingredients-to-video/), verified 2026-05-08
-- [Veo 3.1 Gemini API launch](https://developers.googleblog.com/en/introducing-veo-3-1-and-new-creative-capabilities-in-the-gemini-api/), verified 2026-05-08
-- [ByteDance Seedance 2.0](https://seed.bytedance.com/en/seedance2_0), verified 2026-05-08
-- [Seedance 2.0 official launch](https://seed.bytedance.com/blog/seedance-2-0-official-launch), verified 2026-05-08
-- [BytePlus Seedance 2.0 API reference](https://docs.byteplus.com/api/docs/ModelArk/1520757), verified 2026-05-08
-- [BytePlus Seedance 2.0 resource packs](https://docs.byteplus.com/api/docs/ModelArk/2191775), verified 2026-05-08
+- [Google DeepMind Veo](https://deepmind.google/models/veo/), verified 2026-06-06
+- [Veo 3.1 Gemini API video docs](https://ai.google.dev/gemini-api/docs/video), verified 2026-06-06
+- [Gemini API Veo 3.1 pricing](https://ai.google.dev/gemini-api/docs/pricing), verified 2026-06-06
+- [Veo 3.1 Ingredients to Video update](https://blog.google/innovation-and-ai/technology/ai/veo-3-1-ingredients-to-video/), verified 2026-06-06
+- [Veo 3.1 Gemini API launch](https://developers.googleblog.com/en/introducing-veo-3-1-and-new-creative-capabilities-in-the-gemini-api/), verified 2026-06-06
+- [ByteDance Seedance 2.0](https://seed.bytedance.com/en/seedance2_0), verified 2026-06-06
+- [Seedance 2.0 official launch](https://seed.bytedance.com/blog/seedance-2-0-official-launch), verified 2026-06-06
+- [BytePlus Seedance 2.0 API reference](https://docs.byteplus.com/api/docs/ModelArk/1520757), verified 2026-06-06
+- [BytePlus Seedance 2.0 resource packs](https://docs.byteplus.com/api/docs/ModelArk/2191775), verified 2026-06-06

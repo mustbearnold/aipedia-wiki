@@ -5,20 +5,20 @@ title: "Runway vs Google Veo 3.1"
 tools: [runway, veo]
 category: ai-video
 winner: runway
-seo_title: "Runway vs Google Veo 3.1: Production Workspace or Google Video Model? (May 2026)"
-meta_description: "Runway vs Google Veo 3.1, updated May 8, 2026. Runway wins for production workflow; Veo wins for Google API, Vertex AI, and provenance."
+seo_title: "Runway vs Google Veo 3.1: Production Workspace or Google Video Model? (June 2026)"
+meta_description: "Runway vs Google Veo 3.1, updated June 6, 2026. Runway wins for production workflow; Veo wins for Google API, Vertex AI, and provenance."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-06
+last_verified: 2026-06-06
 update_frequency: weekly
 canonical_fact_table: true
 ---
 
 # Runway vs Google Veo 3.1
 
-[Runway](../tools/runway.md) and [Google Veo 3.1](../tools/veo.md) are often compared as AI video generators, but the better framing is product vs model route. Runway is a production AI video workspace and API platform. Veo 3.1 is Google's frontier video model family across Flow, Gemini API, Vertex AI, Google Vids, and Gemini app surfaces.
+[Runway](/tools/runway/) and [Google Veo 3.1](/tools/veo/) are often compared as AI video generators, but the better framing is product vs model route. Runway is a production AI video workspace and API platform. Veo 3.1 is Google's frontier video model family across Flow, Gemini API, Vertex AI, Google Vids, and Gemini app surfaces.
 
-AiPedia's answer on May 8, 2026: **Runway wins for most production workflows; Veo 3.1 wins when the buyer specifically needs Google's model, Gemini API, Vertex AI, native vertical output, or Google provenance.**
+AiPedia's answer On June 6, 2026: **Runway wins for most production workflows; Veo 3.1 wins when the buyer specifically needs Google's model, Gemini API, Vertex AI, native vertical output, or Google provenance.**
 
 ## Quick Answer
 
@@ -43,7 +43,7 @@ Veo wins when the buyer is explicitly Google-native. The Gemini API docs and pri
 |---|---|---|
 | **Best viewed as** | Production AI video workspace plus API | Google video model family and API route |
 | **Best for** | Editing, model switching, teams, exports, workflow | Google API, Vertex AI, vertical output, provenance |
-| **Pricing shape** | Free plus Standard/Pro/Unlimited/Enterprise plans; API credits | Gemini API paid-tier per-second pricing |
+| **Pricing shape** | Free plus Standard/Pro/Max/Enterprise plans; API credits | Gemini API paid-tier per-second pricing |
 | **Main strength** | Shipping finished video | Google-native model deployment |
 | **Main watch-out** | Credits and third-party model terms can add up | Per-second API cost can climb quickly |
 | **AiPedia default** | Best production workspace | Best Google/API model route |
@@ -66,9 +66,9 @@ The key distinction: Veo may be available inside Runway, but direct Veo through 
 
 ## Pricing And Plan Guidance
 
-Runway's first serious paid tier is Standard at $12/user/month billed annually with 625 monthly credits. Pro is $28/user/month billed annually with 2,250 monthly credits. Unlimited is $76/user/month billed annually with Explore Mode relaxed-rate generation. Enterprise is custom. Those prices buy a workspace, not only model seconds.
+Runway's first serious paid tier is Standard at $12/user/month billed annually with 625 monthly credits. Pro is $28/user/month billed annually with 2,250 monthly credits. Max is $76/user/month billed annually with 9,500 monthly credits, one-month credit rollover, and relaxed Explore Mode generation. Enterprise is custom. Those prices buy a workspace, not only model seconds.
 
-Veo's clearest pricing is Gemini API per-second pricing. As of May 8, 2026, the pricing page lists Veo 3.1 Standard at $0.40/sec for 720p and 1080p, $0.60/sec for 4K; Fast at $0.10/sec for 720p, $0.12/sec for 1080p, $0.30/sec for 4K; and Lite at $0.05/sec for 720p and $0.08/sec for 1080p. That is easier to model for developers, but long iteration loops can get expensive fast.
+Veo's clearest pricing is Gemini API per-second pricing. As of June 6, 2026, the pricing page lists Veo 3.1 Standard at $0.40/sec for 720p and 1080p, $0.60/sec for 4K; Fast at $0.10/sec for 720p, $0.12/sec for 1080p, $0.30/sec for 4K; and Lite at $0.05/sec for 720p and $0.08/sec for 1080p. That is easier to model for developers, but long iteration loops can get expensive fast.
 
 ## Who Should Choose Runway
 
@@ -112,11 +112,11 @@ Yes. A team can use Veo through Google for governed model calls and Runway for c
 
 ## Sources
 
-- [Runway pricing](https://runwayml.com/pricing), verified 2026-05-08
-- [Runway API models](https://docs.dev.runwayml.com/guides/models/), verified 2026-05-08
-- [Runway API pricing](https://docs.dev.runwayml.com/guides/pricing/), verified 2026-05-08
-- [Runway Gen-4 help docs](https://help.runwayml.com/hc/en-us/articles/37327109429011-Creating-with-Gen-4-Video), verified 2026-05-08
-- [Google DeepMind Veo](https://deepmind.google/models/veo/), verified 2026-05-08
-- [Veo 3.1 Gemini API video docs](https://ai.google.dev/gemini-api/docs/video), verified 2026-05-08
-- [Gemini API Veo 3.1 pricing](https://ai.google.dev/gemini-api/docs/pricing), verified 2026-05-08
-- [Veo 3.1 Ingredients to Video update](https://blog.google/innovation-and-ai/technology/ai/veo-3-1-ingredients-to-video/), verified 2026-05-08
+- [Runway pricing](https://runwayml.com/pricing), verified 2026-06-06
+- [Runway API models](https://docs.dev.runwayml.com/guides/models/), verified 2026-06-06
+- [Runway API pricing](https://docs.dev.runwayml.com/guides/pricing/), verified 2026-06-06
+- [Runway Gen-4 help docs](https://help.runwayml.com/hc/en-us/articles/37327109429011-Creating-with-Gen-4-Video), verified 2026-06-06
+- [Google DeepMind Veo](https://deepmind.google/models/veo/), verified 2026-06-06
+- [Veo 3.1 Gemini API video docs](https://ai.google.dev/gemini-api/docs/video), verified 2026-06-06
+- [Gemini API Veo 3.1 pricing](https://ai.google.dev/gemini-api/docs/pricing), verified 2026-06-06
+- [Veo 3.1 Ingredients to Video update](https://blog.google/innovation-and-ai/technology/ai/veo-3-1-ingredients-to-video/), verified 2026-06-06

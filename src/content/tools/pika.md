@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$148/month billed yearly"
 status: active
 launched: 2023-11
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-06
+last_verified: 2026-06-06
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,8 +30,8 @@ facts:
     source: "https://pika.art"
     source_label: "Pika official site"
     source_id: pika-official
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-06-06
+    next_review_at: 2026-07-06
     volatility: high
     confidence: high
   creative_surface:
@@ -39,8 +39,8 @@ facts:
     source: "https://pika.art"
     source_label: "Pika official site"
     source_id: pika-official
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-06-06
+    next_review_at: 2026-07-06
     volatility: high
     confidence: medium
   pricing_anchor:
@@ -48,8 +48,8 @@ facts:
     source: "https://pika.art/pricing"
     source_label: "Pika pricing"
     source_id: pika-pricing
-    verified_at: 2026-05-13
-    next_review_at: 2026-08-13
+    verified_at: 2026-06-06
+    next_review_at: 2026-07-06
     volatility: high
     confidence: high
   workflow_surface:
@@ -57,8 +57,8 @@ facts:
     source: "https://pika.art"
     source_label: "Pika official site"
     source_id: pika-official
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-06-06
+    next_review_at: 2026-07-06
     volatility: high
     confidence: medium
   watch_out_for:
@@ -66,12 +66,12 @@ facts:
     source: "https://pika.art/pricing"
     source_label: "Pika pricing"
     source_id: pika-pricing
-    verified_at: 2026-05-04
-    next_review_at: 2026-08-04
+    verified_at: 2026-06-06
+    next_review_at: 2026-07-06
     volatility: high
     confidence: high
 tags: [ai-video, text-to-video, image-to-video, video-generation, creative, short-video, pikaffects, pika-2-5]
-seo_title: 'Pika Labs: Features, Pricing & Review (May 2026)'
+seo_title: 'Pika Labs: Features, Pricing & Review (June 2026)'
 meta_description: >-
   Pika Labs runs on Pika 2.5 with Pikaffects, Pikadditions, Pikaframes, and scene extension. Free includes 80 monthly video credits; paid plans run from Basic at $8/mo to Fancy at $148/mo billed yearly.
 author: aipedia.wiki Editorial
@@ -139,6 +139,7 @@ Pricing runs from a free tier to Fancy at $148/month billed yearly. The free tie
 
 ## Recent changes
 
+- **2026-06-06:** Rechecked Pika pricing and creative-effects positioning during the Kling/Pika/Runway/Seedance/Synthesia/Veo comparison refresh. The Basic/Standard/Pro/Fancy ladder and Pika 2.5 credit math remain the buyer anchor.
 - **2026-05-13:** Pika restructured its paid ladder. Standard moved from $8 to $28 with 700 credits, all resolutions, and Pikaframes. Pro moved from $28 to $76 with 2,300 credits. Fancy moved from $76 to $148 with 6,000 credits. A new Basic tier at $8 keeps the cheap entry point with commercial use rights but stays at 80 credits.
 
 ## System Verdict
@@ -162,7 +163,7 @@ Pricing runs from a free tier to Fancy at $148/month billed yearly. The free tie
 | **API access** | Enterprise tier only |
 | **Company** | Pika Labs |
 
-Pricing was refreshed against the official Pika pricing page on 2026-05-13. Feature notes were last checked against Pika's official site and Pika 2.5 release notes on 2026-04-17. See Sources.
+Pricing was refreshed against the official Pika pricing page on 2026-06-06. Feature notes were last checked against Pika's official site and Pika 2.5 release notes on 2026-04-17. See Sources.
 
 ## What it actually is
 
@@ -201,7 +202,7 @@ Subscription pricing via [pika.art/pricing](https://pika.art/pricing). Standard 
 | Pro | $76/mo billed yearly | 2,300 | Faster generations · larger credit allowance |
 | Fancy | $148/mo billed yearly | 6,000 | Fastest generations · largest listed credit allowance |
 
-*Prices verified 2026-05-13 via [pika.art/pricing](https://pika.art/pricing). VAT and monthly-billing prices may vary by country and billing toggle.*
+*Prices verified 2026-06-06 via [pika.art/pricing](https://pika.art/pricing). VAT and monthly-billing prices may vary by country and billing toggle.*
 
 ## Against the alternatives
 
@@ -227,7 +228,7 @@ Subscription pricing via [pika.art/pricing](https://pika.art/pricing). Standard 
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis above. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-05-13 against [pika.art/pricing](https://pika.art/pricing) and the [Pika 2.5 release notes](https://pika.art/blog/pika-2-5).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis above. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-06 against [pika.art/pricing](https://pika.art/pricing) and the [Pika 2.5 release notes](https://pika.art/blog/pika-2-5).
 
 ## FAQ
 
@@ -252,7 +253,7 @@ Yes, but treat API access as a separate/custom route. Standard and Pro users sho
 ## Sources
 
 - [Pika Labs official site](https://pika.art) (verified 2026-04-17)
-- [Pika Pricing](https://pika.art/pricing) (verified 2026-05-13)
+- [Pika Pricing](https://pika.art/pricing) (verified 2026-06-06)
 - [Pika 2.5 release notes](https://pika.art/blog/pika-2-5) (verified 2026-04-17)
 
 ## Related

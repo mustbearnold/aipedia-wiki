@@ -5,20 +5,20 @@ title: "Google Veo 3.1 vs Kling 3.0"
 tools: [veo, kling]
 category: ai-video
 winner: depends
-seo_title: "Google Veo 3.1 vs Kling 3.0: Google API or Cinematic Creator Model? (May 2026)"
-meta_description: "Google Veo 3.1 vs Kling 3.0, updated May 8, 2026. Veo wins for Google API/provenance; Kling is the creator-value challenger."
+seo_title: "Google Veo 3.1 vs Kling 3.0: Google API or Cinematic Creator Model? (June 2026)"
+meta_description: "Google Veo 3.1 vs Kling 3.0, updated June 6, 2026. Veo wins for Google API/provenance; Kling is the creator-value challenger."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-06
+last_verified: 2026-06-06
 update_frequency: weekly
 canonical_fact_table: true
 ---
 
 # Google Veo 3.1 vs Kling 3.0
 
-[Google Veo 3.1](../tools/veo.md) and [Kling 3.0](../tools/kling.md) are both top-tier AI video options, but they represent different buyer routes. Veo is the Google-native model path through Flow, Gemini API, Vertex AI, Google Vids, and Gemini app surfaces. Kling is Kuaishou's creator-facing cinematic video model family, with Video 3.0 and Video 3.0 Omni positioned around native audio, multi-shot storytelling, and reference consistency.
+[Google Veo 3.1](/tools/veo/) and [Kling 3.0](/tools/kling/) are both top-tier AI video options, but they represent different buyer routes. Veo is the Google-native model path through Flow, Gemini API, Vertex AI, Google Vids, and Gemini app surfaces. Kling is Kuaishou's creator-facing cinematic video model family, with Video 3.0 and Video 3.0 Omni positioned around native audio, multi-shot storytelling, and reference consistency.
 
-AiPedia's answer on May 8, 2026 is a split decision: **pick Veo 3.1 for Google API, governance, provenance, and auditable pricing; test Kling 3.0 for cinematic creator output and value.**
+AiPedia's answer On June 6, 2026 is a split decision: **pick Veo 3.1 for Google API, governance, provenance, and auditable pricing; test Kling 3.0 for cinematic creator output and value.**
 
 ## Quick Answer
 
@@ -60,7 +60,7 @@ Veo's mobile-first advantage is real. Google says Veo 3.1 Ingredients to Video s
 
 Kling wins when the buyer wants a creator-facing cinematic model test. Kuaishou says Kling 3.0 supports native audio across languages and accents, full multimodal input/output, text-to-video, image-to-video, reference-to-video, in-video editing, and improved consistency.
 
-That makes Kling especially attractive for social creators, agencies, and video teams who want to evaluate a strong cinematic model quickly. If the output brief is a short ad, music-video scene, product shot, character reference, or native-audio cinematic clip, Kling deserves a direct test beside Veo and [Seedance 2.0](../tools/seedance.md).
+That makes Kling especially attractive for social creators, agencies, and video teams who want to evaluate a strong cinematic model quickly. If the output brief is a short ad, music-video scene, product shot, character reference, or native-audio cinematic clip, Kling deserves a direct test beside Veo and [Seedance 2.0](/tools/seedance/).
 
 The buyer risk is not capability; it is certainty. Kling's pricing, credit costs, model access, watermark rules, commercial rights, and region availability should be checked inside the official account before volume use. Do not assume an old public plan quote unlocks all current 3.0/Omni capabilities.
 
@@ -112,11 +112,11 @@ Yes. For raw model quality, Seedance 2.0, Kling 3.0, and Veo 3.1 should be teste
 
 ## Sources
 
-- [Google DeepMind Veo](https://deepmind.google/models/veo/), verified 2026-05-08
-- [Veo 3.1 Gemini API video docs](https://ai.google.dev/gemini-api/docs/video), verified 2026-05-08
-- [Gemini API Veo 3.1 pricing](https://ai.google.dev/gemini-api/docs/pricing), verified 2026-05-08
-- [Veo 3.1 Ingredients to Video update](https://blog.google/innovation-and-ai/technology/ai/veo-3-1-ingredients-to-video/), verified 2026-05-08
-- [Veo 3.1 Gemini API launch](https://developers.googleblog.com/en/introducing-veo-3-1-and-new-creative-capabilities-in-the-gemini-api/), verified 2026-05-08
-- [Kuaishou: Kling AI 3.0 launch](https://ir.kuaishou.com/news-releases/news-release-details/kling-ai-launches-30-model-ushering-era-where-everyone-can-be), verified 2026-05-08
-- [Kling AI](https://klingai.com/), verified 2026-05-08
-- [Kling AI pricing](https://klingai.com/pricing), checked 2026-05-08
+- [Google DeepMind Veo](https://deepmind.google/models/veo/), verified 2026-06-06
+- [Veo 3.1 Gemini API video docs](https://ai.google.dev/gemini-api/docs/video), verified 2026-06-06
+- [Gemini API Veo 3.1 pricing](https://ai.google.dev/gemini-api/docs/pricing), verified 2026-06-06
+- [Veo 3.1 Ingredients to Video update](https://blog.google/innovation-and-ai/technology/ai/veo-3-1-ingredients-to-video/), verified 2026-06-06
+- [Veo 3.1 Gemini API launch](https://developers.googleblog.com/en/introducing-veo-3-1-and-new-creative-capabilities-in-the-gemini-api/), verified 2026-06-06
+- [Kuaishou: Kling AI 3.0 launch](https://ir.kuaishou.com/news-releases/news-release-details/kling-ai-launches-30-model-ushering-era-where-everyone-can-be), verified 2026-06-06
+- [Kling AI](https://klingai.com/), verified 2026-06-06
+- [Kling AI pricing](https://klingai.com/pricing), checked 2026-06-06

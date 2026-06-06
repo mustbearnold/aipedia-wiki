@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "Free + credit-based paid plans; verify 3.0/Omni access in app"
 status: active
 launched: 2024-06
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-06
+last_verified: 2026-06-06
 update_frequency: weekly
 affiliate:
   has_program: false
@@ -30,8 +30,8 @@ facts:
     source: "https://ir.kuaishou.com/news-releases/news-release-details/kling-ai-launches-30-model-ushering-era-where-everyone-can-be"
     source_label: "Kuaishou Kling 3.0 launch"
     source_id: kling-30-launch
-    verified_at: 2026-05-13
-    next_review_at: 2026-06-08
+    verified_at: 2026-06-06
+    next_review_at: 2026-07-06
     volatility: high
     confidence: high
   video_generation:
@@ -39,8 +39,8 @@ facts:
     source: "https://ir.kuaishou.com/news-releases/news-release-details/kling-ai-launches-30-model-ushering-era-where-everyone-can-be"
     source_label: "Kuaishou Kling 3.0 launch"
     source_id: kling-30-launch
-    verified_at: 2026-05-13
-    next_review_at: 2026-06-08
+    verified_at: 2026-06-06
+    next_review_at: 2026-07-06
     volatility: high
     confidence: high
   pricing_anchor:
@@ -48,8 +48,8 @@ facts:
     source: "https://klingai.com/pricing"
     source_label: "Kling AI pricing"
     source_id: kling-pricing
-    verified_at: 2026-05-13
-    next_review_at: 2026-06-08
+    verified_at: 2026-06-06
+    next_review_at: 2026-07-06
     volatility: high
     confidence: medium
   watch_out_for:
@@ -57,13 +57,13 @@ facts:
     source: "https://ir.kuaishou.com/news-releases/news-release-details/kling-ai-launches-30-model-ushering-era-where-everyone-can-be"
     source_label: "Kuaishou Kling 3.0 launch"
     source_id: kling-30-launch
-    verified_at: 2026-05-13
-    next_review_at: 2026-06-08
+    verified_at: 2026-06-06
+    next_review_at: 2026-07-06
     volatility: high
     confidence: high
 tags: [ai-video, video-generation, text-to-video, image-to-video, native-audio, kuaishou, kling, cinematic, multi-shot]
-seo_title: "Kling 3.0: Features, Pricing & Review (May 2026)"
-meta_description: "Kling 3.0 is Kuaishou's frontier AI video model family for native audio, 15-second clips, multi-shot storytelling, and cinematic output. Verified May 13, 2026."
+seo_title: "Kling 3.0: Features, Pricing & Review (June 2026)"
+meta_description: "Kling 3.0 is Kuaishou's frontier AI video model family for native audio, 15-second clips, multi-shot storytelling, and cinematic output. Verified June 6, 2026."
 author: "aipedia.wiki Editorial"
 best_for:
   - cinematic AI video
@@ -75,7 +75,7 @@ not_best_for:
   - public API procurement
   - Western-only data handling requirements
 quick_answer: >-
-  Kling 3.0 is one of the top AI video models to test in May 2026. As of May 13, 2026, pick it for cinematic short clips, native audio, multi-shot storytelling, and value after verifying current 3.0/Omni access in the official app. Skip it if you need a clean public API or static pricing that is easy to audit without login.
+  Kling 3.0 is one of the top AI video models to test in June 2026. As of June 6, 2026, pick it for cinematic short clips, native audio, multi-shot storytelling, and value after verifying current 3.0/Omni access in the official app. Skip it if you need a clean public API or static pricing that is easy to audit without login.
 price_history:
   - date: 2026-02-05
     plan: "Kling AI 3.0 series"
@@ -83,15 +83,15 @@ price_history:
     source: "https://ir.kuaishou.com/news-releases/news-release-details/kling-ai-launches-30-model-ushering-era-where-everyone-can-be"
     source_label: "Kuaishou Kling 3.0 launch"
     source_id: kling-30-launch
-    verified_at: 2026-05-13
-    note: "Historical launch-access detail. Re-verified May 13, 2026 against the same launch source."
+    verified_at: 2026-06-06
+    note: "Historical launch-access detail. Re-verified June 6, 2026 against the same launch source."
   - date: 2026-05-08
     plan: "Kling paid plans"
     price: "Credit-based; verify current plan access in app"
     source: "https://klingai.com/pricing"
     source_label: "Kling AI pricing"
     source_id: kling-pricing
-    verified_at: 2026-05-08
+    verified_at: 2026-06-06
     note: "Static crawler output did not expose complete current pricing details."
   - date: 2026-05-13
     plan: "Kling paid plans"
@@ -99,15 +99,19 @@ price_history:
     source: "https://klingai.com/pricing"
     source_label: "Kling AI pricing"
     source_id: kling-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-06-06
     note: "Pricing page bot-blocked on this pass; treat in-app plan, credit cost, and 3.0/Omni access as the source of truth."
 ---
 
 # Kling 3.0
 
-Kling 3.0 is Kuaishou's frontier AI video model family. As of May 13, 2026, it belongs on the short list with [Seedance 2.0](/tools/seedance/) and [Google Veo 3.1](/tools/veo/) for anyone comparing the best current AI video models.
+Kling 3.0 is Kuaishou's frontier AI video model family. As of June 6, 2026, it belongs on the short list with [Seedance 2.0](/tools/seedance/) and [Google Veo 3.1](/tools/veo/) for anyone comparing the best current AI video models.
 
 The right way to evaluate Kling is prompt-first: run the same test prompts through Kling, Seedance, Veo, and Runway, then compare motion, shot continuity, audio, character consistency, text preservation, and post-production cleanup time.
+
+## Recent changes
+
+- **2026-06-06:** Rechecked official Kling 3.0/Omni documentation and pricing-access caveats while refreshing the old Kling/Pika/Seedance/Synthesia/Veo comparison cluster. Keep plan guidance conservative because exact 3.0/Omni access still needs account-level confirmation.
 
 ## System Verdict
 
@@ -154,7 +158,7 @@ Kuaishou also says Kling AI has served more than 60 million creators and produce
 
 ## Pricing And Access
 
-Kling uses a credit-based app model. AiPedia is not hard-coding a specific May 2026 paid-plan recommendation until the official public pricing surface exposes a static, crawlable plan table or the logged-in buyer route is manually verified.
+Kling uses a credit-based app model. AiPedia is not hard-coding a specific June 2026 paid-plan recommendation until the official public pricing surface exposes a static, crawlable plan table or the logged-in buyer route is manually verified.
 
 For buyers, that means the right plan is the lowest current plan that explicitly unlocks the model you need:
 
@@ -177,7 +181,7 @@ For buyers, that means the right plan is the lowest current plan that explicitly
 ## FAQ
 
 **Is Kling 3.0 one of the best AI video models?**
-Yes. On May 13, 2026, it belongs in the frontier set with Seedance 2.0 and Veo 3.1.
+Yes. On June 6, 2026, it belongs in the frontier set with Seedance 2.0 and Veo 3.1.
 
 **How much does Kling 3.0 cost?**
 Kling is credit-based. Verify the current paid plan, model access, and credit cost in the official app before buying because public pricing details can change and the page is not reliably crawlable as static text.
@@ -190,9 +194,9 @@ Kuaishou's official 3.0 launch describes native audio across English, Chinese, J
 
 ## Sources
 
-- [Kuaishou: Kling AI 3.0 launch](https://ir.kuaishou.com/news-releases/news-release-details/kling-ai-launches-30-model-ushering-era-where-everyone-can-be) (verified 2026-05-13)
-- [Kling AI](https://klingai.com/) (verified 2026-05-13)
-- [Kling AI pricing](https://klingai.com/pricing) (checked 2026-05-13; dynamic page, verify in app)
+- [Kuaishou: Kling AI 3.0 launch](https://ir.kuaishou.com/news-releases/news-release-details/kling-ai-launches-30-model-ushering-era-where-everyone-can-be) (verified 2026-06-06)
+- [Kling AI](https://klingai.com/) (verified 2026-06-06)
+- [Kling AI pricing](https://klingai.com/pricing) (checked 2026-06-06; dynamic page, verify in app)
 
 ## Related
 

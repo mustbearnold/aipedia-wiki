@@ -4196,7 +4196,8 @@
       "url": "https://klingai.com",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-06"
     },
     {
       "id": "kling-pricing",
@@ -4205,7 +4206,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-05"
+      "last_checked": "2026-06-06"
     },
     {
       "id": "kling-30-launch",
@@ -4214,7 +4215,7 @@
       "type": "newsroom",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-05"
+      "last_checked": "2026-06-06"
     },
     {
       "id": "kokoro-model",
@@ -5846,7 +5847,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-05"
+      "last_checked": "2026-06-06"
     },
     {
       "id": "pika-pricing",
@@ -5855,7 +5856,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-05"
+      "last_checked": "2026-06-06"
     },
     {
       "id": "pinecone-official",
@@ -6560,7 +6561,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-05"
+      "last_checked": "2026-06-06"
     },
     {
       "id": "runway-api-pricing",
@@ -6569,7 +6570,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-05"
+      "last_checked": "2026-06-06"
     },
     {
       "id": "runway-aleph-2",
@@ -6595,7 +6596,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-24"
+      "last_checked": "2026-06-06"
     },
     {
       "id": "runway-pricing",
@@ -6604,7 +6605,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-05"
+      "last_checked": "2026-06-06"
     },
     {
       "id": "runway-research",
@@ -6620,7 +6621,8 @@
       "url": "https://help.runwayml.com/hc/en-us/articles/18927776141715-Usage-rights",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-06"
     },
     {
       "id": "rytr-official",
@@ -6702,7 +6704,7 @@
     },
     {
       "trust_tier": "primary",
-      "last_checked": "2026-06-05",
+      "last_checked": "2026-06-06",
       "id": "seedance-byteplus-modelark",
       "label": "BytePlus ModelArk",
       "url": "https://www.byteplus.com/en/product/modelark",
@@ -6716,7 +6718,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-05"
+      "last_checked": "2026-06-06"
     },
     {
       "id": "seedance-pricing",
@@ -6725,7 +6727,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-05"
+      "last_checked": "2026-06-06"
     },
     {
       "id": "seedance-bytedance-launch",
@@ -6734,7 +6736,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-05"
+      "last_checked": "2026-06-06"
     },
     {
       "id": "seedance-byteplus-api",
@@ -6743,7 +6745,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-05"
+      "last_checked": "2026-06-06"
     },
     {
       "id": "seedance-ai-independent-disclosure",
@@ -6752,7 +6754,7 @@
       "type": "official",
       "trust_tier": "secondary",
       "volatility": "high",
-      "last_checked": "2026-06-05"
+      "last_checked": "2026-06-06"
     },
     {
       "trust_tier": "primary",
@@ -7051,7 +7053,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-05"
+      "last_checked": "2026-06-06"
     },
     {
       "id": "synthesia-product",
@@ -7060,7 +7062,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-05"
+      "last_checked": "2026-06-06"
     },
     {
       "id": "synthesia-avatars",
@@ -7078,7 +7080,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-05"
+      "last_checked": "2026-06-06"
     },
     {
       "id": "synthesia-enterprise",
@@ -7096,7 +7098,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-05"
+      "last_checked": "2026-06-06"
     },
     {
       "id": "synthesia-personal-avatar-docs",
@@ -7105,7 +7107,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-05"
+      "last_checked": "2026-06-06"
     },
     {
       "id": "synthesia-security-practices",
@@ -7114,7 +7116,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-05"
+      "last_checked": "2026-06-06"
     },
     {
       "id": "tabnine-docs",
@@ -7517,7 +7519,8 @@
       "url": "https://deepmind.google/models/veo/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-06"
     },
     {
       "id": "veo-pricing",
@@ -7525,7 +7528,8 @@
       "url": "https://one.google.com/about/google-ai-plans/",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-06"
     },
     {
       "id": "veo-gemini-api-pricing",
@@ -7533,7 +7537,8 @@
       "url": "https://ai.google.dev/gemini-api/docs/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-06"
     },
     {
       "id": "veo-31-gemini-api-docs",
@@ -7541,7 +7546,8 @@
       "url": "https://ai.google.dev/gemini-api/docs/video",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-06"
     },
     {
       "id": "veo-31-ingredients",
@@ -7549,7 +7555,8 @@
       "url": "https://blog.google/innovation-and-ai/technology/ai/veo-3-1-ingredients-to-video/",
       "type": "blog",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-06"
     },
     {
       "id": "veo-31-gemini-api-update",
@@ -7557,7 +7564,8 @@
       "url": "https://developers.googleblog.com/en/introducing-veo-3-1-and-new-creative-capabilities-in-the-gemini-api/",
       "type": "blog",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-06"
     },
     {
       "id": "veo-31-lite",
@@ -7565,7 +7573,8 @@
       "url": "https://blog.google/innovation-and-ai/technology/ai/veo-3-1-lite/",
       "type": "blog",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-06"
     },
     {
       "id": "vidu-official",

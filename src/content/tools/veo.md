@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "Google AI plans + Gemini API paid tier $0.05-$0.60/sec"
 status: active
 launched: 2025-10
-last_updated: 2026-05-20
-last_verified: 2026-05-20
+last_updated: 2026-06-06
+last_verified: 2026-06-06
 update_frequency: weekly
 affiliate:
   has_program: false
@@ -30,8 +30,8 @@ facts:
     source: "https://deepmind.google/models/veo/"
     source_label: "Google DeepMind Veo"
     source_id: veo-official
-    verified_at: 2026-05-13
-    next_review_at: 2026-06-13
+    verified_at: 2026-06-06
+    next_review_at: 2026-07-06
     volatility: high
     confidence: high
   video_generation:
@@ -39,8 +39,8 @@ facts:
     source: "https://blog.google/innovation-and-ai/technology/ai/veo-3-1-ingredients-to-video/"
     source_label: "Veo 3.1 Ingredients to Video update"
     source_id: veo-31-ingredients
-    verified_at: 2026-05-13
-    next_review_at: 2026-06-13
+    verified_at: 2026-06-06
+    next_review_at: 2026-07-06
     volatility: high
     confidence: high
   pricing_anchor:
@@ -48,8 +48,8 @@ facts:
     source: "https://ai.google.dev/gemini-api/docs/pricing"
     source_label: "Gemini API Veo 3.1 pricing"
     source_id: veo-gemini-api-pricing
-    verified_at: 2026-05-13
-    next_review_at: 2026-06-13
+    verified_at: 2026-06-06
+    next_review_at: 2026-07-06
     volatility: high
     confidence: high
   api_available:
@@ -57,8 +57,8 @@ facts:
     source: "https://ai.google.dev/gemini-api/docs/video"
     source_label: "Gemini API Veo 3.1 docs"
     source_id: veo-31-gemini-api-docs
-    verified_at: 2026-05-13
-    next_review_at: 2026-06-13
+    verified_at: 2026-06-06
+    next_review_at: 2026-07-06
     volatility: high
     confidence: high
   watch_out_for:
@@ -66,13 +66,13 @@ facts:
     source: "https://ai.google.dev/gemini-api/docs/pricing"
     source_label: "Gemini API Veo 3.1 pricing"
     source_id: veo-gemini-api-pricing
-    verified_at: 2026-05-13
-    next_review_at: 2026-06-13
+    verified_at: 2026-06-06
+    next_review_at: 2026-07-06
     volatility: high
     confidence: high
 tags: [ai-video, text-to-video, image-to-video, video-generation, google, deepmind, gemini, vertex-ai, veo, native-audio]
-seo_title: "Google Veo 3.1: Features, Pricing & Review (May 2026)"
-meta_description: "Google Veo 3.1 is a frontier AI video model for Flow, Gemini API, Vertex AI, vertical video, native audio, and SynthID provenance. Google I/O 2026 added Gemini Omni and refreshed Google AI Ultra pricing; Veo API pricing last verified May 13."
+seo_title: "Google Veo 3.1: Features, Pricing & Review (June 2026)"
+meta_description: "Google Veo 3.1 is a frontier AI video model for Flow, Gemini API, Vertex AI, vertical video, native audio, and SynthID provenance. Google I/O 2026 added Gemini Omni and refreshed Google AI Ultra pricing; Veo API pricing last verified June 6."
 author: "aipedia.wiki Editorial"
 best_for:
   - Google Workspace users
@@ -93,7 +93,7 @@ price_history:
     source: "https://developers.googleblog.com/en/introducing-veo-3-1-and-new-creative-capabilities-in-the-gemini-api/"
     source_label: "Veo 3.1 Gemini API launch"
     source_id: veo-31-gemini-api-update
-    verified_at: 2026-05-13
+    verified_at: 2026-06-06
     note: "Google announced Veo 3.1 and Veo 3.1 Fast in paid preview for Gemini API, Google AI Studio, and Vertex AI."
   - date: 2026-03-31
     plan: "Veo 3.1 Lite"
@@ -101,7 +101,7 @@ price_history:
     source: "https://blog.google/innovation-and-ai/technology/ai/veo-3-1-lite/"
     source_label: "Veo 3.1 Lite announcement"
     source_id: veo-31-lite
-    verified_at: 2026-05-13
+    verified_at: 2026-06-06
     note: "Google introduced Veo 3.1 Lite as its lower-cost video model for developers."
   - date: 2026-05-08
     plan: "Gemini API Veo 3.1 family"
@@ -109,7 +109,7 @@ price_history:
     source: "https://ai.google.dev/gemini-api/docs/pricing"
     source_label: "Gemini API Veo 3.1 pricing"
     source_id: veo-gemini-api-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-06-06
     note: "Official Gemini API pricing lists Standard, Fast, and Lite rates by resolution."
   - date: 2026-05-13
     plan: "Gemini API Veo 3.1 family"
@@ -117,13 +117,13 @@ price_history:
     source: "https://ai.google.dev/gemini-api/docs/pricing"
     source_label: "Gemini API Veo 3.1 pricing"
     source_id: veo-gemini-api-pricing
-    verified_at: 2026-05-13
-    note: "Re-verified May 13, 2026: Veo 3.1 Standard $0.40/sec at 720p/1080p and $0.60/sec at 4K, Fast $0.10-$0.30/sec, Lite $0.05-$0.08/sec all hold; no new Veo version listed."
+    verified_at: 2026-06-06
+    note: "Re-verified June 6, 2026: Veo 3.1 Standard $0.40/sec at 720p/1080p and $0.60/sec at 4K, Fast $0.10-$0.30/sec, Lite $0.05-$0.08/sec all hold; no new Veo version listed."
 ---
 
 # Google Veo 3.1
 
-Google Veo 3.1 is a frontier AI video model family from Google DeepMind. As of May 13, 2026, AiPedia ranks it as the best Google/API pick in AI video: strong native audio, vertical mobile output, 1080p/4K workflows, Gemini API pricing, Vertex AI access, and SynthID provenance.
+Google Veo 3.1 is a frontier AI video model family from Google DeepMind. As of June 6, 2026, AiPedia ranks it as the best Google/API pick in AI video: strong native audio, vertical mobile output, 1080p/4K workflows, Gemini API pricing, Vertex AI access, and SynthID provenance.
 
 **May 19, 2026 update:** [Google I/O 2026 added Gemini Omni and refreshed Google AI Ultra pricing](/news/2026-05-19-google-io-gemini-35-search-ai-ultra/). Veo 3.1 remains the source-backed API/Vertex AI video model on this page, but consumer video access now also needs to be compared against [Gemini Omni](/tools/gemini-omni/) and the new $100/$200 Ultra tiers.
 
@@ -152,7 +152,7 @@ It should be tested directly against [Seedance 2.0](/tools/seedance/) and [Kling
 
 ## Pricing
 
-The strongest source-backed pricing signal is the Gemini API pricing page. On May 13, 2026, it listed:
+The strongest source-backed pricing signal is the Gemini API pricing page. On June 6, 2026, it listed:
 
 | Model | 720p | 1080p | 4K |
 |---|---:|---:|---:|
@@ -188,7 +188,7 @@ Consumer plan access can vary by country, account, and product surface. For prod
 ## FAQ
 
 **Is Veo 3.1 one of the best AI video models?**
-Yes. On May 13, 2026, it belongs in the frontier short list with Seedance 2.0 and Kling 3.0.
+Yes. On June 6, 2026, it belongs in the frontier short list with Seedance 2.0 and Kling 3.0.
 
 **How much does Veo 3.1 cost through the API?**
 The Gemini API pricing page lists Veo 3.1 family rates from $0.05/sec for Lite 720p to $0.60/sec for Standard 4K.
@@ -199,12 +199,12 @@ Yes. Google's January 2026 update specifically highlights native vertical 9:16 o
 ## Sources
 
 - [Google I/O 2026 Gemini and subscription update](/news/2026-05-19-google-io-gemini-35-search-ai-ultra/) (verified 2026-05-20)
-- [Google DeepMind Veo](https://deepmind.google/models/veo/) (verified 2026-05-13)
-- [Veo 3.1 Gemini API video docs](https://ai.google.dev/gemini-api/docs/video) (verified 2026-05-13)
-- [Gemini API Veo 3.1 pricing](https://ai.google.dev/gemini-api/docs/pricing) (verified 2026-05-13)
-- [Veo 3.1 Ingredients to Video update](https://blog.google/innovation-and-ai/technology/ai/veo-3-1-ingredients-to-video/) (verified 2026-05-13)
-- [Veo 3.1 Gemini API launch](https://developers.googleblog.com/en/introducing-veo-3-1-and-new-creative-capabilities-in-the-gemini-api/) (verified 2026-05-13)
-- [Veo 3.1 Lite announcement](https://blog.google/innovation-and-ai/technology/ai/veo-3-1-lite/) (verified 2026-05-13)
+- [Google DeepMind Veo](https://deepmind.google/models/veo/) (verified 2026-06-06)
+- [Veo 3.1 Gemini API video docs](https://ai.google.dev/gemini-api/docs/video) (verified 2026-06-06)
+- [Gemini API Veo 3.1 pricing](https://ai.google.dev/gemini-api/docs/pricing) (verified 2026-06-06)
+- [Veo 3.1 Ingredients to Video update](https://blog.google/innovation-and-ai/technology/ai/veo-3-1-ingredients-to-video/) (verified 2026-06-06)
+- [Veo 3.1 Gemini API launch](https://developers.googleblog.com/en/introducing-veo-3-1-and-new-creative-capabilities-in-the-gemini-api/) (verified 2026-06-06)
+- [Veo 3.1 Lite announcement](https://blog.google/innovation-and-ai/technology/ai/veo-3-1-lite/) (verified 2026-06-06)
 
 ## Related
 
