@@ -126,9 +126,9 @@ Do not subscribe to multiple chatbots because each one has a new model announcem
 - [Best Claude Alternatives](/guides/claude-alternatives/)
 - [Best DeepSeek Alternatives](/guides/deepseek-alternatives/)
 - [Best AI Coding Assistant](/guides/best-ai-coding-assistant/)
-- [Best Free AI Tools](/guides/best-free-ai-tools/)
+- [Best Free AI Tools](/guides/best-free-ai-tools/) is the June 6 verified free-stack guide for ChatGPT, Gemini, Claude, Perplexity, and NotebookLM, with upgrade triggers separated by general chat, Google-native work, writing, cited web research, and source-grounded notebooks.
 - [Best AI Tools Under $20/month](/guides/best-ai-tools-under-20-month/) is the June 6 verified first-paid-plan guide for ChatGPT Plus, Claude Pro, Gemini/Google AI Pro, GitHub Copilot Pro, Cursor, Suno, Freepik, ElevenLabs, Perplexity, and NotebookLM, with explicit credit-burn and upgrade-pressure warnings before buyers stack subscriptions.
-- [Best Open Source AI Tools](/guides/best-open-source-ai-tools/)
+- [Best Open Source AI Tools](/guides/best-open-source-ai-tools/) is the June 6 verified open-source/open-weight guide for Ollama, LM Studio, Open WebUI, Llama, Mistral, DeepSeek, FLUX, Stable Diffusion, Whisper, and Hugging Face, with local-control and licensing caveats before chatbot buyers self-host.
 - [Best AI Tools for Product Managers](/guides/best-ai-tools-for-product-managers/) is the June 6 verified PM guide for ChatGPT, Claude, Perplexity, Figma, Notion AI, Fathom, and Gemini, with source trails, design handoff, meeting capture, and roadmap-data guardrails.
 - [Best AI Tools for Consultants](/guides/best-ai-tools-for-consultants/) is the June 6 verified consulting workflow guide for ChatGPT, Claude, Perplexity, Gamma, Fathom, and client-data safety.
 - [Best AI Tools for Journalists](/guides/best-ai-tools-for-journalists/) is the June 6 verified guide for using broad assistants only with source logs, source-pack notebooks, primary-source checks, account security, and newsroom policy.

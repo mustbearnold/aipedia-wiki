@@ -7,8 +7,8 @@ tool_count: 12
 seo_title: "Best AI Infrastructure & Model API Tools (June 2026)"
 meta_description: "Updated June 3, 2026: compare OpenRouter after its $113M Series B, OpenAI API, Claude API, Gemini API, Mistral 3, Groq, Replicate, fal, Fireworks AI, Browserbase, Deepgram, Pinecone, Weaviate, Qdrant, LM Studio, and the June 3 agent-infrastructure wave from NVIDIA, Microsoft, Postman, RelationalAI, 7AI, and the White House."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-03
-last_verified: 2026-06-03
+last_updated: 2026-06-06
+last_verified: 2026-06-06
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -82,8 +82,8 @@ The June 3 update widens that control story. Microsoft Build put Work IQ and Fou
 
 ## Money Pages To Keep Current
 
-- [Best pay-as-you-go AI tools and APIs](/guides/best-pay-as-you-go-ai-tools/) now separates true metered API usage from flat subscriptions and should stay synchronized with OpenAI, Claude, Gemini, OpenRouter, Mistral, Groq, Replicate, fal, Deepgram, ElevenLabs, and Fish Audio pricing.
-- [Best open source AI tools](/guides/best-open-source-ai-tools/) should stay aligned because open-model buyers often compare local control against hosted pay-as-you-go APIs.
+- [Best pay-as-you-go AI tools and APIs](/guides/best-pay-as-you-go-ai-tools/) was refreshed June 6, 2026 to separate true metered API usage from flat subscriptions and keep OpenAI, Claude, Gemini, OpenRouter, Mistral, Groq, Replicate, fal, Deepgram, ElevenLabs, and Fish Audio pricing risk in one buyer path.
+- [Best open source AI tools](/guides/best-open-source-ai-tools/) was refreshed June 6, 2026 for Ollama, LM Studio, Open WebUI, Llama, Mistral, DeepSeek, FLUX, Stable Diffusion, Whisper, and Hugging Face because open-model buyers often compare local control against hosted pay-as-you-go APIs.
 - [Best AI tools for developers](/guides/best-ai-tools-for-developers/) is the June 6 verified developer guide for separating Cursor, GitHub Copilot AI Credits, Claude Code shared limits/API credits, Codex token credits, Replit Agent, and Aider BYOK API costs.
 - A new `OpenRouter vs direct APIs` comparison would capture buyers choosing between a model router and direct OpenAI/Anthropic/Google contracts.
 - A new `Replicate vs fal.ai` comparison would capture image/video/API buyers choosing between broad model catalog and fast media-generation infrastructure.
@@ -98,25 +98,25 @@ Do not publish infrastructure pages with old flat monthly subscription framing. 
 
 - [OpenRouter pricing](https://openrouter.ai/pricing) (verified 2026-05-27)
 - [OpenRouter Series B announcement](https://www.businesswire.com/news/home/20260526953416/en/OpenRouter-Raises-%24113-Million-CapitalG-led-Series-B-as-Weekly-Volume-Explodes-to-25T-Tokens) (verified 2026-05-27)
-- [OpenAI API pricing](https://openai.com/api/pricing/) (verified 2026-05-13)
-- [Claude API pricing](https://platform.claude.com/docs/en/about-claude/pricing) (verified 2026-05-13)
-- [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing) (verified 2026-05-13)
-- [Mistral AI pricing](https://mistral.ai/pricing) (verified 2026-05-13)
-- [Groq pricing](https://groq.com/pricing) (verified 2026-05-13)
-- [Replicate pricing](https://replicate.com/pricing) (verified 2026-05-13)
+- [OpenAI API pricing](https://openai.com/api/pricing/) (verified 2026-06-06)
+- [Claude API pricing](https://platform.claude.com/docs/en/about-claude/pricing) (verified 2026-06-06)
+- [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing) (verified 2026-06-06)
+- [Mistral AI pricing](https://mistral.ai/pricing) (verified 2026-06-06)
+- [Groq pricing](https://groq.com/pricing) (verified 2026-06-06)
+- [Replicate pricing](https://replicate.com/pricing) (verified 2026-06-06)
 - [fal Model API pricing docs](https://fal.ai/docs/documentation/model-apis/pricing) (verified 2026-06-02)
 - [Fireworks AI pricing](https://fireworks.ai/pricing) (verified 2026-06-02)
 - [Fireworks billing FAQ](https://docs.fireworks.ai/faq-new/billing-pricing/how-much-does-fireworks-cost) (verified 2026-06-02)
 - [Fireworks inference documentation](https://docs.fireworks.ai/guides/inference-introduction) (verified 2026-06-02)
-- [Browserbase pricing](https://www.browserbase.com/pricing) (verified 2026-06-01)
-- [Deepgram pricing](https://deepgram.com/pricing) (verified 2026-05-13)
-- [Together AI pricing](https://www.together.ai/pricing) (verified 2026-05-13)
+- [Browserbase pricing](https://www.browserbase.com/pricing) (verified 2026-06-06)
+- [Deepgram pricing](https://deepgram.com/pricing) (verified 2026-06-06)
+- [Together AI pricing](https://www.together.ai/pricing) (verified 2026-06-06)
 - [Hugging Face pricing](https://huggingface.co/pricing) (verified 2026-06-02)
-- [Modal pricing](https://modal.com/pricing) (verified 2026-05-13)
-- [LM Studio](https://lmstudio.ai/) (verified 2026-05-13)
-- [Pinecone pricing](https://www.pinecone.io/pricing/) (verified 2026-05-13)
-- [Weaviate pricing](https://weaviate.io/pricing) (verified 2026-05-13)
-- [Qdrant Cloud billing](https://qdrant.tech/documentation/cloud-pricing-payments/) (verified 2026-05-13)
+- [Modal pricing](https://modal.com/pricing) (verified 2026-06-06)
+- [LM Studio](https://lmstudio.ai/) (verified 2026-06-06)
+- [Pinecone pricing](https://www.pinecone.io/pricing/) (verified 2026-06-06)
+- [Weaviate pricing](https://weaviate.io/pricing) (verified 2026-06-06)
+- [Qdrant Cloud billing](https://qdrant.tech/documentation/cloud-pricing-payments/) (verified 2026-06-06)
 - [CoreWeave autonomous agent improvement launch](https://investors.coreweave.com/news/news-details/2026/CoreWeave-Closes-the-Training-to-Inference-Gap-for-Autonomous-Agent-Improvement/default.aspx) (verified 2026-05-31)
 - [OpenAI Rosalind Biodefense](https://openai.com/index/strengthening-societal-resilience-with-rosalind-biodefense/) (verified 2026-05-31)
 - [Geordie AI Series A](https://www.geordie.ai/resources/geordie-ai-raises-30m-series-a-as-enterprises-race-to-govern-autonomous-ai-agents/) (verified 2026-05-31)

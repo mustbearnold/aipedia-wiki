@@ -55,7 +55,7 @@ Start with [ElevenLabs](/tools/elevenlabs/) for polished creator voice generatio
 
 - [Best AI for Transcription](/guides/best-ai-for-transcription/) is the June 6 verified STT buyer guide for Fathom, Descript, Deepgram, AssemblyAI, and ElevenLabs, with meeting, creator-editing, developer API, speech-understanding, and wider voice-platform lanes separated.
 - [Best AI Tools for Podcasters](/guides/best-ai-for-podcasters/) is the June 6 verified creator workflow guide for Descript, Castmagic, ElevenLabs, and Riverside, with consent, synthetic voice, disclosure, recording-quality, and repurposing guardrails tightened.
-- [Best AI Voice Generator for YouTube](/guides/best-ai-voice-youtube/)
+- [Best AI Voice Generator for YouTube](/guides/best-ai-voice-youtube/) was refreshed June 6, 2026 with current ElevenLabs, Fish Audio, MiniMax Speech, Murf, WellSaid, HeyGen, Synthesia, and Descript checks plus creator-specific consent, disclosure, and credit-economics warnings.
 - [Best AI Tools Under $20/month](/guides/best-ai-tools-under-20-month/) is the June 6 verified budget guide that treats ElevenLabs Starter as a low-cost voice test, not a blanket production answer, because credits, model choice, agents, dubbing, music, and API usage can change real cost quickly.
 - [Best AI Tools for YouTube Creators](/guides/best-ai-for-youtube-creators/) is the June 6 verified creator-stack guide for Descript editing, ChatGPT scripts, Canva/Midjourney thumbnails, ElevenLabs narration, OpusClip Shorts, Runway B-roll, and YouTube altered/synthetic disclosure checks.
 - [Best AI Avatar Video Generator](/guides/best-ai-avatar-video-generator/)
@@ -70,9 +70,9 @@ Start with [ElevenLabs](/tools/elevenlabs/) for polished creator voice generatio
 - [ElevenLabs API and Agents PAYG update](https://elevenlabs.io/blog/weve-lowered-api-agents-pricing-and-introduced-pay-as-you-go) (verified 2026-06-05)
 - [Fish Audio plans](https://fish.audio/plan/) (verified 2026-06-05)
 - [Fish Audio API pricing](https://docs.fish.audio/developer-guide/models-pricing/pricing-and-rate-limits) (verified 2026-06-05)
-- [MiniMax Audio Subscription pricing](https://platform.minimax.io/docs/guides/pricing-speech) (verified 2026-05-13)
-- [MiniMax pay-as-you-go pricing](https://platform.minimax.io/docs/guides/pricing-paygo) (verified 2026-05-13)
-- [MiniMax T2A API docs](https://platform.minimax.io/docs/api-reference/speech-t2a-intro) (verified 2026-05-13)
+- [MiniMax Audio Subscription pricing](https://platform.minimax.io/docs/guides/pricing-speech) (verified 2026-06-06)
+- [MiniMax pay-as-you-go pricing](https://platform.minimax.io/docs/guides/pricing-paygo) (verified 2026-06-06)
+- [MiniMax T2A API docs](https://platform.minimax.io/docs/api-reference/speech-t2a-intro) (verified 2026-06-06)
 - [Cartesia pricing](https://cartesia.ai/pricing) (verified 2026-06-03)
 - [Mistral pricing](https://mistral.ai/pricing) (verified 2026-06-06)
 - [Voxtral TTS model card](https://docs.mistral.ai/models/voxtral-tts-26-03) (verified 2026-06-05)

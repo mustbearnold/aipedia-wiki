@@ -91,7 +91,7 @@ The June 6 [summarization guide](/guides/best-ai-for-summarization/) refresh kee
 - [Best AI Tools for Consultants](/guides/best-ai-tools-for-consultants/) is the June 6 verified adjacent guide for meeting capture, client-call source material, cited research, and memo synthesis.
 - [Best AI Tools for Journalists](/guides/best-ai-tools-for-journalists/) is the June 6 verified adjacent guide for source-pack notebooks, transcript review, consented interview capture, and newsroom retention/safety guardrails.
 - [Best AI Tools for Nonprofits](/guides/best-ai-tools-for-nonprofits/) is the June 6 verified adjacent guide for NotebookLM source packs, board packets, grant guidance, program reports, and donor/beneficiary data boundaries.
-- [Best Free AI Tools](/guides/best-free-ai-tools/)
+- [Best Free AI Tools](/guides/best-free-ai-tools/) is the June 6 verified no-cost stack guide that keeps NotebookLM in the source-grounded study lane beside ChatGPT, Gemini, Claude, and Perplexity rather than treating every free assistant as interchangeable notes software.
 - [Best AI Tools for Students](/guides/best-ai-tools-for-students/) is the June 6 verified student stack guide that keeps NotebookLM as the assigned-source study lane while separating ChatGPT tutoring, Perplexity cited research, Claude writing feedback, Cursor coding help, Gemini Google-native workflows, and Semantic Scholar paper discovery.
 
 ## Sources

@@ -2,20 +2,20 @@
 type: workflow
 slug: youtube-content-stack
 title: "Solo YouTuber AI Stack: Script, Voice, Edit, B-roll, Thumbnails"
-seo_title: "Solo YouTuber AI Workflow Stack (May 2026): Script, Voice, Editing, B-roll, Thumbnails"
-meta_description: "Updated May 13, 2026: a practical solo YouTuber AI workflow using Claude, Descript, ElevenLabs, Canva, and optional Runway/Midjourney/Ideogram. Includes buying order, avoid-if guidance, and source-backed plan caveats."
+seo_title: "Solo YouTuber AI Workflow Stack (June 2026): Script, Voice, Editing, B-roll, Thumbnails"
+meta_description: "Updated June 6, 2026: a practical solo YouTuber AI workflow using Claude, Descript, ElevenLabs, Canva, and optional Runway/Midjourney/Ideogram. Includes buying order, avoid-if guidance, and source-backed plan caveats."
 description: "A current solo YouTuber AI workflow for turning a topic into a publishable video without overbuying AI subscriptions."
 stack: [claude, descript, elevenlabs, canva, runway, midjourney, ideogram]
 tools_mentioned: [claude, descript, elevenlabs, canva, runway, midjourney, ideogram, perplexity]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-06
+last_verified: 2026-06-06
 update_frequency: monthly
 ---
 
 # Solo YouTuber AI Stack: Script, Voice, Edit, B-roll, Thumbnails
 
-As of May 13, 2026, the best solo YouTube AI workflow is not a fixed $187/month bundle. It is a buying sequence:
+As of June 6, 2026, the best solo YouTube AI workflow is not a fixed bundle. It is a buying sequence:
 
 1. **Script and structure:** [Claude](/tools/claude/)
 2. **Editing, captions, and repurposing:** [Descript](/tools/descript/)
@@ -75,7 +75,7 @@ Use [ElevenLabs](/tools/elevenlabs/) when the channel is faceless, multilingual,
 
 If using a cloned voice, get consent, keep source audio clean, and disclose synthetic voice use when platform rules, sponsor expectations, or audience trust require it.
 
-For a deeper voice-only buying decision, use the current [Best AI Voice Generator for YouTube](/guides/best-ai-voice-youtube/) guide. It now separates polished creator narration, value/open workflows, hosted API options, and business explainer voice tools instead of treating every TTS product as the same purchase.
+For a deeper voice-only buying decision, use the June 6 refreshed [Best AI Voice Generator for YouTube](/guides/best-ai-voice-youtube/) guide. It now separates ElevenLabs-style polished creator narration, Fish Audio and MiniMax value/API paths, Murf/WellSaid business narration, hosted API options, and YouTube disclosure/consent risk instead of treating every TTS product as the same purchase.
 
 ### 4. Edit in Descript
 
@@ -182,16 +182,16 @@ No. Runway is a production upgrade, not a starting requirement. Use screen recor
 
 ## Sources
 
-- [Claude pricing](https://www.anthropic.com/pricing) (verified 2026-05-13)
-- [Claude Max plan](https://support.claude.com/en/articles/11049741-what-is-the-max-plan) (verified 2026-05-13)
-- [Descript pricing](https://www.descript.com/price) (verified 2026-05-13)
-- [ElevenLabs pricing](https://elevenlabs.io/pricing) (verified 2026-05-13)
-- [Runway pricing](https://runwayml.com/pricing) (verified 2026-05-13)
-- [Runway credits](https://help.runwayml.com/hc/en-us/articles/15124877443219-How-do-credits-work) (verified 2026-05-13)
-- [Midjourney plans](https://docs.midjourney.com/docs/plans) (verified 2026-05-13)
-- [Ideogram available plans](https://docs.ideogram.ai/plans-and-pricing/available-plans) (verified 2026-05-13)
-- [Canva AI](https://www.canva.com/magic/) (verified 2026-05-13)
-- [Perplexity Pro help center](https://www.perplexity.ai/help-center/en/articles/9385876-what-is-perplexity-pro) (verified 2026-05-13)
+- [Claude pricing](https://www.anthropic.com/pricing) (verified 2026-06-06)
+- [Claude Max plan](https://support.claude.com/en/articles/11049741-what-is-the-max-plan) (verified 2026-06-06)
+- [Descript pricing](https://www.descript.com/price) (verified 2026-06-06)
+- [ElevenLabs pricing](https://elevenlabs.io/pricing) (verified 2026-06-06)
+- [Runway pricing](https://runwayml.com/pricing) (verified 2026-06-06)
+- [Runway credits](https://help.runwayml.com/hc/en-us/articles/15124877443219-How-do-credits-work) (verified 2026-06-06)
+- [Midjourney plans](https://docs.midjourney.com/docs/plans) (verified 2026-06-06)
+- [Ideogram available plans](https://docs.ideogram.ai/plans-and-pricing/available-plans) (verified 2026-06-06)
+- [Canva AI](https://www.canva.com/magic/) (verified 2026-06-06)
+- [Perplexity Pro help center](https://www.perplexity.ai/help-center/en/articles/9385876-what-is-perplexity-pro) (verified 2026-06-06)
 
 ## Related
 
