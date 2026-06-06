@@ -88,7 +88,7 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 
 **Best Cursor alternative guide:** [Cursor alternatives](/guides/cursor-alternatives/) now separates AI-native IDE swaps, existing-editor Copilot workflows, terminal agents, open-source CLI control, browser app builders, and enterprise delegation.
 
-**Best full buyer guide:** [Best AI coding assistant](/guides/best-ai-coding-assistant/) remains the primary category money page and should stay synchronized with Copilot billing, Cursor pricing, Claude Code access, and model availability.
+**Best full buyer guide:** [Best AI coding assistant](/guides/best-ai-coding-assistant/) is now the June 6 verified category money page for Cursor pricing, Claude Code and Agent SDK budgeting, GitHub Copilot AI Credits, Codex agent workflows, Windsurf/Devin Desktop lineage, and Devin delegation risk.
 
 **Best developer buyer guide:** [Best AI tools for developers](/guides/best-ai-tools-for-developers/) now separates AI-native IDEs, GitHub-native assistants, terminal agents, OpenAI-native agents, browser app builders, and open-source CLI workflows for developer buyers.
 

@@ -7,6 +7,10 @@
  * Refresh metadata: 2026-06-06 lead-generation and solo-founder guide refresh
  * across Apollo, Clay, Amplemarket, Instantly, n8n, Cursor, ChatGPT, Claude
  * Agent SDK, Copilot AI Credits, Lovable, Bolt, Intercom, Notion, and Gamma;
+ * Refresh metadata: 2026-06-06 avatar-video and coding-assistant guide refresh
+ * across HeyGen, Synthesia, Tavus, D-ID, Hedra, Argil, Captions, Cursor,
+ * Claude Code, Copilot AI Credits, Codex, Windsurf/Devin Desktop, Devin, AI
+ * Video, AI Coding, guides, and LLM maintenance;
  * Refresh metadata: 2026-06-06 guide stack refresh across AI agency stack,
  * content creator stack, archived merge guides, /guides/, AI Automation,
  * and LLM surfaces after current June 2026 official source checks;
@@ -327,6 +331,17 @@ function newsDateFmt(iso: string): string {
       verifiedLabel={freshLabel}
       rankLabel={rankLabelText}
     />
+
+    <section class="gt-home-refresh" aria-label="Latest buyer guide refresh">
+      <p>
+        <strong>Updated June 2026:</strong>
+        refreshed avatar-video and coding-assistant buying advice with current credit, API, and governance checks.
+      </p>
+      <nav aria-label="Freshly verified guide links">
+        <a href="/guides/best-ai-avatar-video-generator/">Avatar video guide</a>
+        <a href="/guides/best-ai-coding-assistant/">Coding assistant guide</a>
+      </nav>
+    </section>
 
     {weeklyStream.length > 0 && (
       <nav class="gt-weekly" aria-label="What's new this week">
@@ -847,6 +862,60 @@ function newsDateFmt(iso: string): string {
   </div>
 
   <style>
+    .gt-home-refresh {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      margin: -2px 0 22px;
+      padding: 12px 14px;
+      border: 1px solid var(--gt-line);
+      border-radius: var(--gt-radius-sm);
+      background: var(--gt-surface);
+    }
+    .gt-home-refresh p {
+      margin: 0;
+      color: var(--gt-muted);
+      font-size: 14px;
+      line-height: 1.45;
+    }
+    .gt-home-refresh strong { color: var(--gt-fg); }
+    .gt-home-refresh nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px;
+      flex: 0 0 auto;
+    }
+    .gt-home-refresh a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 0 10px;
+      border: 1px solid var(--gt-line-strong);
+      border-radius: var(--gt-radius-sm);
+      color: var(--gt-accent);
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .gt-home-refresh a:hover {
+      border-color: var(--gt-accent);
+      color: var(--gt-accent-hover);
+    }
+    @media (max-width: 720px) {
+      .gt-home-refresh {
+        display: block;
+        margin-bottom: 18px;
+      }
+      .gt-home-refresh nav {
+        justify-content: flex-start;
+        margin-top: 10px;
+      }
+      .gt-home-refresh a { white-space: normal; }
+    }
+
     /* What's new this week — auto-scrolling marquee ticker.
        Two copies of the list inside .gt-weekly-track so the transform
        can loop at -50% for a seamless wrap. CSS mask fades the edges
