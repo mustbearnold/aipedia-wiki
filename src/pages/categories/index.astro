@@ -3,6 +3,11 @@
  * /categories/ index — god-tier 10/10 mobile-first.
  *
  * Browse all AI tool categories. Legacy preserved at
+ * Refresh metadata: 2026-06-06 AI Automation, AI Writing, AI Chatbots,
+ * AI Search, AI Research, AI Notes, AI Presentation, and AI Design parent hub
+ * maintenance after agencies, consultants, customer-support, and designers
+ * guide refreshes against current June 2026 pricing, outcome, credit,
+ * research, meeting, design, and client-data source checks;
  * Refresh metadata: 2026-06-06 AI Writing, AI Notes, AI Video, and AI Voice
  * parent hub maintenance after summarization, TikTok, transcription, and
  * translation guide refreshes against current June 2026 pricing, API,
@@ -258,6 +263,10 @@ const categoryItems = sorted.map((category: any) => ({
       rankLabel={`${allCategories.length} categories · ${activeTools.length} tools`}
     />
 
+    <p class="gt-cat-refresh">
+      Updated June 2026 after current-source checks across the agencies, consultants, customer-support, and designers buyer guide refreshes.
+    </p>
+
     <section class="gt-cat-index" aria-label="All AI tool categories">
       <ul class="gt-cat-cards">
         {sorted.map((c: any) => (
@@ -293,6 +302,13 @@ const categoryItems = sorted.map((category: any) => ({
 
   <style>
     .gt-cat-index { margin-bottom: 40px; }
+    .gt-cat-refresh {
+      margin: -12px 0 18px;
+      color: var(--gt-muted);
+      font-size: 13px;
+      line-height: 1.5;
+      max-width: 760px;
+    }
     .gt-cat-cards {
       list-style: none; padding: 0; margin: 0;
       display: grid; grid-template-columns: 1fr; gap: 10px;

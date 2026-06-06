@@ -77,7 +77,7 @@ Large law firms and legal departments should evaluate Harvey separately from aca
 - [Best AI Tools for Students](/guides/best-ai-tools-for-students/)
 - [Best AI for Data Analysis](/guides/best-ai-for-data-analysis/) is the June 6 verified adjacent guide for ChatGPT file analysis, Gemini/Google Sheets workflows, Claude analytical critique, Hex governed data-team notebooks, Julius no-code data agents, Rows spreadsheet AI, and Perplexity cited market research.
 - [Best AI for Interview Prep](/guides/best-ai-for-interview-prep/) is the June 6 verified adjacent guide for ethical prep, source-grounded resume/job-description research, spoken roleplay, company-source checking, and technical mock practice.
-- [Best AI Tools for Consultants](/guides/best-ai-tools-for-consultants/)
+- [Best AI Tools for Consultants](/guides/best-ai-tools-for-consultants/) is the June 6 verified adjacent guide for source-backed market, company, vendor, meeting, deck, and memo workflows.
 - [Best AI Tools for Journalists](/guides/best-ai-tools-for-journalists/)
 
 AiPedia is intentionally not promoting the old medical-research guide until it is rebuilt with medical-specific sources, privacy guidance, regulator context, high-stakes safety caveats, and current life-sciences AI coverage.

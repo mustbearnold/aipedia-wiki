@@ -96,7 +96,7 @@ For most solo buyers, test Gamma first, then decide if you need Beautiful.ai's l
 ## Best Next Pages
 
 - Start with the full buyer guide: [Best AI for Presentations](/guides/best-ai-for-presentations/).
-- For consulting teams, pair deck tooling with research, meeting, and memo workflows: [Best AI Tools for Consultants](/guides/best-ai-tools-for-consultants/).
+- For consulting teams, pair deck tooling with the June 6 verified research, meeting, and memo workflow guide: [Best AI Tools for Consultants](/guides/best-ai-tools-for-consultants/).
 - Compare the default winner with the design-control runner-up: [Beautiful.ai vs Gamma](/compare/beautiful-ai-vs-gamma/).
 - Compare team workflow and prompt-to-deck: [Gamma vs Pitch](/compare/gamma-vs-pitch/).
 - Compare interactive delivery against the default generator: [Decktopus AI vs Gamma](/compare/decktopus-vs-gamma/).
