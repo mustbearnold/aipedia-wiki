@@ -7,8 +7,8 @@ tool_count: 17
 seo_title: "Best AI Chatbots & LLMs (June 2026), aipedia.wiki"
 meta_description: "Compare the best AI chatbots and LLMs in June 2026: ChatGPT (GPT-5.5), Claude Opus 4.8, Gemini 3.1 Pro, Perplexity, Grok, Mistral, Kimi K2.6, Qwen3.7-Max / Qwen Cloud, GLM-5.1, Hunyuan, Jan.ai, NotebookLM, and AnythingLLM, with enterprise workspace, local desktop, and self-hosted RAG signals."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-06
-last_verified: 2026-06-06
+last_updated: 2026-06-07
+last_verified: 2026-06-07
 update_frequency: monthly
 ---
 
@@ -121,9 +121,9 @@ Do not subscribe to multiple chatbots because each one has a new model announcem
 
 ## Money Guides
 
-- [Best ChatGPT Alternatives](/guides/chatgpt-alternatives/)
+- [Best ChatGPT Alternatives](/guides/chatgpt-alternatives/) is the June 7 verified switching guide for Claude, Gemini, Perplexity, Grok, Mistral Vibe/platform, and NotebookLM, with the "stay with ChatGPT" case separated from model-announcement hype.
 - [Best Gemini Alternatives](/guides/gemini-alternatives/)
-- [Best Claude Alternatives](/guides/claude-alternatives/)
+- [Best Claude Alternatives](/guides/claude-alternatives/) is the June 7 verified guide for ChatGPT, Gemini, Perplexity, Grok, Mistral Vibe/platform, and the cases where Claude still wins for writing, long context, and Claude Code.
 - [Best DeepSeek Alternatives](/guides/deepseek-alternatives/)
 - [Best AI Coding Assistant](/guides/best-ai-coding-assistant/)
 - [Best Free AI Tools](/guides/best-free-ai-tools/) is the June 6 verified free-stack guide for ChatGPT, Gemini, Claude, Perplexity, and NotebookLM, with upgrade triggers separated by general chat, Google-native work, writing, cited web research, and source-grounded notebooks.
@@ -158,20 +158,20 @@ Do not subscribe to multiple chatbots because each one has a new model announcem
 - [OpenAI GPT-5.5 in ChatGPT](https://help.openai.com/en/articles/11909943-gpt-55-in-chatgpt) (verified 2026-06-03)
 - [Anthropic Claude Opus 4.8 launch](https://www.anthropic.com/news/claude-opus-4-8) (verified 2026-06-04)
 - [Anthropic Claude models](https://platform.claude.com/docs/en/about-claude/models/overview) (verified 2026-06-04)
-- [Claude pricing](https://claude.com/pricing) (verified 2026-06-04)
+- [Claude pricing](https://claude.com/pricing) (verified 2026-06-07)
 - [Anthropic Chris Olah remarks on Magnifica Humanitas](https://www.anthropic.com/news/chris-olah-pope-leo-encyclical) (verified 2026-05-26)
-- [Google AI subscriptions](https://gemini.google/subscriptions/) (verified 2026-06-05)
+- [Google AI subscriptions](https://gemini.google/subscriptions/) (verified 2026-06-07)
 - [Google One AI plans](https://one.google.com/about/google-ai-plans/) (verified 2026-06-05)
 - [Google Gemini 3.5 announcement](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/) (verified 2026-06-05)
 - [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing) (verified 2026-06-05)
-- [Perplexity Pro](https://www.perplexity.ai/pro) (verified 2026-05-24)
-- [Grok by xAI](https://x.ai/grok) (verified 2026-06-04)
+- [Perplexity Pro](https://www.perplexity.ai/pro) (verified 2026-06-07)
+- [Grok by xAI](https://x.ai/grok) (verified 2026-06-07)
 - [xAI pricing](https://x.ai/pricing) (verified 2026-06-04)
 - [xAI model docs](https://docs.x.ai/developers/models) (verified 2026-06-04)
 - [Groq official site](https://groq.com/) (verified 2026-06-02)
 - [Groq pricing](https://groq.com/pricing/) (verified 2026-06-02)
 - [Groq model docs](https://console.groq.com/docs/models) (verified 2026-06-02)
-- [Mistral AI pricing](https://mistral.ai/pricing) (verified 2026-06-06)
+- [Mistral AI pricing](https://mistral.ai/pricing) (verified 2026-06-07)
 - [Mistral model docs](https://docs.mistral.ai/models/overview) (verified 2026-06-06)
 - [Mistral Search Toolkit](https://mistral.ai/news/search-toolkit) (verified 2026-06-06)
 - [Qwen Cloud model releases](https://docs.qwencloud.com/changelog/models) (verified 2026-06-06)
