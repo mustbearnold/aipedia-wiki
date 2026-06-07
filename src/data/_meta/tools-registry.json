@@ -4085,10 +4085,10 @@
       "company": "bytedance",
       "url": "https://jimeng.jianying.com",
       "pricing_model": "freemium",
-      "price_range": "$9.60-$84/month",
+      "price_range": "Freemium; pricing is region/account-gated",
       "launched": "2024-08",
-      "last_updated": "2026-05-13T00:00:00.000Z",
-      "last_verified": "2026-05-13T00:00:00.000Z",
+      "last_updated": "2026-06-07T00:00:00.000Z",
+      "last_verified": "2026-06-07T00:00:00.000Z",
       "update_frequency": "monthly",
       "scores": {
         "utility": 8,

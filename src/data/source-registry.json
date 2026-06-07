@@ -4074,23 +4074,35 @@
       "url": "https://jimeng.jianying.com/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-07"
     },
     {
       "id": "jimeng-pricing",
-      "label": "Source",
-      "url": "https://dreamina.capcut.com",
+      "label": "Dreamina CapCut portal",
+      "url": "https://dreamina.capcut.com/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "high",
+      "last_checked": "2026-06-07"
+    },
+    {
+      "id": "jimeng-pricing-third-party",
+      "label": "Atlas Cloud Seedance 2.0 pricing breakdown",
+      "url": "https://www.atlascloud.ai/blog/case-studies/seedance-2.0-pricing-full-cost-breakdown-2026",
+      "type": "third_party",
+      "trust_tier": "secondary",
+      "volatility": "high",
+      "last_checked": "2026-06-07"
     },
     {
       "id": "jimeng-volcengine",
       "label": "Volcengine image/video infrastructure",
-      "url": "https://www.volcengine.com/product/veImageX",
+      "url": "https://www.volcengine.com/docs/508/23757",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-07"
     },
     {
       "id": "julius-business",

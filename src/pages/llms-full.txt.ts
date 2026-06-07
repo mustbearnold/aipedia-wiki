@@ -2,6 +2,9 @@
 // Lists every active tool with category + tagline, every comparison, every
 // use-case guide. Intended for crawlers willing to ingest a larger manifest
 // to discover the full content map without parsing the sitemap.
+// Refresh metadata: 2026-06-07 Jimeng/Dreamina tool refresh with
+// Seedream 5.0 Lite, Seedance 2.0, pricing-route caveats, source registry,
+// tools registry, and LLM maintenance.
 // Refresh metadata: 2026-06-07 media kit refresh with live inventory
 // counts, partnership guardrails, brand assets, and LLM maintenance.
 // Refresh metadata: 2026-06-07 April 2026 report archive refresh with
@@ -104,6 +107,7 @@ export const GET: APIRoute = async () => {
   lines.push('> Extended LLM-friendly site manifest. Enumerates every active page across tools, categories, comparisons, buyer guides, and companies. See /llms.txt for the concise version.');
   lines.push('');
   lines.push('Recent guide refresh: June 7, 2026 refreshed Runway alternatives, Suno alternatives, and Synthesia alternatives around Runway credit/API pricing, Seedance/Kling/Veo/Luma/Pika/Hailuo video lanes, Suno paid-rights and v5.5 baseline, ElevenLabs Music/Udio/AIVA/Mubert/Stable Audio music alternatives, and HeyGen/Tavus/D-ID/Hedra/Argil/Captions avatar-video switching paths.');
+  lines.push('Recent tool refresh: June 7, 2026 refreshed Jimeng/Dreamina around ByteDance Seedream 5.0 Lite, Seedance 2.0, CapCut/Dreamina route context, account-gated pricing, historical third-party price caveats, and source-registry maintenance.');
   lines.push('Recent maintenance: June 7, 2026 refreshed the April 2026 report archive, corrected stale May-watchlist claims against current official Anthropic, OpenAI, Google, Mistral, Claude, ChatGPT, Cursor, Midjourney, and ElevenLabs sources, and restored the report detail route.');
   lines.push('Recent maintenance: June 7, 2026 refreshed the media kit with live collection inventory language, partnership guardrails, brand asset context, and canonical LLM-surface discovery.');
   lines.push('Recent maintenance: June 7, 2026 refreshed the dead tools archive so dedicated shutdown records and dead tool records such as DALL-E, Phind, Tome, and Grok Code Fast appear in one migration-focused surface.');
