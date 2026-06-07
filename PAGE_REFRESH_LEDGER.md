@@ -33,9 +33,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /compare/phind-vs-you-com/ | Comparison | Yes | frontmatter | src/content/comparisons/phind-vs-you-com.md |
 | 2026-05-13 | /compare/pitch-vs-tome/ | Comparison | Yes | frontmatter | src/content/comparisons/pitch-vs-tome.md |
 | 2026-05-13 | /compare/presentations-ai-vs-tome/ | Comparison | Yes | frontmatter | src/content/comparisons/presentations-ai-vs-tome.md |
-| 2026-05-13 | /guides/runway-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/runway-alternatives.md |
-| 2026-05-13 | /guides/suno-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/suno-alternatives.md |
-| 2026-05-13 | /guides/synthesia-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/synthesia-alternatives.md |
 | 2026-05-13 | /media-kit/ | Static page | Yes | git | src/pages/media-kit.astro |
 | 2026-05-13 | /reports/2026-04/ | Report | Yes | frontmatter | src/content/reports/2026-04.md |
 | 2026-05-13 | /tools/grok-code-fast/ | Tool | Yes | frontmatter | src/content/tools/grok-code-fast.md |
@@ -162,7 +159,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-20 | /tools/imagen/ | Tool | Yes | frontmatter | src/content/tools/imagen.md |
 | 2026-05-23 | /tools/cohere/ | Tool | Yes | frontmatter | src/content/tools/cohere.md |
 | 2026-05-24 | /answers/best-ai-chatbot-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-chatbot-2026.astro |
-| 2026-05-24 | /answers/best-ai-video-generator-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-video-generator-2026.astro |
 | 2026-05-24 | /compare/chatgpt-vs-qwen/ | Comparison | Yes | frontmatter | src/content/comparisons/chatgpt-vs-qwen.md |
 | 2026-05-24 | /compare/cursor-vs-claude-code-vs-copilot/ | Comparison | Yes | frontmatter | src/content/comparisons/cursor-vs-claude-code-vs-copilot.md |
 | 2026-05-24 | /tools/codex/ | Tool | Yes | frontmatter | src/content/tools/codex.md |
@@ -579,11 +575,9 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-06 | /answers/best-free-ai-tools-2026/ | Static page | Yes | page metadata | src/pages/answers/best-free-ai-tools-2026.astro |
 | 2026-06-06 | /categories/ai-automation/ | Category | Yes | frontmatter | src/content/categories/ai-automation.md |
 | 2026-06-06 | /categories/ai-infrastructure/ | Category | Yes | frontmatter | src/content/categories/ai-infrastructure.md |
-| 2026-06-06 | /categories/ai-music/ | Category | Yes | frontmatter | src/content/categories/ai-music.md |
 | 2026-06-06 | /categories/ai-notes/ | Category | Yes | frontmatter | src/content/categories/ai-notes.md |
 | 2026-06-06 | /categories/ai-presentation/ | Category | Yes | frontmatter | src/content/categories/ai-presentation.md |
 | 2026-06-06 | /categories/ai-research/ | Category | Yes | frontmatter | src/content/categories/ai-research.md |
-| 2026-06-06 | /categories/ai-video/ | Category | Yes | frontmatter | src/content/categories/ai-video.md |
 | 2026-06-06 | /compare/ | Static page | Yes | git | src/pages/compare/index.astro |
 | 2026-06-06 | /compare/kagi-vs-perplexity/ | Comparison | Yes | frontmatter | src/content/comparisons/kagi-vs-perplexity.md |
 | 2026-06-06 | /compare/kagi-vs-you-com/ | Comparison | Yes | frontmatter | src/content/comparisons/kagi-vs-you-com.md |
@@ -721,19 +715,22 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-06 | /tools/you-com/ | Tool | Yes | frontmatter | src/content/tools/you-com.md |
 | 2026-06-06 | /workflows/youtube-content-stack/ | Workflow | Yes | frontmatter | src/content/workflows/youtube-content-stack.md |
 | 2026-06-07 | / | Static page | Yes | working tree | src/pages/index.astro |
-| 2026-06-07 | /answers/best-ai-for-writing-2026/ | Static page | Yes | working tree | src/pages/answers/best-ai-for-writing-2026.astro |
-| 2026-06-07 | /answers/best-ai-image-generator-2026/ | Static page | Yes | working tree | src/pages/answers/best-ai-image-generator-2026.astro |
+| 2026-06-07 | /answers/best-ai-for-writing-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-for-writing-2026.astro |
+| 2026-06-07 | /answers/best-ai-image-generator-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-image-generator-2026.astro |
+| 2026-06-07 | /answers/best-ai-video-generator-2026/ | Static page | Yes | working tree | src/pages/answers/best-ai-video-generator-2026.astro |
 | 2026-06-07 | /answers/best-ai-voice-generator-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-voice-generator-2026.astro |
 | 2026-06-07 | /answers/chatgpt-alternatives-2026/ | Static page | Yes | page metadata | src/pages/answers/chatgpt-alternatives-2026.astro |
-| 2026-06-07 | /answers/is-midjourney-worth-it/ | Static page | Yes | working tree | src/pages/answers/is-midjourney-worth-it.astro |
+| 2026-06-07 | /answers/is-midjourney-worth-it/ | Static page | Yes | page metadata | src/pages/answers/is-midjourney-worth-it.astro |
 | 2026-06-07 | /categories/ | Static page | Yes | working tree | src/pages/categories/index.astro |
-| 2026-06-07 | /categories/ai-chatbots/ | Category | Yes | working tree | src/content/categories/ai-chatbots.md |
+| 2026-06-07 | /categories/ai-chatbots/ | Category | Yes | frontmatter | src/content/categories/ai-chatbots.md |
 | 2026-06-07 | /categories/ai-coding/ | Category | Yes | frontmatter | src/content/categories/ai-coding.md |
 | 2026-06-07 | /categories/ai-design/ | Category | Yes | frontmatter | src/content/categories/ai-design.md |
-| 2026-06-07 | /categories/ai-image/ | Category | Yes | working tree | src/content/categories/ai-image.md |
-| 2026-06-07 | /categories/ai-search/ | Category | Yes | working tree | src/content/categories/ai-search.md |
+| 2026-06-07 | /categories/ai-image/ | Category | Yes | frontmatter | src/content/categories/ai-image.md |
+| 2026-06-07 | /categories/ai-music/ | Category | Yes | working tree | src/content/categories/ai-music.md |
+| 2026-06-07 | /categories/ai-search/ | Category | Yes | frontmatter | src/content/categories/ai-search.md |
+| 2026-06-07 | /categories/ai-video/ | Category | Yes | working tree | src/content/categories/ai-video.md |
 | 2026-06-07 | /categories/ai-voice/ | Category | Yes | frontmatter | src/content/categories/ai-voice.md |
-| 2026-06-07 | /categories/ai-writing/ | Category | Yes | working tree | src/content/categories/ai-writing.md |
+| 2026-06-07 | /categories/ai-writing/ | Category | Yes | frontmatter | src/content/categories/ai-writing.md |
 | 2026-06-07 | /guides/ | Static page | Yes | working tree | src/pages/guides/index.astro |
 | 2026-06-07 | /guides/canva-ai-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/canva-ai-alternatives.md |
 | 2026-06-07 | /guides/chatgpt-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/chatgpt-alternatives.md |
@@ -743,9 +740,12 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-07 | /guides/elevenlabs-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/elevenlabs-alternatives.md |
 | 2026-06-07 | /guides/gemini-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/gemini-alternatives.md |
 | 2026-06-07 | /guides/github-copilot-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/github-copilot-alternatives.md |
-| 2026-06-07 | /guides/grammarly-alternatives/ | Guide | Yes | working tree | src/content/use-cases/grammarly-alternatives.md |
-| 2026-06-07 | /guides/jasper-alternatives/ | Guide | Yes | working tree | src/content/use-cases/jasper-alternatives.md |
-| 2026-06-07 | /guides/midjourney-alternatives/ | Guide | Yes | working tree | src/content/use-cases/midjourney-alternatives.md |
-| 2026-06-07 | /guides/perplexity-alternatives/ | Guide | Yes | working tree | src/content/use-cases/perplexity-alternatives.md |
+| 2026-06-07 | /guides/grammarly-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/grammarly-alternatives.md |
+| 2026-06-07 | /guides/jasper-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/jasper-alternatives.md |
+| 2026-06-07 | /guides/midjourney-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/midjourney-alternatives.md |
+| 2026-06-07 | /guides/perplexity-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/perplexity-alternatives.md |
+| 2026-06-07 | /guides/runway-alternatives/ | Guide | Yes | working tree | src/content/use-cases/runway-alternatives.md |
+| 2026-06-07 | /guides/suno-alternatives/ | Guide | Yes | working tree | src/content/use-cases/suno-alternatives.md |
+| 2026-06-07 | /guides/synthesia-alternatives/ | Guide | Yes | working tree | src/content/use-cases/synthesia-alternatives.md |
 | 2026-06-07 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
 | 2026-06-07 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
