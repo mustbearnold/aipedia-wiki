@@ -122,9 +122,9 @@ Do not subscribe to multiple chatbots because each one has a new model announcem
 ## Money Guides
 
 - [Best ChatGPT Alternatives](/guides/chatgpt-alternatives/) is the June 7 verified switching guide for Claude, Gemini, Perplexity, Grok, Mistral Vibe/platform, and NotebookLM, with the "stay with ChatGPT" case separated from model-announcement hype.
-- [Best Gemini Alternatives](/guides/gemini-alternatives/)
+- [Best Gemini Alternatives](/guides/gemini-alternatives/) is the June 7 verified switching guide for ChatGPT, Claude, Perplexity, Grok, Mistral, and NotebookLM, with Google's AI subscription bundle and the "stay with Gemini" case separated from generic chatbot rankings.
 - [Best Claude Alternatives](/guides/claude-alternatives/) is the June 7 verified guide for ChatGPT, Gemini, Perplexity, Grok, Mistral Vibe/platform, and the cases where Claude still wins for writing, long context, and Claude Code.
-- [Best DeepSeek Alternatives](/guides/deepseek-alternatives/)
+- [Best DeepSeek Alternatives](/guides/deepseek-alternatives/) is the June 7 verified switching guide for ChatGPT, Claude, Cursor, Gemini, Mistral, Perplexity, and Grok, with DeepSeek V4-Flash/V4-Pro API cost advantages kept separate from trust, governance, and finished-assistant fit.
 - [Best AI Coding Assistant](/guides/best-ai-coding-assistant/)
 - [Best Free AI Tools](/guides/best-free-ai-tools/) is the June 6 verified free-stack guide for ChatGPT, Gemini, Claude, Perplexity, and NotebookLM, with upgrade triggers separated by general chat, Google-native work, writing, cited web research, and source-grounded notebooks.
 - [Best AI Tools Under $20/month](/guides/best-ai-tools-under-20-month/) is the June 6 verified first-paid-plan guide for ChatGPT Plus, Claude Pro, Gemini/Google AI Pro, GitHub Copilot Pro, Cursor, Suno, Freepik, ElevenLabs, Perplexity, and NotebookLM, with explicit credit-burn and upgrade-pressure warnings before buyers stack subscriptions.

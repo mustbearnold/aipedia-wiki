@@ -4,6 +4,12 @@
  *
  * Composes the same god-tier components used across the site:
  *   Hero · DecisionCard (top tool) · top tools list · category rail · news list · TrustPanel
+ * Refresh metadata: 2026-06-07 DeepSeek, Gemini, GitHub Copilot, and
+ * ElevenLabs alternatives guide refresh across DeepSeek V4 pricing, ChatGPT,
+ * Claude, Cursor, Gemini, Mistral, Perplexity, Grok, Copilot AI Credits,
+ * Claude Code, Codex, Windsurf/Devin Desktop, Gemini Code Assist, Cartesia,
+ * Fish Audio, WellSaid, Voxtral, AI Chatbots, AI Coding, AI Voice, guides,
+ * answers, categories, homepage, and LLM maintenance.
  * Refresh metadata: 2026-06-07 ChatGPT, Claude, Cursor, and Canva AI
  * alternatives guide refresh across Claude, Gemini, Perplexity, Grok,
  * Mistral Vibe, NotebookLM, ChatGPT pricing, GitHub Copilot AI Credits,
@@ -429,13 +435,13 @@ function newsDateFmt(iso: string): string {
     <section class="gt-home-refresh" aria-label="Latest buyer guide refresh">
       <p>
         <strong>Updated June 7, 2026:</strong>
-        refreshed ChatGPT, Claude, Cursor, and Canva AI alternatives with current Claude/Gemini/Perplexity/Grok/Mistral Vibe lanes, GitHub Copilot AI Credits, Windsurf/Devin Desktop positioning, Canva AI 2.0, Figma AI credits, Firefly generative credits, and image-design credit checks.
+        refreshed DeepSeek, Gemini, GitHub Copilot, and ElevenLabs alternatives with current DeepSeek V4 pricing, Google AI subscription bundling, Copilot AI Credits, Claude Code/Codex coding-agent paths, and voice alternatives across Cartesia, Fish Audio, WellSaid, and Voxtral.
       </p>
       <nav aria-label="Freshly verified guide links">
-          <a href="/guides/chatgpt-alternatives/">ChatGPT alternatives</a>
-          <a href="/guides/claude-alternatives/">Claude alternatives</a>
-          <a href="/guides/cursor-alternatives/">Cursor alternatives</a>
-          <a href="/guides/canva-ai-alternatives/">Canva alternatives</a>
+          <a href="/guides/deepseek-alternatives/">DeepSeek alternatives</a>
+          <a href="/guides/gemini-alternatives/">Gemini alternatives</a>
+          <a href="/guides/github-copilot-alternatives/">Copilot alternatives</a>
+          <a href="/guides/elevenlabs-alternatives/">ElevenLabs alternatives</a>
       </nav>
     </section>
 
@@ -982,6 +988,7 @@ function newsDateFmt(iso: string): string {
       justify-content: flex-end;
       gap: 8px;
       flex: 0 0 auto;
+      min-width: 0;
     }
     .gt-home-refresh a {
       display: inline-flex;
@@ -1000,7 +1007,7 @@ function newsDateFmt(iso: string): string {
       border-color: var(--gt-accent);
       color: var(--gt-accent-hover);
     }
-    @media (max-width: 720px) {
+    @media (max-width: 900px) {
       .gt-home-refresh {
         display: block;
         margin-bottom: 18px;
