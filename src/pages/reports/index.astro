@@ -34,7 +34,7 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
 
 <BaseLayout
   title="Monthly AI Tool Reports · aipedia.wiki"
-  description={`Monthly editorial reports across ${activeToolCount} active AI tools. New launches, score movements, pricing shifts, deaths.`}
+  description={`Monthly editorial reports across ${activeToolCount} active AI tools. Archived launches, score movements, pricing shifts, deaths, and source-backed refresh notes.`}
 >
   <BreadcrumbLD items={[
     { name: 'Home', url: new URL('/', siteBase).href },
@@ -53,7 +53,7 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
         { label: 'aipedia', href: '/' },
         { label: 'Reports' },
       ]}
-      verifiedLabel="Verified June 1, 2026"
+      verifiedLabel="Verified June 7, 2026"
       rankLabel={`${sorted.length} report${sorted.length === 1 ? '' : 's'}`}
     />
 

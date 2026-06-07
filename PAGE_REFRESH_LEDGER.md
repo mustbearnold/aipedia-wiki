@@ -32,7 +32,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /compare/phind-vs-you-com/ | Comparison | Yes | frontmatter | src/content/comparisons/phind-vs-you-com.md |
 | 2026-05-13 | /compare/pitch-vs-tome/ | Comparison | Yes | frontmatter | src/content/comparisons/pitch-vs-tome.md |
 | 2026-05-13 | /compare/presentations-ai-vs-tome/ | Comparison | Yes | frontmatter | src/content/comparisons/presentations-ai-vs-tome.md |
-| 2026-05-13 | /reports/2026-04/ | Report | Yes | frontmatter | src/content/reports/2026-04.md |
 | 2026-05-13 | /tools/grok-code-fast/ | Tool | Yes | frontmatter | src/content/tools/grok-code-fast.md |
 | 2026-05-13 | /tools/jimeng/ | Tool | Yes | frontmatter | src/content/tools/jimeng.md |
 | 2026-05-13 | /tools/julius/ | Tool | Yes | frontmatter | src/content/tools/julius.md |
@@ -199,7 +198,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-01 | /demo-godtier/ | Static page | Yes | git | src/pages/demo-godtier.astro |
 | 2026-06-01 | /glossary/ | Static page | Yes | git | src/pages/glossary/index.astro |
 | 2026-06-01 | /privacy/ | Static page | Yes | git | src/pages/privacy.astro |
-| 2026-06-01 | /reports/ | Static page | Yes | git | src/pages/reports/index.astro |
 | 2026-06-01 | /robots.txt | Crawl surface | No | git | public/robots.txt |
 | 2026-06-01 | /terms/ | Static page | Yes | git | src/pages/terms.astro |
 | 2026-06-01 | /tool-finder/ | Static page | No | git | src/pages/tool-finder.astro |
@@ -748,4 +746,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-07 | /guides/synthesia-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/synthesia-alternatives.md |
 | 2026-06-07 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
 | 2026-06-07 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
-| 2026-06-07 | /media-kit/ | Static page | Yes | working tree | src/pages/media-kit.astro |
+| 2026-06-07 | /media-kit/ | Static page | Yes | git | src/pages/media-kit.astro |
+| 2026-06-07 | /reports/ | Static page | Yes | working tree | src/pages/reports/index.astro |
+| 2026-06-07 | /reports/2026-04/ | Report | Yes | working tree | src/content/reports/2026-04.md |

@@ -4,6 +4,9 @@
 // to discover the full content map without parsing the sitemap.
 // Refresh metadata: 2026-06-07 media kit refresh with live inventory
 // counts, partnership guardrails, brand assets, and LLM maintenance.
+// Refresh metadata: 2026-06-07 April 2026 report archive refresh with
+// current Anthropic, OpenAI, Google, Mistral, Claude, ChatGPT, Cursor,
+// Midjourney, and ElevenLabs source checks plus /reports/ route maintenance.
 // Refresh metadata: 2026-06-07 dead archive refresh across DALL-E,
 // Phind, Tome, Grok Code Fast, homepage, and LLM maintenance after current
 // June 2026 retirement/source checks.
@@ -78,6 +81,7 @@ export const GET: APIRoute = async () => {
   const comparisons = await getCollection('comparisons').catch(() => []);
   const useCases = await getCollection('use-cases').catch(() => []);
   const companies = await getCollection('companies').catch(() => []);
+  const reports = await getCollection('reports').catch(() => []);
 
   const activeTools = tools
     .filter(isActive)
@@ -100,6 +104,7 @@ export const GET: APIRoute = async () => {
   lines.push('> Extended LLM-friendly site manifest. Enumerates every active page across tools, categories, comparisons, buyer guides, and companies. See /llms.txt for the concise version.');
   lines.push('');
   lines.push('Recent guide refresh: June 7, 2026 refreshed Runway alternatives, Suno alternatives, and Synthesia alternatives around Runway credit/API pricing, Seedance/Kling/Veo/Luma/Pika/Hailuo video lanes, Suno paid-rights and v5.5 baseline, ElevenLabs Music/Udio/AIVA/Mubert/Stable Audio music alternatives, and HeyGen/Tavus/D-ID/Hedra/Argil/Captions avatar-video switching paths.');
+  lines.push('Recent maintenance: June 7, 2026 refreshed the April 2026 report archive, corrected stale May-watchlist claims against current official Anthropic, OpenAI, Google, Mistral, Claude, ChatGPT, Cursor, Midjourney, and ElevenLabs sources, and restored the report detail route.');
   lines.push('Recent maintenance: June 7, 2026 refreshed the media kit with live collection inventory language, partnership guardrails, brand asset context, and canonical LLM-surface discovery.');
   lines.push('Recent maintenance: June 7, 2026 refreshed the dead tools archive so dedicated shutdown records and dead tool records such as DALL-E, Phind, Tome, and Grok Code Fast appear in one migration-focused surface.');
   lines.push('Recent maintenance: June 6, 2026 refreshed budget, AI video generator, small-business, students, teachers, writers, real-estate agents, recruiters, researchers, sales teams, lawyers, marketers, nonprofits, product managers, developers, ecommerce, freelancers, journalists, agencies, consultants, customer-support, designers, summarization, TikTok, transcription, translation, presentations, resume-writing, social-media-posts, SQL queries, medical-research archive, newsletter-writers, photo-editing, podcasters, interview-prep, archived legal-research, LinkedIn, logo-design, email-writing, Excel/spreadsheets, professional-headshot, Instagram, cold-email, cover-letter, data-analysis, debugging, book-writing, brainstorming, citations, code-review, academic-writing, ad-copy, API-documentation, blog-writing, unit-test, YouTube creator, AI music, and accountant buyer guides plus AI Automation, AI Infrastructure, AI Writing, AI Chatbots, AI Search, AI Research, AI Notes, AI Presentation, AI Design, AI Video, AI Image, AI Voice, AI Coding, Answers, /guides/, homepage, categories, sitemap, and LLM surfaces around under-$20 first-paid-plan sequencing, archived under-$10 and under-$50 merge routes, ChatGPT Plus, Claude Pro, GitHub Copilot AI Credits, Cursor usage-plan warnings, Google AI Pro, Suno credits, Freepik credits, ElevenLabs credits, Seedance/Kling/Veo/Runway/Pika/HeyGen video lanes, small-business first-purchase sequencing, Google-native workflow fit, Zapier MCP/task economics, student source-grounded study, academic integrity, ChatGPT for Teachers, Google AI Pro for Education, classroom data safety, long-form writing edits, fiction workflow, brand-governed writing, inline polish, listing and fair-housing safeguards, Zillow lead/CRM context, human-in-the-loop hiring checks, candidate-data controls, source-integrity rules, literature-review workflow, outbound credits, deliverability, CRM hygiene, legal AI authority, citation/privilege checks, ad creative credits, conversion-page economics, nonprofit discounts, donor/beneficiary data safety, product evidence trails, developer agent credits, ecommerce creative/operations, freelancer client-data controls, newsroom source safety, client-data guardrails, outcome billing, research source trails, meeting capture, design credits, source-grounded summaries, localization/API translation, recording consent, TikTok disclosure and music-rights checks, deck export and AI credits, card-required trials, resume privacy and fake-metric risk, paid-social creative tracking, SQL verification, data credits/connectors, medical noindex criteria, GPT-Rosalind/life-sciences caveats, newsletter MCP/source-pack/interview workflows, photo-editing rights and production checks, podcast synthetic-voice disclosure, ethical interview prep, legal AI noindex criteria, LinkedIn authenticity, logo trademark/vector risk, inbox drafting, spreadsheet verification, likeness trust, outbound credits, job-application privacy, data-workflow reproducibility, Copilot AI Credits, manuscript workflow limits, source-grounded brainstorming, citation integrity, PR review billing, ad creative credits, docs/SDK/MCP tooling, Jasper credits, Surfer SEO positioning, test-assertion quality, YouTube altered/synthetic disclosure, AI-music export/licensing risk, and accounting client-data governance.');
@@ -121,6 +126,7 @@ export const GET: APIRoute = async () => {
   lines.push('- [Guides](https://aipedia.wiki/guides/)');
   lines.push('- [Tool Set Builder](https://aipedia.wiki/stack-builder/)');
   lines.push('- [News](https://aipedia.wiki/news/)');
+  lines.push('- [Reports](https://aipedia.wiki/reports/)');
   lines.push('- [Dead Tools Archive](https://aipedia.wiki/dead/)');
   lines.push('- [Answers](https://aipedia.wiki/answers/)');
   lines.push('- [Glossary](https://aipedia.wiki/glossary/)');
@@ -176,6 +182,18 @@ export const GET: APIRoute = async () => {
     for (const u of sortedUseCases) {
       const slug = u.slug || u.id?.replace(/\.md$/, '');
       lines.push(`- [${u.data.title}](https://aipedia.wiki/guides/${slug}/)`);
+    }
+    lines.push('');
+  }
+
+  if (reports.length > 0) {
+    lines.push('## Monthly reports');
+    lines.push('');
+    const sortedReports = [...reports].sort((a: any, b: any) => (b.data.slug || b.id || '').localeCompare(a.data.slug || a.id || ''));
+    for (const r of sortedReports) {
+      const slug = r.data.slug || r.id?.replace(/\.md$/, '');
+      const desc = excerpt(r.data.meta_description || r.data.description || '', 180);
+      lines.push(`- [${r.data.title}](https://aipedia.wiki/reports/${slug}/)${desc ? `: ${desc}` : ''}`);
     }
     lines.push('');
   }

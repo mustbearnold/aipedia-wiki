@@ -16,19 +16,63 @@ const { Content, headings } = await render(entry);
 const slug = entry.data.slug ?? entry.id.replace(/\.md$/, '');
 const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
 
+function toYmd(value: unknown): string | undefined {
+  if (!value) return undefined;
+  if (typeof value === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(value)) return value;
+  const date = value instanceof Date ? value : new Date(String(value));
+  return isNaN(date.getTime()) ? String(value) : date.toISOString().slice(0, 10);
+}
+
+function monthEndFromSlug(value: string): string | undefined {
+  const match = /^(\d{4})-(\d{2})$/.exec(value);
+  if (!match) return undefined;
+  const year = Number(match[1]);
+  const month = Number(match[2]);
+  return new Date(Date.UTC(year, month, 0)).toISOString().slice(0, 10);
+}
+
 const wordCount = entry.body ? entry.body.split(/\s+/).filter(Boolean).length : 0;
 const readingMinutes = Math.max(1, Math.round(wordCount / 230));
+const verifiedIso = toYmd(entry.data.last_verified) ?? toYmd(entry.data.last_updated);
+const sources = Array.isArray((entry.data as any).sources) ? (entry.data as any).sources.filter((source: any) => source?.url) : [];
+const relatedItems = [
+  {
+    href: '/reports/',
+    title: 'More monthly field reports',
+    description: 'Browse archived monthly snapshots across tool launches, pricing changes, and score movement.',
+    kind: 'internal' as const,
+  },
+  {
+    href: '/tools/',
+    title: 'Current AI tool rankings',
+    description: 'Use the live tool directory for current pricing, scores, alternatives, and buying guidance.',
+    kind: 'tool' as const,
+  },
+  {
+    href: '/news/',
+    title: 'Current AI tools news',
+    description: 'Track source-backed model, product, pricing, acquisition, and shutdown updates.',
+    kind: 'news' as const,
+  },
+];
 ---
 
 <ArticlePlusLayout
   title={entry.data.title}
-  seoTitle={entry.data.seo_title ?? entry.data.title}
+  seoTitle={entry.data.seo_title}
   description={entry.data.meta_description ?? entry.data.description ?? ''}
   pageUrl={`${siteBase}reports/${slug}/`}
   breadcrumbs={[{ label: 'Reports', href: '/reports/' }, { label: entry.data.title }]}
   headings={headings}
   readingMinutes={readingMinutes}
-  lastVerified={entry.data.last_verified ? String(entry.data.last_verified) : (entry.data.last_updated ? String(entry.data.last_updated) : undefined)}
+  datePublished={monthEndFromSlug(slug)}
+  lastVerified={verifiedIso}
+  articleType="Article"
+  articleSection="AI Tool Reports"
+  badge={{ text: 'Archived report', color: 'gray' }}
+  citations={sources}
+  relatedItems={relatedItems}
+  homeSurfaceCards
 >
   <Content />
 </ArticlePlusLayout>
