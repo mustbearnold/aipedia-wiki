@@ -2,6 +2,9 @@
 import ArticleLayout from '../layouts/ArticleLayout.astro';
 import { getCollection } from 'astro:content';
 
+// Refresh metadata: 2026-06-07 media kit refresh with live collection
+// inventory language, partnership guardrails, brand asset context, and
+// durable page-level dateModified metadata.
 const allTools = await getCollection('tools');
 const activeTools = allTools.filter(
   (t) => t.data.status !== 'dead' && t.data.status !== 'retired' && t.data.status !== 'acquired'
@@ -12,12 +15,20 @@ const allUseCases = await getCollection('use-cases');
 const allDead = await getCollection('dead');
 const allNews = await getCollection('news');
 
-const LAST_UPDATED = '2026-05-13';
-const LAST_UPDATED_HUMAN = 'May 13, 2026';
+const LAST_UPDATED = '2026-06-07';
+const LAST_UPDATED_HUMAN = 'June 7, 2026';
 
 const pageName = 'Media Kit & Partnerships, aipedia.wiki';
 const pageDesc =
   'aipedia.wiki media kit for partnerships and affiliate programs. Site description, audience, content inventory, editorial standards, review methodology, partnership contact.';
+const mediaKitLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: pageName,
+  url: new URL('/media-kit/', Astro.site?.href ?? 'https://aipedia.wiki/').href,
+  dateModified: LAST_UPDATED,
+  description: pageDesc,
+};
 
 const brandAssets = [
   {
@@ -86,19 +97,22 @@ const brandNotes = [
   subhead="Press-ready data, logo files, citation language, and partnership requests."
   breadcrumbs={[{ label: 'Media Kit' }]}
 >
+  <script type="application/ld+json" set:html={JSON.stringify(mediaKitLd)} />
   <p class="not-prose text-xs text-[var(--text-muted)] mb-[var(--site-content-gap)]">
     <span class="uppercase tracking-[0.12em]">Last updated:</span>
     <time datetime={LAST_UPDATED}>{LAST_UPDATED_HUMAN}</time>
+    <span aria-hidden="true"> · </span>
+    <span>Inventory counts below are generated from the current content collections.</span>
   </p>
 
   <h2>Site description</h2>
 
   <p>
-    aipedia.wiki is an independent AI tools encyclopedia. The site reviews, scores, and compares AI tools across {allCategories.length} categories (chatbots and LLMs, coding, writing, image, video, voice, music, search, research, automation, design, notes, presentation, SEO, and more). Every tool page follows a consistent agent-voice template: quick answer, key facts, system verdict, when to pick the tool, when to pick something else, pricing, failure modes, methodology disclosure.
+    aipedia.wiki is an independent AI tools encyclopedia. The site reviews, scores, and compares AI tools across {allCategories.length} categories (chatbots and LLMs, coding, writing, image, video, voice, music, search, research, automation, design, notes, presentation, SEO, and more). Every monetizable tool page is built to answer the buying questions that matter: what to use, which plan to buy, what to avoid, and which alternative is stronger.
   </p>
 
   <p>
-    The site is agentically operated. Research, drafting, structured comparisons, and recurring updates are handled by an editorial pipeline designed for scale. Human oversight exists at the standards, audit, and correction layers. Full detail at <a href="/about/editorial/">/about/editorial/</a>.
+    The site is agentically operated. Research, drafting, structured comparisons, and recurring updates are handled by an editorial pipeline designed for scale. Human oversight exists at the standards, audit, correction, and commercial-integrity layers. Full detail at <a href="/about/editorial/">/about/editorial/</a>.
   </p>
 
   <h2>Site at a glance</h2>
@@ -149,7 +163,7 @@ const brandNotes = [
   <ul>
     <li><strong>Primary-source research.</strong> Every atomic fact is verifiable against the vendor's own documentation, pricing page, or changelog.</li>
     <li><strong>Four-dimension scoring.</strong> Utility, Value, Moat, Longevity on a 1 to 10 scale. Unweighted average. <a href="/about/scoring/">Methodology</a>.</li>
-    <li><strong>Monthly verification.</strong> Pricing and flagship models are re-checked against vendor pages. Every page carries a visible "last verified" date.</li>
+    <li><strong>Current-date verification.</strong> Pricing, flagship models, availability, and commercial claims are re-checked against current sources when a page is materially refreshed. Every tool page carries a visible "last verified" date.</li>
     <li><strong>No paid placements, no sponsored reviews.</strong> Affiliate status has zero effect on score. <a href="/disclosure/">Affiliate disclosure</a>.</li>
     <li><strong>Corrections welcomed.</strong> Reader reports are read and actioned on merit.</li>
   </ul>
@@ -157,7 +171,11 @@ const brandNotes = [
   <h2>Why partner with aipedia.wiki</h2>
 
   <p>
-    The site targets high-intent buyers searching for specific tool names, tool comparisons, and "best X for Y" queries. Every tool page cross-links to relevant comparisons and category pages. Outbound clicks to partner sites are measured by each partner's affiliate network and appear in the partner dashboard under aipedia.wiki as the originating publisher.
+    The site targets high-intent buyers searching for specific tool names, tool comparisons, and "best X for Y" queries. Every tool page cross-links to relevant comparisons, category pages, and alternatives. Outbound clicks to partner sites are measured through disclosed commercial links when a program is available; official links remain the fallback when affiliate attribution is unavailable.
+  </p>
+
+  <p>
+    Partnership does not buy ranking. It makes attribution cleaner when a tool already deserves coverage. AiPedia will not change scores, verdicts, comparisons, warnings, alternatives, or category placement in exchange for commission.
   </p>
 
   <p>
@@ -174,7 +192,7 @@ const brandNotes = [
   <h2>Partnership and affiliate program enrolment</h2>
 
   <p>
-    aipedia.wiki is actively enrolling in affiliate programs across the AI tooling space. Networks used or applied to include Impact, PartnerStack, Rewardful, FirstPromoter, ShareASale, Awin, and CJ Affiliate.
+    aipedia.wiki is actively enrolling in affiliate programs across the AI tooling space. Direct programs and networks such as Impact, PartnerStack, Rewardful, FirstPromoter, ShareASale, Awin, and CJ Affiliate are evaluated only for attribution, reporting, and reader-safe offer quality.
   </p>
 
   <p>
@@ -197,7 +215,7 @@ const brandNotes = [
   <h2>Brand assets</h2>
 
   <p>
-    Current Signal Cyan logo, favicon, and preview images are available under the paths below. Partners may use these for partner-directory pages, press coverage, and integration announcements.
+    Current Signal Cyan logo, favicon, and preview images are available under the paths below. Partners may use these for partner-directory pages, press coverage, affiliate dashboards, and integration announcements that accurately describe aipedia.wiki as an independent AI tools review and reference site.
   </p>
 
   <div class="not-prose media-brand-kit my-[var(--site-content-gap)]">

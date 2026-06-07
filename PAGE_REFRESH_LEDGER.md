@@ -32,7 +32,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /compare/phind-vs-you-com/ | Comparison | Yes | frontmatter | src/content/comparisons/phind-vs-you-com.md |
 | 2026-05-13 | /compare/pitch-vs-tome/ | Comparison | Yes | frontmatter | src/content/comparisons/pitch-vs-tome.md |
 | 2026-05-13 | /compare/presentations-ai-vs-tome/ | Comparison | Yes | frontmatter | src/content/comparisons/presentations-ai-vs-tome.md |
-| 2026-05-13 | /media-kit/ | Static page | Yes | git | src/pages/media-kit.astro |
 | 2026-05-13 | /reports/2026-04/ | Report | Yes | frontmatter | src/content/reports/2026-04.md |
 | 2026-05-13 | /tools/grok-code-fast/ | Tool | Yes | frontmatter | src/content/tools/grok-code-fast.md |
 | 2026-05-13 | /tools/jimeng/ | Tool | Yes | frontmatter | src/content/tools/jimeng.md |
@@ -713,7 +712,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-06 | /tools/veo/ | Tool | Yes | frontmatter | src/content/tools/veo.md |
 | 2026-06-06 | /tools/you-com/ | Tool | Yes | frontmatter | src/content/tools/you-com.md |
 | 2026-06-06 | /workflows/youtube-content-stack/ | Workflow | Yes | frontmatter | src/content/workflows/youtube-content-stack.md |
-| 2026-06-07 | / | Static page | Yes | working tree | src/pages/index.astro |
+| 2026-06-07 | / | Static page | Yes | git | src/pages/index.astro |
 | 2026-06-07 | /answers/best-ai-for-writing-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-for-writing-2026.astro |
 | 2026-06-07 | /answers/best-ai-image-generator-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-image-generator-2026.astro |
 | 2026-06-07 | /answers/best-ai-video-generator-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-video-generator-2026.astro |
@@ -730,7 +729,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-07 | /categories/ai-video/ | Category | Yes | frontmatter | src/content/categories/ai-video.md |
 | 2026-06-07 | /categories/ai-voice/ | Category | Yes | frontmatter | src/content/categories/ai-voice.md |
 | 2026-06-07 | /categories/ai-writing/ | Category | Yes | frontmatter | src/content/categories/ai-writing.md |
-| 2026-06-07 | /dead/ | Static page | Yes | working tree | src/pages/dead/index.astro |
+| 2026-06-07 | /dead/ | Static page | Yes | page metadata | src/pages/dead/index.astro |
 | 2026-06-07 | /guides/ | Static page | Yes | git | src/pages/guides/index.astro |
 | 2026-06-07 | /guides/canva-ai-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/canva-ai-alternatives.md |
 | 2026-06-07 | /guides/chatgpt-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/chatgpt-alternatives.md |
@@ -749,3 +748,4 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-07 | /guides/synthesia-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/synthesia-alternatives.md |
 | 2026-06-07 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
 | 2026-06-07 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
+| 2026-06-07 | /media-kit/ | Static page | Yes | working tree | src/pages/media-kit.astro |
