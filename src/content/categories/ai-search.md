@@ -5,10 +5,10 @@ title: AI Search & Research Tools
 description: AI answer engines, private search, research notebooks, semantic search APIs, and source-backed research assistants.
 tool_count: 8
 seo_title: "Best AI Search and Research Tools (June 2026)"
-meta_description: "Updated June 6, 2026: compare Perplexity, Kagi, You.com APIs, Comet, ChatGPT Search, Google AI Mode, NotebookLM, Exa, Genspark, Glean, and Grok by citations, privacy, APIs, paid media limits, and buyer fit."
+meta_description: "Updated June 7, 2026: compare Perplexity, Kagi, You.com APIs, Comet, ChatGPT Search, Google AI Mode, NotebookLM, Exa, Genspark, Glean, and Grok by citations, privacy, APIs, paid media limits, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-06
-last_verified: 2026-06-06
+last_updated: 2026-06-07
+last_verified: 2026-06-07
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -33,6 +33,8 @@ AI search is not one category anymore. Buyers now choose between **cited answer 
 **Use [Comet](/tools/comet/) when the search workflow should live inside the browser.** Comet is the Perplexity browser lane for users who want AI search, page context, shopping/research help, and everyday web actions closer to tabs instead of a separate answer-engine page.
 
 **Use [Dia](/tools/dia/) when browser context, tabs, meetings, and connected work apps are the AI surface.** The June 2 check found Dia explicitly positioned as part of Atlassian, with SSO, MDM controls, admin-managed profiles, SOC 2 Type II coverage, and provider no-training restrictions now surfaced on the security page. It is still a user browser, not a programmable browser automation API.
+
+**June 7 Perplexity alternatives update:** [Perplexity alternatives](/guides/perplexity-alternatives/) now separates ChatGPT Search for all-purpose AI work, Gemini/Google AI Mode for Google-native research, NotebookLM for owned-source notebooks, Claude for deep synthesis, Kagi for private paid search, and Exa/Perplexity APIs for developer retrieval and answer layers.
 
 **Use [ChatGPT](/tools/chatgpt/) when search is only one part of the workflow.** ChatGPT Search is the better Perplexity alternative when the buyer also wants writing, coding, file analysis, images, voice, data analysis, projects, and everyday assistant work.
 
@@ -95,7 +97,7 @@ AI search is not one category anymore. Buyers now choose between **cited answer 
 
 ## Money Pages To Keep Current
 
-- [Perplexity alternatives](/guides/perplexity-alternatives/) now separates answer engines, general assistants, Google AI Search, owned-document research, private search, and developer APIs.
+- [Perplexity alternatives](/guides/perplexity-alternatives/) is the June 7 verified switching guide for ChatGPT Search, Gemini/Google AI Mode, NotebookLM, Claude, Kagi, Exa, and Perplexity API buyers deciding between cited open-web answers, all-purpose assistants, owned-source research, private paid search, and developer APIs.
 - [Best AI tools for researchers](/guides/best-ai-tools-for-researchers/) is the June 6 verified research workflow guide and should stay synchronized because research buyers often move between Perplexity, NotebookLM, Elicit, Semantic Scholar, Scite, Consensus, Claude, and ChatGPT for current web research, owned-source notebooks, literature review, and citation context.
 - [Best AI tools for real estate agents](/guides/best-ai-tools-for-real-estate-agents/) now separates Perplexity-style cited market/vendor research from listing copy, listing creative, Zillow lead context, and broker-reviewed client advice.
 - [Best AI Tools for Consultants](/guides/best-ai-tools-for-consultants/) is the June 6 verified adjacent guide for Perplexity-led source trails, ChatGPT drafting, Claude memo review, Gamma decks, and Fathom meeting capture.
@@ -126,20 +128,20 @@ Do not leave this category stale. Google AI Mode, Perplexity Pro/Max/Enterprise,
 - [Perplexity Pro](https://www.perplexity.ai/pro) (verified 2026-06-06)
 - [Perplexity Max help](https://www.perplexity.ai/help-center/en/articles/11680686-perplexity-max) (verified 2026-06-06)
 - [Perplexity Enterprise](https://www.perplexity.ai/enterprise) (verified 2026-06-06)
-- [Perplexity API pricing](https://docs.perplexity.ai/docs/getting-started/pricing) (verified 2026-06-06)
+- [Perplexity API pricing](https://docs.perplexity.ai/docs/getting-started/pricing) (verified 2026-06-07)
 - [Perplexity Agent API tools](https://docs.perplexity.ai/docs/agent-api/tools) (verified 2026-06-06)
 - [Perplexity Sonar media docs](https://docs.perplexity.ai/docs/sonar/media) (verified 2026-06-06)
 - [Perplexity Enterprise pricing](https://www.perplexity.ai/enterprise/pricing) (verified 2026-06-06)
-- [ChatGPT Search Help](https://help.openai.com/en/articles/9237897-chatgpt-search) (verified 2026-05-13)
+- [ChatGPT Search Help](https://help.openai.com/en/articles/9237897-chatgpt-search) (verified 2026-06-07)
 - [Google AI Mode and AI Overviews updates](https://blog.google/products-and-platforms/products/search/explore-web-generative-ai-search/) (verified 2026-05-13)
-- [Google AI Plans](https://one.google.com/about/google-ai-plans/) (verified 2026-05-13)
-- [NotebookLM upgrade docs](https://support.google.com/notebooklm/answer/16213268) (verified 2026-05-13)
+- [Google AI Plans](https://one.google.com/about/google-ai-plans/) (verified 2026-06-07)
+- [NotebookLM upgrade docs](https://support.google.com/notebooklm/answer/16213268) (verified 2026-06-07)
 - [Kagi pricing](https://kagi.com/pricing) (verified 2026-06-06)
 - [Kagi Assistant docs](https://help.kagi.com/kagi/ai/assistant.html) (verified 2026-06-06)
-- [Kagi Ultimate plan docs](https://help.kagi.com/kagi/plans/ultimate-plan.html) (verified 2026-06-06)
-- [Kagi Team plan docs](https://help.kagi.com/kagi/plans/team-plan.html) (verified 2026-06-06)
+- [Kagi Ultimate plan docs](https://help.kagi.com/kagi/plans/ultimate-plan.html) (verified 2026-06-07)
+- [Kagi Team plan docs](https://help.kagi.com/kagi/plans/team-plan.html) (verified 2026-06-07)
 - [Kagi Research Assistants](https://help.kagi.com/kagi/ai/kagi-research.html) (verified 2026-06-06)
-- [Exa pricing update](https://exa.ai/docs/changelog/pricing-update) (verified 2026-06-05)
+- [Exa pricing update](https://exa.ai/docs/changelog/pricing-update) (verified 2026-06-07)
 - [Exa API pricing](https://exa.ai/pricing/api) (verified 2026-06-05)
 - [Genspark membership benefits](https://www.genspark.ai/membership-benefits-lp) (verified 2026-06-02)
 - [Glean official site](https://www.glean.com/) (verified 2026-06-02)

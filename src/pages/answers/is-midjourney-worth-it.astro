@@ -5,13 +5,13 @@ import AnswerContent from '../../components/AnswerContent.astro';
 import AnswerDecisionPanel from '../../components/AnswerDecisionPanel.astro';
 
 const answerContent = `
-[Midjourney](/tools/midjourney/) is worth paying for in May 2026 if you create stylized images regularly: concept art, moodboards, social visuals, game art, editorial illustration, or campaign exploration.
+[Midjourney](/tools/midjourney/) is worth paying for in June 2026 if you create stylized images regularly: concept art, moodboards, social visuals, game art, editorial illustration, or campaign exploration.
 
-It is less compelling for one-off image generation, product photography, precise brand layouts, or text-heavy graphics. For those jobs, compare [ChatGPT](/tools/chatgpt/) for convenience, [Ideogram](/tools/ideogram/) for text rendering, and [Stable Diffusion](/tools/stable-diffusion/) for controlled or local workflows.
+It is less compelling for one-off image generation, product photography, precise brand layouts, or text-heavy graphics. For those jobs, compare [ChatGPT](/tools/chatgpt/) for convenience, [Ideogram](/tools/ideogram/) for text rendering, [Adobe Firefly](/tools/adobe-firefly/) for Adobe-native commercial creative, and [Stable Diffusion](/tools/stable-diffusion/) or FLUX.2 paths for controlled or local/API workflows.
 
 The Standard tier is the sensible starting point for regular users because image volume matters more than testing a handful of prompts. Basic can work for light experiments. Higher tiers make sense only when image generation is part of a real production workflow.
 
-Pick Midjourney if visual style is the job. Skip it if you only need occasional images, exact product accuracy, or a general assistant that also writes, browses, analyzes, and codes. For alternatives, compare the [AI image generator answer](/answers/best-ai-image-generator-2026/) and the [Midjourney alternatives guide](/guides/midjourney-alternatives/).
+Pick Midjourney if visual style is the job. Skip it if you only need occasional images, exact product accuracy, readable text, Adobe workflow, local/API control, or a general assistant that also writes, browses, analyzes, and codes. For alternatives, compare the [AI image generator answer](/answers/best-ai-image-generator-2026/) and the June 7 refreshed [Midjourney alternatives guide](/guides/midjourney-alternatives/).
 `;
 
 const answerLD = JSON.stringify({
@@ -21,7 +21,7 @@ const answerLD = JSON.stringify({
   author: { '@type': 'Organization', name: 'aipedia.wiki Editorial', url: 'https://aipedia.wiki/about/editorial/' },
   publisher: { '@id': 'https://aipedia.wiki/#organization' },
   datePublished: '2026-04-16',
-  dateModified: '2026-05-17',
+  dateModified: '2026-06-07',
   mainEntityOfPage: 'https://aipedia.wiki/answers/is-midjourney-worth-it/',
 });
 ---
@@ -37,7 +37,7 @@ const answerLD = JSON.stringify({
         { label: 'Answers', href: '/answers/' },
         { label: "Is Midjourney worth it in 2026?" },
       ]}
-      verifiedLabel="Verified May 17, 2026"
+      verifiedLabel="Verified June 7, 2026"
     />
 
     <article class="gt-body" id="gt-body">
@@ -48,7 +48,7 @@ const answerLD = JSON.stringify({
       winner="Regular visual exploration"
       bestFor="Creators making concept art, moodboards, campaign visuals, social images, game art, editorial illustration, or visual style exploration."
       avoidIf="You need exact product accuracy, text-heavy graphics, brand-layout precision, or a general assistant that also writes and analyzes."
-      nextStep="Check image-generator alternatives if text rendering, convenience, or local control matters more than style."
+      nextStep="Check image-generator alternatives if text rendering, convenience, Adobe workflow, free experimentation, or local/API control matters more than style."
       links={[
         { href: '/tools/midjourney/', label: 'Review Midjourney' },
         { href: '/answers/best-ai-image-generator-2026/', label: 'Compare image generators' },
@@ -59,7 +59,7 @@ const answerLD = JSON.stringify({
     <AnswerContent content={answerContent} />
 
     <div class="mt-[var(--site-section-gap)] pt-[var(--site-content-gap)] border-t border-[var(--border)] text-sm text-[var(--text-muted)]">
-      <p>This answer was checked against current vendor sources on May 17, 2026, including <a href="https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans" class="text-[var(--accent-primary)] no-underline hover:underline">Midjourney plans</a>, <a href="https://openai.com/index/introducing-chatgpt-images-2-0/" class="text-[var(--accent-primary)] no-underline hover:underline">OpenAI ChatGPT Images 2.0</a>, and <a href="https://docs.ideogram.ai/plans-and-pricing/plans-and-pricing" class="text-[var(--accent-primary)] no-underline hover:underline">Ideogram plans</a>. See our <a href="/about/scoring/" class="text-[var(--accent-primary)] no-underline hover:underline">scoring methodology</a>.</p>
+      <p>This answer was checked against current vendor sources on June 7, 2026, including <a href="https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans" class="text-[var(--accent-primary)] no-underline hover:underline">Midjourney plans</a>, <a href="https://developers.openai.com/api/docs/models/gpt-image-2" class="text-[var(--accent-primary)] no-underline hover:underline">GPT Image 2 API docs</a>, <a href="https://ideogram.ai/pricing" class="text-[var(--accent-primary)] no-underline hover:underline">Ideogram pricing</a>, and <a href="https://www.adobe.com/products/firefly/plans.html" class="text-[var(--accent-primary)] no-underline hover:underline">Adobe Firefly plans</a>. See our <a href="/about/scoring/" class="text-[var(--accent-primary)] no-underline hover:underline">scoring methodology</a>.</p>
     </div>
   </article>
   </div>

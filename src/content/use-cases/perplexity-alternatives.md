@@ -1,16 +1,21 @@
 ---
 type: use-case
 slug: perplexity-alternatives
-title: "Best Perplexity Alternatives (May 2026)"
-seo_title: "Best Perplexity Alternatives: ChatGPT Search, Google AI Mode, NotebookLM, Claude, Kagi and Exa"
-meta_description: "Updated May 13, 2026: compare the best Perplexity alternatives for cited web answers, Google-native research, private search, owned documents, deep synthesis, and search APIs."
-description: "A current buyer guide to Perplexity alternatives, separating cited answer engines, Google AI Search, ChatGPT Search, NotebookLM, Claude, Kagi, Exa, and developer search APIs by real research workflow."
+title: "Best Perplexity Alternatives (June 2026)"
+seo_title: "Best Perplexity Alternatives in June 2026: ChatGPT Search, Google AI Mode, NotebookLM, Kagi, Exa"
+meta_description: "June 2026 Perplexity alternatives guide: ChatGPT Search for all-purpose AI, Gemini and Google AI Mode for Google-native research, NotebookLM for owned sources, Claude for synthesis, Kagi for private search, and Exa for search APIs."
+description: "A current buyer guide to Perplexity alternatives, separating cited answer engines, Google AI Search, ChatGPT Search, NotebookLM, Claude, Kagi, Exa, and developer APIs by real research workflow."
 tools_mentioned: ["perplexity", "chatgpt", "gemini", "notebooklm", "claude", "kagi", "exa", "you-com", "grok"]
+author: "aipedia.wiki Editorial"
+last_updated: 2026-06-07
+last_verified: 2026-06-07
+update_frequency: monthly
 guide_picks:
   best_overall:
     tool: chatgpt
     label: "Best all-purpose Perplexity alternative"
-    reason: "Best first alternative when the buyer wants web search, citations, files, analysis, writing, images, voice, code, and everyday assistant work in one account."
+    plan: "Free/Plus to test; Business for team research workspaces"
+    reason: "ChatGPT is the best first alternative when the buyer wants web search, citations, files, analysis, writing, images, voice, code, and everyday assistant work in one account."
     sources:
       - label: "ChatGPT Search Help"
         url: "https://help.openai.com/en/articles/9237897-chatgpt-search"
@@ -19,207 +24,162 @@ guide_picks:
   budget:
     tool: gemini
     label: "Best Google-native search alternative"
-    reason: "Best fit when the buyer wants AI Mode, AI Overviews, Google Search, Gemini, Deep Research, NotebookLM upgrades, and Workspace integration in the same ecosystem."
+    plan: "Free/Google AI Pro to test; Ultra only when the broader Google AI bundle matters"
+    reason: "Gemini and Google AI Mode are best when the buyer wants AI answers close to Google Search, Gemini, Deep Research, NotebookLM, Workspace, Drive, and Google AI subscription benefits."
     sources:
-      - label: "Google AI Mode and AI Overviews updates"
-        url: "https://blog.google/products-and-platforms/products/search/explore-web-generative-ai-search/"
-      - label: "Google AI Plans"
-        url: "https://one.google.com/about/google-ai-plans/"
+      - label: "Google AI subscriptions"
+        url: "https://gemini.google/us/subscriptions/"
   pro_team:
     tool: notebooklm
     label: "Best for owned-source research"
-    reason: "Best when the research source set is your own PDFs, reports, transcripts, notes, Drive files, or class materials rather than open-web discovery."
+    plan: "Standard for light notebooks; Plus/Pro/Ultra or enterprise paths when limits matter"
+    reason: "NotebookLM is best when the research source set is your own PDFs, reports, transcripts, notes, Drive files, class materials, or internal documents rather than open-web discovery."
     sources:
       - label: "NotebookLM upgrade docs"
         url: "https://support.google.com/notebooklm/answer/16213268"
-author: "aipedia.wiki Editorial"
-last_updated: 2026-05-13
-last_verified: 2026-05-13
-update_frequency: monthly
 ---
 
-# Best Perplexity Alternatives (May 2026)
+# Best Perplexity Alternatives (June 2026)
 
-Perplexity is still one of the cleanest AI answer engines when the job is **ask a web question, get citations, refine the search, and keep moving**. But it is no longer the only serious option. The best alternative depends on whether you want a general AI workspace, Google Search integration, private search, owned-document analysis, enterprise research, or a developer search API.
+[Perplexity](/tools/perplexity/) remains one of the cleanest AI answer engines when the job is **ask a web question, get citations, inspect sources, refine, and keep moving**. But the best alternative depends on whether you want a general AI workspace, Google-native research, private search, owned-document analysis, deeper synthesis, or a developer search API.
 
-This guide was refreshed on **May 13, 2026** against current official sources from Perplexity, OpenAI, Google, Anthropic, Kagi, Exa, You.com, and X/xAI surfaces where relevant. Recent context worth pricing in: ChatGPT Search continues to expand inside GPT-5.5, Google AI Mode and AI Overviews have shipped further updates, and NotebookLM Ultra has rolled out higher source and audio/video overview limits.
+Verified June 7, 2026 against official Perplexity, OpenAI, Google, NotebookLM, Anthropic, Kagi, and Exa sources. AiPedia may earn from some outbound links, but rankings are editorial and source-backed.
 
 ## Quick Verdict
 
-**Best overall alternative:** [ChatGPT](/tools/chatgpt/) with Search. It is the best Perplexity replacement when you want cited web answers plus files, code, writing, images, voice, data analysis, projects, and daily assistant work in one product.
+**Pick [ChatGPT](/tools/chatgpt/) with Search for the best all-purpose alternative.** It is the better replacement when you want cited web answers plus files, writing, code, images, voice, data analysis, and daily assistant work.
 
-**Best Google-native alternative:** [Gemini](/tools/gemini/) and Google AI Mode. Choose it if you already search in Google, use Workspace, want Deep Research, or want AI answers that sit closer to Google's default search experience.
+**Pick [Gemini](/tools/gemini/) and Google AI Mode for Google-native research.** Choose this if the buyer already uses Search, Gmail, Docs, Drive, Chrome, NotebookLM, or Google AI subscriptions.
 
-**Best owned-source alternative:** [NotebookLM](/tools/notebooklm/). Use it when your research is based on your uploaded sources, Drive files, reports, transcripts, or class materials, not open-web discovery.
+**Pick [NotebookLM](/tools/notebooklm/) for owned-source research.** It is the best alternative when the source set is your PDFs, reports, notes, transcripts, Drive files, class materials, or internal documents.
 
-**Best deep synthesis alternative:** [Claude](/tools/claude/). Choose it when you already have the source set and need nuanced analysis, writing, editing, or code-heavy reasoning.
+**Pick [Claude](/tools/claude/) for deep synthesis after source gathering.** Use it when you already trust the sources and need analysis, writing, editing, policy interpretation, or code reasoning.
 
-**Best private search alternative:** [Kagi](/tools/kagi/). Use it if the buyer wants paid, ad-free search, ranking controls, and optional AI assistance instead of an ad-funded answer engine.
+**Pick [Kagi](/tools/kagi/) for private paid search.** Kagi is the alternative when the buyer wants ad-free search, ranking control, optional Assistant access, and less dependence on an AI answer engine.
 
-**Best developer alternative:** [Exa](/tools/exa/) or the Perplexity API. Use Exa when you are building search/retrieval inside a product. Use Perplexity's Sonar/Search/Agent APIs when you specifically want Perplexity-style web answers programmatically.
+**Pick [Exa](/tools/exa/) for developer search APIs.** Use Exa when you are building retrieval, search, RAG, or agent discovery inside a product.
 
 ## Should You Leave Perplexity?
 
-Stay with Perplexity if your main workflow is cited web answers, current-source research, Pro Search-style follow-ups, source-aware browsing, and research spaces. Perplexity Enterprise also positions the product around web research, internal knowledge, Comet Browser, Computer, security, audit logs, and no training on enterprise customer data.
+Stay with Perplexity if your main workflow is cited open-web answers, current-source research, Pro Search-style follow-ups, source-aware browsing, and Perplexity's research interface. Perplexity also has API paths for Sonar, Search, Agent APIs, embeddings, and web tools, with AWS Marketplace purchase options for API credits.
 
-Switch or add an alternative if one of these is true:
+Switch or add an alternative if:
 
-- You want one AI workspace for research, writing, coding, files, images, voice, and analysis.
-- You already live in Google Search, Gmail, Docs, Drive, Sheets, NotebookLM, or Chrome.
-- You need to analyze a controlled source set rather than the open web.
-- You want paid private search with ranking controls.
-- You are building an AI product and need a search API rather than a consumer answer page.
-- You need deep synthesis from sources you already trust and do not want another search engine in the loop.
+- you want one AI workspace for research, writing, coding, files, images, voice, and analysis;
+- you already live in Google Search, Gmail, Docs, Drive, Sheets, Chrome, or NotebookLM;
+- you need to interrogate a controlled source set instead of the open web;
+- you want paid private search with ranking controls;
+- you are building an AI product and need search/retrieval APIs;
+- you need deeper synthesis from sources you already trust.
 
-## Best Alternatives by Buyer Job
+## Best Alternatives by Job
 
-### ChatGPT Search - Best All-Purpose Alternative
+| Buyer job | Best pick | Why | Watch-out |
+|---|---|---|---|
+| All-purpose AI workspace | [ChatGPT](/tools/chatgpt/) | Search plus files, writing, code, analysis, images, and voice | Less search-first than Perplexity |
+| Google-native research | [Gemini](/tools/gemini/) | Google Search, AI Mode, Workspace, Drive, NotebookLM, subscriptions | Google ecosystem lock-in |
+| Owned-source research | [NotebookLM](/tools/notebooklm/) | Grounded Q&A over selected sources, higher limits on upgraded paths | Not an open-web search engine |
+| Deep synthesis | [Claude](/tools/claude/) | Strong analysis, writing, long documents, critique, policy/code reasoning | Does not start every answer with live citations |
+| Private paid search | [Kagi](/tools/kagi/) | Ad-free search, ranking controls, Assistant on Ultimate | Not the same cited-answer interface |
+| Developer search API | [Exa](/tools/exa/) | Search/retrieval primitives, crawler/deep research API, agent data discovery | You build the answer layer |
 
-Use [ChatGPT](/tools/chatgpt/) when the buyer wants Perplexity-style current answers but also wants the rest of a general AI workspace. OpenAI's help docs say ChatGPT can search the web for fast, timely answers with links to relevant sources, can automatically search when a question benefits from the web, and can show inline citations or a Sources panel.
+## 1. ChatGPT Search
 
-Choose it when:
+Use [ChatGPT](/tools/chatgpt/) when the buyer wants Perplexity-style current answers but also wants the rest of a general AI workspace. OpenAI's Search help says ChatGPT can search the web for timely answers, include source links, and automatically search when a question benefits from fresh information.
 
-- You want research, writing, code, file analysis, images, voice, and web search in one product.
-- You ask broad questions that need synthesis plus follow-up work.
-- You want an assistant that can turn research into drafts, tables, code, plans, and visuals.
+Choose it when research needs to become a brief, spreadsheet, code snippet, email, image prompt, data analysis, or plan in the same workspace.
 
-Avoid it when:
+**Best plan:** Free/Plus for testing; Business when team workspace controls matter.
 
-- You want the cleanest source-first search interface every time.
-- You need a dedicated research answer engine for every query.
-- You do not want to prompt for source discipline.
+**Watch-out:** if every query must be source-first and web-answer-first, Perplexity may still feel cleaner.
 
-### Gemini and Google AI Mode - Best Google-Native Alternative
+## 2. Gemini and Google AI Mode
 
-Use [Gemini](/tools/gemini/) and Google AI Search when the buyer already trusts Google Search and Workspace as the research base. Google's recent Search updates say AI Mode and AI Overviews are getting new ways to find relevant websites, deep insights, and original content from across the web. Google AI Plans also bundle higher access to Gemini, Deep Research, AI Mode features, Workspace help, NotebookLM upgrades, and Google storage depending on tier.
+Use [Gemini](/tools/gemini/) and Google AI Mode when the buyer already trusts Google as the research layer. Google's subscription page positions Google AI Pro and Ultra around Gemini access, Gmail/Docs integration, NotebookLM, cloud storage, and other benefits, while Google Search keeps moving AI answers closer to the default search workflow.
 
-Choose it when:
+Choose it when research lives beside Gmail, Docs, Drive, Search, Chrome, NotebookLM, and Google AI subscription benefits.
 
-- You want AI answers inside or beside normal Google Search.
-- Your workflow lives in Gmail, Docs, Drive, Sheets, Chrome, and NotebookLM.
-- You want Deep Research and long-context analysis in the Google ecosystem.
+**Best plan:** test the free Gemini/Search experience first. Inspect Google AI Pro or Ultra only if the whole Google bundle matters.
 
-Avoid it when:
+**Watch-out:** plan names, limits, and included tools move quickly. Verify live Google subscription pages before procurement.
 
-- You want a non-Google answer engine with a clearer standalone research workspace.
-- You need to control which sources are included every time.
-- You do not want Google ecosystem lock-in.
+## 3. NotebookLM
 
-### NotebookLM - Best for Your Own Documents
+[NotebookLM](/tools/notebooklm/) is the best Perplexity alternative for your own sources. Google's upgrade docs list higher limits through Google AI Plans, Google Cloud, or qualifying Workspace plans, including larger notebook/source/chat/audio/video/report limits on upgraded tiers and enterprise paths through Google Cloud or Gemini Enterprise.
 
-Use [NotebookLM](/tools/notebooklm/) when the source corpus is already known: PDFs, reports, notes, transcripts, Drive files, class materials, calls, or internal documents. Google's NotebookLM help page lists Standard, Plus, Pro, and Ultra access, with higher limits for notebooks, sources, chats, audio overviews, video overviews, reports, flashcards, quizzes, mind maps, Deep Research, data tables, and premium features through Google AI Plans, Google Cloud, or qualifying Workspace plans.
+Choose it when the source set is known: class readings, research PDFs, meeting transcripts, customer calls, policy docs, Drive files, reports, or internal documents.
 
-Choose it when:
+**Best plan:** Standard/free access for small notebooks; Plus/Pro/Ultra or enterprise plans when source, chat, audio overview, video overview, report, quiz, or mind-map limits matter.
 
-- You need to cite and interrogate a controlled source set.
-- You are studying, reviewing reports, analyzing meeting transcripts, or building a research notebook.
-- You care more about source-grounded notes than open-web discovery.
+**Watch-out:** NotebookLM is not a web discovery tool. It is best after you already know what sources should count.
 
-Avoid it when:
+## 4. Claude
 
-- You need Perplexity-style web discovery first.
-- You do not have reliable source material yet.
-- You need a general web answer engine rather than a notebook.
+[Claude](/tools/claude/) is the deep-analysis alternative after source gathering. Use it when the job is to understand, compare, edit, summarize, critique, or rewrite from sources you already trust.
 
-### Claude - Best for Deep Analysis After Source Gathering
+Claude is especially useful for long briefs, policy documents, legal-style issue spotting, code review, research synthesis, and careful prose. It is less useful when the buyer expects every answer to start with fresh web citations.
 
-Use [Claude](/tools/claude/) when the research work is analysis, writing, editing, code review, policy interpretation, or careful synthesis from sources you already have. Anthropic's Max help page says Max is for users who collaborate with Claude frequently, includes higher usage capacity than Pro, priority access to new features and models, Claude Code access, and Cowork access, with Max 5x and Max 20x tiers.
+**Best plan:** Pro or Max when frequent research synthesis and long sessions need more capacity.
 
-Choose it when:
+**Watch-out:** if Claude changes a factual claim during a rewrite, verify it against the original source before publishing.
 
-- You need a careful analyst or editor after collecting sources.
-- You work with long briefs, transcripts, policies, code, or research documents.
-- You want strong writing and reasoning more than a search-first interface.
+## 5. Kagi
 
-Avoid it when:
+[Kagi](/tools/kagi/) is the private-search alternative. Kagi's Ultimate docs position the plan around Kagi Search plus The Assistant by Kagi, combining Kagi results with current LLMs for research, creative, and programming tasks. Team docs describe Professional and Ultimate choices for organizations that want ad-free search, shared search customization, Summarizer, and Assistant on Ultimate.
 
-- You expect every answer to start with fresh web citations.
-- You need a consumer search engine replacement.
-- You need a source-discovery workflow more than a synthesis workflow.
+Choose Kagi when the buyer wants a paid search engine with ranking controls and optional AI, not an answer engine that replaces search.
 
-### Kagi - Best Private Search Alternative
+**Best plan:** Professional for search-first users; Ultimate when Assistant is the purchase reason.
 
-Use [Kagi](/tools/kagi/) when the buyer is frustrated with ad-driven search and wants paid search with ranking controls. Kagi's docs position Ultimate as the premier Kagi experience with Assistant access, and Kagi Team docs describe Professional and Ultimate tiers for organizations that want ad-free search, shared search customizations, Summarizer, and Assistant on Ultimate.
+**Watch-out:** Kagi is not trying to be Perplexity's exact interface. It is search-first, not answer-first.
 
-Choose it when:
+## 6. Exa and Perplexity API
 
-- You want a paid search engine rather than an ad-funded answer engine.
-- You value ranking control, lenses, filters, and search customization.
-- You want optional AI assistance on top of search, not AI search as the whole product.
+[Exa](/tools/exa/) is the developer alternative when the task is search/retrieval inside a product. Exa's March 2026 pricing update says it simplified and bundled API pricing, included contents for 10 search results per request, and reduced Exa Deep cost.
 
-Avoid it when:
+Use Perplexity's API when you specifically want Perplexity-style answers programmatically. Its docs now separate model pricing, third-party Agent API pricing, Search API costs, Sonar pricing, web-search/fetch tools, and AWS Marketplace purchase options.
 
-- You want Perplexity's concise cited answer format first.
-- You do not want to pay for search.
-- You need the broadest AI assistant feature set.
+**Best plan:** use Exa when you want retrieval primitives and your own answer layer. Use Perplexity API when the answer layer should come from Perplexity.
 
-### Exa and Perplexity API - Best for Developers
-
-Use [Exa](/tools/exa/) when you are building an AI agent, research workflow, RAG product, or semantic search feature. Exa's 2026 pricing update says it simplified pricing, and its pricing page frames the product around AI search, SERP API, website crawler tools, and deep research API.
-
-Use Perplexity's API when you want Perplexity-style web answers, Sonar, Search API, Agent API, embeddings, and tool pricing. Perplexity's API docs list model token pricing, web search and fetch_url tool pricing, Search API request pricing, Sonar API token/request pricing, Pro Search pricing, and embeddings.
-
-Choose Exa when:
-
-- You need search and retrieval primitives inside your own product.
-- You want semantic search, crawler-like retrieval, or agent data discovery.
-- You want to build the answer layer yourself.
-
-Choose Perplexity API when:
-
-- You want an answer API with search baked in.
-- You want Sonar or Perplexity's research-style output.
-- You can model token, request, context, and tool costs.
+**Watch-out:** monthly sticker prices do not tell the story. Model token rates, search requests, context size, web fetches, and agent steps determine production cost.
 
 ## What Not To Do
 
-Do not treat every chatbot as a Perplexity replacement. A Perplexity alternative must either search the web well, cite sources clearly, analyze your source set, or power a search/retrieval workflow.
+Do not call every chatbot a Perplexity replacement. A credible alternative must either search the web, cite sources, analyze your selected corpus, improve source synthesis, or power a retrieval workflow.
 
-Do not use AI search as a fact-checking authority by itself. AI answers can surface useful sources, but the source still needs to support the claim.
+Do not use AI search as the final fact-check. The answer can point you to sources; the source still has to support the claim.
 
-Do not move sensitive internal research into a consumer tool without checking privacy, retention, enterprise controls, and whether your organization permits it.
+Do not move sensitive internal research into a consumer search or chat product without checking privacy, retention, enterprise controls, and company policy.
 
-Do not compare only monthly sticker prices. Research tools hide value and cost in source limits, file limits, model access, browser agents, search depth, API request fees, and enterprise governance.
-
-## What's New Since the Last Refresh
-
-- **NotebookLM Ultra** raised limits on sources, audio overviews, video overviews, reports, flashcards, quizzes, mind maps, and Deep Research for owned-source research workflows.
-- **Google AI Mode and AI Overviews** continued shipping incremental updates around web exploration, multimodal answers, and Workspace integration.
-- **Exa** kept its simpler 2026 pricing structure with consolidated AI search, SERP API, crawler, and deep research API surfaces.
-- **Perplexity** still leads on the cleanest cited-answer interface for open-web questions; the alternative case is strongest when the buyer wants more than that one job.
+Do not compare only monthly subscription prices. Research products hide cost in source limits, file limits, model access, browser agents, search depth, API requests, and enterprise controls.
 
 ## FAQ
 
 **What is the best free Perplexity alternative?**
-For most people, start with ChatGPT Search and Google AI Mode/AI Overviews, then add NotebookLM if your source set is your own documents.
+Start with ChatGPT Search and Google AI Mode/AI Overviews, then add NotebookLM if your source set is your own documents.
 
 **Is ChatGPT better than Perplexity for research?**
 ChatGPT is better as an all-purpose AI workspace. Perplexity is often cleaner when the only job is cited open-web answers.
 
 **Is NotebookLM a Perplexity alternative?**
-Only for owned-source research. NotebookLM is excellent for asking questions over selected sources, but it is not the same as a live web answer engine.
+Only for owned-source research. NotebookLM is excellent for selected sources, but it is not the same as a live web answer engine.
 
 **Is Kagi better than Perplexity?**
 Kagi is better if you want paid, private, customizable search. Perplexity is better if you want AI-generated cited answers as the default interface.
 
 **What is the best Perplexity alternative for developers?**
-Exa is the better search/retrieval API when you want to build your own answer layer. Perplexity's Sonar/Search/Agent APIs are better when you want Perplexity-style answer generation programmatically.
+Exa is the better search/retrieval API when you want to build your own answer layer. Perplexity's APIs are better when you want Perplexity-style answer generation programmatically.
 
 ## Sources
 
-- [Perplexity Enterprise](https://www.perplexity.ai/enterprise) (verified 2026-05-13)
-- [Perplexity Enterprise pricing FAQ](https://www.perplexity.ai/help-center/en/articles/10352986-enterprise-pro-pricing-and-billing-frequently-asked-questions) (verified 2026-05-13)
-- [Perplexity API pricing](https://docs.perplexity.ai/docs/getting-started/pricing) (verified 2026-05-13)
-- [Perplexity Pro and Max help collection](https://www.perplexity.ai/help-center/en/collections/8935108-perplexity-pro-and-max) (verified 2026-05-13)
-- [ChatGPT Search Help](https://help.openai.com/en/articles/9237897-chatgpt-search) (verified 2026-05-13)
-- [ChatGPT pricing](https://chatgpt.com/pricing) (verified 2026-05-13)
-- [Google AI Mode and AI Overviews updates](https://blog.google/products-and-platforms/products/search/explore-web-generative-ai-search/) (verified 2026-05-13)
-- [Google AI Plans](https://one.google.com/about/google-ai-plans/) (verified 2026-05-13)
-- [NotebookLM upgrade docs](https://support.google.com/notebooklm/answer/16213268) (verified 2026-05-13)
-- [Claude Max plan help](https://support.claude.com/en/articles/11049741-what-is-the-max-plan) (verified 2026-05-13)
-- [Kagi Ultimate plan docs](https://help.kagi.com/kagi/plans/ultimate-plan.html) (verified 2026-05-13)
-- [Kagi Team plan docs](https://help.kagi.com/kagi/plans/team-plan.html) (verified 2026-05-13)
-- [Exa pricing update](https://exa.ai/docs/changelog/pricing-update) (verified 2026-05-13)
-- [Exa pricing](https://exa.ai/pricing) (verified 2026-05-13)
-- [You.com plans](https://home.you.com/plans) (verified 2026-05-13)
-- [X Premium+ pricing](https://help.x.com/en/premium-plus-price-update) (verified 2026-05-13)
+- [Perplexity Enterprise pricing FAQ](https://www.perplexity.ai/help-center/en/articles/10352986-enterprise-pro-pricing-and-billing-frequently-asked-questions) (verified 2026-06-07)
+- [Perplexity API pricing](https://docs.perplexity.ai/docs/getting-started/pricing) (verified 2026-06-07)
+- [ChatGPT Search help](https://help.openai.com/en/articles/9237897-chatgpt-search) (verified 2026-06-07)
+- [ChatGPT pricing](https://chatgpt.com/pricing) (verified 2026-06-07)
+- [Google AI subscriptions](https://gemini.google/us/subscriptions/) (verified 2026-06-07)
+- [NotebookLM upgrade docs](https://support.google.com/notebooklm/answer/16213268) (verified 2026-06-07)
+- [Claude pricing](https://claude.com/pricing) (verified 2026-06-07)
+- [Choosing a Claude plan](https://support.claude.com/en/articles/11049762-choosing-a-claude-ai-plan) (verified 2026-06-07)
+- [Kagi Ultimate plan docs](https://help.kagi.com/kagi/plans/ultimate-plan.html) (verified 2026-06-07)
+- [Kagi Team plans](https://help.kagi.com/kagi/plans/team-plan.html) (verified 2026-06-07)
+- [Exa pricing update](https://exa.ai/docs/changelog/pricing-update) (verified 2026-06-07)
