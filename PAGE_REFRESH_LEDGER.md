@@ -33,7 +33,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /compare/pitch-vs-tome/ | Comparison | Yes | frontmatter | src/content/comparisons/pitch-vs-tome.md |
 | 2026-05-13 | /compare/presentations-ai-vs-tome/ | Comparison | Yes | frontmatter | src/content/comparisons/presentations-ai-vs-tome.md |
 | 2026-05-13 | /tools/grok-code-fast/ | Tool | Yes | frontmatter | src/content/tools/grok-code-fast.md |
-| 2026-05-13 | /tools/julius/ | Tool | Yes | frontmatter | src/content/tools/julius.md |
 | 2026-05-13 | /tools/kimi/ | Tool | Yes | frontmatter | src/content/tools/kimi.md |
 | 2026-05-13 | /tools/kokoro/ | Tool | Yes | frontmatter | src/content/tools/kokoro.md |
 | 2026-05-13 | /tools/krea/ | Tool | Yes | frontmatter | src/content/tools/krea.md |
@@ -748,4 +747,5 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-07 | /media-kit/ | Static page | Yes | git | src/pages/media-kit.astro |
 | 2026-06-07 | /reports/ | Static page | Yes | git | src/pages/reports/index.astro |
 | 2026-06-07 | /reports/2026-04/ | Report | Yes | frontmatter | src/content/reports/2026-04.md |
-| 2026-06-07 | /tools/jimeng/ | Tool | Yes | working tree | src/content/tools/jimeng.md |
+| 2026-06-07 | /tools/jimeng/ | Tool | Yes | frontmatter | src/content/tools/jimeng.md |
+| 2026-06-07 | /tools/julius/ | Tool | Yes | working tree | src/content/tools/julius.md |

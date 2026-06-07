@@ -3,6 +3,10 @@
 // Copilot) at the canonical index + category hubs + editorial policy.
 //
 // See also /llms-full.txt for the verbose variant with every page listed.
+// Refresh metadata: 2026-06-07 Julius AI tool refresh with
+// credit-based pricing, Plus/Pro/Max/Ultra/Business/Growth packaging,
+// data connectors, Slack Agent, scheduled reports, source registry,
+// tools registry, and LLM maintenance.
 // Refresh metadata: 2026-06-07 Jimeng/Dreamina tool refresh with
 // Seedream 5.0 Lite, Seedance 2.0, pricing-route caveats, source registry,
 // tools registry, and LLM maintenance.
@@ -95,6 +99,7 @@ export const GET: APIRoute = async () => {
   lines.push(`> Independent AI tools encyclopedia maintained by aipedia.wiki Editorial. ${activeTools.length} active tool pages across ${activeCategories.length} categories, ${comparisons.length} head-to-head comparisons, ${useCases.length} buyer guides. Public pages carry verification metadata and editorial sourcing controls.`);
   lines.push('');
   lines.push('Recent guide refresh: June 7, 2026 refreshed Runway alternatives, Suno alternatives, and Synthesia alternatives around Runway credit/API pricing, Seedance/Kling/Veo/Luma/Pika/Hailuo video lanes, Suno paid-rights and v5.5 baseline, ElevenLabs Music/Udio/AIVA/Mubert/Stable Audio music alternatives, and HeyGen/Tavus/D-ID/Hedra/Argil/Captions avatar-video switching paths.');
+  lines.push('Recent tool refresh: June 7, 2026 refreshed Julius AI around credit-based pricing, Plus/Pro/Max/Ultra/Business/Growth packaging, data connectors, Slack Agent, scheduled reports, 32 GB Pro compute context, and source-registry maintenance.');
   lines.push('Recent tool refresh: June 7, 2026 refreshed Jimeng/Dreamina around ByteDance Seedream 5.0 Lite, Seedance 2.0, CapCut/Dreamina route context, account-gated pricing, historical third-party price caveats, and source-registry maintenance.');
   lines.push('Recent maintenance: June 7, 2026 refreshed the April 2026 report archive, corrected stale May-watchlist claims against current official Anthropic, OpenAI, Google, Mistral, Claude, ChatGPT, Cursor, Midjourney, and ElevenLabs sources, and restored the report detail route.');
   lines.push('Recent maintenance: June 7, 2026 refreshed the media kit with live collection inventory language, partnership guardrails, brand asset context, and canonical LLM-surface discovery.');

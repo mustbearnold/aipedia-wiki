@@ -4128,10 +4128,10 @@
       "company": "Julius AI, Inc.",
       "url": "https://julius.ai",
       "pricing_model": "freemium",
-      "price_range": "$20-$375/month",
+      "price_range": "$20-$750/month; enterprise custom",
       "launched": "2023-08",
-      "last_updated": "2026-05-13T00:00:00.000Z",
-      "last_verified": "2026-05-13T00:00:00.000Z",
+      "last_updated": "2026-06-07T00:00:00.000Z",
+      "last_verified": "2026-06-07T00:00:00.000Z",
       "update_frequency": "monthly",
       "scores": {
         "utility": 9,
@@ -4151,7 +4151,8 @@
         "snowflake",
         "claude",
         "gpt-5",
-        "gemini"
+        "slack-agent",
+        "data-connectors"
       ],
       "affiliate": {
         "has_program": false,

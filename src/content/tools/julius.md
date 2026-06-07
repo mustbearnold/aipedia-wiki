@@ -2,20 +2,20 @@
 type: tool
 slug: julius
 title: Julius AI
-tagline: Data analysis copilot that writes and runs Python, R, and SQL on uploaded files up to 32GB, with Claude, GPT-5, and Gemini selectable per task.
+tagline: Data analysis workspace that turns files, notebooks, databases, and Slack questions into Python, SQL, charts, slides, and scheduled reports.
 category: ai-automation
 secondary_categories: [ai-coding]
 company: Julius AI, Inc.
 url: https://julius.ai
 pricing_model: freemium
-price_range: "$20-$375/month"
+price_range: "$20-$750/month; enterprise custom"
 status: active
 launched: 2023-08
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-07
+last_verified: 2026-06-07
 update_frequency: monthly
-seo_title: "Julius AI: Features, Pricing & Review (May 2026)"
-meta_description: "Julius AI is a data-analysis copilot. Upload CSV, Excel, Parquet, or connect Snowflake and BigQuery, and Julius writes Python or R code, runs it, and returns charts. Free tier, Lite $20, Standard $45, Pro $60, Team $50/user, Business $375."
+seo_title: "Julius AI: Features, Pricing & Review (June 2026)"
+meta_description: "Julius AI is a data-analysis workspace for files, notebooks, live databases, Slack Agent, charts, slides, and scheduled reports. June 2026 pricing now uses credits: Plus $20, Pro $45, Max $200, Ultra $500, Business $450, Growth $750."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -30,212 +30,218 @@ scores:
   longevity: 7
 facts:
   best_for:
-    value: Best for analysts and business users who want to chat with spreadsheets/data files and generate analysis without
-      writing code.
+    value: Best for analysts and operators who need AI-assisted analysis over files, notebooks, live databases, charts,
+      slides, Slack questions, and scheduled reports.
     source: https://julius.ai/
     source_label: Julius AI official site
     source_id: julius-official
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-07'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-13'
+    next_review_at: '2026-12-07'
   pricing_anchor:
-    value: Julius pricing includes free and paid packaging; verify message/analysis limits, data size, model access, team features,
-      and enterprise/security terms.
+    value: Julius has moved paid plans from message counts to usage credits, with current public tiers from Plus to Growth
+      plus custom Enterprise; verify credit grants, models, RAM, seats, connectors, Slack Agent, scheduled reports, and renewal price before buying.
     source: https://julius.ai/pricing
     source_label: Julius AI pricing
     source_id: julius-pricing
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-07'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-13'
+    next_review_at: '2026-08-07'
   workflow_surface:
-    value: Julius focuses on AI data analysis over uploaded data, charts, and reports rather than general BI governance or warehouse-native
-      notebooks.
-    source: https://julius.ai/
-    source_label: Julius AI official site
-    source_id: julius-official
-    verified_at: '2026-05-13'
+    value: Julius focuses on conversational data analysis, notebooks, data connectors, Slack Agent, and scheduled reports rather than
+      replacing a governed BI semantic layer or production pipeline scheduler.
+    source: https://julius.ai/docs/data-connectors/overview
+    source_label: Julius data connector docs
+    source_id: julius-connectors
+    verified_at: '2026-06-07'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-13'
+    next_review_at: '2026-12-07'
   enterprise_controls:
-    value: Business evaluation should review team controls, data handling, security posture, and deployment fit for sensitive
-      datasets.
-    source: https://julius.ai/for-business
-    source_label: Julius AI for business
-    source_id: julius-business
-    verified_at: '2026-05-13'
+    value: Business evaluation should review seats, credits, data connectors, Slack Agent permissions, scheduled reports, custom
+      agents, security posture, and whether analysts can audit the generated code and queries.
+    source: https://julius.ai/pricing
+    source_label: Julius AI pricing
+    source_id: julius-pricing
+    verified_at: '2026-06-07'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-13'
+    next_review_at: '2026-12-07'
   watch_out_for:
-    value: For serious analytics, test reproducibility, source-data handling, statistical correctness, chart provenance, and
-      whether outputs can be audited by analysts.
-    source: https://julius.ai/for-business
-    source_label: Julius AI for business
-    source_id: julius-business
-    verified_at: '2026-05-13'
+    value: For serious analytics, test credit burn, source-data permissions, query correctness, reproducibility, chart provenance,
+      Slack visibility, and whether outputs can be audited by analysts before decisions are made.
+    source: https://julius.ai/docs/billing/credits-overview
+    source_label: Julius credits docs
+    source_id: julius-credits
+    verified_at: '2026-06-07'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-13'
-tags: [data-analysis, code-interpreter, python, r, sql, csv, spreadsheet, bigquery, snowflake, claude, gpt-5, gemini]
+    next_review_at: '2026-12-07'
+tags: [data-analysis, code-interpreter, python, sql, csv, spreadsheet, bigquery, snowflake, claude, gpt-5, slack-agent, data-connectors]
 best_for:
   - business analysts running ad-hoc spreadsheet analysis
-  - researchers needing reproducible Python or R notebooks
-  - teams analyzing files too large for ChatGPT Code Interpreter
+  - teams turning notebooks into scheduled Slack or email reports
+  - operators querying Snowflake, BigQuery, Postgres, or Supabase without exports
   - non-coders who need real charts, not just text summaries
-  - connecting warehouses like Snowflake or BigQuery to chat
+  - teams that want a data-analysis agent in Slack
 not_best_for:
-  - users happy with ChatGPT's built-in Code Interpreter
-  - building production data pipelines or scheduled jobs
-  - teams standardized on one model provider already
-  - workloads under 512MB that do not need R or extra RAM
+  - users whose general chatbot already handles the data cleanly
+  - building production data pipelines or automated data jobs
+  - governed BI semantic layers and audited dashboards
+  - teams unwilling to model credit burn before rollout
+  - sensitive datasets without a clear connector, Slack, and access-control review
 quick_answer: >-
-  Julius is a data-analysis copilot built around file uploads. Pick it for CSVs above ChatGPT's 512MB cap, R-language workflows, or warehouse connectors Claude and ChatGPT do not match. Skip it when ChatGPT Plus at $20 already covers the workload.
+  Julius is an AI data-analysis workspace built around files, notebooks, live data connectors, charts, slides, and Slack Agent. Pick it when analysts need conversational analysis over databases or recurring reports. Skip it when a general chatbot, spreadsheet, or BI tool already gives enough control and auditability.
 price_history:
   - date: 2026-04-15
-    plan: "Standard"
+    plan: "Standard (legacy naming)"
     price: "$45/mo"
     source: "https://julius.ai/pricing"
-    source_label: "Source"
+    source_label: "Julius AI pricing"
     source_id: julius-pricing
-    note: "Verified, unchanged."
+    note: "Historical message-era packaging; superseded by Pro credit packaging in the June 2026 public pricing page."
   - date: 2026-04-15
-    plan: "Team"
+    plan: "Team (legacy naming)"
     price: "$50/user/mo"
     source: "https://julius.ai/pricing"
-    source_label: "Source"
+    source_label: "Julius AI pricing"
     source_id: julius-pricing
-    note: "Verified, unchanged."
-  - date: 2026-05-13
-    plan: "Standard"
+    note: "Historical team packaging; superseded by Business/Growth credit tiers in the June 2026 public pricing page."
+  - date: 2026-06-07
+    plan: "Pro"
     price: "$45/mo"
     source: "https://julius.ai/pricing"
-    source_label: "Source"
+    source_label: "Julius AI pricing"
     source_id: julius-pricing
-    note: "Reverified, unchanged."
+    note: "Current public credit-based plan: 5,000 monthly credits, 32 GB RAM, one seat, and expanded context."
+  - date: 2026-06-07
+    plan: "Business"
+    price: "$450/mo"
+    source: "https://julius.ai/pricing"
+    source_label: "Julius AI pricing"
+    source_id: julius-pricing
+    note: "Current public team tier: 60,000 monthly credits, 10 seats, data connectors, custom agent, Slack Agent, and scheduled report runs."
 ---
 
 # Julius AI
 
-A data-analysis copilot. Users upload a spreadsheet, CSV, Parquet file, or connect a warehouse, then ask questions in English. Julius selects a model (Claude, GPT-5, or Gemini), writes Python or R code, runs it on sandboxed containers, and returns charts, tables, and plain-language insight.
+A data-analysis workspace. Users upload files, build notebooks, connect live databases, or ask questions in Slack. Julius turns natural-language questions into code, SQL, charts, slides, artifacts, and scheduled reports.
 
-Memory Boost containers reach 32GB of RAM on paid plans. That is 64x the file cap on ChatGPT's Code Interpreter.
+The June 7 buyer change is pricing. Julius now presents usage credits instead of message counts. That makes the right question less "how many messages do I get?" and more "how many credits does our real analysis loop burn?"
 
 ## System Verdict
 
-> **Pick Julius if spreadsheet analysis is a weekly workflow and ChatGPT's Code Interpreter keeps hitting walls.** The 32GB RAM containers, R-language support, and native connectors to Snowflake, BigQuery, Postgres, Supabase, Google Drive, Stripe, and Google Ads are the three features ChatGPT does not match. Julius also exposes model choice per task, so GPT-5.5 handles heavy statistics while Claude Sonnet does exploratory writeups in the same session.
+> **Pick Julius if data questions keep bouncing between spreadsheets, warehouses, notebooks, and Slack.** The current product is no longer just "chat with a CSV." It combines notebooks, 32 GB RAM on Pro and above, data connectors for PostgreSQL, MySQL, SQL Server, Snowflake, BigQuery, Databricks, Supabase, Vertica, Google Ads, Meta Ads, and MCP, plus Slack Agent and scheduled reports.
 >
-> **Skip it if ChatGPT Plus at $20 already finishes the work.** Files under 512MB, Python-only workflows, and one-off analyses all run fine in ChatGPT. Julius costs more and adds a model-routing surface non-technical users do not need.
+> **Skip it if a general assistant or BI tool already finishes the job.** Julius is strongest as a flexible analysis agent, not as a governed semantic layer, deterministic ETL system, or production dashboard replacement. Analysts still need to inspect generated SQL/code, validate charts, and keep a decision trail.
 >
-> **Who pays which tier:** Free for testing, Lite $20 for light monthly use (250 messages), Standard $45 for most working analysts, Pro $60 for premium support and priority compute, Team $50/user for collaborative workflows, Business $375 for orgs with shared dashboards. Yearly billing saves 15 to 17 percent across tiers.
+> **Who pays which tier:** Free for small tests, Plus $20 for solo analysis, Pro $45 for most working analysts who need 5,000 credits and 32 GB RAM, Max $200 or Ultra $500 for heavy individual usage, Business $450 for 10-seat teams with connectors/Slack/custom agents, Growth $750 for wider startup/org rollout, and Enterprise custom for larger deployments.
 
 ## Key Facts
 
 | | |
 |---|---|
-| **Product type** | Data-analysis chat copilot with sandboxed code execution |
-| **Current models** | Claude Opus 4.7, Claude Sonnet 4.6, GPT-5.5, Gemini 3 · user-selectable per task |
-| **Languages executed** | Python, R, SQL |
-| **File formats** | CSV, Excel, JSON, TXT, PDF, PNG, JPG, GIF, Parquet, Feather, SQLite, SAV, Jupyter notebooks |
-| **File size cap** | Up to 32GB on Standard and above (Memory Boost containers) |
-| **Warehouse connectors** | Snowflake, BigQuery, PostgreSQL, Supabase · Pro and Business plans |
-| **App connectors** | Google Drive, OneDrive, Google Ads, Stripe |
-| **Pricing** | Free · Lite $20 · Standard $45 · Pro $60 · Team $50/user · Business $375 |
-| **API** | None generally available |
-| **Output** | Charts, tables, the underlying Python or R code, and a written explanation |
+| **Product type** | AI data-analysis workspace with notebooks, code execution, connectors, Slack Agent, and scheduled reports |
+| **Billing unit** | Usage credits, not messages |
+| **Current public paid tiers** | Plus $20 · Pro $45 · Max $200 · Ultra $500 · Business $450 · Growth $750 · Enterprise custom |
+| **Models named on pricing page** | Julius models plus GPT-5.5 and Claude-family frontier models; exact model access varies by plan |
+| **Compute** | 2 GB RAM on Free; 32 GB RAM appears on Pro and above |
+| **Data connectors** | PostgreSQL, MySQL, SQL Server, Snowflake, BigQuery, Databricks, Supabase, Vertica, Google Ads, Meta Ads, MCP |
+| **Team surface** | Slack Agent, scheduled reports, shared connectors, custom agents, dashboards on higher plans |
+| **Output** | Charts, tables, slides, HTML artifacts, images, code/queries, and written explanations |
 
-Every data point above was reverified against vendor sources on 2026-05-13. See Sources.
+Every data point above was reverified against vendor sources on 2026-06-07. See Sources.
 
 ## What it actually is
 
-A web app wrapped around a multi-model router and sandboxed Jupyter-style containers. Each message triggers code generation, execution, and a written interpretation. Every result ships with the raw Python or R code, so analysts can copy it into a notebook, adapt it, or hand it to engineering.
+A web app wrapped around a multi-model data-analysis agent, notebooks, and connected data sources. Julius can answer questions over uploaded files or live databases, generate charts, export slides/artifacts, and turn notebooks into recurring Slack or email reports.
 
-The moat is the combination of three features. Memory Boost containers that reach 32GB RAM handle files ChatGPT Code Interpreter refuses. R-language execution covers the statistical workflows that Python-only tools miss. Warehouse connectors push the starting line past "upload a CSV" into "point at Snowflake."
+The moat is the workflow bundle. Most chatbots can analyze a file. Fewer combine live data connectors, notebook-style repeatability, Slack Agent, scheduled reports, custom agents, and team seats in one buyer path.
 
-Julius does not train its own model. The value is orchestration: pick the right frontier model for a given analytical step, wire up the runtime, and get out of the way.
+Julius does not replace analyst judgment. The value is orchestration: select capable models, run code and queries, pull from connected data, and show enough work that a human can check whether the analysis is right.
 
 ## When to pick Julius
 
-- **Files exceed 512MB.** ChatGPT Code Interpreter caps uploads around 512MB. Julius handles 8 to 32GB depending on tier. Financial datasets, session logs, and exported event tables all land in this zone.
-- **R workflows matter.** Academic statistics, survival analysis, and some econometric packages have no Python equivalent. ChatGPT runs Python only. Julius runs R natively.
-- **The work lives in a warehouse.** Snowflake, BigQuery, Postgres, and Supabase connectors skip the export step. Analysts query the source of truth without copying data out.
-- **Model choice matters.** Heavy statistics often favor GPT-5.5. Narrative writeups favor Claude. Vision tasks on charts favor Gemini 3. Julius lets the user switch mid-session.
-- **Stakeholders want self-service.** Non-technical users can type questions, get charts, and share results without a data team bottleneck.
+- **The work lives in a database.** Snowflake, BigQuery, Postgres, Supabase, Databricks, and other connectors reduce CSV export loops.
+- **Reports recur.** Notebooks plus scheduled Slack/email reporting are more useful than one-off chat answers when the same metric set repeats weekly.
+- **Slack is where stakeholders ask data questions.** Julius Slack Agent can query connected sources and return analysis inside team conversations.
+- **The user needs charts, slides, and artifacts.** Paid plans include export paths for slides, HTML artifacts, charts, and images.
+- **Credit-based compute is acceptable.** Teams that can model usage may get more powerful analysis than old message limits allowed.
 
 ## When to pick something else
 
-- **Most individual workflows fit [ChatGPT](/tools/chatgpt/) at $20/mo.** Code Interpreter ships inside Plus, handles Python, and covers files under 512MB. If the workflow fits, there is no reason to add Julius.
-- **Long-form analytical writeups and reasoning:** [Claude](/tools/claude/) Opus 4.7 directly. Claude's 1M-token context handles large transcripts or documents, and Projects provide shared context. File-size limits are tighter (20MB per attachment), so it loses on huge spreadsheets.
+- **Most individual workflows fit [ChatGPT](/tools/chatgpt/) or [Claude](/tools/claude/).** If a general assistant can analyze the file, explain the result, and preserve enough context, Julius may be extra workflow overhead.
+- **Long-form analytical writeups and reasoning:** use Claude directly when the job is narrative reasoning over documents rather than live data connectors, notebooks, and scheduled reports.
 - **Production data pipelines:** dbt, Airflow, or native warehouse tooling. Julius is an analysis surface, not a scheduler.
-- **Charting-first dashboards:** Hex, Mode, or Tableau. Julius generates ad-hoc charts; it does not replace a BI tool.
+- **Governed BI and dashboards:** Hex, Mode, Tableau, Looker, or warehouse-native semantic layers when metric definitions, access controls, versioning, and audit trails are the actual purchase.
 - **Open-source, self-hosted control:** Jupyter plus a local LLM. Julius is a managed service.
 
 ## Pricing
 
-Plans via [julius.ai/pricing](https://julius.ai/pricing). Annual billing saves 15 to 17 percent across paid tiers.
+Plans via [julius.ai/pricing](https://julius.ai/pricing). Annual billing is advertised at roughly 20% off on the current public pricing page. Julius moved from message-based billing to credits, so buyers should test real workflows before projecting monthly cost.
 
-| Plan | Monthly | Messages | File cap | Connectors | Who's it for |
-|------|---------|----------|----------|------------|--------------|
-| Free | $0 | Limited (~5-15/mo) | Small | None | First test drive |
-| Lite | $20/mo ($16.66 yearly) | 250/mo | Standard | None | Light monthly use |
-| Standard | $45/mo ($37.50 yearly) | Unlimited | 32GB Memory Boost | Basic | **Most working analysts land here** |
-| Pro | $60/mo ($50 yearly) | Unlimited | 32GB | All connectors, premium support | Power users on Snowflake or BigQuery |
-| Team | $50/user/mo | Unlimited | 32GB | All connectors | 2+ seat teams with shared workflows |
-| Business | $375/mo | Unlimited | 32GB, team features | All connectors | Department-level rollout |
-| Enterprise | Custom | Unlimited | Custom | All + SSO, SOC 2 | Large orgs with compliance needs |
+| Plan | Monthly | Annual equivalent | Credits / seats | Why buy |
+|------|---------|-------------------|-----------------|---------|
+| Free | $0 | $0 | Daily free credits, 2 GB RAM | Small projects and first test drive |
+| Plus | $20 | $16/mo | 2,000 credits, 1 seat | Solo users who need more advanced analysis and exports |
+| Pro | $45 | $37/mo | 5,000 credits, 1 seat, 32 GB RAM | **Most working analysts start here** |
+| Max | $200 | $166/mo | 25,000 credits | Heavy solo usage, larger context, priority access |
+| Ultra | $500 | $416/mo | 70,000 credits | Heaviest individual usage and permanent file storage |
+| Business | $450 | $375/mo | 60,000 credits, 10 seats | Teams needing connectors, Slack Agent, custom agent, scheduled reports |
+| Growth | $750 | $625/mo | 120,000 credits, up to 30 seats | Startup/org rollout with knowledge base, data dictionary, dashboards, support |
+| Enterprise | Custom | Custom | Custom/unlimited | Large orgs needing custom security, procurement, and deployment terms |
 
-*Prices reverified 2026-05-13 via [Julius pricing](https://julius.ai/pricing) and third-party reviews at [Fahim AI](https://www.fahimai.com/julius-ai) and [eesel AI](https://www.eesel.ai/blog/julius-ai-pricing).*
+*Prices reverified 2026-06-07 via [Julius pricing](https://julius.ai/pricing), [credits docs](https://julius.ai/docs/billing/credits-overview), and the [billing update](https://julius.ai/content/billing-update-messages-to-usage-credits).*
 
 ## Against the alternatives
 
-| | Julius Standard | ChatGPT Plus (Code Interpreter) | Claude Pro |
+| | Julius Pro | ChatGPT Plus | Claude Pro |
 |---|---|---|---|
 | **Monthly price** | $45 | $20 | $20 |
-| **File size cap** | 32GB | ~512MB | ~20MB per file |
-| **Languages** | Python, R, SQL | Python only | Python via Artifacts |
-| **Warehouse connectors** | Snowflake, BigQuery, Postgres, Supabase | None native | None native |
-| **Model choice per task** | Claude, GPT-5.5, Gemini | GPT-5.5 only | Claude only |
-| **Long-context reasoning** | Depends on selected model | Strong (GPT-5.5) | Strongest (1M, Opus 4.7) |
-| **Best viewed as** | Data-analysis specialist | Generalist with analysis mode | Reasoning specialist with light analysis |
+| **Billing risk** | Credits vary by task and compute | Subscription limits/usage caps | Subscription limits/usage caps |
+| **Core fit** | Data-analysis workspace | General assistant with analysis | Reasoning assistant with project context |
+| **Live database connectors** | Yes, including Snowflake/BigQuery/Postgres/Supabase/Databricks | No dedicated warehouse layer | No dedicated warehouse layer |
+| **Slack Agent / scheduled reports** | Yes on team-oriented paths | No | No |
+| **Artifacts/exports** | Slides, HTML artifacts, charts, images | Chat/output exports | Artifacts and documents |
+| **Best viewed as** | Repeatable analysis and team data agent | Generalist analysis assistant | Reasoning/writing assistant |
 
 ## Failure modes
 
-- **Model routing is not always right.** Default selection can pick a cheaper model for a task that needs Opus 4.7 or GPT-5.5 Pro. Power users should override manually.
-- **No generally available API.** Integrating Julius into scheduled jobs or other tools is not supported. This is a chat surface, not a pipeline component.
-- **Paid-only for serious work.** The free tier gives 5 to 15 messages per month. Real analysis needs Lite or above on day one.
-- **Vendor dependency across three model families.** Julius passes work to Anthropic, OpenAI, and Google. Any upstream outage or policy change hits Julius users directly.
-- **Connector reliability varies.** Snowflake and BigQuery are stable. Smaller connectors (Google Ads, Stripe) can lag on schema changes and require manual refresh.
-- **Reproducibility depends on saving code.** Julius shows the Python or R it generated, but session state does not export cleanly to a standalone notebook without user effort.
-- **Limited moat vs. bundled Code Interpreter.** If ChatGPT or Claude ship larger file caps, native R, or warehouse connectors, the value gap narrows fast.
+- **Credit burn is the new pricing risk.** Simple questions and heavy code/database analysis do not cost the same. Trial the real workflow before buying Business or Growth.
+- **Generated analysis still needs review.** SQL, code, joins, filters, statistical methods, and chart labels can be wrong even when the output looks polished.
+- **Slack makes mistakes more visible.** If Julius posts into shared channels, teams need rules for who can ask questions, which connectors are available, and what counts as decision-ready.
+- **Connectors require data-admin discipline.** Least-privilege credentials, firewall rules, IP whitelisting, and warehouse cost controls matter.
+- **Not a production pipeline.** Scheduled reports are useful, but Julius should not be treated as dbt, Airflow, or a governed semantic layer.
+- **Model names can move quickly.** The pricing page names frontier model examples; avoid building procurement around one model label without checking the current account screen.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis shown here. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-05-13 against [Julius pricing](https://julius.ai/pricing), [Julius capabilities](https://julius.ai/capabilities), the [Julius vs. ChatGPT comparison](https://julius.ai/articles/julius-ai-vs-chatgpt), and independent reviews at [letdataspeak](https://letdataspeak.com/julius-ai-review/) and [DataCamp](https://www.datacamp.com/tutorial/julius-ai-guide).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis shown here. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-07 against [Julius pricing](https://julius.ai/pricing), [Julius credits docs](https://julius.ai/docs/billing/credits-overview), the [billing update](https://julius.ai/content/billing-update-messages-to-usage-credits), [data connector docs](https://julius.ai/docs/data-connectors/overview), and [Slack Agent docs](https://julius.ai/docs/slack-agent/overview).
 
 ## FAQ
 
 **Is Julius AI free?**
-Yes, with strict limits. The free tier caps monthly messages around 5 to 15 and does not include Memory Boost containers or connectors. Lite at $20/mo is the real entry point.
+Yes. The free plan is for small projects and basic analysis, with daily free credits and 2 GB RAM. Plus at $20/mo is the first paid plan for regular solo use.
 
 **What models does Julius use?**
-As of May 2026, Julius exposes Claude Opus 4.7, Claude Sonnet 4.6, GPT-5.5, and Gemini 3 for user selection per task. Model availability by tier is documented on the [Julius capabilities page](https://julius.ai/capabilities).
+The June 7 pricing page names Julius models plus GPT-5.5 and Claude-family frontier models, including Claude Opus 4.8 in plan cards and Claude Sonnet 4.6 / Opus 4.7 in the feature table. Treat the current account model picker as the source of truth because access can vary by plan and release cycle.
 
 **How large a file can Julius handle?**
-Standard and above unlock Memory Boost containers that reach 32GB of RAM, which handles most files up to that size. ChatGPT's Code Interpreter caps closer to 512MB.
+The current pricing page lists 2 GB RAM on Free and 32 GB RAM on Pro and above. Do not equate RAM with a guaranteed file-size limit; test your actual file, connector, and notebook workflow.
 
-**Can Julius run R code?**
-Yes. Python, R, and SQL all execute inside Julius sandboxed containers. ChatGPT's Code Interpreter runs Python only as of May 2026.
+**What happened to Julius message limits?**
+Julius moved from message-based billing to usage credits. Plus gets 2,000 monthly credits, Pro 5,000, Max 25,000, Ultra 70,000, Business 60,000, and Growth 120,000 on the current public pricing page.
 
 **Does Julius connect to Snowflake or BigQuery?**
-Yes on Pro and Business tiers. Connectors also cover PostgreSQL, Supabase, Google Drive, OneDrive, Google Ads, and Stripe.
+Yes. Current data-connector docs list PostgreSQL, MySQL, SQL Server, Snowflake, BigQuery, Databricks, Supabase, Vertica, Google Ads, Meta Ads, and MCP.
 
-**Is there an API?**
-No generally available API as of May 2026. Julius is a chat product, not a programmatic service.
+**Does Julius work in Slack?**
+Yes. Julius Slack Agent lets teams query connected data sources, run analysis, generate visualizations, and schedule notebook reports into Slack channels. Review Slack permissions and data connector access before rollout.
 
 **Julius or ChatGPT Code Interpreter?**
-ChatGPT Plus at $20 covers most individual analysis and ships inside a general-purpose chatbot. Pick Julius when files exceed 512MB, the workflow needs R, a warehouse is the data source, or the team wants to route tasks across Claude, GPT-5, and Gemini.
+Start with ChatGPT or Claude when the job is one-off file analysis or general reasoning. Pick Julius when the workflow needs live data connectors, notebooks, scheduled reports, Slack Agent, team access, and analysis artifacts.
 
 ## Related
 
@@ -244,10 +250,9 @@ ChatGPT Plus at $20 covers most individual analysis and ships inside a general-p
 
 ## Sources
 
-- [Julius AI pricing](https://julius.ai/pricing): current plans and message limits
-- [Julius AI capabilities](https://julius.ai/capabilities): supported formats, languages, connectors
-- [Julius vs ChatGPT article](https://julius.ai/articles/julius-ai-vs-chatgpt): file-cap and language comparison
-- [Fahim AI review](https://www.fahimai.com/julius-ai): independent pricing and usage analysis
-- [eesel AI pricing guide](https://www.eesel.ai/blog/julius-ai-pricing): detailed tier breakdown
-- [letdataspeak review](https://letdataspeak.com/julius-ai-review/): independent 2026 review
-- [DataCamp tutorial](https://www.datacamp.com/tutorial/julius-ai-guide): workflow walkthrough
+- [Julius AI pricing](https://julius.ai/pricing): current public plans, credits, seats, RAM, connectors, Slack Agent, and export features, verified 2026-06-07
+- [Julius credits overview](https://julius.ai/docs/billing/credits-overview): credit-based billing explanation, verified 2026-06-07
+- [Julius billing update](https://julius.ai/content/billing-update-messages-to-usage-credits): transition from messages to usage credits, verified 2026-06-07
+- [Julius data connector overview](https://julius.ai/docs/data-connectors/overview): supported databases, MCP, built-in data tools, and security notes, verified 2026-06-07
+- [Julius Slack Agent overview](https://julius.ai/docs/slack-agent/overview): Slack data-analysis and scheduled-report workflow, verified 2026-06-07
+- [Julius scheduled Slack reports](https://julius.ai/docs/slack-agent/slack-reports): recurring notebook-to-Slack reporting, verified 2026-06-07

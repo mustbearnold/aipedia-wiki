@@ -4110,7 +4110,26 @@
       "url": "https://julius.ai/for-business",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-07"
+    },
+    {
+      "id": "julius-connectors",
+      "label": "Julius data connector docs",
+      "url": "https://julius.ai/docs/data-connectors/overview",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-07"
+    },
+    {
+      "id": "julius-credits",
+      "label": "Julius credits docs",
+      "url": "https://julius.ai/docs/billing/credits-overview",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-07"
     },
     {
       "id": "julius-official",
@@ -4118,7 +4137,8 @@
       "url": "https://julius.ai/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-07"
     },
     {
       "id": "julius-pricing",
@@ -4126,7 +4146,17 @@
       "url": "https://julius.ai/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-07"
+    },
+    {
+      "id": "julius-slack-agent",
+      "label": "Julius Slack Agent docs",
+      "url": "https://julius.ai/docs/slack-agent/overview",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-07"
     },
     {
       "id": "kagi-assistant-docs",
