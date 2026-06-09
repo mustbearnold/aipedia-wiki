@@ -8,11 +8,11 @@ secondary_categories: [ai-coding, ai-automation, ai-chatbots]
 company: Together AI
 url: https://www.together.ai
 pricing_model: paid
-price_range: Serverless tokens; dedicated H100 $3.99/hr, H200 $5.49/hr, B200 $9.95/hr; fine-tuning $0.48-$3.20/MTok; sandbox $0.03/session
+price_range: Serverless tokens; dedicated H100 $6.49/hr, H200 contact sales, B200 $11.95/hr; GPU clusters H100 $5.49/hr, H200 $6.79/hr, B200 $9.95/hr; sandbox $0.03/session
 status: active
 launched: 2022
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-09
+last_verified: 2026-06-09
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -29,32 +29,32 @@ facts:
   best_for:
     value: "AI infrastructure platform for serverless inference, dedicated GPU deployments, fine-tuning, code sandboxes, and open-model training workflows. Best for AI infrastructure, retrieval, vector search, hosting, or developer platforms."
     source: "https://www.together.ai/pricing"
-    source_label: "Source"
-    source_id: llama-pricing
-    verified_at: 2026-05-13
+    source_label: "Together AI pricing"
+    source_id: together-ai-pricing
+    verified_at: 2026-06-09
     volatility: medium
     confidence: high
   pricing_anchor:
-    value: "Serverless tokens vary by model (GLM-5.1 $1.40/$4.40, DeepSeek V4 Pro $2.10/$4.40, Qwen3.6-Plus $0.50/$3.00 per MTok); dedicated H100 $3.99/hr, H200 $5.49/hr, B200 $9.95/hr; fine-tuning $0.48-$3.20/MTok; code sandbox $0.03/60-min session"
+    value: "Serverless tokens vary by model (for example Kimi K2.6 $1.20/$4.50, Qwen3.6-Plus $0.50/$3.00, Qwen3 235B throughput $0.20/$0.60, Llama 3.3 70B $1.04/$1.04 per MTok); dedicated inference is H100 $6.49/hr, H200 contact sales, B200 $11.95/hr; GPU clusters are H100 $5.49/hr, H200 $6.79/hr, B200 $9.95/hr."
     source: "https://www.together.ai/pricing"
-    source_label: "Source"
-    source_id: llama-pricing
-    verified_at: 2026-05-13
-    next_review_at: 2026-06-13
+    source_label: "Together AI pricing"
+    source_id: together-ai-pricing
+    verified_at: 2026-06-09
+    next_review_at: 2026-07-09
     volatility: high
     confidence: high
   watch_out_for:
     value: "Pricing is multi-dimensional: inference per MTok, dedicated GPU per hour, fine-tuning per MTok, sandbox per session, plus storage at $0.16/GiB/month. Model your full bill before migrating production traffic."
     source: "https://www.together.ai/pricing"
-    source_label: "Source"
-    source_id: llama-pricing
-    verified_at: 2026-05-13
-    next_review_at: 2026-06-13
+    source_label: "Together AI pricing"
+    source_id: together-ai-pricing
+    verified_at: 2026-06-09
+    next_review_at: 2026-07-09
     volatility: high
     confidence: high
 tags: [llm-inference, fine-tuning, gpu-cloud, open-models, api, serverless, developers]
-seo_title: "Together AI Review: Inference, Fine-Tuning & GPU Pricing (May 2026)"
-meta_description: "Together AI is an AI infrastructure platform for serverless inference, dedicated GPU deployments, fine-tuning, code sandboxes, and open-model workloads."
+seo_title: "Together AI Review: Inference, Fine-Tuning & GPU Pricing (June 2026)"
+meta_description: "Together AI is an AI infrastructure platform for serverless inference, dedicated GPU deployments, GPU clusters, fine-tuning, code sandboxes, and open-model workloads. Pricing rechecked June 2026."
 author: aipedia.wiki Editorial
 best_for:
   - teams running open-weight LLMs in production
@@ -77,7 +77,7 @@ It overlaps with [Fireworks AI](/tools/fireworks-ai/), [Groq](/tools/groq/), [Fa
 
 ## Recent developments
 
-- **May 13, 2026:** Pricing reverified at [together.ai/pricing](https://www.together.ai/pricing). Serverless rates (GLM-5.1 $1.40/$4.40, DeepSeek V4 Pro $2.10/$4.40, Qwen3.6-Plus $0.50/$3.00 per MTok), dedicated H100 $3.99/hr / H200 $5.49/hr / B200 $9.95/hr, fine-tuning $0.48 to $3.20/MTok across tiers, code sandbox $0.03 per 60-minute session, and shared filesystem at $0.16/GiB/month all confirmed.
+- **June 9, 2026:** Pricing reverified at [together.ai/pricing](https://www.together.ai/pricing). Serverless examples now include Kimi K2.6 at $1.20/$4.50 per MTok, Qwen3.6-Plus at $0.50/$3.00, Qwen3 235B throughput at $0.20/$0.60, and Llama 3.3 70B at $1.04/$1.04. Dedicated inference is now H100 $6.49/hr, H200 contact-sales, and B200 $11.95/hr; GPU clusters are separate at H100 $5.49/hr, H200 $6.79/hr, and B200 $9.95/hr.
 - **April 28, 2026:** [Mistral 3 shipped with Large 3 and new Ministral models](/news/2026-04-28-mistral-3-open-model-release/). Mistral listed Together AI among the available platforms, adding another open-model family for teams to benchmark on production inference.
 
 ## System Verdict
@@ -93,9 +93,9 @@ It overlaps with [Fireworks AI](/tools/fireworks-ai/), [Groq](/tools/groq/), [Fa
 | | |
 |---|---|
 | **Core product** | AI infrastructure for inference, tuning, training, and compute |
-| **Serverless inference** | Per-MTok pricing; GLM-5.1 $1.40/$4.40, DeepSeek V4 Pro $2.10/$4.40, Qwen3.6-Plus $0.50/$3.00, Llama 3.3 70B $0.88/$0.88; budget tier from $0.05/MTok |
-| **Dedicated inference** | Single-tenant: H100 80GB $3.99/hr · H200 141GB $5.49/hr · B200 180GB $9.95/hr |
-| **GPU clusters (on-demand)** | H100 $3.99/hr · H200 $4.79/hr · B200 $7.49/hr; reserved (7 to 30 days) drops to H100 $3.45, H200 $3.99, B200 $7.15 |
+| **Serverless inference** | Per-MTok pricing; Kimi K2.6 $1.20/$4.50, Qwen3.6-Plus $0.50/$3.00, Qwen3 235B throughput $0.20/$0.60, Llama 3.3 70B $1.04/$1.04; budget tier from $0.05/MTok |
+| **Dedicated inference** | Single-tenant: H100 80GB $6.49/hr · H200 140GB contact sales · HGX B200 180GB $11.95/hr |
+| **GPU clusters (on-demand)** | HGX H100 $5.49/hr · HGX H200 $6.79/hr · HGX B200 $9.95/hr; reserved 7-30 days starts at H100 $4.99, H200 $5.95, B200 $9.65 |
 | **Fine-tuning** | $0.48 to $0.54/MTok up to 16B · $1.50 to $1.65/MTok at 17B to 69B · $2.90 to $3.20/MTok at 70 to 100B; specialized models (DeepSeek-R1, GLM-5) $10 to $100+ with minimums |
 | **Code sandbox** | VM compute $0.0446/vCPU/hr + $0.0149/GiB RAM/hr; Code Interpreter $0.03 per 60-minute session |
 | **Storage** | Shared filesystem $0.16/GiB/month |
@@ -118,11 +118,11 @@ It overlaps with [Fireworks AI](/tools/fireworks-ai/), [Groq](/tools/groq/), [Fa
 
 ## Pricing
 
-Together AI pricing is usage-based across five dimensions. Verified 2026-05-13 against [together.ai/pricing](https://www.together.ai/pricing):
+Together AI pricing is usage-based across five dimensions. Verified 2026-06-09 against [together.ai/pricing](https://www.together.ai/pricing):
 
-- **Serverless inference (per 1M tokens):** GLM-5.1 $1.40 in / $4.40 out · DeepSeek V4 Pro $2.10 / $4.40 · Qwen3.6-Plus $0.50 / $3.00 · Llama 3.3 70B $0.88 / $0.88. Budget options like Gemma 3n E4B start at $0.06 / $0.12 and gpt-oss-20B at $0.05 / $0.20. Image: FLUX.2 [pro] $0.03/image, FLUX.1 [schnell] $0.0027, Imagen 4.0 Ultra $0.06. Audio: Whisper Large v3 $0.0015/audio minute. Embeddings: Multilingual e5 large at $0.02/MTok.
-- **Dedicated inference (single-tenant, hourly):** H100 80GB $3.99 · H200 141GB $5.49 · B200 180GB $9.95.
-- **GPU clusters:** On-demand H100 $3.99/hr, H200 $4.79/hr, B200 $7.49/hr. Reserved 7 to 30 days drops to H100 $3.45, H200 $3.99, B200 $7.15. Longer commitments unlock additional discounts.
+- **Serverless inference (per 1M tokens):** Kimi K2.6 $1.20 in / $4.50 out · Qwen3.6-Plus $0.50 / $3.00 · Qwen3 235B throughput $0.20 / $0.60 · Llama 3.3 70B $1.04 / $1.04 · gpt-oss-20B $0.05 / $0.20 · Gemma 3n E4B $0.06 / $0.12. Image: FLUX.2 [pro] $0.03/image, Nano Banana Pro $0.134/image, Imagen 4.0 Ultra $0.06/image. Audio: Whisper Large v3 $0.0015/audio minute. Embeddings: Multilingual e5 large at $0.02/MTok.
+- **Dedicated inference (single-tenant, hourly):** H100 80GB $6.49 · H200 140GB contact sales · HGX B200 180GB $11.95.
+- **GPU clusters:** On-demand HGX H100 $5.49/hr, HGX H200 $6.79/hr, HGX B200 $9.95/hr. Reserved 7 to 30 days starts at H100 $4.99, H200 $5.95, and B200 $9.65; 91 to 180 day reserved pricing drops to H100 $3.99, H200 $4.55, and B200 $9.09.
 - **Fine-tuning (per 1M tokens):** Standard models scale by size: up to 16B at $0.48 SFT / $0.54 DPO; 17B to 69B at $1.50 / $1.65; 70 to 100B at $2.90 / $3.20. Specialized models like DeepSeek-R1 and GLM-5 run $10 to $100+ with minimum charges of $6 to $60.
 - **Code sandbox:** VM compute $0.0446/vCPU/hour + $0.0149/GiB RAM/hour. Code Interpreter sessions $0.03 per 60 minutes.
 - **Storage:** Shared filesystem $0.16/GiB/month.
@@ -168,7 +168,7 @@ The best Together AI deployment usually starts with a benchmark matrix. Compare 
 
 ## Methodology
 
-Last verified 2026-05-13 against [together.ai/pricing](https://www.together.ai/pricing) and product documentation. Scoring emphasizes breadth of infrastructure, production value, open-model leverage, and complexity of adoption.
+Last verified 2026-06-09 against [together.ai/pricing](https://www.together.ai/pricing) and product documentation. Scoring emphasizes breadth of infrastructure, production value, open-model leverage, and complexity of adoption.
 
 ## FAQ
 

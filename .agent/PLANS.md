@@ -82,6 +82,101 @@ Summarize changed files, behavior shipped, tests passed, unresolved risks, and r
 
 ---
 
+## ExecPlan: June 9 2026 Taskade Tavus Tines Together AI Tool Refresh
+
+### 1. Objective
+
+Continue the oldest-to-newest live ledger refresh after skipped dead tool rows by updating Taskade, Tavus, Tines, and Together AI to June 9, 2026 source-backed buyer guidance.
+
+### 2. Current state
+
+`PAGE_REFRESH_LEDGER.md` shows the next oldest rows after skipped `/dead/*`, Phind, Tome, DALL-E, Grok Code Fast, and Rows are active May 13 tool pages: `/tools/taskade/`, `/tools/tavus/`, `/tools/tines/`, and `/tools/together-ai/`. Current records exist in `src/content/tools/` and use source IDs already present in `src/data/source-registry.json`, but volatile pricing/model/concurrency facts need a June 2026 recheck.
+
+### 3. Target state
+
+The four tool pages should have June 9, 2026 `last_updated`/`last_verified` values, current pricing and plan caveats, updated SEO/meta language, current source IDs and source registry checks, and buyer guidance strong enough for mobile users to choose or avoid each tool. Parent hubs and LLM/top-layer surfaces should summarize the changed facts without becoming stale.
+
+### 4. Scope
+
+Included: `src/content/tools/taskade.md`, `src/content/tools/tavus.md`, `src/content/tools/tines.md`, `src/content/tools/together-ai.md`, affected category hubs, source registry rows, top-layer route metadata comments, LLM surfaces, ledger regeneration, checks, and responsive QA. Excluded: dead tool pages, individual news article pages, unrelated generated news/OG changes already present in the worktree, and affiliate CTA mechanics.
+
+Affected parent/top-layer surfaces: AI Automation, AI Notes, AI Video, AI Voice, AI Infrastructure, AI Coding, AI Chatbots, `/tools/`, `/categories/`, `/`, `/llms.txt`, `/llms-full.txt`, sitemap/build-generated surfaces, and `PAGE_REFRESH_LEDGER.md`.
+
+### 5. Files likely affected
+
+`src/content/tools/taskade.md`, `src/content/tools/tavus.md`, `src/content/tools/tines.md`, `src/content/tools/together-ai.md`, `src/content/categories/ai-automation.md`, `src/content/categories/ai-notes.md`, `src/content/categories/ai-video.md`, `src/content/categories/ai-voice.md`, `src/content/categories/ai-infrastructure.md`, `src/content/categories/ai-coding.md`, `src/content/categories/ai-chatbots.md`, `src/data/source-registry.json`, `src/pages/index.astro`, `src/pages/tools/index.astro`, `src/pages/categories/index.astro`, `src/pages/llms.txt.ts`, `src/pages/llms-full.txt.ts`, `PAGE_REFRESH_LEDGER.md`, and this plan.
+
+### 6. Data model impact
+
+No schema changes. Existing facts, price history, source IDs, verification dates, and source registry `last_checked` fields will be refreshed in place. Add a Together-specific pricing source ID only if needed to reduce reliance on the older `llama-pricing` label.
+
+### 7. SEO impact
+
+Refresh title/meta descriptions where they still say May 2026 or contain stale plan language. Preserve canonical route structure and internal links.
+
+### 8. Conversion impact
+
+Commercial CTA mechanics are unchanged. Pricing and plan guidance must be current, caveated when rendered source surfaces conflict, and grounded in primary sources.
+
+### 9. Mobile UX impact
+
+The first mobile screen should still answer what the tool is for, who should buy it, what plan or pricing unit matters, and the primary watch-out. Browser QA will cover 360, 390, 430, 768, and 1024 px for refreshed pages and representative parent surfaces.
+
+### 10. Implementation steps
+
+1. Inspect selected tool records, parent hubs, and source registry entries.
+2. Verify current June 2026 facts from primary sources.
+3. Patch the four tool pages and source registry.
+4. Update affected parent/top-layer surfaces.
+5. Regenerate `PAGE_REFRESH_LEDGER.md`.
+6. Run source/stale sweeps, ledger checks, content guards, tests, build, and browser QA.
+
+### 11. Verification commands
+
+`npm run ledger:pages`
+
+`npm run ledger:pages:check`
+
+`npm run audit:sources`
+
+`npm run audit:facts`
+
+`npm run guard:check`
+
+`npm run check:links`
+
+`npm run test:scripts`
+
+`npm run check`
+
+`npm run build:fast`
+
+Browser QA on refreshed tool pages and affected hubs at 360, 390, 430, 768, and 1024 px.
+
+### 12. Acceptance criteria
+
+Selected oldest eligible active pages are refreshed to June 9, 2026 with current source-backed facts; skipped dead/news pages are untouched; affected parent/top-layer surfaces are maintained; ledger is current; checks/build/browser QA pass or unrelated failures are documented.
+
+### 13. Risks and mitigations
+
+Risk: Taskade and Together pricing pages render multiple units and can change quickly. Mitigation: prefer current primary pricing page values, retain date-specific caveats, and avoid unsupported flat-price simplification.
+
+Risk: Tavus pricing markup includes repeated comparison blocks with possible concurrency inconsistencies. Mitigation: cite specific plan cards and add a buyer caveat to confirm concurrency in the portal for scale.
+
+Risk: Tines docs may conflict between older FAQ and current packaging. Mitigation: use May 1, 2026 packaging plus February 10 AI Agent availability note as the current primary guidance.
+
+### 14. Progress log
+
+2026-06-09: Selected `/tools/taskade/`, `/tools/tavus/`, `/tools/tines/`, and `/tools/together-ai/` as the next active live-tool cluster after skipped dead rows. Verified current primary Taskade pricing/help, Tavus pricing/CVI, Tines pricing-packaging/AI Agents docs, and Together AI pricing surfaces.
+
+2026-06-09: Refreshed the four selected tool records to June 9 verification language, updated relevant category/top-layer surfaces, added/updated source registry rows including `together-ai-pricing` and `tines-agent-intro`, regenerated `PAGE_REFRESH_LEDGER.md`, and confirmed the ledger now places `/tools/taskade/`, `/tools/tavus/`, `/tools/tines/`, and `/tools/together-ai/` at 2026-06-09. Skipped dead-tool rows and individual news article pages per user direction. In-app browser automation could not complete because the Node browser runtime failed during Windows sandbox setup; build/render and command checks passed, with visual QA still the main residual gap.
+
+### 15. Final report
+
+Completed for the current day. Changed files in this batch include the four refreshed tool records, `src/data/source-registry.json`, `PAGE_REFRESH_LEDGER.md`, affected category hubs (`ai-automation`, `ai-video`, `ai-infrastructure`, plus related coding/chatbot source-date surfaces), top-layer route comments for `/`, `/tools/`, `/categories/`, LLM surfaces, and this plan. Verification passed: source registry/source-id audit, `npm run ledger:pages`, `npm run ledger:pages:check`, `npm run audit:sources`, `npm run audit:facts`, `npm run check:links`, `npm run check`, `npm run test:scripts`, and `npm run build:fast`. Remaining risk: browser visual QA was blocked by the local in-app browser runtime, so the next session should start with a browser pass once the runtime is healthy. Next oldest live tool rows to continue from are `/tools/tripo3d/`, `/tools/typingmind/`, `/tools/uizard/`, `/tools/unbounce/`, `/tools/vidu/`, `/tools/voiceflow/`, `/tools/wan/`, `/tools/watsonx-orchestrate/`, `/tools/weaviate/`, `/tools/whisper/`, `/tools/wispr-flow/`, `/tools/workato/`, `/tools/writer/`, and `/tools/yi/`.
+
+---
+
 ## ExecPlan: June 1 2026 God-Tier Full-Site Refresh Ultraplan
 
 ### 1. Objective
@@ -424,7 +519,186 @@ The full refresh is complete only when:
 
 ### 15. Final report
 
-Pending. Future final report must include refreshed page count, date range completed, changed files, top-layer surfaces updated, verification commands/results, unresolved risks, and next recommended batch if the refresh is not fully complete in one session.
+## ExecPlan: June 3-9 2026 AI News Coverage Refresh
+
+### 1. Objective
+
+Create source-backed, high-quality AiPedia news article coverage for AI and AI tools news from June 3 through June 9, 2026. The work improves organic rankings, trust, editorial freshness, mobile decision quality, and news archive completeness.
+
+### 2. Current state
+
+The news collection lives in `src/content/news/` and is rendered by `src/pages/news/[slug].astro` with `ArticlePlusLayout`, `NewsImpactBox`, `RelatedToolsStrip`, article citations, and generated OG imagery. The news archive at `src/pages/news/index.astro`, RSS route at `src/pages/news/rss.xml.ts`, homepage recent news module in `src/pages/index.astro`, and LLM surfaces in `src/pages/llms.txt.ts` and `src/pages/llms-full.txt.ts` summarize this collection. Before this work, June 3 has three articles and June 4-9 are missing from the collection.
+
+### 3. Target state
+
+Each day from June 3 through June 9 has at least two useful, current, source-backed articles, with daily desks where appropriate and standalone decision articles for major tool/model/developer-platform changes. Mobile readers should quickly see what changed, who is affected, buyer/developer action, and the AiPedia verdict.
+
+### 4. Scope
+
+Included: add and refresh June 3-9 news Markdown records, sources, verification dates, summaries, related tools, categories, news OG assets, `/news/`, homepage recent-news metadata, RSS metadata, LLM surfaces, and `PAGE_REFRESH_LEDGER.md`.
+
+Excluded: changing tool pricing records, affiliate URLs, product rankings, unrelated category hubs, or non-news templates unless a verification failure requires it.
+
+Affected top-layer surfaces: `/`, `/news/`, `/news/rss.xml`, `/llms.txt`, `/llms-full.txt`, sitemap/LLM/generated news asset surfaces, and the page refresh ledger.
+
+### 5. Files likely affected
+
+`src/content/news/*.md`, `src/pages/news/index.astro`, `src/pages/news/rss.xml.ts`, `src/pages/index.astro`, `src/pages/llms.txt.ts`, `src/pages/llms-full.txt.ts`, `public/og/news/**`, `PAGE_REFRESH_LEDGER.md`, and this plan file.
+
+### 6. Data model impact
+
+No schema change is planned. New records must satisfy the existing `news` content schema: slug, title, date, severity, summary, affects/categories, author, last_updated, last_verified, sources, and optional related tools.
+
+### 7. SEO impact
+
+Each article gets a unique slug/title/summary and the existing article route supplies canonical/schema surfaces. The archive, RSS, homepage recent-news rail, and LLM text surfaces must reflect the refreshed June 9 coverage.
+
+### 8. Conversion impact
+
+No new affiliate CTA mechanics are planned. Editorial buyer guidance must remain honest, with no unsupported commercial claims.
+
+### 9. Mobile UX impact
+
+Article copy should be concise, scannable, and decision-oriented. QA must check `/news/` and representative articles at 360, 390, 430, 768, and desktop widths for overflow, broken cards, and readable first-screen summaries.
+
+### 10. Implementation steps
+
+1. Verify volatile June 2026 facts against current primary sources.
+2. Add standalone news articles and daily desks for June 3-9.
+3. Refresh existing June 3 coverage where new primary-source facts affect that day.
+4. Update top-layer metadata and LLM/RSS/homepage surfaces.
+5. Regenerate news OG assets and the page refresh ledger.
+6. Run news, link, guard, and build checks.
+7. Run in-app browser QA at required mobile and desktop widths.
+
+### 11. Verification commands
+
+`node scripts/generate-og-news.mjs`
+
+`npm run ledger:pages`
+
+`npm run guard:check`
+
+`npm run check:links`
+
+`npm run check:news`
+
+`npm run build:fast`
+
+Browser QA against `http://127.0.0.1:4321/news/` and representative article URLs.
+
+### 12. Acceptance criteria
+
+June 3-9 news coverage exists, is source-backed, has `last_verified: 2026-06-09`, passes the news rendering/xref audits, builds successfully, and has generated OG assets. Parent/top-layer surfaces are refreshed and the ledger reflects the real editorial scope.
+
+### 13. Risks and mitigations
+
+Risk: claiming an item happened on a quieter weekend day when the primary source was published earlier. Mitigation: label weekend posts as catch-up/watchlist analysis and cite source dates plainly.
+
+Risk: stale or unsupported AI pricing/model claims. Mitigation: use only current primary sources and avoid unsupported commercial details.
+
+Risk: broken related tool slugs. Mitigation: inspect available tool records before finalizing related_tools.
+
+### 14. Progress log
+
+2026-06-09: Plan created after inspecting news collection, archive/RSS/homepage/LLM surfaces, package scripts, and current git status.
+
+2026-06-09: Added June 3-9 source-backed news coverage, refreshed the June 3 desk, updated `/news/`, RSS, homepage, and LLM surface metadata, generated OG/thumb assets, regenerated `PAGE_REFRESH_LEDGER.md`, and verified with `npm run check:news`, `npm run guard:check`, `npm run check:links`, and `npm run build:fast`.
+
+2026-06-09: Browser QA on `http://127.0.0.1:4321/news/`, `/news/2026-06-09-ai-news-desk/`, and `/news/2026-06-08-google-gemini-apple-developers-xcode/` at 360, 390, 430, 768, and 1024px found no horizontal overflow, confirmed article citations, and confirmed the June 9 story appears on the news index.
+
+### 15. Final report
+
+Pending final user report.
+
+## ExecPlan: Ledger Refresh Batch, Oldest Eligible Active Pages
+
+### 1. Objective
+
+Continue refreshing pages in `PAGE_REFRESH_LEDGER.md` from oldest to newest while skipping dead tools, dead archive pages, and individual news articles. This batch improves trust, data quality, SEO freshness, and buying-decision usefulness for the next oldest active pages.
+
+### 2. Current state
+
+The ledger is current through 2026-06-09. The oldest rows are dead archive pages and dead tool pages, which this user request explicitly excludes. The next eligible active tool pages begin at 2026-05-13.
+
+### 3. Target state
+
+Refresh the next oldest eligible active pages to `last_updated` and `last_verified` 2026-06-09 with current June 2026 source-backed facts, plus update affected parent/top-layer surfaces and the ledger.
+
+### 4. Scope
+
+Included in this batch: `/tools/sanebox/`, `/tools/servicenow/`, `/tools/spellbook/`, `/tools/stable-audio/`, `/tools/tactiq/`, relevant source registry entries if used, affected categories, `/tools/`, homepage, LLM surfaces, and `PAGE_REFRESH_LEDGER.md`.
+
+Excluded: `/dead/*`, dead tool pages such as Phind, Tome, DALL-E, and Grok Code Fast, individual news articles, unrelated redesigns, and unrelated generated news asset churn already present from the prior task.
+
+### 5. Files likely affected
+
+`src/content/tools/sanebox.md`, `src/content/tools/servicenow.md`, `src/content/tools/spellbook.md`, `src/content/tools/stable-audio.md`, `src/content/tools/tactiq.md`, relevant category records, `src/pages/tools/index.astro`, `src/pages/index.astro`, `src/pages/llms.txt.ts`, `src/pages/llms-full.txt.ts`, `PAGE_REFRESH_LEDGER.md`, and this plan file.
+
+### 6. Data model impact
+
+No schema change is planned. Existing structured facts, source IDs, price history, verdicts, best-for/not-best-for, and source metadata may be refreshed.
+
+### 7. SEO impact
+
+Titles, descriptions, verdicts, and internal links remain stable unless current source checks show stale claims. Parent surfaces should show current maintenance context after the child page refresh.
+
+### 8. Conversion impact
+
+Commercial CTA mechanics are not changing. Any pricing or plan guidance touched must be verified against current sources and retain disclosure/trust framing.
+
+### 9. Mobile UX impact
+
+Tool pages must remain scannable on mobile with first-screen decision content intact. QA will spot-check representative refreshed tool pages and parent surfaces.
+
+### 10. Implementation steps
+
+1. Inspect selected tool records and source/source-registry patterns.
+2. Verify current facts with June 2026 current-source searches and primary sources where available.
+3. Patch selected tool pages and affected parent surfaces.
+4. Regenerate `PAGE_REFRESH_LEDGER.md`.
+5. Run content guards, source checks, link checks, and build.
+6. Browser QA representative refreshed pages at mobile and desktop widths.
+
+### 11. Verification commands
+
+`npm run ledger:pages`
+
+`npm run ledger:pages:check`
+
+`npm run guard:check`
+
+`npm run check:links`
+
+`npm run check`
+
+`npm run build:fast`
+
+Browser QA on `/`, `/tools/`, `/categories/`, `/tools/sanebox/`, `/tools/servicenow/`, `/tools/spellbook/`, `/tools/stable-audio/`, `/tools/tactiq/`, `/categories/ai-automation/`, `/categories/ai-notes/`, `/categories/ai-music/`, `/categories/ai-writing/`, and `/categories/ai-research/` at 360, 390, 430, 768, and 1024 px.
+
+### 12. Acceptance criteria
+
+Selected oldest eligible active pages are refreshed to June 9, 2026 with current source-backed facts; excluded dead/news pages are untouched; affected parent/top-layer surfaces are maintained; ledger is current; checks/build pass.
+
+### 13. Risks and mitigations
+
+Risk: accidentally refreshing excluded dead pages. Mitigation: use ledger order and skip `/dead/*` and tool records with `status: dead`.
+
+Risk: stale pricing or plan claims. Mitigation: verify each touched commercial/tool fact against current June 2026 official sources or defer the claim.
+
+### 14. Progress log
+
+2026-06-09: Initially identified Rows, SaneBox, ServiceNow, Spellbook, and Stable Audio as the next oldest rows after skipped dead archive/tool rows. Current official Rows source says Rows.com fully wound down on May 31, 2026, so Rows is now treated as an excluded dead/retired tool for this user request and left untouched.
+
+2026-06-09: Adjusted the eligible batch to SaneBox, ServiceNow, Spellbook, Stable Audio, and Tactiq. Current-source checks found SaneBox still presenting three plan families plus a 14-day trial, ServiceNow AI Control Tower expanded across discover/observe/govern/secure/measure with GA expected August 2026, Spellbook still on custom team pricing with 7-day trial and 4,400-team adoption copy, Stable Audio 3.0 now superseding the 2.5-first framing, and Tactiq Business annual pricing now rendered at $29.17/user/month with MCP and Claude Connector betas.
+
+2026-06-09: Refreshed the five active tool pages and affected parent/top-layer surfaces. SaneBox now covers Appetizer/Snack/Lunch/Dinner effective monthly pricing plus request-only SaneDrafts/SaneSummary beta caveats; ServiceNow now centers AI Control Tower's discover/observe/govern/secure/measure expansion and August 2026 GA caveat; Spellbook now reflects custom pricing, 7-day trial, security/compliance checks, and Word-native contract workflows; Stable Audio now reflects the Stable Audio 3.0 Small SFX/Small/Medium/Large model split, Community License versus Enterprise License, and API/hosted caveats; Tactiq now reflects Free/Pro/Team/Business/Enterprise pricing plus MCP and Claude Connector beta context. Updated AI Automation, AI Notes, AI Music, AI Writing, AI Research, `/`, `/tools/`, `/categories/`, `/llms.txt`, `/llms-full.txt`, source registry rows, and `PAGE_REFRESH_LEDGER.md`.
+
+### 15. Final report
+
+Completed this batch. Refreshed 5 active tool pages from the oldest eligible ledger cluster to June 9, 2026: `/tools/sanebox/`, `/tools/servicenow/`, `/tools/spellbook/`, `/tools/stable-audio/`, and `/tools/tactiq/`. Skipped `/tools/rows/` because official Rows.com documentation says the product fully wound down on May 31, 2026, so it is treated as a dead/retired tool for this user request. No dead tool pages or individual news article pages were refreshed.
+
+Verification passed: `npm run ledger:pages` with `AIPEDIA_LEDGER_DATE=2026-06-09`, `npm run ledger:pages:check`, source-registry parse/duplicate checks, refreshed tool source-ID checks, targeted stale-string sweeps, `git diff --check -- <touched files>`, `npm run audit:sources`, `npm run audit:facts`, `npm run guard:check`, `npm run test:scripts`, `npm run check:links`, `npm run check`, and `npm run build:fast`. In-app browser QA passed for 13 refreshed/top-layer routes at 360, 390, 430, 768, and 1024 px: 65 route-width checks, no horizontal overflow, H1/main content present, and current June 9 buyer facts visible where required. `dist-fast` was removed after the build.
 
 ---
 

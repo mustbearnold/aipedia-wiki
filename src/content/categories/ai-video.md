@@ -4,11 +4,11 @@ slug: ai-video
 title: AI Video Generation
 description: Current AI video tools for raw model testing, conversational video editing, production workflows, budget social clips, avatar videos, localization, and business training.
 tool_count: 27
-seo_title: "Best AI Video Tools (June 2026): Gemini Omni, Seedance, Kling, Veo & Runway"
-meta_description: "Updated June 8, 2026: compare Gemini Omni, Seedance 2.0, Kling 3.0, Veo 3.1, Hailuo 2.3, Runway Max, Luma Ray3.14, Pika, HeyGen, Synthesia, and Sora sunset caveats by model quality, workflow, pricing, and buyer fit."
+seo_title: "Best AI Video Tools (June 2026): Seedance, Kling, Veo, Runway & Tavus"
+meta_description: "Updated June 9, 2026: compare Gemini Omni, Seedance 2.0, Kling 3.0, Veo 3.1, Hailuo 2.3, Runway Max, Luma Ray3.14, Pika, HeyGen, Synthesia, Tavus CVI, and Sora sunset caveats by model quality, workflow, pricing, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-08
-last_verified: 2026-06-08
+last_updated: 2026-06-09
+last_verified: 2026-06-09
 update_frequency: weekly
 top_picks:
   best_overall: seedance
@@ -18,7 +18,7 @@ top_picks:
 
 ## Quick Decision
 
-AI video is no longer one clean product category. On June 7, 2026, the useful buyer split is:
+AI video is no longer one clean product category. On June 9, 2026, the useful buyer split is:
 
 **Test [Seedance 2.0](/tools/seedance/) first for raw model quality.** ByteDance says Seedance 2.0 supports text, image, audio, and video inputs with multimodal references, editing, extension, 15-second multi-shot audio-video output, motion stability, and director-level control. That makes it the first model AiPedia would test when the only question is "which model can make the best shot?"
 
@@ -74,7 +74,7 @@ If you need a person on camera, use avatar tools. The [best AI avatar video gene
 
 **Best PixVerse use case:** treat [PixVerse](/tools/pixverse/) as a budget/stylized test bed and API-credit route, not as a default enterprise video system. Its June 8 Platform docs publish C1, V6, V5.6, and V5.5 credit rates, one-time API credit packs, and Essential/Scale/Business API memberships that are separate from PixVerse Web memberships, so buyers should verify web-plan pricing, watermark rules, commercial rights, and upload/data policy before paying.
 
-**Best avatar-video pick:** [HeyGen](/tools/heygen/) for creator/business presenter video, sales video, localization, digital twins, and fast templates. The June 7 avatar refresh keeps HeyGen app plans separate from Avatar IV/V API pricing, treats Synthesia as the enterprise training/L&D shortlist when credits, SCORM, LMS, workplace governance, and structured training workflows matter, and routes live-agent buyers toward Tavus or D-ID. Use the June 6 verified [avatar-video buyer guide](/guides/best-ai-avatar-video-generator/) when the choice is between HeyGen, Synthesia, Tavus, D-ID, Hedra, Argil, and Captions. If Synthesia is already the incumbent, use the June 7 verified [Synthesia alternatives guide](/guides/synthesia-alternatives/) to decide whether switching is worth the migration cost.
+**Best avatar-video pick:** [HeyGen](/tools/heygen/) for creator/business presenter video, sales video, localization, digital twins, and fast templates. The June 7 avatar refresh keeps HeyGen app plans separate from Avatar IV/V API pricing, treats Synthesia as the enterprise training/L&D shortlist when credits, SCORM, LMS, workplace governance, and structured training workflows matter, and routes live-agent buyers toward Tavus or D-ID. The June 9 Tavus check keeps Tavus as the API-first live video-agent lane, with Developer pricing at Free, Starter $59/mo, Growth $397/mo, Enterprise custom, plus pay-as-you-go usage and a current Growth card showing 10 concurrent streams. Use the June 6 verified [avatar-video buyer guide](/guides/best-ai-avatar-video-generator/) when the choice is between HeyGen, Synthesia, Tavus, D-ID, Hedra, Argil, and Captions. If Synthesia is already the incumbent, use the June 7 verified [Synthesia alternatives guide](/guides/synthesia-alternatives/) to decide whether switching is worth the migration cost.
 
 ## What Hurts Trust
 
@@ -195,8 +195,8 @@ Yes, but with honest positioning. They are useful for budget testing, effects, o
 - [InVideo pricing](https://invideo.io/pricing/) (verified 2026-06-06)
 - [CapCut](https://www.capcut.com/) (verified 2026-06-06)
 - [HeyGen self-serve API pricing](https://developers.heygen.com/docs/pricing) (verified 2026-06-07)
-- [Tavus pricing](https://www.tavus.io/pricing) (verified 2026-06-07)
-- [Tavus CVI](https://www.tavus.io/cvi) (verified 2026-06-07)
+- [Tavus pricing](https://www.tavus.io/pricing) (verified 2026-06-09)
+- [Tavus CVI](https://www.tavus.io/cvi) (verified 2026-06-09)
 - [Synthesia pricing](https://www.synthesia.io/pricing) (verified 2026-06-07)
 
 ## Related

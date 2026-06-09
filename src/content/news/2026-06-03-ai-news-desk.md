@@ -1,20 +1,26 @@
 ---
 type: news
 slug: 2026-06-03-ai-news-desk
-title: "AI News Desk, June 3, 2026: agents move from demos into work, code, security, and policy"
+title: "AI News Desk, June 3, 2026: agents, local models, and AI governance move into production"
 date: 2026-06-03
 severity: major
-summary: "June 3 AI news desk: Microsoft opens Work IQ APIs, GitHub Copilot makes SDK and AI Credits the coding-agent control surface, Anthropic expands Project Glasswing, OpenAI retires older ChatGPT models, Google brings Drive sharing to Gemini assets, and NVIDIA, Postman, RelationalAI, 7AI, and the White House push agents deeper into production."
+summary: "June 3 AI news desk: Microsoft opens Work IQ APIs and reveals MAI-Thinking-1, Google ships Gemma 4 12B for local multimodal work, GitHub makes Copilot SDK and AI Credits the coding-agent control surface, Anthropic expands Project Glasswing, OpenAI retires older ChatGPT models, and agent infrastructure pushes deeper into production."
 categories: [ai-automation, ai-coding, ai-chatbots, ai-infrastructure]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-03
-last_verified: 2026-06-03
-related_tools: [microsoft-agent-framework, github-copilot, chatgpt, claude, gemini]
+last_updated: 2026-06-09
+last_verified: 2026-06-09
+related_tools: [microsoft-agent-framework, github-copilot, chatgpt, claude, gemini, ollama]
 sources:
   - url: https://blogs.microsoft.com/blog/2026/06/02/microsoft-build-2026-be-yourself-at-work/
     title: "Microsoft: Microsoft Build 2026: Be yourself at work"
+  - url: https://microsoft.ai/news/building-a-hillclimbing-machine-launching-seven-new-mai-models/
+    title: "Microsoft AI: Building a hillclimbing machine, launching seven new MAI models"
   - url: https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/02/announcing-the-new-work-iq-apis/
     title: "Microsoft: Announcing the new Work IQ APIs"
+  - url: https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemma-4-12b/
+    title: "Google: Introducing Gemma 4 12B"
+  - url: https://developers.googleblog.com/gemma-4-12b-the-developer-guide/
+    title: "Google Developers Blog: Gemma 4 12B developer guide"
   - url: https://github.blog/changelog/2026-06-02-copilot-sdk-is-now-generally-available/
     title: "GitHub: Copilot SDK is now generally available"
   - url: https://github.blog/changelog/2026-06-01-updates-to-github-copilot-billing-and-plans
@@ -47,15 +53,17 @@ sources:
     title: "7AI: Agentic Security Platform"
 ---
 
-# AI News Desk, June 3, 2026: agents move from demos into work, code, security, and policy
+# AI News Desk, June 3, 2026: agents, local models, and AI governance move into production
 
-This is the **June 3, 2026 AiPedia news desk**, covering material AI tool and AI industry updates found from the June 1 through current June 3 catch-up window. The through-line is simple: agents are becoming production surfaces. The real buyer question is no longer "can an AI agent act?" It is "who controls the action, what context does it use, how is it billed, and what happens when it is wrong?"
+This is the **June 3, 2026 AiPedia news desk**, refreshed on June 9 after re-checking the same news window against primary sources. The through-line is simple: agents and local models are becoming production surfaces. The real buyer question is no longer "can an AI agent act?" It is "who controls the action, what context does it use, where does the model run, how is it billed, and what happens when it is wrong?"
 
 ## Microsoft turns work context into an API layer
 
 Microsoft's Build 2026 announcements make Work IQ the center of the Microsoft agent story. The Work IQ APIs are scheduled for general availability on June 16, 2026, giving developers programmatic access to Microsoft 365 context, Copilot-style chat, tools, and workspaces within the Microsoft 365 tenant boundary.
 
 For buyers, this is a governance story. Microsoft is not only putting Copilot into apps; it is making the permissioned work graph available to agents. That gives Microsoft-aligned teams a strong reason to evaluate Microsoft 365 Copilot, Copilot Studio, Microsoft Foundry, and [Microsoft Agent Framework](/tools/microsoft-agent-framework/) together rather than as isolated products.
+
+Microsoft also used the Build window to introduce a seven-model Microsoft AI stack led by MAI-Thinking-1. That matters because Microsoft is no longer only packaging third-party frontier models into enterprise software; it is also building more first-party model capability into the platform layer. Read the standalone analysis: [Microsoft introduces MAI-Thinking-1 and a seven-model in-house AI stack](/news/2026-06-03-microsoft-mai-thinking-1-build-model-stack/).
 
 ## GitHub Copilot becomes an embeddable agent runtime
 
@@ -81,6 +89,8 @@ Google Workspace is rolling out Drive-backed sharing for Gemini app chats, canva
 
 This matters because AI outputs are becoming work assets. If Gemini chats, canvases, and generated media are governed through familiar Drive sharing policies, Workspace customers get a cleaner path from "AI conversation" to "managed company artifact."
 
+Google also released Gemma 4 12B on June 3, adding an Apache 2.0 open model for local multimodal workflows with native audio input and a 16GB local-hardware target. That is the local-model side of the same production story: the model does not always need to live in a hosted chat product if the task needs edge privacy, device-side latency, or local experimentation. Read the standalone analysis: [Google ships Gemma 4 12B for local multimodal agents](/news/2026-06-03-google-gemma-4-12b-local-multimodal/).
+
 ## NVIDIA, Postman, RelationalAI, and 7AI push agents into vertical jobs
 
 NVIDIA's June 1 agent announcements point in three directions: enterprise software partners building AI agents with NVIDIA, physical-AI workflows turned into open agent-executable skills around Omniverse/Cosmos/Alpamayo/Metropolis, and high-end Windows machines for local agent development through RTX Spark and DGX Station. Cosmos 3 and Alpamayo 2 Super make the physical-AI story concrete: one aims at open world-model reasoning and generation, while the other targets level 4 robotaxi development.
@@ -99,6 +109,6 @@ That does not create a normal software buying checklist by itself, but it change
 
 The June 3 desk theme is **agent productionization**.
 
-The market is shifting from model launches to controlled action layers: Work IQ for enterprise context, Copilot SDK for coding-agent embedding, Project Glasswing for restricted cyber capability, Gemini Drive sharing for AI asset governance, NVIDIA/Postman/RelationalAI/7AI for vertical agent execution, and government policy for AI-enabled cyber risk.
+The market is shifting from model launches to controlled action layers: Work IQ for enterprise context, MAI for Microsoft-owned model capacity, Gemma 4 12B for local multimodal deployment, Copilot SDK for coding-agent embedding, Project Glasswing for restricted cyber capability, Gemini Drive sharing for AI asset governance, NVIDIA/Postman/RelationalAI/7AI for vertical agent execution, and government policy for AI-enabled cyber risk.
 
 Buyers should stop evaluating agents as isolated demos. Evaluate data access, write permissions, identity, audit logs, usage billing, rollback, and human approval before letting agents touch real work.

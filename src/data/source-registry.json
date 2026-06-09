@@ -26,7 +26,17 @@
       "url": "https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-turns-enterprise-AI-chaos-into-control-with-the-platform-for-governed-autonomous-work/default.aspx",
       "type": "newsroom",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-09"
+    },
+    {
+      "id": "servicenow-ai-control-tower-2026",
+      "label": "ServiceNow AI Control Tower Knowledge 2026 expansion",
+      "url": "https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-expands-AI-Control-Tower-to-discover-observe-govern-secure-and-measure-AI-deployed-across-any-system-in-the-enterprise/default.aspx",
+      "type": "newsroom",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-09"
     },
     {
       "id": "servicenow-otto-2026",
@@ -34,7 +44,8 @@
       "url": "https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-Otto-creates-the-unified-AI-experience-for-the-enterprise/default.aspx",
       "type": "newsroom",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-09"
     },
     {
       "id": "servicenow-products",
@@ -42,7 +53,8 @@
       "url": "https://www.servicenow.com/products.html",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-09"
     },
     {
       "id": "ibm-think-2026-prnewswire",
@@ -4650,6 +4662,15 @@
       "last_checked": "2026-06-08"
     },
     {
+      "id": "together-ai-pricing",
+      "label": "Together AI pricing",
+      "url": "https://www.together.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-09"
+    },
+    {
       "id": "llama-groq-scout",
       "label": "Groq Llama 4 Scout model card",
       "url": "https://console.groq.com/docs/model/llama-4-scout-17b-16e-instruct",
@@ -7205,7 +7226,8 @@
       "url": "https://spellbook.com/pricing",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-09"
     },
     {
       "id": "spellbook-pricing",
@@ -7213,7 +7235,8 @@
       "url": "https://spellbook.com/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-09"
     },
     {
       "id": "spellbook-security",
@@ -7221,7 +7244,8 @@
       "url": "https://spellbook.com/security",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-09"
     },
     {
       "id": "spellbook-associate",
@@ -7256,7 +7280,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-06"
+      "last_checked": "2026-06-09"
     },
     {
       "id": "stable-audio-official",
@@ -7265,7 +7289,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-06"
+      "last_checked": "2026-06-09"
     },
     {
       "id": "stable-audio-api-pricing",
@@ -7273,7 +7297,26 @@
       "url": "https://platform.stability.ai/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-09"
+    },
+    {
+      "id": "stable-audio-3-launch",
+      "label": "Stable Audio 3.0 launch",
+      "url": "https://stability.ai/news-updates/meet-stable-audio-3-the-model-family-built-for-artistic-experimentation-with-open-weight-models",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-09"
+    },
+    {
+      "id": "stable-audio-api-release-notes",
+      "label": "Stability AI API release notes",
+      "url": "https://platform.stability.ai/docs/release-notes",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-09"
     },
     {
       "id": "stable-audio-launch",
@@ -7556,7 +7599,8 @@
       "url": "https://tactiq.io",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-09"
     },
     {
       "id": "tactiq-pricing",
@@ -7564,7 +7608,17 @@
       "url": "https://tactiq.io/buy",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-09"
+    },
+    {
+      "id": "tactiq-mcp",
+      "label": "Tactiq MCP",
+      "url": "https://tactiq.io/mcp",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-09"
     },
     {
       "id": "tactiq-trust-center",
@@ -7572,7 +7626,8 @@
       "url": "https://help.tactiq.io/en/articles/12307002-how-to-access-tactiq-s-trust-center",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-09"
     },
     {
       "id": "taskade-official",
@@ -7580,15 +7635,17 @@
       "url": "https://www.taskade.com",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-09"
     },
     {
       "id": "taskade-pricing",
-      "label": "Source",
+      "label": "Taskade pricing",
       "url": "https://www.taskade.com/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-09"
     },
     {
       "id": "tavus-pricing",
@@ -7597,7 +7654,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-08"
+      "last_checked": "2026-06-09"
     },
     {
       "id": "tavus-cvi",
@@ -7606,7 +7663,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-08"
+      "last_checked": "2026-06-09"
     },
     {
       "id": "tavus-cvi-docs",
@@ -7615,7 +7672,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-08"
+      "last_checked": "2026-06-09"
     },
     {
       "id": "tavus-phoenix-4",
@@ -7624,7 +7681,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-08"
+      "last_checked": "2026-06-09"
     },
     {
       "id": "tines-ai",
@@ -7632,7 +7689,8 @@
       "url": "https://www.tines.com/platform/ai/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-09"
     },
     {
       "id": "tines-agent-faq",
@@ -7643,12 +7701,22 @@
       "volatility": "high"
     },
     {
+      "id": "tines-agent-intro",
+      "label": "Tines AI Agents introduction",
+      "url": "https://explained.tines.com/en/articles/11571096-introduction-to-ai-agents",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-09"
+    },
+    {
       "id": "tines-ai-credits",
       "label": "Tines AI usage and credits",
       "url": "https://explained.tines.com/en/articles/12801399-ai-usage-and-credits",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-09"
     },
     {
       "id": "tines-about",
@@ -7672,7 +7740,8 @@
       "url": "https://explained.tines.com/en/articles/9620399-understanding-tines-pricing-and-packaging",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-09"
     },
     {
       "id": "tines-pricing",
@@ -7680,7 +7749,8 @@
       "url": "https://www.tines.com/pricing/",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-09"
     },
     {
       "id": "tines-security",
@@ -7688,7 +7758,8 @@
       "url": "https://www.tines.com/security/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-09"
     },
     {
       "id": "tome-official",
@@ -9050,7 +9121,8 @@
       "url": "https://www.sanebox.com/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-09"
     },
     {
       "id": "sanebox-pricing",
@@ -9058,7 +9130,35 @@
       "url": "https://www.sanebox.com/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-09"
+    },
+    {
+      "id": "sanebox-plan-help",
+      "label": "SaneBox subscription plan help",
+      "url": "https://www.sanebox.com/help/201-which-subscription-plans-can-i-choose-from",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-09"
+    },
+    {
+      "id": "sanebox-feature-help",
+      "label": "SaneBox feature help",
+      "url": "https://www.sanebox.com/help/138-what-is-a-feature",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-09"
+    },
+    {
+      "id": "sanebox-reply-drafts",
+      "label": "SaneBox Reply Draft beta help",
+      "url": "https://www.sanebox.com/help/464-reply-draft-sanedrafts-automatically-generate-email-replies-in-your-voice",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-09"
     },
     {
       "id": "servicenow-action-fabric-2026",
@@ -9066,7 +9166,8 @@
       "url": "https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-opens-its-full-system-of-action-to-every-AI-Agent-in-the-enterprise/default.aspx",
       "type": "newsroom",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-09"
     },
     {
       "id": "servicenow-aws-kiro-2026",
@@ -9098,7 +9199,8 @@
       "url": "https://www.taskade.com/ai",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-09"
     },
     {
       "id": "tidio-lyro",
@@ -9130,7 +9232,8 @@
       "url": "https://explained.tines.com/en/articles/9620399-understanding-tines-pricing-and-packaging",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-09"
     },
     {
       "id": "tripo3d-site",

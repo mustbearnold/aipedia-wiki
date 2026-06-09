@@ -5,7 +5,7 @@ title: AI Automation & Agents
 description: Current workflow automation, AI agent platforms, meeting automation, call automation, and operations tools for technical teams, non-technical operators, GTM workflows, customer success, support, sales, and internal automation.
 tool_count: 27
 seo_title: "Best AI Automation Tools & Agent Platforms (June 2026)"
-meta_description: "Updated June 9, 2026: compare n8n, Zapier, Make, Reclaim.ai, Instantly, Intercom, Gumloop, Relevance AI, Activepieces, AG2, CrewAI, Langflow, Langfuse, LangGraph, Letta, Dust, Glean, Goose, Browserbase, Modal, Apollo, Lindy, Pipedream, CloudTalk, and MeetGeek by workflow, pricing unit, AI orchestration, and risk."
+meta_description: "Updated June 9, 2026: compare n8n, Zapier, Make, Taskade, Tines, Reclaim.ai, Instantly, Intercom, Gumloop, Relevance AI, Activepieces, AG2, CrewAI, Langflow, Langfuse, LangGraph, Letta, Dust, Glean, Goose, Browserbase, Modal, Apollo, Lindy, Pipedream, CloudTalk, and MeetGeek by workflow, pricing unit, AI orchestration, and risk."
 author: "aipedia.wiki Editorial"
 last_updated: 2026-06-09
 last_verified: 2026-06-09
@@ -38,9 +38,17 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 
 **Use [Gumloop](/tools/gumloop/) when the buyer wants AI-native flows, agents, triggers, MCP, policies, and guardrails.** Gumloop is a stronger fit for agent-heavy workflow building than a generic "connect two apps" use case. The June 2 check keeps credit testing central: BYOK can reduce some workflow AI-node burn, but teams should test workflow nodes and agent/model paths separately before assuming every AI step is cheap.
 
+**Use [Taskade](/tools/taskade/) when automation belongs inside project work.** The June 9 check keeps Taskade in the AI workspace lane: tasks, docs, mind maps, automations, Genesis apps, agents, model routing, and MCP live beside the team's project state. Public pricing now shows workspace tiers from Free through Starter $6/mo, Pro $16/mo, Business $40/mo, Max $200/mo, and Enterprise $400/mo, but the help-center table still disagrees on some monthly-style prices, so buyers should confirm the billing toggle before renewal.
+
 **Use [Reclaim.ai](/tools/reclaim-ai/) when automation starts with the calendar.** The June 9 check confirms Reclaim.ai is now branded from Dropbox, supports Google Calendar and Microsoft Outlook, and positions AI agents around tasks, habits, scheduling links, smart meetings, and team availability. Start with Reclaim when the job is calendar defense, focus-time protection, and task scheduling; skip it if the buyer needs a broad workflow router.
 
+**Use [SaneBox](/tools/sanebox/) when automation starts with inbox triage.** The June 9 check updates SaneBox's Appetizer/Snack/Lunch/Dinner pricing ladder and adds an important caveat: SaneDrafts/Reply Draft and SaneSummary are request-only beta AI features, while the durable product remains server-side inbox classification, SaneLater, SaneBlackHole, Daily Digest, reminders, and snooze.
+
 **Use [Relevance AI](/tools/relevance-ai/) when the purchase question is an AI workforce.** The June 9 check found the public pricing page foregrounding Enterprise contact-sales packaging, while docs still define Free at 200 Actions/month plus 1,000 Vendor Credits, top-ups at $80 per 1,000 Actions and $20 per 10,000 Vendor Credits, and BYO API keys on paid plans. Treat old Pro/Team prices as historical unless the app or sales confirms them.
+
+**Use [ServiceNow](/tools/servicenow/) when enterprise AI automation needs a governance/control tower.** The June 9 check keeps ServiceNow in the governed autonomous-work lane: AI Control Tower now spans Discover, Observe, Govern, Secure, and Measure, with Action Fabric MCP, Build Agent, Workflow Data Fabric, AWS Bedrock AgentCore/Kiro context, and an August 2026 GA caveat for Control Tower enhancements.
+
+**Use [Tines](/tools/tines/) when security, IT, or compliance teams need workflow runs that hold up in audit.** The June 9 check keeps Community free, Starter starting at $500/mo, Business/Enterprise contact-sales, and the AI Agent action broader than the old FAQ wording. The practical purchase question is not app count; it is AI run-time credits, package limits, logs, SSO/SAML, flexible hosting, and whether a SOC or IT team can own the workflow safely.
 
 **Use [Activepieces](/tools/activepieces/) when open-source workflow automation and self-hosting matter.** The June 1 check keeps the buyer story stable: MIT-licensed self-hosting is free, cloud Standard remains free for 10 flows and then $5 per active flow per month, and the public site now frames the platform around 700+ integrations plus AI agents.
 
@@ -100,6 +108,8 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 
 **Use [MeetGeek](/tools/meetgeek/) when automation starts with meetings.** MeetGeek is the better fit when customer success, sales, recruiting, or implementation teams need meeting transcripts, summaries, action items, AI Chat, Zapier/Make/n8n workflows, API/MCP access, and CRM/task handoff from customer calls.
 
+**Use [Tactiq](/tools/tactiq/) when meeting automation needs no-bot browser capture.** The June 9 check keeps Tactiq's Free plan at 10 transcripts/month and 5 AI credits, Pro at $8/user/month annual, Team at $16.67, and Business at $29.17 with SAML SSO, advanced retention, Tactiq MCP beta, and Claude Connector beta for transcript context in AI tools.
+
 **Use [Lindy](/tools/lindy/) when the buyer wants an AI work assistant, not a workflow canvas.** Lindy's May 27 refresh now routes high-intent buyers into a 7-day trial, Plus-first plan guidance, and the [Lindy vs Zapier vs n8n](/compare/lindy-vs-zapier-vs-n8n/) decision path. It belongs in this category for inbox, calendar, meeting prep, meeting notes, follow-up drafting, and iMessage/SMS delegation, but not for high-volume backend automation.
 
 **Use [Pipedream](/tools/pipedream/) when developer API workflows, embedded integrations, or AI-agent tool access matter more than no-code breadth.** The June 8 rendered pricing check replaces the stale daily-credit model with monthly included credits: Free 100/month, Basic 2,000/month, Advanced 2,000/month, Connect 10,000/month, and Business custom. Treat Connect, MCP tool scoping, Workday ownership, and monthly overage modeling as the main procurement questions.
@@ -118,8 +128,12 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 | Non-technical SaaS automation | [Zapier](/tools/zapier/) | Broadest app catalog and fastest setup for business teams | Task billing and automation sprawl can get expensive |
 | Visual scenario building and branching workflows | [Make](/tools/make/) | Strong visual canvas, routers, filters, credits, and 3000+ apps | Credit use depends on scenario design and frequency |
 | Agent-heavy workflows and modern automation teams | [Gumloop](/tools/gumloop/) | AI-native flows, unlimited agents/flows, policies, guardrails, and MCP support | Credit usage must be tested with real production tasks |
+| AI project workspace automation | [Taskade](/tools/taskade/) | Tasks, docs, mind maps, automations, Genesis apps, and custom agents share one project surface | Pricing surfaces conflict; confirm checkout tier and AI-credit assumptions |
 | Calendar defense and task scheduling | [Reclaim.ai](/tools/reclaim-ai/) | Google Calendar and Outlook scheduling, tasks, habits, AI agents, Smart Meetings, and team availability | Not a broad app automation platform; Outlook has integration limits to verify |
+| Inbox triage automation | [SaneBox](/tools/sanebox/) | Server-side classification, SaneLater, SaneBlackHole, Daily Digest, reminders, snooze, and request-only beta AI drafts/summaries | Not a full AI email client replacement; beta AI features must be requested |
 | Delegated GTM, research, support, and ops agents | [Relevance AI](/tools/relevance-ai/) | AI workforces, Actions, Vendor Credits, scheduling, escalations, and marketplace patterns | Public pricing is Enterprise-led; docs and in-app billing need direct verification |
+| Enterprise AI governance and workflow control | [ServiceNow](/tools/servicenow/) | AI Control Tower, Otto, Action Fabric MCP, Build Agent, Workflow Data Fabric, and governed enterprise workflows | SKU packaging, Innovation Lab/GA timing, and regional availability need contract verification |
+| Security and IT workflow automation | [Tines](/tools/tines/) | Audit logs, RBAC, SSO/SAML, flexible hosting, Workbench, and AI Agent actions for SOC/IT workflows | Starter floor is high and AI Agent usage depends on credits and package limits |
 | Open-source automation and self-hosting | [Activepieces](/tools/activepieces/) | MIT-licensed self-host path, cloud active-flow billing, 700+ integrations, and AI-agent support | Someone still has to own hosting, secrets, and connector maintenance |
 | Developer multi-agent framework | [AG2](/tools/ag2/) | Apache 2.0 framework for AutoGen-style agent systems with active releases | Requires Python engineering judgment; not a turnkey workflow product |
 | Python multi-agent orchestration | [CrewAI](/tools/crewai/) | Role-based agents, crews, flows, Studio, tracing, triggers, and an Enterprise path | Basic cloud is small; LLM costs and production controls still need engineering ownership |
@@ -146,6 +160,7 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 | Chat-first customer support automation | [Intercom](/tools/intercom/) | Fin AI Agent, human inbox, Copilot, help center, workflows, and customer context in one support platform | Seat, outcome, Copilot, and add-on fees stack quickly |
 | Phone-heavy sales/support operations | [CloudTalk](/tools/cloudtalk/) | Business calling, routing, dialers, CRM sync, AI Conversation Intelligence, and AI Voice Agents in one platform | More than teams need if the job is internal-only calling or pure chat support |
 | Meeting-to-workflow automation for CS, sales, recruiting, and ops | [MeetGeek](/tools/meetgeek/) | Transcripts, summaries, AI Chat, action items, Zapier/Make/n8n workflows, API/MCP access, and CRM/task handoff from meeting content | Needs consent policy, workspace permissions, and a defined post-meeting workflow |
+| No-bot browser meeting capture | [Tactiq](/tools/tactiq/) | Meet/Zoom/Teams caption capture, AI summaries, workflow integrations, and Business-tier MCP/Claude Connector betas | Browser-caption quality, consent, AI credits, and Business beta access need verification |
 | One-off general autonomous tasks | [Manus](/tools/manus/) | Hosted VM agent for research, spreadsheets, slides, files, and browser work; official site now describes Manus as part of Meta | Credit burn and data-handling terms need direct verification before sensitive work |
 | Inbox, calendar, meeting, and follow-up assistant | [Lindy](/tools/lindy/) | Assistant-style automation for professionals who want delegation, not a blank canvas; start with [the work-assistant guide](/guides/best-ai-personal-assistant-for-work/) or [Lindy vs Zapier vs n8n](/compare/lindy-vs-zapier-vs-n8n/) | Current public pricing starts with a 7-day trial; Plus is the first paid plan for most solo buyers, while usage and inbox limits must be tested |
 | Developer API workflows and embedded integrations | [Pipedream](/tools/pipedream/) | Developer-friendly workflows, Connect, MCP servers, monthly included credits, and Workday ownership | Requires more technical judgment than Zapier or Make; model monthly credit overage and ask how Workday packaging affects enterprise rollout |
@@ -207,8 +222,16 @@ Do not leave this category stale. Automation tools are adding MCP, agent builder
 - [Gumloop docs](https://docs.gumloop.com/) (verified 2026-06-02)
 - [Reclaim.ai pricing](https://reclaim.ai/pricing) (verified 2026-06-09)
 - [Reclaim.ai Microsoft Outlook integration help](https://help.reclaim.ai/en/articles/9590707-microsoft-outlook-integration-overview-updates) (verified 2026-06-09)
+- [SaneBox pricing](https://www.sanebox.com/pricing) (verified 2026-06-09)
+- [SaneBox Reply Draft help](https://www.sanebox.com/help/464-reply-draft-sanedrafts-automatically-generate-email-replies-in-your-voice) (verified 2026-06-09)
 - [Relevance AI pricing](https://relevanceai.com/pricing) (verified 2026-06-09)
 - [Relevance AI plans and credits documentation](https://relevanceai.com/docs/admin/subscriptions/plans) (verified 2026-06-09)
+- [ServiceNow AI Control Tower expansion](https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-expands-AI-Control-Tower-to-discover-observe-govern-secure-and-measure-AI-deployed-across-any-system-in-the-enterprise/default.aspx) (verified 2026-06-09)
+- [Taskade pricing](https://www.taskade.com/pricing) (verified 2026-06-09)
+- [Taskade AI](https://www.taskade.com/ai) (verified 2026-06-09)
+- [Tines pricing](https://www.tines.com/pricing/) (verified 2026-06-09)
+- [Tines pricing explainer](https://explained.tines.com/en/articles/9620399-understanding-tines-pricing-and-packaging) (verified 2026-06-09)
+- [Tines AI Agents introduction](https://explained.tines.com/en/articles/11571096-introduction-to-ai-agents) (verified 2026-06-09)
 - [Activepieces pricing](https://www.activepieces.com/pricing) (verified 2026-06-01)
 - [Activepieces GitHub releases](https://github.com/activepieces/activepieces/releases) (verified 2026-06-01)
 - [AG2 releases](https://github.com/ag2ai/ag2/releases) (verified 2026-06-01)
@@ -289,6 +312,8 @@ Do not leave this category stale. Automation tools are adding MCP, agent builder
 - [CloudTalk official site](https://www.cloudtalk.io/) (verified 2026-05-26)
 - [MeetGeek pricing](https://meetgeek.ai/pricing) (verified 2026-05-26)
 - [MeetGeek integrations](https://meetgeek.ai/integrations) (verified 2026-05-26)
+- [Tactiq pricing](https://tactiq.io/buy) (verified 2026-06-09)
+- [Tactiq MCP](https://tactiq.io/mcp) (verified 2026-06-09)
 - [Asana StackAI acquisition](https://www.businesswire.com/news/home/20260528515345/en/Asana-Acquires-StackAI-Adding-Cross-System-Execution-for-Human-Agent-Teams) (verified 2026-05-31)
 - [Robinhood agentic trading and card launch](https://robinhood.com/us/en/newsroom/robinhood-is-now-open-to-agents/) (verified 2026-05-31)
 - [CoreWeave autonomous agent improvement launch](https://investors.coreweave.com/news/news-details/2026/CoreWeave-Closes-the-Training-to-Inference-Gap-for-Autonomous-Agent-Improvement/default.aspx) (verified 2026-05-31)

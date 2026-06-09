@@ -209,7 +209,7 @@ Do not publish stale model-version claims. Coding tools route models and change 
 - [MiniMax pay-as-you-go pricing](https://platform.minimax.io/docs/guides/pricing-paygo) (verified 2026-06-08)
 - [Llama official site](https://ai.meta.com/llama/) (verified 2026-06-08)
 - [Llama 4 Community License](https://www.llama.com/llama4/license/) (verified 2026-06-08)
-- [Together AI pricing](https://www.together.ai/pricing) (verified 2026-06-08)
+- [Together AI pricing](https://www.together.ai/pricing) (verified 2026-06-09)
 - [Groq Llama 4 Scout model card](https://console.groq.com/docs/model/llama-4-scout-17b-16e-instruct) (verified 2026-06-08)
 - [Glean developer platform](https://developers.glean.com/) (verified 2026-06-02)
 - [v0 pricing](https://v0.app/pricing) (verified 2026-06-05)

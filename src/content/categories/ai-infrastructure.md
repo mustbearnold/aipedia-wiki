@@ -5,7 +5,7 @@ title: AI Infrastructure & Model APIs
 description: Developer platforms for LLM routing, pay-as-you-go model APIs, hosted inference, serverless GPUs, vector databases, speech APIs, and production retrieval systems.
 tool_count: 12
 seo_title: "Best AI Infrastructure & Model API Tools (June 2026)"
-meta_description: "Updated June 9, 2026: compare OpenRouter, OpenAI API, Claude API, Gemini API, Mistral, Groq, Replicate, fal, Fireworks AI, Modal, Browserbase, Deepgram, Pinecone, Weaviate, Qdrant, Llama, LM Studio, and current local/open-model infrastructure tradeoffs."
+meta_description: "Updated June 9, 2026: compare OpenRouter, OpenAI API, Claude API, Gemini API, Mistral, Groq, Together AI, Replicate, fal, Fireworks AI, Modal, Browserbase, Deepgram, Pinecone, Weaviate, Qdrant, Llama, LM Studio, and current local/open-model infrastructure tradeoffs."
 author: "aipedia.wiki Editorial"
 last_updated: 2026-06-09
 last_verified: 2026-06-09
@@ -69,7 +69,7 @@ The June 3 update widens that control story. Microsoft Build put Work IQ and Fou
 - **Model routing:** Pick [OpenRouter](/tools/openrouter/) when you need one OpenAI-compatible API across many providers.
 - **Direct LLM APIs:** Pick [OpenAI](/tools/chatgpt/), [Claude](/tools/claude/), or [Gemini](/tools/gemini/) when native features, procurement, and provider-specific controls matter.
 - **Cost and latency:** Pick [Mistral AI](/tools/mistral-ai/) or [Groq](/tools/groq/) when you can benchmark quality against real prompts and need tighter unit economics.
-- **Open-model infrastructure:** Pick [Together AI](/tools/together-ai/) when you need hosted inference, tuning, and GPU capacity for open models.
+- **Open-model infrastructure:** Pick [Together AI](/tools/together-ai/) when you need hosted inference, fine-tuning, dedicated endpoints, code sandboxes, and GPU capacity for open-model products. The June 9 check separates serverless model-token pricing from dedicated inference and GPU clusters, so benchmark your actual traffic before assuming a single "open model" unit cost.
 - **Model catalog and experiments:** Pick [Hugging Face](/tools/hugging-face/) for discovery, datasets, model cards, demos, Spaces, ZeroGPU, and endpoints.
 - **Media and community models:** Pick [Replicate](/tools/replicate/) when the job is running image, video, audio, or custom models by API. The June 9 check confirms buyers should model public output-priced examples separately from hardware-time runs and private deployments that can bill while idle.
 - **Fast media APIs:** Pick [fal.ai](/tools/fal-ai/) when successful-output billing, image/video/audio/3D endpoints, and fast experimentation matter.
@@ -112,14 +112,14 @@ Do not publish infrastructure pages with old flat monthly subscription framing. 
 - [Fireworks inference documentation](https://docs.fireworks.ai/guides/inference-introduction) (verified 2026-06-02)
 - [Browserbase pricing](https://www.browserbase.com/pricing) (verified 2026-06-06)
 - [Deepgram pricing](https://deepgram.com/pricing) (verified 2026-06-06)
-- [Together AI pricing](https://www.together.ai/pricing) (verified 2026-06-06)
+- [Together AI pricing](https://www.together.ai/pricing) (verified 2026-06-09)
 - [Hugging Face pricing](https://huggingface.co/pricing) (verified 2026-06-02)
 - [Modal pricing](https://modal.com/pricing) (verified 2026-06-08)
 - [Modal GPU docs](https://modal.com/docs/guide/gpu) (verified 2026-06-08)
 - [LM Studio](https://lmstudio.ai/) (verified 2026-06-08)
 - [LM Studio developer docs](https://lmstudio.ai/docs/api) (verified 2026-06-08)
 - [Llama official site](https://ai.meta.com/llama/) (verified 2026-06-08)
-- [Together AI Llama pricing](https://www.together.ai/pricing) (verified 2026-06-08)
+- [Together AI Llama pricing](https://www.together.ai/pricing) (verified 2026-06-09)
 - [Groq Llama 4 Scout model card](https://console.groq.com/docs/model/llama-4-scout-17b-16e-instruct) (verified 2026-06-08)
 - [Pinecone pricing](https://www.pinecone.io/pricing/) (verified 2026-06-08)
 - [Pinecone cost docs](https://docs.pinecone.io/guides/manage-cost/understanding-cost) (verified 2026-06-08)

@@ -32,7 +32,7 @@ For budget-conscious research teams running their own pipelines, [Reka Edge](/to
 
 The May 31 update adds an important caveat for high-stakes science. OpenAI's [Rosalind Biodefense expansion](/news/2026-05-31-openai-rosalind-biodefense-trusted-access/) shows that specialist research models can be powerful but gated. GPT-Rosalind is not a general research subscription; it is a trusted-access life-sciences model program for qualified teams and public-health or biodefense workflows. Treat that as a separate procurement lane from everyday literature review.
 
-For legal and professional-services research, [Harvey](/tools/harvey/) belongs in a separate enterprise lane from academic tools. Its June 2 refresh keeps Assistant, Vault, Knowledge, Agents, Contract Intelligence, Command Center, Harvey Mobile, and the Claude for Legal connector in scope. It is for matter-grounded legal research, drafting, contract review, and deployment governance inside large firms, not for student literature review.
+For legal and professional-services research, [Harvey](/tools/harvey/) belongs in a separate enterprise lane from academic tools. Its June 2 refresh keeps Assistant, Vault, Knowledge, Agents, Contract Intelligence, Command Center, Harvey Mobile, and the Claude for Legal connector in scope. It is for matter-grounded legal research, drafting, contract review, and deployment governance inside large firms, not for student literature review. [Spellbook](/tools/spellbook/) sits in the narrower contract-drafting/review lane: the June 9 check keeps pricing custom, the trial at 7 days, and the suite focused on Microsoft Word plus Associate multi-document workflows, not broad academic search.
 
 The June 6 [interview-prep guide](/guides/best-ai-for-interview-prep/) refresh adds a practical source-grounded research use case: use NotebookLM for a resume/job-description/source packet, Perplexity or Gemini for current company research, and a general assistant only after primary sources are opened. That keeps interview research in the low-stakes preparation lane rather than pretending a chatbot can own evidence judgment.
 
@@ -128,3 +128,5 @@ Do not cite generated text. Cite the original source. Do not treat a linked sour
 - [Harvey official site](https://www.harvey.ai/) - verified 2026-06-02.
 - [Harvey blog](https://www.harvey.ai/blog) - verified 2026-06-02.
 - [Harvey security](https://www.harvey.ai/security) - verified 2026-06-02.
+- [Spellbook pricing](https://spellbook.com/pricing) - verified 2026-06-09.
+- [Spellbook security](https://spellbook.com/security) - verified 2026-06-09.

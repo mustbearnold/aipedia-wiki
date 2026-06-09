@@ -2,6 +2,18 @@
 // Lists every active tool with category + tagline, every comparison, every
 // use-case guide. Intended for crawlers willing to ingest a larger manifest
 // to discover the full content map without parsing the sitemap.
+// Refresh metadata: 2026-06-09 Taskade, Tavus, Tines, and Together AI
+// active-tool refresh with dead tools and news articles skipped, plus source
+// registry, parent category hubs, homepage, tools index, categories index,
+// and LLM maintenance.
+// Refresh metadata: 2026-06-09 SaneBox, ServiceNow, Spellbook,
+// Stable Audio, and Tactiq active-tool refresh with Rows skipped as a
+// wound-down/dead tool, plus source registry, parent category hubs, homepage,
+// tools index, categories index, and LLM maintenance.
+// Refresh metadata: 2026-06-09 June 3-9 AI news refresh across ChatGPT
+// memory, GitHub Copilot agent APIs and model/plugin governance, Gemma 4
+// local/QAT releases, Gemini for Apple developers, Claude Cowork,
+// Devin/Desktop, FrontierCode, Kaggle local benchmarks, and Microsoft MAI.
 // Refresh metadata: 2026-06-08 PixVerse, Playground AI, Poe, and Qdrant
 // tool refresh with PixVerse C1/V6/API memberships and credit packs,
 // Playground Pro/Pro Plus/Nano Banana/GPT Image 2/Day Pass/API caveats,
@@ -133,6 +145,9 @@ export const GET: APIRoute = async () => {
   lines.push('');
   lines.push('> Extended LLM-friendly site manifest. Enumerates every active page across tools, categories, comparisons, buyer guides, and companies. See /llms.txt for the concise version.');
   lines.push('');
+  lines.push('Recent news refresh: June 9, 2026 added June 3-9 source-backed AI tools coverage across ChatGPT memory, GitHub Copilot agent APIs and model/plugin governance, Gemma 4 local/QAT releases, Gemini for Apple developers, Claude Cowork, Devin/Desktop, FrontierCode, Kaggle local benchmarks, and Microsoft MAI.');
+  lines.push('Recent tool refresh: June 9, 2026 refreshed Taskade, Tavus, Tines, and Together AI around Taskade workspace pricing and conflicting help-table caveats, Tavus Developer/PALs pricing plus CVI concurrency, Tines AI Agent action credit/package caveats, and Together serverless, dedicated-inference, GPU-cluster, fine-tuning, and code-sandbox pricing.');
+  lines.push('Recent tool refresh: June 9, 2026 refreshed SaneBox, ServiceNow, Spellbook, Stable Audio, and Tactiq around SaneBox Appetizer/Snack/Lunch/Dinner pricing and beta SaneDrafts/SaneSummary, ServiceNow AI Control Tower Discover/Observe/Govern/Secure/Measure and August GA caveats, Spellbook custom legal Word pricing/security, Stable Audio 3.0 open weights/API/Enterprise licensing, and Tactiq Business MCP/Claude Connector beta. Rows was skipped because Rows.com says the product fully wound down May 31, 2026.');
   lines.push('Recent tool refresh: June 8, 2026 refreshed LinkedIn Recruiter, Llama, LM Studio, and Logseq around LinkedIn Hiring Assistant add-on/metrics, Llama Groq Scout and Together Maverick pricing caveats, LM Studio v1 REST/API/free-work posture, and Logseq DB/markdown-mirror/sync caveats.');
   lines.push('Recent guide refresh: June 8, 2026 refreshed open-source AI tools around LM Studio developer APIs, Llama open-weight/provider economics, local/self-hosted AI security, and open-source versus open-weight licensing language.');
   lines.push('Recent tool refresh: June 8, 2026 refreshed Langfuse, LangGraph, Leonardo AI, and Letta around Langfuse Cloud unit pricing/evals, LangGraph/LangSmith pricing and deployment billing, Leonardo Free/Essential/Premium/Ultimate web plans plus team/API paths, and Letta Code Free/Pro/Enterprise/BYOK/Letta Auto pricing.');
