@@ -5,11 +5,11 @@ title: "Gamma vs Tome"
 tools: [gamma, tome]
 category: ai-presentation
 winner: gamma
-seo_title: "Gamma vs Tome: Tome Is Dead, Use Gamma for AI Decks (May 2026)"
-meta_description: "Gamma vs Tome for AI presentations. Tome Slides sunset April 30, 2025; Gamma is the active choice for narrative AI decks, docs, and shareable pages. Verified May 2026."
+seo_title: "Gamma vs Tome: Tome Is Dead, Use Gamma for AI Decks (June 2026)"
+meta_description: "Gamma vs Tome for AI presentations. Tome Slides sunset April 30, 2025; Gamma is the active choice for narrative AI decks, docs, and shareable pages. Verified June 2026."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-08
+last_verified: 2026-06-08
 update_frequency: quarterly
 canonical_fact_table: true
 ---
@@ -18,7 +18,7 @@ canonical_fact_table: true
 
 [Gamma](/tools/gamma/) is the clear winner over [Tome](/tools/tome/) in 2026 because Tome Slides is no longer an active presentation product. The official Tome Help Center says Tome Slides was sunsetting on April 30, 2025, that users needed to migrate important work before that date, and that after April 30 users would not be able to sign in or access Tome content. VentureBeat later covered the founding team's pivot to Lightfield, an AI-native CRM, after Tome's presentation product failed to become a durable business.
 
-The practical buyer answer: **use Gamma if you wanted Tome's AI-first, narrative-style presentation experience. Do not shortlist Tome for new presentation work.** This page was re-verified on **May 8, 2026** against current Tome, Gamma, VentureBeat, and Lightfield sources.
+The practical buyer answer: **use Gamma if you wanted Tome's AI-first, narrative-style presentation experience. Do not shortlist Tome for new presentation work.** This page was re-verified on **June 8, 2026** against current Tome, Gamma, VentureBeat, and Lightfield sources.
 
 ## Quick Verdict
 
@@ -56,7 +56,7 @@ That past value is why this page still exists. It helps former Tome users unders
 
 ## Pricing Reality
 
-Gamma has current pricing. On May 8, 2026, AiPedia verified Gamma against its official AI presentation and pricing pages plus Gamma's workspace upgrade help documentation. Readers should still check Gamma's live pricing page before purchase because credits, tiers, and limits can change.
+Gamma has current pricing. On June 8, 2026, AiPedia verified Gamma against its official AI presentation and pricing pages. The live page lists Free, Plus, Pro, and Ultra paths; Free supports PDF/PPTX/PNG/Google Slides export, Plus removes Gamma branding and expands AI power, Pro adds premium models, custom branding/fonts, detailed analytics, advanced sharing, custom domains, API access, and workspace templates, and Ultra adds more usage and access to the most advanced models. Readers should still check Gamma's live pricing page before purchase because credits, tiers, and limits can change.
 
 Tome Slides has no current presentation pricing because the product was sunset. The old Free/Pro/Enterprise comparison language should be treated as historical only. If you see a third-party page quoting Tome prices, it is likely describing the discontinued product or a different Tome-branded surface.
 
@@ -117,6 +117,6 @@ If you exported your old Tome content, Gamma is a reasonable place to rebuild na
 - Tome Help Center: [Tome Slides is Sunsetting on April 30th, 2025](https://tome.app/help/en/articles/10744234-tome-slides-is-sunsetting-on-april-30th-2025)
 - VentureBeat: [Tome's founders ditch viral presentation app to build AI-native CRM Lightfield](https://venturebeat.com/technology/tomes-founders-ditch-viral-presentation-app-with-20m-users-to-build-ai)
 - Lightfield homepage: [https://lightfield.app/](https://lightfield.app/)
-- Gamma AI presentation maker: [https://gamma.app/ai-presentation-maker](https://gamma.app/ai-presentation-maker)
-- Gamma pricing: [https://gamma.app/pricing](https://gamma.app/pricing)
+- Gamma AI presentation maker: [https://gamma.app/ai-presentation-maker](https://gamma.app/ai-presentation-maker) (verified 2026-06-08)
+- Gamma pricing: [https://gamma.app/pricing](https://gamma.app/pricing) (verified 2026-06-08)
 - Related category: [AI Presentation Tools](/categories/ai-presentation/)

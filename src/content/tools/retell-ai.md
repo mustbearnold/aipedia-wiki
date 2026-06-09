@@ -11,10 +11,10 @@ pricing_model: freemium
 price_range: "$0.07-$0.31/min voice; $0.002+/message chat; Enterprise custom"
 status: active
 launched: 2023
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-09
+last_verified: 2026-06-09
 update_frequency: monthly
-seo_title: "Retell AI: Features, Pricing & Review (May 2026)"
+seo_title: "Retell AI: Features, Pricing & Review (June 2026)"
 meta_description: "Retell AI is a pay-as-you-go AI voice agent platform. It offers $10 free credits, $0.07-$0.31/min AI voice agents, $0.002+/message AI chat agents, component add-ons, 20 included concurrent calls, and Enterprise custom pricing."
 author: aipedia.wiki Editorial
 affiliate:
@@ -34,22 +34,22 @@ facts:
     source: "https://www.retellai.com/pricing"
     source_label: "Retell AI pricing"
     source_id: retell-ai-best-for
-    verified_at: 2026-05-13
+    verified_at: 2026-06-09
     confidence: high
   best_paid_tier:
-    value: "Pay-as-you-go for builders; Enterprise for higher concurrency, role-based access control, SSO, MSA/DPA/BAA terms, dedicated stable server, and dedicated support"
+    value: "Pay-as-you-go for builders; Enterprise for high concurrency, role-based access control, SSO, MSA/DPA/BAA terms, dedicated stable server, and dedicated support. Pay-as-you-go includes 20 concurrent calls; extra active-call capacity is listed at $8 per concurrency per month."
     source: "https://www.retellai.com/pricing"
     source_label: "Retell AI pricing"
     source_id: retell-ai-best-for
-    verified_at: 2026-05-13
-    next_review_at: 2026-06-10
+    verified_at: 2026-06-09
+    next_review_at: 2026-07-09
     confidence: high
   best_for:
     value: "Teams building inbound or outbound phone agents that need production call analytics, testing, knowledge bases, batch calling, webhooks, and API control"
     source: "https://www.retellai.com/pricing"
     source_label: "Retell AI pricing"
     source_id: retell-ai-best-for
-    verified_at: 2026-05-13
+    verified_at: 2026-06-09
     confidence: high
 tags: [ai-voice, voice-agent, phone-agent, call-automation, customer-support, sales, telephony, webhooks, api]
 best_for:
@@ -64,6 +64,34 @@ not_best_for:
 quick_answer: >-
   Retell AI is a strong choice for production voice agents because it combines pay-as-you-go pricing with templates, analytics, testing, knowledge bases, batch calls, webhooks, API access, and enterprise escalation. The main caveat is cost modeling: the headline per-minute range is only the start, because model, voice, telephony, add-ons, silence time, and transfers can change the real bill.
 price_history:
+  - date: 2026-06-09
+    plan: "Pay as you go"
+    price: "$0.07-$0.31/minute for AI Voice Agents"
+    source: "https://www.retellai.com/pricing"
+    source_label: "Source"
+    source_id: retell-ai-best-for
+    note: "$10 free credits, 20 included concurrent calls; additional active-call concurrency listed at $8 per concurrency per month"
+  - date: 2026-06-09
+    plan: "AI Chat Agents"
+    price: "$0.002+/message"
+    source: "https://www.retellai.com/pricing"
+    source_label: "Source"
+    source_id: retell-ai-best-for
+    note: "Model-specific chat agent pricing still starts at $0.002/AI message on the public pricing table"
+  - date: 2026-06-09
+    plan: "Call agent add-ons"
+    price: "Knowledge Base +$0.005/min; Batch Call +$0.005/dial; Branded Call +$0.10/outbound call; Advanced Denoising +$0.005/min; PII Removal +$0.01/min"
+    source: "https://www.retellai.com/pricing"
+    source_label: "Source"
+    source_id: retell-ai-best-for
+    note: "Knowledge base subscriptions are also listed at $8/month per knowledge base after the first 10 free knowledge bases"
+  - date: 2026-06-09
+    plan: "Enterprise"
+    price: "Custom"
+    source: "https://www.retellai.com/pricing"
+    source_label: "Source"
+    source_id: retell-ai-best-for
+    note: "Custom pricing, high or no-cap concurrency, dedicated stable server, SSO, custom MSA/DPA/BAA, dedicated portal support, and named account manager"
   - date: 2026-05-10
     plan: "Pay as you go"
     price: "$0.07-$0.31/minute for AI Voice Agents"
@@ -98,7 +126,7 @@ price_history:
 
 Retell AI is a platform for building AI voice agents and AI chat agents. It is aimed at teams that want to automate customer calls, sales qualification, appointment workflows, support routing, and other voice-first business interactions.
 
-The official pricing page positions Retell as "true pay as you go": start at $0, get free credits, and pay only for usage before moving to custom enterprise terms. In May 2026, the important buyer detail is that Retell also exposes component pricing for LLMs, text-to-speech, telephony, speech-to-speech options, and call-agent add-ons.
+The official pricing page positions Retell as "true pay as you go": start at $0, get free credits, and pay only for usage before moving to custom enterprise terms. In June 2026, the important buyer detail is that Retell also exposes component pricing for LLMs, text-to-speech, telephony, speech-to-speech options, active-call concurrency, knowledge-base subscriptions, and call-agent add-ons.
 
 ## System Verdict
 
@@ -117,15 +145,15 @@ The official pricing page positions Retell as "true pay as you go": start at $0,
 | **Free credits** | $10 free credits |
 | **AI voice price** | $0.07-$0.31/minute |
 | **AI chat price** | $0.002+/message |
-| **Concurrent calls** | 20 included on pay-as-you-go |
+| **Concurrent calls** | 20 included on pay-as-you-go; extra active-call concurrency listed at $8/month each |
 | **Developer features** | Webhooks and API access |
 | **Operations features** | Call analytics, transcripts, simulation testing, knowledge bases, batch calls |
-| **Cost add-ons** | Knowledge Base, Batch Call, Branded Call, Advanced Denoising, Safety Guardrails, PII Removal, AI Quality Assurance |
+| **Cost add-ons** | Knowledge Base, Batch Call, Branded Call, Advanced Denoising, Safety Guardrails, PII Removal, AI Quality Assurance, extra active-call concurrency |
 | **Enterprise controls** | Role-based access control, SSO, custom MSA/DPA/BAA, dedicated stable server, no cap on concurrent calls |
 
 ## What It Actually Is
 
-Retell is voice-agent infrastructure, not a generic transcription app. The pricing page lists pre-built agent templates, call analytics, transcripts, simulation testing, webhooks, API access, and 20 included concurrent calls on pay-as-you-go.
+Retell is voice-agent infrastructure, not a generic transcription app. The pricing page lists pre-built agent templates, call analytics, transcripts, simulation testing, webhooks, API access, and 20 included concurrent calls on pay-as-you-go. Additional active-call concurrency is listed at $8 per concurrency per month, so busy outbound campaigns should model concurrency separately from per-minute voice cost.
 
 That combination is important. Good voice agents need more than a nice voice. They need interruption handling, fallback behavior, validation, call transfer logic, latency management, transcripts, testing, and post-call data flows. Retell is built around that operational layer.
 
@@ -160,16 +188,17 @@ Retell's docs also show a knowledge-base layer for website URLs, uploaded docume
 
 ## Pricing
 
-Retell pricing was verified from the official pricing page on 2026-05-13:
+Retell pricing was verified from the official pricing page on 2026-06-09:
 
 | Plan | Price | Practical meaning |
 |---|---:|---|
 | Pay as you go | $0.07-$0.31/minute for AI Voice Agents | Build and test without an annual contract; 20 concurrent calls included |
 | AI Chat Agents | $0.002+/message | Text/chat agent usage, with model-specific per-message pricing |
-| Add-ons | From +$0.005/minute or +$0.005/dial, depending feature | Knowledge Base, Batch Call, Safety Guardrails, Advanced Denoising, PII Removal, and AI Quality Assurance can increase the real cost |
-| Enterprise | Custom | Dedicated support, custom agreements, SSO, role-based access control, dedicated stable server, and no cap on concurrent calls |
+| Extra concurrency | $8/concurrency/month after the included 20 | Active-call capacity is a separate scaling line item |
+| Add-ons | From +$0.005/minute, +$0.005/dial, or fixed monthly line items | Knowledge Base, Batch Call, Branded Call, Safety Guardrails, Advanced Denoising, PII Removal, and AI Quality Assurance can increase the real cost |
+| Enterprise | Custom | Dedicated support, custom agreements, SSO, role-based access control, dedicated stable server, and high/no-cap concurrency |
 
-Retell also lists $10 in free credits and 20 included concurrent calls on pay-as-you-go. The real bill depends on call volume, LLM choice, text-to-speech provider, telephony setup, add-ons, and agent configuration. Retell says AI voice billing continues during silence or hold time because speech-to-text remains active, but the AI voice agent fee stops after a call is transferred and only telephony continues for the transferred portion.
+Retell also lists $10 in free credits and 20 included concurrent calls on pay-as-you-go. The real bill depends on call volume, LLM choice, text-to-speech provider, telephony setup, add-ons, knowledge-base count, active-call capacity, and agent configuration. Retell says failed calls are not billed, and voicemail is billed only while the AI agent is active on the line. Retell also says AI voice billing continues during silence or hold time because speech-to-text remains active, but the AI voice agent fee stops after a call is transferred and only telephony continues for the transferred portion.
 
 ## Against The Alternatives
 
@@ -186,13 +215,14 @@ Retell also lists $10 in free credits and 20 included concurrent calls on pay-as
 - **Cost forecasting is hard.** Minutes, models, TTS, STT, telephony, add-ons, silence time, transfers, and retries all affect real cost.
 - **Voice agents need narrow workflow design.** Broad prompts can fail in live calls.
 - **Knowledge bases are not magic grounding.** Retell retrieves chunks automatically, but the docs still recommend clear source formatting and prompt constraints when the agent must avoid unsupported answers.
+- **API migrations can break older integrations.** Retell's June 15, 2026 deprecation notice moves legacy list endpoints to newer versioned endpoints and unified pagination; teams with older API clients should migrate before relying on the current dashboard and SDK surface.
 - **Compliance is not automatic.** Healthcare, legal, finance, and HR use cases need careful review of BAA terms, PII removal, recording/transcription opt-outs, and retention settings.
 - **Human fallback still matters.** Agents should transfer or escalate when confidence drops.
 - **Latency and interruption handling can make or break the experience.** Test with real accents, noisy rooms, and impatient callers.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-05-13 against Retell AI primary pricing, documentation, knowledge-base, and batch-call information.
+This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-09 against Retell AI primary pricing, documentation, knowledge-base, batch-call, and API-deprecation information.
 
 ## FAQ
 
@@ -216,6 +246,7 @@ Yes, if the workflow is designed tightly and tested. It includes templates, anal
 - [Retell AI pricing](https://www.retellai.com/pricing): pay-as-you-go prices, free credits, concurrent calls, features, Enterprise controls
 - [Retell AI knowledge base docs](https://docs.retellai.com/build/knowledge-base): URL, document, custom text, retrieval, limits, and best-practice guidance
 - [Retell AI batch-call docs](https://docs.retellai.com/deploy/make-batch-call): CSV upload, dynamic variables, scheduling, status, and concurrency-slot behavior
+- [Retell AI June 15, 2026 deprecation notice](https://docs.retellai.com/deprecation-notice/2026/06-15_legacy_list_endpoints): legacy list endpoint migrations and post-call/post-chat analysis field deprecations
 
 ## Related
 

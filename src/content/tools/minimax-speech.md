@@ -11,8 +11,8 @@ pricing_model: paid
 price_range: "$5-$999/mo subscriptions / $60-$100 per 1M chars PAYG"
 status: active
 launched: 2025-04
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-08
+last_verified: 2026-06-08
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: "https://platform.minimax.io/docs/api-reference/speech-t2a-intro"
     source_label: "MiniMax T2A docs"
     source_id: minimax-speech-t2a
-    verified_at: 2026-05-13
+    verified_at: 2026-06-08
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -39,8 +39,8 @@ facts:
     source: "https://platform.minimax.io/docs/guides/pricing-paygo"
     source_label: "MiniMax pay-as-you-go pricing"
     source_id: minimax-speech-pricing
-    verified_at: 2026-05-13
-    next_review_at: 2026-06-13
+    verified_at: 2026-06-08
+    next_review_at: 2026-07-08
     volatility: high
     confidence: high
   watch_out_for:
@@ -48,13 +48,13 @@ facts:
     source: "https://platform.minimax.io/docs/api-reference/speech-t2a-intro"
     source_label: "MiniMax T2A docs"
     source_id: minimax-speech-t2a
-    verified_at: 2026-05-13
-    next_review_at: 2026-06-13
+    verified_at: 2026-06-08
+    next_review_at: 2026-07-08
     volatility: high
     confidence: high
 tags: [tts, voice-cloning, chinese-ai, multilingual, minimax, speech-2-8, api]
 seo_title: "MiniMax Speech Review: Cheap TTS, Voice Cloning and ElevenLabs Alternative"
-meta_description: "MiniMax Speech is a low-cost TTS and voice-cloning API with current Speech 2.8 HD/Turbo models, 300+ system voices, streaming, long-form async generation, and subscription or pay-as-you-go pricing. Verified May 13, 2026."
+meta_description: "MiniMax Speech is a low-cost TTS and voice-cloning API with current Speech 2.8 HD/Turbo models, 300+ system voices, streaming, long-form async generation, and subscription or pay-as-you-go pricing. Verified June 8, 2026."
 author: "aipedia.wiki Editorial"
 best_for:
   - cost-sensitive production tts workloads
@@ -67,6 +67,15 @@ not_best_for:
   - developers requiring a mature plugin ecosystem
 quick_answer: >-
   MiniMax Speech is the budget ElevenLabs alternative for multilingual TTS and voice cloning. Pick Speech 2.8 Turbo or HD when hosted API economics, voice slots, RPM, and multilingual output matter, especially for apps, IVR, dubbing, agents, or bulk narration. Choose ElevenLabs when the highest creator polish, marketplace breadth, and integrations matter more.
+price_history:
+  - date: 2026-06-08
+    plan: "Audio Subscription / pay-as-you-go"
+    price: "$5-$999/mo subscriptions; $60-$100/M chars PAYG"
+    source: "https://platform.minimax.io/docs/guides/pricing-paygo"
+    source_label: "MiniMax pay-as-you-go pricing"
+    source_id: minimax-speech-pricing
+    verified_at: 2026-06-08
+    note: "June 8 verification pass. Speech 2.8 Turbo and HD remain the current model names in the T2A and voice-cloning docs; PAYG T2A remains $60/M characters for Turbo and $100/M characters for HD; Audio Subscription still runs Starter $5/mo through Business $999/mo."
 decision_brief:
   items:
     - label: Best use
@@ -88,7 +97,7 @@ The current docs list 300+ system voices plus custom cloned voices, streaming ou
 
 ## System Verdict
 
-> **Pick MiniMax Speech if the brief is multilingual TTS at production volume where API economics drive the budget.** As of May 13, 2026 the pay-as-you-go page lists T2A Turbo at $60 per million characters and T2A HD at $100 per million characters, while Audio Subscription plans start at $5/month for 100,000 credits and scale to $999/month for 20,000,000 credits.
+> **Pick MiniMax Speech if the brief is multilingual TTS at production volume where API economics drive the budget.** As of June 8, 2026 the pay-as-you-go page lists T2A Turbo at $60 per million characters and T2A HD at $100 per million characters, while Audio Subscription plans start at $5/month for 100,000 credits and scale to $999/month for 20,000,000 credits.
 >
 > **Skip it for peak-quality audiobook and luxury production work.** ElevenLabs still holds the quality ceiling, the larger curated voice marketplace, and the deeper third-party integration stack. [Cartesia](/tools/cartesia/) owns low-latency conversational use cases with tighter streaming guarantees.
 >
@@ -148,7 +157,7 @@ Speed, pitch, volume, bitrate, sample rate, language boost, subtitle output, voi
 | Scale sub | $249/mo | 3,300,000 credits |
 | Business sub | $999/mo | 20,000,000 credits |
 
-*Prices verified 2026-05-13 via the [MiniMax Audio Subscription docs](https://platform.minimax.io/docs/guides/pricing-speech) and [MiniMax pay-as-you-go pricing](https://platform.minimax.io/docs/guides/pricing-paygo). Do not mix up Audio Subscription, Token Plan, and pay-as-you-go: they are different purchase routes with different limits.*
+*Prices verified 2026-06-08 via the [MiniMax Audio Subscription docs](https://platform.minimax.io/docs/guides/pricing-speech) and [MiniMax pay-as-you-go pricing](https://platform.minimax.io/docs/guides/pricing-paygo). Do not mix up Audio Subscription, Token Plan, and pay-as-you-go: they are different purchase routes with different limits.*
 
 ## Against the alternatives
 
@@ -168,7 +177,7 @@ Speed, pitch, volume, bitrate, sample rate, language boost, subtitle output, voi
 - **Quality ceiling and workflow maturity below ElevenLabs on critical creator work.** MiniMax is strong on API economics, but ElevenLabs remains the safer default for polished creator narration, voice marketplace breadth, and non-developer production workflows.
 - **Voice library is narrower.** 300+ voices against ElevenLabs' thousands. Specific demographic or style gaps can force workarounds.
 - **Voice-clone lifecycle can surprise teams.** Rapid clones are temporary unless used in T2A within 168 hours, and fees are charged when the clone is first synthesized through T2A.
-- **Ecosystem is thinner.** Fewer SDKs, integrations, and community tutorials compared to ElevenLabs or Cartesia as of May 13, 2026.
+- **Ecosystem is thinner.** Fewer SDKs, integrations, and community tutorials compared to ElevenLabs or Cartesia as of June 8, 2026.
 - **Peak-load latency spikes.** Some reviews note occasional processing delays under heavy load. Base latency is competitive.
 - **China-based vendor.** Enterprise compliance teams with US or EU data-residency requirements should use the private deployment option or choose a Western vendor.
 - **Model naming and plan surfaces are easy to confuse.** Speech 2.8, Speech 2.6, and Speech-02 appear across different docs; Audio Subscription, Token Plan, and pay-as-you-go are separate purchase routes.
@@ -176,12 +185,12 @@ Speed, pitch, volume, bitrate, sample rate, language boost, subtitle output, voi
 
 ## Methodology
 
-This page was rechecked by the aipedia.wiki editorial workflow on May 13, 2026 against the [MiniMax T2A API overview](https://platform.minimax.io/docs/api-reference/speech-t2a-intro), [MiniMax T2A HTTP docs](https://platform.minimax.io/docs/api-reference/speech-t2a-http), [MiniMax Voice Cloning docs](https://platform.minimax.io/docs/api-reference/voice-cloning-intro), [MiniMax Audio Subscription pricing](https://platform.minimax.io/docs/guides/pricing-speech), [MiniMax pay-as-you-go pricing](https://platform.minimax.io/docs/guides/pricing-paygo), and MiniMax's March 2026 financial-results release. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average).
+This page was rechecked by the aipedia.wiki editorial workflow on June 8, 2026 against the [MiniMax T2A API overview](https://platform.minimax.io/docs/api-reference/speech-t2a-intro), [MiniMax T2A HTTP docs](https://platform.minimax.io/docs/api-reference/speech-t2a-http), [MiniMax Voice Cloning docs](https://platform.minimax.io/docs/api-reference/voice-cloning-intro), [MiniMax Audio Subscription pricing](https://platform.minimax.io/docs/guides/pricing-speech), [MiniMax pay-as-you-go pricing](https://platform.minimax.io/docs/guides/pricing-paygo), and MiniMax's March 2026 financial-results release. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average).
 
 ## FAQ
 
 **How does MiniMax Speech pricing compare to ElevenLabs?**
-MiniMax is positioned as the cheaper developer API lane. As of May 13, 2026, MiniMax pay-as-you-go lists T2A Turbo at $60 per million characters and HD at $100 per million characters, plus monthly Audio Subscription plans from $5 to $999. ElevenLabs retains a broader voice library, richer integrations, and a higher quality ceiling for premium production.
+MiniMax is positioned as the cheaper developer API lane. As of June 8, 2026, MiniMax pay-as-you-go lists T2A Turbo at $60 per million characters and HD at $100 per million characters, plus monthly Audio Subscription plans from $5 to $999. ElevenLabs retains a broader voice library, richer integrations, and a higher quality ceiling for premium production.
 
 **What is the difference between Speech 2.8 HD and Speech 2.8 Turbo?**
 HD is the fidelity lane for voiceovers, audiobook-style narration, and polished output. Turbo is the speed/value lane for live apps, chatbots, gaming, IVR, and high-volume generation.

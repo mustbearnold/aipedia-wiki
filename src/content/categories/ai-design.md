@@ -5,10 +5,10 @@ title: AI Design & App Building
 description: Current AI design tools and app builders for social creative, product design, design systems, web prototypes, full-stack apps, and Vercel-native UI workflows.
 tool_count: 9
 seo_title: "Best AI Design & App Builder Tools (June 2026)"
-meta_description: "Updated June 7, 2026: compare Canva AI, Figma, Midjourney, Adobe Firefly, Recraft V4, Google Stitch, Framer, Lovable, Base44, Bolt.new, and v0 by buyer fit, pricing, workflow, credits, and production risk, with refreshed Canva AI alternatives routing."
+meta_description: "Updated June 9, 2026: compare Canva AI, Figma, Midjourney, Lovart, Adobe Firefly, Recraft V4, Google Stitch, Framer, Lovable, Rork, Base44, Bolt.new, and v0 by buyer fit, pricing, workflow, credits, and production risk."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-07
-last_verified: 2026-06-07
+last_updated: 2026-06-09
+last_verified: 2026-06-09
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -30,13 +30,19 @@ As of June 7, 2026, start with the job:
 
 **Use [Canva](/tools/canva/) when non-designers need finished creative fast.** Canva AI 2.0 is built across Canva's Visual Suite and supports conversational creation, editable layouts, on-brand generation, AI images, AI video, Magic Write, resizing, background tools, and business controls. It is the safest first stop for marketers, creators, teachers, small businesses, and teams that need to publish polished content without a design department.
 
+**Use [Napkin AI](/tools/napkin-ai/) when the design task starts as text and needs an explanatory visual.** The June 8 pricing check keeps Free at 500 weekly AI credits, Plus at $9/person/month, and Pro at $22/person/month. It is a diagram/flowchart/slide-visual builder, not a full design system or campaign creative suite.
+
 **Use [Figma](/tools/figma/) when design quality, design systems, multiplayer review, and handoff matter.** Figma's June 5 pricing check lists AI add-ons, daily/monthly AI credits by plan, Figma Make, Figma Sites, Dev Mode, MCP support, libraries, variables, governance, and enterprise seats. The June 5 model-selection check confirms Figma Make has multiple selectable non-default models, a default-model caveat, and credit-burn caveats. Pick Figma when the artifact has to survive design critique and developer handoff, not just look plausible in a generator.
 
 **Use [Midjourney](/tools/midjourney/) when the job is visual ideation, art direction, concept imagery, or campaign moodboards.** Midjourney's June 5 official plan check keeps Basic, Standard, Pro, and Mega as subscriptions built around generation capacity and GPU time, with V8.1 documented as the current newer image model. Treat it as an ideation engine, not a product design system or layout production workflow.
 
+**Use [Lovart](/tools/lovart/) when the buyer wants an AI design agent rather than a template editor or raw image model.** The June 8 check keeps Lovart in the brand-exploration, marketing-visual, mockup, moodboard, and targeted-edit lane. Its pricing is credit-based: monthly subscription credits do not roll over, top-up credits do not expire, Relax Generation is plan-limited and queued, and multi-user work should use the Team Plan instead of shared individual accounts.
+
 **Use [Adobe Firefly](/tools/adobe-firefly/) when Adobe-native image, vector, and Creative Cloud production matters.** Firefly plans and Creative Cloud bundles are credit-aware, so the buying question is not just "Can it generate an image?" but whether it fits Photoshop, Illustrator, Express, team review, and commercial creative workflows.
 
 **Use [Lovable](/tools/lovable/) when the buyer wants a full-stack app from a prompt.** Lovable's June 6 public pricing and docs check lists Free with 5 daily credits capped at 30/month, Pro at $25/month with 100 monthly credits plus 5 daily credits up to 150/month, Business from $50/month, Enterprise platform-fee pricing, and temporary included Cloud + AI balances. The refreshed [Lovable vs Bolt.new vs v0](/compare/lovable-vs-bolt-vs-v0/) page keeps Lovable as the default founder MVP lane.
+
+**Use [Rork](/tools/rork/) when the app-builder question is mobile or app-store output, not a generic web app.** The June 9 docs check uses Free, Rork Pro, and Rork Max: Free is a public web-app lane with tiny monthly credits, Pro starts at $20/month for Android Kotlin/Compose plus Expo/React Native and web apps, and Max starts at $200/month for SwiftUI iOS plus Apple-device outputs. Treat it as a mobile/app prototype lane that still needs developer review before production.
 
 **Use [Base44](/tools/base44/) when the buyer wants a Wix-owned AI app builder with an all-in-one app path.** Base44's June 1 pricing check keeps the Free, Starter, Builder, Pro, Elite, and Enterprise ladder intact, but also found a Free integration-credit inconsistency between the plan card and FAQ. Treat credit and integration limits as the first thing to verify before a serious build.
 
@@ -55,10 +61,13 @@ As of June 7, 2026, start with the job:
 | Buyer job | Start with | Why | Watch out |
 |---|---|---|---|
 | Social posts, thumbnails, ads, classroom assets, presentations | [Canva](/tools/canva/) | Fastest path from idea to publishable creative for non-designers | Regional pricing and AI usage limits can vary; verify the plan in Canva before upgrading |
+| Text-to-diagram visual explanation | [Napkin AI](/tools/napkin-ai/) | Turns written ideas into flowcharts, diagrams, and slide-ready visuals | Not a design system, brand suite, or data-visualization engine |
 | Product design, UX review, design systems, developer handoff | [Figma](/tools/figma/) | Best collaborative design surface, with AI credits, Dev Mode, MCP, libraries, and governance | AI output still needs design judgment and component discipline |
 | Visual ideation, campaign moodboards, concept art | [Midjourney](/tools/midjourney/) | Strong image-style exploration before final production | Not a design system, layout app, or final client-asset workflow without review |
+| AI design-agent exploration, campaign mockups, brand directions | [Lovart](/tools/lovart/) | Turns briefs into design directions, visuals, mockups, and targeted edits before human polish | Credit usage varies by task complexity; team use should use the Team Plan |
 | Adobe-first image, vector, and creative production | [Adobe Firefly](/tools/adobe-firefly/) | Fits Creative Cloud and credit-based Adobe generation workflows | Compare Firefly plans, Creative Cloud plans, and current credit rules before buying |
 | Full-stack app from prompt | [Lovable](/tools/lovable/) | Strongest single-product path for app, backend, auth, database, and live URL assumptions | Credits and generated backend choices need review before production |
+| Mobile or app-store prototype | [Rork](/tools/rork/) | Pro covers Android, Expo/React Native, and web; Max covers SwiftUI iOS and Apple-device paths | Free projects are public, Max is expensive, and generated mobile architecture still needs review |
 | All-in-one AI app builder under Wix | [Base44](/tools/base44/) | Natural-language app creation with hosted app, data, auth, integrations, and a Free-to-Enterprise plan ladder | Integration credits and platform limits need direct plan-screen verification |
 | Vercel-native app or UI workflow | [v0](/tools/v0/) | Strong web artifact loop: prompt, files, Figma, design mode, GitHub, deploys, PRs | Credit/token usage and generated code quality can surprise teams |
 | Browser-based app prototyping | [Bolt.new](/tools/bolt/) | Runs app-building work in the browser with generous free token limits | Larger projects use more tokens because file-system context is part of prompts |
@@ -73,11 +82,17 @@ As of June 7, 2026, start with the job:
 
 **Best image ideation tool: Midjourney.** Use Midjourney when a designer or creative team needs many visual directions quickly. Do not mistake it for a design system, a brand-governed production surface, or a layout handoff tool.
 
+**Best text-to-diagram bridge: Napkin AI.** Use it when the creative problem is turning a written explanation, process, or framework into a clear visual before final polish in Canva, PowerPoint, Figma, or a deck tool.
+
+**Best AI design-agent ideation path: Lovart.** Use Lovart when the buyer wants to move from a vague creative brief into brand directions, campaign visuals, product mockups, and moodboards. Keep a human designer in the loop for accessibility, licensing, typography, final files, and brand-system fit.
+
 **Best Adobe workflow AI: Adobe Firefly.** Firefly is strongest when a team already works in Adobe's creative stack and wants generative work to connect with Photoshop, Illustrator, Express, Firefly web, and plan-based credits.
 
 **Best logo and brand-asset concepting path: Ideogram plus Recraft.** The June 6 [logo-design guide](/guides/best-ai-for-logo-design/) now separates the jobs cleanly: use Ideogram when readable words, initials, badges, or labels matter; use Recraft when the buyer needs vector-style marks, icons, packaging, or SVG-style asset families; use Midjourney for visual taste; use Firefly for Adobe-native production. Generated marks still need vector redraw, small-size testing, and trademark review.
 
 **Best app builder for most founders: Lovable.** Choose Lovable when "AI design" really means "I want a working SaaS, internal tool, portal, marketplace, or app." The Pro and Business tiers are priced around credits and shared users, so it can be easier for a small team to try than a seat-heavy product design suite.
+
+**Best mobile app-builder path: Rork.** Choose Rork when the buyer specifically wants Android, Expo/React Native, SwiftUI iOS, Apple Watch, Vision Pro, native games, widgets, app-store publishing, or GitHub handoff. Do not treat it as the default for ordinary web dashboards.
 
 **Best all-in-one app builder to cross-shop with Lovable and Bolt: Base44.** Choose Base44 when the buyer wants app generation, hosting, data, auth, integrations, and business-app scaffolding in one Wix-owned surface. The June 1 check makes the pricing ladder usable, but the Free-plan credit mismatch means teams should confirm the account screen before committing.
 
@@ -95,6 +110,8 @@ Figma is seat-based and AI-credit aware. Its public pricing page lists Starter f
 
 Lovable is credit-based and team-friendly. Its pricing page lists Pro at $25/month and Business at $50/month, shared across unlimited users, with monthly credits and usage-based cloud plus AI.
 
+Rork is credit-based and platform-tiered. The June 9 docs list Free at $0 for public web apps, Rork Pro from $20/month for 100 credits or $100/month for 500 credits, and Rork Max from $200/month for 1,000 credits with larger Max packs up to 10,000 credits. The plan decision is platform output first, credit volume second.
+
 Base44 is app-credit and integration-credit aware. Its public pricing page lists Free, Starter, Builder, Pro, Elite, and Enterprise, but the June 1 check found inconsistent Free integration-credit language between the plan card and FAQ. Verify current in-product limits before choosing it for a client or production app.
 
 Bolt.new is token-based. Its public pricing page lists Free, Pro at $25/month, Teams at $30/month per member, and Enterprise custom, with token limits and rollover rules.
@@ -107,6 +124,8 @@ Midjourney pricing is subscription and generation-capacity based. Its official p
 
 Adobe Firefly pricing is plan and credit based. Its official plans page separates free access, Firefly plans, and Creative Cloud Pro paths, so verify the current credit rules and bundle before buying for a team.
 
+Lovart pricing is credit-based. The June 8 check confirms credits depend on task complexity, model/tool choice, quality, style, detail, and advanced settings; subscription credits reset and do not roll over, while top-up credits do not expire. It is a useful ideation lane, but teams should test their normal campaign briefs before annual billing.
+
 Google Stitch's official March and May 2026 updates are product-focused, not durable pricing tables. Treat its access and quotas as volatile until Google publishes stable commercial terms.
 
 Framer is site-plan based. The June 2 public pricing check lists Free, Basic, Pro, Scale, and Enterprise, with Basic at $10/month annual, Pro at $30/month annual, and Scale at $100/month annual. Verify page, CMS collection, CMS item, bandwidth, and collaboration needs before moving a client site.
@@ -114,6 +133,8 @@ Framer is site-plan based. The June 2 public pricing check lists Free, Basic, Pr
 ## What Hurts Trust
 
 Do not call every app builder a design tool. Lovable, Bolt, and v0 can generate interfaces, but the purchase question is app-building scope, code ownership, deployment, backend, and review workflow.
+
+Do not publish retired Rork plan language. Current buyer guidance should use Free, Rork Pro, and Rork Max with the platform split made explicit.
 
 Do not call every design tool an app builder. Canva and Figma can produce AI-assisted design artifacts, but that is different from owning the app runtime, database, authentication, and production deploy path.
 
@@ -151,6 +172,7 @@ Do not make a wide table the only mobile experience. Mobile buyers need top pick
 - [Canva AI](https://www.canva.com/canva-ai/) (verified 2026-06-07)
 - [Canva pricing](https://www.canva.com/pricing/) (verified 2026-06-02)
 - [Canva AI social media post generator](https://www.canva.com/features/ai-social-media-post-generator/) (verified 2026-06-06)
+- [Napkin AI pricing](https://www.napkin.ai/pricing/) (verified 2026-06-08)
 - [AdCreative.ai social media ads](https://www.adcreative.ai/social-media-ads) (verified 2026-06-06)
 - [Jasper pricing](https://www.jasper.ai/pricing) (verified 2026-06-06)
 - [Jasper Brand Voice help](https://help.jasper.ai/hc/en-us/articles/27419540851995-Brand-Voice) (verified 2026-06-06)
@@ -163,6 +185,8 @@ Do not make a wide table the only mobile experience. Mobile buyers need top pick
 - [Create and edit a Figma Make file](https://help.figma.com/hc/en-us/articles/31304485164695-Create-and-edit-a-Figma-Make-file) (verified 2026-06-05)
 - [Midjourney plans](https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans) (verified 2026-06-07)
 - [Midjourney version docs](https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version) (verified 2026-06-05)
+- [Lovart website](https://www.lovart.ai) (verified 2026-06-08)
+- [Lovart pricing](https://www.lovart.ai/pricing) (verified 2026-06-08)
 - [Adobe Firefly plans](https://www.adobe.com/products/firefly/plans) (verified 2026-06-07)
 - [Google Stitch official site](https://stitch.withgoogle.com/) (verified 2026-06-05)
 - [Google Stitch announcement](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/) (verified 2026-06-05)
@@ -171,6 +195,8 @@ Do not make a wide table the only mobile experience. Mobile buyers need top pick
 - [Lovable pricing](https://lovable.dev/pricing) (verified 2026-06-06)
 - [Lovable plans and credits](https://docs.lovable.dev/introduction/plans-and-credits) (verified 2026-06-06)
 - [Lovable Cloud docs](https://docs.lovable.dev/integrations/cloud) (verified 2026-06-06)
+- [Rork subscription docs](https://docs.rork.com/introduction/subscriptions) (verified 2026-06-09)
+- [Rork technical FAQ](https://docs.rork.com/faq/technical) (verified 2026-06-09)
 - [Base44 pricing](https://base44.com/pricing) (verified 2026-06-01)
 - [Bolt.new pricing](https://bolt.new/pricing) (verified 2026-06-06)
 - [v0 pricing](https://v0.app/pricing) (verified 2026-06-06)

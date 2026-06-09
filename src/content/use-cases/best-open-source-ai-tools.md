@@ -38,8 +38,8 @@ guide_picks:
       - label: "Open WebUI GitHub"
         url: "https://github.com/open-webui/open-webui"
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-06
-last_verified: 2026-06-06
+last_updated: 2026-06-08
+last_verified: 2026-06-08
 update_frequency: monthly
 ---
 
@@ -49,7 +49,7 @@ Open source AI is not one purchase. Buyers are usually choosing between a local 
 
 For most people, start with **[Ollama](/tools/ollama/)** or **[LM Studio](/tools/lm-studio/)**. Move to **[Open WebUI](/tools/open-webui/)** only when you are ready to run AI like infrastructure.
 
-Verified June 6, 2026 against current official Ollama, LM Studio, Open WebUI, Meta Llama, Mistral, DeepSeek, Black Forest Labs, Stability, Hugging Face, and OpenAI Whisper sources.
+Verified June 8, 2026 against current official Ollama, LM Studio, Open WebUI, Meta Llama, Mistral, DeepSeek, Black Forest Labs, Stability, Hugging Face, hosted Llama provider pricing, and OpenAI Whisper sources.
 
 ## Quick Verdict
 
@@ -61,7 +61,7 @@ Watch out: a local runtime is not automatically private if you expose endpoints,
 
 ### Best desktop local AI app: LM Studio
 
-Pick [LM Studio](/tools/lm-studio/) if you want a desktop app for browsing models, chatting locally, and running an OpenAI-compatible local server without starting in the terminal.
+Pick [LM Studio](/tools/lm-studio/) if you want a desktop app for browsing models, chatting locally, and exposing local models through a v1 REST API, OpenAI-compatible endpoints, Anthropic-compatible Messages, MCP support, SDKs, and CLI/headless server controls without starting in the terminal.
 
 Watch out: model quality depends on model choice, quantization, RAM/VRAM, context length, and local hardware. A local app does not make a small model frontier-quality.
 
@@ -73,7 +73,7 @@ Watch out: self-hosted AI interfaces need authentication, patching, backups, sec
 
 ### Best model-family decision: Llama or Mistral
 
-Pick [Llama](/tools/llama/) when ecosystem, community support, and Meta-backed open-weight distribution matter. Pick [Mistral AI](/tools/mistral-ai/) when permissive open-weight strategy, European AI infrastructure, APIs, and enterprise deployment options matter.
+Pick [Llama](/tools/llama/) when ecosystem, community support, and Meta-backed open-weight distribution matter. The June 8 check keeps Llama in the "open weights, provider-specific economics" bucket: Scout is the easier public long-context lane on Groq, while Maverick pricing and availability vary by hosted provider. Pick [Mistral AI](/tools/mistral-ai/) when permissive open-weight strategy, European AI infrastructure, APIs, and enterprise deployment options matter.
 
 Do not say "open source" when you mean "open weights." Open-source software, open-weight models, research-only releases, non-commercial licenses, and hosted APIs are different things.
 
@@ -93,7 +93,7 @@ Watch out: local transcription still needs human review for names, quotes, times
 
 ### Local chat
 
-Start with Ollama if you are comfortable with a local runtime and command-line setup. Start with LM Studio if you want a desktop app and model browser.
+Start with Ollama if you are comfortable with a local runtime and command-line setup. Start with LM Studio if you want a desktop app, model browser, local API server, and MCP-capable developer path.
 
 Do not begin by self-hosting a team web app. First prove that local models actually solve your work.
 
@@ -159,11 +159,16 @@ LM Studio for local desktop testing, then Ollama if you want a runtime. Avoid se
 
 - [Ollama](https://ollama.com/) (verified 2026-06-06)
 - [Ollama GitHub](https://github.com/ollama/ollama) (verified 2026-06-06)
-- [LM Studio](https://lmstudio.ai/) (verified 2026-06-06)
-- [LM Studio docs](https://lmstudio.ai/docs) (verified 2026-06-06)
+- [LM Studio](https://lmstudio.ai/) (verified 2026-06-08)
+- [LM Studio API docs](https://lmstudio.ai/docs/api) (verified 2026-06-08)
+- [LM Studio REST API docs](https://lmstudio.ai/docs/developer/rest) (verified 2026-06-08)
+- [LM Studio free-for-work announcement](https://lmstudio.ai/blog/free-for-work) (verified 2026-06-08)
 - [Open WebUI](https://openwebui.com/) (verified 2026-06-06)
 - [Open WebUI GitHub](https://github.com/open-webui/open-webui) (verified 2026-06-06)
-- [Meta Llama on Hugging Face](https://huggingface.co/meta-llama) (verified 2026-06-06)
+- [Meta Llama](https://ai.meta.com/llama/) (verified 2026-06-08)
+- [Llama 4 license](https://www.llama.com/llama4/license/) (verified 2026-06-08)
+- [Groq Llama 4 Scout model card](https://console.groq.com/docs/model/llama-4-scout-17b-16e-instruct) (verified 2026-06-08)
+- [Together AI pricing](https://www.together.ai/pricing) (verified 2026-06-08)
 - [Mistral AI pricing](https://mistral.ai/pricing) (verified 2026-06-06)
 - [DeepSeek Transparency Center](https://www.deepseek.com/en/transparency/) (verified 2026-06-06)
 - [Black Forest Labs FLUX.2 pricing](https://docs.bfl.ai/quick_start/pricing) (verified 2026-06-06)

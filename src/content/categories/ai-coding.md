@@ -5,10 +5,10 @@ title: AI Coding Assistants
 description: Current AI coding assistants, AI-native IDEs, terminal coding agents, PR agents, and app builders for developers, founders, teams, and non-developers.
 tool_count: 30
 seo_title: "Best AI Coding Tools & Copilot Alternatives (June 2026)"
-meta_description: "Updated June 7, 2026: compare Cursor, Claude Code, GitHub Copilot, Continue, Devin, Val Town, Windsurf/Devin Desktop, Codex, v0, Goose, GLM, Glean, Replit Agent, Aider, Cline, CodeRabbit, Cody, Amazon Q Developer, and Augment by workflow, pricing, autonomy, app-building, and team fit, including Cursor alternatives and Copilot AI Credits."
+meta_description: "Updated June 9, 2026: compare Cursor, Claude Code, GitHub Copilot, Continue, Devin, Val Town, Windsurf/Devin Desktop, Codex, v0, Rork, Goose, GLM, MiniMax M3, Llama, Modal, Glean, Replit Agent, Aider, Cline, CodeRabbit, Cody, Amazon Q Developer, and Augment by workflow, pricing, autonomy, app-building, and team fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-07
-last_verified: 2026-06-07
+last_updated: 2026-06-09
+last_verified: 2026-06-09
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -48,9 +48,17 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 
 **Use [v0 by Vercel](/tools/v0/) when the coding deliverable is a Vercel-native web artifact.** The June 4 [ChatGPT vs v0](/compare/chatgpt-vs-v0/) refresh keeps the boundary clear: ChatGPT is broader for requirements, architecture, debugging, and code review, while v0 is better for generating previewable React/Next/Tailwind interfaces, deploys, GitHub sync, and PR workflows.
 
+**Use [Rork](/tools/rork/) when the coding deliverable is a mobile/app-store prototype instead of a web dashboard.** The June 9 docs check keeps Free as a public web-app test lane, Rork Pro from $20/month for Android Kotlin/Compose plus Expo/React Native and web apps, and Rork Max from $200/month for SwiftUI iOS, Apple Watch, Vision Pro, native games, and widgets. It is an app-builder handoff lane, not a replacement for code review, mobile architecture, or production QA.
+
 **Use [Goose](/tools/goose/) when the buyer wants an open-source local/BYOK agent that crosses coding and general automation.** The active repository now resolves to `aaif-goose/goose`, Goose itself is Apache-2.0/free, and the real cost is the configured LLM plus local permission/security controls.
 
 **Use [GLM](/tools/glm/) when the coding question is model backend evaluation.** Z.AI's GLM-5.1 docs list 200K context, 128K maximum output, OpenAI-compatible API examples, MCP/tool support, and MIT Hugging Face weights, with public API pricing at $1.40/M input and $4.40/M output.
+
+**Use [MiniMax](/tools/minimax/) when the coding question is MiniMax-M3 backend evaluation.** The June 8 check moves MiniMax from M2.7-first to M3-first: standard M3 pay-as-you-go is listed at $0.30/M input and $1.20/M output for <=512K input, while >512K input and Priority tiers still need account-level access confirmation.
+
+**Use [Llama](/tools/llama/) when the coding question is open-weight model control rather than an IDE.** The June 8 check keeps Maverick as the flagship open-weight model to evaluate, Scout as the long-context/Groq fast-inference lane, and Together/Groq pricing as provider-specific. It belongs here for self-hosted coding backends, local agent experiments, and model-diversification strategy, not as a direct substitute for Cursor, Copilot, Claude Code, or Codex.
+
+**Use [Modal](/tools/modal/) when the coding deliverable is Python-backed infrastructure, not code suggestions.** Modal fits serverless Python functions, GPU inference jobs, web endpoints, sandboxes, queues, and scheduled jobs. It is a runtime/deployment lane beside Val Town and Replit-style builders, not an IDE assistant.
 
 **Use [Glean](/tools/glean/) when coding agents need permission-aware company knowledge.** Glean's developer platform now exposes MCP and setup paths for Claude Code, Codex, Goose, Cursor, Gemini CLI, VS Code, Windsurf, JetBrains, and other developer surfaces, so it belongs in the enterprise-codebase-context lane rather than the autocomplete lane.
 
@@ -67,13 +75,16 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 | Lowest-cost multi-model IDE experiment | [Trae](/tools/trae/) | Lite at $3 and Pro at $10 undercut most AI IDE plans while preserving a VS Code-like workflow | ByteDance-adjacent telemetry/procurement risk and token allowances need review before serious repo work |
 | OpenAI-native coding agent | [Codex](/tools/codex/) | Good for local repo tasks, PR-style work, and OpenAI-aligned teams | Not a pure inline autocomplete replacement |
 | Vercel-native app builder | [v0](/tools/v0/) | Turns prompts, screenshots, Figma context, and code context into previewable web apps and PR-ready changes | Credit/token usage, accessibility, security, and generated code quality need review |
+| Mobile/app-store app builder | [Rork](/tools/rork/) | Pro covers Android, Expo/React Native, and web; Max covers SwiftUI iOS and Apple-device outputs | Free projects are public, Max starts high, and real apps still need developer handoff |
 | Open-source local/BYOK agent | [Goose](/tools/goose/) | Desktop, CLI, and API agent with model choice, MCP extensions, and Apache-2.0 code | Needs provider-cost controls, secrets hygiene, and local-permission review |
 | Source-controlled AI PR checks | [Continue](/tools/continue/) | Best fit when teams want repo-owned checks, private agents, and explicit standards-as-code review | Weak prompts create noisy checks; humans still own merge decisions |
 | Coding model backend evaluation | [GLM](/tools/glm/) | GLM-5.1 open weights, OpenAI-compatible API examples, MCP/tool support, and long context | Verify endpoint behavior, region, compliance, and output-heavy costs |
+| MiniMax M3 backend evaluation | [MiniMax](/tools/minimax/) | M3 coding/agentic positioning, native multimodality, low standard token price, and MiniMax Code path | Verify 512K vs 1M context access, Priority tier access, data residency, and independent benchmark fit |
 | Enterprise code/context search | [Glean](/tools/glean/) | Permission-aware work search and MCP/IDE integrations for developer tools | Sales-led pricing and connector/security review are required |
 | Browser app building for non-devs | [Replit Agent](/tools/replit-agent/) | Useful when the buyer wants build/run/deploy in a browser | Generated apps still need review, security, and maintenance |
 | Async ticket delegation | [Devin](/tools/devin/) | Sandbox sessions, playback, and PR output fit well-scoped backlog work | Quotas, on-demand credits, and full-seat costs need modeling before team rollout |
 | Tiny serverless TypeScript jobs | [Val Town](/tools/val-town/) | Fastest path for vals, cron jobs, webhooks, and small internal utilities | Not a full coding assistant or general app platform |
+| Serverless Python/GPU jobs | [Modal](/tools/modal/) | Python functions, queues, endpoints, sandboxes, scheduled jobs, and per-second GPU billing | Not a coding assistant; production cost depends on utilization, regions, and non-preemptible needs |
 | Open-source CLI/BYOK coding | [Aider](/tools/aider/) | Strong for developers who want local control and model choice | Requires comfort with terminal workflows and API cost management |
 
 ## Our Picks
@@ -127,6 +138,8 @@ Do not rank coding tools by monthly price alone. Copilot AI Credits, Cursor and 
 
 Do not call every coding model an IDE. Cursor, Copilot, Claude Code, Codex, Gemini, Replit Agent, Lovable, Bolt, and v0 answer different workflow questions.
 
+Do not carry forward retired Rork plan names. Current coding-app-builder copy should separate Free, Rork Pro, and Rork Max by platform output and credit budget.
+
 Do not publish stale model-version claims. Coding tools route models and change access frequently; cite current vendor pages and avoid fake precision.
 
 ## Sources
@@ -172,6 +185,7 @@ Do not publish stale model-version claims. Coding tools route models and change 
 - [Base44 pricing](https://base44.com/pricing) (verified 2026-06-01)
 - [Bolt.new pricing](https://bolt.new/pricing) (verified 2026-06-01)
 - [Browserbase pricing](https://www.browserbase.com/pricing) (verified 2026-06-01)
+- [Modal pricing](https://modal.com/pricing) (verified 2026-06-08)
 - [Supermaven pricing](https://supermaven.com/pricing) (verified 2026-06-01)
 - [Tabnine pricing](https://www.tabnine.com/pricing) (verified 2026-06-05)
 - [Val Town pricing](https://www.val.town/pricing) (verified 2026-06-05)
@@ -191,6 +205,14 @@ Do not publish stale model-version claims. Coding tools route models and change 
 - [Z.AI GLM-5.1 docs](https://docs.z.ai/guides/llm/glm-5.1) (verified 2026-06-02)
 - [Z.AI pricing](https://docs.z.ai/guides/overview/pricing) (verified 2026-06-02)
 - [GLM-5.1 on Hugging Face](https://huggingface.co/zai-org/GLM-5.1) (verified 2026-06-02)
+- [MiniMax M3 model page](https://www.minimax.io/models/text/m3) (verified 2026-06-08)
+- [MiniMax pay-as-you-go pricing](https://platform.minimax.io/docs/guides/pricing-paygo) (verified 2026-06-08)
+- [Llama official site](https://ai.meta.com/llama/) (verified 2026-06-08)
+- [Llama 4 Community License](https://www.llama.com/llama4/license/) (verified 2026-06-08)
+- [Together AI pricing](https://www.together.ai/pricing) (verified 2026-06-08)
+- [Groq Llama 4 Scout model card](https://console.groq.com/docs/model/llama-4-scout-17b-16e-instruct) (verified 2026-06-08)
 - [Glean developer platform](https://developers.glean.com/) (verified 2026-06-02)
 - [v0 pricing](https://v0.app/pricing) (verified 2026-06-05)
 - [v0 documentation](https://v0.app/docs) (verified 2026-06-05)
+- [Rork subscription docs](https://docs.rork.com/introduction/subscriptions) (verified 2026-06-09)
+- [Rork technical FAQ](https://docs.rork.com/faq/technical) (verified 2026-06-09)

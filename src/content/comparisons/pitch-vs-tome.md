@@ -5,11 +5,11 @@ title: "Pitch vs Tome"
 tools: [pitch, tome]
 category: ai-presentation
 winner: pitch
-seo_title: "Pitch vs Tome: Tome Is Dead, Use Pitch for Team Decks (May 2026)"
-meta_description: "Pitch vs Tome for presentations. Tome Slides sunset April 30, 2025; Pitch is the active pick for collaborative decks, guests, analytics, and pitch rooms. Verified May 2026."
+seo_title: "Pitch vs Tome: Tome Is Dead, Use Pitch for Team Decks (June 2026)"
+meta_description: "Pitch vs Tome for presentations. Tome Slides sunset April 30, 2025; Pitch is the active pick for collaborative decks, guests, analytics, and pitch rooms. Verified June 2026."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-08
+last_verified: 2026-06-08
 update_frequency: quarterly
 canonical_fact_table: true
 ---
@@ -18,7 +18,7 @@ canonical_fact_table: true
 
 [Pitch](/tools/pitch/) is the clear current winner over [Tome](/tools/tome/) for team presentation workflows. Tome Slides was sunset on April 30, 2025 according to Tome's official Help Center, and VentureBeat later covered the founding team's pivot to Lightfield, an AI-native CRM. Pitch remains an active presentation workspace with AI deck generation, collaboration, comments, guests, advanced links, pitch rooms, analytics, custom domains, PowerPoint exports, and version history.
 
-The practical buyer answer: **use Pitch when you wanted Tome for shareable sales narratives, collaboration, or audience engagement. Do not shortlist Tome for new presentation work.** This comparison was re-verified on **May 8, 2026** against current Pitch, Tome, VentureBeat, and Lightfield sources.
+The practical buyer answer: **use Pitch when you wanted Tome for shareable sales narratives, collaboration, or audience engagement. Do not shortlist Tome for new presentation work.** This comparison was re-verified on **June 8, 2026** against current Pitch, Tome, VentureBeat, and Lightfield sources.
 
 ## Quick Verdict
 
@@ -55,7 +55,7 @@ But Pitch is the safer option for the workflows Tome was trying to move into bef
 
 ## Pricing Reality
 
-Pitch has current pricing. On May 8, 2026, AiPedia verified Pitch's official pricing and AI presentation pages. The pricing page describes a Free workspace, Plus for one-person workspaces, Team for up to 25 members, Business for up to 200 members, and Enterprise for custom requirements. Pricing, credits, and limits should still be checked live before purchase.
+Pitch has current pricing. On June 8, 2026, AiPedia verified Pitch's official pricing, AI presentation, and AI credits pages. The pricing page describes Free, Plus, Team/Pro-style, Business, and Enterprise buying paths, while the AI credits help page lists Free with 100 lifetime credits, Plus with 250 credits per month or 3,000 per year, Pro with 500 recurring credits per seat per month, Business with 750 recurring credits per seat per month, and extra credits at $0.004 per credit. Pricing, credits, and limits should still be checked live before purchase.
 
 Tome Slides has no current presentation pricing. Any old Tome Free/Pro/Enterprise claims are historical and should not be used for procurement.
 
@@ -116,6 +116,7 @@ Choose Pitch for collaboration and sales sharing. Choose Gamma for narrative AI 
 - Tome Help Center: [Tome Slides is Sunsetting on April 30th, 2025](https://tome.app/help/en/articles/10744234-tome-slides-is-sunsetting-on-april-30th-2025)
 - VentureBeat: [Tome's founders ditch viral presentation app to build AI-native CRM Lightfield](https://venturebeat.com/technology/tomes-founders-ditch-viral-presentation-app-with-20m-users-to-build-ai)
 - Lightfield homepage: [https://lightfield.app/](https://lightfield.app/)
-- Pitch AI presentation maker: [https://pitch.com/use-cases/ai-presentation-maker](https://pitch.com/use-cases/ai-presentation-maker)
-- Pitch pricing: [https://pitch.com/pricing/us](https://pitch.com/pricing/us)
+- Pitch AI presentation maker: [https://pitch.com/use-cases/ai-presentation-maker](https://pitch.com/use-cases/ai-presentation-maker) (verified 2026-06-08)
+- Pitch pricing: [https://pitch.com/pricing/us](https://pitch.com/pricing/us) (verified 2026-06-08)
+- Pitch AI credits help: [https://help.pitch.com/en/articles/12755590-guide-to-ai-credits](https://help.pitch.com/en/articles/12755590-guide-to-ai-credits) (verified 2026-06-08)
 - Related category: [AI Presentation Tools](/categories/ai-presentation/)

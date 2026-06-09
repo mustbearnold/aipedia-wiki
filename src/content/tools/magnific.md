@@ -12,11 +12,11 @@ pricing_model: freemium
 price_range: "Free; paid platform plans vary by region and billing cycle; API usage-based"
 status: active
 launched: 2023-09
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-08
+last_verified: 2026-06-08
 update_frequency: monthly
-seo_title: "Magnific AI: Features, Pricing & Review (May 2026)"
-meta_description: "Magnific is the AI creative platform that absorbed Freepik in the April 28, 2026 rebrand, with the original creative upscaler, stock assets, image/video/audio tools, and usage-based API access. Best for premium creative production, not faithful restoration."
+seo_title: "Magnific AI Review: Freepik Rebrand, Pricing, API & Alternatives (June 2026)"
+meta_description: "Magnific is the AI creative platform formerly known as Freepik, with the original creative upscaler, stock assets, image/video/audio tools, and usage-based API access. Compare pricing caveats, use cases, and alternatives."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: true
@@ -36,34 +36,34 @@ facts:
     source: "https://www.magnific.com"
     source_label: "Magnific homepage"
     source_id: magnific-official
-    verified_at: 2026-05-13
+    verified_at: 2026-06-08
     volatility: medium
     confidence: medium
   pricing_anchor:
-    value: "Platform pricing routes through magnific.com/pricing with Free, Essential, Premium, Premium+, Pro, Business, and Enterprise-style plan families. Localized by region, currency, and billing cycle. API pricing is usage-based by output image area."
-    source: "https://www.magnific.com/pricing"
-    source_label: "Magnific pricing"
-    source_id: magnific-pricing
-    verified_at: 2026-05-13
-    next_review_at: 2026-08-13
+    value: "Platform checkout pricing should be verified in the live magnific.com pricing/account surface. API pricing is credit-based and pay-as-you-go; Creative Upscaler API cost is based on final output image area and upscale factor."
+    source: "https://docs.magnific.com/pricing"
+    source_label: "Magnific API pricing"
+    source_id: magnific-api-pricing
+    verified_at: 2026-06-08
+    next_review_at: 2026-07-08
     volatility: high
-    confidence: medium
+    confidence: high
   brand_state:
-    value: "freepik.com now resolves into the Magnific brand. The original magnific.ai upscaler subscriptions continue through their term per Magnific's relaunch FAQ. Treat 'Magnific' and 'the platform formerly known as Freepik' as the same product surface."
-    source: "https://www.magnific.com"
-    source_label: "Magnific homepage"
-    source_id: magnific-official
-    verified_at: 2026-05-13
-    next_review_at: 2026-08-13
+    value: "Freepik acquired Magnific in 2024 and current public/business surfaces use Magnific as the AI creative-platform identity. Treat old Freepik AI and Magnific references as overlapping buyer surfaces, but verify the exact checkout/account destination before procurement."
+    source: "https://www.freepik.com/blog/magnific/"
+    source_label: "Freepik and Magnific announcement"
+    source_id: freepik-magnific-announcement
+    verified_at: 2026-06-08
+    next_review_at: 2026-07-08
     volatility: medium
     confidence: high
   watch_out_for:
-    value: "Verify current platform pricing, credit budgets, API output-area costs, and license terms before procurement. Creative upscaler can hallucinate detail and is not safe for faithful restoration or compliance-sensitive imagery."
-    source: "https://www.magnific.com/pricing"
-    source_label: "Magnific pricing"
-    source_id: magnific-pricing
-    verified_at: 2026-05-13
-    next_review_at: 2026-08-13
+    value: "Verify current platform pricing, web-app allowances, API credit budgets, output-area costs, and license terms before procurement. Creative upscaler can hallucinate detail and is not safe for faithful restoration or compliance-sensitive imagery."
+    source: "https://docs.magnific.com/api-reference/image-upscaler-creative/image-upscaler"
+    source_label: "Magnific Upscaler Creative API"
+    source_id: magnific-upscaler-api
+    verified_at: 2026-06-08
+    next_review_at: 2026-07-08
     volatility: high
     confidence: medium
 tags: [image-upscaling, ai-image, ai-design, ai-creative-suite, image-enhancement, creative-upscaler, magnific, freepik, magnific-api]
@@ -115,13 +115,20 @@ price_history:
     source_label: "Magnific pricing"
     source_id: magnific-pricing
     note: "Public pricing surface remained Magnific (formerly Freepik) and unchanged in shape. Plan-family lineup verified against magnific.com after the April 28 rebrand."
+  - date: 2026-06-08
+    plan: "Magnific API"
+    price: "Credit-based; Creative Upscaler examples from €0.10 to €0.50 for common 2x-8x sample outputs"
+    source: "https://docs.magnific.com/api-reference/image-upscaler-creative/image-upscaler"
+    source_label: "Magnific Upscaler Creative API"
+    source_id: magnific-upscaler-api
+    note: "API usage always consumes credits even where web-app plans include Unlimited allowances. Creative Upscaler cost depends on final output image area and upscale factor."
 ---
 
 # Magnific AI
 
-Magnific is no longer just the viral creative upscaler from 2023. As of the April 28, 2026 relaunch, **Freepik is now Magnific**: a broader AI creative platform for image, video, audio, stock assets, collaboration, and production workflows.
+Magnific is no longer just the viral creative upscaler from 2023. In the current buyer market, **Magnific and the former Freepik AI platform overlap**: the brand now points buyers toward a broader AI creative platform for image, video, audio, stock assets, collaboration, and production workflows.
 
-That rebrand matters because older Magnific reviews are now half-wrong. The original **Magnific creative upscaler** still matters, and the standalone `magnific.ai` upscaler flow continues for existing subscribers, but the main public buyer journey now points to [magnific.com](https://www.magnific.com) and [magnific.com/pricing](https://www.magnific.com/pricing).
+That brand transition matters because older Magnific reviews are now half-wrong. The original **Magnific creative upscaler** still matters, but a new buyer should verify the exact [magnific.com](https://www.magnific.com) pricing/account surface before assuming legacy Freepik or standalone upscaler terms still apply.
 
 This review focuses on the buyer decision: should you use Magnific for creative upscaling and AI production, or should you pick a narrower upscaler, image generator, or local tool?
 
@@ -129,7 +136,8 @@ This review focuses on the buyer decision: should you use Magnific for creative 
 
 - **April 28, 2026:** Freepik rebranded as Magnific. The broader creative platform (stock assets, AI image, video, audio, collaboration, editing) now lives under the Magnific name; freepik.com routes into the Magnific surface. The dedicated [Freepik tool page](/tools/freepik/) reflects the same rebrand.
 - **May 5, 2026:** Rebrand fully visible on magnific.com and across launch coverage (PR Newswire, Magnific blog).
-- **2026-05-13:** Platform pricing structure and API output-area pricing verified unchanged in shape on magnific.com/pricing.
+- **2026-06-08:** Magnific API docs reverified: API usage is credit-based, "Unlimited" allowances apply only inside the web app, and API calls always consume credits. Creative Upscaler API cost is based on final output size and upscale factor.
+- **2026-06-08:** Static access to the public web-app pricing surface remains less reliable than the API docs, so this page does not quote a single durable web-plan table. Verify checkout pricing, region, tax, currency, allowances, and credit rules in the live account surface before buying.
 
 ## System Verdict
 
@@ -143,7 +151,7 @@ This review focuses on the buyer decision: should you use Magnific for creative 
 
 | | |
 |---|---|
-| **Current identity** | Magnific (the platform formerly known as Freepik; freepik.com now resolves into the Magnific surface) |
+| **Current identity** | Magnific / former Freepik AI creative-platform surface |
 | **Original product** | Prompt-guided creative upscaler from magnific.ai |
 | **Current platform** | AI image, video, audio, stock assets, collaboration, and editing tools |
 | **Main buyer URL** | [magnific.com](https://www.magnific.com) |
@@ -152,16 +160,16 @@ This review focuses on the buyer decision: should you use Magnific for creative 
 | **Faithful upscaling path** | Magnific Precision / non-generative alternatives |
 | **API** | [Magnific Upscaler Creative API](https://docs.magnific.com/api-reference/image-upscaler-creative/image-upscaler) |
 | **API pricing model** | Usage-based by output image area and upscale factor |
-| **Platform pricing** | Free plus paid plans; prices localize by region, currency, billing cycle, seats, credits, and plan family |
+| **Platform pricing** | Free plus paid plans; verify live checkout because prices, region, currency, billing cycle, seats, credits, and allowances can vary |
 | **Commercial use** | Magnific says created content belongs to the user, subject to its license terms and AI-product terms |
 
-Every data point above was verified against Magnific, Freepik/Magnific, and Magnific API sources on 2026-05-13. See Sources.
+Every data point above was verified against Magnific, Freepik/Magnific, and Magnific API sources on 2026-06-08. See Sources.
 
 ## What it actually is
 
 There are three Magnific surfaces now.
 
-**Magnific.com** is the current creative platform. It is the renamed Freepik product: stock assets, AI image models, AI video models, audio tools, editing, Spaces-style collaboration, and paid plan families under the Magnific brand.
+**Magnific.com** is the current creative-platform buyer surface. It bundles stock assets, AI image models, AI video models, audio tools, editing, collaboration, and paid plan families under the Magnific brand.
 
 **Magnific upscaling** is the original reason the brand matters. Creative mode takes an input image plus optional prompt guidance and produces a larger image with inferred detail. It is not a neutral resize. It is a generative enhancement model.
 
@@ -191,15 +199,15 @@ Magnific pricing is now best understood by surface:
 
 | Surface | Pricing shape | Best for |
 |---|---|---|
-| Magnific platform | Free plus paid plan families; localized by region, currency, billing cycle, credits, seats, and plan | Creators and teams who want stock assets, AI generation, upscaling, editing, and collaboration together |
+| Magnific platform | Free plus paid plan families; verify live checkout for region, currency, billing cycle, credits, seats, and allowances | Creators and teams who want stock assets, AI generation, upscaling, editing, and collaboration together |
 | Existing magnific.ai upscaler subscriptions | Existing plans continue through their term according to Magnific's relaunch FAQ | Existing standalone upscaler users |
 | Magnific Upscaler Creative API | Usage-based by output image area and upscale factor | Developers embedding upscaling in apps or pipelines |
 
-The old standalone Magnific AI price table is no longer the safest public citation for new buyers. Use [magnific.com/pricing](https://www.magnific.com/pricing) for current platform checkout pricing, and use the [API docs](https://docs.magnific.com/api-reference/image-upscaler-creative/image-upscaler) for developer costs.
+The old standalone Magnific AI price table is no longer the safest public citation for new buyers. Use [magnific.com/pricing](https://www.magnific.com/pricing) or your account checkout for current platform pricing, and use the [API docs](https://docs.magnific.com/api-reference/image-upscaler-creative/image-upscaler) for developer costs.
 
-API docs give example upscale costs such as 640x480 to 1280x960 at 2x for €0.10, 640x480 to 2560x1920 at 4x for €0.20, and 640x480 to 5120x3840 at 8x for €0.50. The practical lesson is simple: input size and upscale factor drive the final price.
+API docs give example upscale costs such as 640x480 to 1280x960 at 2x for EUR 0.10, 640x480 to 2560x1920 at 4x for EUR 0.20, and 640x480 to 5120x3840 at 8x for EUR 0.50. The practical lesson is simple: input size and upscale factor drive the final price.
 
-Prices and pricing structure verified 2026-05-13 against Magnific pricing and API documentation. Checkout totals may vary by region, tax, currency, billing cycle, and promotional state.
+API pricing structure verified 2026-06-08 against Magnific API documentation. Web-app checkout totals may vary by region, tax, currency, billing cycle, allowance, and promotional state.
 
 ## Against the alternatives
 
@@ -217,8 +225,9 @@ Prices and pricing structure verified 2026-05-13 against Magnific pricing and AP
 - **Brand transition confusion.** Magnific.ai, Freepik, Magnific.com, and Magnific API now overlap. New buyers should check which surface they are actually paying for.
 - **Creative mode hallucinates.** Added detail can look better than the source while being factually false. That is a feature for advertising and a flaw for evidence.
 - **Faces can drift.** High creative settings may alter likeness, age, texture, or identity cues. Use more conservative settings when subject fidelity matters.
-- **Pricing is not one simple table anymore.** Platform pricing localizes by country and plan. API pricing depends on output image area. Legacy standalone upscaler pricing is not the best new-buyer reference.
+- **Pricing is not one simple table anymore.** Platform pricing can vary by checkout context. API pricing depends on output image area. Legacy standalone upscaler pricing is not the best new-buyer reference.
 - **Credits and "unlimited" rules require reading.** Magnific's platform pricing uses credits, model availability, and plan-specific limits. Heavy users should test the exact models they rely on before annual billing.
+- **API is never covered by web-app unlimited allowances.** Magnific API docs say API calls deduct credits even when a subscription includes web-app "Unlimited" allowances.
 - **API costs grow with resolution.** A large source image at 8x or 16x can cost materially more than a small 2x upscale.
 - **Platform breadth can be overkill.** If all you need is a few occasional upscales, Magnific's broader creative suite may be more product than you need.
 
@@ -226,7 +235,7 @@ Prices and pricing structure verified 2026-05-13 against Magnific pricing and AP
 
 This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average).
 
-Last verified 2026-05-13 against Magnific's homepage, Magnific pricing, Magnific API documentation, Freepik's May 2024 acquisition announcement, and the April 2026 Freepik-to-Magnific relaunch announcement.
+Last verified 2026-06-08 against Magnific API documentation, Magnific pricing surfaces, and Freepik/Magnific acquisition context.
 
 ## FAQ
 
@@ -250,9 +259,10 @@ The Creative Upscaler API charges by output image area, which depends on the inp
 
 ## Sources
 
-- [Magnific homepage](https://www.magnific.com): current platform positioning, Freepik-to-Magnific identity, relaunch FAQ
-- [Magnific pricing](https://www.magnific.com/pricing): current public plan families, credit model, billing structure, and pricing FAQ
-- [Magnific Upscaler Creative API docs](https://docs.magnific.com/api-reference/image-upscaler-creative/image-upscaler): creative upscaler behavior, 2x/4x/8x/16x support, and output-area pricing examples
+- [Magnific homepage](https://www.magnific.com): current platform positioning and buyer surface (verified 2026-06-08)
+- [Magnific pricing](https://www.magnific.com/pricing): current checkout destination; verify live account pricing before buying (verified 2026-06-08)
+- [Magnific API pricing](https://docs.magnific.com/pricing): credit model, API usage, and web-app allowance caveat (verified 2026-06-08)
+- [Magnific Upscaler Creative API docs](https://docs.magnific.com/api-reference/image-upscaler-creative/image-upscaler): creative upscaler behavior, 2x/4x/8x/16x support, and output-area pricing examples (verified 2026-06-08)
 - [Freepik becomes Magnific press release](https://www.prnewswire.com/news-releases/freepik-becomes-magnific-hits-230m-arr-and-introduces-the-no-collar-creative-economy-302755376.html): April 28, 2026 rebrand and platform scope
 - [Freepik and Magnific announcement](https://www.freepik.com/blog/magnific/): May 2024 acquisition context
 

@@ -5,16 +5,16 @@ title: AI Chatbots & LLMs
 description: General-purpose AI assistants and large language model chatbots for writing, research, coding help, analysis, multimodal work, and everyday decision support.
 tool_count: 17
 seo_title: "Best AI Chatbots & LLMs (June 2026), aipedia.wiki"
-meta_description: "Compare the best AI chatbots and LLMs in June 2026: ChatGPT (GPT-5.5), Claude Opus 4.8, Gemini 3.1 Pro, Perplexity, Grok, Mistral, Kimi K2.6, Qwen3.7-Max / Qwen Cloud, GLM-5.1, Hunyuan, Jan.ai, NotebookLM, and AnythingLLM, with enterprise workspace, local desktop, and self-hosted RAG signals."
+meta_description: "Updated June 9, 2026: compare the best AI chatbots and LLMs: ChatGPT, Claude, Gemini, Perplexity, Grok, Mistral, Reka, Kimi, Qwen, GLM, Hunyuan, Ollama, Open WebUI, Jan.ai, NotebookLM, and AnythingLLM, with enterprise workspace, model infrastructure, local runtime, desktop, and self-hosted RAG signals."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-07
-last_verified: 2026-06-07
+last_updated: 2026-06-09
+last_verified: 2026-06-09
 update_frequency: monthly
 ---
 
 ## Overview
 
-AI chatbots are now the default starting point for writing, research, coding help, analysis, planning, images, voice, file work, and everyday problem solving. But the market is no longer one generic "best model" race. As of June 6, 2026, the right chatbot depends on the buyer's ecosystem, risk tolerance, source needs, budget, and workflow. Flagship models continue to shift: ChatGPT runs on GPT-5.5, Claude leads with Opus 4.8, Gemini 3.1 Pro Preview and Gemini 3.5 Flash anchor Google's current public buyer path, Qwen3.7-Max is live on Qwen Cloud, qwen3.7-plus is the newest Qwen Cloud changelog entry AiPedia found, and DeepSeek V4-Flash and V4-Pro are now in production for cost-sensitive workloads. DeepSeek's June 5 pricing check keeps V4-Flash at $0.14 cache-miss input and $0.28 output per million tokens, while Doubao remains a China-first ByteDance/Volcengine lane where exact API prices should be checked in the live model table before quoting.
+AI chatbots are now the default starting point for writing, research, coding help, analysis, planning, images, voice, file work, and everyday problem solving. But the market is no longer one generic "best model" race. As of June 8, 2026, the right chatbot depends on the buyer's ecosystem, risk tolerance, source needs, budget, and workflow. Flagship models continue to shift: ChatGPT runs on GPT-5.5, Claude leads with Opus 4.8, Gemini 3.1 Pro Preview and Gemini 3.5 Flash anchor Google's current public buyer path, MiniMax-M3 is now MiniMax's current M3-first coding/agentic API path, Qwen3.7-Max is live on Qwen Cloud, qwen3.7-plus is the newest Qwen Cloud changelog entry AiPedia found, and DeepSeek V4-Flash and V4-Pro are now in production for cost-sensitive workloads. DeepSeek's June 5 pricing check keeps V4-Flash at $0.14 cache-miss input and $0.28 output per million tokens, while Doubao remains a China-first ByteDance/Volcengine lane where exact API prices should be checked in the live model table before quoting.
 
 The May 31 refresh adds two enterprise workspace signals: MUFG's [ChatGPT Enterprise rollout to roughly 35,000 bank employees](/news/2026-05-30-openai-mufg-chatgpt-enterprise-rollout/) and Microsoft's [redesigned Microsoft 365 Copilot experience](/news/2026-05-31-microsoft-365-copilot-redesign-work-iq/). The lesson is practical. General assistants win inside companies only when training, permission rules, visible context, app placement, and output quality make daily work safer and faster.
 
@@ -28,9 +28,21 @@ The June 5 Gemini comparison refresh updates the oldest live Gemini cluster: [Ge
 
 The June 6 [Mistral AI vs Qwen](/compare/mistral-ai-vs-qwen/) refresh keeps the open-model platform lane current: Mistral is the stronger EU/vendor-platform and Search Toolkit choice, while Qwen is the stronger Alibaba/Qwen Cloud, qwen3.7-max long-context, qwen3.7-plus multimodal-agent, multilingual, and Apache 2.0 Qwen3 model-family choice.
 
-For most people, the first paid chatbot to compare is still one of three: [ChatGPT](/tools/chatgpt/) for the broadest all-purpose AI workspace, [Claude](/tools/claude/) for writing, long analysis, and code reasoning, or [Gemini](/tools/gemini/) for Google-native work across Search, Gmail, Docs, Drive, NotebookLM, and Google AI subscription benefits. [Perplexity](/tools/perplexity/) is the better answer engine when every serious claim needs a source trail. [Grok](/tools/grok/) is most useful when X-native real-time context matters. [Mistral AI](/tools/mistral-ai/) matters more for builders and teams that care about model control, European AI infrastructure, APIs, Vibe for Code, Search Toolkit, and open-model options; the June 3 [ChatGPT vs Mistral AI](/compare/chatgpt-vs-mistral-ai/) refresh frames this as a finished-assistant versus model-platform decision. [Qwen](/tools/qwen/) is the Alibaba Cloud lane: hosted Qwen3.7-Max, Qwen Chat testing, Apache 2.0 Qwen3 open weights, and a growing Qwen Cloud / agent-platform push after [Alibaba's first international Qwen Conference](/news/2026-05-27-qwen-conference-agent-cloud-suite/). [GLM](/tools/glm/) is the Z.AI lane for teams evaluating GLM-5.1's 200K context, 128K maximum output, OpenAI-compatible API examples, MCP/tool support, MIT Hugging Face weights, and $1.40/M input plus $4.40/M output API pricing. [Kimi](/tools/kimi/) is the Moonshot lane for builders evaluating Kimi K2.6, 256K context, multimodal input, usage-based API pricing, and a post-K2-retirement model path; the June 3 [ChatGPT vs Kimi](/compare/chatgpt-vs-kimi/) refresh keeps ChatGPT as the better finished assistant and Kimi as the model/API alternative. [Hunyuan](/tools/hunyuan/) is Tencent's open-weight/model-family lane for Hy3-preview, HY-World 2.0, and HY-OmniWeaving; [Jan.ai](/tools/jan-ai/) is the free local desktop lane, with v0.8.2 now adding faster startup, AMD ROCm/HIP on Linux, and resumable downloads.
+The June 8 Kimi tool refresh keeps Moonshot's lane current: Kimi K2.6 remains the active Kimi API path for new model evaluation, with $0.16/M cache-hit input, $0.95/M cache-miss input, $4.00/M output, 256K context, multimodal input, and long-horizon agent/coding positioning. Legacy K2 pricing URLs should be treated as historical or redirecting documentation, not a new-production recommendation.
 
-For document chat and private RAG, [AnythingLLM](/tools/anythingllm/) is the practical self-hosted app lane. The June 1 check keeps the MIT self-host path free, confirms cloud Basic at $50/month and Pro at $99/month, and keeps the recommendation model-agnostic: quality depends on the hosted or local LLM you connect.
+The June 8 MiniMax refresh moves MiniMax out of the old M2.7-first framing. [MiniMax](/tools/minimax/) is now the M3 evaluation lane: MiniMax-M3 standard pay-as-you-go is listed at $0.30/M input and $1.20/M output for <=512K input, the official model page positions M3 around coding, agentic work, native multimodality, and up-to-1M context, and the pricing page still flags >512K input and Priority tiers with access caveats. Treat M3 as a model/API benchmark candidate, not a finished ChatGPT-style default.
+
+The June 9 [Reka](/tools/reka/) refresh keeps Reka in the model-infrastructure lane, not the consumer-chatbot lane. Reka now foregrounds physical AI, Edge 2, Infer, Vision, and Claru; its docs list Edge at $0.10/M input and $0.10/M output, Flash at $0.80/M input and $2/M output, and Core at $2/M input and $6/M output. Reka Edge weights are source-available under BSL 1.1 with a commercial threshold, so buyers should not call them permissive open source without checking license fit.
+
+The June 8 open-model refresh keeps [Llama](/tools/llama/) and [LM Studio](/tools/lm-studio/) from being treated like ordinary chatbot subscriptions. Llama is the open-weight/model-control lane: Maverick remains the flagship to evaluate, Scout is the long-context and current Groq fast-inference path, Groq's public Scout card lists $0.11/M input and $0.34/M output, and Together continues to list Maverick at $0.27/M input and $0.85/M output. LM Studio is the desktop-local lane: free home/work use, visual model browser, native v1 REST API, OpenAI-compatible and Anthropic-compatible endpoints, MCP support, SDKs, CLI server control, and LM Link. Neither replaces ChatGPT or Claude for peak finished-assistant quality.
+
+The June 8 self-hosted stack refresh adds current [Ollama](/tools/ollama/) and [Open WebUI](/tools/open-webui/) guidance to this hub. Ollama is the local runtime/API lane: v0.30.6 is the latest stable release checked, local use remains free, Cloud Pro is $20/month or $200/year, Cloud Max is $100/month, and Team is still listed as coming soon. Open WebUI is the self-hosted team interface/RAG lane: v0.9.6 is the latest release checked, the official site claims 290M downloads and 423K community members, and the enterprise page emphasizes SSO, RBAC, audit logs, support, and control over data and infrastructure. Pairing them can make sense, but neither removes the need for ops, governance, and model/provider review.
+
+The June 8 [Poe](/tools/poe/) refresh keeps the multi-model comparison lane current. Poe is strongest when the buyer wants one points budget for many text, image, video, audio, and custom bots, not when they want the cleanest native experience for a single provider. Its current paid ladder runs from Basic at 10,000 points/day through Plus, Pro, Advanced, and Max at 8.25 million monthly points, while the subscription page localizes checkout and exposes US annual structured-data anchors from $99.99/year to $4,999.99/year. Direct ChatGPT, Claude, Gemini, or Perplexity subscriptions still make more sense for heavy single-model work.
+
+For most people, the first paid chatbot to compare is still one of three: [ChatGPT](/tools/chatgpt/) for the broadest all-purpose AI workspace, [Claude](/tools/claude/) for writing, long analysis, and code reasoning, or [Gemini](/tools/gemini/) for Google-native work across Search, Gmail, Docs, Drive, NotebookLM, and Google AI subscription benefits. [Perplexity](/tools/perplexity/) is the better answer engine when every serious claim needs a source trail. [Grok](/tools/grok/) is most useful when X-native real-time context matters. [Mistral AI](/tools/mistral-ai/) matters more for builders and teams that care about model control, European AI infrastructure, APIs, Vibe for Code, Search Toolkit, and open-model options; the June 3 [ChatGPT vs Mistral AI](/compare/chatgpt-vs-mistral-ai/) refresh frames this as a finished-assistant versus model-platform decision. [Qwen](/tools/qwen/) is the Alibaba Cloud lane: hosted Qwen3.7-Max, Qwen Chat testing, Apache 2.0 Qwen3 open weights, and a growing Qwen Cloud / agent-platform push after [Alibaba's first international Qwen Conference](/news/2026-05-27-qwen-conference-agent-cloud-suite/). [GLM](/tools/glm/) is the Z.AI lane for teams evaluating GLM-5.1's 200K context, 128K maximum output, OpenAI-compatible API examples, MCP/tool support, MIT Hugging Face weights, and $1.40/M input plus $4.40/M output API pricing. [Kimi](/tools/kimi/) is the Moonshot lane for builders evaluating Kimi K2.6, 256K context, multimodal input, usage-based API pricing, and a post-K2-retirement model path; the June 3 [ChatGPT vs Kimi](/compare/chatgpt-vs-kimi/) refresh keeps ChatGPT as the better finished assistant and Kimi as the model/API alternative. [MiniMax](/tools/minimax/) is the M3 lane for buyers testing low-cost coding, agentic, multimodal, and long-context API work, with Speech 2.8 and Hailuo as adjacent MiniMax modalities. [Hunyuan](/tools/hunyuan/) is Tencent's open-weight/model-family lane for Hy3-preview, HY-World 2.0, and HY-OmniWeaving; [Jan.ai](/tools/jan-ai/) is the free local desktop lane, with v0.8.2 now adding faster startup, AMD ROCm/HIP on Linux, and resumable downloads.
+
+For document chat and private RAG, [AnythingLLM](/tools/anythingllm/) and [Open WebUI](/tools/open-webui/) are the two practical self-hosted app lanes. AnythingLLM remains the MIT app-plus-cloud lane; Open WebUI is the broader self-hosted interface/knowledge-base layer that many Ollama users adopt for team chat. In both cases, quality depends on the hosted or local LLM you connect.
 
 For API-first model serving, [Fireworks AI](/tools/fireworks-ai/) and [Groq](/tools/groq/) are tracked in this category because they expose LLM and multimodal model endpoints, but buyers should treat them as infrastructure rather than chatbot subscriptions. The June 2 Groq check keeps the buyer story focused on LPU inference speed, pricing/model docs, and production throughput rather than acquisition rumors. The Fireworks pricing check keeps serverless inference, cached-token discounts, batch discounts, B200/B300 dedicated deployments, and fine-tuning as the important purchase variables.
 
@@ -46,16 +58,21 @@ The wrong move is paying for three overlapping chatbots without a job for each o
 | **[Claude](/tools/claude/)** | Writing, editing, long analysis, document work, code reasoning | Best when quality, critique, calm tone, and long-form work matter more than feature sprawl. |
 | **[Gemini](/tools/gemini/)** | Google ecosystem, Search, Gmail, Docs, Drive, NotebookLM, Google One/AI subscription bundles | Best if your work already lives in Google and the assistant needs to sit near those files and apps. |
 | **[Perplexity](/tools/perplexity/)** | Cited research, fact checks, market scans, source-backed briefs | Best when source trails and current web synthesis are more important than open-ended chat. |
+| **[Poe](/tools/poe/)** | Multi-model and media-bot comparison through one points budget | Best for breadth, custom bots, and trying many providers; direct subscriptions are cleaner for heavy single-model use. |
 | **[Grok](/tools/grok/)** | X-native real-time context, creator/news/social signal monitoring | Useful for fast social context, but important claims still need primary-source verification. |
 | **[Mistral AI](/tools/mistral-ai/)** | Model-control workflows, European AI infrastructure, APIs, Vibe for Code, Search Toolkit, open-model strategy | Best for builders and organizations that care about deployment and vendor-control choices. |
 | **[Qwen](/tools/qwen/)** | Alibaba Cloud, open-weight Qwen3, hosted Qwen3.7-Max, multilingual model control | Best for builders who want Qwen Cloud APIs or self-hostable Apache 2.0 Qwen3 checkpoints, not a polished consumer workspace. |
 | **[GLM](/tools/glm/)** | Z.AI GLM-5.1, open MIT weights, long-context agentic coding/model evaluation | Best for teams testing Chinese frontier/open-weight model options, not a polished English consumer chatbot. |
 | **[Kimi](/tools/kimi/)** | Kimi K2.6 API evaluation, long-context coding, multimodal input, and cost-sensitive model serving | Best for builders comparing model economics and non-OpenAI API lanes; ChatGPT remains the easier finished assistant. |
+| **[MiniMax](/tools/minimax/)** | MiniMax-M3 coding, agentic, multimodal, long-context API evaluation plus Speech/Hailuo adjacency | Best for builders testing M3 price/performance and MiniMax's multimodal platform; verify 512K vs 1M context access and service tier before production. |
+| **[Reka](/tools/reka/)** | Physical-AI and multimodal model infrastructure, Edge/Flash/Core APIs, source-available Edge weights | Best for builders testing low-cost multimodal Edge/Flash/Core workflows; BSL 1.1 licensing and commercial thresholds need legal review. |
 | **[Hunyuan](/tools/hunyuan/)** | Tencent open-weight model family across LLMs, 3D worlds, video, image, and embodied AI | Best for China/Tencent-cloud and open-model R&D teams; not the first English consumer chatbot. |
 | **[DeepSeek](/tools/deepseek/)** | Low-cost API reasoning, open-weight baseline, China-origin model testing | Best when cost and self-hosting experiments matter more than Western enterprise procurement. Recheck endpoint names and token rates before production. |
 | **[Doubao](/tools/doubao/)** | China-first ByteDance assistant and Volcengine model/API evaluation | Best for Chinese-language consumer and Asia cloud evaluation, not Western regulated data residency or primary English chat. |
 | **[Groq](/tools/groq/)** | Low-latency hosted inference and API throughput | Best when inference speed, OpenAI-compatible APIs, and predictable production serving matter more than a consumer chat workspace. |
 | **[Fireworks AI](/tools/fireworks-ai/)** | Hosted inference, batch jobs, dedicated GPUs, and fine-tuning | Best when the buyer needs model APIs and deployment controls rather than a consumer chat UI. |
+| **[Ollama](/tools/ollama/)** | Local open-model runtime, embeddings, OpenAI-compatible local API, optional Cloud inference | Best when privacy, local prototyping, or open-model testing matters; not a full team chat app by itself. |
+| **[Open WebUI](/tools/open-webui/)** | Self-hosted AI chat interface, knowledge bases, local/cloud model access, enterprise controls | Best when a technical team wants a governed self-hosted UI layer over Ollama or OpenAI-compatible APIs. |
 | **[Jan.ai](/tools/jan-ai/)** | Local desktop ChatGPT-style app for local and cloud models | Best when a user wants an open-source desktop app, local-model privacy, and optional cloud providers in one UI. |
 | **[NotebookLM](/tools/notebooklm/)** | Source-grounded study and document research | Not a general chatbot replacement; excellent when answers should come from a fixed source library. |
 | **[AnythingLLM](/tools/anythingllm/)** | Self-hosted document chat and RAG app | Best when the buyer wants an MIT-licensed app, local/private documents, agents, and bring-your-own-model control instead of another hosted chatbot subscription. |
@@ -71,7 +88,11 @@ The wrong move is paying for three overlapping chatbots without a job for each o
 - **Best Alibaba/open-weight lane:** [Qwen](/tools/qwen/) when hosted Qwen3.7-Max, Qwen Cloud pricing, multilingual coverage, or self-hosted Qwen3 checkpoints matter.
 - **Best GLM-family evaluation lane:** [GLM](/tools/glm/) when Z.AI API access, GLM-5.1 open weights, long context, and coding-agent benchmarks are the purchase reason. The June 3 [ChatGPT vs GLM](/compare/chatgpt-vs-glm/) refresh frames this as a product-versus-model decision, not a simple chatbot replacement.
 - **Best Kimi API evaluation lane:** [Kimi](/tools/kimi/) when Kimi K2.6 pricing, 256K context, multimodal input, ToolCalls, JSON Mode, and China/Asia model diversification are the purchase reason. The June 3 [ChatGPT vs Kimi](/compare/chatgpt-vs-kimi/) refresh keeps the old K2 series retirement out of new-build recommendations.
+- **Best MiniMax M3 evaluation lane:** [MiniMax](/tools/minimax/) when M3 coding/agentic claims, $0.30/M input and $1.20/M output standard pricing, native multimodality, and adjacent Speech/Hailuo APIs are the purchase reason.
+- **Best Reka physical-AI evaluation lane:** [Reka](/tools/reka/) when Edge/Flash/Core APIs, local Edge weights, video/image understanding, source-available deployment, or robot/edge-device multimodal work are the purchase reason.
 - **Best Tencent/open-model family lane:** [Hunyuan](/tools/hunyuan/) when Hy3-preview, HY-World 2.0, HY-OmniWeaving, Tencent Cloud, or Chinese-language model evaluation are the purchase reason.
+- **Best local model runtime:** [Ollama](/tools/ollama/) when local inference, OpenAI-compatible API experiments, embeddings, and open-model testing are the purchase reason.
+- **Best self-hosted team chat UI:** [Open WebUI](/tools/open-webui/) when a technical team wants a self-hosted interface, knowledge-base/RAG layer, and enterprise controls over local or cloud models.
 - **Best open-source local desktop chatbot:** [Jan.ai](/tools/jan-ai/) when a user wants a free desktop app for local models, optional provider connections, and a more open alternative to LM Studio.
 - **Best self-hosted RAG app:** [AnythingLLM](/tools/anythingllm/) when document chat, local/private deployment, and bring-your-own-model flexibility matter more than polished consumer-chat features.
 
@@ -95,6 +116,10 @@ The wrong move is paying for three overlapping chatbots without a job for each o
 
 **Use Kimi if:** Kimi K2.6, 256K context, multimodal input, token-level API pricing, cache-hit economics, ToolCalls, JSON Mode, and non-OpenAI model diversification are the purchase reason.
 
+**Use MiniMax if:** MiniMax-M3, coding/agentic API evaluation, native multimodal input, up-to-1M context positioning, low standard M3 token pricing, Speech 2.8, Hailuo video, or non-US model diversification are the purchase reason. Verify whether your account actually has >512K input and Priority access before building around it.
+
+**Use Reka if:** the buyer is testing physical-AI or multimodal model infrastructure, wants Edge/Flash/Core API pricing, needs local Edge weights, or is evaluating video/image understanding close to devices. Do not choose it as a first consumer chatbot, and review the BSL 1.1 license terms before commercial local deployment.
+
 **Use Hunyuan if:** Tencent Cloud fit, Chinese-language workloads, Hy3-preview open weights, HY-World 2.0 3D world generation, or HY-OmniWeaving video research are the purchase reason.
 
 **Use DeepSeek if:** API cost, open-weight baselines, or China-origin model benchmarking are more important than polished consumer UX and Western enterprise controls.
@@ -106,6 +131,10 @@ The wrong move is paying for three overlapping chatbots without a job for each o
 **Use Groq if:** the job is low-latency API inference, high-throughput serving, or production model routing. Use Groq's official site, docs, and pricing pages for purchase facts; do not rely on rumor-cycle claims.
 
 **Use Fireworks AI if:** the job is hosted model inference, batch processing, deployment capacity, cached-token optimization, or fine-tuning rather than a general assistant interface.
+
+**Use Ollama if:** the buyer wants local inference, OpenAI-compatible local endpoints, embeddings, and open-model experiments before committing to hosted inference.
+
+**Use Open WebUI if:** the buyer wants a self-hosted team interface, knowledge bases, model/provider routing, and enterprise controls over local or OpenAI-compatible models.
 
 ## When to Pay for More Than One
 
@@ -182,9 +211,22 @@ Do not subscribe to multiple chatbots because each one has a new model announcem
 - [Z.AI GLM-5.1 docs](https://docs.z.ai/guides/llm/glm-5.1) (verified 2026-06-03)
 - [Z.AI pricing](https://docs.z.ai/guides/overview/pricing) (verified 2026-06-03)
 - [GLM-5.1 on Hugging Face](https://huggingface.co/zai-org/GLM-5.1) (verified 2026-06-03)
-- [Kimi API platform](https://platform.moonshot.ai/) (verified 2026-06-04)
-- [Kimi K2.6 pricing docs](https://platform.kimi.ai/docs/pricing/chat-k26) (verified 2026-06-04)
-- [Legacy Kimi K2 pricing notice](https://platform.kimi.ai/docs/pricing/chat-k2) (verified 2026-06-04)
+- [Kimi API platform](https://platform.moonshot.ai/) (verified 2026-06-08)
+- [Kimi K2.6 pricing docs](https://platform.kimi.ai/docs/pricing/chat-k26) (verified 2026-06-08)
+- [Legacy Kimi K2 pricing URL](https://platform.kimi.ai/docs/pricing/chat-k2) (redirect behavior checked 2026-06-08)
+- [MiniMax M3 model page](https://www.minimax.io/models/text/m3) (verified 2026-06-08)
+- [MiniMax M3 launch post](https://www.minimax.io/blog/minimax-m3) (verified 2026-06-08)
+- [MiniMax pay-as-you-go pricing](https://platform.minimax.io/docs/guides/pricing-paygo) (verified 2026-06-08)
+- [Reka homepage](https://reka.ai/) (verified 2026-06-09)
+- [Reka pricing docs](https://docs.reka.ai/pricing) (verified 2026-06-09)
+- [Reka Edge product page](https://reka.ai/reka-edge) (verified 2026-06-09)
+- [Reka model docs](https://docs.reka.ai/chat/models) (verified 2026-06-09)
+- [Llama official site](https://ai.meta.com/llama/) (verified 2026-06-08)
+- [Llama 4 Community License](https://www.llama.com/llama4/license/) (verified 2026-06-08)
+- [Together AI pricing](https://www.together.ai/pricing) (verified 2026-06-08)
+- [Groq Llama 4 Scout model card](https://console.groq.com/docs/model/llama-4-scout-17b-16e-instruct) (verified 2026-06-08)
+- [LM Studio developer docs](https://lmstudio.ai/docs/api) (verified 2026-06-08)
+- [LM Studio free-for-work announcement](https://lmstudio.ai/blog/free-for-work) (verified 2026-06-08)
 - [Hy3-preview on Hugging Face](https://huggingface.co/tencent/Hy3-preview) (verified 2026-06-02)
 - [Tencent HY-World 2.0](https://huggingface.co/tencent/HY-World-2.0) (verified 2026-06-02)
 - [HY-OmniWeaving on Hugging Face](https://huggingface.co/tencent/HY-OmniWeaving) (verified 2026-06-02)
@@ -202,5 +244,14 @@ Do not subscribe to multiple chatbots because each one has a new model announcem
 - [Fireworks AI pricing](https://fireworks.ai/pricing) (verified 2026-06-02)
 - [Fireworks billing FAQ](https://docs.fireworks.ai/faq-new/billing-pricing/how-much-does-fireworks-cost) (verified 2026-06-02)
 - [Fireworks inference documentation](https://docs.fireworks.ai/guides/inference-introduction) (verified 2026-06-02)
+- [Ollama official site](https://ollama.com/) (verified 2026-06-08)
+- [Ollama pricing](https://ollama.com/pricing) (verified 2026-06-08)
+- [Ollama model library](https://ollama.com/library) (verified 2026-06-08)
+- [Ollama v0.30.6 release notes](https://github.com/ollama/ollama/releases/tag/v0.30.6) (verified 2026-06-08)
+- [Open WebUI official site](https://openwebui.com/) (verified 2026-06-08)
+- [Open WebUI Enterprise docs](https://docs.openwebui.com/enterprise/) (verified 2026-06-08)
+- [Open WebUI v0.9.6 release notes](https://github.com/open-webui/open-webui/releases/tag/v0.9.6) (verified 2026-06-08)
+- [Poe subscription plans](https://poe.com/subscription_plans) (verified 2026-06-08)
+- [Poe purchases FAQ](https://help.poe.com/hc/en-us/articles/19945140063636-Poe-Purchases-FAQs) (verified 2026-06-08)
 - [Jan changelog](https://www.jan.ai/changelog) (verified 2026-06-02)
 - [Jan GitHub repository](https://github.com/janhq/jan) (verified 2026-06-02)

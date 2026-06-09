@@ -2,18 +2,18 @@
 type: tool
 slug: qdrant
 title: Qdrant
-tagline: Open-source vector database written in Rust, with managed cloud, hybrid cloud, metadata filtering, payload indexes, and RAG-ready retrieval.
+tagline: Open-source vector database written in Rust, with managed cloud, Free/Standard/Premium tiers, hybrid/private cloud options, metadata filtering, payload indexes, and RAG-ready retrieval.
 category: ai-infrastructure
 secondary_categories: [ai-search, ai-automation]
 company: Qdrant
 url: https://qdrant.tech
 github_url: https://github.com/qdrant/qdrant
 pricing_model: open-source
-price_range: Free self-host; Qdrant Cloud priced by CPU, memory, and disk usage
+price_range: Free self-host; Free Cloud tier; Standard usage-based; Premium/Hybrid/Private sales-led
 status: active
 launched: 2021
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-08
+last_verified: 2026-06-08
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -32,26 +32,33 @@ facts:
     source: "https://qdrant.tech/documentation/"
     source_label: "Qdrant documentation"
     source_id: qdrant-best-for
-    verified_at: 2026-05-13
-    next_review_at: 2026-06-03
+    verified_at: 2026-06-08
+    next_review_at: 2026-07-08
     confidence: high
   best_paid_tier:
-    value: "Qdrant Cloud when managed operations matter; self-host for maximum control"
-    source: "https://qdrant.tech/documentation/cloud-pricing-payments/"
-    source_label: "Qdrant Cloud billing"
-    source_id: qdrant-best-paid-tier
-    verified_at: 2026-05-13
-    next_review_at: 2026-06-03
+    value: "Standard Cloud for production managed clusters; Premium when SSO/private links/higher SLA matter; Hybrid or Private Cloud when the cluster must run in the buyer's environment"
+    source: "https://qdrant.tech/pricing/"
+    source_label: "Qdrant pricing"
+    source_id: qdrant-pricing
+    verified_at: 2026-06-08
+    next_review_at: 2026-07-08
     confidence: high
   best_for:
     value: "Open-source vector search, metadata filtering, RAG retrieval, and self-hostable AI infrastructure"
     source: "https://qdrant.tech/documentation/"
     source_id: qdrant-best-for
-    verified_at: 2026-05-13
+    verified_at: 2026-06-08
+  latest_release:
+    value: "Qdrant v1.18.2 was the latest GitHub release checked on June 8, 2026; release notes include bug fixes plus REST auth whitelist bypass and malicious snapshot length security fixes"
+    source: "https://github.com/qdrant/qdrant/releases/tag/v1.18.2"
+    source_label: "Qdrant v1.18.2 release notes"
+    source_id: qdrant-release-v1-18-2
+    verified_at: 2026-06-08
+    next_review_at: 2026-07-08
     confidence: high
 tags: [vector-database, open-source, rust, rag, semantic-search, retrieval, embeddings]
-seo_title: "Qdrant Review: Open-Source Vector Database & Cloud Pricing (May 2026)"
-meta_description: "Qdrant is an open-source Rust vector database with managed cloud options for RAG, semantic search, payload filtering, and AI retrieval workloads."
+seo_title: "Qdrant Review: Open-Source Vector Database & Cloud Pricing (June 2026)"
+meta_description: "Qdrant is an open-source Rust vector database with Free, Standard, Premium, Hybrid, and Private Cloud options for RAG, semantic search, payload filtering, and AI retrieval workloads."
 author: aipedia.wiki Editorial
 best_for:
   - teams wanting a fast open-source vector database
@@ -63,7 +70,7 @@ not_best_for:
   - very small apps that can stay in pgvector
   - buyers wanting a proprietary fully managed default
 quick_answer: >-
-  Qdrant is a strong open-source vector database for teams that want fast retrieval, metadata filtering, and self-hosting optionality. Pick it for RAG infrastructure with control. Skip it when you need a workplace-search product or when Postgres vector search is enough.
+  Qdrant is a strong open-source vector database for teams that want fast retrieval, metadata filtering, and self-hosting optionality. Pick it for RAG infrastructure with control, especially if Free/Standard Cloud gives a managed path without losing open-source optionality. Skip it when you need a workplace-search product or when Postgres vector search is enough.
 ---
 
 # Qdrant
@@ -88,9 +95,11 @@ It is one of the main open-source alternatives to [Pinecone](/tools/pinecone/) a
 | **Language** | Rust |
 | **Use cases** | RAG, semantic search, recommendations, filtering |
 | **Cloud** | Qdrant Cloud managed clusters |
-| **Hybrid** | Options for customer environments |
-| **Pricing** | Cloud priced by CPU, memory, and disk usage |
+| **Cloud tiers** | Free · Standard · Premium |
+| **Hybrid / Private** | Options for customer environments, regulated workloads, and isolated deployments |
+| **Pricing** | Free prototype cluster; Standard usage-based; Premium minimum spend; marketplace billing via $0.01 Resource Usage Units |
 | **Operations** | Snapshots, monitoring, distributed deployment, and production checklist |
+| **Latest release checked** | v1.18.2, published June 4, 2026 |
 | **Best fit** | Teams needing retrieval infrastructure with control |
 
 ## When to pick Qdrant
@@ -119,11 +128,21 @@ Choose something else if your hardest problem is connectors, permissions, or end
 
 ## Pricing
 
-Self-hosting Qdrant is free apart from infrastructure costs. Qdrant Cloud prices managed clusters based on CPU, memory, and disk storage usage. Billing can run through credit card or cloud marketplaces.
+Self-hosting Qdrant is free apart from infrastructure costs. Qdrant Cloud now has a clearer public tier shape:
+
+| Qdrant lane | Current buyer meaning | Watch-out |
+|---|---|---|
+| OSS / self-host | Run the open-source vector database yourself | You own backups, upgrades, observability, and scaling |
+| Free Cloud | Single-node prototype cluster with 0.5 vCPU, 1GB RAM, and 4GB disk | Good for testing, not high availability |
+| Standard Cloud | Usage-based managed clusters for production workloads | Model CPU, memory, disk, backups, and inference tokens before launch |
+| Premium Cloud | Minimum-spend enterprise lane with SSO, private VPC links, premium support, and higher SLA posture | Sales-led; verify minimum spend and security controls |
+| Hybrid / Private Cloud | Managed Qdrant in your own infrastructure or a dedicated/isolated deployment | Best for regulated workloads, data residency, and air-gapped needs |
+
+Billing can run through credit card or AWS, GCP, and Azure marketplaces.
 
 For small projects, self-hosting or pgvector may be cheaper. For production teams that value managed operations, Qdrant Cloud removes database maintenance work.
 
-As verified on 2026-05-13, Qdrant's cloud billing docs emphasize resource-shaped pricing rather than a simple per-query SaaS plan, with credit card billing through Stripe or AWS, GCP, and Azure marketplace subscriptions billed at $0.01 per Resource Usage Unit. That means teams should model cluster size, replicas, disk storage, snapshots, traffic patterns, and marketplace billing before procurement.
+As verified on 2026-06-08, Qdrant's cloud billing docs emphasize resource-shaped pricing rather than a simple per-query SaaS plan, with credit card billing through Stripe or AWS, GCP, and Azure marketplace subscriptions billed at $0.01 per Resource Usage Unit. That means teams should model cluster size, replicas, disk storage, snapshots, traffic patterns, marketplace billing, and any Cloud Inference usage before procurement.
 
 ## Evaluation checklist
 
@@ -154,7 +173,7 @@ It is weaker when the buyer expects a finished knowledge product. Qdrant will no
 
 ## Methodology
 
-Last verified 2026-05-13 against Qdrant documentation, cloud billing docs, and GitHub. Scoring weighs open-source value, retrieval utility, cloud path, and platform breadth.
+Last verified 2026-06-08 against Qdrant documentation, Qdrant pricing, cloud billing docs, and GitHub v1.18.2 release notes. Scoring weighs open-source value, retrieval utility, cloud path, and platform breadth.
 
 ## FAQ
 
@@ -162,7 +181,7 @@ Last verified 2026-05-13 against Qdrant documentation, cloud billing docs, and G
 Yes. Qdrant's core vector database is open source.
 
 **How is Qdrant Cloud priced?**
-Managed clusters are priced by CPU, memory, and disk storage usage.
+Managed clusters are priced by resource usage. The Free tier is limited to 0.5 vCPU, 1GB RAM, and 4GB disk; Standard is usage-based; Premium is sales-led with minimum spend and additional enterprise controls.
 
 **Qdrant vs Weaviate?**
 Qdrant is a focused Rust vector database. Weaviate is a broader AI-native vector platform with more built-in cloud services.
@@ -170,8 +189,10 @@ Qdrant is a focused Rust vector database. Weaviate is a broader AI-native vector
 ## Sources
 
 - [Qdrant Cloud billing](https://qdrant.tech/documentation/cloud-pricing-payments/)
+- [Qdrant pricing](https://qdrant.tech/pricing/)
 - [Qdrant documentation](https://qdrant.tech/documentation/)
 - [Qdrant GitHub](https://github.com/qdrant/qdrant)
+- [Qdrant v1.18.2 release notes](https://github.com/qdrant/qdrant/releases/tag/v1.18.2)
 
 ## Related
 

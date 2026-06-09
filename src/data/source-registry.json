@@ -4642,11 +4642,30 @@
     },
     {
       "id": "llama-pricing",
-      "label": "Source",
+      "label": "Together AI Llama pricing",
       "url": "https://www.together.ai/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-08"
+    },
+    {
+      "id": "llama-groq-scout",
+      "label": "Groq Llama 4 Scout model card",
+      "url": "https://console.groq.com/docs/model/llama-4-scout-17b-16e-instruct",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-08"
+    },
+    {
+      "id": "llama-groq-deprecations",
+      "label": "Groq model deprecation docs",
+      "url": "https://console.groq.com/docs/deprecations",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-08"
     },
     {
       "id": "llama-repository",
@@ -4658,11 +4677,12 @@
     },
     {
       "id": "lm-studio-api-docs",
-      "label": "LM Studio local API docs",
-      "url": "https://lmstudio.ai/docs/app/api",
+      "label": "LM Studio developer docs",
+      "url": "https://lmstudio.ai/docs/api",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-08"
     },
     {
       "id": "lm-studio-docs",
@@ -4686,7 +4706,17 @@
       "url": "https://lmstudio.ai/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-08"
+    },
+    {
+      "id": "lm-studio-free-work",
+      "label": "LM Studio free-for-work announcement",
+      "url": "https://lmstudio.ai/blog/free-for-work",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-08"
     },
     {
       "id": "logseq-blog",
@@ -4694,7 +4724,8 @@
       "url": "https://blog.logseq.com/",
       "type": "blog",
       "trust_tier": "primary",
-      "volatility": "low"
+      "volatility": "low",
+      "last_checked": "2026-06-08"
     },
     {
       "id": "logseq-docs",
@@ -4702,7 +4733,8 @@
       "url": "https://docs.logseq.com/",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-08"
     },
     {
       "id": "logseq-official",
@@ -4710,15 +4742,26 @@
       "url": "https://logseq.com/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-08"
+    },
+    {
+      "id": "logseq-sync-setup",
+      "label": "Logseq Sync setup guide",
+      "url": "https://blog.logseq.com/how-to-setup-and-use-logseq-sync/",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-08"
     },
     {
       "id": "logseq-pricing",
-      "label": "Source",
-      "url": "https://logseq.com/pricing",
+      "label": "Logseq official site and Sync beta context",
+      "url": "https://logseq.com/",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-08"
     },
     {
       "id": "logseq-repository",
@@ -4726,7 +4769,17 @@
       "url": "https://github.com/logseq/logseq",
       "type": "repository",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-08"
+    },
+    {
+      "id": "logseq-db-changelog",
+      "label": "Logseq DB May 2026 changelog",
+      "url": "https://discuss.logseq.com/t/logseq-db-changelog/30013?page=2",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-08"
     },
     {
       "id": "lovable-docs",
@@ -4788,7 +4841,17 @@
       "url": "https://www.lovart.ai",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-08"
+    },
+    {
+      "id": "lovart-pricing",
+      "label": "Lovart pricing",
+      "url": "https://www.lovart.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-08"
     },
     {
       "id": "lovo-help",
@@ -4820,15 +4883,44 @@
       "url": "https://lumalabs.ai/dream-machine",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-08"
     },
     {
       "id": "luma-pricing",
-      "label": "Source",
+      "label": "Luma pricing",
       "url": "https://lumalabs.ai/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-08"
+    },
+    {
+      "id": "luma-dream-machine-pricing",
+      "label": "Dream Machine plans",
+      "url": "https://lumalabs.ai/learning-hub/dream-machine-support-pricing-information",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-08"
+    },
+    {
+      "id": "luma-ray314-faq",
+      "label": "Ray3.14 FAQ",
+      "url": "https://lumalabs.ai/learning-hub/ray3-faq",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-08"
+    },
+    {
+      "id": "luma-ray3-news",
+      "label": "Ray3 announcement",
+      "url": "https://lumalabs.ai/news/ray3",
+      "type": "newsroom",
+      "trust_tier": "primary",
+      "volatility": "low",
+      "last_checked": "2026-06-08"
     },
     {
       "id": "magnific-official",
@@ -4836,15 +4928,44 @@
       "url": "https://www.magnific.com",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-08"
     },
     {
       "id": "magnific-pricing",
-      "label": "Source",
+      "label": "Magnific pricing",
       "url": "https://www.magnific.com/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-08"
+    },
+    {
+      "id": "magnific-api-pricing",
+      "label": "Magnific API pricing",
+      "url": "https://docs.magnific.com/pricing",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-08"
+    },
+    {
+      "id": "magnific-upscaler-api",
+      "label": "Magnific Upscaler Creative API",
+      "url": "https://docs.magnific.com/api-reference/image-upscaler-creative/image-upscaler",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-08"
+    },
+    {
+      "id": "freepik-magnific-announcement",
+      "label": "Freepik and Magnific announcement",
+      "url": "https://www.freepik.com/blog/magnific/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "low",
+      "last_checked": "2026-06-08"
     },
     {
       "id": "make-ai-agents",
@@ -5015,7 +5136,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-08"
     },
     {
       "id": "mem-pricing",
@@ -5024,7 +5145,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-08"
     },
     {
       "id": "mem-product",
@@ -5033,7 +5154,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-08"
     },
     {
       "id": "meshy-pricing",
@@ -5042,7 +5163,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-09"
+      "last_checked": "2026-06-08"
     },
     {
       "id": "meshy-credit-usage",
@@ -5051,7 +5172,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-09"
+      "last_checked": "2026-06-08"
     },
     {
       "id": "meshy-6-launch",
@@ -5060,7 +5181,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-05-09"
+      "last_checked": "2026-06-08"
     },
     {
       "id": "midjourney-plans-docs",
@@ -5105,7 +5226,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-05-09"
+      "last_checked": "2026-06-08"
     },
     {
       "id": "minimax-pricing",
@@ -5114,7 +5235,34 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-09"
+      "last_checked": "2026-06-08"
+    },
+    {
+      "id": "minimax-m3-model",
+      "label": "MiniMax M3 model page",
+      "url": "https://www.minimax.io/models/text/m3",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-08"
+    },
+    {
+      "id": "minimax-m3-launch",
+      "label": "MiniMax M3 launch post",
+      "url": "https://www.minimax.io/blog/minimax-m3",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-08"
+    },
+    {
+      "id": "minimax-m3-coding-tools",
+      "label": "M3 for AI Coding Tools docs",
+      "url": "https://platform.minimax.io/docs/guides/text-ai-coding-tools",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-08"
     },
     {
       "id": "minimax-speech-official",
@@ -5123,7 +5271,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-05-09"
+      "last_checked": "2026-06-08"
     },
     {
       "id": "minimax-speech-pricing",
@@ -5132,7 +5280,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-09"
+      "last_checked": "2026-06-08"
     },
     {
       "id": "minimax-speech-t2a",
@@ -5141,7 +5289,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-09"
+      "last_checked": "2026-06-08"
     },
     {
       "id": "minimax-speech-voice-cloning",
@@ -5150,7 +5298,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-09"
+      "last_checked": "2026-06-08"
     },
     {
       "id": "mistral-chat",
@@ -5212,7 +5360,8 @@
       "url": "https://modal.com/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-08"
     },
     {
       "id": "morphic-pricing",
@@ -5220,7 +5369,8 @@
       "url": "https://morphic.sh",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-08"
     },
     {
       "id": "mubert-faq",
@@ -5444,7 +5594,8 @@
       "url": "https://www.napkin.ai/pricing/",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-08"
     },
     {
       "id": "neuronwriter-features",
@@ -5583,19 +5734,39 @@
     },
     {
       "id": "ollama-official",
-      "label": "Groq",
-      "url": "https://groq.com",
+      "label": "Ollama official site",
+      "url": "https://ollama.com/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-08"
     },
     {
       "id": "ollama-pricing",
-      "label": "independent benchmarks",
-      "url": "https://pooya.blog/blog/local-ai-ollama-benchmarks-cost-2026/",
+      "label": "Ollama pricing",
+      "url": "https://ollama.com/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-08"
+    },
+    {
+      "id": "ollama-library",
+      "label": "Ollama model library",
+      "url": "https://ollama.com/library",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-08"
+    },
+    {
+      "id": "ollama-releases",
+      "label": "ollama/ollama releases on GitHub",
+      "url": "https://github.com/ollama/ollama/releases",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-08"
     },
     {
       "id": "omniseo-official",
@@ -5621,7 +5792,8 @@
       "url": "https://openwebui.com",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-08"
     },
     {
       "trust_tier": "primary",
@@ -5760,7 +5932,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-09"
+      "last_checked": "2026-06-08"
     },
     {
       "id": "opusclip-plans-credits",
@@ -5769,7 +5941,16 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-09"
+      "last_checked": "2026-06-08"
+    },
+    {
+      "id": "opusclip-credit-consumption",
+      "label": "OpusClip credit mechanics",
+      "url": "https://help.opus.pro/docs/article/how-are-credits-consumed",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-08"
     },
     {
       "id": "opusclip-clipanything",
@@ -5778,7 +5959,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-05-09"
+      "last_checked": "2026-06-08"
     },
     {
       "id": "otter-ai-pricing",
@@ -5919,7 +6100,35 @@
       "url": "https://www.pinecone.io/pricing/",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-08"
+    },
+    {
+      "id": "pinecone-cost-docs",
+      "label": "Pinecone cost docs",
+      "url": "https://docs.pinecone.io/guides/manage-cost/understanding-cost",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-08"
+    },
+    {
+      "id": "pinecone-assistant-pricing",
+      "label": "Pinecone Assistant pricing and limits",
+      "url": "https://docs.pinecone.io/guides/assistant/pricing-and-limits",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-08"
+    },
+    {
+      "id": "pipedream-public-pricing",
+      "label": "Pipedream pricing",
+      "url": "https://pipedream.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-08"
     },
     {
       "id": "pipedream-pricing",
@@ -5927,7 +6136,35 @@
       "url": "https://pipedream.com/docs/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-08"
+    },
+    {
+      "id": "pipedream-mcp-users",
+      "label": "Pipedream MCP end-user docs",
+      "url": "https://pipedream.com/docs/connect/mcp/users",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-08"
+    },
+    {
+      "id": "pipedream-mcp-developers",
+      "label": "Pipedream MCP developer docs",
+      "url": "https://pipedream.com/docs/connect/mcp/developers",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-08"
+    },
+    {
+      "id": "workday-pipedream-signing",
+      "label": "Workday signs Pipedream acquisition agreement",
+      "url": "https://newsroom.workday.com/2025-11-19-Workday-Signs-Definitive-Agreement-to-Acquire-Pipedream",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-08"
     },
     {
       "id": "workday-pipedream-close",
@@ -5936,7 +6173,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-05-09"
+      "last_checked": "2026-06-08"
     },
     {
       "id": "pitch-ai",
@@ -5972,34 +6209,34 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-05-09"
+      "last_checked": "2026-06-08"
     },
     {
       "id": "pixverse-pricing",
-      "label": "PixVerse model pricing",
-      "url": "https://docs.platform.pixverse.ai/model-pricing-796039m0",
+      "label": "PixVerse Platform pricing",
+      "url": "https://docs.platform.pixverse.ai/pricing-796039m0",
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-09"
+      "last_checked": "2026-06-08"
     },
     {
       "id": "pixverse-model-pricing",
-      "label": "PixVerse model pricing",
-      "url": "https://docs.platform.pixverse.ai/model-pricing-796039m0",
+      "label": "PixVerse Platform pricing",
+      "url": "https://docs.platform.pixverse.ai/pricing-796039m0",
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-09"
+      "last_checked": "2026-06-08"
     },
     {
       "id": "pixverse-api-subscriptions",
       "label": "PixVerse API subscription docs",
-      "url": "https://docs.platform.pixverse.ai/how-to-subscribe-api-plans-882969m0",
+      "url": "https://docs.platform.pixverse.ai/subscribe-api-plans-882969m0",
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-09"
+      "last_checked": "2026-06-08"
     },
     {
       "id": "pixverse-api-overview",
@@ -6008,7 +6245,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-05-09"
+      "last_checked": "2026-06-08"
     },
     {
       "id": "pixverse-funding-cntechpost",
@@ -6017,15 +6254,25 @@
       "type": "third_party",
       "trust_tier": "secondary",
       "volatility": "medium",
-      "last_checked": "2026-05-09"
+      "last_checked": "2026-06-08"
     },
     {
       "id": "playground-ai-pricing",
-      "label": "Source",
+      "label": "Playground pricing",
       "url": "https://playground.com/design/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-08"
+    },
+    {
+      "id": "playground-paid-limits",
+      "label": "Playground paid-plan limits",
+      "url": "https://help.playgroundai.com/en/articles/11165689-how-many-images-or-edits-under-the-paid-plans-pro-day-pass",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-08"
     },
     {
       "id": "poe-about",
@@ -6033,7 +6280,8 @@
       "url": "https://poe.com/about",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-08"
     },
     {
       "id": "poe-api-docs",
@@ -6041,7 +6289,8 @@
       "url": "https://poe.com/api_docs",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-08"
     },
     {
       "id": "poe-creator-docs",
@@ -6049,7 +6298,8 @@
       "url": "https://creator.poe.com/docs/server-bots/quick-start",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-08"
     },
     {
       "id": "poe-product",
@@ -6057,7 +6307,26 @@
       "url": "https://poe.com",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-08"
+    },
+    {
+      "id": "poe-subscription-plans",
+      "label": "Poe subscription plans",
+      "url": "https://poe.com/subscription_plans",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-08"
+    },
+    {
+      "id": "poe-purchases-faq",
+      "label": "Poe purchases FAQ",
+      "url": "https://help.poe.com/hc/en-us/articles/19945140063636-Poe-Purchases-FAQs",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-08"
     },
     {
       "id": "postman-ai-engineer",
@@ -6110,7 +6379,8 @@
       "url": "https://qdrant.tech/documentation/",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-08"
     },
     {
       "id": "qdrant-best-paid-tier",
@@ -6118,7 +6388,26 @@
       "url": "https://qdrant.tech/documentation/cloud-pricing-payments/",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-08"
+    },
+    {
+      "id": "qdrant-pricing",
+      "label": "Qdrant pricing",
+      "url": "https://qdrant.tech/pricing/",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-08"
+    },
+    {
+      "id": "qdrant-release-v1-18-2",
+      "label": "Qdrant v1.18.2 release notes",
+      "url": "https://github.com/qdrant/qdrant/releases/tag/v1.18.2",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-08"
     },
     {
       "id": "qodo-best-for",
@@ -6311,7 +6600,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-05-04"
+      "last_checked": "2026-06-09"
     },
     {
       "id": "reflect-pricing",
@@ -6320,7 +6609,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-05-04"
+      "last_checked": "2026-06-09"
     },
     {
       "id": "reka-pricing",
@@ -6329,7 +6618,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-09"
     },
     {
       "id": "relevance-ai-official",
@@ -6337,7 +6626,17 @@
       "url": "https://relevanceai.com/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-09"
+    },
+    {
+      "id": "relevance-ai-plans-docs",
+      "label": "Relevance AI plans and credits documentation",
+      "url": "https://relevanceai.com/docs/admin/subscriptions/plans",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-09"
     },
     {
       "id": "relationalai-snowflake-agentic-decision-intelligence",
@@ -6354,7 +6653,8 @@
       "url": "https://replicate.com/docs/guides/deploy-a-custom-model",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-09"
     },
     {
       "id": "replicate-docs",
@@ -6362,7 +6662,8 @@
       "url": "https://replicate.com/docs",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-09"
     },
     {
       "id": "replicate-official",
@@ -6370,7 +6671,8 @@
       "url": "https://replicate.com/docs/topics/models/official-models",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-09"
     },
     {
       "id": "replicate-pricing",
@@ -6378,7 +6680,8 @@
       "url": "https://replicate.com/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-09"
     },
     {
       "id": "replit-agent-docs",
@@ -6453,7 +6756,8 @@
       "url": "https://www.retellai.com/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-09"
     },
     {
       "id": "retell-ai-knowledge-base",
@@ -6461,7 +6765,8 @@
       "url": "https://docs.retellai.com/build/knowledge-base",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-09"
     },
     {
       "id": "retell-ai-batch-call",
@@ -6469,15 +6774,26 @@
       "url": "https://docs.retellai.com/deploy/make-batch-call",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-09"
+    },
+    {
+      "id": "retell-ai-api-deprecation-2026-06-15",
+      "label": "Retell AI June 15, 2026 legacy endpoint deprecation",
+      "url": "https://docs.retellai.com/deprecation-notice/2026/06-15_legacy_list_endpoints",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-09"
     },
     {
       "id": "riverside-pricing",
       "label": "Riverside pricing",
-      "url": "https://riverside.fm/pricing",
+      "url": "https://riverside.com/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-09"
     },
     {
       "id": "riverside-high-quality-tracks",
@@ -6485,7 +6801,8 @@
       "url": "https://support.riverside.com/hc/en-us/articles/5260109014045-About-high-quality-tracks",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-09"
     },
     {
       "id": "riverside-4k-recording",
@@ -6493,7 +6810,8 @@
       "url": "https://support.riverside.com/hc/en-us/articles/5588601739165-Guide-Recording-in-4K",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-09"
     },
     {
       "id": "riverside-ai-tools",
@@ -6501,7 +6819,8 @@
       "url": "https://support.riverside.com/hc/en-us/articles/13315511579037-AI-Tools-Overview",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-09"
     },
     {
       "id": "riverside-about",
@@ -6509,7 +6828,8 @@
       "url": "https://riverside.com/about",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-09"
     },
     {
       "id": "rodin-pricing",
@@ -6526,7 +6846,8 @@
       "url": "https://docs.rork.com/faq/technical",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-09"
     },
     {
       "id": "rork-best-paid-tier",
@@ -6534,7 +6855,8 @@
       "url": "https://docs.rork.com/introduction/subscriptions",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-09"
     },
     {
       "id": "rork-coding-agent",
@@ -6542,7 +6864,8 @@
       "url": "https://docs.rork.com/",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-09"
     },
     {
       "id": "rork-github-sync",
@@ -6550,7 +6873,8 @@
       "url": "https://docs.rork.com/tutorials/how-to-connect-github",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-09"
     },
     {
       "id": "rork-api-guide",
@@ -6558,7 +6882,8 @@
       "url": "https://docs.rork.com/features-apis/apis/how-to-connect-an-api-to-your-project",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-09"
     },
     {
       "id": "rork-app-store-checklist",
@@ -6566,7 +6891,8 @@
       "url": "https://docs.rork.com/submitting-to-app-store/apple/app-store-checklist",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-09"
     },
     {
       "id": "rows-ai",
@@ -8296,7 +8622,17 @@
       "url": "https://business.linkedin.com/hire/recruiter",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-08"
+    },
+    {
+      "id": "linkedin-hiring-assistant",
+      "label": "LinkedIn Hiring Assistant",
+      "url": "https://business.linkedin.com/hire/hiring-assistant",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-08"
     },
     {
       "id": "paradox-recruiters",
@@ -8304,7 +8640,26 @@
       "url": "https://www.paradox.ai/solutions/recruiters",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-08"
+    },
+    {
+      "id": "workday-paradox-close",
+      "label": "Workday completes Paradox acquisition",
+      "url": "https://investor.workday.com/news-and-events/press-releases/news-details/2025/Workday-Completes-Acquisition-of-Paradox-10-01-2025/default.aspx",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-08"
+    },
+    {
+      "id": "workday-paradox-ats",
+      "label": "Workday Paradox Conversational ATS availability",
+      "url": "https://investor.workday.com/news-and-events/press-releases/news-details/2026/Paradox-Conversational-Applicant-Tracking-System-ATS-Now-Available-Through-Workday-Helping-Organizations-Hire-Frontline-Workers-Faster/default.aspx",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-08"
     },
     {
       "id": "ag2-releases",
@@ -8553,7 +8908,17 @@
       "url": "https://github.com/miurla/morphic",
       "type": "repository",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-08"
+    },
+    {
+      "id": "morphic-releases",
+      "label": "miurla/morphic releases on GitHub",
+      "url": "https://github.com/miurla/morphic/releases",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-08"
     },
     {
       "id": "open-webui-enterprise",
@@ -8561,7 +8926,26 @@
       "url": "https://docs.openwebui.com/enterprise/",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-08"
+    },
+    {
+      "id": "open-webui-releases",
+      "label": "open-webui/open-webui releases on GitHub",
+      "url": "https://github.com/open-webui/open-webui/releases",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-08"
+    },
+    {
+      "id": "open-webui-github",
+      "label": "open-webui/open-webui on GitHub",
+      "url": "https://github.com/open-webui/open-webui",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-08"
     },
     {
       "id": "openai-codex-mobile",
@@ -8577,7 +8961,17 @@
       "url": "https://reclaim.ai/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-09"
+    },
+    {
+      "id": "reclaim-about",
+      "label": "Reclaim.ai about page",
+      "url": "https://reclaim.ai/about",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-09"
     },
     {
       "id": "reclaim-pricing",
@@ -8585,7 +8979,53 @@
       "url": "https://reclaim.ai/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-09"
+    },
+    {
+      "id": "reclaim-pricing-help",
+      "label": "Reclaim.ai pricing and plans help",
+      "url": "https://help.reclaim.ai/en/articles/6405975-how-reclaim-s-pricing-and-plans-work",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-09"
+    },
+    {
+      "id": "reclaim-outlook-help",
+      "label": "Reclaim.ai Microsoft Outlook integration help",
+      "url": "https://help.reclaim.ai/en/articles/9590707-microsoft-outlook-integration-overview-updates",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-09"
+    },
+    {
+      "id": "reka-homepage",
+      "label": "Reka homepage",
+      "url": "https://reka.ai/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-09"
+    },
+    {
+      "id": "reka-edge-product",
+      "label": "Reka Edge product page",
+      "url": "https://reka.ai/reka-edge",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-09"
+    },
+    {
+      "id": "reka-models-docs",
+      "label": "Reka model documentation",
+      "url": "https://docs.reka.ai/chat/models",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-09"
     },
     {
       "id": "reka-edge-launch",
@@ -8594,7 +9034,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-09"
     },
     {
       "id": "runway-agent",

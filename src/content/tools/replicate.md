@@ -11,8 +11,8 @@ pricing_model: paid
 price_range: Usage-based by official model output or hardware runtime
 status: active
 launched: 2019
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-09
+last_verified: 2026-06-09
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -32,58 +32,58 @@ facts:
     source: https://replicate.com/docs/topics/models/official-models
     source_label: Replicate official models
     source_id: replicate-official
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-09'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-13'
+    next_review_at: '2026-12-09'
   pricing_anchor:
-    value: "Hardware billed by the second. CPU at $0.09/hr ($0.36/hr standard), T4 at $0.81/hr, L40S at $3.51/hr ($7.02 for 2x), A100 80GB at $5.04/hr ($10.08 for 2x), H100 at $5.49/hr ($10.98 for 2x). Output-priced examples include FLUX 1.1 Pro at $0.04 per image and Claude 3.7 Sonnet at $3 per million input tokens. Private deployments bill setup, idle, and active time."
+    value: "Hardware billed by the second. CPU at $0.09/hr ($0.36/hr standard), T4 at $0.81/hr, L40S at $3.51/hr ($7.02 for 2x), A100 80GB at $5.04/hr ($10.08 for 2x), and H100 at $5.49/hr ($10.98 for 2x). Output-priced examples include FLUX 1.1 Pro at $0.04 per image, Wan 2.1 i2v at $0.09-$0.25 per output-video second, and Claude 3.7 Sonnet at $3 per million input tokens plus $0.015 per thousand output tokens. Private deployments bill setup, idle, and active time unless labeled fast-booting fine-tunes."
     source: https://replicate.com/pricing
     source_label: Replicate pricing
     source_id: replicate-pricing
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-09'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-11'
+    next_review_at: '2026-09-09'
   api_available:
     value: 'Replicate is API-first: models can be run through hosted endpoints and integrated into apps from the documentation.'
     source: https://replicate.com/docs
     source_label: Replicate documentation
     source_id: replicate-docs
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-09'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-13'
+    next_review_at: '2026-12-09'
   open_source_or_local:
     value: Strong open-model coverage, but Replicate is primarily hosted infrastructure rather than a local inference app.
     source: https://replicate.com/docs/topics/models/official-models
     source_label: Replicate official models
     source_id: replicate-official
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-09'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-13'
+    next_review_at: '2026-12-09'
   enterprise_controls:
     value: Custom model deployment is available for teams that need private deployments beyond public model endpoints.
     source: https://replicate.com/docs/guides/deploy-a-custom-model
     source_label: Replicate custom model deployment docs
     source_id: replicate-custom-models
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-09'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-13'
+    next_review_at: '2026-12-09'
   watch_out_for:
     value: 'The buyer risk is variable usage economics: the cheapest prototype can become expensive when model runtime, retries,
       and dedicated hardware are not monitored. H100 at $5.49/hr and A100 at $5.04/hr can run up fast on private deployments billed for setup and idle.'
     source: https://replicate.com/pricing
     source_label: Replicate pricing
     source_id: replicate-pricing
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-09'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-11'
+    next_review_at: '2026-09-09'
 tags: [model-hosting, api, image-generation, video-generation, open-models, developers, inference]
-seo_title: "Replicate Review: AI Model API, Official Models & Pricing (May 2026)"
+seo_title: "Replicate Review: AI Model API, Official Models & Pricing (June 2026)"
 meta_description: "Replicate lets developers run official, community, and custom AI models by API. It is strongest for open-model image, video, and experimental inference workflows."
 author: aipedia.wiki Editorial
 best_for:
@@ -147,7 +147,7 @@ Replicate uses two main pricing patterns. Some public models are billed by input
 
 Private models are different. Most private models run on dedicated hardware, so teams can pay for setup time, idle time, and active processing time while the deployment is online. Fast-booting fine-tunes are an exception when labeled that way. This is fair for experimentation but needs monitoring in production. Slow models, high-resolution outputs, idle deployments, and retries can move the bill faster than a flat SaaS plan.
 
-As verified on 2026-05-13, Replicate's hardware rates run from CPU at $0.09/hr (small) or $0.36/hr (standard), through T4 at $0.81/hr, L40S at $3.51/hr (2x at $7.02), A100 80GB at $5.04/hr (2x at $10.08), and H100 at $5.49/hr (2x at $10.98). 4x and 8x GPU configurations require committed-spend contracts. Output-priced examples include FLUX 1.1 Pro at $0.04 per image, Claude 3.7 Sonnet at $3 per million input tokens, and Deepseek R1 at $3.75 per million input tokens. Enterprise and volume-discount conversations can add higher GPU limits, performance SLAs, priority support, onboarding help, and custom-model optimization.
+As verified on 2026-06-09, Replicate's hardware rates run from CPU at $0.09/hr (small) or $0.36/hr (standard), through T4 at $0.81/hr, L40S at $3.51/hr (2x at $7.02), A100 80GB at $5.04/hr (2x at $10.08), and H100 at $5.49/hr (2x at $10.98). 4x and 8x GPU configurations require committed-spend contracts. Output-priced examples include FLUX 1.1 Pro at $0.04 per image, Wan 2.1 i2v at $0.09 per second of 480p output video or $0.25 per second of 720p output video, Claude 3.7 Sonnet at $3 per million input tokens plus $0.015 per thousand output tokens, and DeepSeek R1 at $3.75 per million input tokens plus $0.01 per thousand output tokens. Enterprise and volume-discount conversations can add higher GPU limits, performance SLAs, priority support, onboarding help, and custom-model optimization.
 
 ## Evaluation checklist
 
@@ -177,7 +177,7 @@ It becomes less compelling when the model choice is settled and traffic is high.
 
 ## Methodology
 
-Last verified 2026-05-13 against Replicate's official model and pricing documentation. Scoring emphasizes model breadth, developer experience, production stability, and cost predictability.
+Last verified 2026-06-09 against Replicate's official model and pricing documentation. Scoring emphasizes model breadth, developer experience, production stability, and cost predictability.
 
 ## FAQ
 

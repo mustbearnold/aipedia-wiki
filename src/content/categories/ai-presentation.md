@@ -5,10 +5,10 @@ title: AI Presentation Tools
 description: AI tools for turning prompts, outlines, docs, and written ideas into decks, visual stories, and presentation assets.
 tool_count: 8
 seo_title: "Best AI Presentation Tools: Gamma, Canva, Pitch & Beautiful.ai (June 2026)"
-meta_description: "Updated June 6, 2026: Gamma wins prompt-to-deck, Canva wins easy assets, Pitch wins team workflow, and deck export, AI credits, and trial caveats were rechecked."
+meta_description: "Updated June 8, 2026: Gamma wins prompt-to-deck, Canva wins easy assets, Pitch wins team workflow, and Tome migration pages now route buyers to active replacements."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-06
-last_verified: 2026-06-06
+last_updated: 2026-06-08
+last_verified: 2026-06-08
 update_frequency: monthly
 top_picks:
   best_overall:
@@ -31,7 +31,7 @@ The best AI presentation tool for most buyers is [Gamma](/tools/gamma/) because 
 
 [Pitch](/tools/pitch/) is the better pick when the deck is a team workflow. It is less about one-shot magic and more about live collaboration, comments, external guests, PowerPoint export, custom fonts, and analytics. [Beautiful.ai](/tools/beautiful-ai/) is the better pick when the content is known but the layout needs to stay polished under brand control; the June 1 check keeps Pro at $12/month on annual billing or $45 monthly, Team at $40/month per user on annual billing or $50 monthly, and Custom for 20+ seats. [Napkin AI](/tools/napkin-ai/) is not a full deck generator, but it is one of the best budget tools in this category because it turns text into diagrams, flowcharts, and slide-ready visuals.
 
-Do not shortlist [Tome](/tools/tome/) for new presentation work. The original Tome presentation product is discontinued, and AiPedia treats old Tome comparisons as historical or merge/noindex candidates, not live buyer recommendations.
+Do not shortlist [Tome](/tools/tome/) for new presentation work. The original Tome presentation product is discontinued, and AiPedia treats old Tome comparisons as migration pages, not live buyer recommendations. The June 8 comparison cleanup keeps the replacement map current: [Gamma vs Tome](/compare/gamma-vs-tome/) is the narrative deck lane, [Beautiful.ai vs Tome](/compare/beautiful-ai-vs-tome/) is the polished business-slide lane, [Pitch vs Tome](/compare/pitch-vs-tome/) is the sales/team workflow lane, [Decktopus AI vs Tome](/compare/decktopus-vs-tome/) is the interactive proposal lane, and [Presentations.AI vs Tome](/compare/presentations-ai-vs-tome/) is the branded AI deck lane.
 
 For prompt-to-prototype work that overlaps deck creation, also evaluate [Claude Design](/tools/claude-design/) (launched April 17, 2026). It competes with Gamma when the buyer wants generated UI mockups, landing-page concepts, and visual design artifacts alongside slide-style output. The June 2 check keeps it in the Claude Pro-and-up lane and avoids claiming a newer Design-specific backing model until Anthropic publishes that on a Claude Design source.
 
@@ -49,7 +49,7 @@ Pick Pitch when decks need owners, comments, guests, versioning, export, and tea
 Pick Beautiful.ai when the goal is "make this look professional and stay on brand." Beautiful.ai's current AI presentation page emphasizes a guided AI creation workflow, outline review, Smart Slides, custom AI image styles, themes, brand control, and data-aware slides. Its June 1 pricing check also confirms the 14-day Pro trial requires a card. It is the right short list for consultants, sales teams, operations teams, and executives who know the story but hate layout cleanup.
 
 **Slide visuals and diagrams: [Napkin AI](/tools/napkin-ai/).**
-Pick Napkin AI when the bottleneck is not the whole deck, but the visual explanation inside the deck. Its current pricing page lists a free plan with weekly AI credits, unlimited visual editing, file import, PNG/PDF export, and paid Plus/Pro plans for PPT/SVG export and branding. That makes it a useful budget pick for founders, teachers, consultants, and writers who need diagrams before they need a full presentation system.
+Pick Napkin AI when the bottleneck is not the whole deck, but the visual explanation inside the deck. Its June 8 pricing page check keeps Free at 500 weekly AI credits with unlimited visual editing, file import, PNG/PDF export, and Napkin branding; Plus at $9/person/month with 10,000 monthly credits and PPT/SVG export; and Pro at $22/person/month with 30,000 monthly credits, uploaded fonts, custom branding, and optional credit top-ups. That makes it a useful budget pick for founders, teachers, consultants, and writers who need diagrams before they need a full presentation system.
 
 **Interactive presenter workflows: [Decktopus AI](/tools/decktopus/).**
 Pick Decktopus when a deck needs built-in forms, Q&A, analytics, embedded pages, custom domains, voice recording, webhooks, or lead capture. It is not the cleanest default for executive polish, but it is more useful than a plain deck generator when the presentation is also a microsite, feedback form, training asset, or sales funnel. Decktopus pricing and FAQ details were rechecked on June 5, 2026; Pro remains $14.99/month billed annually and Business remains $34.99/user/month billed annually.
@@ -131,8 +131,9 @@ Affiliate availability does not determine ranking. A monetizable tool can be inc
 - Pitch AI presentation maker, pricing, and AI credits: [https://pitch.com/use-cases/ai-presentation-maker](https://pitch.com/use-cases/ai-presentation-maker), [https://pitch.com/pricing/us](https://pitch.com/pricing/us), [https://help.pitch.com/en/articles/12755590-guide-to-ai-credits](https://help.pitch.com/en/articles/12755590-guide-to-ai-credits) (verified 2026-06-06)
 - Decktopus pricing and feature FAQ: [https://www.decktopus.com/pricing](https://www.decktopus.com/pricing) (verified 2026-06-06)
 - Presentations.AI pricing and product site: [https://www.presentations.ai/pricing](https://www.presentations.ai/pricing), [https://www.presentations.ai/](https://www.presentations.ai/) (verified 2026-06-06)
-- Napkin AI pricing: [https://www.napkin.ai/pricing/](https://www.napkin.ai/pricing/) (verified 2026-06-06)
+- Napkin AI pricing: [https://www.napkin.ai/pricing/](https://www.napkin.ai/pricing/) (verified 2026-06-08)
 - Prezi pricing and plan support: [https://prezi.com/pricing/](https://prezi.com/pricing/), [https://support.prezi.com/hc/en-us/articles/360003478934-Guide-to-Prezi-plans](https://support.prezi.com/hc/en-us/articles/360003478934-Guide-to-Prezi-plans) (verified 2026-06-06)
 - Gemini in Slides help: [https://support.google.com/docs/answer/14355071](https://support.google.com/docs/answer/14355071) (verified 2026-06-06)
 - Claude Design launch and access: [https://www.anthropic.com/news/claude-design-anthropic-labs](https://www.anthropic.com/news/claude-design-anthropic-labs), [https://claude.com/pricing](https://claude.com/pricing) (verified 2026-06-02)
-- Tome/Lightfield pivot coverage: [https://venturebeat.com/technology/tomes-founders-ditch-viral-presentation-app-with-20m-users-to-build-ai](https://venturebeat.com/technology/tomes-founders-ditch-viral-presentation-app-with-20m-users-to-build-ai)
+- Tome Slides sunset notice: [https://tome.app/help/en/articles/10744234-tome-slides-is-sunsetting-on-april-30th-2025](https://tome.app/help/en/articles/10744234-tome-slides-is-sunsetting-on-april-30th-2025) (verified 2026-06-08)
+- Tome/Lightfield pivot coverage: [https://venturebeat.com/technology/tomes-founders-ditch-viral-presentation-app-with-20m-users-to-build-ai](https://venturebeat.com/technology/tomes-founders-ditch-viral-presentation-app-with-20m-users-to-build-ai) (verified 2026-06-08)

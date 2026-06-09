@@ -5,10 +5,10 @@ title: AI Video Generation
 description: Current AI video tools for raw model testing, conversational video editing, production workflows, budget social clips, avatar videos, localization, and business training.
 tool_count: 27
 seo_title: "Best AI Video Tools (June 2026): Gemini Omni, Seedance, Kling, Veo & Runway"
-meta_description: "Updated June 7, 2026: compare Gemini Omni, Seedance 2.0, Kling 3.0, Veo 3.1, Hailuo 2.3, Runway Max, Pika, HeyGen, Synthesia, and Sora sunset caveats by model quality, workflow, pricing, and buyer fit."
+meta_description: "Updated June 8, 2026: compare Gemini Omni, Seedance 2.0, Kling 3.0, Veo 3.1, Hailuo 2.3, Runway Max, Luma Ray3.14, Pika, HeyGen, Synthesia, and Sora sunset caveats by model quality, workflow, pricing, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-07
-last_verified: 2026-06-07
+last_updated: 2026-06-08
+last_verified: 2026-06-08
 update_frequency: weekly
 top_picks:
   best_overall: seedance
@@ -30,7 +30,9 @@ AI video is no longer one clean product category. On June 7, 2026, the useful bu
 
 **Do not treat Sora 2 Pro as a fresh buying route.** OpenAI says the Sora web and app experiences were discontinued on April 26, 2026, and the Sora API will be discontinued on September 24, 2026. Use Sora only for legacy exports, migration planning, or a short API sunset comparison; do not build a new video workflow around it.
 
-**Test [Hailuo 2.3](/tools/hailuo/) as the current budget challenger.** Hailuo 2.3 is the current generation buyers should benchmark against Pika and Luma for low-cost social and ideation work, not the older 2.x branches still mentioned in stale lists. The June 2 check keeps MiniMax token plans and video packages as the purchase math: subscriptions can include large token buckets, while video API/package routes need unit-level cost modeling before scale.
+**Test [Hailuo 2.3](/tools/hailuo/) as the current budget challenger.** Hailuo 2.3 is the current generation buyers should benchmark against Pika and Luma for low-cost social and ideation work, not the older 2.x branches still mentioned in stale lists. The June 8 MiniMax pricing check keeps token plans, video packages, and pay-as-you-go video rates as the purchase math: subscriptions can include daily Hailuo quotas, while video API/package routes need unit-level cost modeling before scale.
+
+**Use [Luma Dream Machine](/tools/luma/) when camera language is the purchase reason.** The June 8 refresh separates Dream Machine web pricing from broader Luma app pricing: Dream Machine web support lists Free, Lite $9.99/month, Plus $29.99/month, Unlimited $94.99/month, and Enterprise custom, while Luma's main app pricing lists Plus $30/month, Pro $90/month, and Ultra $300/month. Ray3.14 is strong for pan, tilt, dolly, orbit, image-to-video, HDR/EXR workflows, and 4K upscaling, but Ray3.14 itself is silent and the FAQ says it is web-only rather than API-native.
 
 **Use [Higgsfield](/tools/higgsfield/) when the job is cinematic camera language, character consistency, and social creative in one multi-model studio.** The June 2 check puts individual annual tiers at Starter $15/mo, Plus $39/mo, Ultra $99/mo, and Teams from $59/seat/mo annual. The buyer caveat is surface-specific economics: unlimited model and free-generation allowances apply on higgsfield.ai, not MCP, CLI, Canvas, or Supercomputer.
 
@@ -40,7 +42,7 @@ AI video is no longer one clean product category. On June 7, 2026, the useful bu
 
 **June 7 switching-route refresh:** AiPedia rechecked the Runway and Synthesia alternatives guides against current official sources. The current hub logic still holds: Seedance first for raw model tests, Kling as the value/cinematic challenger, Veo for Google/API/provenance, Runway for production workflow, Pika/Luma/Hailuo for lighter social experiments, and Synthesia/HeyGen/Tavus/D-ID/Hedra/Argil/Captions for avatar-led business video.
 
-The June 6 [best AI video generator guide](/guides/best-ai-video-generator/) refresh now mirrors this hub on mobile: no wide comparison table as the primary experience, Seedance/Kling/Veo/Runway/Pika/HeyGen kept in separate buying lanes, and explicit rights, credit, region, procurement, and production-workflow checks before CTAs.
+The June 6 [best AI video generator guide](/guides/best-ai-video-generator/) refresh now mirrors this hub on mobile: no wide comparison table as the primary experience, separate buying lanes for Seedance, Kling, Veo, Runway, Pika, and HeyGen, plus explicit rights, credit, region, procurement, and production-workflow checks before CTAs.
 
 ## How To Choose
 
@@ -50,7 +52,7 @@ If you need the highest raw model ceiling, run the same prompt set through Seeda
 
 If you need a finished workflow, start with Runway. The value is consolidation: one place to test multiple video routes, edit shots, manage projects, remove watermarks on paid plans, store assets, work with a team, and move toward API or enterprise usage.
 
-If you need lower-cost social clips or effects, use [Pika](/tools/pika/), [Luma](/tools/luma/), [Wan](/tools/wan/), [Hailuo](/tools/hailuo/), [Vidu](/tools/vidu/), [Pixverse](/tools/pixverse/), or similar tools as test beds. They can be useful for ideation, short-form clips, image-to-video, and stylized effects, but do not assume they beat the frontier model set without a prompt-by-prompt test.
+If you need lower-cost social clips, effects, or camera-control experiments, use [Pika](/tools/pika/), [Luma](/tools/luma/), [Wan](/tools/wan/), [Hailuo](/tools/hailuo/), [Vidu](/tools/vidu/), [Pixverse](/tools/pixverse/), or similar tools as test beds. They can be useful for ideation, short-form clips, image-to-video, stylized effects, and camera language, but do not assume they beat the frontier model set without a prompt-by-prompt test.
 
 If you need a person on camera, use avatar tools. The [best AI avatar video generator guide](/guides/best-ai-avatar-video-generator/) covers HeyGen, Synthesia, Tavus, D-ID, Argil, Hedra, and Captions-style products because they solve a different problem: generating, localizing, editing, or scaling presenter-led business video. Hedra now sits closer to a pooled-credit creative studio than a narrow talking-head generator, so buyers should test its character workflow and third-party model credit rates separately.
 
@@ -68,7 +70,9 @@ If you need a person on camera, use avatar tools. The [best AI avatar video gene
 
 **Best budget/effects pick:** Pika. Use it for quick social clips, playful effects, image-to-video experiments, and low-commitment creator workflows.
 
-**Best PixVerse use case:** treat [PixVerse](/tools/pixverse/) as a budget/stylized test bed and API-credit route, not as a default enterprise video system. Its official Platform docs publish V6/C1/V5.6 credit rates and make clear API memberships are separate from PixVerse Web memberships, so buyers should verify web-plan pricing, watermark rules, commercial rights, and upload/data policy before paying.
+**Best explicit camera-control pick:** Luma Dream Machine. Use it when the test prompt depends on pan, tilt, dolly, orbit, previz, animatics, or image-to-video camera language. Skip it as the default API pick until Ray3.14 API availability is directly verified.
+
+**Best PixVerse use case:** treat [PixVerse](/tools/pixverse/) as a budget/stylized test bed and API-credit route, not as a default enterprise video system. Its June 8 Platform docs publish C1, V6, V5.6, and V5.5 credit rates, one-time API credit packs, and Essential/Scale/Business API memberships that are separate from PixVerse Web memberships, so buyers should verify web-plan pricing, watermark rules, commercial rights, and upload/data policy before paying.
 
 **Best avatar-video pick:** [HeyGen](/tools/heygen/) for creator/business presenter video, sales video, localization, digital twins, and fast templates. The June 7 avatar refresh keeps HeyGen app plans separate from Avatar IV/V API pricing, treats Synthesia as the enterprise training/L&D shortlist when credits, SCORM, LMS, workplace governance, and structured training workflows matter, and routes live-agent buyers toward Tavus or D-ID. Use the June 6 verified [avatar-video buyer guide](/guides/best-ai-avatar-video-generator/) when the choice is between HeyGen, Synthesia, Tavus, D-ID, Hedra, Argil, and Captions. If Synthesia is already the incumbent, use the June 7 verified [Synthesia alternatives guide](/guides/synthesia-alternatives/) to decide whether switching is worth the migration cost.
 
@@ -106,9 +110,11 @@ Do not make a wide comparison table the mobile experience. Mobile buyers need st
 
 **Camera-control creator or agency:** test Higgsfield when shot presets, Soul character anchoring, and multi-model selection matter more than owning a single base model. Keep Runway in the comparison if edit timeline, API maturity, or team production workflow is more important.
 
+**Camera-language or animatics buyer:** test Luma Dream Machine when shot direction is the core job. Buy Web Plus for commercial no-watermark Dream Machine work, Web Unlimited for relaxed-mode volume, and keep Runway or Veo in the shortlist when timeline editing or API procurement is more important.
+
 **YouTube creator:** use the refreshed [YouTube creators AI guide](/guides/best-ai-for-youtube-creators/) when the buyer needs to choose between Descript editing, ChatGPT scripts, Canva or Midjourney thumbnails, ElevenLabs narration, OpusClip Shorts, and Runway B-roll. The June 6 guide adds current media-hour, AI-credit, voice-consent, music-rights, generated-video credit, and YouTube altered/synthetic disclosure checks before creators stack subscriptions.
 
-**Long-form repurposing buyer:** use [OpusClip](/tools/opusclip/) when the source is already a podcast, webinar, livestream, interview, or YouTube video and the job is finding clips, adding captions, reframing to 9:16, and scheduling Shorts/Reels/TikTok posts. It is not a text-to-video model; compare it against Descript, Captions, [Castmagic](/tools/castmagic/) (re-verified June 2, 2026 for podcast-to-content pipelines), and InVideo before comparing it against Seedance, Kling, Veo, or Runway.
+**Long-form repurposing buyer:** use [OpusClip](/tools/opusclip/) when the source is already a podcast, webinar, livestream, interview, or YouTube video and the job is finding clips, adding captions, reframing to 9:16, and scheduling Shorts/Reels/TikTok posts. The June 8 check keeps Starter at $15/month, Pro at $29/month or $174/year, and credit use tied to source-video minutes rather than exported clip count, with limited Pro API access and Business custom integrations needing direct confirmation. It is not a text-to-video model; compare it against Descript, Captions, [Castmagic](/tools/castmagic/) (re-verified June 2, 2026 for podcast-to-content pipelines), and InVideo before comparing it against Seedance, Kling, Veo, or Runway.
 
 ## Review Standard
 
@@ -167,19 +173,24 @@ Yes, but with honest positioning. They are useful for budget testing, effects, o
 - [Pika pricing](https://pika.art/pricing) (verified 2026-06-06)
 - [Hailuo official site](https://hailuoai.video/) (verified 2026-06-02)
 - [MiniMax video API docs](https://platform.minimax.io/docs/api-reference/video-generation-intro) (verified 2026-06-02)
-- [MiniMax video package pricing](https://platform.minimax.io/docs/guides/pricing-video) (verified 2026-06-02)
-- [MiniMax token subscription pricing](https://platform.minimax.io/docs/guides/pricing-token-plan) (verified 2026-06-02)
+- [MiniMax video package pricing](https://platform.minimax.io/docs/guides/pricing-video) (verified 2026-06-08)
+- [MiniMax token subscription pricing](https://platform.minimax.io/docs/guides/pricing-token-plan) (verified 2026-06-08)
+- [MiniMax pay-as-you-go pricing](https://platform.minimax.io/docs/guides/pricing-paygo) (verified 2026-06-08)
+- [Luma Dream Machine pricing support](https://lumalabs.ai/learning-hub/dream-machine-support-pricing-information) (verified 2026-06-08)
+- [Luma pricing](https://lumalabs.ai/pricing) (verified 2026-06-08)
+- [Luma Ray3.14 FAQ](https://lumalabs.ai/learning-hub/ray3-faq) (verified 2026-06-08)
 - [Hedra pricing](https://www.hedra.com/pricing) (verified 2026-06-02)
 - [Hedra models](https://www.hedra.com/models) (verified 2026-06-02)
 - [Higgsfield pricing](https://higgsfield.ai/pricing) (verified 2026-06-02)
 - [Higgsfield about](https://higgsfield.ai/about) (verified 2026-06-02)
 - [ChatGPT pricing](https://chatgpt.com/pricing/) (verified 2026-06-06)
-- [OpusClip pricing](https://www.opus.pro/pricing) (verified 2026-06-06)
-- [OpusClip plans and credits](https://help.opus.pro/docs/article/plans-and-credits) (verified 2026-06-06)
+- [OpusClip pricing](https://www.opus.pro/pricing) (verified 2026-06-08)
+- [OpusClip plans and credits](https://help.opus.pro/docs/article/plans-and-credits) (verified 2026-06-08)
+- [OpusClip credit mechanics](https://help.opus.pro/docs/article/how-are-credits-consumed) (verified 2026-06-08)
 - [Captions pricing](https://captions.ai/pricing) (verified 2026-06-06)
 - [Castmagic pricing](https://www.castmagic.io/pricing) (verified 2026-06-02)
-- [PixVerse Platform model pricing](https://docs.platform.pixverse.ai/model-pricing-796039m0) (verified 2026-05-13)
-- [PixVerse API subscription docs](https://docs.platform.pixverse.ai/how-to-subscribe-api-plans-882969m0) (verified 2026-05-13)
+- [PixVerse Platform pricing](https://docs.platform.pixverse.ai/pricing-796039m0) (verified 2026-06-08)
+- [PixVerse API subscription docs](https://docs.platform.pixverse.ai/subscribe-api-plans-882969m0) (verified 2026-06-08)
 - [HeyGen pricing](https://www.heygen.com/pricing) (verified 2026-06-07)
 - [InVideo pricing](https://invideo.io/pricing/) (verified 2026-06-06)
 - [CapCut](https://www.capcut.com/) (verified 2026-06-06)

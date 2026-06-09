@@ -5,10 +5,10 @@ title: AI Infrastructure & Model APIs
 description: Developer platforms for LLM routing, pay-as-you-go model APIs, hosted inference, serverless GPUs, vector databases, speech APIs, and production retrieval systems.
 tool_count: 12
 seo_title: "Best AI Infrastructure & Model API Tools (June 2026)"
-meta_description: "Updated June 3, 2026: compare OpenRouter after its $113M Series B, OpenAI API, Claude API, Gemini API, Mistral 3, Groq, Replicate, fal, Fireworks AI, Browserbase, Deepgram, Pinecone, Weaviate, Qdrant, LM Studio, and the June 3 agent-infrastructure wave from NVIDIA, Microsoft, Postman, RelationalAI, 7AI, and the White House."
+meta_description: "Updated June 9, 2026: compare OpenRouter, OpenAI API, Claude API, Gemini API, Mistral, Groq, Replicate, fal, Fireworks AI, Modal, Browserbase, Deepgram, Pinecone, Weaviate, Qdrant, Llama, LM Studio, and current local/open-model infrastructure tradeoffs."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-06
-last_verified: 2026-06-06
+last_updated: 2026-06-09
+last_verified: 2026-06-09
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -38,7 +38,7 @@ The June 3 update widens that control story. Microsoft Build put Work IQ and Fou
 
 **Use [Mistral AI](/tools/mistral-ai/) or [Groq](/tools/groq/) when price/performance, open-model strategy, European infrastructure, or low-latency inference matters.** Mistral 3 shipped on April 28, 2026 and tightened price/performance across the chat, code, and reasoning lineups. Benchmark real prompts before switching because model quality, output length, and retries change the bill.
 
-**Use [Replicate](/tools/replicate/) or [fal.ai](/tools/fal-ai/) when the job is hosted image, video, audio, 3D, or custom-model inference.** Replicate is stronger as a broad model catalog and custom-model deployment layer. fal is stronger when successful-output billing and fast media APIs are the buyer problem; the June 2 check keeps prepaid credits, queue behavior, failed-output billing, and the 50% batch discount as the key pricing details to model.
+**Use [Replicate](/tools/replicate/) or [fal.ai](/tools/fal-ai/) when the job is hosted image, video, audio, 3D, or custom-model inference.** The June 9 Replicate check keeps it strongest as a broad model catalog and custom-model deployment layer: public models may bill by hardware time or by input/output, while most private deployments bill setup, idle, and active time unless they are labeled fast-booting fine-tunes. fal is stronger when successful-output billing and fast media APIs are the buyer problem; the June 2 check keeps prepaid credits, queue behavior, failed-output billing, and the 50% batch discount as the key pricing details to model.
 
 **Use [Fireworks AI](/tools/fireworks-ai/) when the workload is production inference over open or commercial models.** Fireworks is not a consumer chatbot. It belongs here when serverless per-token inference, cached-token discounts, batch jobs, dedicated GPU deployments, fine-tuning, and B200/B300 capacity are the actual purchase.
 
@@ -55,9 +55,10 @@ The June 3 update widens that control story. Microsoft Build put Work IQ and Fou
 | Multi-model LLM routing | [OpenRouter](/tools/openrouter/) | One API, many providers, spend controls, logs, routing | Router fees and provider policy choices still need governance |
 | Direct frontier LLM API | [OpenAI](/tools/chatgpt/), [Claude](/tools/claude/), or [Gemini](/tools/gemini/) | Best when native model features, support, and procurement matter | Long context, outputs, tools, and video can raise cost quickly |
 | Budget/open-model API | [Mistral AI](/tools/mistral-ai/) or [Groq](/tools/groq/) | Useful for cost-sensitive and latency-sensitive workloads | Requires benchmarking against your actual prompts |
-| Hosted model catalog | [Replicate](/tools/replicate/) | Public, proprietary, and custom models without owning GPUs | Runtime billing can surprise teams if generations are slow |
+| Hosted model catalog | [Replicate](/tools/replicate/) | Public, proprietary, and custom models without owning GPUs | Hardware-time, output-priced media, and private-model idle billing need separate cost modeling |
 | Fast media APIs | [fal.ai](/tools/fal-ai/) | Image, video, audio, and 3D APIs with per-output or per-second pricing | Prepaid credits and per-model units need tracking |
 | Production model inference | [Fireworks AI](/tools/fireworks-ai/) | Serverless inference, batch jobs, dedicated GPUs, fine-tuning, and cached-token discounts | Named model rates, GPU utilization, batch timing, and cached-token behavior decide the real bill |
+| Serverless Python/GPU apps | [Modal](/tools/modal/) | Python jobs, web endpoints, queues, sandboxes, and per-second GPU billing without Kubernetes | Region selection, non-preemptible execution, and steady 24/7 GPU load can change the economics |
 | Cloud browser infrastructure | [Browserbase](/tools/browserbase/) | Managed browser sessions, web data APIs, runtime, identity, observability, Stagehand, and MCP | Browser sessions and agent loops need cost, timeout, and credential controls |
 | Speech and voice infrastructure | [Deepgram](/tools/deepgram/) | STT, TTS, audio intelligence, and voice-agent APIs | Voice minutes, channels, model choice, and LLM orchestration affect cost |
 | Model discovery and endpoints | [Hugging Face](/tools/hugging-face/) | Model cards, datasets, Spaces, Inference Endpoints | License and safety checks stay with the builder |
@@ -70,15 +71,16 @@ The June 3 update widens that control story. Microsoft Build put Work IQ and Fou
 - **Cost and latency:** Pick [Mistral AI](/tools/mistral-ai/) or [Groq](/tools/groq/) when you can benchmark quality against real prompts and need tighter unit economics.
 - **Open-model infrastructure:** Pick [Together AI](/tools/together-ai/) when you need hosted inference, tuning, and GPU capacity for open models.
 - **Model catalog and experiments:** Pick [Hugging Face](/tools/hugging-face/) for discovery, datasets, model cards, demos, Spaces, ZeroGPU, and endpoints.
-- **Media and community models:** Pick [Replicate](/tools/replicate/) when the job is running image, video, audio, or custom models by API.
+- **Media and community models:** Pick [Replicate](/tools/replicate/) when the job is running image, video, audio, or custom models by API. The June 9 check confirms buyers should model public output-priced examples separately from hardware-time runs and private deployments that can bill while idle.
 - **Fast media APIs:** Pick [fal.ai](/tools/fal-ai/) when successful-output billing, image/video/audio/3D endpoints, and fast experimentation matter.
 - **Production inference:** Pick [Fireworks AI](/tools/fireworks-ai/) when hosted model APIs, batch inference, dedicated GPU deployments, and fine-tuning are more important than a polished chatbot UI.
 - **Browser automation:** Pick [Browserbase](/tools/browserbase/) when an AI agent, scraper, QA runner, or workflow needs managed browsers, identity, observability, and Stagehand-style automation.
 - **Speech APIs:** Pick [Deepgram](/tools/deepgram/) when speech-to-text, text-to-speech, voice agents, or audio intelligence are infrastructure, not just creator utilities.
-- **Serverless GPU apps:** Pick [Modal](/tools/modal/) when you want Python jobs, endpoints, queues, and GPU workloads without Kubernetes.
-- **Local model runtime:** Pick [LM Studio](/tools/lm-studio/) when developers need a desktop GUI plus OpenAI-compatible local server for Llama, Qwen, Mistral, and other open weights. LM Studio re-licensed to an open license in May 2026, removing the prior commercial-use friction.
-- **Managed vector search:** Pick [Pinecone](/tools/pinecone/) when retrieval is production-critical and you want managed operations.
-- **Open vector databases:** Pick [Weaviate](/tools/weaviate/) or [Qdrant](/tools/qdrant/) when self-hosting optionality and control matter.
+- **Serverless GPU apps:** Pick [Modal](/tools/modal/) when you want Python jobs, endpoints, queues, sandboxes, and GPU workloads without Kubernetes. The June 8 check keeps Starter at $0 with $30/month credits, Team at $250/month plus compute with $100/month credits, B200 at $0.001736/sec, H100 at $0.001097/sec, and B200+ as a compatibility route that can run on B200 or B300 while billing as B200.
+- **Open-weight model family:** Pick [Llama](/tools/llama/) when infrastructure needs self-hostable or provider-hosted open weights rather than a closed frontier API. The June 8 check keeps Maverick as the flagship open-weight lane, Scout as the current Groq fast-inference card at $0.11/M input and $0.34/M output, and Together Maverick at $0.27/M input and $0.85/M output.
+- **Local model runtime:** Pick [LM Studio](/tools/lm-studio/) when developers need a desktop GUI plus native v1 REST API, OpenAI-compatible and Anthropic-compatible endpoints, MCP support, SDKs, CLI server control, and LM Link for Llama, Qwen, Mistral, and other open weights. LM Studio has been free for ordinary home and work use since its July 2025 terms change.
+- **Managed vector search:** Pick [Pinecone](/tools/pinecone/) when retrieval is production-critical and you want managed operations. The June 8 check keeps Starter free, Builder at $20/month flat, Standard at a $50/month minimum plus usage, and Enterprise at a $500/month minimum, so production buyers should model reads, writes, storage, Assistant, inference, backups, imports, and reranking before treating the database price as the whole retrieval bill.
+- **Open vector databases:** Pick [Weaviate](/tools/weaviate/) or [Qdrant](/tools/qdrant/) when self-hosting optionality and control matter. The June 8 Qdrant check keeps the Free Cloud testing tier at 0.5 vCPU, 1GB RAM, and 4GB disk; Standard as usage-based production cloud; Premium as the enterprise-support tier; Hybrid/Private Cloud as the control-first path; and v1.18.2 as the latest release checked, with security fixes included in the release notes.
 
 ## Money Pages To Keep Current
 
@@ -103,7 +105,7 @@ Do not publish infrastructure pages with old flat monthly subscription framing. 
 - [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing) (verified 2026-06-06)
 - [Mistral AI pricing](https://mistral.ai/pricing) (verified 2026-06-06)
 - [Groq pricing](https://groq.com/pricing) (verified 2026-06-06)
-- [Replicate pricing](https://replicate.com/pricing) (verified 2026-06-06)
+- [Replicate pricing](https://replicate.com/pricing) (verified 2026-06-09)
 - [fal Model API pricing docs](https://fal.ai/docs/documentation/model-apis/pricing) (verified 2026-06-02)
 - [Fireworks AI pricing](https://fireworks.ai/pricing) (verified 2026-06-02)
 - [Fireworks billing FAQ](https://docs.fireworks.ai/faq-new/billing-pricing/how-much-does-fireworks-cost) (verified 2026-06-02)
@@ -112,11 +114,20 @@ Do not publish infrastructure pages with old flat monthly subscription framing. 
 - [Deepgram pricing](https://deepgram.com/pricing) (verified 2026-06-06)
 - [Together AI pricing](https://www.together.ai/pricing) (verified 2026-06-06)
 - [Hugging Face pricing](https://huggingface.co/pricing) (verified 2026-06-02)
-- [Modal pricing](https://modal.com/pricing) (verified 2026-06-06)
-- [LM Studio](https://lmstudio.ai/) (verified 2026-06-06)
-- [Pinecone pricing](https://www.pinecone.io/pricing/) (verified 2026-06-06)
+- [Modal pricing](https://modal.com/pricing) (verified 2026-06-08)
+- [Modal GPU docs](https://modal.com/docs/guide/gpu) (verified 2026-06-08)
+- [LM Studio](https://lmstudio.ai/) (verified 2026-06-08)
+- [LM Studio developer docs](https://lmstudio.ai/docs/api) (verified 2026-06-08)
+- [Llama official site](https://ai.meta.com/llama/) (verified 2026-06-08)
+- [Together AI Llama pricing](https://www.together.ai/pricing) (verified 2026-06-08)
+- [Groq Llama 4 Scout model card](https://console.groq.com/docs/model/llama-4-scout-17b-16e-instruct) (verified 2026-06-08)
+- [Pinecone pricing](https://www.pinecone.io/pricing/) (verified 2026-06-08)
+- [Pinecone cost docs](https://docs.pinecone.io/guides/manage-cost/understanding-cost) (verified 2026-06-08)
+- [Pinecone Assistant pricing and limits](https://docs.pinecone.io/guides/assistant/pricing-and-limits) (verified 2026-06-08)
 - [Weaviate pricing](https://weaviate.io/pricing) (verified 2026-06-06)
-- [Qdrant Cloud billing](https://qdrant.tech/documentation/cloud-pricing-payments/) (verified 2026-06-06)
+- [Qdrant pricing](https://qdrant.tech/pricing/) (verified 2026-06-08)
+- [Qdrant Cloud billing](https://qdrant.tech/documentation/cloud-pricing-payments/) (verified 2026-06-08)
+- [Qdrant v1.18.2 release notes](https://github.com/qdrant/qdrant/releases/tag/v1.18.2) (verified 2026-06-08)
 - [CoreWeave autonomous agent improvement launch](https://investors.coreweave.com/news/news-details/2026/CoreWeave-Closes-the-Training-to-Inference-Gap-for-Autonomous-Agent-Improvement/default.aspx) (verified 2026-05-31)
 - [OpenAI Rosalind Biodefense](https://openai.com/index/strengthening-societal-resilience-with-rosalind-biodefense/) (verified 2026-05-31)
 - [Geordie AI Series A](https://www.geordie.ai/resources/geordie-ai-raises-30m-series-a-as-enterprises-race-to-govern-autonomous-ai-agents/) (verified 2026-05-31)

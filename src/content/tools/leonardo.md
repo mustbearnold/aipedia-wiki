@@ -3,17 +3,17 @@ type: tool
 slug: leonardo
 title: Leonardo AI
 tagline: >-
-  AI image generation with the most generous free tier in the category: 150
-  daily tokens, Lucid and Phoenix models, beginner-friendly canvas.
+  AI image, video, design, and motion workspace with 150 free daily Fast Tokens,
+  Lucid/Phoenix models, private paid generations, and separate API credits.
 category: ai-image
 company: leonardo-ai
 url: 'https://leonardo.ai'
 pricing_model: freemium
-price_range: $0-$48/month
+price_range: "$0-$60/month web plans; team and API plans separate"
 status: active
 launched: 2023-01
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-08
+last_verified: 2026-06-08
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -28,54 +28,54 @@ scores:
   longevity: 7
 facts:
   best_for:
-    value: "Best for creators and product teams that want an image-generation studio with model presets, canvas-style editing, and API access for visual production workflows."
+    value: "Best for creators and product teams that want an image, video, design, and motion workspace with model presets, canvas-style editing, paid private generations, and separate API credit paths."
     source: https://leonardo.ai/
     source_label: Leonardo AI official site
     source_id: leonardo-official
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-08'
     volatility: medium
     confidence: medium
-    next_review_at: '2026-11-13'
+    next_review_at: '2026-12-08'
   pricing_anchor:
-    value: "Leonardo publishes plan/token pricing but the pricing page returns 403 to automated monitors. The Apprentice $10 / Artisan $24 / Maestro $48 ladder has held steady through April 2026. Confirm token allowances and API billing manually before procurement."
+    value: "Leonardo's June 2026 public pricing lists Free $0 with 150 Fast Tokens/day, Essential $12/month with 8,500 Fast Tokens/month, Premium $30/month with 25,000 Fast Tokens/month, and Ultimate $60/month with 60,000 Fast Tokens/month. Team Starter/Growth and API pay-as-you-go/custom plans are separate."
     source: https://leonardo.ai/pricing/
     source_label: Leonardo AI pricing
     source_id: leonardo-pricing
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-08'
     volatility: high
     confidence: medium
-    next_review_at: '2026-08-13'
+    next_review_at: '2026-09-08'
   api_available:
-    value: "The developer docs are the source of truth for API authentication, image-generation endpoints, model IDs, and usage patterns."
+    value: "Leonardo's API docs say API access is separate from free or web app subscriptions; users purchase API credits, create API keys, and track API credit usage through API Access."
     source: https://docs.leonardo.ai/docs/getting-started
     source_label: Leonardo AI API docs
     source_id: leonardo-docs
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-08'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-13'
+    next_review_at: '2026-12-08'
   workflow_surface:
-    value: "Evaluate Leonardo as a creative production environment, not just a prompt box. Image editing, model choices, token budgets, and asset workflows drive fit."
+    value: "Evaluate Leonardo as a creative production environment, not just a prompt box. Image generation, video generation, model choices, token budgets, private/public generation rules, training limits, and asset workflows drive fit."
     source: https://leonardo.ai/
     source_label: Leonardo AI official site
     source_id: leonardo-official
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-08'
     volatility: medium
     confidence: medium
-    next_review_at: '2026-11-13'
+    next_review_at: '2026-12-08'
   watch_out_for:
-    value: "Automated pricing checks see 403 responses (confirmed again May 2026), so high-confidence buying decisions should be confirmed manually against the live web UI and terms."
+    value: "Web subscriptions, team subscriptions, top-up tokens, and API credits are separate buying paths. Free creations are public, while private generations start on Essential and above."
     source: https://leonardo.ai/pricing/
     source_label: Leonardo AI pricing
     source_id: leonardo-pricing
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-08'
     volatility: high
     confidence: medium
-    next_review_at: '2026-08-13'
+    next_review_at: '2026-09-08'
 tags: [ai-image, image-generation, text-to-image, free-tier, beginner-friendly, leonardo, lucid-origin, phoenix]
-seo_title: 'Leonardo AI: Features, Pricing & Review (May 2026)'
+seo_title: 'Leonardo AI: Features, Pricing & Review (June 2026)'
 meta_description: >-
-  Leonardo AI offers 150 free tokens/day with Lucid Origin, Lucid Realism, and Phoenix 1.0 models. Paid plans $10-$48/month. The most generous free tier in AI image generation.
+  Leonardo AI offers 150 free Fast Tokens/day. Verified June 8, 2026: Essential is $12/mo, Premium $30/mo, Ultimate $60/mo, with team and API plans separate.
 author: aipedia.wiki Editorial
 best_for:
   - beginners evaluating AI image generation
@@ -90,7 +90,7 @@ not_best_for:
   - users needing guaranteed text rendering
   - agencies with strict IP indemnification requirements
 quick_answer: >-
-  Leonardo AI runs the most generous free tier in AI image generation: 150 tokens per day across Lucid Origin, Lucid Realism, and Phoenix 1.0 models. Paid plans start at $10/month. Best entry point for beginners, game-asset creators, and daily social media producers. Midjourney still leads on aesthetic ceiling.
+  Leonardo AI is an easy free entry point for AI image generation, with 150 Fast Tokens per day and public creations on Free. Paid web plans now start with Essential at $12/month for 8,500 Fast Tokens, private generations, enhanced quality, unlimited collections, and top-up tokens. Premium is $30/month for 25,000 Fast Tokens and relaxed image generation on selected models; Ultimate is $60/month for 60,000 Fast Tokens plus relaxed image and video generation on selected models. API access is a separate credit path, not simply bundled into the web subscription.
 price_history:
   - date: 2025-09-01
     plan: "Lucid Origin"
@@ -112,14 +112,21 @@ price_history:
     source: "https://leonardo.ai/pricing"
     source_label: "Source"
     source_id: leonardo-pricing
-    note: "Re-verified. Pricing page continues to return 403 to automated monitors. Tier prices, token allowances, and 150/day free token cap unchanged on third-party reviews and help docs in May 2026."
+    note: "Historical check from the previous Leonardo plan ladder. Superseded by the June 8, 2026 official Free / Essential / Premium / Ultimate public pricing refresh."
+  - date: 2026-06-08
+    plan: "Free / Essential / Premium / Ultimate"
+    price: "$0 / $12 / $30 / $60 per month"
+    source: "https://leonardo.ai/pricing"
+    source_label: "Leonardo.Ai pricing"
+    source_id: leonardo-pricing
+    note: "Official pricing now lists Free with 150 Fast Tokens/day, Essential with 8,500 Fast Tokens/month, Premium with 25,000 Fast Tokens/month, Ultimate with 60,000 Fast Tokens/month, plus separate team and API pay-as-you-go/custom plans."
 ---
 
 # Leonardo AI
 
-Leonardo Interactive Pty Ltd.'s web-based image generator. **Lucid Origin** and **Lucid Realism** are the current flagship models, with **Phoenix 1.0** still in rotation for prompt-faithful output.
+Leonardo Interactive Pty Ltd.'s web-based image, video, design, and motion workspace. **Lucid Origin** and **Lucid Realism** remain important Leonardo models, with **Phoenix 1.0** and **Phoenix 0.9** still listed on the current pricing page for selected relaxed-generation support.
 
-The free tier runs 150 tokens per day with no expiry. That is the most generous free offering in the category.
+The free tier runs 150 Fast Tokens per day. That is still one of the easiest free entry points in AI image generation, but the buying details changed: the old Apprentice / Artisan / Maestro ladder is stale. Leonardo's current public web plans are Free, Essential, Premium, and Ultimate, with team and API plans separate.
 
 ## System Verdict
 
@@ -127,7 +134,7 @@ The free tier runs 150 tokens per day with no expiry. That is the most generous 
 >
 > **Skip it if peak aesthetic quality is the priority.** [Midjourney](/tools/midjourney/) V7 still leads on cinematic composition and stylized output. [Flux](/tools/flux/) wins on edit fidelity and open weights. [Ideogram](/tools/ideogram/) wins on text rendering.
 >
-> **Who pays which tier:** Free for learning and casual posting, Apprentice $10/mo for private generations, Artisan $24/mo for API access, Maestro $48/mo for sustained team workloads.
+> **Who pays which tier:** Free for learning and casual posting when public generations are acceptable, Essential $12/mo for private generations and daily hobby use, Premium $30/mo for active creators who need 25,000 Fast Tokens and relaxed image generation on selected models, Ultimate $60/mo for pros who need 60,000 Fast Tokens, larger queues, and relaxed video generation. API buyers should model API credits separately.
 
 ## Key Facts
 
@@ -135,16 +142,16 @@ The free tier runs 150 tokens per day with no expiry. That is the most generous 
 |---|---|
 | **Flagship models** | Lucid Origin, Lucid Realism (2025-2026) |
 | **Also in rotation** | Phoenix 1.0, Phoenix 0.9, Alchemy V2 |
-| **Free tier** | 150 tokens/day, no expiry |
-| **Paid tiers** | Apprentice $10 · Artisan $24 · Maestro $48 (annual pricing) |
+| **Free tier** | 150 Fast Tokens/day, public creations |
+| **Paid web tiers** | Essential $12/mo · Premium $30/mo · Ultimate $60/mo |
 | **Token behavior** | Variable cost per generation (1-20+ tokens depending on settings) |
-| **Motion Studio** | Image-to-video, up to 4-second clips, paid tiers |
-| **Universal Upscaler** | Free 4K upscaling on all generations |
+| **Relaxed generation** | Premium and Ultimate list unlimited relaxed image generation for selected models; Ultimate also lists relaxed video generation for selected models |
+| **Private generations** | Essential, Premium, and Ultimate |
 | **Community models** | 100+ user-fine-tuned variants |
-| **API access** | Artisan and Maestro tiers |
-| **Commercial rights** | Included on paid plans |
+| **API access** | Separate API credits / pay-as-you-go / custom API plans |
+| **Ownership note** | Paid subscribers retain ownership of generated images; Free users receive a commercial-use license but Leonardo retains broader rights to use Free creations |
 
-Every data point above was verified on 2026-05-13. See Sources.
+Every data point above was verified on 2026-06-08. See Sources.
 
 ## What it actually is
 
@@ -152,7 +159,7 @@ A web-based multi-model image platform. Users pick a model (Lucid Origin, Lucid 
 
 Motion Studio converts stills to short video clips. The public gallery supports remixing and prompt sharing. Originally a game-asset tool, Leonardo now covers general image creation.
 
-The moat is the free tier plus the beginner-friendly UI. No Discord, no CLI, no technical setup. Paid tiers add private generations, priority queue, API access, and larger token allowances. Lucid Origin is the model to start with for most general work; Lucid Realism suits cinematic and image-to-video pipelines.
+The moat is the free tier plus the beginner-friendly UI. No Discord, no CLI, no technical setup. Paid web tiers add private generations, enhanced quality, collections, higher Fast Token allowances, larger queues, top-up tokens, and selected relaxed generation. Lucid Origin is the model to start with for most general work; Lucid Realism suits cinematic and image-to-video pipelines. API access is no longer safe to describe as a simple web-tier entitlement: Leonardo's API docs say API plans are distinct from free or web app subscriptions.
 
 ## When to pick Leonardo
 
@@ -173,16 +180,20 @@ The moat is the free tier plus the beginner-friendly UI. No Discord, no CLI, no 
 
 ## Pricing
 
-Subscription pricing via [leonardo.ai/pricing](https://leonardo.ai/pricing). Monthly rates shown; annual billing reduces the effective monthly cost.
+Subscription pricing via [leonardo.ai/pricing](https://leonardo.ai/pricing). Monthly web-plan rates shown, excluding tax. Team subscriptions and API credits are separate buying paths.
 
-| Plan | Monthly (annual) | Tokens/Month | Key Features | Who's it for |
+| Plan | Monthly | Fast Tokens | Key Features | Who's it for |
 |------|------------------|--------------|--------------|--------------|
-| Free | $0 | 150/day (~4,500/mo) | Multiple models, public gallery, basic editor | Learners and casual users |
-| Apprentice | $10 | 8,500 | Private generations, priority queue, Motion basics | **Most hobbyists land here** |
-| Artisan | $24 | 25,000 | + API access, advanced Motion, max resolution | Solo pros and small teams |
-| Maestro | $48 | 60,000 | + Unlimited relaxed generations, team features | Sustained team workloads |
+| Free | $0 | 150/day | Public creations, limited collections, basic quality | Learners and casual users |
+| Essential | $12 | 8,500/month | Private creations, enhanced quality, unlimited collections, 10 personal AI models/month, 5 generation queue | **Most hobbyists start here** |
+| Premium | $30 | 25,000/month | 20 personal AI models/month, 10 generation queue, selected-model relaxed image generation | Active creators and solo pros |
+| Ultimate | $60 | 60,000/month | 50 personal AI models/month, 20 generation queue, selected-model relaxed image and video generation | Sustained creator and small-business output |
+| Team Starter | $72/month total | 75,000 shared tokens | $24/seat, 3-seat example, private team generations | Small teams |
+| Team Growth | $144/month total | 180,000 shared tokens | $48/seat, 3-seat example, private team generations plus team-model training | Growing teams |
+| API Pay as you go | Starts with $5 API credit | Usage-based | API credits, up to 10 concurrent generations, no long commitment | Developers testing production workflows |
+| API Custom | Custom | Custom | Higher-volume workloads, custom concurrency, model-based discounts, dedicated support | Production API teams |
 
-*Prices verified 2026-05-13 against [leonardo.ai/pricing](https://leonardo.ai/pricing) and third-party reviews. Token cost varies by model and settings. Higher settings (4K, Motion, ControlNet) can consume 5-20x more tokens per generation.*
+*Prices verified 2026-06-08 against [leonardo.ai/pricing](https://leonardo.ai/pricing) and the Leonardo API quickstart. Token cost varies by model and settings. API access is separate from Free or web app subscriptions, so teams building product workflows should budget API credits directly rather than assuming a web plan covers production API use.*
 
 ## Against the alternatives
 
@@ -191,8 +202,8 @@ Subscription pricing via [leonardo.ai/pricing](https://leonardo.ai/pricing). Mon
 | **Free tier** | **150 tokens/day, no expiry** | None | 10 prompts/day |
 | **Aesthetic ceiling** | Mid-high | **Strongest** cinematic | Mid |
 | **Text-in-image** | Mid | Improving | **Strongest** |
-| **Entry paid price** | $10/mo | $10/mo | $7/mo |
-| **API access** | Yes, Artisan+ | None publicly | Yes, Pro tier |
+| **Entry paid price** | $12/mo | $10/mo | $7/mo |
+| **API access** | Separate API credits | None publicly | Yes, Pro tier |
 | **Image-to-video** | Yes, 4-second clips | None in image tier | None |
 | **Beginner UX** | **Easiest** | Moderate | Easy |
 | **Best viewed as** | Free-tier volume leader | Visual-quality specialist | Typography specialist |
@@ -200,21 +211,22 @@ Subscription pricing via [leonardo.ai/pricing](https://leonardo.ai/pricing). Mon
 ## Failure modes
 
 - **Quality ceiling trails Midjourney and Flux.** Complex compositions, multi-subject scenes, and fine detail work come out softer than Midjourney V7 equivalents.
-- **Token cost is opaque.** One token does not equal one image. High settings consume 5-20x base rates. Users burn through allowances faster than expected without monitoring.
+- **Token cost is opaque.** One Fast Token does not equal one image. Higher-quality, video, upscaling, training, and guidance workflows can burn allowances faster than expected without monitoring.
 - **100+ community models overwhelm beginners.** No single "best" model for all tasks. Pick Lucid Origin as the default and branch from there.
-- **Motion Studio tops out at 4 seconds.** Behind Runway Gen-4.5 (10+ seconds) and Kling 3.0 (full scenes). Not the pick for narrative video.
-- **API maturity lags.** Functional on Artisan+ but less robust than Flux or direct OpenAI image endpoints for production pipelines.
-- **Free tier images land in the community gallery.** Private generations require a paid plan. Client concepts leak on Free.
+- **Motion is not the same as a dedicated video stack.** Leonardo's selected relaxed video generation is useful for creative iteration, but Runway, Kling, Seedance, Veo, and Luma remain stronger first shortlists for narrative video workflows.
+- **API billing is separate.** Leonardo's API docs say API plans are distinct from web app plans, so production teams should budget API credits and concurrency limits directly.
+- **Free tier images are public.** Private generations require Essential or higher. Client concepts should not be tested on Free.
 - **No IP indemnification.** Commercial rights are granted on paid plans, but Leonardo does not defend users against copyright claims the way Adobe Firefly does.
 - **Upscaling softens at high resolutions.** Universal Upscaler is free, but output clarity drops as target resolution climbs past 2K.
 
 ## Recent changes
 
-- **2026-05-13:** Tier prices, model lineup, and free-tier allowance re-verified against third-party reviews. Pricing page continues to return 403 to automated monitors; live web UI required for procurement-grade confirmation. No public 2026 model successor to Lucid Origin / Lucid Realism / Phoenix 1.0 announced.
+- **2026-06-08:** Rebuilt pricing around Leonardo's current official Free, Essential, Premium, Ultimate, Team Starter/Growth, and API plan surfaces. Removed stale Apprentice / Artisan / Maestro buyer guidance.
+- **2026-05-13:** Previous tier prices, model lineup, and free-tier allowance were re-verified against third-party reviews because automated pricing checks failed. Superseded by the June 8 official pricing refresh.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [leonardo.ai/pricing](https://leonardo.ai/pricing), the [Lucid Origin announcement](https://leonardo.ai/lucid-origin/), and [Lucid Origin help docs](https://intercom.help/leonardo-ai/en/articles/11890238-lucid-origin).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-08 against [leonardo.ai/pricing](https://leonardo.ai/pricing), the [Leonardo API quickstart](https://docs.leonardo.ai/docs/getting-started), the [Lucid Origin announcement](https://leonardo.ai/lucid-origin/), and [Lucid Origin help docs](https://intercom.help/leonardo-ai/en/articles/11890238-lucid-origin).
 
 ## FAQ
 
@@ -222,7 +234,7 @@ This page was produced by the aipedia.wiki editorial pipeline, an automated syst
 Yes. The free tier gives 150 tokens per day with no expiry, usable across Lucid Origin, Lucid Realism, Phoenix 1.0, and community models. Free generations post to the public gallery.
 
 **How much does Leonardo cost?**
-Apprentice is $10/month (8,500 tokens), Artisan is $24/month (25,000 tokens + API), Maestro is $48/month (60,000 tokens + team features). Annual pricing; monthly rates run slightly higher.
+The current public web plans are Free $0, Essential $12/month, Premium $30/month, and Ultimate $60/month. Team Starter/Growth and API pay-as-you-go/custom plans are separate. The old Apprentice, Artisan, and Maestro names are stale for June 2026 buying decisions.
 
 **What is Lucid Origin?**
 Leonardo's most adaptable and prompt-responsive flagship, outputting in Full HD with strong prompt adherence. Recommended as the default starting model for general image work ([Lucid Origin](https://leonardo.ai/lucid-origin/)).
@@ -231,17 +243,17 @@ Leonardo's most adaptable and prompt-responsive flagship, outputting in Full HD 
 Lucid Origin is the versatile generalist. Lucid Realism is purpose-built for cinematic and image-to-video workflows, optimized for emotional storytelling and motion pipelines ([Lucid Origin docs](https://intercom.help/leonardo-ai/en/articles/11890238-lucid-origin)).
 
 **Can I use Leonardo images commercially?**
-Yes, on paid plans (Apprentice, Artisan, Maestro). Free tier has more limited commercial rights. Leonardo does not offer IP indemnification; Adobe Firefly does.
+Paid subscribers retain ownership of generated images under Leonardo's current FAQ. Free users receive a non-exclusive, royalty-free license to access creations for commercial use, but Leonardo can use, reproduce, modify, and distribute Free creations. Leonardo does not offer Adobe-style IP indemnification.
 
 **Does Leonardo have an API?**
-Yes, on Artisan ($24/mo) and Maestro ($48/mo). The API is functional but less mature than Flux's or direct OpenAI image endpoints for high-volume production workflows.
+Yes, but API access is a separate API-credit path. Leonardo's API docs say API plans are distinct from free or web app subscriptions; API buyers purchase credits, create API keys, and monitor credit balance through API Access.
 
 ## Sources
 
-- [Leonardo.Ai pricing](https://leonardo.ai/pricing): plan tiers and token allowances
+- [Leonardo.Ai pricing](https://leonardo.ai/pricing): current Free, Essential, Premium, Ultimate, team, API, token, queue, private-generation, and rights details
+- [Leonardo API quickstart](https://docs.leonardo.ai/docs/getting-started): API keys, API credit purchase, and API-vs-web-plan distinction
 - [Lucid Origin announcement](https://leonardo.ai/lucid-origin/): flagship model release
 - [Lucid Origin help docs](https://intercom.help/leonardo-ai/en/articles/11890238-lucid-origin): model capabilities and positioning
-- [Leonardo AI Review 2026](https://cybernews.com/ai-tools/leonardo-ai-review/): third-party verification
 
 ## Related
 

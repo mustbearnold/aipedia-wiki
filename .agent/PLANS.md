@@ -1607,3 +1607,545 @@ The June AI news catch-up is complete for the verified June 1-3 window, with Jun
 2026-06-06: Continued oldest-to-newest ledger pass after the pushed lawyers/marketers/nonprofits/product-managers guide slice, skipping dead tool pages, dead-tool comparison/archive surfaces, `/dead/` routes, and individual news articles. Refreshed the next guide rows: `/guides/best-ai-tools-for-real-estate-agents/`, `/guides/best-ai-tools-for-recruiters/`, `/guides/best-ai-tools-for-researchers/`, and `/guides/best-ai-tools-for-sales-teams/`. Verified June 2026 facts from official/source-backed Zillow AI Mode, Zillow Premier Agent, Follow Up Boss, ChatGPT/OpenAI, Canva, Jasper, LinkedIn Recruiter/Hiring Assistant, hireEZ, Paradox, Eightfold, Elicit, Semantic Scholar, Perplexity, Claude, NotebookLM, Scite, Consensus, Apollo, Instantly, Clay, and Amplemarket sources. Rebuilt the guides around listing/lead safeguards, fair-housing and CRM discipline, human-in-the-loop hiring checks, candidate-data controls, source-integrity workflows, literature-review provenance, outbound credit economics, deliverability, and CRM hygiene. Revived the real-estate agents guide from archived/noindex status to a live sitemap page after the source-backed rebuild and removed its sitemap exclusion entries. Updated AI Automation, AI Writing, AI Research, AI Search, AI Chatbots, AI Design, `/guides/`, `/categories/`, homepage, LLM surfaces, `astro.config.mjs`, `scripts/generate-page-refresh-ledger.mjs`, and `PAGE_REFRESH_LEDGER.md`. Passing commands: `npm run ledger:pages`, `npm run ledger:pages:check`, `git diff --check`, `npm run check:news`, `npm run audit:sources`, `npm run check:links`, `npm run test:scripts`, `npm run check`, `npm run build:fast`, in-app Browser responsive QA for 13 refreshed/top-layer HTML routes at 360, 390, 430, 768, 1024, and 1366 px, rendered `/llms.txt` plus `/llms-full.txt` checks, and built sitemap inclusion checks for the refreshed guide URLs. No dead tool pages or individual news article pages were edited.
 
 2026-06-06: Continued oldest-to-newest ledger pass after the pushed real-estate/recruiting/research/sales guide slice, skipping dead tool pages, dead-tool comparison/archive surfaces, `/dead/` routes, and individual news articles. Refreshed the next live May 13 guide rows: `/guides/best-ai-tools-for-small-business/`, `/guides/best-ai-tools-for-students/`, `/guides/best-ai-tools-for-teachers/`, and `/guides/best-ai-tools-for-writers/`. Verified June 2026 facts from official/source-backed ChatGPT/OpenAI, ChatGPT for Teachers, Google AI/Gemini/NotebookLM/Google AI Pro for Education, Zapier plans/MCP/task docs, Claude, Perplexity, Cursor student, Semantic Scholar, Sudowrite, Jasper, and Grammarly sources. Rebuilt the guides around first-purchase sequencing for small businesses, source-grounded study and academic integrity, classroom privacy/teacher workflow guardrails, and writing lanes for drafting, long-form editing, fiction, brand governance, inline polish, and source-pack work. Updated AI Automation, AI Writing, AI Research, AI Notes, AI Chatbots, the student answer surface, `/guides/`, `/categories/`, homepage, LLM surfaces, and `PAGE_REFRESH_LEDGER.md`. Passing commands: `npm run ledger:pages`, `npm run ledger:pages:check`, `git diff --check`, focused stale/table/code-block sweeps, `npm run check:news`, `npm run audit:sources`, `npm run check:links`, `npm run test:scripts`, `$env:AIPEDIA_LEDGER_DATE='2026-06-06'; npm run check`, `npm run build:fast`, in-app Browser responsive QA for 13 refreshed/top-layer HTML routes at 360, 390, 430, 768, 1024, and 1366 px, and local HTTP checks for `/llms.txt`, `/llms-full.txt`, `/sitemap-index.xml`, and `/sitemap-0.xml`. The in-app browser blocked direct `.txt` and `.xml` navigation, so those crawl surfaces were verified by local HTTP against the same built static server. No dead tool pages or individual news article pages were edited.
+
+---
+
+## ExecPlan: June 8 2026 Wiki Front Page Rebuild
+
+### 1. Objective
+
+Rebuild the homepage first screen so AiPedia reads like a real wiki front page: searchable, navigable, dense, current, and useful for buyer decisions. This improves mobile UX, trust, SEO navigation, and editorial scalability without changing child page facts.
+
+### 2. Current state
+
+`src/pages/index.astro` has all required homepage data already loaded: active tools, comparisons, categories, guides, news, source links, search typeahead, stats, top tools, category grid, weekly news, and trust panel. The current first screen is still closer to a landing page: a large hero, a buyer-router module, weekly/news refresh modules, then the actual search form lower on the page.
+
+### 3. Target state
+
+The first screen should contain the wiki identity, current verification strip, homepage search, catalog stats, and main portal links. Buyer-guide and news refresh modules should remain, but become supporting front-page sections below the search-first introduction.
+
+### 4. Scope
+
+Included: homepage layout, homepage CSS, analytics attributes on moved/renamed internal links, and `PAGE_REFRESH_LEDGER.md` freshness verification. Excluded: child tool/guide/comparison content changes, new data models, logo work, and unrelated generated assets.
+
+### 5. Files likely affected
+
+- `src/pages/index.astro`
+- `PAGE_REFRESH_LEDGER.md`
+- `.agent/PLANS.md`
+
+### 6. Data model impact
+
+No data model change. Existing `getCollection` data and homepage search JSON continue to power the front page.
+
+### 7. SEO impact
+
+The homepage keeps its title, meta description, canonical handling through `BaseLayout`, and `HomepageLD`. The visible H1 remains `aipedia.wiki`; main internal links become more crawlable and wiki-like above the fold.
+
+### 8. Conversion impact
+
+Commercial CTA behavior remains in the existing top-tool decision card. The first screen emphasizes navigation and trust before purchase pressure.
+
+### 9. Mobile UX impact
+
+The search and portals must fit cleanly at 360, 390, 430, 768, and desktop widths without horizontal overflow or orphaned controls.
+
+### 10. Implementation steps
+
+1. Replace the landing-style hero usage with a custom wiki front section.
+2. Move the existing homepage search form into the first screen.
+3. Add main portal links for tools, categories, compare, guides, answers, and news.
+4. Reposition buyer-guide/router and refresh modules as supporting wiki front-page sections.
+5. Update CSS for dense, mobile-first wiki layout.
+6. Run ledger, tests, build, diff, and browser viewport QA.
+
+### 11. Verification commands
+
+- `npm run ledger:pages:check`
+- `npm run test:scripts`
+- `npm run build:fast`
+- `git diff --check -- src/pages/index.astro PAGE_REFRESH_LEDGER.md .agent/PLANS.md`
+- Browser QA at 360, 390, 430, 768, and 1024+ widths.
+
+### 12. Acceptance criteria
+
+The homepage first screen feels like a wiki front page, search appears before lower editorial modules, the main portal links are clear and crawlable, mobile has no horizontal overflow, ledger remains current, and build/tests pass.
+
+### 13. Risks and mitigations
+
+- Risk: moving the search form breaks typeahead. Mitigation: keep existing `data-home-search` hooks and script unchanged.
+- Risk: the page becomes too dense. Mitigation: use restrained portals and short descriptions, not nested card walls.
+- Risk: unrelated dirty files leak into the change. Mitigation: stage/report only the three scoped files.
+
+### 14. Progress log
+
+2026-06-08: Created plan after inspecting `src/pages/index.astro`, existing homepage search, data collections, and current buyer-router layout.
+
+2026-06-08: Rebuilt the homepage first screen into a wiki-style front page with a freshness strip, H1 identity, search-first entry point, editorial status panel, crawlable portal links, and featured decision routes. Kept existing lower editorial/news/tool/category modules intact and moved the buyer router into a supporting section.
+
+2026-06-08: Tightened the mobile front page after browser review: shortened portal copy, aligned all live/freshness accents to the orange palette, changed the freshness strip to the June 8 page refresh, guarded empty collection sections, and moved populated top tools, categories, and latest news directly below the wiki front panel before the buyer-router/editorial refresh modules.
+
+2026-06-08: Per in-app browser feedback, compressed the phone/tablet wiki-front further: folded duplicate mobile stats into a compact trust strip, made portal cards count-and-label first, removed always-visible portal explainer text, prevented the `aipedia.wiki` H1 from wrapping at small desktop widths, and verified that the first top-tool card is visible in the initial viewport at 360, 390, 430, 768, 1024, and 1280 px.
+
+2026-06-08: Fixed the rendered homepage hierarchy after a follow-up browser check showed the buyer-router still appearing before the populated catalog sections. Moved Top-scored AI tools, Browse by category, and Latest AI news directly after the wiki front panel; demoted the buyer-router to Buyer shortcuts below news; changed stale-sounding "current AI news" / "News through" copy to "AI news archives" / "News indexed through"; regenerated the ledger; and reverified mobile/desktop rendering at 360, 390, 430, 768, and 1024 px.
+
+### 15. Final report
+
+Completed. Updated `src/pages/index.astro` to replace the landing-style hero with a proper wiki front page, preserve the existing `data-home-search` behavior, add the portal index and featured decision routes, align freshness/status accents to the orange palette, guard empty homepage collection sections, and render the populated top tools, categories, and latest news above the buyer shortcuts/editorial refresh modules. Updated `PAGE_REFRESH_LEDGER.md` for the June 8 homepage refresh and kept the page's visible freshness language honest by saying news is indexed through Jun 3 rather than implying current-hour news coverage. The latest density pass made the mobile and tablet front page more wiki-like by replacing duplicate phone stats with a compact trust strip, keeping portal cards short, and ensuring top-tool content appears in the first viewport. Verification passed: `npm run ledger:pages`, `npm run ledger:pages:check`, `npm run check`, `npm run build:fast`, and `git diff --check -- src/pages/index.astro PAGE_REFRESH_LEDGER.md .agent/PLANS.md`. Browser QA passed at 360, 390, 430, 768, and 1024 px, with no page-level horizontal overflow, no H1 wrapping, no empty `See all 0 tools` state, 6 top-tool rows, 15 category cards, 6 latest-news rows, and final mobile/desktop visual passes showing a fitted search row and first top-tool card above the fold.
+
+---
+
+## ExecPlan: June 8 2026 Live Tool Cluster Refresh
+
+### 1. Objective
+
+Continue the oldest-to-newest ledger refresh after the homepage pass by updating the next eligible live tool records dated May 13: Kimi, Kokoro, Krea, and Langflow. The goal is higher trust, current June 2026 facts, stronger buyer warnings, cleaner parent hubs, and accurate ledger state while continuing to skip dead tool pages and individual news article pages.
+
+### 2. Current state
+
+`PAGE_REFRESH_LEDGER.md` shows multiple skipped dead/dead-tool rows before the next live cluster. The selected live records are `src/content/tools/kimi.md`, `src/content/tools/kokoro.md`, `src/content/tools/krea.md`, and `src/content/tools/langflow.md`, all previously verified on 2026-05-13. Affected parent category hubs are `src/content/categories/ai-chatbots.md`, `src/content/categories/ai-voice.md`, `src/content/categories/ai-image.md`, and `src/content/categories/ai-automation.md`.
+
+### 3. Target state
+
+Each selected tool page should show `last_updated` and `last_verified` as 2026-06-08, current June 2026 source-backed pricing/version/license/watch-out facts, updated methodology language, and practical buyer guidance. Parent category hubs should mention the materially changed lane facts without re-ranking unrelated tools.
+
+### 4. Scope
+
+Included: four live tool pages, four affected category hubs, ledger regeneration, LLM/ledger crawl surfaces produced by existing scripts, and verification commands. Excluded: dead tool pages, dead archive pages, individual news article pages, broad comparison rewrites, logo work, and unrelated generated OG assets.
+
+### 5. Files likely affected
+
+- `src/content/tools/kimi.md`
+- `src/content/tools/kokoro.md`
+- `src/content/tools/krea.md`
+- `src/content/tools/langflow.md`
+- `src/content/categories/ai-chatbots.md`
+- `src/content/categories/ai-voice.md`
+- `src/content/categories/ai-image.md`
+- `src/content/categories/ai-automation.md`
+- `PAGE_REFRESH_LEDGER.md`
+- `.agent/PLANS.md`
+
+### 6. Data model impact
+
+No schema change. Existing frontmatter fields, `facts`, `price_history`, source metadata, and category Markdown are sufficient.
+
+### 7. SEO impact
+
+Tool SEO titles/meta descriptions move from May to June 2026 where stale. Category hubs receive fresh source language so snippets and internal summaries do not contradict refreshed tool pages.
+
+### 8. Conversion impact
+
+No affiliate CTAs or revenue events change. The conversion impact is trust protection: Krea credit rollover is corrected, Kokoro scam-domain warning is surfaced, Kimi legacy endpoint caution is explicit, and Langflow security-release/pinning guidance is visible.
+
+### 9. Mobile UX impact
+
+Content changes should preserve existing tool/category templates. QA should check mobile widths for all four tool pages and affected categories for overflow from long URLs, tables, or pricing strings.
+
+### 10. Implementation steps
+
+1. Verify current June 2026 official facts for Kimi, Kokoro, Krea, and Langflow.
+2. Patch four tool pages with current facts, dates, pricing/version warnings, and methodology text.
+3. Patch four category hubs with lightweight parent-surface maintenance.
+4. Regenerate `PAGE_REFRESH_LEDGER.md`.
+5. Run stale-string sweeps, ledger checks, content checks, build, and responsive QA.
+
+### 11. Verification commands
+
+- `npm run ledger:pages`
+- `npm run ledger:pages:check`
+- `rg -n "2026-05-13|May 13, 2026|May 2026|1\\.9\\.2|Krea 2 access is gated|credits do not roll over" <touched files>`
+- `git diff --check -- <touched files>`
+- `npm run check`
+- `npm run build:fast`
+- Browser or local rendered QA for `/tools/kimi/`, `/tools/kokoro/`, `/tools/krea/`, `/tools/langflow/`, and affected categories at 360, 390, 430, 768, and 1024+ widths.
+
+### 12. Acceptance criteria
+
+All selected pages and affected parent hubs are current to June 8, 2026, volatile claims are source-backed, no skipped dead/news article pages are edited, ledger rows match the real refresh scope, and validation/build/mobile QA pass or any unrelated failure is documented.
+
+### 13. Risks and mitigations
+
+- Risk: over-updating parent category pages. Mitigation: add only lane-specific maintenance notes and source rows.
+- Risk: stale historical price-history strings look like current claims. Mitigation: leave historical entries only where clearly dated and add current June 8 entries.
+- Risk: long URLs/pricing strings cause mobile overflow. Mitigation: run rendered mobile checks after build.
+
+### 14. Progress log
+
+2026-06-08: Selected the next live ledger cluster after skipping dead tool/dead archive rows and individual news article pages. Verified current official sources: Kimi K2.6 pricing/overview docs, Kokoro Hugging Face and GitHub, Krea pricing, Langflow site/docs/releases.
+
+2026-06-08: Updated Kimi with June 8 pricing/source language, cache-hit/cache-miss pricing, legacy K2 redirect caution, and category parent maintenance.
+
+2026-06-08: Updated Kokoro with June 8 Apache 2.0/source language, official scam-domain warning, current GitHub install example, voice/language nuance, and AI Voice parent maintenance.
+
+2026-06-08: Updated Krea with June 8 pricing/source language, model catalog wording, annual-plan/compute-unit details, Basic/Pro/Max versus Business/Enterprise rollover distinction, and AI Image parent maintenance.
+
+2026-06-08: Updated Langflow with June 8 version 1.9.6 status, 1.9.3 critical security-release warning, version-pinning guidance, and AI Automation parent maintenance.
+
+2026-06-08: Regenerated `PAGE_REFRESH_LEDGER.md`, ran stale-claim sweeps, full content checks, fast build, and rendered browser QA across the four refreshed tool pages, affected category hubs, and homepage at 360, 390, 430, 768, and 1024 px.
+
+### 15. Final report
+
+Completed. Refreshed Kimi, Kokoro, Krea, and Langflow to June 8, 2026 with current official/source-backed pricing, license, version, safety, and buyer-warning language. Updated the affected AI Chatbots, AI Voice, AI Image, and AI Automation category hubs so parent surfaces match the child-page changes without broad re-ranking. Regenerated `PAGE_REFRESH_LEDGER.md` and kept the prior homepage June 8 refresh in scope.
+
+Verification passed: `npm run ledger:pages`, `npm run ledger:pages:check`, targeted stale-string sweep over touched files, `git diff --check -- <touched files>`, `npm run check:news`, `npm run audit:sources`, `npm run check:links`, `npm run test:scripts`, `npm run check`, and `npm run build:fast` after rerunning with a longer timeout. Browser QA passed at 360, 390, 430, 768, and 1024 px for `/`, `/tools/kimi/`, `/tools/kokoro/`, `/tools/krea/`, `/tools/langflow/`, `/categories/ai-chatbots/`, `/categories/ai-voice/`, `/categories/ai-image/`, and `/categories/ai-automation/`: no page-level horizontal overflow, H1s rendered, refreshed verification labels rendered, homepage top tools/category/news sections were populated, and no `See all 0 tools` state appeared.
+
+---
+
+## ExecPlan: June 8 2026 Tome Phind Comparison Migration Refresh
+
+### 1. Objective
+
+Continue the oldest-to-newest ledger refresh after skipping dead tool pages by updating the May 13 comparison cluster that still routes searchers through dead Tome and Phind surfaces. The goal is to convert stale head-to-head language into honest migration guidance while keeping active replacement facts current to June 8, 2026.
+
+### 2. Current state
+
+`PAGE_REFRESH_LEDGER.md` placed the dead tool pages for Phind, Tome, and DALL-E before a set of May 13 comparison routes. The dead tool pages are excluded by the user request, but the comparison pages remain public, indexable, and useful if they clearly steer readers to active replacements.
+
+### 3. Scope
+
+Included: `beautiful-ai-vs-tome`, `chatgpt-vs-phind`, `decktopus-vs-tome`, `exa-vs-phind`, `gamma-vs-tome`, `kagi-vs-phind`, `perplexity-vs-phind`, `phind-vs-you-com`, `pitch-vs-tome`, `presentations-ai-vs-tome`, `/compare/`, `ai-presentation`, `ai-search`, ledger regeneration, and verification. Excluded: dead tool records, dead archive pages, individual news articles, and unrelated OG assets.
+
+### 4. Implementation notes
+
+Verified current June 2026 official/source-backed facts for active replacements: ChatGPT/OpenAI pricing and search help, Exa API pricing, Kagi pricing and Ultimate docs, Perplexity enterprise pricing, You.com API pricing, Beautiful.ai pricing, Gamma pricing, Decktopus pricing, Pitch pricing/AI credits, Presentations.AI pricing, Tome sunset notice, Lightfield/Tome pivot coverage, and Phind shutdown retrospectives. Rebuilt the Phind comparisons as migration pages instead of fake live comparisons, tightened the Tome comparisons with June 8 pricing/source language, and updated parent `/compare/`, AI Presentation, and AI Search surfaces.
+
+### 5. Verification plan
+
+Run `npm run ledger:pages`, `npm run ledger:pages:check`, stale-string sweeps over touched comparison/category/index files, `git diff --check`, focused content checks, full `npm run check`, `npm run build:fast`, and browser QA for the refreshed routes at 360, 390, 430, 768, and 1024 px.
+
+### 6. Final report
+
+Completed June 8, 2026. Regenerated `PAGE_REFRESH_LEDGER.md`, refreshed all scoped comparison/category/archive rows, and verified with `npm run ledger:pages:check`, `npm run check`, `npm run test:scripts`, `npm run build:fast`, stale-string sweeps, `git diff --check`, and Browser QA across 70 route-width combinations. Browser QA covered `/`, `/compare/`, the AI Presentation and AI Search category hubs, and all ten refreshed Tome/Phind comparison routes at 360, 390, 430, 768, and 1024 px with no horizontal overflow or broken homepage/top-tools/news sections found. Dead tool pages, dead archive pages, individual news articles, and unrelated OG image changes were intentionally excluded.
+
+---
+
+## ExecPlan: June 8 2026 Lovart Luma Magnific Mem Tool Refresh
+
+### 1. Objective
+
+Continue the oldest-to-newest ledger refresh after skipping dead tool rows by updating the next eligible live May 13 tool records: Lovart, Luma Dream Machine, Magnific, and Mem. The goal is higher buyer trust, current June 2026 source-backed pricing and product caveats, cleaner parent hubs, and accurate ledger state.
+
+### 2. Current state
+
+`PAGE_REFRESH_LEDGER.md` lists `/tools/lovart/`, `/tools/luma/`, `/tools/magnific/`, and `/tools/mem/` immediately after skipped dead/deprecated tool rows. The tool pages were last verified on May 13, 2026. The affected parent hubs are AI Design, AI Video, AI Image, and AI Notes; `/tools/`, `/categories/`, homepage, and LLM surfaces are dynamic top-layer routes that should be inspected/QAed for regressions.
+
+### 3. Target state
+
+Each selected tool page should show `last_updated` and `last_verified` as 2026-06-08, current source-backed pricing/product warnings, and practical buyer guidance. Parent category hubs should reflect material lane updates without broad re-ranking unrelated tools.
+
+### 4. Scope
+
+Included: four live tool pages, four affected category hubs, source registry entries, ledger regeneration, and mobile/desktop QA. Excluded: dead tool pages, dead archive pages, individual news articles, unrelated OG assets, and broad comparison/guide rewrites.
+
+### 5. Files likely affected
+
+- `src/content/tools/lovart.md`
+- `src/content/tools/luma.md`
+- `src/content/tools/magnific.md`
+- `src/content/tools/mem.md`
+- `src/content/categories/ai-design.md`
+- `src/content/categories/ai-video.md`
+- `src/content/categories/ai-image.md`
+- `src/content/categories/ai-notes.md`
+- `src/data/source-registry.json`
+- `PAGE_REFRESH_LEDGER.md`
+- `.agent/PLANS.md`
+
+### 6. Data model impact
+
+No schema changes. Existing frontmatter fields, `facts`, `price_history`, source IDs, and category Markdown are sufficient. New source registry IDs are added for Lovart pricing, Luma Dream Machine pricing, Ray3.14 FAQ, Ray3 announcement, Magnific API pricing, Magnific Upscaler API, and Freepik/Magnific acquisition context.
+
+### 7. SEO impact
+
+Tool SEO titles/meta descriptions move from May 2026 or generic 2026 language to June 2026. Parent hubs receive fresh source language so snippets and internal summaries do not contradict refreshed tool pages.
+
+### 8. Conversion impact
+
+Magnific retains affiliate metadata, but public copy prioritizes pricing/credit honesty over conversion pressure. Lovart, Luma, and Mem commercial guidance clarifies who should pay which plan and what to verify before annual billing.
+
+### 9. Mobile UX impact
+
+Content changes should preserve existing templates. QA should check all touched tool/category routes at 360, 390, 430, 768, and 1024+ widths for horizontal overflow from pricing tables, source links, and long model names.
+
+### 10. Implementation steps
+
+1. Verify June 2026 official/source-backed facts for Lovart, Luma, Magnific, and Mem.
+2. Patch the four tool pages with current facts, dates, pricing caveats, price-history notes, and source updates.
+3. Patch affected category hubs with targeted parent-surface maintenance.
+4. Patch source registry entries used by refreshed content.
+5. Regenerate `PAGE_REFRESH_LEDGER.md`.
+6. Run stale-string sweeps, ledger checks, content checks, build, and responsive QA.
+
+### 11. Verification commands
+
+- `npm run ledger:pages`
+- `npm run ledger:pages:check`
+- stale-string sweep over touched tool/category/source files
+- `node -e "JSON.parse(require('fs').readFileSync('src/data/source-registry.json','utf8'))"`
+- `git diff --check -- <touched files>`
+- `npm run check`
+- `npm run build:fast`
+- Browser QA for the four refreshed tool pages, affected category hubs, `/tools/`, `/categories/`, and `/` at 360, 390, 430, 768, and 1024 px.
+
+### 12. Acceptance criteria
+
+All selected pages and affected parent hubs are current to June 8, 2026; volatile claims are source-backed; no skipped dead/news article pages are edited; ledger rows match the real refresh scope; and validation/build/mobile QA pass or any unrelated failure is documented.
+
+### 13. Risks and mitigations
+
+- Risk: Luma pricing surfaces get collapsed into a false single plan table. Mitigation: separate Dream Machine web plans, Luma app plans, and API/credit caveats.
+- Risk: dynamic Lovart/Magnific pricing gets over-quoted. Mitigation: describe credit mechanics and require live checkout verification where static plan cards are not durable.
+- Risk: category hubs become noisy. Mitigation: add only lane-specific maintenance notes and source rows.
+
+### 14. Progress log
+
+2026-06-08: Selected the next live ledger cluster after skipping `/dead/*`, Phind, Tome, DALL-E, and Grok Code Fast. Verified current official/source-backed Lovart pricing FAQ, Luma Dream Machine pricing support, Luma pricing, Luma Ray3.14 FAQ, Magnific API pricing/API docs, Freepik/Magnific context, and Mem pricing/product sources.
+
+2026-06-08: Updated Lovart with June 8 credit mechanics, non-rollover monthly credits, top-up credit persistence, Relax Generation and Team Plan caveats, and AI Design parent maintenance.
+
+2026-06-08: Updated Luma with June 8 split pricing: Dream Machine web Free/Lite/Plus/Unlimited, broader Luma app Plus/Pro/Ultra, Ray3.14 web-only caveat, no-native-audio warning, credit-cost caveats, and AI Video parent maintenance.
+
+2026-06-08: Updated Magnific with June 8 Freepik/Magnific identity caution, API credit model, web-app unlimited-vs-API credit caveat, output-area pricing examples, and AI Image parent maintenance.
+
+2026-06-08: Updated Mem with June 8 Free/Pro/Teams limits, PDF/chat/search wording, Teams procurement caveats, related-context language, and AI Notes parent maintenance.
+
+2026-06-08: Regenerated `PAGE_REFRESH_LEDGER.md`, fixed the Luma source type from unsupported `news` to `newsroom`, ran full validation/build checks, removed generated `dist-fast`, and completed Browser QA across refreshed routes plus `/`, `/tools/`, and `/categories/`.
+
+### 15. Final report
+
+Completed June 8, 2026. Refreshed Lovart, Luma Dream Machine, Magnific, and Mem to June 8 with source-backed pricing/product caveats and updated parent hub summaries. Lovart now explains credit mechanics, non-rollover monthly credits, top-up credits, Relax Generation, and Team Plan rules. Luma now separates Dream Machine web pricing, Luma app pricing, and API/credit caveats instead of blurring them into one plan table. Magnific now separates web-app checkout uncertainty from API credit pricing and warns that API calls always consume credits even when web-app plans include Unlimited allowances. Mem now reflects the current Free/Pro/Teams limits and related-context language.
+
+Verification passed: `npm run ledger:pages`, `npm run ledger:pages:check`, JSON parse check for `src/data/source-registry.json`, stale-string sweeps over touched tool/category files, `git diff --check -- <touched files>`, `npm run check`, `npm run check:news`, `npm run audit:sources`, `npm run check:links`, `npm run test:scripts`, and `npm run build:fast`. Browser QA passed for `/`, `/tools/`, `/categories/`, `/tools/lovart/`, `/tools/luma/`, `/tools/magnific/`, `/tools/mem/`, `/categories/ai-design/`, `/categories/ai-video/`, `/categories/ai-image/`, and `/categories/ai-notes/` at 360, 390, 430, 768, and 1024 px: 55 route-width checks, no page-level horizontal overflow, H1s rendered, refreshed verification language present, and no empty `See all 0 tools` state.
+
+---
+
+## ExecPlan: June 8 2026 Meshy MiniMax Modal Tool Refresh
+
+### 1. Objective
+
+Continue the oldest-to-newest ledger refresh after skipped dead rows by updating the next eligible live May 13 tool records: Meshy, MiniMax Speech, MiniMax, and Modal. The goal is June 8 source-backed buyer guidance, no stale model/pricing language, and parent category hubs that match the refreshed child pages.
+
+### 2. Scope
+
+Included: `src/content/tools/meshy.md`, `src/content/tools/minimax-speech.md`, `src/content/tools/minimax.md`, `src/content/tools/modal.md`, affected category hubs, source registry entries, ledger regeneration, and mobile/desktop QA. Excluded: dead tool pages, dead archive pages, individual news articles, and unrelated homepage redesign work.
+
+### 3. Verification notes
+
+Official June 2026 checks found Meshy pricing/credit docs still listing Free, Pro, Studio, and Meshy 6 credit math; MiniMax Speech still listing Speech 2.8 HD/Turbo and the same audio pricing; MiniMax now positioning MiniMax-M3 as the M3 flagship with up to 1M context and new standard/priority pricing; and Modal pricing still listing the current per-second GPU/CPU/memory meters plus Starter/Team caps and multipliers.
+
+### 4. Implementation plan
+
+Patch the four tool pages, update source registry dates/new M3 source IDs, adjust AI Image, AI Voice, AI Chatbots, AI Infrastructure, and AI Research hub language only where those pages summarize the refreshed records, regenerate `PAGE_REFRESH_LEDGER.md`, then run stale-string sweeps, JSON parse, ledger checks, content checks, build, and browser QA at 360, 390, 430, 768, and 1024 px.
+
+### 5. Progress log
+
+2026-06-08: Verified current official/source-backed facts for Meshy pricing, Meshy 6 credit math and asset rights; MiniMax Speech 2.8 HD/Turbo, voice cloning, audio packages, token plans, video pricing, and pay-as-you-go docs; MiniMax-M3 model/pricing/coding-tool docs; Modal pricing and GPU docs; and PixVerse API docs where the touched AI Video hub needed stale May source rows brought current.
+
+2026-06-08: Refreshed Meshy with June 8 plan, credit, API, asset-rights, annual-checkout, and Meshy 6 guidance; refreshed MiniMax Speech with June 8 speech model/pricing/package guidance; rebuilt MiniMax around MiniMax-M3 as the current flagship while keeping older M2.7 mentions as fallback/history; and refreshed Modal with Starter/Team caps plus B200/B300 routing caveats.
+
+2026-06-08: Updated affected parent hubs: AI Image, AI Voice, AI Chatbots, AI Infrastructure, AI Research, AI Video, AI Automation, and AI Coding. Added new MiniMax-M3 source IDs and updated registry dates for Meshy, MiniMax, Modal, and PixVerse source rows used by touched pages.
+
+2026-06-08: Regenerated `PAGE_REFRESH_LEDGER.md`, fixed one AI Video mobile overflow caused by slash-packed prose, and verified homepage sections no longer show empty `See all 0 tools` or empty latest-news states.
+
+### 6. Final report
+
+Completed June 8, 2026. Refreshed Meshy, MiniMax Speech, MiniMax, and Modal to June 8 source-backed buyer guidance and updated all affected parent hub surfaces. Meshy now separates Free/Pro/Studio, credit consumption, API, ownership, and annual checkout caveats. MiniMax Speech now reflects Speech 2.8 HD/Turbo and audio/package pricing. MiniMax now uses MiniMax-M3 as the current flagship with explicit pricing/access caveats instead of stale M2.7-first copy. Modal now documents Starter/Team caps, GPU meters, and B200/B300 routing risk.
+
+Verification passed: `npm run ledger:pages`, `npm run ledger:pages:check`, JSON parse check for `src/data/source-registry.json`, source ID registry sweep, stale-string sweeps over touched tool/category files, `git diff --check -- <touched files>`, `npm run check`, `npm run audit:sources`, `npm run audit:facts`, `npm run test:scripts`, and `npm run build:fast`. Responsive QA passed for `/`, `/tools/`, `/categories/`, the four refreshed tool pages, and eight affected category hubs at 360, 390, 430, 768, and 1024 px: 75 route-width checks, no page-level horizontal overflow, H1s rendered, refreshed June 8 language present on tool pages, and no empty homepage top-tools/news state.
+
+---
+
+## ExecPlan: June 8 2026 Morphic Napkin Ollama Open WebUI Tool Refresh
+
+### 1. Objective
+
+Continue the oldest-to-newest live ledger refresh after skipped dead and retired rows by updating Morphic, Napkin AI, Ollama, and Open WebUI to June 8, 2026 source-backed buyer guidance.
+
+### 2. Scope
+
+Included: `src/content/tools/morphic.md`, `src/content/tools/napkin-ai.md`, `src/content/tools/ollama.md`, `src/content/tools/open-webui.md`, affected category hubs, source registry entries, ledger regeneration, and responsive QA. Excluded: dead tool pages, individual news articles, and unrelated homepage/OG asset work.
+
+### 3. Verification notes
+
+Primary June 2026 checks found Morphic v1.4.0 as the latest release with Apache 2.0 licensing and a dynamic provider selector; Napkin pricing still listing Free, Plus, Pro, Enterprise, 500 weekly Free credits, 10,000 Plus credits, 30,000 Pro credits, and 25% annual savings; Ollama pricing still listing Free, Pro at $20/month or $200/year, Max at $100/month, Team coming soon, and v0.30.6 as the latest stable release after a v0.30.7 release-candidate pre-release; and Open WebUI positioning itself as a self-hosted AI interface with 290M+ downloads, 423K+ community members, 141K+ stars, enterprise SSO/RBAC/audit-log posture, and v0.9.6 as the latest release.
+
+### 4. Implementation plan
+
+Patch the four tool pages, update source registry dates and incorrect Ollama source rows, add release/source IDs where needed, update only category hubs that directly summarize these pages, regenerate `PAGE_REFRESH_LEDGER.md`, then run source/stale sweeps, ledger checks, content checks, build, and responsive QA at 360, 390, 430, 768, and 1024 px.
+
+### 5. Progress log
+
+2026-06-08: Selected the next live ledger cluster after skipped `/dead/*`, Phind, Tome, DALL-E, and Grok Code Fast. Verified current primary sources for Morphic GitHub/release data, Napkin AI pricing and credit mechanics, Ollama homepage/pricing/library/release notes, and Open WebUI homepage/enterprise/release notes.
+
+2026-06-08: Refreshed the four tool pages to June 8 facts, corrected Morphic v1.4.0 and Apache 2.0 wording, updated Napkin Free/Plus/Pro credit and export guidance, replaced stale Ollama v0.23.3/future-model copy with v0.30.6 stable and current Cloud pricing, and reframed Open WebUI around source-available self-hosting, enterprise controls, v0.9.6, and first-party/third-party pricing separation.
+
+2026-06-08: Updated affected parent hubs: AI Search now routes self-hosted answer-engine buyers to Morphic; AI Chatbots now separates Ollama runtime, Open WebUI self-hosted UI/RAG, Jan desktop, and AnythingLLM RAG lanes; AI Presentation, AI Design, and AI Writing now include current Napkin AI pricing/role language where relevant.
+
+2026-06-08: Fixed `src/data/source-registry.json` so Ollama source IDs point to Ollama instead of Groq/benchmark URLs, added current Ollama/Morphic/Open WebUI release/library/repository sources, and marked batch sources `last_checked: 2026-06-08`.
+
+### 6. Final report
+
+Verification passed: `npm run ledger:pages`, `npm run ledger:pages:check`, JSON parse and duplicate-ID checks for `src/data/source-registry.json`, `npm run audit:sources`, `npm run audit:facts`, `npm run test:scripts`, `npm run check`, `npm run build:fast`, `git diff --check -- <touched files>`, and targeted stale-string sweeps over the refreshed tool pages. Browser QA passed for `/`, `/tools/morphic/`, `/tools/napkin-ai/`, `/tools/ollama/`, `/tools/open-webui/`, `/categories/ai-search/`, `/categories/ai-chatbots/`, `/categories/ai-presentation/`, `/categories/ai-design/`, and `/categories/ai-writing/` at 360, 390, 430, 768, and 1024 px: 50 route-width checks, no horizontal overflow, H1/main content present, June 8 text present where required, and no homepage `See all 0 tools` or empty news state. `dist-fast` was removed after the build.
+
+---
+
+## ExecPlan: June 8 2026 Homepage Mobile Wiki Front Page Polish
+
+### 1. Objective
+
+Make the homepage feel like a clean mobile-first AI tools wiki front page rather than a marketing landing page, while preserving source-backed counts, search, internal routing, and populated top-tools/news sections.
+
+### 2. Scope
+
+Included: `src/pages/index.astro`, homepage ledger regeneration, and mobile/desktop browser QA. Excluded: individual news article refreshes, dead tool pages, and unrelated content-record facts.
+
+### 3. Implementation notes
+
+Moved category browsing directly under the wiki search/index hero, shortened the decision-path card language, changed the mobile decision-path grid to a compact two-column layout, reduced the homepage meta line length, and strengthened panel backgrounds so decorative page texture no longer competes with card text.
+
+### 4. Verification plan
+
+Run `npm run ledger:pages`, `npm run ledger:pages:check`, `git diff --check -- src/pages/index.astro PAGE_REFRESH_LEDGER.md .agent/PLANS.md`, `npm run check`, `npm run build:fast`, and Browser QA for `/` at 360, 390, 430, 768, and 1024 px. Confirm top tools/news rows are populated and no horizontal overflow appears.
+
+### 5. Progress log
+
+2026-06-08: Patched the homepage so category browsing follows the search/index hero, decision-path cards use shorter non-marketing labels, phone widths render the decision paths as a compact two-column grid, and homepage panels use stronger surfaces to keep decorative background texture behind the content.
+
+2026-06-08: Regenerated `PAGE_REFRESH_LEDGER.md`, confirmed the homepage row remains June 8, and verified the live dev page at 360, 390, 430, 768, and 1024 px. All checked widths rendered 6 portal links, 8 category cards, 4 decision paths, 5 top-tool rows, and 4 latest-news rows with no positive horizontal overflow.
+
+2026-06-09: Follow-up mobile polish after browser review: reduced hero-scale brand weight, tightened mobile portal/search/tool/news rows, updated homepage freshness metadata to Jun 9, confirmed old broken labels (`See all 0 tools`, `TOP-SCORED AI TOOLS`, `AI TOOLS WIKI`) are absent, and rechecked the live homepage at 360, 390, 430, 768, and 1024 px.
+
+### 6. Final report
+
+Completed. The homepage now reads more like a mobile-first wiki front page: search and portal index first, category browsing next, then decision paths, top-scored records, latest news, verified guides, and editorial standards. June 9 follow-up verification passed: `npm run ledger:pages`, `npm run ledger:pages:check`, `git diff --check -- <touched files>`, `npm run audit:sources`, `npm run audit:facts`, `npm run test:scripts`, `npm run check`, `npm run build:fast`, and Browser viewport QA at 360, 390, 430, 768, and 1024 px. `dist-fast` was removed after the build.
+
+---
+
+## ExecPlan: June 8 2026 OpusClip Paradox Pinecone Pipedream Tool Refresh
+
+### 1. Objective
+
+Continue the oldest-to-newest live ledger refresh after skipped dead and retired rows by updating OpusClip, Paradox, Pinecone, and Pipedream to June 8, 2026 source-backed buyer guidance.
+
+### 2. Scope
+
+Included: `src/content/tools/opusclip.md`, `src/content/tools/paradox.md`, `src/content/tools/pinecone.md`, `src/content/tools/pipedream.md`, directly affected category hubs, source registry rows, LLM surfaces, ledger regeneration, checks, and responsive QA. Excluded: dead tool pages, individual news article pages, and unrelated homepage design work.
+
+### 3. Verification notes
+
+Primary June 2026 checks found OpusClip still listing Free, Starter, Pro, and Business with Starter at $15/month, Pro at $29/month or $174 billed annually, Free at 60 monthly credits, Starter at 150 monthly credits, Pro at 3,600 yearly credits on annual billing, and credit consumption at 1 credit per source-video minute. Workday completed its Paradox acquisition on October 1, 2025 and made Paradox Conversational ATS available through Workday on January 8, 2026, while the Paradox recruiter page still surfaces Olivia, mobile apply, screening, scheduling, resume matching, Workday integration, and sales-led demo flow. Pinecone still lists Starter/Builder/Standard/Enterprise with $20 Builder, $50 Standard minimum, $500 Enterprise minimum, usage-based database rates, Assistant token/storage meters, and the June 30, 2026 Starter Assistant input-token promo. Pipedream’s rendered pricing now lists Free at 100 credits/month, Basic $29/month, Advanced $49/month, Connect $99/month, and Business custom, with credits now monthly rather than the stale daily-credit framing.
+
+### 4. Implementation plan
+
+Patch the four tool pages, update source registry rows and add missing source IDs for credit mechanics, rendered pricing, MCP docs, and Workday ownership/current packaging. Update AI Automation, AI Video, AI Writing, AI Infrastructure, and LLM surfaces where they summarize these pages. Regenerate `PAGE_REFRESH_LEDGER.md`, then run source/stale sweeps, ledger checks, content checks, build, and responsive QA at 360, 390, 430, 768, and 1024 px.
+
+### 5. Progress log
+
+2026-06-08: Selected `/tools/opusclip/`, `/tools/paradox/`, `/tools/pinecone/`, and `/tools/pipedream/` as the next live ledger cluster after skipped `/dead/*`, Phind, Tome, DALL-E, and Grok Code Fast rows. Verified current official OpusClip pricing/help, Paradox/Workday recruiter and ATS/acquisition sources, Pinecone pricing/cost/Assistant docs, Pipedream pricing/docs/MCP sources, and Workday Pipedream close disclosure.
+
+2026-06-08: Refreshed the four tool pages. OpusClip now corrects credit consumption, pack modeling, Pro limited API access, and Business custom-integration guidance. Paradox now reflects Workday ownership, Workday Paradox Candidate Experience/Conversational ATS packaging, and candidate-governance procurement checks. Pinecone now corrects Starter/Builder/Standard/Enterprise limits, Assistant token promo placement, Standard/Enterprise minimums, and cost-doc usage categories. Pipedream now replaces stale daily-credit guidance with current monthly-credit pricing, Connect, MCP, and Workday ownership guidance.
+
+2026-06-08: Updated affected parent/top-layer surfaces: AI Automation, AI Video, AI Writing, AI Infrastructure, `/tools/`, `/categories/`, `/llms.txt`, and `/llms-full.txt`. Added current source registry IDs for OpusClip credit mechanics, Pinecone cost/Assistant docs, Pipedream rendered pricing/MCP docs/Workday signing, and Workday Paradox acquisition/ATS availability. Regenerated `PAGE_REFRESH_LEDGER.md`.
+
+### 6. Final report
+
+Completed. Verification passed: `npm run ledger:pages`, `npm run ledger:pages:check`, JSON parse and duplicate-ID checks for `src/data/source-registry.json`, targeted stale-string sweeps over the refreshed tool pages, `git diff --check -- <touched files>`, `npm run audit:sources`, `npm run audit:facts`, `npm run test:scripts`, `npm run check`, and `npm run build:fast`. Responsive QA passed for `/`, `/tools/`, `/categories/`, `/tools/opusclip/`, `/tools/paradox/`, `/tools/pinecone/`, `/tools/pipedream/`, `/categories/ai-automation/`, `/categories/ai-video/`, `/categories/ai-writing/`, and `/categories/ai-infrastructure/` at 360, 390, 430, 768, and 1024 px: 55 route-width checks, no positive horizontal overflow, H1/main content present, and current June 8 verification copy present where required. `dist-fast` was removed after the build.
+
+---
+
+## ExecPlan: June 8 2026 PixVerse Playground Poe Qdrant Tool Refresh
+
+### 1. Objective
+
+Continue the oldest-to-newest live ledger refresh after the OpusClip/Paradox/Pinecone/Pipedream batch by updating PixVerse, Playground AI, Poe, and Qdrant to June 8, 2026 source-backed buyer guidance.
+
+### 2. Scope
+
+Included: `src/content/tools/pixverse.md`, `src/content/tools/playground-ai.md`, `src/content/tools/poe.md`, `src/content/tools/qdrant.md`, directly affected category hubs, source registry rows, LLM surfaces, ledger regeneration, checks, and responsive QA. Excluded: dead tool pages, individual news article pages, and unrelated OG image changes already present in the worktree.
+
+### 3. Verification notes
+
+Primary June 2026 checks found PixVerse Platform pricing updated on May 25, 2026 with C1 and V6 credit tables, membership packs at Essential $100, Scale $1,500, and Business $6,000, and one-off credit packs from $10 to $5,000. Playground's rendered pricing page still lists Free, Pro, and Pro Plus: Free gets 10 images every 3 hours and 3 monthly generations across Nano Banana, GPT Image 2, and Seedream; Pro is $15/month or $12/month annual with 75 images every 3 hours and 150 monthly credits; Pro Plus is $45/month or $36/month annual with unlimited Playground v3 generations, 1,000 monthly credits, Nano Banana Pro at 4 credits/generation, 4K GPT Image 2 editing, and API-access request gating. Playground's help center still lists Day Pass and $8 one-time 100-credit packs, so old "Day Pass discontinued" copy is stale. Poe's current subscription page exposes five point buckets: Basic 10K points/day, Plus 660K/month, Pro 1.65M/month, Advanced 3.3M/month, and Max 8.25M/month; its structured data lists US annual prices at $99.99, $399.99, $999.99, $1,999.99, and $4,999.99, while checkout prices can localize by region. Qdrant's current pricing page splits Free, Standard, Premium, Hybrid Cloud, and Private Cloud, while GitHub shows v1.18.2 as the latest release published June 4, 2026 with security fixes.
+
+### 4. Implementation plan
+
+Patch the four tool pages, update source registry rows and add missing current source IDs for Playground paid limits, Poe subscription plans, Qdrant pricing, and Qdrant v1.18.2. Update AI Video, AI Image, AI Chatbots, AI Infrastructure, `/tools/`, `/categories/`, `/llms.txt`, and `/llms-full.txt` where they summarize the changed pages. Regenerate `PAGE_REFRESH_LEDGER.md`, then run source/stale sweeps, ledger checks, content checks, build, and responsive QA at 360, 390, 430, 768, and 1024 px.
+
+### 5. Progress log
+
+2026-06-08: Selected `/tools/pixverse/`, `/tools/playground-ai/`, `/tools/poe/`, and `/tools/qdrant/` as the next live ledger cluster after skipped dead/retired rows and the completed OpusClip/Paradox/Pinecone/Pipedream batch. Verified current official PixVerse Platform pricing, Playground rendered pricing/help docs, Poe about/subscription/purchase docs, Qdrant pricing/billing/docs, and Qdrant GitHub release state.
+
+2026-06-08: Refreshed the four tool records to current June 8 buyer guidance. PixVerse now covers C1/V6 credit tables, membership packs, one-time credits, and API buyer paths; Playground AI now reflects Free, Pro, Pro Plus, Nano Banana/GPT Image 2 credit economics, Day Pass, one-time packs, and API request gating; Poe now uses the five-tier Basic/Plus/Pro/Advanced/Max point ladder with regional checkout caveats; Qdrant now separates Free, Standard, Premium, Hybrid Cloud, Private Cloud, and v1.18.2 security-release context.
+
+2026-06-08: Updated affected parent and top-layer surfaces: AI Video, AI Image, AI Chatbots, AI Infrastructure, `/tools/`, `/categories/`, `/`, `/llms.txt`, and `/llms-full.txt`. Added current source registry rows for PixVerse, Playground AI, Poe, and Qdrant, regenerated `PAGE_REFRESH_LEDGER.md` with `AIPEDIA_LEDGER_DATE=2026-06-08`, and confirmed the refreshed rows landed on June 8.
+
+2026-06-08: Polished the mobile privacy banner after visual QA showed the old banner was too heavy for the homepage. The consent surface now uses shorter copy, compact mobile actions, no teal accent leakage, and tighter layout so it reads as site utility rather than a modal-style interruption.
+
+### 6. Final report
+
+Completed this batch. Verification passed with the ledger date pinned to June 8: `npm run ledger:pages`, `npm run ledger:pages:check`, source-registry parse/duplicate/missing-ID checks, `npm run audit:sources`, `npm run audit:facts`, `npm run test:scripts`, `npm run check`, `npm run build:fast`, and `git diff --check -- <touched files>`. Responsive QA passed for `/`, `/tools/`, `/categories/`, `/tools/pixverse/`, `/tools/playground-ai/`, `/tools/poe/`, `/tools/qdrant/`, `/categories/ai-video/`, `/categories/ai-image/`, `/categories/ai-chatbots/`, and `/categories/ai-infrastructure/` at 360, 390, 430, 768, and 1024 px: 55 route-width checks, no horizontal overflow, H1/main content present, current June 8 verification copy present where required, and the homepage privacy banner visually confirmed after restarting the dev server on `http://127.0.0.1:4321/`. `dist-fast` and temporary QA screenshots/logs were removed after the build.
+
+---
+
+## ExecPlan: June 9 2026 Reclaim Reflect Reka Relevance Tool Refresh
+
+### 1. Objective
+
+Continue the oldest-to-newest live ledger refresh after skipped dead rows by updating Reclaim.ai, Reflect, Reka, and Relevance AI to June 9, 2026 source-backed buyer guidance.
+
+### 2. Scope
+
+Included: `src/content/tools/reclaim-ai.md`, `src/content/tools/reflect.md`, `src/content/tools/reka.md`, `src/content/tools/relevance-ai.md`, directly affected category hubs, source registry rows, top-layer route metadata comments, LLM surfaces, ledger regeneration, checks, and responsive QA. Excluded: dead tool pages, individual news article pages, and unrelated generated OG image changes already present in the worktree.
+
+### 3. Verification notes
+
+Primary June 2026 checks found Reclaim.ai now branded as Reclaim.ai from Dropbox, with official full support for Google Calendar and Microsoft Outlook, annual pricing still showing Lite free, Starter $10/seat/month, Business $15/seat/month, and Enterprise $22/seat/month, plus month-to-month Starter/Business and 29%-30% annual savings language across help/pricing pages. Reflect remains Reflect Notes at reflect.app, with one plan at $10/month billed annually, a 14-day trial, GPT-4/Whisper AI assistance, end-to-end encrypted sync, Google/Outlook calendar integrations, Kindle/web capture, export, and API. Reka's public site now centers the physical-AI/Edge story: Reka Edge 2, Infer, Vision, Claru, open Hugging Face weights under BSL 1.1 with free commercial use below $1M annual revenue, and API pricing listing Edge at $0.10/$0.10 per 1M tokens with $0.03/min video and no audio column. Relevance AI's public pricing page now foregrounds Enterprise only, while docs still define the Actions/Vendor Credits billing model, Free at 200 Actions/month plus 1,000 Vendor Credits, top-ups at $80/1,000 Actions and $20/10,000 Vendor Credits, BYO API keys on paid plans, and legacy/new billing caveats.
+
+### 4. Implementation plan
+
+Patch the four tool pages, update source registry rows and add missing source IDs for Reclaim Outlook/Dropbox/about/help pages, Reka Edge/current models, and Relevance plans docs. Update AI Automation, AI Notes, AI Chatbots, AI Research, `/tools/`, `/categories/`, `/llms.txt`, and `/llms-full.txt` where they summarize the changed pages. Regenerate `PAGE_REFRESH_LEDGER.md` with the June 9 target date, then run source/stale sweeps, ledger checks, content checks, build, and responsive QA at 360, 390, 430, 768, and 1024 px.
+
+### 5. Progress log
+
+2026-06-09: Selected `/tools/reclaim-ai/`, `/tools/reflect/`, `/tools/reka/`, and `/tools/relevance-ai/` as the next live ledger cluster after skipped dead Phind, Tome, DALL-E, and Grok Code Fast rows. Verified current official Reclaim pricing/help/Outlook/about sources, Reflect homepage/pricing/features, Reka pricing/models/Edge/homepage sources, and Relevance AI pricing/plans docs.
+
+2026-06-09: Refreshed the four tool records. Reclaim.ai now reflects Dropbox branding, Google Calendar plus Microsoft Outlook support, annual/monthly pricing, AI-agent counts, Smart Meetings attendee-user caveats, and Outlook integration limits. Reflect now reflects the `reflect.app` product, $10/month annual-billed plan, 14-day trial, GPT-4/Whisper AI, encrypted sync, calendar, Kindle/web capture, export/API, and unrelated-app disambiguation. Reka now reflects the current physical-AI/Edge posture, Edge/Flash/Core pricing, Edge video/image rates, no Edge audio column, source-available BSL 1.1 weights, and local-deployment caveats. Relevance AI now separates the Enterprise-first public pricing page from docs-defined Actions/Vendor Credits, Free allowance, top-up rates, BYO API keys, and historical Pro/Team notes.
+
+2026-06-09: Updated directly affected parent hubs: AI Automation now includes Reclaim.ai and current Relevance AI pricing caveats; AI Notes includes Reflect as the encrypted linked-notes lane; AI Chatbots includes Reka as model infrastructure with BSL/source-available caveats; AI Research updates the Reka Edge research-infrastructure lane and Jun 9 source dates. Added current source registry IDs for Reclaim Outlook/help/about, Reka homepage/Edge/model docs, and Relevance AI plans docs, then regenerated `PAGE_REFRESH_LEDGER.md`.
+
+### 6. Final report
+
+Completed. Verification passed: `npm run ledger:pages`, `npm run ledger:pages:check`, JSON parse for `src/data/source-registry.json`, source ID/date spot checks, stale-string sweeps over Reclaim/Reflect/Reka/Relevance AI pages, `git diff --check -- <touched files>`, `npm run audit:sources`, `npm run audit:facts`, `npm run test:scripts`, `npm run check`, and `npm run build:fast`. Browser QA passed for `/` at 360, 390, 430, 768, and 1024 px with no horizontal overflow and populated portal/category/top-tools/news sections. `dist-fast` was removed after the build.
+
+---
+
+## ExecPlan: June 9 2026 Replicate Retell Riverside Rork Tool Refresh
+
+### 1. Objective
+
+Continue the oldest-to-newest live ledger refresh after skipped dead rows by updating Replicate, Retell AI, Riverside, and Rork to June 9, 2026 source-backed buyer guidance.
+
+### 2. Scope
+
+Included: `src/content/tools/replicate.md`, `src/content/tools/retell-ai.md`, `src/content/tools/riverside.md`, `src/content/tools/rork.md`, directly affected category hubs, source registry rows, homepage/mobile wiki-front QA where relevant, ledger regeneration, checks, and responsive QA. Excluded: dead tool pages, individual news article pages, and unrelated generated OG image changes already present in the worktree.
+
+### 3. Verification notes
+
+Primary June 2026 checks found Replicate still billing public models by hardware time or input/output depending model, with FLUX, Wan, Claude, DeepSeek, CPU, T4, L40S, A100, and H100 examples on the official pricing page; private models usually bill setup, idle, and active time except fast-booting fine-tunes. Retell AI pricing still lists pay-as-you-go voice agents at $0.07-$0.31/minute, chat agents at $0.002+/message, $10 free credits, 20 included concurrent calls, more concurrency on demand, and connected-call-only billing, while its docs flag June 15, 2026 legacy endpoint removals. Riverside pricing now resolves on `riverside.com/pricing` with Free $0, Pro $29 monthly or $24/month annual, Live $39 monthly or $34/month annual, Webinar $99 monthly or $79/month annual, and Business custom; the rendered table repeats a Webinar annual-billing line, so checkout verification remains a trust note. Rork docs now use Free, Rork Pro, and Rork Max instead of old Junior/Middle/Senior language: Free is public web apps, Pro starts at $20/month for Android Kotlin/Compose plus Expo/React Native and web, and Max starts at $200/month for SwiftUI iOS plus Apple-device outputs.
+
+### 4. Implementation plan
+
+Patch the four tool pages, remove stale Rork plan-history rows, update source registry rows and add the Retell June 15, 2026 deprecation source, update affected category hubs for infrastructure, voice, design, coding, and automation, regenerate `PAGE_REFRESH_LEDGER.md`, then run source/stale sweeps, ledger checks, content checks, build, and responsive QA at 360, 390, 430, 768, and 1024 px.
+
+### 5. Progress log
+
+2026-06-09: Selected `/tools/replicate/`, `/tools/retell-ai/`, `/tools/riverside/`, and `/tools/rork/` as the next live ledger cluster after skipped dead Phind, Tome, DALL-E, and Grok Code Fast rows. Verified current official Replicate pricing, Retell pricing/deprecation docs, Riverside pricing, and Rork subscription/technical docs.
+
+2026-06-09: Refreshed the four tool records. Replicate now separates public hardware-time, output-priced models, private model idle/setup billing, and fast-booting fine-tunes. Retell AI now models included/extra concurrency, add-ons, failed-call/voicemail billing, and the June 15 legacy endpoint migration. Riverside now reflects the current `riverside.com` pricing page and checkout-verification caveat. Rork now reflects Free, Rork Pro, and Rork Max while removing obsolete Junior/Middle/Senior price-history rows.
+
+2026-06-09: Updated affected parent hubs: AI Infrastructure now models Replicate public/private cost risk; AI Voice now carries Retell concurrency/API migration and Riverside pricing notes; AI Design and AI Coding now place Rork in the mobile/app-store builder lane; AI Automation now flags Retell concurrency and endpoint migration for customer-support workflows. Added current source-registry checks for Replicate, Retell, Riverside, and Rork plus the Retell June 15 deprecation source.
+
+### 6. Final report
+
+Completed. Verification passed: `npm run ledger:pages`, `npm run ledger:pages:check`, JSON parse/duplicate/missing/stale checks for the relevant source registry IDs, retired Rork plan-name sweeps, `git diff --check -- <touched files>`, `npm run audit:sources`, `npm run audit:facts`, `npm run test:scripts`, `npm run check`, and `npm run build:fast`. Browser/Playwright QA passed for `/`, `/tools/replicate/`, `/tools/retell-ai/`, `/tools/riverside/`, `/tools/rork/`, `/categories/ai-infrastructure/`, `/categories/ai-voice/`, `/categories/ai-design/`, `/categories/ai-coding/`, and `/categories/ai-automation/` at 360, 390, 430, 768, and 1024 px: 50 route-width checks, no real horizontal overflow, H1/main content present, June 9 verification copy present where required, and homepage top tools/news/portals populated. `dist-fast` was removed after the build.

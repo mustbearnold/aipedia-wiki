@@ -2,7 +2,7 @@
 type: tool
 slug: langflow
 title: Langflow
-tagline: Open-source visual canvas for LangChain-based LLM workflows, agents, and RAG pipelines. Version 1.9.2 as of May 2026, now with a free first-party enterprise-grade cloud.
+tagline: Open-source visual canvas for LangChain-based LLM workflows, agents, MCP servers, and RAG pipelines. Version 1.9.6 is the current stable release as of June 8, 2026.
 category: ai-automation
 company: langflow
 url: https://langflow.org
@@ -11,8 +11,8 @@ pricing_model: open-source
 price_range: "$0 self-host · free Langflow Cloud tier"
 status: active
 launched: 2023-04
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-08
+last_verified: 2026-06-08
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: https://www.langflow.org/
     source_label: Langflow official site
     source_id: langflow-official
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-08'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -40,40 +40,40 @@ facts:
     source: https://www.langflow.org/
     source_label: Langflow official site
     source_id: langflow-pricing
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-08'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
   workflow_surface:
-    value: "Langflow turns components into flows that can be run, exported, and served for agentic or retrieval applications rather than acting as a generic SaaS automation suite."
+    value: "Langflow turns components into flows that can be run, tested, deployed through the API, and served for agentic or retrieval applications rather than acting as a generic SaaS automation suite."
     source: https://docs.langflow.org/
     source_label: Langflow documentation
     source_id: langflow-docs
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-08'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
   open_source:
-    value: "The GitHub repository is the best source for current license, release cadence, install paths, and community-maintained integrations."
+    value: "The GitHub repository is the best source for current license, release cadence, security releases, install paths, and community-maintained integrations."
     source: https://github.com/langflow-ai/langflow
     source_label: Langflow GitHub repository
     source_id: langflow-repository
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-08'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
   watch_out_for:
-    value: "Buyers needing hard SLAs, deep enterprise controls, or non-LLM business-app automation should still validate the new Langflow Cloud terms rather than assuming the OSS canvas comes with those guarantees."
+    value: "Buyers needing hard SLAs, deep enterprise controls, or non-LLM business-app automation should still validate Langflow Cloud terms and pin/patch self-hosted versions rather than assuming the OSS canvas comes with those guarantees."
     source: https://docs.langflow.org/
     source_label: Langflow documentation
     source_id: langflow-docs
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-08'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
 tags: [llm-workflows, ai-agents, langchain, open-source, visual-builder, no-code, rag, automation, langgraph]
-seo_title: "Langflow: Features, Pricing & Review (May 2026)"
-meta_description: "Langflow is a free, open-source visual builder for LangChain LLM workflows, AI agents, and RAG pipelines. Version 1.9.2 ships MCP servers, deeper LangGraph integration, and a free first-party Langflow Cloud tier."
+seo_title: "Langflow: Features, Pricing & Review (June 2026)"
+meta_description: "Langflow is a free, open-source visual builder for LangChain LLM workflows, AI agents, MCP servers, and RAG pipelines. June 2026 review updated for version 1.9.6 and the 1.9.3 security-release path."
 author: "aipedia.wiki Editorial"
 best_for:
   - developers prototyping LangChain and LangGraph workflows visually
@@ -108,11 +108,19 @@ price_history:
     source_label: "Source"
     source_id: langflow-pricing
     note: "Free first-party Langflow Cloud tier live alongside OSS. Version 1.9.2 released May 1, 2026."
+  - date: 2026-06-08
+    plan: "Langflow Cloud + OSS"
+    price: "$0 self-host · free cloud start"
+    source: "https://github.com/langflow-ai/langflow/releases"
+    source_label: "Langflow GitHub releases"
+    source_id: langflow-releases
+    verified_at: 2026-06-08
+    note: "Version 1.9.6 is the latest stable release checked; 1.9.3 was a critical security release, so production users should pin and patch."
 ---
 
 # Langflow
 
-Langflow is the open-source visual canvas for LangChain-based LLM workflows, agents, and RAG pipelines. Version 1.9.2 (May 1, 2026) ships telemetry hooks for the deployments API, improved agent nodes, MCP server export, and deeper LangGraph integration. The project also now runs its own free enterprise-grade Langflow Cloud alongside the OSS build. DataStax-hosted Langflow was deprecated March 9, 2026 and shut down April 9, 2026; the OSS project continues independently.
+Langflow is the open-source visual canvas for LangChain-based LLM workflows, agents, MCP servers, and RAG pipelines. Version 1.9.6 (June 2, 2026) is the current stable release checked by AiPedia on June 8; it follows a fast 1.9.x cadence that included a critical 1.9.3 security release on May 15. The project also runs its own free enterprise-grade Langflow Cloud alongside the OSS build. DataStax-hosted Langflow was deprecated March 9, 2026 and shut down April 9, 2026; the OSS project continues independently.
 
 ## System Verdict
 
@@ -127,17 +135,17 @@ Langflow is the open-source visual canvas for LangChain-based LLM workflows, age
 | | |
 |---|---|
 | **License** | MIT (fully open source) |
-| **Current version** | 1.9.2 (May 1, 2026) |
+| **Current version** | 1.9.6 (June 2, 2026) |
 | **Core product** | Visual canvas for LangChain and LangGraph flows |
 | **Components** | 150+ pre-built nodes: models, prompts, retrievers, tools, agents, embeddings |
 | **Deployment** | REST API · MCP server · Python export · free Langflow Cloud |
-| **Langflow Cloud** | First-party managed cloud · free tier live as of May 2026 |
+| **Langflow Cloud** | First-party managed cloud · free start path checked June 8, 2026 |
 | **DataStax cloud status** | Deprecated March 9, 2026 · shut down April 9, 2026 |
 | **Self-host** | Free · Docker · Python · unlimited |
 | **Supported models** | OpenAI frontier models · Claude Opus 4.7 · Gemini 3.1 Pro · Llama 4 · Mistral 3 · local models |
 | **LangGraph support** | Native (multi-agent, stateful memory, tool calling) |
 
-Every data point above was verified against vendor documentation on 2026-05-13. See Sources.
+Every volatile data point above was verified against vendor documentation on 2026-06-08. See Sources.
 
 ## What it actually is
 
@@ -174,7 +182,7 @@ Langflow is MIT-licensed and free to self-host. Langflow Cloud added a free firs
 | Cloud partners (IBM watsonx, Render, Railway) | Partner pricing | Optional managed hosting through ecosystem vendors. Verify current partner list on [langflow.org](https://langflow.org). |
 | Ecosystem support contracts | Custom | SLA-backed deployment through partner integrators. |
 
-*Prices verified 2026-05-13 via [langflow.org](https://langflow.org) and the [Langflow GitHub](https://github.com/langflow-ai/langflow). DataStax-hosted Langflow was deprecated March 9, 2026 and shut down April 9, 2026; the new first-party Langflow Cloud is unrelated.*
+*Prices and release status verified 2026-06-08 via [langflow.org](https://langflow.org), [Langflow documentation](https://docs.langflow.org/), and [Langflow GitHub releases](https://github.com/langflow-ai/langflow/releases). DataStax-hosted Langflow was deprecated March 9, 2026 and shut down April 9, 2026; the first-party Langflow Cloud is unrelated.*
 
 ## Against the alternatives
 
@@ -196,16 +204,16 @@ Langflow is MIT-licensed and free to self-host. Langflow Cloud added a free firs
 - **Not pure no-code.** Non-template use assumes familiarity with LangChain concepts (chains, retrievers, agents, tool calling). Operators without that grounding stall.
 - **DataStax cloud shutdown.** Teams that stood up workflows on DataStax-hosted Langflow before March 2026 need to migrate to self-host or another partner by April 9, 2026. Existing data was scheduled for deletion.
 - **Component quality varies.** Community-contributed nodes ship at uneven maturity. Core nodes are solid; some integrations lag model releases.
-- **Version churn.** Monthly releases move fast. Breaking changes land occasionally. Pin versions for production.
+- **Version churn and patch pressure.** The 1.9.x line moved from 1.9.2 on May 1 to 1.9.6 on June 2, and 1.9.3 was explicitly labeled a critical security release. Pin versions for production and schedule upgrade testing.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [langflow.org](https://langflow.org), the [Langflow GitHub releases](https://github.com/langflow-ai/langflow/releases), and the [Langflow documentation](https://docs.langflow.org/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-08 against [langflow.org](https://langflow.org), the [Langflow GitHub releases](https://github.com/langflow-ai/langflow/releases), and the [Langflow documentation](https://docs.langflow.org/).
 
 ## FAQ
 
 **Is Langflow free?**
-Yes. MIT-licensed and free to self-host with no usage caps. The first-party Langflow Cloud also ships a free tier as of May 2026, so users no longer need to stand up infrastructure to start. A $5 to $20/month VPS covers small self-hosted deployments ([Langflow GitHub](https://github.com/langflow-ai/langflow)).
+Yes. MIT-licensed and free to self-host with no usage caps. The first-party Langflow Cloud also offers a free start path, so users no longer need to stand up infrastructure to begin. A $5 to $20/month VPS covers small self-hosted deployments, but production teams should still pin versions and monitor security releases ([Langflow GitHub](https://github.com/langflow-ai/langflow)).
 
 **What happened to DataStax Langflow?**
 DataStax deprecated its hosted Langflow service March 9, 2026 and shut it down April 9, 2026. All DataStax Langflow data was scheduled for deletion at shutdown. The open-source Langflow project continues independently and now runs its own first-party Langflow Cloud.

@@ -3,6 +3,29 @@
 // Copilot) at the canonical index + category hubs + editorial policy.
 //
 // See also /llms-full.txt for the verbose variant with every page listed.
+// Refresh metadata: 2026-06-08 PixVerse, Playground AI, Poe, and Qdrant
+// tool refresh with PixVerse C1/V6/API memberships and credit packs,
+// Playground Pro/Pro Plus/Nano Banana/GPT Image 2/Day Pass/API caveats,
+// Poe point-tier and regional checkout guidance, Qdrant Free/Standard/
+// Premium/Hybrid/Private Cloud plus v1.18.2 release guidance, source
+// registry, homepage/category parent hubs, and LLM maintenance.
+// Refresh metadata: 2026-06-08 OpusClip, Paradox, Pinecone, and Pipedream
+// tool refresh with OpusClip credit/API corrections, Workday-owned Paradox
+// recruiting/ATS packaging, Pinecone Starter/Builder/Standard/Assistant
+// pricing corrections, Pipedream monthly-credit pricing, source registry,
+// category parent hubs, and LLM maintenance.
+// Refresh metadata: 2026-06-08 LinkedIn Recruiter, Llama, LM Studio, and
+// Logseq tool refresh with skipped dead tool pages, LinkedIn Hiring Assistant
+// add-on/metrics, Llama Groq Scout and Together Maverick pricing caveats,
+// LM Studio v1 REST/API/free-work posture, Logseq DB/markdown-mirror/sync
+// caveats, source registry, category parent hubs, and LLM maintenance.
+// Refresh metadata: 2026-06-08 open-source AI guide follow-up with LM Studio
+// v1 REST/API/free-work posture, Llama Scout/Maverick hosted-provider pricing
+// caveats, open-weight licensing language, /guides/, and LLM maintenance.
+// Refresh metadata: 2026-06-08 Langfuse, LangGraph, Leonardo AI, and
+// Letta tool refresh with Langfuse Cloud unit pricing/evals,
+// LangGraph/LangSmith deployment billing, Leonardo current web/team/API
+// pricing, Letta Code pricing/BYOK, category parent hubs, and LLM maintenance.
 // Refresh metadata: 2026-06-07 Julius AI tool refresh with
 // credit-based pricing, Plus/Pro/Max/Ultra/Business/Growth packaging,
 // data connectors, Slack Agent, scheduled reports, source registry,
@@ -98,6 +121,9 @@ export const GET: APIRoute = async () => {
   lines.push('');
   lines.push(`> Independent AI tools encyclopedia maintained by aipedia.wiki Editorial. ${activeTools.length} active tool pages across ${activeCategories.length} categories, ${comparisons.length} head-to-head comparisons, ${useCases.length} buyer guides. Public pages carry verification metadata and editorial sourcing controls.`);
   lines.push('');
+  lines.push('Recent tool refresh: June 8, 2026 refreshed LinkedIn Recruiter, Llama, LM Studio, and Logseq around LinkedIn Hiring Assistant add-on/metrics, Llama Groq Scout and Together Maverick pricing caveats, LM Studio v1 REST/API/free-work posture, and Logseq DB/markdown-mirror/sync caveats.');
+  lines.push('Recent guide refresh: June 8, 2026 refreshed open-source AI tools around LM Studio developer APIs, Llama open-weight/provider economics, local/self-hosted AI security, and open-source versus open-weight licensing language.');
+  lines.push('Recent tool refresh: June 8, 2026 refreshed Langfuse, LangGraph, Leonardo AI, and Letta around Langfuse Cloud unit pricing/evals, LangGraph/LangSmith pricing and deployment billing, Leonardo Free/Essential/Premium/Ultimate web plans plus team/API paths, and Letta Code Free/Pro/Enterprise/BYOK/Letta Auto pricing.');
   lines.push('Recent guide refresh: June 7, 2026 refreshed Runway alternatives, Suno alternatives, and Synthesia alternatives around Runway credit/API pricing, Seedance/Kling/Veo/Luma/Pika/Hailuo video lanes, Suno paid-rights and v5.5 baseline, ElevenLabs Music/Udio/AIVA/Mubert/Stable Audio music alternatives, and HeyGen/Tavus/D-ID/Hedra/Argil/Captions avatar-video switching paths.');
   lines.push('Recent tool refresh: June 7, 2026 refreshed Julius AI around credit-based pricing, Plus/Pro/Max/Ultra/Business/Growth packaging, data connectors, Slack Agent, scheduled reports, 32 GB Pro compute context, and source-registry maintenance.');
   lines.push('Recent tool refresh: June 7, 2026 refreshed Jimeng/Dreamina around ByteDance Seedream 5.0 Lite, Seedance 2.0, CapCut/Dreamina route context, account-gated pricing, historical third-party price caveats, and source-registry maintenance.');

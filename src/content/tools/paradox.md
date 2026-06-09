@@ -4,13 +4,13 @@ slug: paradox
 title: Paradox
 tagline: Conversational AI recruiting platform best known for Olivia, with mobile apply, candidate screening, resume matching, interview scheduling, and candidate-experience automation.
 category: ai-automation
-company: Paradox
+company: Workday / Paradox
 url: https://www.paradox.ai/solutions/recruiters
 pricing_model: enterprise
 price_range: "Contact sales"
 status: active
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-08
+last_verified: 2026-06-08
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -25,33 +25,33 @@ scores:
   longevity: 8
 facts:
   best_for:
-    value: "Paradox is best for high-volume recruiting teams that need conversational AI for mobile apply, screening, resume matching, candidate questions, and interview scheduling."
+    value: "Paradox is best for high-volume recruiting teams that need conversational AI for mobile apply, screening, resume matching, candidate questions, interview scheduling, and Workday-connected candidate experience workflows."
     source: "https://www.paradox.ai/solutions/recruiters"
     source_label: "Paradox recruiter solution"
     source_id: paradox-recruiters
-    verified_at: 2026-05-13
+    verified_at: 2026-06-08
     volatility: medium
     confidence: high
   pricing_anchor:
-    value: "Paradox uses sales-led pricing; buyers should validate package, implementation, candidate volume, scheduling, ATS integration, and conversational workflow scope with sales."
-    source: "https://www.paradox.ai/solutions/recruiters"
-    source_label: "Paradox recruiter solution"
-    source_id: paradox-recruiters
-    verified_at: 2026-05-13
+    value: "Paradox/Workday uses sales-led pricing; buyers should validate Workday availability, package, implementation, candidate volume, scheduling, ATS integration, conversational workflow scope, consent, audit, and renewal terms with sales."
+    source: "https://investor.workday.com/news-and-events/press-releases/news-details/2026/Paradox-Conversational-Applicant-Tracking-System-ATS-Now-Available-Through-Workday-Helping-Organizations-Hire-Frontline-Workers-Faster/default.aspx"
+    source_label: "Workday Paradox Conversational ATS availability"
+    source_id: workday-paradox-ats
+    verified_at: 2026-06-08
     volatility: high
     confidence: medium
-    next_review_at: 2026-08-13
+    next_review_at: 2026-09-08
   watch_out_for:
-    value: "Paradox is strongest for candidate conversion and high-volume workflows, not passive sourcing or enterprise-wide skills intelligence."
-    source: "https://www.paradox.ai/solutions/recruiters"
-    source_label: "Paradox recruiter solution"
-    source_id: paradox-recruiters
-    verified_at: 2026-05-13
+    value: "Paradox is strongest for candidate conversion and high-volume workflows, not passive sourcing or enterprise-wide skills intelligence; Workday ownership also means roadmap, packaging, data boundaries, and Paradox/Workday buying path should be verified before a multi-year rollout."
+    source: "https://investor.workday.com/news-and-events/press-releases/news-details/2025/Workday-Completes-Acquisition-of-Paradox-10-01-2025/default.aspx"
+    source_label: "Workday completes Paradox acquisition"
+    source_id: workday-paradox-close
+    verified_at: 2026-06-08
     volatility: medium
     confidence: high
 tags: [recruiting, conversational-ai, screening, scheduling, candidate-experience]
-seo_title: "Paradox Review (May 2026): Olivia for AI Recruiting"
-meta_description: "Paradox is a conversational AI recruiting platform best known for Olivia, with mobile apply, screening, resume matching, interview scheduling, and candidate experience automation."
+seo_title: "Paradox Review (June 2026): Workday, Olivia & AI Recruiting"
+meta_description: "Paradox is Workday-owned conversational AI recruiting software for Olivia, mobile apply, screening, resume matching, interview scheduling, candidate experience, and frontline hiring automation. Updated June 8, 2026."
 author: "aipedia.wiki Editorial"
 best_for:
   - high-volume hiring
@@ -68,25 +68,27 @@ quick_answer: >-
 
 # Paradox
 
-Paradox is a conversational AI recruiting platform best known for Olivia. Recruiters use it for candidate questions, mobile apply, screening, resume matching, scheduling, reminders, and candidate-experience workflows.
+Paradox is a Workday-owned conversational AI recruiting platform best known for Olivia. Recruiters use it for candidate questions, mobile apply, screening, resume matching, scheduling, reminders, and candidate-experience workflows.
 
-As of May 13, 2026, AiPedia treats Paradox as the best AI recruiting pick for high-volume screening and scheduling. The recruiter solution centers on a six-product conversational suite (Career Sites, CRM, ATS, Apply, Events, Scheduling) plus text recruiting, recorded video interviews, onboarding, and surveys, with the Immersive Job Preview named 2025 Top HR Product of the Year by HR Executive.
+As of June 8, 2026, AiPedia treats Paradox as the best AI recruiting pick for high-volume screening and scheduling when the buyer wants conversational hiring workflow rather than passive sourcing. Workday completed its Paradox acquisition on October 1, 2025, made the Workday Paradox Candidate Experience Agent available for purchase, and made Paradox Conversational ATS available through Workday in January 2026 for frontline hiring workflows.
 
 ## System Verdict
 
-Pick Paradox when the hiring funnel is losing candidates because apply, screening, and scheduling are too slow. Its value is strongest for volume hiring and candidate conversion.
+Pick Paradox when the hiring funnel is losing candidates because apply, screening, and scheduling are too slow. Its value is strongest for volume hiring, frontline recruiting, and candidate conversion where repetitive candidate interactions can be standardized safely.
 
 Skip it if the main job is sourcing passive specialized candidates. [LinkedIn Recruiter](/tools/linkedin-recruiter/) and [hireEZ](/tools/hireez/) are better starting points for sourcing. Skip it if the bigger business problem is skills planning and internal mobility; [Eightfold AI](/tools/eightfold-ai/) is the enterprise talent-intelligence option.
 
+The buyer watch-out is governance. Paradox can shorten candidate journeys, but screening, scheduling, and candidate communications still need consent language, accessibility review, adverse-impact monitoring, recruiter override paths, data-retention controls, and audit trails.
+
 ## What Paradox Actually Does
 
-Paradox is a conversational AI recruiting platform centered on Olivia. The product is designed to automate candidate-facing recruiting work: answering questions, helping candidates apply on mobile, screening for requirements, matching resumes, scheduling interviews, sending reminders, and coordinating reschedules. The official recruiter page emphasizes reducing administrative work and moving candidates faster through the funnel.
+Paradox is a conversational AI recruiting platform centered on Olivia. The product is designed to automate candidate-facing recruiting work: answering questions, helping candidates apply on mobile, screening for requirements, matching resumes, scheduling interviews, sending reminders, and coordinating reschedules. The official recruiter page emphasizes reducing administrative work and moving candidates faster through the funnel. Workday's January 2026 availability announcement adds the Workday route: Paradox Conversational ATS is available through Workday for frontline hiring, with short text-based conversations across search, apply, interview, and onboarding.
 
 That is a different job from LinkedIn Recruiter or hireEZ. Paradox is not primarily a passive-sourcing database. Its best fit is high-volume hiring where candidate speed and consistency matter: hourly roles, distributed locations, healthcare, retail, restaurants, logistics, hospitality, franchise networks, and field operations. If candidates abandon the process because apply or scheduling is slow, Paradox attacks that leak directly.
 
 ## Best Plan
 
-Paradox is sales-led, so the right plan is the workflow package that matches hiring volume. A sensible evaluation starts with:
+Paradox is sales-led, so the right plan is the Workday/Paradox package that matches hiring volume. A sensible evaluation starts with:
 
 - Mobile apply if the candidate drop-off starts before applications are complete.
 - Conversational screening if recruiters spend too much time on basic qualification.
@@ -94,13 +96,13 @@ Paradox is sales-led, so the right plan is the workflow package that matches hir
 - Interview scheduling if calendar coordination is slowing time to interview.
 - Candidate-experience automation if reminders, reschedules, and FAQs are consuming recruiter capacity.
 
-The product should be bought around a specific funnel leak, not as a vague AI layer. Ask Paradox to model expected impact using your actual applicant volume, completion rate, interview-show rate, recruiter hours, and time-to-fill baseline.
+The product should be bought around a specific funnel leak, not as a vague AI layer. Ask Workday/Paradox to model expected impact using your actual applicant volume, completion rate, interview-show rate, recruiter hours, time-to-fill baseline, ATS stack, and candidate support requirements.
 
 ## Pricing And Procurement
 
-Paradox does not publish a simple self-serve monthly price on the verified recruiter page. Treat pricing as custom enterprise or mid-market procurement. The quote should separate implementation, candidate volume, locations, languages, ATS integration, scheduling integration, conversational workflow design, support, and renewal terms.
+Paradox does not publish a simple self-serve monthly price on the verified recruiter page. Treat pricing as custom enterprise or mid-market procurement through Paradox and/or Workday. The quote should separate implementation, candidate volume, locations, languages, Workday availability, ATS integration, scheduling integration, conversational workflow design, support, and renewal terms.
 
-The most important procurement question is not "does Olivia use AI?" It is whether the product can safely automate the specific candidate interactions your organization is willing to standardize. Hiring teams should confirm escalation rules, candidate consent language, data retention, audit logs, adverse-impact review, accessibility, and fallback paths for candidates who need human help.
+The most important procurement question is not "does Olivia use AI?" It is whether the product can safely automate the specific candidate interactions your organization is willing to standardize. Hiring teams should confirm escalation rules, candidate consent language, data retention, audit logs, adverse-impact review, accessibility, recruiter override, and fallback paths for candidates who need human help. Workday ownership also means buyers should ask whether the rollout is sold as Workday Paradox Candidate Experience Agent, Paradox Conversational ATS, a Paradox-direct package, or a hybrid with existing ATS/CRM systems.
 
 ## Best Alternatives
 
@@ -123,6 +125,8 @@ Before buying Paradox, document the funnel:
 - Which ATS, email, calendar, SMS, and CRM systems must integrate?
 - What candidate data is collected, retained, and deleted?
 - How will recruiters audit Olivia conversations and override outcomes?
+- How will adverse-impact checks, accessibility exceptions, and human review be documented?
+- Is the buying route Workday, Paradox-direct, or both?
 
 Paradox is strongest when the answers reveal repeatable, high-volume process drag. It is weaker when the hiring motion is bespoke, low-volume, or relationship-led.
 
@@ -148,8 +152,10 @@ Paradox should be judged on workflow fit, not just AI branding. Before buying, m
 
 ## AiPedia Trust Note
 
-This page was refreshed on May 13, 2026 using Paradox's current recruiter solution page. AiPedia does not list a paid affiliate program for Paradox. Scores reflect practical recruiter utility, candidate-experience impact, implementation risk, and durability.
+This page was refreshed on June 8, 2026 using Paradox's current recruiter solution page plus Workday's Paradox acquisition and January 2026 Workday availability disclosures. AiPedia does not list a paid affiliate program for Paradox. Scores reflect practical recruiter utility, candidate-experience impact, Workday packaging risk, implementation risk, governance, and durability.
 
 ## Sources
 
 - [Paradox recruiter solution](https://www.paradox.ai/solutions/recruiters)
+- [Workday completes acquisition of Paradox](https://investor.workday.com/news-and-events/press-releases/news-details/2025/Workday-Completes-Acquisition-of-Paradox-10-01-2025/default.aspx)
+- [Paradox Conversational ATS available through Workday](https://investor.workday.com/news-and-events/press-releases/news-details/2026/Paradox-Conversational-Applicant-Tracking-System-ATS-Now-Available-Through-Workday-Helping-Organizations-Hire-Frontline-Workers-Faster/default.aspx)

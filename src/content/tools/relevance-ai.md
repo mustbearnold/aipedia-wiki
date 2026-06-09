@@ -2,16 +2,16 @@
 type: tool
 slug: relevance-ai
 title: Relevance AI
-tagline: No-code AI workforce platform for building agents that reason and act, billed on Actions plus separate Vendor Credits.
+tagline: No-code AI workforce platform for agents, workforces, tools, and enterprise automation, billed through Actions plus Vendor Credits in the docs.
 category: ai-automation
 company: relevance-ai
 url: https://relevanceai.com
 pricing_model: enterprise
-price_range: "Pro, Team, Enterprise · all contact-sales as of May 2026 · prior Pro $19/mo and Team $234/mo annual rates no longer publicly listed"
+price_range: "Enterprise contact sales on public pricing page; docs still describe Free, Pro, Team, Actions, and Vendor Credits"
 status: active
 launched: 2023-06
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-09
+last_verified: 2026-06-09
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -26,34 +26,34 @@ scores:
   longevity: 6
 facts:
   best_for:
-    value: "No-code AI workforce platform for building agents that reason and act, billed on Actions plus separate Vendor Credits. Best for workflow automation, agentic operations, and business-process automation."
+    value: "No-code AI workforce platform for building enterprise agents, tools, and workforces across GTM, support, operations, research, and business-process automation."
     source: "https://relevanceai.com/pricing"
     source_label: "Relevance AI pricing page"
     source_id: relevance-ai-official
-    verified_at: 2026-05-13
+    verified_at: 2026-06-09
     volatility: medium
     confidence: medium
   pricing_anchor:
-    value: "As of May 13, 2026, the public pricing page lists Pro (2,500 Actions/mo + $20 Vendor Credits), Team (7,000 Actions/mo + $70 Vendor Credits), and Enterprise (custom). All three route through Talk to Sales rather than self-serve checkout. Lindy's 2026 pricing breakdown reports Team monthly at $349; prior $19 Pro and $234 Team annual rates are no longer surfaced on the vendor page."
+    value: "As of June 9, 2026, the public pricing page foregrounds Enterprise only: custom Actions, custom Vendor Credits, unlimited agents/tools/users/projects/workforces, 2,000+ integrations, SSO/RBAC/audit logs, and dedicated account management. Docs still define Free at 200 Actions/month plus 1,000 Vendor Credits, Actions at $80 per 1,000 top-up, Vendor Credits at $20 per 10,000 top-up, and BYO API keys on paid plans."
     source: "https://relevanceai.com/pricing"
     source_label: "Relevance AI pricing page"
     source_id: relevance-ai-official
-    verified_at: 2026-05-13
-    next_review_at: 2026-08-13
+    verified_at: 2026-06-09
+    next_review_at: 2026-07-09
     volatility: high
-    confidence: medium
+    confidence: high
   watch_out_for:
-    value: "Pricing moved to contact-sales only in 2026; verify current dollar amounts, action allowances, vendor credit limits, user seats, data policy, and integration details directly with Relevance AI before procurement."
-    source: "https://relevanceai.com/pricing"
-    source_label: "Relevance AI pricing page"
-    source_id: relevance-ai-official
-    verified_at: 2026-05-13
-    next_review_at: 2026-08-13
+    value: "Do not quote old Pro/Team prices as current. The public pricing page no longer exposes those self-serve rates in the static page; verify any Free, Pro, Team, monthly allowance, and paid-plan terms inside the app or directly with Relevance AI."
+    source: "https://relevanceai.com/docs/admin/subscriptions/plans"
+    source_label: "Relevance AI plans and credits docs"
+    source_id: relevance-ai-plans-docs
+    verified_at: 2026-06-09
+    next_review_at: 2026-07-09
     volatility: high
-    confidence: medium
+    confidence: high
 tags: [ai-agents, no-code, agent-builder, llm, workflow, drag-and-drop, automation, rag, ai-workforce]
-seo_title: "Relevance AI: Features, Pricing & Review (May 2026)"
-meta_description: "Relevance AI is a no-code AI workforce platform. Pricing moved to contact-sales in 2026: Pro (2,500 Actions + $20 Vendor Credits), Team (7,000 Actions + $70 Vendor Credits), Enterprise custom. Actions plus Vendor Credits split since September 2025."
+seo_title: "Relevance AI Review: AI Workforce Pricing & Risks (June 2026)"
+meta_description: "Relevance AI is a no-code AI workforce platform. Public pricing now foregrounds Enterprise; docs still explain Actions, Vendor Credits, Free, top-ups, rollovers, and BYO API keys."
 author: "aipedia.wiki Editorial"
 best_for:
   - non-technical teams building sales or support agents
@@ -66,7 +66,7 @@ not_best_for:
   - mission-critical workflows with zero tolerance for drift
   - cost-predictable budgets (credit system is opaque)
 quick_answer: >-
-  Relevance AI is a no-code platform for building AI workforce agents that reason and decide. As of May 2026 the public pricing page lists Pro (2,500 Actions + $20 Vendor Credits/mo), Team (7,000 Actions + $70 Vendor Credits/mo), and Enterprise, all behind contact-sales. Free tier still exists for prototyping per third-party docs. Pick it for non-technical teams shipping sales or support bots; skip for engineering depth or predictable unit economics.
+  Relevance AI is a no-code platform for building AI workforce agents that reason and act. As of June 2026, the public pricing page foregrounds Enterprise contact-sales packaging, while docs still explain Actions, Vendor Credits, Free, Pro, Team, top-ups, rollovers, and BYO API keys. Pick it for business-owned agents and workforces; skip it if you need transparent self-serve pricing or developer-grade control.
 price_history:
   - date: 2025-09
     plan: "Pricing model"
@@ -89,28 +89,37 @@ price_history:
     source_label: "Source"
     source_id: relevance-ai-official
     note: "Prior verified Team annual rate; 84,000 actions/yr + $840 Vendor Credits/yr."
-  - date: 2026-05-13
-    plan: "All paid tiers"
-    price: "Contact sales"
+  - date: 2026-06-09
+    plan: "Public pricing page"
+    price: "Enterprise contact sales"
     source: "https://relevanceai.com/pricing"
-    source_label: "Source"
+    source_label: "Relevance AI pricing page"
     source_id: relevance-ai-official
-    note: "Public pricing page restructured. Pro now lists 2,500 Actions + $20 Vendor Credits per month, Team 7,000 Actions + $70 Vendor Credits per month, Enterprise custom. All tiers route through Talk to Sales rather than self-serve checkout. Lindy's 2026 breakdown reports Team monthly at $349; the prior $19 Pro and $234 Team annual rates are no longer surfaced on the vendor page."
+    verified_at: 2026-06-09
+    note: "Static public pricing now foregrounds Enterprise only: custom Actions, custom Vendor Credits, unlimited agents/tools/users/projects/workforces, 2,000+ integrations, calling/meeting agents, enterprise triggers, agent evaluations, A/B testing and analytics, SSO/RBAC/audit logs, and dedicated account manager."
+  - date: 2026-06-09
+    plan: "Docs billing model"
+    price: "Actions top-ups $80/1,000; Vendor Credits top-ups $20/10,000"
+    source: "https://relevanceai.com/docs/admin/subscriptions/plans"
+    source_label: "Relevance AI plans and credits docs"
+    source_id: relevance-ai-plans-docs
+    verified_at: 2026-06-09
+    note: "Docs say Free users get 200 Actions/month and 1,000 Vendor Credits; paid plans can buy top-ups, roll over top-ups/Vendor Credits, and bring their own API keys to bypass Vendor Credits."
 ---
 
 # Relevance AI
 
-Relevance AI is a no-code AI workforce platform built by Relevance AI Pty Ltd. Drag-and-drop tools and agents run on Claude Opus 4.7, OpenAI frontier models, or Gemini 3.1 Pro within the same workflow.
+Relevance AI is a no-code AI workforce platform built by Relevance AI Pty Ltd. Drag-and-drop tools, agents, and workforces let business teams automate judgment work without building a full agent stack from scratch.
 
-Since September 2025, pricing splits into Actions (what the agent does) and Vendor Credits (LLM model costs). That split changes the cost calculus versus flat-token platforms. In 2026 the public pricing page also restructured: Pro, Team, and Enterprise now all route through Talk to Sales rather than self-serve checkout, with Pro showing 2,500 Actions plus $20 Vendor Credits a month and Team showing 7,000 Actions plus $70 Vendor Credits a month.
+Since September 2025, pricing splits into **Actions** (tool runs) and **Vendor Credits** (AI model and tool costs). That split changes the cost calculus versus flat-token platforms. The June 2026 public pricing page now foregrounds Enterprise only; the docs still describe Free, Pro, Team, legacy/new billing, top-ups, rollovers, and BYO API keys. Treat this as an enterprise-first buying process, not a clean self-serve price card.
 
 ## System Verdict
 
 > **Pick Relevance AI if a non-technical team needs AI agents that make judgment calls, not just shuffle data between apps.** The sweet spot is sales qualification, support triage, and lead research. Built-in OCR, classify, and extract tools cover most business agent patterns without code.
 >
-> **Skip it if you need engineering-grade control or predictable unit costs.** The Actions plus Vendor Credits split is transparent on paper and opaque in practice. Complex agents with multiple decision branches burn credits faster than flat-rate alternatives. The 2026 move to contact-sales pricing makes procurement comparisons harder for self-serve buyers.
+> **Skip it if you need engineering-grade control or predictable unit costs.** The Actions plus Vendor Credits split is transparent on paper and opaque in practice. Complex agents with multiple decision branches burn credits faster than flat-rate alternatives. The current public pricing page makes procurement comparisons harder because it foregrounds Enterprise rather than a full self-serve ladder.
 >
-> **Who pays which tier:** Free for proof-of-concept (still surfaced in third-party docs, no longer prominent on the vendor page). Pro for solo operators or tight prototypes (2,500 Actions + $20 Vendor Credits per month, talk to sales for price). Team for small sales or support pods (7,000 Actions + $70 Vendor Credits per month, Lindy reports ~$349/mo on monthly billing). Enterprise for custom models, SSO, and contractual SLAs.
+> **Who pays which tier:** Free is for proof-of-concept only, with 200 Actions/month plus 1,000 Vendor Credits per current docs. Enterprise is the public-pricing-page path for serious teams. Pro and Team still appear in documentation, but buyers should verify availability, allowances, and price inside the app or with sales before budgeting.
 
 ## Key Facts
 
@@ -118,22 +127,21 @@ Since September 2025, pricing splits into Actions (what the agent does) and Vend
 |---|---|
 | **Category** | No-code AI workforce builder |
 | **Launch** | 2023-06 |
-| **Pricing model** | Actions (agent steps) + Vendor Credits (LLM tokens), split since Sept 2025; contact-sales-only as of 2026 |
-| **Free tier** | 200 actions/mo · $2 bonus Vendor Credits (per docs; not prominent on the May 2026 pricing page) |
-| **Pro tier** | 2,500 Actions/mo + $20 Vendor Credits/mo · contact sales for price |
-| **Team tier** | 7,000 Actions/mo + $70 Vendor Credits/mo · contact sales · Lindy reports ~$349/mo on monthly billing |
-| **Enterprise** | Custom Actions, Vendor Credits, seats, custom models, SSO, dedicated support |
-| **Model support** | Claude Opus 4.7 · OpenAI frontier models · Gemini 3.1 Pro · multi-model routing |
-| **Built-in tools** | OCR · Classify · Extract · web scrape · PDF parse · email · calling and meeting agents (Team tier) |
-| **Procurement note** | All paid tiers behind Talk to Sales as of May 2026; prior $19 Pro and $234 Team annual rates no longer publicly surfaced |
+| **Pricing model** | Actions (tool runs) + Vendor Credits (AI model/tool costs), split since Sept 2025 |
+| **Public pricing page** | Enterprise only in the static June 2026 page: custom Actions, custom Vendor Credits, unlimited agents/tools/users/projects/workforces |
+| **Free docs allowance** | 200 Actions/month + 1,000 Vendor Credits |
+| **Top-ups** | Actions $80 per 1,000 · Vendor Credits $20 per 10,000 |
+| **BYO API keys** | Paid plans only, used to bypass Vendor Credits |
+| **Enterprise controls** | 2,000+ integrations · calling/meeting agents · enterprise triggers · agent evaluations · A/B testing and analytics · SSO, RBAC, audit logs |
+| **Procurement note** | Do not quote old Pro/Team public prices without direct re-verification |
 
-Every data point above was re-verified against vendor sources on 2026-05-13. See Sources.
+Every data point above was re-verified against vendor sources on 2026-06-09. See Sources.
 
 ## What it actually is
 
 A visual builder for composable AI tools and agents. A "tool" is an atomic action like Extract, Classify, or OCR. An "agent" wires tools into a goal-seeking loop with branching, memory, and RAG.
 
-Agents deploy as chatbot widgets, REST endpoints, or scheduled background jobs. Multi-model routing lets one agent call Claude for reasoning, GPT for generation, and Gemini for multimodal in the same run.
+Agents deploy as chatbot widgets, REST endpoints, or scheduled background jobs. Paid-plan BYO API keys let teams bring direct provider billing instead of consuming Vendor Credits for every model call.
 
 The moat is the no-code UX and the opinionated agent primitives, not the underlying LLMs. Anyone with an API key can replicate the tools. Relevance AI bets non-technical teams pay for the integration cut.
 
@@ -155,16 +163,16 @@ The moat is the no-code UX and the opinionated agent primitives, not the underly
 
 ## Pricing
 
-The public pricing page now routes every paid tier through Talk to Sales rather than self-serve checkout. Per-month allowances are listed; dollar amounts are not.
+The public pricing page now foregrounds Enterprise rather than a full self-serve ladder. The docs still explain Free, Pro, Team, Actions, Vendor Credits, old billing, new billing, top-ups, and BYO API keys, so buyer-facing copy should separate the public marketing page from the in-app/docs billing mechanics.
 
-| Plan | Listed price | Actions | Vendor Credits | Users / scope |
+| Surface | Price signal | Actions | Vendor Credits | Buyer note |
 |------|--------------|---------|----------------|---------------|
-| Free | $0/mo (per third-party docs) | 200/mo | $2 bonus | 1 user, 1 project |
-| Pro | Contact sales | 2,500/mo | $20/mo | Solo build user |
-| Team | Contact sales · Lindy reports $349/mo monthly | 7,000/mo | $70/mo | Multiple build users + shared projects + calling/meeting agents |
-| Enterprise | Custom | Custom | Custom | Unlimited seats, dedicated account manager |
+| Public pricing page | Enterprise / Talk to sales | Custom | Custom | Custom Actions, Vendor Credits, unlimited agents/tools/users/projects/workforces |
+| Docs: Free | $0 | 200/mo | 1,000 included | Prototype only |
+| Docs: top-up | $80 per 1,000 Actions | Purchased top-ups roll over to next billing cycle | $20 per 10,000 Vendor Credits, roll over while subscribed | Paid plans only |
+| Docs: paid plans | Verify in app or with sales | Plan-specific | Plan-specific | BYO API keys available on paid plans, not Free |
 
-*Prices and allowances verified 2026-05-13 via [Relevance AI pricing](https://relevanceai.com/pricing) and [Lindy's Relevance AI pricing analysis](https://www.lindy.ai/blog/relevance-ai-pricing). The earlier $19/mo Pro annual and $234/mo Team annual rates surfaced through 2026-04-17 are no longer publicly listed; assume budget targets need a sales conversation. All plans include unlimited agents and tools, plus 2,000+ integrations.*
+*Prices and allowances verified 2026-06-09 via [Relevance AI pricing](https://relevanceai.com/pricing) and [Relevance AI plans and credits docs](https://relevanceai.com/docs/admin/subscriptions/plans). Old public Pro/Team dollar amounts are historical unless directly re-verified in checkout or with sales.*
 
 Actions are agent steps. Vendor Credits are consumed by the LLM call itself. Complex branching agents burn both faster than simple linear chains. Paid plans support bring-your-own-API-key to bypass Vendor Credits entirely if the customer prefers direct LLM billing.
 
@@ -182,25 +190,25 @@ Actions are agent steps. Vendor Credits are consumed by the LLM call itself. Com
 
 ## Failure modes
 
-- **Pricing moved to contact-sales.** As of 2026, every paid tier on the public pricing page routes through Talk to Sales. Self-serve buyers cannot benchmark Pro or Team against alternatives without a discovery call, and prior public rates are no longer surfaced.
+- **Public pricing is Enterprise-first.** The static public pricing page no longer exposes a complete self-serve Pro/Team price ladder. Self-serve buyers cannot benchmark plans without in-app checks or a sales conversation.
 - **Credit system is opaque.** Predicting per-run cost needs manual calibration. Multi-branch agents with retries can spike usage by 5x versus happy-path tests.
 - **Narrow SaaS integration library.** API calls work, but there is no Zapier-scale app catalog. Integrating with a niche CRM means writing the REST call yourself.
 - **Agent quality depends on prompt craft.** The visual builder lowers the floor, not the ceiling. Bad prompts still ship bad agents.
 - **Production reliability is a DIY concern.** Agents drift, loop, or fail silently without human-in-the-loop. Enterprise tier adds audit, not guaranteed determinism.
 - **Smaller ecosystem.** Fewer templates, fewer tutorials, thinner community than CrewAI, LangChain, or Zapier.
-- **Free tier is demo-sized.** 200 actions a month is enough to test, not enough to run a real workflow.
+- **Free tier is demo-sized.** 200 Actions a month is enough to test, not enough to run a real workflow.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [Relevance AI pricing](https://relevanceai.com/pricing), [Relevance AI documentation](https://relevanceai.com/docs/get-started/subscriptions/plans), and [Lindy's Relevance AI pricing breakdown](https://www.lindy.ai/blog/relevance-ai-pricing).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-09 against [Relevance AI pricing](https://relevanceai.com/pricing) and [Relevance AI plans and credits documentation](https://relevanceai.com/docs/admin/subscriptions/plans).
 
 ## FAQ
 
 **Is Relevance AI free?**
-A Free tier still exists in third-party docs and references with 200 actions per month plus $2 in Vendor Credits, suitable for demos and early prototypes. The public pricing page in May 2026 foregrounds Pro, Team, and Enterprise behind Talk to Sales; expect to verify free-tier availability directly with Relevance AI before relying on it.
+The docs say Free users get 200 Actions/month plus 1,000 Vendor Credits. That is suitable for demos and early prototypes, not production. The public pricing page currently foregrounds Enterprise, so verify Free availability in-app before relying on it.
 
 **How does Relevance AI pricing work?**
-Since September 2025, pricing splits into Actions (agent steps) and Vendor Credits (LLM token costs). Paid plans also support bring-your-own-API-key to bypass Vendor Credits. As of 2026, Pro lists 2,500 Actions plus $20 Vendor Credits per month and Team lists 7,000 Actions plus $70 Vendor Credits per month, both behind contact-sales. Lindy reports Team monthly billing at $349. Prior public $19/mo Pro and $234/mo Team annual rates are no longer surfaced on the vendor page.
+Since September 2025, pricing splits into Actions and Vendor Credits. The docs define an Action as a tool run and Vendor Credits as AI model/tool cost. Paid plans can buy top-ups, and BYO API keys can bypass Vendor Credits. Current top-up rates are $80 per 1,000 Actions and $20 per 10,000 Vendor Credits.
 
 **Relevance AI vs CrewAI?**
 Relevance AI targets non-technical teams through a drag-and-drop builder. [CrewAI](/tools/crewai/) targets Python developers through a role-based framework. Pick Relevance AI when business users own the agent; pick CrewAI when engineers own it.
@@ -209,14 +217,12 @@ Relevance AI targets non-technical teams through a drag-and-drop builder. [CrewA
 Yes. OCR, Classify, and Extract are built-in primitives. Combining them with a knowledge base RAG store covers most document-intelligence workflows without code.
 
 **Can Relevance AI use multiple LLMs in one agent?**
-Yes. Multi-model routing lets a single agent call Claude Opus 4.7 for reasoning, OpenAI frontier models for generation, and Gemini 3.1 Pro for multimodal tasks within the same workflow.
+Yes, the platform supports multi-model agent workflows and paid-plan BYO API keys. Verify the exact current model list inside the product before committing a workflow to a specific provider/version.
 
 ## Sources
 
-- [Relevance AI pricing page](https://relevanceai.com/pricing): Current tiers, Actions, Vendor Credits
-- [Relevance AI docs: plans and credits](https://relevanceai.com/docs/get-started/subscriptions/plans): Action and credit definitions
-- [Lindy: Relevance AI pricing 2026](https://www.lindy.ai/blog/relevance-ai-pricing): Independent pricing breakdown
-- [G2: Relevance AI pricing](https://www.g2.com/products/relevance-ai/pricing): Third-party verification
+- [Relevance AI pricing page](https://relevanceai.com/pricing): Enterprise public pricing surface
+- [Relevance AI docs: plans and credits](https://relevanceai.com/docs/admin/subscriptions/plans): Action and Vendor Credit definitions, Free allowance, top-up rates, rollovers, BYO API-key rules
 
 ## Related
 

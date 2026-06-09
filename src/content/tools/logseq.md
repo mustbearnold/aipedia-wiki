@@ -2,17 +2,17 @@
 type: tool
 slug: logseq
 title: Logseq
-tagline: Local-first outliner-style knowledge base. Block-level linking, plain-text markdown on disk, open-source, free.
+tagline: Local-first outliner-style knowledge base. Block-level linking, plain-text markdown on disk for the classic graph, active DB-version work with markdown mirror/CLI, open-source, free.
 category: ai-notes
 company: logseq
 url: https://logseq.com
 github_url: https://github.com/logseq/logseq
 pricing_model: free
-price_range: "Free (Sync add-on $5/mo)"
+price_range: "Free core app; Sync beta historically tied to $5/$15 monthly donor access"
 status: active
 launched: 2020-06
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-08
+last_verified: 2026-06-08
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,49 +31,49 @@ facts:
     source: https://logseq.com/
     source_label: Logseq official site
     source_id: logseq-official
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-08'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-13'
+    next_review_at: '2026-09-08'
   pricing_anchor:
-    value: "The app is open source and local-first; paid evaluation usually centers on sync/publishing/services rather than the core editor."
-    source: https://logseq.com/pricing
-    source_label: Source
+    value: "The public site positions Logseq as open-source, privacy-first, locally owned notes; Sync remains beta, and historical official sync setup tied access to $5/$15 monthly Open Collective donor tiers."
+    source: https://logseq.com/
+    source_label: Logseq official site
     source_id: logseq-pricing
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-08'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-13'
+    next_review_at: '2026-09-08'
   knowledge_model:
-    value: "Logseq is block/outliner-first, so it fits users who think in daily notes, backlinks, and nested bullets more than document-centric writing."
+    value: "Logseq is block/outliner-first, so it fits users who think in daily notes, backlinks, nested bullets, block references, and graph links more than document-centric writing."
     source: https://docs.logseq.com/
     source_label: Logseq documentation
     source_id: logseq-docs
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-08'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-13'
+    next_review_at: '2026-09-08'
   open_source:
     value: "The GitHub repository is the best source for current license, release activity, issues, and community plugin/development posture."
     source: https://github.com/logseq/logseq
     source_label: Logseq GitHub repository
     source_id: logseq-repository
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-08'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-13'
+    next_review_at: '2026-09-08'
   watch_out_for:
-    value: "Teams needing polished collaborative docs, strict admin controls, or AI-native knowledge workflows may outgrow Logseq's personal/local-first orientation."
+    value: "Teams needing polished collaborative docs, strict admin controls, stable mobile parity, or AI-native knowledge workflows may outgrow Logseq's personal/local-first orientation."
     source: https://docs.logseq.com/
     source_label: Logseq documentation
     source_id: logseq-docs
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-08'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-13'
+    next_review_at: '2026-09-08'
 tags: [notes, outliner, local-first, markdown, knowledge-base, zettelkasten, pkm, open-source, block-level, graph-view]
-seo_title: "Logseq: Features, Pricing & Review (May 2026)"
-meta_description: "Logseq is a free open-source outliner knowledge base. Plain-text markdown on disk, block-level references, graph view, PDF annotation. Core app free; Sync add-on $5/mo."
+seo_title: "Logseq: Features, Pricing & Review (June 2026)"
+meta_description: "Logseq is a free open-source outliner knowledge base with block references, graph view, PDF annotation, local Markdown graphs, Sync beta, and active DB-version/markdown-mirror work."
 author: "aipedia.wiki Editorial"
 best_for:
   - outliner-first note-taking (Roam-style)
@@ -87,36 +87,48 @@ not_best_for:
   - users wanting polished mobile apps
   - non-technical users unwilling to tune config
 quick_answer: >-
-  Logseq is a free open-source outliner knowledge base. Every bullet is a first-class block with its own reference, transclusion, and query surface. Files stay plain-text markdown on disk. Pick it for Roam-style block workflows and daily journaling; skip it for page-style documents (Obsidian fits better) or team collaboration.
+  Logseq is a free open-source outliner knowledge base. Every bullet is a first-class block with its own reference, transclusion, and query surface. Pick it for Roam-style block workflows, daily journaling, and local-first personal knowledge. The June 8 check adds a caution: the DB version is active and promising, but markdown mirror, CLI/query, sync, and mobile parity are still buyer-watch items.
 price_history:
   - date: 2024-06-01
     plan: "Logseq Sync"
     price: "$5/mo"
-    source: "https://logseq.com/pricing"
+    source: "https://blog.logseq.com/how-to-setup-and-use-logseq-sync/"
     source_label: "Source"
-    source_id: logseq-pricing
+    source_id: logseq-sync-setup
     note: "End-to-end encrypted cross-device sync launched"
   - date: 2026-04-17
     plan: "Core app"
     price: "Free"
-    source: "https://logseq.com/pricing"
+    source: "https://logseq.com/"
     source_label: "Source"
     source_id: logseq-pricing
     note: "Verified unchanged. AGPL-3.0 license."
   - date: 2026-05-13
     plan: "Core app + Sync"
     price: "Free / $5/mo"
-    source: "https://logseq.com/pricing"
+    source: "https://blog.logseq.com/how-to-setup-and-use-logseq-sync/"
+    source_label: "Source"
+    source_id: logseq-sync-setup
+    note: "Verified unchanged at the previous pricing check. June 8 source check could verify Sync beta language and historical $5/$15 donor access, but the public site did not expose a clean current checkout price."
+  - date: 2026-06-08
+    plan: "Core app + Sync beta"
+    price: "Core free; Sync beta / donor-gated access should be confirmed live"
+    source: "https://logseq.com/"
     source_label: "Source"
     source_id: logseq-pricing
-    note: "Verified unchanged. Core AGPL-3.0; Sync still $5/mo for E2E cross-device."
+    note: "Official site still describes Logseq as open source, free forever for personal use, privacy-first, and local-data owned. Historical official Sync setup tied beta access to $5/$15 monthly Open Collective donations."
 ---
 
 # Logseq
 
-Open-source outliner knowledge base built by Logseq Inc. Every note is a Markdown or Org-mode file on disk; every bullet within a note is a first-class block with its own identifier, reference, and query surface.
+Open-source outliner knowledge base built by Logseq Inc. In the classic graph, notes are Markdown or Org-mode files on disk; every bullet within a note is a first-class block with its own identifier, reference, and query surface.
 
-Core app free under AGPL-3.0. Optional Sync add-on at $5/month delivers end-to-end encrypted cross-device sync. Local-first by default: files live in a folder you control, and you can back up with any filesystem tool.
+Core app free under AGPL-3.0. The public site still describes Logseq as open source, privacy-first, and locally owned, with Sync beta for encrypted cross-device sync. Historical official Sync setup tied beta access to $5 or $15 monthly Open Collective donor tiers; confirm the current checkout path before presenting Sync as a normal SaaS add-on. Local-first by default: files live in a folder you control, and you can back up with any filesystem tool.
+
+## Recent developments
+
+- **May 16, 2026:** Logseq DB updates shipped markdown mirror for DB graphs, CLI query support, graph-view rebuild work, and sync hardening. That makes the DB version more interesting for agent/CLI workflows, but it also means buyers should separate stable classic Markdown graphs from DB-version migration risk.
+- **June 8, 2026:** AiPedia rechecked the official docs, site, forum changelog, and GitHub posture. Logseq remains a good personal/local-first outliner, but teams should watch DB-version mobile parity, markdown round-trip maturity, and collaboration limits before standardizing.
 
 ## System Verdict
 
@@ -124,14 +136,14 @@ Core app free under AGPL-3.0. Optional Sync add-on at $5/month delivers end-to-e
 >
 > **Skip it if you want page-style document editing or real-time collaboration.** [Obsidian](/tools/obsidian/) is the better pick for mixed page + note workflows; [Notion AI](/tools/notion-ai/) handles teams. Logseq's mobile apps are functional but trail Obsidian's polish.
 >
-> **Who pays which tier:** Core app free forever under AGPL-3.0. Logseq Sync at $5/mo for end-to-end encrypted cross-device sync. Power users can instead sync via iCloud, Syncthing, or git.
+> **Who pays which tier:** Core app free under AGPL-3.0. Treat Sync as a beta/paid-support decision unless the current checkout confirms otherwise; historical official docs tied Sync access to $5/$15 monthly donor tiers. Power users can instead sync classic Markdown graphs via iCloud, Syncthing, or git, but DB graphs need more careful review.
 
 ## Key Facts
 
 | | |
 |---|---|
 | **License** | AGPL-3.0 (fully open-source) |
-| **Storage model** | Plain-text Markdown or Org-mode on disk |
+| **Storage model** | Classic graph: plain-text Markdown or Org-mode on disk; DB version: active SQLite/markdown mirror work |
 | **Core paradigm** | Outliner; every bullet is a block with block references |
 | **Graph view** | Native, page-level and block-level |
 | **PDF annotation** | Built-in, highlights become blocks |
@@ -139,10 +151,10 @@ Core app free under AGPL-3.0. Optional Sync add-on at $5/month delivers end-to-e
 | **Whiteboards** | Native canvas feature since 2023 |
 | **Mobile apps** | iOS and Android |
 | **Desktop** | Windows, macOS, Linux |
-| **Sync** | $5/mo Logseq Sync · or roll-your-own (iCloud, Syncthing, git) |
-| **AI** | Plugin ecosystem (e.g., logseq-ai-assistant); bring your own LLM API keys |
+| **Sync** | Sync beta; historical official access tied to $5/$15 monthly donor tiers; roll-your-own works best for classic Markdown graphs |
+| **AI** | Plugin ecosystem and emerging DB/CLI/MCP discussion; bring your own LLM API keys |
 
-Every data point verified 2026-05-13 against [logseq.com](https://logseq.com) and the [GitHub repo](https://github.com/logseq/logseq).
+Every data point verified 2026-06-08 against [logseq.com](https://logseq.com), the [Logseq docs](https://docs.logseq.com/), the [GitHub repo](https://github.com/logseq/logseq), and the May 2026 DB changelog thread.
 
 ## What it actually is
 
@@ -173,15 +185,15 @@ Files stay Markdown (`.md`) or Org-mode (`.org`) on disk, your choice. The vault
 | Plan | Price | Who's it for |
 |---|---|---|
 | Logseq (core) | $0 | All users; full features, no caps |
-| Logseq Sync | $5/mo | Anyone syncing across devices; E2E encrypted |
+| Logseq Sync beta | Confirm live; historical beta access via $5/$15 monthly donor tiers | Anyone syncing across devices; E2E encrypted |
 
-*Prices verified 2026-05-13 via [logseq.com/pricing](https://logseq.com/pricing). Sync is optional; iCloud Drive, Syncthing, or git work fine for power users.*
+*Prices verified 2026-06-08 against [logseq.com](https://logseq.com/) and the official Sync setup blog. Sync is optional; iCloud Drive, Syncthing, or git can work for classic Markdown graphs, but DB graphs and mobile parity need a separate test before standardizing.*
 
 ## Against the alternatives
 
 | | Logseq | Obsidian | Notion | Roam Research |
 |---|---|---|---|---|
-| **Price** | Free + $5/mo sync | Free + $4/mo sync | Free tier + $10/user/mo | $15/mo |
+| **Price** | Free core + beta sync to verify | Free + $4/mo sync | Free tier + $10/user/mo | $15/mo |
 | **License** | AGPL-3.0 | Proprietary (free app) | Proprietary | Proprietary |
 | **Paradigm** | **Outliner (blocks)** | Page-based + optional outliner | Page + database | Outliner (blocks) |
 | **Local-first files** | Yes (MD/Org) | Yes (MD) | No (cloud) | No (cloud) |
@@ -193,29 +205,29 @@ Files stay Markdown (`.md`) or Org-mode (`.org`) on disk, your choice. The vault
 ## Failure modes
 
 - **Mobile trails desktop.** Syncing is reliable but the mobile UI is a stripped-down view. Heavy capture on phone is clunkier than Apple Notes or Bear.
-- **No real-time collaboration.** Multi-device sync works; concurrent editing does not. Last-write-wins conflicts.
+- **No real-time collaboration.** Multi-device sync is not a substitute for Notion-style collaborative editing. Confirm conflict behavior before sharing graphs across a team.
 - **Smaller plugin ecosystem than Obsidian.** Several hundred plugins vs Obsidian's 2,690+. Functional gaps exist.
 - **Config-heavy for polish.** Default theme and keybindings are functional; most users tune extensively.
 - **AGPL-3.0 can complicate embedding.** Enterprises building products on top must ship source of derivative works.
-- **Core team velocity has been uneven.** Major v1.0 release has slipped; the long-term roadmap is not as predictable as Obsidian's.
+- **DB version is still a migration question.** Markdown mirror, CLI query support, graph-view rebuilds, and sync hardening are encouraging, but teams should not assume the DB version has the same maturity, mobile parity, or round-trip file behavior as the classic Markdown graph.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline. Last verified 2026-05-13 against [logseq.com](https://logseq.com), the [GitHub repo](https://github.com/logseq/logseq), and community plugin registry.
+This page was produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-08 against [logseq.com](https://logseq.com), the [Logseq docs](https://docs.logseq.com/), the [GitHub repo](https://github.com/logseq/logseq), the [official Sync setup blog](https://blog.logseq.com/how-to-setup-and-use-logseq-sync/), and the [Logseq DB May 2026 changelog](https://discuss.logseq.com/t/logseq-db-changelog/30013?page=2).
 
 ## FAQ
 
 <details>
 <summary>Is Logseq really free?</summary>
 
-Yes. Core app is AGPL-3.0 with no feature caps. The only paid add-on is Logseq Sync at $5/month for end-to-end encrypted cross-device sync. You can also sync for free via iCloud Drive, Syncthing, or git.
+Yes. Core app is AGPL-3.0 with no feature caps. Sync is the paid/beta piece to check live; historical official docs tied beta access to $5/$15 monthly donor tiers. You can also sync classic Markdown graphs via iCloud Drive, Syncthing, or git.
 
 </details>
 
 <details>
 <summary>How is Logseq different from Obsidian?</summary>
 
-Both store plain-text markdown locally. Logseq is outliner-first (every bullet is a block with references); Obsidian is page-first (every file is a note). Logseq's block references are native; Obsidian needs plugins for equivalent granularity. Obsidian has a larger plugin ecosystem and more polished mobile; Logseq has daily journal built in.
+Both store local knowledge, but the current comparison needs nuance. Classic Logseq graphs use plain-text Markdown/Org files locally; the newer DB version adds SQLite plus markdown mirror work. Logseq is outliner-first (every bullet is a block with references); Obsidian is page-first (every file is a note). Obsidian has a larger plugin ecosystem and more polished mobile; Logseq has daily journal and block references built in.
 
 </details>
 
@@ -239,6 +251,14 @@ Logseq is effectively the open-source Roam clone. Block references, bi-direction
 Yes. Logseq reads Markdown files from any folder. Obsidian's wiki links work. Obsidian's plugin-dependent syntax (Dataview, Templater) does not port; you rebuild queries in Logseq's Datalog-style syntax.
 
 </details>
+
+## Sources
+
+- [Logseq official site](https://logseq.com/): open-source, privacy-first, local-data positioning and Sync beta language
+- [Logseq docs](https://docs.logseq.com/): graph setup, Markdown import, block references, queries, plugins, and publishing docs
+- [Logseq GitHub repository](https://github.com/logseq/logseq): license, release activity, and DB/mobile development posture
+- [Logseq Sync setup blog](https://blog.logseq.com/how-to-setup-and-use-logseq-sync/): historical Sync beta access and donor-tier language
+- [Logseq DB May 2026 changelog](https://discuss.logseq.com/t/logseq-db-changelog/30013?page=2): markdown mirror, CLI query, graph-view, and sync-hardening updates
 
 ## Related
 

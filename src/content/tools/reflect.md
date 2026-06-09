@@ -2,7 +2,7 @@
 type: tool
 slug: reflect
 title: Reflect
-tagline: Networked note-taking app with bidirectional links, end-to-end encrypted sync, and an embedded GPT-backed AI assistant.
+tagline: Reflect Notes at reflect.app is a networked note-taking app with backlinks, E2EE sync, Google/Outlook meeting context, and GPT-4/Whisper-backed AI.
 category: ai-notes
 company: Reflect (reflect.app)
 url: https://reflect.app
@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$10/month"
 status: active
 launched: 2022-03
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-09
+last_verified: 2026-06-09
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -26,44 +26,44 @@ scores:
   longevity: 7
 facts:
   product_scope:
-    value: "Networked notes app with backlinks, encrypted sync, calendar/review workflows, and an embedded AI assistant for note retrieval and drafting."
+    value: "Reflect Notes is a networked notes app with backlinks, end-to-end encrypted sync, browser/Kindle capture, Google and Outlook calendar integrations, export/API access, and an embedded AI assistant for drafting, retrieval, and transcription."
     source: "https://reflect.app/"
     source_label: "Reflect homepage"
     source_id: reflect-official
-    verified_at: 2026-05-13
-    next_review_at: 2026-08-13
+    verified_at: 2026-06-09
+    next_review_at: 2026-09-09
     volatility: medium
     confidence: high
   pricing_anchor:
-    value: "Paid note app with a simple consumer/prosumer subscription model surfaced through Reflect; verify the current monthly/annual price before switching."
+    value: "Reflect keeps one paid plan: $10/month billed annually after a 14-day trial. No perpetual free tier is published on the homepage."
     source: "https://reflect.app/"
     source_label: "Reflect homepage"
     source_id: reflect-pricing
-    verified_at: 2026-05-13
-    next_review_at: 2026-08-13
+    verified_at: 2026-06-09
+    next_review_at: 2026-09-09
     volatility: medium
-    confidence: medium
+    confidence: high
   best_for:
     value: "Personal knowledge management users who want fast notes, backlinks, AI help, and less workspace complexity than Notion or Obsidian plugins."
     source: "https://reflect.app/"
     source_label: "Reflect homepage"
     source_id: reflect-official
-    verified_at: 2026-05-13
-    next_review_at: 2026-08-13
+    verified_at: 2026-06-09
+    next_review_at: 2026-09-09
     volatility: medium
     confidence: high
   watch_out_for:
-    value: "Not ideal for large team docs, heavy databases, or fully local markdown vault ownership; compare Obsidian and Notion for those cases."
+    value: "Not ideal for large team docs, heavy databases, plugin-heavy local markdown vault ownership, or buyers searching for unrelated iOS apps also named Reflect; confirm the product is reflect.app / Reflect Notes before buying."
     source: "https://reflect.app/"
     source_label: "Reflect homepage"
     source_id: reflect-official
-    verified_at: 2026-05-13
-    next_review_at: 2026-08-13
+    verified_at: 2026-06-09
+    next_review_at: 2026-09-09
     volatility: medium
-    confidence: medium
+    confidence: high
 tags: [notes, pkm, networked-notes, backlinks, ai-writing, encrypted]
-seo_title: "Reflect: Networked Notes App Review & Pricing (May 2026)"
-meta_description: "Reflect combines bidirectional linking, daily notes, end-to-end encrypted sync, and a GPT-backed AI assistant. Single $10/mo tier after a 14-day trial. No free tier."
+seo_title: "Reflect Notes Review: Pricing, AI & E2EE Notes (June 2026)"
+meta_description: "Reflect Notes at reflect.app combines backlinks, daily notes, E2EE sync, Google/Outlook calendar context, Kindle capture, GPT-4/Whisper AI, and one $10/mo annual-billed plan."
 author: aipedia.wiki Editorial
 best_for:
   - privacy-conscious solo knowledge workers
@@ -76,7 +76,7 @@ not_best_for:
   - plugin tinkerers who want Obsidian's ecosystem
   - casual note-takers who don't link
 quick_answer: >-
-  Reflect is a networked notes app with E2EE sync and a GPT-backed AI assistant. Pick it for clean bidirectional linking with privacy built in. Skip it for teams, free tiers, or plugin ecosystems.
+  Reflect Notes is a networked notes app with E2EE sync, backlinks, calendar context, browser/Kindle capture, and GPT-4/Whisper-backed AI. Pick it for clean personal knowledge management with privacy built in. Skip it for teams, free tiers, plugin ecosystems, or fully local markdown ownership.
 price_history:
   - date: 2025-09-01
     plan: "Pro"
@@ -92,18 +92,21 @@ price_history:
     source_label: "Source"
     source_id: reflect-pricing
     note: "Verified unchanged on reflect.app"
-  - date: 2026-05-13
+  - date: 2026-06-09
     plan: "Pro"
     price: "$10/mo (annual billing)"
     source: "https://reflect.app"
     source_label: "Source"
     source_id: reflect-pricing
-    note: "Verified unchanged; $10/mo billed annually remains the single paid plan"
+    verified_at: 2026-06-09
+    note: "Verified unchanged on reflect.app; $10/mo billed annually remains the single paid plan after a 14-day trial."
 ---
 
 # Reflect
 
-A networked note-taking app built on bidirectional `[[wiki-style]]` links, daily notes, end-to-end encrypted sync, and an embedded AI assistant backed by GPT and Whisper. Single paid tier, no free plan beyond a 14-day trial.
+A networked note-taking app built on bidirectional `[[wiki-style]]` links, daily notes, end-to-end encrypted sync, Google/Outlook meeting context, web and Kindle capture, and an embedded AI assistant backed by GPT-4 and Whisper. Single paid tier, no free plan beyond a 14-day trial.
+
+This page is about **Reflect Notes at reflect.app**, not unrelated iOS journaling apps also named Reflect that surfaced in June 2026 search results.
 
 Strongest fit for privacy-conscious solo users who have already validated that networked notes match their workflow.
 
@@ -125,18 +128,19 @@ Strongest fit for privacy-conscious solo users who have already validated that n
 | **Daily notes** | Auto-created, date-based |
 | **Graph view** | Visual map of note connections |
 | **Platforms** | Web, macOS, Windows, iOS, Android |
+| **Calendar support** | Google Calendar and Outlook meeting context |
 | **Kindle integration** | Direct highlight import |
-| **Export** | Markdown import/export |
+| **Export / API** | Markdown import/export and API access |
 | **Free tier** | None beyond 14-day trial |
-| **Pro** | $10/mo, unlimited AI usage |
+| **Pro** | $10/mo billed annually |
 
-Every data point was verified against vendor docs on 2026-05-13. See Sources.
+Every data point was verified against vendor docs on 2026-06-09. See Sources.
 
 ## What it actually is
 
 A single-subscription notes app where every note is markdown with `[[Note Title]]` links. Linking two notes creates automatic backlinks in both. Daily notes appear each morning for journaling or logging. Graph view renders the connection map.
 
-The AI assistant lives inside the editor. Highlight any text for rewrite, expand, or summarize. Query the vault for notes matching a question. Kindle integration ingests book highlights directly into notes.
+The AI assistant lives inside the editor. Highlight any text for rewrite, expand, or summarize. Query the vault for notes matching a question. Whisper powers voice-note transcription, and Kindle integration ingests book highlights directly into notes.
 
 The moat: end-to-end encryption plus bidirectional linking in one clean product at $10/mo. The ceiling: no plugins, no team features, and a single-vendor dependency.
 
@@ -161,9 +165,9 @@ The moat: end-to-end encryption plus bidirectional linking in one clean product 
 | Plan | Price | Notes |
 |------|-------|-------|
 | Free trial | 14 days | Full access |
-| Pro | $10/mo (annual discount available) | Unlimited AI, full feature set |
+| Pro | $10/mo billed annually | Reflect AI, full feature set, E2EE sync, backlinks, web/Kindle capture, calendar integrations |
 
-*Prices verified 2026-05-13 via [reflect.app](https://reflect.app). No perpetual free tier exists. Annual billing is the default; the $10/mo figure reflects the annual-billed monthly equivalent.*
+*Prices verified 2026-06-09 via [reflect.app](https://reflect.app). No perpetual free tier exists. Annual billing is the default; the $10/mo figure reflects the annual-billed monthly equivalent.*
 
 ## Against the alternatives
 
@@ -189,7 +193,7 @@ The moat: end-to-end encryption plus bidirectional linking in one clean product 
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-05-13 against [reflect.app](https://reflect.app).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-09 against [reflect.app](https://reflect.app).
 
 ## FAQ
 
@@ -203,14 +207,17 @@ A beta API exists for Pro subscribers. It remains narrower than Obsidian's plugi
 No. Reflect is deliberately individual-only. No real-time editing, no shared workspaces. Notion or Confluence fit team needs.
 
 **What AI does Reflect use?**
-GPT from OpenAI for writing assistance and vault queries, plus Whisper for voice transcription.
+Reflect's homepage describes GPT-4 from OpenAI for writing assistance and vault queries, plus Whisper for voice transcription.
+
+**Is this the same as the new iOS journaling app called Reflect?**
+No. AiPedia tracks Reflect Notes at reflect.app, the networked-notes product from Reflect App, LLC. Do not use pricing or feature claims from unrelated App Store apps with the same name.
 
 **Is there a free tier?**
 No. Only a 14-day trial followed by the $10/mo Pro plan.
 
 ## Sources
 
-- [reflect.app](https://reflect.app): product overview, pricing, and feature list verified 2026-05-13
+- [reflect.app](https://reflect.app): product overview, pricing, and feature list verified 2026-06-09
 
 ## Related
 

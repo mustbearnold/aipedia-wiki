@@ -3,17 +3,17 @@ type: tool
 slug: playground-ai
 title: Playground AI
 tagline: >-
-  Design-focused AI image generator with Playground v3 model, multi-model
-  access, and a canvas editor built for social and marketing workflows.
+  Design-focused AI image generator with Playground v3, Nano Banana, GPT Image 2,
+  Seedream, Nano Banana Pro access, and a canvas editor for social and marketing workflows.
 category: ai-image
 company: Playground AI
 url: 'https://playground.com'
 pricing_model: freemium
-price_range: $0-$45/month
+price_range: "$0-$45/month + one-time credit packs"
 status: active
 launched: 2022-07
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-08
+last_verified: 2026-06-08
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -28,35 +28,35 @@ scores:
   longevity: 7
 facts:
   best_for:
-    value: "Design-focused AI image generator with Playground v3 model, multi-model access (including Nano Banana Pro on Pro Plus), and a canvas editor built for social and marketing workflows."
+    value: "Design-focused AI image generator with Playground v3, Nano Banana, GPT Image 2, Seedream, Nano Banana Pro on paid tiers, and a canvas editor built for social and marketing workflows."
     source: "https://playground.com/design/pricing"
     source_label: "Source"
     source_id: playground-ai-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-06-08
     volatility: medium
     confidence: high
   pricing_anchor:
-    value: "Pro; $15/mo ($12 annual); 75 images per 3 hours, 150 monthly credits, 2K AI editing, commercial license."
+    value: "Pro: $15/mo or $12/mo annual; 75 Playground v3 images every 3 hours, 150 monthly credits across Nano Banana, GPT Image 2, and Seedream, 10 Nano Banana Pro edits, 2K GPT Image 2 editing, and commercial license."
     source: "https://playground.com/design/pricing"
     source_label: "Source"
     source_id: playground-ai-pricing
-    verified_at: 2026-05-13
-    next_review_at: 2026-08-13
+    verified_at: 2026-06-08
+    next_review_at: 2026-07-08
     volatility: medium
     confidence: high
   watch_out_for:
-    value: "Free tier is non-commercial only. Pro Plus replaces the old Turbo tier; Nano Banana Pro costs 4 credits per use against the Pro Plus 1,000-credit pool."
+    value: "Free tier is non-commercial only. Nano Banana Pro costs 4 credits per generation, API access is request-gated and prioritized for partners generating more than 1M images/month, and Day Pass / one-time credit packs should be checked before assuming subscription-only access."
     source: "https://playground.com/design/pricing"
     source_label: "Source"
     source_id: playground-ai-pricing
-    verified_at: 2026-05-13
-    next_review_at: 2026-08-13
+    verified_at: 2026-06-08
+    next_review_at: 2026-07-08
     volatility: medium
     confidence: high
 tags: [ai-image, image-generation, design-tools, canvas-editor, playground-v3, social-media]
-seo_title: 'Playground AI Review (May 2026): Design-Focused Image Generation'
+seo_title: 'Playground AI Review (June 2026): Design-Focused Image Generation'
 meta_description: >-
-  Playground AI runs Playground v3 plus OpenAI image models, Stable Diffusion, Seedream, and Nano Banana Pro in one canvas. Free plan: 10 images per 3 hours, non-commercial. Pro $15/mo, Pro Plus $45/mo. Best for social media designers.
+  Playground AI runs Playground v3 plus Nano Banana, GPT Image 2, Seedream, and Nano Banana Pro in one canvas. Free plan: 10 images per 3 hours, non-commercial. Pro $15/mo, Pro Plus $45/mo. Best for social media designers.
 author: aipedia.wiki Editorial
 best_for:
   - social media managers
@@ -71,36 +71,47 @@ not_best_for:
   - API-first developers
   - enterprise shops needing IP indemnification
 quick_answer: >-
-  Playground AI is a design-focused image platform built around Playground v3 and a canvas editor with inpainting, outpainting, and background removal. It also offers OpenAI image models, Stable Diffusion, Seedream, and Nano Banana Pro on Pro Plus. Free plan: 10 images per 3 hours, non-commercial. Pro is $15/month (75 images per 3 hours + 150 monthly credits); Pro Plus is $45/month (unlimited gens + 1,000 monthly credits).
+  Playground AI is a design-focused image platform built around Playground v3 and a canvas editor with inpainting, outpainting, and background removal. It also offers Nano Banana, GPT Image 2, Seedream, and Nano Banana Pro. Free plan: 10 images per 3 hours, non-commercial. Pro is $15/month (75 images per 3 hours + 150 monthly credits); Pro Plus is $45/month (unlimited Playground v3 generations + 1,000 monthly credits).
 price_history:
+  - date: 2026-06-08
+    plan: "Pro"
+    price: "$15/mo ($12 annual)"
+    source: "https://playground.com/design/pricing"
+    source_label: "Playground pricing"
+    source_id: playground-ai-pricing
+    verified_at: 2026-06-08
+    note: "Rendered pricing page lists 75 Playground v3 images every 3 hours, 150 monthly credits across Nano Banana/GPT Image 2/Seedream, 10 Nano Banana Pro edits, 2K GPT Image 2 editing, and commercial rights"
+  - date: 2026-06-08
+    plan: "Pro Plus"
+    price: "$45/mo ($36 annual)"
+    source: "https://playground.com/design/pricing"
+    source_label: "Playground pricing"
+    source_id: playground-ai-pricing
+    verified_at: 2026-06-08
+    note: "Rendered pricing page lists unlimited Playground v3 generations, 1,000 monthly credits, 250 Nano Banana Pro edits if all credits are spent there, 4K GPT Image 2 editing, priority support, and API-access request path"
   - date: 2025-06-01
     plan: "Pro"
     price: "$15/mo"
     source: "https://playground.com/design/pricing"
-    source_label: "Source"
+    source_label: "Playground pricing"
     source_id: playground-ai-pricing
+    verified_at: 2026-06-08
     note: "Price restructured to current tiers."
-  - date: 2026-04-17
-    plan: "Turbo"
-    price: "$45/mo"
-    source: "https://playground.com/design/pricing"
-    source_label: "Source"
-    source_id: playground-ai-pricing
-    note: "Verified unchanged."
   - date: 2026-05-13
     plan: "Pro Plus"
     price: "$45/mo ($36 annual)"
     source: "https://playground.com/design/pricing"
-    source_label: "Source"
+    source_label: "Playground pricing"
     source_id: playground-ai-pricing
-    note: "Turbo renamed Pro Plus. Adds Nano Banana Pro access (4 credits per use), unlimited generations, 1,000 monthly credits, 4K AI editing. Day Pass discontinued."
+    verified_at: 2026-06-08
+    note: "Pro Plus replaced older Turbo-era buyer language, but June 2026 help docs still list Day Pass and one-time credit packs, so keep one-off access language conditional."
 ---
 
 # Playground AI
 
 Suhail Doshi's design-focused image platform. The proprietary **Playground v3** model sits inside a canvas editor that combines generation with inpainting, outpainting, and background removal.
 
-The platform also runs OpenAI image models, Stable Diffusion, Seedream, and Nano Banana Pro from the same interface. Pro at $15/month and Pro Plus at $45/month carry the production tier. The old Turbo and Day Pass options were discontinued; Pro Plus replaces Turbo with a brighter feature set including Nano Banana Pro access and unlimited generations.
+The platform also runs Nano Banana, GPT Image 2, Seedream, and Nano Banana Pro from the same interface. Pro at $15/month and Pro Plus at $45/month carry the production tier. Pro Plus is the main subscription for heavy users, but Playground's help center still lists Day Pass and $8 one-time 100-credit packs, so light buyers should check the current checkout screen before assuming a monthly subscription is the only paid route.
 
 ## System Verdict
 
@@ -115,15 +126,15 @@ The platform also runs OpenAI image models, Stable Diffusion, Seedream, and Nano
 | | |
 |---|---|
 | **Flagship model** | Playground v3 (proprietary) |
-| **Also available** | OpenAI image models, Stable Diffusion, Seedream, Nano Banana Pro |
+| **Also available** | Nano Banana · GPT Image 2 · Seedream · Nano Banana Pro |
 | **Free tier** | 10 images per 3-hour window, 3 monthly credits, non-commercial |
 | **Pro** | $15/mo ($12 annual), 75 images per 3 hours, 150 monthly credits, 2K AI editing, commercial rights |
-| **Pro Plus** | $45/mo ($36 annual), unlimited generations, 1,000 monthly credits, Nano Banana Pro (4 credits/use), 4K AI editing |
+| **Pro Plus** | $45/mo ($36 annual), unlimited Playground v3 generations, 1,000 monthly credits, Nano Banana Pro (4 credits/use), 4K GPT Image 2 editing |
 | **Output formats** | Raster only (no SVG) |
-| **Max resolution** | Up to 4K AI editing on Pro Plus, 2K on Pro |
+| **Max resolution** | Up to 4K GPT Image 2 editing on Pro Plus, 2K on Pro |
 | **Canvas tools** | Inpainting, outpainting, background removal, text, filters, premium templates |
 
-Every data point above was verified on 2026-05-13. See Sources.
+Every data point above was verified on 2026-06-08 against the rendered pricing page and help-center paid-plan article. See Sources.
 
 ## What it actually is
 
@@ -137,7 +148,7 @@ Social templates (Instagram, LinkedIn, TikTok, YouTube) sit inside the canvas wi
 
 - **You ship social media content daily.** Canvas editing inside the generator saves a Photoshop round-trip.
 - **You produce marketing campaign graphics.** Playground v3's aesthetic runs clean and commercial by default.
-- **You want multi-model access in one place.** Switch between Playground v3, OpenAI image models, Stable Diffusion, and Seedream mid-project.
+- **You want multi-model access in one place.** Switch between Playground v3, Nano Banana, GPT Image 2, Seedream, and Nano Banana Pro mid-project.
 - **You run a small design team on a budget.** Pro Plus at $45/mo undercuts equivalent multi-seat setups elsewhere and unlocks Nano Banana Pro alongside Playground v3.
 - **You test prompts before committing.** The free 10-edits-per-3-hours cycle supports concept exploration.
 
@@ -158,9 +169,9 @@ Subscription pricing via [playground.com/design/pricing](https://playground.com/
 |------|------------------|-----------------|-----------------|--------------|--------------|
 | Free | $0 | 10 per 3 hours | 3 | Playground v3, basic canvas, non-commercial only | Prompt testers |
 | Pro | $15 ($12) | 75 per 3 hours | 150 | Commercial license, premium templates, 2K AI editing, upscaling, background removal | **Most individuals land here** |
-| Pro Plus | $45 ($36) | Unlimited | 1,000 | All Pro features plus Nano Banana Pro (4 credits/use), unlimited editing tools, 4K AI editing, priority support, API eligibility | Teams, agencies, power users |
+| Pro Plus | $45 ($36) | Unlimited Playground v3 generations | 1,000 | All Pro features plus Nano Banana Pro (4 credits/use), 4K GPT Image 2 editing, priority support, API request path | Teams, agencies, power users |
 
-*Prices verified 2026-05-13 via [playground.com/design/pricing](https://playground.com/design/pricing). Turbo and Day Pass discontinued; Pro Plus is the new flagship paid tier.*
+*Prices verified 2026-06-08 via the rendered [playground.com/design/pricing](https://playground.com/design/pricing) page. Paid-plan limits and Day Pass / one-time credit-pack language were cross-checked against Playground's help center.*
 
 ## Against the alternatives
 
@@ -169,7 +180,7 @@ Subscription pricing via [playground.com/design/pricing](https://playground.com/
 | **Design-oriented aesthetic** | **Strong** | Mid | Strong, template-locked |
 | **Artistic / cinematic output** | Mid | **Strongest** | Weak |
 | **In-canvas editing** | **Yes, full suite** | Web editor (separate) | Yes |
-| **Multi-model access** | Yes (Playground v3, OpenAI image, Stable Diffusion, Seedream, Nano Banana Pro) | Single model | Single model |
+| **Multi-model access** | Yes (Playground v3, Nano Banana, GPT Image 2, Seedream, Nano Banana Pro) | Single model | Single model |
 | **Free tier** | 10 images / 3 hours, non-commercial | None | Yes, limited |
 | **Commercial rights** | Paid plans | All paid plans | Paid plans |
 | **Entry price** | $15/mo | $10/mo | $15/mo Pro |
@@ -182,14 +193,14 @@ Subscription pricing via [playground.com/design/pricing](https://playground.com/
 - **Complex compositions strain the model.** 2-3 subjects work well; crowded scenes or dense interaction start breaking down.
 - **No video generation.** The platform is images-only. Motion workflows need Runway or Kling.
 - **Team features on Pro Plus are basic.** Shared workspaces exist; advanced permissions and SSO do not. Enterprise teams outgrow it.
-- **Public API is limited.** API access is gated to Pro Plus eligibility and remains narrower than Flux or direct OpenAI endpoints.
+- **Public API is limited.** API access is request-gated, and Playground says it is prioritizing partners whose users generate more than 1M images a month.
 - **Nano Banana Pro burns Pro Plus credits 4x faster.** Heavy use of the premium model can exhaust the 1,000 monthly credit pool in roughly 250 generations.
 - **Monthly edit caps can bite on Pro.** The 3-hour windowing pattern rewards steady pacing and punishes bursty production days.
-- **Day Pass discontinued.** One-off Pro access for $8 is no longer available; light users must commit to a monthly subscription or stay on free.
+- **One-off access can differ from subscription marketing.** Playground's help center still lists a 24-hour Day Pass and $8 credit packs; verify the checkout surface before budgeting occasional use.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [playground.com/design/pricing](https://playground.com/design/pricing) and [Playground Terms](https://playground.com/terms).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-08 against the rendered [playground.com/design/pricing](https://playground.com/design/pricing) page, [Playground paid-plan limits](https://help.playgroundai.com/en/articles/11165689-how-many-images-or-edits-under-the-paid-plans-pro-day-pass), and [Playground Terms](https://playground.com/terms).
 
 ## FAQ
 
@@ -197,16 +208,16 @@ This page was produced by the aipedia.wiki editorial pipeline, an automated syst
 Yes. The free plan offers 10 images per 3-hour window plus 3 monthly credits with Playground v3 and basic canvas tools. Free output is non-commercial only; commercial rights require a paid plan.
 
 **What is the current Playground model?**
-Playground v3, the proprietary flagship. It targets clean design aesthetics for social and marketing work. The platform also runs OpenAI image models, Stable Diffusion, Seedream, and Nano Banana Pro (Pro Plus only) from the same interface ([Pricing page](https://playground.com/design/pricing)).
+Playground v3, the proprietary flagship. It targets clean design aesthetics for social and marketing work. The platform also runs Nano Banana, GPT Image 2, Seedream, and Nano Banana Pro from the same interface ([Pricing page](https://playground.com/design/pricing)).
 
 **Can I use Playground images commercially?**
-Yes on Pro ($15/mo) and Pro Plus ($45/mo). Free tier output is non-commercial only. The Day Pass option was discontinued in 2026.
+Yes on Pro ($15/mo) and Pro Plus ($45/mo). Free tier output is non-commercial only. Playground's current pricing FAQ says users own generated images for personal or commercial use if they follow the terms.
 
 **How does Playground compare to Midjourney?**
 Playground wins on in-canvas editing, multi-model access, and design-oriented aesthetics. Midjourney V7 wins on artistic range, cinematic lighting, and stylized composition. Many teams keep both for different purposes.
 
 **Does Playground have an API?**
-API access requires Pro Plus eligibility and remains narrower than Flux or direct OpenAI image endpoints. Heavy programmatic workloads should benchmark both before committing.
+API access is request-gated. Playground says it is prioritizing potential partners whose users generate more than 1M images a month, so heavy programmatic workloads should benchmark direct model APIs before committing.
 
 **Is there a team plan?**
 Pro Plus at $45/mo supports shared workspaces and basic team features. Enterprise SSO and advanced permissions are not available. Larger organizations outgrow the plan structure.
@@ -214,6 +225,7 @@ Pro Plus at $45/mo supports shared workspaces and basic team features. Enterpris
 ## Sources
 
 - [Playground pricing](https://playground.com/design/pricing): current plan tiers
+- [Playground paid-plan limits](https://help.playgroundai.com/en/articles/11165689-how-many-images-or-edits-under-the-paid-plans-pro-day-pass): current credits, Day Pass, and one-time pack language
 - [Playground official site](https://playground.com): product overview
 - [Playground Terms of Service](https://playground.com/terms): commercial use rights
 

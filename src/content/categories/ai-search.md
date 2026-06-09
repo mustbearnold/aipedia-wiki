@@ -5,10 +5,10 @@ title: AI Search & Research Tools
 description: AI answer engines, private search, research notebooks, semantic search APIs, and source-backed research assistants.
 tool_count: 8
 seo_title: "Best AI Search and Research Tools (June 2026)"
-meta_description: "Updated June 7, 2026: compare Perplexity, Kagi, You.com APIs, Comet, ChatGPT Search, Google AI Mode, NotebookLM, Exa, Genspark, Glean, and Grok by citations, privacy, APIs, paid media limits, and buyer fit."
+meta_description: "Updated June 8, 2026: compare Perplexity, Kagi, You.com APIs, Comet, ChatGPT Search, Google AI Mode, NotebookLM, Exa, Morphic, and Phind migration paths by citations, privacy, APIs, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-07
-last_verified: 2026-06-07
+last_updated: 2026-06-08
+last_verified: 2026-06-08
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -54,6 +54,10 @@ AI search is not one category anymore. Buyers now choose between **cited answer 
 
 **June 6 answer-engine vs API fork:** [Perplexity vs You.com](/compare/perplexity-vs-you-com/) now separates the human-facing cited research product from the programmable grounding stack. Start with Perplexity when the buyer needs a research UI today; start with You.com when the buyer needs primitives inside an app or agent.
 
+**Use [Morphic](/tools/morphic/) when the answer engine should be self-hosted.** The June 8 check found Morphic v1.4.0 as the latest stable GitHub release, Apache 2.0 licensing, about 8.9k stars, 2.3k forks, and no first-party public paid SaaS tier. It is not a Perplexity replacement for non-technical users; it is the forkable private answer-engine lane for teams that can own deployment, provider keys, search backends, and uptime.
+
+**June 8 Phind migration cleanup:** Phind is not a live AI search recommendation. AiPedia refreshed the stale Phind comparison routes so they no longer describe fake 2026 Phind pricing, model access, or context windows. Former Phind users should pick by replacement job: [ChatGPT vs Phind](/compare/chatgpt-vs-phind/) for a broad assistant, [Perplexity vs Phind](/compare/perplexity-vs-phind/) for cited search, [Kagi vs Phind](/compare/kagi-vs-phind/) for private paid search, [Exa AI vs Phind](/compare/exa-vs-phind/) for retrieval APIs, and [Phind vs You.com](/compare/phind-vs-you-com/) for grounding/research APIs.
+
 **Use [Genspark](/tools/genspark/) when search should become work output.** The June 2 membership check frames Genspark as an AI workspace with Plus at $24.99/month for 10,000 credits and Pro at $249.99/month for 125,000 credits, built around Super Agent, documents, slides, sheets, calls, meetings, media, and AI Drive storage rather than a pure citation-first answer engine.
 
 **Use [Glean](/tools/glean/) when the search surface is company knowledge.** Glean is the enterprise lane for permission-aware workplace search, agents, and developer integrations over SaaS tools and internal content. It is demo-gated, so procurement should validate connectors, permissions, MCP/IDE paths, and security requirements before rollout.
@@ -74,6 +78,7 @@ AI search is not one category anymore. Buyers now choose between **cited answer 
 | Search/retrieval API | [Exa](/tools/exa/) | Search, contents, answer, monitors, summaries, and Agent primitives for AI apps | Value depends on integration quality, request economics, extra results, summaries, monitor usage, enrichment, and Agent effort |
 | Search-to-deliverable AI workspace | [Genspark](/tools/genspark/) | Turns research into docs, slides, sheets, calls, media, and agent outputs | Credit burn and enterprise/API availability need direct verification |
 | Enterprise work search | [Glean](/tools/glean/) | Permission-aware search and agents over company apps and knowledge | Contact-sales pricing and connector/security review are mandatory |
+| Self-hosted answer engine | [Morphic](/tools/morphic/) | Apache 2.0, forkable answer-engine stack with BYOK model/search routing | Requires deployment, provider keys, search-backend setup, and no first-party hosted SLA |
 | Real-time social context | [Grok](/tools/grok/) | Useful when X-native context is the source of the question | Social data can be noisy, biased, or incomplete |
 | Grounding and research APIs | [You.com](/tools/you-com/) | Search, Contents, Research, and Finance Research APIs for agents and LLM apps | Not a consumer chat-plan replacement; benchmark against Exa, Tavily, Brave Search API, and Perplexity Sonar |
 
@@ -95,6 +100,8 @@ AI search is not one category anymore. Buyers now choose between **cited answer 
 
 **Best enterprise work search:** [Glean](/tools/glean/) when the source set is the company's permissioned SaaS and document corpus rather than the open web.
 
+**Best self-hosted answer-engine stack:** [Morphic](/tools/morphic/) when the buyer can run infrastructure and wants a private, forkable Perplexity-style codebase instead of another hosted research subscription.
+
 ## Money Pages To Keep Current
 
 - [Perplexity alternatives](/guides/perplexity-alternatives/) is the June 7 verified switching guide for ChatGPT Search, Gemini/Google AI Mode, NotebookLM, Claude, Kagi, Exa, and Perplexity API buyers deciding between cited open-web answers, all-purpose assistants, owned-source research, private paid search, and developer APIs.
@@ -111,6 +118,7 @@ AI search is not one category anymore. Buyers now choose between **cited answer 
 - A new `Perplexity vs Google AI Mode` answer page would capture search behavior changes caused by Google's AI Overviews and AI Mode.
 - [Exa AI vs Perplexity](/compare/exa-vs-perplexity/) now captures developer buyers choosing between search/retrieval primitives and Perplexity-style answer, search, Sonar, and Agent APIs.
 - [Perplexity vs You.com](/compare/perplexity-vs-you-com/) now captures the highest-intent answer-engine-versus-API decision in AI search.
+- Phind migration pages should remain explicit that Phind is offline: [ChatGPT vs Phind](/compare/chatgpt-vs-phind/), [Perplexity vs Phind](/compare/perplexity-vs-phind/), [Kagi vs Phind](/compare/kagi-vs-phind/), [Exa AI vs Phind](/compare/exa-vs-phind/), and [Phind vs You.com](/compare/phind-vs-you-com/).
 
 ## What Hurts Trust
 
@@ -133,7 +141,7 @@ Do not leave this category stale. Google AI Mode, Perplexity Pro/Max/Enterprise,
 - [Perplexity Sonar media docs](https://docs.perplexity.ai/docs/sonar/media) (verified 2026-06-06)
 - [Perplexity Enterprise pricing](https://www.perplexity.ai/enterprise/pricing) (verified 2026-06-06)
 - [ChatGPT Search Help](https://help.openai.com/en/articles/9237897-chatgpt-search) (verified 2026-06-07)
-- [Google AI Mode and AI Overviews updates](https://blog.google/products-and-platforms/products/search/explore-web-generative-ai-search/) (verified 2026-05-13)
+- [Google AI Mode and AI Overviews updates](https://blog.google/products-and-platforms/products/search/explore-web-generative-ai-search/) (verified 2026-06-08)
 - [Google AI Plans](https://one.google.com/about/google-ai-plans/) (verified 2026-06-07)
 - [NotebookLM upgrade docs](https://support.google.com/notebooklm/answer/16213268) (verified 2026-06-07)
 - [Kagi pricing](https://kagi.com/pricing) (verified 2026-06-06)
@@ -146,10 +154,14 @@ Do not leave this category stale. Google AI Mode, Perplexity Pro/Max/Enterprise,
 - [Genspark membership benefits](https://www.genspark.ai/membership-benefits-lp) (verified 2026-06-02)
 - [Glean official site](https://www.glean.com/) (verified 2026-06-02)
 - [Glean developer platform](https://developers.glean.com/) (verified 2026-06-02)
+- [Morphic official site](https://morphic.sh) (verified 2026-06-08)
+- [miurla/morphic GitHub repository](https://github.com/miurla/morphic) (verified 2026-06-08)
+- [Morphic v1.4.0 release notes](https://github.com/miurla/morphic/releases/tag/v1.4.0) (verified 2026-06-08)
 - [You.com pricing](https://you.com/pricing) (verified 2026-06-06)
 - [You.com API docs](https://you.com/docs/get-started/quickstart) (verified 2026-06-06)
 - [Grok by xAI](https://x.ai/grok) (verified 2026-06-02)
 - [xAI pricing](https://x.ai/pricing) (verified 2026-06-02)
 - [xAI model docs](https://docs.x.ai/developers/models) (verified 2026-06-02)
-- [X Premium+ pricing](https://help.x.com/en/premium-plus-price-update) (verified 2026-05-13)
+- [X Premium+ pricing](https://help.x.com/en/premium-plus-price-update) (verified 2026-06-08)
 - [Bing AI-guided image search](https://blogs.bing.com/search/May-2026/A-Smarter-Way-to-Explore-Images-Has-Come-to-Bing) (verified 2026-05-26)
+- [Phind shutdown retrospective](https://www.toolsforhumans.ai/ai-tools/phind) (verified 2026-06-08)

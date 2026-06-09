@@ -9,11 +9,11 @@ company: Moonshot AI
 url: https://www.kimi.com/
 github_url: https://github.com/MoonshotAI/Kimi-K2
 pricing_model: freemium
-price_range: "Free/freemium chat / K2.6 API $0.95/M input"
+price_range: "Free/freemium chat / K2.6 API $0.95/M cache-miss input"
 status: active
 launched: 2023-10
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-08
+last_verified: 2026-06-08
 update_frequency: quarterly
 affiliate:
   has_program: false
@@ -32,17 +32,17 @@ facts:
     source: "https://platform.moonshot.ai/"
     source_label: "Moonshot platform"
     source_id: kimi-official
-    verified_at: 2026-05-13
-    next_review_at: 2026-08-13
+    verified_at: 2026-06-08
+    next_review_at: 2026-09-08
     volatility: high
     confidence: high
   pricing_anchor:
-    value: "Chat may be free/freemium, while Kimi K2.6 API pricing is published at $0.95/M input tokens, $4.00/M output tokens, and $0.16/M cache-hit tokens before applicable taxes."
+    value: "Chat may be free/freemium, while the current Kimi K2.6 API pricing page publishes $0.16/M cache-hit input tokens, $0.95/M cache-miss input tokens, and $4.00/M output tokens before applicable taxes."
     source: "https://platform.kimi.ai/docs/pricing/chat"
     source_label: "Kimi pricing docs"
     source_id: kimi-pricing
-    verified_at: 2026-05-13
-    next_review_at: 2026-08-13
+    verified_at: 2026-06-08
+    next_review_at: 2026-09-08
     volatility: high
     confidence: high
   api_available:
@@ -50,8 +50,8 @@ facts:
     source: "https://platform.moonshot.ai/"
     source_label: "Moonshot platform"
     source_id: kimi-official
-    verified_at: 2026-05-13
-    next_review_at: 2026-08-13
+    verified_at: 2026-06-08
+    next_review_at: 2026-09-08
     volatility: high
     confidence: high
   best_for:
@@ -59,22 +59,22 @@ facts:
     source: "https://www.kimi.com/"
     source_label: "Kimi homepage"
     source_id: kimi-homepage
-    verified_at: 2026-05-13
-    next_review_at: 2026-08-13
+    verified_at: 2026-06-08
+    next_review_at: 2026-09-08
     volatility: high
     confidence: high
   watch_out_for:
-    value: "Availability, documentation, and model naming can vary by region and platform surface, so verify the exact Kimi/Moonshot endpoint before production use."
+    value: "Availability, documentation, and model naming can vary by region and platform surface; the K2 legacy pricing URL now redirects to the current docs overview, so buyers should verify the exact Kimi/Moonshot model endpoint before production use."
     source: "https://platform.kimi.ai/docs/pricing/chat"
     source_label: "Kimi pricing docs"
     source_id: kimi-pricing
-    verified_at: 2026-05-13
-    next_review_at: 2026-08-13
+    verified_at: 2026-06-08
+    next_review_at: 2026-09-08
     volatility: high
     confidence: medium
 tags: [long-context, chinese-llm, moe, reasoning, coding, multilingual, open-source, api]
-seo_title: "Kimi: Features, Pricing & Review (May 2026)"
-meta_description: "Kimi by Moonshot AI offers K2.6, 256K-context API access, Kimi chat, agent workflows, and open-weight Kimi K2 Thinking. Pricing refreshed May 2026."
+seo_title: "Kimi: Features, Pricing & Review (June 2026)"
+meta_description: "Kimi by Moonshot AI offers K2.6, 256K-context API access, Kimi chat, agent workflows, and open-weight Kimi K2 Thinking. Pricing refreshed June 2026."
 author: "aipedia.wiki Editorial"
 best_for:
   - long-document and codebase analysis with free 256K context
@@ -104,6 +104,14 @@ price_history:
     source_id: kimi-pricing
     verified_at: 2026-05-13
     note: "Re-verified after DeepSeek V4 preview release (April 24, 2026); Kimi pricing unchanged but competitive pressure rising"
+  - date: 2026-06-08
+    plan: "Kimi K2.6 API"
+    price: "$0.16/M cache-hit input, $0.95/M cache-miss input, $4.00/M output"
+    source: "https://platform.kimi.ai/docs/pricing/chat-k26"
+    source_label: "Kimi K2.6 pricing docs"
+    source_id: kimi-pricing
+    verified_at: 2026-06-08
+    note: "Reverified against current Kimi API pricing and overview docs; K2.6 remains the current Kimi model path for new API work."
 ---
 
 # Kimi
@@ -114,7 +122,7 @@ The current flagship is **Kimi K2.6**, released April 21, 2026 as open-weights w
 
 ## Recent developments
 
-Verified 2026-05-13.
+Verified 2026-06-08.
 
 - **April 24, 2026:** [DeepSeek V4 preview released](/news/2026-04-24-deepseek-v4-preview-release/). The cheapest credible competitor for budget-API long-context work moves first; Kimi K2.6 must defend the agentic and open-weights edge as DeepSeek's coding scores climb.
 - **April 21, 2026:** [Kimi K2.6 released](/news/2026-04-21-moonshot-kimi-k2-6-agent-swarm/) with four modes including Agent Swarm (multi-instance parallel execution with planner/executor/verifier/critic roles). Benchmarks: HLE-with-tools 54.0, SWE-Bench Pro 58.6, SWE-bench Multilingual 76.7. Strongest open-weights coding and agentic model as of release.
@@ -146,7 +154,7 @@ Verified 2026-05-13.
 | **K2.6 cache pricing** | $0.16/M cache-hit tokens |
 | **Agent Swarm** | Beta, up to 100 coordinated sub-agents |
 
-Every data point above was verified on 2026-05-13. See Sources.
+Every volatile data point above was rechecked on 2026-06-08. See Sources.
 
 ## What it actually is
 
@@ -180,11 +188,10 @@ Chat at [kimi.com](https://www.kimi.com/), API at [platform.moonshot.ai](https:/
 |---|---|---|
 | Free chat (Adagio) | $0/month | Unlimited basic chat, 256K context, limited DeepResearch and agent tasks |
 | Paid Membership | Tiered | Higher DeepResearch and agent quotas, current plans on kimi.com |
-| Kimi K2.6 API | $0.95/M input, $4.00/M output | Cache $0.16/M, 256K context, multimodal, current recommended Kimi model |
-| Kimi K2.5 API | $0.60/M input, $3.00/M output | Cache $0.10/M, 256K context, multimodal, all modes |
-| Kimi K2 0905 API | $0.60/M input, $2.50/M output | Cache $0.15/M, legacy K2 series; Kimi docs say K2 series retires May 25, 2026 |
+| Kimi K2.6 API | $0.95/M cache-miss input, $4.00/M output | Cache-hit input $0.16/M, 256K context, multimodal, current recommended Kimi model |
+| Older Kimi K2/K2.5 paths | Verify live before use | The current docs navigation centers K2.6 and K2.5, while the old K2 legacy URL now redirects to the docs overview. Treat legacy K2 pricing as historical for new production. |
 
-*Prices verified 2026-05-13 via [Moonshot AI Platform](https://platform.moonshot.ai/), [Kimi API pricing docs](https://platform.kimi.ai/docs/pricing/chat), and the Kimi K2.6/K2.5/K2 model pricing pages. API is pay-as-you-go with no minimum listed on the checked pricing pages. DeepSeek V4 preview release (April 24, 2026) raised competitive pressure on the cheap-API segment; Kimi pricing held steady.*
+*Prices verified 2026-06-08 via [Moonshot AI Platform](https://platform.moonshot.ai/), [Kimi API pricing docs](https://platform.kimi.ai/docs/pricing/chat), and the Kimi K2.6 pricing page. API is pay-as-you-go with no minimum listed on the checked pricing pages. DeepSeek V4 preview release (April 24, 2026) raised competitive pressure on the cheap-API segment; Kimi K2.6 pricing held steady in the June 8 check.*
 
 ## Against the alternatives
 
@@ -210,7 +217,7 @@ Chat at [kimi.com](https://www.kimi.com/), API at [platform.moonshot.ai](https:/
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-05-13 against [Moonshot AI Platform docs](https://platform.moonshot.ai/), [Kimi API pricing docs](https://platform.kimi.ai/docs/pricing/chat), [Kimi K2.6 pricing docs](https://platform.kimi.ai/docs/pricing/chat-k26), [Kimi K2 legacy retirement notice](https://platform.kimi.ai/docs/pricing/chat-k2), [Kimi K2 Thinking on Hugging Face](https://huggingface.co/moonshotai/Kimi-K2-Thinking), and the [April 24 DeepSeek V4 preview coverage](/news/2026-04-24-deepseek-v4-preview-release/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-08 against [Moonshot AI Platform docs](https://platform.moonshot.ai/), [Kimi API pricing docs](https://platform.kimi.ai/docs/pricing/chat), [Kimi K2.6 pricing docs](https://platform.kimi.ai/docs/pricing/chat-k26), the old K2 URL redirect behavior, [Kimi K2 Thinking on Hugging Face](https://huggingface.co/moonshotai/Kimi-K2-Thinking), and the [April 24 DeepSeek V4 preview coverage](/news/2026-04-24-deepseek-v4-preview-release/).
 
 ## FAQ
 
@@ -218,7 +225,7 @@ This page was produced by the aipedia.wiki editorial pipeline, an automated syst
 Yes. kimi.com provides unlimited basic chat with a 256K-token context window at no cost. DeepResearch and agent features are quota-capped on the free tier. The API is pay-as-you-go.
 
 **What is Kimi K2.6?**
-Moonshot AI's current Kimi platform model as of May 13, 2026, released April 21, 2026 as open-weights with Agent Swarm mode. Kimi's docs describe 256K context, text/image/video input, thinking and non-thinking modes, dialogue and agent tasks, ToolCalls, JSON Mode, Partial Mode, internet search, and context caching.
+Moonshot AI's current Kimi platform model as of June 8, 2026, released April 21, 2026 as open-weights with Agent Swarm mode. Kimi's docs describe 256K context, text/image/video input, thinking and non-thinking modes, dialogue and agent tasks, ToolCalls, JSON Mode, Partial Mode, internet search, and context caching.
 
 **What is Kimi K2 Thinking?**
 The open-weight reasoning flagship. It sets state-of-the-art on Humanity's Last Exam at 44.9% with tools and 51.0% in heavy mode, supports 200-300 sequential tool calls, and ships under a modified MIT license. Weights are on [Hugging Face](https://huggingface.co/moonshotai/Kimi-K2-Thinking).
@@ -235,7 +242,7 @@ Yes. Point your OpenAI SDK at api.moonshot by changing the base URL and plugging
 - [Kimi API pricing documentation](https://platform.kimi.ai/docs/pricing/chat): cache rates and tier details
 - [Kimi K2 Thinking on Hugging Face](https://huggingface.co/moonshotai/Kimi-K2-Thinking): open-weight release, modified MIT license
 - [Kimi K2.6 pricing documentation](https://platform.kimi.ai/docs/pricing/chat-k26): current K2.6 model description and pricing
-- [Kimi K2 legacy pricing documentation](https://platform.kimi.ai/docs/pricing/chat-k2): K2 retirement notice and legacy model details
+- [Legacy Kimi K2 pricing URL](https://platform.kimi.ai/docs/pricing/chat-k2): checked for redirect/legacy behavior during the June 8 refresh
 
 ## Related
 

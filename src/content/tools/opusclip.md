@@ -11,11 +11,11 @@ pricing_model: freemium
 price_range: "$0-$29/mo; Business custom"
 status: active
 launched: 2022
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-08
+last_verified: 2026-06-08
 update_frequency: monthly
-seo_title: "OpusClip Review: Pricing, Credits & Best Use Cases (May 2026)"
-meta_description: "OpusClip turns long videos into TikTok, Reels, and Shorts clips with ClipAnything, ReframeAnything, captions, B-roll, and virality scoring. Updated May 13, 2026 with Free, Starter, Pro, and Business buying guidance plus Castmagic context."
+seo_title: "OpusClip Review: Pricing, Credits & Best Use Cases (June 2026)"
+meta_description: "OpusClip turns long videos into TikTok, Reels, and Shorts clips with ClipAnything, ReframeAnything, captions, B-roll, scheduler, and virality scoring. Updated June 8, 2026 with current Free, Starter, Pro, Business, credit, and API guidance."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -34,25 +34,25 @@ facts:
     source: "https://www.opus.pro/pricing"
     source_label: "OpusClip pricing"
     source_id: opusclip-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-06-08
     volatility: medium
     confidence: medium
   pricing_anchor:
-    value: "Pro; $29/mo monthly or $14.50/mo when billed annually; Starter remains $15/mo monthly-only"
+    value: "Starter $15/mo monthly-only; Pro $29/mo monthly or $14.50/mo when billed annually; Business custom. Annual Pro shows $174 billed annually with 3,600 credits available instantly."
     source: "https://www.opus.pro/pricing"
     source_label: "OpusClip pricing"
     source_id: opusclip-pricing
-    verified_at: 2026-05-13
-    next_review_at: 2026-06-13
+    verified_at: 2026-06-08
+    next_review_at: 2026-07-08
     volatility: high
     confidence: medium
   watch_out_for:
-    value: "Credit packs bundle processing minutes, seats, brand templates, and storage; heavy teams cannot buy only extra credits or only extra seats, and Pro tops out at 4 total seats (2 packs max) before Business is required"
-    source: "https://help.opus.pro/docs/article/plans-and-credits"
-    source_label: "OpusClip plans and credits"
-    source_id: opusclip-plans-credits
-    verified_at: 2026-05-13
-    next_review_at: 2026-06-13
+    value: "Credits are based on source-video minutes, not exported clips. Pro buyers can add packs, but high-volume teams should model credits, seats, social connections, storage, API needs, and Business procurement together before committing."
+    source: "https://help.opus.pro/docs/article/how-are-credits-consumed"
+    source_label: "OpusClip credit mechanics"
+    source_id: opusclip-credit-consumption
+    verified_at: 2026-06-08
+    next_review_at: 2026-07-08
     volatility: high
     confidence: medium
 tags: [short-form-video, video-editing, tiktok, reels, social-media, opusclip]
@@ -83,43 +83,49 @@ price_history:
     source_label: "OpusClip pricing"
     source_id: opusclip-pricing
     note: "Monthly-only tier; removes watermark, unlocks 150 credits per month"
-  - date: 2026-05-13
-    plan: "Pro seats"
-    price: "2 included, +2 per add-on pack, 4 max"
-    source: "https://help.opus.pro/docs/article/plans-and-credits"
-    source_label: "OpusClip plans and credits"
-    source_id: opusclip-plans-credits
-    note: "Pro tops out at 4 total seats across 2 packs; teams needing 10+ seats or unlimited storage are routed to Business"
+  - date: 2026-06-08
+    plan: "Starter / Pro"
+    price: "$15/mo Starter; $29/mo Pro monthly or $174/yr"
+    source: "https://www.opus.pro/pricing"
+    source_label: "OpusClip pricing"
+    source_id: opusclip-pricing
+    note: "Pricing page lists Starter at 150 monthly credits, Pro at 300 monthly credits per pack or 3,600 yearly credits on annual billing, and Business as custom pricing and packs."
+  - date: 2026-06-08
+    plan: "Credit consumption"
+    price: "1 credit per source-video minute"
+    source: "https://help.opus.pro/docs/article/how-are-credits-consumed"
+    source_label: "OpusClip credit mechanics"
+    source_id: opusclip-credit-consumption
+    note: "Credit use is based on original imported-video length; X posts or schedules consume 1 credit per published clip."
 ---
 
 # OpusClip
 
 OpusClip is an AI video tool that takes long-form source material like podcasts, webinars, interviews, and Twitch streams and produces short-form social clips for TikTok, Reels, and YouTube Shorts. The **ClipAnything** pipeline ranks clip candidates by virality signals. **ReframeAnything** handles 16:9 to 9:16 conversion with subject tracking. AI B-roll and auto-captions round out the production flow.
 
-The company is **OpusClip Inc.**, based in Redwood City, founded in 2022 by Young Zhao, Grace Wang, and Jay W. Funding totals roughly $50M across two rounds, including a $30M Series A led by Millennium New Horizons in 2024 and a $20M round led by SoftBank Vision Fund 2 in March 2025 at a $215M valuation.
+The company is **OpusClip Inc.** AiPedia's June 8, 2026 refresh treats official OpusClip pricing and help docs as the source of truth for plan, credit, API, export, and team-workspace buying decisions.
 
 ## System Verdict
 
-> **Pick OpusClip if you publish long-form content and want short-form clips without editing them by hand.** The ClipAnything pipeline scores each candidate for virality, ReframeAnything keeps subjects centered in vertical crops, and direct scheduling to TikTok, Reels, Shorts, LinkedIn, and X removes the last manual step. It remains one of the clearest first tests for podcast, webinar, livestream, and interview repurposing as of May 13, 2026.
+> **Pick OpusClip if you publish long-form content and want short-form clips without editing them by hand.** The ClipAnything pipeline scores each candidate for virality, ReframeAnything keeps subjects centered in vertical crops, and direct scheduling to TikTok, Reels, Shorts, LinkedIn, and X removes the last manual step. It remains one of the clearest first tests for podcast, webinar, livestream, and interview repurposing as of June 8, 2026.
 >
 > **Skip it if you need frame-accurate manual editing, original video generation, or heavy motion graphics.** OpusClip does not generate new footage. Complex multi-layer timelines belong in Premiere or DaVinci. For clip-first creators who never had long-form source, [Captions](/tools/captions/) or [Descript](/tools/descript/) fit better. If your repurposing workflow is podcast-first and lives close to transcript editing, show notes, and chapter generation, [Castmagic](/tools/castmagic/) is now the direct competitor for the same source material.
 >
-> **Who pays which tier:** Free for evaluation with watermark, Starter $15/mo for solo creators who want clean exports and basic captions, Pro $29/mo monthly or $14.50/mo annually for serious podcasters and creator teams needing B-roll, team workspace, more sources, scheduling, and Premiere/DaVinci export. Business is the API/custom-integration route and the only way past 4 total seats.
+> **Who pays which tier:** Free for evaluation with watermark, Starter $15/mo for solo creators who want clean exports and basic captions, Pro $29/mo monthly or $14.50/mo annually for serious podcasters and creator teams needing B-roll, team workspace, more sources, scheduling, and Premiere/DaVinci export. Business is the custom-pricing route for tailored credits, team seats, social connections, dedicated storage, API/custom integrations, MSA, and enterprise support.
 
 ## Key Facts
 
 | | |
 |---|---|
 | **Company** | OpusClip Inc. (Redwood City, founded 2022) |
-| **Funding** | ~$50M across Series A + follow-on; $215M valuation (Mar 2025) |
 | **Core pipeline** | ClipAnything (virality scoring) + ReframeAnything (aspect conversion) |
 | **Pricing tiers** | Free · Starter $15/mo · Pro $29/mo monthly / $14.50/mo annual · Business custom |
 | **Free tier** | 60 credits/mo, watermark, 3-day export expiry, 1080p max |
-| **Pro features** | AI B-roll, team workspace (2 seats included, 4 max via 2 packs), 100GB storage, scheduler, Premiere/DaVinci export |
+| **Pro features** | AI B-roll, team workspace with 2 seats per pack, 6 social account connections, scheduler, Premiere/DaVinci export, custom fonts, speech enhancement, limited API access |
 | **Max upload** | 10GB (Free) · 30GB (Pro/Business) |
 | **Sources** | YouTube, Google Drive, Zoom, Twitch, StreamYard, direct upload |
 | **Output targets** | TikTok · Reels · Shorts · LinkedIn · X · Facebook |
-| **API access** | Business tier only |
+| **API access** | Limited API access on Pro; API/custom integrations on Business |
 | **Languages** | 20+ caption languages |
 
 ## What it actually is
@@ -155,12 +161,12 @@ Subscription pricing via [opus.pro/pricing](https://www.opus.pro/pricing):
 |---|---|---|---|
 | Free | $0 | 60/mo, watermark, 3-day export | Evaluation only |
 | Starter | $15/mo | 150/mo, no watermark, 1 brand kit | Solo creators, captions + clipping |
-| Pro | $29/mo ($14.50/mo annual) | 300/mo or 3,600/yr baseline, expandable packs | **Most creator teams should land here** |
-| Business | Custom | Dedicated queue, unlimited storage, API, SSO | Agencies and enterprises (10+ seats route) |
+| Pro | $29/mo ($14.50/mo annual) | 300/mo per pack or 3,600/yr baseline on annual billing, expandable packs | **Most creator teams should land here** |
+| Business | Custom | Tailored credits, seats, social connections, dedicated storage, API/custom integrations, MSA, priority support | Agencies and enterprises that outgrow self-serve packs |
 
-Credit mechanics: 1 credit roughly equals 1 minute of source video processed. Pro adds AI B-roll, team workspace (2 seats included), 6 connected social accounts, 100GB storage, Premiere and DaVinci export, scheduling, custom fonts, speech enhancement, and more import sources. Each add-on pack contributes another 300 monthly credits plus 2 seats, capped at 2 packs (4 total seats) before Business becomes required.
+Credit mechanics: 1 credit equals 1 minute of original source video processed, with partial-minute rounding rules in the help docs. Posting or scheduling to X also costs 1 credit per published clip. Pro adds AI B-roll, team workspace with 2 seats per pack, 6 connected social accounts, Premiere and DaVinci export, scheduling, custom fonts, speech enhancement, more import sources, and limited API access. Extra recurring credits come through additional packs; large teams should ask sales whether Business is cleaner once seats, storage, social accounts, API access, and support matter together.
 
-Prices verified May 13, 2026 via [opus.pro/pricing](https://www.opus.pro/pricing) and [help.opus.pro plans docs](https://help.opus.pro/docs/article/plans-and-credits). OpusClip's docs say organizations needing more than 10 seats, large-volume usage, custom solutions, or API access should use the Business/contact route.
+Prices verified June 8, 2026 via [opus.pro/pricing](https://www.opus.pro/pricing), [help.opus.pro plans docs](https://help.opus.pro/docs/article/plans-and-credits), and [help.opus.pro credit mechanics](https://help.opus.pro/docs/article/how-are-credits-consumed). OpusClip's pricing page says Business uses custom pricing and packs for tailored credits, seats, social connections, dedicated storage, API/custom integrations, MSA, priority support, and enterprise security.
 
 ## Against the alternatives
 
@@ -179,16 +185,16 @@ Prices verified May 13, 2026 via [opus.pro/pricing](https://www.opus.pro/pricing
 - **Virality score is directional, not predictive.** The ranking surfaces hooks, but top-scored clips still flop. Treat it as a first-pass filter, not a guarantee.
 - **AI B-roll is experimental.** Irrelevant or generic stock inserts happen; manual override is often needed. Pro-only feature.
 - **Reframe fails on multi-speaker scenes.** With two or more people in frame, subject tracking oscillates or crops out the active speaker. Manual adjustment required.
-- **Credit packs bundle more than credits.** OpusClip's help docs say extra credits or seats are not sold alone; users need additional packs that also include seats, brand templates, and cloud storage. Pro is hard-capped at 2 add-on packs (4 total seats) before Business becomes the only option.
+- **Credit packs bundle workflow capacity.** OpusClip's pricing and help docs route recurring extra capacity through packs and plan changes, so teams should model credits, seats, social connections, storage, API access, and support together instead of assuming a cheap credits-only top-up.
 - **Starter can disappear fast for long episodes.** Heavy podcasters on Starter can burn most of 150 monthly credits on one long recording session; Pro annual math works better for regular uploads.
 - **Watermark on Free is in-frame, not a corner bug.** Unusable for anything other than evaluation.
 - **No native text-to-video.** OpusClip only works with existing footage. Pair with Runway, Pika, or Kling if new generated content is needed.
 - **Export to Premiere requires Pro.** Starter users are locked into OpusClip's built-in editor for final tweaks.
-- **API is Business-tier only.** Solo creators and small teams cannot automate with API access.
+- **API access is not a simple developer self-serve story.** The pricing page lists limited API access on Pro and API/custom integrations on Business, so automation-heavy buyers should confirm endpoints, quotas, support, and procurement before building around it.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified May 13, 2026 against [opus.pro/pricing](https://www.opus.pro/pricing), [help.opus.pro plans docs](https://help.opus.pro/docs/article/plans-and-credits), [ClipAnything docs](https://help.opus.pro/docs/article/9947095-clip-anything), and funding coverage at [Business Insider](https://www.businessinsider.com/opusclip-softbank-vision-fund-2-funding-valuation-2025-3).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified June 8, 2026 against [opus.pro/pricing](https://www.opus.pro/pricing), [help.opus.pro plans docs](https://help.opus.pro/docs/article/plans-and-credits), [help.opus.pro credit mechanics](https://help.opus.pro/docs/article/how-are-credits-consumed), and [ClipAnything docs](https://help.opus.pro/docs/article/9947095-clip-anything).
 
 ## FAQ
 
@@ -202,7 +208,7 @@ The core clipping model. It ingests long-form video, understands visual, audio, 
 An AI reframing pipeline that converts 16:9 or 1:1 source into 9:16 vertical, 1:1 square, or back to 16:9 with subject tracking. Pro unlocks the higher-accuracy version that handles multi-speaker scenes better.
 
 **Does OpusClip have an API?**
-Only on the Business tier. Pricing is custom and requires a sales conversation. Solo and small-team users cannot automate ingestion or export on Free, Starter, or Pro.
+Not cleanly self-serve. The current pricing page lists limited API access on Pro and API/custom integrations on Business. If API automation is the reason to buy, confirm endpoint access, quotas, support, and contract terms with OpusClip before committing.
 
 **How does OpusClip handle languages other than English?**
 Transcription, captions, and clip detection work in 20+ languages, including Spanish, Portuguese, French, German, Japanese, Hindi, and Arabic. Accuracy is highest on English; results vary for low-resource languages.

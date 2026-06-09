@@ -11,8 +11,8 @@ pricing_model: open-source
 price_range: "Free (open-source)"
 status: active
 launched: 2024-11
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-08
+last_verified: 2026-06-08
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: https://huggingface.co/hexgrad/Kokoro-82M
     source_label: Kokoro model card
     source_id: kokoro-model
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-08'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -41,17 +41,16 @@ facts:
     source: https://github.com/hexgrad/kokoro
     source_label: Kokoro GitHub repository
     source_id: kokoro-repository
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-08'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
   open_source_or_local:
-    value: The Hugging Face model card and repository are the authoritative sources for model files, license notes, examples,
-      and project activity.
+    value: The Hugging Face model card and GitHub repository are the authoritative sources for model files, Apache 2.0 license notes, examples, official scam-domain warnings, and project activity.
     source: https://huggingface.co/hexgrad/Kokoro-82M/blob/main/README.md
     source_label: Kokoro README
     source_id: kokoro-readme
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-08'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -61,17 +60,16 @@ facts:
     source: https://huggingface.co/spaces/hexgrad/Kokoro-TTS
     source_label: Kokoro TTS Hugging Face Space
     source_id: kokoro-space
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-08'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
   watch_out_for:
-    value: Before commercial use, review license, voice rights, quality across languages, hallucinated pronunciations, model
-      provenance, and abuse/safety controls.
+    value: Before commercial use, review license, voice rights, quality across languages, hallucinated pronunciations, model provenance, abuse/safety controls, and avoid third-party domains that imply affiliation with the Kokoro model unless the official model card links them.
     source: https://huggingface.co/hexgrad/Kokoro-82M
     source_label: Kokoro model card
     source_id: kokoro-model
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-08'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -86,11 +84,11 @@ not_best_for:
   - managed enterprise APIs with uptime guarantees and support
   - large multilingual voice libraries
   - nontechnical teams that do not want local model setup
-seo_title: "Kokoro TTS Review (May 2026): Free Open-Source Text-to-Speech That Sounds Human"
-meta_description: "Kokoro is a free, open-source TTS model with 82M parameters that runs locally on consumer hardware. Quality rivals ElevenLabs. Full review with setup guide."
+seo_title: "Kokoro TTS Review (June 2026): Free Open-Source Text-to-Speech That Sounds Human"
+meta_description: "Kokoro is a free Apache 2.0 TTS model with 82M parameters that runs locally on consumer hardware. June 2026 review with setup, voice limits, and official scam-domain warning."
 author: "aipedia.wiki Editorial"
 quick_answer: >-
-  Kokoro is a free, Apache 2.0 text-to-speech model at 82M parameters. It runs locally on CPU or GPU with a ~300MB download, no API key, no per-character fees. V1.0 covers 54 voices across 8 languages. Best for offline or high-volume work; skip for voice cloning.
+  Kokoro is a free, Apache 2.0 text-to-speech model at 82M parameters. It runs locally on CPU or GPU with a ~300MB download, no API key, no per-character fees. The v1.0 model card lists 54 voices across 8 language groups, while the current GitHub examples include Brazilian Portuguese as an additional library path to test. Best for offline or high-volume work; skip for voice cloning or managed SLA needs.
 price_history:
   - date: 2026-05-13
     plan: "Self-hosted"
@@ -99,6 +97,14 @@ price_history:
     source_label: "Source"
     source_id: kokoro-model
     note: "Model remains Apache 2.0; no first-party SaaS pricing."
+  - date: 2026-06-08
+    plan: "Self-hosted"
+    price: "Free (Apache 2.0)"
+    source: "https://huggingface.co/hexgrad/Kokoro-82M"
+    source_label: "Kokoro model card"
+    source_id: kokoro-model
+    verified_at: 2026-06-08
+    note: "Reverified license, official model-card warning about scam domains, and current GitHub install examples."
 ---
 
 # Kokoro TTS
@@ -106,6 +112,8 @@ price_history:
 An open-weight text-to-speech model released by hexgrad in late 2024. At 82M parameters, Kokoro runs on consumer CPU or GPU hardware and produces voice quality that topped the TTS Arena leaderboard in January 2026 above much larger models like XTTS v2 (467M) and MetaVoice (1.2B).
 
 Apache 2.0 licensed. No API key. No usage caps. No network calls after the initial model download.
+
+June 8, 2026 trust note: the official Hugging Face model card explicitly warns that Kokoro-looking third-party domains can be scams or unaffiliated. Treat the Hugging Face model page and the linked `hexgrad/kokoro` GitHub repository as the source of truth before downloading binaries, entering payment details, or trusting a hosted wrapper.
 
 ## System Verdict
 
@@ -123,7 +131,8 @@ Apache 2.0 licensed. No API key. No usage caps. No network calls after the initi
 | **License** | Apache 2.0 (commercial use permitted) |
 | **Architecture** | Modified StyleTTS 2 |
 | **Voices (v1.0)** | 54 voices across 8 languages |
-| **Languages (v1.0)** | English (US + UK), Spanish, French, Hindi, Italian, Japanese, Mandarin Chinese |
+| **Languages (model card v1.0)** | English (US + UK), Spanish, French, Hindi, Italian, Japanese, Mandarin Chinese |
+| **Current library examples** | Also show a Brazilian Portuguese `lang_code='p'` path to test before production use |
 | **Inference** | CPU and CUDA GPU; Apple Silicon via ONNX |
 | **Deployment formats** | PyTorch, ONNX (fp32 310MB, fp16 169MB, int8 88MB) |
 | **Hosted API cost** | Under $1 per 1M input characters via third-party providers |
@@ -150,7 +159,7 @@ The moat is size. At 82M parameters Kokoro takes under 300MB on disk and runs in
 - **Voice cloning from a reference clip:** [ElevenLabs](/tools/elevenlabs/), [Fish Audio](/tools/fish-audio/), or [MiniMax Speech](/tools/minimax-speech/). Kokoro ships fixed voices only.
 - **Fine-grained emotional control:** ElevenLabs v3 or MiniMax Speech-02. Kokoro's prosody controls stay basic.
 - **Real-time streaming for conversational agents:** [Cartesia](/tools/cartesia/) is built for this. Kokoro generates full audio before playback.
-- **Languages beyond the v1.0 set of 9:** ElevenLabs and MiniMax cover 30+ languages with native prosody.
+- **Broad hosted multilingual coverage:** ElevenLabs and MiniMax cover far more languages with managed voices, support, and native-prosody tuning.
 - **Studio production UI with takes and timeline editing:** [Murf](/tools/murf/) or ElevenLabs Studio. Kokoro is code-first.
 
 ## Pricing
@@ -162,7 +171,7 @@ The moat is size. At 82M parameters Kokoro takes under 300MB on disk and runs in
 | Hosted API (third-party) | Under $1 per 1M input characters ([Together AI](https://www.together.ai/models/kokoro-82m), others) |
 | Commercial use | Permitted under Apache 2.0 without royalty |
 
-*Reverified 2026-05-13 via the [Kokoro-82M Hugging Face repo](https://huggingface.co/hexgrad/Kokoro-82M) and [ONNX community builds](https://huggingface.co/onnx-community/Kokoro-82M-v1.0-ONNX). Self-hosted inference is free; hosted APIs price per million characters.*
+*Reverified 2026-06-08 via the [Kokoro-82M Hugging Face repo](https://huggingface.co/hexgrad/Kokoro-82M), the [hexgrad/kokoro GitHub README](https://github.com/hexgrad/kokoro), and [ONNX community builds](https://huggingface.co/onnx-community/Kokoro-82M-v1.0-ONNX). Self-hosted inference is free; hosted APIs price per million characters.*
 
 ## Against the alternatives
 
@@ -184,12 +193,13 @@ The moat is size. At 82M parameters Kokoro takes under 300MB on disk and runs in
 - **No streaming.** Full audio generates before playback. Latency is not viable for real-time agent loops.
 - **English quality leads; other languages lag.** The 8-language v1.0 list is functional but native-speaker critique can show gaps against specialist models.
 - **No hosted first-party API.** Third-party providers (Together, Replicate) exist, but there is no vendor SLA.
+- **Scam-domain risk.** The official model card warns that Kokoro-looking root domains are not owned by or affiliated with the model author unless linked from the official source. Avoid entering credentials or payment details on lookalike sites.
 - **CPU runs are real-time, GPU is 10-20x faster.** Long-document batches on CPU get slow.
 - **Community-driven release cadence.** Version bumps depend on hexgrad's time. Update frequency is irregular.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies claims against primary sources, and generates the editorial analysis shown here. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-05-13 against the [Kokoro-82M Hugging Face repo](https://huggingface.co/hexgrad/Kokoro-82M), [VOICES.md](https://huggingface.co/hexgrad/Kokoro-82M/blob/main/VOICES.md), [hexgrad GitHub](https://github.com/hexgrad/kokoro), and [onnx-community Kokoro-82M-v1.0-ONNX builds](https://huggingface.co/onnx-community/Kokoro-82M-v1.0-ONNX).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies claims against primary sources, and generates the editorial analysis shown here. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-08 against the [Kokoro-82M Hugging Face repo](https://huggingface.co/hexgrad/Kokoro-82M), [VOICES.md](https://huggingface.co/hexgrad/Kokoro-82M/blob/main/VOICES.md), [hexgrad GitHub](https://github.com/hexgrad/kokoro), and [onnx-community Kokoro-82M-v1.0-ONNX builds](https://huggingface.co/onnx-community/Kokoro-82M-v1.0-ONNX).
 
 ## FAQ
 
@@ -200,7 +210,7 @@ Yes. The model is Apache 2.0 licensed, which allows commercial use without royal
 Kokoro matches ElevenLabs on fixed-voice English narration quality in blind TTS Arena tests. ElevenLabs still wins on voice cloning, emotion sliders, real-time streaming, and language breadth. Kokoro wins on cost (free vs per-character) and privacy (local vs hosted).
 
 **How do I run Kokoro?**
-`pip install kokoro soundfile`. Basic inference:
+`pip install kokoro soundfile`. The current GitHub README uses `kokoro>=0.9.4` in examples. Basic inference:
 ```python
 from kokoro import KPipeline
 pipeline = KPipeline(lang_code='a')
@@ -209,7 +219,10 @@ audio, _ = pipeline("Your text here.", voice='af_heart')
 ONNX builds exist for deployment outside Python ([onnx-community](https://huggingface.co/onnx-community/Kokoro-82M-v1.0-ONNX)).
 
 **How many voices and languages does Kokoro support?**
-V1.0 ships 54 voices across 8 languages: English (US, UK), Spanish, French, Hindi, Italian, Japanese, and Mandarin Chinese. Voices come in US female, US male, UK female, UK male, and regional variants. See the [VOICES.md reference](https://huggingface.co/hexgrad/Kokoro-82M/blob/main/VOICES.md) for the full list.
+The official v1.0 release table lists 54 voices across 8 language groups: English (US, UK), Spanish, French, Hindi, Italian, Japanese, and Mandarin Chinese. The current GitHub README also shows a Brazilian Portuguese language-code example, so production multilingual buyers should test the exact voicepack and library version rather than relying on a simple language count. See the [VOICES.md reference](https://huggingface.co/hexgrad/Kokoro-82M/blob/main/VOICES.md) for the full list.
+
+**Which Kokoro website is official?**
+Use the Hugging Face model card and the linked `hexgrad/kokoro` GitHub repository as the source of truth. The model card warns that Kokoro-looking third-party root domains are not owned by or affiliated with the author unless the official model page links them.
 
 **Can Kokoro clone my voice?**
 No. Kokoro supports fixed voices only. For zero-shot voice cloning from a short reference clip, use [ElevenLabs](/tools/elevenlabs/), Fish Audio, or [MiniMax Speech](/tools/minimax-speech/).
