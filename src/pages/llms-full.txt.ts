@@ -2,6 +2,11 @@
 // Lists every active tool with category + tagline, every comparison, every
 // use-case guide. Intended for crawlers willing to ingest a larger manifest
 // to discover the full content map without parsing the sitemap.
+// Refresh metadata: 2026-06-10 trend-section refresh across agent commerce,
+// coding-agent costs, AI memory, AI supply-chain security, AI voice,
+// enterprise agents, GEO, Google Stitch, long context, open-weight parity,
+// sovereign AI, vibe coding, /trends/, /explore/, homepage, and LLM
+// maintenance.
 // Refresh metadata: 2026-06-10 Workato, Writer, and Yi active-tool refresh
 // with parent hub, source registry, homepage/tools/categories, and LLM
 // maintenance after current Workato docs, Writer docs, and 01.AI source checks.
@@ -166,6 +171,7 @@ export const GET: APIRoute = async () => {
   lines.push('> Extended LLM-friendly site manifest. Enumerates every active page across tools, categories, comparisons, buyer guides, and companies. See /llms.txt for the concise version.');
   lines.push('');
   lines.push('Recent news refresh: June 10, 2026 added June 9-10 source-backed AI tools coverage across Claude Fable 5/Mythos 5, Apple Siri AI and EU rollout risk, Copilot CLI custom agents, Datadog DASH agent observability/security, Similarweb May 2026 AI chatbot rankings, Claude Cowork, Gemini for Apple developers, Devin/Desktop, FrontierCode, and local model deployment.');
+  lines.push('Recent trend refresh: June 10, 2026 refreshed all twelve trend analyses around agent commerce payment rails, AI coding usage billing, memory governance, MCP/tool-layer security, real-time voice agents, enterprise agent control planes, GEO visibility tracking, Google Stitch first-draft design, long-context model evaluation, open-weight parity, sovereign AI procurement, and vibe-coding production risks.');
   lines.push('Recent tool refresh: June 10, 2026 refreshed Workato, Writer, and Yi around Workato usage-based platform-edition plus usage-fee pricing, Workato One/Agent Studio/GO/MCP contract caveats, Writer Palmyra X5 pricing and July 13 deprecated-model migration, and 01.AI Yi versus WorldWise/WanZhi 2.5 positioning.');
   lines.push('Recent tool refresh: June 10, 2026 refreshed watsonx Orchestrate, Weaviate, Whisper, and Wispr Flow around IBM agentic plan/add-on governance docs, Weaviate Engram GA and Cloud AI services pricing, OpenAI GPT-4o transcription and GPT-Realtime-Whisper pricing, and Wispr Flow plan, data-control, and reliability docs.');
   lines.push('Recent tool refresh: June 10, 2026 refreshed Rows, Vidu, Voiceflow, and Wan around Rows Free/Plus/Pro/Enterprise pricing and Superhuman policy handover, Vidu Q3/Q3-turbo/Q3-mix API route pricing, Voiceflow demo-gated usage-based quotes, and Wan Model Studio/open-weights/provider-route caveats.');

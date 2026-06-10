@@ -82,6 +82,92 @@ Summarize changed files, behavior shipped, tests passed, unresolved risks, and r
 
 ---
 
+## ExecPlan: June 10 2026 Trend Section Refresh
+
+### 1. Objective
+
+Continue the oldest-to-newest page refresh by updating the May 13 trend section after skipped dead/deprecated tools and excluded news articles. The batch improves trust, SEO freshness, top-layer trend accuracy, and LLM crawl-surface quality.
+
+### 2. Current state
+
+`PAGE_REFRESH_LEDGER.md` shows the next eligible non-news, non-dead frontier as twelve trend pages last updated 2026-05-13. Several pages include stale May-only claims, speculative model/version language, or market claims that need June 10 primary-source verification.
+
+### 3. Target state
+
+All twelve trend records carry `last_updated` and `last_verified` of 2026-06-10, with concise current-source-backed buyer analysis. Parent `/trends/`, `/explore/`, homepage metadata comments, LLM manifests, and the ledger reflect the trend-section refresh.
+
+### 4. Scope
+
+Included: `/trends/agent-commerce/`, `/trends/ai-coding-model-arms-race/`, `/trends/ai-memory-layer/`, `/trends/ai-supply-chain-security/`, `/trends/ai-voice-explosion/`, `/trends/enterprise-agent-platforms/`, `/trends/geo-trend/`, `/trends/google-stitch-disruption/`, `/trends/long-context-standard/`, `/trends/open-source-parity/`, `/trends/sovereign-ai-procurement/`, `/trends/vibe-coding/`, `/trends/`, `/explore/`, `/`, `/llms.txt`, `/llms-full.txt`, and `PAGE_REFRESH_LEDGER.md`. Excluded: dead tools, individual news article pages, unrelated May 14 guide/workflow rows, and source-registry changes unless validation requires them.
+
+### 5. Files likely affected
+
+`src/content/trends/*.md`, `src/pages/trends/index.astro`, `src/pages/explore/index.astro`, `src/pages/index.astro`, `src/pages/llms.txt.ts`, `src/pages/llms-full.txt.ts`, `PAGE_REFRESH_LEDGER.md`, and this plan.
+
+### 6. Data model impact
+
+No schema changes. Trend frontmatter dates, titles, descriptions, timeframes, metadata, and markdown sources are refreshed in place.
+
+### 7. SEO impact
+
+Trend titles and meta descriptions move from stale May wording to June 10 current positioning. Parent trend and crawl surfaces remain indexable and internally linked.
+
+### 8. Conversion impact
+
+No affiliate CTAs are added. The batch improves trust and downstream conversion quality by clarifying commercial implications of agent commerce, coding-agent costs, voice-agent pricing, app builders, and sovereign AI procurement.
+
+### 9. Mobile UX impact
+
+Templates are unchanged. The trend index card summaries should remain compact and readable at 360, 390, 430, 768, and desktop widths.
+
+### 10. Implementation steps
+
+1. Verify June 2026 sources for the twelve trend topics.
+2. Rewrite trend records to remove stale/speculative claims and add verified current sources.
+3. Refresh parent/top-layer surfaces and LLM manifests.
+4. Regenerate and inspect the page refresh ledger.
+5. Run source/fact/link/build checks plus responsive QA.
+6. Commit and push the clean batch if validation passes.
+
+### 11. Verification commands
+
+`npm run ledger:pages`
+
+`npm run ledger:pages:check`
+
+`npm run guard:check`
+
+`npm run check:links`
+
+`npm run test:scripts`
+
+`npm run check`
+
+`npm run build:fast`
+
+`git diff --check`
+
+Static Playwright responsive QA over `/`, `/trends/`, `/explore/`, `/llms.txt`, `/llms-full.txt`, and all twelve refreshed trend routes at 360, 390, 430, 768, and 1024px.
+
+### 12. Acceptance criteria
+
+All twelve trend pages are verified on 2026-06-10, stale May-only assertions are removed or reframed, affected parent/top-layer pages and LLM surfaces are current, the ledger reflects the true refresh scope, and validation passes or failures are documented with risk.
+
+### 13. Risks and mitigations
+
+Some trend topics move quickly and vendor pages mix GA, preview, and roadmap language. The refresh uses primary sources where possible, labels uncertain claims conservatively, avoids unsupported stock/ARR/model claims unless directly sourced, and focuses buyer guidance on durable controls.
+
+### 14. Progress log
+
+- 2026-06-10: Identified May 13 trend section as the next eligible ledger frontier after skipped dead/deprecated tool rows. Verified current sources for agent commerce, coding-agent billing, AI memory, MCP/security, voice agents, enterprise agent platforms, GEO, Stitch, long-context models, open-weight models, sovereign AI, and vibe coding. Rewrote all twelve trend records with June 10 dates and source-backed buyer guidance.
+- 2026-06-10: Refreshed `/trends/`, `/explore/`, homepage metadata comments, `/llms.txt`, `/llms-full.txt`, and `PAGE_REFRESH_LEDGER.md`. Validation passed: `npm run ledger:pages`, `npm run ledger:pages:check`, `npm run guard:check`, `git diff --check`, `npm run check:links`, `npm run audit:sources`, `npm run audit:facts`, `npm run test:scripts`, `npm run check`, `npm run build:fast`, and static Playwright responsive QA across 85 route/viewport pairs.
+
+### 15. Final report
+
+Shipped twelve June 10 2026 trend refreshes plus affected parent and crawl surfaces. The refreshed pages are `/trends/agent-commerce/`, `/trends/ai-coding-model-arms-race/`, `/trends/ai-memory-layer/`, `/trends/ai-supply-chain-security/`, `/trends/ai-voice-explosion/`, `/trends/enterprise-agent-platforms/`, `/trends/geo-trend/`, `/trends/google-stitch-disruption/`, `/trends/long-context-standard/`, `/trends/open-source-parity/`, `/trends/sovereign-ai-procurement/`, and `/trends/vibe-coding/`. Parent surfaces and LLM manifests were updated, the ledger was regenerated, validation passed, and the next eligible ledger frontier is the four May 13 workflow pages after the skipped dead `/tools/grok-code-fast/` row.
+
+---
+
 ## ExecPlan: June 10 2026 Workato Writer Yi Tool Refresh
 
 ### 1. Objective

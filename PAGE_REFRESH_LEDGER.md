@@ -23,18 +23,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-04 | /tools/tome/ | Tool | Yes | frontmatter | src/content/tools/tome.md |
 | 2026-05-05 | /tools/dalle/ | Tool | Yes | frontmatter | src/content/tools/dalle.md |
 | 2026-05-13 | /tools/grok-code-fast/ | Tool | Yes | frontmatter | src/content/tools/grok-code-fast.md |
-| 2026-05-13 | /trends/agent-commerce/ | Trend | Yes | frontmatter | src/content/trends/agent-commerce.md |
-| 2026-05-13 | /trends/ai-coding-model-arms-race/ | Trend | Yes | frontmatter | src/content/trends/ai-coding-model-arms-race.md |
-| 2026-05-13 | /trends/ai-memory-layer/ | Trend | Yes | frontmatter | src/content/trends/ai-memory-layer.md |
-| 2026-05-13 | /trends/ai-supply-chain-security/ | Trend | Yes | frontmatter | src/content/trends/ai-supply-chain-security.md |
-| 2026-05-13 | /trends/ai-voice-explosion/ | Trend | Yes | frontmatter | src/content/trends/ai-voice-explosion.md |
-| 2026-05-13 | /trends/enterprise-agent-platforms/ | Trend | Yes | frontmatter | src/content/trends/enterprise-agent-platforms.md |
-| 2026-05-13 | /trends/geo-trend/ | Trend | Yes | frontmatter | src/content/trends/geo-trend.md |
-| 2026-05-13 | /trends/google-stitch-disruption/ | Trend | Yes | frontmatter | src/content/trends/google-stitch-disruption.md |
-| 2026-05-13 | /trends/long-context-standard/ | Trend | Yes | frontmatter | src/content/trends/long-context-standard.md |
-| 2026-05-13 | /trends/open-source-parity/ | Trend | Yes | frontmatter | src/content/trends/open-source-parity.md |
-| 2026-05-13 | /trends/sovereign-ai-procurement/ | Trend | Yes | frontmatter | src/content/trends/sovereign-ai-procurement.md |
-| 2026-05-13 | /trends/vibe-coding/ | Trend | Yes | frontmatter | src/content/trends/vibe-coding.md |
 | 2026-05-13 | /workflows/agentic-coding-workflow/ | Workflow | Yes | frontmatter | src/content/workflows/agentic-coding-workflow.md |
 | 2026-05-13 | /workflows/design-agency-replacement/ | Workflow | Yes | frontmatter | src/content/workflows/design-agency-replacement.md |
 | 2026-05-13 | /workflows/podcast-automation-stack/ | Workflow | Yes | frontmatter | src/content/workflows/podcast-automation-stack.md |
@@ -70,7 +58,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-17 | /guides/notion-ai-alternatives/ | Guide | No | frontmatter | src/content/use-cases/notion-ai-alternatives.md |
 | 2026-05-17 | /search/ | Static page | No | git | src/pages/search.astro |
 | 2026-05-17 | /stack-builder/ | Static page | Yes | git | src/pages/stack-builder/index.astro |
-| 2026-05-17 | /trends/ | Static page | Yes | git | src/pages/trends/index.astro |
 | 2026-05-17 | /workflows/ | Static page | Yes | git | src/pages/workflows/index.astro |
 | 2026-05-17 | /workflows/micro-saas-weekend-build/ | Workflow | Yes | frontmatter | src/content/workflows/micro-saas-weekend-build.md |
 | 2026-05-17 | /workflows/newsletter-stack/ | Workflow | Yes | frontmatter | src/content/workflows/newsletter-stack.md |
@@ -336,7 +323,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-04 | /compare/continue-vs-devin/ | Comparison | Yes | frontmatter | src/content/comparisons/continue-vs-devin.md |
 | 2026-06-04 | /compare/continue-vs-github-copilot/ | Comparison | Yes | frontmatter | src/content/comparisons/continue-vs-github-copilot.md |
 | 2026-06-04 | /compare/continue-vs-val-town/ | Comparison | Yes | frontmatter | src/content/comparisons/continue-vs-val-town.md |
-| 2026-06-04 | /explore/ | Static page | Yes | git | src/pages/explore/index.astro |
 | 2026-06-04 | /tools/claude-code/ | Tool | Yes | frontmatter | src/content/tools/claude-code.md |
 | 2026-06-04 | /tools/continue/ | Tool | Yes | frontmatter | src/content/tools/continue.md |
 | 2026-06-04 | /tools/github-copilot/ | Tool | Yes | frontmatter | src/content/tools/github-copilot.md |
@@ -716,24 +702,25 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-09 | /tools/tines/ | Tool | Yes | frontmatter | src/content/tools/tines.md |
 | 2026-06-09 | /tools/together-ai/ | Tool | Yes | frontmatter | src/content/tools/together-ai.md |
 | 2026-06-10 | / | Static page | Yes | working tree | src/pages/index.astro |
-| 2026-06-10 | /categories/ | Static page | Yes | working tree | src/pages/categories/index.astro |
-| 2026-06-10 | /categories/ai-automation/ | Category | Yes | working tree | src/content/categories/ai-automation.md |
-| 2026-06-10 | /categories/ai-chatbots/ | Category | Yes | working tree | src/content/categories/ai-chatbots.md |
-| 2026-06-10 | /categories/ai-coding/ | Category | Yes | working tree | src/content/categories/ai-coding.md |
+| 2026-06-10 | /categories/ | Static page | Yes | git | src/pages/categories/index.astro |
+| 2026-06-10 | /categories/ai-automation/ | Category | Yes | frontmatter | src/content/categories/ai-automation.md |
+| 2026-06-10 | /categories/ai-chatbots/ | Category | Yes | frontmatter | src/content/categories/ai-chatbots.md |
+| 2026-06-10 | /categories/ai-coding/ | Category | Yes | frontmatter | src/content/categories/ai-coding.md |
 | 2026-06-10 | /categories/ai-design/ | Category | Yes | frontmatter | src/content/categories/ai-design.md |
 | 2026-06-10 | /categories/ai-image/ | Category | Yes | frontmatter | src/content/categories/ai-image.md |
 | 2026-06-10 | /categories/ai-infrastructure/ | Category | Yes | frontmatter | src/content/categories/ai-infrastructure.md |
 | 2026-06-10 | /categories/ai-notes/ | Category | Yes | frontmatter | src/content/categories/ai-notes.md |
-| 2026-06-10 | /categories/ai-research/ | Category | Yes | working tree | src/content/categories/ai-research.md |
+| 2026-06-10 | /categories/ai-research/ | Category | Yes | frontmatter | src/content/categories/ai-research.md |
 | 2026-06-10 | /categories/ai-search/ | Category | Yes | frontmatter | src/content/categories/ai-search.md |
 | 2026-06-10 | /categories/ai-video/ | Category | Yes | frontmatter | src/content/categories/ai-video.md |
 | 2026-06-10 | /categories/ai-voice/ | Category | Yes | frontmatter | src/content/categories/ai-voice.md |
-| 2026-06-10 | /categories/ai-writing/ | Category | Yes | working tree | src/content/categories/ai-writing.md |
+| 2026-06-10 | /categories/ai-writing/ | Category | Yes | frontmatter | src/content/categories/ai-writing.md |
+| 2026-06-10 | /explore/ | Static page | Yes | working tree | src/pages/explore/index.astro |
 | 2026-06-10 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
 | 2026-06-10 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
 | 2026-06-10 | /news/ | Static page | Yes | page metadata | src/pages/news/index.astro |
 | 2026-06-10 | /news/rss.xml | Crawl surface | No | git | src/pages/news/rss.xml.ts |
-| 2026-06-10 | /tools/ | Static page | Yes | working tree | src/pages/tools/index.astro |
+| 2026-06-10 | /tools/ | Static page | Yes | git | src/pages/tools/index.astro |
 | 2026-06-10 | /tools/rows/ | Tool | Yes | frontmatter | src/content/tools/rows.md |
 | 2026-06-10 | /tools/tripo3d/ | Tool | Yes | frontmatter | src/content/tools/tripo3d.md |
 | 2026-06-10 | /tools/typingmind/ | Tool | Yes | frontmatter | src/content/tools/typingmind.md |
@@ -746,6 +733,19 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-10 | /tools/weaviate/ | Tool | Yes | frontmatter | src/content/tools/weaviate.md |
 | 2026-06-10 | /tools/whisper/ | Tool | Yes | frontmatter | src/content/tools/whisper.md |
 | 2026-06-10 | /tools/wispr-flow/ | Tool | Yes | frontmatter | src/content/tools/wispr-flow.md |
-| 2026-06-10 | /tools/workato/ | Tool | Yes | working tree | src/content/tools/workato.md |
-| 2026-06-10 | /tools/writer/ | Tool | Yes | working tree | src/content/tools/writer.md |
-| 2026-06-10 | /tools/yi/ | Tool | Yes | working tree | src/content/tools/yi.md |
+| 2026-06-10 | /tools/workato/ | Tool | Yes | frontmatter | src/content/tools/workato.md |
+| 2026-06-10 | /tools/writer/ | Tool | Yes | frontmatter | src/content/tools/writer.md |
+| 2026-06-10 | /tools/yi/ | Tool | Yes | frontmatter | src/content/tools/yi.md |
+| 2026-06-10 | /trends/ | Static page | Yes | working tree | src/pages/trends/index.astro |
+| 2026-06-10 | /trends/agent-commerce/ | Trend | Yes | working tree | src/content/trends/agent-commerce.md |
+| 2026-06-10 | /trends/ai-coding-model-arms-race/ | Trend | Yes | working tree | src/content/trends/ai-coding-model-arms-race.md |
+| 2026-06-10 | /trends/ai-memory-layer/ | Trend | Yes | working tree | src/content/trends/ai-memory-layer.md |
+| 2026-06-10 | /trends/ai-supply-chain-security/ | Trend | Yes | working tree | src/content/trends/ai-supply-chain-security.md |
+| 2026-06-10 | /trends/ai-voice-explosion/ | Trend | Yes | working tree | src/content/trends/ai-voice-explosion.md |
+| 2026-06-10 | /trends/enterprise-agent-platforms/ | Trend | Yes | working tree | src/content/trends/enterprise-agent-platforms.md |
+| 2026-06-10 | /trends/geo-trend/ | Trend | Yes | working tree | src/content/trends/geo-trend.md |
+| 2026-06-10 | /trends/google-stitch-disruption/ | Trend | Yes | working tree | src/content/trends/google-stitch-disruption.md |
+| 2026-06-10 | /trends/long-context-standard/ | Trend | Yes | working tree | src/content/trends/long-context-standard.md |
+| 2026-06-10 | /trends/open-source-parity/ | Trend | Yes | working tree | src/content/trends/open-source-parity.md |
+| 2026-06-10 | /trends/sovereign-ai-procurement/ | Trend | Yes | working tree | src/content/trends/sovereign-ai-procurement.md |
+| 2026-06-10 | /trends/vibe-coding/ | Trend | Yes | working tree | src/content/trends/vibe-coding.md |
