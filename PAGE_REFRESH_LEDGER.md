@@ -23,10 +23,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-04 | /tools/tome/ | Tool | Yes | frontmatter | src/content/tools/tome.md |
 | 2026-05-05 | /tools/dalle/ | Tool | Yes | frontmatter | src/content/tools/dalle.md |
 | 2026-05-13 | /tools/grok-code-fast/ | Tool | Yes | frontmatter | src/content/tools/grok-code-fast.md |
-| 2026-05-13 | /workflows/agentic-coding-workflow/ | Workflow | Yes | frontmatter | src/content/workflows/agentic-coding-workflow.md |
-| 2026-05-13 | /workflows/design-agency-replacement/ | Workflow | Yes | frontmatter | src/content/workflows/design-agency-replacement.md |
-| 2026-05-13 | /workflows/podcast-automation-stack/ | Workflow | Yes | frontmatter | src/content/workflows/podcast-automation-stack.md |
-| 2026-05-13 | /workflows/research-assistant-stack/ | Workflow | Yes | frontmatter | src/content/workflows/research-assistant-stack.md |
 | 2026-05-14 | /guides/best-ai-calendar-for-google-workspace-power-users/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-calendar-for-google-workspace-power-users.md |
 | 2026-05-14 | /guides/best-ai-email-triage-for-heavy-inboxes/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-email-triage-for-heavy-inboxes.md |
 | 2026-05-14 | /guides/best-ai-outbound-tool-for-unified-prospecting-and-sequencing/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-outbound-tool-for-unified-prospecting-and-sequencing.md |
@@ -58,7 +54,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-17 | /guides/notion-ai-alternatives/ | Guide | No | frontmatter | src/content/use-cases/notion-ai-alternatives.md |
 | 2026-05-17 | /search/ | Static page | No | git | src/pages/search.astro |
 | 2026-05-17 | /stack-builder/ | Static page | Yes | git | src/pages/stack-builder/index.astro |
-| 2026-05-17 | /workflows/ | Static page | Yes | git | src/pages/workflows/index.astro |
 | 2026-05-17 | /workflows/micro-saas-weekend-build/ | Workflow | Yes | frontmatter | src/content/workflows/micro-saas-weekend-build.md |
 | 2026-05-17 | /workflows/newsletter-stack/ | Workflow | Yes | frontmatter | src/content/workflows/newsletter-stack.md |
 | 2026-05-20 | /tools/antigravity/ | Tool | Yes | frontmatter | src/content/tools/antigravity.md |
@@ -736,16 +731,21 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-10 | /tools/workato/ | Tool | Yes | frontmatter | src/content/tools/workato.md |
 | 2026-06-10 | /tools/writer/ | Tool | Yes | frontmatter | src/content/tools/writer.md |
 | 2026-06-10 | /tools/yi/ | Tool | Yes | frontmatter | src/content/tools/yi.md |
-| 2026-06-10 | /trends/ | Static page | Yes | working tree | src/pages/trends/index.astro |
-| 2026-06-10 | /trends/agent-commerce/ | Trend | Yes | working tree | src/content/trends/agent-commerce.md |
-| 2026-06-10 | /trends/ai-coding-model-arms-race/ | Trend | Yes | working tree | src/content/trends/ai-coding-model-arms-race.md |
-| 2026-06-10 | /trends/ai-memory-layer/ | Trend | Yes | working tree | src/content/trends/ai-memory-layer.md |
-| 2026-06-10 | /trends/ai-supply-chain-security/ | Trend | Yes | working tree | src/content/trends/ai-supply-chain-security.md |
-| 2026-06-10 | /trends/ai-voice-explosion/ | Trend | Yes | working tree | src/content/trends/ai-voice-explosion.md |
-| 2026-06-10 | /trends/enterprise-agent-platforms/ | Trend | Yes | working tree | src/content/trends/enterprise-agent-platforms.md |
-| 2026-06-10 | /trends/geo-trend/ | Trend | Yes | working tree | src/content/trends/geo-trend.md |
-| 2026-06-10 | /trends/google-stitch-disruption/ | Trend | Yes | working tree | src/content/trends/google-stitch-disruption.md |
-| 2026-06-10 | /trends/long-context-standard/ | Trend | Yes | working tree | src/content/trends/long-context-standard.md |
-| 2026-06-10 | /trends/open-source-parity/ | Trend | Yes | working tree | src/content/trends/open-source-parity.md |
-| 2026-06-10 | /trends/sovereign-ai-procurement/ | Trend | Yes | working tree | src/content/trends/sovereign-ai-procurement.md |
-| 2026-06-10 | /trends/vibe-coding/ | Trend | Yes | working tree | src/content/trends/vibe-coding.md |
+| 2026-06-10 | /trends/ | Static page | Yes | git | src/pages/trends/index.astro |
+| 2026-06-10 | /trends/agent-commerce/ | Trend | Yes | frontmatter | src/content/trends/agent-commerce.md |
+| 2026-06-10 | /trends/ai-coding-model-arms-race/ | Trend | Yes | frontmatter | src/content/trends/ai-coding-model-arms-race.md |
+| 2026-06-10 | /trends/ai-memory-layer/ | Trend | Yes | frontmatter | src/content/trends/ai-memory-layer.md |
+| 2026-06-10 | /trends/ai-supply-chain-security/ | Trend | Yes | frontmatter | src/content/trends/ai-supply-chain-security.md |
+| 2026-06-10 | /trends/ai-voice-explosion/ | Trend | Yes | frontmatter | src/content/trends/ai-voice-explosion.md |
+| 2026-06-10 | /trends/enterprise-agent-platforms/ | Trend | Yes | frontmatter | src/content/trends/enterprise-agent-platforms.md |
+| 2026-06-10 | /trends/geo-trend/ | Trend | Yes | frontmatter | src/content/trends/geo-trend.md |
+| 2026-06-10 | /trends/google-stitch-disruption/ | Trend | Yes | frontmatter | src/content/trends/google-stitch-disruption.md |
+| 2026-06-10 | /trends/long-context-standard/ | Trend | Yes | frontmatter | src/content/trends/long-context-standard.md |
+| 2026-06-10 | /trends/open-source-parity/ | Trend | Yes | frontmatter | src/content/trends/open-source-parity.md |
+| 2026-06-10 | /trends/sovereign-ai-procurement/ | Trend | Yes | frontmatter | src/content/trends/sovereign-ai-procurement.md |
+| 2026-06-10 | /trends/vibe-coding/ | Trend | Yes | frontmatter | src/content/trends/vibe-coding.md |
+| 2026-06-10 | /workflows/ | Static page | Yes | working tree | src/pages/workflows/index.astro |
+| 2026-06-10 | /workflows/agentic-coding-workflow/ | Workflow | Yes | working tree | src/content/workflows/agentic-coding-workflow.md |
+| 2026-06-10 | /workflows/design-agency-replacement/ | Workflow | Yes | working tree | src/content/workflows/design-agency-replacement.md |
+| 2026-06-10 | /workflows/podcast-automation-stack/ | Workflow | Yes | working tree | src/content/workflows/podcast-automation-stack.md |
+| 2026-06-10 | /workflows/research-assistant-stack/ | Workflow | Yes | working tree | src/content/workflows/research-assistant-stack.md |

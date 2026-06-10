@@ -1,6 +1,10 @@
 ---
 /**
  * /workflows/ index — god-tier 10/10 mobile-first.
+ *
+ * Refresh metadata: 2026-06-10 workflow refresh across agentic coding,
+ * design production, podcast automation, and research-assistant stacks;
+ * index remains data-driven from workflow frontmatter.
  */
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
@@ -33,7 +37,7 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
 
 <BaseLayout
   title="AI Workflow Tutorials · aipedia.wiki"
-  description="Real workflow tutorials for solo operators and small teams. Tool stacks for podcasts, research pipelines, micro-SaaS, newsletters, and more."
+  description="Real workflow tutorials for solo operators and small teams. Tool stacks for coding agents, design production, podcasts, research pipelines, newsletters, and more."
 >
   <BreadcrumbLD items={[
     { name: 'Home', url: new URL('/', siteBase).href },

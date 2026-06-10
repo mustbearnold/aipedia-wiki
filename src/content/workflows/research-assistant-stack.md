@@ -2,140 +2,161 @@
 type: workflow
 slug: research-assistant-stack
 title: "Research Assistant Stack: Perplexity, Claude, Notion AI"
-seo_title: "Research Assistant Stack: Perplexity, Claude, Notion AI (May 2026)"
-meta_description: "Answer deep research questions with sourced citations, organized notes, and follow-up threads in 25 minutes per task. Stack costs $65/mo. Verified May 13, 2026."
-description: "Answer deep research questions with sourced citations, organized notes, and follow-up threads in a single workflow"
+seo_title: "Research Assistant Stack: Perplexity, Claude & Notion AI (June 2026)"
+meta_description: "Updated June 10, 2026: build a source-backed research workflow with Perplexity, Claude, and Notion AI while avoiding stale citations, unsupported query-limit claims, and hidden Notion AI costs."
+description: "Answer deep research questions with citations, structured analysis, and organized notes in a human-reviewed workflow."
 stack: [perplexity, claude, notion-ai]
 tools_mentioned: [perplexity, claude, notion-ai]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-10
+last_verified: 2026-06-10
 update_frequency: monthly
 ---
 
 # Research Assistant Stack: Perplexity, Claude, Notion AI
 
-This stack is for an analyst, journalist, or wiki editor producing 10+ cited research tasks per month on a $65/month tools budget.
+This stack is for analysts, journalists, founders, consultants, and wiki editors who need a repeatable process for cited research, structured reasoning, and durable notes.
 
-Hands-on time per task: 25 minutes, down from ~2 hours of manual research. Output is a cited report plus a searchable Notion database row.
+**AiPedia verdict, verified June 10, 2026:** use [Perplexity](/tools/perplexity/) for cited discovery and web-grounded first passes, [Claude](/tools/claude/) for careful analysis and long-form synthesis, and [Notion AI](/tools/notion-ai/) when the organization already lives in Notion and wants research to become searchable workspace memory. Do not use this stack as a source of truth without checking the top citations manually.
+
+The value is not that AI "does research." The value is that it makes a human research loop faster: find sources, separate evidence from interpretation, synthesize the answer, store the trail, and revisit the question later.
 
 ## System Verdict
 
-> **Pick this stack for cited, structured research at ~10-30 tasks per month.** Perplexity Pro owns discovery with inline citations, Claude Projects owns threaded analysis with persistent context, Notion AI owns organization.
+> **Pick this stack for cited, structured research at recurring monthly volume.** Perplexity owns source discovery, Claude owns analysis, and Notion owns the knowledge base.
 >
-> **Skip it for pure idea brainstorming (use free ChatGPT) or if Notion is off-limits.** Obsidian plugins can replace Notion but drop AI threading.
+> **Skip it for pure brainstorming, confidential research that cannot touch external AI systems, or teams that do not use Notion.** Obsidian, Logseq, Google Docs, or a private knowledge base can replace Notion if workspace governance matters more than Notion AI.
 >
-> **Total cost: $65/month.** A freelance analyst doing 20 comparable reports runs ~$4,000/month.
+> **Do not quote a universal $65/month stack.** Current vendor pages show Perplexity Pro at $20/month, Claude Pro at $20/month when billed monthly, and Notion AI as included with Business and Enterprise while Free/Plus get limited trial usage. Exact Notion seat pricing varies by region, billing, and plan.
 
 ## Key Facts
 
 | | |
 |---|---|
-| **Output per task** | Cited report, comparison table, Notion database row |
-| **Hands-on time** | ~25 minutes per task |
-| **Monthly cost** | $65 |
-| **Throughput** | 20 research tasks/month at the reference operator |
-| **Research engine** | Perplexity Pro, Deep Research mode, 20 queries/day |
-| **Analysis model** | Claude Opus 4.7 via Claude Projects |
-| **Organizer** | Notion AI, database mode |
+| **Output per task** | Cited brief, evidence table, risks, next questions, and a knowledge-base row |
+| **Best-fit cadence** | 10+ research tasks/month |
+| **Discovery engine** | Perplexity web-grounded answers and Pro/Max research features |
+| **Analysis layer** | Claude Pro, Team, or higher depending on document size and usage |
+| **Organizer** | Notion Business or Enterprise for full Notion AI features; Free/Plus are trial-limited |
+| **Human checkpoint** | Verify the top citations, source dates, and any commercial/legal/medical claims |
 
-## The short version
+## The Short Version
 
-- Perplexity Pro runs initial discovery with inline citations (~5 min).
-- Claude Project refines into comparison tables and risk analysis (~10 min).
-- Notion AI organizes into a threaded database with Q&A blocks (~10 min).
-- Task time: ~25 min vs ~2 hours manual. $3.25 per task at 20 tasks/month.
+- Perplexity finds current sources and produces cited first-pass answers.
+- Claude turns the source pack into a structured memo, comparison table, risk list, and follow-up plan.
+- Notion stores the research in a database row with source links, decisions, owner, date, and next review.
+- The human verifies at least the top sources before publishing or acting.
+- The stack is strongest for recurring research, not one-off curiosity.
 
-## The stack
+## The Stack
 
-### [Perplexity Pro](/tools/perplexity/) ($20/mo)
+### [Perplexity](/tools/perplexity/): discovery and cited first pass
 
-Owns discovery. Pulls real-time sources from 10-50 sites and synthesizes with inline citations via Claude Opus 4.7 and OpenAI frontier models.
+Perplexity is the discovery layer. Its current hub describes Perplexity as an answer engine that researches the open web in real time, returns cited answers, and routes queries across multiple frontier models. Perplexity says core search is free, while Pro is $20/month or $200/year and unlocks Pro Search, Spaces, file uploads, image generation, and higher limits. Max extends limits for heavy daily research.
 
-Deep Research mode supports 20 queries/day. Single-model tools without live web access cannot match citation depth here.
+Use Perplexity to gather sources, not to finish the memo. Ask for primary sources, dates, conflicting evidence, and what remains uncertain. Open the links that matter.
 
-### [Claude Projects](/tools/claude/) ($20/mo on Pro)
+### [Claude](/tools/claude/): analysis and structured synthesis
 
-Owns reasoning and threading. Opus 4.7 inside a Project holds instructions, uploaded artifacts, and multi-turn context.
+Claude owns the reasoning pass. Current Claude pricing lists Pro at $20/month when billed monthly, with more usage, unlimited projects, Research, and more model access. Team and Enterprise add collaboration, administration, connectors, and enterprise controls.
 
-One Project per topic means follow-up questions stay coherent across 50+ messages without re-pasting. ChatGPT folders reset per chat and force re-explaining.
+Use Claude to turn the Perplexity source pack into a decision memo, comparison table, risk register, or outline. Tell it which sources are authoritative and require inline source references. Do not ask it to invent citations.
 
-### [Notion AI](/tools/notion-ai/) ($25/mo add-on)
+### [Notion AI](/tools/notion-ai/): workspace memory
 
-Owns final organization. Summarizes Claude outputs into database rows with Q&A blocks and auto-linked sources.
+Notion owns the archive when the team already works there. The current Notion AI page positions Notion AI around Notion Agent, Custom Agents, Enterprise Search, AI Meeting Notes, Research Mode, AI blocks, autofill, and database work. The pricing page says Notion AI Core, Meeting Notes, Research Mode, and Notion Agent are trial-limited on lower plans, while Notion AI is included with Business and Enterprise. Custom Agents use Notion credits at $10 per 1,000 monthly credits.
 
-Eliminates manual tagging. Integrates with an existing wiki workspace directly.
+Use Notion AI to turn the final memo into a searchable database row, meeting brief, decision log, or follow-up tracker. Do not rely on Notion as the only source archive; store the primary links and capture dates.
 
-## The workflow, step by step
+## Workflow, Step By Step
 
-1. **Discovery (2 min).** Open Perplexity Pro. Paste a precise query: "Top 10 multifamily transactions Phoenix last 6 months. Include cap rates, price per unit, buyer profiles, cited sources." Select Deep Research mode. Opus 4.7 synthesis with 20 cited sources in ~2 minutes.
+1. **Write the research question.** Include scope, date range, geography, decision owner, and output format. Example: "Which AI voice vendors changed pricing or commercial-rights language in June 2026, and what should a creator buy first?"
 
-2. **Project setup (3 min).** Copy Perplexity output (answer plus citations) into a new Claude Project named "Phoenix Multifamily Q2 2026." Set project instructions: "Analyze for cap-rate trends above 5.5%. Extract buyer patterns. Suggest 3 investment risks. Cite Perplexity sources inline."
+2. **Run discovery in Perplexity.** Ask for current primary sources first, then reputable secondary sources. Require source dates, vendor pages, docs, pricing pages, changelogs, and any conflict between sources.
 
-3. **Table and summary (3 min).** In the Project, prompt: "From the pasted Perplexity report, build a comparison table with columns Company, Price/Unit, Cap Rate, Buyer Type. Rank by ROI potential. Add a 200-word executive summary." Download the Markdown artifact.
+3. **Open the key sources.** Manually verify at least the top three primary links and any source used for a price, model, plan, legal, medical, or commercial claim.
 
-4. **Cross-check (4 min).** Follow-up in the same Project: "Cross-check cap rates against 2026 CRE benchmarks. Where gaps exist, hypothesize from trends. Cite inline only." Claude recalls full context and appends a 500-word analysis.
+4. **Create a Claude source pack.** Paste the research question, verified links, relevant excerpts, uncertainty notes, and decision criteria into Claude. Ask for a memo with source-backed claims and a separate "unverified or weak evidence" section.
 
-5. **Export to Notion (2 min).** Export Project as Markdown. Open Notion page "Research Vault > 2026 CRE." Use Notion AI block: "Summarize this Claude export into a database row with fields Query, Sources (top 5 links), Table, Risks, Follow-ups."
+5. **Build the table.** Ask Claude to produce a table with columns such as vendor, claim, source, verified date, buyer implication, confidence, and next check.
 
-6. **Q&A block (1 min).** Notion AI auto-creates the row. Prompt a Q&A block: "From this page, which Phoenix buyer dominates sub-6% cap-rate deals?" Response scans citations and returns a table excerpt in ~30 seconds.
+6. **Create the Notion record.** Store the final memo in Notion with properties for topic, owner, date verified, decision, confidence, primary sources, next review date, and related pages.
 
-7. **Follow-up thread.** Duplicate the row, paste a new Perplexity query for "Phoenix Q3 forecast," and loop back to step 1. Entire thread lives in one Notion page with sub-pages.
+7. **Use Notion AI for retrieval, not final authority.** Let Notion summarize across stored research, draft status updates, or answer questions from the workspace. Re-open primary sources before publishing fresh claims.
 
-8. **Weekly rollup.** Notion AI on the vault page: "Synthesize all CRE rows into a 1-page trends report." Output copies cleanly into a wiki draft.
+8. **Schedule review.** For AI tools, pricing, models, and market share, set a review date. Volatile claims should not live indefinitely in a knowledge base without re-verification.
 
-Folder convention: `Vault/Topic/[Perplexity Raw]/[Claude Project MD]/[Notion DB Link]`.
+## Where It Breaks
 
-## Where it breaks
+Perplexity citations can point to pages that moved, changed, or only partly support the answer. Open the source before trusting the claim.
 
-Perplexity Deep Research hits the 20/day Pro limit. Overflow queries fall back to free-tier defaults (OpenAI frontier models) and lose model choice.
+Claude can turn weak sources into confident prose. Keep an explicit section for "unsupported", "unclear", and "needs a primary source".
 
-Skipping Project instructions drops citations in ~40% of Claude outputs. The "cite inline only" rule is mandatory.
+Notion AI pricing and access changed enough that old "AI add-on" budgeting can be wrong. In June 2026, budget around Business or Enterprise for full Notion AI, and treat Custom Agents as credit-metered.
 
-Claude Projects caps at 100 artifacts per project. Archive to Notion before the context thins.
+Long tables pasted into Notion can lose structure. Store the final source table as Markdown or CSV when accuracy matters.
 
-Notion AI mangles complex tables above ~10 rows on paste. Split long tables into two blocks.
+Research stacks create false confidence when they hide dates. Every row should carry a verified date and next-review date.
 
-Perplexity citations link to dead pages at roughly a 5% rate. Manually verify the top 3 sources per report.
+## Monthly Cost
 
-## Monthly cost
-
-| Tool | Price/mo | Notes |
+| Tool | Common lane | Budget note |
 |---|---|---|
-| Perplexity Pro | $20 | 20 Deep Research queries/day |
-| Claude Pro (Projects included) | $20 | Opus 4.7, unlimited Projects |
-| Notion AI | $25 | Add-on to existing Notion workspace |
-| **Total** | **$65** | Vs ~$200 per freelance analyst report |
+| Perplexity | Pro for recurring individual research; Max or Enterprise for heavy/team research | Pro is listed at $20/month or $200/year; Max extends limits |
+| Claude | Pro for individual analysis; Team/Enterprise for collaboration or governance | Pro is listed at $20/month monthly; Team/Enterprise add controls and seats |
+| Notion AI | Business or Enterprise for full Notion AI features | Free/Plus are trial-limited; Custom Agents use Notion credits |
 
-*Prices verified 2026-05-13 via [Perplexity pricing](https://www.perplexity.ai/pro), [claude.com/pricing](https://claude.com/pricing), and [Notion pricing](https://www.notion.so/pricing).*
+The old "$65/month" shortcut is no longer precise enough. The honest budget is a range based on Notion plan, region, billing period, team size, and whether Custom Agents or extra credits are used.
 
-Human analyst alternative: $150-300 per 2-hour task times 20 tasks equals ~$4,000/month. This stack: $65.
+## Who This Is For
 
-## Who this is for
+Use this stack if:
 
-Copy this stack for 10+ cited research pieces per month with outputs that hold up to editorial review. Built for analysts, journalists, and wiki editors who need defensible claims.
+- you produce recurring research briefs,
+- sources and citations matter,
+- you need searchable institutional memory,
+- a human editor will verify source claims,
+- Notion is already part of the team workflow.
 
-Skip it for open-ended brainstorming (free ChatGPT is fine) or if Notion is not an option (Obsidian with AI plugins works but drops threading fidelity).
+Skip it if:
+
+- you only need brainstorming,
+- the work is too confidential for external AI systems,
+- the team does not use Notion,
+- you cannot verify sources manually,
+- the output will be treated as legal, medical, financial, or safety advice without expert review.
 
 ## FAQ
 
-**How many sources per Perplexity query?**
-10-50. Pro cites all inline and links back to originals. Manual verification of the top 3 sources is still required.
+**How many sources should I verify manually?**
+Verify every source used for pricing, model access, legal/commercial claims, medical claims, or recommendations. For a normal research brief, verify at least the top three primary sources.
+
+**Is Perplexity enough on its own?**
+Not for decision-grade research. It is excellent for discovery and cited first passes, but the final memo still needs source inspection and reasoning.
 
 **Claude Projects vs ChatGPT folders?**
-Projects persist multi-turn context across sessions. Folders reset per chat and force re-pasting context after ~10 messages.
+This workflow uses Claude because it is strong for careful long-form analysis and project-style context. The same workflow can be adapted to ChatGPT if your organization already standardizes there.
 
-**Cost per task in practice?**
-$65 divided across 20 tasks equals $3.25 per task. Time: 25 minutes vs ~120 minutes manual. ROI crosses breakeven at ~10 tasks/month.
+**Do I need Notion AI?**
+Only if research needs to become workspace memory. If you just need a brief, a Markdown file or Google Doc may be simpler.
 
-**Upgrade to Perplexity Pro's Deep Research at higher tiers?**
-Not required. The $200/mo tier is only justified at 100+ queries/day. Pro's 20/day cap covers 600 queries/month.
+**What is the biggest mistake?**
+Treating AI citations as proof. Citations are leads. Verification happens when a human opens the source and checks whether it actually supports the claim.
 
 ## System Notes
 
-This page documents an operational stack verified by the aipedia.wiki editorial pipeline. Last verified 2026-05-13.
+This page documents an operational research stack verified by the aipedia.wiki editorial pipeline. Last verified 2026-06-10.
 
 ## Related
 
-- **Tools:** [Perplexity](/tools/perplexity/) · [Claude](/tools/claude/) · [Notion AI](/tools/notion-ai/)
-- **Workflows:** [Newsletter Stack](/workflows/newsletter-stack/) · [YouTube Content Stack](/workflows/youtube-content-stack/)
+- **Tools:** [Perplexity](/tools/perplexity/) - [Claude](/tools/claude/) - [Notion AI](/tools/notion-ai/)
+- **Workflows:** [Newsletter Stack](/workflows/newsletter-stack/) - [YouTube Content Stack](/workflows/youtube-content-stack/)
+
+## Sources
+
+- [Perplexity hub](https://www.perplexity.ai/hub), verified 2026-06-10
+- [Perplexity Pro](https://www.perplexity.ai/pro), verified 2026-06-10
+- [Perplexity API rate limits](https://docs.perplexity.ai/docs/admin/rate-limits-usage-tiers), verified 2026-06-10
+- [Claude pricing](https://claude.com/pricing), verified 2026-06-10
+- [Notion pricing](https://www.notion.com/pricing), verified 2026-06-10
+- [Notion AI](https://www.notion.com/product/ai), verified 2026-06-10

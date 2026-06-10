@@ -2,143 +2,169 @@
 type: workflow
 slug: podcast-automation-stack
 title: "Podcast Automation Stack: Claude, ElevenLabs, Descript, Fish Audio"
-seo_title: "Podcast Automation Stack: Claude, ElevenLabs, Descript, Fish Audio (May 2026)"
-meta_description: "Turn a 60-minute interview into a polished episode plus five social clips in 1.5 hours of hands-on time. Stack costs $78/mo. Verified May 13, 2026."
-description: "Turn a 60-minute interview into a polished episode plus five social clips in under 2 hours of hands-on time"
+seo_title: "Podcast Automation Stack: Claude, ElevenLabs, Descript & Fish Audio (June 2026)"
+meta_description: "Updated June 10, 2026: turn an interview podcast into a polished episode, show notes, and social clips with Claude, Descript, ElevenLabs, and Fish Audio without hiding consent or credit costs."
+description: "Turn an interview podcast into a polished episode, source notes, and social clips with a human-controlled AI production stack."
 stack: [claude, elevenlabs, descript, fish-audio]
 tools_mentioned: [claude, elevenlabs, descript, fish-audio, castmagic, meetgeek, riverside]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-10
+last_verified: 2026-06-10
 update_frequency: monthly
 ---
 
 # Podcast Automation Stack: Claude, ElevenLabs, Descript, Fish Audio
 
-This stack is for a solo interview podcaster producing ~4 episodes/month on a $78/month tools budget.
+This stack is for a solo or small-team interview podcast that wants one repeatable workflow for transcript cleanup, episode structure, show notes, optional voiceover, and short-form clips.
 
-Hands-on time per episode: 1.5 hours, down from a conventional 8-hour manual edit. The stack delivers a polished episode plus five 60-second social clips.
+**AiPedia verdict, verified June 10, 2026:** use [Descript](/tools/descript/) as the recording, transcript, edit, and clip workspace; use [Claude](/tools/claude/) for transcript cleanup, show notes, chapters, and repurposing; use [ElevenLabs](/tools/elevenlabs/) for high-quality voice work when the host has consented to cloning or synthetic narration; and use [Fish Audio](/tools/fish-audio/) for lower-cost short-form voice experiments. Keep [Riverside](/tools/riverside/) on the shortlist when live-event recording quality matters more than text-based editing, and use [Castmagic](/tools/castmagic/) or [MeetGeek](/tools/meetgeek/) when all you need is transcript-to-notes output.
+
+The stack can reduce editing time, but it should not hide synthetic voice use. If a generated or cloned voice appears in the episode or clip, disclose it where listeners make trust decisions.
 
 ## System Verdict
 
-> **Pick this stack for a weekly 60-minute interview podcast with social-clip repurposing.** Descript records and edits, Claude cleans transcripts and generates show notes, ElevenLabs voices the host, Fish Audio voices the shorts.
+> **Pick this stack for a weekly interview podcast that needs show notes and social clips.** Descript owns the edit. Claude owns structure. ElevenLabs owns premium voice output. Fish Audio is the budget voice lane for short clips and experiments.
 >
-> **Skip it for live events (use [Riverside](/tools/riverside/)) or scripted solo shows (an n8n full-auto pipeline is cheaper).** Skip also if the brand requires unmodified live audio. For show-notes-only workflows without voice generation, [Castmagic](/tools/castmagic/) or [MeetGeek](/tools/meetgeek/) cover transcript-to-notes more cheaply.
+> **Skip it for live productions, legal/medical claims, or brands that require untouched host audio.** Also skip synthetic voices unless the speaker has given explicit permission.
 >
-> **Total cost: $78/month.** The human equivalent (editor + voice actor + editing suite + clip producer) runs ~$950/month at comparable output.
+> **Budget as a variable stack, not a fixed $78 promise.** A common self-serve mix is Claude Pro, Descript Creator, ElevenLabs Creator, and Fish Audio Plus, but the total changes with annual billing, monthly billing, taxes, credit top-ups, media minutes, voice minutes, and whether you need team seats.
 
 ## Key Facts
 
 | | |
 |---|---|
-| **Format** | Weekly 60-minute interview + five 60-second social clips |
-| **Hands-on time** | ~1.5 hours per episode |
-| **Monthly cost** | $78 |
-| **Episode model** | Claude Opus 4.7 for transcript cleanup and show notes |
-| **Main voiceover** | ElevenLabs VoiceLab v2.3, Conversational Podcast model |
-| **Clip voiceover** | Fish Audio v1.8, Energetic Hype voice |
-| **Host platform** | Buzzsprout via Descript integration |
+| **Format** | Interview podcast plus show notes and social clips |
+| **Best-fit cadence** | Weekly or biweekly publishing |
+| **Human role** | Producer/editor reviews transcript, cuts, claims, voice consent, and final exports |
+| **Transcript and edit workspace** | Descript with media minutes and AI credits |
+| **Analysis and copy** | Claude Pro or higher, depending on usage |
+| **Premium voice lane** | ElevenLabs Creator or higher for Professional Voice Cloning |
+| **Budget voice lane** | Fish Audio Plus or higher for larger credit pools and commercial-use workflows |
 
-## The short version
+## The Short Version
 
-- Record in Descript (15 min), auto-transcribe, clean transcript in Claude (20 min).
-- Feed cleaned transcript to Claude Opus 4.7 for episode script, chapters, show notes, five clip scripts (10 min).
-- Generate voiceovers on ElevenLabs (main episode) and Fish Audio (clips). Assemble in Descript (30 min).
-- Export episode plus clips. Total hands-on drops from ~8 hours to ~1.5 hours per episode.
+- Record and transcribe in Descript.
+- Clean the transcript and create chapters, show notes, titles, descriptions, and clip scripts in Claude.
+- Edit the main episode in Descript using text-based cuts, Studio Sound, Remove Filler Words, and Underlord where helpful.
+- Use ElevenLabs only for consented host clones, intros, ad reads, narration, or replacement lines that listeners would not mistake for untouched live audio.
+- Use Fish Audio for lower-cost short-form variants, test reads, and clip narration when the voice rights are clear.
+- Publish with disclosure, source links, and a manual review of every claim.
 
-## The stack
+## The Stack
 
-### [Claude Opus 4.7](/tools/claude/) ($20/mo)
+### [Claude](/tools/claude/): transcript cleanup and editorial structure
 
-Owns transcript cleanup, episode structuring, and content repurposing.
+Claude owns the text work: transcript cleanup, chapter summaries, episode description, title options, guest bio, newsletter copy, and short-form clip scripts. Claude Pro is currently listed at $20/month when billed monthly, with Claude Code and Cowork included, but podcast teams should budget around general Claude usage rather than assuming every long transcript will fit comfortably into a light plan.
 
-Paste a raw Descript transcript; Claude Opus 4.7 removes filler, adds chapter timestamps, generates 200-word show notes, and extracts five 60-second clip scripts. OpenAI frontier models hallucinate podcast formats more often on this prompt.
+Use Claude for organization and drafting. Do not let it invent guest quotes, sponsor claims, statistics, or legal/medical advice.
 
-### [ElevenLabs](/tools/elevenlabs/) ($22/mo)
+### [Descript](/tools/descript/): recording, transcript editing, and clips
 
-Handles main-episode voiceover from the Claude-cleaned script.
+Descript is the production workspace. Its current product navigation includes podcasting, Rooms, captions, transcription, AI speech, Create Clips, Studio Sound, Remove Filler Words, and Underlord. The pricing page lists Free, Creator, Business, and Enterprise paths, with Creator showing 10 media hours/month and 400 AI credits/month, and Business showing larger media-hour and AI-credit allowances.
 
-Clone the host voice once. VoiceLab v2.3 outputs studio-quality audio in roughly 4 minutes for a 60-minute episode. ElevenLabs holds voice consistency better than Fish Audio on long-form.
+The important cost detail is metering. Descript's help docs say media minutes are consumed by uploads and recordings, while AI credits are consumed by AI-powered features such as Underlord, Studio Sound, Remove Filler Words, Green Screen, Eye Contact, AI speech, avatars, and generated video. Some features scale with media length, and top-ups are available from the usage tab.
 
-### [Descript](/tools/descript/) ($24/mo)
+### [ElevenLabs](/tools/elevenlabs/): premium synthetic voice
 
-Records, transcribes, and edits.
+ElevenLabs is the higher-quality voice lane. The current pricing page lists Creator at $22/month, with a first-month discount displayed, Professional Voice Cloning, and 121k credits/month. Pro, Scale, Business, and Enterprise expand credits, quality, seats, clones, concurrency, and business controls.
 
-Text-based cuts save ~6 hours vs a timeline editor. Studio Sound normalizes guest audio. About 5% of clips still need manual cleanup; that is the only remaining manual seam.
+Use ElevenLabs for voiceover, intro/outro variants, ad reads, localization, or carefully disclosed voice-clone work. Keep the original speaker's consent and review path in writing.
 
-### [Fish Audio](/tools/fish-audio/) ($12/mo)
+### [Fish Audio](/tools/fish-audio/): budget voice variants and shorts
 
-Voices the social clips with punchy inflection.
+Fish Audio is the budget voice lane. The current plan page lists a Free tier, Plus, Pro, Max, and Enterprise. Plus is shown at $11/month when billed annually, with 250,000 credits/month, up to 200 minutes generation, larger character limits, private voice slots, priority generation, enhanced voice cloning, and commercial use allowed. Pro and Max increase credits, minutes, seats, and production capacity.
 
-Claude writes the clip scripts; Fish Audio reads them with "Energetic Hype" tuning for TikTok and Reels. ElevenLabs handles long-form, Fish handles shorts.
+Use Fish Audio for short-form tests and clips. Do not rely on it for a full host-voice replacement without careful quality review and consent.
 
-## The workflow, step by step
+## Workflow, Step By Step
 
-1. **Record (5 min hands-on).** 60-minute interview in Descript with SquadCast integration. Separate tracks, live transcription at ~99% accuracy. Export raw transcript as .docx.
+1. **Record the interview.** Use Descript Rooms or your preferred recorder. Capture separate tracks when possible and keep the raw recording archived.
 
-2. **Transcript cleanup and repurposing (10 min).** Paste transcript into Claude Opus 4.7. Prompt: "You are a podcast editor. This is the raw transcript of a 60-minute interview on [topic] with [guest]. Remove ums, uhs, repetitions. Structure into 5 chapters with timestamps. Output: cleaned full script, 200-word show notes, five 60-second clip scripts optimized for Reels (hook, key quote, CTA)." Save outputs to `/podcast/[episode]/`.
+2. **Create the transcript.** Let Descript transcribe the episode. Before using AI cleanup, scan for speaker labels, names, brand terms, sponsor language, medical/legal claims, and anything that might become a quote.
 
-3. **Organize (5 min).** Inside `/podcast/[episode]/`, write `show-notes.md`, `chapters.txt`, and a `clips/` folder with `clip1-script.txt` through `clip5-script.txt`. Claude finishes generation in ~2 minutes. Scan for errors.
+3. **Clean and structure in Claude.** Paste the transcript or selected sections into Claude with instructions: remove filler without changing meaning, flag unclear sections, create chapter titles, draft show notes, extract quotes only from the transcript, and propose five clip candidates.
 
-4. **Main voiceover (5 min).** Upload full episode script to ElevenLabs VoiceLab v2.3. Select "Conversational Podcast" model. Generate 60-minute voiceover MP3 (~4 min wall-clock). Save to `/podcast/[episode]/audio/`.
+4. **Edit in Descript.** Make text-based cuts, apply Studio Sound carefully, remove filler words only when it does not change speaker intent, and create clips from moments that actually occurred in the interview.
 
-5. **Clip voiceovers (2 min).** Upload each clip script to Fish Audio v1.8. Pick "Energetic Hype" voice clone. Generate five 60-second MP3s.
+5. **Generate optional voice assets.** Use ElevenLabs for premium narration or host clone work only with consent. Use Fish Audio for short-form alternatives or quick test reads. Label any synthetic or cloned voice in the production notes and public description where appropriate.
 
-6. **Assembly (20 min).** Import raw interview video and audio into Descript. Apply Studio Sound to the guest track. Layer the cleaned script over the ElevenLabs voiceover; text-edit to sync. Delete 10-15% of generated audio that does not match the final cut. Use Overdub for filler fixes.
+6. **Review claims and quotes.** Compare the final episode description, show notes, sponsor claims, and clip captions against the transcript. Do not publish Claude-generated claims without source checks.
 
-7. **Chapters and clips (15 min).** Auto-generate chapters from Claude's timestamps. Crop five clips: select transcript sections, hit "Clip" button; Descript matches video and audio. Add captions, export MP4s.
+7. **Export and publish.** Export the full episode audio/video, captions, and short clips. Keep the transcript, prompts, generated copy, voice files, and approvals in one folder.
 
-8. **Publish (15 min).** Export full episode: MP3 for hosting, video for YouTube. Upload to Buzzsprout via Descript integration. Post clips to Instagram and TikTok manually. That upload step is the only non-automatable leg.
+8. **Archive the episode package.** Store `/raw`, `/transcript`, `/claude-notes`, `/descript-project`, `/voice`, `/clips`, `/exports`, and `/approval` folders. This keeps future corrections and repurposing sane.
 
-9. **Archive.** Paste show notes and embed clips in Notion. Total hands-on: ~1.5 hours.
+## Where It Breaks
 
-## Where it breaks
+Claude can over-clean transcripts and make a guest sound more certain than they were. Ask it to preserve meaning and flag unclear sections instead of silently rewriting them.
 
-Opus 4.7 invents guest quotes if the transcript has more than ~5% noise. Always spot-check against the raw Descript export.
+Descript AI credits and media minutes can run out faster than expected when the team uses Underlord, Studio Sound, speech regeneration, clips, avatars, or generated video on every episode.
 
-ElevenLabs cuts off at ~65 minutes on complex scripts. Split into two 30-minute generations and stitch in Descript.
+ElevenLabs sounds good enough that disclosure matters. A cloned host voice used for ad reads or replacement lines should be approved by the speaker and disclosed when it affects listener trust.
 
-Descript Studio Sound over-brightens quiet guest tracks. Manual EQ passes are needed on roughly 1 in 4 episodes.
+Fish Audio is attractive on price, but short clips still need pronunciation, pacing, and rights review. Budget voice output can create brand risk if it sounds like a fake testimonial or fake guest quote.
 
-Fish Audio v1.8 glitches on clip scripts over ~90 words. Claude's prompt keeps clips under 80 words.
+Social clips are not automatically safer because they are short. A misleading 30-second quote can cause more damage than a full episode with context.
 
-## Monthly cost
+## Monthly Cost
 
-| Tool | Price/mo | Human alternative |
+| Tool | Common self-serve lane | Current budget note |
 |---|---|---|
-| Claude Opus 4.7 | $20 | ~$400 editor for 4 episodes |
-| ElevenLabs | $22 | ~$150 voice actor |
-| Descript | $24 | ~$300 editing suite plus time |
-| Fish Audio | $12 | ~$100 clip production |
-| **Total** | **$78** | **~$950** |
+| Claude | Pro or higher | Pro is listed at $20/month monthly; usage limits and higher plans matter for heavy transcript work |
+| Descript | Creator or Business | Creator and Business differ by media hours, AI credits, export quality, team features, and top-up access |
+| ElevenLabs | Creator or Pro | Creator lists Professional Voice Cloning and 121k credits/month; higher plans increase credits and business controls |
+| Fish Audio | Plus or Pro | Plus annual pricing is shown at $11/month with 250k credits/month; monthly checkout and credit needs can differ |
 
-*Prices verified 2026-05-13 via vendor pricing pages.*
+Treat the total as a monthly range. The cheapest honest version uses annual-rate self-serve plans and limited AI credit use. The professional version adds media-minute top-ups, voice-credit top-ups, team seats, or a higher ElevenLabs/Fish Audio tier.
 
-## Who this is for
+## Who This Is For
 
-Copy this stack for a solo interview podcast recording weekly with current editing time above 4 hours. Ideal for 1-2 person teams who accept ~1.5 hours of oversight per episode.
+Copy this stack if:
 
-Skip for scripted solo shows (a full n8n pipeline goes cheaper) or live events ([Riverside](/tools/riverside/) is the right tool). For transcript-to-notes only, [Castmagic](/tools/castmagic/) (released May 2026) and [MeetGeek](/tools/meetgeek/) cover the lighter lane.
+- you publish interview episodes regularly,
+- you already review audio and copy before publishing,
+- show notes and clips are a meaningful growth channel,
+- synthetic voice use is optional or explicitly disclosed,
+- the time saved is worth more than the credit spend.
+
+Skip it if:
+
+- the brand requires untouched live audio,
+- you cannot review transcript accuracy,
+- the show covers high-stakes legal, medical, or financial advice without expert review,
+- the host or guest has not consented to voice cloning,
+- the team only needs show notes and no editing workflow.
 
 ## FAQ
 
-**How accurate is Descript transcription?**
-Around 99% on clear audio. Drops to ~92% with heavy accents. Claude fixes residual errors in step 2.
+**Can this produce a full episode plus clips?**
+Yes, but the practical output quality depends on the raw recording, transcript accuracy, edit discipline, AI-credit budget, and human review.
 
-**Can this produce video podcasts?**
-Yes. Descript exports YouTube-ready MP4s with captions up to 4K.
+**Should I clone the host voice?**
+Only with explicit consent and a clear disclosure rule. Voice cloning is useful for intros, corrections, ads, and localization; it is risky when listeners think they are hearing untouched live speech.
 
-**Without a voice clone?**
-ElevenLabs premade voices work for the first episode. A host voice clone lifts listener retention by ~20% on this stack based on A/B tests.
+**Is Fish Audio a replacement for ElevenLabs?**
+Sometimes for short-form narration or budget tests. ElevenLabs remains the stronger default when professional cloning, business controls, and high-quality voice output matter.
 
-**Does it scale to daily podcasts?**
-No. Rate limits compound around ~10 episodes/week. Add OpenAI frontier models for overflow scripting, or move to a managed studio.
+**Can I remove the human editor?**
+No. AI can speed transcript cleanup, clip selection, and rough cuts, but a human still needs to approve meaning, pacing, claims, sponsor language, voice rights, and final exports.
+
+**What is the safest first setup?**
+Start with Descript plus Claude for transcript cleanup and show notes. Add ElevenLabs or Fish Audio only after the team has written a consent and disclosure rule for synthetic voice use.
 
 ## System Notes
 
-This page documents an operational stack verified by the aipedia.wiki editorial pipeline. Last verified 2026-05-13.
+This page documents an operational podcast-production stack verified by the aipedia.wiki editorial pipeline. Last verified 2026-06-10.
 
 ## Related
 
-- **Tools:** [Claude](/tools/claude/) · [ElevenLabs](/tools/elevenlabs/) · [Descript](/tools/descript/) · [Fish Audio](/tools/fish-audio/)
-- **Workflows:** [YouTube Content Stack](/workflows/youtube-content-stack/) · [Newsletter Stack](/workflows/newsletter-stack/)
+- **Tools:** [Claude](/tools/claude/) - [ElevenLabs](/tools/elevenlabs/) - [Descript](/tools/descript/) - [Fish Audio](/tools/fish-audio/)
+- **Workflows:** [YouTube Content Stack](/workflows/youtube-content-stack/) - [Newsletter Stack](/workflows/newsletter-stack/)
+
+## Sources
+
+- [Claude pricing](https://claude.com/pricing), verified 2026-06-10
+- [Descript pricing](https://www.descript.com/pricing), verified 2026-06-10
+- [Descript media minutes and AI credits](https://help.descript.com/hc/en-us/articles/27841674958221-Track-and-understand-your-media-minutes-and-AI-credits), verified 2026-06-10
+- [ElevenLabs pricing](https://elevenlabs.io/pricing), verified 2026-06-10
+- [Fish Audio pricing](https://fish.audio/plan/), verified 2026-06-10

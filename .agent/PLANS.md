@@ -82,6 +82,92 @@ Summarize changed files, behavior shipped, tests passed, unresolved risks, and r
 
 ---
 
+## ExecPlan: June 10 2026 Workflow Stack Refresh
+
+### 1. Objective
+
+Continue the oldest-to-newest page refresh by updating the four May 13 live workflow pages after skipping the dead Grok Code Fast tool row. The batch improves trust, SEO freshness, source-backed buying guidance, mobile workflow usefulness, and LLM crawler quality.
+
+### 2. Current state
+
+`PAGE_REFRESH_LEDGER.md` showed `/workflows/agentic-coding-workflow/`, `/workflows/design-agency-replacement/`, `/workflows/podcast-automation-stack/`, and `/workflows/research-assistant-stack/` as the next eligible live rows dated 2026-05-13. The pages contained stale May metadata plus over-specific or unsupported claims around model versions, fixed stack costs, query limits, production time, transcription accuracy, voice models, and human-alternative costs.
+
+### 3. Target state
+
+All four workflow pages carry `last_updated` and `last_verified` of 2026-06-10, with current official-source-backed plan, billing, credit, consent, and review guidance. Parent `/workflows/`, `/explore/`, homepage metadata comments, `/llms.txt`, `/llms-full.txt`, and `PAGE_REFRESH_LEDGER.md` reflect the refresh.
+
+### 4. Scope
+
+Included: `/workflows/agentic-coding-workflow/`, `/workflows/design-agency-replacement/`, `/workflows/podcast-automation-stack/`, `/workflows/research-assistant-stack/`, `/workflows/`, `/explore/`, `/`, `/llms.txt`, `/llms-full.txt`, and `PAGE_REFRESH_LEDGER.md`. Excluded: dead tools, news article pages, unrelated workflow rows not at the current ledger frontier, source-registry schema work, and new affiliate surfaces.
+
+### 5. Files likely affected
+
+`src/content/workflows/agentic-coding-workflow.md`, `src/content/workflows/design-agency-replacement.md`, `src/content/workflows/podcast-automation-stack.md`, `src/content/workflows/research-assistant-stack.md`, `src/pages/workflows/index.astro`, `src/pages/explore/index.astro`, `src/pages/index.astro`, `src/pages/llms.txt.ts`, `src/pages/llms-full.txt.ts`, `PAGE_REFRESH_LEDGER.md`, and this plan.
+
+### 6. Data model impact
+
+No schema changes. Workflow frontmatter dates and metadata are refreshed in place; markdown sources are updated to current official vendor pages.
+
+### 7. SEO impact
+
+Workflow titles and meta descriptions move from stale May wording to June 10 current positioning. Parent workflow and crawl surfaces remain indexable and internally linked.
+
+### 8. Conversion impact
+
+No new affiliate CTAs are added. The batch improves conversion trust by replacing fixed-price shortcuts with current billing caveats for coding agents, creative credits, podcast production credits, and Notion AI/Perplexity/Claude research stacks.
+
+### 9. Mobile UX impact
+
+Templates are unchanged. The first-screen workflow verdicts, tables, sources, and review warnings should remain readable at 360, 390, 430, 768, and desktop widths.
+
+### 10. Implementation steps
+
+1. Verify June 2026 official sources for the four workflow stacks.
+2. Rewrite workflow records to remove stale/speculative or unsupported facts.
+3. Refresh parent/top-layer surfaces and LLM manifests.
+4. Regenerate and inspect the page refresh ledger.
+5. Run source/fact/link/build checks plus responsive QA.
+6. Commit and push the clean batch if validation passes.
+
+### 11. Verification commands
+
+`npm run ledger:pages`
+
+`npm run ledger:pages:check`
+
+`npm run guard:check`
+
+`npm run check:links`
+
+`npm run test:scripts`
+
+`npm run check`
+
+`npm run build:fast`
+
+`git diff --check`
+
+Static responsive QA over `/`, `/workflows/`, `/explore/`, `/llms.txt`, `/llms-full.txt`, and all four refreshed workflow routes at 360, 390, 430, 768, and 1024px.
+
+### 12. Acceptance criteria
+
+All four workflow pages are verified on 2026-06-10, stale May-only assertions are removed or reframed, affected parent/top-layer pages and LLM surfaces are current, the ledger reflects the true refresh scope, and validation passes or failures are documented with risk.
+
+### 13. Risks and mitigations
+
+Vendor billing and model access changed quickly in this area, especially for coding agents and AI credits. The refresh uses official sources where possible, avoids unsupported exact throughput or ROI claims, labels variable pricing clearly, and keeps human review and source verification as workflow requirements.
+
+### 14. Progress log
+
+- 2026-06-10: Identified the May 13 workflow rows as the next eligible ledger frontier after skipped dead `/tools/grok-code-fast/`. Verified current sources for Cursor, Claude Code, GitHub Copilot, Codex, Midjourney, Figma, Canva, Adobe Firefly, Magnific, Claude, Descript, ElevenLabs, Fish Audio, Perplexity, and Notion AI. Rewrote all four workflow pages and refreshed parent/crawl surfaces.
+- 2026-06-10: Regenerated the page refresh ledger and reran validation. Static Playwright QA initially caught mobile overflow in the design-agency workflow's monthly-cost table at 360 and 390px, so the section was converted to stacked buying guidance and the 45 route/viewport QA pass was rerun cleanly.
+
+### 15. Final report
+
+Shipped the June 10, 2026 workflow refresh for `/workflows/agentic-coding-workflow/`, `/workflows/design-agency-replacement/`, `/workflows/podcast-automation-stack/`, and `/workflows/research-assistant-stack/`. Parent `/workflows/`, `/explore/`, homepage metadata comments, `/llms.txt`, `/llms-full.txt`, and `PAGE_REFRESH_LEDGER.md` were refreshed in the same batch. Validation passed with `npm run ledger:pages`, `npm run ledger:pages:check`, `npm run guard:check`, `npm run check:links`, `npm run audit:sources`, `npm run audit:facts`, `npm run test:scripts`, `npm run check`, `npm run build:fast`, `git diff --check`, and static Playwright responsive QA for 9 routes at 360, 390, 430, 768, and 1024px.
+
+---
+
 ## ExecPlan: June 10 2026 Trend Section Refresh
 
 ### 1. Objective
