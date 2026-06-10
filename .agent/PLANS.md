@@ -82,6 +82,99 @@ Summarize changed files, behavior shipped, tests passed, unresolved risks, and r
 
 ---
 
+## ExecPlan: June 9-10 2026 AI News Coverage Refresh
+
+### 1. Objective
+
+Create source-backed, buyer-useful AiPedia news coverage for the June 9 and June 10, 2026 AI tools news cycle without duplicating existing June 8-9 Apple, Gemini, Claude Cowork, or coding-agent articles. The work should improve trust, organic rankings, editorial scalability, internal linking, and the news archive's usefulness for tool buyers.
+
+### 2. Current state
+
+The news collection already includes June 9 coverage for Claude Cowork and a coding-agent control-plane roundup, plus June 8 Apple Foundation Models and Google Gemini-for-Apple-developers stories. There are no June 10 news markdown records yet. `/news/`, `/news/rss.xml`, the homepage news rail, and LLM crawl surfaces are data-driven but carry refresh metadata and visible recent-news summaries that must stay aligned with new coverage.
+
+### 3. Target state
+
+Add non-overlapping June 9 and June 10 articles covering the most material AI and AI-tools developments verified on June 10, 2026: Claude Fable 5/Mythos 5, Apple Siri AI and EU rollout risk, Datadog DASH AI agent observability/security, Similarweb's May 2026 AI chatbot rankings, and a June 10 desk tying the market together. Refresh the existing June 9 desk and coding-agent control-plane article where new same-day official sources make them stale.
+
+### 4. Scope
+
+Included: new `src/content/news/*.md` records, existing June 9 desk/coding-agent refreshes, news archive/RSS metadata, homepage news metadata, LLM text surfaces, generated news OG assets, and `PAGE_REFRESH_LEDGER.md`. Excluded: new tool records, logos, affiliate CTA mechanics, tool-page fact refreshes, and duplicate standalone articles for topics already covered by existing June 8-9 posts.
+
+Affected top-layer surfaces: `/news/`, `/news/rss.xml`, `/`, `/llms.txt`, `/llms-full.txt`, sitemap/build-generated surfaces, and `PAGE_REFRESH_LEDGER.md`.
+
+### 5. Files likely affected
+
+`src/content/news/`, `src/pages/news/index.astro`, `src/pages/news/rss.xml.ts`, `src/pages/index.astro`, `src/pages/llms.txt.ts`, `src/pages/llms-full.txt.ts`, `PAGE_REFRESH_LEDGER.md`, generated assets under `public/og/news/`, and this plan.
+
+### 6. Data model impact
+
+No content schema changes. New records use the existing news frontmatter fields: `type`, `slug`, `title`, `date`, `severity`, `summary`, `categories`, `last_updated`, `last_verified`, `related_tools`, and `sources`.
+
+### 7. SEO impact
+
+Each new article gets a unique slug/title/summary, current source list, clean heading hierarchy, and internal links to related coverage where useful. The archive, RSS metadata, and LLM surfaces should reflect the current June 9-10 coverage mix.
+
+### 8. Conversion impact
+
+No new affiliate CTA surfaces. Buyer guidance in the articles should distinguish tool choice, governance, procurement, and plan/access caveats without overstating commercial claims.
+
+### 9. Mobile UX impact
+
+News article templates are unchanged. The content should be scannable on mobile with short sections, direct verdicts, bullet checklists, and no wide tables.
+
+### 10. Implementation steps
+
+1. Verify current June 2026 primary sources and de-duplicate against existing news records.
+2. Add new June 9 and June 10 article records.
+3. Refresh the June 9 desk and coding-agent control-plane article with newly verified same-day sources.
+4. Update news archive/RSS/homepage/LLM top-layer metadata and summaries.
+5. Generate news OG assets and regenerate the page refresh ledger.
+6. Run news, link, guard, script, and build checks; document any residual QA gaps.
+
+### 11. Verification commands
+
+`node scripts/generate-og-news.mjs`
+
+`npm run ledger:pages`
+
+`npm run guard:check`
+
+`npm run check:news`
+
+`npm run check:links`
+
+`npm run test:scripts`
+
+`npm run build:fast`
+
+`git diff --check`
+
+### 12. Acceptance criteria
+
+New and refreshed news records are source-backed as of June 10, 2026, avoid topic double-ups, answer buyer-action questions, and include visible verification dates. Affected top-layer pages and crawl surfaces are current and internally aligned. Generated assets and ledger are current. Verification commands pass or failures are explicitly documented.
+
+### 13. Risks and mitigations
+
+Risk: Recent AI product claims can be volatile or promotional. Mitigation: rely on primary sources, date every verification, and frame analysis as AiPedia editorial judgment.
+
+Risk: Coverage can duplicate existing Apple/Gemini or coding-agent stories. Mitigation: refresh existing desks for overlapping context and reserve new articles for distinct buyer questions.
+
+Risk: Generated assets or ledger drift can break repository guards. Mitigation: run the repo's OG, ledger, news, guard, and build scripts before final reporting.
+
+### 14. Progress log
+
+2026-06-10: Inspected existing June 8-9 news records, news schema, top-layer news/homepage/LLM files, category/tool slugs, and package scripts. Verified primary June 2026 sources for Anthropic Claude Fable 5/Mythos 5, Apple Siri AI and DMA rollout delay, GitHub Copilot CLI custom agents, Datadog DASH 2026 AI announcements, and Similarweb May 2026 AI chatbot rankings.
+
+2026-06-10: Added six non-overlapping news records for Claude Fable 5/Mythos 5, Apple Siri AI/EU rollout risk, GitHub Copilot CLI custom agents, Datadog DASH AI-agent observability/security, Similarweb May 2026 AI chatbot rankings, and the June 10 desk. Refreshed the June 9 desk and coding-agent control-plane synthesis so they include the newer same-day Anthropic, Apple, and GitHub sources.
+
+2026-06-10: Updated `/news/`, `/news/rss.xml`, homepage news metadata, `/llms.txt`, `/llms-full.txt`, generated news OG assets, and regenerated `PAGE_REFRESH_LEDGER.md`. Verification passed: `node scripts/generate-og-news.mjs`, `npm run ledger:pages`, `npm run guard:check`, `npm run check:news`, `npm run check:links`, `npm run test:scripts`, `npm run check:security`, `npm run check`, `npm run build:fast`, and `git diff --check`. Rendered QA checked `/news/` plus all six new article pages at 360, 390, 430, 768, and 1024 px with HTTP 200s, H1s present, and no horizontal overflow.
+
+### 15. Final report
+
+Completed. The June 9-10 news refresh now covers the material AI tools cycle without duplicating existing June 8-9 Apple/Gemini/Claude Cowork/coding-agent articles. Changed files include new news markdown records, refreshed June 9 synthesis records, top-layer news/homepage/LLM metadata, generated news OG/thumbnail assets, `PAGE_REFRESH_LEDGER.md`, and this ExecPlan. No new tool records were added, so the hard logo rule did not require new tool logo assets. All verification commands passed; no unresolved QA risks remain for this content-only change.
+
+---
+
 ## ExecPlan: June 9 2026 Taskade Tavus Tines Together AI Tool Refresh
 
 ### 1. Objective

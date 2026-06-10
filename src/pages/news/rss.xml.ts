@@ -1,7 +1,7 @@
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 
-// Refresh metadata: 2026-06-09 news collection coverage refresh across June 3-9 AI tools news.
+// Refresh metadata: 2026-06-10 news collection coverage refresh across June 9-10 AI tools news, including Claude Fable 5, Siri AI, Copilot CLI custom agents, Datadog DASH agents, and Similarweb AI chatbot rankings.
 
 function escapeXml(s: string) {
   return String(s ?? '')

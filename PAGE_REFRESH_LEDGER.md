@@ -1,6 +1,6 @@
 # AiPedia Page Refresh Ledger
 
-Ledger updated through: 2026-06-09
+Ledger updated through: 2026-06-10
 Tracked public pages and crawl surfaces: 738
 
 Hard rule: every time a tracked website page is edited, refreshed, materially re-ranked, or has volatile facts re-verified, update that page row in this file on the same change. If a child page update affects a parent hub, archive, internal-link block, sitemap, or LLM surface, update those affected rows too.
@@ -712,26 +712,21 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-08 | /tools/playground-ai/ | Tool | Yes | frontmatter | src/content/tools/playground-ai.md |
 | 2026-06-08 | /tools/poe/ | Tool | Yes | frontmatter | src/content/tools/poe.md |
 | 2026-06-08 | /tools/qdrant/ | Tool | Yes | frontmatter | src/content/tools/qdrant.md |
-| 2026-06-09 | / | Static page | Yes | working tree | src/pages/index.astro |
-| 2026-06-09 | /categories/ | Static page | Yes | working tree | src/pages/categories/index.astro |
-| 2026-06-09 | /categories/ai-automation/ | Category | Yes | working tree | src/content/categories/ai-automation.md |
-| 2026-06-09 | /categories/ai-chatbots/ | Category | Yes | working tree | src/content/categories/ai-chatbots.md |
-| 2026-06-09 | /categories/ai-coding/ | Category | Yes | working tree | src/content/categories/ai-coding.md |
+| 2026-06-09 | /categories/ | Static page | Yes | git | src/pages/categories/index.astro |
+| 2026-06-09 | /categories/ai-automation/ | Category | Yes | frontmatter | src/content/categories/ai-automation.md |
+| 2026-06-09 | /categories/ai-chatbots/ | Category | Yes | frontmatter | src/content/categories/ai-chatbots.md |
+| 2026-06-09 | /categories/ai-coding/ | Category | Yes | frontmatter | src/content/categories/ai-coding.md |
 | 2026-06-09 | /categories/ai-design/ | Category | Yes | frontmatter | src/content/categories/ai-design.md |
-| 2026-06-09 | /categories/ai-infrastructure/ | Category | Yes | working tree | src/content/categories/ai-infrastructure.md |
-| 2026-06-09 | /categories/ai-music/ | Category | Yes | working tree | src/content/categories/ai-music.md |
-| 2026-06-09 | /categories/ai-notes/ | Category | Yes | working tree | src/content/categories/ai-notes.md |
-| 2026-06-09 | /categories/ai-research/ | Category | Yes | working tree | src/content/categories/ai-research.md |
-| 2026-06-09 | /categories/ai-video/ | Category | Yes | working tree | src/content/categories/ai-video.md |
+| 2026-06-09 | /categories/ai-infrastructure/ | Category | Yes | frontmatter | src/content/categories/ai-infrastructure.md |
+| 2026-06-09 | /categories/ai-music/ | Category | Yes | frontmatter | src/content/categories/ai-music.md |
+| 2026-06-09 | /categories/ai-notes/ | Category | Yes | frontmatter | src/content/categories/ai-notes.md |
+| 2026-06-09 | /categories/ai-research/ | Category | Yes | frontmatter | src/content/categories/ai-research.md |
+| 2026-06-09 | /categories/ai-video/ | Category | Yes | frontmatter | src/content/categories/ai-video.md |
 | 2026-06-09 | /categories/ai-voice/ | Category | Yes | frontmatter | src/content/categories/ai-voice.md |
-| 2026-06-09 | /categories/ai-writing/ | Category | Yes | working tree | src/content/categories/ai-writing.md |
+| 2026-06-09 | /categories/ai-writing/ | Category | Yes | frontmatter | src/content/categories/ai-writing.md |
 | 2026-06-09 | /compare/ | Static page | Yes | git | src/pages/compare/index.astro |
 | 2026-06-09 | /guides/ | Static page | Yes | git | src/pages/guides/index.astro |
-| 2026-06-09 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
-| 2026-06-09 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
-| 2026-06-09 | /news/ | Static page | Yes | working tree | src/pages/news/index.astro |
-| 2026-06-09 | /news/rss.xml | Crawl surface | No | working tree | src/pages/news/rss.xml.ts |
-| 2026-06-09 | /tools/ | Static page | Yes | working tree | src/pages/tools/index.astro |
+| 2026-06-09 | /tools/ | Static page | Yes | git | src/pages/tools/index.astro |
 | 2026-06-09 | /tools/reclaim-ai/ | Tool | Yes | frontmatter | src/content/tools/reclaim-ai.md |
 | 2026-06-09 | /tools/reflect/ | Tool | Yes | frontmatter | src/content/tools/reflect.md |
 | 2026-06-09 | /tools/reka/ | Tool | Yes | frontmatter | src/content/tools/reka.md |
@@ -740,12 +735,17 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-09 | /tools/retell-ai/ | Tool | Yes | frontmatter | src/content/tools/retell-ai.md |
 | 2026-06-09 | /tools/riverside/ | Tool | Yes | frontmatter | src/content/tools/riverside.md |
 | 2026-06-09 | /tools/rork/ | Tool | Yes | frontmatter | src/content/tools/rork.md |
-| 2026-06-09 | /tools/sanebox/ | Tool | Yes | working tree | src/content/tools/sanebox.md |
-| 2026-06-09 | /tools/servicenow/ | Tool | Yes | working tree | src/content/tools/servicenow.md |
-| 2026-06-09 | /tools/spellbook/ | Tool | Yes | working tree | src/content/tools/spellbook.md |
-| 2026-06-09 | /tools/stable-audio/ | Tool | Yes | working tree | src/content/tools/stable-audio.md |
-| 2026-06-09 | /tools/tactiq/ | Tool | Yes | working tree | src/content/tools/tactiq.md |
-| 2026-06-09 | /tools/taskade/ | Tool | Yes | working tree | src/content/tools/taskade.md |
-| 2026-06-09 | /tools/tavus/ | Tool | Yes | working tree | src/content/tools/tavus.md |
-| 2026-06-09 | /tools/tines/ | Tool | Yes | working tree | src/content/tools/tines.md |
-| 2026-06-09 | /tools/together-ai/ | Tool | Yes | working tree | src/content/tools/together-ai.md |
+| 2026-06-09 | /tools/sanebox/ | Tool | Yes | frontmatter | src/content/tools/sanebox.md |
+| 2026-06-09 | /tools/servicenow/ | Tool | Yes | frontmatter | src/content/tools/servicenow.md |
+| 2026-06-09 | /tools/spellbook/ | Tool | Yes | frontmatter | src/content/tools/spellbook.md |
+| 2026-06-09 | /tools/stable-audio/ | Tool | Yes | frontmatter | src/content/tools/stable-audio.md |
+| 2026-06-09 | /tools/tactiq/ | Tool | Yes | frontmatter | src/content/tools/tactiq.md |
+| 2026-06-09 | /tools/taskade/ | Tool | Yes | frontmatter | src/content/tools/taskade.md |
+| 2026-06-09 | /tools/tavus/ | Tool | Yes | frontmatter | src/content/tools/tavus.md |
+| 2026-06-09 | /tools/tines/ | Tool | Yes | frontmatter | src/content/tools/tines.md |
+| 2026-06-09 | /tools/together-ai/ | Tool | Yes | frontmatter | src/content/tools/together-ai.md |
+| 2026-06-10 | / | Static page | Yes | working tree | src/pages/index.astro |
+| 2026-06-10 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
+| 2026-06-10 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
+| 2026-06-10 | /news/ | Static page | Yes | working tree | src/pages/news/index.astro |
+| 2026-06-10 | /news/rss.xml | Crawl surface | No | working tree | src/pages/news/rss.xml.ts |

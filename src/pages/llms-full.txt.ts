@@ -6,6 +6,10 @@
 // active-tool refresh with dead tools and news articles skipped, plus source
 // registry, parent category hubs, homepage, tools index, categories index,
 // and LLM maintenance.
+// Refresh metadata: 2026-06-10 June 9-10 AI news refresh across Claude
+// Fable 5/Mythos 5, Apple Siri AI and EU rollout risk, Copilot CLI custom
+// agents, Datadog DASH agent observability/security, and Similarweb May
+// 2026 AI chatbot rankings.
 // Refresh metadata: 2026-06-09 SaneBox, ServiceNow, Spellbook,
 // Stable Audio, and Tactiq active-tool refresh with Rows skipped as a
 // wound-down/dead tool, plus source registry, parent category hubs, homepage,
@@ -145,7 +149,7 @@ export const GET: APIRoute = async () => {
   lines.push('');
   lines.push('> Extended LLM-friendly site manifest. Enumerates every active page across tools, categories, comparisons, buyer guides, and companies. See /llms.txt for the concise version.');
   lines.push('');
-  lines.push('Recent news refresh: June 9, 2026 added June 3-9 source-backed AI tools coverage across ChatGPT memory, GitHub Copilot agent APIs and model/plugin governance, Gemma 4 local/QAT releases, Gemini for Apple developers, Claude Cowork, Devin/Desktop, FrontierCode, Kaggle local benchmarks, and Microsoft MAI.');
+  lines.push('Recent news refresh: June 10, 2026 added June 9-10 source-backed AI tools coverage across Claude Fable 5/Mythos 5, Apple Siri AI and EU rollout risk, Copilot CLI custom agents, Datadog DASH agent observability/security, Similarweb May 2026 AI chatbot rankings, Claude Cowork, Gemini for Apple developers, Devin/Desktop, FrontierCode, and local model deployment.');
   lines.push('Recent tool refresh: June 9, 2026 refreshed Taskade, Tavus, Tines, and Together AI around Taskade workspace pricing and conflicting help-table caveats, Tavus Developer/PALs pricing plus CVI concurrency, Tines AI Agent action credit/package caveats, and Together serverless, dedicated-inference, GPU-cluster, fine-tuning, and code-sandbox pricing.');
   lines.push('Recent tool refresh: June 9, 2026 refreshed SaneBox, ServiceNow, Spellbook, Stable Audio, and Tactiq around SaneBox Appetizer/Snack/Lunch/Dinner pricing and beta SaneDrafts/SaneSummary, ServiceNow AI Control Tower Discover/Observe/Govern/Secure/Measure and August GA caveats, Spellbook custom legal Word pricing/security, Stable Audio 3.0 open weights/API/Enterprise licensing, and Tactiq Business MCP/Claude Connector beta. Rows was skipped because Rows.com says the product fully wound down May 31, 2026.');
   lines.push('Recent tool refresh: June 8, 2026 refreshed LinkedIn Recruiter, Llama, LM Studio, and Logseq around LinkedIn Hiring Assistant add-on/metrics, Llama Groq Scout and Together Maverick pricing caveats, LM Studio v1 REST/API/free-work posture, and Logseq DB/markdown-mirror/sync caveats.');
