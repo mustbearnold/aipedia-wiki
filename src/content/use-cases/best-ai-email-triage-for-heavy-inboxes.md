@@ -1,10 +1,10 @@
 ---
 type: use-case
 slug: best-ai-email-triage-for-heavy-inboxes
-title: "Best AI Email Triage for Heavy Inboxes (May 2026)"
+title: "Best AI Email Triage for Heavy Inboxes (June 2026)"
 seo_title: "Best AI Email Triage for Heavy Inboxes: SaneBox, Superhuman, Shortwave (2026)"
-meta_description: "Verified May 14, 2026: the best AI email triage tools for executives, founders, and professionals with 3000+ unread inboxes. SaneBox, Superhuman, Shortwave compared honestly."
-description: "May 14, 2026 buyer guide to AI email triage tools for heavy inboxes. Honest picks across SaneBox's ML triage, Superhuman's speed, and Shortwave's AI assistant."
+meta_description: "Verified June 10, 2026: the best AI email triage tools for executives, founders, and professionals with 3000+ unread inboxes. SaneBox, Superhuman, Shortwave compared honestly."
+description: "June 10, 2026 buyer guide to AI email triage tools for heavy inboxes. Honest picks across SaneBox's ML triage, Superhuman's speed, and Shortwave's AI assistant."
 tools_mentioned: ["sanebox"]
 guide_picks:
   best_overall:
@@ -34,8 +34,8 @@ guide_picks:
       - label: "SaneBox pricing"
         url: "https://www.sanebox.com/pricing"
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-14
-last_verified: 2026-05-14
+last_updated: 2026-06-10
+last_verified: 2026-06-10
 update_frequency: monthly
 related:
   - href: /tools/sanebox/
@@ -56,11 +56,11 @@ related:
     kind: guide
 ---
 
-# Best AI Email Triage for Heavy Inboxes (May 2026)
+# Best AI Email Triage for Heavy Inboxes (June 2026)
 
 A founder, executive, or professional with 3000+ unread emails has a specific problem: the inbox is full of mail that should not have been there. Newsletters, automated reports, transactional emails, low-priority CCs, and one-time correspondence drown out the messages that actually need attention. Discipline does not fix this. Filters partially fix it. Machine learning trained on years of your actual email behavior fixes it.
 
-This guide is for the specific buyer: someone whose inbox has crossed the threshold where it cannot be managed manually. AiPedia verified pricing and capabilities on May 14, 2026.
+This guide is for the specific buyer: someone whose inbox has crossed the threshold where it cannot be managed manually. AiPedia verified pricing and capabilities on June 10, 2026.
 
 The short version: **SaneBox** wins because its core feature, ML triage trained on your behavior, is the only thing that scales to heavy inboxes without changing your email client. **Superhuman** wins when you can migrate clients and speed is the dominant value. **Shortwave** wins when you want an AI assistant that drafts and summarizes within Gmail.
 
@@ -175,27 +175,23 @@ Pair pattern: Copilot + SaneBox on the same Outlook account is fine and addresse
 
 ## Pricing Reality
 
-Verified May 14, 2026:
+Verified June 10, 2026:
 
-| Tool | Tier | Price |
-|---|---|---|
-| SaneBox | Snack | ~$7/mo per inbox |
-| SaneBox | Lunch | ~$12/mo per inbox |
-| SaneBox | Dinner | ~$36/mo per inbox |
-| Superhuman | Individual | ~$30/mo |
-| Shortwave | Pro | ~$9/mo |
-| Microsoft Copilot for 365 | Add-on to M365 | ~$30/user/mo |
+Use this as buying guidance, not a fixed stack total:
 
-Annual billing typically cuts 20-25%. SaneBox runs a $25-credit referral program (the affiliate program here).
+- **SaneBox:** The current pricing page lists Snack at $4.99/month, Lunch at $7.99/month, and Dinner at $24.99/month. Buy it when you want filtering beneath your existing Gmail, Outlook, iCloud, FastMail, or IMAP inbox.
+- **Superhuman:** The current Superhuman Suite page lists Pro at $12/member/month billed annually or $30 monthly, and Business at $33/member/month billed annually or $40 monthly. Business is the safer reference point when Mail is the reason you are buying.
+- **Shortwave:** The current pricing page lists Business at $24/seat/month billed annually, Premier at $36, and Max at $100. Choose it when Gmail-native AI search, summaries, filters, and team email workflow matter more than classic inbox filtering.
+- **Microsoft 365 Copilot:** Still budget as a Microsoft 365 add-on or bundled SKU decision, not a standalone inbox tool. Microsoft has July 1, 2026 SMB SKU changes coming, so verify the exact tenant price before recommending it to a team.
+
+SaneBox still has the clearest low-cost entry for heavy-inbox triage; Superhuman and Shortwave are higher-commitment email-client decisions.
 
 ## Setup Time
 
-| Tool | Effective in |
-|---|---|
-| SaneBox | 1-2 weeks (ML settles) |
-| Superhuman | 1-2 weeks (client migration, shortcuts) |
-| Shortwave | 1 hour (Gmail connection, learn UI) |
-| Microsoft Copilot | Immediate if M365 already configured |
+- **SaneBox:** 1-2 weeks because its filtering gets better after it watches and learns your mailbox behavior.
+- **Superhuman:** 1-2 weeks because migration, shortcuts, and team habits matter as much as AI features.
+- **Shortwave:** About 1 hour for Gmail connection and first useful AI summaries, with deeper payoff after labels and filters settle.
+- **Microsoft Copilot:** Immediate if the Microsoft 365 tenant, license, and Outlook setup are already in place.
 
 ## Failure Modes
 
@@ -244,12 +240,16 @@ Different category. Shortwave is an AI assistant inside Gmail. SaneBox is a tria
 
 ## Sources
 
-- [SaneBox product](https://www.sanebox.com/)
-- [SaneBox pricing](https://www.sanebox.com/pricing)
-- [SaneBox features](https://www.sanebox.com/features)
-- [Superhuman](https://superhuman.com/)
-- [Shortwave](https://www.shortwave.com/)
-- [Microsoft Copilot for Microsoft 365](https://www.microsoft.com/en-us/microsoft-365/copilot)
+- [SaneBox product](https://www.sanebox.com/), verified 2026-06-10
+- [SaneBox pricing](https://www.sanebox.com/pricing), verified 2026-06-10
+- [SaneBox features](https://www.sanebox.com/features), verified 2026-06-10
+- [Superhuman](https://superhuman.com/), verified 2026-06-10
+- [Superhuman plans](https://superhuman.com/plans), verified 2026-06-10
+- [Shortwave](https://www.shortwave.com/), verified 2026-06-10
+- [Shortwave pricing](https://www.shortwave.com/pricing/), verified 2026-06-10
+- [Microsoft Copilot for Microsoft 365](https://www.microsoft.com/en-us/microsoft-365/copilot), verified 2026-06-10
+- [Microsoft 365 Copilot pricing](https://www.microsoft.com/en-us/microsoft-365-copilot/pricing), verified 2026-06-10
+- [Microsoft Partner Center June 2026 announcements](https://learn.microsoft.com/en-us/partner-center/announcements/2026-june), verified 2026-06-10
 
 Internal references:
 

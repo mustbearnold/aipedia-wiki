@@ -82,6 +82,98 @@ Summarize changed files, behavior shipped, tests passed, unresolved risks, and r
 
 ---
 
+## ExecPlan: June 10 2026 May 14 Guide Refresh
+
+### 1. Objective
+
+Continue the oldest-to-newest page refresh by updating the twelve live May 14 buyer guides that appear before the May 14 workflow rows in `PAGE_REFRESH_LEDGER.md`. The batch improves current-date trust, mobile buying guidance, SEO freshness, source-backed pricing caveats, internal linking, and LLM crawler summaries.
+
+### 2. Current state
+
+The next eligible live ledger rows are twelve `/guides/` pages dated 2026-05-14: Google Workspace calendar, heavy-inbox triage, unified outbound, receipt/bookkeeping, academic citations, mid-market SDR platforms, CRO, paid-social creative, transcript-first podcast editing, remote sales/training presentations, SMB sales presentations, and emotion-aware voice AI. The pages already have useful decision frameworks, but their visible titles, verification dates, sources, pricing reality sections, and some plan assumptions are May-dated. Several pages still use wide Markdown tables for pricing/setup sections that require mobile QA.
+
+### 3. Target state
+
+All twelve guides carry `last_updated` and `last_verified` of 2026-06-10, June 2026 titles/meta/verdict language, current official-source-backed plan/pricing caveats, and source lists with June 10 verification dates. The `/guides/` archive, `/explore/`, homepage metadata comments, `/llms.txt`, `/llms-full.txt`, and `PAGE_REFRESH_LEDGER.md` reflect the batch.
+
+### 4. Scope
+
+Included: the twelve May 14 guide pages, `/guides/`, `/explore/`, `/`, `/llms.txt`, `/llms-full.txt`, and the page refresh ledger. Excluded: news article pages, dead tools, the May 14 workflow rows, unrelated guides outside the current frontier, new affiliate programs, and source-registry schema work.
+
+### 5. Files likely affected
+
+`src/content/use-cases/best-ai-calendar-for-google-workspace-power-users.md`, `src/content/use-cases/best-ai-email-triage-for-heavy-inboxes.md`, `src/content/use-cases/best-ai-outbound-tool-for-unified-prospecting-and-sequencing.md`, `src/content/use-cases/best-ai-receipt-tool-for-bookkeepers.md`, `src/content/use-cases/best-ai-research-tool-for-academic-citations.md`, `src/content/use-cases/best-ai-sales-platform-for-mid-market-sdr-teams.md`, `src/content/use-cases/best-ai-tool-for-conversion-rate-optimization.md`, `src/content/use-cases/best-ai-tool-for-paid-social-creative-velocity.md`, `src/content/use-cases/best-podcast-editor-for-transcript-first-editing.md`, `src/content/use-cases/best-presentation-tool-for-remote-sales-and-training.md`, `src/content/use-cases/best-presentation-tool-for-smb-sales-teams.md`, `src/content/use-cases/best-voice-ai-for-emotion-aware-products.md`, `src/pages/guides/index.astro`, `src/pages/explore/index.astro`, `src/pages/index.astro`, `src/pages/llms.txt.ts`, `src/pages/llms-full.txt.ts`, `PAGE_REFRESH_LEDGER.md`, and this plan.
+
+### 6. Data model impact
+
+No schema changes. Guide frontmatter and Markdown source metadata are refreshed in place.
+
+### 7. SEO impact
+
+The batch removes May-only title/meta language from twelve indexable buyer guides, refreshes the parent guide archive summary, and keeps crawlable internal links aligned with the current recommendation set.
+
+### 8. Conversion impact
+
+No new affiliate programs are added. Existing commercial CTAs remain honest and source-backed; pricing sections should avoid over-specific stale claims where official pages are region-, seat-, credit-, or sales-led.
+
+### 9. Mobile UX impact
+
+The guide pages must remain complete and readable at 360, 390, 430, 768, and desktop widths. Any wide Markdown table that creates overflow should be converted to stacked guidance or otherwise made mobile-safe.
+
+### 10. Implementation steps
+
+1. Verify June 2026 official sources for the guide recommendation set.
+2. Refresh guide frontmatter, visible titles, verdicts, pricing caveats, and sources.
+3. Update affected parent/top-layer pages and LLM crawl surfaces.
+4. Regenerate and inspect the page refresh ledger.
+5. Run source/fact/link/build checks plus responsive QA.
+6. Commit and push the clean batch if validation passes.
+
+### 11. Verification commands
+
+`npm run ledger:pages`
+
+`npm run ledger:pages:check`
+
+`npm run guard:check`
+
+`npm run check:links`
+
+`npm run audit:sources`
+
+`npm run audit:facts`
+
+`npm run test:scripts`
+
+`npm run check`
+
+`npm run build:fast`
+
+`git diff --check`
+
+Static responsive QA over `/`, `/guides/`, `/explore/`, `/llms.txt`, `/llms-full.txt`, and all twelve refreshed guide routes at 360, 390, 430, 768, and 1024px.
+
+### 12. Acceptance criteria
+
+All twelve guide pages are verified on 2026-06-10, stale May dates and unsupported fixed-price shortcuts are removed or reframed, affected parent/top-layer pages and LLM surfaces are current, the ledger reflects the true refresh scope, mobile QA has no horizontal overflow, and validation passes or failures are documented with risk.
+
+### 13. Risks and mitigations
+
+Many vendors in this batch use region-specific, usage-based, annual-billing, or sales-led pricing. The refresh should prefer official pages, avoid unsupported exact totals when plan pages are dynamic, and phrase price guidance around buyer impact rather than false precision.
+
+### 14. Progress log
+
+- 2026-06-10: Identified the twelve May 14 guide rows as the next eligible live frontier after pushing the May 13 workflow batch. Started official-source verification for scheduling, email, outbound, bookkeeping, research, CRO, creative, podcasting, presentation, and voice AI tools.
+- 2026-06-10: Refreshed all twelve guide pages to June 10 frontmatter and visible verification language, converted pricing/setup reality tables into stacked mobile-friendly buying guidance, updated source blocks with current official-source verification dates, and added current pricing/credit/seat caveats for Reclaim, Motion, SaneBox, Superhuman, Shortwave, Microsoft Copilot, Amplemarket, Apollo, Clay, Instantly, Dext, Hubdoc, AutoEntry, Ramp, Consensus, Elicit, Unbounce, VWO, Convert, Surfer, AdCreative, Descript, Riverside, Captions, Adobe Podcast, Prezi, Beautiful.ai, Pitch, Gamma, Decktopus, Hume, ElevenLabs, Cartesia, Deepgram, and AssemblyAI.
+- 2026-06-10: Updated `/guides/`, `/explore/`, homepage, `/categories/`, `/llms.txt`, and `/llms-full.txt` maintenance metadata, then regenerated `PAGE_REFRESH_LEDGER.md`. The twelve May 14 guide rows now appear as June 10 rows; the remaining May 14 frontier is the workflow batch beginning with `/workflows/accountant-stack/`.
+- 2026-06-10: Validation passed with `npm run ledger:pages`, `npm run ledger:pages:check`, `npm run guard:check`, `npm run check:links`, `npm run audit:sources`, `npm run audit:facts`, `npm run test:scripts`, `npm run check`, `npm run build:fast`, `git diff --check`, an in-app browser sanity check on the refreshed calendar guide at a 390px viewport, and static Playwright responsive QA for 17 routes across 360, 390, 430, 768, and 1024px.
+
+### 15. Final report
+
+Shipped the June 10, 2026 guide refresh for the twelve May 14 buyer guides covering scheduling, inbox triage, outbound/sales, receipt capture, academic citations, CRO, paid-social creative, podcast editing, remote/SMB presentation tools, and emotion-aware voice AI. Parent `/guides/`, `/explore/`, homepage, `/categories/`, `/llms.txt`, `/llms-full.txt`, and `PAGE_REFRESH_LEDGER.md` were refreshed in the same batch. Validation passed with the commands listed above. Remaining oldest eligible live rows are the May 14 workflow pages beginning with `/workflows/accountant-stack/`.
+
+---
+
 ## ExecPlan: June 10 2026 Workflow Stack Refresh
 
 ### 1. Objective

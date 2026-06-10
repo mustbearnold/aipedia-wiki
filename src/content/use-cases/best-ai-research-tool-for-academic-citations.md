@@ -1,10 +1,10 @@
 ---
 type: use-case
 slug: best-ai-research-tool-for-academic-citations
-title: "Best AI Research Tool for Academic Citations (May 2026)"
+title: "Best AI Research Tool for Academic Citations (June 2026)"
 seo_title: "Best AI Research Tool for Academic Citations: Consensus, Elicit, Semantic Scholar (2026)"
-meta_description: "Verified May 14, 2026: the best AI research tools for source-backed academic citations. Consensus, Elicit, Semantic Scholar, Scite, and honest picks by use case."
-description: "May 14, 2026 buyer guide to the best AI research tools that surface real, citable academic sources, with picks for grad students, faculty, and policy researchers."
+meta_description: "Verified June 10, 2026: the best AI research tools for source-backed academic citations. Consensus, Elicit, Semantic Scholar, Scite, and honest picks by use case."
+description: "June 10, 2026 buyer guide to the best AI research tools that surface real, citable academic sources, with picks for grad students, faculty, and policy researchers."
 tools_mentioned: ["consensus", "elicit", "semantic-scholar"]
 guide_picks:
   best_overall:
@@ -36,8 +36,8 @@ guide_picks:
       - label: "Elicit pricing"
         url: "https://elicit.com/pricing"
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-14
-last_verified: 2026-05-14
+last_updated: 2026-06-10
+last_verified: 2026-06-10
 update_frequency: monthly
 related:
   - href: /tools/consensus/
@@ -58,17 +58,17 @@ related:
     kind: guide
 ---
 
-# Best AI Research Tool for Academic Citations (May 2026)
+# Best AI Research Tool for Academic Citations (June 2026)
 
 A graduate student writing a thesis, a researcher submitting a grant, or a policy analyst building a brief cannot use ChatGPT for citations. The model will hallucinate plausible-looking paper titles, authors, and DOIs that do not exist. This is well-documented and has appeared in retracted legal filings, retracted academic papers, and at least one US judicial sanction.
 
 The right AI research tools for citation work do not synthesize answers from a model's training data. They retrieve, parse, and cite actual papers. This guide picks honestly across the three workflows that actually matter: citation-backed question answering, structured literature review, and free academic search.
 
-AiPedia verified pricing and capabilities on May 14, 2026. The short version: **Consensus** wins citation-backed search because the entire product is built around grounding answers in retrieved papers. **Elicit** wins structured literature reviews. **Semantic Scholar** is the right free fallback for paper discovery without AI summarization.
+AiPedia verified pricing and capabilities on June 10, 2026. The short version: **Consensus** wins citation-backed search because the entire product is built around grounding answers in retrieved papers. **Elicit** wins structured literature reviews. **Semantic Scholar** is the right free fallback for paper discovery without AI summarization.
 
 ## Quick Verdict
 
-Use [Consensus](/tools/consensus/) when you have a research question and want an AI-generated answer with the supporting papers visible inline. Consensus parses 200M+ paper abstracts, applies a relevance and quality filter, and returns answers with paper-level citations rather than synthesizing prose that cannot be traced to sources.
+Use [Consensus](/tools/consensus/) when you have a research question and want an AI-generated answer with the supporting papers visible inline. Consensus searches a very large scientific corpus, applies a relevance and quality filter, and returns answers with paper-level citations rather than synthesizing prose that cannot be traced to sources.
 
 Use [Elicit](/tools/elicit/) when the workflow is a literature review and you need to extract specific data points across dozens of papers into a structured table. Different bottleneck than Consensus.
 
@@ -186,25 +186,23 @@ Not a replacement for Consensus or Elicit. A companion tool when citation contex
 
 ## Pricing Reality
 
-Verified May 14, 2026:
+Verified June 10, 2026:
 
-| Tool | Pricing | What you get |
-|---|---|---|
-| Consensus | Free tier; Premium ~$11.99/mo | Unlimited search, GPT-4-class synthesis, Consensus Meter, study quality filters |
-| Elicit | Free tier; Plus ~$12/mo | Higher extraction limits, better workflow features |
-| Semantic Scholar | Fully free | Search and citation graph |
-| Scite.ai | Limited free; Personal ~$20/mo | Citation context, alerts, dashboards |
+Use this as buying guidance, not a fixed stack total:
 
-Annual billing typically cuts 15-30%. Institutional pricing for Consensus and Elicit covers labs and departments.
+- **Consensus:** Free is enough for occasional checks. Current Consensus help pages list Pro at $15/month or $120/year, and Deep at $65/month or $540/year for heavier literature review use.
+- **Elicit:** Free is useful for casual exploration. The current pricing page lists Pro at $49/month and Scale at $169/month for heavier systematic-review and collaboration workflows.
+- **Semantic Scholar:** Still the best free discovery layer when you need search, related work, citation graph context, and API-backed literature metadata without paying for AI synthesis.
+- **Scite.ai:** Keep it as a paid citation-context specialist. Use the current quote/page for final pricing because academic, personal, and institutional access can vary.
+
+Annual billing and institution/team plans change the effective price, so students and labs should check campus access before paying personally.
 
 ## Setup Time
 
-| Tool | First useful result in |
-|---|---|
-| Consensus | 2 minutes (ask a question) |
-| Elicit | 10-15 minutes (set up extraction columns) |
-| Semantic Scholar | 1 minute (search) |
-| Scite.ai | 2 minutes (search a known paper or DOI) |
+- **Consensus:** 2 minutes to ask a research question and inspect cited papers.
+- **Elicit:** 10-15 minutes to set up extraction columns and review the first structured table.
+- **Semantic Scholar:** 1 minute for a search or citation graph lookup.
+- **Scite.ai:** 2 minutes when you already have a paper title, DOI, or claim to investigate.
 
 ## Failure Modes
 
@@ -252,12 +250,14 @@ For citation work, yes, structurally. ChatGPT with web search will still synthes
 
 ## Sources
 
-- [Consensus product page](https://consensus.app/)
-- [Consensus pricing](https://consensus.app/home/pricing/)
-- [Elicit product page](https://elicit.com/)
-- [Elicit pricing](https://elicit.com/pricing)
-- [Semantic Scholar](https://www.semanticscholar.org/)
-- [Scite.ai](https://scite.ai/)
+- [Consensus product page](https://consensus.app/), verified 2026-06-10
+- [Consensus Pro subscription](https://help.consensus.app/en/articles/11408820-what-do-you-get-with-a-pro-subscription), verified 2026-06-10
+- [Consensus subscription plans](https://help.consensus.app/en/articles/10087865-subscription-plans), verified 2026-06-10
+- [Elicit product page](https://elicit.com/), verified 2026-06-10
+- [Elicit pricing](https://elicit.com/pricing), verified 2026-06-10
+- [Semantic Scholar](https://www.semanticscholar.org/), verified 2026-06-10
+- [Semantic Scholar API](https://www.semanticscholar.org/product/api), verified 2026-06-10
+- [Scite.ai](https://scite.ai/), verified 2026-06-10
 
 Internal references:
 

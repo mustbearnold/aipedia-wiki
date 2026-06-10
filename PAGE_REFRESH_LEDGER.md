@@ -23,18 +23,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-04 | /tools/tome/ | Tool | Yes | frontmatter | src/content/tools/tome.md |
 | 2026-05-05 | /tools/dalle/ | Tool | Yes | frontmatter | src/content/tools/dalle.md |
 | 2026-05-13 | /tools/grok-code-fast/ | Tool | Yes | frontmatter | src/content/tools/grok-code-fast.md |
-| 2026-05-14 | /guides/best-ai-calendar-for-google-workspace-power-users/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-calendar-for-google-workspace-power-users.md |
-| 2026-05-14 | /guides/best-ai-email-triage-for-heavy-inboxes/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-email-triage-for-heavy-inboxes.md |
-| 2026-05-14 | /guides/best-ai-outbound-tool-for-unified-prospecting-and-sequencing/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-outbound-tool-for-unified-prospecting-and-sequencing.md |
-| 2026-05-14 | /guides/best-ai-receipt-tool-for-bookkeepers/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-receipt-tool-for-bookkeepers.md |
-| 2026-05-14 | /guides/best-ai-research-tool-for-academic-citations/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-research-tool-for-academic-citations.md |
-| 2026-05-14 | /guides/best-ai-sales-platform-for-mid-market-sdr-teams/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-sales-platform-for-mid-market-sdr-teams.md |
-| 2026-05-14 | /guides/best-ai-tool-for-conversion-rate-optimization/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-tool-for-conversion-rate-optimization.md |
-| 2026-05-14 | /guides/best-ai-tool-for-paid-social-creative-velocity/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-tool-for-paid-social-creative-velocity.md |
-| 2026-05-14 | /guides/best-podcast-editor-for-transcript-first-editing/ | Guide | Yes | frontmatter | src/content/use-cases/best-podcast-editor-for-transcript-first-editing.md |
-| 2026-05-14 | /guides/best-presentation-tool-for-remote-sales-and-training/ | Guide | Yes | frontmatter | src/content/use-cases/best-presentation-tool-for-remote-sales-and-training.md |
-| 2026-05-14 | /guides/best-presentation-tool-for-smb-sales-teams/ | Guide | Yes | frontmatter | src/content/use-cases/best-presentation-tool-for-smb-sales-teams.md |
-| 2026-05-14 | /guides/best-voice-ai-for-emotion-aware-products/ | Guide | Yes | frontmatter | src/content/use-cases/best-voice-ai-for-emotion-aware-products.md |
 | 2026-05-14 | /workflows/accountant-stack/ | Workflow | Yes | frontmatter | src/content/workflows/accountant-stack.md |
 | 2026-05-14 | /workflows/agency-sales-stack/ | Workflow | Yes | frontmatter | src/content/workflows/agency-sales-stack.md |
 | 2026-05-14 | /workflows/consultant-stack/ | Workflow | Yes | frontmatter | src/content/workflows/consultant-stack.md |
@@ -678,7 +666,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-08 | /tools/qdrant/ | Tool | Yes | frontmatter | src/content/tools/qdrant.md |
 | 2026-06-09 | /categories/ai-music/ | Category | Yes | frontmatter | src/content/categories/ai-music.md |
 | 2026-06-09 | /compare/ | Static page | Yes | git | src/pages/compare/index.astro |
-| 2026-06-09 | /guides/ | Static page | Yes | git | src/pages/guides/index.astro |
 | 2026-06-09 | /tools/reclaim-ai/ | Tool | Yes | frontmatter | src/content/tools/reclaim-ai.md |
 | 2026-06-09 | /tools/reflect/ | Tool | Yes | frontmatter | src/content/tools/reflect.md |
 | 2026-06-09 | /tools/reka/ | Tool | Yes | frontmatter | src/content/tools/reka.md |
@@ -697,7 +684,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-09 | /tools/tines/ | Tool | Yes | frontmatter | src/content/tools/tines.md |
 | 2026-06-09 | /tools/together-ai/ | Tool | Yes | frontmatter | src/content/tools/together-ai.md |
 | 2026-06-10 | / | Static page | Yes | working tree | src/pages/index.astro |
-| 2026-06-10 | /categories/ | Static page | Yes | git | src/pages/categories/index.astro |
+| 2026-06-10 | /categories/ | Static page | Yes | working tree | src/pages/categories/index.astro |
 | 2026-06-10 | /categories/ai-automation/ | Category | Yes | frontmatter | src/content/categories/ai-automation.md |
 | 2026-06-10 | /categories/ai-chatbots/ | Category | Yes | frontmatter | src/content/categories/ai-chatbots.md |
 | 2026-06-10 | /categories/ai-coding/ | Category | Yes | frontmatter | src/content/categories/ai-coding.md |
@@ -711,6 +698,19 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-10 | /categories/ai-voice/ | Category | Yes | frontmatter | src/content/categories/ai-voice.md |
 | 2026-06-10 | /categories/ai-writing/ | Category | Yes | frontmatter | src/content/categories/ai-writing.md |
 | 2026-06-10 | /explore/ | Static page | Yes | working tree | src/pages/explore/index.astro |
+| 2026-06-10 | /guides/ | Static page | Yes | working tree | src/pages/guides/index.astro |
+| 2026-06-10 | /guides/best-ai-calendar-for-google-workspace-power-users/ | Guide | Yes | working tree | src/content/use-cases/best-ai-calendar-for-google-workspace-power-users.md |
+| 2026-06-10 | /guides/best-ai-email-triage-for-heavy-inboxes/ | Guide | Yes | working tree | src/content/use-cases/best-ai-email-triage-for-heavy-inboxes.md |
+| 2026-06-10 | /guides/best-ai-outbound-tool-for-unified-prospecting-and-sequencing/ | Guide | Yes | working tree | src/content/use-cases/best-ai-outbound-tool-for-unified-prospecting-and-sequencing.md |
+| 2026-06-10 | /guides/best-ai-receipt-tool-for-bookkeepers/ | Guide | Yes | working tree | src/content/use-cases/best-ai-receipt-tool-for-bookkeepers.md |
+| 2026-06-10 | /guides/best-ai-research-tool-for-academic-citations/ | Guide | Yes | working tree | src/content/use-cases/best-ai-research-tool-for-academic-citations.md |
+| 2026-06-10 | /guides/best-ai-sales-platform-for-mid-market-sdr-teams/ | Guide | Yes | working tree | src/content/use-cases/best-ai-sales-platform-for-mid-market-sdr-teams.md |
+| 2026-06-10 | /guides/best-ai-tool-for-conversion-rate-optimization/ | Guide | Yes | working tree | src/content/use-cases/best-ai-tool-for-conversion-rate-optimization.md |
+| 2026-06-10 | /guides/best-ai-tool-for-paid-social-creative-velocity/ | Guide | Yes | working tree | src/content/use-cases/best-ai-tool-for-paid-social-creative-velocity.md |
+| 2026-06-10 | /guides/best-podcast-editor-for-transcript-first-editing/ | Guide | Yes | working tree | src/content/use-cases/best-podcast-editor-for-transcript-first-editing.md |
+| 2026-06-10 | /guides/best-presentation-tool-for-remote-sales-and-training/ | Guide | Yes | working tree | src/content/use-cases/best-presentation-tool-for-remote-sales-and-training.md |
+| 2026-06-10 | /guides/best-presentation-tool-for-smb-sales-teams/ | Guide | Yes | working tree | src/content/use-cases/best-presentation-tool-for-smb-sales-teams.md |
+| 2026-06-10 | /guides/best-voice-ai-for-emotion-aware-products/ | Guide | Yes | working tree | src/content/use-cases/best-voice-ai-for-emotion-aware-products.md |
 | 2026-06-10 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
 | 2026-06-10 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
 | 2026-06-10 | /news/ | Static page | Yes | page metadata | src/pages/news/index.astro |
@@ -744,8 +744,8 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-10 | /trends/open-source-parity/ | Trend | Yes | frontmatter | src/content/trends/open-source-parity.md |
 | 2026-06-10 | /trends/sovereign-ai-procurement/ | Trend | Yes | frontmatter | src/content/trends/sovereign-ai-procurement.md |
 | 2026-06-10 | /trends/vibe-coding/ | Trend | Yes | frontmatter | src/content/trends/vibe-coding.md |
-| 2026-06-10 | /workflows/ | Static page | Yes | working tree | src/pages/workflows/index.astro |
-| 2026-06-10 | /workflows/agentic-coding-workflow/ | Workflow | Yes | working tree | src/content/workflows/agentic-coding-workflow.md |
-| 2026-06-10 | /workflows/design-agency-replacement/ | Workflow | Yes | working tree | src/content/workflows/design-agency-replacement.md |
-| 2026-06-10 | /workflows/podcast-automation-stack/ | Workflow | Yes | working tree | src/content/workflows/podcast-automation-stack.md |
-| 2026-06-10 | /workflows/research-assistant-stack/ | Workflow | Yes | working tree | src/content/workflows/research-assistant-stack.md |
+| 2026-06-10 | /workflows/ | Static page | Yes | git | src/pages/workflows/index.astro |
+| 2026-06-10 | /workflows/agentic-coding-workflow/ | Workflow | Yes | frontmatter | src/content/workflows/agentic-coding-workflow.md |
+| 2026-06-10 | /workflows/design-agency-replacement/ | Workflow | Yes | frontmatter | src/content/workflows/design-agency-replacement.md |
+| 2026-06-10 | /workflows/podcast-automation-stack/ | Workflow | Yes | frontmatter | src/content/workflows/podcast-automation-stack.md |
+| 2026-06-10 | /workflows/research-assistant-stack/ | Workflow | Yes | frontmatter | src/content/workflows/research-assistant-stack.md |
