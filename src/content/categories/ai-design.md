@@ -5,10 +5,10 @@ title: AI Design & App Building
 description: Current AI design tools and app builders for social creative, product design, design systems, web prototypes, full-stack apps, and Vercel-native UI workflows.
 tool_count: 9
 seo_title: "Best AI Design & App Builder Tools (June 2026)"
-meta_description: "Updated June 9, 2026: compare Canva AI, Figma, Midjourney, Lovart, Adobe Firefly, Recraft V4, Google Stitch, Framer, Lovable, Rork, Base44, Bolt.new, and v0 by buyer fit, pricing, workflow, credits, and production risk."
+meta_description: "Updated June 10, 2026: compare Canva AI, Figma, Midjourney, Lovart, Uizard, Unbounce, Adobe Firefly, Recraft V4, Google Stitch, Framer, Lovable, Rork, Base44, Bolt.new, and v0 by buyer fit, pricing, workflow, credits, and production risk."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-09
-last_verified: 2026-06-09
+last_updated: 2026-06-10
+last_verified: 2026-06-10
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -34,6 +34,8 @@ As of June 7, 2026, start with the job:
 
 **Use [Figma](/tools/figma/) when design quality, design systems, multiplayer review, and handoff matter.** Figma's June 5 pricing check lists AI add-ons, daily/monthly AI credits by plan, Figma Make, Figma Sites, Dev Mode, MCP support, libraries, variables, governance, and enterprise seats. The June 5 model-selection check confirms Figma Make has multiple selectable non-default models, a default-model caveat, and credit-burn caveats. Pick Figma when the artifact has to survive design critique and developer handoff, not just look plausible in a generator.
 
+**Use [Uizard](/tools/uizard/) when non-designers need editable UI mockups before a Figma handoff.** The June 10 check keeps Free at 3 AI generations/month with Autodesigner 1.5, Pro at $12/month billed annually with 500 generations and Autodesigner 2.0, Business at $39/month billed annually with 5,000 generations, and Enterprise custom. Treat React/CSS handoff as component-level developer reference, because Uizard's own export docs still say full-project HTML/JavaScript export is not available.
+
 **Use [Midjourney](/tools/midjourney/) when the job is visual ideation, art direction, concept imagery, or campaign moodboards.** Midjourney's June 5 official plan check keeps Basic, Standard, Pro, and Mega as subscriptions built around generation capacity and GPU time, with V8.1 documented as the current newer image model. Treat it as an ideation engine, not a product design system or layout production workflow.
 
 **Use [Lovart](/tools/lovart/) when the buyer wants an AI design agent rather than a template editor or raw image model.** The June 8 check keeps Lovart in the brand-exploration, marketing-visual, mockup, moodboard, and targeted-edit lane. Its pricing is credit-based: monthly subscription credits do not roll over, top-up credits do not expire, Relax Generation is plan-limited and queued, and multi-user work should use the Team Plan instead of shared individual accounts.
@@ -56,6 +58,8 @@ As of June 7, 2026, start with the job:
 
 **Use [Framer AI](/tools/framer-ai/) when the job is a marketing site, landing page, portfolio, or polished web presence rather than a full app.** Framer's June 2 pricing check keeps Free, Basic at $10/month annual, Pro at $30/month annual, Scale at $100/month annual, and Enterprise custom. The important buyer split is website publishing and CMS limits, not app backend generation.
 
+**Use [Unbounce](/tools/unbounce/) when the design job is paid-campaign conversion, not general web design.** The June 10 check keeps Starter at $29/month or $22/month annual, Build at $99/$74, Experiment at $149/$112, Optimize at $249/$187, and Concierge/Agency custom. Build is the practical floor for active campaigns, Experiment is the A/B-testing inspection point, and Optimize is the tier to inspect when Smart Traffic is the reason to buy.
+
 ## Buyer Paths
 
 | Buyer job | Start with | Why | Watch out |
@@ -63,6 +67,7 @@ As of June 7, 2026, start with the job:
 | Social posts, thumbnails, ads, classroom assets, presentations | [Canva](/tools/canva/) | Fastest path from idea to publishable creative for non-designers | Regional pricing and AI usage limits can vary; verify the plan in Canva before upgrading |
 | Text-to-diagram visual explanation | [Napkin AI](/tools/napkin-ai/) | Turns written ideas into flowcharts, diagrams, and slide-ready visuals | Not a design system, brand suite, or data-visualization engine |
 | Product design, UX review, design systems, developer handoff | [Figma](/tools/figma/) | Best collaborative design surface, with AI credits, Dev Mode, MCP, libraries, and governance | AI output still needs design judgment and component discipline |
+| First-draft UI mockups for non-designers | [Uizard](/tools/uizard/) | Turns prompts, screenshots, and sketches into editable screens quickly | React/CSS handoff is component-level; no full-project code export |
 | Visual ideation, campaign moodboards, concept art | [Midjourney](/tools/midjourney/) | Strong image-style exploration before final production | Not a design system, layout app, or final client-asset workflow without review |
 | AI design-agent exploration, campaign mockups, brand directions | [Lovart](/tools/lovart/) | Turns briefs into design directions, visuals, mockups, and targeted edits before human polish | Credit usage varies by task complexity; team use should use the Team Plan |
 | Adobe-first image, vector, and creative production | [Adobe Firefly](/tools/adobe-firefly/) | Fits Creative Cloud and credit-based Adobe generation workflows | Compare Firefly plans, Creative Cloud plans, and current credit rules before buying |
@@ -73,12 +78,15 @@ As of June 7, 2026, start with the job:
 | Browser-based app prototyping | [Bolt.new](/tools/bolt/) | Runs app-building work in the browser with generous free token limits | Larger projects use more tokens because file-system context is part of prompts |
 | Experimental AI-native design canvas | [Google Stitch](/tools/google-stitch/) | Best place to test Google's vibe-design direction and voice/canvas workflow | Labs product: verify access, quotas, export path, and enterprise fit before relying on it |
 | AI-assisted marketing site design | [Framer AI](/tools/framer-ai/) | Strong for fast sites, CMS-backed pages, AEO scanning, and designer-friendly publishing | Not a full-stack app builder; page, CMS, and bandwidth limits matter |
+| Paid-campaign landing pages and testing | [Unbounce](/tools/unbounce/) | Campaign pages, popups, sticky bars, A/B testing, Smart Copy, and Smart Traffic in one conversion workflow | Starter is constrained; serious teams should inspect Build, Experiment, or Optimize |
 
 ## Current Shortlist
 
 **Best for non-designers: Canva.** The reason is not just AI generation. Canva wins because it combines templates, brand controls, image/video/editor workflows, AI writing, social formats, education use cases, and a familiar editor. If the buyer is a marketer, creator, teacher, founder, or small business operator, Canva usually turns intent into a publishable asset faster than Figma or an app builder.
 
 **Best pro design suite: Figma.** Figma is still the pro team default because design is social: designers, PMs, engineers, marketers, and stakeholders need comments, versions, libraries, variables, prototypes, Dev Mode, and governance. Figma Make and Sites make the category more competitive with app builders, but the strongest reason to buy Figma is still shared product design discipline.
+
+**Best non-designer UI mockup tool: Uizard.** Use it when a founder, PM, or engineer needs editable screens before a designer gets involved. Do not sell it as production code generation: the current export docs keep full-project code export off the table.
 
 **Best image ideation tool: Midjourney.** Use Midjourney when a designer or creative team needs many visual directions quickly. Do not mistake it for a design system, a brand-governed production surface, or a layout handoff tool.
 
@@ -101,6 +109,8 @@ As of June 7, 2026, start with the job:
 **Best browser builder: Bolt.new.** Choose Bolt when the buyer wants to build in a browser environment and test quickly without a local setup. The free tier is useful for evaluation; serious use moves into Pro or Teams when token ceilings and collaboration matter.
 
 **Best experimental design canvas: Google Stitch.** Stitch is strategically important because it attacks the idea stage before Figma, v0, Lovable, or Bolt get involved. It is where founders and designers should test voice-directed UI exploration and agentic design critique. It is not the default production design system yet.
+
+**Best paid-campaign landing page platform: Unbounce.** Choose it when page conversion affects paid-media economics and the buyer will actually build, test, and improve campaign destinations. Do not buy it as a simple one-page website builder.
 
 ## Pricing Reality
 
@@ -130,6 +140,10 @@ Google Stitch's official March and May 2026 updates are product-focused, not dur
 
 Framer is site-plan based. The June 2 public pricing check lists Free, Basic, Pro, Scale, and Enterprise, with Basic at $10/month annual, Pro at $30/month annual, and Scale at $100/month annual. Verify page, CMS collection, CMS item, bandwidth, and collaboration needs before moving a client site.
 
+Uizard is generation-cap and plan based. The June 10 public pricing check lists Free with 3 AI generations/month, Pro at $12/month billed annually with 500 generations, Business at $39/month billed annually with 5,000 generations, and Enterprise custom with unlimited generation positioning.
+
+Unbounce is campaign-plan and traffic-limit based. The June 10 public pricing check lists Starter, Build, Experiment, Optimize, Concierge, and Agency; buyer math should start with visitor limits, root domains, users, A/B testing, and Smart Traffic rather than the $29 headline.
+
 ## What Hurts Trust
 
 Do not call every app builder a design tool. Lovable, Bolt, and v0 can generate interfaces, but the purchase question is app-building scope, code ownership, deployment, backend, and review workflow.
@@ -145,6 +159,10 @@ Do not claim Stitch has a stable buyer plan or fixed quota unless the current of
 Do not publish unsourced model-routing or model-version claims as if they are confirmed product facts for this category. Model routing changes quickly and should be sourced per tool page, not invented in category copy.
 
 Do not make a wide table the only mobile experience. Mobile buyers need top picks, plain-language use cases, pricing caveats, and watch-outs before they compare rows.
+
+Do not describe Uizard handoff as full app export. Current Uizard export docs limit React/CSS to individual components in Handoff Mode.
+
+Do not position Unbounce Starter as the default serious paid-campaign tier. Its 5 pages, 500 visitors, 1 user, and 1 root domain make it an entry lane, not the active-campaign baseline.
 
 ## Money Pages To Build Next
 
@@ -201,6 +219,12 @@ Do not make a wide table the only mobile experience. Mobile buyers need top pick
 - [Bolt.new pricing](https://bolt.new/pricing) (verified 2026-06-06)
 - [v0 pricing](https://v0.app/pricing) (verified 2026-06-06)
 - [v0 documentation](https://v0.app/docs) (verified 2026-06-06)
+- [Uizard pricing](https://uizard.io/pricing/) (verified 2026-06-10)
+- [Uizard Autodesigner 2.0](https://uizard.io/autodesigner/) (verified 2026-06-10)
+- [Uizard exporting projects and Handoff Mode](https://support.uizard.io/en/articles/6380330-exporting-projects) (verified 2026-06-10)
+- [Unbounce pricing](https://unbounce.com/pricing/) (verified 2026-06-10)
+- [Unbounce plan comparison](https://unbounce.com/compare-plan-features/) (verified 2026-06-10)
+- [Unbounce features](https://unbounce.com/product/features/) (verified 2026-06-10)
 - [Freepik plans and pricing docs](https://www.freepik.com/ai/docs/plans-and-pricing) (verified 2026-06-07)
 - [Recraft V4 docs](https://www.recraft.ai/docs/recraft-models/recraft-V4) (verified 2026-06-07)
 - [Recraft V4 announcement](https://www.recraft.ai/blog/introducing-recraft-v4-design-taste-meets-image-generation) (verified 2026-06-07)

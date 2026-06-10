@@ -4,6 +4,15 @@
  *
  * Composes the same god-tier components used across the site:
  *   wiki search · portal index · buyer shortcuts · tool records · category rail · news list · TrustPanel
+ * Refresh metadata: 2026-06-10 homepage inspected after watsonx
+ * Orchestrate, Weaviate, Whisper, and Wispr Flow active-tool refresh;
+ * no hardcoded homepage copy required beyond shared tool/category/news data.
+ * Refresh metadata: 2026-06-10 homepage inspected after Rows, Vidu,
+ * Voiceflow, and Wan active-tool refresh; no hardcoded homepage copy
+ * required beyond shared tool/category/news data.
+ * Refresh metadata: 2026-06-10 homepage inspected after Tripo3D,
+ * TypingMind, Uizard, and Unbounce active-tool refresh; no hardcoded
+ * homepage copy required beyond shared tool/category/news data.
  * Refresh metadata: 2026-06-10 homepage news rail now reflects June 9-10
  * AI tools coverage across Claude Fable 5/Mythos 5, Apple Siri AI and EU
  * rollout risk, Copilot CLI custom agents, Datadog DASH agent observability
@@ -497,7 +506,7 @@ const homepageSources = [
 const monthShort = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 const latestNewsDateIso = latestNews[0]?.date ?? '';
 const latestNewsDate = latestNewsDateIso ? new Date(latestNewsDateIso + 'T12:00:00Z') : null;
-const freshLabel = 'Page refreshed Jun 9';
+const freshLabel = 'Page refreshed Jun 10';
 const newsThroughLabel = latestNewsDate && !isNaN(latestNewsDate.getTime())
   ? `Latest archive entry: ${monthShort[latestNewsDate.getUTCMonth()]} ${latestNewsDate.getUTCDate()}`
   : 'News archive';

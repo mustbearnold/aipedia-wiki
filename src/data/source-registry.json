@@ -62,7 +62,17 @@
       "url": "https://www.prnewswire.com/news-releases/think-2026-ibm-delivers-the-blueprint-for-the-ai-operating-model-as-the-ai-divide-widens-302762136.html",
       "type": "newsroom",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-10"
+    },
+    {
+      "id": "ibm-watsonx-orchestrate-release-notes",
+      "label": "IBM watsonx Orchestrate release notes",
+      "url": "https://www.ibm.com/docs/en/watsonx/watson-orchestrate/base?topic=releases-release-notes-2025",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-10"
     },
     {
       "id": "ibm-watsonx-orchestrate-announcement",
@@ -70,7 +80,8 @@
       "url": "https://www.ibm.com/new/announcements/manage-all-your-ai-agents-in-one-place-with-watsonx-orchestrate",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-10"
     },
     {
       "id": "ibm-watsonx-portfolio",
@@ -78,7 +89,8 @@
       "url": "https://www.ibm.com/watsonx",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-10"
     },
     {
       "id": "activepieces-docs",
@@ -5823,7 +5835,8 @@
       "label": "OpenAI API pricing",
       "url": "https://openai.com/api/pricing/",
       "type": "pricing",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-10"
     },
     {
       "id": "openai-chatgpt-pricing",
@@ -5912,7 +5925,8 @@
       "url": "https://openai.com/api/pricing/",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-10"
     },
     {
       "id": "openclaw-official",
@@ -6921,7 +6935,8 @@
       "url": "https://rows.com/ai",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-10"
     },
     {
       "id": "rows-docs",
@@ -6929,7 +6944,8 @@
       "url": "https://rows.com/docs",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-10"
     },
     {
       "id": "rows-official",
@@ -6937,7 +6953,8 @@
       "url": "https://rows.com/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-10"
     },
     {
       "id": "rows-pricing",
@@ -6945,7 +6962,8 @@
       "url": "https://rows.com/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-10"
     },
     {
       "id": "runway-help",
@@ -7793,7 +7811,17 @@
       "url": "https://www.tripo3d.ai/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-10"
+    },
+    {
+      "id": "tripo3d-v3-ultra",
+      "label": "Tripo v3.0 Ultra release",
+      "url": "https://www.tripo3d.ai/blog/introducing-tripo-new-algorithm3",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-10"
     },
     {
       "id": "typeface-official",
@@ -7819,7 +7847,17 @@
       "url": "https://www.typingmind.com/buy",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-10"
+    },
+    {
+      "id": "typingmind-teams-pricing",
+      "label": "TypingMind Teams pricing",
+      "url": "https://custom.typingmind.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-10"
     },
     {
       "id": "udio-pricing",
@@ -7872,7 +7910,8 @@
       "url": "https://uizard.io/pricing/",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-10"
     },
     {
       "id": "uizard-autodesigner",
@@ -7880,7 +7919,8 @@
       "url": "https://uizard.io/autodesigner/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-10"
     },
     {
       "id": "uizard-screenshot-scanner",
@@ -7888,7 +7928,8 @@
       "url": "https://support.uizard.io/en/articles/7915206-using-screenshot-scanner",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-10"
     },
     {
       "id": "uizard-wireframe-scanner",
@@ -7896,7 +7937,8 @@
       "url": "https://support.uizard.io/en/articles/6435370-using-wireframe-scanner",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-10"
     },
     {
       "id": "uizard-exporting-projects",
@@ -7904,7 +7946,8 @@
       "url": "https://support.uizard.io/en/articles/6380330-exporting-projects",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-10"
     },
     {
       "id": "uizard-figma-import",
@@ -7912,7 +7955,8 @@
       "url": "https://support.uizard.io/en/articles/6912011-importing-screens-from-figma-adobe-or-sketch",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-10"
     },
     {
       "id": "uizard-subscriptions",
@@ -7920,7 +7964,8 @@
       "url": "https://support.uizard.io/en/articles/6249189-understanding-subscriptions",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-10"
     },
     {
       "id": "uizard-joins-miro",
@@ -7928,7 +7973,8 @@
       "url": "https://uizard.io/blog/uizard-joins-miro/",
       "type": "blog",
       "trust_tier": "primary",
-      "volatility": "low"
+      "volatility": "low",
+      "last_checked": "2026-06-10"
     },
     {
       "id": "unbounce-pricing",
@@ -7936,7 +7982,17 @@
       "url": "https://unbounce.com/pricing/",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-10"
+    },
+    {
+      "id": "unbounce-plan-comparison",
+      "label": "Unbounce plan comparison",
+      "url": "https://unbounce.com/compare-plan-features/",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-10"
     },
     {
       "id": "unbounce-features",
@@ -7944,7 +8000,8 @@
       "url": "https://unbounce.com/product/features/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-10"
     },
     {
       "id": "v0-changelog",
@@ -8079,7 +8136,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-08"
+      "last_checked": "2026-06-10"
     },
     {
       "id": "vidu-q3-official",
@@ -8088,7 +8145,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-08"
+      "last_checked": "2026-06-10"
     },
     {
       "id": "vidu-reference-to-video",
@@ -8097,7 +8154,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-08"
+      "last_checked": "2026-06-10"
     },
     {
       "id": "vidu-api-quickstart",
@@ -8106,7 +8163,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-05-08"
+      "last_checked": "2026-06-10"
     },
     {
       "id": "vidu-api-pricing",
@@ -8115,7 +8172,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-08"
+      "last_checked": "2026-06-10"
     },
     {
       "id": "vidu-api-reference-to-video",
@@ -8124,15 +8181,16 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-08"
+      "last_checked": "2026-06-10"
     },
     {
       "id": "voiceflow-pricing",
-      "label": "Source",
+      "label": "Voiceflow pricing",
       "url": "https://www.voiceflow.com/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-10"
     },
     {
       "trust_tier": "primary",
@@ -8177,7 +8235,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-08"
+      "last_checked": "2026-06-10"
     },
     {
       "id": "wan-model-studio-video-docs",
@@ -8186,7 +8244,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-08"
+      "last_checked": "2026-06-10"
     },
     {
       "id": "wan-model-studio-pricing",
@@ -8195,7 +8253,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-08"
+      "last_checked": "2026-06-10"
     },
     {
       "id": "wan-model-studio-models",
@@ -8204,7 +8262,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-08"
+      "last_checked": "2026-06-10"
     },
     {
       "id": "wan2-2-github",
@@ -8213,7 +8271,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-05-08"
+      "last_checked": "2026-06-10"
     },
     {
       "id": "wan-huggingface",
@@ -8222,16 +8280,16 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-05-08"
+      "last_checked": "2026-06-10"
     },
     {
       "id": "fal-wan-27",
-      "label": "fal.ai Wan 2.7",
-      "url": "https://fal.ai/wan-2.7",
+      "label": "fal.ai Wan 2.7 reference-to-video",
+      "url": "https://fal.ai/models/fal-ai/wan/v2.7/reference-to-video",
       "type": "pricing",
       "trust_tier": "secondary",
       "volatility": "high",
-      "last_checked": "2026-05-08"
+      "last_checked": "2026-06-10"
     },
     {
       "id": "weaviate-best-for",
@@ -8239,7 +8297,8 @@
       "url": "https://weaviate.io/developers/weaviate",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-10"
     },
     {
       "id": "weaviate-best-paid-tier",
@@ -8247,7 +8306,17 @@
       "url": "https://weaviate.io/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-10"
+    },
+    {
+      "id": "weaviate-engram-ga",
+      "label": "Weaviate Engram generally available",
+      "url": "https://weaviate.io/blog/engram-generally-available",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-10"
     },
     {
       "id": "wellsaid-docs",
@@ -8300,7 +8369,8 @@
       "url": "https://github.com/openai/whisper",
       "type": "repository",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-10"
     },
     {
       "id": "whisper-pricing",
@@ -8308,7 +8378,8 @@
       "url": "https://developers.openai.com/api/docs/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-10"
     },
     {
       "id": "whisper-research",
@@ -8316,7 +8387,8 @@
       "url": "https://openai.com/research/whisper",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "low"
+      "volatility": "low",
+      "last_checked": "2026-06-10"
     },
     {
       "id": "openai-speech-to-text-docs",
@@ -8324,7 +8396,8 @@
       "url": "https://developers.openai.com/api/docs/guides/speech-to-text",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-10"
     },
     {
       "id": "openai-realtime-transcription-docs",
@@ -8332,7 +8405,8 @@
       "url": "https://developers.openai.com/api/docs/guides/realtime-transcription",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-10"
     },
     {
       "id": "windsurf-docs",
@@ -8384,7 +8458,44 @@
       "url": "https://wisprflow.ai/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-10"
+    },
+    {
+      "id": "wispr-flow-plans-docs",
+      "label": "Wispr Flow plans docs",
+      "url": "https://docs.wisprflow.ai/articles/9559327591-flow-plans-and-what-s-included",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-10"
+    },
+    {
+      "id": "wispr-flow-business",
+      "label": "Wispr Flow business pricing",
+      "url": "https://wisprflow.ai/business",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-10"
+    },
+    {
+      "id": "wispr-flow-data-controls",
+      "label": "Wispr Flow data controls",
+      "url": "https://wisprflow.ai/data-controls",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-10"
+    },
+    {
+      "id": "wispr-flow-whats-new",
+      "label": "Wispr Flow What's New",
+      "url": "https://wisprflow.ai/whats-new",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-10"
     },
     {
       "id": "wispr-flow-privacy",
@@ -8392,7 +8503,8 @@
       "url": "https://wisprflow.ai/privacy",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-10"
     },
     {
       "id": "wispr-flow-command-mode",
@@ -8400,7 +8512,8 @@
       "url": "https://docs.wisprflow.ai/articles/4816967992-how-to-use-command-mode",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-10"
     },
     {
       "id": "wispr-flow-team-enterprise-faq",
@@ -8408,7 +8521,8 @@
       "url": "https://docs.wisprflow.ai/articles/2458545840-faqs-for-flow-pro-team-and-flow-enterprise-plans",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-10"
     },
     {
       "id": "wispr-flow-affiliate-program",
@@ -8416,7 +8530,8 @@
       "url": "https://partners.dub.co/flow",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-10"
     },
     {
       "id": "wordtune-plan-docs",
@@ -9241,7 +9356,8 @@
       "url": "https://www.tripo3d.ai",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-10"
     },
     {
       "id": "weaviate-add-ons",
@@ -9249,7 +9365,8 @@
       "url": "https://weaviate.io/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-10"
     },
     {
       "id": "white-house-ai-cybersecurity-2026",
@@ -9266,7 +9383,8 @@
       "url": "https://www.bloomberg.com/news/articles/2026-05-12/ai-dictation-startup-wispr-in-funding-talks-at-2-billion-value",
       "type": "third_party",
       "trust_tier": "secondary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-10"
     }
   ]
 }

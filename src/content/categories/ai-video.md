@@ -5,10 +5,10 @@ title: AI Video Generation
 description: Current AI video tools for raw model testing, conversational video editing, production workflows, budget social clips, avatar videos, localization, and business training.
 tool_count: 27
 seo_title: "Best AI Video Tools (June 2026): Seedance, Kling, Veo, Runway & Tavus"
-meta_description: "Updated June 9, 2026: compare Gemini Omni, Seedance 2.0, Kling 3.0, Veo 3.1, Hailuo 2.3, Runway Max, Luma Ray3.14, Pika, HeyGen, Synthesia, Tavus CVI, and Sora sunset caveats by model quality, workflow, pricing, and buyer fit."
+meta_description: "Updated June 10, 2026: compare Gemini Omni, Seedance 2.0, Kling 3.0, Veo 3.1, Hailuo 2.3, Runway Max, Luma Ray3.14, Vidu Q3, Wan, Pika, HeyGen, Synthesia, Tavus CVI, and Sora sunset caveats by model quality, workflow, pricing, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-09
-last_verified: 2026-06-09
+last_updated: 2026-06-10
+last_verified: 2026-06-10
 update_frequency: weekly
 top_picks:
   best_overall: seedance
@@ -44,6 +44,8 @@ AI video is no longer one clean product category. On June 9, 2026, the useful bu
 
 The June 6 [best AI video generator guide](/guides/best-ai-video-generator/) refresh now mirrors this hub on mobile: no wide comparison table as the primary experience, separate buying lanes for Seedance, Kling, Veo, Runway, Pika, and HeyGen, plus explicit rights, credit, region, procurement, and production-workflow checks before CTAs.
 
+**June 10 Vidu/Wan route refresh:** [Vidu](/tools/vidu/) remains a reference-consistency and native-audio story-video test, not a default general-video winner. Current API docs put Q3-pro general video at $0.045-$0.12/sec, Q3-turbo at $0.035-$0.065/sec, and Q3-mix reference-to-video up to $0.145/sec. [Wan](/tools/wan/) remains the model/API/open-weights route: Wan2.2 is the Apache 2.0 self-hosting path, Alibaba Cloud Model Studio has route-specific Wan 2.7/2.6 docs, and international pricing examples span roughly $0.015-$0.15/sec depending on model, audio, and resolution.
+
 ## How To Choose
 
 Start with the job, not the logo.
@@ -69,6 +71,10 @@ If you need a person on camera, use avatar tools. The [best AI avatar video gene
 **Best production workspace:** Runway. It is the buyer route for creators and teams that want model switching, editing, team workflow, exports, API options, and a cleaner path from experiment to deliverable.
 
 **Best budget/effects pick:** Pika. Use it for quick social clips, playful effects, image-to-video experiments, and low-commitment creator workflows.
+
+**Best reference-consistency challenger:** Vidu. Test Vidu Q3 when the brief needs native audio, character/product consistency, and short narrative clips; verify the exact app plan or API route before paying because consumer credits and API seconds do not map cleanly.
+
+**Best open/API control route:** Wan. Test Wan when open weights, Alibaba Cloud Model Studio, provider APIs, or self-hosting are the reason to buy. Do not rank it as the easiest creator product; route/provider drift is the product risk.
 
 **Best explicit camera-control pick:** Luma Dream Machine. Use it when the test prompt depends on pan, tilt, dolly, orbit, previz, animatics, or image-to-video camera language. Skip it as the default API pick until Ray3.14 API availability is directly verified.
 
@@ -107,6 +113,8 @@ Do not make a wide comparison table the mobile experience. Mobile buyers need st
 **Training or L&D buyer:** start with Synthesia or HeyGen, then use the [avatar-video buyer guide](/guides/best-ai-avatar-video-generator/) to compare Tavus, D-ID, Argil, Hedra, and Captions depending on whether the need is templates, live conversation, long-form avatars, custom talking characters, or short-form social editing.
 
 **Short-form social creator:** use the refreshed [TikTok AI tools guide](/guides/best-ai-for-tiktok/) when the choice is hooks/scripts, CapCut-style editing, OpusClip repurposing, Runway generated B-roll, Captions.ai creator polish, HeyGen avatar posts, or InVideo prompt-to-video. The June 6 guide keeps ChatGPT as the planning layer, OpusClip as the long-form clipper, Runway as the generated-video workspace, and consent/disclosure/music-rights checks as the trust layer before publishing.
+
+**Reference consistency or open-route buyer:** test Vidu when the job is consistent characters, products, or short native-audio story clips. Test Wan when the job is open weights, Alibaba Cloud, or provider API economics. In both cases, write down the exact model route, resolution, audio setting, duration, region, provider terms, and failed-generation billing before comparing against Seedance, Kling, Veo, or Runway.
 
 **Camera-control creator or agency:** test Higgsfield when shot presets, Soul character anchoring, and multi-model selection matter more than owning a single base model. Keep Runway in the comparison if edit timeline, API maturity, or team production workflow is more important.
 
@@ -191,6 +199,12 @@ Yes, but with honest positioning. They are useful for budget testing, effects, o
 - [Castmagic pricing](https://www.castmagic.io/pricing) (verified 2026-06-02)
 - [PixVerse Platform pricing](https://docs.platform.pixverse.ai/pricing-796039m0) (verified 2026-06-08)
 - [PixVerse API subscription docs](https://docs.platform.pixverse.ai/subscribe-api-plans-882969m0) (verified 2026-06-08)
+- [Vidu Q3](https://www.vidu.com/vidu-q3) (verified 2026-06-10)
+- [Vidu API pricing](https://platform.vidu.com/docs/pricing) (verified 2026-06-10)
+- [Vidu API reference-to-video](https://platform.vidu.com/docs/reference-to-video) (verified 2026-06-10)
+- [Alibaba Cloud Wan video generation and editing docs](https://www.alibabacloud.com/help/en/model-studio/video-generate-edit-model/) (verified 2026-06-10)
+- [Alibaba Cloud Model Studio pricing](https://www.alibabacloud.com/help/en/model-studio/model-pricing) (verified 2026-06-10)
+- [Wan2.2 GitHub repository](https://github.com/Wan-Video/Wan2.2) (verified 2026-06-10)
 - [HeyGen pricing](https://www.heygen.com/pricing) (verified 2026-06-07)
 - [InVideo pricing](https://invideo.io/pricing/) (verified 2026-06-06)
 - [CapCut](https://www.capcut.com/) (verified 2026-06-06)

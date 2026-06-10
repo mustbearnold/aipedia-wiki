@@ -82,6 +82,294 @@ Summarize changed files, behavior shipped, tests passed, unresolved risks, and r
 
 ---
 
+## ExecPlan: June 10 2026 watsonx Orchestrate Weaviate Whisper Wispr Flow Tool Refresh
+
+### 1. Objective
+
+Continue the oldest-to-newest live ledger refresh by updating the next active tool batch after skipped dead/deprecated rows: watsonx Orchestrate, Weaviate, Whisper, and Wispr Flow. The batch improves trust, SEO freshness, source-backed buyer guidance, parent hub accuracy, and LLM crawl-surface freshness.
+
+### 2. Current state
+
+The ledger order after the completed Rows/Vidu/Voiceflow/Wan batch still skips dead/deprecated tool rows and then reaches `/tools/watsonx-orchestrate/`, `/tools/weaviate/`, `/tools/whisper/`, and `/tools/wispr-flow/`. All four carried May 13, 2026 verification. Current official sources add material June context: IBM release notes now expose agent monitoring, partner agents, audit logs, voice/SIP paths, data isolation, and agentic plan/add-on meters; Weaviate now has Engram generally available and current Cloud AI services pricing; OpenAI docs/pricing separate GPT-4o transcription, diarization, and GPT-Realtime-Whisper paths; Wispr plan/data/reliability docs clarify Free/Pro/Team/Enterprise, Privacy Mode, cloud transcription, and recent reliability work.
+
+### 3. Target state
+
+The four tool pages should carry `last_updated` and `last_verified` of 2026-06-10, with current price/history/source fields and clear buyer caveats. Affected parent category hubs, top-layer indexes, LLM surfaces, and the page refresh ledger should reflect the June 10 refresh.
+
+### 4. Scope
+
+Included: `src/content/tools/watsonx-orchestrate.md`, `src/content/tools/weaviate.md`, `src/content/tools/whisper.md`, `src/content/tools/wispr-flow.md`, source registry rows for their source IDs, affected parent hubs for AI Automation, AI Infrastructure, AI Search, AI Voice, AI Writing, AI Notes, and AI Coding, homepage/tools/categories metadata, LLM text surfaces, `PAGE_REFRESH_LEDGER.md`, and validation. Excluded: dead tool pages, individual news articles, logo work, schema changes, and new affiliate CTAs.
+
+Affected top-layer surfaces: `/`, `/tools/`, `/categories/`, `/categories/ai-automation/`, `/categories/ai-infrastructure/`, `/categories/ai-search/`, `/categories/ai-voice/`, `/categories/ai-writing/`, `/categories/ai-notes/`, `/categories/ai-coding/`, `/llms.txt`, `/llms-full.txt`, generated sitemap/ledger surfaces, and `PAGE_REFRESH_LEDGER.md`.
+
+### 5. Files likely affected
+
+`src/content/tools/watsonx-orchestrate.md`, `src/content/tools/weaviate.md`, `src/content/tools/whisper.md`, `src/content/tools/wispr-flow.md`, `src/content/categories/ai-automation.md`, `src/content/categories/ai-infrastructure.md`, `src/content/categories/ai-search.md`, `src/content/categories/ai-voice.md`, `src/content/categories/ai-writing.md`, `src/content/categories/ai-notes.md`, `src/content/categories/ai-coding.md`, `src/data/source-registry.json`, `src/pages/index.astro`, `src/pages/tools/index.astro`, `src/pages/categories/index.astro`, `src/pages/llms.txt.ts`, `src/pages/llms-full.txt.ts`, `PAGE_REFRESH_LEDGER.md`, and this plan.
+
+### 6. Data model impact
+
+No schema changes. Existing frontmatter, `facts`, `price_history`, source lists, and registry `last_checked` values are refreshed in place. New source IDs are added for IBM watsonx Orchestrate release notes, Weaviate Engram GA, and Wispr Flow plan/data/reliability sources.
+
+### 7. SEO impact
+
+Update stale May 2026 titles/meta descriptions where present, preserve canonical routes, and align parent hubs with child-page positioning so category summaries do not contradict current facts.
+
+### 8. Conversion impact
+
+No affiliate links or new CTAs are added. Wispr Flow retains affiliate metadata without adding a tracked link because no approved affiliate URL is present. Buying guidance should reduce conversion risk by clarifying enterprise quote meters, hosted API pricing, and trial/team controls.
+
+### 9. Mobile UX impact
+
+Templates are unchanged. Short verdicts, plan guidance, watch-outs, and category summaries should remain readable at 360, 390, 430, 768, and desktop widths.
+
+### 10. Implementation steps
+
+1. Verify June 2026 official sources for IBM, Weaviate, OpenAI, and Wispr Flow.
+2. Patch the four tool records and source registry.
+3. Refresh affected parent category hubs.
+4. Refresh top-layer/LLM metadata and regenerate the ledger.
+5. Run source/fact/link/build checks plus responsive QA.
+
+### 11. Verification commands
+
+`npm run ledger:pages`
+
+`npm run ledger:pages:check`
+
+`npm run guard:check`
+
+`npm run audit:sources`
+
+`npm run audit:facts`
+
+`npm run check:links`
+
+`npm run test:scripts`
+
+`npm run check`
+
+`npm run build:fast`
+
+`git diff --check`
+
+### 12. Acceptance criteria
+
+The four selected active tool pages are verified on 2026-06-10, stale May-only pricing/model/feature language is removed from touched records, affected parent hubs and LLM surfaces are current, the ledger reflects the true refresh scope, and validation passes or any failures are documented with scope and risk.
+
+### 13. Risks and mitigations
+
+Risk: IBM's enterprise packaging can be misread as public self-serve pricing. Mitigation: describe agentic meters and add-ons without inventing dollar prices.
+
+Risk: OpenAI's current pricing tables expose some transcription model prices but not every documented model ID. Mitigation: keep GPT-4o and realtime pricing explicit while telling buyers to confirm legacy `whisper-1` and diarize billing in-account.
+
+Risk: Wispr Flow's consumer/team/business surfaces overlap. Mitigation: separate Basic/Pro/Team/Enterprise buyer guidance and avoid adding affiliate CTAs without a tracked link.
+
+### 14. Progress log
+
+2026-06-10: Selected watsonx Orchestrate, Weaviate, Whisper, and Wispr Flow as the next live ledger batch. Verified official June 2026 sources: IBM watsonx Orchestrate release notes/Think 2026 pages, Weaviate pricing/homepage/Engram GA, OpenAI speech-to-text/pricing/realtime docs, and Wispr Flow plan/business/data-controls/what's-new/team docs.
+
+2026-06-10: Patched the four tool records, source registry, affected parent hubs, top-layer metadata comments, and LLM text surfaces.
+
+2026-06-10: Validation passed: `npm run ledger:pages`, `npm run ledger:pages:check`, `npm run guard:check`, `npm run audit:sources`, `npm run audit:facts`, `npm run check:links`, `git diff --check`, `npm run test:scripts`, `npm run check`, `npm run build:fast`, and Playwright static responsive QA for 16 routes at 360, 390, 430, 768, and 1024 px.
+
+### 15. Final report
+
+Completed for this batch. `/tools/watsonx-orchestrate/`, `/tools/weaviate/`, `/tools/whisper/`, and `/tools/wispr-flow/` now carry June 10, 2026 verification and current buyer guidance. Parent/category and top-layer surfaces refreshed: `/categories/ai-automation/`, `/categories/ai-infrastructure/`, `/categories/ai-search/`, `/categories/ai-voice/`, `/categories/ai-writing/`, `/categories/ai-notes/`, `/categories/ai-coding/`, `/`, `/tools/`, `/categories/`, `/llms.txt`, and `/llms-full.txt`. The next live tool rows after skipped dead/deprecated pages are `/tools/workato/`, `/tools/writer/`, and `/tools/yi/`.
+
+---
+
+## ExecPlan: June 10 2026 Rows Vidu Voiceflow Wan Tool Refresh
+
+### 1. Objective
+
+Continue the oldest-to-newest live ledger refresh by updating the next active tool batch after skipped dead/deprecated rows: Rows, Vidu, Voiceflow, and Wan. The batch improves trust, SEO freshness, source-backed buyer guidance, parent hub accuracy, and LLM crawl-surface freshness.
+
+### 2. Current state
+
+The regenerated ledger still lists `/tools/phind/`, `/tools/tome/`, `/tools/dalle/`, and `/tools/grok-code-fast/` ahead of this batch, but those records are marked `status: dead`, so they are excluded by the user rule. The next active rows are `/tools/rows/`, `/tools/vidu/`, `/tools/voiceflow/`, and `/tools/wan/`, all last verified on 2026-05-13. Rows and Voiceflow need June pricing/source-date updates. Vidu needs Q3 API pricing language corrected from older Q3-pro general-video anchors to the current Q3/Q3-turbo/Q3-mix route table. Wan needs route-specific language kept current without overclaiming a universal price.
+
+### 3. Target state
+
+The four tool pages should carry `last_updated` and `last_verified` of 2026-06-10, updated price/history/source dates, and current official-source-backed buyer caveats. The affected AI Automation and AI Video category hubs, top-layer indexes, LLM surfaces, and ledger should reflect the June 10 refresh.
+
+### 4. Scope
+
+Included: `src/content/tools/rows.md`, `src/content/tools/vidu.md`, `src/content/tools/voiceflow.md`, `src/content/tools/wan.md`, source registry rows for their source IDs, `src/content/categories/ai-automation.md`, `src/content/categories/ai-video.md`, homepage/tools/categories metadata comments, LLM text surfaces, `PAGE_REFRESH_LEDGER.md`, and validation. Excluded: dead tool pages, individual news articles, logo work, schema changes, and affiliate changes.
+
+Affected top-layer surfaces: `/`, `/tools/`, `/categories/`, `/categories/ai-automation/`, `/categories/ai-video/`, `/llms.txt`, `/llms-full.txt`, generated sitemap/ledger surfaces, and `PAGE_REFRESH_LEDGER.md`.
+
+### 5. Files likely affected
+
+`src/content/tools/rows.md`, `src/content/tools/vidu.md`, `src/content/tools/voiceflow.md`, `src/content/tools/wan.md`, `src/content/categories/ai-automation.md`, `src/content/categories/ai-video.md`, `src/data/source-registry.json`, `src/pages/index.astro`, `src/pages/tools/index.astro`, `src/pages/categories/index.astro`, `src/pages/llms.txt.ts`, `src/pages/llms-full.txt.ts`, `PAGE_REFRESH_LEDGER.md`, and this plan.
+
+### 6. Data model impact
+
+No schema changes. Existing frontmatter, `facts`, `price_history`, `sources`, and registry `last_checked` values are refreshed in place.
+
+### 7. SEO impact
+
+Update stale May 2026 titles/meta descriptions where present, preserve canonical routes, and keep parent hubs aligned with child-page positioning.
+
+### 8. Conversion impact
+
+No affiliate surfaces are added. Buying guidance should reduce conversion risk by clarifying pricing units: Rows seat/base pricing, Voiceflow demo-gated usage billing, Vidu API seconds/credits, and Wan route/provider pricing.
+
+### 9. Mobile UX impact
+
+Templates are unchanged. Short verdicts, first-screen watch-outs, and plan guidance should remain readable at 360, 390, 430, 768, and desktop widths.
+
+### 10. Implementation steps
+
+1. Verify June 2026 official sources for Rows, Vidu, Voiceflow, and Wan.
+2. Patch the four tool records and source registry.
+3. Refresh AI Automation and AI Video category hub references.
+4. Refresh top-layer/LLM metadata and regenerate the ledger.
+5. Run source/fact/link/build checks plus responsive QA.
+
+### 11. Verification commands
+
+`npm run ledger:pages`
+
+`npm run ledger:pages:check`
+
+`npm run guard:check`
+
+`npm run audit:sources`
+
+`npm run audit:facts`
+
+`npm run check:links`
+
+`npm run test:scripts`
+
+`npm run check`
+
+`npm run build:fast`
+
+`git diff --check`
+
+### 12. Acceptance criteria
+
+The four selected active tool pages are verified on 2026-06-10, stale May-only pricing/model language is removed from touched records, affected parent hubs and LLM surfaces are current, the ledger reflects the true refresh scope, and validation passes or any failures are documented with scope and risk.
+
+### 13. Risks and mitigations
+
+Risk: Vidu and Wan pricing are route-specific and easy to flatten incorrectly. Mitigation: keep route/provider wording explicit and cite official docs for each price anchor.
+
+Risk: Voiceflow no longer publishes old public tier prices. Mitigation: label historical rates as reference baselines only and foreground the current demo-gated usage-based pricing surface.
+
+Risk: Rows has Superhuman policy handover language around June 16. Mitigation: state the policy route plainly without implying a product shutdown.
+
+### 14. Progress log
+
+2026-06-10: Selected Rows, Vidu, Voiceflow, and Wan as the next live ledger batch after skipping dead/deprecated Phind, Tome, DALL-E, and Grok Code Fast. Verified official June 2026 sources: Rows pricing and AI docs, Voiceflow pricing and docs, Vidu Q3/API/reference/pricing pages, Alibaba Cloud Wan docs/pricing/model list, and Wan2.2 GitHub.
+
+2026-06-10: Patched the four tool records, source registry, AI Automation and AI Video parent hubs, top-layer metadata comments, LLM text surfaces, and ledger. Corrected an older public maintenance note that wrongly implied Rows was wound down; Rows is active and now verified against its live pricing page.
+
+2026-06-10: Validation passed: `npm run ledger:pages`, `npm run ledger:pages:check`, `npm run guard:check`, `npm run audit:sources`, `npm run audit:facts`, `npm run check:links`, `git diff --check`, `npm run test:scripts`, `npm run check`, `npm run build:fast`, and Playwright static mobile QA for 9 HTML routes plus `/llms.txt` and `/llms-full.txt` at 360, 390, 430, 768, and 1024 px.
+
+### 15. Final report
+
+Completed for this batch. `/tools/rows/`, `/tools/vidu/`, `/tools/voiceflow/`, and `/tools/wan/` now carry June 10, 2026 verification and current buyer guidance. Parent/category and top-layer surfaces refreshed: `/categories/ai-automation/`, `/categories/ai-video/`, `/`, `/tools/`, `/categories/`, `/llms.txt`, and `/llms-full.txt`. The next live tool rows after skipped dead/deprecated pages are `/tools/watsonx-orchestrate/`, `/tools/weaviate/`, `/tools/whisper/`, and `/tools/wispr-flow/`.
+
+---
+
+## ExecPlan: June 10 2026 Tripo3D TypingMind Uizard Unbounce Tool Refresh
+
+### 1. Objective
+
+Continue the oldest-to-newest live ledger refresh by updating Tripo3D, TypingMind, Uizard, and Unbounce to source-backed June 10, 2026 buyer guidance. The batch improves trust, SEO freshness, data quality, mobile decision support, and parent-hub accuracy while continuing to skip dead tool pages and individual news article pages.
+
+### 2. Current state
+
+`PAGE_REFRESH_LEDGER.md` shows skipped dead/archive rows first, then the next eligible active tool rows at 2026-05-13: `/tools/tripo3d/`, `/tools/typingmind/`, `/tools/uizard/`, and `/tools/unbounce/`. Tripo3D still carries a retired Basic/Professional/Advanced/Premium price ladder. TypingMind still names unsupported exact model versions. Uizard and Unbounce are mostly accurate but carry May verification dates and need June source checks. Affected parent hubs are AI Image, AI Chatbots, AI Design, and the top-layer tools/categories/homepage/LLM surfaces.
+
+### 3. Target state
+
+The four tool pages should show 2026-06-10 verification dates, current plan guidance, clear best-plan/watch-out language, source IDs aligned to primary sources, and no stale May-only model or pricing claims. Parent hubs should summarize the changed facts without becoming weaker or older than the child pages.
+
+### 4. Scope
+
+Included: the four tool records, `src/data/source-registry.json`, AI Image, AI Chatbots, AI Design, top-layer metadata comments, LLM text surfaces, `PAGE_REFRESH_LEDGER.md`, and verification. Excluded: dead tool pages, individual news article pages, new tool records, logo work, and affiliate CTA mechanics beyond preserving Unbounce's existing approved affiliate metadata.
+
+Affected top-layer surfaces: `/`, `/tools/`, `/categories/`, `/categories/ai-image/`, `/categories/ai-chatbots/`, `/categories/ai-design/`, `/llms.txt`, `/llms-full.txt`, generated sitemap/ledger surfaces, and `PAGE_REFRESH_LEDGER.md`.
+
+### 5. Files likely affected
+
+`src/content/tools/tripo3d.md`, `src/content/tools/typingmind.md`, `src/content/tools/uizard.md`, `src/content/tools/unbounce.md`, `src/content/categories/ai-image.md`, `src/content/categories/ai-chatbots.md`, `src/content/categories/ai-design.md`, `src/data/source-registry.json`, `src/pages/index.astro`, `src/pages/tools/index.astro`, `src/pages/categories/index.astro`, `src/pages/llms.txt.ts`, `src/pages/llms-full.txt.ts`, `PAGE_REFRESH_LEDGER.md`, and this plan.
+
+### 6. Data model impact
+
+No schema changes. Existing frontmatter, facts, source IDs, price history, and source-registry rows are refreshed in place. Add missing source IDs for Tripo v3.0 Ultra, TypingMind Teams pricing, and Unbounce plan comparison if needed so facts do not point to mismatched registry URLs.
+
+### 7. SEO impact
+
+Refresh tool SEO titles and meta descriptions where they still say May 2026 or quote retired pricing/model claims. Preserve canonical routes and improve internal hub alignment.
+
+### 8. Conversion impact
+
+Unbounce affiliate metadata is preserved. Buyer guidance should clarify when Starter/Build/Experiment/Optimize or Free/Pro/Max/Team tiers matter so commercial CTAs remain trustworthy.
+
+### 9. Mobile UX impact
+
+Templates are unchanged. Content needs short first-screen verdicts, best-plan guidance, and watch-outs that read cleanly at 360, 390, 430, 768, and desktop widths.
+
+### 10. Implementation steps
+
+1. Verify June 2026 official sources for all four tools.
+2. Add/update this ExecPlan.
+3. Patch tool records, source registry, parent hubs, and top-layer/LLM metadata.
+4. Search for stale prices, model-version claims, and May-only verification strings in touched files.
+5. Regenerate the page refresh ledger and run source/fact/link/build checks plus responsive QA.
+
+### 11. Verification commands
+
+`npm run ledger:pages`
+
+`npm run ledger:pages:check`
+
+`npm run guard:check`
+
+`npm run audit:sources`
+
+`npm run audit:facts`
+
+`npm run check:links`
+
+`npm run test:scripts`
+
+`npm run check`
+
+`npm run build:fast`
+
+`git diff --check`
+
+### 12. Acceptance criteria
+
+The four selected tool pages are verified on 2026-06-10, current against official sources, and free of known stale plan/model claims. Affected parent hubs, top-layer pages, LLM surfaces, and the ledger are updated. Validation passes or any failures are documented with scope and risk.
+
+### 13. Risks and mitigations
+
+Risk: Tripo pricing changed materially and old plan names can linger in body copy. Mitigation: run targeted stale-price/name searches after patching.
+
+Risk: TypingMind supports many providers but not every exact model version can be verified from the public buy page. Mitigation: use provider/model-family wording instead of unsupported exact version claims.
+
+Risk: Uizard and Unbounce plan pages can regionalize checkout. Mitigation: cite public pricing pages and tell buyers to verify live checkout for monthly/regional details.
+
+### 14. Progress log
+
+2026-06-10: Selected the next live oldest ledger batch after skipped dead/wound-down rows. Verified official June 2026 sources: Tripo3D pricing and v3.0 Ultra release, TypingMind buy and Teams pricing, Uizard pricing/Autodesigner/export help, and Unbounce pricing/plan comparison.
+
+2026-06-10: Patched the four tool records, source registry, affected category hubs, top-layer metadata comments, LLM text surfaces, and ledger. Removed stale Tripo3D plan/pricing references and unsupported TypingMind exact-model claims from the touched tool page.
+
+2026-06-10: Validation passed: `npm run ledger:pages`, `npm run ledger:pages:check`, `npm run guard:check`, `npm run audit:sources`, `npm run audit:facts`, `npm run check:links`, `git diff --check`, `npm run test:scripts`, `npm run check`, `npm run build:fast`, and Playwright static mobile QA for 11 HTML routes plus `/llms.txt` and `/llms-full.txt` at 360, 390, 430, 768, and 1024 px. The Browser plugin control tool was not exposed in this thread, so the responsive QA used local Playwright against `dist-fast`.
+
+### 15. Final report
+
+Completed for this batch. `/tools/tripo3d/`, `/tools/typingmind/`, `/tools/uizard/`, and `/tools/unbounce/` now carry June 10, 2026 verification and current official-source-backed buyer guidance. Parent/category and top-layer surfaces refreshed: `/categories/ai-image/`, `/categories/ai-chatbots/`, `/categories/ai-design/`, `/categories/ai-coding/`, `/`, `/tools/`, `/categories/`, `/llms.txt`, and `/llms-full.txt`. The next oldest eligible live ledger row after this batch is `/tools/vidu/`.
+
+---
+
 ## ExecPlan: June 9-10 2026 AI News Coverage Refresh
 
 ### 1. Objective
@@ -781,7 +1069,7 @@ Risk: stale pricing or plan claims. Mitigation: verify each touched commercial/t
 
 ### 14. Progress log
 
-2026-06-09: Initially identified Rows, SaneBox, ServiceNow, Spellbook, and Stable Audio as the next oldest rows after skipped dead archive/tool rows. Current official Rows source says Rows.com fully wound down on May 31, 2026, so Rows is now treated as an excluded dead/retired tool for this user request and left untouched.
+2026-06-09: Initially identified Rows, SaneBox, ServiceNow, Spellbook, and Stable Audio as the next oldest rows after skipped dead archive/tool rows. Rows was deferred from this batch and later re-verified as an active standalone product in the June 10 Rows/Vidu/Voiceflow/Wan batch.
 
 2026-06-09: Adjusted the eligible batch to SaneBox, ServiceNow, Spellbook, Stable Audio, and Tactiq. Current-source checks found SaneBox still presenting three plan families plus a 14-day trial, ServiceNow AI Control Tower expanded across discover/observe/govern/secure/measure with GA expected August 2026, Spellbook still on custom team pricing with 7-day trial and 4,400-team adoption copy, Stable Audio 3.0 now superseding the 2.5-first framing, and Tactiq Business annual pricing now rendered at $29.17/user/month with MCP and Claude Connector betas.
 
@@ -789,7 +1077,7 @@ Risk: stale pricing or plan claims. Mitigation: verify each touched commercial/t
 
 ### 15. Final report
 
-Completed this batch. Refreshed 5 active tool pages from the oldest eligible ledger cluster to June 9, 2026: `/tools/sanebox/`, `/tools/servicenow/`, `/tools/spellbook/`, `/tools/stable-audio/`, and `/tools/tactiq/`. Skipped `/tools/rows/` because official Rows.com documentation says the product fully wound down on May 31, 2026, so it is treated as a dead/retired tool for this user request. No dead tool pages or individual news article pages were refreshed.
+Completed this batch. Refreshed 5 active tool pages from the oldest eligible ledger cluster to June 9, 2026: `/tools/sanebox/`, `/tools/servicenow/`, `/tools/spellbook/`, `/tools/stable-audio/`, and `/tools/tactiq/`. Deferred `/tools/rows/` for a later live-tool pass. No dead tool pages or individual news article pages were refreshed.
 
 Verification passed: `npm run ledger:pages` with `AIPEDIA_LEDGER_DATE=2026-06-09`, `npm run ledger:pages:check`, source-registry parse/duplicate checks, refreshed tool source-ID checks, targeted stale-string sweeps, `git diff --check -- <touched files>`, `npm run audit:sources`, `npm run audit:facts`, `npm run guard:check`, `npm run test:scripts`, `npm run check:links`, `npm run check`, and `npm run build:fast`. In-app browser QA passed for 13 refreshed/top-layer routes at 360, 390, 430, 768, and 1024 px: 65 route-width checks, no horizontal overflow, H1/main content present, and current June 9 buyer facts visible where required. `dist-fast` was removed after the build.
 

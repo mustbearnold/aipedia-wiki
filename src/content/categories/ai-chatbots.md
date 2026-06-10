@@ -5,10 +5,10 @@ title: AI Chatbots & LLMs
 description: General-purpose AI assistants and large language model chatbots for writing, research, coding help, analysis, multimodal work, and everyday decision support.
 tool_count: 17
 seo_title: "Best AI Chatbots & LLMs (June 2026), aipedia.wiki"
-meta_description: "Updated June 9, 2026: compare the best AI chatbots and LLMs: ChatGPT, Claude, Gemini, Perplexity, Grok, Mistral, Reka, Kimi, Qwen, GLM, Hunyuan, Ollama, Open WebUI, Jan.ai, NotebookLM, and AnythingLLM, with enterprise workspace, model infrastructure, local runtime, desktop, and self-hosted RAG signals."
+meta_description: "Updated June 10, 2026: compare the best AI chatbots and LLMs: ChatGPT, Claude, Gemini, Perplexity, Grok, Mistral, Reka, Kimi, Qwen, GLM, TypingMind, Ollama, Open WebUI, Jan.ai, NotebookLM, and AnythingLLM, with enterprise workspace, model infrastructure, local runtime, BYOK, desktop, and self-hosted RAG signals."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-09
-last_verified: 2026-06-09
+last_updated: 2026-06-10
+last_verified: 2026-06-10
 update_frequency: monthly
 ---
 
@@ -40,6 +40,8 @@ The June 8 self-hosted stack refresh adds current [Ollama](/tools/ollama/) and [
 
 The June 8 [Poe](/tools/poe/) refresh keeps the multi-model comparison lane current. Poe is strongest when the buyer wants one points budget for many text, image, video, audio, and custom bots, not when they want the cleanest native experience for a single provider. Its current paid ladder runs from Basic at 10,000 points/day through Plus, Pro, Advanced, and Max at 8.25 million monthly points, while the subscription page localizes checkout and exposes US annual structured-data anchors from $99.99/year to $4,999.99/year. Direct ChatGPT, Claude, Gemini, or Perplexity subscriptions still make more sense for heavy single-model work.
 
+The June 10 [TypingMind](/tools/typingmind/) refresh keeps the BYOK power-user UI lane current. TypingMind is not a bundled model subscription like ChatGPT Plus or Poe; it is a one-time personal license that routes chat through the buyer's own OpenAI, Anthropic, Google, OpenRouter, cloud, or compatible API accounts. Current personal licenses remain Standard $39, Extended $79, and Premium $99 one-time, with Bulk License at $395 for up to 10 users across 50 devices. Teams and self-hosted deployments add private portal/admin controls, but the public Teams page still warns that provider API costs are billed separately.
+
 For most people, the first paid chatbot to compare is still one of three: [ChatGPT](/tools/chatgpt/) for the broadest all-purpose AI workspace, [Claude](/tools/claude/) for writing, long analysis, and code reasoning, or [Gemini](/tools/gemini/) for Google-native work across Search, Gmail, Docs, Drive, NotebookLM, and Google AI subscription benefits. [Perplexity](/tools/perplexity/) is the better answer engine when every serious claim needs a source trail. [Grok](/tools/grok/) is most useful when X-native real-time context matters. [Mistral AI](/tools/mistral-ai/) matters more for builders and teams that care about model control, European AI infrastructure, APIs, Vibe for Code, Search Toolkit, and open-model options; the June 3 [ChatGPT vs Mistral AI](/compare/chatgpt-vs-mistral-ai/) refresh frames this as a finished-assistant versus model-platform decision. [Qwen](/tools/qwen/) is the Alibaba Cloud lane: hosted Qwen3.7-Max, Qwen Chat testing, Apache 2.0 Qwen3 open weights, and a growing Qwen Cloud / agent-platform push after [Alibaba's first international Qwen Conference](/news/2026-05-27-qwen-conference-agent-cloud-suite/). [GLM](/tools/glm/) is the Z.AI lane for teams evaluating GLM-5.1's 200K context, 128K maximum output, OpenAI-compatible API examples, MCP/tool support, MIT Hugging Face weights, and $1.40/M input plus $4.40/M output API pricing. [Kimi](/tools/kimi/) is the Moonshot lane for builders evaluating Kimi K2.6, 256K context, multimodal input, usage-based API pricing, and a post-K2-retirement model path; the June 3 [ChatGPT vs Kimi](/compare/chatgpt-vs-kimi/) refresh keeps ChatGPT as the better finished assistant and Kimi as the model/API alternative. [MiniMax](/tools/minimax/) is the M3 lane for buyers testing low-cost coding, agentic, multimodal, and long-context API work, with Speech 2.8 and Hailuo as adjacent MiniMax modalities. [Hunyuan](/tools/hunyuan/) is Tencent's open-weight/model-family lane for Hy3-preview, HY-World 2.0, and HY-OmniWeaving; [Jan.ai](/tools/jan-ai/) is the free local desktop lane, with v0.8.2 now adding faster startup, AMD ROCm/HIP on Linux, and resumable downloads.
 
 For document chat and private RAG, [AnythingLLM](/tools/anythingllm/) and [Open WebUI](/tools/open-webui/) are the two practical self-hosted app lanes. AnythingLLM remains the MIT app-plus-cloud lane; Open WebUI is the broader self-hosted interface/knowledge-base layer that many Ollama users adopt for team chat. In both cases, quality depends on the hosted or local LLM you connect.
@@ -59,6 +61,7 @@ The wrong move is paying for three overlapping chatbots without a job for each o
 | **[Gemini](/tools/gemini/)** | Google ecosystem, Search, Gmail, Docs, Drive, NotebookLM, Google One/AI subscription bundles | Best if your work already lives in Google and the assistant needs to sit near those files and apps. |
 | **[Perplexity](/tools/perplexity/)** | Cited research, fact checks, market scans, source-backed briefs | Best when source trails and current web synthesis are more important than open-ended chat. |
 | **[Poe](/tools/poe/)** | Multi-model and media-bot comparison through one points budget | Best for breadth, custom bots, and trying many providers; direct subscriptions are cleaner for heavy single-model use. |
+| **[TypingMind](/tools/typingmind/)** | BYOK multi-provider chat UI with one-time personal licenses | Best for power users with API keys who want one professional interface; API usage is billed separately by each provider. |
 | **[Grok](/tools/grok/)** | X-native real-time context, creator/news/social signal monitoring | Useful for fast social context, but important claims still need primary-source verification. |
 | **[Mistral AI](/tools/mistral-ai/)** | Model-control workflows, European AI infrastructure, APIs, Vibe for Code, Search Toolkit, open-model strategy | Best for builders and organizations that care about deployment and vendor-control choices. |
 | **[Qwen](/tools/qwen/)** | Alibaba Cloud, open-weight Qwen3, hosted Qwen3.7-Max, multilingual model control | Best for builders who want Qwen Cloud APIs or self-hostable Apache 2.0 Qwen3 checkpoints, not a polished consumer workspace. |
@@ -83,6 +86,7 @@ The wrong move is paying for three overlapping chatbots without a job for each o
 - **Best for writing and serious analysis:** [Claude](/tools/claude/) because it is the strongest default for careful prose, long documents, critique, and code reasoning.
 - **Best for Google users:** [Gemini](/tools/gemini/) because Google AI subscriptions now center the assistant around Gemini, Deep Research, Workspace, NotebookLM, Veo/Flow access on higher tiers, and Google One storage.
 - **Best for cited research:** [Perplexity](/tools/perplexity/) because the product is built around answer-plus-source workflows.
+- **Best BYOK power-user UI:** [TypingMind](/tools/typingmind/) when the buyer already has API keys and wants a one-time-license interface instead of stacking multiple flat subscriptions.
 - **Best for X-native context:** [Grok](/tools/grok/) when live social discourse is actually part of the job. The June 3 [ChatGPT vs Grok](/compare/chatgpt-vs-grok/) refresh keeps ChatGPT as the safer default assistant and Grok as the specialist when X Search, SuperGrok, Imagine, voice, or xAI APIs are the real purchase reason.
 - **Best for model-control strategy:** [Mistral AI](/tools/mistral-ai/) for developers and teams evaluating APIs, European infrastructure, Vibe for Code, Search Toolkit, and open-model options.
 - **Best Alibaba/open-weight lane:** [Qwen](/tools/qwen/) when hosted Qwen3.7-Max, Qwen Cloud pricing, multilingual coverage, or self-hosted Qwen3 checkpoints matter.
@@ -117,6 +121,8 @@ The wrong move is paying for three overlapping chatbots without a job for each o
 **Use Kimi if:** Kimi K2.6, 256K context, multimodal input, token-level API pricing, cache-hit economics, ToolCalls, JSON Mode, and non-OpenAI model diversification are the purchase reason.
 
 **Use MiniMax if:** MiniMax-M3, coding/agentic API evaluation, native multimodal input, up-to-1M context positioning, low standard M3 token pricing, Speech 2.8, Hailuo video, or non-US model diversification are the purchase reason. Verify whether your account actually has >512K input and Priority access before building around it.
+
+**Use TypingMind if:** the buyer already has provider API keys, wants OpenAI/Claude/Gemini/other routes in one interface, and prefers a one-time app license plus pay-per-provider-token billing over stacked monthly chatbot subscriptions.
 
 **Use Reka if:** the buyer is testing physical-AI or multimodal model infrastructure, wants Edge/Flash/Core API pricing, needs local Edge weights, or is evaluating video/image understanding close to devices. Do not choose it as a first consumer chatbot, and review the BSL 1.1 license terms before commercial local deployment.
 
@@ -253,5 +259,7 @@ Do not subscribe to multiple chatbots because each one has a new model announcem
 - [Open WebUI v0.9.6 release notes](https://github.com/open-webui/open-webui/releases/tag/v0.9.6) (verified 2026-06-08)
 - [Poe subscription plans](https://poe.com/subscription_plans) (verified 2026-06-08)
 - [Poe purchases FAQ](https://help.poe.com/hc/en-us/articles/19945140063636-Poe-Purchases-FAQs) (verified 2026-06-08)
+- [TypingMind buy page](https://www.typingmind.com/buy) (verified 2026-06-10)
+- [TypingMind Teams pricing](https://custom.typingmind.com/pricing) (verified 2026-06-10)
 - [Jan changelog](https://www.jan.ai/changelog) (verified 2026-06-02)
 - [Jan GitHub repository](https://github.com/janhq/jan) (verified 2026-06-02)

@@ -3,6 +3,19 @@
 // Copilot) at the canonical index + category hubs + editorial policy.
 //
 // See also /llms-full.txt for the verbose variant with every page listed.
+// Refresh metadata: 2026-06-10 watsonx Orchestrate, Weaviate, Whisper, and
+// Wispr Flow active-tool refresh with dead tools and news articles skipped,
+// plus source registry, AI Automation/Infrastructure/Search/Voice/Writing/
+// Notes/Coding parent hubs, homepage, tools index, categories index, and
+// LLM maintenance.
+// Refresh metadata: 2026-06-10 Rows, Vidu, Voiceflow, and Wan active-tool
+// refresh with dead tools and news articles skipped, plus source registry,
+// AI Automation/AI Video parent hubs, homepage, tools index, categories
+// index, and LLM maintenance.
+// Refresh metadata: 2026-06-10 Tripo3D, TypingMind, Uizard, and Unbounce
+// active-tool refresh with dead tools and news articles skipped, plus source
+// registry, AI Image/Chatbots/Design/Coding parent hubs, homepage, tools
+// index, categories index, and LLM maintenance.
 // Refresh metadata: 2026-06-09 Taskade, Tavus, Tines, and Together AI
 // active-tool refresh with dead tools and news articles skipped, plus source
 // registry, parent category hubs, homepage, tools index, categories index,
@@ -12,8 +25,8 @@
 // agents, Datadog DASH agent observability/security, and Similarweb May
 // 2026 AI chatbot rankings.
 // Refresh metadata: 2026-06-09 SaneBox, ServiceNow, Spellbook,
-// Stable Audio, and Tactiq active-tool refresh with Rows skipped as a
-// wound-down/dead tool, plus source registry, parent category hubs, homepage,
+// Stable Audio, and Tactiq active-tool refresh with Rows deferred to a
+// later live-tool pass, plus source registry, parent category hubs, homepage,
 // tools index, categories index, and LLM maintenance.
 // Refresh metadata: 2026-06-09 June 3-9 AI news refresh across ChatGPT
 // memory, GitHub Copilot agent APIs and model/plugin governance, Gemma 4
@@ -138,8 +151,11 @@ export const GET: APIRoute = async () => {
   lines.push(`> Independent AI tools encyclopedia maintained by aipedia.wiki Editorial. ${activeTools.length} active tool pages across ${activeCategories.length} categories, ${comparisons.length} head-to-head comparisons, ${useCases.length} buyer guides. Public pages carry verification metadata and editorial sourcing controls.`);
   lines.push('');
   lines.push('Recent news refresh: June 10, 2026 added June 9-10 source-backed AI tools coverage across Claude Fable 5/Mythos 5, Apple Siri AI and EU rollout risk, Copilot CLI custom agents, Datadog DASH agent observability/security, Similarweb May 2026 AI chatbot rankings, Claude Cowork, Gemini for Apple developers, Devin/Desktop, FrontierCode, and local model deployment.');
+  lines.push('Recent tool refresh: June 10, 2026 refreshed watsonx Orchestrate, Weaviate, Whisper, and Wispr Flow around IBM agentic plan/add-on governance docs, Weaviate Engram GA and Cloud AI services pricing, OpenAI GPT-4o transcription and GPT-Realtime-Whisper pricing, and Wispr Flow plan, data-control, and reliability docs.');
+  lines.push('Recent tool refresh: June 10, 2026 refreshed Rows, Vidu, Voiceflow, and Wan around Rows Free/Plus/Pro/Enterprise pricing and Superhuman policy handover, Vidu Q3/Q3-turbo/Q3-mix API route pricing, Voiceflow demo-gated usage-based quotes, and Wan Model Studio/open-weights/provider-route caveats.');
+  lines.push('Recent tool refresh: June 10, 2026 refreshed Tripo3D, TypingMind, Uizard, and Unbounce around Tripo Free/Pro/Max/Team pricing and v3.0 Ultra features, TypingMind BYOK one-time license and provider-route wording, Uizard Autodesigner 2.0 pricing and component-level handoff limits, and Unbounce Starter/Build/Experiment/Optimize pricing plus Smart Traffic/Smart Copy plan caveats.');
   lines.push('Recent tool refresh: June 9, 2026 refreshed Taskade, Tavus, Tines, and Together AI around Taskade workspace pricing and conflicting help-table caveats, Tavus Developer/PALs pricing plus CVI concurrency, Tines AI Agent action credit/package caveats, and Together serverless, dedicated-inference, GPU-cluster, fine-tuning, and code-sandbox pricing.');
-  lines.push('Recent tool refresh: June 9, 2026 refreshed SaneBox, ServiceNow, Spellbook, Stable Audio, and Tactiq around SaneBox Appetizer/Snack/Lunch/Dinner pricing and beta SaneDrafts/SaneSummary, ServiceNow AI Control Tower Discover/Observe/Govern/Secure/Measure and August GA caveats, Spellbook custom legal Word pricing/security, Stable Audio 3.0 open weights/API/Enterprise licensing, and Tactiq Business MCP/Claude Connector beta. Rows was skipped because Rows.com says the product fully wound down May 31, 2026.');
+  lines.push('Recent tool refresh: June 9, 2026 refreshed SaneBox, ServiceNow, Spellbook, Stable Audio, and Tactiq around SaneBox Appetizer/Snack/Lunch/Dinner pricing and beta SaneDrafts/SaneSummary, ServiceNow AI Control Tower Discover/Observe/Govern/Secure/Measure and August GA caveats, Spellbook custom legal Word pricing/security, Stable Audio 3.0 open weights/API/Enterprise licensing, and Tactiq Business MCP/Claude Connector beta.');
   lines.push('Recent tool refresh: June 8, 2026 refreshed LinkedIn Recruiter, Llama, LM Studio, and Logseq around LinkedIn Hiring Assistant add-on/metrics, Llama Groq Scout and Together Maverick pricing caveats, LM Studio v1 REST/API/free-work posture, and Logseq DB/markdown-mirror/sync caveats.');
   lines.push('Recent guide refresh: June 8, 2026 refreshed open-source AI tools around LM Studio developer APIs, Llama open-weight/provider economics, local/self-hosted AI security, and open-source versus open-weight licensing language.');
   lines.push('Recent tool refresh: June 8, 2026 refreshed Langfuse, LangGraph, Leonardo AI, and Letta around Langfuse Cloud unit pricing/evals, LangGraph/LangSmith pricing and deployment billing, Leonardo Free/Essential/Premium/Ultimate web plans plus team/API paths, and Letta Code Free/Pro/Enterprise/BYOK/Letta Auto pricing.');

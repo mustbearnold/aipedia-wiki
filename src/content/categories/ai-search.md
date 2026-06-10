@@ -5,10 +5,10 @@ title: AI Search & Research Tools
 description: AI answer engines, private search, research notebooks, semantic search APIs, and source-backed research assistants.
 tool_count: 8
 seo_title: "Best AI Search and Research Tools (June 2026)"
-meta_description: "Updated June 8, 2026: compare Perplexity, Kagi, You.com APIs, Comet, ChatGPT Search, Google AI Mode, NotebookLM, Exa, Morphic, and Phind migration paths by citations, privacy, APIs, and buyer fit."
+meta_description: "Updated June 10, 2026: compare Perplexity, Kagi, You.com APIs, Comet, ChatGPT Search, Google AI Mode, NotebookLM, Exa, Weaviate/Engram, Morphic, and Phind migration paths by citations, privacy, APIs, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-08
-last_verified: 2026-06-08
+last_updated: 2026-06-10
+last_verified: 2026-06-10
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -50,6 +50,8 @@ AI search is not one category anymore. Buyers now choose between **cited answer 
 
 **Use [Exa](/tools/exa/) when you are building AI search into a product.** It is a developer API lane for semantic search, retrieval, crawling-style workflows, deep research APIs, answer endpoints, monitors, AI page summaries, and beta Agent runs. Model result counts, summaries, monitor cadence, enrichment, and Agent effort before traffic grows.
 
+**Use [Weaviate](/tools/weaviate/) when search is product infrastructure rather than an answer engine.** The June 10 check keeps Weaviate in the open vector database lane, but Engram's June 3 GA means it now also belongs in agent-memory conversations: it is for teams building retrieval, RAG, hybrid search, and durable scoped context inside products, not for non-technical users replacing Google or Perplexity.
+
 **Use [You.com](/tools/you-com/) when the buyer wants grounding and research APIs rather than a consumer chat UI.** The June 5 [Exa vs You.com](/compare/exa-vs-you-com/) refresh reflects the current API-first surface: Search at $5/1K calls, Contents at $1/1K pages, Research at $12/1K calls, Finance Research from $110/1K calls, $100 free credit, and custom Enterprise terms.
 
 **June 6 answer-engine vs API fork:** [Perplexity vs You.com](/compare/perplexity-vs-you-com/) now separates the human-facing cited research product from the programmable grounding stack. Start with Perplexity when the buyer needs a research UI today; start with You.com when the buyer needs primitives inside an app or agent.
@@ -76,6 +78,7 @@ AI search is not one category anymore. Buyers now choose between **cited answer 
 | Owned-source research | [NotebookLM](/tools/notebooklm/) | Best for selected PDFs, notes, reports, calls, classes, and Drive material | Not a full web discovery engine |
 | Private paid search | [Kagi](/tools/kagi/) | Ad-free search, lenses, ranking controls, Assistant options | Paid search is a harder sell for casual users |
 | Search/retrieval API | [Exa](/tools/exa/) | Search, contents, answer, monitors, summaries, and Agent primitives for AI apps | Value depends on integration quality, request economics, extra results, summaries, monitor usage, enrichment, and Agent effort |
+| Product RAG and agent memory | [Weaviate](/tools/weaviate/) | Open vector database, managed cloud, hybrid search, hosted embeddings, Query Agent, and Engram memory/context service | Infrastructure ownership, index design, add-on pricing, and app-layer permissions still matter |
 | Search-to-deliverable AI workspace | [Genspark](/tools/genspark/) | Turns research into docs, slides, sheets, calls, media, and agent outputs | Credit burn and enterprise/API availability need direct verification |
 | Enterprise work search | [Glean](/tools/glean/) | Permission-aware search and agents over company apps and knowledge | Contact-sales pricing and connector/security review are mandatory |
 | Self-hosted answer engine | [Morphic](/tools/morphic/) | Apache 2.0, forkable answer-engine stack with BYOK model/search routing | Requires deployment, provider keys, search-backend setup, and no first-party hosted SLA |
@@ -151,6 +154,8 @@ Do not leave this category stale. Google AI Mode, Perplexity Pro/Max/Enterprise,
 - [Kagi Research Assistants](https://help.kagi.com/kagi/ai/kagi-research.html) (verified 2026-06-06)
 - [Exa pricing update](https://exa.ai/docs/changelog/pricing-update) (verified 2026-06-07)
 - [Exa API pricing](https://exa.ai/pricing/api) (verified 2026-06-05)
+- [Weaviate pricing](https://weaviate.io/pricing) (verified 2026-06-10)
+- [Weaviate Engram GA announcement](https://weaviate.io/blog/engram-generally-available) (verified 2026-06-10)
 - [Genspark membership benefits](https://www.genspark.ai/membership-benefits-lp) (verified 2026-06-02)
 - [Glean official site](https://www.glean.com/) (verified 2026-06-02)
 - [Glean developer platform](https://developers.glean.com/) (verified 2026-06-02)

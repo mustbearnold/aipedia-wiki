@@ -7,11 +7,11 @@ category: ai-video
 company: Alibaba Cloud / Tongyi Lab
 url: https://wan.video
 pricing_model: freemium
-price_range: "$0 self-host; API roughly $0.02-$0.15/sec by route"
+price_range: "$0 self-host; hosted API roughly $0.015-$0.15/sec by route, provider, resolution, and audio mode"
 status: active
 launched: 2025-02
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-10
+last_verified: 2026-06-10
 update_frequency: weekly
 affiliate:
   has_program: false
@@ -30,8 +30,8 @@ facts:
     source: "https://www.alibabacloud.com/help/en/model-studio/video-generate-edit-model/"
     source_label: "Alibaba Cloud Wan video docs"
     source_id: wan-model-studio-video-docs
-    verified_at: 2026-05-13
-    next_review_at: 2026-06-13
+    verified_at: 2026-06-10
+    next_review_at: 2026-07-10
     volatility: high
     confidence: high
   current_model_route:
@@ -39,8 +39,8 @@ facts:
     source: "https://www.alibabacloud.com/help/en/model-studio/video-generate-edit-model/"
     source_label: "Alibaba Cloud Wan video docs"
     source_id: wan-model-studio-video-docs
-    verified_at: 2026-05-13
-    next_review_at: 2026-06-13
+    verified_at: 2026-06-10
+    next_review_at: 2026-07-10
     volatility: high
     confidence: high
   open_weights:
@@ -48,26 +48,26 @@ facts:
     source: "https://github.com/Wan-Video/Wan2.2"
     source_label: "Wan2.2 GitHub"
     source_id: wan2-2-github
-    verified_at: 2026-05-13
-    next_review_at: 2026-08-08
+    verified_at: 2026-06-10
+    next_review_at: 2026-09-10
     volatility: medium
     confidence: high
   pricing_anchor:
-    value: "Alibaba Cloud Model Studio publishes Wan route pricing by deployment region, resolution, audio mode, and model. Wan 2.6 is commonly listed around $0.10/s at 720P and $0.15/s at 1080P in international/US routes; cheaper flash/no-audio routes exist."
+    value: "Alibaba Cloud Model Studio publishes Wan route pricing by deployment region, resolution, audio mode, and model. International Wan video pricing currently spans examples such as wan2.2-i2v-flash from $0.015/s at 480P without audio and wan2.6-i2v at $0.10/s for 720P or $0.15/s for 1080P with audio."
     source: "https://www.alibabacloud.com/help/en/model-studio/model-pricing"
     source_label: "Alibaba Cloud Model Studio pricing"
     source_id: wan-model-studio-pricing
-    verified_at: 2026-05-13
-    next_review_at: 2026-06-13
+    verified_at: 2026-06-10
+    next_review_at: 2026-07-10
     volatility: high
     confidence: high
   provider_wan_27:
-    value: "fal.ai lists Wan 2.7 text-to-video, image-to-video, reference-to-video, and edit-video endpoints at $0.10 per second; treat this as provider-specific pricing, not universal Wan pricing."
-    source: "https://fal.ai/wan-2.7"
-    source_label: "fal.ai Wan 2.7"
+    value: "fal.ai lists Wan 2.7 reference-to-video at $0.10 per second, with video input billing based on input duration plus output duration; treat this as provider-specific pricing, not universal Wan pricing."
+    source: "https://fal.ai/models/fal-ai/wan/v2.7/reference-to-video"
+    source_label: "fal.ai Wan 2.7 reference-to-video"
     source_id: fal-wan-27
-    verified_at: 2026-05-13
-    next_review_at: 2026-06-13
+    verified_at: 2026-06-10
+    next_review_at: 2026-07-10
     volatility: high
     confidence: medium
   watch_out_for:
@@ -75,13 +75,13 @@ facts:
     source: "https://www.alibabacloud.com/help/en/model-studio/models"
     source_label: "Alibaba Cloud Model Studio models"
     source_id: wan-model-studio-models
-    verified_at: 2026-05-13
-    next_review_at: 2026-06-13
+    verified_at: 2026-06-10
+    next_review_at: 2026-07-10
     volatility: high
     confidence: high
 tags: [ai-video, video-generation, text-to-video, image-to-video, alibaba, wan, tongyi, qwen, open-weights, model-studio]
-seo_title: "Wan Review: Pricing, Models, Open Weights & Best Uses (May 2026)"
-meta_description: "Wan is Alibaba's AI video model family: Wan 2.7/2.6 through Model Studio and providers, plus Wan 2.2 Apache 2.0 open weights. Updated May 13, 2026."
+seo_title: "Wan Review: Pricing, Models, Open Weights & Best Uses (June 2026)"
+meta_description: "Wan is Alibaba's AI video model family: Wan 2.7/2.6 through Model Studio and providers, plus Wan 2.2 Apache 2.0 open weights. Updated June 10, 2026."
 author: "aipedia.wiki Editorial"
 best_for:
   - open-weights video research and self-hosting with Wan2.2
@@ -113,18 +113,34 @@ price_history:
   - date: 2026-05-08
     plan: "fal.ai Wan 2.7"
     price: "$0.10/second"
-    source: "https://fal.ai/wan-2.7"
-    source_label: "fal.ai Wan 2.7"
+    source: "https://fal.ai/models/fal-ai/wan/v2.7/reference-to-video"
+    source_label: "fal.ai Wan 2.7 reference-to-video"
     source_id: fal-wan-27
     note: "Provider-specific price for Wan 2.7 endpoints, not universal Alibaba Cloud pricing"
   - date: 2026-05-13
     plan: "fal.ai Wan 2.7"
     price: "$0.10/second unchanged"
-    source: "https://fal.ai/wan-2.7"
-    source_label: "fal.ai Wan 2.7"
+    source: "https://fal.ai/models/fal-ai/wan/v2.7/reference-to-video"
+    source_label: "fal.ai Wan 2.7 reference-to-video"
     source_id: fal-wan-27
     verified_at: 2026-05-13
     note: "Re-verified May 13, 2026: fal.ai still flat-prices all four Wan 2.7 endpoints (t2v, i2v, r2v, edit) at $0.10/sec; no Wan 2.8 or 3.0 listed."
+  - date: 2026-06-10
+    plan: "Alibaba Cloud Model Studio Wan video routes"
+    price: "$0.015-$0.15/sec examples by route"
+    source: "https://www.alibabacloud.com/help/en/model-studio/model-pricing"
+    source_label: "Alibaba Cloud Model Studio pricing"
+    source_id: wan-model-studio-pricing
+    verified_at: 2026-06-10
+    note: "Re-verified route-specific pricing examples: wan2.2-i2v-flash starts at $0.015/sec for 480P video without audio, while wan2.6-i2v with audio lists $0.10/sec at 720P and $0.15/sec at 1080P in the international table."
+  - date: 2026-06-10
+    plan: "fal.ai Wan 2.7 reference-to-video"
+    price: "$0.10/second"
+    source: "https://fal.ai/models/fal-ai/wan/v2.7/reference-to-video"
+    source_label: "fal.ai Wan 2.7 reference-to-video"
+    source_id: fal-wan-27
+    verified_at: 2026-06-10
+    note: "Provider-specific price for fal.ai's Wan 2.7 reference-to-video endpoint; video input billing can include input duration plus output duration."
 ---
 
 # Wan
@@ -181,9 +197,9 @@ That split is useful, but it also makes procurement messy. A serious buyer shoul
 
 Wan pricing cannot be summarized as one plan table without misleading people.
 
-**Wan2.2 open weights:** self-hosting starts at $0 license cost, but GPU, storage, engineering time, orchestration, and moderation are real costs. The open route is best for teams that already know how to run video models.
+**Wan2.2 open weights:** self-hosting starts at $0 license cost under Apache 2.0 terms, but GPU, storage, engineering time, orchestration, and moderation are real costs. The open route is best for teams that already know how to run video models.
 
-**Alibaba Cloud Model Studio:** official pricing is route-specific. As of May 13, 2026, Alibaba Cloud pricing pages list Wan 2.6 text-to-video and image-to-video routes around $0.10/second at 720P and $0.15/second at 1080P in common international/US routes, with cheaper flash/no-audio routes and different regional prices.
+**Alibaba Cloud Model Studio:** official pricing is route-specific. As of June 10, 2026, Alibaba Cloud pricing pages list international examples from wan2.2-i2v-flash at $0.015/second for 480P video without audio through wan2.6-i2v at $0.10/second for 720P and $0.15/second for 1080P video with audio, with different regional prices and route-specific rules.
 
 **fal.ai Wan 2.7:** fal.ai lists Wan 2.7 text-to-video, image-to-video, reference-to-video, and editing endpoints at $0.10/second. Treat that as fal.ai pricing and terms, not a universal Wan price.
 
@@ -220,7 +236,7 @@ Before buying or building, verify:
 
 ## Methodology
 
-AiPedia refreshed this page on May 13, 2026 using current primary sources: Alibaba Cloud Model Studio video docs, Alibaba Cloud pricing/model docs, the official Wan2.2 GitHub repo, Wan-AI Hugging Face, wan.video, and fal.ai's provider page for Wan 2.7. Scores reflect buyer usefulness, not just model excitement. Wan's score was reduced from the old near-frontier profile because route complexity, provider variance, and procurement uncertainty make it less suitable as a default recommendation than Seedance, Kling, Veo, or Runway for many readers.
+AiPedia refreshed this page on June 10, 2026 using current primary sources: Alibaba Cloud Model Studio video docs, Alibaba Cloud pricing/model docs, the official Wan2.2 GitHub repo, Wan-AI Hugging Face, wan.video, and fal.ai's provider page for Wan 2.7. Scores reflect buyer usefulness, not just model excitement. Wan's score was reduced from the old near-frontier profile because route complexity, provider variance, and procurement uncertainty make it less suitable as a default recommendation than Seedance, Kling, Veo, or Runway for many readers.
 
 ## FAQ
 
@@ -238,13 +254,13 @@ For raw model quality, test Wan against Seedance 2.0, Kling 3.0, and Veo 3.1. Fo
 
 ## Sources
 
-- [Wan official site](https://wan.video) (verified 2026-05-13)
-- [Alibaba Cloud Wan video generation and editing docs](https://www.alibabacloud.com/help/en/model-studio/video-generate-edit-model/) (verified 2026-05-13)
-- [Alibaba Cloud Model Studio pricing](https://www.alibabacloud.com/help/en/model-studio/model-pricing) (verified 2026-05-13)
-- [Alibaba Cloud Model Studio models](https://www.alibabacloud.com/help/en/model-studio/models) (verified 2026-05-13)
-- [Wan2.2 GitHub repository](https://github.com/Wan-Video/Wan2.2) (verified 2026-05-13)
-- [Wan-AI on Hugging Face](https://huggingface.co/Wan-AI) (verified 2026-05-13)
-- [fal.ai Wan 2.7](https://fal.ai/wan-2.7) (verified 2026-05-13)
+- [Wan official site](https://wan.video) (verified 2026-06-10)
+- [Alibaba Cloud Wan video generation and editing docs](https://www.alibabacloud.com/help/en/model-studio/video-generate-edit-model/) (verified 2026-06-10)
+- [Alibaba Cloud Model Studio pricing](https://www.alibabacloud.com/help/en/model-studio/model-pricing) (verified 2026-06-10)
+- [Alibaba Cloud Model Studio models](https://www.alibabacloud.com/help/en/model-studio/models) (verified 2026-06-10)
+- [Wan2.2 GitHub repository](https://github.com/Wan-Video/Wan2.2) (verified 2026-06-10)
+- [Wan-AI on Hugging Face](https://huggingface.co/Wan-AI) (verified 2026-06-10)
+- [fal.ai Wan 2.7 reference-to-video](https://fal.ai/models/fal-ai/wan/v2.7/reference-to-video) (verified 2026-06-10)
 
 ## Related
 

@@ -5,10 +5,10 @@ title: AI Infrastructure & Model APIs
 description: Developer platforms for LLM routing, pay-as-you-go model APIs, hosted inference, serverless GPUs, vector databases, speech APIs, and production retrieval systems.
 tool_count: 12
 seo_title: "Best AI Infrastructure & Model API Tools (June 2026)"
-meta_description: "Updated June 9, 2026: compare OpenRouter, OpenAI API, Claude API, Gemini API, Mistral, Groq, Together AI, Replicate, fal, Fireworks AI, Modal, Browserbase, Deepgram, Pinecone, Weaviate, Qdrant, Llama, LM Studio, and current local/open-model infrastructure tradeoffs."
+meta_description: "Updated June 10, 2026: compare OpenRouter, OpenAI API, Claude API, Gemini API, Mistral, Groq, Together AI, Replicate, fal, Fireworks AI, Modal, Browserbase, Deepgram, Pinecone, Weaviate/Engram, Qdrant, Llama, LM Studio, and current local/open-model infrastructure tradeoffs."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-09
-last_verified: 2026-06-09
+last_updated: 2026-06-10
+last_verified: 2026-06-10
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -80,7 +80,7 @@ The June 3 update widens that control story. Microsoft Build put Work IQ and Fou
 - **Open-weight model family:** Pick [Llama](/tools/llama/) when infrastructure needs self-hostable or provider-hosted open weights rather than a closed frontier API. The June 8 check keeps Maverick as the flagship open-weight lane, Scout as the current Groq fast-inference card at $0.11/M input and $0.34/M output, and Together Maverick at $0.27/M input and $0.85/M output.
 - **Local model runtime:** Pick [LM Studio](/tools/lm-studio/) when developers need a desktop GUI plus native v1 REST API, OpenAI-compatible and Anthropic-compatible endpoints, MCP support, SDKs, CLI server control, and LM Link for Llama, Qwen, Mistral, and other open weights. LM Studio has been free for ordinary home and work use since its July 2025 terms change.
 - **Managed vector search:** Pick [Pinecone](/tools/pinecone/) when retrieval is production-critical and you want managed operations. The June 8 check keeps Starter free, Builder at $20/month flat, Standard at a $50/month minimum plus usage, and Enterprise at a $500/month minimum, so production buyers should model reads, writes, storage, Assistant, inference, backups, imports, and reranking before treating the database price as the whole retrieval bill.
-- **Open vector databases:** Pick [Weaviate](/tools/weaviate/) or [Qdrant](/tools/qdrant/) when self-hosting optionality and control matter. The June 8 Qdrant check keeps the Free Cloud testing tier at 0.5 vCPU, 1GB RAM, and 4GB disk; Standard as usage-based production cloud; Premium as the enterprise-support tier; Hybrid/Private Cloud as the control-first path; and v1.18.2 as the latest release checked, with security fixes included in the release notes.
+- **Open vector databases and agent memory:** Pick [Weaviate](/tools/weaviate/) or [Qdrant](/tools/qdrant/) when self-hosting optionality and control matter. The June 10 Weaviate check keeps Free, Flex from $45/month, Plus from $280/month, Premium from $400/month, Weaviate Embeddings at $0.025-$0.065 per 1M tokens, Query Agent at a free 1,000-request/month trial path or $30/org/month with 4,000 included requests, and Engram generally available as a managed memory/context service for agents. The June 8 Qdrant check keeps the Free Cloud testing tier at 0.5 vCPU, 1GB RAM, and 4GB disk; Standard as usage-based production cloud; Premium as the enterprise-support tier; Hybrid/Private Cloud as the control-first path; and v1.18.2 as the latest release checked, with security fixes included in the release notes.
 
 ## Money Pages To Keep Current
 
@@ -124,7 +124,8 @@ Do not publish infrastructure pages with old flat monthly subscription framing. 
 - [Pinecone pricing](https://www.pinecone.io/pricing/) (verified 2026-06-08)
 - [Pinecone cost docs](https://docs.pinecone.io/guides/manage-cost/understanding-cost) (verified 2026-06-08)
 - [Pinecone Assistant pricing and limits](https://docs.pinecone.io/guides/assistant/pricing-and-limits) (verified 2026-06-08)
-- [Weaviate pricing](https://weaviate.io/pricing) (verified 2026-06-06)
+- [Weaviate pricing](https://weaviate.io/pricing) (verified 2026-06-10)
+- [Weaviate Engram GA announcement](https://weaviate.io/blog/engram-generally-available) (verified 2026-06-10)
 - [Qdrant pricing](https://qdrant.tech/pricing/) (verified 2026-06-08)
 - [Qdrant Cloud billing](https://qdrant.tech/documentation/cloud-pricing-payments/) (verified 2026-06-08)
 - [Qdrant v1.18.2 release notes](https://github.com/qdrant/qdrant/releases/tag/v1.18.2) (verified 2026-06-08)

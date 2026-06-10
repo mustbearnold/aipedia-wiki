@@ -11,8 +11,8 @@ pricing_model: enterprise
 price_range: Custom enterprise pricing
 status: active
 launched: 2023
-last_updated: 2026-05-13
-last_verified: 2026-05-13
+last_updated: 2026-06-10
+last_verified: 2026-06-10
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -27,44 +27,44 @@ scores:
   longevity: 8
 facts:
   best_for:
-    value: "Enterprises that want a governance and orchestration layer for many agents across different stacks, with a single control plane for policy, visibility, and accountability."
-    source: "https://www.ibm.com/new/announcements/manage-all-your-ai-agents-in-one-place-with-watsonx-orchestrate"
-    source_label: "IBM announcement"
-    source_id: ibm-watsonx-orchestrate-announcement
-    verified_at: 2026-05-13
+    value: "Enterprises that want a governance and orchestration layer for many agents across different stacks, with a single control plane for policy, visibility, monitoring, partner agents, audit logs, and accountability."
+    source: "https://www.ibm.com/docs/en/watsonx/watson-orchestrate/base?topic=releases-release-notes-2025"
+    source_label: "IBM watsonx Orchestrate release notes"
+    source_id: ibm-watsonx-orchestrate-release-notes
+    verified_at: 2026-06-10
     volatility: medium
     confidence: medium
-    next_review_at: 2026-08-06
+    next_review_at: 2026-09-10
   pricing_anchor:
-    value: "Enterprise packaging; contract terms depend on IBM stack adoption, agent enrollment scope, and governance needs. No public self-serve price."
-    source: "https://www.ibm.com/watsonx"
-    source_label: "IBM watsonx portfolio"
-    source_id: ibm-watsonx-portfolio
-    verified_at: 2026-05-13
+    value: "Enterprise packaging with IBM Cloud trial path and metered agentic plan language in docs; IBM references Essentials, Standard, Premium, Agentic MAUs, Agentic Messages, Skill Runs, Voice MAUs/minutes, documents, domain agents, and non-IBM domain-agent add-ons, but no simple public dollar price."
+    source: "https://www.ibm.com/docs/en/watsonx/watson-orchestrate/base?topic=releases-release-notes-2025"
+    source_label: "IBM watsonx Orchestrate release notes"
+    source_id: ibm-watsonx-orchestrate-release-notes
+    verified_at: 2026-06-10
     volatility: high
     confidence: medium
-    next_review_at: 2026-08-06
+    next_review_at: 2026-09-10
   enterprise_controls:
-    value: "Yes. The May 5, 2026 Think announcement positions Orchestrate next-generation as an agentic control plane in private preview, deploying agents from heterogeneous sources under shared policy, visibility, and accountability."
-    source: "https://www.ibm.com/new/announcements/manage-all-your-ai-agents-in-one-place-with-watsonx-orchestrate"
-    source_label: "IBM announcement"
-    source_id: ibm-watsonx-orchestrate-announcement
-    verified_at: 2026-05-13
+    value: "Yes. June 2026 docs add operational details around agent metric monitoring in watsonx.governance, partner A2A agents, partner catalog agents, audit logs, structured chat data, voice/SIP/Genesys support, and Premium data isolation."
+    source: "https://www.ibm.com/docs/en/watsonx/watson-orchestrate/base?topic=releases-release-notes-2025"
+    source_label: "IBM watsonx Orchestrate release notes"
+    source_id: ibm-watsonx-orchestrate-release-notes
+    verified_at: 2026-06-10
     volatility: high
     confidence: medium
-    next_review_at: 2026-06-06
+    next_review_at: 2026-09-10
   watch_out_for:
-    value: "Think 2026 bundled Orchestrate with Concert (public preview), Sovereign Core (GA), IBM Bob (GA), and Confluent-linked watsonx.data features (private preview). Validate which Orchestrate features are GA versus private preview, which runtimes can enroll first, and what audit artifacts look like in failures before contracting."
-    source: "https://www.prnewswire.com/news-releases/think-2026-ibm-delivers-the-blueprint-for-the-ai-operating-model-as-the-ai-divide-widens-302762136.html"
-    source_label: "IBM Think 2026 press release"
-    source_id: ibm-think-2026-prnewswire
-    verified_at: 2026-05-13
+    value: "Validate GA versus preview scope, supported runtimes and regions, whether policy blocks actions or only reports after the fact, and how the new Agentic MAU/message/add-on meters apply before signing a broad enterprise agreement."
+    source: "https://www.ibm.com/docs/en/watsonx/watson-orchestrate/base?topic=releases-release-notes-2025"
+    source_label: "IBM watsonx Orchestrate release notes"
+    source_id: ibm-watsonx-orchestrate-release-notes
+    verified_at: 2026-06-10
     volatility: high
     confidence: medium
-    next_review_at: 2026-06-06
+    next_review_at: 2026-09-10
 tags: [enterprise, agents, orchestration, governance, control-plane, ibm, watsonx, observability, policy]
-seo_title: "watsonx Orchestrate: IBM's Multi-Agent Control Plane (2026)"
-meta_description: "IBM positions watsonx Orchestrate as a control plane for multi-agent governance: enroll agents across stacks under shared policy, visibility, and accountability. Enterprise pricing and preview/GA packaging vary."
+seo_title: "watsonx Orchestrate: IBM's Multi-Agent Control Plane (June 2026)"
+meta_description: "June 2026 watsonx Orchestrate review: IBM's multi-agent control plane now has docs for monitoring, partner agents, audit logs, voice/SIP support, data isolation, and agentic plan meters. Pricing remains enterprise-led."
 author: "aipedia.wiki Editorial"
 best_for:
   - enterprises deploying many agents across teams and stacks
@@ -74,16 +74,16 @@ not_best_for:
   - small teams without enterprise agent governance requirements
   - buyers needing transparent self-serve pricing
 quick_answer: >-
-  watsonx Orchestrate is IBM's orchestration and governance layer for multi-agent enterprise deployments. Pick it if agent sprawl is your bottleneck and you want a control plane. Expect enterprise pricing and verify preview vs GA scope.
+  watsonx Orchestrate is IBM's orchestration and governance layer for multi-agent enterprise deployments. Pick it if agent sprawl is your bottleneck and you want a control plane with monitoring, audit, partner-agent, voice, and data-isolation hooks. Expect enterprise pricing and verify preview vs GA scope plus Agentic MAU/message/add-on meters.
 ---
 
 # watsonx Orchestrate
 
 watsonx Orchestrate is IBM's orchestration and governance layer for enterprise agents. IBM positions it as a **control plane**: a shared layer for deploying agents from heterogeneous sources under consistent policy, visibility, and accountability.
 
-## Recent developments (May 2026)
+## Recent developments (June 2026)
 
-- **May 13, 2026:** Page reverified. Think 2026 announcements remain the load-bearing signal; no further GA notices in the week since launch, and IBM still has not published self-serve pricing.
+- **June 10, 2026:** Reverified against IBM release notes. The page now separates the original Think 2026 control-plane announcement from operational details now visible in docs: agent metric monitoring through watsonx.governance, Partner A2A agents, partner catalog purchases, structured chat data, SIP/Genesys voice paths, audit logs, Premium data isolation, and new agentic plan/add-on meters. IBM still does not publish a simple self-serve dollar price for broad enterprise rollout.
 - **May 5, 2026:** [IBM Think 2026 in Boston unveiled the next-generation watsonx Orchestrate as an agentic control plane](/news/2026-05-05-ibm-think-2026-watsonx-agent-orchestration/). The release bundles Orchestrate (private preview), Concert AI-assisted operations (public preview), IBM Sovereign Core (GA), IBM Bob coding/delivery assistant (GA), and expanded real-time data context via Confluent-linked streaming and watsonx.data features (private preview). The framing pitches enterprise AI as an operating-model problem rather than a model-leaderboard one, targeting organizations that have moved from one pilot agent to many agents built by different teams on different stacks.
 
 ## Who should shortlist it
@@ -99,10 +99,11 @@ Before treating watsonx Orchestrate as the control plane, ask IBM to separate wh
 Minimum verification list:
 
 - Which agent runtimes can be enrolled on day one, including non-IBM agents.
+- Whether Partner A2A agents, partner catalog purchases, Groq-linked paths, and non-IBM domain-agent add-ons are available in the buyer's cloud region and contract.
 - Whether policy enforcement blocks actions or only reports after the fact.
 - What audit artifacts are produced when an agent fails, escalates, or violates policy.
 - How identity, approvals, and rollback work across IBM, Red Hat, and third-party systems.
-- Whether pricing is based on users, agents, executions, environments, or enterprise agreement scope.
+- Whether pricing is based on Agentic MAUs, Agentic Messages, Skill Runs, voice MAUs/minutes, documents, domain agents, non-IBM domain agents, environments, or broader enterprise agreement scope.
 
 ## Pilot design
 
@@ -118,13 +119,17 @@ There is no self-serve tier to recommend. The best buying path is a scoped enter
 
 For most buyers, the first commercial checkpoint is not seat count. It is whether IBM can map Orchestrate to the systems, agents, and compliance obligations already in scope. Ask for a written rollout architecture before treating the platform as the default control layer.
 
+The June 2026 docs make the commercial review more specific. Ask IBM to map the pilot to named agentic plan units and add-ons before procurement: Agentic MAUs, Agentic Messages, Skill Runs, Voice MAUs, Voice Minutes, Messages, Documents, Domain Agents, and Non-IBM Domain Agents can change the bill even when the use case sounds like "one control plane."
+
 ## Best alternatives
 
 For ServiceNow-heavy organizations, [ServiceNow Otto and AI Control Tower](/tools/servicenow/) may be the more natural governance layer because it sits directly inside ITSM and workflow operations. For integration-led automation teams, [Workato](/tools/workato/) is a stronger fit when the buyer wants mature connector governance rather than a broader multi-agent control plane. For smaller teams, [n8n](/tools/n8n/) and [Zapier](/tools/zapier/) are usually easier starting points, but they are not substitutes for enterprise-wide agent governance.
 
 ## Pricing and rollout advice
 
-There is no simple public self-serve price to optimize around. Treat the price as part of an enterprise architecture decision: the cost only makes sense if the platform reduces agent sprawl, duplicated governance work, or audit risk across multiple business units. A good pilot should enroll a narrow set of agents with clear policies, failure criteria, and audit expectations before expanding to the wider estate.
+There is no simple public self-serve price to optimize around. IBM docs now reference a 30-day IBM Cloud trial path and agentic plan/add-on packaging, but the practical buyer still needs a written quote. Treat the price as part of an enterprise architecture decision: the cost only makes sense if the platform reduces agent sprawl, duplicated governance work, voice/agent runtime fragmentation, or audit risk across multiple business units.
+
+A good pilot should enroll a narrow set of agents with clear policies, failure criteria, audit expectations, and metering assumptions before expanding to the wider estate. If the pilot includes voice, partner agents, documents, or non-IBM domain agents, model those add-ons explicitly rather than assuming they are included in a generic enterprise control-plane SKU.
 
 ## System Verdict
 
@@ -134,5 +139,12 @@ There is no simple public self-serve price to optimize around. Treat the price a
 
 ## Methodology
 
-Last verified 2026-05-13 against the [IBM Think 2026 press release](https://www.prnewswire.com/news-releases/think-2026-ibm-delivers-the-blueprint-for-the-ai-operating-model-as-the-ai-divide-widens-302762136.html), the [IBM Orchestrate announcement page](https://www.ibm.com/new/announcements/manage-all-your-ai-agents-in-one-place-with-watsonx-orchestrate), and the [IBM watsonx portfolio](https://www.ibm.com/watsonx). Scoring weighs governance value, IBM enterprise reach, opacity of preview-vs-GA scope, and pricing uncertainty without self-serve disclosure.
+Last verified 2026-06-10 against [IBM watsonx Orchestrate release notes](https://www.ibm.com/docs/en/watsonx/watson-orchestrate/base?topic=releases-release-notes-2025), the [IBM Think 2026 announcement](https://newsroom.ibm.com/2026-05-05-think-2026-ibm-delivers-the-blueprint-for-the-ai-operating-model-as-the-ai-divide-widens), the [IBM Orchestrate announcement page](https://www.ibm.com/new/announcements/manage-all-your-ai-agents-in-one-place-with-watsonx-orchestrate), and the [IBM watsonx portfolio](https://www.ibm.com/watsonx). Scoring weighs governance value, IBM enterprise reach, monitoring/audit/partner-agent depth, opacity of preview-vs-GA scope, and pricing uncertainty without self-serve disclosure.
+
+## Sources
+
+- [IBM watsonx Orchestrate release notes](https://www.ibm.com/docs/en/watsonx/watson-orchestrate/base?topic=releases-release-notes-2025) (verified 2026-06-10)
+- [IBM Think 2026 announcement](https://newsroom.ibm.com/2026-05-05-think-2026-ibm-delivers-the-blueprint-for-the-ai-operating-model-as-the-ai-divide-widens) (verified 2026-06-10)
+- [IBM Orchestrate announcement](https://www.ibm.com/new/announcements/manage-all-your-ai-agents-in-one-place-with-watsonx-orchestrate) (verified 2026-06-10)
+- [IBM watsonx portfolio](https://www.ibm.com/watsonx) (verified 2026-06-10)
 

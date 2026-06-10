@@ -5,10 +5,10 @@ title: AI Automation & Agents
 description: Current workflow automation, AI agent platforms, meeting automation, call automation, and operations tools for technical teams, non-technical operators, GTM workflows, customer success, support, sales, and internal automation.
 tool_count: 27
 seo_title: "Best AI Automation Tools & Agent Platforms (June 2026)"
-meta_description: "Updated June 9, 2026: compare n8n, Zapier, Make, Taskade, Tines, Reclaim.ai, Instantly, Intercom, Gumloop, Relevance AI, Activepieces, AG2, CrewAI, Langflow, Langfuse, LangGraph, Letta, Dust, Glean, Goose, Browserbase, Modal, Apollo, Lindy, Pipedream, CloudTalk, and MeetGeek by workflow, pricing unit, AI orchestration, and risk."
+meta_description: "Updated June 10, 2026: compare n8n, Zapier, Make, Taskade, Rows, Voiceflow, watsonx Orchestrate, Tines, Reclaim.ai, Instantly, Intercom, Gumloop, Relevance AI, Activepieces, AG2, CrewAI, Langflow, Langfuse, LangGraph, Letta, Dust, Glean, Goose, Browserbase, Modal, Apollo, Lindy, Pipedream, CloudTalk, and MeetGeek by workflow, pricing unit, AI orchestration, governance, and risk."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-09
-last_verified: 2026-06-09
+last_updated: 2026-06-10
+last_verified: 2026-06-10
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -47,6 +47,8 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 **Use [Relevance AI](/tools/relevance-ai/) when the purchase question is an AI workforce.** The June 9 check found the public pricing page foregrounding Enterprise contact-sales packaging, while docs still define Free at 200 Actions/month plus 1,000 Vendor Credits, top-ups at $80 per 1,000 Actions and $20 per 10,000 Vendor Credits, and BYO API keys on paid plans. Treat old Pro/Team prices as historical unless the app or sales confirms them.
 
 **Use [ServiceNow](/tools/servicenow/) when enterprise AI automation needs a governance/control tower.** The June 9 check keeps ServiceNow in the governed autonomous-work lane: AI Control Tower now spans Discover, Observe, Govern, Secure, and Measure, with Action Fabric MCP, Build Agent, Workflow Data Fabric, AWS Bedrock AgentCore/Kiro context, and an August 2026 GA caveat for Control Tower enhancements.
+
+**Use [watsonx Orchestrate](/tools/watsonx-orchestrate/) when agent sprawl crosses IBM, partner, and non-IBM stacks.** The June 10 check moves it from pure Think 2026 announcement coverage into more concrete procurement questions: IBM docs now reference agent metric monitoring in watsonx.governance, Partner A2A agents, partner catalog purchases, structured chat data, voice/SIP/Genesys support, audit logs, Premium data isolation, and agentic plan/add-on meters. It is a control-plane shortlist, not a lightweight Zapier/n8n substitute.
 
 **Use [Tines](/tools/tines/) when security, IT, or compliance teams need workflow runs that hold up in audit.** The June 9 check keeps Community free, Starter starting at $500/mo, Business/Enterprise contact-sales, and the AI Agent action broader than the old FAQ wording. The practical purchase question is not app count; it is AI run-time credits, package limits, logs, SSO/SAML, flexible hosting, and whether a SOC or IT team can own the workflow safely.
 
@@ -90,6 +92,8 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 
 **Use [Dext](/tools/dext/) when automation starts with bookkeeping document intake.** It is vertical pre-accounting automation for receipts, invoices, statements, expenses, and accounting handoff, not a general agent platform. Pricing still scales by users and document volume, with the 5-user/250-document baseline rechecked on June 2.
 
+**Use [Rows](/tools/rows/) when automation starts inside a spreadsheet.** The June 10 check keeps Free at 5 AI tasks/month, Plus at $8/user/month with 200 AI tasks/month, Pro at $79/month plus $8/user with 1,000 AI tasks/month, and Enterprise custom. Rows is strongest when an ops or marketing team wants AI Analyst, `=AI()` cells, Python blocks, and live SaaS data tables in one workbook; skip it when the job is Excel-grade modeling or broad backend workflow orchestration.
+
 **Use the [accountants AI tools guide](/guides/best-ai-tools-for-accountants/) when automation touches client books, invoices, reconciliations, or firm workflow.** The June 6 guide separates Microsoft 365 Copilot in Excel, ChatGPT, Claude, Gemini, Perplexity, Intuit Assist, Xero JAX, and accounting-native systems from generic automation claims, with client-data, audit-trail, and deterministic-verification guardrails.
 
 **Use [Eightfold AI](/tools/eightfold-ai/) when automation starts with enterprise talent decisions.** Eightfold is not a simple recruiter productivity tool; the June 2 refresh keeps TalentForge, AI Interviewer/360 Interview, AI Interview Companion, Workforce Readiness, talent acquisition, talent management, workforce exchange, resource management, and workforce planning in one skills-intelligence procurement lane.
@@ -103,6 +107,8 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 **Use [Ada](/tools/ada/) when enterprise customer service wants AI agents for support outcomes.** Ada is now a demo-gated contact-sales page for serious service volumes, not a self-serve chatbot widget. Its June 1 source check found 550+ deployed AI agents and 5.5B+ interactions, so the buyer question is enterprise fit, resolution quality, and channel coverage.
 
 **Use [Intercom](/tools/intercom/) when support automation is chat-first and Fin outcome pricing fits the volume model.** The June 5 check keeps Essential/Advanced/Expert annual seats at $29/$85/$132, Fin at $0.99 per outcome, and the core buyer risk around seats, outcome volume, Copilot, and add-ons. The refreshed comparisons separate Intercom's support platform from Make/Zapier orchestration and Instantly outbound sending.
+
+**Use [Voiceflow](/tools/voiceflow/) when a product, CX, or agency team needs to design chat/voice agents without code.** The June 10 check confirms the public pricing page still does not publish the old Sandbox/Pro/Teams tier sheet; it is a free-trial-plus-demo path with usage-based billing. Treat historical Pro/Teams rates as quote-review baselines only, and ask for written credit, editor-seat, model-provider, voice/phone, and overage terms before buying.
 
 **Use [CloudTalk](/tools/cloudtalk/) when automation starts with phone operations.** CloudTalk is not a generic workflow router. It is the better fit when a sales or support team needs cloud calling, routing, dialers, CRM call logging, AI summaries, coaching analytics, and optional AI voice agents in one system.
 
@@ -133,6 +139,7 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 | Inbox triage automation | [SaneBox](/tools/sanebox/) | Server-side classification, SaneLater, SaneBlackHole, Daily Digest, reminders, snooze, and request-only beta AI drafts/summaries | Not a full AI email client replacement; beta AI features must be requested |
 | Delegated GTM, research, support, and ops agents | [Relevance AI](/tools/relevance-ai/) | AI workforces, Actions, Vendor Credits, scheduling, escalations, and marketplace patterns | Public pricing is Enterprise-led; docs and in-app billing need direct verification |
 | Enterprise AI governance and workflow control | [ServiceNow](/tools/servicenow/) | AI Control Tower, Otto, Action Fabric MCP, Build Agent, Workflow Data Fabric, and governed enterprise workflows | SKU packaging, Innovation Lab/GA timing, and regional availability need contract verification |
+| Multi-agent enterprise control plane | [watsonx Orchestrate](/tools/watsonx-orchestrate/) | IBM control-plane path for heterogeneous agents, monitoring, partner agents, audit logs, voice paths, and data-isolation controls | Preview-vs-GA scope, regions, agentic MAUs/messages/add-ons, and non-IBM agent support need written confirmation |
 | Security and IT workflow automation | [Tines](/tools/tines/) | Audit logs, RBAC, SSO/SAML, flexible hosting, Workbench, and AI Agent actions for SOC/IT workflows | Starter floor is high and AI Agent usage depends on credits and package limits |
 | Open-source automation and self-hosting | [Activepieces](/tools/activepieces/) | MIT-licensed self-host path, cloud active-flow billing, 700+ integrations, and AI-agent support | Someone still has to own hosting, secrets, and connector maintenance |
 | Developer multi-agent framework | [AG2](/tools/ag2/) | Apache 2.0 framework for AutoGen-style agent systems with active releases | Requires Python engineering judgment; not a turnkey workflow product |
@@ -155,9 +162,11 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 | AI workspace deliverable automation | [Genspark](/tools/genspark/) | Super Agent plus docs, slides, sheets, media, meetings, calls, and AI Drive | Credit burn and enterprise/API availability need direct verification |
 | Email/webinar/course marketing automation | [GetResponse](/tools/getresponse/) | Email sends, funnels, webinars, course creator, ecommerce and marketing automation | Not a general ops agent; affiliate status does not affect ranking |
 | Bookkeeping document automation | [Dext](/tools/dext/) | Receipts, invoices, expenses, bank/supplier statements, approvals, and accounting handoff | Not a ledger, payroll, tax, or general automation platform |
+| Spreadsheet-native ops automation | [Rows](/tools/rows/) | AI Analyst, `=AI()` cells, Python blocks, and live SaaS data tables inside a workbook | AI task caps, Superhuman policy handover, and spreadsheet lock-in need review |
 | Enterprise talent intelligence | [Eightfold AI](/tools/eightfold-ai/) | Skills-based hiring, internal mobility, TalentForge, AI Interviewer, Workforce Readiness, and workforce planning | Requires HR data readiness, governance, implementation scope, and change management |
 | Recruiting sourcing and CRM automation | [hireEZ](/tools/hireez/) | Sourcing, CRM, rediscovery, applicant match, hiring intelligence, scheduling, job distribution, and ATS workflows | Demo-led pricing and broad implementation scope need procurement discipline |
 | Chat-first customer support automation | [Intercom](/tools/intercom/) | Fin AI Agent, human inbox, Copilot, help center, workflows, and customer context in one support platform | Seat, outcome, Copilot, and add-on fees stack quickly |
+| No-code conversational agents | [Voiceflow](/tools/voiceflow/) | Visual agent design, knowledge-base RAG, testing, deployment, and monitoring for chat/voice experiences | Public pricing is demo-gated; confirm usage, model, seat, voice/phone, and overage terms |
 | Phone-heavy sales/support operations | [CloudTalk](/tools/cloudtalk/) | Business calling, routing, dialers, CRM sync, AI Conversation Intelligence, and AI Voice Agents in one platform | More than teams need if the job is internal-only calling or pure chat support |
 | Meeting-to-workflow automation for CS, sales, recruiting, and ops | [MeetGeek](/tools/meetgeek/) | Transcripts, summaries, AI Chat, action items, Zapier/Make/n8n workflows, API/MCP access, and CRM/task handoff from meeting content | Needs consent policy, workspace permissions, and a defined post-meeting workflow |
 | No-bot browser meeting capture | [Tactiq](/tools/tactiq/) | Meet/Zoom/Teams caption capture, AI summaries, workflow integrations, and Business-tier MCP/Claude Connector betas | Browser-caption quality, consent, AI credits, and Business beta access need verification |
@@ -227,6 +236,8 @@ Do not leave this category stale. Automation tools are adding MCP, agent builder
 - [Relevance AI pricing](https://relevanceai.com/pricing) (verified 2026-06-09)
 - [Relevance AI plans and credits documentation](https://relevanceai.com/docs/admin/subscriptions/plans) (verified 2026-06-09)
 - [ServiceNow AI Control Tower expansion](https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-expands-AI-Control-Tower-to-discover-observe-govern-secure-and-measure-AI-deployed-across-any-system-in-the-enterprise/default.aspx) (verified 2026-06-09)
+- [IBM watsonx Orchestrate release notes](https://www.ibm.com/docs/en/watsonx/watson-orchestrate/base?topic=releases-release-notes-2025) (verified 2026-06-10)
+- [IBM Think 2026 announcement](https://newsroom.ibm.com/2026-05-05-think-2026-ibm-delivers-the-blueprint-for-the-ai-operating-model-as-the-ai-divide-widens) (verified 2026-06-10)
 - [Taskade pricing](https://www.taskade.com/pricing) (verified 2026-06-09)
 - [Taskade AI](https://www.taskade.com/ai) (verified 2026-06-09)
 - [Tines pricing](https://www.tines.com/pricing/) (verified 2026-06-09)
@@ -257,6 +268,8 @@ Do not leave this category stale. Automation tools are adding MCP, agent builder
 - [Genspark membership benefits](https://www.genspark.ai/membership-benefits-lp) (verified 2026-06-02)
 - [GetResponse pricing](https://www.getresponse.com/pricing) (verified 2026-06-02)
 - [Dext business plans](https://help.dext.com/en/articles/647776-dext-plans-for-businesses) (verified 2026-06-02)
+- [Rows pricing](https://rows.com/pricing) (verified 2026-06-10)
+- [Rows AI](https://rows.com/ai) (verified 2026-06-10)
 - [Eightfold Talent Acquisition](https://eightfold.ai/products/talent-acquisition/) (verified 2026-06-02)
 - [Eightfold products](https://eightfold.ai/products/) (verified 2026-06-02)
 - [Eightfold TalentForge launch](https://eightfold.ai/company/press/press-releases/eightfold-ushers-in-the-golden-age-of-hr-software-with-launch-of-talentforge/) (verified 2026-06-02)
@@ -274,6 +287,8 @@ Do not leave this category stale. Automation tools are adding MCP, agent builder
 - [Ada platform](https://www.ada.cx/platform) (verified 2026-06-01)
 - [Intercom pricing](https://www.intercom.com/pricing) (verified 2026-06-05)
 - [Fin AI Agent pricing](https://fin.ai/pricing) (verified 2026-06-05)
+- [Voiceflow pricing](https://www.voiceflow.com/pricing) (verified 2026-06-10)
+- [Voiceflow documentation](https://docs.voiceflow.com/documentation/Introduction) (verified 2026-06-10)
 - [Retell AI pricing](https://www.retellai.com/pricing) (verified 2026-06-09)
 - [Retell AI legacy endpoint deprecation](https://docs.retellai.com/deprecation-notice/2026/06-15_legacy_list_endpoints) (verified 2026-06-09)
 - [Microsoft Build 2026 Work IQ and Foundry agent stack](https://blogs.microsoft.com/blog/2026/06/02/microsoft-build-2026-be-yourself-at-work/) (verified 2026-06-03)

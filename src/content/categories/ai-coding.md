@@ -5,10 +5,10 @@ title: AI Coding Assistants
 description: Current AI coding assistants, AI-native IDEs, terminal coding agents, PR agents, and app builders for developers, founders, teams, and non-developers.
 tool_count: 30
 seo_title: "Best AI Coding Tools & Copilot Alternatives (June 2026)"
-meta_description: "Updated June 9, 2026: compare Cursor, Claude Code, GitHub Copilot, Continue, Devin, Val Town, Windsurf/Devin Desktop, Codex, v0, Rork, Goose, GLM, MiniMax M3, Llama, Modal, Glean, Replit Agent, Aider, Cline, CodeRabbit, Cody, Amazon Q Developer, and Augment by workflow, pricing, autonomy, app-building, and team fit."
+meta_description: "Updated June 10, 2026: compare Cursor, Claude Code, GitHub Copilot, Continue, Devin, Val Town, Windsurf/Devin Desktop, Codex, v0, Rork, Uizard handoff caveats, Goose, GLM, MiniMax M3, Llama, Modal, Whisper, Glean, Replit Agent, Aider, Cline, CodeRabbit, Cody, Amazon Q Developer, and Augment by workflow, pricing, autonomy, app-building, model/API integration, and team fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-09
-last_verified: 2026-06-09
+last_updated: 2026-06-10
+last_verified: 2026-06-10
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -60,6 +60,8 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 
 **Use [Modal](/tools/modal/) when the coding deliverable is Python-backed infrastructure, not code suggestions.** Modal fits serverless Python functions, GPU inference jobs, web endpoints, sandboxes, queues, and scheduled jobs. It is a runtime/deployment lane beside Val Town and Replit-style builders, not an IDE assistant.
 
+**Use [Whisper](/tools/whisper/) when the coding task is adding speech-to-text, not writing code.** The June 10 check keeps Whisper as the MIT self-hosted batch transcription baseline, while hosted OpenAI builds should compare GPT-4o Transcribe, GPT-4o Mini Transcribe, GPT-4o Transcribe Diarize, and GPT-Realtime-Whisper by price, diarization, and latency before choosing a model ID.
+
 **Use [Glean](/tools/glean/) when coding agents need permission-aware company knowledge.** Glean's developer platform now exposes MCP and setup paths for Claude Code, Codex, Goose, Cursor, Gemini CLI, VS Code, Windsurf, JetBrains, and other developer surfaces, so it belongs in the enterprise-codebase-context lane rather than the autocomplete lane.
 
 **June 4 maintenance note:** the previous live coding-ledger rows refreshed [Continue vs Cursor](/compare/continue-vs-cursor/), [Continue vs Devin](/compare/continue-vs-devin/), [Continue vs GitHub Copilot](/compare/continue-vs-github-copilot/), and [Continue vs Val Town](/compare/continue-vs-val-town/) around the current split: Continue is source-controlled AI PR checks and agent governance, Cursor is the managed AI-native IDE, Devin is async ticket delegation, GitHub Copilot is the GitHub-native AI Credits platform, and Val Town is a hosted TypeScript runtime. The earlier June 4 live coding rows refreshed [Cline vs Cursor](/compare/cline-vs-cursor/) and [Cody vs Cursor](/compare/cody-vs-cursor/) around Cline as the open-source BYOK agent runtime, Cody as the Sourcegraph Enterprise code-context lane after Free/Pro sunset, and Cursor as the managed AI-native IDE for daily implementation. The Claude Code comparison layer has also been refreshed against current Anthropic, GitHub, Continue, Cognition, and Val Town sources. The same June 4 pass refreshed [Claude vs Cline](/compare/claude-vs-cline/), [Claude vs Cody](/compare/claude-vs-cody/), [Claude vs Cursor](/compare/claude-vs-cursor/), and [Claude vs GitHub Copilot](/compare/claude-vs-github-copilot/) so this hub now separates Claude as the broad assistant/Claude Code lane, Cline as the open-source BYOK repo agent, Cody as the Sourcegraph Enterprise code-context lane, Cursor as the GUI-first AI-native IDE, and Copilot as the GitHub-native AI Credits/model-picker lane. Earlier June 2 maintenance remains in force for Aider, Cline, CodeRabbit, Amazon Q Developer, Augment Code, Sourcegraph Cody, Factory, JetBrains AI, Kiro, Mastra, OpenHands, Pieces, Qodo, Replit Agent, Same.dev, Supermaven, Tabnine, Windsurf/Devin Desktop, Zed, Goose, GLM-5.1, and Glean.
@@ -76,6 +78,7 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 | OpenAI-native coding agent | [Codex](/tools/codex/) | Good for local repo tasks, PR-style work, and OpenAI-aligned teams | Not a pure inline autocomplete replacement |
 | Vercel-native app builder | [v0](/tools/v0/) | Turns prompts, screenshots, Figma context, and code context into previewable web apps and PR-ready changes | Credit/token usage, accessibility, security, and generated code quality need review |
 | Mobile/app-store app builder | [Rork](/tools/rork/) | Pro covers Android, Expo/React Native, and web; Max covers SwiftUI iOS and Apple-device outputs | Free projects are public, Max starts high, and real apps still need developer handoff |
+| UI mockup handoff reference | [Uizard](/tools/uizard/) | Fast editable mockups and per-component React/CSS handoff for non-designers | Not a full-project code export or production app builder |
 | Open-source local/BYOK agent | [Goose](/tools/goose/) | Desktop, CLI, and API agent with model choice, MCP extensions, and Apache-2.0 code | Needs provider-cost controls, secrets hygiene, and local-permission review |
 | Source-controlled AI PR checks | [Continue](/tools/continue/) | Best fit when teams want repo-owned checks, private agents, and explicit standards-as-code review | Weak prompts create noisy checks; humans still own merge decisions |
 | Coding model backend evaluation | [GLM](/tools/glm/) | GLM-5.1 open weights, OpenAI-compatible API examples, MCP/tool support, and long context | Verify endpoint behavior, region, compliance, and output-heavy costs |
@@ -85,6 +88,7 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 | Async ticket delegation | [Devin](/tools/devin/) | Sandbox sessions, playback, and PR output fit well-scoped backlog work | Quotas, on-demand credits, and full-seat costs need modeling before team rollout |
 | Tiny serverless TypeScript jobs | [Val Town](/tools/val-town/) | Fastest path for vals, cron jobs, webhooks, and small internal utilities | Not a full coding assistant or general app platform |
 | Serverless Python/GPU jobs | [Modal](/tools/modal/) | Python functions, queues, endpoints, sandboxes, scheduled jobs, and per-second GPU billing | Not a coding assistant; production cost depends on utilization, regions, and non-preemptible needs |
+| Speech-to-text integration | [Whisper](/tools/whisper/) | MIT self-hosted STT baseline plus OpenAI-hosted successor models for transcription, diarization, and realtime audio | Confirm current hosted model billing, latency, diarization, file limits, and data-handling before production |
 | Open-source CLI/BYOK coding | [Aider](/tools/aider/) | Strong for developers who want local control and model choice | Requires comfort with terminal workflows and API cost management |
 
 ## Our Picks
@@ -138,6 +142,8 @@ Do not rank coding tools by monthly price alone. Copilot AI Credits, Cursor and 
 
 Do not call every coding model an IDE. Cursor, Copilot, Claude Code, Codex, Gemini, Replit Agent, Lovable, Bolt, and v0 answer different workflow questions.
 
+Do not classify Uizard as a coding agent. Its June 10 export check still limits React/CSS handoff to individual components and says full-project HTML/JavaScript export is not available.
+
 Do not carry forward retired Rork plan names. Current coding-app-builder copy should separate Free, Rork Pro, and Rork Max by platform output and credit budget.
 
 Do not publish stale model-version claims. Coding tools route models and change access frequently; cite current vendor pages and avoid fake precision.
@@ -186,6 +192,10 @@ Do not publish stale model-version claims. Coding tools route models and change 
 - [Bolt.new pricing](https://bolt.new/pricing) (verified 2026-06-01)
 - [Browserbase pricing](https://www.browserbase.com/pricing) (verified 2026-06-01)
 - [Modal pricing](https://modal.com/pricing) (verified 2026-06-08)
+- [OpenAI Whisper GitHub](https://github.com/openai/whisper) (verified 2026-06-10)
+- [OpenAI speech-to-text docs](https://developers.openai.com/api/docs/guides/speech-to-text) (verified 2026-06-10)
+- [OpenAI API pricing](https://developers.openai.com/api/docs/pricing) (verified 2026-06-10)
+- [OpenAI public API pricing](https://openai.com/api/pricing/) (verified 2026-06-10)
 - [Supermaven pricing](https://supermaven.com/pricing) (verified 2026-06-01)
 - [Tabnine pricing](https://www.tabnine.com/pricing) (verified 2026-06-05)
 - [Val Town pricing](https://www.val.town/pricing) (verified 2026-06-05)
@@ -214,5 +224,6 @@ Do not publish stale model-version claims. Coding tools route models and change 
 - [Glean developer platform](https://developers.glean.com/) (verified 2026-06-02)
 - [v0 pricing](https://v0.app/pricing) (verified 2026-06-05)
 - [v0 documentation](https://v0.app/docs) (verified 2026-06-05)
+- [Uizard exporting projects and Handoff Mode](https://support.uizard.io/en/articles/6380330-exporting-projects) (verified 2026-06-10)
 - [Rork subscription docs](https://docs.rork.com/introduction/subscriptions) (verified 2026-06-09)
 - [Rork technical FAQ](https://docs.rork.com/faq/technical) (verified 2026-06-09)
