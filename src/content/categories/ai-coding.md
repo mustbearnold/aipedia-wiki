@@ -5,7 +5,7 @@ title: AI Coding Assistants
 description: Current AI coding assistants, AI-native IDEs, terminal coding agents, PR agents, and app builders for developers, founders, teams, and non-developers.
 tool_count: 30
 seo_title: "Best AI Coding Tools & Copilot Alternatives (June 2026)"
-meta_description: "Updated June 10, 2026: compare Cursor, Claude Code, GitHub Copilot, Continue, Devin, Val Town, Windsurf/Devin Desktop, Codex, v0, Rork, Uizard handoff caveats, Goose, GLM, MiniMax M3, Llama, Modal, Whisper, Glean, Replit Agent, Aider, Cline, CodeRabbit, Cody, Amazon Q Developer, and Augment by workflow, pricing, autonomy, app-building, model/API integration, and team fit."
+meta_description: "Updated June 10, 2026: compare Cursor, Claude Code, GitHub Copilot, Continue, Devin, Val Town, Windsurf/Devin Desktop, Codex, v0, Rork, Uizard handoff caveats, Goose, GLM, MiniMax M3, Yi-Coder legacy context, Llama, Modal, Whisper, Glean, Replit Agent, Aider, Cline, CodeRabbit, Cody, Amazon Q Developer, and Augment by workflow, pricing, autonomy, app-building, model/API integration, and team fit."
 author: "aipedia.wiki Editorial"
 last_updated: 2026-06-10
 last_verified: 2026-06-10
@@ -56,6 +56,8 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 
 **Use [MiniMax](/tools/minimax/) when the coding question is MiniMax-M3 backend evaluation.** The June 8 check moves MiniMax from M2.7-first to M3-first: standard M3 pay-as-you-go is listed at $0.30/M input and $1.20/M output for <=512K input, while >512K input and Priority tiers still need account-level access confirmation.
 
+**Use [Yi](/tools/yi/) only for legacy Yi-Coder or frozen-model coding experiments.** The June 10 check keeps 01.AI's public Yi pages alive, but the company headline is WorldWise/WanZhi 2.5 enterprise agents rather than a new Yi coding-model roadmap. Teams with Yi-Coder integrated can keep it as a reproducible baseline after license review; new coding-model evaluations should start with GLM, Qwen, Kimi, MiniMax, DeepSeek, or current hosted coding assistants.
+
 **Use [Llama](/tools/llama/) when the coding question is open-weight model control rather than an IDE.** The June 8 check keeps Maverick as the flagship open-weight model to evaluate, Scout as the long-context/Groq fast-inference lane, and Together/Groq pricing as provider-specific. It belongs here for self-hosted coding backends, local agent experiments, and model-diversification strategy, not as a direct substitute for Cursor, Copilot, Claude Code, or Codex.
 
 **Use [Modal](/tools/modal/) when the coding deliverable is Python-backed infrastructure, not code suggestions.** Modal fits serverless Python functions, GPU inference jobs, web endpoints, sandboxes, queues, and scheduled jobs. It is a runtime/deployment lane beside Val Town and Replit-style builders, not an IDE assistant.
@@ -83,6 +85,7 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 | Source-controlled AI PR checks | [Continue](/tools/continue/) | Best fit when teams want repo-owned checks, private agents, and explicit standards-as-code review | Weak prompts create noisy checks; humans still own merge decisions |
 | Coding model backend evaluation | [GLM](/tools/glm/) | GLM-5.1 open weights, OpenAI-compatible API examples, MCP/tool support, and long context | Verify endpoint behavior, region, compliance, and output-heavy costs |
 | MiniMax M3 backend evaluation | [MiniMax](/tools/minimax/) | M3 coding/agentic positioning, native multimodality, low standard token price, and MiniMax Code path | Verify 512K vs 1M context access, Priority tier access, data residency, and independent benchmark fit |
+| Legacy Yi-Coder or frozen-model baseline | [Yi](/tools/yi/) | Yi-Coder/Yi-1.5 remain available through public 01.AI-linked model paths | Not a current coding-agent default; confirm license, support, and whether WorldWise/WanZhi is the actual 01.AI product path |
 | Enterprise code/context search | [Glean](/tools/glean/) | Permission-aware work search and MCP/IDE integrations for developer tools | Sales-led pricing and connector/security review are required |
 | Browser app building for non-devs | [Replit Agent](/tools/replit-agent/) | Useful when the buyer wants build/run/deploy in a browser | Generated apps still need review, security, and maintenance |
 | Async ticket delegation | [Devin](/tools/devin/) | Sandbox sessions, playback, and PR output fit well-scoped backlog work | Quotas, on-demand credits, and full-seat costs need modeling before team rollout |
@@ -217,6 +220,8 @@ Do not publish stale model-version claims. Coding tools route models and change 
 - [GLM-5.1 on Hugging Face](https://huggingface.co/zai-org/GLM-5.1) (verified 2026-06-02)
 - [MiniMax M3 model page](https://www.minimax.io/models/text/m3) (verified 2026-06-08)
 - [MiniMax pay-as-you-go pricing](https://platform.minimax.io/docs/guides/pricing-paygo) (verified 2026-06-08)
+- [01.AI Yi models](https://www.01.ai/yi-models) (verified 2026-06-10)
+- [Yi GitHub repository](https://github.com/01-ai/Yi) (verified 2026-06-10)
 - [Llama official site](https://ai.meta.com/llama/) (verified 2026-06-08)
 - [Llama 4 Community License](https://www.llama.com/llama4/license/) (verified 2026-06-08)
 - [Together AI pricing](https://www.together.ai/pricing) (verified 2026-06-09)

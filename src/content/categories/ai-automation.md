@@ -5,7 +5,7 @@ title: AI Automation & Agents
 description: Current workflow automation, AI agent platforms, meeting automation, call automation, and operations tools for technical teams, non-technical operators, GTM workflows, customer success, support, sales, and internal automation.
 tool_count: 27
 seo_title: "Best AI Automation Tools & Agent Platforms (June 2026)"
-meta_description: "Updated June 10, 2026: compare n8n, Zapier, Make, Taskade, Rows, Voiceflow, watsonx Orchestrate, Tines, Reclaim.ai, Instantly, Intercom, Gumloop, Relevance AI, Activepieces, AG2, CrewAI, Langflow, Langfuse, LangGraph, Letta, Dust, Glean, Goose, Browserbase, Modal, Apollo, Lindy, Pipedream, CloudTalk, and MeetGeek by workflow, pricing unit, AI orchestration, governance, and risk."
+meta_description: "Updated June 10, 2026: compare n8n, Zapier, Make, Workato, Taskade, Rows, Voiceflow, watsonx Orchestrate, Tines, Reclaim.ai, Instantly, Intercom, Gumloop, Relevance AI, Activepieces, AG2, CrewAI, Langflow, Langfuse, LangGraph, Letta, Dust, Glean, Goose, Browserbase, Modal, Apollo, Lindy, Pipedream, CloudTalk, and MeetGeek by workflow, pricing unit, AI orchestration, governance, and risk."
 author: "aipedia.wiki Editorial"
 last_updated: 2026-06-10
 last_verified: 2026-06-10
@@ -49,6 +49,8 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 **Use [ServiceNow](/tools/servicenow/) when enterprise AI automation needs a governance/control tower.** The June 9 check keeps ServiceNow in the governed autonomous-work lane: AI Control Tower now spans Discover, Observe, Govern, Secure, and Measure, with Action Fabric MCP, Build Agent, Workflow Data Fabric, AWS Bedrock AgentCore/Kiro context, and an August 2026 GA caveat for Control Tower enhancements.
 
 **Use [watsonx Orchestrate](/tools/watsonx-orchestrate/) when agent sprawl crosses IBM, partner, and non-IBM stacks.** The June 10 check moves it from pure Think 2026 announcement coverage into more concrete procurement questions: IBM docs now reference agent metric monitoring in watsonx.governance, Partner A2A agents, partner catalog purchases, structured chat data, voice/SIP/Genesys support, audit logs, Premium data isolation, and agentic plan/add-on meters. It is a control-plane shortlist, not a lightweight Zapier/n8n substitute.
+
+**Use [Workato](/tools/workato/) when enterprise integration depth and governed agentic orchestration matter more than self-serve pricing.** The June 10 check confirms Workato's direct-customer model is still a platform edition fee plus usage fee, with Workato One adding agentic capabilities above Enterprise. Agent Studio genies, Workato GO, and MCP are the AI reasons to shortlist it, but MCP availability is region-scoped and contract-dependent, so buyers must verify edition, usage capacity, OPAs, concurrency, Agent Studio, GO, MCP, and data-center terms in writing.
 
 **Use [Tines](/tools/tines/) when security, IT, or compliance teams need workflow runs that hold up in audit.** The June 9 check keeps Community free, Starter starting at $500/mo, Business/Enterprise contact-sales, and the AI Agent action broader than the old FAQ wording. The practical purchase question is not app count; it is AI run-time credits, package limits, logs, SSO/SAML, flexible hosting, and whether a SOC or IT team can own the workflow safely.
 
@@ -140,6 +142,7 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 | Delegated GTM, research, support, and ops agents | [Relevance AI](/tools/relevance-ai/) | AI workforces, Actions, Vendor Credits, scheduling, escalations, and marketplace patterns | Public pricing is Enterprise-led; docs and in-app billing need direct verification |
 | Enterprise AI governance and workflow control | [ServiceNow](/tools/servicenow/) | AI Control Tower, Otto, Action Fabric MCP, Build Agent, Workflow Data Fabric, and governed enterprise workflows | SKU packaging, Innovation Lab/GA timing, and regional availability need contract verification |
 | Multi-agent enterprise control plane | [watsonx Orchestrate](/tools/watsonx-orchestrate/) | IBM control-plane path for heterogeneous agents, monitoring, partner agents, audit logs, voice paths, and data-isolation controls | Preview-vs-GA scope, regions, agentic MAUs/messages/add-ons, and non-IBM agent support need written confirmation |
+| Enterprise iPaaS and agentic orchestration | [Workato](/tools/workato/) | Workato One, Agent Studio genies, Workato GO, MCP, 1,000+ connectors, and governance-heavy workflow execution | Usage-based custom pricing, legacy-contract differences, region-scoped MCP, OPAs, concurrency, and agentic entitlements need written confirmation |
 | Security and IT workflow automation | [Tines](/tools/tines/) | Audit logs, RBAC, SSO/SAML, flexible hosting, Workbench, and AI Agent actions for SOC/IT workflows | Starter floor is high and AI Agent usage depends on credits and package limits |
 | Open-source automation and self-hosting | [Activepieces](/tools/activepieces/) | MIT-licensed self-host path, cloud active-flow billing, 700+ integrations, and AI-agent support | Someone still has to own hosting, secrets, and connector maintenance |
 | Developer multi-agent framework | [AG2](/tools/ag2/) | Apache 2.0 framework for AutoGen-style agent systems with active releases | Requires Python engineering judgment; not a turnkey workflow product |
@@ -238,6 +241,9 @@ Do not leave this category stale. Automation tools are adding MCP, agent builder
 - [ServiceNow AI Control Tower expansion](https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-expands-AI-Control-Tower-to-discover-observe-govern-secure-and-measure-AI-deployed-across-any-system-in-the-enterprise/default.aspx) (verified 2026-06-09)
 - [IBM watsonx Orchestrate release notes](https://www.ibm.com/docs/en/watsonx/watson-orchestrate/base?topic=releases-release-notes-2025) (verified 2026-06-10)
 - [IBM Think 2026 announcement](https://newsroom.ibm.com/2026-05-05-think-2026-ibm-delivers-the-blueprint-for-the-ai-operating-model-as-the-ai-divide-widens) (verified 2026-06-10)
+- [Workato pricing docs](https://docs.workato.com/pricing.html) (verified 2026-06-10)
+- [Workato MCP docs](https://docs.workato.com/en/mcp.html) (verified 2026-06-10)
+- [Workato Agent Studio docs](https://docs.workato.com/agentic/agent-studio) (verified 2026-06-10)
 - [Taskade pricing](https://www.taskade.com/pricing) (verified 2026-06-09)
 - [Taskade AI](https://www.taskade.com/ai) (verified 2026-06-09)
 - [Tines pricing](https://www.tines.com/pricing/) (verified 2026-06-09)

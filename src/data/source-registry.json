@@ -8557,7 +8557,8 @@
       "url": "https://docs.workato.com/pricing.html",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-10"
     },
     {
       "id": "workato-mcp-docs",
@@ -8565,7 +8566,8 @@
       "url": "https://docs.workato.com/en/mcp.html",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-10"
     },
     {
       "id": "workato-agent-studio-docs",
@@ -8573,7 +8575,8 @@
       "url": "https://docs.workato.com/agentic/agent-studio",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-10"
     },
     {
       "id": "workato-go-docs",
@@ -8581,7 +8584,8 @@
       "url": "https://docs.workato.com/en/agentic/workato-go.html",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-10"
     },
     {
       "id": "workato-connectors-docs",
@@ -8589,7 +8593,8 @@
       "url": "https://docs.workato.com/en/connectors.html",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-10"
     },
     {
       "id": "workato-security-compliance-docs",
@@ -8597,7 +8602,8 @@
       "url": "https://docs.workato.com/en/security/security-compliance.html",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-10"
     },
     {
       "id": "workato-gartner-mq-2026",
@@ -8605,7 +8611,8 @@
       "url": "https://www.workato.com/the-connector/gartner-magic-quadrant-2026/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-10"
     },
     {
       "id": "writer-official",
@@ -8614,7 +8621,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-05-04"
+      "last_checked": "2026-06-10"
     },
     {
       "id": "writer-palmyra",
@@ -8623,7 +8630,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-04"
+      "last_checked": "2026-06-10"
     },
     {
       "id": "writer-platform",
@@ -8632,7 +8639,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-05-04"
+      "last_checked": "2026-06-10"
     },
     {
       "id": "writer-pricing",
@@ -8641,7 +8648,25 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-04"
+      "last_checked": "2026-06-10"
+    },
+    {
+      "id": "writer-developer-pricing",
+      "label": "Writer developer pricing",
+      "url": "https://dev.writer.com/home/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-10"
+    },
+    {
+      "id": "writer-model-docs",
+      "label": "Writer model docs",
+      "url": "https://dev.writer.com/home/models",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-10"
     },
     {
       "id": "writesonic-docs",
@@ -8707,11 +8732,48 @@
     },
     {
       "id": "yi-official",
-      "label": "01.AI Wikipedia",
-      "url": "https://en.wikipedia.org/wiki/01.AI",
+      "label": "01.AI company site",
+      "url": "https://www.01.ai/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-10"
+    },
+    {
+      "id": "yi-models",
+      "label": "01.AI Yi models",
+      "url": "https://www.01.ai/yi-models",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-10"
+    },
+    {
+      "id": "yi-lingyiwanwu",
+      "label": "Lingyiwanwu WanZhi platform",
+      "url": "https://www.lingyiwanwu.com/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-10"
+    },
+    {
+      "id": "yi-huggingface",
+      "label": "Hugging Face 01-ai",
+      "url": "https://huggingface.co/01-ai",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-10"
+    },
+    {
+      "id": "yi-github",
+      "label": "Yi GitHub repository",
+      "url": "https://github.com/01-ai/Yi",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-10"
     },
     {
       "trust_tier": "primary",

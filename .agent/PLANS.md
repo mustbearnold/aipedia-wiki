@@ -82,6 +82,95 @@ Summarize changed files, behavior shipped, tests passed, unresolved risks, and r
 
 ---
 
+## ExecPlan: June 10 2026 Workato Writer Yi Tool Refresh
+
+### 1. Objective
+
+Continue the oldest-to-newest live ledger refresh by updating the next active tool rows after skipped dead/deprecated pages: Workato, Writer, and Yi. The batch improves trust, source-backed buyer guidance, SEO freshness, parent hub accuracy, and LLM crawl-surface freshness.
+
+### 2. Current state
+
+`PAGE_REFRESH_LEDGER.md` shows `/tools/workato/`, `/tools/writer/`, and `/tools/yi/` as the next live May 13 rows after skipped dead/deprecated pages. The tool records carried stale May verification, Writer still implied deprecated Palmyra model IDs were stable model-family recommendations, and Yi's source registry pointed `yi-official` at Wikipedia despite facts citing the 01.AI company site.
+
+### 3. Target state
+
+The three tool pages should carry `last_updated` and `last_verified` of 2026-06-10, with current pricing/model/platform caveats. Affected parent category hubs, top-layer indexes, LLM surfaces, source registry, and the refresh ledger should reflect the batch.
+
+### 4. Scope
+
+Included: Workato, Writer, and Yi tool records; source registry entries used by their facts; AI Automation, AI Writing, AI Research, AI Chatbots, and AI Coding parent hubs; `/`, `/tools/`, `/categories/`, `/llms.txt`, `/llms-full.txt`, `PAGE_REFRESH_LEDGER.md`, validation, and responsive QA. Excluded: dead tool pages, individual news articles, logo work, schema changes, and new affiliate CTAs.
+
+Affected top-layer surfaces: `/`, `/tools/`, `/categories/`, `/categories/ai-automation/`, `/categories/ai-writing/`, `/categories/ai-research/`, `/categories/ai-chatbots/`, `/categories/ai-coding/`, `/llms.txt`, `/llms-full.txt`, generated sitemap/ledger surfaces, and `PAGE_REFRESH_LEDGER.md`.
+
+### 5. Files likely affected
+
+`src/content/tools/workato.md`, `src/content/tools/writer.md`, `src/content/tools/yi.md`, `src/content/categories/ai-automation.md`, `src/content/categories/ai-writing.md`, `src/content/categories/ai-research.md`, `src/content/categories/ai-chatbots.md`, `src/content/categories/ai-coding.md`, `src/data/source-registry.json`, `src/pages/index.astro`, `src/pages/tools/index.astro`, `src/pages/categories/index.astro`, `src/pages/llms.txt.ts`, `src/pages/llms-full.txt.ts`, `PAGE_REFRESH_LEDGER.md`, and this plan.
+
+### 6. Data model impact
+
+No schema changes. Existing frontmatter, `facts`, `price_history`, source lists, and registry `last_checked` values are refreshed in place. New source IDs are added for Writer developer pricing/model docs and Yi's official model, Hugging Face, Lingyiwanwu/WanZhi, and GitHub surfaces.
+
+### 7. SEO impact
+
+Update stale May 2026 titles/meta descriptions where present, preserve canonical routes, and align parent hubs with child-page positioning so category summaries do not contradict current facts.
+
+### 8. Conversion impact
+
+No affiliate links or tracked CTAs are added. Buying guidance reduces conversion risk by clarifying Workato custom usage pricing, Writer model deprecations, and Yi direct-pricing uncertainty.
+
+### 9. Mobile UX impact
+
+Templates are unchanged. Short verdicts, plan guidance, watch-outs, and category summaries should remain readable at 360, 390, 430, 768, and desktop widths.
+
+### 10. Implementation steps
+
+1. Verify June 2026 official/current sources for Workato, Writer, and 01.AI/Yi.
+2. Patch the three tool records and source registry.
+3. Refresh affected parent category hubs.
+4. Refresh top-layer/LLM metadata and regenerate the ledger.
+5. Run source/fact/link/build checks plus responsive QA.
+
+### 11. Verification commands
+
+`npm run ledger:pages`
+
+`npm run ledger:pages:check`
+
+`npm run guard:check`
+
+`npm run audit:sources`
+
+`npm run audit:facts`
+
+`npm run check:links`
+
+`npm run test:scripts`
+
+`npm run check`
+
+`npm run build:fast`
+
+`git diff --check`
+
+### 12. Acceptance criteria
+
+The three selected active tool pages are verified on 2026-06-10, stale May-only pricing/model/feature language is removed from touched records, affected parent hubs and LLM surfaces are current, the ledger reflects the true refresh scope, and validation passes or any failures are documented with scope and risk.
+
+### 13. Risks and mitigations
+
+Workato and Writer have sales-led terms, so the content avoids invented rates and points buyers to contract confirmation. Writer model availability is time-sensitive because the July 13 deprecation date is close; the page now flags migration. Yi has mixed licensing and product-positioning signals, so the page avoids blanket open-source claims and requires model-specific license review.
+
+### 14. Progress log
+
+- 2026-06-10: Verified Workato pricing/MCP/Agent Studio/GO/security/Gartner sources, Writer plans/LLMs/developer pricing/model docs, and 01.AI/Yi/WorldWise/WanZhi/Hugging Face/GitHub sources. Patched tool records, source registry, parent hubs, top-layer comments, and LLM manifest summaries.
+- 2026-06-10: Ran ledger, guard, source, fact, link, script-test, check, fast-build, diff, and static responsive QA gates. Build generated 1,104 pages and the responsive pass checked 65 route/viewport pairs at 360, 390, 430, 768, and 1024px without blank pages or horizontal overflow.
+
+### 15. Final report
+
+Shipped the Workato, Writer, and Yi June 10, 2026 refresh with updated source registry entries, refreshed parent category hubs, top-layer metadata comments, LLM crawl-surface summaries, and regenerated page refresh ledger rows. Validation passed with `npm run ledger:pages`, `npm run ledger:pages:check`, `npm run guard:check`, `npm run audit:sources`, `npm run audit:facts`, `npm run check:links`, `npm run test:scripts`, `npm run check`, `npm run build:fast`, `git diff --check`, and static Playwright responsive QA. No unresolved product-content risks remain beyond the documented sales-led/custom-pricing caveats on Workato, Writer, and Yi.
+
+---
+
 ## ExecPlan: June 10 2026 watsonx Orchestrate Weaviate Whisper Wispr Flow Tool Refresh
 
 ### 1. Objective

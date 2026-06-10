@@ -5,10 +5,10 @@ title: AI Research Tools
 description: Source-backed AI tools for literature review, paper discovery, citation context, research notebooks, academic search, and evidence synthesis.
 tool_count: 9
 seo_title: "Best AI Research Tools: Elicit, Scite, Semantic Scholar & Perplexity (June 2026)"
-meta_description: "Updated June 9, 2026: Elicit for systematic-review workflow, Semantic Scholar for free academic search/API, Scite for citation context/MCP, Perplexity for cited web research/API, NotebookLM for source-grounded notebooks, Consensus for claim-level Q&A, Connected Papers for graph mapping, ChatPDF and Humata for PDF workflows, and Reka Edge for low-cost multimodal research infrastructure."
+meta_description: "Updated June 10, 2026: Elicit for systematic-review workflow, Semantic Scholar for free academic search/API, Scite for citation context/MCP, Perplexity for cited web research/API, NotebookLM for source-grounded notebooks, Consensus for claim-level Q&A, Connected Papers for graph mapping, ChatPDF and Humata for PDF workflows, Reka Edge for low-cost multimodal research infrastructure, and Yi for frozen-model baselines."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-09
-last_verified: 2026-06-09
+last_updated: 2026-06-10
+last_verified: 2026-06-10
 update_frequency: monthly
 ---
 
@@ -29,6 +29,8 @@ The June 4 [Claude vs Elicit](/compare/claude-vs-elicit/) refresh adds the match
 The June 4 research-discovery comparison pass refreshed [Connected Papers vs Consensus](/compare/connected-papers-vs-consensus/), [Connected Papers vs Elicit](/compare/connected-papers-vs-elicit/), [Connected Papers vs nanochat](/compare/connected-papers-vs-nanochat/), [Connected Papers vs Scite](/compare/connected-papers-vs-scite/), [Connected Papers vs Semantic Scholar](/compare/connected-papers-vs-semantic-scholar/), [Consensus vs Elicit](/compare/consensus-vs-elicit/), [Consensus vs nanochat](/compare/consensus-vs-nanochat/), [Consensus vs Scite](/compare/consensus-vs-scite/), and [Consensus vs Semantic Scholar](/compare/consensus-vs-semantic-scholar/). The buyer split is now explicit: Connected Papers maps a field, Consensus answers focused academic questions, Elicit manages systematic-review workflow, Scite checks citation context, Semantic Scholar is the free academic-search/API baseline, and [nanochat](/tools/nanochat/) is an educational LLM training harness rather than a paper-search product.
 
 For budget-conscious research teams running their own pipelines, [Reka Edge](/tools/reka/) is now a physical-AI and multimodal infrastructure candidate rather than a generic literature-review app. The June 9 check keeps Edge API pricing at $0.10 per million input tokens and $0.10 per million output tokens, with Edge image input at $0.005 and video at $0.03/minute. Its weights are source-available under BSL 1.1 with a commercial threshold, so buyers should not describe it as permissive Apache/MIT open source. Teams evaluating open-weight, long-context extraction or agentic coding around research corpora can also shortlist [GLM](/tools/glm/): GLM-5.1 has MIT Hugging Face weights, 200K context, 128K maximum output, and public Z.AI API pricing, but it is model infrastructure rather than a literature-review workflow. The June 8 [MiniMax](/tools/minimax/) refresh adds a similar model-infrastructure lane: MiniMax-M3 is worth benchmarking for long-context/coding/agentic extraction experiments, but it is not a research workflow product and buyers must verify whether their account has >512K input or Priority access before relying on the 1M-context positioning.
+
+The June 10 [Yi](/tools/yi/) refresh keeps 01.AI in this hub only as a frozen-model and enterprise-platform research edge case. Yi-Lightning and Yi open models still appear on 01.AI, Hugging Face, and GitHub surfaces, but 01.AI's active 2026 story is WorldWise/WanZhi 2.5, multi-agent enterprise deployment, and Super Employee products. Use Yi for reproducible baselines, legacy bilingual experiments, or studying 01.AI's pivot; use active model families such as Qwen, DeepSeek, GLM, Kimi, Reka, or MiniMax for new model-infrastructure evaluation.
 
 The May 31 update adds an important caveat for high-stakes science. OpenAI's [Rosalind Biodefense expansion](/news/2026-05-31-openai-rosalind-biodefense-trusted-access/) shows that specialist research models can be powerful but gated. GPT-Rosalind is not a general research subscription; it is a trusted-access life-sciences model program for qualified teams and public-health or biodefense workflows. Treat that as a separate procurement lane from everyday literature review.
 
@@ -120,6 +122,10 @@ Do not cite generated text. Cite the original source. Do not treat a linked sour
 - [GLM-5.1 on Hugging Face](https://huggingface.co/zai-org/GLM-5.1) - verified 2026-06-02.
 - [MiniMax M3 model page](https://www.minimax.io/models/text/m3) - verified 2026-06-08.
 - [MiniMax pay-as-you-go pricing](https://platform.minimax.io/docs/guides/pricing-paygo) - verified 2026-06-08.
+- [01.AI company site](https://www.01.ai/) - verified 2026-06-10.
+- [01.AI Yi models](https://www.01.ai/yi-models) - verified 2026-06-10.
+- [Hugging Face 01-ai](https://huggingface.co/01-ai) - verified 2026-06-10.
+- [Yi GitHub repository](https://github.com/01-ai/Yi) - verified 2026-06-10.
 - [OpenAI GPT-Rosalind for life sciences research](https://openai.com/index/introducing-gpt-rosalind/) - verified 2026-05-31.
 - [OpenAI Rosalind Biodefense trusted-access expansion](https://openai.com/index/strengthening-societal-resilience-with-rosalind-biodefense/) - verified 2026-05-31.
 - [OpenAI new GPT-Rosalind capabilities](https://openai.com/index/introducing-new-capabilities-to-gpt-rosalind/) - verified 2026-06-06.
