@@ -1,15 +1,15 @@
 ---
 type: workflow
 slug: agency-sales-stack
-title: "The Agency Sales Stack (May 2026)"
+title: "The Agency Sales Stack (June 2026)"
 seo_title: "Agency Sales Stack: Apollo, Amplemarket, Unbounce, AdCreative, Beautiful.ai (2026)"
-meta_description: "Verified May 14, 2026: the working AI sales stack for marketing and creative agencies. Prospecting, outbound, landing pages, ad creative, decks, with honest pairings."
+meta_description: "Verified June 11, 2026: the working AI sales stack for marketing and creative agencies. Prospecting, outbound, landing pages, ad creative, decks, with honest pairings."
 description: "An assembled AI sales stack for marketing and creative agencies running new-business development at scale. Honest tool pairings by function, not a marketing list."
 stack: [apollo, amplemarket, unbounce, adcreative, beautiful-ai, reclaim-ai]
 tools_mentioned: [apollo, amplemarket, unbounce, adcreative, beautiful-ai, reclaim-ai, clay]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-14
-last_verified: 2026-05-14
+last_updated: 2026-06-11
+last_verified: 2026-06-11
 update_frequency: monthly
 related:
   - href: /workflows/sdr-stack/
@@ -30,11 +30,11 @@ related:
     kind: guide
 ---
 
-# The Agency Sales Stack (May 2026)
+# The Agency Sales Stack (June 2026)
 
 A marketing or creative agency running new-business development has a specific problem: the work that produces revenue (client delivery) and the work that produces new revenue (sales) compete for the same finite team time. The right AI stack lets a small business-development function (often one or two people plus the founder) cover prospecting, outbound, demos, and proposals without distracting the delivery team.
 
-This stack is assembled from the tools that work for agencies of 10-50 people doing $100k-$2M/year in new business. AiPedia verified pricing and capabilities on May 14, 2026.
+This stack is assembled from the tools that work for agencies of 10-50 people doing $100k-$2M/year in new business. AiPedia verified pricing and capabilities on June 11, 2026.
 
 ## Function by function
 
@@ -47,7 +47,7 @@ This stack is assembled from the tools that work for agencies of 10-50 people do
 | Pitch decks and proposals | [Beautiful.ai](/tools/beautiful-ai/) | Brand-consistent decks across business-development team |
 | Calendar and meeting management | [Reclaim.ai](/tools/reclaim-ai/) | Smart 1:1s and team scheduling |
 
-Total stack cost: roughly $500-1,200/month depending on team size and tiers. For agencies whose average new client value exceeds $20k, this is well under 1% of acquisition cost.
+Current stack cost splits into two buying paths: Apollo-led volume outbound can stay in the low hundreds per month for a small business-development team, while adding Amplemarket changes the math because its public Startup entry is an annual $600/month package for two users. For agencies whose average new client value exceeds $20k, the stack can still fit acquisition economics, but only if pipeline attribution is clean.
 
 ## Why This Stack vs. Best-of-Breed
 
@@ -69,7 +69,7 @@ For volume outbound on the broader prospect universe (the long tail of accounts 
 
 ### 2. AI personalization with Amplemarket on named accounts
 
-For the 50-100 named accounts where a generic sequence will not work, Amplemarket's Duo personalization writes openers based on each prospect's recent posts, company news, fundraising context, and hiring signals. Reply rates on this segment typically 3-5x the volume outbound.
+For the 50-100 named accounts where a generic sequence will not work, Amplemarket's Duo personalization writes openers based on each prospect's recent posts, company news, fundraising context, and hiring signals. This named-account lane should outperform volume outbound when the account research is real, but measure it against your own ICP before buying the second platform.
 
 The split: Apollo for volume, Amplemarket for named. Some agencies run both; some run only one. Test on your actual ICP before committing to both.
 
@@ -97,18 +97,16 @@ Reclaim defends business-development focus blocks against client meeting load an
 
 ## Pricing Reality
 
-Verified May 14, 2026. Annual billing typically cuts 15-25%.
+Verified June 11, 2026. Annual billing, usage credits, and checkout promotions vary, so model the stack in lanes:
 
-| Tool | Tier | Monthly / annual (~20% off) |
-|---|---|---|
-| Apollo | Professional | ~$99 / ~$80 per user/mo |
-| Amplemarket | Plus | ~$150-200 per user/mo, custom annual |
-| Unbounce | Optimize | ~$145 / ~$110 per month |
-| AdCreative | Professional | ~$109 / ~$90 per month |
-| Beautiful.ai | Team | ~$40 / ~$32 per user/mo |
-| Reclaim.ai | Team | ~$15 / ~$12 per seat/mo |
+- **Apollo:** Basic is currently $49/seat/month billed annually, Professional $79/seat/month billed annually, and Organization $119/seat/month billed annually. Use Professional when A/B testing, dialer, and advanced sequencing matter.
+- **Amplemarket:** the public Startup plan starts at $600/month on an annual term with 2 users included. That makes it a named-account motion, not a casual add-on for every agency.
+- **Unbounce:** AI traffic optimization currently sits on the Optimize path, with the public pricing page showing a $249/month list point and annual billing savings. Budget it only for paid-traffic campaigns where landing-page conversion lift is measurable.
+- **AdCreative:** keep this as a variable paid-creative line item because public pricing and campaign credit packaging can change at checkout; verify the active plan before promising client output volume.
+- **Beautiful.ai:** Pro is currently $12/month when billed annually, while Team is $40/user/month annually or $50/user/month monthly.
+- **Reclaim.ai:** Free is enough to test solo scheduling; the public Starter path currently shows $12/seat/month before discounts.
 
-For a 2-person business-development function plus the founder doing pitch work, total stack cost is roughly $700-900/mo. For a 5-person business-development function, roughly $1,400-1,800/mo.
+For a 2-person business-development function plus the founder doing pitch work, Apollo + Beautiful.ai + Reclaim can stay lean. Adding Amplemarket and Unbounce moves the stack toward a $1k+/month operating commitment before ad spend.
 
 ## What This Stack Does Not Cover
 
@@ -168,12 +166,19 @@ Lightly. The deeper deck analytics integration lives in Pitch and Decktopus. If 
 
 ## Sources
 
-- [Apollo](https://www.apollo.io/)
-- [Amplemarket](https://amplemarket.com/)
-- [Unbounce](https://unbounce.com/)
-- [AdCreative](https://www.adcreative.ai/)
-- [Beautiful.ai](https://www.beautiful.ai/)
-- [Reclaim.ai](https://reclaim.ai/)
+- [Apollo](https://www.apollo.io/), verified 2026-06-11
+- [Apollo pricing](https://www.apollo.io/pricing), verified 2026-06-11
+- [Amplemarket](https://amplemarket.com/), verified 2026-06-11
+- [Amplemarket pricing](https://www.amplemarket.com/pricing), verified 2026-06-11
+- [Unbounce](https://unbounce.com/), verified 2026-06-11
+- [Unbounce pricing](https://unbounce.com/pricing/), verified 2026-06-11
+- [Unbounce Smart Traffic](https://unbounce.com/product/smart-traffic/), verified 2026-06-11
+- [AdCreative](https://www.adcreative.ai/), verified 2026-06-11
+- [AdCreative pricing](https://www.adcreative.ai/pricing), verified 2026-06-11
+- [Beautiful.ai](https://www.beautiful.ai/), verified 2026-06-11
+- [Beautiful.ai pricing](https://www.beautiful.ai/pricing), verified 2026-06-11
+- [Reclaim.ai](https://reclaim.ai/), verified 2026-06-11
+- [Reclaim pricing](https://reclaim.ai/pricing), verified 2026-06-11
 
 Internal references:
 

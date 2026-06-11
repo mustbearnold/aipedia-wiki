@@ -1,15 +1,15 @@
 ---
 type: workflow
 slug: consultant-stack
-title: "The Independent Consultant AI Stack (May 2026)"
+title: "The Independent Consultant AI Stack (June 2026)"
 seo_title: "Independent Consultant AI Stack: Decks, Research, Calendar, Email, Content (2026)"
-meta_description: "Verified May 14, 2026: the AI stack for independent consultants. Beautiful.ai for decks, Consensus for research, Reclaim for calendar, SaneBox for email, Descript for content."
+meta_description: "Verified June 11, 2026: the AI stack for independent consultants. Beautiful.ai for decks, Consensus for research, Reclaim for calendar, SaneBox for email, Descript for content."
 description: "An assembled AI stack for independent consultants and boutique consulting firms. Honest tool pairings for deck production, research, calendar defense, and content."
 stack: [beautiful-ai, consensus, reclaim-ai, sanebox, descript]
 tools_mentioned: [beautiful-ai, consensus, reclaim-ai, sanebox, descript, elicit, claude]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-14
-last_verified: 2026-05-14
+last_updated: 2026-06-11
+last_verified: 2026-06-11
 update_frequency: monthly
 related:
   - href: /guides/best-presentation-tool-for-smb-sales-teams/
@@ -30,11 +30,11 @@ related:
     kind: workflow
 ---
 
-# The Independent Consultant AI Stack (May 2026)
+# The Independent Consultant AI Stack (June 2026)
 
 An independent consultant or boutique consulting firm sells expertise on a clock that runs whether the client is present or not. The right AI stack defends the time that produces revenue (client work), accelerates the work that creates the next engagement (proposals, decks, research), and clears the noise that produces nothing (email triage, scheduling overhead).
 
-AiPedia verified pricing on May 14, 2026.
+AiPedia verified pricing on June 11, 2026.
 
 ## Function by function
 
@@ -47,7 +47,7 @@ AiPedia verified pricing on May 14, 2026.
 | Content: podcast, video, talks | [Descript](/tools/descript/) | Transcript-first editing for thought-leadership content |
 | Primary LLM | [Claude](/tools/claude/) | Long-form reasoning and writing |
 
-Total monthly cost: roughly $130-200 depending on tiers. For a consultant billing $300+/hour, this is one client hour per month.
+Current monthly cost is usually around one consultant hour if you stay on individual plans: Beautiful.ai for decks, Consensus for source-backed research, Reclaim and SaneBox for operating discipline, Descript for content, and one paid LLM plan. The exact number depends on whether Descript and research tools are occasional or weekly workhorses.
 
 ## Why This Stack vs. Generic SMB Tools
 
@@ -81,18 +81,16 @@ Three constraints specific to consulting work:
 
 ## Pricing Reality
 
-Verified May 14, 2026:
+Verified June 11, 2026:
 
-| Tool | Tier | Price |
-|---|---|---|
-| Beautiful.ai | Pro | ~$15/mo |
-| Consensus | Premium | ~$11.99/mo |
-| Reclaim.ai | Starter | ~$10/mo |
-| SaneBox | Snack | ~$7/mo |
-| Descript | Creator or Pro | $16-30/mo |
-| Claude | Pro | $20/mo |
+- **Beautiful.ai:** Pro is currently $12/month when billed annually; Team is materially more expensive and only makes sense when multiple consultants share decks and brand controls.
+- **Consensus:** Pro is currently $15/month or $120/year; Deep is $65/month or $540/year and is overkill unless research reviews are part of the paid deliverable.
+- **Reclaim.ai:** test on Free, then use Starter or Business when scheduling range, integrations, or team controls matter; the public Starter path currently shows $12/seat/month.
+- **SaneBox:** Snack is currently $4.99/month and is enough for many solo consultants; Lunch adds more inbox capacity at $7.99/month.
+- **Descript:** paid plans start at $16/month, with higher creator/business tiers using media hours and AI credits for heavier video work.
+- **Claude:** Pro is currently $20/month; Max and Team are for heavier usage or collaboration.
 
-Total: roughly $80-95/mo. Pair with a $30-50/mo professional liability insurance plus the consultant's domain and email and the operating overhead remains under $200/mo.
+A lean consultant stack can stay near the low hundreds per month. If every client engagement requires formal literature reviews, move Consensus or Elicit up a tier and treat research tooling as a billable delivery cost.
 
 ## What This Stack Does Not Cover
 
@@ -150,11 +148,18 @@ Two questions: (1) Did adding the stack increase your effective billable hours p
 
 ## Sources
 
-- [Beautiful.ai](https://www.beautiful.ai/)
-- [Consensus](https://consensus.app/)
-- [Reclaim.ai](https://reclaim.ai/)
-- [SaneBox](https://www.sanebox.com/)
-- [Descript](https://www.descript.com/)
+- [Beautiful.ai](https://www.beautiful.ai/), verified 2026-06-11
+- [Beautiful.ai pricing](https://www.beautiful.ai/pricing), verified 2026-06-11
+- [Consensus](https://consensus.app/), verified 2026-06-11
+- [Consensus subscription plans](https://help.consensus.app/en/articles/10087865-subscription-plans), verified 2026-06-11
+- [Reclaim.ai](https://reclaim.ai/), verified 2026-06-11
+- [Reclaim pricing](https://reclaim.ai/pricing), verified 2026-06-11
+- [SaneBox](https://www.sanebox.com/), verified 2026-06-11
+- [SaneBox pricing](https://www.sanebox.com/pricing), verified 2026-06-11
+- [Descript](https://www.descript.com/), verified 2026-06-11
+- [Descript pricing](https://www.descript.com/pricing), verified 2026-06-11
+- [Descript media minutes and AI credits](https://help.descript.com/hc/en-us/articles/27841674958221-Track-and-understand-your-media-minutes-and-AI-credits), verified 2026-06-11
+- [Claude pricing](https://claude.com/pricing), verified 2026-06-11
 
 Internal references:
 

@@ -1,15 +1,15 @@
 ---
 type: workflow
 slug: solo-founder-stack
-title: "The Solo Founder AI Stack (May 2026)"
+title: "The Solo Founder AI Stack (June 2026)"
 seo_title: "Solo Founder AI Stack: Calendar, Email, Sales, Decks, Content (2026)"
-meta_description: "Verified May 14, 2026: the AI stack for solo founders running every function alone. Reclaim, SaneBox, Apollo, Beautiful.ai, Descript, with honest pairings and pricing."
+meta_description: "Verified June 11, 2026: the AI stack for solo founders running every function alone. Reclaim, SaneBox, Apollo, Beautiful.ai, Descript, with honest pairings and pricing."
 description: "A working AI tool stack for solo founders who need to run calendar, email, sales, presentations, and content with no team. Honest pairings, not a marketing list."
 stack: [reclaim-ai, sanebox, apollo, beautiful-ai, descript, consensus]
 tools_mentioned: [reclaim-ai, sanebox, apollo, beautiful-ai, descript, consensus, claude, chatgpt]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-14
-last_verified: 2026-05-14
+last_updated: 2026-06-11
+last_verified: 2026-06-11
 update_frequency: monthly
 related:
   - href: /guides/best-ai-calendar-for-google-workspace-power-users/
@@ -30,11 +30,11 @@ related:
     kind: workflow
 ---
 
-# The Solo Founder AI Stack (May 2026)
+# The Solo Founder AI Stack (June 2026)
 
 A solo founder runs every function: sales, marketing, product, ops, finance, content. The right AI stack is not the longest list. It is the shortest list that covers the load-bearing problems without becoming a second job to maintain.
 
-This stack was assembled from the tools the aipedia.wiki editorial team uses to run a one-person operation. AiPedia verified pricing and capabilities on May 14, 2026.
+This stack was assembled for the one-person operator pattern: one owner carrying sales, calendar, inbox, decks, content, and source checks without adding a second job of tool administration. AiPedia verified pricing and capabilities on June 11, 2026.
 
 The frame: pick one tool per problem, accept that each is mid-tier rather than best-of-breed, and save the time and money for the work that actually moves revenue.
 
@@ -50,7 +50,7 @@ The frame: pick one tool per problem, accept that each is mid-tier rather than b
 | Research and verification | [Consensus](/tools/consensus/) | Citation-backed answers, no hallucinated sources |
 | Primary LLM | [Claude](/tools/claude/) or [ChatGPT](/tools/chatgpt/) | Pick one as the default reasoning surface |
 
-Total monthly cost: roughly $200-300 depending on tiers and usage. The math typically pays back inside 30 days for any founder whose hourly value exceeds $50.
+Total monthly cost can stay near the low hundreds if outbound is deferred, or move toward the low-to-mid hundreds once Apollo and paid content tools are active. The math only works when each tool maps to a weekly operating load, not a hypothetical future workflow.
 
 ## Why This Specific Stack
 
@@ -58,7 +58,7 @@ Three principles shaped the picks:
 
 - **One tool per problem.** Stitching three best-of-breed tools per category produces a stack a solo founder cannot maintain. Each pick is good-enough at its job and integrates cleanly with the rest.
 - **No tool requires a learning curve longer than a week.** A solo founder cannot invest two months learning a CRM. Tools that demand heavy setup time were rejected.
-- **Affiliate-active tools are disclosed.** Reclaim, SaneBox, Apollo, Beautiful.ai, Descript, and Consensus all have affiliate programs we participate in (see [the disclosure page](/disclosure/)). They are in this stack because we use them, not because they pay. Several tools in this stack we use without commission (Claude, ChatGPT, the IDE we code in).
+- **Commercial relationships are disclosed.** Reclaim, SaneBox, Apollo, Beautiful.ai, Descript, and Consensus may have affiliate programs or commercial paths (see [the disclosure page](/disclosure/)). Affiliate status is not the ranking criterion; the stack is built around the load-bearing solo-founder jobs.
 
 ## The Daily Workflow
 
@@ -114,23 +114,21 @@ End-of-day takes 15 minutes if the morning was disciplined.
 
 ## Pricing Reality
 
-Verified May 14, 2026 list prices. Annual billing typically cuts 15-25%.
+Verified June 11, 2026 official-source pricing. Annual billing and promotions vary:
 
-| Tool | Tier | Price |
-|---|---|---|
-| Reclaim.ai | Lite (free) or Starter | $0-10/mo |
-| SaneBox | Snack | ~$7/mo |
-| Apollo | Professional | ~$99/mo |
-| Beautiful.ai | Pro | ~$15/mo |
-| Descript | Creator or Pro | $16-30/mo |
-| Consensus | Premium | ~$11.99/mo |
-| Claude or ChatGPT | Pro | $20/mo |
+- **Reclaim.ai:** start on Free; Starter currently shows $12/seat/month before annual or promotional discounts.
+- **SaneBox:** Snack is currently $4.99/month, Lunch $7.99/month, and Dinner $24.99/month.
+- **Apollo:** Basic is currently $49/seat/month billed annually, Professional $79/seat/month billed annually, and Organization $119/seat/month billed annually.
+- **Beautiful.ai:** Pro is currently $12/month billed annually; Team is $40/user/month annually or $50/user/month monthly, which is unnecessary for most solo founders.
+- **Descript:** paid plans start at $16/month; media hours and AI credits drive whether content-heavy founders need a higher tier.
+- **Consensus:** Pro is currently $15/month or $120/year; use free first if source-backed research is occasional.
+- **Claude or ChatGPT:** keep one paid LLM plan as the default reasoning surface, then review usage before upgrading to Max/Pro-heavy tiers.
 
-Total: roughly $180-200/mo. The single biggest cost is Apollo; founders who do not need active outbound can defer it until pipeline matters.
+Apollo is still the biggest swing factor. Founders who are not actively doing outbound should defer it and keep the core operating stack to calendar, inbox, one LLM, and only the content/research tools they use every week.
 
 ## What This Stack Does Not Cover
 
-- **Accounting and bookkeeping.** For founders processing more than 50 receipts/month, add [Dext](/tools/dext/) or use Hubdoc if already on QuickBooks Online Plus.
+- **Accounting and bookkeeping.** For founders processing more than 50 receipts/month, add [Dext](/tools/dext/) or use Hubdoc if the connected QuickBooks or Xero account supports that workflow.
 - **Landing pages and paid ads.** If running paid traffic, add [Unbounce](/tools/unbounce/) for testing and [AdCreative](/tools/adcreative/) for creative velocity. Not necessary in the bootstrap phase.
 - **SEO content production at scale.** For founders prioritizing organic, add [OmniSEO](/tools/omniseo/) or [Surfer SEO](/tools/surfer-seo/).
 - **Customer support.** For founders past 50 customers, add a real support tool (Intercom, Front, or Zendesk).
@@ -194,12 +192,20 @@ If you are already on Microsoft 365 with Copilot, it covers some of what Claude/
 
 ## Sources
 
-- [Reclaim.ai](https://reclaim.ai/)
-- [SaneBox](https://www.sanebox.com/)
-- [Apollo](https://www.apollo.io/)
-- [Beautiful.ai](https://www.beautiful.ai/)
-- [Descript](https://www.descript.com/)
-- [Consensus](https://consensus.app/)
+- [Reclaim.ai](https://reclaim.ai/), verified 2026-06-11
+- [Reclaim pricing](https://reclaim.ai/pricing), verified 2026-06-11
+- [SaneBox](https://www.sanebox.com/), verified 2026-06-11
+- [SaneBox pricing](https://www.sanebox.com/pricing), verified 2026-06-11
+- [Apollo](https://www.apollo.io/), verified 2026-06-11
+- [Apollo pricing](https://www.apollo.io/pricing), verified 2026-06-11
+- [Beautiful.ai](https://www.beautiful.ai/), verified 2026-06-11
+- [Beautiful.ai pricing](https://www.beautiful.ai/pricing), verified 2026-06-11
+- [Descript](https://www.descript.com/), verified 2026-06-11
+- [Descript pricing](https://www.descript.com/pricing), verified 2026-06-11
+- [Consensus](https://consensus.app/), verified 2026-06-11
+- [Consensus subscription plans](https://help.consensus.app/en/articles/10087865-subscription-plans), verified 2026-06-11
+- [Claude pricing](https://claude.com/pricing), verified 2026-06-11
+- [ChatGPT pricing](https://chatgpt.com/pricing/), verified 2026-06-11
 
 Internal references:
 

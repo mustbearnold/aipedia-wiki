@@ -1,15 +1,15 @@
 ---
 type: workflow
 slug: sdr-stack
-title: "The Modern SDR Stack (May 2026)"
+title: "The Modern SDR Stack (June 2026)"
 seo_title: "Modern SDR Stack: Apollo, Amplemarket, Reclaim, SaneBox (2026)"
-meta_description: "Verified May 14, 2026: the working AI stack for sales development representatives in 2026. Prospecting, sequencing, calendar, email triage, with honest pairings."
+meta_description: "Verified June 11, 2026: the working AI stack for sales development representatives in 2026. Prospecting, sequencing, calendar, email triage, with honest pairings."
 description: "The AI tool stack for sales development representatives running outbound at mid-market scale. Honest tool pairings for the daily SDR workflow."
 stack: [apollo, amplemarket, reclaim-ai, sanebox]
 tools_mentioned: [apollo, amplemarket, reclaim-ai, sanebox, clay]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-14
-last_verified: 2026-05-14
+last_updated: 2026-06-11
+last_verified: 2026-06-11
 update_frequency: monthly
 related:
   - href: /guides/best-ai-sales-platform-for-mid-market-sdr-teams/
@@ -30,11 +30,11 @@ related:
     kind: guide
 ---
 
-# The Modern SDR Stack (May 2026)
+# The Modern SDR Stack (June 2026)
 
 A sales development representative in 2026 lives in three states: prospecting (researching and queuing accounts), sequencing (running multichannel outbound), and meeting management (booking and prepping for the conversations the previous two states produce). The right stack collapses these into one workflow, defends focus time against meeting load, and triages the email noise that comes with running outbound at volume.
 
-AiPedia verified pricing and capabilities on May 14, 2026.
+AiPedia verified pricing and capabilities on June 11, 2026.
 
 ## Function by function
 
@@ -45,7 +45,7 @@ AiPedia verified pricing and capabilities on May 14, 2026.
 | Calendar and meeting prep | [Reclaim.ai](/tools/reclaim-ai/) | Smart 1:1s, focus defense, meeting prep blocks |
 | Email triage | [SaneBox](/tools/sanebox/) | Routes vendor noise out of the SDR inbox |
 
-Total per-SDR monthly cost: roughly $120-300 depending on whether Amplemarket is included. Pays back at typical SDR pipeline contribution rates.
+Current per-SDR cost is straightforward without Amplemarket and much heavier with it. Apollo Professional plus Reclaim and SaneBox can sit near the low hundreds per rep; adding Amplemarket means buying into an annual Startup package that currently begins at $600/month for two users, so named-account pipeline has to justify the jump.
 
 ## Why This Specific Stack
 
@@ -96,16 +96,14 @@ Three observations from SDR teams that work:
 
 ## Pricing Reality
 
-Verified May 14, 2026. Per-SDR cost on team annual billing:
+Verified June 11, 2026. Model the stack by motion:
 
-| Tool | Per-SDR price |
-|---|---|
-| Apollo Professional | ~$80/mo on annual |
-| Amplemarket Plus | Custom, typically $120-180/mo on team plans |
-| Reclaim Team | ~$12/seat/mo on annual |
-| SaneBox Snack | ~$7/mo per inbox |
+- **Apollo:** Basic is currently $49/seat/month billed annually, Professional $79/seat/month billed annually, and Organization $119/seat/month billed annually. Most SDR teams should evaluate Professional first.
+- **Amplemarket:** the public Startup plan starts at $600/month on an annual term with 2 users included. Use it for named-account research and personalization, not as a default seat for every rep.
+- **Reclaim.ai:** Free can test the scheduling workflow; Starter currently shows $12/seat/month before discounts.
+- **SaneBox:** Snack is currently $4.99/month per inbox and Lunch is $7.99/month.
 
-Per-SDR total: ~$120/mo without Amplemarket, ~$260/mo with Amplemarket. For SDRs producing $50k+ in pipeline per quarter, the math is straightforward.
+Per-SDR cost without Amplemarket is usually Apollo plus a small calendar/inbox layer. With Amplemarket, evaluate at the team-package level and tie it to named-account pipeline, not vanity reply-rate improvements.
 
 ## What This Stack Does Not Cover
 
@@ -139,7 +137,7 @@ Per-SDR total: ~$120/mo without Amplemarket, ~$260/mo with Amplemarket. For SDRs
 <details>
 <summary>Can I run this stack without Amplemarket?</summary>
 
-Yes. Apollo alone covers mid-market SDR outbound. Amplemarket adds named-account personalization that often produces 2-3x reply rates on the personalized segment. Whether it is worth the price premium depends on the ICP. Test on 20-30 named accounts before scaling.
+Yes. Apollo alone covers mid-market SDR outbound. Amplemarket adds named-account personalization for the segment where a generic sequence will not work. Whether it is worth the price premium depends on the ICP; test on 20-30 named accounts before scaling.
 
 </details>
 
@@ -166,10 +164,14 @@ A new SDR is productive on Apollo in week one, on Amplemarket in week two, on th
 
 ## Sources
 
-- [Apollo](https://www.apollo.io/)
-- [Amplemarket](https://amplemarket.com/)
-- [Reclaim.ai](https://reclaim.ai/)
-- [SaneBox](https://www.sanebox.com/)
+- [Apollo](https://www.apollo.io/), verified 2026-06-11
+- [Apollo pricing](https://www.apollo.io/pricing), verified 2026-06-11
+- [Amplemarket](https://amplemarket.com/), verified 2026-06-11
+- [Amplemarket pricing](https://www.amplemarket.com/pricing), verified 2026-06-11
+- [Reclaim.ai](https://reclaim.ai/), verified 2026-06-11
+- [Reclaim pricing](https://reclaim.ai/pricing), verified 2026-06-11
+- [SaneBox](https://www.sanebox.com/), verified 2026-06-11
+- [SaneBox pricing](https://www.sanebox.com/pricing), verified 2026-06-11
 
 Internal references:
 

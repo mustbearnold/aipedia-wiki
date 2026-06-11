@@ -1,15 +1,15 @@
 ---
 type: workflow
 slug: researcher-stack
-title: "The Independent Researcher AI Stack (May 2026)"
+title: "The Independent Researcher AI Stack (June 2026)"
 seo_title: "Independent Researcher AI Stack: Consensus, Elicit, Descript, Reclaim (2026)"
-meta_description: "Verified May 14, 2026: the working AI stack for independent researchers, analysts, and journalists. Consensus for citations, Elicit for literature reviews, Descript for interviews."
+meta_description: "Verified June 11, 2026: the working AI stack for independent researchers, analysts, and journalists. Consensus for citations, Elicit for literature reviews, Descript for interviews."
 description: "An assembled AI stack for independent researchers, policy analysts, science writers, and freelance journalists who produce source-backed work."
 stack: [consensus, descript, reclaim-ai, sanebox]
 tools_mentioned: [consensus, elicit, descript, reclaim-ai, sanebox, claude, semantic-scholar]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-14
-last_verified: 2026-05-14
+last_updated: 2026-06-11
+last_verified: 2026-06-11
 update_frequency: monthly
 related:
   - href: /guides/best-ai-research-tool-for-academic-citations/
@@ -30,11 +30,11 @@ related:
     kind: workflow
 ---
 
-# The Independent Researcher AI Stack (May 2026)
+# The Independent Researcher AI Stack (June 2026)
 
 An independent researcher, policy analyst, science writer, or freelance journalist works against a specific constraint: every claim has to be source-backed, every citation has to be real, and the deadline is real. Off-the-shelf LLMs fabricate citations. Generic productivity tools do not address research-specific workflows. The right stack solves both.
 
-This stack is for the buyer profile: someone whose output is source-backed writing or analysis. AiPedia verified pricing and capabilities on May 14, 2026.
+This stack is for the buyer profile: someone whose output is source-backed writing or analysis. AiPedia verified pricing and capabilities on June 11, 2026.
 
 ## Function by function
 
@@ -48,7 +48,7 @@ This stack is for the buyer profile: someone whose output is source-backed writi
 | Reasoning and drafting | [Claude](/tools/claude/) | Long-form reasoning, grounded by Consensus output |
 | Free supplementary search | [Semantic Scholar](/tools/semantic-scholar/) | Free paper discovery, citation graph |
 
-Total monthly cost: roughly $80-130. The free Semantic Scholar layer and the Consensus + Elicit free tiers can stretch a researcher with limited budget significantly further.
+Current monthly cost depends on whether Elicit is a casual paper-finding aid or a systematic-review workhorse. A lightweight researcher can combine Semantic Scholar, free/Pro Consensus, Descript only when interviews are active, and one paid LLM plan; structured literature reviews push the stack up because Elicit Pro and Scale are now materially higher-priced workflow tiers.
 
 ## Why This Stack
 
@@ -56,7 +56,7 @@ Three constraints unique to research work:
 
 - **Fabricated citations end careers.** Documented retractions and sanctions exist where researchers cited ChatGPT-hallucinated sources. The citation layer must be retrieval-grounded, not LLM-synthesized.
 - **Literature reviews are a data extraction problem, not a reading problem.** Elicit's structured extraction across many papers is dramatically faster than manual reading for "what does the literature say about X intervention."
-- **Interview transcription quality varies more than it should.** Descript's transcription is reliably accurate for clean recordings; the transcript-first editing speeds the move from transcript to publishable quote.
+- **Interview transcription quality varies more than it should.** Descript is strongest when interview cleanup and quote selection need to happen inside the transcript, not just when a raw transcript is enough.
 
 ## The Research Workflow
 
@@ -89,19 +89,17 @@ Three constraints unique to research work:
 
 ## Pricing Reality
 
-Verified May 14, 2026:
+Verified June 11, 2026:
 
-| Tool | Tier | Price |
-|---|---|---|
-| Consensus | Premium | ~$11.99/mo |
-| Elicit | Plus | ~$12/mo |
-| Descript | Creator | ~$16/mo |
-| Reclaim.ai | Starter | ~$10/mo |
-| SaneBox | Snack | ~$7/mo |
-| Claude | Pro | $20/mo |
-| Semantic Scholar | Free | $0 |
+- **Consensus:** Pro is currently $15/month or $120/year; Deep is $65/month or $540/year for heavier Deep reviews.
+- **Elicit:** Basic remains the budget path, while Pro is currently $49/user/month billed annually and Scale is $169/user/month billed annually. Do not assume the old low-cost Plus math still applies.
+- **Descript:** paid plans start at $16/month, with media hours and AI credits determining whether interview-heavy work needs a higher tier.
+- **Reclaim.ai:** use Free unless interview scheduling and writing blocks need paid scheduling range or team controls.
+- **SaneBox:** Snack is currently $4.99/month and is the first paid inbox-triage step.
+- **Claude:** Pro is currently $20/month; heavier research drafting may require Max or API usage.
+- **Semantic Scholar:** free paper discovery and API documentation remain the baseline safety net.
 
-Total: roughly $77/mo. Researchers on tight budgets can drop Reclaim and SaneBox (~$17/mo) and use the free tiers of Consensus and Elicit, bringing the stack to ~$50/mo.
+Researchers on tight budgets should start with Semantic Scholar, free Elicit, and either free or Pro Consensus. Upgrade Elicit only when structured extraction is part of the paid output.
 
 ## What This Stack Does Not Cover
 
@@ -140,7 +138,7 @@ Different jobs. Consensus answers research questions with cited evidence. Elicit
 <details>
 <summary>Can ChatGPT or Claude replace Consensus?</summary>
 
-No. Both LLMs will hallucinate citations. The architecture of retrieval-augmented tools like Consensus prevents fabrication by grounding answers in retrieved papers the model never invents.
+No. Both LLMs can produce plausible but fake citations. Retrieval-grounded tools like Consensus reduce that risk by grounding answers in retrieved papers, but you still need to spot-check the paper and claim before publishing.
 
 </details>
 
@@ -167,12 +165,21 @@ Useful for general web research. Less useful for academic citations because its 
 
 ## Sources
 
-- [Consensus](https://consensus.app/)
-- [Elicit](https://elicit.com/)
-- [Descript](https://www.descript.com/)
-- [Reclaim.ai](https://reclaim.ai/)
-- [SaneBox](https://www.sanebox.com/)
-- [Semantic Scholar](https://www.semanticscholar.org/)
+- [Consensus](https://consensus.app/), verified 2026-06-11
+- [Consensus Pro subscription](https://help.consensus.app/en/articles/11408820-what-do-you-get-with-a-pro-subscription), verified 2026-06-11
+- [Consensus subscription plans](https://help.consensus.app/en/articles/10087865-subscription-plans), verified 2026-06-11
+- [Elicit](https://elicit.com/), verified 2026-06-11
+- [Elicit pricing](https://elicit.com/pricing), verified 2026-06-11
+- [Descript](https://www.descript.com/), verified 2026-06-11
+- [Descript pricing](https://www.descript.com/pricing), verified 2026-06-11
+- [Descript media minutes and AI credits](https://help.descript.com/hc/en-us/articles/27841674958221-Track-and-understand-your-media-minutes-and-AI-credits), verified 2026-06-11
+- [Reclaim.ai](https://reclaim.ai/), verified 2026-06-11
+- [Reclaim pricing](https://reclaim.ai/pricing), verified 2026-06-11
+- [SaneBox](https://www.sanebox.com/), verified 2026-06-11
+- [SaneBox pricing](https://www.sanebox.com/pricing), verified 2026-06-11
+- [Semantic Scholar](https://www.semanticscholar.org/), verified 2026-06-11
+- [Semantic Scholar API](https://www.semanticscholar.org/product/api), verified 2026-06-11
+- [Claude pricing](https://claude.com/pricing), verified 2026-06-11
 
 Internal references:
 

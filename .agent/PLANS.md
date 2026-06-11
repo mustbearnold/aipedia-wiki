@@ -82,6 +82,99 @@ Summarize changed files, behavior shipped, tests passed, unresolved risks, and r
 
 ---
 
+## ExecPlan: June 11 2026 May 14 Workflow Stack Refresh
+
+### 1. Objective
+
+Continue the oldest-to-newest page refresh by updating the seven live May 14 workflow pages that remain at the current ledger frontier. The batch improves current-date trust, source-backed stack economics, mobile workflow usefulness, SEO freshness, and LLM crawler summaries.
+
+### 2. Current state
+
+`PAGE_REFRESH_LEDGER.md` shows seven eligible live workflow rows dated 2026-05-14: `/workflows/accountant-stack/`, `/workflows/agency-sales-stack/`, `/workflows/consultant-stack/`, `/workflows/researcher-stack/`, `/workflows/sdr-stack/`, `/workflows/seo-content-pipeline/`, and `/workflows/solo-founder-stack/`. The pages have useful workflow structure but carry May 2026 titles, May 14 visible verification text, stale fixed-price totals, and several pricing tables that need June 11 verification and mobile QA. The `/workflows/` index is data-driven but needs maintenance metadata when its child workflow records change.
+
+### 3. Target state
+
+All seven workflow pages carry `last_updated` and `last_verified` of 2026-06-11, June 2026 title/meta/H1 language, source-backed current pricing caveats, and source lists with June 11 verification dates. Parent `/workflows/`, `/explore/`, homepage, `/categories/`, `/llms.txt`, `/llms-full.txt`, and `PAGE_REFRESH_LEDGER.md` reflect the batch.
+
+### 4. Scope
+
+Included: the seven May 14 workflow pages, `/workflows/`, `/explore/`, `/`, `/categories/`, `/llms.txt`, `/llms-full.txt`, `PAGE_REFRESH_LEDGER.md`, and this plan. Excluded: dead tools, individual news article pages, unrelated workflow rows outside the current frontier, source-registry schema work, and new affiliate-program surfaces.
+
+### 5. Files likely affected
+
+`src/content/workflows/accountant-stack.md`, `src/content/workflows/agency-sales-stack.md`, `src/content/workflows/consultant-stack.md`, `src/content/workflows/researcher-stack.md`, `src/content/workflows/sdr-stack.md`, `src/content/workflows/seo-content-pipeline.md`, `src/content/workflows/solo-founder-stack.md`, `src/pages/workflows/index.astro`, `src/pages/explore/index.astro`, `src/pages/index.astro`, `src/pages/categories/index.astro`, `src/pages/llms.txt.ts`, `src/pages/llms-full.txt.ts`, `PAGE_REFRESH_LEDGER.md`, and this plan.
+
+### 6. Data model impact
+
+No schema changes. Workflow frontmatter and Markdown source metadata are refreshed in place.
+
+### 7. SEO impact
+
+The batch removes May-only title/meta language from seven indexable workflow pages and keeps workflow archive sorting, crawlable internal links, sitemap inventory, and LLM manifests aligned with the refreshed child pages.
+
+### 8. Conversion impact
+
+No new affiliate programs are added. Existing affiliate-active tool recommendations remain framed around buyer fit and trust. Pricing sections should avoid unsupported fixed totals when vendor pages are usage-based, annual-only, region-specific, checkout-gated, or sales-led.
+
+### 9. Mobile UX impact
+
+The workflow pages must remain complete and readable at 360, 390, 430, 768, and desktop widths. Pricing reality tables should be converted to stacked guidance if they risk horizontal overflow.
+
+### 10. Implementation steps
+
+1. Verify June 2026 official sources for the workflow recommendation set.
+2. Refresh workflow frontmatter, visible titles, verification text, stack economics, pricing caveats, and sources.
+3. Update affected parent/top-layer pages and LLM crawl surfaces.
+4. Regenerate and inspect the page refresh ledger.
+5. Run source/fact/link/build checks plus responsive QA.
+6. Commit and push the clean batch if validation passes.
+
+### 11. Verification commands
+
+`npm run ledger:pages`
+
+`npm run ledger:pages:check`
+
+`npm run guard:check`
+
+`npm run check:links`
+
+`npm run audit:sources`
+
+`npm run audit:facts`
+
+`npm run test:scripts`
+
+`npm run check`
+
+`npm run build:fast`
+
+`git diff --check`
+
+Static responsive QA over `/`, `/workflows/`, `/explore/`, `/categories/`, `/llms.txt`, `/llms-full.txt`, and all seven refreshed workflow routes at 360, 390, 430, 768, and 1024px.
+
+### 12. Acceptance criteria
+
+All seven workflow pages are verified on 2026-06-11, stale May dates and unsupported fixed-price shortcuts are removed or reframed, affected parent/top-layer pages and LLM surfaces are current, the ledger reflects the true refresh scope, mobile QA has no horizontal overflow, and validation passes or failures are documented with risk.
+
+### 13. Risks and mitigations
+
+Many tools in this batch have annual-only, usage-based, credit-based, team-seat, or dynamic checkout pricing. The refresh should prefer official pages, source the current plan posture, and phrase stack budgets as ranges or buyer checks rather than false precision. Solo-founder copy must avoid fabricated first-hand usage claims.
+
+### 14. Progress log
+
+- 2026-06-10: Identified the seven May 14 workflow rows as the next eligible live frontier after pushing the May 14 guide batch. Started current-source verification for Dext, Reclaim, SaneBox, Consensus, Apollo, Amplemarket, Unbounce, AdCreative, Beautiful.ai, Descript, Elicit, Semantic Scholar, Claude, ChatGPT, Ahrefs, Semrush, OmniSEO, Surfer SEO, and Frase.
+- 2026-06-10: Initially refreshed all seven workflow pages with June 2026 frontmatter and visible verification language. Reframed stale stack totals and pricing tables into mobile-friendly current buying guidance around Dext per-client practice pricing, Reclaim/SaneBox inbox and calendar tiers, Consensus/Elicit research tiers, Apollo/Amplemarket outbound economics, Unbounce/AdCreative campaign costs, Beautiful.ai/Descript production pricing, Claude/ChatGPT plan caveats, and OmniSEO/Ahrefs/Semrush/Surfer/Frase SEO stack costs.
+- 2026-06-10: Updated `/workflows/`, `/explore/`, homepage, `/categories/`, `/llms.txt`, and `/llms-full.txt` maintenance metadata, then regenerated `PAGE_REFRESH_LEDGER.md`.
+- 2026-06-11: Re-checked official source pages for the active batch after the environment date rolled forward, corrected the active workflow pages and affected parent/crawl metadata to June 11, and will regenerate the ledger before validation.
+- 2026-06-11: Validation passed with `npm run ledger:pages`, `npm run ledger:pages:check`, `npm run guard:check`, `npm run check:links`, `npm run audit:sources`, `npm run audit:facts`, `npm run test:scripts`, `npm run check`, `npm run build:fast`, `git diff --check`, and local Playwright responsive QA for 13 routes across 360, 390, 430, 768, and 1024px. The in-app browser blocked localhost/file navigation in this session, so responsive QA used the built `dist-fast` output through a temporary local Playwright server.
+
+### 15. Final report
+
+Shipped-ready June 11, 2026 refresh for `/workflows/accountant-stack/`, `/workflows/agency-sales-stack/`, `/workflows/consultant-stack/`, `/workflows/researcher-stack/`, `/workflows/sdr-stack/`, `/workflows/seo-content-pipeline/`, and `/workflows/solo-founder-stack/`. Parent `/workflows/`, `/explore/`, homepage, `/categories/`, `/llms.txt`, `/llms-full.txt`, and `PAGE_REFRESH_LEDGER.md` were refreshed in the same batch. Validation passed with the commands listed above. Remaining oldest eligible live rows begin with `/about/our-stack/`, `/guides/best-ai-landing-page-builder-for-ab-testing/`, and `/tools/openclaw/`, after skipping dead-tool rows and excluded individual news article pages.
+
+---
+
 ## ExecPlan: June 10 2026 May 14 Guide Refresh
 
 ### 1. Objective

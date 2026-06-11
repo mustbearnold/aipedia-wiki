@@ -1,15 +1,15 @@
 ---
 type: workflow
 slug: accountant-stack
-title: "The Modern Bookkeeper and Accountant AI Stack (May 2026)"
+title: "The Modern Bookkeeper and Accountant AI Stack (June 2026)"
 seo_title: "Modern Bookkeeper and Accountant AI Stack: Dext, Reclaim, SaneBox (2026)"
-meta_description: "Verified May 14, 2026: the working AI stack for independent bookkeepers and accounting practices. Dext for receipts, Reclaim for client work blocks, SaneBox for inbox."
+meta_description: "Verified June 11, 2026: the working AI stack for independent bookkeepers and accounting practices. Dext for receipts, Reclaim for client work blocks, SaneBox for inbox."
 description: "An assembled AI tool stack for independent bookkeepers, accountants, and small accounting practices managing multiple client books."
 stack: [dext, reclaim-ai, sanebox]
 tools_mentioned: [dext, reclaim-ai, sanebox, consensus]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-14
-last_verified: 2026-05-14
+last_updated: 2026-06-11
+last_verified: 2026-06-11
 update_frequency: monthly
 related:
   - href: /guides/best-ai-receipt-tool-for-bookkeepers/
@@ -30,11 +30,11 @@ related:
     kind: guide
 ---
 
-# The Modern Bookkeeper and Accountant AI Stack (May 2026)
+# The Modern Bookkeeper and Accountant AI Stack (June 2026)
 
 A bookkeeper or accountant running multiple client books has a specific constraint: time on receipt entry is time not spent on client advisory. The right AI stack collapses the data-entry layer, defends the deep-work blocks where the actual accounting happens, and triages the email noise that comes with juggling 10-50 client relationships.
 
-AiPedia verified pricing on May 14, 2026.
+AiPedia verified pricing on June 11, 2026.
 
 ## Function by function
 
@@ -45,7 +45,7 @@ AiPedia verified pricing on May 14, 2026.
 | Email triage | [SaneBox](/tools/sanebox/) | Routes vendor and PR noise out of the practice inbox |
 | Research and citations (advisory work) | [Consensus](/tools/consensus/) | Source-backed answers for client advisory questions |
 
-Total per-practice monthly cost: roughly $60-100 plus the per-client Dext pricing (varies with volume). Pays back inside one engagement for any practice billing $50+/hour.
+Current stack cost is dominated by the document-capture layer: Dext practice pricing scales per client and typically starts with a minimum client count, while Reclaim, SaneBox, and Consensus add a smaller owner/team subscription layer. Treat the stack as a low-to-mid hundreds monthly operating cost for a multi-client practice, then verify the Dext quote against your client count before buying.
 
 ## Why This Stack vs. Generic SMB Tools
 
@@ -77,16 +77,14 @@ Three constraints specific to accounting work:
 
 ## Pricing Reality
 
-Verified May 14, 2026. Annual billing typically cuts 15-20%.
+Verified June 11, 2026. Annual billing and promotions vary by vendor, so use these as checkout checks rather than guaranteed totals.
 
-| Tool | Tier | Cost |
-|---|---|---|
-| Dext | Practice tier | Per-client pricing, varies with submission volume (~$15-30/client/mo at typical small-business volume) |
-| Reclaim.ai | Starter or Team | $10-15/seat/mo |
-| SaneBox | Snack or Lunch | $7-12/mo per inbox |
-| Consensus | Premium | ~$11.99/mo |
+- **Dext:** practice pricing is per client per month, with Dext's help center pointing firms back to the official pricing page for the current quote and minimums. This is the line item that determines whether the stack is a solo-bookkeeper stack or a small-firm stack.
+- **Reclaim.ai:** use Free for a solo calendar test, then move to Starter or Business when scheduling range, integrations, or team controls matter; the public page currently shows Starter at $12/seat/month before any annual or promotional discount.
+- **SaneBox:** the current public tiers are Snack at $4.99/month, Lunch at $7.99/month, and Dinner at $24.99/month, so most practices should start with Snack or Lunch per inbox.
+- **Consensus:** use the free tier for occasional advisory checks; Pro is currently $15/month or $120/year, while Deep is for heavier literature-review work.
 
-For a practice with 20 client books and a 2-person team: total tool cost roughly $400-700/mo, which is well under 1% of typical practice revenue at that client count.
+For a practice with 20 client books and a 2-person team, price Dext first, then add roughly one or two inbox/calendar/research subscriptions. If the Dext quote looks high, compare Hubdoc for QuickBooks-native clients and AutoEntry for Sage-heavy workflows before committing.
 
 ## What This Stack Does Not Cover
 
@@ -104,7 +102,7 @@ For a practice with 20 client books and a 2-person team: total tool cost roughly
 | Multi-partner firm with 30+ clients | Add a practice management tool (Karbon or Canopy) |
 | Tax-focused practice | Add specific tax software; this stack handles bookkeeping side |
 | Forensic accounting / specialized advisory | Heavier Consensus use; add specialized research databases |
-| QuickBooks-only practice | Hubdoc (bundled with QBO Plus+) instead of Dext if volume is moderate |
+| QuickBooks-only practice | Hubdoc instead of Dext if the client's QuickBooks workflow supports it and volume is moderate |
 | Sage-native practice | AutoEntry instead of Dext for tighter Sage integration |
 
 ## Failure Modes
@@ -134,7 +132,7 @@ No. Dext is a document-capture and extraction layer that feeds QuickBooks, Xero,
 <details>
 <summary>Is Hubdoc really free with QuickBooks?</summary>
 
-Yes, included with QuickBooks Online Plus and Advanced. Verify your QBO tier qualifies before assuming it is free for a given client.
+Do not assume a bundled entitlement without checking the client account. Hubdoc still presents itself as a QuickBooks Online add-on and document-sync workflow, but your actual cost and access path depend on the connected accounting account and current Intuit/Xero terms.
 
 </details>
 
@@ -154,11 +152,19 @@ Different category. Ramp and Brex are corporate cards plus expense software that
 
 ## Sources
 
-- [Dext](https://dext.com/)
-- [Dext Practice](https://dext.com/practices)
-- [Reclaim.ai](https://reclaim.ai/)
-- [SaneBox](https://www.sanebox.com/)
-- [Consensus](https://consensus.app/)
+- [Dext](https://dext.com/), verified 2026-06-11
+- [Dext Practice](https://dext.com/practices), verified 2026-06-11
+- [Dext practice pricing](https://dext.com/us/partner/pricing), verified 2026-06-11
+- [Dext plans for accountants and bookkeepers](https://help.dext.com/en/articles/273220-dext-plans-for-accountants-and-bookkeepers), verified 2026-06-11
+- [Reclaim.ai](https://reclaim.ai/), verified 2026-06-11
+- [Reclaim pricing](https://reclaim.ai/pricing), verified 2026-06-11
+- [SaneBox](https://www.sanebox.com/), verified 2026-06-11
+- [SaneBox pricing](https://www.sanebox.com/pricing), verified 2026-06-11
+- [Consensus](https://consensus.app/), verified 2026-06-11
+- [Consensus subscription plans](https://help.consensus.app/en/articles/10087865-subscription-plans), verified 2026-06-11
+- [Hubdoc QuickBooks add-on](https://www.hubdoc.com/quickbooks), verified 2026-06-11
+- [AutoEntry pricing](https://www.autoentry.com/pricing), verified 2026-06-11
+- [Ramp pricing](https://ramp.com/pricing), verified 2026-06-11
 
 Internal references:
 
