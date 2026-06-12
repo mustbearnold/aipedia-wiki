@@ -11,10 +11,10 @@ pricing_model: paid
 price_range: "$10-$40/month; Enterprise custom"
 status: active
 launched: 2021
-last_updated: 2026-05-26
-last_verified: 2026-05-26
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
-seo_title: "BLACKBOX AI: Features, Pricing & Review (May 2026)"
+seo_title: "BLACKBOX AI: Features, Pricing & Review (June 2026)"
 meta_description: "BLACKBOX AI is a multi-model coding assistant and agent platform. Pro is $10/mo, Pro Plus $20/mo, Pro Max $40/mo, with credits, Minimax-M2.5 agent requests, and Enterprise controls."
 author: aipedia.wiki Editorial
 affiliate:
@@ -36,14 +36,14 @@ facts:
     source: "https://www.blackbox.ai/pricing"
     source_label: "BLACKBOX AI pricing"
     source_id: blackbox-ai-best-for
-    verified_at: 2026-05-13
+    verified_at: 2026-06-12
     confidence: high
   best_paid_tier:
     value: "Pro Plus ($20/month) because it adds App Builder, multi-agent execution, coding agent, remote data analysis, Slack, auto-refill, and E2E chat encryption"
     source: "https://www.blackbox.ai/pricing"
     source_label: "BLACKBOX AI pricing"
     source_id: blackbox-ai-best-for
-    verified_at: 2026-05-13
+    verified_at: 2026-06-12
     next_review_at: 2026-06-13
     confidence: high
   best_for:
@@ -51,7 +51,7 @@ facts:
     source: "https://www.blackbox.ai/pricing"
     source_label: "BLACKBOX AI pricing"
     source_id: blackbox-ai-best-for
-    verified_at: 2026-05-13
+    verified_at: 2026-06-12
     confidence: high
 tags: [ai-coding, coding-agent, app-builder, multi-model, ide, terminal, voice-agent, figma-to-code]
 best_for:
@@ -164,7 +164,7 @@ The security page is more explicit than the pricing page. It says Zero Data Rete
 
 ## Pricing
 
-BLACKBOX AI pricing was verified from the official pricing page on 2026-05-13:
+BLACKBOX AI pricing was verified from the official pricing page on 2026-06-12:
 
 | Plan | Price | Practical meaning |
 |---|---:|---|
@@ -196,7 +196,7 @@ The pricing page also references yearly billing at 20% off. Treat model-credit a
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-05-13 against BLACKBOX AI pricing, docs, security, and enterprise materials, plus third-party affiliate-directory signals.
+This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against BLACKBOX AI pricing, docs, security, and enterprise materials, plus third-party affiliate-directory signals.
 
 ## FAQ
 

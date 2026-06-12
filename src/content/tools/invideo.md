@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$100/month"
 status: active
 launched: 2019-07
-last_updated: 2026-05-26
-last_verified: 2026-05-26
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -19,7 +19,7 @@ affiliate:
   cookie_days: 120
   network: Impact
   link: null
-  notes: "InVideo help center verified 2026-05-26: Impact-managed affiliate rewards, 120-day referral window, 50% monthly / 25% annual first-cycle commission."
+  notes: "InVideo help center verified 2026-06-12: Impact-managed affiliate rewards, 120-day referral window, 50% monthly / 25% annual first-cycle commission."
 scores:
   utility: 8
   value: 9
@@ -32,7 +32,7 @@ facts:
     source: https://invideo.io/ai/
     source_label: Invideo AI
     source_id: invideo-ai
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -41,7 +41,7 @@ facts:
     source: https://invideo.io/pricing/
     source_label: Invideo pricing
     source_id: invideo-pricing
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -50,7 +50,7 @@ facts:
     source: https://invideo.io/
     source_label: Invideo official site
     source_id: invideo-official
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -60,7 +60,7 @@ facts:
     source: https://help.invideo.io/
     source_label: Invideo help center
     source_id: invideo-help
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -70,13 +70,13 @@ facts:
     source: https://invideo.io/pricing/
     source_label: Invideo pricing
     source_id: invideo-pricing
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
 tags: [ai-video, text-to-video, youtube, social-media, voiceover, sora, veo, templates]
-seo_title: "InVideo AI: Features, Pricing & Review (May 2026)"
-meta_description: "InVideo AI bundles 200+ models (VEO 3.1, Sora 2 Pro, Kling 3.0, Nano Banana Pro) inside a text-to-video pipeline with 16M+ stock clips, AI voiceover in 50+ languages, and scene-level editing. Plans $0-$100/mo. Reviewed May 2026."
+seo_title: "InVideo AI: Features, Pricing & Review (June 2026)"
+meta_description: "InVideo AI bundles 200+ models (VEO 3.1, Sora 2 Pro, Kling 3.0, Nano Banana Pro) inside a text-to-video pipeline with 16M+ stock clips, AI voiceover in 50+ languages, and scene-level editing. Plans $0-$100/mo. Reviewed June 2026."
 author: "aipedia.wiki Editorial"
 best_for:
   - faceless YouTube creators producing structured content at volume
@@ -110,7 +110,7 @@ price_history:
     source: "https://invideo.io/pricing/"
     source_label: "Source"
     source_id: invideo-pricing
-    note: "Re-verified May 2026; bundle now lists 200+ models including Sora 2 Pro and Nano Banana Pro alongside VEO 3.1 and Kling 3.0."
+    note: "Re-verified June 2026; bundle now lists 200+ models including Sora 2 Pro and Nano Banana Pro alongside VEO 3.1 and Kling 3.0."
 ---
 
 # InVideo AI
@@ -121,7 +121,7 @@ The platform handles script, voiceover in 50+ languages, captions, and scene-by-
 
 ## System Verdict
 
-> **Pick InVideo AI if you produce high-volume structured video: faceless YouTube, marketing explainers, product demos, or social ads.** The 200+ model bundle is the genuine differentiator in May 2026: buying VEO 3.1 Ultra, Sora 2 Pro, and Kling 3.0 directly would cost roughly $250/mo (Google AI Ultra) plus $200/mo (ChatGPT Pro) plus a Kling subscription, whereas InVideo Plus wraps the entire catalog into a $28/mo workflow with stock clips, voiceover, and ElevenLabs music on top.
+> **Pick InVideo AI if you produce high-volume structured video: faceless YouTube, marketing explainers, product demos, or social ads.** The 200+ model bundle is the genuine differentiator in June 2026: buying VEO 3.1 Ultra, Sora 2 Pro, and Kling 3.0 directly would cost roughly $250/mo (Google AI Ultra) plus $200/mo (ChatGPT Pro) plus a Kling subscription, whereas InVideo Plus wraps the entire catalog into a $28/mo workflow with stock clips, voiceover, and ElevenLabs music on top.
 >
 > **Skip it if cinematic or auteur video matters.** [Runway](/tools/runway/) still gives finer control over Gen-4 outputs, timeline editing, and motion brush. InVideo's web editor is fast but shallow: no node-based effects, no frame-accurate grading, no professional color workflows.
 >
@@ -141,7 +141,7 @@ The platform handles script, voiceover in 50+ languages, captions, and scene-by-
 | **Watermark** | Present on Free tier only |
 | **Free tier** | 4 watermarked exports/week, 10GB storage |
 
-Every data point was verified against vendor documentation on 2026-05-13. See Sources.
+Every data point was verified against vendor documentation on 2026-06-12. See Sources.
 
 ## What it actually is
 
@@ -179,7 +179,7 @@ Subscription pricing via [invideo.io/pricing](https://invideo.io/pricing/):
 | Generator | ~$100/mo | 1,000 credits/month | Sustained agency workloads |
 | Enterprise | Custom | Custom | API access · custom limits · dedicated support |
 
-*Prices verified 2026-05-13 via [invideo.io/pricing](https://invideo.io/pricing/) and [InVideo plans and credits help doc](https://help.invideo.io/en/articles/11528140-what-plans-does-invideo-offer-and-what-s-included-in-each). Annual billing saves ~20% across all paid plans. All paid tiers now include access to 200+ image, video, audio, and music models including VEO 3.1, Sora 2 Pro, Kling 3.0, Nano Banana Pro, and ElevenLabs music. Model and agent prices are subject to change per InVideo's pricing page.*
+*Prices verified 2026-06-12 via [invideo.io/pricing](https://invideo.io/pricing/) and [InVideo plans and credits help doc](https://help.invideo.io/en/articles/11528140-what-plans-does-invideo-offer-and-what-s-included-in-each). Annual billing saves ~20% across all paid plans. All paid tiers now include access to 200+ image, video, audio, and music models including VEO 3.1, Sora 2 Pro, Kling 3.0, Nano Banana Pro, and ElevenLabs music. Model and agent prices are subject to change per InVideo's pricing page.*
 
 ## Against the alternatives
 
@@ -208,7 +208,7 @@ Subscription pricing via [invideo.io/pricing](https://invideo.io/pricing/):
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-05-13 against [invideo.io/pricing](https://invideo.io/pricing/), the [InVideo plans and credits help doc](https://help.invideo.io/en/articles/11528140-what-plans-does-invideo-offer-and-what-s-included-in-each), and AI-video market context from [TechCrunch](https://techcrunch.com/2026/03/15/ai-video-landscape-2026/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-12 against [invideo.io/pricing](https://invideo.io/pricing/), the [InVideo plans and credits help doc](https://help.invideo.io/en/articles/11528140-what-plans-does-invideo-offer-and-what-s-included-in-each), and AI-video market context from [TechCrunch](https://techcrunch.com/2026/03/15/ai-video-landscape-2026/).
 
 ## FAQ
 

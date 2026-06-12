@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: $0-$149/month
 status: active
 launched: 2019-01
-last_updated: 2026-05-26
-last_verified: 2026-05-26
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -21,7 +21,7 @@ affiliate:
   cookie_days: null
   network: direct
   link: null
-  notes: "Official LOVO affiliate page verified 2026-05-26: 20% recurring commission for 24 months, monthly payouts, approval usually about a week."
+  notes: "Official LOVO affiliate page verified 2026-06-12: 20% recurring commission for 24 months, monthly payouts, approval usually about a week."
 scores:
   utility: 7
   value: 7
@@ -33,7 +33,7 @@ facts:
     source: https://lovo.ai/
     source_label: LOVO AI official site
     source_id: lovo-official
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -42,7 +42,7 @@ facts:
     source: https://lovo.ai/pricing
     source_label: LOVO pricing
     source_id: lovo-pricing
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -51,7 +51,7 @@ facts:
     source: https://help.lovo.ai/
     source_label: LOVO help center
     source_id: lovo-help
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -60,16 +60,16 @@ facts:
     source: https://lovo.ai/
     source_label: LOVO AI official site
     source_id: lovo-official
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
   api_access:
-    value: "LOVO publicly promotes a developer API on the homepage as of May 2026 (advertised as a 5-line integration), narrowing the long-standing gap vs ElevenLabs and Fish Audio. Self-serve developer tier limits should still be verified before commitment."
+    value: "LOVO publicly promotes a developer API on the homepage as of June 2026 (advertised as a 5-line integration), narrowing the long-standing gap vs ElevenLabs and Fish Audio. Self-serve developer tier limits should still be verified before commitment."
     source: https://lovo.ai/
     source_label: LOVO AI official site
     source_id: lovo-official
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: medium
     next_review_at: '2026-08-13'
@@ -78,15 +78,15 @@ facts:
     source: https://help.lovo.ai/
     source_label: LOVO help center
     source_id: lovo-help
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
 tags: [tts, text-to-speech, voice-generator, ai-voice, video-editor, e-learning, voiceover]
-seo_title: 'LOVO (Genny): Features, Pricing & Review (May 2026)'
+seo_title: 'LOVO (Genny): Features, Pricing & Review (June 2026)'
 meta_description: >-
   LOVO (Genny) is an AI voice generator with 500+ voices and a built-in video
-  editor. Plans run $0-$149/month. Pricing verified May 2026.
+  editor. Plans run $0-$149/month. Pricing verified June 2026.
 author: "aipedia.wiki Editorial"
 best_for:
   - e-learning narration
@@ -145,12 +145,12 @@ A developer API is now publicly promoted on the homepage (advertised as a 5-line
 | **Voice cloning** | Available from Basic tier upward |
 | **Video editor** | Drag-and-drop timeline · stock media · on-screen text |
 | **Screen recorder** | Included · narration layered post-record |
-| **API access** | Developer API publicly promoted on lovo.ai homepage (May 2026); self-serve tier pricing not in the consumer plan grid |
+| **API access** | Developer API publicly promoted on lovo.ai homepage (June 2026); self-serve tier pricing not in the consumer plan grid |
 | **Free tier** | Yes · watermark + download caps |
 | **Pricing** | Free · Basic $24 · Pro $48 · Pro+ $149 · Enterprise custom |
 | **Best commercial rights floor** | Paid tiers (Basic and above) |
 
-Every data point verified against vendor documentation on 2026-05-13. See Sources.
+Every data point verified against vendor documentation on 2026-06-12. See Sources.
 
 ## What it actually is
 
@@ -188,7 +188,7 @@ Subscription pricing via [lovo.ai/pricing](https://lovo.ai/pricing).
 | Pro+ | $149 | ~20 hrs/month | 400GB storage, priority support, all Pro features |
 | Enterprise | Custom | Volume | Custom voices, SSO, SLA, API access |
 
-*Prices verified 2026-05-13 via [LOVO pricing](https://lovo.ai/pricing). Annual billing saves roughly 20-30% across paid tiers.*
+*Prices verified 2026-06-12 via [LOVO pricing](https://lovo.ai/pricing). Annual billing saves roughly 20-30% across paid tiers.*
 
 ## Against the alternatives
 
@@ -212,7 +212,7 @@ Subscription pricing via [lovo.ai/pricing](https://lovo.ai/pricing).
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-05-13 against the [LOVO pricing page](https://lovo.ai/pricing) and the [LOVO official site](https://lovo.ai).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against the [LOVO pricing page](https://lovo.ai/pricing) and the [LOVO official site](https://lovo.ai).
 
 ## FAQ
 
@@ -220,13 +220,13 @@ This page was produced by the aipedia.wiki editorial pipeline, an automated syst
 Yes. The free tier provides ~20 minutes of audio and 5 downloads per month. Video exports carry a watermark. It works as an evaluation trial, not a production tool.
 
 **How many voices does LOVO have?**
-500+ voices across 100+ languages as of May 2026. Voices are tagged by age, accent, and style (narration, advertising, conversational, e-learning).
+500+ voices across 100+ languages as of June 2026. Voices are tagged by age, accent, and style (narration, advertising, conversational, e-learning).
 
 **Can LOVO clone my voice?**
 Yes, starting on the Basic plan at $24/month. Uploads of 10-30 seconds produce a usable clone. Pro unlocks unlimited cloning for teams maintaining multi-voice libraries.
 
 **Does LOVO have an API?**
-Yes, and it is now publicly promoted on lovo.ai (advertised as a 5-line integration) as of May 2026, a change from the prior Enterprise-only posture. Tier-level rate limits and pricing are not yet listed in the consumer plan grid, so teams that need full documentation and predictable per-character pricing on day one may still prefer [ElevenLabs](/tools/elevenlabs/) or [Fish Audio](/tools/fish-audio/).
+Yes, and it is now publicly promoted on lovo.ai (advertised as a 5-line integration) as of June 2026, a change from the prior Enterprise-only posture. Tier-level rate limits and pricing are not yet listed in the consumer plan grid, so teams that need full documentation and predictable per-character pricing on day one may still prefer [ElevenLabs](/tools/elevenlabs/) or [Fish Audio](/tools/fish-audio/).
 
 **Is LOVO better than ElevenLabs?**
 Different jobs. LOVO wins on bundled video workflow for narrated explainers. ElevenLabs wins on voice naturalness, creative range, and API depth. Most teams evaluate both and pick based on primary output format.

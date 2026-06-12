@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "Free trial; paid Studio and API plans"
 status: active
 launched: 2017-01
-last_updated: 2026-05-26
-last_verified: 2026-05-26
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: weekly
 affiliate:
   has_program: true
@@ -19,7 +19,7 @@ affiliate:
   cookie_days: null
   network: direct
   link: null
-  notes: "Official D-ID affiliate terms verified 2026-05-26: selected-user program, payment only after two consecutive paid months, minimum $30 accumulated fee."
+  notes: "Official D-ID affiliate terms verified 2026-06-12: selected-user program, payment only after two consecutive paid months, minimum $30 accumulated fee."
 scores:
   utility: 8
   value: 6
@@ -31,7 +31,7 @@ facts:
     source: https://www.d-id.com/ai-agents/
     source_label: D-ID AI Agents
     source_id: d-id-agents
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-08-13'
@@ -40,7 +40,7 @@ facts:
     source: https://www.d-id.com/pricing/studio/
     source_label: D-ID Studio pricing
     source_id: d-id-studio-pricing
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-06-13'
@@ -49,7 +49,7 @@ facts:
     source: https://docs.d-id.com/
     source_label: D-ID docs
     source_id: d-id-docs
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-08-13'
@@ -58,7 +58,7 @@ facts:
     source: https://www.d-id.com/ai-agents/
     source_label: D-ID AI Agents
     source_id: d-id-agents
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-08-13'
@@ -67,7 +67,7 @@ facts:
     source: https://www.d-id.com/ai-agents/
     source_label: D-ID AI Agents
     source_id: d-id-agents
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: medium
     next_review_at: '2026-06-13'
@@ -76,7 +76,7 @@ facts:
     source: https://www.d-id.com/pricing/studio/
     source_label: D-ID Studio pricing
     source_id: d-id-studio-pricing
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-06-13'
@@ -91,8 +91,8 @@ not_best_for:
   - enterprise L&D teams that primarily need SCORM/LMS workflows
   - cinematic scene generation or non-presenter video
   - teams without consent, brand-safety, and likeness-governance workflows
-seo_title: "D-ID Review: Visual Agents, Studio & Pricing (May 2026)"
-meta_description: "D-ID is best for real-time visual AI agents and API-driven talking avatars. Current May 2026 review covers Studio/API pricing caveats, best uses, alternatives, and buyer watch-outs."
+seo_title: "D-ID Review: Visual Agents, Studio & Pricing (June 2026)"
+meta_description: "D-ID is best for real-time visual AI agents and API-driven talking avatars. Current June 2026 review covers Studio/API pricing caveats, best uses, alternatives, and buyer watch-outs."
 author: aipedia.wiki Editorial
 quick_answer: >-
   D-ID is the right shortlist pick when you need a live visual AI agent or embeddable talking-avatar API. It is not the default choice for cheap pre-rendered avatar videos; compare HeyGen, Synthesia, and Tavus when output volume, avatar polish, or training workflows matter more than real-time interaction.
@@ -122,7 +122,7 @@ D-ID is an AI avatar platform for two related jobs: generating talking-avatar vi
 - **Watermark caveat:** D-ID states that Trial and Lite videos carry watermarks, including full-screen watermarking for trial users.
 - **Buyer watch-out:** old exact self-serve prices should not be treated as current unless the live pricing page or logged-in checkout confirms them on the purchase date.
 
-Verified against D-ID official pages on 2026-05-13.
+Verified against D-ID official pages on 2026-06-12.
 
 ## What It Actually Is
 

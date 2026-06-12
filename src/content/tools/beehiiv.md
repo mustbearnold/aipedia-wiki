@@ -14,8 +14,8 @@ pricing_model: freemium
 price_range: "$0-$99+/month"
 status: active
 launched: 2021-11
-last_updated: 2026-05-26
-last_verified: 2026-05-26
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -23,7 +23,7 @@ affiliate:
   cookie_days: 60
   network: "PartnerStack"
   link: null
-  notes: "Official beehiiv partner page verified 2026-05-26: up to 60% for 12 months, 60-day cookie, apply via beehiiv partner page."
+  notes: "Official beehiiv partner page verified 2026-06-12: up to 60% for 12 months, 60-day cookie, apply via beehiiv partner page."
 scores:
   utility: 8
   value: 8
@@ -36,7 +36,7 @@ facts:
     source: https://www.beehiiv.com/
     source_label: beehiiv official site
     source_id: beehiiv-official
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -46,7 +46,7 @@ facts:
     source: https://www.beehiiv.com/pricing
     source_label: beehiiv pricing
     source_id: beehiiv-pricing
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -56,7 +56,7 @@ facts:
     source: https://developers.beehiiv.com/
     source_label: beehiiv developer docs
     source_id: beehiiv-developer-docs
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -65,7 +65,7 @@ facts:
     source: https://www.beehiiv.com/
     source_label: beehiiv official site
     source_id: beehiiv-official
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -75,12 +75,12 @@ facts:
     source: https://www.beehiiv.com/pricing
     source_label: beehiiv pricing
     source_id: beehiiv-pricing
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
 tags: [newsletter, email-marketing, ai-writer, monetization, content-creation, publishing, audience-growth, referrals]
-seo_title: "Beehiiv: Features, Pricing & Review (May 2026)"
+seo_title: "Beehiiv: Features, Pricing & Review (June 2026)"
 meta_description: >-
   Beehiiv is the newsletter platform built by ex-Morning Brew operators. AI Writer, auto-translation,
   referral program, ad network, Boosts, and premium subscriptions in one stack. Launch tier free
@@ -132,7 +132,7 @@ The pitch is creator-economy first: the operator owns the subscriber list, the m
 
 ## System Verdict
 
-> **Pick Beehiiv if a newsletter is the business.** The combined ad network, Boosts (paid cross-promotion), native referral program, 0% take rate on paid subscriptions, and AI drafting tools make it the most complete creator-economy newsletter stack in May 2026. Operators scaling past 2,500 subscribers get access to monetization surfaces that a hosted Substack or Mailchimp account does not expose.
+> **Pick Beehiiv if a newsletter is the business.** The combined ad network, Boosts (paid cross-promotion), native referral program, 0% take rate on paid subscriptions, and AI drafting tools make it the most complete creator-economy newsletter stack in June 2026. Operators scaling past 2,500 subscribers get access to monetization surfaces that a hosted Substack or Mailchimp account does not expose.
 >
 > **Skip Beehiiv if the newsletter is not the business.** Marketing teams that need deep CRM integration, multi-step drip campaigns, and automated segmentation off a CRM belong on a classic ESP. Hobbyists who want a free list with no revenue pressure can stay on Substack's discovery network. Writers with an existing Substack following and no plan to monetize aggressively have little reason to migrate.
 >
@@ -154,7 +154,7 @@ The pitch is creator-economy first: the operator owns the subscriber list, the m
 | **Deliverability** | Dedicated sending infrastructure; strong creator-economy reputation |
 | **Public API** | Send API on Enterprise; developer docs available across paid tiers |
 
-Every data point above was verified against vendor documentation on 2026-05-13. See Sources.
+Every data point above was verified against vendor documentation on 2026-06-12. See Sources.
 
 ## What it actually is
 
@@ -191,7 +191,7 @@ Subscription pricing via [beehiiv.com/pricing](https://www.beehiiv.com/pricing).
 | Max | from $96/mo ($1,151/yr) | Up to 100,000 | Removes Beehiiv branding, audio newsletters, up to 10 publications, unlimited team seats, priority support, dynamic content | Full stack | **Creators running newsletters as a business** |
 | Enterprise | Custom | 100,000+ | Concierge onboarding, dedicated account manager, dedicated IPs, Send API, SSO, VIP support | Full stack | Publishing teams and media studios |
 
-*Prices verified 2026-05-13 via [Beehiiv pricing](https://www.beehiiv.com/pricing). Annual billing saves roughly 20% across Scale and Max. Both Scale and Max prices rise with subscriber count up to a 100,000-subscriber ceiling; lists above that move to Enterprise. Run the calculator on the pricing page for an exact number at your list size.*
+*Prices verified 2026-06-12 via [Beehiiv pricing](https://www.beehiiv.com/pricing). Annual billing saves roughly 20% across Scale and Max. Both Scale and Max prices rise with subscriber count up to a 100,000-subscriber ceiling; lists above that move to Enterprise. Run the calculator on the pricing page for an exact number at your list size.*
 
 The right default for a serious operator is now Max at $96/mo. Scale already unlocks Ads, Boosts, and premium subs in 2026, so the upgrade case for Max is branding removal, multi-publication, audio newsletters, and unlimited team seats. Boosts earnings often recover either subscription once a list crosses 10,000 engaged subscribers.
 
@@ -222,7 +222,7 @@ The right default for a serious operator is now Max at $96/mo. Scale already unl
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-05-13 against [beehiiv.com](https://www.beehiiv.com), [beehiiv.com/pricing](https://www.beehiiv.com/pricing), and [blog.beehiiv.com](https://blog.beehiiv.com).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-12 against [beehiiv.com](https://www.beehiiv.com), [beehiiv.com/pricing](https://www.beehiiv.com/pricing), and [blog.beehiiv.com](https://blog.beehiiv.com).
 
 ## FAQ
 

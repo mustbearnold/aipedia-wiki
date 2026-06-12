@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: $0-$2999+/month
 status: active
 launched: 2013-01
-last_updated: 2026-05-26
-last_verified: 2026-05-26
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -22,7 +22,7 @@ affiliate:
   network: direct
   link: null
   application_status: none
-  notes: "Official Tidio affiliate page and help article verified 2026-05-26: up to 30% recurring, 30-day cookie, $50 payout threshold, no paid-search promotion."
+  notes: "Official Tidio affiliate page and help article verified 2026-06-12: up to 30% recurring, 30-day cookie, $50 payout threshold, no paid-search promotion."
 scores:
   utility: 8
   value: 6
@@ -34,7 +34,7 @@ facts:
     source: "https://www.tidio.com/"
     source_label: "Tidio overview"
     source_id: tidio-overview
-    verified_at: 2026-05-13
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
   pricing_anchor:
@@ -42,7 +42,7 @@ facts:
     source: "https://www.tidio.com/pricing/"
     source_label: "Tidio pricing"
     source_id: tidio-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-06-12
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -51,7 +51,7 @@ facts:
     source: "https://www.tidio.com/ai-agent/"
     source_label: "Tidio AI agent (Lyro)"
     source_id: tidio-lyro
-    verified_at: 2026-05-13
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   integrations:
@@ -59,7 +59,7 @@ facts:
     source: "https://www.tidio.com/"
     source_label: "Tidio overview"
     source_id: tidio-overview
-    verified_at: 2026-05-13
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   customer_count:
@@ -67,7 +67,7 @@ facts:
     source: "https://www.tidio.com/"
     source_label: "Tidio overview"
     source_id: tidio-overview
-    verified_at: 2026-05-13
+    verified_at: 2026-06-12
     volatility: low
     confidence: medium
   watch_out_for:
@@ -75,14 +75,14 @@ facts:
     source: "https://www.tidio.com/pricing/"
     source_label: "Tidio pricing"
     source_id: tidio-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-08-13
 tags: [chatbot, customer-support, live-chat, lyro, ai-agent, shopify, ecommerce, helpdesk, ticketing]
-seo_title: 'Tidio: Features, Pricing & Review (May 2026)'
+seo_title: 'Tidio: Features, Pricing & Review (June 2026)'
 meta_description: >-
-  Tidio is a live-chat + Lyro AI agent for SMB ecommerce and SaaS. Free starter tier; paid plans from $24.17/mo plus separate Lyro AI billing from $32.50/mo as of May 2026.
+  Tidio is a live-chat + Lyro AI agent for SMB ecommerce and SaaS. Free starter tier; paid plans from $24.17/mo plus separate Lyro AI billing from $32.50/mo as of June 2026.
 author: aipedia.wiki Editorial
 best_for:
   - Shopify and small DTC brands handling support volume
@@ -153,7 +153,7 @@ The product sits between **free chat widgets** (Crisp, the old Intercom Free) an
 | **Underlying model** | Not publicly disclosed; closed pipeline behind Lyro |
 | **Customer base** | 300,000+ businesses worldwide |
 
-Every data point above was verified against Tidio pricing and product documentation on 2026-05-13. See Sources.
+Every data point above was verified against Tidio pricing and product documentation on 2026-06-12. See Sources.
 
 ## What it actually is
 
@@ -201,7 +201,7 @@ Subscription and add-on pricing is managed via [tidio.com/pricing](https://www.t
 - **Lyro AI Agent:** from $32.50/mo for 50 conversations · scales with volume
 - **Flows:** from $24.17/mo for 2,000 visitors
 
-Prices verified 2026-05-13 via [tidio.com/pricing](https://www.tidio.com/pricing/). Check the live page for current billing toggles and exact volume tiers.
+Prices verified 2026-06-12 via [tidio.com/pricing](https://www.tidio.com/pricing/). Check the live page for current billing toggles and exact volume tiers.
 
 ## Against the alternatives
 
@@ -228,7 +228,7 @@ Prices verified 2026-05-13 via [tidio.com/pricing](https://www.tidio.com/pricing
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-13 against [Tidio pricing](https://www.tidio.com/pricing/) and the [Tidio AI Agent page](https://www.tidio.com/ai-agent/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-12 against [Tidio pricing](https://www.tidio.com/pricing/) and the [Tidio AI Agent page](https://www.tidio.com/ai-agent/).
 
 ## FAQ
 

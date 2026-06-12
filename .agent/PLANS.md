@@ -3574,3 +3574,72 @@ Batch date substitution risks corrupting dated internal `/news/` URLs on lines t
 ### 15. Final report
 
 Completed. All 13 May 24 cluster pages now carry June 12, 2026 verification with no pricing changes found. Historical price-history rows and dated news references preserved (codex.md's mangled slugs restored). Ledger regenerated clean; all validation passed. Next oldest live rows: the 2026-05-26 cluster (guides: best-ai-for-meeting-notes, best-ai-meeting-assistant-for-customer-success-teams, best-ai-phone-system-for-smb-sales-and-support-teams, otter-ai-alternatives; tools: adobe-firefly, beehiiv, blackbox-ai, cloudtalk, and others).
+
+---
+
+## ExecPlan: June 12 2026 May 26 Cluster Refresh
+
+### 1. Objective
+
+Continue the oldest-to-newest live ledger refresh with the 14-page 2026-05-26 cluster: 4 guides (`/guides/best-ai-for-meeting-notes/`, `/guides/best-ai-meeting-assistant-for-customer-success-teams/`, `/guides/best-ai-phone-system-for-smb-sales-and-support-teams/`, `/guides/otter-ai-alternatives/`) and 10 tools (adobe-firefly, beehiiv, blackbox-ai, cloudtalk, d-id, invideo, lovo, meetgeek, speechify, tidio), bumping each to June 12, 2026.
+
+### 2. Current state
+
+All 14 routes carry 2026-05-26 dates, May-dated facts/verification stamps, and "May 2026"/"May 26, 2026" wording. All 10 tools are status: active.
+
+### 3. Target state
+
+All 14 pages carry 2026-06-12 dates and June 2026 wording; historical price-history dates, affiliate approval dates, and dated changelog bullets preserved. Ledger reflects the batch.
+
+### 4. Scope
+
+Included: the 14 source files, `PAGE_REFRESH_LEDGER.md`, this plan. Excluded: dead tools, news pages, rows newer than 2026-05-26, affiliate `approved_date`/audit-note dates (historical facts).
+
+### 5. Files likely affected
+
+4 guide files under `src/content/use-cases/`, 10 tool files under `src/content/tools/`, `PAGE_REFRESH_LEDGER.md`, this plan.
+
+### 6. Data model impact
+
+None; dates and month wording in place. CloudTalk and MeetGeek price-history rows keep their 2026-05-26 row dates with verified_at re-stamped 2026-06-12.
+
+### 7. SEO impact
+
+Removes "(May 2026)"/"Verified May 2026"/"Reviewed May 2026" SEO strings from 13 sitemap-included pages plus the noindex otter-ai-alternatives guide.
+
+### 8. Conversion impact
+
+CloudTalk and MeetGeek are affiliate money pages; affiliate terms, links, and approval dates unchanged, only verification stamps bumped. Guard's money-guide protections passed.
+
+### 9. Mobile UX impact
+
+Text-only edits; none.
+
+### 10. Implementation steps
+
+1. Confirm tool liveness; survey stale strings.
+2. Batch-apply date bumps with the hardened script (news-URL-protected substitution, price_history/dated-bullet skips).
+3. Second-pass targeted fixes for meta descriptions and frontmatter facts positioned after price_history blocks.
+4. Regenerate ledger; run validation suite; commit and push.
+
+### 11. Verification commands
+
+`npm run ledger:pages`, `npm run ledger:pages:check`, `npm run guard:check`, `npm run check:links`, `npm run audit:facts`, `npm run test:scripts`, `npm run check`, `npm run build:fast`.
+
+### 12. Acceptance criteria
+
+All 14 pages June 12-dated with historical entries preserved; links clean; ledger current; validation passes.
+
+### 13. Risks and mitigations
+
+Affiliate money pages (cloudtalk, meetgeek) must not have program terms altered by batch edits: verified the affiliate blocks (approved_date, notes) were skipped. The earlier news-slug corruption mode was mitigated by excluding `/news/` URL substrings from date substitution; check:links confirmed clean on first pass.
+
+### 14. Progress log
+
+- 2026-06-12: Confirmed all 10 tools active; surveyed the 14 files; batch-applied June 12 date bumps with the hardened script.
+- 2026-06-12: Second pass fixed meta descriptions ("Updated May 26"/"Verified May 2026"/"Reviewed May 2026"/"Current May 2026"), the CloudTalk guide's "as of May 26" verdict line, and CloudTalk/MeetGeek verification stamps that sat after price_history blocks.
+- 2026-06-12: Regenerated ledger; full validation passed (33/33 script tests, links clean, 1104 pages built, indexability and CTA audits clean).
+
+### 15. Final report
+
+Completed. All 14 May 26 cluster pages now carry June 12, 2026 verification with no pricing or affiliate-term changes. Ledger regenerated clean; all validation passed. Next oldest live rows: 2026-05-27 (lindy-vs-zapier-vs-n8n comparison, best-ai-automation-platform and best-ai-personal-assistant-for-work guides, lindy and openrouter tools), then the 2026-05-28 cluster.

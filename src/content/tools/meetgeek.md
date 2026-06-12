@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$17/user/month billed annually; Enterprise custom"
 status: active
 launched: 2020-11
-last_updated: 2026-05-26
-last_verified: 2026-05-26
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 best_plan: "Business for customer-facing teams; Pro for solo professionals who can live inside 20 transcription hours per month"
 affiliate:
@@ -34,7 +34,7 @@ facts:
     value: "MeetGeek is best for customer success, implementation, sales, recruiting, and operations teams that need customer-facing meetings to become searchable records, action items, CRM updates, risk signals, and follow-up workflows."
     source: "https://meetgeek.ai/"
     source_label: "MeetGeek official site"
-    verified_at: 2026-05-26
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -42,7 +42,7 @@ facts:
     source: "https://meetgeek.ai/pricing"
     source_label: "MeetGeek pricing"
     source_id: meetgeek-pricing
-    verified_at: 2026-05-26
+    verified_at: 2026-06-12
     next_review_at: 2026-06-26
     volatility: high
     confidence: high
@@ -51,7 +51,7 @@ facts:
     source: "https://meetgeek.ai/pricing"
     source_label: "MeetGeek pricing"
     source_id: meetgeek-pricing
-    verified_at: 2026-05-26
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
   language_support:
@@ -59,7 +59,7 @@ facts:
     source: "https://meetgeek.ai/pricing"
     source_label: "MeetGeek pricing"
     source_id: meetgeek-pricing
-    verified_at: 2026-05-26
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   automation_features:
@@ -67,21 +67,21 @@ facts:
     source: "https://meetgeek.ai/pricing"
     source_label: "MeetGeek pricing"
     source_id: meetgeek-pricing
-    verified_at: 2026-05-26
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
   privacy_and_consent:
     value: "MeetGeek lists SOC 2, GDPR, HIPAA, zero-data-training, data storage region choice, private meetings by default on Business, and recording consent notifications; its consent help page says MeetGeek does not support incognito recording or surveillance."
     source: "https://support.meetgeek.ai/en/articles/6021904-recording-consents-notifications"
     source_label: "MeetGeek consent help center"
-    verified_at: 2026-05-26
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   affiliate_terms:
     value: "MeetGeek's PartnerStack directory lists 30% recurring commissions, recurring commissions for 12 months unless otherwise stated, cash-out via PayPal or Stripe, payout the month after commission is earned, and a 90-day cookie."
     source: "https://market.partnerstack.com/page/meetgeek"
     source_label: "MeetGeek PartnerStack program"
-    verified_at: 2026-05-26
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
   watch_out_for:
@@ -89,12 +89,12 @@ facts:
     source: "https://meetgeek.ai/pricing"
     source_label: "MeetGeek pricing"
     source_id: meetgeek-pricing
-    verified_at: 2026-05-26
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
 tags: [meeting-notes, transcription, ai-summaries, action-items, meeting-recording, customer-success, sales-coaching, multi-language, agentic-workflows, mcp, crm]
-seo_title: "MeetGeek Review (May 2026): Pricing, Best Plan, Affiliate Verdict"
-meta_description: "MeetGeek is an AI meeting assistant for CS, sales, recruiting, and ops teams. Verified May 2026 pricing, best plan, affiliate terms, watch-outs, and alternatives."
+seo_title: "MeetGeek Review (June 2026): Pricing, Best Plan, Affiliate Verdict"
+meta_description: "MeetGeek is an AI meeting assistant for CS, sales, recruiting, and ops teams. Verified June 2026 pricing, best plan, affiliate terms, watch-outs, and alternatives."
 author: "aipedia.wiki Editorial"
 best_for:
   - customer success teams running onboarding calls, QBRs, renewal calls, and escalation reviews
@@ -115,25 +115,25 @@ price_history:
     price: "Free; 3 transcription hours/month; 3 months transcript storage; 1 month audio storage"
     source: "https://meetgeek.ai/pricing"
     source_label: "MeetGeek pricing"
-    verified_at: 2026-05-26
+    verified_at: 2026-06-12
   - date: 2026-05-26
     plan: Pro
     price: "$9.99/user/month billed annually; 20 transcription hours/month; 1 year transcript storage; 6 months audio storage; $0.50 per extra hour"
     source: "https://meetgeek.ai/pricing"
     source_label: "MeetGeek pricing"
-    verified_at: 2026-05-26
+    verified_at: 2026-06-12
   - date: 2026-05-26
     plan: Business
     price: "$17/user/month billed annually; unlimited transcription; unlimited transcript storage; 12 months video storage"
     source: "https://meetgeek.ai/pricing"
     source_label: "MeetGeek pricing"
-    verified_at: 2026-05-26
+    verified_at: 2026-06-12
   - date: 2026-05-26
     plan: Enterprise
     price: "Custom; unlimited transcription; custom video storage; SSO/SCIM; custom retention; on-premise storage options"
     source: "https://meetgeek.ai/pricing"
     source_label: "MeetGeek pricing"
-    verified_at: 2026-05-26
+    verified_at: 2026-06-12
 ---
 
 # MeetGeek
@@ -142,7 +142,7 @@ MeetGeek is an AI meeting assistant for teams that need every customer call, sal
 
 The strongest way to understand it: MeetGeek is not just a transcript app. It is a meeting-to-workflow layer. It records and transcribes calls, generates summaries and next steps, lets teams search and chat across meeting history, and can push structured outputs into CRMs, task tools, Slack, Zapier, Make, n8n, API, and MCP-connected assistants.
 
-AiPedia verified this page against MeetGeek official pricing, product, integration, consent, customer-success, and PartnerStack program sources on 2026-05-26. AiPedia may earn from MeetGeek links, but the score and verdict remain editorial.
+AiPedia verified this page against MeetGeek official pricing, product, integration, consent, customer-success, and PartnerStack program sources on 2026-06-12. AiPedia may earn from MeetGeek links, but the score and verdict remain editorial.
 
 ## System Verdict
 
@@ -218,7 +218,7 @@ The trap is buying Pro for a team that is obviously a Business buyer. A CSM doin
 
 ## Pricing Reality
 
-MeetGeek pricing was verified from the official pricing page on 2026-05-26. The prices below are the annual-billing prices visible on the pricing page.
+MeetGeek pricing was verified from the official pricing page on 2026-06-12. The prices below are the annual-billing prices visible on the pricing page.
 
 | Plan | Price | Usage | Best for |
 |---|---:|---|---|
@@ -313,12 +313,12 @@ AiPedia may earn a commission from MeetGeek affiliate links. Rankings and recomm
 
 ## Sources
 
-- [MeetGeek official site](https://meetgeek.ai/) (verified 2026-05-26)
-- [MeetGeek pricing](https://meetgeek.ai/pricing) (verified 2026-05-26)
-- [MeetGeek integrations](https://meetgeek.ai/integrations) (verified 2026-05-26)
-- [MeetGeek PartnerStack program](https://market.partnerstack.com/page/meetgeek) (verified 2026-05-26)
-- [MeetGeek recording consent help center](https://support.meetgeek.ai/en/articles/6021904-recording-consents-notifications) (verified 2026-05-26)
-- [MeetGeek AI for Customer Success playbook](https://meetgeek.ai/blog/ai-for-customer-success) (verified 2026-05-26)
+- [MeetGeek official site](https://meetgeek.ai/) (verified 2026-06-12)
+- [MeetGeek pricing](https://meetgeek.ai/pricing) (verified 2026-06-12)
+- [MeetGeek integrations](https://meetgeek.ai/integrations) (verified 2026-06-12)
+- [MeetGeek PartnerStack program](https://market.partnerstack.com/page/meetgeek) (verified 2026-06-12)
+- [MeetGeek recording consent help center](https://support.meetgeek.ai/en/articles/6021904-recording-consents-notifications) (verified 2026-06-12)
+- [MeetGeek AI for Customer Success playbook](https://meetgeek.ai/blog/ai-for-customer-success) (verified 2026-06-12)
 
 ## Related
 
