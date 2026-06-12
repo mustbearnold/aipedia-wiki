@@ -5,10 +5,10 @@ title: AI Image Generation
 description: Current AI image tools for generation, photo editing, upscaling, product visuals, text-heavy graphics, creative ideation, and commercially safer Adobe workflows.
 tool_count: 18
 seo_title: "Best AI Image Tools, Photo Editors & 3D Generators (June 2026)"
-meta_description: "Updated June 10, 2026: compare Midjourney, ChatGPT Images, Adobe Firefly, Canva, Flux, Ideogram, Leonardo AI, Recraft, Freepik, AdCreative.ai, Meshy, Tripo3D, Rodin, and other AI image/3D tools by quality, workflow, pricing risk, text rendering, rights, and production fit."
+meta_description: "Updated June 12, 2026: compare Midjourney, ChatGPT Images, Adobe Firefly, Canva, Flux, Ideogram, Leonardo AI, Recraft, Freepik, AdCreative.ai, Meshy, Tripo3D, Rodin, and other AI image/3D tools by quality, workflow, pricing risk, text rendering, rights, and production fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-10
-last_verified: 2026-06-10
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -24,7 +24,7 @@ top_picks:
 
 ## Overview
 
-AiPedia rechecked Tripo3D on June 10, 2026 after the June 8 Leonardo AI/Magnific refresh, the June 7 Midjourney alternatives guide, the June 6 photo-editing buyer guide, and the June 5 Midjourney, Ideogram, and Flux image-model comparison slice. This category now splits into five buyer jobs: aesthetic generation, conversational image editing, finished social/design assets, professional photo-production workflows, and 3D asset generation for games, AR/VR, printing, and prototyping. Freepik/Magnific naming remains mixed across public surfaces: use Freepik AI Suite / Magnific for buyer guidance, but verify the live Freepik/Magnific pricing/model table before claiming a specific credit-free model or plan entitlement.
+AiPedia rechecked Tripo3D on June 12, 2026 after the June 8 Leonardo AI/Magnific refresh, the June 7 Midjourney alternatives guide, the June 6 photo-editing buyer guide, and the June 5 Midjourney, Ideogram, and Flux image-model comparison slice. This category now splits into five buyer jobs: aesthetic generation, conversational image editing, finished social/design assets, professional photo-production workflows, and 3D asset generation for games, AR/VR, printing, and prototyping. Freepik/Magnific naming remains mixed across public surfaces: use Freepik AI Suite / Magnific for buyer guidance, but verify the live Freepik/Magnific pricing/model table before claiming a specific credit-free model or plan entitlement.
 
 [Midjourney](/tools/midjourney/) remains the aesthetic ideation benchmark, and the June 6 check keeps the buyer math anchored to Basic, Standard, Pro, and Mega subscriptions plus current V8.1 docs. [ChatGPT](/tools/chatgpt/) is the best default when image generation or editing is part of a broader assistant workflow, especially after current ChatGPT release notes added ImageGen 2.0 and image-prompt editing updates. [Adobe Firefly](/tools/adobe-firefly/) is the safer first pick for Photoshop, Creative Cloud, Generative Fill, object removal, image expansion, partner-model-aware Adobe workflows, and credit-aware commercial review. [Canva](/tools/canva/) wins when the image needs to become a finished post, ad, thumbnail, product graphic, or presentation asset quickly.
 
@@ -109,30 +109,30 @@ Image generation is approaching commodity. The real differentiation is workflow 
 
 ## Sources
 
-- [Midjourney plans](https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans) (verified 2026-06-07)
-- [Midjourney docs](https://docs.midjourney.com/) (verified 2026-06-06)
-- [OpenAI image generation API](https://openai.com/index/image-generation-api/) (verified 2026-06-06)
-- [ChatGPT release notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes) (verified 2026-06-06)
-- [Adobe Firefly plans](https://www.adobe.com/products/firefly/plans.html) (verified 2026-06-07)
-- [Photoshop Generative Fill](https://www.adobe.com/products/photoshop/generative-fill.html) (verified 2026-06-06)
-- [Canva AI](https://www.canva.com/canva-ai/) (verified 2026-06-07)
-- [Black Forest Labs FLUX.2 pricing](https://docs.bfl.ai/quick_start/pricing) (verified 2026-06-07)
-- [FLUX.2 Klein 4B on Hugging Face](https://huggingface.co/black-forest-labs/FLUX.2-klein-4B) (verified 2026-06-05)
-- [Ideogram pricing](https://ideogram.ai/pricing) (verified 2026-06-07)
-- [Leonardo.Ai pricing](https://leonardo.ai/pricing) (verified 2026-06-08)
-- [Leonardo API quickstart](https://docs.leonardo.ai/docs/getting-started) (verified 2026-06-08)
-- [Freepik plans and pricing docs](https://www.freepik.com/ai/docs/plans-and-pricing) (verified 2026-06-07)
-- [Magnific API pricing](https://docs.magnific.com/pricing) (verified 2026-06-08)
-- [Magnific Upscaler Creative API](https://docs.magnific.com/api-reference/image-upscaler-creative/image-upscaler) (verified 2026-06-08)
-- [Meshy pricing](https://www.meshy.ai/pricing) (verified 2026-06-08)
-- [Meshy credit usage help](https://help.meshy.ai/en/articles/10000507-how-many-credits-does-each-generation-task-cost) (verified 2026-06-08)
-- [Tripo3D pricing](https://www.tripo3d.ai/pricing) (verified 2026-06-10)
-- [Tripo v3.0 Ultra release](https://www.tripo3d.ai/blog/introducing-tripo-new-algorithm3) (verified 2026-06-10)
-- [Recraft V4 docs](https://www.recraft.ai/docs/recraft-models/recraft-V4) (verified 2026-06-07)
-- [AdCreative.ai official site](https://www.adcreative.ai/) (verified 2026-06-01)
+- [Midjourney plans](https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans) (verified 2026-06-12)
+- [Midjourney docs](https://docs.midjourney.com/) (verified 2026-06-12)
+- [OpenAI image generation API](https://openai.com/index/image-generation-api/) (verified 2026-06-12)
+- [ChatGPT release notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes) (verified 2026-06-12)
+- [Adobe Firefly plans](https://www.adobe.com/products/firefly/plans.html) (verified 2026-06-12)
+- [Photoshop Generative Fill](https://www.adobe.com/products/photoshop/generative-fill.html) (verified 2026-06-12)
+- [Canva AI](https://www.canva.com/canva-ai/) (verified 2026-06-12)
+- [Black Forest Labs FLUX.2 pricing](https://docs.bfl.ai/quick_start/pricing) (verified 2026-06-12)
+- [FLUX.2 Klein 4B on Hugging Face](https://huggingface.co/black-forest-labs/FLUX.2-klein-4B) (verified 2026-06-12)
+- [Ideogram pricing](https://ideogram.ai/pricing) (verified 2026-06-12)
+- [Leonardo.Ai pricing](https://leonardo.ai/pricing) (verified 2026-06-12)
+- [Leonardo API quickstart](https://docs.leonardo.ai/docs/getting-started) (verified 2026-06-12)
+- [Freepik plans and pricing docs](https://www.freepik.com/ai/docs/plans-and-pricing) (verified 2026-06-12)
+- [Magnific API pricing](https://docs.magnific.com/pricing) (verified 2026-06-12)
+- [Magnific Upscaler Creative API](https://docs.magnific.com/api-reference/image-upscaler-creative/image-upscaler) (verified 2026-06-12)
+- [Meshy pricing](https://www.meshy.ai/pricing) (verified 2026-06-12)
+- [Meshy credit usage help](https://help.meshy.ai/en/articles/10000507-how-many-credits-does-each-generation-task-cost) (verified 2026-06-12)
+- [Tripo3D pricing](https://www.tripo3d.ai/pricing) (verified 2026-06-12)
+- [Tripo v3.0 Ultra release](https://www.tripo3d.ai/blog/introducing-tripo-new-algorithm3) (verified 2026-06-12)
+- [Recraft V4 docs](https://www.recraft.ai/docs/recraft-models/recraft-V4) (verified 2026-06-12)
+- [AdCreative.ai official site](https://www.adcreative.ai/) (verified 2026-06-12)
 - [NightCafe pricing](https://creator.nightcafe.studio/pricing) (verified 2026-05-24)
 - [Rodin pricing](https://hyper3d.ai/pricing) (verified 2026-05-24)
-- [fal Model API pricing docs](https://fal.ai/docs/documentation/model-apis/pricing) (verified 2026-06-02)
-- [Krea pricing](https://www.krea.ai/pricing) (verified 2026-06-08)
-- [Playground pricing](https://playground.com/design/pricing) (verified 2026-06-08)
-- [Playground paid-plan limits](https://help.playgroundai.com/en/articles/11165689-how-many-images-or-edits-under-the-paid-plans-pro-day-pass) (verified 2026-06-08)
+- [fal Model API pricing docs](https://fal.ai/docs/documentation/model-apis/pricing) (verified 2026-06-12)
+- [Krea pricing](https://www.krea.ai/pricing) (verified 2026-06-12)
+- [Playground pricing](https://playground.com/design/pricing) (verified 2026-06-12)
+- [Playground paid-plan limits](https://help.playgroundai.com/en/articles/11165689-how-many-images-or-edits-under-the-paid-plans-pro-day-pass) (verified 2026-06-12)

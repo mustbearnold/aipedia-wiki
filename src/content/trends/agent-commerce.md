@@ -3,13 +3,13 @@ type: trend
 slug: agent-commerce
 title: "Agent Commerce, AI Agents as Economic Actors"
 seo_title: "Agent Commerce: AI Agents in Commerce (June 2026), aipedia.wiki"
-meta_description: "Updated June 10, 2026: agent commerce is moving from demos to payment infrastructure, with Visa Intelligent Commerce, Mastercard Agent Pay, PayPal.ai, and Stripe Agent Toolkit making consent, tokens, and approvals the buying criteria."
+meta_description: "Updated June 12, 2026: agent commerce is moving from demos to payment infrastructure, with Visa Intelligent Commerce, Mastercard Agent Pay, PayPal.ai, and Stripe Agent Toolkit making consent, tokens, and approvals the buying criteria."
 author: "aipedia.wiki Editorial"
 description: AI agents are starting to research, compare, assemble carts, and initiate payments. The 2026 buying question is not whether agents can shop, but who controls consent, payment tokens, merchant scope, and refund accountability.
 timeframe: Conceptual in 2024, payment-platform pilots and developer tooling through 2025, and moving into production payment infrastructure by June 2026 through Visa, Mastercard, PayPal, and Stripe agentic-commerce surfaces.
 impact: high
-last_updated: 2026-06-10
-last_verified: 2026-06-10
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 ---
 
@@ -55,10 +55,10 @@ Agent commerce is high-impact because it changes both discovery and checkout. Th
 
 ## Sources
 
-- [Visa Intelligent Commerce](https://corporate.visa.com/en/products/intelligent-commerce.html), verified 2026-06-10.
-- [Visa Intelligent Commerce Connect announcement](https://investor.visa.com/news/news-details/2026/Visa-Opens-the-Door-to-AI-Driven-Shopping-for-Businesses-Worldwide/default.aspx), verified 2026-06-10.
-- [Mastercard Agent Pay](https://www.mastercard.com/us/en/business/artificial-intelligence/mastercard-agent-pay.html), verified 2026-06-10.
-- [Worldline, ING, and Mastercard live European agentic payment](https://www.mastercard.com/news/europe/en/newsroom/press-releases/en/2026/worldline-ing-and-mastercard-complete-a-live-end-to-end-european-agentic-payment-in-production/), verified 2026-06-10.
-- [PayPal.ai agentic commerce](https://www.paypal.ai/), verified 2026-06-10.
-- [Stripe Agent Toolkit docs](https://docs.stripe.com/agents), verified 2026-06-10.
-- [Stripe Agent Toolkit quickstart](https://docs.stripe.com/agents/quickstart), verified 2026-06-10.
+- [Visa Intelligent Commerce](https://corporate.visa.com/en/products/intelligent-commerce.html), verified 2026-06-12.
+- [Visa Intelligent Commerce Connect announcement](https://investor.visa.com/news/news-details/2026/Visa-Opens-the-Door-to-AI-Driven-Shopping-for-Businesses-Worldwide/default.aspx), verified 2026-06-12.
+- [Mastercard Agent Pay](https://www.mastercard.com/us/en/business/artificial-intelligence/mastercard-agent-pay.html), verified 2026-06-12.
+- [Worldline, ING, and Mastercard live European agentic payment](https://www.mastercard.com/news/europe/en/newsroom/press-releases/en/2026/worldline-ing-and-mastercard-complete-a-live-end-to-end-european-agentic-payment-in-production/), verified 2026-06-12.
+- [PayPal.ai agentic commerce](https://www.paypal.ai/), verified 2026-06-12.
+- [Stripe Agent Toolkit docs](https://docs.stripe.com/agents), verified 2026-06-12.
+- [Stripe Agent Toolkit quickstart](https://docs.stripe.com/agents/quickstart), verified 2026-06-12.

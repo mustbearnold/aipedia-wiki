@@ -5,10 +5,10 @@ title: AI Design & App Building
 description: Current AI design tools and app builders for social creative, product design, design systems, web prototypes, full-stack apps, and Vercel-native UI workflows.
 tool_count: 9
 seo_title: "Best AI Design & App Builder Tools (June 2026)"
-meta_description: "Updated June 10, 2026: compare Canva AI, Figma, Midjourney, Lovart, Uizard, Unbounce, Adobe Firefly, Recraft V4, Google Stitch, Framer, Lovable, Rork, Base44, Bolt.new, and v0 by buyer fit, pricing, workflow, credits, and production risk."
+meta_description: "Updated June 12, 2026: compare Canva AI, Figma, Midjourney, Lovart, Uizard, Unbounce, Adobe Firefly, Recraft V4, Google Stitch, Framer, Lovable, Rork, Base44, Bolt.new, and v0 by buyer fit, pricing, workflow, credits, and production risk."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-10
-last_verified: 2026-06-10
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -26,7 +26,7 @@ top_picks:
 
 AI design is now two overlapping markets. The first is **visual creation and product design**: brand assets, social posts, presentations, UX mockups, design systems, and stakeholder review. The second is **AI app building**: prompts, screenshots, Figma context, and code turning into web apps, prototypes, deploys, or pull requests.
 
-As of June 7, 2026, start with the job:
+As of June 12, 2026, start with the job:
 
 **Use [Canva](/tools/canva/) when non-designers need finished creative fast.** Canva AI 2.0 is built across Canva's Visual Suite and supports conversational creation, editable layouts, on-brand generation, AI images, AI video, Magic Write, resizing, background tools, and business controls. It is the safest first stop for marketers, creators, teachers, small businesses, and teams that need to publish polished content without a design department.
 
@@ -187,45 +187,45 @@ Do not position Unbounce Starter as the default serious paid-campaign tier. Its 
 
 ## Sources
 
-- [Canva AI](https://www.canva.com/canva-ai/) (verified 2026-06-07)
-- [Canva pricing](https://www.canva.com/pricing/) (verified 2026-06-02)
-- [Canva AI social media post generator](https://www.canva.com/features/ai-social-media-post-generator/) (verified 2026-06-06)
-- [Napkin AI pricing](https://www.napkin.ai/pricing/) (verified 2026-06-08)
-- [AdCreative.ai social media ads](https://www.adcreative.ai/social-media-ads) (verified 2026-06-06)
-- [Jasper pricing](https://www.jasper.ai/pricing) (verified 2026-06-06)
-- [Jasper Brand Voice help](https://help.jasper.ai/hc/en-us/articles/27419540851995-Brand-Voice) (verified 2026-06-06)
-- [OpusClip pricing](https://www.opus.pro/pricing) (verified 2026-06-06)
-- [Anthropic Claude Design launch](https://www.anthropic.com/news/claude-design-anthropic-labs) (verified 2026-06-02)
-- [Claude pricing](https://claude.com/pricing) (verified 2026-06-02)
-- [Figma pricing](https://www.figma.com/pricing/) (verified 2026-06-07)
-- [Figma AI credits](https://help.figma.com/hc/en-us/articles/33459875669015-How-AI-credits-work) (verified 2026-06-07)
-- [Figma Make model selection](https://help.figma.com/hc/en-us/articles/36400680326551-Select-an-AI-model-to-use-in-Figma-Make) (verified 2026-06-05)
-- [Create and edit a Figma Make file](https://help.figma.com/hc/en-us/articles/31304485164695-Create-and-edit-a-Figma-Make-file) (verified 2026-06-05)
-- [Midjourney plans](https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans) (verified 2026-06-07)
-- [Midjourney version docs](https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version) (verified 2026-06-05)
-- [Lovart website](https://www.lovart.ai) (verified 2026-06-08)
-- [Lovart pricing](https://www.lovart.ai/pricing) (verified 2026-06-08)
-- [Adobe Firefly plans](https://www.adobe.com/products/firefly/plans) (verified 2026-06-07)
-- [Google Stitch official site](https://stitch.withgoogle.com/) (verified 2026-06-05)
-- [Google Stitch announcement](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/) (verified 2026-06-05)
-- [Google Stitch real-time update](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-updates/) (verified 2026-06-05)
-- [Framer pricing](https://www.framer.com/pricing) (verified 2026-06-02)
-- [Lovable pricing](https://lovable.dev/pricing) (verified 2026-06-06)
-- [Lovable plans and credits](https://docs.lovable.dev/introduction/plans-and-credits) (verified 2026-06-06)
-- [Lovable Cloud docs](https://docs.lovable.dev/integrations/cloud) (verified 2026-06-06)
-- [Rork subscription docs](https://docs.rork.com/introduction/subscriptions) (verified 2026-06-09)
-- [Rork technical FAQ](https://docs.rork.com/faq/technical) (verified 2026-06-09)
-- [Base44 pricing](https://base44.com/pricing) (verified 2026-06-01)
-- [Bolt.new pricing](https://bolt.new/pricing) (verified 2026-06-06)
-- [v0 pricing](https://v0.app/pricing) (verified 2026-06-06)
-- [v0 documentation](https://v0.app/docs) (verified 2026-06-06)
-- [Uizard pricing](https://uizard.io/pricing/) (verified 2026-06-10)
-- [Uizard Autodesigner 2.0](https://uizard.io/autodesigner/) (verified 2026-06-10)
-- [Uizard exporting projects and Handoff Mode](https://support.uizard.io/en/articles/6380330-exporting-projects) (verified 2026-06-10)
-- [Unbounce pricing](https://unbounce.com/pricing/) (verified 2026-06-10)
-- [Unbounce plan comparison](https://unbounce.com/compare-plan-features/) (verified 2026-06-10)
-- [Unbounce features](https://unbounce.com/product/features/) (verified 2026-06-10)
-- [Freepik plans and pricing docs](https://www.freepik.com/ai/docs/plans-and-pricing) (verified 2026-06-07)
-- [Recraft V4 docs](https://www.recraft.ai/docs/recraft-models/recraft-V4) (verified 2026-06-07)
-- [Recraft V4 announcement](https://www.recraft.ai/blog/introducing-recraft-v4-design-taste-meets-image-generation) (verified 2026-06-07)
-- [Ideogram plans](https://docs.ideogram.ai/plans-and-pricing/available-plans) (verified 2026-06-07)
+- [Canva AI](https://www.canva.com/canva-ai/) (verified 2026-06-12)
+- [Canva pricing](https://www.canva.com/pricing/) (verified 2026-06-12)
+- [Canva AI social media post generator](https://www.canva.com/features/ai-social-media-post-generator/) (verified 2026-06-12)
+- [Napkin AI pricing](https://www.napkin.ai/pricing/) (verified 2026-06-12)
+- [AdCreative.ai social media ads](https://www.adcreative.ai/social-media-ads) (verified 2026-06-12)
+- [Jasper pricing](https://www.jasper.ai/pricing) (verified 2026-06-12)
+- [Jasper Brand Voice help](https://help.jasper.ai/hc/en-us/articles/27419540851995-Brand-Voice) (verified 2026-06-12)
+- [OpusClip pricing](https://www.opus.pro/pricing) (verified 2026-06-12)
+- [Anthropic Claude Design launch](https://www.anthropic.com/news/claude-design-anthropic-labs) (verified 2026-06-12)
+- [Claude pricing](https://claude.com/pricing) (verified 2026-06-12)
+- [Figma pricing](https://www.figma.com/pricing/) (verified 2026-06-12)
+- [Figma AI credits](https://help.figma.com/hc/en-us/articles/33459875669015-How-AI-credits-work) (verified 2026-06-12)
+- [Figma Make model selection](https://help.figma.com/hc/en-us/articles/36400680326551-Select-an-AI-model-to-use-in-Figma-Make) (verified 2026-06-12)
+- [Create and edit a Figma Make file](https://help.figma.com/hc/en-us/articles/31304485164695-Create-and-edit-a-Figma-Make-file) (verified 2026-06-12)
+- [Midjourney plans](https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans) (verified 2026-06-12)
+- [Midjourney version docs](https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version) (verified 2026-06-12)
+- [Lovart website](https://www.lovart.ai) (verified 2026-06-12)
+- [Lovart pricing](https://www.lovart.ai/pricing) (verified 2026-06-12)
+- [Adobe Firefly plans](https://www.adobe.com/products/firefly/plans) (verified 2026-06-12)
+- [Google Stitch official site](https://stitch.withgoogle.com/) (verified 2026-06-12)
+- [Google Stitch announcement](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/) (verified 2026-06-12)
+- [Google Stitch real-time update](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-updates/) (verified 2026-06-12)
+- [Framer pricing](https://www.framer.com/pricing) (verified 2026-06-12)
+- [Lovable pricing](https://lovable.dev/pricing) (verified 2026-06-12)
+- [Lovable plans and credits](https://docs.lovable.dev/introduction/plans-and-credits) (verified 2026-06-12)
+- [Lovable Cloud docs](https://docs.lovable.dev/integrations/cloud) (verified 2026-06-12)
+- [Rork subscription docs](https://docs.rork.com/introduction/subscriptions) (verified 2026-06-12)
+- [Rork technical FAQ](https://docs.rork.com/faq/technical) (verified 2026-06-12)
+- [Base44 pricing](https://base44.com/pricing) (verified 2026-06-12)
+- [Bolt.new pricing](https://bolt.new/pricing) (verified 2026-06-12)
+- [v0 pricing](https://v0.app/pricing) (verified 2026-06-12)
+- [v0 documentation](https://v0.app/docs) (verified 2026-06-12)
+- [Uizard pricing](https://uizard.io/pricing/) (verified 2026-06-12)
+- [Uizard Autodesigner 2.0](https://uizard.io/autodesigner/) (verified 2026-06-12)
+- [Uizard exporting projects and Handoff Mode](https://support.uizard.io/en/articles/6380330-exporting-projects) (verified 2026-06-12)
+- [Unbounce pricing](https://unbounce.com/pricing/) (verified 2026-06-12)
+- [Unbounce plan comparison](https://unbounce.com/compare-plan-features/) (verified 2026-06-12)
+- [Unbounce features](https://unbounce.com/product/features/) (verified 2026-06-12)
+- [Freepik plans and pricing docs](https://www.freepik.com/ai/docs/plans-and-pricing) (verified 2026-06-12)
+- [Recraft V4 docs](https://www.recraft.ai/docs/recraft-models/recraft-V4) (verified 2026-06-12)
+- [Recraft V4 announcement](https://www.recraft.ai/blog/introducing-recraft-v4-design-taste-meets-image-generation) (verified 2026-06-12)
+- [Ideogram plans](https://docs.ideogram.ai/plans-and-pricing/available-plans) (verified 2026-06-12)

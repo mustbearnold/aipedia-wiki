@@ -5,10 +5,10 @@ title: AI Voice Tools
 description: Compare AI voice generation, voice cloning, text-to-speech, speech-to-text, dubbing, meeting transcription, transcription APIs, voice-agent tools, and AI-powered phone systems.
 tool_count: 24
 seo_title: "Best AI Voice Tools 2026: TTS, Voice Agents, AI Phone Systems"
-meta_description: "Updated June 10, 2026: compare AI voice tools including ElevenLabs, Whisper, Wispr Flow, Resemble AI, Voxtral, Cartesia, Retell AI, Deepgram, AssemblyAI, and meeting transcription apps by TTS, STT, dictation, agents, and buyer fit."
+meta_description: "Updated June 12, 2026: compare AI voice tools including ElevenLabs, Whisper, Wispr Flow, Resemble AI, Voxtral, Cartesia, Retell AI, Deepgram, AssemblyAI, and meeting transcription apps by TTS, STT, dictation, agents, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-10
-last_verified: 2026-06-10
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 ---
 
@@ -60,7 +60,7 @@ The June 10 refresh adds two voice lanes that are easy to blur. [Whisper](/tools
 - [Best AI for Transcription](/guides/best-ai-for-transcription/) is the June 6 verified STT buyer guide for Fathom, Descript, Deepgram, AssemblyAI, and ElevenLabs, with meeting, creator-editing, developer API, speech-understanding, and wider voice-platform lanes separated.
 - [Best AI Tools for Podcasters](/guides/best-ai-for-podcasters/) is the June 6 verified creator workflow guide for Descript, Castmagic, ElevenLabs, and Riverside, with consent, synthetic voice, disclosure, recording-quality, and repurposing guardrails tightened.
 - [ElevenLabs alternatives](/guides/elevenlabs-alternatives/) is the June 7 verified voice-switching guide for Cartesia real-time agents, Fish Audio API value, WellSaid narration teams, Voxtral open/model-platform fit, and the cases where ElevenLabs remains the broad default.
-- [Best AI Voice Generator for YouTube](/guides/best-ai-voice-youtube/) was refreshed June 6, 2026 with current ElevenLabs, Fish Audio, MiniMax Speech, Murf, WellSaid, HeyGen, Synthesia, and Descript checks plus creator-specific consent, disclosure, and credit-economics warnings.
+- [Best AI Voice Generator for YouTube](/guides/best-ai-voice-youtube/) was refreshed June 12, 2026 with current ElevenLabs, Fish Audio, MiniMax Speech, Murf, WellSaid, HeyGen, Synthesia, and Descript checks plus creator-specific consent, disclosure, and credit-economics warnings.
 - [Best AI Tools Under $20/month](/guides/best-ai-tools-under-20-month/) is the June 6 verified budget guide that treats ElevenLabs Starter as a low-cost voice test, not a blanket production answer, because credits, model choice, agents, dubbing, music, and API usage can change real cost quickly.
 - [Best AI Tools for YouTube Creators](/guides/best-ai-for-youtube-creators/) is the June 6 verified creator-stack guide for Descript editing, ChatGPT scripts, Canva/Midjourney thumbnails, ElevenLabs narration, OpusClip Shorts, Runway B-roll, and YouTube altered/synthetic disclosure checks.
 - [Best AI Avatar Video Generator](/guides/best-ai-avatar-video-generator/)
@@ -70,52 +70,52 @@ The June 10 refresh adds two voice lanes that are easy to blur. [Whisper](/tools
 
 ## Sources
 
-- [ElevenLabs pricing](https://elevenlabs.io/pricing) (verified 2026-06-07)
-- [ElevenLabs API pricing](https://elevenlabs.io/pricing/api) (verified 2026-06-07)
-- [ElevenLabs API and Agents PAYG update](https://elevenlabs.io/blog/weve-lowered-api-agents-pricing-and-introduced-pay-as-you-go) (verified 2026-06-05)
-- [Fish Audio plans](https://fish.audio/plan/) (verified 2026-06-07)
-- [Fish Audio API pricing](https://docs.fish.audio/developer-guide/models-pricing/pricing-and-rate-limits) (verified 2026-06-07)
-- [MiniMax Audio Subscription pricing](https://platform.minimax.io/docs/guides/pricing-speech) (verified 2026-06-08)
-- [MiniMax pay-as-you-go pricing](https://platform.minimax.io/docs/guides/pricing-paygo) (verified 2026-06-08)
-- [MiniMax T2A API docs](https://platform.minimax.io/docs/api-reference/speech-t2a-intro) (verified 2026-06-08)
-- [Cartesia pricing](https://cartesia.ai/pricing) (verified 2026-06-07)
-- [Mistral pricing](https://mistral.ai/pricing) (verified 2026-06-07)
-- [Voxtral TTS model card](https://docs.mistral.ai/models/voxtral-tts-26-03) (verified 2026-06-07)
-- [Mistral speech-to-text docs](https://docs.mistral.ai/studio-api/audio/speech_to_text) (verified 2026-06-05)
-- [OpenAI speech-to-text docs](https://developers.openai.com/api/docs/guides/speech-to-text) (verified 2026-06-10)
-- [OpenAI API pricing](https://developers.openai.com/api/docs/pricing) (verified 2026-06-10)
-- [OpenAI public API pricing](https://openai.com/api/pricing/) (verified 2026-06-10)
-- [OpenAI Whisper GitHub](https://github.com/openai/whisper) (verified 2026-06-10)
-- [Wispr Flow plans docs](https://docs.wisprflow.ai/articles/9559327591-flow-plans-and-what-s-included) (verified 2026-06-10)
-- [Wispr Flow business pricing](https://wisprflow.ai/business) (verified 2026-06-10)
-- [Wispr Flow data controls](https://wisprflow.ai/data-controls) (verified 2026-06-10)
-- [Wispr Flow What's New](https://wisprflow.ai/whats-new) (verified 2026-06-10)
-- [Castmagic pricing](https://www.castmagic.io/pricing) (verified 2026-06-06)
-- [Hedra pricing](https://www.hedra.com/pricing) (verified 2026-06-02)
-- [Hedra models](https://www.hedra.com/models) (verified 2026-06-02)
-- [Hume AI pricing](https://www.hume.ai/pricing) (verified 2026-06-02)
-- [Hume Expression Measurement docs](https://dev.hume.ai/docs/expression-measurement/overview) (verified 2026-06-02)
-- [YouTube altered or synthetic content disclosure](https://support.google.com/youtube/answer/14328491) (verified 2026-06-06)
-- [Descript pricing](https://www.descript.com/pricing) (verified 2026-06-06)
-- [HeyGen pricing](https://www.heygen.com/pricing) (verified 2026-06-05)
-- [HeyGen developer API pricing](https://developers.heygen.com/docs/pricing) (verified 2026-06-05)
-- [Murf pricing](https://murf.ai/pricing) (verified 2026-06-05)
-- [Murf API overview](https://murf.ai/api) (verified 2026-06-05)
-- [Otter.ai pricing](https://otter.ai/pricing) (verified 2026-06-05)
-- [Resemble AI pricing](https://www.resemble.ai/pricing/) (verified 2026-06-06)
-- [Resemble AI products overview](https://www.resemble.ai/products) (verified 2026-06-05)
-- [Synthesia pricing](https://www.synthesia.io/pricing) (verified 2026-06-05)
-- [WellSaid pricing](https://wellsaidlabs.com/pricing) (verified 2026-06-07)
-- [Deepgram pricing](https://deepgram.com/pricing) (verified 2026-06-06)
-- [AssemblyAI pricing](https://www.assemblyai.com/pricing) (verified 2026-06-06)
-- [Fathom pricing](https://www.fathom.ai/pricing) (verified 2026-06-06)
-- [Fathom Account-Wide Ask usage limits](https://help.fathom.video/en/articles/10390017) (verified 2026-06-06)
+- [ElevenLabs pricing](https://elevenlabs.io/pricing) (verified 2026-06-12)
+- [ElevenLabs API pricing](https://elevenlabs.io/pricing/api) (verified 2026-06-12)
+- [ElevenLabs API and Agents PAYG update](https://elevenlabs.io/blog/weve-lowered-api-agents-pricing-and-introduced-pay-as-you-go) (verified 2026-06-12)
+- [Fish Audio plans](https://fish.audio/plan/) (verified 2026-06-12)
+- [Fish Audio API pricing](https://docs.fish.audio/developer-guide/models-pricing/pricing-and-rate-limits) (verified 2026-06-12)
+- [MiniMax Audio Subscription pricing](https://platform.minimax.io/docs/guides/pricing-speech) (verified 2026-06-12)
+- [MiniMax pay-as-you-go pricing](https://platform.minimax.io/docs/guides/pricing-paygo) (verified 2026-06-12)
+- [MiniMax T2A API docs](https://platform.minimax.io/docs/api-reference/speech-t2a-intro) (verified 2026-06-12)
+- [Cartesia pricing](https://cartesia.ai/pricing) (verified 2026-06-12)
+- [Mistral pricing](https://mistral.ai/pricing) (verified 2026-06-12)
+- [Voxtral TTS model card](https://docs.mistral.ai/models/voxtral-tts-26-03) (verified 2026-06-12)
+- [Mistral speech-to-text docs](https://docs.mistral.ai/studio-api/audio/speech_to_text) (verified 2026-06-12)
+- [OpenAI speech-to-text docs](https://developers.openai.com/api/docs/guides/speech-to-text) (verified 2026-06-12)
+- [OpenAI API pricing](https://developers.openai.com/api/docs/pricing) (verified 2026-06-12)
+- [OpenAI public API pricing](https://openai.com/api/pricing/) (verified 2026-06-12)
+- [OpenAI Whisper GitHub](https://github.com/openai/whisper) (verified 2026-06-12)
+- [Wispr Flow plans docs](https://docs.wisprflow.ai/articles/9559327591-flow-plans-and-what-s-included) (verified 2026-06-12)
+- [Wispr Flow business pricing](https://wisprflow.ai/business) (verified 2026-06-12)
+- [Wispr Flow data controls](https://wisprflow.ai/data-controls) (verified 2026-06-12)
+- [Wispr Flow What's New](https://wisprflow.ai/whats-new) (verified 2026-06-12)
+- [Castmagic pricing](https://www.castmagic.io/pricing) (verified 2026-06-12)
+- [Hedra pricing](https://www.hedra.com/pricing) (verified 2026-06-12)
+- [Hedra models](https://www.hedra.com/models) (verified 2026-06-12)
+- [Hume AI pricing](https://www.hume.ai/pricing) (verified 2026-06-12)
+- [Hume Expression Measurement docs](https://dev.hume.ai/docs/expression-measurement/overview) (verified 2026-06-12)
+- [YouTube altered or synthetic content disclosure](https://support.google.com/youtube/answer/14328491) (verified 2026-06-12)
+- [Descript pricing](https://www.descript.com/pricing) (verified 2026-06-12)
+- [HeyGen pricing](https://www.heygen.com/pricing) (verified 2026-06-12)
+- [HeyGen developer API pricing](https://developers.heygen.com/docs/pricing) (verified 2026-06-12)
+- [Murf pricing](https://murf.ai/pricing) (verified 2026-06-12)
+- [Murf API overview](https://murf.ai/api) (verified 2026-06-12)
+- [Otter.ai pricing](https://otter.ai/pricing) (verified 2026-06-12)
+- [Resemble AI pricing](https://www.resemble.ai/pricing/) (verified 2026-06-12)
+- [Resemble AI products overview](https://www.resemble.ai/products) (verified 2026-06-12)
+- [Synthesia pricing](https://www.synthesia.io/pricing) (verified 2026-06-12)
+- [WellSaid pricing](https://wellsaidlabs.com/pricing) (verified 2026-06-12)
+- [Deepgram pricing](https://deepgram.com/pricing) (verified 2026-06-12)
+- [AssemblyAI pricing](https://www.assemblyai.com/pricing) (verified 2026-06-12)
+- [Fathom pricing](https://www.fathom.ai/pricing) (verified 2026-06-12)
+- [Fathom Account-Wide Ask usage limits](https://help.fathom.video/en/articles/10390017) (verified 2026-06-12)
 - [CloudTalk pricing](https://www.cloudtalk.io/pricing/) (verified 2026-05-26)
 - [CloudTalk Conversation Intelligence help center](https://help.cloudtalk.io/en/articles/9128167-conversation-intelligence) (verified 2026-05-26)
 - [MeetGeek pricing](https://meetgeek.ai/pricing) (verified 2026-05-26)
 - [MeetGeek recording consent help center](https://support.meetgeek.ai/en/articles/6021904-recording-consents-notifications) (verified 2026-05-26)
-- [Retell AI pricing](https://www.retellai.com/pricing) (verified 2026-06-09)
-- [Retell AI legacy endpoint deprecation](https://docs.retellai.com/deprecation-notice/2026/06-15_legacy_list_endpoints) (verified 2026-06-09)
-- [Riverside pricing](https://riverside.com/pricing) (verified 2026-06-09)
-- [Kokoro-82M on Hugging Face](https://huggingface.co/hexgrad/Kokoro-82M) (verified 2026-06-08)
-- [hexgrad/kokoro GitHub repository](https://github.com/hexgrad/kokoro) (verified 2026-06-08)
+- [Retell AI pricing](https://www.retellai.com/pricing) (verified 2026-06-12)
+- [Retell AI legacy endpoint deprecation](https://docs.retellai.com/deprecation-notice/2026/06-15_legacy_list_endpoints) (verified 2026-06-12)
+- [Riverside pricing](https://riverside.com/pricing) (verified 2026-06-12)
+- [Kokoro-82M on Hugging Face](https://huggingface.co/hexgrad/Kokoro-82M) (verified 2026-06-12)
+- [hexgrad/kokoro GitHub repository](https://github.com/hexgrad/kokoro) (verified 2026-06-12)

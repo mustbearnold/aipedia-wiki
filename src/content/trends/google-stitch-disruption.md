@@ -3,13 +3,13 @@ type: trend
 slug: google-stitch-disruption
 title: "Google Stitch Disruption, AI Design Gets A Free First-Draft Layer"
 seo_title: "Google Stitch vs Figma (June 2026), aipedia.wiki"
-meta_description: "Updated June 10, 2026: Google Stitch turns prompts and images into UI designs and front-end code, creating pressure on first-draft design tools while Figma remains stronger for systems, collaboration, and handoff."
+meta_description: "Updated June 12, 2026: Google Stitch turns prompts and images into UI designs and front-end code, creating pressure on first-draft design tools while Figma remains stronger for systems, collaboration, and handoff."
 author: "aipedia.wiki Editorial"
 description: Google Stitch turns natural-language and image prompts into UI designs and front-end code. It pressures first-draft mockup tools, but professional design systems and collaborative handoff still favor Figma-class workflows.
 timeframe: Launched at Google I/O 2026 and refreshed through June 2026 as an experimental Labs design-to-code tool. The near-term impact is strongest for founders, marketers, PMs, and vibe-coding workflows.
 impact: medium
-last_updated: 2026-06-10
-last_verified: 2026-06-10
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 ---
 
@@ -59,9 +59,9 @@ Stitch is disruptive because it removes friction from the first visual draft. It
 
 ## Sources
 
-- [Google Developers Blog: Stitch, a new way to design UIs](https://developers.googleblog.com/stitch-a-new-way-to-design-uis/), verified 2026-06-10.
-- [Google Stitch](https://stitch.google.com/), verified 2026-06-10.
-- [Google Labs Stitch](https://labs.google/fx/tools/stitch), verified 2026-06-10.
-- [Figma AI](https://www.figma.com/ai/), verified 2026-06-10.
-- [v0 by Vercel](https://v0.app/), verified 2026-06-10.
-- [Bolt.new](https://bolt.new/), verified 2026-06-10.
+- [Google Developers Blog: Stitch, a new way to design UIs](https://developers.googleblog.com/stitch-a-new-way-to-design-uis/), verified 2026-06-12.
+- [Google Stitch](https://stitch.google.com/), verified 2026-06-12.
+- [Google Labs Stitch](https://labs.google/fx/tools/stitch), verified 2026-06-12.
+- [Figma AI](https://www.figma.com/ai/), verified 2026-06-12.
+- [v0 by Vercel](https://v0.app/), verified 2026-06-12.
+- [Bolt.new](https://bolt.new/), verified 2026-06-12.

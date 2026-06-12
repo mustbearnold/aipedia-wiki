@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$15/user/month; Enterprise custom"
 status: active
 launched: 2024
-last_updated: 2026-06-10
-last_verified: 2026-06-10
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 seo_title: "Wispr Flow: Features, Pricing & Review (June 2026)"
 meta_description: "June 2026 Wispr Flow review: AI dictation for Mac, Windows, iPhone, and Android. Free Basic, Pro at $15 monthly or $12 annual, Team/Enterprise controls, Command Mode, Privacy Mode, and reliability watch-outs."
@@ -34,14 +34,14 @@ facts:
     source: "https://docs.wisprflow.ai/articles/9559327591-flow-plans-and-what-s-included"
     source_label: "Wispr Flow plans docs"
     source_id: wispr-flow-plans-docs
-    verified_at: 2026-06-10
+    verified_at: 2026-06-12
     confidence: high
   best_paid_tier:
     value: "Flow Pro ($15/user/month monthly or $12/user/month annual) for unlimited words and command mode"
     source: "https://wisprflow.ai/business"
     source_label: "Wispr Flow business pricing"
     source_id: wispr-flow-business
-    verified_at: 2026-06-10
+    verified_at: 2026-06-12
     next_review_at: 2026-09-10
     confidence: high
   best_for:
@@ -49,14 +49,14 @@ facts:
     source: "https://docs.wisprflow.ai/articles/9559327591-flow-plans-and-what-s-included"
     source_label: "Wispr Flow plans docs"
     source_id: wispr-flow-plans-docs
-    verified_at: 2026-06-10
+    verified_at: 2026-06-12
     confidence: high
   data_controls:
     value: "Privacy Mode is the zero-dictation-retention path when enabled; Wispr still performs cloud transcription and may use dictation data to evaluate/train systems when Privacy Mode is off."
     source: "https://wisprflow.ai/data-controls"
     source_label: "Wispr Flow data controls"
     source_id: wispr-flow-data-controls
-    verified_at: 2026-06-10
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-09-10
@@ -65,7 +65,7 @@ facts:
     source: "https://www.bloomberg.com/news/articles/2026-05-12/ai-dictation-startup-wispr-in-funding-talks-at-2-billion-value"
     source_label: "Bloomberg"
     source_id: wispr-funding-260m
-    verified_at: 2026-06-10
+    verified_at: 2026-06-12
     volatility: high
     confidence: medium
     next_review_at: 2026-07-10
@@ -210,7 +210,7 @@ Command Mode is the key paid workflow to understand. Wispr's help docs say it is
 
 ## Pricing
 
-Wispr Flow pricing was re-verified from official plan docs and the business pricing page on 2026-06-10:
+Wispr Flow pricing was re-verified from official plan docs and the business pricing page on 2026-06-12:
 
 | Plan | Price | Practical meaning |
 |---|---:|---|
@@ -245,7 +245,7 @@ Team and Enterprise admins should read the plan FAQ before procurement. Wispr's 
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-10 against Wispr Flow primary plan docs, business pricing, data-controls, privacy, command-mode, team/enterprise, reliability-update, referral, and affiliate-program information, plus May 12, 2026 Bloomberg/The Tech Portal/TechFundingNews coverage of the reported $260M Menlo-led round at a $2B valuation.
+This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against Wispr Flow primary plan docs, business pricing, data-controls, privacy, command-mode, team/enterprise, reliability-update, referral, and affiliate-program information, plus May 12, 2026 Bloomberg/The Tech Portal/TechFundingNews coverage of the reported $260M Menlo-led round at a $2B valuation.
 
 ## FAQ
 
@@ -269,13 +269,13 @@ No. Wispr Flow is a dictation and writing tool. Use a voice-agent platform for p
 
 ## Sources
 
-- [Wispr Flow plans docs](https://docs.wisprflow.ai/articles/9559327591-flow-plans-and-what-s-included): Basic, Pro, Team, Enterprise, platforms, and plan features (verified 2026-06-10)
-- [Wispr Flow business pricing](https://wisprflow.ai/business): current Free/Pro/Enterprise price and feature cards (verified 2026-06-10)
-- [Wispr Flow data controls](https://wisprflow.ai/data-controls): Privacy Mode, retention, cloud transcription, context awareness, and security controls (verified 2026-06-10)
-- [Wispr Flow What's New](https://wisprflow.ai/whats-new): June 4, 2026 reliability update (verified 2026-06-10)
-- [Wispr Flow privacy](https://wisprflow.ai/privacy): Privacy Mode, no-sale/no-share language, compliance and SSO claims (verified 2026-06-10)
+- [Wispr Flow plans docs](https://docs.wisprflow.ai/articles/9559327591-flow-plans-and-what-s-included): Basic, Pro, Team, Enterprise, platforms, and plan features (verified 2026-06-12)
+- [Wispr Flow business pricing](https://wisprflow.ai/business): current Free/Pro/Enterprise price and feature cards (verified 2026-06-12)
+- [Wispr Flow data controls](https://wisprflow.ai/data-controls): Privacy Mode, retention, cloud transcription, context awareness, and security controls (verified 2026-06-12)
+- [Wispr Flow What's New](https://wisprflow.ai/whats-new): June 12, 2026 reliability update (verified 2026-06-12)
+- [Wispr Flow privacy](https://wisprflow.ai/privacy): Privacy Mode, no-sale/no-share language, compliance and SSO claims (verified 2026-06-12)
 - [Wispr Flow Command Mode docs](https://docs.wisprflow.ai/articles/4816967992-how-to-use-command-mode): paid/trial requirement and Mac/Windows availability
-- [Wispr Flow team and Enterprise FAQ](https://docs.wisprflow.ai/articles/2458545840-faqs-for-flow-pro-team-and-flow-enterprise-plans): trials, billing, team features, admin roles, and Enterprise access (verified 2026-06-10)
+- [Wispr Flow team and Enterprise FAQ](https://docs.wisprflow.ai/articles/2458545840-faqs-for-flow-pro-team-and-flow-enterprise-plans): trials, billing, team features, admin roles, and Enterprise access (verified 2026-06-12)
 - [Wispr Flow affiliate program](https://partners.dub.co/flow): commission, cookie, payout, and advertising guidelines
 - [Bloomberg: Wispr in funding talks at $2B value (May 12, 2026)](https://www.bloomberg.com/news/articles/2026-05-12/ai-dictation-startup-wispr-in-funding-talks-at-2-billion-value): $260M round led by Menlo Ventures, not finalized
 - [aipedia.wiki news coverage](/news/2026-05-12-wispr-ai-260m-2b-valuation-menlo-ventures/): aggregated coverage of the reported round

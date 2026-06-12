@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$39-$99 one-time / $395+ team bulk"
 status: active
 launched: 2023-04
-last_updated: 2026-06-10
-last_verified: 2026-06-10
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://www.typingmind.com/buy"
     source_label: "typingmind.com/buy"
     source_id: typingmind-official
-    verified_at: 2026-06-10
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -38,7 +38,7 @@ facts:
     source: "https://www.typingmind.com/buy"
     source_label: "typingmind.com/buy"
     source_id: typingmind-official
-    verified_at: 2026-06-10
+    verified_at: 2026-06-12
     next_review_at: 2026-09-10
     volatility: medium
     confidence: high
@@ -47,7 +47,7 @@ facts:
     source: "https://www.typingmind.com/buy"
     source_label: "typingmind.com/buy"
     source_id: typingmind-official
-    verified_at: 2026-06-10
+    verified_at: 2026-06-12
     next_review_at: 2026-09-10
     volatility: medium
     confidence: high
@@ -143,7 +143,7 @@ A chat UI for power users who already have API keys for the major providers. Buy
 
 **Note on BYOK billing:** TypingMind never bills you for API calls. You pay OpenAI, Anthropic, Google, OpenRouter, cloud credits, or whichever configured provider you use based on provider pricing. All personal licenses include a 14-day money-back guarantee and allow free upgrades between tiers anytime.
 
-Prices verified 2026-06-10 via [typingmind.com/buy](https://www.typingmind.com/buy) and [TypingMind Teams pricing](https://custom.typingmind.com/pricing).
+Prices verified 2026-06-12 via [typingmind.com/buy](https://www.typingmind.com/buy) and [TypingMind Teams pricing](https://custom.typingmind.com/pricing).
 
 ## Failure modes
 
@@ -165,7 +165,7 @@ Prices verified 2026-06-10 via [typingmind.com/buy](https://www.typingmind.com/b
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-10 against [typingmind.com/buy](https://www.typingmind.com/buy), [TypingMind Teams pricing](https://custom.typingmind.com/pricing), and [G2 TypingMind alternatives](https://www.g2.com/products/typingmind-typingmind/competitors/alternatives).
+Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-12 against [typingmind.com/buy](https://www.typingmind.com/buy), [TypingMind Teams pricing](https://custom.typingmind.com/pricing), and [G2 TypingMind alternatives](https://www.g2.com/products/typingmind-typingmind/competitors/alternatives).
 
 ## FAQ
 

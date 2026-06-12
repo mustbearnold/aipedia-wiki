@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$39/mo annual + custom"
 status: active
 launched: 2018-01
-last_updated: 2026-06-10
-last_verified: 2026-06-10
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: quarterly
 seo_title: "Uizard Review: Pricing, Autodesigner & Limits (June 2026)"
 meta_description: "Uizard is Miro's AI UI mockup tool. Verified June 2026: Free gets 3 AI generations/mo, Pro is $12/mo billed annually, Business is $39/mo billed annually, and React/CSS handoff is per component."
@@ -34,7 +34,7 @@ facts:
     source: "https://uizard.io/autodesigner/"
     source_label: "Uizard Autodesigner"
     source_id: uizard-autodesigner
-    verified_at: 2026-06-10
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -42,7 +42,7 @@ facts:
     source: "https://uizard.io/pricing/"
     source_label: "Uizard pricing"
     source_id: uizard-pricing
-    verified_at: 2026-06-10
+    verified_at: 2026-06-12
     next_review_at: 2026-09-10
     volatility: high
     confidence: high
@@ -51,7 +51,7 @@ facts:
     source: "https://support.uizard.io/en/articles/6380330-exporting-projects"
     source_label: "Uizard export help"
     source_id: uizard-exporting-projects
-    verified_at: 2026-06-10
+    verified_at: 2026-06-12
     next_review_at: 2026-09-10
     volatility: high
     confidence: high
@@ -125,7 +125,7 @@ price_history:
 
 Uizard is an AI-first UI design tool that generates editable mobile and web mockups from a text prompt, a screenshot, or a hand-drawn sketch. The flagship feature is **Autodesigner 2.0**, which uses a conversational prompt flow to create and iterate sharable prototypes. Screenshot Scanner and Wireframe Scanner handle the reverse direction, converting existing visuals into editable Uizard screens.
 
-Uizard was founded in 2018 out of Copenhagen PhD research into AI-assisted UI generation. Miro acquired the company in May 2024. As of this June 10, 2026 refresh, Uizard still has its own public app, support center, and pricing page at uizard.io, so buyers should treat it as Miro-owned but operationally separate from a standard Miro workspace until their account rep confirms otherwise.
+Uizard was founded in 2018 out of Copenhagen PhD research into AI-assisted UI generation. Miro acquired the company in May 2024. As of this June 12, 2026 refresh, Uizard still has its own public app, support center, and pricing page at uizard.io, so buyers should treat it as Miro-owned but operationally separate from a standard Miro workspace until their account rep confirms otherwise.
 
 ## System Verdict
 
@@ -187,7 +187,7 @@ Pricing via [uizard.io/pricing](https://uizard.io/pricing/):
 
 Pro adds developer handoff with React/CSS, private projects, all templates, and Autodesigner 2.0. Business adds custom brand kit, faster AI generation, unlimited projects, and priority support. Enterprise adds design-system setup, AI data SLA, custom billing, white-glove onboarding, SSO, and 2FA.
 
-Prices verified 2026-06-10 via [Uizard pricing page](https://uizard.io/pricing/). Uizard's support page still uses $19/month as a Pro monthly billing example, but the durable public pricing page emphasizes annual billing for the displayed $12 and $39 rates; verify checkout pricing before buying monthly seats.
+Prices verified 2026-06-12 via [Uizard pricing page](https://uizard.io/pricing/). Uizard's support page still uses $19/month as a Pro monthly billing example, but the durable public pricing page emphasizes annual billing for the displayed $12 and $39 rates; verify checkout pricing before buying monthly seats.
 
 ## Against the alternatives
 
@@ -214,12 +214,12 @@ Prices verified 2026-06-10 via [Uizard pricing page](https://uizard.io/pricing/)
 
 ## Methodology
 
-This page was refreshed on 2026-06-10 by checking Uizard's pricing page, Autodesigner page, and help center export docs, with previous scanner, subscription, and Miro acquisition sources retained for context. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). The most volatile fields are pricing, generation allowances, handoff/export scope, and Enterprise data terms.
+This page was refreshed on 2026-06-12 by checking Uizard's pricing page, Autodesigner page, and help center export docs, with previous scanner, subscription, and Miro acquisition sources retained for context. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). The most volatile fields are pricing, generation allowances, handoff/export scope, and Enterprise data terms.
 
 ## FAQ
 
 **Is Uizard still independent after the Miro acquisition?**
-As of June 10, 2026, Uizard ships at uizard.io with its own public pricing and support docs, while Uizard's own May 2024 post says it joined Miro. Treat it as Miro-owned but verify exact Miro workspace, billing, SSO, and data terms before procurement.
+As of June 12, 2026, Uizard ships at uizard.io with its own public pricing and support docs, while Uizard's own May 2024 post says it joined Miro. Treat it as Miro-owned but verify exact Miro workspace, billing, SSO, and data terms before procurement.
 
 **What is Autodesigner 2.0 versus 1.5?**
 Autodesigner 2.0 (paid tiers only) generates complete multi-screen projects with themes from a text prompt in around 30 seconds. Autodesigner 1.5 (free tier) is the older engine, limited to 3 generations per month with lower fidelity output.
@@ -229,20 +229,20 @@ Pro tier and above expose React and CSS in Handoff Mode for individual component
 
 ## Sources
 
-- [Uizard pricing](https://uizard.io/pricing/) (verified 2026-06-10)
-- [Uizard Autodesigner 2.0](https://uizard.io/autodesigner/) (verified 2026-06-10)
-- [Using Screenshot Scanner](https://support.uizard.io/en/articles/7915206-using-screenshot-scanner) (verified 2026-06-10)
-- [Using Wireframe Scanner](https://support.uizard.io/en/articles/6435370-using-wireframe-scanner) (verified 2026-06-10)
-- [Exporting projects and Handoff Mode](https://support.uizard.io/en/articles/6380330-exporting-projects) (verified 2026-06-10)
-- [Importing screens from Figma, Adobe, or Sketch](https://support.uizard.io/en/articles/6912011-importing-screens-from-figma-adobe-or-sketch) (verified 2026-06-10)
-- [Understanding subscriptions](https://support.uizard.io/en/articles/6249189-understanding-subscriptions) (verified 2026-06-10)
-- [Uizard joins Miro](https://uizard.io/blog/uizard-joins-miro/) (verified 2026-06-10)
+- [Uizard pricing](https://uizard.io/pricing/) (verified 2026-06-12)
+- [Uizard Autodesigner 2.0](https://uizard.io/autodesigner/) (verified 2026-06-12)
+- [Using Screenshot Scanner](https://support.uizard.io/en/articles/7915206-using-screenshot-scanner) (verified 2026-06-12)
+- [Using Wireframe Scanner](https://support.uizard.io/en/articles/6435370-using-wireframe-scanner) (verified 2026-06-12)
+- [Exporting projects and Handoff Mode](https://support.uizard.io/en/articles/6380330-exporting-projects) (verified 2026-06-12)
+- [Importing screens from Figma, Adobe, or Sketch](https://support.uizard.io/en/articles/6912011-importing-screens-from-figma-adobe-or-sketch) (verified 2026-06-12)
+- [Understanding subscriptions](https://support.uizard.io/en/articles/6249189-understanding-subscriptions) (verified 2026-06-12)
+- [Uizard joins Miro](https://uizard.io/blog/uizard-joins-miro/) (verified 2026-06-12)
 
 ## Review History
 
 - 2026-05-10: Refreshed pricing, Autodesigner limits, handoff/export caveats, Miro ownership language, scanner source support, and visible verification dates.
 - 2026-05-13: Reverified all four tiers, AI generation caps, Autodesigner version split, and React/CSS handoff scope against uizard.io/pricing. No material changes.
-- 2026-06-10: Reverified Free, Pro, Business, and Enterprise prices, AI generation caps, Autodesigner 2.0 positioning, and component-level React/CSS handoff scope. No material pricing change.
+- 2026-06-12: Reverified Free, Pro, Business, and Enterprise prices, AI generation caps, Autodesigner 2.0 positioning, and component-level React/CSS handoff scope. No material pricing change.
 
 ## Related
 

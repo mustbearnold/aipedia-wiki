@@ -3,13 +3,13 @@ type: trend
 slug: long-context-standard
 title: "Long Context Becomes Standard, But Effective Context Is The Real Test"
 seo_title: "Long Context Windows In 2026: 1M+ Tokens, RAG Tradeoffs, and Effective Context"
-meta_description: "Updated June 10, 2026: Gemini long-context docs, Claude Opus 4.8's 1M window, Llama 4 Scout's 10M window, and GPT-5.5's large Codex context show long context becoming normal. The buying question is effective context, caching, and governance."
+meta_description: "Updated June 12, 2026: Gemini long-context docs, Claude Opus 4.8's 1M window, Llama 4 Scout's 10M window, and GPT-5.5's large Codex context show long context becoming normal. The buying question is effective context, caching, and governance."
 author: "aipedia.wiki Editorial"
 description: Million-token context is now table stakes for many flagship and specialist models, but buyers should evaluate effective context, retrieval quality, caching economics, and prompt-injection risk instead of chasing raw window size.
 timeframe: Gemini normalized million-token context in 2024-2025. By June 2026, Claude Opus 4.8 advertises a 1M context window, Llama 4 Scout advertises 10M, Gemini docs teach 1M+ long-context workflows, and GPT-5.5 ships large Codex context.
 impact: high
-last_updated: 2026-06-10
-last_verified: 2026-06-10
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 ---
 
@@ -58,11 +58,11 @@ Long context is now standard enough that buyers should stop treating it as magic
 
 ## Sources
 
-- [Gemini API docs: long context](https://ai.google.dev/gemini-api/docs/long-context), verified 2026-06-10.
-- [Gemini API release notes](https://ai.google.dev/gemini-api/docs/changelog), verified 2026-06-10.
-- [Google DeepMind Gemini 3.1 Pro model card](https://deepmind.google/models/model-cards/gemini-3-1-pro/), verified 2026-06-10.
-- [Anthropic Claude Opus](https://www.anthropic.com/claude/opus), verified 2026-06-10.
-- [Anthropic: introducing Claude Opus 4.8](https://www.anthropic.com/news/claude-opus-4-8), verified 2026-06-10.
-- [OpenAI: introducing GPT-5.5](https://openai.com/index/introducing-gpt-5-5/), verified 2026-06-10.
-- [Meta AI: Llama 4 announcement](https://ai.meta.com/blog/llama-4-multimodal-intelligence/), verified 2026-06-10.
-- [Llama 4 model page](https://www.llama.com/models/llama-4/), verified 2026-06-10.
+- [Gemini API docs: long context](https://ai.google.dev/gemini-api/docs/long-context), verified 2026-06-12.
+- [Gemini API release notes](https://ai.google.dev/gemini-api/docs/changelog), verified 2026-06-12.
+- [Google DeepMind Gemini 3.1 Pro model card](https://deepmind.google/models/model-cards/gemini-3-1-pro/), verified 2026-06-12.
+- [Anthropic Claude Opus](https://www.anthropic.com/claude/opus), verified 2026-06-12.
+- [Anthropic: introducing Claude Opus 4.8](https://www.anthropic.com/news/claude-opus-4-8), verified 2026-06-12.
+- [OpenAI: introducing GPT-5.5](https://openai.com/index/introducing-gpt-5-5/), verified 2026-06-12.
+- [Meta AI: Llama 4 announcement](https://ai.meta.com/blog/llama-4-multimodal-intelligence/), verified 2026-06-12.
+- [Llama 4 model page](https://www.llama.com/models/llama-4/), verified 2026-06-12.

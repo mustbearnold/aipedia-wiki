@@ -5,10 +5,10 @@ title: AI Coding Assistants
 description: Current AI coding assistants, AI-native IDEs, terminal coding agents, PR agents, and app builders for developers, founders, teams, and non-developers.
 tool_count: 30
 seo_title: "Best AI Coding Tools & Copilot Alternatives (June 2026)"
-meta_description: "Updated June 10, 2026: compare Cursor, Claude Code, GitHub Copilot, Continue, Devin, Val Town, Windsurf/Devin Desktop, Codex, v0, Rork, Uizard handoff caveats, Goose, GLM, MiniMax M3, Yi-Coder legacy context, Llama, Modal, Whisper, Glean, Replit Agent, Aider, Cline, CodeRabbit, Cody, Amazon Q Developer, and Augment by workflow, pricing, autonomy, app-building, model/API integration, and team fit."
+meta_description: "Updated June 12, 2026: compare Cursor, Claude Code, GitHub Copilot, Continue, Devin, Val Town, Windsurf/Devin Desktop, Codex, v0, Rork, Uizard handoff caveats, Goose, GLM, MiniMax M3, Yi-Coder legacy context, Llama, Modal, Whisper, Glean, Replit Agent, Aider, Cline, CodeRabbit, Cody, Amazon Q Developer, and Augment by workflow, pricing, autonomy, app-building, model/API integration, and team fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-10
-last_verified: 2026-06-10
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -102,9 +102,9 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 
 **Best terminal agent: Claude Code.** Choose it when a senior developer wants to delegate real repo work from the command line, especially after Opus 4.8 and dynamic workflows widened its lane for codebase-scale work.
 
-**Best Copilot alternative guide:** [GitHub Copilot alternatives](/guides/github-copilot-alternatives/) was refreshed June 7, 2026 around Cursor, Claude Code, Codex, Windsurf/Devin Desktop, Gemini Code Assist, and Copilot AI Credits so teams can compare AI-native IDEs, terminal agents, OpenAI-native agents, Google-native workflows, and Copilot's usage-based billing risk before switching.
+**Best Copilot alternative guide:** [GitHub Copilot alternatives](/guides/github-copilot-alternatives/) was refreshed June 12, 2026 around Cursor, Claude Code, Codex, Windsurf/Devin Desktop, Gemini Code Assist, and Copilot AI Credits so teams can compare AI-native IDEs, terminal agents, OpenAI-native agents, Google-native workflows, and Copilot's usage-based billing risk before switching.
 
-**Best Cursor alternative guide:** [Cursor alternatives](/guides/cursor-alternatives/) was refreshed June 7, 2026 around GitHub Copilot AI Credits, Claude Code Pro/Max usage, Windsurf/Devin Desktop, Aider, Replit Agent, Devin, Codex, and Cursor cost/review discipline.
+**Best Cursor alternative guide:** [Cursor alternatives](/guides/cursor-alternatives/) was refreshed June 12, 2026 around GitHub Copilot AI Credits, Claude Code Pro/Max usage, Windsurf/Devin Desktop, Aider, Replit Agent, Devin, Codex, and Cursor cost/review discipline.
 
 **Best full buyer guide:** [Best AI coding assistant](/guides/best-ai-coding-assistant/) is now the June 6 verified category money page for Cursor pricing, Claude Code and Agent SDK budgeting, GitHub Copilot AI Credits, Codex agent workflows, Windsurf/Devin Desktop lineage, and Devin delegation risk.
 
@@ -129,11 +129,11 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 - [Best AI for code review](/guides/best-ai-for-code-review/) is the June 6 verified adjacent guide for dedicated PR review, enterprise code-quality governance, GitHub-native review billing, Cursor Bugbot usage-based review, Claude Code checkpoints, and Codex patch review.
 - [Best AI for unit tests](/guides/best-ai-for-unit-tests/) is the June 6 verified test-generation guide for IDE loops, GitHub-native assistants, Claude-backed edge-case planning, terminal agents, local test commands, and AI-credit-aware usage controls.
 - [Best AI for API documentation](/guides/best-ai-for-api-documentation/) is the June 6 verified docs/agent buyer guide: Mintlify for hosted docs, Stainless for SDK/docs/MCP generation, Speakeasy for SDK/Terraform/MCP automation, ReadMe for developer portals, and Cursor/ChatGPT/Claude/Gemini only as support tools.
-- [Best open source AI tools](/guides/best-open-source-ai-tools/) was refreshed June 6, 2026 around Ollama, LM Studio, Open WebUI, Llama, Mistral, DeepSeek, FLUX, Whisper, and Hugging Face so developer buyers can compare local/self-hosted control, model licensing, hardware fit, and hosted-agent costs before committing.
+- [Best open source AI tools](/guides/best-open-source-ai-tools/) was refreshed June 12, 2026 around Ollama, LM Studio, Open WebUI, Llama, Mistral, DeepSeek, FLUX, Whisper, and Hugging Face so developer buyers can compare local/self-hosted control, model licensing, hardware fit, and hosted-agent costs before committing.
 - [DeepSeek alternatives](/guides/deepseek-alternatives/) is the June 7 verified switching guide for ChatGPT, Claude, Cursor, Gemini, Mistral, Perplexity, Grok, and the open-source AI guide because DeepSeek switching intent often overlaps with coding, model cost, V4-Flash/V4-Pro API pricing, trust review, and local/open-model control.
 - [Best AI for SQL queries](/guides/best-ai-for-sql-queries/) is the June 6 verified SQL workflow guide for ChatGPT, Cursor, Claude, Hex, and Julius, with the buyer split tightened around learning/drafting, codebase-aware database work, schema reasoning, governed Hex notebooks/Threads/Semantic Models, Julius credits/connectors, and mandatory query verification before shipping business decisions.
 - [Best AI Tools Under $20/month](/guides/best-ai-tools-under-20-month/) is the June 6 verified first-paid-plan guide that keeps GitHub Copilot Pro as the cheaper coding-specialist pick while warning that AI Credits, Actions-minutes review billing, Cursor heavy-agent use, and multi-tool subscription stacking can erase the apparent budget advantage.
-- [GitHub Copilot alternatives](/guides/github-copilot-alternatives/) is the June 7 verified switching guide for Cursor, Claude Code, Codex, Windsurf/Devin Desktop, Gemini Code Assist, and Copilot AI Credits after the June 1, 2026 Copilot billing migration and June 2 Copilot SDK GA.
+- [GitHub Copilot alternatives](/guides/github-copilot-alternatives/) is the June 7 verified switching guide for Cursor, Claude Code, Codex, Windsurf/Devin Desktop, Gemini Code Assist, and Copilot AI Credits after the June 12, 2026 Copilot billing migration and June 2 Copilot SDK GA.
 - [Cursor alternatives](/guides/cursor-alternatives/) should stay synchronized with Cursor pricing, Copilot AI Credits, Claude Code Pro/Max usage, Windsurf/Devin Desktop packaging, Devin pricing, Replit Agent credits, Codex token costs, and Aider BYOK setup because coding-agent cost and packaging can move faster than generic IDE rankings.
 - A new `Claude Code vs Codex` comparison would capture terminal-agent and OpenAI/Anthropic agent-intent searches.
 - [Cursor vs Windsurf](/compare/cursor-vs-windsurf/) should stay monitored because Windsurf now routes through Devin Desktop, not a clean standalone pricing page.
@@ -153,82 +153,82 @@ Do not publish stale model-version claims. Coding tools route models and change 
 
 ## Sources
 
-- [GitHub Copilot plans](https://github.com/features/copilot/plans) (verified 2026-06-07)
-- [GitHub Copilot billing docs](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals) (verified 2026-06-05)
-- [GitHub Copilot organization billing docs](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-organizations-and-enterprises) (verified 2026-06-05)
-- [GitHub Copilot billing and plans changelog](https://github.blog/changelog/2026-06-01-updates-to-github-copilot-billing-and-plans) (verified 2026-06-07)
-- [GitHub Copilot SDK GA](https://github.blog/changelog/2026-06-02-copilot-sdk-is-now-generally-available/) (verified 2026-06-05)
-- [Cursor pricing](https://cursor.com/pricing) (verified 2026-06-07)
-- [Cursor Teams pricing update](https://cursor.com/blog/teams-pricing-june-2026) (verified 2026-06-06)
-- [Cursor Composer 2.5 changelog](https://cursor.com/changelog/composer-2-5) (verified 2026-06-05)
+- [GitHub Copilot plans](https://github.com/features/copilot/plans) (verified 2026-06-12)
+- [GitHub Copilot billing docs](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals) (verified 2026-06-12)
+- [GitHub Copilot organization billing docs](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-organizations-and-enterprises) (verified 2026-06-12)
+- [GitHub Copilot billing and plans changelog](https://github.blog/changelog/2026-06-01-updates-to-github-copilot-billing-and-plans) (verified 2026-06-12)
+- [GitHub Copilot SDK GA](https://github.blog/changelog/2026-06-02-copilot-sdk-is-now-generally-available/) (verified 2026-06-12)
+- [Cursor pricing](https://cursor.com/pricing) (verified 2026-06-12)
+- [Cursor Teams pricing update](https://cursor.com/blog/teams-pricing-june-2026) (verified 2026-06-12)
+- [Cursor Composer 2.5 changelog](https://cursor.com/changelog/composer-2-5) (verified 2026-06-12)
 - [Cursor Gartner enterprise-coding-agent recognition](https://cursor.com/blog/cursor-leads-gartner-mq-2026) (verified 2026-05-26)
-- [Cursor changelog](https://cursor.com/changelog) (verified 2026-06-05)
-- [Claude Code docs](https://code.claude.com/docs) (verified 2026-06-04)
-- [Claude Code cost management](https://code.claude.com/docs/en/costs) (verified 2026-06-04)
-- [Claude Opus 4.8 and dynamic workflows](https://www.anthropic.com/news/claude-opus-4-8) (verified 2026-06-04)
-- [Claude dynamic workflows in Claude Code](https://claude.com/blog/introducing-dynamic-workflows-in-claude-code) (verified 2026-06-02)
-- [Claude Max plan](https://support.claude.com/en/articles/11049741-what-is-the-max-plan) (verified 2026-06-04)
-- [Windsurf pricing redirect to Devin pricing](https://windsurf.com/pricing) (verified 2026-06-07)
-- [Devin Desktop model docs](https://docs.devin.ai/desktop/models) (verified 2026-06-05)
-- [Aider docs](https://aider.chat/docs/) (verified 2026-06-02)
-- [Aider GitHub repository](https://github.com/Aider-AI/aider) (verified 2026-06-02)
-- [Amazon Q Developer pricing](https://aws.amazon.com/q/developer/pricing/) (verified 2026-06-01)
-- [Augment Code pricing](https://www.augmentcode.com/pricing) (verified 2026-06-01)
-- [Cline homepage](https://cline.bot/) (verified 2026-06-04)
-- [CodeRabbit pricing](https://www.coderabbit.ai/pricing) (verified 2026-06-01)
-- [Continue pricing](https://www.continue.dev/pricing) (verified 2026-06-04)
-- [Continue docs](https://docs.continue.dev/) (verified 2026-06-04)
-- [Continue GitHub repository](https://github.com/continuedev/continue) (verified 2026-06-04)
-- [Devin pricing](https://devin.ai/pricing) (verified 2026-06-07)
-- [Sourcegraph pricing](https://sourcegraph.com/pricing) (verified 2026-06-04)
-- [Cognition Windsurf acquisition announcement](https://cognition.ai/blog/windsurf) (verified 2026-06-05)
-- [Factory pricing](https://docs.factory.ai/pricing) (verified 2026-06-01)
-- [JetBrains AI pricing](https://www.jetbrains.com/help/ai-assistant/licensing-and-subscriptions.html) (verified 2026-06-01)
-- [Kiro pricing](https://kiro.dev/pricing) (verified 2026-06-01)
-- [Mastra pricing](https://mastra.ai/pricing) (verified 2026-06-01)
-- [OpenHands pricing](https://openhands.dev/pricing) (verified 2026-06-01)
-- [Pieces pricing](https://pieces.app/pricing) (verified 2026-06-01)
-- [Qodo pricing](https://www.qodo.ai/pricing/) (verified 2026-06-01)
-- [Replit pricing](https://replit.com/pricing) (verified 2026-06-01)
-- [Same pricing docs](https://docs.same.new/usage/pricing) (verified 2026-06-01)
-- [Base44 pricing](https://base44.com/pricing) (verified 2026-06-01)
-- [Bolt.new pricing](https://bolt.new/pricing) (verified 2026-06-01)
-- [Browserbase pricing](https://www.browserbase.com/pricing) (verified 2026-06-01)
-- [Modal pricing](https://modal.com/pricing) (verified 2026-06-08)
-- [OpenAI Whisper GitHub](https://github.com/openai/whisper) (verified 2026-06-10)
-- [OpenAI speech-to-text docs](https://developers.openai.com/api/docs/guides/speech-to-text) (verified 2026-06-10)
-- [OpenAI API pricing](https://developers.openai.com/api/docs/pricing) (verified 2026-06-10)
-- [OpenAI public API pricing](https://openai.com/api/pricing/) (verified 2026-06-10)
-- [Supermaven pricing](https://supermaven.com/pricing) (verified 2026-06-01)
-- [Tabnine pricing](https://www.tabnine.com/pricing) (verified 2026-06-05)
-- [Val Town pricing](https://www.val.town/pricing) (verified 2026-06-05)
-- [Zed pricing](https://zed.dev/pricing) (verified 2026-06-01)
-- [Trae plans and billing](https://docs.trae.ai/ide/new-plans-and-billing) (verified 2026-06-04)
-- [Gemini Code Assist](https://cloud.google.com/products/gemini/code-assist) (verified 2026-06-05)
-- [Google AI subscriptions](https://gemini.google/subscriptions/) (verified 2026-06-05)
-- [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing) (verified 2026-06-05)
-- [Hex pricing](https://hex.tech/pricing/) (verified 2026-06-06)
-- [Hex AI docs](https://learn.hex.tech/docs/getting-started/ai-overview) (verified 2026-06-06)
-- [Hex agent credits usage blog](https://hex.tech/blog/agent-credits-usage/) (verified 2026-06-06)
-- [Julius AI pricing](https://julius.ai/pricing) (verified 2026-06-06)
-- [Julius credit billing update](https://julius.ai/content/billing-update-messages-to-usage-credits) (verified 2026-06-06)
-- [Julius data connector overview](https://julius.ai/docs/data-connectors/overview) (verified 2026-06-06)
-- [Goose GitHub repository](https://github.com/aaif-goose/goose) (verified 2026-06-02)
-- [Goose documentation](https://block.github.io/goose/) (verified 2026-06-02)
-- [Z.AI GLM-5.1 docs](https://docs.z.ai/guides/llm/glm-5.1) (verified 2026-06-02)
-- [Z.AI pricing](https://docs.z.ai/guides/overview/pricing) (verified 2026-06-02)
-- [GLM-5.1 on Hugging Face](https://huggingface.co/zai-org/GLM-5.1) (verified 2026-06-02)
-- [MiniMax M3 model page](https://www.minimax.io/models/text/m3) (verified 2026-06-08)
-- [MiniMax pay-as-you-go pricing](https://platform.minimax.io/docs/guides/pricing-paygo) (verified 2026-06-08)
-- [01.AI Yi models](https://www.01.ai/yi-models) (verified 2026-06-10)
-- [Yi GitHub repository](https://github.com/01-ai/Yi) (verified 2026-06-10)
-- [Llama official site](https://ai.meta.com/llama/) (verified 2026-06-08)
-- [Llama 4 Community License](https://www.llama.com/llama4/license/) (verified 2026-06-08)
-- [Together AI pricing](https://www.together.ai/pricing) (verified 2026-06-09)
-- [Groq Llama 4 Scout model card](https://console.groq.com/docs/model/llama-4-scout-17b-16e-instruct) (verified 2026-06-08)
-- [Glean developer platform](https://developers.glean.com/) (verified 2026-06-02)
-- [v0 pricing](https://v0.app/pricing) (verified 2026-06-05)
-- [v0 documentation](https://v0.app/docs) (verified 2026-06-05)
-- [Uizard exporting projects and Handoff Mode](https://support.uizard.io/en/articles/6380330-exporting-projects) (verified 2026-06-10)
-- [Rork subscription docs](https://docs.rork.com/introduction/subscriptions) (verified 2026-06-09)
-- [Rork technical FAQ](https://docs.rork.com/faq/technical) (verified 2026-06-09)
+- [Cursor changelog](https://cursor.com/changelog) (verified 2026-06-12)
+- [Claude Code docs](https://code.claude.com/docs) (verified 2026-06-12)
+- [Claude Code cost management](https://code.claude.com/docs/en/costs) (verified 2026-06-12)
+- [Claude Opus 4.8 and dynamic workflows](https://www.anthropic.com/news/claude-opus-4-8) (verified 2026-06-12)
+- [Claude dynamic workflows in Claude Code](https://claude.com/blog/introducing-dynamic-workflows-in-claude-code) (verified 2026-06-12)
+- [Claude Max plan](https://support.claude.com/en/articles/11049741-what-is-the-max-plan) (verified 2026-06-12)
+- [Windsurf pricing redirect to Devin pricing](https://windsurf.com/pricing) (verified 2026-06-12)
+- [Devin Desktop model docs](https://docs.devin.ai/desktop/models) (verified 2026-06-12)
+- [Aider docs](https://aider.chat/docs/) (verified 2026-06-12)
+- [Aider GitHub repository](https://github.com/Aider-AI/aider) (verified 2026-06-12)
+- [Amazon Q Developer pricing](https://aws.amazon.com/q/developer/pricing/) (verified 2026-06-12)
+- [Augment Code pricing](https://www.augmentcode.com/pricing) (verified 2026-06-12)
+- [Cline homepage](https://cline.bot/) (verified 2026-06-12)
+- [CodeRabbit pricing](https://www.coderabbit.ai/pricing) (verified 2026-06-12)
+- [Continue pricing](https://www.continue.dev/pricing) (verified 2026-06-12)
+- [Continue docs](https://docs.continue.dev/) (verified 2026-06-12)
+- [Continue GitHub repository](https://github.com/continuedev/continue) (verified 2026-06-12)
+- [Devin pricing](https://devin.ai/pricing) (verified 2026-06-12)
+- [Sourcegraph pricing](https://sourcegraph.com/pricing) (verified 2026-06-12)
+- [Cognition Windsurf acquisition announcement](https://cognition.ai/blog/windsurf) (verified 2026-06-12)
+- [Factory pricing](https://docs.factory.ai/pricing) (verified 2026-06-12)
+- [JetBrains AI pricing](https://www.jetbrains.com/help/ai-assistant/licensing-and-subscriptions.html) (verified 2026-06-12)
+- [Kiro pricing](https://kiro.dev/pricing) (verified 2026-06-12)
+- [Mastra pricing](https://mastra.ai/pricing) (verified 2026-06-12)
+- [OpenHands pricing](https://openhands.dev/pricing) (verified 2026-06-12)
+- [Pieces pricing](https://pieces.app/pricing) (verified 2026-06-12)
+- [Qodo pricing](https://www.qodo.ai/pricing/) (verified 2026-06-12)
+- [Replit pricing](https://replit.com/pricing) (verified 2026-06-12)
+- [Same pricing docs](https://docs.same.new/usage/pricing) (verified 2026-06-12)
+- [Base44 pricing](https://base44.com/pricing) (verified 2026-06-12)
+- [Bolt.new pricing](https://bolt.new/pricing) (verified 2026-06-12)
+- [Browserbase pricing](https://www.browserbase.com/pricing) (verified 2026-06-12)
+- [Modal pricing](https://modal.com/pricing) (verified 2026-06-12)
+- [OpenAI Whisper GitHub](https://github.com/openai/whisper) (verified 2026-06-12)
+- [OpenAI speech-to-text docs](https://developers.openai.com/api/docs/guides/speech-to-text) (verified 2026-06-12)
+- [OpenAI API pricing](https://developers.openai.com/api/docs/pricing) (verified 2026-06-12)
+- [OpenAI public API pricing](https://openai.com/api/pricing/) (verified 2026-06-12)
+- [Supermaven pricing](https://supermaven.com/pricing) (verified 2026-06-12)
+- [Tabnine pricing](https://www.tabnine.com/pricing) (verified 2026-06-12)
+- [Val Town pricing](https://www.val.town/pricing) (verified 2026-06-12)
+- [Zed pricing](https://zed.dev/pricing) (verified 2026-06-12)
+- [Trae plans and billing](https://docs.trae.ai/ide/new-plans-and-billing) (verified 2026-06-12)
+- [Gemini Code Assist](https://cloud.google.com/products/gemini/code-assist) (verified 2026-06-12)
+- [Google AI subscriptions](https://gemini.google/subscriptions/) (verified 2026-06-12)
+- [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing) (verified 2026-06-12)
+- [Hex pricing](https://hex.tech/pricing/) (verified 2026-06-12)
+- [Hex AI docs](https://learn.hex.tech/docs/getting-started/ai-overview) (verified 2026-06-12)
+- [Hex agent credits usage blog](https://hex.tech/blog/agent-credits-usage/) (verified 2026-06-12)
+- [Julius AI pricing](https://julius.ai/pricing) (verified 2026-06-12)
+- [Julius credit billing update](https://julius.ai/content/billing-update-messages-to-usage-credits) (verified 2026-06-12)
+- [Julius data connector overview](https://julius.ai/docs/data-connectors/overview) (verified 2026-06-12)
+- [Goose GitHub repository](https://github.com/aaif-goose/goose) (verified 2026-06-12)
+- [Goose documentation](https://block.github.io/goose/) (verified 2026-06-12)
+- [Z.AI GLM-5.1 docs](https://docs.z.ai/guides/llm/glm-5.1) (verified 2026-06-12)
+- [Z.AI pricing](https://docs.z.ai/guides/overview/pricing) (verified 2026-06-12)
+- [GLM-5.1 on Hugging Face](https://huggingface.co/zai-org/GLM-5.1) (verified 2026-06-12)
+- [MiniMax M3 model page](https://www.minimax.io/models/text/m3) (verified 2026-06-12)
+- [MiniMax pay-as-you-go pricing](https://platform.minimax.io/docs/guides/pricing-paygo) (verified 2026-06-12)
+- [01.AI Yi models](https://www.01.ai/yi-models) (verified 2026-06-12)
+- [Yi GitHub repository](https://github.com/01-ai/Yi) (verified 2026-06-12)
+- [Llama official site](https://ai.meta.com/llama/) (verified 2026-06-12)
+- [Llama 4 Community License](https://www.llama.com/llama4/license/) (verified 2026-06-12)
+- [Together AI pricing](https://www.together.ai/pricing) (verified 2026-06-12)
+- [Groq Llama 4 Scout model card](https://console.groq.com/docs/model/llama-4-scout-17b-16e-instruct) (verified 2026-06-12)
+- [Glean developer platform](https://developers.glean.com/) (verified 2026-06-12)
+- [v0 pricing](https://v0.app/pricing) (verified 2026-06-12)
+- [v0 documentation](https://v0.app/docs) (verified 2026-06-12)
+- [Uizard exporting projects and Handoff Mode](https://support.uizard.io/en/articles/6380330-exporting-projects) (verified 2026-06-12)
+- [Rork subscription docs](https://docs.rork.com/introduction/subscriptions) (verified 2026-06-12)
+- [Rork technical FAQ](https://docs.rork.com/faq/technical) (verified 2026-06-12)

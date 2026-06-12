@@ -5,10 +5,10 @@ title: AI Search & Research Tools
 description: AI answer engines, private search, research notebooks, semantic search APIs, and source-backed research assistants.
 tool_count: 8
 seo_title: "Best AI Search and Research Tools (June 2026)"
-meta_description: "Updated June 10, 2026: compare Perplexity, Kagi, You.com APIs, Comet, ChatGPT Search, Google AI Mode, NotebookLM, Exa, Weaviate/Engram, Morphic, and Phind migration paths by citations, privacy, APIs, and buyer fit."
+meta_description: "Updated June 12, 2026: compare Perplexity, Kagi, You.com APIs, Comet, ChatGPT Search, Google AI Mode, NotebookLM, Exa, Weaviate/Engram, Morphic, and Phind migration paths by citations, privacy, APIs, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-10
-last_verified: 2026-06-10
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -133,40 +133,40 @@ Do not leave this category stale. Google AI Mode, Perplexity Pro/Max/Enterprise,
 
 ## Sources
 
-- [Perplexity Comet](https://www.perplexity.ai/comet) (verified 2026-06-02)
-- [Dia website](https://www.diabrowser.com) (verified 2026-06-02)
-- [Dia security](https://www.diabrowser.com/security) (verified 2026-06-02)
-- [Perplexity Pro](https://www.perplexity.ai/pro) (verified 2026-06-06)
-- [Perplexity Max help](https://www.perplexity.ai/help-center/en/articles/11680686-perplexity-max) (verified 2026-06-06)
-- [Perplexity Enterprise](https://www.perplexity.ai/enterprise) (verified 2026-06-06)
-- [Perplexity API pricing](https://docs.perplexity.ai/docs/getting-started/pricing) (verified 2026-06-07)
-- [Perplexity Agent API tools](https://docs.perplexity.ai/docs/agent-api/tools) (verified 2026-06-06)
-- [Perplexity Sonar media docs](https://docs.perplexity.ai/docs/sonar/media) (verified 2026-06-06)
-- [Perplexity Enterprise pricing](https://www.perplexity.ai/enterprise/pricing) (verified 2026-06-06)
-- [ChatGPT Search Help](https://help.openai.com/en/articles/9237897-chatgpt-search) (verified 2026-06-07)
-- [Google AI Mode and AI Overviews updates](https://blog.google/products-and-platforms/products/search/explore-web-generative-ai-search/) (verified 2026-06-08)
-- [Google AI Plans](https://one.google.com/about/google-ai-plans/) (verified 2026-06-07)
-- [NotebookLM upgrade docs](https://support.google.com/notebooklm/answer/16213268) (verified 2026-06-07)
-- [Kagi pricing](https://kagi.com/pricing) (verified 2026-06-06)
-- [Kagi Assistant docs](https://help.kagi.com/kagi/ai/assistant.html) (verified 2026-06-06)
-- [Kagi Ultimate plan docs](https://help.kagi.com/kagi/plans/ultimate-plan.html) (verified 2026-06-07)
-- [Kagi Team plan docs](https://help.kagi.com/kagi/plans/team-plan.html) (verified 2026-06-07)
-- [Kagi Research Assistants](https://help.kagi.com/kagi/ai/kagi-research.html) (verified 2026-06-06)
-- [Exa pricing update](https://exa.ai/docs/changelog/pricing-update) (verified 2026-06-07)
-- [Exa API pricing](https://exa.ai/pricing/api) (verified 2026-06-05)
-- [Weaviate pricing](https://weaviate.io/pricing) (verified 2026-06-10)
-- [Weaviate Engram GA announcement](https://weaviate.io/blog/engram-generally-available) (verified 2026-06-10)
-- [Genspark membership benefits](https://www.genspark.ai/membership-benefits-lp) (verified 2026-06-02)
-- [Glean official site](https://www.glean.com/) (verified 2026-06-02)
-- [Glean developer platform](https://developers.glean.com/) (verified 2026-06-02)
-- [Morphic official site](https://morphic.sh) (verified 2026-06-08)
-- [miurla/morphic GitHub repository](https://github.com/miurla/morphic) (verified 2026-06-08)
-- [Morphic v1.4.0 release notes](https://github.com/miurla/morphic/releases/tag/v1.4.0) (verified 2026-06-08)
-- [You.com pricing](https://you.com/pricing) (verified 2026-06-06)
-- [You.com API docs](https://you.com/docs/get-started/quickstart) (verified 2026-06-06)
-- [Grok by xAI](https://x.ai/grok) (verified 2026-06-02)
-- [xAI pricing](https://x.ai/pricing) (verified 2026-06-02)
-- [xAI model docs](https://docs.x.ai/developers/models) (verified 2026-06-02)
-- [X Premium+ pricing](https://help.x.com/en/premium-plus-price-update) (verified 2026-06-08)
+- [Perplexity Comet](https://www.perplexity.ai/comet) (verified 2026-06-12)
+- [Dia website](https://www.diabrowser.com) (verified 2026-06-12)
+- [Dia security](https://www.diabrowser.com/security) (verified 2026-06-12)
+- [Perplexity Pro](https://www.perplexity.ai/pro) (verified 2026-06-12)
+- [Perplexity Max help](https://www.perplexity.ai/help-center/en/articles/11680686-perplexity-max) (verified 2026-06-12)
+- [Perplexity Enterprise](https://www.perplexity.ai/enterprise) (verified 2026-06-12)
+- [Perplexity API pricing](https://docs.perplexity.ai/docs/getting-started/pricing) (verified 2026-06-12)
+- [Perplexity Agent API tools](https://docs.perplexity.ai/docs/agent-api/tools) (verified 2026-06-12)
+- [Perplexity Sonar media docs](https://docs.perplexity.ai/docs/sonar/media) (verified 2026-06-12)
+- [Perplexity Enterprise pricing](https://www.perplexity.ai/enterprise/pricing) (verified 2026-06-12)
+- [ChatGPT Search Help](https://help.openai.com/en/articles/9237897-chatgpt-search) (verified 2026-06-12)
+- [Google AI Mode and AI Overviews updates](https://blog.google/products-and-platforms/products/search/explore-web-generative-ai-search/) (verified 2026-06-12)
+- [Google AI Plans](https://one.google.com/about/google-ai-plans/) (verified 2026-06-12)
+- [NotebookLM upgrade docs](https://support.google.com/notebooklm/answer/16213268) (verified 2026-06-12)
+- [Kagi pricing](https://kagi.com/pricing) (verified 2026-06-12)
+- [Kagi Assistant docs](https://help.kagi.com/kagi/ai/assistant.html) (verified 2026-06-12)
+- [Kagi Ultimate plan docs](https://help.kagi.com/kagi/plans/ultimate-plan.html) (verified 2026-06-12)
+- [Kagi Team plan docs](https://help.kagi.com/kagi/plans/team-plan.html) (verified 2026-06-12)
+- [Kagi Research Assistants](https://help.kagi.com/kagi/ai/kagi-research.html) (verified 2026-06-12)
+- [Exa pricing update](https://exa.ai/docs/changelog/pricing-update) (verified 2026-06-12)
+- [Exa API pricing](https://exa.ai/pricing/api) (verified 2026-06-12)
+- [Weaviate pricing](https://weaviate.io/pricing) (verified 2026-06-12)
+- [Weaviate Engram GA announcement](https://weaviate.io/blog/engram-generally-available) (verified 2026-06-12)
+- [Genspark membership benefits](https://www.genspark.ai/membership-benefits-lp) (verified 2026-06-12)
+- [Glean official site](https://www.glean.com/) (verified 2026-06-12)
+- [Glean developer platform](https://developers.glean.com/) (verified 2026-06-12)
+- [Morphic official site](https://morphic.sh) (verified 2026-06-12)
+- [miurla/morphic GitHub repository](https://github.com/miurla/morphic) (verified 2026-06-12)
+- [Morphic v1.4.0 release notes](https://github.com/miurla/morphic/releases/tag/v1.4.0) (verified 2026-06-12)
+- [You.com pricing](https://you.com/pricing) (verified 2026-06-12)
+- [You.com API docs](https://you.com/docs/get-started/quickstart) (verified 2026-06-12)
+- [Grok by xAI](https://x.ai/grok) (verified 2026-06-12)
+- [xAI pricing](https://x.ai/pricing) (verified 2026-06-12)
+- [xAI model docs](https://docs.x.ai/developers/models) (verified 2026-06-12)
+- [X Premium+ pricing](https://help.x.com/en/premium-plus-price-update) (verified 2026-06-12)
 - [Bing AI-guided image search](https://blogs.bing.com/search/May-2026/A-Smarter-Way-to-Explore-Images-Has-Come-to-Bing) (verified 2026-05-26)
-- [Phind shutdown retrospective](https://www.toolsforhumans.ai/ai-tools/phind) (verified 2026-06-08)
+- [Phind shutdown retrospective](https://www.toolsforhumans.ai/ai-tools/phind) (verified 2026-06-12)

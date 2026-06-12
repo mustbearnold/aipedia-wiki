@@ -11,8 +11,8 @@ pricing_model: enterprise
 price_range: Custom enterprise pricing
 status: active
 launched: 2023
-last_updated: 2026-06-10
-last_verified: 2026-06-10
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: "https://www.ibm.com/docs/en/watsonx/watson-orchestrate/base?topic=releases-release-notes-2025"
     source_label: "IBM watsonx Orchestrate release notes"
     source_id: ibm-watsonx-orchestrate-release-notes
-    verified_at: 2026-06-10
+    verified_at: 2026-06-12
     volatility: medium
     confidence: medium
     next_review_at: 2026-09-10
@@ -40,7 +40,7 @@ facts:
     source: "https://www.ibm.com/docs/en/watsonx/watson-orchestrate/base?topic=releases-release-notes-2025"
     source_label: "IBM watsonx Orchestrate release notes"
     source_id: ibm-watsonx-orchestrate-release-notes
-    verified_at: 2026-06-10
+    verified_at: 2026-06-12
     volatility: high
     confidence: medium
     next_review_at: 2026-09-10
@@ -49,7 +49,7 @@ facts:
     source: "https://www.ibm.com/docs/en/watsonx/watson-orchestrate/base?topic=releases-release-notes-2025"
     source_label: "IBM watsonx Orchestrate release notes"
     source_id: ibm-watsonx-orchestrate-release-notes
-    verified_at: 2026-06-10
+    verified_at: 2026-06-12
     volatility: high
     confidence: medium
     next_review_at: 2026-09-10
@@ -58,7 +58,7 @@ facts:
     source: "https://www.ibm.com/docs/en/watsonx/watson-orchestrate/base?topic=releases-release-notes-2025"
     source_label: "IBM watsonx Orchestrate release notes"
     source_id: ibm-watsonx-orchestrate-release-notes
-    verified_at: 2026-06-10
+    verified_at: 2026-06-12
     volatility: high
     confidence: medium
     next_review_at: 2026-09-10
@@ -139,12 +139,12 @@ A good pilot should enroll a narrow set of agents with clear policies, failure c
 
 ## Methodology
 
-Last verified 2026-06-10 against [IBM watsonx Orchestrate release notes](https://www.ibm.com/docs/en/watsonx/watson-orchestrate/base?topic=releases-release-notes-2025), the [IBM Think 2026 announcement](https://newsroom.ibm.com/2026-05-05-think-2026-ibm-delivers-the-blueprint-for-the-ai-operating-model-as-the-ai-divide-widens), the [IBM Orchestrate announcement page](https://www.ibm.com/new/announcements/manage-all-your-ai-agents-in-one-place-with-watsonx-orchestrate), and the [IBM watsonx portfolio](https://www.ibm.com/watsonx). Scoring weighs governance value, IBM enterprise reach, monitoring/audit/partner-agent depth, opacity of preview-vs-GA scope, and pricing uncertainty without self-serve disclosure.
+Last verified 2026-06-12 against [IBM watsonx Orchestrate release notes](https://www.ibm.com/docs/en/watsonx/watson-orchestrate/base?topic=releases-release-notes-2025), the [IBM Think 2026 announcement](https://newsroom.ibm.com/2026-05-05-think-2026-ibm-delivers-the-blueprint-for-the-ai-operating-model-as-the-ai-divide-widens), the [IBM Orchestrate announcement page](https://www.ibm.com/new/announcements/manage-all-your-ai-agents-in-one-place-with-watsonx-orchestrate), and the [IBM watsonx portfolio](https://www.ibm.com/watsonx). Scoring weighs governance value, IBM enterprise reach, monitoring/audit/partner-agent depth, opacity of preview-vs-GA scope, and pricing uncertainty without self-serve disclosure.
 
 ## Sources
 
-- [IBM watsonx Orchestrate release notes](https://www.ibm.com/docs/en/watsonx/watson-orchestrate/base?topic=releases-release-notes-2025) (verified 2026-06-10)
-- [IBM Think 2026 announcement](https://newsroom.ibm.com/2026-05-05-think-2026-ibm-delivers-the-blueprint-for-the-ai-operating-model-as-the-ai-divide-widens) (verified 2026-06-10)
-- [IBM Orchestrate announcement](https://www.ibm.com/new/announcements/manage-all-your-ai-agents-in-one-place-with-watsonx-orchestrate) (verified 2026-06-10)
-- [IBM watsonx portfolio](https://www.ibm.com/watsonx) (verified 2026-06-10)
+- [IBM watsonx Orchestrate release notes](https://www.ibm.com/docs/en/watsonx/watson-orchestrate/base?topic=releases-release-notes-2025) (verified 2026-06-12)
+- [IBM Think 2026 announcement](https://newsroom.ibm.com/2026-05-05-think-2026-ibm-delivers-the-blueprint-for-the-ai-operating-model-as-the-ai-divide-widens) (verified 2026-06-12)
+- [IBM Orchestrate announcement](https://www.ibm.com/new/announcements/manage-all-your-ai-agents-in-one-place-with-watsonx-orchestrate) (verified 2026-06-12)
+- [IBM watsonx portfolio](https://www.ibm.com/watsonx) (verified 2026-06-12)
 

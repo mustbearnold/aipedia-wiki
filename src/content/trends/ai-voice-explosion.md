@@ -3,13 +3,13 @@ type: trend
 slug: ai-voice-explosion
 title: "AI Voice Explosion, Voice Agents Move Into Enterprise Workflows"
 seo_title: "AI Voice Explosion: Voice Agents in 2026, aipedia.wiki"
-meta_description: "Updated June 10, 2026: OpenAI Realtime voice models, ElevenLabs Conversational AI, Microsoft Copilot Studio real-time voice agents, and Google Conversational Agents show voice AI moving from TTS into governed customer workflows."
+meta_description: "Updated June 12, 2026: OpenAI Realtime voice models, ElevenLabs Conversational AI, Microsoft Copilot Studio real-time voice agents, and Google Conversational Agents show voice AI moving from TTS into governed customer workflows."
 author: "aipedia.wiki Editorial"
 description: Voice AI is moving from narration and transcription into low-latency agents that can resolve support, sales, scheduling, and contact-center workflows.
 timeframe: Enterprise voice-agent adoption accelerated through May-June 2026 as OpenAI launched new Realtime voice models, Microsoft made real-time Copilot Studio voice agents generally available in Dynamics 365 Contact Center, and ElevenLabs/Google continued scaling voice-agent platforms.
 impact: high
-last_updated: 2026-06-10
-last_verified: 2026-06-10
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 ---
 
@@ -59,11 +59,11 @@ Voice AI is high-impact because it meets users where typing is slow. The winning
 
 ## Sources
 
-- [OpenAI: new Realtime voice models](https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/), verified 2026-06-10.
-- [OpenAI API pricing](https://openai.com/api/pricing/), verified 2026-06-10.
-- [ElevenLabs Conversational AI](https://elevenlabs.io/conversational-ai), verified 2026-06-10.
-- [ElevenLabs: ElevenAgents cost](https://help.elevenlabs.io/hc/en-us/articles/29298065878929-How-much-does-ElevenAgents-cost), verified 2026-06-10.
-- [Microsoft: real-time voice agents in Copilot Studio](https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/extend-ai-voice-support-introducing-real-time-voice-agents-in-microsoft-copilot-studio/), verified 2026-06-10.
-- [Microsoft Copilot Studio docs: voice agent template](https://learn.microsoft.com/en-us/microsoft-copilot-studio/voice-build-from-template), verified 2026-06-10.
-- [Google Cloud Conversational Agents pricing](https://cloud.google.com/products/conversational-agents/pricing), verified 2026-06-10.
-- [Dialogflow CX documentation](https://docs.cloud.google.com/dialogflow/cx/docs), verified 2026-06-10.
+- [OpenAI: new Realtime voice models](https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/), verified 2026-06-12.
+- [OpenAI API pricing](https://openai.com/api/pricing/), verified 2026-06-12.
+- [ElevenLabs Conversational AI](https://elevenlabs.io/conversational-ai), verified 2026-06-12.
+- [ElevenLabs: ElevenAgents cost](https://help.elevenlabs.io/hc/en-us/articles/29298065878929-How-much-does-ElevenAgents-cost), verified 2026-06-12.
+- [Microsoft: real-time voice agents in Copilot Studio](https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/extend-ai-voice-support-introducing-real-time-voice-agents-in-microsoft-copilot-studio/), verified 2026-06-12.
+- [Microsoft Copilot Studio docs: voice agent template](https://learn.microsoft.com/en-us/microsoft-copilot-studio/voice-build-from-template), verified 2026-06-12.
+- [Google Cloud Conversational Agents pricing](https://cloud.google.com/products/conversational-agents/pricing), verified 2026-06-12.
+- [Dialogflow CX documentation](https://docs.cloud.google.com/dialogflow/cx/docs), verified 2026-06-12.

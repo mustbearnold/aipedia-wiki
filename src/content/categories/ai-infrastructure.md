@@ -5,10 +5,10 @@ title: AI Infrastructure & Model APIs
 description: Developer platforms for LLM routing, pay-as-you-go model APIs, hosted inference, serverless GPUs, vector databases, speech APIs, and production retrieval systems.
 tool_count: 12
 seo_title: "Best AI Infrastructure & Model API Tools (June 2026)"
-meta_description: "Updated June 10, 2026: compare OpenRouter, OpenAI API, Claude API, Gemini API, Mistral, Groq, Together AI, Replicate, fal, Fireworks AI, Modal, Browserbase, Deepgram, Pinecone, Weaviate/Engram, Qdrant, Llama, LM Studio, and current local/open-model infrastructure tradeoffs."
+meta_description: "Updated June 12, 2026: compare OpenRouter, OpenAI API, Claude API, Gemini API, Mistral, Groq, Together AI, Replicate, fal, Fireworks AI, Modal, Browserbase, Deepgram, Pinecone, Weaviate/Engram, Qdrant, Llama, LM Studio, and current local/open-model infrastructure tradeoffs."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-10
-last_verified: 2026-06-10
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -84,8 +84,8 @@ The June 3 update widens that control story. Microsoft Build put Work IQ and Fou
 
 ## Money Pages To Keep Current
 
-- [Best pay-as-you-go AI tools and APIs](/guides/best-pay-as-you-go-ai-tools/) was refreshed June 6, 2026 to separate true metered API usage from flat subscriptions and keep OpenAI, Claude, Gemini, OpenRouter, Mistral, Groq, Replicate, fal, Deepgram, ElevenLabs, and Fish Audio pricing risk in one buyer path.
-- [Best open source AI tools](/guides/best-open-source-ai-tools/) was refreshed June 6, 2026 for Ollama, LM Studio, Open WebUI, Llama, Mistral, DeepSeek, FLUX, Stable Diffusion, Whisper, and Hugging Face because open-model buyers often compare local control against hosted pay-as-you-go APIs.
+- [Best pay-as-you-go AI tools and APIs](/guides/best-pay-as-you-go-ai-tools/) was refreshed June 12, 2026 to separate true metered API usage from flat subscriptions and keep OpenAI, Claude, Gemini, OpenRouter, Mistral, Groq, Replicate, fal, Deepgram, ElevenLabs, and Fish Audio pricing risk in one buyer path.
+- [Best open source AI tools](/guides/best-open-source-ai-tools/) was refreshed June 12, 2026 for Ollama, LM Studio, Open WebUI, Llama, Mistral, DeepSeek, FLUX, Stable Diffusion, Whisper, and Hugging Face because open-model buyers often compare local control against hosted pay-as-you-go APIs.
 - [Best AI tools for developers](/guides/best-ai-tools-for-developers/) is the June 6 verified developer guide for separating Cursor, GitHub Copilot AI Credits, Claude Code shared limits/API credits, Codex token credits, Replit Agent, and Aider BYOK API costs.
 - A new `OpenRouter vs direct APIs` comparison would capture buyers choosing between a model router and direct OpenAI/Anthropic/Google contracts.
 - A new `Replicate vs fal.ai` comparison would capture image/video/API buyers choosing between broad model catalog and fast media-generation infrastructure.
@@ -100,48 +100,48 @@ Do not publish infrastructure pages with old flat monthly subscription framing. 
 
 - [OpenRouter pricing](https://openrouter.ai/pricing) (verified 2026-05-27)
 - [OpenRouter Series B announcement](https://www.businesswire.com/news/home/20260526953416/en/OpenRouter-Raises-%24113-Million-CapitalG-led-Series-B-as-Weekly-Volume-Explodes-to-25T-Tokens) (verified 2026-05-27)
-- [OpenAI API pricing](https://openai.com/api/pricing/) (verified 2026-06-06)
-- [Claude API pricing](https://platform.claude.com/docs/en/about-claude/pricing) (verified 2026-06-06)
-- [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing) (verified 2026-06-06)
-- [Mistral AI pricing](https://mistral.ai/pricing) (verified 2026-06-06)
-- [Groq pricing](https://groq.com/pricing) (verified 2026-06-06)
-- [Replicate pricing](https://replicate.com/pricing) (verified 2026-06-09)
-- [fal Model API pricing docs](https://fal.ai/docs/documentation/model-apis/pricing) (verified 2026-06-02)
-- [Fireworks AI pricing](https://fireworks.ai/pricing) (verified 2026-06-02)
-- [Fireworks billing FAQ](https://docs.fireworks.ai/faq-new/billing-pricing/how-much-does-fireworks-cost) (verified 2026-06-02)
-- [Fireworks inference documentation](https://docs.fireworks.ai/guides/inference-introduction) (verified 2026-06-02)
-- [Browserbase pricing](https://www.browserbase.com/pricing) (verified 2026-06-06)
-- [Deepgram pricing](https://deepgram.com/pricing) (verified 2026-06-06)
-- [Together AI pricing](https://www.together.ai/pricing) (verified 2026-06-09)
-- [Hugging Face pricing](https://huggingface.co/pricing) (verified 2026-06-02)
-- [Modal pricing](https://modal.com/pricing) (verified 2026-06-08)
-- [Modal GPU docs](https://modal.com/docs/guide/gpu) (verified 2026-06-08)
-- [LM Studio](https://lmstudio.ai/) (verified 2026-06-08)
-- [LM Studio developer docs](https://lmstudio.ai/docs/api) (verified 2026-06-08)
-- [Llama official site](https://ai.meta.com/llama/) (verified 2026-06-08)
-- [Together AI Llama pricing](https://www.together.ai/pricing) (verified 2026-06-09)
-- [Groq Llama 4 Scout model card](https://console.groq.com/docs/model/llama-4-scout-17b-16e-instruct) (verified 2026-06-08)
-- [Pinecone pricing](https://www.pinecone.io/pricing/) (verified 2026-06-08)
-- [Pinecone cost docs](https://docs.pinecone.io/guides/manage-cost/understanding-cost) (verified 2026-06-08)
-- [Pinecone Assistant pricing and limits](https://docs.pinecone.io/guides/assistant/pricing-and-limits) (verified 2026-06-08)
-- [Weaviate pricing](https://weaviate.io/pricing) (verified 2026-06-10)
-- [Weaviate Engram GA announcement](https://weaviate.io/blog/engram-generally-available) (verified 2026-06-10)
-- [Qdrant pricing](https://qdrant.tech/pricing/) (verified 2026-06-08)
-- [Qdrant Cloud billing](https://qdrant.tech/documentation/cloud-pricing-payments/) (verified 2026-06-08)
-- [Qdrant v1.18.2 release notes](https://github.com/qdrant/qdrant/releases/tag/v1.18.2) (verified 2026-06-08)
+- [OpenAI API pricing](https://openai.com/api/pricing/) (verified 2026-06-12)
+- [Claude API pricing](https://platform.claude.com/docs/en/about-claude/pricing) (verified 2026-06-12)
+- [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing) (verified 2026-06-12)
+- [Mistral AI pricing](https://mistral.ai/pricing) (verified 2026-06-12)
+- [Groq pricing](https://groq.com/pricing) (verified 2026-06-12)
+- [Replicate pricing](https://replicate.com/pricing) (verified 2026-06-12)
+- [fal Model API pricing docs](https://fal.ai/docs/documentation/model-apis/pricing) (verified 2026-06-12)
+- [Fireworks AI pricing](https://fireworks.ai/pricing) (verified 2026-06-12)
+- [Fireworks billing FAQ](https://docs.fireworks.ai/faq-new/billing-pricing/how-much-does-fireworks-cost) (verified 2026-06-12)
+- [Fireworks inference documentation](https://docs.fireworks.ai/guides/inference-introduction) (verified 2026-06-12)
+- [Browserbase pricing](https://www.browserbase.com/pricing) (verified 2026-06-12)
+- [Deepgram pricing](https://deepgram.com/pricing) (verified 2026-06-12)
+- [Together AI pricing](https://www.together.ai/pricing) (verified 2026-06-12)
+- [Hugging Face pricing](https://huggingface.co/pricing) (verified 2026-06-12)
+- [Modal pricing](https://modal.com/pricing) (verified 2026-06-12)
+- [Modal GPU docs](https://modal.com/docs/guide/gpu) (verified 2026-06-12)
+- [LM Studio](https://lmstudio.ai/) (verified 2026-06-12)
+- [LM Studio developer docs](https://lmstudio.ai/docs/api) (verified 2026-06-12)
+- [Llama official site](https://ai.meta.com/llama/) (verified 2026-06-12)
+- [Together AI Llama pricing](https://www.together.ai/pricing) (verified 2026-06-12)
+- [Groq Llama 4 Scout model card](https://console.groq.com/docs/model/llama-4-scout-17b-16e-instruct) (verified 2026-06-12)
+- [Pinecone pricing](https://www.pinecone.io/pricing/) (verified 2026-06-12)
+- [Pinecone cost docs](https://docs.pinecone.io/guides/manage-cost/understanding-cost) (verified 2026-06-12)
+- [Pinecone Assistant pricing and limits](https://docs.pinecone.io/guides/assistant/pricing-and-limits) (verified 2026-06-12)
+- [Weaviate pricing](https://weaviate.io/pricing) (verified 2026-06-12)
+- [Weaviate Engram GA announcement](https://weaviate.io/blog/engram-generally-available) (verified 2026-06-12)
+- [Qdrant pricing](https://qdrant.tech/pricing/) (verified 2026-06-12)
+- [Qdrant Cloud billing](https://qdrant.tech/documentation/cloud-pricing-payments/) (verified 2026-06-12)
+- [Qdrant v1.18.2 release notes](https://github.com/qdrant/qdrant/releases/tag/v1.18.2) (verified 2026-06-12)
 - [CoreWeave autonomous agent improvement launch](https://investors.coreweave.com/news/news-details/2026/CoreWeave-Closes-the-Training-to-Inference-Gap-for-Autonomous-Agent-Improvement/default.aspx) (verified 2026-05-31)
 - [OpenAI Rosalind Biodefense](https://openai.com/index/strengthening-societal-resilience-with-rosalind-biodefense/) (verified 2026-05-31)
 - [Geordie AI Series A](https://www.geordie.ai/resources/geordie-ai-raises-30m-series-a-as-enterprises-race-to-govern-autonomous-ai-agents/) (verified 2026-05-31)
 - [Sysdig LLM-agent intrusion analysis](https://www.sysdig.com/blog/ai-agent-at-the-wheel-how-an-attacker-used-llms-to-move-from-a-cve-to-an-internal-database-in-4-pivots) (verified 2026-05-31)
-- [Microsoft Build 2026 Work IQ and Foundry agent stack](https://blogs.microsoft.com/blog/2026/06/02/microsoft-build-2026-be-yourself-at-work/) (verified 2026-06-03)
-- [GitHub Copilot SDK GA](https://github.blog/changelog/2026-06-02-copilot-sdk-is-now-generally-available/) (verified 2026-06-03)
-- [NVIDIA enterprise software agents](https://investor.nvidia.com/news/press-release-details/2026/Enterprise-Software-Leaders-Build-AI-Agents-With-NVIDIA/default.aspx) (verified 2026-06-03)
-- [NVIDIA Cosmos 3 physical AI model](https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Launches-Cosmos-3-the-Open-Frontier-Foundation-Model-for-Physical-AI/default.aspx) (verified 2026-06-03)
-- [NVIDIA physical AI agent tools and skills](https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Releases-Major-Collection-of-Open-Source-Agent-Tools-and-Skills-for-Physical-AI/default.aspx) (verified 2026-06-03)
-- [NVIDIA Alpamayo 2 Super](https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Launches-Alpamayo-2-Super-Open-Reasoning-Model-for-Robotaxis/default.aspx) (verified 2026-06-03)
-- [NVIDIA RTX Spark Windows AI PCs](https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-and-Microsoft-Reinvent-Windows-PCs-for-the-Age-of-Personal-AI/default.aspx) (verified 2026-06-03)
-- [NVIDIA DGX Station for Windows](https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-DGX-Station-for-Windows-Puts-a-Trillion-Parameter-AI-Supercomputer-on-Every-Enterprise-Desk/default.aspx) (verified 2026-06-03)
-- [Postman AI Engineer](https://blog.postman.com/introducing-the-ai-engineer/) (verified 2026-06-03)
-- [RelationalAI Snowflake agentic decision intelligence](https://www.globenewswire.com/news-release/2026/06/02/3305546/0/en/RelationalAI-Closes-the-AI-Value-Gap-with-New-Agentic-Decision-Intelligence-Capabilities-for-the-Snowflake-AI-Data-Cloud.html) (verified 2026-06-03)
-- [7AI Agentic Security Platform](https://7ai.com/platform) (verified 2026-06-03)
-- [White House AI cybersecurity order](https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security/) (verified 2026-06-03)
+- [Microsoft Build 2026 Work IQ and Foundry agent stack](https://blogs.microsoft.com/blog/2026/06/02/microsoft-build-2026-be-yourself-at-work/) (verified 2026-06-12)
+- [GitHub Copilot SDK GA](https://github.blog/changelog/2026-06-02-copilot-sdk-is-now-generally-available/) (verified 2026-06-12)
+- [NVIDIA enterprise software agents](https://investor.nvidia.com/news/press-release-details/2026/Enterprise-Software-Leaders-Build-AI-Agents-With-NVIDIA/default.aspx) (verified 2026-06-12)
+- [NVIDIA Cosmos 3 physical AI model](https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Launches-Cosmos-3-the-Open-Frontier-Foundation-Model-for-Physical-AI/default.aspx) (verified 2026-06-12)
+- [NVIDIA physical AI agent tools and skills](https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Releases-Major-Collection-of-Open-Source-Agent-Tools-and-Skills-for-Physical-AI/default.aspx) (verified 2026-06-12)
+- [NVIDIA Alpamayo 2 Super](https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Launches-Alpamayo-2-Super-Open-Reasoning-Model-for-Robotaxis/default.aspx) (verified 2026-06-12)
+- [NVIDIA RTX Spark Windows AI PCs](https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-and-Microsoft-Reinvent-Windows-PCs-for-the-Age-of-Personal-AI/default.aspx) (verified 2026-06-12)
+- [NVIDIA DGX Station for Windows](https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-DGX-Station-for-Windows-Puts-a-Trillion-Parameter-AI-Supercomputer-on-Every-Enterprise-Desk/default.aspx) (verified 2026-06-12)
+- [Postman AI Engineer](https://blog.postman.com/introducing-the-ai-engineer/) (verified 2026-06-12)
+- [RelationalAI Snowflake agentic decision intelligence](https://www.globenewswire.com/news-release/2026/06/02/3305546/0/en/RelationalAI-Closes-the-AI-Value-Gap-with-New-Agentic-Decision-Intelligence-Capabilities-for-the-Snowflake-AI-Data-Cloud.html) (verified 2026-06-12)
+- [7AI Agentic Security Platform](https://7ai.com/platform) (verified 2026-06-12)
+- [White House AI cybersecurity order](https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security/) (verified 2026-06-12)

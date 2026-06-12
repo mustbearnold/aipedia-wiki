@@ -3,13 +3,13 @@ type: trend
 slug: open-source-parity
 title: "Open-Weight Parity, Free Models Pressure Proprietary APIs"
 seo_title: "Open-Weight AI Parity (June 2026), aipedia.wiki"
-meta_description: "Updated June 10, 2026: Llama 4, Qwen3, Mistral 3, and DeepSeek show open-weight models closing much of the practical gap with proprietary APIs, especially for coding, long context, and self-hosted workloads."
+meta_description: "Updated June 12, 2026: Llama 4, Qwen3, Mistral 3, and DeepSeek show open-weight models closing much of the practical gap with proprietary APIs, especially for coding, long context, and self-hosted workloads."
 author: "aipedia.wiki Editorial"
 description: The gap between open-weight and proprietary AI is shrinking. For many coding, reasoning, multimodal, and long-context workloads, buyers now need a concrete reason to stay proprietary-only.
 timeframe: Accelerated through 2025-2026 as Meta Llama 4, Alibaba Qwen3, Mistral 3, and DeepSeek releases gave developers strong open-weight options with commercial deployment paths, long context, and agentic capabilities.
 impact: high
-last_updated: 2026-06-10
-last_verified: 2026-06-10
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 ---
 
@@ -59,11 +59,11 @@ Open-weight parity is real enough to change default evaluations. The right buyin
 
 ## Sources
 
-- [Meta AI: Llama 4 announcement](https://ai.meta.com/blog/llama-4-multimodal-intelligence/), verified 2026-06-10.
-- [Llama 4 model page](https://www.llama.com/models/llama-4/), verified 2026-06-10.
-- [Qwen3 announcement](https://qwenlm.github.io/blog/qwen3/), verified 2026-06-10.
-- [Qwen3-235B-A22B on Hugging Face](https://huggingface.co/Qwen/Qwen3-235B-A22B), verified 2026-06-10.
-- [Mistral 3 announcement](https://mistral.ai/news/mistral-3/), verified 2026-06-10.
-- [DeepSeek](https://www.deepseek.com/en/), verified 2026-06-10.
-- [DeepSeek V3 GitHub](https://github.com/deepseek-ai/DeepSeek-V3), verified 2026-06-10.
-- [Artificial Analysis leaderboard](https://artificialanalysis.ai/), verified 2026-06-10.
+- [Meta AI: Llama 4 announcement](https://ai.meta.com/blog/llama-4-multimodal-intelligence/), verified 2026-06-12.
+- [Llama 4 model page](https://www.llama.com/models/llama-4/), verified 2026-06-12.
+- [Qwen3 announcement](https://qwenlm.github.io/blog/qwen3/), verified 2026-06-12.
+- [Qwen3-235B-A22B on Hugging Face](https://huggingface.co/Qwen/Qwen3-235B-A22B), verified 2026-06-12.
+- [Mistral 3 announcement](https://mistral.ai/news/mistral-3/), verified 2026-06-12.
+- [DeepSeek](https://www.deepseek.com/en/), verified 2026-06-12.
+- [DeepSeek V3 GitHub](https://github.com/deepseek-ai/DeepSeek-V3), verified 2026-06-12.
+- [Artificial Analysis leaderboard](https://artificialanalysis.ai/), verified 2026-06-12.

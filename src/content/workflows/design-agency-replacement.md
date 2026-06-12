@@ -3,13 +3,13 @@ type: workflow
 slug: design-agency-replacement
 title: "Replace Some Design Agency Work with Midjourney, Figma, Canva, and Firefly"
 seo_title: "AI Design Agency Replacement Workflow: Midjourney, Figma, Canva, Firefly & Magnific"
-meta_description: "Updated June 10, 2026: a practical AI design workflow for marketing visuals, brand assets, social creative, and landing-page mockups using Midjourney, Figma, Canva, Adobe Firefly, and Magnific."
+meta_description: "Updated June 12, 2026: a practical AI design workflow for marketing visuals, brand assets, social creative, and landing-page mockups using Midjourney, Figma, Canva, Adobe Firefly, and Magnific."
 description: "A practical AI design workflow for marketing visuals, brand assets, social creative, and landing-page mockups."
 stack: [midjourney, figma, canva, adobe-firefly, magnific]
 tools_mentioned: [midjourney, figma, canva, adobe-firefly, magnific]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-10
-last_verified: 2026-06-10
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 ---
 
@@ -17,7 +17,7 @@ update_frequency: monthly
 
 This workflow can replace a slice of design-agency production: campaign concepts, moodboards, social assets, landing-page mockups, simple ads, thumbnails, flyers, and rapid creative variants. It should not be sold as a full agency replacement for brand strategy, regulated claims, packaging systems, accessibility review, print production, or final client accountability.
 
-**AiPedia verdict, verified June 10, 2026:** use [Midjourney](/tools/midjourney/) for visual direction, [Figma](/tools/figma/) for editable layouts and handoff, [Canva](/tools/canva/) for publishable social and marketing assets, [Adobe Firefly](/tools/adobe-firefly/) when Adobe-native production and generative-credit governance matter, and [Magnific](/tools/magnific/) when you need a broader AI creative platform with upscaling, image, video, audio, stock, and team workflows.
+**AiPedia verdict, verified June 12, 2026:** use [Midjourney](/tools/midjourney/) for visual direction, [Figma](/tools/figma/) for editable layouts and handoff, [Canva](/tools/canva/) for publishable social and marketing assets, [Adobe Firefly](/tools/adobe-firefly/) when Adobe-native production and generative-credit governance matter, and [Magnific](/tools/magnific/) when you need a broader AI creative platform with upscaling, image, video, audio, stock, and team workflows.
 
 The win is not "replace every designer." The win is compressing the first three rounds of production so a human designer, marketer, founder, or client can make better decisions sooner.
 
@@ -129,17 +129,17 @@ Use it after a direction is approved or when the team needs repeatable multi-mod
 
 ## Methodology
 
-This workflow page was rechecked on June 10, 2026 against current official Midjourney, Figma, Canva, Adobe Firefly, and Magnific pages. Pricing, credit rules, plan names, model access, and AI feature availability can change quickly, so buyers should verify their region, account, and seat mix before committing.
+This workflow page was rechecked on June 12, 2026 against current official Midjourney, Figma, Canva, Adobe Firefly, and Magnific pages. Pricing, credit rules, plan names, model access, and AI feature availability can change quickly, so buyers should verify their region, account, and seat mix before committing.
 
 ## Sources
 
-- [Midjourney plan comparison](https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans), verified 2026-06-10
-- [Figma pricing](https://www.figma.com/pricing/), verified 2026-06-10
-- [Figma AI](https://www.figma.com/ai/), verified 2026-06-10
-- [Figma release notes](https://www.figma.com/release-notes/), verified 2026-06-10
-- [Canva AI 2.0 announcement](https://www.canva.com/newsroom/news/canva-create-2026-ai/), verified 2026-06-10
-- [Canva pricing](https://www.canva.com/pricing/), verified 2026-06-10
-- [Adobe Firefly plans](https://www.adobe.com/products/firefly/plans.html), verified 2026-06-10
-- [Adobe generative credits FAQ](https://helpx.adobe.com/creative-cloud/apps/generative-ai/generative-credits-faq.html), verified 2026-06-10
-- [Magnific platform](https://www.magnific.com/), verified 2026-06-10
-- [Magnific plans and pricing docs](https://www.magnific.com/ai/docs/plans-and-pricing), verified 2026-06-10
+- [Midjourney plan comparison](https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans), verified 2026-06-12
+- [Figma pricing](https://www.figma.com/pricing/), verified 2026-06-12
+- [Figma AI](https://www.figma.com/ai/), verified 2026-06-12
+- [Figma release notes](https://www.figma.com/release-notes/), verified 2026-06-12
+- [Canva AI 2.0 announcement](https://www.canva.com/newsroom/news/canva-create-2026-ai/), verified 2026-06-12
+- [Canva pricing](https://www.canva.com/pricing/), verified 2026-06-12
+- [Adobe Firefly plans](https://www.adobe.com/products/firefly/plans.html), verified 2026-06-12
+- [Adobe generative credits FAQ](https://helpx.adobe.com/creative-cloud/apps/generative-ai/generative-credits-faq.html), verified 2026-06-12
+- [Magnific platform](https://www.magnific.com/), verified 2026-06-12
+- [Magnific plans and pricing docs](https://www.magnific.com/ai/docs/plans-and-pricing), verified 2026-06-12

@@ -3,13 +3,13 @@ type: trend
 slug: geo-trend
 title: "GEO, Generative Engine Optimization"
 seo_title: "GEO: Generative Engine Optimization (June 2026), aipedia.wiki"
-meta_description: "Updated June 10, 2026: GEO now means measuring visibility in AI answers, not only ranking in Google. Writesonic, Semrush, Ahrefs, and AI Overview research show citation tracking becoming a marketing workflow."
+meta_description: "Updated June 12, 2026: GEO now means measuring visibility in AI answers, not only ranking in Google. Writesonic, Semrush, Ahrefs, and AI Overview research show citation tracking becoming a marketing workflow."
 author: "aipedia.wiki Editorial"
 description: The post-SEO visibility layer. Brands now optimize to be cited and trusted by AI-generated answers across Google AI Overviews, ChatGPT, Perplexity, Claude, and other answer engines.
 timeframe: Emerged through 2024-2025, became a commercial software category by June 2026 as SEO suites and specialist tools added AI visibility, citation, and answer-share tracking.
 impact: high
-last_updated: 2026-06-10
-last_verified: 2026-06-10
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 ---
 
@@ -57,8 +57,8 @@ GEO is not a magic trick for manipulating models. The durable strategy is to pub
 
 ## Sources
 
-- [Writesonic AI Visibility Tracker](https://writesonic.com/ai-visibility-tracker), verified 2026-06-10.
-- [Semrush AI Visibility Toolkit](https://www.semrush.com/kb/1493-ai-visibility-toolkit), verified 2026-06-10.
-- [Ahrefs Brand Radar](https://ahrefs.com/brand-radar), verified 2026-06-10.
-- [Pew Research Center: Google users are less likely to click links when AI summaries appear](https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/), verified 2026-06-10.
-- [Google Search Central: AI features and your website](https://developers.google.com/search/docs/appearance/ai-features), verified 2026-06-10.
+- [Writesonic AI Visibility Tracker](https://writesonic.com/ai-visibility-tracker), verified 2026-06-12.
+- [Semrush AI Visibility Toolkit](https://www.semrush.com/kb/1493-ai-visibility-toolkit), verified 2026-06-12.
+- [Ahrefs Brand Radar](https://ahrefs.com/brand-radar), verified 2026-06-12.
+- [Pew Research Center: Google users are less likely to click links when AI summaries appear](https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/), verified 2026-06-12.
+- [Google Search Central: AI features and your website](https://developers.google.com/search/docs/appearance/ai-features), verified 2026-06-12.

@@ -12,8 +12,8 @@ pricing_model: open-source
 price_range: "Free/open weights; Yi-Lightning historical ~$0.14/M; WorldWise custom"
 status: active
 launched: 2023-11
-last_updated: 2026-06-10
-last_verified: 2026-06-10
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: irregular
 affiliate:
   has_program: false
@@ -32,7 +32,7 @@ facts:
     source: "https://www.01.ai/"
     source_label: "01.AI company site"
     source_id: yi-official
-    verified_at: 2026-06-10
+    verified_at: 2026-06-12
     volatility: medium
     confidence: medium
   pricing_anchor:
@@ -40,7 +40,7 @@ facts:
     source: "https://huggingface.co/01-ai"
     source_label: "Hugging Face 01-ai"
     source_id: yi-huggingface
-    verified_at: 2026-06-10
+    verified_at: 2026-06-12
     next_review_at: 2026-09-10
     volatility: high
     confidence: medium
@@ -49,13 +49,13 @@ facts:
     source: "https://www.01.ai/"
     source_label: "01.AI company site"
     source_id: yi-official
-    verified_at: 2026-06-10
+    verified_at: 2026-06-12
     next_review_at: 2026-09-10
     volatility: high
     confidence: medium
 tags: [open-source, llm, kai-fu-lee, chinese-ai, yi-34b, yi-lightning, open-weight, 01ai, worldwise]
 seo_title: "Yi (01.AI): Frozen Models, WorldWise 2.5 Pivot & Review (June 2026)"
-meta_description: "Yi is 01.AI's open-weight LLM family. The company now leads with WorldWise/WanZhi 2.5 enterprise agents while Yi remains available through public model pages. Verified June 10, 2026."
+meta_description: "Yi is 01.AI's open-weight LLM family. The company now leads with WorldWise/WanZhi 2.5 enterprise agents while Yi remains available through public model pages. Verified June 12, 2026."
 author: "aipedia.wiki Editorial"
 best_for:
   - researchers using Yi-34B-200K for long-context experiments on fixed weights
@@ -99,7 +99,7 @@ quick_answer: >-
 | **License posture** | GitHub now shows Apache-2.0 license files for Yi-1.5; 01.AI site still routes commercial-license applications, so confirm model-specific terms |
 | **No Yi-2 announced** | Public 01.AI and GitHub pages do not show a new Yi-2 release |
 
-Every data point above was verified on 2026-06-10. See Sources.
+Every data point above was verified on 2026-06-12. See Sources.
 
 ## What it actually is
 
@@ -139,7 +139,7 @@ Yi-Lightning pricing depends on third-party aggregators unless 01.AI sales confi
 | Yi-Lightning (third-party gateways) | Varies | OpenRouter, AIMLAPI, other aggregators |
 | WorldWise/WanZhi 2.5 enterprise platform | Custom | Multi-agent platform; CEO-led sales motion in 2026 |
 
-*Prices verified 2026-06-10 via [01.AI company site](https://www.01.ai/), [01.AI Yi models](https://www.01.ai/yi-models), [Hugging Face 01-ai](https://huggingface.co/01-ai), [Yi GitHub](https://github.com/01-ai/Yi), and [SCMP coverage of 01.AI's enterprise pivot](https://www.scmp.com/tech/tech-trends/article/3303403/ai-entrepreneur-lee-kai-fu-bets-his-start-ups-future-deepseek-and-open-source). Direct 01.AI API access post-pivot remains uncertain; third-party gateways are the practical path for Yi-Lightning unless sales confirms otherwise, while WorldWise/WanZhi 2.5 is a sales-led enterprise platform.*
+*Prices verified 2026-06-12 via [01.AI company site](https://www.01.ai/), [01.AI Yi models](https://www.01.ai/yi-models), [Hugging Face 01-ai](https://huggingface.co/01-ai), [Yi GitHub](https://github.com/01-ai/Yi), and [SCMP coverage of 01.AI's enterprise pivot](https://www.scmp.com/tech/tech-trends/article/3303403/ai-entrepreneur-lee-kai-fu-bets-his-start-ups-future-deepseek-and-open-source). Direct 01.AI API access post-pivot remains uncertain; third-party gateways are the practical path for Yi-Lightning unless sales confirms otherwise, while WorldWise/WanZhi 2.5 is a sales-led enterprise platform.*
 
 ## Against the alternatives
 
@@ -165,7 +165,7 @@ Yi-Lightning pricing depends on third-party aggregators unless 01.AI sales confi
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Longevity is scored low to reflect the frozen-model status of the Yi family, even though 01.AI as a company remains operational via WorldWise/WanZhi 2.5. Last verified 2026-06-10 against [01.AI company site](https://www.01.ai/), [01.AI Yi models](https://www.01.ai/yi-models), [Lingyiwanwu/WanZhi site](https://www.lingyiwanwu.com/), [SCMP interview with Kai-Fu Lee](https://www.scmp.com/tech/tech-trends/article/3303403/ai-entrepreneur-lee-kai-fu-bets-his-start-ups-future-deepseek-and-open-source), [Hugging Face 01-ai](https://huggingface.co/01-ai), and [Yi GitHub](https://github.com/01-ai/Yi).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Longevity is scored low to reflect the frozen-model status of the Yi family, even though 01.AI as a company remains operational via WorldWise/WanZhi 2.5. Last verified 2026-06-12 against [01.AI company site](https://www.01.ai/), [01.AI Yi models](https://www.01.ai/yi-models), [Lingyiwanwu/WanZhi site](https://www.lingyiwanwu.com/), [SCMP interview with Kai-Fu Lee](https://www.scmp.com/tech/tech-trends/article/3303403/ai-entrepreneur-lee-kai-fu-bets-his-start-ups-future-deepseek-and-open-source), [Hugging Face 01-ai](https://huggingface.co/01-ai), and [Yi GitHub](https://github.com/01-ai/Yi).
 
 ## FAQ
 
@@ -186,13 +186,13 @@ Only if you specifically need a frozen-weight research baseline or already have 
 
 ## Sources
 
-- [01.AI company site](https://www.01.ai/): WorldWise 2.5 positioning and Yi-Lightning marketing, verified 2026-06-10
-- [01.AI Yi models](https://www.01.ai/yi-models): Yi-Lightning, Yi-1.5, Yi-VL, and Yi-Coder public model positioning, verified 2026-06-10
-- [Lingyiwanwu/WanZhi site](https://www.lingyiwanwu.com/): Chinese WanZhi enterprise-agent positioning and January 5, 2026 WanZhi 2.5 item, verified 2026-06-10
-- [SCMP: Kai-Fu Lee bets on DeepSeek](https://www.scmp.com/tech/tech-trends/article/3303403/ai-entrepreneur-lee-kai-fu-bets-his-start-ups-future-deepseek-and-open-source): strategic reversal interview, verified 2026-06-10
-- [Hugging Face 01-ai](https://huggingface.co/01-ai): current public model availability, verified 2026-06-10
-- [Yi open-source GitHub](https://github.com/01-ai/Yi): repo license, release-news, and community status, verified 2026-06-10
-- [Yi: Open Foundation Models paper](https://arxiv.org/abs/2403.04652): original model architecture and training, verified 2026-06-10
+- [01.AI company site](https://www.01.ai/): WorldWise 2.5 positioning and Yi-Lightning marketing, verified 2026-06-12
+- [01.AI Yi models](https://www.01.ai/yi-models): Yi-Lightning, Yi-1.5, Yi-VL, and Yi-Coder public model positioning, verified 2026-06-12
+- [Lingyiwanwu/WanZhi site](https://www.lingyiwanwu.com/): Chinese WanZhi enterprise-agent positioning and January 5, 2026 WanZhi 2.5 item, verified 2026-06-12
+- [SCMP: Kai-Fu Lee bets on DeepSeek](https://www.scmp.com/tech/tech-trends/article/3303403/ai-entrepreneur-lee-kai-fu-bets-his-start-ups-future-deepseek-and-open-source): strategic reversal interview, verified 2026-06-12
+- [Hugging Face 01-ai](https://huggingface.co/01-ai): current public model availability, verified 2026-06-12
+- [Yi open-source GitHub](https://github.com/01-ai/Yi): repo license, release-news, and community status, verified 2026-06-12
+- [Yi: Open Foundation Models paper](https://arxiv.org/abs/2403.04652): original model architecture and training, verified 2026-06-12
 
 ## Related
 

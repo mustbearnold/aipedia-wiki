@@ -3786,6 +3786,7 @@ Each date-cluster: all eligible pages June 12-dated, historical/affiliate/news c
 - 2026-06-12: Upgraded .refresh-tmp.py with a broader case-insensitive keyword set (as of / updated / reviewed / refreshed / reverified / re-checked / checked / verifiedLabel) plus external-dated-URL protection; re-ran over the 516 committed June 1-7 files and fixed 69 with As-of/Updated/footer leftovers (no historical events over-bumped). Committed as a cleanup.
 - 2026-06-12: June 8 cluster (32 tools, 10 comparisons, 1 category, 1 guide): upgraded script changed 44/44 files clean in one pass, no residuals. Links clean, guide-picks clean, 33/33 tests, 1104 pages built.
 - 2026-06-12: June 9 cluster (17 tools, 1 category; compare-index skipped): script changed 18/18 files clean, no residuals. Links clean, 33/33 tests, 1104 pages built.
+- 2026-06-12: June 10 cluster (15 tools, 12 guides, 12 trends, 11 categories, 4 workflows; news/trends index + rss crawl surface skipped): script changed 54/54 files clean, no residuals. Trends use standard last_updated/last_verified fields (handled). Links clean, guide-picks clean, 33/33 tests, 1104 pages built.
 
 ### 15. Final report
 

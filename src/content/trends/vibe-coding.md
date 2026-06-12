@@ -3,13 +3,13 @@ type: trend
 slug: vibe-coding
 title: "Vibe Coding, AI App Builders Hit Mainstream"
 seo_title: "Vibe Coding Explained (June 2026), aipedia.wiki"
-meta_description: "Updated June 10, 2026: vibe coding has moved from meme to app-builder category, with Lovable, Bolt.new, v0, Replit, Base44, and code agents letting users prompt, run, edit, and deploy software faster."
+meta_description: "Updated June 12, 2026: vibe coding has moved from meme to app-builder category, with Lovable, Bolt.new, v0, Replit, Base44, and code agents letting users prompt, run, edit, and deploy software faster."
 author: "aipedia.wiki Editorial"
 description: Building software by describing it in natural language. The 2026 reality is powerful first drafts, faster prototypes, and more non-developer builders, but production work still needs review, security, and maintenance.
 timeframe: Term popularized in 2025, mainstreamed through 2025-2026 as Lovable, Bolt.new, v0, Replit Agent, Base44, Cursor, Claude Code, and Codex made prompt-to-app workflows normal.
 impact: high
-last_updated: 2026-06-10
-last_verified: 2026-06-10
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 ---
 
@@ -59,10 +59,10 @@ Vibe coding is not replacing software engineering. It is replacing the empty can
 
 ## Sources
 
-- [Lovable Series B announcement](https://lovable.dev/blog/series-b), verified 2026-06-10.
-- [Business Insider: Lovable user and ARR report](https://www.businessinsider.com/lovable-arr-hit-500-million-surprising-facts-about-its-users-2026-6), verified 2026-06-10.
-- [Bolt.new](https://bolt.new/), verified 2026-06-10.
-- [Bolt.new GitHub](https://github.com/stackblitz/bolt.new), verified 2026-06-10.
-- [v0 pricing](https://v0.app/pricing), verified 2026-06-10.
-- [Replit Agent](https://replit.com/agent), verified 2026-06-10.
-- [Base44](https://base44.com/), verified 2026-06-10.
+- [Lovable Series B announcement](https://lovable.dev/blog/series-b), verified 2026-06-12.
+- [Business Insider: Lovable user and ARR report](https://www.businessinsider.com/lovable-arr-hit-500-million-surprising-facts-about-its-users-2026-6), verified 2026-06-12.
+- [Bolt.new](https://bolt.new/), verified 2026-06-12.
+- [Bolt.new GitHub](https://github.com/stackblitz/bolt.new), verified 2026-06-12.
+- [v0 pricing](https://v0.app/pricing), verified 2026-06-12.
+- [Replit Agent](https://replit.com/agent), verified 2026-06-12.
+- [Base44](https://base44.com/), verified 2026-06-12.

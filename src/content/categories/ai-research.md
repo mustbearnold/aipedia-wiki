@@ -5,10 +5,10 @@ title: AI Research Tools
 description: Source-backed AI tools for literature review, paper discovery, citation context, research notebooks, academic search, and evidence synthesis.
 tool_count: 9
 seo_title: "Best AI Research Tools: Elicit, Scite, Semantic Scholar & Perplexity (June 2026)"
-meta_description: "Updated June 10, 2026: Elicit for systematic-review workflow, Semantic Scholar for free academic search/API, Scite for citation context/MCP, Perplexity for cited web research/API, NotebookLM for source-grounded notebooks, Consensus for claim-level Q&A, Connected Papers for graph mapping, ChatPDF and Humata for PDF workflows, Reka Edge for low-cost multimodal research infrastructure, and Yi for frozen-model baselines."
+meta_description: "Updated June 12, 2026: Elicit for systematic-review workflow, Semantic Scholar for free academic search/API, Scite for citation context/MCP, Perplexity for cited web research/API, NotebookLM for source-grounded notebooks, Consensus for claim-level Q&A, Connected Papers for graph mapping, ChatPDF and Humata for PDF workflows, Reka Edge for low-cost multimodal research infrastructure, and Yi for frozen-model baselines."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-10
-last_verified: 2026-06-10
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 ---
 
@@ -16,7 +16,7 @@ update_frequency: monthly
 
 AI research tools split into four buyer lanes now: **literature review**, **academic search**, **citation context**, and **source-grounded analysis**. The right purchase depends on whether the user needs to find papers, evaluate citations, analyze a fixed source set, or research current web material outside academic databases.
 
-As of June 6, 2026, **[Elicit](/tools/elicit/)** is AiPedia's best research-workflow pick because it is built around paper discovery, screening, extraction, evidence tables, reports, API access, and systematic-review workflow; its Basic, Plus, Pro, Scale, and Enterprise ladder still needs billing-cadence verification at purchase time because research-team packaging can move quickly. **[Semantic Scholar](/tools/semantic-scholar/)** is the free academic-search/API baseline, with its homepage showing 234,531,320 searchable papers and its API page still listing 214 million papers, 2.49 billion citations, and 79 million authors. **[Scite](/tools/scite/)** is the specialist pick when citation context matters, with Basic still verified at $20/month, Pro at $50/month, Organization/Developer on custom terms, and Scite MCP relevant for teams grounding ChatGPT, Claude, Copilot, Cursor, Claude Code, or other MCP clients in Smart Citations. The June 6 [Scite vs Semantic Scholar](/compare/scite-vs-semantic-scholar/) refresh now makes the workflow boundary explicit: use Semantic Scholar to find and map papers for free, then use Scite when a claim, citation, or bibliography needs Supporting/Contrasting/Mentioning context. **[NotebookLM](/tools/notebooklm/)** is best when answers must stay grounded in a chosen source library. **[Perplexity](/tools/perplexity/)** is the best cited-web add-on for current sources, documentation, policy, market, company research, and Search/Sonar API workflows. **[Consensus](/tools/consensus/)** and **[Connected Papers](/tools/connected-papers/)** were rechecked recently; **[ChatPDF](/tools/chatpdf/)** remains the quick PDF-chat route, while **[Humata](/tools/humata/)** is the paid PDF/team-document lane with Free 60 pages/month, Expert $9.99/month for 500 pages and up to 3 users, Team $49/user/month for 5,000 pages and up to 10 users, OCR, folder permissions, and SOC-2.
+As of June 12, 2026, **[Elicit](/tools/elicit/)** is AiPedia's best research-workflow pick because it is built around paper discovery, screening, extraction, evidence tables, reports, API access, and systematic-review workflow; its Basic, Plus, Pro, Scale, and Enterprise ladder still needs billing-cadence verification at purchase time because research-team packaging can move quickly. **[Semantic Scholar](/tools/semantic-scholar/)** is the free academic-search/API baseline, with its homepage showing 234,531,320 searchable papers and its API page still listing 214 million papers, 2.49 billion citations, and 79 million authors. **[Scite](/tools/scite/)** is the specialist pick when citation context matters, with Basic still verified at $20/month, Pro at $50/month, Organization/Developer on custom terms, and Scite MCP relevant for teams grounding ChatGPT, Claude, Copilot, Cursor, Claude Code, or other MCP clients in Smart Citations. The June 6 [Scite vs Semantic Scholar](/compare/scite-vs-semantic-scholar/) refresh now makes the workflow boundary explicit: use Semantic Scholar to find and map papers for free, then use Scite when a claim, citation, or bibliography needs Supporting/Contrasting/Mentioning context. **[NotebookLM](/tools/notebooklm/)** is best when answers must stay grounded in a chosen source library. **[Perplexity](/tools/perplexity/)** is the best cited-web add-on for current sources, documentation, policy, market, company research, and Search/Sonar API workflows. **[Consensus](/tools/consensus/)** and **[Connected Papers](/tools/connected-papers/)** were rechecked recently; **[ChatPDF](/tools/chatpdf/)** remains the quick PDF-chat route, while **[Humata](/tools/humata/)** is the paid PDF/team-document lane with Free 60 pages/month, Expert $9.99/month for 500 pages and up to 3 users, Team $49/user/month for 5,000 pages and up to 10 users, OCR, folder permissions, and SOC-2.
 
 The June 6 nanochat comparison pass refreshed [nanochat vs Scite](/compare/nanochat-vs-scite/) and [nanochat vs Semantic Scholar](/compare/nanochat-vs-semantic-scholar/). The parent takeaway is simple: nanochat belongs in the LLM-training education lane, Scite belongs in citation-context evidence review, and Semantic Scholar belongs in free scholarly discovery plus API infrastructure.
 
@@ -92,47 +92,47 @@ Do not cite generated text. Cite the original source. Do not treat a linked sour
 
 ## Sources
 
-- [Elicit pricing](https://elicit.com/pricing) - verified 2026-06-06.
-- [Elicit API announcement](https://elicit.com/blog/elicit-api) - verified 2026-06-05.
-- [Semantic Scholar](https://www.semanticscholar.org/) - verified 2026-06-06.
-- [Semantic Scholar API](https://www.semanticscholar.org/product/api) - verified 2026-06-06.
-- [Scite](https://scite.ai/) - verified 2026-06-06.
-- [Scite pricing](https://scite.ai/pricing) - verified 2026-06-06.
-- [Research Solutions Scite MCP announcement](https://www.nasdaq.com/press-release/research-solutions-launches-scite-mcp-connecting-chatgpt-claude-other-ai-tools) - verified 2026-06-05.
-- [NotebookLM](https://notebooklm.google/) - verified 2026-06-04.
-- [NotebookLM upgrade help](https://support.google.com/notebooklm/answer/16213268) - verified 2026-06-06.
-- [Yoodli pricing](https://yoodli.ai/pricing) - verified 2026-06-06.
-- [Yoodli interview practice support](https://support.yoodli.ai/en/articles/9550465-practice-with-yoodli) - verified 2026-06-06.
-- [Interviewing.io](https://interviewing.io/) - verified 2026-06-06.
-- [Perplexity Enterprise](https://www.perplexity.ai/enterprise/pricing) - verified 2026-06-05.
-- [Perplexity API pricing](https://docs.perplexity.ai/docs/getting-started/pricing) - verified 2026-06-05.
-- [Consensus](https://consensus.app/) - verified 2026-06-04.
-- [Consensus pricing](https://consensus.app/pricing) - verified 2026-06-04.
-- [Connected Papers](https://www.connectedpapers.com/) - verified 2026-06-04.
-- [Connected Papers pricing](https://www.connectedpapers.com/pricing) - verified 2026-06-04.
-- [nanochat GitHub repository](https://github.com/karpathy/nanochat) - verified 2026-06-06.
-- [ChatPDF](https://www.chatpdf.com/) - verified 2026-06-02.
-- [ChatPDF backend API docs](https://www.chatpdf.com/docs/api/backend) - verified 2026-06-02.
-- [Humata pricing](https://www.humata.ai/pricing) - verified 2026-06-02.
-- [Humata security](https://www.humata.ai/security) - verified 2026-06-02.
-- [Reka pricing](https://docs.reka.ai/pricing) - verified 2026-06-09.
-- [Reka Edge product page](https://reka.ai/reka-edge) - verified 2026-06-09.
-- [Z.AI GLM-5.1 docs](https://docs.z.ai/guides/llm/glm-5.1) - verified 2026-06-02.
-- [Z.AI pricing](https://docs.z.ai/guides/overview/pricing) - verified 2026-06-02.
-- [GLM-5.1 on Hugging Face](https://huggingface.co/zai-org/GLM-5.1) - verified 2026-06-02.
-- [MiniMax M3 model page](https://www.minimax.io/models/text/m3) - verified 2026-06-08.
-- [MiniMax pay-as-you-go pricing](https://platform.minimax.io/docs/guides/pricing-paygo) - verified 2026-06-08.
-- [01.AI company site](https://www.01.ai/) - verified 2026-06-10.
-- [01.AI Yi models](https://www.01.ai/yi-models) - verified 2026-06-10.
-- [Hugging Face 01-ai](https://huggingface.co/01-ai) - verified 2026-06-10.
-- [Yi GitHub repository](https://github.com/01-ai/Yi) - verified 2026-06-10.
+- [Elicit pricing](https://elicit.com/pricing) - verified 2026-06-12.
+- [Elicit API announcement](https://elicit.com/blog/elicit-api) - verified 2026-06-12.
+- [Semantic Scholar](https://www.semanticscholar.org/) - verified 2026-06-12.
+- [Semantic Scholar API](https://www.semanticscholar.org/product/api) - verified 2026-06-12.
+- [Scite](https://scite.ai/) - verified 2026-06-12.
+- [Scite pricing](https://scite.ai/pricing) - verified 2026-06-12.
+- [Research Solutions Scite MCP announcement](https://www.nasdaq.com/press-release/research-solutions-launches-scite-mcp-connecting-chatgpt-claude-other-ai-tools) - verified 2026-06-12.
+- [NotebookLM](https://notebooklm.google/) - verified 2026-06-12.
+- [NotebookLM upgrade help](https://support.google.com/notebooklm/answer/16213268) - verified 2026-06-12.
+- [Yoodli pricing](https://yoodli.ai/pricing) - verified 2026-06-12.
+- [Yoodli interview practice support](https://support.yoodli.ai/en/articles/9550465-practice-with-yoodli) - verified 2026-06-12.
+- [Interviewing.io](https://interviewing.io/) - verified 2026-06-12.
+- [Perplexity Enterprise](https://www.perplexity.ai/enterprise/pricing) - verified 2026-06-12.
+- [Perplexity API pricing](https://docs.perplexity.ai/docs/getting-started/pricing) - verified 2026-06-12.
+- [Consensus](https://consensus.app/) - verified 2026-06-12.
+- [Consensus pricing](https://consensus.app/pricing) - verified 2026-06-12.
+- [Connected Papers](https://www.connectedpapers.com/) - verified 2026-06-12.
+- [Connected Papers pricing](https://www.connectedpapers.com/pricing) - verified 2026-06-12.
+- [nanochat GitHub repository](https://github.com/karpathy/nanochat) - verified 2026-06-12.
+- [ChatPDF](https://www.chatpdf.com/) - verified 2026-06-12.
+- [ChatPDF backend API docs](https://www.chatpdf.com/docs/api/backend) - verified 2026-06-12.
+- [Humata pricing](https://www.humata.ai/pricing) - verified 2026-06-12.
+- [Humata security](https://www.humata.ai/security) - verified 2026-06-12.
+- [Reka pricing](https://docs.reka.ai/pricing) - verified 2026-06-12.
+- [Reka Edge product page](https://reka.ai/reka-edge) - verified 2026-06-12.
+- [Z.AI GLM-5.1 docs](https://docs.z.ai/guides/llm/glm-5.1) - verified 2026-06-12.
+- [Z.AI pricing](https://docs.z.ai/guides/overview/pricing) - verified 2026-06-12.
+- [GLM-5.1 on Hugging Face](https://huggingface.co/zai-org/GLM-5.1) - verified 2026-06-12.
+- [MiniMax M3 model page](https://www.minimax.io/models/text/m3) - verified 2026-06-12.
+- [MiniMax pay-as-you-go pricing](https://platform.minimax.io/docs/guides/pricing-paygo) - verified 2026-06-12.
+- [01.AI company site](https://www.01.ai/) - verified 2026-06-12.
+- [01.AI Yi models](https://www.01.ai/yi-models) - verified 2026-06-12.
+- [Hugging Face 01-ai](https://huggingface.co/01-ai) - verified 2026-06-12.
+- [Yi GitHub repository](https://github.com/01-ai/Yi) - verified 2026-06-12.
 - [OpenAI GPT-Rosalind for life sciences research](https://openai.com/index/introducing-gpt-rosalind/) - verified 2026-05-31.
 - [OpenAI Rosalind Biodefense trusted-access expansion](https://openai.com/index/strengthening-societal-resilience-with-rosalind-biodefense/) - verified 2026-05-31.
-- [OpenAI new GPT-Rosalind capabilities](https://openai.com/index/introducing-new-capabilities-to-gpt-rosalind/) - verified 2026-06-06.
-- [NIH reminder on research integrity when using AI](https://grants.nih.gov/news-events/nih-extramural-nexus-news/2026/05/helpful-reminders-to-ensure-integrity-of-nih-supported-research-when-using-artificial-intelligence) - verified 2026-06-06.
-- [FDA AI-enabled device software lifecycle recommendations](https://www.fda.gov/media/184856/download) - verified 2026-06-06.
-- [Harvey official site](https://www.harvey.ai/) - verified 2026-06-02.
-- [Harvey blog](https://www.harvey.ai/blog) - verified 2026-06-02.
-- [Harvey security](https://www.harvey.ai/security) - verified 2026-06-02.
-- [Spellbook pricing](https://spellbook.com/pricing) - verified 2026-06-09.
-- [Spellbook security](https://spellbook.com/security) - verified 2026-06-09.
+- [OpenAI new GPT-Rosalind capabilities](https://openai.com/index/introducing-new-capabilities-to-gpt-rosalind/) - verified 2026-06-12.
+- [NIH reminder on research integrity when using AI](https://grants.nih.gov/news-events/nih-extramural-nexus-news/2026/05/helpful-reminders-to-ensure-integrity-of-nih-supported-research-when-using-artificial-intelligence) - verified 2026-06-12.
+- [FDA AI-enabled device software lifecycle recommendations](https://www.fda.gov/media/184856/download) - verified 2026-06-12.
+- [Harvey official site](https://www.harvey.ai/) - verified 2026-06-12.
+- [Harvey blog](https://www.harvey.ai/blog) - verified 2026-06-12.
+- [Harvey security](https://www.harvey.ai/security) - verified 2026-06-12.
+- [Spellbook pricing](https://spellbook.com/pricing) - verified 2026-06-12.
+- [Spellbook security](https://spellbook.com/security) - verified 2026-06-12.

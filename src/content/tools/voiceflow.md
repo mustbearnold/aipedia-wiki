@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "Free agency trial plus demo-gated usage-based quotes; historical Pro/Teams rates must be confirmed"
 status: active
 launched: 2019-01
-last_updated: 2026-06-10
-last_verified: 2026-06-10
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://www.voiceflow.com/pricing"
     source_label: "Source"
     source_id: voiceflow-pricing
-    verified_at: 2026-06-10
+    verified_at: 2026-06-12
     volatility: medium
     confidence: medium
   pricing_anchor:
@@ -38,7 +38,7 @@ facts:
     source: "https://www.voiceflow.com/pricing"
     source_label: "Source"
     source_id: voiceflow-pricing
-    verified_at: 2026-06-10
+    verified_at: 2026-06-12
     next_review_at: 2026-09-10
     volatility: high
     confidence: medium
@@ -47,7 +47,7 @@ facts:
     source: "https://www.voiceflow.com/pricing"
     source_label: "Source"
     source_id: voiceflow-pricing
-    verified_at: 2026-06-10
+    verified_at: 2026-06-12
     next_review_at: 2026-09-10
     volatility: high
     confidence: high
@@ -102,7 +102,7 @@ price_history:
 
 Voiceflow is the no-code AI agent builder for conversational apps. A drag-and-drop canvas designs multi-turn flows, a knowledge base powers RAG-grounded answers, and one-click deployment ships agents to web chat, Slack, WhatsApp, Microsoft Teams, and voice channels.
 
-Voiceflow's current public pricing page no longer publishes the old self-serve tier rates. As of June 10, 2026, treat Voiceflow as a free-trial-plus-quote product with usage-based billing; use historical Pro/Teams rates only as procurement baselines to confirm in writing.
+Voiceflow's current public pricing page no longer publishes the old self-serve tier rates. As of June 12, 2026, treat Voiceflow as a free-trial-plus-quote product with usage-based billing; use historical Pro/Teams rates only as procurement baselines to confirm in writing.
 
 ## System Verdict
 
@@ -126,7 +126,7 @@ Voiceflow's current public pricing page no longer publishes the old self-serve t
 | **Model costs** | Confirm whether usage is billed through Voiceflow, provider keys, or both |
 | **Version control** | Staging · production · rollback · change history |
 
-Every data point above was verified against vendor documentation on 2026-06-10. Voiceflow's public pricing page no longer lists tier rates; the figures below reflect last-known buyer baselines and should be confirmed with sales before procurement. See Sources.
+Every data point above was verified against vendor documentation on 2026-06-12. Voiceflow's public pricing page no longer lists tier rates; the figures below reflect last-known buyer baselines and should be confirmed with sales before procurement. See Sources.
 
 ## What it actually is
 
@@ -189,7 +189,7 @@ As of June 2026, [voiceflow.com/pricing](https://www.voiceflow.com/pricing) no l
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-10 against [Voiceflow pricing](https://www.voiceflow.com/pricing) and the [Voiceflow documentation](https://docs.voiceflow.com/). Public pricing tiers are no longer displayed on the vendor page; rates shown reflect the last publicly confirmed numbers (2026-04-15) and should be verified against a sales quote.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-12 against [Voiceflow pricing](https://www.voiceflow.com/pricing) and the [Voiceflow documentation](https://docs.voiceflow.com/). Public pricing tiers are no longer displayed on the vendor page; rates shown reflect the last publicly confirmed numbers (2026-04-15) and should be verified against a sales quote.
 
 ## FAQ
 
