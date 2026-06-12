@@ -4633,6 +4633,46 @@
       "volatility": "medium"
     },
     {
+      "id": "lindy-quickstart",
+      "label": "Lindy quickstart",
+      "url": "https://docs.lindy.ai/start-here/quickstart",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "lindy-integrations",
+      "label": "Lindy integrations",
+      "url": "https://www.lindy.ai/integrations",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "lindy-usage",
+      "label": "Lindy usage docs",
+      "url": "https://docs.lindy.ai/account-billing/usage",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "lindy-credits",
+      "label": "Lindy credits docs",
+      "url": "https://docs.lindy.ai/account-billing/credits",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "lindy-partnerstack",
+      "label": "PartnerStack Lindy program",
+      "url": "https://market.partnerstack.com/page/lindy",
+      "type": "third_party",
+      "trust_tier": "secondary",
+      "volatility": "high"
+    },
+    {
       "id": "llama-docs",
       "label": "Llama model documentation",
       "url": "https://www.llama.com/docs/model-cards-and-prompt-formats/",
