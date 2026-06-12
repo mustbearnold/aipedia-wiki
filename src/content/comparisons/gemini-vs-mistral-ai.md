@@ -6,10 +6,10 @@ tools: [gemini, mistral-ai]
 category: ai-chatbots
 winner: depends
 seo_title: "Gemini vs Mistral AI: Google Assistant or EU Model Platform?"
-meta_description: "Gemini vs Mistral AI, refreshed June 5, 2026: compare Google AI subscriptions, Gemini API, Workspace, and media tools with Mistral Le Chat, Studio APIs, Vibe, Search Toolkit, and open models."
+meta_description: "Gemini vs Mistral AI, refreshed June 12, 2026: compare Google AI subscriptions, Gemini API, Workspace, and media tools with Mistral Le Chat, Studio APIs, Vibe, Search Toolkit, and open models."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -71,9 +71,9 @@ Yes. Use Gemini for broad Google-native productivity and Mistral for model evalu
 
 - [Gemini review](/tools/gemini/)
 - [Mistral AI review](/tools/mistral-ai/)
-- [Google AI subscriptions](https://gemini.google/subscriptions/) (verified 2026-06-05)
-- [Gemini API models](https://ai.google.dev/gemini-api/docs/models) (verified 2026-06-05)
-- [Mistral pricing](https://mistral.ai/pricing) (verified 2026-06-05)
-- [Mistral model documentation](https://docs.mistral.ai/getting-started/models/models_overview/) (verified 2026-06-05)
-- [Mistral Search Toolkit](https://docs.mistral.ai/capabilities/search/) (verified 2026-06-05)
+- [Google AI subscriptions](https://gemini.google/subscriptions/) (verified 2026-06-12)
+- [Gemini API models](https://ai.google.dev/gemini-api/docs/models) (verified 2026-06-12)
+- [Mistral pricing](https://mistral.ai/pricing) (verified 2026-06-12)
+- [Mistral model documentation](https://docs.mistral.ai/getting-started/models/models_overview/) (verified 2026-06-12)
+- [Mistral Search Toolkit](https://docs.mistral.ai/capabilities/search/) (verified 2026-06-12)
 - [AI Chatbots & LLMs](/categories/ai-chatbots/)

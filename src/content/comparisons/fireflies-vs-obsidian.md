@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Fireflies.ai vs Obsidian: Meeting Capture or Local Knowledge Base?"
 meta_description: "Fireflies.ai vs Obsidian, refreshed June 2026: choose Fireflies for AI meeting capture and searchable call history; choose Obsidian for local-first markdown notes, plugins, and long-term PKM."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: quarterly
 canonical_fact_table: true
 ---
@@ -92,6 +92,6 @@ No. Fireflies stores meeting records. Obsidian is better for long-term writing, 
 
 ## Sources
 
-- [Fireflies.ai pricing](https://fireflies.ai/pricing) (verified 2026-06-05)
-- [Obsidian pricing](https://obsidian.md/pricing) (verified 2026-06-05)
-- [Obsidian community plugins](https://community.obsidian.md/) (verified 2026-06-05)
+- [Fireflies.ai pricing](https://fireflies.ai/pricing) (verified 2026-06-12)
+- [Obsidian pricing](https://obsidian.md/pricing) (verified 2026-06-12)
+- [Obsidian community plugins](https://community.obsidian.md/) (verified 2026-06-12)

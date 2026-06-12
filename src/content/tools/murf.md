@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: "$0-$99/month + API PAYG"
 status: active
 launched: 2020-10
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -35,7 +35,7 @@ facts:
     source: https://murf.ai/
     source_label: Murf AI official site
     source_id: murf-official
-    verified_at: '2026-06-05'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-12-05'
@@ -44,7 +44,7 @@ facts:
     source: https://murf.ai/pricing
     source_label: Murf pricing
     source_id: murf-pricing
-    verified_at: '2026-06-05'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-09-05'
@@ -53,7 +53,7 @@ facts:
     source: https://help.murf.ai/murf-api-plans-and-limits
     source_label: Murf API plans and limits
     source_id: murf-api-plans
-    verified_at: '2026-06-05'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-09-05'
@@ -62,7 +62,7 @@ facts:
     source: https://murf.ai/api/docs/text-to-speech-models/falcon
     source_label: Murf Falcon docs
     source_id: murf-falcon
-    verified_at: '2026-06-05'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-09-05'
@@ -71,7 +71,7 @@ facts:
     source: https://murf.ai/enterprise
     source_label: Murf enterprise
     source_id: murf-enterprise
-    verified_at: '2026-06-05'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-12-05'
@@ -80,7 +80,7 @@ facts:
     source: https://murf.ai/api
     source_label: Murf Voice API
     source_id: murf-api
-    verified_at: '2026-06-05'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-09-05'
@@ -158,7 +158,7 @@ The June 5, 2026 correction: Murf should no longer be described as a Studio-only
 - **API PAYG anchor:** Murf API help lists 10,000 characters for $1 with a $2 minimum purchase.
 - **Main watch-out:** Studio, API, Dub, and Enterprise have separate limits and billing paths.
 
-Every current data point was verified against Murf vendor pages and help documentation on 2026-06-05.
+Every current data point was verified against Murf vendor pages and help documentation on 2026-06-12.
 
 ## What It Actually Is
 
@@ -197,7 +197,7 @@ Murf's pricing needs to be evaluated by product surface.
 - **API Custom:** For higher character, concurrency, rate-limit, and volume-discount requirements.
 - **Dub:** Free Trial, pay-as-you-go, and Custom routes; confirm project, watermark, QA, and enterprise requirements in the Dub product.
 
-Prices and plan routes were verified 2026-06-05 against Murf pricing, API docs, and Murf help pages. Because Murf exposes several billing surfaces, confirm the exact plan inside the product before procurement.
+Prices and plan routes were verified 2026-06-12 against Murf pricing, API docs, and Murf help pages. Because Murf exposes several billing surfaces, confirm the exact plan inside the product before procurement.
 
 ## Against The Alternatives
 
@@ -216,7 +216,7 @@ Prices and plan routes were verified 2026-06-05 against Murf pricing, API docs, 
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that checks vendor documentation, pricing pages, help-center pages, and product documentation before generating editorial analysis. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-05 against Murf pricing, Murf API docs, Murf Falcon docs, Murf API plan help, and Murf pay-as-you-go help.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that checks vendor documentation, pricing pages, help-center pages, and product documentation before generating editorial analysis. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-12 against Murf pricing, Murf API docs, Murf Falcon docs, Murf API plan help, and Murf pay-as-you-go help.
 
 ## FAQ
 
@@ -237,14 +237,14 @@ Confirm whether you need Studio, API, Dub, Enterprise, or more than one. Then ve
 
 ## Sources
 
-- [Murf AI official site](https://murf.ai) (verified 2026-06-05)
-- [Murf pricing](https://murf.ai/pricing) (verified 2026-06-05)
-- [Murf API overview](https://murf.ai/api) (verified 2026-06-05)
-- [Murf API docs](https://murf.ai/api/docs) (verified 2026-06-05)
-- [Murf Falcon docs](https://murf.ai/api/docs/text-to-speech-models/falcon) (verified 2026-06-05)
-- [Murf API plans and limits](https://help.murf.ai/murf-api-plans-and-limits) (verified 2026-06-05)
-- [Murf API pay-as-you-go](https://help.murf.ai/murf-api-pay-as-you-go) (verified 2026-06-05)
-- [Murf Dub plans](https://help.murf.ai/murf-dub-plans) (verified 2026-06-05)
+- [Murf AI official site](https://murf.ai) (verified 2026-06-12)
+- [Murf pricing](https://murf.ai/pricing) (verified 2026-06-12)
+- [Murf API overview](https://murf.ai/api) (verified 2026-06-12)
+- [Murf API docs](https://murf.ai/api/docs) (verified 2026-06-12)
+- [Murf Falcon docs](https://murf.ai/api/docs/text-to-speech-models/falcon) (verified 2026-06-12)
+- [Murf API plans and limits](https://help.murf.ai/murf-api-plans-and-limits) (verified 2026-06-12)
+- [Murf API pay-as-you-go](https://help.murf.ai/murf-api-pay-as-you-go) (verified 2026-06-12)
+- [Murf Dub plans](https://help.murf.ai/murf-dub-plans) (verified 2026-06-12)
 
 ## Related
 

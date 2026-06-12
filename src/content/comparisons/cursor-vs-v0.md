@@ -6,10 +6,10 @@ tools: [cursor, v0]
 category: ai-coding
 winner: depends
 seo_title: "Cursor vs v0 by Vercel: AI IDE or Vercel App Builder? (June 2026)"
-meta_description: "Cursor vs v0 by Vercel, verified June 5, 2026: AI coding IDE, Vercel-native app builder, Team and Business pricing, model token pricing, and workflow fit."
+meta_description: "Cursor vs v0 by Vercel, verified June 12, 2026: AI coding IDE, Vercel-native app builder, Team and Business pricing, model token pricing, and workflow fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -18,7 +18,7 @@ canonical_fact_table: true
 
 [Cursor](/tools/cursor/) and [v0 by Vercel](/tools/v0/) both generate code, but the workflow is different. Cursor is an AI-native IDE for developers working across a repository. v0 is a Vercel-native app and UI generation surface for creating, previewing, syncing, deploying, and iterating on web artifacts.
 
-**Verified June 5, 2026:** Cursor pricing still lists Hobby free, Individual from $20/month, Teams at $40/user/month, and Enterprise custom. v0 pricing lists Free at $0/month with $5 monthly credits and a 7-message/day limit, Team at $30/user/month with $30 included monthly credits per user plus daily login credits, Business at $100/user/month, Enterprise custom, and separate model token pricing for v0 Mini, v0 Pro, v0 Max, and v0 Max Fast.
+**Verified June 12, 2026:** Cursor pricing still lists Hobby free, Individual from $20/month, Teams at $40/user/month, and Enterprise custom. v0 pricing lists Free at $0/month with $5 monthly credits and a 7-message/day limit, Team at $30/user/month with $30 included monthly credits per user plus daily login credits, Business at $100/user/month, Enterprise custom, and separate model token pricing for v0 Mini, v0 Pro, v0 Max, and v0 Max Fast.
 
 ## Quick Answer
 
@@ -106,8 +106,8 @@ Start with v0 if the goal is a Vercel-native visual app draft. Start with Cursor
 
 ## Sources
 
-- [Cursor pricing](https://cursor.com/pricing), verified 2026-06-05
-- [Cursor docs](https://cursor.com/docs), verified 2026-06-05
-- [v0 pricing](https://v0.app/pricing), verified 2026-06-05
-- [v0 documentation](https://v0.app/docs), verified 2026-06-05
-- [Vercel updated v0 pricing announcement](https://vercel.com/blog/updated-v0-pricing), verified 2026-06-05
+- [Cursor pricing](https://cursor.com/pricing), verified 2026-06-12
+- [Cursor docs](https://cursor.com/docs), verified 2026-06-12
+- [v0 pricing](https://v0.app/pricing), verified 2026-06-12
+- [v0 documentation](https://v0.app/docs), verified 2026-06-12
+- [Vercel updated v0 pricing announcement](https://vercel.com/blog/updated-v0-pricing), verified 2026-06-12

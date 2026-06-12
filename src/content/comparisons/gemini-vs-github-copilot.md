@@ -6,10 +6,10 @@ tools: [gemini, github-copilot]
 category: ai-chatbots
 winner: depends
 seo_title: "Gemini vs GitHub Copilot: Google AI or GitHub Coding?"
-meta_description: "Gemini vs GitHub Copilot, refreshed June 5, 2026: compare Google AI subscriptions, Gemini API, Workspace, Search, and media tools with Copilot IDE, PR, Coding Agent, SDK, and AI Credits."
+meta_description: "Gemini vs GitHub Copilot, refreshed June 12, 2026: compare Google AI subscriptions, Gemini API, Workspace, Search, and media tools with Copilot IDE, PR, Coding Agent, SDK, and AI Credits."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -71,9 +71,9 @@ Yes. A common stack is Gemini for Google productivity and broad reasoning, with 
 
 - [Gemini review](/tools/gemini/)
 - [GitHub Copilot review](/tools/github-copilot/)
-- [Google AI subscriptions](https://gemini.google/subscriptions/) (verified 2026-06-05)
-- [Gemini API models](https://ai.google.dev/gemini-api/docs/models) (verified 2026-06-05)
-- [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing) (verified 2026-06-05)
-- [GitHub Copilot plans](https://docs.github.com/en/copilot/concepts/billing/copilot-plans) (verified 2026-06-05)
-- [GitHub Copilot AI Credits](https://docs.github.com/en/copilot/concepts/billing/copilot-usage-based-billing) (verified 2026-06-05)
+- [Google AI subscriptions](https://gemini.google/subscriptions/) (verified 2026-06-12)
+- [Gemini API models](https://ai.google.dev/gemini-api/docs/models) (verified 2026-06-12)
+- [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing) (verified 2026-06-12)
+- [GitHub Copilot plans](https://docs.github.com/en/copilot/concepts/billing/copilot-plans) (verified 2026-06-12)
+- [GitHub Copilot AI Credits](https://docs.github.com/en/copilot/concepts/billing/copilot-usage-based-billing) (verified 2026-06-12)
 - [AI Coding Assistants](/categories/ai-coding/)

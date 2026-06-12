@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$0 to start, pay-per-use + Enterprise"
 status: active
 launched: 2019-06
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://www.resemble.ai/"
     source_label: "Resemble AI homepage"
     source_id: resemble-ai-official
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     next_review_at: 2026-09-05
     volatility: medium
     confidence: high
@@ -39,7 +39,7 @@ facts:
     source: "https://www.resemble.ai/pricing/"
     source_label: "Resemble AI pricing"
     source_id: resemble-ai-pricing
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     next_review_at: 2026-09-05
     volatility: high
     confidence: high
@@ -48,7 +48,7 @@ facts:
     source: "https://docs.resemble.ai/welcome"
     source_label: "Resemble AI docs"
     source_id: resemble-ai-docs
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     next_review_at: 2026-09-05
     volatility: medium
     confidence: high
@@ -57,7 +57,7 @@ facts:
     source: "https://www.resemble.ai/"
     source_label: "Resemble AI homepage"
     source_id: resemble-ai-official
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     next_review_at: 2026-09-05
     volatility: medium
     confidence: high
@@ -66,7 +66,7 @@ facts:
     source: "https://www.resemble.ai/pricing/"
     source_label: "Resemble AI pricing"
     source_id: resemble-ai-pricing
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     next_review_at: 2026-09-05
     volatility: high
     confidence: medium
@@ -159,7 +159,7 @@ Launched 2019. Targets enterprise workflows where compliance, watermarking, and 
 | **Voice add-ons** | Rapid Voice Clone $2/voice/mo, Pro Voice Clone $5/voice/mo, Voice Design $2/voice/mo |
 | **Enterprise** | Custom; volume discounts up to 80%, SOC 2, SSO/SAML, custom training, on-prem, dedicated support |
 
-Every data point above was verified against vendor sources on 2026-06-05. See Sources.
+Every data point above was verified against vendor sources on 2026-06-12. See Sources.
 
 ## What it actually is
 
@@ -203,7 +203,7 @@ In May 2026 Resemble retired its flat-rate Free, Creator ($30/mo), Professional 
 - Pro Voice Clone: $5/voice/mo
 - Voice Design: $2/voice/mo
 
-*Prices verified 2026-06-05 via [resemble.ai/pricing](https://www.resemble.ai/pricing). The May 2026 reset removes the previous Creator/Professional/Business flat tiers; budget against expected per-second usage instead of seat counts.*
+*Prices verified 2026-06-12 via [resemble.ai/pricing](https://www.resemble.ai/pricing). The May 2026 reset removes the previous Creator/Professional/Business flat tiers; budget against expected per-second usage instead of seat counts.*
 
 ## Against the alternatives
 
@@ -238,7 +238,7 @@ In May 2026 Resemble retired its flat-rate Free, Creator ($30/mo), Professional 
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-05 against [resemble.ai](https://www.resemble.ai/), [pricing page](https://www.resemble.ai/pricing/), and [voice AI platform overview](https://www.resemble.ai/voice-ai-platform/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-12 against [resemble.ai](https://www.resemble.ai/), [pricing page](https://www.resemble.ai/pricing/), and [voice AI platform overview](https://www.resemble.ai/voice-ai-platform/).
 
 ## FAQ
 

@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Codeium vs GitHub Copilot: What To Choose Now (June 2026)"
 meta_description: "Codeium is no longer a separate product: it became Windsurf, and Windsurf is now Devin Desktop. Compare the Codeium lineage with GitHub Copilot's June 2026 AI Credits, plans, models, and team fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -51,7 +51,7 @@ Pick Devin Desktop when Cognition's agent workflow is the reason to buy. Pick Co
 | **Power individual plan** | Max $200/month | Pro+ $39/month; Max $100/month for existing-plan upgrades |
 | **Team plan** | Teams $80/month base plus $40/month per full dev seat | Business $19/user/month |
 | **Enterprise plan** | Custom | Enterprise $39/user/month |
-| **Usage model** | Quotas plus extra usage at API pricing on paid plans | GitHub AI Credits active for all plans as of June 1, 2026 |
+| **Usage model** | Quotas plus extra usage at API pricing on paid plans | GitHub AI Credits active for all plans as of June 12, 2026 |
 
 ## Where GitHub Copilot Wins
 

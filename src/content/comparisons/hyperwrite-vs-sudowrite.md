@@ -8,8 +8,8 @@ winner: depends
 seo_title: "HyperWrite vs Sudowrite: Productivity Writer Or Fiction Workspace? (June 2026)"
 meta_description: "June 2026 HyperWrite vs Sudowrite comparison: HyperWrite wins for Chrome-native productivity writing, TypeAhead, citations, and browser-agent help; Sudowrite wins for fiction, Muse, Story Engine, Describe, Expand, Rewrite, and manuscript workflow."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---

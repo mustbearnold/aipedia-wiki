@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: "$0-$449/month"
 status: active
 launched: 2022-03
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -32,7 +32,7 @@ facts:
     source: "https://exa.ai/docs/reference/search-api-guide"
     source_label: "Exa Search API guide"
     source_id: exa-docs
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     next_review_at: 2026-09-02
     volatility: medium
     confidence: high
@@ -41,7 +41,7 @@ facts:
     source: "https://exa.ai/pricing/api"
     source_label: "Exa API pricing"
     source_id: exa-official
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     next_review_at: 2026-09-02
     volatility: high
     confidence: high
@@ -50,7 +50,7 @@ facts:
     source: "https://exa.ai/"
     source_label: "Exa homepage"
     source_id: exa-official
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     next_review_at: 2026-09-02
     volatility: medium
     confidence: high
@@ -59,7 +59,7 @@ facts:
     source: "https://exa.ai/docs/reference/search-api-guide"
     source_label: "Exa Search API guide"
     source_id: exa-docs
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     next_review_at: 2026-09-02
     volatility: medium
     confidence: high
@@ -158,7 +158,7 @@ No consumer interface. Developer-first product.
 | **Framework integrations** | LangChain, LlamaIndex (native connectors), MCP-compatible |
 | **Funding** | Series B, $85M (2025) |
 
-Every data point above was verified against vendor documentation on 2026-06-05. See Sources.
+Every data point above was verified against vendor documentation on 2026-06-12. See Sources.
 
 ## What it actually is
 
@@ -204,7 +204,7 @@ Pricing via [exa.ai/pricing](https://exa.ai/pricing):
 | Websets Pro | $449/mo | 100,000 credits, 10 seats, 1,000 results/Webset, 10 concurrent |
 | Enterprise | Custom | Volume pricing, SLA, security review |
 
-Prices verified 2026-06-05 via [Exa API pricing](https://exa.ai/pricing/api) and [Exa pricing update](https://exa.ai/docs/changelog/pricing-update). Startups and education projects can apply for $1,000 in free credits.
+Prices verified 2026-06-12 via [Exa API pricing](https://exa.ai/pricing/api) and [Exa pricing update](https://exa.ai/docs/changelog/pricing-update). Startups and education projects can apply for $1,000 in free credits.
 
 ## Against the alternatives
 
@@ -229,7 +229,7 @@ Prices verified 2026-06-05 via [Exa API pricing](https://exa.ai/pricing/api) and
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-05 against [Exa API pricing](https://exa.ai/pricing/api), [Exa Search API guide](https://exa.ai/docs/reference/search-api-guide), [Exa pricing update](https://exa.ai/docs/changelog/pricing-update), and [Exa Series B announcement](https://exa.ai/blog/announcing-series-b).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against [Exa API pricing](https://exa.ai/pricing/api), [Exa Search API guide](https://exa.ai/docs/reference/search-api-guide), [Exa pricing update](https://exa.ai/docs/changelog/pricing-update), and [Exa Series B announcement](https://exa.ai/blog/announcing-series-b).
 
 ## FAQ
 

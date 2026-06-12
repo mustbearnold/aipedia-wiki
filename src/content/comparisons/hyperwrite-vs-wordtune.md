@@ -8,8 +8,8 @@ winner: depends
 seo_title: "HyperWrite vs Wordtune: Drafting Assistant Or Rewrite Layer? (June 2026)"
 meta_description: "June 2026 HyperWrite vs Wordtune comparison: HyperWrite wins for Chrome-native drafting, TypeAhead, citations, personas, and Personal Assistant; Wordtune wins for cheaper voice-preserving rewrites, summaries, and sentence-level polish."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---

@@ -6,10 +6,10 @@ tools: [gamma, pitch]
 category: ai-presentation
 winner: depends
 seo_title: "Gamma vs Pitch: AI Deck Generator or Team Workspace?"
-meta_description: "Gamma vs Pitch, refreshed June 5, 2026: compare prompt-to-deck speed, deck/doc/web output, Pitch collaboration, AI credits, analytics, pitch rooms, and plan fit."
+meta_description: "Gamma vs Pitch, refreshed June 12, 2026: compare prompt-to-deck speed, deck/doc/web output, Pitch collaboration, AI credits, analytics, pitch rooms, and plan fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -69,8 +69,8 @@ Yes. Draft in Gamma, then move final team-facing decks into Pitch for comments, 
 
 ## Sources
 
-- [Gamma AI presentation maker](https://gamma.app/ai-presentation-maker) (verified 2026-06-05)
-- [Gamma pricing](https://gamma.app/pricing) (verified 2026-06-05)
-- [Pitch AI presentation maker](https://pitch.com/use-cases/ai-presentation-maker) (verified 2026-06-05)
-- [Pitch pricing](https://pitch.com/pricing/us) (verified 2026-06-05)
+- [Gamma AI presentation maker](https://gamma.app/ai-presentation-maker) (verified 2026-06-12)
+- [Gamma pricing](https://gamma.app/pricing) (verified 2026-06-12)
+- [Pitch AI presentation maker](https://pitch.com/use-cases/ai-presentation-maker) (verified 2026-06-12)
+- [Pitch pricing](https://pitch.com/pricing/us) (verified 2026-06-12)
 - [AI Presentation Tools](/categories/ai-presentation/)

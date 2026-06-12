@@ -6,10 +6,10 @@ tools: [exa, perplexity]
 category: ai-search
 winner: depends
 seo_title: "Exa AI vs Perplexity: Search API or Answer Engine? (June 2026)"
-meta_description: "Updated June 5, 2026: Exa is semantic search infrastructure for agents and RAG. Perplexity is a cited answer engine with Pro, Max, Enterprise, Search API, Sonar, and Agent API."
+meta_description: "Updated June 12, 2026: Exa is semantic search infrastructure for agents and RAG. Perplexity is a cited answer engine with Pro, Max, Enterprise, Search API, Sonar, and Agent API."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: quarterly
 canonical_fact_table: true
 ---

@@ -8,8 +8,8 @@ winner: depends
 seo_title: "HyperWrite vs QuillBot: Drafting Agent Or Paraphrasing Utility? (June 2026)"
 meta_description: "June 2026 HyperWrite vs QuillBot comparison: HyperWrite wins for Chrome-native drafting, TypeAhead, citations, and Personal Assistant; QuillBot wins for cheaper paraphrasing, summaries, citations, AI Detector, Humanizer, and plagiarism-aware text transformation."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---

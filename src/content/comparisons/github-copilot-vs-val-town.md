@@ -8,8 +8,8 @@ winner: depends
 seo_title: "GitHub Copilot vs Val Town: Coding Assistant Or Serverless Runtime? (June 2026)"
 meta_description: "June 2026 GitHub Copilot vs Val Town comparison: Copilot is for IDE, PR, and agent workflows; Val Town is for instant hosted TypeScript vals, cron jobs, and APIs."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---

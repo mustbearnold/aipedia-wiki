@@ -6,10 +6,10 @@ tools: [gemini, perplexity]
 category: ai-chatbots
 winner: depends
 seo_title: "Gemini vs Perplexity: Google AI or Cited Answer Engine?"
-meta_description: "Gemini vs Perplexity, refreshed June 5, 2026: compare Google AI subscriptions, Search, Workspace, NotebookLM, and Gemini API with Perplexity Pro, Max, Enterprise, Comet, Sonar, Search API, and cited research."
+meta_description: "Gemini vs Perplexity, refreshed June 12, 2026: compare Google AI subscriptions, Search, Workspace, NotebookLM, and Gemini API with Perplexity Pro, Max, Enterprise, Comet, Sonar, Search API, and cited research."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -71,9 +71,9 @@ Only if each has a distinct role: Gemini for Google productivity and Perplexity 
 
 - [Gemini review](/tools/gemini/)
 - [Perplexity review](/tools/perplexity/)
-- [Google AI subscriptions](https://gemini.google/subscriptions/) (verified 2026-06-05)
-- [Gemini API models](https://ai.google.dev/gemini-api/docs/models) (verified 2026-06-05)
-- [Perplexity pricing](https://www.perplexity.ai/pricing) (verified 2026-06-05)
-- [Perplexity Enterprise pricing](https://www.perplexity.ai/enterprise) (verified 2026-06-05)
-- [Perplexity API docs](https://docs.perplexity.ai/) (verified 2026-06-05)
+- [Google AI subscriptions](https://gemini.google/subscriptions/) (verified 2026-06-12)
+- [Gemini API models](https://ai.google.dev/gemini-api/docs/models) (verified 2026-06-12)
+- [Perplexity pricing](https://www.perplexity.ai/pricing) (verified 2026-06-12)
+- [Perplexity Enterprise pricing](https://www.perplexity.ai/enterprise) (verified 2026-06-12)
+- [Perplexity API docs](https://docs.perplexity.ai/) (verified 2026-06-12)
 - [AI Search & Research Tools](/categories/ai-search/)

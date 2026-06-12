@@ -6,10 +6,10 @@ tools: [flux, stable-diffusion]
 category: ai-image
 winner: depends
 seo_title: "Flux vs Stable Diffusion: Which Image Model Stack Is Better in 2026?"
-meta_description: "Flux vs Stable Diffusion, refreshed June 5, 2026: compare FLUX.2 API/open-weight routes with SD 3.5, Stable Image pricing, local workflows, licenses, and ecosystem depth."
+meta_description: "Flux vs Stable Diffusion, refreshed June 12, 2026: compare FLUX.2 API/open-weight routes with SD 3.5, Stable Image pricing, local workflows, licenses, and ecosystem depth."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -82,9 +82,9 @@ Yes. Many advanced users run both Flux and Stable Diffusion workflows in ComfyUI
 
 ## Sources
 
-- [Black Forest Labs FLUX.2 pricing](https://docs.bfl.ai/quick_start/pricing) (verified 2026-06-05)
-- [Black Forest Labs FLUX models overview](https://help.bfl.ai/articles/9364115800-flux-models-overview) (verified 2026-06-05)
-- [Stability AI platform pricing](https://platform.stability.ai/pricing) (verified 2026-06-05)
-- [Stability AI Stable Image docs](https://platform.stability.ai/docs/getting-started/stable-image) (verified 2026-06-05)
-- [Stability AI Community License](https://stability.ai/license) (verified 2026-06-05)
+- [Black Forest Labs FLUX.2 pricing](https://docs.bfl.ai/quick_start/pricing) (verified 2026-06-12)
+- [Black Forest Labs FLUX models overview](https://help.bfl.ai/articles/9364115800-flux-models-overview) (verified 2026-06-12)
+- [Stability AI platform pricing](https://platform.stability.ai/pricing) (verified 2026-06-12)
+- [Stability AI Stable Image docs](https://platform.stability.ai/docs/getting-started/stable-image) (verified 2026-06-12)
+- [Stability AI Community License](https://stability.ai/license) (verified 2026-06-12)
 - [Flux review](/tools/flux/) and [Stable Diffusion review](/tools/stable-diffusion/)

@@ -6,10 +6,10 @@ tools: [copy-ai, wordtune]
 category: ai-writing
 winner: depends
 seo_title: "Copy.ai vs Wordtune: Campaign Generation or Sentence Polish? (June 2026)"
-meta_description: "Updated June 5, 2026: Copy.ai is for GTM workflow automation; Wordtune is for low-cost sentence rewrites, summaries, grammar, clarity, and tone polish."
+meta_description: "Updated June 12, 2026: Copy.ai is for GTM workflow automation; Wordtune is for low-cost sentence rewrites, summaries, grammar, clarity, and tone polish."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -18,7 +18,7 @@ canonical_fact_table: true
 
 [Copy.ai](/tools/copy-ai/) and [Wordtune](/tools/wordtune/) both help with business writing, but they sit on opposite ends of the workflow. Copy.ai creates and automates GTM content. Wordtune improves text that already exists through rewrites, summaries, spelling, grammar, vocabulary, clarity, and fluency.
 
-This comparison was refreshed on June 5, 2026 against current Copy.ai pricing and Wordtune plan documentation.
+This comparison was refreshed on June 12, 2026 against current Copy.ai pricing and Wordtune plan documentation.
 
 ## Quick Answer
 

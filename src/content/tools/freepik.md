@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$158.33/month annual; Business and Enterprise custom"
 status: active
 launched: 2023-06
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -31,7 +31,7 @@ facts:
     source: "https://www.freepik.com/ai/image-generator"
     source_label: "Freepik AI Image Generator"
     source_id: freepik-official
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     next_review_at: 2026-09-05
     volatility: high
     confidence: high
@@ -40,7 +40,7 @@ facts:
     source: "https://www.freepik.com/ai/docs/plans-and-pricing"
     source_label: "Freepik plans and pricing docs"
     source_id: freepik-official
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     next_review_at: 2026-09-05
     volatility: high
     confidence: medium
@@ -49,7 +49,7 @@ facts:
     source: "https://www.freepik.com/ai/docs/plans-and-pricing"
     source_label: "Freepik plans and pricing docs"
     source_id: freepik-pricing
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     next_review_at: 2026-09-05
     volatility: high
     confidence: medium
@@ -58,7 +58,7 @@ facts:
     source: "https://www.freepik.com/ai/image-generator"
     source_label: "Freepik AI Image Generator"
     source_id: freepik-official
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     next_review_at: 2026-09-05
     volatility: high
     confidence: medium
@@ -67,7 +67,7 @@ facts:
     source: "https://www.freepik.com/pricing"
     source_label: "Freepik pricing"
     source_id: freepik-pricing
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     next_review_at: 2026-09-05
     volatility: high
     confidence: high
@@ -148,7 +148,7 @@ No [Midjourney](/tools/midjourney/) integration. Magnific is positioned as the "
 | **Video, audio, 3D** | Native generation surfaces on the post-rebrand platform · share the unified credit balance |
 | **Free tier** | Limited access, up to 20 AI image generations per day with the in-house model, personal use/attribution |
 
-Every data point was verified against vendor sources on 2026-06-05. See Sources.
+Every data point was verified against vendor sources on 2026-06-12. See Sources.
 
 ## What it actually is
 
@@ -189,7 +189,7 @@ Subscription pricing via [Freepik pricing docs](https://www.freepik.com/ai/docs/
 | Business | Custom | 45,000/seat/month in docs | Shared credit pools and team management for 2-30 people |
 | Enterprise | Custom | Custom allocation | Unlimited seats, compliance, SSO, dedicated support |
 
-*Prices and plan inclusions verified 2026-06-05 against [Freepik plans and pricing docs](https://www.freepik.com/ai/docs/plans-and-pricing) and the live [Freepik pricing page](https://www.freepik.com/pricing). Premium+ and Pro unlimited generation applies to most image models, not every model or media type. Premium models, video, audio, upscalers, training, and advanced tools can still consume credits.*
+*Prices and plan inclusions verified 2026-06-12 against [Freepik plans and pricing docs](https://www.freepik.com/ai/docs/plans-and-pricing) and the live [Freepik pricing page](https://www.freepik.com/pricing). Premium+ and Pro unlimited generation applies to most image models, not every model or media type. Premium models, video, audio, upscalers, training, and advanced tools can still consume credits.*
 
 ## Against the alternatives
 
@@ -223,7 +223,7 @@ Subscription pricing via [Freepik pricing docs](https://www.freepik.com/ai/docs/
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-05 against [Freepik AI Image Generator](https://www.freepik.com/ai/image-generator), [Freepik plans and pricing docs](https://www.freepik.com/ai/docs/plans-and-pricing), the [Freepik pricing page](https://www.freepik.com/pricing), [Freepik AI image model credit tables](https://www.freepik.com/pricing), and the [Freepik Enterprise page](https://www.freepik.com/enterprise).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against [Freepik AI Image Generator](https://www.freepik.com/ai/image-generator), [Freepik plans and pricing docs](https://www.freepik.com/ai/docs/plans-and-pricing), the [Freepik pricing page](https://www.freepik.com/pricing), [Freepik AI image model credit tables](https://www.freepik.com/pricing), and the [Freepik Enterprise page](https://www.freepik.com/enterprise).
 
 ## FAQ
 

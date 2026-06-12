@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Fish Audio / OpenAudio S1 + S2 vs Resemble AI: Which Voice AI Is Better in 2026?"
 meta_description: "June 2026 head-to-head of Fish Audio / OpenAudio S1 + S2 and Resemble AI. Compare open-weight TTS control, voice cloning, governance, pricing, and enterprise fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: quarterly
 canonical_fact_table: true
 ---

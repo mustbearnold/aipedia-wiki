@@ -6,10 +6,10 @@ tools: [cursor, gemini]
 category: ai-coding
 winner: depends
 seo_title: "Cursor vs Gemini: AI IDE or Google AI Assistant? (June 2026)"
-meta_description: "Cursor vs Gemini, verified June 5, 2026: AI coding IDE, Google AI Pro and Ultra, Gemini API pricing, Antigravity/Jules coding paths, and buyer fit."
+meta_description: "Cursor vs Gemini, verified June 12, 2026: AI coding IDE, Google AI Pro and Ultra, Gemini API pricing, Antigravity/Jules coding paths, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -18,7 +18,7 @@ canonical_fact_table: true
 
 [Cursor](/tools/cursor/) and [Gemini](/tools/gemini/) overlap on coding help, but they answer different buying questions. Cursor is a dedicated AI-native IDE for developers working in a repository. Gemini is Google's broad AI assistant, subscription, API, media, Search, Workspace, Jules, and Antigravity ecosystem.
 
-**Verified June 5, 2026:** Cursor pricing still anchors on Hobby free, Individual from $20/month, Teams at $40/user/month, and Enterprise custom. Google AI subscriptions now show Free, AI Plus at $7.99/month, AI Pro at $19.99/month, and AI Ultra starting at $99.99/month with a higher $199.99/month tier. Gemini API pricing remains a separate developer/API path.
+**Verified June 12, 2026:** Cursor pricing still anchors on Hobby free, Individual from $20/month, Teams at $40/user/month, and Enterprise custom. Google AI subscriptions now show Free, AI Plus at $7.99/month, AI Pro at $19.99/month, and AI Ultra starting at $99.99/month with a higher $199.99/month tier. Gemini API pricing remains a separate developer/API path.
 
 ## Quick Answer
 
@@ -105,8 +105,8 @@ No. Gemini is the broader assistant and model ecosystem. Gemini Code Assist, Jul
 
 ## Sources
 
-- [Cursor pricing](https://cursor.com/pricing), verified 2026-06-05
-- [Cursor docs](https://cursor.com/docs), verified 2026-06-05
-- [Google AI subscriptions](https://gemini.google/subscriptions/), verified 2026-06-05
-- [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing), verified 2026-06-05
-- [Gemini Code Assist](https://cloud.google.com/products/gemini/code-assist), verified 2026-06-05
+- [Cursor pricing](https://cursor.com/pricing), verified 2026-06-12
+- [Cursor docs](https://cursor.com/docs), verified 2026-06-12
+- [Google AI subscriptions](https://gemini.google/subscriptions/), verified 2026-06-12
+- [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing), verified 2026-06-12
+- [Gemini Code Assist](https://cloud.google.com/products/gemini/code-assist), verified 2026-06-12

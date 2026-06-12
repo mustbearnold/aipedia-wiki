@@ -6,10 +6,10 @@ tools: [freepik, midjourney]
 category: ai-image
 winner: depends
 seo_title: "Freepik AI Suite vs Midjourney: Which AI Image Workflow Is Better in 2026?"
-meta_description: "Freepik AI Suite / Magnific vs Midjourney, refreshed June 5, 2026: compare stock-backed creative production with Midjourney's aesthetic image generation, pricing, privacy, and workflow fit."
+meta_description: "Freepik AI Suite / Magnific vs Midjourney, refreshed June 12, 2026: compare stock-backed creative production with Midjourney's aesthetic image generation, pricing, privacy, and workflow fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -62,8 +62,8 @@ No. Use Midjourney directly if that specific model/workflow is required.
 
 ## Sources
 
-- [Midjourney plans](https://docs.midjourney.com/docs/plans) (verified 2026-06-05)
-- [Midjourney documentation home](https://docs.midjourney.com/hc/en-us) (verified 2026-06-05)
-- [Freepik plans and pricing docs](https://www.freepik.com/ai/docs/plans-and-pricing) (verified 2026-06-05)
-- [Freepik pricing](https://www.freepik.com/pricing) (verified 2026-06-05)
+- [Midjourney plans](https://docs.midjourney.com/docs/plans) (verified 2026-06-12)
+- [Midjourney documentation home](https://docs.midjourney.com/hc/en-us) (verified 2026-06-12)
+- [Freepik plans and pricing docs](https://www.freepik.com/ai/docs/plans-and-pricing) (verified 2026-06-12)
+- [Freepik pricing](https://www.freepik.com/pricing) (verified 2026-06-12)
 - [Freepik review](/tools/freepik/) and [Midjourney review](/tools/midjourney/)

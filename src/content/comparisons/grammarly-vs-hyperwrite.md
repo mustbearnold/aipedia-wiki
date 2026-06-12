@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Grammarly vs HyperWrite: Inline Editor Or AI Writing Agent? (June 2026)"
 meta_description: "June 2026 Grammarly vs HyperWrite comparison: Grammarly wins for always-on grammar, tone, and team writing quality; HyperWrite wins for Chrome-native drafting, TypeAhead, citations, and supervised browser-agent work."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---

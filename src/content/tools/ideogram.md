@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: $0-$42/month annual; Team $20/user/mo annual; Enterprise custom
 status: active
 launched: 2023-08
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -32,16 +32,16 @@ facts:
     source: "https://ideogram.ai/features/3.0"
     source_label: "Ideogram 3.0 features"
     source_id: ideogram-official
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
   model_surface:
-    value: "Ideogram 3.0 remains the flagship as of 2026-06-05. API buyers should verify current model and endpoint availability in docs because Ideogram has not released a 4.0 line yet."
+    value: "Ideogram 3.0 remains the flagship as of 2026-06-12. API buyers should verify current model and endpoint availability in docs because Ideogram has not released a 4.0 line yet."
     source: "https://docs.ideogram.ai/"
     source_label: "Ideogram API docs"
     source_id: ideogram-docs
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -50,7 +50,7 @@ facts:
     source: "https://ideogram.ai/pricing"
     source_label: "Ideogram pricing"
     source_id: ideogram-pricing
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -59,7 +59,7 @@ facts:
     source: "https://docs.ideogram.ai/"
     source_label: "Ideogram API docs"
     source_id: ideogram-docs
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -68,7 +68,7 @@ facts:
     source: "https://ideogram.ai/features/3.0"
     source_label: "Ideogram 3.0 features"
     source_id: ideogram-official
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -156,7 +156,7 @@ Competitive signal: [OpenAI launched ChatGPT Images 2.0 and gpt-image-2](/news/2
 | **Image output per prompt** | 4 |
 | **Styles** | Realistic, Illustration, 3D Render, Anime, Design |
 
-Every data point above was verified on 2026-06-05. See Sources.
+Every data point above was verified on 2026-06-12. See Sources.
 
 ## What it actually is
 
@@ -196,7 +196,7 @@ Subscription pricing via [ideogram.ai/pricing](https://ideogram.ai/pricing). Ann
 | Enterprise | Contact sales | Custom | Private custom models, custom credits, volume API discounts, priority support | Larger organizations |
 | Legacy Basic | Grandfathered | Varies | Closed to new customers | Existing subscribers only |
 
-*Prices verified 2026-06-05 via [Ideogram pricing](https://ideogram.ai/pricing). The live feature table lists Ideogram 3.0 credit rates at 2, 4, or 6 credits per 4 images depending on Turbo, Default, or Quality speed. Top-up credits are available on paid plans. API and enterprise volume discounts should be checked in current docs before production automation.*
+*Prices verified 2026-06-12 via [Ideogram pricing](https://ideogram.ai/pricing). The live feature table lists Ideogram 3.0 credit rates at 2, 4, or 6 credits per 4 images depending on Turbo, Default, or Quality speed. Top-up credits are available on paid plans. API and enterprise volume discounts should be checked in current docs before production automation.*
 
 ## Against the alternatives
 
@@ -227,7 +227,7 @@ Subscription pricing via [ideogram.ai/pricing](https://ideogram.ai/pricing). Ann
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-05 against [Ideogram pricing](https://ideogram.ai/pricing), [Ideogram 3.0 launch page](https://ideogram.ai/features/3.0), and [Ideogram docs](https://docs.ideogram.ai/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against [Ideogram pricing](https://ideogram.ai/pricing), [Ideogram 3.0 launch page](https://ideogram.ai/features/3.0), and [Ideogram docs](https://docs.ideogram.ai/).
 
 ## FAQ
 

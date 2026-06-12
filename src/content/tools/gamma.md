@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "Free + paid tiers; exact dollar pricing can vary by billing/account state"
 status: active
 launched: 2020-01
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -35,7 +35,7 @@ facts:
     source: "https://gamma.app/features"
     source_label: "Gamma features"
     source_id: gamma-features
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
   pricing_anchor:
@@ -43,7 +43,7 @@ facts:
     source: "https://gamma.app/pricing"
     source_label: "Gamma pricing"
     source_id: gamma-official
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     next_review_at: 2026-09-05
     volatility: high
     confidence: high
@@ -52,7 +52,7 @@ facts:
     source: "https://gamma.app/ai-presentation-maker"
     source_label: "Gamma AI presentation maker"
     source_id: gamma-ai-presentation
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   output_model:
@@ -60,7 +60,7 @@ facts:
     source: "https://gamma.app/features"
     source_label: "Gamma features"
     source_id: gamma-features
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
   watch_out_for:
@@ -68,7 +68,7 @@ facts:
     source: "https://gamma.app/pricing"
     source_label: "Gamma pricing"
     source_id: gamma-official
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
 tags: [presentations, slides, ai-generation, documents, web-pages, pitch-decks, prompt-to-deck]
@@ -119,7 +119,7 @@ The free tier supports simple projects, imports, and exports. Paid tiers add bra
 | **PPTX export** | Available, lossy on complex layouts |
 | **Offline mode** | None |
 
-Every data point above was verified against official Gamma documentation on 2026-06-05. See Sources.
+Every data point above was verified against official Gamma documentation on 2026-06-12. See Sources.
 
 ## Recent Changes
 
@@ -161,7 +161,7 @@ Subscription and team pricing are managed via [gamma.app/pricing](https://gamma.
 | Ultra | Everything in Pro; substantially more AI usage; up to 75 cards per prompt; access to advanced text, image, and video models; up to 100 custom domains; early feature access | Power users, agencies, and heavy generators |
 | Team / Sales | Contact-sales path for teams evaluating Gamma | Shared workspace and organization needs |
 
-*Plan gates verified 2026-06-05 via [gamma.app/pricing](https://gamma.app/pricing). Check the live pricing page for current dollar amounts and billing options before purchase.*
+*Plan gates verified 2026-06-12 via [gamma.app/pricing](https://gamma.app/pricing). Check the live pricing page for current dollar amounts and billing options before purchase.*
 
 ## Against the alternatives
 
@@ -185,7 +185,7 @@ Subscription and team pricing are managed via [gamma.app/pricing](https://gamma.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-05 against [Gamma pricing](https://gamma.app/pricing), Gamma's AI presentation maker page, Gamma API documentation, and Gamma's affiliate-program help page.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against [Gamma pricing](https://gamma.app/pricing), Gamma's AI presentation maker page, Gamma API documentation, and Gamma's affiliate-program help page.
 
 ## FAQ
 

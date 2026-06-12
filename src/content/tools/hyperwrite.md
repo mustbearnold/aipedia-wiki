@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$44.99/month"
 status: active
 launched: 2021-06
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://www.hyperwriteai.com"
     source_label: "HyperWrite official site"
     source_id: hyperwrite-official
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   agent_surface:
@@ -38,16 +38,16 @@ facts:
     source: "https://www.hyperwriteai.com/personal-assistant"
     source_label: "HyperWrite Personal Assistant"
     source_id: hyperwrite-personal-assistant
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
   pricing_anchor:
-    value: "Freemium writing-assistant product with paid plans listed on the vendor pricing page: Premium $19.99/mo monthly or $16/mo annual equivalent; Ultra $44.99/mo monthly or $29/mo annual equivalent as of June 5, 2026."
+    value: "Freemium writing-assistant product with paid plans listed on the vendor pricing page: Premium $19.99/mo monthly or $16/mo annual equivalent; Ultra $44.99/mo monthly or $29/mo annual equivalent as of June 12, 2026."
     source: "https://www.hyperwriteai.com/pricing"
     source_label: "HyperWrite pricing"
     source_id: hyperwrite-pricing
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -56,7 +56,7 @@ facts:
     source: "https://www.hyperwriteai.com"
     source_label: "HyperWrite official site"
     source_id: hyperwrite-official
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: medium
     confidence: medium
   watch_out_for:
@@ -64,7 +64,7 @@ facts:
     source: "https://www.hyperwriteai.com/personal-assistant"
     source_label: "HyperWrite Personal Assistant"
     source_id: hyperwrite-personal-assistant
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -143,7 +143,7 @@ Pricing runs $0 to $44.99/month on monthly billing. Annual billing saves 20% on 
 | **Integrations** | Gmail, Google Docs, LinkedIn, Notion, most browser text fields |
 | **Desktop app** | None, browser-only |
 
-Every data point above was verified against vendor documentation on 2026-06-05. See Sources.
+Every data point above was verified against vendor documentation on 2026-06-12. See Sources.
 
 ## What it actually is
 
@@ -181,7 +181,7 @@ Subscription pricing via [hyperwriteai.com/pricing](https://www.hyperwriteai.com
 | Premium | $19.99/mo | $192/yr (~$16/mo, saves 20%) | 250 per month | 3 custom | Included | **Most daily users land here** |
 | Ultra | $44.99/mo | $348/yr (~$29/mo, saves 20%) | Unlimited | 10 custom | Included with first access to experimental features | Heavy browser-automation workloads |
 
-*Prices verified 2026-06-05 via [HyperWrite pricing](https://www.hyperwriteai.com/pricing). Premium and Ultra both include unlimited TypeAheads and citations with real-time info. Promo codes rotate. The 250-AI-messages cap on Premium is the main reason heavy daily users should compare against Ultra before subscribing.*
+*Prices verified 2026-06-12 via [HyperWrite pricing](https://www.hyperwriteai.com/pricing). Premium and Ultra both include unlimited TypeAheads and citations with real-time info. Promo codes rotate. The 250-AI-messages cap on Premium is the main reason heavy daily users should compare against Ultra before subscribing.*
 
 ## Against the alternatives
 
@@ -207,7 +207,7 @@ Subscription pricing via [hyperwriteai.com/pricing](https://www.hyperwriteai.com
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-05 against [HyperWrite pricing](https://www.hyperwriteai.com/pricing), the [Personal Assistant product page](https://www.hyperwriteai.com/personal-assistant), and the [AI Agent overview](https://www.hyperwriteai.com/aitools/ai-agent).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against [HyperWrite pricing](https://www.hyperwriteai.com/pricing), the [Personal Assistant product page](https://www.hyperwriteai.com/personal-assistant), and the [AI Agent overview](https://www.hyperwriteai.com/aitools/ai-agent).
 
 ## FAQ
 

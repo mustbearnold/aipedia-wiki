@@ -6,10 +6,10 @@ tools: [elevenlabs, wellsaid]
 category: ai-voice
 winner: depends
 seo_title: "ElevenLabs vs WellSaid Labs: Creator Voice or L&D Narration? (June 2026)"
-meta_description: "ElevenLabs vs WellSaid Labs, verified June 5, 2026: compare expressive voice generation, WellSaid Studio pricing, L&D exports, API access, and enterprise fit."
+meta_description: "ElevenLabs vs WellSaid Labs, verified June 12, 2026: compare expressive voice generation, WellSaid Studio pricing, L&D exports, API access, and enterprise fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: weekly
 canonical_fact_table: true
 ---
@@ -88,12 +88,12 @@ WellSaid if the final asset needs training narration, SCORM/LMS handoff, and con
 
 - [ElevenLabs review](/tools/elevenlabs/)
 - [WellSaid Labs review](/tools/wellsaid/)
-- [ElevenLabs pricing](https://elevenlabs.io/pricing) (verified 2026-06-05)
-- [ElevenLabs API pricing](https://elevenlabs.io/pricing/api) (verified 2026-06-05)
-- [ElevenLabs model help](https://help.elevenlabs.io/hc/en-us/articles/17883183930129-What-models-do-you-offer-and-what-is-the-difference-between-them) (verified 2026-06-05)
-- [WellSaid pricing](https://wellsaidlabs.com/pricing) (verified 2026-06-05)
-- [WellSaid pricing help](https://help.wellsaid.io/hc/en-us/articles/39149441616531-How-Much-Does-WellSaid-Studio-Cost) (verified 2026-06-05)
-- [WellSaid API docs](https://docs.wellsaidlabs.com/) (verified 2026-06-05)
+- [ElevenLabs pricing](https://elevenlabs.io/pricing) (verified 2026-06-12)
+- [ElevenLabs API pricing](https://elevenlabs.io/pricing/api) (verified 2026-06-12)
+- [ElevenLabs model help](https://help.elevenlabs.io/hc/en-us/articles/17883183930129-What-models-do-you-offer-and-what-is-the-difference-between-them) (verified 2026-06-12)
+- [WellSaid pricing](https://wellsaidlabs.com/pricing) (verified 2026-06-12)
+- [WellSaid pricing help](https://help.wellsaid.io/hc/en-us/articles/39149441616531-How-Much-Does-WellSaid-Studio-Cost) (verified 2026-06-12)
+- [WellSaid API docs](https://docs.wellsaidlabs.com/) (verified 2026-06-12)
 
 ## Related
 

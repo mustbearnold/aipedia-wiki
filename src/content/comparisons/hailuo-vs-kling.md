@@ -6,10 +6,10 @@ tools: [hailuo, kling]
 category: ai-video
 winner: kling
 seo_title: "Hailuo AI vs Kling 3.0: Which AI Video Tool Should You Test? (June 2026)"
-meta_description: "Hailuo AI vs Kling 3.0, verified June 5, 2026. Kling is the stronger cinematic first test; Hailuo is the value/API route for MiniMax video experiments."
+meta_description: "Hailuo AI vs Kling 3.0, verified June 12, 2026. Kling is the stronger cinematic first test; Hailuo is the value/API route for MiniMax video experiments."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: weekly
 canonical_fact_table: true
 ---
@@ -79,11 +79,11 @@ Yes. Serious buyers should benchmark Seedance 2.0, Kling 3.0, Veo 3.1, Runway, a
 
 ## Sources
 
-- [MiniMax Hailuo 2.3 launch](https://www.minimax.io/news/minimax-hailuo-23), verified 2026-06-02
-- [MiniMax video generation API docs](https://platform.minimax.io/docs/api-reference/video-generation-intro), verified 2026-06-02
-- [MiniMax video package pricing](https://platform.minimax.io/docs/guides/pricing-video), verified 2026-06-05
-- [Hailuo AI official site](https://hailuoai.video/), verified 2026-06-02
-- [Hailuo subscription page](https://hailuoai.video/subscribe), checked 2026-06-02
-- [Kuaishou: Kling AI 3.0 launch](https://ir.kuaishou.com/news-releases/news-release-details/kling-ai-launches-30-model-ushering-era-where-everyone-can-be), verified 2026-06-05
-- [Kling AI](https://klingai.com/), checked 2026-06-05
-- [Kling AI pricing](https://klingai.com/pricing), checked 2026-06-05; dynamic page, verify in account
+- [MiniMax Hailuo 2.3 launch](https://www.minimax.io/news/minimax-hailuo-23), verified 2026-06-12
+- [MiniMax video generation API docs](https://platform.minimax.io/docs/api-reference/video-generation-intro), verified 2026-06-12
+- [MiniMax video package pricing](https://platform.minimax.io/docs/guides/pricing-video), verified 2026-06-12
+- [Hailuo AI official site](https://hailuoai.video/), verified 2026-06-12
+- [Hailuo subscription page](https://hailuoai.video/subscribe), checked 2026-06-12
+- [Kuaishou: Kling AI 3.0 launch](https://ir.kuaishou.com/news-releases/news-release-details/kling-ai-launches-30-model-ushering-era-where-everyone-can-be), verified 2026-06-12
+- [Kling AI](https://klingai.com/), checked 2026-06-12
+- [Kling AI pricing](https://klingai.com/pricing), checked 2026-06-12; dynamic page, verify in account

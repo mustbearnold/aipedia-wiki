@@ -6,10 +6,10 @@ tools: [deepseek, gemini]
 category: ai-chatbots
 winner: depends
 seo_title: "DeepSeek vs Gemini: Which Is Better in June 2026?"
-meta_description: "DeepSeek vs Gemini, verified June 5, 2026: V4 Flash/Pro pricing, Gemini 3.5 Flash, Gemini 3.1 Pro, Google AI plans, API costs, media tools, and buyer fit."
+meta_description: "DeepSeek vs Gemini, verified June 12, 2026: V4 Flash/Pro pricing, Gemini 3.5 Flash, Gemini 3.1 Pro, Google AI plans, API costs, media tools, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---

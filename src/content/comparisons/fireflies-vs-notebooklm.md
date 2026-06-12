@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Fireflies.ai vs NotebookLM: Meeting Memory or Source Notebook?"
 meta_description: "Fireflies.ai vs Google NotebookLM, refreshed June 2026: choose Fireflies for meeting capture and team recall; choose NotebookLM for source-grounded research, Audio Overviews, reports, and study artifacts."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: quarterly
 canonical_fact_table: true
 ---
@@ -96,7 +96,7 @@ Only for meeting recall. NotebookLM is better for analyzing uploaded documents, 
 
 ## Sources
 
-- [Fireflies.ai pricing](https://fireflies.ai/pricing) (verified 2026-06-05)
-- [Fireflies pricing guide](https://guide.fireflies.ai/articles/3734844560-learn-about-the-fireflies-pricing-plans) (verified 2026-06-05)
-- [NotebookLM upgrade information](https://support.google.com/notebooklm/answer/16213268) (verified 2026-06-05)
-- [Google AI Plans](https://one.google.com/about/google-ai-plans/) (verified 2026-06-05)
+- [Fireflies.ai pricing](https://fireflies.ai/pricing) (verified 2026-06-12)
+- [Fireflies pricing guide](https://guide.fireflies.ai/articles/3734844560-learn-about-the-fireflies-pricing-plans) (verified 2026-06-12)
+- [NotebookLM upgrade information](https://support.google.com/notebooklm/answer/16213268) (verified 2026-06-12)
+- [Google AI Plans](https://one.google.com/about/google-ai-plans/) (verified 2026-06-12)

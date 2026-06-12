@@ -6,10 +6,10 @@ tools: [gemini, grok]
 category: ai-chatbots
 winner: depends
 seo_title: "Gemini vs Grok: Google AI or X-Native Assistant?"
-meta_description: "Gemini vs Grok, refreshed June 5, 2026: compare Google AI subscriptions, Workspace, Search, NotebookLM, and Gemini API with Grok, X context, xAI API, Grok 4.3, Voice, Imagine, and X search."
+meta_description: "Gemini vs Grok, refreshed June 12, 2026: compare Google AI subscriptions, Workspace, Search, NotebookLM, and Gemini API with Grok, X context, xAI API, Grok 4.3, Voice, Imagine, and X search."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -71,10 +71,10 @@ Yes. Use Gemini for Google productivity and Grok for X/social context. Keep a so
 
 - [Gemini review](/tools/gemini/)
 - [Grok review](/tools/grok/)
-- [Google AI subscriptions](https://gemini.google/subscriptions/) (verified 2026-06-05)
-- [Gemini API models](https://ai.google.dev/gemini-api/docs/models) (verified 2026-06-05)
-- [xAI Grok product page](https://x.ai/grok) (verified 2026-06-05)
-- [xAI models](https://docs.x.ai/developers/models) (verified 2026-06-05)
-- [xAI billing docs](https://docs.x.ai/console/billing) (verified 2026-06-05)
-- [X Premium help](https://help.x.com/en/using-x/x-premium) (verified 2026-06-05)
+- [Google AI subscriptions](https://gemini.google/subscriptions/) (verified 2026-06-12)
+- [Gemini API models](https://ai.google.dev/gemini-api/docs/models) (verified 2026-06-12)
+- [xAI Grok product page](https://x.ai/grok) (verified 2026-06-12)
+- [xAI models](https://docs.x.ai/developers/models) (verified 2026-06-12)
+- [xAI billing docs](https://docs.x.ai/console/billing) (verified 2026-06-12)
+- [X Premium help](https://help.x.com/en/using-x/x-premium) (verified 2026-06-12)
 - [AI Chatbots & LLMs](/categories/ai-chatbots/)

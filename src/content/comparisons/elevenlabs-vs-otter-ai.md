@@ -6,10 +6,10 @@ tools: [elevenlabs, otter-ai]
 category: ai-voice
 winner: depends
 seo_title: "ElevenLabs vs Otter.ai: Generate Voice or Capture Meetings? (June 2026)"
-meta_description: "ElevenLabs vs Otter.ai, verified June 5, 2026: choose ElevenLabs for generated voice, dubbing, and agents; choose Otter.ai for meeting transcription, summaries, and team memory."
+meta_description: "ElevenLabs vs Otter.ai, verified June 12, 2026: choose ElevenLabs for generated voice, dubbing, and agents; choose Otter.ai for meeting transcription, summaries, and team memory."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: weekly
 canonical_fact_table: true
 ---
@@ -95,11 +95,11 @@ Yes. Capture source calls in Otter, edit the transcript into a script, then crea
 
 - [ElevenLabs review](/tools/elevenlabs/)
 - [Otter.ai review](/tools/otter-ai/)
-- [ElevenLabs pricing](https://elevenlabs.io/pricing) (verified 2026-06-05)
-- [ElevenLabs API pricing](https://elevenlabs.io/pricing/api) (verified 2026-06-05)
-- [ElevenLabs model help](https://help.elevenlabs.io/hc/en-us/articles/17883183930129-What-models-do-you-offer-and-what-is-the-difference-between-them) (verified 2026-06-05)
-- [Otter.ai pricing](https://otter.ai/pricing) (verified 2026-06-05)
-- [OtterPilot overview](https://otter.ai/otterpilot) (verified 2026-06-05)
+- [ElevenLabs pricing](https://elevenlabs.io/pricing) (verified 2026-06-12)
+- [ElevenLabs API pricing](https://elevenlabs.io/pricing/api) (verified 2026-06-12)
+- [ElevenLabs model help](https://help.elevenlabs.io/hc/en-us/articles/17883183930129-What-models-do-you-offer-and-what-is-the-difference-between-them) (verified 2026-06-12)
+- [Otter.ai pricing](https://otter.ai/pricing) (verified 2026-06-12)
+- [OtterPilot overview](https://otter.ai/otterpilot) (verified 2026-06-12)
 
 ## Related
 

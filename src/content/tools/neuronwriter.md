@@ -12,8 +12,8 @@ pricing_model: paid
 price_range: $19-$97/month
 status: active
 launched: 2021-01
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -35,7 +35,7 @@ facts:
     source: "https://neuronwriter.com/features/"
     source_label: "NeuronWriter features"
     source_id: neuronwriter-features
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
   pricing_anchor:
@@ -43,7 +43,7 @@ facts:
     source: "https://neuronwriter.com/pricing-neuron/"
     source_label: "NeuronWriter pricing"
     source_id: neuronwriter-official
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     next_review_at: 2026-08-28
     volatility: high
     confidence: high
@@ -52,7 +52,7 @@ facts:
     source: "https://neuronwriter.com/features/"
     source_label: "NeuronWriter features"
     source_id: neuronwriter-features
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   competitive_position:
@@ -60,7 +60,7 @@ facts:
     source: "https://neuronwriter.com/pricing-neuron/"
     source_label: "NeuronWriter pricing"
     source_id: neuronwriter-official
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   watch_out_for:
@@ -68,7 +68,7 @@ facts:
     source: "https://neuronwriter.com/features/"
     source_label: "NeuronWriter features"
     source_id: neuronwriter-features
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
 tags: [seo, content-optimization, nlp, content-editor, serp-analysis, ai-writing, semantic-seo]
@@ -141,7 +141,7 @@ Five subscription tiers: Bronze, Silver, Gold, Platinum, Diamond. Pricing runs $
 | **Billing** | USD on current pricing page; listed historically in EUR |
 | **Free trial** | 7-day Gold trial |
 
-Every data point above was re-verified against vendor sources on 2026-06-05. See Sources.
+Every data point above was re-verified against vendor sources on 2026-06-12. See Sources.
 
 AiPedia has an approved NeuronWriter affiliate link. The affiliate relationship does not change the ranking, plan advice, or warnings on this page.
 
@@ -178,7 +178,7 @@ The moat is thin. The core scoring engine is commodity NLP applied to SERP scrap
 | Platinum | $77 | 100 | 60K | 25 | Mid-agencies with API access |
 | Diamond | $97 | 150 | 75K | 50 | Large agencies with custom branding |
 
-*Prices verified 2026-06-05 via [NeuronWriter pricing](https://neuronwriter.com/pricing-neuron/). Annual billing shown; monthly billing runs roughly 20% higher (Bronze $23, Silver $45, Gold $69, Platinum $93, Diamond $117). A 7-day Gold trial is available.*
+*Prices verified 2026-06-12 via [NeuronWriter pricing](https://neuronwriter.com/pricing-neuron/). Annual billing shown; monthly billing runs roughly 20% higher (Bronze $23, Silver $45, Gold $69, Platinum $93, Diamond $117). A 7-day Gold trial is available.*
 
 ## Against the alternatives
 
@@ -203,7 +203,7 @@ The moat is thin. The core scoring engine is commodity NLP applied to SERP scrap
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-05 against [NeuronWriter pricing](https://neuronwriter.com/pricing-neuron/), [NeuronWriter features](https://neuronwriter.com/features/), and the [NeuronWriter affiliate program](https://neuronwriter.com/contact/affiliates/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against [NeuronWriter pricing](https://neuronwriter.com/pricing-neuron/), [NeuronWriter features](https://neuronwriter.com/features/), and the [NeuronWriter affiliate program](https://neuronwriter.com/contact/affiliates/).
 
 ## FAQ
 

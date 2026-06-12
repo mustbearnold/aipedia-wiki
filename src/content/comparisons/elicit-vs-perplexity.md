@@ -6,10 +6,10 @@ tools: [elicit, perplexity]
 category: ai-research
 winner: depends
 seo_title: "Elicit vs Perplexity: Academic Evidence or Live-Web Research? (June 2026)"
-meta_description: "Updated June 5, 2026: Elicit is best for paper screening and extraction; Perplexity is best for current cited web research, enterprise search, and Sonar/API workflows."
+meta_description: "Updated June 12, 2026: Elicit is best for paper screening and extraction; Perplexity is best for current cited web research, enterprise search, and Sonar/API workflows."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -89,10 +89,10 @@ Start with Perplexity for broad orientation. Switch to Elicit when the final ans
 
 ## Sources
 
-- [Elicit pricing](https://elicit.com/pricing) (verified 2026-06-05)
-- [Elicit product site](https://elicit.com/) (verified 2026-06-05)
-- [Perplexity Enterprise pricing](https://www.perplexity.ai/enterprise/pricing) (verified 2026-06-05)
-- [Perplexity API pricing](https://docs.perplexity.ai/docs/getting-started/pricing) (verified 2026-06-05)
+- [Elicit pricing](https://elicit.com/pricing) (verified 2026-06-12)
+- [Elicit product site](https://elicit.com/) (verified 2026-06-12)
+- [Perplexity Enterprise pricing](https://www.perplexity.ai/enterprise/pricing) (verified 2026-06-12)
+- [Perplexity API pricing](https://docs.perplexity.ai/docs/getting-started/pricing) (verified 2026-06-12)
 
 ## Related
 

@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$25/month individual; Business from $167/month yearly, Enterprise custom"
 status: active
 launched: 2023-01
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://www.val.town/"
     source_label: "Val Town homepage"
     source_id: val-town-official
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     next_review_at: 2026-08-13
     volatility: medium
     confidence: high
@@ -39,7 +39,7 @@ facts:
     source: "https://docs.val.town/"
     source_label: "Val Town docs"
     source_id: val-town-docs
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     next_review_at: 2026-08-13
     volatility: medium
     confidence: high
@@ -48,7 +48,7 @@ facts:
     source: "https://www.val.town/pricing"
     source_label: "Val Town pricing"
     source_id: val-town-pricing
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -57,7 +57,7 @@ facts:
     source: "https://docs.val.town/"
     source_label: "Val Town docs"
     source_id: val-town-docs
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     next_review_at: 2026-08-13
     volatility: medium
     confidence: high
@@ -66,7 +66,7 @@ facts:
     source: "https://www.val.town/pricing"
     source_label: "Val Town pricing"
     source_id: val-town-pricing
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     next_review_at: 2026-08-13
     volatility: high
     confidence: medium
@@ -181,7 +181,7 @@ Townie, the AI agent that writes vals from natural-language prompts, bills on cr
 | **Standard library** | Email, blob storage, SQLite, HTTP utilities |
 | **Community registry** | Public vals, fork and remix, 100k+ scripts |
 
-Every data point above was verified against vendor sources on 2026-06-05. See Sources.
+Every data point above was verified against vendor sources on 2026-06-12. See Sources.
 
 ## Recent changes
 
@@ -224,7 +224,7 @@ The moats are narrow but real. The community val registry, the browser-first wor
 | Business | From $167/mo yearly-billed headline | $100/mo included | unlimited | 5M runs/day, unlimited custom domains, team accounts, Slack Connect | Small teams, shared workspaces |
 | Enterprise | Custom | Flexible allocation | unlimited | No published runtime caps, log export, SOC 2 | Compliance-heavy orgs |
 
-*Prices verified 2026-06-05 via [val.town/pricing](https://www.val.town/pricing). The public page showed the yearly toggle with two months free during verification; confirm the monthly toggle before quoting month-to-month procurement numbers. Townie runs on a pay-per-use credit model; top-ups are available on every tier.*
+*Prices verified 2026-06-12 via [val.town/pricing](https://www.val.town/pricing). The public page showed the yearly toggle with two months free during verification; confirm the monthly toggle before quoting month-to-month procurement numbers. Townie runs on a pay-per-use credit model; top-ups are available on every tier.*
 
 ## Against the alternatives
 
@@ -250,7 +250,7 @@ The moats are narrow but real. The community val registry, the browser-first wor
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-05 against [val.town/pricing](https://www.val.town/pricing), [Val Town docs](https://docs.val.town), and current Val Town pricing/limits surfaces.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-12 against [val.town/pricing](https://www.val.town/pricing), [Val Town docs](https://docs.val.town), and current Val Town pricing/limits surfaces.
 
 ## FAQ
 

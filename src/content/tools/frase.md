@@ -12,8 +12,8 @@ pricing_model: paid
 price_range: $49-$299+/month
 status: active
 launched: 2018-01
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -33,7 +33,7 @@ facts:
     source: "https://www.frase.io/pricing"
     source_label: "Frase pricing"
     source_id: frase-pricing
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   workflow_surface:
@@ -41,7 +41,7 @@ facts:
     source: "https://www.frase.io/pricing"
     source_label: "Frase pricing"
     source_id: frase-pricing
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -49,7 +49,7 @@ facts:
     source: "https://www.frase.io/pricing"
     source_label: "Frase pricing"
     source_id: frase-pricing
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -58,7 +58,7 @@ facts:
     source: "https://www.frase.io/pricing"
     source_label: "Frase pricing"
     source_id: frase-pricing
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: medium
     confidence: medium
   watch_out_for:
@@ -114,7 +114,7 @@ Current self-serve pricing lists Starter at $49/month, Professional at $129/mont
 | **Backlink data** | None |
 | **Free trial** | 7-day trial with no credit card |
 
-Every data point above was verified against vendor sources on 2026-06-05. See Sources.
+Every data point above was verified against vendor sources on 2026-06-12. See Sources.
 
 ## What it actually is
 
@@ -147,7 +147,7 @@ The editor scores drafts in real time against competitors. The AI drafter fills 
 | Professional | $129 | 40/mo | 3 included (+$29/seat) | **Most teams start here** |
 | Scale | $299 | 100/mo | 5 included (+$29/seat) | Agencies and high-volume teams |
 
-*Prices verified 2026-06-05 via [Frase pricing](https://www.frase.io/pricing). Annual billing saves 20%. Every current self-serve plan includes Frase Agent, SEO and GEO content optimization, AI visibility tracking, site audits, publishing, API, and MCP access; plans differ by volume, domains, seats, history, and enterprise controls.*
+*Prices verified 2026-06-12 via [Frase pricing](https://www.frase.io/pricing). Annual billing saves 20%. Every current self-serve plan includes Frase Agent, SEO and GEO content optimization, AI visibility tracking, site audits, publishing, API, and MCP access; plans differ by volume, domains, seats, history, and enterprise controls.*
 
 ## Against the alternatives
 
@@ -171,7 +171,7 @@ The editor scores drafts in real time against competitors. The AI drafter fills 
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-05 against [Frase pricing](https://www.frase.io/pricing) and [Frase AI Visibility help](https://help.frase.io/article/218-ai-visibility).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against [Frase pricing](https://www.frase.io/pricing) and [Frase AI Visibility help](https://help.frase.io/article/218-ai-visibility).
 
 ## FAQ
 

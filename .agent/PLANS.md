@@ -3780,6 +3780,7 @@ Each date-cluster: all eligible pages June 12-dated, historical/affiliate/news c
 - 2026-06-12: June 2 cluster (55 tools, 12 comparisons, 2 companies anthropic/elevenlabs-company, 1 SEO-tool guide; 3 infra/index static pages skipped): script changed 70/70 files; fixed deepgram/dia/harvey "reverified" (no-hyphen) prose stragglers; confirmed price_history-row verified_at preserved while facts-block verified_at bumped. Links clean, ledger current, full validation passed (33/33 tests, 1104 pages built).
 - 2026-06-12: June 3 cluster (55 comparisons, 4 tools): script changed 59/59 files; no residual stragglers; frontmatter clean. Links clean, ledger current, full validation passed (33/33 tests, 1104 pages built).
 - 2026-06-12: June 4 cluster (47 comparisons, 8 tools): script changed 55/55 files; no stragglers; frontmatter clean. Links clean, ledger current (standalone check), full validation passed (33/33 tests, 1104 pages built).
+- 2026-06-12: June 5 cluster (1 category, 105 comparisons, 37 tools): script changed 143/143 files; second pass fixed 5 files with "checked/re-checked <date>" Sources/prose stragglers (hailuo-vs-kling, heygen-vs-kling/pika/seedance, elevenlabs); freepik affiliate note preserved. Links clean, ledger current, full validation passed (33/33 tests, 1104 pages built).
 
 ### 15. Final report
 

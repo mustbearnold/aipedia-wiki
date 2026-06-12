@@ -6,10 +6,10 @@ tools: [ideogram, stable-diffusion]
 category: ai-image
 winner: depends
 seo_title: "Ideogram vs Stable Diffusion: Which Image Workflow Is Better in 2026?"
-meta_description: "Ideogram vs Stable Diffusion, refreshed June 5, 2026: compare Ideogram 3.0 text-in-image workflows with SD 3.5, open weights, ComfyUI, API credits, and local control."
+meta_description: "Ideogram vs Stable Diffusion, refreshed June 12, 2026: compare Ideogram 3.0 text-in-image workflows with SD 3.5, open weights, ComfyUI, API credits, and local control."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -63,9 +63,9 @@ Yes. Use Ideogram for text-critical source images and Stable Diffusion for local
 
 ## Sources
 
-- [Ideogram pricing](https://ideogram.ai/pricing) (verified 2026-06-05)
-- [Ideogram available plans docs](https://docs.ideogram.ai/plans-and-pricing/available-plans) (verified 2026-06-05)
-- [Stability AI platform pricing](https://platform.stability.ai/pricing) (verified 2026-06-05)
-- [Stability AI Stable Image docs](https://platform.stability.ai/docs/getting-started/stable-image) (verified 2026-06-05)
-- [Stability AI Community License](https://stability.ai/license) (verified 2026-06-05)
+- [Ideogram pricing](https://ideogram.ai/pricing) (verified 2026-06-12)
+- [Ideogram available plans docs](https://docs.ideogram.ai/plans-and-pricing/available-plans) (verified 2026-06-12)
+- [Stability AI platform pricing](https://platform.stability.ai/pricing) (verified 2026-06-12)
+- [Stability AI Stable Image docs](https://platform.stability.ai/docs/getting-started/stable-image) (verified 2026-06-12)
+- [Stability AI Community License](https://stability.ai/license) (verified 2026-06-12)
 - [Ideogram review](/tools/ideogram/) and [Stable Diffusion review](/tools/stable-diffusion/)

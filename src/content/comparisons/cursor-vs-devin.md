@@ -6,10 +6,10 @@ tools: [cursor, devin]
 category: ai-coding
 winner: depends
 seo_title: "Cursor vs Devin: IDE Agent or Autonomous Coding Worker? (June 2026)"
-meta_description: "Cursor vs Devin, verified June 5, 2026: AI-native IDE, Devin Desktop, cloud agents, current pricing, usage limits, and which coding workflow to buy."
+meta_description: "Cursor vs Devin, verified June 12, 2026: AI-native IDE, Devin Desktop, cloud agents, current pricing, usage limits, and which coding workflow to buy."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -18,7 +18,7 @@ canonical_fact_table: true
 
 [Cursor](/tools/cursor/) and [Devin](/tools/devin/) are not interchangeable coding assistants. Cursor is the AI-native IDE for developers who want to stay hands-on inside the edit loop. Devin is Cognition's autonomous software-engineering agent for teams that want to assign scoped work, supervise progress, and review the output.
 
-**Verified June 5, 2026:** Cursor's public pricing still starts with Hobby free, Individual at $20/month, Teams at $40/user/month, and Enterprise custom, with Pro+/Ultra positioned for heavier agent use. Devin's public pricing now lists Free, Pro at $20/month, Max at $200/month, Teams at $80/month plus $40/month per full dev seat, and Enterprise custom, with paid plans using included quotas and extra usage at API pricing.
+**Verified June 12, 2026:** Cursor's public pricing still starts with Hobby free, Individual at $20/month, Teams at $40/user/month, and Enterprise custom, with Pro+/Ultra positioned for heavier agent use. Devin's public pricing now lists Free, Pro at $20/month, Max at $200/month, Teams at $80/month plus $40/month per full dev seat, and Enterprise custom, with paid plans using included quotas and extra usage at API pricing.
 
 ## Quick Answer
 
@@ -110,8 +110,8 @@ Cursor, unless the team already has a queue of well-scoped tickets and reviewers
 
 ## Sources
 
-- [Cursor pricing](https://cursor.com/pricing), verified 2026-06-05
-- [Cursor docs](https://cursor.com/docs), verified 2026-06-05
-- [Devin pricing](https://devin.ai/pricing), verified 2026-06-05
-- [Devin docs](https://docs.devin.ai/get-started/devin-intro), verified 2026-06-05
-- [Devin Desktop model docs](https://docs.devin.ai/desktop/models), verified 2026-06-05
+- [Cursor pricing](https://cursor.com/pricing), verified 2026-06-12
+- [Cursor docs](https://cursor.com/docs), verified 2026-06-12
+- [Devin pricing](https://devin.ai/pricing), verified 2026-06-12
+- [Devin docs](https://docs.devin.ai/get-started/devin-intro), verified 2026-06-12
+- [Devin Desktop model docs](https://docs.devin.ai/desktop/models), verified 2026-06-12

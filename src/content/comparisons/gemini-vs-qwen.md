@@ -6,10 +6,10 @@ tools: [gemini, qwen]
 category: ai-chatbots
 winner: depends
 seo_title: "Gemini vs Qwen: Google AI or Alibaba Model Family?"
-meta_description: "Gemini vs Qwen, refreshed June 5, 2026: compare Google AI subscriptions, Gemini API, Workspace, and media tools with Qwen Chat, Qwen Cloud, Qwen3.7-Max, pricing, and open-weight Qwen3 models."
+meta_description: "Gemini vs Qwen, refreshed June 12, 2026: compare Google AI subscriptions, Gemini API, Workspace, and media tools with Qwen Chat, Qwen Cloud, Qwen3.7-Max, pricing, and open-weight Qwen3 models."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -71,9 +71,9 @@ Yes. Use Gemini as the finished assistant and Qwen as a model-family option for 
 
 - [Gemini review](/tools/gemini/)
 - [Qwen review](/tools/qwen/)
-- [Google AI subscriptions](https://gemini.google/subscriptions/) (verified 2026-06-05)
-- [Gemini API models](https://ai.google.dev/gemini-api/docs/models) (verified 2026-06-05)
-- [Qwen official site](https://qwen.ai/) (verified 2026-06-05)
-- [Qwen Cloud Qwen3.7-Max](https://www.qwencloud.com/models/qwen3.7-max) (verified 2026-06-05)
-- [Qwen Cloud pricing](https://docs.qwencloud.com/developer-guides/getting-started/pricing) (verified 2026-06-05)
-- [Qwen3 release blog](https://qwenlm.github.io/blog/qwen3/) (verified 2026-06-05)
+- [Google AI subscriptions](https://gemini.google/subscriptions/) (verified 2026-06-12)
+- [Gemini API models](https://ai.google.dev/gemini-api/docs/models) (verified 2026-06-12)
+- [Qwen official site](https://qwen.ai/) (verified 2026-06-12)
+- [Qwen Cloud Qwen3.7-Max](https://www.qwencloud.com/models/qwen3.7-max) (verified 2026-06-12)
+- [Qwen Cloud pricing](https://docs.qwencloud.com/developer-guides/getting-started/pricing) (verified 2026-06-12)
+- [Qwen3 release blog](https://qwenlm.github.io/blog/qwen3/) (verified 2026-06-12)

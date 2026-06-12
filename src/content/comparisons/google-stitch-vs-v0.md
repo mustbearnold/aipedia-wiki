@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Google Stitch vs v0: UI Exploration Or Vercel App Builder? (June 2026)"
 meta_description: "June 2026 Google Stitch vs v0 comparison: Stitch wins for Google Labs design exploration; v0 wins for Vercel-native full-stack web apps, deploys, PRs, and token-metered AI building."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -66,7 +66,7 @@ The clean workflow is Stitch for exploring the best UI direction, then v0 for tu
 
 ## Pricing Snapshot
 
-- **Google Stitch:** free Labs surface as of June 5, 2026; no stable public quota, SLA, billing table, or paid-tier timing published by Google.
+- **Google Stitch:** free Labs surface as of June 12, 2026; no stable public quota, SLA, billing table, or paid-tier timing published by Google.
 - **v0 Free:** $0/month with $5 of included monthly credits, Vercel deploys, Design Mode, GitHub sync, and 7 messages/day.
 - **v0 Team:** $30/user/month with $30 monthly credits per user, daily login credits, shared purchased credits, centralized billing, and collaboration.
 - **v0 Business:** $100/user/month with the Team usage structure plus training opt-out by default and business controls.

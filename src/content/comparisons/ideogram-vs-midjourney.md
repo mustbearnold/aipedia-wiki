@@ -6,10 +6,10 @@ tools: [ideogram, midjourney]
 category: ai-image
 winner: depends
 seo_title: "Ideogram vs Midjourney: Text Graphics or Image Ideation in 2026?"
-meta_description: "Ideogram vs Midjourney, refreshed June 5, 2026: compare Ideogram 3.0 text-in-image workflow with Midjourney V8.1, current pricing, rights, API fit, and buyer watch-outs."
+meta_description: "Ideogram vs Midjourney, refreshed June 12, 2026: compare Ideogram 3.0 text-in-image workflow with Midjourney V8.1, current pricing, rights, API fit, and buyer watch-outs."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -100,12 +100,12 @@ Usually, yes, but read the current terms for your account and business size. Ide
 
 - [Ideogram review](/tools/ideogram/)
 - [Midjourney review](/tools/midjourney/)
-- [Ideogram 3.0 features](https://ideogram.ai/features/3.0) (verified 2026-06-05)
-- [Ideogram available plans](https://docs.ideogram.ai/plans-and-pricing/available-plans) (verified 2026-06-05)
-- [Ideogram API pricing](https://ideogram.ai/features/api-pricing) (verified 2026-06-05)
-- [Midjourney version docs](https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version) (verified 2026-06-05)
-- [Midjourney V8.1 update](https://updates.midjourney.com/v8-1-updates/) (verified 2026-06-05)
-- [Midjourney plan comparison](https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans) (verified 2026-06-05)
-- [Midjourney commercial-use docs](https://docs.midjourney.com/hc/en-us/articles/27870375276557-Using-Images-Videos-Commercially) (verified 2026-06-05)
+- [Ideogram 3.0 features](https://ideogram.ai/features/3.0) (verified 2026-06-12)
+- [Ideogram available plans](https://docs.ideogram.ai/plans-and-pricing/available-plans) (verified 2026-06-12)
+- [Ideogram API pricing](https://ideogram.ai/features/api-pricing) (verified 2026-06-12)
+- [Midjourney version docs](https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version) (verified 2026-06-12)
+- [Midjourney V8.1 update](https://updates.midjourney.com/v8-1-updates/) (verified 2026-06-12)
+- [Midjourney plan comparison](https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans) (verified 2026-06-12)
+- [Midjourney commercial-use docs](https://docs.midjourney.com/hc/en-us/articles/27870375276557-Using-Images-Videos-Commercially) (verified 2026-06-12)
 - [AI Image category](/categories/ai-image/)
 - [Best AI image generator answer](/answers/best-ai-image-generator-2026/)

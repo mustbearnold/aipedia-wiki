@@ -6,10 +6,10 @@ tools: [descript, elevenlabs]
 category: ai-voice
 winner: depends
 seo_title: "Descript vs ElevenLabs: Editing or AI Voice? (June 2026)"
-meta_description: "Descript vs ElevenLabs comparison verified June 5, 2026. Descript wins transcript-first editing; ElevenLabs wins TTS, cloning, agents, and API voice generation."
+meta_description: "Descript vs ElevenLabs comparison verified June 12, 2026. Descript wins transcript-first editing; ElevenLabs wins TTS, cloning, agents, and API voice generation."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: quarterly
 canonical_fact_table: true
 ---
@@ -99,10 +99,10 @@ Yes. Generate or clone voice in ElevenLabs, then edit and publish in Descript. T
 
 ## Sources
 
-- [Descript pricing](https://www.descript.com/pricing) (verified 2026-06-05)
-- [Descript help center](https://help.descript.com) (verified 2026-06-05)
-- [ElevenLabs pricing](https://elevenlabs.io/pricing) (verified 2026-06-05)
-- [ElevenLabs API pricing](https://elevenlabs.io/pricing/api) (verified 2026-06-05)
-- [ElevenLabs model docs](https://elevenlabs.io/docs/overview/models) (verified 2026-06-05)
+- [Descript pricing](https://www.descript.com/pricing) (verified 2026-06-12)
+- [Descript help center](https://help.descript.com) (verified 2026-06-12)
+- [ElevenLabs pricing](https://elevenlabs.io/pricing) (verified 2026-06-12)
+- [ElevenLabs API pricing](https://elevenlabs.io/pricing/api) (verified 2026-06-12)
+- [ElevenLabs model docs](https://elevenlabs.io/docs/overview/models) (verified 2026-06-12)
 - [Descript tool review](/tools/descript/)
 - [ElevenLabs tool review](/tools/elevenlabs/)

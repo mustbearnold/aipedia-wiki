@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$200/month individual via Devin pricing; Team from $80/month plus full-dev seats"
 status: active
 launched: 2024-11
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: https://windsurf.com/pricing
     source_label: Devin pricing
     source_id: windsurf-pricing
-    verified_at: '2026-06-05'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-07-05'
@@ -39,7 +39,7 @@ facts:
     source: https://windsurf.com/pricing
     source_label: Devin pricing
     source_id: windsurf-pricing
-    verified_at: '2026-06-05'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-07-05'
@@ -48,7 +48,7 @@ facts:
     source: https://docs.devin.ai/desktop/models
     source_label: Devin Desktop model docs
     source_id: windsurf-docs
-    verified_at: '2026-06-05'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-07-05'
@@ -57,7 +57,7 @@ facts:
     source: https://devin.ai/pricing
     source_label: Devin pricing
     source_id: devin-pricing
-    verified_at: '2026-06-05'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-07-05'
@@ -66,7 +66,7 @@ facts:
     source: https://windsurf.com/pricing
     source_label: Devin pricing
     source_id: windsurf-pricing
-    verified_at: '2026-06-05'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-07-05'
@@ -147,7 +147,7 @@ That makes this page active, not dead. The correct buyer framing is no longer "W
 | **Enterprise** | Custom |
 | **Main risk** | Rebrand/packaging churn and stale old Windsurf pricing claims |
 
-Every data point above was verified against current public Cognition, Devin, and Windsurf sources on 2026-06-05.
+Every data point above was verified against current public Cognition, Devin, and Windsurf sources on 2026-06-12.
 
 ## What It Actually Is
 
@@ -204,7 +204,7 @@ Paid-plan usage language now centers on included allowances that refresh daily/w
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-05 against [Windsurf pricing](https://windsurf.com/pricing), [Devin pricing](https://devin.ai/pricing), [Devin Desktop model docs](https://docs.devin.ai/desktop/models), and the [Cognition acquisition announcement](https://cognition.ai/blog/windsurf).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against [Windsurf pricing](https://windsurf.com/pricing), [Devin pricing](https://devin.ai/pricing), [Devin Desktop model docs](https://docs.devin.ai/desktop/models), and the [Cognition acquisition announcement](https://cognition.ai/blog/windsurf).
 
 ## FAQ
 

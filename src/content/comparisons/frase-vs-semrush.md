@@ -6,10 +6,10 @@ tools: [frase, semrush]
 category: ai-seo
 winner: depends
 seo_title: "Frase.io vs Semrush: Content Workflow or SEO Suite?"
-meta_description: "Frase.io vs Semrush, refreshed June 5, 2026: compare Frase SEO/GEO workflow with Semrush SEO Toolkit, Semrush One, AI Visibility Toolkit, content tools, and buyer fit."
+meta_description: "Frase.io vs Semrush, refreshed June 12, 2026: compare Frase SEO/GEO workflow with Semrush SEO Toolkit, Semrush One, AI Visibility Toolkit, content tools, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -70,8 +70,8 @@ Depends on the job. Frase is better when AI visibility is part of content workfl
 
 ## Sources
 
-- [Frase pricing](https://www.frase.io/pricing) (verified 2026-06-05)
-- [Frase AI Visibility help](https://help.frase.io/article/218-ai-visibility) (verified 2026-06-05)
-- [Semrush One pricing](https://www.semrush.com/pricing/semrush-one/) (verified 2026-06-05)
-- [Semrush subscription plans and toolkits](https://www.semrush.com/kb/1011-subscriptions) (verified 2026-06-05)
-- [Semrush AI Visibility features](https://www.semrush.com/kb/1626-ai-visibility-features) (verified 2026-06-05)
+- [Frase pricing](https://www.frase.io/pricing) (verified 2026-06-12)
+- [Frase AI Visibility help](https://help.frase.io/article/218-ai-visibility) (verified 2026-06-12)
+- [Semrush One pricing](https://www.semrush.com/pricing/semrush-one/) (verified 2026-06-12)
+- [Semrush subscription plans and toolkits](https://www.semrush.com/kb/1011-subscriptions) (verified 2026-06-12)
+- [Semrush AI Visibility features](https://www.semrush.com/kb/1626-ai-visibility-features) (verified 2026-06-12)

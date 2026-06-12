@@ -6,10 +6,10 @@ tools: [exa, kagi]
 category: ai-search
 winner: depends
 seo_title: "Exa AI vs Kagi: Search API or Paid Private Search? (June 2026)"
-meta_description: "Updated June 5, 2026: Exa is a semantic search, contents, answer, monitor, and agent API for builders. Kagi is paid ad-free search with Quick/Research Assistant modes for people."
+meta_description: "Updated June 12, 2026: Exa is a semantic search, contents, answer, monitor, and agent API for builders. Kagi is paid ad-free search with Quick/Research Assistant modes for people."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: quarterly
 canonical_fact_table: true
 ---

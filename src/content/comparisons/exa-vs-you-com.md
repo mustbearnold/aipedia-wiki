@@ -6,10 +6,10 @@ tools: [exa, you-com]
 category: ai-search
 winner: depends
 seo_title: "Exa AI vs You.com: Search APIs Compared (June 2026)"
-meta_description: "Updated June 5, 2026: Exa is semantic retrieval, contents, monitors, answer, and Agent infrastructure. You.com is Search, Contents, Research, Finance Research, MCP, and enterprise grounding APIs."
+meta_description: "Updated June 12, 2026: Exa is semantic retrieval, contents, monitors, answer, and Agent infrastructure. You.com is Search, Contents, Research, Finance Research, MCP, and enterprise grounding APIs."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: quarterly
 canonical_fact_table: true
 ---

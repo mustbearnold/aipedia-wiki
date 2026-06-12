@@ -6,10 +6,10 @@ tools: [elicit, semantic-scholar]
 category: ai-research
 winner: depends
 seo_title: "Elicit vs Semantic Scholar: Paid Review Workflow or Free Discovery? (June 2026)"
-meta_description: "Updated June 5, 2026: Elicit is best for systematic-review screening and extraction; Semantic Scholar is the free AI-powered discovery and Academic Graph API baseline."
+meta_description: "Updated June 12, 2026: Elicit is best for systematic-review screening and extraction; Semantic Scholar is the free AI-powered discovery and Academic Graph API baseline."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -89,10 +89,10 @@ Semantic Scholar's API page lists 214 million papers. Elicit's current pricing p
 
 ## Sources
 
-- [Elicit pricing](https://elicit.com/pricing) (verified 2026-06-05)
-- [Elicit product site](https://elicit.com/) (verified 2026-06-05)
-- [Semantic Scholar Academic Graph API](https://www.semanticscholar.org/product/api) (verified 2026-06-05)
-- [Semantic Scholar homepage](https://www.semanticscholar.org/) (verified 2026-06-05)
+- [Elicit pricing](https://elicit.com/pricing) (verified 2026-06-12)
+- [Elicit product site](https://elicit.com/) (verified 2026-06-12)
+- [Semantic Scholar Academic Graph API](https://www.semanticscholar.org/product/api) (verified 2026-06-12)
+- [Semantic Scholar homepage](https://www.semanticscholar.org/) (verified 2026-06-12)
 
 ## Related
 

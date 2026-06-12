@@ -6,10 +6,10 @@ tools: [midjourney, flux]
 category: ai-image
 winner: depends
 seo_title: "Midjourney vs Flux: Creative Product or Image Model Stack in 2026?"
-meta_description: "Midjourney vs Flux, refreshed June 5, 2026: compare Midjourney V8.1 subscriptions with BFL FLUX.2 API/open-weight workflows, pricing, rights, and production fit."
+meta_description: "Midjourney vs Flux, refreshed June 12, 2026: compare Midjourney V8.1 subscriptions with BFL FLUX.2 API/open-weight workflows, pricing, rights, and production fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -101,14 +101,14 @@ Midjourney is easier to budget when you need a subscription creative tool. Flux 
 
 - [AiPedia Midjourney review](/tools/midjourney/)
 - [AiPedia Flux review](/tools/flux/)
-- [Midjourney version documentation](https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version) (verified 2026-06-05)
-- [Midjourney V8.1 update](https://updates.midjourney.com/v8-1-updates/) (verified 2026-06-05)
-- [Midjourney plan comparison](https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans) (verified 2026-06-05)
-- [Midjourney commercial-use documentation](https://docs.midjourney.com/hc/en-us/articles/27870375276557-Using-Images-Videos-Commercially) (verified 2026-06-05)
-- [BFL FLUX models overview](https://help.bfl.ai/articles/9364115800-flux-models-overview) (verified 2026-06-05)
-- [BFL API pricing](https://docs.bfl.ai/quick_start/pricing) (verified 2026-06-05)
-- [FLUX.2 GitHub repository](https://github.com/black-forest-labs/flux2) (verified 2026-06-05)
-- [fal.ai FLUX.2 API](https://fal.ai/flux-2) (verified 2026-06-05)
-- [Replicate FLUX.2 announcement](https://replicate.com/blog/run-flux-2-on-replicate/) (verified 2026-06-05)
+- [Midjourney version documentation](https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version) (verified 2026-06-12)
+- [Midjourney V8.1 update](https://updates.midjourney.com/v8-1-updates/) (verified 2026-06-12)
+- [Midjourney plan comparison](https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans) (verified 2026-06-12)
+- [Midjourney commercial-use documentation](https://docs.midjourney.com/hc/en-us/articles/27870375276557-Using-Images-Videos-Commercially) (verified 2026-06-12)
+- [BFL FLUX models overview](https://help.bfl.ai/articles/9364115800-flux-models-overview) (verified 2026-06-12)
+- [BFL API pricing](https://docs.bfl.ai/quick_start/pricing) (verified 2026-06-12)
+- [FLUX.2 GitHub repository](https://github.com/black-forest-labs/flux2) (verified 2026-06-12)
+- [fal.ai FLUX.2 API](https://fal.ai/flux-2) (verified 2026-06-12)
+- [Replicate FLUX.2 announcement](https://replicate.com/blog/run-flux-2-on-replicate/) (verified 2026-06-12)
 - [Best AI image generators](/answers/best-ai-image-generator-2026/)
 - [AI image category](/categories/ai-image/)

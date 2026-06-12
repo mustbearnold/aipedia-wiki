@@ -6,10 +6,10 @@ tools: [elevenlabs, fish-audio]
 category: ai-voice
 winner: depends
 seo_title: "ElevenLabs vs Fish Audio: Which Voice Platform Wins? (June 2026)"
-meta_description: "ElevenLabs vs Fish Audio, verified June 5, 2026: Eleven v3, Flash v2.5, Fish S2 Pro, API rates, self-hosting caveats, commercial rights, and buyer fit."
+meta_description: "ElevenLabs vs Fish Audio, verified June 12, 2026: Eleven v3, Flash v2.5, Fish S2 Pro, API rates, self-hosting caveats, commercial rights, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: weekly
 canonical_fact_table: true
 ---
@@ -91,12 +91,12 @@ ElevenLabs is the safer self-serve hosted voice-agent pick. Fish Audio can be ev
 
 - [ElevenLabs review](/tools/elevenlabs/)
 - [Fish Audio review](/tools/fish-audio/)
-- [ElevenLabs pricing](https://elevenlabs.io/pricing) (verified 2026-06-05)
-- [ElevenLabs API pricing](https://elevenlabs.io/pricing/api) (verified 2026-06-05)
-- [ElevenLabs model help](https://help.elevenlabs.io/hc/en-us/articles/17883183930129-What-models-do-you-offer-and-what-is-the-difference-between-them) (verified 2026-06-05)
-- [Fish Audio plans](https://fish.audio/plan/) (verified 2026-06-05)
-- [Fish Audio API pricing and rate limits](https://docs.fish.audio/developer-guide/models-pricing/pricing-and-rate-limits) (verified 2026-06-05)
-- [Fish Audio S2 Pro on Hugging Face](https://huggingface.co/fishaudio/s2-pro) (verified 2026-06-05)
+- [ElevenLabs pricing](https://elevenlabs.io/pricing) (verified 2026-06-12)
+- [ElevenLabs API pricing](https://elevenlabs.io/pricing/api) (verified 2026-06-12)
+- [ElevenLabs model help](https://help.elevenlabs.io/hc/en-us/articles/17883183930129-What-models-do-you-offer-and-what-is-the-difference-between-them) (verified 2026-06-12)
+- [Fish Audio plans](https://fish.audio/plan/) (verified 2026-06-12)
+- [Fish Audio API pricing and rate limits](https://docs.fish.audio/developer-guide/models-pricing/pricing-and-rate-limits) (verified 2026-06-12)
+- [Fish Audio S2 Pro on Hugging Face](https://huggingface.co/fishaudio/s2-pro) (verified 2026-06-12)
 
 ## Related
 

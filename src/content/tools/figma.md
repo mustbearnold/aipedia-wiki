@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$90/mo per Full seat"
 status: active
 launched: 2016-09
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://help.figma.com/hc/en-us/articles/360040328273-Figma-plans-and-features"
     source_label: "Figma plans and features"
     source_id: figma-plans-features
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -38,7 +38,7 @@ facts:
     source: "https://www.figma.com/pricing/"
     source_label: "Figma pricing"
     source_id: figma-pricing
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-07-02
@@ -47,7 +47,7 @@ facts:
     source: "https://www.figma.com/pricing/"
     source_label: "Figma pricing"
     source_id: figma-pricing
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-07-02
@@ -56,7 +56,7 @@ facts:
     source: "https://help.figma.com/hc/en-us/articles/33459875669015-How-AI-credits-work"
     source_label: "Figma AI credits"
     source_id: figma-ai-credits
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-07-02
@@ -65,7 +65,7 @@ facts:
     source: "https://help.figma.com/hc/en-us/articles/36400680326551-Select-an-AI-model-to-use-in-Figma-Make"
     source_label: "Figma Make model selection"
     source_id: figma-make-models
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-07-02
@@ -74,7 +74,7 @@ facts:
     source: "https://help.figma.com/hc/en-us/articles/31304485164695-Create-and-edit-a-Figma-Make-file"
     source_label: "Figma Make creation docs"
     source_id: figma-make-create
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   code_handoff:
@@ -82,7 +82,7 @@ facts:
     source: "https://help.figma.com/hc/en-us/articles/35710574222487-Beyond-the-basics-Using-Figma-Make"
     source_label: "Figma Make advanced docs"
     source_id: figma-make-advanced
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   watch_out_for:
@@ -90,7 +90,7 @@ facts:
     source: "https://help.figma.com/hc/en-us/articles/29717597009431-Guide-to-billing-at-Figma"
     source_label: "Figma billing guide"
     source_id: figma-billing
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
 hero_glance:
@@ -123,7 +123,7 @@ decision_brief:
       tone: negative
 tags: [design, ui-ux, prototyping, collaboration, design-system, figma-make, figma-sites, figma-slides, figma-buzz, dev-mode]
 seo_title: "Figma Review: Pricing, AI Credits, Make & Sites (June 2026)"
-meta_description: "Updated June 5, 2026: Figma pricing, Full seats, AI credits, Figma Make model selection, Sites, Dev Mode, best plan, alternatives, and buyer risks."
+meta_description: "Updated June 12, 2026: Figma pricing, Full seats, AI credits, Figma Make model selection, Sites, Dev Mode, best plan, alternatives, and buyer risks."
 author: "aipedia.wiki Editorial"
 primary_cta_label: "Start with Figma free"
 best_plan: "Professional Full seat at $16/month"
@@ -165,7 +165,7 @@ price_history:
 
 # Figma
 
-Figma is the default product-design platform for teams that build software interfaces together. As verified on June 5, 2026, the platform now spans Figma Design, Dev Mode, FigJam, Slides, Draw, Buzz, Sites, Make, AI credits, design-system administration, and seat-based billing. The practical buying question is no longer "Can Figma do AI?" It can. The better question is whether the buyer needs AI inside a shared design system, or whether a prompt-first app builder would ship the first version faster.
+Figma is the default product-design platform for teams that build software interfaces together. As verified on June 12, 2026, the platform now spans Figma Design, Dev Mode, FigJam, Slides, Draw, Buzz, Sites, Make, AI credits, design-system administration, and seat-based billing. The practical buying question is no longer "Can Figma do AI?" It can. The better question is whether the buyer needs AI inside a shared design system, or whether a prompt-first app builder would ship the first version faster.
 
 AiPedia's answer: Figma is the strongest choice when the design file is the source of truth. Lovable, Bolt.new, v0, and Replit Agent are better when the source of truth is a working app and the design layer can be rougher at first.
 
@@ -284,7 +284,7 @@ The short version: Figma wins when design quality, shared systems, and handoff m
 
 AiPedia scores Figma as a buyer decision page, not as a benchmark claim. Utility is high because Figma remains central to product design, Dev Mode, design systems, Make, Sites, and cross-functional collaboration. Value is strong for teams that use the suite daily, but weaker for solos who only need one generated app. Moat is high because shared design systems and team workflows are hard to migrate. Longevity is high because Figma has expanded from design canvas to multi-product workflow, but prompt-first app builders are attacking the early-prototype use case.
 
-This page was updated on 2026-06-05 against official Figma pricing, AI credit, Make model, Make creation, Make advanced, and plans/features documentation. Unsupported permanent default-model language was removed.
+This page was updated on 2026-06-12 against official Figma pricing, AI credit, Make model, Make creation, Make advanced, and plans/features documentation. Unsupported permanent default-model language was removed.
 
 ## FAQ
 
@@ -302,7 +302,7 @@ Figma Make can create functional prototypes, web apps, and interactive UI from p
 
 **What models does Figma Make use?**
 
-As verified on June 5, 2026, Figma's model-selection docs list multiple selectable non-default models and say the default model may change over time.
+As verified on June 12, 2026, Figma's model-selection docs list multiple selectable non-default models and say the default model may change over time.
 
 **Is Figma better than Lovable?**
 
@@ -314,13 +314,13 @@ No. It can help design, prototype, generate, inspect, and hand off code. Product
 
 ## Sources
 
-- [Figma pricing](https://www.figma.com/pricing/) - current plan, seat, AI-credit, Make, Sites, and feature matrix. Verified 2026-06-05.
-- [Figma AI credits](https://help.figma.com/hc/en-us/articles/33459875669015-How-AI-credits-work) - credit allowances, monthly reset, non-rollover rules, daily caps, and model/complexity consumption notes. Verified 2026-06-05.
-- [Figma Make model selection](https://help.figma.com/hc/en-us/articles/36400680326551-Select-an-AI-model-to-use-in-Figma-Make) - selectable models and default-model caveat. Verified 2026-06-05.
-- [Create and edit a Figma Make file](https://help.figma.com/hc/en-us/articles/31304485164695-Create-and-edit-a-Figma-Make-file) - prompt workflow, attached designs, backend instructions, MCP connectors, preview, and code editing. Verified 2026-06-05.
-- [Beyond the basics: Using Figma Make](https://help.figma.com/hc/en-us/articles/35710574222487-Beyond-the-basics-Using-Figma-Make) - Supabase support, code ZIP download, and GitHub push. Verified 2026-06-05.
-- [Figma plans and features](https://help.figma.com/hc/en-us/articles/360040328273-Figma-plans-and-features) - product lineup, plan features, and governance features. Verified 2026-06-05.
-- [Figma billing guide](https://help.figma.com/hc/en-us/articles/29717597009431-Guide-to-billing-at-Figma) - seat types and product access by role. Verified 2026-06-05.
+- [Figma pricing](https://www.figma.com/pricing/) - current plan, seat, AI-credit, Make, Sites, and feature matrix. Verified 2026-06-12.
+- [Figma AI credits](https://help.figma.com/hc/en-us/articles/33459875669015-How-AI-credits-work) - credit allowances, monthly reset, non-rollover rules, daily caps, and model/complexity consumption notes. Verified 2026-06-12.
+- [Figma Make model selection](https://help.figma.com/hc/en-us/articles/36400680326551-Select-an-AI-model-to-use-in-Figma-Make) - selectable models and default-model caveat. Verified 2026-06-12.
+- [Create and edit a Figma Make file](https://help.figma.com/hc/en-us/articles/31304485164695-Create-and-edit-a-Figma-Make-file) - prompt workflow, attached designs, backend instructions, MCP connectors, preview, and code editing. Verified 2026-06-12.
+- [Beyond the basics: Using Figma Make](https://help.figma.com/hc/en-us/articles/35710574222487-Beyond-the-basics-Using-Figma-Make) - Supabase support, code ZIP download, and GitHub push. Verified 2026-06-12.
+- [Figma plans and features](https://help.figma.com/hc/en-us/articles/360040328273-Figma-plans-and-features) - product lineup, plan features, and governance features. Verified 2026-06-12.
+- [Figma billing guide](https://help.figma.com/hc/en-us/articles/29717597009431-Guide-to-billing-at-Figma) - seat types and product access by role. Verified 2026-06-12.
 
 ## Related
 

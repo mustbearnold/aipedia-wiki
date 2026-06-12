@@ -6,10 +6,10 @@ tools: [elevenlabs, murf]
 category: ai-voice
 winner: depends
 seo_title: "ElevenLabs vs Murf: Voice Quality, Studio, and API Fit (June 2026)"
-meta_description: "ElevenLabs vs Murf, verified June 5, 2026: compare expressive TTS, Murf Studio, Falcon API, dubbing, pricing, voice agents, and which AI voice tool to buy."
+meta_description: "ElevenLabs vs Murf, verified June 12, 2026: compare expressive TTS, Murf Studio, Falcon API, dubbing, pricing, voice agents, and which AI voice tool to buy."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: weekly
 canonical_fact_table: true
 ---
@@ -92,14 +92,14 @@ It depends on the workflow. ElevenLabs bills key API TTS models by characters. M
 
 - [ElevenLabs review](/tools/elevenlabs/)
 - [Murf review](/tools/murf/)
-- [ElevenLabs pricing](https://elevenlabs.io/pricing) (verified 2026-06-05)
-- [ElevenLabs API pricing](https://elevenlabs.io/pricing/api) (verified 2026-06-05)
-- [ElevenLabs model help](https://help.elevenlabs.io/hc/en-us/articles/17883183930129-What-models-do-you-offer-and-what-is-the-difference-between-them) (verified 2026-06-05)
-- [Murf pricing](https://murf.ai/pricing) (verified 2026-06-05)
-- [Murf API overview](https://murf.ai/api) (verified 2026-06-05)
-- [Murf API docs](https://murf.ai/api/docs) (verified 2026-06-05)
-- [Murf Falcon docs](https://murf.ai/api/docs/text-to-speech-models/falcon) (verified 2026-06-05)
-- [Murf API plans and limits](https://help.murf.ai/murf-api-plans-and-limits) (verified 2026-06-05)
+- [ElevenLabs pricing](https://elevenlabs.io/pricing) (verified 2026-06-12)
+- [ElevenLabs API pricing](https://elevenlabs.io/pricing/api) (verified 2026-06-12)
+- [ElevenLabs model help](https://help.elevenlabs.io/hc/en-us/articles/17883183930129-What-models-do-you-offer-and-what-is-the-difference-between-them) (verified 2026-06-12)
+- [Murf pricing](https://murf.ai/pricing) (verified 2026-06-12)
+- [Murf API overview](https://murf.ai/api) (verified 2026-06-12)
+- [Murf API docs](https://murf.ai/api/docs) (verified 2026-06-12)
+- [Murf Falcon docs](https://murf.ai/api/docs/text-to-speech-models/falcon) (verified 2026-06-12)
+- [Murf API plans and limits](https://help.murf.ai/murf-api-plans-and-limits) (verified 2026-06-12)
 
 ## Related
 

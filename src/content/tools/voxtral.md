@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "Open weights for eligible use; hosted TTS $0.016/1k chars; Transcribe 2 from $0.002/min"
 status: active
 launched: 2025-07
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://docs.mistral.ai/models/voxtral-tts-26-03"
     source_label: "Voxtral TTS model card"
     source_id: voxtral-tts-docs
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     next_review_at: 2026-07-05
     volatility: high
     confidence: high
@@ -39,7 +39,7 @@ facts:
     source: "https://docs.mistral.ai/studio-api/audio/speech_to_text"
     source_label: "Mistral speech-to-text docs"
     source_id: voxtral-docs
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     next_review_at: 2026-07-05
     volatility: high
     confidence: high
@@ -48,7 +48,7 @@ facts:
     source: "https://mistral.ai/pricing"
     source_label: "Mistral pricing"
     source_id: mistral-pricing
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     next_review_at: 2026-07-05
     volatility: high
     confidence: high
@@ -57,7 +57,7 @@ facts:
     source: "https://mistral.ai/news/voxtral-tts"
     source_label: "Mistral Voxtral TTS announcement"
     source_id: voxtral-tts-launch
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     next_review_at: 2026-07-05
     volatility: medium
     confidence: high
@@ -66,7 +66,7 @@ facts:
     source: "https://mistral.ai/news/voxtral-tts"
     source_label: "Mistral Voxtral TTS announcement"
     source_id: voxtral-tts-launch
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     next_review_at: 2026-07-05
     volatility: high
     confidence: high
@@ -154,7 +154,7 @@ The June 2026 correction is important: older AiPedia copy treated Voxtral as STT
 | **Best fit** | Mistral-native speech generation, transcription, and audio understanding |
 | **Not a full creator studio** | No ElevenLabs-style voice library, Studio workflow, or dubbing UI |
 
-Every data point above was verified against vendor sources on 2026-06-05. See Sources.
+Every data point above was verified against vendor sources on 2026-06-12. See Sources.
 
 ## What It Actually Is
 
@@ -190,7 +190,7 @@ The stronger buyer case is ecosystem consolidation: one Mistral account, one mod
 | Open TTS weights | Free for eligible use | Mistral announcement says CC BY-NC 4.0; commercial teams need hosted API or license review |
 | Enterprise | Custom | Use Mistral procurement for volume, private deployment, or commercial-license questions |
 
-*Prices verified 2026-06-05 via [Mistral pricing](https://mistral.ai/pricing), [Voxtral TTS model card](https://docs.mistral.ai/models/voxtral-tts-26-03), and [Mistral speech-to-text docs](https://docs.mistral.ai/studio-api/audio/speech_to_text).*
+*Prices verified 2026-06-12 via [Mistral pricing](https://mistral.ai/pricing), [Voxtral TTS model card](https://docs.mistral.ai/models/voxtral-tts-26-03), and [Mistral speech-to-text docs](https://docs.mistral.ai/studio-api/audio/speech_to_text).*
 
 ## Against The Alternatives
 
@@ -223,7 +223,7 @@ The stronger buyer case is ecosystem consolidation: one Mistral account, one mod
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-05 against [Mistral pricing](https://mistral.ai/pricing), [Voxtral TTS model card](https://docs.mistral.ai/models/voxtral-tts-26-03), [Mistral Voxtral TTS announcement](https://mistral.ai/news/voxtral-tts), [Mistral speech-to-text docs](https://docs.mistral.ai/studio-api/audio/speech_to_text), and [Mistral model overview](https://docs.mistral.ai/models/overview).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-12 against [Mistral pricing](https://mistral.ai/pricing), [Voxtral TTS model card](https://docs.mistral.ai/models/voxtral-tts-26-03), [Mistral Voxtral TTS announcement](https://mistral.ai/news/voxtral-tts), [Mistral speech-to-text docs](https://docs.mistral.ai/studio-api/audio/speech_to_text), and [Mistral model overview](https://docs.mistral.ai/models/overview).
 
 ## FAQ
 
@@ -234,7 +234,7 @@ Yes. Mistral now publishes Voxtral TTS v26.03 as a text-to-speech model. Older p
 There are open weights for eligible use, but license terms matter. Voxtral TTS open weights are announced under CC BY-NC 4.0, so commercial teams should use the hosted API or confirm licensing. Hosted API use is paid.
 
 **How much does Voxtral TTS cost?**
-Mistral pricing lists Voxtral TTS v26.03 at $16 per million output characters, equivalent to $0.016 per 1k characters, verified 2026-06-05.
+Mistral pricing lists Voxtral TTS v26.03 at $16 per million output characters, equivalent to $0.016 per 1k characters, verified 2026-06-12.
 
 **Does Voxtral handle transcription?**
 Yes. Voxtral Mini Transcribe 2 handles batch transcription and Voxtral Realtime handles live transcription/audio understanding.

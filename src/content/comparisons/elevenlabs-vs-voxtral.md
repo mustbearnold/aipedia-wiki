@@ -6,10 +6,10 @@ tools: [elevenlabs, voxtral]
 category: ai-voice
 winner: depends
 seo_title: "ElevenLabs vs Voxtral: Creator Voice Platform or Mistral Audio API? (June 2026)"
-meta_description: "ElevenLabs vs Voxtral, corrected and verified June 5, 2026: compare ElevenLabs voice creation with Mistral Voxtral TTS, Transcribe, Realtime, pricing, and API fit."
+meta_description: "ElevenLabs vs Voxtral, corrected and verified June 12, 2026: compare ElevenLabs voice creation with Mistral Voxtral TTS, Transcribe, Realtime, pricing, and API fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: weekly
 canonical_fact_table: true
 ---
@@ -88,12 +88,12 @@ It depends on stack fit. ElevenLabs is easier for a voice-specific app. Voxtral 
 
 - [ElevenLabs review](/tools/elevenlabs/)
 - [Voxtral review](/tools/voxtral/)
-- [ElevenLabs pricing](https://elevenlabs.io/pricing) (verified 2026-06-05)
-- [ElevenLabs API pricing](https://elevenlabs.io/pricing/api) (verified 2026-06-05)
-- [ElevenLabs model help](https://help.elevenlabs.io/hc/en-us/articles/17883183930129-What-models-do-you-offer-and-what-is-the-difference-between-them) (verified 2026-06-05)
-- [Mistral pricing](https://mistral.ai/pricing) (verified 2026-06-05)
-- [Voxtral TTS model card](https://docs.mistral.ai/models/voxtral-tts-26-03) (verified 2026-06-05)
-- [Mistral speech-to-text docs](https://docs.mistral.ai/studio-api/audio/speech_to_text) (verified 2026-06-05)
+- [ElevenLabs pricing](https://elevenlabs.io/pricing) (verified 2026-06-12)
+- [ElevenLabs API pricing](https://elevenlabs.io/pricing/api) (verified 2026-06-12)
+- [ElevenLabs model help](https://help.elevenlabs.io/hc/en-us/articles/17883183930129-What-models-do-you-offer-and-what-is-the-difference-between-them) (verified 2026-06-12)
+- [Mistral pricing](https://mistral.ai/pricing) (verified 2026-06-12)
+- [Voxtral TTS model card](https://docs.mistral.ai/models/voxtral-tts-26-03) (verified 2026-06-12)
+- [Mistral speech-to-text docs](https://docs.mistral.ai/studio-api/audio/speech_to_text) (verified 2026-06-12)
 
 ## Related
 

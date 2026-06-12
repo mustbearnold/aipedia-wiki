@@ -6,10 +6,10 @@ tools: [descript, resemble-ai]
 category: ai-voice
 winner: depends
 seo_title: "Descript vs Resemble AI: Editor or Voice Governance? (June 2026)"
-meta_description: "Descript vs Resemble AI comparison verified June 5, 2026. Descript wins creator editing; Resemble AI wins custom voices, dubbing, detection, and enterprise governance."
+meta_description: "Descript vs Resemble AI comparison verified June 12, 2026. Descript wins creator editing; Resemble AI wins custom voices, dubbing, detection, and enterprise governance."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: quarterly
 canonical_fact_table: true
 ---
@@ -98,9 +98,9 @@ Not when the requirement includes custom voice governance, localization pipeline
 
 ## Sources
 
-- [Descript pricing](https://www.descript.com/pricing) (verified 2026-06-05)
-- [Descript help center](https://help.descript.com) (verified 2026-06-05)
-- [Resemble AI pricing](https://www.resemble.ai/pricing/) (verified 2026-06-05)
-- [Resemble AI products overview](https://www.resemble.ai/products) (verified 2026-06-05)
+- [Descript pricing](https://www.descript.com/pricing) (verified 2026-06-12)
+- [Descript help center](https://help.descript.com) (verified 2026-06-12)
+- [Resemble AI pricing](https://www.resemble.ai/pricing/) (verified 2026-06-12)
+- [Resemble AI products overview](https://www.resemble.ai/products) (verified 2026-06-12)
 - [Descript tool review](/tools/descript/)
 - [Resemble AI tool review](/tools/resemble-ai/)

@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$47-$358+/month outreach; Lead Finder priced separately"
 status: active
 launched: 2021-10
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -31,7 +31,7 @@ facts:
     source: "https://instantly.ai/products/email-outreach"
     source_label: "Instantly email outreach"
     source_id: instantly-email
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
   pricing_anchor:
@@ -39,7 +39,7 @@ facts:
     source: "https://instantly.ai/pricing"
     source_label: "Instantly Pricing"
     source_id: instantly-official
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     next_review_at: 2026-09-05
     volatility: high
     confidence: high
@@ -48,7 +48,7 @@ facts:
     source: "https://instantly.ai/products/lead-finder"
     source_label: "Instantly Lead Finder"
     source_id: instantly-leads
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     next_review_at: 2026-09-05
     volatility: high
     confidence: high
@@ -57,7 +57,7 @@ facts:
     source: "https://instantly.ai/products/deliverability-network"
     source_label: "Instantly deliverability"
     source_id: instantly-deliverability
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   watch_out_for:
@@ -65,7 +65,7 @@ facts:
     source: "https://instantly.ai/products/deliverability-network"
     source_label: "Instantly deliverability"
     source_id: instantly-deliverability
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
 price_history:
@@ -233,11 +233,11 @@ Instantly pricing and packaging are volatile, so AiPedia treats it as a monthly 
 
 ## Sources
 
-- [Instantly pricing](https://instantly.ai/pricing) (verified 2026-06-05)
-- [Instantly email outreach](https://instantly.ai/products/email-outreach) (verified 2026-06-05)
-- [Instantly Lead Finder](https://instantly.ai/products/lead-finder) (verified 2026-06-05)
-- [Instantly deliverability network](https://instantly.ai/products/deliverability-network) (verified 2026-06-05)
-- [Instantly plans overview](https://help.instantly.ai/en/articles/10273259-plans-overview) (verified 2026-06-05)
+- [Instantly pricing](https://instantly.ai/pricing) (verified 2026-06-12)
+- [Instantly email outreach](https://instantly.ai/products/email-outreach) (verified 2026-06-12)
+- [Instantly Lead Finder](https://instantly.ai/products/lead-finder) (verified 2026-06-12)
+- [Instantly deliverability network](https://instantly.ai/products/deliverability-network) (verified 2026-06-12)
+- [Instantly plans overview](https://help.instantly.ai/en/articles/10273259-plans-overview) (verified 2026-06-12)
 
 ## Related
 

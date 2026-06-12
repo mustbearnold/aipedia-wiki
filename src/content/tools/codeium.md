@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: "$0-$200/month individual; Teams from $80/month plus full-dev seats"
 status: active
 launched: 2022-12
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -32,7 +32,7 @@ facts:
     source: https://devin.ai/blog/windsurf-is-now-devin-desktop
     source_label: Devin Desktop announcement
     source_id: codeium-devin-desktop
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
     next_review_at: '2026-07-05'
@@ -41,7 +41,7 @@ facts:
     source: https://windsurf.com/pricing
     source_label: Devin pricing
     source_id: codeium-pricing
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: '2026-07-05'
@@ -50,7 +50,7 @@ facts:
     source: https://devin.ai/blog/windsurf-is-now-devin-desktop
     source_label: Devin Desktop announcement
     source_id: codeium-devin-desktop
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: '2026-07-05'
@@ -59,7 +59,7 @@ facts:
     source: https://windsurf.com/pricing
     source_label: Devin pricing
     source_id: codeium-pricing
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: '2026-07-05'
@@ -68,7 +68,7 @@ facts:
     source: https://devin.ai/blog/windsurf-is-now-devin-desktop
     source_label: Devin Desktop announcement
     source_id: codeium-devin-desktop
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: '2026-07-05'
@@ -141,7 +141,7 @@ As of the June 5, 2026 check, `windsurf.com/pricing` redirects to Devin pricing,
 | **Current agent surface** | Devin Desktop with Agent Command Center, Spaces, ACP support, Devin Local, Devin Cloud, Devin CLI, and Devin Review |
 | **Main risk** | Brand churn: old Codeium and old standalone Windsurf claims are stale |
 
-Every data point above was verified against current Cognition, Devin, and Windsurf sources on 2026-06-05.
+Every data point above was verified against current Cognition, Devin, and Windsurf sources on 2026-06-12.
 
 ## What it actually is
 
@@ -185,7 +185,7 @@ All current public pricing flows through the Windsurf-to-Devin pricing path. His
 | Teams | $80/month base plus $40/month per full dev seat | Team plan plus full dev seats and shared controls | Teams that need admin and collaboration |
 | Enterprise | Custom | SSO/OIDC, centralized admin, deployment/support options | Regulated or large enterprises |
 
-Prices verified 2026-06-05 via [Windsurf pricing](https://windsurf.com/pricing), which redirects to Devin pricing, and the current [Devin Desktop announcement](https://devin.ai/blog/windsurf-is-now-devin-desktop). Existing account entitlements may differ, so enterprise and grandfathered buyers should verify inside the live admin console.
+Prices verified 2026-06-12 via [Windsurf pricing](https://windsurf.com/pricing), which redirects to Devin pricing, and the current [Devin Desktop announcement](https://devin.ai/blog/windsurf-is-now-devin-desktop). Existing account entitlements may differ, so enterprise and grandfathered buyers should verify inside the live admin console.
 
 ## Against the alternatives
 
@@ -206,7 +206,7 @@ Prices verified 2026-06-05 via [Windsurf pricing](https://windsurf.com/pricing),
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-05 against [Windsurf pricing](https://windsurf.com/pricing), [Devin pricing](https://devin.ai/pricing), [Cognition's Devin Desktop announcement](https://devin.ai/blog/windsurf-is-now-devin-desktop), and the [Cognition announcement](https://cognition.ai/blog/introducing-devin-desktop).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against [Windsurf pricing](https://windsurf.com/pricing), [Devin pricing](https://devin.ai/pricing), [Cognition's Devin Desktop announcement](https://devin.ai/blog/windsurf-is-now-devin-desktop), and the [Cognition announcement](https://cognition.ai/blog/introducing-devin-desktop).
 
 ## FAQ
 

@@ -6,10 +6,10 @@ tools: [n8n, make, zapier]
 category: ai-automation
 winner: depends
 seo_title: "n8n vs Make vs Zapier: Best Automation Tool in 2026"
-meta_description: "n8n vs Make vs Zapier, refreshed June 5, 2026: compare self-hosting, execution pricing, Make credits, Zapier tasks, AI Agents, MCP, app coverage, and buyer fit."
+meta_description: "n8n vs Make vs Zapier, refreshed June 12, 2026: compare self-hosting, execution pricing, Make credits, Zapier tasks, AI Agents, MCP, app coverage, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -92,10 +92,10 @@ n8n is best for technical AI-agent workflows, Make is strong for transparent age
 - [n8n review](/tools/n8n/)
 - [Make review](/tools/make/)
 - [Zapier review](/tools/zapier/)
-- [n8n pricing](https://n8n.io/pricing) (verified 2026-06-05)
-- [n8n AI Agent node docs](https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/) (verified 2026-06-05)
-- [Make pricing](https://www.make.com/en/pricing) (verified 2026-06-05)
-- [Make AI Agents](https://www.make.com/en/ai-agents) (verified 2026-06-05)
-- [Zapier pricing](https://zapier.com/pricing) (verified 2026-06-05)
-- [Zapier AI](https://zapier.com/ai) (verified 2026-06-05)
+- [n8n pricing](https://n8n.io/pricing) (verified 2026-06-12)
+- [n8n AI Agent node docs](https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/) (verified 2026-06-12)
+- [Make pricing](https://www.make.com/en/pricing) (verified 2026-06-12)
+- [Make AI Agents](https://www.make.com/en/ai-agents) (verified 2026-06-12)
+- [Zapier pricing](https://zapier.com/pricing) (verified 2026-06-12)
+- [Zapier AI](https://zapier.com/ai) (verified 2026-06-12)
 - [AI Automation category](/categories/ai-automation/)

@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$50-$160+/user/month"
 status: active
 launched: 2018
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: quarterly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: https://wellsaidlabs.com/enterprise
     source_label: WellSaid enterprise
     source_id: wellsaid-enterprise
-    verified_at: '2026-06-05'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-12-05'
@@ -40,7 +40,7 @@ facts:
     source: https://wellsaidlabs.com/pricing
     source_label: WellSaid pricing
     source_id: wellsaid-pricing
-    verified_at: '2026-06-05'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-09-05'
@@ -49,7 +49,7 @@ facts:
     source: https://docs.wellsaidlabs.com/
     source_label: WellSaid API docs
     source_id: wellsaid-docs
-    verified_at: '2026-06-05'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-12-05'
@@ -58,7 +58,7 @@ facts:
     source: https://wellsaidlabs.com/enterprise
     source_label: WellSaid enterprise
     source_id: wellsaid-enterprise
-    verified_at: '2026-06-05'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-12-05'
@@ -67,7 +67,7 @@ facts:
     source: https://docs.wellsaidlabs.com/
     source_label: WellSaid API docs
     source_id: wellsaid-docs
-    verified_at: '2026-06-05'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-12-05'
@@ -76,7 +76,7 @@ facts:
     source: https://wellsaidlabs.com/pricing
     source_label: WellSaid pricing
     source_id: wellsaid-pricing
-    verified_at: '2026-06-05'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-09-05'
@@ -158,7 +158,7 @@ The June 5, 2026 buyer correction: WellSaid should not be described as having no
 - **API:** WellSaid publishes API documentation; confirm access and terms before building.
 - **Main watch-out:** Great fit for enterprise narration, weak fit for emotional creator content.
 
-Every current data point was verified against WellSaid vendor pages and help documentation on 2026-06-05.
+Every current data point was verified against WellSaid vendor pages and help documentation on 2026-06-12.
 
 ## What It Actually Is
 
@@ -192,7 +192,7 @@ Current WellSaid pricing should be evaluated by plan route:
 - **Enterprise:** Custom; evaluate custom voices, advanced support, security, and larger governance requirements.
 - **API:** Separate route; confirm API access, usage, and support directly before building.
 
-Prices and plan routes were verified 2026-06-05 against WellSaid pricing and pricing-help pages. Because WellSaid sells Studio, Enterprise, and API routes, confirm download limits, seats, export formats, custom voice requirements, and API terms before signing.
+Prices and plan routes were verified 2026-06-12 against WellSaid pricing and pricing-help pages. Because WellSaid sells Studio, Enterprise, and API routes, confirm download limits, seats, export formats, custom voice requirements, and API terms before signing.
 
 ## Against The Alternatives
 
@@ -211,7 +211,7 @@ Prices and plan routes were verified 2026-06-05 against WellSaid pricing and pri
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that checks vendor documentation, pricing pages, help-center pages, and product documentation before generating editorial analysis. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-05 against WellSaid pricing, pricing help, enterprise, and API documentation.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that checks vendor documentation, pricing pages, help-center pages, and product documentation before generating editorial analysis. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-12 against WellSaid pricing, pricing help, enterprise, and API documentation.
 
 ## FAQ
 
@@ -232,11 +232,11 @@ No. It is tuned for corporate narration. Use ElevenLabs, Fish Audio, or another 
 
 ## Sources
 
-- [WellSaid Labs official site](https://wellsaidlabs.com) (verified 2026-06-05)
-- [WellSaid pricing](https://wellsaidlabs.com/pricing) (verified 2026-06-05)
-- [WellSaid pricing help](https://help.wellsaid.io/hc/en-us/articles/39149441616531-How-Much-Does-WellSaid-Studio-Cost) (verified 2026-06-05)
-- [WellSaid API docs](https://docs.wellsaidlabs.com/) (verified 2026-06-05)
-- [WellSaid enterprise](https://wellsaidlabs.com/enterprise) (verified 2026-06-05)
+- [WellSaid Labs official site](https://wellsaidlabs.com) (verified 2026-06-12)
+- [WellSaid pricing](https://wellsaidlabs.com/pricing) (verified 2026-06-12)
+- [WellSaid pricing help](https://help.wellsaid.io/hc/en-us/articles/39149441616531-How-Much-Does-WellSaid-Studio-Cost) (verified 2026-06-12)
+- [WellSaid API docs](https://docs.wellsaidlabs.com/) (verified 2026-06-12)
+- [WellSaid enterprise](https://wellsaidlabs.com/enterprise) (verified 2026-06-12)
 
 ## Related
 

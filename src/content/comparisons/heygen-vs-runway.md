@@ -6,10 +6,10 @@ tools: [heygen, runway]
 category: ai-video
 winner: depends
 seo_title: "HeyGen vs Runway: Avatar Videos or Production AI Video? (June 2026)"
-meta_description: "HeyGen vs Runway, verified June 5, 2026. HeyGen wins for avatar-led business video; Runway wins for generated footage, editing, model switching, and API production."
+meta_description: "HeyGen vs Runway, verified June 12, 2026. HeyGen wins for avatar-led business video; Runway wins for generated footage, editing, model switching, and API production."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: weekly
 canonical_fact_table: true
 ---
@@ -72,9 +72,9 @@ Not cleanly for business-avatar workflows. Use HeyGen or Synthesia when the pres
 
 ## Sources
 
-- [HeyGen pricing](https://www.heygen.com/pricing), verified 2026-06-05
-- [HeyGen self-serve API pricing](https://developers.heygen.com/docs/pricing), verified 2026-06-05
-- [HeyGen Avatar V announcement](https://www.heygen.com/blog/announcing-avatar-v), verified 2026-06-05
-- [Runway pricing](https://runwayml.com/pricing), verified 2026-06-05
-- [Runway API model docs](https://docs.dev.runwayml.com/guides/models/), verified 2026-06-05
-- [Runway API pricing docs](https://docs.dev.runwayml.com/guides/pricing/), verified 2026-06-05
+- [HeyGen pricing](https://www.heygen.com/pricing), verified 2026-06-12
+- [HeyGen self-serve API pricing](https://developers.heygen.com/docs/pricing), verified 2026-06-12
+- [HeyGen Avatar V announcement](https://www.heygen.com/blog/announcing-avatar-v), verified 2026-06-12
+- [Runway pricing](https://runwayml.com/pricing), verified 2026-06-12
+- [Runway API model docs](https://docs.dev.runwayml.com/guides/models/), verified 2026-06-12
+- [Runway API pricing docs](https://docs.dev.runwayml.com/guides/pricing/), verified 2026-06-12

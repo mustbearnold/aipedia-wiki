@@ -6,10 +6,10 @@ tools: [descript, voxtral]
 category: ai-voice
 winner: depends
 seo_title: "Descript vs Voxtral: Editor or Mistral Audio API? (June 2026)"
-meta_description: "Descript vs Voxtral comparison verified June 5, 2026. Descript wins creator editing; Voxtral wins Mistral-native TTS, transcription, realtime STT, and API audio workflows."
+meta_description: "Descript vs Voxtral comparison verified June 12, 2026. Descript wins creator editing; Voxtral wins Mistral-native TTS, transcription, realtime STT, and API audio workflows."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: quarterly
 canonical_fact_table: true
 ---
@@ -95,17 +95,17 @@ No. Voxtral is an audio model/API family. Descript is a media editor.
 No. Descript has AI voice tools inside editing, but it is not a hosted TTS/STT model stack.
 
 **How much does Voxtral TTS cost?**
-Mistral pricing lists Voxtral TTS at $0.016 per 1k characters, verified June 5, 2026.
+Mistral pricing lists Voxtral TTS at $0.016 per 1k characters, verified June 12, 2026.
 
 **Which is better for voice agents?**
 Voxtral is more relevant than Descript for voice-agent infrastructure, but teams should still benchmark Voxtral against Cartesia, ElevenLabs, Deepgram, and other specialist stacks on real traffic.
 
 ## Sources
 
-- [Descript pricing](https://www.descript.com/pricing) (verified 2026-06-05)
-- [Descript help center](https://help.descript.com) (verified 2026-06-05)
-- [Mistral pricing](https://mistral.ai/pricing) (verified 2026-06-05)
-- [Voxtral TTS model card](https://docs.mistral.ai/models/voxtral-tts-26-03) (verified 2026-06-05)
-- [Mistral speech-to-text docs](https://docs.mistral.ai/studio-api/audio/speech_to_text) (verified 2026-06-05)
+- [Descript pricing](https://www.descript.com/pricing) (verified 2026-06-12)
+- [Descript help center](https://help.descript.com) (verified 2026-06-12)
+- [Mistral pricing](https://mistral.ai/pricing) (verified 2026-06-12)
+- [Voxtral TTS model card](https://docs.mistral.ai/models/voxtral-tts-26-03) (verified 2026-06-12)
+- [Mistral speech-to-text docs](https://docs.mistral.ai/studio-api/audio/speech_to_text) (verified 2026-06-12)
 - [Descript tool review](/tools/descript/)
 - [Voxtral tool review](/tools/voxtral/)

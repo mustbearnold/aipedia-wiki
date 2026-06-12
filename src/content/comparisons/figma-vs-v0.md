@@ -6,10 +6,10 @@ tools: [figma, v0]
 category: ai-design
 winner: depends
 seo_title: "Figma vs v0: Design System or Vercel App Builder? (June 2026)"
-meta_description: "Updated June 5, 2026: compare Figma and v0 by Vercel for design systems, app generation, pricing, credits, tokens, GitHub, deploys, and handoff."
+meta_description: "Updated June 12, 2026: compare Figma and v0 by Vercel for design systems, app generation, pricing, credits, tokens, GitHub, deploys, and handoff."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -40,7 +40,7 @@ There is no universal winner. Figma is the better design source of truth. v0 is 
 
 ## Pricing Reality
 
-Figma is seat and AI-credit based. As verified June 5, 2026, Figma lists Starter free, Professional Full seat at $16/month, Organization Full seat at $55/month billed annually, and Enterprise Full seat at $90/month billed annually. Starter includes 150 AI credits per day up to 500 per month. Professional Full seats include 3,000 monthly credits, Organization Full seats include 3,500, and Enterprise Full seats include 4,250.
+Figma is seat and AI-credit based. As verified June 12, 2026, Figma lists Starter free, Professional Full seat at $16/month, Organization Full seat at $55/month billed annually, and Enterprise Full seat at $90/month billed annually. Starter includes 150 AI credits per day up to 500 per month. Professional Full seats include 3,000 monthly credits, Organization Full seats include 3,500, and Enterprise Full seats include 4,250.
 
 v0 is credit and token metered. Its public pricing page lists Free at $0/month with $5 of included monthly credits, Vercel deploys, Design Mode, GitHub sync, and a 7-message/day limit. Team is $30/user/month with $30 of included monthly credits per user and $2 of free daily credits on login per user. Business is $100/user/month with training opt-out by default. Enterprise is custom. Model pricing is exposed separately: v0 Mini, v0 Pro, v0 Max, and v0 Max Fast have different input, cache, and output token rates.
 
@@ -90,7 +90,7 @@ AiPedia weighted:
 - Current pricing and usage-meter clarity.
 - Handoff quality for designers, PMs, and engineers.
 - Production risk after the AI-generated output exists.
-- Current official-source support as of 2026-06-05.
+- Current official-source support as of 2026-06-12.
 
 This comparison removes older unsupported model/context-window claims and retired v0 pricing. Affiliate status does not influence the winner. AiPedia has no tracked affiliate publisher link configured for either Figma or v0, so public CTAs should use official vendor URLs.
 
@@ -118,11 +118,11 @@ Often yes, but in order. Use Figma to clarify the design and use v0 to generate 
 
 ## Sources
 
-- [Figma pricing](https://www.figma.com/pricing/) - plan, seat, AI-credit, Make, Dev Mode, and feature matrix. Verified 2026-06-05.
-- [Figma AI credits](https://help.figma.com/hc/en-us/articles/33459875669015-How-AI-credits-work) - included credits and variable Figma Make consumption. Verified 2026-06-05.
-- [Create and edit a Figma Make file](https://help.figma.com/hc/en-us/articles/31304485164695-Create-and-edit-a-Figma-Make-file) - functional prototypes, web apps, attached designs, backend instructions, MCP connectors, preview editing, and code editing. Verified 2026-06-05.
-- [v0 pricing](https://v0.app/pricing) - Free, Team, Business, Enterprise, included credits, daily limits, Design Mode, GitHub sync, and model token pricing. Verified 2026-06-05.
-- [Vercel updated v0 pricing](https://vercel.com/blog/updated-v0-pricing) - token-metered billing model, included credits, and context/token usage explanation. Verified 2026-06-05.
+- [Figma pricing](https://www.figma.com/pricing/) - plan, seat, AI-credit, Make, Dev Mode, and feature matrix. Verified 2026-06-12.
+- [Figma AI credits](https://help.figma.com/hc/en-us/articles/33459875669015-How-AI-credits-work) - included credits and variable Figma Make consumption. Verified 2026-06-12.
+- [Create and edit a Figma Make file](https://help.figma.com/hc/en-us/articles/31304485164695-Create-and-edit-a-Figma-Make-file) - functional prototypes, web apps, attached designs, backend instructions, MCP connectors, preview editing, and code editing. Verified 2026-06-12.
+- [v0 pricing](https://v0.app/pricing) - Free, Team, Business, Enterprise, included credits, daily limits, Design Mode, GitHub sync, and model token pricing. Verified 2026-06-12.
+- [Vercel updated v0 pricing](https://vercel.com/blog/updated-v0-pricing) - token-metered billing model, included credits, and context/token usage explanation. Verified 2026-06-12.
 
 ## Related
 

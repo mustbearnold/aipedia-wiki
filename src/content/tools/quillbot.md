@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$8.33/month billed annually in US checkout; varies by region"
 status: active
 launched: 2017-10
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -34,7 +34,7 @@ facts:
     source: "https://quillbot.com/premium"
     source_label: "QuillBot Premium"
     source_id: quillbot-premium
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -42,7 +42,7 @@ facts:
     source: "https://quillbot.com/premium"
     source_label: "QuillBot Premium"
     source_id: quillbot-premium
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-09-05
@@ -51,7 +51,7 @@ facts:
     source: "https://quillbot.com/premium"
     source_label: "QuillBot Premium"
     source_id: quillbot-premium
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   academic_toolkit:
@@ -59,7 +59,7 @@ facts:
     source: "https://quillbot.com/premium"
     source_label: "QuillBot Premium"
     source_id: quillbot-premium
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   watch_out_for:
@@ -67,7 +67,7 @@ facts:
     source: "https://quillbot.com/premium"
     source_label: "QuillBot Premium"
     source_id: quillbot-premium
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-09-05
@@ -76,7 +76,7 @@ facts:
     source: "https://quillbot.com/affiliates"
     source_label: "QuillBot Affiliate Program"
     source_id: quillbot-affiliate-program
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
 tags: [ai-writing, paraphrasing, grammar-checker, summarizer, plagiarism-checker, student-tools]
@@ -145,7 +145,7 @@ QuillBot's current Premium page says it is trusted by over 35 million writers wo
 | **Extensions** | Chrome, Edge, Word, Google Docs |
 | **Refund policy** | 3-day money-back guarantee on Premium |
 
-Every data point above was verified against vendor documentation on 2026-06-05. See Sources.
+Every data point above was verified against vendor documentation on 2026-06-12. See Sources.
 
 ## What it actually is
 
@@ -182,7 +182,7 @@ Subscription pricing via [quillbot.com/premium](https://quillbot.com/premium):
 | Premium Monthly / Quarterly | Varies by region and checkout state | QuillBot's Help Center says monthly and quarterly options exist; verify the live checkout for the current local price before buying |
 | Team Plan | Volume / team path | Team usage metrics · user management · centralized billing · data control · priority support |
 
-*Prices verified 2026-06-05 via [quillbot.com/premium](https://quillbot.com/premium) and QuillBot's Help Center. Check the live checkout for current monthly, quarterly, regional, and team pricing before purchase.*
+*Prices verified 2026-06-12 via [quillbot.com/premium](https://quillbot.com/premium) and QuillBot's Help Center. Check the live checkout for current monthly, quarterly, regional, and team pricing before purchase.*
 
 ## Against the alternatives
 
@@ -209,7 +209,7 @@ Subscription pricing via [quillbot.com/premium](https://quillbot.com/premium):
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-05 against [quillbot.com/premium](https://quillbot.com/premium), QuillBot's Help Center, QuillBot's affiliate page, and PartnerStack's QuillBot listing.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against [quillbot.com/premium](https://quillbot.com/premium), QuillBot's Help Center, QuillBot's affiliate page, and PartnerStack's QuillBot listing.
 
 ## FAQ
 

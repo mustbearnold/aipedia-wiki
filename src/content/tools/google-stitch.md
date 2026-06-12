@@ -10,8 +10,8 @@ pricing_model: free
 price_range: "Free while in Google Labs; public quotas and paid-tier timing not guaranteed"
 status: active
 launched: 2025-05
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 seo_title: "Google Stitch: Features, Pricing & Review (June 2026)"
 meta_description: "Google Stitch is Google Labs' AI-native UI design canvas for prompt, image, text, and code-based interface exploration. Free in Labs; Google has not published durable public quotas or paid-tier timing."
@@ -33,7 +33,7 @@ facts:
     source: "https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/"
     source_label: "Google Stitch announcement"
     source_id: google-stitch-pricing
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -42,16 +42,16 @@ facts:
     source: "https://labs.google/stitch/"
     source_label: "Google Labs Stitch"
     source_id: google-stitch-labs
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
   pricing_anchor:
-    value: "Accessible through Google Labs as of 2026-06-05, but Google public pages do not publish durable quota, billing, SLA, or paid-tier timing terms for procurement."
+    value: "Accessible through Google Labs as of 2026-06-12, but Google public pages do not publish durable quota, billing, SLA, or paid-tier timing terms for procurement."
     source: "https://stitch.withgoogle.com/"
     source_label: "Google Stitch official site"
     source_id: google-stitch-official
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     next_review_at: 2026-08-13
     volatility: high
     confidence: medium
@@ -60,7 +60,7 @@ facts:
     source: "https://labs.google/stitch/"
     source_label: "Google Labs Stitch"
     source_id: google-stitch-labs
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     next_review_at: 2026-08-13
     volatility: high
     confidence: medium
@@ -69,7 +69,7 @@ facts:
     source: "https://labs.google/stitch/"
     source_label: "Google Labs Stitch"
     source_id: google-stitch-labs
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -140,7 +140,7 @@ It is free while inside Google Labs, but Google has not published stable public 
 | **Handoff** | DESIGN.md, MCP server, SDK, Skills, and exports to developer tools |
 | **Pricing caveat** | No durable public quota, SLA, billing, or paid-tier schedule published |
 
-Every data point above was verified against vendor sources on 2026-06-05. See Sources.
+Every data point above was verified against vendor sources on 2026-06-12. See Sources.
 
 ## What it actually is
 
@@ -173,7 +173,7 @@ Export paths are part of the point, but they are still handoff surfaces, not pro
 | Google Labs (current) | Free | Public Google pages do not publish durable quota, SLA, billing, or paid-tier timing terms |
 | Paid tiers | Not announced | Wait for Google-published commercial terms before budget planning |
 
-*Verified 2026-06-05 via [Google Stitch](https://stitch.withgoogle.com/), the [March Google Labs announcement](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/), and the [May real-time design update](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-updates/). Third-party quota and paid-tier claims are intentionally not treated as Google-published procurement facts.*
+*Verified 2026-06-12 via [Google Stitch](https://stitch.withgoogle.com/), the [March Google Labs announcement](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/), and the [May real-time design update](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-updates/). Third-party quota and paid-tier claims are intentionally not treated as Google-published procurement facts.*
 
 ## Against the alternatives
 
@@ -205,7 +205,7 @@ Export paths are part of the point, but they are still handoff surfaces, not pro
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis shown. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-05 against [stitch.withgoogle.com](https://stitch.withgoogle.com/), the [Google Labs announcement](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/), and the [Google Labs real-time design update](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-updates/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis shown. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against [stitch.withgoogle.com](https://stitch.withgoogle.com/), the [Google Labs announcement](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/), and the [Google Labs real-time design update](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-updates/).
 
 ## FAQ
 

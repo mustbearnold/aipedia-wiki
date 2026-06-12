@@ -6,10 +6,10 @@ tools: [figma, google-stitch]
 category: ai-design
 winner: depends
 seo_title: "Figma vs Google Stitch: Production Design or AI UI Canvas? (June 2026)"
-meta_description: "Updated June 5, 2026: compare Figma and Google Stitch for product design systems, AI UI exploration, pricing, exports, handoff, and buyer risk."
+meta_description: "Updated June 12, 2026: compare Figma and Google Stitch for product design systems, AI UI exploration, pricing, exports, handoff, and buyer risk."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -88,7 +88,7 @@ AiPedia treats this as a buyer decision, not a feature checklist. We weighted:
 - How much human design review remains after generation.
 - Whether official sources support the claim.
 
-This comparison was refreshed on 2026-06-05 from official Figma and Google sources. Affiliate status does not influence the winner. AiPedia has no tracked affiliate publisher link configured for either Figma or Google Stitch, so public CTAs should use official vendor URLs.
+This comparison was refreshed on 2026-06-12 from official Figma and Google sources. Affiliate status does not influence the winner. AiPedia has no tracked affiliate publisher link configured for either Figma or Google Stitch, so public CTAs should use official vendor URLs.
 
 ## FAQ
 
@@ -114,11 +114,11 @@ Neither is a full coding IDE. Figma is better for design specs and Dev Mode hand
 
 ## Sources
 
-- [Figma pricing](https://www.figma.com/pricing/) - plan, seat, AI-credit, Make, Sites, Dev Mode, and feature matrix. Verified 2026-06-05.
-- [Figma AI credits](https://help.figma.com/hc/en-us/articles/33459875669015-How-AI-credits-work) - credit allowances and agentic AI consumption caveats. Verified 2026-06-05.
-- [Create and edit a Figma Make file](https://help.figma.com/hc/en-us/articles/31304485164695-Create-and-edit-a-Figma-Make-file) - prompts, attached designs, backend instructions, MCP connectors, preview editing, and code editing. Verified 2026-06-05.
-- [Google Stitch March 2026 announcement](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/) - AI-native canvas, design agent, DESIGN.md, prototypes, voice, MCP/SDK, and exports. Verified 2026-06-05.
-- [Google Stitch May 2026 update](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-updates/) - real-time design, Stitch Agent, AI Studio links, Antigravity export, and Netlify publishing. Verified 2026-06-05.
+- [Figma pricing](https://www.figma.com/pricing/) - plan, seat, AI-credit, Make, Sites, Dev Mode, and feature matrix. Verified 2026-06-12.
+- [Figma AI credits](https://help.figma.com/hc/en-us/articles/33459875669015-How-AI-credits-work) - credit allowances and agentic AI consumption caveats. Verified 2026-06-12.
+- [Create and edit a Figma Make file](https://help.figma.com/hc/en-us/articles/31304485164695-Create-and-edit-a-Figma-Make-file) - prompts, attached designs, backend instructions, MCP connectors, preview editing, and code editing. Verified 2026-06-12.
+- [Google Stitch March 2026 announcement](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/) - AI-native canvas, design agent, DESIGN.md, prototypes, voice, MCP/SDK, and exports. Verified 2026-06-12.
+- [Google Stitch May 2026 update](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-updates/) - real-time design, Stitch Agent, AI Studio links, Antigravity export, and Netlify publishing. Verified 2026-06-12.
 
 ## Related
 

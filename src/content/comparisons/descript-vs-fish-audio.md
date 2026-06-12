@@ -6,10 +6,10 @@ tools: [descript, fish-audio]
 category: ai-voice
 winner: depends
 seo_title: "Descript vs Fish Audio: Editor or Open TTS? (June 2026)"
-meta_description: "Descript vs Fish Audio comparison verified June 5, 2026. Descript wins editing; Fish Audio wins open-weight TTS, self-hosting, and high-volume speech generation."
+meta_description: "Descript vs Fish Audio comparison verified June 12, 2026. Descript wins editing; Fish Audio wins open-weight TTS, self-hosting, and high-volume speech generation."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: quarterly
 canonical_fact_table: true
 ---
@@ -97,9 +97,9 @@ Not for high-volume TTS, self-hosting, or model experimentation. Descript's AI S
 
 ## Sources
 
-- [Descript pricing](https://www.descript.com/pricing) (verified 2026-06-05)
-- [Descript help center](https://help.descript.com) (verified 2026-06-05)
-- [Fish Audio plans](https://fish.audio/plan/) (verified 2026-06-05)
-- [Fish Audio API pricing](https://docs.fish.audio/developer-guide/models-pricing/pricing-and-rate-limits) (verified 2026-06-05)
+- [Descript pricing](https://www.descript.com/pricing) (verified 2026-06-12)
+- [Descript help center](https://help.descript.com) (verified 2026-06-12)
+- [Fish Audio plans](https://fish.audio/plan/) (verified 2026-06-12)
+- [Fish Audio API pricing](https://docs.fish.audio/developer-guide/models-pricing/pricing-and-rate-limits) (verified 2026-06-12)
 - [Descript tool review](/tools/descript/)
 - [Fish Audio tool review](/tools/fish-audio/)

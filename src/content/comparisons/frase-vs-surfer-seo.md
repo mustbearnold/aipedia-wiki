@@ -6,10 +6,10 @@ tools: [frase, surfer-seo]
 category: ai-seo
 winner: depends
 seo_title: "Frase.io vs Surfer SEO: Brief Workflow or Content Optimizer?"
-meta_description: "Frase.io vs Surfer SEO, refreshed June 5, 2026: compare Frase AI Agent, GEO visibility, audits, API/MCP access with Surfer Content Editor, AI Tracker, tracked pages, and pricing."
+meta_description: "Frase.io vs Surfer SEO, refreshed June 12, 2026: compare Frase AI Agent, GEO visibility, audits, API/MCP access with Surfer Content Editor, AI Tracker, tracked pages, and pricing."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -70,7 +70,7 @@ Yes. Use Frase for research and brief creation, then Surfer for final optimizati
 
 ## Sources
 
-- [Frase pricing](https://www.frase.io/pricing) (verified 2026-06-05)
-- [Frase AI Visibility help](https://help.frase.io/article/218-ai-visibility) (verified 2026-06-05)
-- [Surfer SEO pricing](https://surferseo.com/pricing/) (verified 2026-06-05)
-- [Surfer SEO official site](https://surferseo.com/) (verified 2026-06-05)
+- [Frase pricing](https://www.frase.io/pricing) (verified 2026-06-12)
+- [Frase AI Visibility help](https://help.frase.io/article/218-ai-visibility) (verified 2026-06-12)
+- [Surfer SEO pricing](https://surferseo.com/pricing/) (verified 2026-06-12)
+- [Surfer SEO official site](https://surferseo.com/) (verified 2026-06-12)

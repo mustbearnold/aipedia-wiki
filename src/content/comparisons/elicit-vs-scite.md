@@ -6,10 +6,10 @@ tools: [elicit, scite]
 category: ai-research
 winner: depends
 seo_title: "Elicit vs Scite: Extraction Workflow or Citation Context? (June 2026)"
-meta_description: "Updated June 5, 2026: Elicit is best for systematic-review screening and extraction; Scite is best for Smart Citations, citation context, and MCP/API evidence layers."
+meta_description: "Updated June 12, 2026: Elicit is best for systematic-review screening and extraction; Scite is best for Smart Citations, citation context, and MCP/API evidence layers."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -85,10 +85,10 @@ No. Elicit can summarize and extract from papers, but it is not built primarily 
 
 ## Sources
 
-- [Elicit pricing](https://elicit.com/pricing) (verified 2026-06-05)
-- [Elicit product site](https://elicit.com/) (verified 2026-06-05)
-- [Scite pricing](https://scite.ai/pricing) (verified 2026-06-05)
-- [Research Solutions Scite MCP announcement](https://www.nasdaq.com/press-release/research-solutions-launches-scite-mcp-connecting-chatgpt-claude-other-ai-tools) (verified 2026-06-05)
+- [Elicit pricing](https://elicit.com/pricing) (verified 2026-06-12)
+- [Elicit product site](https://elicit.com/) (verified 2026-06-12)
+- [Scite pricing](https://scite.ai/pricing) (verified 2026-06-12)
+- [Research Solutions Scite MCP announcement](https://www.nasdaq.com/press-release/research-solutions-launches-scite-mcp-connecting-chatgpt-claude-other-ai-tools) (verified 2026-06-12)
 
 ## Related
 

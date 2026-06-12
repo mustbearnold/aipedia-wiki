@@ -6,10 +6,10 @@ tools: [midjourney, stable-diffusion]
 category: ai-image
 winner: depends
 seo_title: "Midjourney vs Stable Diffusion: Hosted Polish or Open Workflow?"
-meta_description: "Midjourney vs Stable Diffusion, refreshed June 5, 2026: compare Midjourney plans/version docs with SD 3.5, Stable Image pricing, local workflows, licenses, and buyer fit."
+meta_description: "Midjourney vs Stable Diffusion, refreshed June 12, 2026: compare Midjourney plans/version docs with SD 3.5, Stable Image pricing, local workflows, licenses, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -75,9 +75,9 @@ Yes. Use Midjourney for fast concept exploration and Stable Diffusion for privat
 
 ## Sources
 
-- [Midjourney plan comparison docs](https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans) (verified 2026-06-05)
-- [Midjourney version docs](https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version) (verified 2026-06-05)
-- [Midjourney terms](https://docs.midjourney.com/hc/en-us/articles/32083055291277-Terms-of-Service) (verified 2026-06-05)
-- [Stability AI platform pricing](https://platform.stability.ai/pricing) (verified 2026-06-05)
-- [Stability AI Stable Image docs](https://platform.stability.ai/docs/getting-started/stable-image) (verified 2026-06-05)
-- [Stability AI Community License](https://stability.ai/license) (verified 2026-06-05)
+- [Midjourney plan comparison docs](https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans) (verified 2026-06-12)
+- [Midjourney version docs](https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version) (verified 2026-06-12)
+- [Midjourney terms](https://docs.midjourney.com/hc/en-us/articles/32083055291277-Terms-of-Service) (verified 2026-06-12)
+- [Stability AI platform pricing](https://platform.stability.ai/pricing) (verified 2026-06-12)
+- [Stability AI Stable Image docs](https://platform.stability.ai/docs/getting-started/stable-image) (verified 2026-06-12)
+- [Stability AI Community License](https://stability.ai/license) (verified 2026-06-12)

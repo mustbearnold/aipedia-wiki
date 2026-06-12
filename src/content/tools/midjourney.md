@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$10-$120/month"
 status: active
 launched: 2022-07
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://updates.midjourney.com/v8-1-updates"
     source_label: "Midjourney V8.1 update"
     source_id: midjourney-v81-update
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-13
@@ -39,7 +39,7 @@ facts:
     source: "https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version"
     source_label: "Midjourney version docs"
     source_id: midjourney-version-docs
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
     next_review_at: 2026-06-13
@@ -48,7 +48,7 @@ facts:
     source: "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans"
     source_label: "Midjourney plan comparison docs"
     source_id: midjourney-plans-docs
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-13
@@ -57,7 +57,7 @@ facts:
     source: "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans"
     source_label: "Midjourney plan comparison docs"
     source_id: midjourney-plans-docs
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-13
@@ -66,7 +66,7 @@ facts:
     source: "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans"
     source_label: "Midjourney plan comparison docs"
     source_id: midjourney-plans-docs
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-13
@@ -75,7 +75,7 @@ facts:
     source: "https://docs.midjourney.com/hc/en-us/articles/33329300781837-Web-vs-Discord"
     source_label: "Midjourney web vs Discord docs"
     source_id: midjourney-version-docs
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   image_generation:
@@ -83,7 +83,7 @@ facts:
     source: "https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version"
     source_label: "Midjourney version docs"
     source_id: midjourney-version-docs
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-13
@@ -92,7 +92,7 @@ facts:
     source: "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans"
     source_label: "Midjourney plan comparison docs"
     source_id: midjourney-plans-docs
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   real_time_voice:
@@ -100,7 +100,7 @@ facts:
     source: "https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version"
     source_label: "Midjourney version docs"
     source_id: midjourney-version-docs
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
   web_browsing:
@@ -108,7 +108,7 @@ facts:
     source: "https://docs.midjourney.com/hc/en-us/articles/33329300781837-Web-vs-Discord"
     source_label: "Midjourney web vs Discord docs"
     source_id: midjourney-version-docs
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
   coding_agent:
@@ -116,7 +116,7 @@ facts:
     source: "https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version"
     source_label: "Midjourney version docs"
     source_id: midjourney-version-docs
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
   enterprise_controls:
@@ -124,7 +124,7 @@ facts:
     source: "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans"
     source_label: "Midjourney plan comparison docs"
     source_id: midjourney-plans-docs
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   data_retention_or_privacy:
@@ -132,7 +132,7 @@ facts:
     source: "https://docs.midjourney.com/hc/en-us/articles/32083055291277-Terms-of-Service"
     source_label: "Midjourney terms"
     source_id: midjourney-terms
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   open_source_or_local:
@@ -140,7 +140,7 @@ facts:
     source: "https://docs.midjourney.com/hc/en-us/articles/32083055291277-Terms-of-Service"
     source_label: "Midjourney terms"
     source_id: midjourney-terms
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
   best_for:
@@ -148,7 +148,7 @@ facts:
     source: "https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version"
     source_label: "Midjourney version docs"
     source_id: midjourney-version-docs
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   watch_out_for:
@@ -156,7 +156,7 @@ facts:
     source: "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans"
     source_label: "Midjourney plan comparison docs"
     source_id: midjourney-plans-docs
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
 tags: [ai-image, image-generation, text-to-image, midjourney, art, design, creative, v7, v8]
@@ -234,7 +234,7 @@ Pricing runs $10-$120/month. No free tier. No generally-available public API.
 | **Commercial rights** | Included on all paid tiers · Free users have no commercial rights · $1M+ revenue orgs require Pro or Mega |
 | **Free tier** | None (discontinued late 2024) |
 
-Every data point above was verified against vendor documentation on 2026-06-05. See Sources.
+Every data point above was verified against vendor documentation on 2026-06-12. See Sources.
 
 ## What it actually is
 
@@ -273,7 +273,7 @@ Subscription pricing via [midjourney.com pricing](https://docs.midjourney.com/hc
 | Pro | $60 | $48 (~$576/yr) | 30 hrs | Unlimited | Yes | Agency or freelance client work |
 | Mega | $120 | $96 (~$1,152/yr) | 60 hrs | Unlimited | Yes | Sustained Fast-mode workloads |
 
-*Prices verified 2026-06-05 via [Midjourney Comparing Plans](https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans). Annual billing saves 20% across all tiers. No free trial since late 2024.*
+*Prices verified 2026-06-12 via [Midjourney Comparing Plans](https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans). Annual billing saves 20% across all tiers. No free trial since late 2024.*
 
 ## Against the alternatives
 
@@ -301,7 +301,7 @@ Subscription pricing via [midjourney.com pricing](https://docs.midjourney.com/hc
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-05 against [Midjourney Version docs](https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version), [Comparing Plans](https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans), [Using Images & Videos Commercially](https://docs.midjourney.com/hc/en-us/articles/27870375276557-Using-Images-Videos-Commercially), the [V8.1 update](https://updates.midjourney.com/v8-1-updates), the [V8 Alpha update](https://updates.midjourney.com/v8-alpha/), and the [Niji V7 announcement](https://updates.midjourney.com/niji-v7/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against [Midjourney Version docs](https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version), [Comparing Plans](https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans), [Using Images & Videos Commercially](https://docs.midjourney.com/hc/en-us/articles/27870375276557-Using-Images-Videos-Commercially), the [V8.1 update](https://updates.midjourney.com/v8-1-updates), the [V8 Alpha update](https://updates.midjourney.com/v8-alpha/), and the [Niji V7 announcement](https://updates.midjourney.com/niji-v7/).
 
 ## FAQ
 

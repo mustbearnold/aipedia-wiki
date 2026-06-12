@@ -6,10 +6,10 @@ tools: [cursor, val-town]
 category: ai-coding
 winner: depends
 seo_title: "Cursor vs Val Town: AI IDE or Instant TypeScript Runtime? (June 2026)"
-meta_description: "Cursor vs Val Town, verified June 5, 2026: AI coding IDE, Val Town runtime, Townie credits, pricing, MCP, API endpoints, cron jobs, and workflow fit."
+meta_description: "Cursor vs Val Town, verified June 12, 2026: AI coding IDE, Val Town runtime, Townie credits, pricing, MCP, API endpoints, cron jobs, and workflow fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -18,7 +18,7 @@ canonical_fact_table: true
 
 [Cursor](/tools/cursor/) and [Val Town](/tools/val-town/) both help developers ship code faster, but they sit in different parts of the stack. Cursor is an AI-native IDE for editing a repository. Val Town is a hosted JavaScript/TypeScript runtime for instantly deployed vals, APIs, crons, email handlers, small apps, MCP-connected automation, and Townie-assisted coding in the browser.
 
-**Verified June 5, 2026:** Cursor pricing still anchors on Hobby free, Individual from $20/month, Teams at $40/user/month, and Enterprise custom. Val Town pricing lists Free at $0, Pro at $21/month yearly with $10 Townie AI credit/month, Business starting at $167/month yearly with $100 Townie AI credit/month, and Enterprise custom.
+**Verified June 12, 2026:** Cursor pricing still anchors on Hobby free, Individual from $20/month, Teams at $40/user/month, and Enterprise custom. Val Town pricing lists Free at $0, Pro at $21/month yearly with $10 Townie AI credit/month, Business starting at $167/month yearly with $100 Townie AI credit/month, and Enterprise custom.
 
 ## Quick Answer
 
@@ -106,8 +106,8 @@ Yes. Use Cursor for durable code and Val Town for lightweight endpoints, schedul
 
 ## Sources
 
-- [Cursor pricing](https://cursor.com/pricing), verified 2026-06-05
-- [Cursor docs](https://cursor.com/docs), verified 2026-06-05
-- [Val Town pricing](https://www.val.town/pricing), verified 2026-06-05
-- [Val Town docs](https://docs.val.town/), verified 2026-06-05
-- [Townie's back in town](https://blog.val.town/townie-v5), verified 2026-06-05
+- [Cursor pricing](https://cursor.com/pricing), verified 2026-06-12
+- [Cursor docs](https://cursor.com/docs), verified 2026-06-12
+- [Val Town pricing](https://www.val.town/pricing), verified 2026-06-12
+- [Val Town docs](https://docs.val.town/), verified 2026-06-12
+- [Townie's back in town](https://blog.val.town/townie-v5), verified 2026-06-12

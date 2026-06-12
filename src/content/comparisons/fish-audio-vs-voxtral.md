@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Fish Audio / OpenAudio S1 + S2 vs Voxtral: Which Voice AI Is Better in 2026?"
 meta_description: "June 2026 head-to-head of Fish Audio and Voxtral. Compare open-weight TTS, Mistral Voxtral TTS, transcription, realtime STT, pricing, and stack fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: quarterly
 canonical_fact_table: true
 ---

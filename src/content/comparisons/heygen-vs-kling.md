@@ -6,10 +6,10 @@ tools: [heygen, kling]
 category: ai-video
 winner: depends
 seo_title: "HeyGen vs Kling 3.0: Avatar Video or Cinematic AI Video? (June 2026)"
-meta_description: "HeyGen vs Kling 3.0, verified June 5, 2026. Choose HeyGen for avatar-led presenter video; choose Kling for generated footage, native audio, and cinematic clips."
+meta_description: "HeyGen vs Kling 3.0, verified June 12, 2026. Choose HeyGen for avatar-led presenter video; choose Kling for generated footage, native audio, and cinematic clips."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: weekly
 canonical_fact_table: true
 ---
@@ -72,10 +72,10 @@ Most training teams should start with HeyGen or Synthesia. Use Kling only for ge
 
 ## Sources
 
-- [HeyGen pricing](https://www.heygen.com/pricing), verified 2026-06-05
-- [HeyGen self-serve API pricing](https://developers.heygen.com/docs/pricing), verified 2026-06-05
-- [HeyGen Avatar V announcement](https://www.heygen.com/blog/announcing-avatar-v), verified 2026-06-05
-- [HeyGen API docs](https://docs.heygen.com), verified 2026-06-05
-- [Kuaishou: Kling AI 3.0 launch](https://ir.kuaishou.com/news-releases/news-release-details/kling-ai-launches-30-model-ushering-era-where-everyone-can-be), verified 2026-06-05
-- [Kling AI](https://klingai.com/), checked 2026-06-05
-- [Kling AI pricing](https://klingai.com/pricing), checked 2026-06-05; dynamic page, verify in account
+- [HeyGen pricing](https://www.heygen.com/pricing), verified 2026-06-12
+- [HeyGen self-serve API pricing](https://developers.heygen.com/docs/pricing), verified 2026-06-12
+- [HeyGen Avatar V announcement](https://www.heygen.com/blog/announcing-avatar-v), verified 2026-06-12
+- [HeyGen API docs](https://docs.heygen.com), verified 2026-06-12
+- [Kuaishou: Kling AI 3.0 launch](https://ir.kuaishou.com/news-releases/news-release-details/kling-ai-launches-30-model-ushering-era-where-everyone-can-be), verified 2026-06-12
+- [Kling AI](https://klingai.com/), checked 2026-06-12
+- [Kling AI pricing](https://klingai.com/pricing), checked 2026-06-12; dynamic page, verify in account

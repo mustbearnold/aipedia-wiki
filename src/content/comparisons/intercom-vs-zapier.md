@@ -6,10 +6,10 @@ tools: [intercom, zapier]
 category: ai-automation
 winner: depends
 seo_title: "Intercom vs Zapier: Customer Support or App Automation?"
-meta_description: "Intercom vs Zapier, refreshed June 5, 2026: compare Fin AI Agent support automation with Zapier's 9,000+ app platform, Agents, MCP, task pricing, and buyer fit."
+meta_description: "Intercom vs Zapier, refreshed June 12, 2026: compare Fin AI Agent support automation with Zapier's 9,000+ app platform, Agents, MCP, task pricing, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -70,8 +70,8 @@ Yes. Zapier can automate follow-up from Intercom conversations, tags, leads, use
 
 - [Intercom review](/tools/intercom/)
 - [Zapier review](/tools/zapier/)
-- [Intercom pricing](https://www.intercom.com/pricing) (verified 2026-06-05)
-- [Fin AI pricing](https://fin.ai/pricing) (verified 2026-06-05)
-- [Zapier pricing](https://zapier.com/pricing) (verified 2026-06-05)
-- [Zapier AI](https://zapier.com/ai) (verified 2026-06-05)
+- [Intercom pricing](https://www.intercom.com/pricing) (verified 2026-06-12)
+- [Fin AI pricing](https://fin.ai/pricing) (verified 2026-06-12)
+- [Zapier pricing](https://zapier.com/pricing) (verified 2026-06-12)
+- [Zapier AI](https://zapier.com/ai) (verified 2026-06-12)
 - [AI Automation category](/categories/ai-automation/)

@@ -6,10 +6,10 @@ tools: [devin, val-town]
 category: ai-coding
 winner: depends
 seo_title: "Devin vs Val Town: Autonomous Coding Agent or Serverless Runtime? (June 2026)"
-meta_description: "Devin vs Val Town, verified June 5, 2026. Compare Devin's autonomous software-engineering agent with Val Town's browser-based TypeScript runtime, Townie AI credits, pricing, and workflow fit."
+meta_description: "Devin vs Val Town, verified June 12, 2026. Compare Devin's autonomous software-engineering agent with Val Town's browser-based TypeScript runtime, Townie AI credits, pricing, and workflow fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -40,7 +40,7 @@ Choose **Devin** when the job is broader software engineering: a repo task, bug 
 
 ## Pricing And Limits
 
-**Devin pricing, verified June 5, 2026:**
+**Devin pricing, verified June 12, 2026:**
 
 - Free: light agent quota.
 - Pro: $20/month.
@@ -50,7 +50,7 @@ Choose **Devin** when the job is broader software engineering: a repo task, bug 
 - Usage model: agent usage allowances plus extra usage at API pricing.
 - Core unit: delegated engineering session.
 
-**Val Town pricing, verified June 5, 2026:**
+**Val Town pricing, verified June 12, 2026:**
 
 - Free: unlimited public vals, 100k runs/day, and 15-minute cron intervals.
 - Pro: $21/month yearly-billed headline.

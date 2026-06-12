@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$200/month individual; Team from $80/month plus full-dev seats"
 status: active
 launched: 2024-12
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://docs.devin.ai/get-started/devin-intro"
     source_label: "Devin docs"
     source_id: devin-docs
-    verified_at: 2026-06-04
+    verified_at: 2026-06-12
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -39,7 +39,7 @@ facts:
     source: "https://docs.devin.ai/get-started/devin-intro"
     source_label: "Devin docs"
     source_id: devin-docs
-    verified_at: 2026-06-04
+    verified_at: 2026-06-12
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -48,7 +48,7 @@ facts:
     source: "https://devin.ai/pricing"
     source_label: "Devin pricing"
     source_id: devin-pricing
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -57,7 +57,7 @@ facts:
     source: "https://docs.devin.ai/get-started/devin-intro"
     source_label: "Devin docs"
     source_id: devin-docs
-    verified_at: 2026-06-04
+    verified_at: 2026-06-12
     next_review_at: 2026-08-13
     volatility: high
     confidence: medium
@@ -66,7 +66,7 @@ facts:
     source: "https://docs.devin.ai/get-started/devin-intro"
     source_label: "Devin docs"
     source_id: devin-docs
-    verified_at: 2026-06-04
+    verified_at: 2026-06-12
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -159,7 +159,7 @@ The delegation model is the core differentiator. Assign a ticket over Slack or L
 | **MCP support** | Yes · MCP Marketplace in Settings (Pro and above) |
 | **Underlying models** | Cognition does not publish a stable exact model mix on the pricing page; evaluate quality on real tickets |
 
-Every data point above was verified against vendor documentation on 2026-06-05. See Sources.
+Every data point above was verified against vendor documentation on 2026-06-12. See Sources.
 
 ## What it actually is
 
@@ -199,7 +199,7 @@ Pricing via [devin.ai/pricing](https://devin.ai/pricing). Individual plans use i
 | Team | $80/mo base plus full-dev seats | Shared quota | Plan/seat dependent | Teams wanting admin + centralized billing |
 | Enterprise | Custom | Custom quota + VPC option | Unlimited | SSO, SAML/OIDC, custom deployment |
 
-*Prices verified 2026-06-05 via [Devin pricing](https://devin.ai/pricing). Team pricing should be quoted with the full-dev-seat add-on, not just the base workspace price. The old ACU-specific public wording should not be treated as the current buying copy unless it appears in the account screen.*
+*Prices verified 2026-06-12 via [Devin pricing](https://devin.ai/pricing). Team pricing should be quoted with the full-dev-seat add-on, not just the base workspace price. The old ACU-specific public wording should not be treated as the current buying copy unless it appears in the account screen.*
 
 ## Against the alternatives
 
@@ -225,7 +225,7 @@ Pricing via [devin.ai/pricing](https://devin.ai/pricing). Individual plans use i
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-05 against [Devin pricing](https://devin.ai/pricing), [Devin Desktop model docs](https://docs.devin.ai/desktop/models), the [MCP Marketplace announcement](https://cognition.ai/blog/mcp-marketplace), and the [Cognition acquisition of Windsurf](https://cognition.ai/blog/windsurf).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against [Devin pricing](https://devin.ai/pricing), [Devin Desktop model docs](https://docs.devin.ai/desktop/models), the [MCP Marketplace announcement](https://cognition.ai/blog/mcp-marketplace), and the [Cognition acquisition of Windsurf](https://cognition.ai/blog/windsurf).
 
 ## FAQ
 

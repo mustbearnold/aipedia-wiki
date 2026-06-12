@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Fireflies.ai vs Readwise Reader: Meetings or Reading Retention?"
 meta_description: "Fireflies.ai vs Readwise Reader, refreshed June 2026: choose Fireflies for meeting capture and team memory; choose Readwise for Reader, Ghostreader, highlights, exports, and spaced-repetition review."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: quarterly
 canonical_fact_table: true
 ---
@@ -93,8 +93,8 @@ No. Fireflies is not a read-later app, highlight manager, or spaced-repetition r
 
 ## Sources
 
-- [Fireflies.ai pricing](https://fireflies.ai/pricing) (verified 2026-06-05)
-- [Readwise pricing](https://readwise.io/pricing) (verified 2026-06-05)
-- [Readwise Reader pricing](https://readwise.io/pricing/reader) (verified 2026-06-05)
-- [Readwise Reader](https://readwise.io/read) (verified 2026-06-05)
-- [Ghostreader docs](https://docs.readwise.io/reader/guides/ghostreader/overview) (verified 2026-06-05)
+- [Fireflies.ai pricing](https://fireflies.ai/pricing) (verified 2026-06-12)
+- [Readwise pricing](https://readwise.io/pricing) (verified 2026-06-12)
+- [Readwise Reader pricing](https://readwise.io/pricing/reader) (verified 2026-06-12)
+- [Readwise Reader](https://readwise.io/read) (verified 2026-06-12)
+- [Ghostreader docs](https://docs.readwise.io/reader/guides/ghostreader/overview) (verified 2026-06-12)

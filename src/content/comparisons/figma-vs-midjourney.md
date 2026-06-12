@@ -6,10 +6,10 @@ tools: [figma, midjourney]
 category: ai-design
 winner: depends
 seo_title: "Figma vs Midjourney: Product Design or Image Ideation? (June 2026)"
-meta_description: "Updated June 5, 2026: compare Figma and Midjourney for product design, image ideation, pricing, AI credits, V8.1, handoff, and creative workflow."
+meta_description: "Updated June 12, 2026: compare Figma and Midjourney for product design, image ideation, pricing, AI credits, V8.1, handoff, and creative workflow."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -41,7 +41,7 @@ Use both when the project needs an art-directed visual direction before product 
 
 ## Pricing Reality
 
-Figma pricing is seat and AI-credit based. As verified June 5, 2026, Figma lists Starter free; Professional Full seat at $16/month; Organization Full seat at $55/month billed annually; and Enterprise Full seat at $90/month billed annually. Starter includes 150 AI credits per day up to 500 per month. Professional Full seats include 3,000 AI credits per month, Organization Full seats include 3,500, and Enterprise Full seats include 4,250. Additional credit usage and seat mix matter for teams using Figma Make, Sites, image tools, or heavier AI workflows.
+Figma pricing is seat and AI-credit based. As verified June 12, 2026, Figma lists Starter free; Professional Full seat at $16/month; Organization Full seat at $55/month billed annually; and Enterprise Full seat at $90/month billed annually. Starter includes 150 AI credits per day up to 500 per month. Professional Full seats include 3,000 AI credits per month, Organization Full seats include 3,500, and Enterprise Full seats include 4,250. Additional credit usage and seat mix matter for teams using Figma Make, Sites, image tools, or heavier AI workflows.
 
 Midjourney pricing is subscription and generation-capacity based. Its official plan docs list Basic at $10/month, Standard at $30/month, Pro at $60/month, and Mega at $120/month, with annual billing reducing the effective monthly cost by 20%. Standard, Pro, and Mega include Relax Mode for unlimited image generations; Pro and Mega add Stealth Mode. Businesses over $1,000,000 in annual gross revenue need Pro or Mega for commercial use under Midjourney's terms.
 
@@ -92,7 +92,7 @@ AiPedia weighted:
 - How much human review remains before the output is useful.
 - Pricing clarity and the unit being billed: seats/AI credits versus subscription/GPU time.
 - Production risk around handoff, privacy, rights, and governance.
-- Current official-source support as of 2026-06-05.
+- Current official-source support as of 2026-06-12.
 
 Affiliate status does not influence the winner. AiPedia has no tracked affiliate publisher link configured for either Figma or Midjourney, so public CTAs should use official vendor URLs.
 
@@ -120,11 +120,11 @@ Often yes. Use Midjourney to explore mood and direction, then Figma to build the
 
 ## Sources
 
-- [Figma pricing](https://www.figma.com/pricing/) - plan, seat, AI-credit, Make, Dev Mode, and feature matrix. Verified 2026-06-05.
-- [Figma AI credits](https://help.figma.com/hc/en-us/articles/33459875669015-How-AI-credits-work) - included credits and variable Figma Make consumption. Verified 2026-06-05.
-- [Create and edit a Figma Make file](https://help.figma.com/hc/en-us/articles/31304485164695-Create-and-edit-a-Figma-Make-file) - functional prototypes, web apps, attached designs, backend instructions, MCP connectors, preview editing, and code editing. Verified 2026-06-05.
-- [Midjourney plan comparison](https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans) - Basic, Standard, Pro, Mega, GPU time, Relax Mode, Stealth Mode, annual pricing, and commercial terms. Verified 2026-06-05.
-- [Midjourney version docs](https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version) - V8.1, V7, Niji 7, HD, and version behavior. Verified 2026-06-05.
+- [Figma pricing](https://www.figma.com/pricing/) - plan, seat, AI-credit, Make, Dev Mode, and feature matrix. Verified 2026-06-12.
+- [Figma AI credits](https://help.figma.com/hc/en-us/articles/33459875669015-How-AI-credits-work) - included credits and variable Figma Make consumption. Verified 2026-06-12.
+- [Create and edit a Figma Make file](https://help.figma.com/hc/en-us/articles/31304485164695-Create-and-edit-a-Figma-Make-file) - functional prototypes, web apps, attached designs, backend instructions, MCP connectors, preview editing, and code editing. Verified 2026-06-12.
+- [Midjourney plan comparison](https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans) - Basic, Standard, Pro, Mega, GPU time, Relax Mode, Stealth Mode, annual pricing, and commercial terms. Verified 2026-06-12.
+- [Midjourney version docs](https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version) - V8.1, V7, Niji 7, HD, and version behavior. Verified 2026-06-12.
 
 ## Related
 

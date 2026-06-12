@@ -6,10 +6,10 @@ tools: [cursor, windsurf]
 category: ai-coding
 winner: cursor
 seo_title: "Cursor vs Windsurf / Devin Desktop: Which AI IDE Wins? (June 2026)"
-meta_description: "Cursor vs Windsurf, verified June 5, 2026: Cursor AI IDE versus Windsurf's move into Devin Desktop, current pricing redirects, SWE-1.6, BYOK, and buyer risk."
+meta_description: "Cursor vs Windsurf, verified June 12, 2026: Cursor AI IDE versus Windsurf's move into Devin Desktop, current pricing redirects, SWE-1.6, BYOK, and buyer risk."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -108,8 +108,8 @@ Not automatically. Former Codeium/Windsurf users should first evaluate the curre
 
 ## Sources
 
-- [Cursor pricing](https://cursor.com/pricing), verified 2026-06-05
-- [Cursor docs](https://cursor.com/docs), verified 2026-06-05
-- [Devin pricing / Windsurf pricing redirect](https://windsurf.com/pricing), verified 2026-06-05
-- [Devin Desktop model docs / Windsurf model docs redirect](https://docs.devin.ai/desktop/models), verified 2026-06-05
-- [Cognition acquisition of Windsurf](https://cognition.ai/blog/windsurf), verified 2026-06-05
+- [Cursor pricing](https://cursor.com/pricing), verified 2026-06-12
+- [Cursor docs](https://cursor.com/docs), verified 2026-06-12
+- [Devin pricing / Windsurf pricing redirect](https://windsurf.com/pricing), verified 2026-06-12
+- [Devin Desktop model docs / Windsurf model docs redirect](https://docs.devin.ai/desktop/models), verified 2026-06-12
+- [Cognition acquisition of Windsurf](https://cognition.ai/blog/windsurf), verified 2026-06-12

@@ -6,10 +6,10 @@ tools: [intercom, make]
 category: ai-automation
 winner: depends
 seo_title: "Intercom vs Make: AI Support Platform or Workflow Automation?"
-meta_description: "Intercom vs Make, refreshed June 5, 2026: compare Fin AI Agent outcome pricing with Make's visual automation canvas, credits, AI Agents, MCP, and workflow fit."
+meta_description: "Intercom vs Make, refreshed June 12, 2026: compare Fin AI Agent outcome pricing with Make's visual automation canvas, credits, AI Agents, MCP, and workflow fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -70,8 +70,8 @@ Yes. Make can route Intercom conversations, tags, customers, and support events 
 
 - [Intercom review](/tools/intercom/)
 - [Make review](/tools/make/)
-- [Intercom pricing](https://www.intercom.com/pricing) (verified 2026-06-05)
-- [Fin AI pricing](https://fin.ai/pricing) (verified 2026-06-05)
-- [Make pricing](https://www.make.com/en/pricing) (verified 2026-06-05)
-- [Make AI Agents](https://www.make.com/en/ai-agents) (verified 2026-06-05)
+- [Intercom pricing](https://www.intercom.com/pricing) (verified 2026-06-12)
+- [Fin AI pricing](https://fin.ai/pricing) (verified 2026-06-12)
+- [Make pricing](https://www.make.com/en/pricing) (verified 2026-06-12)
+- [Make AI Agents](https://www.make.com/en/ai-agents) (verified 2026-06-12)
 - [AI Automation category](/categories/ai-automation/)

@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Google Stitch vs Lovable: Design Canvas Or AI App Builder? (June 2026)"
 meta_description: "June 2026 Google Stitch vs Lovable comparison: Stitch wins for Google Labs UI exploration; Lovable wins for deployed full-stack MVPs with credits, Cloud, Supabase, and GitHub sync."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -66,7 +66,7 @@ The clean hybrid path is Stitch for UI exploration, then Lovable when the winnin
 
 ## Pricing Snapshot
 
-- **Google Stitch:** free Labs surface as of June 5, 2026; no durable public quota, SLA, billing table, or paid-tier schedule published by Google.
+- **Google Stitch:** free Labs surface as of June 12, 2026; no durable public quota, SLA, billing table, or paid-tier schedule published by Google.
 - **Lovable Free:** 5 daily credits, capped at 30 credits/month, workspace collaboration, and private projects.
 - **Lovable Pro 100 credits:** $25/month, plus 5 daily credits up to 150/month, custom domains, badge removal, Code mode, roles, and private projects.
 - **Lovable higher Pro bundles:** $50-$2,250/month depending on monthly credits.

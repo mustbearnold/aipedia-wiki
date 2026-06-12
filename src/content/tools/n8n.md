@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0 (self-host) - €667+/month (Business cloud)"
 status: active
 launched: 2019-06
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -34,7 +34,7 @@ facts:
     source: "https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/"
     source_label: "n8n AI Agent node docs"
     source_id: n8n-agent-docs
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-09-05
@@ -43,7 +43,7 @@ facts:
     source: "https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/"
     source_label: "n8n AI Agent node docs"
     source_id: n8n-agent-docs
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-09-05
@@ -52,7 +52,7 @@ facts:
     source: "https://n8n.io/pricing"
     source_label: "n8n pricing"
     source_id: n8n-pricing
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-09-05
@@ -61,7 +61,7 @@ facts:
     source: "https://n8n.io/pricing"
     source_label: "n8n pricing"
     source_id: n8n-pricing
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-09-05
@@ -70,7 +70,7 @@ facts:
     source: "https://n8n.io/pricing"
     source_label: "n8n pricing"
     source_id: n8n-pricing
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-13
@@ -79,7 +79,7 @@ facts:
     source: "https://docs.n8n.io"
     source_label: "n8n documentation"
     source_id: n8n-docs
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   image_generation:
@@ -87,7 +87,7 @@ facts:
     source: "https://docs.n8n.io"
     source_label: "n8n documentation"
     source_id: n8n-docs
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   video_generation:
@@ -95,7 +95,7 @@ facts:
     source: "https://docs.n8n.io"
     source_label: "n8n documentation"
     source_id: n8n-docs
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   real_time_voice:
@@ -103,7 +103,7 @@ facts:
     source: "https://docs.n8n.io"
     source_label: "n8n documentation"
     source_id: n8n-docs
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
   web_browsing:
@@ -111,7 +111,7 @@ facts:
     source: "https://docs.n8n.io"
     source_label: "n8n documentation"
     source_id: n8n-docs
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   coding_agent:
@@ -119,7 +119,7 @@ facts:
     source: "https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/"
     source_label: "n8n AI Agent node docs"
     source_id: n8n-agent-docs
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   enterprise_controls:
@@ -127,7 +127,7 @@ facts:
     source: "https://n8n.io/pricing"
     source_label: "n8n pricing"
     source_id: n8n-pricing
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-13
@@ -136,7 +136,7 @@ facts:
     source: "https://docs.n8n.io"
     source_label: "n8n documentation"
     source_id: n8n-docs
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   open_source_or_local:
@@ -144,7 +144,7 @@ facts:
     source: "https://github.com/n8n-io/n8n"
     source_label: "n8n GitHub repository"
     source_id: n8n-github
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   best_for:
@@ -152,7 +152,7 @@ facts:
     source: "https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/"
     source_label: "n8n AI Agent node docs"
     source_id: n8n-agent-docs
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   watch_out_for:
@@ -160,7 +160,7 @@ facts:
     source: "https://docs.n8n.io"
     source_label: "n8n documentation"
     source_id: n8n-docs
-    verified_at: 2026-06-05
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
 tags: [automation, workflows, ai-agents, no-code, open-source, integrations, zapier-alternative, self-host]
@@ -234,7 +234,7 @@ n8n is the open-source workflow automation platform built by n8n GmbH. Visual ca
 | **Deployment** | Docker · Kubernetes · VPS · Railway · any Node.js host |
 | **Data residency** | Full control in self-host |
 
-Every data point above was verified against vendor documentation on 2026-06-05. See Sources.
+Every data point above was verified against vendor documentation on 2026-06-12. See Sources.
 
 ## What it actually is
 
@@ -272,7 +272,7 @@ Subscription pricing via [n8n.io/pricing](https://n8n.io/pricing). All cloud tie
 | Business (cloud) | €667 | 40,000 | Higher | Unlimited | 6 | SSO / SAML / LDAP, self-hosted option, enterprise scale |
 | Enterprise | Custom | Custom | 200+ | Unlimited | Unlimited | On-prem option, dedicated support, SLA |
 
-*Prices verified 2026-06-05 via [n8n pricing](https://n8n.io/pricing). All tiers include unlimited users and every integration. Pricing is based on monthly workflow executions, not per-step cost. Qualifying startups get 50% off the Business plan. Self-hosted Community Edition has no feature caps; hosting cost is the VPS bill (typically $5 to $20/month).*
+*Prices verified 2026-06-12 via [n8n pricing](https://n8n.io/pricing). All tiers include unlimited users and every integration. Pricing is based on monthly workflow executions, not per-step cost. Qualifying startups get 50% off the Business plan. Self-hosted Community Edition has no feature caps; hosting cost is the VPS bill (typically $5 to $20/month).*
 
 ## Against the alternatives
 
@@ -297,7 +297,7 @@ Subscription pricing via [n8n.io/pricing](https://n8n.io/pricing). All cloud tie
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-05 against [n8n pricing](https://n8n.io/pricing), [n8n documentation](https://docs.n8n.io), and the [n8n AI Agent node docs](https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-12 against [n8n pricing](https://n8n.io/pricing), [n8n documentation](https://docs.n8n.io), and the [n8n AI Agent node docs](https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/).
 
 ## FAQ
 
@@ -318,10 +318,10 @@ AI workflows count as regular executions. There is no separate AI pricing tier. 
 
 ## Sources
 
-- [n8n pricing](https://n8n.io/pricing): current cloud plan rates and execution limits (verified 2026-06-05)
-- [n8n documentation](https://docs.n8n.io): self-host setup, nodes, and workflow reference (verified 2026-06-05)
-- [n8n AI Agent node](https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/): native agent capabilities (verified 2026-06-05)
-- [n8n GitHub](https://github.com/n8n-io/n8n): source, releases, and license (verified 2026-06-05)
+- [n8n pricing](https://n8n.io/pricing): current cloud plan rates and execution limits (verified 2026-06-12)
+- [n8n documentation](https://docs.n8n.io): self-host setup, nodes, and workflow reference (verified 2026-06-12)
+- [n8n AI Agent node](https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/): native agent capabilities (verified 2026-06-12)
+- [n8n GitHub](https://github.com/n8n-io/n8n): source, releases, and license (verified 2026-06-12)
 
 ## Related
 

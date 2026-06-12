@@ -6,10 +6,10 @@ tools: [gamma, presentations-ai]
 category: ai-presentation
 winner: gamma
 seo_title: "Gamma vs Presentations.AI: Creator Workspace or Business Decks?"
-meta_description: "Gamma vs Presentations.AI, refreshed June 5, 2026: compare Gamma decks/docs/websites with Presentations.AI Starter, Pro, Gold, PowerPoint export, analytics, and brand controls."
+meta_description: "Gamma vs Presentations.AI, refreshed June 12, 2026: compare Gamma decks/docs/websites with Presentations.AI Starter, Pro, Gold, PowerPoint export, analytics, and brand controls."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -69,8 +69,8 @@ Test Presentations.AI if dynamic business decks, brand controls, analytics, and 
 
 ## Sources
 
-- [Gamma AI presentation maker](https://gamma.app/ai-presentation-maker) (verified 2026-06-05)
-- [Gamma pricing](https://gamma.app/pricing) (verified 2026-06-05)
-- [Presentations.AI product site](https://www.presentations.ai/) (verified 2026-06-05)
-- [Presentations.AI pricing](https://www.presentations.ai/pricing) (verified 2026-06-05)
+- [Gamma AI presentation maker](https://gamma.app/ai-presentation-maker) (verified 2026-06-12)
+- [Gamma pricing](https://gamma.app/pricing) (verified 2026-06-12)
+- [Presentations.AI product site](https://www.presentations.ai/) (verified 2026-06-12)
+- [Presentations.AI pricing](https://www.presentations.ai/pricing) (verified 2026-06-12)
 - [AI Presentation Tools](/categories/ai-presentation/)

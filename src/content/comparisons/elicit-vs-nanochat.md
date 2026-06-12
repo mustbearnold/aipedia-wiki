@@ -6,10 +6,10 @@ tools: [elicit, nanochat]
 category: ai-research
 winner: depends
 seo_title: "Elicit vs nanochat: Research Workflow or LLM Training Lab? (June 2026)"
-meta_description: "Updated June 5, 2026: Elicit is for systematic literature review, screening, extraction, and reports; nanochat is Karpathy's open-source LLM training reference."
+meta_description: "Updated June 12, 2026: Elicit is for systematic literature review, screening, extraction, and reports; nanochat is Karpathy's open-source LLM training reference."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-05
-last_verified: 2026-06-05
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -89,10 +89,10 @@ Not directly. Elicit can find and summarize papers about LLM training, but nanoc
 
 ## Sources
 
-- [Elicit pricing](https://elicit.com/pricing) (verified 2026-06-05)
-- [Elicit product site](https://elicit.com/) (verified 2026-06-05)
-- [Elicit API announcement](https://elicit.com/blog/elicit-api) (verified 2026-06-05)
-- [nanochat GitHub repository](https://github.com/karpathy/nanochat) (verified 2026-06-05)
+- [Elicit pricing](https://elicit.com/pricing) (verified 2026-06-12)
+- [Elicit product site](https://elicit.com/) (verified 2026-06-12)
+- [Elicit API announcement](https://elicit.com/blog/elicit-api) (verified 2026-06-12)
+- [nanochat GitHub repository](https://github.com/karpathy/nanochat) (verified 2026-06-12)
 
 ## Related
 
