@@ -7,8 +7,8 @@ severity: major
 summary: "The June 10 AI news desk connects the week's biggest buyer signals: Anthropic opens guarded Mythos-class access through Claude Fable 5, Apple turns Siri AI into an OS platform with EU caveats, GitHub moves Copilot workflows into repo-reviewed agents, Datadog makes agent observability a category, and Similarweb shows a crowded chatbot market."
 categories: [ai-chatbots, ai-coding, ai-infrastructure, ai-automation, ai-search]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-10
-last_verified: 2026-06-10
+last_updated: 2026-06-13
+last_verified: 2026-06-13
 related_tools: [claude, claude-code, chatgpt, gemini, github-copilot, cursor, codex, deepseek, grok, perplexity]
 sources:
   - url: https://www.anthropic.com/news/claude-fable-5-mythos-5
@@ -21,6 +21,8 @@ sources:
     title: "Datadog: DASH 2026 guide to newest announcements"
   - url: https://www.similarweb.com/top-websites/ai-chatbots-and-tools/
     title: "Similarweb: Top AI Chatbots and Tools Websites Ranking"
+  - url: https://blog.google/innovation-and-ai/technology/developers-tools/diffusion-gemma-faster-text-generation/
+    title: "Google: DiffusionGemma, 4x faster text generation"
 ---
 
 # AI News Desk, June 10, 2026: Claude Fable 5, Siri AI, Datadog agents, Copilot workflows, and chatbot market share
@@ -62,6 +64,12 @@ Read the standalone buyer analysis: [Datadog's DASH announcements make AI-agent 
 Similarweb's May 2026 AI Chatbots and Tools ranking keeps ChatGPT first, but Gemini and Claude are close enough in visibility and engagement that serious buyers should not default to one assistant without workflow testing. DeepSeek, Grok, Perplexity, Copilot, Cursor, and other surfaces also show up prominently.
 
 Read the standalone buyer analysis: [Similarweb's May 2026 AI chatbot rankings show ChatGPT still first, with Gemini and Claude close behind](/news/2026-06-10-similarweb-ai-chatbot-rankings-may-2026/).
+
+## 6. Google ships an experimental open text-diffusion model
+
+Google DeepMind released DiffusionGemma, an Apache 2.0 open-weights model that generates text by denoising 256-token blocks in parallel rather than one token at a time, reaching 1000+ tokens per second on an H100 and running on a high-end consumer GPU. Google says quality trails standard Gemma 4, so it is best read as a fast, local-friendly draft engine rather than a production replacement.
+
+Read the standalone buyer analysis: [Google DeepMind ships DiffusionGemma, an experimental open model that writes text by diffusion](/news/2026-06-10-google-diffusiongemma-text-diffusion/).
 
 ## Desk verdict
 
