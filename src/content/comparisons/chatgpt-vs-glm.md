@@ -6,10 +6,10 @@ tools: [chatgpt, glm]
 category: ai-chatbots
 winner: chatgpt
 seo_title: "ChatGPT vs GLM: General Assistant or Open-Weight Coding Model? (June 2026)"
-meta_description: "Updated June 3, 2026: compare ChatGPT and Z.AI GLM-5.1 for everyday assistant work, Chinese/open-weight model evaluation, agentic coding, context, pricing, and buyer fit."
+meta_description: "Updated June 12, 2026: compare ChatGPT and Z.AI GLM-5.1 for everyday assistant work, Chinese/open-weight model evaluation, agentic coding, context, pricing, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-03
-last_verified: 2026-06-03
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -18,7 +18,7 @@ canonical_fact_table: true
 
 [ChatGPT](/tools/chatgpt/) and [GLM](/tools/glm/) are not direct substitutes. ChatGPT is a finished AI workspace for writing, research, files, images, voice, coding help, memory, projects, and team use. GLM is Z.AI's model family, with GLM-5.1 positioned in current docs as a flagship long-horizon agentic engineering model with open MIT weights, 200K context, 128K maximum output, OpenAI-compatible API examples, tool/function calling, MCP support, and usage-based API pricing.
 
-This page was re-verified on **June 3, 2026** against current OpenAI, ChatGPT, Z.AI, and Hugging Face sources.
+This page was re-verified on **June 12, 2026** against current OpenAI, ChatGPT, Z.AI, and Hugging Face sources.
 
 ## Quick answer
 

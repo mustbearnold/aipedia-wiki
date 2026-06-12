@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Bolt.new vs Figma AI: Running App or Product Design System? (June 2026)"
 meta_description: "Bolt.new vs Figma AI, refreshed June 2026: compare prompt-to-app building with Figma's collaborative design, AI credits, Dev Mode, Slides, Sites, and Make."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-03
-last_verified: 2026-06-03
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -54,7 +54,7 @@ Bolt is for making the app run. Figma is for deciding what the product should lo
 
 ## Current Fact Check
 
-Verified 2026-06-03 against Bolt and Figma official pricing/product pages. Figma's local tool record was refreshed 2026-06-02 and reflects its expanded product surface across Design, Dev Mode, FigJam, Slides, Draw, Buzz, Sites, Make, and AI credits.
+Verified 2026-06-12 against Bolt and Figma official pricing/product pages. Figma's local tool record was refreshed 2026-06-12 and reflects its expanded product surface across Design, Dev Mode, FigJam, Slides, Draw, Buzz, Sites, Make, and AI credits.
 
 ## FAQ
 

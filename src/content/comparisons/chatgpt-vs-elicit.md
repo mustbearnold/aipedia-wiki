@@ -8,8 +8,8 @@ winner: depends
 seo_title: "ChatGPT vs Elicit: Academic Assistant or Literature Review Workflow?"
 meta_description: "ChatGPT vs Elicit, verified June 2026: compare ChatGPT's broad research assistant workflow with Elicit's paper search, systematic review, extraction tables, pricing, and source posture."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-03
-last_verified: 2026-06-03
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -127,11 +127,11 @@ Often, yes. Elicit handles paper discovery, screening, and extraction. ChatGPT h
 
 ## Sources
 
-- [ChatGPT pricing](https://chatgpt.com/pricing/) - plan structure, GPT-5.5 access, deep research, files, image, voice, Codex, context, and business controls verified 2026-06-03.
-- [OpenAI model docs](https://platform.openai.com/docs/models) - current model and API surface verified 2026-06-03.
-- [Elicit pricing](https://elicit.com/pricing) - Basic, Plus, Pro, Scale, Enterprise, report limits, paper search, and billing surfaces verified 2026-06-03.
-- [Elicit systematic review help](https://support.elicit.com/en/articles/14759154-systematic-reviews-in-elicit) - protocol, search, screening, extraction, and report workflow verified 2026-06-03.
-- [Elicit homepage](https://elicit.com/) - research assistant positioning verified 2026-06-03.
+- [ChatGPT pricing](https://chatgpt.com/pricing/) - plan structure, GPT-5.5 access, deep research, files, image, voice, Codex, context, and business controls verified 2026-06-12.
+- [OpenAI model docs](https://platform.openai.com/docs/models) - current model and API surface verified 2026-06-12.
+- [Elicit pricing](https://elicit.com/pricing) - Basic, Plus, Pro, Scale, Enterprise, report limits, paper search, and billing surfaces verified 2026-06-12.
+- [Elicit systematic review help](https://support.elicit.com/en/articles/14759154-systematic-reviews-in-elicit) - protocol, search, screening, extraction, and report workflow verified 2026-06-12.
+- [Elicit homepage](https://elicit.com/) - research assistant positioning verified 2026-06-12.
 
 ## Related
 

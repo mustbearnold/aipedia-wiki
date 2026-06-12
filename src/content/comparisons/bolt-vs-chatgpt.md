@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Bolt.new vs ChatGPT: Browser App Builder or General AI Workspace? (June 2026)"
 meta_description: "Bolt.new vs ChatGPT, refreshed June 2026: compare app-building workflow, GPT/Codex breadth, pricing, hosting, artifacts, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-03
-last_verified: 2026-06-03
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -58,7 +58,7 @@ Bolt is the better first click when you want to see an app run. ChatGPT is the b
 
 ## Current Fact Check
 
-Verified 2026-06-03 against Bolt's official pricing/home pages and OpenAI's ChatGPT pricing page, both reachable during this refresh. ChatGPT's local tool record was last refreshed 2026-05-24, so this page avoids unsupported plan-specific model entitlement claims beyond the visible pricing anchors.
+Verified 2026-06-12 against Bolt's official pricing/home pages and OpenAI's ChatGPT pricing page, both reachable during this refresh. ChatGPT's local tool record was last refreshed 2026-05-24, so this page avoids unsupported plan-specific model entitlement claims beyond the visible pricing anchors.
 
 ## FAQ
 

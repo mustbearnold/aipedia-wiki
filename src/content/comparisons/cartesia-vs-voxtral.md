@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Cartesia vs Voxtral: Hosted Voice Agents or Mistral Audio Stack? (June 2026)"
 meta_description: "Cartesia vs Voxtral, verified June 2026: choose Cartesia for hosted low-latency voice agents; choose Voxtral for Mistral-native TTS, transcription, and open-weight experimentation."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-03
-last_verified: 2026-06-03
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---

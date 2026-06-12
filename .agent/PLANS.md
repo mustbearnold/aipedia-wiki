@@ -3778,6 +3778,7 @@ Each date-cluster: all eligible pages June 12-dated, historical/affiliate/news c
 - 2026-06-12: Authored the hardened .refresh-tmp.py refresh script (news-URL stashing, price_history/dated-bullet/affiliate-note skips, ISO+prose June 1-11 to June 12 substitution on verification lines).
 - 2026-06-12: June 1 cluster (31 tools + /answers/best-ai-coding-tool-2026/): script changed 32/32 files; fixed adcreative and apollo "checked <date>" prose stragglers; confirmed openhands/qodo verified_at and amazon-q/augment/cline/coderabbit/cody "Re-verified" notes were correctly preserved as historical price_history entries. Ledger regenerated; guard/links/facts/tests/check/build all passed (33/33 tests, 1104 pages built). Pure-infra static pages (privacy, terms, glossary, robots, admin, demo, tool-finder, editorial) intentionally left at their git dates.
 - 2026-06-12: June 2 cluster (55 tools, 12 comparisons, 2 companies anthropic/elevenlabs-company, 1 SEO-tool guide; 3 infra/index static pages skipped): script changed 70/70 files; fixed deepgram/dia/harvey "reverified" (no-hyphen) prose stragglers; confirmed price_history-row verified_at preserved while facts-block verified_at bumped. Links clean, ledger current, full validation passed (33/33 tests, 1104 pages built).
+- 2026-06-12: June 3 cluster (55 comparisons, 4 tools): script changed 59/59 files; no residual stragglers; frontmatter clean. Links clean, ledger current, full validation passed (33/33 tests, 1104 pages built).
 
 ### 15. Final report
 

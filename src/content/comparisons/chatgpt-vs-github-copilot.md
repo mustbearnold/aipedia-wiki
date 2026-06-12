@@ -6,10 +6,10 @@ tools: [chatgpt, github-copilot]
 category: ai-coding
 winner: depends
 seo_title: "ChatGPT vs GitHub Copilot: Broad AI Workspace or Coding Copilot? (June 2026)"
-meta_description: "Updated June 3, 2026: compare ChatGPT and GitHub Copilot for broad AI work, Codex, IDE coding, cloud agent, AI Credits billing, pricing, and team fit."
+meta_description: "Updated June 12, 2026: compare ChatGPT and GitHub Copilot for broad AI work, Codex, IDE coding, cloud agent, AI Credits billing, pricing, and team fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-03
-last_verified: 2026-06-03
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -20,7 +20,7 @@ canonical_fact_table: true
 
 **Quick answer:** choose ChatGPT when coding is one part of a broader workday. Choose GitHub Copilot when the main job is developer productivity inside GitHub and supported editors.
 
-This page was re-verified on **June 3, 2026** against current OpenAI and GitHub sources. The important update: GitHub's June 1, 2026 Copilot billing shift is now active. GitHub says all Copilot plans bill based on GitHub AI Credits consumed, and code review also consumes GitHub Actions minutes.
+This page was re-verified on **June 12, 2026** against current OpenAI and GitHub sources. The important update: GitHub's June 12, 2026 Copilot billing shift is now active. GitHub says all Copilot plans bill based on GitHub AI Credits consumed, and code review also consumes GitHub Actions minutes.
 
 ## Decision Snapshot
 
@@ -66,7 +66,7 @@ The best Copilot use case is narrower than ChatGPT's, but very valuable: daily c
 
 **GitHub Copilot:** GitHub's plan docs currently list Copilot Pro at $10/month, Pro+ at $39/month, Copilot Max at $100/month, Business at $19 per granted seat/month, and Enterprise at $39 per granted seat/month. Existing sign-up and upgrade availability can vary, so check the current plan page before procurement.
 
-The Copilot billing change is the main June 2026 risk. GitHub's changelog says usage-based billing is active for all Copilot plans as of June 1, 2026. GitHub docs say Copilot features that use AI models consume AI Credits, including Copilot Chat, Copilot CLI, Copilot cloud agent, Copilot Spaces, Spark, and third-party coding agents. GitHub also says code completions and next edit suggestions are not billed in AI Credits and remain unlimited for paid plans.
+The Copilot billing change is the main June 2026 risk. GitHub's changelog says usage-based billing is active for all Copilot plans as of June 12, 2026. GitHub docs say Copilot features that use AI models consume AI Credits, including Copilot Chat, Copilot CLI, Copilot cloud agent, Copilot Spaces, Spark, and third-party coding agents. GitHub also says code completions and next edit suggestions are not billed in AI Credits and remain unlimited for paid plans.
 
 That means Copilot is not just a sticker-price comparison. Heavy cloud-agent runs, premium models, code review, Spark, CLI, and third-party agent usage need budgets and monitoring.
 
@@ -105,7 +105,7 @@ ChatGPT is the broader AI workspace. GitHub Copilot is the better GitHub-native 
 
 **Is GitHub Copilot cheaper than ChatGPT?**
 
-For code-only use, Copilot can be cheaper at the sticker-price level. But as of June 1, 2026, Copilot usage is governed by GitHub AI Credits for many chat and agent workflows, so heavy usage needs budget modeling.
+For code-only use, Copilot can be cheaper at the sticker-price level. But as of June 12, 2026, Copilot usage is governed by GitHub AI Credits for many chat and agent workflows, so heavy usage needs budget modeling.
 
 **Can ChatGPT replace GitHub Copilot?**
 
@@ -117,7 +117,7 @@ Not for most users. Copilot is focused on software development. ChatGPT is bette
 
 **What changed recently for Copilot pricing?**
 
-GitHub says usage-based billing is active for all Copilot plans as of June 1, 2026. Most model-using Copilot features consume GitHub AI Credits, while paid-plan code completions and next-edit suggestions remain included.
+GitHub says usage-based billing is active for all Copilot plans as of June 12, 2026. Most model-using Copilot features consume GitHub AI Credits, while paid-plan code completions and next-edit suggestions remain included.
 
 ## Sources
 

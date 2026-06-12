@@ -6,10 +6,10 @@ tools: [capacities, notebooklm]
 category: ai-notes
 winner: depends
 seo_title: "Capacities vs NotebookLM: PKM or Source-Grounded Research? (June 2026)"
-meta_description: "Updated June 3, 2026: choose Capacities for object-based personal knowledge management and NotebookLM for source-grounded Q&A, reports, study outputs, and Audio Overviews."
+meta_description: "Updated June 12, 2026: choose Capacities for object-based personal knowledge management and NotebookLM for source-grounded Q&A, reports, study outputs, and Audio Overviews."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-03
-last_verified: 2026-06-03
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -71,7 +71,7 @@ Start with **Capacities Basic** when the work is system-first: daily notes, proj
 
 ## Current Fact Check
 
-Verified June 3, 2026 against official Capacities pricing/docs and Google's NotebookLM Help page. NotebookLM limits now need specific plan wording: Standard, Plus, Pro, and Ultra have different source and artifact caps, and Ultra has separate 20 TB and 30 TB plan limits in Google's current table.
+Verified June 12, 2026 against official Capacities pricing/docs and Google's NotebookLM Help page. NotebookLM limits now need specific plan wording: Standard, Plus, Pro, and Ultra have different source and artifact caps, and Ultra has separate 20 TB and 30 TB plan limits in Google's current table.
 
 ## Who Should Choose Capacities
 

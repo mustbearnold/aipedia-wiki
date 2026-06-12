@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Apollo.io vs Intercom: Outbound Sales or AI Support? (June 2026)"
 meta_description: "Apollo.io vs Intercom, refreshed June 2026: compare outbound sales engagement against Intercom's Fin AI support platform, pricing, buyer fit, and stack overlap."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-03
-last_verified: 2026-06-03
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -67,7 +67,7 @@ Apollo is an acquisition tool. Intercom is a support and customer-experience pla
 
 ## Current Fact Check
 
-Verified 2026-06-03 against official Apollo and Intercom pricing/product pages plus current AiPedia tool records. Intercom's tool record was refreshed 2026-06-02 and Apollo's was refreshed 2026-06-01.
+Verified 2026-06-12 against official Apollo and Intercom pricing/product pages plus current AiPedia tool records. Intercom's tool record was refreshed 2026-06-12 and Apollo's was refreshed 2026-06-12.
 
 ## FAQ
 

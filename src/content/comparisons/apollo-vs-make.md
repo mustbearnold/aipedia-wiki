@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Apollo.io vs Make: Sales Platform or Automation Builder? (June 2026)"
 meta_description: "Apollo.io vs Make, refreshed June 2026: compare outbound sales engagement with visual workflow automation, pricing, AI modules, and best-fit teams."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-03
-last_verified: 2026-06-03
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -67,7 +67,7 @@ Apollo is a sales platform with automation inside it. Make is an automation plat
 
 ## Current Fact Check
 
-Verified 2026-06-03 against official Apollo and Make pricing/product pages plus current AiPedia tool records. Make pricing was re-checked from the official pricing page after its May 2026 headline-rate drop; Apollo's tool record was refreshed 2026-06-01.
+Verified 2026-06-12 against official Apollo and Make pricing/product pages plus current AiPedia tool records. Make pricing was re-checked from the official pricing page after its May 2026 headline-rate drop; Apollo's tool record was refreshed 2026-06-12.
 
 ## FAQ
 

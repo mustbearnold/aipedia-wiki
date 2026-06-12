@@ -8,8 +8,8 @@ winner: depends
 seo_title: "ChatGPT vs Copy.ai: Assistant or GTM Workflow Platform?"
 meta_description: "ChatGPT vs Copy.ai, verified June 2026: compare broad AI assistant work with Copy.ai's GTM workflow platform, pricing, seats, workflow credits, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-03
-last_verified: 2026-06-03
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -112,11 +112,11 @@ Pick ChatGPT first if work is broad or exploratory. Pick Copy.ai first if the bo
 
 ## Sources
 
-- [ChatGPT pricing](https://chatgpt.com/pricing/) - plan, model, Codex, image, voice, and business controls verified 2026-06-03.
-- [OpenAI model docs](https://platform.openai.com/docs/models) - current model and API surface verified 2026-06-03.
-- [Copy.ai pricing](https://www.copy.ai/prices) - Chat, Growth, Expansion, Scale, Enterprise, seats, credits, and implementation language verified 2026-06-03.
-- [Copy.ai platform](https://www.copy.ai/platform) - GTM AI platform positioning verified 2026-06-03.
-- [Copy.ai workflows](https://www.copy.ai/workflows) - workflow positioning verified 2026-06-03.
+- [ChatGPT pricing](https://chatgpt.com/pricing/) - plan, model, Codex, image, voice, and business controls verified 2026-06-12.
+- [OpenAI model docs](https://platform.openai.com/docs/models) - current model and API surface verified 2026-06-12.
+- [Copy.ai pricing](https://www.copy.ai/prices) - Chat, Growth, Expansion, Scale, Enterprise, seats, credits, and implementation language verified 2026-06-12.
+- [Copy.ai platform](https://www.copy.ai/platform) - GTM AI platform positioning verified 2026-06-12.
+- [Copy.ai workflows](https://www.copy.ai/workflows) - workflow positioning verified 2026-06-12.
 
 ## Related
 

@@ -8,8 +8,8 @@ winner: depends
 seo_title: "ChatGPT vs Cursor: Assistant or AI Code Editor?"
 meta_description: "ChatGPT vs Cursor, verified June 2026: compare ChatGPT, Codex, and broad assistant work against Cursor's AI-native IDE, Composer 2.5, Cloud Agents, pricing, and team fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-03
-last_verified: 2026-06-03
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -122,12 +122,12 @@ Cursor says paid tiers include access to frontier models. Exact provider/model u
 
 ## Sources
 
-- [ChatGPT pricing](https://chatgpt.com/pricing/) - GPT-5.5 access, Codex, agent mode, image, voice, files, and business controls verified 2026-06-03.
-- [OpenAI Codex](https://openai.com/codex/) - Codex product surface verified 2026-06-03.
-- [Using Codex with your ChatGPT plan](https://help.openai.com/en/articles/11369540-using-codex-with-your-chatgpt-plan) - ChatGPT plan relationship verified 2026-06-03.
-- [Cursor pricing](https://cursor.com/pricing) - Individual, Teams, Enterprise, usage, Agent, Bugbot, Cloud Agents, and controls verified 2026-06-03.
-- [Cursor Composer 2.5 changelog](https://cursor.com/changelog/composer-2-5) - Composer 2.5 capability and pricing signal verified 2026-06-03.
-- [Cursor pricing policy](https://cursor.com/terms/pricing/) - usage-policy framing verified 2026-06-03.
+- [ChatGPT pricing](https://chatgpt.com/pricing/) - GPT-5.5 access, Codex, agent mode, image, voice, files, and business controls verified 2026-06-12.
+- [OpenAI Codex](https://openai.com/codex/) - Codex product surface verified 2026-06-12.
+- [Using Codex with your ChatGPT plan](https://help.openai.com/en/articles/11369540-using-codex-with-your-chatgpt-plan) - ChatGPT plan relationship verified 2026-06-12.
+- [Cursor pricing](https://cursor.com/pricing) - Individual, Teams, Enterprise, usage, Agent, Bugbot, Cloud Agents, and controls verified 2026-06-12.
+- [Cursor Composer 2.5 changelog](https://cursor.com/changelog/composer-2-5) - Composer 2.5 capability and pricing signal verified 2026-06-12.
+- [Cursor pricing policy](https://cursor.com/terms/pricing/) - usage-policy framing verified 2026-06-12.
 
 ## Related
 

@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Cartesia vs Descript: Real-Time Voice API or Creator Editor? (June 2026)"
 meta_description: "Cartesia vs Descript, verified June 2026: choose Cartesia for real-time TTS and voice agents; choose Descript for transcript-based podcast and video editing."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-03
-last_verified: 2026-06-03
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---

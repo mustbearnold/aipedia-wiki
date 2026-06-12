@@ -6,10 +6,10 @@ tools: [chatgpt, hermes-agent]
 category: ai-automation
 winner: depends
 seo_title: "ChatGPT vs Hermes Agent: Hosted Assistant or Self-Hosted Agent? (June 2026)"
-meta_description: "Updated June 3, 2026: compare ChatGPT and Hermes Agent for hosted AI assistance, self-hosted agents, memory, scheduling, messaging integrations, setup cost, and buyer fit."
+meta_description: "Updated June 12, 2026: compare ChatGPT and Hermes Agent for hosted AI assistance, self-hosted agents, memory, scheduling, messaging integrations, setup cost, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-03
-last_verified: 2026-06-03
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -18,7 +18,7 @@ canonical_fact_table: true
 
 [ChatGPT](/tools/chatgpt/) and [Hermes Agent](/tools/hermes-agent/) answer very different buyer questions. ChatGPT is OpenAI's hosted general-purpose AI workspace for non-technical and technical users. Hermes Agent is Nous Research's open-source, self-hosted agent project for builders who want persistent memory, scheduled tasks, multi-platform messaging, terminal backends, tools, skills, subagents, and provider/model routing under their own control.
 
-This page was re-verified on **June 3, 2026** against current OpenAI, ChatGPT, Hermes Agent documentation, and the NousResearch GitHub release stream.
+This page was re-verified on **June 12, 2026** against current OpenAI, ChatGPT, Hermes Agent documentation, and the NousResearch GitHub release stream.
 
 ## Quick answer
 

@@ -8,8 +8,8 @@ winner: depends
 seo_title: "ChatGPT vs Claude: Which Should You Use in 2026?"
 meta_description: "ChatGPT vs Claude, verified June 2026: compare ChatGPT's broad GPT-5.5 workspace with Claude Opus 4.8 for writing, coding, long context, pricing, and team fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-03
-last_verified: 2026-06-03
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -117,12 +117,12 @@ Use both only when each has a repeatable role. A high-value split is ChatGPT for
 
 ## Sources
 
-- [ChatGPT pricing](https://chatgpt.com/pricing/) - plan structure, GPT-5.5 access, Codex, context windows, image generation, voice, apps, and business controls verified 2026-06-03.
-- [OpenAI model docs](https://platform.openai.com/docs/models) - current API model surface and GPT-5.5 docs verified 2026-06-03.
-- [OpenAI Codex product page](https://openai.com/codex/) - coding-agent surface verified 2026-06-03.
-- [Claude pricing](https://claude.com/pricing) - Free, Pro, Max, Team, Enterprise, controls, and billing language verified 2026-06-03.
-- [Anthropic Claude model docs](https://platform.claude.com/docs/en/about-claude/models/overview) - Opus 4.8, Sonnet 4.6, context, multimodal support, and API pricing verified 2026-06-03.
-- [Anthropic Claude Opus 4.8 launch](https://www.anthropic.com/news/claude-opus-4-8) - Opus 4.8 and dynamic workflows verified 2026-06-03.
+- [ChatGPT pricing](https://chatgpt.com/pricing/) - plan structure, GPT-5.5 access, Codex, context windows, image generation, voice, apps, and business controls verified 2026-06-12.
+- [OpenAI model docs](https://platform.openai.com/docs/models) - current API model surface and GPT-5.5 docs verified 2026-06-12.
+- [OpenAI Codex product page](https://openai.com/codex/) - coding-agent surface verified 2026-06-12.
+- [Claude pricing](https://claude.com/pricing) - Free, Pro, Max, Team, Enterprise, controls, and billing language verified 2026-06-12.
+- [Anthropic Claude model docs](https://platform.claude.com/docs/en/about-claude/models/overview) - Opus 4.8, Sonnet 4.6, context, multimodal support, and API pricing verified 2026-06-12.
+- [Anthropic Claude Opus 4.8 launch](https://www.anthropic.com/news/claude-opus-4-8) - Opus 4.8 and dynamic workflows verified 2026-06-12.
 
 ## Related
 

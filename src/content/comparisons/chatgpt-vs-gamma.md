@@ -6,10 +6,10 @@ tools: [chatgpt, gamma]
 category: ai-presentation
 winner: depends
 seo_title: "ChatGPT vs Gamma: AI Assistant or AI Presentation Maker? (June 2026)"
-meta_description: "Updated June 3, 2026: compare ChatGPT and Gamma for research, outlines, prompt-to-deck generation, PDF/PPTX import, exports, API access, and buyer fit."
+meta_description: "Updated June 12, 2026: compare ChatGPT and Gamma for research, outlines, prompt-to-deck generation, PDF/PPTX import, exports, API access, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-03
-last_verified: 2026-06-03
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -20,7 +20,7 @@ canonical_fact_table: true
 
 **Quick answer:** use ChatGPT when the story is not clear yet. Use Gamma when the story is ready enough to become a designed artifact.
 
-This page was re-verified on **June 3, 2026** against current OpenAI and Gamma sources. The practical 2026 difference is that Gamma's public pricing page now makes the artifact gates very clear: Free includes simple creation, PDF/PPTX import, and PDF/PPTX/PNG/Google Slides export; paid tiers add higher card-per-prompt limits, branding removal, more advanced models, custom branding, analytics, custom domains, API access, workspace templates, and heavier usage.
+This page was re-verified on **June 12, 2026** against current OpenAI and Gamma sources. The practical 2026 difference is that Gamma's public pricing page now makes the artifact gates very clear: Free includes simple creation, PDF/PPTX import, and PDF/PPTX/PNG/Google Slides export; paid tiers add higher card-per-prompt limits, branding removal, more advanced models, custom branding, analytics, custom domains, API access, workspace templates, and heavier usage.
 
 ## Decision Snapshot
 

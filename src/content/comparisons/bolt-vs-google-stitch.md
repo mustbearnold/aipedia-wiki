@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Bolt.new vs Google Stitch: App Builder or AI UI Design Canvas? (June 2026)"
 meta_description: "Bolt.new vs Google Stitch, refreshed June 2026: compare browser app generation with Google's Labs UI design canvas, DESIGN.md workflow, and developer handoff."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-03
-last_verified: 2026-06-03
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -54,7 +54,7 @@ Bolt answers "can this app run?" Stitch answers "what should this interface look
 
 ## Current Fact Check
 
-Verified 2026-06-03 against Bolt official pages and the live Google Stitch site. Google Stitch's local tool record was refreshed 2026-06-02 and still marks the product as free while in Google Labs with uncertain public quotas and paid-tier timing.
+Verified 2026-06-12 against Bolt official pages and the live Google Stitch site. Google Stitch's local tool record was refreshed 2026-06-12 and still marks the product as free while in Google Labs with uncertain public quotas and paid-tier timing.
 
 ## FAQ
 

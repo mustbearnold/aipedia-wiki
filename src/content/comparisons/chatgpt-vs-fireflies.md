@@ -6,10 +6,10 @@ tools: [chatgpt, fireflies]
 category: ai-notes
 winner: depends
 seo_title: "ChatGPT vs Fireflies.ai: Meeting Capture or AI Assistant? (June 2026)"
-meta_description: "Updated June 3, 2026: compare ChatGPT and Fireflies.ai for meeting capture, transcripts, AskFred, AI credits, follow-up work, pricing, and team workflows."
+meta_description: "Updated June 12, 2026: compare ChatGPT and Fireflies.ai for meeting capture, transcripts, AskFred, AI credits, follow-up work, pricing, and team workflows."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-03
-last_verified: 2026-06-03
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -20,7 +20,7 @@ canonical_fact_table: true
 
 **Quick answer:** use Fireflies when the hard problem is capturing meetings automatically. Use ChatGPT when the hard problem is turning selected meeting evidence into decisions, documents, messages, briefs, or next-step work.
 
-This page was re-verified on **June 3, 2026** against current OpenAI and Fireflies sources. The important buyer nuance is that Fireflies AI credits are **not** transcription minutes. Fireflies says transcription, note-taking, and recap emails are covered by the plan, while AI credits apply to advanced features such as AI Skills, Personal Assistant, Live Assist AskFred, custom summaries, Sales Assist, voice agents, and CRM autofill.
+This page was re-verified on **June 12, 2026** against current OpenAI and Fireflies sources. The important buyer nuance is that Fireflies AI credits are **not** transcription minutes. Fireflies says transcription, note-taking, and recap emails are covered by the plan, while AI credits apply to advanced features such as AI Skills, Personal Assistant, Live Assist AskFred, custom summaries, Sales Assist, voice agents, and CRM autofill.
 
 ## Decision Snapshot
 

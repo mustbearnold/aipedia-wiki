@@ -6,10 +6,10 @@ tools: [capacities, fireflies]
 category: ai-notes
 winner: depends
 seo_title: "Capacities vs Fireflies.ai: Best AI Notes Workflow (June 2026)"
-meta_description: "Updated June 3, 2026: Capacities is better for object-based PKM, while Fireflies.ai is better for meeting capture, transcripts, AskFred, and team call history."
+meta_description: "Updated June 12, 2026: Capacities is better for object-based PKM, while Fireflies.ai is better for meeting capture, transcripts, AskFred, and team call history."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-03
-last_verified: 2026-06-03
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -73,7 +73,7 @@ For Fireflies, model the AI credits separately. Fireflies' own AI Credits guide 
 
 ## Current Fact Check
 
-Verified June 3, 2026 against official Capacities pricing/docs and Fireflies pricing/help pages. Current official sources support the product split above: Capacities is a structured knowledge tool with Pro AI features and MCP-style AI Chat Connectors; Fireflies is a meeting intelligence product with paid transcription/summaries and a separate advanced AI credit system.
+Verified June 12, 2026 against official Capacities pricing/docs and Fireflies pricing/help pages. Current official sources support the product split above: Capacities is a structured knowledge tool with Pro AI features and MCP-style AI Chat Connectors; Fireflies is a meeting intelligence product with paid transcription/summaries and a separate advanced AI credit system.
 
 ## Who Should Choose Capacities
 

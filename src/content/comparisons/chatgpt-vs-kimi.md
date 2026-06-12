@@ -6,10 +6,10 @@ tools: [chatgpt, kimi]
 category: ai-chatbots
 winner: chatgpt
 seo_title: "ChatGPT vs Kimi: General AI Assistant or Low-Cost K2.6 API? (June 2026)"
-meta_description: "Updated June 3, 2026: compare ChatGPT and Kimi K2.6 for assistant UX, long-context coding, API pricing, multimodal input, legacy K2 retirement, and buyer fit."
+meta_description: "Updated June 12, 2026: compare ChatGPT and Kimi K2.6 for assistant UX, long-context coding, API pricing, multimodal input, legacy K2 retirement, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-03
-last_verified: 2026-06-03
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -18,7 +18,7 @@ canonical_fact_table: true
 
 [ChatGPT](/tools/chatgpt/) and [Kimi](/tools/kimi/) overlap on chat, coding, and long-context work, but the buying decision is mostly product versus model platform. ChatGPT is the finished AI workspace. Kimi is Moonshot AI's assistant and API lane, with Kimi K2.6 currently positioned as the latest model for long-context coding, agent tasks, multimodal input, and lower-cost usage-based serving.
 
-This page was re-verified on **June 3, 2026** against current OpenAI, ChatGPT pricing, Kimi, Moonshot platform, and Kimi API pricing documentation. The key current Kimi fact is that the legacy `kimi-k2` series discontinuation date of May 25, 2026 has passed; new production work should evaluate Kimi K2.6 instead.
+This page was re-verified on **June 12, 2026** against current OpenAI, ChatGPT pricing, Kimi, Moonshot platform, and Kimi API pricing documentation. The key current Kimi fact is that the legacy `kimi-k2` series discontinuation date of May 25, 2026 has passed; new production work should evaluate Kimi K2.6 instead.
 
 ## Quick Answer
 

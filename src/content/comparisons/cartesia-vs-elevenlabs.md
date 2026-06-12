@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Cartesia vs ElevenLabs: Voice Agents or Creator Voice Platform? (June 2026)"
 meta_description: "Cartesia vs ElevenLabs, verified June 2026: choose Cartesia for latency-critical voice agents; choose ElevenLabs for polished narration, cloning, dubbing, and broader audio workflows."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-03
-last_verified: 2026-06-03
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---

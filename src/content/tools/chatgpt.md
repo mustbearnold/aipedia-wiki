@@ -11,11 +11,11 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2022-11
-last_updated: 2026-06-03
-last_verified: 2026-06-03
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 seo_title: "ChatGPT: Features, Pricing & Review (June 2026)"
-meta_description: "Updated June 3, 2026: ChatGPT runs GPT-5.5 Instant as the default, with GPT-5.5 Thinking on paid tiers, GPT-5.5 Pro on Pro/Business/Enterprise/Edu, Codex, image generation, voice, apps, and business controls."
+meta_description: "Updated June 12, 2026: ChatGPT runs GPT-5.5 Instant as the default, with GPT-5.5 Thinking on paid tiers, GPT-5.5 Pro on Pro/Business/Enterprise/Edu, Codex, image generation, voice, apps, and business controls."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -34,7 +34,7 @@ facts:
     source: "https://help.openai.com/en/articles/11909943-gpt-55-in-chatgpt"
     source_label: "OpenAI GPT-5.5 in ChatGPT help"
     source_id: openai-chatgpt-gpt-55-help
-    verified_at: 2026-06-03
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-07-03
@@ -43,7 +43,7 @@ facts:
     source: "https://help.openai.com/en/articles/11909943-gpt-55-in-chatgpt"
     source_label: "OpenAI GPT-5.5 in ChatGPT help"
     source_id: openai-chatgpt-gpt-55-help
-    verified_at: 2026-06-03
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-07-03
@@ -52,7 +52,7 @@ facts:
     source: "https://chatgpt.com/pricing/"
     source_label: "ChatGPT pricing"
     source_id: openai-chatgpt-pricing
-    verified_at: 2026-06-03
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-07-03
@@ -61,7 +61,7 @@ facts:
     source: "https://chatgpt.com/pricing/"
     source_label: "ChatGPT pricing"
     source_id: openai-chatgpt-pricing
-    verified_at: 2026-06-03
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-07-03
@@ -70,7 +70,7 @@ facts:
     source: "https://chatgpt.com/pricing/"
     source_label: "ChatGPT pricing"
     source_id: openai-chatgpt-pricing
-    verified_at: 2026-06-03
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-07-03
@@ -79,7 +79,7 @@ facts:
     source: "https://platform.openai.com/docs/models"
     source_label: "OpenAI model docs"
     source_id: openai-model-docs
-    verified_at: 2026-06-03
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-07-03
@@ -88,7 +88,7 @@ facts:
     source: "https://platform.openai.com/docs/models"
     source_label: "OpenAI model docs"
     source_id: openai-model-docs
-    verified_at: 2026-06-03
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-07-03
@@ -97,7 +97,7 @@ facts:
     source: "https://chatgpt.com/pricing/"
     source_label: "ChatGPT pricing"
     source_id: openai-chatgpt-pricing
-    verified_at: 2026-06-03
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-07-03
@@ -106,7 +106,7 @@ facts:
     source: "https://platform.openai.com/docs/models"
     source_label: "OpenAI model docs"
     source_id: openai-model-docs
-    verified_at: 2026-06-03
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-07-03
@@ -115,7 +115,7 @@ facts:
     source: "https://platform.openai.com/docs/models"
     source_label: "OpenAI model docs"
     source_id: openai-model-docs
-    verified_at: 2026-06-03
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-07-03
@@ -124,7 +124,7 @@ facts:
     source: "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
     source_label: "ChatGPT release notes"
     source_id: openai-chatgpt-release-notes
-    verified_at: 2026-06-03
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-07-03
@@ -133,7 +133,7 @@ facts:
     source: "https://chatgpt.com/pricing/"
     source_label: "ChatGPT pricing"
     source_id: openai-chatgpt-pricing
-    verified_at: 2026-06-03
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-07-03
@@ -142,7 +142,7 @@ facts:
     source: "https://openai.com/enterprise-privacy/"
     source_label: "OpenAI enterprise privacy"
     source_id: openai-enterprise-privacy
-    verified_at: 2026-06-03
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-07-03
@@ -151,7 +151,7 @@ facts:
     source: "https://platform.openai.com/docs/models"
     source_label: "OpenAI model docs"
     source_id: openai-model-docs
-    verified_at: 2026-06-03
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
   best_for:
@@ -159,7 +159,7 @@ facts:
     source: "https://chatgpt.com/pricing/"
     source_label: "ChatGPT pricing"
     source_id: openai-chatgpt-pricing
-    verified_at: 2026-06-03
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   watch_out_for:
@@ -167,7 +167,7 @@ facts:
     source: "https://chatgpt.com/pricing/"
     source_label: "ChatGPT pricing"
     source_id: openai-chatgpt-pricing
-    verified_at: 2026-06-03
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
 tags: [chatbot, ai-assistant, writing, search, code-interpreter, image-generation, gpt-5, codex, agent-mode, voice, memory]
@@ -338,7 +338,7 @@ OpenAI's general-purpose AI assistant for text, images, web browsing, sandboxed 
 | **File Library** | Free 500 MB · Go 4 GB · Plus/Business 20 GB · Pro 100 GB; expanded to Free and Go on May 15, 2026 |
 | **Score** | Utility 10 · Value 8 · Moat 10 · Longevity 10 |
 
-Every data point above was last verified against OpenAI pages, local news entries, or named sources on June 3, 2026.
+Every data point above was last verified against OpenAI pages, local news entries, or named sources on June 12, 2026.
 
 ## Pricing
 
@@ -352,7 +352,7 @@ Every data point above was last verified against OpenAI pages, local news entrie
 | Business | $25/user/mo monthly; $20/user/mo annually | Flexible GPT-5.5 Thinking and GPT-5.5 Pro access | Included, with workspace controls | No | Small teams |
 | Enterprise | Custom | Flexible GPT-5.5 Thinking and GPT-5.5 Pro access | High | No | SSO, audit, SOC 2, data controls |
 
-Prices and model access were rechecked on June 3, 2026 using [ChatGPT pricing](https://chatgpt.com/pricing/), [OpenAI's GPT-5.5 in ChatGPT help article](https://help.openai.com/en/articles/11909943-gpt-55-in-chatgpt), [OpenAI's Pro tiers help article](https://help.openai.com/en/articles/9793128-about-chatgpt-pro-plans), [ChatGPT release notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes), and [OpenAI's File storage and Library article](https://help.openai.com/en/articles/20001052-file-storage-and-library-in-chatgpt). The public pricing snapshot available here does not expose a fixed US dollar amount for Go, so the table lists it as regional pricing instead of repeating an unverified $8/mo figure.
+Prices and model access were rechecked on June 12, 2026 using [ChatGPT pricing](https://chatgpt.com/pricing/), [OpenAI's GPT-5.5 in ChatGPT help article](https://help.openai.com/en/articles/11909943-gpt-55-in-chatgpt), [OpenAI's Pro tiers help article](https://help.openai.com/en/articles/9793128-about-chatgpt-pro-plans), [ChatGPT release notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes), and [OpenAI's File storage and Library article](https://help.openai.com/en/articles/20001052-file-storage-and-library-in-chatgpt). The public pricing snapshot available here does not expose a fixed US dollar amount for Go, so the table lists it as regional pricing instead of repeating an unverified $8/mo figure.
 
 ## Recent changes
 
@@ -455,11 +455,11 @@ ChatGPT wins on breadth, image generation, and agent integrations. Claude remain
 
 ## Sources
 
-- [ChatGPT Official Site and Pricing](https://chatgpt.com/pricing/): Current model access by tier and feature overview (verified 2026-06-03)
-- [OpenAI: GPT-5.5 in ChatGPT](https://help.openai.com/en/articles/11909943-gpt-55-in-chatgpt): default model, tier access, usage limits, context windows, and tool support (verified 2026-06-03)
-- [OpenAI: ChatGPT release notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes): Codex updates, Finances, and File Library expansion (verified 2026-06-03)
-- [OpenAI: About ChatGPT Pro tiers](https://help.openai.com/en/articles/9793128-about-chatgpt-pro-plans): Pro $100, Pro $200, Codex limits, and promo details (verified 2026-06-03)
-- [OpenAI: Models](https://platform.openai.com/docs/models): API model IDs, context window, and pricing for gpt-5.5 (verified 2026-06-03)
-- [OpenAI: File storage and Library in ChatGPT](https://help.openai.com/en/articles/20001052-file-storage-and-library-in-chatgpt): Library availability, saved-file behavior, and storage limits (verified 2026-06-03)
+- [ChatGPT Official Site and Pricing](https://chatgpt.com/pricing/): Current model access by tier and feature overview (verified 2026-06-12)
+- [OpenAI: GPT-5.5 in ChatGPT](https://help.openai.com/en/articles/11909943-gpt-55-in-chatgpt): default model, tier access, usage limits, context windows, and tool support (verified 2026-06-12)
+- [OpenAI: ChatGPT release notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes): Codex updates, Finances, and File Library expansion (verified 2026-06-12)
+- [OpenAI: About ChatGPT Pro tiers](https://help.openai.com/en/articles/9793128-about-chatgpt-pro-plans): Pro $100, Pro $200, Codex limits, and promo details (verified 2026-06-12)
+- [OpenAI: Models](https://platform.openai.com/docs/models): API model IDs, context window, and pricing for gpt-5.5 (verified 2026-06-12)
+- [OpenAI: File storage and Library in ChatGPT](https://help.openai.com/en/articles/20001052-file-storage-and-library-in-chatgpt): Library availability, saved-file behavior, and storage limits (verified 2026-06-12)
 
-This review follows the aipedia.wiki four-axis scoring model: Utility, Value, Moat, and Longevity. Last verified 2026-06-03.
+This review follows the aipedia.wiki four-axis scoring model: Utility, Value, Moat, and Longevity. Last verified 2026-06-12.

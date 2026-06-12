@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Canva AI vs Figma AI: Which Is Better in 2026?"
 meta_description: "Canva AI vs Figma AI, refreshed June 2026: compare finished marketing design, product-design systems, Figma Make, AI credits, pricing, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-03
-last_verified: 2026-06-03
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -74,7 +74,7 @@ Canva is the better tool for finished marketing and non-designer visual producti
 
 ## Current Fact Check
 
-Verified 2026-06-03 against current Canva and Figma official pricing/product sources plus the refreshed AiPedia Canva/Figma tool records. Unsupported old claims about fixed Canva universal pricing and permanent Figma model defaults were removed.
+Verified 2026-06-12 against current Canva and Figma official pricing/product sources plus the refreshed AiPedia Canva/Figma tool records. Unsupported old claims about fixed Canva universal pricing and permanent Figma model defaults were removed.
 
 ## FAQ
 

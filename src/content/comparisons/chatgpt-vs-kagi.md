@@ -6,10 +6,10 @@ tools: [chatgpt, kagi]
 category: ai-search
 winner: depends
 seo_title: "ChatGPT vs Kagi: General AI Workspace or Private AI Search? (June 2026)"
-meta_description: "Updated June 3, 2026: compare ChatGPT and Kagi for broad assistant work, private paid search, Kagi Assistant, pricing, model access, research workflow, and buyer fit."
+meta_description: "Updated June 12, 2026: compare ChatGPT and Kagi for broad assistant work, private paid search, Kagi Assistant, pricing, model access, research workflow, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-03
-last_verified: 2026-06-03
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -18,7 +18,7 @@ canonical_fact_table: true
 
 [ChatGPT](/tools/chatgpt/) and [Kagi](/tools/kagi/) are not trying to solve the same problem. ChatGPT is a broad AI workspace for writing, analysis, files, coding help, images, voice, memory, apps, and general task execution. Kagi is a paid, ad-free search engine with ranking controls, privacy positioning, and Kagi Assistant layered on top of search.
 
-This page was re-verified on **June 3, 2026** against current ChatGPT pricing, OpenAI GPT-5.5 Instant notes, Kagi pricing, and Kagi Assistant documentation.
+This page was re-verified on **June 12, 2026** against current ChatGPT pricing, OpenAI GPT-5.5 Instant notes, Kagi pricing, and Kagi Assistant documentation.
 
 ## Quick Answer
 

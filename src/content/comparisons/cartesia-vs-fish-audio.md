@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Cartesia vs Fish Audio: Voice Agents or Open TTS? (June 2026)"
 meta_description: "Cartesia vs Fish Audio, verified June 2026: choose Cartesia for real-time voice agents; choose Fish Audio for open-weight TTS, expressive narration, and low-cost hosted API workloads."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-03
-last_verified: 2026-06-03
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---

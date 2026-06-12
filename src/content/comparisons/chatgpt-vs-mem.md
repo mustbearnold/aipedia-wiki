@@ -6,10 +6,10 @@ tools: [chatgpt, mem]
 category: ai-notes
 winner: depends
 seo_title: "ChatGPT vs Mem: General AI Assistant or AI Note Memory? (June 2026)"
-meta_description: "Updated June 3, 2026: compare ChatGPT and Mem for AI notes, personal knowledge, search/chat memory, pricing, Teams, exports, and buyer fit."
+meta_description: "Updated June 12, 2026: compare ChatGPT and Mem for AI notes, personal knowledge, search/chat memory, pricing, Teams, exports, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-03
-last_verified: 2026-06-03
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -18,7 +18,7 @@ canonical_fact_table: true
 
 [ChatGPT](/tools/chatgpt/) and [Mem](/tools/mem/) both help users think with AI, but they store value differently. ChatGPT is a broad assistant for writing, analysis, coding help, files, images, voice, research, and day-to-day problem solving. Mem is an AI note and personal knowledge tool built around notes, search, chat, collections, templates, connected email, PDF understanding, and team knowledge workflows.
 
-This page was re-verified on **June 3, 2026** against current ChatGPT pricing, OpenAI GPT-5.5 sources, Mem pricing, and Mem product pages.
+This page was re-verified on **June 12, 2026** against current ChatGPT pricing, OpenAI GPT-5.5 sources, Mem pricing, and Mem product pages.
 
 ## Quick Answer
 

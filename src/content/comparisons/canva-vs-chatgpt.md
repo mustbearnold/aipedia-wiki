@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Canva AI vs ChatGPT: Which Is Better in 2026?"
 meta_description: "Canva AI vs ChatGPT, refreshed June 2026: compare finished-design workflow, GPT-5.5 breadth, pricing anchors, best plan, watch-outs, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-03
-last_verified: 2026-06-03
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -77,7 +77,7 @@ Canva is the better production tool. ChatGPT is the better thinking and general-
 
 ## Current Fact Check
 
-Verified 2026-06-03 against the current Canva tool record and official Canva AI/pricing pages, plus ChatGPT's current pricing page, ChatGPT Plus help article, and June 2026 release notes. This page avoids unsupported universal Canva price quotes because Canva pricing and AI allowances are region-rendered.
+Verified 2026-06-12 against the current Canva tool record and official Canva AI/pricing pages, plus ChatGPT's current pricing page, ChatGPT Plus help article, and June 2026 release notes. This page avoids unsupported universal Canva price quotes because Canva pricing and AI allowances are region-rendered.
 
 ## FAQ
 

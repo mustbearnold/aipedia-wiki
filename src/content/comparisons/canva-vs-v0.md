@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Canva AI vs v0 by Vercel: Which Is Better in 2026?"
 meta_description: "Canva AI vs v0 by Vercel, refreshed June 2026: compare finished design production, Vercel-native app building, credits, token pricing, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-03
-last_verified: 2026-06-03
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -72,7 +72,7 @@ Canva is the better visual-production tool. v0 is the better web-building tool. 
 
 ## Current Fact Check
 
-Verified 2026-06-03 against official Canva pages/tool record and current v0 pricing/Vercel pricing sources. Removed old $20 Premium and fixed-credit claims because the current public v0 pricing page lists Free, Team, Business, Enterprise, included credits, daily login credits, and token-model pricing.
+Verified 2026-06-12 against official Canva pages/tool record and current v0 pricing/Vercel pricing sources. Removed old $20 Premium and fixed-credit claims because the current public v0 pricing page lists Free, Team, Business, Enterprise, included credits, daily login credits, and token-model pricing.
 
 ## FAQ
 

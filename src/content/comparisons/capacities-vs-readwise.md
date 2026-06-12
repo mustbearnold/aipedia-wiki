@@ -6,10 +6,10 @@ tools: [capacities, readwise]
 category: ai-notes
 winner: depends
 seo_title: "Capacities vs Readwise Reader: PKM or Reading Retention? (June 2026)"
-meta_description: "Updated June 3, 2026: choose Capacities for object-based PKM and Readwise Reader for reading capture, highlights, Ghostreader AI, exports, and spaced-repetition review."
+meta_description: "Updated June 12, 2026: choose Capacities for object-based PKM and Readwise Reader for reading capture, highlights, Ghostreader AI, exports, and spaced-repetition review."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-03
-last_verified: 2026-06-03
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -73,7 +73,7 @@ Do not buy both on day one unless you already know the workflow. Test Readwise a
 
 ## Current Fact Check
 
-Verified June 3, 2026 against official Capacities pricing/docs, Readwise pricing, and Readwise Ghostreader docs. The old comparison's exact AI model claims were removed because Readwise's current docs describe Ghostreader behavior and prompts without requiring a fixed public model-version claim.
+Verified June 12, 2026 against official Capacities pricing/docs, Readwise pricing, and Readwise Ghostreader docs. The old comparison's exact AI model claims were removed because Readwise's current docs describe Ghostreader behavior and prompts without requiring a fixed public model-version claim.
 
 ## Who Should Choose Capacities
 

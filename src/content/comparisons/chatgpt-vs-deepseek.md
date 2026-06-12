@@ -8,8 +8,8 @@ winner: depends
 seo_title: "ChatGPT vs DeepSeek: Assistant Workspace or Low-Cost Model API?"
 meta_description: "ChatGPT vs DeepSeek, verified June 2026: compare GPT-5.5 assistant breadth with DeepSeek V4-Flash and V4-Pro API pricing, open-weight evaluation, governance, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-03
-last_verified: 2026-06-03
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -117,11 +117,11 @@ Yes for many human-in-the-loop tasks. It may not be cost-optimal for high-volume
 
 ## Sources
 
-- [ChatGPT pricing](https://chatgpt.com/pricing/) - GPT-5.5 access, Codex, image, voice, app, context, and business controls verified 2026-06-03.
-- [OpenAI model docs](https://platform.openai.com/docs/models) - current OpenAI model surface verified 2026-06-03.
-- [DeepSeek API pricing](https://api-docs.deepseek.com/quick_start/pricing) - V4-Flash, V4-Pro, context, output, pricing, and feature rows verified 2026-06-03.
-- [DeepSeek API changelog](https://api-docs.deepseek.com/updates/) - V4 and legacy endpoint deprecation language verified 2026-06-03.
-- [DeepSeek Hugging Face organization](https://huggingface.co/deepseek-ai) - open-weight evaluation surface verified 2026-06-03.
+- [ChatGPT pricing](https://chatgpt.com/pricing/) - GPT-5.5 access, Codex, image, voice, app, context, and business controls verified 2026-06-12.
+- [OpenAI model docs](https://platform.openai.com/docs/models) - current OpenAI model surface verified 2026-06-12.
+- [DeepSeek API pricing](https://api-docs.deepseek.com/quick_start/pricing) - V4-Flash, V4-Pro, context, output, pricing, and feature rows verified 2026-06-12.
+- [DeepSeek API changelog](https://api-docs.deepseek.com/updates/) - V4 and legacy endpoint deprecation language verified 2026-06-12.
+- [DeepSeek Hugging Face organization](https://huggingface.co/deepseek-ai) - open-weight evaluation surface verified 2026-06-12.
 
 ## Related
 

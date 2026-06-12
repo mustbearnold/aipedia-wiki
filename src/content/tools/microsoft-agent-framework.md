@@ -11,8 +11,8 @@ pricing_model: open-source
 price_range: "Free (open source)"
 status: active
 launched: 2026-04
-last_updated: 2026-06-03
-last_verified: 2026-06-03
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: "https://blogs.microsoft.com/blog/2026/06/02/microsoft-build-2026-be-yourself-at-work/"
     source_label: "Microsoft Build 2026 agent stack"
     source_id: microsoft-build-2026-work-iq
-    verified_at: 2026-06-03
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -39,7 +39,7 @@ facts:
     source: "https://github.com/microsoft/agent-framework"
     source_label: "Microsoft Agent Framework GitHub"
     source_id: maf-github
-    verified_at: 2026-06-03
+    verified_at: 2026-06-12
     next_review_at: 2026-08-13
     volatility: low
     confidence: high
@@ -48,7 +48,7 @@ facts:
     source: "https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/02/announcing-the-new-work-iq-apis/"
     source_label: "Microsoft Work IQ APIs"
     source_id: microsoft-work-iq-apis
-    verified_at: 2026-06-03
+    verified_at: 2026-06-12
     next_review_at: 2026-06-13
     volatility: medium
     confidence: high
@@ -130,7 +130,7 @@ Microsoft Agent Framework is free and open source. You pay for:
 
 No framework licensing fees.
 
-Verified 2026-06-03 via [Microsoft Agent Framework overview](https://learn.microsoft.com/en-us/agent-framework/overview/), the [agent-framework GitHub releases](https://github.com/microsoft/agent-framework/releases), [Microsoft Build 2026](https://blogs.microsoft.com/blog/2026/06/02/microsoft-build-2026-be-yourself-at-work/), and the [Work IQ API announcement](https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/02/announcing-the-new-work-iq-apis/).
+Verified 2026-06-12 via [Microsoft Agent Framework overview](https://learn.microsoft.com/en-us/agent-framework/overview/), the [agent-framework GitHub releases](https://github.com/microsoft/agent-framework/releases), [Microsoft Build 2026](https://blogs.microsoft.com/blog/2026/06/02/microsoft-build-2026-be-yourself-at-work/), and the [Work IQ API announcement](https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/02/announcing-the-new-work-iq-apis/).
 
 ## Failure modes
 
@@ -153,7 +153,7 @@ Verified 2026-06-03 via [Microsoft Agent Framework overview](https://learn.micro
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-03 against the [Microsoft Agent Framework overview](https://learn.microsoft.com/en-us/agent-framework/overview/), the [agent-framework GitHub releases page](https://github.com/microsoft/agent-framework/releases), [Microsoft Build 2026](https://blogs.microsoft.com/blog/2026/06/02/microsoft-build-2026-be-yourself-at-work/), and the [Work IQ API announcement](https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/02/announcing-the-new-work-iq-apis/).
+Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-12 against the [Microsoft Agent Framework overview](https://learn.microsoft.com/en-us/agent-framework/overview/), the [agent-framework GitHub releases page](https://github.com/microsoft/agent-framework/releases), [Microsoft Build 2026](https://blogs.microsoft.com/blog/2026/06/02/microsoft-build-2026-be-yourself-at-work/), and the [Work IQ API announcement](https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/02/announcing-the-new-work-iq-apis/).
 
 ## FAQ
 

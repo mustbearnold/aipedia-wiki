@@ -6,17 +6,17 @@ tools: [chatgpt, otter-ai]
 category: ai-notes
 winner: depends
 seo_title: "ChatGPT vs Otter.ai: AI Assistant or Meeting Notetaker? (June 2026)"
-meta_description: "ChatGPT vs Otter.ai, verified June 3, 2026: choose ChatGPT for broad AI work and Otter for live meeting transcription, summaries, searchable archives, team workflows, and Otter MCP."
+meta_description: "ChatGPT vs Otter.ai, verified June 12, 2026: choose ChatGPT for broad AI work and Otter for live meeting transcription, summaries, searchable archives, team workflows, and Otter MCP."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-03
-last_verified: 2026-06-03
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
 
 # ChatGPT vs Otter.ai
 
-[ChatGPT](/tools/chatgpt/) is the broad AI assistant for writing, research, code, files, images, voice, apps, tasks, and agent workflows. [Otter.ai](/tools/otter-ai/) is a meeting intelligence system for live transcription, AI meeting workflows, speaker identification, summaries, shared meeting archives, and cross-meeting AI Chat. This comparison was refreshed on June 3, 2026 against current OpenAI/ChatGPT and Otter.ai pricing/product sources.
+[ChatGPT](/tools/chatgpt/) is the broad AI assistant for writing, research, code, files, images, voice, apps, tasks, and agent workflows. [Otter.ai](/tools/otter-ai/) is a meeting intelligence system for live transcription, AI meeting workflows, speaker identification, summaries, shared meeting archives, and cross-meeting AI Chat. This comparison was refreshed on June 12, 2026 against current OpenAI/ChatGPT and Otter.ai pricing/product sources.
 
 ## Quick Answer
 
@@ -111,10 +111,10 @@ Yes. Otter captures the meeting. ChatGPT turns the transcript into useful work.
 
 ## Sources
 
-- [ChatGPT pricing](https://chatgpt.com/pricing/): current ChatGPT plan ladder and GPT-5.5 feature access, verified June 3, 2026
-- [OpenAI GPT-5.5 announcement](https://openai.com/index/introducing-gpt-5-5/): current OpenAI model context, verified June 3, 2026
-- [Otter.ai pricing](https://otter.ai/pricing): Basic, Pro, Business, Enterprise pricing, limits, Otter MCP, and team features, verified June 3, 2026
-- [Otter.ai product overview](https://otter.ai/): meeting agent, transcription, summary, and workflow positioning, verified June 3, 2026
+- [ChatGPT pricing](https://chatgpt.com/pricing/): current ChatGPT plan ladder and GPT-5.5 feature access, verified June 12, 2026
+- [OpenAI GPT-5.5 announcement](https://openai.com/index/introducing-gpt-5-5/): current OpenAI model context, verified June 12, 2026
+- [Otter.ai pricing](https://otter.ai/pricing): Basic, Pro, Business, Enterprise pricing, limits, Otter MCP, and team features, verified June 12, 2026
+- [Otter.ai product overview](https://otter.ai/): meeting agent, transcription, summary, and workflow positioning, verified June 12, 2026
 
 ## Related
 

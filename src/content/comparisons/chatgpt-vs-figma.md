@@ -6,10 +6,10 @@ tools: [chatgpt, figma]
 category: ai-design
 winner: depends
 seo_title: "ChatGPT vs Figma AI: Product Strategy or Design Workspace? (June 2026)"
-meta_description: "Updated June 3, 2026: compare ChatGPT and Figma AI for product briefs, UX copy, design systems, Figma Make, AI credits, pricing, and team workflow."
+meta_description: "Updated June 12, 2026: compare ChatGPT and Figma AI for product briefs, UX copy, design systems, Figma Make, AI credits, pricing, and team workflow."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-03
-last_verified: 2026-06-03
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -20,7 +20,7 @@ canonical_fact_table: true
 
 **Quick answer:** use ChatGPT to decide what should be built. Use Figma when the answer has to become a real design artifact that designers, PMs, engineers, and stakeholders can inspect together.
 
-This page was re-verified on **June 3, 2026** against current OpenAI and Figma sources. The important 2026 change is Figma's AI-credit layer: Figma now exposes AI add-ons and included credits across plans, and Figma Make can use different models with different credit burn.
+This page was re-verified on **June 12, 2026** against current OpenAI and Figma sources. The important 2026 change is Figma's AI-credit layer: Figma now exposes AI add-ons and included credits across plans, and Figma Make can use different models with different credit burn.
 
 ## Decision Snapshot
 

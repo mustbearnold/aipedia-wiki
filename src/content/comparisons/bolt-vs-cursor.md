@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Bolt.new vs Cursor: App Builder or AI Code Editor? (June 2026)"
 meta_description: "Bolt.new vs Cursor, refreshed June 2026: compare browser app generation with AI-native IDE work, pricing, agents, production hardening, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-03
-last_verified: 2026-06-03
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -54,7 +54,7 @@ Bolt is the faster prototype machine. Cursor is the better daily engineering env
 
 ## Current Fact Check
 
-Verified 2026-06-03 against Bolt and Cursor official pricing/product pages. Cursor's local tool record was also refreshed 2026-06-02, and Bolt's was refreshed 2026-06-01.
+Verified 2026-06-12 against Bolt and Cursor official pricing/product pages. Cursor's local tool record was also refreshed 2026-06-12, and Bolt's was refreshed 2026-06-12.
 
 ## FAQ
 

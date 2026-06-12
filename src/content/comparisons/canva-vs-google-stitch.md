@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Canva AI vs Google Stitch: Which Is Better in 2026?"
 meta_description: "Canva AI vs Google Stitch, refreshed June 2026: compare finished design production, Google Labs UI prototyping, pricing risk, handoff, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-03
-last_verified: 2026-06-03
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -72,7 +72,7 @@ Canva is the better commercial design-production tool. Google Stitch is the more
 
 ## Current Fact Check
 
-Verified 2026-06-03 against Canva's current official pages/tool record and Google's March 2026 Stitch announcement plus official Labs surfaces. Removed unsupported claims about Gemini plan pricing, context windows, and Google Workspace packaging because Google has not published those as durable Stitch procurement facts.
+Verified 2026-06-12 against Canva's current official pages/tool record and Google's March 2026 Stitch announcement plus official Labs surfaces. Removed unsupported claims about Gemini plan pricing, context windows, and Google Workspace packaging because Google has not published those as durable Stitch procurement facts.
 
 ## FAQ
 

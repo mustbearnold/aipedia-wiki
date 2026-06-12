@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Bolt.new vs Canva AI: App Builder or Design Platform? (June 2026)"
 meta_description: "Bolt.new vs Canva AI, refreshed June 2026: compare browser app building with Canva's AI design suite, pricing posture, buyer fit, and workflow risk."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-03
-last_verified: 2026-06-03
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -58,7 +58,7 @@ Bolt is for app creation. Canva is for visual communication. If the output needs
 
 ## Current Fact Check
 
-Verified 2026-06-03 against Bolt's official pricing/home pages and Canva's current AiPedia tool record refreshed 2026-06-02. Canva's public pricing page blocked direct scripted fetches during this refresh, so the comparison avoids unsupported fixed Pro/Business price claims and keeps the region-rendered pricing caveat.
+Verified 2026-06-12 against Bolt's official pricing/home pages and Canva's current AiPedia tool record refreshed 2026-06-12. Canva's public pricing page blocked direct scripted fetches during this refresh, so the comparison avoids unsupported fixed Pro/Business price claims and keeps the region-rendered pricing caveat.
 
 ## FAQ
 

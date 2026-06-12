@@ -6,10 +6,10 @@ tools: [capacities, otter-ai]
 category: ai-notes
 winner: depends
 seo_title: "Capacities vs Otter.ai: PKM or Meeting Transcription? (June 2026)"
-meta_description: "Updated June 3, 2026: choose Capacities for object-based personal knowledge management and Otter.ai for live transcription, OtterPilot meeting notes, and team meeting workflows."
+meta_description: "Updated June 12, 2026: choose Capacities for object-based personal knowledge management and Otter.ai for live transcription, OtterPilot meeting notes, and team meeting workflows."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-03
-last_verified: 2026-06-03
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -73,7 +73,7 @@ For regulated industries, HR, education, healthcare, legal, and customer calls, 
 
 ## Current Fact Check
 
-Verified June 3, 2026 against official Capacities pricing/docs and Otter.ai pricing. Otter's pricing page currently shows Basic, Pro, Business, and Enterprise with distinct meeting-minute, import, storage, workflow, and admin limits; Capacities remains the object-based PKM pick rather than a meeting transcription substitute.
+Verified June 12, 2026 against official Capacities pricing/docs and Otter.ai pricing. Otter's pricing page currently shows Basic, Pro, Business, and Enterprise with distinct meeting-minute, import, storage, workflow, and admin limits; Capacities remains the object-based PKM pick rather than a meeting transcription substitute.
 
 ## Who Should Choose Capacities
 
