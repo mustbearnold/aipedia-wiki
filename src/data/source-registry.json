@@ -4673,6 +4673,46 @@
       "volatility": "high"
     },
     {
+      "id": "ada-demo",
+      "label": "Ada demo request",
+      "url": "https://www.ada.cx/demo/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "low"
+    },
+    {
+      "id": "assemblyai-voice-agent-api",
+      "label": "AssemblyAI Voice Agent API",
+      "url": "https://www.assemblyai.com/products/voice-agent-api",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium"
+    },
+    {
+      "id": "google-gemini-app-io-2026",
+      "label": "Gemini app I/O 2026 update",
+      "url": "https://blog.google/innovation-and-ai/products/gemini-app/next-evolution-gemini-app/",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "langflow-releases",
+      "label": "Langflow GitHub releases",
+      "url": "https://github.com/langflow-ai/langflow/releases",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
+      "id": "pieces-public-pricing",
+      "label": "Pieces pricing",
+      "url": "https://pieces.app/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high"
+    },
+    {
       "id": "llama-docs",
       "label": "Llama model documentation",
       "url": "https://www.llama.com/docs/model-cards-and-prompt-formats/",
