@@ -36,6 +36,24 @@ smartypants) or from layout/component code, not literal em dashes in content:
 ### Pass 5 — other staleness (quarters, relative time, beta/preview) — CLEAN
 - No passed future-quarter framing. "this week"/"last week" are all speed idioms ("ship an MVP this week"), not calendar claims. "as of early 2026" markers are correct GA/establishment history (Firefly Image 5, Eleven v3, Doubao DAU). Ollama "Team coming soon" is vendor-sourced with an explicit June 8 check date and caveats. Nothing to fix.
 
+### Provenance integrity (from audit:freshness / audit:provenance)
+- Registered 5 missing fact source IDs on lindy.md (lindy-quickstart/integrations/usage/credits/partnerstack) and 5 missing price-history source IDs (ada-demo, assemblyai-voice-agent-api, google-gemini-app-io-2026, langflow-releases, pieces-public-pricing). Both were sweep misses where the facts already had correct inline source URLs. Result: 0 unknown source IDs across facts and price history; 1081 registered sources, no duplicates.
+
+### Durable guards added (prevent regression of the bug classes above)
+- scripts/guard-em-dashes.mjs (wired into guard:check): fails on a literal em dash or a prose " -- " in src/content, ignoring code spans. +2 tests.
+- audit-guide-picks.mjs extended: new `guide-pick-tool-not-active` check fails if a guide recommends a dead/retired/acquired tool in any pick slot. +1 test.
+- Test suite now 36/36 green.
+
+### Presentation + integrity audits run (all clean)
+- Full mobile sweep: all 1112 routes at 360px -> 0 horizontal overflow. Plus 49 page-types x {360,390,768,1280} -> 0 issues. Image alt coverage 100%.
+- Internal-linking orphan check: 5 "orphans" are all intentional noindex archives (correct); near-orphans are dead/company pages (expected). No defects.
+- Body-vs-frontmatter verification-date consistency across 260 tool pages: 0 stale (no phind-type recurrence).
+- audit:facts 0 missing/stale; audit:sources 0 registry issues.
+
+## Out of safe-autonomous scope (need external data or a human call)
+- 29 canonical facts are past next_review_at ("due now" in audit:freshness). Re-verification needs live vendor pricing/model data; not auto-fixed to avoid fabrication.
+- 54 news articles under 300 words (audit:kpis "thin-risk"). News is excluded from the refresh by instruction.
+
 ## Sweep summary (staleness mission)
 Passes 1-5 complete. Auto-fixed: 6 passed-date framings, 1 dead-tool cross-ref, and a site-wide em-dash elimination (13 files incl. all ~260 tool-page citations and a real `npm test --` CLI-rendering bug). Passes 3 and 5 confirmed clean. The June sweep + these passes leave the content genuinely current and the rendered output em-dash-free (except the compare-tool empty-cell placeholders, flagged below). Remaining staleness categories needing EXTERNAL data (live pricing re-verification, valuation/funding drift, external-link rot) are out of safe-autonomous scope.
 
