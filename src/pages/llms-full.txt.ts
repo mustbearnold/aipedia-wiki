@@ -183,7 +183,7 @@ export const GET: APIRoute = async () => {
     .sort((a: any, b: any) => (a.data.title || '').localeCompare(b.data.title || ''));
 
   const lines: string[] = [];
-  lines.push('# aipedia.wiki — full manifest');
+  lines.push('# aipedia.wiki full manifest');
   lines.push('');
   lines.push('> Extended LLM-friendly site manifest. Enumerates every active page across tools, categories, comparisons, buyer guides, and companies. See /llms.txt for the concise version.');
   lines.push('');

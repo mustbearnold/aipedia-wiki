@@ -535,7 +535,7 @@ const toolsCount = allTools.filter(
     } else {
       setTimeout(prefetch, 1500);
     }
-    // Also prefetch on first hover/focus of either trigger — covers the
+    // Also prefetch on first hover/focus of either trigger, covering the
     // case where the user lands and immediately reaches for search
     // before idle fires.
     const eagerPrefetch = () => { load(); };

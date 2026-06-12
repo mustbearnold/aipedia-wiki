@@ -10,7 +10,7 @@ last_verified: 2026-06-12
 
 # AI Tools Glossary
 
-> Quick-reference definitions for every key term used across the AI Tools wiki. Each heading is an anchor link -- use `glossary/index.md#term-name` to link from any page.
+> Quick-reference definitions for every key term used across the AI Tools wiki. Each heading is an anchor link; use `glossary/index.md#term-name` to link from any page.
 
 ---
 ## LLM

@@ -60,9 +60,9 @@ Google DeepMind leads in compute via TPUs and distribution across Google product
 Threats include continued model velocity from Anthropic (Opus 4.8, Claude Mythos research preview) and OpenAI (GPT-5.5, Daybreak). Opportunities lie in enterprise via Vertex AI, Isomorphic Labs' science track funded by the May 12 $2.1B Series C, and Gemini Intelligence converting Google's distribution into recurring assistant usage.
 
 ## Sources
-- [Google DeepMind](https://deepmind.google/) -- Official site for models and research.
-- [Google AI Blog](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/) -- Gemini 3.1 Pro announcement.
-- [Mean CEO Blog](https://blog.mean.ceo/new-ai-model-releases-news-april-2026/) -- April 2026 model updates.
+- [Google DeepMind](https://deepmind.google/): Official site for models and research.
+- [Google AI Blog](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/): Gemini 3.1 Pro announcement.
+- [Mean CEO Blog](https://blog.mean.ceo/new-ai-model-releases-news-april-2026/): April 2026 model updates.
 
 ## Related
 - [Gemini](../tools/gemini.md)

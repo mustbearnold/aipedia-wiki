@@ -12,7 +12,7 @@ last_updated: 2026-06-12
 last_verified: 2026-06-12
 ---
 
-# Play.ht -- Discontinued
+# Play.ht (Discontinued)
 
 Play.ht was an AI text-to-speech and voice cloning platform that ceased operations on December 31, 2025, after Meta acqui-hired its team to develop voice features for Meta's AI assistant and Llama models.[1][2] Users received 90 days notice, but cloned voices could not transfer, and no export tool existed for voice models.[1]
 
@@ -50,6 +50,6 @@ Vendor dependence in AI voice carries shutdown risk, as seen with non-portable c
 Self-hosting options like Fish Audio S2 reduce risks by granting model control. Maintain training samples and test multiple providers for exit strategies.
 
 ## Sources
-- [Murf.ai blog on Play.ht transition](https://murf.ai/blog/play-ai-transition-guide)[1] -- Confirms Meta acquisition, December 31, 2025 shutdown, API disruptions, and migration offers.
-- [YouTube on Play.ht downfall](https://www.youtube.com/watch?v=YKcA8t8WCPw)[2] -- Reports Meta acquisition confirmation via Bloomberg and team memo.
-- [NYSE index](https://www.nyse.com/index)[3] -- Unrelated market data.
+- [Murf.ai blog on Play.ht transition](https://murf.ai/blog/play-ai-transition-guide)[1]: Confirms Meta acquisition, December 31, 2025 shutdown, API disruptions, and migration offers.
+- [YouTube on Play.ht downfall](https://www.youtube.com/watch?v=YKcA8t8WCPw)[2]: Reports Meta acquisition confirmation via Bloomberg and team memo.
+- [NYSE index](https://www.nyse.com/index)[3]: Unrelated market data.

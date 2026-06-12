@@ -123,7 +123,7 @@ Use them for repeatable test-generation chores, not final judgment. The develope
 - "Cover success, empty input, malformed input, permission errors, and boundary values."
 - "Use the existing test style in this repository."
 - "Do not mock the unit under test."
-- "Run or reason against this command: npm test -- path/to/file.test.ts."
+- "Run or reason against this command: `npm test -- path/to/file.test.ts`."
 - "After writing tests, explain what behavior is still untested."
 - "If a test fails, decide whether the test or implementation is wrong before patching."
 

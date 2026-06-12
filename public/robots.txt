@@ -62,5 +62,5 @@ Disallow: /api/
 Sitemap: https://aipedia.wiki/sitemap-index.xml
 
 # LLM-friendly site manifests (per llmstxt.org)
-# /llms.txt      — concise manifest: entry points + categories + editorial policy
-# /llms-full.txt — full manifest: every active tool, comparison, and guide
+# /llms.txt      - concise manifest: entry points + categories + editorial policy
+# /llms-full.txt - full manifest: every active tool, comparison, and guide

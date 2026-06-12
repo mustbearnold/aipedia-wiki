@@ -395,7 +395,7 @@ const tocItems = (headings ?? [])
     <ShareButtons title={f.title} pageUrl={`${siteBase}tools/${toolSlug}/`} />
     <HelpfulVote pageSlug={toolSlug} pageType="tool" />
     <BadgeEmbed slug={toolSlug} title={f.title} />
-    <CiteThisPage title={`${f.title} — Editorial Review`} pageUrl={`${siteBase}tools/${toolSlug}/`} pageType="tool-review" />
+    <CiteThisPage title={`${f.title}: Editorial Review`} pageUrl={`${siteBase}tools/${toolSlug}/`} pageType="tool-review" />
     <FeedbackForm toolName={f.title} />
     <ReportOutdatedButton pageTitle={f.title} pageSlug={toolSlug} pageType="tool" />
   </div>

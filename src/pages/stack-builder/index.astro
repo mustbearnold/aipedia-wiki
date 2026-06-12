@@ -1330,7 +1330,7 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
       } else if (state.roles.length < MAX_ROLES) {
         state.roles.push(role);
       } else {
-        // At cap — drop the first one to make room
+        // At cap, drop the first one to make room
         state.roles.shift();
         state.roles.push(role);
       }
@@ -1512,7 +1512,7 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
                 // exists, else the canonical vendor URL. Opens in a new
                 // tab with rel=noopener (and sponsored when affiliate) so
                 // we earn on the intent moment without hijacking nav.
-                // Label is "Try" for every tool — consistent UX. The rel
+                // Label is "Try" for every tool, consistent UX. The rel
                 // value still flips to "sponsored" for affiliate links so
                 // Google + FTC see the disclosure, but users see a single
                 // action verb instead of a confusing Try/Open mix.
@@ -1598,7 +1598,7 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
         Object.entries(state.swaps).sort(([a], [b]) => a.localeCompare(b)).map(([k, v]) => `${k}=${v}`).join('|'),
       ].join('::');
 
-      // "From $X" uses summed LOW prices — the realistic entry cost.
+      // "From $X" uses summed LOW prices, the realistic entry cost.
       // High-range ceiling was confusing ($29-$2745) because seat-based
       // tools like Intercom blew the top out. Entry cost is the actionable
       // number for "what's this going to cost me to start?".
