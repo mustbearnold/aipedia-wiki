@@ -2,8 +2,8 @@
 import ArticleLayout from '../../layouts/ArticleLayout.astro';
 import { getCollection } from 'astro:content';
 
-const LAST_REVIEWED = '2026-05-14';
-const LAST_REVIEWED_HUMAN = 'May 14, 2026';
+const LAST_REVIEWED = '2026-06-12';
+const LAST_REVIEWED_HUMAN = 'June 12, 2026';
 
 const pageName = 'Tools We Actually Use, aipedia.wiki';
 const pageDesc =
@@ -23,9 +23,8 @@ type StackEntry = {
 };
 
 // Honest list: only the tools the editorial team genuinely uses to build and
-// maintain aipedia.wiki. Affiliate status is irrelevant here. Neither of these
-// vendors runs an affiliate program, which is the point: this page exists to
-// be honest, not to monetize.
+// maintain aipedia.wiki. Affiliate status is irrelevant here: this page exists
+// to be honest, not to monetize.
 const realStack: StackEntry[] = [
   {
     slug: 'claude-code',
@@ -113,7 +112,7 @@ const infrastructure: { name: string; url: string; why: string }[] = [
   </div>
 
   <p class="text-sm text-[var(--text-muted)]">
-    Neither Anthropic (Claude Code) nor OpenAI (Codex) runs an affiliate program at the time of this writing. No commission is earned when readers click through to these tools from this page. They are listed because the editorial team uses them, not because they monetize.
+    AiPedia has no commission configured for the Claude Code or Codex links on this page. No commission is earned when readers click through to these tools from this page. They are listed because the editorial team uses them, not because they monetize.
   </p>
 
   <h2>Site infrastructure</h2>

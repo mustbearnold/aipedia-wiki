@@ -1,6 +1,6 @@
 # AiPedia Page Refresh Ledger
 
-Ledger updated through: 2026-06-11
+Ledger updated through: 2026-06-12
 Tracked public pages and crawl surfaces: 738
 
 Hard rule: every time a tracked website page is edited, refreshed, materially re-ranked, or has volatile facts re-verified, update that page row in this file on the same change. If a child page update affects a parent hub, archive, internal-link block, sitemap, or LLM surface, update those affected rows too.
@@ -23,9 +23,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-04 | /tools/tome/ | Tool | Yes | frontmatter | src/content/tools/tome.md |
 | 2026-05-05 | /tools/dalle/ | Tool | Yes | frontmatter | src/content/tools/dalle.md |
 | 2026-05-13 | /tools/grok-code-fast/ | Tool | Yes | frontmatter | src/content/tools/grok-code-fast.md |
-| 2026-05-15 | /about/our-stack/ | Static page | Yes | git | src/pages/about/our-stack.astro |
-| 2026-05-15 | /guides/best-ai-landing-page-builder-for-ab-testing/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-landing-page-builder-for-ab-testing.md |
-| 2026-05-15 | /tools/openclaw/ | Tool | Yes | frontmatter | src/content/tools/openclaw.md |
 | 2026-05-17 | /answers/chatgpt-vs-claude-which-is-better/ | Static page | Yes | page metadata | src/pages/answers/chatgpt-vs-claude-which-is-better.astro |
 | 2026-05-17 | /answers/is-cursor-worth-it/ | Static page | Yes | page metadata | src/pages/answers/is-cursor-worth-it.astro |
 | 2026-05-17 | /companies/google-deepmind/ | Company | Yes | frontmatter | src/content/companies/google-deepmind.md |
@@ -120,7 +117,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-01 | /tools/tabnine/ | Tool | Yes | frontmatter | src/content/tools/tabnine.md |
 | 2026-06-01 | /tools/zed/ | Tool | Yes | frontmatter | src/content/tools/zed.md |
 | 2026-06-02 | /404/ | Static page | No | git | src/pages/404.astro |
-| 2026-06-02 | /about/ | Static page | Yes | git | src/pages/about/index.astro |
 | 2026-06-02 | /about/scoring/ | Static page | Yes | git | src/pages/about/scoring.astro |
 | 2026-06-02 | /companies/ | Static page | Yes | git | src/pages/companies/index.astro |
 | 2026-06-02 | /companies/anthropic/ | Company | Yes | frontmatter | src/content/companies/anthropic.md |
@@ -676,7 +672,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-09 | /tools/tavus/ | Tool | Yes | frontmatter | src/content/tools/tavus.md |
 | 2026-06-09 | /tools/tines/ | Tool | Yes | frontmatter | src/content/tools/tines.md |
 | 2026-06-09 | /tools/together-ai/ | Tool | Yes | frontmatter | src/content/tools/together-ai.md |
-| 2026-06-10 | /categories/ai-automation/ | Category | Yes | frontmatter | src/content/categories/ai-automation.md |
 | 2026-06-10 | /categories/ai-chatbots/ | Category | Yes | frontmatter | src/content/categories/ai-chatbots.md |
 | 2026-06-10 | /categories/ai-coding/ | Category | Yes | frontmatter | src/content/categories/ai-coding.md |
 | 2026-06-10 | /categories/ai-design/ | Category | Yes | frontmatter | src/content/categories/ai-design.md |
@@ -688,7 +683,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-10 | /categories/ai-video/ | Category | Yes | frontmatter | src/content/categories/ai-video.md |
 | 2026-06-10 | /categories/ai-voice/ | Category | Yes | frontmatter | src/content/categories/ai-voice.md |
 | 2026-06-10 | /categories/ai-writing/ | Category | Yes | frontmatter | src/content/categories/ai-writing.md |
-| 2026-06-10 | /guides/ | Static page | Yes | git | src/pages/guides/index.astro |
 | 2026-06-10 | /guides/best-ai-calendar-for-google-workspace-power-users/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-calendar-for-google-workspace-power-users.md |
 | 2026-06-10 | /guides/best-ai-email-triage-for-heavy-inboxes/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-email-triage-for-heavy-inboxes.md |
 | 2026-06-10 | /guides/best-ai-outbound-tool-for-unified-prospecting-and-sequencing/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-outbound-tool-for-unified-prospecting-and-sequencing.md |
@@ -703,7 +697,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-10 | /guides/best-voice-ai-for-emotion-aware-products/ | Guide | Yes | frontmatter | src/content/use-cases/best-voice-ai-for-emotion-aware-products.md |
 | 2026-06-10 | /news/ | Static page | Yes | page metadata | src/pages/news/index.astro |
 | 2026-06-10 | /news/rss.xml | Crawl surface | No | git | src/pages/news/rss.xml.ts |
-| 2026-06-10 | /tools/ | Static page | Yes | git | src/pages/tools/index.astro |
 | 2026-06-10 | /tools/rows/ | Tool | Yes | frontmatter | src/content/tools/rows.md |
 | 2026-06-10 | /tools/tripo3d/ | Tool | Yes | frontmatter | src/content/tools/tripo3d.md |
 | 2026-06-10 | /tools/typingmind/ | Tool | Yes | frontmatter | src/content/tools/typingmind.md |
@@ -736,16 +729,23 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-10 | /workflows/design-agency-replacement/ | Workflow | Yes | frontmatter | src/content/workflows/design-agency-replacement.md |
 | 2026-06-10 | /workflows/podcast-automation-stack/ | Workflow | Yes | frontmatter | src/content/workflows/podcast-automation-stack.md |
 | 2026-06-10 | /workflows/research-assistant-stack/ | Workflow | Yes | frontmatter | src/content/workflows/research-assistant-stack.md |
-| 2026-06-11 | / | Static page | Yes | working tree | src/pages/index.astro |
-| 2026-06-11 | /categories/ | Static page | Yes | working tree | src/pages/categories/index.astro |
-| 2026-06-11 | /explore/ | Static page | Yes | working tree | src/pages/explore/index.astro |
-| 2026-06-11 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
-| 2026-06-11 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
-| 2026-06-11 | /workflows/ | Static page | Yes | working tree | src/pages/workflows/index.astro |
-| 2026-06-11 | /workflows/accountant-stack/ | Workflow | Yes | working tree | src/content/workflows/accountant-stack.md |
-| 2026-06-11 | /workflows/agency-sales-stack/ | Workflow | Yes | working tree | src/content/workflows/agency-sales-stack.md |
-| 2026-06-11 | /workflows/consultant-stack/ | Workflow | Yes | working tree | src/content/workflows/consultant-stack.md |
-| 2026-06-11 | /workflows/researcher-stack/ | Workflow | Yes | working tree | src/content/workflows/researcher-stack.md |
-| 2026-06-11 | /workflows/sdr-stack/ | Workflow | Yes | working tree | src/content/workflows/sdr-stack.md |
-| 2026-06-11 | /workflows/seo-content-pipeline/ | Workflow | Yes | working tree | src/content/workflows/seo-content-pipeline.md |
-| 2026-06-11 | /workflows/solo-founder-stack/ | Workflow | Yes | working tree | src/content/workflows/solo-founder-stack.md |
+| 2026-06-11 | /workflows/ | Static page | Yes | git | src/pages/workflows/index.astro |
+| 2026-06-11 | /workflows/accountant-stack/ | Workflow | Yes | frontmatter | src/content/workflows/accountant-stack.md |
+| 2026-06-11 | /workflows/agency-sales-stack/ | Workflow | Yes | frontmatter | src/content/workflows/agency-sales-stack.md |
+| 2026-06-11 | /workflows/consultant-stack/ | Workflow | Yes | frontmatter | src/content/workflows/consultant-stack.md |
+| 2026-06-11 | /workflows/researcher-stack/ | Workflow | Yes | frontmatter | src/content/workflows/researcher-stack.md |
+| 2026-06-11 | /workflows/sdr-stack/ | Workflow | Yes | frontmatter | src/content/workflows/sdr-stack.md |
+| 2026-06-11 | /workflows/seo-content-pipeline/ | Workflow | Yes | frontmatter | src/content/workflows/seo-content-pipeline.md |
+| 2026-06-11 | /workflows/solo-founder-stack/ | Workflow | Yes | frontmatter | src/content/workflows/solo-founder-stack.md |
+| 2026-06-12 | / | Static page | Yes | working tree | src/pages/index.astro |
+| 2026-06-12 | /about/ | Static page | Yes | working tree | src/pages/about/index.astro |
+| 2026-06-12 | /about/our-stack/ | Static page | Yes | working tree | src/pages/about/our-stack.astro |
+| 2026-06-12 | /categories/ | Static page | Yes | working tree | src/pages/categories/index.astro |
+| 2026-06-12 | /categories/ai-automation/ | Category | Yes | working tree | src/content/categories/ai-automation.md |
+| 2026-06-12 | /explore/ | Static page | Yes | working tree | src/pages/explore/index.astro |
+| 2026-06-12 | /guides/ | Static page | Yes | working tree | src/pages/guides/index.astro |
+| 2026-06-12 | /guides/best-ai-landing-page-builder-for-ab-testing/ | Guide | Yes | working tree | src/content/use-cases/best-ai-landing-page-builder-for-ab-testing.md |
+| 2026-06-12 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
+| 2026-06-12 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
+| 2026-06-12 | /tools/ | Static page | Yes | working tree | src/pages/tools/index.astro |
+| 2026-06-12 | /tools/openclaw/ | Tool | Yes | working tree | src/content/tools/openclaw.md |

@@ -82,6 +82,98 @@ Summarize changed files, behavior shipped, tests passed, unresolved risks, and r
 
 ---
 
+## ExecPlan: June 12 2026 May 15 Mixed Frontier Refresh
+
+### 1. Objective
+
+Continue the oldest-to-newest refresh by updating the next live May 15 frontier: `/about/our-stack/`, `/guides/best-ai-landing-page-builder-for-ab-testing/`, and `/tools/openclaw/`. The batch improves transparency, current buyer guidance, AI automation trust, mobile readability, and crawl/ledger freshness.
+
+### 2. Current state
+
+`PAGE_REFRESH_LEDGER.md` shows dead-tool rows for Phind, Tome, DALL-E, and Grok Code Fast before the next live rows. Those are excluded by the active goal. The next eligible live rows are the editorial-stack static page, the landing-page-builder A/B testing guide, and OpenClaw. The guide still carries May 2026 wording and stale pricing shortcuts. OpenClaw carries May 15 metadata, a 371K+ star count, and pre-June security posture. The stack page has May 14 review metadata and makes vendor-affiliate-program wording that is safer as internal AiPedia commission-state wording.
+
+### 3. Target state
+
+All three pages are refreshed to June 12, 2026 with current verification language. The guide reflects current Unbounce, Instapage, Convert, VWO, and Leadpages pricing/source posture and avoids unsupported fixed-price claims. OpenClaw reflects current GitHub/source posture, a current star range, and clearer safety warnings after June 2026 security coverage. The stack page states internal commission/link status without implying an externally verified vendor affiliate-program claim. Affected parent/crawl surfaces and `PAGE_REFRESH_LEDGER.md` reflect the batch.
+
+### 4. Scope
+
+Included: the three May 15 live pages, `/about/`, `/guides/`, `/tools/`, `/categories/`, `/categories/ai-automation/`, `/explore/`, homepage, `/llms.txt`, `/llms-full.txt`, `PAGE_REFRESH_LEDGER.md`, and this plan. Excluded: dead tools, individual news article pages, unrelated May 17+ rows, new tool records, logo work, and source-registry schema changes.
+
+### 5. Files likely affected
+
+`src/pages/about/our-stack.astro`, `src/content/use-cases/best-ai-landing-page-builder-for-ab-testing.md`, `src/content/tools/openclaw.md`, `src/pages/about/index.astro`, `src/pages/guides/index.astro`, `src/pages/tools/index.astro`, `src/pages/categories/index.astro`, `src/content/categories/ai-automation.md`, `src/pages/explore/index.astro`, `src/pages/index.astro`, `src/pages/llms.txt.ts`, `src/pages/llms-full.txt.ts`, `src/data/source-registry.json`, `PAGE_REFRESH_LEDGER.md`, and this plan.
+
+### 6. Data model impact
+
+No schema changes. Tool, guide, category, and static-page metadata are refreshed in place.
+
+### 7. SEO impact
+
+The batch removes May-only titles/descriptions from the guide/tool pages, keeps active parent hubs current, and updates crawl manifests so LLM/search surfaces see the newest static/guide/tool refresh.
+
+### 8. Conversion impact
+
+The guide remains a commercial buyer page around Unbounce and alternatives. Existing CTAs must stay honest, source-backed, and disclosed through existing site surfaces. No new affiliate program is added.
+
+### 9. Mobile UX impact
+
+Pricing reality sections should be stacked on mobile rather than wide tables where current pricing caveats are long. The pages must remain readable at 360, 390, 430, 768, and desktop widths.
+
+### 10. Implementation steps
+
+1. Verify June 2026 sources for Unbounce, Instapage, VWO, Convert, Leadpages, OpenClaw, and internal stack records.
+2. Refresh the three pages to June 11 facts and source stamps.
+3. Update affected parent/top-layer pages and LLM crawl surfaces.
+4. Regenerate and inspect `PAGE_REFRESH_LEDGER.md`.
+5. Run validation and responsive QA.
+6. Commit and push if clean.
+
+### 11. Verification commands
+
+`npm run ledger:pages`
+
+`npm run ledger:pages:check`
+
+`npm run guard:check`
+
+`npm run check:links`
+
+`npm run audit:sources`
+
+`npm run audit:facts`
+
+`npm run test:scripts`
+
+`npm run check`
+
+`npm run build:fast`
+
+`git diff --check`
+
+Responsive QA across affected routes at 360, 390, 430, 768, and 1024px.
+
+### 12. Acceptance criteria
+
+All three pages show June 11 verification, stale May pricing/model/source statements are removed or reframed, parent/top-layer pages and crawl surfaces are current, the ledger reflects the refresh scope, validation passes, and mobile QA has no horizontal overflow.
+
+### 13. Risks and mitigations
+
+OpenClaw has fast-changing security and repository signals; avoid false precision beyond currently observed source ranges. Landing-page-builder alternatives expose dynamic or sales-led pricing; avoid hard-coded unsupported competitor prices. The stack page should not overclaim external affiliate-program facts when internal link/commission state is the verifiable point.
+
+### 14. Progress log
+
+- 2026-06-11: Identified the May 15 live frontier after skipping dead Phind, Tome, DALL-E, and Grok Code Fast rows. Began source verification for Unbounce, Instapage, VWO, Convert, Leadpages, OpenClaw, and internal stack records.
+- 2026-06-12: Resumed the batch against the current date. Re-verified Unbounce, Instapage, Convert, VWO, Leadpages, and OpenClaw source posture for June 2026 before editing.
+- 2026-06-12: Edited all three target pages plus parent/crawl surfaces (`/about/`, `/guides/`, `/tools/`, `/categories/`, `/categories/ai-automation/`, `/explore/`, homepage, `/llms.txt`, `/llms-full.txt`, `src/data/source-registry.json`) to June 12 facts and verification stamps. Regenerated `PAGE_REFRESH_LEDGER.md` (738 rows, updated through 2026-06-12).
+- 2026-06-12: Ran `npm run ledger:pages:check`, `npm run guard:check`, `npm run check:links`, `npm run audit:sources`, `npm run audit:facts`, `npm run test:scripts`, `npm run check`, and `npm run build:fast`. All passed: 33/33 script tests, 1104 pages built, indexability and commercial CTA audits clean, 0 npm audit vulnerabilities.
+
+### 15. Final report
+
+All three May 15 pages (`/about/our-stack/`, `/guides/best-ai-landing-page-builder-for-ab-testing/`, `/tools/openclaw/`) now carry June 12, 2026 verification. The guide replaced stale fixed-price shortcuts with current Unbounce, Instapage, Leadpages, VWO, and Convert pricing and added per-source verification dates. OpenClaw reflects the 378K+ star/79K+ fork count, 22+ messaging surfaces, DM pairing/sandbox guidance, and June 2026 security coverage (TechRadar). The stack page reframes the affiliate-program claim as internal AiPedia commission-state wording. The `/categories/ai-automation/` hub gained an OpenClaw row/use-case and a June 12 local-agent update note; `/about/`, `/guides/`, `/tools/`, `/categories/`, `/explore/`, homepage, `/llms.txt`, and `/llms-full.txt` all reference the refreshed pages. `PAGE_REFRESH_LEDGER.md` regenerated clean (738 rows, through 2026-06-12). All validation commands pass; no unresolved risks. Next task: continue the oldest-to-newest refresh with the live 2026-05-17 cluster (11 pages: `/answers/chatgpt-vs-claude-which-is-better/`, `/answers/is-cursor-worth-it/`, `/companies/google-deepmind/`, `/companies/mistral/`, `/companies/openai/`, `/compare/build/`, `/guides/notion-ai-alternatives/`, `/search/`, `/stack-builder/`, `/workflows/micro-saas-weekend-build/`, `/workflows/newsletter-stack/`).
+
+---
+
 ## ExecPlan: June 11 2026 May 14 Workflow Stack Refresh
 
 ### 1. Objective

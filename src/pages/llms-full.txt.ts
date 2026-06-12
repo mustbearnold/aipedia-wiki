@@ -2,6 +2,9 @@
 // Lists every active tool with category + tagline, every comparison, every
 // use-case guide. Intended for crawlers willing to ingest a larger manifest
 // to discover the full content map without parsing the sitemap.
+// Refresh metadata: 2026-06-12 May 15 frontier refresh across
+// /about/our-stack/, landing-page A/B testing, OpenClaw, AI Automation,
+// source registry, homepage, tools, guides, categories, and LLM maintenance.
 // Refresh metadata: 2026-06-11 May 14 workflow refresh across accountant,
 // agency-sales, consultant, researcher, SDR, SEO-content, and solo-founder
 // stacks with Dext, Reclaim, SaneBox, Consensus, Apollo, Amplemarket,
@@ -184,6 +187,7 @@ export const GET: APIRoute = async () => {
   lines.push('');
   lines.push('> Extended LLM-friendly site manifest. Enumerates every active page across tools, categories, comparisons, buyer guides, and companies. See /llms.txt for the concise version.');
   lines.push('');
+  lines.push('Recent maintenance: June 12, 2026 refreshed the May 15 frontier across /about/our-stack/, the landing-page A/B testing guide, and OpenClaw; updated Unbounce, Instapage, VWO, Convert, Leadpages, and OpenClaw source posture plus /about/, /guides/, /tools/, AI Automation, homepage, categories, source registry, and LLM surfaces.');
   lines.push('Recent news refresh: June 10, 2026 added June 9-10 source-backed AI tools coverage across Claude Fable 5/Mythos 5, Apple Siri AI and EU rollout risk, Copilot CLI custom agents, Datadog DASH agent observability/security, Similarweb May 2026 AI chatbot rankings, Claude Cowork, Gemini for Apple developers, Devin/Desktop, FrontierCode, and local model deployment.');
   lines.push('Recent workflow refresh: June 11, 2026 refreshed accountant, agency-sales, consultant, researcher, SDR, SEO-content, and solo-founder stacks around Dext per-client practice pricing, Reclaim/SaneBox inbox and calendar tiers, Consensus and Elicit research tiers, Apollo and Amplemarket outbound economics, Unbounce/AdCreative campaign costs, Beautiful.ai/Descript production pricing, Claude/ChatGPT plan caveats, and OmniSEO/Ahrefs/Semrush/Surfer/Frase SEO stack costs.');
   lines.push('Recent maintenance: June 10, 2026 refreshed twelve May 14 buyer guides across AI scheduling, inbox triage, outbound/sales platforms, receipt capture, academic citations, CRO, paid-social creative, podcast editing, presentation tools, and emotion-aware voice AI, with current official pricing/credit/source checks plus /guides/, /explore/, homepage, categories, and LLM maintenance.');

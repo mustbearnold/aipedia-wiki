@@ -5934,7 +5934,8 @@
       "url": "https://github.com/openclaw/openclaw",
       "type": "repository",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-12"
     },
     {
       "id": "openhands-official",

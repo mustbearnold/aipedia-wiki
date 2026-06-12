@@ -5,10 +5,10 @@ title: AI Automation & Agents
 description: Current workflow automation, AI agent platforms, meeting automation, call automation, and operations tools for technical teams, non-technical operators, GTM workflows, customer success, support, sales, and internal automation.
 tool_count: 27
 seo_title: "Best AI Automation Tools & Agent Platforms (June 2026)"
-meta_description: "Updated June 10, 2026: compare n8n, Zapier, Make, Workato, Taskade, Rows, Voiceflow, watsonx Orchestrate, Tines, Reclaim.ai, Instantly, Intercom, Gumloop, Relevance AI, Activepieces, AG2, CrewAI, Langflow, Langfuse, LangGraph, Letta, Dust, Glean, Goose, Browserbase, Modal, Apollo, Lindy, Pipedream, CloudTalk, and MeetGeek by workflow, pricing unit, AI orchestration, governance, and risk."
+meta_description: "Updated June 12, 2026: compare n8n, Zapier, Make, Workato, Taskade, Rows, Voiceflow, watsonx Orchestrate, Tines, Reclaim.ai, Instantly, Intercom, Gumloop, Relevance AI, Activepieces, AG2, CrewAI, Langflow, Langfuse, LangGraph, Letta, Dust, Glean, Goose, OpenClaw, Browserbase, Modal, Apollo, Lindy, Pipedream, CloudTalk, and MeetGeek by workflow, pricing unit, AI orchestration, governance, and risk."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-10
-last_verified: 2026-06-10
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -28,13 +28,15 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 
 **June 3 agent-stack update:** Microsoft's [Build 2026 Work IQ and Foundry announcements](/news/2026-06-02-microsoft-build-work-iq-agent-stack/), GitHub's [Copilot SDK GA plus AI Credits migration](/news/2026-06-02-github-copilot-ai-credits-sdk-ga/), NVIDIA's [enterprise and physical-AI agent stack](/news/2026-06-01-nvidia-agents-physical-ai-gtc-taipei/), and the [enterprise-agent roundup](/news/2026-06-02-enterprise-agent-roundup-postman-relationalai-7ai-white-house/) make one rule sharper: agents are safest when they inherit permissioned context, log actions, expose spend, and route risky writes through review. Generic "autonomous" claims are weaker than tenant boundaries, tool scopes, audit logs, budget controls, and task-specific runtime evidence.
 
+**June 12 local-agent update:** [OpenClaw](/tools/openclaw/) stays in the high-control, high-risk lane. The current GitHub README shows 22+ supported messaging surfaces, DM pairing defaults, explicit public-DM opt-in, `openclaw doctor`, and non-main sandbox guidance, while June 2026 security coverage reinforces the same buyer rule: do not expose privileged agents to messages, browsers, files, or gateways without patching, allowlists, sandbox policy, and owner accountability.
+
 **June 5 automation comparison update:** AiPedia rebuilt the high-intent automation fork across [Instantly vs Intercom](/compare/instantly-vs-intercom/), [Instantly vs Make](/compare/instantly-vs-make/), [Instantly vs Zapier](/compare/instantly-vs-zapier/), [Intercom vs Make](/compare/intercom-vs-make/), [Intercom vs Zapier](/compare/intercom-vs-zapier/), and [n8n vs Make vs Zapier](/compare/n8n-vs-make-vs-zapier/). The practical split is sharper now: outbound sending, customer support, visual workflow orchestration, broad no-code app automation, and self-hosted technical AI workflows are different buying jobs.
 
-**Use [n8n](/tools/n8n/) when a technical founder, ops engineer, or agency wants control.** n8n's current pricing page says cloud plans include unlimited users, unlimited workflows, every integration, and monthly workflow-execution billing rather than per-step billing. As of May 2026 the EU cloud Starter tier dropped from EU24 to EU20 per month, with reductions across higher tiers, while the self-hosted Community Edition path remains free. The June 5 check also confirms current AI Agent docs now standardize AI Agent nodes around Tools Agent behavior. This makes n8n the strongest default for complex AI workflows when someone can own credentials, logs, retries, and security.
+**Use [n8n](/tools/n8n/) when a technical founder, ops engineer, or agency wants control.** n8n's current pricing page says cloud plans include unlimited users, unlimited workflows, every integration, and monthly workflow-execution billing rather than per-step billing. As of the June 12 spot-check, Starter is still listed at EUR20/month billed annually, Pro at EUR50/month billed annually, Business at EUR667/month billed annually, and the self-hosted Community Edition path remains free. The current AI Agent docs also standardize AI Agent nodes around Tools Agent behavior. This makes n8n the strongest default for complex AI workflows when someone can own credentials, logs, retries, and security.
 
 **Use [Zapier](/tools/zapier/) when non-technical teams need the fastest SaaS connection path.** Zapier's current pricing and AI pages frame the platform around Zaps, Tables, Forms, MCP, Copilot, Agents, and more than 9,000 apps. The June 4 [ChatGPT vs Zapier](/compare/chatgpt-vs-zapier/) refresh keeps the distinction explicit: ChatGPT is the thinking and drafting assistant; Zapier is the workflow execution layer when SaaS actions need to run repeatedly. It is still the cleanest recommendation when app coverage and speed matter more than self-hosting or code-level control.
 
-**Use [Make](/tools/make/) when visual workflow clarity and low entry price matter.** Make's current pricing page lists a free plan with 1,000 credits/month and 3,000+ apps, plus Core, Pro, Teams, and Enterprise tiers. The May 2026 price reduction took Core from $10.59 to $9 per month, with proportional cuts across Pro and Teams. Its AI Agents page positions Make around transparent agents, MCP, AI Toolkit, AI Web Search, and 350+ AI apps across 3,000+ app connectors. The refreshed June 5 comparisons keep Make separate from Instantly-style sending and Intercom-style support: Make should orchestrate those systems, not replace their domain workflows.
+**Use [Make](/tools/make/) when visual workflow clarity and low entry price matter.** Make's June 12 pricing page lists a free plan with 1,000 credits/month and 3,000+ apps, plus Core at $9/month, Pro at $16/month, Teams at $29/month, and Enterprise custom at the 10K-credit selector. Its AI Agents page positions Make around transparent agents built inside the Make canvas, reusable agents across workflows, MCP, AI Toolkit, AI Web Search, and 350+ AI apps across 3,000+ app connectors. The refreshed June 5 comparisons keep Make separate from Instantly-style sending and Intercom-style support: Make should orchestrate those systems, not replace their domain workflows.
 
 **Use [Gumloop](/tools/gumloop/) when the buyer wants AI-native flows, agents, triggers, MCP, policies, and guardrails.** Gumloop is a stronger fit for agent-heavy workflow building than a generic "connect two apps" use case. The June 2 check keeps credit testing central: BYOK can reduce some workflow AI-node burn, but teams should test workflow nodes and agent/model paths separately before assuming every AI step is cheap.
 
@@ -85,6 +87,8 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 **Use [Glean](/tools/glean/) when automation starts with permission-aware work search and company knowledge.** Glean's June 2 source check keeps it in the enterprise Work AI lane: agents, Assistant, Search, MCP, Claude Code/Cursor plugins, and setup paths for Codex, Goose, Gemini CLI, VS Code, Windsurf, JetBrains, and related developer surfaces. Pricing remains sales-led.
 
 **Use [Goose](/tools/goose/) when the buyer wants an open-source BYOK agent that can automate local tasks.** The June 2 check confirms the active repository now resolves to `aaif-goose/goose`, with Apache-2.0 licensing and no Goose subscription fee. The cost and risk are model usage, local permissions, extensions, and secrets hygiene.
+
+**Use [OpenClaw](/tools/openclaw/) when the buyer wants a self-hosted personal assistant reachable from messaging apps.** The June 12 check keeps it out of the simple workflow-router lane: OpenClaw is free/MIT and has huge community momentum, but it controls browser, shell, files, channels, and gateway state from the operator's machine. Buy it for local-first personal automation only when someone can own DM pairing, allowlists, sandboxing, patching, model spend, and remote-exposure policy.
 
 **Use [Hermes Agent](/tools/hermes-agent/) when the buyer wants a self-hosted, memory-bearing ops agent across chat platforms.** The June 3 [ChatGPT vs Hermes Agent](/compare/chatgpt-vs-hermes-agent/) refresh keeps the split clean: ChatGPT is the hosted assistant; Hermes is the operator-owned agent stack. Current GitHub and docs checks keep Hermes at the v0.15.x release stream, MIT licensing, six terminal backends, 15+ messaging platforms, natural-language cron, auto-generated skills, subagents, MCP, and optional Nous Portal model/tool routing.
 
@@ -161,6 +165,7 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 | Internal team AI agents | [Dust](/tools/dust/) | Custom agents over company data and tools, Slack/Zendesk/API surfaces, model choice | Value depends on source hygiene, permissions, and repeated team workflows |
 | Enterprise knowledge agents | [Glean](/tools/glean/) | Permission-aware work search, agents, MCP, and developer-tool integrations over company data | Contact-sales pricing, connectors, and security review drive procurement |
 | Open-source local/BYOK agent | [Goose](/tools/goose/) | Apache-2.0 desktop/CLI/API agent with provider choice and MCP extensions | Local permissions, model costs, and extension trust need controls |
+| Self-hosted personal assistant across messaging surfaces | [OpenClaw](/tools/openclaw/) | MIT-licensed local gateway, 22+ channels, model/provider config, DM pairing, `openclaw doctor`, and sandbox guidance | Operator owns patching, exposure, allowlists, credentials, model spend, and tool permissions |
 | Self-hosted persistent ops agent | [Hermes Agent](/tools/hermes-agent/) | MIT-licensed persistent memory, auto-skills, natural-language cron, subagents, 15+ messaging platforms, and six backends | Operator owns uptime, credentials, spend limits, and tool permissions |
 | AI workspace deliverable automation | [Genspark](/tools/genspark/) | Super Agent plus docs, slides, sheets, media, meetings, calls, and AI Drive | Credit burn and enterprise/API availability need direct verification |
 | Email/webinar/course marketing automation | [GetResponse](/tools/getresponse/) | Email sends, funnels, webinars, course creator, ecommerce and marketing automation | Not a general ops agent; affiliate status does not affect ranking |
@@ -221,14 +226,14 @@ Do not leave this category stale. Automation tools are adding MCP, agent builder
 
 ## Sources
 
-- [n8n pricing](https://n8n.io/pricing/) (verified 2026-06-05)
-- [n8n AI documentation](https://docs.n8n.io/advanced-ai/) (verified 2026-06-05)
-- [n8n AI Agent node documentation](https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/) (verified 2026-06-05)
+- [n8n pricing](https://n8n.io/pricing/) (verified 2026-06-12)
+- [n8n AI documentation](https://docs.n8n.io/advanced-ai/) (verified 2026-06-12)
+- [n8n AI Agent node documentation](https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/) (verified 2026-06-12)
 - [Claude Agent SDK with a Claude plan](https://support.claude.com/en/articles/15036540-use-the-claude-agent-sdk-with-your-claude-plan) (verified 2026-06-06)
 - [Zapier pricing](https://zapier.com/pricing) (verified 2026-06-05)
 - [Zapier AI](https://zapier.com/ai) (verified 2026-06-05)
-- [Make pricing](https://www.make.com/en/pricing) (verified 2026-06-05)
-- [Make AI Agents](https://www.make.com/en/ai-agents) (verified 2026-06-05)
+- [Make pricing](https://www.make.com/en/pricing) (verified 2026-06-12)
+- [Make AI Agents](https://www.make.com/en/ai-agents) (verified 2026-06-12)
 - [Make pricing adjustments](https://help.make.com/adjustments-to-plans-and-pricing) (verified 2026-06-04)
 - [Gumloop pricing](https://www.gumloop.com/pricing) (verified 2026-06-02)
 - [Gumloop docs](https://docs.gumloop.com/) (verified 2026-06-02)
@@ -269,6 +274,9 @@ Do not leave this category stale. Automation tools are adding MCP, agent builder
 - [Glean developer platform](https://developers.glean.com/) (verified 2026-06-02)
 - [Goose GitHub repository](https://github.com/aaif-goose/goose) (verified 2026-06-02)
 - [Goose documentation](https://block.github.io/goose/) (verified 2026-06-02)
+- [OpenClaw GitHub repository](https://github.com/openclaw/openclaw) (verified 2026-06-12)
+- [OpenClaw security guide](https://docs.openclaw.ai/security) (verified 2026-06-12)
+- [TechRadar OpenClaw vulnerability coverage](https://www.techradar.com/pro/what-the-openclaw-vulnerability-reveals-about-the-future-of-agentic-ai-security) (verified 2026-06-12)
 - [Hermes Agent docs](https://hermes-agent.nousresearch.com/docs/) (verified 2026-06-03)
 - [Hermes Agent GitHub releases](https://github.com/NousResearch/hermes-agent/releases) (verified 2026-06-03)
 - [Genspark membership benefits](https://www.genspark.ai/membership-benefits-lp) (verified 2026-06-02)
