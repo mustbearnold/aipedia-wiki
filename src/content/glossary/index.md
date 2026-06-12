@@ -3,9 +3,9 @@ type: glossary
 slug: glossary-index
 title: AI Tools Glossary
 description: Definitions of key terms used throughout the AI Tools wiki.
-last_updated: 2026-06-01
+last_updated: 2026-06-12
 update_frequency: quarterly
-last_verified: 2026-06-01
+last_verified: 2026-06-12
 ---
 
 # AI Tools Glossary
