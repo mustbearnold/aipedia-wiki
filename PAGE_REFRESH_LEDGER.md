@@ -11,8 +11,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 
 | Last updated | Page | Type | Sitemap | Date source | Source file |
 | --- | --- | --- | --- | --- | --- |
-| 2026-05-17 | /search/ | Static page | No | git | src/pages/search.astro |
-| 2026-05-17 | /stack-builder/ | Static page | Yes | git | src/pages/stack-builder/index.astro |
 | 2026-06-01 | /about/editorial/ | Static page | Yes | git | src/pages/about/editorial.astro |
 | 2026-06-01 | /demo-godtier/ | Static page | Yes | git | src/pages/demo-godtier.astro |
 | 2026-06-01 | /glossary/ | Static page | Yes | git | src/pages/glossary/index.astro |
@@ -516,6 +514,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-12 | /tools/crewai/ | Tool | Yes | frontmatter | src/content/tools/crewai.md |
 | 2026-06-12 | /tools/cursor/ | Tool | Yes | frontmatter | src/content/tools/cursor.md |
 | 2026-06-12 | /tools/d-id/ | Tool | Yes | frontmatter | src/content/tools/d-id.md |
+| 2026-06-12 | /tools/dalle/ | Tool | Yes | frontmatter | src/content/tools/dalle.md |
 | 2026-06-12 | /tools/decktopus/ | Tool | Yes | frontmatter | src/content/tools/decktopus.md |
 | 2026-06-12 | /tools/deepgram/ | Tool | Yes | frontmatter | src/content/tools/deepgram.md |
 | 2026-06-12 | /tools/deepl/ | Tool | Yes | frontmatter | src/content/tools/deepl.md |
@@ -555,6 +554,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-12 | /tools/gpt-image-2/ | Tool | Yes | frontmatter | src/content/tools/gpt-image-2.md |
 | 2026-06-12 | /tools/grammarly/ | Tool | Yes | frontmatter | src/content/tools/grammarly.md |
 | 2026-06-12 | /tools/granola/ | Tool | Yes | frontmatter | src/content/tools/granola.md |
+| 2026-06-12 | /tools/grok-code-fast/ | Tool | Yes | frontmatter | src/content/tools/grok-code-fast.md |
 | 2026-06-12 | /tools/grok/ | Tool | Yes | frontmatter | src/content/tools/grok.md |
 | 2026-06-12 | /tools/groq/ | Tool | Yes | frontmatter | src/content/tools/groq.md |
 | 2026-06-12 | /tools/gumloop/ | Tool | Yes | frontmatter | src/content/tools/gumloop.md |
@@ -637,6 +637,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-12 | /tools/otter-ai/ | Tool | Yes | frontmatter | src/content/tools/otter-ai.md |
 | 2026-06-12 | /tools/paradox/ | Tool | Yes | frontmatter | src/content/tools/paradox.md |
 | 2026-06-12 | /tools/perplexity/ | Tool | Yes | frontmatter | src/content/tools/perplexity.md |
+| 2026-06-12 | /tools/phind/ | Tool | Yes | frontmatter | src/content/tools/phind.md |
 | 2026-06-12 | /tools/pieces/ | Tool | Yes | frontmatter | src/content/tools/pieces.md |
 | 2026-06-12 | /tools/pika/ | Tool | Yes | frontmatter | src/content/tools/pika.md |
 | 2026-06-12 | /tools/pinecone/ | Tool | Yes | frontmatter | src/content/tools/pinecone.md |
@@ -691,6 +692,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-12 | /tools/tidio/ | Tool | Yes | frontmatter | src/content/tools/tidio.md |
 | 2026-06-12 | /tools/tines/ | Tool | Yes | frontmatter | src/content/tools/tines.md |
 | 2026-06-12 | /tools/together-ai/ | Tool | Yes | frontmatter | src/content/tools/together-ai.md |
+| 2026-06-12 | /tools/tome/ | Tool | Yes | frontmatter | src/content/tools/tome.md |
 | 2026-06-12 | /tools/trae/ | Tool | Yes | frontmatter | src/content/tools/trae.md |
 | 2026-06-12 | /tools/tripo3d/ | Tool | Yes | frontmatter | src/content/tools/tripo3d.md |
 | 2026-06-12 | /tools/typeface/ | Tool | Yes | frontmatter | src/content/tools/typeface.md |
@@ -745,7 +747,5 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-12 | /workflows/seo-content-pipeline/ | Workflow | Yes | frontmatter | src/content/workflows/seo-content-pipeline.md |
 | 2026-06-12 | /workflows/solo-founder-stack/ | Workflow | Yes | frontmatter | src/content/workflows/solo-founder-stack.md |
 | 2026-06-12 | /workflows/youtube-content-stack/ | Workflow | Yes | frontmatter | src/content/workflows/youtube-content-stack.md |
-| 2026-06-13 | /tools/dalle/ | Tool | Yes | working tree | src/content/tools/dalle.md |
-| 2026-06-13 | /tools/grok-code-fast/ | Tool | Yes | working tree | src/content/tools/grok-code-fast.md |
-| 2026-06-13 | /tools/phind/ | Tool | Yes | working tree | src/content/tools/phind.md |
-| 2026-06-13 | /tools/tome/ | Tool | Yes | working tree | src/content/tools/tome.md |
+| 2026-06-13 | /search/ | Static page | No | working tree | src/pages/search.astro |
+| 2026-06-13 | /stack-builder/ | Static page | Yes | working tree | src/pages/stack-builder/index.astro |

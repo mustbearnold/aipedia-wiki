@@ -7,6 +7,10 @@
  * analytics tracking as legacy.
  *
  * Legacy preserved at src/legacy-pages/search.legacy.astro.
+ *
+ * Reviewed 2026-06-12: index derives entirely from live content collections,
+ * so results stay current automatically. Confirmed noindex/follow, quick-term
+ * chips, Ctrl/Cmd-K shortcut, and no stale hardcoded copy.
  */
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
