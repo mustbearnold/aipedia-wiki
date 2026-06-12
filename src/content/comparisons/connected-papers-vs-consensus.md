@@ -6,10 +6,10 @@ tools: [connected-papers, consensus]
 category: ai-research
 winner: depends
 seo_title: "Connected Papers vs Consensus: Paper Graph or Evidence Q&A? (June 2026)"
-meta_description: "Updated June 4, 2026: Connected Papers maps related papers from a seed work; Consensus answers focused research questions with cited academic evidence and study-agreement signals."
+meta_description: "Updated June 12, 2026: Connected Papers maps related papers from a seed work; Consensus answers focused research questions with cited academic evidence and study-agreement signals."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-04
-last_verified: 2026-06-04
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -91,10 +91,10 @@ Consensus is usually more useful for focused biomedical questions because it ret
 
 ## Sources
 
-- [Connected Papers pricing](https://www.connectedpapers.com/pricing) (verified 2026-06-04)
-- [Connected Papers about](https://www.connectedpapers.com/about) (verified 2026-06-04)
-- [Consensus](https://consensus.app/) (verified 2026-06-04)
-- [Consensus pricing](https://consensus.app/pricing) (verified 2026-06-04)
+- [Connected Papers pricing](https://www.connectedpapers.com/pricing) (verified 2026-06-12)
+- [Connected Papers about](https://www.connectedpapers.com/about) (verified 2026-06-12)
+- [Consensus](https://consensus.app/) (verified 2026-06-12)
+- [Consensus pricing](https://consensus.app/pricing) (verified 2026-06-12)
 
 ## Related
 

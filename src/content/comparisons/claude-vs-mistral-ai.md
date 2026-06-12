@@ -6,10 +6,10 @@ tools: [claude, mistral-ai]
 category: ai-chatbots
 winner: depends
 seo_title: "Claude vs Mistral AI: assistant or open model platform? (June 2026)"
-meta_description: "Claude vs Mistral AI, verified June 4, 2026: compare Claude Opus 4.8 with Mistral Vibe, Pro, Team, Large 3, Medium 3.5, open weights, and EU deployment fit."
+meta_description: "Claude vs Mistral AI, verified June 12, 2026: compare Claude Opus 4.8 with Mistral Vibe, Pro, Team, Large 3, Medium 3.5, open weights, and EU deployment fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-04
-last_verified: 2026-06-04
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -18,7 +18,7 @@ canonical_fact_table: true
 
 [Claude](/tools/claude/) is the better polished assistant for writing, analysis, coding, long documents, and high-trust team work. [Mistral AI](/tools/mistral-ai/) is the better model-control and European AI platform lane when the buyer cares about open weights, cloud choice, self-hosting, Vibe, API pricing, Search Toolkit, or EU procurement posture.
 
-**Verified June 4, 2026:** Claude's current docs list Opus 4.8 as Anthropic's top complex-reasoning and agentic-coding model. Mistral's current pricing page lists Free, Pro at $14.99/month before tax, Team at $24.99/user/month before tax, and Enterprise custom. The same page now positions Vibe as the agentic assistant/code workflow, lists Mistral Large 3 at $0.50 input and $1.50 output per million tokens, and lists Mistral Medium 3.5 at $1.50 input and $7.50 output per million tokens.
+**Verified June 12, 2026:** Claude's current docs list Opus 4.8 as Anthropic's top complex-reasoning and agentic-coding model. Mistral's current pricing page lists Free, Pro at $14.99/month before tax, Team at $24.99/user/month before tax, and Enterprise custom. The same page now positions Vibe as the agentic assistant/code workflow, lists Mistral Large 3 at $0.50 input and $1.50 output per million tokens, and lists Mistral Medium 3.5 at $1.50 input and $7.50 output per million tokens.
 
 ## Quick Answer
 

@@ -6,10 +6,10 @@ tools: [connected-papers, nanochat]
 category: ai-research
 winner: depends
 seo_title: "Connected Papers vs nanochat: Research App or LLM Training Harness? (June 2026)"
-meta_description: "Updated June 4, 2026: Connected Papers is a visual academic-paper discovery app; nanochat is Andrej Karpathy's MIT-licensed LLM training harness for education and experiments."
+meta_description: "Updated June 12, 2026: Connected Papers is a visual academic-paper discovery app; nanochat is Andrej Karpathy's MIT-licensed LLM training harness for education and experiments."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-04
-last_verified: 2026-06-04
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -91,10 +91,10 @@ Research students should start with Connected Papers for literature discovery. M
 
 ## Sources
 
-- [Connected Papers pricing](https://www.connectedpapers.com/pricing) (verified 2026-06-04)
-- [Connected Papers about](https://www.connectedpapers.com/about) (verified 2026-06-04)
-- [nanochat GitHub repository](https://github.com/karpathy/nanochat) (verified 2026-06-04)
-- [nanochat README](https://github.com/karpathy/nanochat/blob/master/README.md) (verified 2026-06-04)
+- [Connected Papers pricing](https://www.connectedpapers.com/pricing) (verified 2026-06-12)
+- [Connected Papers about](https://www.connectedpapers.com/about) (verified 2026-06-12)
+- [nanochat GitHub repository](https://github.com/karpathy/nanochat) (verified 2026-06-12)
+- [nanochat README](https://github.com/karpathy/nanochat/blob/master/README.md) (verified 2026-06-12)
 
 ## Related
 

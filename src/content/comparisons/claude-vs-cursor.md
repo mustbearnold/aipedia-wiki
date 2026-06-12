@@ -6,10 +6,10 @@ tools: [claude, cursor]
 category: ai-coding
 winner: depends
 seo_title: "Claude vs Cursor: AI assistant or AI code editor? (June 2026)"
-meta_description: "Claude vs Cursor, verified June 4, 2026: choose Claude for broad reasoning and Claude Code, or Cursor for daily GUI-first AI coding inside a VS Code-style editor."
+meta_description: "Claude vs Cursor, verified June 12, 2026: choose Claude for broad reasoning and Claude Code, or Cursor for daily GUI-first AI coding inside a VS Code-style editor."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-04
-last_verified: 2026-06-04
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---

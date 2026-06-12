@@ -6,10 +6,10 @@ tools: [claude-code, val-town]
 category: ai-coding
 winner: depends
 seo_title: "Claude Code vs Val Town: Coding Agent or Serverless TypeScript Runtime? (June 2026)"
-meta_description: "Claude Code vs Val Town, verified June 4, 2026: choose Claude Code for repo work; choose Val Town for browser-based TypeScript vals, HTTP endpoints, cron jobs, and Townie-assisted deploys."
+meta_description: "Claude Code vs Val Town, verified June 12, 2026: choose Claude Code for repo work; choose Val Town for browser-based TypeScript vals, HTTP endpoints, cron jobs, and Townie-assisted deploys."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-04
-last_verified: 2026-06-04
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -18,7 +18,7 @@ canonical_fact_table: true
 
 [Claude Code](/tools/claude-code/) is an AI coding agent for working through repositories with Claude. [Val Town](/tools/val-town/) is a browser-based TypeScript runtime: write a val, run it, expose it as an HTTP endpoint, schedule it as a cron job, or use Townie to generate small deployable scripts.
 
-This comparison was refreshed on June 4, 2026 against current Claude Code docs, Claude pricing, Val Town pricing, Val Town docs, and the Val Town product site.
+This comparison was refreshed on June 12, 2026 against current Claude Code docs, Claude pricing, Val Town pricing, Val Town docs, and the Val Town product site.
 
 ## Quick Answer
 
@@ -98,12 +98,12 @@ Yes. Use Claude Code to write/review the TypeScript and Val Town to run it.
 
 ## Sources
 
-- [Claude Code overview](https://code.claude.com/docs/en/overview) - coding-agent workflow and surfaces, verified 2026-06-04.
-- [Claude Code cost management](https://code.claude.com/docs/en/costs) - usage and budget controls, verified 2026-06-04.
-- [Claude pricing](https://claude.com/pricing) - Claude plan access context, verified 2026-06-04.
-- [Val Town pricing](https://www.val.town/pricing) - Free, Pro, Business, Enterprise, and Townie credit context, verified 2026-06-04.
-- [Val Town docs](https://docs.val.town/) - vals, HTTP, cron, runtime, and platform behavior, verified 2026-06-04.
-- [Val Town homepage](https://www.val.town/) - product positioning and browser runtime surface, verified 2026-06-04.
+- [Claude Code overview](https://code.claude.com/docs/en/overview) - coding-agent workflow and surfaces, verified 2026-06-12.
+- [Claude Code cost management](https://code.claude.com/docs/en/costs) - usage and budget controls, verified 2026-06-12.
+- [Claude pricing](https://claude.com/pricing) - Claude plan access context, verified 2026-06-12.
+- [Val Town pricing](https://www.val.town/pricing) - Free, Pro, Business, Enterprise, and Townie credit context, verified 2026-06-12.
+- [Val Town docs](https://docs.val.town/) - vals, HTTP, cron, runtime, and platform behavior, verified 2026-06-12.
+- [Val Town homepage](https://www.val.town/) - product positioning and browser runtime surface, verified 2026-06-12.
 
 ## Related
 

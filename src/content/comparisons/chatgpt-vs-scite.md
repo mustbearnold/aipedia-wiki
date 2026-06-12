@@ -6,10 +6,10 @@ tools: [chatgpt, scite]
 category: ai-research
 winner: depends
 seo_title: "ChatGPT vs Scite: Assistant or Citation Evidence Checker? (June 2026)"
-meta_description: "ChatGPT vs Scite, verified June 4, 2026: choose ChatGPT for broad research drafting and Scite for citation-context checks, Smart Citations, patents, MCP credits, and evidence review."
+meta_description: "ChatGPT vs Scite, verified June 12, 2026: choose ChatGPT for broad research drafting and Scite for citation-context checks, Smart Citations, patents, MCP credits, and evidence review."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-04
-last_verified: 2026-06-04
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -18,7 +18,7 @@ canonical_fact_table: true
 
 [ChatGPT](/tools/chatgpt/) is the broad AI workspace for drafting, research planning, files, coding, data analysis, images, voice, projects, and agent work. [Scite](/tools/scite/) is a specialist evidence layer for academic and scientific work: it classifies citation contexts as Supporting, Contrasting, or Mentioning and gives researchers a way to inspect whether later literature reinforces or disputes a source.
 
-This page was refreshed on June 4, 2026 against current ChatGPT pricing, OpenAI model documentation, Scite pricing, and Scite product sources.
+This page was refreshed on June 12, 2026 against current ChatGPT pricing, OpenAI model documentation, Scite pricing, and Scite product sources.
 
 ## Quick Answer
 
@@ -100,10 +100,10 @@ Use Pro when patents, broader MCP datasets, and the 2,500-credit allowance are a
 
 ## Sources
 
-- [ChatGPT pricing](https://chatgpt.com/pricing/) - current ChatGPT plan features, verified 2026-06-04.
-- [OpenAI model docs](https://platform.openai.com/docs/models) - current API model context, verified 2026-06-04.
-- [Scite pricing](https://scite.ai/pricing) - Basic, Pro, Organization, and Developer plans, verified 2026-06-04.
-- [Scite official site](https://scite.ai/) - Smart Citations and product positioning, verified 2026-06-04.
+- [ChatGPT pricing](https://chatgpt.com/pricing/) - current ChatGPT plan features, verified 2026-06-12.
+- [OpenAI model docs](https://platform.openai.com/docs/models) - current API model context, verified 2026-06-12.
+- [Scite pricing](https://scite.ai/pricing) - Basic, Pro, Organization, and Developer plans, verified 2026-06-12.
+- [Scite official site](https://scite.ai/) - Smart Citations and product positioning, verified 2026-06-12.
 
 ## Related
 

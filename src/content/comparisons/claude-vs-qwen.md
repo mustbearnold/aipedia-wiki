@@ -6,10 +6,10 @@ tools: [claude, qwen]
 category: ai-chatbots
 winner: depends
 seo_title: "Claude vs Qwen: Anthropic assistant or Qwen Cloud model family? (June 2026)"
-meta_description: "Claude vs Qwen, verified June 4, 2026: compare Claude Opus 4.8 with Qwen3.7-Max, Qwen Cloud pricing, Qwen3.7 Plus, open-weight strategy, and buyer fit."
+meta_description: "Claude vs Qwen, verified June 12, 2026: compare Claude Opus 4.8 with Qwen3.7-Max, Qwen Cloud pricing, Qwen3.7 Plus, open-weight strategy, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-04
-last_verified: 2026-06-04
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -18,7 +18,7 @@ canonical_fact_table: true
 
 [Claude](/tools/claude/) is the better finished assistant for high-trust writing, analysis, coding, and long-document work. [Qwen](/tools/qwen/) is the better model-family lane when the buyer wants Alibaba/Qwen Cloud, Qwen3.7-Max, Qwen3.7 Plus, open-weight evaluation, China/Asia model diversification, or lower-cost model routing.
 
-**Verified June 4, 2026:** Qwen Cloud's current pricing docs list qwen3.7-max at $2.50 input and $7.50 output per million tokens for 0-991K input, qwen3.7-plus at $0.40 input and $1.60 output per million tokens up to 256K, and higher rates for longer qwen3.7-plus prompts. Qwen Cloud's model release log lists qwen3.7-plus on June 1, 2026 and qwen3.7-max on May 21, 2026. Claude's current docs list Opus 4.8 as Anthropic's top complex-reasoning and agentic-coding model.
+**Verified June 12, 2026:** Qwen Cloud's current pricing docs list qwen3.7-max at $2.50 input and $7.50 output per million tokens for 0-991K input, qwen3.7-plus at $0.40 input and $1.60 output per million tokens up to 256K, and higher rates for longer qwen3.7-plus prompts. Qwen Cloud's model release log lists qwen3.7-plus on June 12, 2026 and qwen3.7-max on May 21, 2026. Claude's current docs list Opus 4.8 as Anthropic's top complex-reasoning and agentic-coding model.
 
 ## Quick Answer
 

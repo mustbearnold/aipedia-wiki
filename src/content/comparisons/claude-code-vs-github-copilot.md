@@ -6,10 +6,10 @@ tools: [claude-code, github-copilot]
 category: ai-coding
 winner: depends
 seo_title: "Claude Code vs GitHub Copilot: Claude Agent or GitHub AI Platform? (June 2026)"
-meta_description: "Claude Code vs GitHub Copilot, verified June 4, 2026: compare Claude agentic coding with Copilot's IDE, GitHub, AI Credits, SDK, code review, and cloud-agent workflows."
+meta_description: "Claude Code vs GitHub Copilot, verified June 12, 2026: compare Claude agentic coding with Copilot's IDE, GitHub, AI Credits, SDK, code review, and cloud-agent workflows."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-04
-last_verified: 2026-06-04
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -18,7 +18,7 @@ canonical_fact_table: true
 
 [Claude Code](/tools/claude-code/) is Anthropic's agentic coding product for Claude-backed repo work. [GitHub Copilot](/tools/github-copilot/) is GitHub's AI coding platform across IDEs, GitHub.com, code review, CLI, Spaces, Spark, cloud Coding Agent workflows, and the generally available Copilot SDK.
 
-This comparison was refreshed on June 4, 2026 against current Claude Code docs, Claude pricing, GitHub Copilot plans, AI Credits billing docs, supported-model docs, feature matrix, and Copilot SDK GA notes.
+This comparison was refreshed on June 12, 2026 against current Claude Code docs, Claude pricing, GitHub Copilot plans, AI Credits billing docs, supported-model docs, feature matrix, and Copilot SDK GA notes.
 
 ## Quick Answer
 
@@ -99,14 +99,14 @@ Yes. Use Copilot for everyday IDE and GitHub workflows, then Claude Code for har
 
 ## Sources
 
-- [Claude Code overview](https://code.claude.com/docs/en/overview) - coding-agent workflow and surfaces, verified 2026-06-04.
-- [Claude Code cost management](https://code.claude.com/docs/en/costs) - usage and budget controls, verified 2026-06-04.
-- [Claude pricing](https://claude.com/pricing) - Claude plan access context, verified 2026-06-04.
-- [GitHub Copilot plans](https://docs.github.com/en/copilot/get-started/plans) - plan structure, verified 2026-06-04.
-- [GitHub Copilot AI Credits billing](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals) - usage-credit mechanics, verified 2026-06-04.
-- [GitHub Copilot feature matrix](https://docs.github.com/en/copilot/reference/copilot-feature-matrix) - surface and plan availability, verified 2026-06-04.
-- [GitHub Copilot supported models](https://docs.github.com/en/copilot/reference/ai-models/supported-models) - live model catalog, verified 2026-06-04.
-- [Copilot SDK GA](https://github.blog/changelog/2026-06-02-copilot-sdk-is-now-generally-available/) - SDK availability, verified 2026-06-04.
+- [Claude Code overview](https://code.claude.com/docs/en/overview) - coding-agent workflow and surfaces, verified 2026-06-12.
+- [Claude Code cost management](https://code.claude.com/docs/en/costs) - usage and budget controls, verified 2026-06-12.
+- [Claude pricing](https://claude.com/pricing) - Claude plan access context, verified 2026-06-12.
+- [GitHub Copilot plans](https://docs.github.com/en/copilot/get-started/plans) - plan structure, verified 2026-06-12.
+- [GitHub Copilot AI Credits billing](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals) - usage-credit mechanics, verified 2026-06-12.
+- [GitHub Copilot feature matrix](https://docs.github.com/en/copilot/reference/copilot-feature-matrix) - surface and plan availability, verified 2026-06-12.
+- [GitHub Copilot supported models](https://docs.github.com/en/copilot/reference/ai-models/supported-models) - live model catalog, verified 2026-06-12.
+- [Copilot SDK GA](https://github.blog/changelog/2026-06-02-copilot-sdk-is-now-generally-available/) - SDK availability, verified 2026-06-12.
 
 ## Related
 

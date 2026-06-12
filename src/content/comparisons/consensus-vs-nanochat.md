@@ -6,10 +6,10 @@ tools: [consensus, nanochat]
 category: ai-research
 winner: depends
 seo_title: "Consensus vs nanochat: Academic Q&A or LLM Training Code? (June 2026)"
-meta_description: "Updated June 4, 2026: Consensus is an academic search and evidence-Q&A product; nanochat is Karpathy's MIT-licensed LLM training harness for education and experiments."
+meta_description: "Updated June 12, 2026: Consensus is an academic search and evidence-Q&A product; nanochat is Karpathy's MIT-licensed LLM training harness for education and experiments."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-04
-last_verified: 2026-06-04
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -91,10 +91,10 @@ Use Consensus to find papers and nanochat to learn implementation mechanics.
 
 ## Sources
 
-- [Consensus](https://consensus.app/) (verified 2026-06-04)
-- [Consensus pricing](https://consensus.app/pricing) (verified 2026-06-04)
-- [nanochat GitHub repository](https://github.com/karpathy/nanochat) (verified 2026-06-04)
-- [nanochat README](https://github.com/karpathy/nanochat/blob/master/README.md) (verified 2026-06-04)
+- [Consensus](https://consensus.app/) (verified 2026-06-12)
+- [Consensus pricing](https://consensus.app/pricing) (verified 2026-06-12)
+- [nanochat GitHub repository](https://github.com/karpathy/nanochat) (verified 2026-06-12)
+- [nanochat README](https://github.com/karpathy/nanochat/blob/master/README.md) (verified 2026-06-12)
 
 ## Related
 

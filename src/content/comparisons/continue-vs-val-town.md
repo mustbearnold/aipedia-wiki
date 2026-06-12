@@ -6,10 +6,10 @@ tools: [continue, val-town]
 category: ai-coding
 winner: depends
 seo_title: "Continue vs Val Town: AI PR Checks or Hosted TypeScript Vals? (June 2026)"
-meta_description: "Updated June 4, 2026: Continue runs source-controlled AI PR checks; Val Town runs TypeScript vals as HTTP endpoints, cron jobs, and Townie-assisted scripts."
+meta_description: "Updated June 12, 2026: Continue runs source-controlled AI PR checks; Val Town runs TypeScript vals as HTTP endpoints, cron jobs, and Townie-assisted scripts."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-04
-last_verified: 2026-06-04
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -18,7 +18,7 @@ canonical_fact_table: true
 
 [Continue](/tools/continue/) and [Val Town](/tools/val-town/) are often grouped under developer AI tools, but they do not compete directly. Continue is for AI-assisted pull-request checks and engineering standards. Val Town is a hosted TypeScript runtime for vals, HTTP endpoints, cron jobs, small automations, and Townie-assisted scripts.
 
-This page was refreshed on June 4, 2026 against current Continue docs/pricing, the Continue GitHub repository, Val Town pricing, and Val Town docs.
+This page was refreshed on June 12, 2026 against current Continue docs/pricing, the Continue GitHub repository, Val Town pricing, and Val Town docs.
 
 ## Quick Answer
 
@@ -104,12 +104,12 @@ Yes. Use Val Town to run a small script and Continue to enforce review standards
 
 ## Sources
 
-- [Continue homepage](https://www.continue.dev/) (verified 2026-06-04)
-- [Continue docs](https://docs.continue.dev/) (verified 2026-06-04)
-- [Continue pricing](https://www.continue.dev/pricing) (verified 2026-06-04)
-- [Continue GitHub repository](https://github.com/continuedev/continue) (verified 2026-06-04)
-- [Val Town pricing](https://www.val.town/pricing) (verified 2026-06-04)
-- [Val Town docs](https://docs.val.town/) (verified 2026-06-04)
+- [Continue homepage](https://www.continue.dev/) (verified 2026-06-12)
+- [Continue docs](https://docs.continue.dev/) (verified 2026-06-12)
+- [Continue pricing](https://www.continue.dev/pricing) (verified 2026-06-12)
+- [Continue GitHub repository](https://github.com/continuedev/continue) (verified 2026-06-12)
+- [Val Town pricing](https://www.val.town/pricing) (verified 2026-06-12)
+- [Val Town docs](https://docs.val.town/) (verified 2026-06-12)
 
 ## Related
 

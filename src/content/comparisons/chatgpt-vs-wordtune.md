@@ -6,10 +6,10 @@ tools: [chatgpt, wordtune]
 category: ai-writing
 winner: chatgpt
 seo_title: "ChatGPT vs Wordtune: AI Assistant or Rewrite Layer? (June 2026)"
-meta_description: "ChatGPT vs Wordtune, verified June 4, 2026: choose ChatGPT for broad writing, research, files, and reasoning; choose Wordtune for focused rewriting, grammar, summaries, and sentence polish."
+meta_description: "ChatGPT vs Wordtune, verified June 12, 2026: choose ChatGPT for broad writing, research, files, and reasoning; choose Wordtune for focused rewriting, grammar, summaries, and sentence polish."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-04
-last_verified: 2026-06-04
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -18,7 +18,7 @@ canonical_fact_table: true
 
 [ChatGPT](/tools/chatgpt/) is a broad AI assistant for drafting, research, files, coding, data analysis, images, voice, and general reasoning. [Wordtune](/tools/wordtune/) is a focused writing layer from AI21 Labs for improving text you already wrote: rewrites, grammar, summaries, fluency, tone, and clarity.
 
-This comparison was refreshed on June 4, 2026 against current ChatGPT pricing, OpenAI model documentation, Wordtune Help Center pricing notes, and Wordtune plan sources.
+This comparison was refreshed on June 12, 2026 against current ChatGPT pricing, OpenAI model documentation, Wordtune Help Center pricing notes, and Wordtune plan sources.
 
 ## Quick Answer
 
@@ -95,10 +95,10 @@ ChatGPT first for broad needs. Wordtune first only if rewriting existing text is
 
 ## Sources
 
-- [ChatGPT pricing](https://chatgpt.com/pricing/) - current ChatGPT plan features, verified 2026-06-04.
-- [OpenAI model docs](https://platform.openai.com/docs/models) - current API model context, verified 2026-06-04.
-- [Wordtune Help Center: plans and pricing](https://support.wordtune.com/en/articles/8262930-wordtune-s-plans-pricing) - plan structure and pricing caveat, verified 2026-06-04.
-- [Wordtune plans](https://wordtune.com/plans) - current plan checkout path, verified 2026-06-04.
+- [ChatGPT pricing](https://chatgpt.com/pricing/) - current ChatGPT plan features, verified 2026-06-12.
+- [OpenAI model docs](https://platform.openai.com/docs/models) - current API model context, verified 2026-06-12.
+- [Wordtune Help Center: plans and pricing](https://support.wordtune.com/en/articles/8262930-wordtune-s-plans-pricing) - plan structure and pricing caveat, verified 2026-06-12.
+- [Wordtune plans](https://wordtune.com/plans) - current plan checkout path, verified 2026-06-12.
 
 ## Related
 

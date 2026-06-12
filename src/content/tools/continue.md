@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$20/seat/month"
 status: active
 launched: 2023-05
-last_updated: 2026-06-04
-last_verified: 2026-06-04
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: "https://docs.continue.dev/"
     source_label: "Continue docs"
     source_id: continue-docs
-    verified_at: 2026-06-04
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
   pricing_anchor:
@@ -39,7 +39,7 @@ facts:
     source: "https://www.continue.dev/pricing"
     source_label: "Continue pricing"
     source_id: continue-pricing
-    verified_at: 2026-06-04
+    verified_at: 2026-06-12
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -48,7 +48,7 @@ facts:
     source: "https://docs.continue.dev/"
     source_label: "Continue docs"
     source_id: continue-docs
-    verified_at: 2026-06-04
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   team_distribution:
@@ -56,7 +56,7 @@ facts:
     source: "https://www.continue.dev/pricing"
     source_label: "Continue pricing"
     source_id: continue-pricing
-    verified_at: 2026-06-04
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   watch_out_for:
@@ -64,7 +64,7 @@ facts:
     source: "https://docs.continue.dev/"
     source_label: "Continue docs"
     source_id: continue-docs
-    verified_at: 2026-06-04
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
 tags: [open-source, ai-checks, pull-request-review, ai-coding, cli, github-status-checks, byok, code-quality]
@@ -160,7 +160,7 @@ That makes Continue less of a "buy another autocomplete" decision and more of a 
 | **Best fit** | Teams standardizing code-review rules, quality gates, and AI-agent behavior |
 | **Main watch-out** | Weak prompts become weak checks; humans still decide whether suggested fixes merge |
 
-Every data point above was verified against vendor documentation on 2026-06-04. See Sources.
+Every data point above was verified against vendor documentation on 2026-06-12. See Sources.
 
 ## What It Actually Is
 
@@ -218,7 +218,7 @@ The important pricing detail is not only the seat price. Check volume, model cho
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-04 against [Continue pricing](https://www.continue.dev/pricing), [Continue docs](https://docs.continue.dev), [Continue homepage](https://www.continue.dev/), and the [Continue GitHub repo](https://github.com/continuedev/continue).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against [Continue pricing](https://www.continue.dev/pricing), [Continue docs](https://docs.continue.dev), [Continue homepage](https://www.continue.dev/), and the [Continue GitHub repo](https://github.com/continuedev/continue).
 
 ## FAQ
 
@@ -236,10 +236,10 @@ Start with one narrow check, such as secrets, input validation, deprecated API u
 
 ## Sources
 
-- [Continue homepage](https://www.continue.dev/) - source-controlled AI checks positioning, verified 2026-06-04
-- [Continue docs](https://docs.continue.dev/) - check files and GitHub status-check workflow, verified 2026-06-04
-- [Continue pricing](https://www.continue.dev/pricing) - Starter, Team, Company tiers, verified 2026-06-04
-- [GitHub: continuedev/continue](https://github.com/continuedev/continue) - open-source repository and Apache-2.0 license, verified 2026-06-04
+- [Continue homepage](https://www.continue.dev/) - source-controlled AI checks positioning, verified 2026-06-12
+- [Continue docs](https://docs.continue.dev/) - check files and GitHub status-check workflow, verified 2026-06-12
+- [Continue pricing](https://www.continue.dev/pricing) - Starter, Team, Company tiers, verified 2026-06-12
+- [GitHub: continuedev/continue](https://github.com/continuedev/continue) - open-source repository and Apache-2.0 license, verified 2026-06-12
 
 ## Related
 

@@ -6,10 +6,10 @@ tools: [claude, cline]
 category: ai-coding
 winner: depends
 seo_title: "Claude vs Cline: Claude assistant or open-source coding agent? (June 2026)"
-meta_description: "Claude vs Cline, verified June 4, 2026: choose Anthropic's hosted assistant for broad reasoning and Claude Code, or Cline for open-source BYOK IDE and CLI coding."
+meta_description: "Claude vs Cline, verified June 12, 2026: choose Anthropic's hosted assistant for broad reasoning and Claude Code, or Cline for open-source BYOK IDE and CLI coding."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-04
-last_verified: 2026-06-04
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---

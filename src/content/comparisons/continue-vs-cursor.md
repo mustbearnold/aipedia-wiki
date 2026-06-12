@@ -6,10 +6,10 @@ tools: [continue, cursor]
 category: ai-coding
 winner: depends
 seo_title: "Continue vs Cursor: AI PR Checks or AI IDE? (June 2026)"
-meta_description: "Updated June 4, 2026: Continue is source-controlled AI PR checks; Cursor is a managed AI-native IDE with Agent, Cloud Agents, Bugbot, Teams, and usage-based model billing."
+meta_description: "Updated June 12, 2026: Continue is source-controlled AI PR checks; Cursor is a managed AI-native IDE with Agent, Cloud Agents, Bugbot, Teams, and usage-based model billing."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-04
-last_verified: 2026-06-04
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -18,7 +18,7 @@ canonical_fact_table: true
 
 [Continue](/tools/continue/) and [Cursor](/tools/cursor/) both sit in AI coding workflows, but they answer different buyer questions. Continue asks, "How do we encode our engineering standards as AI checks on every pull request?" Cursor asks, "Which AI-native editor should developers use every day?"
 
-This page was refreshed on June 4, 2026 against current Continue docs, Continue pricing, the Continue GitHub repository, Cursor pricing, Cursor model/pricing docs, and Cursor product sources.
+This page was refreshed on June 12, 2026 against current Continue docs, Continue pricing, the Continue GitHub repository, Cursor pricing, Cursor model/pricing docs, and Cursor product sources.
 
 ## Quick Answer
 
@@ -104,13 +104,13 @@ Neither is automatically safe. Continue gives explicit repo-defined checks and a
 
 ## Sources
 
-- [Continue homepage](https://www.continue.dev/) (verified 2026-06-04)
-- [Continue docs](https://docs.continue.dev/) (verified 2026-06-04)
-- [Continue pricing](https://www.continue.dev/pricing) (verified 2026-06-04)
-- [Continue GitHub repository](https://github.com/continuedev/continue) (verified 2026-06-04)
-- [Cursor pricing](https://cursor.com/pricing) (verified 2026-06-04)
-- [Cursor model and pricing docs](https://cursor.com/docs/models-and-pricing) (verified 2026-06-04)
-- [Cursor Composer 2.5 changelog](https://cursor.com/changelog/composer-2-5) (verified 2026-06-04)
+- [Continue homepage](https://www.continue.dev/) (verified 2026-06-12)
+- [Continue docs](https://docs.continue.dev/) (verified 2026-06-12)
+- [Continue pricing](https://www.continue.dev/pricing) (verified 2026-06-12)
+- [Continue GitHub repository](https://github.com/continuedev/continue) (verified 2026-06-12)
+- [Cursor pricing](https://cursor.com/pricing) (verified 2026-06-12)
+- [Cursor model and pricing docs](https://cursor.com/docs/models-and-pricing) (verified 2026-06-12)
+- [Cursor Composer 2.5 changelog](https://cursor.com/changelog/composer-2-5) (verified 2026-06-12)
 
 ## Related
 

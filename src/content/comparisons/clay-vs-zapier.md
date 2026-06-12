@@ -6,10 +6,10 @@ tools: [clay, zapier]
 category: ai-automation
 winner: depends
 seo_title: "Clay vs Zapier: GTM Enrichment or SaaS Automation? (June 2026)"
-meta_description: "Updated June 4, 2026: Clay is the GTM enrichment and AI research workspace; Zapier is the no-code automation incumbent with 9,000+ apps, MCP, SDK, Copilot, and Agents."
+meta_description: "Updated June 12, 2026: Clay is the GTM enrichment and AI research workspace; Zapier is the no-code automation incumbent with 9,000+ apps, MCP, SDK, Copilot, and Agents."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-04
-last_verified: 2026-06-04
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -108,12 +108,12 @@ Buy Zapier first for general automation. Buy Clay first when lead/account data q
 
 ## Sources
 
-- [Clay pricing](https://www.clay.com/pricing) (verified 2026-06-04)
-- [Clay integrations](https://www.clay.com/integrations) (verified 2026-06-04)
-- [Zapier pricing](https://zapier.com/pricing) (verified 2026-06-04)
-- [Zapier AI](https://zapier.com/ai) (verified 2026-06-04)
-- [Zapier apps directory](https://zapier.com/apps) (verified 2026-06-04)
-- [Zapier plan updates: Tables, Interfaces, and MCP](https://help.zapier.com/hc/en-us/articles/39645433045773-Zapier-plan-updates-Tables-Interfaces-and-MCP-now-included) (verified 2026-06-04)
+- [Clay pricing](https://www.clay.com/pricing) (verified 2026-06-12)
+- [Clay integrations](https://www.clay.com/integrations) (verified 2026-06-12)
+- [Zapier pricing](https://zapier.com/pricing) (verified 2026-06-12)
+- [Zapier AI](https://zapier.com/ai) (verified 2026-06-12)
+- [Zapier apps directory](https://zapier.com/apps) (verified 2026-06-12)
+- [Zapier plan updates: Tables, Interfaces, and MCP](https://help.zapier.com/hc/en-us/articles/39645433045773-Zapier-plan-updates-Tables-Interfaces-and-MCP-now-included) (verified 2026-06-12)
 
 ## Related
 

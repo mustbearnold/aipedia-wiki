@@ -6,10 +6,10 @@ tools: [clay, make]
 category: ai-automation
 winner: depends
 seo_title: "Clay vs Make: GTM Enrichment or Visual Automation? (June 2026)"
-meta_description: "Updated June 4, 2026: Clay is the GTM enrichment and account-research workspace; Make is the visual automation builder with credits, 3,000+ apps, MCP, and AI Agents."
+meta_description: "Updated June 12, 2026: Clay is the GTM enrichment and account-research workspace; Make is the visual automation builder with credits, 3,000+ apps, MCP, and AI Agents."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-04
-last_verified: 2026-06-04
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -97,11 +97,11 @@ Buy Make first for general automation. Buy Clay first only when GTM enrichment i
 
 ## Sources
 
-- [Clay pricing](https://www.clay.com/pricing) (verified 2026-06-04)
-- [Clay integrations](https://www.clay.com/integrations) (verified 2026-06-04)
-- [Make pricing](https://www.make.com/en/pricing) (verified 2026-06-04)
-- [Make AI Agents](https://www.make.com/en/ai-agents) (verified 2026-06-04)
-- [Make pricing adjustments](https://help.make.com/adjustments-to-plans-and-pricing) (verified 2026-06-04)
+- [Clay pricing](https://www.clay.com/pricing) (verified 2026-06-12)
+- [Clay integrations](https://www.clay.com/integrations) (verified 2026-06-12)
+- [Make pricing](https://www.make.com/en/pricing) (verified 2026-06-12)
+- [Make AI Agents](https://www.make.com/en/ai-agents) (verified 2026-06-12)
+- [Make pricing adjustments](https://help.make.com/adjustments-to-plans-and-pricing) (verified 2026-06-12)
 
 ## Related
 

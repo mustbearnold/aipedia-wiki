@@ -6,10 +6,10 @@ tools: [claude, notion-ai]
 category: ai-notes
 winner: depends
 seo_title: "Claude vs Notion AI: assistant or workspace AI? (June 2026)"
-meta_description: "Claude vs Notion AI, verified June 4, 2026: compare Claude Opus 4.8 with Notion Business, Notion Agent, Custom Agents credits, AI Meeting Notes, Enterprise Search, and workspace fit."
+meta_description: "Claude vs Notion AI, verified June 12, 2026: compare Claude Opus 4.8 with Notion Business, Notion Agent, Custom Agents credits, AI Meeting Notes, Enterprise Search, and workspace fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-04
-last_verified: 2026-06-04
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -18,7 +18,7 @@ canonical_fact_table: true
 
 [Claude](/tools/claude/) is the better standalone assistant for writing, reasoning, coding, files, and long-document analysis. [Notion AI](/tools/notion-ai/) is the better embedded workspace AI when the buyer already runs docs, projects, databases, meetings, and company knowledge inside Notion.
 
-**Verified June 4, 2026:** Notion's current AI product page says Notion AI includes Notion Agent, Custom Agents, AI Meeting Notes, Enterprise Search, admin controls, and workspace actions. Notion's current pricing page lists Free and Plus with trial AI, Business as the main full AI workspace plan, and Enterprise with zero-retention LLM-provider handling. Official localized pricing snippets and the live pricing page's USD selector list Business at $20/member/month in the U.S. Notion's AI product page and pricing page also state Custom Agents are free to try and then require Notion credits at $10 per 1,000 credits.
+**Verified June 12, 2026:** Notion's current AI product page says Notion AI includes Notion Agent, Custom Agents, AI Meeting Notes, Enterprise Search, admin controls, and workspace actions. Notion's current pricing page lists Free and Plus with trial AI, Business as the main full AI workspace plan, and Enterprise with zero-retention LLM-provider handling. Official localized pricing snippets and the live pricing page's USD selector list Business at $20/member/month in the U.S. Notion's AI product page and pricing page also state Custom Agents are free to try and then require Notion credits at $10 per 1,000 credits.
 
 ## Quick Answer
 

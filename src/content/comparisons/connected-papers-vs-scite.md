@@ -6,10 +6,10 @@ tools: [connected-papers, scite]
 category: ai-research
 winner: depends
 seo_title: "Connected Papers vs Scite: Map Papers or Check Citations? (June 2026)"
-meta_description: "Updated June 4, 2026: Connected Papers maps related literature from a seed paper; Scite classifies citation contexts as Supporting, Contrasting, or Mentioning."
+meta_description: "Updated June 12, 2026: Connected Papers maps related literature from a seed paper; Scite classifies citation contexts as Supporting, Contrasting, or Mentioning."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-04
-last_verified: 2026-06-04
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -91,10 +91,10 @@ Scite is better for citation-context checks. Connected Papers is better for earl
 
 ## Sources
 
-- [Connected Papers pricing](https://www.connectedpapers.com/pricing) (verified 2026-06-04)
-- [Connected Papers about](https://www.connectedpapers.com/about) (verified 2026-06-04)
-- [Scite pricing](https://scite.ai/pricing) (verified 2026-06-04)
-- [Scite](https://scite.ai/) (verified 2026-06-04)
+- [Connected Papers pricing](https://www.connectedpapers.com/pricing) (verified 2026-06-12)
+- [Connected Papers about](https://www.connectedpapers.com/about) (verified 2026-06-12)
+- [Scite pricing](https://scite.ai/pricing) (verified 2026-06-12)
+- [Scite](https://scite.ai/) (verified 2026-06-12)
 
 ## Related
 

@@ -6,10 +6,10 @@ tools: [consensus, semantic-scholar]
 category: ai-research
 winner: depends
 seo_title: "Consensus vs Semantic Scholar: AI Answers or Free Academic Search? (June 2026)"
-meta_description: "Updated June 4, 2026: Consensus is best for paper-backed academic Q&A; Semantic Scholar is the free AI2 academic search and API baseline with 214M papers."
+meta_description: "Updated June 12, 2026: Consensus is best for paper-backed academic Q&A; Semantic Scholar is the free AI2 academic search and API baseline with 214M papers."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-04
-last_verified: 2026-06-04
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -91,10 +91,10 @@ Semantic Scholar, because it exposes Academic Graph, Recommendations, and Datase
 
 ## Sources
 
-- [Consensus](https://consensus.app/) (verified 2026-06-04)
-- [Consensus pricing](https://consensus.app/pricing) (verified 2026-06-04)
-- [Semantic Scholar](https://www.semanticscholar.org/) (verified 2026-06-04)
-- [Semantic Scholar API](https://www.semanticscholar.org/product/api) (verified 2026-06-04)
+- [Consensus](https://consensus.app/) (verified 2026-06-12)
+- [Consensus pricing](https://consensus.app/pricing) (verified 2026-06-12)
+- [Semantic Scholar](https://www.semanticscholar.org/) (verified 2026-06-12)
+- [Semantic Scholar API](https://www.semanticscholar.org/product/api) (verified 2026-06-12)
 
 ## Related
 

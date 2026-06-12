@@ -6,10 +6,10 @@ tools: [chatgpt, sudowrite]
 category: ai-writing
 winner: depends
 seo_title: "ChatGPT vs Sudowrite: General Assistant or Fiction Workspace? (June 2026)"
-meta_description: "ChatGPT vs Sudowrite, verified June 4, 2026: choose ChatGPT for broad writing, research, and productivity; choose Sudowrite for fiction drafting, Story Engine, Muse, and manuscript workflow."
+meta_description: "ChatGPT vs Sudowrite, verified June 12, 2026: choose ChatGPT for broad writing, research, and productivity; choose Sudowrite for fiction drafting, Story Engine, Muse, and manuscript workflow."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-04
-last_verified: 2026-06-04
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -18,7 +18,7 @@ canonical_fact_table: true
 
 [ChatGPT](/tools/chatgpt/) is the broad assistant for writing, research, files, coding, images, analysis, voice, and agent workflows. [Sudowrite](/tools/sudowrite/) is a fiction-first writing workspace for scenes, characters, story structure, sensory detail, rewrite passes, and manuscript progress.
 
-This comparison was refreshed on June 4, 2026 against current ChatGPT pricing, OpenAI model documentation, Sudowrite pricing, and Sudowrite product sources.
+This comparison was refreshed on June 12, 2026 against current ChatGPT pricing, OpenAI model documentation, Sudowrite pricing, and Sudowrite product sources.
 
 ## Quick Answer
 
@@ -102,10 +102,10 @@ Yes. Use ChatGPT for research, critique, blurbs, and planning. Use Sudowrite for
 
 ## Sources
 
-- [ChatGPT pricing](https://chatgpt.com/pricing/) - current ChatGPT plan features, verified 2026-06-04.
-- [OpenAI model docs](https://platform.openai.com/docs/models) - current API model context, verified 2026-06-04.
-- [Sudowrite pricing](https://sudowrite.com/pricing) - Hobby & Student, Professional, Max, and Enterprise pricing, verified 2026-06-04.
-- [Sudowrite FAQ and product page](https://sudowrite.com/pricing) - model and writing-workflow notes, verified 2026-06-04.
+- [ChatGPT pricing](https://chatgpt.com/pricing/) - current ChatGPT plan features, verified 2026-06-12.
+- [OpenAI model docs](https://platform.openai.com/docs/models) - current API model context, verified 2026-06-12.
+- [Sudowrite pricing](https://sudowrite.com/pricing) - Hobby & Student, Professional, Max, and Enterprise pricing, verified 2026-06-12.
+- [Sudowrite FAQ and product page](https://sudowrite.com/pricing) - model and writing-workflow notes, verified 2026-06-12.
 
 ## Related
 

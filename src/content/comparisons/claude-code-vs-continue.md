@@ -6,10 +6,10 @@ tools: [claude-code, continue]
 category: ai-coding
 winner: depends
 seo_title: "Claude Code vs Continue: Agentic Coding or Open-Source IDE Layer? (June 2026)"
-meta_description: "Claude Code vs Continue, verified June 4, 2026: choose Claude Code for Anthropic agentic repo work; choose Continue for open-source BYOK IDE control across VS Code, JetBrains, and Vim."
+meta_description: "Claude Code vs Continue, verified June 12, 2026: choose Claude Code for Anthropic agentic repo work; choose Continue for open-source BYOK IDE control across VS Code, JetBrains, and Vim."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-04
-last_verified: 2026-06-04
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -18,7 +18,7 @@ canonical_fact_table: true
 
 [Claude Code](/tools/claude-code/) is Anthropic's agentic coding product for repo-aware edits, shell work, IDE integrations, browser and desktop flows, and Claude-backed coding sessions. [Continue](/tools/continue/) is the open-source BYOK coding layer for VS Code, JetBrains, and Vim, with Continue Hub for shared agents, rules, MCPs, and team distribution.
 
-This comparison was refreshed on June 4, 2026 against current Claude Code docs, Claude pricing, Continue pricing, Continue docs, and Continue Hub sources.
+This comparison was refreshed on June 12, 2026 against current Claude Code docs, Claude pricing, Continue pricing, Continue docs, and Continue Hub sources.
 
 ## Quick Answer
 
@@ -98,12 +98,12 @@ Continue is better when teams need IDE and provider flexibility. Claude Code is 
 
 ## Sources
 
-- [Claude Code overview](https://code.claude.com/docs/en/overview) - product surfaces and coding-agent workflow, verified 2026-06-04.
-- [Claude Code cost management](https://code.claude.com/docs/en/costs) - usage and budget controls, verified 2026-06-04.
-- [Claude pricing](https://claude.com/pricing) - Claude plan access context, verified 2026-06-04.
-- [Continue pricing](https://www.continue.dev/pricing) - Starter, Team, Company, and credit details, verified 2026-06-04.
-- [Continue docs](https://docs.continue.dev/) - IDE support, models, context, and configuration, verified 2026-06-04.
-- [Continue Hub](https://hub.continue.dev/) - shared agents, rules, MCPs, and commands, verified 2026-06-04.
+- [Claude Code overview](https://code.claude.com/docs/en/overview) - product surfaces and coding-agent workflow, verified 2026-06-12.
+- [Claude Code cost management](https://code.claude.com/docs/en/costs) - usage and budget controls, verified 2026-06-12.
+- [Claude pricing](https://claude.com/pricing) - Claude plan access context, verified 2026-06-12.
+- [Continue pricing](https://www.continue.dev/pricing) - Starter, Team, Company, and credit details, verified 2026-06-12.
+- [Continue docs](https://docs.continue.dev/) - IDE support, models, context, and configuration, verified 2026-06-12.
+- [Continue Hub](https://hub.continue.dev/) - shared agents, rules, MCPs, and commands, verified 2026-06-12.
 
 ## Related
 

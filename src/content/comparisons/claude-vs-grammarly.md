@@ -6,10 +6,10 @@ tools: [claude, grammarly]
 category: ai-writing
 winner: depends
 seo_title: "Claude vs Grammarly: AI writing assistant or inline editor? (June 2026)"
-meta_description: "Claude vs Grammarly, verified June 4, 2026: compare Claude Opus 4.8 with Grammarly Pro, AI prompts, Superhuman suite positioning, editing, tone, and team controls."
+meta_description: "Claude vs Grammarly, verified June 12, 2026: compare Claude Opus 4.8 with Grammarly Pro, AI prompts, Superhuman suite positioning, editing, tone, and team controls."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-04
-last_verified: 2026-06-04
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -18,7 +18,7 @@ canonical_fact_table: true
 
 [Claude](/tools/claude/) and [Grammarly](/tools/grammarly/) both improve writing, but they belong at different stages of the workflow. Claude is the thinking, drafting, rewriting, and analysis assistant. Grammarly is the inline editing and communication-quality layer that follows people around the browser, desktop, docs, email, and daily writing surfaces.
 
-**Verified June 4, 2026:** Claude's current model docs list Opus 4.8 as Anthropic's most capable model for complex reasoning and agentic coding. Grammarly's current support page lists Pro at $30/member/month, $60/member/quarter, or $144/member/year, with Pro replacing the old Grammarly Business plan for up to 149 seats. Grammarly's plans page now presents Free, Pro, and Enterprise, and it frames Enterprise as part of the broader Superhuman suite.
+**Verified June 12, 2026:** Claude's current model docs list Opus 4.8 as Anthropic's most capable model for complex reasoning and agentic coding. Grammarly's current support page lists Pro at $30/member/month, $60/member/quarter, or $144/member/year, with Pro replacing the old Grammarly Business plan for up to 149 seats. Grammarly's plans page now presents Free, Pro, and Enterprise, and it frames Enterprise as part of the broader Superhuman suite.
 
 ## Quick Answer
 

@@ -6,10 +6,10 @@ tools: [claude, perplexity]
 category: ai-search
 winner: depends
 seo_title: "Claude vs Perplexity: assistant or cited research engine? (June 2026)"
-meta_description: "Claude vs Perplexity, verified June 4, 2026: compare Claude Opus 4.8 with Perplexity Pro, Enterprise Pro, Enterprise Max, cited search, model choice, and API research workflows."
+meta_description: "Claude vs Perplexity, verified June 12, 2026: compare Claude Opus 4.8 with Perplexity Pro, Enterprise Pro, Enterprise Max, cited search, model choice, and API research workflows."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-04
-last_verified: 2026-06-04
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -18,7 +18,7 @@ canonical_fact_table: true
 
 [Claude](/tools/claude/) is the better assistant for deep reasoning, writing, coding, and long-document work. [Perplexity](/tools/perplexity/) is the better first stop for cited web research, source-backed answers, market scans, and finding the primary sources that should feed a final decision.
 
-**Verified June 4, 2026:** Claude's current model docs list Opus 4.8 as Anthropic's top complex-reasoning and agentic-coding model. Perplexity's current Enterprise pricing page lists Pro at $20/month or $200/year, Enterprise Pro at $40/seat/month or $400/year, and Enterprise Max at $325/seat/month or $3,250/year, with annual equivalents shown as $17, $34, and $271 per month. The page also lists model choice across GPT, Claude, Gemini, and more, plus cited search, file/app search, deep research, Spaces, Comet, and team controls.
+**Verified June 12, 2026:** Claude's current model docs list Opus 4.8 as Anthropic's top complex-reasoning and agentic-coding model. Perplexity's current Enterprise pricing page lists Pro at $20/month or $200/year, Enterprise Pro at $40/seat/month or $400/year, and Enterprise Max at $325/seat/month or $3,250/year, with annual equivalents shown as $17, $34, and $271 per month. The page also lists model choice across GPT, Claude, Gemini, and more, plus cited search, file/app search, deep research, Spaces, Comet, and team controls.
 
 ## Quick Answer
 

@@ -6,10 +6,10 @@ tools: [claude, cody]
 category: ai-coding
 winner: depends
 seo_title: "Claude vs Cody: Claude assistant or Sourcegraph code AI? (June 2026)"
-meta_description: "Claude vs Cody, verified June 4, 2026: choose Claude for a broad managed assistant, or Cody only when Sourcegraph Enterprise and cross-repo code context are the purchase reason."
+meta_description: "Claude vs Cody, verified June 12, 2026: choose Claude for a broad managed assistant, or Cody only when Sourcegraph Enterprise and cross-repo code context are the purchase reason."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-04
-last_verified: 2026-06-04
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---

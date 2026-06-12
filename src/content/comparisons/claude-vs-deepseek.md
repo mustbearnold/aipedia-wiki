@@ -6,10 +6,10 @@ tools: [claude, deepseek]
 category: ai-chatbots
 winner: depends
 seo_title: "Claude vs DeepSeek: premium assistant or low-cost model API? (June 2026)"
-meta_description: "Claude vs DeepSeek, verified June 4, 2026: compare Opus 4.8 and Claude plans with DeepSeek V4-Flash/V4-Pro pricing, open-weight tradeoffs, and buyer fit."
+meta_description: "Claude vs DeepSeek, verified June 12, 2026: compare Opus 4.8 and Claude plans with DeepSeek V4-Flash/V4-Pro pricing, open-weight tradeoffs, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-04
-last_verified: 2026-06-04
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---

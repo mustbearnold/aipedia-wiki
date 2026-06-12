@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: $0-$69+/month
 status: active
 launched: 2012-01
-last_updated: 2026-06-04
-last_verified: 2026-06-04
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -32,7 +32,7 @@ facts:
     source: "https://zapier.com/ai"
     source_label: "Zapier AI"
     source_id: zapier-ai
-    verified_at: 2026-06-04
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-09-04
@@ -41,7 +41,7 @@ facts:
     source: "https://zapier.com/ai"
     source_label: "Zapier AI"
     source_id: zapier-ai
-    verified_at: 2026-06-04
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
     next_review_at: 2026-09-04
@@ -50,7 +50,7 @@ facts:
     source: "https://zapier.com/pricing"
     source_label: "Zapier pricing"
     source_id: zapier-pricing
-    verified_at: 2026-06-04
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-09-04
@@ -59,7 +59,7 @@ facts:
     source: "https://zapier.com/pricing"
     source_label: "Zapier pricing"
     source_id: zapier-pricing
-    verified_at: 2026-06-04
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-09-04
@@ -68,7 +68,7 @@ facts:
     source: "https://zapier.com/pricing"
     source_label: "Zapier pricing"
     source_id: zapier-pricing
-    verified_at: 2026-06-04
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-09-04
@@ -77,7 +77,7 @@ facts:
     source: "https://zapier.com/apps"
     source_label: "Zapier apps directory"
     source_id: zapier-apps
-    verified_at: 2026-06-04
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   image_generation:
@@ -85,7 +85,7 @@ facts:
     source: "https://zapier.com/apps"
     source_label: "Zapier apps directory"
     source_id: zapier-apps
-    verified_at: 2026-06-04
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   video_generation:
@@ -93,7 +93,7 @@ facts:
     source: "https://zapier.com/apps"
     source_label: "Zapier apps directory"
     source_id: zapier-apps
-    verified_at: 2026-06-04
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   real_time_voice:
@@ -101,7 +101,7 @@ facts:
     source: "https://zapier.com/apps"
     source_label: "Zapier apps directory"
     source_id: zapier-apps
-    verified_at: 2026-06-04
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
   web_browsing:
@@ -109,7 +109,7 @@ facts:
     source: "https://zapier.com/ai"
     source_label: "Zapier AI"
     source_id: zapier-ai
-    verified_at: 2026-06-04
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   coding_agent:
@@ -117,7 +117,7 @@ facts:
     source: "https://zapier.com/blog/zapier-agents-guide/"
     source_label: "Zapier Agents guide"
     source_id: zapier-agents-guide
-    verified_at: 2026-06-04
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   enterprise_controls:
@@ -125,7 +125,7 @@ facts:
     source: "https://zapier.com/pricing"
     source_label: "Zapier pricing"
     source_id: zapier-pricing
-    verified_at: 2026-06-04
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-09-04
@@ -134,7 +134,7 @@ facts:
     source: "https://zapier.com/pricing"
     source_label: "Zapier pricing"
     source_id: zapier-pricing
-    verified_at: 2026-06-04
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   open_source_or_local:
@@ -142,7 +142,7 @@ facts:
     source: "https://zapier.com/pricing"
     source_label: "Zapier pricing"
     source_id: zapier-pricing
-    verified_at: 2026-06-04
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
   best_for:
@@ -150,7 +150,7 @@ facts:
     source: "https://zapier.com/apps"
     source_label: "Zapier apps directory"
     source_id: zapier-apps
-    verified_at: 2026-06-04
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   watch_out_for:
@@ -158,7 +158,7 @@ facts:
     source: "https://zapier.com/pricing"
     source_label: "Zapier pricing"
     source_id: zapier-pricing
-    verified_at: 2026-06-04
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-09-04
@@ -230,7 +230,7 @@ Pricing runs from Free to Professional, Team, and Enterprise. Professional start
 | **Self-host** | None |
 | **Data residency** | Cloud only, Zapier servers |
 
-Every data point above was verified against vendor sources on 2026-06-04. See Sources.
+Every data point above was verified against vendor sources on 2026-06-12. See Sources.
 
 ## What it actually is
 
@@ -267,7 +267,7 @@ Subscription pricing via [zapier.com/pricing](https://zapier.com/pricing). Annua
 | Team | $69+ | Shared task tier | Shared Zaps/folders/connections, SAML SSO, premier support | Collaborative teams |
 | Enterprise | Custom | Annual task limits | Advanced admin, observability, governance, technical account manager | Enterprise governance |
 
-*Prices verified 2026-06-04 via [Zapier pricing](https://zapier.com/pricing). Monthly billing runs higher than the annual rates shown. Task counts scale with selected task tier and add-ons.*
+*Prices verified 2026-06-12 via [Zapier pricing](https://zapier.com/pricing). Monthly billing runs higher than the annual rates shown. Task counts scale with selected task tier and add-ons.*
 
 ## Against the alternatives
 
@@ -294,7 +294,7 @@ Subscription pricing via [zapier.com/pricing](https://zapier.com/pricing). Annua
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-04 against the [Zapier pricing page](https://zapier.com/pricing), Zapier pricing documentation, and Zapier's AI orchestration materials.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-12 against the [Zapier pricing page](https://zapier.com/pricing), Zapier pricing documentation, and Zapier's AI orchestration materials.
 
 ## FAQ
 

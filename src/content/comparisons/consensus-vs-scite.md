@@ -6,10 +6,10 @@ tools: [consensus, scite]
 category: ai-research
 winner: depends
 seo_title: "Consensus vs Scite: Evidence Answers or Citation Context? (June 2026)"
-meta_description: "Updated June 4, 2026: Consensus gives paper-backed answers and study-agreement signals; Scite checks whether citations support, contrast, or mention claims."
+meta_description: "Updated June 12, 2026: Consensus gives paper-backed answers and study-agreement signals; Scite checks whether citations support, contrast, or mention claims."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-04
-last_verified: 2026-06-04
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -91,10 +91,10 @@ No. It can highlight support and contrast patterns, but a systematic review stil
 
 ## Sources
 
-- [Consensus](https://consensus.app/) (verified 2026-06-04)
-- [Consensus pricing](https://consensus.app/pricing) (verified 2026-06-04)
-- [Scite pricing](https://scite.ai/pricing) (verified 2026-06-04)
-- [Scite](https://scite.ai/) (verified 2026-06-04)
+- [Consensus](https://consensus.app/) (verified 2026-06-12)
+- [Consensus pricing](https://consensus.app/pricing) (verified 2026-06-12)
+- [Scite pricing](https://scite.ai/pricing) (verified 2026-06-12)
+- [Scite](https://scite.ai/) (verified 2026-06-12)
 
 ## Related
 

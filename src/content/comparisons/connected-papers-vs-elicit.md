@@ -6,10 +6,10 @@ tools: [connected-papers, elicit]
 category: ai-research
 winner: depends
 seo_title: "Connected Papers vs Elicit: Graph Mapping or Systematic Review? (June 2026)"
-meta_description: "Updated June 4, 2026: Connected Papers is best for visual paper-neighborhood mapping; Elicit is best for systematic review, screening, extraction tables, and evidence reports."
+meta_description: "Updated June 12, 2026: Connected Papers is best for visual paper-neighborhood mapping; Elicit is best for systematic review, screening, extraction tables, and evidence reports."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-04
-last_verified: 2026-06-04
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -91,10 +91,10 @@ Start with the free tiers. Pay for Connected Papers if you need more graphs. Pay
 
 ## Sources
 
-- [Connected Papers pricing](https://www.connectedpapers.com/pricing) (verified 2026-06-04)
-- [Connected Papers about](https://www.connectedpapers.com/about) (verified 2026-06-04)
-- [Elicit pricing](https://elicit.com/pricing) (verified 2026-06-04)
-- [Systematic Reviews in Elicit](https://support.elicit.com/en/articles/14759154-systematic-reviews-in-elicit) (verified 2026-06-04)
+- [Connected Papers pricing](https://www.connectedpapers.com/pricing) (verified 2026-06-12)
+- [Connected Papers about](https://www.connectedpapers.com/about) (verified 2026-06-12)
+- [Elicit pricing](https://elicit.com/pricing) (verified 2026-06-12)
+- [Systematic Reviews in Elicit](https://support.elicit.com/en/articles/14759154-systematic-reviews-in-elicit) (verified 2026-06-12)
 
 ## Related
 

@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$100/user/month"
 status: active
 launched: 2021-06
-last_updated: 2026-06-04
-last_verified: 2026-06-04
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://docs.github.com/en/copilot/reference/ai-models/supported-models"
     source_label: "GitHub Copilot supported models"
     source_id: github-copilot-supported-models
-    verified_at: 2026-06-04
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-16
@@ -39,7 +39,7 @@ facts:
     source: "https://docs.github.com/en/copilot"
     source_label: "GitHub Copilot documentation"
     source_id: github-copilot-docs
-    verified_at: 2026-06-04
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-16
@@ -48,7 +48,7 @@ facts:
     source: "https://docs.github.com/en/copilot/get-started/plans"
     source_label: "GitHub Copilot plan docs"
     source_id: github-copilot-plan-docs
-    verified_at: 2026-06-04
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-16
@@ -57,7 +57,7 @@ facts:
     source: "https://github.com/features/copilot/plans"
     source_label: "GitHub Copilot plans"
     source_id: github-copilot-plans
-    verified_at: 2026-06-04
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-16
@@ -66,7 +66,7 @@ facts:
     source: "https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals"
     source_label: "GitHub Copilot usage-based billing"
     source_id: github-copilot-ai-credits
-    verified_at: 2026-06-04
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-16
@@ -75,7 +75,7 @@ facts:
     source: "https://github.blog/changelog/2026-06-02-copilot-sdk-is-now-generally-available/"
     source_label: "GitHub Copilot SDK GA"
     source_id: github-copilot-sdk-ga
-    verified_at: 2026-06-04
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
   image_generation:
@@ -83,7 +83,7 @@ facts:
     source: "https://docs.github.com/en/copilot"
     source_label: "GitHub Copilot documentation"
     source_id: github-copilot-docs
-    verified_at: 2026-06-04
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
   video_generation:
@@ -91,7 +91,7 @@ facts:
     source: "https://docs.github.com/en/copilot"
     source_label: "GitHub Copilot documentation"
     source_id: github-copilot-docs
-    verified_at: 2026-06-04
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
   real_time_voice:
@@ -99,7 +99,7 @@ facts:
     source: "https://docs.github.com/en/copilot/reference/copilot-feature-matrix"
     source_label: "GitHub Copilot feature matrix"
     source_id: github-copilot-feature-matrix
-    verified_at: 2026-06-04
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
   web_browsing:
@@ -107,7 +107,7 @@ facts:
     source: "https://docs.github.com/en/copilot/reference/copilot-feature-matrix"
     source_label: "GitHub Copilot feature matrix"
     source_id: github-copilot-feature-matrix
-    verified_at: 2026-06-04
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   coding_agent:
@@ -115,7 +115,7 @@ facts:
     source: "https://github.blog/changelog/2026-06-02-copilot-sdk-is-now-generally-available/"
     source_label: "GitHub Copilot SDK GA"
     source_id: github-copilot-sdk-ga
-    verified_at: 2026-06-04
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-16
@@ -124,7 +124,7 @@ facts:
     source: "https://docs.github.com/en/copilot/reference/copilot-feature-matrix"
     source_label: "GitHub Copilot feature matrix"
     source_id: github-copilot-feature-matrix
-    verified_at: 2026-06-04
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-16
@@ -133,7 +133,7 @@ facts:
     source: "https://docs.github.com/en/copilot"
     source_label: "GitHub Copilot documentation"
     source_id: github-copilot-docs
-    verified_at: 2026-06-04
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   open_source_or_local:
@@ -141,7 +141,7 @@ facts:
     source: "https://github.com/features/copilot"
     source_label: "GitHub Copilot product page"
     source_id: github-copilot-docs
-    verified_at: 2026-06-04
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
   best_for:
@@ -149,7 +149,7 @@ facts:
     source: "https://docs.github.com/en/copilot"
     source_label: "GitHub Copilot documentation"
     source_id: github-copilot-docs
-    verified_at: 2026-06-04
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   watch_out_for:
@@ -157,7 +157,7 @@ facts:
     source: "https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals"
     source_label: "GitHub Copilot usage-based billing"
     source_id: github-copilot-ai-credits
-    verified_at: 2026-06-04
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-16
@@ -397,7 +397,7 @@ Third, IDE breadth. JetBrains, Xcode, and Neovim developers only have Copilot am
 
 ## Pricing
 
-Subscription tiers verified June 4, 2026 via [GitHub Copilot plans](https://docs.github.com/en/copilot/get-started/plans), [individual AI Credits billing](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals), [organization AI Credits billing](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-organizations-and-enterprises), [models and pricing](https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing), and the [Copilot SDK GA changelog](https://github.blog/changelog/2026-06-02-copilot-sdk-is-now-generally-available/):
+Subscription tiers verified June 12, 2026 via [GitHub Copilot plans](https://docs.github.com/en/copilot/get-started/plans), [individual AI Credits billing](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals), [organization AI Credits billing](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-organizations-and-enterprises), [models and pricing](https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing), and the [Copilot SDK GA changelog](https://github.blog/changelog/2026-06-02-copilot-sdk-is-now-generally-available/):
 
 | Plan | Price | Included AI Credits | Model access | Who's it for |
 |---|---|---|---|---|
@@ -442,7 +442,7 @@ One GitHub AI Credit equals $0.01 USD. Chat, agent mode, cloud Coding Agent, Cop
 - **Model churn is now operational.** [GPT-5.2 and GPT-5.2-Codex retire from most Copilot experiences on June 1, 2026](/news/2026-05-03-github-copilot-gpt-52-deprecation/). Admins need model-policy owners, not just developer preference lists.
 - **AI Credits make agent usage a budget problem.** Higher-reasoning models, larger context windows, long cloud-agent sessions, code review, Spark, Spaces, and third-party agents can consume credits quickly. Teams should set budgets, track usage reports, and reserve expensive model/client combinations for hard problems.
 - **Free and student access is constrained.** Copilot Free remains useful for evaluation, but its completions/chat caps and changing free-model set make it a trial path rather than a dependable production plan.
-- **Copilot Max and some paid sign-ups are constrained.** GitHub's live plan docs note temporary pauses around new individual and self-serve organization sign-ups, with Max only available for upgrade to users with existing Copilot plans as of June 1, 2026. Procurement should confirm account eligibility before promising a rollout.
+- **Copilot Max and some paid sign-ups are constrained.** GitHub's live plan docs note temporary pauses around new individual and self-serve organization sign-ups, with Max only available for upgrade to users with existing Copilot plans as of June 12, 2026. Procurement should confirm account eligibility before promising a rollout.
 - **Autocomplete latency varies by language.** Strongest on Python, TypeScript, JavaScript, Go. Noticeably weaker than dedicated IDE stacks on niche languages and on large cold files.
 - **GitHub lock-in is real.** Coding Agent, PR review, Spaces, and org knowledge all assume GitHub is your forge. GitLab and Bitbucket teams get the extension but lose the agent graph.
 - **Enterprise admin surface is complex.** Policy controls, per-model allow/deny lists, content exclusions, and SKU combinations (Copilot Enterprise + GitHub Enterprise Cloud) take real time to configure correctly.
@@ -453,7 +453,7 @@ One GitHub AI Credit equals $0.01 USD. Chat, agent mode, cloud Coding Agent, Cop
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, normalizes factual claims, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-04 against [GitHub Copilot plans](https://docs.github.com/en/copilot/get-started/plans), [individual AI Credits billing](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals), [organization AI Credits billing](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-organizations-and-enterprises), [models and pricing](https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing), [supported models](https://docs.github.com/en/copilot/reference/ai-models/supported-models), [github.com/features/copilot](https://github.com/features/copilot), the [Copilot SDK GA changelog](https://github.blog/changelog/2026-06-02-copilot-sdk-is-now-generally-available/), and recent AiPedia coverage linked above.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, normalizes factual claims, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against [GitHub Copilot plans](https://docs.github.com/en/copilot/get-started/plans), [individual AI Credits billing](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals), [organization AI Credits billing](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-organizations-and-enterprises), [models and pricing](https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing), [supported models](https://docs.github.com/en/copilot/reference/ai-models/supported-models), [github.com/features/copilot](https://github.com/features/copilot), the [Copilot SDK GA changelog](https://github.blog/changelog/2026-06-02-copilot-sdk-is-now-generally-available/), and recent AiPedia coverage linked above.
 
 ## FAQ
 

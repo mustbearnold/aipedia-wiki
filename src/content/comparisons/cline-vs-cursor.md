@@ -6,10 +6,10 @@ tools: [cline, cursor]
 category: ai-coding
 winner: depends
 seo_title: "Cline vs Cursor: Open-Source Agent or AI IDE? (June 2026)"
-meta_description: "Updated June 4, 2026: Cline is the open-source BYOK coding agent across IDE, CLI, and SDK; Cursor is the managed AI-native IDE with Pro, Teams, agents, Bugbot, and model usage."
+meta_description: "Updated June 12, 2026: Cline is the open-source BYOK coding agent across IDE, CLI, and SDK; Cursor is the managed AI-native IDE with Pro, Teams, agents, Bugbot, and model usage."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-04
-last_verified: 2026-06-04
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -94,12 +94,12 @@ Try Cursor first if you want a ready-to-use AI IDE. Try Cline first if open sour
 
 ## Sources
 
-- [Cline homepage](https://cline.bot/) (verified 2026-06-04)
-- [Cline overview docs](https://docs.cline.bot/cline-overview) (verified 2026-06-04)
-- [Cline GitHub repository](https://github.com/cline/cline) (verified 2026-06-04)
-- [Cursor pricing](https://cursor.com/pricing) (verified 2026-06-04)
-- [Cursor Composer 2.5 changelog](https://cursor.com/changelog/composer-2-5) (verified 2026-06-04)
-- [Cursor models and pricing docs](https://cursor.com/docs/models) (verified 2026-06-04)
+- [Cline homepage](https://cline.bot/) (verified 2026-06-12)
+- [Cline overview docs](https://docs.cline.bot/cline-overview) (verified 2026-06-12)
+- [Cline GitHub repository](https://github.com/cline/cline) (verified 2026-06-12)
+- [Cursor pricing](https://cursor.com/pricing) (verified 2026-06-12)
+- [Cursor Composer 2.5 changelog](https://cursor.com/changelog/composer-2-5) (verified 2026-06-12)
+- [Cursor models and pricing docs](https://cursor.com/docs/models) (verified 2026-06-12)
 
 ## Related
 

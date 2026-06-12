@@ -6,10 +6,10 @@ tools: [cody, cursor]
 category: ai-coding
 winner: depends
 seo_title: "Cody vs Cursor: Enterprise Code Context or AI IDE? (June 2026)"
-meta_description: "Updated June 4, 2026: Cody is Sourcegraph Enterprise AI code context after Free/Pro sunset; Cursor is the AI-native IDE for daily coding, agents, Bugbot, and teams."
+meta_description: "Updated June 12, 2026: Cody is Sourcegraph Enterprise AI code context after Free/Pro sunset; Cursor is the AI-native IDE for daily coding, agents, Bugbot, and teams."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-04
-last_verified: 2026-06-04
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -94,12 +94,12 @@ Try Cursor first unless the team already needs Sourcegraph. Cody is too enterpri
 
 ## Sources
 
-- [Sourcegraph Cody docs](https://sourcegraph.com/docs/cody) (verified 2026-06-04)
-- [Sourcegraph pricing](https://sourcegraph.com/pricing) (verified 2026-06-04)
-- [Sourcegraph Cody plan changes](https://sourcegraph.com/blog/changes-to-cody-free-pro-and-enterprise-starter-plans) (verified 2026-06-04)
-- [Cursor pricing](https://cursor.com/pricing) (verified 2026-06-04)
-- [Cursor Composer 2.5 changelog](https://cursor.com/changelog/composer-2-5) (verified 2026-06-04)
-- [Cursor models and pricing docs](https://cursor.com/docs/models) (verified 2026-06-04)
+- [Sourcegraph Cody docs](https://sourcegraph.com/docs/cody) (verified 2026-06-12)
+- [Sourcegraph pricing](https://sourcegraph.com/pricing) (verified 2026-06-12)
+- [Sourcegraph Cody plan changes](https://sourcegraph.com/blog/changes-to-cody-free-pro-and-enterprise-starter-plans) (verified 2026-06-12)
+- [Cursor pricing](https://cursor.com/pricing) (verified 2026-06-12)
+- [Cursor Composer 2.5 changelog](https://cursor.com/changelog/composer-2-5) (verified 2026-06-12)
+- [Cursor models and pricing docs](https://cursor.com/docs/models) (verified 2026-06-12)
 
 ## Related
 

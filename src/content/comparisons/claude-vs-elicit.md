@@ -6,10 +6,10 @@ tools: [claude, elicit]
 category: ai-research
 winner: depends
 seo_title: "Claude vs Elicit: general AI assistant or literature-review workflow? (June 2026)"
-meta_description: "Claude vs Elicit, verified June 4, 2026: choose Claude for broad reasoning and writing, or Elicit for paper search, screening, systematic review, and evidence tables."
+meta_description: "Claude vs Elicit, verified June 12, 2026: choose Claude for broad reasoning and writing, or Elicit for paper search, screening, systematic review, and evidence tables."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-04
-last_verified: 2026-06-04
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---

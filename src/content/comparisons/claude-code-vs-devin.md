@@ -6,10 +6,10 @@ tools: [claude-code, devin]
 category: ai-coding
 winner: depends
 seo_title: "Claude Code vs Devin: Interactive Agent or Autonomous Software Engineer? (June 2026)"
-meta_description: "Claude Code vs Devin, verified June 4, 2026: choose Claude Code for supervised repo work; choose Devin for async ticket delegation, sandbox sessions, PR output, and ACU-based agent work."
+meta_description: "Claude Code vs Devin, verified June 12, 2026: choose Claude Code for supervised repo work; choose Devin for async ticket delegation, sandbox sessions, PR output, and ACU-based agent work."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-04
-last_verified: 2026-06-04
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -18,7 +18,7 @@ canonical_fact_table: true
 
 [Claude Code](/tools/claude-code/) is a first-party Anthropic coding agent for supervised repository work across terminal, IDE, desktop, browser, and remote flows. [Devin](/tools/devin/) is Cognition's autonomous software-engineering agent: assign a task, let it work in a sandboxed machine, then review the output.
 
-This comparison was refreshed on June 4, 2026 against current Claude Code docs, Claude pricing, Devin pricing, Devin docs, Cognition self-serve plan notes, and Devin MCP documentation.
+This comparison was refreshed on June 12, 2026 against current Claude Code docs, Claude pricing, Devin pricing, Devin docs, Cognition self-serve plan notes, and Devin MCP documentation.
 
 ## Quick Answer
 
@@ -99,13 +99,13 @@ Yes. Use Devin for routine backlog tickets and Claude Code for investigation, re
 
 ## Sources
 
-- [Claude Code overview](https://code.claude.com/docs/en/overview) - coding-agent workflow and surfaces, verified 2026-06-04.
-- [Claude Code cost management](https://code.claude.com/docs/en/costs) - usage and budget controls, verified 2026-06-04.
-- [Claude pricing](https://claude.com/pricing) - Claude plan access context, verified 2026-06-04.
-- [Devin pricing](https://devin.ai/pricing) - plans, ACU model, seats, and overage context, verified 2026-06-04.
-- [Devin intro docs](https://docs.devin.ai/get-started/devin-intro) - autonomous software engineer positioning, verified 2026-06-04.
-- [Cognition self-serve plans for Devin](https://cognition.ai/blog/new-self-serve-plans-for-devin) - Pro/Max plan context, verified 2026-06-04.
-- [Devin MCP Marketplace docs](https://docs.devin.ai/work-with-devin/mcp) - MCP setup and marketplace path, verified 2026-06-04.
+- [Claude Code overview](https://code.claude.com/docs/en/overview) - coding-agent workflow and surfaces, verified 2026-06-12.
+- [Claude Code cost management](https://code.claude.com/docs/en/costs) - usage and budget controls, verified 2026-06-12.
+- [Claude pricing](https://claude.com/pricing) - Claude plan access context, verified 2026-06-12.
+- [Devin pricing](https://devin.ai/pricing) - plans, ACU model, seats, and overage context, verified 2026-06-12.
+- [Devin intro docs](https://docs.devin.ai/get-started/devin-intro) - autonomous software engineer positioning, verified 2026-06-12.
+- [Cognition self-serve plans for Devin](https://cognition.ai/blog/new-self-serve-plans-for-devin) - Pro/Max plan context, verified 2026-06-12.
+- [Devin MCP Marketplace docs](https://docs.devin.ai/work-with-devin/mcp) - MCP setup and marketplace path, verified 2026-06-12.
 
 ## Related
 

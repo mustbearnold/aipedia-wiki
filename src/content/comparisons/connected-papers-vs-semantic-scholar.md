@@ -6,10 +6,10 @@ tools: [connected-papers, semantic-scholar]
 category: ai-research
 winner: depends
 seo_title: "Connected Papers vs Semantic Scholar: Paid Graph or Free Search? (June 2026)"
-meta_description: "Updated June 4, 2026: Connected Papers is a focused visual graph layer; Semantic Scholar is the free AI2 academic search and API baseline with 214M papers."
+meta_description: "Updated June 12, 2026: Connected Papers is a focused visual graph layer; Semantic Scholar is the free AI2 academic search and API baseline with 214M papers."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-04
-last_verified: 2026-06-04
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -91,10 +91,10 @@ Semantic Scholar. Its Academic Graph, Recommendations, and Datasets APIs are the
 
 ## Sources
 
-- [Connected Papers pricing](https://www.connectedpapers.com/pricing) (verified 2026-06-04)
-- [Connected Papers about](https://www.connectedpapers.com/about) (verified 2026-06-04)
-- [Semantic Scholar](https://www.semanticscholar.org/) (verified 2026-06-04)
-- [Semantic Scholar API](https://www.semanticscholar.org/product/api) (verified 2026-06-04)
+- [Connected Papers pricing](https://www.connectedpapers.com/pricing) (verified 2026-06-12)
+- [Connected Papers about](https://www.connectedpapers.com/about) (verified 2026-06-12)
+- [Semantic Scholar](https://www.semanticscholar.org/) (verified 2026-06-12)
+- [Semantic Scholar API](https://www.semanticscholar.org/product/api) (verified 2026-06-12)
 
 ## Related
 
