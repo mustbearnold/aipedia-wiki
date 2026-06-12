@@ -184,7 +184,7 @@ Do not subscribe to multiple chatbots because each one has a new model announcem
 
 ## Related Categories
 
-- **[AI Search](/categories/ai-search/)** - Perplexity, Kagi, Exa, Phind, and other AI-powered answer/search tools.
+- **[AI Search](/categories/ai-search/)** - Perplexity, Kagi, Exa, and other AI-powered answer/search tools.
 - **[AI Writing](/categories/ai-writing/)** - ChatGPT, Claude, Jasper, Copy.ai, Writer, Grammarly, and content workflow tools.
 - **[AI Coding](/categories/ai-coding/)** - Cursor, Claude Code, GitHub Copilot, Codex, Windsurf, and IDE-integrated coding assistants.
 - **[AI Notes](/categories/ai-notes/)** - NotebookLM, Notion, Obsidian, Read AI, Fathom, and meeting/document memory tools.

@@ -40,7 +40,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-12 | /answers/is-midjourney-worth-it/ | Static page | Yes | page metadata | src/pages/answers/is-midjourney-worth-it.astro |
 | 2026-06-12 | /categories/ | Static page | Yes | git | src/pages/categories/index.astro |
 | 2026-06-12 | /categories/ai-automation/ | Category | Yes | frontmatter | src/content/categories/ai-automation.md |
-| 2026-06-12 | /categories/ai-chatbots/ | Category | Yes | frontmatter | src/content/categories/ai-chatbots.md |
 | 2026-06-12 | /categories/ai-coding/ | Category | Yes | frontmatter | src/content/categories/ai-coding.md |
 | 2026-06-12 | /categories/ai-design/ | Category | Yes | frontmatter | src/content/categories/ai-design.md |
 | 2026-06-12 | /categories/ai-image/ | Category | Yes | frontmatter | src/content/categories/ai-image.md |
@@ -455,6 +454,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-12 | /tools/activepieces/ | Tool | Yes | frontmatter | src/content/tools/activepieces.md |
 | 2026-06-12 | /tools/ada/ | Tool | Yes | frontmatter | src/content/tools/ada.md |
 | 2026-06-12 | /tools/adcreative/ | Tool | Yes | frontmatter | src/content/tools/adcreative.md |
+| 2026-06-12 | /tools/adobe-firefly/ | Tool | Yes | frontmatter | src/content/tools/adobe-firefly.md |
 | 2026-06-12 | /tools/ag2/ | Tool | Yes | frontmatter | src/content/tools/ag2.md |
 | 2026-06-12 | /tools/ahrefs/ | Tool | Yes | frontmatter | src/content/tools/ahrefs.md |
 | 2026-06-12 | /tools/aider/ | Tool | Yes | frontmatter | src/content/tools/aider.md |
@@ -536,6 +536,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-12 | /tools/gemini/ | Tool | Yes | frontmatter | src/content/tools/gemini.md |
 | 2026-06-12 | /tools/genspark/ | Tool | Yes | frontmatter | src/content/tools/genspark.md |
 | 2026-06-12 | /tools/getresponse/ | Tool | Yes | frontmatter | src/content/tools/getresponse.md |
+| 2026-06-12 | /tools/github-copilot/ | Tool | Yes | frontmatter | src/content/tools/github-copilot.md |
 | 2026-06-12 | /tools/glean/ | Tool | Yes | frontmatter | src/content/tools/glean.md |
 | 2026-06-12 | /tools/glm/ | Tool | Yes | frontmatter | src/content/tools/glm.md |
 | 2026-06-12 | /tools/google-stitch/ | Tool | Yes | frontmatter | src/content/tools/google-stitch.md |
@@ -543,6 +544,8 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-12 | /tools/gpt-image-2/ | Tool | Yes | frontmatter | src/content/tools/gpt-image-2.md |
 | 2026-06-12 | /tools/grammarly/ | Tool | Yes | frontmatter | src/content/tools/grammarly.md |
 | 2026-06-12 | /tools/granola/ | Tool | Yes | frontmatter | src/content/tools/granola.md |
+| 2026-06-12 | /tools/grok-code-fast/ | Tool | Yes | frontmatter | src/content/tools/grok-code-fast.md |
+| 2026-06-12 | /tools/grok/ | Tool | Yes | frontmatter | src/content/tools/grok.md |
 | 2026-06-12 | /tools/groq/ | Tool | Yes | frontmatter | src/content/tools/groq.md |
 | 2026-06-12 | /tools/gumloop/ | Tool | Yes | frontmatter | src/content/tools/gumloop.md |
 | 2026-06-12 | /tools/hailuo/ | Tool | Yes | frontmatter | src/content/tools/hailuo.md |
@@ -575,6 +578,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-12 | /tools/kling/ | Tool | Yes | frontmatter | src/content/tools/kling.md |
 | 2026-06-12 | /tools/kokoro/ | Tool | Yes | frontmatter | src/content/tools/kokoro.md |
 | 2026-06-12 | /tools/krea/ | Tool | Yes | frontmatter | src/content/tools/krea.md |
+| 2026-06-12 | /tools/langflow/ | Tool | Yes | frontmatter | src/content/tools/langflow.md |
 | 2026-06-12 | /tools/langfuse/ | Tool | Yes | frontmatter | src/content/tools/langfuse.md |
 | 2026-06-12 | /tools/langgraph/ | Tool | Yes | frontmatter | src/content/tools/langgraph.md |
 | 2026-06-12 | /tools/leonardo/ | Tool | Yes | frontmatter | src/content/tools/leonardo.md |
@@ -737,6 +741,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-13 | /404/ | Static page | No | git | src/pages/404.astro |
 | 2026-06-13 | /about/editorial/ | Static page | Yes | git | src/pages/about/editorial.astro |
 | 2026-06-13 | /about/scoring/ | Static page | Yes | git | src/pages/about/scoring.astro |
+| 2026-06-13 | /categories/ai-chatbots/ | Category | Yes | working tree | src/content/categories/ai-chatbots.md |
 | 2026-06-13 | /companies/ | Static page | Yes | git | src/pages/companies/index.astro |
 | 2026-06-13 | /demo-godtier/ | Static page | Yes | git | src/pages/demo-godtier.astro |
 | 2026-06-13 | /glossary/ | Static page | Yes | git | src/pages/glossary/index.astro |
@@ -744,8 +749,3 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-13 | /search/ | Static page | No | git | src/pages/search.astro |
 | 2026-06-13 | /stack-builder/ | Static page | Yes | git | src/pages/stack-builder/index.astro |
 | 2026-06-13 | /tool-finder/ | Static page | No | git | src/pages/tool-finder.astro |
-| 2026-06-13 | /tools/adobe-firefly/ | Tool | Yes | working tree | src/content/tools/adobe-firefly.md |
-| 2026-06-13 | /tools/github-copilot/ | Tool | Yes | working tree | src/content/tools/github-copilot.md |
-| 2026-06-13 | /tools/grok-code-fast/ | Tool | Yes | working tree | src/content/tools/grok-code-fast.md |
-| 2026-06-13 | /tools/grok/ | Tool | Yes | working tree | src/content/tools/grok.md |
-| 2026-06-13 | /tools/langflow/ | Tool | Yes | working tree | src/content/tools/langflow.md |
