@@ -10,8 +10,8 @@ interface Props {
 const { slug, title } = Astro.props;
 const embedUrl = `https://aipedia.wiki/embed/comparisons/${slug}.svg`;
 const pageUrl = `https://aipedia.wiki/compare/${slug}/`;
-const htmlSnippet = `<a href="${pageUrl}" target="_blank" rel="noopener"><img src="${embedUrl}" alt="${title} — aipedia.wiki" width="384" /></a>`;
-const markdownSnippet = `[![${title} — aipedia.wiki](${embedUrl})](${pageUrl})`;
+const htmlSnippet = `<a href="${pageUrl}" target="_blank" rel="noopener"><img src="${embedUrl}" alt="${title} · aipedia.wiki" width="384" /></a>`;
+const markdownSnippet = `[![${title} · aipedia.wiki](${embedUrl})](${pageUrl})`;
 ---
 
 <details class="not-prose mt-[var(--site-content-gap)] rounded-[var(--site-radius-card)] border border-[var(--border)] bg-[var(--bg-card)]">
