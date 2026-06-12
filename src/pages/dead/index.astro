@@ -2,9 +2,11 @@
 /**
  * /dead/ index — god-tier 10/10 mobile-first.
  *
- * Refresh metadata: 2026-06-07 dead archive index now merges the dedicated
- * dead collection with dead tool records after current OpenAI DALL-E
- * deprecation checks and ledger review.
+ * Refresh metadata: 2026-06-12 dead archive index reflects the June 12
+ * dead-archive cluster (8 dead pages) and dead-tool refresh, including the
+ * DALL-E 2/3 API removal (May 12) and Grok Code Fast 1 retirement (May 15)
+ * flipped to completed past-tense. Merges the dedicated dead collection with
+ * dead tool records.
  */
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
@@ -14,13 +16,13 @@ import BreadcrumbLD from '../../components/seo/BreadcrumbLD.astro';
 const allDead = await getCollection('dead');
 const allTools = await getCollection('tools');
 const deadTools = allTools.filter((t: any) => t.data.status === 'dead');
-const LAST_UPDATED_HUMAN = 'June 7, 2026';
+const LAST_UPDATED_HUMAN = 'June 12, 2026';
 const archivePageLd = {
   '@context': 'https://schema.org',
   '@type': 'CollectionPage',
   name: 'Dead AI Tools Archive',
   url: new URL('/dead/', Astro.site?.href ?? 'https://aipedia.wiki/').href,
-  dateModified: '2026-06-07',
+  dateModified: '2026-06-12',
   description:
     'Archive of discontinued, acquired, pivoted, retired, and dead AI tool records maintained for migration context.',
 };

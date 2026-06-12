@@ -17,7 +17,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-06 | /answers/ | Static page | Yes | git | src/pages/answers/index.astro |
 | 2026-06-06 | /disclosure/ | Static page | Yes | page metadata | src/pages/disclosure.astro |
 | 2026-06-06 | /sitemap-index.xml | Crawl surface | No | git | astro.config.mjs |
-| 2026-06-07 | /dead/ | Static page | Yes | page metadata | src/pages/dead/index.astro |
 | 2026-06-07 | /media-kit/ | Static page | Yes | git | src/pages/media-kit.astro |
 | 2026-06-07 | /reports/ | Static page | Yes | git | src/pages/reports/index.astro |
 | 2026-06-09 | /compare/ | Static page | Yes | git | src/pages/compare/index.astro |
@@ -743,7 +742,8 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-13 | /404/ | Static page | No | git | src/pages/404.astro |
 | 2026-06-13 | /about/editorial/ | Static page | Yes | git | src/pages/about/editorial.astro |
 | 2026-06-13 | /about/scoring/ | Static page | Yes | git | src/pages/about/scoring.astro |
-| 2026-06-13 | /companies/ | Static page | Yes | working tree | src/pages/companies/index.astro |
+| 2026-06-13 | /companies/ | Static page | Yes | git | src/pages/companies/index.astro |
+| 2026-06-13 | /dead/ | Static page | Yes | working tree | src/pages/dead/index.astro |
 | 2026-06-13 | /demo-godtier/ | Static page | Yes | git | src/pages/demo-godtier.astro |
 | 2026-06-13 | /glossary/ | Static page | Yes | git | src/pages/glossary/index.astro |
 | 2026-06-13 | /search/ | Static page | No | git | src/pages/search.astro |
