@@ -42,25 +42,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-07 | /dead/ | Static page | Yes | page metadata | src/pages/dead/index.astro |
 | 2026-06-07 | /media-kit/ | Static page | Yes | git | src/pages/media-kit.astro |
 | 2026-06-07 | /reports/ | Static page | Yes | git | src/pages/reports/index.astro |
-| 2026-06-09 | /categories/ai-music/ | Category | Yes | frontmatter | src/content/categories/ai-music.md |
 | 2026-06-09 | /compare/ | Static page | Yes | git | src/pages/compare/index.astro |
-| 2026-06-09 | /tools/reclaim-ai/ | Tool | Yes | frontmatter | src/content/tools/reclaim-ai.md |
-| 2026-06-09 | /tools/reflect/ | Tool | Yes | frontmatter | src/content/tools/reflect.md |
-| 2026-06-09 | /tools/reka/ | Tool | Yes | frontmatter | src/content/tools/reka.md |
-| 2026-06-09 | /tools/relevance-ai/ | Tool | Yes | frontmatter | src/content/tools/relevance-ai.md |
-| 2026-06-09 | /tools/replicate/ | Tool | Yes | frontmatter | src/content/tools/replicate.md |
-| 2026-06-09 | /tools/retell-ai/ | Tool | Yes | frontmatter | src/content/tools/retell-ai.md |
-| 2026-06-09 | /tools/riverside/ | Tool | Yes | frontmatter | src/content/tools/riverside.md |
-| 2026-06-09 | /tools/rork/ | Tool | Yes | frontmatter | src/content/tools/rork.md |
-| 2026-06-09 | /tools/sanebox/ | Tool | Yes | frontmatter | src/content/tools/sanebox.md |
-| 2026-06-09 | /tools/servicenow/ | Tool | Yes | frontmatter | src/content/tools/servicenow.md |
-| 2026-06-09 | /tools/spellbook/ | Tool | Yes | frontmatter | src/content/tools/spellbook.md |
-| 2026-06-09 | /tools/stable-audio/ | Tool | Yes | frontmatter | src/content/tools/stable-audio.md |
-| 2026-06-09 | /tools/tactiq/ | Tool | Yes | frontmatter | src/content/tools/tactiq.md |
-| 2026-06-09 | /tools/taskade/ | Tool | Yes | frontmatter | src/content/tools/taskade.md |
-| 2026-06-09 | /tools/tavus/ | Tool | Yes | frontmatter | src/content/tools/tavus.md |
-| 2026-06-09 | /tools/tines/ | Tool | Yes | frontmatter | src/content/tools/tines.md |
-| 2026-06-09 | /tools/together-ai/ | Tool | Yes | frontmatter | src/content/tools/together-ai.md |
 | 2026-06-10 | /categories/ai-chatbots/ | Category | Yes | frontmatter | src/content/categories/ai-chatbots.md |
 | 2026-06-10 | /categories/ai-coding/ | Category | Yes | frontmatter | src/content/categories/ai-coding.md |
 | 2026-06-10 | /categories/ai-design/ | Category | Yes | frontmatter | src/content/categories/ai-design.md |
@@ -143,6 +125,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-12 | /answers/is-midjourney-worth-it/ | Static page | Yes | page metadata | src/pages/answers/is-midjourney-worth-it.astro |
 | 2026-06-12 | /categories/ | Static page | Yes | git | src/pages/categories/index.astro |
 | 2026-06-12 | /categories/ai-automation/ | Category | Yes | frontmatter | src/content/categories/ai-automation.md |
+| 2026-06-12 | /categories/ai-music/ | Category | Yes | frontmatter | src/content/categories/ai-music.md |
 | 2026-06-12 | /categories/ai-presentation/ | Category | Yes | frontmatter | src/content/categories/ai-presentation.md |
 | 2026-06-12 | /categories/ai-seo/ | Category | Yes | frontmatter | src/content/categories/ai-seo.md |
 | 2026-06-12 | /companies/anthropic/ | Company | Yes | frontmatter | src/content/companies/anthropic.md |
@@ -712,18 +695,30 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-12 | /tools/qwen/ | Tool | Yes | frontmatter | src/content/tools/qwen.md |
 | 2026-06-12 | /tools/read-ai/ | Tool | Yes | frontmatter | src/content/tools/read-ai.md |
 | 2026-06-12 | /tools/readwise/ | Tool | Yes | frontmatter | src/content/tools/readwise.md |
+| 2026-06-12 | /tools/reclaim-ai/ | Tool | Yes | frontmatter | src/content/tools/reclaim-ai.md |
 | 2026-06-12 | /tools/recraft/ | Tool | Yes | frontmatter | src/content/tools/recraft.md |
+| 2026-06-12 | /tools/reflect/ | Tool | Yes | frontmatter | src/content/tools/reflect.md |
+| 2026-06-12 | /tools/reka/ | Tool | Yes | frontmatter | src/content/tools/reka.md |
+| 2026-06-12 | /tools/relevance-ai/ | Tool | Yes | frontmatter | src/content/tools/relevance-ai.md |
+| 2026-06-12 | /tools/replicate/ | Tool | Yes | frontmatter | src/content/tools/replicate.md |
 | 2026-06-12 | /tools/replit-agent/ | Tool | Yes | frontmatter | src/content/tools/replit-agent.md |
 | 2026-06-12 | /tools/resemble-ai/ | Tool | Yes | frontmatter | src/content/tools/resemble-ai.md |
+| 2026-06-12 | /tools/retell-ai/ | Tool | Yes | frontmatter | src/content/tools/retell-ai.md |
+| 2026-06-12 | /tools/riverside/ | Tool | Yes | frontmatter | src/content/tools/riverside.md |
 | 2026-06-12 | /tools/rodin/ | Tool | Yes | frontmatter | src/content/tools/rodin.md |
+| 2026-06-12 | /tools/rork/ | Tool | Yes | frontmatter | src/content/tools/rork.md |
 | 2026-06-12 | /tools/runway/ | Tool | Yes | frontmatter | src/content/tools/runway.md |
 | 2026-06-12 | /tools/rytr/ | Tool | Yes | frontmatter | src/content/tools/rytr.md |
 | 2026-06-12 | /tools/same-dev/ | Tool | Yes | frontmatter | src/content/tools/same-dev.md |
+| 2026-06-12 | /tools/sanebox/ | Tool | Yes | frontmatter | src/content/tools/sanebox.md |
 | 2026-06-12 | /tools/scite/ | Tool | Yes | frontmatter | src/content/tools/scite.md |
 | 2026-06-12 | /tools/seedance/ | Tool | Yes | frontmatter | src/content/tools/seedance.md |
 | 2026-06-12 | /tools/semantic-scholar/ | Tool | Yes | frontmatter | src/content/tools/semantic-scholar.md |
 | 2026-06-12 | /tools/semrush/ | Tool | Yes | frontmatter | src/content/tools/semrush.md |
+| 2026-06-12 | /tools/servicenow/ | Tool | Yes | frontmatter | src/content/tools/servicenow.md |
 | 2026-06-12 | /tools/speechify/ | Tool | Yes | frontmatter | src/content/tools/speechify.md |
+| 2026-06-12 | /tools/spellbook/ | Tool | Yes | frontmatter | src/content/tools/spellbook.md |
+| 2026-06-12 | /tools/stable-audio/ | Tool | Yes | frontmatter | src/content/tools/stable-audio.md |
 | 2026-06-12 | /tools/stable-diffusion/ | Tool | Yes | frontmatter | src/content/tools/stable-diffusion.md |
 | 2026-06-12 | /tools/sudowrite/ | Tool | Yes | frontmatter | src/content/tools/sudowrite.md |
 | 2026-06-12 | /tools/suno/ | Tool | Yes | frontmatter | src/content/tools/suno.md |
@@ -731,7 +726,12 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-12 | /tools/surfer-seo/ | Tool | Yes | frontmatter | src/content/tools/surfer-seo.md |
 | 2026-06-12 | /tools/synthesia/ | Tool | Yes | frontmatter | src/content/tools/synthesia.md |
 | 2026-06-12 | /tools/tabnine/ | Tool | Yes | frontmatter | src/content/tools/tabnine.md |
+| 2026-06-12 | /tools/tactiq/ | Tool | Yes | frontmatter | src/content/tools/tactiq.md |
+| 2026-06-12 | /tools/taskade/ | Tool | Yes | frontmatter | src/content/tools/taskade.md |
+| 2026-06-12 | /tools/tavus/ | Tool | Yes | frontmatter | src/content/tools/tavus.md |
 | 2026-06-12 | /tools/tidio/ | Tool | Yes | frontmatter | src/content/tools/tidio.md |
+| 2026-06-12 | /tools/tines/ | Tool | Yes | frontmatter | src/content/tools/tines.md |
+| 2026-06-12 | /tools/together-ai/ | Tool | Yes | frontmatter | src/content/tools/together-ai.md |
 | 2026-06-12 | /tools/trae/ | Tool | Yes | frontmatter | src/content/tools/trae.md |
 | 2026-06-12 | /tools/typeface/ | Tool | Yes | frontmatter | src/content/tools/typeface.md |
 | 2026-06-12 | /tools/udio/ | Tool | Yes | frontmatter | src/content/tools/udio.md |

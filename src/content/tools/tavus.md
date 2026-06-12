@@ -11,11 +11,11 @@ pricing_model: freemium
 price_range: "Developer: free, Starter $59/mo, Growth $397/mo, Enterprise custom, plus pay-as-you-go usage"
 status: active
 launched: 2021-02
-last_updated: 2026-06-09
-last_verified: 2026-06-09
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: weekly
 seo_title: "Tavus Review: CVI, Phoenix-4 & Pricing (June 2026)"
-meta_description: "Tavus review updated June 9, 2026. See CVI, Phoenix-4, Raven-1, Sparrow-1, Developer pricing, PALs caveat, overages, concurrency, and avatar-video alternatives."
+meta_description: "Tavus review updated June 12, 2026. See CVI, Phoenix-4, Raven-1, Sparrow-1, Developer pricing, PALs caveat, overages, concurrency, and avatar-video alternatives."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -34,7 +34,7 @@ facts:
     source: "https://www.tavus.io/cvi"
     source_label: "Tavus CVI product page"
     source_id: tavus-cvi
-    verified_at: 2026-06-09
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-07-09
@@ -43,7 +43,7 @@ facts:
     source: "https://docs.tavus.io/sections/conversational-video-interface/overview-cvi"
     source_label: "Tavus CVI docs"
     source_id: tavus-cvi-docs
-    verified_at: 2026-06-09
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-07-09
@@ -52,7 +52,7 @@ facts:
     source: "https://www.tavus.io/cvi"
     source_label: "Tavus CVI product page"
     source_id: tavus-cvi
-    verified_at: 2026-06-09
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-07-09
@@ -61,7 +61,7 @@ facts:
     source: "https://www.tavus.io/post/phoenix-4-real-time-human-rendering-with-emotional-intelligence"
     source_label: "Tavus Phoenix-4 announcement"
     source_id: tavus-phoenix-4
-    verified_at: 2026-06-09
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-07-09
@@ -70,7 +70,7 @@ facts:
     source: "https://www.tavus.io/pricing"
     source_label: "Tavus pricing"
     source_id: tavus-pricing
-    verified_at: 2026-06-09
+    verified_at: 2026-06-12
     next_review_at: 2026-07-09
     volatility: high
     confidence: high
@@ -79,7 +79,7 @@ facts:
     source: "https://www.tavus.io/pricing"
     source_label: "Tavus pricing"
     source_id: tavus-pricing
-    verified_at: 2026-06-09
+    verified_at: 2026-06-12
     next_review_at: 2026-07-09
     volatility: high
     confidence: high
@@ -95,7 +95,7 @@ not_best_for:
   - cinematic text-to-video generation
   - low-budget workflows that do not need real-time interaction
 quick_answer: >-
-  Tavus is the avatar-video pick when the product requirement is real-time conversation, not a rendered presenter clip. As of June 9, 2026, its developer stack is CVI with Phoenix-4 rendering, Raven-1 perception, and Sparrow-1 turn-taking. Use it for embedded AI video agents; use HeyGen or Synthesia for scripted business videos, and use Veo, Seedance, Kling, Runway, or Vidu for cinematic scene generation.
+  Tavus is the avatar-video pick when the product requirement is real-time conversation, not a rendered presenter clip. As of June 12, 2026, its developer stack is CVI with Phoenix-4 rendering, Raven-1 perception, and Sparrow-1 turn-taking. Use it for embedded AI video agents; use HeyGen or Synthesia for scripted business videos, and use Veo, Seedance, Kling, Runway, or Vidu for cinematic scene generation.
 price_history:
   - date: 2026-05-13
     plan: "Basic"
@@ -234,7 +234,7 @@ The June 9 refresh of the public pricing page shows Growth at 10 concurrent stre
 
 ## Methodology
 
-This page was refreshed on 2026-06-09 against Tavus's current pricing page, CVI product page, CVI documentation, and Phoenix-4 announcement. AiPedia treats vendor model claims as primary-source facts and the buying recommendation as editorial analysis.
+This page was refreshed on 2026-06-12 against Tavus's current pricing page, CVI product page, CVI documentation, and Phoenix-4 announcement. AiPedia treats vendor model claims as primary-source facts and the buying recommendation as editorial analysis.
 
 Scores follow the four-dimension rubric at [/about/scoring/](/about/scoring/): utility, value, moat, and longevity.
 
@@ -259,7 +259,7 @@ Only for real-time video agents. For scripted business video, HeyGen and Synthes
 Yes, Tavus includes AI video generation minutes, but its strategic value is live conversational video. If the main need is cinematic footage, start with Veo, Seedance, Kling, Runway, Vidu, or Wan.
 
 **How fresh is the pricing?**
-Pricing and plan details were verified on 2026-06-09. Because Tavus uses subscription plus pay-as-you-go usage, production buyers should verify overages, concurrency (Growth is currently listed at 10 streams), SLAs, and enterprise terms before committing.
+Pricing and plan details were verified on 2026-06-12. Because Tavus uses subscription plus pay-as-you-go usage, production buyers should verify overages, concurrency (Growth is currently listed at 10 streams), SLAs, and enterprise terms before committing.
 
 ## Sources
 

@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$40/user/month; annual discounts"
 status: active
 launched: 2020-08
-last_updated: 2026-06-09
-last_verified: 2026-06-09
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: "https://tactiq.io"
     source_label: "Tactiq official"
     source_id: tactiq-official
-    verified_at: 2026-06-09
+    verified_at: 2026-06-12
     volatility: medium
     confidence: medium
   pricing_anchor:
@@ -39,7 +39,7 @@ facts:
     source: "https://tactiq.io/buy"
     source_label: "Tactiq pricing"
     source_id: tactiq-pricing
-    verified_at: 2026-06-09
+    verified_at: 2026-06-12
     next_review_at: 2026-09-09
     volatility: high
     confidence: medium
@@ -48,7 +48,7 @@ facts:
     source: "https://tactiq.io/buy"
     source_label: "Tactiq pricing"
     source_id: tactiq-pricing
-    verified_at: 2026-06-09
+    verified_at: 2026-06-12
     next_review_at: 2026-09-09
     volatility: high
     confidence: medium
@@ -148,7 +148,7 @@ The June 9, 2026 recheck also confirms Tactiq's MCP direction: the Business pric
 | **Pricing (annual)** | Free, Pro $8, Team $16.67, Business $29.17, Enterprise custom |
 | **Adoption signals claimed** | 1m+ weekly meetings, 1,000,000+ Chrome extension users, 4.8 rating from 3,000+ Chrome Web Store reviews |
 
-Every data point above was verified against vendor pages on 2026-06-09. See Sources.
+Every data point above was verified against vendor pages on 2026-06-12. See Sources.
 
 ## What it actually is
 
@@ -187,7 +187,7 @@ Subscription pricing via [tactiq.io/buy](https://tactiq.io/buy). Annual billing 
 | Business | $40/user | $29.17/user | Unlimited | Unlimited | 20-200 | SAML SSO, MCP beta, Claude Connector beta, advanced retention |
 | Enterprise | Custom | Custom | Unlimited | Unlimited | 200+ | DPA, customizable SSO, CSM |
 
-*Prices verified 2026-06-09 via [tactiq.io/buy](https://tactiq.io/buy). Free tier has no credit card requirement.*
+*Prices verified 2026-06-12 via [tactiq.io/buy](https://tactiq.io/buy). Free tier has no credit card requirement.*
 
 ## Against the alternatives
 
@@ -215,7 +215,7 @@ Subscription pricing via [tactiq.io/buy](https://tactiq.io/buy). Annual billing 
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-09 against [tactiq.io/buy](https://tactiq.io/buy), [tactiq.io](https://tactiq.io), [Tactiq MCP](https://tactiq.io/mcp), and Tactiq's Trust Center help page.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against [tactiq.io/buy](https://tactiq.io/buy), [tactiq.io](https://tactiq.io), [Tactiq MCP](https://tactiq.io/mcp), and Tactiq's Trust Center help page.
 
 ## FAQ
 

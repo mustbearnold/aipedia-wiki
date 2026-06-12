@@ -3785,6 +3785,7 @@ Each date-cluster: all eligible pages June 12-dated, historical/affiliate/news c
 - 2026-06-12: June 7 cluster (15 guides, 6 answer pages, 2 tools, 1 report; dead-index/media-kit/reports-index skipped): main script changed 24/24 files. Surfaced two phrasings the keyword set missed - capital "As of June N, 2026" guide intros and answer-page "checked against ... on June N, 2026" footers - fixed via targeted pass (15 files), plus julius "reverified" and a pipeline-pass log line. Note: earlier June 1-6 batches likely share these missed patterns; a global cleanup sweep follows. Links clean, guide-picks clean, 33/33 tests, 1104 pages built.
 - 2026-06-12: Upgraded .refresh-tmp.py with a broader case-insensitive keyword set (as of / updated / reviewed / refreshed / reverified / re-checked / checked / verifiedLabel) plus external-dated-URL protection; re-ran over the 516 committed June 1-7 files and fixed 69 with As-of/Updated/footer leftovers (no historical events over-bumped). Committed as a cleanup.
 - 2026-06-12: June 8 cluster (32 tools, 10 comparisons, 1 category, 1 guide): upgraded script changed 44/44 files clean in one pass, no residuals. Links clean, guide-picks clean, 33/33 tests, 1104 pages built.
+- 2026-06-12: June 9 cluster (17 tools, 1 category; compare-index skipped): script changed 18/18 files clean, no residuals. Links clean, 33/33 tests, 1104 pages built.
 
 ### 15. Final report
 

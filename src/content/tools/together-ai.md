@@ -11,8 +11,8 @@ pricing_model: paid
 price_range: Serverless tokens; dedicated H100 $6.49/hr, H200 contact sales, B200 $11.95/hr; GPU clusters H100 $5.49/hr, H200 $6.79/hr, B200 $9.95/hr; sandbox $0.03/session
 status: active
 launched: 2022
-last_updated: 2026-06-09
-last_verified: 2026-06-09
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: "https://www.together.ai/pricing"
     source_label: "Together AI pricing"
     source_id: together-ai-pricing
-    verified_at: 2026-06-09
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -39,7 +39,7 @@ facts:
     source: "https://www.together.ai/pricing"
     source_label: "Together AI pricing"
     source_id: together-ai-pricing
-    verified_at: 2026-06-09
+    verified_at: 2026-06-12
     next_review_at: 2026-07-09
     volatility: high
     confidence: high
@@ -48,7 +48,7 @@ facts:
     source: "https://www.together.ai/pricing"
     source_label: "Together AI pricing"
     source_id: together-ai-pricing
-    verified_at: 2026-06-09
+    verified_at: 2026-06-12
     next_review_at: 2026-07-09
     volatility: high
     confidence: high
@@ -118,7 +118,7 @@ It overlaps with [Fireworks AI](/tools/fireworks-ai/), [Groq](/tools/groq/), [Fa
 
 ## Pricing
 
-Together AI pricing is usage-based across five dimensions. Verified 2026-06-09 against [together.ai/pricing](https://www.together.ai/pricing):
+Together AI pricing is usage-based across five dimensions. Verified 2026-06-12 against [together.ai/pricing](https://www.together.ai/pricing):
 
 - **Serverless inference (per 1M tokens):** Kimi K2.6 $1.20 in / $4.50 out · Qwen3.6-Plus $0.50 / $3.00 · Qwen3 235B throughput $0.20 / $0.60 · Llama 3.3 70B $1.04 / $1.04 · gpt-oss-20B $0.05 / $0.20 · Gemma 3n E4B $0.06 / $0.12. Image: FLUX.2 [pro] $0.03/image, Nano Banana Pro $0.134/image, Imagen 4.0 Ultra $0.06/image. Audio: Whisper Large v3 $0.0015/audio minute. Embeddings: Multilingual e5 large at $0.02/MTok.
 - **Dedicated inference (single-tenant, hourly):** H100 80GB $6.49 · H200 140GB contact sales · HGX B200 180GB $11.95.
@@ -168,7 +168,7 @@ The best Together AI deployment usually starts with a benchmark matrix. Compare 
 
 ## Methodology
 
-Last verified 2026-06-09 against [together.ai/pricing](https://www.together.ai/pricing) and product documentation. Scoring emphasizes breadth of infrastructure, production value, open-model leverage, and complexity of adoption.
+Last verified 2026-06-12 against [together.ai/pricing](https://www.together.ai/pricing) and product documentation. Scoring emphasizes breadth of infrastructure, production value, open-model leverage, and complexity of adoption.
 
 ## FAQ
 

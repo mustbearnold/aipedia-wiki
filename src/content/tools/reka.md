@@ -11,8 +11,8 @@ pricing_model: paid
 price_range: "$0.10-$6/MTok for Chat API; Research $25-$60/1k requests"
 status: active
 launched: 2022
-last_updated: 2026-06-09
-last_verified: 2026-06-09
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: quarterly
 seo_title: "Reka AI Review: Edge 2, Pricing & Physical AI (June 2026)"
 meta_description: "Reka now centers Edge 2, physical AI, Vision, Infer, and Chat API pricing. Edge is $0.10/$0.10 per MTok, BSL 1.1 weights are available, and Core remains $2/$6 per MTok."
@@ -34,7 +34,7 @@ facts:
     source: "https://reka.ai/"
     source_label: "Reka homepage"
     source_id: reka-homepage
-    verified_at: 2026-06-09
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -42,7 +42,7 @@ facts:
     source: "https://docs.reka.ai/pricing"
     source_label: "Reka API pricing"
     source_id: reka-pricing
-    verified_at: 2026-06-09
+    verified_at: 2026-06-12
     next_review_at: 2026-09-09
     volatility: medium
     confidence: high
@@ -51,7 +51,7 @@ facts:
     source: "https://reka.ai/reka-edge"
     source_label: "Reka Edge product page"
     source_id: reka-edge-product
-    verified_at: 2026-06-09
+    verified_at: 2026-06-12
     next_review_at: 2026-09-09
     volatility: medium
     confidence: high
@@ -171,7 +171,7 @@ Research pricing:
 
 Dedicated on-prem deployments and Spark licensing price through direct contact with Reka sales.
 
-Prices verified 2026-06-09 via [docs.reka.ai/pricing](https://docs.reka.ai/pricing), the [Reka Edge product page](https://reka.ai/reka-edge), and the [Reka Edge launch announcement](https://reka.ai/news/reka-edge-frontier-level-edge-intelligence-for-physical-ai).
+Prices verified 2026-06-12 via [docs.reka.ai/pricing](https://docs.reka.ai/pricing), the [Reka Edge product page](https://reka.ai/reka-edge), and the [Reka Edge launch announcement](https://reka.ai/news/reka-edge-frontier-level-edge-intelligence-for-physical-ai).
 
 **No free tier is documented.** Reka runs pay-as-you-go with no upfront commitment. Usage is billed after consumption.
 
@@ -200,7 +200,7 @@ Prices verified 2026-06-09 via [docs.reka.ai/pricing](https://docs.reka.ai/prici
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-09 against [docs.reka.ai/pricing](https://docs.reka.ai/pricing), the [Reka models docs](https://docs.reka.ai/chat/models), the [Reka Edge product page](https://reka.ai/reka-edge), the [Reka Edge launch announcement](https://reka.ai/news/reka-edge-frontier-level-edge-intelligence-for-physical-ai), and the [Reka homepage](https://reka.ai/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-12 against [docs.reka.ai/pricing](https://docs.reka.ai/pricing), the [Reka models docs](https://docs.reka.ai/chat/models), the [Reka Edge product page](https://reka.ai/reka-edge), the [Reka Edge launch announcement](https://reka.ai/news/reka-edge-frontier-level-edge-intelligence-for-physical-ai), and the [Reka homepage](https://reka.ai/).
 
 ## FAQ
 

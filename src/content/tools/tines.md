@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$500+/month + custom"
 status: active
 launched: 2018
-last_updated: 2026-06-09
-last_verified: 2026-06-09
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: quarterly
 seo_title: "Tines: Pricing, Features & Review (June 2026)"
 meta_description: "Tines is security-first workflow automation for IT and SOC teams. Community is free; Starter starts at $500/mo; Business and Enterprise are custom. AI Agent usage depends on credits and package terms."
@@ -34,7 +34,7 @@ facts:
     source: "https://www.tines.com/platform/ai/"
     source_label: "Tines AI"
     source_id: tines-ai
-    verified_at: 2026-06-09
+    verified_at: 2026-06-12
     volatility: medium
     confidence: medium
   pricing_anchor:
@@ -42,7 +42,7 @@ facts:
     source: "https://explained.tines.com/en/articles/9620399-understanding-tines-pricing-and-packaging"
     source_label: "Tines pricing explainer"
     source_id: tines-pricing-explainer
-    verified_at: 2026-06-09
+    verified_at: 2026-06-12
     next_review_at: 2026-07-09
     volatility: high
     confidence: medium
@@ -51,7 +51,7 @@ facts:
     source: "https://explained.tines.com/en/articles/9620399-understanding-tines-pricing-and-packaging"
     source_label: "Tines pricing explainer"
     source_id: tines-pricing-explainer
-    verified_at: 2026-06-09
+    verified_at: 2026-06-12
     next_review_at: 2026-07-09
     volatility: high
     confidence: medium
@@ -160,7 +160,7 @@ As of June 2026, Tines' AI stack spans Workbench, the AI Agent action, Story cop
 | **Funding** | $272M total, $125M Series C Feb 2025, $1.125B valuation |
 | **Investors** | Growth Equity at Goldman Sachs, SoftBank, Activant, Accel, Felicis, CrowdStrike, Addition |
 
-Every data point above was verified against vendor or company-source pages on 2026-06-09. See Sources.
+Every data point above was verified against vendor or company-source pages on 2026-06-12. See Sources.
 
 ## What it actually is
 
@@ -200,7 +200,7 @@ All tiers include unlimited parallel workflow runs. Tines' pricing explainer say
 
 Published list pricing for Business and Enterprise is not posted. Treat any third-party quote ranges as directional only until Tines returns an order form.
 
-Prices verified 2026-06-09 via [tines.com/pricing](https://www.tines.com/pricing/), the [Tines pricing explainer](https://explained.tines.com/en/articles/9620399-understanding-tines-pricing-and-packaging), and the [Tines AI Agents intro](https://explained.tines.com/en/articles/11571096-introduction-to-ai-agents).
+Prices verified 2026-06-12 via [tines.com/pricing](https://www.tines.com/pricing/), the [Tines pricing explainer](https://explained.tines.com/en/articles/9620399-understanding-tines-pricing-and-packaging), and the [Tines AI Agents intro](https://explained.tines.com/en/articles/11571096-introduction-to-ai-agents).
 
 ## Against the alternatives
 
@@ -227,7 +227,7 @@ Prices verified 2026-06-09 via [tines.com/pricing](https://www.tines.com/pricing
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-09 against [tines.com/pricing](https://www.tines.com/pricing/), the [Tines pricing explainer](https://explained.tines.com/en/articles/9620399-understanding-tines-pricing-and-packaging), the [Tines AI Agents intro](https://explained.tines.com/en/articles/11571096-introduction-to-ai-agents), [AI in Tines](https://www.tines.com/platform/ai/), and [Tines security](https://www.tines.com/security/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-12 against [tines.com/pricing](https://www.tines.com/pricing/), the [Tines pricing explainer](https://explained.tines.com/en/articles/9620399-understanding-tines-pricing-and-packaging), the [Tines AI Agents intro](https://explained.tines.com/en/articles/11571096-introduction-to-ai-agents), [AI in Tines](https://www.tines.com/platform/ai/), and [Tines security](https://www.tines.com/security/).
 
 ## FAQ
 

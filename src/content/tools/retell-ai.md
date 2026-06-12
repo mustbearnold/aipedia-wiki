@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0.07-$0.31/min voice; $0.002+/message chat; Enterprise custom"
 status: active
 launched: 2023
-last_updated: 2026-06-09
-last_verified: 2026-06-09
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 seo_title: "Retell AI: Features, Pricing & Review (June 2026)"
 meta_description: "Retell AI is a pay-as-you-go AI voice agent platform. It offers $10 free credits, $0.07-$0.31/min AI voice agents, $0.002+/message AI chat agents, component add-ons, 20 included concurrent calls, and Enterprise custom pricing."
@@ -34,14 +34,14 @@ facts:
     source: "https://www.retellai.com/pricing"
     source_label: "Retell AI pricing"
     source_id: retell-ai-best-for
-    verified_at: 2026-06-09
+    verified_at: 2026-06-12
     confidence: high
   best_paid_tier:
     value: "Pay-as-you-go for builders; Enterprise for high concurrency, role-based access control, SSO, MSA/DPA/BAA terms, dedicated stable server, and dedicated support. Pay-as-you-go includes 20 concurrent calls; extra active-call capacity is listed at $8 per concurrency per month."
     source: "https://www.retellai.com/pricing"
     source_label: "Retell AI pricing"
     source_id: retell-ai-best-for
-    verified_at: 2026-06-09
+    verified_at: 2026-06-12
     next_review_at: 2026-07-09
     confidence: high
   best_for:
@@ -49,7 +49,7 @@ facts:
     source: "https://www.retellai.com/pricing"
     source_label: "Retell AI pricing"
     source_id: retell-ai-best-for
-    verified_at: 2026-06-09
+    verified_at: 2026-06-12
     confidence: high
 tags: [ai-voice, voice-agent, phone-agent, call-automation, customer-support, sales, telephony, webhooks, api]
 best_for:
@@ -188,7 +188,7 @@ Retell's docs also show a knowledge-base layer for website URLs, uploaded docume
 
 ## Pricing
 
-Retell pricing was verified from the official pricing page on 2026-06-09:
+Retell pricing was verified from the official pricing page on 2026-06-12:
 
 | Plan | Price | Practical meaning |
 |---|---:|---|
@@ -222,7 +222,7 @@ Retell also lists $10 in free credits and 20 included concurrent calls on pay-as
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-09 against Retell AI primary pricing, documentation, knowledge-base, batch-call, and API-deprecation information.
+This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against Retell AI primary pricing, documentation, knowledge-base, batch-call, and API-deprecation information.
 
 ## FAQ
 

@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$200+/month"
 status: active
 launched: 2025
-last_updated: 2026-06-09
-last_verified: 2026-06-09
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 seo_title: "Rork: Features, Pricing & Review (June 2026)"
 meta_description: "Rork builds apps from prompts. Free supports public web apps with 5 daily credits, Rork Pro starts at $20/mo for Android and Expo/React Native, and Rork Max starts at $200/mo for SwiftUI iOS and Apple-device apps."
@@ -34,14 +34,14 @@ facts:
     source: "https://docs.rork.com/"
     source_label: "Rork docs"
     source_id: rork-coding-agent
-    verified_at: 2026-06-09
+    verified_at: 2026-06-12
     confidence: high
   best_paid_tier:
     value: "Rork Pro from $20/month for most cross-platform/mobile prototypes; Rork Max from $200/month when native SwiftUI iOS, iPad, Apple Watch, Vision Pro, widgets, or native-game work justifies the cost"
     source: "https://docs.rork.com/introduction/subscriptions"
     source_label: "Rork subscription docs"
     source_id: rork-best-paid-tier
-    verified_at: 2026-06-09
+    verified_at: 2026-06-12
     next_review_at: 2026-07-09
     confidence: high
   best_for:
@@ -49,7 +49,7 @@ facts:
     source: "https://docs.rork.com/faq/technical"
     source_label: "Rork technical FAQ"
     source_id: rork-best-for
-    verified_at: 2026-06-09
+    verified_at: 2026-06-12
     confidence: high
 tags: [mobile-app-builder, ai-design, ai-coding, react-native, expo, swift, app-store, play-store, github]
 best_for:
@@ -159,7 +159,7 @@ The big distinction is Rork Pro vs Rork Max. Rork Pro is the pragmatic app-build
 
 ## Pricing
 
-Pricing verified on 2026-06-09 via [Rork subscription docs](https://docs.rork.com/introduction/subscriptions):
+Pricing verified on 2026-06-12 via [Rork subscription docs](https://docs.rork.com/introduction/subscriptions):
 
 | Plan | Price | Monthly credits | Notes |
 |---|---:|---:|---|
@@ -198,7 +198,7 @@ One pricing caveat: the public subscription docs list Rork's own subscription cr
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-09 against Rork primary subscription, technical, GitHub sync, API/backend, testing, monetization, and store-publishing documentation.
+This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against Rork primary subscription, technical, GitHub sync, API/backend, testing, monetization, and store-publishing documentation.
 
 ## FAQ
 

@@ -11,8 +11,8 @@ pricing_model: enterprise
 price_range: Custom enterprise pricing
 status: active
 launched: 2004
-last_updated: 2026-06-09
-last_verified: 2026-06-09
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: "https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-turns-enterprise-AI-chaos-into-control-with-the-platform-for-governed-autonomous-work/default.aspx"
     source_label: "ServiceNow press release (Knowledge 2026)"
     source_id: servicenow-governed-autonomous-work-2026
-    verified_at: 2026-06-09
+    verified_at: 2026-06-12
     volatility: medium
     confidence: medium
     next_review_at: 2026-08-31
@@ -40,7 +40,7 @@ facts:
     source: "https://www.servicenow.com/products.html"
     source_label: "ServiceNow products"
     source_id: servicenow-products
-    verified_at: 2026-06-09
+    verified_at: 2026-06-12
     volatility: high
     confidence: medium
     next_review_at: 2026-08-31
@@ -49,7 +49,7 @@ facts:
     source: "https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-expands-AI-Control-Tower-to-discover-observe-govern-secure-and-measure-AI-deployed-across-any-system-in-the-enterprise/default.aspx"
     source_label: "ServiceNow AI Control Tower expansion"
     source_id: servicenow-ai-control-tower-2026
-    verified_at: 2026-06-09
+    verified_at: 2026-06-12
     volatility: high
     confidence: medium
     next_review_at: 2026-08-31
@@ -58,7 +58,7 @@ facts:
     source: "https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-Otto-creates-the-unified-AI-experience-for-the-enterprise/default.aspx"
     source_label: "ServiceNow Otto press release"
     source_id: servicenow-otto-2026
-    verified_at: 2026-06-09
+    verified_at: 2026-06-12
     volatility: high
     confidence: medium
     next_review_at: 2026-08-31
@@ -67,7 +67,7 @@ facts:
     source: "/news/2026-05-05-servicenow-action-fabric-ai-agent-system/"
     source_label: "ServiceNow Action Fabric coverage"
     source_id: servicenow-action-fabric-2026
-    verified_at: 2026-06-09
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-08-13
@@ -76,7 +76,7 @@ facts:
     source: "/news/2026-05-06-servicenow-build-agent-coding-tools/"
     source_label: "ServiceNow Build Agent coverage"
     source_id: servicenow-build-agent-2026
-    verified_at: 2026-06-09
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-08-13
@@ -85,7 +85,7 @@ facts:
     source: "/news/2026-05-06-servicenow-aws-agentcore-kiro-integration/"
     source_label: "ServiceNow + AWS AgentCore + Kiro coverage"
     source_id: servicenow-aws-kiro-2026
-    verified_at: 2026-06-09
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-08-13
@@ -94,7 +94,7 @@ facts:
     source: "/news/2026-05-06-servicenow-real-time-data-foundation/"
     source_label: "ServiceNow real-time data foundation coverage"
     source_id: servicenow-data-foundation-2026
-    verified_at: 2026-06-09
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-08-13
@@ -208,7 +208,7 @@ The best early candidates are workflows where ServiceNow already owns the proces
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-09 against ServiceNow's AI Control Tower expansion, Otto launch, product catalog, [Action Fabric coverage](/news/2026-05-05-servicenow-action-fabric-ai-agent-system/), [Build Agent in coding tools coverage](/news/2026-05-06-servicenow-build-agent-coding-tools/), [AWS AgentCore + Kiro integration coverage](/news/2026-05-06-servicenow-aws-agentcore-kiro-integration/), and [real-time data foundation coverage](/news/2026-05-06-servicenow-real-time-data-foundation/).
+This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against ServiceNow's AI Control Tower expansion, Otto launch, product catalog, [Action Fabric coverage](/news/2026-05-05-servicenow-action-fabric-ai-agent-system/), [Build Agent in coding tools coverage](/news/2026-05-06-servicenow-build-agent-coding-tools/), [AWS AgentCore + Kiro integration coverage](/news/2026-05-06-servicenow-aws-agentcore-kiro-integration/), and [real-time data foundation coverage](/news/2026-05-06-servicenow-real-time-data-foundation/).
 
 ## Sources
 

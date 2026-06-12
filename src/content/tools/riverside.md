@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$79/month annually · custom Business"
 status: active
 launched: 2020-01
-last_updated: 2026-06-09
-last_verified: 2026-06-09
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: "https://riverside.com/pricing"
     source_label: "Source"
     source_id: riverside-pricing
-    verified_at: 2026-06-09
+    verified_at: 2026-06-12
     volatility: medium
     confidence: medium
   pricing_anchor:
@@ -39,7 +39,7 @@ facts:
     source: "https://riverside.com/pricing"
     source_label: "Source"
     source_id: riverside-pricing
-    verified_at: 2026-06-09
+    verified_at: 2026-06-12
     next_review_at: 2026-09-09
     volatility: high
     confidence: medium
@@ -48,7 +48,7 @@ facts:
     source: "https://riverside.com/pricing"
     source_label: "Source"
     source_id: riverside-pricing
-    verified_at: 2026-06-09
+    verified_at: 2026-06-12
     next_review_at: 2026-09-09
     volatility: high
     confidence: medium
@@ -129,7 +129,7 @@ Founded in 2020 by Gideon and Nadav Keyson, Riverside has grown from remote podc
 | **Pricing tiers** | Free · Pro $24/mo annual · Live $34/mo annual · Webinar $79/mo annual · Business custom |
 | **Monthly pricing** | Annual plans show up to 20% discount versus monthly billing |
 
-Every data point verified 2026-06-09 via [Riverside pricing](https://riverside.com/pricing), Riverside Help Center recording docs, and Riverside AI tools docs. Note: riverside.fm now 301-redirects to riverside.com as the canonical domain.
+Every data point verified 2026-06-12 via [Riverside pricing](https://riverside.com/pricing), Riverside Help Center recording docs, and Riverside AI tools docs. Note: riverside.fm now 301-redirects to riverside.com as the canonical domain.
 
 ## What it actually is
 
@@ -163,7 +163,7 @@ Added capabilities layered on top:
 
 ## Pricing
 
-Subscription pricing via [riverside.com/pricing](https://riverside.com/pricing). Riverside shows annual plans with up to 20% off versus monthly billing. Monthly rates (verified 2026-06-09): Pro $29, Live $39, Webinar $99. Annual monthly rates remain Pro $24, Live $34, and Webinar $79, but verify the final annual billed total at checkout because one rendered pricing-page line appears to duplicate Live's billed amount inside the Webinar card.
+Subscription pricing via [riverside.com/pricing](https://riverside.com/pricing). Riverside shows annual plans with up to 20% off versus monthly billing. Monthly rates (verified 2026-06-12): Pro $29, Live $39, Webinar $99. Annual monthly rates remain Pro $24, Live $34, and Webinar $79, but verify the final annual billed total at checkout because one rendered pricing-page line appears to duplicate Live's billed amount inside the Webinar card.
 
 | Plan | Annual monthly rate | Recording cap | Key features | Who's it for |
 |---|---|---|---|---|
@@ -173,7 +173,7 @@ Subscription pricing via [riverside.com/pricing](https://riverside.com/pricing).
 | Webinar | $79/mo | Unlimited separate-track recording shown in compare table | Webinar registration, up to 100 registrants, analytics, HubSpot sync | Webinars and events |
 | Business | Custom | Unlimited multi-track recording | API access, custom roles, SSO, ISO 27001/SOC 2 language, priority support | Teams, agencies, enterprises |
 
-*Prices verified 2026-06-09 via [Riverside pricing](https://riverside.com/pricing).*
+*Prices verified 2026-06-12 via [Riverside pricing](https://riverside.com/pricing).*
 
 ## Against the alternatives
 
@@ -197,7 +197,7 @@ Subscription pricing via [riverside.com/pricing](https://riverside.com/pricing).
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-09 against Riverside pricing, Help Center recording docs, and Riverside AI tools docs.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against Riverside pricing, Help Center recording docs, and Riverside AI tools docs.
 
 ## FAQ
 

@@ -11,11 +11,11 @@ pricing_model: paid
 price_range: "Custom quote; 7-day free trial"
 status: active
 launched: 2022-06
-last_updated: 2026-06-09
-last_verified: 2026-06-09
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: quarterly
 seo_title: "Spellbook Review: Legal AI in Word, Pricing & Security (June 2026)"
-meta_description: "Spellbook review refreshed June 9, 2026: legal AI for Microsoft Word, Associate multi-document workflows, custom per-team pricing, 7-day trial, ZDR, SOC 2 Type II, and Claude for Legal context."
+meta_description: "Spellbook review refreshed June 12, 2026: legal AI for Microsoft Word, Associate multi-document workflows, custom per-team pricing, 7-day trial, ZDR, SOC 2 Type II, and Claude for Legal context."
 author: "aipedia.wiki Editorial"
 best_plan: "Start with the 7-day trial; request a custom quote before any team rollout."
 affiliate:
@@ -35,7 +35,7 @@ facts:
     source: "https://spellbook.com/pricing"
     source_label: "Spellbook pricing"
     source_id: spellbook-official
-    verified_at: 2026-06-09
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -43,7 +43,7 @@ facts:
     source: "https://spellbook.com/pricing"
     source_label: "Spellbook pricing"
     source_id: spellbook-pricing
-    verified_at: 2026-06-09
+    verified_at: 2026-06-12
     next_review_at: 2026-09-09
     volatility: high
     confidence: high
@@ -52,7 +52,7 @@ facts:
     source: "https://spellbook.com/pricing"
     source_label: "Spellbook pricing"
     source_id: spellbook-pricing
-    verified_at: 2026-06-09
+    verified_at: 2026-06-12
     next_review_at: 2026-09-09
     volatility: high
     confidence: high
@@ -163,7 +163,7 @@ The official path is a trial or demo request via [spellbook.com/pricing](https:/
 
 The Spellbook Suite includes: Word add-in with Review, Draft, Ask, Benchmarks, and Playbooks. Associate (the multi-document agent) is included. Group or team training sessions are included. Dedicated support applies to teams over 10 users.
 
-Prices verified 2026-06-09 via [Spellbook pricing](https://spellbook.com/pricing). Fixed per-seat numbers are not publicly disclosed by Spellbook directly.
+Prices verified 2026-06-12 via [Spellbook pricing](https://spellbook.com/pricing). Fixed per-seat numbers are not publicly disclosed by Spellbook directly.
 
 ## Against the alternatives
 
@@ -192,7 +192,7 @@ Prices verified 2026-06-09 via [Spellbook pricing](https://spellbook.com/pricing
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-09 against Spellbook pricing, security, Associate help, legal AI in Word, State of Contracts, and Series B pages, with cross-reference to the May 12, 2026 [Anthropic Claude for Legal launch](/news/2026-05-12-anthropic-claude-for-legal-plugins-microsoft-365/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against Spellbook pricing, security, Associate help, legal AI in Word, State of Contracts, and Series B pages, with cross-reference to the May 12, 2026 [Anthropic Claude for Legal launch](/news/2026-05-12-anthropic-claude-for-legal-plugins-microsoft-365/).
 
 ## FAQ
 

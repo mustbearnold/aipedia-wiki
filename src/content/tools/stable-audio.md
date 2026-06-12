@@ -10,11 +10,11 @@ pricing_model: freemium
 price_range: "Open weights + hosted/API/enterprise"
 status: active
 launched: 2023-09
-last_updated: 2026-06-09
-last_verified: 2026-06-09
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 seo_title: "Stable Audio Review: Stable Audio 3.0, Pricing & License (June 2026)"
-meta_description: "Stable Audio review refreshed June 9, 2026: Stable Audio 3.0 open weights, Small/Medium/Large model family, six-minute generation, Community vs Enterprise licensing, API access, and hosted-pricing caveats."
+meta_description: "Stable Audio review refreshed June 12, 2026: Stable Audio 3.0 open weights, Small/Medium/Large model family, six-minute generation, Community vs Enterprise licensing, API access, and hosted-pricing caveats."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -33,7 +33,7 @@ facts:
     source: "https://stability.ai/news-updates/meet-stable-audio-3-the-model-family-built-for-artistic-experimentation-with-open-weight-models"
     source_label: "Stable Audio 3.0 launch"
     source_id: stable-audio-3-launch
-    verified_at: 2026-06-09
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -41,7 +41,7 @@ facts:
     source: "https://stability.ai/news-updates/meet-stable-audio-3-the-model-family-built-for-artistic-experimentation-with-open-weight-models"
     source_label: "Stable Audio 3.0 launch"
     source_id: stable-audio-3-launch
-    verified_at: 2026-06-09
+    verified_at: 2026-06-12
     next_review_at: 2026-09-09
     volatility: high
     confidence: high
@@ -50,7 +50,7 @@ facts:
     source: "https://stability.ai/news-updates/meet-stable-audio-3-the-model-family-built-for-artistic-experimentation-with-open-weight-models"
     source_label: "Stable Audio 3.0 launch"
     source_id: stable-audio-3-launch
-    verified_at: 2026-06-09
+    verified_at: 2026-06-12
     next_review_at: 2026-09-09
     volatility: high
     confidence: high
@@ -100,9 +100,9 @@ price_history:
 
 # Stable Audio
 
-Stable Audio is Stability AI's music and sound generation product. **Stable Audio 3.0** is the current flagship family as of June 9, 2026, and Stability positions it for licensed-data audio generation, open-weight experimentation, API access, sound effects, brand audio, full music composition, and enterprise deployment.
+Stable Audio is Stability AI's music and sound generation product. **Stable Audio 3.0** is the current flagship family as of June 12, 2026, and Stability positions it for licensed-data audio generation, open-weight experimentation, API access, sound effects, brand audio, full music composition, and enterprise deployment.
 
-Verified June 9, 2026 against Stability AI's Stable Audio 3.0 release, StableAudio.com pricing, Stability AI platform/API surfaces, and Stability AI licensing context.
+Verified June 12, 2026 against Stability AI's Stable Audio 3.0 release, StableAudio.com pricing, Stability AI platform/API surfaces, and Stability AI licensing context.
 
 ## System Verdict
 
@@ -186,7 +186,7 @@ The old May pricing page data for hosted subscriptions should not be treated as 
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified June 9, 2026 against the [Stable Audio 3.0 launch](https://stability.ai/news-updates/meet-stable-audio-3-the-model-family-built-for-artistic-experimentation-with-open-weight-models), [Stable Audio pricing](https://stableaudio.com/pricing), [Stability AI platform pricing](https://platform.stability.ai/pricing), and [Stability AI licensing](https://stability.ai/license).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified June 12, 2026 against the [Stable Audio 3.0 launch](https://stability.ai/news-updates/meet-stable-audio-3-the-model-family-built-for-artistic-experimentation-with-open-weight-models), [Stable Audio pricing](https://stableaudio.com/pricing), [Stability AI platform pricing](https://platform.stability.ai/pricing), and [Stability AI licensing](https://stability.ai/license).
 
 ## FAQ
 
