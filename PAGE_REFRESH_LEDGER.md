@@ -23,17 +23,8 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-04 | /tools/tome/ | Tool | Yes | frontmatter | src/content/tools/tome.md |
 | 2026-05-05 | /tools/dalle/ | Tool | Yes | frontmatter | src/content/tools/dalle.md |
 | 2026-05-13 | /tools/grok-code-fast/ | Tool | Yes | frontmatter | src/content/tools/grok-code-fast.md |
-| 2026-05-17 | /answers/chatgpt-vs-claude-which-is-better/ | Static page | Yes | page metadata | src/pages/answers/chatgpt-vs-claude-which-is-better.astro |
-| 2026-05-17 | /answers/is-cursor-worth-it/ | Static page | Yes | page metadata | src/pages/answers/is-cursor-worth-it.astro |
-| 2026-05-17 | /companies/google-deepmind/ | Company | Yes | frontmatter | src/content/companies/google-deepmind.md |
-| 2026-05-17 | /companies/mistral/ | Company | Yes | frontmatter | src/content/companies/mistral.md |
-| 2026-05-17 | /companies/openai/ | Company | Yes | frontmatter | src/content/companies/openai.md |
-| 2026-05-17 | /compare/build/ | Static page | No | git | src/pages/compare/build.astro |
-| 2026-05-17 | /guides/notion-ai-alternatives/ | Guide | No | frontmatter | src/content/use-cases/notion-ai-alternatives.md |
 | 2026-05-17 | /search/ | Static page | No | git | src/pages/search.astro |
 | 2026-05-17 | /stack-builder/ | Static page | Yes | git | src/pages/stack-builder/index.astro |
-| 2026-05-17 | /workflows/micro-saas-weekend-build/ | Workflow | Yes | frontmatter | src/content/workflows/micro-saas-weekend-build.md |
-| 2026-05-17 | /workflows/newsletter-stack/ | Workflow | Yes | frontmatter | src/content/workflows/newsletter-stack.md |
 | 2026-05-20 | /tools/antigravity/ | Tool | Yes | frontmatter | src/content/tools/antigravity.md |
 | 2026-05-20 | /tools/gemini-omni/ | Tool | Yes | frontmatter | src/content/tools/gemini-omni.md |
 | 2026-05-20 | /tools/gpt-image-2/ | Tool | Yes | frontmatter | src/content/tools/gpt-image-2.md |
@@ -737,15 +728,24 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-11 | /workflows/sdr-stack/ | Workflow | Yes | frontmatter | src/content/workflows/sdr-stack.md |
 | 2026-06-11 | /workflows/seo-content-pipeline/ | Workflow | Yes | frontmatter | src/content/workflows/seo-content-pipeline.md |
 | 2026-06-11 | /workflows/solo-founder-stack/ | Workflow | Yes | frontmatter | src/content/workflows/solo-founder-stack.md |
-| 2026-06-12 | / | Static page | Yes | working tree | src/pages/index.astro |
-| 2026-06-12 | /about/ | Static page | Yes | working tree | src/pages/about/index.astro |
-| 2026-06-12 | /about/our-stack/ | Static page | Yes | working tree | src/pages/about/our-stack.astro |
-| 2026-06-12 | /categories/ | Static page | Yes | working tree | src/pages/categories/index.astro |
-| 2026-06-12 | /categories/ai-automation/ | Category | Yes | working tree | src/content/categories/ai-automation.md |
-| 2026-06-12 | /explore/ | Static page | Yes | working tree | src/pages/explore/index.astro |
-| 2026-06-12 | /guides/ | Static page | Yes | working tree | src/pages/guides/index.astro |
-| 2026-06-12 | /guides/best-ai-landing-page-builder-for-ab-testing/ | Guide | Yes | working tree | src/content/use-cases/best-ai-landing-page-builder-for-ab-testing.md |
-| 2026-06-12 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
-| 2026-06-12 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
-| 2026-06-12 | /tools/ | Static page | Yes | working tree | src/pages/tools/index.astro |
-| 2026-06-12 | /tools/openclaw/ | Tool | Yes | working tree | src/content/tools/openclaw.md |
+| 2026-06-12 | / | Static page | Yes | git | src/pages/index.astro |
+| 2026-06-12 | /about/ | Static page | Yes | git | src/pages/about/index.astro |
+| 2026-06-12 | /about/our-stack/ | Static page | Yes | git | src/pages/about/our-stack.astro |
+| 2026-06-12 | /answers/chatgpt-vs-claude-which-is-better/ | Static page | Yes | working tree | src/pages/answers/chatgpt-vs-claude-which-is-better.astro |
+| 2026-06-12 | /answers/is-cursor-worth-it/ | Static page | Yes | working tree | src/pages/answers/is-cursor-worth-it.astro |
+| 2026-06-12 | /categories/ | Static page | Yes | git | src/pages/categories/index.astro |
+| 2026-06-12 | /categories/ai-automation/ | Category | Yes | frontmatter | src/content/categories/ai-automation.md |
+| 2026-06-12 | /companies/google-deepmind/ | Company | Yes | working tree | src/content/companies/google-deepmind.md |
+| 2026-06-12 | /companies/mistral/ | Company | Yes | working tree | src/content/companies/mistral.md |
+| 2026-06-12 | /companies/openai/ | Company | Yes | working tree | src/content/companies/openai.md |
+| 2026-06-12 | /compare/build/ | Static page | No | working tree | src/pages/compare/build.astro |
+| 2026-06-12 | /explore/ | Static page | Yes | git | src/pages/explore/index.astro |
+| 2026-06-12 | /guides/ | Static page | Yes | git | src/pages/guides/index.astro |
+| 2026-06-12 | /guides/best-ai-landing-page-builder-for-ab-testing/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-landing-page-builder-for-ab-testing.md |
+| 2026-06-12 | /guides/notion-ai-alternatives/ | Guide | No | working tree | src/content/use-cases/notion-ai-alternatives.md |
+| 2026-06-12 | /llms-full.txt | Crawl surface | No | git | src/pages/llms-full.txt.ts |
+| 2026-06-12 | /llms.txt | Crawl surface | No | git | src/pages/llms.txt.ts |
+| 2026-06-12 | /tools/ | Static page | Yes | git | src/pages/tools/index.astro |
+| 2026-06-12 | /tools/openclaw/ | Tool | Yes | frontmatter | src/content/tools/openclaw.md |
+| 2026-06-12 | /workflows/micro-saas-weekend-build/ | Workflow | Yes | working tree | src/content/workflows/micro-saas-weekend-build.md |
+| 2026-06-12 | /workflows/newsletter-stack/ | Workflow | Yes | working tree | src/content/workflows/newsletter-stack.md |

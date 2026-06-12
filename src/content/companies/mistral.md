@@ -2,22 +2,22 @@
 type: company
 slug: mistral
 title: Mistral AI
-seo_title: "Mistral AI Company Profile (May 2026), aipedia.wiki"
-meta_description: "Mistral AI is Europe's leading AI lab. April 28, 2026 launched the Mistral 3 family: Large 3 under Apache 2.0, Ministral 3 edge models, Voxtral STT, and Codestral 2. Verified May 13, 2026."
+seo_title: "Mistral AI Company Profile (June 2026), aipedia.wiki"
+meta_description: "Mistral AI is Europe's leading AI lab. April 28, 2026 launched the Mistral 3 family: Large 3 under Apache 2.0, Ministral 3 edge models, Voxtral STT, and Codestral 2. Verified June 12, 2026."
 author: "aipedia.wiki Editorial"
 company_type: startup
 founded: 2023
 hq: Paris, France
 funding: "$1B+"
 key_products: [mistral-ai, voxtral]
-last_updated: 2026-05-17
+last_updated: 2026-06-12
 update_frequency: monthly
-last_verified: 2026-05-13
+last_verified: 2026-06-12
 ---
 
 # Mistral AI
 
-Mistral AI, founded in 2023 in Paris by Arthur Mensch, Guillaume Lample, and Timothee Lacroix (former Meta AI and Google DeepMind researchers), develops open-weight large language models. As of May 13, 2026, the company holds a valuation over $6 billion and is anchored on its April 28, 2026 **Mistral 3 family** release: Mistral Large 3 under Apache 2.0, Ministral 3 edge-tier models, Voxtral 2 speech-to-text, and Codestral 2. The Mistral 3 launch reframed the company as the open-weight challenger that ships frontier-class capability under a permissive license, with a sharper EU-sovereignty pitch than US labs.[1][2]
+Mistral AI, founded in 2023 in Paris by Arthur Mensch, Guillaume Lample, and Timothee Lacroix (former Meta AI and Google DeepMind researchers), develops open-weight large language models. As of June 12, 2026, the company holds a valuation over $6 billion and is anchored on its April 28, 2026 **Mistral 3 family** release: Mistral Large 3 under Apache 2.0, Ministral 3 edge-tier models, Voxtral 2 speech-to-text, and Codestral 2. The Mistral 3 launch reframed the company as the open-weight challenger that ships frontier-class capability under a permissive license, with a sharper EU-sovereignty pitch than US labs.[1][2]
 
 ## Key Facts
 | | |
@@ -48,6 +48,7 @@ Products include Le Chat (consumer assistant), Spaces CLI for agent workflows, C
 - **April 28, 2026:** Released the **Mistral 3 family**: Mistral Large 3 under Apache 2.0, Ministral 3 edge models (3B/8B/14B), Voxtral 2 speech-to-text, and Codestral 2. The Apache 2.0 release on Large 3 is the clearest single signal of Mistral's open-weight wedge versus the closed US frontier.
 - **March 2026:** NVIDIA partnership extended for Hopper GPUs and inference optimization across the Mistral 3 family.[1]
 - **2025 onward:** Le Chat consumer surface and Spaces CLI for agentic workflows continued to grow alongside La Plateforme hosted APIs.[2]
+- **June 12, 2026:** Re-verified against official sources; the Mistral 3 family (Large 3, Ministral 3, Voxtral 2, Codestral 2) remains Mistral's current flagship line, with no new model releases since April 28.
 
 ## Strategic Position
 

@@ -2,14 +2,14 @@
 type: workflow
 slug: newsletter-stack
 title: "Newsletter Stack: Claude, Perplexity, and Substack"
-seo_title: "Newsletter Stack: Claude, Perplexity, and Substack (May 2026)"
-meta_description: "Updated May 13, 2026: publish a weekly research-backed newsletter in 3 hours of hands-on time. Stack costs $40/mo. Exact prompts, steps, and failure modes."
+seo_title: "Newsletter Stack: Claude, Perplexity, and Substack (June 2026)"
+meta_description: "Updated June 12, 2026: publish a weekly research-backed newsletter in 3 hours of hands-on time. Stack costs $40/mo. Exact prompts, steps, and failure modes."
 description: "Publish a weekly research-backed newsletter in 3 hours of hands-on time"
 stack: [claude, perplexity]
 tools_mentioned: [claude, perplexity]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-17
-last_verified: 2026-05-13
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 ---
 
@@ -50,7 +50,7 @@ Hands-on time per issue: 3 hours. Research runs on [Perplexity Max](/tools/perpl
 
 ### [Perplexity Max](/tools/perplexity/) ($20/mo)
 
-Owns research. Queries like "latest on AI agent workflows May 2026" return synthesized answers with inline citations in about 2 minutes.
+Owns research. Queries like "latest on AI agent workflows June 2026" return synthesized answers with inline citations in about 2 minutes.
 
 Deep Research mode handles multi-step queries better than a browser with tabs open. Typical output is an 800-word cited report. Pin the model picker to Opus 4.7 or GPT-5.5 for analytical pieces; Gemini 3.1 Pro is better at long-form scrape synthesis.
 
@@ -68,11 +68,11 @@ Lacks native AI integration, but the workflow does not need it. Analytics on the
 
 ## The workflow, step by step
 
-1. **Sunday 9 AM. Research (10 min).** Open Perplexity Max. Prompt: "Research top 5 AI workflow tools for solo operators in May 2026. Include pricing, versions like Claude Opus 4.7, GPT-5.5, and Gemini 3.1 Pro, and real user savings from sources dated April or May 2026. Synthesize into 800 words with citations. Focus on newsletters." Save 600 words of output to `/Newsletter/2026-W20/Research.txt`.
+1. **Sunday 9 AM. Research (10 min).** Open Perplexity Max. Prompt: "Research top 5 AI workflow tools for solo operators in June 2026. Include pricing, versions like Claude Opus 4.7, GPT-5.5, and Gemini 3.1 Pro, and real user savings from sources dated May or June 2026. Synthesize into 800 words with citations. Focus on newsletters." Save 600 words of output to `/Newsletter/2026-W24/Research.txt`.
 
-2. **Draft (15 min).** New Claude Pro chat labeled "Draft-W20" on Opus 4.7. Paste the Perplexity research. Prompt: "Write a 1,200-word newsletter draft on AI workflows for solo operators. Structure: hook, 3 examples with savings, editorial take, call to action. Voice: blunt, specific, no hype. Base only on pasted research." Save to `/Newsletter/2026-W20/Draft.md`.
+2. **Draft (15 min).** New Claude Pro chat labeled "Draft-W24" on Opus 4.7. Paste the Perplexity research. Prompt: "Write a 1,200-word newsletter draft on AI workflows for solo operators. Structure: hook, 3 examples with savings, editorial take, call to action. Voice: blunt, specific, no hype. Base only on pasted research." Save to `/Newsletter/2026-W24/Draft.md`.
 
-3. **Edit notes (5 min).** Read draft aloud. Log issues to `/Newsletter/2026-W20/Edits.txt`. Example from the prior issue: "Too many lists; tighten to 2 examples. Voice drifts salesy in para 4."
+3. **Edit notes (5 min).** Read draft aloud. Log issues to `/Newsletter/2026-W24/Edits.txt`. Example from the prior issue: "Too many lists; tighten to 2 examples. Voice drifts salesy in para 4."
 
 4. **Edit pass (45 min).** New Claude chat "Edit-W20". Paste draft and edit notes. Prompt: "Edit this draft: short sentences, concrete examples, cut 200 words, fix salesy tone. Output only the revised draft." Write back to `Draft.md`.
 
@@ -80,13 +80,13 @@ Lacks native AI integration, but the workflow does not need it. Analytics on the
 
 6. **Publish (25 min).** Open Substack new post. Paste final `Draft.md` (Markdown works). Bold key terms, convert Perplexity citations to inline links, add one stock image. Preview, schedule Monday 8 AM.
 
-7. **Archive.** Zip `/Newsletter/2026-W20/` to Drive. Log time in Notion.
+7. **Archive.** Zip `/Newsletter/2026-W24/` to Drive. Log time in Notion.
 
 ## Where it breaks
 
 Opus 4.7 drafts repeat Perplexity phrasing verbatim if the prompt omits "use your own words." First run without that guardrail sounded copied.
 
-Perplexity Max cites outdated info pre-May 2026 if the query is not date-scoped. The prior issue pulled February announcements that had since been superseded by GPT-5.5 and Gemini 3.1 Pro releases.
+Perplexity Max cites outdated info pre-2026 if the query is not date-scoped. The prior issue pulled February announcements that had since been superseded by GPT-5.5 and Gemini 3.1 Pro releases.
 
 Substack Markdown strips nested lists occasionally. Flatten them or paste twice.
 
@@ -101,7 +101,7 @@ Claude fact-check flags editorial opinions as "missing citations." Prefix the pr
 | Substack | $0 | Free tier, paid upgrades optional |
 | **Total** | **$40** | Replaces ~10 hours/week of manual research and copy |
 
-*Prices verified 2026-05-13 via [Perplexity pricing](https://www.perplexity.ai/pro) and [claude.com/pricing](https://claude.com/pricing).*
+*Prices verified 2026-06-12 via [Perplexity pricing](https://www.perplexity.ai/pro) and [claude.com/pricing](https://claude.com/pricing).*
 
 ## Who this is for
 
@@ -125,7 +125,7 @@ The reference channel averages ~47% over the past three months. Research-led hoo
 
 ## System Notes
 
-This page documents an operational stack verified by the aipedia.wiki editorial pipeline. Last verified 2026-05-13.
+This page documents an operational stack verified by the aipedia.wiki editorial pipeline. Last verified 2026-06-12.
 
 ## Related
 

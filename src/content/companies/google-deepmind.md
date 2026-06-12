@@ -2,17 +2,17 @@
 type: company
 slug: google-deepmind
 title: Google DeepMind
-seo_title: "Google DeepMind Profile (May 2026), aipedia.wiki"
-meta_description: "Google DeepMind is Alphabet's unified AI lab building Gemini 3.1 Pro, Gemini Intelligence, Googlebook, NotebookLM, Veo 3.1, and Google Stitch. Verified May 13, 2026."
+seo_title: "Google DeepMind Profile (June 2026), aipedia.wiki"
+meta_description: "Google DeepMind is Alphabet's unified AI lab building Gemini 3.1 Pro, Gemini Intelligence, Googlebook, NotebookLM, Veo 3.1, and Google Stitch. Verified June 12, 2026."
 author: "aipedia.wiki Editorial"
 company_type: bigtech
 founded: 2023
 hq: London, UK / Mountain View, USA
 funding: "Alphabet-funded (no external rounds)"
 key_products: [gemini, notebooklm, google-stitch, veo]
-last_updated: 2026-05-17
+last_updated: 2026-06-12
 update_frequency: monthly
-last_verified: 2026-05-13
+last_verified: 2026-06-12
 ---
 
 # Google DeepMind
@@ -52,6 +52,7 @@ Compute scale and data access from Google's ecosystem provide cost advantages, e
 - **April 16, 2026:** Released **Gemini 3.1 Pro** in preview, scoring 77.1% on ARC-AGI-2 (roughly double Gemini 3.0 Pro); rolled out to Gemini API, Vertex AI, and NotebookLM.[https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/]
 - Early 2026: Launched the **Gemini 3** series with Deep Think mode for subscribers and Gemma 4 open models derived from Gemini 3 research.[https://deepmind.google/models/][https://blog.mean.ceo/new-ai-model-releases-news-april-2026/]
 - No new external funding reported for DeepMind itself; the lab remains Alphabet-funded. Isomorphic's $2.1B Series C is separate.
+- **June 12, 2026:** Re-verified against official sources; no new flagship model or hardware announcements since the May 12 Gemini Intelligence and Googlebook launches. Gemini 3.1 Pro, Veo 3.1, NotebookLM, and Google Stitch remain DeepMind's current lineup.
 
 ## Strategic Position
 Google DeepMind leads in compute via TPUs and distribution across Google products, enabling low-cost scaling unmatched by startups. Gemini 3.1 Pro is competitive on reasoning benchmarks, and the May 12 Gemini Intelligence and Googlebook launches make Alphabet's plan explicit: own the consumer "intelligence layer" across phone, browser, Workspace, and hardware. Veo 3.1 keeps Google in the cinematic-video race.

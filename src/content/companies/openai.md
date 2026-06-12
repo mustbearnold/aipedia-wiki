@@ -2,17 +2,17 @@
 type: company
 slug: openai
 title: OpenAI
-seo_title: "OpenAI Company Profile (May 2026), aipedia.wiki"
-meta_description: "OpenAI builds ChatGPT, Codex, GPT Image 2, GPT-5.5, the new Daybreak agent (May 2026), Deployment Company, and gpt-oss models. Valued at $1.2T. Verified May 13, 2026."
+seo_title: "OpenAI Company Profile (June 2026), aipedia.wiki"
+meta_description: "OpenAI builds ChatGPT, Codex, GPT Image 2, GPT-5.5, the Daybreak agent (May 2026), Deployment Company, and gpt-oss models. Valued at $1.2T. Verified June 12, 2026."
 author: "aipedia.wiki Editorial"
 company_type: startup
 founded: 2015
 hq: San Francisco, USA
 funding: "$133B+"
 key_products: [chatgpt, codex, gpt-image-2]
-last_updated: 2026-05-17
+last_updated: 2026-06-12
 update_frequency: monthly
-last_verified: 2026-05-13
+last_verified: 2026-06-12
 ---
 
 # OpenAI
@@ -56,6 +56,7 @@ The strategic pattern is clear: keep ChatGPT as the default user-facing assistan
 - **April 21, 2026:** [ChatGPT Images 2.0 and gpt-image-2 launched](/news/2026-04-21-openai-chatgpt-images-2-gpt-image-2/), making GPT Image 2 the current OpenAI image-generation surface.
 - **April 2026:** OpenAI raised $122 billion for compute expansion and global AI deployment [5](https://openai.com/index/accelerating-the-next-phase-ai/).
 - **2026:** OpenAI introduced gpt-oss open models for self-hosting and customization [6](https://openai.com/open-models/).
+- **June 12, 2026:** Re-verified against official sources; ChatGPT, Codex (with Codex Chrome), Daybreak, Deployment Company, GPT Image 2, and gpt-oss remain OpenAI's current product lineup, with GPT-5.5 still the flagship model across tiers.
 
 ## Strategic Position
 

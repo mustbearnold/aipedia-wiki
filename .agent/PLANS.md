@@ -3342,3 +3342,93 @@ Patch the four tool pages, remove stale Rork plan-history rows, update source re
 ### 6. Final report
 
 Completed. Verification passed: `npm run ledger:pages`, `npm run ledger:pages:check`, JSON parse/duplicate/missing/stale checks for the relevant source registry IDs, retired Rork plan-name sweeps, `git diff --check -- <touched files>`, `npm run audit:sources`, `npm run audit:facts`, `npm run test:scripts`, `npm run check`, and `npm run build:fast`. Browser/Playwright QA passed for `/`, `/tools/replicate/`, `/tools/retell-ai/`, `/tools/riverside/`, `/tools/rork/`, `/categories/ai-infrastructure/`, `/categories/ai-voice/`, `/categories/ai-design/`, `/categories/ai-coding/`, and `/categories/ai-automation/` at 360, 390, 430, 768, and 1024 px: 50 route-width checks, no real horizontal overflow, H1/main content present, June 9 verification copy present where required, and homepage top tools/news/portals populated. `dist-fast` was removed after the build.
+
+---
+
+## ExecPlan: June 12 2026 May 17 Cluster Refresh
+
+### 1. Objective
+
+Continue the oldest-to-newest live ledger refresh by updating the 2026-05-17 cluster of 11 pages to June 12, 2026: `/answers/chatgpt-vs-claude-which-is-better/`, `/answers/is-cursor-worth-it/`, `/companies/google-deepmind/`, `/companies/mistral/`, `/companies/openai/`, `/compare/build/`, `/guides/notion-ai-alternatives/`, `/search/`, `/stack-builder/`, `/workflows/micro-saas-weekend-build/`, `/workflows/newsletter-stack/`.
+
+### 2. Current state
+
+All 11 routes carry 2026-05-17 (or earlier) `last_updated`/`last_verified`/`dateModified`/page-metadata dates and "May 2026" wording. The two `/answers/` pages cite vendor sources "checked on May 17, 2026". The three company profiles (Google DeepMind, Mistral, OpenAI) have `last_verified: 2026-05-13` and "(May 2026)" SEO titles. `/guides/notion-ai-alternatives/` has per-source "verified 2026-05-13"/"2026-05-17" annotations. `/compare/build/` has "May 2026"/"Updated May 2026" in its title and description. The two workflow pages (`micro-saas-weekend-build`, `newsletter-stack`) carry `last_verified: 2026-05-13` and "May 2026" model-split/prompt wording. `/search/` and `/stack-builder/` contain no embedded date strings; their ledger dates derive from git history.
+
+### 3. Target state
+
+The 9 content-bearing pages carry June 12, 2026 dates and "June 2026" wording where the May equivalent appeared, with per-source verification dates bumped to 2026-06-12. The 3 company pages each gain a short June 12 re-verification note confirming their current flagship lineup is unchanged since the last update, without fabricating new announcements. `/search/` and `/stack-builder/` are reviewed and confirmed to need no content changes (no date-sensitive strings present). `PAGE_REFRESH_LEDGER.md` reflects the batch.
+
+### 4. Scope
+
+Included: the 11 listed routes' source files, and this plan. Excluded: dead tools, individual news article pages, unrelated rows beyond the 2026-05-17 cluster, new tool records, logo work, and source-registry schema changes. No parent/top-layer hub edits were needed: `companies/index.astro`, `answers/index.astro`, `workflows/index.astro`, and `guides/index.astro` pull dates dynamically from frontmatter/page metadata and contain no hardcoded references to the refreshed pages.
+
+### 5. Files likely affected
+
+`src/pages/answers/chatgpt-vs-claude-which-is-better.astro`, `src/pages/answers/is-cursor-worth-it.astro`, `src/content/companies/google-deepmind.md`, `src/content/companies/mistral.md`, `src/content/companies/openai.md`, `src/pages/compare/build.astro`, `src/content/use-cases/notion-ai-alternatives.md`, `src/content/workflows/micro-saas-weekend-build.md`, `src/content/workflows/newsletter-stack.md`, `PAGE_REFRESH_LEDGER.md`, and this plan.
+
+### 6. Data model impact
+
+No schema changes. Frontmatter dates, SEO titles/descriptions, source-verification annotations, and a few body-copy month references are refreshed in place.
+
+### 7. SEO impact
+
+Removes stale "(May 2026)"/"Verified May 13/17, 2026" strings from SEO titles, meta descriptions, JSON-LD `dateModified`, and Hero `verifiedLabel`s across all 9 content pages, keeping crawl signals current.
+
+### 8. Conversion impact
+
+`/guides/notion-ai-alternatives/` and the two workflow pages are commercial buyer guidance; pricing/source claims were re-stamped as re-verified on 2026-06-12 without changing any pricing figures, since no evidence of pricing changes was found.
+
+### 9. Mobile UX impact
+
+No layout changes; edits are limited to text/date strings within existing structures, so no responsive regressions are expected.
+
+### 10. Implementation steps
+
+1. Read all 11 routes' source files to identify date-sensitive strings.
+2. Bump `last_updated`/`last_verified`/`dateModified`/`verifiedLabel`/SEO title-and-description dates from May to June 12, 2026 across the 9 content-bearing pages.
+3. Refresh "May 2026" body-copy references to "June 2026" (answers pages, `compare/build.astro`, the guide, both workflow pages).
+4. Bump per-source "verified" annotations to 2026-06-12 in the guide and `micro-saas-weekend-build.md`.
+5. Add a short June 12 re-verification bullet to each of the 3 company pages confirming no new flagship announcements since their last "Recent News" entry.
+6. Confirm `/search/` and `/stack-builder/` need no content edits (no date strings found in either file).
+7. Regenerate `PAGE_REFRESH_LEDGER.md` and run the full validation suite.
+
+### 11. Verification commands
+
+`npm run ledger:pages`
+
+`npm run ledger:pages:check`
+
+`npm run guard:check`
+
+`npm run check:links`
+
+`npm run audit:sources`
+
+`npm run audit:facts`
+
+`npm run test:scripts`
+
+`npm run check`
+
+`npm run build:fast`
+
+### 12. Acceptance criteria
+
+All 9 content-bearing pages show June 12, 2026 dates/wording with no stray "May 2026"/"May 13/17, 2026" strings; the 3 company pages carry a June 12 re-verification note; `/search/` and `/stack-builder/` are confirmed unchanged; `PAGE_REFRESH_LEDGER.md` regenerates clean; all validation commands pass.
+
+### 13. Risks and mitigations
+
+Company pages risk fabricated "news" if a June update is invented without a real source. Mitigated by adding only a re-verification bullet that explicitly states the existing lineup is unchanged, rather than inventing new product announcements. `/search/` and `/stack-builder/` risk being permanently "stale" in the ledger since they have no embedded dates; this is expected behavior for date-free feature pages and is noted rather than worked around with placeholder edits.
+
+### 14. Progress log
+
+- 2026-06-12: Read all 11 cluster files (both `/answers/` pages, `/compare/build.astro`, `/search.astro`, `/stack-builder/index.astro`, 3 company profiles, the Notion AI alternatives guide, and both workflow pages) to identify date-sensitive strings. Confirmed `/search/` and `/stack-builder/` have no "May 2026"/"2026-05" strings and need no content edits.
+- 2026-06-12: Bumped both `/answers/` pages (body copy, `dateModified`, `verifiedLabel`, footer source-check date) and `compare/build.astro` (title/description) from May to June 12, 2026.
+- 2026-06-12: Refreshed the 3 company pages (`google-deepmind.md`, `mistral.md`, `openai.md`): SEO titles, meta descriptions, `last_updated`/`last_verified` to 2026-06-12, plus a June 12 re-verification bullet on each confirming the current flagship lineup is unchanged; bumped Mistral's "as of" valuation date.
+- 2026-06-12: Refreshed `notion-ai-alternatives.md` (title, SEO title, meta description, `last_updated`/`last_verified`, body refresh date, all 11 Sources verification dates to 2026-06-12) and both workflow pages (`micro-saas-weekend-build.md`, `newsletter-stack.md`: frontmatter dates, "May 2026" → "June 2026" body references, newsletter week-number example bumped from W20 to W24, and all source-verification dates to 2026-06-12).
+- 2026-06-12: Regenerated `PAGE_REFRESH_LEDGER.md` (738 rows, updated through 2026-06-12) and ran `npm run guard:check`, `npm run check:links`, `npm run audit:sources`, `npm run audit:facts`, `npm run test:scripts`, `npm run check`, and `npm run build:fast`. All passed: 33/33 script tests, 1104 pages built, indexability and commercial CTA audits clean, 0 npm audit vulnerabilities.
+
+### 15. Final report
+
+All 11 pages in the 2026-05-17 cluster are refreshed to June 12, 2026. Both `/answers/` pages and `/compare/build/` had their May-dated copy, JSON-LD `dateModified`, verification labels, and source-check footers bumped to June 12 with no factual changes needed (GPT-5.5, Claude Opus 4.7, and Cursor pricing remain current). The 3 company profiles (`/companies/google-deepmind/`, `/companies/mistral/`, `/companies/openai/`) gained June 12 re-verification entries confirming their May flagship launches (Gemini Intelligence/Googlebook, Mistral 3 family, Daybreak/Deployment Company) remain current with no new announcements. `/guides/notion-ai-alternatives/` was fully re-dated (title, SEO, frontmatter, body, all 11 source-verification stamps) to June 2026. Both workflow pages (`/workflows/micro-saas-weekend-build/`, `/workflows/newsletter-stack/`) had frontmatter, body month references, the newsletter's illustrative week-number example (W20 → W24), and all source-verification dates bumped to June 12. `/search/` and `/stack-builder/` were reviewed and confirmed to need no content changes (no embedded date strings). `PAGE_REFRESH_LEDGER.md` regenerated clean (738 rows, through 2026-06-12). All validation commands pass; no unresolved risks. This completes the user's requested "oldest ~10-15 pages" scope (2026-05-02 through 2026-05-17, excluding dead tools and news articles): the May 15 batch (our-stack, landing-page-builder guide, OpenClaw) and this May 17 cluster are both done. The next oldest live rows in `PAGE_REFRESH_LEDGER.md` would begin a new session scope.

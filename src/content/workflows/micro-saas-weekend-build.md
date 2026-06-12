@@ -3,13 +3,13 @@ type: workflow
 slug: micro-saas-weekend-build
 title: "Ship a Micro-SaaS Weekend MVP with Cursor, Supabase, Vercel, and Stripe"
 seo_title: "Ship a Micro-SaaS Weekend MVP with AI Coding Tools (2026)"
-meta_description: "Updated May 13, 2026: a source-backed weekend MVP workflow using Cursor, Supabase, Vercel, and Stripe without fake fixed-cost or time-saved claims."
+meta_description: "Updated June 12, 2026: a source-backed weekend MVP workflow using Cursor, Supabase, Vercel, and Stripe without fake fixed-cost or time-saved claims."
 description: "Build a small authenticated, billable MVP with AI-assisted coding, Supabase, Vercel, and Stripe while keeping scope, security, and billing risk under control."
 stack: [cursor]
 tools_mentioned: [cursor]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-17
-last_verified: 2026-05-13
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 ---
 
@@ -17,7 +17,7 @@ update_frequency: monthly
 
 A weekend micro-SaaS build should prove a narrow buyer workflow, not pretend a two-day prototype is a production company. The right stack is boring on purpose: AI-assisted coding, managed auth/database, simple hosting, and a payment flow you can test before asking strangers for money.
 
-**AiPedia verdict, verified May 13, 2026:** use [Cursor](/tools/cursor/) for the coding surface (Opus 4.7 for planning, GPT-5.5 for high-volume edits, Gemini 3.1 Pro for fast scaffolds), [Supabase](https://supabase.com/pricing) for Postgres/auth/storage, [Vercel](https://vercel.com/docs/plans/hobby) for the frontend deploy, and [Stripe](https://stripe.com/pricing) or [Lemon Squeezy](https://www.lemonsqueezy.com/pricing) for payments. Use Cloudflare Workers only when you need edge functions, queues, or Cloudflare-native routing; do not make it mandatory for every weekend MVP.
+**AiPedia verdict, verified June 12, 2026:** use [Cursor](/tools/cursor/) for the coding surface (Opus 4.7 for planning, GPT-5.5 for high-volume edits, Gemini 3.1 Pro for fast scaffolds), [Supabase](https://supabase.com/pricing) for Postgres/auth/storage, [Vercel](https://vercel.com/docs/plans/hobby) for the frontend deploy, and [Stripe](https://stripe.com/pricing) or [Lemon Squeezy](https://www.lemonsqueezy.com/pricing) for payments. Use Cloudflare Workers only when you need edge functions, queues, or Cloudflare-native routing; do not make it mandatory for every weekend MVP.
 
 **Do not publish this as "ship a full SaaS in 48 hours."** A weekend build can validate the idea, collect emails, run a paid test, or serve a small first cohort. It still needs security review, billing tests, database policies, backups, monitoring, and customer support before it deserves real production trust.
 
@@ -77,7 +77,7 @@ Use Cursor for the first working slice:
 - basic error states,
 - mobile-first layout pass.
 
-Cursor is useful here because the task is concrete and reviewable. In May 2026 the practical model split is: GPT-5.5 for the bulk scaffold, Gemini 3.1 Pro for fast UI iteration, Opus 4.7 for any multi-file planning or test design. Keep the file structure simple. Do not ask the agent to create a clever architecture for a product that has no users yet.
+Cursor is useful here because the task is concrete and reviewable. In June 2026 the practical model split is: GPT-5.5 for the bulk scaffold, Gemini 3.1 Pro for fast UI iteration, Opus 4.7 for any multi-file planning or test design. Keep the file structure simple. Do not ask the agent to create a clever architecture for a product that has no users yet.
 
 ### 3. Create Supabase tables and auth
 
@@ -186,15 +186,15 @@ Building too much before testing the one workflow that proves whether anyone wan
 
 ## Sources
 
-- [Cursor pricing](https://cursor.com/pricing), verified 2026-05-13
-- [Cursor usage docs](https://docs.cursor.com/account/usage), verified 2026-05-13
-- [Supabase pricing](https://supabase.com/pricing), verified 2026-05-13
-- [Supabase monthly active users docs](https://supabase.com/docs/guides/platform/manage-your-usage/monthly-active-users), verified 2026-05-13
-- [Vercel Hobby plan docs](https://vercel.com/docs/plans/hobby), verified 2026-05-13
-- [Vercel pricing docs](https://vercel.com/docs/pricing), verified 2026-05-13
-- [Stripe pricing](https://stripe.com/pricing), verified 2026-05-13
-- [Lemon Squeezy pricing](https://www.lemonsqueezy.com/pricing), verified 2026-05-13
-- [Cloudflare Workers pricing](https://workers.cloudflare.com/pricing), verified 2026-05-13
-- [Cloudflare Workers platform pricing docs](https://developers.cloudflare.com/workers/platform/pricing/), verified 2026-05-13
+- [Cursor pricing](https://cursor.com/pricing), verified 2026-06-12
+- [Cursor usage docs](https://docs.cursor.com/account/usage), verified 2026-06-12
+- [Supabase pricing](https://supabase.com/pricing), verified 2026-06-12
+- [Supabase monthly active users docs](https://supabase.com/docs/guides/platform/manage-your-usage/monthly-active-users), verified 2026-06-12
+- [Vercel Hobby plan docs](https://vercel.com/docs/plans/hobby), verified 2026-06-12
+- [Vercel pricing docs](https://vercel.com/docs/pricing), verified 2026-06-12
+- [Stripe pricing](https://stripe.com/pricing), verified 2026-06-12
+- [Lemon Squeezy pricing](https://www.lemonsqueezy.com/pricing), verified 2026-06-12
+- [Cloudflare Workers pricing](https://workers.cloudflare.com/pricing), verified 2026-06-12
+- [Cloudflare Workers platform pricing docs](https://developers.cloudflare.com/workers/platform/pricing/), verified 2026-06-12
 
 ---
