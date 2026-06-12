@@ -207,7 +207,7 @@ The real moats are Apache 2.0 licensing on most open sizes, 119-language coverag
 
 - **Polished consumer chat product:** [ChatGPT](/tools/chatgpt/) or [Claude](/tools/claude/). qwen.ai is developer-first.
 - **Strongest open-weight reasoning:** [DeepSeek](/tools/deepseek/) R1 still leads on specific reasoning benchmarks.
-- **Best-in-class English writing:** [Claude](/tools/claude/) Opus 4.7. Qwen handles English well but trails Claude on nuance.
+- **Best-in-class English writing:** [Claude](/tools/claude/) Opus 4.8. Qwen handles English well but trails Claude on nuance.
 - **Google Workspace integration:** [Gemini](/tools/gemini/). Qwen has no Workspace hooks.
 - **Open-weight with Huawei Ascend training stack:** [GLM](/tools/glm/) GLM-5.1 is the closest alternative with domestic-silicon provenance.
 - **Broadest plugin marketplace:** [ChatGPT](/tools/chatgpt/). No Qwen equivalent to the GPT Store.

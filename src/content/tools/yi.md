@@ -125,7 +125,7 @@ The strategic story has shifted twice. In March 2025 Kai-Fu Lee publicly argued 
 - **Polished English product:** [ChatGPT](/tools/chatgpt/) or [Claude](/tools/claude/).
 - **Open-weight coding leader:** [GLM](/tools/glm/) GLM-5.1 under MIT at SWE-Bench Pro leader tier.
 - **Open-weight agentic baseline:** [Kimi](/tools/kimi/) K2.6 Agent Swarm leads the open-weight agentic category that 01.AI has stepped away from.
-- **Long-context frontier model:** [Claude](/tools/claude/) Opus 4.7 at 1M tokens, or Kimi K2.6 at 256K.
+- **Long-context frontier model:** [Claude](/tools/claude/) Opus 4.8 at 1M tokens, or Kimi K2.6 at 256K.
 
 ## Pricing
 

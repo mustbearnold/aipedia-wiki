@@ -25,7 +25,7 @@ Cursor delivers the most polished GUI-first AI IDE experience, now anchored by C
 
 | | Cursor | Claude Code | GitHub Copilot |
 |---|---|---|---|
-| **Flagship Model** | Composer 2.5 plus selectable Claude / OpenAI / Gemini routes | Claude Opus 4.7 | OpenAI frontier models in Copilot |
+| **Flagship Model** | Composer 2.5 plus selectable Claude / OpenAI / Gemini routes | Claude Opus 4.8 | OpenAI frontier models in Copilot |
 | **Price (Individual)** | $20/mo (Pro) | $100-200/mo (API usage) | $10/mo |
 | **Context Window** | Model-dependent, with long-context limits following the selected model | Model-dependent | Model and plan dependent |
 | **Autocomplete Speed** | Fast, IDE-native Cursor Tab | Terminal-based, no IDE autocomplete | Fast, IDE-integrated |
@@ -37,13 +37,13 @@ Cursor delivers the most polished GUI-first AI IDE experience, now anchored by C
 
 - **GUI agent workbench**: Composer 2.5, the Agents Window, Cloud Agents, and Automations sit inside the editor instead of forcing a terminal-only loop.
 - **IDE experience**: Purpose-built AI IDE with full VS Code compatibility, eliminating context switching
-- **Multi-model access**: Switch between Cursor's proprietary models, Claude Opus 4.7, OpenAI frontier models, Gemini, Grok, and Kimi within one interface
+- **Multi-model access**: Switch between Cursor's proprietary models, Claude Opus 4.8, OpenAI frontier models, Gemini, Grok, and Kimi within one interface
 - **Polished UX**: $2 billion in annual recurring revenue reflects deep embedding in developer workflows[2]
 - **Session persistence**: Chat history and edits remain accessible within the IDE
 
 ## Where Claude Code Wins
 
-- **Autonomous reasoning**: CLI-first design enables Claude Opus 4.7 to reason across entire codebases and execute multi-step plans without human intervention
+- **Autonomous reasoning**: CLI-first design enables Claude Opus 4.8 to reason across entire codebases and execute multi-step plans without human intervention
 - **Project-wide context**: Reads full codebases, maintains persistent memory via CLAUDE.md, and understands architectural patterns across files
 - **Terminal-native execution**: Runs commands, writes files, and validates changes directly from the terminal without IDE overhead
 - **No artificial caps**: Pay-per-token pricing means no request limits; heavy users get unlimited autonomous work
@@ -61,7 +61,7 @@ Cursor delivers the most polished GUI-first AI IDE experience, now anchored by C
 
 Cursor is an IDE replacement: it is a fork of VS Code rebuilt around AI, so the entire editing experience is optimized for AI-assisted workflows. Cursor Tab handles inline completion, Composer 2.5 handles supervised multi-file edits, and Cloud Agents / Automations can work on tasks while you continue editing. This makes Cursor ideal for developers who want AI deeply integrated into their moment-to-moment coding.
 
-Claude Code is a terminal-first agent: it operates from the command line, reads your entire codebase as context, and executes multi-step plans autonomously. There is no IDE; instead, Claude Opus 4.7 becomes the driver of your project. This approach excels at large refactors, architectural changes, and complex reasoning tasks that benefit from full project context. The tradeoff is that you work in the terminal rather than a graphical editor.
+Claude Code is a terminal-first agent: it operates from the command line, reads your entire codebase as context, and executes multi-step plans autonomously. There is no IDE; instead, Claude Opus 4.8 becomes the driver of your project. This approach excels at large refactors, architectural changes, and complex reasoning tasks that benefit from full project context. The tradeoff is that you work in the terminal rather than a graphical editor.
 
 GitHub Copilot is an IDE extension: it bolts onto your existing editor (VS Code, JetBrains, Neovim) and provides inline completions and chat. With OpenAI frontier models and expanded agent mode, it now handles file editing and terminal commands, but it remains less autonomous than Claude Code and less polished than Cursor. Copilot's strength is accessibility and cost; it is the easiest entry point for teams already in the GitHub ecosystem.
 
@@ -79,7 +79,7 @@ Budget-conscious developers and teams at $10 per month. Organizations already st
 
 ## Bottom Line
 
-Cursor leads on GUI IDE experience, Composer 2.5 multi-file work, and agent orchestration inside a VS Code fork. Claude Code dominates autonomous reasoning and project-wide refactoring through its CLI-first design and Claude Opus 4.7 integration. GitHub Copilot at $10/month remains the value leader for inline completions and teams already in the GitHub ecosystem. Many power users combine Claude Code for heavy agentic work with Copilot or Cursor for inline completions.
+Cursor leads on GUI IDE experience, Composer 2.5 multi-file work, and agent orchestration inside a VS Code fork. Claude Code dominates autonomous reasoning and project-wide refactoring through its CLI-first design and Claude Opus 4.8 integration. GitHub Copilot at $10/month remains the value leader for inline completions and teams already in the GitHub ecosystem. Many power users combine Claude Code for heavy agentic work with Copilot or Cursor for inline completions.
 
 ## FAQ
 

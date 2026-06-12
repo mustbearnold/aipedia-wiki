@@ -57,7 +57,7 @@ Compute scale and data access from Google's ecosystem provide cost advantages, e
 ## Strategic Position
 Google DeepMind leads in compute via TPUs and distribution across Google products, enabling low-cost scaling unmatched by startups. Gemini 3.1 Pro is competitive on reasoning benchmarks, and the May 12 Gemini Intelligence and Googlebook launches make Alphabet's plan explicit: own the consumer "intelligence layer" across phone, browser, Workspace, and hardware. Veo 3.1 keeps Google in the cinematic-video race.
 
-Threats include continued model velocity from Anthropic (Opus 4.7, Claude Mythos research preview) and OpenAI (GPT-5.5, Daybreak). Opportunities lie in enterprise via Vertex AI, Isomorphic Labs' science track funded by the May 12 $2.1B Series C, and Gemini Intelligence converting Google's distribution into recurring assistant usage.
+Threats include continued model velocity from Anthropic (Opus 4.8, Claude Mythos research preview) and OpenAI (GPT-5.5, Daybreak). Opportunities lie in enterprise via Vertex AI, Isomorphic Labs' science track funded by the May 12 $2.1B Series C, and Gemini Intelligence converting Google's distribution into recurring assistant usage.
 
 ## Sources
 - [Google DeepMind](https://deepmind.google/) -- Official site for models and research.

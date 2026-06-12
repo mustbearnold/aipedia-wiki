@@ -180,7 +180,7 @@ Subscription pricing via [sudowrite.com/pricing](https://sudowrite.com/pricing):
 
 | | Sudowrite Pro | Claude Pro | ChatGPT Plus |
 |---|---|---|---|
-| **Primary model** | **Muse (fiction-trained)** | Claude Opus 4.7 | GPT-5.5 |
+| **Primary model** | **Muse (fiction-trained)** | Claude Opus 4.8 | GPT-5.5 |
 | **Fiction workflow** | **Story Engine, Canvas, Describe, Expand** | Generic chat | Generic chat |
 | **Content filter** | **Unfiltered** | Conservative | Moderate |
 | **Style matching** | **Matches surrounding prose** | Prompt-dependent | Prompt-dependent |

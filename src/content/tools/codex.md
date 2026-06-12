@@ -262,7 +262,7 @@ The real moat is the **cross-surface consistency**. A task started in the deskto
 ## When to pick something else
 
 - **Daily-driver IDE coding:** [Cursor](/tools/cursor/). Tighter in-editor autocomplete, Composer for multi-file edits, and Cursor 3's Agents Window for parallel agent orchestration. Works on Linux, macOS, Windows.
-- **Terminal-native autonomous runs:** [Claude Code](/tools/claude-code/). Strongest CLI coding agent; 1M context on Opus 4.7; Ultraplan cloud environments; no desktop-app requirement.
+- **Terminal-native autonomous runs:** [Claude Code](/tools/claude-code/). Strongest CLI coding agent; 1M context on Opus 4.8; Ultraplan cloud environments; no desktop-app requirement.
 - **Fully-autonomous enterprise agent:** [Devin](/tools/devin/) by Cognition AI. $500/mo Teams. Agent-first from the ground up, runs end-to-end without human review.
 - **Open-source terminal agent:** [Aider](/tools/aider/). Free, self-hosted, works with any model including local Ollama.
 - **IDE plugin inside existing VS Code setup:** [GitHub Copilot](/tools/github-copilot/). Deepest Microsoft ecosystem integration.
@@ -292,7 +292,7 @@ Prices verified 2026-06-12 via [OpenAI Codex pricing](https://developers.openai.
 |---|---|---|---|---|
 | **Primary surface** | Desktop app + cloud + CLI | Terminal CLI | VS Code fork IDE | Web app |
 | **Async cloud execution** | Yes (sandboxed VM) | Ultraplan cloud environments | Cloud sandboxes + parallel agents | Yes, cloud-native by default |
-| **Backing model(s)** | GPT-5.5 + GPT-5.3-Codex-Spark | Claude Opus 4.7 + Sonnet 4.6 | User-selectable (Claude, GPT, Gemini, Grok, Composer 2.5) | Proprietary Cognition models |
+| **Backing model(s)** | GPT-5.5 + GPT-5.3-Codex-Spark | Claude Opus 4.8 + Sonnet 4.6 | User-selectable (Claude, GPT, Gemini, Grok, Composer 2.5) | Proprietary Cognition models |
 | **Computer Use** | Yes (April 16, macOS first) | Research preview in Claude Code | No native computer use | Yes, agent-native |
 | **Memory** | Yes (April 16, persistent cross-session) | Projects + session scope | Via `.cursorrules` + rules | Agent-native memory |
 | **Image generation** | gpt-image-2 bundled | None native | None native | None native |
@@ -322,7 +322,7 @@ Prices verified 2026-06-12 via [OpenAI Codex pricing](https://developers.openai.
 - **Async tasks can fail silently.** Cloud-sandboxed VMs sometimes error without a clear message. Check task status rather than assuming success.
 - **90+ plugin surface = larger attack surface.** The April 16 [MCP vulnerability](/news/2026-04-16-mcp-vulnerability-200k-servers/) and the May 1 [MCP STDIO command-execution disclosure](/news/2026-05-03-mcp-stdio-command-execution-flaw/) affect every Codex MCP server. Audit third-party plugins and sandbox STDIO tools before trusting them with shell access.
 - **Pricing complexity.** Free / Go / Plus / Pro / Pro 20x / Business / Enterprise is a lot of tiers. Users often pay for the wrong one. Baseline recommendation: Plus for individuals, Pro for active coders, Pro 20x only for sustained daily use.
-- **Codex quality lags Claude Code on strict SWE-bench.** Claude Opus 4.7 leads SWE-bench Verified; Codex is close behind at ~80%. Codex wins on Terminal-Bench 2.0 at 77.3% for autonomous terminal ops.
+- **Codex quality lags Claude Code on strict SWE-bench.** Claude Opus 4.8 leads SWE-bench Verified; Codex is close behind at ~80%. Codex wins on Terminal-Bench 2.0 at 77.3% for autonomous terminal ops.
 - **Computer Use is early.** Works for simple app operations; fragile for complex UI automation. Test your workflow before relying on it.
 - **Memory is not end-to-end encrypted by default.** Enterprise tiers add stronger guarantees; consumer tiers store persistent context on OpenAI's infrastructure subject to their data retention policies.
 
@@ -339,7 +339,7 @@ No. Codex is bundled with every paid ChatGPT tier: Plus ($20/mo), Pro ($100/mo),
 ChatGPT is the general-purpose assistant. Codex is the coding agent inside ChatGPT and in standalone surfaces. Codex Desktop is the macOS app that runs Codex agents + Computer Use + 90+ plugins. Same underlying product family.
 
 **How does Codex compare to Claude Code?**
-Both are agentic coding products. Codex works async in the cloud and via desktop app; [Claude Code](/tools/claude-code/) runs terminal-native on your local machine with the 1M Opus 4.7 context window. Claude Code is tighter for long-context refactors; Codex is stronger for async background work and plugin-driven workflows.
+Both are agentic coding products. Codex works async in the cloud and via desktop app; [Claude Code](/tools/claude-code/) runs terminal-native on your local machine with the 1M Opus 4.8 context window. Claude Code is tighter for long-context refactors; Codex is stronger for async background work and plugin-driven workflows.
 
 **How does Codex compare to Cursor?**
 [Cursor](/tools/cursor/) is an IDE (VS Code fork) optimized for daily in-editor coding with real-time autocomplete, Composer, and the Agents Window for parallel agents. Codex is primarily async cloud + desktop app. Many developers use both: Cursor as primary IDE, Codex for fire-and-forget tasks.

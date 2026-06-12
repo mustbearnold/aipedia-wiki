@@ -17,7 +17,7 @@ update_frequency: monthly
 
 A weekend micro-SaaS build should prove a narrow buyer workflow, not pretend a two-day prototype is a production company. The right stack is boring on purpose: AI-assisted coding, managed auth/database, simple hosting, and a payment flow you can test before asking strangers for money.
 
-**AiPedia verdict, verified June 12, 2026:** use [Cursor](/tools/cursor/) for the coding surface (Opus 4.7 for planning, GPT-5.5 for high-volume edits, Gemini 3.1 Pro for fast scaffolds), [Supabase](https://supabase.com/pricing) for Postgres/auth/storage, [Vercel](https://vercel.com/docs/plans/hobby) for the frontend deploy, and [Stripe](https://stripe.com/pricing) or [Lemon Squeezy](https://www.lemonsqueezy.com/pricing) for payments. Use Cloudflare Workers only when you need edge functions, queues, or Cloudflare-native routing; do not make it mandatory for every weekend MVP.
+**AiPedia verdict, verified June 12, 2026:** use [Cursor](/tools/cursor/) for the coding surface (Opus 4.8 for planning, GPT-5.5 for high-volume edits, Gemini 3.1 Pro for fast scaffolds), [Supabase](https://supabase.com/pricing) for Postgres/auth/storage, [Vercel](https://vercel.com/docs/plans/hobby) for the frontend deploy, and [Stripe](https://stripe.com/pricing) or [Lemon Squeezy](https://www.lemonsqueezy.com/pricing) for payments. Use Cloudflare Workers only when you need edge functions, queues, or Cloudflare-native routing; do not make it mandatory for every weekend MVP.
 
 **Do not publish this as "ship a full SaaS in 48 hours."** A weekend build can validate the idea, collect emails, run a paid test, or serve a small first cohort. It still needs security review, billing tests, database policies, backups, monitoring, and customer support before it deserves real production trust.
 
@@ -25,7 +25,7 @@ A weekend micro-SaaS build should prove a narrow buyer workflow, not pretend a t
 
 ## The Short Version
 
-- **Build surface:** [Cursor](/tools/cursor/) for fast editing, review, and AI-assisted implementation on Opus 4.7, GPT-5.5, or Gemini 3.1 Pro.
+- **Build surface:** [Cursor](/tools/cursor/) for fast editing, review, and AI-assisted implementation on Opus 4.8, GPT-5.5, or Gemini 3.1 Pro.
 - **Backend:** Supabase for Postgres, auth, storage, and row-level security.
 - **Frontend deploy:** Vercel for GitHub-linked preview and production deploys.
 - **Payments:** Stripe Checkout/Billing for direct payment control, or Lemon Squeezy if merchant-of-record tax handling matters more.
@@ -77,7 +77,7 @@ Use Cursor for the first working slice:
 - basic error states,
 - mobile-first layout pass.
 
-Cursor is useful here because the task is concrete and reviewable. In June 2026 the practical model split is: GPT-5.5 for the bulk scaffold, Gemini 3.1 Pro for fast UI iteration, Opus 4.7 for any multi-file planning or test design. Keep the file structure simple. Do not ask the agent to create a clever architecture for a product that has no users yet.
+Cursor is useful here because the task is concrete and reviewable. In June 2026 the practical model split is: GPT-5.5 for the bulk scaffold, Gemini 3.1 Pro for fast UI iteration, Opus 4.8 for any multi-file planning or test design. Keep the file structure simple. Do not ask the agent to create a clever architecture for a product that has no users yet.
 
 ### 3. Create Supabase tables and auth
 

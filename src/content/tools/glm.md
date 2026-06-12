@@ -154,7 +154,7 @@ The real moat is the open-weight, long-horizon coding-and-agent positioning. The
 ## When to pick something else
 
 - **Cheapest API for general chat:** [DeepSeek](/tools/deepseek/) or [Qwen](/tools/qwen/), depending on current endpoint and region.
-- **Polished English writing:** [Claude](/tools/claude/) Opus 4.7 or [ChatGPT](/tools/chatgpt/). GLM's English is functional, not best-in-class.
+- **Polished English writing:** [Claude](/tools/claude/) Opus 4.8 or [ChatGPT](/tools/chatgpt/). GLM's English is functional, not best-in-class.
 - **Broadest open-weight coverage:** [Qwen](/tools/qwen/). Apache 2.0 across more sizes, wider language coverage, more active monthly releases.
 - **Google Workspace integration:** [Gemini](/tools/gemini/). GLM has no Workspace hooks.
 - **Consumer-grade product polish:** [ChatGPT](/tools/chatgpt/) or [Claude](/tools/claude/). Z.ai chat is developer-adjacent, not consumer-first.

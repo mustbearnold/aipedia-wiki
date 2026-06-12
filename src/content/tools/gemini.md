@@ -191,7 +191,7 @@ not_best_for:
   - users outside the Google ecosystem
   - writing tasks requiring distinctive prose (Claude Opus leads)
 quick_answer: >-
-  Gemini is the widest multimodal bundle at a single subscription. Pick it for Google Workspace depth, bundled 5TB storage, native Veo 3.1 video, and Nano Banana 2 image gen inside AI Pro at $19.99/mo. Skip it for agentic coding (Claude Code leads) or distinctive long-form writing (Claude Opus 4.7 leads).
+  Gemini is the widest multimodal bundle at a single subscription. Pick it for Google Workspace depth, bundled 5TB storage, native Veo 3.1 video, and Nano Banana 2 image gen inside AI Pro at $19.99/mo. Skip it for agentic coding (Claude Code leads) or distinctive long-form writing (Claude Opus 4.8 leads).
 price_history:
   - date: 2026-06-03
     plan: "Workspace Gemini Drive sharing"
@@ -321,7 +321,7 @@ Verified 2026-06-12.
 
 > **Pick Gemini if you live in Google Workspace, rely on Google Search, need image/video tools inside one account, or want the most integrated Google-side assistant bundle.** Gemini 3.5 Flash is now the default model in the Gemini app and AI Mode in Search, while AI Pro at $19.99 remains the mainstream paid tier. Gemini also bundles Workspace, Android, Search, Veo/Imagen media tools, Antigravity, and Google One benefits more tightly than ChatGPT or Claude can.
 >
-> **Skip it if your workload is agentic coding, nuanced long-form writing, or anything outside Google's ecosystem.** [Claude Opus 4.7](/tools/claude/) leads on agentic coding (Claude Code CLI), long-form reasoning, and prose voice; [ChatGPT](/tools/chatgpt/) leads on Codex, custom-GPT marketplace, and operator-style agent mode; [Midjourney](/tools/midjourney/) still beats Nano Banana 2 on stylized image quality; [Perplexity](/tools/perplexity/) produces tighter citation-first research than Deep Research.
+> **Skip it if your workload is agentic coding, nuanced long-form writing, or anything outside Google's ecosystem.** [Claude Opus 4.8](/tools/claude/) leads on agentic coding (Claude Code CLI), long-form reasoning, and prose voice; [ChatGPT](/tools/chatgpt/) leads on Codex, custom-GPT marketplace, and operator-style agent mode; [Midjourney](/tools/midjourney/) still beats Nano Banana 2 on stylized image quality; [Perplexity](/tools/perplexity/) produces tighter citation-first research than Deep Research.
 >
 > **Who pays which tier:** Free for casual access, Google AI Plus for light users, Google AI Pro $19.99/mo for most individuals, AI Ultra $100/mo for higher agent/media/developer usage, and AI Ultra $200/mo only when you need the highest limits or top-tier media/agent features. Verify regional rollout and account eligibility before upgrading.
 
@@ -366,7 +366,7 @@ For Google-stack users, switching cost to ChatGPT or Claude isn't about model qu
 ## When to pick something else
 
 - **Terminal-native agentic coding:** [Claude](/tools/claude/). Claude Code remains the tighter terminal loop; Gemini's strongest coding story is now Antigravity and Managed Agents.
-- **Nuanced long-form writing:** [Claude](/tools/claude/). Opus 4.7 produces more distinctive prose voice. Gemini defaults to corporate-safe phrasing.
+- **Nuanced long-form writing:** [Claude](/tools/claude/). Opus 4.8 produces more distinctive prose voice. Gemini defaults to corporate-safe phrasing.
 - **Broadest plugin / custom-agent ecosystem:** [ChatGPT](/tools/chatgpt/). GPT Store has no Gemini equivalent. Gems are smaller-scale.
 - **Best-quality image generation:** [Midjourney](/tools/midjourney/). Nano Banana 2 is strong on text rendering and personal-context images but still trails Midjourney v7 on stylized photoreal output.
 - **Citation-first research:** [Perplexity](/tools/perplexity/). Cleaner source management and faster inline citations. Better for ongoing research workflows than Deep Research's one-shot reports.
@@ -398,7 +398,7 @@ Subscription and API model/pricing surfaces rechecked 2026-06-12 via [Google AI 
 
 ## Against the alternatives
 
-| | Gemini 3.5 Flash / Google AI Pro | Claude Opus 4.7 / Claude Pro | ChatGPT Plus / Pro |
+| | Gemini 3.5 Flash / Google AI Pro | Claude Opus 4.8 / Claude Pro | ChatGPT Plus / Pro |
 |---|---|---|---|
 | **Best surface** | Search, Workspace, Android, multimodal bundle | Long-form reasoning and terminal coding | General assistant plus Codex and GPT Image 2 |
 | **Agentic coding** | Antigravity 2.0 and Managed Agents | Claude Code is stronger in terminal | Codex is stronger in OpenAI ecosystem |

@@ -269,7 +269,7 @@ Max adds Model Council and heavier Computer/research access. The Comet browser i
 
 > **Pick Perplexity if you need cited, verifiable answers from the live web.** Nothing else in the consumer-AI market surfaces sources as aggressively or as cleanly. Pro at $20/mo or $200/year is the right default for researchers, journalists, analysts, and anyone doing due diligence who needs to see where a claim came from.
 >
-> **Skip it if your workload is writing, coding-IDE work, voice agents, or creative generation as the primary job.** [Claude](/tools/claude/) Opus 4.7 wins on long-form coherence and terminal coding; [ChatGPT](/tools/chatgpt/) wins on feature breadth, image generation, and the Codex agent. Perplexity now exposes paid asset/video generation limits, but those are research-output extras rather than the reason to buy it.
+> **Skip it if your workload is writing, coding-IDE work, voice agents, or creative generation as the primary job.** [Claude](/tools/claude/) Opus 4.8 wins on long-form coherence and terminal coding; [ChatGPT](/tools/chatgpt/) wins on feature breadth, image generation, and the Codex agent. Perplexity now exposes paid asset/video generation limits, but those are research-output extras rather than the reason to buy it.
 >
 > **Who pays which tier:** Free for casual fact-checks, Pro $20/mo or $200/year for regular cited research (the sweet spot), individual Max $200/mo or $2,000/year only for heavy personal usage, Enterprise Pro $40/seat/mo or $400/year for teams that need SSO, shared files, and admin controls, Enterprise Max $325/seat/mo or $3,250/year only for heavy reasoning, multi-model research, larger files, video generation, and high-volume Computer workflows.
 
@@ -310,7 +310,7 @@ The open question is whether any of these survive once Google AI Overviews, Chat
 
 ## When to pick something else
 
-- **Long-form writing, coding, or nuanced reasoning:** [Claude](/tools/claude/) Opus 4.7. Better coherence on 10K+ word outputs. Claude Code CLI is the strongest terminal coding agent.
+- **Long-form writing, coding, or nuanced reasoning:** [Claude](/tools/claude/) Opus 4.8. Better coherence on 10K+ word outputs. Claude Code CLI is the strongest terminal coding agent.
 - **One tool for everything (text + images + voice + agents):** [ChatGPT](/tools/chatgpt/). Broader feature surface, GPT Store, Codex, Operator agent.
 - **Neural web search for technical and research-heavy queries:** [Exa](/tools/exa/). Embeddings-based; best when you want the raw ranked document list, not a synthesized answer.
 - **Ad-free traditional search with privacy controls:** [Kagi](/tools/kagi/). Keeps the classic ranked-links UI and lets you re-rank or block domains.

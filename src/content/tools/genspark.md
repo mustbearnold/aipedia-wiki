@@ -165,7 +165,7 @@ The moat is the orchestration layer and the specialist surfaces, not the base LL
 ## When to pick something else
 
 - **Cited, source-grounded research:** [Perplexity](/tools/perplexity/). Better citation surfacing and primary-source discipline.
-- **Deep reasoning or long-document analysis:** [Claude](/tools/claude/). Opus 4.7 leads on long-form coherence and 1M-token context.
+- **Deep reasoning or long-document analysis:** [Claude](/tools/claude/). Opus 4.8 leads on long-form coherence and 1M-token context.
 - **Generalist assistant with the broadest ecosystem:** [ChatGPT](/tools/chatgpt/). Larger custom-GPT marketplace and mature Operator mode.
 - **Conversational web search with fewer guardrails:** [Morphic](/tools/morphic/). Lighter, more source-transparent search layer.
 - **Social-signal search with community Q&A:** [You.com](/tools/you-com/). Different flavor of search-first assistant.

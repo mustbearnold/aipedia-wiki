@@ -137,7 +137,7 @@ Users build custom agents that read and write project data, trigger workflows, a
 
 > **Pick Taskade if you want AI agents living inside project views, not bolted onto them.** Agents read the same tasks, docs, and mind maps your team sees, and they act on that state. The 700+ template library shortens cold-start time. Free tier supports real work, and Taskade now routes across 11+ frontier models from OpenAI, Anthropic, and Google with per-agent model selection.
 >
-> **Skip it if you need enterprise project portfolio management, a deep knowledge graph, or pure workflow plumbing.** [Notion AI](/tools/notion-ai/) wins on knowledge density. [Obsidian](/tools/obsidian/) wins on long-term personal knowledge. [ChatGPT](/tools/chatgpt/) and [Claude](/tools/claude/) win on agent intelligence; Claude Opus 4.7 (April 16) holds the agentic-coding lead. [Zapier](/tools/zapier/) wins on cross-app automation breadth.
+> **Skip it if you need enterprise project portfolio management, a deep knowledge graph, or pure workflow plumbing.** [Notion AI](/tools/notion-ai/) wins on knowledge density. [Obsidian](/tools/obsidian/) wins on long-term personal knowledge. [ChatGPT](/tools/chatgpt/) and [Claude](/tools/claude/) win on agent intelligence; Claude Opus 4.8 holds the agentic-coding lead. [Zapier](/tools/zapier/) wins on cross-app automation breadth.
 >
 > **Who pays which tier (workspace pricing, rechecked June 9):** Free for solo testing with up to 3K one-time credits, Starter $6/mo (3 users, 10K monthly credits) for tiny teams, Pro $16/mo (10 users, 50K monthly credits) for most small teams, Business $40/mo (unlimited users, 150K monthly credits) for admin and analytics, Max $200/mo for autonomous agents and extended thinking, Enterprise from $400/mo for SSO, SAML, BYOK, and MCP integration. Confirm monthly versus annual checkout because the help-center table still shows $8/$20/$50.
 
@@ -216,7 +216,7 @@ Subscription pricing via [taskade.com/pricing](https://www.taskade.com/pricing).
 
 ## Failure modes
 
-- **Agent intelligence is mid-tier on default tasks.** Taskade routes to frontier providers but cannot match a dedicated [Claude](/tools/claude/) Opus 4.7 or [ChatGPT](/tools/chatgpt/) session for hard reasoning. Max-tier extended thinking narrows the gap but does not close it.
+- **Agent intelligence is mid-tier on default tasks.** Taskade routes to frontier providers but cannot match a dedicated [Claude](/tools/claude/) Opus 4.8 or [ChatGPT](/tools/chatgpt/) session for hard reasoning. Max-tier extended thinking narrows the gap but does not close it.
 - **Knowledge base depth trails Notion.** No true backlinks graph, weaker database views, thinner formula language. Teams whose primary need is a wiki should pick Notion.
 - **Credit consumption is variable.** 50K Pro credits sound generous yet deplete fast under heavy agent or app-generation use. Unused credits do not roll over. Track usage before assuming the quota fits the workload.
 - **Integrations breadth is narrower than Zapier.** 100+ native connectors cover the common apps including Stripe, Slack, GitHub, and HubSpot. Edge-case SaaS typically requires a Zapier bridge.

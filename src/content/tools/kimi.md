@@ -177,7 +177,7 @@ The real moats are the free 256K chat context, the open-weight K2 Thinking relea
 - **Cheapest API:** [DeepSeek](/tools/deepseek/) and other budget API providers can undercut Kimi K2.6 on raw input price.
 - **Polished English consumer UX:** [ChatGPT](/tools/chatgpt/) or [Claude](/tools/claude/). Kimi's English chat is functional but not first-class.
 - **Google Workspace integration:** [Gemini](/tools/gemini/). Kimi has no Workspace hooks.
-- **Best-in-class long-form writing:** [Claude](/tools/claude/) Opus 4.7. Kimi's prose lags Claude's coherence on 10K-word outputs.
+- **Best-in-class long-form writing:** [Claude](/tools/claude/) Opus 4.8. Kimi's prose lags Claude's coherence on 10K-word outputs.
 - **Broadest plugin ecosystem:** [ChatGPT](/tools/chatgpt/). No Kimi equivalent to the GPT Store.
 
 ## Pricing
@@ -195,7 +195,7 @@ Chat at [kimi.com](https://www.kimi.com/), API at [platform.moonshot.ai](https:/
 
 ## Against the alternatives
 
-| | Kimi K2.6 | DeepSeek V3 | Claude Opus 4.7 | Qwen3.6 Plus |
+| | Kimi K2.6 | DeepSeek V3 | Claude Opus 4.8 | Qwen3.6 Plus |
 |---|---|---|---|---|
 | **Context window** | 256K | 64K | 1M | 1M |
 | **Free long context** | Yes, 256K | Limited | Pro $20/mo for 1M | API pay-per-token |
@@ -231,7 +231,7 @@ Moonshot AI's current Kimi platform model as of June 12, 2026, released April 21
 The open-weight reasoning flagship. It sets state-of-the-art on Humanity's Last Exam at 44.9% with tools and 51.0% in heavy mode, supports 200-300 sequential tool calls, and ships under a modified MIT license. Weights are on [Hugging Face](https://huggingface.co/moonshotai/Kimi-K2-Thinking).
 
 **How does Kimi compare to Claude for long documents?**
-Kimi's 256K context is free. Claude Opus 4.7's 1M context is larger but requires Pro ($20/mo) or API. At equal context lengths, Claude's English prose is more coherent; Kimi's bilingual Chinese-English handling is stronger. Pick based on language mix and budget.
+Kimi's 256K context is free. Claude Opus 4.8's 1M context is larger but requires Pro ($20/mo) or API. At equal context lengths, Claude's English prose is more coherent; Kimi's bilingual Chinese-English handling is stronger. Pick based on language mix and budget.
 
 **Can I use Kimi as a drop-in OpenAI replacement?**
 Yes. Point your OpenAI SDK at api.moonshot by changing the base URL and plugging in your Moonshot key. Most SDK features port directly.

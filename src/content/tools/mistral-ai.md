@@ -298,7 +298,7 @@ The moat is now jurisdiction *plus* permissive licensing on the flagship. EU-inc
 
 - **Largest ecosystem and plugin marketplace:** [ChatGPT](/tools/chatgpt/). GPT Store has no Mistral equivalent.
 - **Google Workspace integration:** [Gemini](/tools/gemini/). Native Docs / Sheets / Gmail hooks.
-- **Strongest long-form reasoning and writing:** [Claude](/tools/claude/). Opus 4.7 beats Large 3 on most reasoning benchmarks.
+- **Strongest long-form reasoning and writing:** [Claude](/tools/claude/). Opus 4.8 beats Large 3 on most reasoning benchmarks.
 - **Cheapest per-token API with open weights:** [DeepSeek](/tools/deepseek/) V3.2 at $0.28/M input for text-only workloads where vision is not needed. Mistral Small 4 is cheaper but flips the trade-off toward multimodal.
 - **Video generation:** Mistral has none. [Veo 3](/tools/veo/) via Gemini or [Kling](/tools/kling/).
 - **Commercial TTS with permissive license:** Voxtral is CC BY-NC 4.0. For commercial products use [ElevenLabs](/tools/elevenlabs/) or [OpenAI TTS](/tools/chatgpt/).
@@ -331,7 +331,7 @@ Consumer pricing via [mistral.ai/pricing](https://mistral.ai/pricing). API prici
 
 ## Against the alternatives
 
-| | Mistral Large 3 | OpenAI frontier models | Claude Opus 4.7 |
+| | Mistral Large 3 | OpenAI frontier models | Claude Opus 4.8 |
 |---|---|---|---|
 | **License** | Apache 2.0 (open weights) | Closed | Closed |
 | **Parameter count** | 41B active / 675B total MoE | Undisclosed | Undisclosed |

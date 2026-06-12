@@ -51,7 +51,7 @@ This guide was refreshed on **June 12, 2026** against current official sources f
 
 Pick **[ChatGPT](/tools/chatgpt/)** when the assistant work is the real bottleneck. It is the most capable Notion AI replacement when you want writing, summaries, file analysis, web search, images, voice, and code in one product instead of a workspace add-on.
 
-Pick **[Claude](/tools/claude/)** when the assistant work is long-form analysis, careful writing, policy interpretation, code review, or anything that benefits from a 1M-token context. Opus 4.7 is currently the strongest model for sustained long-form reasoning.
+Pick **[Claude](/tools/claude/)** when the assistant work is long-form analysis, careful writing, policy interpretation, code review, or anything that benefits from a 1M-token context. Opus 4.8 is currently the strongest model for sustained long-form reasoning.
 
 Pick **[Obsidian](/tools/obsidian/)** when the buyer wants local-first notes stored as plain Markdown files, with optional AI plugins on top. Best fit when control, portability, and offline access matter more than collaboration.
 
@@ -93,7 +93,7 @@ Avoid it when:
 
 ### Claude - Best Deep Reasoning Alternative
 
-Use [Claude](/tools/claude/) when the workspace-AI job is heavy analysis, long-document review, or sustained writing. Opus 4.7 (released April 16, 2026) leads on long-context reasoning, agentic coding, and structured output, and the 1M-token context window works for whole-codebase or book-length input without chunking. Anthropic's pricing page lists Free, Pro at $20/month, Max 5x at $100/month, Max 20x at $200/month, Team, and Enterprise.
+Use [Claude](/tools/claude/) when the workspace-AI job is heavy analysis, long-document review, or sustained writing. Opus 4.8 (released May 28, 2026) leads on long-context reasoning, agentic coding, and structured output, and the 1M-token context window works for whole-codebase or book-length input without chunking. Anthropic's pricing page lists Free, Pro at $20/month, Max 5x at $100/month, Max 20x at $200/month, Team, and Enterprise.
 
 Choose it when:
 

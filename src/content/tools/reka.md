@@ -106,7 +106,7 @@ The company hit unicorn status in 2025 with a $110M round led by NVIDIA and Snow
 
 > **Pick Reka if your workload centers on visual/physical AI, video understanding, local or edge deployment, or multimodal infrastructure.** Reka Edge 2 is the buyer signal now: source-available weights, Hugging Face/vLLM deployment, local offline operation, API access, and commercial-license caveats. Core and Flash still matter for API workloads, but the homepage no longer reads like a generic LLM lab.
 >
-> **Skip it if you need consumer-grade chat, top-of-benchmark reasoning, or image/video generation.** Reka has no ChatGPT-style consumer product. On pure text reasoning, [Claude](/tools/claude/) Opus 4.7 and OpenAI frontier models lead. Reka also understands media but does not generate it, so image and video creation workflows need a separate tool.
+> **Skip it if you need consumer-grade chat, top-of-benchmark reasoning, or image/video generation.** Reka has no ChatGPT-style consumer product. On pure text reasoning, [Claude](/tools/claude/) Opus 4.8 and OpenAI frontier models lead. Reka also understands media but does not generate it, so image and video creation workflows need a separate tool.
 >
 > **Who pays which tier:** Edge at $0.10 / $0.10 per MTok for cheap visual/chat API work and local deployment evaluation, Flash at $0.80 input / $2 output per MTok for balanced production workloads, Core at $2 input / $6 output per MTok for heavier multimodal reasoning, Research via flat $25-$60 per 1,000 requests for grounded web-research workflows, Vision via its own product/pricing path for video and image search/Q&A.
 
@@ -140,13 +140,13 @@ The deployment story is the real differentiator. Reka Edge can be run locally, i
 - **Video, image, and physical-world analysis.** Reka Edge and Vision are now the strongest public buyer lane: real-time video analysis, object detection, visual search, metadata tagging, and image/video Q&A.
 - **On-device and local physical AI.** Edge (7B-class) is optimized for robotics, cameras, vehicles, wearables, and embedded systems where cloud round-trips are unacceptable. It is available via API and Hugging Face/vLLM for local deployment.
 - **Enterprise on-prem deployment.** Regulated industries that cannot ship data to a third-party API get dedicated or on-prem options here. Rare among frontier-class labs.
-- **Cost-sensitive multimodal API workloads.** Core at $2 in / $6 out per MTok sits well below [Claude](/tools/claude/) Opus 4.7's $5/$25 for comparable multimodal tasks.
+- **Cost-sensitive multimodal API workloads.** Core at $2 in / $6 out per MTok sits well below [Claude](/tools/claude/) Opus 4.8's $5/$25 for comparable multimodal tasks.
 - **Grounded research workflows.** Reka Research's flat per-1,000-request pricing can be more predictable than token-based chat billing for research agents.
 
 ## When to pick something else
 
 - **Consumer chat:** [ChatGPT](/tools/chatgpt/), [Claude](/tools/claude/), or [Gemini](/tools/gemini/). Reka ships developer APIs, not a polished consumer UI.
-- **Top-of-benchmark reasoning:** [Claude](/tools/claude/) Opus 4.7 leads agentic coding and long-form reasoning; [Gemini](/tools/gemini/) 3.1 Pro leads Google-stack integration.
+- **Top-of-benchmark reasoning:** [Claude](/tools/claude/) Opus 4.8 leads agentic coding and long-form reasoning; [Gemini](/tools/gemini/) 3.1 Pro leads Google-stack integration.
 - **Permissive open weights for fine-tuning:** [Llama](/tools/llama/), [Qwen](/tools/qwen/), [DeepSeek](/tools/deepseek/), [Mistral AI](/tools/mistral-ai/), [Kimi](/tools/kimi/), [GLM](/tools/glm/), or [Yi](/tools/yi/). Reka Edge weights are available, but the BSL 1.1 license and commercial-use threshold are not the same as Apache/MIT.
 - **Enterprise chatbot with heavy Google Workspace integration:** [Gemini](/tools/gemini/) 3.1 Pro. Reka has no Workspace hooks.
 
@@ -177,7 +177,7 @@ Prices verified 2026-06-12 via [docs.reka.ai/pricing](https://docs.reka.ai/prici
 
 ## Against the alternatives
 
-| | Reka Core | Claude Opus 4.7 | Gemini 3.1 Pro | OpenAI frontier models |
+| | Reka Core | Claude Opus 4.8 | Gemini 3.1 Pro | OpenAI frontier models |
 |---|---|---|---|---|
 | **Video understanding** | Native long-context (hours) | None | Native, chunked extraction | None native |
 | **Image understanding** | Yes | Yes | Yes | Yes |
@@ -192,7 +192,7 @@ Prices verified 2026-06-12 via [docs.reka.ai/pricing](https://docs.reka.ai/prici
 
 - **No consumer chat interface.** Reka is API-first. Teams wanting a ChatGPT-style UI need to build it or pick a different provider.
 - **Smaller ecosystem.** Fewer third-party tools, SDKs, and community templates than OpenAI, Anthropic, or Google. Integration work is more DIY.
-- **Behind on pure text reasoning benchmarks.** Core's multimodal strength does not translate to chart-topping text-only scores. Claude Opus 4.7 and OpenAI frontier models lead those categories.
+- **Behind on pure text reasoning benchmarks.** Core's multimodal strength does not translate to chart-topping text-only scores. Claude Opus 4.8 and OpenAI frontier models lead those categories.
 - **Edge licensing is not Apache/MIT.** Reka Edge weights are available, but BSL 1.1 and the $1M annual-revenue commercial threshold make licensing a procurement issue.
 - **Core/Flash/Edge naming can confuse buyers.** The homepage emphasizes Reka Edge 2 and physical-AI infrastructure, while the API docs list public chat models as `reka-flash` and `reka-edge` / `reka-edge-2603`; verify model IDs from the Get Models API before production.
 - **No documented free tier.** Unlike OpenAI, Anthropic, or Google, there is no free monthly quota to evaluate Core before billing begins. Expect to set up billing from day one.
@@ -214,7 +214,7 @@ The older flagship framing was Reka Core, still priced at $2 input / $6 output p
 A 7B-class vision-language model optimized for on-device physical AI, robotics, vehicles, cameras, and embedded systems. It is available through the API and through Hugging Face/vLLM local deployment, with BSL 1.1 licensing and a free commercial grant below $1M annual revenue.
 
 **How does Reka compare to Claude or Gemini?**
-Reka's strength is native long-context video understanding and on-prem deployment. [Claude](/tools/claude/) Opus 4.7 leads agentic coding and text reasoning. [Gemini](/tools/gemini/) 3.1 Pro integrates deeply with Google Workspace. Pick Reka when video is central and you need on-prem or dedicated infrastructure.
+Reka's strength is native long-context video understanding and on-prem deployment. [Claude](/tools/claude/) Opus 4.8 leads agentic coding and text reasoning. [Gemini](/tools/gemini/) 3.1 Pro integrates deeply with Google Workspace. Pick Reka when video is central and you need on-prem or dedicated infrastructure.
 
 **Can I fine-tune Reka models?**
 Reka Edge weights are available, but the license is BSL 1.1 rather than permissive Apache/MIT. For broad open-weight fine-tuning under more permissive terms, compare [Llama](/tools/llama/), [Qwen](/tools/qwen/), [DeepSeek](/tools/deepseek/), [GLM](/tools/glm/), or [Mistral AI](/tools/mistral-ai/).
