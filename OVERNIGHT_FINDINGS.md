@@ -33,6 +33,12 @@ smartypants) or from layout/component code, not literal em dashes in content:
 - Result: 0 visible em dashes on every page type (QA confirmed); only the compare/build empty-cell placeholders remain (see below).
 - Left as-is: build-time doc-comment em dashes in .astro/.ts frontmatter (not shipped to HTML).
 
+### Pass 5 — other staleness (quarters, relative time, beta/preview) — CLEAN
+- No passed future-quarter framing. "this week"/"last week" are all speed idioms ("ship an MVP this week"), not calendar claims. "as of early 2026" markers are correct GA/establishment history (Firefly Image 5, Eleven v3, Doubao DAU). Ollama "Team coming soon" is vendor-sourced with an explicit June 8 check date and caveats. Nothing to fix.
+
+## Sweep summary (staleness mission)
+Passes 1-5 complete. Auto-fixed: 6 passed-date framings, 1 dead-tool cross-ref, and a site-wide em-dash elimination (13 files incl. all ~260 tool-page citations and a real `npm test --` CLI-rendering bug). Passes 3 and 5 confirmed clean. The June sweep + these passes leave the content genuinely current and the rendered output em-dash-free (except the compare-tool empty-cell placeholders, flagged below). Remaining staleness categories needing EXTERNAL data (live pricing re-verification, valuation/funding drift, external-link rot) are out of safe-autonomous scope.
+
 ## Needs human review / could not safely auto-fix
 
 - compare/build.astro (lines ~352-389): uses the em-dash glyph "—" as empty-table-cell placeholders (no-value marker), not prose. Left intact to avoid a compare-tool UI change on judgment; convert to "-"/"N/A"/en-dash if you want the hard em-dash rule applied to functional placeholders too.
