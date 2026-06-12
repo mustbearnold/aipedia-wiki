@@ -37,7 +37,7 @@ facts:
     confidence: high
     next_review_at: '2026-11-13'
   pricing_anchor:
-    value: "As of June 2, 2026 Hugging Face publishes Pro at $9/month, Team at $20/user/month, and Enterprise from $50/user/month. Storage is tiered per TB per month with volume discounts. Spaces hardware starts free on CPU Basic and includes ZeroGPU on RTX Pro 6000 Blackwell for PRO/Enterprise, while paid GPUs and Inference Endpoints scale from low hourly CPU pricing through B200-class options."
+    value: "As of June 12, 2026 Hugging Face publishes Pro at $9/month, Team at $20/user/month, and Enterprise from $50/user/month. Storage is tiered per TB per month with volume discounts. Spaces hardware starts free on CPU Basic and includes ZeroGPU on RTX Pro 6000 Blackwell for PRO/Enterprise, while paid GPUs and Inference Endpoints scale from low hourly CPU pricing through B200-class options."
     source: https://huggingface.co/pricing
     source_label: Hugging Face pricing
     source_id: hugging-face-pricing
@@ -124,7 +124,7 @@ not_best_for:
   - teams that need one fully managed app instead of a platform
   - production workloads that require hand-tuned GPU infrastructure
 quick_answer: >-
-  Hugging Face is the default map of the open AI ecosystem. Pick it for model discovery, datasets, Spaces demos, research artifacts, and managed inference endpoints. As of June 2, 2026, Pro is still $9/mo, Team $20/user/mo, Enterprise from $50/user/mo, with separate storage, Spaces, ZeroGPU, and Inference Endpoint billing. Skip it if you need a polished end-user app or a single-purpose hosted model API with simpler pricing.
+  Hugging Face is the default map of the open AI ecosystem. Pick it for model discovery, datasets, Spaces demos, research artifacts, and managed inference endpoints. As of June 12, 2026, Pro is still $9/mo, Team $20/user/mo, Enterprise from $50/user/mo, with separate storage, Spaces, ZeroGPU, and Inference Endpoint billing. Skip it if you need a polished end-user app or a single-purpose hosted model API with simpler pricing.
 ---
 
 # Hugging Face

@@ -291,7 +291,7 @@ Subscription pricing via [descript.com/pricing](https://www.descript.com/pricing
 
 - **June 5, 2026 comparison refresh.** Descript was rechecked against ElevenLabs, Fish Audio, Resemble AI, and Voxtral. The buyer split remains clear: Descript wins transcript-first editing and post-production; specialist voice/model platforms win standalone TTS, cloning, voice agents, open weights, and enterprise voice governance.
 - **June 2, 2026 feature check.** Prices remain stable, and the public pricing page now surfaces AI avatars and prompt-based media generation alongside AI Speech, Regenerate, Studio Sound, captions, clips, and Underlord.
-- **2026 plan restructure (reverified 2026-06-05).** Descript replaced the prior Creator $12 and Pro $24 annual tiers with Hobbyist $16, Creator $24, and Business $50. Allowances shifted from transcription hours to media hours plus AI credits, so frequent creators should re-check whether the new Creator pool covers their workload before renewal.
+- **2026 plan restructure (reverified 2026-06-12).** Descript replaced the prior Creator $12 and Pro $24 annual tiers with Hobbyist $16, Creator $24, and Business $50. Allowances shifted from transcription hours to media hours plus AI credits, so frequent creators should re-check whether the new Creator pool covers their workload before renewal.
 - **Feature naming refresh.** Overdub now appears on the pricing page as AI Speech; Regenerate is positioned alongside it as a tone-matched repair tool. Underlord packages 20-plus AI tools across the editor.
 - **Business tier replaces Pro.** Business adds Brand Studio, translation and dubbing in 30-plus languages, priority SLA support, and up to 5 seats; the prior Pro feature set is no longer the top self-serve plan.
 

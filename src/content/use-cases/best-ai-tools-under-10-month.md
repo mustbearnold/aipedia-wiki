@@ -55,7 +55,7 @@ A standalone under-$10 page fails AiPedia's current quality bar unless it can an
 - Which plan should a buyer choose instead if the right tool costs $20?
 - What does the buyer give up below $10?
 
-As of June 6, 2026, the better user experience is to route users to stronger pages with clearer buying decisions.
+As of June 12, 2026, the better user experience is to route users to stronger pages with clearer buying decisions.
 
 ## What To Use Instead
 

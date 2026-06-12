@@ -221,7 +221,7 @@ price_history:
 
 > **Not to be confused with [Groq](/tools/groq/)** (the LPU inference provider, different company, different product). This page is xAI's Grok chatbot.
 
-xAI's AI assistant is tightly integrated with X (formerly Twitter) and now spans consumer chat, Business/Enterprise plans, the xAI API, Grok Build CLI, Grok Imagine image/video generation, and a Voice API. As of the June 2, 2026 verification pass, the safest buyer anchor is xAI's own docs:
+xAI's AI assistant is tightly integrated with X (formerly Twitter) and now spans consumer chat, Business/Enterprise plans, the xAI API, Grok Build CLI, Grok Imagine image/video generation, and a Voice API. As of the June 12, 2026 verification pass, the safest buyer anchor is xAI's own docs:
 
 - **Grok 4.3** is the current default text API model, with 1 million tokens of context, configurable reasoning, and $1.25/M input plus $2.50/M output pricing.
 - **Grok Build 0.1** is the dedicated coding model for agentic coding workflows, priced at $1/M input and $2/M output in the API docs.

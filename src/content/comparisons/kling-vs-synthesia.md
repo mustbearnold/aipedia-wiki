@@ -78,7 +78,7 @@ Synthesia's strongest current claim is workflow control. The pricing page lists 
 
 Use the generated fact table and vendor pages for current pricing. Kling procurement should focus on credits, generation limits, watermark rules, queue priority, output rights, current 3.0/Omni access, and whether the model can consistently produce the shots your brand needs. Synthesia procurement should focus on video minutes, credits, avatars, languages, custom avatars, review controls, LMS/export needs, API access, SSO, SCIM, audit logs, and enterprise governance.
 
-As of June 6, 2026, AiPedia is not hard-coding a specific Kling paid-plan recommendation because the public pricing surface is dynamic and does not reliably expose a static plan table. Buyers should verify the exact model version, credit cost, commercial rights, watermark behavior, and audio/Omni access in the official Kling app before paying.
+As of June 12, 2026, AiPedia is not hard-coding a specific Kling paid-plan recommendation because the public pricing surface is dynamic and does not reliably expose a static plan table. Buyers should verify the exact model version, credit cost, commercial rights, watermark behavior, and audio/Omni access in the official Kling app before paying.
 
 Synthesia is easier to price publicly, but still needs plan-by-plan review. Current pricing lists Basic free, Starter at $29/month monthly or $18/month annual, Creator at $89/month monthly or $64/month annual, and Enterprise custom. The cheap-looking first paid plan is not the whole decision if the workflow needs SCORM, SAML/SSO, unlimited minutes, implementation support, or large-team governance.
 

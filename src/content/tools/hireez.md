@@ -71,7 +71,7 @@ quick_answer: >-
 
 hireEZ is an AI-first recruiting platform for sourcing, recruiting CRM, rediscovery, applicant match, hiring intelligence, scheduling, job distribution, and ATS workflows.
 
-As of June 2, 2026, AiPedia treats hireEZ as the strongest sourcing-and-CRM challenger to LinkedIn Recruiter for teams that want more of the recruiting workflow in one AI-first platform.
+As of June 12, 2026, AiPedia treats hireEZ as the strongest sourcing-and-CRM challenger to LinkedIn Recruiter for teams that want more of the recruiting workflow in one AI-first platform.
 
 ## System Verdict
 

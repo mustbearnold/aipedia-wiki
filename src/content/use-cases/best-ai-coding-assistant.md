@@ -141,7 +141,7 @@ If you are an engineering team, pilot **Cursor Teams**, **Copilot Business/Enter
 
 ## How We Chose
 
-AiPedia ranked these tools by buyer usefulness, not hype: daily coding speed, repo awareness, agentic execution, editor fit, pricing clarity, team controls, and how easy it is to verify outputs. Current pricing and positioning were checked against official vendor pages on June 6, 2026. Where vendor pricing or model availability is usage-based, promotional, or likely to change, this guide avoids over-precise claims and tells buyers to confirm the checkout page before committing.
+AiPedia ranked these tools by buyer usefulness, not hype: daily coding speed, repo awareness, agentic execution, editor fit, pricing clarity, team controls, and how easy it is to verify outputs. Current pricing and positioning were checked against official vendor pages on June 12, 2026. Where vendor pricing or model availability is usage-based, promotional, or likely to change, this guide avoids over-precise claims and tells buyers to confirm the checkout page before committing.
 
 ## FAQ
 

@@ -265,7 +265,7 @@ Partly. The official Qwen3 open-weight line ships under Apache 2.0 on Hugging Fa
 The official Qwen3 release includes two MoE models, Qwen3-235B-A22B and Qwen3-30B-A3B, plus six dense models from 0.6B through 32B. Qwen says the line supports hybrid thinking modes, 119 languages and dialects, and agentic/coding improvements.
 
 **What is the latest Qwen model?**
-As of this refresh on June 6, 2026, the latest official hosted flagship text model AiPedia found is Qwen3.7-Max / `qwen3.7-max-2026-05-20` on Qwen Cloud. The latest official model-release changelog entry AiPedia found is `qwen3.7-plus-2026-05-26`, a multimodal interactive hybrid-agent model. Neither changes the buyer-facing fact that the main open-weight line is still Qwen3.
+As of this refresh on June 12, 2026, the latest official hosted flagship text model AiPedia found is Qwen3.7-Max / `qwen3.7-max-2026-05-20` on Qwen Cloud. The latest official model-release changelog entry AiPedia found is `qwen3.7-plus-2026-05-26`, a multimodal interactive hybrid-agent model. Neither changes the buyer-facing fact that the main open-weight line is still Qwen3.
 
 **How does Qwen3 compare to Claude?**
 Qwen is more compelling when you need open weights and self-hosting. Claude is usually stronger when you want a polished paid assistant or API for English writing, long-document work, and managed enterprise workflows.

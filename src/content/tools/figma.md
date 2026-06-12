@@ -203,7 +203,7 @@ The best first paid plan for most professional teams is **Professional Full seat
 | Code handoff | Download code ZIP or push to GitHub; outside code changes do not automatically sync back |
 | Main watch-out | Seat costs plus AI-credit burn can outrun value if the buyer only needs one prompt-built app |
 
-Every fact above was checked against official Figma sources on 2026-06-05. See Sources.
+Every fact above was checked against official Figma sources on 2026-06-12. See Sources.
 
 ## What Figma Actually Is
 
@@ -235,7 +235,7 @@ The important limitation is ownership flow. Code can leave Figma Make, but chang
 
 ## Pricing
 
-Pricing was checked against [Figma pricing](https://www.figma.com/pricing/) on 2026-06-05. Figma's current public page is seat based, not a flat "AI design app" subscription.
+Pricing was checked against [Figma pricing](https://www.figma.com/pricing/) on 2026-06-12. Figma's current public page is seat based, not a flat "AI design app" subscription.
 
 | Plan | Current public price | Buyer fit |
 |---|---:|---|

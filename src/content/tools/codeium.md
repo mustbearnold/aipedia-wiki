@@ -110,7 +110,7 @@ price_history:
 
 Codeium was the AI code completion brand that shipped plugin-based autocomplete across many editors from 2022 to 2025. The current buyer path is no longer Codeium. It is **Codeium -> [Windsurf](/tools/windsurf/) -> Devin Desktop**.
 
-As of the June 5, 2026 check, `windsurf.com/pricing` redirects to Devin pricing, and Cognition's June 2 announcement says Windsurf is now Devin Desktop. This page stays live because people still search for Codeium, but the recommendation is historical and navigational: use it to understand the lineage, then evaluate [Windsurf / Devin Desktop](/tools/windsurf/) or [GitHub Copilot](/tools/github-copilot/) as current products.
+As of the June 12, 2026 check, `windsurf.com/pricing` redirects to Devin pricing, and Cognition's June 2 announcement says Windsurf is now Devin Desktop. This page stays live because people still search for Codeium, but the recommendation is historical and navigational: use it to understand the lineage, then evaluate [Windsurf / Devin Desktop](/tools/windsurf/) or [GitHub Copilot](/tools/github-copilot/) as current products.
 
 ## Recent Developments
 

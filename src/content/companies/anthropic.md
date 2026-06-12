@@ -19,7 +19,7 @@ last_verified: 2026-06-12
 
 Anthropic is an AI safety and research company founded in 2021 by Dario Amodei, Daniela Amodei, and former OpenAI researchers. Headquartered in San Francisco, the company develops the Claude family of models and enterprise products around coding, knowledge work, agents, and regulated-industry deployments.
 
-As of June 2, 2026, Anthropic is no longer just a fast-growing private frontier lab. It has raised a $65 billion Series H at a $965 billion post-money valuation, disclosed that run-rate revenue crossed $47 billion earlier in May, and confidentially submitted a draft S-1 registration statement to the SEC on June 1. The S-1 filing is not a completed IPO and the number of shares and price have not been set, but it is a clear signal that Anthropic is preparing optionality for public-market listing while Claude demand is still accelerating.
+As of June 12, 2026, Anthropic is no longer just a fast-growing private frontier lab. It has raised a $65 billion Series H at a $965 billion post-money valuation, disclosed that run-rate revenue crossed $47 billion earlier in May, and confidentially submitted a draft S-1 registration statement to the SEC on June 1. The S-1 filing is not a completed IPO and the number of shares and price have not been set, but it is a clear signal that Anthropic is preparing optionality for public-market listing while Claude demand is still accelerating.
 
 ## Key Facts
 

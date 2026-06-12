@@ -81,7 +81,7 @@ quick_answer: >-
 
 # Dia
 
-Dia is an AI-native browser from The Browser Company, the team behind Arc and now part of Atlassian. As of 2026-06-02, the public site positions Dia as a browser that "works with you": it reads across tabs, can create Morning Briefs from calendar, inbox, and links, surfaces proactive suggestions, and can answer using context from GSuite, Slack, tabs, and connected work apps.
+Dia is an AI-native browser from The Browser Company, the team behind Arc and now part of Atlassian. As of 2026-06-12, the public site positions Dia as a browser that "works with you": it reads across tabs, can create Morning Briefs from calendar, inbox, and links, surfaces proactive suggestions, and can answer using context from GSuite, Slack, tabs, and connected work apps.
 
 It is currently available for Apple macOS 14 or later on M1 chips or later. No Windows or Linux build is advertised on the public site. The security page says Dia is Chromium-based, disables several Google and Chromium telemetry and sync integrations, includes native ad blocking, completed a SOC 2 Type II examination covering security, confidentiality, and privacy for calendar year 2025 (final report issued in 2026), supports SSO, MDM controls, and admin-managed profiles, and uses layered controls for prompt-injection risk. Partner AI providers are contractually restricted from retaining or using Dia user data to train their own models.
 

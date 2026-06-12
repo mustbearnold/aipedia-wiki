@@ -130,7 +130,7 @@ quick_answer: >-
 
 Instantly is a cold-email outreach platform. It focuses on sending accounts, warmup, deliverability, campaigns, reply handling, and a unified inbox. It also offers Lead Finder as a separate buyer consideration for teams that want prospect data inside the same ecosystem.
 
-As of June 5, 2026, Instantly is AiPedia's outbound execution pick for sales teams that already know cold email is the motion and need sender infrastructure more than a broad CRM, support desk, or generic workflow builder.
+As of June 12, 2026, Instantly is AiPedia's outbound execution pick for sales teams that already know cold email is the motion and need sender infrastructure more than a broad CRM, support desk, or generic workflow builder.
 
 ## Recent changes
 

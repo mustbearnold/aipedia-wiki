@@ -93,7 +93,7 @@ not_best_for:
   - pure text-to-video quality benchmarks (Veo 3 and Seedance still lead)
   - teams needing enterprise SSO, VPC, or compliance controls
 quick_answer: >-
-  Higgsfield is an AI video and image studio specializing in cinematic camera control, Soul character consistency, and multi-model generation. As of June 2, 2026, annual individual pricing lists Starter $15/mo, Plus $39/mo, Ultra $99/mo, with Teams from $59/seat/mo. Pick it for short-form cinematic clips, social ads, and character-consistent campaigns. Skip it for long-form editing or API-first workflows that need low entry pricing.
+  Higgsfield is an AI video and image studio specializing in cinematic camera control, Soul character consistency, and multi-model generation. As of June 12, 2026, annual individual pricing lists Starter $15/mo, Plus $39/mo, Ultra $99/mo, with Teams from $59/seat/mo. Pick it for short-form cinematic clips, social ads, and character-consistent campaigns. Skip it for long-form editing or API-first workflows that need low entry pricing.
 price_history:
   - date: 2026-04-18
     plan: "Starter"
@@ -181,7 +181,7 @@ Cinema Studio adds per-shot camera control (dolly, orbit, push-in, crane, static
 
 Lipsync Studio and Talking Avatar handle dubbed video, so a single image plus a voice track produces a talking-head clip.
 
-Credit consumption varies by model. As of June 2, 2026, the pricing matrix showed examples such as Seedance 2.0 720p at 22 credits per 5 seconds, Seedance 2.0 Fast at 17 credits per 5 seconds, Kling 3.0 at 7-8 credits per 5 seconds, Google Veo 3.1 Fast at 11 credits per 4 seconds, Google Veo 3.1 at 29 credits per 4 seconds, and Veo 3 at 58 credits per 8 seconds. Nano Banana Pro / 2 image generations were listed at 2 credits per image.
+Credit consumption varies by model. As of June 12, 2026, the pricing matrix showed examples such as Seedance 2.0 720p at 22 credits per 5 seconds, Seedance 2.0 Fast at 17 credits per 5 seconds, Kling 3.0 at 7-8 credits per 5 seconds, Google Veo 3.1 Fast at 11 credits per 4 seconds, Google Veo 3.1 at 29 credits per 4 seconds, and Veo 3 at 58 credits per 8 seconds. Nano Banana Pro / 2 image generations were listed at 2 credits per image.
 
 ## When to pick Higgsfield
 

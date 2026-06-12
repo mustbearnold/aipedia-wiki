@@ -35,7 +35,7 @@ facts:
     confidence: high
     next_review_at: '2026-11-13'
   pricing_anchor:
-    value: As of June 2, 2026, Llama 4 Scout runs $0.11/$0.34, Llama 3.1 8B Instant $0.05/$0.08, Llama 3.3 70B Versatile $0.59/$0.79,
+    value: As of June 12, 2026, Llama 4 Scout runs $0.11/$0.34, Llama 3.1 8B Instant $0.05/$0.08, Llama 3.3 70B Versatile $0.59/$0.79,
       Qwen3 32B $0.29/$0.59, and GPT OSS 20B $0.075/$0.30 per million tokens; prompt caching gives 50 percent off cached inputs
       and Batch API gives 50 percent off async workloads.
     source: https://groq.com/pricing/

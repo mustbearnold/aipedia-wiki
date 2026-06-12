@@ -306,7 +306,7 @@ price_history:
 
 GitHub's AI pair programmer, built by Microsoft and GitHub on top of the repo, issue, pull-request, and Actions graph. It ships across VS Code, Visual Studio, JetBrains, Xcode, Neovim, GitHub.com, CLI, code review, Spaces, Spark, and the cloud Coding Agent.
 
-As of June 2, 2026, the buying question is no longer just "which Copilot plan has which model?" GitHub has moved most non-completion AI work into GitHub AI Credits. Chat, agent mode, Coding Agent, Copilot CLI, code review, Spaces, Spark, and third-party agents can consume credits. Code completions and next-edit suggestions remain included on paid plans.
+As of June 12, 2026, the buying question is no longer just "which Copilot plan has which model?" GitHub has moved most non-completion AI work into GitHub AI Credits. Chat, agent mode, Coding Agent, Copilot CLI, code review, Spaces, Spark, and third-party agents can consume credits. Code completions and next-edit suggestions remain included on paid plans.
 
 On May 20-21, [GitHub added semantic issue search, smarter auto model routing, Eclipse source transparency, GitHub-owned report URLs, and web model cleanup](/news/2026-05-21-github-copilot-semantic-search-auto-model-eclipse/). The important nuance remains that model availability must be checked per surface, plan, and policy rather than assumed globally.
 

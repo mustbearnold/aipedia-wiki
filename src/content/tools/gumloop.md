@@ -91,7 +91,7 @@ not_best_for:
   - self-hosted or air-gapped deployments (n8n is better)
   - pure LLM chat or coding assistance (use ChatGPT, Claude, Copilot)
 quick_answer: >-
-  Gumloop is a YC W24 drag-and-drop AI workflow builder aimed at marketing, sales, and ops teams. As of June 2, 2026 the plan structure remains Free (5K credits, 1 seat), Pro ($37/mo, 20K+ credits, unlimited seats, team analytics, app policies), and Enterprise (custom). Pick it for AI-native no-code automation. Skip for broad SaaS connector breadth or self-hosting.
+  Gumloop is a YC W24 drag-and-drop AI workflow builder aimed at marketing, sales, and ops teams. As of June 12, 2026 the plan structure remains Free (5K credits, 1 seat), Pro ($37/mo, 20K+ credits, unlimited seats, team analytics, app policies), and Enterprise (custom). Pick it for AI-native no-code automation. Skip for broad SaaS connector breadth or self-hosting.
 price_history:
   - date: 2026-06-02
     plan: "Free / Pro / Enterprise"

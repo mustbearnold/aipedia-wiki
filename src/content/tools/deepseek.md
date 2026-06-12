@@ -347,7 +347,7 @@ This page was produced by the aipedia.wiki editorial pipeline, an automated syst
 Yes. The chat interface at [chat.deepseek.com](https://chat.deepseek.com) is free with no declared usage cap and includes DeepThink reasoning and web search. The API is pay-per-token; new accounts get 5M free tokens on registration.
 
 **Is DeepSeek V4 out?**
-Yes. As of June 2, 2026, V4-Flash and V4-Pro are the documented production models on the API pricing page, both with a 1M context window and 384K maximum output. V4-Pro is listed at the adjusted quarter-price after the May promotion ended. The legacy `deepseek-chat` and `deepseek-reasoner` endpoint names still resolve to V4-Flash modes but are flagged for deprecation.
+Yes. As of June 12, 2026, V4-Flash and V4-Pro are the documented production models on the API pricing page, both with a 1M context window and 384K maximum output. V4-Pro is listed at the adjusted quarter-price after the May promotion ended. The legacy `deepseek-chat` and `deepseek-reasoner` endpoint names still resolve to V4-Flash modes but are flagged for deprecation.
 
 **How does DeepSeek R1 compare to OpenAI o1?**
 At launch (January 2025), R1 matched o1 on AIME 2024 (79.8% vs 79.2%) and MATH-500 (97.3% vs 96.4%). R1 is open-weight and free via chat. Its role today is as the open-weight reasoning baseline, with V4-Flash and V4-Pro handling production thinking-mode workloads on the API.

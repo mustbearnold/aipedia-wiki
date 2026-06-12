@@ -16,7 +16,7 @@ canonical_fact_table: true
 
 # Cursor vs Windsurf
 
-[Cursor](/tools/cursor/) and [Windsurf](/tools/windsurf/) used to be the cleanest AI-IDE head-to-head: two VS Code-like editors, two agentic coding workflows, two pricing systems. As of the June 5, 2026 check, the buyer question has changed. `windsurf.com/pricing` now redirects to [Devin pricing](https://devin.ai/pricing), the top banner says "Windsurf is now Devin Desktop," and the model docs redirect to [Devin Desktop model docs](https://docs.devin.ai/desktop/models).
+[Cursor](/tools/cursor/) and [Windsurf](/tools/windsurf/) used to be the cleanest AI-IDE head-to-head: two VS Code-like editors, two agentic coding workflows, two pricing systems. As of the June 12, 2026 check, the buyer question has changed. `windsurf.com/pricing` now redirects to [Devin pricing](https://devin.ai/pricing), the top banner says "Windsurf is now Devin Desktop," and the model docs redirect to [Devin Desktop model docs](https://docs.devin.ai/desktop/models).
 
 That does **not** mean Windsurf is dead. It means the product should now be evaluated as **Devin Desktop**, the IDE surface inside Cognition's broader Devin stack.
 

@@ -51,7 +51,7 @@ The product bundle matters as much as the model. Gemini connects to Gmail, Docs,
 
 ## Pricing and Cost Control
 
-DeepSeek is simpler: free chat for testing, then usage-based API billing. As of June 5, 2026, the official pricing page lists V4-Flash at $0.0028/M cache-hit input, $0.14/M cache-miss input, and $0.28/M output. V4-Pro lists $0.003625/M cache-hit input, $0.435/M cache-miss input, and $0.87/M output after the May promotion converted into the adjusted quarter-price.
+DeepSeek is simpler: free chat for testing, then usage-based API billing. As of June 12, 2026, the official pricing page lists V4-Flash at $0.0028/M cache-hit input, $0.14/M cache-miss input, and $0.28/M output. V4-Pro lists $0.003625/M cache-hit input, $0.435/M cache-miss input, and $0.87/M output after the May promotion converted into the adjusted quarter-price.
 
 Gemini is split across subscriptions and APIs. Google AI plans vary by region and currently include Free, Plus, Pro, and Ultra-style paths, with Pro/Ultra adding higher usage, Google app benefits, storage, Deep Research, media features, and agent access depending on market. The Gemini API pricing page is model-specific: Gemini 3.1 Pro Preview is materially more expensive than DeepSeek for long prompts, while lighter Gemini models and batch/flex modes can be more competitive. Do not compare "Gemini" to "DeepSeek" without naming the exact model, mode, context length, and grounding/tool usage.
 

@@ -262,7 +262,7 @@ This page was produced by the aipedia.wiki editorial pipeline, an automated syst
 Yes, under the Stability AI Community License. SD 1.5, SDXL, SD 3.5 Large, Turbo, and Medium weights are all downloadable at no cost, and commercial use is free for individuals and organizations earning under $1M annual revenue. The only costs for self-hosting are hardware (8GB+ VRAM GPU recommended for SD 3.5 Large) and electricity. Above $1M annual revenue, an Enterprise license is required: contact Stability AI.
 
 **Has SD 4 launched?**
-No. As of June 5, 2026, SD 3.5 Large remains Stability AI's flagship public Stable Diffusion model. The SD 3.5 family (Large, Large Turbo, Medium) was released October 2024 and remains available through current platform pricing. No SD 4 release date has been announced.
+No. As of June 12, 2026, SD 3.5 Large remains Stability AI's flagship public Stable Diffusion model. The SD 3.5 family (Large, Large Turbo, Medium) was released October 2024 and remains available through current platform pricing. No SD 4 release date has been announced.
 
 **What GPU do I need to run SD 3.5 Large locally?**
 NVIDIA GPU with 8GB+ VRAM is the practical minimum (RTX 3070 / 4070 and above). TensorRT optimizations reduce VRAM usage by roughly 40% on RTX GPUs. AMD Radeon and Ryzen AI are supported via ONNX runtime. Apple Silicon Macs run via CoreML backends. SD 3.5 Medium (2.5B parameters) targets consumer hardware and runs on lower-VRAM setups. SDXL and SD 1.5 remain viable for 4-6GB VRAM GPUs with optimizations.

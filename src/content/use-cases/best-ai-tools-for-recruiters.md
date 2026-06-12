@@ -41,7 +41,7 @@ update_frequency: monthly
 
 # Best AI Tools for Recruiters (June 2026)
 
-The best AI recruiting tool depends on the bottleneck: sourcing, applicant review, high-volume screening, scheduling, outreach, talent intelligence, or day-to-day recruiter writing. As of June 6, 2026, [LinkedIn Recruiter + Hiring Assistant](/tools/linkedin-recruiter/) is the best overall first evaluation, [hireEZ](/tools/hireez/) is the sourcing-and-CRM challenger, [Paradox](/tools/paradox/) is the high-volume screening and scheduling pick, and [Eightfold AI](/tools/eightfold-ai/) is the enterprise skills-intelligence platform.
+The best AI recruiting tool depends on the bottleneck: sourcing, applicant review, high-volume screening, scheduling, outreach, talent intelligence, or day-to-day recruiter writing. As of June 12, 2026, [LinkedIn Recruiter + Hiring Assistant](/tools/linkedin-recruiter/) is the best overall first evaluation, [hireEZ](/tools/hireez/) is the sourcing-and-CRM challenger, [Paradox](/tools/paradox/) is the high-volume screening and scheduling pick, and [Eightfold AI](/tools/eightfold-ai/) is the enterprise skills-intelligence platform.
 
 AiPedia may earn a commission from some links on this page. Rankings are editorial and source-backed.
 

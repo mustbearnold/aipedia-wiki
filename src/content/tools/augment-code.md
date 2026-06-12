@@ -128,7 +128,7 @@ Augment Code is an AI coding platform built around a codebase context engine. It
 
 The positioning is different from [Cursor](/tools/cursor/) or [Windsurf](/tools/windsurf/): Augment is not trying to replace your editor. It tries to understand a large repository deeply enough to make code changes, answer questions, and review pull requests without forcing a new IDE.
 
-The model menu matters. As of June 1, 2026, Augment documents selectable access to Anthropic Claude Opus 4.7 (April 16, 2026 release), Opus 4.6 and 4.5, Sonnet 4.6, 4.5, and 4, and Haiku 4.5, plus Google Gemini 3.1 Pro, OpenAI GPT-5.5, 5.4, 5.2, and 5.1, and Moonshot Kimi K2.6. Augment also ships Prism smart-routing presets that pick between curated Claude+Gemini and GPT+Kimi combinations on the fly. Model choice applies to Agent in the current workspace; Auggie CLI exposes the same model picker through `/model` or `--model`.
+The model menu matters. As of June 12, 2026, Augment documents selectable access to Anthropic Claude Opus 4.7 (April 16, 2026 release), Opus 4.6 and 4.5, Sonnet 4.6, 4.5, and 4, and Haiku 4.5, plus Google Gemini 3.1 Pro, OpenAI GPT-5.5, 5.4, 5.2, and 5.1, and Moonshot Kimi K2.6. Augment also ships Prism smart-routing presets that pick between curated Claude+Gemini and GPT+Kimi combinations on the fly. Model choice applies to Agent in the current workspace; Auggie CLI exposes the same model picker through `/model` or `--model`.
 
 ## System Verdict
 

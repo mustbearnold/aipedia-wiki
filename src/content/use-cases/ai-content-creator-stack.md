@@ -43,7 +43,7 @@ update_frequency: monthly
 
 # Best AI Stack for Content Creators (2026)
 
-As of June 6, 2026, the best AI stack for content creators is not one giant subscription bundle. It is a small workflow with clear jobs:
+As of June 12, 2026, the best AI stack for content creators is not one giant subscription bundle. It is a small workflow with clear jobs:
 
 1. **Research and angles:** [Perplexity](/tools/perplexity/)
 2. **Scripts and outlines:** [Claude](/tools/claude/)

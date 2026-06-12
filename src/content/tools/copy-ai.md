@@ -80,7 +80,7 @@ not_best_for:
   - teams that only need raw writing output
   - small teams priced out of the new Growth, Expansion, and Scale workflow tiers
 quick_answer: >-
-  Copy.ai is a GTM AI platform built around CRM-connected workflows, not standalone copywriting. As of June 2, 2026 the self-serve lineup is Chat at $29/mo plus four-figure Growth ($1,000), Expansion ($2,000), and Scale ($3,000) annual workflow tiers. Pick it when sales outreach and marketing automation sit on HubSpot or Salesforce and you can fill at least 20,000 workflow credits a month. Skip it for solo use where a general assistant covers the job.
+  Copy.ai is a GTM AI platform built around CRM-connected workflows, not standalone copywriting. As of June 12, 2026 the self-serve lineup is Chat at $29/mo plus four-figure Growth ($1,000), Expansion ($2,000), and Scale ($3,000) annual workflow tiers. Pick it when sales outreach and marketing automation sit on HubSpot or Salesforce and you can fill at least 20,000 workflow credits a month. Skip it for solo use where a general assistant covers the job.
 price_history:
   - date: 2026-04-17
     plan: "Advanced"
@@ -109,7 +109,7 @@ price_history:
 
 Copy.ai is an AI go-to-market automation platform. It started as a template-based copywriting tool in 2020, and the 2025 pivot reframed the product around sales outreach and marketing workflows connected to CRMs, not standalone generation. Ships with 100+ templates, CRM integrations for HubSpot, Salesforce, and Pipedrive, multi-LLM routing across OpenAI, Anthropic, and Google, plus 2,000+ integrations via Zapier.
 
-As of June 2, 2026 the public pricing page still lists Chat at $29/month, then jumps to annual-billed Growth ($1,000/month, 75 seats, 20K workflow credits), Expansion ($2,000/month, 150 seats, 45K credits), Scale ($3,000/month, 200 seats, 75K credits), and custom Enterprise. The previously visible Free trial, Starter ($49/month), and Advanced ($249/month) tiers are no longer surfaced on the pricing page.
+As of June 12, 2026 the public pricing page still lists Chat at $29/month, then jumps to annual-billed Growth ($1,000/month, 75 seats, 20K workflow credits), Expansion ($2,000/month, 150 seats, 45K credits), Scale ($3,000/month, 200 seats, 75K credits), and custom Enterprise. The previously visible Free trial, Starter ($49/month), and Advanced ($249/month) tiers are no longer surfaced on the pricing page.
 
 ## System Verdict
 

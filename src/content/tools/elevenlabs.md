@@ -251,7 +251,7 @@ The top-ranked AI voice generation platform in June 2026. Eleven v3 covers 70+ l
 | **Image & Video** | Image to Video in ElevenCreative, with model selection, voice integration, MP4 export, and paid-plan video generation |
 | **Self-hosted option** | None (cloud-only) |
 
-Core pricing and model data above was re-checked against ElevenLabs' published pricing, model docs, Image to Video page, and the May 7 API/Agents PAYG pricing update on 2026-06-05. See Sources.
+Core pricing and model data above was re-checked against ElevenLabs' published pricing, model docs, Image to Video page, and the May 7 API/Agents PAYG pricing update on 2026-06-12. See Sources.
 
 ## What it actually is
 

@@ -238,7 +238,7 @@ price_history:
 
 # Runway
 
-Runway is a production AI video workspace and API platform. Its value is not just one model. As of June 6, 2026, Runway gives creators and teams a single workspace for Gen-4.5 text-to-video, Gen-4 image-to-video, Gen-4 Turbo iteration, Aleph video editing, Act-Two performance capture, Veo 3.1/Veo 3, and third-party video models such as Seedance 2.0 and Kling 3.0 Pro.
+Runway is a production AI video workspace and API platform. Its value is not just one model. As of June 12, 2026, Runway gives creators and teams a single workspace for Gen-4.5 text-to-video, Gen-4 image-to-video, Gen-4 Turbo iteration, Aleph video editing, Act-Two performance capture, Veo 3.1/Veo 3, and third-party video models such as Seedance 2.0 and Kling 3.0 Pro.
 
 That makes Runway strategically important even when another model wins a raw-output shootout. If you only need the best single clip from a prompt, test [Seedance 2.0](/tools/seedance/), [Kling 3.0](/tools/kling/), and [Google Veo 3.1](/tools/veo/) beside Runway. If you need to edit, export, iterate, hand off to a team, or build an API pipeline, Runway moves back to the top of the shortlist.
 

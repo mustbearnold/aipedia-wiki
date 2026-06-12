@@ -75,7 +75,7 @@ not_best_for:
   - public API procurement
   - Western-only data handling requirements
 quick_answer: >-
-  Kling 3.0 is one of the top AI video models to test in June 2026. As of June 6, 2026, pick it for cinematic short clips, native audio, multi-shot storytelling, and value after verifying current 3.0/Omni access in the official app. Skip it if you need a clean public API or static pricing that is easy to audit without login.
+  Kling 3.0 is one of the top AI video models to test in June 2026. As of June 12, 2026, pick it for cinematic short clips, native audio, multi-shot storytelling, and value after verifying current 3.0/Omni access in the official app. Skip it if you need a clean public API or static pricing that is easy to audit without login.
 price_history:
   - date: 2026-02-05
     plan: "Kling AI 3.0 series"
@@ -105,7 +105,7 @@ price_history:
 
 # Kling 3.0
 
-Kling 3.0 is Kuaishou's frontier AI video model family. As of June 6, 2026, it belongs on the short list with [Seedance 2.0](/tools/seedance/) and [Google Veo 3.1](/tools/veo/) for anyone comparing the best current AI video models.
+Kling 3.0 is Kuaishou's frontier AI video model family. As of June 12, 2026, it belongs on the short list with [Seedance 2.0](/tools/seedance/) and [Google Veo 3.1](/tools/veo/) for anyone comparing the best current AI video models.
 
 The right way to evaluate Kling is prompt-first: run the same test prompts through Kling, Seedance, Veo, and Runway, then compare motion, shot continuity, audio, character consistency, text preservation, and post-production cleanup time.
 

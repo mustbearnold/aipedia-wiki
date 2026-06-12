@@ -146,7 +146,7 @@ Harvey is the enterprise AI platform built specifically for law firms and in-hou
 
 The company was founded in 2022 by Winston Weinberg, a former O'Melveny litigator, and Gabriel Pereyra, a former Google DeepMind and Meta researcher. By January 2026 Harvey hit $190M in annual recurring revenue. In March 2026 it raised $200M at an $11B valuation led by GIC and Sequoia, bringing total funding above $1B.
 
-As of June 2, 2026, Harvey reports **142,000+ professionals** using the platform across 60 AmLaw 100 firms, over 500 in-house legal teams, and 50 asset managers. More than 25,000 custom agents run on Harvey today, and Harvey's June blog shows the company expanding product breadth and APAC presence.
+As of June 12, 2026, Harvey reports **142,000+ professionals** using the platform across 60 AmLaw 100 firms, over 500 in-house legal teams, and 50 asset managers. More than 25,000 custom agents run on Harvey today, and Harvey's June blog shows the company expanding product breadth and APAC presence.
 
 ## Recent developments
 

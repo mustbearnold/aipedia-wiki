@@ -18,7 +18,7 @@ canonical_fact_table: true
 
 [Seedance 2.0](/tools/seedance/) and [Synthesia](/tools/synthesia/) are both AI video tools, but they answer different production questions. Seedance is ByteDance Seed's current multimodal audio-video model for generated scenes, references, editing, continuation, and model-quality tests. Synthesia is for making script-driven avatar videos that look consistent enough for training, onboarding, sales enablement, customer education, and internal communications.
 
-As of June 6, 2026, AiPedia treats ByteDance Seed and BytePlus ModelArk as the source-backed Seedance route. Do not use independent Seedance-branded pages as official pricing or access evidence unless they clearly disclose the underlying provider. For Synthesia, the current pricing page is the source of truth for Basic, Starter, Creator, Enterprise, credits, API access, avatars, and SCORM/governance claims.
+As of June 12, 2026, AiPedia treats ByteDance Seed and BytePlus ModelArk as the source-backed Seedance route. Do not use independent Seedance-branded pages as official pricing or access evidence unless they clearly disclose the underlying provider. For Synthesia, the current pricing page is the source of truth for Basic, Starter, Creator, Enterprise, credits, API access, avatars, and SCORM/governance claims.
 
 ## Quick Answer
 

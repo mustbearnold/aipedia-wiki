@@ -90,7 +90,7 @@ quick_answer: >-
 
 Apollo.io is a B2B sales intelligence and engagement platform. It combines prospect search, enrichment, outbound sequences, a dialer, CRM sync, and AI-assisted GTM workflows. For sales teams, the key buyer question is simple: do you want one platform for database plus engagement, or do you want to build a specialist stack with separate enrichment and sending tools?
 
-As of June 1, 2026, Apollo is AiPedia's best all-in-one sales-platform pick for teams that need to find prospects, enrich account/contact data, run sequences, call prospects, and sync activity back to a CRM from one workspace. The current pricing page also foregrounds Apollo MCP and Apollo's new credit-system rollout, so procurement should confirm whether a workspace is on legacy or new packaging before buying credits.
+As of June 12, 2026, Apollo is AiPedia's best all-in-one sales-platform pick for teams that need to find prospects, enrich account/contact data, run sequences, call prospects, and sync activity back to a CRM from one workspace. The current pricing page also foregrounds Apollo MCP and Apollo's new credit-system rollout, so procurement should confirm whether a workspace is on legacy or new packaging before buying credits.
 
 ## System Verdict
 

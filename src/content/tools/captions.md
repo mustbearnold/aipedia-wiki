@@ -193,7 +193,7 @@ AiPedia refreshed this page on 2026-06-12 using Captions' official overview and 
 Captions.ai is best for short-form social video: talking-head edits, captions, AI edits, creator ads, AI Twin/custom actors, translation/lipdub, and mobile-first publishing.
 
 **How much does Captions.ai cost?**
-As of 2026-06-02, Captions lists Pro at $9.99/month, Max at $24.99/month, Scale at $69.99/month, and Enterprise custom on the public pricing page. Displayed prices reflect iOS plans only.
+As of 2026-06-12, Captions lists Pro at $9.99/month, Max at $24.99/month, Scale at $69.99/month, and Enterprise custom on the public pricing page. Displayed prices reflect iOS plans only.
 
 **Which Captions.ai plan should I buy?**
 Most creators should start with Pro for watermark-free editing and captions. Upgrade to Max only if AI-generated videos, AI Twin/custom actors, chat editing, or generative assets are central.

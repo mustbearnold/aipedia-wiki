@@ -71,7 +71,7 @@ quick_answer: >-
 
 Eightfold AI is an enterprise talent intelligence platform. Its product surface spans Talent Acquisition, Talent Management, Workforce Exchange, Resource Management, and broader workforce planning.
 
-As of June 2, 2026, AiPedia treats Eightfold as the best enterprise AI recruiting option when the business problem is skills-based talent intelligence rather than simple sourcing. The product surface now includes TalentForge for custom HR software, AI Interviewer with 360 Interview collapsing multi-round evaluations into one session, AI Interview Companion for human-led interviews, and Workforce Readiness for AI adoption and upskilling signals. Oracle Recruiting integration extends Eightfold's agentic interviewing into existing Oracle workflows.
+As of June 12, 2026, AiPedia treats Eightfold as the best enterprise AI recruiting option when the business problem is skills-based talent intelligence rather than simple sourcing. The product surface now includes TalentForge for custom HR software, AI Interviewer with 360 Interview collapsing multi-round evaluations into one session, AI Interview Companion for human-led interviews, and Workforce Readiness for AI adoption and upskilling signals. Oracle Recruiting integration extends Eightfold's agentic interviewing into existing Oracle workflows.
 
 ## Recent developments
 

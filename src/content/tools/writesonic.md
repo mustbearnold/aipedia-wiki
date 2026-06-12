@@ -236,7 +236,7 @@ This page was produced by the aipedia.wiki editorial pipeline, an automated syst
 ## FAQ
 
 **Is there still a free Writesonic plan?**
-No. As of 2026-06-04 the lowest published tier is Starter at $79/mo. Annual billing saves 20% ([Writesonic pricing](https://writesonic.com/pricing)).
+No. As of 2026-06-12 the lowest published tier is Starter at $79/mo. Annual billing saves 20% ([Writesonic pricing](https://writesonic.com/pricing)).
 
 **Which models power Chatsonic and the AI Article Writer?**
 Routed third-party frontier APIs from OpenAI, Anthropic, and Google. No proprietary base model. Model quality tracks whatever underlying API handles the call on the day.

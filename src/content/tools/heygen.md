@@ -225,7 +225,7 @@ seo_title: "HeyGen Review: Avatar V, Pricing & Best Uses (June 2026)"
 meta_description: "HeyGen review updated June 12, 2026. See Avatar V, Avatar IV & V API pricing, Creator/Pro/Business plans, best use cases, risks, and alternatives."
 author: "aipedia.wiki Editorial"
 quick_answer: >-
-  HeyGen is the best AI video shortlist pick when the deliverable is avatar-led business video: sales clips, training, localization, digital twins, and presenter templates. As of June 5, 2026, Avatar V is the current headline avatar model, while Avatar IV & V API pricing is the important programmatic route. Do not rank HeyGen as a general cinematic AI video model; compare it against Synthesia, Tavus, and D-ID for avatar workflows, and against Seedance, Kling, Veo, or Runway only when you also need scene generation.
+  HeyGen is the best AI video shortlist pick when the deliverable is avatar-led business video: sales clips, training, localization, digital twins, and presenter templates. As of June 12, 2026, Avatar V is the current headline avatar model, while Avatar IV & V API pricing is the important programmatic route. Do not rank HeyGen as a general cinematic AI video model; compare it against Synthesia, Tavus, and D-ID for avatar workflows, and against Seedance, Kling, Veo, or Runway only when you also need scene generation.
 ---
 
 # HeyGen
@@ -284,7 +284,7 @@ This separation matters for purchasing. A plan that looks cheap for manual video
 
 ## Pricing And Buying Advice
 
-As of June 5, 2026, HeyGen's public app pricing lists:
+As of June 12, 2026, HeyGen's public app pricing lists:
 
 - **Free:** $0, 3 videos per month up to 1 minute each, 720p export, 500+ stock photo avatars, and trial access to premium features.
 - **Creator:** $29/mo, videos up to 30 minutes, one Custom Digital Twin, 700+ Stock Video Avatars, 175+ languages/dialects, 1080p export, brand kit, and watermark removal.

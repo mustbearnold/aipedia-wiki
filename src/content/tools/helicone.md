@@ -118,7 +118,7 @@ price_history:
 
 Open-source observability for LLM applications. Drop one line into your OpenAI, Anthropic, Google, or LiteLLM client config and every request gets logged, traced, costed, and available for replay in the Helicone dashboard.
 
-As of June 2, 2026, Helicone also leans hard into the AI Gateway: unified access to 100+ models, 0% markup provider credits, bring-your-own provider keys, caching, rate limits, automatic fallbacks, and complete observability from the same integration path.
+As of June 12, 2026, Helicone also leans hard into the AI Gateway: unified access to 100+ models, 0% markup provider credits, bring-your-own provider keys, caching, rate limits, automatic fallbacks, and complete observability from the same integration path.
 
 ## System Verdict
 

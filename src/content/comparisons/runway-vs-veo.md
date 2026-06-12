@@ -68,7 +68,7 @@ The key distinction: Veo may be available inside Runway, but direct Veo through 
 
 Runway's first serious paid tier is Standard at $12/user/month billed annually with 625 monthly credits. Pro is $28/user/month billed annually with 2,250 monthly credits. Max is $76/user/month billed annually with 9,500 monthly credits, one-month credit rollover, and relaxed Explore Mode generation. Enterprise is custom. Those prices buy a workspace, not only model seconds.
 
-Veo's clearest pricing is Gemini API per-second pricing. As of June 6, 2026, the pricing page lists Veo 3.1 Standard at $0.40/sec for 720p and 1080p, $0.60/sec for 4K; Fast at $0.10/sec for 720p, $0.12/sec for 1080p, $0.30/sec for 4K; and Lite at $0.05/sec for 720p and $0.08/sec for 1080p. That is easier to model for developers, but long iteration loops can get expensive fast.
+Veo's clearest pricing is Gemini API per-second pricing. As of June 12, 2026, the pricing page lists Veo 3.1 Standard at $0.40/sec for 720p and 1080p, $0.60/sec for 4K; Fast at $0.10/sec for 720p, $0.12/sec for 1080p, $0.30/sec for 4K; and Lite at $0.05/sec for 720p and $0.08/sec for 1080p. That is easier to model for developers, but long iteration loops can get expensive fast.
 
 ## Who Should Choose Runway
 

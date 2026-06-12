@@ -139,7 +139,7 @@ price_history:
 
 AdCreative.ai is an AI ad-creative generator for teams that need more testable ad assets than a designer, founder, or small growth team can make manually. Its strongest fit is paid-social and ecommerce creative production: upload a brand kit or product asset, generate platform-ready variants, score likely performance, and send the best ideas into the campaign workflow.
 
-As of 2026-06-01, AiPedia would shortlist AdCreative.ai for marketers who are creative-volume constrained. It is not the best first choice for brand systems, polished campaign art direction, or long-form copy strategy.
+As of 2026-06-12, AiPedia would shortlist AdCreative.ai for marketers who are creative-volume constrained. It is not the best first choice for brand systems, polished campaign art direction, or long-form copy strategy.
 
 ## System Verdict
 

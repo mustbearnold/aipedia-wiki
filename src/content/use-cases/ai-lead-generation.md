@@ -49,7 +49,7 @@ update_frequency: weekly
 
 AI lead generation is not one tool. It is a chain of decisions: where prospects come from, how contact data is enriched, how accounts are scored, how outreach is handed to a sender or sales platform, and how the team stays compliant while keeping the CRM clean.
 
-As of June 6, 2026, **Apollo.io** is AiPedia's best all-in-one AI lead-generation platform for most B2B teams, **n8n** is the best DIY workflow layer for teams with technical ownership, and **Amplemarket** is the best premium AI SDR suite for teams ready to buy a bundled outbound platform. **Clay** is the enrichment and GTM workflow specialist, while **Instantly** is the sender/Lead Finder option when email execution is the bottleneck.
+As of June 12, 2026, **Apollo.io** is AiPedia's best all-in-one AI lead-generation platform for most B2B teams, **n8n** is the best DIY workflow layer for teams with technical ownership, and **Amplemarket** is the best premium AI SDR suite for teams ready to buy a bundled outbound platform. **Clay** is the enrichment and GTM workflow specialist, while **Instantly** is the sender/Lead Finder option when email execution is the bottleneck.
 
 ## Quick Verdict
 

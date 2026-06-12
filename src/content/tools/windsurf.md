@@ -112,7 +112,7 @@ price_history:
 
 # Windsurf / Devin Desktop
 
-Windsurf is Cognition's AI-native IDE surface formerly sold as a standalone Windsurf product. As of the June 5, 2026 verification, the public path has shifted: `windsurf.com/pricing` redirects to Devin pricing, and the pricing page banner says **"Windsurf is now Devin Desktop."**
+Windsurf is Cognition's AI-native IDE surface formerly sold as a standalone Windsurf product. As of the June 12, 2026 verification, the public path has shifted: `windsurf.com/pricing` redirects to Devin pricing, and the pricing page banner says **"Windsurf is now Devin Desktop."**
 
 That makes this page active, not dead. The correct buyer framing is no longer "Windsurf versus Cursor as two clean standalone AI IDEs." It is now **Devin Desktop versus Cursor**: Cognition's IDE surface attached to the broader Devin autonomous-engineering stack.
 

@@ -99,7 +99,7 @@ It depends on usage. Aider is cheaper for occasional work if you use inexpensive
 
 **Did Copilot pricing change in June 2026?**
 
-Base subscription prices did not change in the official GitHub blog announcement, but the older request-based metering model moved to GitHub AI Credits starting June 1, 2026. The live docs should be checked before procurement because plan availability and included credits can change.
+Base subscription prices did not change in the official GitHub blog announcement, but the older request-based metering model moved to GitHub AI Credits starting June 12, 2026. The live docs should be checked before procurement because plan availability and included credits can change.
 
 **Which is better for teams?**
 

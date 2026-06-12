@@ -56,7 +56,7 @@ Most teams should not treat this as an either/or decision. Fireflies can capture
 
 ## Pricing Reality
 
-Fireflies pricing is per seat. As of June 5, 2026, public annual pricing is Free, Pro $10/seat/month, Business $19/seat/month, and Enterprise $39/seat/month. Monthly billing is higher for Pro and Business. Paid tiers include AI credits for advanced features; credits are not the same thing as transcription minutes.
+Fireflies pricing is per seat. As of June 12, 2026, public annual pricing is Free, Pro $10/seat/month, Business $19/seat/month, and Enterprise $39/seat/month. Monthly billing is higher for Pro and Business. Paid tiers include AI credits for advanced features; credits are not the same thing as transcription minutes.
 
 NotebookLM Standard is free. Higher NotebookLM limits come through Google AI Plans, Google Cloud, or qualifying Workspace plans. The public Help Center lists different Standard, Plus, Pro, Ultra 20 TB, and Ultra 30 TB limits, and Google notes that limits can change.
 

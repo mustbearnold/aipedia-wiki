@@ -15,7 +15,7 @@ update_frequency: monthly
 
 # Solo YouTuber AI Stack: Script, Voice, Edit, B-roll, Thumbnails
 
-As of June 6, 2026, the best solo YouTube AI workflow is not a fixed bundle. It is a buying sequence:
+As of June 12, 2026, the best solo YouTube AI workflow is not a fixed bundle. It is a buying sequence:
 
 1. **Script and structure:** [Claude](/tools/claude/)
 2. **Editing, captions, and repurposing:** [Descript](/tools/descript/)

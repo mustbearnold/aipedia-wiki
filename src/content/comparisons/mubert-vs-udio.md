@@ -20,7 +20,7 @@ canonical_fact_table: true
 
 ## Quick Answer
 
-Choose **Mubert** when the music is supporting material and you need to audit usage rights before publishing. Choose **Udio** when the music itself is the creative object and you need song generation, section edits, vocals, or producer-style iteration. As of June 6, 2026, Udio's own help center also says downloads of audio, video, and stems are disabled during the UMG partnership transition, so do not buy Udio for workflows that require exportable production files today.
+Choose **Mubert** when the music is supporting material and you need to audit usage rights before publishing. Choose **Udio** when the music itself is the creative object and you need song generation, section edits, vocals, or producer-style iteration. As of June 12, 2026, Udio's own help center also says downloads of audio, video, and stems are disabled during the UMG partnership transition, so do not buy Udio for workflows that require exportable production files today.
 
 ## Decision Snapshot
 

@@ -114,7 +114,7 @@ price_history:
 
 # Seedance 2.0
 
-Seedance 2.0 is ByteDance Seed's frontier multimodal AI video model. As of June 6, 2026, AiPedia treats it as one of the first models serious buyers should test for raw video quality, motion stability, multimodal references, native audio-video generation, and director-style control.
+Seedance 2.0 is ByteDance Seed's frontier multimodal AI video model. As of June 12, 2026, AiPedia treats it as one of the first models serious buyers should test for raw video quality, motion stability, multimodal references, native audio-video generation, and director-style control.
 
 The key correction: `seedance.ai` is not the official ByteDance Seedance product route. That site says it is independent and not affiliated with ByteDance or its products. The canonical sources for this record are ByteDance Seed and BytePlus ModelArk.
 
@@ -190,7 +190,7 @@ Do not reuse old consumer-plan numbers for Seedance unless they are tied to a ve
 Yes. Seedance 2.0 is official through ByteDance Seed. The official page is on `seed.bytedance.com`.
 
 **Is seedance.ai official?**
-No. As of June 6, 2026, the public `seedance.ai` page says it is independent and not affiliated with ByteDance or its products.
+No. As of June 12, 2026, the public `seedance.ai` page says it is independent and not affiliated with ByteDance or its products.
 
 **Does Seedance 2.0 have an API?**
 BytePlus ModelArk documents video generation APIs and exposes Seedance 2.0 through its product surface. Validate the exact model ID, region, rights, and pricing before production use.

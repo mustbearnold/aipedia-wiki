@@ -73,7 +73,7 @@ ElevenLabs is the better creator and commercial voice platform. Voxtral is the b
 ## FAQ
 
 **Is Voxtral only speech-to-text?**
-No. As of the June 5, 2026 check, Mistral lists Voxtral TTS alongside Voxtral transcription and realtime speech-recognition routes.
+No. As of the June 12, 2026 check, Mistral lists Voxtral TTS alongside Voxtral transcription and realtime speech-recognition routes.
 
 **Which is cheaper for TTS?**
 Mistral lists Voxtral TTS at $0.016 per 1K characters. ElevenLabs lists Flash/Turbo TTS at $0.05 per 1K characters and Multilingual v2/v3 at $0.10 per 1K characters. Compare quality, latency, voices, and workflow before choosing only on price.

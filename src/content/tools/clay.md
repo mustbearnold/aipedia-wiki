@@ -132,7 +132,7 @@ price_history:
 
 Clay is a GTM enrichment and automation workspace. Teams use it to waterfall multiple data providers, enrich account/contact records, run AI-assisted research, build signal-based outbound lists, and push enriched data into CRMs or sending tools.
 
-As of June 2, 2026, Clay is AiPedia's best sales-tool pick for teams whose bottleneck is **data quality and workflow logic**, not merely sending emails. It is more powerful than a simple prospecting tool, but it also demands more operational discipline.
+As of June 12, 2026, Clay is AiPedia's best sales-tool pick for teams whose bottleneck is **data quality and workflow logic**, not merely sending emails. It is more powerful than a simple prospecting tool, but it also demands more operational discipline.
 
 ## System Verdict
 

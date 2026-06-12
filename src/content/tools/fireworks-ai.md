@@ -36,7 +36,7 @@ facts:
     confidence: high
     next_review_at: '2026-11-13'
   pricing_anchor:
-    value: "As of June 2, 2026 Fireworks lists serverless inference (per-token, with a 50% cached-input discount and a 50% batch discount), on-demand GPUs at $7/hr (H100 80GB and H200 141GB), $10/hr (B200 180GB), and $12/hr (B300 288GB), embeddings from $0.008 per 1M input tokens, structured fine-tuning rates by model size, and reinforcement fine-tuning billed per GPU hour."
+    value: "As of June 12, 2026 Fireworks lists serverless inference (per-token, with a 50% cached-input discount and a 50% batch discount), on-demand GPUs at $7/hr (H100 80GB and H200 141GB), $10/hr (B200 180GB), and $12/hr (B300 288GB), embeddings from $0.008 per 1M input tokens, structured fine-tuning rates by model size, and reinforcement fine-tuning billed per GPU hour."
     source: https://fireworks.ai/pricing
     source_label: Fireworks AI pricing
     source_id: fireworks-ai-pricing
@@ -168,7 +168,7 @@ The buyer question is not "does this replace ChatGPT?" It is whether Fireworks g
 
 ## Pricing
 
-Fireworks uses usage-based pricing rather than a simple monthly SaaS plan. As of verification on 2026-06-02, the official pricing page lists:
+Fireworks uses usage-based pricing rather than a simple monthly SaaS plan. As of verification on 2026-06-12, the official pricing page lists:
 
 - **Serverless inference** billed per token, with pricing that varies by model size and selected model. Cached input tokens receive a **50%** discount, and the Batch API discounts both input and output by **50%** for asynchronous jobs. Postpaid billing with $1 in free starter credits.
 - **On-demand GPU deployments** billed per second:

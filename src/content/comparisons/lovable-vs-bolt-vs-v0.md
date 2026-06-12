@@ -16,7 +16,7 @@ canonical_fact_table: true
 
 # Lovable vs Bolt.new vs v0
 
-As of June 6, 2026, [Lovable](/tools/lovable/), [Bolt.new](/tools/bolt/), and [v0 by Vercel](/tools/v0/) are no longer interchangeable "AI design" toys. They are three different buying paths for people trying to turn an idea into working software.
+As of June 12, 2026, [Lovable](/tools/lovable/), [Bolt.new](/tools/bolt/), and [v0 by Vercel](/tools/v0/) are no longer interchangeable "AI design" toys. They are three different buying paths for people trying to turn an idea into working software.
 
 The clean decision: **Lovable is the best default for most founder-style app-builder buyers**, because its official docs frame it as a full-stack AI development platform for building, iterating on, and deploying web apps with frontend, backend, database, authentication, integrations, editable code, and GitHub workflow. **Bolt.new is the better pick when the buyer wants the whole build/run/debug loop in the browser**, especially for JavaScript-based websites, web apps, and mobile app starts. **v0 is the better pick when the buyer is already in the Vercel, React, Next.js, Tailwind, or shadcn/ui lane** and needs a high-fidelity web artifact, deploy, or pull request.
 

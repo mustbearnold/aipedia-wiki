@@ -127,7 +127,7 @@ Free, MIT-licensed autonomous AI agent from Nous Research ([hermes-agent.nousres
 
 Three features set it apart from a standard chatbot: persistent memory across restarts, auto-generated skills that the agent writes and refines from experience, and natural language cron scheduling that delivers recurring output to any connected platform.
 
-As of June 2, 2026, the official GitHub release stream is at v0.15.2 and the current docs/README describe a broader platform surface than the early spring build: 15+ messaging platforms, six terminal backends, MCP support, subagents, a Tool Gateway through Nous Portal, and provider switching across Nous Portal, OpenRouter, OpenAI, Anthropic-compatible routes, NovitaAI, NVIDIA NIM, z.ai/GLM, Kimi/Moonshot, MiniMax, Hugging Face, and custom endpoints.
+As of June 12, 2026, the official GitHub release stream is at v0.15.2 and the current docs/README describe a broader platform surface than the early spring build: 15+ messaging platforms, six terminal backends, MCP support, subagents, a Tool Gateway through Nous Portal, and provider switching across Nous Portal, OpenRouter, OpenAI, Anthropic-compatible routes, NovitaAI, NVIDIA NIM, z.ai/GLM, Kimi/Moonshot, MiniMax, Hugging Face, and custom endpoints.
 
 ## System Verdict
 

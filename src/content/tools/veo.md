@@ -123,7 +123,7 @@ price_history:
 
 # Google Veo 3.1
 
-Google Veo 3.1 is a frontier AI video model family from Google DeepMind. As of June 6, 2026, AiPedia ranks it as the best Google/API pick in AI video: strong native audio, vertical mobile output, 1080p/4K workflows, Gemini API pricing, Vertex AI access, and SynthID provenance.
+Google Veo 3.1 is a frontier AI video model family from Google DeepMind. As of June 12, 2026, AiPedia ranks it as the best Google/API pick in AI video: strong native audio, vertical mobile output, 1080p/4K workflows, Gemini API pricing, Vertex AI access, and SynthID provenance.
 
 **May 19, 2026 update:** [Google I/O 2026 added Gemini Omni and refreshed Google AI Ultra pricing](/news/2026-05-19-google-io-gemini-35-search-ai-ultra/). Veo 3.1 remains the source-backed API/Vertex AI video model on this page, but consumer video access now also needs to be compared against [Gemini Omni](/tools/gemini-omni/) and the new $100/$200 Ultra tiers.
 

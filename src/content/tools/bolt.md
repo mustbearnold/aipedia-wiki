@@ -161,7 +161,7 @@ quick_answer: >-
 
 Bolt.new is StackBlitz's browser-native AI app builder at [bolt.new](https://bolt.new). It lets users describe an idea, generate code, edit files, run the app, debug, manage Bolt Cloud resources, and publish without setting up a local development environment.
 
-As of June 6, 2026, the old "frontend prototype only" description is not good enough. Current Bolt docs describe Bolt Cloud databases, hosting, custom-domain support for Pro users, JavaScript-based backend support, GitHub integration, Figma integration, Stripe integration, Supabase integration, and a model-choice workflow. That makes Bolt a real app-builder buyer option, not just a sandbox.
+As of June 12, 2026, the old "frontend prototype only" description is not good enough. Current Bolt docs describe Bolt Cloud databases, hosting, custom-domain support for Pro users, JavaScript-based backend support, GitHub integration, Figma integration, Stripe integration, Supabase integration, and a model-choice workflow. That makes Bolt a real app-builder buyer option, not just a sandbox.
 
 The buying question is whether you want the browser itself to be the build environment. If yes, Bolt is one of the strongest tools in the category. If you want a guided founder MVP workflow with backend and less code-workspace feel, start with [Lovable](/tools/lovable/). If you are already living in Vercel, Next.js, Tailwind, and shadcn, start with [v0](/tools/v0/).
 
@@ -198,7 +198,7 @@ Do not pick Bolt because you think it eliminates engineering. It still needs rev
 | Stack limit | JavaScript-based web technologies; no PHP or Python backends |
 | Mobile limit | Mobile browsers are not fully supported yet |
 
-Every fact above was checked against official Bolt and StackBlitz sources on 2026-06-06. See Sources.
+Every fact above was checked against official Bolt and StackBlitz sources on 2026-06-12. See Sources.
 
 ## What Bolt Actually Is
 
@@ -210,7 +210,7 @@ The second moat is workflow compression. The same session can cover prompt-to-co
 
 ## Pricing
 
-Pricing was checked against [Bolt.new pricing](https://bolt.new/pricing) and [Bolt token docs](https://support.bolt.new/account-and-subscription/tokens) on 2026-06-06.
+Pricing was checked against [Bolt.new pricing](https://bolt.new/pricing) and [Bolt token docs](https://support.bolt.new/account-and-subscription/tokens) on 2026-06-12.
 
 | Plan | Current public price | Buyer fit |
 |---|---:|---|

@@ -143,7 +143,7 @@ quick_answer: >-
 
 # Lovable
 
-Lovable is an AI app builder at [lovable.dev](https://lovable.dev) for turning product descriptions into deployed web apps. As of June 6, 2026, the buying question is not "Can it make a demo?" It can. The better question is whether Lovable is the right place to spend credits, add backend logic, connect a database, and move toward a real launch without losing control of the code.
+Lovable is an AI app builder at [lovable.dev](https://lovable.dev) for turning product descriptions into deployed web apps. As of June 12, 2026, the buying question is not "Can it make a demo?" It can. The better question is whether Lovable is the right place to spend credits, add backend logic, connect a database, and move toward a real launch without losing control of the code.
 
 AiPedia's answer: Lovable is one of the strongest tools in the AI app-builder category for nontechnical founders and small teams. It earns that position because it combines prompt-based app generation, Lovable Cloud, native Supabase integration, GitHub sync, visual editing, and Code mode. It is weaker when the buyer only needs components, wants full stack choice from day one, or expects generated code to be production-grade without review.
 
@@ -178,7 +178,7 @@ The best first paid plan for most serious builders is **Pro 100 credits at $25/m
 | Code handoff | GitHub sync for backup, collaboration, local IDE work, and outside deployment |
 | Main risk | Credit/cloud burn plus production-readiness gaps if no engineer reviews the app |
 
-Every fact above was checked against official Lovable sources on 2026-06-06. See Sources.
+Every fact above was checked against official Lovable sources on 2026-06-12. See Sources.
 
 ## What Lovable Actually Is
 
@@ -206,7 +206,7 @@ The tradeoff is that the same breadth can hide real costs. Credits are usage-bas
 
 ## Pricing
 
-Pricing was checked against [Lovable pricing](https://lovable.dev/pricing) and [Lovable plans and credits](https://docs.lovable.dev/introduction/plans-and-credits) on 2026-06-06.
+Pricing was checked against [Lovable pricing](https://lovable.dev/pricing) and [Lovable plans and credits](https://docs.lovable.dev/introduction/plans-and-credits) on 2026-06-12.
 
 | Plan | Current public price | Credits and buyer fit |
 |---|---:|---|

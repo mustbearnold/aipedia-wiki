@@ -86,7 +86,7 @@ not_best_for:
   - teams that need predictable fixed video minutes rather than variable model credits
   - users who will waste monthly credits because they do not roll over
 quick_answer: >-
-  Hedra is no longer just "one portrait plus audio becomes a talking character." As of June 2, 2026, it is better understood as a pooled-credit AI media studio used by 20M+ users: Hedra character models sit next to Veo 3.1, Kling 2.6 Pro, Kling 2.5 Turbo, MiniMax Hailuo 2.3, image models, and voice generation. Pick it when you want model choice and fast creative iteration; skip it when you need predictable avatar-video minutes or enterprise training workflows.
+  Hedra is no longer just "one portrait plus audio becomes a talking character." As of June 12, 2026, it is better understood as a pooled-credit AI media studio used by 20M+ users: Hedra character models sit next to Veo 3.1, Kling 2.6 Pro, Kling 2.5 Turbo, MiniMax Hailuo 2.3, image models, and voice generation. Pick it when you want model choice and fast creative iteration; skip it when you need predictable avatar-video minutes or enterprise training workflows.
 price_history:
   - date: 2026-06-02
     plan: "Basic / Creator / Professional / Teams / Enterprise"
@@ -208,7 +208,7 @@ AiPedia refreshed this page on 2026-06-12 using Hedra's official home page, mode
 Hedra is best for creators and marketing teams that want character video plus broader AI media generation in one pooled-credit studio.
 
 **How much does Hedra cost?**
-As of 2026-06-02, Hedra lists Basic at $15/month, Creator at $30/month, Professional at $75/month, Teams at $75/month, and Enterprise at custom pricing.
+As of 2026-06-12, Hedra lists Basic at $15/month, Creator at $30/month, Professional at $75/month, Teams at $75/month, and Enterprise at custom pricing.
 
 **Does Hedra include Veo or Kling?**
 Hedra's models/pricing surface says Veo and Kling models are available inside Hedra Studio, and its pricing page lists current credit rates for Veo 3.1, Veo 3.1 Fast, Kling 2.6 Pro, Kling 2.5 Turbo, and other models.

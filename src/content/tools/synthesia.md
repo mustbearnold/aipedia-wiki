@@ -190,7 +190,7 @@ seo_title: "Synthesia Review: Pricing, Express-2 & Best Uses (June 2026)"
 meta_description: "Synthesia review updated June 12, 2026. Compare Basic, Starter, Creator, Enterprise, Express-2 avatars, API access, SCORM export, and alternatives."
 author: "aipedia.wiki Editorial"
 quick_answer: >-
-  Synthesia is the enterprise AI avatar video pick when the job is training, onboarding, compliance, sales enablement, PowerPoint-to-video, localization, or SCORM-ready presenter content. As of June 6, 2026, Express-2 is the current avatar engine story, Creator now matters because API access (360 minutes/year) appears on public pricing, the Studio Express Avatar add-on is a $1,000/year annual-only path to a Personal Avatar, and Enterprise is still the safer path for governance, unlimited minutes, SAML/SSO, brand kits, and SCORM workflows.
+  Synthesia is the enterprise AI avatar video pick when the job is training, onboarding, compliance, sales enablement, PowerPoint-to-video, localization, or SCORM-ready presenter content. As of June 12, 2026, Express-2 is the current avatar engine story, Creator now matters because API access (360 minutes/year) appears on public pricing, the Studio Express Avatar add-on is a $1,000/year annual-only path to a Personal Avatar, and Enterprise is still the safer path for governance, unlimited minutes, SAML/SSO, brand kits, and SCORM workflows.
 price_history:
   - date: 2026-05-13
     plan: "Basic"
@@ -284,7 +284,7 @@ Express-2 is Synthesia's current avatar-engine story. Synthesia describes it as 
 
 ## Pricing And Buying Advice
 
-As of June 6, 2026, Synthesia's public pricing lists:
+As of June 12, 2026, Synthesia's public pricing lists:
 
 - **Basic:** free, 1,200 credits/mo, up to 10 minutes of video/month or 25 AI-generated video assets, 9 stock avatars, no Personal Avatars.
 - **Starter:** $29/mo monthly or $18/mo annual, 14,500 credits/year on annual billing (about 120 video/dubbing minutes/year), 125+ stock avatars, 3 Personal Avatars, 1 editor and 3 guests, AI Dubbing, logo removal, and downloaded videos.

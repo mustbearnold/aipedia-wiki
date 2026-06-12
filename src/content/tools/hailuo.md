@@ -90,7 +90,7 @@ quick_answer: >-
 
 # Hailuo AI
 
-Hailuo AI is MiniMax's creator-facing AI video product. As of June 2, 2026, the current MiniMax video story is **Hailuo 2.3** and **Hailuo 2.3 Fast**, with product access through the Hailuo app and developer access through the MiniMax video generation API.
+Hailuo AI is MiniMax's creator-facing AI video product. As of June 12, 2026, the current MiniMax video story is **Hailuo 2.3** and **Hailuo 2.3 Fast**, with product access through the Hailuo app and developer access through the MiniMax video generation API.
 
 The buyer frame is simple: Hailuo is a good place to test short, fast, lower-cost clips. It should not be treated as the guaranteed best video model on the market without comparing current outputs against [Seedance](/tools/seedance/), [Kling](/tools/kling/), [Veo](/tools/veo/), and [Runway](/tools/runway/).
 
@@ -100,7 +100,7 @@ The buyer frame is simple: Hailuo is a good place to test short, fast, lower-cos
 >
 > **Skip Hailuo as your default if raw model quality is the only goal.** In the current AI video market, Seedance, Kling, Veo, and Runway deserve side-by-side testing before you decide. Hailuo's strongest role is value, speed, stylized clips, social concepts, and API experimentation, not a blanket "best video generator" claim.
 >
-> **Buyer warning:** Hailuo's consumer pricing and credit rules are dynamic. AiPedia can verify the official product, MiniMax token plans, and MiniMax API pricing pages on June 2, 2026, but exact Hailuo-app allowances should be checked inside the current account screen before any high-volume purchase.
+> **Buyer warning:** Hailuo's consumer pricing and credit rules are dynamic. AiPedia can verify the official product, MiniMax token plans, and MiniMax API pricing pages on June 12, 2026, but exact Hailuo-app allowances should be checked inside the current account screen before any high-volume purchase.
 
 ## Key Facts
 
