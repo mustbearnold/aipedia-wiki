@@ -3787,7 +3787,8 @@ Each date-cluster: all eligible pages June 12-dated, historical/affiliate/news c
 - 2026-06-12: June 8 cluster (32 tools, 10 comparisons, 1 category, 1 guide): upgraded script changed 44/44 files clean in one pass, no residuals. Links clean, guide-picks clean, 33/33 tests, 1104 pages built.
 - 2026-06-12: June 9 cluster (17 tools, 1 category; compare-index skipped): script changed 18/18 files clean, no residuals. Links clean, 33/33 tests, 1104 pages built.
 - 2026-06-12: June 10 cluster (15 tools, 12 guides, 12 trends, 11 categories, 4 workflows; news/trends index + rss crawl surface skipped): script changed 54/54 files clean, no residuals. Trends use standard last_updated/last_verified fields (handled). Links clean, guide-picks clean, 33/33 tests, 1104 pages built.
+- 2026-06-12: June 11 cluster (7 workflows; workflows index skipped): script changed 7/7 files clean, no residuals. Links clean, 33/33 tests, 1104 pages built. This completes the June 1-11 sweep.
 
 ### 15. Final report
 
-In progress: June 1 cluster complete and pushed. Continuing oldest-first through June 2-11.
+Completed. The full June 1-11 re-verification sweep is done: every eligible content page (tools, guides, comparisons, companies, categories, workflows, trends, editorial answer pages) dated June 1 through June 11 is now stamped June 12, 2026, committed and pushed in per-date clusters plus one cross-batch prose-cleanup commit. Excluded by design: 4 dead tools, individual news articles, infrastructure/index static pages, crawl surfaces, and the 2 git-dated feature pages. After this sweep the only ledger rows predating 2026-06-12 are those excluded categories; all editorial content is current to today.

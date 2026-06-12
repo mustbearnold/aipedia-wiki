@@ -47,13 +47,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-10 | /news/rss.xml | Crawl surface | No | git | src/pages/news/rss.xml.ts |
 | 2026-06-10 | /trends/ | Static page | Yes | git | src/pages/trends/index.astro |
 | 2026-06-11 | /workflows/ | Static page | Yes | git | src/pages/workflows/index.astro |
-| 2026-06-11 | /workflows/accountant-stack/ | Workflow | Yes | frontmatter | src/content/workflows/accountant-stack.md |
-| 2026-06-11 | /workflows/agency-sales-stack/ | Workflow | Yes | frontmatter | src/content/workflows/agency-sales-stack.md |
-| 2026-06-11 | /workflows/consultant-stack/ | Workflow | Yes | frontmatter | src/content/workflows/consultant-stack.md |
-| 2026-06-11 | /workflows/researcher-stack/ | Workflow | Yes | frontmatter | src/content/workflows/researcher-stack.md |
-| 2026-06-11 | /workflows/sdr-stack/ | Workflow | Yes | frontmatter | src/content/workflows/sdr-stack.md |
-| 2026-06-11 | /workflows/seo-content-pipeline/ | Workflow | Yes | frontmatter | src/content/workflows/seo-content-pipeline.md |
-| 2026-06-11 | /workflows/solo-founder-stack/ | Workflow | Yes | frontmatter | src/content/workflows/solo-founder-stack.md |
 | 2026-06-12 | / | Static page | Yes | git | src/pages/index.astro |
 | 2026-06-12 | /about/ | Static page | Yes | git | src/pages/about/index.astro |
 | 2026-06-12 | /about/our-stack/ | Static page | Yes | git | src/pages/about/our-stack.astro |
@@ -742,10 +735,17 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-12 | /trends/open-source-parity/ | Trend | Yes | frontmatter | src/content/trends/open-source-parity.md |
 | 2026-06-12 | /trends/sovereign-ai-procurement/ | Trend | Yes | frontmatter | src/content/trends/sovereign-ai-procurement.md |
 | 2026-06-12 | /trends/vibe-coding/ | Trend | Yes | frontmatter | src/content/trends/vibe-coding.md |
+| 2026-06-12 | /workflows/accountant-stack/ | Workflow | Yes | frontmatter | src/content/workflows/accountant-stack.md |
+| 2026-06-12 | /workflows/agency-sales-stack/ | Workflow | Yes | frontmatter | src/content/workflows/agency-sales-stack.md |
 | 2026-06-12 | /workflows/agentic-coding-workflow/ | Workflow | Yes | frontmatter | src/content/workflows/agentic-coding-workflow.md |
+| 2026-06-12 | /workflows/consultant-stack/ | Workflow | Yes | frontmatter | src/content/workflows/consultant-stack.md |
 | 2026-06-12 | /workflows/design-agency-replacement/ | Workflow | Yes | frontmatter | src/content/workflows/design-agency-replacement.md |
 | 2026-06-12 | /workflows/micro-saas-weekend-build/ | Workflow | Yes | frontmatter | src/content/workflows/micro-saas-weekend-build.md |
 | 2026-06-12 | /workflows/newsletter-stack/ | Workflow | Yes | frontmatter | src/content/workflows/newsletter-stack.md |
 | 2026-06-12 | /workflows/podcast-automation-stack/ | Workflow | Yes | frontmatter | src/content/workflows/podcast-automation-stack.md |
 | 2026-06-12 | /workflows/research-assistant-stack/ | Workflow | Yes | frontmatter | src/content/workflows/research-assistant-stack.md |
+| 2026-06-12 | /workflows/researcher-stack/ | Workflow | Yes | frontmatter | src/content/workflows/researcher-stack.md |
+| 2026-06-12 | /workflows/sdr-stack/ | Workflow | Yes | frontmatter | src/content/workflows/sdr-stack.md |
+| 2026-06-12 | /workflows/seo-content-pipeline/ | Workflow | Yes | frontmatter | src/content/workflows/seo-content-pipeline.md |
+| 2026-06-12 | /workflows/solo-founder-stack/ | Workflow | Yes | frontmatter | src/content/workflows/solo-founder-stack.md |
 | 2026-06-12 | /workflows/youtube-content-stack/ | Workflow | Yes | frontmatter | src/content/workflows/youtube-content-stack.md |

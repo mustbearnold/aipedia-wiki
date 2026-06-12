@@ -3,13 +3,13 @@ type: workflow
 slug: agency-sales-stack
 title: "The Agency Sales Stack (June 2026)"
 seo_title: "Agency Sales Stack: Apollo, Amplemarket, Unbounce, AdCreative, Beautiful.ai (2026)"
-meta_description: "Verified June 11, 2026: the working AI sales stack for marketing and creative agencies. Prospecting, outbound, landing pages, ad creative, decks, with honest pairings."
+meta_description: "Verified June 12, 2026: the working AI sales stack for marketing and creative agencies. Prospecting, outbound, landing pages, ad creative, decks, with honest pairings."
 description: "An assembled AI sales stack for marketing and creative agencies running new-business development at scale. Honest tool pairings by function, not a marketing list."
 stack: [apollo, amplemarket, unbounce, adcreative, beautiful-ai, reclaim-ai]
 tools_mentioned: [apollo, amplemarket, unbounce, adcreative, beautiful-ai, reclaim-ai, clay]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-11
-last_verified: 2026-06-11
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 related:
   - href: /workflows/sdr-stack/
@@ -34,7 +34,7 @@ related:
 
 A marketing or creative agency running new-business development has a specific problem: the work that produces revenue (client delivery) and the work that produces new revenue (sales) compete for the same finite team time. The right AI stack lets a small business-development function (often one or two people plus the founder) cover prospecting, outbound, demos, and proposals without distracting the delivery team.
 
-This stack is assembled from the tools that work for agencies of 10-50 people doing $100k-$2M/year in new business. AiPedia verified pricing and capabilities on June 11, 2026.
+This stack is assembled from the tools that work for agencies of 10-50 people doing $100k-$2M/year in new business. AiPedia verified pricing and capabilities on June 12, 2026.
 
 ## Function by function
 
@@ -97,7 +97,7 @@ Reclaim defends business-development focus blocks against client meeting load an
 
 ## Pricing Reality
 
-Verified June 11, 2026. Annual billing, usage credits, and checkout promotions vary, so model the stack in lanes:
+Verified June 12, 2026. Annual billing, usage credits, and checkout promotions vary, so model the stack in lanes:
 
 - **Apollo:** Basic is currently $49/seat/month billed annually, Professional $79/seat/month billed annually, and Organization $119/seat/month billed annually. Use Professional when A/B testing, dialer, and advanced sequencing matter.
 - **Amplemarket:** the public Startup plan starts at $600/month on an annual term with 2 users included. That makes it a named-account motion, not a casual add-on for every agency.
@@ -166,19 +166,19 @@ Lightly. The deeper deck analytics integration lives in Pitch and Decktopus. If 
 
 ## Sources
 
-- [Apollo](https://www.apollo.io/), verified 2026-06-11
-- [Apollo pricing](https://www.apollo.io/pricing), verified 2026-06-11
-- [Amplemarket](https://amplemarket.com/), verified 2026-06-11
-- [Amplemarket pricing](https://www.amplemarket.com/pricing), verified 2026-06-11
-- [Unbounce](https://unbounce.com/), verified 2026-06-11
-- [Unbounce pricing](https://unbounce.com/pricing/), verified 2026-06-11
-- [Unbounce Smart Traffic](https://unbounce.com/product/smart-traffic/), verified 2026-06-11
-- [AdCreative](https://www.adcreative.ai/), verified 2026-06-11
-- [AdCreative pricing](https://www.adcreative.ai/pricing), verified 2026-06-11
-- [Beautiful.ai](https://www.beautiful.ai/), verified 2026-06-11
-- [Beautiful.ai pricing](https://www.beautiful.ai/pricing), verified 2026-06-11
-- [Reclaim.ai](https://reclaim.ai/), verified 2026-06-11
-- [Reclaim pricing](https://reclaim.ai/pricing), verified 2026-06-11
+- [Apollo](https://www.apollo.io/), verified 2026-06-12
+- [Apollo pricing](https://www.apollo.io/pricing), verified 2026-06-12
+- [Amplemarket](https://amplemarket.com/), verified 2026-06-12
+- [Amplemarket pricing](https://www.amplemarket.com/pricing), verified 2026-06-12
+- [Unbounce](https://unbounce.com/), verified 2026-06-12
+- [Unbounce pricing](https://unbounce.com/pricing/), verified 2026-06-12
+- [Unbounce Smart Traffic](https://unbounce.com/product/smart-traffic/), verified 2026-06-12
+- [AdCreative](https://www.adcreative.ai/), verified 2026-06-12
+- [AdCreative pricing](https://www.adcreative.ai/pricing), verified 2026-06-12
+- [Beautiful.ai](https://www.beautiful.ai/), verified 2026-06-12
+- [Beautiful.ai pricing](https://www.beautiful.ai/pricing), verified 2026-06-12
+- [Reclaim.ai](https://reclaim.ai/), verified 2026-06-12
+- [Reclaim pricing](https://reclaim.ai/pricing), verified 2026-06-12
 
 Internal references:
 

@@ -3,13 +3,13 @@ type: workflow
 slug: accountant-stack
 title: "The Modern Bookkeeper and Accountant AI Stack (June 2026)"
 seo_title: "Modern Bookkeeper and Accountant AI Stack: Dext, Reclaim, SaneBox (2026)"
-meta_description: "Verified June 11, 2026: the working AI stack for independent bookkeepers and accounting practices. Dext for receipts, Reclaim for client work blocks, SaneBox for inbox."
+meta_description: "Verified June 12, 2026: the working AI stack for independent bookkeepers and accounting practices. Dext for receipts, Reclaim for client work blocks, SaneBox for inbox."
 description: "An assembled AI tool stack for independent bookkeepers, accountants, and small accounting practices managing multiple client books."
 stack: [dext, reclaim-ai, sanebox]
 tools_mentioned: [dext, reclaim-ai, sanebox, consensus]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-11
-last_verified: 2026-06-11
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 related:
   - href: /guides/best-ai-receipt-tool-for-bookkeepers/
@@ -34,7 +34,7 @@ related:
 
 A bookkeeper or accountant running multiple client books has a specific constraint: time on receipt entry is time not spent on client advisory. The right AI stack collapses the data-entry layer, defends the deep-work blocks where the actual accounting happens, and triages the email noise that comes with juggling 10-50 client relationships.
 
-AiPedia verified pricing on June 11, 2026.
+AiPedia verified pricing on June 12, 2026.
 
 ## Function by function
 
@@ -77,7 +77,7 @@ Three constraints specific to accounting work:
 
 ## Pricing Reality
 
-Verified June 11, 2026. Annual billing and promotions vary by vendor, so use these as checkout checks rather than guaranteed totals.
+Verified June 12, 2026. Annual billing and promotions vary by vendor, so use these as checkout checks rather than guaranteed totals.
 
 - **Dext:** practice pricing is per client per month, with Dext's help center pointing firms back to the official pricing page for the current quote and minimums. This is the line item that determines whether the stack is a solo-bookkeeper stack or a small-firm stack.
 - **Reclaim.ai:** use Free for a solo calendar test, then move to Starter or Business when scheduling range, integrations, or team controls matter; the public page currently shows Starter at $12/seat/month before any annual or promotional discount.
@@ -152,19 +152,19 @@ Different category. Ramp and Brex are corporate cards plus expense software that
 
 ## Sources
 
-- [Dext](https://dext.com/), verified 2026-06-11
-- [Dext Practice](https://dext.com/practices), verified 2026-06-11
-- [Dext practice pricing](https://dext.com/us/partner/pricing), verified 2026-06-11
-- [Dext plans for accountants and bookkeepers](https://help.dext.com/en/articles/273220-dext-plans-for-accountants-and-bookkeepers), verified 2026-06-11
-- [Reclaim.ai](https://reclaim.ai/), verified 2026-06-11
-- [Reclaim pricing](https://reclaim.ai/pricing), verified 2026-06-11
-- [SaneBox](https://www.sanebox.com/), verified 2026-06-11
-- [SaneBox pricing](https://www.sanebox.com/pricing), verified 2026-06-11
-- [Consensus](https://consensus.app/), verified 2026-06-11
-- [Consensus subscription plans](https://help.consensus.app/en/articles/10087865-subscription-plans), verified 2026-06-11
-- [Hubdoc QuickBooks add-on](https://www.hubdoc.com/quickbooks), verified 2026-06-11
-- [AutoEntry pricing](https://www.autoentry.com/pricing), verified 2026-06-11
-- [Ramp pricing](https://ramp.com/pricing), verified 2026-06-11
+- [Dext](https://dext.com/), verified 2026-06-12
+- [Dext Practice](https://dext.com/practices), verified 2026-06-12
+- [Dext practice pricing](https://dext.com/us/partner/pricing), verified 2026-06-12
+- [Dext plans for accountants and bookkeepers](https://help.dext.com/en/articles/273220-dext-plans-for-accountants-and-bookkeepers), verified 2026-06-12
+- [Reclaim.ai](https://reclaim.ai/), verified 2026-06-12
+- [Reclaim pricing](https://reclaim.ai/pricing), verified 2026-06-12
+- [SaneBox](https://www.sanebox.com/), verified 2026-06-12
+- [SaneBox pricing](https://www.sanebox.com/pricing), verified 2026-06-12
+- [Consensus](https://consensus.app/), verified 2026-06-12
+- [Consensus subscription plans](https://help.consensus.app/en/articles/10087865-subscription-plans), verified 2026-06-12
+- [Hubdoc QuickBooks add-on](https://www.hubdoc.com/quickbooks), verified 2026-06-12
+- [AutoEntry pricing](https://www.autoentry.com/pricing), verified 2026-06-12
+- [Ramp pricing](https://ramp.com/pricing), verified 2026-06-12
 
 Internal references:
 
