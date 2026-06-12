@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2025-03
-last_updated: 2026-05-24
-last_verified: 2026-05-24
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 seo_title: "Manus: Features, Pricing & Review (2026)"
 meta_description: "Manus is a general-purpose autonomous agent now described by its official site as part of Meta. Free tier includes starter and daily credits; paid Pro plans start at $20/mo. Verify credit burn and data handling before using it for sensitive work."
@@ -34,7 +34,7 @@ facts:
     source: "https://manus.im/pricing"
     source_label: "Source"
     source_id: manus-pricing
-    verified_at: 2026-05-24
+    verified_at: 2026-06-12
     volatility: medium
     confidence: medium
   pricing_anchor:
@@ -42,7 +42,7 @@ facts:
     source: "https://manus.im/pricing"
     source_label: "Source"
     source_id: manus-pricing
-    verified_at: 2026-05-24
+    verified_at: 2026-06-12
     next_review_at: 2026-08-24
     volatility: high
     confidence: medium
@@ -51,7 +51,7 @@ facts:
     source: "https://manus.im/pricing"
     source_label: "Source"
     source_id: manus-pricing
-    verified_at: 2026-05-24
+    verified_at: 2026-06-12
     next_review_at: 2026-08-24
     volatility: high
     confidence: medium
@@ -173,7 +173,7 @@ Current plans via [manus.im/pricing](https://manus.im/pricing):
 
 Credits scale with task complexity. A chat-style question can cost under 50 credits. A deep research run covering dozens of sources typically burns 500 to 900 credits.
 
-Prices re-verified 2026-05-24 against the current [Manus pricing page](https://manus.im/pricing) and Manus help/source pages. The most important May 24 change is ownership language: the official site now describes Manus as part of Meta.
+Prices re-verified 2026-06-12 against the current [Manus pricing page](https://manus.im/pricing) and Manus help/source pages. The most important May 24 change is ownership language: the official site now describes Manus as part of Meta.
 
 ## Against the alternatives
 
@@ -196,7 +196,7 @@ Prices re-verified 2026-05-24 against the current [Manus pricing page](https://m
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-05-24 against the [Manus pricing page](https://manus.im/pricing), official Manus help/source pages, and current official ownership language.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-12 against the [Manus pricing page](https://manus.im/pricing), official Manus help/source pages, and current official ownership language.
 
 ## FAQ
 

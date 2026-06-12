@@ -11,8 +11,8 @@ pricing_model: paid
 price_range: $89-$899+/month
 status: active
 launched: 2024-01
-last_updated: 2026-05-24
-last_verified: 2026-05-24
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -35,7 +35,7 @@ facts:
     source: "https://omniseo.com"
     source_label: "OmniSEO homepage"
     source_id: omniseo-official
-    verified_at: 2026-05-24
+    verified_at: 2026-06-12
     volatility: medium
     confidence: medium
   pricing_anchor:
@@ -43,7 +43,7 @@ facts:
     source: "https://omniseo.com/pricing/"
     source_label: "Source"
     source_id: omniseo-pricing
-    verified_at: 2026-05-24
+    verified_at: 2026-06-12
     next_review_at: 2026-08-24
     volatility: high
     confidence: medium
@@ -52,12 +52,12 @@ facts:
     source: "https://omniseo.com/pricing/"
     source_label: "Source"
     source_id: omniseo-pricing
-    verified_at: 2026-05-24
+    verified_at: 2026-06-12
     next_review_at: 2026-08-24
     volatility: high
     confidence: medium
 tags: [ai-seo, ai-visibility, aeo, llm-visibility, geo, brand-monitoring, ai-search, citation-tracking]
-seo_title: 'OmniSEO: Features, Pricing & Review (May 2026)'
+seo_title: 'OmniSEO: Features, Pricing & Review (June 2026)'
 meta_description: >-
   OmniSEO is an AI Visibility Platform. Essentials starts at $89/mo for 4 AI channels; Professional is $349/mo for 10 channels; Enterprise starts at $899+/mo. Best for brands tracking AI-search visibility.
 author: "aipedia.wiki Editorial"
@@ -138,11 +138,11 @@ The product category is still young. The practical question is not "does OmniSEO
 | **Core workflows** | Prompt tracking · competitor analysis · citation analytics · placement recommendations · AI Brand Research |
 | **Pricing** | Essentials $89/mo · Professional $349/mo · Enterprise $899+/mo |
 | **Annual billing** | Two months free listed on public pricing page |
-| **First-month promo** | 50% off Essentials and Professional, verified live on 2026-05-24 |
+| **First-month promo** | 50% off Essentials and Professional, verified live on 2026-06-12 |
 | **Annual billing** | Two months free ($890/yr Essentials, $3,490/yr Professional) |
 | **Free tool** | AI Brand Research lookup |
 
-Every data point above was verified against OmniSEO's published pages on 2026-05-24. See Sources.
+Every data point above was verified against OmniSEO's published pages on 2026-06-12. See Sources.
 
 ## Recent changes
 
@@ -189,7 +189,7 @@ Subscription pricing via [omniseo.com/pricing](https://omniseo.com/pricing/):
 | Professional | $349/mo | 10 AI channels, 100 saved prompts/month, 5 competitors, 10 seats |
 | Enterprise | $899+/mo | 10+ channels, custom regions/model cohorts, 500+ saved prompts/month, monthly AEO/GEO consultations, unlimited seats |
 
-The public pricing page showed 50% off the first month for Essentials ($45) and Professional ($175), verified again on 2026-05-24. Annual billing is listed as two months free ($890/yr Essentials, $3,490/yr Professional). Verify checkout totals before purchase because promotions can change.
+The public pricing page showed 50% off the first month for Essentials ($45) and Professional ($175), verified again on 2026-06-12. Annual billing is listed as two months free ($890/yr Essentials, $3,490/yr Professional). Verify checkout totals before purchase because promotions can change.
 
 ## Against the alternatives
 
@@ -215,7 +215,7 @@ The public pricing page showed 50% off the first month for Essentials ($45) and 
 
 This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average).
 
-Last verified 2026-05-24 against OmniSEO's homepage, pricing page, and AI Brand Research page.
+Last verified 2026-06-12 against OmniSEO's homepage, pricing page, and AI Brand Research page.
 
 ## FAQ
 

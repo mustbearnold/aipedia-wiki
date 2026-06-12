@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: $0-$39/user/month
 status: active
 launched: 2009-01
-last_updated: 2026-05-24
-last_verified: 2026-05-24
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -35,7 +35,7 @@ facts:
     source: "https://prezi.com/"
     source_label: "Prezi homepage"
     source_id: prezi-official
-    verified_at: 2026-05-24
+    verified_at: 2026-06-12
     volatility: medium
     confidence: medium
   pricing_anchor:
@@ -43,7 +43,7 @@ facts:
     source: "https://prezi.com/pricing/"
     source_label: "Source"
     source_id: prezi-pricing
-    verified_at: 2026-05-24
+    verified_at: 2026-06-12
     next_review_at: 2026-08-24
     volatility: high
     confidence: medium
@@ -52,12 +52,12 @@ facts:
     source: "https://prezi.com/pricing/"
     source_label: "Source"
     source_id: prezi-pricing
-    verified_at: 2026-05-24
+    verified_at: 2026-06-12
     next_review_at: 2026-08-24
     volatility: high
     confidence: medium
 tags: [presentations, non-linear-presentation, prezi-ai, prezi-video, zoom-pan, storytelling, ai-presentation]
-seo_title: 'Prezi: Features, Pricing & Review (May 2026)'
+seo_title: 'Prezi: Features, Pricing & Review (June 2026)'
 meta_description: >-
   Prezi is the non-linear presentation platform. Prezi AI generates full presentations from a prompt; Prezi Video puts presenters on-screen alongside content; the zoom-and-pan canvas breaks the slide format. Standard starts at $7/mo annually, with Plus, Premium, Teams, and Education plans.
 author: "aipedia.wiki Editorial"
@@ -144,7 +144,7 @@ The AI era brought **Prezi AI**, a prompt-to-deck generator that builds a full p
 | **Accessibility** | Collaborative editing, commenting, presentation sharing |
 | **Team controls** | Brand kit · SSO · admin controls on Teams/Business |
 
-Every data point above verified against Prezi's published pricing and support sources on 2026-05-24. Exact checkout totals can vary by country, currency, tax, billing cycle, and promotional treatment.
+Every data point above verified against Prezi's published pricing and support sources on 2026-06-12. Exact checkout totals can vary by country, currency, tax, billing cycle, and promotional treatment.
 
 ## What it actually is
 
@@ -191,7 +191,7 @@ Subscription pricing via [prezi.com/pricing](https://prezi.com/pricing):
 
 Actual checkout rates can vary with monthly billing, annual billing, region, taxes, and promotional periods. Verify current exact rates against [prezi.com/pricing](https://prezi.com/pricing) before major pricing citations.
 
-Prices and AI-plan access verified 2026-05-24 via Prezi's public pricing pages and support materials.
+Prices and AI-plan access verified 2026-06-12 via Prezi's public pricing pages and support materials.
 
 ## Against the alternatives
 
@@ -220,7 +220,7 @@ Prices and AI-plan access verified 2026-05-24 via Prezi's public pricing pages a
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-24 against the [Prezi homepage](https://prezi.com/), [Prezi pricing](https://prezi.com/pricing/), and Prezi support materials.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-12 against the [Prezi homepage](https://prezi.com/), [Prezi pricing](https://prezi.com/pricing/), and Prezi support materials.
 
 ## FAQ
 

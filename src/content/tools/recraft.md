@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$48/month"
 status: active
 launched: 2022-12
-last_updated: 2026-05-24
-last_verified: 2026-05-24
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 seo_title: "Recraft: Features, Pricing & Review (2026)"
 meta_description: "Recraft V4 is the vector-native AI image generator for design assets, readable text, SVG-style output, and brand-consistent graphics. Free tier with daily credits; paid plans start at $10/month."
@@ -34,7 +34,7 @@ facts:
     source: "https://www.recraft.ai/pricing"
     source_label: "Source"
     source_id: recraft-pricing
-    verified_at: 2026-05-24
+    verified_at: 2026-06-12
     volatility: medium
     confidence: medium
   pricing_anchor:
@@ -42,7 +42,7 @@ facts:
     source: "https://www.recraft.ai/pricing"
     source_label: "Source"
     source_id: recraft-pricing
-    verified_at: 2026-05-24
+    verified_at: 2026-06-12
     next_review_at: 2026-08-24
     volatility: high
     confidence: medium
@@ -51,7 +51,7 @@ facts:
     source: "https://www.recraft.ai/pricing"
     source_label: "Source"
     source_id: recraft-pricing
-    verified_at: 2026-05-24
+    verified_at: 2026-06-12
     next_review_at: 2026-08-24
     volatility: high
     confidence: medium
@@ -172,7 +172,7 @@ API pricing via [recraft.ai/api](https://www.recraft.ai/api):
 | Raster image | $0.04 | All non-vector styles |
 | Vector image | $0.08 | SVG output with real paths |
 
-Prices verified 2026-05-24 via [Recraft pricing](https://www.recraft.ai/pricing), [Recraft V4 docs](https://www.recraft.ai/docs/recraft-models/recraft-V4), and Recraft FAQ language on ownership, rollovers, and API access.
+Prices verified 2026-06-12 via [Recraft pricing](https://www.recraft.ai/pricing), [Recraft V4 docs](https://www.recraft.ai/docs/recraft-models/recraft-V4), and Recraft FAQ language on ownership, rollovers, and API access.
 
 ## Against the alternatives
 
@@ -198,7 +198,7 @@ Prices verified 2026-05-24 via [Recraft pricing](https://www.recraft.ai/pricing)
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-24 against [Recraft pricing](https://www.recraft.ai/pricing), [Recraft V4 docs](https://www.recraft.ai/docs/recraft-models/recraft-V4), [Recraft API](https://www.recraft.ai/api), and [Recraft company registration](https://find-and-update.company-information.service.gov.uk/company/14525957).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-12 against [Recraft pricing](https://www.recraft.ai/pricing), [Recraft V4 docs](https://www.recraft.ai/docs/recraft-models/recraft-V4), [Recraft API](https://www.recraft.ai/api), and [Recraft company registration](https://find-and-update.company-information.service.gov.uk/company/14525957).
 
 ## FAQ
 

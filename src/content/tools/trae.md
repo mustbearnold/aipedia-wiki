@@ -11,10 +11,10 @@ pricing_model: freemium
 price_range: "$0-$100/month"
 status: active
 launched: 2025-01
-last_updated: 2026-05-24
-last_verified: 2026-05-24
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
-seo_title: "Trae: ByteDance's AI IDE Review & Pricing (May 2026)"
+seo_title: "Trae: ByteDance's AI IDE Review & Pricing (June 2026)"
 meta_description: "Trae is ByteDance's VS Code fork with SOLO agent mode, Claude, GPT, DeepSeek and Gemini models, and token-based pricing from $0 free through $100 Ultra. Lite at $3/mo is the cheapest way to reach Claude and GPT inside an IDE."
 author: "aipedia.wiki Editorial"
 affiliate:
@@ -34,7 +34,7 @@ facts:
     source: "https://www.trae.ai/pricing"
     source_label: "Source"
     source_id: trae-pricing
-    verified_at: 2026-05-24
+    verified_at: 2026-06-12
     volatility: medium
     confidence: medium
   pricing_anchor:
@@ -42,7 +42,7 @@ facts:
     source: "https://www.trae.ai/pricing"
     source_label: "Source"
     source_id: trae-pricing
-    verified_at: 2026-05-24
+    verified_at: 2026-06-12
     next_review_at: 2026-08-24
     volatility: high
     confidence: medium
@@ -51,7 +51,7 @@ facts:
     source: "https://www.trae.ai/pricing"
     source_label: "Source"
     source_id: trae-pricing
-    verified_at: 2026-05-24
+    verified_at: 2026-06-12
     next_review_at: 2026-08-24
     volatility: high
     confidence: medium
@@ -166,7 +166,7 @@ A VS Code fork with ByteDance's AI layer bolted in at the editor level. Users im
 
 ## Pricing
 
-Subscription pricing verified 2026-05-24 via [trae.ai/pricing](https://www.trae.ai/pricing):
+Subscription pricing verified 2026-06-12 via [trae.ai/pricing](https://www.trae.ai/pricing):
 
 | Plan | Price | What's included | Who's it for |
 |---|---|---|---|
@@ -182,7 +182,7 @@ Models available across paid tiers span Claude, OpenAI, DeepSeek, and Gemini rou
 
 Usage is metered on a token pool per tier, not unlimited. This shifted on February 18, 2026 from the prior fully-free Pro feature set.
 
-Prices verified 2026-05-24 via [Trae pricing page](https://www.trae.ai/pricing) and current official plan comparison text.
+Prices verified 2026-06-12 via [Trae pricing page](https://www.trae.ai/pricing) and current official plan comparison text.
 
 ## Against the alternatives
 
@@ -208,7 +208,7 @@ Prices verified 2026-05-24 via [Trae pricing page](https://www.trae.ai/pricing) 
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-24 against [trae.ai/pricing](https://www.trae.ai/pricing) and current official plan comparison text.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-12 against [trae.ai/pricing](https://www.trae.ai/pricing) and current official plan comparison text.
 
 ## FAQ
 

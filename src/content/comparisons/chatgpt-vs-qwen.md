@@ -5,11 +5,11 @@ title: "ChatGPT vs Qwen"
 tools: [chatgpt, qwen]
 category: ai-chatbots
 winner: depends
-seo_title: "ChatGPT vs Qwen: ChatGPT app or Qwen open models? (May 2026)"
+seo_title: "ChatGPT vs Qwen: ChatGPT app or Qwen open models? (June 2026)"
 meta_description: "ChatGPT vs Qwen, verified May 24, 2026. Compare GPT-5.5 in ChatGPT with Qwen3.7-Max, Alibaba Qwen open weights, hosted API pricing, and developer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-24
-last_verified: 2026-05-24
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -22,7 +22,7 @@ canonical_fact_table: true
 
 Choose **ChatGPT** for the all-purpose app: GPT-5.5 is available in ChatGPT and Codex for paid tiers, OpenAI lists Plus at $20/month and Pro at $200/month, and the product bundles model routing, files, image tools, voice, browsing, projects, and workspace features. Choose **Qwen** when your team wants open weights under Apache 2.0, hosted Qwen3.7-Max, Qwen Chat testing, Hugging Face/ModelScope downloads, or Qwen Cloud / Model Studio API pricing that varies by exact model and token usage.
 
-Verified May 24, 2026 against OpenAI, ChatGPT, Qwen, Qwen Cloud, Alibaba Cloud Model Studio, and Hugging Face sources.
+Verified June 12, 2026 against OpenAI, ChatGPT, Qwen, Qwen Cloud, Alibaba Cloud Model Studio, and Hugging Face sources.
 
 ## Decision Snapshot
 

@@ -3503,3 +3503,74 @@ Antigravity's Opus support FAQ risks overclaiming: mitigated by stating only tha
 ### 15. Final report
 
 Completed. All five May 20-23 tool rows (`/tools/antigravity/`, `/tools/gemini-omni/`, `/tools/gpt-image-2/`, `/tools/imagen/`, `/tools/cohere/`) now carry June 12, 2026 verification with no pricing changes found. Antigravity and Cohere now reference Opus 4.8 as the Anthropic flagship per site canon. GPT Image 2 gained a June 12 unchanged-pricing history row. `PAGE_REFRESH_LEDGER.md` regenerated clean and all validation commands passed. Next oldest live rows: the 2026-05-24 cluster (`/answers/best-ai-chatbot-2026/`, `/compare/chatgpt-vs-qwen/`, `/compare/cursor-vs-claude-code-vs-copilot/`, and 10 tool pages including codex, manus, nightcafe, omniseo, prezi, read-ai, recraft, rodin, trae, typeface).
+
+---
+
+## ExecPlan: June 12 2026 May 24 Cluster Refresh
+
+### 1. Objective
+
+Continue the oldest-to-newest live ledger refresh with the 13-page 2026-05-24 cluster: `/answers/best-ai-chatbot-2026/`, `/compare/chatgpt-vs-qwen/`, `/compare/cursor-vs-claude-code-vs-copilot/`, and 10 tool pages (codex, manus, nightcafe, omniseo, prezi, read-ai, recraft, rodin, trae, typeface), bumping each to June 12, 2026.
+
+### 2. Current state
+
+All 13 routes carry 2026-05-24 (or 05-22/23 for some verification stamps) dates, "(May 2026)" SEO titles, May-dated facts `verified_at` stamps, and "May 24, 2026"/"May 2026" body verification copy. All 10 tools are `status: active` (verified before editing).
+
+### 3. Target state
+
+All 13 pages carry 2026-06-12 frontmatter/facts/verification dates and June 2026 wording, with historical price-history rows and dated changelog bullets preserved unchanged. The ledger reflects the batch.
+
+### 4. Scope
+
+Included: the 13 listed source files, `PAGE_REFRESH_LEDGER.md`, and this plan. Excluded: dead tools, news article pages, category hubs (no hardcoded references required edits), and rows newer than 2026-05-24.
+
+### 5. Files likely affected
+
+The 10 tool records under `src/content/tools/`, both comparisons under `src/content/comparisons/`, `src/pages/answers/best-ai-chatbot-2026.astro`, `PAGE_REFRESH_LEDGER.md`, and this plan.
+
+### 6. Data model impact
+
+No schema changes; dates and month wording refreshed in place.
+
+### 7. SEO impact
+
+Removes "(May 2026)" SEO titles and May-dated verification strings from 12 sitemap-included pages plus one answers page.
+
+### 8. Conversion impact
+
+No pricing figures changed; existing verified pricing re-stamped as re-checked June 12.
+
+### 9. Mobile UX impact
+
+Text-only edits; no responsive changes.
+
+### 10. Implementation steps
+
+1. Confirm all 10 tools are status: active.
+2. Survey date-sensitive strings across all 13 files.
+3. Batch-apply date bumps with a script that skips price_history blocks and dated changelog bullets.
+4. Grep-verify no stray stale strings; fix the answers-page footer date individually.
+5. Regenerate ledger, run validation suite, commit, push.
+
+### 11. Verification commands
+
+`npm run ledger:pages`, `npm run ledger:pages:check`, `npm run guard:check`, `npm run check:links`, `npm run audit:sources`, `npm run audit:facts`, `npm run test:scripts`, `npm run check`, `npm run build:fast`.
+
+### 12. Acceptance criteria
+
+All 13 pages show June 12, 2026 dates with historical entries preserved, internal links clean, ledger regenerates clean, all validation commands pass.
+
+### 13. Risks and mitigations
+
+Batch date substitution risks corrupting dated internal `/news/` URLs on lines that also contain verification language. This occurred in codex.md's Methodology line (9 news slugs mangled); caught immediately by `npm run check:links` and restored to original dates before commit. Mitigation for future batches: exclude `/news/` URL substrings from date substitution.
+
+### 14. Progress log
+
+- 2026-06-12: Confirmed all 10 tools active; surveyed date strings across the 13 files.
+- 2026-06-12: Batch-applied June 12 date bumps (frontmatter, facts verified_at, SEO titles, body verification copy, month references) preserving price-history rows and dated changelog bullets; fixed the answers-page source-check footer.
+- 2026-06-12: `check:links` caught 9 mangled news slugs in codex.md's Methodology line from the batch substitution; restored original dated slugs and re-verified clean.
+- 2026-06-12: Regenerated `PAGE_REFRESH_LEDGER.md`; full validation suite passed (33/33 script tests, 1104 pages built, indexability and CTA audits clean, 0 vulnerabilities).
+
+### 15. Final report
+
+Completed. All 13 May 24 cluster pages now carry June 12, 2026 verification with no pricing changes found. Historical price-history rows and dated news references preserved (codex.md's mangled slugs restored). Ledger regenerated clean; all validation passed. Next oldest live rows: the 2026-05-26 cluster (guides: best-ai-for-meeting-notes, best-ai-meeting-assistant-for-customer-success-teams, best-ai-phone-system-for-smb-sales-and-support-teams, otter-ai-alternatives; tools: adobe-firefly, beehiiv, blackbox-ai, cloudtalk, and others).
