@@ -7,8 +7,8 @@ meta_description: "Sora by OpenAI shut down in March 2026. Migration guide to Kl
 author: "aipedia.wiki Editorial"
 died: 2026-03-24
 cause: shutdown
-last_updated: 2026-04-30
-last_verified: 2026-04-30
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 ---
 
 # Sora - Discontinued
@@ -35,11 +35,11 @@ Video lacked competitive edge against rivals improving faster on benchmarks.[3] 
 
 ## Current Alternatives
 
-- **Kling 3.0:** Leads ELO benchmarks for quality, motion, and physics. Standard plan at $10/month offers strong value.[../tools/kling.md]
-- **Seedance 2.0:** ByteDance model with generous free tier. Excels in character consistency and rhythmic content.[../tools/seedance.md]
-- **Runway Gen-4.5:** Provides cinematic output with controls for motion and style. Suited for professionals.[../tools/runway.md]
-- **Luma Dream Machine 3:** Fast generation speeds and high-fidelity scenes. Good for iterative workflows.[../tools/luma.md]
-- **Hailuo AI:** MiniMax model strong on realism and long clips. Competitive pricing for high-volume use.[../tools/hailuo.md]
+- **[Kling 3.0](../tools/kling.md):** Leads ELO benchmarks for quality, motion, and physics. Standard plan at $10/month offers strong value.
+- **[Seedance 2.0](../tools/seedance.md):** ByteDance model with generous free tier. Excels in character consistency and rhythmic content.
+- **[Runway Gen-4.5](../tools/runway.md):** Provides cinematic output with controls for motion and style. Suited for professionals.
+- **[Luma Dream Machine 3](../tools/luma.md):** Fast generation speeds and high-fidelity scenes. Good for iterative workflows.
+- **[Hailuo AI](../tools/hailuo.md):** MiniMax model strong on realism and long clips. Competitive pricing for high-volume use.
 
 ## Lessons
 

@@ -14,8 +14,8 @@ acquired_by: ""
 seo_title: "Clipdrop: What Happened? (Discontinued)"
 meta_description: "Stability AI shut down Clipdrop in May 2024 amid financial difficulties. Here's what Clipdrop did, why it closed, and the best alternatives."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-30
-last_verified: 2026-04-30
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 ---
 
 # Clipdrop (Discontinued)
@@ -42,7 +42,7 @@ Key factors included parent company overspending on funding from a 2022 $1 billi
 
 ## Current Alternatives
 
-Replacements for Clipdrop's features as of 2026-04-15:
+Replacements for Clipdrop's features as of June 2026:
 
 - **[Adobe Firefly](../tools/adobe-firefly.md)** - background removal, generative fill, relighting; commercial-grade with copyright protections
 - **[Canva](../tools/canva.md)** - background remover, magic eraser, AI generation in design platform

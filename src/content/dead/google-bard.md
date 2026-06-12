@@ -14,8 +14,8 @@ acquired_by: "Google (rebranded to Gemini)"
 seo_title: "Google Bard: What Happened? (Rebranded to Gemini)"
 meta_description: "Google Bard was rebranded to Google Gemini in February 2024. Learn what Bard was, why Google renamed it, and what changed in the transition."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-30
-last_verified: 2026-04-30
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 ---
 
 # Google Bard (Discontinued)
@@ -42,7 +42,7 @@ Competitive needs drove the change: Bard's playful name contrasted with serious 
 
 ## Current Alternatives
 
-Bard functionality continues in [Google Gemini](../tools/gemini.md). Other active AI chatbots as of 2026-04-15 include:
+Bard functionality continues in [Google Gemini](../tools/gemini.md). Other active AI chatbots as of June 2026 include:
 
 - **[ChatGPT](../tools/chatgpt.md)**, mature conversational AI with broad capabilities
 - **[Claude](../tools/claude.md)**, excels in long-context tasks and writing

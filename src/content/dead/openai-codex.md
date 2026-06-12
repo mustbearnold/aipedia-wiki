@@ -14,13 +14,15 @@ acquired_by: ""
 seo_title: "OpenAI Codex: What Happened? (Discontinued)"
 meta_description: "OpenAI Codex API was deprecated on March 23, 2023. Learn what it was, why OpenAI shut it down, and the best alternatives for AI coding today."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-30
-last_verified: 2026-04-30
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 ---
 
 # OpenAI Codex (Discontinued)
 
 OpenAI Codex was a dedicated API for AI code generation based on GPT-3 and fine-tuned on public GitHub code. OpenAI shut it down on March 23, 2023, because newer models like GPT-3.5-Turbo and later successors outperformed it on coding tasks.[1][2]
+
+> **Not the same as today's Codex.** This page covers the original 2021 to 2023 Codex completion API. OpenAI later reused the Codex name for its current coding agent (the Codex CLI and cloud agent, now running on the GPT-5.5 Codex model). That product is active and unrelated to the deprecated API below.
 
 ## What It Was
 
@@ -48,7 +50,7 @@ Current replacements for Codex API users include:
 - **[Cursor](../tools/cursor.md)**, AI-powered code editor with frontier model support
 - **[Aider](../tools/aider.md)**, Open-source CLI tool for AI-assisted coding
 - **[Claude Code](../tools/claude-code.md)**, Anthropic's coding interface via API and apps
-- **[Codeium](../tools/codeium.md)**, Free AI coding autocomplete for multiple IDEs
+- **[Windsurf (formerly Codeium)](../tools/codeium.md)**, AI coding autocomplete and agent, now part of Cognition's stack
 
 ## Lessons
 

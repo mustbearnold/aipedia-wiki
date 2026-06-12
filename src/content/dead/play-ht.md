@@ -8,8 +8,8 @@ author: "aipedia.wiki Editorial"
 died: 2025-12-31
 cause: acquired
 acquired_by: Meta
-last_updated: 2026-04-30
-last_verified: 2026-04-30
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 ---
 
 # Play.ht -- Discontinued

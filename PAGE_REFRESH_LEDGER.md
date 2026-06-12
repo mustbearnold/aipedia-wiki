@@ -11,14 +11,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 
 | Last updated | Page | Type | Sitemap | Date source | Source file |
 | --- | --- | --- | --- | --- | --- |
-| 2026-04-30 | /dead/bing-chat/ | Dead tool archive | Yes | frontmatter | src/content/dead/bing-chat.md |
-| 2026-04-30 | /dead/google-bard/ | Dead tool archive | Yes | frontmatter | src/content/dead/google-bard.md |
-| 2026-04-30 | /dead/gpt-3-api/ | Dead tool archive | Yes | frontmatter | src/content/dead/gpt-3-api.md |
-| 2026-04-30 | /dead/meta-imagine/ | Dead tool archive | Yes | frontmatter | src/content/dead/meta-imagine.md |
-| 2026-04-30 | /dead/openai-codex/ | Dead tool archive | Yes | frontmatter | src/content/dead/openai-codex.md |
-| 2026-04-30 | /dead/play-ht/ | Dead tool archive | Yes | frontmatter | src/content/dead/play-ht.md |
-| 2026-04-30 | /dead/sora/ | Dead tool archive | Yes | frontmatter | src/content/dead/sora.md |
-| 2026-04-30 | /dead/stability-ai-clipdrop/ | Dead tool archive | Yes | frontmatter | src/content/dead/stability-ai-clipdrop.md |
 | 2026-05-02 | /tools/phind/ | Tool | Yes | frontmatter | src/content/tools/phind.md |
 | 2026-05-04 | /tools/tome/ | Tool | Yes | frontmatter | src/content/tools/tome.md |
 | 2026-05-05 | /tools/dalle/ | Tool | Yes | frontmatter | src/content/tools/dalle.md |
@@ -351,6 +343,14 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-12 | /compare/surfer-vs-semrush-vs-ahrefs/ | Comparison | Yes | frontmatter | src/content/comparisons/surfer-vs-semrush-vs-ahrefs.md |
 | 2026-06-12 | /compare/veo-vs-kling/ | Comparison | Yes | frontmatter | src/content/comparisons/veo-vs-kling.md |
 | 2026-06-12 | /compare/veo-vs-seedance/ | Comparison | Yes | frontmatter | src/content/comparisons/veo-vs-seedance.md |
+| 2026-06-12 | /dead/bing-chat/ | Dead tool archive | Yes | working tree | src/content/dead/bing-chat.md |
+| 2026-06-12 | /dead/google-bard/ | Dead tool archive | Yes | working tree | src/content/dead/google-bard.md |
+| 2026-06-12 | /dead/gpt-3-api/ | Dead tool archive | Yes | working tree | src/content/dead/gpt-3-api.md |
+| 2026-06-12 | /dead/meta-imagine/ | Dead tool archive | Yes | working tree | src/content/dead/meta-imagine.md |
+| 2026-06-12 | /dead/openai-codex/ | Dead tool archive | Yes | working tree | src/content/dead/openai-codex.md |
+| 2026-06-12 | /dead/play-ht/ | Dead tool archive | Yes | working tree | src/content/dead/play-ht.md |
+| 2026-06-12 | /dead/sora/ | Dead tool archive | Yes | working tree | src/content/dead/sora.md |
+| 2026-06-12 | /dead/stability-ai-clipdrop/ | Dead tool archive | Yes | working tree | src/content/dead/stability-ai-clipdrop.md |
 | 2026-06-12 | /explore/ | Static page | Yes | git | src/pages/explore/index.astro |
 | 2026-06-12 | /guides/ | Static page | Yes | git | src/pages/guides/index.astro |
 | 2026-06-12 | /guides/ai-agency-stack/ | Guide | Yes | frontmatter | src/content/use-cases/ai-agency-stack.md |

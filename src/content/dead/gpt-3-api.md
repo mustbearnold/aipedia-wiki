@@ -14,8 +14,8 @@ acquired_by: ""
 seo_title: "GPT-3 API (text-davinci): What Happened? (Deprecated)"
 meta_description: "OpenAI deprecated GPT-3's text-davinci models on January 4, 2024. Learn what they were, what replaced them, and how to migrate."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-30
-last_verified: 2026-04-30
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 ---
 
 # GPT-3 API (text-davinci Models) Shutdown
@@ -42,9 +42,9 @@ Retaining infrastructure for low-usage models proved inefficient as capabilities
 
 ## Current Alternatives
 
-Teams replacing text-davinci models use these active APIs as of 2026-04-15:
+Teams replacing text-davinci models use these active APIs as of June 2026:
 
-- **[gpt-5.1-chat-latest](../tools/chatgpt.md)** via OpenAI API: Successor post-GPT-4o shutdown on February 16, 2026; handles text generation with top performance.[1][2]
+- **[GPT-5.5](../tools/chatgpt.md)** via OpenAI API: Current flagship line after the GPT-4o shutdown on February 16, 2026; handles text generation with top performance.[1][2]
 - **[Claude](../tools/claude.md)** via Anthropic API: Matches GPT capabilities for writing; reduces OpenAI reliance.[1]
 - **[Gemini](../tools/gemini.md)** via Google API: Competitive on instruction tasks; viable migration option.[1]
 - **Llama 4 (open-source)**: Self-hostable at low cost; approaches closed-model quality for text tasks.[1]

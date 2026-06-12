@@ -14,8 +14,8 @@ acquired_by: ""
 seo_title: "Meta Imagine: What Happened? (Merged into Meta AI)"
 meta_description: "Meta Imagine at imagine.meta.com was shut down in mid-2024 as Meta consolidated all AI features into Meta AI. Here's what changed and where to find it now."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-04-30
-last_verified: 2026-04-30
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 ---
 
 # Meta Imagine (Discontinued)
@@ -42,7 +42,7 @@ Platform unification reduced fragmentation; a dedicated image site confused user
 
 ## Current Alternatives
 
-Image generation remains free in [Meta AI](https://meta.ai). Dedicated tools alive as of 2026-04-15:
+Image generation remains free in [Meta AI](https://meta.ai). Dedicated tools alive as of June 2026:
 
 - **[Adobe Firefly](../tools/adobe-firefly.md)**: Commercially safe images with Creative Cloud tools.
 - **[Ideogram](../tools/ideogram.md)**: Strong free tier and text rendering.
