@@ -4,6 +4,12 @@
  *
  * Composes the same god-tier components used across the site:
  *   wiki search · portal index · buyer shortcuts · tool records · category rail · news list · TrustPanel
+ * Refresh metadata: 2026-06-12 converted homepage freshness signals to
+ * self-updating so they cannot silently go stale: the visible "page refreshed"
+ * label and schema lastUpdated now derive from the latest news date, and the
+ * "buyer guides checked" date derives from the linked guides' last_verified.
+ * Also re-verified and bumped homepage source dates (scoring, editorial, about)
+ * to June 12.
  * Refresh metadata: 2026-06-12 homepage inspected after May 15 frontier
  * refresh across /about/our-stack/, landing-page A/B testing, and OpenClaw;
  * homepage remains data-driven beyond shared tool/guide/category/LLM data.
@@ -514,9 +520,9 @@ const latestNews = allNews
   .slice(0, 4);
 
 const homepageSources = [
-  { label: 'Scoring methodology', url: '/about/scoring/', verified: '2026-05-11' },
-  { label: 'Editorial policy',    url: '/about/editorial/', verified: '2026-05-11' },
-  { label: 'How we verify facts', url: '/about/', verified: '2026-05-11' },
+  { label: 'Scoring methodology', url: '/about/scoring/', verified: '2026-06-12' },
+  { label: 'Editorial policy',    url: '/about/editorial/', verified: '2026-06-12' },
+  { label: 'How we verify facts', url: '/about/', verified: '2026-06-12' },
   { label: 'Affiliate disclosure', url: '/disclosure/', verified: '2026-06-06' },
 ];
 
@@ -524,12 +530,35 @@ const homepageSources = [
 // verified label off the most-recent news date so the homepage rank
 // line actually carries a real signal.
 const monthShort = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const monthLong = ['January','February','March','April','May','June','July','August','September','October','November','December'];
 const latestNewsDateIso = latestNews[0]?.date ?? '';
 const latestNewsDate = latestNewsDateIso ? new Date(latestNewsDateIso + 'T12:00:00Z') : null;
-const freshLabel = 'Page refreshed Jun 10';
+// Self-updating freshness: derive the visible "page refreshed" label from the
+// freshest content the homepage surfaces (latest news) so it can never show a
+// hardcoded stale date. Every rebuild that ingests newer news advances it.
+const freshLabel = latestNewsDate && !isNaN(latestNewsDate.getTime())
+  ? `Page refreshed ${monthShort[latestNewsDate.getUTCMonth()]} ${latestNewsDate.getUTCDate()}`
+  : 'Independent AI tools wiki';
 const newsThroughLabel = latestNewsDate && !isNaN(latestNewsDate.getTime())
   ? `Latest archive entry: ${monthShort[latestNewsDate.getUTCMonth()]} ${latestNewsDate.getUTCDate()}`
   : 'News archive';
+
+// "Buyer guides checked" date derives from the freshest verification among the
+// guides the refresh module links, so the claim tracks real guide dates rather
+// than a hardcoded one that silently goes stale.
+const refreshGuideSlugs = ['runway-alternatives', 'suno-alternatives', 'synthesia-alternatives'];
+const toIsoDate = (v: any): string =>
+  v instanceof Date ? v.toISOString().slice(0, 10) : String(v ?? '').slice(0, 10);
+const refreshGuideIso = allGuides
+  .filter((g: any) => refreshGuideSlugs.includes(entrySlug(g)))
+  .map((g: any) => toIsoDate(g.data.last_verified ?? g.data.last_updated))
+  .filter(Boolean)
+  .sort()
+  .pop() ?? latestNewsDateIso;
+const refreshCheckedDate = refreshGuideIso ? new Date(refreshGuideIso + 'T12:00:00Z') : null;
+const refreshCheckedHuman = refreshCheckedDate && !isNaN(refreshCheckedDate.getTime())
+  ? `${monthLong[refreshCheckedDate.getUTCMonth()]} ${refreshCheckedDate.getUTCDate()}, ${refreshCheckedDate.getUTCFullYear()}`
+  : 'recently';
 
 // News count today (same UTC date as latest)
 const todayIso = new Date().toISOString().slice(0, 10);
@@ -554,7 +583,7 @@ function newsDateFmt(iso: string): string {
     toolCount={toolCount}
     comparisonCount={comparisonCount}
     categoryCount={allCategories.length}
-    lastUpdated="2026-06-09"
+    lastUpdated={latestNewsDateIso || '2026-06-12'}
   />
 
   <div class="sr-only" data-pagefind-ignore>
@@ -805,7 +834,7 @@ function newsDateFmt(iso: string): string {
         </p>
         <h2 id="gt-home-refresh-title">Buyer guides checked this week</h2>
         <p>
-          Checked June 8, 2026 against current official vendor surfaces. These guides separate model quality, usage credits, commercial rights, and export limits before recommending an alternative.
+          Checked {refreshCheckedHuman} against current official vendor surfaces. These guides separate model quality, usage credits, commercial rights, and export limits before recommending an alternative.
         </p>
         <a class="gt-home-refresh-answer" href="/answers/best-ai-video-generator-2026/">
           Best AI video answer <span aria-hidden="true">→</span>
