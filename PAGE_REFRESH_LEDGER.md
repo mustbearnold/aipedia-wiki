@@ -11,13 +11,10 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 
 | Last updated | Page | Type | Sitemap | Date source | Source file |
 | --- | --- | --- | --- | --- | --- |
-| 2026-06-01 | /about/editorial/ | Static page | Yes | git | src/pages/about/editorial.astro |
-| 2026-06-01 | /demo-godtier/ | Static page | Yes | git | src/pages/demo-godtier.astro |
 | 2026-06-01 | /glossary/ | Static page | Yes | git | src/pages/glossary/index.astro |
 | 2026-06-01 | /privacy/ | Static page | Yes | git | src/pages/privacy.astro |
 | 2026-06-01 | /robots.txt | Crawl surface | No | git | public/robots.txt |
 | 2026-06-01 | /terms/ | Static page | Yes | git | src/pages/terms.astro |
-| 2026-06-01 | /tool-finder/ | Static page | No | git | src/pages/tool-finder.astro |
 | 2026-06-02 | /404/ | Static page | No | git | src/pages/404.astro |
 | 2026-06-02 | /about/scoring/ | Static page | Yes | git | src/pages/about/scoring.astro |
 | 2026-06-02 | /companies/ | Static page | Yes | git | src/pages/companies/index.astro |
@@ -747,5 +744,8 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-12 | /workflows/seo-content-pipeline/ | Workflow | Yes | frontmatter | src/content/workflows/seo-content-pipeline.md |
 | 2026-06-12 | /workflows/solo-founder-stack/ | Workflow | Yes | frontmatter | src/content/workflows/solo-founder-stack.md |
 | 2026-06-12 | /workflows/youtube-content-stack/ | Workflow | Yes | frontmatter | src/content/workflows/youtube-content-stack.md |
-| 2026-06-13 | /search/ | Static page | No | working tree | src/pages/search.astro |
-| 2026-06-13 | /stack-builder/ | Static page | Yes | working tree | src/pages/stack-builder/index.astro |
+| 2026-06-13 | /about/editorial/ | Static page | Yes | working tree | src/pages/about/editorial.astro |
+| 2026-06-13 | /demo-godtier/ | Static page | Yes | working tree | src/pages/demo-godtier.astro |
+| 2026-06-13 | /search/ | Static page | No | git | src/pages/search.astro |
+| 2026-06-13 | /stack-builder/ | Static page | Yes | git | src/pages/stack-builder/index.astro |
+| 2026-06-13 | /tool-finder/ | Static page | No | working tree | src/pages/tool-finder.astro |
