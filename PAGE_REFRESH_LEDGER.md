@@ -26,7 +26,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-17 | /search/ | Static page | No | git | src/pages/search.astro |
 | 2026-05-17 | /stack-builder/ | Static page | Yes | git | src/pages/stack-builder/index.astro |
 | 2026-06-01 | /about/editorial/ | Static page | Yes | git | src/pages/about/editorial.astro |
-| 2026-06-01 | /admin/reviews/ | Static page | No | git | src/pages/admin/reviews.astro |
 | 2026-06-01 | /demo-godtier/ | Static page | Yes | git | src/pages/demo-godtier.astro |
 | 2026-06-01 | /glossary/ | Static page | Yes | git | src/pages/glossary/index.astro |
 | 2026-06-01 | /privacy/ | Static page | Yes | git | src/pages/privacy.astro |
@@ -50,6 +49,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-12 | / | Static page | Yes | git | src/pages/index.astro |
 | 2026-06-12 | /about/ | Static page | Yes | git | src/pages/about/index.astro |
 | 2026-06-12 | /about/our-stack/ | Static page | Yes | git | src/pages/about/our-stack.astro |
+| 2026-06-12 | /admin/reviews/ | Static page | No | git | src/pages/admin/reviews.astro |
 | 2026-06-12 | /answers/best-ai-chatbot-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-chatbot-2026.astro |
 | 2026-06-12 | /answers/best-ai-coding-tool-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-coding-tool-2026.astro |
 | 2026-06-12 | /answers/best-ai-for-students/ | Static page | Yes | page metadata | src/pages/answers/best-ai-for-students.astro |
