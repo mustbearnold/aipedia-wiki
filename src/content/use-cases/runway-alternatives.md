@@ -7,8 +7,8 @@ meta_description: "June 2026 buyer guide to Runway alternatives: Seedance for fr
 description: "Source-backed buyer guide to choosing Runway alternatives for frontier video models, image-to-video, API workflows, creator pipelines, social clips, and avatar-video edge cases."
 tools_mentioned: [runway, seedance, kling, veo, luma, pika, hailuo, heygen, synthesia]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-07
-last_verified: 2026-06-07
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 guide_picks:
   best_overall:
@@ -41,7 +41,7 @@ guide_picks:
 
 [Runway](/tools/runway/) is still one of the safest AI video workspaces for production-minded creators. The mistake is treating "Runway alternative" as one job. In June 2026, you might be replacing a **video model**, an **editor**, a **credit/API route**, a **creator workflow**, or an **avatar-video system**. Those are different purchases.
 
-Verified June 7, 2026 against current Runway, Google, Seedance, Kling, Luma, Pika, Hailuo, HeyGen, and Synthesia source paths where available. AiPedia may earn from some outbound links, but rankings are editorial and affiliate relationships do not affect placement.
+Verified June 12, 2026 against current Runway, Google, Seedance, Kling, Luma, Pika, Hailuo, HeyGen, and Synthesia source paths where available. AiPedia may earn from some outbound links, but rankings are editorial and affiliate relationships do not affect placement.
 
 ## Quick Verdict
 
@@ -162,15 +162,15 @@ Only if the video is avatar-led training, sales, onboarding, localization, or in
 
 ## Sources
 
-- [Runway API pricing](https://docs.dev.runwayml.com/guides/pricing/) (verified 2026-06-07)
-- [Runway credits help](https://help.runwayml.com/hc/en-us/articles/15124877443219-How-do-credits-work) (verified 2026-06-07)
-- [Runway Standard plan details](https://help.runwayml.com/hc/en-us/articles/49191105352339-Standard-plan-details) (verified 2026-06-07)
-- [Runway unused credits help](https://help.runwayml.com/hc/en-us/articles/23987639973267-Will-unused-credits-carry-over-after-my-billing-day) (verified 2026-06-07)
-- [Runway Gen-4 video help](https://help.runwayml.com/hc/en-us/articles/37327109429011-Creating-with-Gen-4-Video) (verified 2026-06-07)
-- [ByteDance Seedance 2.0](https://seed.bytedance.com/en/seedance2_0) (verified 2026-06-07)
-- [Veo 3.1 Gemini API video docs](https://ai.google.dev/gemini-api/docs/video) (verified 2026-06-07)
-- [Veo 3.1 Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing) (verified 2026-06-07)
-- [Kling AI pricing](https://klingai.com/pricing) (verified 2026-06-07)
-- [Pika pricing](https://pika.art/pricing) (verified 2026-06-07)
-- [HeyGen API pricing](https://developers.heygen.com/docs/pricing) (verified 2026-06-07)
-- [Synthesia pricing help](https://help.synthesia.io/en/articles/8517240-which-synthesia-pricing-plans-are-available) (verified 2026-06-07)
+- [Runway API pricing](https://docs.dev.runwayml.com/guides/pricing/) (verified 2026-06-12)
+- [Runway credits help](https://help.runwayml.com/hc/en-us/articles/15124877443219-How-do-credits-work) (verified 2026-06-12)
+- [Runway Standard plan details](https://help.runwayml.com/hc/en-us/articles/49191105352339-Standard-plan-details) (verified 2026-06-12)
+- [Runway unused credits help](https://help.runwayml.com/hc/en-us/articles/23987639973267-Will-unused-credits-carry-over-after-my-billing-day) (verified 2026-06-12)
+- [Runway Gen-4 video help](https://help.runwayml.com/hc/en-us/articles/37327109429011-Creating-with-Gen-4-Video) (verified 2026-06-12)
+- [ByteDance Seedance 2.0](https://seed.bytedance.com/en/seedance2_0) (verified 2026-06-12)
+- [Veo 3.1 Gemini API video docs](https://ai.google.dev/gemini-api/docs/video) (verified 2026-06-12)
+- [Veo 3.1 Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing) (verified 2026-06-12)
+- [Kling AI pricing](https://klingai.com/pricing) (verified 2026-06-12)
+- [Pika pricing](https://pika.art/pricing) (verified 2026-06-12)
+- [HeyGen API pricing](https://developers.heygen.com/docs/pricing) (verified 2026-06-12)
+- [Synthesia pricing help](https://help.synthesia.io/en/articles/8517240-which-synthesia-pricing-plans-are-available) (verified 2026-06-12)

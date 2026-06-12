@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "Freemium; pricing is region/account-gated"
 status: active
 launched: 2024-08
-last_updated: 2026-06-07
-last_verified: 2026-06-07
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 seo_title: "Jimeng AI: Features, Pricing & Review (June 2026)"
 meta_description: "Jimeng (即梦) is ByteDance's Chinese-market creative app for image and video, paired with Dreamina/CapCut internationally. Public official pages confirm image, video, canvas, Seedream 5.0 Lite, and Seedance 2.0 context; pricing is region/account-gated."
@@ -34,7 +34,7 @@ facts:
     source: https://jimeng.jianying.com/
     source_label: Jimeng AI official site
     source_id: jimeng-official
-    verified_at: '2026-06-07'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-12-07'
@@ -44,7 +44,7 @@ facts:
     source: https://dreamina.capcut.com/
     source_label: Dreamina CapCut portal
     source_id: jimeng-pricing
-    verified_at: '2026-06-07'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: medium
     next_review_at: '2026-08-07'
@@ -54,7 +54,7 @@ facts:
     source: https://jimeng.jianying.com/
     source_label: Jimeng AI official site
     source_id: jimeng-official
-    verified_at: '2026-06-07'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-12-07'
@@ -64,7 +64,7 @@ facts:
     source: https://www.volcengine.com/docs/508/23757
     source_label: Volcengine image/video infrastructure
     source_id: jimeng-volcengine
-    verified_at: '2026-06-07'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-12-07'
@@ -74,7 +74,7 @@ facts:
     source: https://jimeng.jianying.com/
     source_label: Jimeng AI official site
     source_id: jimeng-official
-    verified_at: '2026-06-07'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-07'
@@ -147,7 +147,7 @@ The engine is two ByteDance model families. **Seedream 5.0 Lite** handles image 
 | **International access** | Dreamina availability and feature access can vary by region |
 | **API posture** | Not a clean public developer platform; use ByteDance Seed/BytePlus routes for model/API checks |
 
-Every data point above was rechecked on 2026-06-07. Exact pricing remains account-gated. See Sources.
+Every data point above was rechecked on 2026-06-12. Exact pricing remains account-gated. See Sources.
 
 ## What it actually is
 
@@ -215,7 +215,7 @@ Historical third-party coverage has cited Jimeng from 69 RMB/mo and Dreamina in 
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies model and pricing claims against primary sources, and generates the editorial analysis readers see. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-07 against the [Jimeng official site](https://jimeng.jianying.com/), [Dreamina CapCut portal](https://dreamina.capcut.com/), [ByteDance Seed models page](https://seed.bytedance.com/en/models), [Seedream 5.0 Lite announcement](https://seed.bytedance.com/en/blog/deeper-thinking-more-accurate-generation-introducing-seedream-5-0-lite), [Seedance 2.0 official launch](https://seed.bytedance.com/en/blog/seedance-2-0-official-launch), and current pricing-route checks.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies model and pricing claims against primary sources, and generates the editorial analysis readers see. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-12 against the [Jimeng official site](https://jimeng.jianying.com/), [Dreamina CapCut portal](https://dreamina.capcut.com/), [ByteDance Seed models page](https://seed.bytedance.com/en/models), [Seedream 5.0 Lite announcement](https://seed.bytedance.com/en/blog/deeper-thinking-more-accurate-generation-introducing-seedream-5-0-lite), [Seedance 2.0 official launch](https://seed.bytedance.com/en/blog/seedance-2-0-official-launch), and current pricing-route checks.
 
 ## FAQ
 
@@ -239,11 +239,11 @@ Yes, but exact free credits, seconds, watermarks, and model access are route-spe
 
 ## Sources
 
-- [Jimeng official site](https://jimeng.jianying.com/): official Chinese-market app surface, verified 2026-06-07
-- [Dreamina portal on CapCut](https://dreamina.capcut.com/): official international creative route, verified 2026-06-07
-- [ByteDance Seed models](https://seed.bytedance.com/en/models): official Seedream and Seedance family list, verified 2026-06-07
-- [ByteDance Seedream 5.0 Lite announcement](https://seed.bytedance.com/en/blog/deeper-thinking-more-accurate-generation-introducing-seedream-5-0-lite): online search and image-generation capability source, verified 2026-06-07
-- [ByteDance Seedance 2.0 official launch](https://seed.bytedance.com/en/blog/seedance-2-0-official-launch): video, editing, extension, and audio capability source, verified 2026-06-07
+- [Jimeng official site](https://jimeng.jianying.com/): official Chinese-market app surface, verified 2026-06-12
+- [Dreamina portal on CapCut](https://dreamina.capcut.com/): official international creative route, verified 2026-06-12
+- [ByteDance Seed models](https://seed.bytedance.com/en/models): official Seedream and Seedance family list, verified 2026-06-12
+- [ByteDance Seedream 5.0 Lite announcement](https://seed.bytedance.com/en/blog/deeper-thinking-more-accurate-generation-introducing-seedream-5-0-lite): online search and image-generation capability source, verified 2026-06-12
+- [ByteDance Seedance 2.0 official launch](https://seed.bytedance.com/en/blog/seedance-2-0-official-launch): video, editing, extension, and audio capability source, verified 2026-06-12
 - [TechCrunch: Dreamina Seedance 2.0 comes to CapCut](https://techcrunch.com/2026/03/26/bytedances-new-ai-video-generation-model-dreamina-seedance-2-0-comes-to-capcut/): March 2026 international rollout coverage
 - [Atlas Cloud Seedance 2.0 pricing breakdown](https://www.atlascloud.ai/blog/case-studies/seedance-2.0-pricing-full-cost-breakdown-2026): third-party historical pricing context; not treated as current official rate-card proof
 

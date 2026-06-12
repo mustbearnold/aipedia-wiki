@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$20-$750/month; enterprise custom"
 status: active
 launched: 2023-08
-last_updated: 2026-06-07
-last_verified: 2026-06-07
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 seo_title: "Julius AI: Features, Pricing & Review (June 2026)"
 meta_description: "Julius AI is a data-analysis workspace for files, notebooks, live databases, Slack Agent, charts, slides, and scheduled reports. June 2026 pricing now uses credits: Plus $20, Pro $45, Max $200, Ultra $500, Business $450, Growth $750."
@@ -35,7 +35,7 @@ facts:
     source: https://julius.ai/
     source_label: Julius AI official site
     source_id: julius-official
-    verified_at: '2026-06-07'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-12-07'
@@ -45,7 +45,7 @@ facts:
     source: https://julius.ai/pricing
     source_label: Julius AI pricing
     source_id: julius-pricing
-    verified_at: '2026-06-07'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-07'
@@ -55,7 +55,7 @@ facts:
     source: https://julius.ai/docs/data-connectors/overview
     source_label: Julius data connector docs
     source_id: julius-connectors
-    verified_at: '2026-06-07'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-12-07'
@@ -65,7 +65,7 @@ facts:
     source: https://julius.ai/pricing
     source_label: Julius AI pricing
     source_id: julius-pricing
-    verified_at: '2026-06-07'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-12-07'
@@ -75,7 +75,7 @@ facts:
     source: https://julius.ai/docs/billing/credits-overview
     source_label: Julius credits docs
     source_id: julius-credits
-    verified_at: '2026-06-07'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-12-07'
@@ -152,7 +152,7 @@ The June 7 buyer change is pricing. Julius now presents usage credits instead of
 | **Team surface** | Slack Agent, scheduled reports, shared connectors, custom agents, dashboards on higher plans |
 | **Output** | Charts, tables, slides, HTML artifacts, images, code/queries, and written explanations |
 
-Every data point above was reverified against vendor sources on 2026-06-07. See Sources.
+Every data point above was reverified against vendor sources on 2026-06-12. See Sources.
 
 ## What it actually is
 
@@ -193,7 +193,7 @@ Plans via [julius.ai/pricing](https://julius.ai/pricing). Annual billing is adve
 | Growth | $750 | $625/mo | 120,000 credits, up to 30 seats | Startup/org rollout with knowledge base, data dictionary, dashboards, support |
 | Enterprise | Custom | Custom | Custom/unlimited | Large orgs needing custom security, procurement, and deployment terms |
 
-*Prices reverified 2026-06-07 via [Julius pricing](https://julius.ai/pricing), [credits docs](https://julius.ai/docs/billing/credits-overview), and the [billing update](https://julius.ai/content/billing-update-messages-to-usage-credits).*
+*Prices reverified 2026-06-12 via [Julius pricing](https://julius.ai/pricing), [credits docs](https://julius.ai/docs/billing/credits-overview), and the [billing update](https://julius.ai/content/billing-update-messages-to-usage-credits).*
 
 ## Against the alternatives
 
@@ -218,7 +218,7 @@ Plans via [julius.ai/pricing](https://julius.ai/pricing). Annual billing is adve
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis shown here. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-07 against [Julius pricing](https://julius.ai/pricing), [Julius credits docs](https://julius.ai/docs/billing/credits-overview), the [billing update](https://julius.ai/content/billing-update-messages-to-usage-credits), [data connector docs](https://julius.ai/docs/data-connectors/overview), and [Slack Agent docs](https://julius.ai/docs/slack-agent/overview).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis shown here. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-12 against [Julius pricing](https://julius.ai/pricing), [Julius credits docs](https://julius.ai/docs/billing/credits-overview), the [billing update](https://julius.ai/content/billing-update-messages-to-usage-credits), [data connector docs](https://julius.ai/docs/data-connectors/overview), and [Slack Agent docs](https://julius.ai/docs/slack-agent/overview).
 
 ## FAQ
 
@@ -250,9 +250,9 @@ Start with ChatGPT or Claude when the job is one-off file analysis or general re
 
 ## Sources
 
-- [Julius AI pricing](https://julius.ai/pricing): current public plans, credits, seats, RAM, connectors, Slack Agent, and export features, verified 2026-06-07
-- [Julius credits overview](https://julius.ai/docs/billing/credits-overview): credit-based billing explanation, verified 2026-06-07
-- [Julius billing update](https://julius.ai/content/billing-update-messages-to-usage-credits): transition from messages to usage credits, verified 2026-06-07
-- [Julius data connector overview](https://julius.ai/docs/data-connectors/overview): supported databases, MCP, built-in data tools, and security notes, verified 2026-06-07
-- [Julius Slack Agent overview](https://julius.ai/docs/slack-agent/overview): Slack data-analysis and scheduled-report workflow, verified 2026-06-07
-- [Julius scheduled Slack reports](https://julius.ai/docs/slack-agent/slack-reports): recurring notebook-to-Slack reporting, verified 2026-06-07
+- [Julius AI pricing](https://julius.ai/pricing): current public plans, credits, seats, RAM, connectors, Slack Agent, and export features, verified 2026-06-12
+- [Julius credits overview](https://julius.ai/docs/billing/credits-overview): credit-based billing explanation, verified 2026-06-12
+- [Julius billing update](https://julius.ai/content/billing-update-messages-to-usage-credits): transition from messages to usage credits, verified 2026-06-12
+- [Julius data connector overview](https://julius.ai/docs/data-connectors/overview): supported databases, MCP, built-in data tools, and security notes, verified 2026-06-12
+- [Julius Slack Agent overview](https://julius.ai/docs/slack-agent/overview): Slack data-analysis and scheduled-report workflow, verified 2026-06-12
+- [Julius scheduled Slack reports](https://julius.ai/docs/slack-agent/slack-reports): recurring notebook-to-Slack reporting, verified 2026-06-12

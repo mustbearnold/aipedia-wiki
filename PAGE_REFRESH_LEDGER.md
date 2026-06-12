@@ -39,33 +39,9 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-06 | /answers/ | Static page | Yes | git | src/pages/answers/index.astro |
 | 2026-06-06 | /disclosure/ | Static page | Yes | page metadata | src/pages/disclosure.astro |
 | 2026-06-06 | /sitemap-index.xml | Crawl surface | No | git | astro.config.mjs |
-| 2026-06-07 | /answers/best-ai-for-writing-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-for-writing-2026.astro |
-| 2026-06-07 | /answers/best-ai-image-generator-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-image-generator-2026.astro |
-| 2026-06-07 | /answers/best-ai-video-generator-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-video-generator-2026.astro |
-| 2026-06-07 | /answers/best-ai-voice-generator-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-voice-generator-2026.astro |
-| 2026-06-07 | /answers/chatgpt-alternatives-2026/ | Static page | Yes | page metadata | src/pages/answers/chatgpt-alternatives-2026.astro |
-| 2026-06-07 | /answers/is-midjourney-worth-it/ | Static page | Yes | page metadata | src/pages/answers/is-midjourney-worth-it.astro |
 | 2026-06-07 | /dead/ | Static page | Yes | page metadata | src/pages/dead/index.astro |
-| 2026-06-07 | /guides/canva-ai-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/canva-ai-alternatives.md |
-| 2026-06-07 | /guides/chatgpt-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/chatgpt-alternatives.md |
-| 2026-06-07 | /guides/claude-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/claude-alternatives.md |
-| 2026-06-07 | /guides/cursor-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/cursor-alternatives.md |
-| 2026-06-07 | /guides/deepseek-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/deepseek-alternatives.md |
-| 2026-06-07 | /guides/elevenlabs-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/elevenlabs-alternatives.md |
-| 2026-06-07 | /guides/gemini-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/gemini-alternatives.md |
-| 2026-06-07 | /guides/github-copilot-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/github-copilot-alternatives.md |
-| 2026-06-07 | /guides/grammarly-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/grammarly-alternatives.md |
-| 2026-06-07 | /guides/jasper-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/jasper-alternatives.md |
-| 2026-06-07 | /guides/midjourney-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/midjourney-alternatives.md |
-| 2026-06-07 | /guides/perplexity-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/perplexity-alternatives.md |
-| 2026-06-07 | /guides/runway-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/runway-alternatives.md |
-| 2026-06-07 | /guides/suno-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/suno-alternatives.md |
-| 2026-06-07 | /guides/synthesia-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/synthesia-alternatives.md |
 | 2026-06-07 | /media-kit/ | Static page | Yes | git | src/pages/media-kit.astro |
 | 2026-06-07 | /reports/ | Static page | Yes | git | src/pages/reports/index.astro |
-| 2026-06-07 | /reports/2026-04/ | Report | Yes | frontmatter | src/content/reports/2026-04.md |
-| 2026-06-07 | /tools/jimeng/ | Tool | Yes | frontmatter | src/content/tools/jimeng.md |
-| 2026-06-07 | /tools/julius/ | Tool | Yes | frontmatter | src/content/tools/julius.md |
 | 2026-06-08 | /categories/ai-presentation/ | Category | Yes | frontmatter | src/content/categories/ai-presentation.md |
 | 2026-06-08 | /compare/beautiful-ai-vs-tome/ | Comparison | Yes | frontmatter | src/content/comparisons/beautiful-ai-vs-tome.md |
 | 2026-06-08 | /compare/chatgpt-vs-phind/ | Comparison | Yes | frontmatter | src/content/comparisons/chatgpt-vs-phind.md |
@@ -200,9 +176,15 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-12 | /answers/best-ai-chatbot-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-chatbot-2026.astro |
 | 2026-06-12 | /answers/best-ai-coding-tool-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-coding-tool-2026.astro |
 | 2026-06-12 | /answers/best-ai-for-students/ | Static page | Yes | page metadata | src/pages/answers/best-ai-for-students.astro |
+| 2026-06-12 | /answers/best-ai-for-writing-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-for-writing-2026.astro |
+| 2026-06-12 | /answers/best-ai-image-generator-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-image-generator-2026.astro |
+| 2026-06-12 | /answers/best-ai-video-generator-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-video-generator-2026.astro |
+| 2026-06-12 | /answers/best-ai-voice-generator-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-voice-generator-2026.astro |
 | 2026-06-12 | /answers/best-free-ai-tools-2026/ | Static page | Yes | page metadata | src/pages/answers/best-free-ai-tools-2026.astro |
+| 2026-06-12 | /answers/chatgpt-alternatives-2026/ | Static page | Yes | page metadata | src/pages/answers/chatgpt-alternatives-2026.astro |
 | 2026-06-12 | /answers/chatgpt-vs-claude-which-is-better/ | Static page | Yes | page metadata | src/pages/answers/chatgpt-vs-claude-which-is-better.astro |
 | 2026-06-12 | /answers/is-cursor-worth-it/ | Static page | Yes | page metadata | src/pages/answers/is-cursor-worth-it.astro |
+| 2026-06-12 | /answers/is-midjourney-worth-it/ | Static page | Yes | page metadata | src/pages/answers/is-midjourney-worth-it.astro |
 | 2026-06-12 | /categories/ | Static page | Yes | git | src/pages/categories/index.astro |
 | 2026-06-12 | /categories/ai-automation/ | Category | Yes | frontmatter | src/content/categories/ai-automation.md |
 | 2026-06-12 | /categories/ai-seo/ | Category | Yes | frontmatter | src/content/categories/ai-seo.md |
@@ -551,10 +533,26 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-12 | /guides/best-ai-voice-youtube/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-voice-youtube.md |
 | 2026-06-12 | /guides/best-free-ai-tools/ | Guide | Yes | frontmatter | src/content/use-cases/best-free-ai-tools.md |
 | 2026-06-12 | /guides/best-pay-as-you-go-ai-tools/ | Guide | Yes | frontmatter | src/content/use-cases/best-pay-as-you-go-ai-tools.md |
+| 2026-06-12 | /guides/canva-ai-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/canva-ai-alternatives.md |
+| 2026-06-12 | /guides/chatgpt-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/chatgpt-alternatives.md |
+| 2026-06-12 | /guides/claude-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/claude-alternatives.md |
+| 2026-06-12 | /guides/cursor-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/cursor-alternatives.md |
+| 2026-06-12 | /guides/deepseek-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/deepseek-alternatives.md |
+| 2026-06-12 | /guides/elevenlabs-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/elevenlabs-alternatives.md |
+| 2026-06-12 | /guides/gemini-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/gemini-alternatives.md |
+| 2026-06-12 | /guides/github-copilot-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/github-copilot-alternatives.md |
+| 2026-06-12 | /guides/grammarly-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/grammarly-alternatives.md |
+| 2026-06-12 | /guides/jasper-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/jasper-alternatives.md |
+| 2026-06-12 | /guides/midjourney-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/midjourney-alternatives.md |
 | 2026-06-12 | /guides/notion-ai-alternatives/ | Guide | No | frontmatter | src/content/use-cases/notion-ai-alternatives.md |
 | 2026-06-12 | /guides/otter-ai-alternatives/ | Guide | No | frontmatter | src/content/use-cases/otter-ai-alternatives.md |
+| 2026-06-12 | /guides/perplexity-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/perplexity-alternatives.md |
+| 2026-06-12 | /guides/runway-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/runway-alternatives.md |
+| 2026-06-12 | /guides/suno-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/suno-alternatives.md |
+| 2026-06-12 | /guides/synthesia-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/synthesia-alternatives.md |
 | 2026-06-12 | /llms-full.txt | Crawl surface | No | git | src/pages/llms-full.txt.ts |
 | 2026-06-12 | /llms.txt | Crawl surface | No | git | src/pages/llms.txt.ts |
+| 2026-06-12 | /reports/2026-04/ | Report | Yes | frontmatter | src/content/reports/2026-04.md |
 | 2026-06-12 | /tools/ | Static page | Yes | git | src/pages/tools/index.astro |
 | 2026-06-12 | /tools/activepieces/ | Tool | Yes | frontmatter | src/content/tools/activepieces.md |
 | 2026-06-12 | /tools/ada/ | Tool | Yes | frontmatter | src/content/tools/ada.md |
@@ -673,6 +671,8 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-12 | /tools/jan-ai/ | Tool | Yes | frontmatter | src/content/tools/jan-ai.md |
 | 2026-06-12 | /tools/jasper/ | Tool | Yes | frontmatter | src/content/tools/jasper.md |
 | 2026-06-12 | /tools/jetbrains-ai/ | Tool | Yes | frontmatter | src/content/tools/jetbrains-ai.md |
+| 2026-06-12 | /tools/jimeng/ | Tool | Yes | frontmatter | src/content/tools/jimeng.md |
+| 2026-06-12 | /tools/julius/ | Tool | Yes | frontmatter | src/content/tools/julius.md |
 | 2026-06-12 | /tools/kagi/ | Tool | Yes | frontmatter | src/content/tools/kagi.md |
 | 2026-06-12 | /tools/kiro/ | Tool | Yes | frontmatter | src/content/tools/kiro.md |
 | 2026-06-12 | /tools/kling/ | Tool | Yes | frontmatter | src/content/tools/kling.md |

@@ -3,7 +3,7 @@ type: use-case
 slug: canva-ai-alternatives
 title: "Best Canva AI Alternatives (June 2026)"
 seo_title: "Best Canva AI Alternatives (June 2026): Figma, Firefly, Midjourney, Freepik, Recraft"
-meta_description: "Updated June 7, 2026: the best Canva AI alternatives by buyer job. Figma for product design, Adobe Firefly for Creative Cloud production, Midjourney for visual ideation, Freepik for creator assets, Recraft for vector/design output, and Ideogram for text-heavy graphics."
+meta_description: "Updated June 12, 2026: the best Canva AI alternatives by buyer job. Figma for product design, Adobe Firefly for Creative Cloud production, Midjourney for visual ideation, Freepik for creator assets, Recraft for vector/design output, and Ideogram for text-heavy graphics."
 description: "A current buyer guide to Canva AI alternatives, separating pro design, Adobe production, image ideation, creator asset generation, vector workflows, and text-heavy marketing graphics."
 tools_mentioned: ["canva", "figma", "adobe-firefly", "midjourney", "freepik", "recraft", "ideogram"]
 guide_picks:
@@ -36,14 +36,14 @@ guide_picks:
       - label: "Adobe Firefly plans"
         url: "https://www.adobe.com/products/firefly/plans.html"
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-07
-last_verified: 2026-06-07
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: weekly
 ---
 
 # Best Canva AI Alternatives (June 2026)
 
-As of June 7, 2026, the best Canva AI alternative depends on the job Canva is failing.
+As of June 12, 2026, the best Canva AI alternative depends on the job Canva is failing.
 
 Choose [Figma](/tools/figma/) if Canva is too light for product design, systems, prototyping, and handoff. Choose [Adobe Firefly](/tools/adobe-firefly/) if the final asset moves through Creative Cloud. Choose [Midjourney](/tools/midjourney/) if the problem is visual ideation and art direction. Choose [Freepik](/tools/freepik/) if the buyer wants a creator asset engine with stock plus AI. Choose [Recraft](/tools/recraft/) for vector-style and design-forward brand assets. Choose [Ideogram](/tools/ideogram/) when text-heavy marketing graphics are the pain.
 
@@ -168,16 +168,16 @@ Only if the business is doing product design, design systems, or developer hando
 
 ## Sources
 
-- [Canva AI 2.0 announcement](https://www.canva.com/newsroom/news/canva-create-2026-ai/) (verified 2026-06-07)
-- [Canva AI](https://www.canva.com/magic/) (verified 2026-06-07)
-- [Figma pricing](https://www.figma.com/pricing/) (verified 2026-06-07)
-- [Figma AI credits](https://help.figma.com/hc/en-us/articles/33459875669015-How-AI-credits-work) (verified 2026-06-07)
-- [Adobe Firefly plans](https://www.adobe.com/products/firefly/plans.html) (verified 2026-06-07)
-- [Adobe generative credits overview](https://helpx.adobe.com/firefly/using/generative-credits.html) (verified 2026-06-07)
-- [Midjourney plan comparison](https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans) (verified 2026-06-07)
-- [Freepik pricing](https://www.freepik.com/pricing) (verified 2026-06-07)
-- [Freepik AI plans and pricing docs](https://www.freepik.com/ai/docs/plans-and-pricing) (verified 2026-06-07)
-- [Recraft V4 docs](https://www.recraft.ai/docs/recraft-models/recraft-V4) (verified 2026-06-07)
-- [Recraft paid plans](https://www.recraft.ai/docs/plans-and-billing/paid-plans) (verified 2026-06-07)
-- [Ideogram available plans](https://docs.ideogram.ai/plans-and-pricing/available-plans) (verified 2026-06-07)
-- [Ideogram 3.0](https://ideogram.ai/features/3.0/) (verified 2026-06-07)
+- [Canva AI 2.0 announcement](https://www.canva.com/newsroom/news/canva-create-2026-ai/) (verified 2026-06-12)
+- [Canva AI](https://www.canva.com/magic/) (verified 2026-06-12)
+- [Figma pricing](https://www.figma.com/pricing/) (verified 2026-06-12)
+- [Figma AI credits](https://help.figma.com/hc/en-us/articles/33459875669015-How-AI-credits-work) (verified 2026-06-12)
+- [Adobe Firefly plans](https://www.adobe.com/products/firefly/plans.html) (verified 2026-06-12)
+- [Adobe generative credits overview](https://helpx.adobe.com/firefly/using/generative-credits.html) (verified 2026-06-12)
+- [Midjourney plan comparison](https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans) (verified 2026-06-12)
+- [Freepik pricing](https://www.freepik.com/pricing) (verified 2026-06-12)
+- [Freepik AI plans and pricing docs](https://www.freepik.com/ai/docs/plans-and-pricing) (verified 2026-06-12)
+- [Recraft V4 docs](https://www.recraft.ai/docs/recraft-models/recraft-V4) (verified 2026-06-12)
+- [Recraft paid plans](https://www.recraft.ai/docs/plans-and-billing/paid-plans) (verified 2026-06-12)
+- [Ideogram available plans](https://docs.ideogram.ai/plans-and-pricing/available-plans) (verified 2026-06-12)
+- [Ideogram 3.0](https://ideogram.ai/features/3.0/) (verified 2026-06-12)
