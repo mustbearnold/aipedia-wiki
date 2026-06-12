@@ -6,10 +6,10 @@ tools: [perplexity, chatgpt]
 category: ai-search
 winner: depends
 seo_title: "Perplexity vs ChatGPT: Which Is Better in 2026?"
-meta_description: "Updated June 6, 2026: Perplexity wins for cited open-web research and source trails; ChatGPT wins for general assistant work, files, coding, image generation, voice, and agents."
+meta_description: "Updated June 12, 2026: Perplexity wins for cited open-web research and source trails; ChatGPT wins for general assistant work, files, coding, image generation, voice, and agents."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-06
-last_verified: 2026-06-06
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: quarterly
 canonical_fact_table: true
 ---

@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$5-$25/month"
 status: active
 launched: 2017-06
-last_updated: 2026-06-06
-last_verified: 2026-06-06
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://kagi.com"
     source_label: "Kagi official site"
     source_id: kagi-official
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   ai_search:
@@ -38,15 +38,15 @@ facts:
     source: "https://help.kagi.com/kagi/ai/assistant.html"
     source_label: "Kagi Assistant docs"
     source_id: kagi-assistant-docs
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   pricing_anchor:
-    value: "Paid search plans (Starter $5, Professional $10, Ultimate $25) verified on the live pricing page on June 5, 2026. Annual billing still shows 10% off."
+    value: "Paid search plans (Starter $5, Professional $10, Ultimate $25) verified on the live pricing page on June 12, 2026. Annual billing still shows 10% off."
     source: "https://kagi.com/pricing"
     source_label: "Kagi pricing"
     source_id: kagi-pricing
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     next_review_at: 2026-09-06
     volatility: high
     confidence: high
@@ -55,7 +55,7 @@ facts:
     source: "https://kagi.com"
     source_label: "Kagi official site"
     source_id: kagi-official
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: medium
     confidence: medium
   watch_out_for:
@@ -63,7 +63,7 @@ facts:
     source: "https://kagi.com/pricing"
     source_label: "Kagi pricing"
     source_id: kagi-pricing
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     next_review_at: 2026-09-06
     volatility: high
     confidence: high
@@ -143,7 +143,7 @@ Kagi Assistant is the integrated AI chat layer. Quick mode Assistant is now avai
 | **Privacy** | No behavioral tracking, no ad profiles, subscription-funded |
 | **Index** | Proprietary crawl + licensed third-party indexes |
 
-Every data point above was verified against vendor documentation on 2026-06-06. See Sources.
+Every data point above was verified against vendor documentation on 2026-06-12. See Sources.
 
 ## What it actually is
 
@@ -180,7 +180,7 @@ Pricing via [kagi.com/pricing](https://kagi.com/pricing):
 | Professional | $10 | Unlimited | Quick mode | **Most paying users land here** |
 | Ultimate | $25 | Unlimited | Research mode + flagship models | Power researchers + AI power users |
 
-Annual billing saves 10% across all tiers. Fair pricing policy: unused Starter searches auto-credit the next cycle. Prices verified 2026-06-06 via [Kagi pricing](https://kagi.com/pricing) and [Kagi plan types docs](https://help.kagi.com/kagi/plans/plan-types.html).
+Annual billing saves 10% across all tiers. Fair pricing policy: unused Starter searches auto-credit the next cycle. Prices verified 2026-06-12 via [Kagi pricing](https://kagi.com/pricing) and [Kagi plan types docs](https://help.kagi.com/kagi/plans/plan-types.html).
 
 No free tier. New users get a 100-search trial before subscribing.
 
@@ -213,7 +213,7 @@ No free tier. New users get a 100-search trial before subscribing.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-06 against [Kagi pricing](https://kagi.com/pricing), [Kagi plan types docs](https://help.kagi.com/kagi/plans/plan-types.html), [Kagi Research Assistants](https://help.kagi.com/kagi/ai/kagi-research.html), and [Kagi Assistant docs](https://help.kagi.com/kagi/ai/assistant.html).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against [Kagi pricing](https://kagi.com/pricing), [Kagi plan types docs](https://help.kagi.com/kagi/plans/plan-types.html), [Kagi Research Assistants](https://help.kagi.com/kagi/ai/kagi-research.html), and [Kagi Assistant docs](https://help.kagi.com/kagi/ai/assistant.html).
 
 ## FAQ
 

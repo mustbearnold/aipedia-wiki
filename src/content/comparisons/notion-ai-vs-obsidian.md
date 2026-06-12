@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Notion AI vs Obsidian: Team Workspace or Local Markdown Vault?"
 meta_description: "Notion AI is better for team docs, databases, meeting notes, Enterprise Search, and agents. Obsidian is better for private local Markdown, backlinks, and plugin-controlled AI. Verified June 2026."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-06
-last_verified: 2026-06-06
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: quarterly
 canonical_fact_table: true
 ---
@@ -87,8 +87,8 @@ Workspace quality and credit economics. Messy Notion workspaces produce weaker a
 
 ## Sources
 
-- [Notion pricing](https://www.notion.com/pricing) (verified 2026-06-06)
-- [Notion AI product page](https://www.notion.com/product/ai) (verified 2026-06-06)
-- [Notion Custom Agent pricing](https://www.notion.com/help/custom-agent-pricing) (verified 2026-06-06)
-- [Obsidian pricing](https://obsidian.md/pricing) (verified 2026-06-06)
-- [Obsidian Help](https://help.obsidian.md/) (verified 2026-06-06)
+- [Notion pricing](https://www.notion.com/pricing) (verified 2026-06-12)
+- [Notion AI product page](https://www.notion.com/product/ai) (verified 2026-06-12)
+- [Notion Custom Agent pricing](https://www.notion.com/help/custom-agent-pricing) (verified 2026-06-12)
+- [Obsidian pricing](https://obsidian.md/pricing) (verified 2026-06-12)
+- [Obsidian Help](https://help.obsidian.md/) (verified 2026-06-12)

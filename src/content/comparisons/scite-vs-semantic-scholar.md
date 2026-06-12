@@ -6,10 +6,10 @@ tools: [scite, semantic-scholar]
 category: ai-research
 winner: depends
 seo_title: "Scite vs Semantic Scholar: Which Is Better in 2026?"
-meta_description: "Updated June 6, 2026: Semantic Scholar wins for free academic search and API breadth; Scite wins for citation-context evidence checks across supporting, contrasting, and mentioning citations."
+meta_description: "Updated June 12, 2026: Semantic Scholar wins for free academic search and API breadth; Scite wins for citation-context evidence checks across supporting, contrasting, and mentioning citations."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-06
-last_verified: 2026-06-06
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: quarterly
 canonical_fact_table: true
 ---

@@ -6,10 +6,10 @@ tools: [kling, pika]
 category: ai-video
 winner: kling
 seo_title: "Kling 3.0 vs Pika Labs: Cinematic Video or Social Effects? (June 2026)"
-meta_description: "Kling 3.0 vs Pika Labs, updated June 6, 2026. Kling is the stronger cinematic model test; Pika is better for fast social effects and creator clips."
+meta_description: "Kling 3.0 vs Pika Labs, updated June 12, 2026. Kling is the stronger cinematic model test; Pika is better for fast social effects and creator clips."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-06
-last_verified: 2026-06-06
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: weekly
 canonical_fact_table: true
 ---
@@ -116,8 +116,8 @@ Yes. Use Kling for stronger base footage and Pika for effects, variants, and soc
 
 ## Sources
 
-- [Kuaishou: Kling AI 3.0 launch](https://ir.kuaishou.com/news-releases/news-release-details/kling-ai-launches-30-model-ushering-era-where-everyone-can-be), verified 2026-06-06
-- [Kling AI](https://klingai.com/), verified 2026-06-06
-- [Kling AI pricing](https://klingai.com/pricing), checked 2026-06-06
-- [Pika pricing](https://pika.art/pricing), verified 2026-06-06
-- [Pika official site](https://pika.art), verified 2026-06-06
+- [Kuaishou: Kling AI 3.0 launch](https://ir.kuaishou.com/news-releases/news-release-details/kling-ai-launches-30-model-ushering-era-where-everyone-can-be), verified 2026-06-12
+- [Kling AI](https://klingai.com/), verified 2026-06-12
+- [Kling AI pricing](https://klingai.com/pricing), checked 2026-06-12
+- [Pika pricing](https://pika.art/pricing), verified 2026-06-12
+- [Pika official site](https://pika.art), verified 2026-06-12

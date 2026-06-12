@@ -6,10 +6,10 @@ tools: [pika, runway]
 category: ai-video
 winner: runway
 seo_title: "Pika Labs vs Runway: Social Video App or Production AI Video Workspace? (June 2026)"
-meta_description: "Pika Labs vs Runway, updated June 6, 2026. Pika is better for quick social effects; Runway wins for production workflow, teams, editing, and API access."
+meta_description: "Pika Labs vs Runway, updated June 12, 2026. Pika is better for quick social effects; Runway wins for production workflow, teams, editing, and API access."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-06
-last_verified: 2026-06-06
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: weekly
 canonical_fact_table: true
 ---
@@ -114,9 +114,9 @@ Try Pika first for effects-heavy social video. Try Runway first if you need edit
 
 ## Sources
 
-- [Pika pricing](https://pika.art/pricing), verified 2026-06-06
-- [Pika official site](https://pika.art), verified 2026-06-06
-- [Runway pricing](https://runwayml.com/pricing), verified 2026-06-06
-- [Runway API models](https://docs.dev.runwayml.com/guides/models/), verified 2026-06-06
-- [Runway API pricing](https://docs.dev.runwayml.com/guides/pricing/), verified 2026-06-06
-- [Runway usage rights](https://help.runwayml.com/hc/en-us/articles/18927776141715-Usage-rights), verified 2026-06-06
+- [Pika pricing](https://pika.art/pricing), verified 2026-06-12
+- [Pika official site](https://pika.art), verified 2026-06-12
+- [Runway pricing](https://runwayml.com/pricing), verified 2026-06-12
+- [Runway API models](https://docs.dev.runwayml.com/guides/models/), verified 2026-06-12
+- [Runway API pricing](https://docs.dev.runwayml.com/guides/pricing/), verified 2026-06-12
+- [Runway usage rights](https://help.runwayml.com/hc/en-us/articles/18927776141715-Usage-rights), verified 2026-06-12

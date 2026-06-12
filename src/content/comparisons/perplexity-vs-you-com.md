@@ -6,10 +6,10 @@ tools: [perplexity, you-com]
 category: ai-search
 winner: depends
 seo_title: "Perplexity vs You.com (June 2026): Answer Engine or Search API?"
-meta_description: "Perplexity is a cited answer engine with Pro, Max, Enterprise, and API paths; You.com is now a Search, Contents, and Research API platform. Updated June 6, 2026."
+meta_description: "Perplexity is a cited answer engine with Pro, Max, Enterprise, and API paths; You.com is now a Search, Contents, and Research API platform. Updated June 12, 2026."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-06
-last_verified: 2026-06-06
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -77,9 +77,9 @@ Perplexity. You.com now assumes a builder or procurement motion around APIs.
 
 ## Sources
 
-- [Perplexity Enterprise pricing](https://www.perplexity.ai/enterprise/pricing) (verified 2026-06-06)
-- [Perplexity API pricing](https://docs.perplexity.ai/docs/getting-started/pricing) (verified 2026-06-06)
-- [You.com pricing](https://you.com/pricing) (verified 2026-06-06)
-- [You.com API docs](https://you.com/docs/welcome) (verified 2026-06-06)
-- [Perplexity review](/tools/perplexity/) (verified 2026-06-06)
-- [You.com review](/tools/you-com/) (verified 2026-06-06)
+- [Perplexity Enterprise pricing](https://www.perplexity.ai/enterprise/pricing) (verified 2026-06-12)
+- [Perplexity API pricing](https://docs.perplexity.ai/docs/getting-started/pricing) (verified 2026-06-12)
+- [You.com pricing](https://you.com/pricing) (verified 2026-06-12)
+- [You.com API docs](https://you.com/docs/welcome) (verified 2026-06-12)
+- [Perplexity review](/tools/perplexity/) (verified 2026-06-12)
+- [You.com review](/tools/you-com/) (verified 2026-06-12)

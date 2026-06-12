@@ -6,10 +6,10 @@ tools: [runway, veo]
 category: ai-video
 winner: runway
 seo_title: "Runway vs Google Veo 3.1: Production Workspace or Google Video Model? (June 2026)"
-meta_description: "Runway vs Google Veo 3.1, updated June 6, 2026. Runway wins for production workflow; Veo wins for Google API, Vertex AI, and provenance."
+meta_description: "Runway vs Google Veo 3.1, updated June 12, 2026. Runway wins for production workflow; Veo wins for Google API, Vertex AI, and provenance."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-06
-last_verified: 2026-06-06
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: weekly
 canonical_fact_table: true
 ---
@@ -112,11 +112,11 @@ Yes. A team can use Veo through Google for governed model calls and Runway for c
 
 ## Sources
 
-- [Runway pricing](https://runwayml.com/pricing), verified 2026-06-06
-- [Runway API models](https://docs.dev.runwayml.com/guides/models/), verified 2026-06-06
-- [Runway API pricing](https://docs.dev.runwayml.com/guides/pricing/), verified 2026-06-06
-- [Runway Gen-4 help docs](https://help.runwayml.com/hc/en-us/articles/37327109429011-Creating-with-Gen-4-Video), verified 2026-06-06
-- [Google DeepMind Veo](https://deepmind.google/models/veo/), verified 2026-06-06
-- [Veo 3.1 Gemini API video docs](https://ai.google.dev/gemini-api/docs/video), verified 2026-06-06
-- [Gemini API Veo 3.1 pricing](https://ai.google.dev/gemini-api/docs/pricing), verified 2026-06-06
-- [Veo 3.1 Ingredients to Video update](https://blog.google/innovation-and-ai/technology/ai/veo-3-1-ingredients-to-video/), verified 2026-06-06
+- [Runway pricing](https://runwayml.com/pricing), verified 2026-06-12
+- [Runway API models](https://docs.dev.runwayml.com/guides/models/), verified 2026-06-12
+- [Runway API pricing](https://docs.dev.runwayml.com/guides/pricing/), verified 2026-06-12
+- [Runway Gen-4 help docs](https://help.runwayml.com/hc/en-us/articles/37327109429011-Creating-with-Gen-4-Video), verified 2026-06-12
+- [Google DeepMind Veo](https://deepmind.google/models/veo/), verified 2026-06-12
+- [Veo 3.1 Gemini API video docs](https://ai.google.dev/gemini-api/docs/video), verified 2026-06-12
+- [Gemini API Veo 3.1 pricing](https://ai.google.dev/gemini-api/docs/pricing), verified 2026-06-12
+- [Veo 3.1 Ingredients to Video update](https://blog.google/innovation-and-ai/technology/ai/veo-3-1-ingredients-to-video/), verified 2026-06-12

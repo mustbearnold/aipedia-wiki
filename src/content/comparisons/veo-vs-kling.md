@@ -6,10 +6,10 @@ tools: [veo, kling]
 category: ai-video
 winner: depends
 seo_title: "Google Veo 3.1 vs Kling 3.0: Google API or Cinematic Creator Model? (June 2026)"
-meta_description: "Google Veo 3.1 vs Kling 3.0, updated June 6, 2026. Veo wins for Google API/provenance; Kling is the creator-value challenger."
+meta_description: "Google Veo 3.1 vs Kling 3.0, updated June 12, 2026. Veo wins for Google API/provenance; Kling is the creator-value challenger."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-06
-last_verified: 2026-06-06
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: weekly
 canonical_fact_table: true
 ---
@@ -112,11 +112,11 @@ Yes. For raw model quality, Seedance 2.0, Kling 3.0, and Veo 3.1 should be teste
 
 ## Sources
 
-- [Google DeepMind Veo](https://deepmind.google/models/veo/), verified 2026-06-06
-- [Veo 3.1 Gemini API video docs](https://ai.google.dev/gemini-api/docs/video), verified 2026-06-06
-- [Gemini API Veo 3.1 pricing](https://ai.google.dev/gemini-api/docs/pricing), verified 2026-06-06
-- [Veo 3.1 Ingredients to Video update](https://blog.google/innovation-and-ai/technology/ai/veo-3-1-ingredients-to-video/), verified 2026-06-06
-- [Veo 3.1 Gemini API launch](https://developers.googleblog.com/en/introducing-veo-3-1-and-new-creative-capabilities-in-the-gemini-api/), verified 2026-06-06
-- [Kuaishou: Kling AI 3.0 launch](https://ir.kuaishou.com/news-releases/news-release-details/kling-ai-launches-30-model-ushering-era-where-everyone-can-be), verified 2026-06-06
-- [Kling AI](https://klingai.com/), verified 2026-06-06
-- [Kling AI pricing](https://klingai.com/pricing), checked 2026-06-06
+- [Google DeepMind Veo](https://deepmind.google/models/veo/), verified 2026-06-12
+- [Veo 3.1 Gemini API video docs](https://ai.google.dev/gemini-api/docs/video), verified 2026-06-12
+- [Gemini API Veo 3.1 pricing](https://ai.google.dev/gemini-api/docs/pricing), verified 2026-06-12
+- [Veo 3.1 Ingredients to Video update](https://blog.google/innovation-and-ai/technology/ai/veo-3-1-ingredients-to-video/), verified 2026-06-12
+- [Veo 3.1 Gemini API launch](https://developers.googleblog.com/en/introducing-veo-3-1-and-new-creative-capabilities-in-the-gemini-api/), verified 2026-06-12
+- [Kuaishou: Kling AI 3.0 launch](https://ir.kuaishou.com/news-releases/news-release-details/kling-ai-launches-30-model-ushering-era-where-everyone-can-be), verified 2026-06-12
+- [Kling AI](https://klingai.com/), verified 2026-06-12
+- [Kling AI pricing](https://klingai.com/pricing), checked 2026-06-12

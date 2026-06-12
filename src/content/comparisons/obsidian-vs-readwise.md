@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Obsidian vs Readwise Reader: Local PKM or Reading Pipeline?"
 meta_description: "Obsidian is better for owning a local Markdown knowledge base. Readwise Reader is better for capture, highlighting, Ghostreader AI, exports, and spaced review. Verified June 2026."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-06
-last_verified: 2026-06-06
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: quarterly
 canonical_fact_table: true
 ---
@@ -87,8 +87,8 @@ Only if you are willing to manually build capture, clipping, highlighting, revie
 
 ## Sources
 
-- [Obsidian pricing](https://obsidian.md/pricing) (verified 2026-06-06)
-- [Obsidian Help](https://help.obsidian.md/) (verified 2026-06-06)
-- [Readwise Reader pricing](https://readwise.io/pricing/reader) (verified 2026-06-06)
-- [Readwise Reader official site](https://readwise.io/read) (verified 2026-06-06)
-- [Ghostreader docs](https://docs.readwise.io/reader/guides/ghostreader/overview) (verified 2026-06-06)
+- [Obsidian pricing](https://obsidian.md/pricing) (verified 2026-06-12)
+- [Obsidian Help](https://help.obsidian.md/) (verified 2026-06-12)
+- [Readwise Reader pricing](https://readwise.io/pricing/reader) (verified 2026-06-12)
+- [Readwise Reader official site](https://readwise.io/read) (verified 2026-06-12)
+- [Ghostreader docs](https://docs.readwise.io/reader/guides/ghostreader/overview) (verified 2026-06-12)

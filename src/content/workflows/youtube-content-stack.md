@@ -3,13 +3,13 @@ type: workflow
 slug: youtube-content-stack
 title: "Solo YouTuber AI Stack: Script, Voice, Edit, B-roll, Thumbnails"
 seo_title: "Solo YouTuber AI Workflow Stack (June 2026): Script, Voice, Editing, B-roll, Thumbnails"
-meta_description: "Updated June 6, 2026: a practical solo YouTuber AI workflow using Claude, Descript, ElevenLabs, Canva, and optional Runway/Midjourney/Ideogram. Includes buying order, avoid-if guidance, and source-backed plan caveats."
+meta_description: "Updated June 12, 2026: a practical solo YouTuber AI workflow using Claude, Descript, ElevenLabs, Canva, and optional Runway/Midjourney/Ideogram. Includes buying order, avoid-if guidance, and source-backed plan caveats."
 description: "A current solo YouTuber AI workflow for turning a topic into a publishable video without overbuying AI subscriptions."
 stack: [claude, descript, elevenlabs, canva, runway, midjourney, ideogram]
 tools_mentioned: [claude, descript, elevenlabs, canva, runway, midjourney, ideogram, perplexity]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-06
-last_verified: 2026-06-06
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 ---
 
@@ -182,16 +182,16 @@ No. Runway is a production upgrade, not a starting requirement. Use screen recor
 
 ## Sources
 
-- [Claude pricing](https://www.anthropic.com/pricing) (verified 2026-06-06)
-- [Claude Max plan](https://support.claude.com/en/articles/11049741-what-is-the-max-plan) (verified 2026-06-06)
-- [Descript pricing](https://www.descript.com/price) (verified 2026-06-06)
-- [ElevenLabs pricing](https://elevenlabs.io/pricing) (verified 2026-06-06)
-- [Runway pricing](https://runwayml.com/pricing) (verified 2026-06-06)
-- [Runway credits](https://help.runwayml.com/hc/en-us/articles/15124877443219-How-do-credits-work) (verified 2026-06-06)
-- [Midjourney plans](https://docs.midjourney.com/docs/plans) (verified 2026-06-06)
-- [Ideogram available plans](https://docs.ideogram.ai/plans-and-pricing/available-plans) (verified 2026-06-06)
-- [Canva AI](https://www.canva.com/magic/) (verified 2026-06-06)
-- [Perplexity Pro help center](https://www.perplexity.ai/help-center/en/articles/9385876-what-is-perplexity-pro) (verified 2026-06-06)
+- [Claude pricing](https://www.anthropic.com/pricing) (verified 2026-06-12)
+- [Claude Max plan](https://support.claude.com/en/articles/11049741-what-is-the-max-plan) (verified 2026-06-12)
+- [Descript pricing](https://www.descript.com/price) (verified 2026-06-12)
+- [ElevenLabs pricing](https://elevenlabs.io/pricing) (verified 2026-06-12)
+- [Runway pricing](https://runwayml.com/pricing) (verified 2026-06-12)
+- [Runway credits](https://help.runwayml.com/hc/en-us/articles/15124877443219-How-do-credits-work) (verified 2026-06-12)
+- [Midjourney plans](https://docs.midjourney.com/docs/plans) (verified 2026-06-12)
+- [Ideogram available plans](https://docs.ideogram.ai/plans-and-pricing/available-plans) (verified 2026-06-12)
+- [Canva AI](https://www.canva.com/magic/) (verified 2026-06-12)
+- [Perplexity Pro help center](https://www.perplexity.ai/help-center/en/articles/9385876-what-is-perplexity-pro) (verified 2026-06-12)
 
 ## Related
 

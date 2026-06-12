@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$148/month billed yearly"
 status: active
 launched: 2023-11
-last_updated: 2026-06-06
-last_verified: 2026-06-06
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://pika.art"
     source_label: "Pika official site"
     source_id: pika-official
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     next_review_at: 2026-07-06
     volatility: high
     confidence: high
@@ -39,7 +39,7 @@ facts:
     source: "https://pika.art"
     source_label: "Pika official site"
     source_id: pika-official
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     next_review_at: 2026-07-06
     volatility: high
     confidence: medium
@@ -48,7 +48,7 @@ facts:
     source: "https://pika.art/pricing"
     source_label: "Pika pricing"
     source_id: pika-pricing
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     next_review_at: 2026-07-06
     volatility: high
     confidence: high
@@ -57,7 +57,7 @@ facts:
     source: "https://pika.art"
     source_label: "Pika official site"
     source_id: pika-official
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     next_review_at: 2026-07-06
     volatility: high
     confidence: medium
@@ -66,7 +66,7 @@ facts:
     source: "https://pika.art/pricing"
     source_label: "Pika pricing"
     source_id: pika-pricing
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     next_review_at: 2026-07-06
     volatility: high
     confidence: high
@@ -163,7 +163,7 @@ Pricing runs from a free tier to Fancy at $148/month billed yearly. The free tie
 | **API access** | Enterprise tier only |
 | **Company** | Pika Labs |
 
-Pricing was refreshed against the official Pika pricing page on 2026-06-06. Feature notes were last checked against Pika's official site and Pika 2.5 release notes on 2026-04-17. See Sources.
+Pricing was refreshed against the official Pika pricing page on 2026-06-12. Feature notes were last checked against Pika's official site and Pika 2.5 release notes on 2026-04-17. See Sources.
 
 ## What it actually is
 
@@ -202,7 +202,7 @@ Subscription pricing via [pika.art/pricing](https://pika.art/pricing). Standard 
 | Pro | $76/mo billed yearly | 2,300 | Faster generations · larger credit allowance |
 | Fancy | $148/mo billed yearly | 6,000 | Fastest generations · largest listed credit allowance |
 
-*Prices verified 2026-06-06 via [pika.art/pricing](https://pika.art/pricing). VAT and monthly-billing prices may vary by country and billing toggle.*
+*Prices verified 2026-06-12 via [pika.art/pricing](https://pika.art/pricing). VAT and monthly-billing prices may vary by country and billing toggle.*
 
 ## Against the alternatives
 
@@ -228,7 +228,7 @@ Subscription pricing via [pika.art/pricing](https://pika.art/pricing). Standard 
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis above. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-06 against [pika.art/pricing](https://pika.art/pricing) and the [Pika 2.5 release notes](https://pika.art/blog/pika-2-5).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis above. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against [pika.art/pricing](https://pika.art/pricing) and the [Pika 2.5 release notes](https://pika.art/blog/pika-2-5).
 
 ## FAQ
 
@@ -253,7 +253,7 @@ Yes, but treat API access as a separate/custom route. Standard and Pro users sho
 ## Sources
 
 - [Pika Labs official site](https://pika.art) (verified 2026-04-17)
-- [Pika Pricing](https://pika.art/pricing) (verified 2026-06-06)
+- [Pika Pricing](https://pika.art/pricing) (verified 2026-06-12)
 - [Pika 2.5 release notes](https://pika.art/blog/pika-2-5) (verified 2026-04-17)
 
 ## Related

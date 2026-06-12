@@ -6,10 +6,10 @@ tools: [kagi, perplexity]
 category: ai-search
 winner: depends
 seo_title: "Kagi vs Perplexity (June 2026): Private Search or Cited Answers?"
-meta_description: "Kagi is paid private search with ranking controls; Perplexity is a cited answer engine with Pro, Max, Enterprise, and API paths. Updated June 6, 2026."
+meta_description: "Kagi is paid private search with ranking controls; Perplexity is a cited answer engine with Pro, Max, Enterprise, and API paths. Updated June 12, 2026."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-06
-last_verified: 2026-06-06
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -77,9 +77,9 @@ Perplexity, when the deliverable needs citations, source trails, exports, or tea
 
 ## Sources
 
-- [Kagi pricing](https://kagi.com/pricing) (verified 2026-06-06)
-- [Kagi plan types](https://help.kagi.com/kagi/plans/plan-types.html) (verified 2026-06-06)
-- [Perplexity Enterprise pricing](https://www.perplexity.ai/enterprise/pricing) (verified 2026-06-06)
-- [Perplexity API pricing](https://docs.perplexity.ai/docs/getting-started/pricing) (verified 2026-06-06)
-- [Kagi review](/tools/kagi/) (verified 2026-06-06)
-- [Perplexity review](/tools/perplexity/) (verified 2026-06-06)
+- [Kagi pricing](https://kagi.com/pricing) (verified 2026-06-12)
+- [Kagi plan types](https://help.kagi.com/kagi/plans/plan-types.html) (verified 2026-06-12)
+- [Perplexity Enterprise pricing](https://www.perplexity.ai/enterprise/pricing) (verified 2026-06-12)
+- [Perplexity API pricing](https://docs.perplexity.ai/docs/getting-started/pricing) (verified 2026-06-12)
+- [Kagi review](/tools/kagi/) (verified 2026-06-12)
+- [Perplexity review](/tools/perplexity/) (verified 2026-06-12)

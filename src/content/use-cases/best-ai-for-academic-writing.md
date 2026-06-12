@@ -3,7 +3,7 @@ type: use-case
 slug: best-ai-for-academic-writing
 title: "Best AI for Academic Writing (June 2026)"
 seo_title: "Best AI for Academic Writing: Claude, ChatGPT, NotebookLM, Elicit, Semantic Scholar and Grammarly"
-meta_description: "Updated June 6, 2026: compare Claude, ChatGPT, NotebookLM, Elicit, Semantic Scholar, Scite, Grammarly, and QuillBot for source-backed academic writing workflows."
+meta_description: "Updated June 12, 2026: compare Claude, ChatGPT, NotebookLM, Elicit, Semantic Scholar, Scite, Grammarly, and QuillBot for source-backed academic writing workflows."
 description: "A source-backed academic writing guide that separates drafting, source-grounded notes, literature review, citation discovery, editing, and academic integrity risk."
 tools_mentioned: ["claude", "chatgpt", "notebooklm", "elicit", "semantic-scholar", "scite", "grammarly", "quillbot"]
 guide_picks:
@@ -34,8 +34,8 @@ guide_picks:
       - label: "Elicit pricing"
         url: "https://elicit.com/pricing"
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-06
-last_verified: 2026-06-06
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 ---
 
@@ -43,7 +43,7 @@ update_frequency: monthly
 
 Academic writing is high-stakes writing. AI can help with outlines, synthesis, editing, argument structure, methods explanations, and source-grounded notes, but it must not invent sources, fabricate quotations, hide weak evidence, or replace the author's own contribution.
 
-This guide was refreshed on **June 6, 2026** against current official sources from Anthropic, OpenAI, Google NotebookLM, Elicit, Semantic Scholar, Scite, Grammarly, and QuillBot.
+This guide was refreshed on **June 12, 2026** against current official sources from Anthropic, OpenAI, Google NotebookLM, Elicit, Semantic Scholar, Scite, Grammarly, and QuillBot.
 
 ## June 6 Academic Integrity Update
 
@@ -182,19 +182,19 @@ It can generate prose, but that is not the same as acceptable academic work. Fol
 Elicit is the best starting point for structured literature-review workflow. Semantic Scholar is the free search baseline. Scite is useful when citation support or contrast matters.
 
 **How often is this guide updated?**
-Monthly, or sooner when major model, pricing, academic-integrity, citation, or product-policy changes affect academic use. Last verified June 6, 2026.
+Monthly, or sooner when major model, pricing, academic-integrity, citation, or product-policy changes affect academic use. Last verified June 12, 2026.
 
 ## Sources
 
-- [Claude pricing](https://claude.com/pricing) (verified 2026-06-06)
-- [Claude plan help](https://support.claude.com/en/articles/11049762-choosing-a-claude-plan) (verified 2026-06-06)
-- [Claude Agent SDK credit help](https://support.claude.com/en/articles/15036540-use-the-claude-agent-sdk-with-your-claude-plan) (verified 2026-06-06)
-- [ChatGPT pricing](https://chatgpt.com/pricing/) (verified 2026-06-06)
-- [NotebookLM upgrade docs](https://support.google.com/notebooklm/answer/16213268) (verified 2026-06-06)
-- [Elicit pricing](https://elicit.com/pricing) (verified 2026-06-06)
-- [Semantic Scholar](https://www.semanticscholar.org/) (verified 2026-06-06)
-- [Scite pricing](https://scite.ai/pricing) (verified 2026-06-06)
-- [Grammarly plans](https://www.grammarly.com/plans) (verified 2026-06-06)
-- [Grammarly Pro cost](https://support.grammarly.com/hc/en-us/articles/115000090011-How-much-does-Grammarly-Pro-cost) (verified 2026-06-06)
-- [QuillBot Premium](https://quillbot.com/premium) (verified 2026-06-06)
-- [QuillBot free vs Premium help](https://help.quillbot.com/hc/en-us/articles/360058341753-What-s-the-difference-between-a-free-and-a-Premium-account) (verified 2026-06-06)
+- [Claude pricing](https://claude.com/pricing) (verified 2026-06-12)
+- [Claude plan help](https://support.claude.com/en/articles/11049762-choosing-a-claude-plan) (verified 2026-06-12)
+- [Claude Agent SDK credit help](https://support.claude.com/en/articles/15036540-use-the-claude-agent-sdk-with-your-claude-plan) (verified 2026-06-12)
+- [ChatGPT pricing](https://chatgpt.com/pricing/) (verified 2026-06-12)
+- [NotebookLM upgrade docs](https://support.google.com/notebooklm/answer/16213268) (verified 2026-06-12)
+- [Elicit pricing](https://elicit.com/pricing) (verified 2026-06-12)
+- [Semantic Scholar](https://www.semanticscholar.org/) (verified 2026-06-12)
+- [Scite pricing](https://scite.ai/pricing) (verified 2026-06-12)
+- [Grammarly plans](https://www.grammarly.com/plans) (verified 2026-06-12)
+- [Grammarly Pro cost](https://support.grammarly.com/hc/en-us/articles/115000090011-How-much-does-Grammarly-Pro-cost) (verified 2026-06-12)
+- [QuillBot Premium](https://quillbot.com/premium) (verified 2026-06-12)
+- [QuillBot free vs Premium help](https://help.quillbot.com/hc/en-us/articles/360058341753-What-s-the-difference-between-a-free-and-a-Premium-account) (verified 2026-06-12)

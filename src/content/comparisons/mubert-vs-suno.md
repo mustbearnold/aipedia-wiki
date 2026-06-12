@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Mubert vs Suno: Background Music or Full Songs?"
 meta_description: "Mubert vs Suno, refreshed June 2026: compare licensed background music, vocal song generation, commercial rights, pricing signals, exports, and which AI music tool to buy."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-06
-last_verified: 2026-06-06
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -59,9 +59,9 @@ Use Suno when the song is the deliverable. A vocal demo, parody track, creator s
 
 ## Pricing And Procurement
 
-Suno's public pricing was rechecked on June 6, 2026: Free is $0 with v4.5-all, 50 daily credits, and no commercial use; Pro is shown at $8/month with annual billing language, 2,500 monthly credits, commercial rights for new songs, v5.5, stems, Voices, and custom models; Premier is shown at $24/month with annual billing language, 10,000 monthly credits, Suno Studio, and the same commercial-rights language.
+Suno's public pricing was rechecked on June 12, 2026: Free is $0 with v4.5-all, 50 daily credits, and no commercial use; Pro is shown at $8/month with annual billing language, 2,500 monthly credits, commercial rights for new songs, v5.5, stems, Voices, and custom models; Premier is shown at $24/month with annual billing language, 10,000 monthly credits, Suno Studio, and the same commercial-rights language.
 
-Mubert's pricing page was also rechecked on June 6, 2026. Its public page clearly exposes subscription/perpetual-license paths, API/custom-sales language, and the key licensing disclaimer: downloads include plan license certificates, but public plans do not license tracks for Content ID, standalone streaming-platform release, or stock-music sites. Because the exact plan-price table is rendered client-side, AiPedia keeps buyer guidance centered on use rights and license fit rather than repeating a stale headline price.
+Mubert's pricing page was also rechecked on June 12, 2026. Its public page clearly exposes subscription/perpetual-license paths, API/custom-sales language, and the key licensing disclaimer: downloads include plan license certificates, but public plans do not license tracks for Content ID, standalone streaming-platform release, or stock-music sites. Because the exact plan-price table is rendered client-side, AiPedia keeps buyer guidance centered on use rights and license fit rather than repeating a stale headline price.
 
 ## Workflow Fit
 

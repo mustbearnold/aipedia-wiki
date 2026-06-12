@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Obsidian vs Otter.ai: Local Notes or Meeting Transcription?"
 meta_description: "Obsidian wins for private local Markdown and PKM. Otter.ai wins for live transcription, speaker ID, meeting summaries, workflows, and searchable call archives. Verified June 2026."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-06
-last_verified: 2026-06-06
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: quarterly
 canonical_fact_table: true
 ---
@@ -87,7 +87,7 @@ No for PKM. Otter is a meeting archive; Obsidian is a general knowledge system.
 
 ## Sources
 
-- [Obsidian pricing](https://obsidian.md/pricing) (verified 2026-06-06)
-- [Obsidian Help](https://help.obsidian.md/) (verified 2026-06-06)
-- [Otter.ai pricing](https://otter.ai/pricing) (verified 2026-06-06)
-- [OtterPilot overview](https://otter.ai/otterpilot) (verified 2026-06-06)
+- [Obsidian pricing](https://obsidian.md/pricing) (verified 2026-06-12)
+- [Obsidian Help](https://help.obsidian.md/) (verified 2026-06-12)
+- [Otter.ai pricing](https://otter.ai/pricing) (verified 2026-06-12)
+- [OtterPilot overview](https://otter.ai/otterpilot) (verified 2026-06-12)

@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Google NotebookLM vs Otter.ai: Research Notebook or Meeting Transcription?"
 meta_description: "NotebookLM wins for cited analysis of existing sources. Otter.ai wins for live meeting transcription, speaker ID, summaries, and searchable meeting archives. Verified June 2026."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-06
-last_verified: 2026-06-06
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: quarterly
 canonical_fact_table: true
 ---
@@ -89,7 +89,7 @@ NotebookLM. Otter is a meeting archive; NotebookLM is the better source-grounded
 
 ## Sources
 
-- [NotebookLM Help: upgrade and usage limits](https://support.google.com/notebooklm/answer/16213268) (verified 2026-06-06)
-- [NotebookLM official app](https://notebooklm.google.com) (verified 2026-06-06)
-- [Otter.ai pricing](https://otter.ai/pricing) (verified 2026-06-06)
-- [OtterPilot overview](https://otter.ai/otterpilot) (verified 2026-06-06)
+- [NotebookLM Help: upgrade and usage limits](https://support.google.com/notebooklm/answer/16213268) (verified 2026-06-12)
+- [NotebookLM official app](https://notebooklm.google.com) (verified 2026-06-12)
+- [Otter.ai pricing](https://otter.ai/pricing) (verified 2026-06-12)
+- [OtterPilot overview](https://otter.ai/otterpilot) (verified 2026-06-12)

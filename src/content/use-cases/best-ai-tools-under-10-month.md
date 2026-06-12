@@ -3,12 +3,12 @@ type: use-case
 slug: best-ai-tools-under-10-month
 title: "Best AI Tools Under $10/Month (Archived, June 2026)"
 seo_title: "Best AI Tools Under $10/Month (Archived, June 2026)"
-meta_description: "Archived under-$10 AI tools page, rechecked June 6, 2026. Use AiPedia's free AI tools and under-$20 buyer guides for current source-backed buying advice."
+meta_description: "Archived under-$10 AI tools page, rechecked June 12, 2026. Use AiPedia's free AI tools and under-$20 buyer guides for current source-backed buying advice."
 description: "Archived under-$10 AI tools page that now routes users to stronger free, first-paid, and category-specific AI buying guides."
 tools_mentioned: [chatgpt, claude, gemini, perplexity, github-copilot, suno, freepik]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-06
-last_verified: 2026-06-06
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 noindex: true
 ---

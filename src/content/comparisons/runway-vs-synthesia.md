@@ -6,10 +6,10 @@ tools: [runway, synthesia]
 category: ai-video
 winner: depends
 seo_title: "Runway vs Synthesia: Creative Video Workspace or Avatar Training Platform? (June 2026)"
-meta_description: "Runway vs Synthesia, updated June 6, 2026. Pick Runway for production AI video and editing; pick Synthesia for avatar-led training, onboarding, and SCORM-ready business video."
+meta_description: "Runway vs Synthesia, updated June 12, 2026. Pick Runway for production AI video and editing; pick Synthesia for avatar-led training, onboarding, and SCORM-ready business video."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-06
-last_verified: 2026-06-06
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: weekly
 canonical_fact_table: true
 ---
@@ -106,9 +106,9 @@ Yes. Use Runway for generated visuals and Synthesia for the presenter-led traini
 
 ## Sources
 
-- [Runway pricing](https://runwayml.com/pricing), verified 2026-06-06
-- [Runway developer model docs](https://docs.dev.runwayml.com/guides/models/), verified 2026-06-06
-- [Runway API pricing docs](https://docs.dev.runwayml.com/guides/pricing/), verified 2026-06-06
-- [Synthesia pricing](https://www.synthesia.io/pricing), verified 2026-06-06
-- [Synthesia Express-2 announcement](https://www.synthesia.io/post/express-2-is-synthesias-next-chapter-for-full-body-expressive-ai-avatars), verified 2026-06-06
-- [Synthesia avatar docs](https://docs.synthesia.io/docs/synthesia-avatars), verified 2026-06-06
+- [Runway pricing](https://runwayml.com/pricing), verified 2026-06-12
+- [Runway developer model docs](https://docs.dev.runwayml.com/guides/models/), verified 2026-06-12
+- [Runway API pricing docs](https://docs.dev.runwayml.com/guides/pricing/), verified 2026-06-12
+- [Synthesia pricing](https://www.synthesia.io/pricing), verified 2026-06-12
+- [Synthesia Express-2 announcement](https://www.synthesia.io/post/express-2-is-synthesias-next-chapter-for-full-body-expressive-ai-avatars), verified 2026-06-12
+- [Synthesia avatar docs](https://docs.synthesia.io/docs/synthesia-avatars), verified 2026-06-12

@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Kling 3.0 vs Synthesia: AI Video or Avatar Training? (June 2026)"
 meta_description: "Kling 3.0 vs Synthesia for video teams: compare current cinematic AI video generation, avatar presenter workflows, training content, pricing checks, and production fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-06
-last_verified: 2026-06-06
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -127,8 +127,8 @@ Yes. Kling can generate visual clips for a course or campaign, while Synthesia c
 
 ## Sources
 
-- [Kuaishou Kling AI 3.0 launch](https://ir.kuaishou.com/news-releases/news-release-details/kling-ai-launches-30-model-ushering-era-where-everyone-can-be), verified 2026-06-06
-- [Kling AI pricing](https://klingai.com/pricing), checked 2026-06-06; dynamic page, verify in app
-- [Synthesia pricing](https://www.synthesia.io/pricing), verified 2026-06-06
-- [Synthesia security practices](https://www.synthesia.io/legal/security-practices), verified 2026-06-06
-- [Synthesia Personal Avatars docs](https://docs.synthesia.io/docs/personal-avatars), verified 2026-06-06
+- [Kuaishou Kling AI 3.0 launch](https://ir.kuaishou.com/news-releases/news-release-details/kling-ai-launches-30-model-ushering-era-where-everyone-can-be), verified 2026-06-12
+- [Kling AI pricing](https://klingai.com/pricing), checked 2026-06-12; dynamic page, verify in app
+- [Synthesia pricing](https://www.synthesia.io/pricing), verified 2026-06-12
+- [Synthesia security practices](https://www.synthesia.io/legal/security-practices), verified 2026-06-12
+- [Synthesia Personal Avatars docs](https://docs.synthesia.io/docs/personal-avatars), verified 2026-06-12

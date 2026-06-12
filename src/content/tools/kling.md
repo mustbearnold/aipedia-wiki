@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "Free + credit-based paid plans; verify 3.0/Omni access in app"
 status: active
 launched: 2024-06
-last_updated: 2026-06-06
-last_verified: 2026-06-06
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: weekly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://ir.kuaishou.com/news-releases/news-release-details/kling-ai-launches-30-model-ushering-era-where-everyone-can-be"
     source_label: "Kuaishou Kling 3.0 launch"
     source_id: kling-30-launch
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     next_review_at: 2026-07-06
     volatility: high
     confidence: high
@@ -39,7 +39,7 @@ facts:
     source: "https://ir.kuaishou.com/news-releases/news-release-details/kling-ai-launches-30-model-ushering-era-where-everyone-can-be"
     source_label: "Kuaishou Kling 3.0 launch"
     source_id: kling-30-launch
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     next_review_at: 2026-07-06
     volatility: high
     confidence: high
@@ -48,7 +48,7 @@ facts:
     source: "https://klingai.com/pricing"
     source_label: "Kling AI pricing"
     source_id: kling-pricing
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     next_review_at: 2026-07-06
     volatility: high
     confidence: medium
@@ -57,13 +57,13 @@ facts:
     source: "https://ir.kuaishou.com/news-releases/news-release-details/kling-ai-launches-30-model-ushering-era-where-everyone-can-be"
     source_label: "Kuaishou Kling 3.0 launch"
     source_id: kling-30-launch
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     next_review_at: 2026-07-06
     volatility: high
     confidence: high
 tags: [ai-video, video-generation, text-to-video, image-to-video, native-audio, kuaishou, kling, cinematic, multi-shot]
 seo_title: "Kling 3.0: Features, Pricing & Review (June 2026)"
-meta_description: "Kling 3.0 is Kuaishou's frontier AI video model family for native audio, 15-second clips, multi-shot storytelling, and cinematic output. Verified June 6, 2026."
+meta_description: "Kling 3.0 is Kuaishou's frontier AI video model family for native audio, 15-second clips, multi-shot storytelling, and cinematic output. Verified June 12, 2026."
 author: "aipedia.wiki Editorial"
 best_for:
   - cinematic AI video
@@ -194,9 +194,9 @@ Kuaishou's official 3.0 launch describes native audio across English, Chinese, J
 
 ## Sources
 
-- [Kuaishou: Kling AI 3.0 launch](https://ir.kuaishou.com/news-releases/news-release-details/kling-ai-launches-30-model-ushering-era-where-everyone-can-be) (verified 2026-06-06)
-- [Kling AI](https://klingai.com/) (verified 2026-06-06)
-- [Kling AI pricing](https://klingai.com/pricing) (checked 2026-06-06; dynamic page, verify in app)
+- [Kuaishou: Kling AI 3.0 launch](https://ir.kuaishou.com/news-releases/news-release-details/kling-ai-launches-30-model-ushering-era-where-everyone-can-be) (verified 2026-06-12)
+- [Kling AI](https://klingai.com/) (verified 2026-06-12)
+- [Kling AI pricing](https://klingai.com/pricing) (checked 2026-06-12; dynamic page, verify in app)
 
 ## Related
 

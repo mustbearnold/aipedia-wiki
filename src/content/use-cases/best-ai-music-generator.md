@@ -7,8 +7,8 @@ meta_description: "Best AI music generators in June 2026: Suno for full songs, U
 author: "aipedia.wiki Editorial"
 description: "A source-backed buyer guide to choosing an AI music generator by job: full songs, editable composition, commercial audio, background tracks, and licensing-sensitive creator work."
 tools_mentioned: ["suno", "udio", "elevenlabs", "aiva", "mubert", "stable-audio", "boomy"]
-last_updated: 2026-06-06
-last_verified: 2026-06-06
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 guide_picks:
   best_overall:
@@ -45,7 +45,7 @@ guide_picks:
 
 The best AI music generator in June 2026 depends on the job. **[Suno](/tools/suno/)** is the easiest default for full songs. **[Udio](/tools/udio/)** is still the closest Suno-style comparison, but it is a constrained test while downloads remain disabled during its UMG partnership transition. **[ElevenLabs Music](/tools/elevenlabs/)** is the strongest commercial audio workflow to evaluate. **[AIVA](/tools/aiva/)** is best for composers who want editable composition. **[Mubert](/tools/mubert/)** is best when you need background music rather than songs.
 
-Verified June 6, 2026 against official Suno, Udio, ElevenLabs, AIVA, Mubert, Stable Audio, and Boomy sources where available. AiPedia may earn from some tool links, but scores and rankings stay editorial.
+Verified June 12, 2026 against official Suno, Udio, ElevenLabs, AIVA, Mubert, Stable Audio, and Boomy sources where available. AiPedia may earn from some tool links, but scores and rankings stay editorial.
 
 ## Quick Verdict
 
@@ -132,17 +132,17 @@ Only for background music. Mubert is not trying to make the same kind of full vo
 Use Suno for full songs, Mubert for background tracks, AIVA for composed cues, ElevenLabs Music for commercial audio workflows, and Udio only if the current download limitation does not affect the job. Check the exact license before monetizing.
 
 **How often is this list updated?**  
-Verified monthly, with extra checks when AI music pricing, model access, or licensing changes. This page was last verified on 2026-06-06.
+Verified monthly, with extra checks when AI music pricing, model access, or licensing changes. This page was last verified on 2026-06-12.
 
 ## Sources
 
-- [Suno pricing](https://suno.com/pricing) (verified 2026-06-06)
-- [Udio credit limits](https://help.udio.com/en/articles/10739134-credits-and-credit-limits) (verified 2026-06-06)
-- [Udio UMG partnership changes](https://help.udio.com/en/articles/12683565-changes-associated-with-the-universal-music-group-umg-partnership) (verified 2026-06-06)
-- [ElevenLabs Music](https://elevenlabs.io/music) (verified 2026-06-06)
-- [ElevenLabs Music v2](https://elevenlabs.io/blog/introducing-music-v2) (verified 2026-06-06)
-- [ElevenLabs pricing](https://elevenlabs.io/pricing) (verified 2026-06-06)
-- [AIVA pricing](https://www.aiva.ai/pricing) (verified 2026-06-06)
-- [Mubert pricing](https://mubert.com/render/pricing) (verified 2026-06-06)
-- [Stable Audio pricing](https://stableaudio.com/pricing) (verified 2026-06-06)
-- [Boomy pricing](https://boomy.com/pricing) (verified 2026-06-06)
+- [Suno pricing](https://suno.com/pricing) (verified 2026-06-12)
+- [Udio credit limits](https://help.udio.com/en/articles/10739134-credits-and-credit-limits) (verified 2026-06-12)
+- [Udio UMG partnership changes](https://help.udio.com/en/articles/12683565-changes-associated-with-the-universal-music-group-umg-partnership) (verified 2026-06-12)
+- [ElevenLabs Music](https://elevenlabs.io/music) (verified 2026-06-12)
+- [ElevenLabs Music v2](https://elevenlabs.io/blog/introducing-music-v2) (verified 2026-06-12)
+- [ElevenLabs pricing](https://elevenlabs.io/pricing) (verified 2026-06-12)
+- [AIVA pricing](https://www.aiva.ai/pricing) (verified 2026-06-12)
+- [Mubert pricing](https://mubert.com/render/pricing) (verified 2026-06-12)
+- [Stable Audio pricing](https://stableaudio.com/pricing) (verified 2026-06-12)
+- [Boomy pricing](https://boomy.com/pricing) (verified 2026-06-12)

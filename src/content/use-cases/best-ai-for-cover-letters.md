@@ -3,7 +3,7 @@ type: use-case
 slug: best-ai-for-cover-letters
 title: "Best AI for Cover Letters (2026)"
 seo_title: "Best AI for Cover Letters (June 2026): ChatGPT, Claude, Gemini"
-meta_description: "Updated June 6, 2026: ChatGPT is best for fast tailored cover letters, Claude is best for restrained formal editing, and Gemini is best for Google Docs workflows."
+meta_description: "Updated June 12, 2026: ChatGPT is best for fast tailored cover letters, Claude is best for restrained formal editing, and Gemini is best for Google Docs workflows."
 description: "A practical guide to using AI for cover letters without producing generic, exaggerated, or unsafe job-application copy."
 tools_mentioned: ["chatgpt", "claude", "gemini"]
 guide_picks:
@@ -32,8 +32,8 @@ guide_picks:
       - label: "Google AI subscriptions"
         url: "https://gemini.google/subscriptions/"
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-06
-last_verified: 2026-06-06
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 ---
 
@@ -41,7 +41,7 @@ update_frequency: monthly
 
 AI can draft a cover letter quickly. The hard part is making it sound specific, honest, and useful to the hiring manager. The best tool is the one that helps you connect your real experience to the job description without inventing achievements.
 
-AiPedia rechecked this guide against current ChatGPT, Claude, Gemini, Google AI, Workspace AI, and Grammarly plan surfaces on June 6, 2026. Recommendations are editorial and focus on truthful application materials, workflow fit, privacy, and claim verification.
+AiPedia rechecked this guide against current ChatGPT, Claude, Gemini, Google AI, Workspace AI, and Grammarly plan surfaces on June 12, 2026. Recommendations are editorial and focus on truthful application materials, workflow fit, privacy, and claim verification.
 
 ## Quick Verdict
 
@@ -145,14 +145,14 @@ ChatGPT, Claude, and Gemini all have free access with limits. Check current plan
 Usually no for ordinary cover-letter drafting, but follow any employer or application-system rules. Never use AI to invent experience.
 
 **How often is this list updated?**
-Monthly, or sooner when plan limits, file features, workspace controls, or job-application workflows change. This guide was last verified on 2026-06-06.
+Monthly, or sooner when plan limits, file features, workspace controls, or job-application workflows change. This guide was last verified on 2026-06-12.
 
 ## Sources
 
-- [ChatGPT pricing](https://chatgpt.com/pricing/) (verified 2026-06-06)
-- [OpenAI business ChatGPT pricing](https://openai.com/business/chatgpt-pricing/) (verified 2026-06-06)
-- [Claude pricing](https://claude.com/pricing) (verified 2026-06-06)
-- [Google AI subscriptions](https://gemini.google/subscriptions/) (verified 2026-06-06)
-- [Google Workspace AI](https://workspace.google.com/solutions/ai/) (verified 2026-06-06)
-- [Grammarly plans](https://www.grammarly.com/plans) (verified 2026-06-06)
-- AiPedia editorial review, verified 2026-06-06.
+- [ChatGPT pricing](https://chatgpt.com/pricing/) (verified 2026-06-12)
+- [OpenAI business ChatGPT pricing](https://openai.com/business/chatgpt-pricing/) (verified 2026-06-12)
+- [Claude pricing](https://claude.com/pricing) (verified 2026-06-12)
+- [Google AI subscriptions](https://gemini.google/subscriptions/) (verified 2026-06-12)
+- [Google Workspace AI](https://workspace.google.com/solutions/ai/) (verified 2026-06-12)
+- [Grammarly plans](https://www.grammarly.com/plans) (verified 2026-06-12)
+- AiPedia editorial review, verified 2026-06-12.

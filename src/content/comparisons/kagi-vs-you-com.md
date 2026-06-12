@@ -6,10 +6,10 @@ tools: [kagi, you-com]
 category: ai-search
 winner: depends
 seo_title: "Kagi vs You.com (June 2026): Private Search or Search API?"
-meta_description: "Kagi is a paid private search engine for humans; You.com is now an API-first grounding and research platform for builders. Updated June 6, 2026."
+meta_description: "Kagi is a paid private search engine for humans; You.com is now an API-first grounding and research platform for builders. Updated June 12, 2026."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-06
-last_verified: 2026-06-06
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -77,9 +77,9 @@ No. Kagi is not the right choice if the requirement is production web-grounding 
 
 ## Sources
 
-- [Kagi pricing](https://kagi.com/pricing) (verified 2026-06-06)
-- [Kagi plan types](https://help.kagi.com/kagi/plans/plan-types.html) (verified 2026-06-06)
-- [You.com pricing](https://you.com/pricing) (verified 2026-06-06)
-- [You.com API docs](https://you.com/docs/welcome) (verified 2026-06-06)
-- [Kagi review](/tools/kagi/) (verified 2026-06-06)
-- [You.com review](/tools/you-com/) (verified 2026-06-06)
+- [Kagi pricing](https://kagi.com/pricing) (verified 2026-06-12)
+- [Kagi plan types](https://help.kagi.com/kagi/plans/plan-types.html) (verified 2026-06-12)
+- [You.com pricing](https://you.com/pricing) (verified 2026-06-12)
+- [You.com API docs](https://you.com/docs/welcome) (verified 2026-06-12)
+- [Kagi review](/tools/kagi/) (verified 2026-06-12)
+- [You.com review](/tools/you-com/) (verified 2026-06-12)

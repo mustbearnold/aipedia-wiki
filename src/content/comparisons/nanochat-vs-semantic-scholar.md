@@ -6,10 +6,10 @@ tools: [nanochat, semantic-scholar]
 category: ai-research
 winner: semantic-scholar
 seo_title: "nanochat vs Semantic Scholar: LLM Training Repo or Free Paper Search?"
-meta_description: "nanochat vs Semantic Scholar, refreshed June 6, 2026: choose Semantic Scholar for free paper discovery/API; choose nanochat only for LLM training education."
+meta_description: "nanochat vs Semantic Scholar, refreshed June 12, 2026: choose Semantic Scholar for free paper discovery/API; choose nanochat only for LLM training education."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-06
-last_verified: 2026-06-06
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: quarterly
 canonical_fact_table: true
 ---
@@ -26,7 +26,7 @@ Choose **Semantic Scholar** for literature discovery, citation trails, author lo
 
 | Buyer question | Winner | Why |
 |---|---|---|
-| I need to find papers on a topic | Semantic Scholar | The homepage lists more than 234 million searchable papers as of June 6, 2026. |
+| I need to find papers on a topic | Semantic Scholar | The homepage lists more than 234 million searchable papers as of June 12, 2026. |
 | I need an academic API | Semantic Scholar | Academic Graph, Recommendations, and Datasets APIs expose papers, authors, citations, venues, embeddings, and dataset downloads. |
 | I need to learn LLM training | nanochat | The repo shows tokenization, pretraining, supervised tuning, RLHF-style alignment, evaluation, inference, and a chat UI. |
 | I need a free research starting point | Semantic Scholar | Core search is free and account-light; API access is free but rate-limited. |

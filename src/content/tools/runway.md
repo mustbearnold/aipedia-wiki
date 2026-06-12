@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "Free + paid plans from $12/user/month billed annually; API credits at $0.01/credit"
 status: active
 launched: 2023-03
-last_updated: 2026-06-06
-last_verified: 2026-06-06
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: weekly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: "https://runwayml.com/news/introducing-aleph-2-and-edit-studio"
     source_label: "Runway Aleph 2.0 announcement"
     source_id: runway-aleph-2
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-07-06
@@ -40,7 +40,7 @@ facts:
     source: "https://help.runwayml.com/hc/en-us/articles/37327109429011-Creating-with-Gen-4-Video"
     source_label: "Runway Gen-4 help docs"
     source_id: runway-help
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
     next_review_at: 2026-07-06
@@ -49,7 +49,7 @@ facts:
     source: "https://runwayml.com/pricing"
     source_label: "Runway pricing"
     source_id: runway-pricing
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-07-06
@@ -58,7 +58,7 @@ facts:
     source: "https://runwayml.com/pricing"
     source_label: "Runway pricing"
     source_id: runway-pricing
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-07-06
@@ -67,7 +67,7 @@ facts:
     source: "https://runwayml.com/pricing"
     source_label: "Runway pricing"
     source_id: runway-pricing
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-07-06
@@ -76,7 +76,7 @@ facts:
     source: "https://docs.dev.runwayml.com/guides/models/"
     source_label: "Runway API models"
     source_id: runway-api-models
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-07-06
@@ -85,7 +85,7 @@ facts:
     source: "https://runwayml.com/pricing"
     source_label: "Runway pricing"
     source_id: runway-pricing
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-07-06
@@ -94,7 +94,7 @@ facts:
     source: "https://runwayml.com/pricing"
     source_label: "Runway pricing"
     source_id: runway-pricing
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-07-06
@@ -103,7 +103,7 @@ facts:
     source: "https://runwayml.com/pricing"
     source_label: "Runway pricing"
     source_id: runway-pricing
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
     next_review_at: 2026-07-06
@@ -112,7 +112,7 @@ facts:
     source: "https://docs.dev.runwayml.com/"
     source_label: "Runway API docs"
     source_id: runway-api-docs
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
   coding_agent:
@@ -120,7 +120,7 @@ facts:
     source: "https://docs.dev.runwayml.com/"
     source_label: "Runway API docs"
     source_id: runway-api-docs
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
   enterprise_controls:
@@ -128,7 +128,7 @@ facts:
     source: "https://runwayml.com/pricing"
     source_label: "Runway pricing"
     source_id: runway-pricing
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-07-06
@@ -137,7 +137,7 @@ facts:
     source: "https://help.runwayml.com/hc/en-us/articles/18927776141715-Usage-rights"
     source_label: "Runway usage rights"
     source_id: runway-usage-rights
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
     next_review_at: 2026-07-06
@@ -146,7 +146,7 @@ facts:
     source: "https://runwayml.com"
     source_label: "Runway official site"
     source_id: runway-help
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
   best_for:
@@ -154,7 +154,7 @@ facts:
     source: "https://runwayml.com/pricing"
     source_label: "Runway pricing"
     source_id: runway-pricing
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   watch_out_for:
@@ -162,13 +162,13 @@ facts:
     source: "https://docs.dev.runwayml.com/guides/pricing/"
     source_label: "Runway API pricing"
     source_id: runway-api-pricing
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-07-06
 tags: [ai-video, video-generation, text-to-video, image-to-video, video-editing, filmmaking, runway, gen-4-5, gen-4, aleph, act-two, veo, seedance, kling, api, production-workflow]
 seo_title: "Runway Review: Pricing, Models, API and Best Use Cases (June 2026)"
-meta_description: "Runway is the best production AI video workspace, not always the raw model winner. Updated June 6, 2026 with Max plan pricing, Gen-4.5, Aleph, Act-Two, Veo 3.1, Seedance 2.0, Kling 3.0 Pro, pricing, and API guidance."
+meta_description: "Runway is the best production AI video workspace, not always the raw model winner. Updated June 12, 2026 with Max plan pricing, Gen-4.5, Aleph, Act-Two, Veo 3.1, Seedance 2.0, Kling 3.0 Pro, pricing, and API guidance."
 author: "aipedia.wiki Editorial"
 best_for:
   - video production teams
@@ -364,14 +364,14 @@ For Google-stack API and provenance use cases, Veo 3.1 may be the cleaner model 
 
 ## Sources
 
-- [Runway pricing](https://runwayml.com/pricing) (verified 2026-06-06)
+- [Runway pricing](https://runwayml.com/pricing) (verified 2026-06-12)
 - [Runway Gen-4 help docs](https://help.runwayml.com/hc/en-us/articles/37327109429011-Creating-with-Gen-4-Video)
 - [Runway Aleph help docs](https://help.runwayml.com/hc/en-us/articles/43176400374419-Creating-with-Aleph)
 - [Runway Act-Two help docs](https://help.runwayml.com/hc/en-us/articles/42311337895827-Performance-Capture-with-Act-Two)
-- [Available Models on Runway](https://help.runwayml.com/hc/en-us/articles/48649877897107-Available-Models-on-Runway) (verified 2026-06-06)
+- [Available Models on Runway](https://help.runwayml.com/hc/en-us/articles/48649877897107-Available-Models-on-Runway) (verified 2026-06-12)
 - [Runway API docs](https://docs.dev.runwayml.com/)
-- [Runway API models](https://docs.dev.runwayml.com/guides/models/) (verified 2026-06-06)
-- [Runway API pricing](https://docs.dev.runwayml.com/guides/pricing/) (verified 2026-06-06)
+- [Runway API models](https://docs.dev.runwayml.com/guides/models/) (verified 2026-06-12)
+- [Runway API pricing](https://docs.dev.runwayml.com/guides/pricing/) (verified 2026-06-12)
 - [Runway usage rights](https://help.runwayml.com/hc/en-us/articles/18927776141715-Usage-rights)
 - [Runway enterprise](https://runwayml.com/enterprise/)
 - [Runway data security](https://runwayml.com/data-security)

@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: $0-$24/month
 status: active
 launched: 2023-12
-last_updated: 2026-06-06
-last_verified: 2026-06-06
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -33,7 +33,7 @@ facts:
     source: "https://suno.com/blog/v5-5"
     source_label: "Suno v5.5 announcement"
     source_id: suno-v55
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-07-06
@@ -42,7 +42,7 @@ facts:
     source: "https://help.suno.com/en/articles/5782721"
     source_label: "Suno model timeline"
     source_id: suno-model-timeline
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
     next_review_at: 2026-07-06
@@ -51,7 +51,7 @@ facts:
     source: "https://suno.com/pricing"
     source_label: "Suno pricing"
     source_id: suno-pricing
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-07-06
@@ -60,7 +60,7 @@ facts:
     source: "https://suno.com/pricing"
     source_label: "Suno pricing"
     source_id: suno-pricing
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-07-06
@@ -69,7 +69,7 @@ facts:
     source: "https://suno.com/pricing"
     source_label: "Suno pricing"
     source_id: suno-pricing
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-07-06
@@ -78,7 +78,7 @@ facts:
     source: "https://suno.com/pricing"
     source_label: "Suno pricing"
     source_id: suno-pricing
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   image_generation:
@@ -86,7 +86,7 @@ facts:
     source: "https://suno.com/pricing"
     source_label: "Suno pricing"
     source_id: suno-pricing
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
   video_generation:
@@ -94,7 +94,7 @@ facts:
     source: "https://suno.com/pricing"
     source_label: "Suno pricing"
     source_id: suno-pricing
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
   real_time_voice:
@@ -102,7 +102,7 @@ facts:
     source: "https://suno.com/blog/v5-5"
     source_label: "Suno v5.5 announcement"
     source_id: suno-v55
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   web_browsing:
@@ -110,7 +110,7 @@ facts:
     source: "https://suno.com/pricing"
     source_label: "Suno pricing"
     source_id: suno-pricing
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
   coding_agent:
@@ -118,7 +118,7 @@ facts:
     source: "https://suno.com/pricing"
     source_label: "Suno pricing"
     source_id: suno-pricing
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
   enterprise_controls:
@@ -126,7 +126,7 @@ facts:
     source: "https://suno.com/pricing"
     source_label: "Suno pricing"
     source_id: suno-pricing
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-07-06
@@ -135,7 +135,7 @@ facts:
     source: "https://suno.com/pricing"
     source_label: "Suno pricing"
     source_id: suno-pricing
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   open_source_or_local:
@@ -143,7 +143,7 @@ facts:
     source: "https://suno.com/pricing"
     source_label: "Suno pricing"
     source_id: suno-pricing
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
   best_for:
@@ -151,7 +151,7 @@ facts:
     source: "https://suno.com/blog/suno-studio"
     source_label: "Suno Studio announcement"
     source_id: suno-studio
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   watch_out_for:
@@ -159,7 +159,7 @@ facts:
     source: "https://suno.com/pricing"
     source_label: "Suno pricing"
     source_id: suno-pricing
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-07-06
@@ -257,7 +257,7 @@ Suno is the default AI music generator as of June 2026. The current model is **v
 | **Licensed label partners** | Warner Music Group (settled Nov 2025) |
 | **Open litigation** | Sony Music · UMG / Concord / ABKCO ($3B+ case filed Jan 2026) |
 
-Every current pricing, model-access, credits, stems, and commercial-rights point above was verified against vendor sources on 2026-06-06. See Sources.
+Every current pricing, model-access, credits, stems, and commercial-rights point above was verified against vendor sources on 2026-06-12. See Sources.
 
 ## What it actually is
 
@@ -294,7 +294,7 @@ Via [suno.com/pricing](https://suno.com/pricing):
 | Premier | $24/mo | $19.20/mo | 10,000 / mo | ~833 v5 | **Yes** | **12 stems** | **Yes** | **Yes** + MIDI export | Producers replacing part of a DAW workflow |
 | Enterprise | Custom | · | Custom | Custom | Yes | 12 stems | Yes | Yes | Labels, agencies, licensed partners |
 
-Prices verified 2026-06-06 via [suno.com/pricing](https://suno.com/pricing). May 2026 pricing pulled Pro from $10 to $8 and Premier from $30 to $24 in the public pricing display; annual rates moved correspondingly. Commercial use rights attach to songs generated **while subscribed**. If Pro / Premier lapses, new songs lose commercial rights (songs previously exported under an active plan retain them). Voices costs 4 credits per track during beta, below the standard 12-credit v5 rate.
+Prices verified 2026-06-12 via [suno.com/pricing](https://suno.com/pricing). May 2026 pricing pulled Pro from $10 to $8 and Premier from $30 to $24 in the public pricing display; annual rates moved correspondingly. Commercial use rights attach to songs generated **while subscribed**. If Pro / Premier lapses, new songs lose commercial rights (songs previously exported under an active plan retain them). Voices costs 4 credits per track during beta, below the standard 12-credit v5 rate.
 
 ## Against the alternatives
 
@@ -322,7 +322,7 @@ Prices verified 2026-06-06 via [suno.com/pricing](https://suno.com/pricing). May
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Moat and longevity scores reflect the open Sony / UMG litigation and the lack of a defensible API moat. Last verified 2026-06-06 against Suno's [pricing page](https://suno.com/pricing), the [v5.5 announcement](https://suno.com/blog/v5-5), the [Suno Studio launch post](https://suno.com/blog/suno-studio), and coverage of the [Warner Music settlement](https://www.rollingstone.com/music/music-features/suno-warner-music-group-ai-music-settlement-lawsuit-1235472868/) and [June 2026 court filings](https://www.musicbusinessworldwide.com/suno-moves-to-keep-size-of-its-ai-training-data-sealed-in-umg-and-sonys-copyright-case-citing-competitive-harm/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Moat and longevity scores reflect the open Sony / UMG litigation and the lack of a defensible API moat. Last verified 2026-06-12 against Suno's [pricing page](https://suno.com/pricing), the [v5.5 announcement](https://suno.com/blog/v5-5), the [Suno Studio launch post](https://suno.com/blog/suno-studio), and coverage of the [Warner Music settlement](https://www.rollingstone.com/music/music-features/suno-warner-music-group-ai-music-settlement-lawsuit-1235472868/) and [June 2026 court filings](https://www.musicbusinessworldwide.com/suno-moves-to-keep-size-of-its-ai-training-data-sealed-in-umg-and-sonys-copyright-case-citing-competitive-harm/).
 
 ## FAQ
 
@@ -330,7 +330,7 @@ This page was produced by the aipedia.wiki editorial pipeline, an automated syst
 Suno v5.5, released March 26, 2026. It adds Voices (voice cloning, Pro+), Custom Models (up to 3 personal style models, Pro+), and My Taste (preference learning, free). v5, v4.5, and v4.5-All remain accessible on the model selector. v4.5-All is the default on free.
 
 **How much does Suno cost?**
-Free ($0, 50 credits/day, non-commercial, v4.5-All only), Pro ($8/mo or $6.40/mo annual: 2,500 credits, commercial rights, 12 stems, voice cloning), Premier ($24/mo or $19.20/mo annual: 10,000 credits, Suno Studio DAW, MIDI export). Enterprise is custom. Prices verified June 6, 2026; the public display dropped from $10/$30 to $8/$24 in May.
+Free ($0, 50 credits/day, non-commercial, v4.5-All only), Pro ($8/mo or $6.40/mo annual: 2,500 credits, commercial rights, 12 stems, voice cloning), Premier ($24/mo or $19.20/mo annual: 10,000 credits, Suno Studio DAW, MIDI export). Enterprise is custom. Prices verified June 12, 2026; the public display dropped from $10/$30 to $8/$24 in May.
 
 **Can I use Suno music commercially?**
 Yes on Pro and Premier, and only while the subscription is active. Songs generated during an active Pro / Premier subscription retain commercial rights; new songs generated after cancellation revert to non-commercial. Free tier output is personal / non-commercial only.
@@ -355,7 +355,7 @@ No official public one. Suno runs beta access for select partners only and expli
 
 ## Sources
 
-- [Suno pricing](https://suno.com/pricing) · current tiers, credits, commercial rights (verified 2026-06-06)
+- [Suno pricing](https://suno.com/pricing) · current tiers, credits, commercial rights (verified 2026-06-12)
 - [Suno v5.5 announcement](https://suno.com/blog/v5-5) · voice cloning, custom models, release date
 - [Introducing Suno Studio](https://suno.com/blog/suno-studio) · AI-native DAW, MIDI export, Premier exclusivity
 - [Suno Model Timeline](https://help.suno.com/en/articles/5782721) · v4.5 / v5 / v5.5 availability

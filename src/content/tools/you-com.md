@@ -13,8 +13,8 @@ pricing_model: paid
 price_range: "$1-$110+ per 1K calls; $100 free credit; Enterprise custom"
 status: active
 launched: 2020-11
-last_updated: 2026-06-06
-last_verified: 2026-06-06
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -33,7 +33,7 @@ facts:
     source: "https://you.com/pricing"
     source_label: "You.com pricing"
     source_id: you-com-official
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     next_review_at: 2026-09-05
     volatility: high
     confidence: high
@@ -42,7 +42,7 @@ facts:
     source: "https://you.com/pricing"
     source_label: "You.com pricing"
     source_id: you-com-official
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     next_review_at: 2026-09-05
     volatility: high
     confidence: high
@@ -51,7 +51,7 @@ facts:
     source: "https://you.com/docs/welcome"
     source_label: "You.com API docs"
     source_id: you-com-docs
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     next_review_at: 2026-09-05
     volatility: medium
     confidence: high
@@ -60,7 +60,7 @@ facts:
     source: "https://you.com/"
     source_label: "You.com homepage"
     source_id: you-com-official
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     next_review_at: 2026-09-05
     volatility: high
     confidence: high
@@ -69,7 +69,7 @@ facts:
     source: "https://you.com/pricing"
     source_label: "You.com pricing"
     source_id: you-com-official
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     next_review_at: 2026-09-05
     volatility: high
     confidence: high
@@ -183,7 +183,7 @@ You.com finished its pivot from consumer AI search to a developer-API platform. 
 | **Pivot status** | Consumer Pro and Max subscriptions removed from the pricing page in 2026 |
 | **Where ARI lives now** | Inside the Research API as the depth-tier ladder |
 
-Every data point above was verified against vendor sources on 2026-06-06. See Sources.
+Every data point above was verified against vendor sources on 2026-06-12. See Sources.
 
 ## What it actually is
 
@@ -221,7 +221,7 @@ Pricing via [you.com/pricing](https://you.com/pricing):
 | Finance Research API | From $110 per 1K calls | Finance-focused research calls for higher-cost research workloads |
 | Enterprise | Custom | Custom QPS, volume and annual discounts, SOC 2, zero retention, DPA-ready |
 
-Prices verified 2026-06-06 via [You.com pricing](https://you.com/pricing). Enterprise quotes come through sales. Annual commitment and high-volume discounts apply on top of pay-as-you-go rates.
+Prices verified 2026-06-12 via [You.com pricing](https://you.com/pricing). Enterprise quotes come through sales. Annual commitment and high-volume discounts apply on top of pay-as-you-go rates.
 
 ## Against the alternatives
 
@@ -244,7 +244,7 @@ Prices verified 2026-06-06 via [You.com pricing](https://you.com/pricing). Enter
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-06 against [You.com pricing](https://you.com/pricing), [You.com API docs](https://you.com/docs/welcome), and the [You.com homepage](https://you.com/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against [You.com pricing](https://you.com/pricing), [You.com API docs](https://you.com/docs/welcome), and the [You.com homepage](https://you.com/).
 
 ## FAQ
 

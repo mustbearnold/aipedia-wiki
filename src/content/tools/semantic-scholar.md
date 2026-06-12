@@ -10,8 +10,8 @@ pricing_model: free
 price_range: "Free"
 status: active
 launched: 2015-11
-last_updated: 2026-06-06
-last_verified: 2026-06-06
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://www.semanticscholar.org/"
     source_label: "Semantic Scholar homepage"
     source_id: semantic-scholar-official
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     next_review_at: 2026-09-06
     volatility: medium
     confidence: high
@@ -39,7 +39,7 @@ facts:
     source: "https://www.semanticscholar.org/product/api"
     source_label: "Semantic Scholar API"
     source_id: semantic-scholar-api
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     next_review_at: 2026-09-06
     volatility: medium
     confidence: high
@@ -48,7 +48,7 @@ facts:
     source: "https://www.semanticscholar.org/product/api"
     source_label: "Semantic Scholar API"
     source_id: semantic-scholar-api
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     next_review_at: 2026-09-06
     volatility: medium
     confidence: high
@@ -57,7 +57,7 @@ facts:
     source: "https://www.semanticscholar.org/"
     source_label: "Semantic Scholar homepage"
     source_id: semantic-scholar-official
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     next_review_at: 2026-09-06
     volatility: medium
     confidence: high
@@ -66,7 +66,7 @@ facts:
     source: "https://www.semanticscholar.org/product/api"
     source_label: "Semantic Scholar API"
     source_id: semantic-scholar-api
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     next_review_at: 2026-09-06
     volatility: medium
     confidence: medium
@@ -172,7 +172,7 @@ The moat is institutional. AI2 is a non-profit with permanent funding, which rem
 |------|-------|--------|
 | Free | $0 | Core search, TLDR, Semantic Reader, Research Feed, and API access with public rate limits or API key where required |
 
-*Verified 2026-06-06. Semantic Scholar's core search is free. API access is free but rate-limited, and some endpoints require an API key.*
+*Verified 2026-06-12. Semantic Scholar's core search is free. API access is free but rate-limited, and some endpoints require an API key.*
 
 ## Against the alternatives
 
@@ -198,7 +198,7 @@ The moat is institutional. AI2 is a non-profit with permanent funding, which rem
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies corpus and feature details against primary sources, and generates the analysis above. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-06 against [Semantic Scholar](https://www.semanticscholar.org) and the [Semantic Scholar API overview](https://www.semanticscholar.org/product/api).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies corpus and feature details against primary sources, and generates the analysis above. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against [Semantic Scholar](https://www.semanticscholar.org) and the [Semantic Scholar API overview](https://www.semanticscholar.org/product/api).
 
 ## FAQ
 

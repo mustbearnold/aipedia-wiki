@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Otter.ai vs Readwise Reader: Meeting Archive or Reading Retention?"
 meta_description: "Otter.ai wins for live transcription and searchable meeting archives. Readwise Reader wins for articles, PDFs, highlights, Ghostreader AI, exports, and daily review. Verified June 2026."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-06
-last_verified: 2026-06-06
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: quarterly
 canonical_fact_table: true
 ---
@@ -87,8 +87,8 @@ No. Otter's archive is transcript-centered; Readwise is built for reading, highl
 
 ## Sources
 
-- [Otter.ai pricing](https://otter.ai/pricing) (verified 2026-06-06)
-- [OtterPilot overview](https://otter.ai/otterpilot) (verified 2026-06-06)
-- [Readwise Reader pricing](https://readwise.io/pricing/reader) (verified 2026-06-06)
-- [Readwise Reader official site](https://readwise.io/read) (verified 2026-06-06)
-- [Ghostreader docs](https://docs.readwise.io/reader/guides/ghostreader/overview) (verified 2026-06-06)
+- [Otter.ai pricing](https://otter.ai/pricing) (verified 2026-06-12)
+- [OtterPilot overview](https://otter.ai/otterpilot) (verified 2026-06-12)
+- [Readwise Reader pricing](https://readwise.io/pricing/reader) (verified 2026-06-12)
+- [Readwise Reader official site](https://readwise.io/read) (verified 2026-06-12)
+- [Ghostreader docs](https://docs.readwise.io/reader/guides/ghostreader/overview) (verified 2026-06-12)

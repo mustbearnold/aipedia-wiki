@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$30/user/month"
 status: active
 launched: 2016-02
-last_updated: 2026-06-06
-last_verified: 2026-06-06
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -30,7 +30,7 @@ facts:
     source: "https://otter.ai/otterpilot"
     source_label: "OtterPilot overview"
     source_id: otter-otterpilot
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -38,7 +38,7 @@ facts:
     source: "https://otter.ai/pricing"
     source_label: "Otter.ai pricing"
     source_id: otter-ai-pricing
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-08-10
@@ -47,7 +47,7 @@ facts:
     source: "https://otter.ai/pricing"
     source_label: "Otter.ai pricing"
     source_id: otter-ai-pricing
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   enterprise_controls:
@@ -55,7 +55,7 @@ facts:
     source: "https://otter.ai/pricing"
     source_label: "Otter.ai pricing"
     source_id: otter-ai-pricing
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: high
     confidence: medium
     next_review_at: 2026-08-10
@@ -64,14 +64,14 @@ facts:
     source: "https://otter.ai/otterpilot"
     source_label: "OtterPilot overview"
     source_id: otter-otterpilot
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-08-10
 tags: [meeting-transcription, ai-notes, zoom-integration, meeting-summary, productivity, otterpilot]
 seo_title: "Otter.ai: Features, Pricing & Review (June 2026)"
 meta_description: >-
-  Otter.ai captures meetings, transcribes, summarizes, searches archives, and exposes Otter MCP. Basic has 300 minutes/month; Pro starts at $16.99/user/month before live discounts. Verified 2026-06-06.
+  Otter.ai captures meetings, transcribes, summarizes, searches archives, and exposes Otter MCP. Basic has 300 minutes/month; Pro starts at $16.99/user/month before live discounts. Verified 2026-06-12.
 author: "aipedia.wiki Editorial"
 quick_answer: >-
   Otter.ai joins meetings via OtterPilot, transcribes in real time, and summarizes with action items. Full-text search across every past transcript is the real differentiator. Pick it for heavy meeting loads. Skip it if Fathom's free tier covers the basics.
@@ -181,7 +181,7 @@ Subscription pricing via [otter.ai/pricing](https://otter.ai/pricing).
 | Business | $30/user/mo before current discount states | Unlimited meetings; unlimited imports | 4 hrs | Video recording, team workspaces, analytics, priority support, 3 concurrent OtterPilots |
 | Enterprise | Custom | Unlimited | Unlimited | SSO, SCIM, compliance, OtterPilot for Sales, video replay |
 
-*Prices verified 2026-06-06 via [otter.ai/pricing](https://otter.ai/pricing). The live pricing page can render annual and introductory discount states; confirm the current checkout state before quoting a final per-seat annual price. Free tier hits the 300-minute cap fast for anyone in more than 2 long weekly meetings.*
+*Prices verified 2026-06-12 via [otter.ai/pricing](https://otter.ai/pricing). The live pricing page can render annual and introductory discount states; confirm the current checkout state before quoting a final per-seat annual price. Free tier hits the 300-minute cap fast for anyone in more than 2 long weekly meetings.*
 
 ## Against the alternatives
 
@@ -209,7 +209,7 @@ Subscription pricing via [otter.ai/pricing](https://otter.ai/pricing).
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the analysis above. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-06 against [Otter.ai pricing](https://otter.ai/pricing), [Otter.ai product pages](https://otter.ai/), and [Otter.ai Help Center](https://help.otter.ai).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the analysis above. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against [Otter.ai pricing](https://otter.ai/pricing), [Otter.ai product pages](https://otter.ai/), and [Otter.ai Help Center](https://help.otter.ai).
 
 ## FAQ
 
@@ -233,8 +233,8 @@ Only on Business and Enterprise. Basic and Pro capture audio transcripts only.
 
 ## Sources
 
-- [Otter.ai pricing](https://otter.ai/pricing): current tier prices, limits, Otter MCP, workflow features, and Enterprise controls, verified 2026-06-06
-- [Otter.ai product overview](https://otter.ai/): bot features and meeting platforms, verified 2026-06-06
+- [Otter.ai pricing](https://otter.ai/pricing): current tier prices, limits, Otter MCP, workflow features, and Enterprise controls, verified 2026-06-12
+- [Otter.ai product overview](https://otter.ai/): bot features and meeting platforms, verified 2026-06-12
 - [Otter.ai Help Center](https://help.otter.ai): feature documentation and limits
 
 ## Related

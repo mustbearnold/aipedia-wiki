@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Mubert vs Udio: Background Music or Full Songs?"
 meta_description: "Mubert vs Udio, refreshed June 2026: compare background-music licensing, full-song generation, inpainting, credits, disabled downloads, and which AI music tool to buy."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-06
-last_verified: 2026-06-06
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -59,9 +59,9 @@ Udio should be tested against real musical prompts: vocal style, genre fidelity,
 
 ## Pricing And Procurement
 
-Mubert procurement starts with rights. Its public pricing page was rechecked on June 6, 2026 and still exposes subscription/perpetual-license paths, API/custom-sales language, and the critical disclaimer that public-plan tracks are not licensed for Content ID registration, standalone release on streaming platforms, or stock-music sites. Exact plan prices are rendered client-side, so AiPedia treats current self-serve pricing as something buyers should recheck in-session before purchase.
+Mubert procurement starts with rights. Its public pricing page was rechecked on June 12, 2026 and still exposes subscription/perpetual-license paths, API/custom-sales language, and the critical disclaimer that public-plan tracks are not licensed for Content ID registration, standalone release on streaming platforms, or stock-music sites. Exact plan prices are rendered client-side, so AiPedia treats current self-serve pricing as something buyers should recheck in-session before purchase.
 
-Udio procurement starts with transition risk. Udio's help center was rechecked on June 6, 2026 and lists free-account limits, Standard at 2,400 monthly credits, Pro at 6,000 monthly credits, non-rolling subscription credits, and non-expiring a la carte credits purchased on udio.com/pricing. The same help center states that downloading audio, video, and stems has been disabled because of the UMG partnership changes. That makes Udio a creative exploration tool first and a production export tool second until the licensed platform clarifies terms.
+Udio procurement starts with transition risk. Udio's help center was rechecked on June 12, 2026 and lists free-account limits, Standard at 2,400 monthly credits, Pro at 6,000 monthly credits, non-rolling subscription credits, and non-expiring a la carte credits purchased on udio.com/pricing. The same help center states that downloading audio, video, and stems has been disabled because of the UMG partnership changes. That makes Udio a creative exploration tool first and a production export tool second until the licensed platform clarifies terms.
 
 ## Workflow Fit
 

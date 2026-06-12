@@ -3,7 +3,7 @@ type: use-case
 slug: best-ai-tools-for-consultants
 title: "Best AI Tools for Consultants (June 2026)"
 seo_title: "Best AI Tools for Consultants: ChatGPT, Claude, Perplexity, Gamma & Fathom (June 2026)"
-meta_description: "Updated June 6, 2026: ChatGPT is the best all-purpose consultant workspace, Claude is the best memo and synthesis partner, Perplexity is the best cited research add-on, Gamma is the fastest deck path, and Fathom is the meeting capture pick."
+meta_description: "Updated June 12, 2026: ChatGPT is the best all-purpose consultant workspace, Claude is the best memo and synthesis partner, Perplexity is the best cited research add-on, Gamma is the fastest deck path, and Fathom is the meeting capture pick."
 description: "A current buyer guide to AI tools for consultants covering research, source-backed synthesis, client deliverables, decks, meetings, spreadsheet work, confidentiality, and procurement."
 tools_mentioned: [chatgpt, claude, perplexity, gamma, fathom, napkin-ai, gemini, beautiful-ai]
 guide_picks:
@@ -32,8 +32,8 @@ guide_picks:
       - label: "Claude pricing"
         url: "https://claude.com/pricing"
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-06
-last_verified: 2026-06-06
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 ---
 
@@ -41,7 +41,7 @@ update_frequency: monthly
 
 Consulting AI is a workflow stack, not a chatbot contest. The real jobs are research, synthesis, analysis, client memos, slides, meetings, spreadsheet work, proposal writing, and safe handling of confidential client material.
 
-AiPedia rechecked this guide on **June 6, 2026** against current official OpenAI, Anthropic, Perplexity, Gamma, Fathom, Napkin AI, Google, and Beautiful.ai sources. Rankings are editorial. AiPedia may earn affiliate revenue when readers choose a tool through a commercial link, but paid placement does not determine recommendations.
+AiPedia rechecked this guide on **June 12, 2026** against current official OpenAI, Anthropic, Perplexity, Gamma, Fathom, Napkin AI, Google, and Beautiful.ai sources. Rankings are editorial. AiPedia may earn affiliate revenue when readers choose a tool through a commercial link, but paid placement does not determine recommendations.
 
 ## Quick Verdict
 
@@ -157,12 +157,12 @@ Only when the client contract, firm policy, privacy obligations, and vendor term
 
 ## Sources
 
-- [ChatGPT pricing](https://chatgpt.com/pricing/) (verified 2026-06-06)
-- [Claude pricing](https://claude.com/pricing) (verified 2026-06-06)
-- [Perplexity Enterprise pricing](https://www.perplexity.ai/enterprise/pricing) (verified 2026-06-06)
-- [Gamma pricing](https://gamma.app/pricing) (verified 2026-06-06)
-- [Fathom pricing](https://www.fathom.ai/pricing) (verified 2026-06-06)
-- [Napkin AI pricing](https://www.napkin.ai/pricing/) (verified 2026-06-06)
-- [Beautiful.ai pricing](https://www.beautiful.ai/pricing) (verified 2026-06-06)
-- [Google AI subscriptions](https://gemini.google/subscriptions/) (verified 2026-06-06)
-- AiPedia editorial review, verified 2026-06-06.
+- [ChatGPT pricing](https://chatgpt.com/pricing/) (verified 2026-06-12)
+- [Claude pricing](https://claude.com/pricing) (verified 2026-06-12)
+- [Perplexity Enterprise pricing](https://www.perplexity.ai/enterprise/pricing) (verified 2026-06-12)
+- [Gamma pricing](https://gamma.app/pricing) (verified 2026-06-12)
+- [Fathom pricing](https://www.fathom.ai/pricing) (verified 2026-06-12)
+- [Napkin AI pricing](https://www.napkin.ai/pricing/) (verified 2026-06-12)
+- [Beautiful.ai pricing](https://www.beautiful.ai/pricing) (verified 2026-06-12)
+- [Google AI subscriptions](https://gemini.google/subscriptions/) (verified 2026-06-12)
+- AiPedia editorial review, verified 2026-06-12.

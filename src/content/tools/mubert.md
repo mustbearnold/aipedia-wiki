@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "Free and paid subscription/perpetual license paths; verify live pricing before purchase"
 status: active
 launched: 2017-01
-last_updated: 2026-06-06
-last_verified: 2026-06-06
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -31,7 +31,7 @@ facts:
     source: "https://mubert.com/"
     source_label: "Mubert homepage"
     source_id: mubert-official
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     next_review_at: 2026-07-06
     volatility: medium
     confidence: high
@@ -40,7 +40,7 @@ facts:
     source: "https://mubert.com/render/pricing"
     source_label: "Mubert pricing"
     source_id: mubert-pricing
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     next_review_at: 2026-07-06
     volatility: high
     confidence: high
@@ -49,7 +49,7 @@ facts:
     source: "https://mubert.com/render/faq"
     source_label: "Mubert FAQ"
     source_id: mubert-faq
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     next_review_at: 2026-07-06
     volatility: medium
     confidence: high
@@ -58,7 +58,7 @@ facts:
     source: "https://mubert.com/render/pricing"
     source_label: "Mubert pricing"
     source_id: mubert-pricing
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     next_review_at: 2026-07-06
     volatility: high
     confidence: high
@@ -67,7 +67,7 @@ facts:
     source: "https://mubert.com/render/faq"
     source_label: "Mubert FAQ"
     source_id: mubert-faq
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     next_review_at: 2026-07-06
     volatility: medium
     confidence: medium
@@ -146,7 +146,7 @@ The important detail is licensing. Mubert can be useful for creator-safe backgro
 | **Standalone music release** | Not licensed for standalone release on streaming platforms or stock-music sites |
 | **API/custom use** | API and custom terms are handled through a sales call |
 
-License exclusions and subscription/perpetual-license paths were rechecked on 2026-06-06 against Mubert's public pricing and FAQ pages. Exact plan prices and limits are app-rendered, so AiPedia no longer treats the May 13 price-table capture as enough for current procurement.
+License exclusions and subscription/perpetual-license paths were rechecked on 2026-06-12 against Mubert's public pricing and FAQ pages. Exact plan prices and limits are app-rendered, so AiPedia no longer treats the May 13 price-table capture as enough for current procurement.
 
 ## What it actually is
 
@@ -207,7 +207,7 @@ One-track perpetual licenses were visible in the May 13 capture as a separate bu
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that checks vendor documentation and public pricing data before publishing tool analysis. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity). Last verified 2026-06-06 against Mubert's official site, Render pricing page, and FAQ. Exact self-serve plan prices were not fully exposed in static HTML, so buyers should recheck the live Mubert pricing flow before procurement.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that checks vendor documentation and public pricing data before publishing tool analysis. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity). Last verified 2026-06-12 against Mubert's official site, Render pricing page, and FAQ. Exact self-serve plan prices were not fully exposed in static HTML, so buyers should recheck the live Mubert pricing flow before procurement.
 
 ## FAQ
 

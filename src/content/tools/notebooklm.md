@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$250/month"
 status: active
 launched: 2023-07
-last_updated: 2026-06-06
-last_verified: 2026-06-06
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: "https://notebooklm.google.com"
     source_label: "Google NotebookLM official app"
     source_id: notebooklm-official
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -40,7 +40,7 @@ facts:
     source: "https://support.google.com/notebooklm/"
     source_label: "NotebookLM Help"
     source_id: notebooklm-help
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -48,7 +48,7 @@ facts:
     source: "https://notebooklm.google.com"
     source_label: "Google NotebookLM official app"
     source_id: notebooklm-pricing
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     next_review_at: 2026-08-13
     volatility: high
     confidence: medium
@@ -57,7 +57,7 @@ facts:
     source: "https://support.google.com/notebooklm/"
     source_label: "NotebookLM Help"
     source_id: notebooklm-help
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   watch_out_for:
@@ -65,7 +65,7 @@ facts:
     source: "https://support.google.com/notebooklm/"
     source_label: "NotebookLM Help"
     source_id: notebooklm-help
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
 tags: [research, document-qa, summarization, podcast, audio-overview, google, rag, source-grounding, free]
@@ -139,7 +139,7 @@ Standard tier (free) covers most individual use. As of June 2026, Google's publi
 | **API access** | None |
 | **Grounding** | Strictly to uploaded sources, no open-web answers |
 
-Every data point was verified against vendor docs on 2026-06-06. See Sources.
+Every data point was verified against vendor docs on 2026-06-12. See Sources.
 
 ## What it actually is
 
@@ -177,7 +177,7 @@ The moat: citation precision plus Audio Overview in one free product. No competi
 
 The current help table also lists daily chat, Video Overview, report, quiz, flashcard, mind-map, Deep Research, data-table, infographic, and slide-deck limits. Google notes that usage limits are subject to change, so institutional buyers should verify the live help page before rollout.
 
-*Verified 2026-06-06 via the [NotebookLM Help Center](https://support.google.com/notebooklm/answer/16213268), [Google AI Plans](https://one.google.com/about/google-ai-plans), and [NotebookLM](https://notebooklm.google.com).*
+*Verified 2026-06-12 via the [NotebookLM Help Center](https://support.google.com/notebooklm/answer/16213268), [Google AI Plans](https://one.google.com/about/google-ai-plans), and [NotebookLM](https://notebooklm.google.com).*
 
 ## Against the alternatives
 
@@ -203,7 +203,7 @@ The current help table also lists daily chat, Video Overview, report, quiz, flas
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-06 against the [NotebookLM Help Center plan comparison](https://support.google.com/notebooklm/answer/16213268), [Google AI Plans](https://one.google.com/about/google-ai-plans), [NotebookLM](https://notebooklm.google.com), and the [Google Blog NotebookLM + Gemini update](https://blog.google/technology/ai/notebooklm-gemini-2-0/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-12 against the [NotebookLM Help Center plan comparison](https://support.google.com/notebooklm/answer/16213268), [Google AI Plans](https://one.google.com/about/google-ai-plans), [NotebookLM](https://notebooklm.google.com), and the [Google Blog NotebookLM + Gemini update](https://blog.google/technology/ai/notebooklm-gemini-2-0/).
 
 ## FAQ
 

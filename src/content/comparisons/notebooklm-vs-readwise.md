@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Google NotebookLM vs Readwise Reader: Research Q&A or Reading Retention?"
 meta_description: "NotebookLM wins for cited Q&A and generated study artifacts from source packs. Readwise Reader wins for reading capture, highlights, exports, Ghostreader, and daily review. Verified June 2026."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-06
-last_verified: 2026-06-06
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: quarterly
 canonical_fact_table: true
 ---
@@ -87,7 +87,7 @@ Yes. Use Readwise to capture and retain reading, then use NotebookLM for source-
 
 ## Sources
 
-- [NotebookLM Help: upgrade and usage limits](https://support.google.com/notebooklm/answer/16213268) (verified 2026-06-06)
-- [Readwise Reader pricing](https://readwise.io/pricing/reader) (verified 2026-06-06)
-- [Readwise Reader official site](https://readwise.io/read) (verified 2026-06-06)
-- [Ghostreader docs](https://docs.readwise.io/reader/guides/ghostreader/overview) (verified 2026-06-06)
+- [NotebookLM Help: upgrade and usage limits](https://support.google.com/notebooklm/answer/16213268) (verified 2026-06-12)
+- [Readwise Reader pricing](https://readwise.io/pricing/reader) (verified 2026-06-12)
+- [Readwise Reader official site](https://readwise.io/read) (verified 2026-06-12)
+- [Ghostreader docs](https://docs.readwise.io/reader/guides/ghostreader/overview) (verified 2026-06-12)

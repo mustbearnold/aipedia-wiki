@@ -6,10 +6,10 @@ tools: [nanochat, scite]
 category: ai-research
 winner: scite
 seo_title: "nanochat vs Scite: LLM Training Repo or Citation Evidence Tool?"
-meta_description: "nanochat vs Scite, refreshed June 6, 2026: choose Scite for citation context and evidence checks; choose nanochat only for learning how LLM training works."
+meta_description: "nanochat vs Scite, refreshed June 12, 2026: choose Scite for citation context and evidence checks; choose nanochat only for learning how LLM training works."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-06
-last_verified: 2026-06-06
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: quarterly
 canonical_fact_table: true
 ---

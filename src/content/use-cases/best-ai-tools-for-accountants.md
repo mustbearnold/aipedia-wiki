@@ -34,8 +34,8 @@ guide_picks:
       - label: "Google Workspace AI"
         url: "https://workspace.google.com/solutions/ai/"
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-06
-last_verified: 2026-06-06
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 ---
 
@@ -43,7 +43,7 @@ update_frequency: monthly
 
 Accounting AI is high-stakes. The useful tools are not the ones that sound the most confident; they are the ones that help accountants analyze, document, reconcile, explain, and review work without inventing numbers or replacing professional judgment.
 
-Verified June 6, 2026 against current official OpenAI, Anthropic, Google, Microsoft, Xero, Intuit, and Perplexity sources. AiPedia may earn from some tool links, but rankings stay editorial and are based on buyer fit, not commission.
+Verified June 12, 2026 against current official OpenAI, Anthropic, Google, Microsoft, Xero, Intuit, and Perplexity sources. AiPedia may earn from some tool links, but rankings stay editorial and are based on buyer fit, not commission.
 
 ## Quick Verdict
 
@@ -141,12 +141,12 @@ These are not generic chatbot replacements. They belong in the buying conversati
 
 ## Sources
 
-- [Get started with Copilot in Excel](https://support.microsoft.com/en-us/copilot-excel) (verified 2026-06-06)
-- [Microsoft 365 Copilot pricing](https://www.microsoft.com/en-us/microsoft-365-copilot/pricing) (verified 2026-06-06)
-- [ChatGPT pricing](https://chatgpt.com/pricing/) (verified 2026-06-06)
-- [Claude pricing](https://claude.com/pricing) (verified 2026-06-06)
-- [Claude for financial services](https://www.anthropic.com/solutions/financial-services) (verified 2026-06-06)
-- [Google Workspace AI](https://workspace.google.com/solutions/ai/) (verified 2026-06-06)
-- [Xero JAX](https://www.xero.com/us/ai-in-accounting/jax/) (verified 2026-06-06)
-- [Intuit Assist](https://www.intuit.com/intuitassist/) (verified 2026-06-06)
-- [Perplexity pricing](https://docs.perplexity.ai/docs/getting-started/pricing) (verified 2026-06-06)
+- [Get started with Copilot in Excel](https://support.microsoft.com/en-us/copilot-excel) (verified 2026-06-12)
+- [Microsoft 365 Copilot pricing](https://www.microsoft.com/en-us/microsoft-365-copilot/pricing) (verified 2026-06-12)
+- [ChatGPT pricing](https://chatgpt.com/pricing/) (verified 2026-06-12)
+- [Claude pricing](https://claude.com/pricing) (verified 2026-06-12)
+- [Claude for financial services](https://www.anthropic.com/solutions/financial-services) (verified 2026-06-12)
+- [Google Workspace AI](https://workspace.google.com/solutions/ai/) (verified 2026-06-12)
+- [Xero JAX](https://www.xero.com/us/ai-in-accounting/jax/) (verified 2026-06-12)
+- [Intuit Assist](https://www.intuit.com/intuitassist/) (verified 2026-06-12)
+- [Perplexity pricing](https://docs.perplexity.ai/docs/getting-started/pricing) (verified 2026-06-12)

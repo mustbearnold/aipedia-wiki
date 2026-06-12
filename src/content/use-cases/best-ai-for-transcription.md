@@ -32,8 +32,8 @@ guide_picks:
       - label: "Deepgram pricing"
         url: "https://deepgram.com/pricing"
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-06
-last_verified: 2026-06-06
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 ---
 
@@ -41,7 +41,7 @@ update_frequency: monthly
 
 The best AI transcription tool depends on the input and the workflow after the transcript exists. A sales call needs summaries, action items, clips, CRM handoff, retention controls, and consent clarity. A podcast needs text-based editing and captions. A developer building an app needs a speech-to-text API. A voice platform may need STT alongside text-to-speech, dubbing, and agents.
 
-Verified June 6, 2026 against official Fathom, Descript, Deepgram, AssemblyAI, and ElevenLabs sources. AiPedia may earn from some tool links, but rankings stay editorial and source-backed.
+Verified June 12, 2026 against official Fathom, Descript, Deepgram, AssemblyAI, and ElevenLabs sources. AiPedia may earn from some tool links, but rankings stay editorial and source-backed.
 
 ## Quick Verdict
 
@@ -152,14 +152,14 @@ Deepgram is the first API to test for real-time and production STT. AssemblyAI s
 Yes, but it makes the most sense when transcription is part of a broader voice workflow that also needs TTS, dubbing, voice cloning, or voice-agent features.
 
 **How often is this guide updated?**
-Monthly, and sooner when pricing, API capabilities, language support, plan limits, consent features, or major speech-model changes affect the recommendation. Last verified on 2026-06-06.
+Monthly, and sooner when pricing, API capabilities, language support, plan limits, consent features, or major speech-model changes affect the recommendation. Last verified on 2026-06-12.
 
 ## Sources
 
-- [Fathom pricing](https://www.fathom.ai/pricing) (verified 2026-06-06)
-- [Fathom Account-Wide Ask usage limits](https://help.fathom.video/en/articles/10390017) (verified 2026-06-06)
-- [Descript pricing](https://www.descript.com/pricing) (verified 2026-06-06)
-- [Deepgram pricing](https://deepgram.com/pricing) (verified 2026-06-06)
-- [AssemblyAI pricing](https://www.assemblyai.com/pricing) (verified 2026-06-06)
-- [ElevenLabs pricing](https://elevenlabs.io/pricing) (verified 2026-06-06)
-- [ElevenLabs API pricing](https://elevenlabs.io/pricing/api) (verified 2026-06-06)
+- [Fathom pricing](https://www.fathom.ai/pricing) (verified 2026-06-12)
+- [Fathom Account-Wide Ask usage limits](https://help.fathom.video/en/articles/10390017) (verified 2026-06-12)
+- [Descript pricing](https://www.descript.com/pricing) (verified 2026-06-12)
+- [Deepgram pricing](https://deepgram.com/pricing) (verified 2026-06-12)
+- [AssemblyAI pricing](https://www.assemblyai.com/pricing) (verified 2026-06-12)
+- [ElevenLabs pricing](https://elevenlabs.io/pricing) (verified 2026-06-12)
+- [ElevenLabs API pricing](https://elevenlabs.io/pricing/api) (verified 2026-06-12)

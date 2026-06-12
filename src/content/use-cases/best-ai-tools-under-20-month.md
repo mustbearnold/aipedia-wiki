@@ -34,8 +34,8 @@ guide_picks:
     sources:
       - label: "Claude plan guide"
         url: "https://support.claude.com/en/articles/11049762-choosing-a-claude-ai-plan"
-last_updated: 2026-06-06
-last_verified: 2026-06-06
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 ---
 

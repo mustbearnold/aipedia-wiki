@@ -38,8 +38,8 @@ guide_picks:
       - label: "Claude Code costs"
         url: "https://code.claude.com/docs/en/costs"
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-06
-last_verified: 2026-06-06
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 ---
 
@@ -47,7 +47,7 @@ update_frequency: monthly
 
 AI is useful for unit tests because the feedback loop is tight: inspect code, write a small test, run the suite, read the failure, and patch narrowly. The best tool is not the one that writes the most tests. It is the one that can see the relevant context, respect the local test style, and stop before it creates brittle coverage theater.
 
-Verified June 6, 2026 against current Cursor, GitHub Copilot, Anthropic, and official pricing/docs sources. AiPedia may earn from some tool links, but rankings stay editorial and are based on buyer fit, not commission.
+Verified June 12, 2026 against current Cursor, GitHub Copilot, Anthropic, and official pricing/docs sources. AiPedia may earn from some tool links, but rankings stay editorial and are based on buyer fit, not commission.
 
 ## Quick Verdict
 
@@ -160,14 +160,14 @@ Claude is the best planning layer. Ask it for invariants, boundary cases, and te
 No. Use AI for drafts and edge-case discovery, then make humans own assertions, fixtures, product behavior, and merge decisions.
 
 **How often is this list updated?**
-Verified monthly, with extra checks when AI coding pricing or model access changes. This page was last verified on 2026-06-06.
+Verified monthly, with extra checks when AI coding pricing or model access changes. This page was last verified on 2026-06-12.
 
 ## Sources
 
-- [Cursor pricing](https://cursor.com/pricing) (verified 2026-06-06)
-- [Cursor Teams pricing update](https://www.cursor.com/blog/teams-pricing-june-2026) (verified 2026-06-06)
-- [GitHub Copilot plans](https://github.com/features/copilot/plans) (verified 2026-06-06)
-- [GitHub Copilot AI Credits billing](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals) (verified 2026-06-06)
-- [GitHub Copilot usage-based billing announcement](https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/) (verified 2026-06-06)
-- [Claude pricing](https://claude.com/pricing) (verified 2026-06-06)
-- [Claude Code cost docs](https://code.claude.com/docs/en/costs) (verified 2026-06-06)
+- [Cursor pricing](https://cursor.com/pricing) (verified 2026-06-12)
+- [Cursor Teams pricing update](https://www.cursor.com/blog/teams-pricing-june-2026) (verified 2026-06-12)
+- [GitHub Copilot plans](https://github.com/features/copilot/plans) (verified 2026-06-12)
+- [GitHub Copilot AI Credits billing](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals) (verified 2026-06-12)
+- [GitHub Copilot usage-based billing announcement](https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/) (verified 2026-06-12)
+- [Claude pricing](https://claude.com/pricing) (verified 2026-06-12)
+- [Claude Code cost docs](https://code.claude.com/docs/en/costs) (verified 2026-06-12)

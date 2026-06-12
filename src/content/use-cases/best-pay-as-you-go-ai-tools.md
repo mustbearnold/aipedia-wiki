@@ -3,7 +3,7 @@ type: use-case
 slug: best-pay-as-you-go-ai-tools
 title: "Best Pay-As-You-Go AI Tools and APIs (June 2026)"
 seo_title: "Best Pay-As-You-Go AI Tools and APIs: OpenRouter, OpenAI, Claude, Gemini, Replicate, fal & Deepgram"
-meta_description: "Updated June 6, 2026: compare true pay-as-you-go AI APIs and usage-based tools across LLMs, model routing, media generation, speech, voice, and budget controls."
+meta_description: "Updated June 12, 2026: compare true pay-as-you-go AI APIs and usage-based tools across LLMs, model routing, media generation, speech, voice, and budget controls."
 description: "Current buyer guide to true pay-as-you-go AI tools, separating metered APIs from flat subscriptions and showing which platform to use for text, coding, media, voice, and production workloads."
 tools_mentioned: ["openrouter", "chatgpt", "claude", "gemini", "mistral-ai", "groq", "replicate", "fal-ai", "deepgram", "elevenlabs", "fish-audio"]
 guide_picks:
@@ -36,8 +36,8 @@ guide_picks:
       - label: "fal Model API pricing"
         url: "https://fal.ai/docs/documentation/model-apis/pricing"
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-06
-last_verified: 2026-06-06
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 ---
 
@@ -47,7 +47,7 @@ Pay-as-you-go AI is not the same thing as a $20/month chatbot subscription. A su
 
 For most developers, start with **[OpenRouter](/tools/openrouter/)** for model routing, then test one direct vendor API for the model family you expect to use most. For media, compare **[Replicate](/tools/replicate/)** and **[fal.ai](/tools/fal-ai/)**. For speech infrastructure, start with **[Deepgram](/tools/deepgram/)**.
 
-Verified June 6, 2026 against current official OpenAI, Anthropic, Google Gemini API, OpenRouter, Mistral, Groq, Replicate, fal, Deepgram, ElevenLabs, and Fish Audio sources.
+Verified June 12, 2026 against current official OpenAI, Anthropic, Google Gemini API, OpenRouter, Mistral, Groq, Replicate, fal, Deepgram, ElevenLabs, and Fish Audio sources.
 
 ## What Counts as Pay-As-You-Go?
 
@@ -164,17 +164,17 @@ Track requests, input tokens, output tokens, media seconds, retries, cache hits,
 
 ## Sources
 
-- [OpenAI API pricing](https://openai.com/api/pricing/) (verified 2026-06-06)
-- [Claude API pricing](https://docs.anthropic.com/en/docs/about-claude/pricing) (verified 2026-06-06)
-- [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing) (verified 2026-06-06)
-- [OpenRouter pricing](https://openrouter.ai/pricing) (verified 2026-06-06)
-- [Mistral AI pricing](https://mistral.ai/pricing) (verified 2026-06-06)
-- [Groq pricing](https://groq.com/pricing) (verified 2026-06-06)
-- [Replicate pricing](https://replicate.com/pricing) (verified 2026-06-06)
-- [fal Model API pricing docs](https://fal.ai/docs/documentation/model-apis/pricing) (verified 2026-06-06)
-- [Deepgram pricing](https://deepgram.com/pricing) (verified 2026-06-06)
-- [ElevenLabs API pricing](https://elevenlabs.io/pricing/api) (verified 2026-06-06)
-- [Fish Audio pricing and rate limits](https://docs.fish.audio/developer-platform/models-pricing/pricing-and-rate-limits) (verified 2026-06-06)
+- [OpenAI API pricing](https://openai.com/api/pricing/) (verified 2026-06-12)
+- [Claude API pricing](https://docs.anthropic.com/en/docs/about-claude/pricing) (verified 2026-06-12)
+- [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing) (verified 2026-06-12)
+- [OpenRouter pricing](https://openrouter.ai/pricing) (verified 2026-06-12)
+- [Mistral AI pricing](https://mistral.ai/pricing) (verified 2026-06-12)
+- [Groq pricing](https://groq.com/pricing) (verified 2026-06-12)
+- [Replicate pricing](https://replicate.com/pricing) (verified 2026-06-12)
+- [fal Model API pricing docs](https://fal.ai/docs/documentation/model-apis/pricing) (verified 2026-06-12)
+- [Deepgram pricing](https://deepgram.com/pricing) (verified 2026-06-12)
+- [ElevenLabs API pricing](https://elevenlabs.io/pricing/api) (verified 2026-06-12)
+- [Fish Audio pricing and rate limits](https://docs.fish.audio/developer-platform/models-pricing/pricing-and-rate-limits) (verified 2026-06-12)
 
 ## Related
 

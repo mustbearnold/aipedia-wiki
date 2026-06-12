@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "BytePlus API/resource packs; route-specific pricing"
 status: active
 launched: 2026-02
-last_updated: 2026-06-06
-last_verified: 2026-06-06
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: weekly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://seed.bytedance.com/en/seedance2_0"
     source_label: "ByteDance Seedance 2.0"
     source_id: seedance-official
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     next_review_at: 2026-07-06
     volatility: high
     confidence: high
@@ -39,7 +39,7 @@ facts:
     source: "https://seed.bytedance.com/blog/seedance-2-0-official-launch"
     source_label: "Seedance 2.0 official launch"
     source_id: seedance-bytedance-launch
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     next_review_at: 2026-07-06
     volatility: high
     confidence: high
@@ -48,7 +48,7 @@ facts:
     source: "https://docs.byteplus.com/api/docs/ModelArk/1520757"
     source_label: "BytePlus Seedance 2.0 API reference"
     source_id: seedance-byteplus-api
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     next_review_at: 2026-07-06
     volatility: high
     confidence: high
@@ -57,7 +57,7 @@ facts:
     source: "https://docs.byteplus.com/api/docs/ModelArk/2191775"
     source_label: "BytePlus Seedance 2.0 resource packs"
     source_id: seedance-pricing
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     next_review_at: 2026-07-06
     volatility: high
     confidence: high
@@ -66,13 +66,13 @@ facts:
     source: "https://www.seedance.ai/"
     source_label: "Seedance.ai independent disclosure"
     source_id: seedance-ai-independent-disclosure
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     next_review_at: 2026-07-06
     volatility: high
     confidence: high
 tags: [ai-video, video-generation, text-to-video, image-to-video, audio-video, bytedance, seedance, multimodal, modelark]
 seo_title: "Seedance 2.0: Features, Access, Pricing and Review (June 2026)"
-meta_description: "Seedance 2.0 is ByteDance Seed's frontier multimodal AI video model. Verified June 6, 2026 against ByteDance Seed and BytePlus sources. Avoid treating seedance.ai as official."
+meta_description: "Seedance 2.0 is ByteDance Seed's frontier multimodal AI video model. Verified June 12, 2026 against ByteDance Seed and BytePlus sources. Avoid treating seedance.ai as official."
 author: "aipedia.wiki Editorial"
 best_for:
   - raw AI video model quality tests
@@ -171,9 +171,9 @@ Do not reuse old consumer-plan numbers for Seedance unless they are tied to a ve
 
 | Route | What to verify | Source-backed status |
 |---|---|---|
-| ByteDance Seed page | Model identity and official positioning | Verified June 6, 2026 |
-| BytePlus ModelArk | API/product access and docs | Verified June 6, 2026 |
-| BytePlus resource packs | USD resource-pack pricing and minimum purchase rules | Verified June 6, 2026 |
+| ByteDance Seed page | Model identity and official positioning | Verified June 12, 2026 |
+| BytePlus ModelArk | API/product access and docs | Verified June 12, 2026 |
+| BytePlus resource packs | USD resource-pack pricing and minimum purchase rules | Verified June 12, 2026 |
 | seedance.ai | Whether it is official ByteDance | It says it is independent and not affiliated |
 
 ## Failure Modes
@@ -200,12 +200,12 @@ AiPedia would test Seedance 2.0 first for raw model quality on June 6, 2026. Ser
 
 ## Sources
 
-- [ByteDance Seedance 2.0](https://seed.bytedance.com/en/seedance2_0) (verified 2026-06-06)
-- [Seedance 2.0 official launch](https://seed.bytedance.com/blog/seedance-2-0-official-launch) (verified 2026-06-06)
-- [BytePlus ModelArk](https://www.byteplus.com/en/product/modelark) (verified 2026-06-06)
-- [BytePlus Seedance 2.0 API reference](https://docs.byteplus.com/api/docs/ModelArk/1520757) (verified 2026-06-06)
-- [BytePlus Seedance 2.0 resource packs](https://docs.byteplus.com/api/docs/ModelArk/2191775) (verified 2026-06-06)
-- [Seedance.ai independent disclosure](https://www.seedance.ai/) (verified 2026-06-06)
+- [ByteDance Seedance 2.0](https://seed.bytedance.com/en/seedance2_0) (verified 2026-06-12)
+- [Seedance 2.0 official launch](https://seed.bytedance.com/blog/seedance-2-0-official-launch) (verified 2026-06-12)
+- [BytePlus ModelArk](https://www.byteplus.com/en/product/modelark) (verified 2026-06-12)
+- [BytePlus Seedance 2.0 API reference](https://docs.byteplus.com/api/docs/ModelArk/1520757) (verified 2026-06-12)
+- [BytePlus Seedance 2.0 resource packs](https://docs.byteplus.com/api/docs/ModelArk/2191775) (verified 2026-06-12)
+- [Seedance.ai independent disclosure](https://www.seedance.ai/) (verified 2026-06-12)
 
 ## Related
 

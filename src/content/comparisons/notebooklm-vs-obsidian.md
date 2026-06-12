@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Google NotebookLM vs Obsidian: Source Notebook or Local PKM?"
 meta_description: "NotebookLM is better for cited Q&A over uploaded sources. Obsidian is better for local Markdown, backlinks, plugins, and long-term personal knowledge management. Verified June 2026."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-06
-last_verified: 2026-06-06
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: quarterly
 canonical_fact_table: true
 ---
@@ -89,7 +89,7 @@ Yes. Use Obsidian as the permanent vault and NotebookLM as the temporary analysi
 
 ## Sources
 
-- [NotebookLM Help: upgrade and usage limits](https://support.google.com/notebooklm/answer/16213268) (verified 2026-06-06)
-- [NotebookLM official app](https://notebooklm.google.com) (verified 2026-06-06)
-- [Obsidian pricing](https://obsidian.md/pricing) (verified 2026-06-06)
-- [Obsidian Help](https://help.obsidian.md/) (verified 2026-06-06)
+- [NotebookLM Help: upgrade and usage limits](https://support.google.com/notebooklm/answer/16213268) (verified 2026-06-12)
+- [NotebookLM official app](https://notebooklm.google.com) (verified 2026-06-12)
+- [Obsidian pricing](https://obsidian.md/pricing) (verified 2026-06-12)
+- [Obsidian Help](https://help.obsidian.md/) (verified 2026-06-12)

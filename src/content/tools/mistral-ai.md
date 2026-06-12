@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: "$0-$24.99/month"
 status: active
 launched: 2023-09
-last_updated: 2026-06-06
-last_verified: 2026-06-06
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -32,7 +32,7 @@ facts:
     source: "https://docs.mistral.ai/models/overview"
     source_label: "Mistral AI model docs"
     source_id: mistral-model-docs
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-14
@@ -41,7 +41,7 @@ facts:
     source: "https://docs.mistral.ai/models/overview"
     source_label: "Mistral AI model docs"
     source_id: mistral-model-docs
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-14
@@ -50,7 +50,7 @@ facts:
     source: "https://mistral.ai/pricing"
     source_label: "Mistral AI pricing"
     source_id: mistral-pricing
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-14
@@ -59,7 +59,7 @@ facts:
     source: "https://mistral.ai/pricing"
     source_label: "Mistral AI pricing"
     source_id: mistral-pricing
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-14
@@ -68,7 +68,7 @@ facts:
     source: "https://mistral.ai/pricing"
     source_label: "Mistral AI pricing"
     source_id: mistral-pricing
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-14
@@ -77,7 +77,7 @@ facts:
     source: "https://mistral.ai/pricing"
     source_label: "Mistral AI pricing"
     source_id: mistral-pricing
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-14
@@ -86,7 +86,7 @@ facts:
     source: "https://chat.mistral.ai"
     source_label: "Le Chat by Mistral AI"
     source_id: mistral-chat
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-14
@@ -95,7 +95,7 @@ facts:
     source: "https://docs.mistral.ai/models/overview"
     source_label: "Mistral AI model docs"
     source_id: mistral-model-docs
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
   real_time_voice:
@@ -103,7 +103,7 @@ facts:
     source: "https://docs.mistral.ai/models/overview"
     source_label: "Mistral AI model docs"
     source_id: mistral-model-docs
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   web_browsing:
@@ -111,7 +111,7 @@ facts:
     source: "https://mistral.ai/news/search-toolkit"
     source_label: "Mistral Search Toolkit"
     source_id: mistral-search-toolkit
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-14
@@ -120,7 +120,7 @@ facts:
     source: "https://mistral.ai/pricing"
     source_label: "Mistral AI pricing"
     source_id: mistral-pricing
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   enterprise_controls:
@@ -128,7 +128,7 @@ facts:
     source: "https://mistral.ai/pricing"
     source_label: "Mistral AI pricing"
     source_id: mistral-pricing
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   data_retention_or_privacy:
@@ -136,7 +136,7 @@ facts:
     source: "https://mistral.ai/pricing"
     source_label: "Mistral AI pricing"
     source_id: mistral-pricing
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   open_source_or_local:
@@ -144,7 +144,7 @@ facts:
     source: "https://huggingface.co/mistralai"
     source_label: "Mistral AI Hugging Face organization"
     source_id: mistral-huggingface
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   best_for:
@@ -152,7 +152,7 @@ facts:
     source: "https://docs.mistral.ai/models/overview"
     source_label: "Mistral AI model docs"
     source_id: mistral-model-docs
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   watch_out_for:
@@ -272,7 +272,7 @@ The April 2026 release of Mistral 3 was the biggest open-weight drop of the year
 | **Open-weight lineup** | Mistral 7B · Mixtral 8x7B · Mistral 8x22B · Small 4 · **Large 3 · Ministral 3 family** |
 | **Distribution** | Mistral AI Studio, Amazon Bedrock, Azure Foundry, Hugging Face, OpenRouter, Fireworks, Together AI, Modal, IBM watsonx, Unsloth AI; OpenAI-API compatible |
 
-Every volatile model, pricing, and platform data point verified on 2026-06-06 against [mistral.ai/pricing](https://mistral.ai/pricing), [docs.mistral.ai](https://docs.mistral.ai/models/overview), [Mistral docs](https://docs.mistral.ai/), [Mistral 3](https://mistral.ai/news/mistral-3), and [Mistral Search Toolkit](https://mistral.ai/news/search-toolkit).
+Every volatile model, pricing, and platform data point verified on 2026-06-12 against [mistral.ai/pricing](https://mistral.ai/pricing), [docs.mistral.ai](https://docs.mistral.ai/models/overview), [Mistral docs](https://docs.mistral.ai/), [Mistral 3](https://mistral.ai/news/mistral-3), and [Mistral Search Toolkit](https://mistral.ai/news/search-toolkit).
 
 ## What it actually is
 
@@ -327,7 +327,7 @@ Consumer pricing via [mistral.ai/pricing](https://mistral.ai/pricing). API prici
 | Codestral | Hosted on la Plateforme | Same | Code specialist · 80+ languages |
 | Devstral 2 | Hosted on la Plateforme | Same | v25.12 · frontier code agent · software engineering tasks |
 
-*Prices verified 2026-06-06 via [mistral.ai/pricing](https://mistral.ai/pricing) and [docs.mistral.ai](https://docs.mistral.ai/models/overview). Mistral 3 family is Apache 2.0 so hosted per-token rates vary by platform (Mistral Studio, Bedrock, Azure, Fireworks, Together, OpenRouter); benchmark against your preferred provider before committing.*
+*Prices verified 2026-06-12 via [mistral.ai/pricing](https://mistral.ai/pricing) and [docs.mistral.ai](https://docs.mistral.ai/models/overview). Mistral 3 family is Apache 2.0 so hosted per-token rates vary by platform (Mistral Studio, Bedrock, Azure, Fireworks, Together, OpenRouter); benchmark against your preferred provider before committing.*
 
 ## Against the alternatives
 
@@ -355,7 +355,7 @@ Consumer pricing via [mistral.ai/pricing](https://mistral.ai/pricing). API prici
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-06 against [mistral.ai/pricing](https://mistral.ai/pricing), [docs.mistral.ai/models/overview](https://docs.mistral.ai/models/overview), [Mistral docs](https://docs.mistral.ai/), [Mistral Search Toolkit](https://mistral.ai/news/search-toolkit), and the [Mistral 3 launch post](https://mistral.ai/news/mistral-3).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-12 against [mistral.ai/pricing](https://mistral.ai/pricing), [docs.mistral.ai/models/overview](https://docs.mistral.ai/models/overview), [Mistral docs](https://docs.mistral.ai/), [Mistral Search Toolkit](https://mistral.ai/news/search-toolkit), and the [Mistral 3 launch post](https://mistral.ai/news/mistral-3).
 
 ## FAQ
 

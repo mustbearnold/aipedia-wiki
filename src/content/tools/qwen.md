@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "Free open-weight downloads / hosted API priced per model"
 status: active
 launched: 2023-09
-last_updated: 2026-06-06
-last_verified: 2026-06-06
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: "https://qwen.ai/"
     source_label: "Qwen official site"
     source_id: qwen-official
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     next_review_at: 2026-06-08
     volatility: high
     confidence: high
@@ -40,7 +40,7 @@ facts:
     source: "https://docs.qwencloud.com/changelog/models"
     source_label: "Qwen Cloud model releases"
     source_id: qwencloud-model-releases
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     next_review_at: 2026-06-08
     volatility: high
     confidence: high
@@ -49,7 +49,7 @@ facts:
     source: "https://www.qwencloud.com/models/qwen3.7-max"
     source_label: "Qwen Cloud Qwen3.7-Max model page"
     source_id: qwencloud-qwen37-max
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     next_review_at: 2026-06-08
     volatility: high
     confidence: high
@@ -58,7 +58,7 @@ facts:
     source: "https://docs.qwencloud.com/changelog/models"
     source_label: "Qwen Cloud model releases"
     source_id: qwencloud-model-releases
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     next_review_at: 2026-06-08
     volatility: high
     confidence: high
@@ -67,7 +67,7 @@ facts:
     source: "https://docs.qwencloud.com/developer-guides/getting-started/pricing"
     source_label: "Qwen Cloud pricing docs"
     source_id: qwencloud-pricing
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     next_review_at: 2026-06-08
     volatility: high
     confidence: high
@@ -76,7 +76,7 @@ facts:
     source: "https://qwen.ai/"
     source_label: "Qwen official site"
     source_id: qwen-official
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     next_review_at: 2026-06-08
     volatility: high
     confidence: medium
@@ -85,7 +85,7 @@ facts:
     source: "https://qwenlm.github.io/blog/qwen3/"
     source_label: "Qwen3 blog"
     source_id: qwen-blog
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     next_review_at: 2026-06-08
     volatility: high
     confidence: high
@@ -183,7 +183,7 @@ The official Qwen3 release includes two open-weight MoE models, **Qwen3-235B-A22
 | **Production agent surface** | Qwen and Taobao co-built agentic shopping launched May 11, 2026 |
 | **Agent-cloud push** | First international Qwen Conference promoted Qwen Cloud, Skills, infrastructure upgrades, and JVS Agent Suite |
 
-Qwen3.7-Max, Qwen3.7-Plus, Qwen Cloud pricing, and model-release rows above were verified on 2026-06-06. Older qwen-max examples retain their own source dates in price history. See Sources.
+Qwen3.7-Max, Qwen3.7-Plus, Qwen Cloud pricing, and model-release rows above were verified on 2026-06-12. Older qwen-max examples retain their own source dates in price history. See Sources.
 
 ## What it actually is
 
@@ -228,7 +228,7 @@ Hosted pricing via [Qwen Cloud pricing docs](https://docs.qwencloud.com/develope
 | Qwen-Flash | $0.10/M input, $0.40/M output | New entry tier; Qwen-Turbo no longer receiving updates |
 | Batch invocation | 50% off real-time | Supported models only |
 
-*Qwen3.7-Max and Qwen3.7-Plus pricing verified 2026-06-06 via [Qwen Cloud pricing docs](https://docs.qwencloud.com/developer-guides/getting-started/pricing), the [Qwen3.7-Max model page](https://www.qwencloud.com/models/qwen3.7-max), and the [Qwen3.7-Max promotion page](https://www.qwencloud.com/promo/discount-qwen). Older qwen-max examples were verified 2026-05-13 via Alibaba Cloud Model Studio pricing. Chinese Mainland deployment rates can differ from International tiers. Third-party gateways can be useful, but their rates and model availability are separate from Alibaba's official pricing.*
+*Qwen3.7-Max and Qwen3.7-Plus pricing verified 2026-06-12 via [Qwen Cloud pricing docs](https://docs.qwencloud.com/developer-guides/getting-started/pricing), the [Qwen3.7-Max model page](https://www.qwencloud.com/models/qwen3.7-max), and the [Qwen3.7-Max promotion page](https://www.qwencloud.com/promo/discount-qwen). Older qwen-max examples were verified 2026-05-13 via Alibaba Cloud Model Studio pricing. Chinese Mainland deployment rates can differ from International tiers. Third-party gateways can be useful, but their rates and model availability are separate from Alibaba's official pricing.*
 
 ## Against the alternatives
 
@@ -254,7 +254,7 @@ Hosted pricing via [Qwen Cloud pricing docs](https://docs.qwencloud.com/develope
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-06 against [Qwen Cloud model releases](https://docs.qwencloud.com/changelog/models), the [Qwen3.7-Max model page](https://www.qwencloud.com/models/qwen3.7-max), [Qwen Cloud pricing docs](https://docs.qwencloud.com/developer-guides/getting-started/pricing), the [Qwen3.7-Max promotion page](https://www.qwencloud.com/promo/discount-qwen), [Qwen official site](https://qwen.ai/), [Qwen3 blog](https://qwenlm.github.io/blog/qwen3/), [Hugging Face Qwen](https://huggingface.co/Qwen), current Qwen Conference coverage, the [May 11 Qwen-Taobao agentic shopping coverage](/news/2026-05-11-alibaba-qwen-taobao-agentic-shopping/), and the tracked [Qwen3.6-35B-A3B news signal](/news/2026-04-16-qwen-3-6-35b-a3b-release/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-12 against [Qwen Cloud model releases](https://docs.qwencloud.com/changelog/models), the [Qwen3.7-Max model page](https://www.qwencloud.com/models/qwen3.7-max), [Qwen Cloud pricing docs](https://docs.qwencloud.com/developer-guides/getting-started/pricing), the [Qwen3.7-Max promotion page](https://www.qwencloud.com/promo/discount-qwen), [Qwen official site](https://qwen.ai/), [Qwen3 blog](https://qwenlm.github.io/blog/qwen3/), [Hugging Face Qwen](https://huggingface.co/Qwen), current Qwen Conference coverage, the [May 11 Qwen-Taobao agentic shopping coverage](/news/2026-05-11-alibaba-qwen-taobao-agentic-shopping/), and the tracked [Qwen3.6-35B-A3B news signal](/news/2026-04-16-qwen-3-6-35b-a3b-release/).
 
 ## FAQ
 

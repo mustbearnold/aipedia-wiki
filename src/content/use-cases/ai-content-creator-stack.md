@@ -3,7 +3,7 @@ type: use-case
 slug: ai-content-creator-stack
 title: "Best AI Stack for Content Creators (2026)"
 seo_title: "Best AI Stack for Content Creators (June 2026): Research, Scripts, Voice, Video, Editing & Thumbnails"
-meta_description: "Updated June 6, 2026: the best AI stack for YouTube, TikTok, podcast, and social creators. Use Perplexity for sourced research, Claude for scripts, ElevenLabs or HeyGen for voice/avatar work, Runway for B-roll, Descript for editing, Canva for thumbnails, and Suno for music."
+meta_description: "Updated June 12, 2026: the best AI stack for YouTube, TikTok, podcast, and social creators. Use Perplexity for sourced research, Claude for scripts, ElevenLabs or HeyGen for voice/avatar work, Runway for B-roll, Descript for editing, Canva for thumbnails, and Suno for music."
 author: "aipedia.wiki Editorial"
 description: "A current, source-backed AI tool stack for content creators, from research and scripting to voice, avatar video, B-roll, editing, thumbnails, and music."
 tools_mentioned: [perplexity, claude, elevenlabs, heygen, runway, descript, canva, suno]
@@ -36,8 +36,8 @@ guide_picks:
         url: "https://runwayml.com/pricing"
       - label: "Runway credits"
         url: "https://help.runwayml.com/hc/en-us/articles/15124877443219-How-do-credits-work"
-last_updated: 2026-06-06
-last_verified: 2026-06-06
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 ---
 
@@ -183,19 +183,19 @@ Partly. Free tiers are enough to test a workflow, but consistent publishing usua
 
 ## Sources
 
-- [Perplexity Pro help center](https://www.perplexity.ai/help-center/en/articles/9385876-what-is-perplexity-pro) (verified 2026-06-06)
-- [Perplexity API pricing](https://docs.perplexity.ai/getting-started/pricing) (verified 2026-06-06)
-- [Claude pricing](https://www.anthropic.com/pricing) (verified 2026-06-06)
-- [Claude Max plan](https://support.claude.com/en/articles/11049741-what-is-the-max-plan) (verified 2026-06-06)
-- [ElevenLabs pricing](https://elevenlabs.io/pricing) (verified 2026-06-06)
-- [ElevenLabs ElevenAgents cost](https://help.elevenlabs.io/hc/en-us/articles/29298065878929-How-much-does-ElevenAgents-cost) (verified 2026-06-06)
-- [HeyGen pricing](https://www.heygen.com/pricing) (verified 2026-06-06)
-- [HeyGen API pricing](https://developers.heygen.com/docs/pricing) (verified 2026-06-06)
-- [Runway pricing](https://runwayml.com/pricing) (verified 2026-06-06)
-- [Runway credits](https://help.runwayml.com/hc/en-us/articles/15124877443219-How-do-credits-work) (verified 2026-06-06)
-- [Runway API pricing](https://docs.dev.runwayml.com/guides/pricing/) (verified 2026-06-06)
-- [Descript pricing](https://www.descript.com/pricing) (verified 2026-06-06)
-- [Canva AI 2.0 announcement](https://www.canva.com/newsroom/news/canva-create-2026-ai/) (verified 2026-06-06)
-- [Canva AI](https://www.canva.com/magic/) (verified 2026-06-06)
-- [Suno pricing](https://suno.com/pricing) (verified 2026-06-06)
-- [Suno plan types](https://help.suno.com/en/articles/2410049) (verified 2026-06-06)
+- [Perplexity Pro help center](https://www.perplexity.ai/help-center/en/articles/9385876-what-is-perplexity-pro) (verified 2026-06-12)
+- [Perplexity API pricing](https://docs.perplexity.ai/getting-started/pricing) (verified 2026-06-12)
+- [Claude pricing](https://www.anthropic.com/pricing) (verified 2026-06-12)
+- [Claude Max plan](https://support.claude.com/en/articles/11049741-what-is-the-max-plan) (verified 2026-06-12)
+- [ElevenLabs pricing](https://elevenlabs.io/pricing) (verified 2026-06-12)
+- [ElevenLabs ElevenAgents cost](https://help.elevenlabs.io/hc/en-us/articles/29298065878929-How-much-does-ElevenAgents-cost) (verified 2026-06-12)
+- [HeyGen pricing](https://www.heygen.com/pricing) (verified 2026-06-12)
+- [HeyGen API pricing](https://developers.heygen.com/docs/pricing) (verified 2026-06-12)
+- [Runway pricing](https://runwayml.com/pricing) (verified 2026-06-12)
+- [Runway credits](https://help.runwayml.com/hc/en-us/articles/15124877443219-How-do-credits-work) (verified 2026-06-12)
+- [Runway API pricing](https://docs.dev.runwayml.com/guides/pricing/) (verified 2026-06-12)
+- [Descript pricing](https://www.descript.com/pricing) (verified 2026-06-12)
+- [Canva AI 2.0 announcement](https://www.canva.com/newsroom/news/canva-create-2026-ai/) (verified 2026-06-12)
+- [Canva AI](https://www.canva.com/magic/) (verified 2026-06-12)
+- [Suno pricing](https://suno.com/pricing) (verified 2026-06-12)
+- [Suno plan types](https://help.suno.com/en/articles/2410049) (verified 2026-06-12)

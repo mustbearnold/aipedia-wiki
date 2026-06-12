@@ -36,8 +36,8 @@ guide_picks:
         url: "https://ai.google.dev/gemini-api/docs/pricing"
       - label: "Veo 3.1 video update"
         url: "https://blog.google/innovation-and-ai/technology/ai/veo-3-1-ingredients-to-video/"
-last_updated: 2026-06-06
-last_verified: 2026-06-06
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: weekly
 ---
 

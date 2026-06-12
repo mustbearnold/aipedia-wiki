@@ -3781,6 +3781,7 @@ Each date-cluster: all eligible pages June 12-dated, historical/affiliate/news c
 - 2026-06-12: June 3 cluster (55 comparisons, 4 tools): script changed 59/59 files; no residual stragglers; frontmatter clean. Links clean, ledger current, full validation passed (33/33 tests, 1104 pages built).
 - 2026-06-12: June 4 cluster (47 comparisons, 8 tools): script changed 55/55 files; no stragglers; frontmatter clean. Links clean, ledger current (standalone check), full validation passed (33/33 tests, 1104 pages built).
 - 2026-06-12: June 5 cluster (1 category, 105 comparisons, 37 tools): script changed 143/143 files; second pass fixed 5 files with "checked/re-checked <date>" Sources/prose stragglers (hailuo-vs-kling, heygen-vs-kling/pika/seedance, elevenlabs); freepik affiliate note preserved. Links clean, ledger current, full validation passed (33/33 tests, 1104 pages built).
+- 2026-06-12: June 6 cluster (71 guides, 34 comparisons, 25 tools, 1 workflow, 2 answer pages; crawl surface + answers-index + disclosure skipped): script changed 133/133 files; second pass fixed 10 files with "checked <date>" Sources stragglers; notion-ai affiliate note preserved. Guide-picks audit clean (15 money guides protected). Ledger generated with IGNORE_DIRTY for deterministic frontmatter-based dating. Full validation passed (33/33 tests, 1104 pages built).
 
 ### 15. Final report
 

@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$5.59-$12.99/month"
 status: active
 launched: 2018-01
-last_updated: 2026-06-06
-last_verified: 2026-06-06
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://readwise.io/read"
     source_label: "Readwise Reader official site"
     source_id: readwise-reader
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   knowledge_surface:
@@ -38,7 +38,7 @@ facts:
     source: "https://readwise.io/read"
     source_label: "Readwise Reader official site"
     source_id: readwise-reader
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -46,7 +46,7 @@ facts:
     source: "https://readwise.io/pricing"
     source_label: "Readwise pricing"
     source_id: readwise-pricing
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -55,7 +55,7 @@ facts:
     source: "https://readwise.io/read"
     source_label: "Readwise Reader official site"
     source_id: readwise-reader
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: medium
     confidence: medium
   watch_out_for:
@@ -63,7 +63,7 @@ facts:
     source: "https://readwise.io/read"
     source_label: "Readwise Reader official site"
     source_id: readwise-reader
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
 tags: [ai-notes, reading, highlights, spaced-repetition, pkm, newsletters, rss]
@@ -135,7 +135,7 @@ $9.99/mo annual bundles Reader plus the full Readwise system; Lite drops to $5.5
 | **Free tier** | 30-day trial only, no perpetual free |
 | **Price floor** | $5.59/mo annual (Lite); $12.99/mo monthly |
 
-Every data point was verified against vendor docs on 2026-06-06. See Sources.
+Every data point was verified against vendor docs on 2026-06-12. See Sources.
 
 ## What it actually is
 
@@ -171,7 +171,7 @@ The Readwise review layer is the retention engine. Highlights resurface daily wi
 | Lite | $5.59/mo annual ($12.99 monthly) | Reading inbox and daily email, no spaced repetition |
 | Reader + Readwise (Full) | $9.99/mo annual | Everything: Ghostreader AI, spaced repetition, all exports |
 
-*Prices verified 2026-06-06 via [readwise.io/pricing](https://readwise.io/pricing). Annual billing saves roughly 24% versus monthly. No perpetual free tier after the 30-day trial.*
+*Prices verified 2026-06-12 via [readwise.io/pricing](https://readwise.io/pricing). Annual billing saves roughly 24% versus monthly. No perpetual free tier after the 30-day trial.*
 
 ## Against the alternatives
 
@@ -198,7 +198,7 @@ The Readwise review layer is the retention engine. Highlights resurface daily wi
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-06 against [readwise.io/pricing](https://readwise.io/pricing), [readwise.io/read](https://readwise.io/read), and the [Ghostreader docs](https://docs.readwise.io/reader/guides/ghostreader/overview).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-12 against [readwise.io/pricing](https://readwise.io/pricing), [readwise.io/read](https://readwise.io/read), and the [Ghostreader docs](https://docs.readwise.io/reader/guides/ghostreader/overview).
 
 ## FAQ
 

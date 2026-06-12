@@ -3,7 +3,7 @@ type: use-case
 slug: ai-lead-generation
 title: "AI Lead Generation Stack (June 2026)"
 seo_title: "AI Lead Generation Stack (June 2026): Apollo, Clay, Amplemarket"
-meta_description: "Updated June 6, 2026: Apollo is the best all-in-one AI lead-generation platform, n8n is the best DIY workflow layer, and Amplemarket is the best premium AI SDR suite, with Clay and Instantly requiring credit modeling before scale."
+meta_description: "Updated June 12, 2026: Apollo is the best all-in-one AI lead-generation platform, n8n is the best DIY workflow layer, and Amplemarket is the best premium AI SDR suite, with Clay and Instantly requiring credit modeling before scale."
 description: "A current buyer guide to AI lead generation covering prospect data, enrichment, AI research, scoring, sender handoff, compliance, and which tool to buy first."
 tools_mentioned: [apollo, n8n, amplemarket, clay, instantly]
 guide_picks:
@@ -40,8 +40,8 @@ guide_picks:
       - label: "Amplemarket pricing explainer"
         url: "https://www.amplemarket.com/blog/amplemarket-pricing"
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-06
-last_verified: 2026-06-06
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: weekly
 ---
 
@@ -197,17 +197,17 @@ It should not. AI can score, enrich, route, summarize, and draft, but humans sho
 
 ## Sources
 
-- [Apollo pricing](https://www.apollo.io/pricing) (verified 2026-06-06)
-- [Apollo sales engagement](https://www.apollo.io/product/sales-engagement) (verified 2026-06-06)
-- [Apollo data enrichment](https://www.apollo.io/product/data-enrichment) (verified 2026-06-06)
-- [Apollo credits documentation](https://knowledge.apollo.io/hc/en-us/articles/9527776320781-What-Are-Credits) (verified 2026-06-06)
-- [Clay pricing](https://www.clay.com/pricing) (verified 2026-06-06)
-- [Clay integrations](https://www.clay.com/integrations) (verified 2026-06-06)
-- [Clay University](https://www.clay.com/university) (verified 2026-06-06)
-- [Amplemarket pricing](https://www.amplemarket.com/pricing) (verified 2026-06-06)
-- [Amplemarket pricing explainer](https://www.amplemarket.com/blog/amplemarket-pricing) (verified 2026-06-06)
-- [n8n pricing](https://n8n.io/pricing/) (verified 2026-06-06)
-- [Instantly pricing](https://instantly.ai/pricing?lng=en) (verified 2026-06-06)
+- [Apollo pricing](https://www.apollo.io/pricing) (verified 2026-06-12)
+- [Apollo sales engagement](https://www.apollo.io/product/sales-engagement) (verified 2026-06-12)
+- [Apollo data enrichment](https://www.apollo.io/product/data-enrichment) (verified 2026-06-12)
+- [Apollo credits documentation](https://knowledge.apollo.io/hc/en-us/articles/9527776320781-What-Are-Credits) (verified 2026-06-12)
+- [Clay pricing](https://www.clay.com/pricing) (verified 2026-06-12)
+- [Clay integrations](https://www.clay.com/integrations) (verified 2026-06-12)
+- [Clay University](https://www.clay.com/university) (verified 2026-06-12)
+- [Amplemarket pricing](https://www.amplemarket.com/pricing) (verified 2026-06-12)
+- [Amplemarket pricing explainer](https://www.amplemarket.com/blog/amplemarket-pricing) (verified 2026-06-12)
+- [n8n pricing](https://n8n.io/pricing/) (verified 2026-06-12)
+- [Instantly pricing](https://instantly.ai/pricing?lng=en) (verified 2026-06-12)
 
 ## Related
 

@@ -3,7 +3,7 @@ type: use-case
 slug: ai-agency-stack
 title: "AI Automation Agency Tech Stack (June 2026)"
 seo_title: "AI Automation Agency Tech Stack: n8n, Zapier, Make, Claude, ChatGPT, Voice Agents and Client Dashboards"
-meta_description: "Updated June 6, 2026: a practical AI automation agency stack for discovery, workflow orchestration, LLM calls, voice agents, browser automation, client dashboards, QA, monitoring, and handoff."
+meta_description: "Updated June 12, 2026: a practical AI automation agency stack for discovery, workflow orchestration, LLM calls, voice agents, browser automation, client dashboards, QA, monitoring, and handoff."
 description: "A source-backed AI automation agency stack for selling reliable client workflows without overbuying agent platforms or hiding failure modes."
 tools_mentioned: [n8n, zapier, make, claude, chatgpt, elevenlabs, retell-ai, browserbase, lovable, v0]
 guide_picks:
@@ -38,8 +38,8 @@ guide_picks:
       - label: "Zapier plan help"
         url: "https://help.zapier.com/hc/en-us/articles/16051471305357-How-to-select-your-plan"
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-06
-last_verified: 2026-06-06
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 ---
 
@@ -47,7 +47,7 @@ update_frequency: monthly
 
 An AI automation agency does not win by selling the flashiest "agent" demo. It wins by shipping client workflows that survive real inputs, API failures, messy CRM data, permissions, human review, and handoff.
 
-This stack was refreshed on **June 6, 2026** against current official n8n, Zapier, Make, OpenAI, Anthropic, ElevenLabs, Retell AI, Browserbase, Lovable, and Vercel v0 sources. The June check also folds in Anthropic's official June 15 Agent SDK and `claude -p` billing change so agencies do not sell Claude subscription limits as a background-automation pool.
+This stack was refreshed on **June 12, 2026** against current official n8n, Zapier, Make, OpenAI, Anthropic, ElevenLabs, Retell AI, Browserbase, Lovable, and Vercel v0 sources. The June check also folds in Anthropic's official June 15 Agent SDK and `claude -p` billing change so agencies do not sell Claude subscription limits as a background-automation pool.
 
 ## Quick Verdict
 
@@ -202,19 +202,19 @@ Monthly at minimum, and faster when n8n, Zapier, Make, OpenAI, Anthropic, Eleven
 
 ## Sources
 
-- [n8n pricing](https://n8n.io/pricing/) (verified 2026-06-06)
-- [n8n AI documentation](https://docs.n8n.io/advanced-ai/) (verified 2026-06-06)
-- [Zapier pricing](https://zapier.com/pricing) (verified 2026-06-06)
-- [Zapier plan updates: Tables, Interfaces, and MCP](https://help.zapier.com/hc/en-us/articles/39645433045773-Zapier-plan-updates-Tables-Interfaces-and-MCP-now-included) (verified 2026-06-06)
-- [Make pricing](https://www.make.com/en/pricing) (verified 2026-06-06)
-- [Make AI Agents](https://www.make.com/en/ai-agents) (verified 2026-06-06)
-- [OpenAI API pricing](https://openai.com/api/pricing/) (verified 2026-06-06)
-- [ChatGPT Business help](https://help.openai.com/en/articles/8792828-what-is-chatgpt-business) (verified 2026-06-06)
-- [Claude pricing](https://claude.com/pricing) (verified 2026-06-06)
-- [Claude plan help](https://support.claude.com/en/articles/11049762-choosing-a-claude-ai-plan) (verified 2026-06-06)
-- [Claude Agent SDK with a Claude plan](https://support.claude.com/en/articles/15036540-use-the-claude-agent-sdk-with-your-claude-plan) (verified 2026-06-06)
-- [ElevenLabs ElevenAgents cost](https://help.elevenlabs.io/hc/en-us/articles/29298065878929-How-much-does-ElevenAgents-cost) (verified 2026-06-06)
-- [Retell AI pricing](https://www.retellai.com/pricing) (verified 2026-06-06)
-- [Browserbase pricing](https://www.browserbase.com/pricing) (verified 2026-06-06)
-- [Lovable billing FAQ](https://lovable.dev/faq/billing/plans) (verified 2026-06-06)
-- [Vercel v0 pricing update](https://vercel.com/blog/updated-v0-pricing) (verified 2026-06-06)
+- [n8n pricing](https://n8n.io/pricing/) (verified 2026-06-12)
+- [n8n AI documentation](https://docs.n8n.io/advanced-ai/) (verified 2026-06-12)
+- [Zapier pricing](https://zapier.com/pricing) (verified 2026-06-12)
+- [Zapier plan updates: Tables, Interfaces, and MCP](https://help.zapier.com/hc/en-us/articles/39645433045773-Zapier-plan-updates-Tables-Interfaces-and-MCP-now-included) (verified 2026-06-12)
+- [Make pricing](https://www.make.com/en/pricing) (verified 2026-06-12)
+- [Make AI Agents](https://www.make.com/en/ai-agents) (verified 2026-06-12)
+- [OpenAI API pricing](https://openai.com/api/pricing/) (verified 2026-06-12)
+- [ChatGPT Business help](https://help.openai.com/en/articles/8792828-what-is-chatgpt-business) (verified 2026-06-12)
+- [Claude pricing](https://claude.com/pricing) (verified 2026-06-12)
+- [Claude plan help](https://support.claude.com/en/articles/11049762-choosing-a-claude-ai-plan) (verified 2026-06-12)
+- [Claude Agent SDK with a Claude plan](https://support.claude.com/en/articles/15036540-use-the-claude-agent-sdk-with-your-claude-plan) (verified 2026-06-12)
+- [ElevenLabs ElevenAgents cost](https://help.elevenlabs.io/hc/en-us/articles/29298065878929-How-much-does-ElevenAgents-cost) (verified 2026-06-12)
+- [Retell AI pricing](https://www.retellai.com/pricing) (verified 2026-06-12)
+- [Browserbase pricing](https://www.browserbase.com/pricing) (verified 2026-06-12)
+- [Lovable billing FAQ](https://lovable.dev/faq/billing/plans) (verified 2026-06-12)
+- [Vercel v0 pricing update](https://vercel.com/blog/updated-v0-pricing) (verified 2026-06-12)

@@ -3,7 +3,7 @@ type: use-case
 slug: best-ai-for-photo-editing
 title: "Best AI for Photo Editing (June 2026)"
 seo_title: "Best AI Photo Editing Tools: Firefly, ChatGPT, Canva & Midjourney (June 2026)"
-meta_description: "Updated June 6, 2026: Adobe Firefly is best for Photoshop-native photo edits, ChatGPT is best for conversational image iteration, Canva is best for social assets, and Midjourney is best for creative variations."
+meta_description: "Updated June 12, 2026: Adobe Firefly is best for Photoshop-native photo edits, ChatGPT is best for conversational image iteration, Canva is best for social assets, and Midjourney is best for creative variations."
 description: "A current buyer guide to AI photo editing tools for object removal, generative fill, background extension, social graphics, image variations, product images, and creative retouching workflows."
 tools_mentioned: ["adobe-firefly", "chatgpt", "canva", "midjourney"]
 guide_picks:
@@ -34,14 +34,14 @@ guide_picks:
       - label: "ChatGPT release notes"
         url: "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-06
-last_verified: 2026-06-06
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 ---
 
 # Best AI for Photo Editing (June 2026)
 
-AiPedia verified this guide on June 6, 2026 against current official Adobe, OpenAI, Canva, and Midjourney sources. Rankings are editorial. AiPedia may earn affiliate revenue when readers choose a tool through a commercial link, but paid placement does not determine the winner.
+AiPedia verified this guide on June 12, 2026 against current official Adobe, OpenAI, Canva, and Midjourney sources. Rankings are editorial. AiPedia may earn affiliate revenue when readers choose a tool through a commercial link, but paid placement does not determine the winner.
 
 The best AI photo editor depends on whether the final asset is a professional photo, a social post, a product image, a thumbnail, or a creative variation. Do not buy this category by model hype alone. The practical questions are: does the tool preserve the photo, can it finish the deliverable, can the buyer review usage rights, and does the workflow fit the team?
 
@@ -156,12 +156,12 @@ Use ChatGPT for conversational iteration and broad creative workflows. Use Adobe
 
 ## Sources
 
-- [Adobe Firefly plans](https://www.adobe.com/products/firefly/plans.html) (verified 2026-06-06)
-- [Photoshop Generative Fill](https://www.adobe.com/products/photoshop/generative-fill.html) (verified 2026-06-06)
-- [Adobe Firefly creative agent announcement](https://news.adobe.com/news/2026/04/adobe-new-creative-agent) (verified 2026-06-06)
-- [OpenAI image generation API](https://openai.com/index/image-generation-api/) (verified 2026-06-06)
-- [ChatGPT release notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes) (verified 2026-06-06)
-- [Canva AI](https://www.canva.com/canva-ai/) (verified 2026-06-06)
-- [Canva pricing](https://www.canva.com/pricing/) (verified 2026-06-06)
-- [Midjourney docs](https://docs.midjourney.com/) (verified 2026-06-06)
-- [Midjourney plans](https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans) (verified 2026-06-06)
+- [Adobe Firefly plans](https://www.adobe.com/products/firefly/plans.html) (verified 2026-06-12)
+- [Photoshop Generative Fill](https://www.adobe.com/products/photoshop/generative-fill.html) (verified 2026-06-12)
+- [Adobe Firefly creative agent announcement](https://news.adobe.com/news/2026/04/adobe-new-creative-agent) (verified 2026-06-12)
+- [OpenAI image generation API](https://openai.com/index/image-generation-api/) (verified 2026-06-12)
+- [ChatGPT release notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes) (verified 2026-06-12)
+- [Canva AI](https://www.canva.com/canva-ai/) (verified 2026-06-12)
+- [Canva pricing](https://www.canva.com/pricing/) (verified 2026-06-12)
+- [Midjourney docs](https://docs.midjourney.com/) (verified 2026-06-12)
+- [Midjourney plans](https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans) (verified 2026-06-12)

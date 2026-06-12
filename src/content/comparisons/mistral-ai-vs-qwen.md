@@ -6,10 +6,10 @@ tools: [mistral-ai, qwen]
 category: ai-chatbots
 winner: depends
 seo_title: "Mistral AI vs Qwen: EU Model Platform or Qwen Cloud?"
-meta_description: "Mistral AI vs Qwen, refreshed June 6, 2026: compare Mistral 3, Medium 3.5, Le Chat, Vibe, Studio, and Search Toolkit with Qwen Cloud, qwen3.7-max, qwen3.7-plus, and Apache 2.0 Qwen3 open weights."
+meta_description: "Mistral AI vs Qwen, refreshed June 12, 2026: compare Mistral 3, Medium 3.5, Le Chat, Vibe, Studio, and Search Toolkit with Qwen Cloud, qwen3.7-max, qwen3.7-plus, and Apache 2.0 Qwen3 open weights."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-06
-last_verified: 2026-06-06
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -99,13 +99,13 @@ Yes. A practical setup is Mistral for EU/vendor-governed production lanes and Qw
 
 - [Mistral AI review](/tools/mistral-ai/)
 - [Qwen review](/tools/qwen/)
-- [Mistral pricing](https://mistral.ai/pricing) (verified 2026-06-06)
-- [Mistral model documentation](https://docs.mistral.ai/models/overview) (verified 2026-06-06)
-- [Mistral 3 launch](https://mistral.ai/news/mistral-3/) (verified 2026-06-06)
-- [Mistral Search Toolkit](https://mistral.ai/news/search-toolkit/) (verified 2026-06-06)
-- [Qwen Cloud model releases](https://docs.qwencloud.com/changelog/models) (verified 2026-06-06)
-- [Qwen Cloud pricing](https://docs.qwencloud.com/developer-guides/getting-started/pricing) (verified 2026-06-06)
-- [Qwen3.7-Max model page](https://www.qwencloud.com/models/qwen3.7-max) (verified 2026-06-06)
-- [Qwen3.7-Max promotion](https://www.qwencloud.com/promo/discount-qwen) (verified 2026-06-06)
-- [Qwen3 official blog](https://qwenlm.github.io/blog/qwen3/) (verified 2026-06-06)
+- [Mistral pricing](https://mistral.ai/pricing) (verified 2026-06-12)
+- [Mistral model documentation](https://docs.mistral.ai/models/overview) (verified 2026-06-12)
+- [Mistral 3 launch](https://mistral.ai/news/mistral-3/) (verified 2026-06-12)
+- [Mistral Search Toolkit](https://mistral.ai/news/search-toolkit/) (verified 2026-06-12)
+- [Qwen Cloud model releases](https://docs.qwencloud.com/changelog/models) (verified 2026-06-12)
+- [Qwen Cloud pricing](https://docs.qwencloud.com/developer-guides/getting-started/pricing) (verified 2026-06-12)
+- [Qwen3.7-Max model page](https://www.qwencloud.com/models/qwen3.7-max) (verified 2026-06-12)
+- [Qwen3.7-Max promotion](https://www.qwencloud.com/promo/discount-qwen) (verified 2026-06-12)
+- [Qwen3 official blog](https://qwenlm.github.io/blog/qwen3/) (verified 2026-06-12)
 - [AI Chatbots & LLMs](/categories/ai-chatbots/)

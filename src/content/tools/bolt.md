@@ -10,11 +10,11 @@ pricing_model: freemium
 price_range: "$0-$30+/seat/mo"
 status: active
 launched: 2024-10
-last_updated: 2026-06-06
-last_verified: 2026-06-06
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 seo_title: "Bolt.new Review: Pricing, Tokens, Cloud & Best Plan (June 2026)"
-meta_description: "Updated June 6, 2026: Bolt.new pricing, token limits, Bolt Cloud databases, hosting, WebContainers, best plan, alternatives, and production risks."
+meta_description: "Updated June 12, 2026: Bolt.new pricing, token limits, Bolt Cloud databases, hosting, WebContainers, best plan, alternatives, and production risks."
 author: "aipedia.wiki Editorial"
 primary_cta_label: "Start with Bolt.new free"
 best_plan: "Pro at $25/month"
@@ -35,7 +35,7 @@ facts:
     source: "https://support.bolt.new/building/intro-bolt"
     source_label: "Bolt introduction docs"
     source_id: bolt-intro
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -43,7 +43,7 @@ facts:
     source: "https://bolt.new/pricing"
     source_label: "bolt.new/pricing"
     source_id: bolt-official
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     next_review_at: 2026-07-06
     volatility: high
     confidence: high
@@ -52,7 +52,7 @@ facts:
     source: "https://bolt.new/pricing"
     source_label: "bolt.new/pricing"
     source_id: bolt-official
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     next_review_at: 2026-07-06
     volatility: high
     confidence: high
@@ -61,7 +61,7 @@ facts:
     source: "https://bolt.new/pricing"
     source_label: "bolt.new/pricing"
     source_id: bolt-official
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     next_review_at: 2026-07-06
     volatility: high
     confidence: high
@@ -70,7 +70,7 @@ facts:
     source: "https://support.bolt.new/building/intro-bolt"
     source_label: "Bolt introduction docs"
     source_id: bolt-intro
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   cloud_database:
@@ -78,7 +78,7 @@ facts:
     source: "https://support.bolt.new/cloud/database"
     source_label: "Bolt database docs"
     source_id: bolt-database
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   hosting_path:
@@ -86,7 +86,7 @@ facts:
     source: "https://support.bolt.new/cloud/hosting"
     source_label: "Bolt hosting docs"
     source_id: bolt-hosting
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   supported_stack:
@@ -94,7 +94,7 @@ facts:
     source: "https://support.bolt.new/building/supported-technologies"
     source_label: "Bolt supported technologies"
     source_id: bolt-supported-technologies
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   token_economics:
@@ -102,7 +102,7 @@ facts:
     source: "https://support.bolt.new/account-and-subscription/tokens"
     source_label: "Bolt token docs"
     source_id: bolt-tokens
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     next_review_at: 2026-07-06
     volatility: high
     confidence: high
@@ -111,7 +111,7 @@ facts:
     source: "https://support.bolt.new/building/supported-technologies"
     source_label: "Bolt supported technologies"
     source_id: bolt-supported-technologies
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
 hero_glance:
@@ -283,13 +283,13 @@ The short version: Bolt wins when the browser itself should be the development w
 
 AiPedia scores Bolt.new as a buyer decision page. Utility is high because Bolt solves a real problem: it makes app building possible in a browser without a local stack. Value is strong at Free and Pro, but buyers should monitor token burn. Moat is strong because WebContainers are difficult to copy. Longevity is solid because StackBlitz owns the runtime story, but competition from Lovable, v0, Replit, Cursor, and cloud IDEs remains intense.
 
-This page was updated on 2026-06-06 against official Bolt pricing and documentation. Unsupported current model-name claims are intentionally avoided because AiPedia did not verify a stable public model list from the official sources used for this update.
+This page was updated on 2026-06-12 against official Bolt pricing and documentation. Unsupported current model-name claims are intentionally avoided because AiPedia did not verify a stable public model list from the official sources used for this update.
 
 ## FAQ
 
 **Is Bolt.new free?**
 
-Yes. The Free plan includes public and private projects, a 300K daily token limit, 1M tokens per month, Bolt branding, website hosting, and unlimited databases as verified on 2026-06-06.
+Yes. The Free plan includes public and private projects, a 300K daily token limit, 1M tokens per month, Bolt branding, website hosting, and unlimited databases as verified on 2026-06-12.
 
 **What Bolt.new plan should I buy first?**
 
@@ -317,13 +317,13 @@ Bolt is broader as a browser development workspace. v0 is better when the buyer 
 
 ## Sources
 
-- [Bolt.new pricing](https://bolt.new/pricing) - Free, Pro, Teams, Enterprise, token limits, hosting, databases, custom domains, rollover claims, and short-lived free-domain promo. Verified 2026-06-06.
-- [Bolt introduction docs](https://support.bolt.new/building/intro-bolt) - product scope, Bolt Cloud, databases, hosting, publishing, WebContainers, and pricing orientation. Verified 2026-06-06.
-- [Bolt database docs](https://support.bolt.new/cloud/database) - built-in database creation/management and database settings. Verified 2026-06-06.
-- [Bolt token docs](https://support.bolt.new/account-and-subscription/tokens) - token costs, reset rules, reloads, daily limits, rollover, and cancellation behavior. Verified 2026-06-06.
-- [Bolt supported technologies](https://support.bolt.new/building/supported-technologies) - browser support, platforms, JavaScript/Node.js focus, PHP/Python limit, and database options. Verified 2026-06-06.
-- [Bolt hosting docs](https://support.bolt.new/cloud/hosting) - built-in hosting, `.bolt.host` domains, and custom domains for Pro users. Verified 2026-06-06.
-- [StackBlitz WebContainers](https://webcontainers.io/) - browser runtime behind Bolt's development environment. Verified 2026-06-06.
+- [Bolt.new pricing](https://bolt.new/pricing) - Free, Pro, Teams, Enterprise, token limits, hosting, databases, custom domains, rollover claims, and short-lived free-domain promo. Verified 2026-06-12.
+- [Bolt introduction docs](https://support.bolt.new/building/intro-bolt) - product scope, Bolt Cloud, databases, hosting, publishing, WebContainers, and pricing orientation. Verified 2026-06-12.
+- [Bolt database docs](https://support.bolt.new/cloud/database) - built-in database creation/management and database settings. Verified 2026-06-12.
+- [Bolt token docs](https://support.bolt.new/account-and-subscription/tokens) - token costs, reset rules, reloads, daily limits, rollover, and cancellation behavior. Verified 2026-06-12.
+- [Bolt supported technologies](https://support.bolt.new/building/supported-technologies) - browser support, platforms, JavaScript/Node.js focus, PHP/Python limit, and database options. Verified 2026-06-12.
+- [Bolt hosting docs](https://support.bolt.new/cloud/hosting) - built-in hosting, `.bolt.host` domains, and custom domains for Pro users. Verified 2026-06-12.
+- [StackBlitz WebContainers](https://webcontainers.io/) - browser runtime behind Bolt's development environment. Verified 2026-06-12.
 
 ## Related
 

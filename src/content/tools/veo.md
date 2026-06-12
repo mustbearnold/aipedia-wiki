@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "Google AI plans + Gemini API paid tier $0.05-$0.60/sec"
 status: active
 launched: 2025-10
-last_updated: 2026-06-06
-last_verified: 2026-06-06
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: weekly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://deepmind.google/models/veo/"
     source_label: "Google DeepMind Veo"
     source_id: veo-official
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     next_review_at: 2026-07-06
     volatility: high
     confidence: high
@@ -39,7 +39,7 @@ facts:
     source: "https://blog.google/innovation-and-ai/technology/ai/veo-3-1-ingredients-to-video/"
     source_label: "Veo 3.1 Ingredients to Video update"
     source_id: veo-31-ingredients
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     next_review_at: 2026-07-06
     volatility: high
     confidence: high
@@ -48,7 +48,7 @@ facts:
     source: "https://ai.google.dev/gemini-api/docs/pricing"
     source_label: "Gemini API Veo 3.1 pricing"
     source_id: veo-gemini-api-pricing
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     next_review_at: 2026-07-06
     volatility: high
     confidence: high
@@ -57,7 +57,7 @@ facts:
     source: "https://ai.google.dev/gemini-api/docs/video"
     source_label: "Gemini API Veo 3.1 docs"
     source_id: veo-31-gemini-api-docs
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     next_review_at: 2026-07-06
     volatility: high
     confidence: high
@@ -66,7 +66,7 @@ facts:
     source: "https://ai.google.dev/gemini-api/docs/pricing"
     source_label: "Gemini API Veo 3.1 pricing"
     source_id: veo-gemini-api-pricing
-    verified_at: 2026-06-06
+    verified_at: 2026-06-12
     next_review_at: 2026-07-06
     volatility: high
     confidence: high
@@ -199,12 +199,12 @@ Yes. Google's January 2026 update specifically highlights native vertical 9:16 o
 ## Sources
 
 - [Google I/O 2026 Gemini and subscription update](/news/2026-05-19-google-io-gemini-35-search-ai-ultra/) (verified 2026-05-20)
-- [Google DeepMind Veo](https://deepmind.google/models/veo/) (verified 2026-06-06)
-- [Veo 3.1 Gemini API video docs](https://ai.google.dev/gemini-api/docs/video) (verified 2026-06-06)
-- [Gemini API Veo 3.1 pricing](https://ai.google.dev/gemini-api/docs/pricing) (verified 2026-06-06)
-- [Veo 3.1 Ingredients to Video update](https://blog.google/innovation-and-ai/technology/ai/veo-3-1-ingredients-to-video/) (verified 2026-06-06)
-- [Veo 3.1 Gemini API launch](https://developers.googleblog.com/en/introducing-veo-3-1-and-new-creative-capabilities-in-the-gemini-api/) (verified 2026-06-06)
-- [Veo 3.1 Lite announcement](https://blog.google/innovation-and-ai/technology/ai/veo-3-1-lite/) (verified 2026-06-06)
+- [Google DeepMind Veo](https://deepmind.google/models/veo/) (verified 2026-06-12)
+- [Veo 3.1 Gemini API video docs](https://ai.google.dev/gemini-api/docs/video) (verified 2026-06-12)
+- [Gemini API Veo 3.1 pricing](https://ai.google.dev/gemini-api/docs/pricing) (verified 2026-06-12)
+- [Veo 3.1 Ingredients to Video update](https://blog.google/innovation-and-ai/technology/ai/veo-3-1-ingredients-to-video/) (verified 2026-06-12)
+- [Veo 3.1 Gemini API launch](https://developers.googleblog.com/en/introducing-veo-3-1-and-new-creative-capabilities-in-the-gemini-api/) (verified 2026-06-12)
+- [Veo 3.1 Lite announcement](https://blog.google/innovation-and-ai/technology/ai/veo-3-1-lite/) (verified 2026-06-12)
 
 ## Related
 
