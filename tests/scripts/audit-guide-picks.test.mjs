@@ -19,6 +19,21 @@ price_range: "$0-$20/month"
 `;
 }
 
+function toolWithStatus(slug, status) {
+  return `---
+type: tool
+slug: ${slug}
+title: ${slug}
+url: https://example.com/${slug}
+pricing_model: freemium
+price_range: "$0-$20/month"
+status: ${status}
+---
+
+# ${slug}
+`;
+}
+
 function guide(slug) {
   return `---
 type: use-case
@@ -97,6 +112,37 @@ test('guide-picks audit validates required structured buyer picks', () => {
     assert.equal(report.required_guides.length, 1);
     assert.equal(report.guides_with_picks, 1);
     assert.equal(report.issues.length, 0);
+  } finally {
+    rmSync(fixture, { recursive: true, force: true });
+  }
+});
+
+test('guide-picks audit flags a discontinued tool used as a pick', () => {
+  const fixture = mkdtempSync(join(tmpdir(), 'aipedia-guide-picks-dead-'));
+
+  try {
+    const useCasesDir = join(fixture, 'use-cases');
+    const toolsDir = join(fixture, 'tools');
+    mkdirSync(useCasesDir, { recursive: true });
+    mkdirSync(toolsDir, { recursive: true });
+
+    writeFileSync(join(useCasesDir, 'guide-a.md'), guide('guide-a'));
+    // alpha is dead; beta/gamma active. The best_overall pick (alpha) must fail.
+    writeFileSync(join(toolsDir, 'alpha.md'), toolWithStatus('alpha', 'dead'));
+    writeFileSync(join(toolsDir, 'beta.md'), toolWithStatus('beta', 'active'));
+    writeFileSync(join(toolsDir, 'gamma.md'), toolWithStatus('gamma', 'active'));
+
+    const result = spawnSync(process.execPath, [
+      'scripts/audit-guide-picks.mjs', '--json',
+      '--use-cases', useCasesDir, '--tools', toolsDir, '--required', 'guide-a',
+    ], { cwd: process.cwd(), encoding: 'utf8' });
+
+    assert.equal(result.status, 1, 'audit should fail when a pick is discontinued');
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, false);
+    const dead = report.issues.filter((i) => i.code === 'guide-pick-tool-not-active');
+    assert.equal(dead.length, 1, `expected one not-active issue, got ${JSON.stringify(report.issues)}`);
+    assert.match(dead[0].detail, /best_overall: alpha is dead/);
   } finally {
     rmSync(fixture, { recursive: true, force: true });
   }

@@ -134,6 +134,8 @@ const requiredGuides = parseCsv(argValue('--required')).length
   ? parseCsv(argValue('--required'))
   : DEFAULT_REQUIRED_GUIDES;
 
+const DEAD_STATUSES = new Set(['dead', 'retired', 'acquired']);
+
 const issues = [];
 const reports = [];
 const guideBySlug = new Map();
@@ -142,6 +144,14 @@ for (const path of markdownFiles(useCasesDir)) {
   const md = readMarkdown(path);
   const slug = parseSlug(md.frontmatter, path);
   guideBySlug.set(slug, { ...md, slug });
+}
+
+// Tool status by slug, so a guide can never recommend a dead/retired/acquired tool.
+const toolStatusBySlug = new Map();
+for (const path of markdownFiles(toolsDir)) {
+  const md = readMarkdown(path);
+  const slug = parseSlug(md.frontmatter, path);
+  toolStatusBySlug.set(slug, String(scalar(md.frontmatter, 'status') ?? 'active').toLowerCase());
 }
 
 for (const slug of requiredGuides) {
@@ -200,6 +210,16 @@ for (const guide of guideBySlug.values()) {
         issues.push({ code: 'guide-pick-source-url-invalid', guide: guide.slug, file: rel(guide.path), detail: `${slot}.sources[${index}]: ${url || '(empty)'}` });
       }
     });
+  }
+
+  // A guide must never recommend a discontinued tool in any pick slot.
+  for (const [slot, pick] of Object.entries(picks)) {
+    const toolSlug = pick && pick.tool;
+    if (!toolSlug) continue;
+    const status = toolStatusBySlug.get(toolSlug);
+    if (status && DEAD_STATUSES.has(status)) {
+      issues.push({ code: 'guide-pick-tool-not-active', guide: guide.slug, file: rel(guide.path), detail: `${slot}: ${toolSlug} is ${status}` });
+    }
   }
 
   reports.push({
