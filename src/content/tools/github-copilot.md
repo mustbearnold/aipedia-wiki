@@ -243,7 +243,7 @@ price_history:
     source_label: "AIpedia coverage"
     source_id: aipedia-news
     verified_at: 2026-05-13
-    note: "GitHub will deprecate Grok Code Fast 1 across Copilot on May 15, 2026 because of an xAI provider-side deprecation. Suggested alternatives are GPT-5 mini and Claude Haiku 4.5."
+    note: "GitHub deprecated Grok Code Fast 1 across Copilot on May 15, 2026 because of an xAI provider-side deprecation. Suggested alternatives are GPT-5 mini and Claude Haiku 4.5."
   - date: 2026-05-08
     plan: "Coding Agent secrets and variables"
     price: "Included on paid tiers"
@@ -429,7 +429,7 @@ One GitHub AI Credit equals $0.01 USD. Chat, agent mode, cloud Coding Agent, Cop
 - **May 19, 2026:** [Gemini 3.5 Flash became generally available in GitHub Copilot](/news/2026-05-19-github-copilot-gemini-35-flash-ga/), reinforcing Copilot as a multi-model coding surface where teams need model governance instead of one-provider assumptions.
 - **May 18, 2026:** [GitHub turned Copilot into a more governable coding-agent control plane](/news/2026-05-18-github-copilot-agent-control-plane-updates/) with remote CLI control GA, Copilot Spaces API GA, cheaper cloud-agent models, and repository cloud-agent configuration audit APIs.
 - **May 11, 2026:** [OpenAI launched Daybreak](/news/2026-05-11-openai-daybreak-codex-security-launch/), pulling Codex Security into a 22-partner cyber initiative. Copilot teams now have a productized OpenAI security-scanning surface that competes with Anthropic's Project Glasswing and Claude Security.
-- **May 8, 2026:** [GitHub will deprecate Grok Code Fast 1 across Copilot on May 15](/news/2026-05-08-github-copilot-grok-code-fast-1-deprecation/). Teams using it should switch model policies to GPT-5 mini, Claude Haiku 4.5, or another supported model before the deadline.
+- **May 8, 2026:** [GitHub announced it would deprecate Grok Code Fast 1 across Copilot on May 15](/news/2026-05-08-github-copilot-grok-code-fast-1-deprecation/); that removal is now in effect. Teams still on it should switch model policies to GPT-5 mini, Claude Haiku 4.5, or another supported model.
 - **May 8, 2026:** [Copilot cloud agent gained dedicated Agents secrets and variables](/news/2026-05-08-github-copilot-cloud-agent-secrets-variables/), including organization-level sharing for agent configuration.
 - **May 8, 2026:** [Copilot code-review metrics now include comment-type breakdowns](/news/2026-05-08-github-copilot-code-review-metrics-comment-types/), giving admins a better view of security, bug-risk, and other suggestion categories.
 - **May 7, 2026:** [Copilot CLI Rubber Duck can now pair GPT and Claude as cross-model critics](/news/2026-05-07-github-copilot-rubber-duck-cross-model-review/) when experimental mode is enabled.

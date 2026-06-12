@@ -144,7 +144,7 @@ The May 15, 2026 cutoff has passed, so any workload still pinned to Grok Code Fa
 - **Inventory direct xAI API usage.** Identify every service, agent loop, or batch job that still calls `grok-code-fast-1`. Move them to Grok 4.3 per xAI's documented guidance, or to another model that fits your latency and cost target.
 - **Inventory GitHub Copilot usage.** Confirm whether developers still select Grok Code Fast 1 in Copilot Chat, inline edits, ask, agent, or completion modes. Point them to the GitHub-recommended alternatives (GPT-5 mini, Claude Haiku 4.5).
 - **Re-benchmark before standardizing on Grok 4.3.** xAI directs coding users to Grok 4.3 but does not guarantee that price-per-accepted-patch or merge quality will match Grok Code Fast 1. Run your existing test-fix loop and accepted-edit benchmarks against the new model before committing.
-- **Audit Copilot Enterprise model policies.** If a Copilot administrator has disabled the recommended alternatives, developers will hit broken workflows on May 15. Update model allowlists before the cutoff.
+- **Audit Copilot Enterprise model policies.** If a Copilot administrator left the recommended alternatives disabled, developers selecting Grok Code Fast 1 now hit broken workflows. Update model allowlists to GPT-5 mini, Claude Haiku 4.5, or another supported model.
 - **Update reviewer and procurement docs.** RFPs, evaluation spreadsheets, and internal guides should drop Grok Code Fast 1 as a forward-looking choice.
 
 ## Failure modes

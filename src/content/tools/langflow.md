@@ -202,7 +202,7 @@ Langflow is MIT-licensed and free to self-host. Langflow Cloud added a free firs
 - **LangChain lock-in.** Flows assume LangChain abstractions. Migrating to raw SDK calls or LlamaIndex requires rewriting the logic.
 - **Large flows clutter fast.** Canvases past 40 nodes become hard to navigate. Sub-flows and careful grouping help; exporting to Python for maintenance is often the answer.
 - **Not pure no-code.** Non-template use assumes familiarity with LangChain concepts (chains, retrievers, agents, tool calling). Operators without that grounding stall.
-- **DataStax cloud shutdown.** Teams that stood up workflows on DataStax-hosted Langflow before March 2026 need to migrate to self-host or another partner by April 9, 2026. Existing data was scheduled for deletion.
+- **DataStax cloud shutdown.** Teams that stood up workflows on DataStax-hosted Langflow before March 2026 had to migrate to self-host or another partner by the April 9, 2026 cutoff; data left on the hosted service was deleted after that date.
 - **Component quality varies.** Community-contributed nodes ship at uneven maturity. Core nodes are solid; some integrations lag model releases.
 - **Version churn and patch pressure.** The 1.9.x line moved from 1.9.2 on May 1 to 1.9.6 on June 2, and 1.9.3 was explicitly labeled a critical security release. Pin versions for production and schedule upgrade testing.
 

@@ -232,7 +232,7 @@ Older third-party or news-cycle claims about Grok 4.20 variants, future Grok 5 t
 
 ## Recent developments (April-June 2026)
 
-- **May 8:** [GitHub will deprecate Grok Code Fast 1 across Copilot on May 15](/news/2026-05-08-github-copilot-grok-code-fast-1-deprecation/) following an xAI provider-side deprecation. GitHub points users to GPT-5 mini and Claude Haiku 4.5. Teams treating Grok as a stable coding backend should re-verify the exact surface and model before relying on it.
+- **May 8:** [GitHub announced it would deprecate Grok Code Fast 1 across Copilot on May 15](/news/2026-05-08-github-copilot-grok-code-fast-1-deprecation/) following an xAI provider-side deprecation; that removal is now in effect. GitHub points users to GPT-5 mini and Claude Haiku 4.5. Teams treating Grok as a stable coding backend should re-verify the exact surface and model before relying on it.
 - **May 1:** [Grok 4.3 moved into the xAI API and OpenRouter while Custom Voices added team-scoped voice cloning](/news/2026-05-03-xai-grok-43-custom-voices-api/). The June 2 source check keeps the current official buyer anchor on xAI's model docs: Grok 4.3, 1M context, $1.25/M input, $2.50/M output.
 - **April 30:** [Musk testimony said xAI partly used OpenAI models to train Grok](/news/2026-04-30-xai-grok-openai-distillation-testimony/). Treat this as a model-provenance and governance caveat, not a feature change; the public record does not quantify the scope.
 - **April 24:** [AI Industry Roundup, April 24](/news/2026-04-24-ai-industry-roundup/) kept Grok in the broader frontier-lab watchlist alongside DeepSeek, OpenAI, Anthropic, and Cohere-Aleph Alpha.
