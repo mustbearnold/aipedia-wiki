@@ -57,7 +57,7 @@ facts:
     volatility: medium
     confidence: medium
   pricing_anchor:
-    value: "As of May 2026 OpenHands Cloud has two public tiers: free Individual SaaS (10 daily conversations, BYOK or at-cost OpenHands provider) and custom-priced Enterprise (SAML/SSO, private VPC, unlimited concurrent runs). The $20/mo Pro tier was retired. Self-hosting under MIT remains free."
+    value: "As of June 2026 OpenHands Cloud has two public tiers: free Individual SaaS (10 daily conversations, BYOK or at-cost OpenHands provider) and custom-priced Enterprise (SAML/SSO, private VPC, unlimited concurrent runs). The $20/mo Pro tier was retired. Self-hosting under MIT remains free."
     source: "https://openhands.dev/pricing"
     source_label: "OpenHands pricing"
     source_id: openhands-pricing

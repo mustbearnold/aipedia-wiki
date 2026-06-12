@@ -158,7 +158,7 @@ Runs through a web app and browser extension that works inside Google Docs, Gmai
 | **Multilingual input** | Non-English drafts rewritten into natural English |
 | **Plan ladder (May 2026)** | Basic $0, Advanced $6.99/mo ($4.89 annual), Unlimited $9.99/mo ($6.99 annual) |
 | **Plus and Teams** | Retired in the May 2026 rebuild |
-| **Strategic note** | AI21 has pivoted toward the enterprise Maestro platform; consumer Wordtune still live as of May 2026 |
+| **Strategic note** | AI21 has pivoted toward the enterprise Maestro platform; consumer Wordtune still live as of June 2026 |
 
 Every data point above was verified against vendor sources on 2026-06-12. See Sources.
 
