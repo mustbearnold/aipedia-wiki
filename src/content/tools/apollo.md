@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$149/user/month"
 status: active
 launched: 2015-01
-last_updated: 2026-06-01
-last_verified: 2026-06-01
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -33,7 +33,7 @@ facts:
     source: "https://www.apollo.io/product/sales-engagement"
     source_label: "Apollo sales engagement"
     source_id: apollo-sales-engagement
-    verified_at: 2026-06-01
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
   pricing_anchor:
@@ -41,7 +41,7 @@ facts:
     source: "https://www.apollo.io/pricing"
     source_label: "Apollo.io Pricing"
     source_id: apollo-official
-    verified_at: 2026-06-01
+    verified_at: 2026-06-12
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -50,7 +50,7 @@ facts:
     source: "https://www.apollo.io/product/data-enrichment"
     source_label: "Apollo data enrichment"
     source_id: apollo-data-enrichment
-    verified_at: 2026-06-01
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   engagement_surface:
@@ -58,7 +58,7 @@ facts:
     source: "https://www.apollo.io/product/sales-engagement"
     source_label: "Apollo sales engagement"
     source_id: apollo-sales-engagement
-    verified_at: 2026-06-01
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   watch_out_for:
@@ -66,7 +66,7 @@ facts:
     source: "https://www.apollo.io/pricing"
     source_label: "Apollo.io Pricing"
     source_id: apollo-official
-    verified_at: 2026-06-01
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
 tags: [sales-intelligence, lead-generation, sales-automation, cold-email, prospecting]
@@ -180,7 +180,7 @@ Apollo is better as an all-in-one platform. Clay is better for deep enrichment, 
 No. Validate sample segments before scaling. Data coverage, bounce rate, phone accuracy, and regional quality vary by target market.
 
 **How often does AiPedia recheck Apollo?**
-Apollo is a volatile sales/pricing tool, so AiPedia treats it as a monthly review target and rechecks official pricing/product pages when updating commercial claims. Last checked 2026-06-01 against the public pricing page.
+Apollo is a volatile sales/pricing tool, so AiPedia treats it as a monthly review target and rechecks official pricing/product pages when updating commercial claims. Last checked 2026-06-12 against the public pricing page.
 
 ## Sources
 

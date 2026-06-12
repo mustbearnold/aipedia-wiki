@@ -13,8 +13,8 @@ pricing_model: open-source
 price_range: Free self-host / $5 per active flow (cloud)
 status: active
 launched: 2022-06
-last_updated: 2026-06-01
-last_verified: 2026-06-01
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -37,7 +37,7 @@ facts:
     source: https://github.com/activepieces/activepieces
     source_label: Activepieces GitHub repository
     source_id: activepieces-repository
-    verified_at: '2026-06-01'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-04'
@@ -47,7 +47,7 @@ facts:
     source: https://www.activepieces.com/pricing
     source_label: Activepieces pricing
     source_id: activepieces-pricing
-    verified_at: '2026-06-01'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-04'
@@ -57,7 +57,7 @@ facts:
     source: https://github.com/activepieces/activepieces
     source_label: Activepieces GitHub repository
     source_id: activepieces-repository
-    verified_at: '2026-06-01'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-04'
@@ -66,7 +66,7 @@ facts:
     source: https://www.activepieces.com/docs
     source_label: Activepieces docs
     source_id: activepieces-docs
-    verified_at: '2026-06-01'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-04'
@@ -76,7 +76,7 @@ facts:
     source: https://www.activepieces.com/pricing
     source_label: Activepieces pricing
     source_id: activepieces-pricing
-    verified_at: '2026-06-01'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-04'
@@ -86,7 +86,7 @@ facts:
     source: https://www.activepieces.com/docs
     source_label: Activepieces docs
     source_id: activepieces-docs
-    verified_at: '2026-06-01'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-04'
@@ -154,7 +154,7 @@ Two deployment paths: self-host free on your own infrastructure, or use the clou
 | **Code steps** | JavaScript (Node-based) |
 | **Enterprise deploy** | Custom annual contract (SSO, audit, Git sync, private pieces) |
 
-Every data point above was verified against vendor documentation on 2026-06-01. See Sources.
+Every data point above was verified against vendor documentation on 2026-06-12. See Sources.
 
 ## What it actually is
 
@@ -191,7 +191,7 @@ Pricing via [activepieces.com/pricing](https://www.activepieces.com/pricing):
 | Cloud Unlimited | Custom (annual) | SSO, audit logs, role permissions, centralized AI billing, Git sync, private pieces |
 | Embed | From $30,000/yr | Embedded builder and agents, JS SDK, custom templates, white-label |
 
-*Prices verified 2026-06-01 via [activepieces.com/pricing](https://www.activepieces.com/pricing). Pricing shifted from per-task to per-active-flow in early 2026; the current GitHub releases page shows 0.84.0 shipping on May 29, 2026.*
+*Prices verified 2026-06-12 via [activepieces.com/pricing](https://www.activepieces.com/pricing). Pricing shifted from per-task to per-active-flow in early 2026; the current GitHub releases page shows 0.84.0 shipping on May 29, 2026.*
 
 ## Against the alternatives
 
@@ -217,7 +217,7 @@ Pricing via [activepieces.com/pricing](https://www.activepieces.com/pricing):
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis shown. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-01 against [activepieces.com/pricing](https://www.activepieces.com/pricing), the [Activepieces GitHub repository](https://github.com/activepieces/activepieces), and the current releases page.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis shown. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-12 against [activepieces.com/pricing](https://www.activepieces.com/pricing), the [Activepieces GitHub repository](https://github.com/activepieces/activepieces), and the current releases page.
 
 ## FAQ
 

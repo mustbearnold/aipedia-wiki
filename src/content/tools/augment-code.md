@@ -10,11 +10,11 @@ pricing_model: paid
 price_range: "$20-$200/developer/month"
 status: active
 launched: 2024
-last_updated: 2026-06-01
-last_verified: 2026-06-01
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 seo_title: "Augment Code: Features, Pricing & Review (June 2026)"
-meta_description: "Augment Code is an AI coding platform for large codebases. Indie $20/mo with 40,000 credits, Standard $60/developer/mo, Max $200/developer/mo with Cosmos, Enterprise custom. Current docs list Claude Opus 4.7, GPT-5.5, Kimi K2.6, and Prism smart routing. Verified June 1, 2026."
+meta_description: "Augment Code is an AI coding platform for large codebases. Indie $20/mo with 40,000 credits, Standard $60/developer/mo, Max $200/developer/mo with Cosmos, Enterprise custom. Current docs list Claude Opus 4.7, GPT-5.5, Kimi K2.6, and Prism smart routing. Verified June 12, 2026."
 author: aipedia.wiki Editorial
 affiliate:
   has_program: false
@@ -33,7 +33,7 @@ facts:
     source: "https://docs.augmentcode.com/models/available-models"
     source_label: "Augment available models"
     source_id: augment-code-flagship-model
-    verified_at: 2026-06-01
+    verified_at: 2026-06-12
     next_review_at: 2026-06-13
     confidence: high
   coding_agent:
@@ -41,14 +41,14 @@ facts:
     source: "https://docs.augmentcode.com/using-augment/agent"
     source_label: "Augment Agent docs"
     source_id: augment-code-coding-agent
-    verified_at: 2026-06-01
+    verified_at: 2026-06-12
     confidence: high
   best_paid_tier:
     value: "Standard ($60/developer/month) for teams; Indie ($20/month) for solo evaluation; Max ($200/developer/month) unlocks Cosmos for sustained Opus 4.7 and GPT-5.5 agent workloads"
     source: "https://www.augmentcode.com/pricing"
     source_label: "Augment pricing"
     source_id: augment-code-best-paid-tier
-    verified_at: 2026-06-01
+    verified_at: 2026-06-12
     next_review_at: 2026-06-13
     confidence: high
   best_for:
@@ -56,7 +56,7 @@ facts:
     source: "https://docs.augmentcode.com/introduction"
     source_label: "Augment docs"
     source_id: augment-code-best-for
-    verified_at: 2026-06-01
+    verified_at: 2026-06-12
     confidence: high
 tags: [ai-coding, coding-agent, codebase-context, vscode, jetbrains, cli, mcp, code-review]
 best_for:
@@ -199,7 +199,7 @@ Pricing via [Augment Code pricing](https://www.augmentcode.com/pricing):
 | Max | $200/developer/mo | 450,000 | Heavy agent usage; includes Cosmos for bigger runs |
 | Enterprise | Custom | Custom | Unlimited users, SSO, CMEK, ISO 42001, SIEM, volume-based annual discounts |
 
-Auto top-up is listed at $15 for 24,000 credits across paid tiers. Augment's pricing FAQ gives rough examples: a small task with 10 tool calls might cost around 300 credits, while a complex task with 60 tool calls might cost around 4,300 credits. Pricing verified 2026-06-01 via [augmentcode.com/pricing](https://www.augmentcode.com/pricing).
+Auto top-up is listed at $15 for 24,000 credits across paid tiers. Augment's pricing FAQ gives rough examples: a small task with 10 tool calls might cost around 300 credits, while a complex task with 60 tool calls might cost around 4,300 credits. Pricing verified 2026-06-12 via [augmentcode.com/pricing](https://www.augmentcode.com/pricing).
 
 ## Against The Alternatives
 
@@ -224,7 +224,7 @@ Auto top-up is listed at $15 for 24,000 credits across paid tiers. Augment's pri
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-01 against primary Augment sources: the [pricing page](https://www.augmentcode.com/pricing) and the [available models page](https://docs.augmentcode.com/models/available-models).
+This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-12 against primary Augment sources: the [pricing page](https://www.augmentcode.com/pricing) and the [available models page](https://docs.augmentcode.com/models/available-models).
 
 ## FAQ
 
@@ -244,7 +244,7 @@ Augment's pricing FAQ says paid plans exclude AI training on customer data under
 Yes. Augment added Opus 4.7 to its model picker after Anthropic's [April 16, 2026 release](/news/2026-04-16-anthropic-claude-opus-47/). The available-models page lists Opus 4.7 alongside Sonnet 4.6, Haiku 4.5, Gemini 3.1 Pro, GPT-5.5, and Kimi K2.6, plus Prism smart-routing presets.
 
 **What is Cosmos?**
-Cosmos is the heavier agent envelope bundled with the Max plan as of the June 1, 2026 verification. Standard and Indie seats can still run Agent, Next Edit, and Code Review, but the Cosmos workload tier is reserved for $200/developer/mo subscribers.
+Cosmos is the heavier agent envelope bundled with the Max plan as of the June 12, 2026 verification. Standard and Indie seats can still run Agent, Next Edit, and Code Review, but the Cosmos workload tier is reserved for $200/developer/mo subscribers.
 
 ## Sources
 

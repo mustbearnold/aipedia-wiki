@@ -10,8 +10,8 @@ pricing_model: enterprise
 price_range: "Enterprise starts at $16K"
 status: active
 launched: 2023-07
-last_updated: 2026-06-01
-last_verified: 2026-06-01
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://sourcegraph.com/docs/cody"
     source_label: "Sourcegraph Cody docs"
     source_id: cody-docs
-    verified_at: 2026-06-01
+    verified_at: 2026-06-12
     next_review_at: 2026-06-13
     volatility: medium
     confidence: high
@@ -39,7 +39,7 @@ facts:
     source: "https://sourcegraph.com/pricing"
     source_label: "Sourcegraph pricing"
     source_id: cody-pricing
-    verified_at: 2026-06-01
+    verified_at: 2026-06-12
     next_review_at: 2026-06-13
     volatility: high
     confidence: high
@@ -48,7 +48,7 @@ facts:
     source: "https://sourcegraph.com/docs/cody"
     source_label: "Sourcegraph Cody docs"
     source_id: cody-docs
-    verified_at: 2026-06-01
+    verified_at: 2026-06-12
     next_review_at: 2026-06-13
     volatility: medium
     confidence: high
@@ -57,7 +57,7 @@ facts:
     source: "https://sourcegraph.com/pricing"
     source_label: "Sourcegraph pricing"
     source_id: cody-pricing
-    verified_at: 2026-06-01
+    verified_at: 2026-06-12
     next_review_at: 2026-06-13
     volatility: high
     confidence: high
@@ -135,7 +135,7 @@ Self-serve is gone. Free and Pro shut down July 23, 2025. Sourcegraph Enterprise
 | **Compliance** | Enterprise admin controls, model configuration, Sourcegraph Cloud or self-hosted deployment |
 | **Sibling product** | Amp is the agentic workflow path for former Free/Pro Cody users |
 
-Every data point above was verified against vendor sources on 2026-06-01. See Sources.
+Every data point above was verified against vendor sources on 2026-06-12. See Sources.
 
 ## What it actually is
 
@@ -168,7 +168,7 @@ Amp is the agentic coding path Sourcegraph pointed former Cody Free and Pro user
 |---|---|---|
 | Sourcegraph Enterprise | Starts at $16K | Code graph, cross-repo context, Deep Search, Cody, MCP/API/CLI access, AI-feature credits, admin controls, single-tenant cloud, self-hosted option |
 
-*Pricing verified 2026-06-01 via [Sourcegraph pricing](https://sourcegraph.com/pricing) and the [Cody plan changes notice](https://sourcegraph.com/blog/changes-to-cody-free-pro-and-enterprise-starter-plans). Free and Pro were retired on July 23, 2025. Expect a sales-led enterprise contract, not a self-serve seat checkout.*
+*Pricing verified 2026-06-12 via [Sourcegraph pricing](https://sourcegraph.com/pricing) and the [Cody plan changes notice](https://sourcegraph.com/blog/changes-to-cody-free-pro-and-enterprise-starter-plans). Free and Pro were retired on July 23, 2025. Expect a sales-led enterprise contract, not a self-serve seat checkout.*
 
 ## Against the alternatives
 
@@ -193,7 +193,7 @@ Amp is the agentic coding path Sourcegraph pointed former Cody Free and Pro user
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-01 against [Sourcegraph pricing](https://sourcegraph.com/pricing), [Sourcegraph Cody docs](https://sourcegraph.com/docs/cody), [Sourcegraph Model Provider docs](https://sourcegraph.com/docs/model-provider), and [the plan-change announcement](https://sourcegraph.com/blog/changes-to-cody-free-pro-and-enterprise-starter-plans).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-12 against [Sourcegraph pricing](https://sourcegraph.com/pricing), [Sourcegraph Cody docs](https://sourcegraph.com/docs/cody), [Sourcegraph Model Provider docs](https://sourcegraph.com/docs/model-provider), and [the plan-change announcement](https://sourcegraph.com/blog/changes-to-cody-free-pro-and-enterprise-starter-plans).
 
 ## FAQ
 

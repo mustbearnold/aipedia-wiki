@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: $0-$18.99/month
 status: active
 launched: 2022-04
-last_updated: 2026-06-01
-last_verified: 2026-06-01
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -32,7 +32,7 @@ facts:
     source: "https://pieces.app/"
     source_label: "Pieces homepage"
     source_id: pieces-official
-    verified_at: 2026-06-01
+    verified_at: 2026-06-12
     next_review_at: 2026-08-13
     volatility: medium
     confidence: high
@@ -41,7 +41,7 @@ facts:
     source: "https://docs.pieces.app/products/core-dependencies"
     source_label: "Pieces core dependencies docs"
     source_id: pieces-core-dependencies
-    verified_at: 2026-06-01
+    verified_at: 2026-06-12
     next_review_at: 2026-08-13
     volatility: medium
     confidence: high
@@ -50,7 +50,7 @@ facts:
     source: "https://docs.pieces.app/products/paid-plans"
     source_label: "Pieces paid plans docs"
     source_id: pieces-official
-    verified_at: 2026-06-01
+    verified_at: 2026-06-12
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -59,7 +59,7 @@ facts:
     source: "https://pieces.app/"
     source_label: "Pieces homepage"
     source_id: pieces-official
-    verified_at: 2026-06-01
+    verified_at: 2026-06-12
     next_review_at: 2026-08-13
     volatility: medium
     confidence: high
@@ -68,7 +68,7 @@ facts:
     source: "https://docs.pieces.app/products/core-dependencies"
     source_label: "Pieces core dependencies docs"
     source_id: pieces-core-dependencies
-    verified_at: 2026-06-01
+    verified_at: 2026-06-12
     next_review_at: 2026-08-13
     volatility: medium
     confidence: medium
@@ -76,7 +76,7 @@ tags: [snippet-manager, workflow, ai-coding, context, developer-tools, vscode, j
 seo_title: 'Pieces for Developers: Local AI Memory Review (June 2026)'
 meta_description: >-
   Pieces for Developers is a local-first AI memory layer. Free tier includes
-  on-device LLMs with no usage caps. Verified June 1, 2026: the public pricing
+  on-device LLMs with no usage caps. Verified June 12, 2026: the public pricing
   page emphasizes free Individual and Teams contact-for-pricing, while paid-plan
   docs still list Pro at $18.99/mo or $169.99/yr.
 author: "aipedia.wiki Editorial"
@@ -148,7 +148,7 @@ Pricing is the watch item. Pieces' public pricing page currently emphasizes a fr
 | **Data location** | Local by default. Cloud sync opt-in |
 | **LTM engine** | LTM-2 captures continuously in the background |
 
-Every data point above was verified against vendor sources on 2026-06-01. See Sources.
+Every data point above was verified against vendor sources on 2026-06-12. See Sources.
 
 ## What it actually is
 
@@ -182,7 +182,7 @@ LTM-2 is the differentiator. It builds a searchable timeline of sessions. Query 
 | Pro Annual | $169.99/yr ($14.17/mo) | Same as Pro Monthly, 20% off | Up to 9 months | **Most paid users land here** |
 | Enterprise | Custom | Full suite + controls | Custom | SSO, audit, admin, on-prem |
 
-*Prices verified 2026-06-01 via [Pieces public pricing](https://pieces.app/pricing) and [Pieces Pro pricing docs](https://docs.pieces.app/products/paid-plans). Because the two official surfaces do not present the same buyer path, confirm the in-app checkout before committing.*
+*Prices verified 2026-06-12 via [Pieces public pricing](https://pieces.app/pricing) and [Pieces Pro pricing docs](https://docs.pieces.app/products/paid-plans). Because the two official surfaces do not present the same buyer path, confirm the in-app checkout before committing.*
 
 ## Against the alternatives
 
@@ -214,7 +214,7 @@ LTM-2 is the differentiator. It builds a searchable timeline of sessions. Query 
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-01 against [Pieces public pricing](https://pieces.app/pricing), [Pieces Pro pricing docs](https://docs.pieces.app/products/paid-plans), and [Pieces features](https://pieces.app/features).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-12 against [Pieces public pricing](https://pieces.app/pricing), [Pieces Pro pricing docs](https://docs.pieces.app/products/paid-plans), and [Pieces features](https://pieces.app/features).
 
 ## FAQ
 

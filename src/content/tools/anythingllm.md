@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0 self-hosted / $50-$99/mo cloud"
 status: active
 launched: 2023-06
-last_updated: 2026-06-01
-last_verified: 2026-06-01
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -32,7 +32,7 @@ facts:
     source: https://anythingllm.com/
     source_label: AnythingLLM official site
     source_id: anythingllm-official
-    verified_at: '2026-06-01'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -42,7 +42,7 @@ facts:
     source: https://anythingllm.com/pricing
     source_label: AnythingLLM hosted cloud pricing
     source_id: anythingllm-pricing
-    verified_at: '2026-06-01'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -51,7 +51,7 @@ facts:
     source: https://github.com/Mintplex-Labs/anything-llm
     source_label: AnythingLLM GitHub repository
     source_id: anythingllm-repository
-    verified_at: '2026-06-01'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -61,7 +61,7 @@ facts:
     source: https://docs.anythingllm.com/
     source_label: AnythingLLM docs
     source_id: anythingllm-docs
-    verified_at: '2026-06-01'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -71,7 +71,7 @@ facts:
     source: https://docs.anythingllm.com/
     source_label: AnythingLLM docs
     source_id: anythingllm-docs
-    verified_at: '2026-06-01'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -154,7 +154,7 @@ Built by Mintplex Labs (YC). An MIT-licensed open-source application that combin
 | Cloud Pro | $99/mo | Private instance, RAG and agents, 72-hour support SLA. Startups and larger teams. |
 | Enterprise | Custom | On-premise install, custom SLA, custom domain, custom integration. Large companies. |
 
-Prices verified 2026-06-01 via [anythingllm.com/cloud](https://anythingllm.com/cloud).
+Prices verified 2026-06-12 via [anythingllm.com/cloud](https://anythingllm.com/cloud).
 
 ## Failure modes
 
@@ -177,7 +177,7 @@ Prices verified 2026-06-01 via [anythingllm.com/cloud](https://anythingllm.com/c
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-01 against [anythingllm.com/cloud](https://anythingllm.com/cloud) and the [GitHub repo](https://github.com/Mintplex-Labs/anything-llm).
+Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-12 against [anythingllm.com/cloud](https://anythingllm.com/cloud) and the [GitHub repo](https://github.com/Mintplex-Labs/anything-llm).
 
 ## FAQ
 

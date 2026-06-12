@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: "$0-$250/month + usage add-ons / custom enterprise"
 status: active
 launched: 2024-10
-last_updated: 2026-06-01
-last_verified: 2026-06-01
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -32,7 +32,7 @@ facts:
     source: https://mastra.ai/docs
     source_label: Mastra documentation
     source_id: mastra-docs
-    verified_at: '2026-06-01'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-08-13'
@@ -41,7 +41,7 @@ facts:
     source: https://mastra.ai/pricing
     source_label: Mastra pricing
     source_id: mastra-pricing
-    verified_at: '2026-06-01'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-06-13'
@@ -50,7 +50,7 @@ facts:
     source: https://mastra.ai/docs/deployment/overview
     source_label: Mastra deployment documentation
     source_id: mastra-deployment-docs
-    verified_at: '2026-06-01'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-08-13'
@@ -59,7 +59,7 @@ facts:
     source: https://github.com/mastra-ai/mastra
     source_label: Mastra GitHub repository
     source_id: mastra-github
-    verified_at: '2026-06-01'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-08-13'
@@ -68,7 +68,7 @@ facts:
     source: https://mastra.ai/about
     source_label: Mastra about page
     source_id: mastra-about
-    verified_at: '2026-06-01'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-08-13'
@@ -77,13 +77,13 @@ facts:
     source: https://mastra.ai/pricing
     source_label: Mastra pricing
     source_id: mastra-pricing
-    verified_at: '2026-06-01'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-06-13'
 tags: [agent-framework, typescript, javascript, open-source, rag, workflows, memory, observability, y-combinator, developer]
 seo_title: "Mastra: Features, Pricing & Review (June 2026)"
-meta_description: "Mastra is an Apache 2.0 TypeScript AI agent framework and platform. Verified June 1, 2026: Starter is free, Teams is $250/month, Enterprise is custom, with usage meters for CPU, observability, egress, Memory Gateway, and 24/7 persistent server uptime."
+meta_description: "Mastra is an Apache 2.0 TypeScript AI agent framework and platform. Verified June 12, 2026: Starter is free, Teams is $250/month, Enterprise is custom, with usage meters for CPU, observability, egress, Memory Gateway, and 24/7 persistent server uptime."
 author: "aipedia.wiki Editorial"
 best_for:
   - TypeScript and JavaScript developers building AI agents
@@ -95,7 +95,7 @@ not_best_for:
   - non-developers who need a no-code builder
   - tiny teams that may outgrow the free tier but cannot justify platform usage add-ons
 quick_answer: >-
-  Mastra is a TypeScript-first framework and platform for agents, workflows, RAG, memory, evals, observability, and production agent APIs. The framework is Apache 2.0 and free; Mastra Platform has a $0 Starter plan, $250/month Teams plan, custom Enterprise, and usage meters for CPU, observability, egress, persistent server uptime, Memory Gateway tokens, and storage as of June 1, 2026. Pick it if your stack is TypeScript. Skip it if you are Python-first or want no-code automation.
+  Mastra is a TypeScript-first framework and platform for agents, workflows, RAG, memory, evals, observability, and production agent APIs. The framework is Apache 2.0 and free; Mastra Platform has a $0 Starter plan, $250/month Teams plan, custom Enterprise, and usage meters for CPU, observability, egress, persistent server uptime, Memory Gateway tokens, and storage as of June 12, 2026. Pick it if your stack is TypeScript. Skip it if you are Python-first or want no-code automation.
 price_history:
   - date: 2026-06-01
     plan: "Platform Starter"
@@ -136,7 +136,7 @@ Mastra is the TypeScript-native agent framework built by the former Gatsby team.
 
 | | |
 |---|---|
-| **Last verified** | June 1, 2026 |
+| **Last verified** | June 12, 2026 |
 | **Language** | TypeScript / JavaScript |
 | **Framework license** | Apache 2.0 |
 | **Company** | Mastra, founded in 2024 by the former Gatsby team |
@@ -184,7 +184,7 @@ Mastra is the TypeScript-native agent framework built by the former Gatsby team.
 | Usage add-ons | Varies | Observability events, CPU time, data egress, Memory Gateway tokens, retrieval storage, and model-provider usage can add cost |
 | Self-hosted Enterprise | Custom annual fee | Licensed self-hosted features with data staying in the customer's VPC |
 
-Pricing verified June 1, 2026 against Mastra's public pricing page. Model-provider costs (Anthropic, OpenAI, Google, and others) are not included in Mastra pricing.
+Pricing verified June 12, 2026 against Mastra's public pricing page. Model-provider costs (Anthropic, OpenAI, Google, and others) are not included in Mastra pricing.
 
 ## Failure Modes
 
@@ -207,7 +207,7 @@ Pricing verified June 1, 2026 against Mastra's public pricing page. Model-provid
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified June 1, 2026 against Mastra official site, documentation, pricing, platform/deployment docs, customers page, About page, GitHub repository, and recent Mastra blog/changelog surfaces.
+Produced by the aipedia.wiki editorial pipeline. Last verified June 12, 2026 against Mastra official site, documentation, pricing, platform/deployment docs, customers page, About page, GitHub repository, and recent Mastra blog/changelog surfaces.
 
 ## FAQ
 
@@ -240,7 +240,7 @@ Mastra's customers page lists case studies and customer references including Rep
 
 ## Review History
 
-- 2026-06-01: Re-verified Starter, Teams, Enterprise, persistent server, observability event, CPU, data egress, Memory Gateway token, Memory Gateway storage, platform storage, and retention meters. Corrected Starter observability allowance to 100K events and removed unsupported bundled-model implications.
+- 2026-06-12: Re-verified Starter, Teams, Enterprise, persistent server, observability event, CPU, data egress, Memory Gateway token, Memory Gateway storage, platform storage, and retention meters. Corrected Starter observability allowance to 100K events and removed unsupported bundled-model implications.
 - 2026-05-13: Re-verified Starter, Teams, Enterprise, persistent server, CPU, observability event, data egress, Memory Gateway storage, and retention meters against the live pricing page; no material changes. Added model-cost context for buyers using Mastra with hosted frontier-model APIs.
 - 2026-05-10: Refreshed Mastra pricing, source provenance, platform/memory guidance, recent product changes, and buyer watch-outs.
 - 2026-04-18: Initial TypeScript agent-framework review.

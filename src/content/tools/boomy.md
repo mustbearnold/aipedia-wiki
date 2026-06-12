@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0 free / $9.99-$29.99/mo"
 status: active
 launched: 2021-03
-last_updated: 2026-06-01
-last_verified: 2026-06-01
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: https://boomy.com/
     source_label: Boomy official site
     source_id: boomy-official
-    verified_at: '2026-06-01'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -41,7 +41,7 @@ facts:
     source: https://boomy.com/pricing
     source_label: Boomy pricing
     source_id: boomy-pricing
-    verified_at: '2026-06-01'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -50,7 +50,7 @@ facts:
     source: https://boomy.com/
     source_label: Boomy official site
     source_id: boomy-official
-    verified_at: '2026-06-01'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -59,7 +59,7 @@ facts:
     source: https://boomy.com/terms
     source_label: Boomy terms
     source_id: boomy-terms
-    verified_at: '2026-06-01'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -69,7 +69,7 @@ facts:
     source: https://boomy.com/terms
     source_label: Boomy terms
     source_id: boomy-terms
-    verified_at: '2026-06-01'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -88,7 +88,7 @@ not_best_for:
   - users who want to keep 100% of streaming royalties
   - podcasters / YouTubers (royalty-free libraries are cheaper)
 quick_answer: >-
-  Boomy is AI music generation pitched at complete beginners. Click a genre, get a song in seconds, optionally release it to streaming platforms with one click. Creator is $9.99/mo and Pro is $29.99/mo as of June 1, 2026. Catch: Boomy owns non-subscriber tracks and the distribution terms pay creators up to 80% of Boomy net revenue. Pick it for quick experimentation. Skip it for serious music work (Suno or Udio win on quality).
+  Boomy is AI music generation pitched at complete beginners. Click a genre, get a song in seconds, optionally release it to streaming platforms with one click. Creator is $9.99/mo and Pro is $29.99/mo as of June 12, 2026. Catch: Boomy owns non-subscriber tracks and the distribution terms pay creators up to 80% of Boomy net revenue. Pick it for quick experimentation. Skip it for serious music work (Suno or Udio win on quality).
 ---
 
 # Boomy
@@ -140,7 +140,7 @@ Music generation with training wheels. Pick a genre template, click generate, ge
 | Pro | $29.99/mo | Unlimited | 250 WAV/month | Yes, distribution pays up to 80% of Boomy net revenue |
 | Team/Enterprise | Custom | Custom | Custom | Custom |
 
-Verified 2026-06-01 via [boomy.com/pricing](https://boomy.com/pricing).
+Verified 2026-06-12 via [boomy.com/pricing](https://boomy.com/pricing).
 
 ## Failure modes
 
@@ -162,7 +162,7 @@ Verified 2026-06-01 via [boomy.com/pricing](https://boomy.com/pricing).
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-01 against [boomy.com/pricing](https://boomy.com/pricing), [Boomy terms](https://boomy.com/terms), and [TechRadar's Boomy overview](https://www.techradar.com/pro/what-is-boomy-everything-we-know-about-the-ai-music-maker).
+Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-12 against [boomy.com/pricing](https://boomy.com/pricing), [Boomy terms](https://boomy.com/terms), and [TechRadar's Boomy overview](https://www.techradar.com/pro/what-is-boomy-everything-we-know-about-the-ai-music-maker).
 
 ## FAQ
 

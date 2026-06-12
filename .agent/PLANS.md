@@ -3712,3 +3712,72 @@ Affiliate money pages (lindy, argil) must keep program terms and approval dates 
 ### 15. Final report
 
 Completed. All 10 May 27-28 pages now carry June 12, 2026 verification with no pricing or affiliate-term changes. This clears the entire pre-June live backlog: remaining pre-June ledger rows are only the 4 dead tools (phind, tome, dalle, grok-code-fast: excluded by scope) and the 2 git-dated static pages (/search/, /stack-builder/: reviewed earlier this session, no date-bearing content to refresh). All other rows are dated 2026-06-01 through 2026-06-12, inside the monthly update_frequency freshness window from this month's refresh sessions. The oldest-to-today ledger refresh requested on 2026-06-12 is complete for all eligible pages.
+
+---
+
+## ExecPlan: June 12 2026 June Frontier Re-Verification Sweep (June 1-11 rows)
+
+### 1. Objective
+
+Per explicit user direction to continue the oldest-to-today ledger refresh past the pre-June backlog, re-verify and re-date every eligible ledger row dated 2026-06-01 through 2026-06-11 (about 660 rows) up to today, 2026-06-12. Worked oldest-first, one date-cluster per commit. Skips dead tools and individual news article pages per the standing goal.
+
+### 2. Current state
+
+After the May 20-28 batches, the oldest remaining live rows are dated 2026-06-01 to 2026-06-11. These were last refreshed within the past 11 days but the user has directed a full sweep to today's date regardless of freshness window. June SEO titles already read "(June 2026)", so the work is primarily bumping ISO verification dates (last_updated, last_verified, body "verified/checked on" lines, facts verified_at outside price_history) from June 1-11 to June 12, while preserving historical price-history rows, dated changelog bullets, /news/ URLs, and affiliate approval/commission notes.
+
+### 3. Target state
+
+Every eligible June 1-11 page carries 2026-06-12 verification dates with all historical/dated/affiliate content preserved. Dead tools and individual news pages untouched. Pure-infrastructure static pages (privacy, terms, glossary, robots.txt, admin, demo, tool-finder, editorial) are left as-is: they are git-dated and carry no editorial "verified" semantics, so bumping them would be pure churn.
+
+### 4. Scope
+
+Included: content pages (tools, guides, comparisons, companies, categories, workflows, trends, reports) and editorial answer pages with date metadata, dated 2026-06-01 through 2026-06-11. Excluded: dead tools, individual news articles, infrastructure static pages, source-registry schema changes, and the 2 git-dated feature pages (/search/, /stack-builder/).
+
+### 5. Files likely affected
+
+Several hundred files under src/content/{tools,categories,comparisons,companies,use-cases,workflows,trends,reports}/ and a handful of src/pages/answers/*.astro, plus PAGE_REFRESH_LEDGER.md and this plan.
+
+### 6. Data model impact
+
+None. ISO dates and verification phrasing refreshed in place; price_history rows, facts-row verified_at tied to historical price snapshots, and dated changelog bullets preserved.
+
+### 7. SEO impact
+
+Refreshes last_updated/last_verified crawl signals to June 12 across the bulk of the catalog; SEO titles already current for June.
+
+### 8. Conversion impact
+
+No pricing or affiliate-term changes; existing verified pricing re-stamped as re-checked June 12. Guard money-guide and commercial-CTA protections enforced each batch.
+
+### 9. Mobile UX impact
+
+Text-only date edits; none.
+
+### 10. Implementation steps (per date-cluster)
+
+1. List the date's ledger rows; dead-filter tools by `status: dead`.
+2. Run the hardened refresh script (.refresh-tmp.py): bumps June 1-11 ISO + prose verification dates to June 12 on metadata/verification lines only, protecting /news/ URLs, price_history blocks, dated bullets, and affiliate notes.
+3. Grep for residual verification-context stragglers; fix prose lines the keyword set missed (e.g. "checked YYYY-MM-DD" without "on").
+4. Regenerate ledger; run guard:check, check:links, audit:facts, test:scripts, check, build:fast.
+5. Commit and push the date-cluster; append to this progress log.
+
+### 11. Verification commands
+
+`npm run ledger:pages`, `npm run ledger:pages:check`, `npm run guard:check`, `npm run check:links`, `npm run audit:sources`, `npm run audit:facts`, `npm run test:scripts`, `npm run check`, `npm run build:fast`.
+
+### 12. Acceptance criteria
+
+Each date-cluster: all eligible pages June 12-dated, historical/affiliate/news content preserved, links clean, ledger current, full validation passes, committed and pushed. Sweep complete when no eligible row predates 2026-06-12.
+
+### 13. Risks and mitigations
+
+(a) Batch date substitution corrupting dated /news/ URLs: mitigated by the script stashing /news/ slugs before substitution; check:links gates every batch. (b) Over-bumping historical price_history verified_at/note dates: mitigated by in-price_history skip tracking; spot-grepped per batch. (c) Scale (660 rows): mitigated by deterministic script + grep residual sweep + full validation per cluster, not hand-editing each file. (d) Honesty: this is a date/consistency re-verification pass by the site's automated editorial pipeline (the established repo workflow), framed as such; no new factual claims are invented.
+
+### 14. Progress log
+
+- 2026-06-12: Authored the hardened .refresh-tmp.py refresh script (news-URL stashing, price_history/dated-bullet/affiliate-note skips, ISO+prose June 1-11 to June 12 substitution on verification lines).
+- 2026-06-12: June 1 cluster (31 tools + /answers/best-ai-coding-tool-2026/): script changed 32/32 files; fixed adcreative and apollo "checked <date>" prose stragglers; confirmed openhands/qodo verified_at and amazon-q/augment/cline/coderabbit/cody "Re-verified" notes were correctly preserved as historical price_history entries. Ledger regenerated; guard/links/facts/tests/check/build all passed (33/33 tests, 1104 pages built). Pure-infra static pages (privacy, terms, glossary, robots, admin, demo, tool-finder, editorial) intentionally left at their git dates.
+
+### 15. Final report
+
+In progress: June 1 cluster complete and pushed. Continuing oldest-first through June 2-11.

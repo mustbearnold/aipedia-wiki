@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$60/user/month"
 status: active
 launched: 2023-12
-last_updated: 2026-06-01
-last_verified: 2026-06-01
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: https://www.jetbrains.com/ai-assistant/
     source_label: JetBrains AI Assistant
     source_id: jetbrains-ai-assistant
-    verified_at: '2026-06-01'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -40,7 +40,7 @@ facts:
     source: https://www.jetbrains.com/ai/
     source_label: JetBrains AI official site
     source_id: jetbrains-ai-official
-    verified_at: '2026-06-01'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -50,7 +50,7 @@ facts:
     source: https://www.jetbrains.com/help/ai-assistant/
     source_label: JetBrains AI Assistant docs
     source_id: jetbrains-ai-docs
-    verified_at: '2026-06-01'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -60,7 +60,7 @@ facts:
     source: https://www.jetbrains.com/help/ai-assistant/
     source_label: JetBrains AI Assistant docs
     source_id: jetbrains-ai-docs
-    verified_at: '2026-06-01'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -70,13 +70,13 @@ facts:
     source: https://www.jetbrains.com/ai-assistant/
     source_label: JetBrains AI Assistant
     source_id: jetbrains-ai-assistant
-    verified_at: '2026-06-01'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
 tags: [ai-coding, jetbrains, intellij, pycharm, webstorm, ide, autocomplete, junie, agent]
 seo_title: "JetBrains AI Assistant: Features, Pricing & Review (June 2026)"
-meta_description: "JetBrains AI Assistant plus Junie agent run inside IntelliJ, PyCharm, WebStorm, and the rest of the IDE family. Verified June 1, 2026: AI Free has 3 credits, AI Pro is $10 personal/$20 org, AI Ultimate is $30 personal/$60 org, with top-up credits available."
+meta_description: "JetBrains AI Assistant plus Junie agent run inside IntelliJ, PyCharm, WebStorm, and the rest of the IDE family. Verified June 12, 2026: AI Free has 3 credits, AI Pro is $10 personal/$20 org, AI Ultimate is $30 personal/$60 org, with top-up credits available."
 author: "aipedia.wiki Editorial"
 best_for:
   - existing JetBrains IDE users
@@ -156,7 +156,7 @@ Two products in one SKU. AI Assistant handles chat, completion, and code actions
 | **Agent** | Junie, credit-metered |
 | **VS Code support** | None |
 
-Every data point above was verified against vendor sources on 2026-06-01. See Sources.
+Every data point above was verified against vendor sources on 2026-06-12. See Sources.
 
 ## Recent changes
 
@@ -197,7 +197,7 @@ The moat is native IDE depth. AI Assistant reads inspection output directly, exp
 | AI Ultimate | $30/mo | $60/mo | 35 personal / 70 org | Heavy Junie and chat workloads |
 | AI Enterprise | n/a | $60/mo baseline or JetBrains IDE Services terms | On par with AI Ultimate or higher | Organizations that need custom features and centralized IDE services |
 
-*Prices verified 2026-06-01 via [JetBrains AI plans](https://www.jetbrains.com/ai-ides/buy/) and [the licensing docs](https://www.jetbrains.com/help/ai-assistant/licensing-and-subscriptions.html). Top-up credits are available when the monthly quota runs out and remain valid for 12 months. Model availability can vary by region, IDE version, and provider restrictions.*
+*Prices verified 2026-06-12 via [JetBrains AI plans](https://www.jetbrains.com/ai-ides/buy/) and [the licensing docs](https://www.jetbrains.com/help/ai-assistant/licensing-and-subscriptions.html). Top-up credits are available when the monthly quota runs out and remain valid for 12 months. Model availability can vary by region, IDE version, and provider restrictions.*
 
 ## Against the alternatives
 
@@ -223,7 +223,7 @@ The moat is native IDE depth. AI Assistant reads inspection output directly, exp
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-01 against [JetBrains AI plans](https://www.jetbrains.com/ai-ides/buy/) and [JetBrains AI licensing docs](https://www.jetbrains.com/help/ai-assistant/licensing-and-subscriptions.html).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-12 against [JetBrains AI plans](https://www.jetbrains.com/ai-ides/buy/) and [JetBrains AI licensing docs](https://www.jetbrains.com/help/ai-assistant/licensing-and-subscriptions.html).
 
 ## FAQ
 

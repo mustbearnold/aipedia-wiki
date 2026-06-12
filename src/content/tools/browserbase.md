@@ -11,8 +11,8 @@ pricing_model: paid
 price_range: "$0, $20/mo, $99/mo, or custom scale plans plus usage"
 status: active
 launched: 2023
-last_updated: 2026-06-01
-last_verified: 2026-06-01
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 seo_title: "Browserbase: Features, Pricing & Review (2026)"
 meta_description: "Browserbase provides cloud browser infrastructure for AI agents, scraping, QA, and browser automation. Best for teams building reliable web agents instead of running Playwright infrastructure themselves."
@@ -34,19 +34,19 @@ facts:
     source: "https://www.browserbase.com"
     source_label: "Browserbase website"
     source_id: browserbase-best-for
-    verified_at: 2026-06-01
+    verified_at: 2026-06-12
     confidence: high
   coding_agent:
     value: "Infrastructure for browser-using agents; integrates with developer automation stacks"
     source: "https://www.browserbase.com"
     source_id: browserbase-best-for
-    verified_at: 2026-06-01
+    verified_at: 2026-06-12
     confidence: high
   best_for:
     value: "Hosted browsers, Search API, Fetch API, Runtime, Identity, Models, and Observability for web agents"
     source: "https://www.browserbase.com"
     source_id: browserbase-best-for
-    verified_at: 2026-06-01
+    verified_at: 2026-06-12
     confidence: high
 tags: [browser-automation, web-agents, ai-infrastructure, playwright, scraping, qa, cloud-browser]
 price_history:
@@ -141,7 +141,7 @@ The platform has expanded materially in 2026 without changing headline plan pric
 - **February 10:** Browserbase Functions allow direct agent deployment on Browserbase infrastructure with up to 70% lower latency.
 - **January 15:** Session Recordings rebuilt on CDP for pixel-accurate, event-driven playback across multiple tabs.
 
-## Pricing notes verified 2026-06-01
+## Pricing notes verified 2026-06-12
 
 Browserbase lists four plans. Free includes 3 concurrent browsers, 1 browser hour, 1,000 Search calls, 1,000 Fetch calls, 15-minute sessions, 7-day retention, and $5 in model tokens. Developer is $20/mo with 25 concurrent browsers and 100 browser hours, then $0.12/browser-hour, plus 1,000 included Search calls and 1,000 included Fetch calls. Startup is $99/mo with 100 concurrent browsers and 500 browser hours, then $0.10/browser-hour, plus 1,000 Search calls and 10,000 Fetch calls. Scale is custom with 250+ concurrent browsers and enterprise features such as SSO, DPA/BAA options, verified agents, and advanced CAPTCHA solving.
 

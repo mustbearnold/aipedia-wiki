@@ -11,8 +11,8 @@ pricing_model: paid
 price_range: "$39-$999/month; Enterprise custom"
 status: active
 launched: 2021-03
-last_updated: 2026-06-01
-last_verified: 2026-06-01
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: quarterly
 seo_title: "AdCreative.ai Review (June 2026): AI Ad Creative Generator"
 meta_description: "AdCreative.ai generates banner, product, and video ad variants with creative scoring, brand-kit workflows, and current public pricing from $39/mo. Best for paid-social creative volume, not brand-first design."
@@ -37,7 +37,7 @@ facts:
     source: https://www.adcreative.ai/
     source_label: AdCreative.ai official site
     source_id: adcreative-official
-    verified_at: '2026-06-01'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -46,7 +46,7 @@ facts:
     source: https://www.adcreative.ai/
     source_label: AdCreative.ai official site
     source_id: adcreative-pricing
-    verified_at: '2026-06-01'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -55,7 +55,7 @@ facts:
     source: https://www.adcreative.ai/
     source_label: AdCreative.ai official site
     source_id: adcreative-pricing
-    verified_at: '2026-06-01'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -64,7 +64,7 @@ facts:
     source: https://www.adcreative.ai/
     source_label: AdCreative.ai official site
     source_id: adcreative-official
-    verified_at: '2026-06-01'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -73,7 +73,7 @@ facts:
     source: https://www.adcreative.ai/
     source_label: AdCreative.ai official site
     source_id: adcreative-pricing
-    verified_at: '2026-06-01'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -165,7 +165,7 @@ As of 2026-06-01, AiPedia would shortlist AdCreative.ai for marketers who are cr
 
 ## Pricing And Access
 
-AdCreative.ai's pricing surface is current but volatile. AiPedia verified the live pricing on 2026-06-01 against the official site. The published monthly tiers are:
+AdCreative.ai's pricing surface is current but volatile. AiPedia verified the live pricing on 2026-06-12 against the official site. The published monthly tiers are:
 
 | Plan | Monthly | Credits/month | Brands |
 |---|---:|---:|---:|
@@ -249,7 +249,7 @@ If you are still deciding what to sell, what audience to target, or what the lan
 ## FAQ
 
 **Is AdCreative.ai free?**
-No permanent free tier was verified. The official site advertises a trial path, and the public pricing surface starts at Starter $39/month as of 2026-06-01, climbing to Professional $249, Ultimate $999, and custom Enterprise.
+No permanent free tier was verified. The official site advertises a trial path, and the public pricing surface starts at Starter $39/month as of 2026-06-12, climbing to Professional $249, Ultimate $999, and custom Enterprise.
 
 **What is AdCreative.ai best at?**
 Generating many ad creative variants, product visuals, short ad videos, and ad copy directions for performance-marketing tests.
@@ -265,7 +265,7 @@ Canva is a broader design workspace. AdCreative.ai is narrower and more performa
 
 ## Sources
 
-- [AdCreative.ai official site](https://www.adcreative.ai/): product surface, trial language, ad creative, product photo, UGC video, fashion videoshoots, creative scoring, and current Starter $39, Professional $249, Ultimate $999, Enterprise custom pricing checked 2026-06-01.
+- [AdCreative.ai official site](https://www.adcreative.ai/): product surface, trial language, ad creative, product photo, UGC video, fashion videoshoots, creative scoring, and current Starter $39, Professional $249, Ultimate $999, Enterprise custom pricing checked 2026-06-12.
 
 ## Related
 

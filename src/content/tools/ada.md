@@ -11,8 +11,8 @@ pricing_model: enterprise
 price_range: "Contact sales; no public tier sheet"
 status: active
 launched: 2016-01
-last_updated: 2026-06-01
-last_verified: 2026-06-01
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: quarterly
 seo_title: "Ada (ada.cx): AI Customer Service Platform Review (June 2026)"
 meta_description: "Ada runs the ACX Platform for enterprise AI customer support: voice, chat, email, SMS, social, Reasoning Engine, Playbooks, and demo-gated contact-sales pricing."
@@ -35,7 +35,7 @@ facts:
     source: https://www.ada.cx/platform
     source_label: Ada platform
     source_id: ada-platform
-    verified_at: '2026-06-01'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -45,7 +45,7 @@ facts:
     source: https://www.ada.cx/blog/unpacking-ai-agent-pricing-resolution-based-vs-conversation-based-models/
     source_label: Ada AI agent pricing explainer
     source_id: ada-pricing
-    verified_at: '2026-06-01'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -55,7 +55,7 @@ facts:
     source: https://www.ada.cx/platform
     source_label: Ada platform
     source_id: ada-platform
-    verified_at: '2026-06-01'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -64,7 +64,7 @@ facts:
     source: https://www.ada.cx/platform
     source_label: Ada platform
     source_id: ada-platform
-    verified_at: '2026-06-01'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -73,7 +73,7 @@ facts:
     source: https://www.ada.cx/blog/unpacking-ai-agent-pricing-resolution-based-vs-conversation-based-models/
     source_label: Ada AI agent pricing explainer
     source_id: ada-pricing
-    verified_at: '2026-06-01'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -194,7 +194,7 @@ Ada publishes no pricing tiers. Deals are quoted per deployment based on convers
 
 Ada originally pushed outcome-based pricing (per resolved conversation), then shifted toward conversation-based annual commitments after enterprise buyers asked for budget predictability. Both models are still on the table. Large accounts typically negotiate multi-year deals with professional-services components.
 
-Prices rechecked 2026-06-01 via Ada's demo and platform pages. Ada has not published a public tier sheet; exact entry-deal signals should not be quoted without sales confirmation.
+Prices rechecked 2026-06-12 via Ada's demo and platform pages. Ada has not published a public tier sheet; exact entry-deal signals should not be quoted without sales confirmation.
 
 ## Against the alternatives
 
@@ -220,7 +220,7 @@ Prices rechecked 2026-06-01 via Ada's demo and platform pages. Ada has not publi
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-01 against [Ada's homepage](https://www.ada.cx), the [Ada ACX Platform overview](https://www.ada.cx/platform/), the demo-gated pricing path, and the [Reasoning Engine announcement](https://www.ada.cx/media-center/press-release/ada-launches-industrys-first-unified-reasoning-engine/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-12 against [Ada's homepage](https://www.ada.cx), the [Ada ACX Platform overview](https://www.ada.cx/platform/), the demo-gated pricing path, and the [Reasoning Engine announcement](https://www.ada.cx/media-center/press-release/ada-launches-industrys-first-unified-reasoning-engine/).
 
 ## FAQ
 

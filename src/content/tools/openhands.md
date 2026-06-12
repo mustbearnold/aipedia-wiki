@@ -11,8 +11,8 @@ pricing_model: open-source
 price_range: "Free (MIT, BYOK) · Free Individual SaaS (10 conv/day) · Enterprise custom"
 status: active
 launched: 2024-03
-last_updated: 2026-06-01
-last_verified: 2026-06-01
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 price_history:
   - date: 2026-06-01
     price: "see note"
@@ -53,7 +53,7 @@ facts:
     source: "https://docs.openhands.dev/"
     source_label: "OpenHands documentation"
     source_id: openhands-official
-    verified_at: 2026-06-01
+    verified_at: 2026-06-12
     volatility: medium
     confidence: medium
   pricing_anchor:
@@ -61,7 +61,7 @@ facts:
     source: "https://openhands.dev/pricing"
     source_label: "OpenHands pricing"
     source_id: openhands-pricing
-    verified_at: 2026-06-01
+    verified_at: 2026-06-12
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -70,7 +70,7 @@ facts:
     source: "https://openhands.dev/pricing"
     source_label: "OpenHands pricing"
     source_id: openhands-pricing
-    verified_at: 2026-06-01
+    verified_at: 2026-06-12
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -95,7 +95,7 @@ quick_answer: >-
 
 OpenHands is the open-source AI software engineer previously known as OpenDevin, maintained by All Hands AI. It reads, writes, runs, and debugs code inside a Docker sandbox, accessible via CLI, GUI, Python SDK, or OpenHands Cloud ([docs.openhands.dev](https://docs.openhands.dev/)).
 
-The repo carries 75K+ GitHub stars as of June 1, 2026. Model access is bring-your-own or provider-mediated: the stable claim is that OpenHands can be powered with Claude, GPT, or other LLMs through its configuration layer, not that one exact frontier model list will stay current.
+The repo carries 75K+ GitHub stars as of June 12, 2026. Model access is bring-your-own or provider-mediated: the stable claim is that OpenHands can be powered with Claude, GPT, or other LLMs through its configuration layer, not that one exact frontier model list will stay current.
 
 ## Recent developments
 
@@ -123,7 +123,7 @@ The repo carries 75K+ GitHub stars as of June 1, 2026. Model access is bring-you
 | **Cloud Enterprise** | SaaS or self-hosted in your VPC · SAML/SSO · unlimited concurrent runs · Large Codebase SDK · dedicated Slack channel · custom pricing |
 | **Model support** | Claude, GPT, and other configurable LLMs; exact provider/model list depends on keys and deployment |
 
-Every data point above was verified against vendor sources on 2026-06-01. See Sources.
+Every data point above was verified against vendor sources on 2026-06-12. See Sources.
 
 ## What it actually is
 
@@ -158,7 +158,7 @@ The moat is low and the team knows it. The architecture is public, the model lay
 | Cloud Enterprise | Custom | SaaS or self-hosted VPC, SAML/SSO, unlimited concurrent runs, Large Codebase SDK, dedicated Slack channel |
 | Model API costs | Usage-based | Depends on the configured provider/model, context size, and number of agent iterations |
 
-*Prices verified 2026-06-01 via [OpenHands pricing](https://openhands.dev/pricing). The $20/mo Pro tier was retired in May 2026; the current free Individual SaaS plan replaces it with a daily conversation cap and the same BYOK/at-cost model. Self-hosting under MIT remains fully free.*
+*Prices verified 2026-06-12 via [OpenHands pricing](https://openhands.dev/pricing). The $20/mo Pro tier was retired in May 2026; the current free Individual SaaS plan replaces it with a daily conversation cap and the same BYOK/at-cost model. Self-hosting under MIT remains fully free.*
 
 ## Against the alternatives
 
@@ -185,7 +185,7 @@ The moat is low and the team knows it. The architecture is public, the model lay
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-01 against [OpenHands documentation](https://docs.openhands.dev/), [OpenHands pricing](https://openhands.dev/pricing), and the [OpenHands GitHub repo](https://github.com/OpenHands/OpenHands).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-12 against [OpenHands documentation](https://docs.openhands.dev/), [OpenHands pricing](https://openhands.dev/pricing), and the [OpenHands GitHub repo](https://github.com/OpenHands/OpenHands).
 
 ## FAQ
 

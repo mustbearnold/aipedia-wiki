@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$29-$1,499/month"
 status: active
 launched: 2011-01
-last_updated: 2026-06-01
-last_verified: 2026-06-01
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://ahrefs.com/site-explorer"
     source_label: "Ahrefs Site Explorer"
     source_id: ahrefs-site-explorer
-    verified_at: 2026-06-01
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
   pricing_anchor:
@@ -38,7 +38,7 @@ facts:
     source: "https://ahrefs.com/pricing"
     source_label: "Ahrefs pricing"
     source_id: ahrefs-pricing
-    verified_at: 2026-06-01
+    verified_at: 2026-06-12
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -47,7 +47,7 @@ facts:
     source: "https://ahrefs.com/site-explorer"
     source_label: "Ahrefs Site Explorer"
     source_id: ahrefs-site-explorer
-    verified_at: 2026-06-01
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   ai_visibility:
@@ -55,7 +55,7 @@ facts:
     source: "https://ahrefs.com/brand-radar"
     source_label: "Ahrefs Brand Radar"
     source_id: ahrefs-brand-radar
-    verified_at: 2026-06-01
+    verified_at: 2026-06-12
     next_review_at: 2026-08-13
     volatility: medium
     confidence: high
@@ -64,7 +64,7 @@ facts:
     source: "https://ahrefs.com/pricing"
     source_label: "Ahrefs pricing"
     source_id: ahrefs-pricing
-    verified_at: 2026-06-01
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
 tags: [seo, backlinks, keyword-research, site-audit, content-explorer, rank-tracker, brand-radar, ai-content-helper, ai-visibility]
@@ -148,7 +148,7 @@ Brand Radar tracks brand appearances across ChatGPT, Perplexity, Gemini, Copilot
 | **Per-seat fees** | +$40/user (Lite) · +$60/user (Standard) · +$80/user (Advanced) |
 | **Annual billing** | 2 months free (~17% savings) |
 
-Every data point above was verified against vendor sources on 2026-06-01. See Sources.
+Every data point above was verified against vendor sources on 2026-06-12. See Sources.
 
 ## What it actually is
 
@@ -201,7 +201,7 @@ Subscription pricing via [ahrefs.com/pricing](https://ahrefs.com/pricing). Annua
 | Project Boost Max | $200/project | Maximum crawl and refresh capacity per tracked project |
 | Custom Prompts (Basic/Growth/Scale) | $50 / $100 / $250 | Bring-your-own prompt monitoring tiers for Brand Radar |
 
-*Prices verified 2026-06-01 via [ahrefs.com/pricing](https://ahrefs.com/pricing), [Brand Radar product page](https://ahrefs.com/brand-radar), and [January 2026 features update](https://ahrefs.com/blog/new-features-january-2026/). Annual billing is 2 months free (approximately 17% savings).*
+*Prices verified 2026-06-12 via [ahrefs.com/pricing](https://ahrefs.com/pricing), [Brand Radar product page](https://ahrefs.com/brand-radar), and [January 2026 features update](https://ahrefs.com/blog/new-features-january-2026/). Annual billing is 2 months free (approximately 17% savings).*
 
 ## Against the alternatives
 
@@ -228,7 +228,7 @@ Subscription pricing via [ahrefs.com/pricing](https://ahrefs.com/pricing). Annua
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-01 against [ahrefs.com/pricing](https://ahrefs.com/pricing), [Brand Radar product page](https://ahrefs.com/brand-radar), [January 2026 features update](https://ahrefs.com/blog/new-features-january-2026/), and [About Brand Radar help doc](https://help.ahrefs.com/en/articles/11064852-about-brand-radar).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-12 against [ahrefs.com/pricing](https://ahrefs.com/pricing), [Brand Radar product page](https://ahrefs.com/brand-radar), [January 2026 features update](https://ahrefs.com/blog/new-features-january-2026/), and [About Brand Radar help doc](https://help.ahrefs.com/en/articles/11064852-about-brand-radar).
 
 ## FAQ
 

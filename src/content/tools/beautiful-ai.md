@@ -11,8 +11,8 @@ pricing_model: paid
 price_range: $12-$40/user/month
 status: active
 launched: 2015-01
-last_updated: 2026-06-01
-last_verified: 2026-06-01
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -34,7 +34,7 @@ facts:
     source: "https://www.beautiful.ai"
     source_label: "Beautiful.ai overview"
     source_id: beautiful-ai-home
-    verified_at: 2026-06-01
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
   pricing_anchor:
@@ -42,7 +42,7 @@ facts:
     source: "https://www.beautiful.ai/pricing"
     source_label: "Beautiful.ai pricing"
     source_id: beautiful-ai-official
-    verified_at: 2026-06-01
+    verified_at: 2026-06-12
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -51,7 +51,7 @@ facts:
     source: "https://www.beautiful.ai/ai-presentations"
     source_label: "Beautiful.ai AI presentations"
     source_id: beautiful-ai-ai-presentations
-    verified_at: 2026-06-01
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   design_model:
@@ -59,7 +59,7 @@ facts:
     source: "https://www.beautiful.ai"
     source_label: "Beautiful.ai overview"
     source_id: beautiful-ai-home
-    verified_at: 2026-06-01
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
   watch_out_for:
@@ -67,7 +67,7 @@ facts:
     source: "https://www.beautiful.ai/pricing"
     source_label: "Beautiful.ai pricing"
     source_id: beautiful-ai-official
-    verified_at: 2026-06-01
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
 tags: [presentations, slides, smart-templates, layout-ai, team-collaboration, pitch-decks, design-automation]
@@ -123,7 +123,7 @@ Pro runs $12/mo on annual billing. Team is $40/user/mo. Custom plans cover 20+ s
 | **Brand governance** | Team and Custom tiers |
 | **Offline mode** | None |
 
-Every data point above was verified against vendor documentation on 2026-06-01. See Sources.
+Every data point above was verified against vendor documentation on 2026-06-12. See Sources.
 
 ## What it actually is
 
@@ -158,7 +158,7 @@ Subscription pricing via [www.beautiful.ai/pricing](https://www.beautiful.ai/pri
 | Team | $40/user | $50/user | 2-20 | Small-to-mid teams with shared branding |
 | Custom | Custom | Custom | 20+ | Orgs needing SSO, audit, SOC 2, priority support |
 
-*Prices verified 2026-06-01 via [Beautiful.ai pricing](https://www.beautiful.ai/pricing). 14-day free trial available on Pro and Team and requires a credit card. Enterprise security on Custom includes SOC 2 Type II, GDPR, CCPA, and PCI.*
+*Prices verified 2026-06-12 via [Beautiful.ai pricing](https://www.beautiful.ai/pricing). 14-day free trial available on Pro and Team and requires a credit card. Enterprise security on Custom includes SOC 2 Type II, GDPR, CCPA, and PCI.*
 
 ## Against the alternatives
 
@@ -182,7 +182,7 @@ Subscription pricing via [www.beautiful.ai/pricing](https://www.beautiful.ai/pri
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-01 against [Beautiful.ai pricing](https://www.beautiful.ai/pricing), the [Pro plan page](https://www.beautiful.ai/pro), and the [AI presentations page](https://www.beautiful.ai/ai-presentations).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-12 against [Beautiful.ai pricing](https://www.beautiful.ai/pricing), the [Pro plan page](https://www.beautiful.ai/pro), and the [AI presentations page](https://www.beautiful.ai/ai-presentations).
 
 ## FAQ
 

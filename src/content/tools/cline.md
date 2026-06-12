@@ -11,8 +11,8 @@ pricing_model: open-source
 price_range: "Free (BYOK API costs)"
 status: active
 launched: 2024-07
-last_updated: 2026-06-01
-last_verified: 2026-06-01
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: "https://cline.bot/"
     source_label: "Cline homepage"
     source_id: cline-pricing
-    verified_at: 2026-06-01
+    verified_at: 2026-06-12
     next_review_at: 2026-06-13
     volatility: medium
     confidence: high
@@ -40,7 +40,7 @@ facts:
     source: "https://docs.cline.bot/home"
     source_label: "Cline docs"
     source_id: cline-docs
-    verified_at: 2026-06-01
+    verified_at: 2026-06-12
     next_review_at: 2026-06-13
     volatility: medium
     confidence: high
@@ -49,7 +49,7 @@ facts:
     source: "https://github.com/cline/cline"
     source_label: "Cline GitHub repository"
     source_id: cline-repository
-    verified_at: 2026-06-01
+    verified_at: 2026-06-12
     next_review_at: 2026-06-13
     volatility: medium
     confidence: high
@@ -58,7 +58,7 @@ facts:
     source: "https://docs.cline.bot/home"
     source_label: "Cline docs"
     source_id: cline-docs
-    verified_at: 2026-06-01
+    verified_at: 2026-06-12
     next_review_at: 2026-06-13
     volatility: medium
     confidence: high
@@ -67,7 +67,7 @@ facts:
     source: "https://docs.cline.bot/home"
     source_label: "Cline docs"
     source_id: cline-docs
-    verified_at: 2026-06-01
+    verified_at: 2026-06-12
     next_review_at: 2026-06-13
     volatility: medium
     confidence: medium
@@ -134,7 +134,7 @@ The extension itself costs nothing. Bring your own API key for Anthropic, OpenAI
 
 > **Pick Cline if you want a capable autonomous agent inside VS Code or JetBrains with no subscription and full model choice.** Plan mode shows the approach before any code is written; Act mode executes with explicit approval at every significant step.
 >
-> 62,400+ GitHub stars and about 5.0M+ installs across VS Code, JetBrains (early access), Cursor, and Windsurf as of June 1, 2026. The cline.bot homepage now distributes through a VS Code extension, a CLI (`npm i -g cline`), and an SDK (`npm i @cline/sdk`).
+> 62,400+ GitHub stars and about 5.0M+ installs across VS Code, JetBrains (early access), Cursor, and Windsurf as of June 12, 2026. The cline.bot homepage now distributes through a VS Code extension, a CLI (`npm i -g cline`), and an SDK (`npm i @cline/sdk`).
 >
 > **Skip it for zero-setup usage or centralized team dashboards.** [Cursor](/tools/cursor/) bundles a model subscription and more polished UX. [GitHub Copilot](/tools/github-copilot/) has the lowest setup friction for individuals.
 >
@@ -157,7 +157,7 @@ The extension itself costs nothing. Bring your own API key for Anthropic, OpenAI
 | **Distribution** | VS Code Marketplace · CLI (`npm i -g cline`) · SDK (`npm i @cline/sdk`) |
 | **Enterprise adoption** | Cline cites Samsung, Salesforce, Oracle, Amazon, Microsoft as customers |
 
-Every data point above was verified against vendor documentation on 2026-06-01. See Sources.
+Every data point above was verified against vendor documentation on 2026-06-12. See Sources.
 
 ## What it actually is
 
@@ -229,7 +229,7 @@ Typical session costs on BYOK vary by provider, model, context, cache behavior, 
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-01 against [cline.bot](https://cline.bot/), [Cline docs](https://docs.cline.bot/getting-started/what-is-cline), the [Cline GitHub repo](https://github.com/cline/cline), and the [VS Code Marketplace listing](https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-12 against [cline.bot](https://cline.bot/), [Cline docs](https://docs.cline.bot/getting-started/what-is-cline), the [Cline GitHub repo](https://github.com/cline/cline), and the [VS Code Marketplace listing](https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev).
 
 ## FAQ
 

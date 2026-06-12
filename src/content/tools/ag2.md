@@ -13,8 +13,8 @@ status: active
 launched: 2024-10
 current_version: "0.13.0"
 current_version_date: 2026-05-29
-last_updated: 2026-06-01
-last_verified: 2026-06-01
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -33,7 +33,7 @@ facts:
     source: https://www.ag2.ai/
     source_label: AG2 official site
     source_id: ag2-official
-    verified_at: '2026-06-01'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-08-13'
@@ -42,7 +42,7 @@ facts:
     source: https://github.com/ag2ai/ag2
     source_label: AG2 GitHub repository
     source_id: ag2-repository
-    verified_at: '2026-06-01'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-08-13'
@@ -51,7 +51,7 @@ facts:
     source: https://github.com/ag2ai/ag2/releases
     source_label: AG2 releases
     source_id: ag2-releases
-    verified_at: '2026-06-01'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-08-13'
@@ -60,7 +60,7 @@ facts:
     source: https://docs.ag2.ai/
     source_label: AG2 docs
     source_id: ag2-docs
-    verified_at: '2026-06-01'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-08-13'
@@ -69,7 +69,7 @@ facts:
     source: https://docs.ag2.ai/
     source_label: AG2 docs
     source_id: ag2-docs
-    verified_at: '2026-06-01'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-08-13'
@@ -78,7 +78,7 @@ facts:
     source: https://github.com/ag2ai/ag2
     source_label: AG2 GitHub repository
     source_id: ag2-repository
-    verified_at: '2026-06-01'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-08-13'
@@ -154,7 +154,7 @@ AG2 is free and open source. No commercial tier. You pay only for:
 - **Security hardening** (sandboxing, secrets handling, permissions, and review)
 - **Engineering time** (agent design, testing, deployment, and maintenance)
 
-Verified 2026-06-01 via [ag2.ai](https://www.ag2.ai/), [AG2 GitHub](https://github.com/ag2ai/ag2), and the [AG2 releases page](https://github.com/ag2ai/ag2/releases).
+Verified 2026-06-12 via [ag2.ai](https://www.ag2.ai/), [AG2 GitHub](https://github.com/ag2ai/ag2), and the [AG2 releases page](https://github.com/ag2ai/ag2/releases).
 
 ## Buyer fit
 
@@ -208,7 +208,7 @@ AG2's openness is the advantage, but it also means production discipline is the 
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-01 against [ag2.ai](https://www.ag2.ai/), [AG2 GitHub](https://github.com/ag2ai/ag2), the [AG2 releases page](https://github.com/ag2ai/ag2/releases) (v0.13.2 on 2026-05-29), and the [2026 agentic frameworks guide](https://blog.softmaxdata.com/definitive-guide-to-agentic-frameworks-in-2026-langgraph-crewai-ag2-openai-and-more/).
+Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-12 against [ag2.ai](https://www.ag2.ai/), [AG2 GitHub](https://github.com/ag2ai/ag2), the [AG2 releases page](https://github.com/ag2ai/ag2/releases) (v0.13.2 on 2026-05-29), and the [2026 agentic frameworks guide](https://blog.softmaxdata.com/definitive-guide-to-agentic-frameworks-in-2026-langgraph-crewai-ag2-openai-and-more/).
 
 ## FAQ
 

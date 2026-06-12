@@ -11,8 +11,8 @@ pricing_model: paid
 price_range: "$20-$200/month; Teams and Enterprise custom"
 status: active
 launched: 2023
-last_updated: 2026-06-01
-last_verified: 2026-06-01
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 seo_title: "Factory: Features, Pricing & Review (June 2026)"
 meta_description: "Factory is an AI-native development platform for Droid coding agents. Pro is $20/mo, Plus is $100/mo, Max is $200/mo, and Teams/Enterprise add ZDR, SSO, audit, data-residency, and deployment controls."
@@ -34,14 +34,14 @@ facts:
     source: "https://docs.factory.ai/welcome"
     source_label: "Factory docs"
     source_id: factory-best-for
-    verified_at: 2026-06-01
+    verified_at: 2026-06-12
     confidence: high
   best_paid_tier:
     value: "Pro ($20/month) for individuals; Plus ($100/month) for Droid Computers and about 5x Pro usage; Max ($200/month) for about 10x Pro usage and early access"
     source: "https://docs.factory.ai/pricing"
     source_label: "Factory plans and models"
     source_id: factory-best-paid-tier
-    verified_at: 2026-06-01
+    verified_at: 2026-06-12
     next_review_at: 2026-06-03
     confidence: high
   best_for:
@@ -49,7 +49,7 @@ facts:
     source: "https://docs.factory.ai/welcome"
     source_label: "Factory docs"
     source_id: factory-best-for
-    verified_at: 2026-06-01
+    verified_at: 2026-06-12
     confidence: high
 tags: [ai-coding, coding-agent, software-development, cli, desktop, code-review, qa, linear, slack, github]
 best_for:
@@ -177,7 +177,7 @@ The practical question is whether Factory becomes the place your team runs codin
 
 ## Pricing
 
-Factory pricing was verified from official docs on 2026-06-01:
+Factory pricing was verified from official docs on 2026-06-12:
 
 | Plan | Price | Practical meaning |
 |---|---:|---|
@@ -211,7 +211,7 @@ Factory also documents rolling Standard Usage, Droid Core fallback, prepaid Extr
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-01 against Factory primary documentation.
+This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against Factory primary documentation.
 
 ## FAQ
 

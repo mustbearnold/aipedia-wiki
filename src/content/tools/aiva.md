@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: "EUR 0-33/month"
 status: active
 launched: 2016-02
-last_updated: 2026-06-01
-last_verified: 2026-06-01
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -33,7 +33,7 @@ facts:
     source: https://www.aiva.ai/
     source_label: AIVA official site
     source_id: aiva-official
-    verified_at: '2026-06-01'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -42,7 +42,7 @@ facts:
     source: https://www.aiva.ai/pricing
     source_label: AIVA pricing
     source_id: aiva-pricing
-    verified_at: '2026-06-01'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -51,7 +51,7 @@ facts:
     source: https://www.aiva.ai/
     source_label: AIVA official site
     source_id: aiva-official
-    verified_at: '2026-06-01'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -60,7 +60,7 @@ facts:
     source: https://www.aiva.ai/legal/terms
     source_label: AIVA terms
     source_id: aiva-terms
-    verified_at: '2026-06-01'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -70,7 +70,7 @@ facts:
     source: https://www.aiva.ai/help
     source_label: AIVA help
     source_id: aiva-help
-    verified_at: '2026-06-01'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -172,7 +172,7 @@ AIVA Technologies is Luxembourg-based. The engine was registered as a composer w
 | **Vocals / lyrics** | None (instrumental only) |
 | **Company** | AIVA Technologies, Luxembourg. SACEM-registered composer since 2017 |
 
-Every data point above was verified against vendor documentation on 2026-06-01. See Sources.
+Every data point above was verified against vendor documentation on 2026-06-12. See Sources.
 
 ## What it actually is
 
@@ -208,7 +208,7 @@ Subscription pricing via [aiva.ai/pricing](https://www.aiva.ai/pricing). Pricing
 | Standard | EUR 11 | 15 | Up to 5 min | MP3, MIDI | Platform monetization (YouTube, Twitch, TikTok, Instagram); AIVA retains copyright | Creators needing platform-monetized tracks |
 | Pro | EUR 33 | 300 | Up to 5:30 min | MP3, WAV, MIDI, stems | Full copyright ownership | **Professional composers and production houses** |
 
-*Prices verified 2026-06-01 via [AIVA pricing](https://www.aiva.ai/pricing). The Free tier includes MIDI download alongside MP3. Standard supports 5-minute tracks. Educational and enterprise licenses are quoted separately.*
+*Prices verified 2026-06-12 via [AIVA pricing](https://www.aiva.ai/pricing). The Free tier includes MIDI download alongside MP3. Standard supports 5-minute tracks. Educational and enterprise licenses are quoted separately.*
 
 The Pro tier remains the only one that makes sense for a working media composer. Standard retains copyright with AIVA and only grants monetization rights on social platforms. That distinction matters for sync licensing and library-music resale.
 
@@ -238,7 +238,7 @@ The Pro tier remains the only one that makes sense for a working media composer.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-01 against [aiva.ai](https://www.aiva.ai), [aiva.ai/pricing](https://www.aiva.ai/pricing), and [blog.aiva.ai](https://blog.aiva.ai).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-12 against [aiva.ai](https://www.aiva.ai), [aiva.ai/pricing](https://www.aiva.ai/pricing), and [blog.aiva.ai](https://blog.aiva.ai).
 
 ## FAQ
 

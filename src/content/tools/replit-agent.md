@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$100/month + usage credits; Enterprise custom"
 status: active
 launched: 2024-09
-last_updated: 2026-06-01
-last_verified: 2026-06-01
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://docs.replit.com/core-concepts/agent"
     source_label: "Replit Agent docs"
     source_id: replit-agent-docs
-    verified_at: 2026-06-01
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-13
@@ -39,7 +39,7 @@ facts:
     source: "https://docs.replit.com/core-concepts/agent"
     source_label: "Replit Agent docs"
     source_id: replit-agent-docs
-    verified_at: 2026-06-01
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-13
@@ -48,7 +48,7 @@ facts:
     source: "https://replit.com/pricing"
     source_label: "Replit pricing"
     source_id: replit-pricing
-    verified_at: 2026-06-01
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-13
@@ -57,7 +57,7 @@ facts:
     source: "https://replit.com/pricing"
     source_label: "Replit pricing"
     source_id: replit-pricing
-    verified_at: 2026-06-01
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-13
@@ -66,7 +66,7 @@ facts:
     source: "https://replit.com/pricing"
     source_label: "Replit pricing"
     source_id: replit-pricing
-    verified_at: 2026-06-01
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-13
@@ -75,7 +75,7 @@ facts:
     source: "https://docs.replit.com/core-concepts/agent"
     source_label: "Replit Agent docs"
     source_id: replit-agent-docs
-    verified_at: 2026-06-01
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   image_generation:
@@ -83,7 +83,7 @@ facts:
     source: "https://docs.replit.com/core-concepts/agent"
     source_label: "Replit Agent docs"
     source_id: replit-agent-docs
-    verified_at: 2026-06-01
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
   video_generation:
@@ -91,7 +91,7 @@ facts:
     source: "https://docs.replit.com/core-concepts/agent"
     source_label: "Replit Agent docs"
     source_id: replit-agent-docs
-    verified_at: 2026-06-01
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
   real_time_voice:
@@ -99,7 +99,7 @@ facts:
     source: "https://docs.replit.com/core-concepts/agent"
     source_label: "Replit Agent docs"
     source_id: replit-agent-docs
-    verified_at: 2026-06-01
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
   web_browsing:
@@ -107,7 +107,7 @@ facts:
     source: "https://docs.replit.com/core-concepts/agent"
     source_label: "Replit Agent docs"
     source_id: replit-agent-docs
-    verified_at: 2026-06-01
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   coding_agent:
@@ -115,7 +115,7 @@ facts:
     source: "https://docs.replit.com/core-concepts/agent"
     source_label: "Replit Agent docs"
     source_id: replit-agent-docs
-    verified_at: 2026-06-01
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-13
@@ -124,7 +124,7 @@ facts:
     source: "https://replit.com/pricing"
     source_label: "Replit pricing"
     source_id: replit-pricing
-    verified_at: 2026-06-01
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-13
@@ -133,7 +133,7 @@ facts:
     source: "https://docs.replit.com/core-concepts/agent"
     source_label: "Replit Agent docs"
     source_id: replit-agent-docs
-    verified_at: 2026-06-01
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   open_source_or_local:
@@ -141,7 +141,7 @@ facts:
     source: "https://replit.com/pricing"
     source_label: "Replit pricing"
     source_id: replit-pricing
-    verified_at: 2026-06-01
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
   best_for:
@@ -149,7 +149,7 @@ facts:
     source: "https://docs.replit.com/core-concepts/agent"
     source_label: "Replit Agent docs"
     source_id: replit-agent-docs
-    verified_at: 2026-06-01
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   watch_out_for:
@@ -157,7 +157,7 @@ facts:
     source: "https://docs.replit.com/billing/ai-billing"
     source_label: "Replit AI billing docs"
     source_id: replit-ai-billing
-    verified_at: 2026-06-01
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-13
@@ -243,7 +243,7 @@ Agent 3 runs autonomous sessions up to 200 minutes (Agent 1 capped at 2 minutes,
 | **Database rollbacks** | 28 days on Pro |
 | **Lite mode** | Formerly Fast Mode. Quick scoped changes |
 
-Every data point above was verified against vendor sources on 2026-06-01. See Sources.
+Every data point above was verified against vendor sources on 2026-06-12. See Sources.
 
 ## What it actually is
 
@@ -281,7 +281,7 @@ Pricing via [replit.com/pricing](https://replit.com/pricing). Effort-based credi
 | Pro scaled | $100 to $4,000/mo | $100 to $4,000 credit packs | Full | Agencies and sustained production |
 | Enterprise | Custom | Custom plus SSO/SAML, VPC peering, static outbound IPs, single-tenant | Full | Compliance-heavy orgs |
 
-*Prices verified 2026-06-01 via [replit.com/pricing](https://replit.com/pricing) and [Replit AI billing docs](https://docs.replit.com/billing/ai-billing). Agent usage consumes credits based on effort and may include third-party API charges deducted from Replit credits. Credits roll over for one month on Pro. The old Teams tier retired in February 2026, replaced by Pro.*
+*Prices verified 2026-06-12 via [replit.com/pricing](https://replit.com/pricing) and [Replit AI billing docs](https://docs.replit.com/billing/ai-billing). Agent usage consumes credits based on effort and may include third-party API charges deducted from Replit credits. Credits roll over for one month on Pro. The old Teams tier retired in February 2026, replaced by Pro.*
 
 ## Against the alternatives
 
@@ -306,7 +306,7 @@ Pricing via [replit.com/pricing](https://replit.com/pricing). Effort-based credi
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-01 against [replit.com/pricing](https://replit.com/pricing), the [Replit Pro launch post](https://blog.replit.com/pro-plan), [Replit AI billing docs](https://docs.replit.com/billing/ai-billing), and the [Agent 3 launch page](https://replit.com/agent3).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-12 against [replit.com/pricing](https://replit.com/pricing), the [Replit Pro launch post](https://blog.replit.com/pro-plan), [Replit AI billing docs](https://docs.replit.com/billing/ai-billing), and the [Agent 3 launch page](https://replit.com/agent3).
 
 ## FAQ
 
