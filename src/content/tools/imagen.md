@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2025-05
-last_updated: 2026-05-20
-last_verified: 2026-05-20
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,53 +31,53 @@ facts:
     source: https://deepmind.google/models/imagen/
     source_label: Google DeepMind Imagen
     source_id: imagen-official
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-13'
+    next_review_at: '2026-12-12'
   pricing_anchor:
     value: Imagen costs are tied to Google generative AI/Vertex AI image-generation pricing; verify current per-image/model
       pricing before launch.
     source: https://cloud.google.com/vertex-ai/generative-ai/pricing
     source_label: Vertex AI generative AI pricing
     source_id: imagen-vertex-pricing
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-13'
+    next_review_at: '2026-09-12'
   api_available:
     value: Vertex AI image docs define production image generation and editing behavior, model parameters, safety filters, and
       API setup.
     source: https://cloud.google.com/vertex-ai/generative-ai/docs/image/overview
     source_label: Vertex AI image generation docs
     source_id: imagen-vertex-docs
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-13'
+    next_review_at: '2026-12-12'
   model_control:
     value: Gemini API image-generation docs are a separate developer surface and should be checked for current model names and
       multimodal workflow support.
     source: https://ai.google.dev/gemini-api/docs/image-generation
     source_label: Gemini API image generation docs
     source_id: imagen-gemini-docs
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-13'
+    next_review_at: '2026-09-12'
   watch_out_for:
     value: Compare Imagen by exact model/version, safety policy, editing controls, watermark/provenance behavior, regional availability,
       and Cloud account requirements.
     source: https://cloud.google.com/vertex-ai/generative-ai/docs/image/overview
     source_label: Vertex AI image generation docs
     source_id: imagen-vertex-docs
-    verified_at: '2026-05-13'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-13'
+    next_review_at: '2026-12-12'
 tags: [ai-image, image-generation, google, gemini, deepmind, vertex-ai, ai-studio]
-seo_title: "Imagen 4: Features, Pricing & Review (May 2026)"
-meta_description: "Imagen 4 is Google's text-to-image model. Ships in Fast / Standard / Ultra tiers through the Gemini app, Google AI Studio (free testing), the Gemini API ($0.02-$0.06 per image), and Vertex AI. Review for May 2026."
+seo_title: "Imagen 4: Features, Pricing & Review (June 2026)"
+meta_description: "Imagen 4 is Google's text-to-image model. Ships in Fast / Standard / Ultra tiers through the Gemini app, Google AI Studio (free testing), the Gemini API ($0.02-$0.06 per image), and Vertex AI. Review for June 2026."
 author: "aipedia.wiki Editorial"
 best_for:
   - Google Workspace users generating visuals inside Docs and Slides
@@ -157,7 +157,7 @@ The model ships in three tiers: **Fast**, **Standard**, and **Ultra**. API prici
 | **Open weights** | None |
 | **Best-in-class for** | Workspace-embedded generation, per-image API billing |
 
-Every model and API-pricing data point was last verified against vendor documentation on 2026-05-13. Google AI subscription pricing was refreshed on 2026-05-20 after Google I/O. Model IDs on the API surface are `imagen-4.0-fast-generate-001`, `imagen-4.0-generate-001`, and `imagen-4.0-ultra-generate-001`. See Sources.
+Every model and API-pricing data point was last verified against vendor documentation on 2026-06-12. Google AI subscription pricing was last refreshed after Google I/O and re-checked 2026-06-12. Model IDs on the API surface are `imagen-4.0-fast-generate-001`, `imagen-4.0-generate-001`, and `imagen-4.0-ultra-generate-001`. See Sources.
 
 ## What it actually is
 
@@ -203,7 +203,7 @@ API and enterprise pricing via [ai.google.dev/gemini-api/docs/models/imagen](htt
 | Google AI Studio | $0 | Browser playground for free testing (capped) |
 | Vertex AI | Per-image + Cloud billing | Enterprise production with SLAs |
 
-*API prices verified 2026-05-13 via [Gemini API docs](https://ai.google.dev/gemini-api/docs/models/imagen) and [Vertex AI pricing](https://cloud.google.com/vertex-ai/generative-ai/pricing). Google AI subscription prices refreshed 2026-05-20 via [Google AI subscriptions](https://gemini.google/subscriptions/) and the [May 19 I/O subscription update](/news/2026-05-19-google-io-gemini-35-search-ai-ultra/). Each Gemini API request accepts up to a 480-token prompt and returns 1 to 4 images.*
+*API prices verified 2026-06-12 via [Gemini API docs](https://ai.google.dev/gemini-api/docs/models/imagen) and [Vertex AI pricing](https://cloud.google.com/vertex-ai/generative-ai/pricing). Google AI subscription prices refreshed 2026-06-12 via [Google AI subscriptions](https://gemini.google/subscriptions/) and the [May 19 I/O subscription update](/news/2026-05-19-google-io-gemini-35-search-ai-ultra/). Each Gemini API request accepts up to a 480-token prompt and returns 1 to 4 images.*
 
 ## Against the alternatives
 
@@ -229,7 +229,7 @@ API and enterprise pricing via [ai.google.dev/gemini-api/docs/models/imagen](htt
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-05-20 against the [May 19 Google I/O subscription update](/news/2026-05-19-google-io-gemini-35-search-ai-ultra/), the [Imagen 4 Gemini API launch post](https://developers.googleblog.com/en/imagen-4-now-available-in-the-gemini-api-and-google-ai-studio/), [Gemini API Imagen docs](https://ai.google.dev/gemini-api/docs/models/imagen), [Vertex AI generative pricing](https://cloud.google.com/vertex-ai/generative-ai/pricing), [Google AI subscriptions](https://gemini.google/subscriptions/), and the [SynthID overview](https://deepmind.google/technologies/synthid).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-12 against the [May 19 Google I/O subscription update](/news/2026-05-19-google-io-gemini-35-search-ai-ultra/), the [Imagen 4 Gemini API launch post](https://developers.googleblog.com/en/imagen-4-now-available-in-the-gemini-api-and-google-ai-studio/), [Gemini API Imagen docs](https://ai.google.dev/gemini-api/docs/models/imagen), [Vertex AI generative pricing](https://cloud.google.com/vertex-ai/generative-ai/pricing), [Google AI subscriptions](https://gemini.google/subscriptions/), and the [SynthID overview](https://deepmind.google/technologies/synthid).
 
 ## FAQ
 

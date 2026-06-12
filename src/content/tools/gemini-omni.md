@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "Google AI plans + API TBD"
 status: active
 launched: 2026-05
-last_updated: 2026-05-20
-last_verified: 2026-05-20
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: weekly
 affiliate:
   has_program: false
@@ -31,8 +31,8 @@ facts:
     source: "https://deepmind.google/models/model-cards/gemini-omni-flash/"
     source_label: "Google DeepMind Gemini Omni Flash model card"
     source_id: gemini-omni-flash-model-card
-    verified_at: 2026-05-20
-    next_review_at: 2026-06-20
+    verified_at: 2026-06-12
+    next_review_at: 2026-07-12
     volatility: high
     confidence: high
   video_generation:
@@ -40,8 +40,8 @@ facts:
     source: "https://deepmind.google/models/gemini-omni/"
     source_label: "Google DeepMind Gemini Omni"
     source_id: gemini-omni-official
-    verified_at: 2026-05-20
-    next_review_at: 2026-06-20
+    verified_at: 2026-06-12
+    next_review_at: 2026-07-12
     volatility: high
     confidence: high
   pricing_anchor:
@@ -49,8 +49,8 @@ facts:
     source: "https://blog.google/products-and-platforms/products/google-one/google-ai-subscriptions/"
     source_label: "Google AI subscription updates from I/O 2026"
     source_id: google-ai-subscriptions-io-2026
-    verified_at: 2026-05-20
-    next_review_at: 2026-06-20
+    verified_at: 2026-06-12
+    next_review_at: 2026-07-12
     volatility: high
     confidence: high
   best_paid_tier:
@@ -58,8 +58,8 @@ facts:
     source: "https://blog.google/products-and-platforms/products/google-one/google-ai-subscriptions/"
     source_label: "Google AI subscription updates from I/O 2026"
     source_id: google-ai-subscriptions-io-2026
-    verified_at: 2026-05-20
-    next_review_at: 2026-06-20
+    verified_at: 2026-06-12
+    next_review_at: 2026-07-12
     volatility: high
     confidence: high
   api_available:
@@ -67,8 +67,8 @@ facts:
     source: "https://deepmind.google/models/model-cards/gemini-omni-flash/"
     source_label: "Google DeepMind Gemini Omni Flash model card"
     source_id: gemini-omni-flash-model-card
-    verified_at: 2026-05-20
-    next_review_at: 2026-06-20
+    verified_at: 2026-06-12
+    next_review_at: 2026-07-12
     volatility: high
     confidence: high
   image_generation:
@@ -76,8 +76,8 @@ facts:
     source: "https://deepmind.google/models/model-cards/gemini-omni-flash/"
     source_label: "Google DeepMind Gemini Omni Flash model card"
     source_id: gemini-omni-flash-model-card
-    verified_at: 2026-05-20
-    next_review_at: 2026-06-20
+    verified_at: 2026-06-12
+    next_review_at: 2026-07-12
     volatility: high
     confidence: high
   provenance:
@@ -85,8 +85,8 @@ facts:
     source: "https://deepmind.google/models/gemini-omni/"
     source_label: "Google DeepMind Gemini Omni"
     source_id: gemini-omni-official
-    verified_at: 2026-05-20
-    next_review_at: 2026-06-20
+    verified_at: 2026-06-12
+    next_review_at: 2026-07-12
     volatility: medium
     confidence: high
   watch_out_for:
@@ -94,8 +94,8 @@ facts:
     source: "https://deepmind.google/models/model-cards/gemini-omni-flash/"
     source_label: "Google DeepMind Gemini Omni Flash model card"
     source_id: gemini-omni-flash-model-card
-    verified_at: 2026-05-20
-    next_review_at: 2026-06-20
+    verified_at: 2026-06-12
+    next_review_at: 2026-07-12
     volatility: high
     confidence: high
   open_source_or_local:
@@ -103,13 +103,13 @@ facts:
     source: "https://deepmind.google/models/model-cards/gemini-omni-flash/"
     source_label: "Google DeepMind Gemini Omni Flash model card"
     source_id: gemini-omni-flash-model-card
-    verified_at: 2026-05-20
-    next_review_at: 2026-06-20
+    verified_at: 2026-06-12
+    next_review_at: 2026-07-12
     volatility: medium
     confidence: high
 tags: [ai-video, video-generation, video-editing, multimodal, google, deepmind, gemini, flow, youtube, synthid, c2pa]
-seo_title: "Gemini Omni: Features, Pricing & Review (May 2026)"
-meta_description: "Gemini Omni is Google's new Gemini-native video creation and editing model. Compare Gemini Omni Flash pricing, access, Flow, YouTube, SynthID, Veo, Runway, Seedance, and Kling. Verified May 20, 2026."
+seo_title: "Gemini Omni: Features, Pricing & Review (June 2026)"
+meta_description: "Gemini Omni is Google's new Gemini-native video creation and editing model. Compare Gemini Omni Flash pricing, access, Flow, YouTube, SynthID, Veo, Runway, Seedance, and Kling. Verified June 12, 2026."
 author: "aipedia.wiki Editorial"
 best_for:
   - Google AI subscribers testing conversational video editing
@@ -130,7 +130,7 @@ price_history:
     source: "https://blog.google/innovation-and-ai/products/gemini-app/next-evolution-gemini-app/"
     source_label: "Gemini app I/O 2026 update"
     source_id: google-gemini-app-io-2026
-    verified_at: 2026-05-20
+    verified_at: 2026-06-12
     note: "Google announced Gemini Omni for text, image, and video prompts with worldwide rollout to Google AI Plus, Pro, and Ultra subscribers; features vary by tier and geography."
   - date: 2026-05-19
     plan: "Gemini Omni Flash model card"
@@ -138,7 +138,7 @@ price_history:
     source: "https://deepmind.google/models/model-cards/gemini-omni-flash/"
     source_label: "Google DeepMind Gemini Omni Flash model card"
     source_id: gemini-omni-flash-model-card
-    verified_at: 2026-05-20
+    verified_at: 2026-06-12
     note: "The model card lists Gemini App, YouTube, Google Flow, and Google Flow Music distribution and says developer/enterprise evaluations will come with future API rollouts."
   - date: 2026-05-19
     plan: "Google AI Ultra refresh"
@@ -146,7 +146,7 @@ price_history:
     source: "https://blog.google/products-and-platforms/products/google-one/google-ai-subscriptions/"
     source_label: "Google AI subscription updates from I/O 2026"
     source_id: google-ai-subscriptions-io-2026
-    verified_at: 2026-05-20
+    verified_at: 2026-06-12
     note: "Google launched a new $100/mo Ultra plan and reduced the previous top Ultra tier from $250 to $200; exact Omni limits should be checked in-account."
 ---
 
@@ -156,13 +156,13 @@ Gemini Omni is Google's new Gemini-native creation model, starting with video. T
 
 The strategic shift is simple: Google is moving AI video closer to Gemini's conversation loop. Instead of only prompting a separate video model and accepting a finished clip, Omni is designed for step-by-step edits: change the action, swap a character, apply a reference image, alter the environment, and keep iterating.
 
-**Verified 2026-05-20:** Gemini Omni is live in Google's official DeepMind, Gemini app, and subscription materials. Google lists consumer distribution through Gemini, Google Flow, Flow Music, and YouTube; Google AI subscription access through Plus, Pro, and Ultra; and no clean standalone public API price yet.
+**Verified 2026-06-12:** Gemini Omni is live in Google's official DeepMind, Gemini app, and subscription materials. Google lists consumer distribution through Gemini, Google Flow, Flow Music, and YouTube; Google AI subscription access through Plus, Pro, and Ultra; and no clean standalone public API price yet.
 
 ## System Verdict
 
 > **Pick Gemini Omni if you want Google-native conversational video creation.** It is the most important new Google video surface after Veo because it moves video generation into the Gemini interaction model: multimodal references in, video with audio out, then iterative natural-language edits.
 >
-> **Do not buy it as if it were a mature, separately priced production API.** As of May 20, 2026, Google has not published a standalone Gemini Omni API price table. If you need auditable per-second pricing, governed production deployment, or a stable Cloud procurement path today, start with [Veo 3.1](/tools/veo/) and Vertex AI / Gemini API docs.
+> **Do not buy it as if it were a mature, separately priced production API.** As of June 12, 2026, Google has not published a standalone Gemini Omni API price table. If you need auditable per-second pricing, governed production deployment, or a stable Cloud procurement path today, start with [Veo 3.1](/tools/veo/) and Vertex AI / Gemini API docs.
 >
 > **Best buyer route:** test Omni in the Gemini app or [Google Flow](https://flow.google/) first. Upgrade to AI Ultra only when your actual account limits, Flow usage, or media workload justify the jump. Keep [Runway](/tools/runway/), [Seedance 2.0](/tools/seedance/), and [Kling 3.0](/tools/kling/) in the same benchmark set.
 
@@ -268,7 +268,7 @@ Save failed outputs. Omni's value is not just peak output quality; it is how muc
 
 AiPedia treats Gemini Omni as a new video-first Google model surface, not as a replacement for every Google media product. The score rewards utility, multimodal control, Google distribution, and provenance. It holds value back until Google publishes clearer API pricing, exact plan limits, and production availability.
 
-This page was verified on 2026-05-20 against Google's official Gemini app update, Google DeepMind's Gemini Omni product page, Google DeepMind's Gemini Omni Flash model card, and Google's May 19, 2026 AI subscription update. Claims about availability, limits, pricing, and API access should be rechecked weekly until the rollout stabilizes.
+This page was verified on 2026-06-12 against Google's official Gemini app update, Google DeepMind's Gemini Omni product page, Google DeepMind's Gemini Omni Flash model card, and Google's May 19, 2026 AI subscription update. Claims about availability, limits, pricing, and API access should be rechecked weekly until the rollout stabilizes.
 
 ## FAQ
 
@@ -292,12 +292,12 @@ Use Veo 3.1 today if you need published API/Vertex AI pricing and procurement cl
 
 ## Sources
 
-- [Google DeepMind Gemini Omni](https://deepmind.google/models/gemini-omni/) (verified 2026-05-20)
-- [Gemini Omni Flash model card](https://deepmind.google/models/model-cards/gemini-omni-flash/) (verified 2026-05-20)
-- [Gemini app I/O 2026 update](https://blog.google/innovation-and-ai/products/gemini-app/next-evolution-gemini-app/) (verified 2026-05-20)
-- [Google AI subscription updates from I/O 2026](https://blog.google/products-and-platforms/products/google-one/google-ai-subscriptions/) (verified 2026-05-20)
-- [Google AI plans](https://one.google.com/about/google-ai-plans/) (verified 2026-05-20)
-- [AiPedia: Google I/O Gemini 3.5, Search, and AI Ultra update](/news/2026-05-19-google-io-gemini-35-search-ai-ultra/) (verified 2026-05-20)
+- [Google DeepMind Gemini Omni](https://deepmind.google/models/gemini-omni/) (verified 2026-06-12)
+- [Gemini Omni Flash model card](https://deepmind.google/models/model-cards/gemini-omni-flash/) (verified 2026-06-12)
+- [Gemini app I/O 2026 update](https://blog.google/innovation-and-ai/products/gemini-app/next-evolution-gemini-app/) (verified 2026-06-12)
+- [Google AI subscription updates from I/O 2026](https://blog.google/products-and-platforms/products/google-one/google-ai-subscriptions/) (verified 2026-06-12)
+- [Google AI plans](https://one.google.com/about/google-ai-plans/) (verified 2026-06-12)
+- [AiPedia: Google I/O Gemini 3.5, Search, and AI Ultra update](/news/2026-05-19-google-io-gemini-35-search-ai-ultra/) (verified 2026-06-12)
 
 ## Related
 

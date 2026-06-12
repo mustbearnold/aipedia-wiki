@@ -3432,3 +3432,74 @@ Company pages risk fabricated "news" if a June update is invented without a real
 ### 15. Final report
 
 All 11 pages in the 2026-05-17 cluster are refreshed to June 12, 2026. Both `/answers/` pages and `/compare/build/` had their May-dated copy, JSON-LD `dateModified`, verification labels, and source-check footers bumped to June 12 with no factual changes needed (GPT-5.5, Claude Opus 4.7, and Cursor pricing remain current). The 3 company profiles (`/companies/google-deepmind/`, `/companies/mistral/`, `/companies/openai/`) gained June 12 re-verification entries confirming their May flagship launches (Gemini Intelligence/Googlebook, Mistral 3 family, Daybreak/Deployment Company) remain current with no new announcements. `/guides/notion-ai-alternatives/` was fully re-dated (title, SEO, frontmatter, body, all 11 source-verification stamps) to June 2026. Both workflow pages (`/workflows/micro-saas-weekend-build/`, `/workflows/newsletter-stack/`) had frontmatter, body month references, the newsletter's illustrative week-number example (W20 → W24), and all source-verification dates bumped to June 12. `/search/` and `/stack-builder/` were reviewed and confirmed to need no content changes (no embedded date strings). `PAGE_REFRESH_LEDGER.md` regenerated clean (738 rows, through 2026-06-12). All validation commands pass; no unresolved risks. This completes the user's requested "oldest ~10-15 pages" scope (2026-05-02 through 2026-05-17, excluding dead tools and news articles): the May 15 batch (our-stack, landing-page-builder guide, OpenClaw) and this May 17 cluster are both done. The next oldest live rows in `PAGE_REFRESH_LEDGER.md` would begin a new session scope.
+
+---
+
+## ExecPlan: June 12 2026 May 20-23 Tool Cluster Refresh
+
+### 1. Objective
+
+Continue the oldest-to-newest live ledger refresh with the next five tool rows: `/tools/antigravity/` (2026-05-20), `/tools/gemini-omni/` (2026-05-20), `/tools/gpt-image-2/` (2026-05-20), `/tools/imagen/` (2026-05-20), and `/tools/cohere/` (2026-05-23), bumping each to June 12, 2026.
+
+### 2. Current state
+
+All five tool records carry May 20-23 `last_updated`/`last_verified` dates, "(May 2026)" SEO titles, May-dated facts `verified_at` stamps, and May-dated in-body verification copy. Antigravity and Cohere also reference Claude Opus 4.7 as the comparison flagship, which site canon (Opus 4.8 launched May 28, 2026) has superseded.
+
+### 3. Target state
+
+All five pages carry 2026-06-12 frontmatter dates, June 2026 SEO titles, 2026-06-12 facts `verified_at` with pushed-out `next_review_at` dates, June 12 in-body verification copy, and current Opus 4.8 references where the page compares against Anthropic's flagship. Historical price-history rows and dated changelog entries are preserved as-is. GPT Image 2 gains a June 12 price-history row confirming pricing unchanged.
+
+### 4. Scope
+
+Included: the five tool records, `PAGE_REFRESH_LEDGER.md`, and this plan. Excluded: dead tools, news article pages, category hubs (no hardcoded references to these five pages required edits), source-registry schema changes, and rows newer than 2026-05-23.
+
+### 5. Files likely affected
+
+`src/content/tools/antigravity.md`, `src/content/tools/gemini-omni.md`, `src/content/tools/gpt-image-2.md`, `src/content/tools/imagen.md`, `src/content/tools/cohere.md`, `PAGE_REFRESH_LEDGER.md`, and this plan.
+
+### 6. Data model impact
+
+No schema changes. Frontmatter dates, facts verification stamps, SEO strings, and body verification copy refreshed in place; one new price-history row added to gpt-image-2.
+
+### 7. SEO impact
+
+Removes "(May 2026)" SEO titles and May-dated meta descriptions from five sitemap-included tool pages.
+
+### 8. Conversion impact
+
+No pricing figures changed; all five pages re-stamp existing verified pricing as re-checked June 12 with no evidence of changes. No affiliate programs added or modified.
+
+### 9. Mobile UX impact
+
+Text-only edits within existing structures; no responsive regressions expected.
+
+### 10. Implementation steps
+
+1. Read all five tool records and identify date-sensitive and model-stale strings.
+2. Bump frontmatter dates, facts verified_at/next_review_at, SEO titles/descriptions, and body verification copy to June 12, 2026.
+3. Update Claude Opus 4.7 flagship references to Opus 4.8 (Antigravity comparison table and FAQ; Cohere verdict, alternatives, and failure modes) per site canon.
+4. Add a June 12 unchanged-pricing price-history row to gpt-image-2.
+5. Regenerate `PAGE_REFRESH_LEDGER.md` and run the full validation suite.
+6. Commit and push (push pre-authorized by the user earlier this session).
+
+### 11. Verification commands
+
+`npm run ledger:pages`, `npm run ledger:pages:check`, `npm run guard:check`, `npm run check:links`, `npm run audit:sources`, `npm run audit:facts`, `npm run test:scripts`, `npm run check`, `npm run build:fast`.
+
+### 12. Acceptance criteria
+
+All five pages show June 12, 2026 dates with no stray non-historical May verification strings, Opus 4.8 replaces Opus 4.7 in flagship comparisons, the ledger regenerates clean, and all validation commands pass.
+
+### 13. Risks and mitigations
+
+Antigravity's Opus support FAQ risks overclaiming: mitigated by stating only that no Opus 4.7/4.8 availability date has been published, consistent with the existing Sonnet 4.6/Opus 4.6 lineup claim. Gemini Omni is a weekly-volatility page; next_review_at moved to 2026-07-12 to match.
+
+### 14. Progress log
+
+- 2026-06-12: Read all five tool records; identified May-dated frontmatter, facts stamps, SEO titles, body verification copy, and stale Opus 4.7 references in antigravity.md and cohere.md.
+- 2026-06-12: Applied June 12 date bumps across all five files, updated Opus references to 4.8, and added the gpt-image-2 June 12 price-history row. Historical price-history dates and dated changelog entries preserved.
+- 2026-06-12: Regenerated `PAGE_REFRESH_LEDGER.md` and ran the full validation suite.
+
+### 15. Final report
+
+Completed. All five May 20-23 tool rows (`/tools/antigravity/`, `/tools/gemini-omni/`, `/tools/gpt-image-2/`, `/tools/imagen/`, `/tools/cohere/`) now carry June 12, 2026 verification with no pricing changes found. Antigravity and Cohere now reference Opus 4.8 as the Anthropic flagship per site canon. GPT Image 2 gained a June 12 unchanged-pricing history row. `PAGE_REFRESH_LEDGER.md` regenerated clean and all validation commands passed. Next oldest live rows: the 2026-05-24 cluster (`/answers/best-ai-chatbot-2026/`, `/compare/chatgpt-vs-qwen/`, `/compare/cursor-vs-claude-code-vs-copilot/`, and 10 tool pages including codex, manus, nightcafe, omniseo, prezi, read-ai, recraft, rodin, trae, typeface).
