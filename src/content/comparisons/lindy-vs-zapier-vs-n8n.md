@@ -5,11 +5,11 @@ title: "Lindy vs Zapier vs n8n"
 tools: [lindy, zapier, n8n]
 category: ai-automation
 winner: lindy
-seo_title: "Lindy vs Zapier vs n8n: AI Assistant or Automation Platform? (May 2026)"
-meta_description: "Updated May 27, 2026: compare Lindy, Zapier, and n8n for inbox/calendar AI assistant work, no-code SaaS automation, technical workflows, pricing units, and which one to buy first."
+seo_title: "Lindy vs Zapier vs n8n: AI Assistant or Automation Platform? (June 2026)"
+meta_description: "Updated June 12, 2026: compare Lindy, Zapier, and n8n for inbox/calendar AI assistant work, no-code SaaS automation, technical workflows, pricing units, and which one to buy first."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-05-27
-last_verified: 2026-05-27
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -160,12 +160,12 @@ It can replace some admin tasks, not judgment, relationship handling, or all del
 
 ## Sources
 
-- [Lindy pricing](https://www.lindy.ai/pricing) (verified 2026-05-27)
-- [Lindy quickstart docs](https://docs.lindy.ai/start-here/quickstart) (verified 2026-05-27)
-- [Lindy usage docs](https://docs.lindy.ai/account-billing/usage) (verified 2026-05-27)
-- [Lindy credits docs](https://docs.lindy.ai/account-billing/credits) (verified 2026-05-27)
-- [Zapier pricing](https://zapier.com/pricing) (verified 2026-05-27)
-- [n8n pricing](https://n8n.io/pricing/) (verified 2026-05-27)
+- [Lindy pricing](https://www.lindy.ai/pricing) (verified 2026-06-12)
+- [Lindy quickstart docs](https://docs.lindy.ai/start-here/quickstart) (verified 2026-06-12)
+- [Lindy usage docs](https://docs.lindy.ai/account-billing/usage) (verified 2026-06-12)
+- [Lindy credits docs](https://docs.lindy.ai/account-billing/credits) (verified 2026-06-12)
+- [Zapier pricing](https://zapier.com/pricing) (verified 2026-06-12)
+- [n8n pricing](https://n8n.io/pricing/) (verified 2026-06-12)
 
 ## Related
 

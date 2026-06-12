@@ -11,15 +11,15 @@ pricing_model: freemium
 price_range: "Free tier (25+ models, 50 req/day) · Pay-as-you-go (5.5% platform fee on 400+ models) · Enterprise custom"
 status: active
 launched: 2023
-last_updated: 2026-05-27
-last_verified: 2026-05-27
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 price_history:
   - date: 2026-05-27
     price: "see note"
     source: "https://openrouter.ai/pricing"
     source_label: "OpenRouter pricing"
     source_id: openrouter-official
-    verified_at: 2026-05-27
+    verified_at: 2026-06-12
     change: "Public tiers verified: Free (25+ models, 50 requests/day), Pay-as-you-go (5.5% platform fee, 400+ models and 60+ providers), Enterprise (bulk discounts, SSO/SAML, policy controls, support SLA, and custom limits). Failed or fallback attempts are not billed."
   - date: 2026-04-28
     price: "see note"
@@ -46,15 +46,15 @@ facts:
     source: "https://openrouter.ai/pricing"
     source_label: "OpenRouter pricing"
     source_id: openrouter-official
-    verified_at: 2026-05-27
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   pricing_anchor:
-    value: "Three public tiers as of May 2026: Free (25+ models, 50 requests/day), Pay-as-you-go (5.5% platform fee on 400+ models and 60+ providers), Enterprise (bulk discounts, SSO/SAML, policy controls, support SLA, and custom limits)."
+    value: "Three public tiers as of June 2026: Free (25+ models, 50 requests/day), Pay-as-you-go (5.5% platform fee on 400+ models and 60+ providers), Enterprise (bulk discounts, SSO/SAML, policy controls, support SLA, and custom limits)."
     source: "https://openrouter.ai/pricing"
     source_label: "OpenRouter pricing"
     source_id: openrouter-official
-    verified_at: 2026-05-27
+    verified_at: 2026-06-12
     next_review_at: 2026-08-27
     volatility: high
     confidence: high
@@ -63,12 +63,12 @@ facts:
     source: "https://openrouter.ai/pricing"
     source_label: "OpenRouter pricing"
     source_id: openrouter-official
-    verified_at: 2026-05-27
+    verified_at: 2026-06-12
     next_review_at: 2026-08-27
     volatility: high
     confidence: high
 tags: [llm-api, model-router, openai-compatible, fallback, agents, inference, developers]
-seo_title: "OpenRouter Review: Unified LLM API, Routing & Pricing (May 2026)"
+seo_title: "OpenRouter Review: Unified LLM API, Routing & Pricing (June 2026)"
 meta_description: "OpenRouter gives developers one OpenAI-compatible API for 400+ models including Opus 4.7, GPT-5.5, Gemini 3.1 Pro, Grok 4.3, DeepSeek V4, and Kimi K2.6. Free tier (50 req/day), 5.5% platform fee Pay-as-you-go, custom Enterprise with SSO and regional routing."
 author: aipedia.wiki Editorial
 best_for:
@@ -88,7 +88,7 @@ quick_answer: >-
 
 OpenRouter is a unified API layer for LLMs. Developers point an OpenAI-compatible client at OpenRouter, choose a model slug, and can route across providers without rewriting application code.
 
-The product is useful because the model market changes faster than most app code should. A team can compare [ChatGPT](/tools/chatgpt/), [Claude](/tools/claude/), [Gemini](/tools/gemini/), [DeepSeek](/tools/deepseek/), [Qwen](/tools/qwen/), [Kimi](/tools/kimi/), and smaller open models behind one billing account and one request schema. As of May 2026, every current-generation frontier model flows through OpenRouter: **Claude Opus 4.7**, **GPT-5.5**, **Gemini 3.1 Pro**, **Grok 4.3**, **DeepSeek V4**, and **Kimi K2.6**.
+The product is useful because the model market changes faster than most app code should. A team can compare [ChatGPT](/tools/chatgpt/), [Claude](/tools/claude/), [Gemini](/tools/gemini/), [DeepSeek](/tools/deepseek/), [Qwen](/tools/qwen/), [Kimi](/tools/kimi/), and smaller open models behind one billing account and one request schema. As of June 2026, every current-generation frontier model flows through OpenRouter: **Claude Opus 4.7**, **GPT-5.5**, **Gemini 3.1 Pro**, **Grok 4.3**, **DeepSeek V4**, and **Kimi K2.6**.
 
 ## Recent developments
 
@@ -123,7 +123,7 @@ The product is useful because the model market changes faster than most app code
 | **Reliability** | Zero Completion Insurance covers failed requests |
 | **Best fit** | Developer apps, agent tooling, model comparison |
 
-Verified 2026-05-27 against [openrouter.ai/pricing](https://openrouter.ai/pricing).
+Verified 2026-06-12 against [openrouter.ai/pricing](https://openrouter.ai/pricing).
 
 ## When to pick OpenRouter
 
@@ -152,7 +152,7 @@ Per-model token pricing varies by provider route. Some models are free or promot
 
 That flexibility is the point and the risk. Without pinned budgets, provider preferences, and model choices, traffic can land on more expensive routes than expected. Prompt caching and the OpenAI-compatible app attribution header help track spend by surface.
 
-Verified 2026-05-27 via [openrouter.ai/pricing](https://openrouter.ai/pricing).
+Verified 2026-06-12 via [openrouter.ai/pricing](https://openrouter.ai/pricing).
 
 ## Failure Modes
 
@@ -164,7 +164,7 @@ Verified 2026-05-27 via [openrouter.ai/pricing](https://openrouter.ai/pricing).
 
 ## Methodology
 
-Last verified 2026-05-27 against OpenRouter's pricing page, developer documentation, and the May 26 funding/usage announcement. Scoring weighs developer utility, breadth of model access, pricing transparency, durability of the gateway role, and risk from provider dependence.
+Last verified 2026-06-12 against OpenRouter's pricing page, developer documentation, and the May 26 funding/usage announcement. Scoring weighs developer utility, breadth of model access, pricing transparency, durability of the gateway role, and risk from provider dependence.
 
 ## FAQ
 

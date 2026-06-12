@@ -25,16 +25,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-05-13 | /tools/grok-code-fast/ | Tool | Yes | frontmatter | src/content/tools/grok-code-fast.md |
 | 2026-05-17 | /search/ | Static page | No | git | src/pages/search.astro |
 | 2026-05-17 | /stack-builder/ | Static page | Yes | git | src/pages/stack-builder/index.astro |
-| 2026-05-27 | /compare/lindy-vs-zapier-vs-n8n/ | Comparison | Yes | frontmatter | src/content/comparisons/lindy-vs-zapier-vs-n8n.md |
-| 2026-05-27 | /guides/best-ai-automation-platform/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-automation-platform.md |
-| 2026-05-27 | /guides/best-ai-personal-assistant-for-work/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-personal-assistant-for-work.md |
-| 2026-05-27 | /tools/lindy/ | Tool | Yes | frontmatter | src/content/tools/lindy.md |
-| 2026-05-27 | /tools/openrouter/ | Tool | Yes | frontmatter | src/content/tools/openrouter.md |
-| 2026-05-28 | /compare/chatgpt-vs-rytr/ | Comparison | Yes | frontmatter | src/content/comparisons/chatgpt-vs-rytr.md |
-| 2026-05-28 | /guides/best-ai-for-seo-content/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-seo-content.md |
-| 2026-05-28 | /guides/best-ai-seo-tool-replacing-surfer-frase-stack/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-seo-tool-replacing-surfer-frase-stack.md |
-| 2026-05-28 | /tools/argil/ | Tool | Yes | frontmatter | src/content/tools/argil.md |
-| 2026-05-28 | /tools/rytr/ | Tool | Yes | frontmatter | src/content/tools/rytr.md |
 | 2026-06-01 | /about/editorial/ | Static page | Yes | git | src/pages/about/editorial.astro |
 | 2026-06-01 | /admin/reviews/ | Static page | No | git | src/pages/admin/reviews.astro |
 | 2026-06-01 | /answers/best-ai-coding-tool-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-coding-tool-2026.astro |
@@ -709,42 +699,52 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-12 | /companies/openai/ | Company | Yes | frontmatter | src/content/companies/openai.md |
 | 2026-06-12 | /compare/build/ | Static page | No | git | src/pages/compare/build.astro |
 | 2026-06-12 | /compare/chatgpt-vs-qwen/ | Comparison | Yes | frontmatter | src/content/comparisons/chatgpt-vs-qwen.md |
+| 2026-06-12 | /compare/chatgpt-vs-rytr/ | Comparison | Yes | working tree | src/content/comparisons/chatgpt-vs-rytr.md |
 | 2026-06-12 | /compare/cursor-vs-claude-code-vs-copilot/ | Comparison | Yes | frontmatter | src/content/comparisons/cursor-vs-claude-code-vs-copilot.md |
+| 2026-06-12 | /compare/lindy-vs-zapier-vs-n8n/ | Comparison | Yes | working tree | src/content/comparisons/lindy-vs-zapier-vs-n8n.md |
 | 2026-06-12 | /explore/ | Static page | Yes | git | src/pages/explore/index.astro |
 | 2026-06-12 | /guides/ | Static page | Yes | git | src/pages/guides/index.astro |
-| 2026-06-12 | /guides/best-ai-for-meeting-notes/ | Guide | Yes | working tree | src/content/use-cases/best-ai-for-meeting-notes.md |
+| 2026-06-12 | /guides/best-ai-automation-platform/ | Guide | Yes | working tree | src/content/use-cases/best-ai-automation-platform.md |
+| 2026-06-12 | /guides/best-ai-for-meeting-notes/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-meeting-notes.md |
+| 2026-06-12 | /guides/best-ai-for-seo-content/ | Guide | Yes | working tree | src/content/use-cases/best-ai-for-seo-content.md |
 | 2026-06-12 | /guides/best-ai-landing-page-builder-for-ab-testing/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-landing-page-builder-for-ab-testing.md |
-| 2026-06-12 | /guides/best-ai-meeting-assistant-for-customer-success-teams/ | Guide | Yes | working tree | src/content/use-cases/best-ai-meeting-assistant-for-customer-success-teams.md |
-| 2026-06-12 | /guides/best-ai-phone-system-for-smb-sales-and-support-teams/ | Guide | Yes | working tree | src/content/use-cases/best-ai-phone-system-for-smb-sales-and-support-teams.md |
+| 2026-06-12 | /guides/best-ai-meeting-assistant-for-customer-success-teams/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-meeting-assistant-for-customer-success-teams.md |
+| 2026-06-12 | /guides/best-ai-personal-assistant-for-work/ | Guide | Yes | working tree | src/content/use-cases/best-ai-personal-assistant-for-work.md |
+| 2026-06-12 | /guides/best-ai-phone-system-for-smb-sales-and-support-teams/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-phone-system-for-smb-sales-and-support-teams.md |
+| 2026-06-12 | /guides/best-ai-seo-tool-replacing-surfer-frase-stack/ | Guide | Yes | working tree | src/content/use-cases/best-ai-seo-tool-replacing-surfer-frase-stack.md |
 | 2026-06-12 | /guides/notion-ai-alternatives/ | Guide | No | frontmatter | src/content/use-cases/notion-ai-alternatives.md |
-| 2026-06-12 | /guides/otter-ai-alternatives/ | Guide | No | working tree | src/content/use-cases/otter-ai-alternatives.md |
+| 2026-06-12 | /guides/otter-ai-alternatives/ | Guide | No | frontmatter | src/content/use-cases/otter-ai-alternatives.md |
 | 2026-06-12 | /llms-full.txt | Crawl surface | No | git | src/pages/llms-full.txt.ts |
 | 2026-06-12 | /llms.txt | Crawl surface | No | git | src/pages/llms.txt.ts |
 | 2026-06-12 | /tools/ | Static page | Yes | git | src/pages/tools/index.astro |
-| 2026-06-12 | /tools/adobe-firefly/ | Tool | Yes | working tree | src/content/tools/adobe-firefly.md |
+| 2026-06-12 | /tools/adobe-firefly/ | Tool | Yes | frontmatter | src/content/tools/adobe-firefly.md |
 | 2026-06-12 | /tools/antigravity/ | Tool | Yes | frontmatter | src/content/tools/antigravity.md |
-| 2026-06-12 | /tools/beehiiv/ | Tool | Yes | working tree | src/content/tools/beehiiv.md |
-| 2026-06-12 | /tools/blackbox-ai/ | Tool | Yes | working tree | src/content/tools/blackbox-ai.md |
-| 2026-06-12 | /tools/cloudtalk/ | Tool | Yes | working tree | src/content/tools/cloudtalk.md |
+| 2026-06-12 | /tools/argil/ | Tool | Yes | working tree | src/content/tools/argil.md |
+| 2026-06-12 | /tools/beehiiv/ | Tool | Yes | frontmatter | src/content/tools/beehiiv.md |
+| 2026-06-12 | /tools/blackbox-ai/ | Tool | Yes | frontmatter | src/content/tools/blackbox-ai.md |
+| 2026-06-12 | /tools/cloudtalk/ | Tool | Yes | frontmatter | src/content/tools/cloudtalk.md |
 | 2026-06-12 | /tools/codex/ | Tool | Yes | frontmatter | src/content/tools/codex.md |
 | 2026-06-12 | /tools/cohere/ | Tool | Yes | frontmatter | src/content/tools/cohere.md |
-| 2026-06-12 | /tools/d-id/ | Tool | Yes | working tree | src/content/tools/d-id.md |
+| 2026-06-12 | /tools/d-id/ | Tool | Yes | frontmatter | src/content/tools/d-id.md |
 | 2026-06-12 | /tools/gemini-omni/ | Tool | Yes | frontmatter | src/content/tools/gemini-omni.md |
 | 2026-06-12 | /tools/gpt-image-2/ | Tool | Yes | frontmatter | src/content/tools/gpt-image-2.md |
 | 2026-06-12 | /tools/imagen/ | Tool | Yes | frontmatter | src/content/tools/imagen.md |
-| 2026-06-12 | /tools/invideo/ | Tool | Yes | working tree | src/content/tools/invideo.md |
-| 2026-06-12 | /tools/lovo/ | Tool | Yes | working tree | src/content/tools/lovo.md |
+| 2026-06-12 | /tools/invideo/ | Tool | Yes | frontmatter | src/content/tools/invideo.md |
+| 2026-06-12 | /tools/lindy/ | Tool | Yes | working tree | src/content/tools/lindy.md |
+| 2026-06-12 | /tools/lovo/ | Tool | Yes | frontmatter | src/content/tools/lovo.md |
 | 2026-06-12 | /tools/manus/ | Tool | Yes | frontmatter | src/content/tools/manus.md |
-| 2026-06-12 | /tools/meetgeek/ | Tool | Yes | working tree | src/content/tools/meetgeek.md |
+| 2026-06-12 | /tools/meetgeek/ | Tool | Yes | frontmatter | src/content/tools/meetgeek.md |
 | 2026-06-12 | /tools/nightcafe/ | Tool | Yes | frontmatter | src/content/tools/nightcafe.md |
 | 2026-06-12 | /tools/omniseo/ | Tool | Yes | frontmatter | src/content/tools/omniseo.md |
 | 2026-06-12 | /tools/openclaw/ | Tool | Yes | frontmatter | src/content/tools/openclaw.md |
+| 2026-06-12 | /tools/openrouter/ | Tool | Yes | working tree | src/content/tools/openrouter.md |
 | 2026-06-12 | /tools/prezi/ | Tool | Yes | frontmatter | src/content/tools/prezi.md |
 | 2026-06-12 | /tools/read-ai/ | Tool | Yes | frontmatter | src/content/tools/read-ai.md |
 | 2026-06-12 | /tools/recraft/ | Tool | Yes | frontmatter | src/content/tools/recraft.md |
 | 2026-06-12 | /tools/rodin/ | Tool | Yes | frontmatter | src/content/tools/rodin.md |
-| 2026-06-12 | /tools/speechify/ | Tool | Yes | working tree | src/content/tools/speechify.md |
-| 2026-06-12 | /tools/tidio/ | Tool | Yes | working tree | src/content/tools/tidio.md |
+| 2026-06-12 | /tools/rytr/ | Tool | Yes | working tree | src/content/tools/rytr.md |
+| 2026-06-12 | /tools/speechify/ | Tool | Yes | frontmatter | src/content/tools/speechify.md |
+| 2026-06-12 | /tools/tidio/ | Tool | Yes | frontmatter | src/content/tools/tidio.md |
 | 2026-06-12 | /tools/trae/ | Tool | Yes | frontmatter | src/content/tools/trae.md |
 | 2026-06-12 | /tools/typeface/ | Tool | Yes | frontmatter | src/content/tools/typeface.md |
 | 2026-06-12 | /workflows/micro-saas-weekend-build/ | Workflow | Yes | frontmatter | src/content/workflows/micro-saas-weekend-build.md |

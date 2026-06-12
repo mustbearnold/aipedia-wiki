@@ -3643,3 +3643,72 @@ Affiliate money pages (cloudtalk, meetgeek) must not have program terms altered 
 ### 15. Final report
 
 Completed. All 14 May 26 cluster pages now carry June 12, 2026 verification with no pricing or affiliate-term changes. Ledger regenerated clean; all validation passed. Next oldest live rows: 2026-05-27 (lindy-vs-zapier-vs-n8n comparison, best-ai-automation-platform and best-ai-personal-assistant-for-work guides, lindy and openrouter tools), then the 2026-05-28 cluster.
+
+---
+
+## ExecPlan: June 12 2026 May 27-28 Cluster Refresh
+
+### 1. Objective
+
+Complete the pre-June live ledger backlog with the combined 10-page 2026-05-27/05-28 cluster: `/compare/lindy-vs-zapier-vs-n8n/`, `/guides/best-ai-automation-platform/`, `/guides/best-ai-personal-assistant-for-work/`, `/tools/lindy/`, `/tools/openrouter/` (05-27) and `/compare/chatgpt-vs-rytr/`, `/guides/best-ai-for-seo-content/`, `/guides/best-ai-seo-tool-replacing-surfer-frase-stack/`, `/tools/argil/`, `/tools/rytr/` (05-28), bumping each to June 12, 2026.
+
+### 2. Current state
+
+All 10 routes carry 2026-05-27/28 dates and May-dated verification wording. All 4 tools are status: active. Lindy and Argil are affiliate money pages.
+
+### 3. Target state
+
+All 10 pages carry 2026-06-12 dates and June 2026 wording; affiliate terms, commission notes, approval dates, price-history rows, and dated changelog bullets preserved unchanged.
+
+### 4. Scope
+
+Included: the 10 source files, `PAGE_REFRESH_LEDGER.md`, this plan. Excluded: dead tools, news pages, June-dated rows, affiliate program terms.
+
+### 5. Files likely affected
+
+2 comparisons, 4 guides under `src/content/use-cases/`, 4 tools under `src/content/tools/`, `PAGE_REFRESH_LEDGER.md`, this plan.
+
+### 6. Data model impact
+
+None; dates and month wording refreshed in place.
+
+### 7. SEO impact
+
+Removes May-dated SEO/verification strings from 10 sitemap-included pages.
+
+### 8. Conversion impact
+
+Lindy and Argil affiliate blocks untouched (commission/approval notes preserved as historical facts); pricing figures unchanged, re-stamped as re-checked June 12. Guard money-guide protections passed.
+
+### 9. Mobile UX impact
+
+Text-only edits; none.
+
+### 10. Implementation steps
+
+1. Confirm tool liveness; survey stale strings.
+2. Batch-apply date bumps with the hardened script (news-URL protection, price_history/dated-bullet/affiliate-note skips).
+3. Targeted second pass for verdict lines, "checked on" footers, facts stamps, and Argil dated pricing statements.
+4. Regenerate ledger; run validation suite; commit and push.
+
+### 11. Verification commands
+
+`npm run ledger:pages`, `npm run ledger:pages:check`, `npm run guard:check`, `npm run check:links`, `npm run audit:facts`, `npm run test:scripts`, `npm run check`, `npm run build:fast`.
+
+### 12. Acceptance criteria
+
+All 10 pages June 12-dated with historical/affiliate entries preserved; links clean on first pass; ledger current; full validation passes.
+
+### 13. Risks and mitigations
+
+Affiliate money pages (lindy, argil) must keep program terms and approval dates intact: skip rules exclude commission/notes lines, verified by post-pass grep. News-URL protection prevented the codex-style slug corruption; check:links clean on first pass.
+
+### 14. Progress log
+
+- 2026-06-12: Confirmed all 4 tools active; batch-applied June 12 date bumps across the 10 files.
+- 2026-06-12: Second pass fixed the personal-assistant guide verdict line, chatgpt-vs-rytr "checked on" footer, lindy/openrouter/argil/rytr facts stamps, lindy free-plan refresh note, and Argil dated pricing statements.
+- 2026-06-12: Regenerated ledger; full validation passed (33/33 script tests, links clean, 1104 pages built, indexability and CTA audits clean).
+
+### 15. Final report
+
+Completed. All 10 May 27-28 pages now carry June 12, 2026 verification with no pricing or affiliate-term changes. This clears the entire pre-June live backlog: remaining pre-June ledger rows are only the 4 dead tools (phind, tome, dalle, grok-code-fast: excluded by scope) and the 2 git-dated static pages (/search/, /stack-builder/: reviewed earlier this session, no date-bearing content to refresh). All other rows are dated 2026-06-01 through 2026-06-12, inside the monthly update_frequency freshness window from this month's refresh sessions. The oldest-to-today ledger refresh requested on 2026-06-12 is complete for all eligible pages.
