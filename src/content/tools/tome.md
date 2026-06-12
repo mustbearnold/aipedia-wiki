@@ -11,8 +11,8 @@ pricing_model: free
 price_range: "Discontinued"
 status: dead
 launched: 2020-01
-last_updated: 2026-05-04
-last_verified: 2026-05-04
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: quarterly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: "https://venturebeat.com/technology/tomes-founders-ditch-viral-presentation-app-with-20m-users-to-build-ai"
     source_label: "VentureBeat on Tome discontinuation"
     source_id: tome-venturebeat-discontinued
-    verified_at: 2026-05-04
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
   pricing_anchor:
@@ -39,7 +39,7 @@ facts:
     source: "https://venturebeat.com/technology/tomes-founders-ditch-viral-presentation-app-with-20m-users-to-build-ai"
     source_label: "VentureBeat on Tome discontinuation"
     source_id: tome-venturebeat-discontinued
-    verified_at: 2026-05-04
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
   best_for:
@@ -47,7 +47,7 @@ facts:
     source: "https://venturebeat.com/technology/tomes-founders-ditch-viral-presentation-app-with-20m-users-to-build-ai"
     source_label: "VentureBeat on Tome discontinuation"
     source_id: tome-venturebeat-discontinued
-    verified_at: 2026-05-04
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
   watch_out_for:
@@ -55,11 +55,11 @@ facts:
     source: "https://venturebeat.com/technology/tomes-founders-ditch-viral-presentation-app-with-20m-users-to-build-ai"
     source_label: "VentureBeat on Tome discontinuation"
     source_id: tome-venturebeat-discontinued
-    verified_at: 2026-05-04
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
 tags: [presentations, storytelling, narrative, ai-generation, discontinued, shut-down, pivot]
-seo_title: "Tome: Shut Down April 2025. What to Use Instead (April 2026)"
+seo_title: "Tome: Shut Down April 2025. What to Use Instead (June 2026)"
 meta_description: "Tome's AI presentation tool was discontinued April 15, 2025. Founders rebuilt as Lightfield (AI-native CRM). AngelList acquired the brand. Use Gamma, Beautiful.ai, or Pitch instead."
 author: "aipedia.wiki Editorial"
 best_for:
@@ -101,7 +101,7 @@ The founding team rebuilt as [Lightfield](https://lightfield.com), an AI-native 
 | **Recommended replacement for narrative decks** | [Gamma](/tools/gamma/) |
 | **Recommended replacement for B2B sales decks** | Native sales enablement platforms |
 
-Every data point above was verified against reporting on 2026-04-17. See Sources.
+Every data point above was re-verified as still discontinued against reporting on 2026-06-12. See Sources.
 
 ## What it actually is
 
@@ -130,7 +130,7 @@ The Tome AI presentation product was discontinued on April 15, 2025. No current 
 
 The AngelList-owned tome.app domain hosts a different product (document summarization) with separate pricing. The founding team's new company, Lightfield, prices as an AI CRM product, not a presentation tool.
 
-*Shutdown verified 2026-04-17 via [VentureBeat coverage](https://venturebeat.com/technology/tomes-founders-ditch-viral-presentation-app-with-20m-users-to-build-ai) and [Lightfield](https://lightfield.com).*
+*Shutdown verified 2026-06-12 via [VentureBeat coverage](https://venturebeat.com/technology/tomes-founders-ditch-viral-presentation-app-with-20m-users-to-build-ai) and [Lightfield](https://lightfield.com).*
 
 ## Against the alternatives
 
@@ -153,7 +153,7 @@ The AngelList-owned tome.app domain hosts a different product (document summariz
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. The tool is marked dead because the original product shut down on April 15, 2025. Last verified 2026-04-17 against [VentureBeat coverage of the Lightfield pivot](https://venturebeat.com/technology/tomes-founders-ditch-viral-presentation-app-with-20m-users-to-build-ai).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. The tool is marked dead because the original product shut down on April 15, 2025. Last verified 2026-06-12 against [VentureBeat coverage of the Lightfield pivot](https://venturebeat.com/technology/tomes-founders-ditch-viral-presentation-app-with-20m-users-to-build-ai).
 
 ## FAQ
 

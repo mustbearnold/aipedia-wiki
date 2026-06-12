@@ -1,6 +1,6 @@
 # AiPedia Page Refresh Ledger
 
-Ledger updated through: 2026-06-12
+Ledger updated through: 2026-06-13
 Tracked public pages and crawl surfaces: 738
 
 Hard rule: every time a tracked website page is edited, refreshed, materially re-ranked, or has volatile facts re-verified, update that page row in this file on the same change. If a child page update affects a parent hub, archive, internal-link block, sitemap, or LLM surface, update those affected rows too.
@@ -11,10 +11,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 
 | Last updated | Page | Type | Sitemap | Date source | Source file |
 | --- | --- | --- | --- | --- | --- |
-| 2026-05-02 | /tools/phind/ | Tool | Yes | frontmatter | src/content/tools/phind.md |
-| 2026-05-04 | /tools/tome/ | Tool | Yes | frontmatter | src/content/tools/tome.md |
-| 2026-05-05 | /tools/dalle/ | Tool | Yes | frontmatter | src/content/tools/dalle.md |
-| 2026-05-13 | /tools/grok-code-fast/ | Tool | Yes | frontmatter | src/content/tools/grok-code-fast.md |
 | 2026-05-17 | /search/ | Static page | No | git | src/pages/search.astro |
 | 2026-05-17 | /stack-builder/ | Static page | Yes | git | src/pages/stack-builder/index.astro |
 | 2026-06-01 | /about/editorial/ | Static page | Yes | git | src/pages/about/editorial.astro |
@@ -343,14 +339,14 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-12 | /compare/surfer-vs-semrush-vs-ahrefs/ | Comparison | Yes | frontmatter | src/content/comparisons/surfer-vs-semrush-vs-ahrefs.md |
 | 2026-06-12 | /compare/veo-vs-kling/ | Comparison | Yes | frontmatter | src/content/comparisons/veo-vs-kling.md |
 | 2026-06-12 | /compare/veo-vs-seedance/ | Comparison | Yes | frontmatter | src/content/comparisons/veo-vs-seedance.md |
-| 2026-06-12 | /dead/bing-chat/ | Dead tool archive | Yes | working tree | src/content/dead/bing-chat.md |
-| 2026-06-12 | /dead/google-bard/ | Dead tool archive | Yes | working tree | src/content/dead/google-bard.md |
-| 2026-06-12 | /dead/gpt-3-api/ | Dead tool archive | Yes | working tree | src/content/dead/gpt-3-api.md |
-| 2026-06-12 | /dead/meta-imagine/ | Dead tool archive | Yes | working tree | src/content/dead/meta-imagine.md |
-| 2026-06-12 | /dead/openai-codex/ | Dead tool archive | Yes | working tree | src/content/dead/openai-codex.md |
-| 2026-06-12 | /dead/play-ht/ | Dead tool archive | Yes | working tree | src/content/dead/play-ht.md |
-| 2026-06-12 | /dead/sora/ | Dead tool archive | Yes | working tree | src/content/dead/sora.md |
-| 2026-06-12 | /dead/stability-ai-clipdrop/ | Dead tool archive | Yes | working tree | src/content/dead/stability-ai-clipdrop.md |
+| 2026-06-12 | /dead/bing-chat/ | Dead tool archive | Yes | frontmatter | src/content/dead/bing-chat.md |
+| 2026-06-12 | /dead/google-bard/ | Dead tool archive | Yes | frontmatter | src/content/dead/google-bard.md |
+| 2026-06-12 | /dead/gpt-3-api/ | Dead tool archive | Yes | frontmatter | src/content/dead/gpt-3-api.md |
+| 2026-06-12 | /dead/meta-imagine/ | Dead tool archive | Yes | frontmatter | src/content/dead/meta-imagine.md |
+| 2026-06-12 | /dead/openai-codex/ | Dead tool archive | Yes | frontmatter | src/content/dead/openai-codex.md |
+| 2026-06-12 | /dead/play-ht/ | Dead tool archive | Yes | frontmatter | src/content/dead/play-ht.md |
+| 2026-06-12 | /dead/sora/ | Dead tool archive | Yes | frontmatter | src/content/dead/sora.md |
+| 2026-06-12 | /dead/stability-ai-clipdrop/ | Dead tool archive | Yes | frontmatter | src/content/dead/stability-ai-clipdrop.md |
 | 2026-06-12 | /explore/ | Static page | Yes | git | src/pages/explore/index.astro |
 | 2026-06-12 | /guides/ | Static page | Yes | git | src/pages/guides/index.astro |
 | 2026-06-12 | /guides/ai-agency-stack/ | Guide | Yes | frontmatter | src/content/use-cases/ai-agency-stack.md |
@@ -749,3 +745,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-12 | /workflows/seo-content-pipeline/ | Workflow | Yes | frontmatter | src/content/workflows/seo-content-pipeline.md |
 | 2026-06-12 | /workflows/solo-founder-stack/ | Workflow | Yes | frontmatter | src/content/workflows/solo-founder-stack.md |
 | 2026-06-12 | /workflows/youtube-content-stack/ | Workflow | Yes | frontmatter | src/content/workflows/youtube-content-stack.md |
+| 2026-06-13 | /tools/dalle/ | Tool | Yes | working tree | src/content/tools/dalle.md |
+| 2026-06-13 | /tools/grok-code-fast/ | Tool | Yes | working tree | src/content/tools/grok-code-fast.md |
+| 2026-06-13 | /tools/phind/ | Tool | Yes | working tree | src/content/tools/phind.md |
+| 2026-06-13 | /tools/tome/ | Tool | Yes | working tree | src/content/tools/tome.md |

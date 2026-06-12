@@ -10,8 +10,8 @@ pricing_model: free
 price_range: "N/A (discontinued)"
 status: dead
 launched: 2022-04
-last_updated: 2026-05-02
-last_verified: 2026-05-02
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: quarterly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://news.ycombinator.com/item?id=46594533"
     source_label: "Phind shutdown discussion"
     source_id: phind-official
-    verified_at: 2026-05-04
+    verified_at: 2026-06-12
     volatility: low
     confidence: medium
   lifecycle_status:
@@ -38,7 +38,7 @@ facts:
     source: "https://news.ycombinator.com/item?id=46594533"
     source_label: "Phind shutdown discussion"
     source_id: phind-official
-    verified_at: 2026-05-04
+    verified_at: 2026-06-12
     volatility: low
     confidence: medium
   pricing_anchor:
@@ -46,7 +46,7 @@ facts:
     source: "https://news.ycombinator.com/item?id=46594533"
     source_label: "Phind shutdown discussion"
     source_id: phind-official
-    verified_at: 2026-05-04
+    verified_at: 2026-06-12
     volatility: low
     confidence: medium
   migration_surface:
@@ -54,7 +54,7 @@ facts:
     source: "https://news.ycombinator.com/item?id=46594533"
     source_label: "Phind shutdown discussion"
     source_id: phind-official
-    verified_at: 2026-05-04
+    verified_at: 2026-06-12
     volatility: low
     confidence: medium
   watch_out_for:
@@ -62,7 +62,7 @@ facts:
     source: "https://news.ycombinator.com/item?id=46594533"
     source_label: "Phind shutdown discussion"
     source_id: phind-official
-    verified_at: 2026-05-04
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
 tags: [search-engine, developer-tools, coding, ai-search, discontinued, shutdown, phind-70b]
@@ -87,7 +87,7 @@ Phind was a developer-focused AI search engine built around the Phind-70B model.
 
 > **Phind is offline. No subscription, no free tier, no API.** The shutdown came without advance warning roughly one month after a $10M funding round. The VS Code extension no longer connects to the backend. User accounts and history were permanently deleted on January 30, 2026.
 >
-> **What to use instead:** [Perplexity](/tools/perplexity/) for cited developer search, [ChatGPT](/tools/chatgpt/) Plus for Codex coding agent access, [Claude](/tools/claude/) for long-context code reasoning, or GitHub Copilot Workspace for in-IDE assistance.
+> **What to use instead:** [Perplexity](/tools/perplexity/) for cited developer search, [ChatGPT](/tools/chatgpt/) Plus for Codex coding agent access, [Claude](/tools/claude/) for long-context code reasoning, or [GitHub Copilot](/tools/github-copilot/) for in-IDE assistance.
 >
 > **Who should read this page:** Former Phind users planning migration, researchers tracking AI search consolidation, and teams auditing retired tools in their stack.
 
@@ -101,9 +101,9 @@ Phind was a developer-focused AI search engine built around the Phind-70B model.
 | **Former price** | Free tier, Pro $20/mo, Business $40/user/mo |
 | **Former features** | VS Code extension, JetBrains plugin, model selector (Pro), multi-turn chat |
 | **Shutdown context** | Closed roughly one month after a $10M funding round |
-| **Replacement tools** | Perplexity, ChatGPT, Claude, GitHub Copilot Workspace |
+| **Replacement tools** | Perplexity, ChatGPT, Claude, GitHub Copilot |
 
-Every data point above was verified against public shutdown reporting on 2026-04-17. See Sources.
+Every data point above was re-verified as still offline against public shutdown reporting on 2026-06-12. See Sources.
 
 ## What it actually was
 
@@ -122,7 +122,7 @@ The moat was narrow: developer-first source weighting and the Phind-70B model. T
 - **Cited developer search with broad coverage:** [Perplexity](/tools/perplexity/). Pro at $20/mo covers most former Phind use cases.
 - **Agentic coding with multi-file autonomy:** [ChatGPT](/tools/chatgpt/) Plus (Codex) at $20/mo or Pro tiers at $100-$200/mo.
 - **Long-context code reasoning:** [Claude](/tools/claude/) Pro at $20/mo. 1M token context on Opus and Sonnet.
-- **In-IDE coding assistant:** GitHub Copilot Workspace at $19/mo for project-level awareness inside VS Code.
+- **In-IDE coding assistant:** [GitHub Copilot](/tools/github-copilot/) Pro at $10/mo for AI assistance inside VS Code and other IDEs.
 - **Semantic search API for custom dev tools:** [Exa](/tools/exa/). Drop-in for LangChain and LlamaIndex.
 
 ## Pricing
@@ -135,7 +135,7 @@ No active pricing. Phind shut down January 16, 2026. Former pricing (for histori
 | Pro | $20/mo | Offline |
 | Business | $40/user/mo | Offline |
 
-Verified 2026-04-17 via [Phind shutdown on Hacker News](https://news.ycombinator.com/item?id=46594533) and [Devtalk: Phind has shut down](https://devtalk.com/t/phind-has-shut-down/230488).
+Verified 2026-06-12 via [Phind shutdown on Hacker News](https://news.ycombinator.com/item?id=46594533) and [Devtalk: Phind has shut down](https://devtalk.com/t/phind-has-shut-down/230488).
 
 ## Against the alternatives
 
@@ -158,7 +158,7 @@ Verified 2026-04-17 via [Phind shutdown on Hacker News](https://news.ycombinator
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-04-17 against [Phind shutdown on Hacker News](https://news.ycombinator.com/item?id=46594533), [Devtalk shutdown thread](https://devtalk.com/t/phind-has-shut-down/230488), and [intelligenttools.co coverage](https://intelligenttools.co/tools/phind).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against [Phind shutdown on Hacker News](https://news.ycombinator.com/item?id=46594533), [Devtalk shutdown thread](https://devtalk.com/t/phind-has-shut-down/230488), and [intelligenttools.co coverage](https://intelligenttools.co/tools/phind).
 
 ## FAQ
 
@@ -172,7 +172,7 @@ January 30, 2026. Accounts, chat history, and saved queries were permanently pur
 The model powered Phind's answer engine. It is no longer accessible through the product. No public release as open weights.
 
 **What should former Phind users switch to?**
-Perplexity Pro for cited developer search, ChatGPT Plus for Codex agent access, Claude Pro for long-context reasoning, or GitHub Copilot Workspace for in-IDE assistance. Pick based on whether the priority is search, agent autonomy, or IDE integration.
+Perplexity Pro for cited developer search, ChatGPT Plus for Codex agent access, Claude Pro for long-context reasoning, or GitHub Copilot Pro for in-IDE assistance. Pick based on whether the priority is search, agent autonomy, or IDE integration.
 
 **Does the VS Code extension still work?**
 No. The extension marketplace listing persists, but the backend does not respond. Uninstall to avoid confusion.
