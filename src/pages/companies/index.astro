@@ -1,6 +1,10 @@
 ---
 /**
  * /companies/ index — god-tier 10/10 mobile-first.
+ *
+ * Reviewed 2026-06-12: hub derives company profiles (funding, founding dates,
+ * HQ, product rollups) live from the companies collection, so cards stay
+ * current automatically. Confirmed rendering, counts, and sort order.
  */
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
