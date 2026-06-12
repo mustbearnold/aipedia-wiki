@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: $0-$500/month
 status: active
 launched: 2021-01
-last_updated: 2026-06-02
-last_verified: 2026-06-02
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -34,18 +34,18 @@ facts:
     source: https://www.hume.ai/
     source_label: Hume AI official site
     source_id: hume-ai-official
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
   pricing_anchor:
     value: Hume AI pricing is API/usage oriented with Free, Starter $3/mo, Creator $14/mo, Pro $70/mo, Scale $200/mo,
-      Business $500/mo, and Enterprise custom packaging as of June 2, 2026; verify credits, concurrency, voice/model
+      Business $500/mo, and Enterprise custom packaging as of June 12, 2026; verify credits, concurrency, voice/model
       access, Expression Measurement sunset impact, and enterprise terms.
     source: https://www.hume.ai/pricing
     source_label: Hume AI pricing
     source_id: hume-ai-pricing
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -55,7 +55,7 @@ facts:
     source: https://dev.hume.ai/docs
     source_label: Hume AI developer docs
     source_id: hume-ai-docs
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -65,7 +65,7 @@ facts:
     source: https://www.hume.ai/products
     source_label: Hume AI products
     source_id: hume-ai-products
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -77,7 +77,7 @@ facts:
     source: https://dev.hume.ai/docs/expression-measurement/overview
     source_label: Hume Expression Measurement docs
     source_id: hume-ai-expression-measurement-docs
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -181,7 +181,7 @@ Supporting services: Human Feedback API (survey templates + participant pools), 
 | **Voice cloning** | Included on all tiers (create + use) |
 | **Self-hosted** | None on EVI / Octave · TADA is open-source |
 
-Every data point above verified against Hume's published sources on 2026-06-02.
+Every data point above verified against Hume's published sources on 2026-06-12.
 
 ## What it actually is
 
@@ -233,7 +233,7 @@ Usage-based rates (overages or custom workflows):
 | EVI speech-to-speech overage | $0.04 to $0.07 per minute |
 | Expression Measurement | Deprecated May 14, 2026; endpoints no longer accessible June 14, 2026 |
 
-Prices verified 2026-06-02 via [Hume pricing](https://www.hume.ai/pricing), [Hume products](https://www.hume.ai/products), and [Hume Expression Measurement docs](https://dev.hume.ai/docs/expression-measurement/overview). Voice cloning (create and use) is included on all tiers. Enterprise adds API voice access, SOC 2 / GDPR / HIPAA compliance, Slack support, and custom rate limits.
+Prices verified 2026-06-12 via [Hume pricing](https://www.hume.ai/pricing), [Hume products](https://www.hume.ai/products), and [Hume Expression Measurement docs](https://dev.hume.ai/docs/expression-measurement/overview). Voice cloning (create and use) is included on all tiers. Enterprise adds API voice access, SOC 2 / GDPR / HIPAA compliance, Slack support, and custom rate limits.
 
 ## Against the alternatives
 
@@ -261,7 +261,7 @@ Prices verified 2026-06-02 via [Hume pricing](https://www.hume.ai/pricing), [Hum
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-02 against [Hume pricing](https://www.hume.ai/pricing), the [Hume homepage](https://www.hume.ai/), [Hume products](https://www.hume.ai/products), and the [Expression Measurement docs](https://dev.hume.ai/docs/expression-measurement/overview).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against [Hume pricing](https://www.hume.ai/pricing), the [Hume homepage](https://www.hume.ai/), [Hume products](https://www.hume.ai/products), and the [Expression Measurement docs](https://dev.hume.ai/docs/expression-measurement/overview).
 
 ## FAQ
 

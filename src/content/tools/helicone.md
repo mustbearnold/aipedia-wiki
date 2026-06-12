@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "Free 10k req/mo / Pro $79/mo / Team $799/mo / Enterprise custom"
 status: active
 launched: 2023-03
-last_updated: 2026-06-02
-last_verified: 2026-06-02
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -32,7 +32,7 @@ facts:
     source: https://www.helicone.ai/
     source_label: Helicone official site
     source_id: helicone-official
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -41,7 +41,7 @@ facts:
     source: https://www.helicone.ai/pricing
     source_label: Helicone pricing
     source_id: helicone-pricing
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -51,7 +51,7 @@ facts:
     source: https://github.com/Helicone/helicone
     source_label: Helicone GitHub repository
     source_id: helicone-repository
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -61,7 +61,7 @@ facts:
     source: https://docs.helicone.ai/
     source_label: Helicone docs
     source_id: helicone-docs
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -71,7 +71,7 @@ facts:
     source: https://docs.helicone.ai/
     source_label: Helicone docs
     source_id: helicone-docs
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -173,7 +173,7 @@ Helicone ships a cloud-hosted service with generous free tier plus optional self
 | Enterprise | Custom | SAML SSO, MSA agreements, on-prem deployment options |
 | Self-hosted | $0 | Run Helicone on your own infrastructure |
 
-Usage-based pricing applies above the 10K free tier (calculator estimates vary by request volume, storage, and integration path). AI Gateway credits use provider-cost pass-through positioning; observability-only deployments can bring their own provider keys. See [helicone.ai/pricing](https://www.helicone.ai/pricing) and Helicone docs for current paid-tier details. Verified 2026-06-02.
+Usage-based pricing applies above the 10K free tier (calculator estimates vary by request volume, storage, and integration path). AI Gateway credits use provider-cost pass-through positioning; observability-only deployments can bring their own provider keys. See [helicone.ai/pricing](https://www.helicone.ai/pricing) and Helicone docs for current paid-tier details. Verified 2026-06-12.
 
 ## Failure modes
 
@@ -196,7 +196,7 @@ Usage-based pricing applies above the 10K free tier (calculator estimates vary b
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-02 against [helicone.ai](https://www.helicone.ai/), [Helicone pricing](https://www.helicone.ai/pricing), [Helicone docs](https://docs.helicone.ai/getting-started/platform-overview), and the [Helicone GitHub repository](https://github.com/Helicone/helicone).
+Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-12 against [helicone.ai](https://www.helicone.ai/), [Helicone pricing](https://www.helicone.ai/pricing), [Helicone docs](https://docs.helicone.ai/getting-started/platform-overview), and the [Helicone GitHub repository](https://github.com/Helicone/helicone).
 
 ## FAQ
 

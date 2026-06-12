@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "Free; Plus pricing is shown in-app; API available"
 status: active
 launched: 2023-03
-last_updated: 2026-06-02
-last_verified: 2026-06-02
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: https://www.chatpdf.com/
     source_label: ChatPDF official site
     source_id: chatpdf-api
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -39,7 +39,7 @@ facts:
     source: https://www.chatpdf.com/
     source_label: ChatPDF official site pricing surface
     source_id: chatpdf-pricing
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -49,7 +49,7 @@ facts:
     source: https://www.chatpdf.com/
     source_label: ChatPDF official site
     source_id: chatpdf-official
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -58,7 +58,7 @@ facts:
     source: https://www.chatpdf.com/docs/api/backend
     source_label: ChatPDF backend API docs
     source_id: chatpdf-official
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -68,7 +68,7 @@ facts:
     source: https://www.chatpdf.com/
     source_label: ChatPDF official site
     source_id: chatpdf-official
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -93,7 +93,7 @@ quick_answer: >-
 
 The first tool to make "talk to your PDF" a viable workflow. Upload a PDF, get a chat interface that answers questions against the document content with page-level citations. Launched March 2023 in the first wave of ChatGPT-powered apps; still widely used in 2026 despite frontier chatbots now handling PDFs natively.
 
-June 2, 2026 check: ChatPDF's official home page confirms the free plan allows 2 document analyses per day, Plus provides unlimited document analysis and more advanced features, folders can combine multiple PDFs in one conversation, and model routing uses GPT-4o plus GPT-4o-mini. The old `/pricing` path now returns 404, so AiPedia no longer treats the historic `$19.99/mo` Plus price as a freshly verified public quote.
+June 12, 2026 check: ChatPDF's official home page confirms the free plan allows 2 document analyses per day, Plus provides unlimited document analysis and more advanced features, folders can combine multiple PDFs in one conversation, and model routing uses GPT-4o plus GPT-4o-mini. The old `/pricing` path now returns 404, so AiPedia no longer treats the historic `$19.99/mo` Plus price as a freshly verified public quote.
 
 ## System Verdict
 
@@ -137,7 +137,7 @@ June 2, 2026 check: ChatPDF's official home page confirms the free plan allows 2
 | Plus | In-app / volatile | Unlimited document analysis and more advanced features |
 | API | Usage/account gated | Add PDFs by URL or file upload, ask stateless chat questions, include optional page references |
 
-Free and Plus positioning verified 2026-06-02 via [chatpdf.com](https://www.chatpdf.com). API source limits verified via [ChatPDF backend API docs](https://www.chatpdf.com/docs/api/backend), which list 2,000 pages or 32 MB per PDF for API sources. Exact Plus price should be checked in the live upgrade flow because the old public `/pricing` route now returns 404.
+Free and Plus positioning verified 2026-06-12 via [chatpdf.com](https://www.chatpdf.com). API source limits verified via [ChatPDF backend API docs](https://www.chatpdf.com/docs/api/backend), which list 2,000 pages or 32 MB per PDF for API sources. Exact Plus price should be checked in the live upgrade flow because the old public `/pricing` route now returns 404.
 
 ## Failure modes
 
@@ -149,7 +149,7 @@ Free and Plus positioning verified 2026-06-02 via [chatpdf.com](https://www.chat
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-02 against [chatpdf.com](https://www.chatpdf.com) and [ChatPDF backend API docs](https://www.chatpdf.com/docs/api/backend/).
+Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-12 against [chatpdf.com](https://www.chatpdf.com) and [ChatPDF backend API docs](https://www.chatpdf.com/docs/api/backend/).
 
 ## FAQ
 

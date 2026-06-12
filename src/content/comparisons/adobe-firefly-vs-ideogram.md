@@ -9,8 +9,8 @@ seo_title: "Adobe Firefly vs Ideogram (June 2026): Commercial Workflow or Text?"
 meta_description: "June 2026 comparison of Adobe Firefly and Ideogram by typography, commercial safety, pricing, credits, Adobe workflows, and creator use cases."
 description: "Adobe Firefly is better for Adobe-native commercial production; Ideogram is better when readable text inside generated images is the main job."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-02
-last_verified: 2026-06-02
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -103,11 +103,11 @@ Yes. Use Ideogram for typography-first concepts, then rebuild or finish importan
 
 ## Sources
 
-- [Adobe Firefly plans](https://www.adobe.com/products/firefly/plans.html) (verified 2026-06-02)
-- [Adobe Firefly product page](https://www.adobe.com/products/firefly.html) (verified 2026-06-02)
-- [Adobe Firefly creative-agent update](https://news.adobe.com/news/2026/04/adobe-new-creative-agent) (verified 2026-06-02)
-- [Ideogram available plans docs](https://docs.ideogram.ai/plans-and-pricing/available-plans) (verified 2026-06-02)
-- [Ideogram pricing](https://ideogram.ai/pricing) (verified 2026-06-02)
-- [Ideogram 3.0 features](https://ideogram.ai/features/3.0) (verified 2026-06-02)
+- [Adobe Firefly plans](https://www.adobe.com/products/firefly/plans.html) (verified 2026-06-12)
+- [Adobe Firefly product page](https://www.adobe.com/products/firefly.html) (verified 2026-06-12)
+- [Adobe Firefly creative-agent update](https://news.adobe.com/news/2026/04/adobe-new-creative-agent) (verified 2026-06-12)
+- [Ideogram available plans docs](https://docs.ideogram.ai/plans-and-pricing/available-plans) (verified 2026-06-12)
+- [Ideogram pricing](https://ideogram.ai/pricing) (verified 2026-06-12)
+- [Ideogram 3.0 features](https://ideogram.ai/features/3.0) (verified 2026-06-12)
 - [Adobe Firefly review](/tools/adobe-firefly/) (verified 2026-05-26)
-- [Ideogram review](/tools/ideogram/) (verified 2026-06-02)
+- [Ideogram review](/tools/ideogram/) (verified 2026-06-12)

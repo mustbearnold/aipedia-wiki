@@ -9,8 +9,8 @@ seo_title: "Adobe Firefly vs Flux (June 2026): Creative Cloud or FLUX.2?"
 meta_description: "June 2026 comparison of Adobe Firefly and Flux/FLUX.2 by image quality, commercial safety, API pricing, open weights, editing workflow, and buyer fit."
 description: "Adobe Firefly is better for Adobe-governed commercial production; Flux is better for API, open-weight, local, and developer-controlled image workflows."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-02
-last_verified: 2026-06-02
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -96,11 +96,11 @@ Yes. Use Flux for API experiments, reference editing, or model variety; use Fire
 
 ## Sources
 
-- [Adobe Firefly plans](https://www.adobe.com/products/firefly/plans.html) (verified 2026-06-02)
-- [Adobe Firefly product page](https://www.adobe.com/products/firefly.html) (verified 2026-06-02)
-- [Adobe Firefly creative-agent update](https://news.adobe.com/news/2026/04/adobe-new-creative-agent) (verified 2026-06-02)
-- [Black Forest Labs FLUX.2 pricing](https://docs.bfl.ai/quick_start/pricing) (verified 2026-06-02)
-- [Black Forest Labs FLUX models overview](https://help.bfl.ai/articles/9364115800-flux-models-overview) (verified 2026-06-02)
-- [Black Forest Labs licensing overview](https://help.bfl.ai/articles/9272590838-self-serve-dev-license-overview-pricing) (verified 2026-06-02)
+- [Adobe Firefly plans](https://www.adobe.com/products/firefly/plans.html) (verified 2026-06-12)
+- [Adobe Firefly product page](https://www.adobe.com/products/firefly.html) (verified 2026-06-12)
+- [Adobe Firefly creative-agent update](https://news.adobe.com/news/2026/04/adobe-new-creative-agent) (verified 2026-06-12)
+- [Black Forest Labs FLUX.2 pricing](https://docs.bfl.ai/quick_start/pricing) (verified 2026-06-12)
+- [Black Forest Labs FLUX models overview](https://help.bfl.ai/articles/9364115800-flux-models-overview) (verified 2026-06-12)
+- [Black Forest Labs licensing overview](https://help.bfl.ai/articles/9272590838-self-serve-dev-license-overview-pricing) (verified 2026-06-12)
 - [Adobe Firefly review](/tools/adobe-firefly/) (verified 2026-05-26)
-- [Flux review](/tools/flux/) (verified 2026-06-02)
+- [Flux review](/tools/flux/) (verified 2026-06-12)

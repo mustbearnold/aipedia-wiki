@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "Usage-based serverless, deployment, fine-tuning, and batch pricing"
 status: active
 launched: 2022-09
-last_updated: 2026-06-02
-last_verified: 2026-06-02
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: https://fireworks.ai/pricing
     source_label: Fireworks AI pricing
     source_id: fireworks-ai-official
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -40,7 +40,7 @@ facts:
     source: https://fireworks.ai/pricing
     source_label: Fireworks AI pricing
     source_id: fireworks-ai-pricing
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-09-02'
@@ -50,7 +50,7 @@ facts:
     source: https://docs.fireworks.ai/
     source_label: Fireworks AI docs
     source_id: fireworks-ai-docs
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -59,7 +59,7 @@ facts:
     source: https://fireworks.ai/models
     source_label: Fireworks AI models
     source_id: fireworks-ai-models
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-09-02'
@@ -69,7 +69,7 @@ facts:
     source: https://fireworks.ai/pricing
     source_label: Fireworks AI pricing
     source_id: fireworks-ai-pricing
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-09-02'
@@ -205,7 +205,7 @@ Always price your own workload against the live Fireworks pricing page. Named mo
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-02 against the official [Fireworks pricing page](https://fireworks.ai/pricing), [Fireworks billing FAQ](https://docs.fireworks.ai/faq-new/billing-pricing/how-much-does-fireworks-cost), and [Fireworks inference documentation](https://docs.fireworks.ai/guides/inference-introduction).
+Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-12 against the official [Fireworks pricing page](https://fireworks.ai/pricing), [Fireworks billing FAQ](https://docs.fireworks.ai/faq-new/billing-pricing/how-much-does-fireworks-cost), and [Fireworks inference documentation](https://docs.fireworks.ai/guides/inference-introduction).
 
 ## FAQ
 

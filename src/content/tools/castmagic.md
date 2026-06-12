@@ -12,8 +12,8 @@ pricing_model: paid
 price_range: $21-$790/month public self-serve; monthly billing higher
 status: active
 launched: 2022-07
-last_updated: 2026-06-02
-last_verified: 2026-06-02
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: null
@@ -33,7 +33,7 @@ facts:
     source: "https://www.castmagic.io/"
     source_label: "Castmagic overview"
     source_id: castmagic-overview
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
   pricing_anchor:
@@ -41,7 +41,7 @@ facts:
     source: "https://www.castmagic.io/pricing"
     source_label: "Castmagic pricing"
     source_id: castmagic-pricing
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     next_review_at: 2026-09-02
     volatility: high
     confidence: high
@@ -50,7 +50,7 @@ facts:
     source: "https://www.castmagic.io/"
     source_label: "Castmagic overview"
     source_id: castmagic-overview
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   language_support:
@@ -58,7 +58,7 @@ facts:
     source: "https://www.castmagic.io/"
     source_label: "Castmagic overview"
     source_id: castmagic-overview
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
   team_features:
@@ -66,7 +66,7 @@ facts:
     source: "https://www.castmagic.io/pricing"
     source_label: "Castmagic pricing"
     source_id: castmagic-pricing
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   watch_out_for:
@@ -74,7 +74,7 @@ facts:
     source: "https://www.castmagic.io/pricing"
     source_label: "Castmagic pricing"
     source_id: castmagic-pricing
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
 tags: [podcast, content-creation, transcription, show-notes, blog-generation, social-posts, newsletter, repurposing, ai-writing]
@@ -153,7 +153,7 @@ Castmagic is not a transcription tool with extras bolted on. The transcript is a
 | **Pricing model** | Audio-hour quota per month (overage requires plan upgrade) |
 | **Underlying model** | Not publicly documented; treat as a closed pipeline with standard LLM behind it |
 
-Every data point above was verified against Castmagic pricing and product documentation on 2026-06-02. See Sources.
+Every data point above was verified against Castmagic pricing and product documentation on 2026-06-12. See Sources.
 
 ## What it actually is
 
@@ -200,7 +200,7 @@ Subscription pricing is managed via [castmagic.io/pricing](https://www.castmagic
 
 All plans include Magic Chat, Longform AI (10 pages/month), custom + community prompts, audiogram/clip generation, and the full output library. The differences are quota, team, storage, and API.
 
-Prices verified 2026-06-02 via [castmagic.io/pricing](https://www.castmagic.io/pricing). Audio-hour overage requires a plan upgrade; there is no published per-hour overage rate.
+Prices verified 2026-06-12 via [castmagic.io/pricing](https://www.castmagic.io/pricing). Audio-hour overage requires a plan upgrade; there is no published per-hour overage rate.
 
 ## Against the alternatives
 
@@ -229,7 +229,7 @@ The honest framing: **Castmagic + OpusClip + Descript stacks as one show's post-
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-02 against [Castmagic pricing](https://www.castmagic.io/pricing) and the [Castmagic product overview](https://www.castmagic.io/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against [Castmagic pricing](https://www.castmagic.io/pricing) and the [Castmagic product overview](https://www.castmagic.io/).
 
 ## FAQ
 

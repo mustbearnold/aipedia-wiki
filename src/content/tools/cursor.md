@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2023-03
-last_updated: 2026-06-02
-last_verified: 2026-06-02
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://cursor.com/changelog/composer-2-5"
     source_label: "Cursor Composer 2.5 changelog"
     source_id: cursor-composer-25
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-16
@@ -39,7 +39,7 @@ facts:
     source: "https://cursor.com/docs/models"
     source_label: "Cursor model docs"
     source_id: cursor-model-docs
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-16
@@ -48,7 +48,7 @@ facts:
     source: "https://cursor.com/pricing"
     source_label: "Cursor pricing"
     source_id: cursor-pricing
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-16
@@ -57,7 +57,7 @@ facts:
     source: "https://cursor.com/pricing"
     source_label: "Cursor pricing"
     source_id: cursor-pricing
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-16
@@ -66,7 +66,7 @@ facts:
     source: "https://cursor.com/pricing"
     source_label: "Cursor pricing"
     source_id: cursor-pricing
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-16
@@ -75,7 +75,7 @@ facts:
     source: "https://cursor.com/docs/models"
     source_label: "Cursor model docs"
     source_id: cursor-model-docs
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   image_generation:
@@ -83,7 +83,7 @@ facts:
     source: "https://cursor.com"
     source_label: "Cursor product page"
     source_id: cursor-docs
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
   video_generation:
@@ -91,7 +91,7 @@ facts:
     source: "https://cursor.com"
     source_label: "Cursor product page"
     source_id: cursor-docs
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
   real_time_voice:
@@ -99,7 +99,7 @@ facts:
     source: "https://cursor.com"
     source_label: "Cursor product page"
     source_id: cursor-docs
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
   web_browsing:
@@ -107,7 +107,7 @@ facts:
     source: "https://cursor.com/docs"
     source_label: "Cursor documentation"
     source_id: cursor-docs
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   coding_agent:
@@ -115,7 +115,7 @@ facts:
     source: "https://cursor.com/changelog"
     source_label: "Cursor changelog"
     source_id: cursor-changelog
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-16
@@ -124,7 +124,7 @@ facts:
     source: "https://cursor.com/pricing"
     source_label: "Cursor pricing"
     source_id: cursor-pricing
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-16
@@ -133,7 +133,7 @@ facts:
     source: "https://cursor.com/docs"
     source_label: "Cursor documentation"
     source_id: cursor-docs
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   open_source_or_local:
@@ -141,7 +141,7 @@ facts:
     source: "https://cursor.com"
     source_label: "Cursor product page"
     source_id: cursor-docs
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
   best_for:
@@ -149,7 +149,7 @@ facts:
     source: "https://cursor.com"
     source_label: "Cursor product page"
     source_id: cursor-docs
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   watch_out_for:
@@ -157,7 +157,7 @@ facts:
     source: "https://cursor.com/pricing"
     source_label: "Cursor pricing"
     source_id: cursor-pricing
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-16
@@ -316,7 +316,7 @@ Model usage inside Cursor is billed against plan usage and on-demand usage at mo
 
 The 1M-token context is flat-rate with no long-context surcharge. "Auto" mode picks a cheaper model when intelligence isn't the binding constraint.
 
-Subscription prices verified 2026-06-02 via [cursor.com/pricing](https://cursor.com/pricing). Composer 2.5 token pricing verified 2026-06-02 via [Cursor's Composer 2.5 changelog](https://cursor.com/changelog/composer-2-5). The public pricing surface keeps Hobby free, Individual starting at $20, Teams $40/user, and Enterprise custom, with Pro+/Ultra-style upgrade paths for heavier agent usage. Bugbot remains a usage-sensitive surface that teams should model before rollout.
+Subscription prices verified 2026-06-12 via [cursor.com/pricing](https://cursor.com/pricing). Composer 2.5 token pricing verified 2026-06-12 via [Cursor's Composer 2.5 changelog](https://cursor.com/changelog/composer-2-5). The public pricing surface keeps Hobby free, Individual starting at $20, Teams $40/user, and Enterprise custom, with Pro+/Ultra-style upgrade paths for heavier agent usage. Bugbot remains a usage-sensitive surface that teams should model before rollout.
 
 ## Against the alternatives
 
@@ -343,7 +343,7 @@ Subscription prices verified 2026-06-02 via [cursor.com/pricing](https://cursor.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, normalizes factual claims, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-02 against [cursor.com/pricing](https://cursor.com/pricing), [cursor.com/docs/models](https://cursor.com/docs/models), the [Cursor changelog](https://cursor.com/changelog), the [Cursor Composer 2.5 changelog](https://cursor.com/changelog/composer-2-5), and the [Cursor Gartner recognition post](https://cursor.com/blog/cursor-leads-gartner-mq-2026).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, normalizes factual claims, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against [cursor.com/pricing](https://cursor.com/pricing), [cursor.com/docs/models](https://cursor.com/docs/models), the [Cursor changelog](https://cursor.com/changelog), the [Cursor Composer 2.5 changelog](https://cursor.com/changelog/composer-2-5), and the [Cursor Gartner recognition post](https://cursor.com/blog/cursor-leads-gartner-mq-2026).
 
 ## FAQ
 

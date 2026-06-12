@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "Free signup; $15-$75/month; Enterprise custom"
 status: active
 launched: 2024-05
-last_updated: 2026-06-02
-last_verified: 2026-06-02
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: weekly
 seo_title: "Hedra Review: Pricing, Models & Best Uses (June 2026)"
 meta_description: "Hedra is a pooled-credit AI media studio for character video plus Veo, Kling, MiniMax Hailuo, image, and voice models. Current June 2026 review covers pricing, credits, best uses, and watch-outs."
@@ -34,7 +34,7 @@ facts:
     source: https://www.hedra.com/
     source_label: Hedra official site
     source_id: hedra-official
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-08-13'
@@ -43,7 +43,7 @@ facts:
     source: https://www.hedra.com/pricing
     source_label: Hedra pricing
     source_id: hedra-pricing
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-06-13'
@@ -52,7 +52,7 @@ facts:
     source: https://www.hedra.com/models
     source_label: Hedra models
     source_id: hedra-models
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-06-13'
@@ -61,7 +61,7 @@ facts:
     source: https://www.hedra.com/models
     source_label: Hedra models
     source_id: hedra-models
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-06-13'
@@ -70,7 +70,7 @@ facts:
     source: https://www.hedra.com/pricing
     source_label: Hedra pricing
     source_id: hedra-pricing
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-06-13'
@@ -147,7 +147,7 @@ Hedra is an AI creative studio for video, image, character animation, and voice 
 - **Current credit examples:** Hedra Character-3 is listed at 6 credits/second; MiniMax Hailuo 2.3 Fast Standard at 4 credits/second; MiniMax Hailuo 2.3 Fast Pro at 7; Kling 2.5 Turbo at 10; Kling 2.6 Pro at 20; Veo 3.1 Fast at 20; Veo 3.1 at 55; Sora 2 Pro at 70.
 - **Credit rollover:** subscription credits reset each billing cycle; purchased credit packs can roll over.
 
-Verified against Hedra official pages on 2026-06-02.
+Verified against Hedra official pages on 2026-06-12.
 
 ## What It Actually Is
 
@@ -200,7 +200,7 @@ Credits are not interchangeable with minutes. Hedra lists different credit rates
 
 ## Methodology
 
-AiPedia refreshed this page on 2026-06-02 using Hedra's official home page, models page, and pricing page. Older Lite/Creator/Professional pricing, stale free-credit counts, streaming-price claims, and unsupported long-form assertions were removed or replaced with current official plan and model-credit information.
+AiPedia refreshed this page on 2026-06-12 using Hedra's official home page, models page, and pricing page. Older Lite/Creator/Professional pricing, stale free-credit counts, streaming-price claims, and unsupported long-form assertions were removed or replaced with current official plan and model-credit information.
 
 ## FAQ
 

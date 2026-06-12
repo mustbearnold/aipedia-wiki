@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$29-$3,000+/month"
 status: active
 launched: 2020-10
-last_updated: 2026-06-02
-last_verified: 2026-06-02
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -30,15 +30,15 @@ facts:
     source: "https://www.copy.ai/workflows"
     source_label: "Copy.ai workflows"
     source_id: copy-ai-workflows
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
   pricing_anchor:
-    value: "Copy.ai's published self-serve plans remain Chat ($29/mo, 5 seats), Growth ($1,000/mo annual, 75 seats, 20K workflow credits), Expansion ($2,000/mo annual, 150 seats, 45K credits), and Scale ($3,000/mo annual, 200 seats, 75K credits), plus custom Enterprise. The earlier Free trial, Starter ($49/mo), and Advanced ($249/mo) tiers are still not listed on the pricing page as of the June 2, 2026 check."
+    value: "Copy.ai's published self-serve plans remain Chat ($29/mo, 5 seats), Growth ($1,000/mo annual, 75 seats, 20K workflow credits), Expansion ($2,000/mo annual, 150 seats, 45K credits), and Scale ($3,000/mo annual, 200 seats, 75K credits), plus custom Enterprise. The earlier Free trial, Starter ($49/mo), and Advanced ($249/mo) tiers are still not listed on the pricing page as of the June 12, 2026 check."
     source: "https://www.copy.ai/prices"
     source_label: "Copy.ai Pricing"
     source_id: copy-ai-official
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -47,7 +47,7 @@ facts:
     source: "https://www.copy.ai/workflows"
     source_label: "Copy.ai workflows"
     source_id: copy-ai-workflows
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   platform_positioning:
@@ -55,7 +55,7 @@ facts:
     source: "https://www.copy.ai/platform"
     source_label: "Copy.ai platform"
     source_id: copy-ai-platform
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   watch_out_for:
@@ -63,7 +63,7 @@ facts:
     source: "https://www.copy.ai/prices"
     source_label: "Copy.ai Pricing"
     source_id: copy-ai-official
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
 tags: [ai-writing, copywriting, gtm-automation, sales-copy, marketing-copy, workflows]
@@ -135,9 +135,9 @@ As of June 2, 2026 the public pricing page still lists Chat at $29/month, then j
 | **Expansion plan** | $2,000/mo billed annually ($24,000/yr) · 150 seats · 45K workflow credits/mo |
 | **Scale plan** | $3,000/mo billed annually ($36,000/yr) · 200 seats · 75K workflow credits/mo |
 | **Enterprise** | Custom · guided implementation, API access, 20+ integrations, unlimited workflows, dedicated support, enterprise security |
-| **Retired tiers** | Free trial, Starter ($49/mo), and Advanced ($249/mo) are still not listed on the pricing page as of June 2, 2026 |
+| **Retired tiers** | Free trial, Starter ($49/mo), and Advanced ($249/mo) are still not listed on the pricing page as of June 12, 2026 |
 
-Every data point above was verified against vendor documentation on 2026-06-02. See Sources.
+Every data point above was verified against vendor documentation on 2026-06-12. See Sources.
 
 ## What it actually is
 
@@ -177,7 +177,7 @@ Subscription pricing via [copy.ai/prices](https://www.copy.ai/prices). Annual bi
 | Scale | $3,000 ($36,000/yr) | 200 | 75,000/mo | Expansion features plus largest published self-serve seat and credit pool |
 | Enterprise | Custom | Custom | Custom | Guided implementation, API access, 20+ integrations, unlimited workflows, dedicated support, enterprise security |
 
-*Prices verified 2026-06-02 via [Copy.ai pricing](https://www.copy.ai/prices). Workflow features now gate at Growth, not at the retired Advanced tier. Growth, Expansion, and Scale are billed annually only. The Free trial, Starter ($49/mo), and Advanced ($249/mo) plans are no longer listed; existing customers on those plans should verify their status directly with Copy.ai. SOC 2 Type II certification applies across paid tiers.*
+*Prices verified 2026-06-12 via [Copy.ai pricing](https://www.copy.ai/prices). Workflow features now gate at Growth, not at the retired Advanced tier. Growth, Expansion, and Scale are billed annually only. The Free trial, Starter ($49/mo), and Advanced ($249/mo) plans are no longer listed; existing customers on those plans should verify their status directly with Copy.ai. SOC 2 Type II certification applies across paid tiers.*
 
 ## Against the alternatives
 
@@ -207,12 +207,12 @@ Subscription pricing via [copy.ai/prices](https://www.copy.ai/prices). Annual bi
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-02 against [Copy.ai pricing](https://www.copy.ai/prices), the [Copy.ai homepage](https://www.copy.ai/), and Copy.ai workflow documentation.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-12 against [Copy.ai pricing](https://www.copy.ai/prices), the [Copy.ai homepage](https://www.copy.ai/), and Copy.ai workflow documentation.
 
 ## FAQ
 
 **Does Copy.ai have a free plan?**
-Not as of June 2, 2026. The earlier 2-week free trial is no longer surfaced on the [Copy.ai pricing page](https://www.copy.ai/prices). The entry plan is Chat at $29/month (or $24/month on annual billing) with five seats and unlimited words in chat.
+Not as of June 12, 2026. The earlier 2-week free trial is no longer surfaced on the [Copy.ai pricing page](https://www.copy.ai/prices). The entry plan is Chat at $29/month (or $24/month on annual billing) with five seats and unlimited words in chat.
 
 **What models power Copy.ai?**
 Routed third-party frontier APIs from OpenAI, Anthropic, and Google. The platform selects per task; outputs track direct model quality with Copy.ai's formatting and brand-voice layer applied.

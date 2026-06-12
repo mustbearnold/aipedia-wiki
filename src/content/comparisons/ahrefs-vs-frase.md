@@ -9,8 +9,8 @@ seo_title: "Ahrefs vs Frase.io (June 2026): SEO Data Suite or GEO Content Workfl
 meta_description: "June 2026 Ahrefs vs Frase comparison for SEO teams: pricing, AI visibility, briefs, audits, MCP/API access, backlink data, and which plan to buy."
 description: "Ahrefs is better for SEO data, backlinks, audits, and competitor research; Frase is better for SEO/GEO briefs, optimization, AI visibility, and publishing workflow."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-02
-last_verified: 2026-06-02
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---

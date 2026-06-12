@@ -2,15 +2,15 @@
 type: comparison
 slug: aider-vs-claude-code
 title: "Aider vs Claude Code"
-description: "Aider vs Claude Code, verified June 2, 2026: open-source BYOK terminal pair-programmer versus Anthropic's Claude-native coding agent for repo work, plans, costs, and safety."
+description: "Aider vs Claude Code, verified June 12, 2026: open-source BYOK terminal pair-programmer versus Anthropic's Claude-native coding agent for repo work, plans, costs, and safety."
 tools: [aider, claude-code]
 category: ai-coding
 winner: depends
 seo_title: "Aider vs Claude Code: Open-Source CLI or Claude Coding Agent?"
 meta_description: "Aider vs Claude Code, updated June 2026: compare open-source BYOK terminal coding against Anthropic's Claude Code for repo edits, costs, model control, and team use."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-02
-last_verified: 2026-06-02
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -19,7 +19,7 @@ canonical_fact_table: true
 
 [Aider](/tools/aider/) and [Claude Code](/tools/claude-code/) both belong in the terminal-coding lane, but they answer different buyer questions. Aider is an Apache-2.0 open-source CLI that edits files in your local git repo while you bring your own model/API. Claude Code is Anthropic's Claude-native coding agent, available through Claude subscriptions, Anthropic API billing, and enterprise deployment paths.
 
-Verified June 2, 2026: Aider remains free to install, with real cost driven by the model provider you connect. Claude Code is included with Claude Pro, Max, Team, and Enterprise style access, while API-key use is billed per token. Claude Code now also has Opus 4.8 available for harder work and a research-preview dynamic-workflows lane for large parallel tasks.
+Verified June 12, 2026: Aider remains free to install, with real cost driven by the model provider you connect. Claude Code is included with Claude Pro, Max, Team, and Enterprise style access, while API-key use is billed per token. Claude Code now also has Opus 4.8 available for harder work and a research-preview dynamic-workflows lane for large parallel tasks.
 
 ## Quick Answer
 

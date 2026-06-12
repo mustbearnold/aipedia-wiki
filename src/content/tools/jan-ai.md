@@ -11,8 +11,8 @@ pricing_model: free
 price_range: "$0 core app; optional cloud-provider usage/add-ons vary"
 status: active
 launched: 2023-10
-last_updated: 2026-06-02
-last_verified: 2026-06-02
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -32,7 +32,7 @@ facts:
     source: https://jan.ai/
     source_label: Jan official site
     source_id: jan-ai-official
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -41,7 +41,7 @@ facts:
     source: https://github.com/janhq/jan
     source_label: Jan GitHub repository
     source_id: jan-ai-repository
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -50,7 +50,7 @@ facts:
     source: https://github.com/janhq/jan
     source_label: Jan GitHub repository
     source_id: jan-ai-repository
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -59,7 +59,7 @@ facts:
     source: https://jan.ai/docs
     source_label: Jan docs
     source_id: jan-ai-docs
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -69,13 +69,13 @@ facts:
     source: https://jan.ai/docs
     source_label: Jan docs
     source_id: jan-ai-docs
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
 tags: [local-llm, open-source, desktop, privacy, offline, chatgpt-alternative]
 seo_title: "Jan.ai: Features & Review (June 2026)"
-meta_description: "Jan.ai is the free open-source desktop AI app for local and cloud models. v0.8.2 shipped June 1, 2026 with faster startup, AMD ROCm/HIP on Linux, and resumable downloads. 42.8k GitHub stars as of June 2."
+meta_description: "Jan.ai is the free open-source desktop AI app for local and cloud models. v0.8.2 shipped June 12, 2026 with faster startup, AMD ROCm/HIP on Linux, and resumable downloads. 42.8k GitHub stars as of June 2."
 author: "aipedia.wiki Editorial"
 best_for:
   - users who want local AI with a clean desktop UX
@@ -109,7 +109,7 @@ The open-source ChatGPT alternative that can stay on your machine. Desktop-first
 | **License** | Open source (permissive; MIT-style) |
 | **Latest version** | v0.8.2 (published June 1, 2026) |
 | **GitHub repo** | [janhq/jan](https://github.com/janhq/jan) |
-| **GitHub stars** | 42,807 as of June 2, 2026 |
+| **GitHub stars** | 42,807 as of June 12, 2026 |
 | **Recent release focus** | Faster startup, AMD ROCm/HIP on Linux, resumable downloads, safer default context size |
 | **Platforms** | macOS, Windows, Linux |
 | **Core cost** | $0 |
@@ -144,7 +144,7 @@ Jan.ai is fundamentally free.
 | Cloud provider usage | Billed by the connected provider |
 | Optional add-ons | Verify in app before purchase |
 
-Verified 2026-06-02 via [jan.ai](https://www.jan.ai/), [Jan.ai changelog](https://www.jan.ai/changelog), and [Jan.ai GitHub](https://github.com/janhq/jan).
+Verified 2026-06-12 via [jan.ai](https://www.jan.ai/), [Jan.ai changelog](https://www.jan.ai/changelog), and [Jan.ai GitHub](https://github.com/janhq/jan).
 
 ## Failure modes
 
@@ -167,7 +167,7 @@ Verified 2026-06-02 via [jan.ai](https://www.jan.ai/), [Jan.ai changelog](https:
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-02 against [jan.ai](https://www.jan.ai/), [Jan.ai changelog](https://www.jan.ai/changelog), [Jan.ai GitHub releases](https://github.com/janhq/jan/releases), and the GitHub API for current repository activity.
+Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-12 against [jan.ai](https://www.jan.ai/), [Jan.ai changelog](https://www.jan.ai/changelog), [Jan.ai GitHub releases](https://github.com/janhq/jan/releases), and the GitHub API for current repository activity.
 
 ## FAQ
 

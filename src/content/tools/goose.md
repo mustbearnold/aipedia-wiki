@@ -11,8 +11,8 @@ pricing_model: open-source
 price_range: "Free (Apache-2.0; BYOK LLM costs)"
 status: active
 launched: 2025-01
-last_updated: 2026-06-02
-last_verified: 2026-06-02
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: frequent
 affiliate:
   has_program: false
@@ -32,7 +32,7 @@ facts:
     source: https://github.com/aaif-goose/goose
     source_label: Goose GitHub repository
     source_id: goose-repository
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -42,7 +42,7 @@ facts:
     source: https://github.com/aaif-goose/goose
     source_label: Goose GitHub repository
     source_id: goose-repository
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -51,7 +51,7 @@ facts:
     source: https://github.com/aaif-goose/goose
     source_label: Goose GitHub repository
     source_id: goose-repository
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -61,7 +61,7 @@ facts:
     source: https://block.github.io/goose/
     source_label: Goose official site
     source_id: goose-official
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -71,7 +71,7 @@ facts:
     source: https://github.com/aaif-goose/goose
     source_label: Goose GitHub repository
     source_id: goose-repository
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -144,7 +144,7 @@ Runs as a native desktop app, CLI, and API on macOS, Linux, and Windows. Support
 | **GitHub stars** | 46,000+ as of June 2026 |
 | **Pricing** | Free. Users pay their own LLM costs |
 
-Every data point above was verified against vendor documentation on 2026-06-02. See Sources.
+Every data point above was verified against vendor documentation on 2026-06-12. See Sources.
 
 ## What it actually is
 
@@ -179,7 +179,7 @@ Provider flexibility is the architectural commitment. Swap LLMs via config; work
 | CLI | Free |
 | API (self-host) | Free |
 
-*Goose itself is Apache-2.0 and free. Users pay the LLM provider directly. Verified 2026-06-02 via [GitHub](https://github.com/aaif-goose/goose) and the [official docs](https://block.github.io/goose/).*
+*Goose itself is Apache-2.0 and free. Users pay the LLM provider directly. Verified 2026-06-12 via [GitHub](https://github.com/aaif-goose/goose) and the [official docs](https://block.github.io/goose/).*
 
 ## Against the alternatives
 
@@ -206,7 +206,7 @@ Provider flexibility is the architectural commitment. Swap LLMs via config; work
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis shown. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-02 against [Goose documentation](https://block.github.io/goose/), the [aaif-goose/goose GitHub repository](https://github.com/aaif-goose/goose), and the [Block open-source announcement](https://block.xyz/inside/block-open-source-introduces-codename-goose).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis shown. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-12 against [Goose documentation](https://block.github.io/goose/), the [aaif-goose/goose GitHub repository](https://github.com/aaif-goose/goose), and the [Block open-source announcement](https://block.xyz/inside/block-open-source-introduces-codename-goose).
 
 ## FAQ
 

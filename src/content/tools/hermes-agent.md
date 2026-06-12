@@ -11,8 +11,8 @@ pricing_model: open-source
 price_range: "Free (MIT license; BYOK API costs)"
 status: active
 launched: 2026-02
-last_updated: 2026-06-02
-last_verified: 2026-06-02
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -32,7 +32,7 @@ facts:
     source: https://hermes-agent.nousresearch.com/
     source_label: Hermes Agent official site
     source_id: hermes-agent-official
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -42,7 +42,7 @@ facts:
     source: https://github.com/NousResearch/hermes-agent
     source_label: Hermes Agent GitHub repository
     source_id: hermes-agent-repository
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -51,7 +51,7 @@ facts:
     source: https://github.com/NousResearch/hermes-agent
     source_label: Hermes Agent GitHub repository
     source_id: hermes-agent-repository
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -61,7 +61,7 @@ facts:
     source: https://hermes-agent.nousresearch.com/docs
     source_label: Hermes Agent docs
     source_id: hermes-agent-docs
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -71,7 +71,7 @@ facts:
     source: https://hermes-agent.nousresearch.com/docs
     source_label: Hermes Agent docs
     source_id: hermes-agent-docs
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -145,7 +145,7 @@ As of June 2, 2026, the official GitHub release stream is at v0.15.2 and the cur
 |---|---|
 | **License** | MIT open-source (Nous Research) |
 | **Released** | February 2026 |
-| **Current version** | v0.15.2 release stream (verified June 2, 2026) |
+| **Current version** | v0.15.2 release stream (verified June 12, 2026) |
 | **Deployment** | Self-hosted/local or user-controlled infrastructure (local, Docker, SSH, Daytona, Singularity, Modal) |
 | **Platforms from one process** | CLI plus Telegram, Discord, Slack, WhatsApp, Signal, Matrix, Mattermost, Email, SMS, DingTalk, Feishu, WeCom, BlueBubbles, Home Assistant, Microsoft Teams, and more as docs evolve |
 | **Model/providers** | Nous Portal, OpenRouter, NovitaAI, NVIDIA NIM, Xiaomi MiMo, z.ai/GLM, Kimi/Moonshot, MiniMax, Hugging Face, OpenAI, and custom endpoints |
@@ -154,7 +154,7 @@ As of June 2, 2026, the official GitHub release stream is at v0.15.2 and the cur
 | **Scheduling** | Natural language cron ("daily digest at 7am") |
 | **Serverless hibernation** | Modal backend |
 
-Every data point above was verified against vendor documentation and GitHub releases on 2026-06-02. See Sources.
+Every data point above was verified against vendor documentation and GitHub releases on 2026-06-12. See Sources.
 
 ## What it actually is
 
@@ -188,7 +188,7 @@ The skill system is emergent, not pre-authored. After a multi-step task (typical
 | Model/API route | Usage-based BYOK, or optional Nous Portal subscription for model/tool routing |
 | Daytona or Modal backend | Usage-based/serverless-style persistence. Can hibernate when idle, but operators still need spend and permission controls |
 
-*Verified 2026-06-02 via the [official site/docs](https://hermes-agent.nousresearch.com/docs/) and [GitHub repository/releases](https://github.com/nousresearch/hermes-agent/releases). No mandatory subscription; Nous Portal is optional infrastructure for model/tool routing.*
+*Verified 2026-06-12 via the [official site/docs](https://hermes-agent.nousresearch.com/docs/) and [GitHub repository/releases](https://github.com/nousresearch/hermes-agent/releases). No mandatory subscription; Nous Portal is optional infrastructure for model/tool routing.*
 
 ## Against the alternatives
 
@@ -216,7 +216,7 @@ The skill system is emergent, not pre-authored. After a multi-step task (typical
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies product details against primary sources, and generates the editorial analysis shown. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-02 against the [Hermes Agent docs](https://hermes-agent.nousresearch.com/docs/), [GitHub repository](https://github.com/nousresearch/hermes-agent), [GitHub releases](https://github.com/nousresearch/hermes-agent/releases), and [Nous Research](https://nousresearch.com/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies product details against primary sources, and generates the editorial analysis shown. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-12 against the [Hermes Agent docs](https://hermes-agent.nousresearch.com/docs/), [GitHub repository](https://github.com/nousresearch/hermes-agent), [GitHub releases](https://github.com/nousresearch/hermes-agent/releases), and [Nous Research](https://nousresearch.com/).
 
 ## FAQ
 

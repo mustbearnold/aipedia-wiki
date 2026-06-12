@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "Bundled with Claude Pro ($17/mo annual or $20 monthly) and up; uses subscription limits"
 status: beta
 launched: 2026-04
-last_updated: 2026-06-02
-last_verified: 2026-06-02
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -32,7 +32,7 @@ facts:
     source: https://www.anthropic.com/news/claude-design-anthropic-labs
     source_label: Anthropic Claude Design launch page
     source_id: claude-design-official
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -41,7 +41,7 @@ facts:
     source: https://claude.com/pricing
     source_label: Claude plans and pricing
     source_id: anthropic-pricing
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -51,7 +51,7 @@ facts:
     source: https://support.anthropic.com/en/articles/11145838-using-claude-design
     source_label: Claude Design support page
     source_id: claude-design-support
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -61,7 +61,7 @@ facts:
     source: https://www.anthropic.com/news/claude-design-anthropic-labs
     source_label: Anthropic Claude Design launch page
     source_id: claude-design-official
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -70,7 +70,7 @@ facts:
     source: https://www.anthropic.com/news/claude-design-anthropic-labs
     source_label: Anthropic Claude Design launch page
     source_id: claude-design-official
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -121,7 +121,7 @@ price_history:
 
 # Claude Design
 
-Anthropic Labs' prompt-to-prototype product, launched April 17, 2026. Turns text prompts into app mockups, slide decks, marketing one-pagers, and pitch materials. Anthropic's launch page said Claude Design was powered by **Claude Opus 4.7** at launch; as of June 2, 2026, AiPedia has not found a current official source saying Claude Design has switched to a newer backing model. Bundled with Claude Pro, Max, Team, and Enterprise.
+Anthropic Labs' prompt-to-prototype product, launched April 17, 2026. Turns text prompts into app mockups, slide decks, marketing one-pagers, and pitch materials. Anthropic's launch page said Claude Design was powered by **Claude Opus 4.7** at launch; as of June 12, 2026, AiPedia has not found a current official source saying Claude Design has switched to a newer backing model. Bundled with Claude Pro, Max, Team, and Enterprise.
 
 The differentiator: Claude Design reads your **existing codebase and design files** to extract the design system (colors, typography, spacing, components) and applies it consistently across every new artifact. It exports to Canva, PDF, PPTX, standalone HTML, and organization-scoped URLs, then hands off finished prototypes to [Claude Code](/tools/claude-code/) for production builds.
 
@@ -163,7 +163,7 @@ The differentiator: Claude Design reads your **existing codebase and design file
 | **Availability** | Global, rolled out with Claude itself |
 | **Closed-loop build path** | Prompt to prototype to production code via Claude Code |
 
-Every data point verified against Anthropic announcements and Claude pricing on 2026-06-02. See Sources.
+Every data point verified against Anthropic announcements and Claude pricing on 2026-06-12. See Sources.
 
 ## What it actually is
 
@@ -208,7 +208,7 @@ Claude Design is **bundled with every paid Claude tier**. No separate subscripti
 | Team | Team pricing via Claude plan page | Access included for eligible seats |
 | Enterprise | Custom | Full access + admin controls |
 
-Prices verified 2026-06-02 against [Claude pricing](https://claude.com/pricing). The research-preview label means usage limits may adjust as Anthropic learns how people use it.
+Prices verified 2026-06-12 against [Claude pricing](https://claude.com/pricing). The research-preview label means usage limits may adjust as Anthropic learns how people use it.
 
 **No API pricing.** Claude Design is a Claude product surface, not a separately priced design API. Developers who want design automation through code should evaluate the current [Claude API](/tools/claude/) model list and pricing rather than assuming Claude Design has a standalone API SKU.
 
@@ -238,7 +238,7 @@ Prices verified 2026-06-02 against [Claude pricing](https://claude.com/pricing).
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation and multi-source news coverage, verifies facts against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-02 against Anthropic's Claude Design launch page and Claude pricing.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation and multi-source news coverage, verifies facts against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-12 against Anthropic's Claude Design launch page and Claude pricing.
 
 ## FAQ
 
@@ -264,7 +264,7 @@ PDF, PowerPoint (PPTX), shareable URL, Canva (fully editable after export), and 
 Not yet. Claude Design is labeled research preview. Anthropic is iterating rapidly; expect interface and feature changes.
 
 **Which Claude model powers it?**
-Anthropic's launch page said Claude Design was powered by Claude Opus 4.7. As of June 2, 2026, AiPedia has not found an official Claude Design source confirming a switch to Opus 4.8, so this page treats Opus 4.7 as the verified launch backing model rather than making an unsourced latest-model claim.
+Anthropic's launch page said Claude Design was powered by Claude Opus 4.7. As of June 12, 2026, AiPedia has not found an official Claude Design source confirming a switch to Opus 4.8, so this page treats Opus 4.7 as the verified launch backing model rather than making an unsourced latest-model claim.
 
 **Does it work for the enterprise?**
 Yes. Team and Enterprise tiers include Claude Design with admin controls and no-training-on-data guarantees. Enterprises with strict data residency should evaluate custom agreements.

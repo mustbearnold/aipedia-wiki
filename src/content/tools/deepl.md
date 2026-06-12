@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "Free web tier; paid Pro/API plans vary by region and volume"
 status: active
 launched: 2017-08
-last_updated: 2026-06-02
-last_verified: 2026-06-02
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 seo_title: "DeepL: Features, Pricing & Review (June 2026)"
 meta_description: "DeepL Translator and DeepL Write run on a proprietary next-gen LLM. June 2026 API plans now sell Developer, Growth, and Enterprise API; legacy API Free/API Pro are no longer generally purchasable."
@@ -35,7 +35,7 @@ facts:
     source: https://www.deepl.com/en/translator
     source_label: DeepL Translator
     source_id: deepl-translator
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -45,7 +45,7 @@ facts:
     source: https://support.deepl.com/hc/en-us/articles/360019924499-About-DeepL-plans
     source_label: DeepL plans help center
     source_id: deepl-pricing
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -55,7 +55,7 @@ facts:
     source: https://developers.deepl.com/docs
     source_label: DeepL developer documentation
     source_id: deepl-docs
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -65,7 +65,7 @@ facts:
     source: https://www.deepl.com/en/pro
     source_label: DeepL Pro
     source_id: deepl-official
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -75,7 +75,7 @@ facts:
     source: https://www.deepl.com/en/pro
     source_label: DeepL Pro
     source_id: deepl-official
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -164,7 +164,7 @@ The moat is narrow but real. DeepL shows lower edit-distance than GPT-4 or Googl
 | **CAT tool integrations** | Trados, memoQ, Across, Phrase, Wordfast, and others |
 | **Voice translation** | DeepL Voice for real-time meeting captions (Enterprise) |
 
-Every data point above was verified against vendor documentation on 2026-06-02. See Sources.
+Every data point above was verified against vendor documentation on 2026-06-12. See Sources.
 
 ## What it actually is
 
@@ -208,7 +208,7 @@ API plans via [DeepL API plans](https://support.deepl.com/hc/en-us/articles/3600
 | Legacy API Free | Existing downgrade path only | No longer generally purchasable; allows 500,000 characters/month and no Write or speech-to-text access. |
 | Legacy API Pro | Existing API Free upgrade path only | No longer generally purchasable except as an API Free upgrade; monthly fixed fee plus usage-based costs, no volume restriction, Write API and speech-to-text access. |
 
-*Plan structure verified 2026-06-02 via [DeepL API plans](https://support.deepl.com/hc/en-us/articles/360021200939-DeepL-API-plans), [About DeepL plans](https://support.deepl.com/hc/en-us/articles/360019924499-About-DeepL-plans), and [DeepL Pro](https://www.deepl.com/en/pro).*
+*Plan structure verified 2026-06-12 via [DeepL API plans](https://support.deepl.com/hc/en-us/articles/360021200939-DeepL-API-plans), [About DeepL plans](https://support.deepl.com/hc/en-us/articles/360019924499-About-DeepL-plans), and [DeepL Pro](https://www.deepl.com/en/pro).*
 
 ## Against the alternatives
 
@@ -235,7 +235,7 @@ API plans via [DeepL API plans](https://support.deepl.com/hc/en-us/articles/3600
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-02 against [DeepL Pro](https://www.deepl.com/en/pro), [About DeepL plans](https://support.deepl.com/hc/en-us/articles/360019924499-About-DeepL-plans), [DeepL API plans](https://support.deepl.com/hc/en-us/articles/360021200939-DeepL-API-plans), [DeepL Translator languages](https://support.deepl.com/hc/en-us/articles/360019925219-DeepL-Translator-languages), and the [Next-gen language model announcement](https://www.deepl.com/en/blog/next-gen-language-model).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-12 against [DeepL Pro](https://www.deepl.com/en/pro), [About DeepL plans](https://support.deepl.com/hc/en-us/articles/360019924499-About-DeepL-plans), [DeepL API plans](https://support.deepl.com/hc/en-us/articles/360021200939-DeepL-API-plans), [DeepL Translator languages](https://support.deepl.com/hc/en-us/articles/360019925219-DeepL-Translator-languages), and the [Next-gen language model announcement](https://www.deepl.com/en/blog/next-gen-language-model).
 
 ## FAQ
 

@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: "Free Flash models / GLM-5.1 API $1.40/M input, $4.40/M output"
 status: active
 launched: 2022-08
-last_updated: 2026-06-02
-last_verified: 2026-06-02
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: quarterly
 affiliate:
   has_program: false
@@ -33,7 +33,7 @@ facts:
     source: https://docs.z.ai/guides/llm/glm-5.1
     source_label: Z.AI GLM-5.1 docs
     source_id: glm-docs
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -43,7 +43,7 @@ facts:
     source: https://docs.z.ai/guides/llm/glm-5.1
     source_label: Z.AI GLM-5.1 docs
     source_id: glm-huggingface
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -53,7 +53,7 @@ facts:
     source: https://docs.z.ai/guides/overview/pricing
     source_label: Z.AI pricing
     source_id: glm-pricing
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -63,7 +63,7 @@ facts:
     source: https://docs.z.ai/guides/llm/glm-5.1
     source_label: Z.AI GLM-5.1 docs
     source_id: glm-docs
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -73,7 +73,7 @@ facts:
     source: https://huggingface.co/zai-org/GLM-5.1
     source_label: GLM-5.1 on Hugging Face
     source_id: glm-huggingface
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -83,7 +83,7 @@ facts:
     source: https://docs.z.ai/guides/llm/glm-5.1
     source_label: Z.AI GLM-5.1 docs
     source_id: glm-docs
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -133,7 +133,7 @@ Z.AI's documentation and Hugging Face model card report GLM-5.1 at 58.4 on SWE-B
 | **Free tier** | GLM-4.7-Flash and GLM-4.5-Flash free in the Z.AI pricing table |
 | **License** | MIT on GLM-5.1 weights |
 
-Every data point above was verified on 2026-06-02. See Sources.
+Every data point above was verified on 2026-06-12. See Sources.
 
 ## What it actually is
 
@@ -172,7 +172,7 @@ Usage pricing via [Z.AI pricing](https://docs.z.ai/guides/overview/pricing). Z.A
 | GLM-4.7-Flash | Free | Legacy free Flash endpoint |
 | GLM-4.5-Flash | Free | Legacy free Flash endpoint |
 
-*Prices verified 2026-06-02 via [Z.AI pricing](https://docs.z.ai/guides/overview/pricing). Self-hosting GLM-5.1 weights can avoid hosted API usage fees, but it shifts cost to GPUs, serving infrastructure, monitoring, and security review.*
+*Prices verified 2026-06-12 via [Z.AI pricing](https://docs.z.ai/guides/overview/pricing). Self-hosting GLM-5.1 weights can avoid hosted API usage fees, but it shifts cost to GPUs, serving infrastructure, monitoring, and security review.*
 
 ## Against the alternatives
 
@@ -196,7 +196,7 @@ Usage pricing via [Z.AI pricing](https://docs.z.ai/guides/overview/pricing). Z.A
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-02 against [Z.AI GLM-5.1 docs](https://docs.z.ai/guides/llm/glm-5.1), [Z.AI pricing](https://docs.z.ai/guides/overview/pricing), and [GLM-5.1 on Hugging Face](https://huggingface.co/zai-org/GLM-5.1).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-12 against [Z.AI GLM-5.1 docs](https://docs.z.ai/guides/llm/glm-5.1), [Z.AI pricing](https://docs.z.ai/guides/overview/pricing), and [GLM-5.1 on Hugging Face](https://huggingface.co/zai-org/GLM-5.1).
 
 ## FAQ
 

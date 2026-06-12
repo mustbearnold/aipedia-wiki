@@ -11,8 +11,8 @@ pricing_model: enterprise
 price_range: "Contact sales (reported ~$1,000-$1,200 per lawyer/month)"
 status: active
 launched: 2022-07
-last_updated: 2026-06-02
-last_verified: 2026-06-02
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: quarterly
 seo_title: "Harvey AI: Features, Pricing & Review (June 2026)"
 meta_description: "Harvey is the enterprise AI platform for law firms. Assistant, Vault, Knowledge, Contract Intelligence, Command Center, and Agents ground legal work on firm context. Current June 2026 review covers pricing, product updates, integrations, and risks."
@@ -36,7 +36,7 @@ facts:
     source: https://www.harvey.ai/
     source_label: Harvey official site
     source_id: harvey-official
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -47,7 +47,7 @@ facts:
     source: https://www.harvey.ai/platform
     source_label: Harvey platform
     source_id: harvey-platform
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -57,7 +57,7 @@ facts:
     source: https://www.harvey.ai/platform
     source_label: Harvey platform
     source_id: harvey-platform
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -67,7 +67,7 @@ facts:
     source: https://www.harvey.ai/security
     source_label: Harvey security
     source_id: harvey-security
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -77,7 +77,7 @@ facts:
     source: https://www.harvey.ai/blog
     source_label: Harvey blog
     source_id: harvey-blog
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -223,7 +223,7 @@ Third-party coverage has historically reported annual contract values around **$
 
 There is no free tier and no public free trial. Pilots run through enterprise sales.
 
-Prices and product surfaces reverified 2026-06-02 via the [Harvey website](https://www.harvey.ai/), current Harvey product/blog pages, and [CNBC coverage of the March 2026 funding round](https://www.cnbc.com/2026/03/25/legal-ai-startup-harvey-raises-200-million-at-11-billion-valuation.html).
+Prices and product surfaces reverified 2026-06-12 via the [Harvey website](https://www.harvey.ai/), current Harvey product/blog pages, and [CNBC coverage of the March 2026 funding round](https://www.cnbc.com/2026/03/25/legal-ai-startup-harvey-raises-200-million-at-11-billion-valuation.html).
 
 **What this buys:** Assistant, Vault, Knowledge, Agents/Workflows, Contract Intelligence, Command Center, Harvey Mobile, Shared Spaces, SOC 2 Type II and ISO 27001 compliance, and access to multiple underlying frontier models plus any custom tuning Harvey supports for the deployment.
 
@@ -253,7 +253,7 @@ Prices and product surfaces reverified 2026-06-02 via the [Harvey website](https
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-02 against the [Harvey website](https://www.harvey.ai/), Harvey's June 2 Singapore announcement, May 28 Opus 4.8 product post, Contract Intelligence and Command Center posts, the [Harvey blog post on the $11B funding round](https://www.harvey.ai/blog/harvey-raises-at-dollar11-billion-valuation-to-scale-agents-across-law-firms-and-enterprises), [CNBC coverage](https://www.cnbc.com/2026/03/25/legal-ai-startup-harvey-raises-200-million-at-11-billion-valuation.html), [Reuters reporting on the March 2026 raise](https://www.reuters.com/technology/legal-software-firm-harvey-valued-11-billion-latest-funding-round-2026-03-25/), and the [May 12 Anthropic Claude for Legal launch coverage](/news/2026-05-12-anthropic-claude-for-legal-plugins-microsoft-365/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against the [Harvey website](https://www.harvey.ai/), Harvey's June 2 Singapore announcement, May 28 Opus 4.8 product post, Contract Intelligence and Command Center posts, the [Harvey blog post on the $11B funding round](https://www.harvey.ai/blog/harvey-raises-at-dollar11-billion-valuation-to-scale-agents-across-law-firms-and-enterprises), [CNBC coverage](https://www.cnbc.com/2026/03/25/legal-ai-startup-harvey-raises-200-million-at-11-billion-valuation.html), [Reuters reporting on the March 2026 raise](https://www.reuters.com/technology/legal-software-firm-harvey-valued-11-billion-latest-funding-round-2026-03-25/), and the [May 12 Anthropic Claude for Legal launch coverage](/news/2026-05-12-anthropic-claude-for-legal-plugins-microsoft-365/).
 
 ## FAQ
 
@@ -264,7 +264,7 @@ Enterprise contracts only. Harvey publishes no list price. Third-party reporting
 Harvey runs on a mix of frontier models (OpenAI, Anthropic, Google) plus custom fine-tunes. OpenAI was the seed investor and remains the deepest partner, though Harvey is not exclusively GPT-based.
 
 **Who uses Harvey?**
-Sixty AmLaw 100 firms, over 500 in-house legal teams, 50 asset management firms, and 142,000+ professionals overall as of June 2, 2026. Named clients include A&O Shearman, Reed Smith, Vinson & Elkins, O'Melveny, CMS, Cuatrecasas, Dentons, BakerHostetler, DLA Piper, Deutsche Telekom, HSBC, NBCUniversal, and Singapore/APAC customers named in Harvey's June 2 Singapore announcement. Freshfields, Quinn Emanuel, Holland & Knight, and Crosby came in as launch customers for the Harvey-via-Claude integration on May 12, 2026.
+Sixty AmLaw 100 firms, over 500 in-house legal teams, 50 asset management firms, and 142,000+ professionals overall as of June 12, 2026. Named clients include A&O Shearman, Reed Smith, Vinson & Elkins, O'Melveny, CMS, Cuatrecasas, Dentons, BakerHostetler, DLA Piper, Deutsche Telekom, HSBC, NBCUniversal, and Singapore/APAC customers named in Harvey's June 2 Singapore announcement. Freshfields, Quinn Emanuel, Holland & Knight, and Crosby came in as launch customers for the Harvey-via-Claude integration on May 12, 2026.
 
 **Is Harvey integrated with Claude?**
 Yes. As of May 12, 2026, Harvey is a first-party MCP connector inside Anthropic's [Claude for Legal](/news/2026-05-12-anthropic-claude-for-legal-plugins-microsoft-365/). That puts Vault-grounded retrieval and Harvey Workflows inside Claude's Microsoft 365 integration (Word, Outlook, Excel, PowerPoint) alongside Relativity, Everlaw, Thomson Reuters CoCounsel, DocuSign, and Box. Harvey's primary product surface remains its own platform; the Claude integration is an additional distribution channel.

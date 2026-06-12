@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: "Free (open weights) / Tencent Cloud API variable"
 status: active
 launched: 2023-09
-last_updated: 2026-06-02
-last_verified: 2026-06-02
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -33,7 +33,7 @@ facts:
     source: https://cloud.tencent.com/product/hunyuan
     source_label: Tencent Cloud Hunyuan product
     source_id: hunyuan-cloud
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -43,7 +43,7 @@ facts:
     source: https://cloud.tencent.com/document/product/1729/97731
     source_label: Tencent Cloud Hunyuan pricing docs
     source_id: hunyuan-pricing
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -53,7 +53,7 @@ facts:
     source: https://cloud.tencent.com/document/product/1729
     source_label: Tencent Cloud Hunyuan docs
     source_id: hunyuan-docs
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -63,7 +63,7 @@ facts:
     source: https://hunyuan.tencent.com/
     source_label: Tencent Hunyuan official site
     source_id: hunyuan-official
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -73,7 +73,7 @@ facts:
     source: https://cloud.tencent.com/product/hunyuan
     source_label: Tencent Cloud Hunyuan product
     source_id: hunyuan-cloud
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -221,7 +221,7 @@ Self-hosted runs under the respective license terms. Commercial use allowed on m
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-02 against [Tencent-Hunyuan/HY-World-2.0 GitHub](https://github.com/Tencent-Hunyuan/HY-World-2.0), the [Hugging Face tencent org](https://huggingface.co/tencent), the [Hy3-preview model card](https://huggingface.co/tencent/Hy3-preview), the [HY-OmniWeaving model card](https://huggingface.co/tencent/HY-OmniWeaving), and [Tencent Cloud Hunyuan](https://cloud.tencent.com/product/hunyuan).
+Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-12 against [Tencent-Hunyuan/HY-World-2.0 GitHub](https://github.com/Tencent-Hunyuan/HY-World-2.0), the [Hugging Face tencent org](https://huggingface.co/tencent), the [Hy3-preview model card](https://huggingface.co/tencent/Hy3-preview), the [HY-OmniWeaving model card](https://huggingface.co/tencent/HY-OmniWeaving), and [Tencent Cloud Hunyuan](https://cloud.tencent.com/product/hunyuan).
 
 ## FAQ
 

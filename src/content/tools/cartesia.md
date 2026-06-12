@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$239/month + credits"
 status: active
 launched: 2023-09
-last_updated: 2026-06-02
-last_verified: 2026-06-02
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://cartesia.ai/sonic"
     source_label: "Cartesia Sonic"
     source_id: cartesia-sonic
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     next_review_at: 2026-08-13
     volatility: medium
     confidence: high
@@ -39,7 +39,7 @@ facts:
     source: "https://cartesia.ai/pricing"
     source_label: "Cartesia pricing"
     source_id: cartesia-pricing
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -48,7 +48,7 @@ facts:
     source: "https://cartesia.ai/sonic"
     source_label: "Cartesia Sonic"
     source_id: cartesia-sonic
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     next_review_at: 2026-08-13
     volatility: medium
     confidence: high
@@ -57,7 +57,7 @@ facts:
     source: "https://docs.cartesia.ai/"
     source_label: "Cartesia docs"
     source_id: cartesia-docs
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   watch_out_for:
@@ -65,7 +65,7 @@ facts:
     source: "https://cartesia.ai/pricing"
     source_label: "Cartesia pricing"
     source_id: cartesia-pricing
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
 tags: [ai-voice, tts, text-to-speech, real-time, voice-api, low-latency, voice-agents, sonic, cartesia, line]
@@ -138,7 +138,7 @@ Founded in 2023 by MIT and Carnegie Mellon researchers. Integrates natively with
 | **Pricing model** | Bundled credits + prepaid Agent dollars; TTS bills at 15 credits per second of audio; Line starts at $0.06/min |
 | **Compliance** | SOC 2 Type II, HIPAA, PCI Level 1 |
 
-Every data point above was verified against vendor sources on 2026-06-02. See Sources.
+Every data point above was verified against vendor sources on 2026-06-12. See Sources.
 
 ## What it actually is
 
@@ -177,7 +177,7 @@ The moat is the combination of architecture and integration depth. Competing TTS
 
 TTS is billed at 15 credits per second of generated audio. The current pricing page also lists professional voice cloning as a 225-credit one-time cost, Line at $0.06/min, and Cartesia-provided phone numbers at $0.014/min. UI-created agents and LLM usage during text-to-agent calls remain marked free for a limited time, so production buyers should model that as a future line item rather than permanent zero-cost usage.
 
-*Prices verified 2026-06-02 via [cartesia.ai/pricing](https://cartesia.ai/pricing) and [Cartesia docs](https://docs.cartesia.ai/).*
+*Prices verified 2026-06-12 via [cartesia.ai/pricing](https://cartesia.ai/pricing) and [Cartesia docs](https://docs.cartesia.ai/).*
 
 ## Against the alternatives
 
@@ -203,7 +203,7 @@ TTS is billed at 15 credits per second of generated audio. The current pricing p
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity). Last verified 2026-06-02 against [Cartesia pricing](https://cartesia.ai/pricing), [Cartesia Sonic](https://cartesia.ai/sonic), and [Cartesia docs](https://docs.cartesia.ai/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity). Last verified 2026-06-12 against [Cartesia pricing](https://cartesia.ai/pricing), [Cartesia Sonic](https://cartesia.ai/sonic), and [Cartesia docs](https://docs.cartesia.ai/).
 
 ## FAQ
 

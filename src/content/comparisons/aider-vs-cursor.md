@@ -2,15 +2,15 @@
 type: comparison
 slug: aider-vs-cursor
 title: "Aider vs Cursor"
-description: "Aider vs Cursor, verified June 2, 2026: open-source terminal pair-programmer versus AI-native IDE, with current workflow, pricing, model, agent, and team rollout guidance."
+description: "Aider vs Cursor, verified June 12, 2026: open-source terminal pair-programmer versus AI-native IDE, with current workflow, pricing, model, agent, and team rollout guidance."
 tools: [aider, cursor]
 category: ai-coding
 winner: depends
 seo_title: "Aider vs Cursor: CLI Agent or AI-Native IDE?"
 meta_description: "Aider vs Cursor, updated June 2026: compare open-source terminal coding with Cursor's AI IDE, Composer 2.5, agents, pricing, usage risks, and team fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-02
-last_verified: 2026-06-02
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -19,7 +19,7 @@ canonical_fact_table: true
 
 [Aider](/tools/aider/) is an open-source terminal pair-programmer that edits a local git repo and lets you choose the underlying model/provider. [Cursor](/tools/cursor/) is a proprietary AI-native code editor built around a VS Code-like workflow, with Tab completions, chat, Composer, agents, Cloud Agents, Bugbot, team administration, and usage-based model access.
 
-Verified June 2, 2026: Aider remains free as software, with cost coming from the API or local model you connect. Cursor's official pricing page lists Hobby Free, Individual starting at $20/month, Teams at $40/user/month, and Enterprise custom, while its FAQ says Pro+ is recommended for daily agent users and Ultra for agent power users. Cursor's May 2026 changelog also shipped Composer 2.5 and expanded Automations in the Agents Window.
+Verified June 12, 2026: Aider remains free as software, with cost coming from the API or local model you connect. Cursor's official pricing page lists Hobby Free, Individual starting at $20/month, Teams at $40/user/month, and Enterprise custom, while its FAQ says Pro+ is recommended for daily agent users and Ultra for agent power users. Cursor's May 2026 changelog also shipped Composer 2.5 and expanded Automations in the Agents Window.
 
 ## Quick Answer
 

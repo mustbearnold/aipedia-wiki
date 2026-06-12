@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: Free hub access; Pro $9/mo; Team $20/user/mo; Enterprise from $50/user/mo; paid compute/storage
 status: active
 launched: 2016
-last_updated: 2026-06-02
-last_verified: 2026-06-02
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -32,7 +32,7 @@ facts:
     source: https://huggingface.co/
     source_label: Hugging Face official site
     source_id: hugging-face-official
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -41,7 +41,7 @@ facts:
     source: https://huggingface.co/pricing
     source_label: Hugging Face pricing
     source_id: hugging-face-pricing
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -50,7 +50,7 @@ facts:
     source: https://huggingface.co/models
     source_label: Hugging Face model hub
     source_id: hugging-face-models
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -60,7 +60,7 @@ facts:
     source: https://huggingface.co/docs
     source_label: Hugging Face docs
     source_id: hugging-face-docs
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -70,7 +70,7 @@ facts:
     source: https://huggingface.co/models
     source_label: Hugging Face model hub
     source_id: hugging-face-models
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -180,7 +180,7 @@ If a model matters in open AI, it usually has a Hugging Face page. That makes th
 
 The hub itself has a generous free surface. Paid costs appear when teams need private collaboration, more storage, hosted Spaces compute, or production Inference Endpoints.
 
-As verified on 2026-06-02, Hugging Face lists **Pro at $9/month**, **Team at $20/user/month**, and **Enterprise starting at $50/user/month**. Paid storage is priced per TB per month (public from $12 and private from $18, with 20% to 33% volume discounts above 50TB, 200TB, and 500TB). Spaces hardware starts free on CPU Basic and ZeroGPU (RTX Pro 6000 Blackwell, up to 96GB VRAM, for PRO and Enterprise), with CPU Upgrade at $0.03/hour and paid GPU options scaling across T4, L4, L40S, A10G, A100, H100, and H200. **Inference Endpoints start at $0.033/hour for CPU** and scale through GPU options ($0.50 to $74/hour across T4 to B200) and accelerators (AWS Neuron and GCP TPU v5e at $0.75 to $12/hour).
+As verified on 2026-06-12, Hugging Face lists **Pro at $9/month**, **Team at $20/user/month**, and **Enterprise starting at $50/user/month**. Paid storage is priced per TB per month (public from $12 and private from $18, with 20% to 33% volume discounts above 50TB, 200TB, and 500TB). Spaces hardware starts free on CPU Basic and ZeroGPU (RTX Pro 6000 Blackwell, up to 96GB VRAM, for PRO and Enterprise), with CPU Upgrade at $0.03/hour and paid GPU options scaling across T4, L4, L40S, A10G, A100, H100, and H200. **Inference Endpoints start at $0.033/hour for CPU** and scale through GPU options ($0.50 to $74/hour across T4 to B200) and accelerators (AWS Neuron and GCP TPU v5e at $0.75 to $12/hour).
 
 This makes Hugging Face flexible but less predictable than a simple per-request API if the team leaves endpoints or upgraded Spaces running. Budget by storage, collaboration plan, demo hardware, inference providers, and dedicated endpoint uptime separately.
 
@@ -210,7 +210,7 @@ It is weaker when the buyer wants one opinionated application. Hugging Face give
 
 ## Methodology
 
-Last verified 2026-06-02 against the Hugging Face [pricing](https://huggingface.co/pricing) and [Inference Endpoints](https://huggingface.co/docs/inference-endpoints/en/pricing) surfaces. Scoring reflects ecosystem centrality, utility for open AI, low entry cost, and long-term durability.
+Last verified 2026-06-12 against the Hugging Face [pricing](https://huggingface.co/pricing) and [Inference Endpoints](https://huggingface.co/docs/inference-endpoints/en/pricing) surfaces. Scoring reflects ecosystem centrality, utility for open AI, low entry cost, and long-term durability.
 
 ## FAQ
 

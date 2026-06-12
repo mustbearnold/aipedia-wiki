@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: $0-$40/user/month
 status: active
 launched: 2017-01
-last_updated: 2026-06-02
-last_verified: 2026-06-02
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 seo_title: 'ClickUp: Features, Pricing & Review (June 2026)'
 meta_description: >-
@@ -38,7 +38,7 @@ facts:
     source: https://clickup.com/
     source_label: ClickUp official site
     source_id: clickup-official
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -48,7 +48,7 @@ facts:
     source: https://clickup.com/pricing
     source_label: ClickUp pricing
     source_id: clickup-pricing
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -58,7 +58,7 @@ facts:
     source: https://clickup.com/ai
     source_label: ClickUp Brain product page
     source_id: clickup-brain
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -68,7 +68,7 @@ facts:
     source: https://clickup.com/
     source_label: ClickUp official site
     source_id: clickup-official
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -78,7 +78,7 @@ facts:
     source: https://clickup.com/pricing
     source_label: ClickUp pricing
     source_id: clickup-pricing
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -164,7 +164,7 @@ ClickUp is the productivity workspace that bundles tasks, docs, chat, whiteboard
 | **Data residency** | US (default) · EU · AU (Enterprise) |
 | **Mobile** | iOS and Android apps |
 
-Every data point above verified against ClickUp's published sources on 2026-06-02.
+Every data point above verified against ClickUp's published sources on 2026-06-12.
 
 ## What it actually is
 
@@ -209,7 +209,7 @@ AI add-ons (sit on top of any paid plan):
 | Everything AI | $28/user/mo | Brain + ambient answers, talk-to-text, AI notetaker, image generation, AI fields, AI automations, AI dashboards, 5,000 AI Super Credits |
 | AI Super Credits | Pay-as-you-go | $0.001 to $10 per 10,000 credits (depends on model used) |
 
-Prices verified 2026-06-02 via [ClickUp pricing](https://clickup.com/pricing) and [ClickUp Brain](https://clickup.com/brain). Annual billing saves up to 30% vs monthly. 100% money-back guarantee advertised on the public pricing page.
+Prices verified 2026-06-12 via [ClickUp pricing](https://clickup.com/pricing) and [ClickUp Brain](https://clickup.com/brain). Annual billing saves up to 30% vs monthly. 100% money-back guarantee advertised on the public pricing page.
 
 ## Against the alternatives
 
@@ -236,7 +236,7 @@ Prices verified 2026-06-02 via [ClickUp pricing](https://clickup.com/pricing) an
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-02 against [ClickUp pricing](https://clickup.com/pricing), [ClickUp Brain](https://clickup.com/brain), and the [ClickUp Everything App overview](https://clickup.com/everything-app).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against [ClickUp pricing](https://clickup.com/pricing), [ClickUp Brain](https://clickup.com/brain), and the [ClickUp Everything App overview](https://clickup.com/everything-app).
 
 ## FAQ
 

@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$100/month+ (annual billing)"
 status: active
 launched: 2013-01
-last_updated: 2026-06-02
-last_verified: 2026-06-02
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: https://www.framer.com/ai/
     source_label: Framer AI
     source_id: framer-ai
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-04'
@@ -41,7 +41,7 @@ facts:
     source: https://www.framer.com/pricing/
     source_label: Framer pricing
     source_id: framer-pricing
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-04'
@@ -51,7 +51,7 @@ facts:
     source: https://www.framer.com/ai/
     source_label: Framer AI
     source_id: framer-ai
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-04'
@@ -61,7 +61,7 @@ facts:
     source: https://www.framer.com/help/
     source_label: Framer help
     source_id: framer-help
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-04'
@@ -71,7 +71,7 @@ facts:
     source: https://www.framer.com/
     source_label: Framer official site
     source_id: framer-official
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-04'
@@ -157,7 +157,7 @@ The product ships a full site from a single prompt. Webflow still has no equival
 | **Hosting** | Included across all paid tiers, custom domains from Basic |
 | **Tiers (June 2026)** | Free · Basic $10 · Pro $30 · Scale $100+usage · Enterprise (paid public prices shown as annual billing) |
 
-Every data point above was verified against vendor documentation on 2026-06-02. See Sources.
+Every data point above was verified against vendor documentation on 2026-06-12. See Sources.
 
 ## What it actually is
 
@@ -198,7 +198,7 @@ Subscription pricing via [framer.com/pricing](https://framer.com/pricing). Frame
 
 Add-ons: Translation locales $20/locale · Convert A/B testing $50 per 500K events · Advanced Hosting $200/mo.
 
-*Prices verified 2026-06-02 via [framer.com/pricing](https://framer.com/pricing). Tiers reflect the current ladder that retired Mini ($5) and Business ($75). Basic and Pro are fixed-limit site plans; Scale is annual-only and usage-aware.*
+*Prices verified 2026-06-12 via [framer.com/pricing](https://framer.com/pricing). Tiers reflect the current ladder that retired Mini ($5) and Business ($75). Basic and Pro are fixed-limit site plans; Scale is annual-only and usage-aware.*
 
 ## Against the alternatives
 
@@ -225,7 +225,7 @@ Add-ons: Translation locales $20/locale · Convert A/B testing $50 per 500K even
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-02 against [framer.com/pricing](https://framer.com/pricing), [framer.com/ai](https://framer.com/ai), [framer.com/features](https://framer.com/features), and the Framer resource surface. Pricing reflects the current Free / Basic $10 / Pro $30 / Scale $100+usage / Enterprise ladder.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-12 against [framer.com/pricing](https://framer.com/pricing), [framer.com/ai](https://framer.com/ai), [framer.com/features](https://framer.com/features), and the Framer resource surface. Pricing reflects the current Free / Basic $10 / Pro $30 / Scale $100+usage / Enterprise ladder.
 
 ## FAQ
 

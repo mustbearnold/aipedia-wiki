@@ -9,8 +9,8 @@ url: https://eightfold.ai/products/talent-acquisition/
 pricing_model: enterprise
 price_range: "Custom enterprise"
 status: active
-last_updated: 2026-06-02
-last_verified: 2026-06-02
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -29,7 +29,7 @@ facts:
     source: "https://eightfold.ai/products/talent-acquisition/"
     source_label: "Eightfold Talent Acquisition"
     source_id: eightfold-talent-acquisition
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -37,7 +37,7 @@ facts:
     source: "https://eightfold.ai/products/"
     source_label: "Eightfold products"
     source_id: eightfold-products
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: high
     confidence: medium
     next_review_at: 2026-09-02
@@ -46,7 +46,7 @@ facts:
     source: "https://eightfold.ai/products/"
     source_label: "Eightfold products"
     source_id: eightfold-products
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
 tags: [talent-intelligence, recruiting, skills, workforce-planning, internal-mobility]
@@ -154,7 +154,7 @@ Eightfold should be evaluated like an enterprise HR platform, not like a point r
 
 ## AiPedia Trust Note
 
-This page was refreshed on June 2, 2026 using Eightfold's current Talent Acquisition, product overview, AI Interviewer, TalentForge, and interview-lifecycle launch materials. AiPedia does not list a paid affiliate program for Eightfold. Scores reflect buyer usefulness, implementation risk, defensibility, and likely durability rather than vendor hype.
+This page was refreshed on June 12, 2026 using Eightfold's current Talent Acquisition, product overview, AI Interviewer, TalentForge, and interview-lifecycle launch materials. AiPedia does not list a paid affiliate program for Eightfold. Scores reflect buyer usefulness, implementation risk, defensibility, and likely durability rather than vendor hype.
 
 ## Sources
 

@@ -9,8 +9,8 @@ seo_title: "Adobe Firefly vs Midjourney (June 2026): Which Is Better?"
 meta_description: "June 2026 comparison of Adobe Firefly and Midjourney by aesthetics, commercial safety, pricing, V7/V8.1 status, privacy, Adobe workflow, and buyer fit."
 description: "Adobe Firefly is better for Adobe-native commercial production; Midjourney is better for visual ideation, moodboards, and aesthetic exploration."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-02
-last_verified: 2026-06-02
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -105,12 +105,12 @@ Yes. This is often the best workflow: Midjourney for concepts and visual taste, 
 
 ## Sources
 
-- [Adobe Firefly plans](https://www.adobe.com/products/firefly/plans.html) (verified 2026-06-02)
-- [Adobe Firefly product page](https://www.adobe.com/products/firefly.html) (verified 2026-06-02)
-- [Adobe Firefly creative-agent update](https://news.adobe.com/news/2026/04/adobe-new-creative-agent) (verified 2026-06-02)
-- [Midjourney plan comparison docs](https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans) (verified 2026-06-02)
-- [Midjourney version docs](https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version) (verified 2026-06-02)
-- [Midjourney V8.1 update](https://updates.midjourney.com/v8-1-updates/) (verified 2026-06-02)
-- [Midjourney terms](https://docs.midjourney.com/hc/en-us/articles/32083055291277-Terms-of-Service) (verified 2026-06-02)
+- [Adobe Firefly plans](https://www.adobe.com/products/firefly/plans.html) (verified 2026-06-12)
+- [Adobe Firefly product page](https://www.adobe.com/products/firefly.html) (verified 2026-06-12)
+- [Adobe Firefly creative-agent update](https://news.adobe.com/news/2026/04/adobe-new-creative-agent) (verified 2026-06-12)
+- [Midjourney plan comparison docs](https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans) (verified 2026-06-12)
+- [Midjourney version docs](https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version) (verified 2026-06-12)
+- [Midjourney V8.1 update](https://updates.midjourney.com/v8-1-updates/) (verified 2026-06-12)
+- [Midjourney terms](https://docs.midjourney.com/hc/en-us/articles/32083055291277-Terms-of-Service) (verified 2026-06-12)
 - [Adobe Firefly review](/tools/adobe-firefly/) (verified 2026-05-26)
 - [Midjourney review](/tools/midjourney/) (verified 2026-05-13)

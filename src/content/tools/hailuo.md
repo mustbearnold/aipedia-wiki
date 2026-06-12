@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "Free app access plus paid creator plans; MiniMax video API packages from $1,000"
 status: active
 launched: 2024-03
-last_updated: 2026-06-02
-last_verified: 2026-06-02
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: weekly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://hailuoai.video/"
     source_label: "Hailuo AI official site"
     source_id: hailuo-official
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-13
@@ -39,7 +39,7 @@ facts:
     source: "https://www.minimax.io/news/minimax-hailuo-23"
     source_label: "MiniMax Hailuo 2.3 launch"
     source_id: hailuo-23-launch
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-13
@@ -48,7 +48,7 @@ facts:
     source: "https://platform.minimax.io/docs/api-reference/video-generation-intro"
     source_label: "MiniMax video generation API docs"
     source_id: minimax-video-api
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-13
@@ -57,7 +57,7 @@ facts:
     source: "https://platform.minimax.io/docs/guides/pricing-video"
     source_label: "MiniMax video package pricing"
     source_id: minimax-video-packages
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-13
@@ -66,13 +66,13 @@ facts:
     source: "https://hailuoai.video/subscribe"
     source_label: "Hailuo AI pricing"
     source_id: hailuo-pricing
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: high
     confidence: medium
     next_review_at: 2026-06-13
 tags: [ai-video, text-to-video, image-to-video, hailuo, minimax, chinese-ai, video-generation, api-video]
 seo_title: "Hailuo AI Review: Pricing, Models & Best Uses (June 2026)"
-meta_description: "Hailuo AI review updated June 2, 2026. Compare Hailuo 2.3, Hailuo 2.3 Fast, MiniMax API package pricing, token plans, best use cases, risks, and alternatives."
+meta_description: "Hailuo AI review updated June 12, 2026. Compare Hailuo 2.3, Hailuo 2.3 Fast, MiniMax API package pricing, token plans, best use cases, risks, and alternatives."
 author: "aipedia.wiki Editorial"
 best_for:
   - low-cost short-form social video experiments
@@ -180,7 +180,7 @@ MiniMax also publishes unit deductions by model, resolution, and duration. That 
 
 ## Methodology
 
-AiPedia re-verified this page on **June 2, 2026** using official MiniMax and Hailuo sources. The editorial score prioritizes buyer utility, value, moat, and longevity. Claims about current models, API access, token plans, and package pricing are anchored to primary sources, while Hailuo app-specific allowances are treated as volatile because the official app pricing surface is dynamic.
+AiPedia re-verified this page on **June 12, 2026** using official MiniMax and Hailuo sources. The editorial score prioritizes buyer utility, value, moat, and longevity. Claims about current models, API access, token plans, and package pricing are anchored to primary sources, while Hailuo app-specific allowances are treated as volatile because the official app pricing surface is dynamic.
 
 ## FAQ
 

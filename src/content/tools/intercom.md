@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$29-$132/seat/month"
 status: active
 launched: 2011-08
-last_updated: 2026-06-02
-last_verified: 2026-06-02
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://www.intercom.com"
     source_label: "Intercom official site"
     source_id: intercom-official
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   ai_agent_surface:
@@ -38,7 +38,7 @@ facts:
     source: "https://fin.ai/"
     source_label: "Fin by Intercom"
     source_id: intercom-fin
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -47,7 +47,7 @@ facts:
     source: "https://www.intercom.com/pricing"
     source_label: "Intercom pricing"
     source_id: intercom-pricing
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -56,7 +56,7 @@ facts:
     source: "https://www.intercom.com"
     source_label: "Intercom official site"
     source_id: intercom-official
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: medium
     confidence: medium
   watch_out_for:
@@ -64,7 +64,7 @@ facts:
     source: "https://www.intercom.com/pricing"
     source_label: "Intercom pricing"
     source_id: intercom-pricing
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -137,7 +137,7 @@ Seat pricing runs $29 to $132 per seat per month on annual billing, or $39 to $1
 | **Proactive Support Plus add-on** | $99/mo · 500 outbound messages |
 | **Startup discount** | Up to 90% off + 1 year of Fin free via Early Stage program |
 
-Every data point above was verified against Intercom's pricing pages on 2026-06-02. See Sources.
+Every data point above was verified against Intercom's pricing pages on 2026-06-12. See Sources.
 
 ## What it actually is
 
@@ -173,7 +173,7 @@ Subscription pricing via [intercom.com/pricing](https://www.intercom.com/pricing
 | Advanced | $85 | $99 | $0.99 per outcome | $29/agent/mo | 20 free |
 | Expert | $132 | $139 | $0.99 per outcome | $29/agent/mo | 50 free |
 
-*Prices verified 2026-06-02 via [intercom.com/pricing](https://www.intercom.com/pricing). Annual billing saves 5-26% vs monthly. Fin outcomes billed on usage across all plans. Proactive Support Plus is an optional $99/mo add-on with 500 outbound messages. Pro add-on at $99/mo analyzes up to 1,000 conversations/mo for QA and coaching. Early Stage startup program offers up to 90% off plus one year of Fin free.*
+*Prices verified 2026-06-12 via [intercom.com/pricing](https://www.intercom.com/pricing). Annual billing saves 5-26% vs monthly. Fin outcomes billed on usage across all plans. Proactive Support Plus is an optional $99/mo add-on with 500 outbound messages. Pro add-on at $99/mo analyzes up to 1,000 conversations/mo for QA and coaching. Early Stage startup program offers up to 90% off plus one year of Fin free.*
 
 **Real cost math.** A 5-seat Advanced team with Copilot for 3 agents and 1,000 Fin outcomes/mo runs roughly $512 (seats and Copilot at $29) plus $990 (Fin) for $1,502/mo. Heavy volume scales linearly with outcomes.
 
@@ -204,7 +204,7 @@ Subscription pricing via [intercom.com/pricing](https://www.intercom.com/pricing
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-02 against [Intercom pricing](https://www.intercom.com/pricing), [Fin AI Agent pricing](https://fin.ai/pricing), and the [Fin AI Copilot announcement](https://www.intercom.com/blog/announcing-fin-ai-copilot/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against [Intercom pricing](https://www.intercom.com/pricing), [Fin AI Agent pricing](https://fin.ai/pricing), and the [Fin AI Copilot announcement](https://www.intercom.com/blog/announcing-fin-ai-copilot/).
 
 ## FAQ
 

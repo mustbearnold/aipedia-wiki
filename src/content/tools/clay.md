@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0; Launch from $167/mo annual or $185/mo monthly; Growth from $446/mo annual or $495/mo monthly; Enterprise custom"
 status: active
 launched: 2021-01
-last_updated: 2026-06-02
-last_verified: 2026-06-02
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://www.clay.com"
     source_label: "Clay overview"
     source_id: clay-home
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
   pricing_anchor:
@@ -38,7 +38,7 @@ facts:
     source: "https://www.clay.com/pricing"
     source_label: "Clay Pricing"
     source_id: clay-official
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     next_review_at: 2026-09-02
     volatility: high
     confidence: high
@@ -47,7 +47,7 @@ facts:
     source: "https://www.clay.com/integrations"
     source_label: "Clay integrations"
     source_id: clay-integrations
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   ai_research_agent:
@@ -55,7 +55,7 @@ facts:
     source: "https://www.clay.com/pricing"
     source_label: "Clay Pricing"
     source_id: clay-official
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     next_review_at: 2026-09-02
     volatility: medium
     confidence: high
@@ -64,7 +64,7 @@ facts:
     source: "https://www.clay.com/university"
     source_label: "Clay University"
     source_id: clay-university
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   watch_out_for:
@@ -72,7 +72,7 @@ facts:
     source: "https://www.clay.com/pricing"
     source_label: "Clay Pricing"
     source_id: clay-official
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
 tags: [data-enrichment, sales-automation, lead-generation, gtm-automation, outreach]
@@ -232,7 +232,7 @@ Clay pricing and packaging are volatile, so AiPedia treats it as a monthly revie
 
 ## Sources
 
-- [Clay pricing](https://www.clay.com/pricing) (verified 2026-06-02: Free, annual-card Launch $167+, annual-card Growth $446+, FAQ monthly starts $185/$495, Enterprise custom; action and credit allocations as listed above)
+- [Clay pricing](https://www.clay.com/pricing) (verified 2026-06-12: Free, annual-card Launch $167+, annual-card Growth $446+, FAQ monthly starts $185/$495, Enterprise custom; action and credit allocations as listed above)
 - [Clay integrations](https://www.clay.com/integrations)
 - [Clay University](https://www.clay.com/university)
 - [Clay official site](https://www.clay.com/)

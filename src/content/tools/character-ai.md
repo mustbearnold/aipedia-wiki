@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0 free / $9.99/mo c.ai+"
 status: active
 launched: 2022-09
-last_updated: 2026-06-02
-last_verified: 2026-06-02
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,16 +30,16 @@ facts:
     source: https://character.ai/
     source_label: Character.AI official site
     source_id: character-ai-official
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
   pricing_anchor:
-    value: c.ai+ is $9.99/mo or $94.99/year (20% off vs $119.88), re-verified on 2026-06-02. Verify current bundles before quoting.
+    value: c.ai+ is $9.99/mo or $94.99/year (20% off vs $119.88), re-verified on 2026-06-12. Verify current bundles before quoting.
     source: https://character.ai/subscription/plus/pricing
     source_label: Character.AI c.ai+ pricing
     source_id: character-ai-pricing
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -48,7 +48,7 @@ facts:
     source: https://character.ai/about
     source_label: Character.AI about
     source_id: character-ai-about
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -58,7 +58,7 @@ facts:
     source: https://support.character.ai/
     source_label: Character.AI help center
     source_id: character-ai-support
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -68,7 +68,7 @@ facts:
     source: https://character.ai/
     source_label: Character.AI official site
     source_id: character-ai-official
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -159,7 +159,7 @@ The largest user-generated AI character platform on the internet. Over 10 millio
 | c.ai+ (monthly) | $9.99/mo | Better memory, ad-free, Charms bonus, no slow mode, unlimited voice calls, latest models, early-access features |
 | c.ai+ (annual) | $94.99/year (~$7.92/mo) | Same as monthly, 20% savings vs $119.88 |
 
-Prices verified 2026-06-02 via [character.ai/subscription/plus/pricing](https://character.ai/subscription/plus/pricing).
+Prices verified 2026-06-12 via [character.ai/subscription/plus/pricing](https://character.ai/subscription/plus/pricing).
 
 ## Failure modes
 
@@ -171,7 +171,7 @@ Prices verified 2026-06-02 via [character.ai/subscription/plus/pricing](https://
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-02 against the [character.ai pricing page](https://character.ai/subscription/plus/pricing) and [StartupHub.ai 2026 review](https://www.startuphub.ai/ai-news/reviews/2026/character-ai-review-2026). Scoring uses the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/).
+Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-12 against the [character.ai pricing page](https://character.ai/subscription/plus/pricing) and [StartupHub.ai 2026 review](https://www.startuphub.ai/ai-news/reviews/2026/character-ai-review-2026). Scoring uses the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/).
 
 ## FAQ
 

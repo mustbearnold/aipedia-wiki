@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$10/month billed annually"
 status: active
 launched: 2020-06
-last_updated: 2026-06-02
-last_verified: 2026-06-02
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://www.connectedpapers.com/about"
     source_label: "Connected Papers about"
     source_id: connected-papers-about
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
   pricing_anchor:
@@ -38,7 +38,7 @@ facts:
     source: "https://www.connectedpapers.com/pricing"
     source_label: "Connected Papers pricing"
     source_id: connected-papers-pricing
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     next_review_at: 2026-09-02
     volatility: high
     confidence: high
@@ -47,7 +47,7 @@ facts:
     source: "https://www.connectedpapers.com/main"
     source_label: "Connected Papers graph search"
     source_id: connected-papers-main
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   research_positioning:
@@ -55,7 +55,7 @@ facts:
     source: "https://www.connectedpapers.com/about"
     source_label: "Connected Papers about"
     source_id: connected-papers-about
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
   watch_out_for:
@@ -63,7 +63,7 @@ facts:
     source: "https://www.connectedpapers.com/pricing"
     source_label: "Connected Papers pricing"
     source_id: connected-papers-pricing
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
 tags: [academic-search, research, visualization, citations, paper-graph, literature-review]
@@ -169,7 +169,7 @@ The moat is thin. The similarity algorithm is proprietary but the underlying dat
 | Academic | $3/mo (billed annually) | Unlimited | Batch operations, graph export, metadata export |
 | Business | $120/year | Unlimited | Business and industry use |
 
-*Prices verified 2026-06-02 via [Connected Papers pricing](https://www.connectedpapers.com/pricing). Free tier requires no signup. Academic and Business are billed annually.*
+*Prices verified 2026-06-12 via [Connected Papers pricing](https://www.connectedpapers.com/pricing). Free tier requires no signup. Academic and Business are billed annually.*
 
 ## Against the alternatives
 
@@ -195,7 +195,7 @@ The moat is thin. The similarity algorithm is proprietary but the underlying dat
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the analysis above. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-02 against [Connected Papers pricing](https://www.connectedpapers.com/pricing), [Connected Papers about](https://www.connectedpapers.com/about), and [Semantic Scholar about](https://www.semanticscholar.org/about).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the analysis above. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against [Connected Papers pricing](https://www.connectedpapers.com/pricing), [Connected Papers about](https://www.connectedpapers.com/about), and [Semantic Scholar about](https://www.semanticscholar.org/about).
 
 ## FAQ
 

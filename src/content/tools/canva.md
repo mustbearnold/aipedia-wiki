@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "Free; Pro and Business pricing is region-rendered; Enterprise custom"
 status: active
 launched: 2013-01
-last_updated: 2026-06-02
-last_verified: 2026-06-02
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 seo_title: "Canva: Features, Pricing & Review (June 2026)"
 meta_description: "Canva is the design platform for non-designers. June 2026 review covers Canva AI 2.0, Pro, Business, Enterprise, AI Pass, regional pricing, brand kits, storage, and alternatives."
@@ -35,7 +35,7 @@ facts:
     source: "https://www.canva.com/canva-ai/"
     source_label: "Canva AI"
     source_id: canva-ai
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-13
@@ -44,7 +44,7 @@ facts:
     source: "https://www.canva.com/canva-ai/"
     source_label: "Canva AI"
     source_id: canva-ai
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
     next_review_at: 2026-06-13
@@ -53,7 +53,7 @@ facts:
     source: "https://www.canva.com/pricing/"
     source_label: "Canva pricing"
     source_id: canva-pricing
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-13
@@ -62,7 +62,7 @@ facts:
     source: "https://www.canva.com/pricing/"
     source_label: "Canva pricing"
     source_id: canva-pricing
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-13
@@ -71,7 +71,7 @@ facts:
     source: "https://www.canva.com/pricing/"
     source_label: "Canva pricing"
     source_id: canva-pricing
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-13
@@ -80,7 +80,7 @@ facts:
     source: "https://www.canva.com/pricing/"
     source_label: "Canva pricing"
     source_id: canva-pricing
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-13
@@ -89,7 +89,7 @@ facts:
     source: "https://www.canva.com/canva-ai/"
     source_label: "Canva AI"
     source_id: canva-ai
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-13
@@ -98,7 +98,7 @@ facts:
     source: "https://www.canva.com/canva-ai/"
     source_label: "Canva AI"
     source_id: canva-ai
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-13
@@ -107,7 +107,7 @@ facts:
     source: "https://www.canva.com/canva-ai/"
     source_label: "Canva AI"
     source_id: canva-ai
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
   web_browsing:
@@ -115,7 +115,7 @@ facts:
     source: "https://www.canva.com/canva-ai/"
     source_label: "Canva AI"
     source_id: canva-ai
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
   coding_agent:
@@ -123,7 +123,7 @@ facts:
     source: "https://www.canva.com/canva-ai/"
     source_label: "Canva AI"
     source_id: canva-ai
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
   enterprise_controls:
@@ -131,7 +131,7 @@ facts:
     source: "https://www.canva.com/pricing/"
     source_label: "Canva pricing"
     source_id: canva-pricing
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-13
@@ -140,7 +140,7 @@ facts:
     source: "https://www.canva.com/pricing/"
     source_label: "Canva pricing"
     source_id: canva-pricing
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   open_source_or_local:
@@ -148,7 +148,7 @@ facts:
     source: "https://www.canva.com/"
     source_label: "Canva product page"
     source_id: canva-ai
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
   best_for:
@@ -156,7 +156,7 @@ facts:
     source: "https://www.canva.com/canva-ai/"
     source_label: "Canva AI"
     source_id: canva-ai
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   watch_out_for:
@@ -164,7 +164,7 @@ facts:
     source: "https://www.canva.com/pricing/"
     source_label: "Canva pricing"
     source_id: canva-pricing
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-13
@@ -236,7 +236,7 @@ The old "templates plus Magic Studio" story is now too small. Canva's June 2026 
 | **Affiliate program** | No standard publisher affiliate route verified; Canvassador route is creator/education oriented |
 | **Launched** | 2013 |
 
-Every data point above was verified against vendor sources on 2026-06-02. See Sources.
+Every data point above was verified against vendor sources on 2026-06-12. See Sources.
 
 ## What it actually is
 
@@ -274,7 +274,7 @@ Subscription pricing via [canva.com/pricing](https://www.canva.com/pricing/). Ca
 | Business | Region-rendered per person | 20x Free AI allowance; AI Pass add-on available | 500GB | Individuals or teams needing collaboration, approvals, and growth tools |
 | Enterprise | Custom | 20x Free AI allowance, governance controls | 1TB | SSO, SCIM, custom apps, tiered approvals, multi-team management |
 
-*Plan structure verified 2026-06-02 via [Canva pricing](https://www.canva.com/pricing/) and [Canva AI](https://www.canva.com/canva-ai/). The crawl rendered local annual pricing, not a stable global USD table, so verify the live account flow for your country before budgeting.*
+*Plan structure verified 2026-06-12 via [Canva pricing](https://www.canva.com/pricing/) and [Canva AI](https://www.canva.com/canva-ai/). The crawl rendered local annual pricing, not a stable global USD table, so verify the live account flow for your country before budgeting.*
 
 ## Against the alternatives
 
@@ -301,7 +301,7 @@ Subscription pricing via [canva.com/pricing](https://www.canva.com/pricing/). Ca
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-02 against [Canva pricing](https://www.canva.com/pricing/) and [Canva AI](https://www.canva.com/canva-ai/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against [Canva pricing](https://www.canva.com/pricing/) and [Canva AI](https://www.canva.com/canva-ai/).
 
 ## FAQ
 

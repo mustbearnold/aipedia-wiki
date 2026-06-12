@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$45/month; Teams/Enterprise custom"
 status: active
 launched: 2021-11
-last_updated: 2026-06-02
-last_verified: 2026-06-02
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -34,7 +34,7 @@ facts:
     source: "https://consensus.app"
     source_label: "Consensus official site"
     source_id: consensus-official
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   evidence_surface:
@@ -42,7 +42,7 @@ facts:
     source: "https://consensus.app"
     source_label: "Consensus official site"
     source_id: consensus-official
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -50,7 +50,7 @@ facts:
     source: "https://consensus.app/pricing"
     source_label: "Consensus pricing"
     source_id: consensus-pricing
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     next_review_at: 2026-09-02
     volatility: high
     confidence: high
@@ -59,7 +59,7 @@ facts:
     source: "https://consensus.app"
     source_label: "Consensus official site"
     source_id: consensus-official
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: medium
     confidence: medium
   watch_out_for:
@@ -67,7 +67,7 @@ facts:
     source: "https://consensus.app"
     source_label: "Consensus official site"
     source_id: consensus-official
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
 tags: [research, academic-search, peer-review, evidence-synthesis, science, consensus-meter]
@@ -119,7 +119,7 @@ June 2, 2026 pricing check: the old `$11.99/mo Premium` language is no longer th
 | **User base** | 5M+ users across 10,000+ universities |
 | **Coverage bias** | Strongest in biomedical and social science |
 
-Every data point above was verified against vendor documentation on 2026-06-02. See Sources.
+Every data point above was verified against vendor documentation on 2026-06-12. See Sources.
 
 ## What it actually is
 
@@ -157,7 +157,7 @@ Pricing via [consensus.app/pricing](https://consensus.app/pricing):
 | Deep | $45/mo annual ($540/yr) | 200 Deep reviews/month and the Pro feature set |
 | Teams / Enterprise | Custom | Centralized billing, team/institutional access, admin and higher-volume paths |
 
-Prices verified 2026-06-02 via [Consensus pricing](https://consensus.app/pricing) and the [Consensus Pro subscription help page](https://help.consensus.app/en/articles/11408820-what-do-you-get-with-a-pro-subscription).
+Prices verified 2026-06-12 via [Consensus pricing](https://consensus.app/pricing) and the [Consensus Pro subscription help page](https://help.consensus.app/en/articles/11408820-what-do-you-get-with-a-pro-subscription).
 
 ## Against the alternatives
 
@@ -181,7 +181,7 @@ Prices verified 2026-06-02 via [Consensus pricing](https://consensus.app/pricing
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-02 against [Consensus pricing](https://consensus.app/pricing), the [Consensus Pro subscription help page](https://help.consensus.app/en/articles/11408820-what-do-you-get-with-a-pro-subscription), and [Consensus for university libraries](https://consensus.app/home/blog/consensus-for-university-libraries/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against [Consensus pricing](https://consensus.app/pricing), the [Consensus Pro subscription help page](https://help.consensus.app/en/articles/11408820-what-do-you-get-with-a-pro-subscription), and [Consensus for university libraries](https://consensus.app/home/blog/consensus-for-university-libraries/).
 
 ## FAQ
 

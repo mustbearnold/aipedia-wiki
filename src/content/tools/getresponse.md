@@ -11,8 +11,8 @@ pricing_model: paid
 price_range: $19-$69/month+
 status: active
 launched: 1998-09
-last_updated: 2026-06-02
-last_verified: 2026-06-02
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -36,7 +36,7 @@ facts:
     source: https://www.getresponse.com/
     source_label: GetResponse official site
     source_id: getresponse-official
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -46,7 +46,7 @@ facts:
     source: https://www.getresponse.com/pricing
     source_label: GetResponse pricing
     source_id: getresponse-pricing
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -55,7 +55,7 @@ facts:
     source: https://www.getresponse.com/
     source_label: GetResponse official site
     source_id: getresponse-official
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -65,7 +65,7 @@ facts:
     source: https://www.getresponse.com/
     source_label: GetResponse official site
     source_id: getresponse-official
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -75,7 +75,7 @@ facts:
     source: https://www.getresponse.com/pricing
     source_label: GetResponse pricing
     source_id: getresponse-pricing
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -152,7 +152,7 @@ As verified in June 2026, the pricing ladder runs Starter $19/mo, Marketer $59/m
 | **Compliance** | GDPR · CAN-SPAM · CASL · transactional email compliant |
 | **Free custom domain** | Included with yearly billing |
 
-Every data point above verified against GetResponse's published sources on 2026-06-02.
+Every data point above verified against GetResponse's published sources on 2026-06-12.
 
 ## What it actually is
 
@@ -199,7 +199,7 @@ Subscription pricing for a 1,000-contact list via [getresponse.com/pricing](http
 
 All tiers include unlimited monthly email sends, unlimited landing pages, 24/7 support, and free custom domain on annual billing. Contact-list pricing scales: a 10,000-contact list runs roughly 2x the 1K price; 100K contacts moves into Enterprise territory.
 
-Prices verified 2026-06-02 via [GetResponse pricing](https://www.getresponse.com/pricing). 18% annual discount across every tier.
+Prices verified 2026-06-12 via [GetResponse pricing](https://www.getresponse.com/pricing). 18% annual discount across every tier.
 
 ## Against the alternatives
 
@@ -227,7 +227,7 @@ Prices verified 2026-06-02 via [GetResponse pricing](https://www.getresponse.com
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-02 against [GetResponse pricing](https://www.getresponse.com/pricing) and the [GetResponse homepage](https://www.getresponse.com/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-12 against [GetResponse pricing](https://www.getresponse.com/pricing) and the [GetResponse homepage](https://www.getresponse.com/).
 
 ## FAQ
 

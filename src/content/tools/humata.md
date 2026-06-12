@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0 free / $9.99-$49/user/mo"
 status: active
 launched: 2023-02
-last_updated: 2026-06-02
-last_verified: 2026-06-02
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: https://www.humata.ai/
     source_label: Humata official site
     source_id: humata-official
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -42,7 +42,7 @@ facts:
     source: https://www.humata.ai/pricing
     source_label: Humata pricing
     source_id: humata-pricing
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -51,7 +51,7 @@ facts:
     source: https://www.humata.ai/
     source_label: Humata official site
     source_id: humata-official
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -61,7 +61,7 @@ facts:
     source: https://www.humata.ai/security
     source_label: Humata security
     source_id: humata-security
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -71,7 +71,7 @@ facts:
     source: https://www.humata.ai/blog
     source_label: Humata blog
     source_id: humata-blog
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -169,7 +169,7 @@ A document-chat platform aimed at research-heavy students and small teams. Uploa
 | Team | $49/user/mo | 5,000 pages, up to 10 users, GPT-5, OCR, folder permissions, SOC-2 certificate, $0.01/page overage |
 | Enterprise | Custom | Unlimited + uptime SLA + early access + enterprise support |
 
-Prices verified 2026-06-02 via [humata.ai/pricing](https://www.humata.ai/pricing). The current public pricing page shows Free, Expert, Team, and Enterprise; it does not show a self-serve Student tier on the rendered pricing grid.
+Prices verified 2026-06-12 via [humata.ai/pricing](https://www.humata.ai/pricing). The current public pricing page shows Free, Expert, Team, and Enterprise; it does not show a self-serve Student tier on the rendered pricing grid.
 
 ## Best plan recommendation
 
@@ -197,7 +197,7 @@ Before paying, upload the actual documents you care about: scanned PDFs, tables,
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-02 against [humata.ai/pricing](https://www.humata.ai/pricing), [humata.ai](https://www.humata.ai/), and [Humata security](https://www.humata.ai/security).
+Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-12 against [humata.ai/pricing](https://www.humata.ai/pricing), [humata.ai](https://www.humata.ai/), and [Humata security](https://www.humata.ai/security).
 
 ## FAQ
 
@@ -208,7 +208,7 @@ At Expert tier ($9.99/mo for 500 pages), Humata is roughly half the cost of Chat
 Yes, on the Team tier. Useful for scanned contracts, historical documents, or image-based PDFs.
 
 **Which model powers Humata?**
-Humata's public pricing matrix lists GPT-5 support as of June 2, 2026. Verify model access in procurement if the exact model is a hard requirement.
+Humata's public pricing matrix lists GPT-5 support as of June 12, 2026. Verify model access in procurement if the exact model is a hard requirement.
 
 **How accurate is Humata for legal documents?**
 Decent for direct factual questions with citation verification. Always review cited pages. Not a substitute for attorney judgment on material questions.

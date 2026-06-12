@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$37/month + Enterprise custom"
 status: active
 launched: 2023-04
-last_updated: 2026-06-02
-last_verified: 2026-06-02
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 seo_title: "Gumloop: Features, Pricing & Review (June 2026)"
 meta_description: "Gumloop is a YC W24 AI workflow automation platform. Free tier with 5K credits, Pro $37/mo with 20K+ credits and unlimited seats, Enterprise custom. Drag-and-drop builder, BYOK economics, OpenAI/Anthropic/Gemini/DeepSeek backbones."
@@ -35,7 +35,7 @@ facts:
     source: https://www.gumloop.com/
     source_label: Gumloop official site
     source_id: gumloop-official
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -46,7 +46,7 @@ facts:
     source: https://www.gumloop.com/pricing
     source_label: Gumloop pricing
     source_id: gumloop-pricing
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -56,7 +56,7 @@ facts:
     source: https://docs.gumloop.com/
     source_label: Gumloop docs
     source_id: gumloop-docs
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -66,7 +66,7 @@ facts:
     source: https://docs.gumloop.com/
     source_label: Gumloop docs
     source_id: gumloop-docs
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -76,7 +76,7 @@ facts:
     source: https://www.gumloop.com/
     source_label: Gumloop official site
     source_id: gumloop-official
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -149,7 +149,7 @@ The anchor moat is the bring-your-own-API-key model. Connecting your own OpenAI,
 
 ## Recent changes
 
-- **Plan simplification rechecked June 2, 2026.** The previous Solo ($37/mo, 10K credits, 1 seat) and Team ($244/mo, 60K credits, 10 seats) tiers remain collapsed into a single **Pro** plan at $37/mo with 20,000+ credits and unlimited seats. Multi-seat teams now sit on Pro instead of jumping to Team. Free tier credit allowance remains 5,000 credits per month.
+- **Plan simplification rechecked June 12, 2026.** The previous Solo ($37/mo, 10K credits, 1 seat) and Team ($244/mo, 60K credits, 10 seats) tiers remain collapsed into a single **Pro** plan at $37/mo with 20,000+ credits and unlimited seats. Multi-seat teams now sit on Pro instead of jumping to Team. Free tier credit allowance remains 5,000 credits per month.
 
 ## System Verdict
 
@@ -221,7 +221,7 @@ Credit consumption at a glance:
 - Contact enrichment: 60 credits
 - BYOK workflow AI nodes: verify the live node cost; current docs position BYOK as the main way to lower Gumloop credit burn.
 
-Prices verified 2026-06-02 via [Gumloop pricing](https://gumloop.com/pricing) and [Gumloop docs](https://docs.gumloop.com/).
+Prices verified 2026-06-12 via [Gumloop pricing](https://gumloop.com/pricing) and [Gumloop docs](https://docs.gumloop.com/).
 
 ## Against the alternatives
 
@@ -247,7 +247,7 @@ Prices verified 2026-06-02 via [Gumloop pricing](https://gumloop.com/pricing) an
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-02 against [Gumloop pricing](https://gumloop.com/pricing), [Gumloop docs](https://docs.gumloop.com/), [YC's Gumloop company profile](https://www.ycombinator.com/companies/gumloop), and [BetaKit's Series B coverage](https://betakit.com/vancouver-founded-gumloop-sticks-50-million-usd-series-b-round-to-let-employees-build-their-own-ai-agents/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against [Gumloop pricing](https://gumloop.com/pricing), [Gumloop docs](https://docs.gumloop.com/), [YC's Gumloop company profile](https://www.ycombinator.com/companies/gumloop), and [BetaKit's Series B coverage](https://betakit.com/vancouver-founded-gumloop-sticks-50-million-usd-series-b-round-to-let-employees-build-their-own-ai-agents/).
 
 ## FAQ
 

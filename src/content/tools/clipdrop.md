@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "Free; Pro pricing is region-rendered"
 status: active
 launched: 2020-09
-last_updated: 2026-06-02
-last_verified: 2026-06-02
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: https://clipdrop.co/tools
     source_label: Clipdrop tools
     source_id: clipdrop-tools
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -40,7 +40,7 @@ facts:
     source: https://clipdrop.co/pricing
     source_label: Clipdrop pricing
     source_id: clipdrop-pricing
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -49,7 +49,7 @@ facts:
     source: https://clipdrop.co/apis
     source_label: Clipdrop APIs
     source_id: clipdrop-apis
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -58,7 +58,7 @@ facts:
     source: https://clipdrop.co/
     source_label: Clipdrop official site
     source_id: clipdrop-official
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -68,7 +68,7 @@ facts:
     source: https://clipdrop.co/pricing
     source_label: Clipdrop pricing
     source_id: clipdrop-pricing
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -136,7 +136,7 @@ A Swiss-army-knife collection of AI image tools. Originally built on Stability A
 | API | Usage-based per operation | Documented at [clipdrop.co/apis](https://clipdrop.co/apis) |
 | Enterprise | Custom | Volume pricing, SLAs, dedicated support |
 
-Free tier and Pro features verified 2026-06-02 via [clipdrop.co/pricing](https://clipdrop.co/pricing). The crawl rendered region-specific currency rather than a stable global price, so verify the live checkout flow before quoting the Pro amount.
+Free tier and Pro features verified 2026-06-12 via [clipdrop.co/pricing](https://clipdrop.co/pricing). The crawl rendered region-specific currency rather than a stable global price, so verify the live checkout flow before quoting the Pro amount.
 
 ## Failure modes
 
@@ -160,7 +160,7 @@ Free tier and Pro features verified 2026-06-02 via [clipdrop.co/pricing](https:/
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-02 against [clipdrop.co/pricing](https://clipdrop.co/pricing) and the [Clipdrop tools index](https://clipdrop.co/tools).
+Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-12 against [clipdrop.co/pricing](https://clipdrop.co/pricing) and the [Clipdrop tools index](https://clipdrop.co/tools).
 
 ## FAQ
 

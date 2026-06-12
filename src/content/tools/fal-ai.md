@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0.01-$0.08 per image / on-demand A100 $0.99/h, H100 $1.89/h, B200 contact sales"
 status: active
 launched: 2022-10
-last_updated: 2026-06-02
-last_verified: 2026-06-02
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: https://fal.ai/
     source_label: fal.ai official site
     source_id: fal-ai-official
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -40,7 +40,7 @@ facts:
     source: https://fal.ai/pricing
     source_label: fal.ai pricing
     source_id: fal-ai-pricing
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-09-02'
@@ -50,7 +50,7 @@ facts:
     source: https://docs.fal.ai/
     source_label: fal.ai docs
     source_id: fal-ai-docs
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -60,7 +60,7 @@ facts:
     source: https://fal.ai/models
     source_label: fal.ai model catalog
     source_id: fal-ai-models
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-09-02'
@@ -69,7 +69,7 @@ facts:
     source: https://fal.ai/pricing
     source_label: fal.ai pricing
     source_id: fal-ai-pricing
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-09-02'
@@ -175,7 +175,7 @@ A cloud-hosted, serverless inference platform built specifically for generative 
 | **Speed advantage** | Custom CUDA kernels, 5-10s cold starts, 4× faster than some competitors |
 | **Enterprise** | Custom pricing, dedicated inference capacity |
 
-Every data point above was verified against vendor documentation on 2026-06-02. See Sources.
+Every data point above was verified against vendor documentation on 2026-06-12. See Sources.
 
 ## When to pick Fal.ai
 
@@ -208,7 +208,7 @@ Every data point above was verified against vendor documentation on 2026-06-02. 
 | B200 (184GB) on-demand GPU | Contact sales |
 | Free credits | $1 on signup |
 
-fal's model API docs say billing is prepaid-credit based, each model has its own unit, successful outputs are billed, HTTP 500+ server errors are not billed, and time spent waiting in queue is free. Batch inference: 50% of serverless pricing. Verified 2026-06-02 via [fal.ai/pricing](https://fal.ai/pricing), [fal model API pricing docs](https://fal.ai/docs/documentation/model-apis/pricing), and [pricepertoken.com/image](https://pricepertoken.com/image).
+fal's model API docs say billing is prepaid-credit based, each model has its own unit, successful outputs are billed, HTTP 500+ server errors are not billed, and time spent waiting in queue is free. Batch inference: 50% of serverless pricing. Verified 2026-06-12 via [fal.ai/pricing](https://fal.ai/pricing), [fal model API pricing docs](https://fal.ai/docs/documentation/model-apis/pricing), and [pricepertoken.com/image](https://pricepertoken.com/image).
 
 ## Failure modes
 
@@ -229,7 +229,7 @@ fal's model API docs say billing is prepaid-credit based, each model has its own
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-02 against [fal.ai/pricing](https://fal.ai/pricing), [fal model API pricing docs](https://fal.ai/docs/documentation/model-apis/pricing), [docs.fal.ai](https://docs.fal.ai), and [pricepertoken.com/image](https://pricepertoken.com/image).
+Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-12 against [fal.ai/pricing](https://fal.ai/pricing), [fal model API pricing docs](https://fal.ai/docs/documentation/model-apis/pricing), [docs.fal.ai](https://docs.fal.ai), and [pricepertoken.com/image](https://pricepertoken.com/image).
 
 ## FAQ
 

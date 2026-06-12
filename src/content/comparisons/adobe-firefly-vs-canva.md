@@ -9,8 +9,8 @@ seo_title: "Adobe Firefly vs Canva AI (June 2026): Which Should You Use?"
 meta_description: "June 2026 comparison of Adobe Firefly and Canva AI by workflow, pricing risk, commercial safety, brand controls, templates, and who should use each."
 description: "Adobe Firefly is better for Adobe-native commercial creative production; Canva AI is better for non-designers turning prompts into finished campaign assets."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-02
-last_verified: 2026-06-02
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -105,11 +105,11 @@ Yes. Generate or refine important imagery in Firefly and Adobe apps, then use Ca
 
 ## Sources
 
-- [Adobe Firefly plans](https://www.adobe.com/products/firefly/plans.html) (verified 2026-06-02)
-- [Adobe Firefly official product page](https://www.adobe.com/products/firefly.html) (verified 2026-06-02)
-- [Adobe Firefly creative-agent update](https://news.adobe.com/news/2026/04/adobe-new-creative-agent) (verified 2026-06-02)
-- [Adobe generative credits overview](https://helpx.adobe.com/firefly/using/generative-credits.html) (verified 2026-06-02)
-- [Canva AI](https://www.canva.com/canva-ai/) (verified 2026-06-02)
-- [Canva pricing](https://www.canva.com/pricing/) (verified 2026-06-02)
+- [Adobe Firefly plans](https://www.adobe.com/products/firefly/plans.html) (verified 2026-06-12)
+- [Adobe Firefly official product page](https://www.adobe.com/products/firefly.html) (verified 2026-06-12)
+- [Adobe Firefly creative-agent update](https://news.adobe.com/news/2026/04/adobe-new-creative-agent) (verified 2026-06-12)
+- [Adobe generative credits overview](https://helpx.adobe.com/firefly/using/generative-credits.html) (verified 2026-06-12)
+- [Canva AI](https://www.canva.com/canva-ai/) (verified 2026-06-12)
+- [Canva pricing](https://www.canva.com/pricing/) (verified 2026-06-12)
 - [Adobe Firefly review](/tools/adobe-firefly/) (verified 2026-05-26)
-- [Canva review](/tools/canva/) (verified 2026-06-02)
+- [Canva review](/tools/canva/) (verified 2026-06-12)

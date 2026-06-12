@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0 free / SuperGrok $30/month / API usage-based / Business and Enterprise custom"
 status: active
 launched: 2023-11
-last_updated: 2026-06-02
-last_verified: 2026-06-02
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: "https://docs.x.ai/developers/models"
     source_label: "xAI model docs"
     source_id: xai-docs
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-03
@@ -40,7 +40,7 @@ facts:
     source: "https://docs.x.ai/developers/models"
     source_label: "xAI model docs"
     source_id: xai-docs
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-03
@@ -49,7 +49,7 @@ facts:
     source: "https://x.ai/pricing"
     source_label: "xAI pricing"
     source_id: xai-pricing
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-03
@@ -58,7 +58,7 @@ facts:
     source: "https://x.ai/pricing"
     source_label: "xAI pricing"
     source_id: xai-pricing
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-03
@@ -67,7 +67,7 @@ facts:
     source: "https://x.ai/pricing"
     source_label: "xAI pricing"
     source_id: xai-pricing
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-03
@@ -76,7 +76,7 @@ facts:
     source: "https://docs.x.ai/developers/models"
     source_label: "xAI model docs"
     source_id: xai-docs
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-03
@@ -85,7 +85,7 @@ facts:
     source: "https://docs.x.ai/developers/model-capabilities/images/generation"
     source_label: "xAI image-generation docs"
     source_id: xai-docs
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-03
@@ -94,7 +94,7 @@ facts:
     source: "https://docs.x.ai/developers/model-capabilities/video/generation"
     source_label: "xAI video-generation docs"
     source_id: xai-docs
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-03
@@ -103,7 +103,7 @@ facts:
     source: "https://docs.x.ai/developers/models"
     source_label: "xAI model docs"
     source_id: xai-docs
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-03
@@ -112,7 +112,7 @@ facts:
     source: "https://docs.x.ai/developers/tools/web-search"
     source_label: "xAI web-search docs"
     source_id: xai-docs
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-03
@@ -121,7 +121,7 @@ facts:
     source: "https://docs.x.ai/developers/tools/code-execution"
     source_label: "xAI code-execution docs"
     source_id: xai-docs
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-13
@@ -130,7 +130,7 @@ facts:
     source: "https://x.ai/pricing"
     source_label: "xAI pricing"
     source_id: xai-pricing
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-03
@@ -139,7 +139,7 @@ facts:
     source: "https://docs.x.ai/developers/model-capabilities/text/generate-text"
     source_label: "xAI Responses API docs"
     source_id: xai-docs
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-06-03
@@ -148,7 +148,7 @@ facts:
     source: "https://x.ai/grok"
     source_label: "xAI Grok product page"
     source_id: xai-grok-product
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
   best_for:
@@ -156,7 +156,7 @@ facts:
     source: "https://x.ai/grok"
     source_label: "xAI Grok product page"
     source_id: xai-grok-product
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   watch_out_for:
@@ -164,7 +164,7 @@ facts:
     source: "https://docs.x.ai/developers/model-capabilities/text/generate-text"
     source_label: "xAI Responses API docs"
     source_id: xai-docs
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
 tags: [ai-assistant, xai, twitter-ai, real-time-search, grok, multi-agent, long-context]
@@ -262,7 +262,7 @@ Older third-party or news-cycle claims about Grok 4.20 variants, future Grok 5 t
 | **Search tools** | Web Search and X Search can be enabled for current/realtime data |
 | **Persistent memory** | Not documented as a ChatGPT-style cross-session memory feature in the current model docs |
 
-Every data point above was verified on 2026-06-02 against [xAI pricing](https://x.ai/pricing), [xAI model docs](https://docs.x.ai/developers/models), and the [Grok product page](https://x.ai/grok).
+Every data point above was verified on 2026-06-12 against [xAI pricing](https://x.ai/pricing), [xAI model docs](https://docs.x.ai/developers/models), and the [Grok product page](https://x.ai/grok).
 
 ## What it actually is
 
@@ -293,7 +293,7 @@ The real differentiator is data, not architecture. Many frontier assistants are 
 
 ## Pricing
 
-Use [xAI pricing](https://x.ai/pricing) and [xAI model docs](https://docs.x.ai/developers/models) as the purchase source of truth. Verified 2026-06-02:
+Use [xAI pricing](https://x.ai/pricing) and [xAI model docs](https://docs.x.ai/developers/models) as the purchase source of truth. Verified 2026-06-12:
 
 | Plan or API surface | Current public price | Buyer note |
 |---|---|---|
@@ -330,7 +330,7 @@ Lite, Heavy, X Premium bundle, region-specific, or account-specific limits are n
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-02 against [xAI pricing](https://x.ai/pricing), [xAI model docs](https://docs.x.ai/developers/models), [xAI Grok product page](https://x.ai/grok), [xAI text docs](https://docs.x.ai/developers/model-capabilities/text/generate-text), [xAI web search docs](https://docs.x.ai/developers/tools/web-search), [xAI image docs](https://docs.x.ai/developers/model-capabilities/images/generation), and [xAI video docs](https://docs.x.ai/developers/model-capabilities/video/generation).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against [xAI pricing](https://x.ai/pricing), [xAI model docs](https://docs.x.ai/developers/models), [xAI Grok product page](https://x.ai/grok), [xAI text docs](https://docs.x.ai/developers/model-capabilities/text/generate-text), [xAI web search docs](https://docs.x.ai/developers/tools/web-search), [xAI image docs](https://docs.x.ai/developers/model-capabilities/images/generation), and [xAI video docs](https://docs.x.ai/developers/model-capabilities/video/generation).
 
 ## FAQ
 
@@ -354,10 +354,10 @@ AiPedia is not publishing a launch date until xAI posts one in current primary s
 
 ## Sources
 
-- [xAI pricing](https://x.ai/pricing): Free, SuperGrok, Business, Enterprise, and account-tier positioning, verified 2026-06-02.
-- [xAI model docs](https://docs.x.ai/developers/models): Grok 4.3, Grok Build, Voice, Image, Video, and pricing table, verified 2026-06-02.
-- [xAI Grok product page](https://x.ai/grok): product positioning, verified 2026-06-02.
-- [xAI web search docs](https://docs.x.ai/developers/tools/web-search): current web/X search tool surface, verified 2026-06-02.
+- [xAI pricing](https://x.ai/pricing): Free, SuperGrok, Business, Enterprise, and account-tier positioning, verified 2026-06-12.
+- [xAI model docs](https://docs.x.ai/developers/models): Grok 4.3, Grok Build, Voice, Image, Video, and pricing table, verified 2026-06-12.
+- [xAI Grok product page](https://x.ai/grok): product positioning, verified 2026-06-12.
+- [xAI web search docs](https://docs.x.ai/developers/tools/web-search): current web/X search tool surface, verified 2026-06-12.
 
 ## Related
 

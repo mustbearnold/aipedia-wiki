@@ -2,15 +2,15 @@
 type: comparison
 slug: aider-vs-github-copilot
 title: "Aider vs GitHub Copilot"
-description: "Aider vs GitHub Copilot, verified June 2, 2026: open-source terminal agent versus GitHub-native coding assistant, with current AI Credits, plan, model, and workflow guidance."
+description: "Aider vs GitHub Copilot, verified June 12, 2026: open-source terminal agent versus GitHub-native coding assistant, with current AI Credits, plan, model, and workflow guidance."
 tools: [aider, github-copilot]
 category: ai-coding
 winner: depends
 seo_title: "Aider vs GitHub Copilot: CLI Agent or GitHub-Native Copilot?"
 meta_description: "Aider vs GitHub Copilot, updated June 2026: compare terminal BYOK coding with Copilot's IDE, GitHub, agent, AI Credits, model, and team workflows."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-02
-last_verified: 2026-06-02
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -19,7 +19,7 @@ canonical_fact_table: true
 
 [Aider](/tools/aider/) is an open-source terminal pair-programmer for local git repos. [GitHub Copilot](/tools/github-copilot/) is GitHub's coding assistant across IDEs, GitHub.com, CLI, chat, pull requests, Spaces, Spark, and cloud-agent workflows.
 
-Verified June 2, 2026: Copilot has moved into GitHub AI Credits for chat, agent, CLI, Spaces, Spark, code review, cloud-agent, and third-party agent usage. Code completions and next-edit suggestions remain included on paid plans. Aider remains free as software, but you pay your selected provider/model when using hosted APIs.
+Verified June 12, 2026: Copilot has moved into GitHub AI Credits for chat, agent, CLI, Spaces, Spark, code review, cloud-agent, and third-party agent usage. Code completions and next-edit suggestions remain included on paid plans. Aider remains free as software, but you pay your selected provider/model when using hosted APIs.
 
 ## Quick Answer
 

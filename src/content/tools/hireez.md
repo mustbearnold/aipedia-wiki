@@ -10,8 +10,8 @@ url: https://www.hireez.com/platform/
 pricing_model: enterprise
 price_range: "Contact sales / demo-led"
 status: active
-last_updated: 2026-06-02
-last_verified: 2026-06-02
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://www.hireez.com/platform/"
     source_label: "hireEZ AI recruiting platform"
     source_id: hireez-platform
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -38,7 +38,7 @@ facts:
     source: "https://www.hireez.com/platform/"
     source_label: "hireEZ AI recruiting platform"
     source_id: hireez-platform
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: high
     confidence: medium
     next_review_at: 2026-08-13
@@ -47,7 +47,7 @@ facts:
     source: "https://www.hireez.com/platform/"
     source_label: "hireEZ AI recruiting platform"
     source_id: hireez-platform
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
 tags: [recruiting, sourcing, recruiting-crm, talent-acquisition, applicant-matching]
@@ -64,7 +64,7 @@ not_best_for:
   - teams unwilling to implement a recruiting CRM
   - buyers who need transparent self-serve pricing
 quick_answer: >-
-  hireEZ is the strongest AI recruiting-platform challenger when a team wants sourcing, CRM, rediscovery, applicant matching, analytics, scheduling, job distribution, and ATS workflows in one place. It is broader than a point sourcing tool, so adoption and data hygiene determine ROI. Pricing remains demo-led as of June 2, 2026; ask sales to separate seats, candidate volume, CRM, ATS, match, analytics, implementation, support, and renewal escalators.
+  hireEZ is the strongest AI recruiting-platform challenger when a team wants sourcing, CRM, rediscovery, applicant matching, analytics, scheduling, job distribution, and ATS workflows in one place. It is broader than a point sourcing tool, so adoption and data hygiene determine ROI. Pricing remains demo-led as of June 12, 2026; ask sales to separate seats, candidate volume, CRM, ATS, match, analytics, implementation, support, and renewal escalators.
 ---
 
 # hireEZ
@@ -99,7 +99,7 @@ Buy the workflow you can actually operationalize. A broad recruiting platform on
 
 ## Pricing And Procurement
 
-hireEZ does not publish a clean self-serve monthly price on the platform page AiPedia verified on June 2, 2026. Treat pricing as sales-led and ask for the quote to separate recruiter seats, candidate volume, CRM capabilities, applicant match, analytics, scheduling, job distribution, ATS features, implementation, support, and renewal escalators.
+hireEZ does not publish a clean self-serve monthly price on the platform page AiPedia verified on June 12, 2026. Treat pricing as sales-led and ask for the quote to separate recruiter seats, candidate volume, CRM capabilities, applicant match, analytics, scheduling, job distribution, ATS features, implementation, support, and renewal escalators.
 
 Also ask whether email sequencing, integrations, data enrichment, candidate exports, and compliance workflows are included or metered. The hidden cost in recruiting software is rarely the search screen; it is data cleanup, duplicated workflows, low adoption, and unclear ownership between the ATS, CRM, and sourcing tool.
 
@@ -147,7 +147,7 @@ hireEZ is broad. That is a strength only if the team will use the platform beyon
 
 ## AiPedia Trust Note
 
-This page was refreshed on June 2, 2026 using hireEZ's current platform page. AiPedia does not list a paid affiliate program for hireEZ. Scores reflect practical recruiter utility, implementation burden, defensibility, and likely platform durability.
+This page was refreshed on June 12, 2026 using hireEZ's current platform page. AiPedia does not list a paid affiliate program for hireEZ. Scores reflect practical recruiter utility, implementation burden, defensibility, and likely platform durability.
 
 ## Sources
 

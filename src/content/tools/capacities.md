@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "Free; Pro/Believer pricing is region-rendered"
 status: active
 launched: 2021-06
-last_updated: 2026-06-02
-last_verified: 2026-06-02
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://capacities.io/product"
     source_label: "Capacities product"
     source_id: capacities-product
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
   pricing_anchor:
@@ -38,7 +38,7 @@ facts:
     source: "https://capacities.io/pricing"
     source_label: "Capacities pricing"
     source_id: capacities-pricing
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     next_review_at: 2026-09-02
     volatility: high
     confidence: high
@@ -47,7 +47,7 @@ facts:
     source: "https://docs.capacities.io/"
     source_label: "Capacities docs"
     source_id: capacities-docs
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
   ai_surface:
@@ -55,7 +55,7 @@ facts:
     source: "https://capacities.io/product"
     source_label: "Capacities product"
     source_id: capacities-product
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   watch_out_for:
@@ -63,7 +63,7 @@ facts:
     source: "https://docs.capacities.io/"
     source_label: "Capacities docs"
     source_id: capacities-docs
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
 tags: [ai-notes, note-taking, pkm, object-based, knowledge-management]
@@ -150,7 +150,7 @@ Free tier is genuinely generous: the current pricing page lists unlimited spaces
 | **Free tier** | Unlimited spaces, objects, blocks, and custom object types; 5GB total media, then 100MB/month |
 | **API** | None public |
 
-Every data point was verified against vendor docs on 2026-06-02. See Sources.
+Every data point was verified against vendor docs on 2026-06-12. See Sources.
 
 ## What it actually is
 
@@ -184,7 +184,7 @@ The moat: no other mainstream PKM tool enforces object typing at the capture ste
 | Pro | Region-rendered | AI assistant, unlimited media uploads, Pro features |
 | Believer | Region-rendered | Everything in Pro plus project support and early features |
 
-*Prices verified 2026-06-02 via [capacities.io/pricing](https://capacities.io/pricing). The page rendered local currency in this crawl, so verify your account region before budgeting.*
+*Prices verified 2026-06-12 via [capacities.io/pricing](https://capacities.io/pricing). The page rendered local currency in this crawl, so verify your account region before budgeting.*
 
 ## Against the alternatives
 
@@ -211,7 +211,7 @@ The moat: no other mainstream PKM tool enforces object typing at the capture ste
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-02 against [capacities.io/pricing](https://capacities.io/pricing), [capacities.io/product/ai](https://capacities.io/product/ai), and the [Capacities changelog](https://capacities.io/whats-new/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against [capacities.io/pricing](https://capacities.io/pricing), [capacities.io/product/ai](https://capacities.io/product/ai), and the [Capacities changelog](https://capacities.io/whats-new/).
 
 ## FAQ
 

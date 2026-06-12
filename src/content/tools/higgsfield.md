@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$99/month individual annual; Teams from $59/seat/mo annual"
 status: active
 launched: 2025-03
-last_updated: 2026-06-02
-last_verified: 2026-06-02
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 seo_title: "Higgsfield: Features, Pricing & Review (2026)"
 meta_description: "Higgsfield is an AI video platform with cinematic camera controls, Cinema Studio 3.5, Soul character anchoring, and Lipsync Studio. Free tier, Starter $15/mo, Plus $39/mo, Ultra $99/mo (annual). API on Ultra."
@@ -35,18 +35,18 @@ facts:
     source: https://higgsfield.ai/
     source_label: Higgsfield official site
     source_id: higgsfield-official
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
   pricing_anchor:
     value: Higgsfield pricing is plan/credit dependent; individual annual tiers list Starter $15/mo, Plus $39/mo, Ultra $99/mo,
-      and Teams from $59/seat/mo as of June 2, 2026. Verify model rates, unlimited-model exceptions, commercial rights,
+      and Teams from $59/seat/mo as of June 12, 2026. Verify model rates, unlimited-model exceptions, commercial rights,
       and feature access before committing.
     source: https://higgsfield.ai/pricing
     source_label: Higgsfield pricing
     source_id: higgsfield-pricing
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -56,7 +56,7 @@ facts:
     source: https://higgsfield.ai/
     source_label: Higgsfield official site
     source_id: higgsfield-official
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -66,7 +66,7 @@ facts:
     source: https://higgsfield.ai/about
     source_label: Higgsfield about
     source_id: higgsfield-about
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -76,7 +76,7 @@ facts:
     source: https://higgsfield.ai/pricing
     source_label: Higgsfield pricing
     source_id: higgsfield-pricing
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -143,7 +143,7 @@ price_history:
 
 Higgsfield is an AI video and image platform that competes on cinematic camera control rather than raw text-to-video quality. Co-founders: Alex Mashrabov (former head of generative AI at Snap), Yerzat Dulat, and Mahi de Silva. The company publicly launched its video generation tools on March 31, 2025.
 
-As of the June 2, 2026 refresh, Higgsfield's about page positions the platform at 50M+ users, 5M+ creators, 300M+ videos, 2M+ videos created daily, and 6M+ total creations daily. Treat older user-count, run-rate, and funding figures as historical context unless separately re-verified.
+As of the June 12, 2026 refresh, Higgsfield's about page positions the platform at 50M+ users, 5M+ creators, 300M+ videos, 2M+ videos created daily, and 6M+ total creations daily. Treat older user-count, run-rate, and funding figures as historical context unless separately re-verified.
 
 The differentiator is the shot language. Cinema Studio exposes per-shot camera moves (dolly, orbit, push-in, crane, tilt). Soul anchors character identity across generations. Lipsync and talking-avatar surfaces cover dubbed clips. Higgsfield also exposes Explore, Image, Video, Audio, Supercomputer, MCP & CLI, Plugins, Collab, Marketing Studio, Cinema Studio, AI Influencer, and Canvas surfaces, while orchestrating models such as Kling, Seedance, Veo, Sora, Nano Banana, Wan, Flux, Soul, and Cinema.
 
@@ -201,7 +201,7 @@ Credit consumption varies by model. As of June 2, 2026, the pricing matrix showe
 
 ## Pricing
 
-Plans via [higgsfield.ai/pricing](https://higgsfield.ai/pricing), verified June 2, 2026:
+Plans via [higgsfield.ai/pricing](https://higgsfield.ai/pricing), verified June 12, 2026:
 
 | Plan | Price | Credits | Concurrent jobs | Key features |
 |---|---|---|---|---|
@@ -211,7 +211,7 @@ Plans via [higgsfield.ai/pricing](https://higgsfield.ai/pricing), verified June 
 | Ultra | $99/mo annual | 3,000/mo base (6,000/9,000 selectable) | 8 videos / 8 images | All models, one 365-day unlimited video model, Nano Banana Pro / 2 2K unlimited promos, Kling 3.0 unlimited promo, 10,000 Soul V2 and Cinema generations |
 | Teams | from $59/seat/mo annual | Custom/shared | Team workspace | Two seats minimum, shared credits/workspaces, custom credits, unlimited members, SOC 2, custom SSO, no-training clause, indemnification, SLA, analytics, Slack support |
 
-Prices verified 2026-06-02 via [Higgsfield pricing](https://higgsfield.ai/pricing) and current Higgsfield product/about pages.
+Prices verified 2026-06-12 via [Higgsfield pricing](https://higgsfield.ai/pricing) and current Higgsfield product/about pages.
 
 **Billing notes:**
 - Annual pricing is the headline on the main pricing page; monthly rates can differ.
@@ -245,7 +245,7 @@ Prices verified 2026-06-02 via [Higgsfield pricing](https://higgsfield.ai/pricin
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-02 against [Higgsfield pricing](https://higgsfield.ai/pricing), [Higgsfield homepage](https://higgsfield.ai/), and [Higgsfield about](https://higgsfield.ai/about).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against [Higgsfield pricing](https://higgsfield.ai/pricing), [Higgsfield homepage](https://higgsfield.ai/), and [Higgsfield about](https://higgsfield.ai/about).
 
 ## FAQ
 

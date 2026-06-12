@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "Free 30 req/min / paid usage-based"
 status: active
 launched: 2020-01
-last_updated: 2026-06-02
-last_verified: 2026-06-02
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: https://groq.com/
     source_label: Groq official site
     source_id: groq-official
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -41,7 +41,7 @@ facts:
     source: https://groq.com/pricing/
     source_label: Groq pricing
     source_id: groq-pricing
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -51,7 +51,7 @@ facts:
     source: https://console.groq.com/docs/overview
     source_label: Groq docs
     source_id: groq-docs
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -60,7 +60,7 @@ facts:
     source: https://console.groq.com/docs/models
     source_label: Groq supported models
     source_id: groq-models
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -70,7 +70,7 @@ facts:
     source: https://console.groq.com/docs/models
     source_label: Groq supported models
     source_id: groq-models
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -187,7 +187,7 @@ Pricing is per-token and predictable.
 
 Rate tiers: Free (30 req/min, 14,400/day). Developer (10x free + 25 percent off). Enterprise (custom). Batch API: 50 percent off for 24-hour to 7-day windows. Prompt caching: 50 percent off cached input tokens with no extra caching fee.
 
-Verified 2026-06-02 via [groq.com/pricing](https://groq.com/pricing) and [Groq supported models](https://console.groq.com/docs/models).
+Verified 2026-06-12 via [groq.com/pricing](https://groq.com/pricing) and [Groq supported models](https://console.groq.com/docs/models).
 
 ## Failure modes
 
@@ -209,7 +209,7 @@ Verified 2026-06-02 via [groq.com/pricing](https://groq.com/pricing) and [Groq s
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-02 against [Groq pricing](https://groq.com/pricing/), [Groq docs](https://console.groq.com/docs/overview), and [Groq supported models](https://console.groq.com/docs/models).
+Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-12 against [Groq pricing](https://groq.com/pricing/), [Groq docs](https://console.groq.com/docs/overview), and [Groq supported models](https://console.groq.com/docs/models).
 
 ## FAQ
 

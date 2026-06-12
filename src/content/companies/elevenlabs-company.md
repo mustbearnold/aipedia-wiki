@@ -3,23 +3,23 @@ type: company
 slug: elevenlabs-company
 title: ElevenLabs
 seo_title: "ElevenLabs Company Profile (June 2026), aipedia.wiki"
-meta_description: "ElevenLabs offers AI voice synthesis, agents, dubbing, music generation, transcription, and image/video surfaces. Verified June 2, 2026: $500M+ ARR signal, $11B valuation, and $0-$990/mo self-serve tiers."
+meta_description: "ElevenLabs offers AI voice synthesis, agents, dubbing, music generation, transcription, and image/video surfaces. Verified June 12, 2026: $500M+ ARR signal, $11B valuation, and $0-$990/mo self-serve tiers."
 author: "aipedia.wiki Editorial"
 company_type: startup
 founded: 2022
 hq: New York, USA
 funding: "$500M Series D; $11B valuation; total $781M"
 key_products: [elevenlabs]
-last_updated: 2026-06-02
+last_updated: 2026-06-12
 update_frequency: monthly
-last_verified: 2026-06-02
+last_verified: 2026-06-12
 ---
 
 # ElevenLabs
 
 ElevenLabs, founded in 2022 by Piotr Dabkowski and Mati Staniszewski, builds AI audio models and products for text-to-speech, speech-to-text, voice cloning, sound effects, dubbing, music generation, image/video surfaces, and conversational agents.
 
-As of June 2, 2026, ElevenLabs' strongest verified company signal remains its official May 2026 update: the company said it crossed $500 million in ARR during the first four months of 2026, after ending 2025 with $350 million in ARR. Its February 2026 Series D raised $500 million at an $11 billion valuation and brought total funding to $781 million. The latest buyer-sensitive update is pricing clarity: self-serve plans now span Free through $990/month Business, while ElevenAPI and ElevenAgents also support pay-as-you-go usage.
+As of June 12, 2026, ElevenLabs' strongest verified company signal remains its official May 2026 update: the company said it crossed $500 million in ARR during the first four months of 2026, after ending 2025 with $350 million in ARR. Its February 2026 Series D raised $500 million at an $11 billion valuation and brought total funding to $781 million. The latest buyer-sensitive update is pricing clarity: self-serve plans now span Free through $990/month Business, while ElevenAPI and ElevenAgents also support pay-as-you-go usage.
 
 ## Key Facts
 

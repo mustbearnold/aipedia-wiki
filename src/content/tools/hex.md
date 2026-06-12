@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0 free / $36-$75/Editor/mo / Enterprise custom"
 status: active
 launched: 2020-10
-last_updated: 2026-06-02
-last_verified: 2026-06-02
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: https://hex.tech/
     source_label: Hex official site
     source_id: hex-official
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -40,7 +40,7 @@ facts:
     source: https://hex.tech/pricing/
     source_label: Hex pricing
     source_id: hex-pricing
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -49,7 +49,7 @@ facts:
     source: https://learn.hex.tech/
     source_label: Hex Learn
     source_id: hex-learn
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -59,7 +59,7 @@ facts:
     source: https://hex.tech/security/
     source_label: Hex security
     source_id: hex-security
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -69,7 +69,7 @@ facts:
     source: https://hex.tech/
     source_label: Hex official site
     source_id: hex-official
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -162,7 +162,7 @@ A collaborative AI analytics workspace that merges three historically separate t
 | Team | $75/Editor/mo (14-day free trial) | Data teams with Threads agent, Semantic Model agent, extended credits, scheduled runs, unlimited published apps, alerts, shared components |
 | Enterprise | Custom | Compliance, SSO, custom compute, governance |
 
-Prices verified 2026-06-02 via [hex.tech/pricing](https://hex.tech/pricing/) and Hex's AI/credit docs. All paid plans include monthly per-seat AI credit grants for paid seats, with add-on credits available when teams need more.
+Prices verified 2026-06-12 via [hex.tech/pricing](https://hex.tech/pricing/) and Hex's AI/credit docs. All paid plans include monthly per-seat AI credit grants for paid seats, with add-on credits available when teams need more.
 
 ## Failure modes
 
@@ -184,7 +184,7 @@ Prices verified 2026-06-02 via [hex.tech/pricing](https://hex.tech/pricing/) and
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-02 against [hex.tech](https://hex.tech/), [hex.tech/pricing](https://hex.tech/pricing/), [Hex AI docs](https://learn.hex.tech/docs/getting-started/ai-overview), and Hex's May 20, 2026 credit update.
+Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-12 against [hex.tech](https://hex.tech/), [hex.tech/pricing](https://hex.tech/pricing/), [Hex AI docs](https://learn.hex.tech/docs/getting-started/ai-overview), and Hex's May 20, 2026 credit update.
 
 ## FAQ
 

@@ -9,8 +9,8 @@ seo_title: "Adobe Firefly vs Stable Diffusion (June 2026): Adobe or Open Weights
 meta_description: "June 2026 comparison of Adobe Firefly and Stable Diffusion by commercial safety, SD 3.5, local generation, API pricing, licensing, and workflow fit."
 description: "Adobe Firefly is better for Adobe-native commercial production; Stable Diffusion is better for open-weight, local, fine-tuned, and self-hosted image workflows."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-02
-last_verified: 2026-06-02
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -109,13 +109,13 @@ Yes. Use Stable Diffusion for local experimentation, custom styles, and pipeline
 
 ## Sources
 
-- [Adobe Firefly plans](https://www.adobe.com/products/firefly/plans.html) (verified 2026-06-02)
-- [Adobe Firefly product page](https://www.adobe.com/products/firefly.html) (verified 2026-06-02)
-- [Adobe Firefly creative-agent update](https://news.adobe.com/news/2026/04/adobe-new-creative-agent) (verified 2026-06-02)
-- [Stability AI API pricing](https://platform.stability.ai/pricing) (verified 2026-06-02)
-- [Stability AI core models](https://stability.ai/core-models) (verified 2026-06-02)
-- [Stability AI license](https://stability.ai/license) (verified 2026-06-02)
-- [Introducing Stable Diffusion 3.5](https://stability.ai/news-updates/introducing-stable-diffusion-3-5) (verified 2026-06-02)
-- [SD 3.5 Large ControlNets](https://stability.ai/news-updates/sd3-5-large-controlnets) (verified 2026-06-02)
+- [Adobe Firefly plans](https://www.adobe.com/products/firefly/plans.html) (verified 2026-06-12)
+- [Adobe Firefly product page](https://www.adobe.com/products/firefly.html) (verified 2026-06-12)
+- [Adobe Firefly creative-agent update](https://news.adobe.com/news/2026/04/adobe-new-creative-agent) (verified 2026-06-12)
+- [Stability AI API pricing](https://platform.stability.ai/pricing) (verified 2026-06-12)
+- [Stability AI core models](https://stability.ai/core-models) (verified 2026-06-12)
+- [Stability AI license](https://stability.ai/license) (verified 2026-06-12)
+- [Introducing Stable Diffusion 3.5](https://stability.ai/news-updates/introducing-stable-diffusion-3-5) (verified 2026-06-12)
+- [SD 3.5 Large ControlNets](https://stability.ai/news-updates/sd3-5-large-controlnets) (verified 2026-06-12)
 - [Adobe Firefly review](/tools/adobe-firefly/) (verified 2026-05-26)
 - [Stable Diffusion review](/tools/stable-diffusion/) (verified 2026-05-13)

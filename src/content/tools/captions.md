@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$69.99/month public self-serve; Enterprise custom"
 status: active
 launched: 2021-01
-last_updated: 2026-06-02
-last_verified: 2026-06-02
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: weekly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://captions.ai/overview"
     source_label: "Captions overview"
     source_id: captions-overview
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     next_review_at: 2026-06-13
     volatility: high
     confidence: high
@@ -39,7 +39,7 @@ facts:
     source: "https://captions.ai/pricing"
     source_label: "Captions pricing"
     source_id: captions-official
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     next_review_at: 2026-06-13
     volatility: high
     confidence: high
@@ -48,7 +48,7 @@ facts:
     source: "https://captions.ai/overview"
     source_label: "Captions overview"
     source_id: captions-overview
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     next_review_at: 2026-06-13
     volatility: high
     confidence: high
@@ -57,7 +57,7 @@ facts:
     source: "https://captions.ai/pricing"
     source_label: "Captions pricing"
     source_id: captions-official
-    verified_at: 2026-06-02
+    verified_at: 2026-06-12
     next_review_at: 2026-06-13
     volatility: high
     confidence: medium
@@ -131,7 +131,7 @@ Captions.ai is a short-form AI video editor for creators and social teams. It is
 - **Overview claims:** Captions can transform footage into edited videos, create from prompts, add automatic subtitles, dub voiceovers into 30+ languages, generate music or sound effects, fix eye contact, and create a spokesperson from a selfie or from scratch.
 - **Mirage Studio merger:** Captions has folded Mirage Studio into the main product, consolidating both surfaces under the Captions brand.
 
-Verified against Captions official pages on 2026-06-02.
+Verified against Captions official pages on 2026-06-12.
 
 ## What It Actually Is
 
@@ -185,7 +185,7 @@ Captions states that displayed prices reflect iOS plans only. Verify Android, we
 
 ## Methodology
 
-AiPedia refreshed this page on 2026-06-02 using Captions' official overview and pricing pages. The June crawl reverified Pro, Max, Scale, Enterprise, AI Twin, AI Creator, AI Lipdub, the Mirage Studio rename, the iOS-pricing caveat, and Scale's 1,400-credit public card. Older Scale 2x/4x price language was removed from active buyer guidance because it did not render on the current public page.
+AiPedia refreshed this page on 2026-06-12 using Captions' official overview and pricing pages. The June crawl reverified Pro, Max, Scale, Enterprise, AI Twin, AI Creator, AI Lipdub, the Mirage Studio rename, the iOS-pricing caveat, and Scale's 1,400-credit public card. Older Scale 2x/4x price language was removed from active buyer guidance because it did not render on the current public page.
 
 ## FAQ
 

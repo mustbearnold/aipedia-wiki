@@ -3,16 +3,16 @@ type: company
 slug: anthropic
 title: Anthropic
 seo_title: "Anthropic Company Profile (June 2026), aipedia.wiki"
-meta_description: "Anthropic builds Claude, Claude Code, Claude Cowork, and enterprise AI products. Verified June 2, 2026: Series H raised $65B at $965B, Anthropic filed a confidential S-1 draft, and Claude Opus 4.8 is current."
+meta_description: "Anthropic builds Claude, Claude Code, Claude Cowork, and enterprise AI products. Verified June 12, 2026: Series H raised $65B at $965B, Anthropic filed a confidential S-1 draft, and Claude Opus 4.8 is current."
 author: "aipedia.wiki Editorial"
 company_type: startup
 founded: 2021
 hq: San Francisco, USA
 funding: "$65B Series H at $965B post-money (May 2026)"
 key_products: [claude, claude-code]
-last_updated: 2026-06-02
+last_updated: 2026-06-12
 update_frequency: monthly
-last_verified: 2026-06-02
+last_verified: 2026-06-12
 ---
 
 # Anthropic

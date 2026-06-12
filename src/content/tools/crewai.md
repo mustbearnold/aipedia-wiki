@@ -2,7 +2,7 @@
 type: tool
 slug: crewai
 title: CrewAI
-tagline: Open-source Python framework for orchestrating role-based multi-agent teams, plus Basic cloud and custom Enterprise deployment/monitoring. CrewAI 1.14.6 is the current stable release as of June 2, 2026.
+tagline: Open-source Python framework for orchestrating role-based multi-agent teams, plus Basic cloud and custom Enterprise deployment/monitoring. CrewAI 1.14.6 is the current stable release as of June 12, 2026.
 category: ai-automation
 company: crewai
 url: 'https://www.crewai.com'
@@ -11,11 +11,11 @@ pricing_model: open-source
 price_range: "Free Basic and MIT core · Enterprise custom"
 status: active
 launched: 2023-12
-last_updated: 2026-06-02
-last_verified: 2026-06-02
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 seo_title: "CrewAI: Features, Pricing & Review (June 2026)"
-meta_description: "CrewAI 1.14.6 is the current stable release as of June 2, 2026. The core framework is open source; CrewAI Basic is free with 50 executions, and Enterprise is custom for production deployment, SSO, RBAC, and managed infrastructure."
+meta_description: "CrewAI 1.14.6 is the current stable release as of June 12, 2026. The core framework is open source; CrewAI Basic is free with 50 executions, and Enterprise is custom for production deployment, SSO, RBAC, and managed infrastructure."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -35,7 +35,7 @@ facts:
     source: https://www.crewai.com/
     source_label: CrewAI official site
     source_id: crewai-official
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -45,7 +45,7 @@ facts:
     source: https://www.crewai.com/pricing
     source_label: CrewAI pricing
     source_id: crewai-pricing
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -55,7 +55,7 @@ facts:
     source: https://github.com/crewAIInc/crewAI/releases
     source_label: CrewAI GitHub releases
     source_id: crewai-repository
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -65,7 +65,7 @@ facts:
     source: https://docs.crewai.com/
     source_label: CrewAI documentation
     source_id: crewai-docs
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -75,7 +75,7 @@ facts:
     source: https://docs.crewai.com/
     source_label: CrewAI documentation
     source_id: crewai-docs
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -131,7 +131,7 @@ Current stable release is [CrewAI 1.14.6](https://github.com/crewAIInc/crewAI/re
 | **Model support** | Bring API keys/providers through the framework and supported integrations; LLM spend is separate |
 | **GitHub releases** | 1.14.6 marked latest on June 2, 2026 source check |
 
-Every data point above was verified against vendor sources on 2026-06-02. See Sources.
+Every data point above was verified against vendor sources on 2026-06-12. See Sources.
 
 ## What it actually is
 
@@ -166,7 +166,7 @@ The moat is thin. The role-based pattern is easy to copy and competing framework
 | Basic | Free | CrewAI cloud, Studio visual editor, standard tools/triggers, GitHub integration, private agent/tool repositories, 50 included and maximum executions |
 | Enterprise | Custom | Sized-to-workflow executions, enterprise connectors, SSO, RBAC, customer or CrewAI infrastructure, dedicated support, onboarding, deployment, and development help |
 
-*Pricing verified 2026-06-02 via [CrewAI pricing](https://crewai.com/pricing). The public page now shows Basic as Free and Enterprise as Custom; earlier third-party $99/mo and ~$120K/year Ultra figures should not be treated as current public pricing.*
+*Pricing verified 2026-06-12 via [CrewAI pricing](https://crewai.com/pricing). The public page now shows Basic as Free and Enterprise as Custom; earlier third-party $99/mo and ~$120K/year Ultra figures should not be treated as current public pricing.*
 
 LLM API costs are separate. A complex crew can burn several dollars per execution without tight caps because planners, workers, tools, retries, and review loops all add calls. Default to cheaper or smaller models for inner-loop agents and reserve expensive frontier reasoning models for planner or final-review roles.
 
@@ -193,7 +193,7 @@ LLM API costs are separate. A complex crew can burn several dollars per executio
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-02 against the [CrewAI GitHub releases](https://github.com/crewAIInc/crewAI/releases), [CrewAI pricing page](https://crewai.com/pricing), and [CrewAI documentation](https://docs.crewai.com/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-12 against the [CrewAI GitHub releases](https://github.com/crewAIInc/crewAI/releases), [CrewAI pricing page](https://crewai.com/pricing), and [CrewAI documentation](https://docs.crewai.com/).
 
 ## FAQ
 
@@ -201,7 +201,7 @@ This page was produced by the aipedia.wiki editorial pipeline, an automated syst
 Yes. The core framework is MIT-licensed and fully free to self-host. The hosted Basic plan is also listed as Free on the public pricing page, with 50 included/maximum executions. You still supply LLM API keys or pay provider/model costs separately. Enterprise is custom.
 
 **What is the current CrewAI version?**
-CrewAI 1.14.6 is the latest stable release shown on GitHub as of June 2, 2026. It shipped on May 28, 2026 after the 1.14.5 stable release. See [releases](https://github.com/crewAIInc/crewAI/releases).
+CrewAI 1.14.6 is the latest stable release shown on GitHub as of June 12, 2026. It shipped on May 28, 2026 after the 1.14.5 stable release. See [releases](https://github.com/crewAIInc/crewAI/releases).
 
 **CrewAI vs LangGraph?**
 CrewAI uses role-based agents with goals and backstories. Faster to prototype. LangGraph uses explicit state graphs. More control over production behavior. CrewAI wins on time-to-first-crew; LangGraph wins on deterministic production flows.

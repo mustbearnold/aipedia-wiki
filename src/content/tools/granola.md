@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0 free / $14-$35/user/month"
 status: active
 launched: 2024-05
-last_updated: 2026-06-02
-last_verified: 2026-06-02
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,17 +31,17 @@ facts:
     source: https://www.granola.ai/
     source_label: Granola official site
     source_id: granola-official
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
   pricing_anchor:
-    value: Free at $0, Business $14/user/month, Enterprise $35/user/month verified June 2, 2026; Business adds MCP integration
+    value: Free at $0, Business $14/user/month, Enterprise $35/user/month verified June 12, 2026; Business adds MCP integration
       and personal API access alongside Notion, HubSpot, Attio, Affinity, Slack, and Zapier.
     source: https://www.granola.ai/pricing
     source_label: Granola pricing
     source_id: granola-pricing
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -51,7 +51,7 @@ facts:
     source: https://www.granola.ai/
     source_label: Granola official site
     source_id: granola-official
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -61,7 +61,7 @@ facts:
     source: https://www.granola.ai/security
     source_label: Granola security
     source_id: granola-security
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -71,7 +71,7 @@ facts:
     source: https://www.granola.ai/
     source_label: Granola official site
     source_id: granola-official
-    verified_at: '2026-06-02'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -168,7 +168,7 @@ A macOS-first AI notepad built for people who take meetings back to back. You jo
 | Business | $14/user/mo | Unlimited history, advanced AI thinking models, integrations (Notion, HubSpot, Attio, Affinity, Slack, Zapier), MCP integration, personal API access, centralized billing |
 | Enterprise | $35/user/mo | Security, compliance, SSO, admin controls, enterprise API, usage analytics, org-wide auto-deletion |
 
-Prices verified 2026-06-02 via [granola.ai/pricing](https://www.granola.ai/pricing) and Granola's subscription help docs.
+Prices verified 2026-06-12 via [granola.ai/pricing](https://www.granola.ai/pricing) and Granola's subscription help docs.
 
 ## Failure modes
 
@@ -190,7 +190,7 @@ Prices verified 2026-06-02 via [granola.ai/pricing](https://www.granola.ai/prici
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-02 against [granola.ai/pricing](https://www.granola.ai/pricing), [Granola subscriptions and billing](https://help.granola.ai/article/subscriptions-and-billing), and [Granola security](https://www.granola.ai/security).
+Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-12 against [granola.ai/pricing](https://www.granola.ai/pricing), [Granola subscriptions and billing](https://help.granola.ai/article/subscriptions-and-billing), and [Granola security](https://www.granola.ai/security).
 
 ## FAQ
 
