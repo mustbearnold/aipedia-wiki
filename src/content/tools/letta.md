@@ -11,8 +11,8 @@ pricing_model: open-source
 price_range: "Free (open-source) · Letta Code Free · Pro $20/mo · Enterprise custom"
 status: active
 launched: 2023-10
-last_updated: 2026-06-08
-last_verified: 2026-06-08
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: https://www.letta.com/
     source_label: Letta official site
     source_id: letta-official
-    verified_at: '2026-06-08'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-12-08'
@@ -40,7 +40,7 @@ facts:
     source: https://docs.letta.com/letta-code/pricing
     source_label: Letta Code pricing
     source_id: letta-code-pricing
-    verified_at: '2026-06-08'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-09-08'
@@ -49,7 +49,7 @@ facts:
     source: https://docs.letta.com/
     source_label: Letta documentation
     source_id: letta-docs
-    verified_at: '2026-06-08'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-12-08'
@@ -58,7 +58,7 @@ facts:
     source: https://github.com/letta-ai/letta
     source_label: Letta GitHub repository
     source_id: letta-repository
-    verified_at: '2026-06-08'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-12-08'
@@ -67,13 +67,13 @@ facts:
     source: https://docs.letta.com/
     source_label: Letta documentation
     source_id: letta-docs
-    verified_at: '2026-06-08'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-12-08'
 tags: [agent-framework, memory, stateful, memgpt, open-source, python, llm-agents, long-term-memory, rag, letta-code]
 seo_title: "Letta (formerly MemGPT): Features, Pricing & Review (June 2026)"
-meta_description: "Letta is the open-source stateful agent platform formerly known as MemGPT. Verified June 8, 2026: self-host free under Apache-2.0, or use Letta Code Free / Pro $20/mo / Enterprise with Letta Auto and BYOK."
+meta_description: "Letta is the open-source stateful agent platform formerly known as MemGPT. Verified June 12, 2026: self-host free under Apache-2.0, or use Letta Code Free / Pro $20/mo / Enterprise with Letta Auto and BYOK."
 author: "aipedia.wiki Editorial"
 best_for:
   - developers building agents that need long-term memory
@@ -142,7 +142,7 @@ The differentiator is typed memory blocks (persona, human context, archival) tha
 | **Pro tier limits** | Up to 20 stateful agents · Letta Auto quota · pay-as-you-go overage |
 | **Typical usage cost** | Vendor estimates $100-$200+/month for active coding workloads |
 
-Every data point above was verified against vendor sources on 2026-06-08. See Sources.
+Every data point above was verified against vendor sources on 2026-06-12. See Sources.
 
 ## What it actually is
 
@@ -178,7 +178,7 @@ Letta Code is the most interesting recent ship and now the front door for the ho
 | Letta Code Pro | $20/mo | Up to 20 stateful agents · Letta Auto quota + pay-as-you-go overage · BYOK |
 | Enterprise | Custom | Managed per-seat for teams, private models, SAML/OIDC SSO, dedicated quotas |
 
-*Prices verified 2026-06-08 via [Letta Code pricing](https://docs.letta.com/letta-code/pricing). The legacy `letta.com/pricing` route now points buyers to this Letta Code pricing surface. Self-hosting is free; you still pay for LLM tokens through your provider. Vendor estimates active coding workloads can run $100-$200+/month when using paid Letta Auto on Pro.*
+*Prices verified 2026-06-12 via [Letta Code pricing](https://docs.letta.com/letta-code/pricing). The legacy `letta.com/pricing` route now points buyers to this Letta Code pricing surface. Self-hosting is free; you still pay for LLM tokens through your provider. Vendor estimates active coding workloads can run $100-$200+/month when using paid Letta Auto on Pro.*
 
 ## Against the alternatives
 
@@ -209,7 +209,7 @@ Letta Code is the most interesting recent ship and now the front door for the ho
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-08 against [Letta Code pricing](https://docs.letta.com/letta-code/pricing), [Letta Code docs](https://docs.letta.com/letta-code/), the [Letta Code quickstart](https://docs.letta.com/letta-code/quickstart), and the [letta-ai/letta GitHub repo](https://github.com/letta-ai/letta).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-12 against [Letta Code pricing](https://docs.letta.com/letta-code/pricing), [Letta Code docs](https://docs.letta.com/letta-code/), the [Letta Code quickstart](https://docs.letta.com/letta-code/quickstart), and the [letta-ai/letta GitHub repo](https://github.com/letta-ai/letta).
 
 ## FAQ
 

@@ -11,8 +11,8 @@ pricing_model: free
 price_range: "$0 home and work use"
 status: active
 launched: 2023-05
-last_updated: 2026-06-08
-last_verified: 2026-06-08
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: https://lmstudio.ai/
     source_label: LM Studio official site
     source_id: lm-studio-official
-    verified_at: '2026-06-08'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-08'
@@ -40,7 +40,7 @@ facts:
     source: https://lmstudio.ai/
     source_label: LM Studio official site
     source_id: lm-studio-official
-    verified_at: '2026-06-08'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-08'
@@ -49,7 +49,7 @@ facts:
     source: https://lmstudio.ai/docs
     source_label: LM Studio documentation
     source_id: lm-studio-docs
-    verified_at: '2026-06-08'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-08'
@@ -58,7 +58,7 @@ facts:
     source: https://lmstudio.ai/docs/api
     source_label: LM Studio developer docs
     source_id: lm-studio-api-docs
-    verified_at: '2026-06-08'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-08'
@@ -67,7 +67,7 @@ facts:
     source: https://lmstudio.ai/docs
     source_label: LM Studio documentation
     source_id: lm-studio-docs
-    verified_at: '2026-06-08'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-08'
@@ -139,7 +139,7 @@ A desktop application that wraps local open-weight model running in a visual int
 |---|---|---|
 | Home and work use | $0 | All features, unlimited use, no separate commercial license required as of 2026 |
 
-Verified 2026-06-08 via [lmstudio.ai](https://lmstudio.ai) and the official free-for-work announcement. The terms shifted in July 2025 to drop the prior "contact us for commercial" gating; review the [LM Studio Terms of Use](https://lmstudio.ai/terms) before redistribution, embedding, or fleet-scale deployment.
+Verified 2026-06-12 via [lmstudio.ai](https://lmstudio.ai) and the official free-for-work announcement. The terms shifted in July 2025 to drop the prior "contact us for commercial" gating; review the [LM Studio Terms of Use](https://lmstudio.ai/terms) before redistribution, embedding, or fleet-scale deployment.
 
 ## Failure modes
 
@@ -160,7 +160,7 @@ Verified 2026-06-08 via [lmstudio.ai](https://lmstudio.ai) and the official free
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-08 against [lmstudio.ai](https://lmstudio.ai), the [LM Studio developer docs](https://lmstudio.ai/docs/api), the [LM Studio REST API docs](https://lmstudio.ai/docs/developer/rest), the [local server docs](https://lmstudio.ai/docs/developer/core/server), and the [free-for-work announcement](https://lmstudio.ai/blog/free-for-work).
+Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-12 against [lmstudio.ai](https://lmstudio.ai), the [LM Studio developer docs](https://lmstudio.ai/docs/api), the [LM Studio REST API docs](https://lmstudio.ai/docs/developer/rest), the [local server docs](https://lmstudio.ai/docs/developer/core/server), and the [free-for-work announcement](https://lmstudio.ai/blog/free-for-work).
 
 ## FAQ
 

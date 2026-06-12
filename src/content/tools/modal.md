@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: Starter $0 with $30/mo credits; Team $250/mo plus compute; GPU billed per second
 status: active
 launched: 2021
-last_updated: 2026-06-08
-last_verified: 2026-06-08
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: "https://modal.com/pricing"
     source_label: "Modal pricing"
     source_id: modal-official
-    verified_at: 2026-06-08
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -39,7 +39,7 @@ facts:
     source: "https://modal.com/pricing"
     source_label: "Modal pricing"
     source_id: modal-official
-    verified_at: 2026-06-08
+    verified_at: 2026-06-12
     next_review_at: 2026-08-08
     volatility: medium
     confidence: high
@@ -48,13 +48,13 @@ facts:
     source: "https://modal.com/pricing"
     source_label: "Modal pricing"
     source_id: modal-official
-    verified_at: 2026-06-08
+    verified_at: 2026-06-12
     next_review_at: 2026-08-08
     volatility: medium
     confidence: high
 tags: [serverless, gpu-cloud, python, inference, jobs, web-endpoints, ai-infrastructure]
 seo_title: "Modal Review: Serverless GPU Cloud & Pricing (June 2026)"
-meta_description: "Modal is a serverless Python and GPU cloud for AI apps, batch jobs, inference endpoints, queues, and sandboxes, with per-second B200, H200, H100, A100, L40S, L4, and T4 pricing. Verified June 8, 2026."
+meta_description: "Modal is a serverless Python and GPU cloud for AI apps, batch jobs, inference endpoints, queues, and sandboxes, with per-second B200, H200, H100, A100, L40S, L4, and T4 pricing. Verified June 12, 2026."
 author: aipedia.wiki Editorial
 best_for:
   - Python teams deploying AI jobs without Kubernetes
@@ -135,7 +135,7 @@ The Starter plan is $0/mo with $30/mo in compute credits, 100 containers, and 10
 
 This is attractive for bursty jobs. For constant GPU load, compare against reserved instances before committing.
 
-As verified on 2026-06-08, Modal's pricing page also notes regional execution can cost 1.5x to 1.75x base prices and non-preemptible execution can cost 3x base prices. Those multipliers matter for production inference, customer-facing latency, and workloads that cannot tolerate interruption.
+As verified on 2026-06-12, Modal's pricing page also notes regional execution can cost 1.5x to 1.75x base prices and non-preemptible execution can cost 3x base prices. Those multipliers matter for production inference, customer-facing latency, and workloads that cannot tolerate interruption.
 
 ## Evaluation checklist
 
@@ -167,7 +167,7 @@ It is weaker for organizations that already have a mature Kubernetes platform, n
 
 ## Methodology
 
-Last verified 2026-06-08 against [Modal's pricing page](https://modal.com/pricing) and product documentation, with GPU per-second rates, container caps, surcharge multipliers, and B200+/B300 routing guidance confirmed for Starter and Team tiers. Scoring emphasizes developer experience, fit for AI workloads, GPU flexibility, and cost risk.
+Last verified 2026-06-12 against [Modal's pricing page](https://modal.com/pricing) and product documentation, with GPU per-second rates, container caps, surcharge multipliers, and B200+/B300 routing guidance confirmed for Starter and Team tiers. Scoring emphasizes developer experience, fit for AI workloads, GPU flexibility, and cost risk.
 
 ## FAQ
 

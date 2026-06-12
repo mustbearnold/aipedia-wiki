@@ -10,8 +10,8 @@ url: https://business.linkedin.com/hire/recruiter
 pricing_model: enterprise
 price_range: "Contact sales; Hiring Assistant is an add-on"
 status: active
-last_updated: 2026-06-08
-last_verified: 2026-06-08
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://business.linkedin.com/hire/recruiter"
     source_label: "LinkedIn Recruiter + Hiring Assistant"
     source_id: linkedin-recruiter
-    verified_at: 2026-06-08
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -38,7 +38,7 @@ facts:
     source: "https://business.linkedin.com/hire/recruiter"
     source_label: "LinkedIn Recruiter FAQ"
     source_id: linkedin-recruiter
-    verified_at: 2026-06-08
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-08-13
@@ -47,7 +47,7 @@ facts:
     source: "https://business.linkedin.com/hire/recruiter"
     source_label: "LinkedIn Recruiter + Hiring Assistant"
     source_id: linkedin-recruiter
-    verified_at: 2026-06-08
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   watch_out_for:
@@ -55,7 +55,7 @@ facts:
     source: "https://business.linkedin.com/hire/recruiter"
     source_label: "LinkedIn Recruiter FAQ"
     source_id: linkedin-recruiter
-    verified_at: 2026-06-08
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
 tags: [recruiting, sourcing, hiring, talent-acquisition, candidate-outreach]
@@ -79,7 +79,7 @@ quick_answer: >-
 
 LinkedIn Recruiter is LinkedIn's professional recruiting platform. It combines candidate search, projects, InMail, collaboration, reporting, hiring-system integrations, and Hiring Assistant, LinkedIn's AI agent for recruiters.
 
-As of June 8, 2026, AiPedia treats LinkedIn Recruiter + Hiring Assistant as the strongest first evaluation for teams that hire consistently and source candidates through LinkedIn.
+As of June 12, 2026, AiPedia treats LinkedIn Recruiter + Hiring Assistant as the strongest first evaluation for teams that hire consistently and source candidates through LinkedIn.
 
 ## System Verdict
 
@@ -160,7 +160,7 @@ Hiring Assistant should not be treated as an autonomous decision-maker. LinkedIn
 
 ## AiPedia Trust Note
 
-This page was refreshed on June 8, 2026 using LinkedIn's current Recruiter and Hiring Assistant pages. AiPedia does not list a paid affiliate program for LinkedIn Recruiter. Scores reflect buyer utility, defensibility, network moat, and procurement risk.
+This page was refreshed on June 12, 2026 using LinkedIn's current Recruiter and Hiring Assistant pages. AiPedia does not list a paid affiliate program for LinkedIn Recruiter. Scores reflect buyer utility, defensibility, network moat, and procurement risk.
 
 ## Sources
 

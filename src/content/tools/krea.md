@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2022-03
-last_updated: 2026-06-08
-last_verified: 2026-06-08
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 seo_title: "Krea: Features, Pricing & Review (June 2026)"
 meta_description: "Krea is the real-time creative suite for image, video, 3D, lipsync, LoRA, and node workflows. June 2026 pricing check: Free 100 daily compute units; Basic, Pro, Max, Business, and Enterprise differ by model access, rollover, seats, and compute."
@@ -34,7 +34,7 @@ facts:
     source: https://www.krea.ai/
     source_label: Krea official site
     source_id: krea-official
-    verified_at: '2026-06-08'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -43,7 +43,7 @@ facts:
     source: https://www.krea.ai/pricing
     source_label: Krea pricing
     source_id: krea-pricing
-    verified_at: '2026-06-08'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -52,7 +52,7 @@ facts:
     source: https://www.krea.ai/realtime
     source_label: Krea realtime image generation
     source_id: krea-realtime
-    verified_at: '2026-06-08'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -62,7 +62,7 @@ facts:
     source: https://www.krea.ai/video
     source_label: Krea video generator
     source_id: krea-video
-    verified_at: '2026-06-08'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -71,7 +71,7 @@ facts:
     source: https://www.krea.ai/pricing
     source_label: Krea pricing
     source_id: krea-pricing
-    verified_at: '2026-06-08'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -197,7 +197,7 @@ The current pricing page emphasizes yearly discounts for individual plans and a 
 
 No public API pricing tier is currently published, although Enterprise plans include analytics API access.
 
-Prices reverified 2026-06-08 via [Krea pricing](https://www.krea.ai/pricing). The checked page lists Krea 2 access across paid tiers, all video models at Pro and above, unlimited relaxed in-house generations at Max and above, Business terms/no-training clauses for teams, and Analytics API/SLA/audit-log controls at Enterprise.
+Prices reverified 2026-06-12 via [Krea pricing](https://www.krea.ai/pricing). The checked page lists Krea 2 access across paid tiers, all video models at Pro and above, unlimited relaxed in-house generations at Max and above, Business terms/no-training clauses for teams, and Analytics API/SLA/audit-log controls at Enterprise.
 
 ## Against the alternatives
 
@@ -224,7 +224,7 @@ Prices reverified 2026-06-08 via [Krea pricing](https://www.krea.ai/pricing). Th
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-08 against [Krea pricing](https://www.krea.ai/pricing), the [Krea homepage](https://www.krea.ai/), and the [Krea Series B coverage from TechCrunch](https://techcrunch.com/2025/04/07/kreas-founders-snubbed-postgrad-grants-from-the-king-of-spain-to-build-their-ai-startup-now-its-valued-at-500m/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-12 against [Krea pricing](https://www.krea.ai/pricing), the [Krea homepage](https://www.krea.ai/), and the [Krea Series B coverage from TechCrunch](https://techcrunch.com/2025/04/07/kreas-founders-snubbed-postgrad-grants-from-the-king-of-spain-to-build-their-ai-startup-now-its-valued-at-500m/).
 
 ## FAQ
 

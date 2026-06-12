@@ -8,8 +8,8 @@ winner: beautiful-ai
 seo_title: "Beautiful.ai vs Tome: Tome Is Dead, Use Smart Slides (June 2026)"
 meta_description: "Beautiful.ai vs Tome for presentations. Tome Slides sunset April 30, 2025; Beautiful.ai is the active pick for Smart Slides, brand control, and polished decks. Verified June 2026."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-08
-last_verified: 2026-06-08
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: quarterly
 canonical_fact_table: true
 ---
@@ -18,7 +18,7 @@ canonical_fact_table: true
 
 [Beautiful.ai](/tools/beautiful-ai/) is the right current choice over [Tome](/tools/tome/) if your priority is polished business slides, brand guardrails, and layouts that do not fall apart when a teammate edits them. Tome is no longer an active AI presentation product. The official Tome Help Center says Tome Slides was sunsetting on April 30, 2025, that users should migrate important work before that date, and that users would not be able to sign in or access Tome content after the sunset.
 
-The practical buyer answer: **use Beautiful.ai when you wanted Tome's AI creation speed but need a professional slide system that still exists. Do not shortlist Tome for new presentation work.** This comparison was re-verified on **June 8, 2026** against current Beautiful.ai, Tome, VentureBeat, and Lightfield sources.
+The practical buyer answer: **use Beautiful.ai when you wanted Tome's AI creation speed but need a professional slide system that still exists. Do not shortlist Tome for new presentation work.** This comparison was re-verified on **June 12, 2026** against current Beautiful.ai, Tome, VentureBeat, and Lightfield sources.
 
 ## Quick Verdict
 
@@ -54,7 +54,7 @@ But the former advantage is now only historical. Beautiful.ai may feel more stru
 
 ## Pricing Reality
 
-Beautiful.ai has current pricing. On June 8, 2026, AiPedia verified the official Beautiful.ai pricing page, which lists Pro at $12/month billed annually or $45 for one-off monthly work, Team at $40/user/month billed annually or $50/user/month monthly for 2-20 seats, and Enterprise custom pricing. The live page also lists unlimited AI content generation, Smart Slides, branding, PowerPoint import/export, viewer analytics, PDF export, editable PowerPoint export, and a 14-day trial that requires a credit card. Buyers should still check the live pricing page before purchase because vendor plans can change.
+Beautiful.ai has current pricing. On June 12, 2026, AiPedia verified the official Beautiful.ai pricing page, which lists Pro at $12/month billed annually or $45 for one-off monthly work, Team at $40/user/month billed annually or $50/user/month monthly for 2-20 seats, and Enterprise custom pricing. The live page also lists unlimited AI content generation, Smart Slides, branding, PowerPoint import/export, viewer analytics, PDF export, editable PowerPoint export, and a 14-day trial that requires a credit card. Buyers should still check the live pricing page before purchase because vendor plans can change.
 
 Tome Slides has no current presentation pricing. Any old Free/Pro/Enterprise comparison belongs to the discontinued product. Do not treat historical Tome prices as a valid 2026 procurement option.
 
@@ -115,6 +115,6 @@ Yes, if the deliverable is a conventional professional deck. Rebuild rather than
 - Tome Help Center: [Tome Slides is Sunsetting on April 30th, 2025](https://tome.app/help/en/articles/10744234-tome-slides-is-sunsetting-on-april-30th-2025)
 - VentureBeat: [Tome's founders ditch viral presentation app to build AI-native CRM Lightfield](https://venturebeat.com/technology/tomes-founders-ditch-viral-presentation-app-with-20m-users-to-build-ai)
 - Lightfield homepage: [https://lightfield.app/](https://lightfield.app/)
-- Beautiful.ai AI presentations: [https://www.beautiful.ai/ai-presentations](https://www.beautiful.ai/ai-presentations) (verified 2026-06-08)
-- Beautiful.ai pricing: [https://www.beautiful.ai/pricing](https://www.beautiful.ai/pricing) (verified 2026-06-08)
+- Beautiful.ai AI presentations: [https://www.beautiful.ai/ai-presentations](https://www.beautiful.ai/ai-presentations) (verified 2026-06-12)
+- Beautiful.ai pricing: [https://www.beautiful.ai/pricing](https://www.beautiful.ai/pricing) (verified 2026-06-12)
 - Related category: [AI Presentation Tools](/categories/ai-presentation/)

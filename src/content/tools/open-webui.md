@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0 self-hosted / Enterprise custom / third-party hosting varies"
 status: active
 launched: 2023-11
-last_updated: 2026-06-08
-last_verified: 2026-06-08
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: "https://openwebui.com"
     source_label: "openwebui.com"
     source_id: open-webui-official
-    verified_at: 2026-06-08
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -39,7 +39,7 @@ facts:
     source: "https://docs.openwebui.com/enterprise/"
     source_label: "docs.openwebui.com/enterprise"
     source_id: open-webui-enterprise
-    verified_at: 2026-06-08
+    verified_at: 2026-06-12
     next_review_at: 2026-09-08
     volatility: medium
     confidence: high
@@ -48,7 +48,7 @@ facts:
     source: "https://docs.openwebui.com/enterprise/"
     source_label: "docs.openwebui.com/enterprise"
     source_id: open-webui-enterprise
-    verified_at: 2026-06-08
+    verified_at: 2026-06-12
     next_review_at: 2026-09-08
     volatility: medium
     confidence: high
@@ -102,7 +102,7 @@ A self-hosted AI interface for local and cloud models. Pair it with [Ollama](/to
 | **RAG capabilities** | Knowledge-base workflows, retrieval integrations, and sync tooling; final quality depends on setup |
 | **Deployment** | Docker, docker-compose, Kubernetes, VPS |
 
-Verified 2026-06-08 via [openwebui.com](https://openwebui.com), [docs.openwebui.com/enterprise](https://docs.openwebui.com/enterprise/), and [Open WebUI v0.9.6 release notes](https://github.com/open-webui/open-webui/releases/tag/v0.9.6).
+Verified 2026-06-12 via [openwebui.com](https://openwebui.com), [docs.openwebui.com/enterprise](https://docs.openwebui.com/enterprise/), and [Open WebUI v0.9.6 release notes](https://github.com/open-webui/open-webui/releases/tag/v0.9.6).
 
 ## When to pick Open WebUI
 
@@ -127,7 +127,7 @@ Verified 2026-06-08 via [openwebui.com](https://openwebui.com), [docs.openwebui.
 | Third-party hosting | Varies | Hosting partners and marketplaces may offer one-click deploys; verify live provider pricing before buying |
 | Enterprise | Custom | SSO, RBAC, audit logs, enterprise support, deployment/data control, and commercial/license-sensitive deployments |
 
-Verified 2026-06-08 via [openwebui.com](https://openwebui.com) and [docs.openwebui.com/enterprise](https://docs.openwebui.com/enterprise/). AiPedia does not treat third-party hosting prices as first-party Open WebUI pricing.
+Verified 2026-06-12 via [openwebui.com](https://openwebui.com) and [docs.openwebui.com/enterprise](https://docs.openwebui.com/enterprise/). AiPedia does not treat third-party hosting prices as first-party Open WebUI pricing.
 
 ## Failure modes
 
@@ -149,7 +149,7 @@ Verified 2026-06-08 via [openwebui.com](https://openwebui.com) and [docs.openweb
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-08 against [openwebui.com](https://openwebui.com/), [docs.openwebui.com/enterprise](https://docs.openwebui.com/enterprise/), and the [Open WebUI v0.9.6 release notes](https://github.com/open-webui/open-webui/releases/tag/v0.9.6).
+Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-12 against [openwebui.com](https://openwebui.com/), [docs.openwebui.com/enterprise](https://docs.openwebui.com/enterprise/), and the [Open WebUI v0.9.6 release notes](https://github.com/open-webui/open-webui/releases/tag/v0.9.6).
 
 ## FAQ
 
@@ -167,9 +167,9 @@ Jan is a desktop app for one user. Open WebUI is a server app for a team. Differ
 
 ## Sources
 
-- [Open WebUI official site](https://openwebui.com/) (verified 2026-06-08)
-- [Open WebUI Enterprise docs](https://docs.openwebui.com/enterprise/) (verified 2026-06-08)
-- [Open WebUI v0.9.6 release notes](https://github.com/open-webui/open-webui/releases/tag/v0.9.6) (verified 2026-06-08)
+- [Open WebUI official site](https://openwebui.com/) (verified 2026-06-12)
+- [Open WebUI Enterprise docs](https://docs.openwebui.com/enterprise/) (verified 2026-06-12)
+- [Open WebUI v0.9.6 release notes](https://github.com/open-webui/open-webui/releases/tag/v0.9.6) (verified 2026-06-12)
 
 ## Related
 

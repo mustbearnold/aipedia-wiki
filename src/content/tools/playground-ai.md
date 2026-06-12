@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: "$0-$45/month + one-time credit packs"
 status: active
 launched: 2022-07
-last_updated: 2026-06-08
-last_verified: 2026-06-08
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -32,7 +32,7 @@ facts:
     source: "https://playground.com/design/pricing"
     source_label: "Source"
     source_id: playground-ai-pricing
-    verified_at: 2026-06-08
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -40,7 +40,7 @@ facts:
     source: "https://playground.com/design/pricing"
     source_label: "Source"
     source_id: playground-ai-pricing
-    verified_at: 2026-06-08
+    verified_at: 2026-06-12
     next_review_at: 2026-07-08
     volatility: medium
     confidence: high
@@ -49,7 +49,7 @@ facts:
     source: "https://playground.com/design/pricing"
     source_label: "Source"
     source_id: playground-ai-pricing
-    verified_at: 2026-06-08
+    verified_at: 2026-06-12
     next_review_at: 2026-07-08
     volatility: medium
     confidence: high
@@ -134,7 +134,7 @@ The platform also runs Nano Banana, GPT Image 2, Seedream, and Nano Banana Pro f
 | **Max resolution** | Up to 4K GPT Image 2 editing on Pro Plus, 2K on Pro |
 | **Canvas tools** | Inpainting, outpainting, background removal, text, filters, premium templates |
 
-Every data point above was verified on 2026-06-08 against the rendered pricing page and help-center paid-plan article. See Sources.
+Every data point above was verified on 2026-06-12 against the rendered pricing page and help-center paid-plan article. See Sources.
 
 ## What it actually is
 
@@ -171,7 +171,7 @@ Subscription pricing via [playground.com/design/pricing](https://playground.com/
 | Pro | $15 ($12) | 75 per 3 hours | 150 | Commercial license, premium templates, 2K AI editing, upscaling, background removal | **Most individuals land here** |
 | Pro Plus | $45 ($36) | Unlimited Playground v3 generations | 1,000 | All Pro features plus Nano Banana Pro (4 credits/use), 4K GPT Image 2 editing, priority support, API request path | Teams, agencies, power users |
 
-*Prices verified 2026-06-08 via the rendered [playground.com/design/pricing](https://playground.com/design/pricing) page. Paid-plan limits and Day Pass / one-time credit-pack language were cross-checked against Playground's help center.*
+*Prices verified 2026-06-12 via the rendered [playground.com/design/pricing](https://playground.com/design/pricing) page. Paid-plan limits and Day Pass / one-time credit-pack language were cross-checked against Playground's help center.*
 
 ## Against the alternatives
 
@@ -200,7 +200,7 @@ Subscription pricing via [playground.com/design/pricing](https://playground.com/
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-08 against the rendered [playground.com/design/pricing](https://playground.com/design/pricing) page, [Playground paid-plan limits](https://help.playgroundai.com/en/articles/11165689-how-many-images-or-edits-under-the-paid-plans-pro-day-pass), and [Playground Terms](https://playground.com/terms).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-12 against the rendered [playground.com/design/pricing](https://playground.com/design/pricing) page, [Playground paid-plan limits](https://help.playgroundai.com/en/articles/11165689-how-many-images-or-edits-under-the-paid-plans-pro-day-pass), and [Playground Terms](https://playground.com/terms).
 
 ## FAQ
 

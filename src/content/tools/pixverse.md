@@ -11,11 +11,11 @@ pricing_model: freemium
 price_range: "Free + paid web plans; API credits $1=200 credits"
 status: active
 launched: 2024-01
-last_updated: 2026-06-08
-last_verified: 2026-06-08
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 seo_title: "PixVerse Review: V6/C1 API Pricing, Credits, Buyer Fit (June 2026)"
-meta_description: "PixVerse is AIsphere's AI video platform for short-form text-to-video, image-to-video, lip-sync, sound, and API workflows. Updated June 8, 2026 with V6/C1/V5.6 credit rates, API memberships, web-plan caveats, and buyer guidance."
+meta_description: "PixVerse is AIsphere's AI video platform for short-form text-to-video, image-to-video, lip-sync, sound, and API workflows. Updated June 12, 2026 with V6/C1/V5.6 credit rates, API memberships, web-plan caveats, and buyer guidance."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -34,7 +34,7 @@ facts:
     source: "https://docs.platform.pixverse.ai/pixverse-api-llm-txt-2109771m0"
     source_label: "PixVerse API overview"
     source_id: pixverse-api-overview
-    verified_at: 2026-06-08
+    verified_at: 2026-06-12
     volatility: medium
     confidence: medium
   pricing_anchor:
@@ -42,7 +42,7 @@ facts:
     source: "https://docs.platform.pixverse.ai/pricing-796039m0"
     source_label: "PixVerse model pricing"
     source_id: pixverse-model-pricing
-    verified_at: 2026-06-08
+    verified_at: 2026-06-12
     next_review_at: 2026-07-08
     volatility: high
     confidence: medium
@@ -51,7 +51,7 @@ facts:
     source: "https://docs.platform.pixverse.ai/subscribe-api-plans-882969m0"
     source_label: "PixVerse API subscription docs"
     source_id: pixverse-api-subscriptions
-    verified_at: 2026-06-08
+    verified_at: 2026-06-12
     next_review_at: 2026-07-08
     volatility: high
     confidence: medium
@@ -202,7 +202,7 @@ API membership examples:
 | Scale | $1,500 | 239,230 | Higher-volume app or agency experimentation |
 | Business | $6,000 | 1,069,500 | Large-volume API work where procurement has already accepted PixVerse risk |
 
-Prices and credit rates verified June 8, 2026 via [PixVerse Platform pricing](https://docs.platform.pixverse.ai/pricing-796039m0) and [PixVerse API subscription docs](https://docs.platform.pixverse.ai/subscribe-api-plans-882969m0).
+Prices and credit rates verified June 12, 2026 via [PixVerse Platform pricing](https://docs.platform.pixverse.ai/pricing-796039m0) and [PixVerse API subscription docs](https://docs.platform.pixverse.ai/subscribe-api-plans-882969m0).
 
 ## Against the alternatives
 
@@ -228,7 +228,7 @@ Prices and credit rates verified June 8, 2026 via [PixVerse Platform pricing](ht
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified June 8, 2026 against [PixVerse Platform pricing](https://docs.platform.pixverse.ai/pricing-796039m0), [PixVerse API subscription docs](https://docs.platform.pixverse.ai/subscribe-api-plans-882969m0), [PixVerse API overview](https://docs.platform.pixverse.ai/pixverse-api-llm-txt-2109771m0), and [CnTechPost's AIsphere Series C report](https://cntechpost.com/2026/03/12/ai-video-startup-aisphere-raises-300-million-record-china-funding/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified June 12, 2026 against [PixVerse Platform pricing](https://docs.platform.pixverse.ai/pricing-796039m0), [PixVerse API subscription docs](https://docs.platform.pixverse.ai/subscribe-api-plans-882969m0), [PixVerse API overview](https://docs.platform.pixverse.ai/pixverse-api-llm-txt-2109771m0), and [CnTechPost's AIsphere Series C report](https://cntechpost.com/2026/03/12/ai-video-startup-aisphere-raises-300-million-record-china-funding/).
 
 ## FAQ
 

@@ -8,8 +8,8 @@ winner: perplexity
 seo_title: "Perplexity vs Phind: Phind Is Dead, Use Perplexity For Cited Search (June 2026)"
 meta_description: "Perplexity vs Phind for AI search. Phind is offline; Perplexity is the active cited answer-engine lane for research, files, Spaces, Pro, Max, Enterprise, and APIs. Verified June 2026."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-08
-last_verified: 2026-06-08
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: quarterly
 canonical_fact_table: true
 ---
@@ -105,7 +105,7 @@ Try Perplexity if cited web research was the priority. Try ChatGPT, Claude, or G
 
 ## Sources
 
-- [Perplexity Enterprise pricing](https://www.perplexity.ai/enterprise/pricing): current enterprise plan details, verified 2026-06-08
-- [Perplexity Enterprise pricing FAQ](https://www.perplexity.ai/help-center/en/articles/10352986-enterprise-pro-pricing-and-billing-frequently-asked-questions): billing model and seat pricing context, verified 2026-06-08
-- [Phind shutdown retrospective](https://www.toolsforhumans.ai/ai-tools/phind): shutdown status reference, verified 2026-06-08
+- [Perplexity Enterprise pricing](https://www.perplexity.ai/enterprise/pricing): current enterprise plan details, verified 2026-06-12
+- [Perplexity Enterprise pricing FAQ](https://www.perplexity.ai/help-center/en/articles/10352986-enterprise-pro-pricing-and-billing-frequently-asked-questions): billing model and seat pricing context, verified 2026-06-12
+- [Phind shutdown retrospective](https://www.toolsforhumans.ai/ai-tools/phind): shutdown status reference, verified 2026-06-12
 - [AiPedia Phind record](/tools/phind/): local migration page

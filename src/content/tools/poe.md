@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "Free + five regional point tiers; US annual schema $99.99-$4,999.99/year"
 status: active
 launched: 2023-02
-last_updated: 2026-06-08
-last_verified: 2026-06-08
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://poe.com/subscription_plans"
     source_label: "Poe subscription plans"
     source_id: poe-subscription-plans
-    verified_at: 2026-06-08
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-07-08
@@ -39,7 +39,7 @@ facts:
     source: "https://poe.com/about"
     source_label: "Poe about page"
     source_id: poe-about
-    verified_at: 2026-06-08
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-07-08
@@ -48,7 +48,7 @@ facts:
     source: "https://poe.com/subscription_plans"
     source_label: "Poe subscription plans"
     source_id: poe-subscription-plans
-    verified_at: 2026-06-08
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-07-08
@@ -57,7 +57,7 @@ facts:
     source: "https://poe.com"
     source_label: "Poe product site"
     source_id: poe-product
-    verified_at: 2026-06-08
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-07-08
@@ -66,7 +66,7 @@ facts:
     source: "https://poe.com/subscription_plans"
     source_label: "Poe subscription plans"
     source_id: poe-subscription-plans
-    verified_at: 2026-06-08
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-07-08
@@ -75,7 +75,7 @@ facts:
     source: "https://poe.com/api_docs"
     source_label: "Poe API docs"
     source_id: poe-api-docs
-    verified_at: 2026-06-08
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   image_generation:
@@ -83,7 +83,7 @@ facts:
     source: "https://poe.com/about"
     source_label: "Poe about page"
     source_id: poe-about
-    verified_at: 2026-06-08
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-07-08
@@ -92,7 +92,7 @@ facts:
     source: "https://poe.com/about"
     source_label: "Poe about page"
     source_id: poe-about
-    verified_at: 2026-06-08
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   real_time_voice:
@@ -100,7 +100,7 @@ facts:
     source: "https://poe.com/about"
     source_label: "Poe about page"
     source_id: poe-about
-    verified_at: 2026-06-08
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
   web_browsing:
@@ -108,7 +108,7 @@ facts:
     source: "https://poe.com/about"
     source_label: "Poe about page"
     source_id: poe-about
-    verified_at: 2026-06-08
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   coding_agent:
@@ -116,7 +116,7 @@ facts:
     source: "https://poe.com/about"
     source_label: "Poe about page"
     source_id: poe-about
-    verified_at: 2026-06-08
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   enterprise_controls:
@@ -124,7 +124,7 @@ facts:
     source: "https://poe.com/about"
     source_label: "Poe about page"
     source_id: poe-about
-    verified_at: 2026-06-08
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   data_retention_or_privacy:
@@ -132,7 +132,7 @@ facts:
     source: "https://poe.com/about"
     source_label: "Poe about page"
     source_id: poe-about
-    verified_at: 2026-06-08
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   open_source_or_local:
@@ -140,7 +140,7 @@ facts:
     source: "https://poe.com/about"
     source_label: "Poe about page"
     source_id: poe-about
-    verified_at: 2026-06-08
+    verified_at: 2026-06-12
     volatility: low
     confidence: high
   best_for:
@@ -148,7 +148,7 @@ facts:
     source: "https://poe.com/about"
     source_label: "Poe about page"
     source_id: poe-about
-    verified_at: 2026-06-08
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   watch_out_for:
@@ -156,7 +156,7 @@ facts:
     source: "https://poe.com/subscription_plans"
     source_label: "Poe subscription plans"
     source_id: poe-subscription-plans
-    verified_at: 2026-06-08
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-07-08
@@ -174,7 +174,7 @@ not_best_for:
   - API-heavy production use
   - users who want every model at its full-feature fidelity
 quick_answer: >-
-  Poe aggregates frontier chat models, media models, search bots, group chat, custom bots, and creator bots into one app with a unified points-based subscription. As of June 8, 2026, its public plan page lists Basic, Plus, Pro, Advanced, and Max point buckets from 10K points/day to 8.25M points/month, with regional checkout pricing and US annual structured-data anchors from $99.99 to $4,999.99/year. Pick it if you want breadth and comparison. Skip it if you just need one model at full fidelity.
+  Poe aggregates frontier chat models, media models, search bots, group chat, custom bots, and creator bots into one app with a unified points-based subscription. As of June 12, 2026, its public plan page lists Basic, Plus, Pro, Advanced, and Max point buckets from 10K points/day to 8.25M points/month, with regional checkout pricing and US annual structured-data anchors from $99.99 to $4,999.99/year. Pick it if you want breadth and comparison. Skip it if you just need one model at full fidelity.
 ---
 
 # Poe
@@ -226,7 +226,7 @@ Quora's multi-model AI chatbot platform. One account, one subscription, dozens o
 | Advanced | $1,999.99/year | 3.3M points/month; rollover up to 8.5M | Heavier frontier-model and rich-media use |
 | Max | $4,999.99/year | 8.25M points/month; rollover up to 25M | Very heavy use across expensive bots |
 
-Poe's rendered checkout can localize currency and monthly display pricing. The official page also lists add-on points at $30 per 1M points. Prices and point grants verified June 8, 2026 via [Poe subscription plans](https://poe.com/subscription_plans) and [Poe purchases FAQ](https://help.poe.com/hc/en-us/articles/19945140063636-Poe-Purchases-FAQs).
+Poe's rendered checkout can localize currency and monthly display pricing. The official page also lists add-on points at $30 per 1M points. Prices and point grants verified June 12, 2026 via [Poe subscription plans](https://poe.com/subscription_plans) and [Poe purchases FAQ](https://help.poe.com/hc/en-us/articles/19945140063636-Poe-Purchases-FAQs).
 
 ## Failure modes
 
@@ -237,7 +237,7 @@ Poe's rendered checkout can localize currency and monthly display pricing. The o
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-08 against [Poe subscription plans](https://poe.com/subscription_plans), the [Poe about page](https://poe.com/about), [Poe API docs](https://poe.com/api_docs), and the [Poe purchases FAQ](https://help.poe.com/hc/en-us/articles/19945140063636-Poe-Purchases-FAQs).
+Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-12 against [Poe subscription plans](https://poe.com/subscription_plans), the [Poe about page](https://poe.com/about), [Poe API docs](https://poe.com/api_docs), and the [Poe purchases FAQ](https://help.poe.com/hc/en-us/articles/19945140063636-Poe-Purchases-FAQs).
 
 ## FAQ
 

@@ -11,8 +11,8 @@ pricing_model: free
 price_range: "Free core app; Sync beta historically tied to $5/$15 monthly donor access"
 status: active
 launched: 2020-06
-last_updated: 2026-06-08
-last_verified: 2026-06-08
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: https://logseq.com/
     source_label: Logseq official site
     source_id: logseq-official
-    verified_at: '2026-06-08'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-08'
@@ -40,7 +40,7 @@ facts:
     source: https://logseq.com/
     source_label: Logseq official site
     source_id: logseq-pricing
-    verified_at: '2026-06-08'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-09-08'
@@ -49,7 +49,7 @@ facts:
     source: https://docs.logseq.com/
     source_label: Logseq documentation
     source_id: logseq-docs
-    verified_at: '2026-06-08'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-08'
@@ -58,7 +58,7 @@ facts:
     source: https://github.com/logseq/logseq
     source_label: Logseq GitHub repository
     source_id: logseq-repository
-    verified_at: '2026-06-08'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-08'
@@ -67,7 +67,7 @@ facts:
     source: https://docs.logseq.com/
     source_label: Logseq documentation
     source_id: logseq-docs
-    verified_at: '2026-06-08'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-08'
@@ -154,7 +154,7 @@ Core app free under AGPL-3.0. The public site still describes Logseq as open sou
 | **Sync** | Sync beta; historical official access tied to $5/$15 monthly donor tiers; roll-your-own works best for classic Markdown graphs |
 | **AI** | Plugin ecosystem and emerging DB/CLI/MCP discussion; bring your own LLM API keys |
 
-Every data point verified 2026-06-08 against [logseq.com](https://logseq.com), the [Logseq docs](https://docs.logseq.com/), the [GitHub repo](https://github.com/logseq/logseq), and the May 2026 DB changelog thread.
+Every data point verified 2026-06-12 against [logseq.com](https://logseq.com), the [Logseq docs](https://docs.logseq.com/), the [GitHub repo](https://github.com/logseq/logseq), and the May 2026 DB changelog thread.
 
 ## What it actually is
 
@@ -187,7 +187,7 @@ Files stay Markdown (`.md`) or Org-mode (`.org`) on disk, your choice. The vault
 | Logseq (core) | $0 | All users; full features, no caps |
 | Logseq Sync beta | Confirm live; historical beta access via $5/$15 monthly donor tiers | Anyone syncing across devices; E2E encrypted |
 
-*Prices verified 2026-06-08 against [logseq.com](https://logseq.com/) and the official Sync setup blog. Sync is optional; iCloud Drive, Syncthing, or git can work for classic Markdown graphs, but DB graphs and mobile parity need a separate test before standardizing.*
+*Prices verified 2026-06-12 against [logseq.com](https://logseq.com/) and the official Sync setup blog. Sync is optional; iCloud Drive, Syncthing, or git can work for classic Markdown graphs, but DB graphs and mobile parity need a separate test before standardizing.*
 
 ## Against the alternatives
 
@@ -213,7 +213,7 @@ Files stay Markdown (`.md`) or Org-mode (`.org`) on disk, your choice. The vault
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-08 against [logseq.com](https://logseq.com), the [Logseq docs](https://docs.logseq.com/), the [GitHub repo](https://github.com/logseq/logseq), the [official Sync setup blog](https://blog.logseq.com/how-to-setup-and-use-logseq-sync/), and the [Logseq DB May 2026 changelog](https://discuss.logseq.com/t/logseq-db-changelog/30013?page=2).
+This page was produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-12 against [logseq.com](https://logseq.com), the [Logseq docs](https://docs.logseq.com/), the [GitHub repo](https://github.com/logseq/logseq), the [official Sync setup blog](https://blog.logseq.com/how-to-setup-and-use-logseq-sync/), and the [Logseq DB May 2026 changelog](https://discuss.logseq.com/t/logseq-db-changelog/30013?page=2).
 
 ## FAQ
 

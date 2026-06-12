@@ -12,8 +12,8 @@ pricing_model: open-source
 price_range: Free self-host; Free Cloud tier; Standard usage-based; Premium/Hybrid/Private sales-led
 status: active
 launched: 2021
-last_updated: 2026-06-08
-last_verified: 2026-06-08
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -32,7 +32,7 @@ facts:
     source: "https://qdrant.tech/documentation/"
     source_label: "Qdrant documentation"
     source_id: qdrant-best-for
-    verified_at: 2026-06-08
+    verified_at: 2026-06-12
     next_review_at: 2026-07-08
     confidence: high
   best_paid_tier:
@@ -40,20 +40,20 @@ facts:
     source: "https://qdrant.tech/pricing/"
     source_label: "Qdrant pricing"
     source_id: qdrant-pricing
-    verified_at: 2026-06-08
+    verified_at: 2026-06-12
     next_review_at: 2026-07-08
     confidence: high
   best_for:
     value: "Open-source vector search, metadata filtering, RAG retrieval, and self-hostable AI infrastructure"
     source: "https://qdrant.tech/documentation/"
     source_id: qdrant-best-for
-    verified_at: 2026-06-08
+    verified_at: 2026-06-12
   latest_release:
-    value: "Qdrant v1.18.2 was the latest GitHub release checked on June 8, 2026; release notes include bug fixes plus REST auth whitelist bypass and malicious snapshot length security fixes"
+    value: "Qdrant v1.18.2 was the latest GitHub release checked on June 12, 2026; release notes include bug fixes plus REST auth whitelist bypass and malicious snapshot length security fixes"
     source: "https://github.com/qdrant/qdrant/releases/tag/v1.18.2"
     source_label: "Qdrant v1.18.2 release notes"
     source_id: qdrant-release-v1-18-2
-    verified_at: 2026-06-08
+    verified_at: 2026-06-12
     next_review_at: 2026-07-08
     confidence: high
 tags: [vector-database, open-source, rust, rag, semantic-search, retrieval, embeddings]
@@ -99,7 +99,7 @@ It is one of the main open-source alternatives to [Pinecone](/tools/pinecone/) a
 | **Hybrid / Private** | Options for customer environments, regulated workloads, and isolated deployments |
 | **Pricing** | Free prototype cluster; Standard usage-based; Premium minimum spend; marketplace billing via $0.01 Resource Usage Units |
 | **Operations** | Snapshots, monitoring, distributed deployment, and production checklist |
-| **Latest release checked** | v1.18.2, published June 4, 2026 |
+| **Latest release checked** | v1.18.2, published June 12, 2026 |
 | **Best fit** | Teams needing retrieval infrastructure with control |
 
 ## When to pick Qdrant
@@ -142,7 +142,7 @@ Billing can run through credit card or AWS, GCP, and Azure marketplaces.
 
 For small projects, self-hosting or pgvector may be cheaper. For production teams that value managed operations, Qdrant Cloud removes database maintenance work.
 
-As verified on 2026-06-08, Qdrant's cloud billing docs emphasize resource-shaped pricing rather than a simple per-query SaaS plan, with credit card billing through Stripe or AWS, GCP, and Azure marketplace subscriptions billed at $0.01 per Resource Usage Unit. That means teams should model cluster size, replicas, disk storage, snapshots, traffic patterns, marketplace billing, and any Cloud Inference usage before procurement.
+As verified on 2026-06-12, Qdrant's cloud billing docs emphasize resource-shaped pricing rather than a simple per-query SaaS plan, with credit card billing through Stripe or AWS, GCP, and Azure marketplace subscriptions billed at $0.01 per Resource Usage Unit. That means teams should model cluster size, replicas, disk storage, snapshots, traffic patterns, marketplace billing, and any Cloud Inference usage before procurement.
 
 ## Evaluation checklist
 
@@ -173,7 +173,7 @@ It is weaker when the buyer expects a finished knowledge product. Qdrant will no
 
 ## Methodology
 
-Last verified 2026-06-08 against Qdrant documentation, Qdrant pricing, cloud billing docs, and GitHub v1.18.2 release notes. Scoring weighs open-source value, retrieval utility, cloud path, and platform breadth.
+Last verified 2026-06-12 against Qdrant documentation, Qdrant pricing, cloud billing docs, and GitHub v1.18.2 release notes. Scoring weighs open-source value, retrieval utility, cloud path, and platform breadth.
 
 ## FAQ
 

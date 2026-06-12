@@ -10,11 +10,11 @@ pricing_model: freemium
 price_range: "$0-$99/mo annual checkout; Business custom"
 status: active
 launched: 2019-03
-last_updated: 2026-06-08
-last_verified: 2026-06-08
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 seo_title: "Pipedream Review: Pricing, MCP, Connect & Workday (June 2026)"
-meta_description: "Pipedream is the code-first workflow automation platform for developers and agents. Updated June 8, 2026 with Free, Basic, Advanced, Connect, Business, MCP, monthly-credit, and Workday ownership guidance."
+meta_description: "Pipedream is the code-first workflow automation platform for developers and agents. Updated June 12, 2026 with Free, Basic, Advanced, Connect, Business, MCP, monthly-credit, and Workday ownership guidance."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -33,7 +33,7 @@ facts:
     source: "https://pipedream.com/docs/connect/mcp/users"
     source_label: "Pipedream MCP end-user docs"
     source_id: pipedream-mcp-users
-    verified_at: 2026-06-08
+    verified_at: 2026-06-12
     volatility: medium
     confidence: medium
   pricing_anchor:
@@ -41,7 +41,7 @@ facts:
     source: "https://pipedream.com/pricing"
     source_label: "Pipedream pricing"
     source_id: pipedream-public-pricing
-    verified_at: 2026-06-08
+    verified_at: 2026-06-12
     next_review_at: 2026-07-08
     volatility: high
     confidence: medium
@@ -50,7 +50,7 @@ facts:
     source: "https://investor.workday.com/news-and-events/press-releases/news-details/2026/Workday-Announces-Fiscal-2026-Fourth-Quarter-and-Full-Year-Financial-Results/default.aspx"
     source_label: "Workday FY2026 Q4 results"
     source_id: workday-pipedream-close
-    verified_at: 2026-06-08
+    verified_at: 2026-06-12
     next_review_at: 2026-09-08
     volatility: high
     confidence: medium
@@ -118,7 +118,7 @@ Pipedream is a workflow automation platform built for developers. Workflows are 
 
 In March 2025 Pipedream shipped hosted **MCP (Model Context Protocol) servers** that expose 10,000+ prebuilt tools to AI agents. That turned Pipedream into one of the primary tool-access layers for LLM agents alongside Zapier MCP and custom SDKs.
 
-**Workday now owns Pipedream.** Workday signed the definitive agreement on November 19, 2025, then said in its February 24, 2026 fiscal Q4 results that it closed the acquisition of Pipedream. Public Pipedream pricing and docs still remain the best source for buyer-facing workflow, credit, Connect, and MCP details as of June 8, 2026.
+**Workday now owns Pipedream.** Workday signed the definitive agreement on November 19, 2025, then said in its February 24, 2026 fiscal Q4 results that it closed the acquisition of Pipedream. Public Pipedream pricing and docs still remain the best source for buyer-facing workflow, credit, Connect, and MCP details as of June 12, 2026.
 
 ## System Verdict
 
@@ -187,7 +187,7 @@ Subscription pricing via the rendered [pipedream.com/pricing](https://pipedream.
 
 **MCP server access** is free for personal use at [mcp.pipedream.com](https://mcp.pipedream.com). Production deployments inside apps run through Pipedream Connect.
 
-Prices and credit mechanics verified 2026-06-08 via the rendered [Pipedream pricing page](https://pipedream.com/pricing), [Pipedream pricing docs](https://pipedream.com/docs/pricing), and [Pipedream MCP docs](https://pipedream.com/docs/connect/mcp/users). The public pricing page is client-rendered, so verify the current monthly/annual toggle before procurement.
+Prices and credit mechanics verified 2026-06-12 via the rendered [Pipedream pricing page](https://pipedream.com/pricing), [Pipedream pricing docs](https://pipedream.com/docs/pricing), and [Pipedream MCP docs](https://pipedream.com/docs/connect/mcp/users). The public pricing page is client-rendered, so verify the current monthly/annual toggle before procurement.
 
 ## Against the alternatives
 
@@ -204,7 +204,7 @@ Prices and credit mechanics verified 2026-06-08 via the rendered [Pipedream pric
 ## Failure modes
 
 - **No self-hosting.** Everything runs on Pipedream's infrastructure. Data-residency-sensitive and regulated workloads should pick n8n instead.
-- **Monthly credits changed the buying math.** The old daily-credit framing is stale. As of June 8, 2026, the rendered pricing page lists included monthly credits, so high-frequency automations need monthly run modeling before plan choice.
+- **Monthly credits changed the buying math.** The old daily-credit framing is stale. As of June 12, 2026, the rendered pricing page lists included monthly credits, so high-frequency automations need monthly run modeling before plan choice.
 - **Credit unit can surprise at heavy compute.** One credit covers 30 seconds at 256 MB. Longer or heavier workflows use more credits, and heavy AI-inference steps inside a workflow eat credits quickly.
 - **Free tier event history is short.** 30-day history on Basic, 1 year on Advanced. Long-horizon debugging needs the higher tier.
 - **No native versioning UX for team collaboration.** Workflow history exists, but there is no equivalent of a pull-request review flow. Teams building critical automations should layer their own review discipline.
@@ -215,7 +215,7 @@ Prices and credit mechanics verified 2026-06-08 via the rendered [Pipedream pric
 
 ## Methodology
 
-This page was rechecked by the aipedia.wiki editorial workflow on June 8, 2026 against [Pipedream pricing](https://pipedream.com/pricing), [Pipedream pricing docs](https://pipedream.com/docs/pricing), [Pipedream MCP end-user docs](https://pipedream.com/docs/connect/mcp/users), [Pipedream MCP developer docs](https://pipedream.com/docs/connect/mcp/developers), and [Workday's fiscal 2026 Q4 results](https://newsroom.workday.com/2026-02-24-Workday-Announces-Fiscal-2026-Fourth-Quarter-and-Full-Year-Financial-Results). Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average).
+This page was rechecked by the aipedia.wiki editorial workflow on June 12, 2026 against [Pipedream pricing](https://pipedream.com/pricing), [Pipedream pricing docs](https://pipedream.com/docs/pricing), [Pipedream MCP end-user docs](https://pipedream.com/docs/connect/mcp/users), [Pipedream MCP developer docs](https://pipedream.com/docs/connect/mcp/developers), and [Workday's fiscal 2026 Q4 results](https://newsroom.workday.com/2026-02-24-Workday-Announces-Fiscal-2026-Fourth-Quarter-and-Full-Year-Financial-Results). Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average).
 
 ## FAQ
 
@@ -226,7 +226,7 @@ Yes for hobby and evaluation work. The free tier gives 100 credits/month, 3 acti
 A hosted Model Context Protocol endpoint at [mcp.pipedream.com](https://mcp.pipedream.com) that exposes 10,000+ prebuilt tools across 3,000+ APIs to any MCP-compatible AI agent. It is free for personal use. Production embedding into apps runs through Pipedream Connect.
 
 **Is Workday buying Pipedream?**
-Workday signed a definitive agreement to acquire Pipedream on November 19, 2025, and Workday's February 24, 2026 fiscal Q4 results say the acquisition closed. Pipedream's public docs and pricing surface remain active as of June 8, 2026, but enterprise buyers should ask Workday/Pipedream about long-term packaging and roadmap.
+Workday signed a definitive agreement to acquire Pipedream on November 19, 2025, and Workday's February 24, 2026 fiscal Q4 results say the acquisition closed. Pipedream's public docs and pricing surface remain active as of June 12, 2026, but enterprise buyers should ask Workday/Pipedream about long-term packaging and roadmap.
 
 ## Related
 

@@ -8,8 +8,8 @@ winner: chatgpt
 seo_title: "ChatGPT vs Phind: Phind Is Dead, Use ChatGPT (June 2026)"
 meta_description: "ChatGPT vs Phind for former developer-search users. Phind shut down in January 2026; ChatGPT is the active broad assistant with search, Codex, files, voice, and image workflows. Verified June 2026."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-08
-last_verified: 2026-06-08
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: quarterly
 canonical_fact_table: true
 ---
@@ -94,8 +94,8 @@ Perplexity is closest for cited answers; ChatGPT is closest for a broad assistan
 
 ## Sources
 
-- [ChatGPT pricing](https://chatgpt.com/pricing/): current plan surface and feature matrix, verified 2026-06-08
-- [ChatGPT Plus help](https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus): Plus pricing and benefits, verified 2026-06-08
-- [ChatGPT Search help](https://help.openai.com/en/articles/9237897-chatgpt-search): search behavior and source workflow, verified 2026-06-08
-- [Phind shutdown retrospective](https://www.toolsforhumans.ai/ai-tools/phind): shutdown status reference, verified 2026-06-08
+- [ChatGPT pricing](https://chatgpt.com/pricing/): current plan surface and feature matrix, verified 2026-06-12
+- [ChatGPT Plus help](https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus): Plus pricing and benefits, verified 2026-06-12
+- [ChatGPT Search help](https://help.openai.com/en/articles/9237897-chatgpt-search): search behavior and source workflow, verified 2026-06-12
+- [Phind shutdown retrospective](https://www.toolsforhumans.ai/ai-tools/phind): shutdown status reference, verified 2026-06-12
 - [AiPedia Phind record](/tools/phind/): local migration page

@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: Free; Plus $9/user/mo; Pro $22/user/mo; Enterprise custom
 status: active
 launched: 2024
-last_updated: 2026-06-08
-last_verified: 2026-06-08
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: "https://www.napkin.ai/pricing/"
     source_label: "Napkin AI pricing"
     source_id: napkin-ai-official
-    verified_at: 2026-06-08
+    verified_at: 2026-06-12
     volatility: medium
     confidence: medium
   pricing_anchor:
@@ -39,7 +39,7 @@ facts:
     source: "https://www.napkin.ai/pricing/"
     source_label: "Napkin AI pricing"
     source_id: napkin-ai-official
-    verified_at: 2026-06-08
+    verified_at: 2026-06-12
     next_review_at: 2026-09-08
     volatility: medium
     confidence: high
@@ -48,7 +48,7 @@ facts:
     source: "https://www.napkin.ai/pricing/"
     source_label: "Napkin AI pricing"
     source_id: napkin-ai-official
-    verified_at: 2026-06-08
+    verified_at: 2026-06-12
     next_review_at: 2026-09-08
     volatility: medium
     confidence: high
@@ -148,7 +148,7 @@ That narrowness is the point. Napkin is not trying to own the whole deck or the 
 
 Napkin AI has a free plan with 500 AI credits per week, unlimited visual editing, file import, PNG/PDF export, and Napkin branding. Plus is $9 per person per month and adds 10,000 monthly credits, PPT/SVG export, brand styles, bold icons, team management, and branding removal. Pro is $22 per person per month and adds 30,000 monthly credits, exclusive designs, unlimited custom branding, uploaded fonts, and optional credit top-ups. Enterprise is custom.
 
-Annual billing saves about 25% versus monthly. As verified on 2026-06-08, Napkin says AI credits are used to generate visuals, with roughly one credit charged per selected word, though that may change for more complex outputs or advanced features.
+Annual billing saves about 25% versus monthly. As verified on 2026-06-12, Napkin says AI credits are used to generate visuals, with roughly one credit charged per selected word, though that may change for more complex outputs or advanced features.
 
 ## Buyer fit
 
@@ -169,7 +169,7 @@ The healthiest workflow is to use Napkin early. Generate a visual, test whether 
 
 ## Methodology
 
-Last verified 2026-06-08 against [Napkin AI pricing](https://www.napkin.ai/pricing/) and product documentation, with Free/Plus/Pro/Enterprise tiers, credit pools, export entitlements, brand controls, optional credit top-ups, and the 25% annual discount confirmed from the vendor pricing page. Scoring emphasizes usefulness for explanation, low entry cost, export flexibility, and moat risk.
+Last verified 2026-06-12 against [Napkin AI pricing](https://www.napkin.ai/pricing/) and product documentation, with Free/Plus/Pro/Enterprise tiers, credit pools, export entitlements, brand controls, optional credit top-ups, and the 25% annual discount confirmed from the vendor pricing page. Scoring emphasizes usefulness for explanation, low entry cost, export flexibility, and moat risk.
 
 ## FAQ
 
@@ -184,7 +184,7 @@ No. Napkin makes visuals from text. Gamma and Beautiful.ai generate broader pres
 
 ## Sources
 
-- [Napkin AI pricing](https://www.napkin.ai/pricing/) (verified 2026-06-08)
+- [Napkin AI pricing](https://www.napkin.ai/pricing/) (verified 2026-06-12)
 - [Napkin AI home](https://www.napkin.ai/)
 
 ## Related

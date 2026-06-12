@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: "$0-$60/month web plans; team and API plans separate"
 status: active
 launched: 2023-01
-last_updated: 2026-06-08
-last_verified: 2026-06-08
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -32,7 +32,7 @@ facts:
     source: https://leonardo.ai/
     source_label: Leonardo AI official site
     source_id: leonardo-official
-    verified_at: '2026-06-08'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: medium
     next_review_at: '2026-12-08'
@@ -41,7 +41,7 @@ facts:
     source: https://leonardo.ai/pricing/
     source_label: Leonardo AI pricing
     source_id: leonardo-pricing
-    verified_at: '2026-06-08'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: medium
     next_review_at: '2026-09-08'
@@ -50,7 +50,7 @@ facts:
     source: https://docs.leonardo.ai/docs/getting-started
     source_label: Leonardo AI API docs
     source_id: leonardo-docs
-    verified_at: '2026-06-08'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-12-08'
@@ -59,7 +59,7 @@ facts:
     source: https://leonardo.ai/
     source_label: Leonardo AI official site
     source_id: leonardo-official
-    verified_at: '2026-06-08'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: medium
     next_review_at: '2026-12-08'
@@ -68,14 +68,14 @@ facts:
     source: https://leonardo.ai/pricing/
     source_label: Leonardo AI pricing
     source_id: leonardo-pricing
-    verified_at: '2026-06-08'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: medium
     next_review_at: '2026-09-08'
 tags: [ai-image, image-generation, text-to-image, free-tier, beginner-friendly, leonardo, lucid-origin, phoenix]
 seo_title: 'Leonardo AI: Features, Pricing & Review (June 2026)'
 meta_description: >-
-  Leonardo AI offers 150 free Fast Tokens/day. Verified June 8, 2026: Essential is $12/mo, Premium $30/mo, Ultimate $60/mo, with team and API plans separate.
+  Leonardo AI offers 150 free Fast Tokens/day. Verified June 12, 2026: Essential is $12/mo, Premium $30/mo, Ultimate $60/mo, with team and API plans separate.
 author: aipedia.wiki Editorial
 best_for:
   - beginners evaluating AI image generation
@@ -151,7 +151,7 @@ The free tier runs 150 Fast Tokens per day. That is still one of the easiest fre
 | **API access** | Separate API credits / pay-as-you-go / custom API plans |
 | **Ownership note** | Paid subscribers retain ownership of generated images; Free users receive a commercial-use license but Leonardo retains broader rights to use Free creations |
 
-Every data point above was verified on 2026-06-08. See Sources.
+Every data point above was verified on 2026-06-12. See Sources.
 
 ## What it actually is
 
@@ -193,7 +193,7 @@ Subscription pricing via [leonardo.ai/pricing](https://leonardo.ai/pricing). Mon
 | API Pay as you go | Starts with $5 API credit | Usage-based | API credits, up to 10 concurrent generations, no long commitment | Developers testing production workflows |
 | API Custom | Custom | Custom | Higher-volume workloads, custom concurrency, model-based discounts, dedicated support | Production API teams |
 
-*Prices verified 2026-06-08 against [leonardo.ai/pricing](https://leonardo.ai/pricing) and the Leonardo API quickstart. Token cost varies by model and settings. API access is separate from Free or web app subscriptions, so teams building product workflows should budget API credits directly rather than assuming a web plan covers production API use.*
+*Prices verified 2026-06-12 against [leonardo.ai/pricing](https://leonardo.ai/pricing) and the Leonardo API quickstart. Token cost varies by model and settings. API access is separate from Free or web app subscriptions, so teams building product workflows should budget API credits directly rather than assuming a web plan covers production API use.*
 
 ## Against the alternatives
 
@@ -226,7 +226,7 @@ Subscription pricing via [leonardo.ai/pricing](https://leonardo.ai/pricing). Mon
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-08 against [leonardo.ai/pricing](https://leonardo.ai/pricing), the [Leonardo API quickstart](https://docs.leonardo.ai/docs/getting-started), the [Lucid Origin announcement](https://leonardo.ai/lucid-origin/), and [Lucid Origin help docs](https://intercom.help/leonardo-ai/en/articles/11890238-lucid-origin).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against [leonardo.ai/pricing](https://leonardo.ai/pricing), the [Leonardo API quickstart](https://docs.leonardo.ai/docs/getting-started), the [Lucid Origin announcement](https://leonardo.ai/lucid-origin/), and [Lucid Origin help docs](https://intercom.help/leonardo-ai/en/articles/11890238-lucid-origin).
 
 ## FAQ
 

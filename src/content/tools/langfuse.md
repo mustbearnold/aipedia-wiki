@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0 free / $29 Core / $199 Pro / $2,499 Enterprise"
 status: active
 launched: 2023-04
-last_updated: 2026-06-08
-last_verified: 2026-06-08
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: "https://langfuse.com/docs"
     source_label: "Langfuse documentation"
     source_id: langfuse-docs
-    verified_at: 2026-06-08
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
     next_review_at: 2026-12-08
@@ -40,7 +40,7 @@ facts:
     source: "https://langfuse.com/pricing"
     source_label: "Langfuse pricing"
     source_id: langfuse-pricing
-    verified_at: 2026-06-08
+    verified_at: 2026-06-12
     volatility: high
     confidence: high
     next_review_at: 2026-09-08
@@ -49,7 +49,7 @@ facts:
     source: "https://langfuse.com/docs"
     source_label: "Langfuse documentation"
     source_id: langfuse-docs
-    verified_at: 2026-06-08
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
     next_review_at: 2026-12-08
@@ -58,7 +58,7 @@ facts:
     source: "https://langfuse.com/handbook/chapters/open-source"
     source_label: "Langfuse open-source handbook"
     source_id: langfuse-open-source
-    verified_at: 2026-06-08
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
     next_review_at: 2026-12-08
@@ -67,7 +67,7 @@ facts:
     source: "https://langfuse.com/blog/joining-clickhouse"
     source_label: "Langfuse joins ClickHouse"
     source_id: langfuse-clickhouse-acquisition
-    verified_at: 2026-06-08
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
     next_review_at: 2026-12-08
@@ -76,13 +76,13 @@ facts:
     source: "https://langfuse.com/self-hosting"
     source_label: "Langfuse self-hosting"
     source_id: langfuse-self-hosting
-    verified_at: 2026-06-08
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
     next_review_at: 2026-12-08
 tags: [llm-observability, prompt-management, evals, open-source, mit, clickhouse, yc]
 seo_title: "Langfuse Review: Pricing, Evals & Open Source (June 2026)"
-meta_description: "Langfuse is an open-source LLM engineering platform for observability, prompt management and evals. Verified June 8, 2026: Hobby is free, Core is $29/mo, Pro is $199/mo, Enterprise is $2,499/mo."
+meta_description: "Langfuse is an open-source LLM engineering platform for observability, prompt management and evals. Verified June 12, 2026: Hobby is free, Core is $29/mo, Pro is $199/mo, Enterprise is $2,499/mo."
 author: "aipedia.wiki Editorial"
 best_for:
   - LLM app teams wanting observability, evals, and prompt management in one tool
@@ -94,7 +94,7 @@ not_best_for:
   - teams that want no-code analytics without instrumentation work
   - teams without capacity to run ClickHouse/Postgres/Redis/S3 for self-hosting
 quick_answer: >-
-  Langfuse is an open-source LLM engineering platform for tracing, prompt management, datasets, evals, metrics, and production debugging. Pick it when you want a self-hostable LangSmith-style control plane with strong prompt/eval workflows. Skip it if you need an AI gateway: Langfuse observes and evaluates traffic, but Helicone or LiteLLM handles caching, failover, and routing. Pricing verified June 8, 2026: Hobby is free with 50k units/month, Core is $29/month, Pro is $199/month, and Enterprise is $2,499/month.
+  Langfuse is an open-source LLM engineering platform for tracing, prompt management, datasets, evals, metrics, and production debugging. Pick it when you want a self-hostable LangSmith-style control plane with strong prompt/eval workflows. Skip it if you need an AI gateway: Langfuse observes and evaluates traffic, but Helicone or LiteLLM handles caching, failover, and routing. Pricing verified June 12, 2026: Hobby is free with 50k units/month, Core is $29/month, Pro is $199/month, and Enterprise is $2,499/month.
 price_history:
   - date: 2026-05-10
     plan: "Hobby"
@@ -183,7 +183,7 @@ ClickHouse acquired Langfuse in January 2026. The important buyer detail: ClickH
 | **Self-hostable** | Yes, using Docker or production deployments with Postgres, ClickHouse, Redis/Valkey, and object storage |
 | **Integrations** | Python SDK, JS/TS SDK, OpenTelemetry endpoint, LangChain/LangGraph, OpenAI SDK, LiteLLM, Vercel AI SDK, LlamaIndex, Mastra, and many more |
 
-Every data point above was verified against Langfuse or ClickHouse primary sources on 2026-06-08. See Sources.
+Every data point above was verified against Langfuse or ClickHouse primary sources on 2026-06-12. See Sources.
 
 ## What it actually is
 
@@ -252,7 +252,7 @@ Self-hosting is not "free cloud." It can be the right call for data control or h
 
 ## Methodology
 
-This page was refreshed on 2026-06-08 by re-checking Langfuse pricing, documentation, self-hosting docs, open-source handbook, integrations docs, OpenTelemetry docs, GitHub repository, the Langfuse acquisition post, and ClickHouse acquisition continuity language; no material plan, retention, or overage changes versus the May 13 refresh. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). The most volatile fields are pricing, included units, retention, enterprise governance packaging, self-hosting requirements, and ClickHouse post-acquisition packaging.
+This page was refreshed on 2026-06-12 by re-checking Langfuse pricing, documentation, self-hosting docs, open-source handbook, integrations docs, OpenTelemetry docs, GitHub repository, the Langfuse acquisition post, and ClickHouse acquisition continuity language; no material plan, retention, or overage changes versus the May 13 refresh. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). The most volatile fields are pricing, included units, retention, enterprise governance packaging, self-hosting requirements, and ClickHouse post-acquisition packaging.
 
 ## FAQ
 
@@ -260,7 +260,7 @@ This page was refreshed on 2026-06-08 by re-checking Langfuse pricing, documenta
 Yes. Hobby is free with 50k included units/month, 30 days data access, 2 users, and community support. The self-hosted core is also open-source, but operating it still costs infrastructure and engineering time.
 
 **Did the ClickHouse acquisition change anything for users?**
-As of this June 8, 2026 refresh, Langfuse's own acquisition post says the roadmap, Cloud product experience, endpoints, support channels, open-source commitment, and self-hosting commitment stayed in place. The acquisition was announced alongside ClickHouse's $400M Series D, not as a confirmed $400M purchase price for Langfuse.
+As of this June 12, 2026 refresh, Langfuse's own acquisition post says the roadmap, Cloud product experience, endpoints, support channels, open-source commitment, and self-hosting commitment stayed in place. The acquisition was announced alongside ClickHouse's $400M Series D, not as a confirmed $400M purchase price for Langfuse.
 
 **Can I use Langfuse without LangChain?**
 Yes. Langfuse supports native Python and JS/TS SDKs, a public API, OpenTelemetry ingestion, proxy-based logging via LiteLLM, and many framework integrations. LangChain and LangGraph are options, not requirements.

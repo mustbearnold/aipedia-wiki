@@ -9,8 +9,8 @@ url: https://www.paradox.ai/solutions/recruiters
 pricing_model: enterprise
 price_range: "Contact sales"
 status: active
-last_updated: 2026-06-08
-last_verified: 2026-06-08
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -29,7 +29,7 @@ facts:
     source: "https://www.paradox.ai/solutions/recruiters"
     source_label: "Paradox recruiter solution"
     source_id: paradox-recruiters
-    verified_at: 2026-06-08
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -37,7 +37,7 @@ facts:
     source: "https://investor.workday.com/news-and-events/press-releases/news-details/2026/Paradox-Conversational-Applicant-Tracking-System-ATS-Now-Available-Through-Workday-Helping-Organizations-Hire-Frontline-Workers-Faster/default.aspx"
     source_label: "Workday Paradox Conversational ATS availability"
     source_id: workday-paradox-ats
-    verified_at: 2026-06-08
+    verified_at: 2026-06-12
     volatility: high
     confidence: medium
     next_review_at: 2026-09-08
@@ -46,12 +46,12 @@ facts:
     source: "https://investor.workday.com/news-and-events/press-releases/news-details/2025/Workday-Completes-Acquisition-of-Paradox-10-01-2025/default.aspx"
     source_label: "Workday completes Paradox acquisition"
     source_id: workday-paradox-close
-    verified_at: 2026-06-08
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
 tags: [recruiting, conversational-ai, screening, scheduling, candidate-experience]
 seo_title: "Paradox Review (June 2026): Workday, Olivia & AI Recruiting"
-meta_description: "Paradox is Workday-owned conversational AI recruiting software for Olivia, mobile apply, screening, resume matching, interview scheduling, candidate experience, and frontline hiring automation. Updated June 8, 2026."
+meta_description: "Paradox is Workday-owned conversational AI recruiting software for Olivia, mobile apply, screening, resume matching, interview scheduling, candidate experience, and frontline hiring automation. Updated June 12, 2026."
 author: "aipedia.wiki Editorial"
 best_for:
   - high-volume hiring
@@ -70,7 +70,7 @@ quick_answer: >-
 
 Paradox is a Workday-owned conversational AI recruiting platform best known for Olivia. Recruiters use it for candidate questions, mobile apply, screening, resume matching, scheduling, reminders, and candidate-experience workflows.
 
-As of June 8, 2026, AiPedia treats Paradox as the best AI recruiting pick for high-volume screening and scheduling when the buyer wants conversational hiring workflow rather than passive sourcing. Workday completed its Paradox acquisition on October 1, 2025, made the Workday Paradox Candidate Experience Agent available for purchase, and made Paradox Conversational ATS available through Workday in January 2026 for frontline hiring workflows.
+As of June 12, 2026, AiPedia treats Paradox as the best AI recruiting pick for high-volume screening and scheduling when the buyer wants conversational hiring workflow rather than passive sourcing. Workday completed its Paradox acquisition on October 1, 2025, made the Workday Paradox Candidate Experience Agent available for purchase, and made Paradox Conversational ATS available through Workday in January 2026 for frontline hiring workflows.
 
 ## System Verdict
 
@@ -152,7 +152,7 @@ Paradox should be judged on workflow fit, not just AI branding. Before buying, m
 
 ## AiPedia Trust Note
 
-This page was refreshed on June 8, 2026 using Paradox's current recruiter solution page plus Workday's Paradox acquisition and January 2026 Workday availability disclosures. AiPedia does not list a paid affiliate program for Paradox. Scores reflect practical recruiter utility, candidate-experience impact, Workday packaging risk, implementation risk, governance, and durability.
+This page was refreshed on June 12, 2026 using Paradox's current recruiter solution page plus Workday's Paradox acquisition and January 2026 Workday availability disclosures. AiPedia does not list a paid affiliate program for Paradox. Scores reflect practical recruiter utility, candidate-experience impact, Workday packaging risk, implementation risk, governance, and durability.
 
 ## Sources
 

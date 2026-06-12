@@ -8,8 +8,8 @@ winner: you-com
 seo_title: "Phind vs You.com: Phind Is Dead, Use You.com APIs (June 2026)"
 meta_description: "Phind vs You.com for AI search. Phind is offline; You.com is the active Search, Contents, Research, and Finance Research API lane for grounded apps and agents. Verified June 2026."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-08
-last_verified: 2026-06-08
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: quarterly
 canonical_fact_table: true
 ---
@@ -100,7 +100,7 @@ Choose ChatGPT or Perplexity for a human assistant. Choose You.com or Exa for AP
 
 ## Sources
 
-- [You.com pricing](https://you.com/pricing): Search, Contents, Research, and Finance Research API pricing, verified 2026-06-08
-- [You.com developer docs](https://you.com/docs/get-started/quickstart): API platform starting point, verified 2026-06-08
-- [Phind shutdown retrospective](https://www.toolsforhumans.ai/ai-tools/phind): shutdown status reference, verified 2026-06-08
+- [You.com pricing](https://you.com/pricing): Search, Contents, Research, and Finance Research API pricing, verified 2026-06-12
+- [You.com developer docs](https://you.com/docs/get-started/quickstart): API platform starting point, verified 2026-06-12
+- [Phind shutdown retrospective](https://www.toolsforhumans.ai/ai-tools/phind): shutdown status reference, verified 2026-06-12
 - [AiPedia Phind record](/tools/phind/): local migration page

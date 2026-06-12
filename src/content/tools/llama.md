@@ -12,8 +12,8 @@ pricing_model: open-source
 price_range: "$0 weights; hosted Scout from $0.11/M input on Groq, Maverick $0.27/$0.85 on Together"
 status: active
 launched: 2023-02
-last_updated: 2026-06-08
-last_verified: 2026-06-08
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 seo_title: "Llama: Features, Pricing & Review (June 2026)"
 meta_description: "Meta's Llama 4 Maverick remains the flagship open-weight LLM, while Scout is the long-context and current Groq fast lane. Free weights under the Llama 4 Community License; hosted pricing varies by provider."
@@ -35,7 +35,7 @@ facts:
     source: https://ai.meta.com/llama/
     source_label: Meta Llama official site
     source_id: llama-meta-official
-    verified_at: '2026-06-08'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-08'
@@ -44,7 +44,7 @@ facts:
     source: https://www.llama.com/llama-downloads/
     source_label: Llama downloads
     source_id: llama-downloads
-    verified_at: '2026-06-08'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-08'
@@ -53,7 +53,7 @@ facts:
     source: https://www.llama.com/docs/model-cards-and-prompt-formats/
     source_label: Llama model documentation
     source_id: llama-docs
-    verified_at: '2026-06-08'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-08'
@@ -62,7 +62,7 @@ facts:
     source: https://github.com/meta-llama/llama-models
     source_label: Meta Llama GitHub repository
     source_id: llama-repository
-    verified_at: '2026-06-08'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-08'
@@ -71,7 +71,7 @@ facts:
     source: https://www.llama.com/docs/model-cards-and-prompt-formats/
     source_label: Llama model documentation
     source_id: llama-docs
-    verified_at: '2026-06-08'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-08'
@@ -146,7 +146,7 @@ Weights ship free under the Llama 4 Community License. Hosted inference varies b
 | **Consumer UI** | Meta AI at meta.ai (free, ad-adjacent) |
 | **Fine-tuning** | Full weights, LoRA, and QLoRA supported across providers |
 
-Every data point above was verified against vendor sources on 2026-06-08. See Sources.
+Every data point above was verified against vendor sources on 2026-06-12. See Sources.
 
 ## What it actually is
 
@@ -176,7 +176,7 @@ The weaknesses: no native image generation, no video, no consumer app with the r
 
 ## Pricing
 
-Llama weights are free. Costs come from hosted inference or your own compute. Representative hosted pricing via [Together AI](https://www.together.ai/pricing) and Groq's live Scout model card, verified 2026-06-08.
+Llama weights are free. Costs come from hosted inference or your own compute. Representative hosted pricing via [Together AI](https://www.together.ai/pricing) and Groq's live Scout model card, verified 2026-06-12.
 
 | Access path | Input ($/1M tok) | Output ($/1M tok) | Context | Who's it for |
 |---|---|---|---|---|
@@ -189,7 +189,7 @@ Llama weights are free. Costs come from hosted inference or your own compute. Re
 | Together AI (Scout) | $0.08 | $0.30 | 10M | Long-context retrieval |
 | AWS Bedrock / Azure | Custom | Custom | 1M | Enterprise compliance, BAAs |
 
-Prices verified 2026-06-08 via [Together AI pricing](https://www.together.ai/pricing), [Groq Llama 4 Scout model card](https://console.groq.com/docs/model/llama-4-scout-17b-16e-instruct), and [Groq model deprecation docs](https://console.groq.com/docs/deprecations). Provider-specific Maverick rates can move quickly, so check the live provider page before quoting a purchase order.
+Prices verified 2026-06-12 via [Together AI pricing](https://www.together.ai/pricing), [Groq Llama 4 Scout model card](https://console.groq.com/docs/model/llama-4-scout-17b-16e-instruct), and [Groq model deprecation docs](https://console.groq.com/docs/deprecations). Provider-specific Maverick rates can move quickly, so check the live provider page before quoting a purchase order.
 
 ## Against the alternatives
 
@@ -216,7 +216,7 @@ Prices verified 2026-06-08 via [Together AI pricing](https://www.together.ai/pri
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-08 against the [Llama 4 announcement](https://ai.meta.com/blog/llama-4-multimodal-intelligence/), [Llama 4 Community License](https://www.llama.com/llama4/license/), [Together AI pricing](https://www.together.ai/pricing), [Groq Llama 4 Scout model card](https://console.groq.com/docs/model/llama-4-scout-17b-16e-instruct), and [Groq model deprecation docs](https://console.groq.com/docs/deprecations).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against the [Llama 4 announcement](https://ai.meta.com/blog/llama-4-multimodal-intelligence/), [Llama 4 Community License](https://www.llama.com/llama4/license/), [Together AI pricing](https://www.together.ai/pricing), [Groq Llama 4 Scout model card](https://console.groq.com/docs/model/llama-4-scout-17b-16e-instruct), and [Groq model deprecation docs](https://console.groq.com/docs/deprecations).
 
 ## FAQ
 
@@ -227,7 +227,7 @@ Yes. Weights are free under the Llama 4 Community License. Self-hosting costs yo
 Yes for almost all companies. The Community License grants commercial use to any organization under 700M monthly active users. Companies above that threshold (Google, Microsoft, Apple scale) need a separate Meta license. EU-based entities are explicitly carved out of some license provisions. Read the [Llama 4 Community License](https://www.llama.com/llama4/license/).
 
 **What is the current Llama flagship?**
-Llama 4 Maverick: 400B total parameters, 17B active, 128 experts, 1M token context. It remains the strongest production-ready Llama model as of the June 8, 2026 check. Scout (109B / 10M raw-model context, with shorter hosted context on some providers) wins for long-document jobs. Behemoth (2T) is still an internal teacher model and has not shipped.
+Llama 4 Maverick: 400B total parameters, 17B active, 128 experts, 1M token context. It remains the strongest production-ready Llama model as of the June 12, 2026 check. Scout (109B / 10M raw-model context, with shorter hosted context on some providers) wins for long-document jobs. Behemoth (2T) is still an internal teacher model and has not shipped.
 
 **How does Llama compare to Claude?**
 Current Claude models remain the safer pick for careful long-form reasoning, writing, and agentic coding judgment. Llama wins on model control, self-hosting, and provider competition. Use Claude for peak assistant quality; use Llama when data control, open weights, cost, or model diversification is the purchase reason.

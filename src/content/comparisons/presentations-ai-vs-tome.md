@@ -8,8 +8,8 @@ winner: presentations-ai
 seo_title: "Presentations.AI vs Tome: Tome Is Dead, Use Presentations.AI (June 2026)"
 meta_description: "Presentations.AI vs Tome for AI decks. Tome Slides sunset April 30, 2025; Presentations.AI is the active option for branded AI presentations and teams. Verified June 2026."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-08
-last_verified: 2026-06-08
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: quarterly
 canonical_fact_table: true
 ---
@@ -18,11 +18,11 @@ canonical_fact_table: true
 
 [Presentations.AI](/tools/presentations-ai/) is the active choice over [Tome](/tools/tome/) for buyers who want AI-generated presentations with team collaboration, brand themes, templates, analytics, export paths, and enterprise controls. Tome Slides was sunset on April 30, 2025 according to Tome's official Help Center, and the founding team later pivoted into Lightfield, an AI-native CRM.
 
-The practical buyer answer: **use Presentations.AI if you wanted an AI-first presentation generator but need a current product with team and brand controls. Do not shortlist Tome for new presentation work.** This comparison was re-verified on **June 8, 2026** against current Presentations.AI, Tome, VentureBeat, and Lightfield sources.
+The practical buyer answer: **use Presentations.AI if you wanted an AI-first presentation generator but need a current product with team and brand controls. Do not shortlist Tome for new presentation work.** This comparison was re-verified on **June 12, 2026** against current Presentations.AI, Tome, VentureBeat, and Lightfield sources.
 
 ## Quick Verdict
 
-**Winner: Presentations.AI.** Presentations.AI remains an active AI presentation product with a current pricing page. As verified on June 8, 2026, its English pricing page lists Starter at $0 with 100 credits, Pro at $20/month billed annually with 5,000 credits, and Gold at $100/month billed annually with 50,000 credits. The page also lists PowerPoint/PDF export, unbranded public links, password-protected links on paid tiers, guest collaboration, brand customization, analytics, shared knowledge base on Gold, and agent features marked as coming soon or tier-gated.
+**Winner: Presentations.AI.** Presentations.AI remains an active AI presentation product with a current pricing page. As verified on June 12, 2026, its English pricing page lists Starter at $0 with 100 credits, Pro at $20/month billed annually with 5,000 credits, and Gold at $100/month billed annually with 50,000 credits. The page also lists PowerPoint/PDF export, unbranded public links, password-protected links on paid tiers, guest collaboration, brand customization, analytics, shared knowledge base on Gold, and agent features marked as coming soon or tier-gated.
 
 **Tome is not a current buyer option.** The older page treated Tome as a live solo/storytelling tool with active pricing and model claims. That is outdated. Tome Slides was sunset, and old Tome presentation data and pricing should be treated as historical.
 
@@ -113,6 +113,6 @@ VentureBeat covered the team's pivot to Lightfield, an AI-native CRM. Lightfield
 - Tome Help Center: [Tome Slides is Sunsetting on April 30th, 2025](https://tome.app/help/en/articles/10744234-tome-slides-is-sunsetting-on-april-30th-2025)
 - VentureBeat: [Tome's founders ditch viral presentation app to build AI-native CRM Lightfield](https://venturebeat.com/technology/tomes-founders-ditch-viral-presentation-app-with-20m-users-to-build-ai)
 - Lightfield homepage: [https://lightfield.app/](https://lightfield.app/)
-- Presentations.AI homepage: [https://www.presentations.ai/](https://www.presentations.ai/) (verified 2026-06-08)
-- Presentations.AI pricing: [https://www.presentations.ai/pricing](https://www.presentations.ai/pricing) (verified 2026-06-08)
+- Presentations.AI homepage: [https://www.presentations.ai/](https://www.presentations.ai/) (verified 2026-06-12)
+- Presentations.AI pricing: [https://www.presentations.ai/pricing](https://www.presentations.ai/pricing) (verified 2026-06-12)
 - Related category: [AI Presentation Tools](/categories/ai-presentation/)

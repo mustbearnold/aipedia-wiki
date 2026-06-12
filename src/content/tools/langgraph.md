@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0 library / $39 Plus / usage-based deployment"
 status: active
 launched: 2024-01
-last_updated: 2026-06-08
-last_verified: 2026-06-08
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: https://docs.langchain.com/oss/python/langgraph/overview
     source_label: LangGraph documentation
     source_id: langgraph-docs
-    verified_at: '2026-06-08'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-08'
@@ -39,7 +39,7 @@ facts:
     source: https://www.langchain.com/pricing
     source_label: LangChain pricing
     source_id: langgraph-pricing
-    verified_at: '2026-06-08'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-07-08'
@@ -48,7 +48,7 @@ facts:
     source: https://docs.langchain.com/oss/python/langgraph/overview
     source_label: LangGraph documentation
     source_id: langgraph-docs
-    verified_at: '2026-06-08'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-08'
@@ -57,7 +57,7 @@ facts:
     source: https://docs.langchain.com/langsmith/billing
     source_label: LangSmith billing documentation
     source_id: langsmith-billing
-    verified_at: '2026-06-08'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-07-08'
@@ -66,7 +66,7 @@ facts:
     source: https://github.com/langchain-ai/langgraph
     source_label: LangGraph GitHub repository
     source_id: langgraph-repository
-    verified_at: '2026-06-08'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-08'
@@ -75,13 +75,13 @@ facts:
     source: https://docs.langchain.com/oss/python/langgraph/overview
     source_label: LangGraph documentation
     source_id: langgraph-docs
-    verified_at: '2026-06-08'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-08'
 tags: [agent-framework, graph, python, typescript, javascript, langchain, stateful, production, langsmith]
 seo_title: "LangGraph: Features, Pricing & Review (June 2026)"
-meta_description: "LangGraph is LangChain's MIT-licensed orchestration runtime for stateful production agents. Verified June 8, 2026: LangSmith Plus is $39/seat/mo, deployment runs are $0.005, dev uptime is $0.0007/min, production uptime is $0.0036/min."
+meta_description: "LangGraph is LangChain's MIT-licensed orchestration runtime for stateful production agents. Verified June 12, 2026: LangSmith Plus is $39/seat/mo, deployment runs are $0.005, dev uptime is $0.0007/min, production uptime is $0.0036/min."
 author: "aipedia.wiki Editorial"
 best_for:
   - Python and JavaScript teams building production agents
@@ -93,7 +93,7 @@ not_best_for:
   - no-code teams that want a visual builder
   - teams trying to avoid the LangChain ecosystem entirely
 quick_answer: >-
-  LangGraph is LangChain's low-level runtime for long-running, stateful agents and workflows. The library is MIT-licensed and free for Python and JavaScript/TypeScript teams; LangSmith adds paid observability and deployment, with Plus at $39/seat/month, $0.005 per deployment run, $0.0007/minute dev uptime, and $0.0036/minute production uptime as of June 8, 2026. Pick it when you need durable execution, persistence, streaming, or human approval. Skip it for simple one-shot calls or no-code automation.
+  LangGraph is LangChain's low-level runtime for long-running, stateful agents and workflows. The library is MIT-licensed and free for Python and JavaScript/TypeScript teams; LangSmith adds paid observability and deployment, with Plus at $39/seat/month, $0.005 per deployment run, $0.0007/minute dev uptime, and $0.0036/minute production uptime as of June 12, 2026. Pick it when you need durable execution, persistence, streaming, or human approval. Skip it for simple one-shot calls or no-code automation.
 price_history:
   - date: 2026-05-13
     plan: "LangSmith Developer"
@@ -155,7 +155,7 @@ LangGraph is LangChain's low-level orchestration runtime for stateful AI agents.
 
 | | |
 |---|---|
-| **Last verified** | June 8, 2026 |
+| **Last verified** | June 12, 2026 |
 | **License** | MIT for the library |
 | **Languages** | Python and JavaScript/TypeScript |
 | **Current product shape** | LangGraph for orchestration; LangSmith for tracing, evaluation, prompts, and deployment |
@@ -206,7 +206,7 @@ LangGraph is LangChain's low-level orchestration runtime for stateful AI agents.
 | LangSmith Fleet runs | $0.05 per additional run | Plus includes 500 Fleet runs per month |
 | LangSmith Enterprise | Custom | Adds alternative hosting, custom SSO/RBAC, and dedicated support |
 
-Pricing verified June 8, 2026 against LangChain's public pricing and LangSmith billing docs. Model/API provider costs are separate from LangSmith.
+Pricing verified June 12, 2026 against LangChain's public pricing and LangSmith billing docs. Model/API provider costs are separate from LangSmith.
 
 ## Failure Modes
 
@@ -231,7 +231,7 @@ Pricing verified June 8, 2026 against LangChain's public pricing and LangSmith b
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified June 8, 2026 against LangGraph official materials, LangGraph Python and JavaScript docs, LangChain pricing, LangSmith billing docs, LangSmith Deployment docs, the LangGraph GitHub repository, and the LangChain/LangGraph v1.0 announcement.
+Produced by the aipedia.wiki editorial pipeline. Last verified June 12, 2026 against LangGraph official materials, LangGraph Python and JavaScript docs, LangChain pricing, LangSmith billing docs, LangSmith Deployment docs, the LangGraph GitHub repository, and the LangChain/LangGraph v1.0 announcement.
 
 ## FAQ
 
@@ -262,7 +262,7 @@ Yes, especially for TypeScript teams choosing an agent/workflow framework. LangG
 
 ## Review History
 
-- 2026-06-08: Re-verified LangGraph/LangSmith pricing and deployment docs, removed unsupported Claude model/vendor release claims, added current LangSmith Engine, sandbox, Fleet, deployment, and framework-agnostic deployment context.
+- 2026-06-12: Re-verified LangGraph/LangSmith pricing and deployment docs, removed unsupported Claude model/vendor release claims, added current LangSmith Engine, sandbox, Fleet, deployment, and framework-agnostic deployment context.
 - 2026-05-13: Itemized LangSmith Deployment uptime ($0.0007/min dev, $0.0036/min production), base vs extended trace pricing, Fleet runs, and added a price_history block.
 - 2026-05-10: Refreshed LangGraph pricing, hosted deployment naming, source-backed buyer guidance, and current verification language.
 - 2026-04-18: Initial agent-framework review.

@@ -8,8 +8,8 @@ winner: decktopus
 seo_title: "Decktopus AI vs Tome: Tome Is Dead, Use Decktopus (June 2026)"
 meta_description: "Decktopus AI vs Tome for AI presentations. Tome Slides sunset April 30, 2025; Decktopus is the active pick for fast AI decks and interactive sharing. Verified June 2026."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-08
-last_verified: 2026-06-08
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: quarterly
 canonical_fact_table: true
 ---
@@ -18,7 +18,7 @@ canonical_fact_table: true
 
 [Decktopus AI](/tools/decktopus/) is the current choice over [Tome](/tools/tome/) for fast AI-generated decks, interactive proposals, microsite-style sharing, forms, embeds, voice recording, analytics, and branded AI slide generation. Tome Slides was officially sunset on April 30, 2025 according to Tome's Help Center, and the founding team later pivoted into Lightfield, an AI-native CRM.
 
-The practical buyer answer: **use Decktopus AI if you wanted Tome's fast AI presentation creation but need an active product with interactive delivery features. Do not shortlist Tome for new presentation work.** This page was re-verified on **June 8, 2026** against current Decktopus, Tome, VentureBeat, and Lightfield sources.
+The practical buyer answer: **use Decktopus AI if you wanted Tome's fast AI presentation creation but need an active product with interactive delivery features. Do not shortlist Tome for new presentation work.** This page was re-verified on **June 12, 2026** against current Decktopus, Tome, VentureBeat, and Lightfield sources.
 
 ## Quick Verdict
 
@@ -54,7 +54,7 @@ But the Tome advantage stopped being a current buying reason when the product su
 
 ## Pricing Reality
 
-Decktopus has current pricing. On June 8, 2026, AiPedia verified Decktopus pricing and product pages. The pricing page lists Pro at $14.99/month billed annually with 9,000 annual AI credits, Business at $34.99/user/month billed annually with organization credits, and Enterprise custom pricing. It also lists AI presentations, AI image generation, PDF export, custom domain connection, analytics, forms, embeds, voice recording, webhooks, team/organization features, and enterprise branded-slide controls. Readers should check live pricing before purchase.
+Decktopus has current pricing. On June 12, 2026, AiPedia verified Decktopus pricing and product pages. The pricing page lists Pro at $14.99/month billed annually with 9,000 annual AI credits, Business at $34.99/user/month billed annually with organization credits, and Enterprise custom pricing. It also lists AI presentations, AI image generation, PDF export, custom domain connection, analytics, forms, embeds, voice recording, webhooks, team/organization features, and enterprise branded-slide controls. Readers should check live pricing before purchase.
 
 Tome Slides has no current presentation pricing. Any old Tome Free/Pro/Enterprise plan details are historical and should not guide a purchase.
 
@@ -115,6 +115,6 @@ VentureBeat covered the founding team's pivot to Lightfield, an AI-native CRM.
 - Tome Help Center: [Tome Slides is Sunsetting on April 30th, 2025](https://tome.app/help/en/articles/10744234-tome-slides-is-sunsetting-on-april-30th-2025)
 - VentureBeat: [Tome's founders ditch viral presentation app to build AI-native CRM Lightfield](https://venturebeat.com/technology/tomes-founders-ditch-viral-presentation-app-with-20m-users-to-build-ai)
 - Lightfield homepage: [https://lightfield.app/](https://lightfield.app/)
-- Decktopus homepage and AI presentation features: [https://www.decktopus.com/](https://www.decktopus.com/) (verified 2026-06-08)
-- Decktopus pricing: [https://www.decktopus.com/pricing](https://www.decktopus.com/pricing) (verified 2026-06-08)
+- Decktopus homepage and AI presentation features: [https://www.decktopus.com/](https://www.decktopus.com/) (verified 2026-06-12)
+- Decktopus pricing: [https://www.decktopus.com/pricing](https://www.decktopus.com/pricing) (verified 2026-06-12)
 - Related category: [AI Presentation Tools](/categories/ai-presentation/)

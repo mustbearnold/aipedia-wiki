@@ -11,8 +11,8 @@ pricing_model: open-source
 price_range: "Free (open-source)"
 status: active
 launched: 2024-11
-last_updated: 2026-06-08
-last_verified: 2026-06-08
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: https://huggingface.co/hexgrad/Kokoro-82M
     source_label: Kokoro model card
     source_id: kokoro-model
-    verified_at: '2026-06-08'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -41,7 +41,7 @@ facts:
     source: https://github.com/hexgrad/kokoro
     source_label: Kokoro GitHub repository
     source_id: kokoro-repository
-    verified_at: '2026-06-08'
+    verified_at: '2026-06-12'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -50,7 +50,7 @@ facts:
     source: https://huggingface.co/hexgrad/Kokoro-82M/blob/main/README.md
     source_label: Kokoro README
     source_id: kokoro-readme
-    verified_at: '2026-06-08'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -60,7 +60,7 @@ facts:
     source: https://huggingface.co/spaces/hexgrad/Kokoro-TTS
     source_label: Kokoro TTS Hugging Face Space
     source_id: kokoro-space
-    verified_at: '2026-06-08'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -69,7 +69,7 @@ facts:
     source: https://huggingface.co/hexgrad/Kokoro-82M
     source_label: Kokoro model card
     source_id: kokoro-model
-    verified_at: '2026-06-08'
+    verified_at: '2026-06-12'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -171,7 +171,7 @@ The moat is size. At 82M parameters Kokoro takes under 300MB on disk and runs in
 | Hosted API (third-party) | Under $1 per 1M input characters ([Together AI](https://www.together.ai/models/kokoro-82m), others) |
 | Commercial use | Permitted under Apache 2.0 without royalty |
 
-*Reverified 2026-06-08 via the [Kokoro-82M Hugging Face repo](https://huggingface.co/hexgrad/Kokoro-82M), the [hexgrad/kokoro GitHub README](https://github.com/hexgrad/kokoro), and [ONNX community builds](https://huggingface.co/onnx-community/Kokoro-82M-v1.0-ONNX). Self-hosted inference is free; hosted APIs price per million characters.*
+*Reverified 2026-06-12 via the [Kokoro-82M Hugging Face repo](https://huggingface.co/hexgrad/Kokoro-82M), the [hexgrad/kokoro GitHub README](https://github.com/hexgrad/kokoro), and [ONNX community builds](https://huggingface.co/onnx-community/Kokoro-82M-v1.0-ONNX). Self-hosted inference is free; hosted APIs price per million characters.*
 
 ## Against the alternatives
 
@@ -199,7 +199,7 @@ The moat is size. At 82M parameters Kokoro takes under 300MB on disk and runs in
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies claims against primary sources, and generates the editorial analysis shown here. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-08 against the [Kokoro-82M Hugging Face repo](https://huggingface.co/hexgrad/Kokoro-82M), [VOICES.md](https://huggingface.co/hexgrad/Kokoro-82M/blob/main/VOICES.md), [hexgrad GitHub](https://github.com/hexgrad/kokoro), and [onnx-community Kokoro-82M-v1.0-ONNX builds](https://huggingface.co/onnx-community/Kokoro-82M-v1.0-ONNX).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies claims against primary sources, and generates the editorial analysis shown here. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-12 against the [Kokoro-82M Hugging Face repo](https://huggingface.co/hexgrad/Kokoro-82M), [VOICES.md](https://huggingface.co/hexgrad/Kokoro-82M/blob/main/VOICES.md), [hexgrad GitHub](https://github.com/hexgrad/kokoro), and [onnx-community Kokoro-82M-v1.0-ONNX builds](https://huggingface.co/onnx-community/Kokoro-82M-v1.0-ONNX).
 
 ## FAQ
 

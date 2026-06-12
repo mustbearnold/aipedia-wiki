@@ -8,8 +8,8 @@ winner: exa
 seo_title: "Exa AI vs Phind: Phind Is Dead, Use Exa For Search APIs (June 2026)"
 meta_description: "Exa AI vs Phind for developer search. Phind is offline; Exa is the active search, contents, answer, monitor, and research API lane for AI apps. Verified June 2026."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-08
-last_verified: 2026-06-08
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: quarterly
 canonical_fact_table: true
 ---
@@ -100,8 +100,8 @@ Use ChatGPT or Perplexity for a human assistant. Use Exa when you are building a
 
 ## Sources
 
-- [Exa API pricing](https://exa.ai/pricing/api): endpoint pricing and free start path, verified 2026-06-08
-- [Exa pricing update](https://exa.ai/docs/changelog/pricing-update): March 2026 pricing simplification, verified 2026-06-08
-- [Exa Research API](https://docs.exa.ai/reference/exa-research): research workflow and variable pricing, verified 2026-06-08
-- [Phind shutdown retrospective](https://www.toolsforhumans.ai/ai-tools/phind): shutdown status reference, verified 2026-06-08
+- [Exa API pricing](https://exa.ai/pricing/api): endpoint pricing and free start path, verified 2026-06-12
+- [Exa pricing update](https://exa.ai/docs/changelog/pricing-update): March 2026 pricing simplification, verified 2026-06-12
+- [Exa Research API](https://docs.exa.ai/reference/exa-research): research workflow and variable pricing, verified 2026-06-12
+- [Phind shutdown retrospective](https://www.toolsforhumans.ai/ai-tools/phind): shutdown status reference, verified 2026-06-12
 - [AiPedia Phind record](/tools/phind/): local migration page

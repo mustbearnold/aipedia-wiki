@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "Free; Dream Machine web $9.99-$94.99/mo; Luma app $30-$300/mo; API/credits separate"
 status: active
 launched: 2024-06
-last_updated: 2026-06-08
-last_verified: 2026-06-08
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://lumalabs.ai/dream-machine"
     source_label: "Luma Dream Machine product page"
     source_id: luma-official
-    verified_at: 2026-06-08
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   flagship_model:
@@ -38,7 +38,7 @@ facts:
     source: "https://lumalabs.ai/pricing"
     source_label: "Luma pricing"
     source_id: luma-pricing
-    verified_at: 2026-06-08
+    verified_at: 2026-06-12
     next_review_at: 2026-07-08
     volatility: high
     confidence: high
@@ -47,7 +47,7 @@ facts:
     source: "https://lumalabs.ai/learning-hub/dream-machine-support-pricing-information"
     source_label: "Dream Machine plans"
     source_id: luma-dream-machine-pricing
-    verified_at: 2026-06-08
+    verified_at: 2026-06-12
     next_review_at: 2026-07-08
     volatility: high
     confidence: high
@@ -56,7 +56,7 @@ facts:
     source: "https://lumalabs.ai/learning-hub/ray3-faq"
     source_label: "Ray3.14 FAQ"
     source_id: luma-ray314-faq
-    verified_at: 2026-06-08
+    verified_at: 2026-06-12
     next_review_at: 2026-07-08
     volatility: medium
     confidence: high
@@ -65,7 +65,7 @@ facts:
     source: "https://lumalabs.ai/learning-hub/ray3-faq"
     source_label: "Ray3.14 FAQ"
     source_id: luma-ray314-faq
-    verified_at: 2026-06-08
+    verified_at: 2026-06-12
     next_review_at: 2026-07-08
     volatility: medium
     confidence: high
@@ -74,7 +74,7 @@ facts:
     source: "https://lumalabs.ai/pricing"
     source_label: "Luma pricing"
     source_id: luma-pricing
-    verified_at: 2026-06-08
+    verified_at: 2026-06-12
     next_review_at: 2026-07-08
     volatility: high
     confidence: high
@@ -176,7 +176,7 @@ Do not collapse those into one clean "$30 plan" story. Dream Machine web support
 | **API access** | Separate from Dream Machine credits; verify model availability before building |
 | **Company** | Luma AI |
 
-Every data point above was verified against vendor documentation on 2026-06-08. See Sources.
+Every data point above was verified against vendor documentation on 2026-06-12. See Sources.
 
 ## What it actually is
 
@@ -222,7 +222,7 @@ Subscription pricing via [lumalabs.ai/pricing](https://lumalabs.ai/pricing). Com
 | Luma app Ultra | $300/mo | 15x Pro usage with Luma Agents |
 | Team / Enterprise | Contact sales | Team organization, shared team credits, SSO, custom commitments |
 
-*Prices verified 2026-06-08 via [Dream Machine plan support](https://lumalabs.ai/learning-hub/dream-machine-support-pricing-information) and [lumalabs.ai/pricing](https://lumalabs.ai/pricing). Annual billing discounts may apply. API and Dream Machine credits are separate. Ray3.14 HDR/EXR work costs materially more credits than standard output.*
+*Prices verified 2026-06-12 via [Dream Machine plan support](https://lumalabs.ai/learning-hub/dream-machine-support-pricing-information) and [lumalabs.ai/pricing](https://lumalabs.ai/pricing). Annual billing discounts may apply. API and Dream Machine credits are separate. Ray3.14 HDR/EXR work costs materially more credits than standard output.*
 
 ## Against the alternatives
 
@@ -252,7 +252,7 @@ Subscription pricing via [lumalabs.ai/pricing](https://lumalabs.ai/pricing). Com
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis above. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-08 against Dream Machine pricing support, Luma pricing, the Ray3.14 FAQ, and Luma product pages.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis above. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against Dream Machine pricing support, Luma pricing, the Ray3.14 FAQ, and Luma product pages.
 
 ## FAQ
 
@@ -277,10 +277,10 @@ However, Ray3.14 itself should not be assumed API-available: Luma's Ray3.14 FAQ 
 
 ## Sources
 
-- [Luma Dream Machine product page](https://lumalabs.ai/dream-machine) (verified 2026-06-08)
-- [Luma Pricing](https://lumalabs.ai/pricing) (verified 2026-06-08)
-- [Dream Machine Plans: Pricing and Credits](https://lumalabs.ai/learning-hub/dream-machine-support-pricing-information) (verified 2026-06-08)
-- [Ray3.14 FAQ](https://lumalabs.ai/learning-hub/ray3-faq) (verified 2026-06-08)
+- [Luma Dream Machine product page](https://lumalabs.ai/dream-machine) (verified 2026-06-12)
+- [Luma Pricing](https://lumalabs.ai/pricing) (verified 2026-06-12)
+- [Dream Machine Plans: Pricing and Credits](https://lumalabs.ai/learning-hub/dream-machine-support-pricing-information) (verified 2026-06-12)
+- [Ray3.14 FAQ](https://lumalabs.ai/learning-hub/ray3-faq) (verified 2026-06-12)
 - [Ray3 announcement](https://lumalabs.ai/news/ray3) (historical launch context)
 
 ## Related

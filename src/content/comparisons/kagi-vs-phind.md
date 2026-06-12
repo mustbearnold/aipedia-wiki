@@ -8,8 +8,8 @@ winner: kagi
 seo_title: "Kagi vs Phind: Phind Is Dead, Use Kagi For Private Search (June 2026)"
 meta_description: "Kagi vs Phind for former AI search buyers. Phind is offline; Kagi is the active private paid search and Assistant lane. Verified June 2026."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-08
-last_verified: 2026-06-08
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: quarterly
 canonical_fact_table: true
 ---
@@ -100,7 +100,7 @@ Try Kagi if privacy-first search was the appeal. Try ChatGPT, Claude, GitHub Cop
 
 ## Sources
 
-- [Kagi pricing](https://kagi.com/pricing): current plans and trial, verified 2026-06-08
-- [Kagi Ultimate plan docs](https://help.kagi.com/kagi/plans/ultimate-plan.html): Assistant and premium AI access, verified 2026-06-08
-- [Phind shutdown retrospective](https://www.toolsforhumans.ai/ai-tools/phind): shutdown status reference, verified 2026-06-08
+- [Kagi pricing](https://kagi.com/pricing): current plans and trial, verified 2026-06-12
+- [Kagi Ultimate plan docs](https://help.kagi.com/kagi/plans/ultimate-plan.html): Assistant and premium AI access, verified 2026-06-12
+- [Phind shutdown retrospective](https://www.toolsforhumans.ai/ai-tools/phind): shutdown status reference, verified 2026-06-12
 - [AiPedia Phind record](/tools/phind/): local migration page

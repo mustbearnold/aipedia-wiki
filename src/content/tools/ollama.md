@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0 local / $20-$100/mo cloud"
 status: active
 launched: 2023-07
-last_updated: 2026-06-08
-last_verified: 2026-06-08
+last_updated: 2026-06-12
+last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: "https://ollama.com/"
     source_label: "Ollama"
     source_id: ollama-official
-    verified_at: 2026-06-08
+    verified_at: 2026-06-12
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -39,7 +39,7 @@ facts:
     source: "https://ollama.com/"
     source_label: "Ollama"
     source_id: ollama-pricing
-    verified_at: 2026-06-08
+    verified_at: 2026-06-12
     next_review_at: 2026-09-08
     volatility: high
     confidence: high
@@ -48,7 +48,7 @@ facts:
     source: "https://ollama.com/"
     source_label: "Ollama"
     source_id: ollama-pricing
-    verified_at: 2026-06-08
+    verified_at: 2026-06-12
     next_review_at: 2026-09-08
     volatility: medium
     confidence: high
@@ -118,7 +118,7 @@ Ollama is the local-runtime default for people who want to run open models on th
 | **Model library examples** | Llama 3.1/3.2, DeepSeek-R1, Gemma 3, Gemma 4 QAT, Qwen2.5/Qwen3, Mistral, nomic-embed-text, and other open models |
 | **Multimodal** | Depends on the selected model; verify model cards before assuming vision, tool, or embedding support |
 | **Quantization** | Automatic Q4_K_M by default; Q2 through Q8 selectable |
-| **GitHub scale** | 173k stars and 16.5k forks as of June 8, 2026 |
+| **GitHub scale** | 173k stars and 16.5k forks as of June 12, 2026 |
 | **Ollama Cloud tiers** | Free · Pro $20/mo or $200/yr · Max $100/mo |
 | **Team plan** | Listed as coming soon, with shared usage, centralized billing/admin, SSO, model access controls, MDM installer, priority support, and dedicated Slack |
 | **Cloud data note** | Ollama says Cloud data is not trained on; Cloud model regions include United States, Europe, and Singapore |
@@ -154,7 +154,7 @@ Local Ollama is free. Ollama Cloud (released late 2025) offers hosted inference:
 | Max | $100/mo | Run 10 cloud models at a time, 5x more usage than Pro |
 | Team | Coming soon | Shared usage, centralized billing/admin, SSO, model access controls, MDM installer, priority support, dedicated Slack |
 
-*Prices verified 2026-06-08 via [ollama.com/pricing](https://ollama.com/pricing).*
+*Prices verified 2026-06-12 via [ollama.com/pricing](https://ollama.com/pricing).*
 
 ## Failure modes
 
@@ -176,7 +176,7 @@ Local Ollama is free. Ollama Cloud (released late 2025) offers hosted inference:
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/). Last verified 2026-06-08 against the [Ollama official site](https://ollama.com/), [Ollama pricing](https://ollama.com/pricing), [Ollama library](https://ollama.com/library), and [Ollama v0.30.6 release notes](https://github.com/ollama/ollama/releases/tag/v0.30.6).
+This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/). Last verified 2026-06-12 against the [Ollama official site](https://ollama.com/), [Ollama pricing](https://ollama.com/pricing), [Ollama library](https://ollama.com/library), and [Ollama v0.30.6 release notes](https://github.com/ollama/ollama/releases/tag/v0.30.6).
 
 ## FAQ
 
