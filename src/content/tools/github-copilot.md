@@ -322,7 +322,7 @@ On May 6, 2026, [ServiceNow Build Agent reached GitHub Copilot, Cursor, Windsurf
 
 On May 5, 2026, [GitHub brought secret and dependency scanning into MCP developer workflows](/news/2026-05-05-github-mcp-secret-dependency-scanning/). Secret scanning through the GitHub MCP Server is GA, dependency scanning is in public preview, and the Defender for Cloud code-to-cloud integration is GA.
 
-On May 1, 2026, GitHub announced that [GPT-5.2 and GPT-5.2-Codex will be retired across most Copilot experiences on June 1](/news/2026-05-03-github-copilot-gpt-52-deprecation/), pushing users toward newer replacement models. Enterprise admins should confirm model policies before the cutoff.
+On May 1, 2026, GitHub announced that [GPT-5.2 and GPT-5.2-Codex would be retired across most Copilot experiences on June 1](/news/2026-05-03-github-copilot-gpt-52-deprecation/), pushing users toward newer replacement models. That retirement is now in effect; enterprise admins should confirm their current model policies.
 
 On April 27, 2026, GitHub announced that [Copilot would move to usage-based billing on June 1](/news/2026-04-27-github-copilot-usage-based-billing/). That migration is now live in the official billing docs, and private-repo Copilot code review can also consume GitHub Actions minutes.
 

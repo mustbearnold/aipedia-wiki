@@ -329,6 +329,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-12 | /compare/surfer-vs-semrush-vs-ahrefs/ | Comparison | Yes | frontmatter | src/content/comparisons/surfer-vs-semrush-vs-ahrefs.md |
 | 2026-06-12 | /compare/veo-vs-kling/ | Comparison | Yes | frontmatter | src/content/comparisons/veo-vs-kling.md |
 | 2026-06-12 | /compare/veo-vs-seedance/ | Comparison | Yes | frontmatter | src/content/comparisons/veo-vs-seedance.md |
+| 2026-06-12 | /dead/ | Static page | Yes | page metadata | src/pages/dead/index.astro |
 | 2026-06-12 | /dead/bing-chat/ | Dead tool archive | Yes | frontmatter | src/content/dead/bing-chat.md |
 | 2026-06-12 | /dead/google-bard/ | Dead tool archive | Yes | frontmatter | src/content/dead/google-bard.md |
 | 2026-06-12 | /dead/gpt-3-api/ | Dead tool archive | Yes | frontmatter | src/content/dead/gpt-3-api.md |
@@ -357,7 +358,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-12 | /guides/best-ai-for-book-writing/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-book-writing.md |
 | 2026-06-12 | /guides/best-ai-for-brainstorming/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-brainstorming.md |
 | 2026-06-12 | /guides/best-ai-for-citations/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-citations.md |
-| 2026-06-12 | /guides/best-ai-for-code-review/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-code-review.md |
 | 2026-06-12 | /guides/best-ai-for-cold-email/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-cold-email.md |
 | 2026-06-12 | /guides/best-ai-for-cover-letters/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-cover-letters.md |
 | 2026-06-12 | /guides/best-ai-for-data-analysis/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-data-analysis.md |
@@ -430,7 +430,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-12 | /guides/best-pay-as-you-go-ai-tools/ | Guide | Yes | frontmatter | src/content/use-cases/best-pay-as-you-go-ai-tools.md |
 | 2026-06-12 | /guides/best-podcast-editor-for-transcript-first-editing/ | Guide | Yes | frontmatter | src/content/use-cases/best-podcast-editor-for-transcript-first-editing.md |
 | 2026-06-12 | /guides/best-presentation-tool-for-remote-sales-and-training/ | Guide | Yes | frontmatter | src/content/use-cases/best-presentation-tool-for-remote-sales-and-training.md |
-| 2026-06-12 | /guides/best-presentation-tool-for-smb-sales-teams/ | Guide | Yes | frontmatter | src/content/use-cases/best-presentation-tool-for-smb-sales-teams.md |
 | 2026-06-12 | /guides/best-voice-ai-for-emotion-aware-products/ | Guide | Yes | frontmatter | src/content/use-cases/best-voice-ai-for-emotion-aware-products.md |
 | 2026-06-12 | /guides/canva-ai-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/canva-ai-alternatives.md |
 | 2026-06-12 | /guides/chatgpt-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/chatgpt-alternatives.md |
@@ -538,7 +537,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-12 | /tools/gemini/ | Tool | Yes | frontmatter | src/content/tools/gemini.md |
 | 2026-06-12 | /tools/genspark/ | Tool | Yes | frontmatter | src/content/tools/genspark.md |
 | 2026-06-12 | /tools/getresponse/ | Tool | Yes | frontmatter | src/content/tools/getresponse.md |
-| 2026-06-12 | /tools/github-copilot/ | Tool | Yes | frontmatter | src/content/tools/github-copilot.md |
 | 2026-06-12 | /tools/glean/ | Tool | Yes | frontmatter | src/content/tools/glean.md |
 | 2026-06-12 | /tools/glm/ | Tool | Yes | frontmatter | src/content/tools/glm.md |
 | 2026-06-12 | /tools/google-stitch/ | Tool | Yes | frontmatter | src/content/tools/google-stitch.md |
@@ -743,9 +741,11 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-13 | /about/editorial/ | Static page | Yes | git | src/pages/about/editorial.astro |
 | 2026-06-13 | /about/scoring/ | Static page | Yes | git | src/pages/about/scoring.astro |
 | 2026-06-13 | /companies/ | Static page | Yes | git | src/pages/companies/index.astro |
-| 2026-06-13 | /dead/ | Static page | Yes | working tree | src/pages/dead/index.astro |
 | 2026-06-13 | /demo-godtier/ | Static page | Yes | git | src/pages/demo-godtier.astro |
 | 2026-06-13 | /glossary/ | Static page | Yes | git | src/pages/glossary/index.astro |
+| 2026-06-13 | /guides/best-ai-for-code-review/ | Guide | Yes | working tree | src/content/use-cases/best-ai-for-code-review.md |
+| 2026-06-13 | /guides/best-presentation-tool-for-smb-sales-teams/ | Guide | Yes | working tree | src/content/use-cases/best-presentation-tool-for-smb-sales-teams.md |
 | 2026-06-13 | /search/ | Static page | No | git | src/pages/search.astro |
 | 2026-06-13 | /stack-builder/ | Static page | Yes | git | src/pages/stack-builder/index.astro |
 | 2026-06-13 | /tool-finder/ | Static page | No | git | src/pages/tool-finder.astro |
+| 2026-06-13 | /tools/github-copilot/ | Tool | Yes | working tree | src/content/tools/github-copilot.md |

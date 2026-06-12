@@ -227,7 +227,7 @@ CodeRabbit is the best first-pass PR reviewer for most teams because it is purpo
 Qodo is better when the buyer needs enterprise code-quality governance, dashboards, privacy controls, SSO, CLI workflows, and deployment choices. CodeRabbit is the simpler first pick for high-volume PR review.
 
 **Is GitHub Copilot code review free?**
-Not exactly. Copilot code review depends on Copilot plan access and usage accounting. GitHub says private-repo reviews will consume GitHub Actions minutes from June 1, 2026, while public-repo Actions minutes remain free.
+Not exactly. Copilot code review depends on Copilot plan access and usage accounting. As of June 1, 2026, private-repo reviews consume GitHub Actions minutes, while public-repo Actions minutes remain free.
 
 **Can AI code review replace human review?**
 No. It can summarize, flag issues, suggest tests, and propose patches, but humans still own product intent, security, rollout risk, architecture, and final approval.
