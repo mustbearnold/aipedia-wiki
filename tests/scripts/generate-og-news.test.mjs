@@ -157,6 +157,8 @@ test('news OG generator check passes after fixture generation', async () => {
     assert.equal(report.generated, 4);
     assert.equal(report.changed, 0);
     assert.equal(report.written, 0);
+    assert.equal(report.manifest.hit, true);
+    assert.ok(report.outputs.every((output) => output.comparison.kind === 'manifest-hash'));
   } finally {
     rmSync(fixture, { recursive: true, force: true });
   }

@@ -1,0 +1,2001 @@
+{
+  "version": 1,
+  "kind": "tool-og",
+  "source_hash": "2b2d36c80e09393ac3617d46ed66a38febcd067a77f6eb916f439ab0da81cff2",
+  "generated_at": "deterministic",
+  "meta": {
+    "tools": 220,
+    "limit": null
+  },
+  "outputs": [
+    {
+      "file": "public/og-default.png",
+      "kind": "default-png",
+      "slug": null,
+      "theme": null,
+      "target": null,
+      "bytes": 225408,
+      "sha256": "a0fa618807c315c2251d1517f8666a906c1a285fe734d2197f471d701a8ea865"
+    },
+    {
+      "file": "public/og/tools/activepieces.png",
+      "kind": "tool-png",
+      "slug": "activepieces",
+      "theme": null,
+      "target": null,
+      "bytes": 25747,
+      "sha256": "ea385e679ecd4af8c2e37938f203c864b8d73dc93a13ce6e9e9da9ae69e3e332"
+    },
+    {
+      "file": "public/og/tools/ada.png",
+      "kind": "tool-png",
+      "slug": "ada",
+      "theme": null,
+      "target": null,
+      "bytes": 24344,
+      "sha256": "0c82a4324239b16a26d6c1f541289e5aa08ac2b64cd9830fd76e25fa44b99fa4"
+    },
+    {
+      "file": "public/og/tools/adcreative.png",
+      "kind": "tool-png",
+      "slug": "adcreative",
+      "theme": null,
+      "target": null,
+      "bytes": 32861,
+      "sha256": "f0d697eeb424846e40218f763b63545cd4d9dfe6f19a8f4152de34eba23e10e9"
+    },
+    {
+      "file": "public/og/tools/adobe-firefly.png",
+      "kind": "tool-png",
+      "slug": "adobe-firefly",
+      "theme": null,
+      "target": null,
+      "bytes": 31366,
+      "sha256": "dbf656f3d74a098a9f97ba9a3fe1a0e7cd4b24378d1df7ea96c170957e0ca6fa"
+    },
+    {
+      "file": "public/og/tools/ag2.png",
+      "kind": "tool-png",
+      "slug": "ag2",
+      "theme": null,
+      "target": null,
+      "bytes": 25339,
+      "sha256": "328e2e0001b90d8ffb13e787cae2817ab67e12a8d01e0dfc0e5f5a50e0cab19b"
+    },
+    {
+      "file": "public/og/tools/ahrefs.png",
+      "kind": "tool-png",
+      "slug": "ahrefs",
+      "theme": null,
+      "target": null,
+      "bytes": 29110,
+      "sha256": "2871ab36bf5e0537f333bda7f0372b2d59c89729d3c3d712da50e9f7a039d5c0"
+    },
+    {
+      "file": "public/og/tools/aider.png",
+      "kind": "tool-png",
+      "slug": "aider",
+      "theme": null,
+      "target": null,
+      "bytes": 22857,
+      "sha256": "ffda42b4330aa3079cfbda9ff34401d202f70e2c47bfe5201fe065850cbbb5d9"
+    },
+    {
+      "file": "public/og/tools/aiva.png",
+      "kind": "tool-png",
+      "slug": "aiva",
+      "theme": null,
+      "target": null,
+      "bytes": 26012,
+      "sha256": "b17bb59f14670cfaeef18345abd6b285c236038b6f0686d5471956e3057c04c1"
+    },
+    {
+      "file": "public/og/tools/amazon-q.png",
+      "kind": "tool-png",
+      "slug": "amazon-q",
+      "theme": null,
+      "target": null,
+      "bytes": 32782,
+      "sha256": "70e6bfd9e62e1924736bb8d22094e7f36b7f60b5a3ffaf3e66c6a705440c5049"
+    },
+    {
+      "file": "public/og/tools/amplemarket.png",
+      "kind": "tool-png",
+      "slug": "amplemarket",
+      "theme": null,
+      "target": null,
+      "bytes": 26736,
+      "sha256": "b877108d26d11d3b03acf64d28beefb870d4bc69aaa2094075b78fb5874979d5"
+    },
+    {
+      "file": "public/og/tools/antigravity.png",
+      "kind": "tool-png",
+      "slug": "antigravity",
+      "theme": null,
+      "target": null,
+      "bytes": 28207,
+      "sha256": "8a6754daecc92b8055d283e3c49e608571b5817fa5bd126bb3846ade6f71c702"
+    },
+    {
+      "file": "public/og/tools/anythingllm.png",
+      "kind": "tool-png",
+      "slug": "anythingllm",
+      "theme": null,
+      "target": null,
+      "bytes": 28808,
+      "sha256": "0b1697e29436c8fc7cc19a0b26e9591265626f1885f733bdd6a106bf63e8c41b"
+    },
+    {
+      "file": "public/og/tools/apollo.png",
+      "kind": "tool-png",
+      "slug": "apollo",
+      "theme": null,
+      "target": null,
+      "bytes": 25510,
+      "sha256": "8d712d8ed24c93d19f08b2517c3808f48414d52eecc92d88048554405e9e83cb"
+    },
+    {
+      "file": "public/og/tools/argil.png",
+      "kind": "tool-png",
+      "slug": "argil",
+      "theme": null,
+      "target": null,
+      "bytes": 21756,
+      "sha256": "c3331601f818a3dbb8cac653353694e70bf4352a6520c8b13bf09c39e17b2cec"
+    },
+    {
+      "file": "public/og/tools/beautiful-ai.png",
+      "kind": "tool-png",
+      "slug": "beautiful-ai",
+      "theme": null,
+      "target": null,
+      "bytes": 28002,
+      "sha256": "c66acf441e8885e4608d7435914bb936bcdefde360749fbfbf713a9ae18a04f0"
+    },
+    {
+      "file": "public/og/tools/beehiiv.png",
+      "kind": "tool-png",
+      "slug": "beehiiv",
+      "theme": null,
+      "target": null,
+      "bytes": 25798,
+      "sha256": "fadd952ab463bfd8caf67f16c3c1a183b7770001b65b36d245c234403dc48506"
+    },
+    {
+      "file": "public/og/tools/bolt.png",
+      "kind": "tool-png",
+      "slug": "bolt",
+      "theme": null,
+      "target": null,
+      "bytes": 23378,
+      "sha256": "37df996561adcd2cdab8162922781c26325805259b71a6e0c68e1462b01d77be"
+    },
+    {
+      "file": "public/og/tools/boomy.png",
+      "kind": "tool-png",
+      "slug": "boomy",
+      "theme": null,
+      "target": null,
+      "bytes": 27564,
+      "sha256": "ec20e11d2aa8c9bfb2898b8d1fe489447529660969da236176e807133e052105"
+    },
+    {
+      "file": "public/og/tools/canva.png",
+      "kind": "tool-png",
+      "slug": "canva",
+      "theme": null,
+      "target": null,
+      "bytes": 24423,
+      "sha256": "897b6e4bda208ceabe1fc3b847aea6c0a19d8b2c246dfa5ffb1c5fb6278d4219"
+    },
+    {
+      "file": "public/og/tools/capacities.png",
+      "kind": "tool-png",
+      "slug": "capacities",
+      "theme": null,
+      "target": null,
+      "bytes": 29511,
+      "sha256": "2e1a04ba09c5e4dfb60fd5dd5385214e0b321fceae396ec033cb01e3c2233ecc"
+    },
+    {
+      "file": "public/og/tools/captions.png",
+      "kind": "tool-png",
+      "slug": "captions",
+      "theme": null,
+      "target": null,
+      "bytes": 28567,
+      "sha256": "7ff2a8ec50654e7de9017950c186ba75ae60a507c868228ca82262998a438700"
+    },
+    {
+      "file": "public/og/tools/cartesia.png",
+      "kind": "tool-png",
+      "slug": "cartesia",
+      "theme": null,
+      "target": null,
+      "bytes": 26577,
+      "sha256": "6e55493d673d01a811a2be18bbdec33618982974e58baa7dc23f46fd7c4fda1f"
+    },
+    {
+      "file": "public/og/tools/castmagic.png",
+      "kind": "tool-png",
+      "slug": "castmagic",
+      "theme": null,
+      "target": null,
+      "bytes": 24671,
+      "sha256": "29cfcdc15836767a6fbceab5ca1704775af8c99bc4347a28096ba43ec7ee1224"
+    },
+    {
+      "file": "public/og/tools/character-ai.png",
+      "kind": "tool-png",
+      "slug": "character-ai",
+      "theme": null,
+      "target": null,
+      "bytes": 27642,
+      "sha256": "443d436e9025f7e37b33fa85ff8401c6abd2aa4da79c675a34ed48d1961cd2c9"
+    },
+    {
+      "file": "public/og/tools/chatgpt.png",
+      "kind": "tool-png",
+      "slug": "chatgpt",
+      "theme": null,
+      "target": null,
+      "bytes": 26474,
+      "sha256": "828a23f5322efb22e9b15aeb3843dc5c680e2f23e9ea581b55458370e8d504bd"
+    },
+    {
+      "file": "public/og/tools/chatpdf.png",
+      "kind": "tool-png",
+      "slug": "chatpdf",
+      "theme": null,
+      "target": null,
+      "bytes": 26384,
+      "sha256": "5be48941df24c25456d310221c7844d9c2e7c50f87cba507dbd5352a445a8ec4"
+    },
+    {
+      "file": "public/og/tools/claude-code.png",
+      "kind": "tool-png",
+      "slug": "claude-code",
+      "theme": null,
+      "target": null,
+      "bytes": 25836,
+      "sha256": "8e1455dbb4e6967e69af12f81b9e00d9e1785d3f3a8213090c3c8247e002d6be"
+    },
+    {
+      "file": "public/og/tools/claude-design.png",
+      "kind": "tool-png",
+      "slug": "claude-design",
+      "theme": null,
+      "target": null,
+      "bytes": 29905,
+      "sha256": "66e2a3c2021d152869c91f0c8049ba4be24135fe5cf4b01226046b6d61fac03a"
+    },
+    {
+      "file": "public/og/tools/claude.png",
+      "kind": "tool-png",
+      "slug": "claude",
+      "theme": null,
+      "target": null,
+      "bytes": 24971,
+      "sha256": "cbe71b1e53cd53a6a005151c60849813de1fc8bee6968600df01f51d970dd155"
+    },
+    {
+      "file": "public/og/tools/clay.png",
+      "kind": "tool-png",
+      "slug": "clay",
+      "theme": null,
+      "target": null,
+      "bytes": 27329,
+      "sha256": "8ea8f35c9e2a648d99f4c01d29126cbdd2e1d5bb00446ce46728329d36f2337c"
+    },
+    {
+      "file": "public/og/tools/clearscope.png",
+      "kind": "tool-png",
+      "slug": "clearscope",
+      "theme": null,
+      "target": null,
+      "bytes": 31227,
+      "sha256": "d2e1f1499355a14b5694293bacb33457a0393f75499c4e72f48d4b6b9d6efcc1"
+    },
+    {
+      "file": "public/og/tools/clickup.png",
+      "kind": "tool-png",
+      "slug": "clickup",
+      "theme": null,
+      "target": null,
+      "bytes": 26260,
+      "sha256": "b503f8e58f2359f786437ab898742dc6bfb88dcd2fa973eeaaf8111a6976e505"
+    },
+    {
+      "file": "public/og/tools/cline.png",
+      "kind": "tool-png",
+      "slug": "cline",
+      "theme": null,
+      "target": null,
+      "bytes": 21497,
+      "sha256": "d805f6f60453e93f128141874a71b59b47018fa87c87143838cf296fd4e21257"
+    },
+    {
+      "file": "public/og/tools/clipdrop.png",
+      "kind": "tool-png",
+      "slug": "clipdrop",
+      "theme": null,
+      "target": null,
+      "bytes": 24652,
+      "sha256": "99789878183b0e1820973fc15fb77ed428553f09ef72b98c589dd21d799f3bf1"
+    },
+    {
+      "file": "public/og/tools/codeium.png",
+      "kind": "tool-png",
+      "slug": "codeium",
+      "theme": null,
+      "target": null,
+      "bytes": 26870,
+      "sha256": "1f1ccec9ba3eeef03599129f6f2b9c0a29ef58e2c1a1069d2551398c1e8f194d"
+    },
+    {
+      "file": "public/og/tools/codex.png",
+      "kind": "tool-png",
+      "slug": "codex",
+      "theme": null,
+      "target": null,
+      "bytes": 32568,
+      "sha256": "2bdd7bb6eb65ee6176c7eebe85cf45443696e9027cfc36fd68190251977066fa"
+    },
+    {
+      "file": "public/og/tools/cody.png",
+      "kind": "tool-png",
+      "slug": "cody",
+      "theme": null,
+      "target": null,
+      "bytes": 28362,
+      "sha256": "ac6043ed0894d8136012c17188849630128fc24ced4ece0090d25d71e03b7178"
+    },
+    {
+      "file": "public/og/tools/cohere.png",
+      "kind": "tool-png",
+      "slug": "cohere",
+      "theme": null,
+      "target": null,
+      "bytes": 27042,
+      "sha256": "554052dc1e1a4040b51495107919d85aed147536a662ea11b4052deab5e687cf"
+    },
+    {
+      "file": "public/og/tools/connected-papers.png",
+      "kind": "tool-png",
+      "slug": "connected-papers",
+      "theme": null,
+      "target": null,
+      "bytes": 32426,
+      "sha256": "e2ec983d50695b1c67cb5a547b9ae34800fc5ac676906c03bbb573f5411c0740"
+    },
+    {
+      "file": "public/og/tools/consensus.png",
+      "kind": "tool-png",
+      "slug": "consensus",
+      "theme": null,
+      "target": null,
+      "bytes": 28948,
+      "sha256": "f57121156fa59cbbc92a5543a68832d47a9c9506b0e96746165262e413afb2ba"
+    },
+    {
+      "file": "public/og/tools/continue.png",
+      "kind": "tool-png",
+      "slug": "continue",
+      "theme": null,
+      "target": null,
+      "bytes": 28554,
+      "sha256": "e4501cf3c44160607fdd0f10175b23a83dfbf73e39dbdd5e46f851b08f533080"
+    },
+    {
+      "file": "public/og/tools/copy-ai.png",
+      "kind": "tool-png",
+      "slug": "copy-ai",
+      "theme": null,
+      "target": null,
+      "bytes": 23886,
+      "sha256": "e62bb01e32ec9ef06077d240d9c06ad1cba7a44bf84c70ca038901aa01ad9969"
+    },
+    {
+      "file": "public/og/tools/crewai.png",
+      "kind": "tool-png",
+      "slug": "crewai",
+      "theme": null,
+      "target": null,
+      "bytes": 28099,
+      "sha256": "225b1184c8ef7bf890cd1004529f8f29cc99c2ddb200c89ffc6a7ff3a1a62a0e"
+    },
+    {
+      "file": "public/og/tools/cursor.png",
+      "kind": "tool-png",
+      "slug": "cursor",
+      "theme": null,
+      "target": null,
+      "bytes": 26080,
+      "sha256": "cb7e812f68d84914f97314fefd3f3ae991d6987cd99bb0d3bea702754dabae52"
+    },
+    {
+      "file": "public/og/tools/d-id.png",
+      "kind": "tool-png",
+      "slug": "d-id",
+      "theme": null,
+      "target": null,
+      "bytes": 27064,
+      "sha256": "835502c33e4cb1c12f85106fffeb04483cf8f53b180880660d3cf6fee50b8cb0"
+    },
+    {
+      "file": "public/og/tools/decktopus.png",
+      "kind": "tool-png",
+      "slug": "decktopus",
+      "theme": null,
+      "target": null,
+      "bytes": 24849,
+      "sha256": "60703f71abce378a96b2ed20c1927aa66d99cc9f823d9a8fb523fb25c3b25a8d"
+    },
+    {
+      "file": "public/og/tools/deepl.png",
+      "kind": "tool-png",
+      "slug": "deepl",
+      "theme": null,
+      "target": null,
+      "bytes": 24153,
+      "sha256": "9f9aa4aea1510812784044e8a48ce912d76e64b9437291240f7aac506e0b8e1c"
+    },
+    {
+      "file": "public/og/tools/deepseek.png",
+      "kind": "tool-png",
+      "slug": "deepseek",
+      "theme": null,
+      "target": null,
+      "bytes": 26326,
+      "sha256": "9f7f103574fa7f3af32802626553f17e456e0684d504937e6bdd93c31180f92e"
+    },
+    {
+      "file": "public/og/tools/descript.png",
+      "kind": "tool-png",
+      "slug": "descript",
+      "theme": null,
+      "target": null,
+      "bytes": 25536,
+      "sha256": "c002f2cf31237c83457e730a30ea9a29fbf2c1a0bf4e1ea41ff418914fe5650c"
+    },
+    {
+      "file": "public/og/tools/devin.png",
+      "kind": "tool-png",
+      "slug": "devin",
+      "theme": null,
+      "target": null,
+      "bytes": 27800,
+      "sha256": "ceb16862ac81b3a5ccf9b0e9e7e3f8f746870ba3a69cba8bd3fcc13e21aa6a9b"
+    },
+    {
+      "file": "public/og/tools/doubao.png",
+      "kind": "tool-png",
+      "slug": "doubao",
+      "theme": null,
+      "target": null,
+      "bytes": 26918,
+      "sha256": "7f9feefda45107987c17fe56e90060f5695a899e5b526d224c5cdfa790d85eb8"
+    },
+    {
+      "file": "public/og/tools/elevenlabs.png",
+      "kind": "tool-png",
+      "slug": "elevenlabs",
+      "theme": null,
+      "target": null,
+      "bytes": 26980,
+      "sha256": "a2bca2ec184071c64154f1444bad9b5ec7923f9637ee2cc03c5d178bf72da70a"
+    },
+    {
+      "file": "public/og/tools/elicit.png",
+      "kind": "tool-png",
+      "slug": "elicit",
+      "theme": null,
+      "target": null,
+      "bytes": 21155,
+      "sha256": "a049141b62906c731fb33328187aa20a89f3e50f130fbf796a86e4d40286e662"
+    },
+    {
+      "file": "public/og/tools/exa.png",
+      "kind": "tool-png",
+      "slug": "exa",
+      "theme": null,
+      "target": null,
+      "bytes": 21816,
+      "sha256": "dd3189c84b8b924879023a8d71853d00e992d68761b1f1d768c93f3dca583934"
+    },
+    {
+      "file": "public/og/tools/fal-ai.png",
+      "kind": "tool-png",
+      "slug": "fal-ai",
+      "theme": null,
+      "target": null,
+      "bytes": 28167,
+      "sha256": "b9128c1f1369abc25d5a2028c3e7bfebefdcd7f1ea996ac40aa86d5c12f2170c"
+    },
+    {
+      "file": "public/og/tools/fathom.png",
+      "kind": "tool-png",
+      "slug": "fathom",
+      "theme": null,
+      "target": null,
+      "bytes": 28306,
+      "sha256": "d8e48b751ae5c2157e32c0754ea9bea7b4532477afffebadb31a19601f3a0d03"
+    },
+    {
+      "file": "public/og/tools/figma.png",
+      "kind": "tool-png",
+      "slug": "figma",
+      "theme": null,
+      "target": null,
+      "bytes": 29229,
+      "sha256": "f97655898af4491ca6a8415dc1a8a25c902429aeb3492ecd7c3fdcb278299cc2"
+    },
+    {
+      "file": "public/og/tools/fireflies.png",
+      "kind": "tool-png",
+      "slug": "fireflies",
+      "theme": null,
+      "target": null,
+      "bytes": 24532,
+      "sha256": "8e50ffade8961c44991015a5bf354884050fa2075a489cbaa678f301ef91a29d"
+    },
+    {
+      "file": "public/og/tools/fireworks-ai.png",
+      "kind": "tool-png",
+      "slug": "fireworks-ai",
+      "theme": null,
+      "target": null,
+      "bytes": 26959,
+      "sha256": "12d6d38379de36ab18b000e7fec182e76ccbc309f3c3442eb928f1c9b984adbe"
+    },
+    {
+      "file": "public/og/tools/fish-audio.png",
+      "kind": "tool-png",
+      "slug": "fish-audio",
+      "theme": null,
+      "target": null,
+      "bytes": 28939,
+      "sha256": "23ef64fee4451ce36449b85ea6079d2f2593cbd45e5780d0d1d722a574e6d740"
+    },
+    {
+      "file": "public/og/tools/flux.png",
+      "kind": "tool-png",
+      "slug": "flux",
+      "theme": null,
+      "target": null,
+      "bytes": 24400,
+      "sha256": "d7517c36381ef924006e837663081c3390f094593d254303141d79a76e7a32e5"
+    },
+    {
+      "file": "public/og/tools/framer-ai.png",
+      "kind": "tool-png",
+      "slug": "framer-ai",
+      "theme": null,
+      "target": null,
+      "bytes": 26512,
+      "sha256": "b0f8720943e4f7a7950b2082ddfe585e7e97d1fa5ad4a3aada10289eaad77c6e"
+    },
+    {
+      "file": "public/og/tools/frase.png",
+      "kind": "tool-png",
+      "slug": "frase",
+      "theme": null,
+      "target": null,
+      "bytes": 24100,
+      "sha256": "cb8dea87ce182fcf974ed13de9c19e76b24d5a27035e8c7719d7880af48a4be2"
+    },
+    {
+      "file": "public/og/tools/freepik.png",
+      "kind": "tool-png",
+      "slug": "freepik",
+      "theme": null,
+      "target": null,
+      "bytes": 28172,
+      "sha256": "586d09ec8aa64df05b51ad8489cb6784153141af4eb3c602c2a8bd184d14f0ad"
+    },
+    {
+      "file": "public/og/tools/galileo-ai.png",
+      "kind": "tool-png",
+      "slug": "galileo-ai",
+      "theme": null,
+      "target": null,
+      "bytes": 27938,
+      "sha256": "a94f9e9ca3b0c42e1d6151e87aa67fe933239e1f988266be7e7a9c2ec97585b6"
+    },
+    {
+      "file": "public/og/tools/gamma.png",
+      "kind": "tool-png",
+      "slug": "gamma",
+      "theme": null,
+      "target": null,
+      "bytes": 21834,
+      "sha256": "19392b36061caf730970320359edcad9612d6cec90059cec3cb900cc89497c19"
+    },
+    {
+      "file": "public/og/tools/gemini-omni.png",
+      "kind": "tool-png",
+      "slug": "gemini-omni",
+      "theme": null,
+      "target": null,
+      "bytes": 28751,
+      "sha256": "67bdb0b502c88682ed9ac0c5f2781f45cc2860a565d24cb324de5ee9aa5a445f"
+    },
+    {
+      "file": "public/og/tools/gemini.png",
+      "kind": "tool-png",
+      "slug": "gemini",
+      "theme": null,
+      "target": null,
+      "bytes": 27158,
+      "sha256": "b4958e7fe505a68af3dea5f5bb9ea81575f3fa692aad202792f8df949ecc19e0"
+    },
+    {
+      "file": "public/og/tools/genspark.png",
+      "kind": "tool-png",
+      "slug": "genspark",
+      "theme": null,
+      "target": null,
+      "bytes": 31835,
+      "sha256": "3dc0805c4f91f2af64d212e191a68a2ec8d4b48b488afcded1ed003d737c2473"
+    },
+    {
+      "file": "public/og/tools/getresponse.png",
+      "kind": "tool-png",
+      "slug": "getresponse",
+      "theme": null,
+      "target": null,
+      "bytes": 31692,
+      "sha256": "6d353245118fe79ebf49411a5453504fbaa7122bfad063f3245b26a73df0eb95"
+    },
+    {
+      "file": "public/og/tools/github-copilot.png",
+      "kind": "tool-png",
+      "slug": "github-copilot",
+      "theme": null,
+      "target": null,
+      "bytes": 27823,
+      "sha256": "eec4b77befb99f918ee6581c658f7afa4a3ec255816b21281d1cf9a905295d29"
+    },
+    {
+      "file": "public/og/tools/glm.png",
+      "kind": "tool-png",
+      "slug": "glm",
+      "theme": null,
+      "target": null,
+      "bytes": 29628,
+      "sha256": "18d167df3833701632b503095dd69ea26c01f7f64b131fe4a82abd14449e491f"
+    },
+    {
+      "file": "public/og/tools/google-stitch.png",
+      "kind": "tool-png",
+      "slug": "google-stitch",
+      "theme": null,
+      "target": null,
+      "bytes": 31811,
+      "sha256": "40890c621bd1bbc74914cea32fc466407fb4ef93ba33eaaa48fc9fc964d7fa2d"
+    },
+    {
+      "file": "public/og/tools/goose.png",
+      "kind": "tool-png",
+      "slug": "goose",
+      "theme": null,
+      "target": null,
+      "bytes": 29501,
+      "sha256": "c5f6e95db1e242015068d222070087314143f50c880c3add98d479ae71d61730"
+    },
+    {
+      "file": "public/og/tools/gpt-image-2.png",
+      "kind": "tool-png",
+      "slug": "gpt-image-2",
+      "theme": null,
+      "target": null,
+      "bytes": 28720,
+      "sha256": "891e5f0d60f345e405be2ae57a2f5d86ecff01a3d424183c7a6dacb2e6cabacd"
+    },
+    {
+      "file": "public/og/tools/grammarly.png",
+      "kind": "tool-png",
+      "slug": "grammarly",
+      "theme": null,
+      "target": null,
+      "bytes": 26860,
+      "sha256": "ab06d77d2bff2382f3975e6fa3b8eb29382ea0bd785a15588755b06ccbc6789d"
+    },
+    {
+      "file": "public/og/tools/granola.png",
+      "kind": "tool-png",
+      "slug": "granola",
+      "theme": null,
+      "target": null,
+      "bytes": 26733,
+      "sha256": "28a73f318daeabdb374a8be244667d7a96e389b1d337ee15e42efd0937b1f006"
+    },
+    {
+      "file": "public/og/tools/grok.png",
+      "kind": "tool-png",
+      "slug": "grok",
+      "theme": null,
+      "target": null,
+      "bytes": 23879,
+      "sha256": "064a9dea89704566a326cfc0f469606f6925c101250e5927d785173cbb108f60"
+    },
+    {
+      "file": "public/og/tools/groq.png",
+      "kind": "tool-png",
+      "slug": "groq",
+      "theme": null,
+      "target": null,
+      "bytes": 24310,
+      "sha256": "901aa905ce160a5d05dc5880aca764fe958818211bb073da5d9c9e036a562824"
+    },
+    {
+      "file": "public/og/tools/gumloop.png",
+      "kind": "tool-png",
+      "slug": "gumloop",
+      "theme": null,
+      "target": null,
+      "bytes": 23990,
+      "sha256": "3ab7d0bfae13097267acdad3376704c3997182c96fcc85e21fa497064ce8b90f"
+    },
+    {
+      "file": "public/og/tools/hailuo.png",
+      "kind": "tool-png",
+      "slug": "hailuo",
+      "theme": null,
+      "target": null,
+      "bytes": 29540,
+      "sha256": "6cf0bd507297955d28e6a9e39dc826222480b84993c4faeaeb5efc2f9c28c0c5"
+    },
+    {
+      "file": "public/og/tools/harvey.png",
+      "kind": "tool-png",
+      "slug": "harvey",
+      "theme": null,
+      "target": null,
+      "bytes": 26223,
+      "sha256": "f68cfeb0b4e7f51eb53a9c4ff1d1f54b72260a981db7f6074e1f0633cb91f373"
+    },
+    {
+      "file": "public/og/tools/hedra.png",
+      "kind": "tool-png",
+      "slug": "hedra",
+      "theme": null,
+      "target": null,
+      "bytes": 25947,
+      "sha256": "c034647efedda119a4cad1da79eb25fb6b2532f16fb600dc3c4f1e313f41115a"
+    },
+    {
+      "file": "public/og/tools/helicone.png",
+      "kind": "tool-png",
+      "slug": "helicone",
+      "theme": null,
+      "target": null,
+      "bytes": 31720,
+      "sha256": "e2fc7910786a48a897fed18d1ca8e82af907b343a1c76f3996c369d8807dbf75"
+    },
+    {
+      "file": "public/og/tools/hermes-agent.png",
+      "kind": "tool-png",
+      "slug": "hermes-agent",
+      "theme": null,
+      "target": null,
+      "bytes": 27597,
+      "sha256": "76d3aa112f5a02c46ccce6d76ece8132dcbee61ee176b3e6ef6094e651cfad37"
+    },
+    {
+      "file": "public/og/tools/hex.png",
+      "kind": "tool-png",
+      "slug": "hex",
+      "theme": null,
+      "target": null,
+      "bytes": 29521,
+      "sha256": "5f8f71b0bdd8e3151274cd4072f8cde60d6b20486f48bf78adbc2c7c04f28f19"
+    },
+    {
+      "file": "public/og/tools/heygen.png",
+      "kind": "tool-png",
+      "slug": "heygen",
+      "theme": null,
+      "target": null,
+      "bytes": 25859,
+      "sha256": "3729801a23f5a81b3e77a8884bb6752b993903c6dbb7c2d05a2ad7664a809dc0"
+    },
+    {
+      "file": "public/og/tools/higgsfield.png",
+      "kind": "tool-png",
+      "slug": "higgsfield",
+      "theme": null,
+      "target": null,
+      "bytes": 33338,
+      "sha256": "715313daa82d759bdcdd02552485143d96ae0b502a91202fd94f55a1f06b63ee"
+    },
+    {
+      "file": "public/og/tools/humata.png",
+      "kind": "tool-png",
+      "slug": "humata",
+      "theme": null,
+      "target": null,
+      "bytes": 28399,
+      "sha256": "d0640097f61eb8cce1786e6917a8f7b6afc298ae12f5987dba68cb453304da70"
+    },
+    {
+      "file": "public/og/tools/hume-ai.png",
+      "kind": "tool-png",
+      "slug": "hume-ai",
+      "theme": null,
+      "target": null,
+      "bytes": 27953,
+      "sha256": "78a1d5dce19366dd34ff1acb2d85528d16f3e8bf49794a39926607b5abc94230"
+    },
+    {
+      "file": "public/og/tools/hunyuan.png",
+      "kind": "tool-png",
+      "slug": "hunyuan",
+      "theme": null,
+      "target": null,
+      "bytes": 30162,
+      "sha256": "a100d61465a6ae33aafc4b5dbd66cd3ea3a9a28d87541706516cc30e9c3ada72"
+    },
+    {
+      "file": "public/og/tools/hyperwrite.png",
+      "kind": "tool-png",
+      "slug": "hyperwrite",
+      "theme": null,
+      "target": null,
+      "bytes": 23392,
+      "sha256": "d0ba4b20e5b3d403c91a188f2ba701fb33a937403ee3cf9cc7af7da9ec804d6c"
+    },
+    {
+      "file": "public/og/tools/ideogram.png",
+      "kind": "tool-png",
+      "slug": "ideogram",
+      "theme": null,
+      "target": null,
+      "bytes": 21439,
+      "sha256": "bd1331c6e93368e28b9eab785c1229ff379970b32c619c7a76f1b512b199fd9d"
+    },
+    {
+      "file": "public/og/tools/imagen.png",
+      "kind": "tool-png",
+      "slug": "imagen",
+      "theme": null,
+      "target": null,
+      "bytes": 27347,
+      "sha256": "e5708dffd71b75a235d8fae62782bdb4e9b43ad33c784b7a7b4a5cf8aee66401"
+    },
+    {
+      "file": "public/og/tools/instantly.png",
+      "kind": "tool-png",
+      "slug": "instantly",
+      "theme": null,
+      "target": null,
+      "bytes": 24874,
+      "sha256": "51ae8f0cb56b2a5f4b04c76636f1aa0e0e2c7b1fb0f2b648bdd602d75539af07"
+    },
+    {
+      "file": "public/og/tools/intercom.png",
+      "kind": "tool-png",
+      "slug": "intercom",
+      "theme": null,
+      "target": null,
+      "bytes": 25617,
+      "sha256": "9a93429ff65ab071efd275ffe823d3ab7244a452770bca3886136b9a77b407ca"
+    },
+    {
+      "file": "public/og/tools/invideo.png",
+      "kind": "tool-png",
+      "slug": "invideo",
+      "theme": null,
+      "target": null,
+      "bytes": 29254,
+      "sha256": "74f1b5b9089e0b970ee9c8a854f99eb96674877daf7c136df4f7555320c905cd"
+    },
+    {
+      "file": "public/og/tools/jan-ai.png",
+      "kind": "tool-png",
+      "slug": "jan-ai",
+      "theme": null,
+      "target": null,
+      "bytes": 27404,
+      "sha256": "b86ff945d207040e8f2a624d5443e01d4f4525ddf258ac30f780ae04db01c5b8"
+    },
+    {
+      "file": "public/og/tools/jasper.png",
+      "kind": "tool-png",
+      "slug": "jasper",
+      "theme": null,
+      "target": null,
+      "bytes": 19993,
+      "sha256": "5ef5ec47c46d77478e0b31f5916a0baebab09de329bd2453231a9724a7a27389"
+    },
+    {
+      "file": "public/og/tools/jetbrains-ai.png",
+      "kind": "tool-png",
+      "slug": "jetbrains-ai",
+      "theme": null,
+      "target": null,
+      "bytes": 26532,
+      "sha256": "bfae8ed3cfd5745a311ea64a02cc164a6b0f27ae035efba154c90307eef75fe8"
+    },
+    {
+      "file": "public/og/tools/jimeng.png",
+      "kind": "tool-png",
+      "slug": "jimeng",
+      "theme": null,
+      "target": null,
+      "bytes": 27915,
+      "sha256": "290f024890a6d8f72940c33b8c804e688e3c7f651fcdd05442af18fc1fc0c39f"
+    },
+    {
+      "file": "public/og/tools/julius.png",
+      "kind": "tool-png",
+      "slug": "julius",
+      "theme": null,
+      "target": null,
+      "bytes": 30516,
+      "sha256": "fbd6ddebc6553ba6471a7e5a8c206c960fdd48f26f1592b3cb9f61c3cbbd4345"
+    },
+    {
+      "file": "public/og/tools/kagi.png",
+      "kind": "tool-png",
+      "slug": "kagi",
+      "theme": null,
+      "target": null,
+      "bytes": 23747,
+      "sha256": "8b6c31f3fd383a215fadedb078643cbcf9168c6179fcc7458dbca3b8b493c418"
+    },
+    {
+      "file": "public/og/tools/kimi.png",
+      "kind": "tool-png",
+      "slug": "kimi",
+      "theme": null,
+      "target": null,
+      "bytes": 25739,
+      "sha256": "a4ce0c3df5155ec43c6af1580c4d42e50461f1beca3ae4a73d5cf24098b4bce4"
+    },
+    {
+      "file": "public/og/tools/kling.png",
+      "kind": "tool-png",
+      "slug": "kling",
+      "theme": null,
+      "target": null,
+      "bytes": 28232,
+      "sha256": "e5e73d5d97be1d0db5b2695e64c70a5846e84e3c95d0e95428167c76ef7e9689"
+    },
+    {
+      "file": "public/og/tools/kokoro.png",
+      "kind": "tool-png",
+      "slug": "kokoro",
+      "theme": null,
+      "target": null,
+      "bytes": 24038,
+      "sha256": "20ea7900391cea3df50044539e14d3637116f28d877a6937ee5a33598600e515"
+    },
+    {
+      "file": "public/og/tools/krea.png",
+      "kind": "tool-png",
+      "slug": "krea",
+      "theme": null,
+      "target": null,
+      "bytes": 27648,
+      "sha256": "dbec0e34b4a27f1bb070f85b513d08a5a934718205efd8177d0f75c3ffa9182c"
+    },
+    {
+      "file": "public/og/tools/langflow.png",
+      "kind": "tool-png",
+      "slug": "langflow",
+      "theme": null,
+      "target": null,
+      "bytes": 23682,
+      "sha256": "710ecdfbda5eca560d802fa9a90be4b1cdb6be2c6e6b8031370ca16f5bd4e614"
+    },
+    {
+      "file": "public/og/tools/langfuse.png",
+      "kind": "tool-png",
+      "slug": "langfuse",
+      "theme": null,
+      "target": null,
+      "bytes": 27101,
+      "sha256": "f52bab401190aed11d4ae19ce058de4e1ba802cbaaf9d06bb5561e2996c4456c"
+    },
+    {
+      "file": "public/og/tools/langgraph.png",
+      "kind": "tool-png",
+      "slug": "langgraph",
+      "theme": null,
+      "target": null,
+      "bytes": 26973,
+      "sha256": "de77e2467817eb4803795eb339e457100a036211f02a2078765d1c47aefca4f4"
+    },
+    {
+      "file": "public/og/tools/leonardo.png",
+      "kind": "tool-png",
+      "slug": "leonardo",
+      "theme": null,
+      "target": null,
+      "bytes": 29518,
+      "sha256": "4c4cde5abeff2711b291658581a9a6ac2fd52d44bc707bf6f7e79877a022e6ed"
+    },
+    {
+      "file": "public/og/tools/letta.png",
+      "kind": "tool-png",
+      "slug": "letta",
+      "theme": null,
+      "target": null,
+      "bytes": 25006,
+      "sha256": "dd70dafe852616f7bafa809dcd0ad4be6026a1e999d44378fa980a6ec43d5345"
+    },
+    {
+      "file": "public/og/tools/lindy.png",
+      "kind": "tool-png",
+      "slug": "lindy",
+      "theme": null,
+      "target": null,
+      "bytes": 24029,
+      "sha256": "8e235bf2b46f9e7484d7c706b12a86164cd3e7bfeb3dc76bc093bdf510190b8e"
+    },
+    {
+      "file": "public/og/tools/llama.png",
+      "kind": "tool-png",
+      "slug": "llama",
+      "theme": null,
+      "target": null,
+      "bytes": 23955,
+      "sha256": "49d248bb85eeb8e3942167aca297e4202867398fcc3403d19e91cca6ed0c71f6"
+    },
+    {
+      "file": "public/og/tools/lm-studio.png",
+      "kind": "tool-png",
+      "slug": "lm-studio",
+      "theme": null,
+      "target": null,
+      "bytes": 28424,
+      "sha256": "f5b3a7ec1e985c3e0f2ff7b1cac90553e5e61c7d1405938fbf98636ce18e185c"
+    },
+    {
+      "file": "public/og/tools/logseq.png",
+      "kind": "tool-png",
+      "slug": "logseq",
+      "theme": null,
+      "target": null,
+      "bytes": 31129,
+      "sha256": "57ef83b4e0c5cc477721cd5a9180f7514bc9b9933030da490893eff13437af4b"
+    },
+    {
+      "file": "public/og/tools/lovable.png",
+      "kind": "tool-png",
+      "slug": "lovable",
+      "theme": null,
+      "target": null,
+      "bytes": 27739,
+      "sha256": "7f068345a2f1f7a3310705df35638bae442be1201fc4abb0d3b14431d13dc805"
+    },
+    {
+      "file": "public/og/tools/lovo.png",
+      "kind": "tool-png",
+      "slug": "lovo",
+      "theme": null,
+      "target": null,
+      "bytes": 26586,
+      "sha256": "839e71fa77996ded74f674a8a51a0ba2fab9d0b72a8c497c103002cea5801af0"
+    },
+    {
+      "file": "public/og/tools/luma.png",
+      "kind": "tool-png",
+      "slug": "luma",
+      "theme": null,
+      "target": null,
+      "bytes": 28499,
+      "sha256": "fdfc7ee47fa2ab650af4c90a25107edfd99bcd6a46e4d879249462327042d71c"
+    },
+    {
+      "file": "public/og/tools/magnific.png",
+      "kind": "tool-png",
+      "slug": "magnific",
+      "theme": null,
+      "target": null,
+      "bytes": 24885,
+      "sha256": "76c739b0c3511e76e216779b8dae4657a6e046ea88277c9188e6a217bb314a18"
+    },
+    {
+      "file": "public/og/tools/make.png",
+      "kind": "tool-png",
+      "slug": "make",
+      "theme": null,
+      "target": null,
+      "bytes": 29166,
+      "sha256": "4cb2f7b2cc46b3204446afe61470a193ea1e4afc5cc6e7e3b872bd9362525b58"
+    },
+    {
+      "file": "public/og/tools/manus.png",
+      "kind": "tool-png",
+      "slug": "manus",
+      "theme": null,
+      "target": null,
+      "bytes": 30412,
+      "sha256": "8cce74a14a3be3204f831adec9d16e2e852768d951d5ac5622bcfc8d498b3845"
+    },
+    {
+      "file": "public/og/tools/marketmuse.png",
+      "kind": "tool-png",
+      "slug": "marketmuse",
+      "theme": null,
+      "target": null,
+      "bytes": 27263,
+      "sha256": "8820b4f852726ad1707c3690d3873a930a2800e9028e3b0aed11dd78a59aa4ac"
+    },
+    {
+      "file": "public/og/tools/mastra.png",
+      "kind": "tool-png",
+      "slug": "mastra",
+      "theme": null,
+      "target": null,
+      "bytes": 25403,
+      "sha256": "f812751334de6e8fa7a2c86c75852fd949402d36e2a2a0445c7d960fcdc6a795"
+    },
+    {
+      "file": "public/og/tools/meetgeek.png",
+      "kind": "tool-png",
+      "slug": "meetgeek",
+      "theme": null,
+      "target": null,
+      "bytes": 27967,
+      "sha256": "c664da4be691deabd52fe347a21c83cb3101a7e87b047d8fb2be990efec3f3ea"
+    },
+    {
+      "file": "public/og/tools/mem.png",
+      "kind": "tool-png",
+      "slug": "mem",
+      "theme": null,
+      "target": null,
+      "bytes": 22089,
+      "sha256": "ede56c830bbfcf3d935f12a37a50a297b19974a66828738ca0d464d4281bb320"
+    },
+    {
+      "file": "public/og/tools/meshy.png",
+      "kind": "tool-png",
+      "slug": "meshy",
+      "theme": null,
+      "target": null,
+      "bytes": 26046,
+      "sha256": "affea03fe1aa7d2a1e64f6a10617519faa7b5afdd0315b2ae0b1c1367bd3fdd0"
+    },
+    {
+      "file": "public/og/tools/microsoft-agent-framework.png",
+      "kind": "tool-png",
+      "slug": "microsoft-agent-framework",
+      "theme": null,
+      "target": null,
+      "bytes": 29156,
+      "sha256": "2468fe94b0b5fec1a4be2a97e51c6fded360dcb1037ee7a06f9284e3aa806763"
+    },
+    {
+      "file": "public/og/tools/midjourney.png",
+      "kind": "tool-png",
+      "slug": "midjourney",
+      "theme": null,
+      "target": null,
+      "bytes": 27550,
+      "sha256": "22b680430074888277ebe0872d695755eb938f263f779412112ed902cd5cea5e"
+    },
+    {
+      "file": "public/og/tools/minimax-speech.png",
+      "kind": "tool-png",
+      "slug": "minimax-speech",
+      "theme": null,
+      "target": null,
+      "bytes": 27131,
+      "sha256": "08ef82249b9f1b8a222ef2ba7e0b865f4bf7826844069c8ee2175266b6967d63"
+    },
+    {
+      "file": "public/og/tools/minimax.png",
+      "kind": "tool-png",
+      "slug": "minimax",
+      "theme": null,
+      "target": null,
+      "bytes": 25038,
+      "sha256": "f744f496801c6e69cc26225f48877b914abfc538b76bbb1c44527b48ed6e86bf"
+    },
+    {
+      "file": "public/og/tools/mistral-ai.png",
+      "kind": "tool-png",
+      "slug": "mistral-ai",
+      "theme": null,
+      "target": null,
+      "bytes": 24694,
+      "sha256": "a45207986afcfb3bdc2a00155c50975837c4d923f3d7b11eda52bc82d032f821"
+    },
+    {
+      "file": "public/og/tools/morphic.png",
+      "kind": "tool-png",
+      "slug": "morphic",
+      "theme": null,
+      "target": null,
+      "bytes": 28616,
+      "sha256": "ebaefa3574e2c7622c33722591f378670394206b81565366b0f6ebe801921917"
+    },
+    {
+      "file": "public/og/tools/mubert.png",
+      "kind": "tool-png",
+      "slug": "mubert",
+      "theme": null,
+      "target": null,
+      "bytes": 24531,
+      "sha256": "ad129c1f7cfa234e1d324102be377a7f990c9f9f99a6299ea212dbb467751578"
+    },
+    {
+      "file": "public/og/tools/murf.png",
+      "kind": "tool-png",
+      "slug": "murf",
+      "theme": null,
+      "target": null,
+      "bytes": 22920,
+      "sha256": "8a9d930e16702bba2f961e2a6b883414a1ef15fde11fba2e35a3770ae9dfdc65"
+    },
+    {
+      "file": "public/og/tools/n8n.png",
+      "kind": "tool-png",
+      "slug": "n8n",
+      "theme": null,
+      "target": null,
+      "bytes": 24598,
+      "sha256": "251517608dd9a8e6db2773b6961e967ec82dbd8f5f522ccc0eb15e5d7520e7dc"
+    },
+    {
+      "file": "public/og/tools/nanochat.png",
+      "kind": "tool-png",
+      "slug": "nanochat",
+      "theme": null,
+      "target": null,
+      "bytes": 25963,
+      "sha256": "473c017f870c34ad3b333690a6b4746c35ab93e1ca3a7a6e6e17866a0c46cfc1"
+    },
+    {
+      "file": "public/og/tools/neuronwriter.png",
+      "kind": "tool-png",
+      "slug": "neuronwriter",
+      "theme": null,
+      "target": null,
+      "bytes": 25686,
+      "sha256": "a7759ac1ed3f82028db585169367bd0effe517c6644ce6d805502af0c719cc61"
+    },
+    {
+      "file": "public/og/tools/nightcafe.png",
+      "kind": "tool-png",
+      "slug": "nightcafe",
+      "theme": null,
+      "target": null,
+      "bytes": 25430,
+      "sha256": "a2f55f10f81ad4e777e7a499bf62a0b17e6c472e1e6912bdc08a4c21835c4d14"
+    },
+    {
+      "file": "public/og/tools/notebooklm.png",
+      "kind": "tool-png",
+      "slug": "notebooklm",
+      "theme": null,
+      "target": null,
+      "bytes": 25786,
+      "sha256": "2b38d435f7a694ba474d5e739b1f7438e01456add841c83bc29ee739e67df163"
+    },
+    {
+      "file": "public/og/tools/notion-ai.png",
+      "kind": "tool-png",
+      "slug": "notion-ai",
+      "theme": null,
+      "target": null,
+      "bytes": 25731,
+      "sha256": "b9fb798cd5c9a5c558d1aa1f803b7cec8f85d6d5a5b02e61b44ab2b94d9d6166"
+    },
+    {
+      "file": "public/og/tools/obsidian.png",
+      "kind": "tool-png",
+      "slug": "obsidian",
+      "theme": null,
+      "target": null,
+      "bytes": 28301,
+      "sha256": "2945fb7af68baf5ce909467bfe3fa9e1218caa2a3360c56ca10651fa0bbfb51b"
+    },
+    {
+      "file": "public/og/tools/ollama.png",
+      "kind": "tool-png",
+      "slug": "ollama",
+      "theme": null,
+      "target": null,
+      "bytes": 24908,
+      "sha256": "44956c06284d6efcdaba8df25d2788668ee566ff35cd26b9e3b4067a368a8a64"
+    },
+    {
+      "file": "public/og/tools/omniseo.png",
+      "kind": "tool-png",
+      "slug": "omniseo",
+      "theme": null,
+      "target": null,
+      "bytes": 26340,
+      "sha256": "937fafb5f19d879376e626d00d78dedd7c1ca179e83125b21034eea750f24529"
+    },
+    {
+      "file": "public/og/tools/open-webui.png",
+      "kind": "tool-png",
+      "slug": "open-webui",
+      "theme": null,
+      "target": null,
+      "bytes": 25968,
+      "sha256": "fa6a6974956e9c2138f27fba6cb29fec11a5727af595ead1c2e812baf8aae57b"
+    },
+    {
+      "file": "public/og/tools/openclaw.png",
+      "kind": "tool-png",
+      "slug": "openclaw",
+      "theme": null,
+      "target": null,
+      "bytes": 29238,
+      "sha256": "7c1442f9226c876ea42969ed9215d181ce75e653fd5c2ccfaba2ea80057140bb"
+    },
+    {
+      "file": "public/og/tools/openhands.png",
+      "kind": "tool-png",
+      "slug": "openhands",
+      "theme": null,
+      "target": null,
+      "bytes": 27185,
+      "sha256": "ada54bf44249b41f6246ab6fc48836ecbcf075dd52bd5bc86389c230da97879c"
+    },
+    {
+      "file": "public/og/tools/opusclip.png",
+      "kind": "tool-png",
+      "slug": "opusclip",
+      "theme": null,
+      "target": null,
+      "bytes": 24560,
+      "sha256": "2046305b7cb69ea64e0534484ef0ebf71b03786c0a80395871a0fba3264c52f2"
+    },
+    {
+      "file": "public/og/tools/otter-ai.png",
+      "kind": "tool-png",
+      "slug": "otter-ai",
+      "theme": null,
+      "target": null,
+      "bytes": 25456,
+      "sha256": "9bf652ff3df0a8219c96ac1cf39867970281753646b6abf58046a01df88a5e18"
+    },
+    {
+      "file": "public/og/tools/perplexity.png",
+      "kind": "tool-png",
+      "slug": "perplexity",
+      "theme": null,
+      "target": null,
+      "bytes": 27857,
+      "sha256": "2b7b129def8e258d3f3f4c7cedb52b575591e0b2efaf8885a4cd227f826f631c"
+    },
+    {
+      "file": "public/og/tools/pieces.png",
+      "kind": "tool-png",
+      "slug": "pieces",
+      "theme": null,
+      "target": null,
+      "bytes": 30509,
+      "sha256": "d379a937c40ee3905b3ee4df9079774317b9fc9f570e8792831f45627cf29d5a"
+    },
+    {
+      "file": "public/og/tools/pika.png",
+      "kind": "tool-png",
+      "slug": "pika",
+      "theme": null,
+      "target": null,
+      "bytes": 24058,
+      "sha256": "a10d7d17ec99838b5ab3ce56a085bae58252b3d1a8aa867bc4a0db52992be868"
+    },
+    {
+      "file": "public/og/tools/pipedream.png",
+      "kind": "tool-png",
+      "slug": "pipedream",
+      "theme": null,
+      "target": null,
+      "bytes": 28955,
+      "sha256": "cf4d0832aeb69d604181c1c8625d201df0fdc536e31b72bdb18e2cb9919e7a48"
+    },
+    {
+      "file": "public/og/tools/pitch.png",
+      "kind": "tool-png",
+      "slug": "pitch",
+      "theme": null,
+      "target": null,
+      "bytes": 29921,
+      "sha256": "16fc5ef528b8c4a33e2b95b4d7cfb867d07518dd8bc7729be6d1adb4137d6674"
+    },
+    {
+      "file": "public/og/tools/pixverse.png",
+      "kind": "tool-png",
+      "slug": "pixverse",
+      "theme": null,
+      "target": null,
+      "bytes": 26941,
+      "sha256": "564c7014d32cd121600a76ce26240d455b299777b1dec9584daf5933c420d3df"
+    },
+    {
+      "file": "public/og/tools/playground-ai.png",
+      "kind": "tool-png",
+      "slug": "playground-ai",
+      "theme": null,
+      "target": null,
+      "bytes": 32197,
+      "sha256": "e2cbcb432285045bbbbc4e3548fec98ca401f940273a43b7612de2d2ee251044"
+    },
+    {
+      "file": "public/og/tools/poe.png",
+      "kind": "tool-png",
+      "slug": "poe",
+      "theme": null,
+      "target": null,
+      "bytes": 25536,
+      "sha256": "554d0b439016493866ba50f460f6033a4e1e34dafd1e0267014a71a658de4a1a"
+    },
+    {
+      "file": "public/og/tools/presentations-ai.png",
+      "kind": "tool-png",
+      "slug": "presentations-ai",
+      "theme": null,
+      "target": null,
+      "bytes": 33516,
+      "sha256": "a1a6777cc18616f16c337fec6c99ec5e57a9d48bf02b55abc246c79b9afbf7d1"
+    },
+    {
+      "file": "public/og/tools/prezi.png",
+      "kind": "tool-png",
+      "slug": "prezi",
+      "theme": null,
+      "target": null,
+      "bytes": 28391,
+      "sha256": "4b8529295d375696a37f532fa567d454ed2a99ef90f57e4f8410f8ab76b27662"
+    },
+    {
+      "file": "public/og/tools/quillbot.png",
+      "kind": "tool-png",
+      "slug": "quillbot",
+      "theme": null,
+      "target": null,
+      "bytes": 26305,
+      "sha256": "3dd61cc06a5301ceed1701cd4e0d3d79030b8a0996b6b0ab3f516cf65a5873bd"
+    },
+    {
+      "file": "public/og/tools/qwen.png",
+      "kind": "tool-png",
+      "slug": "qwen",
+      "theme": null,
+      "target": null,
+      "bytes": 26756,
+      "sha256": "52d73a696d754c7e3565bff653ad0d4209752e47e25c2302834defebf8556df8"
+    },
+    {
+      "file": "public/og/tools/readwise.png",
+      "kind": "tool-png",
+      "slug": "readwise",
+      "theme": null,
+      "target": null,
+      "bytes": 27034,
+      "sha256": "6c8015e397fbb3771ad9219056713c94c75e7203261ac33d54c2f06e4279d43c"
+    },
+    {
+      "file": "public/og/tools/reclaim-ai.png",
+      "kind": "tool-png",
+      "slug": "reclaim-ai",
+      "theme": null,
+      "target": null,
+      "bytes": 29516,
+      "sha256": "70a5cb71200186fddf6e76d943e9ebc528c103b4d1b373dc5305dc36083674ed"
+    },
+    {
+      "file": "public/og/tools/recraft.png",
+      "kind": "tool-png",
+      "slug": "recraft",
+      "theme": null,
+      "target": null,
+      "bytes": 29512,
+      "sha256": "e562a71ca3d7c77410142cc78ff1f3197aa33eaa1bf96ab20ac06915138207f6"
+    },
+    {
+      "file": "public/og/tools/reflect.png",
+      "kind": "tool-png",
+      "slug": "reflect",
+      "theme": null,
+      "target": null,
+      "bytes": 33399,
+      "sha256": "1dc2b407e3e27e0caa409714c159b57f51c6e76f15cbb38bf4fba32cf1cc038a"
+    },
+    {
+      "file": "public/og/tools/reka.png",
+      "kind": "tool-png",
+      "slug": "reka",
+      "theme": null,
+      "target": null,
+      "bytes": 23476,
+      "sha256": "9e5b1942fd2a8d27ad9b4fe3cc0a1679ee521f95f32486421f44a8d666bad118"
+    },
+    {
+      "file": "public/og/tools/relevance-ai.png",
+      "kind": "tool-png",
+      "slug": "relevance-ai",
+      "theme": null,
+      "target": null,
+      "bytes": 24591,
+      "sha256": "ad70f30c939679167bbd76c26cfdcab6fb1cf8490a59d6e9810f97555bdc6ee2"
+    },
+    {
+      "file": "public/og/tools/replit-agent.png",
+      "kind": "tool-png",
+      "slug": "replit-agent",
+      "theme": null,
+      "target": null,
+      "bytes": 31184,
+      "sha256": "ad5d04bafed49c03f981b2fcb550435ee2abc534a4e10eaff2cd0d8611b6cec9"
+    },
+    {
+      "file": "public/og/tools/resemble-ai.png",
+      "kind": "tool-png",
+      "slug": "resemble-ai",
+      "theme": null,
+      "target": null,
+      "bytes": 25700,
+      "sha256": "8b09632443732fd6b05c92adda6a963a8ab46395c9bda84765812cf403215cfe"
+    },
+    {
+      "file": "public/og/tools/riverside.png",
+      "kind": "tool-png",
+      "slug": "riverside",
+      "theme": null,
+      "target": null,
+      "bytes": 29330,
+      "sha256": "bf38fed3bfea148f65d45a90bcb75e2d80a2267e969f392e42922f84a409f151"
+    },
+    {
+      "file": "public/og/tools/rodin.png",
+      "kind": "tool-png",
+      "slug": "rodin",
+      "theme": null,
+      "target": null,
+      "bytes": 28114,
+      "sha256": "a8aa1bd50f0eca8643847714510bae909d8a90f53c57695aacc40bfaa20dc026"
+    },
+    {
+      "file": "public/og/tools/rows.png",
+      "kind": "tool-png",
+      "slug": "rows",
+      "theme": null,
+      "target": null,
+      "bytes": 29462,
+      "sha256": "f0bc05ba9585820d46d9ffa4c04164207c65e9aac23bb00ee8a58e4b1ed61285"
+    },
+    {
+      "file": "public/og/tools/runway.png",
+      "kind": "tool-png",
+      "slug": "runway",
+      "theme": null,
+      "target": null,
+      "bytes": 25525,
+      "sha256": "20171a116f0bce43af14ad758cb699a9bb4eb4e8408b1d44283e7d134b6463a0"
+    },
+    {
+      "file": "public/og/tools/rytr.png",
+      "kind": "tool-png",
+      "slug": "rytr",
+      "theme": null,
+      "target": null,
+      "bytes": 21091,
+      "sha256": "a389a65a40737a6a07ccf314c40013007a0839d56d3a55e2c1b93ba9edf70a71"
+    },
+    {
+      "file": "public/og/tools/same-dev.png",
+      "kind": "tool-png",
+      "slug": "same-dev",
+      "theme": null,
+      "target": null,
+      "bytes": 31716,
+      "sha256": "519143003c7d3ad94938e9d8f4946031065b1ca3373fd4b9c614f184985ec03c"
+    },
+    {
+      "file": "public/og/tools/sanebox.png",
+      "kind": "tool-png",
+      "slug": "sanebox",
+      "theme": null,
+      "target": null,
+      "bytes": 23909,
+      "sha256": "183b161285ccc26fa673f1ba5045e2ee55c6639c2354c195f4051107f5bc6419"
+    },
+    {
+      "file": "public/og/tools/scite.png",
+      "kind": "tool-png",
+      "slug": "scite",
+      "theme": null,
+      "target": null,
+      "bytes": 26194,
+      "sha256": "1c4f355d8a79e2c217a41779ed27539a94073bca8f78c33ba7dff26b633603a9"
+    },
+    {
+      "file": "public/og/tools/seedance.png",
+      "kind": "tool-png",
+      "slug": "seedance",
+      "theme": null,
+      "target": null,
+      "bytes": 25979,
+      "sha256": "2b4864355dcef6bfb05a6b3393eb96b869fdf1ecb7fb06406e06746a474245c0"
+    },
+    {
+      "file": "public/og/tools/semantic-scholar.png",
+      "kind": "tool-png",
+      "slug": "semantic-scholar",
+      "theme": null,
+      "target": null,
+      "bytes": 30292,
+      "sha256": "7d4c6bd1ffeba2b69978be99d0abf6c1bb835e84a0dd2242065170fc8ebcd0db"
+    },
+    {
+      "file": "public/og/tools/semrush.png",
+      "kind": "tool-png",
+      "slug": "semrush",
+      "theme": null,
+      "target": null,
+      "bytes": 29245,
+      "sha256": "e8d53963ff5e3ff3fa7c0885f54d50d86b6ea01a9f2e3387a45662329f49ff74"
+    },
+    {
+      "file": "public/og/tools/speechify.png",
+      "kind": "tool-png",
+      "slug": "speechify",
+      "theme": null,
+      "target": null,
+      "bytes": 26447,
+      "sha256": "4240d62654397b6e38522796bb563c2cad199f2049c1a9acbe87c49ad6d66625"
+    },
+    {
+      "file": "public/og/tools/spellbook.png",
+      "kind": "tool-png",
+      "slug": "spellbook",
+      "theme": null,
+      "target": null,
+      "bytes": 31701,
+      "sha256": "f2866aeb283de131c4ec0870e81346ea859a2042b06a9def2e6a91a0b9b6cfb0"
+    },
+    {
+      "file": "public/og/tools/stable-audio.png",
+      "kind": "tool-png",
+      "slug": "stable-audio",
+      "theme": null,
+      "target": null,
+      "bytes": 27884,
+      "sha256": "b9119ebb40058d63b071cc3197f62b468cb1de75dd4a7976a3bd649037dfeca1"
+    },
+    {
+      "file": "public/og/tools/stable-diffusion.png",
+      "kind": "tool-png",
+      "slug": "stable-diffusion",
+      "theme": null,
+      "target": null,
+      "bytes": 31838,
+      "sha256": "fc02e527061037f0610b2c4c3798207a05e190c7fd945d8ca565e8d2ca4d4cfd"
+    },
+    {
+      "file": "public/og/tools/sudowrite.png",
+      "kind": "tool-png",
+      "slug": "sudowrite",
+      "theme": null,
+      "target": null,
+      "bytes": 23181,
+      "sha256": "6460ff069d965ce3611930830cc65b03c733e628b398ac630708b5c9580bc6e0"
+    },
+    {
+      "file": "public/og/tools/suno.png",
+      "kind": "tool-png",
+      "slug": "suno",
+      "theme": null,
+      "target": null,
+      "bytes": 27767,
+      "sha256": "5b6ea2472529267bfd343781e79867ac41dddc322f8e91d0c80c0f08e2748ace"
+    },
+    {
+      "file": "public/og/tools/supermaven.png",
+      "kind": "tool-png",
+      "slug": "supermaven",
+      "theme": null,
+      "target": null,
+      "bytes": 23551,
+      "sha256": "02eea9b7103bcded2308644f07e9bd5221604c225d672018cee470326e1485be"
+    },
+    {
+      "file": "public/og/tools/surfer-seo.png",
+      "kind": "tool-png",
+      "slug": "surfer-seo",
+      "theme": null,
+      "target": null,
+      "bytes": 28338,
+      "sha256": "867448b49e761fcdb24f0170040cd72cd6700fd36f93135382a0de7c5a461e9e"
+    },
+    {
+      "file": "public/og/tools/synthesia.png",
+      "kind": "tool-png",
+      "slug": "synthesia",
+      "theme": null,
+      "target": null,
+      "bytes": 28594,
+      "sha256": "4b767b9f3cdb1e1431cb226f8229ac472880a9dee372aebc1232db180eda9b6e"
+    },
+    {
+      "file": "public/og/tools/tabnine.png",
+      "kind": "tool-png",
+      "slug": "tabnine",
+      "theme": null,
+      "target": null,
+      "bytes": 26109,
+      "sha256": "1f6e779a8d5b68064719a61b33f9a41e9d1950bd1d75b12cf98c5a1c604f98bf"
+    },
+    {
+      "file": "public/og/tools/tactiq.png",
+      "kind": "tool-png",
+      "slug": "tactiq",
+      "theme": null,
+      "target": null,
+      "bytes": 26434,
+      "sha256": "8023c903e443ccafccfa6d21566df0a072e6e4e59905dc0b8ed477601c18f0fc"
+    },
+    {
+      "file": "public/og/tools/taskade.png",
+      "kind": "tool-png",
+      "slug": "taskade",
+      "theme": null,
+      "target": null,
+      "bytes": 27783,
+      "sha256": "35105163b100ae3dafc5bbdf5bbec9eabefd12260dc0be29163ac7b9eda96125"
+    },
+    {
+      "file": "public/og/tools/tavus.png",
+      "kind": "tool-png",
+      "slug": "tavus",
+      "theme": null,
+      "target": null,
+      "bytes": 25730,
+      "sha256": "633c5fe20cb15806e2fd3013caaa9305a8c9d520066e8fbef86234f1efc17561"
+    },
+    {
+      "file": "public/og/tools/tidio.png",
+      "kind": "tool-png",
+      "slug": "tidio",
+      "theme": null,
+      "target": null,
+      "bytes": 26429,
+      "sha256": "d4d893308b41bebf1587aef9fde36e99c3c93181a0abea41826c976ab643af66"
+    },
+    {
+      "file": "public/og/tools/tines.png",
+      "kind": "tool-png",
+      "slug": "tines",
+      "theme": null,
+      "target": null,
+      "bytes": 29030,
+      "sha256": "7cf6fb3774e03fd7fe376f2803db881e7e386f10effd5ac5aa0591cb17427105"
+    },
+    {
+      "file": "public/og/tools/trae.png",
+      "kind": "tool-png",
+      "slug": "trae",
+      "theme": null,
+      "target": null,
+      "bytes": 25508,
+      "sha256": "8aed1d6846431546ed0600d1a72abe9dc707d512cf340545fcaa17f53ce467b4"
+    },
+    {
+      "file": "public/og/tools/tripo3d.png",
+      "kind": "tool-png",
+      "slug": "tripo3d",
+      "theme": null,
+      "target": null,
+      "bytes": 30704,
+      "sha256": "6ee8e31aee4fcd322847e97627bf511a3b2492d769c343351346c4c83bde77b9"
+    },
+    {
+      "file": "public/og/tools/typeface.png",
+      "kind": "tool-png",
+      "slug": "typeface",
+      "theme": null,
+      "target": null,
+      "bytes": 29657,
+      "sha256": "88f4e63b19e8a0a3671173a3a964dc00f8830f4d3268bd6edf1b7b5d84e315c4"
+    },
+    {
+      "file": "public/og/tools/typingmind.png",
+      "kind": "tool-png",
+      "slug": "typingmind",
+      "theme": null,
+      "target": null,
+      "bytes": 30927,
+      "sha256": "012226ca08cf60143bfa511918459694c6c3ef1f3471365bf40e0cf4fc4ef93d"
+    },
+    {
+      "file": "public/og/tools/udio.png",
+      "kind": "tool-png",
+      "slug": "udio",
+      "theme": null,
+      "target": null,
+      "bytes": 23373,
+      "sha256": "471b5567feb03f4b63ce6418cb2716a1dd04e3c44bf1ffe98864772b2ead151f"
+    },
+    {
+      "file": "public/og/tools/uizard.png",
+      "kind": "tool-png",
+      "slug": "uizard",
+      "theme": null,
+      "target": null,
+      "bytes": 28430,
+      "sha256": "f02c9829fc668492eef06cda456f250b4a8e66e14746def66ecc2e0d5b7a0a48"
+    },
+    {
+      "file": "public/og/tools/unbounce.png",
+      "kind": "tool-png",
+      "slug": "unbounce",
+      "theme": null,
+      "target": null,
+      "bytes": 26266,
+      "sha256": "892be2145d73dd5f2927f7f80fb87c4b9f98fc24fec78b8f773b5c8a4a9f512d"
+    },
+    {
+      "file": "public/og/tools/v0.png",
+      "kind": "tool-png",
+      "slug": "v0",
+      "theme": null,
+      "target": null,
+      "bytes": 28048,
+      "sha256": "a22b84d85e35e02b2af9c2654cd6646e14148a8573d096ad3d2363a8c93d4e0f"
+    },
+    {
+      "file": "public/og/tools/val-town.png",
+      "kind": "tool-png",
+      "slug": "val-town",
+      "theme": null,
+      "target": null,
+      "bytes": 23807,
+      "sha256": "787a1dc0539a58ba472a39fc65df60acd387d786cfcb8c7570e8814dcc989044"
+    },
+    {
+      "file": "public/og/tools/veo.png",
+      "kind": "tool-png",
+      "slug": "veo",
+      "theme": null,
+      "target": null,
+      "bytes": 30318,
+      "sha256": "6a471c3cd1b09e27e3bd4a212f69d6a1cbe68ffd6b245659217fa917ed5f5258"
+    },
+    {
+      "file": "public/og/tools/vidu.png",
+      "kind": "tool-png",
+      "slug": "vidu",
+      "theme": null,
+      "target": null,
+      "bytes": 25291,
+      "sha256": "44e087f2003f4c46f59b0bae048dec2414322060cba16d2d6be4a99b12dffc3a"
+    },
+    {
+      "file": "public/og/tools/voiceflow.png",
+      "kind": "tool-png",
+      "slug": "voiceflow",
+      "theme": null,
+      "target": null,
+      "bytes": 25113,
+      "sha256": "6359601bd6f2b79223d55fbe5ae4904bdb89f735a138725c4a372fc8179785a0"
+    },
+    {
+      "file": "public/og/tools/voxtral.png",
+      "kind": "tool-png",
+      "slug": "voxtral",
+      "theme": null,
+      "target": null,
+      "bytes": 27385,
+      "sha256": "2e02e8e80fdc109bbfd77c4b831f5cc9c084654c86ff5540d618b7bdf483e229"
+    },
+    {
+      "file": "public/og/tools/wan.png",
+      "kind": "tool-png",
+      "slug": "wan",
+      "theme": null,
+      "target": null,
+      "bytes": 29711,
+      "sha256": "a75870d842eb7061a8663e2503834271838faa10b1e60f6e6092f767e350ac54"
+    },
+    {
+      "file": "public/og/tools/wellsaid.png",
+      "kind": "tool-png",
+      "slug": "wellsaid",
+      "theme": null,
+      "target": null,
+      "bytes": 30420,
+      "sha256": "46567fb7bc062ba9bbb13518442d1467c1fb2694cfc471b20602605e464ccb75"
+    },
+    {
+      "file": "public/og/tools/whisper.png",
+      "kind": "tool-png",
+      "slug": "whisper",
+      "theme": null,
+      "target": null,
+      "bytes": 30065,
+      "sha256": "9bc04522cce5855996017dcd97fdcf5ba4595b4eb8800a33f66291563bd3f0ec"
+    },
+    {
+      "file": "public/og/tools/windsurf.png",
+      "kind": "tool-png",
+      "slug": "windsurf",
+      "theme": null,
+      "target": null,
+      "bytes": 27669,
+      "sha256": "05e15546af5bd7d708af8f949c63424372dde4a0b090c8ead2abdb93cf3dea28"
+    },
+    {
+      "file": "public/og/tools/wordtune.png",
+      "kind": "tool-png",
+      "slug": "wordtune",
+      "theme": null,
+      "target": null,
+      "bytes": 24967,
+      "sha256": "90963b3b357732cb0041686aa5b59416ecaf886a9211fdeb88e9eccccaa5260b"
+    },
+    {
+      "file": "public/og/tools/workato.png",
+      "kind": "tool-png",
+      "slug": "workato",
+      "theme": null,
+      "target": null,
+      "bytes": 28920,
+      "sha256": "eb5dde412e0549880f45ae59ff72a4026a4b0d150f6c3275333953331a84887f"
+    },
+    {
+      "file": "public/og/tools/writer.png",
+      "kind": "tool-png",
+      "slug": "writer",
+      "theme": null,
+      "target": null,
+      "bytes": 25359,
+      "sha256": "7eb05bb4e71cd7e4961cd12e674e78bac0d0e23b59f942771e716d327198cd05"
+    },
+    {
+      "file": "public/og/tools/writesonic.png",
+      "kind": "tool-png",
+      "slug": "writesonic",
+      "theme": null,
+      "target": null,
+      "bytes": 26127,
+      "sha256": "27628e0a3b3d7e3b4e29f6ac65676b37cc378022d2cda28f03ee3fb4a3a480dd"
+    },
+    {
+      "file": "public/og/tools/yi.png",
+      "kind": "tool-png",
+      "slug": "yi",
+      "theme": null,
+      "target": null,
+      "bytes": 25105,
+      "sha256": "2d3efaddb512d3e89842fcb72f674fdd15ea3570c1237b149f4eef8fa2f4bd22"
+    },
+    {
+      "file": "public/og/tools/you-com.png",
+      "kind": "tool-png",
+      "slug": "you-com",
+      "theme": null,
+      "target": null,
+      "bytes": 23489,
+      "sha256": "6db7827121f3efa4f37fc77426244e2d71b6fb4eec6a6e6e413dcce030c83556"
+    },
+    {
+      "file": "public/og/tools/zapier.png",
+      "kind": "tool-png",
+      "slug": "zapier",
+      "theme": null,
+      "target": null,
+      "bytes": 20641,
+      "sha256": "fa87c398fbb224255a9511454d83342582f1e2386446c98dd4d2246562872108"
+    },
+    {
+      "file": "public/og/tools/zed.png",
+      "kind": "tool-png",
+      "slug": "zed",
+      "theme": null,
+      "target": null,
+      "bytes": 22441,
+      "sha256": "04221a138ce5bf7b51852e924d7b0fab2cc6bf3f1847ba296533de213518d1d0"
+    }
+  ]
+}
