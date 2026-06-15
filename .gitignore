@@ -3,6 +3,7 @@ dist/
 dist-fast/
 # generated types
 .astro/
+src/data/github-stats.build.json
 
 # dependencies
 node_modules/

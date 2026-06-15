@@ -83,8 +83,8 @@ const tools = defineCollection({
     company: z.string().optional(),
     url: z.string().optional(),
     // Optional GitHub repository URL. When present, scripts/fetch-github-stats.mjs
-    // populates src/data/github-stats.json with live stars/forks/last-push data
-    // rendered by components/GithubStats.astro on the tool page.
+    // can refresh the committed stats snapshot or the ignored build-time stats
+    // override rendered by components/GithubStats.astro on the tool page.
     github_url: z.string().url().optional(),
     pricing_model: z.enum(['free', 'freemium', 'paid', 'enterprise', 'open-source']).optional(),
     price_range: z.string().optional(),

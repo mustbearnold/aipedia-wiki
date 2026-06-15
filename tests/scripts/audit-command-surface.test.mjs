@@ -36,7 +36,7 @@ function writeFixtureProject(workflows, scriptOverrides = {}) {
   mkdirSync(join(dir, '.github', 'workflows'), { recursive: true });
   const scripts = Object.fromEntries(REQUIRED_SCRIPTS.map((script) => [script, 'echo ok']));
   scripts.prebuild =
-    'node scripts/guard-content.mjs && node scripts/guard-stale-facts.mjs && node scripts/audit-guide-picks.mjs && node scripts/fetch-github-stats.mjs && node scripts/generate-og-news.mjs';
+    'node scripts/guard-content.mjs && node scripts/guard-stale-facts.mjs && node scripts/audit-guide-picks.mjs && node scripts/fetch-github-stats.mjs --output src/data/github-stats.build.json --skip-render-unchanged && node scripts/generate-og-news.mjs';
   scripts['check:assets:quick'] =
     'node scripts/prep-favicons.mjs --check && node scripts/generate-og-svgs.mjs --check --limit 5 && node scripts/generate-og-news.mjs --check --limit 2 && node scripts/optimize-og-images.mjs --check --limit 20 && node scripts/generate-logo-manifest.mjs --check';
   scripts['check:quick'] = 'npm run test:scripts && npm run audit:commands && npm run check:assets:quick';
@@ -153,6 +153,7 @@ test('command surface audit verifies documented npm scripts and script paths', (
   assert.equal(report.missing_workflow_security_invariants.length, 0);
   assert.equal(report.missing_workflow_command_order_invariants.length, 0);
   assert.equal(report.missing_package_script_chain_invariants.length, 0);
+  assert.equal(report.missing_package_command_part_invariants.length, 0);
   assert.equal(report.missing_quick_check_command_invariants.length, 0);
   assert.equal(report.missing_quick_asset_command_invariants.length, 0);
   assert.equal(report.missing_package_referenced_npm_scripts.length, 0);
@@ -208,6 +209,9 @@ test('command surface audit verifies documented npm scripts and script paths', (
     'check:ci': ['check:quick', 'check', 'build:fast'],
     'ship:check': ['check:quick', 'check', 'build:fast'],
     'build:fast': ['guard:check', 'build-fast.mjs'],
+  });
+  assert.deepEqual(report.required_package_command_parts, {
+    prebuild: ['node scripts/fetch-github-stats.mjs --output src/data/github-stats.build.json --skip-render-unchanged'],
   });
   assert.deepEqual(report.required_exact_npm_script_commands, {
     deploy: 'npx vercel build --prod && npx vercel deploy --prebuilt --prod',
@@ -853,6 +857,29 @@ test('command surface audit fails closed when prebuild drops required guards or 
     assert.equal(report.ok, false);
     assert.match(report.missing_package_script_chain_invariants.join('\n'), /prebuild: .*guard-stale-facts\.mjs/);
     assert.match(report.missing_package_script_chain_invariants.join('\n'), /prebuild: .*audit-guide-picks\.mjs/);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('command surface audit fails closed when prebuild writes GitHub stats to tracked data', () => {
+  const dir = writeFixtureProject(STRONG_CI_WORKFLOW, {
+    prebuild:
+      'node scripts/guard-content.mjs && node scripts/guard-stale-facts.mjs && node scripts/audit-guide-picks.mjs && node scripts/fetch-github-stats.mjs && node scripts/generate-og-news.mjs',
+  });
+
+  try {
+    const result = spawnSync(process.execPath, ['scripts/audit-command-surface.mjs', '--json', '--project-dir', dir], {
+      cwd: process.cwd(),
+      encoding: 'utf8',
+    });
+
+    assert.equal(result.status, 1, `stdout:\n${result.stdout}\nstderr:\n${result.stderr}`);
+
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, false);
+    assert.match(report.missing_package_command_part_invariants.join('\n'), /github-stats\.build\.json/);
+    assert.match(report.missing_package_command_part_invariants.join('\n'), /--skip-render-unchanged/);
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }
