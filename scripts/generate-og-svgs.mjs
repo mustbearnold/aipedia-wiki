@@ -561,7 +561,43 @@ async function desiredOutputsFor(tools, issues) {
   return outputs;
 }
 
-function inspectOutput(output, mode, issues) {
+function isPngOutput(output) {
+  return output.kind === 'tool-png' || output.kind === 'default-png';
+}
+
+async function pngPixels(buffer) {
+  const { data, info } = await sharp(buffer).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+  return {
+    data,
+    width: info.width,
+    height: info.height,
+    channels: info.channels,
+  };
+}
+
+async function sameRenderedPng(existing, desired) {
+  const [left, right] = await Promise.all([pngPixels(existing), pngPixels(desired)]);
+  return (
+    left.width === right.width &&
+    left.height === right.height &&
+    left.channels === right.channels &&
+    Buffer.compare(left.data, right.data) === 0
+  );
+}
+
+async function outputChanged(output, existing) {
+  if (!isPngOutput(output)) {
+    return Buffer.compare(existing, output.buffer) !== 0;
+  }
+
+  try {
+    return !(await sameRenderedPng(existing, output.buffer));
+  } catch {
+    return true;
+  }
+}
+
+async function inspectOutput(output, mode, issues) {
   let existingBytes = null;
   let changed = true;
   let written = false;
@@ -570,7 +606,7 @@ function inspectOutput(output, mode, issues) {
     try {
       const existing = readFileSync(output.path);
       existingBytes = existing.length;
-      changed = Buffer.compare(existing, output.buffer) !== 0;
+      changed = await outputChanged(output, existing);
     } catch (err) {
       issues.push({ code: 'read-failed', path: output.path, detail: `could not read ${output.path}: ${err.message}` });
     }
@@ -640,7 +676,10 @@ async function main() {
   }
 
   const desired = await desiredOutputsFor(tools, issues);
-  const outputs = desired.map((output) => inspectOutput(output, mode, issues));
+  const outputs = [];
+  for (const output of desired) {
+    outputs.push(await inspectOutput(output, mode, issues));
+  }
 
   if (mode === 'check' && outputs.some((output) => output.changed)) {
     issues.push({ code: 'og-stale', detail: 'one or more generated OG outputs are missing or stale' });

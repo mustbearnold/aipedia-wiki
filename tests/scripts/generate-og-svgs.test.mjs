@@ -153,6 +153,35 @@ test('OG generator check passes after fixture generation', async () => {
   }
 });
 
+test('OG generator check accepts PNG encoding-only differences', async () => {
+  const fixture = await writeFixtureProject();
+  const pngPath = join(fixture, 'public/og/tools/alpha.png');
+
+  try {
+    const generate = runOgGenerator('--json', `--project-dir=${fixture}`);
+    assert.equal(generate.status, 0, generate.stderr || generate.stdout);
+
+    const original = readFileSync(pngPath);
+    const reencoded = await sharp(original)
+      .png({ compressionLevel: 0, adaptiveFiltering: false, palette: false })
+      .toBuffer();
+    assert.notEqual(Buffer.compare(original, reencoded), 0);
+    writeFileSync(pngPath, reencoded);
+
+    const result = runOgGenerator('--check', '--json', `--project-dir=${fixture}`);
+    assert.equal(result.status, 0, result.stderr || result.stdout);
+    assert.equal(result.stderr, '');
+
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, true);
+    assert.equal(report.mode, 'check');
+    assert.equal(report.changed, 0);
+    assert.equal(report.written, 0);
+  } finally {
+    rmSync(fixture, { recursive: true, force: true });
+  }
+});
+
 test('OG generator check fails stale fixture outputs without writing', async () => {
   const fixture = await writeFixtureProject();
   const stalePath = join(fixture, 'public/og/tools/alpha.png');
