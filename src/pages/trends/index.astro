@@ -1,10 +1,30 @@
 ---
 /**
  * /trends/ index — god-tier 10/10 mobile-first.
+ * Refresh metadata: 2026-06-15 GEO trend refreshed after current
+ * Writesonic, Semrush, Ahrefs, Google Search Central, Pew, arXiv, and
+ * WIRED checks around AI visibility prompt tracking, citation/source logs,
+ * claim fidelity, and liability-aware review.
+ * Refresh metadata: 2026-06-15 agent-commerce trend refreshed after AP
+ * Visa/ChatGPT payments reporting and Visa Intelligent Commerce source checks
+ * around consumer-controlled checkout, approval workflows, token scope,
+ * merchant boundaries, and dispute-ready logs.
+ * Refresh metadata: 2026-06-15 vibe-coding trend Base44 slice refreshed
+ * around Free 100-vs-500 integration-credit source conflict, Builder
+ * domain/GitHub/backend/model gates, affiliate source check, AI Design,
+ * source registry, tools/categories indexes, and LLM maintenance.
+ * Refresh metadata: 2026-06-15 vibe-coding trend Replit Agent slice
+ * refreshed around Agent 4 route correction, Plan Mode, Web Search, Agent
+ * Skills, Custom Instructions, Package Firewall, App Testing scope, Starter
+ * feature gates, credits/billing, and browser app-builder positioning.
  * Refresh metadata: 2026-06-10 full trend-section refresh across agent
  * commerce, AI coding model marketplaces, AI memory, AI supply-chain
  * security, AI voice, enterprise agent platforms, GEO, Google Stitch,
  * long context, open-weight parity, sovereign AI, and vibe coding.
+ * Refresh metadata: 2026-06-13 added the AI Model Availability & Churn
+ * Tracker across ChatGPT/OpenAI, Claude/Anthropic, Gemini/Google, GitHub
+ * Copilot, Claude Code, Codex, OpenRouter, affected tools/categories, and
+ * top-layer discovery surfaces.
  */
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
@@ -37,7 +57,7 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
 
 <BaseLayout
   title="Trending in AI Tools · June 2026 · aipedia.wiki"
-  description="June 2026 editorial analysis of major shifts in AI tools: agent commerce, coding-agent costs, memory, security, voice agents, GEO, open-weight parity, long context, sovereign AI, and vibe coding."
+  description="June 2026 editorial analysis of major shifts in AI tools: model availability churn, agent commerce, coding-agent costs, memory, security, voice agents, GEO, open-weight parity, long context, sovereign AI, and vibe coding."
 >
   <BreadcrumbLD items={[
     { name: 'Home', url: new URL('/', siteBase).href },
@@ -51,7 +71,7 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
   <div class="gt-canvas">
     <Hero
       title="What's changing now"
-      tagline="Curated June 2026 analysis of shifts reshaping AI tools: agent commerce, coding-agent economics, memory governance, voice agents, enterprise control planes, GEO, long context, open-weight models, and app builders."
+      tagline="Curated June 2026 analysis of shifts reshaping AI tools: model availability churn, agent commerce, coding-agent economics, memory governance, voice agents, enterprise control planes, GEO, long context, open-weight models, and app builders."
       breadcrumbs={[
         { label: 'aipedia', href: '/' },
         { label: 'Trending' },

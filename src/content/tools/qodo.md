@@ -11,11 +11,11 @@ pricing_model: freemium
 price_range: "$0-$38/user/month; Enterprise custom"
 status: active
 launched: 2022
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-15
+last_verified: 2026-06-15
 update_frequency: monthly
 seo_title: "Qodo: Features, Pricing & Review (June 2026)"
-meta_description: "Qodo is an AI code review and code quality platform. Developer is free with 250 credits/month, Teams is $38/user/month or $30 annual with 2,500 credits, and Enterprise adds CLI, SSO, MCP, dashboards, and private deployment."
+meta_description: "Updated June 15, 2026: Qodo Review v2 is an AI code review and governance platform. Developer is free, Teams is $38/user/month or $30 annual, and Enterprise adds org-wide review, SSO, Context Engine, MCP, and private deployment."
 author: aipedia.wiki Editorial
 affiliate:
   has_program: false
@@ -30,26 +30,26 @@ scores:
   longevity: 8
 facts:
   coding_agent:
-    value: "AI review across pull requests, IDE, enterprise-beta CLI, Git workflows, multi-repo context, rules, and enterprise governance"
-    source: "https://www.qodo.ai/pricing/"
-    source_label: "Qodo pricing"
-    source_id: qodo-best-paid-tier
-    verified_at: 2026-06-12
+    value: "Qodo Review v2 provides multi-agent pull-request review with repository context, PR history, organizational standards, rules, IDE review, and enterprise governance; CLI is Enterprise Beta but current CLI docs also mark it legacy"
+    source: "https://docs.qodo.ai/qodo-documentation/code-review"
+    source_label: "Qodo Review v2 docs"
+    source_id: qodo-best-for
+    verified_at: 2026-06-15
     confidence: high
   best_paid_tier:
-    value: "Teams ($38/user/month monthly or $30/user/month annual) for private teams that need PR review plus IDE and CLI credits"
+    value: "Teams ($38/user/month monthly or $30/user/month annual) for private teams that need paid-seat PR review and IDE credits; verify each developer has an assigned seat and linked Git account before relying on Teams reviews"
     source: "https://www.qodo.ai/pricing/"
     source_label: "Qodo pricing"
     source_id: qodo-best-paid-tier
-    verified_at: 2026-06-12
-    next_review_at: 2026-06-13
+    verified_at: 2026-06-15
+    next_review_at: 2026-06-22
     confidence: high
   best_for:
     value: "Teams that want AI code review quality control around AI-generated code, not just faster code generation"
-    source: "https://docs.qodo.ai/v1/qodo-merge"
-    source_label: "Qodo Git Integration docs"
+    source: "https://docs.qodo.ai/qodo-documentation/code-review"
+    source_label: "Qodo Review v2 docs"
     source_id: qodo-best-for
-    verified_at: 2026-06-12
+    verified_at: 2026-06-15
     confidence: high
 tags: [ai-coding, code-review, pull-requests, ide-plugin, cli, governance, pr-review, context-engine]
 best_for:
@@ -64,6 +64,22 @@ not_best_for:
 quick_answer: >-
   Qodo is best for teams that care about code review discipline as AI-generated code increases. Pick it when pull-request feedback, IDE review, rules, context, and enterprise controls matter. Skip it if you want autocomplete or chat-based code generation; Qodo says those generation features are being deprecated as the product focuses on review and governance.
 price_history:
+  - date: 2026-06-15
+    plan: "Developer / Teams / Enterprise"
+    price: "$0 / $38 user-monthly or $30 annual / custom"
+    source: "https://www.qodo.ai/pricing/"
+    source_label: "Qodo pricing"
+    source_id: qodo-best-paid-tier
+    verified_at: 2026-06-15
+    note: "Pricing remains unchanged. Current subscription docs clarify Free PR reviews are capped per Git user and Git organization, Teams reviews require an assigned paid seat plus linked Git account, and Enterprise whitelists the whole Git organization with no per-user review limit."
+  - date: 2026-06-15
+    plan: "Qodo Review v2 and CLI caveat"
+    price: "Product packaging note"
+    source: "https://docs.qodo.ai/qodo-documentation/code-review"
+    source_label: "Qodo Review v2 docs"
+    source_id: qodo-best-for
+    verified_at: 2026-06-15
+    note: "Qodo Review v2 is the current code-review product; /v1/ docs are legacy. Current CLI docs call Qodo CLI Enterprise Beta but also legacy and no longer maintained, so buyers should verify CLI support directly."
   - date: 2026-05-13
     plan: "Developer"
     price: "$0"
@@ -100,11 +116,11 @@ price_history:
 
 # Qodo
 
-Qodo is an AI code review and code quality platform. It focuses less on writing more code and more on catching problems before code reaches production. The platform covers pull-request review, IDE review, enterprise-beta CLI workflows, context-aware rules, and enterprise SDLC governance.
+Qodo is an AI code review and code quality platform. It focuses less on writing more code and more on catching problems before code reaches production. The current Qodo Review v2 docs describe multi-agent pull-request review with repository context, pull-request history, organizational standards, rule enforcement, and governance.
 
 That positioning matters in 2026. AI coding agents can create large diffs quickly, but reviewers still need to understand whether the changes are correct, secure, maintainable, and aligned with team conventions. Qodo is built for that review layer.
 
-The key May 2026 change for buyers is focus. Qodo's IDE docs say former Qodo Gen code-generation features, including autocomplete and chat-based code generation, are being deprecated while Qodo shifts fully toward code review and governance.
+The key June 2026 buyer caveat is product packaging. Qodo Review v2 is the current code-review product and `/v1/` docs are legacy. Qodo's IDE docs say former Qodo Gen code-generation features, including autocomplete and chat-based code generation, are being deprecated while Qodo shifts fully toward code review and governance. The CLI needs extra scrutiny: the pricing page lists CLI workflows on Enterprise, but current CLI docs call Qodo CLI both Enterprise Beta and legacy/no longer maintained.
 
 ## System Verdict
 
@@ -112,7 +128,7 @@ The key May 2026 change for buyers is focus. Qodo's IDE docs say former Qodo Gen
 >
 > **Skip it if you only need code completion or a solo coding assistant.** Qodo can help individual developers, but its strongest value appears when review policy, multi-repo context, analytics, and repeatable quality standards matter.
 >
-> **Who pays which tier:** Developer is enough for evaluation and light individual review, Teams is the practical PR/IDE review tier, and Enterprise is for CLI quality workflows, context engine, dashboards, SSO, MCP tools, private deployment, and governance-heavy environments.
+> **Who pays which tier:** Developer is enough for evaluation and light individual review, Teams is the practical paid PR/IDE review tier, and Enterprise is for organization-whitelisted review, Context Engine, dashboards, SSO, MCP tools, private deployment, and governance-heavy environments. Do not assume every Teams PR is reviewed until each developer has an assigned paid seat and a linked Git account.
 
 ## Key Facts
 
@@ -123,9 +139,10 @@ The key May 2026 change for buyers is focus. Qodo's IDE docs say former Qodo Gen
 | **Team tier** | Teams at $38/user/month monthly or $30/user/month annual |
 | **Developer tier** | Free individual tier |
 | **Developer allowance** | Up to 250 credits/month |
-| **PR allowance** | Teams lists 20 PRs/user/month |
+| **Free PR allowance** | Up to 30 reviews per Git user per Git organization per month |
+| **Teams PR allowance** | Teams lists 20 PRs/user/month; reviews require assigned paid seat plus linked Git account |
 | **Teams allowance** | Up to 2,500 credits/month |
-| **Enterprise controls** | SSO, user admin, dashboards, Context Engine, MCP tools, SaaS single/multi-tenant, on-prem and air-gapped deployment options |
+| **Enterprise controls** | Organization-whitelisted review, no per-user review limit, SSO, user admin, dashboards, Context Engine, MCP tools, SaaS single/multi-tenant, on-prem and air-gapped deployment options |
 | **Security posture** | Teams lists no data retention/enhanced privacy; Qodo states paid-subscriber data is retained briefly for troubleshooting and not used for training |
 | **Product focus** | Review and governance; code-generation/autocomplete features are being deprecated |
 
@@ -133,9 +150,9 @@ The key May 2026 change for buyers is focus. Qodo's IDE docs say former Qodo Gen
 
 Qodo is not another full IDE fork. It is a code quality layer that sits around the places teams already review code. The public pricing page describes Qodo as an enterprise AI code review platform across the SDLC, with pull-request review, IDE plugin, CLI workflows, a context engine, a rules system, and enterprise dashboards.
 
-The Git Integration docs describe AI review agents for pull requests. The tool can review PRs, summarize changes, suggest improvements, detect issues, answer PR questions, convert review discussions into ready-to-commit changes, generate docs/tests, search code, and run automatically when PRs open or receive new commits.
+The current Qodo Review v2 docs describe AI review agents for pull requests. Qodo analyzes PRs with specialized review agents, repository context, PR history, organizational standards, and rule enforcement, then surfaces findings directly inside the pull request.
 
-Qodo IDE, formerly Qodo Gen, now centers on local code review in VS Code, JetBrains IDEs, and Visual Studio Professional. Qodo CLI, formerly Qodo Command, is marked Enterprise Beta and supports custom agent configuration, CI/automation integration, interactive web UI mode, model control, webhook serving, and agent-to-MCP behavior.
+Qodo IDE, formerly Qodo Gen, now centers on local code review in VS Code, JetBrains IDEs, and Visual Studio Professional. Qodo CLI, formerly Qodo Command, is marked Enterprise Beta and supports custom agent configuration, CI/automation integration, interactive web UI mode, model control, webhook serving, and agent-to-MCP behavior, but the same current CLI overview says it is a legacy product that is no longer maintained or supported. Treat CLI availability as a sales-confirmed exception, not the default reason to buy.
 
 The value is highest when Qodo has enough context to understand repository patterns and team rules. That makes it more relevant for professional teams than for one-off code snippets.
 
@@ -146,7 +163,7 @@ The value is highest when Qodo has enough context to understand repository patte
 | AI pull-request review | Strong | Core workflow |
 | Enterprise code quality governance | Strong | Admin, SSO, dashboards, and deployment controls on Enterprise |
 | IDE-local review | Strong | IDE plugin is listed on Developer and Teams |
-| CLI quality workflows | Medium | Powerful, but currently positioned as Enterprise Beta |
+| CLI quality workflows | Weak-medium | Pricing lists CLI on Enterprise, but current CLI docs also call it legacy and no longer maintained |
 | Autocomplete-first coding | Weak | Qodo is deprecating generation/autocomplete features; use Copilot, Cursor, or Windsurf |
 | Tiny solo projects | Medium | Free tier helps, but the team value is bigger |
 
@@ -155,8 +172,8 @@ The value is highest when Qodo has enough context to understand repository patte
 - **Your PR volume is rising.** Qodo is useful when AI tools create more review work than humans can comfortably absorb.
 - **You need repeatable review standards.** Rules and governance are more valuable than generic comments.
 - **You care about privacy controls.** Teams lists no data retention/enhanced privacy, and the pricing FAQ says paid-subscriber data is retained for a short troubleshooting window and not used for model training.
-- **You want review in more than one surface.** Pull requests, IDE, and CLI all matter.
-- **You need enterprise deployment options.** Enterprise lists SaaS single/multi-tenant, on-prem, air-gapped, and proprietary self-hosted Qodo models.
+- **You want review in more than one surface.** Pull requests and IDE review are the current clean paths; verify CLI support directly before making it a requirement.
+- **You need enterprise deployment options.** Enterprise lists organization-whitelisted review, SaaS single/multi-tenant, on-prem, air-gapped, and proprietary self-hosted Qodo models.
 - **You are evaluating CodeRabbit alternatives.** Qodo is one of the strongest direct competitors for AI PR review.
 
 ## When To Pick Something Else
@@ -169,15 +186,15 @@ The value is highest when Qodo has enough context to understand repository patte
 
 ## Pricing
 
-Qodo pricing was verified from the official pricing page on 2026-06-12:
+Qodo pricing was verified from the official pricing page and subscription-plan docs on 2026-06-15:
 
 | Plan | Price | Practical meaning |
 |---|---:|---|
-| Developer | $0 | Individual PR review, IDE plugin, community support, and up to 250 credits/month |
-| Teams | $38/user/month monthly or $30/user/month annual | Collaboration tier with 20 PRs/user/month, IDE plugin, standard private support, enhanced privacy, and up to 2,500 credits/month |
-| Enterprise | Custom | CLI quality workflows, Context Engine, dashboards, admin portal, MCP tools, SSO, priority support, SaaS/private deployment, on-prem, air-gapped, and self-hosted Qodo models |
+| Developer | $0 | Individual PR review, IDE plugin, community support, up to 250 credits/month, and up to 30 reviews per Git user per Git organization per month |
+| Teams | $38/user/month monthly or $30/user/month annual | Collaboration tier with 20 PRs/user/month, IDE plugin, standard private support, enhanced privacy, and up to 2,500 credits/month; reviews require an assigned paid seat and linked Git account |
+| Enterprise | Custom | Organization-whitelisted review with no per-user review limit, Context Engine, dashboards, admin portal, MCP tools, SSO, priority support, SaaS/private deployment, on-prem, air-gapped, and self-hosted Qodo models |
 
-Credits reset every 30 days from the first message in Qodo Gen rather than on a calendar schedule. Most LLM and MCP-tool requests cost 1 credit, while premium models cost more; the pricing FAQ lists Claude Opus at 5 credits and Grok 4 at 4 credits. Qodo says additional credit bundles and pay-as-you-go options are in development, so buyers should not assume those are available yet.
+The pricing FAQ says most LLM and MCP-tool requests cost 1 credit, while premium models cost more; it lists Claude Opus at 5 credits and Grok 4 at 4 credits. It also says additional credit bundles and pay-as-you-go options are still in development, so buyers should not assume those are available yet. Use the in-product quota indicator as the operational source of truth because Qodo's public FAQ mixes "calendar month" language with 30-day reset language tied to first Qodo Gen use.
 
 ## Against The Alternatives
 
@@ -193,15 +210,17 @@ Credits reset every 30 days from the first message in Qodo Gen rather than on a 
 
 - **AI review can still miss real bugs.** Qodo helps review capacity, but it does not replace human ownership for critical changes.
 - **Credit accounting adds friction.** Teams must understand PR limits and IDE/CLI credits.
-- **CLI is not the default self-serve motion.** Qodo CLI is positioned as Enterprise Beta, so teams should validate availability before assuming it is part of a normal Teams rollout.
+- **Teams eligibility can fall back to free behavior.** If a developer lacks an assigned paid seat or has not linked their Git account, Qodo says Teams reviews will not run and Free-tier limits apply.
+- **CLI is not the default self-serve motion.** Qodo CLI is positioned as Enterprise Beta in pricing, but current CLI docs also call it legacy and no longer maintained or supported.
 - **Autocomplete buyers should go elsewhere.** Qodo is explicitly moving away from code-generation features toward review and governance.
+- **Legacy docs can mislead buyers.** Qodo's own docs say `/v1/` pages are legacy; use Qodo Review v2 docs for current behavior.
 - **Value depends on workflow fit.** If the team ignores review comments, Qodo becomes noise.
 - **Enterprise features require sales.** SSO, private deployment, and deeper governance are not self-serve.
 - **Overlap with existing bots is real.** Teams already using CodeRabbit or GitHub Advanced Security should map exactly what Qodo adds.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against Qodo primary sources.
+This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-15 against Qodo primary sources.
 
 ## FAQ
 
@@ -214,18 +233,29 @@ Yes. Qodo lists a free Developer tier with PR code review, IDE plugin access, co
 **How much does Qodo Teams cost?**
 The official pricing page lists Teams at $38/user/month monthly or $30/user/month when billed annually.
 
+**Will every Teams PR receive a Qodo review?**
+Not automatically. Qodo's subscription-plan docs say Teams reviews require the developer to have an assigned paid seat in the Qodo Management Portal and a linked Git account. Without both, Qodo falls back to Free-tier behavior.
+
 **Is Qodo the same as Qodo Merge?**
 Qodo previously used product names such as Qodo Merge and Qodo Gen. The current docs frame Git Integration as formerly Qodo Merge, IDE as formerly Qodo Gen, and CLI as formerly Qodo Command.
 
 **Does Qodo still focus on code generation?**
 No. Qodo's IDE documentation says code-generation features, including autocomplete and chat-based code generation, are being deprecated while the product focuses on code review and governance.
 
+**Should I buy Qodo for the CLI?**
+Only after direct validation. The pricing page lists CLI quality workflows on Enterprise, but the current CLI overview also says Qodo CLI is a legacy product that is no longer maintained or supported.
+
 ## Sources
 
 - [Qodo pricing](https://www.qodo.ai/pricing/): plan names, pricing, credits, privacy, enterprise features
-- [Qodo Git Integration docs](https://docs.qodo.ai/v1/qodo-merge): AI pull-request review workflow and PR capabilities
+- [Qodo subscription plans](https://docs.qodo.ai/subscription-plans): Free, Teams, and Enterprise review eligibility and pause behavior
+- [Qodo Review v2 docs](https://docs.qodo.ai/qodo-documentation/code-review): current AI pull-request review workflow, multi-agent review, repository context, PR history, and rule system
+- [Qodo docs LLM index](https://docs.qodo.ai/llms.txt): routing note that Qodo Review v2 is current and `/v1/` docs are legacy
 - [Qodo IDE docs](https://docs.qodo.ai/qodo-ide): local review workflow, IDE availability, and code-generation deprecation notice
-- [Qodo CLI docs](https://docs.qodo.ai/qodo-command): Enterprise Beta CLI and agentic quality workflow details
+- [Qodo CLI docs](https://docs.qodo.ai/qodo-command): Enterprise Beta CLI details and legacy/no-longer-maintained caveat
+- [Qodo Context Engine docs](https://docs.qodo.ai/core-concepts/context-engine): repository, PR, rules, and workflow context layer
+- [Qodo governance docs](https://docs.qodo.ai/code-governance): code standards, security, compliance, audit trail, analytics, and multi-agent enforcement
+- [Qodo deployment models](https://docs.qodo.ai/code-review/deployment-model-support): multi-tenant, single-tenant, on-prem, and air-gapped support by Git provider
 - [Qodo enterprise page](https://www.qodo.ai/solutions/enterprise/): enterprise deployment, Context Engine, security, and governance positioning
 
 ## Related

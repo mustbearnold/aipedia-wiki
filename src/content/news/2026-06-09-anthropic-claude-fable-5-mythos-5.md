@@ -4,13 +4,15 @@ slug: 2026-06-09-anthropic-claude-fable-5-mythos-5
 title: "Anthropic launches Claude Fable 5 and restricted Claude Mythos 5"
 date: 2026-06-09
 severity: breaking
-summary: "Anthropic launched Claude Fable 5 as its generally available Mythos-class model, with safeguards, higher pricing, 30-day retention rules, and restricted Claude Mythos 5 access for approved cyberdefense and infrastructure partners."
+summary: "Anthropic launched Claude Fable 5 as its generally available Mythos-class model, with safeguards, higher pricing, 30-day retention rules, and restricted Claude Mythos 5 access. Update: Anthropic says access to both Fable 5 and Mythos 5 is suspended as of June 12 after a US government directive."
 categories: [ai-chatbots, ai-coding, ai-infrastructure, ai-research]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-10
-last_verified: 2026-06-10
+last_updated: 2026-06-13
+last_verified: 2026-06-13
 related_tools: [claude, claude-code, cursor, github-copilot]
 sources:
+  - url: https://www.anthropic.com/news/fable-mythos-access
+    title: "Anthropic: Statement on the US government directive to suspend access to Fable 5 and Mythos 5"
   - url: https://www.anthropic.com/news/claude-fable-5-mythos-5
     title: "Anthropic: Claude Fable 5 and Claude Mythos 5"
   - url: https://platform.claude.com/docs/en/about-claude/models/introducing-claude-fable-5-and-claude-mythos-5
@@ -23,7 +25,9 @@ sources:
 
 Anthropic launched **Claude Fable 5** on June 9, 2026 as the first generally available Mythos-class Claude model, while keeping **Claude Mythos 5** restricted to approved partners through Project Glasswing and future trusted-access programs.
 
-AiPedia verified Anthropic's announcement, Claude API documentation, and AWS Bedrock availability notes on June 10, 2026.
+**Update, June 13:** Anthropic says access to both Fable 5 and Mythos 5 is now suspended after a US government directive received on June 12. Anthropic says all other Claude models are unaffected and that it is working to restore access. Read the late-day update: [Claude Fable/Mythos suspended, GPT-5.2 retired, OpenAI probed](/news/2026-06-13-us-blocks-anthropic-fable-mythos-openai-probe/).
+
+AiPedia verified Anthropic's launch announcement, June 12 access statement, Claude API documentation, and AWS Bedrock availability notes on June 13, 2026.
 
 ## What changed
 
@@ -36,11 +40,13 @@ Mythos 5 is the more restricted sibling. Anthropic says it shares the same under
 
 ## Availability and price
 
-Claude Fable 5 is available through the Claude API, Claude Platform on AWS, Amazon Bedrock, Vertex AI, and Microsoft Foundry according to Anthropic's docs. Developers can call it with the `claude-fable-5` model ID on Anthropic's API.
+Anthropic's launch documentation said Claude Fable 5 was available through the Claude API, Claude Platform on AWS, Amazon Bedrock, Vertex AI, and Microsoft Foundry, with the `claude-fable-5` model ID on Anthropic's API.
+
+That availability is no longer the current buyer state. As of Anthropic's June 12 statement, access to Fable 5 and Mythos 5 is suspended for all customers while Anthropic complies with a US government directive. Anthropic says access to all other Claude models is not affected.
 
 The listed price is **$10 per million input tokens and $50 per million output tokens** for both Fable 5 and Mythos 5. Anthropic also says these Mythos-class models carry 30-day data retention requirements and are not available under zero data retention.
 
-For subscription users, the access story is temporary and capacity-dependent. Anthropic says Fable 5 is included on Pro, Max, Team, and seat-based Enterprise plans through June 22, 2026, then requires usage credits from June 23 unless Anthropic extends or restores the included window.
+For subscription users, the original access story was temporary and capacity-dependent. Anthropic said Fable 5 would be included on Pro, Max, Team, and seat-based Enterprise plans through June 22, 2026, then require usage credits from June 23 unless capacity allowed an extension. While access is suspended, buyers should not treat that launch-window packaging as usable plan access.
 
 ## Why tool buyers should care
 
@@ -54,7 +60,9 @@ If you operate in cybersecurity, critical infrastructure, or advanced bio/life-s
 
 The safeguards are part of the product, not a footnote. Anthropic says some high-risk requests fall back to Claude Opus 4.8 and that conservative classifiers may catch harmless sessions. Teams should test their own workflows before assuming Fable 5 will behave like a simple drop-in upgrade.
 
-The retention policy is also material. If your organization requires zero data retention for sensitive work, Fable 5 and Mythos 5 may not fit that workload as of June 10, 2026.
+The retention policy is also material. If your organization requires zero data retention for sensitive work, Fable 5 and Mythos 5 may not fit that workload as of June 13, 2026.
+
+Availability is now the main watch-out. If your team was testing Fable 5 for production workflows, do not switch defaults until Anthropic restores access and confirms the model route your account will actually receive.
 
 Cost needs its own pilot. Fable 5's headline quality may justify the premium for hard problems, but it can become expensive when users hand it vague, long-running tasks without budgets, review stops, or prompt discipline.
 
@@ -70,4 +78,4 @@ Run a controlled Fable 5 pilot before changing defaults:
 
 ## AiPedia verdict
 
-Claude Fable 5 is a major release because Anthropic is no longer holding all Mythos-class capability behind a narrow gate. The buyer upside is real for complex work. The buyer risk is also real: higher cost, retention requirements, safety fallbacks, and more autonomous output mean teams need stronger governance, not just a stronger model.
+Claude Fable 5 is a major release because Anthropic tried to move some Mythos-class capability into general availability. The June 12 suspension makes the buyer lesson sharper: higher capability now comes with model-availability risk, retention requirements, safety fallbacks, and government-governance exposure. Treat Fable 5 as a model to watch and test when restored, not as a stable default route today.

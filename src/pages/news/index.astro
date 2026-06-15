@@ -4,7 +4,36 @@
  *
  * AI tools news feed sorted by date. Severity-color-coded cards.
  * Legacy preserved at src/legacy-pages/news-index.legacy.astro.
- * Refresh metadata: dateModified: '2026-06-13'
+ * Refresh metadata: dateModified: '2026-06-15'
+ * Refresh metadata: 2026-06-15 Visa/ChatGPT agent-payments coverage added
+ * after current June AP and Visa Intelligent Commerce source checks;
+ * ChatGPT, OpenAI, agent-commerce trend, June 10 desk, RSS, homepage,
+ * trends/tools/categories indexes, and LLM surfaces inspected.
+ * Refresh metadata: 2026-06-15 OpenAI/Ona Codex persistent-agent
+ * acquisition coverage added after current June official OpenAI, Ona, Codex
+ * product, and Codex pricing source checks; Codex, AI Coding, June 11 desk,
+ * RSS, homepage, and LLM surfaces inspected.
+ * Refresh metadata: 2026-06-15 AI news desk and Google AI search risk
+ * checklist added after current June source checks across the G7 Evian summit
+ * opening, AP AI-regulation agenda and state-law patchwork reporting, Google
+ * AI Overviews liability coverage, and Google's Gemini-related phishing
+ * lawsuit coverage; Gemini, AI Search, AI Chatbots, homepage, RSS, and LLM
+ * surfaces inspected.
+ * Refresh metadata: 2026-06-15 AI coding token-budget governance story added
+ * after current June search found Business Insider/Times of India Disney
+ * reporting on Claude/Cursor usage, tokenmaxxing, and AI-coded release quality;
+ * Cursor, Claude Code, AI Coding, homepage, RSS, and LLM surfaces inspected.
+ * Refresh metadata: 2026-06-14 AI news desk added after current June
+ * source checks across OpenAI multistate probe coverage and buyer-safety
+ * checklist, Anthropic Fable/Mythos access suspension, ChatGPT GPT-5.2
+ * retirement, and the G7 governance backdrop; homepage, RSS, and LLM
+ * surfaces inspected.
+ * Refresh metadata: 2026-06-13 late AI news coverage refresh across Claude
+ * Fable/Mythos access suspension, ChatGPT GPT-5.2 retirement, OpenAI
+ * state-attorneys-general scrutiny, affected tool/company/category pages,
+ * homepage, RSS, and LLM surfaces.
+ * Refresh metadata: 2026-06-13 model availability tracker linked from news
+ * archive after late Claude/OpenAI/Gemini/Copilot route-risk updates.
  * Refresh metadata: 2026-06-13 June 10-13 AI tools news coverage refresh
  * across DXC + Anthropic Claude alliance, Claude Corps fellowship, OpenAI
  * Codex rate-limit banking, Google DeepMind DiffusionGemma, and the G7
@@ -49,7 +78,7 @@ const sorted: NewsItem[] = entries
     date: toYmd(e.data.date),
     severity: (e.data.severity as string) || 'minor',
   }))
-  .sort((a: any, b: any) => (b.date || '').localeCompare(a.date || ''));
+  .sort((a: any, b: any) => (b.date || '').localeCompare(a.date || '') || b.slug.localeCompare(a.slug));
 
 // Severity counts for filter chips
 const severityCounts = sorted.reduce<Record<string, number>>((acc, n) => {
@@ -103,6 +132,22 @@ const topStory = sorted[0];
       verifiedLabel={topStory ? `Latest ${prettyDate(topStory.date)}` : undefined}
       rankLabel={`${sorted.length} stories`}
     />
+
+    <aside class="gt-news-tracker" aria-label="Model availability tracker">
+      <a
+        href="/trends/model-availability-churn/"
+        data-analytics-event="internal_cta_click"
+        data-analytics-source-module="news_index_model_tracker"
+        data-analytics-destination-type="trend"
+        data-analytics-destination-slug="trends/model-availability-churn"
+        data-analytics-destination-url="/trends/model-availability-churn/"
+        data-analytics-position="top"
+        data-analytics-label="Track model availability"
+      >
+        <strong>Model availability tracker</strong>
+        <span>Follow current ChatGPT, Claude, Gemini, Copilot, Codex, and router access changes behind this week's news.</span>
+      </a>
+    </aside>
 
     <nav class="gt-news-filters" aria-label="Filter by severity">
       <button type="button" class="gt-chip is-active" data-filter="all" data-analytics-event="category_filter_click" data-analytics-source-module="news_index_filters" data-analytics-category-slug="all" data-analytics-position="top" data-analytics-label="All news">All <span>{sorted.length}</span></button>
@@ -161,6 +206,23 @@ const topStory = sorted[0];
   </script>
 
   <style>
+    .gt-news-tracker {
+      margin: 0 0 12px;
+      border: 1px solid var(--gt-line-strong);
+      border-radius: var(--gt-radius-sm);
+      background: var(--gt-surface);
+    }
+    .gt-news-tracker a {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding: 12px 14px;
+      color: var(--gt-fg);
+      text-decoration: none;
+    }
+    .gt-news-tracker:hover { background: var(--gt-surface-2); }
+    .gt-news-tracker strong { font-size: 14px; line-height: 1.3; }
+    .gt-news-tracker span { font-size: 13px; line-height: 1.45; color: var(--gt-muted); }
     .gt-news-filters {
       display: flex; gap: 6px;
       overflow-x: auto;

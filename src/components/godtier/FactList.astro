@@ -85,6 +85,7 @@ function volatilityLabel(v: string): string {
     gap: 6px;
     padding: 14px 0;
     border-bottom: 1px solid var(--gt-line);
+    min-width: 0;
   }
   .gt-fact-label {
     font-size: 11px;
@@ -100,6 +101,8 @@ function volatilityLabel(v: string): string {
     gap: 6px 8px;
     margin-top: 4px;
     align-items: center;
+    min-width: 0;
+    max-width: 100%;
   }
   .gt-fact-pill {
     display: inline-flex;
@@ -118,7 +121,11 @@ function volatilityLabel(v: string): string {
     color: var(--gt-muted);
     border: 1px solid var(--gt-line);
   }
-  .gt-fact-verified { font-size: 11px; color: var(--gt-subtle); }
+  .gt-fact-verified {
+    font-size: 11px;
+    color: var(--gt-subtle);
+    overflow-wrap: anywhere;
+  }
 
   @media (min-width: 600px) {
     .gt-fact {
@@ -127,7 +134,8 @@ function volatilityLabel(v: string): string {
       gap: 24px;
     }
     .gt-fact-label { flex: 0 0 130px; padding-top: 2px; }
-    .gt-fact-value { flex: 1; }
-    .gt-fact-meta { flex: 0 0 auto; justify-content: flex-end; }
+    .gt-fact-value { flex: 1 1 0; min-width: 0; }
+    .gt-fact-meta { flex: 0 1 260px; justify-content: flex-end; }
+    .gt-fact-verified { text-align: right; }
   }
 </style>

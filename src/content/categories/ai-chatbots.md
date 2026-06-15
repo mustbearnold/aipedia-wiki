@@ -5,16 +5,22 @@ title: AI Chatbots & LLMs
 description: General-purpose AI assistants and large language model chatbots for writing, research, coding help, analysis, multimodal work, and everyday decision support.
 tool_count: 17
 seo_title: "Best AI Chatbots & LLMs (June 2026), aipedia.wiki"
-meta_description: "Updated June 12, 2026: compare the best AI chatbots and LLMs: ChatGPT, Claude, Gemini, Perplexity, Grok, Mistral, Reka, Kimi, Qwen, GLM, TypingMind, Yi, Ollama, Open WebUI, Jan.ai, NotebookLM, and AnythingLLM, with enterprise workspace, model infrastructure, local runtime, BYOK, desktop, and self-hosted RAG signals."
+meta_description: "Updated June 15, 2026: compare AI chatbots after Visa/ChatGPT payments made spend controls part of agent buying, Claude Fable/Mythos access stayed suspended, GPT-5.2 retired, and safety controls became procurement criteria."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-15
+last_verified: 2026-06-15
 update_frequency: monthly
 ---
 
 ## Overview
 
-AI chatbots are now the default starting point for writing, research, coding help, analysis, planning, images, voice, file work, and everyday problem solving. But the market is no longer one generic "best model" race. As of June 12, 2026, the right chatbot depends on the buyer's ecosystem, risk tolerance, source needs, budget, and workflow. Flagship models continue to shift: ChatGPT runs on GPT-5.5, Claude leads with Opus 4.8, Gemini 3.1 Pro Preview and Gemini 3.5 Flash anchor Google's current public buyer path, MiniMax-M3 is now MiniMax's current M3-first coding/agentic API path, Qwen3.7-Max is live on Qwen Cloud, qwen3.7-plus is the newest Qwen Cloud changelog entry AiPedia found, and DeepSeek V4-Flash and V4-Pro are now in production for cost-sensitive workloads. DeepSeek's June 5 pricing check keeps V4-Flash at $0.14 cache-miss input and $0.28 output per million tokens, while Doubao remains a China-first ByteDance/Volcengine lane where exact API prices should be checked in the live model table before quoting.
+AI chatbots are now the default starting point for writing, research, coding help, analysis, planning, images, voice, file work, and everyday problem solving. But the market is no longer one generic "best model" race. As of June 15, 2026, the right chatbot depends on the buyer's ecosystem, risk tolerance, source needs, budget, workflow, and user-safety posture. Flagship models continue to shift: ChatGPT runs on GPT-5.5 after GPT-5.2 retired from ChatGPT, Claude's stable buyable high-end route is Opus 4.8 after Fable/Mythos access was suspended, Gemini's buyer path now splits between Gemini app labels (Flash-Lite, Flash, Pro), stable Gemini 3.5 Flash in the API, and Gemini 3.1 Pro Preview as the current API Pro route, MiniMax-M3 is now MiniMax's current M3-first coding/agentic API path, Qwen Cloud now lists `qwen3.7-max-2026-06-08` as the latest Qwen changelog entry while its live Max marketplace page still describes a text-only public interface, and DeepSeek V4-Flash and V4-Pro are now in production for cost-sensitive workloads. DeepSeek's June 5 pricing check keeps V4-Flash at $0.14 cache-miss input and $0.28 output per million tokens, while Doubao remains a China-first ByteDance/Volcengine lane where exact API prices should be checked in the live model table before quoting.
+
+The June 14 update adds a sharper governance layer to this category. [Claude Fable/Mythos access is suspended, GPT-5.2 is retired from ChatGPT, and OpenAI faces reported state-AG scrutiny](/news/2026-06-13-us-blocks-anthropic-fable-mythos-openai-probe/), and the follow-up [ChatGPT safety checklist](/news/2026-06-14-openai-chatgpt-probe-safety-checklist/) turns the OpenAI probe reporting into buyer questions about minors, vulnerable users, data practices, engagement, escalation, and safety controls. The practical buyer lesson is simple: do not buy only the benchmark winner. Buy the assistant with current verified access, a fallback model path, sane data controls, and policies that fit the users who will rely on it. For the current cross-provider status matrix, use the [AI Model Availability & Churn Tracker](/trends/model-availability-churn/).
+
+The June 15 Claude follow-up keeps that rule practical: Claude pricing still labels Fable as unavailable, Anthropic's model docs can still describe Fable 5 as a launched highest-capability route, and Agent SDK credits are now active for eligible programmatic workloads. Treat that as a model-doc availability mismatch, not a reason to ignore Claude. Claude remains the writing and long-analysis specialist, but buyers should anchor hard work on Opus 4.8 until Fable/Mythos access is restored.
+
+The June 15 news desk widens the governance lens beyond model access. [G7 opened in Evian while AI search liability tightened](/news/2026-06-15-ai-news-desk/): AP reports AI regulation is on the G7 agenda, WIRED reports a German AI Overviews liability ruling, and Times of India reports Google's lawsuit allegations around Gemini-assisted phishing infrastructure. The companion [Google AI search risk checklist](/news/2026-06-15-google-ai-search-liability-gemini-abuse/) turns that into procurement controls for source trails, logs, abuse monitoring, and human review paths alongside model quality.
 
 The May 31 refresh adds two enterprise workspace signals: MUFG's [ChatGPT Enterprise rollout to roughly 35,000 bank employees](/news/2026-05-30-openai-mufg-chatgpt-enterprise-rollout/) and Microsoft's [redesigned Microsoft 365 Copilot experience](/news/2026-05-31-microsoft-365-copilot-redesign-work-iq/). The lesson is practical. General assistants win inside companies only when training, permission rules, visible context, app placement, and output quality make daily work safer and faster.
 
@@ -26,7 +32,13 @@ The June 5 DeepSeek slice refreshes [DeepSeek vs Gemini](/compare/deepseek-vs-ge
 
 The June 5 Gemini comparison refresh updates the oldest live Gemini cluster: [Gemini vs GitHub Copilot](/compare/gemini-vs-github-copilot/), [Gemini vs Grok](/compare/gemini-vs-grok/), [Gemini vs Mistral AI](/compare/gemini-vs-mistral-ai/), [Gemini vs Perplexity](/compare/gemini-vs-perplexity/), and [Gemini vs Qwen](/compare/gemini-vs-qwen/). The refreshed buyer map is: Gemini for Google-native productivity and broad assistant work, Copilot for GitHub-native coding, Grok for X-native social context, Mistral for EU/open-model platform control, Perplexity for cited open-web research, and Qwen for Alibaba/Qwen Cloud plus open-weight model-family evaluation.
 
+The June 15 Gemini check keeps that lane current: Gemini still belongs here as the Google-native assistant bundle, but coding-oriented buyers on unpaid-tier Gemini Code Assist for individuals or Google One need the June 18, 2026 Antigravity migration caveat before treating Gemini CLI or the old Code Assist IDE extensions as the recommended setup.
+
 The June 6 [Mistral AI vs Qwen](/compare/mistral-ai-vs-qwen/) refresh keeps the open-model platform lane current: Mistral is the stronger EU/vendor-platform and Search Toolkit choice, while Qwen is the stronger Alibaba/Qwen Cloud, qwen3.7-max long-context, qwen3.7-plus multimodal-agent, multilingual, and Apache 2.0 Qwen3 model-family choice.
+
+The June 15 [Mistral AI](/tools/mistral-ai/) refresh keeps that lane from drifting into bad buyer math. Official sources now consolidate Le Chat into Vibe, and Mistral's Vibe agent announcement says Chat mode will soon be sunset while Le Chat history moves into Work Mode. Mistral 3's official launch post is dated December 2, 2025, not April 28, 2026; Medium 3.5 is open weights under a Modified MIT license; Small 4 still has pricing-page versus model-card drift; the pricing FAQ still uses a generic Mistral Large example that differs from Large 3 rows; and exact Devstral/model IDs need docs checks before production. Treat Mistral as a Vibe Work/Code, API, Search Toolkit, and open-weight procurement lane, not a generic chatbot subscription.
+
+The June 15 Qwen recheck found no material change versus the June 14 refresh: Qwen Cloud's newest official changelog item is still `qwen3.7-max-2026-06-08`, described as adding visual-modal understanding compared with the May 20 Max snapshot, but the live qwen3.7-max marketplace page still describes the public route as text input/output. Treat Qwen as a fast-moving model family and verify exact model ID, snapshot, modality support, tool fees, and region before production use.
 
 The June 8 Kimi tool refresh keeps Moonshot's lane current: Kimi K2.6 remains the active Kimi API path for new model evaluation, with $0.16/M cache-hit input, $0.95/M cache-miss input, $4.00/M output, 256K context, multimodal input, and long-horizon agent/coding positioning. Legacy K2 pricing URLs should be treated as historical or redirecting documentation, not a new-production recommendation.
 
@@ -42,7 +54,9 @@ The June 8 [Poe](/tools/poe/) refresh keeps the multi-model comparison lane curr
 
 The June 10 [TypingMind](/tools/typingmind/) refresh keeps the BYOK power-user UI lane current. TypingMind is not a bundled model subscription like ChatGPT Plus or Poe; it is a one-time personal license that routes chat through the buyer's own OpenAI, Anthropic, Google, OpenRouter, cloud, or compatible API accounts. Current personal licenses remain Standard $39, Extended $79, and Premium $99 one-time, with Bulk License at $395 for up to 10 users across 50 devices. Teams and self-hosted deployments add private portal/admin controls, but the public Teams page still warns that provider API costs are billed separately.
 
-For most people, the first paid chatbot to compare is still one of three: [ChatGPT](/tools/chatgpt/) for the broadest all-purpose AI workspace, [Claude](/tools/claude/) for writing, long analysis, and code reasoning, or [Gemini](/tools/gemini/) for Google-native work across Search, Gmail, Docs, Drive, NotebookLM, and Google AI subscription benefits. [Perplexity](/tools/perplexity/) is the better answer engine when every serious claim needs a source trail. [Grok](/tools/grok/) is most useful when X-native real-time context matters. [Mistral AI](/tools/mistral-ai/) matters more for builders and teams that care about model control, European AI infrastructure, APIs, Vibe for Code, Search Toolkit, and open-model options; the June 3 [ChatGPT vs Mistral AI](/compare/chatgpt-vs-mistral-ai/) refresh frames this as a finished-assistant versus model-platform decision. [Qwen](/tools/qwen/) is the Alibaba Cloud lane: hosted Qwen3.7-Max, Qwen Chat testing, Apache 2.0 Qwen3 open weights, and a growing Qwen Cloud / agent-platform push after [Alibaba's first international Qwen Conference](/news/2026-05-27-qwen-conference-agent-cloud-suite/). [GLM](/tools/glm/) is the Z.AI lane for teams evaluating GLM-5.1's 200K context, 128K maximum output, OpenAI-compatible API examples, MCP/tool support, MIT Hugging Face weights, and $1.40/M input plus $4.40/M output API pricing. [Kimi](/tools/kimi/) is the Moonshot lane for builders evaluating Kimi K2.6, 256K context, multimodal input, usage-based API pricing, and a post-K2-retirement model path; the June 3 [ChatGPT vs Kimi](/compare/chatgpt-vs-kimi/) refresh keeps ChatGPT as the better finished assistant and Kimi as the model/API alternative. [MiniMax](/tools/minimax/) is the M3 lane for buyers testing low-cost coding, agentic, multimodal, and long-context API work, with Speech 2.8 and Hailuo as adjacent MiniMax modalities. [Yi](/tools/yi/) is now a frozen-model/history lane rather than a first-purchase chatbot: 01.AI still lists Yi-Lightning and Yi open models, but the active 2026 company story is WorldWise/WanZhi 2.5 enterprise agents. [Hunyuan](/tools/hunyuan/) is Tencent's open-weight/model-family lane for Hy3-preview, HY-World 2.0, and HY-OmniWeaving; [Jan.ai](/tools/jan-ai/) is the free local desktop lane, with v0.8.2 now adding faster startup, AMD ROCm/HIP on Linux, and resumable downloads.
+The June 15 [ChatGPT](/tools/chatgpt/) update adds an agent-commerce watch-out after AP reported Visa payment-network integration inside ChatGPT and Visa's own Intelligent Commerce page described OpenAI/Visa work on secure, transparent, consumer-controlled agent commerce. Treat payment agents as high-risk automations: require human approval, spend limits, token scope, merchant boundaries, and dispute-ready logs before live checkout workflows.
+
+For most people, the first paid chatbot to compare is still one of three: [ChatGPT](/tools/chatgpt/) for the broadest all-purpose AI workspace, [Claude](/tools/claude/) for writing, long analysis, and code reasoning, or [Gemini](/tools/gemini/) for Google-native work across Search, Gmail, Docs, Drive, NotebookLM, and Google AI subscription benefits. [Perplexity](/tools/perplexity/) is the better answer engine when every serious claim needs a source trail. [Grok](/tools/grok/) is most useful when X-native real-time context matters; the June 15 Grok check keeps the buyer anchor on Grok 4.3, 1M context, SuperGrok at $30/month, X Search, Imagine, Voice API, Grok Build coding-agent tests, and separate review of consumer memory versus API response storage. [Mistral AI](/tools/mistral-ai/) matters more for builders and teams that care about model control, European AI infrastructure, APIs, Vibe Work/Code, Search Toolkit, and open-weight options; the June 15 Mistral check keeps the buyer anchor on Vibe Free/Pro/Team, Chat-mode sunset planning, Medium 3.5 open weights, Large 3/Small 4/Ministral 3 model choices, Small 4 and Large-family pricing-source drift, and exact model-ID checks. [Qwen](/tools/qwen/) is the Alibaba Cloud lane: hosted Qwen3.7-Max, the June 8 Max changelog snapshot, qwen3.7-plus for multimodal/GUI-agent evaluation, Qwen Chat testing, Apache 2.0 Qwen3 open weights, and a growing Qwen Cloud / agent-platform push after [Alibaba's first international Qwen Conference](/news/2026-05-27-qwen-conference-agent-cloud-suite/). [GLM](/tools/glm/) is the Z.AI lane for teams evaluating GLM-5.1's 200K context, 128K maximum output, OpenAI-compatible API examples, MCP/tool support, MIT Hugging Face weights, and $1.40/M input plus $4.40/M output API pricing. [Kimi](/tools/kimi/) is the Moonshot lane for builders evaluating Kimi K2.6, 256K context, multimodal input, usage-based API pricing, and a post-K2-retirement model path; the June 3 [ChatGPT vs Kimi](/compare/chatgpt-vs-kimi/) refresh keeps ChatGPT as the better finished assistant and Kimi as the model/API alternative. [MiniMax](/tools/minimax/) is the M3 lane for buyers testing low-cost coding, agentic, multimodal, and long-context API work, with Speech 2.8 and Hailuo as adjacent MiniMax modalities. [Yi](/tools/yi/) is now a frozen-model/history lane rather than a first-purchase chatbot: 01.AI still lists Yi-Lightning and Yi open models, but the active 2026 company story is WorldWise/WanZhi 2.5 enterprise agents. [Hunyuan](/tools/hunyuan/) is Tencent's open-weight/model-family lane for Hy3-preview, HY-World 2.0, and HY-OmniWeaving; [Jan.ai](/tools/jan-ai/) is the free local desktop lane, with v0.8.2 now adding faster startup, AMD ROCm/HIP on Linux, and resumable downloads.
 
 For document chat and private RAG, [AnythingLLM](/tools/anythingllm/) and [Open WebUI](/tools/open-webui/) are the two practical self-hosted app lanes. AnythingLLM remains the MIT app-plus-cloud lane; Open WebUI is the broader self-hosted interface/knowledge-base layer that many Ollama users adopt for team chat. In both cases, quality depends on the hosted or local LLM you connect.
 
@@ -63,8 +77,8 @@ The wrong move is paying for three overlapping chatbots without a job for each o
 | **[Poe](/tools/poe/)** | Multi-model and media-bot comparison through one points budget | Best for breadth, custom bots, and trying many providers; direct subscriptions are cleaner for heavy single-model use. |
 | **[TypingMind](/tools/typingmind/)** | BYOK multi-provider chat UI with one-time personal licenses | Best for power users with API keys who want one professional interface; API usage is billed separately by each provider. |
 | **[Grok](/tools/grok/)** | X-native real-time context, creator/news/social signal monitoring | Useful for fast social context, but important claims still need primary-source verification. |
-| **[Mistral AI](/tools/mistral-ai/)** | Model-control workflows, European AI infrastructure, APIs, Vibe for Code, Search Toolkit, open-model strategy | Best for builders and organizations that care about deployment and vendor-control choices. |
-| **[Qwen](/tools/qwen/)** | Alibaba Cloud, open-weight Qwen3, hosted Qwen3.7-Max, multilingual model control | Best for builders who want Qwen Cloud APIs or self-hostable Apache 2.0 Qwen3 checkpoints, not a polished consumer workspace. |
+| **[Mistral AI](/tools/mistral-ai/)** | Model-control workflows, European AI infrastructure, APIs, Vibe for work/code, Search Toolkit, open-weight strategy | Best for builders and organizations that care about deployment, vendor control, and license/source drift. |
+| **[Qwen](/tools/qwen/)** | Alibaba Cloud, open-weight Qwen3, hosted Qwen3.7-Max, multilingual model control | Best for builders who want Qwen Cloud APIs or self-hostable Apache 2.0 Qwen3 checkpoints; verify exact Max snapshot and modality route before production. |
 | **[GLM](/tools/glm/)** | Z.AI GLM-5.1, open MIT weights, long-context agentic coding/model evaluation | Best for teams testing Chinese frontier/open-weight model options, not a polished English consumer chatbot. |
 | **[Kimi](/tools/kimi/)** | Kimi K2.6 API evaluation, long-context coding, multimodal input, and cost-sensitive model serving | Best for builders comparing model economics and non-OpenAI API lanes; ChatGPT remains the easier finished assistant. |
 | **[MiniMax](/tools/minimax/)** | MiniMax-M3 coding, agentic, multimodal, long-context API evaluation plus Speech/Hailuo adjacency | Best for builders testing M3 price/performance and MiniMax's multimodal platform; verify 512K vs 1M context access and service tier before production. |
@@ -88,8 +102,8 @@ The wrong move is paying for three overlapping chatbots without a job for each o
 - **Best for Google users:** [Gemini](/tools/gemini/) because Google AI subscriptions now center the assistant around Gemini, Deep Research, Workspace, NotebookLM, Veo/Flow access on higher tiers, and Google One storage.
 - **Best for cited research:** [Perplexity](/tools/perplexity/) because the product is built around answer-plus-source workflows.
 - **Best BYOK power-user UI:** [TypingMind](/tools/typingmind/) when the buyer already has API keys and wants a one-time-license interface instead of stacking multiple flat subscriptions.
-- **Best for X-native context:** [Grok](/tools/grok/) when live social discourse is actually part of the job. The June 3 [ChatGPT vs Grok](/compare/chatgpt-vs-grok/) refresh keeps ChatGPT as the safer default assistant and Grok as the specialist when X Search, SuperGrok, Imagine, voice, or xAI APIs are the real purchase reason.
-- **Best for model-control strategy:** [Mistral AI](/tools/mistral-ai/) for developers and teams evaluating APIs, European infrastructure, Vibe for Code, Search Toolkit, and open-model options.
+- **Best for X-native context:** [Grok](/tools/grok/) when live social discourse is actually part of the job. The June 15 Grok source check keeps ChatGPT as the safer default assistant and Grok as the specialist when X Search, SuperGrok, Imagine, voice, Grok Build, or xAI APIs are the real purchase reason.
+- **Best for model-control strategy:** [Mistral AI](/tools/mistral-ai/) for developers and teams evaluating APIs, European infrastructure, Vibe for work/code, Search Toolkit, open-weight options, and model-by-model license fit.
 - **Best Alibaba/open-weight lane:** [Qwen](/tools/qwen/) when hosted Qwen3.7-Max, Qwen Cloud pricing, multilingual coverage, or self-hosted Qwen3 checkpoints matter.
 - **Best GLM-family evaluation lane:** [GLM](/tools/glm/) when Z.AI API access, GLM-5.1 open weights, long context, and coding-agent benchmarks are the purchase reason. The June 3 [ChatGPT vs GLM](/compare/chatgpt-vs-glm/) refresh frames this as a product-versus-model decision, not a simple chatbot replacement.
 - **Best Kimi API evaluation lane:** [Kimi](/tools/kimi/) when Kimi K2.6 pricing, 256K context, multimodal input, ToolCalls, JSON Mode, and China/Asia model diversification are the purchase reason. The June 3 [ChatGPT vs Kimi](/compare/chatgpt-vs-kimi/) refresh keeps the old K2 series retirement out of new-build recommendations.
@@ -107,15 +121,15 @@ The wrong move is paying for three overlapping chatbots without a job for each o
 
 **Use Claude if:** the work involves long documents, careful editing, nuanced writing, code explanation, critique, high-stakes reasoning, or a vendor posture that leans harder into public AI-safety debate and outside oversight. The May 28 Opus 4.8 launch strengthens Claude's agentic-coding and high-autonomy-work story, while the May 25 Vatican AI encyclical appearance by Anthropic co-founder Chris Olah and the June 2 Project Glasswing expansion remain governance/security signals, not normal subscription features.
 
-**Use Gemini if:** Gmail, Docs, Drive, Search, Android, NotebookLM, Veo, Flow, Google One storage, or Drive-governed sharing of Gemini outputs are part of the purchase reason.
+**Use Gemini if:** Gmail, Docs, Drive, Search, Android, NotebookLM, Veo, Flow, Google One storage, or Drive-governed sharing of Gemini outputs are part of the purchase reason. If coding is the purchase reason, check the Antigravity migration note before recommending unpaid-tier or Google One Code Assist.
 
 **Use Perplexity if:** you need quick web research, citations, source trails, competitive checks, market scans, or fact verification.
 
 **Use Grok if:** X conversations, creator signals, breaking social context, or audience momentum are the main information layer.
 
-**Use Mistral AI if:** you are evaluating model choice, data posture, API strategy, European AI infrastructure, Vibe for Code, Search Toolkit, or open-model options rather than only a consumer chatbot.
+**Use Mistral AI if:** you are evaluating model choice, data posture, API strategy, European AI infrastructure, Vibe for work/code, Search Toolkit, or open-weight options rather than only a consumer chatbot.
 
-**Use Qwen if:** Alibaba Cloud integration, Qwen Cloud hosted inference, Qwen3.7-Max testing, multilingual products, or Apache 2.0 Qwen3 open-weight deployment are the purchase reason.
+**Use Qwen if:** Alibaba Cloud integration, Qwen Cloud hosted inference, Qwen3.7-Max testing, qwen3.7-plus multimodal/GUI-agent evaluation, multilingual products, or Apache 2.0 Qwen3 open-weight deployment are the purchase reason.
 
 **Use GLM if:** Z.AI GLM-5.1, MIT-licensed open weights, 200K context, 128K maximum output, OpenAI-compatible API examples, MCP/tool support, and agentic coding evaluation are the purchase reason.
 
@@ -159,7 +173,7 @@ Do not subscribe to multiple chatbots because each one has a new model announcem
 
 - [Best ChatGPT Alternatives](/guides/chatgpt-alternatives/) is the June 7 verified switching guide for Claude, Gemini, Perplexity, Grok, Mistral Vibe/platform, and NotebookLM, with the "stay with ChatGPT" case separated from model-announcement hype.
 - [Best Gemini Alternatives](/guides/gemini-alternatives/) is the June 7 verified switching guide for ChatGPT, Claude, Perplexity, Grok, Mistral, and NotebookLM, with Google's AI subscription bundle and the "stay with Gemini" case separated from generic chatbot rankings.
-- [Best Claude Alternatives](/guides/claude-alternatives/) is the June 7 verified guide for ChatGPT, Gemini, Perplexity, Grok, Mistral Vibe/platform, and the cases where Claude still wins for writing, long context, and Claude Code.
+- [Best Claude Alternatives](/guides/claude-alternatives/) is the June 15 verified switching guide for ChatGPT, Gemini, Perplexity, Grok, Mistral Vibe/platform, Codex, Cursor, and the cases where Claude still wins for writing, long context, Claude Code, and Opus 4.8 fallback planning.
 - [Best DeepSeek Alternatives](/guides/deepseek-alternatives/) is the June 7 verified switching guide for ChatGPT, Claude, Cursor, Gemini, Mistral, Perplexity, and Grok, with DeepSeek V4-Flash/V4-Pro API cost advantages kept separate from trust, governance, and finished-assistant fit.
 - [Best Perplexity Alternatives](/guides/perplexity-alternatives/) is the June 7 verified switching guide for buyers deciding whether cited open-web answers should stay in Perplexity or move into ChatGPT Search, Gemini/Google AI Mode, NotebookLM, Claude, Kagi, Exa, or Perplexity APIs.
 - [Best AI Coding Assistant](/guides/best-ai-coding-assistant/)
@@ -191,30 +205,45 @@ Do not subscribe to multiple chatbots because each one has a new model announcem
 
 ## Sources
 
-- [ChatGPT pricing](https://chatgpt.com/pricing/) (verified 2026-06-12)
+- [ChatGPT pricing](https://chatgpt.com/pricing/) (verified 2026-06-15)
+- [AP: Visa plugs its payment network into ChatGPT](https://apnews.com/article/visa-chatgpt-openai-shopping-mastercard-d769dec86344cb4977c98789e8ec492f) and [Visa Intelligent Commerce](https://www.visa.com/en-us/solutions/intelligent-commerce) (verified 2026-06-15)
 - [OpenAI GPT-5.5 in ChatGPT](https://help.openai.com/en/articles/11909943-gpt-55-in-chatgpt) (verified 2026-06-12)
-- [Anthropic Claude Opus 4.8 launch](https://www.anthropic.com/news/claude-opus-4-8) (verified 2026-06-12)
-- [Anthropic Claude models](https://platform.claude.com/docs/en/about-claude/models/overview) (verified 2026-06-12)
-- [Claude pricing](https://claude.com/pricing) (verified 2026-06-12)
+- [OpenAI ChatGPT release notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes) (verified 2026-06-13)
+- [AiPedia late June 13 AI news update](/news/2026-06-13-us-blocks-anthropic-fable-mythos-openai-probe/) (verified 2026-06-13)
+- [Anthropic Fable/Mythos access statement](https://www.anthropic.com/news/fable-mythos-access) (verified 2026-06-15)
+- [Anthropic Claude Opus 4.8 launch](https://www.anthropic.com/news/claude-opus-4-8) (verified 2026-06-15)
+- [Anthropic Claude models](https://platform.claude.com/docs/en/about-claude/models/overview) (verified 2026-06-15)
+- [Claude pricing](https://claude.com/pricing) (verified 2026-06-15)
+- [Claude Agent SDK credit help](https://support.claude.com/en/articles/15036540-use-the-claude-agent-sdk-with-your-claude-plan) (verified 2026-06-15)
+- [AiPedia June 15 AI news desk](/news/2026-06-15-ai-news-desk/) (verified 2026-06-15)
+- [AiPedia Google AI search risk checklist](/news/2026-06-15-google-ai-search-liability-gemini-abuse/) (verified 2026-06-15)
 - [Anthropic Chris Olah remarks on Magnifica Humanitas](https://www.anthropic.com/news/chris-olah-pope-leo-encyclical) (verified 2026-05-26)
-- [Google AI subscriptions](https://gemini.google/subscriptions/) (verified 2026-06-12)
-- [Google One AI plans](https://one.google.com/about/google-ai-plans/) (verified 2026-06-12)
-- [Google Gemini 3.5 announcement](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/) (verified 2026-06-12)
-- [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing) (verified 2026-06-12)
-- [Perplexity Pro](https://www.perplexity.ai/pro) (verified 2026-06-12)
-- [Grok by xAI](https://x.ai/grok) (verified 2026-06-12)
-- [xAI pricing](https://x.ai/pricing) (verified 2026-06-12)
-- [xAI model docs](https://docs.x.ai/developers/models) (verified 2026-06-12)
+- [Google AI subscriptions](https://gemini.google/subscriptions/) (verified 2026-06-15)
+- [Google One AI plans](https://one.google.com/about/google-ai-plans/) (verified 2026-06-15)
+- [Gemini Apps limits](https://support.google.com/gemini/answer/16275805) (verified 2026-06-15)
+- [Google Gemini API model docs](https://ai.google.dev/gemini-api/docs/models) (verified 2026-06-15)
+- [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing) (verified 2026-06-15)
+- [Perplexity Pro](https://www.perplexity.ai/pro) (verified 2026-06-15)
+- [Grok by xAI](https://x.ai/grok) (verified 2026-06-15)
+- [xAI pricing](https://x.ai/pricing) (verified 2026-06-15)
+- [xAI model docs](https://docs.x.ai/developers/models) (verified 2026-06-15)
+- [xAI Grok Build docs](https://docs.x.ai/build/overview) (verified 2026-06-15)
 - [Groq official site](https://groq.com/) (verified 2026-06-12)
 - [Groq pricing](https://groq.com/pricing/) (verified 2026-06-12)
 - [Groq model docs](https://console.groq.com/docs/models) (verified 2026-06-12)
-- [Mistral AI pricing](https://mistral.ai/pricing) (verified 2026-06-12)
-- [Mistral model docs](https://docs.mistral.ai/models/overview) (verified 2026-06-12)
-- [Mistral Search Toolkit](https://mistral.ai/news/search-toolkit) (verified 2026-06-12)
-- [Qwen Cloud model releases](https://docs.qwencloud.com/changelog/models) (verified 2026-06-12)
+- [Mistral AI pricing](https://mistral.ai/pricing) (verified 2026-06-15)
+- [Mistral Vibe product page](https://mistral.ai/products/vibe/) (verified 2026-06-15)
+- [Mistral Vibe agent announcement](https://mistral.ai/news/vibe-agent/) (verified 2026-06-15)
+- [Mistral AI Now Summit 2026](https://mistral.ai/news/ai-now-summit-2026/) (verified 2026-06-15)
+- [Mistral model docs](https://docs.mistral.ai/models/overview) (verified 2026-06-15)
+- [Mistral 3 launch post](https://mistral.ai/news/mistral-3) (verified 2026-06-15)
+- [Mistral Search Toolkit](https://mistral.ai/news/search-toolkit) (verified 2026-06-15)
+- [Qwen Cloud model releases](https://docs.qwencloud.com/changelog/models) (verified 2026-06-15)
 - [Alibaba Cloud Qwen Conference coverage](https://www.eqs-news.com/news/corporate/alibaba-cloud-unveils-advanced-agentic-ai-ecosystem-for-global-customers/a191d39b-db45-48ed-b194-9cce5071b556_en) (verified 2026-05-27)
-- [Qwen3.7-Max model page](https://www.qwencloud.com/models/qwen3.7-max) (verified 2026-06-12)
-- [Qwen3 official blog](https://qwenlm.github.io/blog/qwen3/) (verified 2026-06-12)
+- [Qwen3.7-Max model page](https://www.qwencloud.com/models/qwen3.7-max) (verified 2026-06-15)
+- [Qwen Cloud pricing](https://docs.qwencloud.com/developer-guides/getting-started/pricing) (verified 2026-06-15)
+- [Qwen3.7-Max promotion](https://www.qwencloud.com/promo/discount-qwen) (verified 2026-06-15)
+- [Qwen3 official blog](https://qwenlm.github.io/blog/qwen3/) (verified 2026-06-15)
 - [Z.AI GLM-5.1 docs](https://docs.z.ai/guides/llm/glm-5.1) (verified 2026-06-12)
 - [Z.AI pricing](https://docs.z.ai/guides/overview/pricing) (verified 2026-06-12)
 - [GLM-5.1 on Hugging Face](https://huggingface.co/zai-org/GLM-5.1) (verified 2026-06-12)
@@ -246,8 +275,8 @@ Do not subscribe to multiple chatbots because each one has a new model announcem
 - [OpenAI MUFG ChatGPT Enterprise customer story](https://openai.com/index/mufg/) (verified 2026-05-31)
 - [Microsoft 365 Copilot redesign](https://www.microsoft.com/en-us/microsoft-365/blog/2026/05/28/introducing-a-new-design-for-microsoft-365-copilot/) (verified 2026-05-31)
 - [OpenAI ChatGPT release notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes) (verified 2026-06-12)
-- [Anthropic Project Glasswing expansion](https://www.anthropic.com/news/expanding-project-glasswing) (verified 2026-06-12)
-- [Google Workspace Gemini Drive sharing](https://workspaceupdates.googleblog.com/2026/04/share-chats-canvases-and-generated-media-from-the-Gemini-app-securely-via-Google-Drive.html) (verified 2026-06-12)
+- [Anthropic Project Glasswing expansion](https://www.anthropic.com/news/expanding-project-glasswing) (verified 2026-06-14)
+- [Google Workspace Gemini Drive sharing](https://workspaceupdates.googleblog.com/2026/04/share-chats-canvases-and-generated-media-from-the-Gemini-app-securely-via-Google-Drive.html) (verified 2026-06-14)
 - [AnythingLLM cloud pricing](https://anythingllm.com/cloud) (verified 2026-06-12)
 - [AnythingLLM GitHub releases](https://github.com/Mintplex-Labs/anything-llm/releases) (verified 2026-06-12)
 - [Character.AI c.ai+ pricing](https://character.ai/subscription/plus/pricing) (verified 2026-06-12)

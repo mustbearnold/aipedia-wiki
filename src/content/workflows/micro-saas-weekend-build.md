@@ -3,13 +3,13 @@ type: workflow
 slug: micro-saas-weekend-build
 title: "Ship a Micro-SaaS Weekend MVP with Cursor, Supabase, Vercel, and Stripe"
 seo_title: "Ship a Micro-SaaS Weekend MVP with AI Coding Tools (2026)"
-meta_description: "Updated June 12, 2026: a source-backed weekend MVP workflow using Cursor, Supabase, Vercel, and Stripe without fake fixed-cost or time-saved claims."
+meta_description: "Updated June 14, 2026: a source-backed weekend MVP workflow using Cursor, Supabase, Vercel Functions, and Stripe without fake fixed-cost or time-saved claims."
 description: "Build a small authenticated, billable MVP with AI-assisted coding, Supabase, Vercel, and Stripe while keeping scope, security, and billing risk under control."
 stack: [cursor]
 tools_mentioned: [cursor]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-14
+last_verified: 2026-06-14
 update_frequency: monthly
 ---
 
@@ -17,7 +17,7 @@ update_frequency: monthly
 
 A weekend micro-SaaS build should prove a narrow buyer workflow, not pretend a two-day prototype is a production company. The right stack is boring on purpose: AI-assisted coding, managed auth/database, simple hosting, and a payment flow you can test before asking strangers for money.
 
-**AiPedia verdict, verified June 12, 2026:** use [Cursor](/tools/cursor/) for the coding surface (Opus 4.8 for planning, GPT-5.5 for high-volume edits, Gemini 3.1 Pro for fast scaffolds), [Supabase](https://supabase.com/pricing) for Postgres/auth/storage, [Vercel](https://vercel.com/docs/plans/hobby) for the frontend deploy, and [Stripe](https://stripe.com/pricing) or [Lemon Squeezy](https://www.lemonsqueezy.com/pricing) for payments. Use Cloudflare Workers only when you need edge functions, queues, or Cloudflare-native routing; do not make it mandatory for every weekend MVP.
+**AiPedia verdict, verified June 14, 2026:** use [Cursor](/tools/cursor/) for the coding surface, [Supabase](https://supabase.com/pricing) for Postgres/auth/storage, [Vercel](https://vercel.com/docs/git) for Git-linked preview and production deploys, [Vercel Functions](https://vercel.com/docs/functions) for API routes and payment webhooks, and [Stripe](https://stripe.com/pricing) or [Lemon Squeezy](https://www.lemonsqueezy.com/pricing) for payments. Keep the weekend MVP on one Vercel deployment path unless a real constraint proves you need another runtime.
 
 **Do not publish this as "ship a full SaaS in 48 hours."** A weekend build can validate the idea, collect emails, run a paid test, or serve a small first cohort. It still needs security review, billing tests, database policies, backups, monitoring, and customer support before it deserves real production trust.
 
@@ -25,11 +25,11 @@ A weekend micro-SaaS build should prove a narrow buyer workflow, not pretend a t
 
 ## The Short Version
 
-- **Build surface:** [Cursor](/tools/cursor/) for fast editing, review, and AI-assisted implementation on Opus 4.8, GPT-5.5, or Gemini 3.1 Pro.
+- **Build surface:** [Cursor](/tools/cursor/) for fast editing, review, and AI-assisted implementation.
 - **Backend:** Supabase for Postgres, auth, storage, and row-level security.
 - **Frontend deploy:** Vercel for GitHub-linked preview and production deploys.
 - **Payments:** Stripe Checkout/Billing for direct payment control, or Lemon Squeezy if merchant-of-record tax handling matters more.
-- **Edge/functions:** Cloudflare Workers only if your app genuinely needs Workers, queues, Durable Objects, or Cloudflare routing.
+- **API and webhooks:** Vercel Functions first, so auth callbacks, payment webhooks, logs, env vars, previews, and production deploys stay in one control plane.
 - **Human checkpoint:** review auth, database access, payment webhooks, error states, and mobile layout before launch.
 
 ---
@@ -77,7 +77,7 @@ Use Cursor for the first working slice:
 - basic error states,
 - mobile-first layout pass.
 
-Cursor is useful here because the task is concrete and reviewable. In June 2026 the practical model split is: GPT-5.5 for the bulk scaffold, Gemini 3.1 Pro for fast UI iteration, Opus 4.8 for any multi-file planning or test design. Keep the file structure simple. Do not ask the agent to create a clever architecture for a product that has no users yet.
+Cursor is useful here because the task is concrete and reviewable. Keep expensive or slower model usage for planning, test design, and hard multi-file debugging; use faster edits for routine scaffolding. Keep the file structure simple. Do not ask the agent to create a clever architecture for a product that has no users yet.
 
 ### 3. Create Supabase tables and auth
 
@@ -110,11 +110,11 @@ Use Lemon Squeezy when merchant-of-record handling, VAT/sales-tax collection, pr
 
 Do not add payments before the core user workflow succeeds without payment. Failed product flow plus working payments is the wrong kind of launch.
 
-### 6. Use Cloudflare Workers only for a reason
+### 6. Keep server-side work on Vercel first
 
-Cloudflare Workers can be excellent for edge functions, request routing, queues, durable state, and platform-style workloads. But a simple weekend SaaS often does not need Workers on day one if Vercel and Supabase already cover the app.
+Use Vercel Functions for the first API routes, payment webhooks, lightweight background work, and AI streaming endpoints. Vercel's current docs describe multiple function runtimes, including Node.js and the Edge runtime, while Git-linked deployments create previews for every push and production deploys from the production branch.
 
-Cloudflare's current Workers pricing is usage-shaped and product-specific. Treat it as an architecture choice, not a mandatory free line item.
+The practical rule is boring but useful: start with the same platform that deploys the app. Add another runtime only after you can name the missing capability, the traffic pattern, the operational owner, and the cost impact.
 
 ---
 
@@ -141,7 +141,7 @@ Before showing the app to users:
 
 **The app looks fine on desktop and breaks on mobile.** Fix by treating 390px as the default build target, not a final polish pass.
 
-**The stack cost is misunderstood.** Cursor, Supabase, Vercel, Stripe, Lemon Squeezy, and Cloudflare all have usage or plan limits. Budget with headroom.
+**The stack cost is misunderstood.** Cursor, Supabase, Vercel, Stripe, and Lemon Squeezy all have usage or plan limits. Budget with headroom.
 
 **The product scope explodes.** Fix by shipping one paid workflow, not a platform.
 
@@ -155,7 +155,7 @@ Before showing the app to users:
 | Database and auth | Supabase free/testing path | Supabase Pro when backups, production controls, or usage justify it |
 | Frontend deploy | Vercel Hobby for personal tests | Vercel Pro when commercial/team limits matter |
 | Payments | Stripe test mode or Lemon Squeezy test product | Live payments after auth and core workflow work |
-| Edge functions | Skip for most MVPs | Cloudflare Workers when edge/routing/queue needs are real |
+| API routes and webhooks | Vercel Functions in the same project | Another runtime only after Vercel limits or architecture needs are real |
 
 ---
 
@@ -175,8 +175,8 @@ Yes, but only after the core workflow, auth, webhook handling, refund path, and 
 **Is Supabase free enough?**
 Often for early testing, but production buyers should evaluate backups, logs, project limits, monthly active users, storage, bandwidth, and support needs against the current Supabase pricing page.
 
-**Should I use Cloudflare Workers or Vercel functions?**
-Use the platform that matches the app. Vercel is simpler for a typical frontend app deployed from GitHub. Cloudflare Workers makes more sense for Cloudflare-native edge workloads, queues, routing, or platform-style services.
+**Should I add another functions platform?**
+Usually no. For a typical weekend MVP deployed from GitHub, Vercel Functions keeps API routes, payment webhooks, environment variables, previews, logs, and production releases in the same operational path. Add another runtime only when Vercel's current limits or your architecture make that tradeoff explicit.
 
 **Should I use Stripe or Lemon Squeezy?**
 Use Stripe for direct SaaS payment infrastructure and control. Use Lemon Squeezy when merchant-of-record tax handling and digital-product workflows are more valuable than direct platform control.
@@ -186,15 +186,14 @@ Building too much before testing the one workflow that proves whether anyone wan
 
 ## Sources
 
-- [Cursor pricing](https://cursor.com/pricing), verified 2026-06-12
-- [Cursor usage docs](https://docs.cursor.com/account/usage), verified 2026-06-12
-- [Supabase pricing](https://supabase.com/pricing), verified 2026-06-12
-- [Supabase monthly active users docs](https://supabase.com/docs/guides/platform/manage-your-usage/monthly-active-users), verified 2026-06-12
-- [Vercel Hobby plan docs](https://vercel.com/docs/plans/hobby), verified 2026-06-12
-- [Vercel pricing docs](https://vercel.com/docs/pricing), verified 2026-06-12
-- [Stripe pricing](https://stripe.com/pricing), verified 2026-06-12
-- [Lemon Squeezy pricing](https://www.lemonsqueezy.com/pricing), verified 2026-06-12
-- [Cloudflare Workers pricing](https://workers.cloudflare.com/pricing), verified 2026-06-12
-- [Cloudflare Workers platform pricing docs](https://developers.cloudflare.com/workers/platform/pricing/), verified 2026-06-12
+- [Cursor pricing](https://cursor.com/pricing), verified 2026-06-14
+- [Supabase pricing](https://supabase.com/pricing), verified 2026-06-14
+- [Supabase monthly active users docs](https://supabase.com/docs/guides/platform/manage-your-usage/monthly-active-users), verified 2026-06-14
+- [Vercel Git deployment docs](https://vercel.com/docs/git), verified 2026-06-14
+- [Vercel Hobby plan docs](https://vercel.com/docs/plans/hobby), verified 2026-06-14
+- [Vercel Functions docs](https://vercel.com/docs/functions), verified 2026-06-14
+- [Vercel runtime docs](https://vercel.com/docs/functions/runtimes), verified 2026-06-14
+- [Stripe pricing](https://stripe.com/pricing), verified 2026-06-14
+- [Lemon Squeezy pricing](https://www.lemonsqueezy.com/pricing), verified 2026-06-14
 
 ---

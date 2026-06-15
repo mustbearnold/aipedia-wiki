@@ -5,10 +5,10 @@ title: AI Search & Research Tools
 description: AI answer engines, private search, research notebooks, semantic search APIs, and source-backed research assistants.
 tool_count: 8
 seo_title: "Best AI Search and Research Tools (June 2026)"
-meta_description: "Updated June 12, 2026: compare Perplexity, Kagi, You.com APIs, Comet, ChatGPT Search, Google AI Mode, NotebookLM, Exa, Weaviate/Engram, Morphic, and Phind migration paths by citations, privacy, APIs, and buyer fit."
+meta_description: "Updated June 15, 2026: compare Perplexity, Kagi, You.com APIs, Comet, ChatGPT Search, Google AI Mode, NotebookLM, Exa, Weaviate/Engram, Grok X Search, Morphic, and Phind migration paths by citations, privacy, APIs, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-15
+last_verified: 2026-06-15
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -24,13 +24,13 @@ top_picks:
 
 ## Quick Decision
 
-AI search is not one category anymore. Buyers now choose between **cited answer engines**, **Google-native AI search**, **owned-document research**, **private paid search**, **developer search APIs**, and **real-time social/current-events context**.
+AI search is not one category anymore. Buyers now choose between **cited answer engines**, **Google-native AI search**, **owned-document research**, **private paid search**, **developer search APIs**, and **real-time social/current-events context**. The June 15 Grok recheck keeps xAI in the social-current context lane while moving Grok Build into the coding comparison set: use Grok here when X Search is the source, but verify important claims against primary sources before publishing or buying.
 
-**Use [Perplexity](/tools/perplexity/) when the job is cited open-web answers.** It remains the strongest default for people who want an answer engine with source links, follow-up research, spaces, Pro/Max paths, Enterprise controls, Comet/Computer, limited paid asset/video generation for research outputs, and API surfaces like Sonar, Search API, Agent API, tools, embeddings, and media responses. The June 5 [Elicit vs Perplexity](/compare/elicit-vs-perplexity/) refresh keeps the buyer boundary clear: Perplexity is for current cited web research; Elicit is for paper screening, extraction, and systematic-review workflow.
+**Use [Perplexity](/tools/perplexity/) when the job is cited open-web answers.** It remains the strongest default for people who want an answer engine with source links, follow-up research, spaces, Pro/Max paths, Enterprise controls, Comet/Computer, limited paid asset/video generation for research outputs, and API surfaces like Sonar, Search API, Agent API, tools, embeddings, and media responses. The June 15 [Perplexity](/tools/perplexity/) refresh keeps pricing intact while adding a harder buyer rule: citations are a source trail, not proof, so customer-facing AI search needs saved source logs, source-quality review, action approvals, and API/tool budget caps.
 
 **June 6 Perplexity vs ChatGPT update:** [Perplexity vs ChatGPT](/compare/perplexity-vs-chatgpt/) now gives Perplexity the answer-engine lane and ChatGPT the general AI workbench lane. Buyers who need source trails, market scans, vendor checks, and current web due diligence should start with Perplexity; buyers who need writing, coding, files, data, image, voice, and agent workflows should start with ChatGPT and add source discipline when browsing.
 
-**Use [Comet](/tools/comet/) when the search workflow should live inside the browser.** Comet is the Perplexity browser lane for users who want AI search, page context, shopping/research help, and everyday web actions closer to tabs instead of a separate answer-engine page.
+**Use [Comet](/tools/comet/) when the search workflow should live inside the browser.** Comet is the Perplexity browser lane for users who want AI search, page context, shopping/research help, and everyday web actions closer to tabs instead of a separate answer-engine page. The June 15 Comet recheck keeps the free-first rule: upgrade Perplexity only when Comet Agent queries, Max Assistant, Computer credits, advanced models, or team controls become the actual bottleneck, and require explicit review before Comet handles email, finance, shopping, account, file, or checkout actions.
 
 **Use [Dia](/tools/dia/) when browser context, tabs, meetings, and connected work apps are the AI surface.** The June 2 check found Dia explicitly positioned as part of Atlassian, with SSO, MDM controls, admin-managed profiles, SOC 2 Type II coverage, and provider no-training restrictions now surfaced on the security page. It is still a user browser, not a programmable browser automation API.
 
@@ -38,11 +38,13 @@ AI search is not one category anymore. Buyers now choose between **cited answer 
 
 **Use [ChatGPT](/tools/chatgpt/) when search is only one part of the workflow.** ChatGPT Search is the better Perplexity alternative when the buyer also wants writing, coding, file analysis, images, voice, data analysis, projects, and everyday assistant work.
 
-**Use [Gemini](/tools/gemini/) and Google AI Mode when the buyer already lives in Google.** Google's current AI Mode and AI Overviews updates focus on helping users find relevant websites, deep insights, and original content across the web. Google AI Plans connect Gemini, Deep Research, AI Mode, Workspace, NotebookLM, and Chrome features depending on plan and region.
+**Use [Gemini](/tools/gemini/) and Google AI Mode when the buyer already lives in Google.** Google's current AI Mode and AI Overviews updates focus on helping users find relevant websites, deep insights, and original content across the web. Google AI Plans connect Gemini, Deep Research, AI Mode, Workspace, NotebookLM, and Chrome features depending on plan and region, while Gemini API grounding carries separate per-query pricing after the shared Gemini 3 monthly search-grounding allowance. The June 15 Gemini check keeps the Google-native search lane intact, but API buyers should still price the exact model, grounding, and account route rather than assuming app-plan search limits transfer to production workloads.
+
+**June 15 AI search liability update:** [The June 15 news desk](/news/2026-06-15-ai-news-desk/) adds the German AI Overviews liability ruling and Google's Gemini-related phishing lawsuit coverage to this category's buyer checklist, while the companion [Google AI search risk checklist](/news/2026-06-15-google-ai-search-liability-gemini-abuse/) turns it into procurement questions. The takeaway is not "avoid AI search." It is that source logs, visible citations, review paths, abuse controls, and budget caps matter whenever AI search or generated summaries become customer-facing or publishable output.
 
 **June 5 Gemini vs Perplexity update:** [Gemini vs Perplexity](/compare/gemini-vs-perplexity/) now keeps the boundary clean: Gemini is the Google-native research and productivity workspace, while Perplexity is the cited open-web answer engine. Buyers who need Google files, NotebookLM, Workspace, and AI Mode should start with Gemini; buyers who need visible source trails for every serious web answer should start with Perplexity.
 
-**Use [NotebookLM](/tools/notebooklm/) when the source set is already known.** It is a research notebook for documents, reports, transcripts, Drive files, and study materials, not a pure open-web search replacement.
+**Use [NotebookLM](/tools/notebooklm/) when source review matters more than open-ended web chat.** The June 15 NotebookLM recheck keeps it in the source-grounded notebook lane, but the current help table now makes Deep Research, data tables, infographics, slide decks, Audio/Video Overview limits, and Cloud/Workspace data-handling routes part of the buying decision. Use source discovery to speed up source-pack building, not to skip source-quality review.
 
 **Use [Kagi](/tools/kagi/) when privacy and search control matter.** It is the paid, ad-free search choice for people who want ranking controls and Assistant features rather than an answer-engine-first product. The June 5 [Exa vs Kagi](/compare/exa-vs-kagi/) refresh keeps the boundary clear: Kagi is the human-facing paid search product; Exa is the developer retrieval API.
 
@@ -70,30 +72,30 @@ AI search is not one category anymore. Buyers now choose between **cited answer 
 
 | Buyer job | Start with | Why | Watch out |
 |---|---|---|---|
-| Cited open-web answers | [Perplexity](/tools/perplexity/) | Best answer-engine workflow for sources, follow-ups, and research spaces | Pro/Max/Enterprise/API plan details change quickly |
-| AI browser workflow | [Comet](/tools/comet/) | Keeps Perplexity-style assistance closer to tabs, pages, and web tasks | Browser availability and plan packaging can move quickly |
+| Cited open-web answers | [Perplexity](/tools/perplexity/) | Best answer-engine workflow for sources, follow-ups, and research spaces | Citations still need source-quality checks, review ownership, and plan/API budget caps |
+| AI browser workflow | [Comet](/tools/comet/) | Keeps Perplexity-style assistance closer to tabs, pages, and web tasks | Sensitive delegated actions need explicit approval; paid capacity matters only when Comet Agent, Max Assistant, or Computer limits block real work |
 | Work-context AI browser | [Dia](/tools/dia/) | Page-aware assistance over tabs and connected apps, now under Atlassian with more enterprise posture detail | macOS-only and not a deterministic automation API |
 | General AI workspace with search | [ChatGPT](/tools/chatgpt/) | Search plus writing, files, code, data, image, voice, and projects | Requires source discipline for serious research |
 | Google-native search and research | [Gemini](/tools/gemini/) | AI Mode, AI Overviews, Deep Research, Workspace, NotebookLM, and Chrome fit | Google ecosystem lock-in and regional feature limits |
-| Owned-source research | [NotebookLM](/tools/notebooklm/) | Best for selected PDFs, notes, reports, calls, classes, and Drive material | Not a full web discovery engine |
+| Owned-source research | [NotebookLM](/tools/notebooklm/) | Best for selected PDFs, notes, reports, calls, classes, Drive material, and source-pack artifacts | Discovery and Deep Research still need source-quality review; no public NotebookLM API |
 | Private paid search | [Kagi](/tools/kagi/) | Ad-free search, lenses, ranking controls, Assistant options | Paid search is a harder sell for casual users |
 | Search/retrieval API | [Exa](/tools/exa/) | Search, contents, answer, monitors, summaries, and Agent primitives for AI apps | Value depends on integration quality, request economics, extra results, summaries, monitor usage, enrichment, and Agent effort |
 | Product RAG and agent memory | [Weaviate](/tools/weaviate/) | Open vector database, managed cloud, hybrid search, hosted embeddings, Query Agent, and Engram memory/context service | Infrastructure ownership, index design, add-on pricing, and app-layer permissions still matter |
 | Search-to-deliverable AI workspace | [Genspark](/tools/genspark/) | Turns research into docs, slides, sheets, calls, media, and agent outputs | Credit burn and enterprise/API availability need direct verification |
 | Enterprise work search | [Glean](/tools/glean/) | Permission-aware search and agents over company apps and knowledge | Contact-sales pricing and connector/security review are mandatory |
 | Self-hosted answer engine | [Morphic](/tools/morphic/) | Apache 2.0, forkable answer-engine stack with BYOK model/search routing | Requires deployment, provider keys, search-backend setup, and no first-party hosted SLA |
-| Real-time social context | [Grok](/tools/grok/) | Useful when X-native context is the source of the question | Social data can be noisy, biased, or incomplete |
+| Real-time social context | [Grok](/tools/grok/) | Useful when X-native context, X Search, and Grok's live social signal are the source of the question | Social data can be noisy, biased, incomplete, and separate from source-backed web research |
 | Grounding and research APIs | [You.com](/tools/you-com/) | Search, Contents, Research, and Finance Research APIs for agents and LLM apps | Not a consumer chat-plan replacement; benchmark against Exa, Tavily, Brave Search API, and Perplexity Sonar |
 
 ## Our Picks
 
-**Best overall AI answer engine: Perplexity.** Use it when citations, source trails, and open-web synthesis are the actual job.
+**Best overall AI answer engine: Perplexity.** Use it when citations, source trails, and open-web synthesis are the actual job, then preserve the cited trail and review the sources before publishing.
 
 **Best Perplexity alternative:** [ChatGPT Search](/tools/chatgpt/) for people who want research to continue into drafting, analysis, code, files, and multimodal work.
 
 **Best Google-native option:** [Gemini](/tools/gemini/) because AI Mode, AI Overviews, Google AI Plans, Deep Research, Workspace, and NotebookLM now overlap heavily with research intent.
 
-**Best source-notebook:** [NotebookLM](/tools/notebooklm/) when the buyer wants to interrogate a controlled source library.
+**Best source-notebook:** [NotebookLM](/tools/notebooklm/) when the buyer wants to interrogate a reviewed source library and turn it into study or research artifacts.
 
 **Best private search:** [Kagi](/tools/kagi/) for buyers who want to pay for search quality, privacy, and ranking control.
 
@@ -133,20 +135,28 @@ Do not leave this category stale. Google AI Mode, Perplexity Pro/Max/Enterprise,
 
 ## Sources
 
-- [Perplexity Comet](https://www.perplexity.ai/comet) (verified 2026-06-12)
+- [Perplexity Comet](https://www.perplexity.ai/comet) (verified 2026-06-15)
 - [Dia website](https://www.diabrowser.com) (verified 2026-06-12)
 - [Dia security](https://www.diabrowser.com/security) (verified 2026-06-12)
-- [Perplexity Pro](https://www.perplexity.ai/pro) (verified 2026-06-12)
-- [Perplexity Max help](https://www.perplexity.ai/help-center/en/articles/11680686-perplexity-max) (verified 2026-06-12)
-- [Perplexity Enterprise](https://www.perplexity.ai/enterprise) (verified 2026-06-12)
-- [Perplexity API pricing](https://docs.perplexity.ai/docs/getting-started/pricing) (verified 2026-06-12)
-- [Perplexity Agent API tools](https://docs.perplexity.ai/docs/agent-api/tools) (verified 2026-06-12)
-- [Perplexity Sonar media docs](https://docs.perplexity.ai/docs/sonar/media) (verified 2026-06-12)
-- [Perplexity Enterprise pricing](https://www.perplexity.ai/enterprise/pricing) (verified 2026-06-12)
+- [Perplexity Pro](https://www.perplexity.ai/pro) (verified 2026-06-15)
+- [Perplexity Max help](https://www.perplexity.ai/help-center/en/articles/11680686-perplexity-max) (verified 2026-06-15)
+- [Perplexity Enterprise](https://www.perplexity.ai/enterprise) (verified 2026-06-15)
+- [Perplexity API pricing](https://docs.perplexity.ai/docs/getting-started/pricing) (verified 2026-06-15)
+- [Perplexity Agent API tools](https://docs.perplexity.ai/docs/agent-api/tools) (verified 2026-06-15)
+- [Perplexity Sonar media docs](https://docs.perplexity.ai/docs/sonar/media) (verified 2026-06-15)
+- [Perplexity Enterprise pricing](https://www.perplexity.ai/enterprise/pricing) (verified 2026-06-15)
+- [Perplexity API privacy and security](https://docs.perplexity.ai/docs/resources/privacy-security) (verified 2026-06-15)
+- [Perplexity security](https://www.perplexity.ai/hub/security) (verified 2026-06-15)
 - [ChatGPT Search Help](https://help.openai.com/en/articles/9237897-chatgpt-search) (verified 2026-06-12)
 - [Google AI Mode and AI Overviews updates](https://blog.google/products-and-platforms/products/search/explore-web-generative-ai-search/) (verified 2026-06-12)
-- [Google AI Plans](https://one.google.com/about/google-ai-plans/) (verified 2026-06-12)
-- [NotebookLM upgrade docs](https://support.google.com/notebooklm/answer/16213268) (verified 2026-06-12)
+- [Google AI Plans](https://one.google.com/about/google-ai-plans/) (verified 2026-06-15)
+- [Gemini Grounding with Google Search](https://ai.google.dev/gemini-api/docs/google-search) (verified 2026-06-15)
+- [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing) (verified 2026-06-15)
+- [AiPedia June 15 AI news desk](/news/2026-06-15-ai-news-desk/) (verified 2026-06-15)
+- [AiPedia Google AI search risk checklist](/news/2026-06-15-google-ai-search-liability-gemini-abuse/) (verified 2026-06-15)
+- [WIRED AI Overviews liability report](https://www.wired.com/story/a-court-has-ruled-that-google-is-liable-for-false-statements-generated-by-ai-overviews/) (verified 2026-06-15)
+- [NotebookLM upgrade docs](https://support.google.com/notebooklm/answer/16213268) (verified 2026-06-15)
+- [The Verge NotebookLM Gemini 3.5 update](https://www.theverge.com/tech/944325/google-notebooklm-ai-gemini-update) (verified 2026-06-15)
 - [Kagi pricing](https://kagi.com/pricing) (verified 2026-06-12)
 - [Kagi Assistant docs](https://help.kagi.com/kagi/ai/assistant.html) (verified 2026-06-12)
 - [Kagi Ultimate plan docs](https://help.kagi.com/kagi/plans/ultimate-plan.html) (verified 2026-06-12)
@@ -164,9 +174,10 @@ Do not leave this category stale. Google AI Mode, Perplexity Pro/Max/Enterprise,
 - [Morphic v1.4.0 release notes](https://github.com/miurla/morphic/releases/tag/v1.4.0) (verified 2026-06-12)
 - [You.com pricing](https://you.com/pricing) (verified 2026-06-12)
 - [You.com API docs](https://you.com/docs/get-started/quickstart) (verified 2026-06-12)
-- [Grok by xAI](https://x.ai/grok) (verified 2026-06-12)
-- [xAI pricing](https://x.ai/pricing) (verified 2026-06-12)
-- [xAI model docs](https://docs.x.ai/developers/models) (verified 2026-06-12)
+- [Grok by xAI](https://x.ai/grok) (verified 2026-06-15)
+- [xAI pricing](https://x.ai/pricing) (verified 2026-06-15)
+- [xAI model docs](https://docs.x.ai/developers/models) (verified 2026-06-15)
+- [xAI X Search docs](https://docs.x.ai/developers/tools/x-search) (verified 2026-06-15)
 - [X Premium+ pricing](https://help.x.com/en/premium-plus-price-update) (verified 2026-06-12)
 - [Bing AI-guided image search](https://blogs.bing.com/search/May-2026/A-Smarter-Way-to-Explore-Images-Has-Come-to-Bing) (verified 2026-05-26)
 - [Phind shutdown retrospective](https://www.toolsforhumans.ai/ai-tools/phind) (verified 2026-06-12)

@@ -1,29 +1,33 @@
 ---
 type: news
 slug: 2026-06-11-ai-news-desk
-title: "AI News Desk, June 11, 2026: DXC puts Claude in regulated systems, Claude Corps, Codex banking, and DiffusionGemma"
+title: "AI News Desk, June 11, 2026: DXC puts Claude in regulated systems, OpenAI agrees to buy Ona, Codex banking, and DiffusionGemma"
 date: 2026-06-11
 severity: major
-summary: "The June 11 AI news desk: Anthropic lands a DXC alliance to embed Claude in banks and airlines, launches a $150M Claude Corps nonprofit fellowship, OpenAI adds rate-limit reset banking to Codex, and Google DeepMind ships the experimental open text-diffusion model DiffusionGemma."
+summary: "The June 11 AI news desk: Anthropic lands a DXC alliance to embed Claude in banks and airlines, launches a $150M Claude Corps nonprofit fellowship, OpenAI agrees to acquire Ona for persistent Codex cloud execution, adds rate-limit reset banking to Codex, and Google DeepMind ships the experimental open text-diffusion model DiffusionGemma."
 categories: [ai-coding, ai-automation, ai-infrastructure, ai-chatbots]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-13
-last_verified: 2026-06-13
+last_updated: 2026-06-15
+last_verified: 2026-06-15
 related_tools: [claude, claude-code, codex, chatgpt, gemini, cursor]
 sources:
   - url: https://www.anthropic.com/news/dxc-anthropic-alliance
     title: "Anthropic: DXC will integrate Claude into the systems regulated industries rely on"
   - url: https://www.anthropic.com/news
     title: "Anthropic: Introducing Claude Corps (newsroom, June 11, 2026)"
+  - url: https://openai.com/index/openai-to-acquire-ona/
+    title: "OpenAI: OpenAI to acquire Ona"
+  - url: https://ona.com/stories/ona-joins-openai
+    title: "Ona: Ona is joining OpenAI"
   - url: https://developers.openai.com/codex/changelog
     title: "OpenAI: Codex changelog (app 26.609, June 11, 2026)"
   - url: https://blog.google/innovation-and-ai/technology/developers-tools/diffusion-gemma-faster-text-generation/
     title: "Google: DiffusionGemma, 4x faster text generation"
 ---
 
-# AI News Desk, June 11, 2026: DXC puts Claude in regulated systems, Claude Corps, Codex banking, and DiffusionGemma
+# AI News Desk, June 11, 2026: DXC puts Claude in regulated systems, OpenAI agrees to buy Ona, Codex banking, and DiffusionGemma
 
-This is the **June 11, 2026 AiPedia news desk**, verified against primary sources on June 13. The day's through-line is distribution. The frontier labs spent the week pushing models into places they were not before: regulated enterprise systems, under-resourced nonprofits, and faster local hardware.
+This is the **June 11, 2026 AiPedia news desk**, verified against primary sources on June 15. The day's through-line is distribution and control. The frontier labs spent the week pushing models into places they were not before: regulated enterprise systems, persistent cloud workspaces, under-resourced nonprofits, and faster local hardware.
 
 No duplicate coverage note: this desk summarizes the day's buyer signals and links to the standalone pieces rather than repeating them.
 
@@ -39,13 +43,19 @@ Anthropic committed $150 million to Claude Corps, a fellowship placing 1,000 tra
 
 Read the standalone analysis: [Anthropic launches Claude Corps, a $150M fellowship to embed 1,000 AI fellows in nonprofits](/news/2026-06-11-anthropic-claude-corps-fellowship/).
 
-## 3. OpenAI makes Codex limits feel less arbitrary
+## 3. OpenAI agrees to buy the persistent execution layer Codex needs
+
+OpenAI announced an agreement to acquire Ona and bring its secure cloud execution and orchestration technology into Codex. The acquisition is still subject to closing conditions and regulatory approvals, but the buyer signal is clear: long-running coding agents need governed cloud workspaces, scoped credentials, audit logs, and review paths, not just stronger models.
+
+Read the standalone analysis: [OpenAI to acquire Ona, giving Codex a persistent cloud workspace for long-running agents](/news/2026-06-11-openai-acquires-ona-codex-persistent-agents/).
+
+## 4. OpenAI makes Codex limits feel less arbitrary
 
 Codex app 26.609 lets Plus and Pro users bank a rate-limit reset and trigger it when they actually hit the ceiling, plus a referral program where both people earn a banked reset and shared workspace credits for Business members. It is a small, daily-driver quality-of-life change in a market where limits and cost predictability decide which coding agent stays open all day.
 
 Read the standalone analysis: [OpenAI adds rate-limit reset banking and referrals to Codex for Plus and Pro users](/news/2026-06-11-openai-codex-rate-limit-banking/).
 
-## 4. Google DeepMind ships a fast, experimental open model
+## 5. Google DeepMind ships a fast, experimental open model
 
 Google released DiffusionGemma, an Apache 2.0 open-weights model that writes text by diffusion, denoising blocks of 256 tokens in parallel instead of one token at a time. It reaches 1000+ tokens per second on an H100 and runs on a high-end consumer GPU, but Google says quality trails standard Gemma 4, so treat it as a fast local draft engine, not a production replacement.
 
@@ -53,4 +63,4 @@ Read the standalone analysis: [Google DeepMind ships DiffusionGemma, an experime
 
 ## Desk verdict
 
-June 11 is a distribution day. Anthropic is competing on where Claude runs and who is trained to deploy it, in regulated systems through DXC and across nonprofits through Claude Corps. OpenAI is fighting on the daily friction of limits. Google is pushing open weights and local speed. The buyer takeaway: the model score matters less than the answers to where it runs, who governs it, and what it costs you on a heavy day.
+June 11 is a distribution and control day. Anthropic is competing on where Claude runs and who is trained to deploy it, in regulated systems through DXC and across nonprofits through Claude Corps. OpenAI is moving to acquire persistent execution infrastructure for Codex while fighting the daily friction of limits. Google is pushing open weights and local speed. The buyer takeaway: the model score matters less than the answers to where it runs, who governs it, and what it costs you on a heavy day.

@@ -5,10 +5,10 @@ title: AI Automation & Agents
 description: Current workflow automation, AI agent platforms, meeting automation, call automation, and operations tools for technical teams, non-technical operators, GTM workflows, customer success, support, sales, and internal automation.
 tool_count: 27
 seo_title: "Best AI Automation Tools & Agent Platforms (June 2026)"
-meta_description: "Updated June 12, 2026: compare n8n, Zapier, Make, Workato, Taskade, Rows, Voiceflow, watsonx Orchestrate, Tines, Reclaim.ai, Instantly, Intercom, Gumloop, Relevance AI, Activepieces, AG2, CrewAI, Langflow, Langfuse, LangGraph, Letta, Dust, Glean, Goose, OpenClaw, Browserbase, Modal, Apollo, Lindy, Pipedream, CloudTalk, and MeetGeek by workflow, pricing unit, AI orchestration, governance, and risk."
+meta_description: "Updated June 15, 2026: compare n8n, Zapier, Make, Workato, Microsoft Agent Framework, Taskade, Rows, Voiceflow, watsonx Orchestrate, Tines, Reclaim.ai, Intercom, Gumloop, Relevance AI, Activepieces, AG2, CrewAI, Langflow, Langfuse, LangGraph, Letta, Glean, Goose, OpenClaw, Browserbase, Modal, Apollo, Lindy, Pipedream, CloudTalk, and MeetGeek by workflow, pricing unit, AI orchestration, governance, and risk."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-15
+last_verified: 2026-06-15
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -26,13 +26,15 @@ top_picks:
 
 AI automation now splits into four buyer jobs: deterministic workflow automation, AI-assisted workflow building, delegated agent workforces, and vertical revenue/support automation. Do not buy by hype. Start with the workflow owner, the billing unit, and the failure risk.
 
+**June 15 Microsoft agent-framework update:** [Microsoft Agent Framework](/tools/microsoft-agent-framework/) remains the Microsoft-aligned open-source agent framework, but the current check sharpens the watch-out. GitHub releases now show dotnet-1.10.0 from June 10 and python-1.8.1 from June 9, with recent breaking or experimental notes, so production teams should pin package versions. Work IQ is still a dated rollout boundary as of June 15: Microsoft's licensing notice says Work IQ API general availability is June 16, 2026 and billing draws down Copilot Credits, not a separate Work IQ API SKU. Do not treat Work IQ-backed agents as free just because Agent Framework itself is MIT open source.
+
 **June 3 agent-stack update:** Microsoft's [Build 2026 Work IQ and Foundry announcements](/news/2026-06-02-microsoft-build-work-iq-agent-stack/), GitHub's [Copilot SDK GA plus AI Credits migration](/news/2026-06-02-github-copilot-ai-credits-sdk-ga/), NVIDIA's [enterprise and physical-AI agent stack](/news/2026-06-01-nvidia-agents-physical-ai-gtc-taipei/), and the [enterprise-agent roundup](/news/2026-06-02-enterprise-agent-roundup-postman-relationalai-7ai-white-house/) make one rule sharper: agents are safest when they inherit permissioned context, log actions, expose spend, and route risky writes through review. Generic "autonomous" claims are weaker than tenant boundaries, tool scopes, audit logs, budget controls, and task-specific runtime evidence.
 
 **June 12 local-agent update:** [OpenClaw](/tools/openclaw/) stays in the high-control, high-risk lane. The current GitHub README shows 22+ supported messaging surfaces, DM pairing defaults, explicit public-DM opt-in, `openclaw doctor`, and non-main sandbox guidance, while June 2026 security coverage reinforces the same buyer rule: do not expose privileged agents to messages, browsers, files, or gateways without patching, allowlists, sandbox policy, and owner accountability.
 
 **June 5 automation comparison update:** AiPedia rebuilt the high-intent automation fork across [Instantly vs Intercom](/compare/instantly-vs-intercom/), [Instantly vs Make](/compare/instantly-vs-make/), [Instantly vs Zapier](/compare/instantly-vs-zapier/), [Intercom vs Make](/compare/intercom-vs-make/), [Intercom vs Zapier](/compare/intercom-vs-zapier/), and [n8n vs Make vs Zapier](/compare/n8n-vs-make-vs-zapier/). The practical split is sharper now: outbound sending, customer support, visual workflow orchestration, broad no-code app automation, and self-hosted technical AI workflows are different buying jobs.
 
-**Use [n8n](/tools/n8n/) when a technical founder, ops engineer, or agency wants control.** n8n's current pricing page says cloud plans include unlimited users, unlimited workflows, every integration, and monthly workflow-execution billing rather than per-step billing. As of the June 12 spot-check, Starter is still listed at EUR20/month billed annually, Pro at EUR50/month billed annually, Business at EUR667/month billed annually, and the self-hosted Community Edition path remains free. The current AI Agent docs also standardize AI Agent nodes around Tools Agent behavior. This makes n8n the strongest default for complex AI workflows when someone can own credentials, logs, retries, and security.
+**Use [n8n](/tools/n8n/) when a technical founder, ops engineer, or agency wants control.** n8n's current pricing page says plans include unlimited users, unlimited workflows, every integration, and monthly workflow-execution billing rather than per-step billing. As of the June 15 spot-check, hosted Starter is still listed at EUR20/month billed annually, hosted Pro at EUR50/month billed annually, Business at EUR667/month billed annually for self-hosted teams, and the Community self-host path remains free. The current AI Agent docs still standardize AI Agent nodes around Tools Agent behavior, while n8n's hosting docs warn that self-hosting is for expert users because server, scaling, and security mistakes can cause data loss or downtime. Buyers should also model the Business license-key ping, default telemetry setting, and EUR4,000 per 300,000-execution overage bucket before treating paid self-host as a simple isolated deployment. This makes n8n the strongest default for complex AI workflows when someone can own credentials, logs, retries, and security.
 
 **Use [Zapier](/tools/zapier/) when non-technical teams need the fastest SaaS connection path.** Zapier's current pricing and AI pages frame the platform around Zaps, Tables, Forms, MCP, Copilot, Agents, and more than 9,000 apps. The June 4 [ChatGPT vs Zapier](/compare/chatgpt-vs-zapier/) refresh keeps the distinction explicit: ChatGPT is the thinking and drafting assistant; Zapier is the workflow execution layer when SaaS actions need to run repeatedly. It is still the cleanest recommendation when app coverage and speed matter more than self-hosting or code-level control.
 
@@ -226,9 +228,10 @@ Do not leave this category stale. Automation tools are adding MCP, agent builder
 
 ## Sources
 
-- [n8n pricing](https://n8n.io/pricing/) (verified 2026-06-12)
-- [n8n AI documentation](https://docs.n8n.io/advanced-ai/) (verified 2026-06-12)
-- [n8n AI Agent node documentation](https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/) (verified 2026-06-12)
+- [n8n pricing](https://n8n.io/pricing/) (verified 2026-06-15)
+- [n8n hosting documentation](https://docs.n8n.io/hosting/) (verified 2026-06-15)
+- [n8n AI documentation](https://docs.n8n.io/advanced-ai/) (verified 2026-06-15)
+- [n8n AI Agent node documentation](https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/) (verified 2026-06-15)
 - [Claude Agent SDK with a Claude plan](https://support.claude.com/en/articles/15036540-use-the-claude-agent-sdk-with-your-claude-plan) (verified 2026-06-06)
 - [Zapier pricing](https://zapier.com/pricing) (verified 2026-06-05)
 - [Zapier AI](https://zapier.com/ai) (verified 2026-06-05)
@@ -305,8 +308,12 @@ Do not leave this category stale. Automation tools are adding MCP, agent builder
 - [Voiceflow documentation](https://docs.voiceflow.com/documentation/Introduction) (verified 2026-06-10)
 - [Retell AI pricing](https://www.retellai.com/pricing) (verified 2026-06-09)
 - [Retell AI legacy endpoint deprecation](https://docs.retellai.com/deprecation-notice/2026/06-15_legacy_list_endpoints) (verified 2026-06-09)
-- [Microsoft Build 2026 Work IQ and Foundry agent stack](https://blogs.microsoft.com/blog/2026/06/02/microsoft-build-2026-be-yourself-at-work/) (verified 2026-06-03)
-- [Microsoft Work IQ APIs](https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/02/announcing-the-new-work-iq-apis/) (verified 2026-06-03)
+- [Microsoft Agent Framework GitHub releases](https://github.com/microsoft/agent-framework/releases) (verified 2026-06-15)
+- [Microsoft Agent Framework overview](https://learn.microsoft.com/en-us/agent-framework/overview/) (verified 2026-06-15)
+- [Microsoft Agent Framework providers](https://learn.microsoft.com/en-us/agent-framework/agents/providers/) (verified 2026-06-15)
+- [Microsoft Build 2026 Work IQ and Foundry agent stack](https://blogs.microsoft.com/blog/2026/06/02/microsoft-build-2026-be-yourself-at-work/) (verified 2026-06-15)
+- [Microsoft Work IQ APIs](https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/02/announcing-the-new-work-iq-apis/) (verified 2026-06-15)
+- [Microsoft Work IQ licensing notice](https://www.microsoft.com/en-us/licensing/news/work-iq-general-availability) (verified 2026-06-15)
 - [GitHub Copilot SDK GA](https://github.blog/changelog/2026-06-02-copilot-sdk-is-now-generally-available/) (verified 2026-06-03)
 - [NVIDIA enterprise software agents](https://investor.nvidia.com/news/press-release-details/2026/Enterprise-Software-Leaders-Build-AI-Agents-With-NVIDIA/default.aspx) (verified 2026-06-03)
 - [NVIDIA physical AI agent tools and skills](https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Releases-Major-Collection-of-Open-Source-Agent-Tools-and-Skills-for-Physical-AI/default.aspx) (verified 2026-06-03)

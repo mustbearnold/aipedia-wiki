@@ -11,8 +11,8 @@ pricing_model: paid
 price_range: "$20-$200/month; Teams and Enterprise custom"
 status: active
 launched: 2023
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-14
+last_verified: 2026-06-14
 update_frequency: monthly
 seo_title: "Factory: Features, Pricing & Review (June 2026)"
 meta_description: "Factory is an AI-native development platform for Droid coding agents. Pro is $20/mo, Plus is $100/mo, Max is $200/mo, and Teams/Enterprise add ZDR, SSO, audit, data-residency, and deployment controls."
@@ -34,22 +34,24 @@ facts:
     source: "https://docs.factory.ai/welcome"
     source_label: "Factory docs"
     source_id: factory-best-for
-    verified_at: 2026-06-12
+    verified_at: 2026-06-14
+    next_review_at: 2026-07-14
     confidence: high
   best_paid_tier:
     value: "Pro ($20/month) for individuals; Plus ($100/month) for Droid Computers and about 5x Pro usage; Max ($200/month) for about 10x Pro usage and early access"
     source: "https://docs.factory.ai/pricing"
     source_label: "Factory plans and models"
     source_id: factory-best-paid-tier
-    verified_at: 2026-06-12
-    next_review_at: 2026-06-03
+    verified_at: 2026-06-14
+    next_review_at: 2026-07-14
     confidence: high
   best_for:
     value: "Engineering teams that want agentic development across local, cloud, CI, review, and enterprise governance surfaces"
     source: "https://docs.factory.ai/welcome"
     source_label: "Factory docs"
     source_id: factory-best-for
-    verified_at: 2026-06-12
+    verified_at: 2026-06-14
+    next_review_at: 2026-07-14
     confidence: high
 tags: [ai-coding, coding-agent, software-development, cli, desktop, code-review, qa, linear, slack, github]
 best_for:
@@ -106,6 +108,13 @@ price_history:
     source_label: "Source"
     source_id: factory-best-paid-tier
     note: "June 1 recheck: Pro $20, Plus $100, Max $200, Teams custom, Enterprise custom. Droid Core fallback, $10 minimum Extra Usage credits, BYOK allowances, and rolling 5-hour/weekly/monthly Standard Usage windows remain the live buying caveats."
+  - date: 2026-06-14
+    plan: "All plans"
+    price: "Unchanged"
+    source: "https://docs.factory.ai/pricing"
+    source_label: "Factory plans and models"
+    source_id: factory-best-paid-tier
+    note: "June 14 recheck: Factory docs still list Pro at $20/month, Plus at $100/month, Max at $200/month, Teams custom, and Enterprise custom. The best-paid-tier guidance remains Pro for individuals, Plus only when Droid Computers or roughly 5x Pro usage matter, and Max for heavy individual users who need roughly 10x Pro usage plus early access."
 ---
 
 # Factory
@@ -177,7 +186,7 @@ The practical question is whether Factory becomes the place your team runs codin
 
 ## Pricing
 
-Factory pricing was verified from official docs on 2026-06-12:
+Factory pricing was verified from official docs on 2026-06-14:
 
 | Plan | Price | Practical meaning |
 |---|---:|---|
@@ -211,7 +220,7 @@ Factory also documents rolling Standard Usage, Droid Core fallback, prepaid Extr
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against Factory primary documentation.
+This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-14 against Factory primary documentation.
 
 ## FAQ
 
@@ -232,11 +241,11 @@ Partly. Cursor is an AI IDE. Factory is broader: CLI, desktop, cloud/headless ex
 
 ## Sources
 
-- [Factory welcome docs](https://docs.factory.ai/welcome): platform surfaces, capabilities, and integrations
-- [Factory plans and pricing](https://docs.factory.ai/pricing): Pro, Plus, Max, Teams, Enterprise, Standard Usage, Droid Core, Extra Usage, Missions, BYOK
-- [Factory enterprise overview](https://docs.factory.ai/enterprise): deployment patterns, high-security environments, governance, analytics, compliance
-- [Factory identity and access docs](https://docs.factory.ai/enterprise/identity-and-access): SSO/SAML/OIDC, SCIM, RBAC, environment policy, audit metadata
-- [Factory desktop app launch](https://factory.ai/news/factory-desktop): desktop availability, multi-agent sessions, computer use, mobile, and inherited security model
+- [Factory welcome docs](https://docs.factory.ai/welcome): platform surfaces, capabilities, and integrations. Verified 2026-06-14.
+- [Factory plans and pricing](https://docs.factory.ai/pricing): Pro, Plus, Max, Teams, Enterprise, Standard Usage, Droid Core, Extra Usage, Missions, BYOK. Verified 2026-06-14.
+- [Factory enterprise overview](https://docs.factory.ai/enterprise): deployment patterns, high-security environments, governance, analytics, compliance. Verified 2026-06-14.
+- [Factory identity and access docs](https://docs.factory.ai/enterprise/identity-and-access): SSO/SAML/OIDC, SCIM, RBAC, environment policy, audit metadata. Verified 2026-06-14.
+- [Factory desktop app launch](https://factory.ai/news/factory-desktop): desktop availability, multi-agent sessions, computer use, mobile, and inherited security model. Verified 2026-06-14.
 
 ## Related
 

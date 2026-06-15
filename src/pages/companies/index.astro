@@ -2,9 +2,20 @@
 /**
  * /companies/ index — god-tier 10/10 mobile-first.
  *
- * Reviewed 2026-06-12: hub derives company profiles (funding, founding dates,
+ * Reviewed 2026-06-15: hub derives company profiles live from the companies
+ * collection; inspected after OpenAI profile refresh covering Visa/ChatGPT
+ * agent-payments, consumer-controlled commerce, GPT-5.2 retirement, and
+ * scrutiny context.
+ *
+ * Reviewed 2026-06-15: hub derives company profiles live from the companies
+ * collection; inspected after Anthropic company profile refresh covering
+ * Fable/Mythos suspension, Opus 4.8 fallback, Agent SDK credits, Series H,
+ * S-1 status, and source-registry maintenance.
+ *
+ * Reviewed 2026-06-13: hub derives company profiles (funding, founding dates,
  * HQ, product rollups) live from the companies collection, so cards stay
- * current automatically. Confirmed rendering, counts, and sort order.
+ * current automatically. Confirmed rendering, counts, and sort order after
+ * OpenAI and Anthropic late-news refreshes.
  */
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
@@ -67,7 +78,7 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
         { label: 'aipedia', href: '/' },
         { label: 'Companies' },
       ]}
-      verifiedLabel="Verified June 2, 2026"
+      verifiedLabel="Verified June 15, 2026"
       rankLabel={`${sorted.length} companies · ${activeToolCount} products`}
     />
 

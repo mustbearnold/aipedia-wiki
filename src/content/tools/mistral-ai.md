@@ -2,18 +2,18 @@
 type: tool
 slug: mistral-ai
 title: Mistral AI
-tagline: French open-weight LLM lab with Le Chat, Mistral Vibe, Vibe for Code, Studio APIs, Search Toolkit, Apache 2.0 Mistral 3 weights, and EU data-sovereignty posture.
+tagline: French open-weight LLM lab with Vibe (formerly Le Chat), Vibe for Code, Studio APIs, Search Toolkit, Apache 2.0 Mistral 3 weights, and EU data-sovereignty posture.
 category: ai-chatbots
 secondary_categories: [ai-search]
 company: 'Mistral AI (Paris, France)'
 url: 'https://mistral.ai'
 github_url: https://github.com/mistralai/mistral-inference
 pricing_model: freemium
-price_range: "$0-$24.99/month"
+price_range: "$0-$24.99/user/month plus metered APIs"
 status: active
 launched: 2023-09
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-15
+last_verified: 2026-06-15
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -28,166 +28,167 @@ scores:
   longevity: 8
 facts:
   flagship_model:
-    value: "Mistral 3 (April 28, 2026) ships Apache 2.0 Mistral Large 3 (41B active / 675B total MoE) plus Ministral 3 edge models at 3B/8B/14B; Mistral Medium 3.5 (v26.04) is the agentic coding workhorse"
+    value: "Mistral 3 officially launched on December 2, 2025 with Apache 2.0 Mistral Large 3 (41B active / 675B total MoE) plus Ministral 3 edge models at 3B/8B/14B; June 2026 docs also feature open Mistral Medium 3.5 (v26.04) for agentic coding"
     source: "https://docs.mistral.ai/models/overview"
     source_label: "Mistral AI model docs"
     source_id: mistral-model-docs
-    verified_at: 2026-06-12
+    verified_at: 2026-06-15
     volatility: high
     confidence: high
-    next_review_at: 2026-06-14
+    next_review_at: 2026-06-22
   context_window:
-    value: "Model-dependent; Small 4 carries 256K, Ministral 3 family ships base/instruct/reasoning variants, and Mistral publishes per-model context windows in its model documentation"
-    source: "https://docs.mistral.ai/models/overview"
-    source_label: "Mistral AI model docs"
-    source_id: mistral-model-docs
-    verified_at: 2026-06-12
+    value: "Model-dependent; current model cards list 256K context for Mistral Large 3, Medium 3.5, and Small 4, while other catalog entries should be checked per model ID"
+    source: "https://docs.mistral.ai/models/model-cards/mistral-large-3-25-12"
+    source_label: "Mistral Large 3 model card"
+    source_id: mistral-large-3-card
+    verified_at: 2026-06-15
     volatility: high
     confidence: high
-    next_review_at: 2026-06-14
+    next_review_at: 2026-06-22
   pricing_anchor:
-    value: "Mistral Free $0, Pro $14.99/mo, Team $24.99/user/mo, Enterprise custom; the pricing page also surfaces Le Chat, Mistral Vibe, Vibe for Code, Studio, Search, and per-model API pricing."
+    value: "Mistral Free $0, Pro $14.99/mo, Education $5.99/mo for eligible verified students, Team $24.99/user/mo, Enterprise custom; Studio/API pricing is per model and plan overages can extend usage with PAYG credits."
     source: "https://mistral.ai/pricing"
     source_label: "Mistral AI pricing"
     source_id: mistral-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-15
     volatility: high
     confidence: high
-    next_review_at: 2026-06-14
+    next_review_at: 2026-06-22
   free_plan:
-    value: "Yes: Mistral Free is the trial path for chat/search/creation and limited coding use; open weights ship separately under Apache 2.0 where model licenses permit."
+    value: "Yes: Mistral Free provides limited Vibe access for latest models, chat, search, creation, and terminal coding; open weights remain a separate self-hosting path with license review required for commercial deployments."
     source: "https://mistral.ai/pricing"
     source_label: "Mistral AI pricing"
     source_id: mistral-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-15
     volatility: high
     confidence: high
-    next_review_at: 2026-06-14
+    next_review_at: 2026-06-22
   best_paid_tier:
-    value: "Pro $14.99/mo for individuals; Team $24.99/user/mo for shared workspaces; Mistral Studio/API/Search Toolkit for developers and teams building applications."
+    value: "Pro $14.99/mo for individuals needing higher Vibe limits; Team $24.99/user/mo for shared workspaces; Studio/API/Search Toolkit for builders; Enterprise for private deployments, SLAs, SSO, audit logs, and custom agents."
     source: "https://mistral.ai/pricing"
     source_label: "Mistral AI pricing"
     source_id: mistral-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-15
     volatility: high
     confidence: high
-    next_review_at: 2026-06-14
+    next_review_at: 2026-06-22
   api_available:
-    value: "Yes: Mistral provides model APIs for chat, reasoning, code, embeddings, and multimodal workflows"
+    value: "Yes: Mistral exposes model APIs across chat/text, reasoning, coding, agentic, multimodal, OCR, voice, transcription, classifier, embedding, and tool workflows"
     source: "https://mistral.ai/pricing"
     source_label: "Mistral AI pricing"
     source_id: mistral-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-15
     volatility: high
     confidence: high
-    next_review_at: 2026-06-14
+    next_review_at: 2026-06-22
   image_generation:
-    value: "Yes through Le Chat/partner creative workflows, but Mistral is primarily a language-model and enterprise AI provider"
-    source: "https://chat.mistral.ai"
-    source_label: "Le Chat by Mistral AI"
-    source_id: mistral-chat
-    verified_at: 2026-06-12
+    value: "Yes inside Vibe for image generation and editing, but Mistral is still primarily a language-model, coding, search, and enterprise AI platform rather than an image-model-first vendor"
+    source: "https://mistral.ai/pricing"
+    source_label: "Mistral AI pricing"
+    source_id: mistral-pricing
+    verified_at: 2026-06-15
     volatility: high
     confidence: high
-    next_review_at: 2026-06-14
+    next_review_at: 2026-06-22
   video_generation:
     value: "No primary native video-generation product; Mistral focuses on language, coding, multimodal, and enterprise model APIs"
     source: "https://docs.mistral.ai/models/overview"
     source_label: "Mistral AI model docs"
     source_id: mistral-model-docs
-    verified_at: 2026-06-12
+    verified_at: 2026-06-15
     volatility: low
     confidence: high
   real_time_voice:
-    value: "Voice/audio capabilities exist in the broader model family, but Mistral is not primarily a real-time voice-agent platform"
+    value: "Voice/audio capabilities exist through Vibe voice input, Voxtral, TTS, and transcription models, but Mistral is not primarily a consumer real-time voice-agent platform"
     source: "https://docs.mistral.ai/models/overview"
     source_label: "Mistral AI model docs"
     source_id: mistral-model-docs
-    verified_at: 2026-06-12
+    verified_at: 2026-06-15
     volatility: medium
     confidence: high
   web_browsing:
-    value: "Yes: Mistral's pricing page lists searches by plan, and the May 2026 Search Toolkit adds hosted semantic search/RAG surfaces for developers."
-    source: "https://mistral.ai/news/search-toolkit"
-    source_label: "Mistral Search Toolkit"
-    source_id: mistral-search-toolkit
-    verified_at: 2026-06-12
+    value: "Yes: Vibe includes web search and deep-research style usage by plan, while Search Toolkit is the developer route for hosted semantic search, vector search, RAG, and web-search-enhanced applications."
+    source: "https://mistral.ai/products/vibe/"
+    source_label: "Mistral Vibe product page"
+    source_id: mistral-vibe-product
+    verified_at: 2026-06-15
     volatility: high
     confidence: high
-    next_review_at: 2026-06-14
+    next_review_at: 2026-06-22
   coding_agent:
-    value: "Vibe for Code is now a named Mistral coding surface with IDE support; model APIs and code-capable models still matter for production developer workflows."
-    source: "https://mistral.ai/pricing"
-    source_label: "Mistral AI pricing"
-    source_id: mistral-pricing
-    verified_at: 2026-06-12
+    value: "Yes: Vibe for Code runs in the web app, VS Code, CLI, IDE/ACP routes, and remote agents; the Vibe agent post adds Code Mode, a VS Code extension, Skills, custom modes/subagents, editable plans, session-scoped permissions, and `/teleport` between local and remote coding sessions."
+    source: "https://mistral.ai/news/vibe-agent/"
+    source_label: "Mistral Vibe agent announcement"
+    source_id: mistral-vibe-agent
+    verified_at: 2026-06-15
     volatility: medium
     confidence: high
   enterprise_controls:
-    value: "Enterprise buyer posture emphasizes European jurisdiction, deployment options, APIs, fine-tuning, and enterprise agreements"
+    value: "Enterprise buyer posture emphasizes private deployments, custom models/agents/workflows, audit logs, SAML SSO, data export, regional controls, SLAs, premium support, and European jurisdiction"
     source: "https://mistral.ai/pricing"
     source_label: "Mistral AI pricing"
     source_id: mistral-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-15
     volatility: medium
     confidence: high
   data_retention_or_privacy:
-    value: "EU incorporation and deployment options make Mistral strategically relevant for European and sovereignty-sensitive AI procurement"
-    source: "https://mistral.ai/pricing"
-    source_label: "Mistral AI pricing"
-    source_id: mistral-pricing
-    verified_at: 2026-06-12
+    value: "EU incorporation, on-prem/private-cloud/Mistral Cloud deployment options, data residency language, model-training opt-out language, and the announced Les Ulis inference facility make Mistral strategically relevant for sovereignty-sensitive AI procurement."
+    source: "https://mistral.ai/news/ai-now-summit-2026/"
+    source_label: "Mistral AI Now Summit 2026"
+    source_id: mistral-ai-now-summit-2026
+    verified_at: 2026-06-15
     volatility: medium
     confidence: high
   open_source_or_local:
-    value: "Yes: Mistral publishes open-weight models through Hugging Face alongside hosted proprietary models"
-    source: "https://huggingface.co/mistralai"
-    source_label: "Mistral AI Hugging Face organization"
-    source_id: mistral-huggingface
-    verified_at: 2026-06-12
+    value: "Yes: Large 3, Small 4, Medium 3.5, Ministral 3, Devstral, Voxtral, and older Mistral/Mixtral families include open-weight options, but commercial deployments still need model-specific license review."
+    source: "https://mistral.ai/pricing"
+    source_label: "Mistral AI pricing"
+    source_id: mistral-pricing
+    verified_at: 2026-06-15
     volatility: medium
     confidence: high
   best_for:
-    value: "European AI procurement, open-weight deployment, model API buyers, coding/model experimentation, and teams balancing capability with sovereignty"
+    value: "European AI procurement, open-weight deployment, model API buyers, Vibe coding/work agents, Search Toolkit users, and teams balancing capability with sovereignty"
     source: "https://docs.mistral.ai/models/overview"
     source_label: "Mistral AI model docs"
     source_id: mistral-model-docs
-    verified_at: 2026-06-12
+    verified_at: 2026-06-15
     volatility: medium
     confidence: high
   watch_out_for:
-    value: "Model lineup changes quickly, consumer Le Chat features differ from API capabilities, open-weight versus hosted model terms vary by model, and May 2026 SDK package compromise means teams should pin and audit dependencies"
+    value: "Model lineup changes quickly, Vibe app features differ from API capabilities, Chat mode is slated for sunset into Work Mode, open-weight versus hosted/commercial terms vary by model, Small 4 prices currently differ between pricing page and model card, the pricing FAQ still uses a generic Mistral Large $2/$6 example while Large 3 rows show $0.50/$1.50, and the closed May 2026 SDK package advisory still means teams should pin and audit dependencies."
     source: "https://docs.mistral.ai/resources/security-advisories"
     source_label: "Mistral AI security advisories"
     source_id: mistral-security-advisories
-    verified_at: 2026-05-17
+    verified_at: 2026-06-15
     volatility: high
     confidence: high
-    next_review_at: 2026-06-17
+    next_review_at: 2026-06-22
 tags: [llm, open-source-ai, european-ai, ai-api, mistral, ai-models, mistral-3, mistral-large-3, ministral-3, mistral-small-4, voxtral, forge]
 seo_title: 'Mistral AI: Features, Pricing & Review (June 2026)'
-meta_description: "Mistral AI offers Le Chat, Mistral Vibe, Vibe for Code, Studio APIs, Search Toolkit, Mistral 3 open weights, Medium 3.5, and EU-oriented model infrastructure. Pro is $14.99/mo and Team is $24.99/user/mo."
+meta_description: "Mistral AI offers Vibe, Vibe for Code, Studio APIs, Search Toolkit, Mistral 3 open weights, Medium 3.5, and EU-oriented model infrastructure. Pro is $14.99/mo and Team is $24.99/user/mo."
 author: aipedia.wiki Editorial
 best_for:
   - EU enterprises with GDPR and data-residency requirements
   - developers needing low-cost API access with open-weight fallback
-  - self-hosters running Small 4 under Apache 2.0
+  - self-hosters evaluating Large 3, Small 4, Medium 3.5, and Ministral 3 licenses
   - multilingual TTS workloads via Voxtral
 not_best_for:
   - users wanting the largest plugin ecosystem
   - deep Google Workspace integrations
   - video generation
 quick_answer: >-
-  Mistral is Europe's credible open-weight LLM lab and model platform. The current public surface spans Le Chat, Mistral Vibe, Vibe for Code, Mistral Studio, Search Toolkit, APIs, and the Apache 2.0 Mistral 3 family. Pick for EU data sovereignty, model-provider control, open-weight evaluation, or coding/API workflows; skip if you only need the most polished everyday assistant.
+  Mistral is Europe's credible open-weight LLM lab and model platform. The current public surface spans Vibe (formerly Le Chat), Vibe for Code, Mistral Studio, Search Toolkit, APIs, and the Mistral 3 / Medium 3.5 / Small 4 model family. Pick for EU data sovereignty, model-provider control, open-weight evaluation, or coding/API workflows; skip if you only need the most polished everyday assistant.
 price_history:
   - date: 2026-03-16
     plan: "API · Mistral Small 4"
-    price: "$0.15/M input"
+    price: "Pricing page now $0.10/M input and $0.30/M output; model card still $0.15/M input and $0.60/M output"
     source: "https://mistral.ai/pricing"
     source_label: "Source"
     source_id: mistral-pricing
-    note: "Small 4 launched · Apache 2.0 · unifies Magistral + Pixtral + Devstral"
-  - date: 2026-04-28
+    verified_at: 2026-06-15
+    note: "Small 4 launched March 16, 2026; June 15 pricing check still found a pricing-page/model-card discrepancy buyers should verify in Studio before budgeting."
+  - date: 2025-12-02
     plan: "Open weights · Mistral 3 family"
     price: "$0 self-host"
     source: "https://mistral.ai/news/mistral-3"
@@ -195,12 +196,12 @@ price_history:
     source_id: mistral-3-launch
     note: "Mistral Large 3 (41B active / 675B total MoE) plus Ministral 3 at 3B/8B/14B shipped under Apache 2.0"
   - date: 2026-05-13
-    plan: "le Chat Pro · Team (new)"
+    plan: "Vibe / Le Chat Pro · Team"
     price: "Pro $14.99/mo · Team $24.99/mo"
     source: "https://mistral.ai/pricing"
     source_label: "Source"
     source_id: mistral-pricing
-    note: "Consumer pricing moved to USD; Team tier ($24.99/mo per seat, 30GB/user, domain verification) added"
+    note: "Consumer pricing moved to USD; Team tier ($24.99/mo per seat, 30GB/user, domain verification) added before Le Chat branding consolidated into Vibe."
   - date: 2026-05-12
     plan: "SDK supply-chain advisory"
     price: "No pricing change"
@@ -216,7 +217,7 @@ price_history:
     source_label: "Source"
     source_id: mistral-pricing
     verified_at: 2026-06-06
-    note: "Pricing page now frames the public surface around Le Chat, Mistral Vibe, Vibe for Code, Studio, Search, API pricing, and enterprise paths."
+    note: "Pricing page framed the public surface around Le Chat, Mistral Vibe, Vibe for Code, Studio, Search, API pricing, and enterprise paths before the Vibe product-page consolidation."
   - date: 2026-06-06
     plan: "Mistral API/platform recheck"
     price: "Free / Pro $14.99/mo / Team $24.99/user/mo; API pricing remains model-specific"
@@ -225,72 +226,83 @@ price_history:
     source_id: mistral-pricing
     verified_at: 2026-06-06
     note: "Rechecked for the DeepSeek vs Mistral AI refresh. Pricing and docs still frame Mistral around Vibe, Studio, Admin, Search, API/tool pricing, and current model families such as Mistral Medium 3.5 and Mistral Small 4."
+  - date: 2026-06-15
+    plan: "Mistral Vibe / API current-source refresh"
+    price: "Free / Pro $14.99/mo / Education $5.99/mo / Team $24.99/user/mo; Large 3 $0.50/$1.50, Medium 3.5 $1.50/$7.50, Small 4 pricing-page $0.10/$0.30 per 1M tokens"
+    source: "https://mistral.ai/pricing"
+    source_label: "Source"
+    source_id: mistral-pricing
+    verified_at: 2026-06-15
+    note: "Rechecked Vibe Work/Code consolidation, Chat-mode sunset language, plan limits, PAYG credits, Large 3 launch-date correction, Medium 3.5 open-weight status, Small 4 pricing discrepancy, Large FAQ pricing drift, exact-ID deprecation warnings, Les Ulis inference-facility context, and SDK advisory status."
 ---
 
 # Mistral AI
 
-Paris-based AI lab founded in 2023 by former DeepMind and Meta researchers. As of June 2026 the lineup spans frontier-class flagships (Mistral Large 3, Medium 3.5), permissively licensed open weights (Large 3, Small 4, Ministral 3 family), Le Chat, Mistral Vibe, Vibe for Code, Studio APIs, and Search Toolkit.
+Paris-based AI lab founded in 2023 by former DeepMind and Meta researchers. As of June 15, 2026 the lineup spans frontier-class flagships (Mistral Large 3, Medium 3.5), open-weight models (Large 3, Small 4, Medium 3.5, Ministral 3 family), Vibe (formerly Le Chat), Vibe for Code, Studio APIs, and Search Toolkit.
 
 EU-incorporated, EU-datacenter hosted, and governed under French law. For any European organization under GDPR Article 44 or the EU AI Act, Mistral is the default credible alternative to U.S.-based providers.
 
-The April 2026 release of Mistral 3 was the biggest open-weight drop of the year. Mistral Large 3 is now Apache 2.0, ships as a 41B-active / 675B-total mixture-of-experts model, and arrives alongside Ministral 3 edge models at 3B, 8B, and 14B parameters. Mistral Medium 3.5 (v26.04) and Devstral 2 (v25.12) round out the agentic coding stack.
+The official Mistral 3 launch was December 2, 2025, not April 2026. Large 3 ships as an Apache 2.0, 41B-active / 675B-total mixture-of-experts model alongside Ministral 3 edge models at 3B, 8B, and 14B parameters. Mistral Medium 3.5 (v26.04) is now an open-weight Modified MIT model for agentic and coding work. Treat Devstral as an active coding lane only after checking the exact model ID, because the model overview's legacy table carries deprecation/retirement warnings for some Devstral IDs.
 
 ## Recent developments
 
+- **June 15, 2026:** Current official sources still consolidate Le Chat into [Mistral Vibe](https://mistral.ai/products/vibe/), and the Vibe agent announcement says Chat mode will soon be sunset while Le Chat history is preserved in Work Mode. The pricing page still lists Free, Pro at $14.99/month, Education at $5.99/month for eligible verified students, Team at $24.99/user/month, Enterprise custom, PAYG credits past plan limits, and per-model API rates. It also lists Large 3 at $0.50/M input and $1.50/M output, Medium 3.5 at $1.50/M input and $7.50/M output, and Small 4 at $0.10/M input and $0.30/M output; the Small 4 model card still shows $0.15/M and $0.60/M, and the pricing FAQ still uses a generic Mistral Large $2/M and $6/M example, so budget from the live Studio quote before committing.
+- **June 15, 2026:** Added Vibe Work/Code details from the May 28 Vibe agent post: Work Mode, Code Mode, VS Code extension, CLI updates, Skills, custom modes/subagents, editable plans, session-scoped permissions, and `/teleport`. The AI Now Summit post also adds a procurement signal: Mistral says the Les Ulis inference facility is a 10 MW site scheduled for Q3 2026.
+- **June 15, 2026:** Reconfirmed the Mistral 3 timeline. The official Mistral 3 launch post is dated December 2, 2025, while April 28, 2026 is the Mistral Medium 3.5 model-card date.
 - **June 6, 2026:** Mistral pricing, model docs, Mistral 3, and Search Toolkit were rechecked while refreshing [Mistral AI vs Qwen](/compare/mistral-ai-vs-qwen/). The buyer split is now explicit: Mistral is the EU/open-model/vendor-platform lane; Qwen is the Alibaba/Qwen Cloud, multilingual, and model-family lane.
 - **June 5, 2026:** Mistral pricing and docs were rechecked while refreshing [DeepSeek vs Mistral AI](/compare/deepseek-vs-mistral-ai/). The buyer split is now explicit: DeepSeek is the cheaper text/reasoning API experiment; Mistral is the more procurement-friendly EU model platform with Vibe, Studio, Search, open weights, and enterprise paths.
 - **June 3, 2026:** Mistral pricing recheck kept Pro at $14.99/month and Team at $24.99/user/month, while the public page now explicitly surfaces Mistral Vibe, Vibe for Code, Studio, Search, and API pricing beside Le Chat.
 - **May 28, 2026:** [Mistral launched Search Toolkit](https://mistral.ai/news/search-toolkit), a hosted search/RAG layer for semantic search, vector search, and web-search-enhanced applications.
-- **May 13, 2026:** le Chat consumer pricing migrated to USD and added a **Team tier at $24.99/mo per seat** (30GB storage per user, domain verification, data export). Pro held at $14.99/mo; Enterprise remains custom.
+- **May 13, 2026:** Le Chat/Vibe consumer pricing migrated to USD and added a **Team tier at $24.99/mo per seat** (30GB storage per user, domain verification, data export). Pro held at $14.99/mo; Enterprise remains custom.
 - **May 12, 2026:** [Mistral published an SDK supply-chain advisory tied to the TanStack incident](/news/2026-05-12-mistral-ai-sdk-supply-chain-advisory/). Mistral says its infrastructure was not compromised, but compromised npm and PyPI package versions were briefly published. Teams using Mistral SDKs should check lockfiles, images, caches, and deployed artifacts for affected versions and rotate exposed secrets where needed.
-- **April 28, 2026:** [Mistral 3 shipped with Mistral Large 3 and new Ministral edge models](/news/2026-04-28-mistral-3-open-model-release/). The Apache 2.0 release made Large 3 a 41B-active / 675B-total MoE flagship, added Ministral 3 at 3B/8B/14B with base, instruct, and reasoning variants, and went live across Mistral AI Studio, Amazon Bedrock, Azure Foundry, Hugging Face, OpenRouter, Fireworks, Together AI, Modal, IBM watsonx, and Unsloth AI on day one.
+- **December 2, 2025:** [Mistral 3 launched](https://mistral.ai/news/mistral-3/) with Mistral Large 3 and new Ministral edge models. The Apache 2.0 release made Large 3 a 41B-active / 675B-total MoE flagship, added Ministral 3 at 3B/8B/14B with base, instruct, and reasoning variants, and went live across Mistral AI Studio, Amazon Bedrock, Azure Foundry, Hugging Face, OpenRouter, Fireworks, Together AI, Modal, IBM watsonx, and Unsloth AI on day one.
 
 ## System Verdict
 
-> **Pick Mistral if EU data sovereignty is non-negotiable or you want a frontier-tier model with open weights.** The April 28 Mistral 3 release made Large 3 Apache 2.0, which removes the last remaining vendor-lock argument against Mistral for regulated workloads. Mistral Small 4 (Apache 2.0, 256K context) still unifies reasoning, vision, and agentic coding at commodity API cost.
+> **Pick Mistral if EU data sovereignty is non-negotiable or you want frontier-tier open weights.** Mistral Large 3 is Apache 2.0, Medium 3.5 is open weights under a Modified MIT license, and Small 4/Ministral 3 keep the cheaper multimodal and edge lanes alive. That removes a lot of vendor-lock pressure for regulated teams, but production buyers still need model-by-model license review.
 >
 > **Skip it for the deepest everyday-assistant ecosystem.** [ChatGPT](/tools/chatgpt/) remains the easier broad assistant. [Gemini](/tools/gemini/) wins Google Workspace. [Claude](/tools/claude/) wins careful long-form writing. Mistral's advantage is model control, European posture, Vibe for Code, Search Toolkit, Studio/API access, and open-weight strategy.
 >
-> **Who pays which tier:** Free for casual chat/search/creation trials, Pro $14.99/mo for individuals, Team $24.99/user/mo for shared workspaces, Mistral Studio/API/Search Toolkit for developers, and Enterprise/Forge for procurement, deployment, and custom model work.
+> **Who pays which tier:** Free for casual Vibe chat/search/creation/coding trials, Pro $14.99/mo for individuals, Education $5.99/mo for verified students, Team $24.99/user/mo for shared workspaces, Mistral Studio/API/Search Toolkit for developers, and Enterprise/Forge for procurement, deployment, and custom model work.
 
 ## Key Facts
 
 | | |
 |---|---|
-| **Open flagship** | Mistral Large 3 (April 28, 2026) · Apache 2.0 · 41B active / 675B total MoE · multimodal |
-| **Agentic coding workhorse** | Mistral Medium 3.5 (v26.04) · frontier-class multimodal, optimized for agentic and coding tasks |
-| **Open multimodal** | Mistral Small 4 (March 16, 2026) · Apache 2.0 · 256K context · 128-expert MoE |
-| **Edge / on-device** | Ministral 3 (April 28, 2026) · 3B / 8B / 14B · Apache 2.0 · base, instruct, reasoning variants |
-| **Code specialists** | Codestral (v25.08) · Devstral 2 (v25.12) · 80+ languages · function calling + JSON mode |
+| **Open flagship** | Mistral Large 3 (December 2, 2025) · Apache 2.0 · 41B active / 675B total MoE · 256K context · multimodal |
+| **Agentic coding workhorse** | Mistral Medium 3.5 (April 28, 2026) · Modified MIT open weights · 128B dense · 256K context · agentic/coding/multimodal |
+| **Open multimodal** | Mistral Small 4 (March 16, 2026) · Apache 2.0 · 119B total / 6.5B active · 256K context |
+| **Edge / on-device** | Ministral 3 (December 2, 2025) · 3B / 8B / 14B · Apache 2.0 · base, instruct, reasoning variants |
+| **Code specialists** | Codestral · Devstral/Vibe for Code · 80+ languages · function calling + JSON mode · exact model IDs need current docs checks |
 | **Voice / TTS** | Voxtral TTS (v26.03) · 4B Ministral base · voice cloning · CC BY-NC 4.0 |
 | **Document AI** | OCR 3 (v25.12) · document processing service |
 | **Math / formal proofs** | Leanstral (v26.03) · Lean 4 proof-engineering agent |
 | **Enterprise fine-tuning** | Forge (March 17, 2026) · license-fee pricing · contact sales |
-| **Consumer subscription** | Free · Pro $14.99/mo · Team $24.99/user/mo · Enterprise custom |
-| **Developer surfaces** | Mistral Studio · API pricing · Vibe for Code · Search Toolkit |
+| **Consumer subscription** | Vibe Free · Pro $14.99/mo · Education $5.99/mo · Team $24.99/user/mo · Enterprise custom |
+| **Developer surfaces** | Mistral Studio · API pricing · Vibe for Code CLI/IDE/remote agents · Search Toolkit |
 | **Data posture** | EU-incorporated · EU datacenter option · GDPR Article 44 compliant · French jurisdiction |
 | **Open-weight lineup** | Mistral 7B · Mixtral 8x7B · Mistral 8x22B · Small 4 · **Large 3 · Ministral 3 family** |
 | **Distribution** | Mistral AI Studio, Amazon Bedrock, Azure Foundry, Hugging Face, OpenRouter, Fireworks, Together AI, Modal, IBM watsonx, Unsloth AI; OpenAI-API compatible |
 
-Every volatile model, pricing, and platform data point verified on 2026-06-12 against [mistral.ai/pricing](https://mistral.ai/pricing), [docs.mistral.ai](https://docs.mistral.ai/models/overview), [Mistral docs](https://docs.mistral.ai/), [Mistral 3](https://mistral.ai/news/mistral-3), and [Mistral Search Toolkit](https://mistral.ai/news/search-toolkit).
+Every volatile model, pricing, and platform data point verified on 2026-06-15 against [mistral.ai/pricing](https://mistral.ai/pricing), [Mistral Vibe](https://mistral.ai/products/vibe/), the [Vibe agent announcement](https://mistral.ai/news/vibe-agent/), [AI Now Summit 2026](https://mistral.ai/news/ai-now-summit-2026/), [docs.mistral.ai/models/overview](https://docs.mistral.ai/models/overview), the Large 3 / Medium 3.5 / Small 4 model cards, [Mistral 3](https://mistral.ai/news/mistral-3), [Mistral Search Toolkit](https://mistral.ai/news/search-toolkit), and [Mistral security advisories](https://docs.mistral.ai/resources/security-advisories).
 
 ## What it actually is
 
-Multiple product surfaces on one model family. Mistral Studio and the APIs are the developer surfaces. Le Chat, Mistral Vibe, and Vibe for Code are the consumer and coding-product surfaces. Search Toolkit is the developer path for semantic search, vector search, and RAG-style applications.
+Multiple product surfaces on one model family. Mistral Studio and the APIs are the developer surfaces. Vibe is now the consumer/work assistant formerly called Le Chat, and Vibe for Code covers web Code Mode, VS Code, CLI, IDE/ACP, remote-agent, and teleport coding workflows. Mistral says Chat mode will be sunset soon, with old Le Chat history preserved in Work Mode, so new buyer evaluation should start from Vibe Work/Code rather than the older Le Chat frame. Search Toolkit is the developer path for semantic search, vector search, and RAG-style applications.
 
-The April 28, 2026 Mistral 3 release reshaped the open-weight tier. Mistral Large 3 is now Apache 2.0, a 41B-active / 675B-total mixture-of-experts model, and the first MoE flagship from Mistral since the Mixtral line. The Ministral 3 family ships alongside it at 3B, 8B, and 14B parameter sizes, each with base, instruct, and reasoning variants plus image understanding and multilingual support. Both families went live on day one across Mistral AI Studio, Amazon Bedrock, Azure Foundry, Hugging Face, OpenRouter, Fireworks, Together AI, Modal, IBM watsonx, and Unsloth AI.
+The December 2, 2025 Mistral 3 release reshaped the open-weight tier. Mistral Large 3 is Apache 2.0, a 41B-active / 675B-total mixture-of-experts model, and the first MoE flagship from Mistral since the Mixtral line. The Ministral 3 family ships alongside it at 3B, 8B, and 14B parameter sizes, each with base, instruct, and reasoning variants plus image understanding and multilingual support. Both families went live on day one across Mistral AI Studio, Amazon Bedrock, Azure Foundry, Hugging Face, OpenRouter, Fireworks, Together AI, Modal, IBM watsonx, and Unsloth AI.
 
-Small 4 (March 16, 2026) still merges three prior specialized models into a single Apache 2.0 release: Magistral for reasoning, Pixtral for multimodal vision, Devstral for agentic coding. 256K context, 128-expert Mixture-of-Experts, 40% lower latency and 3x higher throughput than Small 3. Mistral Medium 3.5 (v26.04) is the frontier-class multimodal model optimized for agentic and coding workloads. Devstral 2 (v25.12) is the standalone code agent; Voxtral TTS is the open-weights multilingual speech model (CC BY-NC 4.0, not permissive enough for most commercial products).
+Small 4 (March 16, 2026) is an Apache 2.0 hybrid model that unifies instruct, reasoning, and coding in a 119B-parameter / 6.5B-active package with 256K context. Mistral Medium 3.5 (April 28, 2026) is a 128B dense open-weight model under a Modified MIT license, optimized for agentic, coding, and multimodal workloads. Devstral remains the named code-agent lane on pricing and Vibe surfaces, but exact Devstral IDs need a current docs check because some model-overview rows are already in legacy/deprecation status. Voxtral TTS is the open-weights multilingual speech model (CC BY-NC 4.0, not permissive enough for most commercial products without a separate license).
 
-The moat is now jurisdiction *plus* permissive licensing on the flagship. EU-incorporated, EU-datacenter, French-law-governed. That pairing matters when GDPR Article 44 third-country transfer rules kick in, which they do for almost every European enterprise workload above a minimal threshold. With Large 3 under Apache 2.0, on-prem deployment is a procurement option for the whole frontier, not just the small models.
+The moat is now jurisdiction plus open-weight control. EU-incorporated, EU-datacenter, French-law-governed. That pairing matters when GDPR Article 44 third-country transfer rules kick in, which they do for almost every European enterprise workload above a minimal threshold. With Large 3 under Apache 2.0 and Vibe available for on-prem/private-cloud/Mistral Cloud enterprise deployments, procurement teams have a credible non-U.S. route, but commercial self-hosting terms should be reviewed model by model.
 
 ## When to pick Mistral
 
 - **EU enterprise with GDPR or EU AI Act requirements.** EU-incorporated, EU-datacenter, French-law jurisdiction. No other frontier-class provider matches this posture.
-- **Open weights at frontier scale.** Mistral Large 3 is now Apache 2.0. Self-host the flagship behind your firewall, fine-tune for your domain, or deploy to a regulated region without contractual gymnastics.
+- **Open weights at frontier scale.** Mistral Large 3 is Apache 2.0 and Medium 3.5 is open weights under Modified MIT. Self-host or deploy behind a controlled boundary when the model license and commercial terms fit.
 - **Edge or on-device inference.** Ministral 3 at 3B/8B/14B with reasoning variants is the strongest small-model lineup in 2026 outside of Llama and Qwen.
-- **Multimodal reasoning at commodity cost.** Small 4 handles text + vision + coding at $0.15/M input, below DeepSeek V3.2's $0.28/M.
-- **Agentic coding without GitHub Copilot lock-in.** Mistral Medium 3.5 and Devstral 2 cover the same workflows that Codex and Claude Code handle, with permissive weights underneath.
+- **Multimodal reasoning at commodity cost.** Small 4 handles text + vision + coding; the live pricing page lists $0.10/M input and $0.30/M output, while the model card still lists $0.15/M and $0.60/M.
+- **Agentic coding without GitHub Copilot lock-in.** Vibe for Code now spans web Code Mode, VS Code, CLI, remote agents, Skills, custom modes/subagents, and `/teleport`; verify the exact Devstral or Medium model ID before building a long-lived coding workflow.
 - **OpenAI-compatible migration path.** la Plateforme ships an OpenAI-API-compatible endpoint. Existing SDK integrations swap in with a base-URL change.
 - **Multilingual TTS for internal tools.** Voxtral TTS is open-weight and multilingual. CC BY-NC 4.0 limits commercial use but internal tools are clear.
 
@@ -305,12 +317,13 @@ The moat is now jurisdiction *plus* permissive licensing on the flagship. EU-inc
 
 ## Pricing
 
-Consumer pricing via [mistral.ai/pricing](https://mistral.ai/pricing). API pricing via [docs.mistral.ai](https://docs.mistral.ai/deployment/ai-studio/pricing).
+Consumer and API pricing via [mistral.ai/pricing](https://mistral.ai/pricing). Use the Studio quote before procurement because model cards and pricing tables can drift.
 
 | Plan | Price | Who's it for |
 |---|---|---|
 | Mistral Free | $0 | Casual chat/search/creation trials · limited Vibe for Code access |
 | Mistral Pro | $14.99/mo | Individuals · higher message/search/image/coding limits · priority support |
+| Mistral Education | $5.99/mo | Verified students at accredited higher institutions, subject to eligibility and fair-use limits |
 | Mistral Team | $24.99/user/mo | Small teams · shared workspace · collaboration and admin path |
 | Mistral Enterprise | Custom | SSO, audit, compliance, deployment, and procurement needs |
 | Mistral Studio / API | Pay-per-token | Developers building on Mistral models and Search Toolkit |
@@ -320,14 +333,16 @@ Consumer pricing via [mistral.ai/pricing](https://mistral.ai/pricing). API prici
 
 | Model | Input | Output | Notes |
 |---|---|---|---|
-| Mistral Large 3 | Apache 2.0 self-host or hosted (rates vary by provider) | Same | **New April 28, 2026** · 41B active / 675B total MoE · multimodal |
-| Mistral Medium 3.5 | $1.50 | $7.50 | v26.04 · frontier-class multimodal · agentic and coding |
-| Mistral Small 4 | $0.15 | Verify at [docs.mistral.ai](https://docs.mistral.ai/deployment/ai-studio/pricing) | March 2026 · 256K context · multimodal · Apache 2.0 |
-| Ministral 3 (3B / 8B / 14B) | Apache 2.0 self-host or hosted | Same | **New April 28, 2026** · base, instruct, reasoning variants |
-| Codestral | Hosted on la Plateforme | Same | Code specialist · 80+ languages |
-| Devstral 2 | Hosted on la Plateforme | Same | v25.12 · frontier code agent · software engineering tasks |
+| Mistral Large 3 | $0.50 | $1.50 | v25.12 · December 2, 2025 · 41B active / 675B total MoE · 256K context · Apache 2.0 |
+| Mistral Medium 3.5 | $1.50 | $7.50 | v26.04 · April 28, 2026 · 128B dense · 256K context · Modified MIT open weights |
+| Mistral Small 4 | Pricing page: $0.10; model card: $0.15 | Pricing page: $0.30; model card: $0.60 | March 16, 2026 · 119B total / 6.5B active · 256K context · Apache 2.0 |
+| Ministral 3 3B | $0.10 | $0.10 | v25.12 · Apache 2.0 · edge/local family |
+| Ministral 3 8B | $0.15 | $0.15 | v25.12 · Apache 2.0 · edge/local family |
+| Ministral 3 14B | $0.20 | $0.20 | v25.12 · Apache 2.0 · edge/local family |
+| Devstral 2 / Devstral current alias | $0.40 | $2.00 | Open-weight agentic coding lane on the pricing page; confirm the exact model ID because the model overview marks some Devstral IDs as legacy |
+| Codestral | $0.30 | $0.90 | Premier code specialist |
 
-*Prices verified 2026-06-12 via [mistral.ai/pricing](https://mistral.ai/pricing) and [docs.mistral.ai](https://docs.mistral.ai/models/overview). Mistral 3 family is Apache 2.0 so hosted per-token rates vary by platform (Mistral Studio, Bedrock, Azure, Fireworks, Together, OpenRouter); benchmark against your preferred provider before committing.*
+*Prices verified 2026-06-15 via [mistral.ai/pricing](https://mistral.ai/pricing), current model cards, and [docs.mistral.ai/models/overview](https://docs.mistral.ai/models/overview). Open-weight models can also be self-hosted or routed through Bedrock, Azure, Fireworks, Together, OpenRouter, Modal, and other providers; benchmark your real prompts and provider route before committing.*
 
 ## Against the alternatives
 
@@ -335,8 +350,8 @@ Consumer pricing via [mistral.ai/pricing](https://mistral.ai/pricing). API prici
 |---|---|---|---|
 | **License** | Apache 2.0 (open weights) | Closed | Closed |
 | **Parameter count** | 41B active / 675B total MoE | Undisclosed | Undisclosed |
-| **Context window** | Up to 256K (Small 4) · Large 3 model card on Hugging Face | Undisclosed | 1M |
-| **Open weights available** | Yes (Large 3, Small 4, Ministral 3, 7B, Mixtral family) | No | No |
+| **Context window** | Up to 256K on Large 3, Medium 3.5, and Small 4 model cards | Undisclosed | 1M |
+| **Open weights available** | Yes (Large 3, Medium 3.5, Small 4, Ministral 3, Devstral, Voxtral, 7B, Mixtral family) | No | No |
 | **Edge model lineup** | Ministral 3 at 3B / 8B / 14B | No | No |
 | **EU data residency** | Native (EU-incorporated, EU datacenters) | Contractual only | Contractual only |
 | **Plugin ecosystem** | Limited | Largest (GPT Store) | MCP-based |
@@ -344,32 +359,34 @@ Consumer pricing via [mistral.ai/pricing](https://mistral.ai/pricing). API prici
 
 ## Failure modes
 
-- **Hosted Mistral 3 prices vary by platform.** Large 3 and Ministral 3 are Apache 2.0, so per-token rates depend on whether you use Mistral AI Studio, Bedrock, Azure Foundry, Fireworks, Together AI, OpenRouter, or self-host. Benchmark before committing.
-- **Output-token pricing for Small 4 not fully public.** $0.15/M input is confirmed; output rate varies by source. Verify at [docs.mistral.ai](https://docs.mistral.ai/deployment/ai-studio/pricing) before budgeting.
+- **Hosted prices vary by platform and source.** Large 3, Medium 3.5, Small 4, and Ministral 3 are open-weight, so per-token rates depend on whether you use Mistral AI Studio, Bedrock, Azure Foundry, Fireworks, Together AI, OpenRouter, or self-host. Benchmark before committing.
+- **Small 4 has a live source discrepancy.** On June 15, 2026 the Mistral pricing page listed $0.10/M input and $0.30/M output, while the Small 4 model card still listed $0.15/M and $0.60/M. Treat Studio billing as authoritative for purchase math.
+- **Large-family pricing examples can mislead.** The pricing FAQ still gives a generic Mistral Large example at $2/M input and $6/M output, while the Large 3 model card and API table list $0.50/M and $1.50/M. Budget by exact model ID and live quote, not by prose examples.
 - **Voxtral license is CC BY-NC 4.0.** Non-commercial only. Using it in a commercial product (even internally) requires a commercial license from Mistral.
 - **Smaller plugin ecosystem.** la Plateforme is OpenAI-compatible, so most tools work, but Mistral-first integrations are thin compared to ChatGPT or Claude.
-- **le Chat UX trails competitors.** Functional but less polished than ChatGPT, Claude.ai, or Gemini web. Code interpreter, canvas, and GPT-Store-equivalent features are limited or absent.
-- **Lineup churn is real.** Medium 3.1 (v25.08) and Medium 3.5 (v26.04) overlap with Large 3 and Small 4 for adjacent workloads. Read the model docs before locking in a model ID for a long-running deployment.
+- **Vibe still trails the broadest consumer ecosystems.** Functional and now much broader than old Le Chat, but ChatGPT, Claude.ai, and Gemini still have deeper everyday-assistant ecosystems. GPT Store-style distribution remains limited.
+- **Lineup churn is real.** Medium 3.1 (v25.08), Medium 3.5 (v26.04), Devstral aliases, and Large 3/Small 4 overlap for adjacent workloads, and the model overview lists retirement dates for some exact IDs. Read the current model docs before locking in a model ID for a long-running deployment.
+- **Chat mode is not the long-term frame.** Mistral's Vibe agent post says Chat mode will soon be sunset, with history preserved in Work Mode. Buyers should evaluate Vibe Work/Code, not an old Le Chat mental model.
 - **Smaller capital base than U.S. frontier labs.** ~$1B raised vs tens of billions at OpenAI, Anthropic, and Google DeepMind. Compute ceiling is a real constraint on frontier model cadence.
 - **No native video generation.** For multimodal output including video, workflow needs a second tool.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-12 against [mistral.ai/pricing](https://mistral.ai/pricing), [docs.mistral.ai/models/overview](https://docs.mistral.ai/models/overview), [Mistral docs](https://docs.mistral.ai/), [Mistral Search Toolkit](https://mistral.ai/news/search-toolkit), and the [Mistral 3 launch post](https://mistral.ai/news/mistral-3).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-15 against [mistral.ai/pricing](https://mistral.ai/pricing), [Mistral Vibe](https://mistral.ai/products/vibe/), the [Vibe agent announcement](https://mistral.ai/news/vibe-agent/), [AI Now Summit 2026](https://mistral.ai/news/ai-now-summit-2026/), [docs.mistral.ai/models/overview](https://docs.mistral.ai/models/overview), current model cards, [Mistral Search Toolkit](https://mistral.ai/news/search-toolkit), the [Mistral 3 launch post](https://mistral.ai/news/mistral-3), and [Mistral security advisories](https://docs.mistral.ai/resources/security-advisories).
 
 ## FAQ
 
 **Is Mistral free?**
-Yes, in two ways. The open-weight models (Mistral 7B, Mixtral 8x7B, 8x22B, Small 4, **Large 3, Ministral 3 at 3B/8B/14B**) are free to self-host under Apache 2.0. [chat.mistral.ai](https://chat.mistral.ai) also has a free consumer tier with 500 memories, document upload, image generation, and connectors.
+Yes, in two ways. Vibe has a Free plan for limited chat, web search, creation, and terminal coding. Mistral also publishes open-weight models including Large 3, Medium 3.5, Small 4, Ministral 3, Devstral, Voxtral, and older Mistral/Mixtral families, but commercial self-hosting terms should be checked per model.
 
 **What is Mistral 3?**
-The April 28, 2026 open-model release. Mistral Large 3 is the new flagship: a 41B-active / 675B-total mixture-of-experts model under Apache 2.0, the first MoE from Mistral since the Mixtral line. The Ministral 3 family ships alongside at 3B, 8B, and 14B parameter sizes with base, instruct, and reasoning variants, image understanding, and multilingual support. All available across Mistral AI Studio, Amazon Bedrock, Azure Foundry, Hugging Face, OpenRouter, Fireworks, Together AI, Modal, IBM watsonx, and Unsloth AI on day one.
+The December 2, 2025 open-model release. Mistral Large 3 is the flagship: a 41B-active / 675B-total mixture-of-experts model under Apache 2.0, the first MoE from Mistral since the Mixtral line. The Ministral 3 family ships alongside at 3B, 8B, and 14B parameter sizes with base, instruct, and reasoning variants, image understanding, and multilingual support. All were available across Mistral AI Studio, Amazon Bedrock, Azure Foundry, Hugging Face, OpenRouter, Fireworks, Together AI, Modal, IBM watsonx, and Unsloth AI on day one.
 
 **What is Mistral Small 4?**
-A single Apache 2.0 model released March 16, 2026 that merges reasoning (Magistral), multimodal vision (Pixtral), and agentic coding (Devstral). 256K context, 128-expert Mixture-of-Experts, 40% faster latency and 3x higher throughput than Small 3. Available via API, Hugging Face, AI Studio, and NVIDIA NIM/NeMo.
+A single Apache 2.0 model released March 16, 2026 that unifies instruct, reasoning, and coding capabilities. The model card lists 119B parameters with 6.5B active and 256K context. The June 15 pricing page lists $0.10/M input and $0.30/M output, while the Small 4 model card still lists $0.15/M and $0.60/M.
 
 **What about Mistral Medium 3.5?**
-v26.04 frontier-class multimodal model optimized for agentic and coding workloads. Sits between Small 4 and Large 3 in the hosted lineup. Hosted on la Plateforme, not currently open-weight.
+v26.04 frontier-class multimodal model optimized for agentic and coding workloads. It is a 128B dense model, released April 28, 2026 as open weights under a Modified MIT license, with 256K context and $1.50/M input plus $7.50/M output on Mistral's pricing page.
 
 **How does Mistral compare to OpenAI frontier models?**
 Mistral Large 3 is broadly competitive on text benchmarks and now ships under Apache 2.0. OpenAI frontier models win on ecosystem, image generation, and multimodal breadth. For EU-regulated workloads Mistral is the default pick regardless of benchmark numbers because GDPR Article 44 third-country transfer rules apply, and now you can self-host the flagship instead of negotiating a closed contract.
@@ -385,13 +402,18 @@ Not under the default license. CC BY-NC 4.0 restricts commercial use. Internal t
 
 ## Sources
 
-- [Mistral AI pricing](https://mistral.ai/pricing): Free, Pro, Team, Enterprise, Vibe, Vibe for Code, Studio, Search, and API pricing
-- [Mistral AI Studio pricing docs](https://docs.mistral.ai/deployment/ai-studio/pricing): per-model API rates
-- [Mistral model overview](https://docs.mistral.ai/models/overview): current production lineup
-- [Mistral 3 launch post](https://mistral.ai/news/mistral-3): Large 3 and Ministral 3 announcement
-- [Mistral Search Toolkit](https://mistral.ai/news/search-toolkit): semantic search, vector search, RAG, and web search announcement
-- [le Chat](https://chat.mistral.ai): consumer product
-- [Hugging Face · mistralai](https://huggingface.co/mistralai): open-weight model releases
+- [Mistral AI pricing](https://mistral.ai/pricing) (verified 2026-06-15): Free, Pro, Education, Team, Enterprise, Vibe, Vibe for Code, Studio, Search, and API pricing
+- [Mistral Vibe](https://mistral.ai/products/vibe/) (verified 2026-06-15): Vibe formerly Le Chat, Vibe for Code, connectors, MCP, remote agents, and enterprise deployment notes
+- [Mistral Vibe agent announcement](https://mistral.ai/news/vibe-agent/) (verified 2026-06-15): Work Mode, Code Mode, VS Code extension, CLI updates, Skills, session permissions, `/teleport`, and Chat-mode sunset language
+- [Mistral AI Now Summit 2026](https://mistral.ai/news/ai-now-summit-2026/) (verified 2026-06-15): Vibe unification, industrial AI context, and Les Ulis inference-facility timing
+- [Mistral model overview](https://docs.mistral.ai/models/overview) (verified 2026-06-15): current production lineup plus legacy/deprecation rows
+- [Mistral Medium 3.5 model card](https://docs.mistral.ai/models/model-cards/mistral-medium-3-5-26-04) (verified 2026-06-15): 128B dense model, Modified MIT, context, and per-token card pricing
+- [Mistral Small 4 model card](https://docs.mistral.ai/models/model-cards/mistral-small-4-0-26-03) (verified 2026-06-15): context, parameter count, and model-card pricing
+- [Mistral Large 3 model card](https://docs.mistral.ai/models/model-cards/mistral-large-3-25-12) (verified 2026-06-15): launch date, context, parameter count, and per-token card pricing
+- [Mistral 3 launch post](https://mistral.ai/news/mistral-3) (verified 2026-06-15): Large 3 and Ministral 3 announcement
+- [Mistral Search Toolkit](https://mistral.ai/news/search-toolkit) (verified 2026-06-15): semantic search, vector search, RAG, and web search announcement
+- [Mistral security advisories](https://docs.mistral.ai/resources/security-advisories) (verified 2026-06-15): SDK supply-chain advisory status and affected package versions
+- [Hugging Face · mistralai](https://huggingface.co/mistralai) (verified 2026-06-15): open-weight model releases
 
 ## Related
 
