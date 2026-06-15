@@ -49,6 +49,9 @@ const THUMB_DIR = join(OUT_DIR, 'thumbs');
 const THUMB_LIGHT_DIR = join(THUMB_DIR, 'light');
 const WRITE_DEBUG_SVG = process.env.AIPEDIA_WRITE_OG_SVG === '1';
 const MAX_PNG_OPTIMIZATION_PASSES = 12;
+const RASTER_VISUAL_AVERAGE_DELTA_LIMIT = 4;
+const RASTER_VISUAL_CHANGED_PIXEL_RATIO_LIMIT = 0.15;
+const RASTER_VISUAL_CHANNEL_DELTA_NOISE_FLOOR = 8;
 
 function valueFor(flag) {
   const index = args.indexOf(flag);
@@ -596,16 +599,86 @@ async function desiredNewsAssets(news, slug, brandLogo, issues) {
   return outputs;
 }
 
-function inspectOutput(output, mode, issues) {
+function isRasterOutput(output) {
+  return output.kind === 'news-png' || output.kind === 'news-thumb';
+}
+
+async function rasterPixels(buffer) {
+  const { data, info } = await sharp(buffer).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+  return {
+    data,
+    width: info.width,
+    height: info.height,
+    channels: info.channels,
+  };
+}
+
+async function compareRenderedRaster(existing, desired) {
+  const [left, right] = await Promise.all([rasterPixels(existing), rasterPixels(desired)]);
+  if (left.width !== right.width || left.height !== right.height || left.channels !== right.channels) {
+    return {
+      matches: false,
+      average_delta: null,
+      changed_pixel_ratio: null,
+      max_delta: null,
+    };
+  }
+
+  let totalDelta = 0;
+  let maxDelta = 0;
+  let changedPixels = 0;
+  const pixelCount = left.width * left.height;
+
+  for (let index = 0; index < left.data.length; index += left.channels) {
+    let pixelMaxDelta = 0;
+    for (let channel = 0; channel < 3; channel += 1) {
+      const delta = Math.abs(left.data[index + channel] - right.data[index + channel]);
+      totalDelta += delta;
+      if (delta > maxDelta) maxDelta = delta;
+      if (delta > pixelMaxDelta) pixelMaxDelta = delta;
+    }
+    if (pixelMaxDelta > RASTER_VISUAL_CHANNEL_DELTA_NOISE_FLOOR) changedPixels += 1;
+  }
+
+  const averageDelta = totalDelta / (pixelCount * 3);
+  const changedPixelRatio = changedPixels / pixelCount;
+
+  return {
+    matches:
+      averageDelta <= RASTER_VISUAL_AVERAGE_DELTA_LIMIT &&
+      changedPixelRatio <= RASTER_VISUAL_CHANGED_PIXEL_RATIO_LIMIT,
+    average_delta: Number(averageDelta.toFixed(4)),
+    changed_pixel_ratio: Number(changedPixelRatio.toFixed(4)),
+    max_delta: maxDelta,
+  };
+}
+
+async function outputComparison(output, existing) {
+  if (!isRasterOutput(output)) {
+    return { changed: Buffer.compare(existing, output.buffer) !== 0, comparison: { kind: 'bytes' } };
+  }
+
+  try {
+    const comparison = await compareRenderedRaster(existing, output.buffer);
+    return { changed: !comparison.matches, comparison: { kind: 'raster-visual', ...comparison } };
+  } catch {
+    return { changed: true, comparison: { kind: 'raster-visual', matches: false } };
+  }
+}
+
+async function inspectOutput(output, mode, issues) {
   let existingBytes = null;
   let changed = true;
   let written = false;
+  let comparison = null;
 
   if (existsSync(output.path)) {
     try {
       const existing = readFileSync(output.path);
       existingBytes = existing.length;
-      changed = Buffer.compare(existing, output.buffer) !== 0;
+      const result = await outputComparison(output, existing);
+      changed = result.changed;
+      comparison = result.comparison;
     } catch (err) {
       issues.push({ code: 'read-failed', path: output.path, detail: `could not read ${output.path}: ${err.message}` });
     }
@@ -631,6 +704,7 @@ function inspectOutput(output, mode, issues) {
     existing_bytes: existingBytes,
     changed,
     written,
+    comparison,
   };
 }
 
@@ -772,7 +846,10 @@ async function main() {
     desired.push(...await desiredNewsAssets(news, slug, brandLogo, issues));
   }
 
-  const outputs = desired.map((output) => inspectOutput(output, mode, issues));
+  const outputs = [];
+  for (const output of desired) {
+    outputs.push(await inspectOutput(output, mode, issues));
+  }
 
   if (mode === 'check' && outputs.some((output) => output.changed)) {
     issues.push({ code: 'news-og-stale', detail: 'one or more generated news OG outputs are missing or stale' });
