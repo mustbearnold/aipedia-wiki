@@ -61,6 +61,16 @@ function dirBytes(path) {
   return total;
 }
 
+function movePath(source, destination) {
+  try {
+    renameSync(source, destination);
+  } catch (error) {
+    if (error?.code !== 'EXDEV') throw error;
+    cpSync(source, destination, { recursive: true });
+    rmSync(source, { recursive: true, force: true });
+  }
+}
+
 function temporarilyRemoveFiles(rootDir, relativeFiles) {
   const tempDir = mkdtempSync(join(tmpdir(), 'aipedia-pagefind-'));
   const moved = [];
@@ -72,7 +82,7 @@ function temporarilyRemoveFiles(rootDir, relativeFiles) {
 
       const backup = join(tempDir, relativeFile);
       mkdirSync(dirname(backup), { recursive: true });
-      renameSync(source, backup);
+      movePath(source, backup);
       moved.push({ source, backup });
     }
 
@@ -80,7 +90,7 @@ function temporarilyRemoveFiles(rootDir, relativeFiles) {
       while (moved.length > 0) {
         const { source, backup } = moved.pop();
         mkdirSync(dirname(source), { recursive: true });
-        renameSync(backup, source);
+        movePath(backup, source);
       }
       removeDir(tempDir);
     };
@@ -88,7 +98,7 @@ function temporarilyRemoveFiles(rootDir, relativeFiles) {
     for (const { source, backup } of moved.reverse()) {
       if (!existsSync(source) && existsSync(backup)) {
         mkdirSync(dirname(source), { recursive: true });
-        renameSync(backup, source);
+        movePath(backup, source);
       }
     }
     removeDir(tempDir);

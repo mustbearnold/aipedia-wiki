@@ -17,6 +17,9 @@ test('build script delegates Pagefind generation to a clean helper', () => {
   assert.match(helper, /tool-finder[\\'"],\s*[\\'"]index\.html/);
   assert.match(helper, /naver271c257f9d62ad7f37c174da981fd27e\.html/);
   assert.match(helper, /temporarilyRemoveFiles/);
+  assert.match(helper, /function movePath/);
+  assert.match(helper, /error\?\.code !== 'EXDEV'/);
+  assert.match(helper, /cpSync\(source,\s*destination,\s*\{\s*recursive:\s*true\s*\}\)/);
   assert.match(helper, /finally\s*{\s*restoreExcludedFiles\(\)/s);
   assert.match(helper, /UNUSED_PAGEFIND_ASSETS/);
   assert.match(helper, /pagefind-ui\.js/);
