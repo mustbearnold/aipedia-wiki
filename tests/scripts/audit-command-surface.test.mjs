@@ -115,6 +115,7 @@ jobs:
     steps:
       - uses: actions/checkout@v5
         with:
+          fetch-depth: 0
           persist-credentials: false
       - uses: actions/setup-node@v5
         with:
@@ -410,6 +411,7 @@ jobs:
     assert.equal(report.missing_required_workflow_npm_scripts.length, 0);
     assert.match(report.missing_workflow_ci_invariants.join('\n'), /node-version must match/);
     assert.match(report.missing_workflow_ci_invariants.join('\n'), /npm ci/);
+    assert.match(report.missing_workflow_ci_invariants.join('\n'), /fetch-depth: 0/);
     assert.match(report.missing_workflow_trigger_invariants.join('\n'), /pull_request/);
     assert.match(report.missing_workflow_trigger_invariants.join('\n'), /push/);
     assert.match(report.missing_workflow_security_invariants.join('\n'), /contents: read/);
@@ -441,6 +443,7 @@ jobs:
     steps:
       - uses: actions/checkout@v5
         with:
+          fetch-depth: 0
           persist-credentials: false
       - uses: actions/setup-node@v5
         with:
@@ -490,6 +493,7 @@ jobs:
     steps:
       - uses: actions/checkout@v5
         with:
+          fetch-depth: 0
           persist-credentials: false
       - uses: actions/setup-node@v5
         with:
@@ -554,6 +558,7 @@ jobs:
     assert.equal(report.missing_workflow_trigger_invariants.length, 0);
     assert.match(report.missing_workflow_ci_invariants.join('\n'), /weak-extra\.yml: .*node-version must match/);
     assert.match(report.missing_workflow_ci_invariants.join('\n'), /weak-extra\.yml: .*npm ci/);
+    assert.match(report.missing_workflow_ci_invariants.join('\n'), /weak-extra\.yml: .*fetch-depth: 0/);
     assert.match(report.missing_workflow_security_invariants.join('\n'), /weak-extra\.yml: .*contents: read/);
     assert.match(report.missing_workflow_security_invariants.join('\n'), /weak-extra\.yml: .*cancel older runs/);
     assert.match(report.missing_workflow_security_invariants.join('\n'), /weak-extra\.yml: .*persist-credentials: false/);
@@ -874,6 +879,7 @@ jobs:
     steps:
       - uses: actions/checkout@v5
         with:
+          fetch-depth: 0
           persist-credentials: false
       - uses: actions/setup-node@v5
         with:
@@ -929,6 +935,7 @@ jobs:
     steps:
       - uses: actions/checkout@v5
         with:
+          fetch-depth: 0
           persist-credentials: false
       - uses: actions/setup-node@v5
         with:

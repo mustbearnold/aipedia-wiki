@@ -395,6 +395,10 @@ function workflowCheckoutDisablesPersistedCredentials(text) {
   return !/uses:\s*actions\/checkout@/i.test(text) || /(^|\n)\s*persist-credentials:\s*false(?:\s|$)/m.test(text);
 }
 
+function workflowCheckoutFetchesFullHistory(text) {
+  return !/uses:\s*actions\/checkout@/i.test(text) || /(^|\n)\s*fetch-depth:\s*0(?:\s|$)/m.test(text);
+}
+
 function workflowJobTimeoutMinutes(text) {
   return [...text.matchAll(/(^|\n)\s*timeout-minutes:\s*(\d+)(?:\s|$)/gm)].map((match) => Number(match[2]));
 }
@@ -573,6 +577,11 @@ const missingWorkflowCiInvariants = npmWorkflowFiles.flatMap((workflow) => [
   ...(/\bnpm\s+ci\b/.test(workflow.text)
     ? []
     : [`${workflowLabel(workflow)}: GitHub workflow must use npm ci for lockfile-safe installs`]),
+  ...(workflow.text.includes('generate-page-refresh-ledger.mjs') || /\bnpm\s+run\s+check\b/.test(workflow.text)
+    ? workflowCheckoutFetchesFullHistory(workflow.text)
+      ? []
+      : [`${workflowLabel(workflow)}: GitHub workflow checkout must set fetch-depth: 0 so ledger git dates are stable`]
+    : []),
 ]);
 const missingWorkflowTriggerInvariants = [
   ...REQUIRED_WORKFLOW_TRIGGERS.filter((trigger) => !workflowHasTrigger(trigger)).map(
