@@ -7,8 +7,8 @@ severity: major
 summary: "Postman launched AI Engineer, RelationalAI added agentic decision intelligence in Snowflake, 7AI is pushing proactive agentic security, and the White House AI cybersecurity order adds policy pressure around advanced AI security."
 categories: [ai-automation, ai-infrastructure]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-03
-last_verified: 2026-06-03
+last_updated: 2026-06-16
+last_verified: 2026-06-16
 sources:
   - url: https://blog.postman.com/introducing-the-ai-engineer/
     title: "Postman: Introducing the AI Engineer"
@@ -25,6 +25,8 @@ sources:
 # Enterprise agent roundup: Postman, RelationalAI, 7AI, and the White House show where agents are getting serious
 
 The June 1-3 enterprise-agent news cycle did not produce one consumer app to rank. It produced a map of where agents are getting serious: API engineering, operational decisions, security investigations, and policy.
+
+June 16 refresh note: AiPedia rechecked Postman, RelationalAI, 7AI, and White House source pages while adding the [June 2 AI news desk](/news/2026-06-02-ai-news-desk/).
 
 ## Postman launches AI Engineer
 

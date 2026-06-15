@@ -671,7 +671,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-14 | /tools/factory/ | Tool | Yes | frontmatter | src/content/tools/factory.md |
 | 2026-06-14 | /tools/val-town/ | Tool | Yes | frontmatter | src/content/tools/val-town.md |
 | 2026-06-14 | /workflows/micro-saas-weekend-build/ | Workflow | Yes | frontmatter | src/content/workflows/micro-saas-weekend-build.md |
-| 2026-06-15 | / | Static page | Yes | git | src/pages/index.astro |
 | 2026-06-15 | /about/our-stack/ | Static page | Yes | git | src/pages/about/our-stack.astro |
 | 2026-06-15 | /categories/ | Static page | Yes | git | src/pages/categories/index.astro |
 | 2026-06-15 | /categories/ai-automation/ | Category | Yes | frontmatter | src/content/categories/ai-automation.md |
@@ -694,7 +693,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-15 | /companies/openai/ | Company | Yes | frontmatter | src/content/companies/openai.md |
 | 2026-06-15 | /compare/ | Static page | Yes | git | src/pages/compare/index.astro |
 | 2026-06-15 | /compare/hailuo-vs-kling/ | Comparison | Yes | frontmatter | src/content/comparisons/hailuo-vs-kling.md |
-| 2026-06-15 | /explore/ | Static page | Yes | git | src/pages/explore/index.astro |
 | 2026-06-15 | /guides/ | Static page | Yes | git | src/pages/guides/index.astro |
 | 2026-06-15 | /guides/best-ai-avatar-video-generator/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-avatar-video-generator.md |
 | 2026-06-15 | /guides/best-ai-for-code-review/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-code-review.md |
@@ -702,11 +700,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-15 | /guides/claude-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/claude-alternatives.md |
 | 2026-06-15 | /guides/cursor-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/cursor-alternatives.md |
 | 2026-06-15 | /guides/github-copilot-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/github-copilot-alternatives.md |
-| 2026-06-15 | /llms-full.txt | Crawl surface | No | git | src/pages/llms-full.txt.ts |
-| 2026-06-15 | /llms.txt | Crawl surface | No | git | src/pages/llms.txt.ts |
 | 2026-06-15 | /media-kit/ | Static page | Yes | git | src/pages/media-kit.astro |
-| 2026-06-15 | /news/ | Static page | Yes | page metadata | src/pages/news/index.astro |
-| 2026-06-15 | /news/rss.xml | Crawl surface | No | git | src/pages/news/rss.xml.ts |
 | 2026-06-15 | /privacy/ | Static page | Yes | git | src/pages/privacy.astro |
 | 2026-06-15 | /search/ | Static page | No | git | src/pages/search.astro |
 | 2026-06-15 | /tools/ | Static page | Yes | git | src/pages/tools/index.astro |
@@ -748,5 +742,11 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-15 | /trends/geo-trend/ | Trend | Yes | frontmatter | src/content/trends/geo-trend.md |
 | 2026-06-15 | /trends/vibe-coding/ | Trend | Yes | frontmatter | src/content/trends/vibe-coding.md |
 | 2026-06-15 | /workflows/ | Static page | Yes | git | src/pages/workflows/index.astro |
+| 2026-06-16 | / | Static page | Yes | git | src/pages/index.astro |
 | 2026-06-16 | /admin/reviews/ | Static page | No | git | src/pages/admin/reviews.astro |
+| 2026-06-16 | /explore/ | Static page | Yes | git | src/pages/explore/index.astro |
+| 2026-06-16 | /llms-full.txt | Crawl surface | No | git | src/pages/llms-full.txt.ts |
+| 2026-06-16 | /llms.txt | Crawl surface | No | git | src/pages/llms.txt.ts |
+| 2026-06-16 | /news/ | Static page | Yes | page metadata | src/pages/news/index.astro |
+| 2026-06-16 | /news/rss.xml | Crawl surface | No | git | src/pages/news/rss.xml.ts |
 | 2026-06-16 | /sitemap-index.xml | Crawl surface | No | git | astro.config.mjs |

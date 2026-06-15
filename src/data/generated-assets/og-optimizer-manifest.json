@@ -1,10 +1,10 @@
 {
   "version": 1,
   "kind": "og-png-optimizer",
-  "source_hash": "58c91032e7d21b44951f0050aea53b20bc7cabb5d031616e3a464bcee201ac3d",
+  "source_hash": "93676ecd518c74a08d17547c72014249c8e728a9419fd1d55cb92e13c6e6088d",
   "generated_at": "deterministic",
   "meta": {
-    "files": 996
+    "files": 1000
   },
   "outputs": [
     {
@@ -3014,6 +3014,15 @@
       "sha256": "b751769df23fcb2adb34ef3305efbe8bf896a84a05d49e6b64d6b6f9b1c40497"
     },
     {
+      "file": "public/og/news/2026-06-01-ai-news-desk.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 46835,
+      "sha256": "6a4752a204bef20f6e2abf8dc04d3be61a6fe63857609e707cd53c70f3cb1d02"
+    },
+    {
       "file": "public/og/news/2026-06-01-github-copilot-ai-credits-billing.png",
       "kind": null,
       "slug": null,
@@ -3030,6 +3039,15 @@
       "target": "public/og/news",
       "bytes": 43867,
       "sha256": "42fc9f6e6f35944c15b6e41508da9e335a4361741ef3106b2a8f386ed241a448"
+    },
+    {
+      "file": "public/og/news/2026-06-02-ai-news-desk.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 50768,
+      "sha256": "259024b233b031dd4df4dc187e3fff65a750ceff8dfe1deacd7a91107be42097"
     },
     {
       "file": "public/og/news/2026-06-02-anthropic-project-glasswing-expansion.png",
@@ -6506,6 +6524,15 @@
       "sha256": "339c4d0131190788296298c7a95ecdf35d1a85f53f214115014a0a825f8bfc6e"
     },
     {
+      "file": "public/og/news/light/2026-06-01-ai-news-desk.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 37790,
+      "sha256": "39269593d69b93962ec3e668c2b61ece500d0b87dc9b3a28dd38921d318894e8"
+    },
+    {
       "file": "public/og/news/light/2026-06-01-github-copilot-ai-credits-billing.png",
       "kind": null,
       "slug": null,
@@ -6522,6 +6549,15 @@
       "target": "public/og/news",
       "bytes": 40921,
       "sha256": "beec8765a289172dae9a2d82610de81ae2257d078977b66a8a557600279c8ddd"
+    },
+    {
+      "file": "public/og/news/light/2026-06-02-ai-news-desk.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 39972,
+      "sha256": "14e034cd4b34576408c7a9ebe95d2268748a33c5e233a239d50efb38a160192f"
     },
     {
       "file": "public/og/news/light/2026-06-02-anthropic-project-glasswing-expansion.png",

@@ -7,8 +7,8 @@ severity: major
 summary: "GitHub's June 1 AI Credits billing migration and June 2 Copilot SDK GA turn Copilot into a metered, embeddable coding-agent runtime rather than only an IDE assistant."
 categories: [ai-coding, ai-automation]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-03
-last_verified: 2026-06-03
+last_updated: 2026-06-16
+last_verified: 2026-06-16
 related_tools: [github-copilot]
 sources:
   - url: https://github.blog/changelog/2026-06-02-copilot-sdk-is-now-generally-available/
@@ -26,6 +26,8 @@ sources:
 GitHub's June 1 and June 2 Copilot updates should be read together.
 
 On June 1, [Copilot moved into the AI Credits era](/news/2026-06-01-github-copilot-ai-credits-billing/). On June 2, GitHub made the Copilot SDK generally available, letting developers embed Copilot's agentic engine into applications, services, CI/CD assistants, internal tools, and customer-facing developer features.
+
+June 16 refresh note: AiPedia rechecked the Copilot SDK GA changelog and the June 1 billing sources while adding the [June 2 AI news desk](/news/2026-06-02-ai-news-desk/).
 
 That makes [GitHub Copilot](/tools/github-copilot/) a platform decision, not only an IDE extension.
 

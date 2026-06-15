@@ -7,8 +7,8 @@ severity: major
 summary: "June 3 AI news desk: Microsoft opens Work IQ APIs and reveals MAI-Thinking-1, Google ships Gemma 4 12B for local multimodal work, GitHub makes Copilot SDK and AI Credits the coding-agent control surface, Anthropic expands Project Glasswing, OpenAI retires older ChatGPT models, and agent infrastructure pushes deeper into production."
 categories: [ai-automation, ai-coding, ai-chatbots, ai-infrastructure]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-09
-last_verified: 2026-06-09
+last_updated: 2026-06-16
+last_verified: 2026-06-16
 related_tools: [microsoft-agent-framework, github-copilot, chatgpt, claude, gemini, ollama]
 sources:
   - url: https://blogs.microsoft.com/blog/2026/06/02/microsoft-build-2026-be-yourself-at-work/
@@ -56,6 +56,8 @@ sources:
 # AI News Desk, June 3, 2026: agents, local models, and AI governance move into production
 
 This is the **June 3, 2026 AiPedia news desk**, refreshed on June 9 after re-checking the same news window against primary sources. The through-line is simple: agents and local models are becoming production surfaces. The real buyer question is no longer "can an AI agent act?" It is "who controls the action, what context does it use, where does the model run, how is it billed, and what happens when it is wrong?"
+
+June 16 refresh note: AiPedia added backfilled daily desks for [June 1](/news/2026-06-01-ai-news-desk/) and [June 2](/news/2026-06-02-ai-news-desk/) so this June 3 productionization desk now has complete preceding-day context.
 
 ## Microsoft turns work context into an API layer
 

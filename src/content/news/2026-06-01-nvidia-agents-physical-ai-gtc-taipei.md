@@ -7,8 +7,8 @@ severity: major
 summary: "NVIDIA's June 1 GTC Taipei announcements highlight enterprise software agents, Cosmos 3, open physical-AI agent skills, Alpamayo 2 Super, RTX Spark, and DGX Station for Windows."
 categories: [ai-infrastructure, ai-automation]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-03
-last_verified: 2026-06-03
+last_updated: 2026-06-16
+last_verified: 2026-06-16
 sources:
   - url: https://investor.nvidia.com/news/press-release-details/2026/Enterprise-Software-Leaders-Build-AI-Agents-With-NVIDIA/default.aspx
     title: "NVIDIA: Enterprise Software Leaders Build AI Agents With NVIDIA"
@@ -29,6 +29,8 @@ sources:
 # NVIDIA pushes agents into enterprise software and physical AI at GTC Taipei
 
 NVIDIA's June 1 GTC Taipei announcements reinforce the same pattern seen across Microsoft, GitHub, Postman, and RelationalAI: agents are becoming infrastructure.
+
+June 16 refresh note: AiPedia rechecked NVIDIA's GTC Taipei, Cosmos 3, physical-AI skills, Alpamayo 2 Super, and enterprise-agent source pages while adding the [June 1 AI news desk](/news/2026-06-01-ai-news-desk/).
 
 Four updates matter for AiPedia buyers. NVIDIA is positioning its software stack around enterprise AI agents, turning physical-AI workflows into agent-executable skills, releasing Cosmos 3 as an open physical-AI foundation model, and extending the local-agent hardware story through RTX Spark and DGX Station for Windows.
 

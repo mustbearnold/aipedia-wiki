@@ -1,10 +1,10 @@
 {
   "version": 1,
   "kind": "news-og",
-  "source_hash": "76b4e844e5fa5bfde21532f306518344574153302ad4de8b955062a51a015f66",
+  "source_hash": "28286ec077a3d9620d1906b587398de3f4e5cbb99fc6ed3578385455ac42f93b",
   "generated_at": "deterministic",
   "meta": {
-    "records": 388,
+    "records": 390,
     "requested_slugs": [],
     "limit": null
   },
@@ -3016,6 +3016,15 @@
       "sha256": "b751769df23fcb2adb34ef3305efbe8bf896a84a05d49e6b64d6b6f9b1c40497"
     },
     {
+      "file": "public/og/news/2026-06-01-ai-news-desk.png",
+      "kind": "news-png",
+      "slug": "2026-06-01-ai-news-desk",
+      "theme": "dark",
+      "target": null,
+      "bytes": 46835,
+      "sha256": "6a4752a204bef20f6e2abf8dc04d3be61a6fe63857609e707cd53c70f3cb1d02"
+    },
+    {
       "file": "public/og/news/2026-06-01-github-copilot-ai-credits-billing.png",
       "kind": "news-png",
       "slug": "2026-06-01-github-copilot-ai-credits-billing",
@@ -3032,6 +3041,15 @@
       "target": null,
       "bytes": 43867,
       "sha256": "42fc9f6e6f35944c15b6e41508da9e335a4361741ef3106b2a8f386ed241a448"
+    },
+    {
+      "file": "public/og/news/2026-06-02-ai-news-desk.png",
+      "kind": "news-png",
+      "slug": "2026-06-02-ai-news-desk",
+      "theme": "dark",
+      "target": null,
+      "bytes": 50768,
+      "sha256": "259024b233b031dd4df4dc187e3fff65a750ceff8dfe1deacd7a91107be42097"
     },
     {
       "file": "public/og/news/2026-06-02-anthropic-project-glasswing-expansion.png",
@@ -6508,6 +6526,15 @@
       "sha256": "339c4d0131190788296298c7a95ecdf35d1a85f53f214115014a0a825f8bfc6e"
     },
     {
+      "file": "public/og/news/light/2026-06-01-ai-news-desk.png",
+      "kind": "news-png",
+      "slug": "2026-06-01-ai-news-desk",
+      "theme": "light",
+      "target": null,
+      "bytes": 37790,
+      "sha256": "39269593d69b93962ec3e668c2b61ece500d0b87dc9b3a28dd38921d318894e8"
+    },
+    {
       "file": "public/og/news/light/2026-06-01-github-copilot-ai-credits-billing.png",
       "kind": "news-png",
       "slug": "2026-06-01-github-copilot-ai-credits-billing",
@@ -6524,6 +6551,15 @@
       "target": null,
       "bytes": 40921,
       "sha256": "beec8765a289172dae9a2d82610de81ae2257d078977b66a8a557600279c8ddd"
+    },
+    {
+      "file": "public/og/news/light/2026-06-02-ai-news-desk.png",
+      "kind": "news-png",
+      "slug": "2026-06-02-ai-news-desk",
+      "theme": "light",
+      "target": null,
+      "bytes": 39972,
+      "sha256": "14e034cd4b34576408c7a9ebe95d2268748a33c5e233a239d50efb38a160192f"
     },
     {
       "file": "public/og/news/light/2026-06-02-anthropic-project-glasswing-expansion.png",
@@ -10000,6 +10036,15 @@
       "sha256": "f39c293a5ad7fb38a3868524ae16f67caff93b3ab6a036de4ab4f20ec8407039"
     },
     {
+      "file": "public/og/news/thumbs/2026-06-01-ai-news-desk.webp",
+      "kind": "news-thumb",
+      "slug": "2026-06-01-ai-news-desk",
+      "theme": "dark",
+      "target": null,
+      "bytes": 19238,
+      "sha256": "496bf69e880748c38072073cad792a8a077c616227261d4af72bd04a29c7e1f1"
+    },
+    {
       "file": "public/og/news/thumbs/2026-06-01-github-copilot-ai-credits-billing.webp",
       "kind": "news-thumb",
       "slug": "2026-06-01-github-copilot-ai-credits-billing",
@@ -10016,6 +10061,15 @@
       "target": null,
       "bytes": 18202,
       "sha256": "34bc4555f0c77cb4b71ac1df19041427f742128b0705c52fb51f8b5e331ffc40"
+    },
+    {
+      "file": "public/og/news/thumbs/2026-06-02-ai-news-desk.webp",
+      "kind": "news-thumb",
+      "slug": "2026-06-02-ai-news-desk",
+      "theme": "dark",
+      "target": null,
+      "bytes": 20222,
+      "sha256": "251087b34808321b0d328b850b17bcad008abad80686988b8aefa01f4fcba4b8"
     },
     {
       "file": "public/og/news/thumbs/2026-06-02-anthropic-project-glasswing-expansion.webp",
@@ -13492,6 +13546,15 @@
       "sha256": "1f964abb2e060fb36904526ba780fc3db08df8fc1c65d2b50bc3682dc770de33"
     },
     {
+      "file": "public/og/news/thumbs/light/2026-06-01-ai-news-desk.webp",
+      "kind": "news-thumb",
+      "slug": "2026-06-01-ai-news-desk",
+      "theme": "light",
+      "target": null,
+      "bytes": 19584,
+      "sha256": "7a4f6d115b58ac45ae21729f31383d88b42afb5cfc7700b04cce988038988164"
+    },
+    {
       "file": "public/og/news/thumbs/light/2026-06-01-github-copilot-ai-credits-billing.webp",
       "kind": "news-thumb",
       "slug": "2026-06-01-github-copilot-ai-credits-billing",
@@ -13508,6 +13571,15 @@
       "target": null,
       "bytes": 18358,
       "sha256": "b32d2249fc14029f41be3dad0d3c74343ee0d567e016b9369b5c0d6e16fbbd0f"
+    },
+    {
+      "file": "public/og/news/thumbs/light/2026-06-02-ai-news-desk.webp",
+      "kind": "news-thumb",
+      "slug": "2026-06-02-ai-news-desk",
+      "theme": "light",
+      "target": null,
+      "bytes": 20446,
+      "sha256": "74e72cae89c760835bec2691c9c4c15e5ce8c219c1bb1ac9bcfde0d8f715cea8"
     },
     {
       "file": "public/og/news/thumbs/light/2026-06-02-anthropic-project-glasswing-expansion.webp",
