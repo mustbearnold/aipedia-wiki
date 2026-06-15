@@ -2,8 +2,8 @@
 import ArticleLayout from '../../layouts/ArticleLayout.astro';
 import { getCollection } from 'astro:content';
 
-const LAST_REVIEWED = '2026-06-12';
-const LAST_REVIEWED_HUMAN = 'June 12, 2026';
+const LAST_REVIEWED = '2026-06-13';
+const LAST_REVIEWED_HUMAN = 'June 13, 2026';
 
 const pageName = 'Tools We Actually Use, aipedia.wiki';
 const pageDesc =
@@ -45,9 +45,14 @@ const infrastructure: { name: string; url: string; why: string }[] = [
     why: 'Static site framework that powers aipedia.wiki. Open source.',
   },
   {
-    name: 'Cloudflare',
-    url: 'https://www.cloudflare.com/',
-    why: 'CDN, DNS, and edge platform.',
+    name: 'Vercel',
+    url: 'https://vercel.com/',
+    why: 'Hosting, CDN, serverless API functions, Web Analytics, and Speed Insights.',
+  },
+  {
+    name: 'Neon Postgres',
+    url: 'https://neon.com/',
+    why: 'Serverless Postgres database for newsletter and review workflows.',
   },
   {
     name: 'GitHub',

@@ -17,7 +17,6 @@ const { variant = 'inline', source = 'unknown' } = Astro.props;
 const toolCount = (await getCollection('tools')).filter(
   (t) => t.data.status !== 'dead' && t.data.status !== 'retired' && t.data.status !== 'acquired'
 ).length;
-const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY ?? '';
 
 // Unique id suffix so multiple instances on one page don't collide
 const uid = Math.random().toString(36).slice(2, 8);
@@ -70,9 +69,6 @@ const containerClasses = {
       placeholder="you@example.com"
       class="flex-1 min-w-0 rounded-[var(--site-radius-control)] border border-[var(--border)] bg-[var(--bg-base)] px-3 py-2.5 text-sm text-[var(--text-primary)] placeholder:text-[var(--text-muted)] focus:outline-none focus:ring-1 focus:ring-[var(--accent-primary)]"
     />
-    {turnstileSiteKey && (
-      <div class="cf-turnstile shrink-0" data-sitekey={turnstileSiteKey} data-theme="dark" data-size="flexible"></div>
-    )}
     <button
       type="submit"
       id={submitId}
@@ -93,10 +89,6 @@ const containerClasses = {
   </p>
 </section>
 
-{turnstileSiteKey && (
-  <script is:inline async src="https://challenges.cloudflare.com/turnstile/v0/api.js" defer></script>
-)}
-
 <script is:inline define:vars={{ formId, inputId, statusId, submitId, submitLabelId, source }}>
   (function () {
     const form = document.getElementById(formId);
@@ -111,7 +103,6 @@ const containerClasses = {
     const ERROR_MESSAGES = {
       invalid_email: "That doesn't look like a valid email. Double-check and try again.",
       rate_limited: 'Too many signups from this network today. Try again tomorrow.',
-      captcha_failed: 'Spam check did not complete. Refresh the page and try again.',
       subscribe_disabled: 'Signups are temporarily unavailable. Try again later.',
       db_failed: 'Something went wrong on our end. Try again in a minute.',
       invalid_json: 'Something went wrong. Try again.',
@@ -132,16 +123,6 @@ const containerClasses = {
       statusEl.style.color = '';
 
       const fd = new FormData(form);
-      const turnstileEl = form.querySelector('.cf-turnstile');
-      const turnstile_token = fd.get('cf-turnstile-response') || undefined;
-
-      if (turnstileEl && !turnstile_token) {
-        statusEl.textContent = 'Spam check is still loading. Try again in a second.';
-        statusEl.style.color = '#fb923c';
-        submitBtn.disabled = false;
-        submitLabel.textContent = 'Subscribe';
-        return;
-      }
 
       try {
         // Astro's trailingSlash: 'always' redirects /api/subscribe to
@@ -150,7 +131,7 @@ const containerClasses = {
         const res = await fetch('/api/subscribe/', {
           method: 'POST',
           headers: { 'content-type': 'application/json' },
-          body: JSON.stringify({ email, source, turnstile_token, website: fd.get('website') || '' }),
+          body: JSON.stringify({ email, source, website: fd.get('website') || '' }),
         });
         const data = await res.json().catch(() => ({}));
 
@@ -176,10 +157,6 @@ const containerClasses = {
         statusEl.style.color = '#fb923c';
         submitBtn.disabled = false;
         submitLabel.textContent = 'Subscribe';
-      } finally {
-        if (window.turnstile) {
-          try { window.turnstile.reset(); } catch (_) {}
-        }
       }
     });
   })();

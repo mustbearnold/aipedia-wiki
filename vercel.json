@@ -1,6 +1,243 @@
 {
   "framework": "astro",
   "installCommand": "npm install",
-  "buildCommand": "AIPEDIA_LEDGER_IGNORE_DIRTY=1 npm run build:fast",
-  "outputDirectory": "dist-fast"
+  "buildCommand": "AIPEDIA_LEDGER_IGNORE_DIRTY=1 npm run build",
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=63072000; includeSubDomains; preload"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://*.googletagmanager.com; script-src-elem 'self' 'unsafe-inline' https://www.googletagmanager.com https://*.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https: https://www.google-analytics.com https://www.googletagmanager.com https://*.google-analytics.com https://*.googletagmanager.com; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://vitals.vercel-insights.com; frame-src 'none'; base-uri 'self'; form-action 'self'"
+        }
+      ]
+    },
+    {
+      "source": "/admin/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow, nosnippet, noarchive"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "private, no-store"
+        }
+      ]
+    },
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "private, no-store"
+        }
+      ]
+    },
+    {
+      "source": "/_astro/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/pagefind/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400"
+        }
+      ]
+    },
+    {
+      "source": "/logos/tools/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800, stale-while-revalidate=86400"
+        }
+      ]
+    },
+    {
+      "source": "/og/news/thumbs/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/home-news-ai-tools-intelligence.webp",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800, stale-while-revalidate=86400"
+        }
+      ]
+    },
+    {
+      "source": "/favicon.ico",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/favicon-16.png",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/favicon-32.png",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/favicon-192.png",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/favicon-512.png",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/apple-touch-icon.png",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/brand/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, must-revalidate"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    { "source": "/compare/ahrefs-vs-chatgpt/", "destination": "/tools/ahrefs/", "permanent": true },
+    { "source": "/compare/ahrefs-vs-chatgpt", "destination": "/tools/ahrefs/", "permanent": true },
+    { "source": "/compare/chatgpt-vs-n8n/", "destination": "/tools/n8n/", "permanent": true },
+    { "source": "/compare/chatgpt-vs-n8n", "destination": "/tools/n8n/", "permanent": true },
+    { "source": "/compare/chatgpt-vs-semrush/", "destination": "/tools/semrush/", "permanent": true },
+    { "source": "/compare/chatgpt-vs-semrush", "destination": "/tools/semrush/", "permanent": true },
+    { "source": "/compare/chatgpt-vs-make/", "destination": "/tools/make/", "permanent": true },
+    { "source": "/compare/chatgpt-vs-make", "destination": "/tools/make/", "permanent": true },
+    { "source": "/compare/chatgpt-vs-midjourney/", "destination": "/answers/best-ai-image-generator-2026/", "permanent": true },
+    { "source": "/compare/chatgpt-vs-midjourney", "destination": "/answers/best-ai-image-generator-2026/", "permanent": true },
+    { "source": "/compare/adobe-firefly-vs-chatgpt/", "destination": "/answers/best-ai-image-generator-2026/", "permanent": true },
+    { "source": "/compare/adobe-firefly-vs-chatgpt", "destination": "/answers/best-ai-image-generator-2026/", "permanent": true },
+    { "source": "/compare/chatgpt-vs-flux/", "destination": "/answers/best-ai-image-generator-2026/", "permanent": true },
+    { "source": "/compare/chatgpt-vs-flux", "destination": "/answers/best-ai-image-generator-2026/", "permanent": true },
+    { "source": "/compare/claude-vs-midjourney/", "destination": "/tools/midjourney/", "permanent": true },
+    { "source": "/compare/claude-vs-midjourney", "destination": "/tools/midjourney/", "permanent": true },
+    { "source": "/compare/chatgpt-vs-heygen/", "destination": "/answers/best-ai-video-generator-2026/", "permanent": true },
+    { "source": "/compare/chatgpt-vs-heygen", "destination": "/answers/best-ai-video-generator-2026/", "permanent": true },
+    { "source": "/about/editor/", "destination": "/about/editorial/", "permanent": true },
+    { "source": "/about/editor", "destination": "/about/editorial/", "permanent": true },
+    { "source": "/tool-finder/", "destination": "/search/", "permanent": true },
+    { "source": "/tool-finder", "destination": "/search/", "permanent": true },
+    { "source": "/demo-claude/", "destination": "/tools/claude/", "permanent": true },
+    { "source": "/demo-claude", "destination": "/tools/claude/", "permanent": true },
+    { "source": "/demo-homepage/", "destination": "/", "permanent": true },
+    { "source": "/demo-homepage", "destination": "/", "permanent": true },
+    { "source": "/homepage-clone/", "destination": "/", "permanent": true },
+    { "source": "/homepage-clone", "destination": "/", "permanent": true },
+    { "source": "/glass-demo/", "destination": "/", "permanent": true },
+    { "source": "/glass-demo", "destination": "/", "permanent": true },
+    { "source": "/glass-demo-v2/", "destination": "/", "permanent": true },
+    { "source": "/glass-demo-v2", "destination": "/", "permanent": true },
+    { "source": "/100k-homepage/", "destination": "/", "permanent": true },
+    { "source": "/100k-homepage", "destination": "/", "permanent": true },
+    { "source": "/comparisons/deepseek-vs-glm/", "destination": "/compare/build/?tools=deepseek,glm", "permanent": true },
+    { "source": "/comparisons/deepseek-vs-glm", "destination": "/compare/build/?tools=deepseek,glm", "permanent": true },
+    { "source": "/comparisons/claude-vs-glm/", "destination": "/compare/build/?tools=claude,glm", "permanent": true },
+    { "source": "/comparisons/claude-vs-glm", "destination": "/compare/build/?tools=claude,glm", "permanent": true },
+    { "source": "/comparisons/tripo3d-vs-rodin/", "destination": "/compare/build/?tools=tripo3d,rodin", "permanent": true },
+    { "source": "/comparisons/tripo3d-vs-rodin", "destination": "/compare/build/?tools=tripo3d,rodin", "permanent": true },
+    { "source": "/comparisons/luma-vs-runway/", "destination": "/compare/build/?tools=luma,runway", "permanent": true },
+    { "source": "/comparisons/luma-vs-runway", "destination": "/compare/build/?tools=luma,runway", "permanent": true },
+    { "source": "/comparisons/kling-vs-luma/", "destination": "/compare/build/?tools=kling,luma", "permanent": true },
+    { "source": "/comparisons/kling-vs-luma", "destination": "/compare/build/?tools=kling,luma", "permanent": true },
+    { "source": "/comparisons/luma-vs-pika/", "destination": "/compare/build/?tools=luma,pika", "permanent": true },
+    { "source": "/comparisons/luma-vs-pika", "destination": "/compare/build/?tools=luma,pika", "permanent": true },
+    { "source": "/comparisons/rodin-vs-meshy/", "destination": "/compare/build/?tools=rodin,meshy", "permanent": true },
+    { "source": "/comparisons/rodin-vs-meshy", "destination": "/compare/build/?tools=rodin,meshy", "permanent": true },
+    { "source": "/comparisons/tripo3d-vs-meshy/", "destination": "/compare/build/?tools=tripo3d,meshy", "permanent": true },
+    { "source": "/comparisons/tripo3d-vs-meshy", "destination": "/compare/build/?tools=tripo3d,meshy", "permanent": true },
+    { "source": "/tools/anthropic/", "destination": "/companies/anthropic/", "permanent": true },
+    { "source": "/tools/anthropic", "destination": "/companies/anthropic/", "permanent": true },
+    { "source": "/use-cases/best-ai-for-voice-agents/", "destination": "/categories/ai-voice/", "permanent": true },
+    { "source": "/use-cases/best-ai-for-voice-agents", "destination": "/categories/ai-voice/", "permanent": true },
+    { "source": "/tools/:any/:slug.md", "destination": "/tools/:slug/", "permanent": true },
+    { "source": "/compare/:any/:slug.md", "destination": "/compare/:slug/", "permanent": true },
+    { "source": "/comparisons/:any/:slug.md", "destination": "/compare/:slug/", "permanent": true },
+    { "source": "/tools/:slug.md", "destination": "/tools/:slug/", "permanent": true },
+    { "source": "/compare/:slug.md", "destination": "/compare/:slug/", "permanent": true },
+    { "source": "/comparisons/:slug.md", "destination": "/compare/:slug/", "permanent": true },
+    { "source": "/categories/:slug.md", "destination": "/categories/:slug/", "permanent": true },
+    { "source": "/guides/:slug.md", "destination": "/guides/:slug/", "permanent": true },
+    { "source": "/use-cases/:slug.md", "destination": "/guides/:slug/", "permanent": true },
+    { "source": "/companies/:slug.md", "destination": "/companies/:slug/", "permanent": true },
+    { "source": "/trends/:slug.md", "destination": "/trends/:slug/", "permanent": true },
+    { "source": "/dead/:slug.md", "destination": "/dead/:slug/", "permanent": true },
+    { "source": "/news/:slug.md", "destination": "/news/:slug/", "permanent": true },
+    { "source": "/comparisons/:slug/", "destination": "/compare/:slug/", "permanent": true },
+    { "source": "/comparisons/:slug", "destination": "/compare/:slug/", "permanent": true },
+    { "source": "/use-cases/:slug/", "destination": "/guides/:slug/", "permanent": true },
+    { "source": "/use-cases/:slug", "destination": "/guides/:slug/", "permanent": true }
+  ]
 }

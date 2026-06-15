@@ -12,11 +12,11 @@
     "prebuild": "node scripts/guard-content.mjs && node scripts/guard-stale-facts.mjs && node scripts/audit-guide-picks.mjs && node scripts/fetch-github-stats.mjs && node scripts/generate-og-news.mjs",
     "dev": "node scripts/copy-content.mjs && astro dev",
     "dev:codex": "npm exec --yes --package=node@24 -- node node_modules/astro/bin/astro.mjs dev",
-    "build:astro": "astro build",
+    "build:astro": "npm exec --yes --package=node@24 -- node node_modules/astro/bin/astro.mjs build",
     "build:fast": "npm run guard:check && npm exec --yes --package=node@24 -- node scripts/build-fast.mjs",
     "build:full:node24": "npm exec --yes --package=node@24 -- node scripts/copy-content.mjs && npm exec --yes --package=node@24 -- node node_modules/astro/bin/astro.mjs build && npm exec --yes --package=node@24 -- node scripts/audit-indexability.mjs && npm exec --yes --package=node@24 -- node scripts/audit-commercial-cta.mjs && npm exec --yes --package=node@24 -- node scripts/build-pagefind.mjs && npm exec --yes --package=node@24 -- node scripts/enforce-built-font-policy.mjs && npm exec --yes --package=node@24 -- node scripts/audit-font-policy.mjs --dist",
-    "build": "node scripts/copy-content.mjs && astro build && node scripts/audit-indexability.mjs && node scripts/audit-commercial-cta.mjs && node scripts/build-pagefind.mjs && node scripts/enforce-built-font-policy.mjs && node scripts/audit-font-policy.mjs --dist",
-    "guard:check": "node scripts/guard-content.mjs && node scripts/guard-stale-facts.mjs && node scripts/guard-em-dashes.mjs && node scripts/audit-guide-picks.mjs && node scripts/audit-tool-logos.mjs && node scripts/audit-news-rendering.mjs && node scripts/generate-page-refresh-ledger.mjs --check && node scripts/audit-font-policy.mjs --source",
+    "build": "node scripts/copy-content.mjs && npm exec --yes --package=node@24 -- node node_modules/astro/bin/astro.mjs build && node scripts/audit-indexability.mjs && node scripts/audit-commercial-cta.mjs && node scripts/build-pagefind.mjs && node scripts/enforce-built-font-policy.mjs && node scripts/audit-font-policy.mjs --dist",
+    "guard:check": "node scripts/guard-content.mjs && node scripts/guard-stale-facts.mjs && node scripts/guard-em-dashes.mjs && node scripts/audit-guide-picks.mjs && node scripts/audit-tool-logos.mjs && node scripts/audit-news-rendering.mjs && node scripts/audit-hosting-runtime.mjs && node scripts/generate-page-refresh-ledger.mjs --check && node scripts/audit-font-policy.mjs --source",
     "guard:baseline": "node scripts/guard-content.mjs --baseline",
     "test": "node --test tests/scripts/*.test.mjs",
     "test:scripts": "node --test tests/scripts/*.test.mjs",
@@ -32,49 +32,58 @@
     "audit:all": "npm run audit:kpis && npm run audit:facts && npm run audit:provenance && npm run audit:freshness && npm run audit:sources && npm run audit:passed-dates",
     "audit:guide-picks": "node scripts/audit-guide-picks.mjs",
     "audit:commands": "node scripts/audit-command-surface.mjs",
+    "db:migrate": "node scripts/neon-migrate.mjs",
+    "db:migrate:check": "node scripts/neon-migrate.mjs --check",
+    "db:migrate:verify": "node scripts/neon-migrate.mjs --verify",
     "ledger:pages": "node scripts/generate-page-refresh-ledger.mjs",
     "ledger:pages:check": "node scripts/generate-page-refresh-ledger.mjs --check",
     "check:content": "npm run guard:check && npm run check:links && npm run check:news",
     "check:links": "node scripts/audit-internal-links.mjs",
     "check:news": "node scripts/audit-news-xrefs.mjs",
+    "check:hosting": "node scripts/audit-hosting-runtime.mjs",
+    "check:assets": "node scripts/prep-favicons.mjs --check && node scripts/generate-og-svgs.mjs --check && node scripts/generate-og-news.mjs --check && node scripts/optimize-og-images.mjs --check && node scripts/generate-logo-manifest.mjs --check",
+    "check:assets:quick": "node scripts/prep-favicons.mjs --check && node scripts/generate-og-svgs.mjs --check --limit 5 && node scripts/generate-og-news.mjs --check --limit 2 && node scripts/optimize-og-images.mjs --check --limit 20 && node scripts/generate-logo-manifest.mjs --check",
+    "check:quick": "npm run test:scripts && npm run audit:commands && npm run check:assets:quick",
     "check:fonts": "node scripts/audit-font-policy.mjs --source",
     "check:security": "npm audit --audit-level=moderate",
     "check:dist": "node scripts/check-dist-budget.mjs && node scripts/audit-indexability.mjs && node scripts/audit-commercial-cta.mjs",
-    "check:ci": "npm run test:scripts && npm run audit:commands && npm run check && npm run build:fast",
-    "ship:check": "npm run check && npm run build:fast",
+    "check:ci": "npm run check:quick && npm run check && npm run build:fast",
+    "ship:check": "npm run check:quick && npm run check && npm run build:fast",
     "vercel:link": "npx vercel link",
     "vercel:pull": "npx vercel pull",
     "vercel:preview": "npx vercel",
     "vercel:prod": "npx vercel --prod",
-    "vercel:env:pull": "npx vercel env pull .env.local",
+    "vercel:env:pull": "npx vercel env pull .env.local --yes",
     "smoke:visual": "playwright test tests/smoke/visual-routes.spec.mjs --config=playwright.config.mjs",
     "smoke:api": "playwright test tests/smoke/api-routes.spec.mjs --config=playwright.config.mjs",
     "kg": "node tools/project-kg/bin/project-kg",
     "indexnow:ping": "node scripts/indexnow-ping.mjs",
     "check": "npm run guard:check && npm run check:links && npm run check:news && npm run check:security",
-    "deploy": "npm run build && wrangler deploy"
+    "deploy": "npx vercel build --prod && npx vercel deploy --prebuilt --prod"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^13.2.1",
-    "@astrojs/sitemap": "^3.7.2",
+    "@astrojs/sitemap": "3.7.2",
+    "@astrojs/vercel": "10.0.8",
+    "@neondatabase/serverless": "1.1.0",
     "@resvg/resvg-js": "^2.6.2",
-    "@tailwindcss/vite": "^4.2.4",
+    "@tailwindcss/vite": "4.2.4",
     "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "^2.0.0",
-    "astro": "^6.1.9",
+    "astro": "6.2.2",
     "pagefind": "^1.5.2",
-    "tailwindcss": "^4.2.4",
+    "tailwindcss": "4.2.4",
     "unist-util-visit": "^5.1.0"
   },
   "devDependencies": {
-    "@playwright/test": "^1.59.1",
-    "sharp": "^0.34.5",
-    "wrangler": "^4.85.0"
+    "@playwright/test": "1.59.1",
+    "sharp": "^0.34.5"
   },
   "optionalDependencies": {
-    "@rollup/rollup-linux-x64-gnu": "^4.60.2"
+    "@rollup/rollup-linux-x64-gnu": "4.60.3"
   },
   "overrides": {
-    "vite": "^7"
+    "esbuild": "0.28.1",
+    "path-to-regexp": "6.3.0",
+    "vite": "^7.3.2"
   }
 }
