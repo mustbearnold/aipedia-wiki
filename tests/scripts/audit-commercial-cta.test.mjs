@@ -270,7 +270,7 @@ test('commercial CTA audit validates representative built money pages', () => {
       );
     }
 
-    const result = spawnSync(process.execPath, ['scripts/audit-commercial-cta.mjs', '--json', '--dist', fixture], {
+    const result = spawnSync(process.execPath, ['scripts/audit-commercial-cta.mjs', '--json', '--site-dir', fixture], {
       cwd: process.cwd(),
       encoding: 'utf8',
     });
@@ -323,4 +323,51 @@ test('commercial CTA audit fails when a required affiliate link is missing from 
   } finally {
     rmSync(fixture, { recursive: true, force: true });
   }
+});
+
+test('commercial CTA audit reports structured invalid arguments', () => {
+  const unknown = spawnSync(process.execPath, ['scripts/audit-commercial-cta.mjs', '--json', '--wat'], {
+    cwd: process.cwd(),
+    encoding: 'utf8',
+  });
+
+  assert.equal(unknown.status, 1);
+
+  const unknownReport = JSON.parse(unknown.stdout);
+  assert.equal(unknownReport.ok, false);
+  assert.deepEqual(unknownReport.routes, []);
+  assert.ok(unknownReport.issues.some((issue) => issue.code === 'argument-invalid' && /unknown flag --wat/.test(issue.detail)));
+
+  const missing = spawnSync(process.execPath, ['scripts/audit-commercial-cta.mjs', '--json', '--site-dir'], {
+    cwd: process.cwd(),
+    encoding: 'utf8',
+  });
+
+  assert.equal(missing.status, 1);
+
+  const missingReport = JSON.parse(missing.stdout);
+  assert.equal(missingReport.ok, false);
+  assert.ok(missingReport.issues.some((issue) => issue.code === 'argument-invalid' && /--site-dir requires a path/.test(issue.detail)));
+
+  const stray = spawnSync(process.execPath, ['scripts/audit-commercial-cta.mjs', '--json', 'dist-fast'], {
+    cwd: process.cwd(),
+    encoding: 'utf8',
+  });
+
+  assert.equal(stray.status, 1);
+
+  const strayReport = JSON.parse(stray.stdout);
+  assert.equal(strayReport.ok, false);
+  assert.ok(strayReport.issues.some((issue) => issue.code === 'argument-invalid' && /unexpected argument dist-fast/.test(issue.detail)));
+});
+
+test('commercial CTA audit prints CLI help', () => {
+  const result = spawnSync(process.execPath, ['scripts/audit-commercial-cta.mjs', '--help'], {
+    cwd: process.cwd(),
+    encoding: 'utf8',
+  });
+
+  assert.equal(result.status, 0);
+  assert.match(result.stdout, /Usage:/);
+  assert.match(result.stdout, /--site-dir <dir>/);
 });

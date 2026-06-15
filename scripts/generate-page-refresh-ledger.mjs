@@ -3,9 +3,137 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+const args = process.argv.slice(2);
+const defaultRepoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+const projectDirArg = valueFor('--project-dir') || valueFor('--root');
+const repoRoot = path.resolve(projectDirArg || defaultRepoRoot);
 const ledgerPath = path.join(repoRoot, 'PAGE_REFRESH_LEDGER.md');
-const checkOnly = process.argv.includes('--check');
+const checkOnly = args.includes('--check');
+const jsonMode = args.includes('--json');
+const helpMode = args.includes('--help') || args.includes('-h');
+const dateArg = valueFor('--date');
+const knownFlags = new Set(['--check', '--json', '--date', '--project-dir', '--root', '--help', '-h']);
+const valueFlags = new Set(['--date', '--project-dir', '--root']);
+const argumentIssues = collectArgumentIssues();
+
+function valueFor(name) {
+  const inlineArg = args.find((arg) => arg.startsWith(`${name}=`));
+  if (inlineArg) return inlineArg.slice(name.length + 1);
+  const index = args.indexOf(name);
+  return index >= 0 ? args[index + 1] : undefined;
+}
+
+function hasFlag(name) {
+  return args.includes(name) || args.some((arg) => arg.startsWith(`${name}=`));
+}
+
+function flagName(arg) {
+  const equalsIndex = arg.indexOf('=');
+  return equalsIndex >= 0 ? arg.slice(0, equalsIndex) : arg;
+}
+
+function collectArgumentIssues() {
+  const issues = [];
+
+  for (const [index, arg] of args.entries()) {
+    if (!arg.startsWith('-')) {
+      const previous = args[index - 1] ?? '';
+      if (!valueFlags.has(previous)) issues.push({ code: 'argument-invalid', detail: `unexpected argument ${arg}` });
+      continue;
+    }
+
+    const name = flagName(arg);
+    if (!knownFlags.has(name)) issues.push({ code: 'argument-invalid', detail: `unknown flag ${name}` });
+
+    if (valueFlags.has(name)) {
+      const value = arg.includes('=') ? arg.slice(name.length + 1) : args[index + 1] ?? '';
+      if (!value || value.startsWith('-')) issues.push({ code: 'argument-invalid', detail: `${name} requires a value` });
+    }
+  }
+
+  if (hasFlag('--project-dir') && hasFlag('--root')) {
+    issues.push({ code: 'argument-invalid', detail: 'choose only one of --project-dir or --root' });
+  }
+
+  if (dateArg && !/^\d{4}-\d{2}-\d{2}$/.test(dateArg)) {
+    issues.push({ code: 'argument-invalid', detail: '--date must be YYYY-MM-DD' });
+  }
+
+  return issues;
+}
+
+function usage() {
+  return [
+    'Usage:',
+    '  node scripts/generate-page-refresh-ledger.mjs',
+    '  node scripts/generate-page-refresh-ledger.mjs --check',
+    '  node scripts/generate-page-refresh-ledger.mjs --project-dir <dir> --date <YYYY-MM-DD>',
+    '',
+    'Options:',
+    '  --check                Verify PAGE_REFRESH_LEDGER.md without writing.',
+    '  --json                 Emit a structured ledger report.',
+    '  --date <YYYY-MM-DD>    Override the local ledger date.',
+    '  --project-dir <dir>    Generate or check another project root.',
+    '  --root <dir>           Alias for --project-dir.',
+    '  --help, -h             Print this help message.',
+  ].join('\n');
+}
+
+function emitReport(report) {
+  if (jsonMode) {
+    console.log(JSON.stringify(report, null, 2));
+    return;
+  }
+
+  if (report.mode === 'argument-error') {
+    console.error('[generate-page-refresh-ledger] Invalid arguments:');
+    for (const issue of report.argument_issues) console.error(`- ${issue.detail}`);
+    console.error('');
+    console.error(usage());
+    return;
+  }
+
+  if (report.skipped) {
+    console.log('PAGE_REFRESH_LEDGER.md strict check skipped for Vercel; local ledger checks remain enforced.');
+    return;
+  }
+
+  if (report.mode === 'check') {
+    if (report.ok) {
+      console.log('PAGE_REFRESH_LEDGER.md is current.');
+    } else {
+      console.error('PAGE_REFRESH_LEDGER.md is out of date. Run `npm run ledger:pages`.');
+    }
+    return;
+  }
+
+  console.log(`Wrote ${path.relative(repoRoot, ledgerPath)} with ${report.rows} rows.`);
+}
+
+function resultFor({ ok, mode, rows = 0, ledgerUpdatedThrough = '', changed = false, skipped = false }) {
+  return {
+    ok,
+    mode,
+    project_dir: repoRoot,
+    ledger_path: ledgerPath,
+    check_only: checkOnly,
+    skipped,
+    rows,
+    ledger_updated_through: ledgerUpdatedThrough,
+    changed,
+    argument_issues: mode === 'argument-error' ? argumentIssues : [],
+  };
+}
+
+if (helpMode) {
+  console.log(usage());
+  process.exit(0);
+}
+
+if (argumentIssues.length > 0) {
+  emitReport(resultFor({ ok: false, mode: 'argument-error' }));
+  process.exit(1);
+}
 
 function localTodayYmd() {
   const now = new Date();
@@ -13,7 +141,7 @@ function localTodayYmd() {
   return local.toISOString().slice(0, 10);
 }
 
-const currentDate = process.env.AIPEDIA_LEDGER_DATE || localTodayYmd();
+const currentDate = dateArg || process.env.AIPEDIA_LEDGER_DATE || localTodayYmd();
 
 const collectionRoutes = [
   { name: 'Tool', base: 'src/content/tools', routePrefix: '/tools/' },
@@ -76,7 +204,12 @@ function walk(dir) {
 }
 
 function parseDirtyFiles() {
-  const output = git(['status', '--porcelain']);
+  let output = '';
+  try {
+    output = git(['status', '--porcelain']);
+  } catch {
+    return new Set();
+  }
   if (!output) return new Set();
 
   return new Set(output.split(/\r?\n/).map((line) => {
@@ -93,7 +226,7 @@ const ignoreDirtyFiles = process.env.AIPEDIA_LEDGER_IGNORE_DIRTY || process.env.
 const dirtyFiles = ignoreDirtyFiles ? new Set() : parseDirtyFiles();
 
 if (checkOnly && process.env.AIPEDIA_LEDGER_IGNORE_DIRTY) {
-  console.log('PAGE_REFRESH_LEDGER.md strict check skipped for Vercel; local ledger checks remain enforced.');
+  emitReport(resultFor({ ok: true, mode: 'check', skipped: true }));
   process.exit(0);
 }
 
@@ -296,11 +429,29 @@ const next = `${lines.join('\n')}`;
 if (checkOnly) {
   const current = fs.existsSync(ledgerPath) ? fs.readFileSync(ledgerPath, 'utf8') : '';
   if (current !== next) {
-    console.error('PAGE_REFRESH_LEDGER.md is out of date. Run `npm run ledger:pages`.');
+    emitReport(resultFor({
+      ok: false,
+      mode: 'check',
+      rows: dedupedRows.length,
+      ledgerUpdatedThrough,
+      changed: true,
+    }));
     process.exit(1);
   }
-  console.log('PAGE_REFRESH_LEDGER.md is current.');
+  emitReport(resultFor({
+    ok: true,
+    mode: 'check',
+    rows: dedupedRows.length,
+    ledgerUpdatedThrough,
+    changed: false,
+  }));
 } else {
   fs.writeFileSync(ledgerPath, next);
-  console.log(`Wrote ${path.relative(repoRoot, ledgerPath)} with ${dedupedRows.length} rows.`);
+  emitReport(resultFor({
+    ok: true,
+    mode: 'write',
+    rows: dedupedRows.length,
+    ledgerUpdatedThrough,
+    changed: true,
+  }));
 }

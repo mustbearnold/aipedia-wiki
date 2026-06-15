@@ -4,40 +4,187 @@
 
 import { createHash } from 'node:crypto';
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
-import { dirname, join } from 'node:path';
+import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const PROJECT_DIR = dirname(dirname(fileURLToPath(import.meta.url)));
+const args = process.argv.slice(2);
+const defaultProjectDir = dirname(dirname(fileURLToPath(import.meta.url)));
+const projectDirArg = valueFor('--project-dir') || valueFor('--root');
+const PROJECT_DIR = resolve(projectDirArg || defaultProjectDir);
 const SOURCE_REGISTRY_PATH = join(PROJECT_DIR, 'src', 'data', 'source-registry.json');
 const DEFAULT_SNAPSHOT_DIR = '/tmp/aipedia-source-snapshots';
+const KNOWN_FLAGS = new Set([
+  '--json',
+  '--live',
+  '--update-snapshots',
+  '--limit',
+  '--timeout-ms',
+  '--snapshot-dir',
+  '--source-id',
+  '--project-dir',
+  '--root',
+  '--help',
+  '-h',
+]);
+const VALUE_FLAGS = new Set(['--limit', '--timeout-ms', '--snapshot-dir', '--source-id', '--project-dir', '--root']);
+const NUMBER_FLAGS = new Set(['--limit', '--timeout-ms']);
 
-const JSON_MODE = process.argv.includes('--json');
-const LIVE_MODE = process.argv.includes('--live');
-const UPDATE_SNAPSHOTS = process.argv.includes('--update-snapshots');
+const JSON_MODE = args.includes('--json');
+const LIVE_MODE = args.includes('--live');
+const UPDATE_SNAPSHOTS = args.includes('--update-snapshots');
+const HELP_MODE = args.includes('--help') || args.includes('-h');
+const argumentIssues = collectArgumentIssues();
 const LIMIT = numberArg('--limit', LIVE_MODE ? 25 : 50);
 const TIMEOUT_MS = numberArg('--timeout-ms', 8000);
 const SNAPSHOT_DIR = stringArg('--snapshot-dir', DEFAULT_SNAPSHOT_DIR);
 const SOURCE_IDS = valuesArg('--source-id');
 
+function valueFor(name) {
+  const inlineArg = args.find((arg) => arg.startsWith(`${name}=`));
+  if (inlineArg) return inlineArg.slice(name.length + 1);
+  const index = args.indexOf(name);
+  return index >= 0 ? args[index + 1] : undefined;
+}
+
+function hasFlag(name) {
+  return args.includes(name) || args.some((arg) => arg.startsWith(`${name}=`));
+}
+
+function flagName(arg) {
+  const equalsIndex = arg.indexOf('=');
+  return equalsIndex >= 0 ? arg.slice(0, equalsIndex) : arg;
+}
+
+function collectArgumentIssues() {
+  const issues = [];
+  for (const [index, arg] of args.entries()) {
+    if (!arg.startsWith('-')) {
+      const previous = args[index - 1] ?? '';
+      if (!VALUE_FLAGS.has(previous)) issues.push({ code: 'argument-invalid', detail: `unexpected argument ${arg}` });
+      continue;
+    }
+
+    const name = flagName(arg);
+    if (!KNOWN_FLAGS.has(name)) issues.push({ code: 'argument-invalid', detail: `unknown flag ${name}` });
+    if (VALUE_FLAGS.has(name)) {
+      const value = arg.includes('=') ? arg.slice(name.length + 1) : args[index + 1] ?? '';
+      if (!value || value.startsWith('-')) {
+        issues.push({ code: 'argument-invalid', detail: `${name} requires a value` });
+      } else if (NUMBER_FLAGS.has(name) && !/^\d+$/.test(value)) {
+        issues.push({ code: 'argument-invalid', detail: `${name} must be a non-negative integer` });
+      }
+    }
+  }
+
+  if (hasFlag('--project-dir') && hasFlag('--root')) {
+    issues.push({ code: 'argument-invalid', detail: 'choose only one of --project-dir or --root' });
+  }
+
+  if (UPDATE_SNAPSHOTS && !LIVE_MODE) {
+    issues.push({ code: 'argument-invalid', detail: '--update-snapshots requires --live' });
+  }
+
+  return issues;
+}
+
+function usage() {
+  return [
+    'Usage:',
+    '  node scripts/audit-source-health.mjs --json',
+    '  node scripts/audit-source-health.mjs --live --limit 10',
+    '  node scripts/audit-source-health.mjs --live --update-snapshots --snapshot-dir <dir>',
+    '',
+    'Options:',
+    '  --json                 Emit a structured report.',
+    '  --live                 Fetch selected sources over HTTP.',
+    '  --update-snapshots     Refresh snapshots after successful live fetches; requires --live.',
+    '  --limit <count>        Limit selected sources; 0 means all selected sources.',
+    '  --timeout-ms <ms>      Per-source live fetch timeout.',
+    '  --snapshot-dir <dir>   Snapshot directory for live hash comparisons.',
+    '  --source-id <id>       Restrict checks to a source ID; repeatable.',
+    '  --project-dir <dir>    Audit another project root.',
+    '  --root <dir>           Alias for --project-dir.',
+  ].join('\n');
+}
+
+function emitArgumentFailure() {
+  const report = {
+    ok: false,
+    mode: 'argument-error',
+    generated_at: new Date().toISOString(),
+    live: LIVE_MODE,
+    update_snapshots: UPDATE_SNAPSHOTS,
+    project_dir: PROJECT_DIR,
+    snapshot_dir: SNAPSHOT_DIR,
+    timeout_ms: TIMEOUT_MS,
+    limit: LIMIT,
+    argument_issues: argumentIssues,
+    totals: {
+      registry_sources: 0,
+      sources_selected: 0,
+      sources_checked_live: 0,
+      http_ok: 0,
+      http_unreachable: 0,
+      content_changed: 0,
+      content_unchanged: 0,
+      missing_snapshots: 0,
+      registry_issues: 0,
+      duplicate_source_ids: 0,
+    },
+    source_registry: {
+      issues: [],
+      duplicate_source_ids: [],
+    },
+    queues: {
+      unreachable_sources: [],
+      changed_sources: [],
+      missing_snapshots: [],
+      checked_sources: [],
+      selected_sources: [],
+    },
+  };
+
+  if (JSON_MODE) {
+    process.stdout.write(`${JSON.stringify(report, null, 2)}\n`);
+  } else {
+    console.error('[audit-source-health] invalid arguments');
+    for (const issue of argumentIssues) console.error(`- ${issue.detail}`);
+  }
+}
+
+if (HELP_MODE) {
+  console.log(usage());
+  process.exit(0);
+}
+
+if (argumentIssues.length > 0) {
+  emitArgumentFailure();
+  process.exit(1);
+}
+
 function numberArg(name, fallback) {
-  const index = process.argv.indexOf(name);
-  if (index === -1) return fallback;
-  const value = Number.parseInt(process.argv[index + 1] ?? '', 10);
+  const rawValue = valueFor(name);
+  if (rawValue === undefined) return fallback;
+  const value = Number.parseInt(rawValue, 10);
   return Number.isFinite(value) && value >= 0 ? value : fallback;
 }
 
 function stringArg(name, fallback) {
-  const index = process.argv.indexOf(name);
-  if (index === -1) return fallback;
-  const value = process.argv[index + 1];
+  const value = valueFor(name);
   return value && !value.startsWith('--') ? value : fallback;
 }
 
 function valuesArg(name) {
   const values = [];
-  for (let index = 0; index < process.argv.length; index += 1) {
-    if (process.argv[index] === name && process.argv[index + 1] && !process.argv[index + 1].startsWith('--')) {
-      values.push(process.argv[index + 1]);
+  for (let index = 0; index < args.length; index += 1) {
+    const arg = args[index];
+    if (arg.startsWith(`${name}=`)) {
+      const value = arg.slice(name.length + 1);
+      if (value) values.push(value);
+      continue;
+    }
+    if (arg === name && args[index + 1] && !args[index + 1].startsWith('--')) {
+      values.push(args[index + 1]);
     }
   }
   return values;
@@ -225,9 +372,11 @@ const result = {
   generated_at: new Date().toISOString(),
   live: LIVE_MODE,
   update_snapshots: UPDATE_SNAPSHOTS,
+  project_dir: PROJECT_DIR,
   snapshot_dir: SNAPSHOT_DIR,
   timeout_ms: TIMEOUT_MS,
   limit: LIMIT,
+  argument_issues: [],
   totals: {
     registry_sources: registry.sources.length,
     sources_selected: selectedSources.length,

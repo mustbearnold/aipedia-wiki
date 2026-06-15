@@ -4,12 +4,19 @@
 // and in the same environments as the existing guard scripts.
 
 import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
-import { dirname, join, relative } from 'node:path';
+import { dirname, join, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const PROJECT_DIR = dirname(dirname(fileURLToPath(import.meta.url)));
+const args = process.argv.slice(2);
+const defaultProjectDir = dirname(dirname(fileURLToPath(import.meta.url)));
+const projectDirArg = valueFor('--project-dir') || valueFor('--root');
+const PROJECT_DIR = resolve(projectDirArg || defaultProjectDir);
 const CONTENT_DIR = join(PROJECT_DIR, 'src', 'content');
-const JSON_MODE = process.argv.includes('--json');
+const KNOWN_FLAGS = new Set(['--json', '--project-dir', '--root', '--help', '-h']);
+const VALUE_FLAGS = new Set(['--project-dir', '--root']);
+const JSON_MODE = args.includes('--json');
+const HELP_MODE = args.includes('--help') || args.includes('-h');
+const argumentIssues = collectArgumentIssues();
 
 const THIN_RISK_WORD_FLOORS = {
   tools: 800,
@@ -31,6 +38,93 @@ const COLLECTIONS = [
   'workflows',
   'reports',
 ];
+
+function valueFor(name) {
+  const inlineArg = args.find((arg) => arg.startsWith(`${name}=`));
+  if (inlineArg) return inlineArg.slice(name.length + 1);
+  const index = args.indexOf(name);
+  return index >= 0 ? args[index + 1] : undefined;
+}
+
+function hasFlag(name) {
+  return args.includes(name) || args.some((arg) => arg.startsWith(`${name}=`));
+}
+
+function flagName(arg) {
+  const equalsIndex = arg.indexOf('=');
+  return equalsIndex >= 0 ? arg.slice(0, equalsIndex) : arg;
+}
+
+function collectArgumentIssues() {
+  const issues = [];
+  for (const [index, arg] of args.entries()) {
+    if (!arg.startsWith('-')) {
+      const previous = args[index - 1] ?? '';
+      if (!VALUE_FLAGS.has(previous)) issues.push({ code: 'argument-invalid', detail: `unexpected argument ${arg}` });
+      continue;
+    }
+
+    const name = flagName(arg);
+    if (!KNOWN_FLAGS.has(name)) issues.push({ code: 'argument-invalid', detail: `unknown flag ${name}` });
+    if (VALUE_FLAGS.has(name)) {
+      const value = arg.includes('=') ? arg.slice(name.length + 1) : args[index + 1] ?? '';
+      if (!value || value.startsWith('-')) issues.push({ code: 'argument-invalid', detail: `${name} requires a value` });
+    }
+  }
+
+  if (hasFlag('--project-dir') && hasFlag('--root')) {
+    issues.push({ code: 'argument-invalid', detail: 'choose only one of --project-dir or --root' });
+  }
+
+  return issues;
+}
+
+function usage() {
+  return [
+    'Usage:',
+    '  node scripts/audit-site-kpis.mjs --json',
+    '  node scripts/audit-site-kpis.mjs --project-dir <dir>',
+    '',
+    'Options:',
+    '  --json                 Emit a structured KPI report.',
+    '  --project-dir <dir>    Audit another project root.',
+    '  --root <dir>           Alias for --project-dir.',
+  ].join('\n');
+}
+
+function emitArgumentFailure() {
+  const report = {
+    ok: false,
+    mode: 'argument-error',
+    generated_at: new Date().toISOString(),
+    project_dir: PROJECT_DIR,
+    argument_issues: argumentIssues,
+    quality_floors: THIN_RISK_WORD_FLOORS,
+    collections: {},
+    tools: {},
+    comparisons: {},
+    use_cases: {},
+    news: {},
+    files: {},
+  };
+
+  if (JSON_MODE) {
+    console.log(JSON.stringify(report, null, 2));
+  } else {
+    console.error('[audit-site-kpis] invalid arguments');
+    for (const issue of argumentIssues) console.error(`- ${issue.detail}`);
+  }
+}
+
+if (HELP_MODE) {
+  console.log(usage());
+  process.exit(0);
+}
+
+if (argumentIssues.length > 0) {
+  emitArgumentFailure();
+  process.exit(1);
+}
 
 function projectPath(path) {
   return relative(PROJECT_DIR, path).replace(/\\/g, '/');
@@ -284,7 +378,11 @@ const newsRecords = markdownFiles('news').map((path) => {
 const freshnessDays = toolRecords.map((tool) => daysSince(tool.last_verified)).filter((value) => value !== null);
 
 const result = {
+  ok: true,
+  mode: 'report',
   generated_at: new Date().toISOString(),
+  project_dir: PROJECT_DIR,
+  argument_issues: [],
   quality_floors: THIN_RISK_WORD_FLOORS,
   collections: collectionCounts,
   tools: {

@@ -6,13 +6,20 @@
 // those values from being hardcoded into ChatGPT comparison prose/tables.
 
 import { existsSync, readdirSync, readFileSync } from 'node:fs';
-import { dirname, join, relative } from 'node:path';
+import { dirname, join, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const PROJECT_DIR = dirname(dirname(fileURLToPath(import.meta.url)));
+const args = process.argv.slice(2);
+const defaultProjectDir = dirname(dirname(fileURLToPath(import.meta.url)));
+const projectDirArg = valueFor('--project-dir') || valueFor('--root');
+const PROJECT_DIR = resolve(projectDirArg || defaultProjectDir);
 const TOOLS_DIR = join(PROJECT_DIR, 'src', 'content', 'tools');
 const COMPARISONS_DIR = join(PROJECT_DIR, 'src', 'content', 'comparisons');
-const JSON_MODE = process.argv.includes('--json');
+const KNOWN_FLAGS = new Set(['--json', '--project-dir', '--root', '--help', '-h']);
+const VALUE_FLAGS = new Set(['--project-dir', '--root']);
+const JSON_MODE = args.includes('--json');
+const HELP_MODE = args.includes('--help') || args.includes('-h');
+const argumentIssues = collectArgumentIssues();
 
 const REQUIRED_FACTS = {
   chatgpt: [
@@ -58,6 +65,97 @@ const STALE_FACT_PATTERNS = [
     label: 'duplicated ChatGPT context wording',
   },
 ];
+
+function valueFor(name) {
+  const inlineArg = args.find((arg) => arg.startsWith(`${name}=`));
+  if (inlineArg) return inlineArg.slice(name.length + 1);
+  const index = args.indexOf(name);
+  return index >= 0 ? args[index + 1] : undefined;
+}
+
+function hasFlag(name) {
+  return args.includes(name) || args.some((arg) => arg.startsWith(`${name}=`));
+}
+
+function flagName(arg) {
+  const equalsIndex = arg.indexOf('=');
+  return equalsIndex >= 0 ? arg.slice(0, equalsIndex) : arg;
+}
+
+function collectArgumentIssues() {
+  const issues = [];
+  for (const [index, arg] of args.entries()) {
+    if (!arg.startsWith('-')) {
+      const previous = args[index - 1] ?? '';
+      if (!VALUE_FLAGS.has(previous)) issues.push({ code: 'argument-invalid', detail: `unexpected argument ${arg}` });
+      continue;
+    }
+
+    const name = flagName(arg);
+    if (!KNOWN_FLAGS.has(name)) issues.push({ code: 'argument-invalid', detail: `unknown flag ${name}` });
+    if (VALUE_FLAGS.has(name)) {
+      const value = arg.includes('=') ? arg.slice(name.length + 1) : args[index + 1] ?? '';
+      if (!value || value.startsWith('-')) issues.push({ code: 'argument-invalid', detail: `${name} requires a value` });
+    }
+  }
+
+  if (hasFlag('--project-dir') && hasFlag('--root')) {
+    issues.push({ code: 'argument-invalid', detail: 'choose only one of --project-dir or --root' });
+  }
+
+  return issues;
+}
+
+function usage() {
+  return [
+    'Usage:',
+    '  node scripts/guard-stale-facts.mjs --json',
+    '  node scripts/guard-stale-facts.mjs --project-dir <dir>',
+    '',
+    'Options:',
+    '  --json                 Emit a structured guard report.',
+    '  --project-dir <dir>    Guard another project root.',
+    '  --root <dir>           Alias for --project-dir.',
+  ].join('\n');
+}
+
+function resultFor({ ok, failures: resultFailures = [], warnings: resultWarnings = [], comparisonsScanned = 0, mode = 'guard' }) {
+  return {
+    ok,
+    mode,
+    project_dir: PROJECT_DIR,
+    argument_issues: mode === 'argument-error' ? argumentIssues : [],
+    totals: {
+      required_tools: Object.keys(REQUIRED_FACTS).length,
+      comparisons_scanned: comparisonsScanned,
+      failures: resultFailures.length,
+      warnings: resultWarnings.length,
+    },
+    required_facts: REQUIRED_FACTS,
+    failures: resultFailures,
+    warnings: resultWarnings,
+  };
+}
+
+function emitArgumentFailure() {
+  const result = resultFor({ ok: false, failures: argumentIssues.map((issue) => issue.detail), mode: 'argument-error' });
+  if (JSON_MODE) {
+    console.log(JSON.stringify(result, null, 2));
+  } else {
+    console.error('[guard-stale-facts] invalid arguments');
+    for (const issue of argumentIssues) console.error(`- ${issue.detail}`);
+  }
+}
+
+if (HELP_MODE) {
+  console.log(usage());
+  process.exit(0);
+}
+
+if (argumentIssues.length > 0) {
+  emitArgumentFailure();
+  process.exit(1);
+}
 
 function readMarkdownFiles(dir) {
   return readdirSync(dir)
@@ -157,7 +255,7 @@ const warnings = [];
 if (!existsSync(TOOLS_DIR) || !existsSync(COMPARISONS_DIR)) {
   const message = '[guard-stale-facts] missing src/content tools or comparisons directory';
   if (JSON_MODE) {
-    console.log(JSON.stringify({ ok: false, failures: [message], warnings: [], totals: { required_tools: Object.keys(REQUIRED_FACTS).length, comparisons_scanned: 0 } }, null, 2));
+    console.log(JSON.stringify(resultFor({ ok: false, failures: [message] }), null, 2));
   } else {
     console.error(message);
   }
@@ -226,19 +324,7 @@ for (const file of comparisons) {
   }
 }
 
-const result = {
-  ok: failures.length === 0,
-  mode: 'guard',
-  totals: {
-    required_tools: Object.keys(REQUIRED_FACTS).length,
-    comparisons_scanned: comparisons.length,
-    failures: failures.length,
-    warnings: warnings.length,
-  },
-  required_facts: REQUIRED_FACTS,
-  failures,
-  warnings,
-};
+const result = resultFor({ ok: failures.length === 0, failures, warnings, comparisonsScanned: comparisons.length });
 
 if (failures.length > 0) {
   if (JSON_MODE) {

@@ -4,14 +4,94 @@
 
 import { spawnSync } from 'node:child_process';
 
-const argv = new Set(process.argv.slice(2));
-const JSON_MODE = argv.has('--json');
+const args = process.argv.slice(2);
+const JSON_MODE = args.includes('--json');
+const HELP_MODE = args.includes('--help') || args.includes('-h');
+const KNOWN_FLAGS = new Set(['--json', '--window-days', '--limit', '--project-dir', '--root', '--help', '-h']);
+const VALUE_FLAGS = new Set(['--window-days', '--limit', '--project-dir', '--root']);
+const argumentIssues = collectArgumentIssues();
+
+function valueFor(name) {
+  const inlineArg = args.find((arg) => arg.startsWith(`${name}=`));
+  if (inlineArg) return inlineArg.slice(name.length + 1);
+  const index = args.indexOf(name);
+  return index >= 0 ? args[index + 1] : undefined;
+}
+
+function hasFlag(name) {
+  return args.includes(name) || args.some((arg) => arg.startsWith(`${name}=`));
+}
+
+function flagName(arg) {
+  const equalsIndex = arg.indexOf('=');
+  return equalsIndex >= 0 ? arg.slice(0, equalsIndex) : arg;
+}
+
+function collectArgumentIssues() {
+  const issues = [];
+  for (const [index, arg] of args.entries()) {
+    if (!arg.startsWith('-')) {
+      const previous = args[index - 1] ?? '';
+      if (!VALUE_FLAGS.has(previous)) issues.push({ code: 'argument-invalid', detail: `unexpected argument ${arg}` });
+      continue;
+    }
+
+    const name = flagName(arg);
+    if (!KNOWN_FLAGS.has(name)) issues.push({ code: 'argument-invalid', detail: `unknown flag ${name}` });
+    if (VALUE_FLAGS.has(name)) {
+      const value = arg.includes('=') ? arg.slice(name.length + 1) : args[index + 1] ?? '';
+      if (!value || value.startsWith('-')) {
+        issues.push({ code: 'argument-invalid', detail: `${name} requires a value` });
+      } else if (['--window-days', '--limit'].includes(name) && !/^\d+$/.test(value)) {
+        issues.push({ code: 'argument-invalid', detail: `${name} must be a non-negative integer` });
+      }
+    }
+  }
+
+  if (hasFlag('--project-dir') && hasFlag('--root')) {
+    issues.push({ code: 'argument-invalid', detail: 'choose only one of --project-dir or --root' });
+  }
+
+  return issues;
+}
+
+function usage() {
+  return [
+    'Usage:',
+    '  node scripts/editorial-weekly-queue.mjs --window-days 30 --limit 50',
+    '  node scripts/editorial-weekly-queue.mjs --json --window-days 14',
+    '',
+    'Options:',
+    '  --json                 Emit a structured grouped queue.',
+    '  --window-days <days>   Include fact reviews due within this many days.',
+    '  --limit <count>        Maximum fact rows to group into tool checklists.',
+    '  --project-dir <dir>    Audit another project root.',
+    '  --root <dir>           Alias for --project-dir.',
+  ].join('\n');
+}
+
+function emitArgumentFailure(windowDays, limitFacts) {
+  const report = {
+    ok: false,
+    mode: 'argument-error',
+    generated_at: new Date().toISOString(),
+    window_days: windowDays,
+    limit_facts: limitFacts,
+    argument_issues: argumentIssues,
+    totals: {},
+    tools: [],
+  };
+
+  if (JSON_MODE) {
+    process.stdout.write(`${JSON.stringify(report, null, 2)}\n`);
+  } else {
+    console.error('[editorial-weekly-queue] invalid arguments');
+    for (const issue of argumentIssues) console.error(`- ${issue.detail}`);
+  }
+}
 
 function argValue(name, fallback) {
-  const index = process.argv.indexOf(name);
-  if (index === -1) return fallback;
-  const value = process.argv[index + 1];
-  return value ?? fallback;
+  return valueFor(name) ?? fallback;
 }
 
 function intArg(name, fallback) {
@@ -21,10 +101,13 @@ function intArg(name, fallback) {
   return Number.isFinite(value) ? value : fallback;
 }
 
-function runFreshness(windowDays) {
+function runFreshness(windowDays, projectDir) {
+  const freshnessArgs = ['scripts/audit-freshness-queue.mjs', '--json', '--window-days', String(windowDays)];
+  if (projectDir) freshnessArgs.push('--project-dir', projectDir);
+
   const result = spawnSync(
     process.execPath,
-    ['scripts/audit-freshness-queue.mjs', '--json', '--window-days', String(windowDays)],
+    freshnessArgs,
     { encoding: 'utf8' },
   );
   if (result.status !== 0) {
@@ -92,10 +175,21 @@ function printQueue(report, tools) {
   }
 }
 
+if (HELP_MODE) {
+  console.log(usage());
+  process.exit(0);
+}
+
 const windowDays = intArg('--window-days', 30);
 const limitFacts = intArg('--limit', 50);
+const projectDir = valueFor('--project-dir') || valueFor('--root') || '';
 
-const report = runFreshness(windowDays);
+if (argumentIssues.length > 0) {
+  emitArgumentFailure(windowDays, limitFacts);
+  process.exit(1);
+}
+
+const report = runFreshness(windowDays, projectDir);
 const topQueue = Array.isArray(report.queues?.top_review_queue) ? report.queues.top_review_queue : [];
 const tools = groupTopQueue(topQueue, limitFacts);
 
@@ -103,9 +197,13 @@ if (JSON_MODE) {
   process.stdout.write(
     `${JSON.stringify(
       {
+        ok: true,
+        mode: 'weekly-queue',
         generated_at: report.generated_at,
+        project_dir: report.project_dir ?? '',
         window_days: report.review_window_days,
         limit_facts: limitFacts,
+        argument_issues: [],
         totals: report.totals,
         tools,
       },

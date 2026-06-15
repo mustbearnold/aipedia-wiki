@@ -21,21 +21,35 @@
  */
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
-import { join } from 'node:path';
+import { dirname, join, relative, resolve } from 'node:path';
 import sharp from 'sharp';
 
+const args = process.argv.slice(2);
+const JSON_MODE = args.includes('--json');
+const DRY_RUN = args.includes('--dry-run');
+const CHECK_MODE = args.includes('--check');
+const HELP_MODE = args.includes('--help') || args.includes('-h');
+const KNOWN_FLAGS = new Set(['--dry-run', '--check', '--json', '--project-dir', '--root', '--limit', '--help', '-h']);
+const VALUE_FLAGS = new Set(['--project-dir', '--root', '--limit']);
+const argumentIssues = collectArgumentIssues();
+
 // Lazy-load resvg so build machines that can't install native modules
-// (e.g. some Cloudflare Workers build environments) still produce SVG
-// output, they just skip the PNG rasterization step. Committed PNGs
-// in public/og/tools/ stay authoritative in that case.
+// still produce SVG output, they just skip the PNG rasterization step.
+// Committed PNGs in public/og/tools/ stay authoritative in that case.
 let Resvg = null;
+let resvgLoadIssue = null;
 try {
   ({ Resvg } = await import('@resvg/resvg-js'));
 } catch (err) {
-  console.warn('resvg unavailable, will emit SVG-only:', err.message);
+  resvgLoadIssue = { code: 'resvg-unavailable', detail: err.message };
+  if (!JSON_MODE) console.warn('resvg unavailable, will emit SVG-only:', err.message);
 }
 
-const ROOT = fileURLToPath(new URL('../', import.meta.url));
+const defaultProjectDir = dirname(dirname(fileURLToPath(import.meta.url)));
+const projectDirArg = valueFor('--project-dir') || valueFor('--root');
+const ROOT = resolve(projectDirArg || defaultProjectDir);
+const limitArg = valueFor('--limit');
+const LIMIT = limitArg ? Number.parseInt(limitArg, 10) : Infinity;
 const REGISTRY = join(ROOT, 'src/data/_meta/tools-registry.json');
 const TOOLS_MD_DIR = join(ROOT, 'src/content/tools');
 const OUT_DIR = join(ROOT, 'public/og/tools');
@@ -49,6 +63,94 @@ const BRAND_LOGO_SMALL = join(ROOT, 'public/brand/aipedia-logo-128.png');
 const BRAND_LOGO_LARGE = join(ROOT, 'public/brand/aipedia-logo-512.png');
 const DEFAULT_SVG = join(ROOT, 'public/og-default.svg');
 const DEFAULT_PNG = join(ROOT, 'public/og-default.png');
+const MAX_PNG_OPTIMIZATION_PASSES = 12;
+
+function valueFor(flag) {
+  const index = args.indexOf(flag);
+  if (index >= 0) {
+    const next = args[index + 1] ?? '';
+    return next && !next.startsWith('-') ? next : '';
+  }
+  const inlineArg = args.find((arg) => arg.startsWith(`${flag}=`));
+  return inlineArg ? inlineArg.slice(flag.length + 1) : '';
+}
+
+function collectArgumentIssues() {
+  const issues = [];
+  const foundValueFlags = new Set();
+
+  for (let index = 0; index < args.length; index += 1) {
+    const arg = args[index];
+    const equalsIndex = arg.startsWith('--') ? arg.indexOf('=') : -1;
+    const flag = equalsIndex >= 0 ? arg.slice(0, equalsIndex) : arg;
+
+    if (!arg.startsWith('-')) {
+      issues.push({ code: 'argument-invalid', detail: `unexpected argument ${arg}` });
+      continue;
+    }
+
+    if (!KNOWN_FLAGS.has(flag)) {
+      issues.push({ code: 'argument-invalid', detail: `unknown flag ${flag}` });
+      continue;
+    }
+
+    if (VALUE_FLAGS.has(flag)) {
+      foundValueFlags.add(flag);
+
+      if (equalsIndex >= 0) {
+        if (!arg.slice(equalsIndex + 1)) issues.push({ code: 'argument-invalid', detail: `${flag} requires a value` });
+        continue;
+      }
+
+      const next = args[index + 1];
+      if (!next || next.startsWith('-')) {
+        issues.push({ code: 'argument-invalid', detail: `${flag} requires a value` });
+      } else {
+        index += 1;
+      }
+      continue;
+    }
+
+    if (equalsIndex >= 0) issues.push({ code: 'argument-invalid', detail: `${flag} does not accept a value` });
+  }
+
+  if (foundValueFlags.has('--project-dir') && foundValueFlags.has('--root')) {
+    issues.push({ code: 'argument-invalid', detail: 'choose only one of --project-dir or --root' });
+  }
+  if (DRY_RUN && CHECK_MODE) {
+    issues.push({ code: 'argument-invalid', detail: 'choose only one of --dry-run or --check' });
+  }
+  if (foundValueFlags.has('--limit') && !/^[1-9][0-9]*$/.test(valueFor('--limit'))) {
+    issues.push({ code: 'argument-invalid', detail: '--limit must be a positive integer' });
+  }
+
+  return issues;
+}
+
+function usage() {
+  return [
+    'Usage: node scripts/generate-og-svgs.mjs [options]',
+    '',
+    'Options:',
+    '  --dry-run             Generate OG card buffers and report changes without writing files.',
+    '  --check               Verify generated OG card outputs match current files without writing.',
+    '  --json                Emit a structured OG generation report.',
+    '  --project-dir <dir>   Generate or inspect another project root.',
+    '  --root <dir>          Alias for --project-dir.',
+    '  --limit <count>       Stop after checking this many tool records.',
+    '  --help, -h            Print this help message.',
+  ].join('\n');
+}
+
+function modeName() {
+  if (CHECK_MODE) return 'check';
+  if (DRY_RUN) return 'dry-run';
+  return 'generate';
+}
+
+function relativeFile(path) {
+  return relative(ROOT, path).replace(/\\/g, '/');
+}
 
 // Cache brand logos as data URLs once per run. Fall back to the master
 // source if the pre-sized variants haven't been generated yet (run
@@ -259,7 +361,7 @@ function svgFor(tool) {
  * Returns null if resvg wasn't available at module load.
  */
 // Bundle our own TTF files so rasterization is reproducible across envs
-// (dev Windows + Cloudflare Pages Linux). resvg does not reliably rasterize
+// (dev Windows + Linux CI/build environments). resvg does not reliably rasterize
 // text from WOFF/WOFF2 files when system fonts are disabled, so these are
 // checked-in Metropolis TTF copies derived from the site's webfont source files.
 const FONT_DIR = join(ROOT, 'public/fonts/metropolis');
@@ -284,6 +386,25 @@ function rasterize(svgString) {
   return resvg.render().asPng();
 }
 
+async function optimizePipelinePng(buffer) {
+  let best = buffer;
+  for (let pass = 0; pass < MAX_PNG_OPTIMIZATION_PASSES; pass += 1) {
+    const optimized = await sharp(best)
+      .png({
+        compressionLevel: 9,
+        adaptiveFiltering: true,
+        palette: true,
+        quality: 92,
+        effort: 10,
+      })
+      .toBuffer();
+
+    if (optimized.length >= best.length) return best;
+    best = optimized;
+  }
+  return best;
+}
+
 async function assertTextRendering() {
   if (!Resvg) return;
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200" viewBox="0 0 400 200">
@@ -302,39 +423,111 @@ async function assertTextRendering() {
   }
 }
 
-async function main() {
-  if (!existsSync(REGISTRY)) {
-    console.error('tools-registry.json not found, skipping OG generation');
-    process.exit(0);
+function reportFor({ mode = modeName(), tools = 0, outputs = [], issues = [], missing_registry = false } = {}) {
+  const changed = outputs.filter((output) => output.changed).length;
+  const written = outputs.filter((output) => output.written).length;
+  const warningCodes = new Set(['resvg-unavailable', 'raster-failed', 'default-raster-failed']);
+  const errorIssues = issues.filter((issue) => !warningCodes.has(issue.code));
+  return {
+    ok: mode !== 'argument-error' && errorIssues.length === 0 && !(mode === 'check' && changed > 0),
+    mode,
+    project_dir: ROOT,
+    registry: REGISTRY,
+    output_dir: OUT_DIR,
+    default_svg: DEFAULT_SVG,
+    default_png: DEFAULT_PNG,
+    write_debug_svg: WRITE_DEBUG_SVG,
+    resvg_available: Boolean(Resvg),
+    limit: Number.isFinite(LIMIT) ? LIMIT : null,
+    tools,
+    generated: outputs.length,
+    changed,
+    written,
+    missing_registry,
+    outputs,
+    issues,
+    argument_issues: mode === 'argument-error' ? argumentIssues : [],
+  };
+}
+
+function emitReport(report) {
+  if (JSON_MODE) {
+    process.stdout.write(`${JSON.stringify(report, null, 2)}\n`);
+    return;
   }
-  if (!existsSync(OUT_DIR)) mkdirSync(OUT_DIR, { recursive: true });
-  await assertTextRendering();
 
+  if (report.mode === 'argument-error') {
+    console.error('[generate-og-svgs] invalid arguments:');
+    for (const issue of report.argument_issues) console.error(`- ${issue.detail}`);
+    return;
+  }
+
+  for (const issue of report.issues) {
+    const level = issue.code === 'resvg-unavailable' || issue.code === 'raster-failed' ? 'warn' : 'error';
+    console[level](`[generate-og-svgs] ${issue.detail}`);
+  }
+
+  if (report.missing_registry) {
+    console.error('tools-registry.json not found, skipping OG generation');
+    return;
+  }
+
+  if (report.mode === 'check') {
+    if (report.ok) {
+      console.log(`[generate-og-svgs] check passed. ${report.generated} output(s) match for ${report.tools} tool(s).`);
+    } else {
+      console.error(`[generate-og-svgs] check failed. ${report.changed} output(s) are missing or stale.`);
+    }
+    return;
+  }
+
+  if (report.mode === 'dry-run') {
+    console.log(`[generate-og-svgs] dry run. ${report.generated} output(s) checked for ${report.tools} tool(s); ${report.changed} would change.`);
+    return;
+  }
+
+  const pngs = report.outputs.filter((output) => output.kind === 'tool-png').length;
+  const svgs = report.outputs.filter((output) => output.kind === 'tool-svg').length;
+  const svgSummary = svgs > 0 ? ` + ${svgs} debug SVGs` : '';
+  console.log(`Generated ${pngs} OG PNGs${svgSummary} in public/og/tools/ (${report.written} written).`);
+  if (report.outputs.some((output) => output.kind === 'default-png' && output.written)) {
+    console.log('Rasterized public/og-default.svg -> og-default.png');
+  }
+}
+
+function readTools() {
   const data = JSON.parse(readFileSync(REGISTRY, 'utf8'));
-  const tools = Object.values(data.tools ?? {}).filter(
-    (t) => t.slug && t.status !== 'dead' && t.status !== 'acquired'
-  );
+  return Object.values(data.tools ?? {})
+    .filter((t) => t.slug && t.status !== 'dead' && t.status !== 'acquired')
+    .slice(0, LIMIT);
+}
 
-  let svgs = 0;
-  let pngs = 0;
+async function desiredOutputsFor(tools, issues) {
+  const outputs = [];
   for (const tool of tools) {
     const svg = svgFor(tool);
     if (WRITE_DEBUG_SVG || !Resvg) {
-      writeFileSync(join(OUT_DIR, `${tool.slug}.svg`), svg, 'utf8');
-      svgs++;
+      outputs.push({
+        kind: 'tool-svg',
+        slug: tool.slug,
+        path: join(OUT_DIR, `${tool.slug}.svg`),
+        buffer: Buffer.from(svg, 'utf8'),
+      });
     }
     try {
       const png = rasterize(svg);
       if (png) {
-        writeFileSync(join(OUT_DIR, `${tool.slug}.png`), png);
-        pngs++;
+        outputs.push({
+          kind: 'tool-png',
+          slug: tool.slug,
+          path: join(OUT_DIR, `${tool.slug}.png`),
+          buffer: await optimizePipelinePng(png),
+        });
       }
     } catch (err) {
-      console.warn(`PNG raster failed for ${tool.slug}:`, err.message);
+      issues.push({ code: 'raster-failed', slug: tool.slug, detail: `PNG raster failed for ${tool.slug}: ${err.message}` });
     }
   }
-  const svgSummary = svgs > 0 ? ` + ${svgs} debug SVGs` : '';
-  console.log(`Generated ${pngs} OG PNGs${svgSummary} in public/og/tools/`);
 
   // Also rasterize the site-wide default card so it works as a social
   // fallback. Without a PNG version, X/LinkedIn/etc show a blank card
@@ -353,13 +546,118 @@ async function main() {
       }
       const png = rasterize(svg);
       if (png) {
-        writeFileSync(DEFAULT_PNG, png);
-        console.log('Rasterized public/og-default.svg -> og-default.png');
+        outputs.push({
+          kind: 'default-png',
+          slug: null,
+          path: DEFAULT_PNG,
+          buffer: png,
+        });
       }
     } catch (err) {
-      console.warn('Default OG PNG raster failed:', err.message);
+      issues.push({ code: 'default-raster-failed', detail: `Default OG PNG raster failed: ${err.message}` });
     }
   }
+
+  return outputs;
 }
 
-await main();
+function inspectOutput(output, mode, issues) {
+  let existingBytes = null;
+  let changed = true;
+  let written = false;
+
+  if (existsSync(output.path)) {
+    try {
+      const existing = readFileSync(output.path);
+      existingBytes = existing.length;
+      changed = Buffer.compare(existing, output.buffer) !== 0;
+    } catch (err) {
+      issues.push({ code: 'read-failed', path: output.path, detail: `could not read ${output.path}: ${err.message}` });
+    }
+  }
+
+  if (mode === 'generate' && changed) {
+    try {
+      writeFileSync(output.path, output.buffer);
+      written = true;
+    } catch (err) {
+      issues.push({ code: 'write-failed', path: output.path, detail: `could not write ${output.path}: ${err.message}` });
+    }
+  }
+
+  return {
+    kind: output.kind,
+    slug: output.slug,
+    path: output.path,
+    file: relativeFile(output.path),
+    bytes: output.buffer.length,
+    existing_bytes: existingBytes,
+    changed,
+    written,
+  };
+}
+
+async function main() {
+  if (HELP_MODE) {
+    console.log(usage());
+    return 0;
+  }
+
+  if (argumentIssues.length > 0) {
+    emitReport(reportFor({ mode: 'argument-error' }));
+    return 1;
+  }
+
+  const mode = modeName();
+  const issues = [];
+  if (resvgLoadIssue) issues.push(resvgLoadIssue);
+
+  if (!existsSync(REGISTRY)) {
+    const report = reportFor({ mode, issues, missing_registry: true });
+    emitReport(report);
+    return mode === 'check' ? 1 : 0;
+  }
+
+  if (mode === 'generate' && !existsSync(OUT_DIR)) mkdirSync(OUT_DIR, { recursive: true });
+
+  try {
+    await assertTextRendering();
+  } catch (err) {
+    issues.push({ code: 'text-rendering-failed', detail: err.message });
+    const report = reportFor({ mode, issues });
+    emitReport(report);
+    return 1;
+  }
+
+  let tools = [];
+  try {
+    tools = readTools();
+  } catch (err) {
+    issues.push({ code: 'registry-read-failed', detail: `could not read tools registry: ${err.message}` });
+    const report = reportFor({ mode, issues });
+    emitReport(report);
+    return 1;
+  }
+
+  const desired = await desiredOutputsFor(tools, issues);
+  const outputs = desired.map((output) => inspectOutput(output, mode, issues));
+
+  if (mode === 'check' && outputs.some((output) => output.changed)) {
+    issues.push({ code: 'og-stale', detail: 'one or more generated OG outputs are missing or stale' });
+  }
+
+  const report = reportFor({ mode, tools: tools.length, outputs, issues });
+  emitReport(report);
+  return report.ok ? 0 : 1;
+}
+
+main().then((code) => {
+  process.exitCode = code;
+}).catch((err) => {
+  const mode = argumentIssues.length > 0 ? 'argument-error' : modeName();
+  emitReport(reportFor({
+    mode,
+    issues: [{ code: 'unexpected-error', detail: err.message }],
+  }));
+  process.exitCode = 1;
+});

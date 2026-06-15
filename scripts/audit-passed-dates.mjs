@@ -7,33 +7,154 @@
 // "today", and it skips effective-date framing ("from/since/as of <date>") and
 // dated changelog bullets ("- **May 8:** ...") which are historical by construction.
 //
-// Report-only: never fails a build. Run: node scripts/audit-passed-dates.mjs [--today YYYY-MM-DD]
+// Findings are report-only: they never fail a build. Invalid operator arguments fail closed.
+// Run: node scripts/audit-passed-dates.mjs [--today YYYY-MM-DD]
 
 import { readdirSync, readFileSync, statSync } from 'node:fs';
-import { dirname, join, relative } from 'node:path';
+import { dirname, join, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const PROJECT_DIR = dirname(dirname(fileURLToPath(import.meta.url)));
-function argValue(name) {
-  const i = process.argv.indexOf(name);
-  return i >= 0 ? process.argv[i + 1] : undefined;
-}
+const args = process.argv.slice(2);
+const defaultProjectDir = dirname(dirname(fileURLToPath(import.meta.url)));
+const projectDirArg = valueFor('--project-dir') || valueFor('--root');
+const PROJECT_DIR = resolve(projectDirArg || defaultProjectDir);
+const KNOWN_FLAGS = new Set(['--json', '--dir', '--today', '--project-dir', '--root', '--help', '-h']);
+const VALUE_FLAGS = new Set(['--dir', '--today', '--project-dir', '--root']);
+const JSON_MODE = args.includes('--json');
+const HELP_MODE = args.includes('--help') || args.includes('-h');
+const argumentIssues = collectArgumentIssues();
+
 // Scan evergreen buyer-facing content; news is intentionally excluded (changelog-style, dated).
 // --dir overrides the scan roots (used by tests).
-const dirOverride = argValue('--dir');
+const dirOverride = valueFor('--dir');
 const SCAN_DIRS = (dirOverride
-  ? [dirOverride]
+  ? [resolve(PROJECT_DIR, dirOverride)]
   : ['tools', 'comparisons', 'compare', 'use-cases', 'trends', 'companies', 'categories'].map((d) => join(PROJECT_DIR, 'src', 'content', d))
-).filter((d) => { try { return statSync(d).isDirectory(); } catch { return false; } });
+).filter((d) => {
+  try {
+    return statSync(d).isDirectory();
+  } catch {
+    return false;
+  }
+});
+
+function valueFor(name) {
+  const inlineArg = args.find((arg) => arg.startsWith(`${name}=`));
+  if (inlineArg) return inlineArg.slice(name.length + 1);
+  const index = args.indexOf(name);
+  return index >= 0 ? args[index + 1] : undefined;
+}
+
+function hasFlag(name) {
+  return args.includes(name) || args.some((arg) => arg.startsWith(`${name}=`));
+}
+
+function flagName(arg) {
+  const equalsIndex = arg.indexOf('=');
+  return equalsIndex >= 0 ? arg.slice(0, equalsIndex) : arg;
+}
+
+function validIsoDate(value) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(String(value ?? ''))) return false;
+  const date = new Date(`${value}T00:00:00Z`);
+  return !Number.isNaN(date.getTime()) && date.toISOString().slice(0, 10) === value;
+}
+
+function collectArgumentIssues() {
+  const issues = [];
+  for (const [index, arg] of args.entries()) {
+    if (!arg.startsWith('-')) {
+      const previous = args[index - 1] ?? '';
+      if (!VALUE_FLAGS.has(previous)) issues.push({ code: 'argument-invalid', detail: `unexpected argument ${arg}` });
+      continue;
+    }
+
+    const name = flagName(arg);
+    if (!KNOWN_FLAGS.has(name)) issues.push({ code: 'argument-invalid', detail: `unknown flag ${name}` });
+    if (VALUE_FLAGS.has(name)) {
+      const value = arg.includes('=') ? arg.slice(name.length + 1) : args[index + 1] ?? '';
+      if (!value || value.startsWith('-')) {
+        issues.push({ code: 'argument-invalid', detail: `${name} requires a value` });
+      } else if (name === '--today' && !validIsoDate(value)) {
+        issues.push({ code: 'argument-invalid', detail: '--today must be YYYY-MM-DD' });
+      }
+    }
+  }
+
+  if (hasFlag('--project-dir') && hasFlag('--root')) {
+    issues.push({ code: 'argument-invalid', detail: 'choose only one of --project-dir or --root' });
+  }
+
+  if (hasFlag('--dir')) {
+    const explicitDir = valueFor('--dir');
+    if (explicitDir && !explicitDir.startsWith('-')) {
+      const resolvedDir = resolve(PROJECT_DIR, explicitDir);
+      try {
+        if (!statSync(resolvedDir).isDirectory()) {
+          issues.push({ code: 'argument-invalid', detail: `--dir must point to a directory: ${explicitDir}` });
+        }
+      } catch {
+        issues.push({ code: 'argument-invalid', detail: `--dir must point to a directory: ${explicitDir}` });
+      }
+    }
+  }
+
+  return issues;
+}
+
+function usage() {
+  return [
+    'Usage:',
+    '  node scripts/audit-passed-dates.mjs --json',
+    '  node scripts/audit-passed-dates.mjs --today 2026-06-14',
+    '  node scripts/audit-passed-dates.mjs --dir <content-dir>',
+    '',
+    'Options:',
+    '  --json                 Emit a structured report.',
+    '  --today <YYYY-MM-DD>   Use a deterministic current date.',
+    '  --dir <dir>            Scan one directory instead of evergreen content roots.',
+    '  --project-dir <dir>    Audit another project root.',
+    '  --root <dir>           Alias for --project-dir.',
+  ].join('\n');
+}
+
+function emitArgumentFailure() {
+  const report = {
+    ok: false,
+    mode: 'argument-error',
+    project_dir: PROJECT_DIR,
+    today: valueFor('--today') || new Date().toISOString().slice(0, 10),
+    scanned: 0,
+    count: 0,
+    argument_issues: argumentIssues,
+    findings: [],
+  };
+
+  if (JSON_MODE) {
+    console.log(JSON.stringify(report, null, 2));
+  } else {
+    console.error('[audit-passed-dates] invalid arguments');
+    for (const issue of argumentIssues) console.error(`- ${issue.detail}`);
+  }
+}
+
+if (HELP_MODE) {
+  console.log(usage());
+  process.exit(0);
+}
+
+if (argumentIssues.length > 0) {
+  emitArgumentFailure();
+  process.exit(1);
+}
 
 function argDate() {
-  const i = process.argv.indexOf('--today');
-  if (i >= 0 && process.argv[i + 1]) return process.argv[i + 1];
+  const today = valueFor('--today');
+  if (today) return today;
   // Env clock; tests pass --today explicitly for determinism.
   return new Date().toISOString().slice(0, 10);
 }
 const TODAY = argDate();
-const JSON_MODE = process.argv.includes('--json');
 
 const MONTHS = { january: 1, february: 2, march: 3, april: 4, may: 5, june: 6, july: 7, august: 8, september: 9, october: 10, november: 11, december: 12 };
 const FUTURE = /\b(will|scheduled to|scheduled for|set to|expected to|due to|is coming|are coming|coming (?:in|on)|launching|arriving|slated to|going to)\b/i;
@@ -101,7 +222,7 @@ for (const dir of SCAN_DIRS) {
 }
 
 if (JSON_MODE) {
-  console.log(JSON.stringify({ today: TODAY, scanned, count: findings.length, findings }, null, 2));
+  console.log(JSON.stringify({ ok: true, mode: 'report', project_dir: PROJECT_DIR, today: TODAY, scanned, count: findings.length, argument_issues: [], findings }, null, 2));
 } else {
   console.log(`[audit-passed-dates] report-only; today=${TODAY}; scanned ${scanned} files.`);
   console.log(`Likely passed-date future-framing: ${findings.length}`);

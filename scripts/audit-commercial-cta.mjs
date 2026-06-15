@@ -1,23 +1,88 @@
 #!/usr/bin/env node
 
 import { existsSync, readFileSync } from 'node:fs';
-import { dirname, isAbsolute, join, relative, sep } from 'node:path';
+import { dirname, join, relative, resolve, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { builtSiteDir } from './lib/built-site-dir.mjs';
 
-const PROJECT_DIR = dirname(dirname(fileURLToPath(import.meta.url)));
-const jsonMode = process.argv.includes('--json');
+const args = process.argv.slice(2);
+const defaultProjectDir = dirname(dirname(fileURLToPath(import.meta.url)));
+const projectDirArg = argValue('--project-dir') || argValue('--root');
+const PROJECT_DIR = resolve(projectDirArg || defaultProjectDir);
+const jsonMode = args.includes('--json');
+const KNOWN_FLAGS = new Set(['--json', '--dist', '--site-dir', '--dist-dir', '--project-dir', '--root', '--help', '-h']);
 
 function argValue(name) {
-  const equalsArg = process.argv.find((arg) => arg.startsWith(`${name}=`));
+  const equalsArg = args.find((arg) => arg.startsWith(`${name}=`));
   if (equalsArg) return equalsArg.slice(name.length + 1);
-  const index = process.argv.indexOf(name);
-  return index >= 0 ? process.argv[index + 1] : undefined;
+  const index = args.indexOf(name);
+  return index >= 0 ? args[index + 1] : undefined;
 }
 
-const distArg = argValue('--dist');
-const distDir = distArg
-  ? (isAbsolute(distArg) ? distArg : join(PROJECT_DIR, distArg))
-  : join(PROJECT_DIR, process.env.AIPEDIA_FAST_BUILD === '1' ? 'dist-fast' : 'dist/client');
+function hasFlag(flag) {
+  return args.includes(flag) || args.some((arg) => arg.startsWith(`${flag}=`));
+}
+
+function flagName(arg) {
+  const equalsIndex = arg.indexOf('=');
+  return equalsIndex >= 0 ? arg.slice(0, equalsIndex) : arg;
+}
+
+function collectArgumentIssues() {
+  const issues = [];
+  for (const [index, arg] of args.entries()) {
+    if (!arg.startsWith('-')) {
+      const previous = args[index - 1] ?? '';
+      if (!['--dist', '--site-dir', '--dist-dir', '--project-dir', '--root'].includes(previous)) {
+        issues.push({ code: 'argument-invalid', detail: `unexpected argument ${arg}` });
+      }
+      continue;
+    }
+
+    const name = flagName(arg);
+    if (!KNOWN_FLAGS.has(name)) issues.push({ code: 'argument-invalid', detail: `unknown flag ${name}` });
+  }
+
+  for (const flag of ['--dist', '--site-dir', '--dist-dir', '--project-dir', '--root']) {
+    if (!hasFlag(flag)) continue;
+    const inlineArg = args.find((arg) => arg.startsWith(`${flag}=`));
+    const value = inlineArg ? inlineArg.slice(flag.length + 1) : args[args.indexOf(flag) + 1] ?? '';
+    if (!value || value.startsWith('-')) issues.push({ code: 'argument-invalid', detail: `${flag} requires a path` });
+  }
+
+  const distFlags = ['--dist', '--site-dir', '--dist-dir'].filter(hasFlag);
+  if (distFlags.length > 1) {
+    issues.push({ code: 'argument-invalid', detail: `choose one built-output flag, got ${distFlags.join(', ')}` });
+  }
+
+  if (hasFlag('--project-dir') && hasFlag('--root')) {
+    issues.push({ code: 'argument-invalid', detail: 'choose only one of --project-dir or --root' });
+  }
+
+  return issues;
+}
+
+function usage() {
+  return [
+    'Usage:',
+    '  node scripts/audit-commercial-cta.mjs --json',
+    '  node scripts/audit-commercial-cta.mjs --site-dir .vercel/output/static',
+    '',
+    'Options:',
+    '  --dist <dir>         Check a specific built output directory.',
+    '  --site-dir <dir>     Alias for --dist.',
+    '  --project-dir <dir>  Resolve relative paths from another project root.',
+  ].join('\n');
+}
+
+const argumentIssues = collectArgumentIssues();
+if (args.includes('--help') || args.includes('-h')) {
+  console.log(usage());
+  process.exit(0);
+}
+
+const distArg = argValue('--dist') || argValue('--site-dir') || argValue('--dist-dir');
+const distDir = builtSiteDir(PROJECT_DIR, distArg);
 
 const partnerLinks = {
   apollo: {
@@ -128,17 +193,46 @@ function isExternalHref(href) {
   return /^https?:\/\//i.test(href);
 }
 
+function formatDistLabel(path) {
+  return relative(PROJECT_DIR, path).replaceAll(sep, '/');
+}
+
+function emitReport(report) {
+  if (jsonMode) {
+    process.stdout.write(`${JSON.stringify(report, null, 2)}\n`);
+  } else if (report.ok) {
+    const total = report.routes.reduce((sum, route) => sum + route.anchors, 0);
+    console.log(`[audit-commercial-cta] OK: ${total} commercial CTA(s) checked across ${report.routes.length} representative money routes.`);
+  } else {
+    console.error('[audit-commercial-cta] Commercial CTA issues found:');
+    for (const issue of report.issues) {
+      console.error(`- ${issue.code}${issue.route ? ` ${issue.route}` : ''}${issue.detail ? ` (${issue.detail})` : ''}`);
+    }
+  }
+}
+
+if (argumentIssues.length > 0) {
+  const report = {
+    ok: false,
+    dist: formatDistLabel(distDir),
+    routes: [],
+    issues: argumentIssues,
+  };
+  emitReport(report);
+  process.exit(1);
+}
+
 const issues = [];
 const routeReports = [];
 
 if (!existsSync(distDir)) {
-  issues.push({ code: 'dist-missing', detail: relative(PROJECT_DIR, distDir).replaceAll(sep, '/') });
+  issues.push({ code: 'dist-missing', detail: formatDistLabel(distDir) });
 }
 
 for (const route of requiredRoutes) {
   const htmlPath = routeHtmlPath(route.path);
   if (!existsSync(htmlPath)) {
-    issues.push({ code: 'representative-route-missing', route: route.path, detail: relative(PROJECT_DIR, htmlPath).replaceAll(sep, '/') });
+    issues.push({ code: 'representative-route-missing', route: route.path, detail: formatDistLabel(htmlPath) });
     continue;
   }
 
@@ -243,21 +337,11 @@ for (const route of requiredRoutes) {
 
 const report = {
   ok: issues.length === 0,
-  dist: relative(PROJECT_DIR, distDir).replaceAll(sep, '/'),
+  dist: formatDistLabel(distDir),
   routes: routeReports,
   issues,
 };
 
-if (jsonMode) {
-  process.stdout.write(`${JSON.stringify(report, null, 2)}\n`);
-} else if (report.ok) {
-  const total = routeReports.reduce((sum, route) => sum + route.anchors, 0);
-  console.log(`[audit-commercial-cta] OK: ${total} commercial CTA(s) checked across ${routeReports.length} representative money routes.`);
-} else {
-  console.error('[audit-commercial-cta] Commercial CTA issues found:');
-  for (const issue of issues) {
-    console.error(`- ${issue.code}${issue.route ? ` ${issue.route}` : ''}${issue.detail ? ` (${issue.detail})` : ''}`);
-  }
-}
+emitReport(report);
 
 process.exit(report.ok ? 0 : 1);

@@ -8,14 +8,14 @@ const guidePickRoutes = [
     route: '/guides/best-ai-coding-assistant/',
     bestOverallSlug: 'cursor',
     plans: ['Cursor Pro', 'Copilot Free or Individual', 'Claude Max or API usage'],
-    firstRankedTitle: 'Cursor',
+    firstRankedTitle: 'GitHub Copilot',
   },
   {
     route: '/guides/best-ai-seo-tool/',
-    bestOverallSlug: 'surfer-seo',
+    bestOverallSlug: 'ahrefs',
     labels: ['Best overall', 'Budget content scoring', 'Pro/team suite'],
-    plans: ['Surfer Standard', 'NeuronWriter Silver', 'Semrush Pro or Guru'],
-    firstRankedTitle: 'Surfer SEO',
+    plans: ['Ahrefs Lite or Standard', 'NeuronWriter Silver', 'Semrush One or SEO Toolkit plus AI Visibility Toolkit'],
+    firstRankedTitle: 'Ahrefs',
   },
   {
     route: '/guides/best-ai-video-generator/',
@@ -32,7 +32,7 @@ const guidePickRoutes = [
     route: '/guides/best-ai-for-presentations/',
     bestOverallSlug: 'gamma',
     plans: ['Gamma Pro for client-facing work', 'Canva Free or Canva Pro', 'Pitch Team'],
-    firstRankedTitle: 'Gamma',
+    firstRankedTitle: 'Canva',
   },
   {
     route: '/guides/best-ai-for-meeting-notes/',
@@ -258,22 +258,25 @@ test('homepage search shell exposes the main catalog workspaces', async ({ page 
 
   await expect(page.locator('[data-home-page]')).toBeVisible();
   await expect(page.locator('[data-home-search]')).toBeVisible();
-  await expect(page.locator('.home-tools')).toBeVisible();
-  await expect(page.locator('.home-news-list')).toBeVisible();
-  await expect(page.locator('#home-title')).toContainText('Find the right AI tool faster');
+  await expect(page.locator('.gt-top-tools')).toBeVisible();
+  await expect(page.locator('.gt-news-list')).toBeVisible();
+  await expect(page.locator('#gt-wiki-front-title')).toContainText('aipedia.wiki');
 });
 
 test('homepage primary destination labels are readable', async ({ page }) => {
   await page.goto('/');
 
-  const labels = page.locator('.home-path span');
-  await expect(labels).toHaveCount(3);
+  const labels = page.locator('.gt-wiki-portal strong');
+  await expect(labels).toHaveCount(6);
 
   const labelText = await labels.allTextContents();
   expect(labelText.map((text) => text.trim())).toEqual([
-    'Browse tools',
-    'Compare options',
-    'Track changes',
+    'Tool index',
+    'Categories',
+    'Comparisons',
+    'Buyer guides',
+    'Quick answers',
+    'AI news',
   ]);
 
   const clippedLabels = await labels.evaluateAll((nodes) => nodes
@@ -294,7 +297,7 @@ test('homepage primary destination labels are readable', async ({ page }) => {
 test('homepage catalog root keeps warm accents out of decorative beams', async ({ page }) => {
   await page.goto('/');
 
-  const homeRoot = page.locator('.home-page');
+  const homeRoot = page.locator('[data-home-page]');
   await expect(homeRoot).toBeVisible();
 
   const rootPaint = await homeRoot.evaluate((node) => {
@@ -475,8 +478,9 @@ test.describe('Signal Cyan palette', () => {
 test('compare featured cards match homepage panel outline palette', async ({ page }) => {
   await page.goto('/compare/');
 
-  const featuredCards = page.locator('.compare-featured-grid .compare-card');
-  await expect(featuredCards).toHaveCount(6);
+  const featuredCards = page.locator('[data-compare-card]');
+  await expect(featuredCards.first()).toBeVisible();
+  expect(await featuredCards.count()).toBeGreaterThan(40);
 
   const cardPaint = await featuredCards.first().evaluate((node) => {
     const style = window.getComputedStyle(node);
@@ -489,8 +493,7 @@ test('compare featured cards match homepage panel outline palette', async ({ pag
   const violetLegacy = /167\D+139\D+250/;
   expect(cardPaint.borderColor).not.toMatch(violetLegacy);
   expect(cardPaint.backgroundImage).not.toMatch(violetLegacy);
-  // Chromium may emit comma rgb(249, 115, 22) or space rgb(249 115 22 / a)
-  expect(cardPaint.borderColor).toMatch(/249\D+115\D+22/);
+  expect(cardPaint.borderColor).toMatch(/255\D+255\D+255\D+0\.08|30\D+41\D+59|148\D+163\D+184/);
   expect(cardPaint.backgroundImage).toBe('none');
 });
 
@@ -506,16 +509,16 @@ test('tool finder is retired in favor of catalog search', async ({ page }) => {
 test('search page shows the full catalog and filters it in place', async ({ page }) => {
   await page.goto('/search/');
 
-  await expect(page.locator('.search-index-control.p3-search.p3-search-btn')).toBeVisible();
-  const totalCards = await page.locator('[data-tool-card]').count();
+  await expect(page.locator('.gt-search [data-tool-search]')).toBeVisible();
+  const totalCards = await page.locator('[data-search-card]').count();
   expect(totalCards).toBeGreaterThan(200);
   await expect(page.locator('[data-visible-count]').first()).toHaveText(String(totalCards));
 
   await page.locator('[data-tool-search]').fill('claude');
-  const visibleCards = await page.locator('[data-tool-card]:visible').count();
+  const visibleCards = await page.locator('[data-search-card]:visible').count();
   expect(visibleCards).toBeGreaterThan(0);
   expect(visibleCards).toBeLessThan(totalCards);
-  await expect(page.locator('[data-tool-card]:visible').first()).toContainText(/Claude/i);
+  await expect(page.locator('[data-search-card]:visible').first()).toContainText(/Claude/i);
 });
 
 test('stack builder shows selected roles before budget is chosen', async ({ page }) => {
@@ -533,63 +536,60 @@ for (const guide of guidePickRoutes) {
   test(`guide exposes buyer-type decision picks before full ranking: ${guide.route}`, async ({ page }) => {
     await page.goto(guide.route);
 
-    const decisionPanel = page.locator('.t2-guide-decisions');
-    await expect(decisionPanel).toBeVisible();
-    const expectedLabels = guide.labels ?? ['Best overall', 'Budget/free pick', 'Pro/team pick'];
-    for (const label of expectedLabels) {
-      await expect(decisionPanel).toContainText(label);
-    }
-    for (const plan of guide.plans) {
-      await expect(decisionPanel).toContainText(plan);
-    }
-    await expect(decisionPanel).toContainText('2 official sources');
+    const bestOverall = page.locator('.gt-card').first();
+    await expect(bestOverall).toBeVisible();
+    await expect(bestOverall).toContainText('Best overall');
+    await expect(bestOverall.locator('a[data-cta-placement="guide_decision_best_overall"]')).toHaveAttribute('data-cta-tool-slug', guide.bestOverallSlug);
 
-    await expect(decisionPanel.locator('a[data-cta-placement="guide_decision_best_overall"]')).toHaveAttribute('data-cta-tool-slug', guide.bestOverallSlug);
-    await expect(decisionPanel.locator('a[data-cta-placement="guide_decision_budget"]')).toHaveCount(1);
-    await expect(decisionPanel.locator('a[data-cta-placement="guide_decision_pro_team"]')).toHaveCount(1);
-    await expect(page.locator('.t2-guide-row-title').first()).toHaveText(guide.firstRankedTitle);
+    const tiers = page.locator('.gt-guide-tiers');
+    await expect(tiers).toBeVisible();
+    await expect(tiers).toContainText('Budget pick');
+    await expect(tiers).toContainText('Pro / team pick');
+    await expect(tiers.locator('a[data-cta-placement="guide_decision_budget"]')).toHaveCount(1);
+    await expect(tiers.locator('a[data-cta-placement="guide_decision_pro_team"]')).toHaveCount(1);
+    await expect(page.locator('.gt-tool-title').first()).toContainText(guide.firstRankedTitle);
   });
 }
 
 test('trends index has expanded beyond the seed report set', async ({ page }) => {
   await page.goto('/trends/');
 
-  await expect(page.locator('[data-trend-card]')).toHaveCount(12);
+  await expect(page.locator('.gt-trend-card')).toHaveCount(13);
 });
 
 for (const route of ['/about/', '/about/editorial/', '/about/scoring/', '/media-kit/', '/glossary/', '/dead/']) {
-  test(`reference page uses refreshed home-adjacent surface: ${route}`, async ({ page }) => {
+  test(`reference page exposes refreshed primary content: ${route}`, async ({ page }) => {
     await page.goto(route);
 
-    await expect(page.locator('[data-refresh-surface="home-adjacent"]').first()).toBeVisible();
-    const heroCard =
+    await expect(page.locator('main h1')).toBeVisible();
+    const primarySurface =
       route === '/dead/'
-        ? page.locator('.dead-page-root .home-surface-card').first()
+        ? page.locator('.gt-canvas ol').first()
         : route === '/glossary/'
-          ? page.locator('.glossary-page-root .home-surface-card').first()
-          : page.locator('.ref-hero-card').first();
-    await expect(heroCard).toBeVisible();
+          ? page.locator('.glossary-page-root').first()
+          : page.locator('.gt-body').first();
+    await expect(primarySurface).toBeVisible();
   });
 }
 
 for (const route of ['/about/editorial/', '/about/scoring/', '/media-kit/']) {
-  test(`article reference rail aligns with editorial ledger: ${route}`, async ({ page }) => {
+  test(`article reference page keeps readable body width: ${route}`, async ({ page }) => {
     await page.goto(route);
 
-    const alignment = await page.evaluate(() => {
-      const ledger = document.querySelector('.ref-hero-ledger')?.getBoundingClientRect();
-      const rail = document.querySelector('.ref-side-rail')?.getBoundingClientRect();
-      if (!ledger || !rail) return null;
+    const width = await page.evaluate(() => {
+      const body = document.querySelector('.gt-body')?.getBoundingClientRect();
+      if (!body) return null;
       return {
-        leftDelta: Math.abs(ledger.left - rail.left),
-        rightDelta: Math.abs(ledger.right - rail.right),
-        widthDelta: Math.abs(ledger.width - rail.width),
+        width: body.width,
+        left: body.left,
+        right: body.right,
+        viewport: document.documentElement.clientWidth,
       };
     });
 
-    expect(alignment).not.toBeNull();
-    expect(alignment.leftDelta).toBeLessThanOrEqual(1);
-    expect(alignment.rightDelta).toBeLessThanOrEqual(1);
-    expect(alignment.widthDelta).toBeLessThanOrEqual(1);
+    expect(width).not.toBeNull();
+    expect(width.left).toBeGreaterThanOrEqual(0);
+    expect(width.right).toBeLessThanOrEqual(width.viewport + 1);
+    expect(width.width).toBeLessThanOrEqual(860);
   });
 }
