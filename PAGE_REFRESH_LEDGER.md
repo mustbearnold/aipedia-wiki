@@ -453,6 +453,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-12 | /tools/deepl/ | Tool | Yes | frontmatter | src/content/tools/deepl.md |
 | 2026-06-12 | /tools/deepseek/ | Tool | Yes | frontmatter | src/content/tools/deepseek.md |
 | 2026-06-12 | /tools/descript/ | Tool | Yes | frontmatter | src/content/tools/descript.md |
+| 2026-06-12 | /tools/devin/ | Tool | Yes | frontmatter | src/content/tools/devin.md |
 | 2026-06-12 | /tools/dext/ | Tool | Yes | frontmatter | src/content/tools/dext.md |
 | 2026-06-12 | /tools/dia/ | Tool | Yes | frontmatter | src/content/tools/dia.md |
 | 2026-06-12 | /tools/doubao/ | Tool | Yes | frontmatter | src/content/tools/doubao.md |
@@ -663,90 +664,89 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-13 | /robots.txt | Crawl surface | No | git | public/robots.txt |
 | 2026-06-13 | /stack-builder/ | Static page | Yes | git | src/pages/stack-builder/index.astro |
 | 2026-06-13 | /tool-finder/ | Static page | No | git | src/pages/tool-finder.astro |
-| 2026-06-15 | / | Static page | Yes | working tree | src/pages/index.astro |
-| 2026-06-15 | /about/our-stack/ | Static page | Yes | working tree | src/pages/about/our-stack.astro |
-| 2026-06-15 | /admin/reviews/ | Static page | No | working tree | src/pages/admin/reviews.astro |
-| 2026-06-15 | /categories/ | Static page | Yes | working tree | src/pages/categories/index.astro |
-| 2026-06-15 | /categories/ai-automation/ | Category | Yes | working tree | src/content/categories/ai-automation.md |
-| 2026-06-15 | /categories/ai-chatbots/ | Category | Yes | working tree | src/content/categories/ai-chatbots.md |
-| 2026-06-15 | /categories/ai-coding/ | Category | Yes | working tree | src/content/categories/ai-coding.md |
-| 2026-06-15 | /categories/ai-design/ | Category | Yes | working tree | src/content/categories/ai-design.md |
-| 2026-06-15 | /categories/ai-image/ | Category | Yes | working tree | src/content/categories/ai-image.md |
-| 2026-06-15 | /categories/ai-infrastructure/ | Category | Yes | working tree | src/content/categories/ai-infrastructure.md |
-| 2026-06-15 | /categories/ai-music/ | Category | Yes | working tree | src/content/categories/ai-music.md |
-| 2026-06-15 | /categories/ai-notes/ | Category | Yes | working tree | src/content/categories/ai-notes.md |
-| 2026-06-15 | /categories/ai-presentation/ | Category | Yes | working tree | src/content/categories/ai-presentation.md |
-| 2026-06-15 | /categories/ai-research/ | Category | Yes | working tree | src/content/categories/ai-research.md |
-| 2026-06-15 | /categories/ai-search/ | Category | Yes | working tree | src/content/categories/ai-search.md |
-| 2026-06-15 | /categories/ai-seo/ | Category | Yes | working tree | src/content/categories/ai-seo.md |
-| 2026-06-15 | /categories/ai-video/ | Category | Yes | working tree | src/content/categories/ai-video.md |
-| 2026-06-15 | /categories/ai-voice/ | Category | Yes | working tree | src/content/categories/ai-voice.md |
-| 2026-06-15 | /categories/ai-writing/ | Category | Yes | working tree | src/content/categories/ai-writing.md |
-| 2026-06-15 | /companies/ | Static page | Yes | working tree | src/pages/companies/index.astro |
-| 2026-06-15 | /companies/anthropic/ | Company | Yes | working tree | src/content/companies/anthropic.md |
-| 2026-06-15 | /companies/openai/ | Company | Yes | working tree | src/content/companies/openai.md |
-| 2026-06-15 | /compare/ | Static page | Yes | working tree | src/pages/compare/index.astro |
-| 2026-06-15 | /compare/hailuo-vs-kling/ | Comparison | Yes | working tree | src/content/comparisons/hailuo-vs-kling.md |
-| 2026-06-15 | /explore/ | Static page | Yes | working tree | src/pages/explore/index.astro |
-| 2026-06-15 | /guides/ | Static page | Yes | working tree | src/pages/guides/index.astro |
-| 2026-06-15 | /guides/best-ai-avatar-video-generator/ | Guide | Yes | working tree | src/content/use-cases/best-ai-avatar-video-generator.md |
-| 2026-06-15 | /guides/best-ai-for-code-review/ | Guide | Yes | working tree | src/content/use-cases/best-ai-for-code-review.md |
-| 2026-06-15 | /guides/best-ai-tools-for-developers/ | Guide | Yes | working tree | src/content/use-cases/best-ai-tools-for-developers.md |
-| 2026-06-15 | /guides/claude-alternatives/ | Guide | Yes | working tree | src/content/use-cases/claude-alternatives.md |
-| 2026-06-15 | /guides/cursor-alternatives/ | Guide | Yes | working tree | src/content/use-cases/cursor-alternatives.md |
-| 2026-06-15 | /guides/github-copilot-alternatives/ | Guide | Yes | working tree | src/content/use-cases/github-copilot-alternatives.md |
-| 2026-06-15 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
-| 2026-06-15 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
-| 2026-06-15 | /media-kit/ | Static page | Yes | working tree | src/pages/media-kit.astro |
-| 2026-06-15 | /news/ | Static page | Yes | working tree | src/pages/news/index.astro |
-| 2026-06-15 | /news/rss.xml | Crawl surface | No | working tree | src/pages/news/rss.xml.ts |
-| 2026-06-15 | /privacy/ | Static page | Yes | working tree | src/pages/privacy.astro |
-| 2026-06-15 | /search/ | Static page | No | working tree | src/pages/search.astro |
-| 2026-06-15 | /sitemap-index.xml | Crawl surface | No | working tree | astro.config.mjs |
-| 2026-06-15 | /tools/ | Static page | Yes | working tree | src/pages/tools/index.astro |
-| 2026-06-15 | /tools/adobe-firefly/ | Tool | Yes | working tree | src/content/tools/adobe-firefly.md |
-| 2026-06-15 | /tools/aider/ | Tool | Yes | working tree | src/content/tools/aider.md |
-| 2026-06-15 | /tools/augment-code/ | Tool | Yes | working tree | src/content/tools/augment-code.md |
-| 2026-06-15 | /tools/base44/ | Tool | Yes | working tree | src/content/tools/base44.md |
-| 2026-06-15 | /tools/blackbox-ai/ | Tool | Yes | working tree | src/content/tools/blackbox-ai.md |
-| 2026-06-15 | /tools/bolt/ | Tool | Yes | working tree | src/content/tools/bolt.md |
-| 2026-06-15 | /tools/canva/ | Tool | Yes | working tree | src/content/tools/canva.md |
-| 2026-06-15 | /tools/captions/ | Tool | Yes | working tree | src/content/tools/captions.md |
-| 2026-06-15 | /tools/chatgpt/ | Tool | Yes | working tree | src/content/tools/chatgpt.md |
-| 2026-06-15 | /tools/claude-code/ | Tool | Yes | working tree | src/content/tools/claude-code.md |
-| 2026-06-15 | /tools/claude/ | Tool | Yes | working tree | src/content/tools/claude.md |
-| 2026-06-15 | /tools/cline/ | Tool | Yes | working tree | src/content/tools/cline.md |
-| 2026-06-15 | /tools/coderabbit/ | Tool | Yes | working tree | src/content/tools/coderabbit.md |
-| 2026-06-15 | /tools/codex/ | Tool | Yes | working tree | src/content/tools/codex.md |
-| 2026-06-15 | /tools/cody/ | Tool | Yes | working tree | src/content/tools/cody.md |
-| 2026-06-15 | /tools/comet/ | Tool | Yes | working tree | src/content/tools/comet.md |
-| 2026-06-15 | /tools/cursor/ | Tool | Yes | working tree | src/content/tools/cursor.md |
-| 2026-06-15 | /tools/d-id/ | Tool | Yes | working tree | src/content/tools/d-id.md |
-| 2026-06-15 | /tools/devin/ | Tool | Yes | working tree | src/content/tools/devin.md |
-| 2026-06-15 | /tools/factory/ | Tool | Yes | working tree | src/content/tools/factory.md |
-| 2026-06-15 | /tools/gemini/ | Tool | Yes | working tree | src/content/tools/gemini.md |
-| 2026-06-15 | /tools/github-copilot/ | Tool | Yes | working tree | src/content/tools/github-copilot.md |
-| 2026-06-15 | /tools/grammarly/ | Tool | Yes | working tree | src/content/tools/grammarly.md |
-| 2026-06-15 | /tools/grok/ | Tool | Yes | working tree | src/content/tools/grok.md |
-| 2026-06-15 | /tools/hailuo/ | Tool | Yes | working tree | src/content/tools/hailuo.md |
-| 2026-06-15 | /tools/hedra/ | Tool | Yes | working tree | src/content/tools/hedra.md |
-| 2026-06-15 | /tools/heygen/ | Tool | Yes | working tree | src/content/tools/heygen.md |
-| 2026-06-15 | /tools/mastra/ | Tool | Yes | working tree | src/content/tools/mastra.md |
-| 2026-06-15 | /tools/microsoft-agent-framework/ | Tool | Yes | working tree | src/content/tools/microsoft-agent-framework.md |
-| 2026-06-15 | /tools/midjourney/ | Tool | Yes | working tree | src/content/tools/midjourney.md |
-| 2026-06-15 | /tools/mistral-ai/ | Tool | Yes | working tree | src/content/tools/mistral-ai.md |
-| 2026-06-15 | /tools/n8n/ | Tool | Yes | working tree | src/content/tools/n8n.md |
-| 2026-06-15 | /tools/notebooklm/ | Tool | Yes | working tree | src/content/tools/notebooklm.md |
-| 2026-06-15 | /tools/openrouter/ | Tool | Yes | working tree | src/content/tools/openrouter.md |
-| 2026-06-15 | /tools/perplexity/ | Tool | Yes | working tree | src/content/tools/perplexity.md |
-| 2026-06-15 | /tools/qodo/ | Tool | Yes | working tree | src/content/tools/qodo.md |
-| 2026-06-15 | /tools/qwen/ | Tool | Yes | working tree | src/content/tools/qwen.md |
-| 2026-06-15 | /tools/replit-agent/ | Tool | Yes | working tree | src/content/tools/replit-agent.md |
-| 2026-06-15 | /tools/val-town/ | Tool | Yes | working tree | src/content/tools/val-town.md |
-| 2026-06-15 | /trends/ | Static page | Yes | working tree | src/pages/trends/index.astro |
-| 2026-06-15 | /trends/agent-commerce/ | Trend | Yes | working tree | src/content/trends/agent-commerce.md |
-| 2026-06-15 | /trends/geo-trend/ | Trend | Yes | working tree | src/content/trends/geo-trend.md |
-| 2026-06-15 | /trends/model-availability-churn/ | Trend | Yes | working tree | src/content/trends/model-availability-churn.md |
-| 2026-06-15 | /trends/vibe-coding/ | Trend | Yes | working tree | src/content/trends/vibe-coding.md |
-| 2026-06-15 | /workflows/ | Static page | Yes | working tree | src/pages/workflows/index.astro |
-| 2026-06-15 | /workflows/micro-saas-weekend-build/ | Workflow | Yes | working tree | src/content/workflows/micro-saas-weekend-build.md |
+| 2026-06-13 | /tools/openrouter/ | Tool | Yes | frontmatter | src/content/tools/openrouter.md |
+| 2026-06-13 | /trends/model-availability-churn/ | Trend | Yes | frontmatter | src/content/trends/model-availability-churn.md |
+| 2026-06-14 | /tools/aider/ | Tool | Yes | frontmatter | src/content/tools/aider.md |
+| 2026-06-14 | /tools/bolt/ | Tool | Yes | frontmatter | src/content/tools/bolt.md |
+| 2026-06-14 | /tools/factory/ | Tool | Yes | frontmatter | src/content/tools/factory.md |
+| 2026-06-14 | /tools/val-town/ | Tool | Yes | frontmatter | src/content/tools/val-town.md |
+| 2026-06-14 | /workflows/micro-saas-weekend-build/ | Workflow | Yes | frontmatter | src/content/workflows/micro-saas-weekend-build.md |
+| 2026-06-15 | / | Static page | Yes | git | src/pages/index.astro |
+| 2026-06-15 | /about/our-stack/ | Static page | Yes | git | src/pages/about/our-stack.astro |
+| 2026-06-15 | /admin/reviews/ | Static page | No | git | src/pages/admin/reviews.astro |
+| 2026-06-15 | /categories/ | Static page | Yes | git | src/pages/categories/index.astro |
+| 2026-06-15 | /categories/ai-automation/ | Category | Yes | frontmatter | src/content/categories/ai-automation.md |
+| 2026-06-15 | /categories/ai-chatbots/ | Category | Yes | frontmatter | src/content/categories/ai-chatbots.md |
+| 2026-06-15 | /categories/ai-coding/ | Category | Yes | frontmatter | src/content/categories/ai-coding.md |
+| 2026-06-15 | /categories/ai-design/ | Category | Yes | frontmatter | src/content/categories/ai-design.md |
+| 2026-06-15 | /categories/ai-image/ | Category | Yes | frontmatter | src/content/categories/ai-image.md |
+| 2026-06-15 | /categories/ai-infrastructure/ | Category | Yes | frontmatter | src/content/categories/ai-infrastructure.md |
+| 2026-06-15 | /categories/ai-music/ | Category | Yes | frontmatter | src/content/categories/ai-music.md |
+| 2026-06-15 | /categories/ai-notes/ | Category | Yes | frontmatter | src/content/categories/ai-notes.md |
+| 2026-06-15 | /categories/ai-presentation/ | Category | Yes | frontmatter | src/content/categories/ai-presentation.md |
+| 2026-06-15 | /categories/ai-research/ | Category | Yes | frontmatter | src/content/categories/ai-research.md |
+| 2026-06-15 | /categories/ai-search/ | Category | Yes | frontmatter | src/content/categories/ai-search.md |
+| 2026-06-15 | /categories/ai-seo/ | Category | Yes | frontmatter | src/content/categories/ai-seo.md |
+| 2026-06-15 | /categories/ai-video/ | Category | Yes | frontmatter | src/content/categories/ai-video.md |
+| 2026-06-15 | /categories/ai-voice/ | Category | Yes | frontmatter | src/content/categories/ai-voice.md |
+| 2026-06-15 | /categories/ai-writing/ | Category | Yes | frontmatter | src/content/categories/ai-writing.md |
+| 2026-06-15 | /companies/ | Static page | Yes | git | src/pages/companies/index.astro |
+| 2026-06-15 | /companies/anthropic/ | Company | Yes | frontmatter | src/content/companies/anthropic.md |
+| 2026-06-15 | /companies/openai/ | Company | Yes | frontmatter | src/content/companies/openai.md |
+| 2026-06-15 | /compare/ | Static page | Yes | git | src/pages/compare/index.astro |
+| 2026-06-15 | /compare/hailuo-vs-kling/ | Comparison | Yes | frontmatter | src/content/comparisons/hailuo-vs-kling.md |
+| 2026-06-15 | /explore/ | Static page | Yes | git | src/pages/explore/index.astro |
+| 2026-06-15 | /guides/ | Static page | Yes | git | src/pages/guides/index.astro |
+| 2026-06-15 | /guides/best-ai-avatar-video-generator/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-avatar-video-generator.md |
+| 2026-06-15 | /guides/best-ai-for-code-review/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-code-review.md |
+| 2026-06-15 | /guides/best-ai-tools-for-developers/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-tools-for-developers.md |
+| 2026-06-15 | /guides/claude-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/claude-alternatives.md |
+| 2026-06-15 | /guides/cursor-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/cursor-alternatives.md |
+| 2026-06-15 | /guides/github-copilot-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/github-copilot-alternatives.md |
+| 2026-06-15 | /llms-full.txt | Crawl surface | No | git | src/pages/llms-full.txt.ts |
+| 2026-06-15 | /llms.txt | Crawl surface | No | git | src/pages/llms.txt.ts |
+| 2026-06-15 | /media-kit/ | Static page | Yes | git | src/pages/media-kit.astro |
+| 2026-06-15 | /news/ | Static page | Yes | page metadata | src/pages/news/index.astro |
+| 2026-06-15 | /news/rss.xml | Crawl surface | No | git | src/pages/news/rss.xml.ts |
+| 2026-06-15 | /privacy/ | Static page | Yes | git | src/pages/privacy.astro |
+| 2026-06-15 | /search/ | Static page | No | git | src/pages/search.astro |
+| 2026-06-15 | /sitemap-index.xml | Crawl surface | No | git | astro.config.mjs |
+| 2026-06-15 | /tools/ | Static page | Yes | git | src/pages/tools/index.astro |
+| 2026-06-15 | /tools/adobe-firefly/ | Tool | Yes | frontmatter | src/content/tools/adobe-firefly.md |
+| 2026-06-15 | /tools/augment-code/ | Tool | Yes | frontmatter | src/content/tools/augment-code.md |
+| 2026-06-15 | /tools/base44/ | Tool | Yes | frontmatter | src/content/tools/base44.md |
+| 2026-06-15 | /tools/blackbox-ai/ | Tool | Yes | frontmatter | src/content/tools/blackbox-ai.md |
+| 2026-06-15 | /tools/canva/ | Tool | Yes | frontmatter | src/content/tools/canva.md |
+| 2026-06-15 | /tools/captions/ | Tool | Yes | frontmatter | src/content/tools/captions.md |
+| 2026-06-15 | /tools/chatgpt/ | Tool | Yes | frontmatter | src/content/tools/chatgpt.md |
+| 2026-06-15 | /tools/claude-code/ | Tool | Yes | frontmatter | src/content/tools/claude-code.md |
+| 2026-06-15 | /tools/claude/ | Tool | Yes | frontmatter | src/content/tools/claude.md |
+| 2026-06-15 | /tools/cline/ | Tool | Yes | frontmatter | src/content/tools/cline.md |
+| 2026-06-15 | /tools/coderabbit/ | Tool | Yes | frontmatter | src/content/tools/coderabbit.md |
+| 2026-06-15 | /tools/codex/ | Tool | Yes | frontmatter | src/content/tools/codex.md |
+| 2026-06-15 | /tools/cody/ | Tool | Yes | frontmatter | src/content/tools/cody.md |
+| 2026-06-15 | /tools/comet/ | Tool | Yes | frontmatter | src/content/tools/comet.md |
+| 2026-06-15 | /tools/cursor/ | Tool | Yes | frontmatter | src/content/tools/cursor.md |
+| 2026-06-15 | /tools/d-id/ | Tool | Yes | frontmatter | src/content/tools/d-id.md |
+| 2026-06-15 | /tools/gemini/ | Tool | Yes | frontmatter | src/content/tools/gemini.md |
+| 2026-06-15 | /tools/github-copilot/ | Tool | Yes | frontmatter | src/content/tools/github-copilot.md |
+| 2026-06-15 | /tools/grammarly/ | Tool | Yes | frontmatter | src/content/tools/grammarly.md |
+| 2026-06-15 | /tools/grok/ | Tool | Yes | frontmatter | src/content/tools/grok.md |
+| 2026-06-15 | /tools/hailuo/ | Tool | Yes | frontmatter | src/content/tools/hailuo.md |
+| 2026-06-15 | /tools/hedra/ | Tool | Yes | frontmatter | src/content/tools/hedra.md |
+| 2026-06-15 | /tools/heygen/ | Tool | Yes | frontmatter | src/content/tools/heygen.md |
+| 2026-06-15 | /tools/mastra/ | Tool | Yes | frontmatter | src/content/tools/mastra.md |
+| 2026-06-15 | /tools/microsoft-agent-framework/ | Tool | Yes | frontmatter | src/content/tools/microsoft-agent-framework.md |
+| 2026-06-15 | /tools/midjourney/ | Tool | Yes | frontmatter | src/content/tools/midjourney.md |
+| 2026-06-15 | /tools/mistral-ai/ | Tool | Yes | frontmatter | src/content/tools/mistral-ai.md |
+| 2026-06-15 | /tools/n8n/ | Tool | Yes | frontmatter | src/content/tools/n8n.md |
+| 2026-06-15 | /tools/notebooklm/ | Tool | Yes | frontmatter | src/content/tools/notebooklm.md |
+| 2026-06-15 | /tools/perplexity/ | Tool | Yes | frontmatter | src/content/tools/perplexity.md |
+| 2026-06-15 | /tools/qodo/ | Tool | Yes | frontmatter | src/content/tools/qodo.md |
+| 2026-06-15 | /tools/qwen/ | Tool | Yes | frontmatter | src/content/tools/qwen.md |
+| 2026-06-15 | /tools/replit-agent/ | Tool | Yes | frontmatter | src/content/tools/replit-agent.md |
+| 2026-06-15 | /trends/ | Static page | Yes | git | src/pages/trends/index.astro |
+| 2026-06-15 | /trends/agent-commerce/ | Trend | Yes | frontmatter | src/content/trends/agent-commerce.md |
+| 2026-06-15 | /trends/geo-trend/ | Trend | Yes | frontmatter | src/content/trends/geo-trend.md |
+| 2026-06-15 | /trends/vibe-coding/ | Trend | Yes | frontmatter | src/content/trends/vibe-coding.md |
+| 2026-06-15 | /workflows/ | Static page | Yes | git | src/pages/workflows/index.astro |
