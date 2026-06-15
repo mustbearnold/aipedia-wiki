@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import { spawnSync } from 'node:child_process';
+import { existsSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -20,14 +21,16 @@ const result = spawnSync(process.execPath, [astroBin, 'build'], {
 
 if ((result.status ?? 1) !== 0) process.exit(result.status ?? 1);
 
-const auditResult = spawnSync(process.execPath, ['scripts/audit-indexability.mjs', '--dist', 'dist-fast'], {
+const fastStaticDir = existsSync(join(PROJECT_DIR, 'dist-fast', 'client')) ? 'dist-fast/client' : 'dist-fast';
+
+const auditResult = spawnSync(process.execPath, ['scripts/audit-indexability.mjs', '--dist', fastStaticDir], {
   cwd: PROJECT_DIR,
   stdio: 'inherit',
 });
 
 if ((auditResult.status ?? 1) !== 0) process.exit(auditResult.status ?? 1);
 
-const commercialCtaAuditResult = spawnSync(process.execPath, ['scripts/audit-commercial-cta.mjs', '--dist', 'dist-fast'], {
+const commercialCtaAuditResult = spawnSync(process.execPath, ['scripts/audit-commercial-cta.mjs', '--dist', fastStaticDir], {
   cwd: PROJECT_DIR,
   stdio: 'inherit',
 });

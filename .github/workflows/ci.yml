@@ -1,14 +1,29 @@
 name: CI
 
 on:
+  pull_request:
+  push:
+    branches:
+      - master
   workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - name: Checkout
         uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+          persist-credentials: false
 
       - name: Use Node 24
         uses: actions/setup-node@v5
@@ -17,10 +32,12 @@ jobs:
           cache: npm
 
       - name: Install
+        env:
+          PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
         run: npm ci
 
-      - name: Script tests and command surface
-        run: npm run test:scripts && npm run audit:commands
+      - name: Quick verification
+        run: npm run check:quick
 
       - name: Guards and audits
         run: npm run check

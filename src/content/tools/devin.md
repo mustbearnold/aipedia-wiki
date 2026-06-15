@@ -140,7 +140,7 @@ The delegation model is the core differentiator. Assign a ticket over Slack or L
 
 > **Pick Devin if you manage a backlog of well-scoped tickets and can review PRs efficiently.** Bug fixes, API integrations, boilerplate, and refactors with clear acceptance criteria are the sweet spot. The MCP Marketplace (launched 2026) plus Slack and Linear integrations make hand-off close to frictionless.
 >
-> **Skip it for interactive coding or architectural decisions.** [Cursor](/tools/cursor/) or [Claude Code](/tools/claude/) are faster and more reliable on ambiguous work. Devin burns through included quota or extra API-priced usage on exploration, which is expensive when specs are fuzzy.
+> **Skip it for interactive coding or architectural decisions.** [Cursor](/tools/cursor/) or [Claude Code](/tools/claude-code/) are faster and more reliable on ambiguous work. Devin burns through included quota or extra API-priced usage on exploration, which is expensive when specs are fuzzy.
 >
 > **Who pays which tier:** Free for evaluation, Pro $20/mo for solo devs with small queues, Max $200/mo for heavier individual workloads, Team from $80/mo when shared admin and collaboration matter, Enterprise for SSO and custom deployment. Budget full-dev-seat add-ons separately before team rollout.
 
@@ -182,7 +182,7 @@ The moat sits in the sandbox plus MCP Marketplace. No other mainstream agent cou
 ## When to pick something else
 
 - **Interactive pair-programming:** [Cursor](/tools/cursor/) or [Devin Desktop / Windsurf](/tools/windsurf/) for faster feedback inside an editor.
-- **Terminal-first agentic coding:** [Claude Code](/tools/claude/) on Max 5x at $100/mo. Strongest CLI agent, flat billing.
+- **Terminal-first agentic coding:** [Claude Code](/tools/claude-code/) on Max 5x at $100/mo. Strongest CLI agent, flat billing.
 - **Open-source BYOK delegation:** [Cline](/tools/cline/) inside VS Code with Plan/Act modes. No subscription floor.
 - **Ultra-lean CLI workflow:** [Aider](/tools/aider/). Free, BYOK, auto-commits every change to git.
 - **Enterprise with strict data controls:** [GitHub Copilot](/tools/github-copilot/) Enterprise. Devin's VPC option works but Copilot's GitHub-native posture is simpler for most orgs.

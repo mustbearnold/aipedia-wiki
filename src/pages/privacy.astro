@@ -1,8 +1,8 @@
 ---
 import ArticleLayout from '../layouts/ArticleLayout.astro';
 
-const LAST_UPDATED = '2026-06-01';
-const LAST_UPDATED_HUMAN = 'June 1, 2026';
+const LAST_UPDATED = '2026-06-13';
+const LAST_UPDATED_HUMAN = 'June 13, 2026';
 
 const pageName = 'Privacy Policy, aipedia.wiki';
 const pageDesc =
@@ -35,12 +35,12 @@ const pageDesc =
   </p>
 
   <ul>
-    <li><strong>Server request logs.</strong> The Cloudflare edge records each request (IP address, user agent, requested URL, referrer, timestamp). These are retained by Cloudflare under its standard policy and are not exported to any other system.</li>
-    <li><strong>Aggregated traffic analytics.</strong> Cloudflare Web Analytics measures pageviews, device type, and country at an aggregated level. No cookies. No cross-site tracking. No individual reader profile is built.</li>
+    <li><strong>Server request metadata.</strong> Vercel processes request metadata needed to host the site, route requests, serve static assets, run API functions, protect infrastructure, and diagnose operational issues.</li>
+    <li><strong>First-party traffic and performance analytics.</strong> Vercel Web Analytics and Speed Insights measure aggregate traffic and Core Web Vitals without third-party cookies. Speed Insights is designed around anonymous performance data rather than individual visitor profiles.</li>
     <li><strong>Optional Google Analytics.</strong> Google Analytics 4 only loads after you click "Allow analytics" in the privacy controls banner. It measures site usage such as pageviews, referral source, browser, device, country/region, approximate engagement, commercial CTA clicks, and search-result interactions. We set IP anonymization and disable Google signals and ad personalization signals.</li>
     <li><strong>Search queries.</strong> The Pagefind search index runs in the reader's browser. If analytics is rejected, search stays local. If analytics is allowed, the site may send aggregate search-event data to Google Analytics, including the search term, result count, result type, and search surface.</li>
-    <li><strong>Newsletter signups.</strong> If you subscribe, the site stores your email address, signup source, timestamp, and a hashed IP value for rate limiting and abuse prevention. Cloudflare Turnstile may be used to verify that the signup was not automated.</li>
-    <li><strong>Reader reviews and feedback.</strong> If you submit a review or correction, the site stores the content you submit, moderation metadata, and anti-abuse signals such as hashed IP, user agent, spam score, and Turnstile result. Review email addresses, when supplied, are hashed before storage. Approved review text and display name may appear publicly.</li>
+    <li><strong>Newsletter signups.</strong> If you subscribe, the site stores your email address, signup source, timestamp, and a hashed IP value for rate limiting and abuse prevention.</li>
+    <li><strong>Reader reviews and feedback.</strong> If you submit a review or correction, the site stores the content you submit, moderation metadata, and anti-abuse signals such as hashed IP, user agent, and spam score. Review email addresses, when supplied, are hashed before storage. Approved review text and display name may appear publicly.</li>
     <li><strong>Local preferences and lightweight votes.</strong> Theme, analytics choice, compare-tray selections, and helpful-vote state may be stored in browser <code>localStorage</code>. Helpful votes also send the page slug, page type, and yes/no value to the site so editors can see which pages need work.</li>
     <li><strong>Email you send.</strong> If you email <a href="mailto:editorial@aipedia.wiki">editorial@aipedia.wiki</a> through a feedback form or correction link, the message is delivered to an editorial inbox. Content is read, actioned where relevant, and retained for correspondence history.</li>
   </ul>
@@ -71,8 +71,8 @@ const pageDesc =
   <h2>Third-party services</h2>
 
   <ul>
-    <li><strong>Cloudflare Pages</strong> hosts the site and delivers pages via a global CDN. <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare privacy policy</a>.</li>
-    <li><strong>Cloudflare Turnstile</strong> helps protect newsletter, review, and feedback forms from automated abuse. <a href="https://www.cloudflare.com/turnstile-privacy-policy/" target="_blank" rel="noopener">Cloudflare Turnstile privacy notice</a>.</li>
+    <li><strong>Vercel</strong> hosts the site, delivers pages through its network, runs the server-side API functions, and provides Web Analytics and Speed Insights. <a href="https://vercel.com/legal/privacy-notice" target="_blank" rel="noopener">Vercel privacy notice</a>, <a href="https://vercel.com/docs/analytics/privacy-policy" target="_blank" rel="noopener">Web Analytics privacy</a>, and <a href="https://vercel.com/docs/speed-insights/privacy-policy" target="_blank" rel="noopener">Speed Insights privacy</a>.</li>
+    <li><strong>Neon Postgres</strong> stores newsletter and review records when those features are enabled. <a href="https://neon.com/privacy-policy" target="_blank" rel="noopener">Neon privacy notice</a>.</li>
     <li><strong>Google Analytics 4</strong> provides consent-based aggregate traffic analytics. Google Analytics is not loaded unless you allow analytics in the privacy controls banner. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google privacy policy</a>.</li>
     <li><strong>Affiliate networks</strong> (Impact, PartnerStack, Rewardful, FirstPromoter, ShareASale, others) may drop a click-tracking cookie when you click through an affiliate link. Each network runs under its own privacy policy, linked from the destination site.</li>
   </ul>
@@ -84,7 +84,7 @@ const pageDesc =
   </p>
 
   <p>
-    Because aipedia.wiki does not maintain reader accounts or behavioural advertising profiles, there is limited reader data to request. Cloudflare server logs contain request metadata that is controlled by Cloudflare's retention cycle. Newsletter records, review submissions, helpful-vote aggregates, and email correspondence are handled by aipedia.wiki for the purposes described above.
+    Because aipedia.wiki does not maintain reader accounts or behavioural advertising profiles, there is limited reader data to request. Infrastructure request metadata is handled through Vercel's hosting and observability systems. Newsletter records, review submissions, helpful-vote aggregates, and email correspondence are handled by aipedia.wiki for the purposes described above.
   </p>
 
   <p>

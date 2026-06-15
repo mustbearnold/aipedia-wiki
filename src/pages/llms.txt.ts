@@ -3,6 +3,182 @@
 // Copilot) at the canonical index + category hubs + editorial policy.
 //
 // See also /llms-full.txt for the verbose variant with every page listed.
+// Refresh metadata: 2026-06-15 AI Presentation category refresh after current
+// Gamma, Pitch, Canva, Beautiful.ai, Decktopus, Presentations.AI, Napkin AI,
+// Prezi, and Gemini in Slides route checks; updated AI-credit, export,
+// branding, usage-limit, source-review, source-registry, homepage,
+// tools/categories/explore indexes, and LLM maintenance.
+// Refresh metadata: 2026-06-15 AI Music category refresh after current Suno,
+// Udio, ElevenLabs Music, AIVA, Mubert, Stable Audio, and Boomy route checks;
+// updated rights/export/licensing buyer guidance, source registry,
+// homepage, tools/categories/explore indexes, and LLM maintenance.
+// Refresh metadata: 2026-06-15 GEO trend refresh after current Writesonic,
+// Semrush, Ahrefs, Google Search Central, Pew, arXiv, and WIRED checks;
+// updated AI visibility prompt tracking, citation/source logs, claim
+// fidelity, source-review controls, source registry, homepage, trends,
+// explore, and LLM maintenance.
+// Refresh metadata: 2026-06-15 AI SEO/GEO category refresh after current
+// Ahrefs, Semrush One, Surfer, Clearscope, Frase, NeuronWriter, OmniSEO,
+// MarketMuse, AdCreative.ai, and Google AI Overviews liability/source-review
+// checks; updated source registry, homepage, tools/categories/explore
+// indexes, and LLM maintenance.
+// Refresh metadata: 2026-06-15 NotebookLM active-tool and AI Notes/AI Search/
+// AI Research parent refresh after current NotebookLM upgrade help, Google AI
+// Plans, and secondary June update checks; updated Deep Research,
+// Audio/Video Overview, source discovery review, Studio artifacts,
+// Cloud/Workspace data handling, source registry, homepage,
+// tools/categories/explore indexes, and LLM maintenance.
+// Refresh metadata: 2026-06-15 Comet active-tool and AI Search parent refresh
+// after current official Comet, Perplexity pricing, Max, and API
+// privacy/security checks; updated free-first upgrade guidance, Comet Agent,
+// Max Assistant, Computer credits, sensitive-action approvals, source
+// registry, homepage, tools/categories/explore indexes, and LLM maintenance.
+// Refresh metadata: 2026-06-15 Perplexity active-tool and AI Search parent
+// refresh after current official pricing, Max, Comet, Computer, Sonar/API
+// pricing, media, Agent API tools, API privacy/security, source registry,
+// homepage, tools/categories/explore indexes, and source-log/review/budget
+// caveat maintenance.
+// Refresh metadata: 2026-06-15 Visa/ChatGPT agent-payments coverage added
+// after current June AP and Visa Intelligent Commerce source checks; updated
+// ChatGPT, OpenAI, agent-commerce trend, AI Chatbots, news archive, RSS,
+// homepage, tools/categories/trends/companies/explore indexes, and LLM
+// surfaces around approvals, spend limits, token scope, merchant boundaries,
+// and dispute-ready logs.
+// Refresh metadata: 2026-06-15 OpenAI/Ona Codex persistent-agent acquisition
+// coverage added after current June official OpenAI, Ona, Codex product, and
+// Codex pricing source checks; Codex, AI Coding, June 11 desk, news archive,
+// RSS, homepage, and LLM surfaces inspected.
+// Refresh metadata: 2026-06-15 AI news desk and Google AI search risk
+// checklist refresh across G7 Evian opening, AP AI-regulation agenda and
+// state-law patchwork reporting, Google AI Overviews liability coverage,
+// Google's Gemini-related phishing lawsuit coverage, Gemini/AI Search/AI
+// Chatbots notes, homepage, news archive, RSS, and LLM surfaces.
+// Refresh metadata: 2026-06-15 AI coding token-budget governance story refresh
+// across Business Insider/Times of India Disney reporting, Claude/Cursor
+// usage, tokenmaxxing, AI-coded release quality, Cursor, Claude Code, AI
+// Coding, homepage, news archive, RSS, and LLM surfaces.
+// Refresh metadata: 2026-06-15 Claude active-tool, Anthropic company, Claude
+// alternatives, and AI Chatbots parent refresh after Opus 4.8 fallback,
+// Fable/Mythos suspension, model-doc availability drift, active Agent SDK
+// credits, source registry, homepage, tools/categories/guides/companies
+// indexes, and LLM maintenance.
+// Refresh metadata: 2026-06-15 Claude Code active-tool, AI Coding parent, and
+// developer/Cursor/GitHub Copilot alternatives guide refresh after active
+// Agent SDK, claude -p, and GitHub Actions per-user credits, interactive
+// subscription limits, API billing paths, Opus 4.8 fallback, Fable/Mythos
+// suspension, source registry, homepage, tools/categories/guides indexes, and
+// LLM maintenance.
+// Refresh metadata: 2026-06-15 Augment Code active-tool and AI Coding parent
+// refresh after Business $100/month flat pricing, $100 included usage, Cosmos,
+// Auggie CLI, usage-balance billing, feature-availability caveats, Fable route
+// risk, source registry, homepage, tools/categories indexes, and LLM
+// maintenance.
+// Refresh metadata: 2026-06-15 Mistral AI active-tool, AI Chatbots, and AI
+// Infrastructure parent refresh after current Vibe formerly Le Chat, Vibe for
+// Code, Vibe Work Mode, Chat-mode sunset planning, Mistral 3 launch-date
+// correction, Medium 3.5 open-weight status, Large 3/Small 4/Ministral
+// pricing, Small 4 and Large-family pricing-source drift, Search Toolkit,
+// Les Ulis inference context, SDK advisory status, source registry, homepage,
+// tools index, categories index, and LLM maintenance.
+// Refresh metadata: 2026-06-15 Hailuo active-tool, AI Video parent, and
+// Hailuo/Kling comparison touch-up after current Hailuo 2.3/2.3-Fast,
+// Hailuo Agent/Media Agent positioning, MiniMax video API routes,
+// first-and-last-frame model-route caveats, pay-as-you-go video rates,
+// one-month video packages, token-plan caveats, dynamic app subscription
+// allowances, source registry, homepage, tools index, categories index,
+// compare index, and LLM maintenance.
+// Refresh metadata: 2026-06-15 Cline active-tool and AI Coding parent refresh
+// after current Open Source free plan, usage-based inference/BYOK, Enterprise
+// custom governance, Spec Driven licensed enterprise lane, IDE/CLI/Kanban/SDK
+// surfaces, provider routing including Vercel AI Gateway, Auto Approve/SDK
+// permission-policy, source registry, homepage, tools index, categories index,
+// and LLM maintenance.
+// Refresh metadata: 2026-06-15 Cody active-tool and AI Coding parent refresh
+// after Sourcegraph Enterprise-only packaging, $16K platform entry,
+// AI-feature credits, org-wide credit pooling, Cody Gateway/model controls,
+// AI Terms, VS Code Marketplace non-enterprise warning plus stale Cody Pro
+// copy, source registry, homepage, tools index, categories index, and LLM
+// maintenance.
+// Refresh metadata: 2026-06-15 Captions.ai active-tool and AI Video/avatar
+// guide refresh after current Android Lite, Pro, Max, Scale, Scale 2x/4x,
+// model-specific credits, rollover-doc conflict, Scale 4x/legacy Teams/
+// Business top-up eligibility, Mirage actor, feature-availability, and source
+// registry checks.
+// Refresh metadata: 2026-06-15 Adobe Firefly active-tool and AI Image/AI
+// Design/AI Video parent refresh after current Firefly Image 5/Image5,
+// Firefly web/mobile plus Creative Cloud workflows, Standard/Pro/Pro Plus/
+// Premium credit pricing, promo caveats, Firefly Services/API docs,
+// partner-model credit rates, Kling prompt/reference-file disclosure,
+// affiliate terms, source registry, homepage, tools index, categories index,
+// and LLM maintenance.
+// Refresh metadata: 2026-06-15 n8n active-tool and AI Automation parent
+// refresh after current hosted Starter/Pro pricing, Business self-host
+// framing, AI Agent Tools Agent behavior, source-available license,
+// self-hosting risk, Business overage/license-key/telemetry caveats,
+// EU-hosted data, affiliate terms, source registry, homepage, tools index,
+// categories index, and LLM maintenance.
+// Refresh metadata: 2026-06-15 Midjourney active-tool and AI Image/AI Design/
+// AI Video parent refresh after current V8.1 default, V7 Omni Reference
+// fallback, annual plan pricing, Midjourney Video plan/resolution/batch GPU-time
+// limits, Enterprise API application, commercial-rights, source registry, homepage, tools index,
+// categories index, and LLM maintenance.
+// Refresh metadata: 2026-06-15 Grammarly active-tool and AI Writing parent
+// refresh after current Grammarly Pro, Superhuman suite pricing, AI prompt,
+// privacy, Expert Review, public 90-day affiliate cookie, affiliate-term,
+// source registry, homepage, tools index, categories index, and LLM maintenance.
+// Refresh metadata: 2026-06-15 Canva active-tool and AI Design/AI Image
+// parent refresh after current Canva AI 2.0, Business, AI Pass, AI allowance,
+// AI Product Terms, Canva Shield, commercial-rights, source registry,
+// homepage, tools index, categories index, and LLM maintenance.
+// Refresh metadata: 2026-06-15 Gemini active-tool and AI Chatbots/AI Coding/
+// AI Search/AI Writing/AI Image/AI Video parent refresh after current
+// Google AI plans, Gemini app limits, API model/pricing, Workspace privacy boundary,
+// grounding, media, source registry, homepage, tools index, categories index,
+// and June 18 Antigravity migration caveat for unpaid-tier / Google One Code
+// Assist users.
+// Refresh metadata: 2026-06-15 Qwen active-tool and AI Chatbots/AI Coding/
+// AI Research parent no-material-change recheck after current Qwen Cloud
+// model-release, pricing, promo, marketplace, Qwen3 blog, and Hugging Face
+// source checks.
+// Refresh metadata: 2026-06-15 Grok active-tool and AI Chatbots/AI Search/
+// AI Coding parent refresh after current xAI pricing, model, Grok Build,
+// X Search, Imagine, Voice, memory, API-retention, source registry,
+// homepage, tools index, categories index, and LLM maintenance.
+// Refresh metadata: 2026-06-14 HeyGen active-tool and AI Video parent
+// refresh after current app pricing, Avatar IV & V API pricing, LiveAvatar,
+// security, legacy Unlimited-plan, avatar-video buyer guide, source registry,
+// homepage, tools index, guides index, categories index, and LLM maintenance.
+// Refresh metadata: 2026-06-14 Factory active-tool and AI Coding parent
+// refresh after current pricing/freshness checks across Pro, Plus, Max,
+// Teams, Enterprise, Droid Core, and Extra Usage.
+// Refresh metadata: 2026-06-14 Val Town active-tool and AI Coding parent
+// refresh after current pricing/runtime checks and Vercel Functions
+// alternative-platform cleanup.
+// Refresh metadata: 2026-06-14 micro-SaaS workflow refresh after moving the
+// default API/webhook path to Vercel Functions, updating AI Coding parent
+// guidance, /workflows/, homepage, and LLM maintenance.
+// Refresh metadata: 2026-06-14 AI news desk refresh across OpenAI probe
+// coverage and buyer-safety checklist, Anthropic Fable/Mythos access risk,
+// ChatGPT GPT-5.2 retirement, G7 governance, homepage, news, RSS, and LLM
+// surfaces.
+// Refresh metadata: 2026-06-14 ChatGPT active-tool and AI Chatbots parent
+// refresh after AP/Business Insider probe coverage turned safety controls
+// into a buyer checklist.
+// Refresh metadata: 2026-06-14 Claude and Claude Code active-tool and parent
+// category refresh after current Anthropic model, pricing, Agent SDK,
+// platform-fee, ZDR, and Fable/Mythos suspension checks made Opus 4.8 fallback,
+// Windows install paths, and route-risk planning explicit for Claude, Claude
+// Code, and Claude API buyers.
+// Refresh metadata: 2026-06-14 Aider active-tool and AI Coding parent refresh
+// after source-backed BYOK cost cleanup and Claude Code alternative-link repair.
+// Refresh metadata: 2026-06-13 late AI news refresh across Claude
+// Fable/Mythos access suspension, ChatGPT GPT-5.2 retirement, OpenAI
+// state-attorneys-general scrutiny, affected tools, companies, category
+// hubs, /news/, RSS, homepage, /explore/, and LLM surfaces.
+// Refresh metadata: 2026-06-13 model availability tracker refresh across
+// ChatGPT/OpenAI, Claude/Anthropic, Gemini/Google, GitHub Copilot, Claude
+// Code, Codex, OpenRouter, tools, categories, /trends/, /tools/, /compare/,
+// /news/, /explore/, homepage, and LLM surfaces.
 // Refresh metadata: 2026-06-12 May 15 frontier refresh across
 // /about/our-stack/, landing-page A/B testing, OpenClaw, AI Automation,
 // source registry, homepage, tools, guides, categories, and LLM maintenance.
@@ -110,6 +286,8 @@
 // Refresh metadata: 2026-06-06 interview-prep, archived legal-research, LinkedIn, and logo-design guide refresh across Yoodli, Interviewing.io, ChatGPT, Claude, NotebookLM, Cursor, Perplexity, Gemini, LinkedIn, Canva, Apollo, Grammarly, Ideogram, Recraft, Midjourney, Adobe Firefly, AI Writing, AI Research, AI Design, /guides/, homepage, categories, and LLM maintenance.
 // Refresh metadata: 2026-06-06 email writing, Excel/spreadsheets, professional headshots, and Instagram guide refresh across ChatGPT, Gemini, Claude, Grammarly, Microsoft 365 Copilot, Rows, Julius, Midjourney, Canva, AdCreative.ai, Runway, Meta Edits, AI Writing, AI Design, /guides/, homepage, categories, and LLM maintenance.
 // Refresh metadata: 2026-06-06 cold email, cover letters, data analysis, and debugging guide refresh across Apollo, Instantly, Clay, Amplemarket, ChatGPT, Claude, Gemini, Grammarly, Hex, Julius, Rows, Perplexity, Cursor, GitHub Copilot AI Credits, Claude Code, Codex, Aider, AI Automation, AI Writing, AI Research, AI Coding, /guides/, homepage, and LLM maintenance.
+// Refresh metadata: 2026-06-15 code review guide CodeRabbit slice refresh across CodeRabbit pricing, plans, usage add-on, Slack Agent, Knowledge Base, CLI, changelog, AI Coding, /guides/, homepage, and LLM maintenance.
+// Refresh metadata: 2026-06-15 code review guide Qodo slice refresh across Qodo Review v2, Teams paid-seat/Git-account linking eligibility, Free review limits, Enterprise org-whitelisted review, CLI legacy caveat, AI Coding, /guides/, homepage, source registry, and LLM maintenance.
 // Refresh metadata: 2026-06-06 book writing, brainstorming, citations, and code review guide refresh across Claude, ChatGPT, Gemini, Sudowrite, Grammarly, NotebookLM, Scite, Semantic Scholar, Elicit, Perplexity, Consensus, CodeRabbit, Qodo, GitHub Copilot, Cursor, Claude Code, Codex, AI Writing, AI Research, AI Coding, /guides/, homepage, and LLM maintenance.
 // Refresh metadata: 2026-06-06 academic writing, ad copy, API documentation, and blog writing guide refresh across Claude, ChatGPT, NotebookLM, Elicit, Semantic Scholar, Scite, Grammarly, QuillBot, AdCreative.ai, Jasper, Copy.ai, Unbounce, Mintlify, Stainless, Speakeasy, ReadMe, Cursor, Gemini, Surfer SEO, AI Writing, AI Research, AI Coding, Answers, /guides/, homepage, and LLM maintenance.
 // Refresh metadata: 2026-06-06 avatar-video and coding-assistant guide refresh across HeyGen, Synthesia, Tavus, D-ID, Hedra, Argil, Captions, Cursor, Claude Code, Copilot AI Credits, Codex, Windsurf/Devin Desktop, Devin, AI Video, AI Coding, /guides/, homepage, and LLM maintenance.
@@ -175,6 +353,52 @@ export const GET: APIRoute = async () => {
   lines.push('');
   lines.push(`> Independent AI tools encyclopedia maintained by aipedia.wiki Editorial. ${activeTools.length} active tool pages across ${activeCategories.length} categories, ${comparisons.length} head-to-head comparisons, ${useCases.length} buyer guides. Public pages carry verification metadata and editorial sourcing controls.`);
   lines.push('');
+  lines.push('Recent category refresh: June 15, 2026 refreshed AI Presentation plus source registry, homepage, tools index, categories index, explore, and LLM maintenance around Gamma Plus/Pro/Ultra deck/export/API gates, Pitch AI credits and branded export gates, Canva AI Product Terms and operational usage limits, Beautiful.ai trial/pricing, Decktopus credits, Presentations.AI credit discrepancy, Napkin AI visual credits, and Prezi route-check caveats.');
+  lines.push('Recent category refresh: June 15, 2026 refreshed AI Music plus source registry, homepage, tools index, categories index, explore, and LLM maintenance around Suno paid-rights timing, Udio disabled downloads, ElevenLabs Music/API, AIVA scoring plans, Mubert Content ID/standalone/stock-site exclusions, Stable Audio 3.0 open weights/API, and Boomy/Stable Audio source-visible pricing caveats.');
+  lines.push('Recent trend refresh: June 15, 2026 refreshed GEO, Generative Engine Optimization, plus source registry, homepage, trends index, explore, and LLM maintenance around AI visibility prompt tracking, citation/source logs, claim fidelity, Google AI features guidance, Pew click research, AI Overview measurement, and liability-aware source-review controls.');
+  lines.push('Recent tool refresh: June 15, 2026 refreshed NotebookLM plus AI Notes, AI Search, AI Research, source registry, homepage, tools index, categories index, explore, and LLM maintenance around public NotebookLM upgrade limits, Deep Research, Audio/Video Overviews, source discovery review, reports, data tables, infographics, slide decks, Cloud/Workspace data handling, and the no-public-API caveat.');
+  lines.push('Recent tool refresh: June 15, 2026 refreshed Comet plus AI Search, source registry, homepage, tools index, categories index, explore, and LLM maintenance around Mac/Windows/iOS/Android availability, free-first browser use, Comet Agent queries, Max Assistant, Computer credits, Enterprise controls, and explicit approval for sensitive email, finance, shopping, account, file, or checkout actions.');
+  lines.push('Recent tool refresh: June 15, 2026 refreshed Perplexity plus AI Search, source registry, homepage, tools index, categories index, explore, and LLM maintenance around Pro/Max/Enterprise pricing, Comet, Computer credits, Sonar/API pricing, media docs, Agent API tool budgets, API privacy/security, and source-log/review-owner caveats for customer-facing AI search.');
+  lines.push('Recent tool refresh: June 15, 2026 refreshed Grammarly plus AI Writing, source registry, homepage, tools index, categories index, and LLM maintenance around Pro pricing, Free/Pro prompt allowances, Superhuman Business suite fit, Trust Center privacy posture, Expert Review trust risk, and the public 90-day affiliate cookie without unapproved payout claims.');
+  lines.push('Recent tool refresh: June 15, 2026 refreshed Microsoft Agent Framework plus AI Automation, source registry, homepage, tools index, categories index, and LLM maintenance around dotnet-1.10.0, python-1.8.1, recent breaking/experimental release notes, Work IQ June 16 GA timing, Copilot Credits billing, and provider-risk guidance.');
+  lines.push('Recent tool refresh: June 15, 2026 refreshed BLACKBOX AI plus AI Coding, source registry, homepage, tools index, categories index, and LLM maintenance around $10/$20/$40 plan prices, conflicting included-credit copy, Pro Plus as the practical app-builder/coding-agent tier, Pro Max team/admin controls, ZDR/security docs, and the paused Cuelinks affiliate listing.');
+  lines.push('Recent tool refresh: June 15, 2026 refreshed Claude plus Anthropic, Claude alternatives, AI Chatbots, source registry, homepage, tools index, categories index, guides index, companies index, and LLM maintenance around Opus 4.8 as the stable buyable route, Fable/Mythos suspension, model-doc availability drift, active Agent SDK credits, ZDR scope, and platform-fee caveats.');
+  lines.push('Recent tool refresh: June 15, 2026 refreshed Claude Code plus AI Coding, developer guide, Cursor alternatives, GitHub Copilot alternatives, source registry, homepage, tools index, categories index, guides index, and LLM maintenance around active per-user Agent SDK credits for claude -p, GitHub Actions, and Agent SDK apps, interactive subscription limits, API paths, Opus 4.8 fallback, and Fable/Mythos suspension.');
+  lines.push('Recent tool refresh: June 15, 2026 refreshed Augment Code plus AI Coding, source registry, homepage, tools index, categories index, and LLM maintenance around Business $100/month flat pricing for up to 50 seats, $100 included usage, Cosmos, Auggie CLI, usage-balance billing, feature-availability caveats, Fable route risk, and retired Indie/Standard/Max public-plan framing.');
+  lines.push('Recent tool refresh: June 15, 2026 refreshed Base44 plus AI Design, AI Coding source rows, vibe-coding, source registry, homepage, tools index, categories index, trends index, and LLM maintenance around the Free 100-vs-500 integration-credit source conflict, Builder domain/GitHub/backend/model gates, annual pricing, and public affiliate terms.');
+  lines.push('Recent tool refresh: June 15, 2026 refreshed Canva plus AI Design, AI Image, source registry, homepage, tools index, categories index, and LLM maintenance around Canva AI 2.0, Business, AI Pass, pooled Standard/Premium/Ultra allowances, AI usage limits as operational controls, AI Product Terms, Canva Shield, region-rendered checkout caveats, and commercial-rights review.');
+  lines.push('Recent tool refresh: June 15, 2026 refreshed GitHub Copilot plus AI Coding, Copilot alternatives, source registry, homepage, tools index, categories index, guides index, and LLM maintenance around paid-plan signup/Max upgrade eligibility, GitHub Enterprise Server unavailability, Fable 5 suspension, one-million-token context, configurable reasoning, Agent tasks REST API, Chat/agent-session handoff, Agentic Workflows, CLI settings, code-review runner/content controls, and AI Credits.');
+  lines.push('Recent tool refresh: June 15, 2026 refreshed Gemini plus AI Chatbots, AI Coding, AI Search, source registry, homepage, tools index, categories index, and LLM maintenance around Gemini 3.5 Flash, Gemini app Flash-Lite/Flash/Pro plan labels, Gemini 3.1 Pro Preview API caveat, Google AI Pro/Ultra limits, Gemini API pricing/grounding, Nano Banana/Veo media docs, Workspace privacy boundary, and the June 18 Antigravity migration for unpaid-tier / Google One Code Assist users.');
+  lines.push('Recent news refresh: June 15, 2026 added Visa/ChatGPT agent-payments coverage and refreshed ChatGPT, OpenAI, AI Chatbots, and agent-commerce guidance around consumer-controlled checkout, approval workflows, spending limits, token scope, merchant boundaries, human approval defaults, and dispute-ready logs.');
+  lines.push('Recent news refresh: June 15, 2026 added OpenAI/Ona Codex persistent-agent coverage, updating Codex and AI Coding buyer guidance around customer-controlled cloud execution, scoped credentials, audit logs, review gates, long-running work, and budget controls.');
+  lines.push('Recent news refresh: June 15, 2026 added a coding-agent governance story from Disney AI adoption reporting, turning Claude/Cursor usage, tokenmaxxing, AI-coded release quality, source-backed agent configuration, tests, review ownership, rollback safety, and token-budget controls into explicit buyer guidance for Cursor, Claude Code, and AI Coding teams.');
+  lines.push('Recent news refresh: June 15, 2026 added a buyer-facing AI news desk and Google AI search risk checklist covering the G7 Evian opening with AI regulation on the agenda, AP state-AI-law patchwork reporting, Google AI Overviews liability reporting, Google Gemini-related phishing lawsuit coverage, and the resulting source-log, abuse-control, workflow-scope, and governance checklist for Gemini, ChatGPT, Claude, Perplexity, AI Search, and AI Chatbots buyers.');
+  lines.push('Recent tool refresh: June 15, 2026 refreshed CodeRabbit plus AI Coding, the code-review buyer guide, source registry, homepage, tools index, categories index, guides index, and LLM maintenance around Pro/Pro+ pricing, refillable review allowances, $1 usage credits, Slack Agent billing, CodeRabbit Plan in VS Code, CLI v0.6.0, automatic repository linking, and GitLab/GHES review updates.');
+  lines.push('Recent tool refresh: June 15, 2026 refreshed Qodo plus AI Coding, the code-review buyer guide, source registry, homepage, tools index, categories index, guides index, and LLM maintenance around Qodo Review v2, Teams paid-seat and Git-account linking requirements, Free review limits, Enterprise org-whitelisted review, Context Engine/governance docs, and the CLI legacy caveat.');
+  lines.push('Recent tool refresh: June 15, 2026 refreshed Mastra plus AI Coding, source registry, homepage, tools index, categories index, and LLM maintenance around Starter/Teams/Enterprise pricing, usage meters, model-router scope, GitHub/company traction claims, Code Mode, Agent Signals, ACP support, and sandbox/harness permission review.');
+  lines.push('Recent tool refresh: June 15, 2026 refreshed Hedra plus AI Video, AI Voice, the avatar-video buyer guide, source registry, homepage, tools index, categories index, guides index, and LLM maintenance around Basic/Creator/Professional/Teams pricing, visible model-credit rates, the missing public Kling 2.6 Pro rate, Hedra Agent, Spaces, Skills, enterprise adoption claims, and pooled-credit rollover caveats.');
+  lines.push('Recent tool refresh: June 15, 2026 refreshed Cursor plus AI Coding, Cursor alternatives, Best AI Tools for Developers, source registry, homepage, tools index, categories index, guides index, and LLM maintenance around live pricing, on-demand usage after included usage, Pro+/Ultra recommendations, Composer 2.5-powered Bugbot, /review before push, CLI/SDK agents, Design Mode/context usage reporting, Enterprise controls, and Data Use privacy posture.');
+  lines.push('Recent tool refresh: June 15, 2026 refreshed Midjourney plus AI Image, AI Design, AI Video, source registry, homepage, tools index, categories index, and LLM maintenance around V8.1 default status, V7 Omni Reference fallback, annual plan pricing, Midjourney Video plan/resolution/batch GPU-time limits, commercial-rights thresholds, and Enterprise API application status.');
+  lines.push('Recent tool refresh: June 15, 2026 refreshed n8n plus AI Automation, source registry, homepage, tools index, categories index, and LLM maintenance around hosted Starter/Pro pricing, Business self-host packaging, Tools Agent behavior, Community self-host risk, Business overage buckets, license-key pings, default telemetry, Frankfurt hosted data, and affiliate-program status.');
+  lines.push('Recent tool refresh: June 15, 2026 refreshed Mistral AI plus AI Chatbots and AI Infrastructure parent hubs around Vibe formerly Le Chat, Vibe Work/Code, Chat-mode sunset planning, Mistral 3 launch-date correction, Medium 3.5 open-weight status, Large 3/Small 4/Ministral API pricing, Small 4 and Large-family pricing-source drift, Search Toolkit, Les Ulis inference context, exact model-ID checks, SDK advisory status, source registry, homepage, tools index, categories index, and LLM maintenance.');
+  lines.push('Recent tool refresh: June 15, 2026 refreshed Replit Agent plus AI Coding, developer-guide, Cursor-alternative, and vibe-coding surfaces around Agent 4, Lite/Economy/Power, High effort, Turbo, Plan Mode, Web Search, Agent Skills, Custom Instructions, Package Firewall, App Testing scope, Starter feature gates, Pro credit rollover, pricing credits, AI billing controls, and production-review caveats.');
+  lines.push('Recent tool refresh: June 15, 2026 refreshed Hailuo plus the AI Video parent hub and Hailuo/Kling comparison around Hailuo 2.3/2.3-Fast, Hailuo Agent/Media Agent positioning, MiniMax video API routes, first-and-last-frame model-route caveats, pay-as-you-go video rates, one-month video packages, token-plan caveats, and dynamic Hailuo app pricing.');
+  lines.push('Recent tool refresh: June 15, 2026 refreshed Cline plus the AI Coding parent hub around the Open Source free plan, usage-based inference/BYOK, Enterprise custom governance, the Spec Driven licensed enterprise lane with LG CNS, IDE/CLI/Kanban/SDK surfaces, provider routing including Vercel AI Gateway and DeepSeek, and Auto Approve/SDK permission-policy caveats.');
+  lines.push('Recent tool refresh: June 15, 2026 refreshed Cody plus the AI Coding parent hub around Sourcegraph Enterprise-only packaging, $16K platform entry, AI-feature credits, org-wide credit pooling, Cody Gateway/model controls, AI Terms, VS Code Marketplace non-enterprise warning plus stale Cody Pro copy, and the Sourcegraph-versus-Copilot/Cursor buyer boundary.');
+  lines.push('Recent tool refresh: June 15, 2026 refreshed D-ID plus the AI Video parent hub and avatar-video buyer guide around Visual Agents, Agentic Videos, same-balance Studio/API minutes, Studio 15-second usage rounding, Trial/Lite watermark caveats, 200 free conversation sessions, 0.5 credit per 30 seconds agent metering, and selected-user affiliate terms.');
+  lines.push('Recent tool refresh: June 15, 2026 refreshed Captions.ai plus the AI Video parent hub and avatar-video buyer guide around Android Lite, Pro, Max, Scale, Scale 2x/4x, monthly credit allowances, model-specific credit rates, rollover-doc conflict, Scale 4x and legacy Teams/Business top-up eligibility, Mirage-generated actors, AI Twin/custom actor plan fit, platform availability, and Mirage API context.');
+  lines.push('Recent tool refresh: June 15, 2026 refreshed Adobe Firefly plus AI Image, AI Design, and AI Video parent hubs around Firefly Image 5/Image5, Firefly web/mobile plus Creative Cloud workflows, Standard/Pro/Pro Plus/Premium credit pricing, promo caveats, Firefly Services/API docs, partner-model credit rates, Kling prompt/reference-file disclosure, and affiliate terms.');
+  lines.push('Recent tool refresh: June 15, 2026 rechecked Qwen plus AI Chatbots, AI Coding, and AI Research parent hubs with no material source change: qwen3.7-max-2026-06-08 remains the latest Qwen Cloud changelog item, qwen3.7-plus remains the clearer multimodal/GUI-agent lane, Qwen Cloud pricing/tool fees and Qwen3 open-weight guidance remain current, and the live Max marketplace page still describes text input/output.');
+  lines.push('Recent tool refresh: June 15, 2026 refreshed Grok plus AI Chatbots, AI Search, and AI Coding parent hubs around Grok 4.3, 1M context, Grok Build CLI/API, SuperGrok pricing, X Search, Imagine, Voice API, consumer memory, API response storage, and current xAI source checks.');
+  lines.push('Recent tool refresh: June 15, 2026 refreshed HeyGen, the AI Video parent hub, and the avatar-video buyer guide around Free/Creator/Pro/Business pricing, Avatar IV & V API pay-as-you-go rates, API-key versus OAuth/web-plan billing, LiveAvatar Essential/Business/Enterprise plans, security posture, Social Creator Program affiliate terms, and legacy Unlimited-plan caveats.');
+  lines.push('Recent tool refresh: June 14, 2026 updated Claude and Claude Code plus AI Chatbots, AI Coding, and AI Infrastructure parent hubs around Fable/Mythos suspension, Opus 4.8 fallback, Agent SDK credit separation, Windows install paths, export-control exposure, and Claude Code/API route-risk planning.');
+  lines.push('Recent tool refresh: June 14, 2026 refreshed Factory and the AI Coding parent hub after current docs kept Pro at $20/month, Plus at $100/month, Max at $200/month, and Teams/Enterprise custom, with Droid Core, Extra Usage, and Missions caveats intact.');
+  lines.push('Recent tool refresh: June 14, 2026 refreshed Val Town and the AI Coding parent hub around Free/Pro/Business pricing, Townie credits, tiny TypeScript runtime fit, and the Vercel Functions alternative-platform boundary.');
+  lines.push('Recent tool refresh: June 14, 2026 refreshed Aider and the AI Coding parent hub around source-backed BYOK cost language, provider/API cost modeling, and a repaired Claude Code alternative link.');
+  lines.push('Recent tool refresh: June 14, 2026 updated ChatGPT and the AI Chatbots parent hub with a safety-procurement checklist based on AP and Business Insider OpenAI probe reporting; refreshed /tools/, /categories/, homepage, and LLM surfaces.');
+  lines.push('Recent news refresh: June 14, 2026 added a buyer-facing AI news desk plus an OpenAI ChatGPT safety-procurement checklist covering multistate probe reporting, Anthropic Fable/Mythos access risk, ChatGPT GPT-5.2 retirement, G7 governance, homepage, /news/, RSS, and LLM surfaces.');
+  lines.push('Recent trend refresh: June 13, 2026 added the AI Model Availability & Churn Tracker for current ChatGPT/OpenAI, Claude/Anthropic, Gemini/Google, GitHub Copilot, Claude Code, Codex, and OpenRouter route risk; refreshed affected tools, categories, /trends/, /tools/, /compare/, /news/, /explore/, homepage, and LLM surfaces.');
+  lines.push('Recent news refresh: June 13, 2026 covered late-day Claude Fable 5/Mythos 5 access suspension, ChatGPT GPT-5.2 retirement, and reported OpenAI state-attorneys-general scrutiny; refreshed Claude, Claude Code, ChatGPT, Anthropic, OpenAI, AI Chatbots, AI Coding, AI Infrastructure, /news/, RSS, homepage, /explore/, /tools/, /categories/, /companies/, and LLM surfaces.');
   lines.push('Recent maintenance: June 12, 2026 refreshed the May 15 frontier across /about/our-stack/, the landing-page A/B testing guide, and OpenClaw; updated Unbounce, Instapage, VWO, Convert, Leadpages, and OpenClaw source posture plus /about/, /guides/, /tools/, AI Automation, homepage, categories, source registry, and LLM surfaces.');
   lines.push('Recent news refresh: June 10, 2026 added June 9-10 source-backed AI tools coverage across Claude Fable 5/Mythos 5, Apple Siri AI and EU rollout risk, Copilot CLI custom agents, Datadog DASH agent observability/security, Similarweb May 2026 AI chatbot rankings, Claude Cowork, Gemini for Apple developers, Devin/Desktop, FrontierCode, and local model deployment.');
   lines.push('Recent workflow refresh: June 11, 2026 refreshed accountant, agency-sales, consultant, researcher, SDR, SEO-content, and solo-founder stacks around Dext per-client practice pricing, Reclaim/SaneBox inbox and calendar tiers, Consensus and Elicit research tiers, Apollo and Amplemarket outbound economics, Unbounce/AdCreative campaign costs, Beautiful.ai/Descript production pricing, Claude/ChatGPT plan caveats, and OmniSEO/Ahrefs/Semrush/Surfer/Frase SEO stack costs.');

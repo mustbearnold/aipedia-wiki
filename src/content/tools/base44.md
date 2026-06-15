@@ -8,14 +8,14 @@ secondary_categories: [ai-coding, ai-automation]
 company: Wix
 url: https://base44.com
 pricing_model: freemium
-price_range: "$0-$200/month"
+price_range: "$0-$160/month annual public tiers; Enterprise custom"
 status: active
 launched: 2025
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-15
+last_verified: 2026-06-15
 update_frequency: monthly
 seo_title: "Base44: Features, Pricing & Review (June 2026)"
-meta_description: "Base44 is a Wix-owned AI app builder for creating apps from natural language. Free, Starter, Builder, Pro, Elite, and Enterprise pricing verified June 12, 2026."
+meta_description: "Updated June 15, 2026: Base44 is a Wix-owned AI app builder. Free is 25 messages and 100 integration credits in docs/cards, Builder adds domains, GitHub, backend functions, and model select."
 author: aipedia.wiki Editorial
 affiliate:
   has_program: true
@@ -34,22 +34,22 @@ facts:
     source: "https://docs.base44.com/developers/app-code/overview/introduction"
     source_label: "Base44 developer docs"
     source_id: base44-coding-agent
-    verified_at: 2026-06-12
+    verified_at: 2026-06-15
     confidence: high
   best_paid_tier:
-    value: "Builder (listed at $40/month when billed annually; monthly equivalent remains the practical custom-domain/GitHub tier) because it unlocks custom domains, backend functions, AI model select, and GitHub integration"
+    value: "Builder (listed at $40/month when billed annually) because the current pricing and billing docs confirm 250 messages, 10,000 integration credits, backend functions, AI model selection, custom domains, and GitHub integration"
     source: "https://base44.com/pricing"
     source_label: "Base44 pricing"
     source_id: base44-best-paid-tier
-    verified_at: 2026-06-12
-    next_review_at: 2026-06-13
+    verified_at: 2026-06-15
+    next_review_at: 2026-06-22
     confidence: high
   best_for:
     value: "Internal tools, portals, dashboards, and SaaS prototypes where managed backend speed beats full ownership"
     source: "https://docs.base44.com/"
     source_label: "Base44 docs"
     source_id: base44-best-for
-    verified_at: 2026-06-12
+    verified_at: 2026-06-15
     confidence: high
 tags: [app-builder, vibe-coding, no-code, ai-design, ai-coding, wix, react, vite, managed-backend, github-sync]
 best_for:
@@ -64,6 +64,22 @@ not_best_for:
 quick_answer: >-
   Base44 is a practical natural-language app builder with a real managed backend and growing Wix integration. Pick it for fast internal tools, customer portals, and MVPs where shipping matters more than owning every layer. Skip it for complex production systems or teams that will quickly outgrow the managed stack.
 price_history:
+  - date: 2026-06-15
+    plan: "Pricing and credits recheck"
+    price: "$0 Free; $16 Starter / $40 Builder / $80 Pro / $160 Elite annual; Enterprise custom"
+    source: "https://docs.base44.com/Account-and-billing/Billing-and-plans"
+    source_label: "Base44 billing and plans"
+    source_id: base44-billing-plans
+    verified_at: 2026-06-15
+    note: "Official plan docs and plan cards list Free at 25 message credits and 100 integration credits/month. The marketing FAQ still says 500 integration credits, so buyers should trust plan docs and account billing before free-tier testing."
+  - date: 2026-06-15
+    plan: "Affiliate program"
+    price: "$100 fixed commission; 30-day cookie; $300 payout threshold"
+    source: "https://base44.com/affiliates"
+    source_label: "Base44 affiliate program"
+    source_id: base44-affiliate-program
+    verified_at: 2026-06-15
+    note: "Public affiliate page says approved partners earn a fixed $100 commission for referrals that convert to paid users within a month, with a $300 minimum payout threshold."
   - date: 2026-05-10
     plan: "Free"
     price: "$0/mo"
@@ -121,7 +137,7 @@ Base44 is a natural-language app builder now owned by Wix. Users describe an app
 
 The developer stack documented by Base44 is React, React Router, Vite, Tailwind CSS, shadcn/ui, managed NoSQL database, built-in auth, serverless backend functions on Deno, realtime updates over WebSocket, and a Base44 SDK for data, auth, integrations, and backend services.
 
-Base44 now has two visible surfaces: the standalone Base44 builder and the Wix App Market version. The standalone pricing page lists Free, Starter, Builder, Pro, Elite, and Enterprise, while the Wix App Market listing starts from the Builder-style US$40/month annual tier.
+Base44 now has two visible surfaces: the standalone Base44 builder and the Wix App Market version. As of the June 15 check, the standalone pricing page and billing docs list Free, Starter, Builder, Pro, Elite, and Enterprise, while the Wix App Market listing starts from the Builder-style US$40/month annual tier.
 
 ## System Verdict
 
@@ -129,7 +145,7 @@ Base44 now has two visible surfaces: the standalone Base44 builder and the Wix A
 >
 > **Skip it if the app needs deep backend control, unusual infrastructure, or a clean migration path from day one.** The managed backend is convenient, but it is also the gravity well. Engineering-led teams should treat Base44 as a prototype and validation tool, not necessarily the final architecture.
 >
-> **Who pays which tier:** Free for testing, Starter for hobby and MVP work, Builder for custom domains and GitHub integration, Pro or Elite for heavier build volume, Enterprise for larger organizations. Base44's current public pricing page foregrounds annual pricing, so verify the checkout price before committing to monthly billing.
+> **Who pays which tier:** Free for public exploration, Starter for private hobby or MVP work, Builder for serious app work because it adds backend functions, model selection, custom domains, and GitHub integration, Pro or Elite for heavier build volume, Enterprise for larger organizations. Base44's current public pricing page foregrounds annual pricing, and the Free integration-credit FAQ still conflicts with the plan cards and billing docs, so verify the account billing screen before committing real work to the free allowance.
 
 ## Key Facts
 
@@ -146,8 +162,8 @@ Base44 now has two visible surfaces: the standalone Base44 builder and the Wix A
 | **Private apps** | New private apps require Starter or higher as of February 6, 2026 |
 | **Wix App Market** | Available as a Wix app, listed from US$40/month |
 | **Security note** | July 2025 Wiz-reported auth bypass was fixed in under 24 hours, with Wix reporting no evidence of abuse |
-| **Pricing** | Free, Starter $16/mo annual, Builder $40/mo annual, Pro $80/mo annual, Elite $160/mo annual, Enterprise custom; historical monthly equivalents are Starter $20, Builder $50, Pro $100, Elite $200 |
-| **Affiliate program** | Public direct program advertises $100 fixed commission and a 30-day cookie |
+| **Pricing** | Free, Starter $16/mo annual, Builder $40/mo annual, Pro $80/mo annual, Elite $160/mo annual, Enterprise custom; the Free plan is 25 messages and 100 integration credits in docs/cards, while the FAQ still says 500 |
+| **Affiliate program** | Public direct program advertises a $100 fixed commission, 30-day cookie, and $300 minimum payout threshold |
 
 ## What It Actually Is
 
@@ -195,18 +211,18 @@ That history does not make Base44 unusable. It does mean buyers should treat sec
 
 ## Pricing
 
-Pricing via Base44's live pricing page, verified June 12, 2026. The page foregrounds annual billing; older monthly equivalents remain useful for buyer budgeting but should be checked at checkout.
+Pricing via Base44's live pricing page and billing docs, verified June 15, 2026. The page foregrounds annual billing; month-to-month checkout pricing should be checked in the account screen before buying.
 
 | Plan | Monthly | Annual equivalent | Key limits |
 |---|---:|---:|---|
-| Free | $0 | $0 | 25 messages, 100 integration credits/month, core app/auth/database features |
-| Starter | Historically $20/mo | $16/mo | 100 messages, 2,000 integration credits, unlimited apps, in-app code edits, new private apps |
-| Builder | Historically $50/mo | $40/mo | 250 messages, 10,000 integration credits, backend functions, AI model select, custom domains, GitHub integration |
-| Pro | Historically $100/mo | $80/mo | 500 messages, 20,000 integration credits, GitHub integration, early beta access |
-| Elite | Historically $200/mo | $160/mo | 1,200 messages, 50,000 integration credits, premium support |
+| Free | $0 | $0 | 25 messages, 100 integration credits/month in plan docs/cards, up to 5 apps, core app/auth/database/analytics features |
+| Starter | Check checkout | $16/mo | 100 messages, 2,000 integration credits, unlimited apps, in-app code edits, new private apps |
+| Builder | Check checkout | $40/mo | 250 messages, 10,000 integration credits, backend functions, AI model selection, custom domains, GitHub integration, free domain and friend credits on yearly billing |
+| Pro | Check checkout | $80/mo | 500 messages, 20,000 integration credits, GitHub integration, early beta access |
+| Elite | Check checkout | $160/mo public card | 1,200 messages, 50,000 integration credits, premium support; docs say Elite has multiple levels in the plan dropdown |
 | Enterprise | Custom | Custom | Unlimited capacity and dedicated support options |
 
-Base44 backend service pricing is documented separately as beta and free to use, with backend operations using workspace integration credits rather than a separate backend subscription. Annual Builder, Pro, and Elite plans also include a free domain for one year; monthly plans do not. The June static pricing page still has an internal inconsistency on the Free tier's integration credits (100 in the plan card, 500 in the FAQ), so validate the billing screen before relying on the free allowance.
+Base44 backend service pricing is documented separately as beta and free to use, with backend operations using workspace integration credits rather than a separate backend subscription. Annual Builder, Pro, and Elite plans also include a free domain for one year; monthly plans do not. The June 15 check still found an internal inconsistency on the Free tier's integration credits: the plan cards and billing docs say 100/month, while the pricing-page FAQ says 500. The pricing page also contains stale duplicate sale/Cyber Monday blocks from 2025, so ignore promotional sale language unless the current account checkout confirms it.
 
 ## Against The Alternatives
 
@@ -215,7 +231,7 @@ Base44 backend service pricing is documented separately as beta and free to use,
 | **Primary target** | Web apps, internal tools, Wix workflows | Full-stack apps with Supabase | Browser-built hosted apps |
 | **Backend** | Managed NoSQL, auth, Deno functions | Supabase/Postgres/auth | Replit runtime + database options |
 | **Code path** | Code tab, GitHub sync, local dev eject | GitHub sync, Dev Mode | Browser IDE, export/migration work |
-| **Best paid tier** | Builder $50/mo | Starter $20/mo or Launch $50/mo | Core $25/mo or Pro $100/mo |
+| **Best paid tier** | Builder $40/mo annual | Starter $20/mo or Launch $50/mo | Core $25/mo or Pro $100/mo |
 | **Lock-in risk** | Medium-high | Medium | High |
 | **Best viewed as** | Managed app platform | Supabase-backed app factory | Hosted agentic IDE |
 
@@ -231,7 +247,7 @@ Base44 backend service pricing is documented separately as beta and free to use,
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against Base44, Wix, and Wiz primary sources.
+This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-15 against Base44 pricing, billing, developer, docs, affiliate, Wix, and Wiz primary sources.
 
 ## FAQ
 
@@ -245,7 +261,7 @@ Base44 developer docs list React, React Router, Vite, Tailwind CSS, shadcn/ui, m
 Yes. GitHub integration is available on the Builder plan or higher. Current docs describe it as two-way sync for local development, with permanent-sync and `main`-branch constraints.
 
 **How much does Base44 cost?**
-The current public pricing page lists Free, Starter at $16/month annual, Builder at $40/month annual, Pro at $80/month annual, Elite at $160/month annual, and Enterprise custom. Historical month-to-month equivalents are Starter $20, Builder $50, Pro $100, and Elite $200, but confirm current checkout pricing before buying.
+The current public pricing page and billing docs list Free, Starter at $16/month annual, Builder at $40/month annual, Pro at $80/month annual, Elite at $160/month annual, and Enterprise custom. Confirm current month-to-month checkout pricing before buying. Also confirm the Free credit allowance in the account screen because Base44's plan cards and billing docs say 100 integration credits/month while the pricing FAQ still says 500.
 
 **Does Base44 have an affiliate program?**
 Yes. Base44's public affiliate page advertises a direct program with a $100 fixed commission, a 30-day cookie window, reviewed applications, and a $300 minimum payout threshold.
@@ -253,6 +269,7 @@ Yes. Base44's public affiliate page advertises a direct program with a $100 fixe
 ## Sources
 
 - [Base44 pricing](https://base44.com/pricing): plan prices, credits, annual billing, feature gates
+- [Base44 docs](https://docs.base44.com/): product scope, build/integrate/secure overview, and plan-selection entry points
 - [Base44 billing and plans docs](https://docs.base44.com/Account-and-billing/Billing-and-plans): private-app plan gate, backend beta billing, cancellation, annual-domain details
 - [Base44 developer docs](https://docs.base44.com/developers/app-code/overview/introduction): app stack and developer controls
 - [Base44 GitHub integration docs](https://docs.base44.com/developers/app-code/local-development/github): GitHub sync, Builder-plan requirement, local development caveats

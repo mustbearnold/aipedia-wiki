@@ -10,11 +10,11 @@ pricing_model: freemium
 price_range: "$0-$30+/seat/mo"
 status: active
 launched: 2024-10
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-14
+last_verified: 2026-06-14
 update_frequency: monthly
 seo_title: "Bolt.new Review: Pricing, Tokens, Cloud & Best Plan (June 2026)"
-meta_description: "Updated June 12, 2026: Bolt.new pricing, token limits, Bolt Cloud databases, hosting, WebContainers, best plan, alternatives, and production risks."
+meta_description: "Updated June 14, 2026: Bolt.new pricing, token limits, Bolt Cloud databases, hosting, WebContainers, best plan, alternatives, and production risks."
 author: "aipedia.wiki Editorial"
 primary_cta_label: "Start with Bolt.new free"
 best_plan: "Pro at $25/month"
@@ -35,7 +35,7 @@ facts:
     source: "https://support.bolt.new/building/intro-bolt"
     source_label: "Bolt introduction docs"
     source_id: bolt-intro
-    verified_at: 2026-06-12
+    verified_at: 2026-06-14
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -43,7 +43,7 @@ facts:
     source: "https://bolt.new/pricing"
     source_label: "bolt.new/pricing"
     source_id: bolt-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-14
     next_review_at: 2026-07-06
     volatility: high
     confidence: high
@@ -52,7 +52,7 @@ facts:
     source: "https://bolt.new/pricing"
     source_label: "bolt.new/pricing"
     source_id: bolt-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-14
     next_review_at: 2026-07-06
     volatility: high
     confidence: high
@@ -61,7 +61,7 @@ facts:
     source: "https://bolt.new/pricing"
     source_label: "bolt.new/pricing"
     source_id: bolt-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-14
     next_review_at: 2026-07-06
     volatility: high
     confidence: high
@@ -70,7 +70,7 @@ facts:
     source: "https://support.bolt.new/building/intro-bolt"
     source_label: "Bolt introduction docs"
     source_id: bolt-intro
-    verified_at: 2026-06-12
+    verified_at: 2026-06-14
     volatility: medium
     confidence: high
   cloud_database:
@@ -78,7 +78,7 @@ facts:
     source: "https://support.bolt.new/cloud/database"
     source_label: "Bolt database docs"
     source_id: bolt-database
-    verified_at: 2026-06-12
+    verified_at: 2026-06-14
     volatility: medium
     confidence: high
   hosting_path:
@@ -86,15 +86,15 @@ facts:
     source: "https://support.bolt.new/cloud/hosting"
     source_label: "Bolt hosting docs"
     source_id: bolt-hosting
-    verified_at: 2026-06-12
+    verified_at: 2026-06-14
     volatility: medium
     confidence: high
   supported_stack:
     value: "Bolt focuses on JavaScript-based web technologies, supports Node.js for the backend, and does not support PHP or Python backends."
-    source: "https://support.bolt.new/building/supported-technologies"
+    source: "https://support.bolt.new/concepts/supported-technologies"
     source_label: "Bolt supported technologies"
     source_id: bolt-supported-technologies
-    verified_at: 2026-06-12
+    verified_at: 2026-06-14
     volatility: medium
     confidence: high
   token_economics:
@@ -102,16 +102,16 @@ facts:
     source: "https://support.bolt.new/account-and-subscription/tokens"
     source_label: "Bolt token docs"
     source_id: bolt-tokens
-    verified_at: 2026-06-12
+    verified_at: 2026-06-14
     next_review_at: 2026-07-06
     volatility: high
     confidence: high
   watch_out_for:
-    value: "Bolt works best in Chrome and other Chromium-based desktop browsers, while mobile browsers are not fully supported yet."
-    source: "https://support.bolt.new/building/supported-technologies"
+    value: "Bolt works best in Chrome and other Chromium-based desktop browsers; mobile browsers can start projects, chat, and publish, but Code View, project settings, database controls, and site visibility controls require desktop."
+    source: "https://support.bolt.new/concepts/supported-technologies"
     source_label: "Bolt supported technologies"
     source_id: bolt-supported-technologies
-    verified_at: 2026-06-12
+    verified_at: 2026-06-14
     volatility: medium
     confidence: high
 hero_glance:
@@ -150,7 +150,7 @@ best_for:
   - classrooms, demos, and locked-down environments that cannot install a local stack
 not_best_for:
   - buyers who need PHP, Python, or non-JavaScript backend frameworks
-  - mobile-browser-first building workflows
+  - mobile-browser-first building workflows that need Code View, project settings, database controls, or site visibility controls
   - large mature apps where token sync and browser runtime limits become expensive
   - teams that need a repo-first engineering process before any AI builder touches code
 quick_answer: >-
@@ -161,7 +161,7 @@ quick_answer: >-
 
 Bolt.new is StackBlitz's browser-native AI app builder at [bolt.new](https://bolt.new). It lets users describe an idea, generate code, edit files, run the app, debug, manage Bolt Cloud resources, and publish without setting up a local development environment.
 
-As of June 12, 2026, the old "frontend prototype only" description is not good enough. Current Bolt docs describe Bolt Cloud databases, hosting, custom-domain support for Pro users, JavaScript-based backend support, GitHub integration, Figma integration, Stripe integration, Supabase integration, and a model-choice workflow. That makes Bolt a real app-builder buyer option, not just a sandbox.
+As of June 14, 2026, the old "frontend prototype only" description is not good enough. Current Bolt docs describe Bolt Cloud databases, hosting, custom-domain support for Pro users, JavaScript-based backend support, GitHub integration, Figma integration, Stripe integration, Supabase integration, and a model-choice workflow. That makes Bolt a real app-builder buyer option, not just a sandbox.
 
 The buying question is whether you want the browser itself to be the build environment. If yes, Bolt is one of the strongest tools in the category. If you want a guided founder MVP workflow with backend and less code-workspace feel, start with [Lovable](/tools/lovable/). If you are already living in Vercel, Next.js, Tailwind, and shadcn, start with [v0](/tools/v0/).
 
@@ -171,11 +171,11 @@ Pick Bolt.new if you want to build and iterate inside a browser tab. Its core ad
 
 Bolt is especially useful for demos, classrooms, Chromebooks, locked-down work machines, hackathons, JavaScript web apps, and fast product experiments where local setup would slow everything down.
 
-Do not pick Bolt because you think it eliminates engineering. It still needs review before production. Token usage can climb as the project grows. Bolt focuses on JavaScript-based web technologies, and its docs say mobile browsers are not fully supported yet. That matters if your imagined workflow is building serious apps from a phone.
+Do not pick Bolt because you think it eliminates engineering. It still needs review before production. Token usage can climb as the project grows. Bolt focuses on JavaScript-based web technologies, and its docs say mobile browsers are limited for Code View, project settings, database controls, and site visibility controls. That matters if your imagined workflow is building serious apps from a phone.
 
 ## Recent Developments
 
-- **June 6, 2026 verification:** Current public pricing still shows Free, Pro, Teams, and Enterprise. The page also shows a free-domain promo for eligible users until June 10, 2026, so AiPedia treats that as a short-lived promotion rather than a durable plan feature.
+- **June 14, 2026 verification:** Current public pricing still shows Free, Pro, Teams, and Enterprise. The page also shows a free-domain promo for eligible users until June 19, 2026, so AiPedia treats that as a short-lived promotion rather than a durable plan feature.
 - **Model competition raises the alternatives bar:** Bolt's value is the browser workspace, WebContainers runtime, hosting path, and app-builder ergonomics, not raw model exclusivity. Serious coders comparing Bolt with Claude Code, Cursor, or local IDE workflows should test the same task in each tool before going annual.
 - **Bolt Cloud changes the comparison:** Current docs say Bolt can create and manage databases, handle hosting, publish to a free `.bolt.host` subdomain, and connect custom domains for Pro users.
 - **Supported stack is clearer now:** Bolt supports JavaScript-based web technologies and Node.js for backend work. It does not support PHP or Python backends.
@@ -196,9 +196,9 @@ Do not pick Bolt because you think it eliminates engineering. It still needs rev
 | Database | Bolt Cloud includes built-in database creation and management |
 | Hosting | Free `.bolt.host` publishing; custom domains for Pro users |
 | Stack limit | JavaScript-based web technologies; no PHP or Python backends |
-| Mobile limit | Mobile browsers are not fully supported yet |
+| Mobile limit | Mobile can start, chat, and publish; Code View, project settings, database controls, and site visibility controls need desktop |
 
-Every fact above was checked against official Bolt and StackBlitz sources on 2026-06-12. See Sources.
+Every fact above was checked against official Bolt and StackBlitz sources on 2026-06-14. See Sources.
 
 ## What Bolt Actually Is
 
@@ -210,7 +210,7 @@ The second moat is workflow compression. The same session can cover prompt-to-co
 
 ## Pricing
 
-Pricing was checked against [Bolt.new pricing](https://bolt.new/pricing) and [Bolt token docs](https://support.bolt.new/account-and-subscription/tokens) on 2026-06-12.
+Pricing was checked against [Bolt.new pricing](https://bolt.new/pricing) and [Bolt token docs](https://support.bolt.new/account-and-subscription/tokens) on 2026-06-14.
 
 | Plan | Current public price | Buyer fit |
 |---|---:|---|
@@ -254,7 +254,7 @@ The practical buyer guidance is simple: use Bolt when you want the browser devel
 - **Pick [Lovable](/tools/lovable/) for guided founder MVPs.** Lovable is usually better when a nontechnical founder wants a smoother prompt-to-product path.
 - **Pick [v0](/tools/v0/) for Vercel-native React and Next.js work.** v0 is stronger when the final destination is Vercel, shadcn, Tailwind, GitHub, and PR review.
 - **Pick [Cursor](/tools/cursor/) for mature repo work.** Bolt is fast for browser building, but existing production codebases need stronger local control and review.
-- **Pick [Claude](/tools/claude/) or Claude Code when the task is multi-file reasoning in an existing repo.** Bolt's value is the browser workspace, not terminal-agent depth.
+- **Pick [Claude](/tools/claude/) or [Claude Code](/tools/claude-code/) when the task is multi-file reasoning in an existing repo.** Bolt's value is the browser workspace, not terminal-agent depth.
 - **Pick another stack if you need PHP or Python backends.** Bolt's docs focus on JavaScript-based technologies.
 
 ## Token And Production Watch-Outs
@@ -263,7 +263,7 @@ The practical buyer guidance is simple: use Bolt when you want the browser devel
 - **Free has a daily cap.** Free users get 300K tokens per day and 1M tokens per month.
 - **Rollover requires a paid subscription.** Paid subscription tokens can roll over for one additional month, but access depends on maintaining the paid subscription.
 - **Reload pricing is plan-dependent.** Current token docs say reload cost varies by plan and is shown in-app, so AiPedia should not publish an unsupported fixed reload price.
-- **Mobile browser support is limited.** Bolt works best in Chrome and other Chromium-based desktop browsers, and mobile browsers are not fully supported yet.
+- **Mobile browser support is limited.** Bolt works best in Chrome and other Chromium-based desktop browsers. Mobile browsers can start projects, chat, and publish, but Code View, project settings, database controls, and site visibility controls require desktop.
 - **Browser runtime limits still exist.** WebContainers are powerful, but large dependencies and heavy builds may still be slower than a local dev environment.
 - **Production still needs engineering review.** Check auth, database access, secrets, deployment settings, logging, dependency health, and generated code quality before real users arrive.
 
@@ -283,13 +283,13 @@ The short version: Bolt wins when the browser itself should be the development w
 
 AiPedia scores Bolt.new as a buyer decision page. Utility is high because Bolt solves a real problem: it makes app building possible in a browser without a local stack. Value is strong at Free and Pro, but buyers should monitor token burn. Moat is strong because WebContainers are difficult to copy. Longevity is solid because StackBlitz owns the runtime story, but competition from Lovable, v0, Replit, Cursor, and cloud IDEs remains intense.
 
-This page was updated on 2026-06-12 against official Bolt pricing and documentation. Unsupported current model-name claims are intentionally avoided because AiPedia did not verify a stable public model list from the official sources used for this update.
+This page was updated on 2026-06-14 against official Bolt pricing and documentation. Unsupported current model-name claims are intentionally avoided because AiPedia did not verify a stable public model list from the official sources used for this update.
 
 ## FAQ
 
 **Is Bolt.new free?**
 
-Yes. The Free plan includes public and private projects, a 300K daily token limit, 1M tokens per month, Bolt branding, website hosting, and unlimited databases as verified on 2026-06-12.
+Yes. The Free plan includes public and private projects, a 300K daily token limit, 1M tokens per month, Bolt branding, website hosting, and unlimited databases as verified on 2026-06-14.
 
 **What Bolt.new plan should I buy first?**
 
@@ -317,13 +317,13 @@ Bolt is broader as a browser development workspace. v0 is better when the buyer 
 
 ## Sources
 
-- [Bolt.new pricing](https://bolt.new/pricing) - Free, Pro, Teams, Enterprise, token limits, hosting, databases, custom domains, rollover claims, and short-lived free-domain promo. Verified 2026-06-12.
-- [Bolt introduction docs](https://support.bolt.new/building/intro-bolt) - product scope, Bolt Cloud, databases, hosting, publishing, WebContainers, and pricing orientation. Verified 2026-06-12.
-- [Bolt database docs](https://support.bolt.new/cloud/database) - built-in database creation/management and database settings. Verified 2026-06-12.
-- [Bolt token docs](https://support.bolt.new/account-and-subscription/tokens) - token costs, reset rules, reloads, daily limits, rollover, and cancellation behavior. Verified 2026-06-12.
-- [Bolt supported technologies](https://support.bolt.new/building/supported-technologies) - browser support, platforms, JavaScript/Node.js focus, PHP/Python limit, and database options. Verified 2026-06-12.
-- [Bolt hosting docs](https://support.bolt.new/cloud/hosting) - built-in hosting, `.bolt.host` domains, and custom domains for Pro users. Verified 2026-06-12.
-- [StackBlitz WebContainers](https://webcontainers.io/) - browser runtime behind Bolt's development environment. Verified 2026-06-12.
+- [Bolt.new pricing](https://bolt.new/pricing) - Free, Pro, Teams, Enterprise, token limits, hosting, databases, custom domains, rollover claims, and short-lived free-domain promo. Verified 2026-06-14.
+- [Bolt introduction docs](https://support.bolt.new/building/intro-bolt) - product scope, Bolt Cloud, databases, hosting, publishing, WebContainers, and pricing orientation. Verified 2026-06-14.
+- [Bolt database docs](https://support.bolt.new/cloud/database) - built-in database creation/management and database settings. Verified 2026-06-14.
+- [Bolt token docs](https://support.bolt.new/account-and-subscription/tokens) - token costs, reset rules, reloads, daily limits, rollover, and cancellation behavior. Verified 2026-06-14.
+- [Bolt supported technologies](https://support.bolt.new/concepts/supported-technologies) - browser support, platforms, JavaScript/Node.js focus, PHP/Python limit, mobile limits, and database options. Verified 2026-06-14.
+- [Bolt hosting docs](https://support.bolt.new/cloud/hosting) - built-in hosting, `.bolt.host` domains, and custom domains for Pro users. Verified 2026-06-14.
+- [StackBlitz WebContainers](https://webcontainers.io/guides/introduction) - browser runtime behind Bolt's development environment. Verified 2026-06-14.
 
 ## Related
 

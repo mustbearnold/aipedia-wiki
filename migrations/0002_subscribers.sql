@@ -1,14 +1,15 @@
 -- Subscribers table for email signups (newsletter / digest).
--- Applied via: wrangler d1 execute aipedia-reviews --file=./migrations/0002_subscribers.sql
+-- Apply to the Vercel/Neon database with:
+-- npm run db:migrate -- --apply --env .env.local
 
 CREATE TABLE IF NOT EXISTS subscribers (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  id BIGSERIAL PRIMARY KEY,
   email TEXT NOT NULL UNIQUE,
   ip_hash TEXT,
-  source TEXT,
-  confirmed INTEGER NOT NULL DEFAULT 0,
-  created_at INTEGER NOT NULL DEFAULT (unixepoch()),
-  confirmed_at INTEGER
+  source TEXT DEFAULT 'unknown',
+  confirmed BOOLEAN NOT NULL DEFAULT FALSE,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  confirmed_at TIMESTAMPTZ
 );
 
 CREATE INDEX IF NOT EXISTS idx_subscribers_email

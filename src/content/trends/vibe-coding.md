@@ -3,13 +3,13 @@ type: trend
 slug: vibe-coding
 title: "Vibe Coding, AI App Builders Hit Mainstream"
 seo_title: "Vibe Coding Explained (June 2026), aipedia.wiki"
-meta_description: "Updated June 12, 2026: vibe coding has moved from meme to app-builder category, with Lovable, Bolt.new, v0, Replit, Base44, and code agents letting users prompt, run, edit, and deploy software faster."
+meta_description: "Updated June 15, 2026: vibe coding has moved from meme to app-builder category, with Lovable, Bolt.new, v0, Replit Agent, Base44, and code agents letting users prompt, plan, run, edit, test, and deploy software faster."
 author: "aipedia.wiki Editorial"
 description: Building software by describing it in natural language. The 2026 reality is powerful first drafts, faster prototypes, and more non-developer builders, but production work still needs review, security, and maintenance.
 timeframe: Term popularized in 2025, mainstreamed through 2025-2026 as Lovable, Bolt.new, v0, Replit Agent, Base44, Cursor, Claude Code, and Codex made prompt-to-app workflows normal.
 impact: high
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-15
+last_verified: 2026-06-15
 update_frequency: monthly
 ---
 
@@ -17,7 +17,7 @@ Vibe coding is the practice of building software by describing what you want in 
 
 ## What Is Happening
 
-The category has matured into several lanes. Lovable focuses on non-technical and startup builders. Bolt.new uses StackBlitz's WebContainers to let users prompt, run, edit, and deploy full-stack apps in the browser. v0 by Vercel is strongest for React, Next.js, Tailwind, shadcn/ui, visual editing, GitHub sync, and Vercel deployment. Replit Agent, Base44, Cursor, Claude Code, and Codex cover adjacent routes from hosted app building to professional repo-agent work.
+The category has matured into several lanes. Lovable focuses on non-technical and startup builders. Bolt.new uses StackBlitz's WebContainers to let users prompt, run, edit, and deploy full-stack apps in the browser. v0 by Vercel is strongest for React, Next.js, Tailwind, shadcn/ui, visual editing, GitHub sync, and Vercel deployment. Replit Agent is the browser workspace lane for plan/build/test/publish, now with current Agent/Agent 4-era docs around Plan Mode, Design Canvas, Web Search, Skills, Custom Instructions, Package Firewall, App Testing scope, and usage controls. Base44 is the Wix-owned managed-backend lane, with Builder unlocking backend functions, model selection, custom domains, and GitHub integration while Free credit limits still need plan-screen verification. Cursor, Claude Code, and Codex cover the professional repo-agent routes.
 
 The business signal is real. Lovable announced a $330 million Series B at a $6.6 billion valuation, and current reporting says the company has continued scaling quickly. Bolt.new's own site says users can build and scale websites and apps with words, while its GitHub page frames Bolt as an AI-powered web development agent that can prompt, run, edit, and deploy full-stack apps directly in the browser. v0's pricing page now packages monthly credits, Vercel deployment, visual editing, GitHub sync, and team collaboration into the product.
 
@@ -64,5 +64,9 @@ Vibe coding is not replacing software engineering. It is replacing the empty can
 - [Bolt.new](https://bolt.new/), verified 2026-06-12.
 - [Bolt.new GitHub](https://github.com/stackblitz/bolt.new), verified 2026-06-12.
 - [v0 pricing](https://v0.app/pricing), verified 2026-06-12.
-- [Replit Agent](https://replit.com/agent), verified 2026-06-12.
-- [Base44](https://base44.com/), verified 2026-06-12.
+- [Replit Agent](https://replit.com/products/agent), verified 2026-06-15.
+- [Replit Agent docs](https://docs.replit.com/references/agent/overview), verified 2026-06-15.
+- [Replit Custom Skills](https://replit.com/blog/custom-skills), verified 2026-06-15.
+- [Replit Package Firewall](https://replit.com/blog/package-firewall), verified 2026-06-15.
+- [Base44](https://base44.com/), verified 2026-06-15.
+- [Base44 billing and plans](https://docs.base44.com/Account-and-billing/Billing-and-plans), verified 2026-06-15.

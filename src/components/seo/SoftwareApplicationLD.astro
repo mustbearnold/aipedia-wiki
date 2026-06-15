@@ -36,8 +36,8 @@ const {
   status,
 } = Astro.props;
 
-// Resolve logo URL via static manifest (avoids node:fs which breaks
-// Cloudflare's miniflare-based prerender step)
+// Resolve logo URL via static manifest so schema generation never needs
+// node:fs from component frontmatter.
 import logoManifest from '../../data/logo-manifest.json';
 let logoUrl: string | undefined;
 if (slug) {

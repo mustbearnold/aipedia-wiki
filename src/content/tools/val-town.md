@@ -7,11 +7,11 @@ category: ai-coding
 company: val-town
 url: https://val.town
 pricing_model: freemium
-price_range: "$0-$25/month individual; Business from $167/month yearly, Enterprise custom"
+price_range: "$0-$21/month yearly individual; Business from $167/month yearly; Enterprise custom"
 status: active
 launched: 2023-01
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-14
+last_verified: 2026-06-14
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://www.val.town/"
     source_label: "Val Town homepage"
     source_id: val-town-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-14
     next_review_at: 2026-08-13
     volatility: medium
     confidence: high
@@ -39,7 +39,7 @@ facts:
     source: "https://docs.val.town/"
     source_label: "Val Town docs"
     source_id: val-town-docs
-    verified_at: 2026-06-12
+    verified_at: 2026-06-14
     next_review_at: 2026-08-13
     volatility: medium
     confidence: high
@@ -48,7 +48,7 @@ facts:
     source: "https://www.val.town/pricing"
     source_label: "Val Town pricing"
     source_id: val-town-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-14
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -57,7 +57,7 @@ facts:
     source: "https://docs.val.town/"
     source_label: "Val Town docs"
     source_id: val-town-docs
-    verified_at: 2026-06-12
+    verified_at: 2026-06-14
     next_review_at: 2026-08-13
     volatility: medium
     confidence: high
@@ -66,7 +66,7 @@ facts:
     source: "https://www.val.town/pricing"
     source_label: "Val Town pricing"
     source_id: val-town-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-14
     next_review_at: 2026-08-13
     volatility: high
     confidence: medium
@@ -162,7 +162,7 @@ Townie, the AI agent that writes vals from natural-language prompts, bills on cr
 
 > **Pick Val Town when a TypeScript script needs to go live in five minutes.** Zero configuration, no CLI, no deployment pipeline. HTTP endpoints get a public URL the moment a `fetch` handler exports. Cron jobs need one import. The community val registry is the fastest fork-and-remix library in serverless.
 >
-> **Skip it for anything that is not a short TypeScript script.** Complex full-stack apps belong on Vercel or Cloudflare. Python automations need a different runtime. Frontend work needs a bundler. Long-running compute hits the execution cap.
+> **Skip it for anything that is not a short TypeScript script.** Complex full-stack apps belong on Vercel or another full-stack app platform. Edge-specific workloads need a deliberate runtime decision. Python automations need a different runtime. Frontend work needs a bundler. Long-running compute hits the execution cap.
 >
 > **Who pays which tier:** Free for public vals and experiments (15-minute cron intervals and 100k runs/day), Pro when private vals, 1-minute cron, 10-minute runs, and $10/mo in Townie credits matter, Business for shared production workspaces with $100/mo in Townie credits, and Enterprise for SOC 2, log export, custom support, and no published runtime limits.
 
@@ -181,11 +181,11 @@ Townie, the AI agent that writes vals from natural-language prompts, bills on cr
 | **Standard library** | Email, blob storage, SQLite, HTTP utilities |
 | **Community registry** | Public vals, fork and remix, 100k+ scripts |
 
-Every data point above was verified against vendor sources on 2026-06-12. See Sources.
+Every data point above was verified against vendor sources on 2026-06-14. See Sources.
 
 ## Recent changes
 
-- **2026-06-01:** Val Town pricing now shows Pro at a $21/mo yearly-billed headline with $10/month in Townie credit, and the collaboration tier is branded Business from $167/mo yearly-billed with $100/month in Townie credit.
+- **2026-06-14:** Val Town pricing still shows the yearly-billed Pro headline at $21/mo with $10/month in Townie credit, and Business from $167/mo yearly-billed with $100/month in Townie credit. AiPedia also tightened the full-stack alternative guidance and comparison table so buyers do not confuse Val Town's tiny TypeScript runtime lane with a Vercel-style full-stack app platform.
 - **2026-06-01:** Free tier limits remain explicit on the page: MCP integration, no custom domains, 15-minute cron intervals, 1-minute execution, unlimited public vals, 3-day log retention, 100,000 runs/day, and email-yourself-only outbound.
 - **2026-06-01:** Pro tier limits remain 1-minute cron intervals, 10-minute execution, 1,000,000 runs/day, 10-day log retention, 10 custom domains, unlimited private vals, and email anyone.
 - **2026-06-01:** Business tier scales to 5,000,000 runs/day with unlimited custom domains, team accounts, and Slack Connect.
@@ -210,7 +210,7 @@ The moats are narrow but real. The community val registry, the browser-first wor
 ## When to pick something else
 
 - **Complex full-stack apps:** [Bolt.new](/tools/bolt/), [v0](/tools/v0/), or traditional Vercel deployments.
-- **Python, Go, or non-JS runtimes:** Vercel Functions, Cloudflare Workers (Python beta), or AWS Lambda.
+- **Python, Go, or non-JS runtimes:** Vercel Functions or AWS Lambda.
 - **Long-running compute:** Traditional cloud providers. Val Town caps execution per tier.
 - **Frontend-heavy projects:** [Cursor](/tools/cursor/) plus Vercel handle this cleanly.
 - **AI agents that edit local repos:** [Aider](/tools/aider/), [Cline](/tools/cline/), or [Claude Code](/tools/claude-code/) work at the filesystem level.
@@ -224,19 +224,19 @@ The moats are narrow but real. The community val registry, the browser-first wor
 | Business | From $167/mo yearly-billed headline | $100/mo included | unlimited | 5M runs/day, unlimited custom domains, team accounts, Slack Connect | Small teams, shared workspaces |
 | Enterprise | Custom | Flexible allocation | unlimited | No published runtime caps, log export, SOC 2 | Compliance-heavy orgs |
 
-*Prices verified 2026-06-12 via [val.town/pricing](https://www.val.town/pricing). The public page showed the yearly toggle with two months free during verification; confirm the monthly toggle before quoting month-to-month procurement numbers. Townie runs on a pay-per-use credit model; top-ups are available on every tier.*
+*Prices verified 2026-06-14 via [val.town/pricing](https://www.val.town/pricing). The public page showed the yearly toggle with two months free during verification; confirm the monthly toggle before quoting month-to-month procurement numbers. Townie runs on a pay-per-use credit model; top-ups are available on every tier.*
 
 ## Against the alternatives
 
-| | Val Town Pro | Replit Core | Cloudflare Workers |
+| | Val Town Pro | Replit Core | Vercel Functions |
 |---|---|---|---|
-| **Price** | $21/mo yearly-billed headline | $25/mo | $5/mo base |
-| **Runtime** | Deno (TS, JS) | multi-language | JS, WASM, Python beta |
-| **Deploy time** | **Seconds (in-browser)** | Seconds | Minutes (wrangler CLI) |
-| **AI agent** | Townie | Agent | None native |
-| **HTTP + cron bundled** | Yes | Yes | Yes |
-| **Community registry** | **100k+ forkable vals** | Template gallery | Examples only |
-| **Best viewed as** | Serverless TS scratchpad | Full IDE in browser | Edge runtime at scale |
+| **Price** | $21/mo yearly-billed headline | $20/mo yearly-billed headline, $25/mo monthly headline | Vercel Pro is $20/mo plus additional usage; Functions meter active CPU, memory, and invocations |
+| **Runtime** | Deno (TS, JS) | multi-language app builder | Node.js, Bun, Python, Rust, Go, Ruby, Wasm, and Edge |
+| **Deploy time** | **Seconds (in-browser)** | Seconds | Git or CLI deploys inside a full app platform |
+| **AI agent** | Townie | Agent | None native to Functions |
+| **HTTP + cron bundled** | Yes | Yes | Functions plus Vercel Cron Jobs |
+| **Community registry** | **100k+ forkable vals** | Template gallery | Framework templates and examples |
+| **Best viewed as** | Serverless TS scratchpad | Full IDE in browser | Full-stack app/serverless runtime |
 
 ## Failure modes
 
@@ -250,7 +250,7 @@ The moats are narrow but real. The community val registry, the browser-first wor
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-12 against [val.town/pricing](https://www.val.town/pricing), [Val Town docs](https://docs.val.town), and current Val Town pricing/limits surfaces.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-14 against [val.town/pricing](https://www.val.town/pricing), [Val Town docs](https://docs.val.town), the Val Town homepage, Vercel Functions/runtime/pricing docs, and Replit pricing for the alternative-platform boundary.
 
 ## FAQ
 
@@ -271,9 +271,13 @@ Deno. Val Town uses Deno's official TypeScript language server and supports npm 
 
 ## Sources
 
-- [Val Town pricing](https://www.val.town/pricing): Free, Pro, Business, and Enterprise tier breakdown
-- [Val Town docs](https://docs.val.town): runtime details, cron, HTTP endpoints, standard library
-- [Val Town homepage](https://www.val.town/): browser runtime and product positioning
+- [Val Town pricing](https://www.val.town/pricing): Free, Pro, Business, and Enterprise tier breakdown. Verified 2026-06-14.
+- [Val Town docs](https://docs.val.town/): HTTP, cron, email, Townie, SQLite, Blob, API, webhook, and agent-plugin scope. Verified 2026-06-14.
+- [Val Town homepage](https://www.val.town/): JavaScript runtime, instant deploy, cron, AI pair-programmer, and zero-config positioning. Verified 2026-06-14.
+- [Vercel Functions docs](https://vercel.com/docs/functions): API route and server-side runtime alternative for full-stack apps. Verified 2026-06-14.
+- [Vercel Functions runtimes](https://vercel.com/docs/functions/runtimes): official runtime list for Node.js, Bun, Python, Rust, Go, Ruby, Wasm, and Edge. Verified 2026-06-14.
+- [Vercel pricing](https://vercel.com/pricing): Pro plan and Functions usage-pricing references. Verified 2026-06-14.
+- [Replit pricing](https://replit.com/pricing): current Core monthly and yearly-billed comparison pricing. Verified 2026-06-14.
 - [Val Town February 2026 investor update](https://blog.val.town/2026-feb): plan changes and Townie credit model
 
 ## Related

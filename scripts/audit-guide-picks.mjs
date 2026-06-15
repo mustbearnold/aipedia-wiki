@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import { existsSync } from 'node:fs';
-import { dirname, isAbsolute, join, relative, sep } from 'node:path';
+import { dirname, isAbsolute, join, relative, resolve, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
   markdownFiles,
@@ -11,8 +11,15 @@ import {
   stripYamlQuotes,
 } from './lib/fact-normalize.mjs';
 
-const PROJECT_DIR = dirname(dirname(fileURLToPath(import.meta.url)));
-const jsonMode = process.argv.includes('--json');
+const args = process.argv.slice(2);
+const defaultProjectDir = dirname(dirname(fileURLToPath(import.meta.url)));
+const projectDirArg = valueFor('--project-dir') || valueFor('--root');
+const PROJECT_DIR = resolve(projectDirArg || defaultProjectDir);
+const jsonMode = args.includes('--json');
+const helpMode = args.includes('--help') || args.includes('-h');
+const KNOWN_FLAGS = new Set(['--json', '--use-cases', '--tools', '--required', '--project-dir', '--root', '--help', '-h']);
+const VALUE_FLAGS = new Set(['--use-cases', '--tools', '--required', '--project-dir', '--root']);
+const argumentIssues = collectArgumentIssues();
 
 const DEFAULT_REQUIRED_GUIDES = [
   'best-ai-coding-assistant',
@@ -35,17 +42,94 @@ const DEFAULT_REQUIRED_GUIDES = [
 const REQUIRED_SLOTS = ['best_overall', 'budget', 'pro_team'];
 const REQUIRED_PICK_FIELDS = ['tool', 'reason'];
 
-function argValue(name) {
-  const equalsArg = process.argv.find((arg) => arg.startsWith(`${name}=`));
+function valueFor(name) {
+  const equalsArg = args.find((arg) => arg.startsWith(`${name}=`));
   if (equalsArg) return equalsArg.slice(name.length + 1);
-  const index = process.argv.indexOf(name);
-  return index >= 0 ? process.argv[index + 1] : undefined;
+  const index = args.indexOf(name);
+  return index >= 0 ? args[index + 1] : undefined;
+}
+
+function hasFlag(name) {
+  return args.includes(name) || args.some((arg) => arg.startsWith(`${name}=`));
+}
+
+function flagName(arg) {
+  const equalsIndex = arg.indexOf('=');
+  return equalsIndex >= 0 ? arg.slice(0, equalsIndex) : arg;
+}
+
+function collectArgumentIssues() {
+  const issues = [];
+
+  for (const [index, arg] of args.entries()) {
+    if (!arg.startsWith('-')) {
+      const previous = args[index - 1] ?? '';
+      if (!VALUE_FLAGS.has(previous)) issues.push({ code: 'argument-invalid', detail: `unexpected argument ${arg}` });
+      continue;
+    }
+
+    const name = flagName(arg);
+    if (!KNOWN_FLAGS.has(name)) issues.push({ code: 'argument-invalid', detail: `unknown flag ${name}` });
+
+    if (VALUE_FLAGS.has(name)) {
+      const value = arg.includes('=') ? arg.slice(name.length + 1) : args[index + 1] ?? '';
+      if (!value || value.startsWith('-')) issues.push({ code: 'argument-invalid', detail: `${name} requires a value` });
+    }
+  }
+
+  if (hasFlag('--project-dir') && hasFlag('--root')) {
+    issues.push({ code: 'argument-invalid', detail: 'choose only one of --project-dir or --root' });
+  }
+
+  return issues;
+}
+
+function usage() {
+  return [
+    'Usage:',
+    '  node scripts/audit-guide-picks.mjs --json',
+    '  node scripts/audit-guide-picks.mjs --project-dir <dir> --required <slugs>',
+    '',
+    'Options:',
+    '  --json                 Emit a structured guide-picks audit report.',
+    '  --use-cases <dir>      Read guide markdown files from a custom directory.',
+    '  --tools <dir>          Read tool markdown files from a custom directory.',
+    '  --required <slugs>     Comma-separated required guide slugs.',
+    '  --project-dir <dir>    Audit another project root.',
+    '  --root <dir>           Alias for --project-dir.',
+    '  --help, -h             Print this help message.',
+  ].join('\n');
+}
+
+function argumentFailureReport() {
+  return {
+    ok: false,
+    mode: 'argument-error',
+    project_dir: PROJECT_DIR,
+    argument_issues: argumentIssues,
+    required_guides: [],
+    guides_with_picks: 0,
+    guides: [],
+    issues: [],
+  };
+}
+
+function emitArgumentFailure() {
+  if (jsonMode) {
+    process.stdout.write(`${JSON.stringify(argumentFailureReport(), null, 2)}\n`);
+  } else {
+    console.error('[audit-guide-picks] Invalid arguments:');
+    for (const issue of argumentIssues) console.error(`- ${issue.detail}`);
+    console.error('');
+    console.error(usage());
+  }
+  process.exit(1);
 }
 
 function resolveArgPath(name, fallback) {
-  const value = argValue(name);
+  const value = valueFor(name);
   if (!value) return fallback;
-  return isAbsolute(value) ? value : join(PROJECT_DIR, value);
+  return isAbsolute(value) ? value : resolve(PROJECT_DIR, value);
 }
 
 function parseCsv(value) {
@@ -128,10 +212,19 @@ function rel(path) {
   return relative(PROJECT_DIR, path).replaceAll(sep, '/');
 }
 
+if (helpMode) {
+  console.log(usage());
+  process.exit(0);
+}
+
+if (argumentIssues.length > 0) {
+  emitArgumentFailure();
+}
+
 const useCasesDir = resolveArgPath('--use-cases', join(PROJECT_DIR, 'src/content/use-cases'));
 const toolsDir = resolveArgPath('--tools', join(PROJECT_DIR, 'src/content/tools'));
-const requiredGuides = parseCsv(argValue('--required')).length
-  ? parseCsv(argValue('--required'))
+const requiredGuides = parseCsv(valueFor('--required')).length
+  ? parseCsv(valueFor('--required'))
   : DEFAULT_REQUIRED_GUIDES;
 
 const DEAD_STATUSES = new Set(['dead', 'retired', 'acquired']);
@@ -232,6 +325,9 @@ for (const guide of guideBySlug.values()) {
 
 const report = {
   ok: issues.length === 0,
+  mode: 'audit',
+  project_dir: PROJECT_DIR,
+  argument_issues: [],
   required_guides: requiredGuides,
   guides_with_picks: reports.length,
   guides: reports.sort((a, b) => a.guide.localeCompare(b.guide)),

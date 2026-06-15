@@ -7,11 +7,11 @@ category: ai-coding
 company: anysphere
 url: https://cursor.com
 pricing_model: freemium
-price_range: "$0-$200/month"
+price_range: "$0-$40+/user/month; Enterprise custom"
 status: active
 launched: 2023-03
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-15
+last_verified: 2026-06-15
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -26,56 +26,56 @@ scores:
   longevity: 9
 facts:
   flagship_model:
-    value: "Cursor-supported model catalog plus Composer 2.5; exact frontier-model access and usage charges are plan/account dependent"
+    value: "Composer 2.5 powers key Cursor agent surfaces including Bugbot, while the live model catalog spans Cursor, Anthropic, OpenAI, Gemini, xAI, and Auto routing; exact access is plan/account dependent"
     source: "https://cursor.com/changelog/composer-2-5"
     source_label: "Cursor Composer 2.5 changelog"
     source_id: cursor-composer-25
-    verified_at: 2026-06-12
+    verified_at: 2026-06-15
     volatility: high
     confidence: high
-    next_review_at: 2026-06-16
+    next_review_at: 2026-06-22
   context_window:
-    value: "Model-dependent; long-context limits follow the selected provider/model inside Cursor"
-    source: "https://cursor.com/docs/models"
-    source_label: "Cursor model docs"
-    source_id: cursor-model-docs
-    verified_at: 2026-06-12
+    value: "Model- and surface-dependent; Cursor's June 4 canvas/context usage report helps teams inspect where agent context is spent"
+    source: "https://cursor.com/changelog"
+    source_label: "Cursor changelog"
+    source_id: cursor-changelog
+    verified_at: 2026-06-15
     volatility: high
     confidence: high
-    next_review_at: 2026-06-16
+    next_review_at: 2026-06-22
   pricing_anchor:
-    value: "Hobby free; Individual starts at $20/mo; Teams $40/user/mo; Enterprise custom; Pro+/Ultra are positioned for heavier agent usage"
+    value: "Hobby free; Individual starts at $20/mo; Teams $40/user/mo; Enterprise custom; Pro+ recommended for daily agent users and Ultra for agent power users; on-demand usage can continue after included usage is consumed and is billed in arrears"
     source: "https://cursor.com/pricing"
     source_label: "Cursor pricing"
     source_id: cursor-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-15
     volatility: high
     confidence: high
-    next_review_at: 2026-06-16
+    next_review_at: 2026-06-22
   free_plan:
-    value: "Yes. Hobby tier with limited completions and requests"
+    value: "Yes. Hobby tier with limited Agent requests and limited Tab completions"
     source: "https://cursor.com/pricing"
     source_label: "Cursor pricing"
     source_id: cursor-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-15
     volatility: high
     confidence: high
-    next_review_at: 2026-06-16
+    next_review_at: 2026-06-22
   best_paid_tier:
-    value: "Individual at $20/mo for daily developers; Pro+/Ultra-style upgrade paths for heavier agent users; Teams $40/user/mo for org controls"
+    value: "Individual/Pro at $20/mo for serious evaluation, Pro+ for daily agent users, Ultra for agent power users, Teams at $40/user/mo for collaboration, and Enterprise for pooled usage/security controls"
     source: "https://cursor.com/pricing"
     source_label: "Cursor pricing"
     source_id: cursor-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-15
     volatility: high
     confidence: high
-    next_review_at: 2026-06-16
+    next_review_at: 2026-06-22
   api_available:
-    value: "No general Cursor model API; Cursor is an editor product that connects to supported model providers"
-    source: "https://cursor.com/docs/models"
-    source_label: "Cursor model docs"
-    source_id: cursor-model-docs
-    verified_at: 2026-06-12
+    value: "No general public model API; Cursor exposes product automation through CLI and SDK agent surfaces"
+    source: "https://cursor.com/cli"
+    source_label: "Cursor CLI"
+    source_id: cursor-cli
+    verified_at: 2026-06-15
     volatility: medium
     confidence: high
   image_generation:
@@ -83,7 +83,7 @@ facts:
     source: "https://cursor.com"
     source_label: "Cursor product page"
     source_id: cursor-docs
-    verified_at: 2026-06-12
+    verified_at: 2026-06-15
     volatility: low
     confidence: high
   video_generation:
@@ -91,7 +91,7 @@ facts:
     source: "https://cursor.com"
     source_label: "Cursor product page"
     source_id: cursor-docs
-    verified_at: 2026-06-12
+    verified_at: 2026-06-15
     volatility: low
     confidence: high
   real_time_voice:
@@ -99,41 +99,41 @@ facts:
     source: "https://cursor.com"
     source_label: "Cursor product page"
     source_id: cursor-docs
-    verified_at: 2026-06-12
+    verified_at: 2026-06-15
     volatility: low
     confidence: high
   web_browsing:
-    value: "Limited. Cursor is codebase/editor-centered rather than a general web-browsing assistant"
-    source: "https://cursor.com/docs"
-    source_label: "Cursor documentation"
+    value: "Limited to coding workflows; Cursor agents can use terminal, web/search, browser/design, CLI, and connected tools rather than acting as a general web assistant"
+    source: "https://cursor.com/product"
+    source_label: "Cursor product page"
     source_id: cursor-docs
-    verified_at: 2026-06-12
+    verified_at: 2026-06-15
     volatility: medium
     confidence: high
   coding_agent:
-    value: "Agents Window, Cloud Agents, Composer 2.5, Automations, and Bugbot add-on"
+    value: "Desktop Agents Window, Cloud Agents, Cursor CLI, SDK agents, Automations, Design Mode, Bugbot, and /review before push"
     source: "https://cursor.com/changelog"
     source_label: "Cursor changelog"
     source_id: cursor-changelog
-    verified_at: 2026-06-12
+    verified_at: 2026-06-15
     volatility: high
     confidence: high
-    next_review_at: 2026-06-16
+    next_review_at: 2026-06-22
   enterprise_controls:
-    value: "Team and Enterprise plans add centralized billing and organization controls"
-    source: "https://cursor.com/pricing"
-    source_label: "Cursor pricing"
-    source_id: cursor-pricing
-    verified_at: 2026-06-12
+    value: "Teams add admin billing, marketplace, analytics, privacy mode, and SSO; Enterprise adds pooled usage, invoice/PO billing, SCIM, repository/model/MCP access controls, audit logs, service accounts, and organization-level governance"
+    source: "https://cursor.com/enterprise"
+    source_label: "Cursor Enterprise"
+    source_id: cursor-enterprise
+    verified_at: 2026-06-15
     volatility: high
     confidence: high
-    next_review_at: 2026-06-16
+    next_review_at: 2026-06-22
   data_retention_or_privacy:
-    value: "Privacy and retention posture depends on Cursor plan and model-provider settings; review Cursor docs before regulated use"
-    source: "https://cursor.com/docs"
-    source_label: "Cursor documentation"
-    source_id: cursor-docs
-    verified_at: 2026-06-12
+    value: "Privacy Mode prevents Cursor/model-provider training and uses ZDR provider agreements, but abuse classifiers, provider policies, backend prompt-building, indexing embeddings, and temporary encrypted file caching still need review"
+    source: "https://cursor.com/en-US/data-use"
+    source_label: "Cursor Data Use and Privacy Overview"
+    source_id: cursor-data-use
+    verified_at: 2026-06-15
     volatility: medium
     confidence: high
   open_source_or_local:
@@ -141,29 +141,29 @@ facts:
     source: "https://cursor.com"
     source_label: "Cursor product page"
     source_id: cursor-docs
-    verified_at: 2026-06-12
+    verified_at: 2026-06-15
     volatility: low
     confidence: high
   best_for:
-    value: "GUI-first multi-agent coding inside a VS Code fork"
-    source: "https://cursor.com"
+    value: "GUI-first multi-agent coding across desktop editor, browser/mobile cloud agents, CLI, and code-review surfaces"
+    source: "https://cursor.com/product"
     source_label: "Cursor product page"
     source_id: cursor-docs
-    verified_at: 2026-06-12
+    verified_at: 2026-06-15
     volatility: medium
     confidence: high
   watch_out_for:
-    value: "Costs rise with frontier-model and agent usage; best fit is teams willing to standardize on Cursor as the primary editor"
+    value: "Included model usage can be consumed quickly by frontier models, Cloud Agents, Bugbot, SDK/CLI automation, and agent power-user workflows; model availability and retention differ by account and policy"
     source: "https://cursor.com/pricing"
     source_label: "Cursor pricing"
     source_id: cursor-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-15
     volatility: high
     confidence: high
-    next_review_at: 2026-06-16
+    next_review_at: 2026-06-22
 tags: [code-editor, ide, autocomplete, ai-coding, vscode-fork, agentic-coding, cloud-agents, automations, mcp, composer, composer-2-5]
 seo_title: "Cursor: Features, Pricing & Review (June 2026)"
-meta_description: "Cursor is an AI-native VS Code fork with Composer 2.5, Automations in the Agents Window, Cloud Agents, Bugbot, and plan-dependent model usage. Hobby free; Individual starts at $20; Teams $40/user."
+meta_description: "Cursor is an AI-native VS Code fork with Composer 2.5, Agents Window, Cloud Agents, CLI, SDK, Design Mode, Bugbot, and usage-sensitive model access. Updated June 15, 2026."
 author: "aipedia.wiki Editorial"
 best_for:
   - professional developers on VS Code ergonomics
@@ -175,8 +175,29 @@ not_best_for:
   - JetBrains, Vim/Neovim, or Zed loyalists
   - extremely budget-conscious users (GitHub Copilot is cheaper)
 quick_answer: >-
-  Cursor is the strongest GUI-first AI IDE in June 2026, built as a VS Code fork with Composer 2.5, a multi-agent Agents Window, Automations, Cloud Agents, and plan-dependent model access. Pick it for parallel agents and Design Mode. Skip it for CLI agent loops (Claude Code) or budget-tier GitHub-native completions (GitHub Copilot).
+  Cursor is the strongest GUI-first AI IDE in June 2026, built as a VS Code fork with Composer 2.5, a multi-agent Agents Window, Automations, Cloud Agents, CLI/SDK agent surfaces, Design Mode, and Bugbot. Pick it for editor-native parallel agents and code review; skip it if you want a pure terminal loop (Claude Code) or cheaper GitHub-native completions (GitHub Copilot).
 price_history:
+  - date: 2026-06-15
+    plan: "Hobby / Individual / Teams / Enterprise"
+    price: "Hobby free; Individual starts at $20/mo; Teams $40/user/mo; Enterprise custom; Pro+ and Ultra are higher Individual upgrade paths"
+    source: "https://cursor.com/pricing"
+    source_label: "Cursor pricing"
+    source_id: cursor-pricing
+    note: "Cursor's live pricing page recommends Pro+ for daily agent users and Ultra for agent power users, confirms on-demand usage can continue after included usage is consumed and be billed in arrears, but the current public snapshot proves only the Individual starting price, Teams price, and Enterprise custom posture."
+  - date: 2026-06-15
+    plan: "Bugbot / code review"
+    price: "Usage-sensitive; plan and configuration dependent"
+    source: "https://cursor.com/changelog"
+    source_label: "Cursor June 10 Bugbot update"
+    source_id: cursor-bugbot-june-10
+    note: "Cursor says Bugbot is now over 3x faster, about 22% cheaper per run, finds about 10% more bugs on average, is powered by Composer 2.5, and supports /review before push in Cursor 3.7+."
+  - date: 2026-06-15
+    plan: "Enterprise organizations"
+    price: "Enterprise custom"
+    source: "https://cursor.com/changelog"
+    source_label: "Cursor Enterprise organizations changelog"
+    source_id: cursor-enterprise-orgs
+    note: "Enterprise organizations are generally available, with organization/team/group structures for security, governance, budget, model access, spend limits, and agent permissions."
   - date: 2026-05-24
     plan: "Composer 2.5 / Composer 2.5 Fast"
     price: "$0.50/M input + $2.50/M output; Fast/default $3.00/M input + $15.00/M output"
@@ -190,7 +211,7 @@ price_history:
     source: "https://cursor.com/pricing"
     source_label: "Source"
     source_id: cursor-pricing
-    note: "Verified unchanged against the official pricing page; Bugbot remains usage-based billing for Individual plans; Teams adds shared-team-context cloud agents, team rules/skills/automations, security review agent"
+    note: "Historical May 2026 snapshot retained for change history; current June 15 guidance should use the live pricing page and account checkout for exact Pro+/Ultra pricing."
   - date: 2026-06-02
     plan: "Hobby / Individual / Teams / Enterprise"
     price: "Hobby free; Individual starts at $20/mo; Teams $40/user/mo; Enterprise custom"
@@ -223,14 +244,19 @@ price_history:
 
 # Cursor
 
-Anysphere's AI-native code editor. A VS Code fork with LLMs wired into autocomplete (Tab), inline edits (Cmd+K), codebase-aware chat (@codebase), Composer 2.5, and the Agents Window (the multi-agent workbench introduced in Cursor 3.0 on April 2, 2026).
+Anysphere's AI-native code editor. A VS Code fork with LLMs wired into autocomplete (Tab), inline edits (Cmd+K), codebase-aware chat, Composer 2.5, the Agents Window, Cloud Agents, Cursor CLI, SDK agents, Design Mode, and Bugbot review workflows.
 
 ## Recent developments
 
+- **June 15, 2026:** [Disney's AI coding push turned token budgets and release quality into buyer checks](/news/2026-06-15-disney-ai-coding-tokenmaxxing/). The reported Disney guidance is a useful enterprise signal for Cursor buyers: measure accepted, reviewed, test-passing work rather than raw token usage, and keep rollback, backup, and post-release quality gates in the rollout plan.
+- **June 15, 2026:** Pricing, data-use, and agent guidance was rechecked against official Cursor sources. The live pricing page proves Hobby free, Individual from $20/month, Teams $40/user/month, Enterprise custom, and recommends Pro+ for daily agent users and Ultra for agent power users. It also says on-demand usage can continue after included usage is consumed and be billed in arrears, so teams should verify exact Pro+/Ultra checkout amounts, included usage, and arrears policy inside their account before procurement.
+- **June 10, 2026:** Cursor says [Bugbot is now over 3x faster, 22% cheaper per run, and finds 10% more bugs on average](https://cursor.com/changelog). It is now powered by Composer 2.5, respects model block lists, supports `/review`, `/review-bugbot`, and `/review-security` before pushing, and can sync local review results with GitHub/GitLab PR review.
+- **June 5, 2026:** Cursor 3.7 improved Design Mode so agents can act on multi-selected UI elements and queued voice feedback in the browser. This matters for front-end teams because Cursor is now a visual editing loop as much as a code editor.
+- **June 4, 2026:** Cursor added SDK custom tools, auto-review for local tool calls, JSONL/custom run stores, nested subagents, and reliability fixes. This makes Cursor more relevant to CI, custom internal agents, and scripted automation, not just desktop IDE use.
+- **June 3, 2026:** Enterprise organizations became generally available, giving admins organization, team, and group layers for security, governance, budget, feature, model-access, spend-limit, and agent-permission controls.
 - **May 22, 2026:** [Cursor said Gartner named it a Leader in the 2026 Magic Quadrant for Enterprise AI Coding Agents](/news/2026-05-22-cursor-gartner-enterprise-ai-coding-agent-leader/). Treat this as an enterprise-procurement signal, not a substitute for hands-on testing against Codex, Claude Code, and GitHub Copilot on your own repos.
 - **May 20, 2026:** Cursor 3.5 added Automations to the [Agents Window](https://cursor.com/changelog), plus multi-repo and no-repo automation setups. This makes Cursor less just an IDE and more a recurring-agent control plane.
 - **May 18, 2026:** Cursor released [Composer 2.5](https://cursor.com/changelog/composer-2-5), its latest in-house coding model. Cursor says it is substantially better than Composer 2 for sustained long-running tasks and complex instruction following; published pricing is $0.50/M input and $2.50/M output for Standard, with Fast/default at $3.00/M input and $15.00/M output.
-- **May 24, 2026:** Subscription pricing reverified at [cursor.com/pricing](https://cursor.com/pricing). Hobby free, Pro $20, Pro+ $60, Ultra $200, Teams $40/user, Enterprise custom, with Bugbot as a usage-based add-on on Individual plans.
 - **May 6, 2026:** [ServiceNow Build Agent reached Cursor and other major AI coding tools](/news/2026-05-06-servicenow-build-agent-coding-tools/). Cursor users building ServiceNow apps can pull platform context into their IDE workflow, but teams should review permissions and deployment approvals before broad rollout.
 - **May 1, 2026:** [The MCP STDIO command-execution flaw made Cursor's MCP layer part of the shell-access threat model](/news/2026-05-03-mcp-stdio-command-execution-flaw/). Cursor users should audit `mcp.json`, disable automatic registration where possible, and sandbox third-party servers.
 - **May 1, 2026:** [Replit argued for independence as Cursor deal talk reshaped AI coding](/news/2026-05-01-replit-cursor-deal-independence/). Cursor's reported SpaceX/xAI acquisition option keeps strategic-owner risk and infrastructure upside central to how enterprises evaluate the IDE.
@@ -244,48 +270,48 @@ Anysphere's AI-native code editor. A VS Code fork with LLMs wired into autocompl
 - **April 17:** [Cursor shipped same-week support for Anthropic's then-new flagship model](/news/2026-04-17-opus-4-7-day-two-ide-adoption/), alongside Windsurf, Zed, and Continue. Treat exact model availability as a live model-catalog question, not a permanent page claim.
 - **April 2:** [Cursor 3 release makes the Agents Window the primary interface](/news/2026-04-02-cursor-3-agent-first-release/). Agent-first IDE shift; traditional editor view moves to a background role for users opting into the new layout.
 
-Cursor's supported model catalog, Auto routing, and in-house Composer 2.5 are the model story. Exact third-party model availability, token pricing, and usage burn are plan/account dependent, so buyers should check the live model picker and usage dashboard before procurement.
+Cursor's supported model catalog, Auto routing, and in-house Composer 2.5 are the model story. Exact third-party model availability, token pricing, data-retention posture, and usage burn are plan/account dependent, so buyers should check the live model picker, usage dashboard, and admin policy settings before procurement.
 
 ## System Verdict
 
-> **Pick Cursor if you want the strongest GUI-first AI IDE in June 2026.** Cursor's Agents Window orchestrates parallel agents across local worktrees, cloud sandboxes, and remote SSH, with Design Mode for clicking on UI elements in a live browser preview and Best-of-N style workflow testing. Composer 2.5 and Automations make it more than autocomplete.
+> **Pick Cursor if you want the strongest GUI-first AI IDE in June 2026.** Cursor's Agents Window orchestrates parallel agents across local worktrees, cloud sandboxes, browser/mobile cloud surfaces, and remote SSH, with Design Mode for selecting UI elements in a live browser preview and Bugbot for PR review. Composer 2.5, CLI/SDK agents, and Automations make it more than autocomplete.
 >
 > **Skip it if a CLI agent loop is what you actually want.** Claude Code outmatches Cursor on autonomous terminal workflows, and GitHub Copilot is cheaper ($10/mo) if you're happy with single-file completions on stock VS Code. JetBrains, Vim/Neovim, and Zed users have no path into Cursor. It's a full editor fork, not an extension.
 >
-> **Who pays which tier:** Hobby (free) for evaluation, Individual starting at $20/mo for most professional developers, Pro+/Ultra-style upgrades for sustained agent usage, and Teams at $40/user/mo for organizations wanting SSO and pooled usage.
+> **Who pays which tier:** Hobby (free) for evaluation, Individual starting at $20/mo for serious users, Pro+ for daily agent users, Ultra for agent power users, Teams at $40/user/mo for collaboration/admin, and Enterprise for pooled usage, SCIM, model/MCP/repository controls, audit logs, and larger governance needs.
 
 ## Key Facts
 
 | | |
 |---|---|
-| **Current release** | Cursor 3.5 (May 20, 2026) · Automations in the Agents Window |
+| **Current release** | Cursor 3.7-era June updates: Design Mode improvements, SDK auto-review/custom tools, Enterprise organizations, and faster Composer 2.5-powered Bugbot |
 | **Base** | Fork of VS Code (all extensions, keybindings, settings portable) |
 | **Model access** | Cursor-supported model catalog, Auto routing, and Composer 2.5; exact availability is plan/account dependent |
 | **Other supported models** | Provider/model access changes frequently; verify against Cursor docs and the in-product picker |
-| **Agent modes** | Tab (autocomplete) · Cmd+K (inline edit) · Agents Window (multi-agent) · Cloud Agents (remote sandboxes) · Automations · Design Mode · Bugbot (PR review, separate add-on) |
+| **Agent modes** | Tab (autocomplete) · Cmd+K (inline edit) · Agents Window (multi-agent) · Cloud Agents · CLI/headless automation · SDK agents · Automations · Design Mode · Bugbot and `/review` |
 | **Model pricing inside Cursor** | Base API rates where supported; Composer 2.5 Standard is $0.50/$2.50 per MTok and Fast/default is $3/$15 per MTok |
-| **Subscription pricing** | Hobby $0 · Pro $20 · Pro+ $60 · Ultra $200 · Teams $40/user · Enterprise custom |
+| **Subscription pricing** | Hobby free · Individual starts at $20/mo · Teams $40/user/mo · Enterprise custom · Pro+/Ultra positioned for heavier agent users |
 | **Annual discount** | ~20% off paid tiers |
-| **Add-on** | Bugbot $40/user/mo (Pro trial + Teams + Enterprise) |
+| **Review surface** | Bugbot is usage-sensitive and can run before push or on GitHub/GitLab PRs; verify plan entitlement and per-run cost in account settings |
 | **Recent shutdowns** | Notepads (deprecated in Cursor 2.0, Oct 2025) |
 
 ## What it actually is
 
-A single desktop editor that covers four autonomy levels on one "autonomy slider": Tab (predictive completion), Cmd+K (targeted single-file rewrites), the Composer 2.5-driven Agents Window (supervised multi-file work), and Cloud Agents (remote sandboxes that build, test, and demo a feature end-to-end). Every agent session can be launched locally, in a git worktree, in a cloud sandbox, or on a remote SSH machine, all from the same window.
+A single coding product that now spans desktop editor, cloud agent dashboard, browser/mobile cloud agents, CLI, SDK, and review surfaces. The autonomy ladder runs from Tab completion and Cmd+K edits to the Composer 2.5-driven Agents Window, Cloud Agents, scripted/headless CLI runs, SDK agents, Design Mode, and Bugbot review.
 
 The real moats are three. First, editor integration: Cursor is a VS Code fork, so the LSP, extensions, keybindings, and debugger UX are already production-grade. AI features bolt onto an editor developers already use.
 
 Second, model coverage without separate API-key setup for most users: Cursor centralizes model access and usage accounting, while still making exact model availability and rate burn dependent on the live plan and model catalog.
 
-Third, the Agents Window's orchestration surface (Best-of-N runs, worktree isolation, cloud handoff, Design Mode) doesn't exist in stock VS Code + Copilot or in Claude Code.
+Third, the orchestration surface (parallel agents, worktree isolation, cloud handoff, Design Mode, CLI/SDK automation, context usage reporting, and Bugbot) does not exist in stock VS Code + Copilot or in Claude Code as one integrated editor product.
 
 ## When to pick Cursor
 
-- **You want a GUI-first multi-agent workbench.** Cursor 3.0's Agents Window runs parallel agents across local/worktree/cloud/SSH and lets you click UI elements in a live browser preview (Design Mode) instead of describing them in text.
+- **You want a GUI-first multi-agent workbench.** Cursor's Agents Window runs parallel agents across local/worktree/cloud/SSH, while Design Mode lets you click, multi-select, draw, or describe UI changes instead of only prompting in text.
 - **You're already on VS Code ergonomics.** Extensions, keybindings, settings, and LSP all carry over. The migration cost is a folder import.
-- **You want one product surface for model routing.** Cursor-supported models, Auto mode, and Composer 2.5 sit behind one product and usage dashboard.
+- **You want one product surface for model routing.** Cursor-supported models, Auto mode, Composer 2.5, usage dashboards, and admin controls sit behind one product/account surface.
 - **You run supervised multi-file refactors.** Composer 2.5 handles plan-and-implement across many files better than single-file extensions. The Agents Window lets you supervise multiple agents at once.
-- **You want model access without manual provider plumbing.** Cursor is easier than BYOK terminal tools when the buyer wants a managed editor workflow.
+- **You want model access without manual provider plumbing.** Cursor is easier than BYOK terminal tools when the buyer wants a managed editor, CLI, cloud-agent, and review workflow.
 
 ## When to pick something else
 
@@ -304,46 +330,49 @@ Subscription tiers via [cursor.com/pricing](https://cursor.com/pricing):
 | Plan | Price | Usage pool | Who's it for |
 |---|---|---|---|
 | Hobby | $0 | Limited Tab + Agent requests | Evaluation only |
-| Pro | $20/mo | $20 of monthly credits on all frontier models | **Most professional developers land here** |
-| Pro+ | $60/mo | 3× Pro credits | Devs burning Pro credits in under a week |
-| Ultra | $200/mo | 20x Pro credits · priority access to new features | Sustained agent and Cloud Agents workloads |
-| Teams | $40/user/mo | Shared pool · SSO (SAML/OIDC) · usage analytics · RBAC | Organizations wanting centralized billing + audit |
-| Enterprise | Custom | Pooled usage · SCIM · AI code tracking API · audit logs | Compliance-heavy orgs |
+| Individual | Starts at $20/mo | Extended Agent limits, frontier models, MCPs, skills, hooks, Cloud Agents, Bugbot usage billing | **Most professional developers start here** |
+| Pro+ | Verify in checkout | Recommended by Cursor for daily agent users | Devs who burn through the entry Individual allotment |
+| Ultra | Verify in checkout | Recommended by Cursor for agent power users | Sustained agent and Cloud Agent workloads |
+| Teams | $40/user/mo | Central billing/admin, team marketplace, Bugbot, shared-context Cloud Agents, automations, usage analytics, team-wide Privacy Mode, SSO | Teams standardizing on Cursor |
+| Enterprise | Custom | Pooled usage, invoice/PO billing, SCIM, repo/model/MCP access controls, auto-run/browser/network controls, audit logs, service accounts, AI code tracking API | Compliance-heavy orgs |
 
-Add-on: **Bugbot** at $40/user/mo for automated PR review (up to 200 PRs/mo on Pro trial, unlimited on Teams). Annual billing saves roughly 20% on all paid tiers.
+Bugbot is now a usage-sensitive review surface rather than a simple fixed-price footnote. Cursor's June 10 changelog says Bugbot runs are about 22% cheaper, average review time is about 90 seconds, it finds about 10% more bugs per review on average, and it can run through `/review` before you push. Teams should still model real per-run cost, model block lists, and GitHub/GitLab sync behavior before enabling it broadly.
 
 Model usage inside Cursor is billed against plan usage and on-demand usage at model-specific rates. Composer 2.5 Standard is $0.50 input / $2.50 output per MTok; Composer 2.5 Fast is the default and costs $3 input / $15 output per MTok.
 
-The 1M-token context is flat-rate with no long-context surcharge. "Auto" mode picks a cheaper model when intelligence isn't the binding constraint.
+Do not assume the $20 Individual starting price covers daily agent work. Cursor's own pricing FAQ recommends Pro+ for daily agent users and Ultra for agent power users, and on-demand usage can continue after included usage is consumed, billed in arrears.
 
-Subscription prices verified 2026-06-12 via [cursor.com/pricing](https://cursor.com/pricing). Composer 2.5 token pricing verified 2026-06-12 via [Cursor's Composer 2.5 changelog](https://cursor.com/changelog/composer-2-5). The public pricing surface keeps Hobby free, Individual starting at $20, Teams $40/user, and Enterprise custom, with Pro+/Ultra-style upgrade paths for heavier agent usage. Bugbot remains a usage-sensitive surface that teams should model before rollout.
+Subscription prices verified 2026-06-15 via [cursor.com/pricing](https://cursor.com/pricing). Composer 2.5 token pricing verified 2026-06-15 via [Cursor's Composer 2.5 changelog](https://cursor.com/changelog/composer-2-5). The public pricing surface keeps Hobby free, Individual starting at $20, Teams $40/user, and Enterprise custom, with Pro+/Ultra upgrade paths for heavier agent usage and on-demand usage after included usage is consumed. Exact Pro+/Ultra checkout amounts, included usage, and billing controls should be verified in the live account screen before procurement.
 
 ## Against the alternatives
 
 | | Cursor Pro $20 | Claude Code (via Claude Max $100) | GitHub Copilot $10 |
 |---|---|---|---|
 | **Model access** | Cursor-supported catalog · Auto routing · Composer 2.5 | Claude account/API model access | GitHub-supported catalog with AI Credits |
-| **Agent mode** | Agents Window · Cloud Agents · Design Mode · Best-of-N | Claude Code CLI (terminal, autonomous loop) | Copilot Chat + Agent Mode (extension) |
+| **Agent mode** | Agents Window · Cloud Agents · CLI/SDK · Design Mode · Bugbot | Claude Code CLI (terminal, autonomous loop) | Copilot Chat + Agent Mode (extension) |
 | **Multi-file edits** | Composer 2.5 + parallel agents in worktrees | Full codebase reads/writes from terminal | Single-repo, extension-bounded |
 | **IDE integration** | Native (VS Code fork) | None · terminal-first | Extension inside stock VS Code / JetBrains |
-| **Pricing model** | $20/mo + usage pool at API rates | $100/mo flat for Max 5x tier | $10/mo flat, unlimited basic completions |
+| **Pricing model** | Starts at $20/mo + included/on-demand usage | $100/mo flat for Max 5x tier | $10/mo plus AI Credits for many agent/chat/review surfaces |
 | **Best viewed as** | GUI-first multi-agent workbench | Strongest autonomous CLI agent | Cheap VS Code autocomplete + chat |
 
 ## Failure modes
 
 - **Individual usage can burn fast.** The entry paid plan can run short for heavy agent users. Power users should check Pro+/Ultra-style upgrade economics before assuming $20/month is enough.
 - **Frontier-model routing is the cost trap.** Higher-capability third-party models consume usage faster than routine options. Use Composer 2.5 Standard or Auto mode for routine work and reserve expensive models for hard problems.
+- **Bugbot is not free review magic.** The June 10 update improves speed and per-run economics, but broad `/review` or PR automation can still create meaningful usage if teams review every branch without rules.
+- **SDK and CLI agents need policy.** Custom tools, nested subagents, headless CLI runs, and auto-review can be powerful in CI, but teams should define tool permissions before letting agents mutate repos or infrastructure.
+- **Enterprise controls have layers.** Organizations, teams, and groups can create different model, budget, and permission outcomes. The most permissive setting can win when users belong to multiple scopes, so test admin policy inheritance.
 - **VS Code lock-in.** Cursor is a full editor fork. JetBrains, Vim/Neovim, Zed, and Emacs users have no entry path. Migrating out later means reinstalling extensions and settings on stock VS Code.
 - **Not a fully autonomous agent.** Cloud Agents iterate inside a sandbox, but the Agents Window is still a supervised workbench. Claude Code's terminal loop is more aggressive at self-correcting on test failures and build errors.
 - **Diff UI can desync on long agent runs.** Multi-agent sessions in worktrees occasionally surface stale diffs in the Agents Window; refresh or reopen the worktree to force-sync.
 - **MCP configs can become shell access.** The May 1 [MCP STDIO flaw](/news/2026-05-03-mcp-stdio-command-execution-flaw/) makes plugin/config hygiene a first-order security requirement for Cursor teams using MCP.
 - **Model-hopping inflates spend.** Users switch models mid-session and burn more usage than expected. Pin a default and deviate deliberately.
 - **Background/Cloud Agents rename is still confusing.** Cursor 2.0 (Oct 2025) renamed Background Agents to Cloud Agents. Documentation and third-party tutorials from late 2025 still use both names interchangeably.
-- **Privacy mode disables some features.** Cursor sends code to LLM providers by default. Privacy Mode (opt-in; on by default for Business/Enterprise) exempts code from training but disables a subset of indexing features. Sensitive codebases should evaluate trade-offs before adopting.
+- **Privacy Mode is not the same as no processing.** Cursor's June 9 data-use page says Privacy Mode prevents training by Cursor and model providers and uses ZDR agreements, but backend prompt-building, codebase indexing, temporary encrypted file caching, provider abuse classifiers, and non-ZDR model opt-ins still need review.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, normalizes factual claims, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against [cursor.com/pricing](https://cursor.com/pricing), [cursor.com/docs/models](https://cursor.com/docs/models), the [Cursor changelog](https://cursor.com/changelog), the [Cursor Composer 2.5 changelog](https://cursor.com/changelog/composer-2-5), and the [Cursor Gartner recognition post](https://cursor.com/blog/cursor-leads-gartner-mq-2026).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, normalizes factual claims, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-15 against [cursor.com/pricing](https://cursor.com/pricing), [Cursor Data Use](https://cursor.com/en-US/data-use), [Cursor Enterprise](https://cursor.com/enterprise), [Cursor CLI](https://cursor.com/cli), the [Cursor changelog](https://cursor.com/changelog), the [Cursor Composer 2.5 changelog](https://cursor.com/changelog/composer-2-5), and the [Cursor Gartner recognition post](https://cursor.com/blog/cursor-leads-gartner-mq-2026).
 
 ## FAQ
 
@@ -351,17 +380,20 @@ This page was produced by the aipedia.wiki editorial pipeline, an automated syst
 Yes. The Hobby plan is free with limited Tab completions and Agent requests. It's enough to evaluate Cursor but not for daily professional work. Pro at $20/mo is the standard paid entry point.
 
 **How should I think about models in Cursor?**
-Treat model access as a live product surface. Cursor supports a plan/account-dependent catalog plus Auto routing and Composer 2.5. Check the in-product picker and usage dashboard before assuming a specific frontier model, rate, or context behavior is available to your account.
+Treat model access as a live product surface. Cursor supports a plan/account-dependent catalog plus Auto routing and Composer 2.5. The current official product pages name Cursor, Anthropic, OpenAI, Gemini, xAI, and Auto-style routing, but account policy, model block lists, pricing, and retention settings still decide what your team can actually use.
 
 **What's new in Cursor 3.0?**
 Cursor 3.0 (released April 2, 2026) reorganizes the editor around the Agents Window: a multi-agent workbench with parallel agents across local, worktree, cloud, and remote-SSH environments, Design Mode for clicking on UI elements in a live browser preview, and Best-of-N runs for side-by-side model comparison.
 
 Cursor 3.1 (April 13) added a tiled layout and upgraded voice input. The April 15 release introduced Canvases (interactive visualizations inside the Agents Window).
 
-Cursor 3.5 (May 20) added Automations to the Agents Window, including multi-repo and no-repo automation setups. Composer 2.5 arrived on May 18 as Cursor's latest in-house coding model.
+Cursor 3.5 (May 20) added Automations to the Agents Window, including multi-repo and no-repo automation setups. Composer 2.5 arrived on May 18 as Cursor's latest in-house coding model. The June 3-10 updates added Enterprise organizations, SDK custom tools/auto-review/nested subagents, Design Mode/context-reporting improvements, and a faster Composer 2.5-powered Bugbot.
 
 **What's the difference between Pro, Pro+, and Ultra?**
-All three are aimed at different usage intensity. The public pricing page shows Individual starting at $20/month and positions Pro+/Ultra-style upgrade paths for daily agent users and power users. Heavy Cloud Agents, Composer, and frontier-model sessions should be modeled from the live usage dashboard rather than the sticker price alone.
+All three are aimed at different usage intensity. The public pricing page shows Individual starting at $20/month, recommends Pro+ for daily agent users, and recommends Ultra for agent power users. Heavy Cloud Agents, Composer, CLI/SDK automation, Bugbot, and frontier-model sessions should be modeled from the live usage dashboard rather than the sticker price alone.
+
+**How does Cursor use my code data?**
+Cursor's June 9 data-use page says Privacy Mode prevents training by Cursor and model providers and uses zero-data-retention provider agreements. It also says requests still go through Cursor's backend for prompt building, indexing uploads code chunks for embeddings, temporary encrypted file caching is used, and abuse classifiers/provider policies can still affect retention. Regulated teams should read the Data Use and Security pages before rollout.
 
 **Cursor or Claude Code?**
 Different shapes. Cursor is a GUI-first editor with a multi-agent window. Claude Code is a terminal-first autonomous agent.

@@ -2,7 +2,8 @@
 import ArticleLayout from '../layouts/ArticleLayout.astro';
 import { getCollection } from 'astro:content';
 
-// Refresh metadata: 2026-06-07 media kit refresh with live collection
+// Refresh metadata: 2026-06-13 media kit refresh with Vercel hosting
+// language, live collection
 // inventory language, partnership guardrails, brand asset context, and
 // durable page-level dateModified metadata.
 const allTools = await getCollection('tools');
@@ -15,8 +16,8 @@ const allUseCases = await getCollection('use-cases');
 const allDead = await getCollection('dead');
 const allNews = await getCollection('news');
 
-const LAST_UPDATED = '2026-06-07';
-const LAST_UPDATED_HUMAN = 'June 7, 2026';
+const LAST_UPDATED = '2026-06-13';
+const LAST_UPDATED_HUMAN = 'June 13, 2026';
 
 const pageName = 'Media Kit & Partnerships, aipedia.wiki';
 const pageDesc =
@@ -271,7 +272,7 @@ const brandNotes = [
       <div><dt class="text-[var(--text-muted)] text-xs uppercase tracking-[0.1em]">Buyer guides</dt><dd class="text-[var(--text-primary)] m-0 tabular-nums">{allUseCases.length}</dd></div>
       <div><dt class="text-[var(--text-muted)] text-xs uppercase tracking-[0.1em]">Editorial model</dt><dd class="text-[var(--text-primary)] m-0">Agentically operated, standards-governed</dd></div>
       <div><dt class="text-[var(--text-muted)] text-xs uppercase tracking-[0.1em]">Monetisation</dt><dd class="text-[var(--text-primary)] m-0">Affiliate links, editorial independence</dd></div>
-      <div><dt class="text-[var(--text-muted)] text-xs uppercase tracking-[0.1em]">Hosting</dt><dd class="text-[var(--text-primary)] m-0">Cloudflare Pages</dd></div>
+      <div><dt class="text-[var(--text-muted)] text-xs uppercase tracking-[0.1em]">Hosting</dt><dd class="text-[var(--text-primary)] m-0">Vercel</dd></div>
       <div><dt class="text-[var(--text-muted)] text-xs uppercase tracking-[0.1em]">Contact</dt><dd class="text-[var(--text-primary)] m-0"><a href="mailto:editorial@aipedia.wiki">editorial@aipedia.wiki</a></dd></div>
     </dl>
   </div>

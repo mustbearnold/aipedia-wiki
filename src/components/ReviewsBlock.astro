@@ -1,7 +1,7 @@
 ---
 /**
  * Client-side reviews block: lists approved reviews for a tool and
- * presents a submission form with Turnstile + validation.
+ * presents a submission form with honeypot, rate-limit, and moderation checks.
  * Mounted on every tool page via ToolLayout.
  */
 interface Props {
@@ -10,7 +10,6 @@ interface Props {
 }
 
 const { toolSlug, toolTitle } = Astro.props;
-const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY ?? '';
 ---
 
 <section
@@ -40,6 +39,14 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY ?? '';
       class="rounded-[var(--site-radius-card)] border border-[var(--border)] bg-[var(--bg-card)] p-[var(--site-card-padding)] mb-[var(--site-content-gap-sm)]"
       data-reviews-form
     >
+      <input
+        type="text"
+        name="website"
+        tabindex="-1"
+        autocomplete="off"
+        aria-hidden="true"
+        class="review-hp"
+      />
       <div class="grid sm:grid-cols-[auto_1fr] gap-[var(--site-card-gap)] mb-[var(--site-card-gap)]">
         <label class="flex items-center gap-[var(--site-chip-gap)] text-sm text-[var(--text-secondary)]">
           <span>Your rating</span>
@@ -93,9 +100,6 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY ?? '';
           class="rounded-[var(--site-radius-control)] border border-[var(--border)] bg-[var(--bg-base)] px-3 py-2 text-sm text-[var(--text-primary)] placeholder:text-[var(--text-muted)] focus:outline-none focus:ring-1 focus:ring-[var(--accent-primary)]"
         />
       </div>
-      {turnstileSiteKey && (
-        <div class="cf-turnstile mb-[var(--site-card-gap)]" data-sitekey={turnstileSiteKey} data-theme="dark"></div>
-      )}
       <div class="flex items-center gap-[var(--site-card-gap)]">
         <button
           type="submit"
@@ -115,10 +119,6 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY ?? '';
     No reviews yet. Be the first to share your experience with {toolTitle}.
   </div>
 </section>
-
-{turnstileSiteKey && (
-  <script is:inline async src="https://challenges.cloudflare.com/turnstile/v0/api.js" defer></script>
-)}
 
 <script is:inline>
   (function () {
@@ -169,7 +169,7 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY ?? '';
 
       async function load() {
         try {
-          const r = await fetch('/api/reviews/for/' + encodeURIComponent(slug));
+          const r = await fetch('/api/reviews/for/' + encodeURIComponent(slug) + '/');
           if (!r.ok) throw new Error('fetch failed');
           const data = await r.json();
           const count = data.count || 0;
@@ -213,11 +213,11 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY ?? '';
           body: fd.get('body'),
           author_name: fd.get('author_name'),
           author_email: fd.get('author_email') || undefined,
-          turnstile_token: fd.get('cf-turnstile-response') || undefined,
+          website: fd.get('website') || '',
         };
         if (statusEl) { statusEl.textContent = 'Submitting…'; statusEl.style.color = ''; }
         try {
-          const r = await fetch('/api/reviews/submit', {
+          const r = await fetch('/api/reviews/submit/', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(payload),
@@ -233,7 +233,6 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY ?? '';
               validation_failed: 'Please fill every field (body must be at least 40 chars).',
               rate_limited: 'Too many reviews from this network today. Try again tomorrow.',
               already_reviewed: 'You already reviewed this tool. Email editorial@aipedia.wiki to update.',
-              captcha_failed: 'Captcha failed. Refresh and try again.',
             }[data.error] || 'Something went wrong. Try again in a minute.';
             if (statusEl) { statusEl.textContent = msg; statusEl.style.color = '#fb923c'; }
           }
@@ -252,3 +251,18 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY ?? '';
     document.addEventListener('astro:page-load', init);
   })();
 </script>
+
+<style>
+  .review-hp {
+    position: fixed;
+    inset: auto;
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    white-space: nowrap;
+  }
+</style>

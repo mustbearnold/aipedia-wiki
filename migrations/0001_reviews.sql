@@ -1,8 +1,9 @@
 -- Reviews table for user-submitted tool reviews.
--- Applied via: wrangler d1 execute aipedia-reviews --file=./migrations/0001_reviews.sql
+-- Apply to the Vercel/Neon database with:
+-- npm run db:migrate -- --apply --env .env.local
 
 CREATE TABLE IF NOT EXISTS reviews (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  id BIGSERIAL PRIMARY KEY,
   tool_slug TEXT NOT NULL,
   rating INTEGER NOT NULL CHECK (rating >= 1 AND rating <= 5),
   title TEXT NOT NULL,
@@ -11,10 +12,10 @@ CREATE TABLE IF NOT EXISTS reviews (
   author_email_hash TEXT,
   ip_hash TEXT,
   user_agent TEXT,
-  created_at INTEGER NOT NULL DEFAULT (unixepoch()),
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
   approved INTEGER NOT NULL DEFAULT 0,
-  approved_at INTEGER,
-  spam_score REAL NOT NULL DEFAULT 0
+  approved_at TIMESTAMPTZ,
+  spam_score DOUBLE PRECISION NOT NULL DEFAULT 0
 );
 
 CREATE INDEX IF NOT EXISTS idx_reviews_tool_approved

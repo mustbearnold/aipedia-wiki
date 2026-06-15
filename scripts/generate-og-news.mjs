@@ -15,23 +15,147 @@
  */
 import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
-import { join } from 'node:path';
+import { dirname, join, relative, resolve } from 'node:path';
 import sharp from 'sharp';
 
+const args = process.argv.slice(2);
+const JSON_MODE = args.includes('--json');
+const DRY_RUN = args.includes('--dry-run');
+const CHECK_MODE = args.includes('--check');
+const HELP_MODE = args.includes('--help') || args.includes('-h');
+const KNOWN_FLAGS = new Set(['--dry-run', '--check', '--json', '--project-dir', '--root', '--limit', '--help', '-h']);
+const VALUE_FLAGS = new Set(['--project-dir', '--root', '--limit']);
+const argumentIssues = collectArgumentIssues();
+const requestedSlugs = collectRequestedSlugs();
+
 let Resvg = null;
+let resvgLoadIssue = null;
 try {
   ({ Resvg } = await import('@resvg/resvg-js'));
 } catch (err) {
-  console.warn('resvg unavailable, will emit SVG-only:', err.message);
+  resvgLoadIssue = { code: 'resvg-unavailable', detail: err.message };
+  if (!JSON_MODE) console.warn('resvg unavailable, will emit SVG-only:', err.message);
 }
 
-const ROOT = fileURLToPath(new URL('../', import.meta.url));
+const defaultProjectDir = dirname(dirname(fileURLToPath(import.meta.url)));
+const projectDirArg = valueFor('--project-dir') || valueFor('--root');
+const ROOT = resolve(projectDirArg || defaultProjectDir);
+const limitArg = valueFor('--limit');
+const LIMIT = limitArg ? Number.parseInt(limitArg, 10) : Infinity;
 const NEWS_DIR = join(ROOT, 'src/content/news');
 const OUT_DIR = join(ROOT, 'public/og/news');
 const OUT_LIGHT_DIR = join(OUT_DIR, 'light');
 const THUMB_DIR = join(OUT_DIR, 'thumbs');
 const THUMB_LIGHT_DIR = join(THUMB_DIR, 'light');
 const WRITE_DEBUG_SVG = process.env.AIPEDIA_WRITE_OG_SVG === '1';
+const MAX_PNG_OPTIMIZATION_PASSES = 12;
+const RASTER_VISUAL_AVERAGE_DELTA_LIMIT = 4;
+const RASTER_VISUAL_CHANGED_PIXEL_RATIO_LIMIT = 0.15;
+const RASTER_VISUAL_CHANNEL_DELTA_NOISE_FLOOR = 8;
+
+function valueFor(flag) {
+  const index = args.indexOf(flag);
+  if (index >= 0) {
+    const next = args[index + 1] ?? '';
+    return next && !next.startsWith('-') ? next : '';
+  }
+  const inlineArg = args.find((arg) => arg.startsWith(`${flag}=`));
+  return inlineArg ? inlineArg.slice(flag.length + 1) : '';
+}
+
+function collectRequestedSlugs() {
+  const slugs = [];
+  for (let index = 0; index < args.length; index += 1) {
+    const arg = args[index];
+    const flag = arg.startsWith('--') ? arg.split('=')[0] : arg;
+    if (VALUE_FLAGS.has(flag) && !arg.includes('=')) {
+      index += 1;
+      continue;
+    }
+    if (!arg.startsWith('-')) slugs.push(arg.replace(/\.md$/, ''));
+  }
+  return slugs;
+}
+
+function collectArgumentIssues() {
+  const issues = [];
+  const foundValueFlags = new Set();
+
+  for (let index = 0; index < args.length; index += 1) {
+    const arg = args[index];
+    const equalsIndex = arg.startsWith('--') ? arg.indexOf('=') : -1;
+    const flag = equalsIndex >= 0 ? arg.slice(0, equalsIndex) : arg;
+
+    if (!arg.startsWith('-')) {
+      const slug = arg.replace(/\.md$/, '');
+      if (!/^[a-z0-9][a-z0-9-]*$/.test(slug)) {
+        issues.push({ code: 'argument-invalid', detail: `invalid news slug ${arg}` });
+      }
+      continue;
+    }
+
+    if (!KNOWN_FLAGS.has(flag)) {
+      issues.push({ code: 'argument-invalid', detail: `unknown flag ${flag}` });
+      continue;
+    }
+
+    if (VALUE_FLAGS.has(flag)) {
+      foundValueFlags.add(flag);
+
+      if (equalsIndex >= 0) {
+        if (!arg.slice(equalsIndex + 1)) issues.push({ code: 'argument-invalid', detail: `${flag} requires a value` });
+        continue;
+      }
+
+      const next = args[index + 1];
+      if (!next || next.startsWith('-')) {
+        issues.push({ code: 'argument-invalid', detail: `${flag} requires a value` });
+      } else {
+        index += 1;
+      }
+      continue;
+    }
+
+    if (equalsIndex >= 0) issues.push({ code: 'argument-invalid', detail: `${flag} does not accept a value` });
+  }
+
+  if (foundValueFlags.has('--project-dir') && foundValueFlags.has('--root')) {
+    issues.push({ code: 'argument-invalid', detail: 'choose only one of --project-dir or --root' });
+  }
+  if (DRY_RUN && CHECK_MODE) {
+    issues.push({ code: 'argument-invalid', detail: 'choose only one of --dry-run or --check' });
+  }
+  if (foundValueFlags.has('--limit') && !/^[1-9][0-9]*$/.test(valueFor('--limit'))) {
+    issues.push({ code: 'argument-invalid', detail: '--limit must be a positive integer' });
+  }
+
+  return issues;
+}
+
+function usage() {
+  return [
+    'Usage: node scripts/generate-og-news.mjs [options] [news-slug ...]',
+    '',
+    'Options:',
+    '  --dry-run             Generate news OG buffers and report changes without writing files.',
+    '  --check               Verify generated news OG outputs match current files without writing.',
+    '  --json                Emit a structured news OG generation report.',
+    '  --project-dir <dir>   Generate or inspect another project root.',
+    '  --root <dir>          Alias for --project-dir.',
+    '  --limit <count>       Stop after checking this many news records.',
+    '  --help, -h            Print this help message.',
+  ].join('\n');
+}
+
+function modeName() {
+  if (CHECK_MODE) return 'check';
+  if (DRY_RUN) return 'dry-run';
+  return 'generate';
+}
+
+function relativeFile(path) {
+  return relative(ROOT, path).replace(/\\/g, '/');
+}
 
 /** Same nudge as `src/styles/global.css` `.nav-logo-frame img` (cyan PNG -> orange accent). */
 const HEADER_BRAND_FILTER = Object.freeze({
@@ -389,6 +513,25 @@ function rasterize(svg, background) {
   return resvg.render().asPng();
 }
 
+async function optimizePipelinePng(buffer) {
+  let best = buffer;
+  for (let pass = 0; pass < MAX_PNG_OPTIMIZATION_PASSES; pass += 1) {
+    const optimized = await sharp(best)
+      .png({
+        compressionLevel: 9,
+        adaptiveFiltering: true,
+        palette: true,
+        quality: 92,
+        effort: 10,
+      })
+      .toBuffer();
+
+    if (optimized.length >= best.length) return best;
+    best = optimized;
+  }
+  return best;
+}
+
 async function assertTextRendering() {
   if (!Resvg) return;
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200" viewBox="0 0 400 200">
@@ -407,77 +550,323 @@ async function assertTextRendering() {
   }
 }
 
-async function writeNewsAssets(news, slug, brandLogo) {
+async function desiredNewsAssets(news, slug, brandLogo, issues) {
   const themes = [
     { key: 'dark', pngDir: OUT_DIR, thumbDir: THUMB_DIR, rasterBg: '#0c0a09' },
     { key: 'light', pngDir: OUT_LIGHT_DIR, thumbDir: THUMB_LIGHT_DIR, rasterBg: '#fafaf9' },
   ];
-  let svgs = 0;
-  let pngs = 0;
-  let thumbs = 0;
+  const outputs = [];
 
   for (const t of themes) {
-    mkdirSync(t.pngDir, { recursive: true });
-    mkdirSync(t.thumbDir, { recursive: true });
-
     const svg = svgForNews(news, t.key, brandLogo).replace(/[ \t]+$/gm, '');
     if (WRITE_DEBUG_SVG || !Resvg) {
-      writeFileSync(join(t.pngDir, `${slug}.svg`), svg, 'utf8');
-      svgs++;
+      outputs.push({
+        kind: 'news-svg',
+        theme: t.key,
+        slug,
+        path: join(t.pngDir, `${slug}.svg`),
+        buffer: Buffer.from(svg, 'utf8'),
+      });
     }
     try {
       const png = rasterize(svg, t.rasterBg);
       if (png) {
-        writeFileSync(join(t.pngDir, `${slug}.png`), png);
-        pngs++;
+        const finalPng = await optimizePipelinePng(png);
+        outputs.push({
+          kind: 'news-png',
+          theme: t.key,
+          slug,
+          path: join(t.pngDir, `${slug}.png`),
+          buffer: finalPng,
+        });
         const thumb = await sharp(png)
           .resize({ width: 960, withoutEnlargement: true })
           .webp({ quality: 82, effort: 6 })
           .toBuffer();
-        writeFileSync(join(t.thumbDir, `${slug}.webp`), thumb);
-        thumbs++;
+        outputs.push({
+          kind: 'news-thumb',
+          theme: t.key,
+          slug,
+          path: join(t.thumbDir, `${slug}.webp`),
+          buffer: thumb,
+        });
       }
     } catch (err) {
-      console.warn(`[news-og] PNG raster failed for ${slug} (${t.key}):`, err.message);
+      issues.push({ code: 'raster-failed', slug, theme: t.key, detail: `PNG raster failed for ${slug} (${t.key}): ${err.message}` });
     }
   }
 
-  return { svgs, pngs, thumbs };
+  return outputs;
+}
+
+function isRasterOutput(output) {
+  return output.kind === 'news-png' || output.kind === 'news-thumb';
+}
+
+async function rasterPixels(buffer) {
+  const { data, info } = await sharp(buffer).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+  return {
+    data,
+    width: info.width,
+    height: info.height,
+    channels: info.channels,
+  };
+}
+
+async function compareRenderedRaster(existing, desired) {
+  const [left, right] = await Promise.all([rasterPixels(existing), rasterPixels(desired)]);
+  if (left.width !== right.width || left.height !== right.height || left.channels !== right.channels) {
+    return {
+      matches: false,
+      average_delta: null,
+      changed_pixel_ratio: null,
+      max_delta: null,
+    };
+  }
+
+  let totalDelta = 0;
+  let maxDelta = 0;
+  let changedPixels = 0;
+  const pixelCount = left.width * left.height;
+
+  for (let index = 0; index < left.data.length; index += left.channels) {
+    let pixelMaxDelta = 0;
+    for (let channel = 0; channel < 3; channel += 1) {
+      const delta = Math.abs(left.data[index + channel] - right.data[index + channel]);
+      totalDelta += delta;
+      if (delta > maxDelta) maxDelta = delta;
+      if (delta > pixelMaxDelta) pixelMaxDelta = delta;
+    }
+    if (pixelMaxDelta > RASTER_VISUAL_CHANNEL_DELTA_NOISE_FLOOR) changedPixels += 1;
+  }
+
+  const averageDelta = totalDelta / (pixelCount * 3);
+  const changedPixelRatio = changedPixels / pixelCount;
+
+  return {
+    matches:
+      averageDelta <= RASTER_VISUAL_AVERAGE_DELTA_LIMIT &&
+      changedPixelRatio <= RASTER_VISUAL_CHANGED_PIXEL_RATIO_LIMIT,
+    average_delta: Number(averageDelta.toFixed(4)),
+    changed_pixel_ratio: Number(changedPixelRatio.toFixed(4)),
+    max_delta: maxDelta,
+  };
+}
+
+async function outputComparison(output, existing) {
+  if (!isRasterOutput(output)) {
+    return { changed: Buffer.compare(existing, output.buffer) !== 0, comparison: { kind: 'bytes' } };
+  }
+
+  try {
+    const comparison = await compareRenderedRaster(existing, output.buffer);
+    return { changed: !comparison.matches, comparison: { kind: 'raster-visual', ...comparison } };
+  } catch {
+    return { changed: true, comparison: { kind: 'raster-visual', matches: false } };
+  }
+}
+
+async function inspectOutput(output, mode, issues) {
+  let existingBytes = null;
+  let changed = true;
+  let written = false;
+  let comparison = null;
+
+  if (existsSync(output.path)) {
+    try {
+      const existing = readFileSync(output.path);
+      existingBytes = existing.length;
+      const result = await outputComparison(output, existing);
+      changed = result.changed;
+      comparison = result.comparison;
+    } catch (err) {
+      issues.push({ code: 'read-failed', path: output.path, detail: `could not read ${output.path}: ${err.message}` });
+    }
+  }
+
+  if (mode === 'generate' && changed) {
+    try {
+      mkdirSync(dirname(output.path), { recursive: true });
+      writeFileSync(output.path, output.buffer);
+      written = true;
+    } catch (err) {
+      issues.push({ code: 'write-failed', path: output.path, detail: `could not write ${output.path}: ${err.message}` });
+    }
+  }
+
+  return {
+    kind: output.kind,
+    theme: output.theme,
+    slug: output.slug,
+    path: output.path,
+    file: relativeFile(output.path),
+    bytes: output.buffer.length,
+    existing_bytes: existingBytes,
+    changed,
+    written,
+    comparison,
+  };
+}
+
+function reportFor({ mode = modeName(), records = 0, outputs = [], issues = [], missing_news_dir = false } = {}) {
+  const changed = outputs.filter((output) => output.changed).length;
+  const written = outputs.filter((output) => output.written).length;
+  const warningCodes = new Set(['resvg-unavailable', 'brand-missing', 'raster-failed']);
+  const errorIssues = issues.filter((issue) => !warningCodes.has(issue.code));
+  return {
+    ok: mode !== 'argument-error' && errorIssues.length === 0 && !(mode === 'check' && changed > 0),
+    mode,
+    project_dir: ROOT,
+    news_dir: NEWS_DIR,
+    output_dir: OUT_DIR,
+    write_debug_svg: WRITE_DEBUG_SVG,
+    resvg_available: Boolean(Resvg),
+    limit: Number.isFinite(LIMIT) ? LIMIT : null,
+    requested_slugs: requestedSlugs,
+    records,
+    generated: outputs.length,
+    changed,
+    written,
+    missing_news_dir,
+    outputs,
+    issues,
+    argument_issues: mode === 'argument-error' ? argumentIssues : [],
+  };
+}
+
+function emitReport(report) {
+  if (JSON_MODE) {
+    process.stdout.write(`${JSON.stringify(report, null, 2)}\n`);
+    return;
+  }
+
+  if (report.mode === 'argument-error') {
+    console.error('[news-og] invalid arguments:');
+    for (const issue of report.argument_issues) console.error(`- ${issue.detail}`);
+    return;
+  }
+
+  for (const issue of report.issues) {
+    const level = ['resvg-unavailable', 'brand-missing', 'raster-failed'].includes(issue.code) ? 'warn' : 'error';
+    console[level](`[news-og] ${issue.detail}`);
+  }
+
+  if (report.mode === 'check') {
+    if (report.ok) {
+      console.log(`[news-og] check passed. ${report.generated} output(s) match for ${report.records} news item(s).`);
+    } else {
+      console.error(`[news-og] check failed. ${report.changed} output(s) are missing or stale.`);
+    }
+    return;
+  }
+
+  if (report.mode === 'dry-run') {
+    console.log(`[news-og] dry run. ${report.generated} output(s) checked for ${report.records} news item(s); ${report.changed} would change.`);
+    return;
+  }
+
+  const totalPngs = report.outputs.filter((output) => output.kind === 'news-png').length;
+  const totalThumbs = report.outputs.filter((output) => output.kind === 'news-thumb').length;
+  const totalSvgs = report.outputs.filter((output) => output.kind === 'news-svg').length;
+  const svgSummary = totalSvgs > 0 ? ` and ${totalSvgs} debug SVGs` : '';
+  console.log(`[news-og] generated ${totalPngs} PNG files, ${totalThumbs} WebP thumbnail files${svgSummary} under public/og/news/ (+ light/) (${report.written} written)`);
+}
+
+function readNewsFiles(issues) {
+  if (!existsSync(NEWS_DIR)) {
+    issues.push({ code: 'news-dir-missing', detail: `news directory missing at ${NEWS_DIR}` });
+    return null;
+  }
+
+  const requested = new Set(requestedSlugs);
+  const allFiles = readdirSync(NEWS_DIR)
+    .filter((f) => f.endsWith('.md'))
+    .filter((f) => requested.size === 0 || requested.has(f.replace(/\.md$/, '')))
+    .sort((a, b) => a.localeCompare(b));
+
+  if (requested.size > 0) {
+    const found = new Set(allFiles.map((file) => file.replace(/\.md$/, '')));
+    for (const slug of requested) {
+      if (!found.has(slug)) {
+        issues.push({ code: 'requested-news-missing', slug, detail: `requested news slug not found: ${slug}` });
+      }
+    }
+  }
+
+  return allFiles.slice(0, LIMIT);
 }
 
 async function main() {
-  if (!existsSync(OUT_DIR)) mkdirSync(OUT_DIR, { recursive: true });
-  if (!existsSync(THUMB_DIR)) mkdirSync(THUMB_DIR, { recursive: true });
-  await assertTextRendering();
+  if (HELP_MODE) {
+    console.log(usage());
+    return 0;
+  }
+
+  if (argumentIssues.length > 0) {
+    emitReport(reportFor({ mode: 'argument-error' }));
+    return 1;
+  }
+
+  const mode = modeName();
+  const issues = [];
+  if (resvgLoadIssue) issues.push(resvgLoadIssue);
+
+  try {
+    await assertTextRendering();
+  } catch (err) {
+    issues.push({ code: 'text-rendering-failed', detail: err.message });
+    const report = reportFor({ mode, issues });
+    emitReport(report);
+    return 1;
+  }
 
   const brandLogo = await prepareBrandLogoForOg();
   if (!brandLogo && !WRITE_DEBUG_SVG) {
-    console.warn('[news-og] No brand PNG found under public/brand/ — OG cards omit the lockup glyph.');
+    issues.push({ code: 'brand-missing', detail: 'No brand PNG found under public/brand/ — OG cards omit the lockup glyph.' });
   }
 
-  const requested = new Set(process.argv.slice(2).map((arg) => arg.replace(/\.md$/, '')));
-  const files = readdirSync(NEWS_DIR)
-    .filter((f) => f.endsWith('.md'))
-    .filter((f) => requested.size === 0 || requested.has(f.replace(/\.md$/, '')));
+  const files = readNewsFiles(issues);
+  if (!files) {
+    const report = reportFor({ mode, issues, missing_news_dir: true });
+    emitReport(report);
+    return 1;
+  }
+  if (issues.some((issue) => issue.code === 'requested-news-missing')) {
+    const report = reportFor({ mode, issues });
+    emitReport(report);
+    return 1;
+  }
 
-  let totalSvgs = 0;
-  let totalPngs = 0;
-  let totalThumbs = 0;
-
+  const desired = [];
   for (const file of files) {
     const src = readFileSync(join(NEWS_DIR, file), 'utf8');
     const news = parseFrontmatter(src);
     if (!news.slug && !news.title) continue;
     const slug = news.slug || file.replace(/\.md$/, '');
-
-    const { svgs, pngs, thumbs } = await writeNewsAssets(news, slug, brandLogo);
-    totalSvgs += svgs;
-    totalPngs += pngs;
-    totalThumbs += thumbs;
+    desired.push(...await desiredNewsAssets(news, slug, brandLogo, issues));
   }
 
-  const svgSummary = totalSvgs > 0 ? ` and ${totalSvgs} debug SVGs` : '';
-  console.log(`[news-og] generated ${totalPngs} PNG pairs, ${totalThumbs} WebP thumbnail pairs${svgSummary} under public/og/news/ (+ light/)`);
+  const outputs = [];
+  for (const output of desired) {
+    outputs.push(await inspectOutput(output, mode, issues));
+  }
+
+  if (mode === 'check' && outputs.some((output) => output.changed)) {
+    issues.push({ code: 'news-og-stale', detail: 'one or more generated news OG outputs are missing or stale' });
+  }
+
+  const report = reportFor({ mode, records: files.length, outputs, issues });
+  emitReport(report);
+  return report.ok ? 0 : 1;
 }
 
-await main();
+main().then((code) => {
+  process.exitCode = code;
+}).catch((err) => {
+  const mode = argumentIssues.length > 0 ? 'argument-error' : modeName();
+  emitReport(reportFor({
+    mode,
+    issues: [{ code: 'unexpected-error', detail: err.message }],
+  }));
+  process.exitCode = 1;
+});

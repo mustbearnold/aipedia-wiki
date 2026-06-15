@@ -11,8 +11,8 @@ pricing_model: free
 price_range: "$0 + API costs"
 status: active
 launched: 2023-05
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-14
+last_verified: 2026-06-14
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,17 +31,17 @@ facts:
     source: "https://aider.chat/"
     source_label: "Aider homepage"
     source_id: aider-official
-    verified_at: 2026-06-12
-    next_review_at: 2026-08-13
+    verified_at: 2026-06-14
+    next_review_at: 2026-07-14
     volatility: medium
     confidence: high
   model_choice:
-    value: "BYOK model support through provider APIs; total cost is the tool cost plus whatever model tokens you use."
+    value: "BYOK model support through provider APIs and local models; total cost is the $0 Aider tool cost plus provider/router token usage or local hardware cost."
     source: "https://aider.chat/docs/"
     source_label: "Aider docs"
     source_id: aider-pricing
-    verified_at: 2026-06-12
-    next_review_at: 2026-08-13
+    verified_at: 2026-06-14
+    next_review_at: 2026-07-14
     volatility: medium
     confidence: high
   open_source_or_local:
@@ -49,8 +49,8 @@ facts:
     source: "https://github.com/Aider-AI/aider"
     source_label: "Aider GitHub repository"
     source_id: aider-repository
-    verified_at: 2026-06-12
-    next_review_at: 2026-08-13
+    verified_at: 2026-06-14
+    next_review_at: 2026-07-14
     volatility: medium
     confidence: high
   best_for:
@@ -58,8 +58,8 @@ facts:
     source: "https://aider.chat/docs/"
     source_label: "Aider docs"
     source_id: aider-pricing
-    verified_at: 2026-06-12
-    next_review_at: 2026-08-13
+    verified_at: 2026-06-14
+    next_review_at: 2026-07-14
     volatility: medium
     confidence: high
   watch_out_for:
@@ -67,8 +67,8 @@ facts:
     source: "https://aider.chat/docs/"
     source_label: "Aider docs"
     source_id: aider-pricing
-    verified_at: 2026-06-12
-    next_review_at: 2026-08-13
+    verified_at: 2026-06-14
+    next_review_at: 2026-07-14
     volatility: medium
     confidence: medium
 tags: [ai-coding, open-source, cli, git-integration, agentic-coding, byok, architect-mode, repo-map]
@@ -87,8 +87,16 @@ not_best_for:
   - users needing visual diffs
   - zero-configuration setups
 quick_answer: >-
-  Pick Aider for a free, open-source CLI pair-programmer that edits real files and auto-commits every change to git. Skip it if a polished GUI matters more; Cursor's $20/mo wins there. BYOK keeps session costs as low as pennies on Gemini 3.1 Pro.
+  Pick Aider for a free, open-source CLI pair-programmer that edits real files and can commit changes to git. Skip it if a polished GUI matters more; Cursor's $20/mo wins there. BYOK keeps the Aider tool cost at $0, but token spend still depends on provider, model, repo-map size, context, and session length.
 price_history:
+  - date: 2026-06-14
+    plan: "License and BYOK cost model"
+    price: "Free Apache 2.0 tool; model/API usage billed by the provider or router"
+    source: "https://aider.chat/docs/"
+    source_label: "Aider docs"
+    source_id: aider-pricing
+    verified_at: 2026-06-14
+    note: "Re-verified official docs and GitHub repository. Aider remains an open-source terminal pair-programmer with provider/API/local model connections; page copy now avoids unsourced per-hour cost precision and fixes the Claude Code alternative link."
   - date: 2024-01-15
     plan: "License"
     price: "Free (Apache 2.0)"
@@ -134,11 +142,11 @@ Supports many LLMs via API key: Claude, OpenAI, Gemini, Mistral, OpenAI-compatib
 
 ## System Verdict
 
-> **Pick Aider for the most cost-transparent AI coding workflow available.** Every edit becomes a git commit with an AI-written message. Architect mode splits planning from execution: a smart model designs the approach, a cheaper model writes the code. Session cost lands at pennies on lower-cost models and can climb on premium Claude-class frontier models.
+> **Pick Aider for one of the most cost-transparent AI coding workflows available.** Every edit can become a git commit with an AI-written message. Architect mode splits planning from execution: a stronger model designs the approach, and a cheaper model can write the code. The tool itself is free; the cost variable is the provider, router, local model, context size, and retry loop you choose.
 >
 > **Skip it for a polished GUI.** No visual diff viewer, no file tree, no inline completions. [Cursor](/tools/cursor/) at $20/mo fills that gap.
 >
-> **Who pays what:** Extension is free. API costs ride on your own provider key. Most sessions are under $1. Large features on Opus can reach $5.
+> **Who pays what:** Aider is free. API, router, Copilot-credit, or local-hardware costs ride on your chosen model path, so large repositories and long sessions need budget discipline.
 
 ## Key Facts
 
@@ -155,7 +163,7 @@ Supports many LLMs via API key: Claude, OpenAI, Gemini, Mistral, OpenAI-compatib
 | **Voice coding** | Yes, via local speech-to-text |
 | **Watch mode** | Yes, auto-applies suggestions as files change |
 
-Every data point above was verified against vendor documentation on 2026-06-12. See Sources.
+Every data point above was verified against vendor documentation on 2026-06-14. See Sources.
 
 ## What it actually is
 
@@ -171,7 +179,7 @@ In-chat commands cover the full workflow: `/run` for shell, `/lint` for quality 
 
 - **You live in a terminal.** Vim, tmux, remote SSH sessions: Aider slots in without changing your editor.
 - **You want git history as the audit log.** Every change becomes a commit with a descriptive message. No hidden edits.
-- **You need BYOK economics.** Lower-cost Gemini-class sessions can run for pennies; premium Claude-class sessions cost more, especially on large repositories.
+- **You need BYOK economics.** Aider is free, so spend comes from the model path you choose. Keep an eye on repo-map size, large files, retry loops, and premium frontier-model context.
 - **You run fully offline sometimes.** Ollama integration covers local models with no network calls.
 - **You contribute to open source.** Aider's transparent git workflow fits OSS review patterns cleanly.
 
@@ -181,21 +189,20 @@ In-chat commands cover the full workflow: `/run` for shell, `/lint` for quality 
 - **IDE-native agent with a subscription:** [Windsurf](/tools/windsurf/) Pro at $20/mo. Cascade for multi-file agent edits.
 - **Free IDE extension with approval gates:** [Cline](/tools/cline/) in VS Code or JetBrains. Plan/Act modes.
 - **Inline autocomplete only:** [GitHub Copilot](/tools/github-copilot/) at $10/mo.
-- **Terminal-first agentic runs:** [Claude Code](/tools/claude/) on Max 5x at $100/mo. Flat rate, deeper agentic capability.
+- **Terminal-first agentic runs:** [Claude Code](/tools/claude-code/) on Max 5x at $100/mo. Flat-rate subscription path for deeper agentic capability, with separate interactive and Agent SDK credit rules to model.
 
 ## Pricing
 
-Aider itself is free under Apache 2.0. You pay LLM API costs directly.
+Aider itself is free under Apache 2.0. You pay model usage directly through the provider, router, subscription-integrated path, or local hardware you choose.
 
-| Model | Cost/hour of active coding | Notes |
-|-------|---------------------------|-------|
-| Gemini-class models | $0.02-$0.15/hr | Cheapest capable option, often attractive for long context |
-| Premium Claude-class model (architect mode) | $0.05-$0.30/hr | Strong quality-to-cost route when used only for planning |
-| OpenAI frontier models | $0.10-$0.50/hr | Solid alternative, slightly weaker on multi-file edits |
-| Premium Claude-class model (full sessions) | $0.50-$2.00/hr | Highest quality route, expensive on large codebases |
-| Ollama (local) | $0 | Fully offline; quality below frontier models |
+| Model path | Direct Aider fee | Notes |
+|---|---:|---|
+| Provider API keys | $0 + provider token usage | Strong for developers who want direct OpenAI, Anthropic, Gemini, DeepSeek, or similar billing control |
+| OpenRouter or OpenAI-compatible APIs | $0 + router/provider token usage | Useful when teams want model choice or centralized API routing |
+| GitHub Copilot connection | $0 + Copilot plan/credit usage | Useful for teams already governed through GitHub, but credit drawdown should be modeled |
+| Ollama or local models | $0 + local hardware cost | Fully offline-capable path; quality depends on the local model |
 
-*Costs verified 2026-06-12. Cost varies with codebase size (repo-map token overhead), provider pricing, model choice, and session length. Bug fixes cost pennies; large features spanning many files can cost $1-$5 on premium frontier models.*
+*License and cost model verified 2026-06-14. Real cost varies with codebase size, repo-map token overhead, provider pricing, model choice, context window, retry loops, and session length. Check live provider pricing before treating any Aider workflow as cheap at scale.*
 
 ## Against the alternatives
 
@@ -221,12 +228,12 @@ Aider itself is free under Apache 2.0. You pay LLM API costs directly.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-12 against [aider.chat docs](https://aider.chat/docs/), the [chat modes reference](https://aider.chat/docs/usage/modes.html), the [repo-map docs](https://aider.chat/docs/repomap.html), and the [Aider GitHub repo](https://github.com/Aider-AI/aider).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-14 against [aider.chat docs](https://aider.chat/docs/), [Aider installation docs](https://aider.chat/docs/install.html), the [chat modes reference](https://aider.chat/docs/usage/modes.html), the [repo-map docs](https://aider.chat/docs/repomap.html), and the [Aider GitHub repo](https://github.com/Aider-AI/aider).
 
 ## FAQ
 
 **Is Aider free?**
-Yes. Apache 2.0 open source. Only cost is the API key you bring. Light sessions run pennies; large features on premium frontier models can reach several dollars. A local Ollama model costs nothing beyond your hardware.
+Yes. Apache 2.0 open source. The direct Aider fee is $0. Your real spend comes from the API key, router, subscription-integrated path, or local model you choose. Large repo maps, long sessions, and retry loops can make premium models expensive.
 
 **What is architect mode?**
 A two-model workflow. A larger reasoning model proposes the approach. A faster cheaper model turns the plan into file-level diffs. Keeps quality high and session cost low.

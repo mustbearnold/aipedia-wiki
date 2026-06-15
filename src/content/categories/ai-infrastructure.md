@@ -5,10 +5,10 @@ title: AI Infrastructure & Model APIs
 description: Developer platforms for LLM routing, pay-as-you-go model APIs, hosted inference, serverless GPUs, vector databases, speech APIs, and production retrieval systems.
 tool_count: 12
 seo_title: "Best AI Infrastructure & Model API Tools (June 2026)"
-meta_description: "Updated June 12, 2026: compare OpenRouter, OpenAI API, Claude API, Gemini API, Mistral, Groq, Together AI, Replicate, fal, Fireworks AI, Modal, Browserbase, Deepgram, Pinecone, Weaviate/Engram, Qdrant, Llama, LM Studio, and current local/open-model infrastructure tradeoffs."
+meta_description: "Updated June 15, 2026: compare OpenRouter, OpenAI API, Claude API after Fable/Mythos suspension, Gemini API, Mistral, Groq, Together AI, Replicate, fal, Fireworks AI, Modal, Browserbase, Deepgram, Pinecone, Weaviate/Engram, Qdrant, Llama, LM Studio, and model-availability governance tradeoffs."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-15
+last_verified: 2026-06-15
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -32,11 +32,13 @@ The late-May infrastructure update is agent control. CoreWeave's [training-to-in
 
 The June 3 update widens that control story. Microsoft Build put Work IQ and Foundry around enterprise agents; GitHub made the Copilot SDK generally available while AI Credits became the agent-usage meter; NVIDIA pushed enterprise agents, Cosmos 3, open physical-AI agent skills, Alpamayo 2 Super, RTX Spark, and DGX Station for Windows; Postman launched AI Engineer for API work; RelationalAI moved agentic decision intelligence deeper into Snowflake; 7AI kept security agents in the proactive-hunting lane; and the White House AI cybersecurity order put advanced AI cyber capability into public-sector and critical-infrastructure policy. Infrastructure buyers should evaluate agent stacks by context access, runtime isolation, traces, evals, spend controls, simulation/data pipelines, local-vs-cloud compute, and write-action approvals.
 
+The June 14 update keeps model availability as a first-class infrastructure risk. [Claude Fable/Mythos access is suspended, GPT-5.2 is retired from ChatGPT, and OpenAI faces reported state-AG scrutiny](/news/2026-06-13-us-blocks-anthropic-fable-mythos-openai-probe/). Direct frontier API buyers should now document the exact model route in production, the fallback route if a model is suspended or retired, the retention policy for that model class, the staff/client access exposure for restricted routes, and the legal/privacy review path for sensitive users. The [AI Model Availability & Churn Tracker](/trends/model-availability-churn/) is now the canonical AiPedia surface for these app/API/router distinctions.
+
 **Use [OpenRouter](/tools/openrouter/) when you need one API across many model providers.** The current pricing page lists pay-as-you-go access to 400+ models and 60+ providers, with budget controls, activity logs, prompt caching, preferred vendor selections, and model-priced token billing. Its [May 27 funding signal](/news/2026-05-27-openrouter-series-b-model-routing/) makes the category clearer: routing, fallback, governance, and spend visibility are becoming production infrastructure, not just developer convenience.
 
 **Use direct vendor APIs when native features matter.** [OpenAI API](/tools/chatgpt/) is the default direct route for broad multimodal app work. [Claude API](/tools/claude/) is the direct route for long reasoning, writing, code, and document workflows. [Gemini API](/tools/gemini/) matters when Google Cloud, long context, multimodal inputs, or Veo video generation are part of the product.
 
-**Use [Mistral AI](/tools/mistral-ai/) or [Groq](/tools/groq/) when price/performance, open-model strategy, European infrastructure, or low-latency inference matters.** Mistral 3 shipped on April 28, 2026 and tightened price/performance across the chat, code, and reasoning lineups. Benchmark real prompts before switching because model quality, output length, and retries change the bill.
+**Use [Mistral AI](/tools/mistral-ai/) or [Groq](/tools/groq/) when price/performance, open-model strategy, European infrastructure, or low-latency inference matters.** The June 15 Mistral check keeps the timeline and cost model honest: Mistral 3 officially launched on December 2, 2025, while Medium 3.5's model-card date is April 28, 2026. Current Mistral pricing lists Large 3 at $0.50/M input and $1.50/M output, Medium 3.5 at $1.50/M and $7.50/M, and Small 4 at $0.10/M and $0.30/M, but the Small 4 model card still lists $0.15/M and $0.60/M, and the pricing FAQ still uses a generic Mistral Large $2/$6 example. Benchmark real prompts, confirm the live Studio quote, and pin exact model IDs before switching because model quality, output length, retries, aliases, and source drift change the bill.
 
 **Use [Replicate](/tools/replicate/) or [fal.ai](/tools/fal-ai/) when the job is hosted image, video, audio, 3D, or custom-model inference.** The June 9 Replicate check keeps it strongest as a broad model catalog and custom-model deployment layer: public models may bill by hardware time or by input/output, while most private deployments bill setup, idle, and active time unless they are labeled fast-booting fine-tunes. fal is stronger when successful-output billing and fast media APIs are the buyer problem; the June 2 check keeps prepaid credits, queue behavior, failed-output billing, and the 50% batch discount as the key pricing details to model.
 
@@ -53,8 +55,8 @@ The June 3 update widens that control story. Microsoft Build put Work IQ and Fou
 | Buyer job | Start with | Why | Watch out |
 |---|---|---|---|
 | Multi-model LLM routing | [OpenRouter](/tools/openrouter/) | One API, many providers, spend controls, logs, routing | Router fees and provider policy choices still need governance |
-| Direct frontier LLM API | [OpenAI](/tools/chatgpt/), [Claude](/tools/claude/), or [Gemini](/tools/gemini/) | Best when native model features, support, and procurement matter | Long context, outputs, tools, and video can raise cost quickly |
-| Budget/open-model API | [Mistral AI](/tools/mistral-ai/) or [Groq](/tools/groq/) | Useful for cost-sensitive and latency-sensitive workloads | Requires benchmarking against your actual prompts |
+| Direct frontier LLM API | [OpenAI](/tools/chatgpt/), [Claude](/tools/claude/), or [Gemini](/tools/gemini/) | Best when native model features, support, and procurement matter | Model access, retirements, legal/data governance, long context, outputs, tools, and video can change cost and risk quickly |
+| Budget/open-model API | [Mistral AI](/tools/mistral-ai/) or [Groq](/tools/groq/) | Useful for cost-sensitive, latency-sensitive, and sovereignty-sensitive workloads | Requires benchmarking against your actual prompts, exact model IDs, and current model-card/pricing-page drift |
 | Hosted model catalog | [Replicate](/tools/replicate/) | Public, proprietary, and custom models without owning GPUs | Hardware-time, output-priced media, and private-model idle billing need separate cost modeling |
 | Fast media APIs | [fal.ai](/tools/fal-ai/) | Image, video, audio, and 3D APIs with per-output or per-second pricing | Prepaid credits and per-model units need tracking |
 | Production model inference | [Fireworks AI](/tools/fireworks-ai/) | Serverless inference, batch jobs, dedicated GPUs, fine-tuning, and cached-token discounts | Named model rates, GPU utilization, batch timing, and cached-token behavior decide the real bill |
@@ -102,8 +104,17 @@ Do not publish infrastructure pages with old flat monthly subscription framing. 
 - [OpenRouter Series B announcement](https://www.businesswire.com/news/home/20260526953416/en/OpenRouter-Raises-%24113-Million-CapitalG-led-Series-B-as-Weekly-Volume-Explodes-to-25T-Tokens) (verified 2026-05-27)
 - [OpenAI API pricing](https://openai.com/api/pricing/) (verified 2026-06-12)
 - [Claude API pricing](https://platform.claude.com/docs/en/about-claude/pricing) (verified 2026-06-12)
+- [AiPedia late June 13 AI news update](/news/2026-06-13-us-blocks-anthropic-fable-mythos-openai-probe/) (verified 2026-06-13)
+- [AiPedia June 14 AI news desk](/news/2026-06-14-ai-news-desk/) (verified 2026-06-14)
+- [Anthropic Fable/Mythos access statement](https://www.anthropic.com/news/fable-mythos-access) (verified 2026-06-14)
+- [OpenAI ChatGPT release notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes) (verified 2026-06-13)
 - [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing) (verified 2026-06-12)
-- [Mistral AI pricing](https://mistral.ai/pricing) (verified 2026-06-12)
+- [Mistral AI pricing](https://mistral.ai/pricing) (verified 2026-06-15)
+- [Mistral Vibe product page](https://mistral.ai/products/vibe/) (verified 2026-06-15)
+- [Mistral Vibe agent announcement](https://mistral.ai/news/vibe-agent/) (verified 2026-06-15)
+- [Mistral AI Now Summit 2026](https://mistral.ai/news/ai-now-summit-2026/) (verified 2026-06-15)
+- [Mistral model docs](https://docs.mistral.ai/models/overview) (verified 2026-06-15)
+- [Mistral 3 launch post](https://mistral.ai/news/mistral-3) (verified 2026-06-15)
 - [Groq pricing](https://groq.com/pricing) (verified 2026-06-12)
 - [Replicate pricing](https://replicate.com/pricing) (verified 2026-06-12)
 - [fal Model API pricing docs](https://fal.ai/docs/documentation/model-apis/pricing) (verified 2026-06-12)

@@ -3,13 +3,20 @@
 // Keeps the inherited fact debt visible without failing CI while Phase 2 rolls out.
 
 import { existsSync, readdirSync, readFileSync } from 'node:fs';
-import { dirname, join, relative } from 'node:path';
+import { dirname, join, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const PROJECT_DIR = dirname(dirname(fileURLToPath(import.meta.url)));
+const args = process.argv.slice(2);
+const defaultProjectDir = dirname(dirname(fileURLToPath(import.meta.url)));
+const projectDirArg = valueFor('--project-dir') || valueFor('--root');
+const PROJECT_DIR = resolve(projectDirArg || defaultProjectDir);
 const TOOLS_DIR = join(PROJECT_DIR, 'src', 'content', 'tools');
 const PRIORITY_PATH = join(PROJECT_DIR, 'src', 'data', 'tool-priority.json');
-const JSON_MODE = process.argv.includes('--json');
+const KNOWN_FLAGS = new Set(['--json', '--project-dir', '--root', '--help', '-h']);
+const VALUE_FLAGS = new Set(['--project-dir', '--root']);
+const JSON_MODE = args.includes('--json');
+const HELP_MODE = args.includes('--help') || args.includes('-h');
+const argumentIssues = collectArgumentIssues();
 const STALE_THRESHOLD_DAYS = 90;
 
 const REQUIRED_KEYS = [
@@ -30,6 +37,117 @@ const REQUIRED_KEYS = [
   'best_for',
   'watch_out_for',
 ];
+
+function valueFor(name) {
+  const inlineArg = args.find((arg) => arg.startsWith(`${name}=`));
+  if (inlineArg) return inlineArg.slice(name.length + 1);
+  const index = args.indexOf(name);
+  return index >= 0 ? args[index + 1] : undefined;
+}
+
+function hasFlag(name) {
+  return args.includes(name) || args.some((arg) => arg.startsWith(`${name}=`));
+}
+
+function flagName(arg) {
+  const equalsIndex = arg.indexOf('=');
+  return equalsIndex >= 0 ? arg.slice(0, equalsIndex) : arg;
+}
+
+function collectArgumentIssues() {
+  const issues = [];
+  for (const [index, arg] of args.entries()) {
+    if (!arg.startsWith('-')) {
+      const previous = args[index - 1] ?? '';
+      if (!VALUE_FLAGS.has(previous)) issues.push({ code: 'argument-invalid', detail: `unexpected argument ${arg}` });
+      continue;
+    }
+
+    const name = flagName(arg);
+    if (!KNOWN_FLAGS.has(name)) issues.push({ code: 'argument-invalid', detail: `unknown flag ${name}` });
+    if (VALUE_FLAGS.has(name)) {
+      const value = arg.includes('=') ? arg.slice(name.length + 1) : args[index + 1] ?? '';
+      if (!value || value.startsWith('-')) issues.push({ code: 'argument-invalid', detail: `${name} requires a value` });
+    }
+  }
+
+  if (hasFlag('--project-dir') && hasFlag('--root')) {
+    issues.push({ code: 'argument-invalid', detail: 'choose only one of --project-dir or --root' });
+  }
+
+  return issues;
+}
+
+function usage() {
+  return [
+    'Usage:',
+    '  node scripts/audit-tool-facts.mjs --json',
+    '  node scripts/audit-tool-facts.mjs --project-dir <dir>',
+    '',
+    'Options:',
+    '  --json                 Emit a structured fact-quality report.',
+    '  --project-dir <dir>    Audit another project root.',
+    '  --root <dir>           Alias for --project-dir.',
+  ].join('\n');
+}
+
+function emitArgumentFailure() {
+  const emptyTier = (name) => ({
+    name,
+    total: 0,
+    tools: [],
+    missing_pages: [],
+    required_fact_slots: 0,
+    present_required_fact_slots: 0,
+    completeness_percent: 100,
+    complete_tools: 0,
+    missing_by_tool: [],
+    missing_key_counts: {},
+  });
+  const report = {
+    ok: false,
+    mode: 'argument-error',
+    generated_at: new Date().toISOString(),
+    project_dir: PROJECT_DIR,
+    stale_threshold_days: STALE_THRESHOLD_DAYS,
+    required_keys: REQUIRED_KEYS,
+    argument_issues: argumentIssues,
+    totals: {
+      tools: 0,
+      tools_with_facts: 0,
+      tools_missing_facts: 0,
+      facts: 0,
+    },
+    priority: {
+      tier1: emptyTier('tier1'),
+      tier2: emptyTier('tier2'),
+      tier3: emptyTier('tier3'),
+    },
+    quality: {
+      facts_missing_source: [],
+      facts_missing_verified_at: [],
+      stale_facts: [],
+      stale_fact_age_by_key: {},
+    },
+  };
+
+  if (JSON_MODE) {
+    console.log(JSON.stringify(report, null, 2));
+  } else {
+    console.error('[audit-tool-facts] invalid arguments');
+    for (const issue of argumentIssues) console.error(`- ${issue.detail}`);
+  }
+}
+
+if (HELP_MODE) {
+  console.log(usage());
+  process.exit(0);
+}
+
+if (argumentIssues.length > 0) {
+  emitArgumentFailure();
+  process.exit(1);
+}
 
 function projectPath(path) {
   return relative(PROJECT_DIR, path).replace(/\\/g, '/');
@@ -238,9 +356,13 @@ for (const key of [...new Set(factAges.map((fact) => fact.key))].sort()) {
 }
 
 const result = {
+  ok: true,
+  mode: 'report',
   generated_at: new Date().toISOString(),
+  project_dir: PROJECT_DIR,
   stale_threshold_days: STALE_THRESHOLD_DAYS,
   required_keys: REQUIRED_KEYS,
+  argument_issues: [],
   totals: {
     tools: toolRecords.length,
     tools_with_facts: toolRecords.filter((tool) => tool.factEntries.length > 0).length,

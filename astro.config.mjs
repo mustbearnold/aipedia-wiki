@@ -9,9 +9,9 @@ import { rehypeRemoveFirstH1 } from './src/plugins/rehype-remove-first-h1.mjs';
 import rehypeCollapseSections from './src/plugins/rehype-collapse-sections.mjs';
 import rehypeRepairTables from './src/plugins/rehype-repair-tables.mjs';
 
-import cloudflare from '@astrojs/cloudflare';
+import vercel from '@astrojs/vercel';
 
-const isDev = process.env.NODE_ENV !== 'production' && !process.env.CF_PAGES;
+const isDev = process.env.NODE_ENV !== 'production';
 const isFastBuild = process.env.AIPEDIA_FAST_BUILD === '1';
 
 const SITEMAP_EXCLUDED_PATHS = new Set([
@@ -60,5 +60,5 @@ export default defineConfig({
     },
   },
 
-  ...(isDev || isFastBuild ? {} : { adapter: cloudflare() }),
+  ...(isDev ? {} : { adapter: vercel() }),
 });

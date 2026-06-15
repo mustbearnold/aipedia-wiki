@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "Bundled with ChatGPT Plus ($20/mo) through Pro 20x ($200/mo)"
 status: active
 launched: 2025-05
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-15
+last_verified: 2026-06-15
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -78,7 +78,7 @@ facts:
     next_review_at: '2026-08-11'
 tags: [agentic-coding, cloud-agent, desktop-app, cli, openai, gpt-5, computer-use, memory, plugins, multi-agent]
 seo_title: "OpenAI Codex: Features, Pricing & Review (June 2026)"
-meta_description: "OpenAI Codex is the cloud-async coding agent bundled with ChatGPT. Updated May 15, 2026: Codex now runs through ChatGPT mobile preview on iOS and Android, with live approvals, diffs, terminal output, and remote-environment control."
+meta_description: "OpenAI Codex is the cloud-async coding agent bundled with ChatGPT. Updated June 15, 2026: OpenAI's Ona deal makes persistent, customer-controlled cloud execution a core Codex buyer issue."
 author: "aipedia.wiki Editorial"
 best_for:
   - async background coding (fire a task, return to a PR)
@@ -92,8 +92,15 @@ not_best_for:
   - terminal-only workflows where Claude Code is tighter
   - users who do not already have a ChatGPT subscription
 quick_answer: >-
-  Codex is OpenAI's agentic coding product. Works async in the cloud or locally via CLI and Codex Desktop. Best for fire-and-forget tasks, multi-file refactors, and teams already inside the OpenAI ecosystem. Bundled with ChatGPT Plus and up; Pro tiers get 5-20x Codex usage. Skip it if you need a Linux desktop GUI or want the tightest IDE daily driver (Cursor) or tightest terminal agent (Claude Code).
+  Codex is OpenAI's agentic coding product. Works async in the cloud or locally via CLI and Codex Desktop. Best for fire-and-forget tasks, multi-file refactors, and teams already inside the OpenAI ecosystem. Bundled with ChatGPT Plus and up; Pro tiers get 5-20x Codex usage. The June 11 Ona acquisition agreement makes persistent, customer-controlled cloud execution the next enterprise control to watch. Skip it if you need a Linux desktop GUI or want the tightest IDE daily driver (Cursor) or tightest terminal agent (Claude Code).
 price_history:
+  - date: 2026-06-11
+    plan: "Ona acquisition agreement"
+    price: "No public price change"
+    source: "/news/2026-06-11-openai-acquires-ona-codex-persistent-agents/"
+    source_label: "AIpedia coverage"
+    source_id: aipedia-news
+    note: "OpenAI agreed to acquire Ona to bring secure, customer-controlled cloud execution and orchestration into Codex for long-running agents across software and knowledge work. The deal is subject to closing conditions and regulatory approvals."
   - date: 2026-05-22
     plan: "Gartner enterprise coding-agent recognition"
     price: "No public price change"
@@ -156,10 +163,12 @@ price_history:
 
 OpenAI's **agentic coding** product. A coding agent that works either **async in the cloud** (fire a task, come back to a PR) or **locally** via the Codex Desktop app, CLI, and IDE extensions. Backed by GPT-5.5 for harder work and GPT-5.3-Codex-Spark for faster routine coding.
 
-Bundled with every paid ChatGPT tier. Pro tiers get 5x to 20x the Codex usage of Plus. The April 16, 2026 super-app update turned Codex Desktop into the most capable OpenAI product surface to date: Computer Use, persistent Memory, gpt-image-2 for visuals, an in-app browser, 90+ plugins, and multi-agent workflows running in parallel.
+Bundled with every paid ChatGPT tier. Pro tiers get 5x to 20x the Codex usage of Plus. The April 16, 2026 super-app update turned Codex Desktop into the most capable OpenAI product surface to date: Computer Use, persistent Memory, gpt-image-2 for visuals, an in-app browser, 90+ plugins, and multi-agent workflows running in parallel. The June 11 Ona acquisition agreement makes persistent, customer-controlled cloud execution the next Codex enterprise control to watch.
 
 ## Recent developments (March-June 2026)
 
+- **June 11, 2026:** [OpenAI agreed to acquire Ona](/news/2026-06-11-openai-acquires-ona-codex-persistent-agents/) to bring secure, customer-controlled cloud execution and orchestration into Codex. OpenAI says Codex now has more than 5 million weekly users and that Ona helps agents keep working across devices, sessions, and long-running enterprise workflows. Treat the deal as a roadmap signal until it closes and the integrated controls are visible in customer accounts.
+- **June 11, 2026:** [OpenAI added rate-limit reset banking and referrals to Codex](/news/2026-06-11-openai-codex-rate-limit-banking/). Plus and Pro users can bank a reset, while Business workspaces can use shared credit rewards through a separate referral program.
 - **May 22, 2026:** [OpenAI said Codex was named a Leader in Gartner's enterprise coding-agent report](/news/2026-05-22-openai-codex-gartner-enterprise-coding-agent-leader/). The procurement signal is that Codex is being evaluated around governance, sandboxing, approval gates, RBAC, policy controls, and deployment surfaces, not just code-generation quality.
 - **May 21, 2026:** [OpenAI added AppShots, Goal Mode, locked computer use, and browser improvements to Codex](/news/2026-05-21-openai-codex-appshots-goal-mode-locked-computer-use/). Ramp's Codex case study adds a real engineering-team proof point for using Codex as a code-review and internal-agent layer.
 - **May 20, 2026:** [OpenAI IPO reporting, Anthropic profit forecasts, and SpaceX compute costs made frontier AI economics more visible](/news/2026-05-20-openai-anthropic-spacex-frontier-ai-capital-pressure/). For Codex buyers, the practical takeaway is to track rate limits, capacity, and model-routing changes alongside raw coding quality.
@@ -214,7 +223,8 @@ Bundled with every paid ChatGPT tier. Pro tiers get 5x to 20x the Codex usage of
 | | |
 |---|---|
 | **Default model** | GPT-5.5 for harder work; GPT-5.3-Codex-Spark for faster routine coding on supported surfaces |
-| **Enterprise signal** | OpenAI says Codex has 4M+ weekly users and was named a Leader in Gartner's 2026 Enterprise AI Coding Agents Magic Quadrant |
+| **Enterprise signal** | OpenAI says Codex has 5M+ weekly users and was named a Leader in Gartner's 2026 Enterprise AI Coding Agents Magic Quadrant |
+| **Persistent execution signal** | OpenAI's June 11 Ona acquisition agreement targets customer-controlled cloud environments for long-running Codex agents, scoped credentials, activity logging, and reviewable production workflows |
 | **Fast model** | GPT-5.3-Codex-Spark (research preview, faster daily-coding) |
 | **Primary surfaces** | Codex Desktop (macOS, Windows rolling) · ChatGPT web · Codex CLI · IDE extensions |
 | **Async cloud execution** | Yes. Sandboxed VM spins up per task; Codex returns a diff or PR |
@@ -232,7 +242,7 @@ Bundled with every paid ChatGPT tier. Pro tiers get 5x to 20x the Codex usage of
 | **Platform support** | macOS (primary) · Windows rolling out · EU/UK rolling out · Linux via CLI |
 | **Cloud distribution** | OpenAI Deployment Company (formed May 11, 2026) consolidates enterprise distribution; Amazon Bedrock preview live since April 28, 2026 |
 
-Every data point verified 2026-06-12 against OpenAI's Codex docs, pricing pages, the Daybreak / Codex Security announcement, May 21 release notes, and multi-source coverage.
+Current Codex product, pricing, and Ona acquisition facts verified 2026-06-15 against OpenAI's Codex page, Codex pricing docs, OpenAI's Ona announcement, and Ona's own announcement. Earlier event links remain sourced through their linked AiPedia coverage.
 
 ## What it actually is
 
@@ -247,6 +257,8 @@ Three related surfaces united by the same underlying agent:
 **4. Codex for Chrome (May 7, 2026).** A browser extension that lets Codex Desktop inspect, test, and operate across signed-in Chrome tabs on macOS and Windows. Real browser context, with the corresponding permission-scope trade-off because the agent runs inside authenticated web apps.
 
 **5. Codex Security (May 11, 2026).** Anchor product of OpenAI's Daybreak defensive-cyber launch. Wraps GPT-5.5, Trusted Access, and GPT-5.5-Cyber model tiers with a Codex Security plugin that handles threat modeling, vulnerability discovery, validation, attack-path analysis, and verified fixes. Twenty-two launch partners including Cloudflare, Cisco, CrowdStrike, Palo Alto Networks, Snyk, Semgrep, and Socket. GPT-5.5-Cyber is now in EU preview through Trusted Access.
+
+**6. Ona and persistent enterprise execution (pending close).** OpenAI's June 11 Ona acquisition agreement is meant to add secure, customer-controlled cloud environments where long-running Codex agents can keep state, access scoped tools, log activity, and continue work across devices. Do not treat this as a shipped customer feature until the transaction closes and OpenAI exposes the integrated controls.
 
 The real moat is the **cross-surface consistency**. A task started in the desktop app can hand off to the cloud agent. Memory carries across sessions and surfaces. Plugins work everywhere. OpenAI is treating Codex as the front end of a developer-focused super app rather than a single product.
 
@@ -303,6 +315,8 @@ Prices verified 2026-06-12 via [OpenAI Codex pricing](https://developers.openai.
 
 ## Recent changes
 
+- **June 11, 2026:** [OpenAI agreed to acquire Ona](/news/2026-06-11-openai-acquires-ona-codex-persistent-agents/) for secure, customer-controlled cloud execution and orchestration inside Codex. Buyer check: where the agent runs, how credentials are scoped, what gets logged, and which actions require review before merge, deploy, or data access.
+- **June 11, 2026:** [OpenAI added rate-limit reset banking and referrals to Codex](/news/2026-06-11-openai-codex-rate-limit-banking/), making usage limits less arbitrary for Plus, Pro, and eligible Business users.
 - **May 19, 2026:** [OpenAI added C2PA conformance, SynthID watermarking, and a public verification-tool preview for images generated through ChatGPT, Codex, and the API](/news/2026-05-19-openai-google-synthid-c2pa-image-provenance/).
 - **May 18, 2026:** [OpenAI and Dell announced a Codex partnership for hybrid and on-premises enterprise environments](/news/2026-05-18-openai-dell-codex-hybrid-enterprise-data/).
 - **May 18, 2026:** [Musk lost his OpenAI lawsuit, reducing one governance overhang for ChatGPT and Codex buyers](/news/2026-05-18-musk-openai-lawsuit-verdict-governance-overhang/).
@@ -322,13 +336,14 @@ Prices verified 2026-06-12 via [OpenAI Codex pricing](https://developers.openai.
 - **Async tasks can fail silently.** Cloud-sandboxed VMs sometimes error without a clear message. Check task status rather than assuming success.
 - **90+ plugin surface = larger attack surface.** The April 16 [MCP vulnerability](/news/2026-04-16-mcp-vulnerability-200k-servers/) and the May 1 [MCP STDIO command-execution disclosure](/news/2026-05-03-mcp-stdio-command-execution-flaw/) affect every Codex MCP server. Audit third-party plugins and sandbox STDIO tools before trusting them with shell access.
 - **Pricing complexity.** Free / Go / Plus / Pro / Pro 20x / Business / Enterprise is a lot of tiers. Users often pay for the wrong one. Baseline recommendation: Plus for individuals, Pro for active coders, Pro 20x only for sustained daily use.
+- **Ona is not integrated until the deal closes.** The acquisition is subject to closing conditions and regulatory approvals. Evaluate current Codex controls as they exist in your account, and treat customer-controlled persistent execution as a roadmap signal until OpenAI ships it.
 - **Codex quality lags Claude Code on strict SWE-bench.** Claude Opus 4.8 leads SWE-bench Verified; Codex is close behind at ~80%. Codex wins on Terminal-Bench 2.0 at 77.3% for autonomous terminal ops.
 - **Computer Use is early.** Works for simple app operations; fragile for complex UI automation. Test your workflow before relying on it.
 - **Memory is not end-to-end encrypted by default.** Enterprise tiers add stronger guarantees; consumer tiers store persistent context on OpenAI's infrastructure subject to their data retention policies.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation and multi-source news coverage, verifies facts against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-12 against OpenAI's Codex docs, the Codex rate card, the [May 21 Codex AppShots / Goal Mode update](/news/2026-05-21-openai-codex-appshots-goal-mode-locked-computer-use/), the [May 20 frontier AI capital-pressure update](/news/2026-05-20-openai-anthropic-spacex-frontier-ai-capital-pressure/), the [May 19 provenance update](/news/2026-05-19-openai-google-synthid-c2pa-image-provenance/), the [May 18 Dell enterprise-data partnership](/news/2026-05-18-openai-dell-codex-hybrid-enterprise-data/), the [May 18 OpenAI lawsuit verdict](/news/2026-05-18-musk-openai-lawsuit-verdict-governance-overhang/), the [May 16 ChatGPT-Codex product strategy coverage](/news/2026-05-16-openai-brockman-chatgpt-codex-product-strategy/), the [May 11 Daybreak / Codex Security launch](/news/2026-05-11-openai-daybreak-codex-security-launch/), the [May 11 OpenAI Deployment Company launch](/news/2026-05-11-openai-deployment-company-launch/), the [May 11 GPT-5.5-Cyber EU preview](/news/2026-05-11-openai-gpt-55-cyber-eu-preview/), the [May 7 Codex for Chrome update](/news/2026-05-07-openai-codex-chrome-extension/), the [May 7 Realtime 2 voice models](/news/2026-05-07-openai-realtime-2-voice-models/), the [May 7 GPT-5.5-Cyber and Codex Security update](/news/2026-05-07-openai-gpt-55-cyber-trusted-access/), and multi-source coverage including the April 16 super-app update announcement.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation and multi-source news coverage, verifies facts against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Current Codex product, pricing, and Ona acquisition facts were verified on 2026-06-15 against OpenAI's Codex page, Codex pricing docs, OpenAI's Ona announcement, and Ona's own announcement, alongside the [June 11 Ona acquisition coverage](/news/2026-06-11-openai-acquires-ona-codex-persistent-agents/) and [Codex rate-limit banking coverage](/news/2026-06-11-openai-codex-rate-limit-banking/). Earlier recent-development links remain sourced through their linked AiPedia coverage.
 
 ## FAQ
 
@@ -368,6 +383,8 @@ Yes. ChatGPT Business at $25/user/mo. Plus Codex-only seats with pay-as-you-go t
 - [OpenAI: Codex pricing](https://developers.openai.com/codex/pricing)
 - [OpenAI: Codex rate card](https://help.openai.com/en/articles/20001106-codex-rate-card)
 - [OpenAI: Codex flexible pricing for teams](https://openai.com/index/codex-flexible-pricing-for-teams/)
+- [OpenAI: OpenAI to acquire Ona](https://openai.com/index/openai-to-acquire-ona/)
+- [Ona: Ona is joining OpenAI](https://ona.com/stories/ona-joins-openai)
 - [Codex for Chrome coverage](/news/2026-05-07-openai-codex-chrome-extension/)
 - [Codex Desktop Pets and config-import update](/news/2026-05-03-openai-codex-pets-config-imports/)
 - [Codex Desktop super-app coverage](/news/2026-04-16-openai-codex-desktop-super-app/)

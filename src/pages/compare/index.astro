@@ -2,6 +2,14 @@
 /**
  * /compare/ index — god-tier 10/10 mobile-first comparison directory.
  *
+ * Refresh metadata: 2026-06-15 Hailuo/Kling comparison touch-up after
+ * Hailuo current-source refresh covering MiniMax pay-as-you-go rates,
+ * one-month video packages, API route support, first-and-last-frame
+ * Hailuo 2.3 caveats, dynamic Hailuo app pricing, AI Video parent
+ * maintenance, and source registry checks.
+ * Refresh metadata: 2026-06-13 model availability tracker linked from the
+ * comparison archive for current ChatGPT, Claude, Gemini, Copilot, Codex,
+ * and model-router route-risk checks.
  * Refresh metadata: 2026-06-06 cross-category May 13 live comparison
  * follow-up across Perplexity/ChatGPT, QuillBot/Sudowrite/Wordtune,
  * Resemble AI/Voxtral, Scite/Semantic Scholar, and Suno/Udio after current
@@ -275,6 +283,17 @@ const collectionItems = sorted.map((c) => ({
         data-analytics-position="top"
         data-analytics-label="Build custom comparison"
       >Build custom comparison</a>
+      <a
+        href="/trends/model-availability-churn/"
+        class="gt-btn gt-btn-secondary gt-compare-builder"
+        data-analytics-event="internal_cta_click"
+        data-analytics-source-module="comparison_index_model_tracker"
+        data-analytics-destination-type="trend"
+        data-analytics-destination-slug="trends/model-availability-churn"
+        data-analytics-destination-url="/trends/model-availability-churn/"
+        data-analytics-position="top"
+        data-analytics-label="Track model availability"
+      >Track model availability</a>
     </section>
 
     <section class="gt-compare-index" aria-label="All comparisons">
@@ -368,7 +387,7 @@ const collectionItems = sorted.map((c) => ({
       width: 100%;
     }
     @media (min-width: 700px) {
-      .gt-compare-actions { grid-template-columns: minmax(0, 1fr) auto; align-items: center; }
+      .gt-compare-actions { grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; }
       .gt-compare-builder { width: auto; }
     }
     .gt-compare-index { margin-bottom: 40px; }
