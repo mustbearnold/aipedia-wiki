@@ -64,6 +64,9 @@ const BRAND_LOGO_LARGE = join(ROOT, 'public/brand/aipedia-logo-512.png');
 const DEFAULT_SVG = join(ROOT, 'public/og-default.svg');
 const DEFAULT_PNG = join(ROOT, 'public/og-default.png');
 const MAX_PNG_OPTIMIZATION_PASSES = 12;
+const PNG_VISUAL_AVERAGE_DELTA_LIMIT = 3;
+const PNG_VISUAL_CHANGED_PIXEL_RATIO_LIMIT = 0.12;
+const PNG_VISUAL_CHANNEL_DELTA_NOISE_FLOOR = 8;
 
 function valueFor(flag) {
   const index = args.indexOf(flag);
@@ -575,25 +578,56 @@ async function pngPixels(buffer) {
   };
 }
 
-async function sameRenderedPng(existing, desired) {
+async function compareRenderedPng(existing, desired) {
   const [left, right] = await Promise.all([pngPixels(existing), pngPixels(desired)]);
-  return (
-    left.width === right.width &&
-    left.height === right.height &&
-    left.channels === right.channels &&
-    Buffer.compare(left.data, right.data) === 0
-  );
+  if (left.width !== right.width || left.height !== right.height || left.channels !== right.channels) {
+    return {
+      matches: false,
+      average_delta: null,
+      changed_pixel_ratio: null,
+      max_delta: null,
+    };
+  }
+
+  let totalDelta = 0;
+  let maxDelta = 0;
+  let changedPixels = 0;
+  const pixelCount = left.width * left.height;
+
+  for (let index = 0; index < left.data.length; index += left.channels) {
+    let pixelMaxDelta = 0;
+    for (let channel = 0; channel < 3; channel += 1) {
+      const delta = Math.abs(left.data[index + channel] - right.data[index + channel]);
+      totalDelta += delta;
+      if (delta > maxDelta) maxDelta = delta;
+      if (delta > pixelMaxDelta) pixelMaxDelta = delta;
+    }
+    if (pixelMaxDelta > PNG_VISUAL_CHANNEL_DELTA_NOISE_FLOOR) changedPixels += 1;
+  }
+
+  const averageDelta = totalDelta / (pixelCount * 3);
+  const changedPixelRatio = changedPixels / pixelCount;
+
+  return {
+    matches:
+      averageDelta <= PNG_VISUAL_AVERAGE_DELTA_LIMIT &&
+      changedPixelRatio <= PNG_VISUAL_CHANGED_PIXEL_RATIO_LIMIT,
+    average_delta: Number(averageDelta.toFixed(4)),
+    changed_pixel_ratio: Number(changedPixelRatio.toFixed(4)),
+    max_delta: maxDelta,
+  };
 }
 
-async function outputChanged(output, existing) {
+async function outputComparison(output, existing) {
   if (!isPngOutput(output)) {
-    return Buffer.compare(existing, output.buffer) !== 0;
+    return { changed: Buffer.compare(existing, output.buffer) !== 0, comparison: { kind: 'bytes' } };
   }
 
   try {
-    return !(await sameRenderedPng(existing, output.buffer));
+    const comparison = await compareRenderedPng(existing, output.buffer);
+    return { changed: !comparison.matches, comparison: { kind: 'png-visual', ...comparison } };
   } catch {
-    return true;
+    return { changed: true, comparison: { kind: 'png-visual', matches: false } };
   }
 }
 
@@ -601,12 +635,15 @@ async function inspectOutput(output, mode, issues) {
   let existingBytes = null;
   let changed = true;
   let written = false;
+  let comparison = null;
 
   if (existsSync(output.path)) {
     try {
       const existing = readFileSync(output.path);
       existingBytes = existing.length;
-      changed = await outputChanged(output, existing);
+      const result = await outputComparison(output, existing);
+      changed = result.changed;
+      comparison = result.comparison;
     } catch (err) {
       issues.push({ code: 'read-failed', path: output.path, detail: `could not read ${output.path}: ${err.message}` });
     }
@@ -630,6 +667,7 @@ async function inspectOutput(output, mode, issues) {
     existing_bytes: existingBytes,
     changed,
     written,
+    comparison,
   };
 }
 

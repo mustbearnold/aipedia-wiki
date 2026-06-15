@@ -177,6 +177,44 @@ test('OG generator check accepts PNG encoding-only differences', async () => {
     assert.equal(report.mode, 'check');
     assert.equal(report.changed, 0);
     assert.equal(report.written, 0);
+    assert.equal(report.outputs.find((output) => output.slug === 'alpha').comparison.kind, 'png-visual');
+  } finally {
+    rmSync(fixture, { recursive: true, force: true });
+  }
+});
+
+test('OG generator check fails valid but visually stale PNG outputs', async () => {
+  const fixture = await writeFixtureProject();
+  const stalePath = join(fixture, 'public/og/tools/alpha.png');
+
+  try {
+    const generate = runOgGenerator('--json', `--project-dir=${fixture}`);
+    assert.equal(generate.status, 0, generate.stderr || generate.stdout);
+
+    const blank = await sharp({
+      create: {
+        width: 1200,
+        height: 630,
+        channels: 4,
+        background: { r: 255, g: 255, b: 255, alpha: 1 },
+      },
+    }).png().toBuffer();
+    writeFileSync(stalePath, blank);
+
+    const result = runOgGenerator('--check', '--json', `--project-dir=${fixture}`);
+    assert.equal(result.status, 1);
+    assert.equal(result.stderr, '');
+
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, false);
+    assert.equal(report.mode, 'check');
+    assert.equal(report.changed, 1);
+    assert.equal(report.written, 0);
+    const staleOutput = report.outputs.find((output) => output.slug === 'alpha');
+    assert.equal(staleOutput.changed, true);
+    assert.equal(staleOutput.comparison.kind, 'png-visual');
+    assert.equal(staleOutput.comparison.matches, false);
+    assert.ok(report.issues.some((issue) => issue.code === 'og-stale'));
   } finally {
     rmSync(fixture, { recursive: true, force: true });
   }
