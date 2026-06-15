@@ -410,6 +410,12 @@ function checkAstroConfig() {
   if (/@astrojs\/cloudflare/.test(text)) {
     addIssue('astro-cloudflare-adapter-present', path, 'remove @astrojs/cloudflare adapter');
   }
+  if (!/output:\s*['"]static['"]/.test(text)) {
+    addIssue('astro-static-output-missing', path, 'Astro 6 static output should be used with per-route prerender=false opt-outs for Vercel functions');
+  }
+  if (!/\.\.\.\(isDev\s*\?\s*\{\}\s*:\s*\{\s*adapter:\s*vercel\(\)\s*\}\)/.test(text)) {
+    addIssue('astro-vercel-adapter-fast-build-missing', path, 'non-dev builds, including fast CI builds, must keep the Vercel adapter so prerender=false routes become functions');
+  }
 }
 
 function checkEnvExample() {
@@ -485,8 +491,8 @@ function checkRuntimeSource() {
     }
 
     const text = readText(path);
-    if (!/AIPEDIA_FAST_BUILD/.test(text) || !/export const prerender = isFastBuild/.test(text)) {
-      addIssue('api-dynamic-prerender-gate-missing', path, 'dynamic API route must only prerender during fast builds');
+    if (!/export const prerender = false/.test(text)) {
+      addIssue('api-dynamic-prerender-optout-missing', path, 'dynamic API routes must use literal export const prerender = false so Astro emits Vercel functions');
     }
   }
 
@@ -634,6 +640,36 @@ function checkRuntimeSource() {
   }
 }
 
+function checkClientApiUrls() {
+  const reviewBlockPath = 'src/components/ReviewsBlock.astro';
+  if (existsSync(projectPath(reviewBlockPath))) {
+    const text = readText(reviewBlockPath);
+    if (!/fetch\(['"]\/api\/reviews\/for\/['"]\s*\+\s*encodeURIComponent\(slug\)\s*\+\s*['"]\/['"]\)/.test(text)) {
+      addIssue('client-review-read-url-not-canonical', reviewBlockPath, 'public review fetch must hit the canonical trailing-slash API route');
+    }
+    if (!/fetch\(['"]\/api\/reviews\/submit\/['"]/.test(text)) {
+      addIssue('client-review-submit-url-not-canonical', reviewBlockPath, 'review submission fetch must hit the canonical trailing-slash API route');
+    }
+    if (/fetch\(['"]\/api\/reviews\/submit['"],/.test(text)) {
+      addIssue('client-review-submit-url-missing-slash', reviewBlockPath, 'review submission POST will 404/redirect if it omits the trailing slash');
+    }
+  }
+
+  const adminReviewsPath = 'src/pages/admin/reviews.astro';
+  if (existsSync(projectPath(adminReviewsPath))) {
+    const text = readText(adminReviewsPath);
+    if (!/fetch\(['"]\/api\/reviews\/admin\/list\/\?status=/.test(text)) {
+      addIssue('client-review-admin-list-url-not-canonical', adminReviewsPath, 'admin review list fetch must hit the canonical trailing-slash API route');
+    }
+    if (!/fetch\(['"]\/api\/reviews\/admin\/moderate\/['"]/.test(text)) {
+      addIssue('client-review-admin-moderate-url-not-canonical', adminReviewsPath, 'admin moderation POST must hit the canonical trailing-slash API route');
+    }
+    if (/fetch\(['"]\/api\/reviews\/admin\/moderate['"],/.test(text)) {
+      addIssue('client-review-admin-moderate-url-missing-slash', adminReviewsPath, 'admin moderation POST will 404/redirect if it omits the trailing slash');
+    }
+  }
+}
+
 function checkMigrationRunner() {
   const path = 'scripts/neon-migrate.mjs';
   if (!existsSync(projectPath(path))) {
@@ -698,6 +734,7 @@ checkEnvExample();
 checkGitignore();
 checkForbiddenHostingFiles();
 checkRuntimeSource();
+checkClientApiUrls();
 checkMigrationRunner();
 checkMigrations();
 

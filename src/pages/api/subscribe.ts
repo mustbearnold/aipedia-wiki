@@ -9,9 +9,7 @@ import {
   sha256,
 } from '../../lib/server/runtime';
 
-const isFastBuild = process.env.AIPEDIA_FAST_BUILD === '1';
-
-export const prerender = isFastBuild;
+export const prerender = false;
 
 const EMAIL_RE = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 

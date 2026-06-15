@@ -1,11 +1,7 @@
-import type { APIRoute, GetStaticPaths } from 'astro';
+import type { APIRoute } from 'astro';
 import { DATABASE_SCHEMA_HINT, getSql, isDebugApiEnabled, json } from '../../../../lib/server/runtime';
 
-const isFastBuild = process.env.AIPEDIA_FAST_BUILD === '1';
-
-export const prerender = isFastBuild;
-
-export const getStaticPaths: GetStaticPaths = () => [];
+export const prerender = false;
 
 export const GET: APIRoute = async ({ params }) => {
   const slug = String(params.slug ?? '').trim();

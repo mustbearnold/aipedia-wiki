@@ -52,7 +52,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         if (!listEl) return;
         listEl.innerHTML = '<div class="text-sm text-[var(--text-muted)]">Loading…</div>';
         try {
-          const r = await fetch('/api/reviews/admin/list?status=' + encodeURIComponent(current));
+          const r = await fetch('/api/reviews/admin/list/?status=' + encodeURIComponent(current));
           if (r.status === 401) {
             listEl.innerHTML = '<div class="text-sm text-[var(--text-muted)]">Enter the admin password in the browser prompt, then reload.</div>';
             return;
@@ -97,7 +97,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         if (!act || !id) return;
         btn.textContent = '…';
         try {
-          await fetch('/api/reviews/admin/moderate', {
+          await fetch('/api/reviews/admin/moderate/', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify({ id: parseInt(id, 10), action: act }),

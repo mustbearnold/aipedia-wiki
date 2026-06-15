@@ -8,9 +8,7 @@ import {
   unauthorizedAdminResponse,
 } from '../../../../lib/server/runtime';
 
-const isFastBuild = process.env.AIPEDIA_FAST_BUILD === '1';
-
-export const prerender = isFastBuild;
+export const prerender = false;
 
 export const GET: APIRoute = async ({ request }) => {
   if (!requireAdmin(request)) return unauthorizedAdminResponse();

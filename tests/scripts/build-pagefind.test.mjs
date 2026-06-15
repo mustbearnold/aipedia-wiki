@@ -1,6 +1,9 @@
 import assert from 'node:assert/strict';
-import { existsSync, readFileSync } from 'node:fs';
+import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join, resolve } from 'node:path';
 import { test } from 'node:test';
+import { builtSiteDir } from '../../scripts/lib/built-site-dir.mjs';
 
 test('build script delegates Pagefind generation to a clean helper', () => {
   const pkg = JSON.parse(readFileSync('package.json', 'utf8'));
@@ -40,4 +43,23 @@ test('built site helper prefers Vercel static output', () => {
   assert.notEqual(distIndex, -1);
   assert.ok(vercelIndex < distClientIndex);
   assert.ok(distClientIndex < distIndex);
+});
+
+test('built site helper prefers nested fast static output when fast build is enabled', () => {
+  const previousFastBuild = process.env.AIPEDIA_FAST_BUILD;
+  const projectDir = mkdtempSync(join(tmpdir(), 'aipedia-built-site-fast-'));
+
+  try {
+    mkdirSync(join(projectDir, 'dist-fast', 'client'), { recursive: true });
+    process.env.AIPEDIA_FAST_BUILD = '1';
+
+    assert.equal(builtSiteDir(projectDir), resolve(projectDir, 'dist-fast', 'client'));
+  } finally {
+    if (previousFastBuild === undefined) {
+      delete process.env.AIPEDIA_FAST_BUILD;
+    } else {
+      process.env.AIPEDIA_FAST_BUILD = previousFastBuild;
+    }
+    rmSync(projectDir, { recursive: true, force: true });
+  }
 });

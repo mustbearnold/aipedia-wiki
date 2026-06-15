@@ -173,6 +173,15 @@ test('vercel project config keeps the full production build path', () => {
   assert.equal(config.buildCommand, 'AIPEDIA_LEDGER_IGNORE_DIRTY=1 npm run build');
 });
 
+test('astro keeps Vercel adapter active for prerender=false API routes', () => {
+  const config = readFileSync('astro.config.mjs', 'utf8');
+
+  assert.match(config, /output:\s*'static'/);
+  assert.match(config, /isDev\s*\?\s*\{\}\s*:\s*\{\s*adapter:\s*vercel\(\)\s*\}/);
+  assert.doesNotMatch(config, /output:\s*isFastBuild/);
+  assert.doesNotMatch(config, /isDev\s*\|\|\s*isFastBuild/);
+});
+
 test('vercel API and admin routes stay noindexed and uncached', () => {
   const config = JSON.parse(readFileSync('vercel.json', 'utf8'));
   const headerValue = (rule, key) =>
@@ -189,6 +198,19 @@ test('vercel API and admin routes stay noindexed and uncached', () => {
   assert.match(headerValue(adminRule, 'X-Robots-Tag'), /nofollow/i);
   assert.match(headerValue(adminRule, 'Cache-Control'), /private/i);
   assert.match(headerValue(adminRule, 'Cache-Control'), /no-store/i);
+});
+
+test('review clients use canonical trailing-slash API routes', () => {
+  const reviewBlock = readFileSync('src/components/ReviewsBlock.astro', 'utf8');
+  const adminPage = readFileSync('src/pages/admin/reviews.astro', 'utf8');
+
+  assert.match(reviewBlock, /fetch\('\/api\/reviews\/for\/'\s*\+\s*encodeURIComponent\(slug\)\s*\+\s*'\/'\)/);
+  assert.match(reviewBlock, /fetch\('\/api\/reviews\/submit\/'/);
+  assert.doesNotMatch(reviewBlock, /fetch\('\/api\/reviews\/submit',/);
+
+  assert.match(adminPage, /fetch\('\/api\/reviews\/admin\/list\/\?status=/);
+  assert.match(adminPage, /fetch\('\/api\/reviews\/admin\/moderate\/'/);
+  assert.doesNotMatch(adminPage, /fetch\('\/api\/reviews\/admin\/moderate',/);
 });
 
 test('API write routes require a centralized IP hash secret', () => {
@@ -246,7 +268,7 @@ test('Neon migration runner accepts the same database env fallback contract', ()
   assert.match(migrationRunner, /postgres:\/\/\[redacted\]/);
 });
 
-test('dynamic API routes only prerender for fast builds', () => {
+test('dynamic API routes opt out of prerendering with Astro literal syntax', () => {
   const routePaths = [
     'src/pages/api/subscribe.ts',
     'src/pages/api/reviews/submit.ts',
@@ -257,8 +279,8 @@ test('dynamic API routes only prerender for fast builds', () => {
 
   for (const path of routePaths) {
     const source = readFileSync(path, 'utf8');
-    assert.match(source, /AIPEDIA_FAST_BUILD/);
-    assert.match(source, /export const prerender = isFastBuild/);
+    assert.match(source, /export const prerender = false/);
+    assert.doesNotMatch(source, /export const prerender = isFastBuild/);
   }
 });
 

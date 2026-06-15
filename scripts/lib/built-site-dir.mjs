@@ -7,7 +7,10 @@ export function resolvePathFromProject(projectDir, pathArg) {
 
 export function builtSiteDir(projectDir, pathArg) {
   if (pathArg) return resolvePathFromProject(projectDir, pathArg);
-  if (process.env.AIPEDIA_FAST_BUILD === '1') return join(projectDir, 'dist-fast');
+  if (process.env.AIPEDIA_FAST_BUILD === '1') {
+    const fastCandidates = [join(projectDir, 'dist-fast', 'client'), join(projectDir, 'dist-fast')];
+    return fastCandidates.find((candidate) => existsSync(candidate)) ?? fastCandidates[0];
+  }
 
   const candidates = [
     join(projectDir, '.vercel', 'output', 'static'),

@@ -1,6 +1,6 @@
 # AiPedia Page Refresh Ledger
 
-Ledger updated through: 2026-06-15
+Ledger updated through: 2026-06-16
 Tracked public pages and crawl surfaces: 739
 
 Hard rule: every time a tracked website page is edited, refreshed, materially re-ranked, or has volatile facts re-verified, update that page row in this file on the same change. If a child page update affects a parent hub, archive, internal-link block, sitemap, or LLM surface, update those affected rows too.
@@ -673,7 +673,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-14 | /workflows/micro-saas-weekend-build/ | Workflow | Yes | frontmatter | src/content/workflows/micro-saas-weekend-build.md |
 | 2026-06-15 | / | Static page | Yes | git | src/pages/index.astro |
 | 2026-06-15 | /about/our-stack/ | Static page | Yes | git | src/pages/about/our-stack.astro |
-| 2026-06-15 | /admin/reviews/ | Static page | No | git | src/pages/admin/reviews.astro |
 | 2026-06-15 | /categories/ | Static page | Yes | git | src/pages/categories/index.astro |
 | 2026-06-15 | /categories/ai-automation/ | Category | Yes | frontmatter | src/content/categories/ai-automation.md |
 | 2026-06-15 | /categories/ai-chatbots/ | Category | Yes | frontmatter | src/content/categories/ai-chatbots.md |
@@ -710,7 +709,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-15 | /news/rss.xml | Crawl surface | No | git | src/pages/news/rss.xml.ts |
 | 2026-06-15 | /privacy/ | Static page | Yes | git | src/pages/privacy.astro |
 | 2026-06-15 | /search/ | Static page | No | git | src/pages/search.astro |
-| 2026-06-15 | /sitemap-index.xml | Crawl surface | No | git | astro.config.mjs |
 | 2026-06-15 | /tools/ | Static page | Yes | git | src/pages/tools/index.astro |
 | 2026-06-15 | /tools/adobe-firefly/ | Tool | Yes | frontmatter | src/content/tools/adobe-firefly.md |
 | 2026-06-15 | /tools/augment-code/ | Tool | Yes | frontmatter | src/content/tools/augment-code.md |
@@ -750,3 +748,5 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-15 | /trends/geo-trend/ | Trend | Yes | frontmatter | src/content/trends/geo-trend.md |
 | 2026-06-15 | /trends/vibe-coding/ | Trend | Yes | frontmatter | src/content/trends/vibe-coding.md |
 | 2026-06-15 | /workflows/ | Static page | Yes | git | src/pages/workflows/index.astro |
+| 2026-06-16 | /admin/reviews/ | Static page | No | git | src/pages/admin/reviews.astro |
+| 2026-06-16 | /sitemap-index.xml | Crawl surface | No | git | astro.config.mjs |
