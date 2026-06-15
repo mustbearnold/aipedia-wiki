@@ -35,6 +35,8 @@ const TARGETS = [
   'public/og/news/light',
 ];
 const MAX_PNG_OPTIMIZATION_PASSES = 12;
+const MATERIAL_CHECK_SAVINGS_BYTES = 2048;
+const MATERIAL_CHECK_SAVINGS_RATIO = 0.005;
 
 function valueFor(flag) {
   const index = args.indexOf(flag);
@@ -155,8 +157,12 @@ function reportFor({ mode = modeName(), files = [], issues = [], skipped_dirs = 
   const totalBefore = files.reduce((sum, file) => sum + file.before_bytes, 0);
   const totalAfter = files.reduce((sum, file) => sum + file.after_bytes, 0);
   const saved = totalBefore - totalAfter;
+  const materialSavings =
+    saved >= MATERIAL_CHECK_SAVINGS_BYTES &&
+    totalBefore > 0 &&
+    saved / totalBefore >= MATERIAL_CHECK_SAVINGS_RATIO;
   return {
-    ok: mode !== 'argument-error' && issues.length === 0 && !(mode === 'check' && saved > 0),
+    ok: mode !== 'argument-error' && issues.length === 0 && !(mode === 'check' && materialSavings),
     mode,
     project_dir: PROJECT_DIR,
     targets: TARGETS,
@@ -170,6 +176,9 @@ function reportFor({ mode = modeName(), files = [], issues = [], skipped_dirs = 
       saved_bytes: saved,
       saved_kb: Math.round(saved / 1024),
       saved_pct: totalBefore > 0 ? Math.round((saved / totalBefore) * 100) : 0,
+      material_savings: materialSavings,
+      material_savings_bytes: MATERIAL_CHECK_SAVINGS_BYTES,
+      material_savings_ratio: MATERIAL_CHECK_SAVINGS_RATIO,
       written_files: files.filter((file) => file.written).length,
       skipped_dirs: skipped_dirs.length,
       issues: issues.length,

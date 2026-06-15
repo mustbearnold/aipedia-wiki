@@ -38,6 +38,25 @@ async function writeFixtureProject() {
   return fixture;
 }
 
+async function writeTinySavingsProject() {
+  const fixture = mkdtempSync(join(tmpdir(), 'aipedia-og-opt-tiny-'));
+  mkdirSync(join(fixture, 'public/og/tools'), { recursive: true });
+
+  const png = await sharp({
+    create: {
+      width: 16,
+      height: 16,
+      channels: 4,
+      background: { r: 249, g: 115, b: 22, alpha: 1 },
+    },
+  })
+    .png({ compressionLevel: 0 })
+    .toBuffer();
+
+  writeFileSync(join(fixture, 'public/og/tools/tiny.png'), png);
+  return fixture;
+}
+
 test('OG optimizer dry run reports PNG savings without rewriting fixtures', async () => {
   const fixture = await writeFixtureProject();
   const target = join(fixture, 'public/og/tools/alpha.png');
@@ -125,6 +144,26 @@ test('OG optimizer check mode passes after fixture optimization', async () => {
     assert.equal(report.mode, 'check');
     assert.equal(report.totals.files, 3);
     assert.equal(report.totals.saved_bytes, 0);
+    assert.equal(report.totals.written_files, 0);
+  } finally {
+    rmSync(fixture, { recursive: true, force: true });
+  }
+});
+
+test('OG optimizer check mode tolerates immaterial native compression savings', async () => {
+  const fixture = await writeTinySavingsProject();
+
+  try {
+    const result = runOptimizer('--check', '--json', `--project-dir=${fixture}`);
+    assert.equal(result.status, 0, result.stderr || result.stdout);
+    assert.equal(result.stderr, '');
+
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, true);
+    assert.equal(report.mode, 'check');
+    assert.equal(report.totals.files, 1);
+    assert.ok(report.totals.saved_bytes > 0);
+    assert.equal(report.totals.material_savings, false);
     assert.equal(report.totals.written_files, 0);
   } finally {
     rmSync(fixture, { recursive: true, force: true });
