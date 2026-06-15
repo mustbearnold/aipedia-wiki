@@ -40,8 +40,15 @@ function preferredLinuxInstallEnv() {
   return {};
 }
 
-if (process.env.PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD === '1') {
-  console.log('[playwright-install] PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1, skipping browser download.');
+function browserDownloadSkipReason() {
+  if (process.env.PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD === '1') return 'PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1';
+  if (process.env.VERCEL === '1' || process.env.VERCEL_ENV) return 'Vercel deployment build';
+  return '';
+}
+
+const skipReason = browserDownloadSkipReason();
+if (skipReason) {
+  console.log(`[playwright-install] ${skipReason}, skipping browser download.`);
   process.exit(0);
 }
 
