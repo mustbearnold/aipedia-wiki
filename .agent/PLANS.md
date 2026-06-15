@@ -1,5 +1,2816 @@
 # AiPedia ExecPlans
 
+## ExecPlan: June 15 2026 AI Presentation Credit Export And Source-Review Refresh
+
+### 1. Objective
+
+Refresh `/categories/ai-presentation/` because the category still carried June 12 guidance while current June 15 plan pages make AI credits, exports, branding, source review, and operational usage limits the real buying constraints. The goal is to keep Gamma as the default while making the upgrade rules explicit across Gamma, Pitch, Canva, Beautiful.ai, Decktopus, Presentations.AI, Napkin AI, Prezi, and Gemini in Slides.
+
+### 2. Sources Checked
+
+- Gamma AI presentation maker, pricing, API docs, and subscription/feature-matrix help for Free/Plus/Pro/Ultra gates, exports, API, advanced models, AI credits, and branding.
+- Pitch pricing for Free/Plus/Team/Business prices, AI credits, PowerPoint exports, branding removal, advanced links, rooms, guests, and team limits.
+- Beautiful.ai pricing and AI presentation pages for Pro, Team, Enterprise, one-off monthly project pricing, PowerPoint export, analytics, and credit-card-required trials.
+- Presentations.AI pricing for Starter, Pro, Gold, PowerPoint/PDF exports, brand customization, analytics, and the live credit discrepancy.
+- Napkin AI pricing for Free, Plus, Pro credits, PPT/SVG export, branding, fonts, and team billing.
+- Decktopus pricing and FAQ for annual credits, AI-deck credit cost, Pro/Business pricing, forms, analytics, custom domains, webhooks, and refund caveats.
+- Canva AI and Canva AI Product Terms for Canva AI 2.0 positioning, operational AI usage limits, output ownership, licensed-content exceptions, AI-audio exceptions, privacy controls, and accuracy-review responsibility.
+- Prezi pricing and plan-support routes plus Gemini in Slides help for current route visibility and Google Workspace-adjacent presentation caveats.
+
+### 3. Scope
+
+Included: `src/content/categories/ai-presentation.md`, AI Presentation source-registry rows, homepage, tools index, categories index, explore hub, LLM manifests, `PAGE_REFRESH_LEDGER.md`, and this plan.
+
+Excluded: broad presentation-tool page rewrites, comparison rewrites, the full presentation buyer-guide rewrite, rendered template changes, browser QA, and full build unless scoped validation exposes a runtime issue.
+
+### 4. Verification Plan
+
+- Regenerate and check `PAGE_REFRESH_LEDGER.md`.
+- Run focused AI Presentation stale/source sweeps.
+- Run `npm run audit:sources`, `npm run audit:facts`, `npm run check:links`, `npm run check:quick`, and scoped `git diff --check`.
+- Skip full build/browser QA because this is content, source-registry, ledger, and crawl-surface maintenance with no template/runtime change, and the user asked to avoid excessive builds.
+
+### 5. Progress
+
+- 2026-06-15: Verified the current AI Presentation source cluster and updated the category, source registry, top-layer metadata, and LLM crawl surfaces. Validation is next.
+- 2026-06-15: Validation passed with `npm run ledger:pages`, `npm run ledger:pages:check`, focused AI Presentation stale/source sweeps, `npm run audit:sources`, `npm run audit:facts`, `npm run check:links`, `npm run check:quick`, and scoped `git diff --check`. `git diff --check` emitted only existing CRLF normalization warnings and exited clean.
+
+### 6. Final Report
+
+Completed on 2026-06-15. `/categories/ai-presentation/` now carries June 15 verification, updated meta copy, and sharper buyer guidance around Gamma Free/Plus/Pro/Ultra gates, Gamma advanced-use credits, Pitch AI credits/export/branding gates, Canva AI Product Terms and operational usage limits, Beautiful.ai trial/pricing, Decktopus credit economics, Presentations.AI's live credit discrepancy, Napkin AI visual-credit lanes, and Prezi route-check caveats. The source registry now includes or refreshes stable IDs for Gamma subscription help, Google Slides/Gemini help, Prezi plan support, Beautiful.ai AI presentations, Presentations.AI official/pricing pages, and the current presentation-tool pricing sources.
+
+No full build or browser QA was run because this was content, source-registry, ledger, and crawl-surface maintenance with no template/runtime change, and the user asked to avoid excessive builds.
+
+Residual risk: presentation-tool pricing, AI credits, exports, brand controls, and usage limits can change quickly; recheck official plan/help/terms pages before making stronger plan-specific procurement claims.
+
+## ExecPlan: June 15 2026 AI Music Rights And Export Refresh
+
+### 1. Objective
+
+Refresh `/categories/ai-music/` because current June 15 source checks changed the practical buyer standard for music generators. The goal is to make AI Music less demo-led and more procurement-safe: rights timing, export availability, credit economics, Content ID/standalone-release exclusions, source-visible pricing, and licensed-data/model-infrastructure fit need to drive the recommendation.
+
+### 2. Sources Checked
+
+- Suno pricing plus Suno plan-type, ownership, and distribution-rights help pages for current Pro/Premier commercial-use timing.
+- Udio credit-limit help and UMG partnership-change help for current credits and disabled download/export status.
+- ElevenLabs Music v2 announcement and Music API compose docs for current music workflow/API positioning.
+- AIVA pricing for current Free, Standard, and Pro scoring-plan pricing and monetization positioning.
+- Boomy pricing and terms routes for source-visible pricing and terms availability; both required caveats because current plan/terms text was not visible in the text crawl.
+- Mubert Render pricing for license-certificate, Content ID, standalone streaming, and stock-library restrictions.
+- Stable Audio pricing route and Stable Audio 3.0 launch post for current pricing visibility, open weights, API/enterprise positioning, and licensed-data claims.
+
+### 3. Scope
+
+Included: `src/content/categories/ai-music.md`, AI Music source-registry rows, homepage, tools index, categories index, explore hub, LLM manifests, `PAGE_REFRESH_LEDGER.md`, and this plan.
+
+Excluded: broad tool-page rewrites, AI Music ranking rebuilds, rendered template changes, browser QA, and full build unless scoped validation exposes a runtime issue.
+
+### 4. Verification Plan
+
+- Regenerate and check `PAGE_REFRESH_LEDGER.md`.
+- Run focused AI Music stale/source sweeps.
+- Run `npm run audit:sources`, `npm run audit:facts`, `npm run check:links`, `npm run check:quick`, and scoped `git diff --check`.
+- Skip full build/browser QA because this is content, source-registry, ledger, and crawl-surface maintenance with no template/runtime change, and the user asked to avoid excessive builds.
+
+### 5. Progress
+
+- 2026-06-15: Verified current Suno, Udio, ElevenLabs Music, AIVA, Boomy, Mubert, and Stable Audio source cluster. Updated the AI Music category, source registry, top-layer metadata, and LLM crawl surfaces. Validation is next.
+- 2026-06-15: Validation passed with `npm run ledger:pages`, `npm run ledger:pages:check`, focused AI Music stale/source sweeps, `npm run audit:sources`, `npm run audit:facts`, `npm run check:links`, `npm run check:quick`, and scoped `git diff --check`. `git diff --check` emitted only existing CRLF normalization warnings and exited clean.
+
+### 6. Final Report
+
+Completed on 2026-06-15. `/categories/ai-music/` now carries June 15 verification, updated buyer guidance around Suno paid-rights timing, Udio disabled downloads during the UMG transition, ElevenLabs Music/API positioning, AIVA scoring plans, Mubert Content ID/standalone/stock-site restrictions, Stable Audio 3.0 open weights/API/enterprise lanes, and Boomy/Stable Audio pricing visibility caveats. The source registry now includes or refreshes stable IDs for Suno plan/ownership/distribution docs, Udio credit/download-transition docs, ElevenLabs Music API, AIVA/Boomy/Mubert/Stable Audio pricing, and Stable Audio 3.0 launch coverage.
+
+No full build or browser QA was run because this was content, source-registry, ledger, and crawl-surface maintenance with no template/runtime change, and the user asked to avoid excessive builds.
+
+Residual risk: AI music licensing, download availability, pricing visibility, and commercial-use terms can change quickly; recheck official plan/help/terms pages before making stronger commercial-use or distribution claims.
+
+## ExecPlan: June 15 2026 GEO Source-Review Trend Refresh
+
+### 1. Objective
+
+Refresh `/trends/geo-trend/` after the June 15 AI SEO and AI Overviews liability work made the parent GEO trend too focused on visibility dashboards and too soft on source-review governance. The goal is to keep GEO useful for buyers by framing AI visibility as prompt, answer, citation, source-log, and claim-fidelity work.
+
+### 2. Sources Checked
+
+- Writesonic AI Visibility Tracker for current specialist GEO/AI visibility positioning.
+- Semrush AI Visibility Toolkit for current suite-level monitoring language.
+- Ahrefs Brand Radar for current brand-presence tracking positioning.
+- Google Search Central AI features guidance for crawlability, indexing, preview controls, and useful-content framing.
+- Pew Research Center AI-summary click research for the click-compression problem.
+- arXiv AI Overviews publisher-ecosystem measurement paper for citation/support concerns.
+- WIRED AI Overviews liability reporting for the buyer risk created by false generated statements.
+
+### 3. Scope
+
+Included: `src/content/trends/geo-trend.md`, GEO source-registry rows, homepage, trends index, explore hub, LLM manifests, `PAGE_REFRESH_LEDGER.md`, and this plan.
+
+Excluded: broad AI SEO reranking, SEO-tool page rewrites, rendered template changes, browser QA, and full build unless scoped validation exposes a runtime issue.
+
+### 4. Verification Plan
+
+- Regenerate and check `PAGE_REFRESH_LEDGER.md`.
+- Run focused GEO/source sweeps.
+- Run `npm run audit:sources`, `npm run check:links`, `npm run check:quick`, and scoped `git diff --check`.
+- Skip full build/browser QA because this is content, source-registry, ledger, and crawl-surface maintenance with no template/runtime change, and the user asked to avoid excessive builds.
+
+### 5. Progress
+
+- 2026-06-15: Verified the current GEO/AI visibility source cluster and updated the GEO trend, source registry, top-layer metadata, and LLM crawl surfaces. Validation is next.
+- 2026-06-15: Validation passed with `npm run ledger:pages`, `npm run ledger:pages:check`, `npm run audit:sources`, `npm run audit:facts`, `npm run check:links`, `npm run check:quick`, and scoped `git diff --check`. An initial `npm run check:quick` caught invalid `research` source types for arXiv/Pew; fixed to the allowed `third_party` registry type and re-ran clean.
+
+### 6. Final Report
+
+Completed on 2026-06-15. `/trends/geo-trend/` now carries a June 15 verification date, a sharper meta description, current source stamps, and explicit buyer guidance around prompt capture, answer text, cited URLs, source text, model-synthesis boundaries, false-claim escalation, and liability-aware source review. The source registry now includes stable IDs for Writesonic AI Visibility Tracker, Semrush AI Visibility Toolkit, Google Search Central AI features, Pew click research, and the arXiv AI Overviews publisher-ecosystem paper, alongside the existing Ahrefs and WIRED sources.
+
+No full build or browser QA was run because this was content, source-registry, ledger, and crawl-surface maintenance with no template/runtime change, and the user asked to avoid excessive builds.
+
+Residual risk: GEO and AI Overview reporting are moving quickly; recheck Google Search Central, vendor AI-visibility docs, and legal/source-fidelity reporting before making stronger product or liability claims.
+
+## ExecPlan: June 15 2026 NotebookLM Source Grounding And Artifact Refresh
+
+### 1. Objective
+
+Refresh `/tools/notebooklm/` because the page still carried June 12 verification while Google's current NotebookLM upgrade table and June secondary reporting materially affect buyer guidance. The goal is to keep NotebookLM as the source-grounded notebook recommendation while making the buying rule sharper: use discovery and Deep Research to build a source pack faster, not to skip source-quality review.
+
+### 2. Sources Checked
+
+- NotebookLM upgrade help for Standard, Plus, Pro, Ultra 20 TB, Ultra 30 TB limits, Deep Research, Audio/Video Overviews, Studio artifacts, data handling, Cloud, and Workspace routes.
+- Google AI Plans for regional Plus/Pro/Ultra packaging and NotebookLM access language.
+- NotebookLM app entry point for official product route verification.
+- The Verge June 2026 NotebookLM update as secondary reporting for source discovery, Antigravity/cloud-computer context, and richer export formats.
+
+### 3. Scope
+
+Included: `src/content/tools/notebooklm.md`, AI Notes, AI Search, and AI Research parent hubs, NotebookLM source-registry rows, homepage, tools index, categories index, explore hub, LLM manifests, `PAGE_REFRESH_LEDGER.md`, and this plan.
+
+Excluded: broad AI Notes reranking, NotebookLM comparison rewrites, rendered template changes, browser QA, and full build unless scoped validation exposes a runtime issue.
+
+### 4. Verification Plan
+
+- Regenerate and check `PAGE_REFRESH_LEDGER.md`.
+- Run focused NotebookLM stale/source sweeps.
+- Run `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, `npm run check:quick`, and scoped `git diff --check`.
+- Skip full build/browser QA because this is content/data/crawl-surface maintenance and the user asked to avoid excessive builds.
+
+### 5. Progress
+
+- 2026-06-15: Verified the current NotebookLM public upgrade table, Google AI Plans, official app route, and secondary June NotebookLM update reporting. Updated the NotebookLM page, AI Notes, AI Search, AI Research, source registry, and top-layer metadata. Validation is next.
+- 2026-06-15: Validation passed with `npm run ledger:pages`, `npm run ledger:pages:check`, targeted NotebookLM stale/positive/source-registry sweeps, scoped `git diff --check`, `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, and `npm run check:quick`.
+
+### 6. Final Report
+
+Completed on 2026-06-15. `/tools/notebooklm/` now carries a June 15 verification date, corrected public pricing/source registry mapping, an added privacy/data-handling fact, current Standard/Plus/Pro/Ultra limit guidance, Deep Research and Studio artifact language, and a clearer source-review rule for discovered sources. AI Notes, AI Search, and AI Research now keep NotebookLM as the source-grounded notebook lane while warning that discovery and Deep Research still require source-quality review.
+
+No full build or browser QA was run because this was content, source-registry, ledger, and crawl-surface maintenance with no template/runtime change, and the user asked to avoid excessive builds.
+
+Residual risk: NotebookLM plan availability, regional Google AI pricing, Workspace/Cloud eligibility, Deep Research limits, and June update rollout scope can change quickly; recheck official Google help/plan pages before making stronger plan-specific claims.
+
+## ExecPlan: June 15 2026 Comet Browser Assistant Refresh
+
+### 1. Objective
+
+Refresh `/tools/comet/` because the Perplexity and AI Search June 15 updates made the standalone Comet buyer page slightly too soft on plan capacity and delegated-action controls. The goal is to keep Comet in the AI browser lane while making the practical buying rule clearer: start free, upgrade only for real Comet Agent/Max Assistant/Computer/team-control constraints, and require approval for sensitive web actions.
+
+### 2. Sources Checked
+
+- Perplexity Comet for current platform availability and browser-assistant task examples.
+- Perplexity Enterprise pricing for Comet Assistant, Comet Agent limits, Computer credits, and Enterprise controls.
+- Perplexity Max help for Max Assistant on Comet and individual Max pricing.
+- Perplexity API privacy/security docs for current security and data-control posture.
+
+### 3. Scope
+
+Included: `src/content/tools/comet.md`, AI Search parent hub, Comet source-registry row, homepage, tools index, categories index, explore hub, LLM manifests, `PAGE_REFRESH_LEDGER.md`, and this plan.
+
+Excluded: broad AI Search reranking, Comet comparisons, rendered template changes, browser QA, and full build unless scoped validation exposes a runtime issue.
+
+### 4. Verification Plan
+
+- Regenerate and check `PAGE_REFRESH_LEDGER.md`.
+- Run focused Comet stale/source sweeps.
+- Run `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, `npm run check:quick`, and scoped `git diff --check`.
+- Skip full build/browser QA because this is content/data/crawl-surface maintenance and the user asked to avoid excessive builds.
+
+### 5. Progress
+
+- 2026-06-15: Verified current Comet platform availability, Comet/Comet Agent/Max Assistant positioning, paid capacity, Computer credits, and privacy/security sources. Updated Comet page, AI Search parent guidance, source registry, and top-layer metadata. Validation is next.
+- 2026-06-15: Validation passed with `npm run ledger:pages`, `npm run ledger:pages:check`, targeted Comet stale/positive/source-registry sweeps, scoped `git diff --check`, `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, and `npm run check:quick`.
+
+### 6. Final Report
+
+Completed on 2026-06-15. `/tools/comet/` now carries a June 15 verification date, a current price-history/control refresh entry, precise Perplexity Comet and Enterprise pricing source IDs, a free-first upgrade rule, and explicit approval guidance for email, finance, shopping, account, file, and checkout actions. AI Search now frames Comet as the browser workflow lane while warning that paid capacity matters only when Comet Agent, Max Assistant, or Computer limits block real work.
+
+No full build or browser QA was run because this was content, source-registry, ledger, and crawl-surface maintenance with no template/runtime change, and the user asked to avoid excessive builds.
+
+Residual risk: Comet platform availability, assistant limits, Computer credits, and Enterprise controls can change quickly; recheck official Perplexity pages before making stronger plan-specific automation claims.
+
+## ExecPlan: June 15 2026 Perplexity Search Risk And Agent Controls Refresh
+
+### 1. Objective
+
+Refresh `/tools/perplexity/` after the June 15 AI search liability coverage made Perplexity's child page slightly stale against the AI Search parent hub. The goal is to keep Perplexity as the cited-answer-engine recommendation while making the buyer standard clearer: citations help, but customer-facing or publishable AI search still needs source logs, source-quality review, action approvals, and API/tool budget caps.
+
+### 2. Sources Checked
+
+- Perplexity Enterprise pricing for Pro, Enterprise Pro, Enterprise Max, Computer credits, Comet Agent, usage limits, data controls, and team controls.
+- Perplexity Max help page for the individual Max price and positioning.
+- Perplexity Comet for current platform availability and browser-assistant task examples.
+- Perplexity API pricing docs for Search API, Sonar, Pro Search, embeddings, search-context pricing, and variable Deep Research/API cost examples.
+- Perplexity Sonar Pro and media docs for context length and media-response behavior.
+- Perplexity Agent API tools docs for web_search, fetch_url, sandbox/tool behavior, and search-context token budget controls.
+- Perplexity API privacy/security and Perplexity security pages for zero-data-retention API posture, no-training claims, compliance posture, access controls, audit logs, and security-program language.
+
+### 3. Scope
+
+Included: `src/content/tools/perplexity.md`, AI Search parent hub, Perplexity source-registry rows, homepage, tools index, categories index, explore hub, LLM manifests, `PAGE_REFRESH_LEDGER.md`, and this plan.
+
+Excluded: broad search-tool reranking, comparison rewrites, rendered template changes, browser QA, and full build unless scoped validation exposes a runtime issue.
+
+### 4. Verification Plan
+
+- Regenerate and check `PAGE_REFRESH_LEDGER.md`.
+- Run focused Perplexity stale/source sweeps.
+- Run `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, `npm run check:quick`, and scoped `git diff --check`.
+- Skip full build/browser QA because this is content/data/crawl-surface maintenance and the user asked to avoid excessive builds.
+
+### 5. Progress
+
+- 2026-06-15: Verified current Perplexity pricing, Max, Enterprise, Comet, API pricing, Sonar Pro, media, Agent API tools, API privacy/security, and security sources. Edits in progress.
+- 2026-06-15: Updated Perplexity structured facts, visible buyer copy, AI Search parent guidance, Perplexity source-registry rows, homepage/tools/categories/explore metadata, LLM manifests, and `PAGE_REFRESH_LEDGER.md`.
+- 2026-06-15: Validation passed with `npm run ledger:pages`, `npm run ledger:pages:check`, focused Perplexity stale/positive sweeps, scoped `git diff --check`, `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, and `npm run check:quick`.
+
+### 6. Final Report
+
+Completed on 2026-06-15. `/tools/perplexity/` now carries a current June 15 verification date, a no-price-change pricing history entry, precise Perplexity source IDs, current Max/Comet/Computer/API/security source posture, and clearer buyer guidance that citations are source trails rather than proof. AI Search now keeps Perplexity as the cited-answer-engine pick while adding source-log, review-owner, approval, and budget-cap caveats for customer-facing AI search.
+
+No full build or browser QA was run because this was content, source-registry, ledger, and crawl-surface maintenance with no template/runtime change, and the user asked to avoid excessive builds.
+
+Residual risk: Perplexity's app UI, model picker, Comet/Computer limits, API pricing, and Enterprise controls can change quickly; recheck official pricing/docs before making stronger plan-specific or production-automation claims.
+
+## ExecPlan: June 15 2026 Visa ChatGPT Agent Payments Coverage
+
+### 1. Objective
+
+Cover the June 2026 Visa/ChatGPT agent-payments signal in a source-backed, buyer-useful way. The goal is to make AiPedia current on agent commerce moving from shopping recommendations toward checkout while preserving trust: no claim of fully autonomous availability, clear human-approval guidance, and explicit spend-control/token/dispute-log requirements.
+
+### 2. Sources Checked
+
+- AP June 10, 2026 Visa/ChatGPT payments reporting.
+- Visa Intelligent Commerce current product page.
+- Visa Intelligent Commerce Connect announcement.
+
+### 3. Scope
+
+- Added standalone news coverage for Visa/ChatGPT payments.
+- Refreshed the durable agent-commerce trend with the ChatGPT payment route and buyer checklist.
+- Updated ChatGPT, OpenAI, and AI Chatbots surfaces with a narrow commerce-control watch-out.
+- Inspected/updated affected top-layer discovery and crawler surfaces: homepage, news archive, RSS, trends index, tools index, categories index, companies index, explore hub, and LLM manifests.
+- Page-refresh ledger and OG generation to be completed by scoped scripts.
+
+### 4. Verification Plan
+
+- Generate OG assets for the new news article.
+- Regenerate and check `PAGE_REFRESH_LEDGER.md`.
+- Run news/content/source/fact/link checks plus `npm run check:quick`.
+- Avoid full build unless scoped checks expose rendered/runtime risk, because this is content/crawl-surface work and the user asked to avoid excessive builds.
+
+### 5. Status
+
+Completed on 2026-06-15. Added the Visa/ChatGPT agent-payments news article; refreshed the June 10 AI news desk, agent-commerce trend, ChatGPT tool page, OpenAI company profile, and AI Chatbots parent hub; aligned homepage, news/RSS, trends/tools/categories/companies/explore indexes, LLM manifests, `PAGE_REFRESH_LEDGER.md`, and new OG assets.
+
+Validation passed: `node scripts/generate-og-news.mjs 2026-06-10-openai-visa-chatgpt-agent-payments`, `npm run ledger:pages`, `npm run ledger:pages:check`, `npm run check:news`, `npm run audit:sources`, `npm run audit:facts`, `npm run check:links`, `npm run check:quick`, scoped `git diff --check`, and `node scripts/generate-og-news.mjs --check 2026-06-10-openai-visa-chatgpt-agent-payments`.
+
+Residual risk: Visa Intelligent Commerce is still marked as in deployment, and the AP story is the ChatGPT-specific reporting source. Future updates should prioritize official OpenAI product docs, actual ChatGPT UI rollout details, merchant availability, card-linking controls, issuer policy, and dispute/chargeback handling before making stronger availability claims.
+
+## ExecPlan: June 15 2026 OpenAI Ona Codex Persistent-Agent Coverage
+
+### 1. Objective
+
+Add the missing June 11 OpenAI/Ona Codex acquisition signal to AiPedia's source-backed news and buyer surfaces. The story matters because coding-agent competition is moving from model quality alone to persistent execution, customer-controlled cloud workspaces, scoped credentials, audit logs, review gates, and budget control for long-running agents.
+
+### 2. Scope
+
+Included: new news article, June 11 AI news desk, `/tools/codex/`, AI Coding parent hub, homepage/news/RSS/LLM crawl surfaces, `PAGE_REFRESH_LEDGER.md`, and this plan.
+
+Excluded: broad Codex pricing rewrite, rendered template changes, browser QA, deployment work, and full build unless scoped checks expose a runtime issue.
+
+### 3. Current Sources
+
+- OpenAI announcement dated June 11, 2026: OpenAI agreed to acquire Ona, with the transaction subject to closing conditions and regulatory approvals.
+- OpenAI says Codex has more than 5 million weekly users and that Ona brings secure, persistent customer-controlled environments for long-running agents.
+- Ona announcement dated June 11, 2026: Ona frames the deal around cloud agents, customer-controlled environments, scoped credentials, audit trails, orchestration, runtime AI security, and cross-device work.
+- Current OpenAI Codex product page and pricing docs preserve the Codex surface and pricing context: Codex is included in ChatGPT Free/Go/Plus/Pro/Business/Edu/Enterprise, Pro starts at $100/month, and usage/credits remain token-sensitive.
+
+### 4. Verification Plan
+
+- Add standalone buyer-facing article and link it from the June 11 desk.
+- Update Codex and AI Coding buyer guidance with pending-close caveats and runtime-control checklist.
+- Update crawl/top-layer metadata, regenerate page ledger and news OG assets.
+- Run scoped no-permission checks: ledger, news validation, link/source/fact audits, quick checks, and scoped `git diff --check`. Skip full build because this is content/crawl-surface maintenance.
+
+### 5. Progress
+
+- 2026-06-15: Verified OpenAI/Ona/Codex current sources through official pages.
+- 2026-06-15: Added `2026-06-11-openai-acquires-ona-codex-persistent-agents.md`, refreshed June 11 desk, updated Codex page, AI Coding hub, homepage/news/RSS/LLM crawl surfaces, and this plan. Validation in progress.
+- 2026-06-15: Validation passed with `node scripts/generate-og-news.mjs 2026-06-11-openai-acquires-ona-codex-persistent-agents`, `npm run ledger:pages`, `npm run ledger:pages:check`, `npm run check:news`, focused Ona/Codex sweeps, `npm run audit:sources`, `npm run audit:facts`, `npm run check:links`, `npm run check:quick`, and scoped `git diff --check`. No full build or browser QA was run because this was content/crawl-surface maintenance with no template/runtime change.
+
+### 6. Final Report
+
+Completed on 2026-06-15. AiPedia now has standalone OpenAI/Ona Codex persistent-agent coverage, the June 11 desk links the acquisition alongside Codex rate-limit banking, `/tools/codex/` carries the 5M+ weekly-user signal and pending-close persistent-execution caveat, and AI Coding now flags runtime control, scoped credentials, logs, review gates, and budget limits as coding-agent buying criteria. Homepage, news archive, RSS, LLM surfaces, OG assets, and `PAGE_REFRESH_LEDGER.md` are aligned.
+
+Residual risk: the Ona deal is not closed, so Codex buyer copy should keep the acquisition as a roadmap/control-plane signal until OpenAI exposes integrated controls in customer accounts.
+
+## ExecPlan: June 15 2026 Replit Agent Skills And Safety Refresh
+
+### 1. Objective
+
+Refresh `/tools/replit-agent/` after `npm run editorial:weekly` moved it to the next due-soon item. Current June 2026 official Replit sources preserve the existing Starter/Core/Pro/Enterprise pricing math, but they add useful buyer guidance around Agent Customization, Skills, Package Firewall, app-testing scope, Starter feature limits, and Pro credit rollover.
+
+### 2. Scope
+
+Included: `src/content/tools/replit-agent.md`, Replit source-registry rows, AI Coding parent hub, vibe-coding trend, homepage/tools/categories metadata, LLM crawl surfaces, `PAGE_REFRESH_LEDGER.md`, and this plan.
+
+Excluded unless validation requires it: full Replit comparison rewrites, broad coding-tool reranking, rendered template changes, browser QA, and full build.
+
+### 3. Current Sources
+
+- Replit pricing: Starter remains free; Core remains $20/month billed annually with $25 monthly credits; Pro remains $95/month billed annually with $100 monthly credits; Enterprise remains custom; pricing page still warns that Replit Agent is probabilistic.
+- Replit Agent product and Agent 4 pages: Agent remains the browser app-builder route for production-ready apps, Design Canvas, mobile/web/decks/videos, service integrations, task sequencing, and parallel agents.
+- Replit Agent docs and billing docs: overview availability now separates Starter/Core/Pro feature gates, published apps, active background tasks, Plan Mode, connectors, task planning, and Turbo; AI billing docs say Pro credits roll over one month and all Agent interactions are billable, including Plan Mode text guidance.
+- Replit Agent Modes and App Testing docs: Lite/Economy/Power remain current; High effort is an opt-in toggle; Turbo is Pro/Enterprise, Power-only, faster, and can cost up to 6x Power; App Testing is currently scoped to Full Stack JavaScript and Streamlit Python web apps and is effort-billed.
+- Replit Custom Skills blog/docs: June 10/11 Replit launched Agent Customization with workspace Custom Instructions for Pro/Enterprise and Skills across plans, using `SKILL.md`, scoped loading, and team playbooks.
+- Replit Package Firewall blog: June 9/10 Replit launched Socket-backed Package Firewall, on by default, to block malicious or compromised dependencies during install.
+
+### 4. Verification Plan
+
+- Update Replit Agent structured facts, visible buyer copy, recent-development notes, AI Coding parent guidance, vibe-coding trend, source registry, top-layer crawl surfaces, and page ledger.
+- Run focused Replit stale/positive sweeps.
+- Run `npm run ledger:pages`, `npm run ledger:pages:check`, `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, `npm run check:quick`, and scoped `git diff --check`.
+- Skip full build/browser QA unless scoped checks expose rendered/runtime risk because this is content/data/crawl-surface maintenance.
+
+### 5. Progress
+
+- 2026-06-15: Opened current Replit pricing, Agent product page, Agent 4 page, Agent overview docs, Agent Modes, Plan Mode, App Testing, Web Search, Agent Skills, AI billing docs, Pro launch, effort-based pricing, Custom Skills, Package Firewall, Shopify storefront, and Databricks integration sources. Edits in progress.
+- 2026-06-15: Updated Replit Agent structured facts, visible buyer copy, pricing/plan caveats, recent-development notes, AI Coding parent guidance, vibe-coding trend guidance, Replit source-registry rows, homepage/tools/categories/guides/trends metadata, LLM crawl surfaces, and `PAGE_REFRESH_LEDGER.md`.
+- 2026-06-15: Validation passed with `npm run ledger:pages`, `npm run ledger:pages:check`, focused Replit stale/positive sweeps, scoped `git diff --check`, `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, and `npm run check:quick`. No full build or browser QA was run because this was source-backed content/data/crawl-surface maintenance only, and the user asked to avoid excessive builds.
+
+### 6. Final Report
+
+Completed on 2026-06-15. `/tools/replit-agent/` now keeps the current Starter/Core/Pro/Enterprise price ladder but adds June 2026 buyer-critical detail: Starter feature gates, all-Agent-interaction billing, Pro one-month credit rollover, Lite/Economy/Power/High effort/Turbo cost boundaries, App Testing's current Full Stack JavaScript and Streamlit scope, Agent Customization with Custom Instructions and `SKILL.md` Skills, and Socket-backed Package Firewall caveats. AI Coding, vibe-coding, source registry, top-layer metadata, LLM surfaces, and `PAGE_REFRESH_LEDGER.md` are aligned.
+
+Residual risk: Replit's hosted pricing, model routing, and feature gates can change quickly; App Testing scope should be rechecked before telling buyers it supports additional frameworks; Package Firewall is useful dependency screening, not a complete supply-chain guarantee.
+
+## ExecPlan: June 15 2026 Hailuo 2.3 API Boundary Recheck
+
+### 1. Objective
+
+Recheck `/tools/hailuo/` after `npm run editorial:weekly` moved Hailuo AI to the next due-soon item. Current June 2026 official Hailuo/MiniMax sources preserve the June 14 pricing math, but they expose two useful buyer refinements: Hailuo's consumer site now highlights Hailuo Agent/Unified AI Space, and the Hailuo 2.3 model page says the 2.3 series currently does not support first-and-last-frame generation even though the broader MiniMax video API exposes start/end-frame routes.
+
+### 2. Scope
+
+Included: `src/content/tools/hailuo.md`, Hailuo/MiniMax source-registry rows, AI Video parent hub, Hailuo/Kling comparison Hailuo-side copy, `/tools/`, `/categories/`, `/compare/`, homepage metadata, LLM crawl surfaces, `PAGE_REFRESH_LEDGER.md`, and this plan.
+
+Excluded unless validation requires it: full Kling-side comparison re-verification, broad video ranking changes, logo work, browser QA, and full build.
+
+### 3. Current Sources
+
+- Hailuo official site: current navigation promotes Create Video, Create Image, Hailuo Agent, Unified AI Space, tools/templates, and account-gated Subscribe.
+- Hailuo 2.3 model page: Hailuo 2.3 remains the pro-tier T2V/I2V model; Hailuo 2.3-Fast is the quicker, lower-cost I2V route; first-and-last-frame video is not currently supported by the Hailuo 2.3 series; example Hailuo 2.3 credits include 25/50/50 credits for 768p 6s, 768p 10s, and 1080p 6s, subject to plan availability.
+- MiniMax Hailuo 2.3 launch: Hailuo 2.3 / 2.3 Fast remain the current video model family, with lower-cost Fast positioning and Media Agent rollout.
+- MiniMax video API docs: video generation remains asynchronous and supports text, image, first-frame, last-frame, and reference-image routes, with MiniMax-Hailuo-2.3, MiniMax-Hailuo-2.3-Fast, and MiniMax-Hailuo-02 listed.
+- MiniMax pricing docs: pay-as-you-go video rates, one-month video packages, unit deductions, token-plan/credit-pack coverage, and dynamic Hailuo app pricing caveats remain current.
+
+### 4. Verification Plan
+
+- Update Hailuo structured facts, buyer copy, AI Video hub, Hailuo/Kling comparison, source registry, top-layer crawl surfaces, and page ledger.
+- Run focused Hailuo stale/positive sweeps.
+- Run `npm run ledger:pages`, `npm run ledger:pages:check`, `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, `npm run check:quick`, and scoped `git diff --check`.
+- Skip full build/browser QA unless scoped checks expose rendered/runtime risk because this is content/data/crawl-surface maintenance.
+
+### 5. Progress
+
+- 2026-06-15: Opened current Hailuo official site, Hailuo subscribe page, Hailuo 2.3 model page, MiniMax Hailuo 2.3 launch, MiniMax video API docs, pay-as-you-go pricing, video package pricing, and token-plan pricing. Edits in progress.
+- 2026-06-15: Updated Hailuo structured facts, visible buyer copy, AI Video parent guidance, Hailuo/Kling comparison copy, Hailuo/MiniMax source-registry dates, homepage/tools/categories/compare metadata, LLM crawl surfaces, and `PAGE_REFRESH_LEDGER.md`.
+- 2026-06-15: Validation passed with `npm run ledger:pages`, `npm run ledger:pages:check`, focused Hailuo stale/API wording sweeps, scoped `git diff --check`, `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, `npm run check:quick`, and `npm run editorial:weekly`. The queue now lists Replit Agent as the next due-soon item instead of Hailuo.
+
+### 6. Final Report
+
+Completed on 2026-06-15. `/tools/hailuo/` now keeps the June 14 pricing math but adds the current Hailuo Agent/Unified AI Space and MiniMax Media Agent positioning, app-credit examples from the Hailuo 2.3 model page, and the important route caveat that the broader MiniMax video API exposes first-frame/last-frame/reference-image routes while Hailuo's own 2.3 model page says current 2.3-series generation does not support first-and-last-frame generation. AI Video, Hailuo/Kling, source registry, top-layer metadata, LLM surfaces, and `PAGE_REFRESH_LEDGER.md` are aligned.
+
+No full build or browser QA was run because this was content, source-registry, ledger, and crawl-surface maintenance with no template/runtime change.
+
+Residual risk: the Hailuo subscribe page remains dynamic/account-gated, and exact app-plan allowances, watermarks, regional availability, commercial terms, and route-level controls should be checked inside a live account before high-volume purchase guidance.
+
+## ExecPlan: June 15 2026 D-ID Studio Rounding Recheck
+
+### 1. Objective
+
+Recheck `/tools/d-id/` after the weekly queue moved D-ID back to the next due-soon item. Current June 2026 official sources still support the June 14 visual-agent buyer story, but the Studio pricing FAQ now makes one useful budgeting detail explicit: video usage is rounded to the nearest 15-second interval.
+
+### 2. Scope
+
+Included: `src/content/tools/d-id.md`, D-ID source-registry rows, AI Video parent hub, avatar-video buyer guide, `/tools/`, `/categories/`, `/guides/`, homepage metadata, LLM crawl surfaces, `PAGE_REFRESH_LEDGER.md`, and this plan.
+
+Excluded unless validation requires it: broad avatar-guide ranking changes, comparison rewrites, logo work, browser QA, and full build.
+
+### 3. Current Sources
+
+- D-ID Visual Agents: Visual Agents remain positioned as real-time avatars with knowledge, webhooks, embeddable deployment, multilingual interaction, sub-two-second latency, and 200 free conversation sessions before plan-dependent session limits.
+- D-ID Agentic Videos: Agentic Videos remain a scripted-plus-interactive surface where viewers can ask questions by voice or chat and answers are grounded in the script plus supplemental knowledge.
+- D-ID Studio pricing: Trial/Lite watermark language, same-balance API minutes, and the 15-second video-usage rounding rule are current.
+- D-ID API pricing/docs: API remains routed through Studio pricing/developer docs rather than a scrape-stable public plan table.
+- D-ID affiliate terms: selected-user payout and sharing restrictions remain current.
+
+### 4. Verification Plan
+
+- Update D-ID structured facts, buyer copy, parent hub, avatar guide, source registry, top-layer crawl surfaces, and page ledger.
+- Run focused D-ID stale/positive sweeps.
+- Run `npm run ledger:pages`, `npm run ledger:pages:check`, `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, `npm run check:quick`, and scoped `git diff --check`.
+- Skip full build/browser QA unless scoped checks expose rendered/runtime risk because this is content/data/crawl-surface maintenance.
+
+### 5. Progress
+
+- 2026-06-15: Opened current D-ID Visual Agents, Agentic Videos, Studio pricing, API pricing, developer docs, and affiliate terms. Edits in progress.
+- 2026-06-15: Updated D-ID verification dates, Studio 15-second rounding guidance, AI Video hub note/source dates, avatar-video buyer guide D-ID slice, D-ID source-registry dates, homepage/tools/categories/guides metadata, and LLM crawl surfaces.
+- 2026-06-15: Validation passed with `npm run ledger:pages`, `npm run ledger:pages:check`, focused D-ID stale/positive sweeps, `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, `npm run check:quick`, scoped `git diff --check`, and `npm run editorial:weekly`. The queue now lists Hailuo AI as the next due-soon item instead of D-ID.
+
+### 6. Final Report
+
+Completed on 2026-06-15. This was a small but material D-ID correction: the official Studio pricing FAQ now supports the 15-second video-usage rounding rule, so `/tools/d-id/`, AI Video, the avatar-video buyer guide, top-layer metadata, LLM surfaces, source registry, and the page ledger now include that budgeting caveat alongside same-balance API minutes, Trial/Lite watermarks, 200 free conversation sessions, 0.5 credit per 30 seconds agent metering, and selected-user affiliate terms.
+
+No full build or browser QA was run because this was content, source-registry, ledger, and crawl-surface maintenance with no template/runtime change.
+
+Residual risk: D-ID's public plan cards remain dynamic and API packaging still routes buyers through live pricing/docs rather than a scrape-stable static table. Future refreshes should recheck exact Studio/API plan limits, watermarks, agent sessions, and whether the public page exposes stable plan-card details.
+
+## ExecPlan: June 15 2026 Cody No-Material-Change Enterprise Refresh
+
+### 1. Objective
+
+Refresh `/tools/cody/` after the weekly queue moved Cody to the next due-soon item. Current June 2026 Sourcegraph sources appear to preserve the existing enterprise-only buyer story, with one useful Marketplace nuance: the VS Code listing still warns Cody is unavailable for non-enterprise users but also carries stale Cody Pro/model-option copy.
+
+### 2. Scope
+
+Included: `src/content/tools/cody.md`, Sourcegraph/Cody source-registry rows, AI Coding parent hub, `/tools/`, `/categories/`, homepage metadata, LLM crawl surfaces, `PAGE_REFRESH_LEDGER.md`, and this plan.
+
+Excluded unless validation requires it: Cody comparison rewrites, Amp page refresh, browser QA, and full build.
+
+### 3. Current Sources
+
+- Sourcegraph pricing: Enterprise still starts at $16K and includes AI-feature credits, org-wide credit pooling, no monthly credit expiry, rollover on renewal, MCP/API/CLI access, single-tenant cloud, self-hosted option, and security/admin controls.
+- Sourcegraph Cody docs: Cody remains supported on Sourcegraph Enterprise and available through VS Code, JetBrains, Visual Studio, Web app, and Cody CLI, using Sourcegraph's advanced Search API for local and remote codebase context.
+- Sourcegraph Model Provider docs: Sourcegraph Model Provider/Cody Gateway remains the default/recommended Enterprise AI provider for Cody and Deep Search, with rate limits and quotas tied to the Enterprise license.
+- Sourcegraph AI Terms: last modified January 22, 2026; customer owns inputs/outputs, partner LLMs use zero retention, Sourcegraph collects customer content only to provide the service, and outputs remain customer-reviewed.
+- VS Code Marketplace: listing now shows 852,345 installs, still labels the extension Free, warns Cody is no longer available for non-enterprise users, and still carries stale Cody Pro/model-option wording.
+
+### 4. Verification Plan
+
+- Update Cody structured facts, visible buyer copy, source list, parent hub, source registry, top-layer metadata, LLM surfaces, and page ledger.
+- Run focused Cody stale/positive sweeps.
+- Run `npm run ledger:pages`, `npm run ledger:pages:check`, `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, `npm run check:quick`, and scoped `git diff --check`.
+- Skip full build/browser QA unless scoped checks expose rendered/runtime risk because this is content/data/crawl-surface maintenance.
+
+### 5. Progress
+
+- 2026-06-15: Opened current Sourcegraph pricing, Cody docs, Model Provider docs, AI Terms, VS Code Marketplace listing, and Cody plan-change announcement. Edits in progress.
+- 2026-06-15: Updated Cody verification dates, next-review windows, Marketplace install count/stale-copy warning, price-history note, source list, Sourcegraph source-registry rows, AI Coding parent hub, homepage/tools/categories metadata, LLM crawl surfaces, and `PAGE_REFRESH_LEDGER.md`.
+- 2026-06-15: Validation passed with `npm run ledger:pages`, `npm run ledger:pages:check`, targeted Cody stale/positive sweeps, `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, `npm run check:quick`, scoped `git diff --check`, and `npm run editorial:weekly`. The queue now lists D-ID as the next due-soon item instead of Cody.
+
+### 6. Final Report
+
+Completed on 2026-06-15. This was a no-material-change Sourcegraph refresh with one buyer-warning improvement: Cody remains Sourcegraph Enterprise-only at the current $16K starting-price anchor, and the VS Code Marketplace now shows 852,345 installs while still mixing a non-enterprise warning with stale Cody Pro/model-option copy. `/tools/cody/` and the AI Coding hub now tell buyers to treat Sourcegraph pricing/docs as the source of truth and to avoid reading Marketplace "Free" labels as self-serve availability.
+
+No full build or browser QA was run because this was content, source-registry, ledger, and crawl-surface maintenance with no template/runtime change.
+
+Residual risk: Sourcegraph's Marketplace listing can drift independently from Sourcegraph's pricing/docs. Future refreshes should recheck whether the Cody extension copy removes Cody Pro/model-option language, whether Sourcegraph changes Amp/Cody positioning, and whether Enterprise credits or Sourcegraph Model Provider quotas become more explicit.
+
+## ExecPlan: June 15 2026 Grok Build Coding-Agent Refresh
+
+### 1. Objective
+
+Refresh `/tools/grok/` after current June 2026 xAI sources showed a material classification change: Grok is no longer only a chatbot/search/voice/media/API entry. xAI now documents Grok Build as an interactive and headless coding agent/CLI with skills/plugins, custom models, ACP integration, enterprise deployment guidance, and a Grok Build 0.1 API model.
+
+### 2. Scope
+
+Included: `src/content/tools/grok.md`, AI Chatbots, AI Search, and AI Coding parent hubs, xAI source-registry dates, `/tools/`, `/categories/`, homepage metadata, LLM crawl surfaces, `PAGE_REFRESH_LEDGER.md`, and this plan.
+
+Excluded unless validation requires it: Grok comparison rewrites, buyer-guide rewrites, browser QA, and full build.
+
+### 3. Current Sources
+
+- xAI Grok product page: Free/SuperGrok product path, web/iOS/Android availability, live web/search, multi-agent mode, memory, voice, image generation, and text-to-video positioning up to 15 seconds at 720p.
+- xAI pricing: Free at $0/month, SuperGrok at $30/month, Business/Enterprise paths, Grok Build CLI feature row, SOC 2, no-training, team/admin controls, SSO/SCIM, data retention/residency, CMK, and dedicated data-plane options by tier.
+- xAI model docs: Grok 4.3 remains the current default text model with 1M context and $1.25/M input plus $2.50/M output. Grok Build 0.1 is listed at 256K context and $1/M input plus $2/M output. Voice and Imagine pricing remain listed in the same table.
+- xAI Grok Build docs: Grok Build is documented as a coding agent usable through TUI, headless scripts/bots, and ACP in other apps, with custom model config and API examples.
+- xAI Grok Build enterprise docs: command permissions, sandbox guidance, data lifecycle, and team-level ZDR behavior need review before enterprise rollout.
+
+### 4. Verification Plan
+
+- Update Grok structured facts, buyer copy, price history, source list, related categories, parent hubs, source registry, top-layer comments, and LLM crawl surfaces.
+- Regenerate and check the page refresh ledger.
+- Run focused stale/positive Grok sweeps, source/date checks, `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, and `npm run check:quick`.
+- Skip full build/browser QA unless checks expose rendered/runtime risk because this is content/data/crawl-surface maintenance.
+
+### 5. Progress
+
+- 2026-06-15: Opened current xAI Grok product, pricing, model docs, web/X search docs, code-execution docs, text response storage docs, image/video docs, Grok Build docs, and Grok Build enterprise docs. Edits in progress.
+- 2026-06-15: Updated Grok structured facts, secondary AI Coding category, quick answer, pricing/history, verdict, key facts, pricing table, failure modes, FAQ, source list, AI Chatbots/AI Search/AI Coding parent hubs, xAI source-registry date, homepage/tools/categories metadata, LLM crawl surfaces, and `PAGE_REFRESH_LEDGER.md`.
+- 2026-06-15: Validation passed with `npm run ledger:pages`, `npm run ledger:pages:check`, targeted Grok stale/positive sweeps, `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, `npm run check:quick`, scoped `git diff --check`, and `npm run editorial:weekly`. The queue now lists Cody as the next due-soon item instead of Grok.
+
+### 6. Final Report
+
+Completed on 2026-06-15. `/tools/grok/` now treats Grok Build as a real xAI-native coding-agent lane while preserving the trust warning that teams should benchmark command approvals, sandboxing, ZDR/team settings, account limits, repo-quality output, and stability before rollout. AI Chatbots and AI Search keep Grok's X-native assistant/search role, while AI Coding now includes Grok as a secondary coding-agent/API evaluation option.
+
+No full build or browser QA was run because this was content, source-registry, ledger, and crawl-surface maintenance with no template/runtime change.
+
+Residual risk: Grok Build is new and high-volatility. Future checks should watch for plan-gating, exact CLI limits, Windows support details, enterprise docs hardening, model retirement notices, and whether Grok Build 0.1 remains the API coding model.
+
+## ExecPlan: June 15 2026 Cline Spec Driven Enterprise Refresh
+
+### 1. Objective
+
+Refresh Cline after the editorial queue moved it to the top due-soon item and current June 2026 sources surfaced Cline Spec Driven as a licensed enterprise AI agent platform. The update should preserve Cline's open-source/runtime buyer lane while separating the licensed enterprise/spec-driven lane from the free Open Source path.
+
+### 2. Scope
+
+Included: `src/content/tools/cline.md`, Cline source-registry rows, AI Coding parent hub note/source dates, `/tools/`, `/categories/`, homepage metadata, LLM crawl surfaces, `PAGE_REFRESH_LEDGER.md`, and this plan.
+
+Excluded unless validation requires it: Cline comparison rewrites, browser QA, full build, and broad coding-category redesign.
+
+### 3. Current Sources
+
+- Cline homepage: still frames Cline as an open source agent runtime across IDE, terminal, and SDK, with 8M+ installs, 63.3k GitHub stars, Apache 2.0 positioning, Plan/Act, rules/skills, MCP/plugins, and broad provider support.
+- Cline pricing: Open Source remains free for individual developers with usage-based inference/BYOK; Enterprise remains custom with SSO, centralized billing, RBAC, provider restrictions, team dashboard, audit logs, and coming advanced controls.
+- Cline docs overview: documents IDE, TUI/CLI, Kanban, SDK, JetBrains plugin, explicit approvals, and enterprise security/governance/observability/team management.
+- Cline provider docs and pricing FAQ: provider routing includes Anthropic, Gemini, OpenAI, OpenRouter, Bedrock, Vertex, Groq, Cerebras, Vercel AI Gateway, DeepSeek, and others.
+- Cline SDK permission docs: unlisted tool policies default to enabled and auto-approved, so production buyers need explicit tool policies for writes, shell commands, network, browser, and SDK tools.
+- Cline Spec Driven page: a licensed Cline x LG CNS enterprise AI agent platform with knowledge foundation, spec-driven execution, enterprise deployment, open-weight or cloud LLM deployment, and "no bill shock" token-efficiency positioning.
+
+### 4. Verification Plan
+
+- Update Cline structured facts, body copy, price history, source list, source registry, AI Coding hub, and top-layer crawl surfaces.
+- Regenerate and check the page refresh ledger.
+- Run focused stale/positive Cline sweeps.
+- Run `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, and `npm run check:quick`.
+- Skip full build/browser QA because this is content/data/crawl-surface maintenance with no template/runtime change.
+
+### 5. Progress
+
+- 2026-06-15: Opened current Cline homepage, pricing, docs overview, provider docs, GitHub repository, SDK permission docs, and Spec Driven page. Edits in progress.
+- 2026-06-15: Updated Cline structured facts, tagline, quick answer, price history, Recent Developments, System Verdict, Key Facts, Pricing, Failure Modes, FAQ, source list, source registry, AI Coding hub, homepage/tools/categories metadata, LLM crawl surfaces, and `PAGE_REFRESH_LEDGER.md`.
+- 2026-06-15: Validation passed with `npm run ledger:pages`, `npm run ledger:pages:check`, focused Cline stale/positive sweeps, `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, `npm run check:quick`, `git diff --check`, and `npm run editorial:weekly`. The queue now lists Grok as the next due-soon item instead of Cline.
+
+### 6. Final Report
+
+Completed on 2026-06-15. `/tools/cline/` now separates the free Open Source runtime from the custom Enterprise lane and the licensed Spec Driven enterprise platform with LG CNS. The buyer guidance now says Open Source remains the individual-developer starting point, while Enterprise/Spec Driven should be treated as governance and delivery-platform purchases for SSO, RBAC, audit, provider controls, enterprise context, fixed spec pipelines, deployment boundaries, and token controls.
+
+No full build or browser QA was run because this was content, source-registry, ledger, and crawl-surface maintenance with no template/runtime change.
+
+Residual risk: Spec Driven is a public marketing/product page rather than a static pricing sheet, so future refreshes should look for formal docs, customer proof, deployment terms, and clearer license/procurement details before making stronger enterprise ROI claims.
+
+## ExecPlan: June 15 2026 Qwen High-Volatility No-Change Source Refresh
+
+### 1. Objective
+
+Recheck the highest-priority `editorial:weekly` due-soon item, Qwen, against current June 2026 primary sources without inventing a content change. The goal is to keep volatile hosted-model, pricing, promo, and model-family claims honest after the June 14 refresh.
+
+### 2. Scope
+
+Included: `src/content/tools/qwen.md`, Qwen source-registry `last_checked` dates, AI Chatbots / AI Coding / AI Research parent hub Qwen notes and source dates, `/tools/`, `/categories/`, homepage metadata, LLM crawl surfaces, `PAGE_REFRESH_LEDGER.md`, and this plan.
+
+Excluded unless validation requires it: Qwen comparison rewrites, new news coverage, logo changes, browser QA, and full build.
+
+### 3. Current Sources
+
+- Qwen Cloud model releases: latest Qwen changelog item remains `qwen3.7-max-2026-06-08`, listed June 10, with visual-modal understanding added versus the May 20 snapshot.
+- Qwen3.7-Max marketplace page: public experimentation surface still says pure text-only input/output, 1M context, 991.80K max input, 65.53K max output, built-in tools, and 50% promo display pricing.
+- Qwen Cloud pricing docs: representative pricing still lists qwen3.7-max at $2.50/M input and $7.50/M output, qwen3.7-plus at $0.40/$1.60 through 256K and $1.20/$4.80 from 256K-1M, plus tool fees.
+- Qwen3.7-Max promo page: 50% promotion still says effective until June 22, 2026.
+- Qwen3 blog and Qwen official site: no material change found versus June 14 on the open-weight Qwen3 / model-family positioning.
+
+### 4. Verification Plan
+
+- Update only verification dates, next review windows, source-registry checks, and no-material-change wording.
+- Regenerate and check the page refresh ledger.
+- Run focused positive/stale sweeps for Qwen date updates.
+- Run `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, and `npm run check:quick`.
+- Skip full build/browser QA because the change is content/data/crawl-surface maintenance with no template/runtime change.
+
+### 5. Progress
+
+- 2026-06-15: Opened current Qwen Cloud model releases, pricing docs, Qwen3.7-Max marketplace page, Qwen3.7-Max promo page, Qwen3 blog, and Qwen official site. No material source change found versus the June 14 refresh. Edits in progress.
+- 2026-06-15: Updated Qwen verification dates, high-volatility `next_review_at` windows, no-material-change wording, top price-history row, Qwen source-registry `last_checked` dates, AI Chatbots / AI Coding / AI Research parent notes, homepage/tools/categories metadata, LLM surfaces, and `PAGE_REFRESH_LEDGER.md`.
+- 2026-06-15: Validation passed with `npm run ledger:pages`, `npm run ledger:pages:check`, focused stale/positive Qwen sweeps, source-registry row check, `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, and `npm run check:quick`. `npm run editorial:weekly` now lists Cline as the next due-soon item instead of Qwen.
+
+### 6. Final Report
+
+Completed on 2026-06-15. This was intentionally a no-material-change refresh: Qwen Cloud still shows `qwen3.7-max-2026-06-08` as the latest Qwen changelog item, the qwen3.7-max marketplace page still presents public experimentation as text-only, representative pricing/tool fees stayed unchanged, and the 50% qwen3.7-max promo still points to June 22, 2026.
+
+No full build or browser QA was run because this was content, source-registry, ledger, and crawl-surface maintenance with no template/runtime change.
+
+Residual risk: Qwen Cloud is high-volatility and the promo expires on June 22, 2026, so the next useful refresh should focus on whether qwen3.7-max pricing reverts to list price and whether the Max public route starts exposing visual input consistently with the changelog.
+
+## ExecPlan: June 15 2026 AI Coding Token Budget Governance News Refresh
+
+### 1. Objective
+
+Add a June 15 coding-agent governance story after current June searches surfaced Business Insider and Times of India reporting that Disney is encouraging Claude/Cursor usage while warning against wasteful token usage and AI-coded products that fail after release. The update should translate the story into buyer guidance for AI coding tools: token budgets, quality gates, release ownership, and agent governance.
+
+### 2. Scope
+
+Included: one new news article, Cursor and Claude Code recent-development notes, AI Coding parent-hub note/source, `/news/`, RSS, homepage metadata, LLM crawl surfaces, generated news OG assets, `PAGE_REFRESH_LEDGER.md`, and this plan.
+
+Excluded unless validation requires it: pricing/model re-verification for Cursor or Claude Code, comparison rewrites, source-registry rows for news-only sources, browser QA, and full build.
+
+### 3. Current Sources
+
+- Business Insider June 13 Disney report: Disney streaming leaders pushed velocity/productivity with AI while warning against "tokenmaxxing"; reported takeaways included token tracking for inefficient usage, higher velocity, and code quality/product resiliency.
+- Times of India June 15 coverage: summarizes the Disney/Business Insider reporting and says Disney expanded Claude/Cursor access while trying to minimize AI-coded products that fail after release.
+- arXiv 2026 agentic-coding configuration study: AGENTS.md/context files, skills, and subagents are becoming the repo-level configuration layer for Claude Code, GitHub Copilot, Cursor, Gemini, and Codex.
+- Existing AiPedia coding-agent incident coverage: Cursor/Claude PocketOS database deletion remains the practical safety backdrop for release ownership, backups, and permission boundaries.
+
+### 4. Verification Plan
+
+- Generate scoped news OG assets for the new slug.
+- Regenerate and check the page refresh ledger.
+- Run focused sweeps over touched files for the new slug and stale wording.
+- Run `npm run check:news`, `npm run check:links`, `npm run audit:sources`, and `npm run check:quick`.
+- Skip full build/browser QA because the change is content/crawl-surface only and the user asked to avoid unnecessary builds.
+
+### 5. Progress
+
+- 2026-06-15: Current June search found the Disney AI coding governance story after the June 15 news desk/checklist passed. Edits in progress.
+- 2026-06-15: Added `2026-06-15-disney-ai-coding-tokenmaxxing`, updated Cursor and Claude Code recent-development notes, added AI Coding hub guidance/source entries, refreshed `/news/`, RSS, homepage metadata, and LLM crawl surfaces.
+- 2026-06-15: Generated scoped OG assets for the new story, regenerated `PAGE_REFRESH_LEDGER.md`, and verified the new slug appears on the affected content, hub, crawl, and asset surfaces.
+- 2026-06-15: Validation passed with `node scripts/generate-og-news.mjs 2026-06-15-disney-ai-coding-tokenmaxxing`, `npm run ledger:pages`, `npm run ledger:pages:check`, `npm run check:news`, `npm run check:links`, `npm run audit:sources`, `npm run check:quick`, focused positive sweeps, scoped asset checks, and scoped `git diff --check`.
+
+### 6. Final Report
+
+Completed on 2026-06-15. AiPedia now covers the Disney AI coding governance report as a buyer-facing signal: do not treat raw token consumption, prompt volume, or agent sessions as productivity by themselves; measure accepted diffs, review quality, test-passing changes, release defect rate, rollback safety, and whether AI-assisted code survives production.
+
+No full build or browser QA was run because this was a content, OG, ledger, and crawl-surface refresh with no template/runtime changes, and the user specifically asked to avoid unnecessary builds and permission stops.
+
+Residual risk: Business Insider's report is based on internal meeting/audio reporting and Times of India is secondary coverage, so future updates should prioritize Disney on-record policy, vendor admin-control changes, or incident/post-release data before turning this into a stronger market-wide claim.
+
+## ExecPlan: June 15 2026 AI News Desk G7 Search State-Law Refresh
+
+### 1. Objective
+
+Add June 15 AI news coverage that keeps AiPedia current after the June 14 desk without inventing a thin model-launch story. The update should capture the live G7 Evian AI-governance signal, U.S. state AI regulation patchwork reporting, Google AI Overviews liability reporting, and Google's Gemini-related phishing lawsuit coverage as buyer-relevant governance/search-risk news.
+
+### 2. Scope
+
+Included: `src/content/news/2026-06-15-ai-news-desk.md`, `src/content/news/2026-06-15-google-ai-search-liability-gemini-abuse.md`, Gemini recent-development note, AI Search and AI Chatbots parent notes/sources, `/news/`, RSS, homepage metadata, LLM crawl surfaces, generated news OG assets, `PAGE_REFRESH_LEDGER.md`, and this plan.
+
+Excluded unless validation requires it: Gemini pricing/model re-verification, comparison rewrites, new tool records, source-registry rows for news-only sources, browser QA, and full build.
+
+### 3. Current Sources
+
+- G7 Evian official site: the G7 summit is in Evian from June 15 to 17, 2026.
+- AP June 15 G7 coverage: artificial intelligence regulation is on the G7 agenda alongside the main geopolitical and trade issues.
+- AP state AI regulation coverage: states are advancing targeted AI rules around child-facing chatbots, employment notice, high-impact decision systems, generated-content provenance, and independent review of developer safety protocols despite federal pushback.
+- WIRED June 13 AI Overviews report: Munich Regional Court preliminarily ruled Google liable for false AI Overviews statements and treated generated summaries as new statements rather than neutral third-party links.
+- Times of India coverage: Google's lawsuit alleges the Outsider Enterprise network used Gemini in phishing-kit and scam-message infrastructure at large scale.
+- arXiv 2026 Google Search/Gemini/AI Overviews study: generative search retrieves and presents sources differently from classic search, strengthening the source-log and review-path buyer guidance.
+- Existing June 13-14 AiPedia coverage: Anthropic Fable/Mythos suspension, ChatGPT GPT-5.2 retirement, and OpenAI probe reporting already covered route-risk and safety-procurement context.
+
+### 4. Verification Plan
+
+- Generate current news OG assets.
+- Regenerate and check the page refresh ledger.
+- Run focused stale/positive sweeps over touched files.
+- Run `npm run check:news`, `npm run check:links`, `npm run audit:sources`, and `npm run check:quick`.
+- Skip full build/browser QA because the change is content/crawl-surface only and the user asked to avoid unnecessary builds.
+
+### 5. Progress
+
+- 2026-06-15: Verified current June sources via web search/open and selected a compact news desk because `npm run editorial:weekly` showed no `due_now` tool facts.
+- 2026-06-15: Added the June 15 AI news desk, then `npm run check:quick` exposed the repo news-rendering guard that expects at least two active-month stories for the newest date.
+- 2026-06-15: Added a distinct companion story, `Google AI search risk checklist`, focused on AI Overviews liability, Gemini abuse claims, generative-search source drift, and buyer controls rather than duplicating the desk digest.
+- 2026-06-15: Generated scoped OG assets for both June 15 slugs, regenerated `PAGE_REFRESH_LEDGER.md`, and aligned Gemini, AI Search, AI Chatbots, `/news/`, RSS, homepage metadata, and LLM surfaces.
+- 2026-06-15: Later same-day search surfaced AP's U.S. state AI law patchwork story; expanded the existing June 15 desk with workflow-scope procurement guidance rather than adding a thin fourth article.
+- 2026-06-15: Regenerated the desk OG assets and page ledger after the state-law expansion. Validation passed with `node scripts/generate-og-news.mjs 2026-06-15-ai-news-desk`, `npm run ledger:pages`, `npm run ledger:pages:check`, focused state-law/reference sweeps, scoped `git diff --check`, `npm run check:news`, `npm run check:links`, `npm run audit:sources`, `npm run audit:facts`, and `npm run check:quick`.
+
+### 6. Final Report
+
+Completed on 2026-06-15. The news desk now covers G7 Evian AI governance, U.S. state AI law patchwork reporting, Google AI Overviews liability reporting, and Gemini-related phishing lawsuit coverage. The companion article turns the Google AI search/security thread into a buyer checklist for source trails, model synthesis boundaries, abuse monitoring, and human review.
+
+Validation passed: `node scripts/generate-og-news.mjs 2026-06-15-ai-news-desk`, `node scripts/generate-og-news.mjs 2026-06-15-google-ai-search-liability-gemini-abuse`, `npm run ledger:pages`, `npm run ledger:pages:check`, focused positive/reference and state-law sweeps, scoped asset checks, `npm run check:news`, `npm run audit:sources`, `npm run check:links`, `npm run check:quick`, `npm run audit:facts`, and `git diff --check`.
+
+No full build or browser QA was run because this was a content, OG, ledger, and crawl-surface refresh with no template/runtime changes, and the user asked to avoid unnecessary builds.
+
+Residual risk: G7 outcomes, state legislative calendars, Google appeal posture, and lawsuit details can move quickly. Keep follow-up coverage focused on official summit communiques, enacted state laws, court/filing updates, and vendor control changes rather than repeating the same governance warning.
+
+## ExecPlan: June 15 2026 Mistral Vibe Pricing Model Drift Refresh
+
+### 1. Objective
+
+Refresh `/tools/mistral-ai/` and affected Mistral parent surfaces from current official Mistral sources so the page reflects the June 15, 2026 state of Vibe, Vibe for Code, pricing, model cards, model deprecations, Search Toolkit, security advisories, and enterprise/compute posture.
+
+### 2. Scope
+
+Included: `src/content/tools/mistral-ai.md`, AI Chatbots and AI Infrastructure parent copy/sources, Mistral source-registry rows, homepage/tools/categories comments, LLM text surfaces, `PAGE_REFRESH_LEDGER.md`, and this plan.
+
+Excluded unless validation requires it: comparison-page rewrites, company profile rewrites, broader Qwen/DeepSeek/Claude/Gemini source checks, rendered template changes, browser QA, and full builds.
+
+### 3. Current Sources
+
+- Mistral pricing: Free, Pro `$14.99`, Education `$5.99`, Team `$24.99/user`, Enterprise custom; Vibe interfaces now include web, CLI, IDE, mobile, remote coding agents, connectors, hooks, teleport, PAYG credits, training opt-out, and API rows for Medium 3.5, Small 4, Large 3, Voxtral, OCR, Devstral, and Codestral.
+- Mistral Vibe product/news: Le Chat is now Vibe; Vibe covers long-horizon work, Work Mode, Code Mode, VS Code extension, CLI updates, Skills, custom modes/subagents, editable plans, session-scoped permissions, and `/teleport`.
+- Mistral model docs/cards: Medium 3.5, Small 4, Large 3, and Ministral 3 remain current open model lanes; Small 4 still has pricing-page versus model-card drift.
+- Model overview: legacy-model table adds deprecation/retirement warnings for some exact IDs, so buyers should pin model IDs and aliases deliberately.
+- Mistral 3/Search Toolkit/security/advisory sources: Mistral 3 remains a December 2, 2025 Apache 2.0 launch; Search Toolkit remains public preview/open source; the May 2026 SDK advisory remains closed with remediation guidance.
+- AI Now Summit: Mistral announced Vibe as a unified long-horizon productivity/code agent and said Les Ulis is a 10 MW inference facility scheduled for Q3 2026.
+
+### 4. Verification Plan
+
+- Regenerate and check the page refresh ledger.
+- Run focused stale-date and positive-fact sweeps over touched files.
+- Run `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, and `npm run check:quick`.
+- Skip full build/browser QA unless scoped checks expose rendered-output or template risk.
+
+### 5. Progress
+
+- 2026-06-15: Selected Mistral AI from `npm run editorial:weekly` after Captions.ai. Reopened current official Mistral pricing, Vibe, Vibe agent announcement, AI Now Summit, model overview, Large 3/Medium 3.5/Small 4 model cards, Mistral 3, Search Toolkit, security advisories, Vibe GitHub, and Hugging Face sources. Edits in progress.
+- 2026-06-15: Completed the Mistral AI refresh. `/tools/mistral-ai/` now carries June 15 verification, June 22 high-volatility review dates, Vibe Work/Code and Chat-mode sunset language, updated pricing/plan buyer guidance, Small 4 pricing-page/model-card drift, Large-family pricing-example drift, exact model-ID/legacy warnings, Les Ulis inference-facility procurement context, and SDK advisory dependency hygiene. AI Chatbots, AI Infrastructure, homepage/tools/categories comments, LLM surfaces, source registry, and `PAGE_REFRESH_LEDGER.md` were aligned. Validation passed: `npm run ledger:pages`, `npm run ledger:pages:check`, focused stale/positive/source-registry sweeps, scoped `git diff --check`, `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, and `npm run check:quick`. No full build or browser QA was run because this was a content/data/crawl-surface refresh and the user asked to avoid unnecessary builds.
+
+### 6. Final Report
+
+Completed on 2026-06-15. Mistral is now positioned as the Vibe Work/Code, Studio/API, Search Toolkit, and open-weight European procurement lane rather than a generic chatbot subscription. The buyer warning is sharper: budget by exact model ID and live Studio quote because pricing prose, API rows, model cards, aliases, and legacy rows can drift.
+
+Residual risk: Mistral is high-volatility across Vibe packaging, model aliases, pricing examples, deprecation tables, and enterprise compute posture. Keep the next high-volatility review on the June 22 cadence and recheck the pricing page, Vibe agent page, and model overview together.
+
+## ExecPlan: June 15 2026 Captions Pricing Credits Platform And Mirage Refresh
+
+### 1. Objective
+
+Refresh `/tools/captions/` from current Captions/Mirage primary sources so its pricing, credit, rollover/top-up, platform availability, AI model, Mirage actor, API-context, and buyer-risk language matches the June 15, 2026 source state.
+
+### 2. Scope
+
+Included: `src/content/tools/captions.md`, AI Video parent copy and sources, avatar-video buyer guide Captions section and sources, Captions source-registry rows, homepage/tools/categories/guides freshness comments, LLM text surfaces, `PAGE_REFRESH_LEDGER.md`, and this plan.
+
+Excluded unless validation requires it: broader avatar guide reranking, non-Captions avatar/video tools, generated OG assets, full build loops, and browser QA.
+
+### 3. Current Sources
+
+- Captions official site: positions Captions as an AI editor that transforms footage, offers custom avatars, generates captions, translates/dubs, and says Mirage Studio projects/actors now live inside Captions.
+- Captions pricing: Max `$24.99`, Scale `$69.99`, Scale 2x `$139.99`, Scale 4x `$279.99`, Enterprise custom; page says pricing is USD and reflects iOS plans only.
+- Captions subscriptions docs: Free has 60-200 lifetime credits; Android Lite is `$4.99`; Pro is `$9.99` with 200 credits; Max is `$24.99` with 500 credits; Scale is `$69.99` with 1,400 credits; Scale 2x/4x are 2,800/5,600 credits; Enterprise contact sales; legacy Teams/Business can add seats without the previous `$40/seat` cost and are eligible for top-up credits.
+- Captions AI usage docs: every AI feature deducts credits; Prompt to Video is 8 credits/sec; AI Edit is 10-40 credits; AI Creator/Ads/Skits are 1 credit/sec; chat editing is 2 credits/message plus actions and generation; model-specific rows include Nano Banana 2/Pro, Veo 3.1, Hailuo 2.3 Fast, Kling, Seedance 2.0, Sora 2, ElevenLabs Music, Lyria 3 Pro, and more.
+- Captions credit docs conflict: the newer AI usage page says Pro+ rollover is available with a 3x cap, while the troubleshooting page still says unused credits expire and do not carry over. Do not hide this contradiction.
+- Feature availability docs: platform limits differ across iOS, web, and legacy desktop; AI Edit caps at 1-2 minutes, AI Creator at 1 minute, and many iOS tools are missing on web.
+- Mirage docs/site: Prompt to Video creates AI talking videos with Mirage-generated actors; Mirage APIs power bulk video generation and captioning, but app pricing is not API pricing.
+
+### 4. Verification Plan
+
+- Regenerate and check the page refresh ledger.
+- Run focused stale-date and positive-fact sweeps over touched files.
+- Run `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, and `npm run check:quick`.
+- Skip full build/browser QA unless scoped checks expose rendered-output or template risk.
+
+### 5. Progress
+
+- 2026-06-15: Selected Captions.ai from `npm run editorial:weekly` after Adobe Firefly. Reopened current Captions official, pricing, subscriptions, AI usage, troubleshooting, feature availability, Prompt to Video, Mirage model, Mirage site, and Mirage announcement sources. Edits in progress.
+- 2026-06-15: Completed the Captions refresh. `/tools/captions/` now carries June 15 verification, June 22 high-volatility review dates, current Android Lite/Pro/Max/Scale/Scale 2x/Scale 4x pricing, monthly credit allowances, model-specific credit examples, the rollover-doc contradiction, Scale 4x and legacy Teams/Business top-up eligibility, Mirage-generated actor context, platform limits, and API-positioning caveats. AI Video, the avatar-video buyer guide, homepage/tools/categories/guides comments, LLM surfaces, source registry, and `PAGE_REFRESH_LEDGER.md` were aligned. Validation passed: `npm run ledger:pages`, `npm run ledger:pages:check`, focused stale/positive/source-registry sweeps, scoped `git diff --check`, `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, and `npm run check:quick`. No full build or browser QA was run because this was a content/data/crawl-surface refresh and the user asked to avoid unnecessary builds.
+
+### 6. Final Report
+
+Completed on 2026-06-15. Captions is now positioned as a short-form social video editor with avatar-style features rather than an enterprise presenter-video platform. The page and parent surfaces make the buyer-risk shift explicit: choose Max for AI Twin/custom actors, Mirage-generated actors, chat editing, and generated assets; consider Scale only after measuring feature and model-route credit burn, platform support, and the live-account rollover rule.
+
+Residual risk: Captions' credit and plan docs are high-volatility, and the current official pages still conflict on rollover. Keep the next high-volatility review on the June 22 cadence and recheck the AI usage/troubleshooting pages together.
+
+## ExecPlan: June 15 2026 Adobe Firefly Partner Model Credit And Disclosure Refresh
+
+### 1. Objective
+
+Refresh `/tools/adobe-firefly/` against current Adobe primary sources so the buyer guidance reflects June 15, 2026 plan pricing, Firefly Image 5/API status, partner-model credit rates, prompt/reference-file sharing disclosures, affiliate terms, and promo limits.
+
+### 2. Scope
+
+Included: `src/content/tools/adobe-firefly.md`, AI Image/AI Design/AI Video parent copy and sources, Adobe source-registry rows, homepage/tools/categories freshness comments, LLM text surfaces, `PAGE_REFRESH_LEDGER.md`, and this plan.
+
+Excluded unless validation exposes risk: template redesign, comparison rewrites, generated OG assets, full build loops, and browser QA.
+
+### 3. Current Sources
+
+- Adobe Firefly product page: current product surface includes Firefly Image 5, partner-model routing, audio/video/design features, and Content Credentials positioning.
+- Adobe Firefly plans: Standard `$9.99`, Pro `$19.99`, Pro Plus `$49.99` regular / `$34.97` promo, Premium `$199.99` regular / `$139.91` promo through June 17, 2026; team plans use separate per-license pricing.
+- Firefly API docs: Image5 is the latest model, supports native 4 MP resolution and Instruct Edit, plus Composite Operations APIs.
+- Adobe generative-credit FAQ and partner-model docs: credits stack across subscriptions, paid plans reset monthly, partner models can consume per-second/per-generation credits, and Kling 3.0/3.0 Omni require sending prompts and reference files to the Chinese company that developed them.
+- Adobe affiliate page: Partnerize program, 85% first-month commission on eligible monthly/annual-paid-monthly plans, 8.33% of first year on annual prepaid, and 30-day cookie.
+
+### 4. Verification Plan
+
+- Regenerate and check the page refresh ledger.
+- Run focused stale-date and positive-fact sweeps over touched files.
+- Run `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, and `npm run check:quick`.
+- Skip full build/browser QA unless scoped checks reveal rendered-output or template risk.
+
+### 5. Progress
+
+- 2026-06-15: Selected Adobe Firefly from `npm run editorial:weekly` after n8n. Reopened current Adobe product, plan, API, generative-credit, partner-model, and affiliate sources. Edits in progress.
+- 2026-06-15: Completed the Adobe Firefly refresh. `/tools/adobe-firefly/` now carries June 15 verification, June 22 high-volatility review dates, Firefly Image 5/Image5 API language, current Standard/Pro/Pro Plus/Premium pricing and June 17 promo caveats, Pro/Pro Plus/Premium unlimited-generation boundaries, team plan separation, generative-credit stacking/exhaustion context, partner-model per-second/per-generation/per-character credit risk, Kling 3.0/Kling 3.0 Omni prompt/reference-file transfer disclosure, Image5/Instruct Edit/Composite Operations API context, and updated Partnerize affiliate terms. AI Image, AI Design, AI Video, homepage, tools/categories indexes, LLM surfaces, source registry, and `PAGE_REFRESH_LEDGER.md` were aligned. Validation passed: `npm run ledger:pages`, `npm run ledger:pages:check`, focused stale/positive/source-registry sweeps, scoped `git diff --check`, `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, and `npm run check:quick`. No full build or browser QA was run because this was a content/data/crawl-surface refresh and the user asked to avoid unnecessary builds.
+
+### 6. Final Report
+
+Completed on 2026-06-15. Firefly is now positioned as an Adobe production and governance pick rather than a generic image generator. The page makes the buyer-risk shift explicit: choose Firefly for Creative Cloud workflow, Content Credentials posture, Image5/Instruct Edit, and multi-model convenience; slow down when the job depends on partner-model credit rates, non-Adobe prompt/reference-file sharing, 4K/resolution-specific plan language, API procurement, or temporary individual-plan promotions.
+
+Residual risk: Adobe's Firefly plans, partner-model menus, model rates, and promo language are high-volatility. Keep the next high-volatility review on the June 22 cadence, especially if the June 17 promo expires or Adobe changes the partner-model rate table.
+
+## ExecPlan: June 15 2026 n8n Pricing AI Agent And Self-Host Refresh
+
+### 1. Objective
+
+Refresh `/tools/n8n/` from current primary sources so its pricing, AI Agent, self-host, affiliate, and buyer-risk language matches the June 15, 2026 market state. Keep affected AI Automation, top-layer, LLM, source-registry, and ledger surfaces aligned without running broad build loops unless validation exposes rendered-risk.
+
+### 2. Scope
+
+Included: `src/content/tools/n8n.md`, `src/content/categories/ai-automation.md`, top-layer freshness comments, LLM text surfaces, n8n source-registry rows, `PAGE_REFRESH_LEDGER.md`, and this plan.
+
+Excluded unless validation requires it: full template rebuilds, browser QA, generated OG assets, unrelated n8n comparison/guide rewrites, and Cloudflare-era deployment work.
+
+### 3. Current Sources
+
+- n8n pricing: annual Starter EUR20, Pro EUR50, Business self-host EUR667, Enterprise custom; unlimited users/workflows/integrations; execution-based billing; Business overage bucket; Frankfurt hosted data; license-key ping and telemetry note.
+- n8n AI Agent docs: current AI Agent nodes use Tools Agent behavior and require at least one tool sub-node.
+- n8n hosting docs: Community self-host is free without a license key; self-hosting requires server, scaling, security, and configuration expertise.
+- n8n release notes: active June release stream through June 12, 2026.
+- n8n affiliate page: 30% on n8n Cloud referrals for 12 months; PartnerStack application flow; AiPedia still has no approved tracked link.
+
+### 4. Verification Plan
+
+- Regenerate and check the page refresh ledger.
+- Run focused stale-date and positive-fact sweeps over touched files.
+- Run source/fact/link/quick validation only: `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, `npm run check:quick`.
+- Skip full build/browser QA unless the scoped checks expose template/runtime risk.
+
+### 5. Progress
+
+- 2026-06-15: Selected from `npm run editorial:weekly` after Midjourney. Reopened current n8n primary sources with June 2026 query context and confirmed pricing, AI Agent behavior, Business/self-host limits, overage language, license-key/telemetry note, hosted-data region, release notes, and affiliate terms. Edits in progress.
+- 2026-06-15: Completed the n8n refresh. `/tools/n8n/` now carries June 15 verification, June 22 high-volatility review dates, safer workflow-execution FAQ language, updated Business/self-host procurement caveats, EUR4,000 per 300,000-execution Business overage language, license-key ping/default telemetry warning, Frankfurt hosted-data note, 193k+ GitHub star framing, and honest PartnerStack affiliate status without a tracked link. AI Automation, homepage, tools/categories indexes, LLM surfaces, source registry, and `PAGE_REFRESH_LEDGER.md` were aligned. Validation passed: `npm run ledger:pages`, `npm run ledger:pages:check`, focused stale/positive/source-registry sweeps, scoped `git diff --check`, `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, and `npm run check:quick`. No full build or browser QA was run because this was a content/data/crawl-surface refresh and the user asked to avoid unnecessary builds.
+
+## ExecPlan: June 15 2026 Midjourney Plans V8.1 And Video Refresh
+
+### 1. Objective
+
+Refresh Midjourney's due-soon high-volatility pricing, free-plan, best-tier, flagship-model, and image/video-generation facts against current June 2026 official Midjourney docs and updates.
+
+### 2. Scope
+
+Included: Midjourney tool facts/body/source dates, AI Image and AI Video parent copy/source dates, Midjourney source-registry rows, affected top-layer freshness comments, LLM manifests, and `PAGE_REFRESH_LEDGER.md`.
+
+Excluded: broader Midjourney alternatives guide reranking, comparison pages, logo work, template changes, and rendered browser/mobile QA unless focused checks reveal rendered-output risk.
+
+### 3. Current-source anchors
+
+- Midjourney plan comparison docs
+- Midjourney version docs
+- Midjourney Video docs
+- Midjourney commercial-use docs
+- V8.1 default announcement
+- V8.1 updates
+- Enterprise API survey
+
+### 4. Affected top-layer pages
+
+- `/tools/midjourney/`
+- `/categories/ai-image/`
+- `/categories/ai-video/`
+- `/`
+- `/tools/`
+- `/categories/`
+- `/llms.txt`
+- `/llms-full.txt`
+- `PAGE_REFRESH_LEDGER.md`
+
+### 5. Verification plan
+
+- Midjourney stale/source sweeps
+- Source-registry spot checks
+- Scoped `git diff --check`
+- `npm run ledger:pages`
+- `npm run ledger:pages:check`
+- `npm run audit:facts`
+- `npm run audit:sources`
+- `npm run check:links`
+- `npm run check:quick`
+
+### 6. Progress log
+
+- 2026-06-15: Selected Midjourney from the weekly queue after HeyGen because five high-volatility facts are due soon and it is summarized across AI Image, AI Video, homepage, tools/categories, and LLM surfaces.
+- 2026-06-15: Rechecked official Midjourney plan comparison docs, Version docs, Video docs, commercial-use docs, V8.1 default announcement, V8.1 updates, and Enterprise API survey. Plans remain Basic `$10`, Standard `$30`, Pro `$60`, Mega `$120`; V8.1 remains the default; all plans can make Fast Mode video, Standard/Pro/Mega can make HD video, Pro/Mega can make Relax Mode SD video; and Enterprise API remains an application/survey-stage route.
+- 2026-06-15: Patched Midjourney, AI Image, AI Video, AI Design, Midjourney source-registry rows plus the new Niji V7 source row, homepage/tools/categories freshness comments, LLM manifests, and `PAGE_REFRESH_LEDGER.md`.
+- 2026-06-15: Validation passed with `npm run ledger:pages`, `npm run ledger:pages:check`, Midjourney stale/positive/source sweeps, scoped `git diff --check`, `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, and `npm run check:quick`. No full build or browser QA was run because this was source-backed content/data/crawl-surface maintenance only.
+
+### 7. Final report
+
+Completed on 2026-06-15. Midjourney now carries June 15 verification across high-volatility model, pricing, free-plan, best-tier, API, image-generation, and video-generation facts. The buyer guidance now names annual effective pricing (`$8/$24/$48/$96` per month), keeps monthly prices at `$10/$30/$60/$120`, explains that Standard/Pro/Mega unlock HD video while Pro/Mega unlock SD video Relax Mode, and calls out default batch-4 video GPU costs of 8 minutes for SD or 26 minutes for HD. AI Image, AI Video, and AI Design now summarize the same purchase constraints, and LLM surfaces expose the June 15 Midjourney refresh.
+
+Residual risk: Midjourney model/default, video, and Enterprise API status are high-volatility. Keep the weekly cadence through the next June 22 review window, especially if V8.0 Alpha deprecation completes or Midjourney changes the Enterprise API application into a concrete product.
+
+---
+
+## ExecPlan: June 15 2026 HeyGen Pricing API LiveAvatar And Affiliate Refresh
+
+### 1. Objective
+
+Refresh HeyGen's due-soon high-volatility pricing, API, Avatar V, LiveAvatar, and watch-out facts against current June 2026 official HeyGen sources, while also correcting the monetizable affiliate block from the stale May note.
+
+### 2. Scope
+
+Included: HeyGen tool facts/body/pricing history/affiliate metadata, AI Video parent copy/sources, avatar-video buyer-guide HeyGen source dates if needed, HeyGen source-registry rows, affected top-layer freshness comments, LLM manifests, and `PAGE_REFRESH_LEDGER.md`.
+
+Excluded: broader avatar-video guide reranking, non-HeyGen avatar tools, logo work, template changes, and rendered browser/mobile QA unless focused checks reveal rendered-output risk.
+
+### 3. Current-source anchors
+
+- HeyGen pricing
+- HeyGen self-serve API pricing
+- HeyGen API pricing explained help article
+- HeyGen LiveAvatar help
+- HeyGen Avatar V launch post
+- HeyGen legacy Unlimited-plan help article
+- HeyGen Social Creator Program
+
+### 4. Affected top-layer pages
+
+- `/tools/heygen/`
+- `/categories/ai-video/`
+- `/guides/best-ai-avatar-video-generator/`
+- `/`
+- `/tools/`
+- `/categories/`
+- `/llms.txt`
+- `/llms-full.txt`
+- `PAGE_REFRESH_LEDGER.md`
+
+### 5. Verification plan
+
+- HeyGen stale pricing/source sweeps
+- Source-registry spot checks
+- Scoped `git diff --check`
+- `npm run ledger:pages`
+- `npm run ledger:pages:check`
+- `npm run audit:facts`
+- `npm run audit:sources`
+- `npm run check:links`
+- `npm run check:quick`
+
+### 6. Progress log
+
+- 2026-06-15: Selected HeyGen from the weekly queue after Gemini because eleven high-volatility facts are due soon across pricing, API, Avatar V, LiveAvatar, image/video generation, enterprise controls, and watch-outs.
+- 2026-06-15: Rechecked official HeyGen pricing, self-serve API pricing, API pricing help, LiveAvatar help, Avatar V launch, legacy Unlimited-plan help, and Social Creator Program affiliate page. Core app prices still match June 14, API pay-as-you-go still separates API-key billing from web-plan OAuth usage, LiveAvatar has its own Essential/Business/Enterprise buying surface, and affiliate terms still show 35% recurring for 3 months with 30-day tracking plus creator eligibility and payout constraints.
+- 2026-06-15: Patched HeyGen, AI Video, the avatar-video buyer guide, HeyGen source-registry rows plus new API-pricing-help and Social Creator Program source rows, homepage/tools/categories freshness comments, LLM manifests, and `PAGE_REFRESH_LEDGER.md`.
+- 2026-06-15: Validation passed with `npm run ledger:pages`, `npm run ledger:pages:check`, HeyGen stale/source sweeps, source-registry spot checks, scoped `git diff --check`, `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, `npm run check:quick`, and `npm run editorial:weekly`. No full build or browser QA was run because this was source-backed content/data/crawl-surface maintenance only.
+
+### 7. Final report
+
+Completed on 2026-06-15. HeyGen now keeps the Free/Creator/Pro/Business/Enterprise app ladder current while adding the sharper buyer boundary between API-key wallet billing, OAuth/web-plan usage, LiveAvatar streaming plans, and affiliate/Social Creator Program terms. The page now records LiveAvatar Essential at `$99/month`, Business at `$475/month`, Enterprise custom with a stated `$48,800` minimum budget, API Avatar IV/V rates from `$0.05/sec` to `$0.0833/sec`, and affiliate terms of 35% recurring commission for three months with 30-day tracking, 60-day validation, `$100` minimum payout, PayPal payout, creator eligibility, and no SEO/blog-only promotion.
+
+Residual risk: HeyGen's pricing surfaces remain split across live pricing, developer docs, help-center articles, and creator-program pages. Keep app pricing, API wallet billing, LiveAvatar streaming, and affiliate eligibility on a short review cadence before publishing commercial claims.
+
+---
+
+## ExecPlan: June 15 2026 Gemini Workspace Privacy Recheck
+
+### 1. Objective
+
+Refresh the one remaining Gemini due-soon privacy fact against current official Google Gemini Apps and Google Workspace generative AI privacy hubs so AiPedia no longer says the Workspace privacy wording remains on a June 14 source check.
+
+### 2. Scope
+
+Included: Gemini privacy fact/source URL, Gemini source registry row, minimal Gemini body/source wording, affected top-layer freshness comments, LLM manifests, and `PAGE_REFRESH_LEDGER.md`.
+
+Excluded: broader Gemini model/pricing/media reranking, comparison pages, logo work, template changes, and rendered browser/mobile QA unless focused checks reveal rendered-output risk.
+
+### 3. Current-source anchors
+
+- Gemini Apps Privacy Hub
+- Generative AI in Google Workspace Privacy Hub
+
+### 4. Affected top-layer pages
+
+- `/tools/gemini/`
+- `/`
+- `/tools/`
+- `/categories/`
+- `/llms.txt`
+- `/llms-full.txt`
+- `PAGE_REFRESH_LEDGER.md`
+
+### 5. Verification plan
+
+- Gemini privacy stale/source sweeps
+- Source-registry spot checks
+- Scoped `git diff --check`
+- `npm run ledger:pages`
+- `npm run ledger:pages:check`
+- `npm run audit:facts`
+- `npm run audit:sources`
+- `npm run check:links`
+- `npm run check:quick`
+
+### 6. Progress log
+
+- 2026-06-15: Selected Gemini after Grammarly because the queue showed only its Workspace privacy fact due soon while the rest of the Gemini model/pricing/media facts were already refreshed on June 15.
+- 2026-06-15: Rechecked official Google Gemini Apps Privacy Hub and followed its Workspace-account link to the official Google Workspace generative AI privacy hub. The Workspace page is updated May 26, 2026 and confirms Workspace customer data, prompts, and generated responses stay within the organization and are not used for model training without customer permission or instruction, while consumer Gemini Apps data handling remains governed by separate Gemini Apps privacy settings.
+- 2026-06-15: Patched Gemini's Workspace privacy fact, methodology, source-registry row, tools/categories freshness comments, LLM manifests, and `PAGE_REFRESH_LEDGER.md`.
+- 2026-06-15: Validation passed with `npm run ledger:pages`, `npm run ledger:pages:check`, Gemini stale/source sweeps, source-registry spot checks, scoped `git diff --check`, `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, `npm run check:quick`, and `npm run editorial:weekly`. No full build or browser QA was run because this was source-backed content/data/crawl-surface maintenance only.
+
+### 7. Final report
+
+Completed on 2026-06-15. Gemini now distinguishes qualifying Workspace Gemini terms from consumer Gemini Apps, connected apps, and third-party services; uses the stable Google Workspace generative AI privacy hub URL; and makes the no-human-review, no-outside-domain-training, organization-boundary, and admin-retention caveats explicit for buyers.
+
+Residual risk: Google maintains separate privacy surfaces for consumer Gemini Apps, Workspace Gemini, connected apps, and third-party services, so privacy recommendations should stay surface-specific and be rechecked if Google changes Workspace Intelligence, Personal Intelligence, or admin retention controls.
+
+---
+
+## ExecPlan: June 15 2026 Grammarly Pro Affiliate And Trust Refresh
+
+### 1. Objective
+
+Refresh Grammarly buyer guidance against current June 2026 official Grammarly/Superhuman pricing, Pro support, suite, trust, and affiliate pages so AiPedia's due-soon facts move off the June 14 source check and the affiliate note reflects the now-visible 90-day cookie without inventing payout terms.
+
+### 2. Scope
+
+Included: Grammarly tool facts/body copy, affiliate metadata note, AI Writing parent guidance/source dates, Grammarly source-registry rows, top-layer freshness comments, LLM surfaces, and `PAGE_REFRESH_LEDGER.md`.
+
+Excluded: Grammarly comparison pages, broader writing-guide reranking, logo work, template changes, and rendered browser/mobile QA unless focused checks reveal rendered-output risk.
+
+### 3. Current-source anchors
+
+- Grammarly Pro page
+- Grammarly Pro pricing support
+- About Grammarly Pro support
+- Superhuman plans
+- Superhuman Grammarly product page
+- Grammarly Business and Trust Center
+- Grammarly affiliate page
+- WIRED Expert Review coverage
+
+### 4. Affected top-layer pages
+
+- `/tools/grammarly/`
+- `/categories/ai-writing/`
+- `/`
+- `/tools/`
+- `/categories/`
+- `/llms.txt`
+- `/llms-full.txt`
+- `PAGE_REFRESH_LEDGER.md`
+
+### 5. Verification plan
+
+- Grammarly stale/source sweeps
+- Source-registry spot checks
+- Scoped `git diff --check`
+- `npm run ledger:pages`
+- `npm run ledger:pages:check`
+- `npm run audit:facts`
+- `npm run audit:sources`
+- `npm run check:links`
+- `npm run check:quick`
+
+### 6. Progress log
+
+- 2026-06-15: Selected Grammarly from the due-soon queue because it has seven internal mentions and high-volatility pricing, free-plan, Pro, flagship-model, and Expert Review watch-out facts due in six days.
+- 2026-06-15: Rechecked official Grammarly Pro, Pro pricing support, About Pro, Superhuman plans, Superhuman Grammarly, Grammarly Business/Trust, Grammarly affiliates, and WIRED Expert Review coverage. Core Pro pricing and prompt allowances still match June 14, and the official affiliate page now exposes a 90-day cookie while still withholding exact public payout amounts.
+- 2026-06-15: Patched Grammarly, AI Writing, Grammarly source registry rows plus the new Trust Center source row, homepage/tools/categories freshness comments, LLM manifests, and `PAGE_REFRESH_LEDGER.md`.
+- 2026-06-15: Validation passed with `npm run ledger:pages`, `npm run ledger:pages:check`, Grammarly stale/source sweeps, source-registry spot checks, scoped `git diff --check`, `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, `npm run check:quick`, and `npm run editorial:weekly`. No full build or browser QA was run because this was source-backed content/data/crawl-surface maintenance only.
+
+### 7. Final report
+
+Completed on 2026-06-15. Grammarly now keeps Free at 100 AI prompts, Pro at `$30/member/month` monthly or `$144/member/year` with 2,000 prompts and up to 149 seats, Superhuman Business as the suite tier, Enterprise as the control tier, and the discontinued Expert Review feature as the trust/governance watch-out. Affiliate metadata now records the public 90-day cookie and Impact application link while leaving commission amounts unpublished because exact payout terms are not visible on the official public page.
+
+Residual risk: Grammarly/Superhuman packaging is still transitioning from Premium/Business to Pro/Superhuman suite, so buyer guidance should keep using support pricing and checkout verification rather than assuming regional prices or unapproved affiliate payout terms.
+
+---
+
+## ExecPlan: June 15 2026 Microsoft Agent Framework Work IQ Watch-Out Refresh
+
+### 1. Objective
+
+Refresh Microsoft Agent Framework buyer guidance around the overdue Work IQ watch-out, current June 2026 Agent Framework releases, provider caveats, and the June 16 Work IQ GA/billing boundary so AiPedia does not imply Work IQ is already GA on June 15.
+
+### 2. Current state
+
+`src/content/tools/microsoft-agent-framework.md` was last verified June 12 and still cites dotnet-1.8.0 / python-1.7.0 as the current release stream. GitHub now shows dotnet-1.10.0 as latest on June 10 and python-1.8.1 on June 9, with several breaking or experimental changes in the recent release notes. The Work IQ licensing notice says Work IQ APIs reach general availability on June 16, 2026 and will be billed through Copilot Credits, so the June 15 page needs to frame Work IQ as tomorrow's scheduled GA, not a settled current production baseline.
+
+### 3. Scope
+
+- `src/content/tools/microsoft-agent-framework.md`
+- `src/content/categories/ai-automation.md`
+- `src/data/source-registry.json`
+- Top-layer freshness comments in homepage, tools index, categories index, and LLM manifests
+- `PAGE_REFRESH_LEDGER.md`
+
+### 4. Out of scope
+
+- Broad LangGraph, AG2, CrewAI, or Mastra comparison reranking.
+- New Work IQ news coverage.
+- Full build or browser/mobile QA unless rendered-output risk emerges.
+
+### 5. Verification plan
+
+- Microsoft Agent Framework stale-version and Work IQ date sweeps
+- Source-registry spot checks
+- Scoped `git diff --check`
+- `npm run ledger:pages`
+- `npm run ledger:pages:check`
+- `npm run audit:facts`
+- `npm run audit:sources`
+- `npm run check:links`
+- `npm run check:quick`
+
+### 6. Progress log
+
+- 2026-06-15: Selected Microsoft Agent Framework as the only overdue queue item after BLACKBOX AI.
+- 2026-06-15: Rechecked Microsoft Learn Agent Framework overview, providers docs, GitHub repository/releases, Microsoft Build 2026 blog, Work IQ API announcement, and Work IQ licensing notice. Found current release stream dotnet-1.10.0 / python-1.8.1 and confirmed Work IQ GA is scheduled for June 16, 2026 with Copilot Credits consumption billing.
+- 2026-06-15: Patched Microsoft Agent Framework, AI Automation, Microsoft source registry rows plus the new providers source row, homepage/tools/categories freshness comments, LLM manifests, and `PAGE_REFRESH_LEDGER.md`.
+- 2026-06-15: Validation passed with `npm run ledger:pages`, `npm run ledger:pages:check`, Microsoft Agent Framework stale-version and Work IQ date sweeps, source-registry spot checks, scoped `git diff --check`, `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, `npm run check:quick`, and `npm run editorial:weekly`. No full build or browser QA was run because this was source-backed content/data/crawl-surface maintenance only.
+
+### 7. Final report
+
+Completed on 2026-06-15. Microsoft Agent Framework now reflects dotnet-1.10.0 and python-1.8.1, the June 16 Work IQ GA and Copilot Credits billing boundary, Microsoft 365/Foundry/Agent 365 context, provider-support differences, and Microsoft's explicit warning that third-party/non-Azure model and tool usage remains the customer's data, cost, permission, and security responsibility. AI Automation, source registry rows, top-layer comments, LLM manifests, and `PAGE_REFRESH_LEDGER.md` are aligned.
+
+Residual risk: Work IQ is scheduled to reach GA on June 16, 2026, one day after this refresh. Recheck after June 16 before claiming live GA behavior, access, or observed Copilot Credit consumption in buyer guidance.
+
+---
+
+## ExecPlan: June 15 2026 BLACKBOX AI Pricing Credit And Affiliate Refresh
+
+### 1. Objective
+
+Refresh BLACKBOX AI buyer guidance against current pricing, security, Desktop Agent, Enterprise, and affiliate-listing sources so AiPedia does not overstate model credits or present a paused third-party affiliate campaign as usable.
+
+### 2. Current state
+
+`src/content/tools/blackbox-ai.md` was last verified June 12 and still presented model-credit amounts as clean `$20 / $40 / $80` allowances. The live BLACKBOX AI pricing page keeps Pro at $10/month, Pro Plus at $20/month, Pro Max at $40/month, and Enterprise custom, but its pricing cards say `$10 / $20 / $40` of latest-model value while comparison/mobile rows say `$20 / $40 / $80`. The page also still treated third-party affiliate listings as an availability signal, while the current Cuelinks listing says the advertiser paused the CPC campaign.
+
+### 3. Scope
+
+- `src/content/tools/blackbox-ai.md`
+- `src/content/categories/ai-coding.md`
+- `src/data/source-registry.json`
+- Top-layer freshness comments in homepage, tools index, categories index, and LLM manifests
+- `PAGE_REFRESH_LEDGER.md`
+
+### 4. Out of scope
+
+- Broad AI Coding reranking.
+- Adding affiliate CTAs or network links.
+- Full build or browser/mobile QA unless rendered-output risk emerges.
+
+### 5. Verification plan
+
+- BLACKBOX stale/pricing/affiliate sweeps
+- Source-registry spot checks
+- Scoped `git diff --check`
+- `npm run ledger:pages`
+- `npm run ledger:pages:check`
+- `npm run audit:facts`
+- `npm run audit:sources`
+- `npm run check:links`
+- `npm run check:quick`
+
+### 6. Progress log
+
+- 2026-06-15: Selected BLACKBOX AI from the overdue queue because its best-paid-tier fact was past due and affects pricing, credit, security, and commercial CTA trust.
+- 2026-06-15: Rechecked official BLACKBOX AI pricing, security, Desktop Agent, Enterprise docs, and current Cuelinks affiliate listing. Plan prices remain `$10 / $20 / $40`, but model-credit copy conflicts across official pricing surfaces, and Cuelinks now marks the campaign paused by the advertiser.
+- 2026-06-15: Patched BLACKBOX AI, AI Coding, BLACKBOX source registry rows, homepage/tools/categories freshness comments, LLM manifests, and `PAGE_REFRESH_LEDGER.md`.
+- 2026-06-15: Validation passed with `npm run ledger:pages`, `npm run ledger:pages:check`, BLACKBOX-specific stale and positive sweeps, source-registry spot checks, scoped `git diff --check`, `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, and `npm run check:quick`. No full build or browser QA was run because this was source-backed content/data/crawl-surface maintenance only.
+
+### 7. Final report
+
+Completed on 2026-06-15. BLACKBOX AI now keeps the $10/$20/$40 paid-plan ladder current while warning buyers that the public pricing page conflicts on included model-credit amounts. Pro Plus remains the practical App Builder / multi-agent / coding-agent tier, Pro Max is framed as the team/admin-control tier, ZDR/security language is aligned with the current security page, and affiliate guidance no longer treats the paused Cuelinks CPC listing as a usable monetized CTA.
+
+Residual risk: BLACKBOX AI's public pricing page contradicts itself on credits, so the page should stay on a short review cadence and buyers should verify checkout/account billing before heavy usage.
+
+---
+
+## ExecPlan: June 15 2026 Qodo Review V2 And Pricing Refresh
+
+### 1. Objective
+
+Refresh Qodo buyer guidance against current official pricing, Qodo Review v2, subscription-plan, IDE, CLI, Context Engine, governance, deployment, and enterprise sources so AiPedia does not keep treating legacy v1 or CLI wording as a clean current self-serve path.
+
+### 2. Current state
+
+`src/content/tools/qodo.md` was last verified June 12 and still uses the legacy `/v1/qodo-merge` source for the core review fact. It correctly lists Developer, Teams, and Enterprise pricing, but underplays the newer subscription-plan behavior: Free PR reviews are capped per Git user and Git organization, Teams reviews require an assigned paid seat plus a linked Git account, and Enterprise is organization-whitelisted. The current CLI docs also call Qodo CLI both Enterprise Beta and legacy/no longer maintained, which needs a stronger buyer caveat.
+
+### 3. Scope
+
+- `src/content/tools/qodo.md`
+- `src/content/use-cases/best-ai-for-code-review.md`
+- `src/content/categories/ai-coding.md`
+- `src/data/source-registry.json`
+- Top-layer freshness comments in homepage, tools index, categories index, guides index, and LLM manifests
+- `PAGE_REFRESH_LEDGER.md`
+
+### 4. Out of scope
+
+- Broad reranking of the code-review guide.
+- Full build or browser/mobile QA unless rendered-output risk emerges.
+- Adding affiliate CTAs; Qodo still has no affiliate program in the tool record.
+
+### 5. Verification plan
+
+- Qodo stale/source sweeps
+- Source-registry spot checks
+- Scoped `git diff --check`
+- `npm run ledger:pages`
+- `npm run ledger:pages:check`
+- `npm run audit:facts`
+- `npm run audit:sources`
+- `npm run check:links`
+- `npm run check:quick`
+
+### 6. Progress log
+
+- 2026-06-15: Selected Qodo from the overdue queue after Base44 because its best-paid-tier fact was past due.
+- 2026-06-15: Rechecked official Qodo pricing, subscription plans, Qodo Review v2 docs, docs `llms.txt`, IDE docs, CLI docs, Context Engine docs, governance docs, deployment-model docs, and enterprise page. Pricing remains Developer free, Teams $38 monthly or $30 annual per user, and Enterprise custom, but current docs add clearer review-eligibility gates and legacy CLI caveats.
+- 2026-06-15: Patched Qodo, AI Coding, the code-review buyer guide, Qodo source registry rows, homepage/tools/categories/guides freshness comments, LLM manifests, and `PAGE_REFRESH_LEDGER.md`.
+- 2026-06-15: Validation passed with `npm run ledger:pages`, `npm run ledger:pages:check`, Qodo stale-source sweeps, source-registry spot checks, scoped `git diff --check`, `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, and `npm run check:quick`. No full build or browser QA was run because this was source-backed content/data/crawl-surface maintenance only.
+
+### 7. Final report
+
+Completed on 2026-06-15. Qodo now points buyers to Qodo Review v2 instead of legacy v1 docs, keeps Developer free / Teams $38 monthly or $30 annual / Enterprise custom pricing current, and adds the two important rollout caveats: Teams PR reviews require an assigned paid seat plus linked Git account, and Qodo CLI is listed on Enterprise pricing but current CLI docs also call it legacy and no longer maintained. AI Coding, the code-review guide, source registry, homepage/tools/categories/guides comments, LLM manifests, and `PAGE_REFRESH_LEDGER.md` are aligned.
+
+Residual risk: Qodo's product packaging is in transition. Keep Qodo on a short review cadence and verify CLI support directly before presenting CLI workflows as a reason to buy Enterprise.
+
+---
+
+## ExecPlan: June 15 2026 Base44 Pricing Credit Refresh
+
+### 1. Objective
+
+Refresh Base44 buyer guidance against current official pricing, billing, developer, and affiliate sources so AiPedia treats the Free credit mismatch, Builder feature gates, and Wix-owned app-builder positioning as current June 15 facts.
+
+### 2. Current state
+
+`src/content/tools/base44.md` was last verified June 12 and already warned about inconsistent Free integration-credit language. The AI Design hub still described this as a June 1 check, while the AI Coding and vibe-coding source rows still carried June 12 dates. Source registry rows for Base44 pricing, billing docs, affiliate terms, and developer docs needed a June 15 check.
+
+### 3. Scope
+
+- `src/content/tools/base44.md`
+- `src/content/categories/ai-design.md`
+- `src/content/categories/ai-coding.md`
+- `src/content/trends/vibe-coding.md`
+- `src/data/source-registry.json`
+- Top-layer freshness comments in homepage, tools index, categories index, trends index, and LLM manifests
+- `PAGE_REFRESH_LEDGER.md`
+
+### 4. Out of scope
+
+- Broad app-builder reranking or comparison-cluster rewrites.
+- Full build or browser/mobile QA unless rendered-output risk emerges.
+- Changing affiliate CTA behavior; the current Base44 record still has no direct affiliate link configured.
+
+### 5. Verification plan
+
+- Base44 stale pricing/source sweeps
+- Source-registry spot checks
+- Scoped `git diff --check`
+- `npm run ledger:pages`
+- `npm run ledger:pages:check`
+- `npm run audit:facts`
+- `npm run audit:sources`
+- `npm run check:links`
+- `npm run check:quick`
+
+### 6. Progress log
+
+- 2026-06-15: Selected Base44 from the overdue queue after Augment Code because it affects both the AI Design app-builder buyer surface and the vibe-coding trend.
+- 2026-06-15: Rechecked official Base44 pricing, billing/plans docs, developer docs, docs homepage, and affiliate program. Pricing cards and billing docs list Free at 25 messages and 100 integration credits/month, while the public pricing FAQ still says 500 integration credits.
+- 2026-06-15: Patched Base44, AI Design, AI Coding source rows, vibe-coding, Base44 source registry rows, homepage/tools/categories/trends freshness comments, LLM manifests, and `PAGE_REFRESH_LEDGER.md`.
+- 2026-06-15: Validation passed with `npm run ledger:pages`, `npm run ledger:pages:check`, Base44 stale-source sweeps, source-registry spot checks, scoped `git diff --check`, `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, and `npm run check:quick`. No full build or browser QA was run because this was source-backed content/data/crawl-surface maintenance only.
+
+### 7. Final report
+
+Completed on 2026-06-15. Base44 now reflects the live Free, Starter, Builder, Pro, Elite, and Enterprise ladder, with Free framed as 25 messages and 100 integration credits/month in plan cards and billing docs while the pricing FAQ still says 500. Buyer guidance now keeps Builder as the practical serious tier for backend functions, model selection, custom domains, and GitHub integration; adds the stale 2025 sale-block caveat; and refreshes the public affiliate terms around $100 fixed commission, 30-day cookie, and $300 payout threshold.
+
+Residual risk: Base44's public pricing page still contains contradictory and stale marketing sections, so this page should stay on a short review cadence and treat account checkout/billing docs as the source of truth for Free credits and month-to-month prices.
+
+---
+
+## ExecPlan: June 15 2026 Augment Code Business Pricing Refresh
+
+### 1. Objective
+
+Refresh Augment Code after the live pricing/model docs shifted from the old Indie/Standard/Max credit-tier framing to Business at $100/month flat for up to 50 seats with $100 included usage, pay-as-you-go top-ups, Cosmos included, and Enterprise custom.
+
+### 2. Current state
+
+`src/content/tools/augment-code.md` was last verified June 12 and still describes Indie $20, Standard $60/developer, Max $200/developer, fixed credit pools, and Cosmos as Max-only. Current official Augment pricing and token-pricing docs now describe a different Business/Enterprise packaging model. The AI Coding hub references Augment only lightly but carries an Augment pricing source date.
+
+### 3. Scope
+
+- `src/content/tools/augment-code.md`
+- `src/content/categories/ai-coding.md`
+- `src/data/source-registry.json`
+- Top-layer freshness comments in homepage, tools index, categories index, and LLM manifests
+- `PAGE_REFRESH_LEDGER.md`
+
+### 4. Out of scope
+
+- Broad reranking of AI Coding or coding comparisons.
+- Browser/mobile QA unless rendered-output risk emerges.
+- Full production build unless scoped checks reveal runtime/rendering risk.
+
+### 5. Verification plan
+
+- Augment stale pricing/model sweeps
+- Scoped `git diff --check`
+- `npm run ledger:pages`
+- `npm run ledger:pages:check`
+- `npm run audit:facts`
+- `npm run audit:sources`
+- `npm run check:links`
+- `npm run check:quick`
+
+### 6. Progress log
+
+- 2026-06-15: Selected Augment Code from the overdue queue because pricing and model facts were past due.
+- 2026-06-15: Rechecked official Augment pricing, available-models, introduction, Agent, token-based pricing, and feature-availability docs. The live pricing page now shows Business at $100/month flat for up to 50 seats with $100 included usage, plus Enterprise custom.
+- 2026-06-15: Patched Augment Code, AI Coding, Augment source registry rows, homepage/tools/categories freshness comments, LLM manifests, and `PAGE_REFRESH_LEDGER.md` to replace stale Indie/Standard/Max credit-tier framing with current Business/Enterprise usage-balance guidance.
+- 2026-06-15: Validation passed with stale Augment pricing/model sweeps, source-registry spot checks, `npm run ledger:pages`, `npm run ledger:pages:check`, scoped `git diff --check`, `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, and `npm run check:quick`. No full build or browser QA was run because this was source-backed content/data/crawl-surface maintenance only.
+
+### 7. Final report
+
+Completed on 2026-06-15. Augment Code now reflects the live Business plan at $100/month flat for up to 50 seats with $100 included usage, pay-as-you-go after included usage, Cosmos, Auggie CLI, MCP/native tools, and Enterprise custom. The page now explains dollar-denominated usage billing, the 40% LLM service fee, Cosmos compute at $0.19/hour, current model docs including Fable 5/Opus 4.7/GPT-5.5/Kimi K2.6/Prism, Fable route-risk caveats, and the Enterprise-only code-completion entitlement warning. AI Coding, source registry, homepage/tools/categories comments, LLM manifests, and `PAGE_REFRESH_LEDGER.md` are aligned.
+
+Residual risk: Augment's pricing and model surfaces moved materially within three days, and its docs list Fable 5 while Anthropic says Fable access is suspended. Keep Augment on a short review cadence and recheck model route availability before using Fable-specific claims in comparisons.
+
+---
+
+## ExecPlan: June 15 2026 Claude Code Agent SDK Credit Refresh
+
+### 1. Objective
+
+Refresh Claude Code's buyer guidance now that June 15, 2026 Agent SDK monthly credits are active, while keeping Fable/Mythos route risk and Opus 4.8 fallback current across developer buying surfaces.
+
+### 2. Current state
+
+`src/content/tools/claude-code.md` was last verified June 14 and already covers Claude Code's terminal/IDE/desktop/browser/remote surface, Fable/Mythos suspension, Opus 4.8 fallback, Windows install paths, and future-tense Agent SDK credits. The AI Coding hub and developer/Cursor/Copilot switching guides summarize Claude Code, but some guide copy still compresses the billing model into shared subscription limits or API billing without the now-active Agent SDK, `claude -p`, and GitHub Actions credit split.
+
+### 3. Scope
+
+- `src/content/tools/claude-code.md`
+- `src/content/categories/ai-coding.md`
+- `src/content/use-cases/best-ai-tools-for-developers.md`
+- `src/content/use-cases/cursor-alternatives.md`
+- `src/content/use-cases/github-copilot-alternatives.md` only if the Claude Code plan field needs the credit split
+- `src/data/source-registry.json`
+- Top-layer freshness comments in homepage, tools index, categories index, guides index, and LLM manifests
+- `PAGE_REFRESH_LEDGER.md`
+
+### 4. Out of scope
+
+- Full reranking of every coding guide or comparison.
+- Browser/mobile QA unless rendered-output risk emerges.
+- Full production build unless scoped checks reveal runtime/rendering risk.
+
+### 5. Verification plan
+
+- Claude Code stale/source sweeps
+- Scoped `git diff --check`
+- `npm run ledger:pages`
+- `npm run ledger:pages:check`
+- `npm run audit:facts`
+- `npm run audit:sources`
+- `npm run check:links`
+- `npm run check:quick`
+
+### 6. Progress log
+
+- 2026-06-15: Selected Claude Code from the weekly queue because it has 11 internal mentions and high-volatility model/route-risk facts due soon.
+- 2026-06-15: Rechecked official Claude Code overview, cost management, usage-limit help, Agent SDK credit help, Anthropic pricing, Fable/Mythos access statement, and Opus 4.8 release sources.
+- 2026-06-15: Patched Claude Code, AI Coding, Best AI Tools for Developers, Cursor alternatives, GitHub Copilot alternatives, Claude Code source registry rows, homepage/tools/categories/guides freshness comments, LLM manifests, and the page refresh ledger to reflect active Agent SDK credits and interactive/API billing separation.
+- 2026-06-15: Validation passed with stale Claude Code billing sweeps, source-registry spot checks, `npm run ledger:pages`, `npm run ledger:pages:check`, scoped `git diff --check`, `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, and `npm run check:quick`. No full build or browser QA was run because this was content/data/crawl-surface maintenance only.
+
+### 7. Final report
+
+Completed on 2026-06-15. Claude Code buyer guidance now treats Agent SDK, `claude -p`, Claude Code GitHub Actions, and third-party Agent SDK app usage as active monthly per-user credits, while interactive Claude Code remains on subscription usage limits and scaled automation still points buyers toward API metering. The page keeps Opus 4.8 as the stable high-end route, warns that Fable/Mythos remain suspended, and adds the no-pooling/no-rollover credit caveat. AI Coding, developer/Cursor/Copilot alternatives guides, source registry, top-layer comments, LLM manifests, and `PAGE_REFRESH_LEDGER.md` are aligned.
+
+Residual risk: Anthropic's model availability and plan copy are high-volatility surfaces, so Claude Code should stay on the short review cadence if Fable/Mythos access changes or Anthropic revises Agent SDK credit eligibility.
+
+---
+
+## ExecPlan: June 15 2026 Canva AI Pass And Commercial Rights Refresh
+
+### 1. Objective
+
+Refresh Canva's buyer guidance around current Canva AI 2.0, Business, AI Pass, AI usage limits, and AI-output commercial-rights caveats so AiPedia keeps Canva's conversion-heavy design/image/video guidance current without running unnecessary builds.
+
+### 2. Current state
+
+`src/content/tools/canva.md` was last verified June 14 and already covers Canva AI 2.0, Business, AI Pass, regional pricing, AI allowances, and commercial-rights review. The editorial queue still shows Canva as due soon across high-volatility pricing, API, image, video, enterprise-control, and watch-out facts. Parent hubs (`ai-design`, `ai-image`, and possibly `ai-video`) plus homepage/tools/categories/LLM surfaces summarize the page.
+
+### 3. Scope
+
+- `src/content/tools/canva.md`
+- `src/content/categories/ai-design.md`
+- `src/content/categories/ai-image.md`
+- `src/content/categories/ai-video.md` only if direct Canva-video wording needs a source-date bump
+- `src/data/source-registry.json`
+- Top-layer freshness comments in homepage, tools index, categories index, and LLM manifests
+- `PAGE_REFRESH_LEDGER.md`
+
+### 4. Out of scope
+
+- Rebuilding Canva alternatives/comparison pages unless link or source checks reveal a direct stale contradiction.
+- Full production build or browser/mobile QA unless rendered-output risk emerges.
+- Changing affiliate/commercial CTA behavior; Canva has no affiliate program in the current tool record.
+
+### 5. Verification plan
+
+- Canva stale/source sweeps
+- Scoped `git diff --check`
+- `npm run ledger:pages`
+- `npm run ledger:pages:check`
+- `npm run audit:facts`
+- `npm run audit:sources`
+- `npm run check:links`
+- `npm run check:quick`
+
+### 6. Progress log
+
+- 2026-06-15: Selected Canva from the weekly queue because it has eight internal mentions and all core high-volatility pricing, AI, media, enterprise, and watch-out facts due within a week.
+- 2026-06-15: Rechecked official Canva AI, Canva AI 2.0 announcement, Canva AI Pass, Canva Business announcement, Canva Pro, AI Product Terms, and Canva Shield sources.
+- 2026-06-15: Patched Canva's tool page, AI Design, AI Image, source registry, homepage/tools/categories top-layer comments, and LLM manifests to emphasize AI Pass, pooled allowances, operational AI usage limits, region-rendered checkout caveats, Canva Shield, and commercial-rights review.
+- 2026-06-15: Kept Canva pricing copy conservative because the public pricing page rendered an unsupported-browser shell during verification; current facts now point to readable official Canva AI, Pro, Business, AI Pass, AI Product Terms, and Shield sources.
+- 2026-06-15: Validation passed with `npm run ledger:pages`, `npm run ledger:pages:check`, stale Canva source/claim sweeps, scoped `git diff --check`, `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, and `npm run check:quick`. No full build or browser QA was run because this was source-backed content and crawl-surface maintenance only.
+
+### 7. Final report
+
+Completed on 2026-06-15. Canva now has current buyer guidance for Canva AI 2.0, Business, AI Pass, pooled Standard/Premium/Ultra allowances, AI usage limits as operational controls, AI Product Terms, Canva Shield, region-rendered checkout caveats, and commercial-rights review. The AI Design and AI Image parent hubs, source registry, homepage/tools/categories maintenance comments, LLM manifests, and `PAGE_REFRESH_LEDGER.md` are aligned.
+
+Residual risk: the live Canva pricing page rendered an unsupported-browser shell in the fetcher, so the content intentionally avoids claiming exact current Pro/Business checkout price, storage, or allowance totals beyond the readable official Business and AI Pass anchors. Buyers are directed to verify the live regional checkout before budgeting.
+
+---
+
+## ExecPlan: June 15 2026 Gemini Code Assist Transition Refresh
+
+### 1. Objective
+
+Refresh Gemini's buyer guidance around the current Google Code Assist and Antigravity transition so AiPedia does not keep recommending Gemini CLI or Gemini Code Assist IDE extensions to unpaid-tier and Google One users without the June 18, 2026 migration caveat.
+
+### 2. Current state
+
+`src/content/tools/gemini.md` was last verified June 14 and already covers Gemini 3.5 Flash, Gemini 3.1 Pro Preview, Google AI Plus/Pro/Ultra limits, API pricing, media surfaces, Workspace privacy, and Gemini Code Assist. Current official Google Code Assist copy now warns that Gemini CLI and Gemini Code Assist IDE extensions for unpaid-tier and Google One users will be replaced by Antigravity CLI and Antigravity on June 18.
+
+### 3. Target state
+
+Gemini should be verified to June 15, 2026 where this coding-surface warning matters. The page should keep Gemini 3.5 Flash as the stable API flagship, preserve Gemini app plan complexity, add the June 18 Antigravity transition caveat for unpaid-tier/Google One coding users, and align AI Coding, AI Chatbots/Search parent notes where Gemini is summarized. Source registry, top-layer comments, LLM surfaces, and page refresh ledger should reflect the focused refresh.
+
+### 4. Scope
+
+Included: `src/content/tools/gemini.md`, `src/content/categories/ai-coding.md`, `src/content/categories/ai-chatbots.md`, `src/content/categories/ai-search.md`, `src/data/source-registry.json`, relevant top-layer comments, LLM surfaces, `PAGE_REFRESH_LEDGER.md`, and focused validation. Excluded: full Gemini alternatives or comparison-cluster reranking, broad Google AI plan rewrite, and browser QA unless rendered risk changes materially.
+
+### 5. Validation plan
+
+- `npm run ledger:pages`
+- `npm run ledger:pages:check`
+- Gemini stale-marker/source sweeps
+- Scoped `git diff --check`
+- `npm run audit:facts`
+- `npm run audit:sources`
+- `npm run check:links`
+- `npm run check:quick`
+- Avoid another full build unless focused checks reveal rendered-output risk
+
+### 6. Progress log
+
+- 2026-06-15: Selected Gemini after the weekly queue showed 10 internal mentions and high-volatility plan/model/media/privacy facts due soon.
+- 2026-06-15: Rechecked official Google AI plans, Gemini subscriptions, Gemini Apps limits, Gemini API models, API pricing, Google Search grounding, Gemini Code Assist, and Veo 3.1 video docs.
+- 2026-06-15: Updated the Gemini tool page, AI Coding, AI Chatbots, AI Search, source registry, homepage/tools/categories top-layer comments, LLM manifests, and page refresh ledger around Gemini 3.5 Flash, Gemini app labels, API pricing/grounding, media docs, and the June 18 Antigravity migration caveat for unpaid-tier / Google One Code Assist users.
+- 2026-06-15: Validation passed with `npm run ledger:pages`, `npm run ledger:pages:check`, Gemini stale/source sweeps, scoped `git diff --check`, `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, and `npm run check:quick`. No full build or browser QA was run because this pass changed source-backed content and freshness surfaces only, and the user asked to avoid excessive builds.
+
+### 7. Final report
+
+Completed on 2026-06-15. Gemini now has current buyer guidance for Gemini 3.5 Flash, Gemini app Flash-Lite/Flash/Pro plan labels, Gemini 3.1 Pro Preview API caveat, Google AI Pro/Ultra limits, Gemini API pricing/grounding, Nano Banana and Veo media docs, and the June 18 Antigravity migration for unpaid-tier / Google One Code Assist users. The Workspace privacy hub remains explicitly marked as a June 14 source check because that source was not successfully reverified in this slice.
+
+---
+
+## ExecPlan: June 15 2026 GitHub Copilot Eligibility And AI Credits Refresh
+
+### 1. Objective
+
+Refresh GitHub Copilot's buyer guidance against current official GitHub sources so AiPedia reflects the June 15, 2026 state of AI Credits, Fable 5 suspension, one-million-token context, Agent tasks, code-review controls, the constrained signup/upgrade footnote, and GitHub Enterprise Server unavailability that can affect procurement.
+
+### 2. Current state
+
+`src/content/tools/github-copilot.md` and `/guides/github-copilot-alternatives/` were refreshed June 14 around AI Credits and Fable 5 route risk. The page already covers most current feature changes, but it underplays GitHub's live note that some new individual and self-serve organization signups remain paused while Max is limited to upgrades for existing eligible plans, and it does not foreground GitHub's live plan-doc caveat that Copilot is not currently available for GitHub Enterprise Server. The AI Coding hub also still labels the Copilot slice as June 14.
+
+### 3. Target state
+
+Copilot should be verified to June 15, 2026 across the tool page, Copilot alternatives guide, AI Coding parent hub, source registry, top-layer maintenance comments, LLM surfaces, and page refresh ledger. Buyer copy should retain the AI Credits and model-route warning, add explicit rollout eligibility caution for new signups/upgrades, call out GitHub Enterprise Server unavailability for self-hosted GitHub buyers, and keep Fable 5 marked suspended while Opus 4.8/Sonnet 4.6/Haiku 4.5 remain the Claude fallback set in Copilot.
+
+### 4. Scope
+
+Included: `src/content/tools/github-copilot.md`, `src/content/use-cases/github-copilot-alternatives.md`, `src/content/categories/ai-coding.md`, `src/data/source-registry.json`, relevant top-layer comments, LLM surfaces, `PAGE_REFRESH_LEDGER.md`, and focused validation. Excluded: full comparison-cluster reranking, broad AI Coding guide rewrite, and browser QA unless tooling is available without permission prompts.
+
+### 5. Validation plan
+
+- `npm run ledger:pages`
+- `npm run ledger:pages:check`
+- Copilot stale-marker/source sweeps
+- Scoped `git diff --check`
+- `npm run audit:facts`
+- `npm run audit:sources`
+- `npm run check:links`
+- `npm run check:quick`
+- Avoid another full build unless rendered output risk changes materially from content edits
+
+### 6. Progress log
+
+- 2026-06-15: Selected GitHub Copilot from the weekly queue because it has 18 internal mentions and high-volatility AI Credits, model availability, context, agent, and enterprise-control facts coming due.
+- 2026-06-15: Rechecked official GitHub Copilot plan, billing, organization billing, supported-model, model-comparison, SDK GA, larger context/reasoning, Agent tasks REST API, Fable 5 suspension, and code-review controls sources.
+- 2026-06-15: Updated the GitHub Copilot tool page, Copilot alternatives guide, AI Coding parent hub, source registry, homepage/tools/categories/guides top-layer comments, LLM manifests, and page refresh ledger around paid-plan signup/Max upgrade eligibility, AI Credits, Fable 5 suspension, one-million-token context, agent APIs, Agentic Workflows, CLI settings, and code-review controls.
+- 2026-06-15: Re-opened the current Copilot plan/billing docs and added the GitHub Enterprise Server unavailability caveat to the Copilot tool page, AI Coding hub, top-layer maintenance comments, LLM manifests, and regenerated page refresh ledger.
+- 2026-06-15: Validation passed with `npm run ledger:pages`, `npm run ledger:pages:check`, Copilot stale-marker and eligibility sweeps, scoped `git diff --check`, `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, and `npm run check:quick`. No full build or browser QA was run because this pass changed content/freshness surfaces only and the user asked to avoid excessive builds.
+
+### 7. Final report
+
+Completed on 2026-06-15. GitHub Copilot now carries current buyer guidance for live signup/upgrade constraints, GitHub Enterprise Server unavailability, AI Credits, Fable 5 suspension, one-million-token context/reasoning, SDK/agent surfaces, Agentic Workflows, CLI settings, and code-review controls. The AI Coding hub, Copilot alternatives guide, source registry, top-layer maintenance comments, LLM manifests, and `PAGE_REFRESH_LEDGER.md` are aligned.
+
+Residual risk: no rendered browser/mobile QA or full build was run in this pass. Focused checks passed, and the remaining June 14 mentions in the touched content are historical update notes or unrelated AI Coding source history. GitHub can reopen self-serve paid signups, expand Max eligibility, or change GitHub Enterprise Server availability without notice, so live plan docs remain the source of truth for procurement.
+
+---
+
+## ExecPlan: June 15 2026 Claude Route-Risk Buyer Refresh
+
+### 1. Objective
+
+Refresh Claude's high-volatility buyer facts after the June 15 Agent SDK credit start date and the live mismatch between Anthropic's model docs listing Fable 5 and the active pricing/access surfaces showing Fable/Mythos unavailable.
+
+### 2. Current state
+
+`src/content/tools/claude.md` was verified June 14 and already explains the Fable/Mythos suspension, Opus 4.8 fallback, Agent SDK credits, ZDR scope, and platform fees. The Claude alternatives guide still shows June 12 verification, the Anthropic company profile shows June 13 framing, and the AI Chatbots hub plus LLM summaries still describe Claude as a June 14 refresh.
+
+### 3. Target state
+
+Claude should be verified to June 15, 2026 across the tool page, Claude alternatives guide, Anthropic company profile, AI Chatbots hub, source registry, top-layer comments, LLM surfaces, and page refresh ledger. Buyer copy should say Opus 4.8 is the stable buyable high-end route while Fable/Mythos remain suspended, note that Agent SDK credits are now active for eligible plans, and warn that API/model docs can lag active availability.
+
+### 4. Scope
+
+Included: `src/content/tools/claude.md`, `src/content/use-cases/claude-alternatives.md`, `src/content/companies/anthropic.md`, `src/content/categories/ai-chatbots.md`, `src/data/source-registry.json`, relevant top-layer comments, LLM surfaces, and `PAGE_REFRESH_LEDGER.md`. Excluded: broad rewrites of every guide that mentions Claude unless validation shows active misleading copy.
+
+### 5. Validation plan
+
+- `npm run ledger:pages`
+- `npm run ledger:pages:check`
+- Claude stale-marker/source sweeps
+- Scoped `git diff --check`
+- `npm run audit:facts`
+- `npm run audit:sources`
+- `npm run check:links`
+- `npm run check:quick`
+- Run `npm run build:fast` only once if rendered content changes require final build confidence
+
+### 6. Progress log
+
+- 2026-06-15: Selected Claude from the weekly queue because it has 29 internal mentions and eleven high-volatility facts due within a week.
+- 2026-06-15: Rechecked official Claude pricing, Anthropic model docs, Fable/Mythos suspension statement, Agent SDK credit help, API/data-retention docs, web search docs, ChatGPT pricing, Gemini subscriptions, xAI Grok surfaces, Perplexity Pro, and Mistral Vibe.
+- 2026-06-15: Updated Claude, Anthropic, Claude alternatives, AI Chatbots, source registry, homepage/tools/categories/guides/companies top-layer comments, LLM manifests, and the page refresh ledger around Opus 4.8 fallback, Fable/Mythos suspension, model-doc availability drift, active Agent SDK credits, ZDR scope, platform fees, and adjacent alternatives.
+- 2026-06-15: Validation passed with `npm run ledger:pages`, `npm run ledger:pages:check`, Claude stale-marker sweeps, scoped `git diff --check`, `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, `npm run check:quick`, `npm run build:fast`, and built-output smoke greps across Claude, Claude alternatives, Anthropic, AI Chatbots, and LLM routes.
+
+### 7. Final report
+
+Completed. Claude now carries June 15, 2026 source-backed buyer guidance across the tool page, Anthropic company profile, Claude alternatives guide, AI Chatbots parent hub, source registry, top-layer maintenance comments, LLM manifests, and page refresh ledger. The refresh makes Opus 4.8 the stable buyable high-end route, keeps Fable/Mythos unavailable until Anthropic restores access, calls out model-doc availability drift, and updates Agent SDK credits from future-tense to active.
+
+Residual risk: no browser/mobile visual QA was run in this pass; rendered confidence came from the successful fast build, indexability/commercial CTA audits, and built HTML/LLM smoke greps. Broad chatbot source-list entries that were outside the Claude slice retain their older source dates.
+
+---
+
+## ExecPlan: June 15 2026 Cursor High-Volatility Fact Refresh
+
+### 1. Objective
+
+Refresh Cursor's high-volatility pricing, agent, Bugbot, enterprise, and data-use facts against current official Cursor sources, then synchronize the directly affected coding buyer surfaces without expanding into a full AI coding guide rewrite.
+
+### 2. Current state
+
+`src/content/tools/cursor.md`, `/guides/cursor-alternatives/`, and `/guides/best-ai-tools-for-developers/` were last verified June 14, 2026, while the weekly queue says Cursor has multiple high-priority facts due June 16. The AI Coding hub is current through June 15 but still describes Cursor's refresh as a June 14 check. The broader `/guides/best-ai-coding-assistant/` remains a larger stale guide and is out of scope for this focused pass unless validation shows the Cursor changes make it actively misleading.
+
+### 3. Target state
+
+Cursor facts should be verified to June 15, 2026, including Hobby, Individual, Teams, Enterprise, Pro+/Ultra recommendations, on-demand usage after included usage is consumed, Bugbot usage billing and `/review` behavior, CLI/headless automation positioning, Enterprise controls, Composer 2.5 token pricing, and Privacy Mode/ZDR caveats. Directly affected guide and hub copy should avoid stale June 14 language. Source registry, top-layer comments, LLM surfaces, and `PAGE_REFRESH_LEDGER.md` should reflect the refresh.
+
+### 4. Scope
+
+Included: `src/content/tools/cursor.md`, `src/data/source-registry.json`, `src/content/categories/ai-coding.md`, `src/content/use-cases/cursor-alternatives.md`, `src/content/use-cases/best-ai-tools-for-developers.md`, top-layer maintenance comments, LLM surfaces, and the page-refresh ledger. Excluded: full reranking across Claude Code, GitHub Copilot, Codex, Devin, Replit Agent, and the broader `best-ai-coding-assistant` guide.
+
+### 5. Validation plan
+
+- `npm run ledger:pages`
+- `npm run ledger:pages:check`
+- Cursor stale-marker/source sweeps
+- Scoped `git diff --check`
+- `npm run audit:facts`
+- `npm run audit:sources`
+- `npm run check:links`
+- `npm run check:quick`
+- Avoid another full build unless rendered/runtime confidence materially changes after the previous successful build
+
+### 6. Progress log
+
+- 2026-06-15: Selected Cursor because the weekly queue shows 17 internal mentions and multiple high-priority facts due June 16.
+- 2026-06-15: Rechecked official Cursor pricing, changelog, Composer 2.5, Enterprise, CLI, and Data Use pages.
+- 2026-06-15: Updated the Cursor tool page, source registry, AI Coding parent hub, Cursor alternatives guide, Best AI Tools for Developers guide, top-layer maintenance comments, LLM surfaces, and page refresh ledger around Cursor's current plans, on-demand usage, Pro+/Ultra guidance, Bugbot, CLI/SDK automation, Enterprise controls, Composer 2.5 economics, and Data Use posture.
+- 2026-06-15: Validation passed with `npm run ledger:pages`, `npm run ledger:pages:check`, Cursor stale/source sweeps, scoped `git diff --check`, `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, `npm run check:quick`, and a final `npm run build:fast` pass after the last rendered hub-label correction.
+
+### 7. Final report
+
+Completed. Cursor now carries June 15, 2026 source-backed buyer guidance across its tool page, directly affected developer guides, AI Coding hub, source registry, LLM summaries, top-layer maintenance comments, and page refresh ledger. The refresh replaces stale June 14/June 6 Cursor framing with current plan, usage, Bugbot, CLI/SDK, Enterprise, Composer 2.5, and privacy/data-use caveats.
+
+Residual risk: no browser/mobile visual QA was run in this pass; rendered confidence came from the successful fast build, indexability/commercial CTA audits, and built HTML smoke greps.
+
+---
+
+## ExecPlan: June 15 2026 CodeRabbit Current-Source Refresh
+
+### 1. Objective
+
+Refresh `/tools/coderabbit/` and the code-review buyer guidance against current official CodeRabbit sources so AiPedia reflects the June 15, 2026 pricing, rate-limit, usage-add-on, Knowledge Base, CLI, Slack agent, and June changelog surface.
+
+### 2. Current state
+
+`src/content/tools/coderabbit.md` and `/guides/best-ai-for-code-review/` carry June 12 verification dates, while visible guide and AI Coding hub copy still describes the code-review guide as a June 6 check. The page has the right broad pricing anchors, but it underplays CodeRabbit's current refill/fair-usage language, $1 credit add-on, linked-repository limits, CodeRabbit Plan in VS Code, CLI v0.6.0, automatic repository linking, and newer GitLab/GHES review surface updates.
+
+### 3. Target state
+
+`/tools/coderabbit/` should show June 15, 2026 verification, keep Free/OSS/Pro/Pro+/Enterprise and Slack-agent pricing current, clarify that plan review limits are refillable per-developer allowances rather than simple hourly quotas, add usage-add-on credit pricing, update Knowledge Base and Slack agent governance wording, and align the code-review guide, AI Coding parent hub, source registry, top-layer comments, LLM manifests, and page-refresh ledger rows.
+
+### 4. Scope
+
+Included: CodeRabbit tool metadata, facts, price history, body copy, source list, source registry entries, Best AI for Code Review guide, AI Coding parent guidance, homepage/tools/categories/guides top-layer comments, LLM surfaces, page-refresh ledger, and focused validation. Excluded: full Qodo/GitHub Copilot/Cursor reranking, comparison-template work, logo changes, and browser QA unless tooling is available without permission prompts.
+
+### 5. Validation plan
+
+- `npm run ledger:pages`
+- `npm run ledger:pages:check`
+- CodeRabbit stale-marker and source-ID sweeps
+- `npm run audit:facts`
+- `npm run audit:sources`
+- `npm run check:links`
+- Bounded OG check
+- Scoped `git diff --check`
+- `npm run check:quick`
+- One `npm run build:fast` only after focused checks pass because rendered tool/guide/category content changes
+
+### 6. Progress log
+
+- 2026-06-15: Selected CodeRabbit from the editorial weekly queue because the tool page and code-review guide were overdue and tied to a monetizable coding workflow.
+- 2026-06-15: Rechecked official CodeRabbit pricing, plans docs, usage-based add-on docs, platform docs, Knowledge Base docs, CLI page, Slack agent docs, and changelog sources.
+- 2026-06-15: Updated `src/content/tools/coderabbit.md` with June 15 verification, current Pro/Pro+ monthly and annual pricing, refillable review allowances, usage add-on credit pricing, Slack Agent billing, Knowledge Base opt-out behavior, CLI v0.6.0 notes, CodeRabbit Plan in VS Code, automatic repository linking, and GitLab/GHES changelog context.
+- 2026-06-15: Updated `/guides/best-ai-for-code-review/` and the AI Coding parent hub with the CodeRabbit refresh, then rechecked adjacent Qodo, GitHub Copilot, and Cursor Bugbot official sources so the buyer guide did not mix fresh CodeRabbit facts with stale competitor context.
+- 2026-06-15: Updated source registry entries, top-layer maintenance comments, LLM surfaces, and regenerated `PAGE_REFRESH_LEDGER.md`.
+- 2026-06-15: Passed `npm run ledger:pages`, `npm run ledger:pages:check`, CodeRabbit stale-marker sweeps, scoped `git diff --check`, `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, `node scripts/generate-og-svgs.mjs --check --limit 50 --json`, `npm run check:quick`, and one `npm run build:fast`.
+- 2026-06-15: A final built-HTML `rg` smoke check hit a Windows sandbox helper error after the successful build; no permission prompt was requested. Browser/mobile rendered QA was left as a residual limitation for this slice.
+
+### 7. Final report
+
+Completed. The CodeRabbit page, Best AI for Code Review guide, AI Coding parent hub, source registry, top-layer comments, LLM surfaces, and page-refresh ledger now reflect current official June 15, 2026 sources. Focused checks and a single fast build passed. Remaining risk: rendered mobile/browser QA was not run because local browser-style verification was unavailable without asking for permissions.
+
+---
+
+## ExecPlan: June 15 2026 Mastra Current-Source Refresh
+
+### 1. Objective
+
+Refresh `/tools/mastra/` against current official Mastra sources so AiPedia's Mastra guidance reflects the June 15, 2026 pricing/platform surface, model-router scope, current GitHub/company traction claims, and June product updates around Code Mode, Agent Signals, and Agent Client Protocol support.
+
+### 2. Current state
+
+`src/content/tools/mastra.md` carries June 12 verification dates and still cites 23.7k GitHub stars, $13m raised, and a 20-person team. The pricing facts are broadly correct but need a current recheck, and the page does not yet cover the June 2-9 Mastra product changes that affect buyer fit and production risk. The AI Coding parent hub still lists Mastra pricing as verified on June 12.
+
+### 3. Target state
+
+`/tools/mastra/` should show June 15, 2026 verification, keep Starter at $0/month, Teams at $250/month, Enterprise/custom and self-hosted custom pricing, expose the usage meters and Memory Gateway market-rate markup, update traction language to current official/GitHub sources, add model-router and June agent-feature context, and align AI Coding, source registry, top-layer comments, LLM surfaces, and page-refresh ledger rows.
+
+### 4. Scope
+
+Included: Mastra tool metadata, facts, price history, body copy, source list, source registry entries, AI Coding parent guidance, tools/categories/home top-layer comments, LLM surfaces, page-refresh ledger, and focused validation. Excluded: LangGraph/Microsoft Agent Framework comparison reranking, broader agent-framework page refreshes, logo work, template changes, and rendered mobile QA unless browser tooling becomes available without permission prompts.
+
+### 5. Validation plan
+
+- `npm run ledger:pages`
+- `npm run ledger:pages:check`
+- Mastra stale-marker and source-ID sweeps
+- `npm run audit:facts`
+- `npm run audit:sources`
+- `npm run check:links`
+- Bounded OG check
+- Scoped `git diff --check`
+- `npm run check:quick`
+- Avoid another build unless focused checks reveal rendered-output risk
+
+### 6. Progress log
+
+- 2026-06-15: Selected Mastra from the editorial weekly queue because high-volatility pricing and watch-out facts were overdue.
+- 2026-06-15: Rechecked official Mastra pricing, docs, deployment docs, Platform docs, model router docs, customers, About page, GitHub repository, blog index, Code Mode, Agent Signals, and Agent Client Protocol support sources.
+- 2026-06-15: Updated the Mastra tool page, AI Coding parent hub, source registry, top-layer maintenance comments, LLM manifests, and page-refresh ledger around current pricing, usage meters, model-router scope, GitHub/company traction claims, Code Mode, Agent Signals, ACP support, and sandbox/harness permission review.
+- 2026-06-15: Validation passed: `npm run ledger:pages`, `npm run ledger:pages:check`, Mastra stale/source sweeps, `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, bounded OG check, scoped `git diff --check`, `npm run check:quick`, and one `npm run build:fast` pass with Vercel/Neon hosting, indexability, and commercial CTA audits.
+
+### 7. Final report
+
+Completed on 2026-06-15. `/tools/mastra/` now reflects current Mastra pricing and usage meters, GitHub/company traction claims, model-router scope, deployment/platform docs, dual-license posture, Code Mode, Agent Signals, ACP support, source registry entries, AI Coding parent guidance, LLM manifests, and `PAGE_REFRESH_LEDGER.md`. Remaining follow-up: LangGraph, Microsoft Agent Framework, AG2, and broader agent-framework comparison copy still retain their earlier source stamps and should get separate current-source passes before changing cross-framework winners.
+
+---
+
+## ExecPlan: June 15 2026 Hedra Current-Source Refresh
+
+### 1. Objective
+
+Refresh `/tools/hedra/` against current official Hedra sources so AiPedia's Hedra guidance reflects the June 15, 2026 pricing/model surface, the newer Hedra Agent/Spaces/Skills creative-workflow positioning, current enterprise claims, and the fact that the current static pricing crawl no longer exposes the older Kling 2.6 Pro credit-rate line.
+
+### 2. Current state
+
+`src/content/tools/hedra.md` carries June 12 verification dates and correctly frames Hedra as a pooled-credit studio, but it still repeats a specific Kling 2.6 Pro credit rate that is not visible in the current pricing page crawl, underplays the creative-agent/Spaces/Skills shift, and blends adoption signals from different Hedra pages. AI Video, AI Voice, and the avatar-video buyer guide still cite Hedra sources as verified on June 12.
+
+### 3. Target state
+
+`/tools/hedra/` should show June 15, 2026 verification, keep current Basic/Creator/Professional/Teams/Enterprise plan math, update current model-rate examples to the pricing page's visible list, add agent-workflow guidance, separate pricing-page and enterprise-page adoption claims, and align AI Video, AI Voice, avatar-video guide, source registry, top-layer comments, LLM surfaces, and page-refresh ledger rows.
+
+### 4. Scope
+
+Included: Hedra tool metadata, facts, price history, body copy, source list, source registry entries, AI Video and AI Voice parent guidance, avatar-video buyer guide Hedra slice, tools/categories/guides/home top-layer comments, LLM surfaces, page-refresh ledger, and focused validation. Excluded: full avatar-video guide reranking, broader AI Video model reranking, logo work, template changes, and unrelated dirty worktree cleanup.
+
+### 5. Validation plan
+
+- `npm run ledger:pages`
+- `npm run ledger:pages:check`
+- Hedra stale-marker and source-ID sweeps
+- `npm run audit:facts`
+- `npm run audit:sources`
+- `npm run check:links`
+- Bounded OG check
+- Scoped `git diff --check`
+- `npm run check:quick`
+- One `npm run build:fast` only after focused checks pass because rendered content and parent surfaces change
+
+### 6. Progress log
+
+- 2026-06-15: Selected Hedra from the editorial weekly queue because four high-volatility model, pricing, workflow, and watch-out facts were overdue.
+- 2026-06-15: Rechecked official Hedra pricing, models, homepage, enterprise, blog index, upgraded Agent, and Skills sources.
+- 2026-06-15: Updated the Hedra tool page, AI Video and AI Voice parent hubs, avatar-video buyer guide, source registry, top-layer maintenance comments, LLM manifests, and page-refresh ledger around Hedra Agent/Spaces/Skills positioning, current visible model-rate examples, enterprise controls, and pricing-page drift on the older Kling 2.6 Pro line.
+- 2026-06-15: Validation passed: `npm run ledger:pages`, `npm run ledger:pages:check`, Hedra stale/source sweeps, `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, bounded OG check, scoped `git diff --check`, `npm run check:quick`, and one `npm run build:fast` pass with Vercel/Neon hosting, indexability, and commercial CTA audits.
+- 2026-06-15: Attempted a rendered mobile overflow check against `dist-fast` via Node/Playwright, but the Windows sandbox helper failed before execution and Browser tools were not exposed in this session; no permission prompt was requested.
+
+### 7. Final report
+
+Completed on 2026-06-15. `/tools/hedra/` now reflects Hedra's current creative-agent workspace positioning, pooled-credit Basic/Creator/Professional/Teams/Enterprise pricing posture, visible model-rate examples, enterprise controls, Agent/Spaces/Skills workflow, and the correction that the current public pricing crawl no longer exposes the older Kling 2.6 Pro credit-rate line. AI Video, AI Voice, the avatar-video buyer guide, source registry, top-layer maintenance markers, LLM manifests, and `PAGE_REFRESH_LEDGER.md` are aligned. Remaining follow-up: full video/avatar rankings should get a separate current-source pass before changing cross-tool winners against Runway, HeyGen, Synthesia, Veo, Kling, or Hailuo; rendered mobile overflow QA still needs a pass in an environment where browser automation is available.
+
+---
+
+## ExecPlan: June 14 2026 Cursor Current-Source Refresh
+
+### 1. Objective
+
+Refresh `/tools/cursor/` against current official Cursor sources so AiPedia's Cursor guidance reflects the June 3-10 Cursor changes, live pricing, Enterprise organization controls, Bugbot speed/cost improvements, SDK auto-review/custom tools, Design Mode/context usage reporting, CLI/agent surfaces, and current data-use/privacy language.
+
+### 2. Current state
+
+`src/content/tools/cursor.md` carried June 12 verification dates and summarized Cursor 3.5/Composer 2.5, but it did not surface Cursor's June 10 Bugbot improvements, June 4 SDK auto-review/custom tools, June 4/5 Design Mode/context reporting updates, June 3 Enterprise organization controls, or the June 9 data-use page. The AI Coding parent hub and developer/Cursor alternatives guides already mention June 14 in visible copy but still carry June 12 Cursor source stamps in places.
+
+### 3. Target state
+
+`/tools/cursor/` should show June 14, 2026 verification, explain the current pricing and usage model without unsupported exact Bugbot seat-price claims, distinguish Cursor's product/model catalog from account-specific model availability, update privacy language to match Cursor's June 9 Data Use page, and align AI Coding, Cursor alternatives, Best AI Tools for Developers, source registry, top-layer comments, LLM surfaces, and page-refresh ledger rows.
+
+### 4. Scope
+
+Included: Cursor tool metadata, facts, price history, body copy, source list, source registry entries, AI Coding parent guidance, Cursor alternatives guide, Best AI Tools for Developers guide, tools/categories/guides/home top-layer comments, LLM surfaces, page-refresh ledger, and focused validation. Excluded: full Cursor comparison cluster rewrites, unrelated coding-tool reranking, logo work, template changes, and browser QA unless rendered code changes appear.
+
+### 5. Validation plan
+
+- `npm run ledger:pages`
+- `npm run ledger:pages:check`
+- Cursor stale-marker and source-ID sweeps
+- `npm run audit:facts`
+- `npm run audit:sources`
+- `npm run check:links`
+- Bounded OG check
+- Scoped `git diff --check`
+- `npm run check:quick`
+- One direct Astro build phase only if focused checks pass and rendered-content confidence requires it
+
+### 6. Progress log
+
+- 2026-06-14: Selected Cursor from the editorial weekly queue because it has 17 internal mentions and eight high-volatility pricing, model, context, agent, free-plan, and enterprise-control facts due in two days.
+- 2026-06-14: Rechecked official Cursor pricing, product, CLI, Enterprise, Data Use, Security, changelog, Composer 2.5, Bugbot, SDK, Design Mode, Canvas/context usage, and Enterprise organization sources.
+- 2026-06-14: Updated the Cursor tool page, AI Coding parent hub, Cursor alternatives guide, Best AI Tools for Developers guide, source registry, top-layer maintenance comments, LLM surfaces, and page-refresh ledger around live pricing, Pro+/Ultra checkout caveats, Bugbot, CLI/SDK agents, Design Mode, Enterprise organizations, and Data Use privacy posture.
+- 2026-06-14: Validation passed: `npm run ledger:pages`, `npm run ledger:pages:check`, Cursor stale/source sweeps, `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, bounded OG check, scoped `git diff --check`, `npm run check:quick`, and one `npm run build:fast` pass with Vercel/Neon hosting, indexability, and commercial CTA audits.
+
+### 7. Final report
+
+Completed. Cursor now carries June 14, 2026 current-source guidance across its tool record, high-value AI Coding and developer-guide surfaces, source registry, top-layer maintenance comments, LLM summaries, and the page refresh ledger. The refresh removes unsupported current exact-price assumptions for Pro+/Ultra/Bugbot, adds the June Bugbot/SDK/Design Mode/Enterprise organization story, and corrects privacy language to match Cursor's current Data Use page.
+
+---
+
+## ExecPlan: June 14 2026 GitHub Copilot Current-Source Refresh
+
+### 1. Objective
+
+Refresh `/tools/github-copilot/` against current official GitHub sources so AiPedia's Copilot guidance reflects the live AI Credits system, temporary sign-up constraints, one-million-token context/reasoning controls, Copilot SDK GA, Agent tasks REST API public preview, Chat/agent-session handoff, Agentic Workflows public preview, code-review controls, and the Claude Fable 5 suspension.
+
+### 2. Current state
+
+`src/content/tools/github-copilot.md` already carried June 13 page dates and recent AI Credits guidance, but high-volatility facts in the editorial queue still pointed to June 12 source stamps. The page did not fully surface the June 4-12 Copilot changes and still treated Claude Fable 5 as broadly available in a few places despite GitHub's June 12 editor note suspending Fable 5 access across Copilot.
+
+### 3. Target state
+
+`/tools/github-copilot/` should show June 14, 2026 verification, distinguish the live supported-model catalog from account/surface/model-route risk, treat Fable 5 as suspended until restored, explain when one-million-token context and higher reasoning raise AI Credit burn, keep pricing/credit guidance aligned with official docs, and update affected AI Coding, Copilot alternatives, source registry, top-layer comments, LLM surfaces, and page-refresh ledger rows.
+
+### 4. Scope
+
+Included: GitHub Copilot tool metadata, facts, body copy, price history, source list, source registry entries, AI Coding parent guidance, GitHub Copilot alternatives guide, tools/categories/guides/home top-layer comments, LLM surfaces, page-refresh ledger, and focused validation. Excluded: full Copilot comparison cluster rewrites, unrelated coding-tool reranking, logo work, template changes, and browser QA unless rendered code changes appear.
+
+### 5. Validation plan
+
+- `npm run ledger:pages`
+- `npm run ledger:pages:check`
+- Copilot stale-marker and source-ID sweeps
+- `npm run audit:facts`
+- `npm run audit:sources`
+- `npm run check:links`
+- Bounded OG check
+- Scoped `git diff --check`
+- `npm run check:quick`
+- One direct Astro build only if focused checks pass and rendered-content confidence requires it
+
+### 6. Progress log
+
+- 2026-06-14: Selected GitHub Copilot from the editorial weekly queue because it has 18 internal mentions and eight high-volatility billing, model, context, agent, free-plan, and enterprise-control facts due in two days.
+- 2026-06-14: Rechecked official GitHub Copilot plans, plan docs, individual and organization AI Credits docs, supported-model docs, models/pricing docs, feature matrix, SDK GA changelog, context/reasoning changelog, Agent tasks REST API changelog, Chat/agent-session handoff, Agentic Workflows public preview, code-review controls, CLI settings, and Fable 5 suspension note.
+- 2026-06-14: Updated the GitHub Copilot tool page, AI Coding parent hub, Copilot alternatives guide, source registry, top-layer maintenance comments, LLM surfaces, and page-refresh ledger around AI Credits, Fable 5 suspension, one-million-token context/reasoning, agent APIs, Agentic Workflows, CLI settings, and code-review controls.
+- 2026-06-14: Validation passed: `npm run ledger:pages:check`, Copilot stale/source sweeps, `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, bounded OG check, scoped `git diff --check`, `npm run check:quick`, and one `npm run build:fast` pass with built indexability and commercial CTA audits.
+
+### 7. Final report
+
+Completed on 2026-06-14. GitHub Copilot now reflects current official GitHub Copilot billing, model-route, context/reasoning, SDK, agent-task, Agentic Workflows, CLI settings, code-review control, and Fable 5 suspension sources. AI Coding, the Copilot alternatives guide, top-layer maintenance markers, LLM surfaces, source registry, and page-refresh ledger are aligned with the refreshed tool page.
+
+---
+
+## ExecPlan: June 14 2026 Replit Agent Current-Source Refresh
+
+### 1. Objective
+
+Refresh `/tools/replit-agent/` against current official Replit sources so AiPedia no longer leads with stale Agent 3 / 200-minute-session claims and instead reflects Replit's current Agent 4/product surface, Agent docs, modes, app testing, web search, skills, pricing, and AI billing controls.
+
+### 2. Current state
+
+`src/content/tools/replit-agent.md` carried June 12 verification dates, made Agent 3 the flagship, cited an `agent3` page that now redirects to Agent 4, and still framed the product around autonomous session length, subagents, and three old effort modes. The AI Coding parent hub, developer guide, Cursor alternatives guide, vibe-coding trend, source registry, and crawl/LLM surfaces summarized the older browser-builder posture.
+
+### 3. Target state
+
+`/tools/replit-agent/` should show June 14, 2026 verification, source every volatile Replit claim to current official Replit pricing/product/docs pages, remove stale Agent 3 session-length claims, disclose usage/credit risks from Replit's billing docs, and align AI Coding, affected developer/alternatives/trend pages, top-layer comments, LLM surfaces, source registry, and page-refresh ledger surfaces.
+
+### 4. Scope
+
+Included: Replit Agent tool metadata, facts, price history, body copy, source list, source registry entries, AI Coding parent guidance, Best AI Tools for Developers, Cursor alternatives, vibe-coding trend, tools/categories/guides/trends/home top-layer comments, LLM surfaces, page-refresh ledger, and focused validation. Excluded: full Replit comparison rewrites, unrelated coding-tool reranking, logo work, template changes, and browser QA unless rendered code changes appear.
+
+### 5. Validation plan
+
+- `npm run ledger:pages`
+- `npm run ledger:pages:check`
+- Replit stale-marker sweep for Agent 3 / 200-minute wording
+- Replit source-ID resolution
+- `npm run audit:facts`
+- `npm run audit:sources`
+- `npm run check:links`
+- Bounded OG check
+- Scoped `git diff --check`
+- `npm run check:quick`
+- One direct Astro build phase only if focused checks pass and rendered-content confidence requires it
+
+### 6. Progress log
+
+- 2026-06-14: Selected Replit Agent from the editorial weekly queue because eight high-volatility pricing, billing, model/agent, and enterprise facts were overdue.
+- 2026-06-14: Rechecked official Replit pricing, Replit Agent product, Replit Agent 4 landing page, Agent overview docs, Agent Modes, Plan Mode, App Testing, Web Search, Agent Skills, AI billing docs, Replit Pro launch, and effort-based pricing sources.
+- 2026-06-14: Updated the Replit Agent tool page, source registry, AI Coding parent hub, Best AI Tools for Developers, Cursor alternatives, vibe-coding trend, top-layer comments, LLM manifests, and page-refresh ledger.
+- 2026-06-14: Validation passed: `npm run ledger:pages`, `npm run ledger:pages:check`, Replit stale-marker sweep, Replit source-ID presence checks, `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, bounded OG check, scoped `git diff --check`, `npm run check:quick`, direct Astro build, `node scripts/audit-indexability.mjs`, and `node scripts/audit-commercial-cta.mjs`.
+
+### 7. Final report
+
+Completed on 2026-06-14. `/tools/replit-agent/` now reflects Replit's current Agent 4-era product surface, Plan Mode, Lite/Economy/Power/High effort guidance, Design Canvas, app testing, web search, skills, AI billing controls, current Starter/Core/Pro/Enterprise pricing posture, and the correction that the old Agent 3 URL now routes to Agent 4. AI Coding, the developer guide, Cursor alternatives, vibe-coding, source registry, top-layer comments, LLM manifests, and `PAGE_REFRESH_LEDGER.md` are aligned. Remaining follow-up: broader Replit-vs-Cursor/Replit-vs-Lovable style comparisons should get separate current-source passes before making cross-tool ranking changes.
+
+---
+
+## ExecPlan: June 14 2026 Mistral AI Current-Source Refresh
+
+### 1. Objective
+
+Refresh `/tools/mistral-ai/` against current official Mistral sources so AiPedia's model-platform guidance reflects Vibe formerly Le Chat, Vibe for Code, the official Mistral 3 launch date, Medium 3.5 open-weight status, current Large 3/Medium 3.5/Small 4/Ministral pricing, Small 4 pricing-source drift, Search Toolkit, and the closed SDK supply-chain advisory.
+
+### 2. Current state
+
+`src/content/tools/mistral-ai.md` carried June 12 verification dates, repeated a false April 28, 2026 Mistral 3 launch date, framed Le Chat and Vibe as separate current surfaces, treated Medium 3.5 as hosted-only, and left Small 4 output pricing ambiguous. AI Chatbots and AI Infrastructure still summarized Mistral with older source stamps and the wrong Mistral 3 date.
+
+### 3. Target state
+
+`/tools/mistral-ai/` should show June 14, 2026 verification, source every volatile Mistral claim to current official Mistral pages, separate Vibe app guidance from Studio/API procurement, disclose the Small 4 pricing-page/model-card discrepancy, keep model-license caveats honest, and align AI Chatbots, AI Infrastructure, tools/categories/home top-layer comments, LLM manifests, source registry, and page-refresh ledger surfaces.
+
+### 4. Scope
+
+Included: Mistral tool metadata, facts, buyer copy, pricing/watch-out language, FAQ, source list, source registry entries, AI Chatbots parent hub, AI Infrastructure parent hub, tools/categories/home top-layer comments, LLM surfaces, page-refresh ledger, and focused validation. Excluded: full Mistral comparison rewrites, Qwen/DeepSeek/Kling side reverification, logo work, rendered template changes, and browser QA unless rendered code changes appear.
+
+### 5. Validation plan
+
+- `npm run ledger:pages`
+- `npm run ledger:pages:check`
+- Mistral source-ID/date resolution and stale-marker sweep
+- `npm run audit:facts`
+- `npm run audit:sources`
+- `npm run check:links`
+- Bounded OG check
+- Scoped `git diff --check`
+- `npm run check:quick`
+- One direct Astro build phase if focused checks pass
+
+### 6. Progress log
+
+- 2026-06-14: Confirmed the Matt Pocock skill setup is already present for this repo: GitHub Issues, default triage labels, and single-context AiPedia domain docs.
+- 2026-06-14: Selected Mistral from the editorial weekly queue because high-volatility model, pricing, Vibe, Search Toolkit, API, and watch-out facts were due and the page is summarized by high-value chatbot and infrastructure hubs.
+- 2026-06-14: Rechecked official Mistral pricing, Vibe product, model overview, Medium 3.5 / Small 4 / Large 3 model cards, Mistral 3 launch post, Search Toolkit, and security advisory sources.
+- 2026-06-14: Updated Mistral tool content, source registry, AI Chatbots, AI Infrastructure, top-layer comments, and LLM manifest lines. Ledger regeneration and focused validation are next.
+- 2026-06-14: Validation passed: `npm run ledger:pages`, `npm run ledger:pages:check`, Mistral source-ID presence check, Mistral stale-marker sweep, `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, bounded OG check, scoped `git diff --check`, `npm run check:quick`, direct Astro build, `node scripts/audit-indexability.mjs`, and `node scripts/audit-commercial-cta.mjs`.
+
+### 7. Final report
+
+Completed on 2026-06-14. `/tools/mistral-ai/` now reflects Vibe formerly Le Chat, Vibe for Code, the official December 2, 2025 Mistral 3 launch date, Medium 3.5 open-weight status, current Large 3/Medium 3.5/Small 4/Ministral pricing, explicit Small 4 pricing-source drift, Search Toolkit, enterprise/private deployment controls, model-license cautions, and the closed SDK supply-chain advisory. AI Chatbots, AI Infrastructure, source registry, top-layer comments, LLM manifests, and `PAGE_REFRESH_LEDGER.md` are aligned. Remaining follow-up: Mistral comparison pages still retain their earlier June 2026 stamps and should get a separate comparison-wide pass before changing Qwen/DeepSeek/Claude/Gemini-side claims.
+
+---
+
+## ExecPlan: June 14 2026 Hailuo Current-Source Refresh
+
+### 1. Objective
+
+Refresh `/tools/hailuo/` against current official Hailuo and MiniMax sources so AiPedia's AI video buyer guidance reflects Hailuo 2.3/2.3-Fast positioning, MiniMax video API model support, pay-as-you-go video rates, one-month video package economics, token-plan caveats, and the dynamic Hailuo app subscribe surface.
+
+### 2. Current state
+
+`src/content/tools/hailuo.md` carried June 12 verification dates, June 13 due-review markers, package-first pricing language, and a broad token-plan anchor that could be mistaken for clean Hailuo video budgeting. The AI Video parent hub and Hailuo/Kling comparison still summarized older MiniMax purchase math, and the source registry lacked a dedicated Hailuo 2.3 model page and MiniMax pay-as-you-go video pricing source ID.
+
+### 3. Target state
+
+`/tools/hailuo/` should show June 14, 2026 verification, source every volatile Hailuo claim to current official Hailuo/MiniMax pages, add pay-as-you-go rate guidance, keep video package and unit-reset caveats precise, warn that app plan allowances must be verified inside the current account screen, and align AI Video, Hailuo/Kling, tools/categories/compare/home top-layer comments, LLM manifests, source registry, and page-refresh ledger surfaces.
+
+### 4. Scope
+
+Included: Hailuo tool metadata, facts, buyer copy, pricing/watch-out language, source list, source registry entries, AI Video parent guidance, Hailuo/Kling comparison Hailuo-side pricing touch-up, tools/categories/compare/home top-layer comments, LLM surfaces, page-refresh ledger, and focused content checks. Excluded: full Kling comparison re-verification, broader video ranking changes, logo work, rendered template changes, and browser QA unless rendered code changes appear.
+
+### 5. Validation plan
+
+- `npm run ledger:pages`
+- `npm run ledger:pages:check`
+- `npm run audit:facts`
+- `npm run audit:sources`
+- `npm run check:links`
+- Hailuo source-ID/date resolution and stale-marker sweep
+- Bounded OG check/generation if Hailuo OG is stale
+- Scoped `git diff --check`
+- `npm run check:quick`
+
+### 6. Progress log
+
+- 2026-06-14: Confirmed the Matt Pocock skill setup is already present for this repo: GitHub Issues, default triage labels, and single-context AiPedia domain docs.
+- 2026-06-14: Selected Hailuo from the editorial weekly queue because high-volatility model, API, pricing, best-fit, and watch-out facts were due.
+- 2026-06-14: Rechecked official Hailuo and MiniMax sources for the Hailuo 2.3 model page, Hailuo official/subscribe pages, MiniMax Hailuo 2.3 launch, video generation API docs, video package pricing, pay-as-you-go pricing, and token-plan pricing.
+- 2026-06-14: Updated the Hailuo tool page, source registry, AI Video parent hub, Hailuo/Kling comparison Hailuo-side pricing copy, top-layer comments, and LLM manifest recent-refresh lines. Ledger regeneration and focused validation are next.
+- 2026-06-14: Validation passed with focused checks plus one direct Astro build phase: `npm run ledger:pages`, `npm run ledger:pages:check`, `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, Hailuo source-ID resolution, Hailuo stale-marker sweep, bounded OG check, scoped `git diff --check`, `npm run check:quick`, direct Astro build, `node scripts/audit-indexability.mjs`, and `node scripts/audit-commercial-cta.mjs`.
+
+### 7. Final report
+
+Completed on 2026-06-14. `/tools/hailuo/` now carries current Hailuo 2.3/2.3-Fast positioning, MiniMax video API model support, pay-as-you-go video rates, one-month video package pricing, unit-reset caveats, token-plan caution, and dynamic app subscription warnings. AI Video, Hailuo/Kling's Hailuo-side pricing guidance, source registry, top-layer comments, LLM manifests, and `PAGE_REFRESH_LEDGER.md` are aligned. Remaining follow-up: the full Kling side of `/compare/hailuo-vs-kling/` still intentionally retains its June 12 source stamps and can receive a separate comparison-wide pass if the next autonomous slice stays in AI Video.
+
+---
+
+## ExecPlan: June 14 2026 D-ID Current-Source Refresh
+
+### 1. Objective
+
+Refresh `/tools/d-id/` against current official D-ID sources so AiPedia's avatar-video and visual-agent guidance reflects Visual Agents, Agentic Videos, same-balance Studio/API minutes, Trial/Lite watermark caveats, 200 free conversation sessions, 0.5 credit per 30 seconds agent-response metering, and selected-user affiliate terms.
+
+### 2. Current state
+
+`src/content/tools/d-id.md` carried June 12 verification dates, June 13 due-review markers, older pricing/date language, and an Agentic Videos fact sourced back to the generic AI Agents page. The AI Video parent hub and avatar-video buyer guide mentioned D-ID but still leaned on older duration/rounding wording instead of the current official same-balance, session, credit, watermark, and agentic-video caveats.
+
+### 3. Target state
+
+`/tools/d-id/` should show June 14, 2026 verification, source every volatile D-ID claim to current official D-ID Studio/API/Visual Agents/Agentic Videos/docs/affiliate pages, remove stale exact-price and unsupported duration-rounding language, and align AI Video, the avatar-video buyer guide, tools/categories/guides/home top-layer comments, LLM manifests, source registry, and page-refresh ledger surfaces.
+
+### 4. Scope
+
+Included: D-ID tool metadata, facts, buyer copy, pricing/watch-out language, source list, source registry entries, AI Video parent guidance, avatar-video buyer guide, tools/categories/guides/home top-layer comments, LLM surfaces, page-refresh ledger, and focused content checks. Excluded: broader avatar-guide ranking changes, D-ID comparison rewrites, logo work, rendered template changes, and browser QA unless rendered code changes appear.
+
+### 5. Validation plan
+
+- `npm run ledger:pages`
+- `npm run ledger:pages:check`
+- `npm run audit:facts`
+- `npm run audit:sources`
+- `npm run check:links`
+- D-ID source-ID/date resolution and stale-marker sweep
+- Bounded OG check/generation if D-ID OG is stale
+- Scoped `git diff --check`
+- `npm run check:quick`
+- `npm run build` if focused checks pass
+
+### 6. Status
+
+Completed on 2026-06-14. D-ID now reflects current official Visual Agents, Agentic Videos, Studio/API balance, Trial/Lite watermark, 200 free conversation session, 0.5 credit per 30 seconds agent metering, affiliate-term, and developer-doc guidance. The AI Video parent hub, avatar-video buyer guide, tools/categories/guides/home top-layer comments, LLM manifests, source registry, and page-refresh ledger were aligned.
+
+Validation passed:
+
+- `npm run ledger:pages`
+- `npm run ledger:pages:check`
+- `npm run audit:facts`
+- `npm run audit:sources`
+- `npm run check:links`
+- D-ID source-ID/date resolution and stale-marker sweep
+- `node scripts/generate-og-svgs.mjs --check --limit 50 --json`
+- Scoped `git diff --check`
+- `npm run check:quick`
+- Astro build phase: `npm exec --yes --package=node@24 -- node node_modules/astro/bin/astro.mjs build`
+- Post-build checks: `node scripts/audit-indexability.mjs`, `node scripts/audit-commercial-cta.mjs`, `node scripts/build-pagefind.mjs`, `node scripts/enforce-built-font-policy.mjs`, and `node scripts/audit-font-policy.mjs --dist`
+
+The first full `npm run build` invocation timed out in the tool wrapper and later exited `1` without preserving Astro's error output. To avoid another full prebuild/OG cycle, the Astro build phase and the remaining post-build commands were run directly; all passed.
+
+---
+
+## ExecPlan: June 14 2026 Cody Current-Source Refresh
+
+### 1. Objective
+
+Refresh `/tools/cody/` against current official Sourcegraph and Marketplace sources so AiPedia's coding-assistant guidance reflects Cody's current Sourcegraph Enterprise-only packaging, $16K platform entry, AI-feature credit model, Cody Gateway/model-provider controls, AI Terms, and non-enterprise availability warning.
+
+### 2. Current state
+
+`src/content/tools/cody.md` carried June 12 verification dates, due review dates of June 13, and still framed several current claims without the latest Sourcegraph AI Terms, Marketplace warning, org-wide credit pooling/no monthly credit expiry/renewal rollover details, or explicit Cody Gateway quota caveat. The AI Coding parent hub and LLM/top-layer maintenance surfaces mentioned Cody's earlier Free/Pro sunset but did not yet carry the June 14 source-backed procurement posture.
+
+### 3. Target state
+
+`/tools/cody/` should show June 14, 2026 verification, source every volatile Cody fact to current Sourcegraph pricing/docs/plan-change/Model Provider/AI Terms plus VS Code Marketplace sources, keep Copilot/Cursor alternative pricing in current context, and align AI Coding, tools/categories/home top-layer comments, LLM manifests, source registry, and page-refresh ledger surfaces.
+
+### 4. Scope
+
+Included: Cody tool metadata, facts, price history, body copy, source list, source registry entries, AI Coding parent guidance, tools/categories/home top-layer comments, LLM surfaces, page-refresh ledger, and focused no-build content checks. Excluded: Cody comparison rewrites, broader AI Coding guide rewrites, logo work, rendered template changes, and full browser QA unless rendered code changes appear.
+
+### 5. Validation plan
+
+- `npm run ledger:pages`
+- `npm run ledger:pages:check`
+- `npm run audit:facts`
+- `npm run audit:sources`
+- `npm run check:links`
+- Cody source-ID resolution and stale-marker sweep
+- Bounded OG check/generation if Cody OG is stale
+- Scoped `git diff --check`
+- `npm run check:quick`
+
+### 6. Status
+
+Completed on 2026-06-14. Cody now reflects Sourcegraph Enterprise-only packaging, the $16K Enterprise entry, AI-feature credits with org-wide pooling/no monthly expiry/renewal rollover, Cody Gateway/Sourcegraph Model Provider controls, AI Terms, the VS Code Marketplace non-enterprise warning, and current Copilot/Cursor comparison anchors.
+
+Validation passed:
+
+- `npm run ledger:pages`
+- `npm run ledger:pages:check`
+- `npm run audit:facts`
+- `npm run audit:sources`
+- `npm run check:links`
+- Cody source-ID/date resolution and stale-marker sweep
+- `node scripts/generate-og-svgs.mjs --check --limit 50 --json`
+- Scoped `git diff --check`
+- `npm run check:quick`
+- `npm run build`
+
+The first full build surfaced an unrelated existing schema blocker in `src/content/tools/grammarly.md`: `affiliate.application_status` used unsupported value `available`. That was mapped to the existing supported `none` state while preserving the affiliate note, then `npm run ledger:pages` and `npm run build` passed.
+
+---
+
+## ExecPlan: June 14 2026 Cline Current-Source Refresh
+
+### 1. Objective
+
+Refresh `/tools/cline/` against current official Cline sources so AiPedia's coding-agent guidance reflects the current Open Source free plan, usage-based inference/BYOK cost model, Enterprise custom governance lane, IDE/CLI/Kanban/SDK runtime surface, broad provider routing including Vercel AI Gateway, and Auto Approve/SDK permission-policy risks.
+
+### 2. Current state
+
+`src/content/tools/cline.md` carried June 12 dates and framed Cline mostly as a free VS Code/JetBrains extension with BYOK costs. It still used stale 5.0M+/62.4k traction figures, old docs URLs, a homepage source under `cline-pricing`, and generic per-session cost ranges that Cline does not publish. The AI Coding parent hub and crawl surfaces summarized the older open-source BYOK lane.
+
+### 3. Target state
+
+`/tools/cline/` should show June 14, 2026 verification, source every volatile fact to current Cline pages/docs/repository/marketplace sources, remove unsupported session-cost ranges, clearly separate Open Source from Enterprise, warn about permission policies and inference spend, and align AI Coding, tools/categories/home top-layer comments, LLM manifests, source registry, and page-refresh ledger surfaces.
+
+### 4. Scope
+
+Included: Cline tool metadata, facts, price history, body copy, source list, source registry entries, AI Coding parent guidance, tools/categories/home top-layer comments, LLM surfaces, page-refresh ledger, and focused no-build content checks. Excluded: Cline comparison rewrites, coding guide rewrites, logo work, rendered template changes, and full browser QA unless rendered code changes appear.
+
+### 5. Files likely affected
+
+`src/content/tools/cline.md`, `src/content/categories/ai-coding.md`, `src/data/source-registry.json`, `src/pages/tools/index.astro`, `src/pages/categories/index.astro`, `src/pages/index.astro`, `src/pages/llms.txt.ts`, `src/pages/llms-full.txt.ts`, `PAGE_REFRESH_LEDGER.md`, and this plan.
+
+### 6. Verification commands
+
+`npm run ledger:pages`
+
+`npm run ledger:pages:check`
+
+`npm run audit:facts`
+
+`npm run audit:sources`
+
+`npm run check:links`
+
+`npm run editorial:weekly -- --limit 12`
+
+`npm run check:quick`
+
+`git diff --check -- src/content/tools/cline.md src/content/categories/ai-coding.md src/data/source-registry.json src/pages/tools/index.astro src/pages/categories/index.astro src/pages/index.astro src/pages/llms.txt.ts src/pages/llms-full.txt.ts PAGE_REFRESH_LEDGER.md .agent/PLANS.md`
+
+### 7. Acceptance criteria
+
+Cline volatile facts are verified against current official sources as of 2026-06-14, source IDs resolve in the registry, stale June 12/5.0M/62.4k/session-cost language is removed from refreshed surfaces, affected parent/top-layer/LLM surfaces are aligned, the ledger reflects the refresh scope, and focused audits pass without an unnecessary full build.
+
+### 8. Progress log
+
+- 2026-06-14: Confirmed the Matt Pocock skill setup is already present for this repo: GitHub Issues, default triage labels, and single-context AiPedia domain docs.
+- 2026-06-14: Mapped the Cline child page, AI Coding parent hub, source registry, tools/categories/home top-layer pages, LLM surfaces, and ledger requirements.
+- 2026-06-14: Rechecked official Cline sources for homepage positioning, pricing, overview docs, IDE, CLI, SDK, Enterprise, GitHub repository, VS Code Marketplace, provider setup, Auto Approve, SDK permission handling, and the Vercel AI Gateway provider route.
+- 2026-06-14: Rebuilt the Cline page around the current Open Source, inference, Enterprise, runtime-surface, provider-routing, and permission-policy story; updated source registry, AI Coding parent guidance, top-layer comments, and LLM manifest recent-refresh lines. Ledger regeneration and focused validation are next.
+- 2026-06-14: Validation passed with focused no-build checks: `npm run ledger:pages`, `npm run ledger:pages:check`, `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, `npm run editorial:weekly -- --limit 12`, Cline source-ID resolution, Cline stale-marker sweep, bounded OG check/regeneration for Cline plus prior stale Canva/Captions cards, scoped `git diff --check`, and `npm run check:quick`.
+
+### 9. Final report
+
+Completed the Cline current-source refresh. `/tools/cline/` now carries June 14, 2026 verification for the Open Source free plan, usage-based inference/BYOK model, Enterprise custom governance, IDE/CLI/Kanban/SDK runtime surfaces, Vercel AI Gateway provider routing, local/provider flexibility, public install/star signals, JetBrains open-source caveat, Auto Approve/YOLO controls, and SDK tool-policy risk. AI Coding, source registry, top-layer comments, LLM manifests, OG assets, and `PAGE_REFRESH_LEDGER.md` are aligned. Remaining follow-up: Cline comparison pages still sit on their June 12/June 4 comparison refresh cycle and can receive a separate comparison-focused pass if the next autonomous slice stays in AI Coding.
+
+---
+
+## ExecPlan: June 14 2026 Captions.ai Current-Source Refresh
+
+### 1. Objective
+
+Refresh `/tools/captions/` against current official Captions/Mirage sources so AiPedia's short-form video guidance reflects current Android Lite, Pro, Max, Scale, Scale 2x/4x pricing, credit allowances, credit rollover/top-up caveats, platform availability limits, Mirage actor/model context, and API-positioning caveats.
+
+### 2. Current state
+
+`src/content/tools/captions.md` had a June 12 refresh, but it still said public self-serve pricing stopped at $69.99/month, warned that Scale 2x/4x had not rendered, used older Captions overview sourcing, and did not capture Android Lite, current Scale 2x/4x credit tiers, no-rollover/no-standard-top-up caveats, feature-availability differences, Prompt to Video duration limits, or Mirage model/API context. The AI Video parent hub and avatar-video buyer guide still pointed to June 12 Captions source dates.
+
+### 3. Target state
+
+`/tools/captions/` should show June 14, 2026 verification, use official Captions pricing/help/source pages, clearly separate Pro/Max/Scale buyer fit, warn that Scale tiers are credit-volume purchases rather than default plans, and align AI Video, avatar-video guide, tools/categories/guides/home top-layer comments, LLM manifests, source registry, and page-refresh ledger surfaces.
+
+### 4. Scope
+
+Included: Captions tool metadata, facts, price history, body copy, source list, source registry entries, AI Video parent guidance, avatar-video buyer guide Captions slice, tools/categories/guides/home top-layer maintenance comments, LLM surfaces, page-refresh ledger, and focused no-build content checks. Excluded: comparison rewrites, TikTok/podcast guide rewrites, logo work, rendered template changes, and full browser QA unless rendered code changes appear.
+
+### 5. Files likely affected
+
+`src/content/tools/captions.md`, `src/content/categories/ai-video.md`, `src/content/use-cases/best-ai-avatar-video-generator.md`, `src/data/source-registry.json`, `src/pages/tools/index.astro`, `src/pages/categories/index.astro`, `src/pages/guides/index.astro`, `src/pages/index.astro`, `src/pages/llms.txt.ts`, `src/pages/llms-full.txt.ts`, `PAGE_REFRESH_LEDGER.md`, and this plan.
+
+### 6. Verification commands
+
+`npm run ledger:pages`
+
+`npm run ledger:pages:check`
+
+`npm run audit:facts`
+
+`npm run audit:sources`
+
+`npm run check:links`
+
+`npm run editorial:weekly`
+
+`git diff --check -- src/content/tools/captions.md src/content/categories/ai-video.md src/content/use-cases/best-ai-avatar-video-generator.md src/data/source-registry.json src/pages/tools/index.astro src/pages/categories/index.astro src/pages/guides/index.astro src/pages/index.astro src/pages/llms.txt.ts src/pages/llms-full.txt.ts PAGE_REFRESH_LEDGER.md .agent/PLANS.md`
+
+### 7. Acceptance criteria
+
+Captions volatile facts are verified against current official Captions/Mirage sources as of 2026-06-14, source IDs resolve in the registry, stale Scale 2x/4x and June 12 language is removed from the refreshed surfaces, affected parent/top-layer/LLM surfaces are aligned, the ledger reflects the refresh scope, and focused audits pass without an unnecessary full build.
+
+### 8. Progress log
+
+- 2026-06-14: Selected Captions.ai from the editorial weekly due queue because the high-volatility fields `best_for`, `pricing_anchor`, `product_scope`, and `watch_out_for` were due and the tool appears in AI Video and avatar-video buyer paths.
+- 2026-06-14: Rechecked official Captions/Mirage pricing, subscription, AI usage, credit troubleshooting, feature availability, Prompt to Video, Mirage model, Mirage official, and Captions/Mirage announcement sources with June 2026 queries.
+- 2026-06-14: Rebuilt the Captions page around current Android Lite/Pro/Max/Scale/Scale 2x/Scale 4x pricing, credit allowances, no-rollover/no-standard-top-up caveats, platform feature differences, Mirage actors, and short-form buyer fit.
+- 2026-06-14: Updated source registry entries, AI Video parent guidance, avatar-video buyer guide Captions slice, top-layer comments, and LLM manifest recent-refresh lines. Ledger regeneration and focused validation are next.
+- 2026-06-14: Validation passed with focused no-build checks: `npm run ledger:pages`, `npm run ledger:pages:check`, `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, `npm run editorial:weekly -- --limit 20`, Captions source-ID resolution, Captions-specific stale-marker sweep, source-registry type validation, scoped `git diff --check`, and `npm run check:quick`. The quick gate also exposed prior invalid registry `type` values for Adobe/Grammarly/n8n sources and a stale bounded Adobe Firefly OG output, both fixed in the same validation pass.
+
+### 9. Final report
+
+Completed the Captions.ai current-source refresh. `/tools/captions/` now carries June 14, 2026 verification for Android Lite, Pro, Max, Scale, Scale 2x, Scale 4x, Enterprise custom, current credit allowances, no-rollover/no-standard-top-up caveats, Prompt to Video/AI Edit/AI Creator credit math, platform availability limits, Mirage actor/model context, and API-positioning caveats. AI Video, the avatar-video buyer guide, source registry, top-layer comments, LLM manifests, and `PAGE_REFRESH_LEDGER.md` are aligned. Remaining follow-up: the TikTok and podcast guide references to Captions still sit on their June 12 guide-refresh cycle and can be handled in a separate guide-focused pass.
+
+---
+
+## ExecPlan: June 14 2026 Adobe Firefly Current-Source Refresh
+
+### 1. Objective
+
+Refresh `/tools/adobe-firefly/` against current official Adobe sources so AiPedia's image/design/video buyer guidance reflects Firefly Image Model 5 public beta, current Firefly Standard/Pro/Pro Plus/Premium credit pricing, current promo caveats, Firefly Services/API documentation, Adobe commercial-safety wording, affiliate terms, and Creative Cloud workflow reality.
+
+### 2. Current state
+
+`src/content/tools/adobe-firefly.md` carried a half-applied June 14 header update after restart, including duplicate `last_updated`, current pricing facts in the frontmatter, and stale body copy that still claimed Pro at $29.99/month, 25-credit free access, Creative Cloud All Apps at $59.99/month, Midjourney V7 as the live reference, and blanket paid-plan IP indemnification. Parent AI Image and AI Design hubs still listed Firefly as Free-$29.99/month, and AI Video did not reflect Firefly's current video allowances.
+
+### 3. Target state
+
+`/tools/adobe-firefly/` should show June 14, 2026 verification, use official Adobe plan/pricing/promo/API/product/legal/affiliate sources, replace unsupported indemnification language with commercial-safety and terms-review wording, give clear plan guidance, and align AI Image, AI Design, AI Video, top-layer, LLM, source-registry, and ledger surfaces.
+
+### 4. Scope
+
+Included: Adobe Firefly tool metadata, facts, affiliate fields, price history, body copy, source list, source registry entries, AI Image/AI Design/AI Video parent guidance, tools/categories/home top-layer comments, LLM surfaces, page-refresh ledger, and focused content checks. Excluded: comparison rewrites, logo work, rendered template changes, and full browser QA unless rendered code changes appear.
+
+### 5. Files likely affected
+
+`src/content/tools/adobe-firefly.md`, `src/content/categories/ai-image.md`, `src/content/categories/ai-design.md`, `src/content/categories/ai-video.md`, `src/data/source-registry.json`, `src/pages/tools/index.astro`, `src/pages/categories/index.astro`, `src/pages/index.astro`, `src/pages/llms.txt.ts`, `src/pages/llms-full.txt.ts`, `PAGE_REFRESH_LEDGER.md`, and this plan.
+
+### 6. Verification commands
+
+`npm run ledger:pages`
+
+`npm run ledger:pages:check`
+
+`npm run audit:facts`
+
+`npm run audit:sources`
+
+`npm run check:links`
+
+`npm run editorial:weekly`
+
+`git diff --check -- src/content/tools/adobe-firefly.md src/content/categories/ai-image.md src/content/categories/ai-design.md src/content/categories/ai-video.md src/data/source-registry.json src/pages/tools/index.astro src/pages/categories/index.astro src/pages/index.astro src/pages/llms.txt.ts src/pages/llms-full.txt.ts PAGE_REFRESH_LEDGER.md .agent/PLANS.md`
+
+### 7. Acceptance criteria
+
+Firefly volatile facts are verified against current official Adobe sources as of 2026-06-14, source IDs resolve in the registry, stale price/IP/API claims are removed, affected parent/top-layer surfaces are current, the ledger reflects the refresh scope, and focused audits pass without an unnecessary full build.
+
+### 8. Progress log
+
+- 2026-06-14: Loaded the repo's Matt Pocock agent-skill setup and confirmed `AGENTS.md` plus `docs/agents/` are present for issue-tracker, label, and domain context.
+- 2026-06-14: Mapped the Firefly tool page, source registry, AI Image/AI Design/AI Video parent hubs, tools/categories/home top-layer pages, LLM surfaces, and ledger requirements.
+- 2026-06-14: Rechecked official Adobe sources for Firefly product positioning, plan pricing, promo exclusions, Firefly Image Model 5 public beta context, Firefly API route, Creative Cloud feature map, GenAI guidelines, FAQ/product availability, enterprise positioning, and affiliate program terms.
+- 2026-06-14: Rebuilt the Firefly page around current Adobe plan math, removed stale Pro $29.99/25-credit/free-watermark/Creative Cloud All Apps $59.99 claims, replaced unsupported blanket legal-coverage language with commercial-safety and terms-review guidance, and updated current affiliate terms.
+- 2026-06-14: Updated AI Image, AI Design, and AI Video parent hubs; added top-layer homepage/tools/categories and LLM maintenance notes; expanded the source registry with current Adobe product, pricing, promo, FAQ, Creative Cloud, API, enterprise, MAX, GenAI guidelines, and affiliate sources.
+- 2026-06-14: Verification passed with focused no-build checks: `npm run ledger:pages`, `npm run ledger:pages:check`, `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, `npm run editorial:weekly`, source-registry JSON parse, Adobe Firefly source-ID resolution, targeted stale-claim sweep, and scoped `git diff --check`. No full build or browser QA was run because this pass changed content, source data, ledger, and crawl/index text only.
+
+### 9. Final report
+
+Completed the Adobe Firefly current-source refresh. `/tools/adobe-firefly/` now carries June 14, 2026 verification for Firefly Image Model 5 public beta, Firefly web/mobile plus Creative Cloud workflows, current Standard/Pro/Pro Plus/Premium pricing and credits, limited-time promo caveats, team plan separation, Firefly Services/API docs, commercial-safety wording, Content Credentials/legal-term caveats, and public Adobe affiliate terms. AI Image, AI Design, AI Video, source registry, top-layer pages, LLM manifests, and `PAGE_REFRESH_LEDGER.md` are aligned. Remaining follow-up: Firefly comparison pages still have June 12 verification and can receive a separate targeted pass if the next autonomous slice stays in the image-comparison cluster.
+
+---
+
+## ExecPlan: June 14 2026 n8n Current-Source Refresh
+
+### 1. Objective
+
+Refresh `/tools/n8n/` against current official n8n sources so AiPedia's automation buyer guidance reflects current hosted Starter/Pro pricing, Business self-host framing, AI Agent Tools Agent behavior, self-hosting risk, EU-hosted data, source-available/fair-code license wording, affiliate-term reality, and active June release stream.
+
+### 2. Current state
+
+`src/content/tools/n8n.md` was active but still carried June 12 verification dates, a due June 13 high-volatility review date on paid-tier and enterprise facts, broad "open-source" wording despite n8n's fair-code/Sustainable Use License framing, a stale/unsupported 90-day affiliate cookie, and "Business cloud" language even though the current pricing page marks Business as self-hosted. The AI Automation parent hub summarized the older June 12 check.
+
+### 3. Target state
+
+`/tools/n8n/` should show June 14, 2026 verification, use source-available/fair-code wording, distinguish hosted Starter/Pro from self-hosted Business, keep Community self-host free without overselling low-ops risk, update affiliate commission framing to 30% for 12 months with no AiPedia approved link, and align AI Automation, top-layer, LLM, source-registry, and ledger surfaces.
+
+### 4. Scope
+
+Included: n8n tool metadata, facts, price history, affiliate fields, body copy, source list, source registry entries, AI Automation parent hub, top-layer tools/categories/home/LLM maintenance comments, page-refresh ledger, and focused content checks. Excluded: n8n comparison rewrites, guide rewrites, logo work, rendered template changes, and full browser QA unless rendered code changes appear.
+
+### 5. Files likely affected
+
+`src/content/tools/n8n.md`, `src/content/categories/ai-automation.md`, `src/data/source-registry.json`, `src/pages/tools/index.astro`, `src/pages/categories/index.astro`, `src/pages/index.astro`, `src/pages/llms.txt.ts`, `src/pages/llms-full.txt.ts`, `PAGE_REFRESH_LEDGER.md`, and this plan.
+
+### 6. Verification commands
+
+`npm run ledger:pages`
+
+`npm run ledger:pages:check`
+
+`npm run audit:facts`
+
+`npm run audit:sources`
+
+`npm run check:links`
+
+`npm run editorial:weekly`
+
+`git diff --check -- src/content/tools/n8n.md src/content/categories/ai-automation.md src/data/source-registry.json src/pages/tools/index.astro src/pages/categories/index.astro src/pages/index.astro src/pages/llms.txt.ts src/pages/llms-full.txt.ts PAGE_REFRESH_LEDGER.md .agent/PLANS.md`
+
+### 7. Acceptance criteria
+
+n8n volatile facts are verified against current official n8n sources as of 2026-06-14, backward `next_review_at` dates are removed, source IDs resolve in the registry, affected parent/top-layer surfaces are current, the ledger reflects the refresh scope, and focused audits pass without an unnecessary full build.
+
+### 8. Progress log
+
+- 2026-06-14: Mapped the n8n child page, AI Automation parent hub, source registry, tools/categories/home top-layer pages, LLM surfaces, and ledger requirements.
+- 2026-06-14: Rechecked official n8n sources for plan pricing, hosted/self-hosted tier split, AI Workflow Builder credits, AI Agent Tools Agent behavior, self-hosting requirements, release notes, license wording, hosted-data location, GitHub star/resource framing, and affiliate program terms.
+- 2026-06-14: Updated n8n metadata, facts, affiliate fields, visible buyer copy, price history, source list, source registry, AI Automation parent guidance, and top-layer/LLM maintenance comments.
+- 2026-06-14: Verification passed with focused no-build checks: `npm run ledger:pages`, `npm run ledger:pages:check`, `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, `npm run editorial:weekly`, JSON parse check for `src/data/source-registry.json`, targeted stale-claim sweep, and scoped `git diff --check`. No full build or browser QA was run because this pass changed content, source data, ledger, and crawl/index text only.
+
+### 9. Final report
+
+Completed the n8n current-source refresh. `/tools/n8n/` now carries June 14, 2026 verification for hosted Starter/Pro pricing, Business self-host framing, Community self-host caveats, AI Agent Tools Agent behavior, AI Workflow Builder credits, EU hosted-data location, source-available/fair-code license wording, active June release stream, and public affiliate commission terms while keeping AiPedia's declined affiliate application honest. AI Automation, top-layer, LLM, source-registry, and page-refresh ledger surfaces were aligned. Remaining follow-up: n8n comparison and guide pages can receive a separate pass for the same Business self-host and source-available wording, but they were not contradicted enough to expand this focused tool refresh.
+
+---
+
+## ExecPlan: June 14 2026 Midjourney Current-Source Refresh
+
+### 1. Objective
+
+Refresh `/tools/midjourney/` against current official Midjourney sources so AiPedia's image/design/video buyer guidance reflects V8.1 as the default image model, V7 as the Omni Reference fallback, Midjourney Video plan/resolution/GPU-time limits, commercial-rights thresholds, and Enterprise API application status.
+
+### 2. Current state
+
+`src/content/tools/midjourney.md` was active but still carried June 12 verification dates, June 13 high-volatility review dates, stale "V7 production default" language, a false "no native video generation" fact, and one wrong first-sentence owner reference. Parent AI Image and AI Design hubs summarized the older V7/V8.1 status, and AI Video did not warn buyers that Midjourney Video is a still-animation add-on rather than a full video workspace.
+
+### 3. Target state
+
+`/tools/midjourney/` should show June 14, 2026 verification, make V8.1 the default image-model anchor, keep V7 framed as the Omni Reference fallback, add current image-to-video plan math, remove stale "no native video" guidance, keep no-free/no-public-API warnings honest, and align AI Image, AI Design, AI Video, top-layer, LLM, source-registry, and ledger surfaces.
+
+### 4. Scope
+
+Included: Midjourney tool metadata, facts, price history, body copy, source list, source registry entries, AI Image/AI Design/AI Video parent notes, top-layer tools/categories/home/LLM maintenance comments, page-refresh ledger, and focused content checks. Excluded: comparison rebuilds, logo work, rendered template changes, and full browser QA unless rendered code changes appear.
+
+### 5. Files likely affected
+
+`src/content/tools/midjourney.md`, `src/content/categories/ai-image.md`, `src/content/categories/ai-design.md`, `src/content/categories/ai-video.md`, `src/data/source-registry.json`, `src/pages/tools/index.astro`, `src/pages/categories/index.astro`, `src/pages/index.astro`, `src/pages/llms.txt.ts`, `src/pages/llms-full.txt.ts`, `PAGE_REFRESH_LEDGER.md`, and this plan.
+
+### 6. Verification commands
+
+`npm run ledger:pages`
+
+`npm run ledger:pages:check`
+
+`npm run audit:facts`
+
+`npm run audit:sources`
+
+`npm run check:links`
+
+`npm run editorial:weekly`
+
+`git diff --check -- AGENTS.md docs/agents/issue-tracker.md docs/agents/triage-labels.md docs/agents/domain.md src/content/tools/midjourney.md src/content/categories/ai-image.md src/content/categories/ai-design.md src/content/categories/ai-video.md src/data/source-registry.json src/pages/tools/index.astro src/pages/categories/index.astro src/pages/index.astro src/pages/llms.txt.ts src/pages/llms-full.txt.ts PAGE_REFRESH_LEDGER.md .agent/PLANS.md`
+
+### 7. Acceptance criteria
+
+Midjourney volatile facts are verified against current official Midjourney sources as of 2026-06-14, backward `next_review_at` dates are removed, source IDs resolve in the registry, affected parent/top-layer surfaces are current, the ledger reflects the refresh scope, Matt Pocock skill context is documented for this repo, and focused audits pass without an unnecessary full build.
+
+### 8. Progress log
+
+- 2026-06-14: Used the Matt Pocock `setup-matt-pocock-skills` skill to add repo-local `AGENTS.md` and `docs/agents/` guidance for GitHub Issues, default triage labels, and AiPedia domain docs.
+- 2026-06-14: Mapped the Midjourney child page, AI Image/AI Design/AI Video parent hubs, source registry, tools/categories/home top-layer pages, LLM surfaces, and ledger requirements.
+- 2026-06-14: Rechecked official Midjourney sources for plan pricing, V8.1 default status, V8.1/V8/V7 compatibility notes, Video plan/resolution/GPU-time limits, commercial rights, terms, web vs Discord, Editor tooling, and Enterprise API application status.
+- 2026-06-14: Updated Midjourney metadata, facts, visible buyer copy, price history, source list, source registry, AI Image/AI Design/AI Video parent guidance, and top-layer/LLM maintenance comments.
+- 2026-06-14: Verification passed with focused no-build checks: `npm run ledger:pages`, `npm run ledger:pages:check`, `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, `npm run editorial:weekly`, JSON parse check for `src/data/source-registry.json`, targeted stale-claim sweep, scoped `git diff --check`, and Matt Pocock agent-skill config presence checks. No full build or browser QA was run because this pass changed content, source data, ledger, and crawl/index text only.
+
+### 9. Final report
+
+Completed the Midjourney current-source refresh. `/tools/midjourney/` now carries June 14, 2026 verification for V8.1 default status, V7 Omni Reference fallback, V8.0 Alpha deprecation, Midjourney Video plan/resolution/GPU-time limits, $10-$120 plan pricing, no-free/no-public-API warnings, commercial-rights thresholds, web/Discord workflow, and Enterprise API application status. AI Image, AI Design, AI Video, top-layer, LLM, source-registry, and page-refresh ledger surfaces were aligned. Remaining follow-up: comparison pages that mention Midjourney should get a separate V8.1/video-aware pass before the next broad comparison refresh.
+
+---
+
+## ExecPlan: June 14 2026 Grammarly Current-Source Refresh
+
+### 1. Objective
+
+Refresh `/tools/grammarly/` against current official Grammarly/Superhuman sources so AiPedia's writing-tool buyer guidance reflects Grammarly Pro, Superhuman suite pricing, current AI prompt allowances, app/site reach, privacy controls, affiliate uncertainty, and Expert Review trust risk.
+
+### 2. Current state
+
+`src/content/tools/grammarly.md` was active but still carried June 12 verification dates and June 13 high-volatility review dates. The page used older GrammarlyGO wording, 500,000+ site reach, 50,000-organization language, old affiliate payout/cookie assumptions, and a simpler Free/Pro/Enterprise pricing story that missed Superhuman Business.
+
+### 3. Target state
+
+`/tools/grammarly/` should show June 14, 2026 verification, use current Superhuman-owned product language, distinguish Grammarly Pro from Superhuman Business, surface Free/Pro/Enterprise prompt allowances, preserve the Pro up-to-149-seat and regional-checkout caveats, remove unverified affiliate payout claims, and include Expert Review as a trust/governance watch-out rather than a live feature claim.
+
+### 4. Scope
+
+Included: Grammarly tool metadata, facts, price history, body copy, source registry entries, AI Writing parent guidance, top-layer tools/categories/home/LLM maintenance comments, page-refresh ledger, and focused content checks. Excluded: comparison rebuilds, answer page rewrites, layout/template changes, logo work, and full browser QA unless rendered code changes appear.
+
+### 5. Files likely affected
+
+`src/content/tools/grammarly.md`, `src/content/categories/ai-writing.md`, `src/data/source-registry.json`, `src/pages/tools/index.astro`, `src/pages/categories/index.astro`, `src/pages/index.astro`, `src/pages/llms.txt.ts`, `src/pages/llms-full.txt.ts`, `PAGE_REFRESH_LEDGER.md`, and this plan.
+
+### 6. Verification commands
+
+`npm run ledger:pages`
+
+`npm run ledger:pages:check`
+
+`npm run audit:facts`
+
+`npm run audit:sources`
+
+`npm run check:links`
+
+`npm run editorial:weekly`
+
+`git diff --check -- src/content/tools/grammarly.md src/content/categories/ai-writing.md src/data/source-registry.json src/pages/tools/index.astro src/pages/categories/index.astro src/pages/index.astro src/pages/llms.txt.ts src/pages/llms-full.txt.ts PAGE_REFRESH_LEDGER.md .agent/PLANS.md`
+
+### 7. Acceptance criteria
+
+Grammarly volatile facts are verified against current official Grammarly/Superhuman sources as of 2026-06-14, backward `next_review_at` dates are removed, source IDs resolve in the registry, affected parent/top-layer surfaces are current, the ledger reflects the refresh scope, and focused audits pass without an unnecessary full build.
+
+### 8. Progress log
+
+- 2026-06-14: Used the Matt Pocock `zoom-out` skill to map the Grammarly child page, AI Writing parent hub, source registry, tools/categories/home top-layer pages, LLM surfaces, and ledger requirements.
+- 2026-06-14: Rechecked official Grammarly/Superhuman sources for Grammarly Pro pricing, Superhuman suite pricing, Free/Pro prompt allowances, Pro up-to-149-seat support, Superhuman Business, Enterprise controls, privacy/security statements, Superhuman rebrand/suite positioning, Premium-to-Pro migration, and affiliate availability; also checked WIRED coverage for the Expert Review trust caveat.
+- 2026-06-14: Updated Grammarly metadata, facts, visible buyer copy, price history, source list, affiliate notes, AI Writing parent guidance, source registry, top-layer/LLM maintenance comments, and regenerated the page-refresh ledger.
+- 2026-06-14: Verification passed with focused no-build checks: `npm run ledger:pages`, `npm run ledger:pages:check`, `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, `npm run editorial:weekly`, JSON parse check for `src/data/source-registry.json`, scoped stale-marker sweep, and scoped `git diff --check`. No full build or browser QA was run because this pass only changed content, source data, ledger, and crawl/index text.
+
+### 9. Final report
+
+Completed the Grammarly current-source refresh. `/tools/grammarly/` now carries June 14, 2026 verification for Grammarly Pro pricing, Superhuman suite pricing, Free/Pro prompt allowances, Pro up-to-149-seat support, Superhuman Business, Enterprise controls, privacy/security claims, Superhuman suite positioning, affiliate uncertainty, and Expert Review trust risk. AI Writing now summarizes the refreshed Grammarly buyer fork, LLM/top-layer surfaces include the refresh, and `PAGE_REFRESH_LEDGER.md` is current. Editorial queue now shows Midjourney, n8n, and Adobe Firefly as the next top stale tools.
+
+---
+
+## ExecPlan: June 14 2026 Canva Current-Source Refresh
+
+### 1. Objective
+
+Refresh `/tools/canva/` against current official Canva sources so AiPedia's design-tool buyer guidance reflects Canva AI 2.0, Canva Business, AI Pass, region-sensitive pricing, AI allowance pools, and commercial-rights caveats.
+
+### 2. Current state
+
+`src/content/tools/canva.md` was active but still carried June 12 verification dates and a June 13 high-volatility review date. The page mixed current Canva AI 2.0 positioning with stale source dates, underplayed the AI Pass allowance math, and ended with a generic affiliate disclosure despite `affiliate.has_program: false`.
+
+### 3. Target state
+
+`/tools/canva/` should show June 14, 2026 verification, separate Canva AI 2.0 product claims from Business and AI Pass commercial claims, make the plan/allowance buying decision explicit, and warn that Canva's own AI terms still require commercial-rights review for generated output.
+
+### 4. Scope
+
+Included: Canva tool metadata, facts, body copy, price history, source registry entries, AI Design and AI Image parent notes, top-layer tools/categories/home/LLM maintenance comments, page-refresh ledger, and focused content checks. Excluded: template/layout changes, new comparison pages, logo work, affiliate program changes, and full browser QA unless rendered code changes appear.
+
+### 5. Files likely affected
+
+`src/content/tools/canva.md`, `src/content/categories/ai-design.md`, `src/content/categories/ai-image.md`, `src/data/source-registry.json`, `src/pages/tools/index.astro`, `src/pages/categories/index.astro`, `src/pages/index.astro`, `src/pages/llms.txt.ts`, `src/pages/llms-full.txt.ts`, `PAGE_REFRESH_LEDGER.md`, and this plan.
+
+### 6. Verification commands
+
+`npm run ledger:pages`
+
+`npm run ledger:pages:check`
+
+`npm run audit:facts`
+
+`npm run audit:sources`
+
+`npm run check:links`
+
+`npm run editorial:weekly`
+
+`git diff --check -- src/content/tools/canva.md src/content/categories/ai-design.md src/content/categories/ai-image.md src/data/source-registry.json src/pages/tools/index.astro src/pages/categories/index.astro src/pages/index.astro src/pages/llms.txt.ts src/pages/llms-full.txt.ts PAGE_REFRESH_LEDGER.md .agent/PLANS.md`
+
+### 7. Acceptance criteria
+
+Canva volatile facts are verified against official Canva sources as of 2026-06-14, backward review dates are removed, source IDs resolve in the registry, affected parent/top-layer surfaces are current, the ledger reflects the refresh scope, and focused audits pass without running an unnecessary full build.
+
+### 8. Progress log
+
+- 2026-06-14: Used the Matt Pocock `zoom-out` skill to map the Canva child page, AI Design parent hub, AI Image secondary hub, source registry, tools/categories/home top-layer pages, LLM surfaces, and ledger requirements after restart.
+- 2026-06-14: Rechecked official Canva sources for Canva AI 2.0, Canva AI, Canva Pro, Canva Business, Canva pricing, and AI Pass. Confirmed Business US$20/person/month anchor, AI Pass as a monthly Pro/Business add-on, 40x Pro / 20x Business allowance language, shared Standard/Premium/Ultra allowance pool, and Canva's commercial-output clearance caveats.
+- 2026-06-14: Updated Canva tool facts/body/source list to June 14, added source registry entries for Canva AI 2.0, Canva Business, Canva AI Pass, and Canva Pro, removed the generic affiliate disclosure, refreshed AI Design and AI Image parent guidance, added top-layer/LLM maintenance notes, and regenerated the page-refresh ledger.
+- 2026-06-14: Verification passed with focused no-build checks: `npm run ledger:pages`, `npm run ledger:pages:check`, `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, `npm run editorial:weekly`, scoped stale-marker sweep, JSON parse check for `src/data/source-registry.json`, and scoped `git diff --check`. No full build or browser QA was run because this pass only changed content, source data, ledger, and crawl/index text.
+
+### 9. Final report
+
+Completed the Canva current-source refresh. `/tools/canva/` now carries June 14, 2026 verification for Canva AI 2.0, Business, AI Pass, Free/Pro/Business/Enterprise plan framing, AI allowance caveats, privacy/admin controls, Canva Code 2.0 positioning, and commercial-rights review warnings. Parent AI Design and AI Image hubs now summarize the refreshed Canva buyer lane, and LLM/top-layer surfaces include the refresh. `PAGE_REFRESH_LEDGER.md` is current. Editorial queue now shows Grammarly, Midjourney, n8n, and Adobe Firefly as the next top stale tools.
+
+---
+
+## ExecPlan: June 14 2026 Grok Current-Source Refresh
+
+### 1. Objective
+
+Refresh `/tools/grok/` against current xAI sources so AiPedia's Grok buyer guidance remains trustworthy, current, and useful for chatbot/search/API purchase decisions.
+
+### 2. Current state
+
+`src/content/tools/grok.md` is active and already has June 2026 positioning, but its `last_verified` date is 2026-06-12 and several high-volatility `next_review_at` values still point backward to 2026-06-03. The page also says persistent memory is not documented, while the live xAI Grok product page now lists memory across chats. Affected parent/context surfaces are `src/content/categories/ai-chatbots.md`, `src/content/categories/ai-search.md`, `src/pages/tools/index.astro`, `src/pages/categories/index.astro`, `src/pages/index.astro`, `src/pages/llms.txt.ts`, `src/pages/llms-full.txt.ts`, `src/data/source-registry.json`, and `PAGE_REFRESH_LEDGER.md`.
+
+### 3. Target state
+
+`/tools/grok/` should show June 14, 2026 verification, current xAI pricing/model/tool facts, clear buyer caveats around fast-moving plan/model packaging, and an accurate memory/privacy note. Parent hubs and top-layer/crawl surfaces should acknowledge the Grok refresh without becoming noisier than the child page.
+
+### 4. Scope
+
+Included: Grok tool frontmatter/body/source dates, xAI source registry last-checked dates, AI Chatbots and AI Search parent source/freshness notes, top-layer maintenance comments, and page-refresh ledger. Excluded: new Grok comparison rebuilds, new news articles, logo work, affiliate changes, and full visual QA because this is content/data-only.
+
+### 5. Files likely affected
+
+`src/content/tools/grok.md`, `src/content/categories/ai-chatbots.md`, `src/content/categories/ai-search.md`, `src/data/source-registry.json`, `src/pages/tools/index.astro`, `src/pages/categories/index.astro`, `src/pages/index.astro`, `src/pages/llms.txt.ts`, `src/pages/llms-full.txt.ts`, `PAGE_REFRESH_LEDGER.md`, and this plan.
+
+### 6. Data model impact
+
+No schema changes. Existing tool facts keep their source IDs and receive current `verified_at` / `next_review_at` dates where the facts were rechecked.
+
+### 7. SEO impact
+
+The Grok page keeps its June 2026 SEO title and meta focus while moving visible verification language to June 14. Parent category pages keep current internal links to Grok as the X-native chatbot/search option.
+
+### 8. Conversion impact
+
+No affiliate program or commercial CTA changes. Buyer guidance remains non-affiliate and points users to official xAI pricing/docs before paying.
+
+### 9. Mobile UX impact
+
+No template/layout changes. The first-screen decision content remains concise: verdict, price range, best plan, and watch-out.
+
+### 10. Implementation steps
+
+1. Verify xAI model, pricing, product, text, web/X search, code execution, image, and video facts from current sources.
+2. Update Grok metadata, facts, body copy, source dates, and the memory/privacy line.
+3. Update parent category/source registry/top-layer maintenance surfaces.
+4. Regenerate or check the page-refresh ledger.
+5. Run focused content/data/link checks without a full build unless a rendered-template issue appears.
+
+### 11. Verification commands
+
+`npm run ledger:pages`
+
+`npm run ledger:pages:check`
+
+`npm run audit:facts`
+
+`npm run audit:sources`
+
+`npm run check:links`
+
+`git diff --check -- src/content/tools/grok.md src/content/categories/ai-chatbots.md src/content/categories/ai-search.md src/data/source-registry.json src/pages/tools/index.astro src/pages/categories/index.astro src/pages/index.astro src/pages/llms.txt.ts src/pages/llms-full.txt.ts PAGE_REFRESH_LEDGER.md .agent/PLANS.md`
+
+### 12. Acceptance criteria
+
+Grok's volatile facts are verified against current xAI sources as of 2026-06-14, backward `next_review_at` dates are removed, parent hubs and top-layer/crawl surfaces are current, the ledger reflects the refresh scope, and focused audits pass.
+
+### 13. Risks and mitigations
+
+xAI plan labels and account limits move quickly. Mitigation: keep exact public pricing anchored to current official pages and tell buyers to verify Lite, Heavy, X bundle, regional, and account-specific limits in the live plan chooser. Build cost is unnecessary for content-only edits; mitigation: run focused checks and skip full build unless rendering code changes.
+
+### 14. Progress log
+
+- 2026-06-14: Inspected Grok content, parent AI Chatbots/AI Search hubs, xAI source registry entries, and top-layer maintenance comments. Reverified xAI model/pricing/product/API/search facts from official live sources.
+- 2026-06-14: Updated Grok tool facts and visible buyer guidance to June 14, fixed the old memory caveat now that xAI's consumer Grok page lists memory across chats, kept API response storage as a separate 30-day retention caveat, refreshed AI Chatbots and AI Search parent notes, updated source registry dates, refreshed `/tools/`, `/categories/`, homepage, and LLM maintenance surfaces, and regenerated the page ledger.
+- 2026-06-14: Verification passed with focused no-build checks: `npm run ledger:pages`, `npm run ledger:pages:check`, `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, scoped `git diff --check`, stale-marker `rg` sweep, and `npm run editorial:weekly`. No full build or browser QA was run because this pass only changed content, source data, ledger, and crawl/index text.
+
+### 15. Final report
+
+Completed the Grok current-source refresh. `/tools/grok/` now carries June 14, 2026 verification for Grok 4.3, 1M context, SuperGrok, Grok Build, Voice API, Imagine API, X Search, code execution, and Responses API storage. Parent AI Chatbots and AI Search hubs now summarize the refreshed Grok/X Search lane, and LLM crawl surfaces include the refresh. `PAGE_REFRESH_LEDGER.md` is current. Editorial queue now shows Qwen as the next top stale tool, not Grok.
+
+---
+
+## ExecPlan: June 14 2026 Qwen Model-Packaging Refresh
+
+### 1. Objective
+
+Refresh `/tools/qwen/` so AiPedia reflects the current Qwen Cloud June 2026 model surface, especially the new qwen3.7-max June 8 snapshot, current Qwen Cloud pricing, and the buyer caveat that Qwen Cloud docs and marketplace pages do not always describe the same capability surface at the same time.
+
+### 2. Current state
+
+`src/content/tools/qwen.md` is active but its high-volatility facts have 2026-06-12 verification and 2026-06-08 `next_review_at` dates. The page still says qwen3.7-plus is the latest official changelog entry, while Qwen Cloud's live changelog now lists `qwen3.7-max-2026-06-08` on June 10, 2026. The qwen3.7-max marketplace page still shows 1M context and 50% promo pricing, while its overview still describes a text-only public interface.
+
+### 3. Target state
+
+`/tools/qwen/` should show June 14 verification, identify `qwen3.7-max-2026-06-08` as the latest Qwen Cloud changelog entry, keep qwen3.7-plus as the multimodal/GUI hybrid-agent lane, preserve the Qwen3 Apache 2.0 open-weight buyer case, and tell buyers to verify exact model snapshot, modality support, pricing, and region before production use.
+
+### 4. Scope
+
+Included: Qwen tool facts/body/source dates, Qwen source registry dates, affected AI Chatbots, AI Coding, and AI Research parent notes, top-layer `/tools/`, `/categories/`, homepage, LLM surfaces, and page-refresh ledger. Excluded: comparison rebuilds, new news articles, logo work, affiliate changes, and full build/browser QA unless the edits touch rendering code.
+
+### 5. Files likely affected
+
+`src/content/tools/qwen.md`, `src/content/categories/ai-chatbots.md`, `src/content/categories/ai-coding.md`, `src/content/categories/ai-research.md`, `src/data/source-registry.json`, `src/pages/tools/index.astro`, `src/pages/categories/index.astro`, `src/pages/index.astro`, `src/pages/llms.txt.ts`, `src/pages/llms-full.txt.ts`, `PAGE_REFRESH_LEDGER.md`, and this plan.
+
+### 6. Data model impact
+
+No schema changes. Existing Qwen fact keys remain, but values, verification dates, and next review dates update. A current 2026-06-14 price-history row may be added for qwen3.7-max/qwen3.7-plus rates.
+
+### 7. SEO impact
+
+The Qwen page remains a June 2026 review and strengthens its long-tail value around qwen3.7-max, qwen3.7-plus, Qwen Cloud pricing, Apache 2.0 Qwen3 open weights, and Alibaba Cloud model-family evaluation.
+
+### 8. Conversion impact
+
+No affiliate changes. Buyer guidance stays official-link/source-backed and warns against relying on promotional Qwen Cloud pricing without checking list price and purchase timing.
+
+### 9. Mobile UX impact
+
+No template changes. The page should keep compact first-screen verdict, price, and watch-out content.
+
+### 10. Implementation steps
+
+1. Verify current Qwen Cloud changelog, pricing, qwen3.7-max model page, promo page, Qwen3 blog, and Hugging Face Qwen organization.
+2. Update Qwen facts, price history, body copy, FAQ, and source dates.
+3. Update affected parent hubs and top-layer/crawl surfaces.
+4. Regenerate the page ledger.
+5. Run focused no-build checks.
+
+### 11. Verification commands
+
+`npm run ledger:pages`
+
+`npm run ledger:pages:check`
+
+`npm run audit:facts`
+
+`npm run audit:sources`
+
+`npm run check:links`
+
+`npm run editorial:weekly`
+
+`git diff --check -- <touched files>`
+
+### 12. Acceptance criteria
+
+Qwen no longer appears as the top overdue tool, current Qwen Cloud model/pricing facts are reflected without overclaiming modality support, parent hubs and crawl surfaces are current, ledger is current, and focused checks pass.
+
+### 13. Risks and mitigations
+
+Qwen Cloud capability pages can lag changelog entries. Mitigation: distinguish changelog snapshot claims from the marketplace page's current public interface wording. Promotional pricing can distort comparisons; mitigation: preserve list price and promo end date.
+
+### 14. Progress log
+
+- 2026-06-14: Inspected Qwen tool facts, parent hub references, source registry IDs, and editorial queue. Verified live Qwen Cloud changelog, pricing docs, qwen3.7-max model page, promo page, Qwen3 blog, and Hugging Face Qwen organization.
+- 2026-06-14: Updated Qwen structured facts, body copy, price history, Key Facts, Pricing, Failure modes, Methodology, FAQ, source list, and high-volatility `next_review_at` dates. The page now distinguishes the June 10 changelog claim for `qwen3.7-max-2026-06-08` from the live qwen3.7-max marketplace page's text-only public-interface wording.
+- 2026-06-14: Refreshed AI Chatbots, AI Coding, and AI Research parent notes; updated Qwen source-registry dates for Qwen Cloud, Qwen3 blog, and Qwen official entries; refreshed `/tools/`, `/categories/`, homepage, and LLM maintenance surfaces; regenerated `PAGE_REFRESH_LEDGER.md`.
+- 2026-06-14: Verification passed with no-build checks: `npm run ledger:pages`, `npm run ledger:pages:check`, `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, `npm run editorial:weekly`, scoped stale-string `rg`, and scoped `git diff --check`. No full build or browser QA was run because this pass changed content, source data, ledger, and crawl text only.
+
+### 15. Final report
+
+Completed the Qwen model-packaging refresh. `/tools/qwen/` now carries June 14, 2026 verification, a current 2026-06-14 price-history row, `qwen3.7-max-2026-06-08` as the newest Qwen Cloud changelog entry, qwen3.7-plus as the multimodal/GUI-agent lane, and an explicit caveat that the live qwen3.7-max marketplace page still describes text input/output. AI Chatbots, AI Coding, AI Research, source registry, top-layer pages, LLM manifests, and `PAGE_REFRESH_LEDGER.md` are current. The editorial weekly queue now shows Claude as the next top overdue tool instead of Qwen.
+
+---
+
+## ExecPlan: June 14 2026 Claude Fact-Currency Refresh
+
+### 1. Objective
+
+Refresh `/tools/claude/` so its structured facts, visible pricing/privacy guidance, source registry entries, parent hubs, crawl surfaces, and page-refresh ledger all agree with current Anthropic sources as of June 14, 2026.
+
+### 2. Current state
+
+`src/content/tools/claude.md` already reflects the June 2026 Fable/Mythos access suspension in visible copy, but several high-volatility facts still carry May verification dates and backward `next_review_at` values. The pricing section needs a current platform-fee and Agent SDK credit caveat, the privacy fact should use Anthropic's current API/data-retention route, and the source registry lacks a dedicated `anthropic-fable-mythos-access` entry even though Claude pages reference that source ID.
+
+### 3. Target state
+
+`/tools/claude/` should show June 14 verification for Opus 4.8, Sonnet 4.6, Haiku 4.5, subscription/API pricing, web search, Claude Code, Agent SDK credits, platform feature fees, ZDR scope, and the Fable/Mythos suspension. Parent category source lists and top-layer/LLM maintenance notes should reflect the refresh without adding unnecessary ranking churn.
+
+### 4. Scope
+
+Included: Claude tool fact dates/body copy/source list, Anthropic source registry dates and missing source IDs, affected AI Chatbots/AI Coding/AI Writing/AI Design parent source dates, `/tools/`, `/categories/`, homepage, LLM surfaces, and `PAGE_REFRESH_LEDGER.md`. Excluded: Claude comparison rebuilds, new news articles, logo work, affiliate changes, and full build/browser QA because this is content/data-only.
+
+### 5. Files likely affected
+
+`src/content/tools/claude.md`, `src/content/categories/ai-chatbots.md`, `src/content/categories/ai-coding.md`, `src/content/categories/ai-writing.md`, `src/content/categories/ai-design.md`, `src/data/source-registry.json`, `src/pages/tools/index.astro`, `src/pages/categories/index.astro`, `src/pages/index.astro`, `src/pages/llms.txt.ts`, `src/pages/llms-full.txt.ts`, `PAGE_REFRESH_LEDGER.md`, and this plan.
+
+### 6. Data model impact
+
+No schema changes. Existing Claude fact keys remain. Current-source edits update `verified_at`, `next_review_at`, `source`, `source_label`, and source-registry metadata where the underlying fact was rechecked.
+
+### 7. SEO impact
+
+The Claude page remains a June 2026 review, but its decision value improves around current model availability, paid-plan fit, ZDR limits, platform feature costs, Agent SDK credits, and the practical Opus 4.8 fallback after Fable/Mythos suspension.
+
+### 8. Conversion impact
+
+No affiliate changes. Buyer guidance remains official-link/source-backed and reinforces that Claude plan choice should account for subscription limits, API token pricing, non-interactive Agent SDK credits, web-search/tool fees, and retention requirements.
+
+### 9. Mobile UX impact
+
+No template changes. The first-screen decision content remains concise: verdict, price range, best plan, and watch-out.
+
+### 10. Implementation steps
+
+1. Verify current Anthropic model, pricing, Agent SDK credit, web search, data-retention, and Fable/Mythos suspension sources.
+2. Update Claude structured facts, price history, Key Facts, Pricing, Failure modes, FAQ, and methodology source language.
+3. Update affected parent category source dates and top-layer/LLM maintenance notes.
+4. Regenerate the page ledger.
+5. Run focused no-build checks.
+
+### 11. Verification commands
+
+`npm run ledger:pages`
+
+`npm run ledger:pages:check`
+
+`npm run audit:facts`
+
+`npm run audit:sources`
+
+`npm run check:links`
+
+`npm run editorial:weekly`
+
+`git diff --check -- <touched files>`
+
+### 12. Acceptance criteria
+
+Claude no longer has overdue high-volatility fact review dates, current Anthropic pricing/model/privacy/support facts are reflected without overclaiming Fable/Mythos availability, source registry IDs exist for referenced current sources, parent hubs and crawl surfaces are current, ledger is current, and focused checks pass.
+
+### 13. Risks and mitigations
+
+Anthropic docs still contain launch-era Fable/Mythos model rows, while the official suspension statement says access is disabled. Mitigation: treat the suspension statement as controlling for buyer availability and explicitly label Fable/Mythos as unavailable until restored. Subscription limits and feature fees can move quickly; mitigation: keep exact figures sourced and set short review dates.
+
+### 14. Progress log
+
+- 2026-06-14: Used the new Matt Pocock `zoom-out` skill to map the affected child page, parent category hubs, source registry, top-layer pages, LLM surfaces, and ledger before editing. Reverified official Anthropic model docs, Claude pricing, Agent SDK credit support docs, API/data-retention docs, web-search docs, and the Fable/Mythos suspension statement.
+- 2026-06-14: Updated Claude structured facts, price history, Key Facts, Pricing, Failure modes, FAQ, methodology sources, parent category source dates, source registry IDs/dates, top-layer maintenance notes, LLM surfaces, and `PAGE_REFRESH_LEDGER.md`.
+- 2026-06-14: Verification passed with no-build checks: `npm run ledger:pages`, `npm run ledger:pages:check`, `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, `npm run editorial:weekly`, scoped stale-string `rg`, and scoped `git diff --check`. No full build or browser QA was run because this pass changed content, source data, ledger, and crawl text only.
+
+### 15. Final report
+
+Completed the Claude fact-currency refresh. `/tools/claude/` now carries June 14, 2026 verification for Opus 4.8, Sonnet 4.6, Haiku 4.5, Fable/Mythos unavailability, subscription/API pricing, Agent SDK credits, web search, platform feature fees, ZDR scope, and memory/privacy caveats. AI Chatbots, AI Coding, AI Writing, AI Design, source registry, top-layer pages, LLM manifests, and `PAGE_REFRESH_LEDGER.md` are current. The editorial weekly queue now shows Gemini as the next top overdue tool instead of Claude.
+
+---
+
+## ExecPlan: June 14 2026 Gemini Current-Source Refresh
+
+### 1. Objective
+
+Refresh `/tools/gemini/` so Gemini's model, subscription, API pricing, media, search-grounding, Workspace privacy, and rollout guidance reflects current official Google sources as of June 14, 2026.
+
+### 2. Current state
+
+`src/content/tools/gemini.md` is active and mostly June 2026-aware, but high-volatility facts still carry May verification dates and `next_review_at` values due on June 13. The page says Gemini 3.5 Pro is expected next, while current official Gemini API docs show Gemini 3.5 Flash as stable, Gemini 3.1 Pro as preview, and Gemini app support docs abstract consumer model access as Flash-Lite, Flash, and Pro. Parent hubs summarize Gemini across AI Chatbots, AI Coding, AI Search, AI Writing, AI Image, and AI Video; AI Notes was inspected and did not need a material Gemini change.
+
+### 3. Target state
+
+`/tools/gemini/` should show June 14 verification, keep Gemini 3.5 Flash as the stable API/agentic default, avoid overclaiming Gemini 3.5 Pro availability, quote current subscription tiers with regional price caveats, quote the current Gemini 3.5 Flash API pricing anchor, and clarify Workspace/consumer/API privacy differences.
+
+### 4. Scope
+
+Included: Gemini tool metadata/facts/body/source dates, relevant Google source-registry entries, affected parent category source dates and summary language, `/tools/`, `/categories/`, homepage, LLM surfaces, and `PAGE_REFRESH_LEDGER.md`. Excluded: new Gemini comparison rebuilds, new news articles, logo work, affiliate changes, and full build/browser QA unless rendering code changes.
+
+### 5. Files likely affected
+
+`src/content/tools/gemini.md`, `src/content/categories/ai-chatbots.md`, `src/content/categories/ai-coding.md`, `src/content/categories/ai-search.md`, `src/content/categories/ai-writing.md`, `src/content/categories/ai-image.md`, `src/content/categories/ai-video.md`, `src/data/source-registry.json`, `src/pages/tools/index.astro`, `src/pages/categories/index.astro`, `src/pages/index.astro`, `src/pages/llms.txt.ts`, `src/pages/llms-full.txt.ts`, `PAGE_REFRESH_LEDGER.md`, and this plan.
+
+### 6. Data model impact
+
+No schema changes. Existing Gemini fact keys remain. Current-source edits update values, source URLs/IDs, `verified_at`, and `next_review_at` where facts were rechecked.
+
+### 7. SEO impact
+
+The Gemini page remains a June 2026 review and improves long-tail value around Gemini 3.5 Flash, Gemini app Pro/Ultra plan limits, 1M context on AI Pro/Ultra, API pricing, Grounding with Google Search, Veo 3.1, Nano Banana, Workspace data controls, and model churn.
+
+### 8. Conversion impact
+
+No affiliate changes. Buyer guidance stays official-link/source-backed and warns users to verify region/account-specific Google AI pricing, feature access, model availability, and compute-used limits before upgrading.
+
+### 9. Mobile UX impact
+
+No template changes. The first-screen decision content remains concise: verdict, price range, best plan, and watch-out.
+
+### 10. Implementation steps
+
+1. Verify current Gemini model, subscription, support-limit, API pricing, release-note, search-grounding, media, and privacy facts from official Google sources.
+2. Update Gemini facts, price history, Key Facts, Pricing, Failure modes, FAQ, and methodology source language.
+3. Update affected parent hubs and top-layer/crawl surfaces.
+4. Regenerate the page ledger.
+5. Run focused no-build checks.
+
+### 11. Verification commands
+
+`npm run ledger:pages`
+
+`npm run ledger:pages:check`
+
+`npm run audit:facts`
+
+`npm run audit:sources`
+
+`npm run check:links`
+
+`npm run editorial:weekly`
+
+`git diff --check -- <touched files>`
+
+### 12. Acceptance criteria
+
+Gemini no longer has overdue high-volatility fact review dates, official Google model/pricing/privacy facts are reflected without overclaiming a stable Gemini 3.5 Pro route, parent hubs and crawl surfaces are current, ledger is current, and focused checks pass.
+
+### 13. Risks and mitigations
+
+Google surfaces use different labels across Gemini app, Google AI subscriptions, AI Studio, Gemini API, Google Cloud, and Workspace. Mitigation: distinguish consumer plan/model names from API model IDs and keep regional/account caveats visible. Google plan prices localize by country; mitigation: use current official page anchors and tell buyers to verify the live plan selector.
+
+### 14. Progress log
+
+- 2026-06-14: Used the new Matt Pocock `zoom-out` skill to map Gemini's child page, parent category hubs, source registry, top-layer pages, LLM surfaces, and ledger before editing. Reverified official Google AI subscription, Gemini app limits, Gemini API model/pricing/changelog, Grounding with Google Search, Google Workspace privacy, and Gemini Enterprise model pages.
+- 2026-06-14: Updated Gemini's fact metadata, price history, pricing table, system verdict, buyer caveats, FAQ, and source language. Corrected Gemini 3.5 Flash API standard pricing to $1.50/M input and $9/M output, with batch/flex and priority rows separated. Added `google-gemini-app-limits` and `google-workspace-ai-privacy-hub` source registry entries and refreshed relevant Google source checks.
+- 2026-06-14: Updated AI Chatbots, AI Coding, AI Search, AI Writing, AI Image, and AI Video parent/source surfaces plus `/tools/`, `/categories/`, homepage, `llms.txt`, `llms-full.txt`, and `PAGE_REFRESH_LEDGER.md`. AI Notes was inspected and left unchanged.
+- 2026-06-14: Verification passed: `npm run ledger:pages`, `npm run ledger:pages:check`, `npm run audit:facts`, `npm run audit:sources`, `npm run check:links`, `npm run editorial:weekly`, and scoped `git diff --check`. No full build or browser QA was run because this was content/data/crawl-surface maintenance without template/runtime changes.
+
+### 15. Final report
+
+Completed. `/tools/gemini/` is now June 14, 2026-current against official Google sources: Gemini app labels are separated from API model IDs, Gemini 3.5 Flash is treated as the stable API/agentic route, Gemini 3.1 Pro remains the preview Pro API caveat, Google AI Pro/Ultra guidance carries regional/account caveats, Workspace privacy is separated from consumer/API terms, and API pricing now reflects the current Google Gemini pricing page. Parent hubs, crawl surfaces, source registry, and the page refresh ledger are aligned. The remaining editorial queue starts with Canva, Grammarly, Midjourney, n8n, and Adobe Firefly.
+
+---
+
 An ExecPlan is required for significant work. It is a living implementation plan that Codex must keep updated while working.
 
 ## When required
@@ -79,6 +2890,742 @@ Update after each major step with date/time, change summary, commands run, and r
 ### 15. Final report
 
 Summarize changed files, behavior shipped, tests passed, unresolved risks, and recommended next task.
+
+---
+
+## ExecPlan: June 13 2026 Neon Migration Safety Runner
+
+### 1. Objective
+
+Make the Vercel/Neon production database setup repeatable and hard to misapply by replacing ad hoc `psql` comments with a guarded project-native migration runner. This improves deployment reliability, maintainability, and trust in newsletter/review API readiness.
+
+### 2. Current state
+
+Reviews and subscribers had Postgres migration files and runtime code used `@neondatabase/serverless`, but the apply path lived only in SQL comments. Standalone scripts do not auto-load `.env.local`, so production setup depended on a human knowing how to source `DATABASE_URL`.
+
+### 3. Target state
+
+The repo should expose dry-run, apply, and verify commands for Neon migrations. Default behavior should be non-destructive, writes should require `--apply`, and verification should fail closed when `DATABASE_URL` is absent.
+
+### 4. Scope
+
+Included: migration runner script, npm migration commands, runtime debug hint update, migration header updates, hosting audit coverage for migration commands, focused tests, and verification. Excluded: running production migrations, editing visible website content, changing database schema shape beyond existing SQL, and changing Vercel dashboard env vars.
+
+### 5. Files likely affected
+
+`scripts/neon-migrate.mjs`, `package.json`, `scripts/audit-hosting-runtime.mjs`, `src/lib/server/runtime.ts`, `migrations/0001_reviews.sql`, `migrations/0002_subscribers.sql`, `tests/scripts/neon-migrate.test.mjs`, and this plan.
+
+### 6. Data model impact
+
+No schema changes beyond the existing review/subscriber migration definitions. The runner validates and applies the existing SQL files in filename order.
+
+### 7. SEO impact
+
+No indexable content, metadata, schema, sitemap, or internal-link changes.
+
+### 8. Conversion impact
+
+No CTA behavior changes. Newsletter signup and reader-review conversion surfaces become easier to enable safely in production because their backing tables have a documented apply/verify path.
+
+### 9. Mobile UX impact
+
+No rendered layout changes.
+
+### 10. Implementation steps
+
+1. Inspect current migrations, runtime DB helper, and API handlers.
+2. Add `scripts/neon-migrate.mjs` with dry-run validation, `--apply`, `--verify`, `--env`, and JSON output.
+3. Add npm commands: `db:migrate`, `db:migrate:check`, and `db:migrate:verify`.
+4. Update runtime schema hint and SQL comments to point at the project-native command.
+5. Extend hosting audit to require the migration commands.
+6. Add focused tests for dry-run success and fail-closed verify behavior without `DATABASE_URL`.
+7. Run focused checks plus normal script/check/build gates.
+
+### 11. Verification commands
+
+`node --check scripts/neon-migrate.mjs`
+
+`node scripts/neon-migrate.mjs --check --json`
+
+`node --test tests/scripts/neon-migrate.test.mjs`
+
+`npm run db:migrate:check`
+
+`npm run check:hosting`
+
+`npm run test:scripts`
+
+`npm run check`
+
+`npm run build`
+
+`npm run check:dist`
+
+`git diff --check`
+
+### 12. Acceptance criteria
+
+Migration dry-run validates the two SQL files without a database, verify mode fails closed without any supported Vercel/Neon database URL, hosting audit requires the migration npm commands, and normal checks/builds remain green.
+
+### 13. Risks and mitigations
+
+Executing SQL from files is powerful. Mitigation: default mode is dry-run, write mode requires `--apply`, migrations are validated before execution, env loading is explicit, and tests do not connect to a real database. The simple SQL splitter could be too small for future complex migrations; current migrations are straightforward DDL, and future complex SQL should extend the parser or switch to a migration framework.
+
+### 14. Progress log
+
+- 2026-06-13: Inspected existing `reviews` and `subscribers` migrations plus runtime Neon helper. Confirmed setup relied on SQL comments and no repo-native apply command.
+- 2026-06-13: Added `scripts/neon-migrate.mjs`, npm migration commands, migration command tests, runtime debug hint update, and migration header updates.
+- 2026-06-13: Switched the env-file argument to `--env` because Node treats `--env-file` as a runtime flag before script code can handle missing files. Verified focused Neon migration tests, hosting checks, full script tests, `npm run check`, production build, dist checks, and whitespace checks.
+- 2026-06-13: Follow-up safety hardening made the migration runner fail closed on unknown flags and missing `--env`/`--env-path` values, preventing typoed apply/verify commands from silently falling back to dry-run behavior. Verification used focused checks only: `node --check scripts/neon-migrate.mjs`, `node --check tests/scripts/neon-migrate.test.mjs`, `node --test tests/scripts/neon-migrate.test.mjs`, `node scripts/neon-migrate.mjs --check --json`, an invalid-flag JSON probe, `npm run test:scripts`, and scoped `git diff --check`.
+- 2026-06-13: Additional build-free safety hardening made mode flags mutually exclusive, so conflicting `--check`/`--verify`/`--apply` invocations fail closed instead of silently choosing one mode. Verification used focused checks only: `node --check scripts/neon-migrate.mjs`, `node --check tests/scripts/neon-migrate.test.mjs`, `node --test tests/scripts/neon-migrate.test.mjs`, a conflicting-mode JSON probe, `npm run test:scripts`, and scoped `git diff --check`.
+- 2026-06-13: Follow-up env fallback alignment made the migration runner use the same ordered Vercel/Neon database keys as runtime (`DATABASE_URL`, `POSTGRES_URL`, `POSTGRES_PRISMA_URL`, `POSTGRES_URL_NON_POOLING`) and report the selected key in JSON without exposing the connection string. Verification used focused checks only; no full build was run.
+- 2026-06-13: Follow-up secret hygiene redacted selected database URL values from migration runner error details, including invalid connection string errors from `@neondatabase/serverless`, while preserving `database_env_key` for debugging. Verification used focused checks only; no full build was run.
+- 2026-06-13: Follow-up env-loader hardening made the migration runner treat whitespace-only inherited database env vars as empty before loading explicit env files, so stale shell values cannot block pulled Vercel/Neon connection strings. Verification used focused checks only; no full build was run.
+- 2026-06-13: Follow-up explicit-env safety made missing `--env` files fail closed with `env-file-missing`, preventing typoed env paths from falling through to inherited shell database values. Verification used focused checks only; no full build was run.
+
+### 15. Final report
+
+Shipped a guarded Vercel/Neon migration runner for the existing review and subscriber tables. The runner defaults to dry-run validation, requires `--apply` for writes, supports `--verify`, loads `.env.local`/`.env` or an explicit `--env` path, fails closed when an explicit env file is missing, treats whitespace-only inherited database env vars as empty before loading env files, accepts `DATABASE_URL` plus Vercel/Neon `POSTGRES_*` fallbacks, emits JSON for tests without exposing connection strings, redacts selected database URL values from error details, fails closed without a supported database URL, and now rejects invalid, incomplete, or conflicting command arguments.
+
+Changed files: `scripts/neon-migrate.mjs`, `tests/scripts/neon-migrate.test.mjs`, `package.json`, `scripts/audit-hosting-runtime.mjs`, `src/lib/server/runtime.ts`, `migrations/0001_reviews.sql`, `migrations/0002_subscribers.sql`, and `.agent/PLANS.md`.
+
+Verification passed: `node --check scripts/neon-migrate.mjs`, `node --check tests/scripts/neon-migrate.test.mjs`, `node scripts/neon-migrate.mjs --check --json`, `node --test tests/scripts/neon-migrate.test.mjs`, `npm run db:migrate:check`, `npm run check:hosting`, `npm run test:scripts`, `npm run check`, `npm run build`, `npm run check:dist`, and `git diff --check`. Production migrations were not applied; run `vercel env pull .env.local --yes` and then `npm run db:migrate -- --apply --env .env.local` when ready.
+
+---
+
+## ExecPlan: June 13 2026 Vercel Hosting Runtime Guard
+
+### 1. Objective
+
+Remove remaining Cloudflare-era hosting allowances after the Vercel migration and add a guard that prevents stale Cloudflare Pages, Wrangler, Turnstile, or D1 runtime surfaces from creeping back into production config. This improves deployment safety, security posture, and maintainability.
+
+### 2. Current state
+
+The repo had already moved runtime APIs to Astro routes for Vercel/Neon, but `vercel.json` still allowed `https://challenges.cloudflare.com` in the Content Security Policy and the empty `functions/` Cloudflare Pages directory tree still existed locally. No existing guard specifically checked the hosting/runtime surface for Cloudflare drift.
+
+### 3. Target state
+
+Vercel config should only allow the origins AiPedia currently uses, API/runtime surfaces should target Vercel/Neon, and `npm run check` should fail if Cloudflare Pages/Wrangler/Turnstile/D1 config reappears in hosting files or server runtime code.
+
+### 4. Scope
+
+Included: CSP cleanup in `vercel.json`, removal of the stale empty `functions/` directory tree, a scoped hosting-runtime audit, npm script wiring, focused tests, and verification. Excluded: editorial content that legitimately mentions Cloudflare as an AI/company/news source, production Vercel dashboard changes, and database migration execution.
+
+### 5. Files likely affected
+
+`vercel.json`, `package.json`, `scripts/audit-hosting-runtime.mjs`, `tests/scripts/hosting-runtime.test.mjs`, deleted `functions/**`, and this plan.
+
+### 6. Data model impact
+
+No content, tool, source, affiliate, scoring, or analytics data model changes.
+
+### 7. SEO impact
+
+No indexable content changes. Security headers remain in `vercel.json`; API/admin noindex headers stay protected.
+
+### 8. Conversion impact
+
+No commercial CTA or affiliate behavior changes.
+
+### 9. Mobile UX impact
+
+No rendered layout changes.
+
+### 10. Implementation steps
+
+1. Inspect Vercel/env/runtime/migration surfaces for Cloudflare-era leftovers.
+2. Remove Cloudflare challenge origins from the CSP in `vercel.json`.
+3. Add `scripts/audit-hosting-runtime.mjs` scoped to config/runtime files, not editorial content.
+4. Wire `audit-hosting-runtime` into `guard:check` and expose `npm run check:hosting`.
+5. Add script tests for the clean Vercel/Neon report and CSP contract.
+6. Remove the stale empty `functions/` directory tree.
+7. Run focused checks plus normal repo/build gates.
+
+### 11. Verification commands
+
+`node --check scripts/audit-hosting-runtime.mjs`
+
+`node scripts/audit-hosting-runtime.mjs --json`
+
+`node --test tests/scripts/hosting-runtime.test.mjs`
+
+`npm run test:scripts`
+
+`npm run check`
+
+`npm run build`
+
+`npm run check:dist`
+
+`git diff --check`
+
+### 12. Acceptance criteria
+
+The CSP contains no Cloudflare challenge/Turnstile origins, old Cloudflare Pages/Wrangler files are absent, the audit reports zero issues, and normal checks/builds remain green.
+
+### 13. Risks and mitigations
+
+The audit could accidentally flag editorial Cloudflare mentions. Mitigation: it only scans hosting config, server runtime files, API routes, env templates, package scripts/dependencies, and migrations. Tightening CSP could break a hidden Turnstile dependency; mitigation: Turnstile was already removed from forms and API handlers, and the audit explicitly checks server runtime surfaces.
+
+### 14. Progress log
+
+- 2026-06-13: Found stale `https://challenges.cloudflare.com` allowances in the Vercel CSP and an empty `functions/` directory tree from the old Cloudflare Pages layout.
+- 2026-06-13: Removed Cloudflare challenge origins from `script-src`, `script-src-elem`, `connect-src`, changed `frame-src` to `'none'`, and removed the empty `functions/` tree.
+- 2026-06-13: Added `scripts/audit-hosting-runtime.mjs`, `npm run check:hosting`, and focused tests.
+- 2026-06-13: Verification passed: `node --check scripts/audit-hosting-runtime.mjs`, `node scripts/audit-hosting-runtime.mjs --json`, `node --test tests/scripts/hosting-runtime.test.mjs`, `npm run test:scripts`, `npm run check`, `npm run build`, `npm run check:dist`, and `git diff --check`.
+- 2026-06-13: Follow-up cleanup updated `.gitignore` comments so legacy ignored Wrangler/dev-var files are labeled as non-runtime legacy artifacts, and the generated metadata note names the Vercel/Astro build. Verification passed: `npm run check:hosting` and `git diff --check`.
+- 2026-06-13: Follow-up runtime hardening centralized `IP_HASH_SECRET` access in `src/lib/server/runtime.ts`, made newsletter and review write routes fail closed when the secret is absent, and extended the hosting audit/tests to prevent direct unsalted IP hash derivation. Verification passed: `node --check src/lib/server/runtime.ts`, `node --check scripts/audit-hosting-runtime.mjs`, `node --check tests/scripts/hosting-runtime.test.mjs`, `npm run check:hosting`, `node --test tests/scripts/hosting-runtime.test.mjs`, `npm run test:scripts`, `npm run check`, `npm run build`, `npm run check:dist`, and `git diff --check`.
+- 2026-06-13: Follow-up env safety guard added `.env.local` and `.env.*.local` to `.gitignore`, kept `.env.example` explicitly trackable, and extended `scripts/audit-hosting-runtime.mjs` plus `tests/scripts/hosting-runtime.test.mjs` so pulled Vercel env files cannot drift into source control. Verification used focused checks only: `git check-ignore -v .env.local .env.preview.local .env.production.local .vercel/project.json`, `.env.example` trackability check, `node --check scripts/audit-hosting-runtime.mjs`, `node --check tests/scripts/hosting-runtime.test.mjs`, `node --test tests/scripts/hosting-runtime.test.mjs`, `npm run check:hosting`, and `git diff --check -- .gitignore scripts/audit-hosting-runtime.mjs tests/scripts/hosting-runtime.test.mjs`.
+- 2026-06-13: Follow-up operator polish aligned `npm run vercel:env:pull` with the documented non-interactive command `npx vercel env pull .env.local --yes` and extended the hosting audit/tests to prevent drift. Verification used focused checks only: `node --check scripts/audit-hosting-runtime.mjs`, `node --check tests/scripts/hosting-runtime.test.mjs`, `node --test tests/scripts/hosting-runtime.test.mjs`, `npm run check:hosting`, a package-script assertion, and `git diff --check -- package.json scripts/audit-hosting-runtime.mjs tests/scripts/hosting-runtime.test.mjs`.
+- 2026-06-13: Follow-up command-surface hardening added required operator npm scripts (`check:hosting`, `db:migrate*`, `deploy`, and `vercel:env:pull`) to `scripts/audit-command-surface.mjs` so the project-wide command audit catches accidental removal of the Vercel/Neon runbook shortcuts. Verification used focused checks only: `node --check scripts/audit-command-surface.mjs`, `node --check tests/scripts/audit-command-surface.test.mjs`, `node scripts/audit-command-surface.mjs --json`, `node --test tests/scripts/audit-command-surface.test.mjs`, `npm run test:scripts`, and scoped `git diff --check`.
+- 2026-06-13: Follow-up Vercel deploy hardening aligned `npm run deploy` with the Vercel prebuilt production flow (`npx vercel build --prod && npx vercel deploy --prebuilt --prod`) and extended the hosting audit/tests to require `@astrojs/vercel`, `@neondatabase/serverless`, and the exact production prebuild command. Verification used focused checks only; no full build was run.
+- 2026-06-13: Follow-up lockfile guard made `scripts/audit-hosting-runtime.mjs` parse `package-lock.json` so the checked dependency graph, not just `package.json`, must retain `@astrojs/vercel` and `@neondatabase/serverless` while keeping `@astrojs/cloudflare`, `wrangler`, and `miniflare` out. Verification used focused checks only; no full build was run.
+- 2026-06-13: Follow-up command-chain guard made `scripts/audit-command-surface.mjs` validate `npm run ...` references inside `package.json` scripts, so chained commands like `check:ci`, `ship:check`, `test:smoke`, and `audit:all` cannot point at deleted scripts unnoticed. Verification used focused checks only; no full build was run.
+- 2026-06-13: Follow-up CI command guard made `scripts/audit-command-surface.mjs` validate `npm run ...` references in `.github/workflows/*.yml` and `.yaml`, so workflow steps cannot point at renamed or deleted npm scripts. Verification used focused checks only; no full build was run.
+- 2026-06-13: Follow-up CI runtime guard made `scripts/audit-command-surface.mjs` require GitHub workflows to use the Node major from `package.json` engines and `npm ci` for lockfile-safe installs. Verification used focused checks only; no full build was run.
+- 2026-06-13: Follow-up CI gate guard made `scripts/audit-command-surface.mjs` require workflow coverage for `test:scripts`, `audit:commands`, `check`, and `build:fast`, so CI cannot quietly drop the core validation ladder. Verification used focused checks only; no full build was run.
+- 2026-06-13: Follow-up CI trigger guard made `.github/workflows/ci.yml` run on pull requests and pushes to `master`, and extended `scripts/audit-command-surface.mjs` so CI cannot regress to manual-only dispatch. Verification used focused checks only; no full build was run.
+- 2026-06-13: Follow-up CI hardening set workflow token permissions to `contents: read`, added concurrency cancellation for older runs on the same ref, and extended `scripts/audit-command-surface.mjs` so those workflow safety defaults cannot silently drift. Verification used focused checks only; no full build was run.
+- 2026-06-13: Follow-up CI timeout guard added a 30-minute job timeout to `.github/workflows/ci.yml` and extended `scripts/audit-command-surface.mjs` so workflow jobs cannot lose bounded runtime protection. Verification used focused checks only; no full build was run.
+- 2026-06-13: Follow-up checkout credential guard set `persist-credentials: false` on the CI checkout step and extended `scripts/audit-command-surface.mjs` so read-only jobs cannot quietly keep push-capable checkout credentials. Verification used focused checks only; no full build was run.
+- 2026-06-13: Follow-up command-audit fixture support added `--project-dir`/`--root` to `scripts/audit-command-surface.mjs` and a negative CI workflow fixture test, proving the audit fails closed when workflow triggers, Node/npm install invariants, permissions, concurrency, checkout credential hardening, or timeouts are missing. Verification used focused checks only; no full build was run.
+- 2026-06-13: Follow-up per-workflow CI audit made `scripts/audit-command-surface.mjs` enforce Node/npm install, permissions, concurrency, checkout credential, and timeout invariants per workflow file, and added a multi-workflow negative fixture so one strong CI file cannot mask a weaker workflow. Verification used focused checks only; no full build was run.
+- 2026-06-14: Follow-up command-surface CLI guard made `scripts/audit-command-surface.mjs` reject unknown, incomplete, conflicting, or stray positional arguments before reading project files, added help output, and exposed `argument_issues` in JSON for fixture-safe diagnosis. Verification used focused checks only; no full build was run.
+- 2026-06-13: Follow-up admin API guard extended `scripts/audit-hosting-runtime.mjs` so review moderation endpoints must use the shared `requireAdmin()` / `unauthorizedAdminResponse()` helpers, the runtime helper must fail closed when `ADMIN_PASSWORD` is unset, and unauthorized responses must send a no-store Basic-auth challenge. Verification used focused checks only; no full build was run.
+- 2026-06-13: Follow-up public review API guard extended `scripts/audit-hosting-runtime.mjs` so `/api/reviews/for/[slug]` must validate slugs, query only `approved = 1` rows, use short public cache headers, and avoid moderation/private fields such as spam score, email hash, IP hash, and user agent. Verification used focused checks only; no full build was run.
+- 2026-06-13: Follow-up review submission guard extended `scripts/audit-hosting-runtime.mjs` so new reader reviews must insert as `approved = 0`, return `pending_review` with accepted status, keep the 3-per-24-hour IP-hash rate limit, and reject duplicate tool reviews from the same hashed IP. Verification used focused checks only; no full build was run.
+- 2026-06-13: Follow-up newsletter signup guard extended `scripts/audit-hosting-runtime.mjs` so the subscribe route must normalize and validate email, keep honeypot success, source capping, the 5-per-24-hour hashed-IP rate limit, idempotent `ON CONFLICT`, and the GET redirect to `/#subscribe`. Verification used focused checks only; no full build was run.
+- 2026-06-13: Follow-up header drift guard tightened `vercel.json` checks so `/api/(.*)` must remain noindexed and no-store, while `/admin/(.*)` must remain noindex/nofollow with private no-store caching. Verification used focused checks only; no full build was run.
+- 2026-06-13: Follow-up Vercel build-command guard made `scripts/audit-hosting-runtime.mjs` require `vercel.json` to keep `npm install` and the full `AIPEDIA_LEDGER_IGNORE_DIRTY=1 npm run build` production build command. Verification used focused checks only; no full build was run.
+- 2026-06-13: Follow-up dynamic API prerender guard made `scripts/audit-hosting-runtime.mjs` require newsletter and review runtime endpoints to prerender only under `AIPEDIA_FAST_BUILD`, preventing accidental static production API output. Verification used focused checks only; no full build was run.
+- 2026-06-13: Follow-up JSON helper guard made `scripts/audit-hosting-runtime.mjs` require the shared API `json()` helper to default responses to `application/json` and `cache-control: no-store` while preserving caller-provided headers. Verification used focused checks only; no full build was run.
+- 2026-06-13: Follow-up database env fallback guard made `scripts/audit-hosting-runtime.mjs` require the runtime helper to keep `DATABASE_URL`, `POSTGRES_URL`, `POSTGRES_PRISMA_URL`, and `POSTGRES_URL_NON_POOLING` support, trimmed lookup, and per-URL Neon client caching. Verification used focused checks only; no full build was run.
+- 2026-06-13: Follow-up migration-runner env guard made `scripts/audit-hosting-runtime.mjs` require `scripts/neon-migrate.mjs` to use the same Vercel/Neon database env fallback contract and expose only the selected env key in JSON. Verification used focused checks only; no full build was run.
+- 2026-06-13: Follow-up env template guard documented the Vercel/Neon `POSTGRES_*` database fallbacks in `.env.example` as commented examples and made the hosting audit require those setup clues. Verification used focused checks only; no full build was run.
+- 2026-06-13: Follow-up migration-log secret guard made `scripts/audit-hosting-runtime.mjs` require `scripts/neon-migrate.mjs` to redact selected database URL values and Postgres URL patterns from error details. Verification used focused checks only; no full build was run.
+- 2026-06-13: Follow-up migration env-loader guard extended the hosting audit/tests so whitespace-only inherited database env vars cannot block explicit Vercel/Neon env-file values in `scripts/neon-migrate.mjs`. Verification used focused checks only; no full build was run.
+- 2026-06-13: Follow-up explicit env-file guard extended the hosting audit/tests so missing migration `--env` files fail before any inherited shell database URL can be selected. Verification used focused checks only; no full build was run.
+- 2026-06-13: Follow-up hosting-audit fixture support added `--project-dir`/`--root` to `scripts/audit-hosting-runtime.mjs`, reported the checked project directory in JSON, and added a temporary Vercel/Neon fixture test proving stale Cloudflare `_headers` files are caught in the supplied project rather than only in the live worktree. Verification used focused checks only; no full build was run.
+- 2026-06-13: Follow-up hosting-audit fail-closed hardening made missing or malformed root files (`package.json`, `astro.config.mjs`, and `.env.example`) report structured JSON issues instead of crashing fixture runs, and added an empty-project regression test. Verification used focused checks only; no full build was run.
+- 2026-06-14: Follow-up hosting-audit CLI guard made `scripts/audit-hosting-runtime.mjs` reject unknown, incomplete, conflicting, or stray arguments before scanning Vercel/Neon runtime files, added `--help`, and exposed JSON `argument_issues` for operator diagnostics. Verification used focused syntax/whitespace checks, `npm run check:hosting`, `node --test tests/scripts/hosting-runtime.test.mjs`, and `npm run test:scripts`; no full build was run.
+- 2026-06-13: Follow-up command-audit fail-closed hardening made missing or malformed fixture `package.json` files report structured `package_json_issues` instead of crashing, and added missing/invalid package-root regression tests. Verification used focused checks only; no full build was run.
+- 2026-06-13: Follow-up migration fixture support added `--project-dir` and `--migrations-dir`/`--migrations` to `scripts/neon-migrate.mjs`, reported both roots in JSON, and added a fixture proving D1/SQLite-era `AUTOINCREMENT` migration syntax is rejected outside the live repo migrations directory. Verification used focused checks only; no database writes or full build were run.
+
+### 15. Final report
+
+Completed for this loop. Vercel CSP no longer allows Cloudflare challenge/Turnstile origins, the stale Cloudflare Pages `functions/` surface is removed, `.gitignore` no longer describes generated metadata as for a Cloudflare build, and the normal `guard:check` now includes a hosting-runtime audit that verifies Vercel/Neon runtime assumptions and rejects Cloudflare Pages/Wrangler/Turnstile/D1 drift. The newsletter and review write routes now require a non-empty `IP_HASH_SECRET` before hashing IPs, shared API JSON responses default to `application/json` and `no-store`, the runtime database helper and migration runner keep `DATABASE_URL`/`POSTGRES_*` fallback lookup with safe JSON reporting and redacted error details, the migration env loader treats whitespace-only inherited database env vars as empty before reading explicit env files, missing explicit migration `--env` files fail before inherited shell database URLs can be selected, `.env.example` documents those Vercel/Neon fallback names as commented setup examples, dynamic newsletter/review API routes stay runtime-backed in production and only prerender during fast builds, review moderation endpoints are guarded by shared fail-closed Basic auth, public review JSON stays approved-only and reader-safe, API/admin route headers are pinned to noindex/no-store behavior, Vercel production builds stay on the full ledger-safe build command, new submitted reviews stay pending with rate-limit/duplicate protections, newsletter signup stays normalized, bounded, idempotent, honeypot-protected, and rate limited, pulled Vercel env files such as `.env.local` are ignored while `.env.example` stays trackable, `npm run vercel:env:pull` now uses the documented non-interactive `.env.local --yes` command, `npm run deploy` now uses Vercel's prebuilt production flow, and the command-surface/hosting audits now protect the core Vercel/Neon operator scripts, CI workflow commands, required validation gates, Node/install invariants, package-script chains, and package/lockfile graph. No page ledger update was needed because no indexable page content was edited.
+
+---
+
+## ExecPlan: June 13 2026 Pagefind Budget Headroom
+
+### 1. Objective
+
+Reduce the generated Pagefind search bundle size so AiPedia keeps reliable Vercel build and dist-budget headroom as the catalog/news archive grows. This improves technical performance, maintainability, and editorial scalability without weakening live page UX or SEO.
+
+### 2. Current state
+
+`npm run check:dist` passed, but the built Pagefind bundle measured about 9.53 MB against a 10 MB raw budget. The largest contributors were repeated directory/listing surfaces such as `/search/`, `/tools/`, `/news/`, `/compare/`, category ranked lists, and generated Pagefind UI bundles that AiPedia does not import.
+
+### 3. Target state
+
+Pagefind should index canonical article/tool/category/comparison content while ignoring repeated interactive directory cards and unused UI bundles. Build and audit helpers should target Vercel's deployable `.vercel/output/static` output before legacy `dist` fallbacks. Runtime search should still load `/pagefind/pagefind.js`; live pages should render unchanged.
+
+### 4. Scope
+
+Included: Vercel static output preference, Pagefind build helper selectors, cleanup of unused generated Pagefind UI assets, focused script test coverage, regenerated Pagefind output, and dist-budget verification. Excluded: visible page copy, editorial facts, page templates, sitemap/LLM surfaces, and page-refresh ledger changes.
+
+### 5. Files likely affected
+
+`scripts/lib/built-site-dir.mjs`, `scripts/build-pagefind.mjs`, `scripts/audit-font-policy.mjs`, `scripts/enforce-built-font-policy.mjs`, `tests/scripts/build-pagefind.test.mjs`, `tests/scripts/audit-font-policy.test.mjs`, `tests/scripts/enforce-built-font-policy.test.mjs`, `public/pagefind/**`, and this plan.
+
+### 6. Data model impact
+
+No content schema, tool-data, source, affiliate, scoring, or analytics payload changes.
+
+### 7. SEO impact
+
+No live HTML, canonical, metadata, schema, or sitemap changes. The optimization only changes the internal Pagefind index artifact generated from the built site.
+
+### 8. Conversion impact
+
+No CTA or affiliate behavior changes. Directory pages and category ranked lists remain visible and crawlable.
+
+### 9. Mobile UX impact
+
+No rendered mobile layout changes. The search bundle should be smaller for users who open the global Pagefind-backed search.
+
+### 10. Implementation steps
+
+1. Measure current Pagefind output size and file composition.
+2. Identify repeated directory/listing selectors that duplicate canonical pages in the internal search index.
+3. Add `--exclude-selectors` to `scripts/build-pagefind.mjs`.
+4. Remove unused generated Pagefind UI/highlight assets before mirroring to `public/pagefind`.
+5. Update script tests to lock the new build behavior.
+6. Prefer Vercel's deployable static directory in `scripts/lib/built-site-dir.mjs`.
+7. Regenerate Pagefind and run focused plus relevant broader checks.
+
+### 11. Verification commands
+
+`node --check scripts/build-pagefind.mjs`
+
+`node --check scripts/lib/built-site-dir.mjs`
+
+`node --test tests/scripts/build-pagefind.test.mjs`
+
+`node scripts/build-pagefind.mjs`
+
+`node scripts/check-dist-budget.mjs`
+
+`npm run check:dist`
+
+`git diff --check`
+
+### 12. Acceptance criteria
+
+Generated Pagefind raw size drops below the prior 9.53 MB baseline with meaningful budget headroom, unused UI bundles are absent from both built and public Pagefind directories, helpers target Vercel static output when it exists, script tests pass, and dist checks remain green.
+
+### 13. Risks and mitigations
+
+Over-excluding selectors could make internal search miss useful hub pages. Mitigation: only repeated interactive cards/lists and noindex/search-builder regions are excluded; canonical detail pages and hub hero/summary content remain available. Removing UI files could break a future Pagefind UI integration; mitigation: current repo search shows runtime imports only `/pagefind/pagefind.js`, and the script test documents the intentional cleanup.
+
+### 14. Progress log
+
+- 2026-06-13: Measured Pagefind at 9.53 MB across 1279 files; fragment and index shards accounted for about 8.9 MB, with unused Pagefind UI/highlight files adding about 0.4 MB.
+- 2026-06-13: Probed selector exclusions plus UI cleanup against the existing Vercel static build; expected output was about 8.75 MB.
+- 2026-06-13: Patched `scripts/build-pagefind.mjs` to pass Pagefind exclude selectors and remove unused UI/highlight bundles before copying to `public/pagefind`.
+- 2026-06-13: Patched `scripts/lib/built-site-dir.mjs` so Vercel's `.vercel/output/static` output is preferred over stale legacy `dist` fallbacks.
+- 2026-06-13: Regenerated Pagefind from `.vercel/output/static`; final output is 8.75 MB across 1266 files in both Vercel static output and `public/pagefind`, with `dist/pagefind` removed.
+- 2026-06-13: Verification passed: `node --check scripts/build-pagefind.mjs`, `node --check scripts/lib/built-site-dir.mjs`, `node --test tests/scripts/build-pagefind.test.mjs`, `node scripts/build-pagefind.mjs`, `node scripts/check-dist-budget.mjs`, `npm run check:dist`, `npm run test:scripts`, `npm run check`, `npm run build`, and `git diff --check`.
+- 2026-06-13: Follow-up warning cleanup made `scripts/build-pagefind.mjs` temporarily remove true utility HTML files from the Vercel static output while Pagefind runs, then restore them before finishing. This suppresses the prior Pagefind warnings for the Naver verification token and `/tool-finder/` redirect without removing either deployed file. Verification passed: `node --check scripts/build-pagefind.mjs`, `node --check tests/scripts/build-pagefind.test.mjs`, `node --test tests/scripts/build-pagefind.test.mjs`, `node scripts/build-pagefind.mjs`, `npm run test:scripts`, `npm run check`, `npm run build`, `npm run check:dist`, and `git diff --check`.
+- 2026-06-13: Follow-up dist-budget guard made `scripts/check-dist-budget.mjs` fail when the selected built-site directory or required budget artifacts are missing, added `--site-dir`/`--dist-dir` fixture support, and added focused missing/complete-output tests. Verification used focused checks only; no full build or Pagefind regeneration was run.
+- 2026-06-13: Follow-up dist-budget CLI guard made `scripts/check-dist-budget.mjs` reject unknown flags, missing fixture directory values, and conflicting `--site-dir`/`--dist-dir` aliases before touching filesystem state; added focused invalid-argument and help-output tests. Verification used focused checks only; no full build or Pagefind regeneration was run.
+- 2026-06-13: Follow-up indexability fixture guard added `--site-dir`/`--dist-dir` and `--project-dir`/`--root` support to `scripts/audit-indexability.mjs`, made invalid arguments return structured reports before filesystem scans, and added focused sitemap/noindex fixture tests. Verification used focused checks plus `npm run check:dist`; no full build or Pagefind regeneration was run.
+- 2026-06-13: Follow-up commercial CTA fixture guard added `--site-dir`/`--dist-dir` and `--project-dir`/`--root` support to `scripts/audit-commercial-cta.mjs`, made invalid arguments return structured reports before representative-route scans, and added focused invalid-argument/help coverage while preserving the existing affiliate-link fixtures. Verification used focused checks plus `npm run check:dist`; no full build or Pagefind regeneration was run.
+- 2026-06-13: Follow-up font-policy fixture guard added `--site-dir`/`--dist-dir` and `--project-dir`/`--root` support to `scripts/audit-font-policy.mjs`, preserved the existing source-scan default, made invalid arguments return structured reports before filesystem scans, and added focused clean/failing built-output fixture tests. Verification used focused checks, `npm run check:fonts`, `npm run test:scripts`, and an existing Vercel static output scan; no full build or Pagefind regeneration was run.
+- 2026-06-13: Follow-up built-font normalizer guard added `--site-dir`/`--dist-dir`, `--pagefind-dir`, and `--project-dir`/`--root` support to `scripts/enforce-built-font-policy.mjs`, made missing built output fail closed, emitted JSON reports for fixture tests, and added focused generated-asset normalization coverage. Verification used focused checks, `npm run test:scripts`, an existing Vercel static output normalization probe, and a follow-up font audit; no full build or Pagefind regeneration was run.
+- 2026-06-13: Follow-up font-audit operator guard made `scripts/audit-font-policy.mjs` honor `--dist <dir>` and `--dist=<dir>` like the other built-output audits, while rejecting stray positional arguments that would otherwise be ignored. Verification used focused checks, `npm run check:fonts`, `npm run test:scripts`, and existing Vercel static output scans for both spaced and inline `--dist` forms; no full build or Pagefind regeneration was run.
+- 2026-06-13: Follow-up built-output audit guard made `scripts/audit-indexability.mjs` and `scripts/audit-commercial-cta.mjs` reject stray positional arguments, so typoed output paths like bare `dist-fast` fail closed instead of silently scanning the default Vercel output. Verification used focused checks, `npm run check:dist`, `npm run test:scripts`, and negative JSON probes for both audits; no full build or Pagefind regeneration was run.
+- 2026-06-14: Follow-up dist-budget guard made `scripts/check-dist-budget.mjs` support `--json` and `--project-dir`/`--root`, reject unknown, incomplete, conflicting, or stray arguments before scanning built output, and emit structured budget/item issues for fixture diagnostics while preserving the human console report. Verification used focused syntax/whitespace checks, `node --test tests/scripts/check-dist-budget.test.mjs`, and `npm run test:scripts`; no full build or Pagefind regeneration was run.
+
+### 15. Final report
+
+Completed for this loop. Pagefind now builds from the deployable Vercel static output, ignores repeated directory/list cards that duplicate canonical pages, removes unused Pagefind UI/highlight bundles, and leaves about 1.25 MB of raw headroom under the 10 MB Pagefind budget. It also skips the Naver verification file and `/tool-finder/` redirect only during indexing, then restores them before the deployable output is used, so the build no longer emits the two no-outer-HTML Pagefind warnings. No page ledger update was needed because live page content/templates were not changed.
+
+---
+
+## ExecPlan: June 13 2026 Visual Smoke and Signal Cyan Favicon Repair
+
+### 1. Objective
+
+Restore the visual smoke suite as a trustworthy regression gate after the current god-tier page templates replaced old homepage, guide, comparison, search, trends, and reference-page selectors. Also repair the browser favicon so the visible brand asset matches the Signal Cyan media-kit and palette guard.
+
+### 2. Current state
+
+`npm run smoke:visual` passed all route-render and mobile-overflow checks but failed 23 structural assertions. Failures were mostly stale selectors such as `.home-tools`, `.home-path`, `.t2-guide-decisions`, `[data-trend-card]`, and old reference-rail hooks. One failure was a real asset issue: `public/favicon-512.png` was amber while the current logo and media-kit language use Signal Cyan.
+
+### 3. Target state
+
+The smoke suite should validate the current `gt-*` surfaces, current guide-pick data, the live search/catalog behavior, trend count, reference article body constraints, and Signal Cyan brand assets. Favicon generation should be repeatable from the cyan master logo during the normal prebuild asset pipeline.
+
+### 4. Scope
+
+Included: smoke test fixture/selector refresh, reusable favicon generation script, copy-content prebuild hook, regenerated favicon PNG/ICO assets, and validation. Excluded: editorial fact changes, page-template redesign, and unrelated dirty worktree files.
+
+### 5. Files likely affected
+
+`.gitignore`, `playwright.config.mjs`, `tests/smoke/visual-routes.spec.mjs`, `scripts/prep-favicons.mjs`, `scripts/copy-content.mjs`, `scripts/serve-static.mjs`, `tests/scripts/serve-static.test.mjs`, `tests/scripts/playwright-config.test.mjs`, `public/favicon-16.png`, `public/favicon-32.png`, `public/favicon-192.png`, `public/favicon-512.png`, `public/favicon.ico`, and this plan.
+
+### 6. Data model impact
+
+No content or tool-data schema changes. The smoke fixtures were aligned to current guide frontmatter and score ordering.
+
+### 7. SEO impact
+
+No indexable content changes. Favicons and browser icons now match the current Signal Cyan brand, which improves brand consistency on browser tabs, saved links, and partner previews.
+
+### 8. Conversion impact
+
+No CTA behavior changes. The refreshed guide smoke checks continue to verify best-overall, budget, and pro/team commercial CTA placements.
+
+### 9. Mobile UX impact
+
+The full visual smoke suite now verifies no horizontal overflow across the tracked mobile widths for all covered routes and validates current homepage/search/catalog/guide surfaces.
+
+### 10. Implementation steps
+
+1. Run `npm run smoke:visual` to capture the current failure set.
+2. Inspect current homepage, search, compare, guide, trends, and article layouts.
+3. Add `scripts/prep-favicons.mjs` and wire it into `scripts/copy-content.mjs`.
+4. Regenerate favicon assets from `public/brand/aipedia-logo-crystal-cyan-512.png`.
+5. Update stale smoke selectors and guide fixtures to current production markup/data.
+6. Run focused Playwright checks, full visual smoke, script tests, content/security checks, API smoke, production build, dist checks, and whitespace checks.
+
+### 11. Verification commands
+
+`node scripts/prep-favicons.mjs`
+
+`node --check scripts/prep-favicons.mjs`
+
+`node --check scripts/copy-content.mjs`
+
+`npm run smoke:visual`
+
+`npm run smoke:api`
+
+`npm run test:scripts`
+
+`npm run check`
+
+`npm run build`
+
+`npm run check:dist`
+
+`git diff --check`
+
+### 12. Acceptance criteria
+
+The full visual smoke suite passes, favicon hue guard passes against the regenerated cyan favicon, `copy-content` successfully runs favicon generation inside the build path, and broader script/content/security/build/dist checks remain green.
+
+### 13. Risks and mitigations
+
+The smoke suite could become too implementation-specific if it chases every class rename. Mitigation: assertions now target stable user-facing surfaces and data/CTA attributes where available. The favicon script could create drift if it uses a different source than the media kit; mitigation: the script uses the same cyan 512px master logo referenced by the media kit.
+
+### 14. Progress log
+
+- 2026-06-13: Ran `npm run smoke:visual`; 135 passed and 23 failed. Route render and mobile overflow checks were green; failures were stale selectors plus amber favicon palette drift.
+- 2026-06-13: Added `scripts/prep-favicons.mjs`, wired it into `scripts/copy-content.mjs`, regenerated favicon PNG/ICO assets, and confirmed favicon hue buckets are Signal Cyan with zero palette violations.
+- 2026-06-13: Removed the stale `.gitignore` entry for `scripts/prep-favicons.mjs` so the build-required helper is visible to Git.
+- 2026-06-13: Updated `tests/smoke/visual-routes.spec.mjs` to current `gt-*` selectors, current guide pick fixtures, current trend count, and reference-page body checks.
+- 2026-06-13: Focused Playwright subset passed, then full `npm run smoke:visual` passed 158/158. `npm run test:scripts`, `npm run check`, `npm run smoke:api`, `npm run build`, `npm run check:dist`, and `git diff --check` also passed.
+- 2026-06-13: Follow-up static-server guard made `scripts/serve-static.mjs` reject unknown, incomplete, conflicting, or invalid CLI arguments, added `--site-dir`/`--dist-dir` plus `--project-dir`/`--root` support for Vercel-style output fixtures, and returns 400 for malformed encoded paths instead of letting decode errors escape the request handler. Verification used focused checks and `npm run test:scripts`; no full build, Playwright smoke run, or generated artifact refresh was run.
+- 2026-06-13: Follow-up Playwright handoff guard added `AIPEDIA_PLAYWRIGHT_SITE_DIR` / `AIPEDIA_PLAYWRIGHT_STATIC_DIR` support to `playwright.config.mjs`, so smoke runs can explicitly target Vercel static output, fast-build output, or fixtures through the hardened static server. Verification used config syntax checks, focused config tests, and `npm run test:scripts`; no full build, Playwright smoke run, or generated artifact refresh was run.
+- 2026-06-14: Follow-up prebuild dry-run guard made `scripts/copy-content.mjs` support `--dry-run`, `--json`, `--project-dir`/`--root`, and `--help`, reject invalid arguments before generator runs, and report the favicon, OG, optimizer, logo-manifest, markdown-count, and optional registry-sync plan without writing generated assets. Verification used focused syntax/whitespace checks, `node --test tests/scripts/copy-content.test.mjs`, `node scripts/copy-content.mjs --dry-run --json`, and `npm run test:scripts`; no full build, Playwright smoke run, or generated artifact refresh was run.
+- 2026-06-14: Follow-up OG optimizer guard made `scripts/optimize-og-images.mjs` support `--dry-run`, `--json`, `--project-dir`/`--root`, `--limit`, and `--help`, reject invalid arguments before scanning, report skipped directories and per-file savings, and let operators run bounded real-tree probes without rewriting OG assets. Verification used focused syntax/whitespace checks, `node --test tests/scripts/optimize-og-images.test.mjs`, `node scripts/optimize-og-images.mjs --dry-run --json --limit 3`, and `npm run test:scripts`; no full build, Playwright smoke run, or generated artifact refresh was run.
+- 2026-06-14: Follow-up favicon generator guard made `scripts/prep-favicons.mjs` support `--dry-run`, `--check`, `--json`, `--project-dir`/`--root`, and `--help`, reject invalid arguments before writes, and report generated/changed/written favicon outputs for fixture and live diagnostics. Verification used focused syntax/whitespace checks, `node --test tests/scripts/prep-favicons.test.mjs`, `node scripts/prep-favicons.mjs --dry-run --json`, `node scripts/prep-favicons.mjs --check --json`, and `npm run test:scripts`; no full build, Playwright smoke run, or generated asset refresh was run.
+- 2026-06-14: Follow-up tool OG generator guard made `scripts/generate-og-svgs.mjs` support `--dry-run`, `--check`, `--json`, `--project-dir`/`--root`, `--limit`, and `--help`, reject invalid arguments before writes, and report generated/changed/written tool/default OG outputs without regenerating the live catalog. Verification used focused syntax/whitespace checks, `node --test tests/scripts/generate-og-svgs.test.mjs`, `node scripts/generate-og-svgs.mjs --dry-run --json --limit 2`, and `npm run test:scripts`; no full build, Playwright smoke run, or generated asset refresh was run.
+- 2026-06-14: Follow-up news OG generator guard made `scripts/generate-og-news.mjs` support `--dry-run`, `--check`, `--json`, `--project-dir`/`--root`, `--limit`, `--help`, and validated positional news slugs, reject invalid arguments before writes, and report generated/changed/written dark/light PNG and thumbnail outputs without regenerating the live news catalog. Verification used focused syntax/whitespace checks, `node --test tests/scripts/generate-og-news.test.mjs`, `node scripts/generate-og-news.mjs --dry-run --json --limit 1`, and `npm run test:scripts`; no full build, Playwright smoke run, or generated asset refresh was run.
+- 2026-06-14: Follow-up OG final-output parity made `scripts/generate-og-svgs.mjs` and `scripts/generate-og-news.mjs` precompress generated PNG buffers with the same Sharp settings as `scripts/optimize-og-images.mjs` before compare/write, while preserving raw-raster WebP thumbnail output for byte stability. Bounded live dry-runs now report `changed: 0` and `written: 0` for sampled tool/news outputs. Verification used focused syntax/whitespace checks, `node --test tests/scripts/generate-og-svgs.test.mjs`, `node --test tests/scripts/generate-og-news.test.mjs`, `node scripts/generate-og-svgs.mjs --dry-run --json --limit 2`, `node scripts/generate-og-news.mjs --dry-run --json --limit 1`, and `npm run test:scripts`; no full build, Playwright smoke run, or generated asset refresh was run.
+- 2026-06-14: Follow-up no-build asset check added `npm run check:assets`, made `scripts/optimize-og-images.mjs --check` fail closed when PNG savings remain, and moved PNG compression in the tool/news generators plus optimizer to a bounded fixed-point loop so generator checks and optimizer checks agree on final bytes. Refreshed generated OG assets through the Node generators, then verified with focused syntax checks, optimizer and command-surface tests, `npm run test:scripts`, `node scripts/audit-command-surface.mjs --json`, bounded live asset checks, full `npm run check:assets`, and `git diff --check`; no full build or Playwright smoke run was run.
+- 2026-06-14: Follow-up quick asset gate added `npm run check:assets:quick` as a bounded no-build check for favicons, sampled tool/news OG outputs, sampled PNG optimization drift, and the logo manifest, while keeping full `check:assets` for release-level drift checks. Command-surface audit now treats the quick gate as a required operator command. Verification used command-surface syntax/tests, `node scripts/audit-command-surface.mjs --json`, `npm run check:assets:quick`, and scoped whitespace checks; no full build or Playwright smoke run was run.
+- 2026-06-14: Follow-up prebuild fail-closed guard made `scripts/copy-content.mjs` exit nonzero when any required generator task fails, replacing the old non-fatal warning path that could let build-required asset generation drift through. A narrow test-only generator script directory hook lets fixture tests prove the wrapper fails closed without running live generators. Verification used copy-content syntax/tests, `node scripts/copy-content.mjs --dry-run --json`, `npm run check:assets:quick`, `npm run test:scripts`, and scoped whitespace checks; no full build or Playwright smoke run was run.
+- 2026-06-14: Follow-up CI asset-drift guard wired the bounded `check:assets:quick` gate into GitHub CI and `npm run check:ci`, then tightened `scripts/audit-command-surface.mjs` so workflow coverage for the quick asset guard cannot be removed silently. Verification used focused command-surface syntax/tests and the quick asset guard only; no full build or Playwright smoke run was run.
+- 2026-06-14: Follow-up local release command guard added `check:assets:quick` to `npm run ship:check` and made `scripts/audit-command-surface.mjs` enforce ordered local command chains for `check:ci` and `ship:check`, so lightweight asset drift checks cannot disappear from either CI-style or release-style local verification. Verification used focused command-surface syntax/tests and audit JSON only; no full build or Playwright smoke run was run.
+- 2026-06-14: Follow-up failure-suppression guard made `scripts/audit-command-surface.mjs` flag `|| true`, `|| exit 0`, and GitHub Actions `continue-on-error: true` in package scripts or workflows, preventing required local/CI checks from being made advisory by shell drift. Verification used focused command-surface syntax/tests and audit JSON only; no full build or Playwright smoke run was run.
+- 2026-06-14: Follow-up quick-asset boundedness guard made `scripts/audit-command-surface.mjs` enforce the exact bounded `check:assets:quick` contract: favicon check, five tool OGs, two news OG records, twenty PNG optimizer probes, and logo-manifest check. A negative fixture now proves unbounded quick-asset scripts fail closed, protecting CI/local release checks from creeping back toward a full asset sweep. Verification used focused command-surface syntax/tests, audit JSON, and the quick asset gate only; no full build or Playwright smoke run was run.
+- 2026-06-14: Follow-up GitHub-stats local fail-closed guard kept per-repo GitHub API failures stale-tolerant but made local filesystem/config errors exit nonzero, added `--dry-run`, `--json`, `--project-dir`/`--root`, and `--help`, and added fixture tests that discover GitHub targets without network or writes. Verification used focused syntax/tests and dry-run probes only; no full build or Playwright smoke run was run.
+- 2026-06-14: Follow-up prebuild chain guard made `scripts/audit-command-surface.mjs` enforce the ordered prebuild ladder (`guard-content`, `guard-stale-facts`, `audit-guide-picks`, `fetch-github-stats`, then `generate-og-news`) so local-content guards and the stale-tolerant GitHub stats refresh cannot silently disappear before generated news assets. Verification used focused command-surface syntax/tests and audit JSON only; no full build or Playwright smoke run was run.
+- 2026-06-14: Follow-up quick verification gate added `npm run check:quick` as the named no-build operator path (`test:scripts`, `audit:commands`, then bounded `check:assets:quick`) and made `scripts/audit-command-surface.mjs` reject any future `check:quick` drift into build, smoke, dev-server, or Vercel deploy commands. Verification used focused command-surface syntax/tests and audit JSON only; no full build or Playwright smoke run was run.
+- 2026-06-14: Follow-up quick-check documentation guard updated `README.md` to present `npm run check:quick` as the first no-build verification loop and made `scripts/audit-command-surface.mjs` require core operator commands (`check:quick`, `check`, `build`, `deploy`, `editorial:weekly`, `ledger:pages`) to stay documented. Verification used focused command-surface syntax/tests and audit JSON only; no full build or Playwright smoke run was run.
+- 2026-06-14: Follow-up verification-scope guidance updated `AGENTS.md` so repo-maintenance-only changes close with `npm run check:quick` and focused checks, while page/content/template/runtime/deployment/pre-ship work still requires the heavier build, mobile, SEO, and conversion gates. This aligns future loops with the no-build command path without weakening rendered-site quality rules.
+- 2026-06-14: Follow-up README intent guard made `scripts/audit-command-surface.mjs` require README command text to preserve the smallest-verification guidance, the `check:quick` no-build/bounded-asset wording, editorial queue and page-ledger descriptions, full-production build wording, and Vercel production deploy wording. A fixture now fails if the quick-check command remains listed but loses the no-build intent.
+- 2026-06-14: Follow-up README command-order guard made `scripts/audit-command-surface.mjs` require the README command list to present `check:quick`, `check`, `editorial:weekly`, `ledger:pages`, `build`, then `deploy` in that order, so the no-build loop remains the first suggested validation path and build/deploy stay last.
+- 2026-06-14: Follow-up quick-gate consolidation made GitHub CI, `npm run check:ci`, and `npm run ship:check` call the named `check:quick` gate instead of duplicating its internals, and tightened `scripts/audit-command-surface.mjs` so workflows and local release scripts cannot bypass that protected no-build lane.
+- 2026-06-14: Follow-up broad-check chain guard made `scripts/audit-command-surface.mjs` protect the non-build source/content/security ladder: `guard:check` must keep content, stale-fact, em-dash, guide-pick, logo, news-rendering, hosting-runtime, page-ledger, and source-font checks; `npm run check` must keep guard, links, news, and security; `build:fast` must keep the guard before the fast build helper.
+- 2026-06-14: Follow-up quick-check boundary guard made `scripts/audit-command-surface.mjs` reject `npm run check`, `npm run check:security`, or `npm audit` inside `check:quick`, keeping the no-build loop from quietly absorbing broad source/security work.
+- 2026-06-14: Follow-up quick-check sibling guard made `scripts/audit-command-surface.mjs` reject heavier `check:*` siblings, broad `npm run test`, and non-command audit scripts inside `check:quick`, while preserving the intended `test:scripts`, `audit:commands`, and bounded `check:assets:quick` lane. Verification used focused syntax checks, the command-surface test, audit JSON, and `npm run check:quick`; no full build or Playwright smoke run was run.
+- 2026-06-14: Follow-up Vercel hosting command guard made `scripts/audit-command-surface.mjs` fail fast when package scripts or GitHub workflows reintroduce Cloudflare/Wrangler deploy commands. This complements the broader hosting runtime audit while keeping stale hosting-command drift visible in `npm run check:quick`. Verification used focused syntax checks, the command-surface test, audit JSON, and `npm run check:quick`; no full build or Playwright smoke run was run.
+- 2026-06-14: Follow-up Vercel operator command guard made `scripts/audit-command-surface.mjs` require the exact production deploy command (`npx vercel build --prod && npx vercel deploy --prebuilt --prod`) and non-interactive env pull command (`npx vercel env pull .env.local --yes`). This moves those runbook contracts into the fast command audit instead of relying only on the broader hosting-runtime tests. Verification used focused syntax checks, the command-surface test, audit JSON, and `npm run check:quick`; no full build or Playwright smoke run was run.
+- 2026-06-14: Follow-up CI scope guard made `scripts/audit-command-surface.mjs` require GitHub workflows to run `npm ci`, `npm run check:quick`, `npm run check`, then `npm run build:fast` in order, and reject full production builds or Vercel deploy commands inside CI workflows. This keeps CI as a bounded verification lane while leaving production deploys to the explicit Vercel runbook command. Verification used focused syntax checks, the command-surface test, audit JSON, and `npm run check:quick`; no full build or Playwright smoke run was run.
+
+### 15. Final report
+
+Completed for this loop. The visual smoke gate is green again, favicon generation is part of the normal prebuild asset path, the helper is no longer ignored by Git, and the browser favicon now matches the Signal Cyan brand. No page ledger update was needed because no indexable page content was edited in this pass.
+
+---
+
+## ExecPlan: June 13 2026 Dependency Security and Vercel Runtime Upgrade
+
+### 1. Objective
+
+Clear the existing `npm audit` blocker without taking npm's unsafe forced downgrade path, and align deployment/runtime code with the current Vercel host. This improves maintainability, security, trust, and editorial velocity by making checks green while removing stale Cloudflare Pages/Wrangler assumptions.
+
+### 2. Current state
+
+`npm run check` previously passed guards, internal links, and news xrefs, then failed at `npm audit --audit-level=moderate`. The stale graph included Cloudflare deployment packages even though the site now deploys on Vercel. Runtime code also still used Cloudflare Pages Functions, D1 bindings, `_headers`, `_redirects`, and Wrangler migration comments for newsletter/review workflows.
+
+### 3. Target state
+
+Use `@astrojs/vercel` for Astro output, remove the Cloudflare adapter/Wrangler deployment path, keep `esbuild@0.28.1` and `path-to-regexp@6.3.0` security overrides, and port server endpoints to Vercel-compatible Astro API routes backed by Neon Postgres. The final graph should pass `npm audit --audit-level=moderate`, render the site, preserve redirect/header behavior through `vercel.json`, and update public stack/privacy pages that named the old host.
+
+### 4. Scope
+
+Included: dependency/config updates, Vercel adapter config, Vercel headers/redirects, newsletter/review API route migration, Postgres migration files, public infrastructure/privacy copy updates, page ledger refresh, and validation. Excluded: production deploy, DNS/provider account changes, replacing optional Turnstile anti-abuse, and unrelated dirty files already in the worktree.
+
+### 5. Files likely affected
+
+`package.json`, `package-lock.json`, `astro.config.mjs`, `vercel.json`, `.env.example`, `tsconfig.json`, `src/lib/server/runtime.ts`, `src/pages/api/subscribe.ts`, `src/pages/api/reviews/**`, `migrations/*.sql`, `src/pages/privacy.astro`, `src/pages/media-kit.astro`, `src/pages/about/our-stack.astro`, `src/pages/admin/reviews.astro`, `src/legacy-pages/404.legacy.astro`, `scripts/audit-indexability.mjs`, `scripts/generate-og-svgs.mjs`, `PAGE_REFRESH_LEDGER.md`, and this plan.
+
+### 6. Data model impact
+
+Newsletter and review storage moves from D1-style SQLite SQL to Postgres schema in `migrations/0001_reviews.sql` and `migrations/0002_subscribers.sql`. Runtime uses `DATABASE_URL` / Vercel env vars through `@neondatabase/serverless`.
+
+### 7. SEO impact
+
+Redirects and security/noindex headers move from Cloudflare Pages convention files into `vercel.json`. Public infrastructure pages `/privacy/`, `/media-kit/`, `/about/our-stack/`, and `/admin/reviews/` are refreshed to avoid stale host claims and require ledger updates.
+
+### 8. Conversion impact
+
+No affiliate or CTA logic changes. Newsletter and review form conversion/trust workflows keep their existing request payloads and anti-abuse behavior.
+
+### 9. Mobile UX impact
+
+No intentional layout changes. Public copy changes are small text updates; run existing builds and smoke checks to catch regressions.
+
+### 10. Implementation steps
+
+1. Inspect current audit JSON, outdated packages, dependency graph, and deployment/runtime files.
+2. Install Vercel/Neon dependencies, remove Cloudflare deployment dependencies, and add `esbuild` plus `path-to-regexp` security overrides.
+3. Switch Astro to the Vercel adapter and move headers/redirects into `vercel.json`.
+4. Port newsletter and review APIs from Cloudflare Pages/D1 code to Astro API routes backed by Neon.
+5. Convert SQL migrations from D1/SQLite to Postgres.
+6. Refresh public infrastructure/privacy/admin pages and regenerate the page ledger.
+7. Run install/audit, inspect `npm ls`, run checks/builds/smoke checks, and document any remaining risk.
+
+### 11. Verification commands
+
+`npm audit --audit-level=moderate`
+
+`npm ls @astrojs/vercel @astrojs/cloudflare wrangler esbuild vite @vercel/routing-utils path-to-regexp @neondatabase/serverless --depth=5`
+
+`npm run check`
+
+`npm run test:scripts`
+
+`npm run ledger:pages`
+
+`npm run ledger:pages:check`
+
+`npm run build:fast`
+
+`npm run build:astro`
+
+`npm run test:smoke`
+
+`git diff --check`
+
+### 12. Acceptance criteria
+
+`npm run check` passes, the Vercel-compatible Astro build passes, the fast build passes, smoke checks pass or any failures are unrelated and documented, the dependency graph no longer contains the vulnerable `esbuild`/`path-to-regexp` versions that triggered the audit, and no tracked deploy/runtime code still depends on Cloudflare Pages, D1, Wrangler, `_headers`, or `_redirects`.
+
+### 13. Risks and mitigations
+
+Forcing `esbuild@0.28.1` outside Astro/Vercel declared ranges or `path-to-regexp@6.3.0` under `@vercel/routing-utils` could expose compatibility problems. Mitigate with `npm ls`, full content checks, Vercel-compatible build output, and Playwright smoke tests. API behavior depends on Vercel env vars and Neon schema; fail closed with clear JSON errors when `DATABASE_URL` or admin secrets are missing.
+
+### 14. Progress log
+
+- 2026-06-13: Started from audit JSON and `npm outdated`. Original graph had `astro@6.2.2`, `vite@7.3.2`, `wrangler@4.94.0`, and `esbuild@0.27.x`; registry showed `esbuild@0.28.1` as the patched version while old Cloudflare paths still pulled vulnerable ranges.
+- 2026-06-13: Pivoted after confirming the site uses Vercel, not Cloudflare. Installed `@astrojs/vercel@10.0.8` and `@neondatabase/serverless@1.1.0`, removed `@astrojs/cloudflare` and `wrangler`, added `path-to-regexp@6.3.0`, and `npm install` now reports 0 vulnerabilities.
+- 2026-06-13: Moved API runtime code from Cloudflare Pages Functions/D1 to Astro API routes with a shared Vercel/Neon server helper; converted migrations to Postgres; moved header/redirect config into `vercel.json`; refreshed visible stack/privacy/admin language.
+- 2026-06-13: Added a built-site resolver so audits, Pagefind, font policy, dist budget, and local static serving work with Vercel's Astro `dist` output as well as fast-build `dist-fast`. Removed remaining tracked Cloudflare deploy/runtime files and updated Playwright static serving.
+- 2026-06-13: Full validation passed for `npm audit --audit-level=moderate`, dependency graph inspection, `npm run check`, `npm run build:fast`, `npm run build`, `npm run check:dist`, `git diff --check`, and focused Playwright mobile routes. The broad smoke suite still has stale selector/palette assertions unrelated to this migration; the real overflow failures found during smoke testing were fixed and rechecked.
+- 2026-06-13: Removed leftover provider-specific build comments, the legacy `cf-connecting-ip` fallback, and the optional Turnstile form path. Newsletter/review forms now use honeypots, hashed-IP rate limits, spam scoring, and moderation instead of a Cloudflare challenge. Regenerated the page ledger after the privacy policy edit.
+- 2026-06-13: Reran validation after removing Turnstile. `npm run check`, `npm run build:fast`, `npm run build`, `npm run check:dist`, focused Playwright mobile overflow checks, `git diff --check`, and the targeted Cloudflare/Turnstile runtime grep all passed. The first full-build attempt hit the tool timeout and produced an EPIPE, then completed successfully with a longer timeout and captured log.
+- 2026-06-14: Follow-up source-monitor CLI guard made `scripts/audit-source-health.mjs` reject unknown, incomplete, conflicting, or stray arguments before registry/live snapshot work, require `--live` for `--update-snapshots`, add `--help`, and report `argument_issues` in JSON. Verification used focused syntax/whitespace checks plus `npm run test:scripts`; no full build was run.
+- 2026-06-14: Follow-up freshness-queue CLI guard made `scripts/audit-freshness-queue.mjs` reject unknown, incomplete, nonnumeric, conflicting, or stray arguments before scanning the catalog, add `--project-dir`/`--root` fixture support, add `--help`, and report `argument_issues` in JSON. Verification used focused syntax/whitespace checks plus `npm run test:scripts`; no full build was run.
+- 2026-06-14: Follow-up weekly editorial queue guard made `scripts/editorial-weekly-queue.mjs` reject unknown, incomplete, nonnumeric, conflicting, or stray arguments before invoking the freshness audit, pass `--project-dir`/`--root` through for fixtures, add `--help`, and report `argument_issues` in JSON. Verification used focused syntax/whitespace checks plus `npm run test:scripts`; no full build was run.
+- 2026-06-14: Follow-up passed-date audit guard made `scripts/audit-passed-dates.mjs` reject unknown, incomplete, invalid-date, conflicting, stray, or nonexistent-directory arguments before scanning content, add `--project-dir`/`--root` fixture support, add `--help`, and report `argument_issues` in JSON while keeping findings report-only. Verification used focused syntax/whitespace checks plus `npm run test:scripts`; no full build was run.
+- 2026-06-14: Follow-up site-KPI audit guard made `scripts/audit-site-kpis.mjs` reject unknown, incomplete, conflicting, or stray arguments before scanning content, add `--project-dir`/`--root` fixture support, add `--help`, and report `argument_issues` in JSON while keeping KPI findings report-only. Verification used focused syntax/whitespace checks plus `npm run test:scripts`; no full build was run.
+- 2026-06-14: Follow-up tool-facts audit guard made `scripts/audit-tool-facts.mjs` reject unknown, incomplete, conflicting, or stray arguments before scanning tool facts, add `--project-dir`/`--root` fixture support, add `--help`, and report `argument_issues` in JSON while keeping fact-debt findings report-only. Verification used focused syntax/whitespace checks plus `npm run test:scripts`; no full build was run.
+- 2026-06-14: Follow-up provenance/pricing audit guard made `scripts/audit-provenance-pricing.mjs` reject unknown, incomplete, conflicting, or stray arguments before scanning source provenance and price history, add `--project-dir`/`--root` fixture support, add `--help`, and report `argument_issues` in JSON while keeping migration-debt findings report-only. Verification used focused syntax/whitespace checks plus `npm run test:scripts`; no full build was run.
+- 2026-06-14: Follow-up content-guard CLI guard made `scripts/guard-content.mjs` reject unknown or stray arguments before the baseline rewrite path, require `--baseline` when `--dry-run` is supplied, add `--help`, emit structured normal guard JSON, and test that typoed baseline dry-run flags cannot rewrite the guard file. Verification used focused syntax/whitespace checks plus `npm run test:scripts`; no full build was run.
+- 2026-06-14: Follow-up stale-facts guard CLI guard made `scripts/guard-stale-facts.mjs` reject unknown, incomplete, conflicting, or stray arguments before scanning volatile comparison facts, add `--project-dir`/`--root` fixture support, add `--help`, and report `argument_issues` in JSON while preserving the existing fail-closed stale-fact behavior. Verification used focused syntax/whitespace checks plus `npm run test:scripts`; no full build was run.
+- 2026-06-14: Follow-up guide-picks audit guard made `scripts/audit-guide-picks.mjs` reject unknown, incomplete, conflicting, or stray arguments before scanning money-guide picks, add `--project-dir`/`--root` fixture support, add `--help`, and report `argument_issues` in JSON while preserving discontinued-tool and pick-source protections. Verification used focused syntax/whitespace checks plus `npm run test:scripts`; no full build was run.
+- 2026-06-14: Follow-up news-rendering guard made `scripts/audit-news-rendering.mjs` reject unknown, incomplete, conflicting, or stray arguments before scanning news/source/media assets, add `--project-dir`/`--root` fixture support, add `--json` and `--help`, and report missing fixture roots as structured JSON while preserving source, OG, thumb, and daily-coverage protections. Verification used focused syntax/whitespace checks plus `npm run test:scripts`; no full build was run.
+- 2026-06-14: Follow-up news-xref guard made `scripts/audit-news-xrefs.mjs` reject unknown, incomplete, invalid-date, invalid-window, conflicting, or stray arguments before scanning recent affected-tool links, add `--project-dir`/`--root`, `--days-back`, `--today`, `--json`, and `--help`, and report missing fixture roots as structured JSON while preserving the default `npm run check:news` output. Verification used focused syntax/whitespace checks, `npm run test:scripts`, and `npm run check:news`; no full build was run.
+- 2026-06-14: Follow-up internal-link guard made `scripts/audit-internal-links.mjs` reject unknown, incomplete, conflicting, or stray arguments before scanning content links, add `--project-dir`/`--root`, `--json`, and `--help`, and report missing fixture roots as structured JSON while preserving the default `npm run check:links` console output and external-URL exclusions. Verification used focused syntax/whitespace checks, `npm run test:scripts`, and `npm run check:links`; no full build was run.
+- 2026-06-14: Follow-up tool-logo audit guard made `scripts/audit-tool-logos.mjs` reject unknown, incomplete, conflicting, or stray arguments before scanning tool logo manifest coverage, add `--project-dir`/`--root`, `--json`, and `--help`, and report missing fixture roots or malformed manifests as structured JSON while preserving the default console output. Verification used focused syntax/whitespace checks, `npm run test:scripts`, and `node scripts/audit-tool-logos.mjs --json`; no full build was run.
+- 2026-06-14: Follow-up em-dash prose guard made `scripts/guard-em-dashes.mjs` reject unknown, incomplete, conflicting, or stray arguments before scanning content prose, add `--project-dir`/`--root` and `--help`, report missing fixture roots as structured JSON, and move planted-violation regression coverage out of the live content tree into temporary project fixtures. Verification used focused syntax/whitespace checks, `npm run test:scripts`, and `node scripts/guard-em-dashes.mjs --json`; no full build was run.
+- 2026-06-14: Follow-up page-refresh ledger generator guard made `scripts/generate-page-refresh-ledger.mjs` reject unknown, incomplete, invalid-date, conflicting, or stray arguments before ledger generation, add `--project-dir`/`--root`, `--date`, `--json`, and `--help`, support fixture roots that are not git repositories, and emit structured write/check/skip reports without changing the ledger format. Verification used focused syntax/whitespace checks and `npm run test:scripts`; the live `node scripts/generate-page-refresh-ledger.mjs --check --json` correctly reported the current dirty worktree ledger as changed (739 generated rows, through 2026-06-14), so no ledger regeneration was performed in this script-only pass. No full build was run.
+- 2026-06-14: Follow-up logo-manifest generator guard made `scripts/generate-logo-manifest.mjs` support non-writing `--check`, `--json`, `--project-dir`/`--root`, and `--help`, reject invalid arguments before writes, generate deterministic sorted manifests with extension priority, and regenerate the live 260-entry manifest once the check exposed drift. Verification used focused syntax/whitespace checks, `node --test tests/scripts/generate-logo-manifest.test.mjs`, `node scripts/generate-logo-manifest.mjs --check --json`, and `npm run test:scripts`; no full build was run.
+- 2026-06-14: Follow-up logo-manifest dry-run parity added `--dry-run` to `scripts/generate-logo-manifest.mjs`, matching the other asset generators so operators can inspect logo manifest drift without writes while keeping `--check` as the failing gate. Verification used focused syntax/tests and live dry-run/check probes only; no full build or Playwright smoke run was run.
+
+### 15. Final report
+
+Completed. The repo is now aligned to Vercel for deployment/runtime: `astro.config.mjs` uses `@astrojs/vercel`, `vercel.json` owns headers and redirects, package dependencies no longer include the Cloudflare adapter or Wrangler, API routes run as Astro endpoints, and review/newsletter persistence now targets Neon Postgres through `@neondatabase/serverless`.
+
+Changed areas include `package.json`, `package-lock.json`, `astro.config.mjs`, `vercel.json`, `.env.example`, `tsconfig.json`, `src/lib/server/runtime.ts`, `src/pages/api/subscribe.ts`, `src/pages/api/reviews/**`, `migrations/0001_reviews.sql`, `migrations/0002_subscribers.sql`, `src/pages/privacy.astro`, `src/pages/media-kit.astro`, `src/pages/about/our-stack.astro`, `src/pages/admin/reviews.astro`, build/audit scripts, Playwright static serving, mobile CSS fixes in company/search/fact-list surfaces, `PAGE_REFRESH_LEDGER.md`, and removal of tracked Cloudflare Pages Function/config files.
+
+Validation passed: `npm install`, `npm audit --audit-level=moderate`, `npm ls @astrojs/vercel @astrojs/cloudflare wrangler esbuild vite @vercel/routing-utils path-to-regexp @neondatabase/serverless --depth=5`, `npm run check`, `npm run build:fast`, `npm run build:astro`, `npm run build`, `npm run check:dist`, `git diff --check`, targeted Cloudflare/Turnstile runtime grep, and focused Playwright checks for `/companies/openai/`, `/search/`, and `/tools/watsonx-orchestrate/` at 360, 390, 430, and 768 widths.
+
+Documented residual risks: production still needs Vercel environment variables and Postgres migrations applied outside this local workspace; the broad `npm run test:smoke` visual suite still has stale assertions for old selectors and favicon palette expectations; the final full build used cached GitHub stats for multiple repos after GitHub API 403 rate limits. A final targeted grep found no tracked deploy/runtime references to Cloudflare Pages, D1, Wrangler, `_headers`, `_redirects`, `cf-connecting-ip`, miniflare, or Turnstile.
+
+---
+
+## ExecPlan: June 13 2026 Model Availability Tracker
+
+### 1. Objective
+
+Create a canonical AiPedia tracker for AI model availability, retirements, suspensions, and route churn so readers can decide which assistant, coding agent, or model-routing stack is safe to buy or build on. This improves trust, data quality, internal linking, editorial scalability, and AI/Search visibility by turning fast-moving model news into a reusable decision surface.
+
+### 2. Current state
+
+The June 13 late-news pass updated Claude, Claude Code, ChatGPT, Anthropic, OpenAI, AI Chatbots, AI Coding, AI Infrastructure, news, homepage, RSS, and LLM surfaces around Fable/Mythos suspension, GPT-5.2 retirement, and OpenAI scrutiny. There is no canonical tracker page for model-route stability. `/trends/` supports evergreen market-shift analysis with `type: trend`, `impact`, `timeframe`, `last_updated`, and source-backed Markdown. `/reports/` is currently framed as archived monthly reports, so it is not the right first route for a live tracker without template changes.
+
+### 3. Target state
+
+Add a high-impact trend page at `/trends/model-availability-churn/` that gives a mobile-readable current matrix of stable, changing, suspended, and risky model routes across ChatGPT/OpenAI, Claude/Anthropic, Gemini/Google, GitHub Copilot, Claude Code, Codex, and OpenRouter-style routing. The page must separate ChatGPT app availability from API availability, avoid unsupported permanence claims, cite official/current sources, and link to affected tool/category/news surfaces.
+
+### 4. Scope
+
+Included: new trend page, affected tool pages (Claude, Claude Code, ChatGPT, Gemini, GitHub Copilot, OpenRouter), affected parent category pages (AI Chatbots, AI Coding, AI Infrastructure), `/trends/`, `/compare/`, `/news/`, `/tools/`, homepage metadata, `/explore/`, LLM manifests, page ledger, and this plan. Excluded: new data-model schema, automated scraper, full source-registry migration, broad pricing refreshes outside touched records, and unrelated dirty worktree files.
+
+### 5. Files likely affected
+
+`src/content/trends/model-availability-churn.md`, `src/content/tools/{chatgpt,claude,claude-code,gemini,github-copilot,openrouter}.md`, `src/content/categories/{ai-chatbots,ai-coding,ai-infrastructure}.md`, `src/pages/trends/index.astro`, `src/pages/compare/index.astro`, `src/pages/news/index.astro`, `src/pages/tools/index.astro`, `src/pages/explore/index.astro`, `src/pages/index.astro`, `src/pages/llms.txt.ts`, `src/pages/llms-full.txt.ts`, `PAGE_REFRESH_LEDGER.md`, and this plan.
+
+### 6. Data model impact
+
+No schema changes in this first pass. The tracker is authored as a `trends` Markdown page using existing frontmatter fields and visible Markdown tables.
+
+### 7. SEO impact
+
+Creates a unique evergreen trend route for "AI model availability tracker" and "AI model retirement tracker" intent. Internal links from tools, categories, news, compare, and LLM surfaces should make it crawlable and useful without creating duplicate thin pages.
+
+### 8. Conversion impact
+
+No new affiliate CTAs. The tracker protects trust by warning buyers when model access, plan eligibility, or API/app distinction changes a purchase or implementation decision.
+
+### 9. Mobile UX impact
+
+The tracker must use short verdict bullets and compact Markdown tables that the existing article layout can stack/scroll without hiding critical content. No wide comparison table should be the only mobile experience; summaries must precede detail.
+
+### 10. Implementation steps
+
+1. Verify current June 2026 model availability and churn facts against official sources and named reporting.
+2. Create `/trends/model-availability-churn/` with a current matrix, buyer actions, and source links.
+3. Add concise cross-links from affected tool and category pages.
+4. Add top-layer discovery links/metadata in `/trends/`, `/compare/`, `/news/`, `/tools/`, `/explore/`, homepage, and LLM manifests.
+5. Regenerate the ledger and run content/build validation.
+
+### 11. Verification commands
+
+`npm run ledger:pages`
+
+`npm run ledger:pages:check`
+
+`npm run guard:check`
+
+`npm run check:links`
+
+`npm run test:scripts`
+
+`npm run build:fast`
+
+`git diff --check`
+
+### 12. Acceptance criteria
+
+The tracker route builds, source-backed facts are current as of June 13, 2026, affected tool/category/index pages link to it, LLM surfaces mention it, ledger is current, and validation passes or unrelated failures are documented.
+
+### 13. Risks and mitigations
+
+Model availability can change within hours; phrase statuses as "as of June 13, 2026" and cite current sources. Avoid overstating API changes where only ChatGPT/Copilot app routes changed. OpenRouter inventory can differ from provider-enforced access; warn readers to verify provider route status before production use. Do not touch unrelated dirty QA files or pre-existing OG/tool image changes.
+
+### 14. Progress log
+
+- 2026-06-13: Inspected trends/reports routes and chose `/trends/` for the live tracker because `/reports/` is currently an archived monthly-report surface.
+- 2026-06-13: Verified current sources: Anthropic Fable/Mythos suspension and Opus 4.8, OpenAI ChatGPT release notes and GPT-5.5 API note, Google Gemini 3.5/Gemini API changelog, GitHub Copilot supported-models and AI Credits docs, and OpenRouter pricing/model surfaces.
+- 2026-06-13: Published `/trends/model-availability-churn/` with a current matrix for ChatGPT/OpenAI, Claude/Anthropic, Gemini/Google, GitHub Copilot, Claude Code, Codex, and OpenRouter-style model routers.
+- 2026-06-13: Added tracker cross-links and current availability wording to ChatGPT, Claude, Claude Code, Gemini, GitHub Copilot, OpenRouter, AI Chatbots, AI Coding, and AI Infrastructure.
+- 2026-06-13: Wired top-layer discovery through `/trends/`, `/tools/`, `/news/`, `/compare/`, `/explore/`, `/categories/`, homepage metadata, and both LLM manifests; regenerated `PAGE_REFRESH_LEDGER.md`.
+- 2026-06-13: Validation passed for ledger check, guards, internal links, news xrefs, script tests, command audit, diff whitespace, fast build, indexability/commercial CTA audits, and a rendered viewport smoke test at 360, 390, 430, 768, and 1280 px for tracker and affected hubs. Full `npm run check` still fails only at the existing `npm audit` esbuild/Vite/Astro/Wrangler advisory.
+
+### 15. Final report
+
+Completed. The canonical model availability tracker now exists at `/trends/model-availability-churn/`, is linked from affected tool/category pages and major discovery surfaces, and carries current June 13, 2026 source-backed guidance for app/API/router distinctions, retirements, suspensions, billing exposure, and fallback planning.
+
+Validation passed except for the pre-existing dependency audit advisory. `npm run check` reaches `check:security` and fails on the known high-severity esbuild/Vite/Astro/Wrangler advisory where `npm audit fix --force` proposes a breaking Astro change, so it was not auto-applied.
+
+---
+
+## ExecPlan: June 13 2026 Late AI News Catch-Up
+
+### 1. Objective
+
+Cover the AI tool and AI industry news that landed after AiPedia's June 13 morning/weekend desk so readers have source-backed, current buyer guidance through June 13, 2026. The update improves trust, freshness, model-availability accuracy, legal/regulatory context, and top-layer news discovery.
+
+### 2. Current state
+
+The newest local article is `/news/2026-06-13-ai-news-desk/`, which synthesized June 10-12 and said Saturday was quiet. Current June 2026 searches found three material later developments: Anthropic suspended Claude Fable 5 and Mythos 5 access after a US government directive, OpenAI's ChatGPT release notes say GPT-5.2 models are no longer available in ChatGPT as of June 12, and Reuters/WSJ reporting says a coalition of US state attorneys general opened an OpenAI probe. The June 9 Fable/Mythos article still describes Fable 5 as available, and Claude, Claude Code, ChatGPT, Anthropic, and OpenAI records do not yet mention the June 13 buyer impact.
+
+### 3. Target state
+
+Publish a new June 13 news update that covers the late-day Anthropic suspension, ChatGPT GPT-5.2 retirement, and OpenAI legal-scrutiny developments, updates the earlier Fable/Mythos launch article with availability status, and adds concise buyer-risk cross-links to affected tool, company, and category pages. The `/news/` hub, homepage dynamic news rail, RSS, LLM manifests, and `PAGE_REFRESH_LEDGER.md` must reflect the refresh.
+
+### 4. Scope
+
+Included: new/updated news content, Claude/Claude Code/ChatGPT affected tool records, Anthropic/OpenAI company records, AI Chatbots/AI Coding/AI Infrastructure parent category hubs, `/news/`, RSS, `/`, `/explore/`, `/tools/`, `/categories/`, `/companies/`, `/llms.txt`, `/llms-full.txt`, generated news OG assets, and `PAGE_REFRESH_LEDGER.md`. Excluded: new tool records, logo work, broad pricing refreshes outside the affected records, and unrelated dirty OG assets already present in the worktree.
+
+### 5. Files likely affected
+
+`src/content/news/2026-06-13-us-blocks-anthropic-fable-mythos-openai-probe.md`, `src/content/news/2026-06-13-ai-news-desk.md`, `src/content/news/2026-06-09-anthropic-claude-fable-5-mythos-5.md`, `src/content/tools/claude.md`, `src/content/tools/claude-code.md`, `src/content/tools/chatgpt.md`, `src/content/companies/anthropic.md`, `src/content/companies/openai.md`, `src/content/categories/ai-chatbots.md`, `src/content/categories/ai-coding.md`, `src/content/categories/ai-infrastructure.md`, `src/pages/news/index.astro`, `src/pages/news/rss.xml.ts`, `src/pages/index.astro`, `src/pages/explore/index.astro`, `src/pages/tools/index.astro`, `src/pages/categories/index.astro`, `src/pages/companies/index.astro`, `src/pages/llms.txt.ts`, `src/pages/llms-full.txt.ts`, generated files under `public/og/news/`, `PAGE_REFRESH_LEDGER.md`, and this plan.
+
+### 6. Data model impact
+
+No schema changes. Add news `affects`/`related_tools` metadata and update existing Markdown/frontmatter verification dates, source lists, quick answers, watch-outs, and price/history notes.
+
+### 7. SEO impact
+
+The new story gets a unique title, summary, canonical route via the existing news detail template, source citations, and generated OG images. News hub metadata and LLM manifests should describe the late June 13 coverage.
+
+### 8. Conversion impact
+
+No new affiliate surfaces. Buyer guidance should protect trust by warning Claude/Fable buyers about availability and retention/governance risk, and ChatGPT/OpenAI buyers about model churn plus legal/regulatory scrutiny without overstating unproven claims.
+
+### 9. Mobile UX impact
+
+Existing news article templates should render the new article as stacked cards and article content on mobile. Because the edit is content-only, mobile QA focuses on route rendering, no broken images, and no horizontal overflow on `/news/`, the new article, and affected tool pages.
+
+### 10. Implementation steps
+
+1. Verify June 2026 sources for Anthropic Fable/Mythos suspension, ChatGPT GPT-5.2 retirement, and OpenAI state-attorneys-general investigation.
+2. Add the new June 13 catch-up article and update the earlier Fable/Mythos article and morning desk.
+3. Add affected-record cross-links to Claude, Claude Code, ChatGPT, Anthropic, OpenAI, and the affected category hubs.
+4. Refresh `/news/`, RSS, top-layer metadata comments, LLM manifests, and ledger.
+5. Generate OG/news assets.
+6. Run content, xref, ledger, test, build, and diff checks.
+
+### 11. Verification commands
+
+`node scripts/generate-og-news.mjs`
+
+`npm run ledger:pages`
+
+`npm run ledger:pages:check`
+
+`npm run guard:check`
+
+`npm run check:news`
+
+`npm run check:links`
+
+`npm run test:scripts`
+
+`npm run build:fast`
+
+`git diff --check`
+
+### 12. Acceptance criteria
+
+The new June 13 article exists and cites current sources, stale Fable availability language is corrected, affected tool/company pages link to the new coverage where buyer decisions changed, `/news/` and LLM surfaces mention the late June 13 update, generated OG/thumb assets exist, the ledger reflects touched tracked pages, and validation passes or unrelated failures are documented.
+
+### 13. Risks and mitigations
+
+The OpenAI probe relies on Reuters/WSJ reporting rather than a public regulator release; phrase it as reported/subpoenaed and avoid declaring legal conclusions. The Anthropic directive is volatile; cite Anthropic's own statement and say access is unavailable as of June 13, not permanently gone. ChatGPT model churn is official but should be framed as ChatGPT product access, not an API-wide claim unless sourced. Same-day news ordering was date-only in the current content model; add a slug tie-breaker on news/home/RSS so late same-day coverage rises.
+
+### 14. Progress log
+
+- 2026-06-13: Identified late June 13 developments via current searches that included "June 2026": Anthropic Fable/Mythos access suspension, ChatGPT GPT-5.2 retirement, and OpenAI state-attorneys-general probe. Verified Anthropic against the launch post and the June 12 statement; verified ChatGPT retirement against OpenAI ChatGPT release notes; verified OpenAI probe against Reuters/CNA and Anadolu/WSJ summary.
+- 2026-06-13: Drafted the new late June 13 news update; updated the earlier Fable/Mythos launch article, the June 13 desk, Claude, Claude Code, ChatGPT, Anthropic, OpenAI, AI Chatbots, AI Coding, and AI Infrastructure.
+- 2026-06-13: Refreshed top-layer discovery surfaces: `/news/`, RSS, homepage same-day ordering, `/explore/`, `/tools/`, `/categories/`, `/companies/`, `/llms.txt`, and `/llms-full.txt`.
+- 2026-06-13: Generated news OG assets, regenerated the page ledger, and ran validation: `ledger:pages:check`, `guard:check`, `check:news`, `check:links`, `test:scripts`, `build:fast`, static route smoke checks, and `git diff --check` passed. `npm run check` reached `npm audit` and failed on existing high-severity esbuild/Vite/Astro/Wrangler advisories that require a breaking `npm audit fix --force`; no forced dependency downgrade was run.
+
+### 15. Final report
+
+Completed. Published the late June 13, 2026 catch-up article covering Anthropic's Fable 5/Mythos 5 suspension, ChatGPT GPT-5.2 retirement, and reported OpenAI state-attorneys-general scrutiny. Refreshed the earlier Fable/Mythos launch article and the June 13 news desk, then aligned affected Claude, Claude Code, ChatGPT, Anthropic, OpenAI, AI Chatbots, AI Coding, and AI Infrastructure pages with the new buyer-risk guidance.
+
+Top-layer discovery and crawl surfaces were refreshed: `/news/`, RSS, homepage latest-news ordering, `/explore/`, `/tools/`, `/categories/`, `/companies/`, `/llms.txt`, `/llms-full.txt`, generated news OG assets, and `PAGE_REFRESH_LEDGER.md`. Validation passed for ledger, guards, links, news refs, script tests, fast build, route/asset smoke checks, and whitespace checks. Residual risk: the full `npm run check` fails only at `npm audit` because of existing high-severity esbuild/Vite/Astro/Wrangler advisories whose suggested force fix would install a breaking Astro version; left unresolved for a separate dependency-upgrade pass.
 
 ---
 
@@ -3793,3 +7340,73 @@ Each date-cluster: all eligible pages June 12-dated, historical/affiliate/news c
 ### 15. Final report
 
 Completed. The full June 1-11 re-verification sweep is done: every eligible content page (tools, guides, comparisons, companies, categories, workflows, trends, editorial answer pages) dated June 1 through June 11 is now stamped June 12, 2026, committed and pushed in per-date clusters plus one cross-batch prose-cleanup commit. Excluded by design: 4 dead tools, individual news articles, infrastructure/index static pages, crawl surfaces, and the 2 git-dated feature pages. After this sweep the only ledger rows predating 2026-06-12 are those excluded categories; all editorial content is current to today.
+
+---
+
+## ExecPlan: June 15 2026 AI SEO/GEO Source-Review Refresh
+
+### 1. Objective
+
+Refresh `/categories/ai-seo/` after June 15 AI-search liability coverage made source review, prompt evidence, and generated-claim QA part of the AI SEO buying decision.
+
+### 2. Current state
+
+The AI SEO hub was last verified June 12 and already covered Ahrefs, Semrush, Surfer, Clearscope, Frase, NeuronWriter, OmniSEO, MarketMuse, and AdCreative.ai. It did not explicitly turn the June 15 AI Overviews liability story into a buyer checklist for AI-visibility tools.
+
+### 3. Target state
+
+The AI SEO hub is verified June 15, explains the difference between AI visibility monitoring and source-reviewed claim governance, and keeps current pricing/source context aligned with the source registry and LLM/top-layer surfaces.
+
+### 4. Scope
+
+Included: `src/content/categories/ai-seo.md`, SEO source registry dates, the WIRED AI Overviews liability source entry, homepage/tools/categories/explore/LLM maintenance notes, page refresh ledger, and scoped validation. Excluded: individual tool-page rewrites and full browser/build QA unless rendered-output validation becomes necessary.
+
+### 5. Files likely affected
+
+`src/content/categories/ai-seo.md`, `src/data/source-registry.json`, `src/pages/index.astro`, `src/pages/tools/index.astro`, `src/pages/categories/index.astro`, `src/pages/explore/index.astro`, `src/pages/llms.txt.ts`, `src/pages/llms-full.txt.ts`, `PAGE_REFRESH_LEDGER.md`, `.agent/PLANS.md`.
+
+### 6. Data model impact
+
+No schema changes. Category copy, visible source verification dates, source-registry `last_checked` stamps, and one secondary source registry entry update.
+
+### 7. SEO impact
+
+Improves the AI SEO hub's freshness and people-first usefulness by connecting GEO/AI-visibility buying to source-review controls instead of only prompt/ranking dashboards.
+
+### 8. Conversion impact
+
+No CTA or affiliate tracking changes. Trust improves because commercial SEO-tool recommendations now warn buyers not to substitute visibility dashboards for source review.
+
+### 9. Mobile UX impact
+
+Text-only content edit; no layout changes.
+
+### 10. Implementation steps
+
+1. Verify current June 2026 official sources for the SEO tool cluster plus secondary AI Overviews liability coverage.
+2. Patch the AI SEO hub with the source-review buyer filter and updated source dates.
+3. Update source registry checked dates and add the WIRED secondary source.
+4. Update top-layer and LLM maintenance notes.
+5. Regenerate ledger and run scoped validation.
+
+### 11. Verification commands
+
+Planned: `npm run ledger:pages`, `npm run ledger:pages:check`, `npm run audit:sources`, `npm run audit:facts`, `npm run check:links`, `npm run check:news`, and `npm run check:quick`.
+
+### 12. Acceptance criteria
+
+`/categories/ai-seo/` carries 2026-06-15 verification, current source dates, no unsupported new pricing claims, source registry passes, ledger is current, and scoped checks pass without a full build.
+
+### 13. Risks and mitigations
+
+Some official pricing pages render regionally or with limited text extraction, so price changes are phrased only where current source text clearly supports them. Full build and browser QA are intentionally skipped unless checks reveal rendered-output risk, honoring the user's concern about excessive builds.
+
+### 14. Progress log
+
+- 2026-06-15: Verified Ahrefs pricing/Brand Radar, Semrush One/pricing, Surfer pricing/homepage, Clearscope pricing/homepage, Frase pricing/AI Visibility help, NeuronWriter pricing/affiliate, OmniSEO pricing/homepage, MarketMuse pricing/inventory/briefs, AdCreative.ai, and WIRED AI Overviews liability coverage.
+- 2026-06-15: Patched AI SEO hub around AI-visibility source review, liability controls, updated source dates, and source-registry alignment.
+- 2026-06-15: Regenerated the page refresh ledger and completed scoped validation: ledger check, source audit, fact audit, internal links, news cross-links, quick script/assets checks, and scoped diff whitespace check all passed. Full build/browser QA intentionally skipped because this was a text/data/LLM-surface refresh.
+
+### 15. Final report
+
+Completed for this slice. `/categories/ai-seo/` is now verified June 15, 2026 with current source stamps and explicit source-review guidance for AI visibility tools. The source registry is aligned to the same verified source cluster and includes the WIRED AI Overviews liability source as secondary context. Top-layer and LLM maintenance notes plus `PAGE_REFRESH_LEDGER.md` are current.
