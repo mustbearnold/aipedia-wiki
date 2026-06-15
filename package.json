@@ -9,7 +9,7 @@
     "postinstall": "node scripts/playwright-install.mjs",
     "playwright:install": "node scripts/playwright-install.mjs",
     "predev": "node scripts/guard-content.mjs && node scripts/guard-stale-facts.mjs",
-    "prebuild": "node scripts/guard-content.mjs && node scripts/guard-stale-facts.mjs && node scripts/audit-guide-picks.mjs && node scripts/fetch-github-stats.mjs && node scripts/generate-og-news.mjs",
+    "prebuild": "node scripts/guard-content.mjs && node scripts/guard-stale-facts.mjs && node scripts/audit-guide-picks.mjs && node scripts/fetch-github-stats.mjs --output src/data/github-stats.build.json --skip-render-unchanged && node scripts/generate-og-news.mjs",
     "dev": "node scripts/copy-content.mjs && astro dev",
     "dev:codex": "npm exec --yes --package=node@24 -- node node_modules/astro/bin/astro.mjs dev",
     "build:astro": "npm exec --yes --package=node@24 -- node node_modules/astro/bin/astro.mjs build",

@@ -14,22 +14,26 @@
  *   node scripts/fetch-github-stats.mjs
  *   node scripts/fetch-github-stats.mjs --dry-run --json
  */
-import { readdir, readFile, writeFile } from 'node:fs/promises';
+import { mkdir, readdir, readFile, writeFile } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import { join, dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { githubStatsMatchRenderedFields } from './lib/github-stats-output.mjs';
 
 const args = process.argv.slice(2);
 const JSON_MODE = args.includes('--json');
 const DRY_RUN = args.includes('--dry-run');
+const SKIP_RENDER_UNCHANGED = args.includes('--skip-render-unchanged');
 const HELP_MODE = args.includes('--help') || args.includes('-h');
-const KNOWN_FLAGS = new Set(['--dry-run', '--json', '--project-dir', '--root', '--help', '-h']);
-const VALUE_FLAGS = new Set(['--project-dir', '--root']);
+const KNOWN_FLAGS = new Set(['--dry-run', '--json', '--skip-render-unchanged', '--output', '--project-dir', '--root', '--help', '-h']);
+const VALUE_FLAGS = new Set(['--output', '--project-dir', '--root']);
 const DEFAULT_ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const projectDirArg = valueFor('--project-dir') || valueFor('--root');
 const ROOT = resolve(projectDirArg || DEFAULT_ROOT);
 const TOOLS_DIR = join(ROOT, 'src/content/tools');
-const OUTPUT = join(ROOT, 'src/data/github-stats.json');
+const DEFAULT_OUTPUT = join(ROOT, 'src/data/github-stats.json');
+const outputArg = valueFor('--output');
+const OUTPUT = outputArg ? resolve(ROOT, outputArg) : DEFAULT_OUTPUT;
 const argumentIssues = collectArgumentIssues();
 
 function valueFor(flag) {
@@ -95,6 +99,9 @@ function usage() {
     'Options:',
     '  --dry-run             Discover GitHub stat targets without fetching or writing.',
     '  --json                Emit a structured report.',
+    '  --skip-render-unchanged',
+    '                        Do not rewrite output when only fetched_at would change.',
+    '  --output <path>       Write stats to another JSON path, resolved from project root.',
     '  --project-dir <dir>   Resolve content and output paths from another project root.',
     '  --root <dir>          Alias for --project-dir.',
     '  --help, -h            Print this help message.',
@@ -122,6 +129,7 @@ function reportFor({ ok = true, mode = DRY_RUN ? 'dry-run' : 'fetch', targets = 
     project_dir: ROOT,
     tools_dir: TOOLS_DIR,
     output_path: OUTPUT,
+    skip_render_unchanged: SKIP_RENDER_UNCHANGED,
     targets,
     target_count: targets.length,
     written,
@@ -162,6 +170,29 @@ async function fetchRepo(owner, repo) {
   return await res.json();
 }
 
+async function readPreviousStats() {
+  for (const path of [OUTPUT, DEFAULT_OUTPUT]) {
+    if (!existsSync(path)) continue;
+    try {
+      return JSON.parse(await readFile(path, 'utf8'));
+    } catch {
+      return {};
+    }
+  }
+
+  return {};
+}
+
+async function writeStatsIfNeeded(stats, previousStats) {
+  if (SKIP_RENDER_UNCHANGED && githubStatsMatchRenderedFields(previousStats, stats)) {
+    return false;
+  }
+
+  await mkdir(dirname(OUTPUT), { recursive: true });
+  await writeFile(OUTPUT, JSON.stringify(stats, null, 2));
+  return true;
+}
+
 async function main() {
   if (HELP_MODE) {
     console.log(usage());
@@ -177,10 +208,7 @@ async function main() {
   const stats = {};
   // Preserve previous results so a single-repo API failure doesn't erase
   // everything. We merge fresh results over the old ones.
-  let prev = {};
-  if (existsSync(OUTPUT)) {
-    try { prev = JSON.parse(await readFile(OUTPUT, 'utf8')); } catch { prev = {}; }
-  }
+  const prev = await readPreviousStats();
 
   const targets = [];
   for (const file of files) {
@@ -199,7 +227,8 @@ async function main() {
 
   if (!targets.length) {
     console.log('[github-stats] no tools with github_url found');
-    await writeFile(OUTPUT, JSON.stringify({}, null, 2));
+    const written = await writeStatsIfNeeded({}, prev);
+    if (!written) console.log(`[github-stats] output unchanged at ${OUTPUT}`);
     return 0;
   }
 
@@ -242,8 +271,12 @@ async function main() {
     }
   }
 
-  await writeFile(OUTPUT, JSON.stringify(stats, null, 2));
-  console.log(`[github-stats] wrote ${Object.keys(stats).length} entries to ${OUTPUT} (${ok} fresh, ${failed} failed)`);
+  const written = await writeStatsIfNeeded(stats, prev);
+  if (written) {
+    console.log(`[github-stats] wrote ${Object.keys(stats).length} entries to ${OUTPUT} (${ok} fresh, ${failed} failed)`);
+  } else {
+    console.log(`[github-stats] rendered stats unchanged at ${OUTPUT} (${ok} fresh, ${failed} failed)`);
+  }
   return 0;
 }
 

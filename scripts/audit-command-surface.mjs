@@ -66,6 +66,9 @@ const REQUIRED_PACKAGE_SCRIPT_CHAINS = {
   'ship:check': ['check:quick', 'check', 'build:fast'],
   'build:fast': ['guard:check', 'build-fast.mjs'],
 };
+const REQUIRED_PACKAGE_COMMAND_PARTS = {
+  prebuild: ['node scripts/fetch-github-stats.mjs --output src/data/github-stats.build.json --skip-render-unchanged'],
+};
 const REQUIRED_EXACT_NPM_SCRIPT_COMMANDS = {
   deploy: 'npx vercel build --prod && npx vercel deploy --prebuilt --prod',
   'vercel:env:pull': 'npx vercel env pull .env.local --yes',
@@ -224,6 +227,9 @@ function emitReport(report) {
     if (report.missing_package_script_chain_invariants?.length) {
       console.error(`Missing package script chain invariants: ${report.missing_package_script_chain_invariants.join('; ')}`);
     }
+    if (report.missing_package_command_part_invariants?.length) {
+      console.error(`Missing package command part invariants: ${report.missing_package_command_part_invariants.join('; ')}`);
+    }
     if (report.missing_exact_npm_script_command_invariants?.length) {
       console.error(`Missing exact npm script command invariants: ${report.missing_exact_npm_script_command_invariants.join('; ')}`);
     }
@@ -265,6 +271,7 @@ if (argumentIssues.length > 0) {
     required_workflow_npm_scripts: REQUIRED_WORKFLOW_NPM_SCRIPTS,
     required_workflow_command_order: REQUIRED_WORKFLOW_COMMAND_ORDER,
     required_package_script_chains: REQUIRED_PACKAGE_SCRIPT_CHAINS,
+    required_package_command_parts: REQUIRED_PACKAGE_COMMAND_PARTS,
     required_exact_npm_script_commands: REQUIRED_EXACT_NPM_SCRIPT_COMMANDS,
     forbidden_quick_check_patterns: FORBIDDEN_QUICK_CHECK_PATTERNS.map(({ code, detail }) => ({ code, detail })),
     required_quick_asset_command_parts: REQUIRED_QUICK_ASSET_COMMAND_PARTS,
@@ -297,6 +304,7 @@ if (argumentIssues.length > 0) {
     missing_workflow_referenced_npm_scripts: [],
     missing_package_referenced_npm_scripts: [],
     missing_package_script_chain_invariants: [],
+    missing_package_command_part_invariants: [],
     missing_exact_npm_script_command_invariants: [],
     missing_quick_check_command_invariants: [],
     missing_quick_asset_command_invariants: [],
@@ -501,6 +509,12 @@ const missingPackageScriptChainInvariants = Object.entries(REQUIRED_PACKAGE_SCRI
   if (hasOrderedScriptChain(command, requiredScripts)) return [];
   return [`${script}: expected ordered npm run chain ${requiredScripts.join(' -> ')}`];
 });
+const missingPackageCommandPartInvariants = Object.entries(REQUIRED_PACKAGE_COMMAND_PARTS).flatMap(([script, requiredParts]) => {
+  const command = scripts[script];
+  if (typeof command !== 'string') return [`${script}: npm script is missing`];
+  if (hasOrderedCommandParts(command, requiredParts)) return [];
+  return [`${script}: expected ordered command parts ${requiredParts.join(' -> ')}`];
+});
 const missingExactNpmScriptCommandInvariants = Object.entries(REQUIRED_EXACT_NPM_SCRIPT_COMMANDS).flatMap(
   ([script, requiredCommand]) => {
     const command = scripts[script];
@@ -649,6 +663,7 @@ const report = {
     missingWorkflowTriggerInvariants.length === 0 &&
     missingWorkflowSecurityInvariants.length === 0 &&
     missingPackageScriptChainInvariants.length === 0 &&
+    missingPackageCommandPartInvariants.length === 0 &&
     missingExactNpmScriptCommandInvariants.length === 0 &&
     missingQuickCheckCommandInvariants.length === 0 &&
     missingQuickAssetCommandInvariants.length === 0 &&
@@ -667,6 +682,7 @@ const report = {
   required_workflow_npm_scripts: REQUIRED_WORKFLOW_NPM_SCRIPTS,
   required_workflow_command_order: REQUIRED_WORKFLOW_COMMAND_ORDER,
   required_package_script_chains: REQUIRED_PACKAGE_SCRIPT_CHAINS,
+  required_package_command_parts: REQUIRED_PACKAGE_COMMAND_PARTS,
   required_exact_npm_script_commands: REQUIRED_EXACT_NPM_SCRIPT_COMMANDS,
   forbidden_quick_check_patterns: FORBIDDEN_QUICK_CHECK_PATTERNS.map(({ code, detail }) => ({ code, detail })),
   required_quick_asset_command_parts: REQUIRED_QUICK_ASSET_COMMAND_PARTS,
@@ -699,6 +715,7 @@ const report = {
   missing_workflow_referenced_npm_scripts: missingWorkflowReferencedNpmScripts,
   missing_package_referenced_npm_scripts: missingPackageReferencedNpmScripts,
   missing_package_script_chain_invariants: missingPackageScriptChainInvariants,
+  missing_package_command_part_invariants: missingPackageCommandPartInvariants,
   missing_exact_npm_script_command_invariants: missingExactNpmScriptCommandInvariants,
   missing_quick_check_command_invariants: missingQuickCheckCommandInvariants,
   missing_quick_asset_command_invariants: missingQuickAssetCommandInvariants,

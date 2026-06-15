@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { spawnSync } from 'node:child_process';
-import { existsSync, mkdirSync, mkdtempSync, rmSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, statSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
 import { test } from 'node:test';
@@ -63,6 +63,39 @@ test('github stats fails closed for missing local tool content directory', () =>
   }
 });
 
+test('github stats skip-render-unchanged leaves matching empty output alone', () => {
+  const fixture = makeFixture();
+  const outputDir = join(fixture, 'src/data');
+  const outputPath = join(outputDir, 'github-stats.json');
+  mkdirSync(outputDir, { recursive: true });
+  writeFileSync(outputPath, '{}');
+  const previousMtime = statSync(outputPath).mtimeMs;
+
+  try {
+    const result = runGithubStats('--skip-render-unchanged', `--project-dir=${fixture}`);
+    assert.equal(result.status, 0, result.stderr || result.stdout);
+    assert.match(result.stdout, /output unchanged/);
+    assert.equal(readFileSync(outputPath, 'utf8'), '{}');
+    assert.equal(statSync(outputPath).mtimeMs, previousMtime);
+  } finally {
+    rmSync(fixture, { recursive: true, force: true });
+  }
+});
+
+test('github stats can write no-target output to a custom path', () => {
+  const fixture = makeFixture();
+  const outputPath = join(fixture, 'tmp/github-stats.build.json');
+
+  try {
+    const result = runGithubStats('--output', 'tmp/github-stats.build.json', `--project-dir=${fixture}`);
+    assert.equal(result.status, 0, result.stderr || result.stdout);
+    assert.equal(readFileSync(outputPath, 'utf8'), '{}');
+    assert.equal(existsSync(join(fixture, 'src/data/github-stats.json')), false);
+  } finally {
+    rmSync(fixture, { recursive: true, force: true });
+  }
+});
+
 test('github stats rejects invalid arguments before local reads', () => {
   const unknown = runGithubStats('--dry-run', '--json', '--wat');
   assert.equal(unknown.status, 1);
@@ -78,6 +111,11 @@ test('github stats rejects invalid arguments before local reads', () => {
   const missingReport = JSON.parse(missing.stdout);
   assert.ok(missingReport.argument_issues.some((issue) => issue.code === 'argument-invalid' && /--project-dir requires a value/.test(issue.detail)));
 
+  const missingOutput = runGithubStats('--dry-run', '--json', '--output');
+  assert.equal(missingOutput.status, 1);
+  const missingOutputReport = JSON.parse(missingOutput.stdout);
+  assert.ok(missingOutputReport.argument_issues.some((issue) => issue.code === 'argument-invalid' && /--output requires a value/.test(issue.detail)));
+
   const conflicting = runGithubStats('--dry-run', '--json', '--project-dir', '.', '--root', '.');
   assert.equal(conflicting.status, 1);
   const conflictingReport = JSON.parse(conflicting.stdout);
@@ -89,6 +127,8 @@ test('github stats prints help', () => {
   assert.equal(result.status, 0);
   assert.match(result.stdout, /Usage: node scripts\/fetch-github-stats\.mjs/);
   assert.match(result.stdout, /--dry-run/);
+  assert.match(result.stdout, /--skip-render-unchanged/);
+  assert.match(result.stdout, /--output <path>/);
   assert.match(result.stdout, /--project-dir <dir>/);
   assert.equal(result.stderr, '');
 });
