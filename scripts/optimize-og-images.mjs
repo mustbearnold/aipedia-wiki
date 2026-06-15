@@ -15,6 +15,18 @@ import sharp from 'sharp';
 import { existsSync, readdirSync, readFileSync, writeFileSync, statSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import {
+  buildManifest,
+  hashExistingFiles,
+  hashExistingSourceFiles,
+  manifestMatches,
+  manifestOutputsForReport,
+  readManifest,
+  relativePath,
+  sha256File,
+  stableHash,
+  writeManifest,
+} from './lib/generated-asset-manifest.mjs';
 
 const args = process.argv.slice(2);
 const JSON_MODE = args.includes('--json');
@@ -24,7 +36,8 @@ const HELP_MODE = args.includes('--help') || args.includes('-h');
 const KNOWN_FLAGS = new Set(['--dry-run', '--check', '--json', '--project-dir', '--root', '--limit', '--help', '-h']);
 const VALUE_FLAGS = new Set(['--project-dir', '--root', '--limit']);
 const argumentIssues = collectArgumentIssues();
-const defaultProjectDir = dirname(dirname(fileURLToPath(import.meta.url)));
+const SCRIPT_PATH = fileURLToPath(import.meta.url);
+const defaultProjectDir = dirname(dirname(SCRIPT_PATH));
 const projectDirArg = valueFor('--project-dir') || valueFor('--root');
 const PROJECT_DIR = resolve(projectDirArg || defaultProjectDir);
 const limitArg = valueFor('--limit');
@@ -34,6 +47,8 @@ const TARGETS = [
   'public/og/news',
   'public/og/news/light',
 ];
+const MANIFEST_FILE = join(PROJECT_DIR, 'src/data/generated-assets/og-optimizer-manifest.json');
+const MANIFEST_KIND = 'og-png-optimizer';
 const MAX_PNG_OPTIMIZATION_PASSES = 12;
 const MATERIAL_CHECK_SAVINGS_BYTES = 2048;
 const MATERIAL_CHECK_SAVINGS_RATIO = 0.005;
@@ -166,6 +181,10 @@ function reportFor({ mode = modeName(), files = [], issues = [], skipped_dirs = 
     mode,
     project_dir: PROJECT_DIR,
     targets: TARGETS,
+    manifest: {
+      file: relativePath(PROJECT_DIR, MANIFEST_FILE),
+      hit: files.some((file) => file.comparison?.kind === 'manifest-hash'),
+    },
     dry_run: DRY_RUN || CHECK_MODE,
     check_mode: CHECK_MODE,
     limit: Number.isFinite(LIMIT) ? LIMIT : null,
@@ -209,6 +228,10 @@ function emitReport(report) {
     console.warn(`[optimize-og-images] failed on ${issue.path}: ${issue.detail}`);
   }
 
+  if (report.manifest.hit) {
+    console.log(`[optimize-og-images] manifest current; skipped recompressing ${report.totals.files} PNG file(s).`);
+  }
+
   if (report.mode === 'check') {
     if (report.ok) {
       console.log(`[optimize-og-images] check passed. ${report.totals.files} PNG file(s) are already optimized.`);
@@ -220,6 +243,38 @@ function emitReport(report) {
 
   const verb = DRY_RUN ? 'would process' : 'processed';
   console.log(`[optimize-og-images] ${verb} ${report.totals.files} files. ${Math.round(report.totals.before_bytes / 1024)} KB -> ${Math.round(report.totals.after_bytes / 1024)} KB. Saved ${report.totals.saved_kb} KB (${report.totals.saved_pct}%).`);
+}
+
+function collectTargetPngFiles() {
+  const files = [];
+  for (const target of TARGETS) {
+    const dir = targetPath(target);
+    if (!existsSync(dir)) continue;
+    let entries = [];
+    try {
+      entries = readdirSync(dir).filter((file) => file.endsWith('.png')).sort((a, b) => a.localeCompare(b));
+    } catch {
+      continue;
+    }
+    for (const file of entries) {
+      if (files.length >= LIMIT) return files;
+      files.push(relativePath(PROJECT_DIR, join(dir, file)));
+    }
+  }
+  return files.sort((left, right) => left.localeCompare(right));
+}
+
+function sourceHashFor(targetFiles) {
+  return stableHash({
+    manifest_kind: MANIFEST_KIND,
+    limit: Number.isFinite(LIMIT) ? LIMIT : null,
+    optimizer_sources: hashExistingSourceFiles(PROJECT_DIR, [
+      relativePath(PROJECT_DIR, SCRIPT_PATH),
+      'package.json',
+      'package-lock.json',
+    ]),
+    png_files: hashExistingFiles(PROJECT_DIR, targetFiles),
+  });
 }
 
 async function main() {
@@ -236,6 +291,31 @@ async function main() {
   const files = [];
   const issues = [];
   const skipped_dirs = [];
+  const expectedFiles = collectTargetPngFiles();
+  const sourceHash = sourceHashFor(expectedFiles);
+  const manifest = readManifest(MANIFEST_FILE);
+
+  if ((modeName() === 'optimize' || modeName() === 'check') && manifestMatches({
+    manifest,
+    kind: MANIFEST_KIND,
+    sourceHash,
+    expectedFiles,
+    root: PROJECT_DIR,
+  })) {
+    const manifestFiles = manifestOutputsForReport(manifest, PROJECT_DIR).map((file) => ({
+      target: file.target,
+      file: file.file.split('/').pop(),
+      path: file.path,
+      before_bytes: file.bytes,
+      after_bytes: file.bytes,
+      saved_bytes: 0,
+      written: false,
+      comparison: file.comparison,
+    }));
+    const report = reportFor({ files: manifestFiles, issues, skipped_dirs });
+    emitReport(report);
+    return report.ok ? 0 : 1;
+  }
 
   targetLoop:
   for (const target of TARGETS) {
@@ -274,6 +354,21 @@ async function main() {
   }
 
   const report = reportFor({ files, issues, skipped_dirs });
+  if (modeName() === 'optimize' && report.ok) {
+    writeManifest(MANIFEST_FILE, buildManifest({
+      kind: MANIFEST_KIND,
+      sourceHash: sourceHashFor(collectTargetPngFiles()),
+      outputs: collectTargetPngFiles().map((file) => ({
+        file,
+        target: TARGETS.find((target) => file.startsWith(`${target}/`)) ?? null,
+        bytes: statSync(join(PROJECT_DIR, file)).size,
+        sha256: sha256File(join(PROJECT_DIR, file)),
+      })),
+      meta: {
+        files: collectTargetPngFiles().length,
+      },
+    }));
+  }
   emitReport(report);
   return report.ok ? 0 : 1;
 }

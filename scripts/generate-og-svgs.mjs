@@ -23,6 +23,17 @@ import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join, relative, resolve } from 'node:path';
 import sharp from 'sharp';
+import {
+  buildManifest,
+  hashExistingSourceFiles,
+  listRelativeFiles,
+  manifestMatches,
+  manifestOutputsForReport,
+  readManifest,
+  sha256File,
+  stableHash,
+  writeManifest,
+} from './lib/generated-asset-manifest.mjs';
 
 const args = process.argv.slice(2);
 const JSON_MODE = args.includes('--json');
@@ -45,7 +56,8 @@ try {
   if (!JSON_MODE) console.warn('resvg unavailable, will emit SVG-only:', err.message);
 }
 
-const defaultProjectDir = dirname(dirname(fileURLToPath(import.meta.url)));
+const SCRIPT_PATH = fileURLToPath(import.meta.url);
+const defaultProjectDir = dirname(dirname(SCRIPT_PATH));
 const projectDirArg = valueFor('--project-dir') || valueFor('--root');
 const ROOT = resolve(projectDirArg || defaultProjectDir);
 const limitArg = valueFor('--limit');
@@ -54,6 +66,8 @@ const REGISTRY = join(ROOT, 'src/data/_meta/tools-registry.json');
 const TOOLS_MD_DIR = join(ROOT, 'src/content/tools');
 const OUT_DIR = join(ROOT, 'public/og/tools');
 const LOGO_DIR = join(ROOT, 'public/logos/tools');
+const MANIFEST_FILE = join(ROOT, 'src/data/generated-assets/og-tools-manifest.json');
+const MANIFEST_KIND = 'tool-og';
 const WRITE_DEBUG_SVG = process.env.AIPEDIA_WRITE_OG_SVG === '1';
 // Two brand logo sizes: a small one for the top-left corner of each
 // tool card (rendered at 56x56), and a large one for the default card
@@ -439,6 +453,10 @@ function reportFor({ mode = modeName(), tools = 0, outputs = [], issues = [], mi
     output_dir: OUT_DIR,
     default_svg: DEFAULT_SVG,
     default_png: DEFAULT_PNG,
+    manifest: {
+      file: relativeFile(MANIFEST_FILE),
+      hit: outputs.some((output) => output.comparison?.kind === 'manifest-hash'),
+    },
     write_debug_svg: WRITE_DEBUG_SVG,
     resvg_available: Boolean(Resvg),
     limit: Number.isFinite(LIMIT) ? LIMIT : null,
@@ -468,6 +486,10 @@ function emitReport(report) {
   for (const issue of report.issues) {
     const level = issue.code === 'resvg-unavailable' || issue.code === 'raster-failed' ? 'warn' : 'error';
     console[level](`[generate-og-svgs] ${issue.detail}`);
+  }
+
+  if (report.manifest.hit) {
+    console.log(`[generate-og-svgs] manifest current; skipped rasterizing ${report.tools} tool card(s).`);
   }
 
   if (report.missing_registry) {
@@ -503,6 +525,57 @@ function readTools() {
   return Object.values(data.tools ?? {})
     .filter((t) => t.slug && t.status !== 'dead' && t.status !== 'acquired')
     .slice(0, LIMIT);
+}
+
+function expectedOutputFiles(tools) {
+  const outputs = [];
+  for (const tool of tools) {
+    if (WRITE_DEBUG_SVG || !Resvg) outputs.push(relativeFile(join(OUT_DIR, `${tool.slug}.svg`)));
+    if (Resvg) outputs.push(relativeFile(join(OUT_DIR, `${tool.slug}.png`)));
+  }
+  if (Resvg && existsSync(DEFAULT_SVG)) outputs.push(relativeFile(DEFAULT_PNG));
+  return outputs.sort((left, right) => left.localeCompare(right));
+}
+
+function sourceHashFor(tools) {
+  const sourceFiles = [
+    relativeFile(SCRIPT_PATH),
+    'package.json',
+    'package-lock.json',
+    relativeFile(REGISTRY),
+    relativeFile(DEFAULT_SVG),
+    ...tools.map((tool) => relativeFile(join(TOOLS_MD_DIR, `${tool.slug}.md`))),
+    ...FONT_PATHS.map((font) => relativeFile(font)),
+    ...listRelativeFiles(ROOT, 'public/brand', (_full, name) => /\.(ico|jpe?g|png|svg|webp)$/i.test(name)),
+    ...listRelativeFiles(ROOT, 'public/logos/tools', (_full, name) => /\.(gif|ico|jpe?g|png|svg|webp)$/i.test(name)),
+  ];
+
+  return stableHash({
+    manifest_kind: MANIFEST_KIND,
+    limit: Number.isFinite(LIMIT) ? LIMIT : null,
+    resvg_available: Boolean(Resvg),
+    write_debug_svg: WRITE_DEBUG_SVG,
+    source_files: hashExistingSourceFiles(ROOT, [...new Set(sourceFiles)]),
+  });
+}
+
+function manifestInputsFor(tools) {
+  return {
+    expectedFiles: expectedOutputFiles(tools),
+    sourceHash: sourceHashFor(tools),
+  };
+}
+
+function manifestOutputsFrom(outputs) {
+  return outputs
+    .filter((output) => existsSync(output.path))
+    .map((output) => ({
+      file: output.file,
+      kind: output.kind,
+      slug: output.slug,
+      bytes: readFileSync(output.path).length,
+      sha256: sha256File(output.path),
+    }));
 }
 
 async function desiredOutputsFor(tools, issues) {
@@ -713,6 +786,21 @@ async function main() {
     return 1;
   }
 
+  const { expectedFiles, sourceHash } = manifestInputsFor(tools);
+  const manifest = readManifest(MANIFEST_FILE);
+  if ((mode === 'generate' || mode === 'check') && manifestMatches({
+    manifest,
+    kind: MANIFEST_KIND,
+    sourceHash,
+    expectedFiles,
+    root: ROOT,
+  })) {
+    const outputs = manifestOutputsForReport(manifest, ROOT);
+    const report = reportFor({ mode, tools: tools.length, outputs, issues });
+    emitReport(report);
+    return report.ok ? 0 : 1;
+  }
+
   const desired = await desiredOutputsFor(tools, issues);
   const outputs = [];
   for (const output of desired) {
@@ -724,6 +812,17 @@ async function main() {
   }
 
   const report = reportFor({ mode, tools: tools.length, outputs, issues });
+  if (mode === 'generate' && report.ok) {
+    writeManifest(MANIFEST_FILE, buildManifest({
+      kind: MANIFEST_KIND,
+      sourceHash,
+      outputs: manifestOutputsFrom(outputs),
+      meta: {
+        tools: tools.length,
+        limit: Number.isFinite(LIMIT) ? LIMIT : null,
+      },
+    }));
+  }
   emitReport(report);
   return report.ok ? 0 : 1;
 }

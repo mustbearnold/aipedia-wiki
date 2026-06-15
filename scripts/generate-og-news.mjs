@@ -17,6 +17,17 @@ import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 
 import { fileURLToPath } from 'node:url';
 import { dirname, join, relative, resolve } from 'node:path';
 import sharp from 'sharp';
+import {
+  buildManifest,
+  hashExistingSourceFiles,
+  listRelativeFiles,
+  manifestMatches,
+  manifestOutputsForReport,
+  readManifest,
+  sha256File,
+  stableHash,
+  writeManifest,
+} from './lib/generated-asset-manifest.mjs';
 
 const args = process.argv.slice(2);
 const JSON_MODE = args.includes('--json');
@@ -37,7 +48,8 @@ try {
   if (!JSON_MODE) console.warn('resvg unavailable, will emit SVG-only:', err.message);
 }
 
-const defaultProjectDir = dirname(dirname(fileURLToPath(import.meta.url)));
+const SCRIPT_PATH = fileURLToPath(import.meta.url);
+const defaultProjectDir = dirname(dirname(SCRIPT_PATH));
 const projectDirArg = valueFor('--project-dir') || valueFor('--root');
 const ROOT = resolve(projectDirArg || defaultProjectDir);
 const limitArg = valueFor('--limit');
@@ -47,6 +59,8 @@ const OUT_DIR = join(ROOT, 'public/og/news');
 const OUT_LIGHT_DIR = join(OUT_DIR, 'light');
 const THUMB_DIR = join(OUT_DIR, 'thumbs');
 const THUMB_LIGHT_DIR = join(THUMB_DIR, 'light');
+const MANIFEST_FILE = join(ROOT, 'src/data/generated-assets/og-news-manifest.json');
+const MANIFEST_KIND = 'news-og';
 const WRITE_DEBUG_SVG = process.env.AIPEDIA_WRITE_OG_SVG === '1';
 const MAX_PNG_OPTIMIZATION_PASSES = 12;
 const RASTER_VISUAL_AVERAGE_DELTA_LIMIT = 4;
@@ -164,16 +178,17 @@ const HEADER_BRAND_FILTER = Object.freeze({
   brightness: 1.02,
 });
 
+const BRAND_LOGO_CANDIDATES = [
+  join(ROOT, 'public/brand/aipedia-logo-crystal-cyan-128.png'),
+  join(ROOT, 'public/brand/aipedia-logo-crystal-cyan-512.png'),
+  join(ROOT, 'public/brand/aipedia-logo-crystal-cyan-64.png'),
+  join(ROOT, 'public/brand/aipedia-logo-crystal-128.png'),
+  join(ROOT, 'public/brand/aipedia-logo-128.png'),
+  join(ROOT, 'public/brand/aipedia-logo.png'),
+];
+
 function pickBrandLogoPath() {
-  const candidates = [
-    join(ROOT, 'public/brand/aipedia-logo-crystal-cyan-128.png'),
-    join(ROOT, 'public/brand/aipedia-logo-crystal-cyan-512.png'),
-    join(ROOT, 'public/brand/aipedia-logo-crystal-cyan-64.png'),
-    join(ROOT, 'public/brand/aipedia-logo-crystal-128.png'),
-    join(ROOT, 'public/brand/aipedia-logo-128.png'),
-    join(ROOT, 'public/brand/aipedia-logo.png'),
-  ];
-  for (const p of candidates) {
+  for (const p of BRAND_LOGO_CANDIDATES) {
     if (existsSync(p)) return p;
   }
   return null;
@@ -719,6 +734,10 @@ function reportFor({ mode = modeName(), records = 0, outputs = [], issues = [], 
     project_dir: ROOT,
     news_dir: NEWS_DIR,
     output_dir: OUT_DIR,
+    manifest: {
+      file: relativeFile(MANIFEST_FILE),
+      hit: outputs.some((output) => output.comparison?.kind === 'manifest-hash'),
+    },
     write_debug_svg: WRITE_DEBUG_SVG,
     resvg_available: Boolean(Resvg),
     limit: Number.isFinite(LIMIT) ? LIMIT : null,
@@ -749,6 +768,10 @@ function emitReport(report) {
   for (const issue of report.issues) {
     const level = ['resvg-unavailable', 'brand-missing', 'raster-failed'].includes(issue.code) ? 'warn' : 'error';
     console[level](`[news-og] ${issue.detail}`);
+  }
+
+  if (report.manifest.hit) {
+    console.log(`[news-og] manifest current; skipped rasterizing ${report.records} news item(s).`);
   }
 
   if (report.mode === 'check') {
@@ -796,6 +819,79 @@ function readNewsFiles(issues) {
   return allFiles.slice(0, LIMIT);
 }
 
+function readNewsRecords(files) {
+  return files
+    .map((file) => {
+      const src = readFileSync(join(NEWS_DIR, file), 'utf8');
+      const news = parseFrontmatter(src);
+      return {
+        file,
+        news,
+        slug: news.slug || file.replace(/\.md$/, ''),
+      };
+    })
+    .filter((record) => record.news.slug || record.news.title);
+}
+
+function expectedOutputFiles(records) {
+  const outputs = [];
+  for (const record of records) {
+    for (const theme of [
+      { key: 'dark', pngDir: OUT_DIR, thumbDir: THUMB_DIR },
+      { key: 'light', pngDir: OUT_LIGHT_DIR, thumbDir: THUMB_LIGHT_DIR },
+    ]) {
+      if (WRITE_DEBUG_SVG || !Resvg) outputs.push(relativeFile(join(theme.pngDir, `${record.slug}.svg`)));
+      if (Resvg) {
+        outputs.push(relativeFile(join(theme.pngDir, `${record.slug}.png`)));
+        outputs.push(relativeFile(join(theme.thumbDir, `${record.slug}.webp`)));
+      }
+    }
+  }
+  return outputs.sort((left, right) => left.localeCompare(right));
+}
+
+function sourceHashFor(records) {
+  const sourceFiles = [
+    relativeFile(SCRIPT_PATH),
+    'package.json',
+    'package-lock.json',
+    ...records.map((record) => relativeFile(join(NEWS_DIR, record.file))),
+    ...BRAND_LOGO_CANDIDATES.map((candidate) => relativeFile(candidate)),
+    ...FONT_PATHS.map((font) => relativeFile(font)),
+    ...listRelativeFiles(ROOT, 'public/logos/tools', (_full, name) => /\.(ico|jpe?g|png|svg|webp)$/i.test(name)),
+  ];
+
+  return stableHash({
+    manifest_kind: MANIFEST_KIND,
+    requested_slugs: requestedSlugs,
+    limit: Number.isFinite(LIMIT) ? LIMIT : null,
+    resvg_available: Boolean(Resvg),
+    write_debug_svg: WRITE_DEBUG_SVG,
+    source_files: hashExistingSourceFiles(ROOT, [...new Set(sourceFiles)]),
+  });
+}
+
+function manifestInputsFor(records) {
+  const expectedFiles = expectedOutputFiles(records);
+  return {
+    expectedFiles,
+    sourceHash: sourceHashFor(records),
+  };
+}
+
+function manifestOutputsFrom(outputs) {
+  return outputs
+    .filter((output) => existsSync(output.path))
+    .map((output) => ({
+      file: output.file,
+      kind: output.kind,
+      slug: output.slug,
+      theme: output.theme,
+      bytes: readFileSync(output.path).length,
+      sha256: sha256File(output.path),
+    }));
+}
+
 async function main() {
   if (HELP_MODE) {
     console.log(usage());
@@ -837,13 +933,25 @@ async function main() {
     return 1;
   }
 
+  const records = readNewsRecords(files);
+  const { expectedFiles, sourceHash } = manifestInputsFor(records);
+  const manifest = readManifest(MANIFEST_FILE);
+  if ((mode === 'generate' || mode === 'check') && manifestMatches({
+    manifest,
+    kind: MANIFEST_KIND,
+    sourceHash,
+    expectedFiles,
+    root: ROOT,
+  })) {
+    const outputs = manifestOutputsForReport(manifest, ROOT);
+    const report = reportFor({ mode, records: records.length, outputs, issues });
+    emitReport(report);
+    return report.ok ? 0 : 1;
+  }
+
   const desired = [];
-  for (const file of files) {
-    const src = readFileSync(join(NEWS_DIR, file), 'utf8');
-    const news = parseFrontmatter(src);
-    if (!news.slug && !news.title) continue;
-    const slug = news.slug || file.replace(/\.md$/, '');
-    desired.push(...await desiredNewsAssets(news, slug, brandLogo, issues));
+  for (const record of records) {
+    desired.push(...await desiredNewsAssets(record.news, record.slug, brandLogo, issues));
   }
 
   const outputs = [];
@@ -855,7 +963,19 @@ async function main() {
     issues.push({ code: 'news-og-stale', detail: 'one or more generated news OG outputs are missing or stale' });
   }
 
-  const report = reportFor({ mode, records: files.length, outputs, issues });
+  const report = reportFor({ mode, records: records.length, outputs, issues });
+  if (mode === 'generate' && report.ok) {
+    writeManifest(MANIFEST_FILE, buildManifest({
+      kind: MANIFEST_KIND,
+      sourceHash,
+      outputs: manifestOutputsFrom(outputs),
+      meta: {
+        records: records.length,
+        requested_slugs: requestedSlugs,
+        limit: Number.isFinite(LIMIT) ? LIMIT : null,
+      },
+    }));
+  }
   emitReport(report);
   return report.ok ? 0 : 1;
 }

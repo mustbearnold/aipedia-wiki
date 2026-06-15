@@ -145,6 +145,8 @@ test('OG optimizer check mode passes after fixture optimization', async () => {
     assert.equal(report.totals.files, 3);
     assert.equal(report.totals.saved_bytes, 0);
     assert.equal(report.totals.written_files, 0);
+    assert.equal(report.manifest.hit, true);
+    assert.ok(report.files.every((file) => file.comparison.kind === 'manifest-hash'));
   } finally {
     rmSync(fixture, { recursive: true, force: true });
   }
