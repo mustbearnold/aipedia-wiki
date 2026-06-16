@@ -682,7 +682,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-15 | /categories/ai-presentation/ | Category | Yes | frontmatter | src/content/categories/ai-presentation.md |
 | 2026-06-15 | /categories/ai-research/ | Category | Yes | frontmatter | src/content/categories/ai-research.md |
 | 2026-06-15 | /categories/ai-search/ | Category | Yes | frontmatter | src/content/categories/ai-search.md |
-| 2026-06-15 | /categories/ai-seo/ | Category | Yes | frontmatter | src/content/categories/ai-seo.md |
 | 2026-06-15 | /categories/ai-video/ | Category | Yes | frontmatter | src/content/categories/ai-video.md |
 | 2026-06-15 | /categories/ai-voice/ | Category | Yes | frontmatter | src/content/categories/ai-voice.md |
 | 2026-06-15 | /categories/ai-writing/ | Category | Yes | frontmatter | src/content/categories/ai-writing.md |
@@ -733,15 +732,14 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-15 | /tools/qodo/ | Tool | Yes | frontmatter | src/content/tools/qodo.md |
 | 2026-06-15 | /tools/qwen/ | Tool | Yes | frontmatter | src/content/tools/qwen.md |
 | 2026-06-15 | /tools/replit-agent/ | Tool | Yes | frontmatter | src/content/tools/replit-agent.md |
-| 2026-06-15 | /trends/ | Static page | Yes | git | src/pages/trends/index.astro |
 | 2026-06-15 | /trends/agent-commerce/ | Trend | Yes | frontmatter | src/content/trends/agent-commerce.md |
-| 2026-06-15 | /trends/geo-trend/ | Trend | Yes | frontmatter | src/content/trends/geo-trend.md |
 | 2026-06-15 | /trends/vibe-coding/ | Trend | Yes | frontmatter | src/content/trends/vibe-coding.md |
 | 2026-06-15 | /workflows/ | Static page | Yes | git | src/pages/workflows/index.astro |
 | 2026-06-16 | / | Static page | Yes | git | src/pages/index.astro |
 | 2026-06-16 | /admin/reviews/ | Static page | No | git | src/pages/admin/reviews.astro |
 | 2026-06-16 | /categories/ | Static page | Yes | git | src/pages/categories/index.astro |
 | 2026-06-16 | /categories/ai-automation/ | Category | Yes | frontmatter | src/content/categories/ai-automation.md |
+| 2026-06-16 | /categories/ai-seo/ | Category | Yes | frontmatter | src/content/categories/ai-seo.md |
 | 2026-06-16 | /explore/ | Static page | Yes | git | src/pages/explore/index.astro |
 | 2026-06-16 | /llms-full.txt | Crawl surface | No | git | src/pages/llms-full.txt.ts |
 | 2026-06-16 | /llms.txt | Crawl surface | No | git | src/pages/llms.txt.ts |
@@ -750,3 +748,5 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-16 | /sitemap-index.xml | Crawl surface | No | git | astro.config.mjs |
 | 2026-06-16 | /tools/ | Static page | Yes | git | src/pages/tools/index.astro |
 | 2026-06-16 | /tools/microsoft-agent-framework/ | Tool | Yes | frontmatter | src/content/tools/microsoft-agent-framework.md |
+| 2026-06-16 | /trends/ | Static page | Yes | git | src/pages/trends/index.astro |
+| 2026-06-16 | /trends/geo-trend/ | Trend | Yes | frontmatter | src/content/trends/geo-trend.md |
