@@ -18,6 +18,7 @@ export const ANSWER_GROUPS: AnswerGroup[] = [
       { slug: 'best-ai-for-writing-2026', q: 'What is the best AI for writing in 2026?', a: 'Claude is the first writing pick; ChatGPT is broader, and Grammarly fits inline review.' },
       { slug: 'best-ai-image-generator-2026', q: 'What is the best AI image generator in 2026?', a: 'ChatGPT with GPT Image 2 is easiest for most people; Midjourney, Ideogram, Firefly, Flux, and Stable Diffusion win specialist jobs.' },
       { slug: 'best-ai-video-generator-2026', q: 'What is the best AI video generator in 2026?', a: 'Runway is safest for production and Edit Studio; Seedance, Veo, and Kling must be tested for frontier quality.' },
+      { slug: 'best-ai-design-tool-2026', q: 'What is the best AI design tool in 2026?', a: 'Canva for marketing graphics and non-designers, Figma for product and UI design, Framer for AI-generated websites, and Uizard for quick UI mockups.' },
       { slug: 'best-ai-voice-generator-2026', q: 'What is the best AI voice generator in 2026?', a: 'ElevenLabs is the safest default; Cartesia, Fish Audio, and Speechify fit narrower workflows.' },
     ],
   },

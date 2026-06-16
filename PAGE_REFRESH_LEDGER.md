@@ -1,7 +1,7 @@
 # AiPedia Page Refresh Ledger
 
 Ledger updated through: 2026-06-16
-Tracked public pages and crawl surfaces: 780
+Tracked public pages and crawl surfaces: 781
 
 Hard rule: every time a tracked website page is edited, refreshed, materially re-ranked, or has volatile facts re-verified, update that page row in this file on the same change. If a child page update affects a parent hub, archive, internal-link block, sitemap, or LLM surface, update those affected rows too.
 
@@ -730,6 +730,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-16 | /admin/reviews/ | Static page | No | git | src/pages/admin/reviews.astro |
 | 2026-06-16 | /answers/ | Static page | Yes | git | src/pages/answers/index.astro |
 | 2026-06-16 | /answers/best-ai-chatbot-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-chatbot-2026.astro |
+| 2026-06-16 | /answers/best-ai-design-tool-2026/ | Static page | Yes | working tree | src/pages/answers/best-ai-design-tool-2026.astro |
 | 2026-06-16 | /answers/best-ai-image-generator-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-image-generator-2026.astro |
 | 2026-06-16 | /answers/best-free-ai-tools-2026/ | Static page | Yes | page metadata | src/pages/answers/best-free-ai-tools-2026.astro |
 | 2026-06-16 | /answers/chatgpt-alternatives-2026/ | Static page | Yes | page metadata | src/pages/answers/chatgpt-alternatives-2026.astro |
