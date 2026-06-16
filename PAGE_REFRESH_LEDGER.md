@@ -607,7 +607,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-12 | /tools/uizard/ | Tool | Yes | frontmatter | src/content/tools/uizard.md |
 | 2026-06-12 | /tools/unbounce/ | Tool | Yes | frontmatter | src/content/tools/unbounce.md |
 | 2026-06-12 | /tools/v0/ | Tool | Yes | frontmatter | src/content/tools/v0.md |
-| 2026-06-12 | /tools/veo/ | Tool | Yes | frontmatter | src/content/tools/veo.md |
 | 2026-06-12 | /tools/vidu/ | Tool | Yes | frontmatter | src/content/tools/vidu.md |
 | 2026-06-12 | /tools/voiceflow/ | Tool | Yes | frontmatter | src/content/tools/voiceflow.md |
 | 2026-06-12 | /tools/voxtral/ | Tool | Yes | frontmatter | src/content/tools/voxtral.md |
@@ -789,5 +788,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-16 | /tools/napkin/ | Tool | Yes | frontmatter | src/content/tools/napkin.md |
 | 2026-06-16 | /tools/tana/ | Tool | Yes | frontmatter | src/content/tools/tana.md |
 | 2026-06-16 | /tools/vapi/ | Tool | Yes | frontmatter | src/content/tools/vapi.md |
+| 2026-06-16 | /tools/veo/ | Tool | Yes | frontmatter | src/content/tools/veo.md |
 | 2026-06-16 | /trends/ | Static page | Yes | git | src/pages/trends/index.astro |
 | 2026-06-16 | /trends/geo-trend/ | Trend | Yes | frontmatter | src/content/trends/geo-trend.md |
