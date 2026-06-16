@@ -620,7 +620,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-16"
     },
     {
       "id": "anthropic-fable-mythos-access",
@@ -6944,6 +6944,15 @@
       "last_checked": "2026-06-16"
     },
     {
+      "id": "openai-chatgpt-free-tier-faq",
+      "label": "ChatGPT Free Tier FAQ",
+      "url": "https://help.openai.com/en/articles/9275245-chatgpt-free-tier-faq",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-16"
+    },
+    {
       "id": "openai-gpt-5-5-announcement",
       "label": "OpenAI GPT-5.5 announcement",
       "url": "https://openai.com/index/introducing-gpt-5-5/",
@@ -6959,7 +6968,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-16"
     },
     {
       "id": "openai-chatgpt-pro-tiers",

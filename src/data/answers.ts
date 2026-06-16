@@ -38,7 +38,7 @@ export const ANSWER_GROUPS: AnswerGroup[] = [
   {
     title: 'Free and budget',
     items: [
-      { slug: 'best-free-ai-tools-2026', q: 'What are the best free AI tools in 2026?', a: 'Start with ChatGPT Free, then add Claude, Gemini, Perplexity, or NotebookLM for specific work.' },
+      { slug: 'best-free-ai-tools-2026', q: 'What are the best free AI tools in 2026?', a: 'ChatGPT Free is the broad default; add Claude, Gemini, Perplexity, or NotebookLM only when their specialist workflow matters.' },
       { slug: 'best-ai-for-students', q: 'What is the best AI for students in 2026?' },
     ],
   },
