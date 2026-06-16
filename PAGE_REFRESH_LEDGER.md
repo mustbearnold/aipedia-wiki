@@ -1,7 +1,7 @@
 # AiPedia Page Refresh Ledger
 
 Ledger updated through: 2026-06-16
-Tracked public pages and crawl surfaces: 747
+Tracked public pages and crawl surfaces: 748
 
 Hard rule: every time a tracked website page is edited, refreshed, materially re-ranked, or has volatile facts re-verified, update that page row in this file on the same change. If a child page update affects a parent hub, archive, internal-link block, sitemap, or LLM surface, update those affected rows too.
 
@@ -744,9 +744,10 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-16 | /compare/claude-vs-poe/ | Comparison | Yes | frontmatter | src/content/comparisons/claude-vs-poe.md |
 | 2026-06-16 | /compare/cursor-vs-replit-agent/ | Comparison | Yes | frontmatter | src/content/comparisons/cursor-vs-replit-agent.md |
 | 2026-06-16 | /compare/deepseek-vs-grok/ | Comparison | Yes | frontmatter | src/content/comparisons/deepseek-vs-grok.md |
+| 2026-06-16 | /compare/deepseek-vs-perplexity/ | Comparison | Yes | working tree | src/content/comparisons/deepseek-vs-perplexity.md |
 | 2026-06-16 | /compare/gemini-vs-poe/ | Comparison | Yes | frontmatter | src/content/comparisons/gemini-vs-poe.md |
 | 2026-06-16 | /compare/github-copilot-vs-replit-agent/ | Comparison | Yes | frontmatter | src/content/comparisons/github-copilot-vs-replit-agent.md |
-| 2026-06-16 | /compare/grok-vs-mistral-ai/ | Comparison | Yes | working tree | src/content/comparisons/grok-vs-mistral-ai.md |
+| 2026-06-16 | /compare/grok-vs-mistral-ai/ | Comparison | Yes | frontmatter | src/content/comparisons/grok-vs-mistral-ai.md |
 | 2026-06-16 | /compare/grok-vs-perplexity/ | Comparison | Yes | frontmatter | src/content/comparisons/grok-vs-perplexity.md |
 | 2026-06-16 | /explore/ | Static page | Yes | git | src/pages/explore/index.astro |
 | 2026-06-16 | /llms-full.txt | Crawl surface | No | git | src/pages/llms-full.txt.ts |
