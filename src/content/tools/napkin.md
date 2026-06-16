@@ -8,7 +8,7 @@ secondary_categories: [ai-presentation]
 company: Napkin
 url: https://www.napkin.ai
 pricing_model: freemium
-price_range: "$0-$30/month + Enterprise custom"
+price_range: "$0-$22/month + Enterprise custom"
 status: active
 launched: 2024
 last_updated: 2026-06-16
@@ -38,8 +38,8 @@ facts:
     volatility: medium
     confidence: high
   pricing_anchor:
-    value: "Free plan available; paid plans run roughly Plus around $10/month and Pro around $24/month, with Enterprise custom. Published prices vary by source and region, so verify on the live pricing page before buying."
-    source: "https://www.napkin.ai"
+    value: "Free plan with weekly AI credits; Plus is $9 per person per month and Pro is $22 per person per month (about 25% off on annual billing), with Enterprise on custom terms. Credits and prices can change, so verify the live pricing page before buying."
+    source: "https://www.napkin.ai/pricing"
     source_label: "Napkin AI pricing"
     source_id: napkin-pricing
     verified_at: 2026-06-16
@@ -47,7 +47,7 @@ facts:
     confidence: medium
     next_review_at: 2026-07-16
   watch_out_for:
-    value: "Napkin is a diagram and visual generator, not a full presentation or design suite, and its public pricing has varied across sources, so confirm the current plan, limits, and export rights on the live site before standardizing on it."
+    value: "Napkin is a diagram and visual generator, not a full presentation or design suite, and its AI generations are metered by credits, so confirm the current credit limits and export rights on the live site before standardizing on it."
     source: "https://www.napkin.ai"
     source_label: "Napkin AI"
     source_id: napkin-product
@@ -81,7 +81,7 @@ The core loop is fast: write or paste text, let Napkin suggest several visual tr
 >
 > **Skip it if you need photoreal images, full presentation design, or video.** [Midjourney](/tools/midjourney/) and [Flux](/tools/flux/) lead on images, [Gamma](/tools/gamma/) and [Canva](/tools/canva/) build full decks, and Napkin does not generate video or audio.
 >
-> **Who pays which tier:** Free for occasional visuals and trial, the Plus tier for individuals who export often and want more AI generations, the Pro tier for heavy users and teams who need collaboration and branding, and Enterprise for organization controls. Confirm the live price before buying, since published figures vary.
+> **Who pays which tier:** Free for occasional visuals and trial, the Plus tier for individuals who export often and want more AI generations, the Pro tier for heavy users and teams who need collaboration and branding, and Enterprise for organization controls. Confirm the live price before buying, since plans are credit-metered.
 
 ## Key Facts
 
@@ -93,7 +93,7 @@ The core loop is fast: write or paste text, let Napkin suggest several visual tr
 | **Exports** | PNG, SVG, PDF, and PowerPoint |
 | **Collaboration** | Share by link; team plans add shared assets and branding |
 | **Free tier** | Yes, with limited AI generations |
-| **Paid plans** | Plus around $10/mo and Pro around $24/mo; Enterprise custom (verify live) |
+| **Paid plans** | Plus $9/mo and Pro $22/mo per person (about 25% off annual); Enterprise custom |
 | **Company** | Napkin |
 | **Video generation** | None |
 
@@ -122,11 +122,11 @@ The tradeoff is scope. Napkin is focused on explanatory visuals, not photoreal a
 
 ## Pricing
 
-Napkin offers a free plan plus paid tiers. As of June 2026, published pricing varies across third-party sources, commonly reported as a Plus tier around $10 per month and a Pro tier around $24 per month, with an Enterprise plan on custom terms. Free covers occasional use with limited AI generations; paid tiers raise generation limits and add collaboration and branding.
+Napkin offers a free plan plus paid tiers. As of June 2026 the live pricing page lists a Plus tier at $9 per person per month and a Pro tier at $22 per person per month, both about 25% cheaper on annual billing, with an Enterprise plan on custom terms. Free covers occasional use with weekly AI credits; paid tiers raise the monthly credit allowance and add branding, more export formats, and team features.
 
-Because the reported figures differ by source and region, treat these as approximate and confirm the current price, generation limits, and export rights on the live pricing page before committing a team.
+Because AI generations are metered by credits and plans can change, confirm the current credit limits and export rights on the live pricing page before committing a team.
 
-Pricing and features verified 2026-06-16 against the [Napkin AI site](https://www.napkin.ai).
+Pricing and features verified 2026-06-16 against the [Napkin AI pricing page](https://www.napkin.ai/pricing).
 
 ## Failure modes
 
@@ -138,7 +138,7 @@ Pricing and features verified 2026-06-16 against the [Napkin AI site](https://ww
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that verifies product and pricing details against primary sources and generates the analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-16 against the [Napkin AI site](https://www.napkin.ai).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that verifies product and pricing details against primary sources and generates the analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-16 against the [Napkin AI pricing page](https://www.napkin.ai/pricing).
 
 ## FAQ
 

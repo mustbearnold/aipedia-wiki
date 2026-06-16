@@ -39,7 +39,7 @@ facts:
     confidence: high
   pricing_anchor:
     value: "Usage-based with no seat fee: Vapi charges about $0.05/min for its platform and passes through model, text-to-speech, transcription, and telephony at cost, so a real call commonly lands around $0.14 to $0.30+ per minute depending on the stack. New accounts get about $10 in free credits."
-    source: "https://vapi.ai"
+    source: "https://vapi.ai/pricing"
     source_label: "Vapi pricing"
     source_id: vapi-pricing
     verified_at: 2026-06-16
