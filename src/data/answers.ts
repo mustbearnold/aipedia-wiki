@@ -15,6 +15,7 @@ export const ANSWER_GROUPS: AnswerGroup[] = [
     items: [
       { slug: 'best-ai-chatbot-2026', q: 'What is the best AI chatbot in 2026?', a: 'ChatGPT is the broadest default; Claude, Gemini, and Perplexity win narrower writing, Google, and research jobs.' },
       { slug: 'best-ai-coding-tool-2026', q: 'What is the best AI coding tool in 2026?', a: 'Cursor for daily IDE work, Claude Code with Opus 4.8 for deep repo tasks, Copilot for GitHub-first teams.' },
+      { slug: 'best-ai-presentation-maker-2026', q: 'What is the best AI presentation maker in 2026?', a: 'Gamma is the best all-round pick; Beautiful.ai wins on design, Pitch on team collaboration, and Canva for all-in-one design.' },
       { slug: 'best-ai-for-writing-2026', q: 'What is the best AI for writing in 2026?', a: 'Claude is the first writing pick; ChatGPT is broader, and Grammarly fits inline review.' },
       { slug: 'best-ai-image-generator-2026', q: 'What is the best AI image generator in 2026?', a: 'ChatGPT with GPT Image 2 is easiest for most people; Midjourney, Ideogram, Firefly, Flux, and Stable Diffusion win specialist jobs.' },
       { slug: 'best-ai-video-generator-2026', q: 'What is the best AI video generator in 2026?', a: 'Runway is safest for production and Edit Studio; Seedance, Veo, and Kling must be tested for frontier quality.' },
