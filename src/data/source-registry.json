@@ -6971,13 +6971,12 @@
     },
     {
       "trust_tier": "primary",
-      "last_checked": "2026-05-04",
       "id": "openai-api-pricing",
       "label": "OpenAI API pricing",
       "url": "https://openai.com/api/pricing/",
       "type": "pricing",
       "volatility": "high",
-      "last_checked": "2026-06-10"
+      "last_checked": "2026-06-16"
     },
     {
       "id": "openai-chatgpt-pricing",
@@ -7103,7 +7102,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-10"
+      "last_checked": "2026-06-16"
     },
     {
       "id": "openclaw-official",
