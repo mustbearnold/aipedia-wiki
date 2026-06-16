@@ -4,9 +4,10 @@
 // to discover the full content map without parsing the sitemap.
 // Refresh metadata: 2026-06-16 answer-cluster refresh after current OpenAI
 // GPT-5.5/ChatGPT pricing/release/model notes, Anthropic model overview,
-// Claude usage-limit and quality-postmortem checks, Google AI plans,
-// Gemini subscriptions, and Perplexity Pro checks; updated answer page schema,
-// answers index, homepage shortcut, source registry, and LLM maintenance.
+// Fable/Mythos access suspension, Claude usage-limit and quality-postmortem
+// checks, Google AI plans, NotebookLM, Gemini subscriptions, and Perplexity
+// Pro checks; updated answer page schema, answers index, homepage shortcut,
+// source registry, and LLM maintenance.
 // Refresh metadata: 2026-06-16 GEO trend and AI SEO parent refresh after
 // current Google Search Console generative-AI report, Google AI features,
 // Writesonic, Semrush, Ahrefs, Pew, arXiv, and WIRED checks; updated first-
@@ -385,7 +386,7 @@ export const GET: APIRoute = async () => {
   lines.push('');
   lines.push('> Extended LLM-friendly site manifest. Enumerates every active page across tools, categories, comparisons, buyer guides, and companies. See /llms.txt for the concise version.');
   lines.push('');
-  lines.push('Recent answer refresh: June 16, 2026 refreshed the best AI chatbot and ChatGPT-vs-Claude answers plus answers index, homepage shortcut, source registry, and LLM maintenance around ChatGPT as the broad default, ChatGPT plan-fit escalation, GPT-5.5 model churn, Claude model availability and usage-limit caveats, Gemini Google-native fit, and Perplexity citation-first research fit.');
+  lines.push('Recent answer refresh: June 16, 2026 refreshed the best AI chatbot, ChatGPT-vs-Claude, and ChatGPT alternatives answers plus answers index, homepage shortcut, source registry, and LLM maintenance around ChatGPT as the broad default, ChatGPT plan-fit escalation, GPT-5.5 model churn, Claude Opus 4.8 fallback and Fable/Mythos access suspension, Gemini/NotebookLM Google-native fit, and Perplexity citation-first research fit.');
   lines.push('Recent news/tool refresh: June 16, 2026 added the Work IQ GA desk and buyer checklist, refreshed Microsoft Agent Framework and AI Automation, and updated source registry, homepage, news archive, RSS, tools index, categories index, explore, and LLM maintenance around Work IQ API GA, Copilot Credit billing, Partner Center admin controls, tenant-bound context, and pending G7 AI summit statements.');
   lines.push('Recent category refresh: June 15, 2026 refreshed AI Presentation plus source registry, homepage, tools index, categories index, explore, and LLM maintenance around Gamma Plus/Pro/Ultra deck/export/API gates, Pitch AI credits and branded export gates, Canva AI Product Terms and operational usage limits, Beautiful.ai trial/pricing, Decktopus credits, Presentations.AI credit discrepancy, Napkin AI visual credits, and Prezi route-check caveats.');
   lines.push('Recent category refresh: June 15, 2026 refreshed AI Music plus source registry, homepage, tools index, categories index, explore, and LLM maintenance around Suno paid-rights timing, Udio disabled downloads, ElevenLabs Music/API, AIVA scoring plans, Mubert Content ID/standalone/stock-site exclusions, Stable Audio 3.0 open weights/API, and Boomy/Stable Audio source-visible pricing caveats.');

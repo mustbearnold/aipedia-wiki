@@ -25,7 +25,7 @@ export const ANSWER_GROUPS: AnswerGroup[] = [
     title: 'Tool comparisons',
     items: [
       { slug: 'chatgpt-vs-claude-which-is-better', q: 'ChatGPT vs Claude: which is better?' },
-      { slug: 'chatgpt-alternatives-2026', q: 'What are the best ChatGPT alternatives in 2026?', a: 'Claude is the first alternative to test; Gemini and Perplexity win Google and research workflows.' },
+      { slug: 'chatgpt-alternatives-2026', q: 'What are the best ChatGPT alternatives in 2026?', a: 'Claude is the first direct alternative; Gemini and Perplexity win Google-native and citation-first workflows.' },
     ],
   },
   {

@@ -629,7 +629,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-16"
     },
     {
       "id": "anthropic-project-glasswing-expansion",
@@ -3698,7 +3698,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-14"
+      "last_checked": "2026-06-16"
     },
     {
       "id": "google-gemini-35-announcement",
@@ -6778,7 +6778,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-16"
     },
     {
       "id": "notebooklm-gemini35-verge",
