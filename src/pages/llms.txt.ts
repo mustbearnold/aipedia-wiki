@@ -3,6 +3,10 @@
 // Copilot) at the canonical index + category hubs + editorial policy.
 //
 // See also /llms-full.txt for the verbose variant with every page listed.
+// Refresh metadata: 2026-06-16 best AI chatbot answer refresh after current
+// OpenAI GPT-5.5/ChatGPT pricing, Anthropic model overview, Google AI
+// plans/subscriptions, and Perplexity Pro checks; updated answer page schema,
+// answers index, homepage shortcut, source registry, and LLM maintenance.
 // Refresh metadata: 2026-06-16 GEO trend and AI SEO parent refresh after
 // current Google Search Console generative-AI report, Google AI features,
 // Writesonic, Semrush, Ahrefs, Pew, arXiv, and WIRED checks; updated first-
@@ -368,6 +372,7 @@ export const GET: APIRoute = async () => {
   lines.push('');
   lines.push(`> Independent AI tools encyclopedia maintained by aipedia.wiki Editorial. ${activeTools.length} active tool pages across ${activeCategories.length} categories, ${comparisons.length} head-to-head comparisons, ${useCases.length} buyer guides. Public pages carry verification metadata and editorial sourcing controls.`);
   lines.push('');
+  lines.push('Recent answer refresh: June 16, 2026 refreshed the best AI chatbot answer plus answers index, homepage shortcut, source registry, and LLM maintenance around ChatGPT as the broad default, ChatGPT plan-fit escalation, Claude model availability caveats, Gemini Google-native fit, and Perplexity citation-first research fit.');
   lines.push('Recent news/tool refresh: June 16, 2026 added the Work IQ GA desk and buyer checklist, refreshed Microsoft Agent Framework and AI Automation, and updated source registry, homepage, news archive, RSS, tools index, categories index, explore, and LLM maintenance around Work IQ API GA, Copilot Credit billing, Partner Center admin controls, tenant-bound context, and pending G7 AI summit statements.');
   lines.push('Recent category refresh: June 15, 2026 refreshed AI Presentation plus source registry, homepage, tools index, categories index, explore, and LLM maintenance around Gamma Plus/Pro/Ultra deck/export/API gates, Pitch AI credits and branded export gates, Canva AI Product Terms and operational usage limits, Beautiful.ai trial/pricing, Decktopus credits, Presentations.AI credit discrepancy, Napkin AI visual credits, and Prezi route-check caveats.');
   lines.push('Recent category refresh: June 15, 2026 refreshed AI Music plus source registry, homepage, tools index, categories index, explore, and LLM maintenance around Suno paid-rights timing, Udio disabled downloads, ElevenLabs Music/API, AIVA scoring plans, Mubert Content ID/standalone/stock-site exclusions, Stable Audio 3.0 open weights/API, and Boomy/Stable Audio source-visible pricing caveats.');
