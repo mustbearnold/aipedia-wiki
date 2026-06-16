@@ -255,7 +255,7 @@ Core pricing and model data above was re-checked against ElevenLabs' published p
 
 ## What it actually is
 
-A single cloud platform covering the full AI audio stack: text-to-speech (Eleven v3, Multilingual v2, Flash v2.5), voice cloning (IVC + PVC), speech-to-text (Scribe v2), conversational AI agents (ElevenAgents), long-form audiobook production (Studio), music generation (Eleven Music), sound effects, and a newer Image to Video surface for turning still images into clips with voice integration. Credits are consumed across generation features; API usage and model choice affect actual cost.
+A single cloud platform covering the full AI audio stack. It spans text-to-speech (Eleven v3, Multilingual v2, Flash v2.5), voice cloning (IVC + PVC), speech-to-text (Scribe v2), conversational AI agents (ElevenAgents), long-form audiobook production (Studio), music generation (Eleven Music), sound effects, and a newer Image to Video surface for turning still images into clips with voice integration. Credits are consumed across generation features; API usage and model choice affect actual cost.
 
 The real moats: voice quality lead (Eleven v3 produces the most expressive TTS output currently shipping), clone quality (Professional Voice Cloning is the near-indistinguishable benchmark other vendors are measured against), and language coverage (70+ languages on v3 is broader than any major competitor).
 
