@@ -128,3 +128,6 @@ src/data/_meta/claim-graph.json
 src/data/_meta/stale-queue.json
 src/data/_meta/signals.jsonl
 src/pages/admin/wiki-health.astro
+
+# Coverage Engine isolated worktrees (one per generated page; merged then removed)
+.worktrees/
