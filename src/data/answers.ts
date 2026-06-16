@@ -14,6 +14,7 @@ export const ANSWER_GROUPS: AnswerGroup[] = [
     title: 'Best tools',
     items: [
       { slug: 'best-ai-chatbot-2026', q: 'What is the best AI chatbot in 2026?', a: 'ChatGPT is the broadest default; Claude, Gemini, and Perplexity win narrower writing, Google, and research jobs.' },
+      { slug: 'best-ai-search-engine-2026', q: 'What is the best AI search engine in 2026?', a: 'Perplexity is the best all-round pick; Kagi for private ad-free search, Phind for developers, and Glean for enterprise.' },
       { slug: 'best-ai-coding-tool-2026', q: 'What is the best AI coding tool in 2026?', a: 'Cursor for daily IDE work, Claude Code with Opus 4.8 for deep repo tasks, Copilot for GitHub-first teams.' },
       { slug: 'best-ai-for-writing-2026', q: 'What is the best AI for writing in 2026?', a: 'Claude is the first writing pick; ChatGPT is broader, and Grammarly fits inline review.' },
       { slug: 'best-ai-image-generator-2026', q: 'What is the best AI image generator in 2026?', a: 'ChatGPT with GPT Image 2 is easiest for most people; Midjourney, Ideogram, Firefly, Flux, and Stable Diffusion win specialist jobs.' },
