@@ -2,6 +2,12 @@
 // Lists every active tool with category + tagline, every comparison, every
 // use-case guide. Intended for crawlers willing to ingest a larger manifest
 // to discover the full content map without parsing the sitemap.
+// Refresh metadata: 2026-06-16 GEO trend and AI SEO parent refresh after
+// current Google Search Console generative-AI report, Google AI features,
+// Writesonic, Semrush, Ahrefs, Pew, arXiv, and WIRED checks; updated first-
+// party measurement reconciliation, prompt/citation/source-log controls,
+// source registry cleanup, homepage, categories/tools/trends/explore indexes,
+// and LLM maintenance.
 // Refresh metadata: 2026-06-16 Work IQ GA desk and buyer checklist refresh after
 // current Microsoft Work IQ API/licensing/Partner Center, Agent Framework,
 // and Council of the EU source checks; updated Microsoft Agent Framework, AI
@@ -377,7 +383,7 @@ export const GET: APIRoute = async () => {
   lines.push('Recent news/tool refresh: June 16, 2026 added the Work IQ GA desk and buyer checklist, refreshed Microsoft Agent Framework and AI Automation, and updated source registry, homepage, news archive, RSS, tools index, categories index, explore, and LLM maintenance around Work IQ API GA, Copilot Credit billing, Partner Center admin controls, tenant-bound context, and pending G7 AI summit statements.');
   lines.push('Recent category refresh: June 15, 2026 refreshed AI Presentation plus source registry, homepage, tools index, categories index, explore, and LLM maintenance around Gamma Plus/Pro/Ultra deck/export/API gates, Pitch AI credits and branded export gates, Canva AI Product Terms and operational usage limits, Beautiful.ai trial/pricing, Decktopus credits, Presentations.AI credit discrepancy, Napkin AI visual credits, and Prezi route-check caveats.');
   lines.push('Recent category refresh: June 15, 2026 refreshed AI Music plus source registry, homepage, tools index, categories index, explore, and LLM maintenance around Suno paid-rights timing, Udio disabled downloads, ElevenLabs Music/API, AIVA scoring plans, Mubert Content ID/standalone/stock-site exclusions, Stable Audio 3.0 open weights/API, and Boomy/Stable Audio source-visible pricing caveats.');
-  lines.push('Recent trend refresh: June 15, 2026 refreshed GEO, Generative Engine Optimization, plus source registry, homepage, trends index, explore, and LLM maintenance around AI visibility prompt tracking, citation/source logs, claim fidelity, Google AI features guidance, Pew click research, AI Overview measurement, and liability-aware source-review controls.');
+  lines.push('Recent trend/category refresh: June 16, 2026 refreshed GEO, Generative Engine Optimization, and the AI SEO parent hub plus source registry, homepage, trends index, categories index, tools index, explore, and LLM maintenance around Google Search Console generative-AI performance reports, AI visibility prompt dashboards, citation/source logs, claim fidelity, Google AI features guidance, Pew click research, AI Overview measurement, and liability-aware source-review controls.');
   lines.push('Recent tool refresh: June 15, 2026 refreshed NotebookLM plus AI Notes, AI Search, AI Research, source registry, homepage, tools index, categories index, explore, and LLM maintenance around public NotebookLM upgrade limits, Deep Research, Audio/Video Overviews, source discovery review, reports, data tables, infographics, slide decks, Cloud/Workspace data handling, and the no-public-API caveat.');
   lines.push('Recent tool refresh: June 15, 2026 refreshed Comet plus AI Search, source registry, homepage, tools index, categories index, explore, and LLM maintenance around Mac/Windows/iOS/Android availability, free-first browser use, Comet Agent queries, Max Assistant, Computer credits, Enterprise controls, and explicit approval for sensitive email, finance, shopping, account, file, or checkout actions.');
   lines.push('Recent tool refresh: June 15, 2026 refreshed Grammarly plus AI Writing, source registry, homepage, tools index, categories index, and LLM maintenance around Pro pricing, Free/Pro prompt allowances, Superhuman Business suite fit, Trust Center privacy posture, Expert Review trust risk, Impact affiliate application link, and the public 90-day affiliate cookie without unapproved payout claims.');

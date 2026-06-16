@@ -338,7 +338,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-16"
     },
     {
       "id": "arxiv-google-ai-overviews-publisher-ecosystem-2026",
@@ -347,7 +347,7 @@
       "type": "third_party",
       "trust_tier": "secondary",
       "volatility": "medium",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-16"
     },
     {
       "id": "google-search-central-ai-features",
@@ -356,7 +356,16 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-16"
+    },
+    {
+      "id": "google-search-console-gen-ai-performance-reports",
+      "label": "Google Search Central: Search Generative AI performance reports",
+      "url": "https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-16"
     },
     {
       "id": "pew-google-ai-summaries-clicks-2025",
@@ -365,7 +374,7 @@
       "type": "third_party",
       "trust_tier": "secondary",
       "volatility": "low",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-16"
     },
     {
       "id": "semrush-ai-visibility-toolkit",
@@ -374,7 +383,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-16"
     },
     {
       "id": "writesonic-ai-visibility-tracker",
@@ -383,7 +392,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-16"
     },
     {
       "id": "ahrefs-pricing",
@@ -448,6 +457,24 @@
       "volatility": "medium"
     },
     {
+      "id": "aipedia-chatgpt-safety-checklist",
+      "label": "AiPedia ChatGPT safety checklist",
+      "url": "https://aipedia.wiki/news/2026-06-14-openai-chatgpt-probe-safety-checklist/",
+      "type": "newsroom",
+      "trust_tier": "secondary",
+      "volatility": "high",
+      "last_checked": "2026-06-16"
+    },
+    {
+      "id": "aipedia-chatgpt-visa-agent-payments",
+      "label": "AiPedia ChatGPT Visa agent payments coverage",
+      "url": "https://aipedia.wiki/news/2026-06-10-openai-visa-chatgpt-agent-payments/",
+      "type": "newsroom",
+      "trust_tier": "secondary",
+      "volatility": "high",
+      "last_checked": "2026-06-16"
+    },
+    {
       "id": "aipedia-fable-mythos-access-update",
       "label": "AiPedia Fable/Mythos access update",
       "url": "https://aipedia.wiki/news/2026-06-13-us-blocks-anthropic-fable-mythos-openai-probe/",
@@ -455,6 +482,15 @@
       "trust_tier": "secondary",
       "volatility": "high",
       "last_checked": "2026-06-15"
+    },
+    {
+      "id": "aipedia-openai-state-ag-probe",
+      "label": "AiPedia OpenAI state attorneys general probe coverage",
+      "url": "https://aipedia.wiki/news/2026-06-13-us-blocks-anthropic-fable-mythos-openai-probe/",
+      "type": "newsroom",
+      "trust_tier": "secondary",
+      "volatility": "high",
+      "last_checked": "2026-06-16"
     },
     {
       "id": "aipedia-june-14-ai-news-desk",
@@ -10745,7 +10781,7 @@
       "type": "third_party",
       "trust_tier": "secondary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-16"
     },
     {
       "id": "wispr-funding-260m",
