@@ -1,7 +1,7 @@
 # AiPedia Page Refresh Ledger
 
 Ledger updated through: 2026-06-16
-Tracked public pages and crawl surfaces: 760
+Tracked public pages and crawl surfaces: 765
 
 Hard rule: every time a tracked website page is edited, refreshed, materially re-ranked, or has volatile facts re-verified, update that page row in this file on the same change. If a child page update affects a parent hub, archive, internal-link block, sitemap, or LLM surface, update those affected rows too.
 
@@ -740,10 +740,15 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-16 | /categories/ai-automation/ | Category | Yes | frontmatter | src/content/categories/ai-automation.md |
 | 2026-06-16 | /categories/ai-infrastructure/ | Category | Yes | frontmatter | src/content/categories/ai-infrastructure.md |
 | 2026-06-16 | /categories/ai-seo/ | Category | Yes | frontmatter | src/content/categories/ai-seo.md |
+| 2026-06-16 | /companies/adobe/ | Company | Yes | frontmatter | src/content/companies/adobe.md |
 | 2026-06-16 | /companies/bytedance/ | Company | Yes | frontmatter | src/content/companies/bytedance.md |
 | 2026-06-16 | /companies/cognition/ | Company | Yes | frontmatter | src/content/companies/cognition.md |
+| 2026-06-16 | /companies/midjourney/ | Company | Yes | frontmatter | src/content/companies/midjourney.md |
 | 2026-06-16 | /companies/minimax/ | Company | Yes | frontmatter | src/content/companies/minimax.md |
 | 2026-06-16 | /companies/perplexity/ | Company | Yes | frontmatter | src/content/companies/perplexity.md |
+| 2026-06-16 | /companies/runway/ | Company | Yes | frontmatter | src/content/companies/runway.md |
+| 2026-06-16 | /companies/stability-ai/ | Company | Yes | frontmatter | src/content/companies/stability-ai.md |
+| 2026-06-16 | /companies/suno/ | Company | Yes | frontmatter | src/content/companies/suno.md |
 | 2026-06-16 | /companies/xai/ | Company | Yes | frontmatter | src/content/companies/xai.md |
 | 2026-06-16 | /compare/chatgpt-vs-poe/ | Comparison | Yes | frontmatter | src/content/comparisons/chatgpt-vs-poe.md |
 | 2026-06-16 | /compare/claude-vs-poe/ | Comparison | Yes | frontmatter | src/content/comparisons/claude-vs-poe.md |
