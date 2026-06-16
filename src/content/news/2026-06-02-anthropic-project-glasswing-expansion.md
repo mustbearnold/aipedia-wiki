@@ -7,8 +7,8 @@ severity: major
 summary: "Anthropic expanded Project Glasswing, its restricted cyberdefense effort around Mythos-class capabilities, signaling that advanced AI security tools may ship through vetted access programs rather than normal Claude tiers."
 categories: [ai-chatbots, ai-infrastructure, ai-automation]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-03
-last_verified: 2026-06-03
+last_updated: 2026-06-16
+last_verified: 2026-06-16
 related_tools: [claude]
 sources:
   - url: https://www.anthropic.com/news/expanding-project-glasswing
@@ -22,6 +22,8 @@ sources:
 # Anthropic expands Project Glasswing and reinforces restricted cyber AI access
 
 Anthropic expanded Project Glasswing on June 2, 2026. The program remains one of the clearest examples of how frontier AI labs may handle high-capability cyber systems: not as a normal subscription feature, but as constrained access for selected defenders.
+
+June 16 refresh note: AiPedia rechecked Anthropic's Project Glasswing expansion and the related White House AI cybersecurity order while adding the [June 2 AI news desk](/news/2026-06-02-ai-news-desk/).
 
 This matters for [Claude](/tools/claude/) buyers even if they cannot access Mythos-class capabilities. It shows Anthropic's product and policy posture around dual-use cyber capability.
 

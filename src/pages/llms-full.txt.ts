@@ -2,6 +2,10 @@
 // Lists every active tool with category + tagline, every comparison, every
 // use-case guide. Intended for crawlers willing to ingest a larger manifest
 // to discover the full content map without parsing the sitemap.
+// Refresh metadata: 2026-06-16 June 1 and June 2 AI news desks backfilled
+// after current June GitHub, NVIDIA, Microsoft, Anthropic, Postman,
+// RelationalAI, 7AI, and White House source checks; homepage, news archive,
+// RSS, and /explore/ inspected.
 // Refresh metadata: 2026-06-15 AI Presentation category refresh after current
 // Gamma, Pitch, Canva, Beautiful.ai, Decktopus, Presentations.AI, Napkin AI,
 // Prezi, and Gemini in Slides route checks; updated AI-credit, export,

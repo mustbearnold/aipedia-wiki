@@ -7,8 +7,8 @@ severity: major
 summary: "GitHub's June 1 Copilot billing update makes AI Credits the practical control surface for chat, code review, agents, Spark, Spaces, CLI, SDK usage, and third-party agent workflows."
 categories: [ai-coding, ai-automation]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-03
-last_verified: 2026-06-03
+last_updated: 2026-06-16
+last_verified: 2026-06-16
 related_tools: [github-copilot]
 sources:
   - url: https://github.blog/changelog/2026-06-01-updates-to-github-copilot-billing-and-plans
@@ -24,6 +24,8 @@ sources:
 # GitHub Copilot AI Credits make agentic coding a budget-control problem
 
 GitHub's June 1, 2026 Copilot billing update is one of the more practical coding-agent stories of the week. It turns [GitHub Copilot](/tools/github-copilot/) from "mostly a seat subscription" into a product where agentic usage needs a budget model.
+
+June 16 refresh note: AiPedia rechecked the GitHub changelog, GitHub usage-billing blog, and billing documentation while adding the [June 1 AI news desk](/news/2026-06-01-ai-news-desk/).
 
 The short version: Copilot AI Credits now matter for more than occasional premium chat. They are the meter behind higher-cost Copilot experiences, especially when the workflow uses agents, code review, Spark, Spaces, CLI, SDK usage, or third-party agent integrations.
 

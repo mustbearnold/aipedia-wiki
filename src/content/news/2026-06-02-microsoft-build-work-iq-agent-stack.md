@@ -7,8 +7,8 @@ severity: major
 summary: "Microsoft used Build 2026 to frame agents around Work IQ APIs, Fabric IQ, Foundry IQ, new Microsoft AI models, Copilot Credits, and a governed Microsoft 365 tenant boundary for enterprise agent development."
 categories: [ai-automation, ai-infrastructure, ai-chatbots]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-03
-last_verified: 2026-06-03
+last_updated: 2026-06-16
+last_verified: 2026-06-16
 related_tools: [microsoft-agent-framework]
 sources:
   - url: https://blogs.microsoft.com/blog/2026/06/02/microsoft-build-2026-be-yourself-at-work/
@@ -22,6 +22,8 @@ sources:
 # Microsoft Build 2026 makes Work IQ, Foundry, and in-house models the agent stack to watch
 
 Microsoft's June 2 Build 2026 announcements put a sharper product shape around enterprise agents: the agent needs a work-intelligence layer, a model stack, a developer framework, governance, and a billing system.
+
+June 16 refresh note: AiPedia rechecked Microsoft's Build 2026 and Work IQ API source pages while adding the [June 2 AI news desk](/news/2026-06-02-ai-news-desk/).
 
 The most buyer-relevant part is **Work IQ**. Microsoft says the Work IQ APIs will be generally available on June 16, 2026, giving developers and IT administrators a way to build agents on the same intelligence layer that powers Microsoft 365 Copilot.
 
