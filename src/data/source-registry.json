@@ -2172,7 +2172,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-16"
     },
     {
       "id": "cursor-model-docs",
@@ -2181,7 +2181,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-16"
     },
     {
       "id": "cursor-pricing",
@@ -2190,7 +2190,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-16"
     },
     {
       "id": "cursor-pricing-policy",
@@ -2199,7 +2199,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-16"
     },
     {
       "id": "cursor-changelog",
@@ -2208,7 +2208,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-16"
     },
     {
       "id": "cursor-composer-25",
@@ -2217,7 +2217,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-16"
     },
     {
       "id": "cursor-bugbot-june-10",
@@ -2226,7 +2226,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-16"
     },
     {
       "id": "cursor-sdk-june-4",
@@ -2235,7 +2235,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-16"
     },
     {
       "id": "cursor-enterprise-orgs",
@@ -2244,7 +2244,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-16"
     },
     {
       "id": "cursor-enterprise",
@@ -2253,7 +2253,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-16"
     },
     {
       "id": "cursor-cli",
@@ -2262,16 +2262,25 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-16"
     },
     {
       "id": "cursor-data-use",
       "label": "Cursor Data Use and Privacy Overview",
-      "url": "https://cursor.com/en-US/data-use",
+      "url": "https://cursor.com/data-use",
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-16"
+    },
+    {
+      "id": "cursor-teams-pricing-june-2026",
+      "label": "Cursor Teams pricing update",
+      "url": "https://cursor.com/blog/teams-pricing-june-2026",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-16"
     },
     {
       "id": "d-id-agents",
