@@ -6953,6 +6953,15 @@
       "last_checked": "2026-06-16"
     },
     {
+      "id": "openai-academy-courses-work-2026",
+      "label": "OpenAI Academy workplace AI courses",
+      "url": "https://openai.com/index/academy-courses-applying-ai-at-work/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-16"
+    },
+    {
       "id": "openai-gpt-5-5-announcement",
       "label": "OpenAI GPT-5.5 announcement",
       "url": "https://openai.com/index/introducing-gpt-5-5/",

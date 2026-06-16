@@ -3,6 +3,11 @@
 // Copilot) at the canonical index + category hubs + editorial policy.
 //
 // See also /llms-full.txt for the verbose variant with every page listed.
+// Refresh metadata: 2026-06-16 June 12 OpenAI Academy workplace-courses
+// backfill after current OpenAI Academy and OpenAI announcement checks;
+// updated June 12 desk, source registry, homepage, news archive, RSS,
+// /explore/, and LLM maintenance around AI Foundations, Applied AI
+// Foundations, Agents and Workflows, certificates, and training governance.
 // Refresh metadata: 2026-06-16 answer-cluster refresh after current OpenAI
 // GPT-5.5/ChatGPT pricing/release/model notes, Anthropic model overview,
 // Fable/Mythos access suspension, Claude usage-limit and quality-postmortem
@@ -375,6 +380,7 @@ export const GET: APIRoute = async () => {
   lines.push(`> Independent AI tools encyclopedia maintained by aipedia.wiki Editorial. ${activeTools.length} active tool pages across ${activeCategories.length} categories, ${comparisons.length} head-to-head comparisons, ${useCases.length} buyer guides. Public pages carry verification metadata and editorial sourcing controls.`);
   lines.push('');
   lines.push('Recent answer refresh: June 16, 2026 refreshed the best AI chatbot, ChatGPT-vs-Claude, ChatGPT alternatives, and best free AI tools answers plus answers index, homepage shortcut, source registry, and LLM maintenance around ChatGPT as the broad default, ChatGPT Free GPT-5.5/tool limits, ChatGPT plan-fit escalation, Claude Free/Pro usage boundaries, Claude Opus 4.8 fallback and Fable/Mythos access suspension, Gemini/NotebookLM Google-native fit, NotebookLM Standard source/research limits, and Perplexity citation-first research fit.');
+  lines.push('Recent news refresh: June 16, 2026 backfilled the June 12 OpenAI Academy workplace-courses story and updated the June 12 desk, source registry, homepage, news archive, RSS, explore, and LLM maintenance around AI Foundations, Applied AI Foundations, Agents and Workflows, completion certificates, enterprise onboarding, and the warning that training certificates do not replace governance.');
   lines.push('Recent news/tool refresh: June 16, 2026 added the Work IQ GA desk and buyer checklist, refreshed Microsoft Agent Framework and AI Automation, and updated source registry, homepage, news archive, RSS, tools index, categories index, explore, and LLM maintenance around Work IQ API GA, Copilot Credit billing, Partner Center admin controls, tenant-bound context, and pending G7 AI summit statements.');
   lines.push('Recent category refresh: June 15, 2026 refreshed AI Presentation plus source registry, homepage, tools index, categories index, explore, and LLM maintenance around Gamma Plus/Pro/Ultra deck/export/API gates, Pitch AI credits and branded export gates, Canva AI Product Terms and operational usage limits, Beautiful.ai trial/pricing, Decktopus credits, Presentations.AI credit discrepancy, Napkin AI visual credits, and Prezi route-check caveats.');
   lines.push('Recent category refresh: June 15, 2026 refreshed AI Music plus source registry, homepage, tools index, categories index, explore, and LLM maintenance around Suno paid-rights timing, Udio disabled downloads, ElevenLabs Music/API, AIVA scoring plans, Mubert Content ID/standalone/stock-site exclusions, Stable Audio 3.0 open weights/API, and Boomy/Stable Audio source-visible pricing caveats.');

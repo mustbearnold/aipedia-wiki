@@ -1,10 +1,10 @@
 {
   "version": 1,
   "kind": "og-png-optimizer",
-  "source_hash": "a2ffe34191fc3646157fe9d9038711268759dab384291b759deef98027bf71b0",
+  "source_hash": "73d72000b239f0ed4763b5684bef7506570267c02c83a9fe179f891e224951b6",
   "generated_at": "deterministic",
   "meta": {
-    "files": 1004
+    "files": 1006
   },
   "outputs": [
     {
@@ -3444,6 +3444,15 @@
       "target": "public/og/news",
       "bytes": 47291,
       "sha256": "d1ec5f73c2c3947b9ea7a5d0a3e353590893f77d2817b4affad1e5fb4771fe18"
+    },
+    {
+      "file": "public/og/news/2026-06-12-openai-academy-work-courses.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 50842,
+      "sha256": "75304ffd1e1286490eff546e880e4b595722d4a07b21f16911ec88d668b809de"
     },
     {
       "file": "public/og/news/2026-06-13-ai-news-desk.png",
@@ -6972,6 +6981,15 @@
       "target": "public/og/news",
       "bytes": 46820,
       "sha256": "49a453efa70885953e603dfe6d043d183b3d4f94923bb4f4e0d04ecf0b542999"
+    },
+    {
+      "file": "public/og/news/light/2026-06-12-openai-academy-work-courses.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 39067,
+      "sha256": "8ab140f1c27676e014c86c034a74deb46e1dfaffc362c14518c0b892e6c3f86a"
     },
     {
       "file": "public/og/news/light/2026-06-13-ai-news-desk.png",
