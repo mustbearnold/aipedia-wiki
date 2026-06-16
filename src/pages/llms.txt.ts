@@ -3,6 +3,13 @@
 // Copilot) at the canonical index + category hubs + editorial policy.
 //
 // See also /llms-full.txt for the verbose variant with every page listed.
+// Refresh metadata: 2026-06-16 Midjourney worth-it answer refresh after
+// current Midjourney plans, V8.1/version docs, GPU cost docs, commercial-use
+// terms, Enterprise API route, GPT Image 2, Ideogram, and Adobe Firefly
+// checks; updated answer schema, answers index, homepage/explore comments,
+// source registry, ledger, and LLM maintenance around Standard-vs-Pro fit,
+// Stealth Mode, SD video Relax Mode, V7 Omni Reference fallback, no public API,
+// and video GPU cost caveats.
 // Refresh metadata: 2026-06-16 Google Cloud data-agents coverage after current
 // Google Cloud announcement, Data Engineering Agent, Conversational Analytics,
 // and MCP server checks; updated June 16 desk, AI Automation, AI
@@ -392,6 +399,7 @@ export const GET: APIRoute = async () => {
   lines.push('');
   lines.push(`> Independent AI tools encyclopedia maintained by aipedia.wiki Editorial. ${activeTools.length} active tool pages across ${activeCategories.length} categories, ${comparisons.length} head-to-head comparisons, ${useCases.length} buyer guides. Public pages carry verification metadata and editorial sourcing controls.`);
   lines.push('');
+  lines.push('Recent answer refresh: June 16, 2026 refreshed the Midjourney worth-it answer plus answers index, homepage/explore comments, source registry, ledger, and LLM maintenance around Standard-vs-Pro fit, V8.1 default status, V7 Omni Reference fallback, Stealth Mode, SD video Relax Mode, video GPU cost caveats, commercial-rights thresholds, no generally available public API, and alternatives for text-heavy, Adobe-governed, assistant-first, or local/API image workflows.');
   lines.push('Recent answer refresh: June 16, 2026 refreshed the Cursor worth-it answer plus answers index, homepage/explore comments, source registry, and LLM maintenance around Cursor Pro/Pro+/Ultra fit, Teams Standard/Premium usage pools, on-demand usage billing, spend alerts, Privacy Mode/ZDR limits, GitHub Copilot rollout fit, and Claude Code terminal-first fit.');
   lines.push('Recent answer refresh: June 16, 2026 refreshed the best AI chatbot, ChatGPT-vs-Claude, ChatGPT alternatives, and best free AI tools answers plus answers index, homepage shortcut, source registry, and LLM maintenance around ChatGPT as the broad default, ChatGPT Free GPT-5.5/tool limits, ChatGPT plan-fit escalation, Claude Free/Pro usage boundaries, Claude Opus 4.8 fallback and Fable/Mythos access suspension, Gemini/NotebookLM Google-native fit, NotebookLM Standard source/research limits, and Perplexity citation-first research fit.');
   lines.push('Recent news/category refresh: June 16, 2026 added Google Cloud data-agent coverage and refreshed the June 16 desk, AI Automation, AI Infrastructure, source registry, homepage, news archive, RSS, tools index, categories index, explore, and LLM maintenance around Data Engineering Agent GA, Managed MCP Servers for Databases GA, Conversational Analytics, Looker and Gemini Enterprise previews, IAM/MCP permissions, SQL verification, BigQuery spend limits, job labels, and preview-vs-GA rollout boundaries.');
