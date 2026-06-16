@@ -570,3 +570,115 @@ See also: [Voice Cloning](#voice-cloning), [Diffusion Model](#diffusion-model), 
 **Compute** is the processing power, usually GPUs or TPUs, used to train and run AI models, and it is one of the biggest costs and constraints in the field. Training frontier models needs vast clusters; serving them needs efficient inference. Compute availability shapes which models exist and how they are priced.
 See also: [Inference](#inference), [Parameters](#parameters), [Quantization](#quantization)
 
+---
+
+## Knowledge Distillation
+
+**Knowledge distillation** trains a smaller, cheaper student model to imitate a larger teacher model, transferring much of its capability at a fraction of the size and cost. It is a common way to ship fast, affordable models derived from frontier ones. Distillation pairs well with quantization for efficient deployment.
+See also: [Fine-tuning](#fine-tuning), [Quantization](#quantization), [Parameters](#parameters)
+
+---
+
+## AI Orchestration
+
+**AI orchestration** is the coordination of multiple models, tools, and steps into a single reliable workflow, deciding what runs when, passing data between stages, and handling errors. It is what turns individual model calls into a dependable product. Agent frameworks and workflow tools both provide orchestration.
+See also: [AI Agent](#ai-agent), [Multi-agent](#multi-agent), [Workflow Automation](#workflow-automation)
+
+---
+
+## Inference Cost
+
+**Inference cost** is what it costs to run a model to produce output, usually billed per input and output token and driven by model size and context length. It is the main ongoing cost of an AI product, distinct from the one-time cost of training. Caching, smaller models, and batching all reduce it.
+See also: [Inference](#inference), [Tokens](#tokens), [Compute](#compute)
+
+---
+
+## Rate Limit
+
+A **rate limit** caps how many requests or tokens you can send to an API in a given period, protecting providers from overload and controlling spend. Hitting one returns an error you handle with backoff and retries. Limits vary by plan and model and are a key planning factor for production apps.
+See also: [API](#api), [Inference Cost](#inference-cost), [Latency](#latency)
+
+---
+
+## Streaming
+
+**Streaming** delivers a model's output token by token as it is generated rather than waiting for the full response. It cuts perceived latency, lets users read along, and avoids timeouts on long outputs. Most chat interfaces and many APIs stream by default.
+See also: [Latency](#latency), [Tokens](#tokens), [Inference](#inference)
+
+---
+
+## Batch Processing
+
+**Batch processing** submits many requests together for asynchronous handling, often at a lower price than real-time calls, in exchange for slower turnaround. It suits bulk jobs like classification, summarization, or dataset generation where latency does not matter. Several providers offer a discounted batch tier.
+See also: [API](#api), [Inference Cost](#inference-cost), [Rate Limit](#rate-limit)
+
+---
+
+## Content Provenance
+
+**Content provenance** is metadata and cryptographic signing that records where a piece of media came from and how it was edited, with C2PA the leading open standard. It helps audiences and platforms tell AI-generated or manipulated content from authentic media. Provenance complements, but does not replace, detection.
+See also: [Deepfake](#deepfake), [Diffusion Model](#diffusion-model), [Voice Cloning](#voice-cloning)
+
+---
+
+## Zero Data Retention
+
+**Zero data retention (ZDR)** is a provider arrangement where prompts and outputs are not stored after a request is served, important for privacy-sensitive and regulated workloads. It is usually limited to specific API or enterprise routes rather than consumer apps, so verify scope before relying on it. Self-hosting is the stronger control.
+See also: [API](#api), [SaaS](#saas), [Local LLM](#local-llm)
+
+---
+
+## Edge AI
+
+**Edge AI** runs models directly on a device or near it, such as a phone, laptop, or sensor, instead of in the cloud, cutting latency and keeping data local. It depends on small or quantized models that fit limited hardware. It is central to private, offline, and real-time use cases.
+See also: [Local LLM](#local-llm), [Quantization](#quantization), [Inference](#inference)
+
+---
+
+## Local LLM
+
+A **local LLM** is a language model you run on your own hardware rather than a hosted API, giving full data control and no per-token fee in exchange for setup and compute. Open-weight models plus quantization make this practical on consumer machines. Tools like Ollama and LM Studio simplify it.
+See also: [Open Weights](#open-weights), [Edge AI](#edge-ai), [Quantization](#quantization)
+
+---
+
+## Text-to-Image
+
+**Text-to-image** generation creates pictures from a written prompt, typically using diffusion models. Quality depends on the prompt, the model, and settings like aspect ratio and seed. It is one of the most popular consumer AI uses, led by tools such as Midjourney.
+See also: [Diffusion Model](#diffusion-model), [Multimodal](#multimodal), [Midjourney](/tools/midjourney/)
+
+---
+
+## Text-to-Video
+
+**Text-to-video** generation produces short video clips from a written prompt, an advancing frontier that is more compute-intensive and harder to control than image generation. Outputs are improving fast in coherence and length. Tools like Runway and several frontier video models compete here.
+See also: [Diffusion Model](#diffusion-model), [Text-to-Image](#text-to-image), [Runway](/tools/runway/)
+
+---
+
+## Negative Prompt
+
+A **negative prompt** tells an image or video model what to avoid, such as extra fingers, text artifacts, or a style you do not want. It complements the main prompt to steer results. Not every model supports it, and its effect varies by system.
+See also: [Text-to-Image](#text-to-image), [Prompt Engineering](#prompt-engineering), [Diffusion Model](#diffusion-model)
+
+---
+
+## Speech-to-Text
+
+**Speech-to-text (STT)**, also called automatic speech recognition, converts spoken audio into written text. It powers transcription, captions, voice commands, and the listening half of voice assistants. Accuracy depends on audio quality, accents, and domain vocabulary.
+See also: [TTS (Text-to-Speech)](#tts), [Real-time Voice](#real-time-voice), [Multimodal](#multimodal)
+
+---
+
+## Real-time Voice
+
+**Real-time voice** is low-latency, speech-to-speech conversation with an AI, where you talk and it replies almost immediately in a natural voice. It combines fast speech recognition, model reasoning, and speech synthesis in a tight loop. It is the basis of modern voice assistants and phone agents.
+See also: [Speech-to-Text](#speech-to-text), [TTS (Text-to-Speech)](#tts), [Latency](#latency)
+
+---
+
+## Coding Agent
+
+A **coding agent** is an AI system that writes, edits, runs, and debugs code with limited human input, iterating against tests, builds, and error output. It goes beyond autocomplete to carry out multi-step development tasks. Examples include terminal and IDE agents like those in Cursor and Claude Code.
+See also: [AI Agent](#ai-agent), [Vibe Coding](#vibe-coding), [Cursor](/tools/cursor/)
+
