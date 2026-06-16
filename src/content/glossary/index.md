@@ -451,3 +451,122 @@ See also: [Agentic AI](#agentic-ai), [Multi-agent](#multi-agent), [Function Call
 **Open weights** means a model's trained parameters are publicly downloadable, so anyone can run, fine-tune, or self-host it, though the license may still restrict commercial use. It is distinct from fully open source, which also releases training code and data. DeepSeek and Mistral publish open-weight models.
 See also: [Open Source vs Closed Source](#open-source-vs-closed-source), [Parameters](#parameters), [DeepSeek](/tools/deepseek/)
 
+---
+
+## Quantization
+
+**Quantization** reduces the numerical precision of a model's weights, for example from 16-bit to 4-bit, to shrink its size and speed up inference, usually with a small accuracy cost. It is what makes large open-weight models runnable on consumer hardware. Many local LLM setups rely on quantized versions of frontier-class models.
+See also: [Parameters](#parameters), [Inference](#inference), [Open Weights](#open-weights)
+
+---
+
+## Temperature
+
+**Temperature** is a sampling setting that controls how random a model's output is: low values make responses focused and deterministic, while high values increase variety and creativity. Lower temperature suits extraction and code; higher suits brainstorming. Note that some newer models restrict or remove this control in favor of effort settings.
+See also: [Tokens](#tokens), [Prompt Engineering](#prompt-engineering), [Hallucination](#hallucination)
+
+---
+
+## Zero-shot Learning
+
+**Zero-shot learning** is when a model performs a task it was not explicitly given examples for, relying only on its pretraining and the instruction in the prompt. Modern frontier models are strong zero-shot, which is why a plain instruction often works. Adding examples (few-shot) can still improve hard or unusual tasks.
+See also: [Few-shot Learning](#few-shot-learning), [In-context Learning](#in-context-learning), [Prompt Engineering](#prompt-engineering)
+
+---
+
+## Few-shot Learning
+
+**Few-shot learning** is when you include a handful of examples in the prompt to show a model the pattern you want before asking it to continue. It often raises accuracy and consistency on formatting, classification, and edge-case tasks without any training. It is a core prompt-engineering technique.
+See also: [Zero-shot Learning](#zero-shot-learning), [In-context Learning](#in-context-learning), [Prompt Engineering](#prompt-engineering)
+
+---
+
+## In-context Learning
+
+**In-context learning** is a model's ability to pick up a task from information in the prompt at inference time, without updating any weights. Examples, instructions, and retrieved documents all shape the output through context alone. It is why larger context windows and good retrieval matter so much.
+See also: [Few-shot Learning](#few-shot-learning), [Context Window](#context-window), [RAG](#rag)
+
+---
+
+## Jailbreak
+
+A **jailbreak** is a prompt crafted to bypass a model's safety guardrails and make it produce restricted or disallowed output. Jailbreaks exploit role-play, obfuscation, or instruction conflicts. Labs counter them with training, guardrails, and red teaming, but it remains an ongoing cat-and-mouse problem.
+See also: [Prompt Injection](#prompt-injection), [Guardrails](#guardrails), [Red Teaming](#red-teaming)
+
+---
+
+## Guardrails
+
+**Guardrails** are the safety constraints placed around a model to keep its behavior and output within acceptable bounds, through training, system prompts, input and output filtering, and tool permissions. They reduce harmful, off-topic, or unsafe responses. Effective guardrails balance safety with not over-refusing legitimate requests.
+See also: [AI Alignment](#ai-alignment), [Jailbreak](#jailbreak), [Constitutional AI](#constitutional-ai)
+
+---
+
+## Constitutional AI
+
+**Constitutional AI** is Anthropic's training approach that uses a written set of principles, a constitution, to guide a model toward helpful and harmless behavior with less direct human labeling. The model critiques and revises its own outputs against the principles. It is a notable alternative to relying solely on human preference labels.
+See also: [RLHF](#rlhf), [AI Alignment](#ai-alignment), [Claude](/tools/claude/)
+
+---
+
+## Prompt Caching
+
+**Prompt caching** stores the processed form of a stable prompt prefix so repeated requests that share it skip recomputation, cutting cost and latency. It pays off when a large system prompt or document is reused across many calls. Keeping the cached prefix byte-identical is what makes it work.
+See also: [System Prompt](#system-prompt), [Tokens](#tokens), [Latency](#latency)
+
+---
+
+## Semantic Search
+
+**Semantic search** finds results by meaning rather than exact keywords, by comparing vector embeddings of the query and the content. It returns relevant passages even when wording differs, which is why it underpins retrieval-augmented generation. It usually runs on a vector database.
+See also: [Embedding](#embedding), [Vector Database](#vector-database), [RAG](#rag)
+
+---
+
+## Grounding
+
+**Grounding** ties a model's output to verifiable external information, such as retrieved documents or live data, so answers reflect real sources rather than only model memory. It reduces hallucination and enables citations. Retrieval-augmented generation is the most common grounding technique.
+See also: [RAG](#rag), [Hallucination](#hallucination), [Semantic Search](#semantic-search)
+
+---
+
+## Synthetic Data
+
+**Synthetic data** is training or evaluation data generated by AI rather than collected from the real world. It helps cover rare cases, protect privacy, and scale datasets cheaply, but poor synthetic data can amplify bias or degrade quality. It is increasingly used to train and fine-tune models.
+See also: [Fine-tuning](#fine-tuning), [Foundation Model](#foundation-model), [AI Bias](#ai-bias)
+
+---
+
+## Benchmark
+
+A **benchmark** is a standardized test used to measure and compare model capabilities on tasks like coding, math, reasoning, or tool use. Benchmarks guide model selection but can be gamed or saturated, so real-world evaluation on your own tasks still matters. Labs cite them heavily at launch.
+See also: [Frontier Model](#frontier-model), [Reasoning Models](#reasoning-models), [Foundation Model](#foundation-model)
+
+---
+
+## Red Teaming
+
+**Red teaming** is the practice of deliberately attacking an AI system to find vulnerabilities, unsafe outputs, and jailbreaks before release. Internal and external red teams probe for harmful, biased, or exploitable behavior. Findings feed back into guardrails and training.
+See also: [Jailbreak](#jailbreak), [Guardrails](#guardrails), [AI Alignment](#ai-alignment)
+
+---
+
+## AI Bias
+
+**AI bias** is systematic unfairness in a model's outputs that reflects skew in its training data, objectives, or design, which can disadvantage particular groups. It matters most in high-stakes uses like hiring, lending, and healthcare. Mitigation spans data curation, evaluation, and human oversight.
+See also: [Synthetic Data](#synthetic-data), [Hallucination](#hallucination), [AI Alignment](#ai-alignment)
+
+---
+
+## Deepfake
+
+A **deepfake** is synthetic image, video, or audio generated to convincingly impersonate a real person, often created with diffusion or voice-cloning models. Deepfakes raise fraud, misinformation, and consent concerns, which is why provenance and watermarking efforts are growing. Detection remains difficult and imperfect.
+See also: [Voice Cloning](#voice-cloning), [Diffusion Model](#diffusion-model), [Multimodal](#multimodal)
+
+---
+
+## Compute
+
+**Compute** is the processing power, usually GPUs or TPUs, used to train and run AI models, and it is one of the biggest costs and constraints in the field. Training frontier models needs vast clusters; serving them needs efficient inference. Compute availability shapes which models exist and how they are priced.
+See also: [Inference](#inference), [Parameters](#parameters), [Quantization](#quantization)
+
