@@ -10880,6 +10880,78 @@
       "trust_tier": "secondary",
       "volatility": "high",
       "last_checked": "2026-06-10"
+    },
+    {
+      "id": "hume-product",
+      "label": "Hume AI official site",
+      "url": "https://www.hume.ai/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-16"
+    },
+    {
+      "id": "hume-pricing",
+      "label": "Hume AI pricing",
+      "url": "https://www.hume.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-16"
+    },
+    {
+      "id": "napkin-product",
+      "label": "Napkin AI official site",
+      "url": "https://www.napkin.ai/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-16"
+    },
+    {
+      "id": "napkin-pricing",
+      "label": "Napkin AI pricing",
+      "url": "https://www.napkin.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-16"
+    },
+    {
+      "id": "tana-product",
+      "label": "Tana official site",
+      "url": "https://tana.inc/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-16"
+    },
+    {
+      "id": "tana-pricing",
+      "label": "Tana pricing",
+      "url": "https://tana.inc/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-16"
+    },
+    {
+      "id": "vapi-product",
+      "label": "Vapi official site",
+      "url": "https://vapi.ai/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-16"
+    },
+    {
+      "id": "vapi-pricing",
+      "label": "Vapi pricing",
+      "url": "https://vapi.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-16"
     }
   ]
 }
