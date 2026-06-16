@@ -12,11 +12,9 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | Last updated | Page | Type | Sitemap | Date source | Source file |
 | --- | --- | --- | --- | --- | --- |
 | 2026-06-01 | /terms/ | Static page | Yes | git | src/pages/terms.astro |
-| 2026-06-06 | /answers/ | Static page | Yes | git | src/pages/answers/index.astro |
 | 2026-06-06 | /disclosure/ | Static page | Yes | page metadata | src/pages/disclosure.astro |
 | 2026-06-07 | /reports/ | Static page | Yes | git | src/pages/reports/index.astro |
 | 2026-06-12 | /about/ | Static page | Yes | git | src/pages/about/index.astro |
-| 2026-06-12 | /answers/best-ai-chatbot-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-chatbot-2026.astro |
 | 2026-06-12 | /answers/best-ai-coding-tool-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-coding-tool-2026.astro |
 | 2026-06-12 | /answers/best-ai-for-students/ | Static page | Yes | page metadata | src/pages/answers/best-ai-for-students.astro |
 | 2026-06-12 | /answers/best-ai-for-writing-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-for-writing-2026.astro |
@@ -737,6 +735,8 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-15 | /workflows/ | Static page | Yes | git | src/pages/workflows/index.astro |
 | 2026-06-16 | / | Static page | Yes | git | src/pages/index.astro |
 | 2026-06-16 | /admin/reviews/ | Static page | No | git | src/pages/admin/reviews.astro |
+| 2026-06-16 | /answers/ | Static page | Yes | git | src/pages/answers/index.astro |
+| 2026-06-16 | /answers/best-ai-chatbot-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-chatbot-2026.astro |
 | 2026-06-16 | /categories/ | Static page | Yes | git | src/pages/categories/index.astro |
 | 2026-06-16 | /categories/ai-automation/ | Category | Yes | frontmatter | src/content/categories/ai-automation.md |
 | 2026-06-16 | /categories/ai-seo/ | Category | Yes | frontmatter | src/content/categories/ai-seo.md |
