@@ -1,10 +1,10 @@
 {
   "version": 1,
   "kind": "og-png-optimizer",
-  "source_hash": "73d72000b239f0ed4763b5684bef7506570267c02c83a9fe179f891e224951b6",
+  "source_hash": "da803e80842d9d24c51c626e5ccdb3ec5de90e7676edd465ea763bb45984fe1a",
   "generated_at": "deterministic",
   "meta": {
-    "files": 1006
+    "files": 1008
   },
   "outputs": [
     {
@@ -3532,8 +3532,17 @@
       "slug": null,
       "theme": null,
       "target": "public/og/news",
-      "bytes": 49855,
-      "sha256": "3ace40334013486fb9b22998462df5bcc34beaa34af322bd8f161634fa602fee"
+      "bytes": 53385,
+      "sha256": "238225c7ec3249ab8a0eea5216072e60d8976c6e154c94d47e24c27a2939ea43"
+    },
+    {
+      "file": "public/og/news/2026-06-16-google-cloud-data-agents.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 48883,
+      "sha256": "05c1d7a9eb192eaf55b494dcaf0d004bc0a6c1b01323c4d5d1005fe40ae19eb2"
     },
     {
       "file": "public/og/news/2026-06-16-microsoft-work-iq-ga-copilot-credits.png",
@@ -7069,8 +7078,17 @@
       "slug": null,
       "theme": null,
       "target": "public/og/news",
-      "bytes": 50696,
-      "sha256": "8806ef1f59887d2d5cabf3e4fb077d46a6bb88e1b38e8c2c067ff81963b163d3"
+      "bytes": 42517,
+      "sha256": "a96c7f27ee8276abdee018bf833a50425851e2b7b8642b01f1d3edfd4ccf4b93"
+    },
+    {
+      "file": "public/og/news/light/2026-06-16-google-cloud-data-agents.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 47540,
+      "sha256": "42a505c6cfb57df8eb2d2554eb1c56a7aa38c886358f719406d79d1433c0f0d7"
     },
     {
       "file": "public/og/news/light/2026-06-16-microsoft-work-iq-ga-copilot-credits.png",

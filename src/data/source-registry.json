@@ -3665,6 +3665,42 @@
       "last_checked": "2026-06-15"
     },
     {
+      "id": "google-cloud-conversational-analytics",
+      "label": "Google Cloud Conversational Analytics docs",
+      "url": "https://docs.cloud.google.com/bigquery/docs/conversational-analytics",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-16"
+    },
+    {
+      "id": "google-cloud-data-agents-2026",
+      "label": "Google Cloud data agents announcement",
+      "url": "https://cloud.google.com/blog/products/data-analytics/new-data-agents-across-the-agentic-data-cloud",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-16"
+    },
+    {
+      "id": "google-cloud-data-engineering-agent",
+      "label": "Google Cloud Data Engineering Agent docs",
+      "url": "https://docs.cloud.google.com/bigquery/docs/data-engineering-agent-pipelines",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-16"
+    },
+    {
+      "id": "google-cloud-managed-mcp-servers",
+      "label": "Google Cloud MCP servers docs",
+      "url": "https://docs.cloud.google.com/mcp/manage-mcp-servers",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-16"
+    },
+    {
       "id": "gemini-code-assist-business",
       "label": "Gemini Code Assist for teams and businesses",
       "url": "https://cloud.google.com/products/gemini/code-assist",

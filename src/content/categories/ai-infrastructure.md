@@ -5,10 +5,10 @@ title: AI Infrastructure & Model APIs
 description: Developer platforms for LLM routing, pay-as-you-go model APIs, hosted inference, serverless GPUs, vector databases, speech APIs, and production retrieval systems.
 tool_count: 12
 seo_title: "Best AI Infrastructure & Model API Tools (June 2026)"
-meta_description: "Updated June 15, 2026: compare OpenRouter, OpenAI API, Claude API after Fable/Mythos suspension, Gemini API, Mistral, Groq, Together AI, Replicate, fal, Fireworks AI, Modal, Browserbase, Deepgram, Pinecone, Weaviate/Engram, Qdrant, Llama, LM Studio, and model-availability governance tradeoffs."
+meta_description: "Updated June 16, 2026: compare OpenRouter, OpenAI API, Claude API after Fable/Mythos suspension, Gemini API, Google Cloud data agents and managed MCP servers, Mistral, Groq, Together AI, Replicate, fal, Fireworks AI, Modal, Browserbase, Deepgram, Pinecone, Weaviate/Engram, Qdrant, Llama, LM Studio, and model-availability governance tradeoffs."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-15
-last_verified: 2026-06-15
+last_updated: 2026-06-16
+last_verified: 2026-06-16
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -33,6 +33,8 @@ The late-May infrastructure update is agent control. CoreWeave's [training-to-in
 The June 3 update widens that control story. Microsoft Build put Work IQ and Foundry around enterprise agents; GitHub made the Copilot SDK generally available while AI Credits became the agent-usage meter; NVIDIA pushed enterprise agents, Cosmos 3, open physical-AI agent skills, Alpamayo 2 Super, RTX Spark, and DGX Station for Windows; Postman launched AI Engineer for API work; RelationalAI moved agentic decision intelligence deeper into Snowflake; 7AI kept security agents in the proactive-hunting lane; and the White House AI cybersecurity order put advanced AI cyber capability into public-sector and critical-infrastructure policy. Infrastructure buyers should evaluate agent stacks by context access, runtime isolation, traces, evals, spend controls, simulation/data pipelines, local-vs-cloud compute, and write-action approvals.
 
 The June 14 update keeps model availability as a first-class infrastructure risk. [Claude Fable/Mythos access is suspended, GPT-5.2 is retired from ChatGPT, and OpenAI faces reported state-AG scrutiny](/news/2026-06-13-us-blocks-anthropic-fable-mythos-openai-probe/). Direct frontier API buyers should now document the exact model route in production, the fallback route if a model is suspended or retired, the retention policy for that model class, the staff/client access exposure for restricted routes, and the legal/privacy review path for sensitive users. The [AI Model Availability & Churn Tracker](/trends/model-availability-churn/) is now the canonical AiPedia surface for these app/API/router distinctions.
+
+The June 16 infrastructure update is governed data agents. Google Cloud's [data-agent rollout](/news/2026-06-16-google-cloud-data-agents/) puts Conversational Analytics, Data Engineering Agent, Looker agents, Gemini Enterprise data access, Data Agent Kit, Managed MCP Servers for Databases, and QueryData into the infrastructure buying conversation. Data Engineering Agent and Managed MCP Servers for Databases are GA, while many of the more ambitious analytics, Looker, Gemini Enterprise, and commerce routes remain preview. Infrastructure teams should evaluate these by IAM scope, `roles/mcp.toolUser`, service permissions, separate production identities, SQL verification, BigQuery spend limits, job labels, audit logging, Model Armor payload logging, and GA-versus-preview fallback plans.
 
 **Use [OpenRouter](/tools/openrouter/) when you need one API across many model providers.** The current pricing page lists pay-as-you-go access to 400+ models and 60+ providers, with budget controls, activity logs, prompt caching, preferred vendor selections, and model-priced token billing. Its [May 27 funding signal](/news/2026-05-27-openrouter-series-b-model-routing/) makes the category clearer: routing, fallback, governance, and spend visibility are becoming production infrastructure, not just developer convenience.
 
@@ -145,6 +147,10 @@ Do not publish infrastructure pages with old flat monthly subscription framing. 
 - [Geordie AI Series A](https://www.geordie.ai/resources/geordie-ai-raises-30m-series-a-as-enterprises-race-to-govern-autonomous-ai-agents/) (verified 2026-05-31)
 - [Sysdig LLM-agent intrusion analysis](https://www.sysdig.com/blog/ai-agent-at-the-wheel-how-an-attacker-used-llms-to-move-from-a-cve-to-an-internal-database-in-4-pivots) (verified 2026-05-31)
 - [Microsoft Build 2026 Work IQ and Foundry agent stack](https://blogs.microsoft.com/blog/2026/06/02/microsoft-build-2026-be-yourself-at-work/) (verified 2026-06-12)
+- [Google Cloud data agents announcement](https://cloud.google.com/blog/products/data-analytics/new-data-agents-across-the-agentic-data-cloud) (verified 2026-06-16)
+- [Google Cloud Data Engineering Agent docs](https://docs.cloud.google.com/bigquery/docs/data-engineering-agent-pipelines) (verified 2026-06-16)
+- [Google Cloud MCP servers docs](https://docs.cloud.google.com/mcp/manage-mcp-servers) (verified 2026-06-16)
+- [Google Cloud Conversational Analytics docs](https://docs.cloud.google.com/bigquery/docs/conversational-analytics) (verified 2026-06-16)
 - [GitHub Copilot SDK GA](https://github.blog/changelog/2026-06-02-copilot-sdk-is-now-generally-available/) (verified 2026-06-12)
 - [NVIDIA enterprise software agents](https://investor.nvidia.com/news/press-release-details/2026/Enterprise-Software-Leaders-Build-AI-Agents-With-NVIDIA/default.aspx) (verified 2026-06-12)
 - [NVIDIA Cosmos 3 physical AI model](https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Launches-Cosmos-3-the-Open-Frontier-Foundation-Model-for-Physical-AI/default.aspx) (verified 2026-06-12)
