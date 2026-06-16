@@ -682,3 +682,143 @@ See also: [Speech-to-Text](#speech-to-text), [TTS (Text-to-Speech)](#tts), [Late
 A **coding agent** is an AI system that writes, edits, runs, and debugs code with limited human input, iterating against tests, builds, and error output. It goes beyond autocomplete to carry out multi-step development tasks. Examples include terminal and IDE agents like those in Cursor and Claude Code.
 See also: [AI Agent](#ai-agent), [Vibe Coding](#vibe-coding), [Cursor](/tools/cursor/)
 
+---
+
+## Pretraining
+
+**Pretraining** is the initial, expensive phase where a model learns general patterns from a huge unlabeled dataset using self-supervision, before any task-specific tuning. It produces the base capabilities that fine-tuning and prompting later shape. Most of a frontier model's cost and knowledge comes from pretraining.
+See also: [Foundation Model](#foundation-model), [Fine-tuning](#fine-tuning), [Parameters](#parameters)
+
+---
+
+## Transfer Learning
+
+**Transfer learning** reuses a model trained on one broad task as the starting point for another, so you adapt existing knowledge instead of training from scratch. It is why a single pretrained foundation model can be fine-tuned for many specialized uses with far less data and compute.
+See also: [Pretraining](#pretraining), [Fine-tuning](#fine-tuning), [Foundation Model](#foundation-model)
+
+---
+
+## Overfitting
+
+**Overfitting** happens when a model learns its training data too closely, including noise, and then performs poorly on new inputs. It signals poor generalization and is countered with more or cleaner data, regularization, and held-out evaluation. Benchmarks can mask it if a model has effectively memorized them.
+See also: [Fine-tuning](#fine-tuning), [Benchmark](#benchmark), [Synthetic Data](#synthetic-data)
+
+---
+
+## Tool Use
+
+**Tool use** is a model's ability to call external functions, APIs, or services to act and fetch information beyond its training, then incorporate the results. It is what turns a chatbot into an agent that can search, calculate, or change real systems. Function calling and MCP are the common mechanisms.
+See also: [Function Calling](#function-calling), [AI Agent](#ai-agent), [MCP (Model Context Protocol)](#mcp)
+
+---
+
+## Structured Output
+
+**Structured output** constrains a model to return data in a defined shape, such as JSON matching a schema, so applications can parse it reliably. It removes brittle text scraping and is essential for tool use and pipelines. Many APIs enforce it with a schema or strict mode.
+See also: [Function Calling](#function-calling), [Tool Use](#tool-use), [Prompt Engineering](#prompt-engineering)
+
+---
+
+## Reranking
+
+**Reranking** is a second retrieval step that reorders an initial set of candidate results by relevance to the query, usually with a model more precise than the first-pass search. It sharpens the context fed to a model in retrieval-augmented generation, improving answer quality.
+See also: [Semantic Search](#semantic-search), [RAG](#rag), [Embedding](#embedding)
+
+---
+
+## Chunking
+
+**Chunking** is splitting documents into smaller passages before embedding them, so retrieval can return focused, relevant pieces rather than whole files. Chunk size and overlap strongly affect retrieval quality. It is a key tuning decision in any retrieval-augmented generation pipeline.
+See also: [RAG](#rag), [Embedding](#embedding), [Vector Database](#vector-database)
+
+---
+
+## Context Engineering
+
+**Context engineering** is the practice of deciding what information goes into a model's context window and how it is arranged: instructions, retrieved data, examples, and history. As context windows and agents grow, managing this well matters more than single-prompt wording. It includes retrieval, compaction, and ordering.
+See also: [Context Window](#context-window), [RAG](#rag), [Prompt Engineering](#prompt-engineering)
+
+---
+
+## Watermarking
+
+**Watermarking** embeds a detectable signal into AI-generated text, images, audio, or video so it can later be identified as machine-made. It supports provenance and abuse detection, but signals can be weakened by editing and are not foolproof. It complements, rather than replaces, content provenance standards.
+See also: [Content Provenance](#content-provenance), [Deepfake](#deepfake), [Diffusion Model](#diffusion-model)
+
+---
+
+## PII
+
+**PII (personally identifiable information)** is data that can identify a specific person, such as names, emails, or IDs. Sending PII to AI services raises privacy and legal obligations, so teams redact it, restrict retention, or self-host. Handling PII correctly is central to AI compliance.
+See also: [Zero Data Retention](#zero-data-retention), [Compliance](#compliance), [Local LLM](#local-llm)
+
+---
+
+## Compliance
+
+**Compliance** is meeting the legal, regulatory, and security standards that apply to handling data and deploying software, such as SOC 2, GDPR, and HIPAA. For AI buyers it shapes which vendors and data flows are allowed. Enterprise AI plans often add the controls and certifications compliance requires.
+See also: [PII](#pii), [Zero Data Retention](#zero-data-retention), [SSO](#sso)
+
+---
+
+## SSO
+
+**SSO (single sign-on)** lets users access multiple applications with one set of credentials managed by a central identity provider. In AI tools it is an enterprise requirement for security and user management, usually paired with provisioning and audit controls. It typically appears only on business and enterprise plans.
+See also: [Compliance](#compliance), [SaaS](#saas), [API](#api)
+
+---
+
+## Knowledge Graph
+
+A **knowledge graph** stores information as a network of entities and the relationships between them, enabling structured queries and reasoning over connected facts. Paired with language models, it can supply precise, relational grounding that plain text retrieval misses. It is one approach to reducing hallucination.
+See also: [RAG](#rag), [Semantic Search](#semantic-search), [Grounding](#grounding)
+
+---
+
+## Superintelligence
+
+**Superintelligence** is a hypothetical AI whose general capability far exceeds the best humans across virtually all domains, beyond even AGI. It is a central subject of long-term safety and governance debate. No such system exists today, and whether or when one could is deeply uncertain.
+See also: [AGI](#agi), [Frontier Model](#frontier-model), [AI Alignment](#ai-alignment)
+
+---
+
+## Digital Human
+
+A **digital human** is an AI-driven, often photoreal avatar that can speak, listen, and present, used for video, customer service, and training. It combines generated video, voice, and sometimes real-time conversation. Quality and consent controls vary, and it overlaps with deepfake concerns when it mimics real people.
+See also: [Deepfake](#deepfake), [Text-to-Video](#text-to-video), [Real-time Voice](#real-time-voice)
+
+---
+
+## Music Generation
+
+**Music generation** is AI creating original music, vocals, or sound from text prompts or other inputs. Modern tools produce full tracks with structure and lyrics, raising both creative possibilities and rights questions. It sits alongside image and video as a major generative-media category.
+See also: [Diffusion Model](#diffusion-model), [Multimodal](#multimodal), [TTS (Text-to-Speech)](#tts)
+
+---
+
+## Code Completion
+
+**Code completion** is inline AI suggestion of the next code as you type, from a single line to a whole function, accepted with a keystroke. It is the most widely used AI coding feature and is distinct from an agent that completes multi-step tasks. It speeds routine coding without taking over control.
+See also: [Coding Agent](#coding-agent), [AI Copilot](#ai-copilot), [Vibe Coding](#vibe-coding)
+
+---
+
+## AI Copilot
+
+An **AI copilot** is an assistant embedded inside an application that helps with tasks in context, suggesting, drafting, or acting while the human stays in control. The term spans coding, writing, and productivity tools. It contrasts with fully autonomous agents by keeping a human in the loop.
+See also: [Code Completion](#code-completion), [Coding Agent](#coding-agent), [AI Agent](#ai-agent)
+
+---
+
+## App Builder
+
+An **app builder** is an AI tool that turns a plain-language description into a working, often deployable application, handling UI, logic, and sometimes a database and hosting. It targets non-developers and rapid prototyping. Output usually still needs review before it becomes production software.
+See also: [Vibe Coding](#vibe-coding), [No-code/Low-code](#no-code-low-code), [Coding Agent](#coding-agent)
+
+---
+
+## Usage-based Pricing
+
+**Usage-based pricing** charges by how much you consume, such as tokens, credits, API calls, or compute time, rather than a flat subscription. It is common for AI products because inference cost scales with use. It rewards light users but can make heavy or unpredictable workloads hard to budget.
+See also: [Inference Cost](#inference-cost), [SaaS](#saas), [Rate Limit](#rate-limit)
+
