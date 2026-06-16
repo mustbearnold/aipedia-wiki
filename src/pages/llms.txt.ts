@@ -21,6 +21,12 @@
 // checks, Google AI plans, NotebookLM, Gemini subscriptions, and Perplexity
 // Pro checks; updated answer page schema, answers index, homepage shortcut,
 // source registry, and LLM maintenance.
+// Refresh metadata: 2026-06-16 Cursor worth-it answer refresh after current
+// Cursor pricing, pricing policy, Teams pricing, changelog, data-use, GitHub
+// Copilot plans, and Claude Code release checks; updated answer schema,
+// answers index, homepage/explore comments, source registry, and LLM
+// maintenance around Pro/Pro+/Ultra fit, on-demand usage, spend alerts,
+// Privacy Mode/ZDR limits, Copilot rollout, and Claude Code terminal fit.
 // Refresh metadata: 2026-06-16 GEO trend and AI SEO parent refresh after
 // current Google Search Console generative-AI report, Google AI features,
 // Writesonic, Semrush, Ahrefs, Pew, arXiv, and WIRED checks; updated first-
@@ -386,6 +392,7 @@ export const GET: APIRoute = async () => {
   lines.push('');
   lines.push(`> Independent AI tools encyclopedia maintained by aipedia.wiki Editorial. ${activeTools.length} active tool pages across ${activeCategories.length} categories, ${comparisons.length} head-to-head comparisons, ${useCases.length} buyer guides. Public pages carry verification metadata and editorial sourcing controls.`);
   lines.push('');
+  lines.push('Recent answer refresh: June 16, 2026 refreshed the Cursor worth-it answer plus answers index, homepage/explore comments, source registry, and LLM maintenance around Cursor Pro/Pro+/Ultra fit, Teams Standard/Premium usage pools, on-demand usage billing, spend alerts, Privacy Mode/ZDR limits, GitHub Copilot rollout fit, and Claude Code terminal-first fit.');
   lines.push('Recent answer refresh: June 16, 2026 refreshed the best AI chatbot, ChatGPT-vs-Claude, ChatGPT alternatives, and best free AI tools answers plus answers index, homepage shortcut, source registry, and LLM maintenance around ChatGPT as the broad default, ChatGPT Free GPT-5.5/tool limits, ChatGPT plan-fit escalation, Claude Free/Pro usage boundaries, Claude Opus 4.8 fallback and Fable/Mythos access suspension, Gemini/NotebookLM Google-native fit, NotebookLM Standard source/research limits, and Perplexity citation-first research fit.');
   lines.push('Recent news/category refresh: June 16, 2026 added Google Cloud data-agent coverage and refreshed the June 16 desk, AI Automation, AI Infrastructure, source registry, homepage, news archive, RSS, tools index, categories index, explore, and LLM maintenance around Data Engineering Agent GA, Managed MCP Servers for Databases GA, Conversational Analytics, Looker and Gemini Enterprise previews, IAM/MCP permissions, SQL verification, BigQuery spend limits, job labels, and preview-vs-GA rollout boundaries.');
   lines.push('Recent news refresh: June 16, 2026 backfilled the June 12 OpenAI Academy workplace-courses story and updated the June 12 desk, source registry, homepage, news archive, RSS, explore, and LLM maintenance around AI Foundations, Applied AI Foundations, Agents and Workflows, completion certificates, enterprise onboarding, and the warning that training certificates do not replace governance.');

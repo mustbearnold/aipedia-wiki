@@ -32,7 +32,7 @@ export const ANSWER_GROUPS: AnswerGroup[] = [
     title: 'Buying decisions',
     items: [
       { slug: 'is-midjourney-worth-it', q: 'Is Midjourney worth it in 2026?' },
-      { slug: 'is-cursor-worth-it', q: 'Is Cursor worth the money?' },
+      { slug: 'is-cursor-worth-it', q: 'Is Cursor worth the money?', a: 'Cursor is worth it for daily VS Code-style IDE work; wait if you code sporadically, need terminal-first agents, or cannot govern agent spend and privacy.' },
     ],
   },
   {
