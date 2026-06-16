@@ -3,6 +3,12 @@
 // Copilot) at the canonical index + category hubs + editorial policy.
 //
 // See also /llms-full.txt for the verbose variant with every page listed.
+// Refresh metadata: 2026-06-16 best AI image generator answer refresh after
+// current GPT Image 2 docs, OpenAI API pricing/deprecations, Midjourney
+// V8.1/version/plans, Ideogram pricing, Adobe Firefly plans, FLUX.2, and Stable
+// Diffusion 3.5 checks; updated answer schema, answers index, homepage/explore
+// comments, source registry cleanup, ledger, and LLM maintenance around
+// default-vs-specialist image-generator routing.
 // Refresh metadata: 2026-06-16 Midjourney worth-it answer refresh after
 // current Midjourney plans, V8.1/version docs, GPU cost docs, commercial-use
 // terms, Enterprise API route, GPT Image 2, Ideogram, and Adobe Firefly
@@ -399,6 +405,7 @@ export const GET: APIRoute = async () => {
   lines.push('');
   lines.push(`> Independent AI tools encyclopedia maintained by aipedia.wiki Editorial. ${activeTools.length} active tool pages across ${activeCategories.length} categories, ${comparisons.length} head-to-head comparisons, ${useCases.length} buyer guides. Public pages carry verification metadata and editorial sourcing controls.`);
   lines.push('');
+  lines.push('Recent answer refresh: June 16, 2026 refreshed the best AI image generator answer plus answers index, homepage/explore comments, source registry cleanup, ledger, and LLM maintenance around ChatGPT with GPT Image 2 as the default, Midjourney for art direction, Ideogram for typography, Adobe Firefly for Adobe-governed creative, and Flux/Stable Diffusion/API-first routes for control-heavy workflows.');
   lines.push('Recent answer refresh: June 16, 2026 refreshed the Midjourney worth-it answer plus answers index, homepage/explore comments, source registry, ledger, and LLM maintenance around Standard-vs-Pro fit, V8.1 default status, V7 Omni Reference fallback, Stealth Mode, SD video Relax Mode, video GPU cost caveats, commercial-rights thresholds, no generally available public API, and alternatives for text-heavy, Adobe-governed, assistant-first, or local/API image workflows.');
   lines.push('Recent answer refresh: June 16, 2026 refreshed the Cursor worth-it answer plus answers index, homepage/explore comments, source registry, and LLM maintenance around Cursor Pro/Pro+/Ultra fit, Teams Standard/Premium usage pools, on-demand usage billing, spend alerts, Privacy Mode/ZDR limits, GitHub Copilot rollout fit, and Claude Code terminal-first fit.');
   lines.push('Recent answer refresh: June 16, 2026 refreshed the best AI chatbot, ChatGPT-vs-Claude, ChatGPT alternatives, and best free AI tools answers plus answers index, homepage shortcut, source registry, and LLM maintenance around ChatGPT as the broad default, ChatGPT Free GPT-5.5/tool limits, ChatGPT plan-fit escalation, Claude Free/Pro usage boundaries, Claude Opus 4.8 fallback and Fable/Mythos access suspension, Gemini/NotebookLM Google-native fit, NotebookLM Standard source/research limits, and Perplexity citation-first research fit.');
