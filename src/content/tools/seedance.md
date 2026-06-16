@@ -10,7 +10,7 @@ pricing_model: paid
 price_range: "BytePlus API/resource packs; route-specific pricing"
 status: active
 launched: 2026-02
-last_updated: 2026-06-12
+last_updated: 2026-06-16
 last_verified: 2026-06-12
 update_frequency: weekly
 affiliate:
@@ -176,6 +176,19 @@ Do not reuse old consumer-plan numbers for Seedance unless they are tied to a ve
 | BytePlus resource packs | USD resource-pack pricing and minimum purchase rules | Verified June 12, 2026 |
 | seedance.ai | Whether it is official ByteDance | It says it is independent and not affiliated |
 
+## Against the alternatives
+
+| | [Veo 3.1](/tools/veo/) | [Kling 3.0](/tools/kling/) | [Seedance 2.0](/tools/seedance/) | Sora 2 | [Runway](/tools/runway/) |
+|---|---|---|---|---|---|
+| **Best at** | All-round quality and audio | Cinematic motion | Reference-based multimodal | Distinctive cinematic style | Production editing suite |
+| **Native audio** | Yes, strongest sync | Yes, across cuts | Yes | Yes | Limited |
+| **Clip length** | Short clips, 1080p and 4K | Up to about 15s, multi-shot | Up to about 15s, multi-shot | Short clips | Short clips |
+| **Access** | Gemini API, Vertex AI, Flow | Kling app, credits | BytePlus API, Dreamina | ChatGPT and Sora app | Web app and API |
+| **Price signal** | Premium ($0.40-0.60/sec at 4K) | Lowest (about $0.10/sec) | Token packs (about $3.30-4.30/1M) | Subscription | Credit-based |
+| **Best viewed as** | Google-stack frontier model | Cinematic motion benchmark | Reference-driven generator | Stylized social video | Editing workspace |
+
+The honest read: [Seedance](/tools/seedance/) is the pick when you generate from your own image, audio, and video references in one pass, [Veo](/tools/veo/) wins for clean audio and Google-stack governance, [Kling](/tools/kling/) leads on cinematic motion and price, Sora 2 has the most distinctive style, and [Runway](/tools/runway/) is the better full editing workspace.
+
 ## Failure Modes
 
 - **Route confusion:** Independent Seedance-branded sites can look official. Always trace the buyer route back to ByteDance Seed, BytePlus, Dreamina/Jimeng, or a clearly disclosed provider.
@@ -183,6 +196,10 @@ Do not reuse old consumer-plan numbers for Seedance unless they are tied to a ve
 - **Pricing fragmentation:** API tokens, resource packs, third-party wrappers, and consumer surfaces may price the same underlying model differently.
 - **Benchmark volatility:** Video-model leaderboards move quickly. Use your own prompt set before buying.
 - **No full production suite:** The model may be excellent, but production teams still need editing, storage, approvals, brand controls, and export workflows.
+
+## Methodology
+
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against [ByteDance Seedance 2.0](https://seed.bytedance.com/en/seedance2_0), the [official launch post](https://seed.bytedance.com/blog/seedance-2-0-official-launch), and the [BytePlus ModelArk API reference](https://docs.byteplus.com/api/docs/ModelArk/1520757).
 
 ## FAQ
 
