@@ -750,7 +750,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-16 | /compare/github-copilot-vs-replit-agent/ | Comparison | Yes | frontmatter | src/content/comparisons/github-copilot-vs-replit-agent.md |
 | 2026-06-16 | /compare/grok-vs-mistral-ai/ | Comparison | Yes | frontmatter | src/content/comparisons/grok-vs-mistral-ai.md |
 | 2026-06-16 | /compare/grok-vs-perplexity/ | Comparison | Yes | frontmatter | src/content/comparisons/grok-vs-perplexity.md |
-| 2026-06-16 | /compare/grok-vs-poe/ | Comparison | Yes | working tree | src/content/comparisons/grok-vs-poe.md |
+| 2026-06-16 | /compare/grok-vs-poe/ | Comparison | Yes | frontmatter | src/content/comparisons/grok-vs-poe.md |
 | 2026-06-16 | /compare/perplexity-vs-poe/ | Comparison | Yes | frontmatter | src/content/comparisons/perplexity-vs-poe.md |
 | 2026-06-16 | /explore/ | Static page | Yes | git | src/pages/explore/index.astro |
 | 2026-06-16 | /llms-full.txt | Crawl surface | No | git | src/pages/llms-full.txt.ts |

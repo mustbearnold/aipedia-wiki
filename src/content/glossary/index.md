@@ -222,7 +222,8 @@ See also: [SaaS](#saas), [MRR](#mrr)
 
 ## Affiliate Marketing
 
-Affiliate marketing is earning commission by promoting third-party products or services, with compensation typically tied to sales, clicks, or conversions. In the AI tools ecosystem, this model creates financial incentives that can influence product recommendations and editorial objectivity. AI tool review platforms frequently rely on affiliate revenue from major AI vendors and SaaS suites, making disclosure of these relationships essential for reader trust. See also: [Sponsored Content](#sponsored-content), [Disclosure Requirements](#disclosure-requirements), [Bias in AI Reviews](#bias-in-ai-reviews)
+Affiliate marketing is earning commission by promoting third-party products or services, with compensation typically tied to sales, clicks, or conversions. In the AI tools ecosystem, this model creates financial incentives that can influence product recommendations and editorial objectivity. AI tool review platforms frequently rely on affiliate revenue from major AI vendors and SaaS suites, making disclosure of these relationships essential for reader trust.
+See also: [SEO](#seo), [GEO](#geo), [SaaS](#saas)
 
 ---
 
@@ -304,7 +305,8 @@ See also: [Inference](#inference), [TTS](#tts-text-to-speech), [API](#api), [Mod
 
 ## Computer Use
 
-**Computer Use** is a capability in agentic AI systems that enables models to interact directly with computer interfaces by clicking buttons, typing text, and navigating screens. This extends AI agents beyond APIs to control visual UIs and legacy software for desktop automation. Claude Opus 4.8 demonstrates Computer Use by operating browsers and applications through screen observation and mouse actions. See also: [Agentic AI](#agentic-ai), [Multi-agent](#multi-agent)
+**Computer Use** is a capability in agentic AI systems that enables models to interact directly with computer interfaces by clicking buttons, typing text, and navigating screens. This extends AI agents beyond APIs to control visual UIs and legacy software for desktop automation. Claude Opus 4.8 demonstrates Computer Use by operating browsers and applications through screen observation and mouse actions.
+See also: [Agentic AI](#agentic-ai), [Multi-agent](#multi-agent)
 
 ---
 
@@ -336,4 +338,116 @@ See also: [Inference](#inference), [Reasoning Models](#reasoning-models)
 
 **Reasoning models** are large language models trained to perform multi-step logical reasoning, breaking complex problems into chain-of-thought steps for superior accuracy on math, coding, and planning tasks. They enable reliable solutions to challenges beyond standard LLMs' pattern-matching capabilities. Examples include Claude Opus 4.8 with extended thinking and Gemini 3.1 Pro Thinking.
 See also: [LLM](#llm), [Prompt Engineering](#prompt-engineering)
+
+---
+
+## Transformer
+
+**The Transformer** is the neural network architecture behind modern large language models, introduced in 2017, that uses self-attention to weigh the relationships between all tokens in a sequence in parallel. It replaced earlier recurrent approaches and made it practical to train models on internet-scale text. Nearly every current frontier model, including GPT-5.5, Claude Opus 4.8, and Gemini 3.1 Pro, is Transformer-based.
+See also: [Foundation Model](#foundation-model), [Attention Mechanism](#attention-mechanism), [LLM](#llm)
+
+---
+
+## Attention Mechanism
+
+The **attention mechanism** lets a model weigh how much each token should influence every other token when producing output, so it can focus on the most relevant parts of the input. Self-attention is the core operation inside a Transformer, and it is what allows long-range context to shape each prediction. Larger context windows depend on making attention efficient.
+See also: [Transformer](#transformer), [Context Window](#context-window), [Tokens](#tokens)
+
+---
+
+## Parameters
+
+**Parameters** are the learned numerical weights inside a neural network that encode what a model knows, adjusted during training and frozen at inference. Parameter count is a rough proxy for capacity, though architecture and training data matter just as much. Mixture-of-experts designs activate only a fraction of total parameters per token to cut cost.
+See also: [Foundation Model](#foundation-model), [Open Weights](#open-weights), [MoE (Mixture of Experts)](#moe)
+
+---
+
+## Diffusion Model
+
+A **diffusion model** generates images, audio, or video by starting from random noise and iteratively denoising it toward a result that matches the prompt. It is the dominant approach for AI image and video generation. Tools like Midjourney and many text-to-video systems rely on diffusion or diffusion-style methods.
+See also: [Foundation Model](#foundation-model), [Multimodal](#multimodal), [Midjourney](/tools/midjourney/)
+
+---
+
+## Multimodal
+
+**Multimodal** AI processes and generates more than one type of data, such as text, images, audio, and video, within a single model or system. It lets you ask questions about a screenshot, generate an image from a description, or analyze a chart. GPT-5.5, Claude Opus 4.8, and Gemini 3.1 Pro are all multimodal to varying degrees.
+See also: [LLM](#llm), [Foundation Model](#foundation-model), [Diffusion Model](#diffusion-model)
+
+---
+
+## Chain-of-Thought
+
+**Chain-of-thought** is a prompting and training technique where a model works through intermediate reasoning steps before giving a final answer, which improves accuracy on math, logic, and multi-step tasks. Reasoning models internalize this behavior and spend extra inference compute deliberating. You can also elicit it by asking a model to think step by step.
+See also: [Reasoning Models](#reasoning-models), [Test-Time Compute](#test-time-compute), [Prompt Engineering](#prompt-engineering)
+
+---
+
+## System Prompt
+
+A **system prompt** is the instruction layer that sets a model's role, rules, and tone before any user message, shaping how it responds across a conversation. Applications use it to define behavior, safety boundaries, and output format. Because it carries operator authority and sits at the front of the context, keeping it stable also helps prompt caching.
+See also: [Prompt Engineering](#prompt-engineering), [Prompt Injection](#prompt-injection), [Context Window](#context-window)
+
+---
+
+## Prompt Injection
+
+**Prompt injection** is an attack where malicious text hidden in user input or external content tricks a model into ignoring its instructions or taking unintended actions. It is a leading security risk for AI agents that read web pages, emails, or documents. Defenses include input isolation, tool permission limits, and treating retrieved content as untrusted.
+See also: [System Prompt](#system-prompt), [AI Agent](#ai-agent), [Agentic AI](#agentic-ai)
+
+---
+
+## RLHF
+
+**RLHF (Reinforcement Learning from Human Feedback)** is a training method that tunes a model using human preference judgments, rewarding outputs people rate as more helpful, honest, and harmless. It is a major reason modern assistants follow instructions well. Anthropic's Constitutional AI is a related approach that uses written principles to guide this feedback.
+See also: [Fine-tuning](#fine-tuning), [AI Alignment](#ai-alignment), [Claude](/tools/claude/)
+
+---
+
+## AI Alignment
+
+**AI alignment** is the field focused on making AI systems pursue their operators' and society's intended goals and values rather than unintended ones. It spans training techniques, evaluation, and oversight, and grows more important as models become more capable and autonomous. RLHF and Constitutional AI are practical alignment methods.
+See also: [RLHF](#rlhf), [Hallucination](#hallucination), [Reasoning Models](#reasoning-models)
+
+---
+
+## AGI
+
+**AGI (Artificial General Intelligence)** refers to a hypothetical AI that matches or exceeds human ability across essentially any cognitive task, rather than excelling at narrow ones. There is no agreed definition or test, and timelines are heavily debated. Today's frontier models are powerful but remain narrow and fallible relative to this bar.
+See also: [Frontier Model](#frontier-model), [Foundation Model](#foundation-model), [AI Alignment](#ai-alignment)
+
+---
+
+## Frontier Model
+
+A **frontier model** is one of the most capable general-purpose AI models available at a given time, typically expensive to train and released by leading labs. The label tracks the moving edge of capability rather than a fixed threshold. As of 2026, examples include GPT-5.5, Claude Opus 4.8, and Gemini 3.1 Pro.
+See also: [Foundation Model](#foundation-model), [LLM](#llm), [ChatGPT](/tools/chatgpt/)
+
+---
+
+## Function Calling
+
+**Function calling** lets a model return structured arguments that an application uses to run a real function or API, then feed the result back into the conversation. It is how assistants book a meeting, query a database, or fetch live data. It is the foundation of tool-using agents and is often paired with structured output.
+See also: [AI Agent](#ai-agent), [MCP (Model Context Protocol)](#mcp), [API](#api)
+
+---
+
+## MCP (Model Context Protocol)
+
+**MCP (Model Context Protocol)** is an open standard for connecting AI models to external tools, data sources, and services through a common interface, so integrations work across apps instead of being rebuilt for each one. It has become a widely adopted way to give assistants and agents access to files, APIs, and databases.
+See also: [Function Calling](#function-calling), [AI Agent](#ai-agent), [SDK](#sdk)
+
+---
+
+## AI Agent
+
+An **AI agent** is a system that uses a model to plan and take actions toward a goal, calling tools, reading the results, and iterating with limited human input. Agents range from simple tool-using assistants to autonomous multi-step workers. Reliability depends on tool design, permissions, and guardrails against errors and prompt injection.
+See also: [Agentic AI](#agentic-ai), [Multi-agent](#multi-agent), [Function Calling](#function-calling)
+
+---
+
+## Open Weights
+
+**Open weights** means a model's trained parameters are publicly downloadable, so anyone can run, fine-tune, or self-host it, though the license may still restrict commercial use. It is distinct from fully open source, which also releases training code and data. DeepSeek and Mistral publish open-weight models.
+See also: [Open Source vs Closed Source](#open-source-vs-closed-source), [Parameters](#parameters), [DeepSeek](/tools/deepseek/)
 
