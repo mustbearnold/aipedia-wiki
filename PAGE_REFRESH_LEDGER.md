@@ -502,7 +502,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-12 | /tools/kagi/ | Tool | Yes | frontmatter | src/content/tools/kagi.md |
 | 2026-06-12 | /tools/kimi/ | Tool | Yes | frontmatter | src/content/tools/kimi.md |
 | 2026-06-12 | /tools/kiro/ | Tool | Yes | frontmatter | src/content/tools/kiro.md |
-| 2026-06-12 | /tools/kling/ | Tool | Yes | frontmatter | src/content/tools/kling.md |
 | 2026-06-12 | /tools/kokoro/ | Tool | Yes | frontmatter | src/content/tools/kokoro.md |
 | 2026-06-12 | /tools/krea/ | Tool | Yes | frontmatter | src/content/tools/krea.md |
 | 2026-06-12 | /tools/langflow/ | Tool | Yes | frontmatter | src/content/tools/langflow.md |
@@ -578,7 +577,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-12 | /tools/same-dev/ | Tool | Yes | frontmatter | src/content/tools/same-dev.md |
 | 2026-06-12 | /tools/sanebox/ | Tool | Yes | frontmatter | src/content/tools/sanebox.md |
 | 2026-06-12 | /tools/scite/ | Tool | Yes | frontmatter | src/content/tools/scite.md |
-| 2026-06-12 | /tools/seedance/ | Tool | Yes | frontmatter | src/content/tools/seedance.md |
 | 2026-06-12 | /tools/semantic-scholar/ | Tool | Yes | frontmatter | src/content/tools/semantic-scholar.md |
 | 2026-06-12 | /tools/semrush/ | Tool | Yes | frontmatter | src/content/tools/semrush.md |
 | 2026-06-12 | /tools/servicenow/ | Tool | Yes | frontmatter | src/content/tools/servicenow.md |
@@ -784,8 +782,10 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-16 | /sitemap-index.xml | Crawl surface | No | git | astro.config.mjs |
 | 2026-06-16 | /tools/ | Static page | Yes | git | src/pages/tools/index.astro |
 | 2026-06-16 | /tools/hume/ | Tool | Yes | frontmatter | src/content/tools/hume.md |
+| 2026-06-16 | /tools/kling/ | Tool | Yes | frontmatter | src/content/tools/kling.md |
 | 2026-06-16 | /tools/microsoft-agent-framework/ | Tool | Yes | frontmatter | src/content/tools/microsoft-agent-framework.md |
 | 2026-06-16 | /tools/napkin/ | Tool | Yes | frontmatter | src/content/tools/napkin.md |
+| 2026-06-16 | /tools/seedance/ | Tool | Yes | frontmatter | src/content/tools/seedance.md |
 | 2026-06-16 | /tools/tana/ | Tool | Yes | frontmatter | src/content/tools/tana.md |
 | 2026-06-16 | /tools/vapi/ | Tool | Yes | frontmatter | src/content/tools/vapi.md |
 | 2026-06-16 | /tools/veo/ | Tool | Yes | frontmatter | src/content/tools/veo.md |
