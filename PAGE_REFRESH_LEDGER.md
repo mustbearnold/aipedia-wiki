@@ -1,7 +1,7 @@
 # AiPedia Page Refresh Ledger
 
 Ledger updated through: 2026-06-16
-Tracked public pages and crawl surfaces: 765
+Tracked public pages and crawl surfaces: 771
 
 Hard rule: every time a tracked website page is edited, refreshed, materially re-ranked, or has volatile facts re-verified, update that page row in this file on the same change. If a child page update affects a parent hub, archive, internal-link block, sitemap, or LLM surface, update those affected rows too.
 
@@ -741,8 +741,14 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-16 | /categories/ai-infrastructure/ | Category | Yes | frontmatter | src/content/categories/ai-infrastructure.md |
 | 2026-06-16 | /categories/ai-seo/ | Category | Yes | frontmatter | src/content/categories/ai-seo.md |
 | 2026-06-16 | /companies/adobe/ | Company | Yes | frontmatter | src/content/companies/adobe.md |
+| 2026-06-16 | /companies/amazon/ | Company | Yes | frontmatter | src/content/companies/amazon.md |
+| 2026-06-16 | /companies/assemblyai/ | Company | Yes | frontmatter | src/content/companies/assemblyai.md |
 | 2026-06-16 | /companies/bytedance/ | Company | Yes | frontmatter | src/content/companies/bytedance.md |
 | 2026-06-16 | /companies/cognition/ | Company | Yes | frontmatter | src/content/companies/cognition.md |
+| 2026-06-16 | /companies/cohere/ | Company | Yes | frontmatter | src/content/companies/cohere.md |
+| 2026-06-16 | /companies/hugging-face/ | Company | Yes | frontmatter | src/content/companies/hugging-face.md |
+| 2026-06-16 | /companies/meta/ | Company | Yes | frontmatter | src/content/companies/meta.md |
+| 2026-06-16 | /companies/microsoft/ | Company | Yes | frontmatter | src/content/companies/microsoft.md |
 | 2026-06-16 | /companies/midjourney/ | Company | Yes | frontmatter | src/content/companies/midjourney.md |
 | 2026-06-16 | /companies/minimax/ | Company | Yes | frontmatter | src/content/companies/minimax.md |
 | 2026-06-16 | /companies/perplexity/ | Company | Yes | frontmatter | src/content/companies/perplexity.md |
