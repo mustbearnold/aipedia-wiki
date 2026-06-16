@@ -740,7 +740,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-16 | /categories/ai-automation/ | Category | Yes | frontmatter | src/content/categories/ai-automation.md |
 | 2026-06-16 | /categories/ai-infrastructure/ | Category | Yes | frontmatter | src/content/categories/ai-infrastructure.md |
 | 2026-06-16 | /categories/ai-seo/ | Category | Yes | frontmatter | src/content/categories/ai-seo.md |
-| 2026-06-16 | /companies/bytedance/ | Company | Yes | working tree | src/content/companies/bytedance.md |
+| 2026-06-16 | /companies/bytedance/ | Company | Yes | frontmatter | src/content/companies/bytedance.md |
 | 2026-06-16 | /companies/perplexity/ | Company | Yes | frontmatter | src/content/companies/perplexity.md |
 | 2026-06-16 | /companies/xai/ | Company | Yes | frontmatter | src/content/companies/xai.md |
 | 2026-06-16 | /compare/chatgpt-vs-poe/ | Comparison | Yes | frontmatter | src/content/comparisons/chatgpt-vs-poe.md |
