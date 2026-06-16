@@ -23,9 +23,9 @@ sources:
 
 Microsoft's June 2 Build 2026 announcements put a sharper product shape around enterprise agents: the agent needs a work-intelligence layer, a model stack, a developer framework, governance, and a billing system.
 
-June 16 refresh note: AiPedia rechecked Microsoft's Build 2026 and Work IQ API source pages while adding the [June 2 AI news desk](/news/2026-06-02-ai-news-desk/).
+June 16 refresh note: AiPedia rechecked Microsoft's Build 2026, Work IQ API, licensing, and Partner Center source pages after Work IQ reached GA. Read the current-day follow-up: [AI News Desk, June 16, 2026: Work IQ GA turns Microsoft 365 agents into a metered context layer](/news/2026-06-16-ai-news-desk/).
 
-The most buyer-relevant part is **Work IQ**. Microsoft says the Work IQ APIs will be generally available on June 16, 2026, giving developers and IT administrators a way to build agents on the same intelligence layer that powers Microsoft 365 Copilot.
+The most buyer-relevant part is **Work IQ**. Microsoft says the Work IQ APIs are generally available as of June 16, 2026, giving developers and IT administrators a way to build agents on the same intelligence layer that powers Microsoft 365 Copilot.
 
 ## What changed
 
@@ -36,7 +36,7 @@ Microsoft's Work IQ API architecture is split into four domains:
 - **Tools:** actions across Microsoft 365 entities such as email, meetings, and documents;
 - **Workspaces:** tenant-bound places for agent state, files, memory, progress, and intermediate outputs.
 
-Microsoft also says Work IQ usage will be priced through Copilot Credits, with an admin-center cost-management dashboard for spend limits and monitoring.
+Microsoft also says Work IQ usage is priced through Copilot Credits, with an admin-center cost-management dashboard for spend limits and monitoring. The licensing notice says there is no separate Work IQ API subscription, SKU, or per-user license; Work IQ Tool API calls are listed at 0.1 Copilot Credits per call, while query-style Chat and Context usage varies by scenario complexity.
 
 Build also brought a model-layer update. Microsoft described MAI-Thinking-1 as a 35-billion active-parameter reasoning model in private preview on Foundry, along with MAI-Image-2.5, MAI-Transcribe 1.5, MAI-Voice-2, and MAI-Code-1 availability in Copilot and VS Code.
 

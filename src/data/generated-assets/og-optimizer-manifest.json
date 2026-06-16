@@ -1,10 +1,10 @@
 {
   "version": 1,
   "kind": "og-png-optimizer",
-  "source_hash": "93676ecd518c74a08d17547c72014249c8e728a9419fd1d55cb92e13c6e6088d",
+  "source_hash": "a2ffe34191fc3646157fe9d9038711268759dab384291b759deef98027bf71b0",
   "generated_at": "deterministic",
   "meta": {
-    "files": 1000
+    "files": 1004
   },
   "outputs": [
     {
@@ -3518,6 +3518,24 @@
       "sha256": "3f35be14f9471ee33cb7ffc104aa5df25c6ac2c6aad0621701b8dba49f3a415b"
     },
     {
+      "file": "public/og/news/2026-06-16-ai-news-desk.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 49855,
+      "sha256": "3ace40334013486fb9b22998462df5bcc34beaa34af322bd8f161634fa602fee"
+    },
+    {
+      "file": "public/og/news/2026-06-16-microsoft-work-iq-ga-copilot-credits.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 51705,
+      "sha256": "73aa8e01f3ffb57959e07855b12f435e11050ed62898c8427b4d4b3faf8abcf7"
+    },
+    {
       "file": "public/og/news/light/2026-02-18-trae-pricing-revamp.png",
       "kind": null,
       "slug": null,
@@ -7026,6 +7044,24 @@
       "target": "public/og/news",
       "bytes": 37031,
       "sha256": "6e2ebcc6031f85cfe1ac7d52fa56c92b033e0168e85163b33317d46242309b24"
+    },
+    {
+      "file": "public/og/news/light/2026-06-16-ai-news-desk.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 50696,
+      "sha256": "8806ef1f59887d2d5cabf3e4fb077d46a6bb88e1b38e8c2c067ff81963b163d3"
+    },
+    {
+      "file": "public/og/news/light/2026-06-16-microsoft-work-iq-ga-copilot-credits.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 42778,
+      "sha256": "fcb92ad7dfa923d0f2deb872f4bf8a4805c958e655d4b55e70f38380a02e42a7"
     },
     {
       "file": "public/og/tools/activepieces.png",
