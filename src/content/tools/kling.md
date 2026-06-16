@@ -10,7 +10,7 @@ pricing_model: freemium
 price_range: "Free + credit-based paid plans; verify 3.0/Omni access in app"
 status: active
 launched: 2024-06
-last_updated: 2026-06-12
+last_updated: 2026-06-16
 last_verified: 2026-06-12
 update_frequency: weekly
 affiliate:
@@ -170,6 +170,19 @@ For buyers, that means the right plan is the lowest current plan that explicitly
 | Commercial output | Are watermark removal and commercial rights included? |
 | Production volume | How many credits do your real prompt tests consume? |
 
+## Against the alternatives
+
+| | [Veo 3.1](/tools/veo/) | [Kling 3.0](/tools/kling/) | [Seedance 2.0](/tools/seedance/) | Sora 2 | [Runway](/tools/runway/) |
+|---|---|---|---|---|---|
+| **Best at** | All-round quality and audio | Cinematic motion | Reference-based multimodal | Distinctive cinematic style | Production editing suite |
+| **Native audio** | Yes, strongest sync | Yes, across cuts | Yes | Yes | Limited |
+| **Clip length** | Short clips, 1080p and 4K | Up to about 15s, multi-shot | Up to about 15s, multi-shot | Short clips | Short clips |
+| **Access** | Gemini API, Vertex AI, Flow | Kling app, credits | BytePlus API, Dreamina | ChatGPT and Sora app | Web app and API |
+| **Price signal** | Premium ($0.40-0.60/sec at 4K) | Lowest (about $0.10/sec) | Token packs (about $3.30-4.30/1M) | Subscription | Credit-based |
+| **Best viewed as** | Google-stack frontier model | Cinematic motion benchmark | Reference-driven generator | Stylized social video | Editing workspace |
+
+The honest read: [Kling](/tools/kling/) is the pick when cinematic motion and price matter most, [Veo](/tools/veo/) wins for clean audio and Google-stack governance, [Seedance](/tools/seedance/) is best when you build from your own image, audio, and video references, Sora 2 has the most distinctive style, and [Runway](/tools/runway/) is the better full editing workspace.
+
 ## Failure Modes
 
 - **Access ambiguity:** Model availability can differ by plan, region, and account.
@@ -177,6 +190,10 @@ For buyers, that means the right plan is the lowest current plan that explicitly
 - **Procurement friction:** Kuaishou ownership can trigger data and legal review for some Western organizations.
 - **No clearly documented public API in this pass:** Use Runway or Veo if API procurement is the priority.
 - **Benchmark volatility:** Good prompts can make one model look dominant; bad prompt fit can reverse the ranking.
+
+## Methodology
+
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against the [Kuaishou Kling 3.0 launch](https://ir.kuaishou.com/news-releases/news-release-details/kling-ai-launches-30-model-ushering-era-where-everyone-can-be), the [Kling AI site](https://klingai.com/), and the [Kling AI pricing page](https://klingai.com/pricing).
 
 ## FAQ
 
