@@ -31,6 +31,7 @@
     "coverage:next": "node scripts/coverage-next.mjs",
     "audit:glossary": "node scripts/audit-glossary.mjs --check",
     "glossary:gaps": "node scripts/audit-glossary.mjs --gaps",
+    "audit:tool-quality": "node scripts/audit-tool-quality.mjs",
     "editorial:weekly": "node scripts/editorial-weekly-queue.mjs --window-days 30 --limit 50",
     "audit:sources": "node scripts/audit-source-health.mjs",
     "audit:passed-dates": "node scripts/audit-passed-dates.mjs",
