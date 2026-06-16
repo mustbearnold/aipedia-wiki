@@ -760,6 +760,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-16 | /sitemap-index.xml | Crawl surface | No | git | astro.config.mjs |
 | 2026-06-16 | /tools/ | Static page | Yes | git | src/pages/tools/index.astro |
 | 2026-06-16 | /tools/microsoft-agent-framework/ | Tool | Yes | frontmatter | src/content/tools/microsoft-agent-framework.md |
-| 2026-06-16 | /tools/napkin/ | Tool | Yes | working tree | src/content/tools/napkin.md |
+| 2026-06-16 | /tools/napkin/ | Tool | Yes | frontmatter | src/content/tools/napkin.md |
 | 2026-06-16 | /trends/ | Static page | Yes | git | src/pages/trends/index.astro |
 | 2026-06-16 | /trends/geo-trend/ | Trend | Yes | frontmatter | src/content/trends/geo-trend.md |
