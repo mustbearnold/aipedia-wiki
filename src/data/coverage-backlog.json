@@ -1,0 +1,1075 @@
+{
+  "ok": true,
+  "generated_at": "2026-06-16T04:58:54.571Z",
+  "project_dir": "C:\\Users\\mustb\\Projects\\aipedia-wiki-clean",
+  "totals": {
+    "tools_active": 256,
+    "tools_notable": 256,
+    "comparisons_existing": 267,
+    "answers_existing": 12,
+    "comparison_gaps": 6794,
+    "answer_gaps": 56
+  },
+  "backlog": {
+    "comparisons": [
+      {
+        "kind": "comparison",
+        "slug": "canva-vs-claude",
+        "tools": [
+          "canva",
+          "claude"
+        ],
+        "shared_categories": [
+          "ai-design"
+        ],
+        "both_tier1": true,
+        "same_category": true,
+        "score": 10
+      },
+      {
+        "kind": "comparison",
+        "slug": "chatgpt-vs-poe",
+        "tools": [
+          "chatgpt",
+          "poe"
+        ],
+        "shared_categories": [
+          "ai-chatbots"
+        ],
+        "both_tier1": true,
+        "same_category": true,
+        "score": 10
+      },
+      {
+        "kind": "comparison",
+        "slug": "claude-vs-poe",
+        "tools": [
+          "claude",
+          "poe"
+        ],
+        "shared_categories": [
+          "ai-chatbots"
+        ],
+        "both_tier1": true,
+        "same_category": true,
+        "score": 10
+      },
+      {
+        "kind": "comparison",
+        "slug": "claude-vs-replit-agent",
+        "tools": [
+          "claude",
+          "replit-agent"
+        ],
+        "shared_categories": [
+          "ai-coding"
+        ],
+        "both_tier1": true,
+        "same_category": true,
+        "score": 10
+      },
+      {
+        "kind": "comparison",
+        "slug": "cursor-vs-deepseek",
+        "tools": [
+          "cursor",
+          "deepseek"
+        ],
+        "shared_categories": [
+          "ai-coding"
+        ],
+        "both_tier1": true,
+        "same_category": true,
+        "score": 10
+      },
+      {
+        "kind": "comparison",
+        "slug": "cursor-vs-grok",
+        "tools": [
+          "cursor",
+          "grok"
+        ],
+        "shared_categories": [
+          "ai-coding"
+        ],
+        "both_tier1": true,
+        "same_category": true,
+        "score": 10
+      },
+      {
+        "kind": "comparison",
+        "slug": "cursor-vs-replit-agent",
+        "tools": [
+          "cursor",
+          "replit-agent"
+        ],
+        "shared_categories": [
+          "ai-coding"
+        ],
+        "both_tier1": true,
+        "same_category": true,
+        "score": 10
+      },
+      {
+        "kind": "comparison",
+        "slug": "deepseek-vs-github-copilot",
+        "tools": [
+          "deepseek",
+          "github-copilot"
+        ],
+        "shared_categories": [
+          "ai-coding"
+        ],
+        "both_tier1": true,
+        "same_category": true,
+        "score": 10
+      },
+      {
+        "kind": "comparison",
+        "slug": "deepseek-vs-grok",
+        "tools": [
+          "deepseek",
+          "grok"
+        ],
+        "shared_categories": [
+          "ai-chatbots",
+          "ai-coding"
+        ],
+        "both_tier1": true,
+        "same_category": true,
+        "score": 10
+      },
+      {
+        "kind": "comparison",
+        "slug": "deepseek-vs-perplexity",
+        "tools": [
+          "deepseek",
+          "perplexity"
+        ],
+        "shared_categories": [
+          "ai-chatbots"
+        ],
+        "both_tier1": true,
+        "same_category": true,
+        "score": 10
+      },
+      {
+        "kind": "comparison",
+        "slug": "deepseek-vs-poe",
+        "tools": [
+          "deepseek",
+          "poe"
+        ],
+        "shared_categories": [
+          "ai-chatbots"
+        ],
+        "both_tier1": true,
+        "same_category": true,
+        "score": 10
+      },
+      {
+        "kind": "comparison",
+        "slug": "deepseek-vs-replit-agent",
+        "tools": [
+          "deepseek",
+          "replit-agent"
+        ],
+        "shared_categories": [
+          "ai-coding"
+        ],
+        "both_tier1": true,
+        "same_category": true,
+        "score": 10
+      },
+      {
+        "kind": "comparison",
+        "slug": "descript-vs-grok",
+        "tools": [
+          "descript",
+          "grok"
+        ],
+        "shared_categories": [
+          "ai-voice"
+        ],
+        "both_tier1": true,
+        "same_category": true,
+        "score": 10
+      },
+      {
+        "kind": "comparison",
+        "slug": "elevenlabs-vs-grok",
+        "tools": [
+          "elevenlabs",
+          "grok"
+        ],
+        "shared_categories": [
+          "ai-voice"
+        ],
+        "both_tier1": true,
+        "same_category": true,
+        "score": 10
+      },
+      {
+        "kind": "comparison",
+        "slug": "gemini-vs-grammarly",
+        "tools": [
+          "gemini",
+          "grammarly"
+        ],
+        "shared_categories": [
+          "ai-writing"
+        ],
+        "both_tier1": true,
+        "same_category": true,
+        "score": 10
+      },
+      {
+        "kind": "comparison",
+        "slug": "gemini-vs-poe",
+        "tools": [
+          "gemini",
+          "poe"
+        ],
+        "shared_categories": [
+          "ai-chatbots"
+        ],
+        "both_tier1": true,
+        "same_category": true,
+        "score": 10
+      },
+      {
+        "kind": "comparison",
+        "slug": "github-copilot-vs-grok",
+        "tools": [
+          "github-copilot",
+          "grok"
+        ],
+        "shared_categories": [
+          "ai-coding"
+        ],
+        "both_tier1": true,
+        "same_category": true,
+        "score": 10
+      },
+      {
+        "kind": "comparison",
+        "slug": "github-copilot-vs-replit-agent",
+        "tools": [
+          "github-copilot",
+          "replit-agent"
+        ],
+        "shared_categories": [
+          "ai-coding"
+        ],
+        "both_tier1": true,
+        "same_category": true,
+        "score": 10
+      },
+      {
+        "kind": "comparison",
+        "slug": "grammarly-vs-perplexity",
+        "tools": [
+          "grammarly",
+          "perplexity"
+        ],
+        "shared_categories": [
+          "ai-writing"
+        ],
+        "both_tier1": true,
+        "same_category": true,
+        "score": 10
+      },
+      {
+        "kind": "comparison",
+        "slug": "grok-vs-mistral-ai",
+        "tools": [
+          "grok",
+          "mistral-ai"
+        ],
+        "shared_categories": [
+          "ai-chatbots",
+          "ai-search"
+        ],
+        "both_tier1": true,
+        "same_category": true,
+        "score": 10
+      },
+      {
+        "kind": "comparison",
+        "slug": "grok-vs-perplexity",
+        "tools": [
+          "grok",
+          "perplexity"
+        ],
+        "shared_categories": [
+          "ai-chatbots",
+          "ai-search"
+        ],
+        "both_tier1": true,
+        "same_category": true,
+        "score": 10
+      },
+      {
+        "kind": "comparison",
+        "slug": "grok-vs-poe",
+        "tools": [
+          "grok",
+          "poe"
+        ],
+        "shared_categories": [
+          "ai-chatbots"
+        ],
+        "both_tier1": true,
+        "same_category": true,
+        "score": 10
+      },
+      {
+        "kind": "comparison",
+        "slug": "grok-vs-replit-agent",
+        "tools": [
+          "grok",
+          "replit-agent"
+        ],
+        "shared_categories": [
+          "ai-coding"
+        ],
+        "both_tier1": true,
+        "same_category": true,
+        "score": 10
+      },
+      {
+        "kind": "comparison",
+        "slug": "mistral-ai-vs-perplexity",
+        "tools": [
+          "mistral-ai",
+          "perplexity"
+        ],
+        "shared_categories": [
+          "ai-chatbots",
+          "ai-search"
+        ],
+        "both_tier1": true,
+        "same_category": true,
+        "score": 10
+      },
+      {
+        "kind": "comparison",
+        "slug": "mistral-ai-vs-poe",
+        "tools": [
+          "mistral-ai",
+          "poe"
+        ],
+        "shared_categories": [
+          "ai-chatbots"
+        ],
+        "both_tier1": true,
+        "same_category": true,
+        "score": 10
+      },
+      {
+        "kind": "comparison",
+        "slug": "perplexity-vs-poe",
+        "tools": [
+          "perplexity",
+          "poe"
+        ],
+        "shared_categories": [
+          "ai-chatbots"
+        ],
+        "both_tier1": true,
+        "same_category": true,
+        "score": 10
+      },
+      {
+        "kind": "comparison",
+        "slug": "adobe-firefly-vs-chatgpt",
+        "tools": [
+          "adobe-firefly",
+          "chatgpt"
+        ],
+        "shared_categories": [],
+        "both_tier1": true,
+        "same_category": false,
+        "score": 8
+      },
+      {
+        "kind": "comparison",
+        "slug": "adobe-firefly-vs-claude",
+        "tools": [
+          "adobe-firefly",
+          "claude"
+        ],
+        "shared_categories": [],
+        "both_tier1": true,
+        "same_category": false,
+        "score": 8
+      },
+      {
+        "kind": "comparison",
+        "slug": "adobe-firefly-vs-cursor",
+        "tools": [
+          "adobe-firefly",
+          "cursor"
+        ],
+        "shared_categories": [],
+        "both_tier1": true,
+        "same_category": false,
+        "score": 8
+      },
+      {
+        "kind": "comparison",
+        "slug": "adobe-firefly-vs-deepseek",
+        "tools": [
+          "adobe-firefly",
+          "deepseek"
+        ],
+        "shared_categories": [],
+        "both_tier1": true,
+        "same_category": false,
+        "score": 8
+      },
+      {
+        "kind": "comparison",
+        "slug": "adobe-firefly-vs-descript",
+        "tools": [
+          "adobe-firefly",
+          "descript"
+        ],
+        "shared_categories": [],
+        "both_tier1": true,
+        "same_category": false,
+        "score": 8
+      },
+      {
+        "kind": "comparison",
+        "slug": "adobe-firefly-vs-elevenlabs",
+        "tools": [
+          "adobe-firefly",
+          "elevenlabs"
+        ],
+        "shared_categories": [],
+        "both_tier1": true,
+        "same_category": false,
+        "score": 8
+      },
+      {
+        "kind": "comparison",
+        "slug": "adobe-firefly-vs-gemini",
+        "tools": [
+          "adobe-firefly",
+          "gemini"
+        ],
+        "shared_categories": [],
+        "both_tier1": true,
+        "same_category": false,
+        "score": 8
+      },
+      {
+        "kind": "comparison",
+        "slug": "adobe-firefly-vs-github-copilot",
+        "tools": [
+          "adobe-firefly",
+          "github-copilot"
+        ],
+        "shared_categories": [],
+        "both_tier1": true,
+        "same_category": false,
+        "score": 8
+      },
+      {
+        "kind": "comparison",
+        "slug": "adobe-firefly-vs-grammarly",
+        "tools": [
+          "adobe-firefly",
+          "grammarly"
+        ],
+        "shared_categories": [],
+        "both_tier1": true,
+        "same_category": false,
+        "score": 8
+      },
+      {
+        "kind": "comparison",
+        "slug": "adobe-firefly-vs-grok",
+        "tools": [
+          "adobe-firefly",
+          "grok"
+        ],
+        "shared_categories": [],
+        "both_tier1": true,
+        "same_category": false,
+        "score": 8
+      },
+      {
+        "kind": "comparison",
+        "slug": "adobe-firefly-vs-heygen",
+        "tools": [
+          "adobe-firefly",
+          "heygen"
+        ],
+        "shared_categories": [],
+        "both_tier1": true,
+        "same_category": false,
+        "score": 8
+      },
+      {
+        "kind": "comparison",
+        "slug": "adobe-firefly-vs-mistral-ai",
+        "tools": [
+          "adobe-firefly",
+          "mistral-ai"
+        ],
+        "shared_categories": [],
+        "both_tier1": true,
+        "same_category": false,
+        "score": 8
+      },
+      {
+        "kind": "comparison",
+        "slug": "adobe-firefly-vs-n8n",
+        "tools": [
+          "adobe-firefly",
+          "n8n"
+        ],
+        "shared_categories": [],
+        "both_tier1": true,
+        "same_category": false,
+        "score": 8
+      },
+      {
+        "kind": "comparison",
+        "slug": "adobe-firefly-vs-notion-ai",
+        "tools": [
+          "adobe-firefly",
+          "notion-ai"
+        ],
+        "shared_categories": [],
+        "both_tier1": true,
+        "same_category": false,
+        "score": 8
+      },
+      {
+        "kind": "comparison",
+        "slug": "adobe-firefly-vs-perplexity",
+        "tools": [
+          "adobe-firefly",
+          "perplexity"
+        ],
+        "shared_categories": [],
+        "both_tier1": true,
+        "same_category": false,
+        "score": 8
+      },
+      {
+        "kind": "comparison",
+        "slug": "adobe-firefly-vs-poe",
+        "tools": [
+          "adobe-firefly",
+          "poe"
+        ],
+        "shared_categories": [],
+        "both_tier1": true,
+        "same_category": false,
+        "score": 8
+      },
+      {
+        "kind": "comparison",
+        "slug": "adobe-firefly-vs-replit-agent",
+        "tools": [
+          "adobe-firefly",
+          "replit-agent"
+        ],
+        "shared_categories": [],
+        "both_tier1": true,
+        "same_category": false,
+        "score": 8
+      },
+      {
+        "kind": "comparison",
+        "slug": "adobe-firefly-vs-runway",
+        "tools": [
+          "adobe-firefly",
+          "runway"
+        ],
+        "shared_categories": [],
+        "both_tier1": true,
+        "same_category": false,
+        "score": 8
+      },
+      {
+        "kind": "comparison",
+        "slug": "adobe-firefly-vs-suno",
+        "tools": [
+          "adobe-firefly",
+          "suno"
+        ],
+        "shared_categories": [],
+        "both_tier1": true,
+        "same_category": false,
+        "score": 8
+      },
+      {
+        "kind": "comparison",
+        "slug": "adobe-firefly-vs-synthesia",
+        "tools": [
+          "adobe-firefly",
+          "synthesia"
+        ],
+        "shared_categories": [],
+        "both_tier1": true,
+        "same_category": false,
+        "score": 8
+      },
+      {
+        "kind": "comparison",
+        "slug": "adobe-firefly-vs-udio",
+        "tools": [
+          "adobe-firefly",
+          "udio"
+        ],
+        "shared_categories": [],
+        "both_tier1": true,
+        "same_category": false,
+        "score": 8
+      },
+      {
+        "kind": "comparison",
+        "slug": "adobe-firefly-vs-zapier",
+        "tools": [
+          "adobe-firefly",
+          "zapier"
+        ],
+        "shared_categories": [],
+        "both_tier1": true,
+        "same_category": false,
+        "score": 8
+      },
+      {
+        "kind": "comparison",
+        "slug": "canva-vs-cursor",
+        "tools": [
+          "canva",
+          "cursor"
+        ],
+        "shared_categories": [],
+        "both_tier1": true,
+        "same_category": false,
+        "score": 8
+      },
+      {
+        "kind": "comparison",
+        "slug": "canva-vs-deepseek",
+        "tools": [
+          "canva",
+          "deepseek"
+        ],
+        "shared_categories": [],
+        "both_tier1": true,
+        "same_category": false,
+        "score": 8
+      },
+      {
+        "kind": "comparison",
+        "slug": "canva-vs-descript",
+        "tools": [
+          "canva",
+          "descript"
+        ],
+        "shared_categories": [],
+        "both_tier1": true,
+        "same_category": false,
+        "score": 8
+      },
+      {
+        "kind": "comparison",
+        "slug": "canva-vs-elevenlabs",
+        "tools": [
+          "canva",
+          "elevenlabs"
+        ],
+        "shared_categories": [],
+        "both_tier1": true,
+        "same_category": false,
+        "score": 8
+      },
+      {
+        "kind": "comparison",
+        "slug": "canva-vs-gemini",
+        "tools": [
+          "canva",
+          "gemini"
+        ],
+        "shared_categories": [],
+        "both_tier1": true,
+        "same_category": false,
+        "score": 8
+      },
+      {
+        "kind": "comparison",
+        "slug": "canva-vs-github-copilot",
+        "tools": [
+          "canva",
+          "github-copilot"
+        ],
+        "shared_categories": [],
+        "both_tier1": true,
+        "same_category": false,
+        "score": 8
+      },
+      {
+        "kind": "comparison",
+        "slug": "canva-vs-grammarly",
+        "tools": [
+          "canva",
+          "grammarly"
+        ],
+        "shared_categories": [],
+        "both_tier1": true,
+        "same_category": false,
+        "score": 8
+      },
+      {
+        "kind": "comparison",
+        "slug": "canva-vs-grok",
+        "tools": [
+          "canva",
+          "grok"
+        ],
+        "shared_categories": [],
+        "both_tier1": true,
+        "same_category": false,
+        "score": 8
+      },
+      {
+        "kind": "comparison",
+        "slug": "canva-vs-heygen",
+        "tools": [
+          "canva",
+          "heygen"
+        ],
+        "shared_categories": [],
+        "both_tier1": true,
+        "same_category": false,
+        "score": 8
+      },
+      {
+        "kind": "comparison",
+        "slug": "canva-vs-mistral-ai",
+        "tools": [
+          "canva",
+          "mistral-ai"
+        ],
+        "shared_categories": [],
+        "both_tier1": true,
+        "same_category": false,
+        "score": 8
+      },
+      {
+        "kind": "comparison",
+        "slug": "canva-vs-n8n",
+        "tools": [
+          "canva",
+          "n8n"
+        ],
+        "shared_categories": [],
+        "both_tier1": true,
+        "same_category": false,
+        "score": 8
+      },
+      {
+        "kind": "comparison",
+        "slug": "canva-vs-notion-ai",
+        "tools": [
+          "canva",
+          "notion-ai"
+        ],
+        "shared_categories": [],
+        "both_tier1": true,
+        "same_category": false,
+        "score": 8
+      }
+    ],
+    "answers": [
+      {
+        "kind": "best-of",
+        "slug": "best-ai-automation-2026",
+        "score": 6
+      },
+      {
+        "kind": "best-of",
+        "slug": "best-ai-design-2026",
+        "score": 6
+      },
+      {
+        "kind": "best-of",
+        "slug": "best-ai-infrastructure-2026",
+        "score": 6
+      },
+      {
+        "kind": "best-of",
+        "slug": "best-ai-music-2026",
+        "score": 6
+      },
+      {
+        "kind": "best-of",
+        "slug": "best-ai-notes-2026",
+        "score": 6
+      },
+      {
+        "kind": "best-of",
+        "slug": "best-ai-presentation-2026",
+        "score": 6
+      },
+      {
+        "kind": "best-of",
+        "slug": "best-ai-research-2026",
+        "score": 6
+      },
+      {
+        "kind": "best-of",
+        "slug": "best-ai-search-2026",
+        "score": 6
+      },
+      {
+        "kind": "best-of",
+        "slug": "best-ai-seo-2026",
+        "score": 6
+      },
+      {
+        "kind": "alternatives",
+        "slug": "adobe-firefly-alternatives-2026",
+        "score": 5
+      },
+      {
+        "kind": "alternatives",
+        "slug": "canva-alternatives-2026",
+        "score": 5
+      },
+      {
+        "kind": "alternatives",
+        "slug": "claude-alternatives-2026",
+        "score": 5
+      },
+      {
+        "kind": "alternatives",
+        "slug": "cursor-alternatives-2026",
+        "score": 5
+      },
+      {
+        "kind": "alternatives",
+        "slug": "deepseek-alternatives-2026",
+        "score": 5
+      },
+      {
+        "kind": "alternatives",
+        "slug": "descript-alternatives-2026",
+        "score": 5
+      },
+      {
+        "kind": "alternatives",
+        "slug": "elevenlabs-alternatives-2026",
+        "score": 5
+      },
+      {
+        "kind": "alternatives",
+        "slug": "gemini-alternatives-2026",
+        "score": 5
+      },
+      {
+        "kind": "alternatives",
+        "slug": "github-copilot-alternatives-2026",
+        "score": 5
+      },
+      {
+        "kind": "alternatives",
+        "slug": "grammarly-alternatives-2026",
+        "score": 5
+      },
+      {
+        "kind": "alternatives",
+        "slug": "grok-alternatives-2026",
+        "score": 5
+      },
+      {
+        "kind": "alternatives",
+        "slug": "heygen-alternatives-2026",
+        "score": 5
+      },
+      {
+        "kind": "worth-it",
+        "slug": "is-adobe-firefly-worth-it",
+        "score": 5
+      },
+      {
+        "kind": "worth-it",
+        "slug": "is-canva-worth-it",
+        "score": 5
+      },
+      {
+        "kind": "worth-it",
+        "slug": "is-chatgpt-worth-it",
+        "score": 5
+      },
+      {
+        "kind": "worth-it",
+        "slug": "is-claude-worth-it",
+        "score": 5
+      },
+      {
+        "kind": "worth-it",
+        "slug": "is-deepseek-worth-it",
+        "score": 5
+      },
+      {
+        "kind": "worth-it",
+        "slug": "is-descript-worth-it",
+        "score": 5
+      },
+      {
+        "kind": "worth-it",
+        "slug": "is-elevenlabs-worth-it",
+        "score": 5
+      },
+      {
+        "kind": "worth-it",
+        "slug": "is-gemini-worth-it",
+        "score": 5
+      },
+      {
+        "kind": "worth-it",
+        "slug": "is-github-copilot-worth-it",
+        "score": 5
+      },
+      {
+        "kind": "worth-it",
+        "slug": "is-grammarly-worth-it",
+        "score": 5
+      },
+      {
+        "kind": "worth-it",
+        "slug": "is-grok-worth-it",
+        "score": 5
+      },
+      {
+        "kind": "worth-it",
+        "slug": "is-heygen-worth-it",
+        "score": 5
+      },
+      {
+        "kind": "worth-it",
+        "slug": "is-mistral-ai-worth-it",
+        "score": 5
+      },
+      {
+        "kind": "worth-it",
+        "slug": "is-n8n-worth-it",
+        "score": 5
+      },
+      {
+        "kind": "worth-it",
+        "slug": "is-notion-ai-worth-it",
+        "score": 5
+      },
+      {
+        "kind": "worth-it",
+        "slug": "is-perplexity-worth-it",
+        "score": 5
+      },
+      {
+        "kind": "worth-it",
+        "slug": "is-poe-worth-it",
+        "score": 5
+      },
+      {
+        "kind": "worth-it",
+        "slug": "is-replit-agent-worth-it",
+        "score": 5
+      },
+      {
+        "kind": "worth-it",
+        "slug": "is-runway-worth-it",
+        "score": 5
+      },
+      {
+        "kind": "worth-it",
+        "slug": "is-suno-worth-it",
+        "score": 5
+      },
+      {
+        "kind": "worth-it",
+        "slug": "is-synthesia-worth-it",
+        "score": 5
+      },
+      {
+        "kind": "worth-it",
+        "slug": "is-udio-worth-it",
+        "score": 5
+      },
+      {
+        "kind": "worth-it",
+        "slug": "is-zapier-worth-it",
+        "score": 5
+      },
+      {
+        "kind": "alternatives",
+        "slug": "midjourney-alternatives-2026",
+        "score": 5
+      },
+      {
+        "kind": "alternatives",
+        "slug": "mistral-ai-alternatives-2026",
+        "score": 5
+      },
+      {
+        "kind": "alternatives",
+        "slug": "n8n-alternatives-2026",
+        "score": 5
+      },
+      {
+        "kind": "alternatives",
+        "slug": "notion-ai-alternatives-2026",
+        "score": 5
+      },
+      {
+        "kind": "alternatives",
+        "slug": "perplexity-alternatives-2026",
+        "score": 5
+      },
+      {
+        "kind": "alternatives",
+        "slug": "poe-alternatives-2026",
+        "score": 5
+      },
+      {
+        "kind": "alternatives",
+        "slug": "replit-agent-alternatives-2026",
+        "score": 5
+      },
+      {
+        "kind": "alternatives",
+        "slug": "runway-alternatives-2026",
+        "score": 5
+      },
+      {
+        "kind": "alternatives",
+        "slug": "suno-alternatives-2026",
+        "score": 5
+      },
+      {
+        "kind": "alternatives",
+        "slug": "synthesia-alternatives-2026",
+        "score": 5
+      },
+      {
+        "kind": "alternatives",
+        "slug": "udio-alternatives-2026",
+        "score": 5
+      },
+      {
+        "kind": "alternatives",
+        "slug": "zapier-alternatives-2026",
+        "score": 5
+      }
+    ]
+  }
+}
