@@ -188,7 +188,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-16"
     },
     {
       "id": "adobe-firefly-creative-agent-2026",
@@ -4721,7 +4721,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-05"
+      "last_checked": "2026-06-16"
     },
     {
       "id": "imagen-gemini-docs",
@@ -6220,7 +6220,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-16"
     },
     {
       "id": "midjourney-terms",
@@ -6229,7 +6229,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-16"
     },
     {
       "id": "midjourney-commercial-rights",
@@ -6238,7 +6238,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-16"
     },
     {
       "id": "midjourney-version-docs",
@@ -6247,7 +6247,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-16"
     },
     {
       "id": "midjourney-video-docs",
@@ -6256,7 +6256,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-16"
     },
     {
       "id": "midjourney-web-vs-discord",
@@ -6265,7 +6265,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-16"
     },
     {
       "id": "midjourney-enterprise-api-survey",
@@ -6274,7 +6274,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-16"
     },
     {
       "id": "midjourney-v8-alpha-update",
@@ -7080,7 +7080,7 @@
     },
     {
       "trust_tier": "primary",
-      "last_checked": "2026-05-04",
+      "last_checked": "2026-06-16",
       "id": "openai-image-generation-docs",
       "label": "OpenAI image generation docs",
       "url": "https://platform.openai.com/docs/guides/image-generation",
@@ -10510,7 +10510,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-16"
     },
     {
       "id": "midjourney-v81-default",
@@ -10519,7 +10519,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-16"
     },
     {
       "id": "microsoft-build-2026-work-iq",
