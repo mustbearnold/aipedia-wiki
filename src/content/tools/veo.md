@@ -10,7 +10,7 @@ pricing_model: paid
 price_range: "Google AI plans + Gemini API paid tier $0.05-$0.60/sec"
 status: active
 launched: 2025-10
-last_updated: 2026-06-12
+last_updated: 2026-06-16
 last_verified: 2026-06-12
 update_frequency: weekly
 affiliate:
@@ -150,6 +150,12 @@ It should be tested directly against [Seedance 2.0](/tools/seedance/) and [Kling
 | Resolution | 1080p and 4K options in Flow, Gemini API, and Vertex AI |
 | Pricing anchor | Gemini API per-second pricing by model and resolution |
 
+## What it actually is
+
+Veo 3.1 is a model family, not a single app. The same models power Flow (Google's creator workflow), the Gemini API and Vertex AI for developers and production, and consumer surfaces like the Gemini app and Google Vids. That spread is the point. Veo's edge is less about winning every quality test and more about living inside Google's stack, with auditable per-second pricing and SynthID provenance on its output.
+
+The family splits by cost and speed. Veo 3.1 Standard targets the highest quality and reaches 4K, Veo 3.1 Fast trades some fidelity for a lower per-second rate, and Veo 3.1 Lite is the budget tier for drafts and high-volume work. All three support native audio. For teams, the Gemini API and Vertex AI routes give the clearest cost model and governance, while consumer app access varies by country and plan.
+
 ## Pricing
 
 The strongest source-backed pricing signal is the Gemini API pricing page. On June 6, 2026, it listed:
@@ -178,12 +184,29 @@ Consumer plan access can vary by country, account, and product surface. For prod
 - **Low-budget effects:** [Pika](/tools/pika/) is lighter for quick clips and playful social assets.
 - **Avatar video:** [HeyGen](/tools/heygen/) is better for presenter-led video.
 
+## Against the alternatives
+
+| | [Veo 3.1](/tools/veo/) | [Kling 3.0](/tools/kling/) | [Seedance 2.0](/tools/seedance/) | Sora 2 | [Runway](/tools/runway/) |
+|---|---|---|---|---|---|
+| **Best at** | All-round quality and audio | Cinematic motion | Reference-based multimodal | Distinctive cinematic style | Production editing suite |
+| **Native audio** | Yes, strongest sync | Yes, across cuts | Yes | Yes | Limited |
+| **Clip length** | Short clips, 1080p and 4K | Up to about 15s | Up to about 15s, multi-shot | Short clips | Short clips |
+| **Access** | Gemini API, Vertex AI, Flow | Kling app, credits | BytePlus API, Dreamina | ChatGPT and Sora app | Web app and API |
+| **Price signal** | Premium ($0.40-0.60/sec at 4K) | Lowest (about $0.10/sec) | Token packs (about $3.30-4.30/1M) | Subscription | Credit-based |
+| **Best viewed as** | Google-stack frontier model | Cinematic motion benchmark | Reference-driven generator | Stylized social video | Editing workspace |
+
+The honest read: Veo wins when you live in the Google stack and want clean audio with auditable API pricing, [Kling](/tools/kling/) leads on cinematic motion and price, [Seedance](/tools/seedance/) is best when you build from your own image, audio, and video references, Sora 2 has the most distinctive style, and [Runway](/tools/runway/) is the better full editing workspace.
+
 ## Failure Modes
 
 - **Cost can climb quickly:** per-second pricing is easy to model but expensive at volume.
 - **Account/product limits vary:** consumer access is not the same as API access.
 - **Not a full editor:** Veo is a model family and product surface, not a complete standalone post-production suite.
 - **Prompt fit varies:** compare the same prompt set against Seedance, Kling, and Runway before committing.
+
+## Methodology
+
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against [Google DeepMind Veo](https://deepmind.google/models/veo/), the [Gemini API video docs](https://ai.google.dev/gemini-api/docs/video), and the [Gemini API pricing page](https://ai.google.dev/gemini-api/docs/pricing).
 
 ## FAQ
 
