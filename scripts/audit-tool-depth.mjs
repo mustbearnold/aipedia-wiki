@@ -117,13 +117,14 @@ function analyze(path, importance) {
 
   const proseRaw = body.split(/\r?\n/)
     .filter((l) => { const t = l.trim(); return t && !/^(#|>|\||[-*]\s|\d+\.\s|```)/.test(t); })
-    .join(' ');
+    .join(' ')
+    .replace(/[*_`]/g, ''); // strip emphasis first so "end.* Next" splits at the period
   let longCount = 0; let longest = 0;
   for (const rawSentence of proseRaw.split(/(?<=[.!?])\s+/)) {
     // Source-citation lists ("Last verified ... against [a], [b], [c]") are link-dense,
     // not run-on prose. Skip sentences with several inline links.
     if ((rawSentence.match(/\]\(/g) || []).length >= 3) continue;
-    const clean = rawSentence.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').replace(/[*_`]/g, '');
+    const clean = rawSentence.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1');
     const n = clean.split(/\s+/).filter(Boolean).length;
     if (n > MAX_SENTENCE_WORDS) { longCount += 1; longest = Math.max(longest, n); }
   }
