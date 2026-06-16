@@ -5,10 +5,10 @@ title: AI Automation & Agents
 description: Current workflow automation, AI agent platforms, meeting automation, call automation, and operations tools for technical teams, non-technical operators, GTM workflows, customer success, support, sales, and internal automation.
 tool_count: 27
 seo_title: "Best AI Automation Tools & Agent Platforms (June 2026)"
-meta_description: "Updated June 15, 2026: compare n8n, Zapier, Make, Workato, Microsoft Agent Framework, Taskade, Rows, Voiceflow, watsonx Orchestrate, Tines, Reclaim.ai, Intercom, Gumloop, Relevance AI, Activepieces, AG2, CrewAI, Langflow, Langfuse, LangGraph, Letta, Glean, Goose, OpenClaw, Browserbase, Modal, Apollo, Lindy, Pipedream, CloudTalk, and MeetGeek by workflow, pricing unit, AI orchestration, governance, and risk."
+meta_description: "Updated June 16, 2026: compare n8n, Zapier, Make, Workato, Microsoft Agent Framework, Taskade, Rows, Voiceflow, watsonx Orchestrate, Tines, Reclaim.ai, Intercom, Gumloop, Relevance AI, Activepieces, AG2, CrewAI, Langflow, Langfuse, LangGraph, Letta, Glean, Goose, OpenClaw, Browserbase, Modal, Apollo, Lindy, Pipedream, CloudTalk, and MeetGeek by workflow, pricing unit, AI orchestration, governance, and risk."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-15
-last_verified: 2026-06-15
+last_updated: 2026-06-16
+last_verified: 2026-06-16
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -26,7 +26,7 @@ top_picks:
 
 AI automation now splits into four buyer jobs: deterministic workflow automation, AI-assisted workflow building, delegated agent workforces, and vertical revenue/support automation. Do not buy by hype. Start with the workflow owner, the billing unit, and the failure risk.
 
-**June 15 Microsoft agent-framework update:** [Microsoft Agent Framework](/tools/microsoft-agent-framework/) remains the Microsoft-aligned open-source agent framework, but the current check sharpens the watch-out. GitHub releases now show dotnet-1.10.0 from June 10 and python-1.8.1 from June 9, with recent breaking or experimental notes, so production teams should pin package versions. Work IQ is still a dated rollout boundary as of June 15: Microsoft's licensing notice says Work IQ API general availability is June 16, 2026 and billing draws down Copilot Credits, not a separate Work IQ API SKU. Do not treat Work IQ-backed agents as free just because Agent Framework itself is MIT open source.
+**June 16 Microsoft agent-framework update:** [Microsoft Agent Framework](/tools/microsoft-agent-framework/) remains the Microsoft-aligned open-source agent framework, but the current check sharpens the watch-out. GitHub releases still show dotnet-1.10.0 from June 10 and python-1.8.1 from June 9, with recent breaking or experimental notes, so production teams should pin package versions. Work IQ is now generally available as of June 16: Microsoft's licensing and Partner Center notices say Work IQ API usage draws down Copilot Credits, has no separate Work IQ API SKU/subscription/per-user license, and should be governed with admin billing, access policies, limits, and alerts before custom or third-party agents use Microsoft 365 data. Do not treat Work IQ-backed agents as free just because Agent Framework itself is MIT open source.
 
 **June 3 agent-stack update:** Microsoft's [Build 2026 Work IQ and Foundry announcements](/news/2026-06-02-microsoft-build-work-iq-agent-stack/), GitHub's [Copilot SDK GA plus AI Credits migration](/news/2026-06-02-github-copilot-ai-credits-sdk-ga/), NVIDIA's [enterprise and physical-AI agent stack](/news/2026-06-01-nvidia-agents-physical-ai-gtc-taipei/), and the [enterprise-agent roundup](/news/2026-06-02-enterprise-agent-roundup-postman-relationalai-7ai-white-house/) make one rule sharper: agents are safest when they inherit permissioned context, log actions, expose spend, and route risky writes through review. Generic "autonomous" claims are weaker than tenant boundaries, tool scopes, audit logs, budget controls, and task-specific runtime evidence.
 
@@ -308,12 +308,13 @@ Do not leave this category stale. Automation tools are adding MCP, agent builder
 - [Voiceflow documentation](https://docs.voiceflow.com/documentation/Introduction) (verified 2026-06-10)
 - [Retell AI pricing](https://www.retellai.com/pricing) (verified 2026-06-09)
 - [Retell AI legacy endpoint deprecation](https://docs.retellai.com/deprecation-notice/2026/06-15_legacy_list_endpoints) (verified 2026-06-09)
-- [Microsoft Agent Framework GitHub releases](https://github.com/microsoft/agent-framework/releases) (verified 2026-06-15)
-- [Microsoft Agent Framework overview](https://learn.microsoft.com/en-us/agent-framework/overview/) (verified 2026-06-15)
-- [Microsoft Agent Framework providers](https://learn.microsoft.com/en-us/agent-framework/agents/providers/) (verified 2026-06-15)
-- [Microsoft Build 2026 Work IQ and Foundry agent stack](https://blogs.microsoft.com/blog/2026/06/02/microsoft-build-2026-be-yourself-at-work/) (verified 2026-06-15)
-- [Microsoft Work IQ APIs](https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/02/announcing-the-new-work-iq-apis/) (verified 2026-06-15)
-- [Microsoft Work IQ licensing notice](https://www.microsoft.com/en-us/licensing/news/work-iq-general-availability) (verified 2026-06-15)
+- [Microsoft Agent Framework GitHub releases](https://github.com/microsoft/agent-framework/releases) (verified 2026-06-16)
+- [Microsoft Agent Framework overview](https://learn.microsoft.com/en-us/agent-framework/overview/) (verified 2026-06-16)
+- [Microsoft Agent Framework providers](https://learn.microsoft.com/en-us/agent-framework/agents/providers/) (verified 2026-06-16)
+- [Microsoft Build 2026 Work IQ and Foundry agent stack](https://blogs.microsoft.com/blog/2026/06/02/microsoft-build-2026-be-yourself-at-work/) (verified 2026-06-16)
+- [Microsoft Work IQ APIs](https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/02/announcing-the-new-work-iq-apis/) (verified 2026-06-16)
+- [Microsoft Work IQ licensing notice](https://www.microsoft.com/en-us/licensing/news/work-iq-general-availability) (verified 2026-06-16)
+- [Microsoft Partner Center Work IQ API and consumptive pricing update](https://learn.microsoft.com/en-us/partner-center/announcements/2026-june) (verified 2026-06-16)
 - [GitHub Copilot SDK GA](https://github.blog/changelog/2026-06-02-copilot-sdk-is-now-generally-available/) (verified 2026-06-03)
 - [NVIDIA enterprise software agents](https://investor.nvidia.com/news/press-release-details/2026/Enterprise-Software-Leaders-Build-AI-Agents-With-NVIDIA/default.aspx) (verified 2026-06-03)
 - [NVIDIA physical AI agent tools and skills](https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Releases-Major-Collection-of-Open-Source-Agent-Tools-and-Skills-for-Physical-AI/default.aspx) (verified 2026-06-03)

@@ -57,11 +57,11 @@ sources:
 
 This is the **June 3, 2026 AiPedia news desk**, refreshed on June 9 after re-checking the same news window against primary sources. The through-line is simple: agents and local models are becoming production surfaces. The real buyer question is no longer "can an AI agent act?" It is "who controls the action, what context does it use, where does the model run, how is it billed, and what happens when it is wrong?"
 
-June 16 refresh note: AiPedia added backfilled daily desks for [June 1](/news/2026-06-01-ai-news-desk/) and [June 2](/news/2026-06-02-ai-news-desk/) so this June 3 productionization desk now has complete preceding-day context.
+June 16 refresh note: AiPedia added backfilled daily desks for [June 1](/news/2026-06-01-ai-news-desk/) and [June 2](/news/2026-06-02-ai-news-desk/), then rechecked Work IQ GA after Microsoft published the June 16 availability and Copilot Credit billing details. Read the current-day follow-up: [AI News Desk, June 16, 2026: Work IQ GA turns Microsoft 365 agents into a metered context layer](/news/2026-06-16-ai-news-desk/).
 
 ## Microsoft turns work context into an API layer
 
-Microsoft's Build 2026 announcements make Work IQ the center of the Microsoft agent story. The Work IQ APIs are scheduled for general availability on June 16, 2026, giving developers programmatic access to Microsoft 365 context, Copilot-style chat, tools, and workspaces within the Microsoft 365 tenant boundary.
+Microsoft's Build 2026 announcements make Work IQ the center of the Microsoft agent story. The Work IQ APIs are generally available as of June 16, 2026, giving developers programmatic access to Microsoft 365 context, Copilot-style chat, tools, and workspaces within the Microsoft 365 tenant boundary.
 
 For buyers, this is a governance story. Microsoft is not only putting Copilot into apps; it is making the permissioned work graph available to agents. That gives Microsoft-aligned teams a strong reason to evaluate Microsoft 365 Copilot, Copilot Studio, Microsoft Foundry, and [Microsoft Agent Framework](/tools/microsoft-agent-framework/) together rather than as isolated products.
 

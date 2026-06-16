@@ -10341,7 +10341,7 @@
       "type": "repository",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-16"
     },
     {
       "id": "maf-overview",
@@ -10350,7 +10350,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-16"
     },
     {
       "id": "maf-providers",
@@ -10359,7 +10359,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-16"
     },
     {
       "id": "meetgeek-overview",
@@ -10402,7 +10402,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-16"
     },
     {
       "id": "microsoft-work-iq-apis",
@@ -10411,7 +10411,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-16"
     },
     {
       "id": "microsoft-work-iq-licensing",
@@ -10420,7 +10420,16 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-16"
+    },
+    {
+      "id": "microsoft-work-iq-partner-center",
+      "label": "Microsoft Partner Center Work IQ API and consumptive pricing update",
+      "url": "https://learn.microsoft.com/en-us/partner-center/announcements/2026-june",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-16"
     },
     {
       "id": "mistral-3-launch",

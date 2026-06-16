@@ -7,12 +7,14 @@ severity: major
 summary: "The June 15 desk: the G7 summit opened in Evian with AI regulation on the agenda; U.S. state AI laws kept moving despite federal pushback; Google AI Overviews faced a German liability ruling; and reporting on Google's Gemini-related phishing lawsuit shows AI abuse moving into procurement and security checklists."
 categories: [ai-chatbots, ai-search, ai-infrastructure, ai-automation]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-15
-last_verified: 2026-06-15
+last_updated: 2026-06-16
+last_verified: 2026-06-16
 related_tools: [gemini, chatgpt, claude, perplexity]
 sources:
   - url: https://g7evian.fr/
     title: "G7 Evian 2026 official site"
+  - url: https://www.consilium.europa.eu/en/meetings/international-summit/2026/06/15-17/
+    title: "Council of the EU: G7 summit, Evian, France, 15-17 June 2026"
   - url: https://apnews.com/article/7e7dfed708daa482c6079863758e6f95
     title: "AP: What to know about the G7 summit Trump is attending in France"
   - url: https://apnews.com/article/23a0e44ab05402ddfe9cdfd0bffa0ade
@@ -32,6 +34,8 @@ This is the **June 15, 2026 AiPedia news desk**, verified against current June s
 Read the previous desk for the weekend baseline: [AI News Desk, June 14, 2026: trust risk moves from model cards to public markets](/news/2026-06-14-ai-news-desk/).
 
 For the narrower Google search and Gemini security playbook, read: [Google AI search risk checklist: AI Overviews liability and Gemini abuse claims](/news/2026-06-15-google-ai-search-liability-gemini-abuse/).
+
+June 16 follow-up: the Council of the EU's official summit page lists "the future of artificial intelligence" among the G7 Evian working-session topics, but final summit language is still pending. Read the next desk for the Work IQ GA and G7 status update: [AI News Desk, June 16, 2026: Work IQ GA turns Microsoft 365 agents into a metered context layer](/news/2026-06-16-ai-news-desk/).
 
 ## What changed today
 

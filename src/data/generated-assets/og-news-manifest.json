@@ -1,10 +1,10 @@
 {
   "version": 1,
   "kind": "news-og",
-  "source_hash": "28286ec077a3d9620d1906b587398de3f4e5cbb99fc6ed3578385455ac42f93b",
+  "source_hash": "1c125c479238934c896ff0f7d598317220986eb1d4be8c5ddab6ce9fbe70044f",
   "generated_at": "deterministic",
   "meta": {
-    "records": 390,
+    "records": 392,
     "requested_slugs": [],
     "limit": null
   },
@@ -3520,6 +3520,24 @@
       "sha256": "3f35be14f9471ee33cb7ffc104aa5df25c6ac2c6aad0621701b8dba49f3a415b"
     },
     {
+      "file": "public/og/news/2026-06-16-ai-news-desk.png",
+      "kind": "news-png",
+      "slug": "2026-06-16-ai-news-desk",
+      "theme": "dark",
+      "target": null,
+      "bytes": 49855,
+      "sha256": "3ace40334013486fb9b22998462df5bcc34beaa34af322bd8f161634fa602fee"
+    },
+    {
+      "file": "public/og/news/2026-06-16-microsoft-work-iq-ga-copilot-credits.png",
+      "kind": "news-png",
+      "slug": "2026-06-16-microsoft-work-iq-ga-copilot-credits",
+      "theme": "dark",
+      "target": null,
+      "bytes": 51705,
+      "sha256": "73aa8e01f3ffb57959e07855b12f435e11050ed62898c8427b4d4b3faf8abcf7"
+    },
+    {
       "file": "public/og/news/light/2026-02-18-trae-pricing-revamp.png",
       "kind": "news-png",
       "slug": "2026-02-18-trae-pricing-revamp",
@@ -7028,6 +7046,24 @@
       "target": null,
       "bytes": 37031,
       "sha256": "6e2ebcc6031f85cfe1ac7d52fa56c92b033e0168e85163b33317d46242309b24"
+    },
+    {
+      "file": "public/og/news/light/2026-06-16-ai-news-desk.png",
+      "kind": "news-png",
+      "slug": "2026-06-16-ai-news-desk",
+      "theme": "light",
+      "target": null,
+      "bytes": 50696,
+      "sha256": "8806ef1f59887d2d5cabf3e4fb077d46a6bb88e1b38e8c2c067ff81963b163d3"
+    },
+    {
+      "file": "public/og/news/light/2026-06-16-microsoft-work-iq-ga-copilot-credits.png",
+      "kind": "news-png",
+      "slug": "2026-06-16-microsoft-work-iq-ga-copilot-credits",
+      "theme": "light",
+      "target": null,
+      "bytes": 42778,
+      "sha256": "fcb92ad7dfa923d0f2deb872f4bf8a4805c958e655d4b55e70f38380a02e42a7"
     },
     {
       "file": "public/og/news/thumbs/2026-02-18-trae-pricing-revamp.webp",
@@ -10540,6 +10576,24 @@
       "sha256": "f96b1c592f6c289e5ec94fda659d3087fd617656c800ce54e6a04c82096b7a18"
     },
     {
+      "file": "public/og/news/thumbs/2026-06-16-ai-news-desk.webp",
+      "kind": "news-thumb",
+      "slug": "2026-06-16-ai-news-desk",
+      "theme": "dark",
+      "target": null,
+      "bytes": 20296,
+      "sha256": "b15480f80e0f9c9c005d0994fb9500afa4706c9161bb8410b11789e4495ea5a2"
+    },
+    {
+      "file": "public/og/news/thumbs/2026-06-16-microsoft-work-iq-ga-copilot-credits.webp",
+      "kind": "news-thumb",
+      "slug": "2026-06-16-microsoft-work-iq-ga-copilot-credits",
+      "theme": "dark",
+      "target": null,
+      "bytes": 19368,
+      "sha256": "21dface1da358d8681e5547d961e356145b5e1b3319a6eb853d82e8c5a937147"
+    },
+    {
       "file": "public/og/news/thumbs/light/2026-02-18-trae-pricing-revamp.webp",
       "kind": "news-thumb",
       "slug": "2026-02-18-trae-pricing-revamp",
@@ -14048,6 +14102,24 @@
       "target": null,
       "bytes": 18868,
       "sha256": "fbf5f50a55e902f00f2136b2d0226126bd02f418080f6af169677998b37bd573"
+    },
+    {
+      "file": "public/og/news/thumbs/light/2026-06-16-ai-news-desk.webp",
+      "kind": "news-thumb",
+      "slug": "2026-06-16-ai-news-desk",
+      "theme": "light",
+      "target": null,
+      "bytes": 20520,
+      "sha256": "f8114108ba09f04064d8add4c39f00b43c1a992a63d845d296d2bfd820dd5a95"
+    },
+    {
+      "file": "public/og/news/thumbs/light/2026-06-16-microsoft-work-iq-ga-copilot-credits.webp",
+      "kind": "news-thumb",
+      "slug": "2026-06-16-microsoft-work-iq-ga-copilot-credits",
+      "theme": "light",
+      "target": null,
+      "bytes": 19472,
+      "sha256": "d3d3e203e791b394c80a6271a44358f5f3ee0734b52c11f131023efe748eed03"
     }
   ]
 }

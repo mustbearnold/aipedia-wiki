@@ -39,7 +39,9 @@ No duplicate coverage note: this desk connects the day. For deeper coverage, rea
 
 ## Microsoft makes work context programmable
 
-Microsoft's Build 2026 message centered on context. Microsoft says Work IQ is the Microsoft 365 work-intelligence layer, and that Work IQ APIs will be generally available on June 16, 2026. The APIs are meant to let agents interact with Microsoft 365 data and apps using tenant context, enterprise controls, and a smaller agent-optimized tool surface.
+June 16 follow-up: Work IQ APIs are now generally available with Copilot Credit billing and admin controls. Read the current update: [AI News Desk, June 16, 2026: Work IQ GA turns Microsoft 365 agents into a metered context layer](/news/2026-06-16-ai-news-desk/).
+
+Microsoft's Build 2026 message centered on context. Microsoft says Work IQ is the Microsoft 365 work-intelligence layer, and the Work IQ APIs are meant to let agents interact with Microsoft 365 data and apps using tenant context, enterprise controls, and a smaller agent-optimized tool surface.
 
 For buyers evaluating [Microsoft Agent Framework](/tools/microsoft-agent-framework/), the important point is that the framework is not isolated. It sits beside Microsoft 365 Copilot, Copilot Studio, Microsoft Foundry, Work IQ, Fabric IQ, Foundry IQ, and Copilot Credits. Microsoft is trying to make the work graph an agent platform.
 

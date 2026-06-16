@@ -1,6 +1,7 @@
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 
+// Refresh metadata: 2026-06-16 Work IQ GA desk and buyer checklist added after current June Microsoft Work IQ API/licensing/Partner Center and Council of the EU source checks; Microsoft Agent Framework, AI Automation, homepage, news archive, tools/categories indexes, /explore/, and LLM surfaces inspected.
 // Refresh metadata: 2026-06-16 June 1 and June 2 AI news desks backfilled after current June GitHub, NVIDIA, Microsoft, Anthropic, Postman, RelationalAI, 7AI, and White House source checks; homepage, news archive, /explore/, and LLM surfaces inspected.
 // Refresh metadata: 2026-06-15 Visa/ChatGPT agent-payments coverage added after current June AP and Visa Intelligent Commerce source checks; ChatGPT, OpenAI, agent-commerce trend, June 10 desk, homepage, news/trends/tools/categories indexes, and LLM surfaces inspected.
 // Refresh metadata: 2026-06-15 OpenAI/Ona Codex persistent-agent acquisition coverage added after current June official OpenAI, Ona, Codex product, and Codex pricing source checks; Codex, AI Coding, June 11 desk, homepage, news archive, and LLM surfaces inspected.
