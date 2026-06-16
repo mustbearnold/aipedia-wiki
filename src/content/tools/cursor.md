@@ -401,7 +401,7 @@ Different shapes. Cursor is a GUI-first editor with a multi-agent window. Claude
 Use Cursor when you want an editor with an Agents Window attached. Use Claude Code when you want the agent to run the whole loop in a terminal with minimal human supervision. Many developers use both: Cursor for interactive work, Claude Code for batch agentic runs.
 
 **What happened to Background Agents?**
-Cursor 2.0 (October 29, 2025) renamed Background Agents to Cloud Agents. Functionality expanded in Cursor 3.0 with seamless local-to-cloud handoff and self-hosted deployment support for enterprises that need code and execution to stay inside their own network.
+Cursor 2.0 (October 29, 2025) renamed Background Agents to Cloud Agents. Functionality expanded in Cursor 3.0 with local-to-cloud handoff and self-hosted deployment support for enterprises that need code and execution to stay inside their own network.
 
 **Does Cursor work with JetBrains, Vim, or Zed?**
 No. Cursor is a VS Code fork, not a plugin. Users on other editors should look at [GitHub Copilot](/tools/github-copilot/), [Cline](/tools/cline/), [Continue](/tools/continue/), or [Aider](/tools/aider/) depending on the editor and workflow.

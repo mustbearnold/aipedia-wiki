@@ -134,7 +134,7 @@ Every data point above was verified against vendor documentation on 2026-06-12. 
 ## Recent Changes
 
 - **2026-06-05:** Pricing, member caps, guest limits, pitch rooms, credit allowances, and $0.004 extra-credit pricing rechecked while refreshing the Decktopus vs Pitch comparison. Free remains $0 with up to 5 members and 100 one-time AI credits; Plus, Team, Business, and Enterprise positioning remains materially unchanged.
-- **2026-05-13:** Pricing, member caps, and credit allowances verified unchanged. Co-present slides confirmed as a Team-tier feature for seamless presentation handoff between collaborators. Free tier still uniquely uncapped on deck count in the category.
+- **2026-05-13:** Pricing, member caps, and credit allowances verified unchanged. Co-present slides confirmed as a Team-tier feature for smooth presentation handoff between collaborators. Free tier still uniquely uncapped on deck count in the category.
 
 ## What it actually is
 
