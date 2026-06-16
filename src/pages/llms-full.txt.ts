@@ -2,6 +2,13 @@
 // Lists every active tool with category + tagline, every comparison, every
 // use-case guide. Intended for crawlers willing to ingest a larger manifest
 // to discover the full content map without parsing the sitemap.
+// Refresh metadata: 2026-06-16 Google Cloud data-agents coverage after current
+// Google Cloud announcement, Data Engineering Agent, Conversational Analytics,
+// and MCP server checks; updated June 16 desk, AI Automation, AI
+// Infrastructure, source registry, homepage, news archive, RSS,
+// tools/categories/explore indexes, and LLM maintenance around governed
+// analytics, MCP permissions, SQL verification, spend limits, and
+// preview-vs-GA rollout boundaries.
 // Refresh metadata: 2026-06-16 June 12 OpenAI Academy workplace-courses
 // backfill after current OpenAI Academy and OpenAI announcement checks;
 // updated June 12 desk, source registry, homepage, news archive, RSS,
@@ -392,6 +399,7 @@ export const GET: APIRoute = async () => {
   lines.push('> Extended LLM-friendly site manifest. Enumerates every active page across tools, categories, comparisons, buyer guides, and companies. See /llms.txt for the concise version.');
   lines.push('');
   lines.push('Recent answer refresh: June 16, 2026 refreshed the best AI chatbot, ChatGPT-vs-Claude, ChatGPT alternatives, and best free AI tools answers plus answers index, homepage shortcut, source registry, and LLM maintenance around ChatGPT as the broad default, ChatGPT Free GPT-5.5/tool limits, ChatGPT plan-fit escalation, Claude Free/Pro usage boundaries, Claude Opus 4.8 fallback and Fable/Mythos access suspension, Gemini/NotebookLM Google-native fit, NotebookLM Standard source/research limits, and Perplexity citation-first research fit.');
+  lines.push('Recent news/category refresh: June 16, 2026 added Google Cloud data-agent coverage and refreshed the June 16 desk, AI Automation, AI Infrastructure, source registry, homepage, news archive, RSS, tools index, categories index, explore, and LLM maintenance around Data Engineering Agent GA, Managed MCP Servers for Databases GA, Conversational Analytics, Looker and Gemini Enterprise previews, IAM/MCP permissions, SQL verification, BigQuery spend limits, job labels, and preview-vs-GA rollout boundaries.');
   lines.push('Recent news refresh: June 16, 2026 backfilled the June 12 OpenAI Academy workplace-courses story and updated the June 12 desk, source registry, homepage, news archive, RSS, explore, and LLM maintenance around AI Foundations, Applied AI Foundations, Agents and Workflows, completion certificates, enterprise onboarding, and the warning that training certificates do not replace governance.');
   lines.push('Recent news/tool refresh: June 16, 2026 added the Work IQ GA desk and buyer checklist, refreshed Microsoft Agent Framework and AI Automation, and updated source registry, homepage, news archive, RSS, tools index, categories index, explore, and LLM maintenance around Work IQ API GA, Copilot Credit billing, Partner Center admin controls, tenant-bound context, and pending G7 AI summit statements.');
   lines.push('Recent category refresh: June 15, 2026 refreshed AI Presentation plus source registry, homepage, tools index, categories index, explore, and LLM maintenance around Gamma Plus/Pro/Ultra deck/export/API gates, Pitch AI credits and branded export gates, Canva AI Product Terms and operational usage limits, Beautiful.ai trial/pricing, Decktopus credits, Presentations.AI credit discrepancy, Napkin AI visual credits, and Prezi route-check caveats.');
