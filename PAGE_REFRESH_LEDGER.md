@@ -759,7 +759,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-16 | /news/rss.xml | Crawl surface | No | git | src/pages/news/rss.xml.ts |
 | 2026-06-16 | /sitemap-index.xml | Crawl surface | No | git | astro.config.mjs |
 | 2026-06-16 | /tools/ | Static page | Yes | git | src/pages/tools/index.astro |
-| 2026-06-16 | /tools/hume/ | Tool | Yes | working tree | src/content/tools/hume.md |
+| 2026-06-16 | /tools/hume/ | Tool | Yes | frontmatter | src/content/tools/hume.md |
 | 2026-06-16 | /tools/microsoft-agent-framework/ | Tool | Yes | frontmatter | src/content/tools/microsoft-agent-framework.md |
 | 2026-06-16 | /tools/napkin/ | Tool | Yes | frontmatter | src/content/tools/napkin.md |
 | 2026-06-16 | /tools/vapi/ | Tool | Yes | frontmatter | src/content/tools/vapi.md |
