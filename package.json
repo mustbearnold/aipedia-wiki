@@ -32,6 +32,8 @@
     "audit:glossary": "node scripts/audit-glossary.mjs --check",
     "glossary:gaps": "node scripts/audit-glossary.mjs --gaps",
     "audit:tool-quality": "node scripts/audit-tool-quality.mjs",
+    "audit:tool-depth": "node scripts/audit-tool-depth.mjs --check",
+    "tool-depth:gaps": "node scripts/audit-tool-depth.mjs --gaps",
     "audit:company": "node scripts/audit-company.mjs --check",
     "company:gaps": "node scripts/audit-company.mjs --gaps",
     "audit:bestof-quality": "node scripts/audit-bestof-quality.mjs",
