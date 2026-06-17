@@ -1,7 +1,7 @@
 {
   "version": 1,
   "kind": "tool-og",
-  "source_hash": "c479e6fd10774c0fb2db8abfa24462cf2a07510d4ea57c8da7e746ac6f4edde7",
+  "source_hash": "ecf946c7362dbb10de606bcc333d4532ac2e4ade1cb8f08edb715790fcd988d7",
   "generated_at": "deterministic",
   "meta": {
     "tools": 220,
@@ -14,8 +14,8 @@
       "slug": null,
       "theme": null,
       "target": null,
-      "bytes": 225408,
-      "sha256": "a0fa618807c315c2251d1517f8666a906c1a285fe734d2197f471d701a8ea865"
+      "bytes": 188932,
+      "sha256": "93007de4a5f265f391af9ac421ddb7623482cbcfea3582cc7b98f024276f9555"
     },
     {
       "file": "public/og/tools/activepieces.png",

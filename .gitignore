@@ -77,6 +77,11 @@ public/pagefind/
 .hermes/
 .agent/logs/
 
+# Local throwaway prototypes and screenshots. Keep design experiments out of git and the page ledger.
+.agent/prototypes/
+src/pages/prototype/
+src/pages/prototypes/
+
 # Project Knowledge Graph runtime data
 .kg/project.db
 .kg/project.db-shm
@@ -87,6 +92,7 @@ public/pagefind/
 .kg/snapshots/
 
 # Local-only admin/operator artifacts. These are useful on Ben's machine but are not part of the functional public website source.
+# If a local doc becomes canonical product or engineering documentation, move it out of this block intentionally.
 AGENTS.md
 CLAUDE.md
 CU-AUDIT-REPORT.md
@@ -131,3 +137,9 @@ src/pages/admin/wiki-health.astro
 
 # Coverage Engine isolated worktrees (one per generated page; merged then removed)
 .worktrees/
+
+# Local MCP server wiring. Keep machine-specific server config out of commits.
+.mcp.json
+
+# CodeGraph local code index (SQLite); rebuildable with `codegraph init`
+.codegraph/

@@ -22,6 +22,16 @@ const REQUIRED_SECTIONS = ['System Verdict', 'Pricing'];
 const MIN_WORDS = 350;
 const VERIFY_MAX_AGE_DAYS = 14;
 const PLACEHOLDER = [/\bTODO\b/, /\bTKTK\b/i, /lorem ipsum/i, /\bplaceholder\b/i, /\bXXX\b/];
+// Dimension 2 (clear + easy to read) proxies. High-confidence filler/vendor-speak
+// that is almost never justified in editorial copy; conservative run-on threshold.
+const FILLER_TERMS = [
+  'seamless', 'seamlessly', 'game-changer', 'game-changing', 'game changer',
+  'revolutionize', 'revolutionary', 'cutting-edge', 'state-of-the-art',
+  'world-class', 'best-in-class', "in today's fast-paced", 'look no further',
+  'unlock the power', 'harness the power', 'take it to the next level',
+  'paradigm shift', 'supercharge',
+];
+const MAX_SENTENCE_WORDS = 50;
 
 function valueFor(name) {
   const inline = args.find((a) => a.startsWith(`${name}=`));
@@ -110,6 +120,31 @@ function checkFile(path) {
   const words = body.replace(/[#>*|`\-]/g, ' ').split(/\s+/).filter(Boolean).length;
   if (words < MIN_WORDS) failures.push(`${rel}: body ${words} words (min ${MIN_WORDS})`);
   for (const re of PLACEHOLDER) if (re.test(body)) failures.push(`${rel}: placeholder ${re}`);
+
+  // Readability: filler / vendor-speak (plain editorial voice, not marketing copy).
+  const bodyLower = body.toLowerCase();
+  const filler = FILLER_TERMS.filter((t) => bodyLower.includes(t));
+  if (filler.length) failures.push(`${rel}: filler/vendor-speak (${filler.join(', ')}); use plain editorial language`);
+
+  // Readability: run-on sentences. Operate on prose only (skip headings, tables,
+  // list items, blockquotes, code fences) so markdown structure doesn't false-positive.
+  const proseText = body
+    .split(/\r?\n/)
+    .filter((line) => {
+      const t = line.trim();
+      if (!t) return false;
+      return !/^(#|>|\||[-*]\s|\d+\.\s|```)/.test(t);
+    })
+    .join(' ')
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1') // links -> visible text
+    .replace(/[*_`]/g, '');
+  let longest = 0;
+  let longCount = 0;
+  for (const sentence of proseText.split(/(?<=[.!?])\s+/)) {
+    const n = sentence.split(/\s+/).filter(Boolean).length;
+    if (n > MAX_SENTENCE_WORDS) { longCount += 1; longest = Math.max(longest, n); }
+  }
+  if (longCount) failures.push(`${rel}: ${longCount} sentence(s) over ${MAX_SENTENCE_WORDS} words (longest ${longest}); split for readability`);
 
   return failures;
 }

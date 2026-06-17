@@ -1,6 +1,6 @@
 # AiPedia Page Refresh Ledger
 
-Ledger updated through: 2026-06-16
+Ledger updated through: 2026-06-18
 Tracked public pages and crawl surfaces: 780
 
 Hard rule: every time a tracked website page is edited, refreshed, materially re-ranked, or has volatile facts re-verified, update that page row in this file on the same change. If a child page update affects a parent hub, archive, internal-link block, sitemap, or LLM surface, update those affected rows too.
@@ -685,7 +685,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-15 | /guides/claude-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/claude-alternatives.md |
 | 2026-06-15 | /guides/cursor-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/cursor-alternatives.md |
 | 2026-06-15 | /guides/github-copilot-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/github-copilot-alternatives.md |
-| 2026-06-15 | /media-kit/ | Static page | Yes | git | src/pages/media-kit.astro |
 | 2026-06-15 | /privacy/ | Static page | Yes | git | src/pages/privacy.astro |
 | 2026-06-15 | /search/ | Static page | No | git | src/pages/search.astro |
 | 2026-06-15 | /tools/adobe-firefly/ | Tool | Yes | frontmatter | src/content/tools/adobe-firefly.md |
@@ -775,10 +774,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-16 | /compare/grok-vs-poe/ | Comparison | Yes | frontmatter | src/content/comparisons/grok-vs-poe.md |
 | 2026-06-16 | /compare/perplexity-vs-poe/ | Comparison | Yes | frontmatter | src/content/comparisons/perplexity-vs-poe.md |
 | 2026-06-16 | /explore/ | Static page | Yes | git | src/pages/explore/index.astro |
-| 2026-06-16 | /llms-full.txt | Crawl surface | No | git | src/pages/llms-full.txt.ts |
-| 2026-06-16 | /llms.txt | Crawl surface | No | git | src/pages/llms.txt.ts |
-| 2026-06-16 | /news/ | Static page | Yes | page metadata | src/pages/news/index.astro |
-| 2026-06-16 | /news/rss.xml | Crawl surface | No | git | src/pages/news/rss.xml.ts |
 | 2026-06-16 | /sitemap-index.xml | Crawl surface | No | git | astro.config.mjs |
 | 2026-06-16 | /tools/ | Static page | Yes | git | src/pages/tools/index.astro |
 | 2026-06-16 | /tools/hume/ | Tool | Yes | frontmatter | src/content/tools/hume.md |
@@ -791,3 +786,8 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-16 | /tools/veo/ | Tool | Yes | frontmatter | src/content/tools/veo.md |
 | 2026-06-16 | /trends/ | Static page | Yes | git | src/pages/trends/index.astro |
 | 2026-06-16 | /trends/geo-trend/ | Trend | Yes | frontmatter | src/content/trends/geo-trend.md |
+| 2026-06-18 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
+| 2026-06-18 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
+| 2026-06-18 | /media-kit/ | Static page | Yes | working tree | src/pages/media-kit.astro |
+| 2026-06-18 | /news/ | Static page | Yes | working tree | src/pages/news/index.astro |
+| 2026-06-18 | /news/rss.xml | Crawl surface | No | working tree | src/pages/news/rss.xml.ts |

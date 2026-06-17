@@ -1,7 +1,13 @@
-// /llms-full.txt — verbose LLM-friendly site manifest.
+// /llms-full.txt - verbose LLM-friendly site manifest.
 // Lists every active tool with category + tagline, every comparison, every
 // use-case guide. Intended for crawlers willing to ingest a larger manifest
 // to discover the full content map without parsing the sitemap.
+// Refresh metadata: 2026-06-17 June 17 AI news catch-up after current Google
+// Pixel Drop, Gemini Omni, Microsoft Copilot Cowork, Work IQ billing, AP G7
+// AI sovereignty, official G7 statement, AP NVIDIA, and Coherent source checks;
+// updated news archive, RSS, ledger, and LLM maintenance around phone-native
+// Gemini creation, metered workplace agents, sovereign model-access risk, and
+// AI infrastructure capacity.
 // Refresh metadata: 2026-06-16 best AI image generator answer refresh after
 // current GPT Image 2 docs, OpenAI API pricing/deprecations, Midjourney
 // V8.1/version/plans, Ideogram pricing, Adobe Firefly plans, FLUX.2, and Stable
@@ -417,6 +423,7 @@ export const GET: APIRoute = async () => {
   lines.push('');
   lines.push('> Extended LLM-friendly site manifest. Enumerates every active page across tools, categories, comparisons, buyer guides, and companies. See /llms.txt for the concise version.');
   lines.push('');
+  lines.push('Recent news refresh: June 17, 2026 filled the active June date gap with the June 17 AI News Desk plus Google Pixel/Gemini, Microsoft Copilot Cowork, G7 AI sovereignty, and NVIDIA AI infrastructure coverage, updating news archive, RSS, ledger, and LLM maintenance around phone-native Gemini creation, metered workplace agents, sovereign model-access risk, and compute-capacity procurement checks.');
   lines.push('Recent answer refresh: June 16, 2026 refreshed the best AI image generator answer plus answers index, homepage/explore comments, source registry cleanup, ledger, and LLM maintenance around ChatGPT with GPT Image 2 as the default, Midjourney for art direction, Ideogram for typography, Adobe Firefly for Adobe-governed creative, and Flux/Stable Diffusion/API-first routes for control-heavy workflows.');
   lines.push('Recent answer refresh: June 16, 2026 refreshed the Midjourney worth-it answer plus answers index, homepage/explore comments, source registry, ledger, and LLM maintenance around Standard-vs-Pro fit, V8.1 default status, V7 Omni Reference fallback, Stealth Mode, SD video Relax Mode, video GPU cost caveats, commercial-rights thresholds, no generally available public API, and alternatives for text-heavy, Adobe-governed, assistant-first, or local/API image workflows.');
   lines.push('Recent answer refresh: June 16, 2026 refreshed the Cursor worth-it answer plus answers index, homepage/explore comments, source registry, and LLM maintenance around Cursor Pro/Pro+/Ultra fit, Teams Standard/Premium usage pools, on-demand usage billing, spend alerts, Privacy Mode/ZDR limits, GitHub Copilot rollout fit, and Claude Code terminal-first fit.');

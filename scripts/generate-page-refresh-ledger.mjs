@@ -162,6 +162,11 @@ const publicSurfaceRoutes = new Map([
   ['src/pages/news/rss.xml.ts', '/news/rss.xml'],
 ]);
 
+const ignoredStaticPagePrefixes = [
+  'src/pages/prototype/',
+  'src/pages/prototypes/',
+];
+
 const sitemapExcludedPaths = new Set([
   '/about/editor/',
   '/compare/build/',
@@ -302,6 +307,7 @@ function routeForStaticPage(relPath) {
 function isHtmlStaticPage(relPath) {
   const ext = htmlStaticExtensions.find((candidate) => relPath.endsWith(candidate));
   if (!ext) return false;
+  if (ignoredStaticPagePrefixes.some((prefix) => relPath.startsWith(prefix))) return false;
   if (relPath.includes('/api/')) return false;
   if (relPath.includes('/embed/')) return false;
   if (relPath.includes('/badges/')) return false;

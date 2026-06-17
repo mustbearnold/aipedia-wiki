@@ -2,10 +2,8 @@
 import ArticleLayout from '../layouts/ArticleLayout.astro';
 import { getCollection } from 'astro:content';
 
-// Refresh metadata: 2026-06-13 media kit refresh with Vercel hosting
-// language, live collection
-// inventory language, partnership guardrails, brand asset context, and
-// durable page-level dateModified metadata.
+// Refresh metadata: 2026-06-17 media kit brand asset refresh after favicon
+// source logo changed from cyan-forward to orange-forward.
 const allTools = await getCollection('tools');
 const activeTools = allTools.filter(
   (t) => t.data.status !== 'dead' && t.data.status !== 'retired' && t.data.status !== 'acquired'
@@ -16,8 +14,8 @@ const allUseCases = await getCollection('use-cases');
 const allDead = await getCollection('dead');
 const allNews = await getCollection('news');
 
-const LAST_UPDATED = '2026-06-13';
-const LAST_UPDATED_HUMAN = 'June 13, 2026';
+const LAST_UPDATED = '2026-06-17';
+const LAST_UPDATED_HUMAN = 'June 17, 2026';
 
 const pageName = 'Media Kit & Partnerships, aipedia.wiki';
 const pageDesc =
@@ -35,22 +33,22 @@ const brandAssets = [
   {
     title: 'Primary logo',
     meta: '512x512 PNG with alpha',
-    href: '/brand/aipedia-logo-crystal-cyan-512.png',
-    preview: '/brand/aipedia-logo-crystal-cyan-512.png',
+    href: '/brand/aipedia-logo-crystal-orange-512.png',
+    preview: '/brand/aipedia-logo-crystal-orange-512.png',
     type: 'logo',
   },
   {
     title: 'Profile logo',
     meta: '128x128 PNG',
-    href: '/brand/aipedia-logo-crystal-cyan-128.png',
-    preview: '/brand/aipedia-logo-crystal-cyan-128.png',
+    href: '/brand/aipedia-logo-crystal-orange-128.png',
+    preview: '/brand/aipedia-logo-crystal-orange-128.png',
     type: 'logo',
   },
   {
     title: 'Compact UI logo',
     meta: '48x48 PNG',
-    href: '/brand/aipedia-logo-crystal-cyan-48.png',
-    preview: '/brand/aipedia-logo-crystal-cyan-48.png',
+    href: '/brand/aipedia-logo-crystal-orange-48.png',
+    preview: '/brand/aipedia-logo-crystal-orange-48.png',
     type: 'logo',
   },
   {
@@ -86,7 +84,7 @@ const brandAssets = [
 const brandNotes = [
   { label: 'Site name', value: 'aipedia.wiki' },
   { label: 'Typeface', value: 'Metropolis' },
-  { label: 'Palette', value: 'Signal Cyan' },
+  { label: 'Palette', value: 'Signal Orange' },
 ];
 ---
 
@@ -216,21 +214,21 @@ const brandNotes = [
   <h2>Brand assets</h2>
 
   <p>
-    Current Signal Cyan logo, favicon, and preview images are available under the paths below. Partners may use these for partner-directory pages, press coverage, affiliate dashboards, and integration announcements that accurately describe aipedia.wiki as an independent AI tools review and reference site.
+    Current Signal Orange logo, favicon, and preview images are available under the paths below. Partners may use these for partner-directory pages, press coverage, affiliate dashboards, and integration announcements that accurately describe aipedia.wiki as an independent AI tools review and reference site.
   </p>
 
   <div class="not-prose media-brand-kit my-[var(--site-content-gap)]">
     <div class="media-brand-hero">
       <img
         src="/brand/aipedia-media-kit-preview.png"
-        alt="aipedia.wiki Signal Cyan media kit preview"
+        alt="aipedia.wiki Signal Orange media kit preview"
         width="1200"
         height="630"
         loading="lazy"
       />
       <div>
         <span>Press card</span>
-        <strong>Signal Cyan brand preview</strong>
+        <strong>Signal Orange brand preview</strong>
         <a href="/brand/aipedia-media-kit-preview.png">Open PNG -&gt;</a>
       </div>
     </div>

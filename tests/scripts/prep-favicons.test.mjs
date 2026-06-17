@@ -12,6 +12,7 @@ const EXPECTED_FILES = [
   'public/favicon-192.png',
   'public/favicon-512.png',
   'public/favicon.ico',
+  'public/apple-touch-icon.png',
 ];
 
 function runPrepFavicons(...args) {
@@ -31,7 +32,7 @@ async function writeFixtureProject() {
       width: 512,
       height: 512,
       channels: 4,
-      background: { r: 12, g: 210, b: 236, alpha: 1 },
+          background: { r: 249, g: 115, b: 22, alpha: 1 },
     },
   })
     .composite([{
@@ -49,7 +50,7 @@ async function writeFixtureProject() {
     .png({ compressionLevel: 9, adaptiveFiltering: true })
     .toBuffer();
 
-  writeFileSync(join(brandDir, 'aipedia-logo-crystal-cyan-512.png'), source);
+  writeFileSync(join(brandDir, 'aipedia-logo-crystal-orange-512.png'), source);
   return fixture;
 }
 
@@ -73,9 +74,9 @@ test('prep-favicons writes fixture favicons and ico', async () => {
     assert.equal(report.ok, true);
     assert.equal(report.mode, 'generate');
     assert.equal(report.project_dir, resolve(fixture));
-    assert.equal(report.generated, 5);
-    assert.equal(report.changed, 5);
-    assert.equal(report.written, 5);
+    assert.equal(report.generated, EXPECTED_FILES.length);
+    assert.equal(report.changed, EXPECTED_FILES.length);
+    assert.equal(report.written, EXPECTED_FILES.length);
     assert.deepEqual(report.argument_issues, []);
     assertOutputFilesExist(fixture);
   } finally {
@@ -94,8 +95,8 @@ test('prep-favicons dry-run reports changes without writing fixture outputs', as
     const report = JSON.parse(result.stdout);
     assert.equal(report.ok, true);
     assert.equal(report.mode, 'dry-run');
-    assert.equal(report.generated, 5);
-    assert.equal(report.changed, 5);
+    assert.equal(report.generated, EXPECTED_FILES.length);
+    assert.equal(report.changed, EXPECTED_FILES.length);
     assert.equal(report.written, 0);
     assert.ok(report.outputs.every((output) => output.written === false));
     for (const file of EXPECTED_FILES) {
@@ -120,7 +121,7 @@ test('prep-favicons check passes after fixture generation', async () => {
     const report = JSON.parse(result.stdout);
     assert.equal(report.ok, true);
     assert.equal(report.mode, 'check');
-    assert.equal(report.generated, 5);
+    assert.equal(report.generated, EXPECTED_FILES.length);
     assert.equal(report.changed, 0);
     assert.equal(report.written, 0);
   } finally {

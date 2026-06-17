@@ -8,6 +8,7 @@ Use the smallest verification command that matches the change.
 
 ```bash
 npm ci
+npm run check:smart
 npm run check:quick
 npm run check
 npm run editorial:weekly
@@ -16,6 +17,7 @@ npm run build
 npm run deploy
 ```
 
+- `npm run check:smart`: recommends the smallest safe verification set for the current diff; use `npm run check:smart:run` to execute it.
 - `npm run check:quick`: no-build loop for script/tooling changes; runs script tests, command-surface audit, and bounded asset checks.
 - `npm run check`: broader source, content, link, news, asset, and security checks.
 - `npm run editorial:weekly`: editorial freshness queue for deciding what to refresh next.

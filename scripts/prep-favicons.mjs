@@ -15,9 +15,10 @@ const argumentIssues = collectArgumentIssues();
 const defaultProjectDir = dirname(dirname(fileURLToPath(import.meta.url)));
 const projectDirArg = valueFor('--project-dir') || valueFor('--root');
 const PROJECT_DIR = resolve(projectDirArg || defaultProjectDir);
-const SOURCE = join(PROJECT_DIR, 'public/brand/aipedia-logo-crystal-cyan-512.png');
+const SOURCE = join(PROJECT_DIR, 'public/brand/aipedia-logo-crystal-orange-512.png');
 const PUBLIC_DIR = join(PROJECT_DIR, 'public');
 const SIZES = [16, 32, 192, 512];
+const TOUCH_ICON_SIZE = 180;
 
 function valueFor(flag) {
   const index = args.indexOf(flag);
@@ -146,6 +147,12 @@ async function desiredOutputs() {
     buffer: icoBuffer(icoPng),
   });
 
+  outputs.push({
+    file: 'apple-touch-icon.png',
+    size: TOUCH_ICON_SIZE,
+    buffer: await pngBuffer(TOUCH_ICON_SIZE),
+  });
+
   return outputs;
 }
 
@@ -198,7 +205,7 @@ function emitReport(report) {
     return;
   }
 
-  console.log(`Favicons: generated ${SIZES.map((size) => `${size}px`).join(', ')} plus favicon.ico (${report.written} written).`);
+  console.log(`Favicons: generated ${SIZES.map((size) => `${size}px`).join(', ')} plus ${TOUCH_ICON_SIZE}px apple touch icon and favicon.ico (${report.written} written).`);
 }
 
 async function main() {

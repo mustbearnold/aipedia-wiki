@@ -1,10 +1,10 @@
 {
   "version": 1,
   "kind": "news-og",
-  "source_hash": "c705a5ede890a79879b30e775c9d3fda783e0825bd8d11fe304c3c240ec4af39",
+  "source_hash": "ba1ee773fe599732cad451075b581dec891f05a9b248560f2037c6135f24e302",
   "generated_at": "deterministic",
   "meta": {
-    "records": 394,
+    "records": 399,
     "requested_slugs": [],
     "limit": null
   },
@@ -3556,6 +3556,51 @@
       "sha256": "73aa8e01f3ffb57959e07855b12f435e11050ed62898c8427b4d4b3faf8abcf7"
     },
     {
+      "file": "public/og/news/2026-06-17-ai-news-desk.png",
+      "kind": "news-png",
+      "slug": "2026-06-17-ai-news-desk",
+      "theme": "dark",
+      "target": null,
+      "bytes": 50646,
+      "sha256": "39537512d620d36e390ab7ba0cab6411daef51f60650427a91ee66f2ac43104c"
+    },
+    {
+      "file": "public/og/news/2026-06-17-g7-ai-sovereignty-frontier-labs.png",
+      "kind": "news-png",
+      "slug": "2026-06-17-g7-ai-sovereignty-frontier-labs",
+      "theme": "dark",
+      "target": null,
+      "bytes": 54303,
+      "sha256": "25b37f40076f166d01725b3aba92266219bcb46c3ae76509ea0e131408eed784"
+    },
+    {
+      "file": "public/og/news/2026-06-17-google-pixel-drop-gemini-omni-tools.png",
+      "kind": "news-png",
+      "slug": "2026-06-17-google-pixel-drop-gemini-omni-tools",
+      "theme": "dark",
+      "target": null,
+      "bytes": 51696,
+      "sha256": "08a59f2c542d864a5b1fbe79d4b337bfc562d40a59bf863d5122b82ad74ab07d"
+    },
+    {
+      "file": "public/og/news/2026-06-17-microsoft-copilot-cowork-usage-billing.png",
+      "kind": "news-png",
+      "slug": "2026-06-17-microsoft-copilot-cowork-usage-billing",
+      "theme": "dark",
+      "target": null,
+      "bytes": 46488,
+      "sha256": "0b7c0793e17d96364b46f904e806264f7b1e878f3eb4671fb897cbbb76ab811d"
+    },
+    {
+      "file": "public/og/news/2026-06-17-nvidia-ai-factory-coherent-social-norms.png",
+      "kind": "news-png",
+      "slug": "2026-06-17-nvidia-ai-factory-coherent-social-norms",
+      "theme": "dark",
+      "target": null,
+      "bytes": 48564,
+      "sha256": "f1922d7496f996392fb229605248be50dfd21027ea8ed2f0b574215a56503400"
+    },
+    {
       "file": "public/og/news/light/2026-02-18-trae-pricing-revamp.png",
       "kind": "news-png",
       "slug": "2026-02-18-trae-pricing-revamp",
@@ -7100,6 +7145,51 @@
       "target": null,
       "bytes": 42778,
       "sha256": "fcb92ad7dfa923d0f2deb872f4bf8a4805c958e655d4b55e70f38380a02e42a7"
+    },
+    {
+      "file": "public/og/news/light/2026-06-17-ai-news-desk.png",
+      "kind": "news-png",
+      "slug": "2026-06-17-ai-news-desk",
+      "theme": "light",
+      "target": null,
+      "bytes": 37097,
+      "sha256": "5120bcb51e741e1eef8af18e0246441fd3dc5d0de4ee457d4291f242a6fbd7a9"
+    },
+    {
+      "file": "public/og/news/light/2026-06-17-g7-ai-sovereignty-frontier-labs.png",
+      "kind": "news-png",
+      "slug": "2026-06-17-g7-ai-sovereignty-frontier-labs",
+      "theme": "light",
+      "target": null,
+      "bytes": 39682,
+      "sha256": "be36332847d98a2a29bcb309f0fa8f59d86f5153bfc5b0bfebda85802d7cdb39"
+    },
+    {
+      "file": "public/og/news/light/2026-06-17-google-pixel-drop-gemini-omni-tools.png",
+      "kind": "news-png",
+      "slug": "2026-06-17-google-pixel-drop-gemini-omni-tools",
+      "theme": "light",
+      "target": null,
+      "bytes": 46830,
+      "sha256": "71cd85a6ef4d54aaa16d52ab639b9a9a5ff2818150bee3b27a62ac09075a1034"
+    },
+    {
+      "file": "public/og/news/light/2026-06-17-microsoft-copilot-cowork-usage-billing.png",
+      "kind": "news-png",
+      "slug": "2026-06-17-microsoft-copilot-cowork-usage-billing",
+      "theme": "light",
+      "target": null,
+      "bytes": 43257,
+      "sha256": "a22f82b2ebdcc51b089af0315508d2a0e18f184dd820ad9219f664df2230082f"
+    },
+    {
+      "file": "public/og/news/light/2026-06-17-nvidia-ai-factory-coherent-social-norms.png",
+      "kind": "news-png",
+      "slug": "2026-06-17-nvidia-ai-factory-coherent-social-norms",
+      "theme": "light",
+      "target": null,
+      "bytes": 42217,
+      "sha256": "380cf1f67af666d786ac2d1169b075abe263c38f8e06c523b22a3f2a4f3f4b12"
     },
     {
       "file": "public/og/news/thumbs/2026-02-18-trae-pricing-revamp.webp",
@@ -10648,6 +10738,51 @@
       "sha256": "21dface1da358d8681e5547d961e356145b5e1b3319a6eb853d82e8c5a937147"
     },
     {
+      "file": "public/og/news/thumbs/2026-06-17-ai-news-desk.webp",
+      "kind": "news-thumb",
+      "slug": "2026-06-17-ai-news-desk",
+      "theme": "dark",
+      "target": null,
+      "bytes": 19418,
+      "sha256": "e09e49a5a73c0a99171615266d10689cf7275bedf11118811d5eef105c0249e7"
+    },
+    {
+      "file": "public/og/news/thumbs/2026-06-17-g7-ai-sovereignty-frontier-labs.webp",
+      "kind": "news-thumb",
+      "slug": "2026-06-17-g7-ai-sovereignty-frontier-labs",
+      "theme": "dark",
+      "target": null,
+      "bytes": 18194,
+      "sha256": "d5148942559ca6e463a20ff6354d6e6b1eedf98839bd806a7f5501c59c55fb1a"
+    },
+    {
+      "file": "public/og/news/thumbs/2026-06-17-google-pixel-drop-gemini-omni-tools.webp",
+      "kind": "news-thumb",
+      "slug": "2026-06-17-google-pixel-drop-gemini-omni-tools",
+      "theme": "dark",
+      "target": null,
+      "bytes": 19704,
+      "sha256": "336d2ab1912f47ceafa854bda0987f91abdae14d375505c1dcf9b0bbd5564d21"
+    },
+    {
+      "file": "public/og/news/thumbs/2026-06-17-microsoft-copilot-cowork-usage-billing.webp",
+      "kind": "news-thumb",
+      "slug": "2026-06-17-microsoft-copilot-cowork-usage-billing",
+      "theme": "dark",
+      "target": null,
+      "bytes": 19366,
+      "sha256": "1d5e9136797359312a470f6a99439b99a4c886a7311dc2d4fc032087cef493ab"
+    },
+    {
+      "file": "public/og/news/thumbs/2026-06-17-nvidia-ai-factory-coherent-social-norms.webp",
+      "kind": "news-thumb",
+      "slug": "2026-06-17-nvidia-ai-factory-coherent-social-norms",
+      "theme": "dark",
+      "target": null,
+      "bytes": 17790,
+      "sha256": "ce9207af1bdc73f239d2951649d909f9d7579d68c9db491419f493bc4dbc6bfc"
+    },
+    {
       "file": "public/og/news/thumbs/light/2026-02-18-trae-pricing-revamp.webp",
       "kind": "news-thumb",
       "slug": "2026-02-18-trae-pricing-revamp",
@@ -14192,6 +14327,51 @@
       "target": null,
       "bytes": 19472,
       "sha256": "d3d3e203e791b394c80a6271a44358f5f3ee0734b52c11f131023efe748eed03"
+    },
+    {
+      "file": "public/og/news/thumbs/light/2026-06-17-ai-news-desk.webp",
+      "kind": "news-thumb",
+      "slug": "2026-06-17-ai-news-desk",
+      "theme": "light",
+      "target": null,
+      "bytes": 19594,
+      "sha256": "10b67dd21d6e3a9458507e9d9c3cf7b4ac3e38adb62742774a01b707be48f83e"
+    },
+    {
+      "file": "public/og/news/thumbs/light/2026-06-17-g7-ai-sovereignty-frontier-labs.webp",
+      "kind": "news-thumb",
+      "slug": "2026-06-17-g7-ai-sovereignty-frontier-labs",
+      "theme": "light",
+      "target": null,
+      "bytes": 18300,
+      "sha256": "d4c26176ac4903679b97156bcc0b1e45eb55c670d1c0d83af98a1c60caa53ab4"
+    },
+    {
+      "file": "public/og/news/thumbs/light/2026-06-17-google-pixel-drop-gemini-omni-tools.webp",
+      "kind": "news-thumb",
+      "slug": "2026-06-17-google-pixel-drop-gemini-omni-tools",
+      "theme": "light",
+      "target": null,
+      "bytes": 19810,
+      "sha256": "5c7a63a4d3798f9de47bf143b6fe0bcfcb4868140cc473c9d685be45aec427b0"
+    },
+    {
+      "file": "public/og/news/thumbs/light/2026-06-17-microsoft-copilot-cowork-usage-billing.webp",
+      "kind": "news-thumb",
+      "slug": "2026-06-17-microsoft-copilot-cowork-usage-billing",
+      "theme": "light",
+      "target": null,
+      "bytes": 19514,
+      "sha256": "fcf4b6fd07325e31a441e420c60b8081d0687216375df234e847e65a34947d91"
+    },
+    {
+      "file": "public/og/news/thumbs/light/2026-06-17-nvidia-ai-factory-coherent-social-norms.webp",
+      "kind": "news-thumb",
+      "slug": "2026-06-17-nvidia-ai-factory-coherent-social-norms",
+      "theme": "light",
+      "target": null,
+      "bytes": 17984,
+      "sha256": "a99ca8a2f1bedf0ff399acbbd303e00a8df15e0de85b96cd465b550135bfc621"
     }
   ]
 }

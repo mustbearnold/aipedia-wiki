@@ -1,6 +1,7 @@
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 
+// Refresh metadata: 2026-06-17 June 17 desk and focused Google Pixel/Gemini, Microsoft Copilot Cowork, G7 AI sovereignty, and NVIDIA AI infrastructure coverage added after current June source checks; news archive, sitemap, LLM surfaces, and related routes inspected.
 // Refresh metadata: 2026-06-16 Google Cloud data-agents coverage added after current June Google Cloud data agents, Data Engineering Agent, Conversational Analytics, and MCP server source checks; June 16 desk, AI Automation, AI Infrastructure, homepage, news archive, tools/categories indexes, /explore/, source registry, and LLM surfaces inspected.
 // Refresh metadata: 2026-06-16 June 12 OpenAI Academy workplace-courses backfill after current June OpenAI Academy and OpenAI announcement checks; June 12 desk, homepage, news archive, /explore/, source registry, and LLM surfaces inspected.
 // Refresh metadata: 2026-06-16 Work IQ GA desk and buyer checklist added after current June Microsoft Work IQ API/licensing/Partner Center and Council of the EU source checks; Microsoft Agent Framework, AI Automation, homepage, news archive, tools/categories indexes, /explore/, and LLM surfaces inspected.
