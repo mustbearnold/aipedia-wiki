@@ -58,6 +58,16 @@ const guideDecisionPick = z.object({
   })).optional(),
 }).passthrough();
 
+const decisionPick = z.object({
+  tool: z.string(),
+  label: z.string(),
+  reason: z.string(),
+  plan: z.string().optional(),
+  source_refs: z.array(z.string()).min(1),
+  verified_at: dateish,
+  confidence: z.enum(['high', 'medium', 'low']),
+});
+
 const categoryTopPick = z.union([
   z.string(),
   z.object({
@@ -156,6 +166,7 @@ const categories = defineCollection({
       budget: categoryTopPick.optional(),
       pro_team: categoryTopPick.optional(),
     }).passthrough().optional(),
+    decision_picks: z.array(decisionPick).optional(),
   }).passthrough(),
 });
 

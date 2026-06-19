@@ -20,6 +20,23 @@ top_picks:
   pro_team:
     tool: claude-code
     label: "Best terminal coding agent"
+decision_picks:
+  - tool: cursor
+    label: Best IDE-native coding agent
+    reason: Cursor remains the strongest fit when the buyer wants editor-native coding, agent tasks, and codebase-aware workflows in one product.
+    plan: Pro or Ultra depending on usage volume
+    source_refs:
+      - cursor-pricing
+    verified_at: 2026-06-15
+    confidence: high
+  - tool: github-copilot
+    label: Best GitHub-native enterprise default
+    reason: GitHub Copilot is the safer default when procurement wants GitHub-native governance, IDE coverage, code review, and agent tasks inside existing GitHub controls.
+    plan: Business or Enterprise
+    source_refs:
+      - github-copilot-plans
+    verified_at: 2026-06-15
+    confidence: high
 ---
 
 ## Quick Decision

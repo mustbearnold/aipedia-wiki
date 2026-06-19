@@ -36,6 +36,41 @@ test('ToolPageModel distinguishes registered and inline-only provenance states',
   assert.match(source, /state:\s*'unknown_id'/);
 });
 
+test('DecisionPick module defines shared pick contract', () => {
+  const source = readSource('src/lib/content-models/decision-pick.ts');
+  for (const token of ['export interface DecisionPick', 'source_refs:', 'verified_at:', 'confidence:', 'normalizeDecisionPick']) {
+    assert.ok(source.includes(token), `missing ${token}`);
+  }
+});
+
+test('content schema accepts category decision picks', () => {
+  const source = readSource('src/content.config.ts');
+  assert.match(source, /const decisionPick = z\.object/);
+  assert.match(source, /source_refs: z\.array\(z\.string\(\)\)/);
+  assert.match(source, /decision_picks: z\.array\(decisionPick\)\.optional\(\)/);
+});
+
+test('AI coding category contains pilot decision picks', () => {
+  const category = readSource('src/content/categories/ai-coding.md');
+  assert.match(category, /^decision_picks:/m);
+  assert.match(category, /source_refs:/);
+  assert.match(category, /verified_at:/);
+  assert.match(category, /^top_picks:/m);
+  assert.match(category, /tool: cursor/);
+  assert.match(category, /tool: github-copilot/);
+  assert.match(category, /- cursor-pricing/);
+  assert.match(category, /- github-copilot-plans/);
+});
+
+test('AI coding decision pick source refs are registered', () => {
+  const registry = JSON.parse(readSource('src/data/source-registry.json'));
+  const sourceIds = new Set(registry.sources.map((source) => source.id));
+
+  for (const sourceId of ['cursor-pricing', 'github-copilot-plans']) {
+    assert.ok(sourceIds.has(sourceId), `missing registered source ${sourceId}`);
+  }
+});
+
 test('provenance source helpers expose page source states', () => {
   const source = readSource('src/lib/provenance.ts');
   for (const token of [
