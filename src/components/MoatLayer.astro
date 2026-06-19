@@ -533,21 +533,24 @@ const data = {
   }
 
   const overlayObserver = new MutationObserver(scheduleRuntimeCheck);
-  let observedOverlayBody = null;
-  function observeOverlayBody() {
-    const body = document.body;
-    if (!body || body === observedOverlayBody) return;
-    overlayObserver.disconnect();
-    overlayObserver.observe(body, {
-      attributes: true,
-      attributeFilter: ['class', 'style', 'hidden', 'aria-hidden'],
-      subtree: true,
-    });
-    observedOverlayBody = body;
+  const overlayAttributeFilter = ['class', 'style', 'hidden', 'aria-hidden'];
+  const overlayVisibilitySelector = '[role="dialog"][aria-modal="true"], .tool-preview-layer, .source-preview-layer';
+  function observeOverlayTarget(target) {
+    if (!target) return;
+    overlayObserver.observe(target, { attributes: true, attributeFilter: overlayAttributeFilter });
   }
-  observeOverlayBody();
+  function observeOverlayTargets() {
+    const body = document.body;
+    overlayObserver.disconnect();
+    if (!body) return;
+    observeOverlayTarget(body);
+    observeOverlayTarget(document.getElementById('search-modal'));
+    observeOverlayTarget(document.getElementById('mobile-menu'));
+    document.querySelectorAll(overlayVisibilitySelector).forEach(observeOverlayTarget);
+  }
+  observeOverlayTargets();
   function update() {
-    observeOverlayBody();
+    observeOverlayTargets();
     setMode();
     state.scroll = window.scrollY || 0;
     applyRuntime(true);

@@ -106,12 +106,12 @@ export function resolvePageSource(source: ProvenanceCarrier, usedBy: PageSourceU
   }
 
   const fallbackUrl = stringField(source.source) ?? stringField(source.url);
-  const fallbackLabel = stringField(source.source_label) ?? stringField(source.label) ?? fallbackUrl;
-  if (sourceId && fallbackUrl && fallbackLabel) {
+  const fallbackLabel = stringField(source.source_label) ?? stringField(source.label) ?? fallbackUrl ?? sourceId;
+  if (sourceId && fallbackLabel) {
     return {
       source_id: sourceId,
       label: fallbackLabel,
-      url: fallbackUrl,
+      url: fallbackUrl ?? '',
       volatility: stringField(source.volatility),
       verified_at: dateishField(source.verified_at) ?? dateishField(source.captured_at),
       used_by: [usedBy],

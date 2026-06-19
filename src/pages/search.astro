@@ -118,7 +118,7 @@ const totalItems = catalogItems.length;
               href={item.href}
               class="gt-tool-link"
               data-search-result
-              data-result-type={item.kind}
+              data-result-type={item.kind === 'compare' ? 'comparison' : item.kind}
               data-result-title={item.title}
               data-result-url={item.href}
               data-tool-slug={item.kind === 'tool' ? item.slug : ''}

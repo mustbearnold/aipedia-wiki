@@ -344,7 +344,7 @@ const ogImageUrl = ogImage
           motionController = (event && event.detail) || window.__aipediaMotionController || motionController;
           if (!motionController || unregisterMotion || motionRegistering || typeof motionController.register !== 'function') return;
           motionRegistering = true;
-          unregisterMotion = motionController.register({ refresh: refresh, policychange: refresh });
+          unregisterMotion = motionController.register({ policychange: refresh });
           motionRegistering = false;
         }
 

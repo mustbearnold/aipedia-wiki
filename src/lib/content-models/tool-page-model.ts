@@ -157,7 +157,7 @@ function factModels(factsBlock: unknown, diagnostics: ModelDiagnostic[], sources
       value,
       confidence: raw.confidence === 'high' || raw.confidence === 'medium' || raw.confidence === 'low' ? raw.confidence : undefined,
       volatility: raw.volatility === 'high' || raw.volatility === 'medium' || raw.volatility === 'low' ? raw.volatility : undefined,
-      verified_at: source?.verified_at ?? dateishField(raw.verified_at),
+      verified_at: dateishField(raw.verified_at) ?? source?.verified_at,
       source,
     });
   }
@@ -172,6 +172,8 @@ function pricingModels(priceHistory: unknown, diagnostics: ModelDiagnostic[], so
     mergeSource(sources, source);
     if (source?.state === 'unknown_id') {
       diagnostics.push({ severity: 'error', code: 'unknown_source_id', path: `price_history.${index}.source_id`, message: `Unknown source ID on price_history row ${index}` });
+    } else if (source?.state === 'inline_only') {
+      diagnostics.push({ severity: 'warning', code: 'inline_only_source', path: `price_history.${index}.source`, message: `Inline-only source on price_history row ${index}` });
     }
     return {
       date: dateishField(raw.date) ?? '',

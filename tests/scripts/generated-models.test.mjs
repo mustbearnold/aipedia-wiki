@@ -1,7 +1,8 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import { spawnSync } from 'node:child_process';
-import { readFileSync } from 'node:fs';
+import { mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 
 const ROOT = process.cwd();
@@ -9,6 +10,54 @@ const ROOT = process.cwd();
 function readSource(path) {
   return readFileSync(join(ROOT, path), 'utf8');
 }
+
+function runGeneratedModelAudit(...args) {
+  return spawnSync(process.execPath, ['scripts/audit-generated-models.mjs', ...args], {
+    cwd: ROOT,
+    encoding: 'utf8',
+  });
+}
+
+function writeFixtureProject(toolFrontmatter) {
+  const projectDir = mkdtempSync(join(tmpdir(), 'aipedia-generated-models-'));
+  mkdirSync(join(projectDir, 'src/content/tools'), { recursive: true });
+  mkdirSync(join(projectDir, 'src/data'), { recursive: true });
+  writeFileSync(
+    join(projectDir, 'src/data/source-registry.json'),
+    `${JSON.stringify({ sources: [{ id: 'alpha-docs', label: 'Alpha docs', url: 'https://example.com/alpha' }] }, null, 2)}\n`,
+  );
+  writeFileSync(join(projectDir, 'src/data/tool-priority.json'), `${JSON.stringify({ tier1: ['alpha'], tier2: [], tier3: [] }, null, 2)}\n`);
+  writeFileSync(
+    join(projectDir, 'src/content/tools/alpha.md'),
+    `---\n${toolFrontmatter.trim()}\n---\n# Alpha\n`,
+  );
+  return projectDir;
+}
+
+const VALID_TOOL_FRONTMATTER = `
+type: tool
+slug: alpha
+title: Alpha
+tagline: Alpha helps teams test generated model audits.
+category: ai-test
+status: active
+scores:
+  utility: 8
+  value: 7
+  moat: 6
+  longevity: 8
+facts:
+  pricing_anchor:
+    value: "$20/mo"
+    source_id: alpha-docs
+    source: "https://example.com/alpha"
+    source_label: "Alpha docs"
+best_for:
+  - teams that need a valid fixture
+not_best_for:
+  - teams that need a broken fixture
+quick_answer: Alpha is a valid generated-model audit fixture.
+`;
 
 test('ToolPageModel source defines required public contract fields', () => {
   const source = readSource('src/lib/content-models/tool-page-model.ts');
@@ -100,18 +149,84 @@ test('ToolLayout consumes ToolPageModel builder', () => {
 });
 
 test('generated model audit supports JSON mode', () => {
-  const result = spawnSync('node', ['scripts/audit-generated-models.mjs', '--json', '--limit', '3'], {
-    cwd: ROOT,
-    encoding: 'utf8',
-  });
+  const result = runGeneratedModelAudit('--json', '--limit', '3');
   assert.equal(result.status, 0, result.stderr);
   const report = JSON.parse(result.stdout);
   assert.equal(report.ok, true);
+  assert.equal(report.status, 'pass');
   assert.equal(report.mode, 'audit');
   assert.ok(report.totals.tools_scanned >= 1);
   assert.ok(Array.isArray(report.provenance.unknown_source_ids));
   for (const source of report.provenance.inline_only_sources) {
     assert.match(source.path, /^src\/content\/tools\//);
+  }
+});
+
+test('generated model audit fails missing Tier-1 decision fields', () => {
+  const projectDir = writeFixtureProject(VALID_TOOL_FRONTMATTER.replace(/^quick_answer: .*$/m, ''));
+
+  try {
+    const result = runGeneratedModelAudit('--json', `--project-dir=${projectDir}`);
+    assert.equal(result.status, 1, result.stdout);
+    assert.equal(result.stderr, '');
+
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, false);
+    assert.equal(report.status, 'fail');
+    assert.ok(report.decision.missing_fields.some((issue) => issue.slug === 'alpha' && issue.field === 'quick_answer'));
+  } finally {
+    rmSync(projectDir, { recursive: true, force: true });
+  }
+});
+
+test('generated model audit fails missing required search catalog fields', () => {
+  const projectDir = writeFixtureProject(VALID_TOOL_FRONTMATTER.replace(/^title: Alpha$/m, ''));
+
+  try {
+    const result = runGeneratedModelAudit('--json', `--project-dir=${projectDir}`);
+    assert.equal(result.status, 1, result.stdout);
+    assert.equal(result.stderr, '');
+
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, false);
+    assert.equal(report.status, 'fail');
+    assert.ok(report.search_catalog.missing_fields.some((issue) => issue.slug === 'alpha' && issue.field === 'title'));
+  } finally {
+    rmSync(projectDir, { recursive: true, force: true });
+  }
+});
+
+test('generated model audit keeps inline-only sources warning-only', () => {
+  const projectDir = writeFixtureProject(VALID_TOOL_FRONTMATTER.replace(/    source_id: alpha-docs\n/, ''));
+
+  try {
+    const result = runGeneratedModelAudit('--json', `--project-dir=${projectDir}`);
+    assert.equal(result.status, 0, result.stdout);
+    assert.equal(result.stderr, '');
+
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, true);
+    assert.equal(report.status, 'pass');
+    assert.ok(report.provenance.inline_only_sources.some((issue) => issue.slug === 'alpha'));
+  } finally {
+    rmSync(projectDir, { recursive: true, force: true });
+  }
+});
+
+test('generated model audit fails unknown registered source ids', () => {
+  const projectDir = writeFixtureProject(VALID_TOOL_FRONTMATTER.replace(/    source_id: alpha-docs/, '    source_id: missing-docs'));
+
+  try {
+    const result = runGeneratedModelAudit('--json', `--project-dir=${projectDir}`);
+    assert.equal(result.status, 1, result.stdout);
+    assert.equal(result.stderr, '');
+
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, false);
+    assert.equal(report.status, 'fail');
+    assert.ok(report.provenance.unknown_source_ids.some((issue) => issue.slug === 'alpha' && issue.source_id === 'missing-docs'));
+  } finally {
+    rmSync(projectDir, { recursive: true, force: true });
   }
 });
 

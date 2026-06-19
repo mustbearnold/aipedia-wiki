@@ -28,6 +28,8 @@ declare global {
   }
 }
 
+const overlayAttributeFilter = ['class', 'style', 'hidden', 'aria-hidden'];
+const overlayVisibilitySelector = '[role="dialog"][aria-modal="true"], .tool-preview-layer, .source-preview-layer';
 function overlayOpen(): boolean {
   const search = document.getElementById('search-modal');
   if (search && (search.classList.contains('is-visible') || search.classList.contains('is-open'))) return true;
@@ -76,44 +78,86 @@ export function installMotionController(): MotionController {
     }
   }
 
-  function refresh(): void {
-    const before = policy.canAnimateAmbient;
+  function applyPolicy(emitModuleRefresh: boolean): void {
+    const beforeReduced = policy.reduced;
+    const beforeSmallViewport = policy.smallViewport;
+    const beforeHidden = policy.hidden;
+    const beforeOverlayOpen = policy.overlayOpen;
+    const beforeCanAnimateAmbient = policy.canAnimateAmbient;
+
     computePolicy();
-    emit('refresh');
-    emit('policychange');
-    if (before && !policy.canAnimateAmbient) emit('pause');
-    if (!before && policy.canAnimateAmbient) emit('resume');
+
+    const changed = beforeReduced !== policy.reduced
+      || beforeSmallViewport !== policy.smallViewport
+      || beforeHidden !== policy.hidden
+      || beforeOverlayOpen !== policy.overlayOpen
+      || beforeCanAnimateAmbient !== policy.canAnimateAmbient;
+
+    if (emitModuleRefresh) emit('refresh');
+    if (changed) emit('policychange');
+    if (beforeCanAnimateAmbient && !policy.canAnimateAmbient) emit('pause');
+    if (!beforeCanAnimateAmbient && policy.canAnimateAmbient) emit('resume');
+  }
+
+  function refresh(): void {
+    applyPolicy(true);
+  }
+
+  function refreshPolicy(): void {
+    applyPolicy(false);
+  }
+
+  let scheduledPolicyRefresh = 0;
+  function schedulePolicyRefresh(): void {
+    if (scheduledPolicyRefresh) return;
+    scheduledPolicyRefresh = window.requestAnimationFrame(() => {
+      scheduledPolicyRefresh = 0;
+      refreshPolicy();
+    });
   }
 
   function pause(): void {
     if (overlayForcedOpen) return;
     overlayForcedOpen = true;
-    refresh();
+    refreshPolicy();
   }
 
   function resume(): void {
     if (!overlayForcedOpen) return;
     overlayForcedOpen = false;
-    refresh();
+    refreshPolicy();
   }
 
   function listenMedia(media: MediaQueryList): void {
-    if (typeof media.addEventListener === 'function') media.addEventListener('change', refresh);
-    else if (typeof media.addListener === 'function') media.addListener(refresh);
+    if (typeof media.addEventListener === 'function') media.addEventListener('change', refreshPolicy);
+    else if (typeof media.addListener === 'function') media.addListener(refreshPolicy);
   }
 
-  const observer = new MutationObserver(refresh);
-  observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
-  if (document.body) {
-    observer.observe(document.body, {
-      attributes: true,
-      attributeFilter: ['class', 'style', 'hidden', 'aria-hidden'],
-      subtree: true,
-    });
+  const observer = new MutationObserver(schedulePolicyRefresh);
+  function observeOverlayTarget(target: Element | null): void {
+    if (!target) return;
+    observer.observe(target, { attributes: true, attributeFilter: overlayAttributeFilter });
   }
+
+  function observeOverlayTargets(): void {
+    observer.disconnect();
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+    if (!document.body) return;
+    observeOverlayTarget(document.body);
+    observeOverlayTarget(document.getElementById('search-modal'));
+    observeOverlayTarget(document.getElementById('mobile-menu'));
+    document.querySelectorAll(overlayVisibilitySelector).forEach(observeOverlayTarget);
+  }
+
+  function refreshAfterSwap(): void {
+    observeOverlayTargets();
+    refresh();
+  }
+
+  observeOverlayTargets();
   window.addEventListener('resize', refresh, { passive: true });
-  document.addEventListener('visibilitychange', refresh);
-  document.addEventListener('astro:after-swap', refresh);
+  document.addEventListener('visibilitychange', refreshPolicy);
+  document.addEventListener('astro:after-swap', refreshAfterSwap);
   listenMedia(reduce);
   listenMedia(small);
   computePolicy();
@@ -133,8 +177,9 @@ export function installMotionController(): MotionController {
     pause,
     resume,
     setOverlayOpen(open) {
+      if (overlayForcedOpen === open) return;
       overlayForcedOpen = open;
-      refresh();
+      refreshPolicy();
     },
   };
 
