@@ -64,7 +64,7 @@ const decisionPick = z.object({
   reason: z.string(),
   plan: z.string().optional(),
   source_refs: z.array(z.string()).min(1),
-  verified_at: dateish,
+  verified_at: z.union([z.string(), z.date()]),
   confidence: z.enum(['high', 'medium', 'low']),
 });
 

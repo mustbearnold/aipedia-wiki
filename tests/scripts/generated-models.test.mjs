@@ -47,6 +47,7 @@ test('content schema accepts category decision picks', () => {
   const source = readSource('src/content.config.ts');
   assert.match(source, /const decisionPick = z\.object/);
   assert.match(source, /source_refs: z\.array\(z\.string\(\)\)/);
+  assert.match(source, /verified_at: z\.union\(\[z\.string\(\), z\.date\(\)\]\)/);
   assert.match(source, /decision_picks: z\.array\(decisionPick\)\.optional\(\)/);
 });
 

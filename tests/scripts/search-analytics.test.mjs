@@ -15,11 +15,11 @@ test('catalog search page emits intent analytics with safe payload fields', () =
   assert.match(searchPageSource, /zero_results:/);
   assert.match(searchPageSource, /query:/);
   assert.match(searchPageSource, /result_count:/);
-  assert.match(searchPageSource, /categorySlug:\s*tool\.data\.category/);
+  assert.match(searchPageSource, /buildSearchCatalog\(\{/);
+  assert.match(searchPageSource, /item\.categorySlug/);
   assert.match(searchPageSource, /data-category-slug=\{item\.categorySlug \?\? ''\}/);
   assert.match(searchPageSource, /const allGuides = await getCollection\('use-cases'\)/);
   assert.match(searchPageSource, /const allWorkflows = await getCollection\('workflows'\)/);
-  assert.match(searchPageSource, /const answerItems: SearchItem\[\] = ANSWER_ITEMS/);
   assert.match(searchPageSource, /page_type:\s*'search'/);
   assert.match(searchPageSource, /viewport_width:/);
   assert.match(searchPageSource, /device_type:/);
