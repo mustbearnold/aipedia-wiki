@@ -34,6 +34,7 @@ export interface ResolvedPageSource {
   volatility?: string;
   last_checked?: string;
   verified_at?: string;
+  next_review_at?: string;
   used_by: PageSourceUse[];
   state: PageSourceState;
 }
@@ -97,9 +98,10 @@ export function resolvePageSource(source: ProvenanceCarrier, usedBy: PageSourceU
       url: registered.url,
       type: registered.type,
       trust_tier: registered.trust_tier,
-      volatility: registered.volatility,
+      volatility: stringField(source.volatility) ?? registered.volatility,
       last_checked: registered.last_checked,
-      verified_at: registered.last_checked,
+      verified_at: dateishField(source.verified_at) ?? registered.last_checked,
+      next_review_at: dateishField(source.next_review_at),
       used_by: [usedBy],
       state: 'registered',
     };
@@ -114,6 +116,7 @@ export function resolvePageSource(source: ProvenanceCarrier, usedBy: PageSourceU
       url: fallbackUrl ?? '',
       volatility: stringField(source.volatility),
       verified_at: dateishField(source.verified_at) ?? dateishField(source.captured_at),
+      next_review_at: dateishField(source.next_review_at),
       used_by: [usedBy],
       state: 'unknown_id',
     };
@@ -124,6 +127,7 @@ export function resolvePageSource(source: ProvenanceCarrier, usedBy: PageSourceU
       url: fallbackUrl,
       volatility: stringField(source.volatility),
       verified_at: dateishField(source.verified_at) ?? dateishField(source.captured_at),
+      next_review_at: dateishField(source.next_review_at),
       used_by: [usedBy],
       state: usedBy === 'evidence' ? 'evidence_only' : 'inline_only',
     };

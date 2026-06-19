@@ -40,7 +40,7 @@ export interface PriceHistoryModel {
 
 export interface ModelDiagnostic {
   severity: 'error' | 'warning';
-  code: 'unknown_source_id' | 'inline_only_source' | 'missing_decision_field' | 'missing_required_field';
+  code: 'unknown_source_id' | 'inline_only_source' | 'stale_source' | 'missing_decision_field' | 'missing_required_field';
   path: string;
   message: string;
 }
@@ -154,7 +154,15 @@ function staleLimitDays(volatility: string | undefined): number {
   return 90;
 }
 
+function isPastDate(value: string | undefined): boolean {
+  if (!value) return false;
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return false;
+  return date.getTime() < Date.now();
+}
+
 function isStaleSource(source: ResolvedPageSource): boolean {
+  if (isPastDate(source.next_review_at)) return true;
   const checked = sourceDate(source);
   if (!checked) return false;
   const date = new Date(checked);
@@ -251,6 +259,16 @@ export function buildToolPageModel(frontmatter: UnknownRecord): ToolPageModel {
   const canonicalUrl = stringField(frontmatter.url);
   const affiliateState = stringField(affiliate.application_status) ?? (affiliateUrl ? 'approved' : 'none');
   const sourceList = Array.from(sources.values());
+  for (const source of sourceList) {
+    if (isStaleSource(source)) {
+      diagnostics.push({
+        severity: 'warning',
+        code: 'stale_source',
+        path: `sources.${source.source_id || source.url}`,
+        message: `Stale ${source.state} source ${source.source_id || source.url}`,
+      });
+    }
+  }
   if (!stringField(frontmatter.quick_answer)) {
     diagnostics.push({ severity: 'warning', code: 'missing_decision_field', path: 'quick_answer', message: 'Missing quick_answer decision verdict' });
   }

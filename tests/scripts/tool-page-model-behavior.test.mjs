@@ -117,6 +117,10 @@ test('ToolPageModel reports provenance states and dedupes source uses', async ()
   assert.equal(renderedFlagship.verified, '2026-02-03');
   assert.equal(renderedFlagship.source, 'Fixture model page');
   assert.ok(
+    model.diagnostics.some((issue) => issue.code === 'stale_source' && issue.path === 'sources.7ai-platform'),
+    'registered claim-level verified_at should drive stale source diagnostics'
+  );
+  assert.ok(
     model.diagnostics.some((issue) => issue.code === 'inline_only_source' && issue.path === 'facts.flagship_model.source'),
     'fact inline-only source should be reported'
   );

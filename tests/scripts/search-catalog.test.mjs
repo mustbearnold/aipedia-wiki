@@ -120,3 +120,55 @@ test('buildSearchCatalog filters inactive tools and preserves buyer search terms
     assert.notEqual(tool[field], undefined, `${field} should be present`);
   }
 });
+
+test('buildSearchCatalog applies non-tool visibility and priority ordering rules', async () => {
+  const { buildSearchCatalog } = await loadSearchCatalog();
+  const catalog = buildSearchCatalog({
+    tools: [{
+      id: 'alpha-tool',
+      data: {
+        type: 'tool',
+        status: 'active',
+        slug: 'alpha-tool',
+        title: 'Alpha Tool',
+        category: 'ai-coding',
+        scores: { utility: 9, value: 8, moat: 8, longevity: 8 },
+      },
+    }],
+    comparisons: [{
+      id: 'alpha-vs-beta',
+      data: { slug: 'alpha-vs-beta', title: 'Alpha vs Beta', tools: ['alpha-tool', 'beta-tool'], winner: 'alpha-tool' },
+    }],
+    categories: [{
+      id: 'ai-coding',
+      data: { slug: 'ai-coding', title: 'AI Coding', description: 'Coding tools', tool_count: 12 },
+    }],
+    guides: [
+      { id: 'visible-guide', data: { slug: 'visible-guide', title: 'Visible Guide', description: 'Shown guide', tools_mentioned: ['alpha-tool'] } },
+      { id: 'hidden-guide', data: { slug: 'hidden-guide', title: 'Hidden Guide', description: 'Hidden guide', noindex: true } },
+    ],
+    news: [],
+    workflows: [],
+    trends: [],
+    companies: [{
+      id: 'alpha-inc',
+      data: { slug: 'alpha-inc', title: 'Alpha Inc', company_type: 'vendor', key_products: ['Alpha Tool'], meta_description: 'Company profile' },
+    }],
+    logos: {},
+  });
+
+  assert.equal(catalog.some((item) => item.slug === 'hidden-guide'), false);
+  assert.ok(catalog.find((item) => item.kind === 'guide' && item.slug === 'visible-guide'));
+  assert.ok(catalog.find((item) => item.kind === 'compare' && item.slug === 'alpha-vs-beta'));
+  assert.ok(catalog.find((item) => item.kind === 'category' && item.categorySlug === 'ai-coding'));
+  assert.ok(catalog.find((item) => item.kind === 'company' && item.slug === 'alpha-inc'));
+
+  for (let index = 1; index < catalog.length; index += 1) {
+    const previous = catalog[index - 1];
+    const current = catalog[index];
+    assert.ok(
+      previous.priority > current.priority || (previous.priority === current.priority && previous.title.localeCompare(current.title) <= 0),
+      'catalog should sort by descending priority then title'
+    );
+  }
+});
