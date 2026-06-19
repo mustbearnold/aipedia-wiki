@@ -23,6 +23,7 @@
     "test:smoke": "npm run smoke:api && npm run smoke:visual",
     "audit:kpis": "node scripts/audit-site-kpis.mjs",
     "audit:facts": "node scripts/audit-tool-facts.mjs",
+    "audit:generated-models": "node scripts/audit-generated-models.mjs",
     "audit:provenance": "node scripts/audit-provenance-pricing.mjs",
     "audit:freshness": "node scripts/audit-freshness-queue.mjs",
     "audit:coverage": "node scripts/audit-coverage-gaps.mjs",

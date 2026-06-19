@@ -41,8 +41,8 @@ import ReportOutdatedButton from '../components/ReportOutdatedButton.astro';
 import BadgeEmbed from '../components/BadgeEmbed.astro';
 import CiteThisPage from '../components/CiteThisPage.astro';
 
-import { categoryLabel, isActiveToolStatus, overallScore } from '../utils/tool-metadata';
-import { dateishField, resolveProvenanceSource } from '../lib/provenance';
+import { isActiveToolStatus, overallScore } from '../utils/tool-metadata';
+import { buildToolPageModel } from '../lib/content-models/tool-page-model';
 
 interface Props {
   frontmatter: Record<string, any>;
@@ -53,12 +53,13 @@ interface Props {
 
 const { frontmatter, faqItems = [], headings = [], readingMinutes = 0 } = Astro.props;
 const f = frontmatter;
+const model = buildToolPageModel(f);
 
-const scores = f.scores ?? { utility: 0, value: 0, moat: 0, longevity: 0 };
-const overall = overallScore(scores);
-const catSlug = f.category ?? '';
-const catLabel = categoryLabel(catSlug);
-const toolSlug = f.slug ?? '';
+const scores = model.scores;
+const overall = model.scores.overall ?? overallScore(scores);
+const catSlug = model.identity.category ?? '';
+const catLabel = model.identity.category_label;
+const toolSlug = model.identity.slug;
 const siteBase = Astro.site?.href ?? 'https://aipedia.wiki';
 const affiliate = f.affiliate ?? {};
 const isAffiliate = Boolean(affiliate?.link && affiliate.link.length > 0);
@@ -145,61 +146,18 @@ const scoreAxes = [
   { label: 'Longevity', value: scores.longevity ?? 0, why: 'How likely the product is to still be best-in-class 24 months out.' },
 ];
 
-// Key facts derived from frontmatter `facts` block
-type FactEntry = { label: string; value: string; confidence?: string; volatility?: string; verified?: string; source?: string };
-type TrustSource = { label: string; url: string; verified?: string; trust_tier?: string };
-const factEntries: FactEntry[] = [];
-const factsBlock = isRecord(f.facts) ? f.facts : {};
-const factOrder = ['best_for', 'pricing_anchor', 'flagship_model', 'coding_agent', 'agent_manifest', 'context_window', 'interface', 'mcp_support', 'watch_out_for', 'best_paid_tier'];
-const seenFactKeys = new Set<string>();
-function prettyLabel(key: string): string {
-  return key.replace(/_/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
-}
-function isRecord(value: unknown): value is Record<string, unknown> {
-  return value !== null && typeof value === 'object' && !Array.isArray(value);
-}
-for (const key of [...factOrder, ...Object.keys(factsBlock)]) {
-  if (seenFactKeys.has(key)) continue;
-  seenFactKeys.add(key);
-  const fact = factsBlock[key];
-  if (!fact) continue;
-  if (typeof fact === 'string') {
-    factEntries.push({ label: prettyLabel(key), value: fact });
-  } else if (isRecord(fact)) {
-    const provenance = resolveProvenanceSource(fact);
-    const rawValue = 'value' in fact ? fact.value : undefined;
-    const value = typeof rawValue === 'string' ? rawValue.trim() : '';
+// Key facts and trust sources are normalized by ToolPageModel.
+const facts = model.facts;
 
-    factEntries.push({
-      label: prettyLabel(key),
-      value,
-      confidence: 'confidence' in fact && typeof fact.confidence === 'string' ? fact.confidence : undefined,
-      volatility: provenance?.volatility ?? ('volatility' in fact && typeof fact.volatility === 'string' ? fact.volatility : undefined),
-      verified: provenance?.verified ?? ('verified_at' in fact ? dateishField(fact.verified_at) : undefined),
-      source: provenance?.label,
-    });
-  }
-}
-const facts = factEntries.filter((e) => e.value && e.value.length > 0).slice(0, 8);
-
-const sourceMap = new Map<string, TrustSource>();
-for (const key of Object.keys(factsBlock)) {
-  const fact = factsBlock[key];
-  if (!isRecord(fact)) continue;
-
-  const provenance = resolveProvenanceSource(fact);
-  if (!provenance?.url || !provenance.label) continue;
-  const sourceKey = provenance.is_registered && provenance.source_id ? provenance.source_id : provenance.url;
-  if (sourceMap.has(sourceKey)) continue;
-
-  sourceMap.set(sourceKey, {
-    label: provenance.label,
-    url: provenance.url,
-    verified: provenance.verified,
-    trust_tier: provenance.trust_tier,
-  });
-}
-const sources = Array.from(sourceMap.values()).slice(0, 8);
+const sources = model.sources
+  .filter((source) => source.url && source.label)
+  .map((source) => ({
+    label: source.label,
+    url: source.url,
+    verified: source.verified_at ?? source.last_checked,
+    trust_tier: source.trust_tier,
+  }))
+  .slice(0, 8);
 
 // Table of contents from markdown H2s (skip System Verdict — covered by the
 // Quick Answer decision card already shown above the body).
