@@ -143,7 +143,7 @@ test('ToolLayout consumes ToolPageModel builder', () => {
   assert.match(layout, /const model = buildToolPageModel\(f\)/);
   assert.match(layout, /const scores = model\.scores/);
   assert.match(layout, /const catLabel = model\.identity\.category_label/);
-  assert.match(layout, /const facts = model\.facts/);
+  assert.match(layout, /const facts = toFactListFacts\(model\.facts\)/);
   assert.match(layout, /const sources = model\.sources/);
   assert.doesNotMatch(layout, /resolveProvenanceSource/);
 });

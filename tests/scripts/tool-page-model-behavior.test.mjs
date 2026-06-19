@@ -60,7 +60,7 @@ async function loadToolPageModel() {
 }
 
 test('ToolPageModel reports provenance states and dedupes source uses', async () => {
-  const { buildToolPageModel } = await loadToolPageModel();
+  const { buildToolPageModel, toFactListFacts } = await loadToolPageModel();
   const model = buildToolPageModel({
     slug: 'fixture-tool',
     title: 'Fixture Tool',
@@ -108,6 +108,14 @@ test('ToolPageModel reports provenance states and dedupes source uses', async ()
     model.diagnostics.some((issue) => issue.code === 'unknown_source_id' && issue.path === 'facts.pricing_anchor.source_id'),
     'unknown source_id without inline URL or label must be audit-visible'
   );
+
+  const renderedFacts = toFactListFacts(model.facts);
+  const renderedRegisteredFact = renderedFacts.find((fact) => fact.label === 'Best For');
+  const renderedFlagship = renderedFacts.find((fact) => fact.label === 'Flagship Model');
+  assert.equal(renderedRegisteredFact.verified, '2026-02-04');
+  assert.equal(renderedRegisteredFact.source, '7AI platform registry fixture');
+  assert.equal(renderedFlagship.verified, '2026-02-03');
+  assert.equal(renderedFlagship.source, 'Fixture model page');
   assert.ok(
     model.diagnostics.some((issue) => issue.code === 'inline_only_source' && issue.path === 'facts.flagship_model.source'),
     'fact inline-only source should be reported'
@@ -116,6 +124,7 @@ test('ToolPageModel reports provenance states and dedupes source uses', async ()
     model.diagnostics.some((issue) => issue.code === 'inline_only_source' && issue.path === 'price_history.1.source'),
     'pricing inline-only source should be reported'
   );
+  assert.equal(model.freshness.has_stale_claims, true, 'stale source dates should mark the model freshness state');
 
   const registeredFact = model.facts.find((fact) => fact.key === 'best_for');
   assert.equal(registeredFact.verified_at, '2026-02-04');
@@ -171,16 +180,18 @@ test('ToolPageModel applies decision and CTA precedence from normalized fields',
   assert.equal(model.cta.href, 'https://partners.example.com/precedence');
   assert.equal(model.cta.disclosure, 'Affiliate link');
   assert.equal(model.cta.affiliate_state, 'applied');
+  assert.equal(model.cta.affiliate_url, 'https://partners.example.com/precedence');
+  assert.equal(model.cta.canonical_url, 'https://example.com/precedence');
 });
 
 test('ToolLayout adapts ToolPageModel facts and normalized page fields before rendering', () => {
   const layout = readSource('src/layouts/ToolLayout.astro');
   assert.match(layout, /const toolTitle = model\.identity\.title/);
-  assert.match(layout, /const affiliateUrl = typeof affiliate\?\.link === 'string'/);
-  assert.match(layout, /const primaryCtaLabel = f\.primary_cta_label \? model\.cta\.label : undefined/);
+  assert.match(layout, /const affiliateUrl = model\.cta\.affiliate_url/);
+  assert.match(layout, /const primaryCtaLabel = model\.cta\.label === 'Visit tool' \? undefined : model\.cta\.label/);
+  assert.match(layout, /const pricingModel = model\.cta\.pricing_model/);
   assert.match(layout, /const quickAnswer = model\.decision\.verdict/);
-  assert.match(layout, /const facts = model\.facts\.map/);
-  assert.match(layout, /verified: fact\.verified_at/);
-  assert.match(layout, /source: fact\.source\?\.label/);
+  assert.match(layout, /const facts = toFactListFacts\(model\.facts\)/);
+  assert.match(layout, /import \{ buildToolPageModel, toFactListFacts \}/);
   assert.match(layout, /<FactList facts=\{facts\}/);
 });

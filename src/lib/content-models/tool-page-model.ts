@@ -21,6 +21,15 @@ export interface ToolFactModel {
   source?: ResolvedPageSource;
 }
 
+export interface ToolFactListItem {
+  label: string;
+  value: string;
+  confidence?: Confidence;
+  volatility?: 'high' | 'medium' | 'low';
+  verified?: string;
+  source?: string;
+}
+
 export interface PriceHistoryModel {
   date: string;
   plan?: string;
@@ -80,6 +89,11 @@ export interface ToolPageModel {
     href?: string;
     disclosure?: string;
     affiliate_state: 'none' | 'applied' | 'approved' | 'rejected' | 'paused' | 'unknown';
+    affiliate_url?: string;
+    affiliate_program?: string;
+    canonical_url?: string;
+    pricing_model?: string;
+    price_range?: string;
   };
   diagnostics: ModelDiagnostic[];
 }
@@ -117,6 +131,36 @@ function confidenceFromScore(score: number): Confidence {
   if (score >= 8.5) return 'high';
   if (score >= 6.5) return 'medium';
   return 'low';
+}
+
+
+export function toFactListFacts(facts: ToolFactModel[]): ToolFactListItem[] {
+  return facts.map((fact) => ({
+    label: fact.label,
+    value: fact.value,
+    confidence: fact.confidence,
+    volatility: fact.volatility,
+    verified: fact.verified_at,
+    source: fact.source?.label,
+  }));
+}
+function sourceDate(source: ResolvedPageSource): string | undefined {
+  return source.verified_at ?? source.last_checked;
+}
+
+function staleLimitDays(volatility: string | undefined): number {
+  if (volatility === 'high') return 30;
+  if (volatility === 'low') return 180;
+  return 90;
+}
+
+function isStaleSource(source: ResolvedPageSource): boolean {
+  const checked = sourceDate(source);
+  if (!checked) return false;
+  const date = new Date(checked);
+  if (Number.isNaN(date.getTime())) return false;
+  const ageDays = Math.floor((Date.now() - date.getTime()) / 86400000);
+  return ageDays > staleLimitDays(source.volatility);
 }
 
 function mergeSource(sources: Map<string, ResolvedPageSource>, source: ResolvedPageSource | undefined): void {
@@ -203,8 +247,10 @@ export function buildToolPageModel(frontmatter: UnknownRecord): ToolPageModel {
   const watchOut = facts.find((fact) => fact.key === 'watch_out_for')?.value;
   const bestPlan = stringField(frontmatter.best_plan) ?? facts.find((fact) => fact.key === 'best_paid_tier')?.value;
   const affiliate = isRecord(frontmatter.affiliate) ? frontmatter.affiliate : {};
-  const affiliateState = stringField(affiliate.application_status) ?? (stringField(affiliate.link) ? 'approved' : 'none');
-
+  const affiliateUrl = stringField(affiliate.link);
+  const canonicalUrl = stringField(frontmatter.url);
+  const affiliateState = stringField(affiliate.application_status) ?? (affiliateUrl ? 'approved' : 'none');
+  const sourceList = Array.from(sources.values());
   if (!stringField(frontmatter.quick_answer)) {
     diagnostics.push({ severity: 'warning', code: 'missing_decision_field', path: 'quick_answer', message: 'Missing quick_answer decision verdict' });
   }
@@ -226,7 +272,7 @@ export function buildToolPageModel(frontmatter: UnknownRecord): ToolPageModel {
       last_updated: dateishField(frontmatter.last_updated) ?? '',
       last_verified: dateishField(frontmatter.last_verified),
       update_frequency: stringField(frontmatter.update_frequency),
-      has_stale_claims: diagnostics.some((issue) => issue.code === 'unknown_source_id'),
+      has_stale_claims: diagnostics.some((issue) => issue.code === 'unknown_source_id') || sourceList.some(isStaleSource),
     },
     decision: {
       verdict: stringField(frontmatter.quick_answer) ?? stringField(frontmatter.tagline) ?? '',
@@ -236,16 +282,21 @@ export function buildToolPageModel(frontmatter: UnknownRecord): ToolPageModel {
       best_alternative: stringField(frontmatter.best_alternative),
       watch_out: watchOut,
       recent_change: stringField(frontmatter.recent_change),
-      source_refs: Array.from(sources.values()).map((source) => source.source_id || source.url).filter(Boolean),
+      source_refs: sourceList.map((source) => source.source_id || source.url).filter(Boolean),
     },
     facts,
     pricing,
-    sources: Array.from(sources.values()),
+    sources: sourceList,
     cta: {
       label: stringField(frontmatter.primary_cta_label) ?? 'Visit tool',
-      href: stringField(affiliate.link) ?? stringField(frontmatter.url),
-      disclosure: stringField(affiliate.link) ? 'Affiliate link' : undefined,
+      href: affiliateUrl ?? canonicalUrl,
+      disclosure: affiliateUrl ? 'Affiliate link' : undefined,
       affiliate_state: affiliateState === 'none' || affiliateState === 'applied' || affiliateState === 'approved' || affiliateState === 'rejected' || affiliateState === 'paused' ? affiliateState : 'unknown',
+      affiliate_url: affiliateUrl,
+      affiliate_program: stringField(affiliate.network),
+      canonical_url: canonicalUrl,
+      pricing_model: stringField(frontmatter.pricing_model),
+      price_range: stringField(frontmatter.price_range),
     },
     diagnostics,
   };

@@ -42,7 +42,7 @@ import BadgeEmbed from '../components/BadgeEmbed.astro';
 import CiteThisPage from '../components/CiteThisPage.astro';
 
 import { isActiveToolStatus, overallScore } from '../utils/tool-metadata';
-import { buildToolPageModel } from '../lib/content-models/tool-page-model';
+import { buildToolPageModel, toFactListFacts } from '../lib/content-models/tool-page-model';
 
 interface Props {
   frontmatter: Record<string, any>;
@@ -65,8 +65,8 @@ const toolTagline = model.identity.tagline;
 const toolUrl = model.identity.url;
 const toolStatus = model.identity.status;
 const siteBase = Astro.site?.href ?? 'https://aipedia.wiki';
-const affiliate = f.affiliate ?? {};
-const affiliateUrl = typeof affiliate?.link === 'string' && affiliate.link.length > 0 ? affiliate.link : undefined;
+const affiliateUrl = model.cta.affiliate_url;
+const affiliateProgram = model.cta.affiliate_program;
 const isAffiliate = Boolean(affiliateUrl);
 const ctaHref = model.cta.href ?? toolUrl ?? '#';
 
@@ -115,10 +115,12 @@ const scoreBand = overall >= 9
       ? 'Useful'
       : 'Niche';
 
-const pricingSummary = f.price_range
-  ?? (f.pricing_model === 'free' ? 'Free' : f.pricing_model === 'freemium' ? 'Free + paid' : 'Paid');
+const pricingModel = model.cta.pricing_model;
+const priceRange = model.cta.price_range;
+const pricingSummary = priceRange
+  ?? (pricingModel === 'free' ? 'Free' : pricingModel === 'freemium' ? 'Free + paid' : 'Paid');
 
-const primaryCtaLabel = f.primary_cta_label ? model.cta.label : undefined;
+const primaryCtaLabel = model.cta.label === 'Visit tool' ? undefined : model.cta.label;
 const quickAnswer = model.decision.verdict;
 
 function cleanSnippet(value: unknown, fallback = ''): string {
@@ -153,11 +155,7 @@ const scoreAxes = [
 ];
 
 // Key facts and trust sources are normalized by ToolPageModel.
-const facts = model.facts.map((fact) => ({
-  ...fact,
-  verified: fact.verified_at,
-  source: fact.source?.label,
-}));
+const facts = toFactListFacts(model.facts);
 
 const sources = model.sources
   .filter((source) => source.url && source.label)
@@ -188,7 +186,7 @@ const tocItems = (headings ?? [])
     name={toolTitle}
     url={toolUrl ?? ''}
     category={catLabel}
-    priceRange={f.price_range ?? 'Free'}
+    priceRange={priceRange ?? 'Free'}
     score={overall}
     description={f.meta_description ?? toolTagline ?? ''}
     publisher={model.identity.company ?? ''}
@@ -203,7 +201,7 @@ const tocItems = (headings ?? [])
   <div class="sr-only" data-pagefind-ignore>
     <span data-pagefind-filter="Type">Tool</span>
     {catLabel && <span data-pagefind-filter="Category">{catLabel}</span>}
-    {f.pricing_model && <span data-pagefind-filter="Pricing">{f.pricing_model}</span>}
+    {pricingModel && <span data-pagefind-filter="Pricing">{pricingModel}</span>}
     {toolStatus && <span data-pagefind-filter="Status">{toolStatus}</span>}
     {overall >= 9 && <span data-pagefind-filter="Score">9+</span>}
     {overall >= 8 && overall < 9 && <span data-pagefind-filter="Score">8-8.9</span>}
@@ -238,9 +236,9 @@ const tocItems = (headings ?? [])
         toolSlug={toolSlug}
         canonicalUrl={toolUrl}
         affiliateUrl={affiliateUrl}
-        affiliateProgram={affiliate?.network}
-        pricingModel={f.pricing_model}
-        priceRange={f.price_range}
+        affiliateProgram={affiliateProgram}
+        pricingModel={pricingModel}
+        priceRange={priceRange}
         pageType="tool"
         placement="tool_hero_primary"
         pageSlug={toolSlug}
@@ -342,9 +340,9 @@ const tocItems = (headings ?? [])
         toolSlug={toolSlug}
         canonicalUrl={toolUrl}
         affiliateUrl={affiliateUrl}
-        affiliateProgram={affiliate?.network}
-        pricingModel={f.pricing_model}
-        priceRange={f.price_range}
+        affiliateProgram={affiliateProgram}
+        pricingModel={pricingModel}
+        priceRange={priceRange}
         pageType="tool"
         placement="tool_post_body"
         pageSlug={toolSlug}
@@ -369,8 +367,8 @@ const tocItems = (headings ?? [])
       toolSlug={toolSlug}
       toolName={toolTitle}
       pageType="tool"
-      priceRange={f.price_range}
-      affiliateProgram={affiliate?.network}
+      priceRange={priceRange}
+      affiliateProgram={affiliateProgram}
     />
 
     <RelatedComparisons toolSlug={toolSlug} toolTitle={toolTitle} />
@@ -392,9 +390,9 @@ const tocItems = (headings ?? [])
     toolSlug={toolSlug}
     canonicalUrl={toolUrl}
     affiliateUrl={affiliateUrl}
-    affiliateProgram={affiliate?.network}
-    pricingModel={f.pricing_model}
-    priceRange={f.price_range}
+    affiliateProgram={affiliateProgram}
+    pricingModel={pricingModel}
+    priceRange={priceRange}
     pageType="tool"
     placement="tool_sticky_mobile"
     pageSlug={toolSlug}
