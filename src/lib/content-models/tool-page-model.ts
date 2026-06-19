@@ -171,6 +171,23 @@ function isStaleSource(source: ResolvedPageSource): boolean {
   return ageDays > staleLimitDays(source.volatility);
 }
 
+function olderDate(left: string | undefined, right: string | undefined): string | undefined {
+  if (!left) return right;
+  if (!right) return left;
+  const leftTime = new Date(left).getTime();
+  const rightTime = new Date(right).getTime();
+  if (Number.isNaN(leftTime)) return right;
+  if (Number.isNaN(rightTime)) return left;
+  return rightTime < leftTime ? right : left;
+}
+
+function higherVolatility(left: string | undefined, right: string | undefined): string | undefined {
+  const rank: Record<string, number> = { low: 1, medium: 2, high: 3 };
+  if (!left) return right;
+  if (!right) return left;
+  return (rank[right] ?? 0) > (rank[left] ?? 0) ? right : left;
+}
+
 function mergeSource(sources: Map<string, ResolvedPageSource>, source: ResolvedPageSource | undefined): void {
   if (!source?.url) return;
   const key = source.source_id || source.url;
@@ -180,6 +197,10 @@ function mergeSource(sources: Map<string, ResolvedPageSource>, source: ResolvedP
     return;
   }
   existing.used_by = Array.from(new Set([...existing.used_by, ...source.used_by]));
+  existing.verified_at = olderDate(existing.verified_at, source.verified_at);
+  existing.last_checked = olderDate(existing.last_checked, source.last_checked);
+  existing.next_review_at = olderDate(existing.next_review_at, source.next_review_at);
+  existing.volatility = higherVolatility(existing.volatility, source.volatility);
 }
 
 function factModels(factsBlock: unknown, diagnostics: ModelDiagnostic[], sources: Map<string, ResolvedPageSource>): ToolFactModel[] {

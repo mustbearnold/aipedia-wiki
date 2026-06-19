@@ -138,6 +138,37 @@ test('ToolPageModel reports provenance states and dedupes source uses', async ()
   assert.equal(flagship.source.label, 'Fixture model page');
 });
 
+test('ToolPageModel keeps duplicate source freshness conservative', async () => {
+  const { buildToolPageModel } = await loadToolPageModel();
+  const model = buildToolPageModel({
+    slug: 'duplicate-source-tool',
+    title: 'Duplicate Source Tool',
+    tagline: 'Fixture tagline',
+    category: 'ai-coding',
+    quick_answer: 'Use it for duplicate source checks.',
+    facts: {
+      best_for: {
+        value: 'Fresh registry claim',
+        source_id: '7ai-platform',
+      },
+      pricing_anchor: {
+        value: 'Stale claim override',
+        source_id: '7ai-platform',
+        verified_at: '2020-01-01',
+      },
+    },
+  });
+
+  const registered = model.sources.find((source) => source.source_id === '7ai-platform');
+  assert.ok(registered, 'duplicate registered source should be retained');
+  assert.equal(registered.verified_at, '2020-01-01');
+  assert.ok(
+    model.diagnostics.some((issue) => issue.code === 'stale_source' && issue.path === 'sources.7ai-platform'),
+    'later stale duplicate source claims should drive stale diagnostics'
+  );
+  assert.equal(model.freshness.has_stale_claims, true, 'later stale duplicate source claims should mark model freshness');
+});
+
 test('ToolPageModel applies decision and CTA precedence from normalized fields', async () => {
   const { buildToolPageModel } = await loadToolPageModel();
   const model = buildToolPageModel({
