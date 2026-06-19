@@ -41,8 +41,8 @@ import ReportOutdatedButton from '../components/ReportOutdatedButton.astro';
 import BadgeEmbed from '../components/BadgeEmbed.astro';
 import CiteThisPage from '../components/CiteThisPage.astro';
 
-import { categoryLabel, isActiveToolStatus, overallScore } from '../utils/tool-metadata';
-import { dateishField, resolveProvenanceSource } from '../lib/provenance';
+import { isActiveToolStatus, overallScore } from '../utils/tool-metadata';
+import { buildToolPageModel, toFactListFacts } from '../lib/content-models/tool-page-model';
 
 interface Props {
   frontmatter: Record<string, any>;
@@ -53,33 +53,40 @@ interface Props {
 
 const { frontmatter, faqItems = [], headings = [], readingMinutes = 0 } = Astro.props;
 const f = frontmatter;
+const model = buildToolPageModel(f);
 
-const scores = f.scores ?? { utility: 0, value: 0, moat: 0, longevity: 0 };
-const overall = overallScore(scores);
-const catSlug = f.category ?? '';
-const catLabel = categoryLabel(catSlug);
-const toolSlug = f.slug ?? '';
+const scores = model.scores;
+const overall = model.scores.overall ?? overallScore(scores);
+const catSlug = model.identity.category ?? '';
+const catLabel = model.identity.category_label;
+const toolSlug = model.identity.slug;
+const toolTitle = model.identity.title;
+const toolTagline = model.identity.tagline;
+const toolUrl = model.identity.url;
+const toolStatus = model.identity.status;
 const siteBase = Astro.site?.href ?? 'https://aipedia.wiki';
-const affiliate = f.affiliate ?? {};
-const isAffiliate = Boolean(affiliate?.link && affiliate.link.length > 0);
+const affiliateUrl = model.cta.affiliate_url;
+const affiliateProgram = model.cta.affiliate_program;
+const isAffiliate = Boolean(affiliateUrl);
+const ctaHref = model.cta.href ?? toolUrl ?? '#';
 
 const breadcrumbLdItems = [
   { name: 'Home', url: `${siteBase}` },
   { name: catLabel, url: `${siteBase}categories/${catSlug}/` },
-  { name: f.title, url: `${siteBase}tools/${toolSlug}/` },
+  { name: toolTitle, url: `${siteBase}tools/${toolSlug}/` },
 ];
 
 // Category rank for the hero rank pill
 const allTools = await getCollection('tools');
 const categoryPeers = allTools
-  .filter((t: any) => t.data.category === f.category && isActiveToolStatus(t.data.status))
+  .filter((t: any) => t.data.category === catSlug && isActiveToolStatus(t.data.status))
   .map((t: any) => ({
     slug: t.data.slug ?? t.id,
     score: overallScore(t.data.scores ?? {}),
   }))
   .sort((a: any, b: any) => b.score - a.score);
-const categoryRank = categoryPeers.findIndex((p: any) => p.slug === (f.slug ?? toolSlug)) + 1;
-const isTopPick = isActiveToolStatus(f.status) && categoryRank === 1 && overall >= 7.5;
+const categoryRank = categoryPeers.findIndex((p: any) => p.slug === toolSlug) + 1;
+const isTopPick = isActiveToolStatus(toolStatus) && categoryRank === 1 && overall >= 7.5;
 const isHighRank = categoryRank > 1 && categoryRank <= 3 && categoryPeers.length >= 6 && overall >= 7;
 const rankLabel = isTopPick
   ? `Top pick in ${catLabel}`
@@ -92,9 +99,9 @@ function daysSince(v: unknown): number {
   if (isNaN(d.getTime())) return Infinity;
   return Math.floor((Date.now() - d.getTime()) / 86400000);
 }
-const verifiedDays = daysSince(f.last_verified);
+const verifiedDays = daysSince(model.freshness.last_verified);
 const monthShort = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-const verifiedDate = f.last_verified ? new Date(String(f.last_verified)) : null;
+const verifiedDate = model.freshness.last_verified ? new Date(String(model.freshness.last_verified)) : null;
 const verifiedStr = verifiedDate && !isNaN(verifiedDate.getTime())
   ? `Verified ${monthShort[verifiedDate.getUTCMonth()]} ${verifiedDate.getUTCDate()}`
   : '';
@@ -108,11 +115,13 @@ const scoreBand = overall >= 9
       ? 'Useful'
       : 'Niche';
 
-const pricingSummary = f.price_range
-  ?? (f.pricing_model === 'free' ? 'Free' : f.pricing_model === 'freemium' ? 'Free + paid' : 'Paid');
+const pricingModel = model.cta.pricing_model;
+const priceRange = model.cta.price_range;
+const pricingSummary = priceRange
+  ?? (pricingModel === 'free' ? 'Free' : pricingModel === 'freemium' ? 'Free + paid' : 'Paid');
 
-const primaryCtaLabel = f.primary_cta_label ? String(f.primary_cta_label) : undefined;
-const quickAnswer = f.quick_answer ?? '';
+const primaryCtaLabel = model.cta.label === 'Visit tool' ? undefined : model.cta.label;
+const quickAnswer = model.decision.verdict;
 
 function cleanSnippet(value: unknown, fallback = ''): string {
   if (!value) return fallback;
@@ -121,14 +130,14 @@ function cleanSnippet(value: unknown, fallback = ''): string {
   return text.charAt(0).toUpperCase() + text.slice(1);
 }
 
-const firstBestFor = Array.isArray(f.best_for) && f.best_for.length > 0
-  ? cleanSnippet(f.best_for[0])
+const firstBestFor = model.decision.buy_if.length > 0
+  ? cleanSnippet(model.decision.buy_if[0])
   : `${catLabel || 'Primary'} workflows`;
-const firstNotBestFor = Array.isArray(f.not_best_for) && f.not_best_for.length > 0
-  ? cleanSnippet(f.not_best_for[0])
+const firstNotBestFor = model.decision.skip_if.length > 0
+  ? cleanSnippet(model.decision.skip_if[0])
   : '';
 const bestPlanGlance = cleanSnippet(
-  f.best_plan ?? f.plan_recommendation ?? (typeof f.facts?.best_paid_tier === 'string' ? f.facts.best_paid_tier : f.facts?.best_paid_tier?.value),
+  model.decision.best_plan ?? f.plan_recommendation,
   pricingSummary
 );
 
@@ -145,61 +154,18 @@ const scoreAxes = [
   { label: 'Longevity', value: scores.longevity ?? 0, why: 'How likely the product is to still be best-in-class 24 months out.' },
 ];
 
-// Key facts derived from frontmatter `facts` block
-type FactEntry = { label: string; value: string; confidence?: string; volatility?: string; verified?: string; source?: string };
-type TrustSource = { label: string; url: string; verified?: string; trust_tier?: string };
-const factEntries: FactEntry[] = [];
-const factsBlock = isRecord(f.facts) ? f.facts : {};
-const factOrder = ['best_for', 'pricing_anchor', 'flagship_model', 'coding_agent', 'agent_manifest', 'context_window', 'interface', 'mcp_support', 'watch_out_for', 'best_paid_tier'];
-const seenFactKeys = new Set<string>();
-function prettyLabel(key: string): string {
-  return key.replace(/_/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
-}
-function isRecord(value: unknown): value is Record<string, unknown> {
-  return value !== null && typeof value === 'object' && !Array.isArray(value);
-}
-for (const key of [...factOrder, ...Object.keys(factsBlock)]) {
-  if (seenFactKeys.has(key)) continue;
-  seenFactKeys.add(key);
-  const fact = factsBlock[key];
-  if (!fact) continue;
-  if (typeof fact === 'string') {
-    factEntries.push({ label: prettyLabel(key), value: fact });
-  } else if (isRecord(fact)) {
-    const provenance = resolveProvenanceSource(fact);
-    const rawValue = 'value' in fact ? fact.value : undefined;
-    const value = typeof rawValue === 'string' ? rawValue.trim() : '';
+// Key facts and trust sources are normalized by ToolPageModel.
+const facts = toFactListFacts(model.facts);
 
-    factEntries.push({
-      label: prettyLabel(key),
-      value,
-      confidence: 'confidence' in fact && typeof fact.confidence === 'string' ? fact.confidence : undefined,
-      volatility: provenance?.volatility ?? ('volatility' in fact && typeof fact.volatility === 'string' ? fact.volatility : undefined),
-      verified: provenance?.verified ?? ('verified_at' in fact ? dateishField(fact.verified_at) : undefined),
-      source: provenance?.label,
-    });
-  }
-}
-const facts = factEntries.filter((e) => e.value && e.value.length > 0).slice(0, 8);
-
-const sourceMap = new Map<string, TrustSource>();
-for (const key of Object.keys(factsBlock)) {
-  const fact = factsBlock[key];
-  if (!isRecord(fact)) continue;
-
-  const provenance = resolveProvenanceSource(fact);
-  if (!provenance?.url || !provenance.label) continue;
-  const sourceKey = provenance.is_registered && provenance.source_id ? provenance.source_id : provenance.url;
-  if (sourceMap.has(sourceKey)) continue;
-
-  sourceMap.set(sourceKey, {
-    label: provenance.label,
-    url: provenance.url,
-    verified: provenance.verified,
-    trust_tier: provenance.trust_tier,
-  });
-}
-const sources = Array.from(sourceMap.values()).slice(0, 8);
+const sources = model.sources
+  .filter((source) => source.url && source.label)
+  .map((source) => ({
+    label: source.label,
+    url: source.url,
+    verified: source.verified_at ?? source.last_checked,
+    trust_tier: source.trust_tier,
+  }))
+  .slice(0, 8);
 
 // Table of contents from markdown H2s (skip System Verdict — covered by the
 // Quick Answer decision card already shown above the body).
@@ -209,34 +175,34 @@ const tocItems = (headings ?? [])
 ---
 
 <BaseLayout
-  title={f.seo_title ?? f.title}
-  description={f.meta_description ?? f.tagline ?? ''}
+  title={f.seo_title ?? toolTitle}
+  description={f.meta_description ?? toolTagline ?? ''}
   ogImage={`/og/tools/${toolSlug}.png`}
 >
   <ReadingProgress />
   <BreadcrumbLD items={breadcrumbLdItems} />
   {faqItems.length > 0 && <FAQPageLD questions={faqItems} />}
   <SoftwareApplicationLD
-    name={f.title}
-    url={f.url ?? ''}
+    name={toolTitle}
+    url={toolUrl ?? ''}
     category={catLabel}
-    priceRange={f.price_range ?? 'Free'}
+    priceRange={priceRange ?? 'Free'}
     score={overall}
-    description={f.meta_description ?? f.tagline ?? ''}
-    publisher={f.company ?? ''}
-    reviewBody={f.tagline ?? f.meta_description ?? ''}
+    description={f.meta_description ?? toolTagline ?? ''}
+    publisher={model.identity.company ?? ''}
+    reviewBody={toolTagline ?? f.meta_description ?? ''}
     pageUrl={`${siteBase}tools/${toolSlug}/`}
-    datePublished={f.last_updated ? String(f.last_updated) : undefined}
-    dateModified={f.last_verified ? String(f.last_verified) : undefined}
+    datePublished={model.freshness.last_updated ? String(model.freshness.last_updated) : undefined}
+    dateModified={model.freshness.last_verified ? String(model.freshness.last_verified) : undefined}
     slug={toolSlug}
-    status={f.status}
+    status={toolStatus}
   />
 
   <div class="sr-only" data-pagefind-ignore>
     <span data-pagefind-filter="Type">Tool</span>
     {catLabel && <span data-pagefind-filter="Category">{catLabel}</span>}
-    {f.pricing_model && <span data-pagefind-filter="Pricing">{f.pricing_model}</span>}
-    {f.status && <span data-pagefind-filter="Status">{f.status}</span>}
+    {pricingModel && <span data-pagefind-filter="Pricing">{pricingModel}</span>}
+    {toolStatus && <span data-pagefind-filter="Status">{toolStatus}</span>}
     {overall >= 9 && <span data-pagefind-filter="Score">9+</span>}
     {overall >= 8 && overall < 9 && <span data-pagefind-filter="Score">8-8.9</span>}
     {overall < 8 && <span data-pagefind-filter="Score">Below 8</span>}
@@ -244,35 +210,35 @@ const tocItems = (headings ?? [])
 
   <div class="gt-canvas gt-canvas-wide">
     <Hero
-      title={f.title}
-      tagline={f.tagline}
+      title={toolTitle}
+      tagline={toolTagline}
       breadcrumbs={[
         { label: 'aipedia', href: '/' },
         { label: catLabel, href: `/categories/${catSlug}/` },
-        { label: f.title },
+        { label: toolTitle },
       ]}
       verifiedLabel={showVerified ? verifiedStr : undefined}
       rankLabel={rankLabel || undefined}
       logoSlug={toolSlug}
-      logoTitle={f.title}
+      logoTitle={toolTitle}
     />
 
     <DecisionCard
       scoreOverall={overall}
       scoreBand={scoreBand}
-      statusActive={f.status === 'active'}
+      statusActive={toolStatus === 'active'}
       price={pricingSummary}
       affiliate={isAffiliate}
     >
       <CommercialCTA
         slot="primary-cta"
-        toolName={f.title}
+        toolName={toolTitle}
         toolSlug={toolSlug}
-        canonicalUrl={f.url}
-        affiliateUrl={affiliate?.link}
-        affiliateProgram={affiliate?.network}
-        pricingModel={f.pricing_model}
-        priceRange={f.price_range}
+        canonicalUrl={toolUrl}
+        affiliateUrl={affiliateUrl}
+        affiliateProgram={affiliateProgram}
+        pricingModel={pricingModel}
+        priceRange={priceRange}
         pageType="tool"
         placement="tool_hero_primary"
         pageSlug={toolSlug}
@@ -292,7 +258,7 @@ const tocItems = (headings ?? [])
         data-compare-source-module="tool_decision_card"
         data-compare-position="top"
         aria-pressed="false"
-        aria-label={`Add ${f.title} to compare`}
+        aria-label={`Add ${toolTitle} to compare`}
       ><span data-compare-label>Add to compare</span></button>
     </DecisionCard>
 
@@ -368,15 +334,15 @@ const tocItems = (headings ?? [])
     </div>
 
     <section class="gt-tool-footer-cta" aria-label="Visit tool">
-      <p class="gt-tool-footer-cta-line">Ready to try {f.title}?</p>
+      <p class="gt-tool-footer-cta-line">Ready to try {toolTitle}?</p>
       <CommercialCTA
-        toolName={f.title}
+        toolName={toolTitle}
         toolSlug={toolSlug}
-        canonicalUrl={f.url}
-        affiliateUrl={affiliate?.link}
-        affiliateProgram={affiliate?.network}
-        pricingModel={f.pricing_model}
-        priceRange={f.price_range}
+        canonicalUrl={toolUrl}
+        affiliateUrl={affiliateUrl}
+        affiliateProgram={affiliateProgram}
+        pricingModel={pricingModel}
+        priceRange={priceRange}
         pageType="tool"
         placement="tool_post_body"
         pageSlug={toolSlug}
@@ -396,44 +362,44 @@ const tocItems = (headings ?? [])
     <FAQAccordionScript />
 
     <PostBodyEnhancements
-      outboundUrl={(affiliate?.link && affiliate.link.length > 0 ? affiliate.link : (f.url ?? '#'))}
+      outboundUrl={ctaHref}
       isAffiliate={isAffiliate}
       toolSlug={toolSlug}
-      toolName={f.title}
+      toolName={toolTitle}
       pageType="tool"
-      priceRange={f.price_range}
-      affiliateProgram={affiliate?.network}
+      priceRange={priceRange}
+      affiliateProgram={affiliateProgram}
     />
 
-    <RelatedComparisons toolSlug={toolSlug} toolTitle={f.title} />
-    <ReviewsBlock toolSlug={toolSlug} toolTitle={f.title} />
-    <ShareButtons title={f.title} pageUrl={`${siteBase}tools/${toolSlug}/`} />
+    <RelatedComparisons toolSlug={toolSlug} toolTitle={toolTitle} />
+    <ReviewsBlock toolSlug={toolSlug} toolTitle={toolTitle} />
+    <ShareButtons title={toolTitle} pageUrl={`${siteBase}tools/${toolSlug}/`} />
     <HelpfulVote pageSlug={toolSlug} pageType="tool" />
-    <BadgeEmbed slug={toolSlug} title={f.title} />
-    <CiteThisPage title={`${f.title}: Editorial Review`} pageUrl={`${siteBase}tools/${toolSlug}/`} pageType="tool-review" />
-    <FeedbackForm toolName={f.title} />
-    <ReportOutdatedButton pageTitle={f.title} pageSlug={toolSlug} pageType="tool" />
+    <BadgeEmbed slug={toolSlug} title={toolTitle} />
+    <CiteThisPage title={`${toolTitle}: Editorial Review`} pageUrl={`${siteBase}tools/${toolSlug}/`} pageType="tool-review" />
+    <FeedbackForm toolName={toolTitle} />
+    <ReportOutdatedButton pageTitle={toolTitle} pageSlug={toolSlug} pageType="tool" />
   </div>
 
   <StickyCTA
-    title={f.title}
+    title={toolTitle}
     score={overall}
     price={pricingSummary}
-    cta={{ label: primaryCtaLabel ?? `Try ${f.title}`, href: (affiliate?.link && affiliate.link.length > 0 ? affiliate.link : (f.url ?? '#')), external: true }}
-    toolName={f.title}
+    cta={{ label: primaryCtaLabel ?? `Try ${toolTitle}`, href: ctaHref, external: true }}
+    toolName={toolTitle}
     toolSlug={toolSlug}
-    canonicalUrl={f.url}
-    affiliateUrl={affiliate?.link}
-    affiliateProgram={affiliate?.network}
-    pricingModel={f.pricing_model}
-    priceRange={f.price_range}
+    canonicalUrl={toolUrl}
+    affiliateUrl={affiliateUrl}
+    affiliateProgram={affiliateProgram}
+    pricingModel={pricingModel}
+    priceRange={priceRange}
     pageType="tool"
     placement="tool_sticky_mobile"
     pageSlug={toolSlug}
     categorySlug={catSlug}
   />
 
-  <script is:inline define:vars={{ toolSlug, toolTitle: f.title }}>
+  <script is:inline define:vars={{ toolSlug, toolTitle }}>
     (function () {
       var KEY = 'recently-viewed-tools';
       var MAX = 10;

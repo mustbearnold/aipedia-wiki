@@ -433,10 +433,21 @@ import ToolLogo from '../../components/ToolLogo.astro';
 import BreadcrumbLD from '../../components/seo/BreadcrumbLD.astro';
 import ItemListLD from '../../components/seo/ItemListLD.astro';
 import { categoryLabel, overallScore } from '../../utils/tool-metadata';
+import { buildSearchCatalog, isCatalogActiveTool } from '../../lib/search-catalog';
 
 const allTools = await getCollection('tools');
-const inactiveStatuses = new Set(['dead', 'retired', 'acquired']);
-const activeTools = allTools.filter((t: any) => !inactiveStatuses.has(String(t.data.status ?? '').toLowerCase()));
+const activeTools = allTools.filter(isCatalogActiveTool);
+const toolCatalogItems = buildSearchCatalog({
+  tools: allTools,
+  comparisons: [],
+  categories: [],
+  guides: [],
+  news: [],
+  workflows: [],
+  trends: [],
+  companies: [],
+});
+const toolCatalogBySlug = new Map(toolCatalogItems.filter((item) => item.kind === 'tool').map((item) => [item.slug, item] as const));
 
 interface ScoredTool {
   slug: string;
@@ -446,18 +457,29 @@ interface ScoredTool {
   categoryLabel: string;
   price: string;
   score: number;
+  search: string;
 }
 
 const scoredTools: ScoredTool[] = activeTools
-  .map((t: any) => ({
-    slug: t.data.slug || t.id.replace(/\.md$/, ''),
-    title: t.data.title,
-    tagline: t.data.tagline ?? t.data.meta_description ?? '',
-    category: t.data.category ?? '',
-    categoryLabel: categoryLabel(t.data.category ?? ''),
-    price: t.data.price_range ?? '',
-    score: overallScore(t.data.scores ?? {}),
-  }))
+  .map((t: any) => {
+    const slug = t.data.slug || t.id.replace(/\.md$/, '').replace(/\\/g, '/');
+    const category = t.data.category ?? '';
+    const label = categoryLabel(category);
+    const price = t.data.price_range ?? '';
+    const catalogSearch = toolCatalogBySlug.get(slug)?.search;
+    return {
+      slug,
+      title: t.data.title,
+      tagline: t.data.tagline ?? t.data.meta_description ?? '',
+      category,
+      categoryLabel: label,
+      price,
+      score: overallScore(t.data.scores ?? {}),
+      search: catalogSearch
+        ? `${catalogSearch} ${price}`.trim()
+        : `${t.data.title} ${t.data.tagline ?? t.data.meta_description ?? ''} ${category} ${label} ${price}`.toLowerCase(),
+    };
+  })
   .sort((a: ScoredTool, b: ScoredTool) => b.score - a.score || a.title.localeCompare(b.title));
 
 const categoryCounts = new Map<string, number>();
@@ -568,7 +590,7 @@ const itemList = scoredTools.map((t) => ({
               class={`gt-tool-row gt-tool-row-${tone}`}
               data-tool-card
               data-category={t.category}
-              data-search-text={`${t.title} ${t.tagline} ${t.category} ${t.categoryLabel} ${t.price}`.toLowerCase()}
+              data-search-text={t.search}
             >
               <a
                 href={`/tools/${t.slug}/`}

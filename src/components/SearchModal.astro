@@ -80,15 +80,15 @@ const toolsCount = allTools.filter(
     const RECENT_KEY = 'aipedia:recent-searches';
     const RECENT_MAX = 5;
     const RESULT_GROUPS = [
-      { kind: 'Tool',     label: 'Tools',       max: 6 },
-      { kind: 'Compare',  label: 'Comparisons', max: 4 },
-      { kind: 'Guide',    label: 'Guides',      max: 4 },
-      { kind: 'Answer',   label: 'Answers',     max: 3 },
-      { kind: 'Workflow', label: 'Workflows',   max: 3 },
-      { kind: 'Category', label: 'Categories',  max: 3 },
-      { kind: 'Trend',    label: 'Trends',      max: 3 },
-      { kind: 'News',     label: 'News',        max: 3 },
-      { kind: 'Company',  label: 'Companies',   max: 2 },
+      { kind: 'tool',     label: 'Tools',       max: 6 },
+      { kind: 'compare',  label: 'Comparisons', max: 4 },
+      { kind: 'guide',    label: 'Guides',      max: 4 },
+      { kind: 'answer',   label: 'Answers',     max: 3 },
+      { kind: 'workflow', label: 'Workflows',   max: 3 },
+      { kind: 'category', label: 'Categories',  max: 3 },
+      { kind: 'trend',    label: 'Trends',      max: 3 },
+      { kind: 'news',     label: 'News',        max: 3 },
+      { kind: 'company',  label: 'Companies',   max: 2 },
     ];
     const POPULAR_TOOL_LIMIT = 6;
 
@@ -209,7 +209,7 @@ const toolsCount = allTools.filter(
     function getPopularTools() {
       if (!data) return [];
       return data
-        .filter((i) => i.kind === 'Tool')
+        .filter((i) => i.kind === 'tool')
         .sort((a, b) => Number(b.priority || 0) - Number(a.priority || 0))
         .slice(0, POPULAR_TOOL_LIMIT);
     }
@@ -259,7 +259,7 @@ const toolsCount = allTools.filter(
           ${second ? `<img src="${escape(second)}" alt="" loading="lazy" decoding="async" />` : ''}
         </span>`;
       }
-      return `<span class="sp-row-kind sp-row-kind-${escape(kind)}">${escape(item.kind || '')}</span>`;
+      return `<span class="sp-row-kind sp-row-kind-${escape(kind)}">${escape(item.kindLabel || item.kind || '')}</span>`;
     }
     function rowHtml(item, idx) {
       const meta = item.meta || '';

@@ -20,6 +20,7 @@ Use the smallest verification command that matches the changed surface. Start wi
 - `public/logos/tools/`: canonical tool logo assets.
 - `public/og/`: generated Open Graph images.
 - `scripts/`: audits, guards, generators, build helpers, and operator tooling.
+- `src/lib/content-models/` and `src/lib/search-catalog.ts`: generated model/search seams audited by `npm run audit:generated-models`.
 - `tests/`: Node script tests and Playwright smoke tests.
 
 ## Generated Or Local-Only Folders
@@ -43,6 +44,7 @@ If `.worktrees/` contains empty or unregistered directories after generated cove
 - Run `npm run check:smart` to see the recommended checks for the current diff.
 - Run `npm run check:smart:run` to execute that recommendation.
 - Run `npm run check:quick` when tooling or repo-maintenance work needs the established no-build gate.
+- Run `npm run audit:generated-models` with `npm run test:scripts` when generated model/search seams or their audit script change.
 - Run `npm run build:fast` when layouts, runtime routes, metadata, schemas, or rendered output changed.
 - Run `npm run build` only for full production confidence or deploy prep.
 

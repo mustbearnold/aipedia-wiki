@@ -14,12 +14,12 @@
 :root {
   /* Foreground colors — fall through to site tokens, then explicit
      defaults so a missing token never produces black-on-black. */
-  --gt-fg: var(--text-primary, #f5f5f5);
-  --gt-muted: var(--text-secondary, #c9c9c9);
-  --gt-subtle: var(--text-muted, #8a8a8a);
+  --gt-fg: var(--color-text-primary, #f5f5f5);
+  --gt-muted: var(--color-text-secondary, #c9c9c9);
+  --gt-subtle: var(--color-text-muted, #8a8a8a);
 
   /* Surfaces */
-  --gt-line: var(--border, rgba(255, 255, 255, 0.10));
+  --gt-line: var(--color-surface-muted, rgba(255, 255, 255, 0.10));
   --gt-line-strong: rgba(255, 255, 255, 0.18);
   --gt-surface: rgba(255, 255, 255, 0.035);
   --gt-surface-2: rgba(255, 255, 255, 0.08);
@@ -27,7 +27,7 @@
   /* Accents */
   --gt-accent: #f97316;
   --gt-accent-hover: #ea6810;
-  --gt-on-accent: #0b0a14;
+  --gt-on-accent: var(--color-accent-contrast);
   --gt-positive: #34d399;
   --gt-positive-rgb: 52, 211, 153;
   --gt-negative: #fb7185;
@@ -37,12 +37,12 @@
   /* Radii */
   --gt-radius: 14px;
   --gt-radius-sm: 10px;
-  --gt-radius-pill: 999px;
+  --gt-radius-pill: var(--radius-pill);
 
   /* Type scale */
   --gt-text-meta: 12px;
   --gt-text-pill: 11px;
-  --gt-text-body: 16px;
+  --gt-text-body: var(--font-size-base);
   --gt-text-prose: 17px;
   --gt-text-tagline: 17px;
   --gt-text-section-h: 12px;

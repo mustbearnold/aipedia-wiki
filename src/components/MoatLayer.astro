@@ -110,11 +110,9 @@ const data = {
   const payload = JSON.parse(root.getAttribute('data-moat') || '{}');
   const categories = Array.isArray(payload.categories) ? payload.categories : [];
   const news = payload.news || {};
-  const motionPolicy = window.__aipediaMotionPolicy || (window.__aipediaMotionPolicy = {
-    reduceQuery: '(prefers-reduced-motion: reduce)',
-  });
-  const reduceMotion = motionPolicy.reduceMotion || (motionPolicy.reduceMotion = window.matchMedia(motionPolicy.reduceQuery));
-  const smallViewport = window.matchMedia('(max-width: 760px), (pointer: coarse)');
+  let motionController = window.__aipediaMotionController || null;
+  const reduceMotion = motionController ? null : window.matchMedia('(prefers-reduced-motion: reduce)');
+  const smallViewport = motionController ? null : window.matchMedia('(max-width: 760px), (pointer: coarse)');
   const state = {
     dpr: 1,
     width: 0,
@@ -453,8 +451,16 @@ const data = {
   }
 
   function nextRuntime() {
+    motionController = window.__aipediaMotionController || motionController;
+    if (motionController) {
+      const policy = motionController.policy;
+      if (policy.hidden) return 'hidden';
+      if (policy.reduced || policy.smallViewport) return 'static';
+      if (state.forcedPaused || policy.overlayOpen || !policy.canAnimateAmbient) return 'paused';
+      return 'active';
+    }
     if (document.hidden) return 'hidden';
-    if (reduceMotion.matches || smallViewport.matches) return 'static';
+    if ((reduceMotion && reduceMotion.matches) || (smallViewport && smallViewport.matches)) return 'static';
     if (state.forcedPaused || overlayOpen()) return 'paused';
     return 'active';
   }
@@ -504,6 +510,7 @@ const data = {
   }
 
   function listenMedia(mql, handler) {
+    if (!mql) return;
     if (typeof mql.addEventListener === 'function') {
       mql.addEventListener('change', handler);
     } else if (typeof mql.addListener === 'function') {
@@ -526,27 +533,44 @@ const data = {
   }
 
   const overlayObserver = new MutationObserver(scheduleRuntimeCheck);
-  let observedOverlayBody = null;
-  function observeOverlayBody() {
-    const body = document.body;
-    if (!body || body === observedOverlayBody) return;
-    overlayObserver.disconnect();
-    overlayObserver.observe(body, {
-      attributes: true,
-      attributeFilter: ['class', 'style', 'hidden', 'aria-hidden'],
-      subtree: true,
-    });
-    observedOverlayBody = body;
+  const overlayAttributeFilter = ['class', 'style', 'hidden', 'aria-hidden'];
+  const overlayVisibilitySelector = '[role="dialog"][aria-modal="true"], .tool-preview-layer, .source-preview-layer';
+  function observeOverlayTarget(target) {
+    if (!target) return;
+    overlayObserver.observe(target, { attributes: true, attributeFilter: overlayAttributeFilter });
   }
-  observeOverlayBody();
+  function observeOverlayTargets() {
+    const body = document.body;
+    overlayObserver.disconnect();
+    if (!body) return;
+    observeOverlayTarget(body);
+    observeOverlayTarget(document.getElementById('search-modal'));
+    observeOverlayTarget(document.getElementById('mobile-menu'));
+    document.querySelectorAll(overlayVisibilitySelector).forEach(observeOverlayTarget);
+  }
+  observeOverlayTargets();
   function update() {
-    observeOverlayBody();
+    observeOverlayTargets();
     setMode();
     state.scroll = window.scrollY || 0;
     applyRuntime(true);
   }
 
   const api = { update, setPaused };
+  let unregisterMotion = null;
+  let motionRegistering = false;
+  function registerMotionController(event) {
+    motionController = (event && event.detail) || window.__aipediaMotionController || motionController;
+    if (!motionController || unregisterMotion || motionRegistering || typeof motionController.register !== 'function') return;
+    motionRegistering = true;
+    unregisterMotion = motionController.register({
+      refresh: update,
+      pause: () => setPaused(true),
+      resume: () => setPaused(false),
+      policychange: () => applyRuntime(false),
+    });
+    motionRegistering = false;
+  }
   window.__aipediaMoat = api;
   window.__aipediaMoatUpdate = update;
 
@@ -565,6 +589,8 @@ const data = {
     const detail = event instanceof CustomEvent ? event.detail : null;
     setPaused(Boolean(detail && detail.paused));
   });
+  window.addEventListener('aipedia:motion-controller-ready', registerMotionController);
+  registerMotionController();
   listenMedia(reduceMotion, () => applyRuntime(true));
   listenMedia(smallViewport, () => applyRuntime(true));
 

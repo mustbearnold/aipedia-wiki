@@ -61,6 +61,16 @@
       }
     },
     {
+      "id": "generated-models",
+      "label": "Generated content models and search catalog",
+      "category": "tooling",
+      "checks": ["generated-models"],
+      "match": {
+        "prefixes": ["src/lib/content-models/"],
+        "files": ["src/lib/search-catalog.ts", "scripts/audit-generated-models.mjs"]
+      }
+    },
+    {
       "id": "runtime-modules",
       "label": "Runtime support modules",
       "category": "runtime",
@@ -143,6 +153,10 @@
       {
         "checks": ["api"],
         "commands": ["npm run smoke:api"]
+      },
+      {
+        "checks": ["generated-models"],
+        "commands": ["npm run audit:generated-models"]
       },
       {
         "categories": ["runtime", "dependencies"],

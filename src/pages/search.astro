@@ -16,8 +16,8 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/godtier/Hero.astro';
 import ToolLogo from '../components/ToolLogo.astro';
-import { ANSWER_ITEMS } from '../data/answers';
-import { categoryLabel, isActiveToolStatus, overallScore } from '../utils/tool-metadata';
+import logoManifest from '../data/logo-manifest.json';
+import { buildSearchCatalog, type SearchCatalogItem } from '../lib/search-catalog';
 
 const allTools = await getCollection('tools');
 const allComparisons = await getCollection('comparisons');
@@ -28,203 +28,19 @@ const allWorkflows = await getCollection('workflows');
 const allTrends = await getCollection('trends');
 const allCompanies = await getCollection('companies');
 
-type SearchKind = 'tool' | 'comparison' | 'guide' | 'answer' | 'workflow' | 'trend' | 'news' | 'category' | 'company';
-
-interface SearchItem {
-  slug: string;
-  title: string;
-  href: string;
-  kind: SearchKind;
-  kindLabel: string;
-  detail: string;
-  meta: string;
-  score?: number;
-  categorySlug?: string;
-  category?: string;
-  tags?: string[];
-  priority: number;
-}
-
-function entrySlug(entry: any): string {
-  return String(entry.data.slug || entry.id.replace(/\.md$/, '').replace(/\\/g, '/'));
-}
-
-function trimDetail(value: unknown, max = 150): string {
-  const text = String(value || '').trim();
-  if (text.length <= max) return text;
-  return `${text.slice(0, max - 1).trimEnd()}…`;
-}
-
-const toolTitleBySlug = new Map<string, string>();
-allTools.forEach((tool: any) => {
-  const slug = entrySlug(tool);
-  toolTitleBySlug.set(slug, tool.data.title || slug);
+const catalogItems = buildSearchCatalog({
+  tools: allTools,
+  comparisons: allComparisons,
+  categories: allCategories,
+  guides: allGuides,
+  news: allNews,
+  workflows: allWorkflows,
+  trends: allTrends,
+  companies: allCompanies,
+  logos: logoManifest as Record<string, string>,
 });
-
-const tools: SearchItem[] = allTools
-  .filter((tool: any) => isActiveToolStatus(tool.data.status))
-  .map((tool: any) => {
-    const slug = entrySlug(tool);
-    const score = overallScore(tool.data.scores ?? {});
-    return {
-      slug,
-      title: tool.data.title,
-      href: `/tools/${slug}/`,
-      kind: 'tool' as const,
-      kindLabel: 'Tool',
-      categorySlug: tool.data.category ?? '',
-      category: categoryLabel(tool.data.category ?? ''),
-      detail: trimDetail(tool.data.tagline ?? tool.data.meta_description),
-      meta: `${categoryLabel(tool.data.category ?? '') || 'AI tool'} · ${score}/10`,
-      score,
-      tags: tool.data.tags ?? [],
-      priority: Math.round(score * 10) + 90,
-    };
-  });
-
-function comparisonDetail(toolsInComparison: string[]): string {
-  const names = toolsInComparison.map((slug) => toolTitleBySlug.get(slug) ?? slug);
-  if (names.length === 0) return 'Head-to-head comparison with scored facts.';
-  if (names.length === 1) return `Where ${names[0]} wins, loses, and what to compare next.`;
-  return `${names.join(' vs ')} on pricing, strengths, and buyer fit.`;
-}
-
-const comparisonItems: SearchItem[] = allComparisons.map((comparison: any) => {
-  const slug = entrySlug(comparison);
-  const toolsInComparison = Array.isArray(comparison.data.tools) ? comparison.data.tools.map(String) : [];
-  return {
-    slug,
-    title: comparison.data.title,
-    href: `/compare/${slug}/`,
-    kind: 'comparison',
-    kindLabel: 'Compare',
-    detail: trimDetail(comparison.data.meta_description ?? comparisonDetail(toolsInComparison)),
-    meta: `${toolsInComparison.length || 2} tools`,
-    priority: 76,
-    tags: [comparison.data.category, comparison.data.winner, ...toolsInComparison].filter(Boolean),
-  };
-});
-
-const guideItems: SearchItem[] = allGuides
-  .filter((guide: any) => guide.data.noindex !== true)
-  .map((guide: any) => {
-    const slug = entrySlug(guide);
-    return {
-      slug,
-      title: guide.data.title,
-      href: `/guides/${slug}/`,
-      kind: 'guide',
-      kindLabel: 'Guide',
-      detail: trimDetail(guide.data.meta_description ?? guide.data.description),
-      meta: 'Buyer guide',
-      priority: 74,
-      tags: guide.data.tools_mentioned ?? [],
-    };
-  });
-
-const answerItems: SearchItem[] = ANSWER_ITEMS.map((answer) => ({
-  slug: answer.slug,
-  title: answer.q,
-  href: `/answers/${answer.slug}/`,
-  kind: 'answer',
-  kindLabel: 'Answer',
-  detail: trimDetail(answer.a),
-  meta: answer.group,
-  priority: 73,
-  tags: [answer.group],
-}));
-
-const workflowItems: SearchItem[] = allWorkflows.map((workflow: any) => {
-  const slug = entrySlug(workflow);
-  const stack = Array.isArray(workflow.data.stack) ? workflow.data.stack : [];
-  return {
-    slug,
-    title: workflow.data.title,
-    href: `/workflows/${slug}/`,
-    kind: 'workflow',
-    kindLabel: 'Workflow',
-    detail: trimDetail(workflow.data.meta_description ?? workflow.data.description),
-    meta: stack.length ? `${stack.length} tools` : 'Workflow',
-    priority: 70,
-    tags: [...stack, ...(workflow.data.tools_mentioned ?? [])],
-  };
-});
-
-const trendItems: SearchItem[] = allTrends.map((trend: any) => {
-  const slug = entrySlug(trend);
-  return {
-    slug,
-    title: trend.data.title,
-    href: `/trends/${slug}/`,
-    kind: 'trend',
-    kindLabel: 'Trend',
-    detail: trimDetail(trend.data.meta_description ?? trend.data.description),
-    meta: trend.data.timeframe ?? 'Trend analysis',
-    priority: 66,
-    tags: [trend.data.impact, trend.data.timeframe].filter(Boolean),
-  };
-});
-
-const newsItems: SearchItem[] = allNews.map((news: any) => {
-  const slug = entrySlug(news);
-  return {
-    slug,
-    title: news.data.title,
-    href: `/news/${slug}/`,
-    kind: 'news',
-    kindLabel: 'News',
-    detail: trimDetail(news.data.summary ?? news.data.description, 130),
-    meta: String(news.data.date),
-    priority: 64,
-    tags: [news.data.severity, ...(news.data.affects ?? []), ...(news.data.categories ?? [])].filter(Boolean),
-  };
-});
-
-const categoryItems: SearchItem[] = allCategories.map((category: any) => {
-  const slug = entrySlug(category);
-  return {
-    slug,
-    title: category.data.title,
-    href: `/categories/${slug}/`,
-    kind: 'category',
-    kindLabel: 'Category',
-    detail: trimDetail(category.data.description ?? category.data.meta_description),
-    meta: 'Category hub',
-    priority: 60,
-    categorySlug: slug,
-    tags: [slug],
-  };
-});
-
-const companyItems: SearchItem[] = allCompanies.map((company: any) => {
-  const slug = entrySlug(company);
-  return {
-    slug,
-    title: company.data.title,
-    href: `/companies/${slug}/`,
-    kind: 'company',
-    kindLabel: 'Company',
-    detail: trimDetail(company.data.meta_description),
-    meta: company.data.company_type ? `${company.data.company_type} company` : 'Company profile',
-    priority: 56,
-    tags: [company.data.company_type, company.data.hq, company.data.funding, ...(company.data.key_products ?? [])].filter(Boolean),
-  };
-});
-
-const catalogItems = [
-  ...tools,
-  ...comparisonItems,
-  ...guideItems,
-  ...answerItems,
-  ...workflowItems,
-  ...trendItems,
-  ...newsItems,
-  ...categoryItems,
-  ...companyItems,
-].sort((a, b) => b.priority - a.priority || a.title.localeCompare(b.title));
 
 const quickTerms = ['ChatGPT', 'Claude', 'Cursor', 'students', 'presentation', 'automation', 'free'];
-const totalTools = tools.length;
 const totalItems = catalogItems.length;
 ---
 
@@ -278,16 +94,16 @@ const totalItems = catalogItems.length;
     </p>
 
     <ol class="gt-tool-list" data-tool-grid>
-      {catalogItems.map((item: SearchItem, i: number) => {
+      {catalogItems.map((item: SearchCatalogItem, i: number) => {
         const searchText = [
-          item.title,
+          item.search,
           item.kind,
           item.kindLabel,
           item.slug,
-          item.categorySlug,
-          item.category,
           item.detail,
           item.meta,
+          item.badge,
+          item.categorySlug,
           ...(item.tags ?? []),
         ].join(' ').toLowerCase();
         const tone = item.kind !== 'tool' ? 'neutral' : (item.score ?? 0) >= 8 ? 'positive' : (item.score ?? 0) >= 6.5 ? 'neutral' : 'negative';
@@ -302,7 +118,7 @@ const totalItems = catalogItems.length;
               href={item.href}
               class="gt-tool-link"
               data-search-result
-              data-result-type={item.kind}
+              data-result-type={item.kind === 'compare' ? 'comparison' : item.kind}
               data-result-title={item.title}
               data-result-url={item.href}
               data-tool-slug={item.kind === 'tool' ? item.slug : ''}

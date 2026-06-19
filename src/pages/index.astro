@@ -1260,7 +1260,7 @@ function newsDateFmt(iso: string): string {
           return data
             .map((item) => ({ item, score: scoreSearchItem(item, qTerms, query, searchOptions) }))
             .filter(({ item, score }) => {
-              if (!qTerms.length) return item.kind === 'Tool';
+              if (!qTerms.length) return item.kind === 'tool';
               return searchItemMatches(item, qTerms, score, searchOptions);
             })
             .sort((a, b) => b.score - a.score || normalizeSearchText(a.item.title).localeCompare(normalizeSearchText(b.item.title)))
@@ -1329,7 +1329,7 @@ function newsDateFmt(iso: string): string {
                 ${second ? `<img src="${escape(second)}" alt="" loading="lazy" decoding="async" />` : ''}
               </span>`;
             }
-            return `<span class="gt-search-result-kind">${escape(m.kind || '')}</span>`;
+            return `<span class="gt-search-result-kind">${escape(m.kindLabel || m.kind || '')}</span>`;
           }
           results.innerHTML = matches.map((m, i) => `
             <a class="gt-search-result" href="${escape(m.href)}" role="option" id="gt-search-result-${i}" tabindex="-1" data-row-query="${escape(input.value)}" data-result-type="${escape(m.kind || '')}" data-result-title="${escape(m.title)}" data-result-url="${escape(m.href)}">

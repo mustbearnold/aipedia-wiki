@@ -45,6 +45,23 @@ test('check-smart routes API pages through API verification', () => {
   assert.ok(plan.commands.includes('npm run build:fast'));
 });
 
+test('check-smart routes generated model surfaces through generated model audit', () => {
+  const modelPlan = planForPaths(['src/lib/content-models/tool-page-model.ts']);
+  const searchPlan = planForPaths(['src/lib/search-catalog.ts']);
+  const auditPlan = planForPaths(['scripts/audit-generated-models.mjs']);
+
+  assert.deepEqual(modelPlan.categories, ['runtime', 'tooling']);
+  assert.deepEqual(searchPlan.categories, ['runtime', 'tooling']);
+  assert.deepEqual(auditPlan.categories, ['tooling']);
+
+  for (const plan of [modelPlan, searchPlan, auditPlan]) {
+    assert.ok(plan.commands.includes('npm run audit:generated-models'));
+    assert.ok(plan.commands.includes('npm run test:scripts'));
+  }
+  assert.ok(modelPlan.commands.includes('npm run build:fast'));
+  assert.ok(searchPlan.commands.includes('npm run build:fast'));
+});
+
 test('operator surface contract names verification surfaces explicitly', () => {
   const surfaceIds = operatorSurfaces.surfaces.map((surface) => surface.id);
 
@@ -54,6 +71,7 @@ test('operator surface contract names verification surfaces explicitly', () => {
   assert.ok(surfaceIds.includes('runtime-layouts'));
   assert.ok(surfaceIds.includes('runtime-components'));
   assert.ok(surfaceIds.includes('runtime-styles'));
+  assert.ok(surfaceIds.includes('generated-models'));
   assert.ok(surfaceIds.includes('assets'));
   assert.ok(surfaceIds.includes('scripts'));
   assert.ok(surfaceIds.includes('config'));
