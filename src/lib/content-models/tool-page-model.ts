@@ -1,7 +1,15 @@
 import { categoryLabel, overallScore } from '../../utils/tool-metadata';
 import { dateishField, resolvePageSource, type ResolvedPageSource } from '../provenance';
+import {
+  buildEvidenceRailModel,
+  highestEvidenceVolatility,
+  isEvidenceSourceStale,
+  oldestEvidenceDate,
+  type EvidenceConfidence,
+  type EvidenceRailModel,
+} from './evidence-rail';
 
-type Confidence = 'high' | 'medium' | 'low';
+type Confidence = EvidenceConfidence;
 
 type UnknownRecord = Record<string, unknown>;
 
@@ -84,6 +92,7 @@ export interface ToolPageModel {
   facts: ToolFactModel[];
   pricing: PriceHistoryModel[];
   sources: ResolvedPageSource[];
+  evidence: EvidenceRailModel;
   cta: {
     label: string;
     href?: string;
@@ -144,49 +153,7 @@ export function toFactListFacts(facts: ToolFactModel[]): ToolFactListItem[] {
     source: fact.source?.label,
   }));
 }
-function sourceDate(source: ResolvedPageSource): string | undefined {
-  return source.verified_at ?? source.last_checked;
-}
 
-function staleLimitDays(volatility: string | undefined): number {
-  if (volatility === 'high') return 30;
-  if (volatility === 'low') return 180;
-  return 90;
-}
-
-function isPastDate(value: string | undefined): boolean {
-  if (!value) return false;
-  const date = new Date(value);
-  if (Number.isNaN(date.getTime())) return false;
-  return date.getTime() < Date.now();
-}
-
-function isStaleSource(source: ResolvedPageSource): boolean {
-  if (isPastDate(source.next_review_at)) return true;
-  const checked = sourceDate(source);
-  if (!checked) return false;
-  const date = new Date(checked);
-  if (Number.isNaN(date.getTime())) return false;
-  const ageDays = Math.floor((Date.now() - date.getTime()) / 86400000);
-  return ageDays > staleLimitDays(source.volatility);
-}
-
-function olderDate(left: string | undefined, right: string | undefined): string | undefined {
-  if (!left) return right;
-  if (!right) return left;
-  const leftTime = new Date(left).getTime();
-  const rightTime = new Date(right).getTime();
-  if (Number.isNaN(leftTime)) return right;
-  if (Number.isNaN(rightTime)) return left;
-  return rightTime < leftTime ? right : left;
-}
-
-function higherVolatility(left: string | undefined, right: string | undefined): string | undefined {
-  const rank: Record<string, number> = { low: 1, medium: 2, high: 3 };
-  if (!left) return right;
-  if (!right) return left;
-  return (rank[right] ?? 0) > (rank[left] ?? 0) ? right : left;
-}
 
 function mergeSource(sources: Map<string, ResolvedPageSource>, source: ResolvedPageSource | undefined): void {
   if (!source?.url) return;
@@ -197,10 +164,10 @@ function mergeSource(sources: Map<string, ResolvedPageSource>, source: ResolvedP
     return;
   }
   existing.used_by = Array.from(new Set([...existing.used_by, ...source.used_by]));
-  existing.verified_at = olderDate(existing.verified_at, source.verified_at);
-  existing.last_checked = olderDate(existing.last_checked, source.last_checked);
-  existing.next_review_at = olderDate(existing.next_review_at, source.next_review_at);
-  existing.volatility = higherVolatility(existing.volatility, source.volatility);
+  existing.verified_at = oldestEvidenceDate(existing.verified_at, source.verified_at);
+  existing.last_checked = oldestEvidenceDate(existing.last_checked, source.last_checked);
+  existing.next_review_at = oldestEvidenceDate(existing.next_review_at, source.next_review_at);
+  existing.volatility = highestEvidenceVolatility(existing.volatility, source.volatility);
 }
 
 function factModels(factsBlock: unknown, diagnostics: ModelDiagnostic[], sources: Map<string, ResolvedPageSource>): ToolFactModel[] {
@@ -281,7 +248,7 @@ export function buildToolPageModel(frontmatter: UnknownRecord): ToolPageModel {
   const affiliateState = stringField(affiliate.application_status) ?? (affiliateUrl ? 'approved' : 'none');
   const sourceList = Array.from(sources.values());
   for (const source of sourceList) {
-    if (isStaleSource(source)) {
+    if (isEvidenceSourceStale(source)) {
       diagnostics.push({
         severity: 'warning',
         code: 'stale_source',
@@ -311,7 +278,7 @@ export function buildToolPageModel(frontmatter: UnknownRecord): ToolPageModel {
       last_updated: dateishField(frontmatter.last_updated) ?? '',
       last_verified: dateishField(frontmatter.last_verified),
       update_frequency: stringField(frontmatter.update_frequency),
-      has_stale_claims: diagnostics.some((issue) => issue.code === 'unknown_source_id') || sourceList.some(isStaleSource),
+      has_stale_claims: diagnostics.some((issue) => issue.code === 'unknown_source_id') || sourceList.some(isEvidenceSourceStale),
     },
     decision: {
       verdict: stringField(frontmatter.quick_answer) ?? stringField(frontmatter.tagline) ?? '',
@@ -326,6 +293,12 @@ export function buildToolPageModel(frontmatter: UnknownRecord): ToolPageModel {
     facts,
     pricing,
     sources: sourceList,
+    evidence: buildEvidenceRailModel({
+      sources: sourceList,
+      facts,
+      verifiedAt: dateishField(frontmatter.last_verified) ?? dateishField(frontmatter.last_updated),
+      confidence: confidenceFromScore(overall),
+    }),
     cta: {
       label: stringField(frontmatter.primary_cta_label) ?? 'Visit tool',
       href: affiliateUrl ?? canonicalUrl,

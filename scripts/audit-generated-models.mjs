@@ -22,7 +22,9 @@ const PROJECT_DIR = resolve(valueFor('--project-dir') || valueFor('--root') || S
 const JSON_MODE = args.includes('--json');
 const HELP_MODE = args.includes('--help') || args.includes('-h');
 const LIMIT = Number(valueFor('--limit') || 0);
-const REQUIRED_SEARCH_FIELDS = ['kind', 'kindLabel', 'slug', 'title', 'href', 'detail', 'meta', 'badge', 'priority', 'search'];
+const REQUIRED_SEARCH_FIELDS = ['kind', 'kindLabel', 'slug', 'title', 'href', 'detail', 'meta', 'badge', 'priority', 'search', 'buyerFit', 'action', 'evidence'];
+const REQUIRED_SEARCH_ACTION_FIELDS = ['label', 'href'];
+const REQUIRED_SEARCH_EVIDENCE_FIELDS = ['sourceCount', 'evidenceState', 'freshnessState', 'confidence'];
 const REQUIRED_TIER1_DECISION_FIELDS = [
   { field: 'quick_answer', modelPath: 'decision.verdict' },
   { field: 'best_for', modelPath: 'decision.buy_if' },
@@ -67,9 +69,13 @@ function readJson(path, fallback) {
   return JSON.parse(readFileSync(path, 'utf8'));
 }
 
-function readRegistryIds() {
+function readRegistrySources() {
   const registry = readJson(join(PROJECT_DIR, 'src/data/source-registry.json'), { sources: [] });
-  return new Set(Array.isArray(registry.sources) ? registry.sources.map((source) => source.id).filter(Boolean) : []);
+  return Array.isArray(registry.sources) ? registry.sources.filter(isRecord) : [];
+}
+
+function readRegistryIds(registrySources) {
+  return new Set(registrySources.map((source) => source.id).filter(Boolean));
 }
 
 function readTier1Slugs() {
@@ -136,20 +142,56 @@ function stringField(value) {
   return trimmed ? trimmed : undefined;
 }
 
+function comparableField(value) {
+  return stringField(value)?.toLowerCase().replace(/\s+/g, ' ');
+}
+
+function matchingRegistrySource(registrySources, sourceLabel, sourceUrl) {
+  const comparableUrl = comparableField(sourceUrl);
+  const comparableLabel = comparableField(sourceLabel);
+  return registrySources.find((source) => (
+    (comparableUrl && comparableField(source.url) === comparableUrl) ||
+    (comparableLabel && comparableField(source.label) === comparableLabel)
+  ));
+}
+
+function sourceCarrierUse(path) {
+  return path.split('.').includes('evidence') ? 'evidence' : 'claim';
+}
+
+function recommendedRegistryAction(registrySources, sourceLabel, sourceUrl, path) {
+  if (sourceCarrierUse(path) === 'evidence') return { action: 'keep_evidence_only' };
+  const registered = matchingRegistrySource(registrySources, sourceLabel, sourceUrl);
+  if (registered) return { action: 'reuse_existing_source_id', source_id: stringField(registered.id) };
+  return { action: 'add_new_source_id' };
+}
+
+function inlineOnlyQueueEntry(registrySources, slug, filePath, path, sourceLabel, sourceUrl) {
+  const recommendation = recommendedRegistryAction(registrySources, sourceLabel, sourceUrl, path);
+  return {
+    slug,
+    content_path: relative(filePath),
+    source_label: sourceLabel,
+    source_url: sourceUrl,
+    claim_path: path || 'frontmatter',
+    fact_path: path || 'frontmatter',
+    recommended_registry_action: recommendation.action,
+    recommended_source_id: recommendation.source_id,
+    verification_command: 'npm run audit:generated-models -- --json',
+  };
+}
 
 function relative(path) {
   return pathRelative(PROJECT_DIR, path).replace(/\\/g, '/');
 }
 
-
 function isActiveToolStatus(status) {
   return !INACTIVE_TOOL_STATUSES.has(String(status ?? 'active'));
 }
 
-
-function collectSourceFindings(value, registryIds, slug, filePath, findings, path = '') {
+function collectSourceFindings(value, registryIds, registrySources, slug, filePath, findings, path = '') {
   if (Array.isArray(value)) {
-    value.forEach((item, index) => collectSourceFindings(item, registryIds, slug, filePath, findings, `${path}.${index}`.replace(/^\./, '')));
+    value.forEach((item, index) => collectSourceFindings(item, registryIds, registrySources, slug, filePath, findings, `${path}.${index}`.replace(/^\./, '')));
     return;
   }
 
@@ -163,27 +205,46 @@ function collectSourceFindings(value, registryIds, slug, filePath, findings, pat
     findings.unknown.push({ slug, path: relative(filePath), source_id: sourceId, field: `${path}.source_id`.replace(/^\./, '') });
   } else if (!sourceId && sourceUrl && sourceLabel) {
     findings.inlineOnlyPaths.add(relative(filePath));
+    findings.inlineOnlyQueue.push(inlineOnlyQueueEntry(registrySources, slug, filePath, path, sourceLabel, sourceUrl));
   }
 
   for (const [key, child] of Object.entries(value)) {
-    collectSourceFindings(child, registryIds, slug, filePath, findings, `${path}.${key}`.replace(/^\./, ''));
+    collectSourceFindings(child, registryIds, registrySources, slug, filePath, findings, `${path}.${key}`.replace(/^\./, ''));
   }
 }
-
 
 function fieldIsMissing(item, field) {
   if (!(field in item)) return true;
   const value = item[field];
   if (field === 'priority') return typeof value !== 'number' || !Number.isFinite(value);
+  if (field === 'sourceCount') return typeof value !== 'number' || !Number.isFinite(value);
   if (field === 'badge') return typeof value !== 'string';
   if (typeof value === 'string') return value.trim().length === 0;
   return value == null;
 }
 
 function validateSearchCatalogItem(item, slug, filePath) {
-  return REQUIRED_SEARCH_FIELDS
+  const missing = REQUIRED_SEARCH_FIELDS
     .filter((field) => fieldIsMissing(item, field))
     .map((field) => ({ slug, path: relative(filePath), field }));
+
+  if (!isRecord(item.action)) {
+    if (!missing.some((issue) => issue.field === 'action')) missing.push({ slug, path: relative(filePath), field: 'action' });
+  } else {
+    for (const field of REQUIRED_SEARCH_ACTION_FIELDS) {
+      if (fieldIsMissing(item.action, field)) missing.push({ slug, path: relative(filePath), field: `action.${field}` });
+    }
+  }
+
+  if (!isRecord(item.evidence)) {
+    if (!missing.some((issue) => issue.field === 'evidence')) missing.push({ slug, path: relative(filePath), field: 'evidence' });
+  } else {
+    for (const field of REQUIRED_SEARCH_EVIDENCE_FIELDS) {
+      if (fieldIsMissing(item.evidence, field)) missing.push({ slug, path: relative(filePath), field: `evidence.${field}` });
+    }
+  }
+
+  return missing;
 }
 
 function validateTier1DecisionModel(model, slug, filePath) {
@@ -197,13 +258,15 @@ function validateTier1DecisionModel(model, slug, filePath) {
 }
 
 async function buildReport() {
-  const registryIds = readRegistryIds();
+  const registrySources = readRegistrySources();
+  const registryIds = readRegistryIds(registrySources);
   const tier1Slugs = readTier1Slugs();
   const { buildToolPageModel, buildSearchCatalog } = await loadProjectModelModules();
   const files = markdownFiles(join(PROJECT_DIR, 'src/content/tools')).slice(0, LIMIT > 0 ? LIMIT : undefined);
   const findings = {
     unknown: [],
     inlineOnlyPaths: new Set(),
+    inlineOnlyQueue: [],
   };
   const missingDecision = [];
   const missingSearchFields = [];
@@ -212,7 +275,7 @@ async function buildReport() {
     const data = parseFrontmatter(readFileSync(file, 'utf8'));
     const slug = stringField(data.slug) ?? file.split(/[\\/]/).pop().replace(/\.md$/, '');
     const model = buildToolPageModel(data);
-    collectSourceFindings(data, registryIds, slug, file, findings);
+    collectSourceFindings(data, registryIds, registrySources, slug, file, findings);
 
     if (tier1Slugs.has(slug)) {
       missingDecision.push(...validateTier1DecisionModel(model, slug, file));
@@ -238,6 +301,8 @@ async function buildReport() {
     slug: path.split('/').pop().replace(/\.md$/, ''),
     path,
   }));
+  const inlineOnlyQueue = findings.inlineOnlyQueue
+    .sort((a, b) => a.content_path.localeCompare(b.content_path) || a.claim_path.localeCompare(b.claim_path));
   const ok = findings.unknown.length === 0 && missingDecision.length === 0 && missingSearchFields.length === 0;
 
   return {
@@ -249,6 +314,7 @@ async function buildReport() {
     provenance: {
       unknown_source_ids: findings.unknown,
       inline_only_sources: inlineOnly,
+      inline_only_queue: inlineOnlyQueue,
     },
     decision: {
       required_tier: 'tier1',
@@ -279,6 +345,7 @@ else {
   console.log(`[audit-generated-models] ${report.totals.tools_scanned} tool model(s) checked.`);
   console.log(`[audit-generated-models] unknown source IDs: ${report.provenance.unknown_source_ids.length}`);
   console.log(`[audit-generated-models] inline-only sources: ${report.provenance.inline_only_sources.length}`);
+  console.log(`[audit-generated-models] inline-only migration queue: ${report.provenance.inline_only_queue.length}`);
   console.log(`[audit-generated-models] missing Tier-1 decision fields: ${report.decision.missing_fields.length}`);
   console.log(`[audit-generated-models] missing search catalog fields: ${report.search_catalog.missing_fields.length}`);
 }

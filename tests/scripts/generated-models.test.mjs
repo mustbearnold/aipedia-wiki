@@ -157,6 +157,10 @@ test('generated model audit supports JSON mode', () => {
   assert.equal(report.mode, 'audit');
   assert.ok(report.totals.tools_scanned >= 1);
   assert.ok(Array.isArray(report.provenance.unknown_source_ids));
+  assert.ok(Array.isArray(report.provenance.inline_only_queue));
+  for (const field of ['buyerFit', 'action', 'evidence']) {
+    assert.ok(report.search_catalog.required_fields.includes(field), `missing required search field ${field}`);
+  }
   for (const source of report.provenance.inline_only_sources) {
     assert.match(source.path, /^src\/content\/tools\//);
   }
@@ -196,7 +200,15 @@ test('generated model audit fails missing required search catalog fields', () =>
   }
 });
 
-test('generated model audit keeps inline-only sources warning-only', () => {
+test('generated model audit validates Phase 3 search card fields', () => {
+  const source = readSource('scripts/audit-generated-models.mjs');
+  assert.match(source, /REQUIRED_SEARCH_ACTION_FIELDS/);
+  assert.match(source, /REQUIRED_SEARCH_EVIDENCE_FIELDS/);
+  assert.match(source, /action\.\$\{field\}/);
+  assert.match(source, /evidence\.\$\{field\}/);
+});
+
+test('generated model audit keeps inline-only sources warning-only with migration queue actions', () => {
   const projectDir = writeFixtureProject(VALID_TOOL_FRONTMATTER.replace(/    source_id: alpha-docs\n/, ''));
 
   try {
@@ -208,6 +220,57 @@ test('generated model audit keeps inline-only sources warning-only', () => {
     assert.equal(report.ok, true);
     assert.equal(report.status, 'pass');
     assert.ok(report.provenance.inline_only_sources.some((issue) => issue.slug === 'alpha'));
+    const queueItem = report.provenance.inline_only_queue.find((issue) => issue.slug === 'alpha' && issue.claim_path === 'facts.pricing_anchor');
+    assert.ok(queueItem);
+    assert.equal(queueItem.content_path, 'src/content/tools/alpha.md');
+    assert.equal(queueItem.fact_path, 'facts.pricing_anchor');
+    assert.equal(queueItem.source_label, 'Alpha docs');
+    assert.equal(queueItem.source_url, 'https://example.com/alpha');
+    assert.equal(queueItem.recommended_registry_action, 'reuse_existing_source_id');
+    assert.equal(queueItem.recommended_source_id, 'alpha-docs');
+    assert.equal(queueItem.verification_command, 'npm run audit:generated-models -- --json');
+  } finally {
+    rmSync(projectDir, { recursive: true, force: true });
+  }
+});
+
+test('generated model audit recommends adding new source ids for unmatched inline claims', () => {
+  const projectDir = writeFixtureProject(VALID_TOOL_FRONTMATTER
+    .replace(/    source_id: alpha-docs\n/, '')
+    .replace('    source: "https://example.com/alpha"', '    source: "https://example.com/beta"')
+    .replace('    source_label: "Alpha docs"', '    source_label: "Beta docs"'));
+
+  try {
+    const result = runGeneratedModelAudit('--json', `--project-dir=${projectDir}`);
+    assert.equal(result.status, 0, result.stdout);
+    assert.equal(result.stderr, '');
+
+    const report = JSON.parse(result.stdout);
+    const queueItem = report.provenance.inline_only_queue.find((issue) => issue.slug === 'alpha' && issue.claim_path === 'facts.pricing_anchor');
+    assert.ok(queueItem);
+    assert.equal(queueItem.recommended_registry_action, 'add_new_source_id');
+    assert.equal(queueItem.recommended_source_id, undefined);
+  } finally {
+    rmSync(projectDir, { recursive: true, force: true });
+  }
+});
+
+test('generated model audit can keep evidence-only source carriers out of the registry migration path', () => {
+  const projectDir = writeFixtureProject(`${VALID_TOOL_FRONTMATTER}
+evidence:
+  - label: "Evidence-only memo"
+    url: "https://example.com/evidence"
+`);
+
+  try {
+    const result = runGeneratedModelAudit('--json', `--project-dir=${projectDir}`);
+    assert.equal(result.status, 0, result.stdout);
+    assert.equal(result.stderr, '');
+
+    const report = JSON.parse(result.stdout);
+    const queueItem = report.provenance.inline_only_queue.find((issue) => issue.claim_path === 'evidence.0');
+    assert.ok(queueItem);
+    assert.equal(queueItem.recommended_registry_action, 'keep_evidence_only');
   } finally {
     rmSync(projectDir, { recursive: true, force: true });
   }

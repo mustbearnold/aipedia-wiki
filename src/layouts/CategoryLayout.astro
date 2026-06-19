@@ -20,6 +20,10 @@ import ShareButtons from '../components/ShareButtons.astro';
 import FeedbackForm from '../components/FeedbackForm.astro';
 import CommercialCTA from '../components/CommercialCTA.astro';
 import BodyEnhancements from '../components/godtier/BodyEnhancements.astro';
+import EvidenceRail from '../components/decision/EvidenceRail.astro';
+import { buildEvidenceRailModel } from '../lib/content-models/evidence-rail';
+import { normalizeDecisionPick, type DecisionPick } from '../lib/content-models/decision-pick';
+import { resolvePageSource, type ResolvedPageSource } from '../lib/provenance';
 
 interface ToolData {
   slug: string;
@@ -54,9 +58,10 @@ interface Props {
   tools: ToolData[];
   lastVerified?: string;
   configuredTopPicks?: CategoryTopPicks;
+  decisionPicks?: unknown[];
 }
 
-const { title, seoTitle, description = '', slug, tools, lastVerified, configuredTopPicks } = Astro.props;
+const { title, seoTitle, description = '', slug, tools, lastVerified, configuredTopPicks, decisionPicks = [] } = Astro.props;
 const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
 
 function overallScore(t: ToolData): number {
@@ -65,6 +70,16 @@ function overallScore(t: ToolData): number {
 }
 function categoryMatchRank(t: ToolData): number {
   return t.category_match_type === 'secondary' ? 0 : 1;
+}
+
+function decisionSourceForRef(sourceRef: string): ResolvedPageSource {
+  return resolvePageSource({ source_id: sourceRef }, 'decision') ?? {
+    source_id: sourceRef,
+    label: sourceRef,
+    url: '',
+    used_by: ['decision'],
+    state: 'unknown_id',
+  };
 }
 
 function bandFor(score: number): string {
@@ -101,13 +116,31 @@ const configuredPickCards = configuredTopPicks
         usedConfiguredPickSlugs.add(tool.slug);
         return {
           label: typeof raw === 'object' && raw.label ? raw.label : label,
-          reason: typeof raw === 'object' && raw.reason ? raw.reason : undefined,
           placement,
           tool,
         };
       })
-      .filter(Boolean) as Array<{ label: string; reason?: string; placement: string; tool: ToolData }>
+      .filter(Boolean) as Array<{ label: string; placement: string; tool: ToolData }>
   : [];
+
+const buyerPathPicks = decisionPicks
+  .map(normalizeDecisionPick)
+  .filter((pick): pick is DecisionPick => Boolean(pick))
+  .map((pick) => {
+    const sources = pick.source_refs.map(decisionSourceForRef);
+    return {
+      ...pick,
+      toolData: toolBySlug.get(pick.tool),
+      sources,
+      evidence: buildEvidenceRailModel({ sources, decisions: [pick] }),
+    };
+  });
+const buyerPathEvidence = buyerPathPicks.length > 0
+  ? buildEvidenceRailModel({
+      sources: buyerPathPicks.flatMap((pick) => pick.sources),
+      decisions: buyerPathPicks,
+    })
+  : undefined;
 
 const topPick = configuredPickCards[0]?.tool ?? sorted[0];
 const topPickScore = topPick ? overallScore(topPick) : 0;
@@ -177,7 +210,7 @@ const rankLabel = sorted.length > 0 ? `${sorted.length} tools verified` : undefi
         affiliate={Boolean(topPick.affiliate?.link)}
         eyebrow={topPickCard?.label}
         title={topPick.title}
-        description={topPickCard?.reason}
+        description={topPick.tagline}
       >
         <CommercialCTA
           slot="primary-cta"
@@ -215,7 +248,7 @@ const rankLabel = sorted.length > 0 ? `${sorted.length} tools verified` : undefi
 
     {tierPickCards.length > 0 && (
       <section class="gt-category-tiers" aria-labelledby="gt-category-tiers-h">
-        <h2 id="gt-category-tiers-h" class="gt-section-h">Best by buyer path</h2>
+        <h2 id="gt-category-tiers-h" class="gt-section-h">Fast CTA picks</h2>
         <div class="gt-category-tier-grid">
           {tierPickCards.map((pick) => {
             const isAffiliate = Boolean(pick.tool.affiliate?.link);
@@ -223,7 +256,6 @@ const rankLabel = sorted.length > 0 ? `${sorted.length} tools verified` : undefi
               <article class="gt-category-tier-card">
                 <p class="gt-category-tier-kicker">{pick.label}</p>
                 <strong class="gt-category-tier-title">{pick.tool.title}</strong>
-                {pick.reason && <p class="gt-category-tier-reason">{pick.reason}</p>}
                 <CommercialCTA
                   toolName={pick.tool.title}
                   toolSlug={pick.tool.slug}
@@ -242,6 +274,98 @@ const rankLabel = sorted.length > 0 ? `${sorted.length} tools verified` : undefi
                   categoryCtaMarker
                   arrow="→"
                 />
+              </article>
+            );
+          })}
+        </div>
+      </section>
+    )}
+
+    {buyerPathPicks.length > 0 && (
+      <section class="gt-category-buyer-path" aria-labelledby="gt-category-buyer-path-h">
+        <div class="gt-category-buyer-path-head">
+          <div>
+            <p class="gt-category-buyer-path-kicker">Buyer path</p>
+            <h2 id="gt-category-buyer-path-h" class="gt-section-h">Source-backed shortlist</h2>
+          </div>
+          {buyerPathEvidence && (
+            <EvidenceRail evidence={buyerPathEvidence} variant="compact" label={`${title} buyer-path evidence`} />
+          )}
+        </div>
+        <div class="gt-category-buyer-path-grid">
+          {buyerPathPicks.map((pick) => {
+            const toolTitle = pick.toolData?.title ?? pick.tool;
+            return (
+              <article class="gt-category-buyer-card">
+                <div class="gt-category-buyer-card-head">
+                  <p class="gt-category-buyer-label">{pick.label}</p>
+                  <a class="gt-category-buyer-title" href={`/tools/${pick.tool}/`}>{toolTitle}</a>
+                </div>
+                <p class="gt-category-buyer-reason">{pick.reason}</p>
+                <dl class="gt-category-buyer-meta">
+                  {pick.plan && (
+                    <div>
+                      <dt>Plan</dt>
+                      <dd>{pick.plan}</dd>
+                    </div>
+                  )}
+                  <div>
+                    <dt>Confidence</dt>
+                    <dd>{pick.confidence}</dd>
+                  </div>
+                  <div>
+                    <dt>Verified</dt>
+                    <dd>{pick.verified_at}</dd>
+                  </div>
+                </dl>
+                <EvidenceRail evidence={pick.evidence} variant="inline" label={`${toolTitle} pick evidence`} />
+                {pick.sources.length > 0 && (
+                  <ul class="gt-category-buyer-sources" aria-label={`${toolTitle} source references`}>
+                    {pick.sources.map((source) => (
+                      <li>
+                        {source.url
+                          ? <a href={source.url} target="_blank" rel="noopener">{source.label}</a>
+                          : <span>{source.label}</span>}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                <div class="gt-category-buyer-actions">
+                  <a
+                    href={`/tools/${pick.tool}/`}
+                    class="gt-btn gt-btn-secondary gt-category-buyer-action"
+                    data-analytics-event="internal_cta_click"
+                    data-analytics-source-module="category_buyer_path"
+                    data-analytics-destination-type="tool"
+                    data-analytics-destination-slug={`tools/${pick.tool}`}
+                    data-analytics-tool-slug={pick.tool}
+                    data-analytics-category-slug={slug}
+                    data-analytics-position="middle"
+                    data-analytics-label={`Read ${toolTitle} review`}
+                  >Read review</a>
+                  <a
+                    href={`/compare/build/?tools=${pick.tool}`}
+                    class="gt-btn gt-btn-secondary gt-category-buyer-action"
+                    data-analytics-event="internal_cta_click"
+                    data-analytics-source-module="category_buyer_path"
+                    data-analytics-destination-type="comparison"
+                    data-analytics-destination-slug="compare/build"
+                    data-analytics-tool-slug={pick.tool}
+                    data-analytics-category-slug={slug}
+                    data-analytics-position="middle"
+                    data-analytics-label={`Build comparison from ${toolTitle}`}
+                  >Build comparison</a>
+                  <button
+                    type="button"
+                    class="gt-btn gt-btn-secondary gt-category-buyer-action"
+                    data-compare-add={pick.tool}
+                    data-compare-label-default="Add to compare"
+                    data-compare-source-module="category_buyer_path"
+                    data-compare-position="middle"
+                    aria-pressed="false"
+                    aria-label={`Add ${toolTitle} to compare`}
+                  ><span data-compare-label>Add to compare</span></button>
+                </div>
               </article>
             );
           })}
@@ -332,6 +456,127 @@ const rankLabel = sorted.length > 0 ? `${sorted.length} tools verified` : undefi
   </div>
 
   <style>
+    .gt-category-buyer-path {
+      margin-bottom: 40px;
+    }
+    .gt-category-buyer-path-head {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .gt-category-buyer-path-kicker {
+      margin: 0 0 4px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gt-subtle);
+    }
+    .gt-category-buyer-path-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    .gt-category-buyer-card {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding: 16px;
+      border: 1px solid var(--gt-line);
+      border-left: 3px solid var(--gt-accent);
+      border-radius: var(--gt-radius);
+      background: var(--gt-surface);
+    }
+    .gt-category-buyer-card-head {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .gt-category-buyer-label {
+      margin: 0;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gt-subtle);
+    }
+    .gt-category-buyer-title {
+      color: var(--gt-fg);
+      font-size: 18px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .gt-category-buyer-title:hover { color: var(--gt-accent); }
+    .gt-category-buyer-reason {
+      margin: 0;
+      color: var(--gt-fg);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+    .gt-category-buyer-meta {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+      margin: 0;
+    }
+    .gt-category-buyer-meta div {
+      padding-top: 8px;
+      border-top: 1px solid var(--gt-line);
+    }
+    .gt-category-buyer-meta dt {
+      margin: 0 0 2px;
+      color: var(--gt-subtle);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .gt-category-buyer-meta dd {
+      margin: 0;
+      color: var(--gt-fg);
+      font-size: 13px;
+      line-height: 1.45;
+      text-transform: none;
+    }
+    .gt-category-buyer-sources {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+    .gt-category-buyer-sources li {
+      font-size: 12px;
+      color: var(--gt-subtle);
+    }
+    .gt-category-buyer-sources a {
+      color: var(--gt-accent);
+      text-decoration: none;
+      border-bottom: 1px solid currentColor;
+    }
+    .gt-category-buyer-actions {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+    .gt-category-buyer-action {
+      width: 100%;
+      min-height: 44px;
+      padding: 8px 14px;
+      font-size: 13px;
+    }
+    @media (min-width: 700px) {
+      .gt-category-buyer-path-head {
+        grid-template-columns: minmax(0, 1fr) minmax(220px, 320px);
+        align-items: end;
+      }
+      .gt-category-buyer-path-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .gt-category-buyer-meta { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .gt-category-buyer-actions { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    }
+
     .gt-category-tiers { margin-bottom: 40px; }
     .gt-category-tier-grid {
       display: grid;
@@ -357,12 +602,6 @@ const rankLabel = sorted.length > 0 ? `${sorted.length} tools verified` : undefi
       color: var(--gt-subtle);
     }
     .gt-category-tier-title { font-size: 17px; font-weight: 700; }
-    .gt-category-tier-reason {
-      margin: 0;
-      color: var(--gt-muted);
-      font-size: 14px;
-      line-height: 1.55;
-    }
     .gt-category-tier-cta {
       margin-top: 4px;
       width: 100%;

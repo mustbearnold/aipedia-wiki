@@ -61,8 +61,14 @@ test('category pages preserve primary-category tools ahead of secondary matches'
   assert.match(routeSource, /category_match_type:\s*primaryMatch \? 'primary' : 'secondary'/);
   assert.match(layoutSource, /categoryMatchRank\(t: ToolData\)/);
   assert.match(layoutSource, /configuredPickCards/);
-  assert.match(layoutSource, /reason: typeof raw === 'object' && raw\.reason/);
-  assert.match(layoutSource, /gt-category-tier-reason/);
+  assert.doesNotMatch(layoutSource, /reason: typeof raw === 'object' && raw\.reason/);
+  assert.doesNotMatch(layoutSource, /gt-category-tier-reason/);
+  assert.match(routeSource, /decisionPicks=\{entry\.data\.decision_picks\}/);
+  assert.match(layoutSource, /normalizeDecisionPick/);
+  assert.match(layoutSource, /resolvePageSource\(\{ source_id: sourceRef \}, 'decision'\)/);
+  assert.match(layoutSource, /gt-category-buyer-path/);
+  assert.match(layoutSource, /<EvidenceRail evidence=\{pick\.evidence\}/);
+  assert.match(layoutSource, /href=\{`\/compare\/build\/\?tools=\$\{pick\.tool\}`\}/);
 
   const tools = loadTools();
   const aiDesignTools = tools

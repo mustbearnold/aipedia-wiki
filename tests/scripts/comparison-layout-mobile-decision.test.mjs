@@ -3,6 +3,7 @@ import { readFileSync } from 'node:fs';
 import { test } from 'node:test';
 
 const layout = readFileSync('src/layouts/ComparisonLayout.astro', 'utf8');
+const route = readFileSync('src/pages/compare/[slug].astro', 'utf8');
 const factsTable = readFileSync('src/components/comparison/ComparisonFactTable.astro', 'utf8');
 const decisionCard = readFileSync('src/components/godtier/DecisionCard.astro', 'utf8');
 
@@ -24,6 +25,19 @@ test('comparison decision hero has responsive styling hooks', () => {
   assert.match(decisionCard, /\.gt-card\b/, 'DecisionCard must style the decision hero');
   assert.match(decisionCard, /@media \(min-width: 600px\)/, 'DecisionCard must have a desktop responsive layout');
   assert.match(layout, /class="gt-compare-use-case"/, 'comparison page must render a winner-by-use-case block');
+});
+
+test('comparison pages expose evidence rails and decision-difference cues', () => {
+  assert.match(route, /buildToolPageModel/);
+  assert.match(route, /evidence: model\.evidence/);
+  assert.match(layout, /import EvidenceRail/);
+  assert.match(layout, /decisionCues\(t: ToolData\)/);
+  assert.match(layout, /Best for/);
+  assert.match(layout, /Avoid if/);
+  assert.match(layout, /Pricing posture/);
+  assert.match(layout, /<EvidenceRail evidence=\{t\.evidence\}/);
+  assert.match(layout, /const comparisonBuildHref = tools\.length > 0/);
+  assert.match(layout, /gt-compare-build-link/);
 });
 
 test('canonical comparison facts use mobile cards instead of a wide mobile table', () => {

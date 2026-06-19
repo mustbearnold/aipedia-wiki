@@ -22,6 +22,7 @@ import ScoreCard from '../components/godtier/ScoreCard.astro';
 import FactList from '../components/godtier/FactList.astro';
 import TrustPanel from '../components/godtier/TrustPanel.astro';
 import StickyCTA from '../components/godtier/StickyCTA.astro';
+import EvidenceRail from '../components/decision/EvidenceRail.astro';
 
 // Existing site components (preserve analytics + behavior)
 import ReadingProgress from '../components/ReadingProgress.astro';
@@ -146,6 +147,11 @@ const decisionItems = [
   { tone: 'positive' as const, label: 'Pick',    value: bestPlanGlance },
   ...(firstNotBestFor ? [{ tone: 'negative' as const, label: 'Skip if', value: firstNotBestFor }] : []),
 ];
+const decisionDetailItems = [
+  { label: 'Best alternative', value: model.decision.best_alternative },
+  { label: 'Watch out', value: model.decision.watch_out },
+  { label: 'Recent change', value: model.decision.recent_change },
+].filter((item): item is { label: string; value: string } => Boolean(item.value));
 
 const scoreAxes = [
   { label: 'Utility',   value: scores.utility ?? 0,   why: 'How much real work it can do for a competent operator, end to end.' },
@@ -268,6 +274,36 @@ const tocItems = (headings ?? [])
         items={decisionItems}
       />
     )}
+
+    <section class="gt-evidence-panel" aria-labelledby="gt-evidence-panel-h">
+      <div class="gt-evidence-panel-head">
+        <p class="gt-evidence-kicker">Evidence rail</p>
+        <h2 id="gt-evidence-panel-h">Why this recommendation is trusted</h2>
+      </div>
+      <EvidenceRail evidence={model.evidence} variant="full" label={`${toolTitle} evidence`} />
+      <a
+        href={`/compare/build/?tools=${toolSlug}`}
+        class="gt-btn gt-btn-secondary gt-evidence-compare-link"
+        data-analytics-event="internal_cta_click"
+        data-analytics-source-module="tool_evidence_panel"
+        data-analytics-destination-type="comparison"
+        data-analytics-destination-slug="compare/build"
+        data-analytics-tool-slug={toolSlug}
+        data-analytics-category-slug={catSlug}
+        data-analytics-position="top"
+        data-analytics-label={`Build comparison from ${toolTitle}`}
+      >Build comparison</a>
+      {decisionDetailItems.length > 0 && (
+        <dl class="gt-decision-details">
+          {decisionDetailItems.map((item) => (
+            <div class="gt-decision-detail">
+              <dt>{item.label}</dt>
+              <dd>{item.value}</dd>
+            </div>
+          ))}
+        </dl>
+      )}
+    </section>
 
     <ScoreCard
       overall={overall}
@@ -671,6 +707,68 @@ const tocItems = (headings ?? [])
       color: var(--gt-accent);
       border-left-color: var(--gt-accent);
       font-weight: 600;
+    }
+
+    .gt-evidence-panel {
+      margin: 0 0 32px;
+      padding: 18px;
+      border: 1px solid var(--gt-line);
+      border-radius: var(--gt-radius);
+      background: var(--gt-surface);
+    }
+    .gt-evidence-panel-head {
+      margin-bottom: 14px;
+    }
+    .gt-evidence-kicker {
+      margin: 0 0 4px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gt-subtle);
+    }
+    .gt-evidence-panel h2 {
+      margin: 0;
+      font-size: 19px;
+      line-height: 1.25;
+      color: var(--gt-fg);
+    }
+    .gt-evidence-compare-link {
+      width: 100%;
+      min-height: 44px;
+      margin-top: 12px;
+      padding: 8px 14px;
+      font-size: 13px;
+    }
+    @media (min-width: 700px) {
+      .gt-evidence-compare-link { width: auto; }
+    }
+    .gt-decision-details {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin: 14px 0 0;
+    }
+    .gt-decision-detail {
+      padding-top: 10px;
+      border-top: 1px solid var(--gt-line);
+    }
+    .gt-decision-detail dt {
+      margin: 0 0 3px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gt-subtle);
+    }
+    .gt-decision-detail dd {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.5;
+      color: var(--gt-fg);
+    }
+    @media (min-width: 700px) {
+      .gt-decision-details { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     }
 
     .gt-github { margin-bottom: 32px; }

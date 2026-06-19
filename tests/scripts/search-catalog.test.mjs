@@ -6,6 +6,7 @@ import { build as bundleModule } from 'esbuild';
 const source = readFileSync('src/lib/search-catalog.ts', 'utf8');
 const expectedKinds = ['tool', 'compare', 'guide', 'answer', 'workflow', 'trend', 'news', 'category', 'company'];
 let catalogModulePromise;
+let searchIndexModulePromise;
 
 async function loadSearchCatalog() {
   if (!catalogModulePromise) {
@@ -24,6 +25,22 @@ async function loadSearchCatalog() {
   return catalogModulePromise;
 }
 
+async function loadSearchIndex() {
+  if (!searchIndexModulePromise) {
+    searchIndexModulePromise = bundleModule({
+      entryPoints: ['src/lib/search-index.ts'],
+      bundle: true,
+      format: 'esm',
+      platform: 'node',
+      write: false,
+    }).then((bundled) => {
+      const code = bundled.outputFiles[0].text;
+      return import(`data:text/javascript;base64,${Buffer.from(code).toString('base64')}`);
+    });
+  }
+  return searchIndexModulePromise;
+}
+
 test('search catalog exports the canonical pure contract', () => {
   assert.match(source, /export type SearchKind\s*=/);
   assert.match(source, /export interface SearchCatalogItem/);
@@ -31,7 +48,7 @@ test('search catalog exports the canonical pure contract', () => {
   assert.match(source, /export function buildSearchCatalog\(/);
   assert.doesNotMatch(source, /astro:content|getCollection\(/, 'catalog module must stay pure and route-independent');
 
-  for (const field of ['kindLabel:', 'slug:', 'title:', 'href:', 'detail:', 'meta:', 'badge:', 'priority:', 'search:']) {
+  for (const field of ['kindLabel:', 'slug:', 'title:', 'href:', 'detail:', 'meta:', 'badge:', 'priority:', 'search:', 'buyerFit:', 'action:', 'evidence:']) {
     assert.ok(source.includes(field), `SearchCatalogItem should expose ${field}`);
   }
 });
@@ -116,7 +133,11 @@ test('buildSearchCatalog filters inactive tools and preserves buyer search terms
   assert.match(tool.search, /developer-tools/);
   assert.match(tool.search, /multi-file/);
 
-  for (const field of ['kind', 'kindLabel', 'slug', 'title', 'href', 'detail', 'meta', 'badge', 'priority', 'search']) {
+  assert.equal(tool.buyerFit, 'multi-file refactors');
+  assert.equal(tool.action.href, '/tools/cursor/');
+  assert.equal(tool.action.label, 'Review tool record');
+  assert.equal(tool.evidence.confidence, 'low');
+  for (const field of ['kind', 'kindLabel', 'slug', 'title', 'href', 'detail', 'meta', 'badge', 'priority', 'search', 'buyerFit', 'action', 'evidence']) {
     assert.notEqual(tool[field], undefined, `${field} should be present`);
   }
 });
@@ -141,7 +162,20 @@ test('buildSearchCatalog applies non-tool visibility and priority ordering rules
     }],
     categories: [{
       id: 'ai-coding',
-      data: { slug: 'ai-coding', title: 'AI Coding', description: 'Coding tools', tool_count: 12 },
+      data: {
+        slug: 'ai-coding',
+        title: 'AI Coding',
+        description: 'Coding tools',
+        tool_count: 12,
+        decision_picks: [{
+          tool: 'alpha-tool',
+          label: 'Best coding agent',
+          reason: 'Best fit for coding agent buyers.',
+          source_refs: ['github-copilot-plans'],
+          verified_at: '2026-06-15',
+          confidence: 'high',
+        }],
+      },
     }],
     guides: [
       { id: 'visible-guide', data: { slug: 'visible-guide', title: 'Visible Guide', description: 'Shown guide', tools_mentioned: ['alpha-tool'] } },
@@ -160,7 +194,11 @@ test('buildSearchCatalog applies non-tool visibility and priority ordering rules
   assert.equal(catalog.some((item) => item.slug === 'hidden-guide'), false);
   assert.ok(catalog.find((item) => item.kind === 'guide' && item.slug === 'visible-guide'));
   assert.ok(catalog.find((item) => item.kind === 'compare' && item.slug === 'alpha-vs-beta'));
-  assert.ok(catalog.find((item) => item.kind === 'category' && item.categorySlug === 'ai-coding'));
+  const category = catalog.find((item) => item.kind === 'category' && item.categorySlug === 'ai-coding');
+  assert.ok(category);
+  assert.equal(category.action.label, 'Open buyer shortlist');
+  assert.match(category.buyerFit, /coding agent buyers/);
+  assert.equal(category.evidence.evidenceState, 'registered');
   assert.ok(catalog.find((item) => item.kind === 'company' && item.slug === 'alpha-inc'));
 
   for (let index = 1; index < catalog.length; index += 1) {
@@ -170,5 +208,85 @@ test('buildSearchCatalog applies non-tool visibility and priority ordering rules
       previous.priority > current.priority || (previous.priority === current.priority && previous.title.localeCompare(current.title) <= 0),
       'catalog should sort by descending priority then title'
     );
+  }
+});
+
+test('category decision source refs surface unknown ids in search evidence', async () => {
+  const { buildSearchCatalog } = await loadSearchCatalog();
+  const catalog = buildSearchCatalog({
+    tools: [],
+    comparisons: [],
+    categories: [{
+      id: 'ai-coding',
+      data: {
+        slug: 'ai-coding',
+        title: 'AI Coding',
+        description: 'Coding agents',
+        decision_picks: [{
+          tool: 'cursor',
+          label: 'Best coding agent',
+          reason: 'Best fit for coding agent buyers.',
+          source_refs: ['missing-source-ref'],
+          verified_at: '2026-06-15',
+          confidence: 'high',
+        }],
+      },
+    }],
+    guides: [],
+    news: [],
+    workflows: [],
+    trends: [],
+    companies: [],
+    logos: {},
+  });
+
+  const category = catalog.find((item) => item.kind === 'category' && item.slug === 'ai-coding');
+  assert.ok(category);
+  assert.equal(category.evidence.evidenceState, 'unknown_id');
+  assert.equal(category.evidence.primaryLabel, 'missing-source-ref');
+});
+
+test('buyer intent queries resolve through the shared search scoring contract', async () => {
+  const { buildSearchCatalog } = await loadSearchCatalog();
+  const { scoreSearchItem, searchItemMatches, searchTerms } = await loadSearchIndex();
+  const catalog = buildSearchCatalog({
+    tools: [
+      {
+        id: 'cursor',
+        data: { type: 'tool', status: 'active', slug: 'cursor', title: 'Cursor', company: 'Anysphere', category: 'ai-coding', tagline: 'Agentic coding editor', best_for: ['coding agent workflows'], scores: { utility: 9, value: 8, moat: 8, longevity: 8 } },
+      },
+      {
+        id: 'ollama',
+        data: { type: 'tool', status: 'active', slug: 'ollama', title: 'Ollama', category: 'ai-infrastructure', tagline: 'Run local open models', best_for: ['local model testing'], scores: { utility: 8, value: 8, moat: 7, longevity: 8 } },
+      },
+    ],
+    comparisons: [{ id: 'claude-vs-cursor', data: { slug: 'claude-vs-cursor', title: 'Claude vs Cursor', tools: ['claude', 'cursor'], winner: 'cursor', meta_description: 'Claude vs Cursor for coding agents' } }],
+    categories: [
+      { id: 'ai-coding', data: { slug: 'ai-coding', title: 'AI Coding', description: 'Coding agents', tool_count: 10 } },
+      { id: 'ai-infrastructure', data: { slug: 'ai-infrastructure', title: 'AI Infrastructure', description: 'Local model and open model infrastructure', tool_count: 8 } },
+      { id: 'ai-automation', data: { slug: 'ai-automation', title: 'AI Automation', description: 'Marketing stack and automation stack workflows', tool_count: 12 } },
+    ],
+    guides: [],
+    news: [],
+    workflows: [],
+    trends: [],
+    companies: [],
+    logos: {},
+  });
+
+  for (const [query, slug] of [
+    ['coding agent', 'ai-coding'],
+    ['local model', 'ai-infrastructure'],
+    ['marketing stack', 'ai-automation'],
+    ['Claude vs Cursor', 'claude-vs-cursor'],
+    ['Anysphere', 'cursor'],
+  ]) {
+    const terms = searchTerms(query);
+    const normalized = terms.join(' ');
+    const matches = catalog
+      .map((item) => ({ item, score: scoreSearchItem(item, terms, normalized, { includeKindMatch: true }) }))
+      .filter(({ item, score }) => searchItemMatches(item, terms, score, { includeKindMatch: true }))
+      .sort((a, b) => b.score - a.score);
+    assert.ok(matches.slice(0, 3).some(({ item }) => item.slug === slug), `${query} should rank ${slug} in the top 3`);
   }
 });

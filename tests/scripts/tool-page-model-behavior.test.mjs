@@ -47,10 +47,17 @@ async function loadToolPageModel() {
     );
     writeTemp(
       fixture,
+      'src/lib/content-models/evidence-rail.ts',
+      readSource('src/lib/content-models/evidence-rail.ts')
+        .replace("from '../provenance'", "from '../provenance.ts'")
+    );
+    writeTemp(
+      fixture,
       'src/lib/content-models/tool-page-model.ts',
       readSource('src/lib/content-models/tool-page-model.ts')
         .replace("from '../../utils/tool-metadata'", "from '../../utils/tool-metadata.ts'")
         .replace("from '../provenance'", "from '../provenance.ts'")
+        .replace("from './evidence-rail'", "from './evidence-rail.ts'")
     );
 
     modulePromise = import(pathToFileURL(join(fixture, 'src/lib/content-models/tool-page-model.ts')).href);
@@ -129,6 +136,13 @@ test('ToolPageModel reports provenance states and dedupes source uses', async ()
     'pricing inline-only source should be reported'
   );
   assert.equal(model.freshness.has_stale_claims, true, 'stale source dates should mark the model freshness state');
+  assert.equal(model.evidence.sourceCount, 4);
+  assert.equal(model.evidence.primaryLabel, '7AI platform registry fixture');
+  assert.equal(model.evidence.evidenceState, 'unknown_id');
+  assert.equal(model.evidence.freshnessState, 'stale');
+  assert.equal(model.evidence.confidence, 'low');
+  assert.equal(model.evidence.verifiedAt, '2026-02-03');
+  assert.equal(model.evidence.volatility, 'high');
 
   const registeredFact = model.facts.find((fact) => fact.key === 'best_for');
   assert.equal(registeredFact.verified_at, '2026-02-04');
@@ -167,6 +181,9 @@ test('ToolPageModel keeps duplicate source freshness conservative', async () => 
     'later stale duplicate source claims should drive stale diagnostics'
   );
   assert.equal(model.freshness.has_stale_claims, true, 'later stale duplicate source claims should mark model freshness');
+  assert.equal(model.evidence.verifiedAt, '2020-01-01');
+  assert.equal(model.evidence.freshnessState, 'stale');
+  assert.equal(model.evidence.confidence, 'low');
 });
 
 test('ToolPageModel applies decision and CTA precedence from normalized fields', async () => {
@@ -229,4 +246,10 @@ test('ToolLayout adapts ToolPageModel facts and normalized page fields before re
   assert.match(layout, /const facts = toFactListFacts\(model\.facts\)/);
   assert.match(layout, /import \{ buildToolPageModel, toFactListFacts \}/);
   assert.match(layout, /<FactList facts=\{facts\}/);
+  assert.match(layout, /import EvidenceRail/);
+  assert.match(layout, /<EvidenceRail evidence=\{model\.evidence\}/);
+  assert.match(layout, /model\.decision\.best_alternative/);
+  assert.match(layout, /model\.decision\.watch_out/);
+  assert.match(layout, /model\.decision\.recent_change/);
+  assert.match(layout, /href=\{`\/compare\/build\/\?tools=\$\{toolSlug\}`\}/);
 });

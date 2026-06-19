@@ -16,6 +16,7 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/godtier/Hero.astro';
 import ToolLogo from '../components/ToolLogo.astro';
+import EvidenceRail from '../components/decision/EvidenceRail.astro';
 import logoManifest from '../data/logo-manifest.json';
 import { buildSearchCatalog, type SearchCatalogItem } from '../lib/search-catalog';
 
@@ -40,7 +41,7 @@ const catalogItems = buildSearchCatalog({
   logos: logoManifest as Record<string, string>,
 });
 
-const quickTerms = ['ChatGPT', 'Claude', 'Cursor', 'students', 'presentation', 'automation', 'free'];
+const quickTerms = ['coding agent', 'local model', 'marketing stack', 'Claude vs Cursor', 'ChatGPT', 'Claude', 'Cursor', 'OpenAI', 'Anthropic', 'Google'];
 const totalItems = catalogItems.length;
 ---
 
@@ -89,7 +90,7 @@ const totalItems = catalogItems.length;
       ))}
     </nav>
 
-    <p class="gt-search-count">
+    <p class="gt-search-count" aria-live="polite" aria-atomic="true">
       <strong data-visible-count>{totalItems}</strong> <span data-search-noun>results</span>
     </p>
 
@@ -100,10 +101,18 @@ const totalItems = catalogItems.length;
           item.kind,
           item.kindLabel,
           item.slug,
+          item.title,
           item.detail,
           item.meta,
           item.badge,
           item.categorySlug,
+          item.buyerFit,
+          item.avoidIf,
+          item.action.label,
+          item.sourceLabel,
+          item.evidence.evidenceState,
+          item.evidence.freshnessState,
+          item.evidence.confidence,
           ...(item.tags ?? []),
         ].join(' ').toLowerCase();
         const tone = item.kind !== 'tool' ? 'neutral' : (item.score ?? 0) >= 8 ? 'positive' : (item.score ?? 0) >= 6.5 ? 'neutral' : 'negative';
@@ -112,31 +121,43 @@ const totalItems = catalogItems.length;
             class={`gt-tool-row gt-tool-row-${tone}`}
             data-search-card
             data-result-kind={item.kind}
+            data-result-type={item.kind === 'compare' ? 'comparison' : item.kind}
+            data-search-title={item.title}
+            data-search-priority={item.priority}
             data-search-text={searchText}
           >
-            <a
-              href={item.href}
-              class="gt-tool-link"
-              data-search-result
-              data-result-type={item.kind === 'compare' ? 'comparison' : item.kind}
-              data-result-title={item.title}
-              data-result-url={item.href}
-              data-tool-slug={item.kind === 'tool' ? item.slug : ''}
-              data-category-slug={item.categorySlug ?? ''}
-            >
-              <span class="gt-tool-rank">{i + 1}</span>
-              {item.kind === 'tool'
-                ? <ToolLogo slug={item.slug} title={item.title} size={40} />
-                : <span class="gt-search-kind">{item.kindLabel}</span>}
-              <div class="gt-tool-main">
-                <strong class="gt-tool-title">{item.title}</strong>
-                {item.detail && <span class="gt-tool-tagline">{item.detail}</span>}
+            <article class="gt-tool-card" data-analytics-kind={item.kind} data-analytics-type={item.kind === 'compare' ? 'comparison' : item.kind}>
+              <a
+                href={item.href}
+                class="gt-tool-link"
+                data-search-result
+                data-result-kind={item.kind}
+                data-result-type={item.kind === 'compare' ? 'comparison' : item.kind}
+                data-result-title={item.title}
+                data-result-url={item.href}
+                data-tool-slug={item.kind === 'tool' ? item.slug : ''}
+                data-category-slug={item.categorySlug ?? ''}
+              >
+                <span class="gt-tool-rank">{i + 1}</span>
+                {item.kind === 'tool'
+                  ? <ToolLogo slug={item.slug} title={item.title} size={40} />
+                  : <span class="gt-search-kind">{item.kindLabel}</span>}
+                <div class="gt-tool-main">
+                  <strong class="gt-tool-title">{item.title}</strong>
+                  {item.detail && <span class="gt-tool-tagline">{item.detail}</span>}
+                </div>
+                <div class="gt-tool-meta">
+                  <span class="gt-tool-category">{item.meta}</span>
+                  {item.kind === 'tool' && item.score && item.score > 0 && <span class="gt-tool-score tabular-nums">{item.score}<span class="gt-tool-score-slash">/10</span></span>}
+                </div>
+              </a>
+              <div class="gt-tool-decision">
+                <p><span>Fit</span>{item.buyerFit}</p>
+                {item.avoidIf && <p><span>Avoid</span>{item.avoidIf}</p>}
+                <EvidenceRail evidence={item.evidence} variant="compact" label={`${item.title} search evidence`} />
+                <a class="gt-tool-action" href={item.action.href} data-search-result data-result-kind={item.kind} data-result-type={item.kind === 'compare' ? 'comparison' : item.kind} data-result-title={item.title} data-result-url={item.action.href} data-tool-slug={item.kind === 'tool' ? item.slug : ''} data-category-slug={item.categorySlug ?? ''}>{item.action.label} <span aria-hidden="true">→</span></a>
               </div>
-              <div class="gt-tool-meta">
-                <span class="gt-tool-category">{item.meta}</span>
-                {item.kind === 'tool' && item.score && item.score > 0 && <span class="gt-tool-score tabular-nums">{item.score}<span class="gt-tool-score-slash">/10</span></span>}
-              </div>
-            </a>
+            </article>
           </li>
         );
       })}
@@ -147,13 +168,15 @@ const totalItems = catalogItems.length;
     </div>
   </div>
 
-  <script is:inline>
+  <script>
+    import { normalizeSearchText, scoreSearchItem, searchItemMatches, searchTerms } from '../lib/search-index';
     (() => {
       const root = document.querySelector('[data-search-index]');
       if (!root) return;
 
       const input = root.querySelector('[data-tool-search]');
       const cards = Array.from(root.querySelectorAll('[data-search-card]'));
+      const grid = root.querySelector('[data-tool-grid]');
       const counters = Array.from(root.querySelectorAll('[data-visible-count]'));
       const empty = root.querySelector('[data-search-empty]');
       const keyHint = root.querySelector('[data-search-kbd]');
@@ -168,7 +191,6 @@ const totalItems = catalogItems.length;
         keyHint.textContent = /Mac|iPhone|iPad|iPod/.test(navigator.platform) ? 'Cmd K' : 'Ctrl K';
       }
 
-      const normalize = (v) => String(v || '').trim().toLowerCase();
 
       function trackSearchIntent(name, extra = {}) {
         const payload = {
@@ -221,14 +243,39 @@ const totalItems = catalogItems.length;
         window.history.replaceState({}, '', url);
       };
 
+      function itemFromCard(card) {
+        return {
+          kind: card.dataset.resultKind || '',
+          title: card.dataset.searchTitle || '',
+          search: card.dataset.searchText || '',
+          priority: card.dataset.searchPriority || '0',
+        };
+      }
+
       const applyFilter = (value, updateUrl = true, source = 'input') => {
-        const terms = normalize(value).split(/\s+/).filter(Boolean);
+        const qTerms = searchTerms(value);
+        const query = qTerms.join(' ');
+        const searchOptions = { includeKindMatch: true };
+        const scored = cards
+          .map((card, originalIndex) => {
+            const item = itemFromCard(card);
+            const score = scoreSearchItem(item, qTerms, query, searchOptions);
+            const match = qTerms.length === 0 || searchItemMatches(item, qTerms, score, searchOptions);
+            return { card, item, score, match, originalIndex };
+          })
+          .sort((a, b) => b.score - a.score || normalizeSearchText(a.item.title).localeCompare(normalizeSearchText(b.item.title)) || a.originalIndex - b.originalIndex);
+        if (grid) {
+          scored.forEach(({ card }) => grid.appendChild(card));
+        }
         let visible = 0;
-        cards.forEach((card) => {
-          const haystack = card.getAttribute('data-search-text') || '';
-          const match = terms.every((t) => haystack.includes(t));
+        scored.forEach(({ card, match }, index) => {
           card.hidden = !match;
-          if (match) visible++;
+          card.style.order = String(index);
+          if (match) {
+            visible++;
+            const rank = card.querySelector('.gt-tool-rank');
+            if (rank) rank.textContent = String(visible);
+          }
         });
         counters.forEach((c) => { c.textContent = String(visible); });
         if (noun) noun.textContent = visible === 1 ? 'result' : 'results';
@@ -260,11 +307,12 @@ const totalItems = catalogItems.length;
       root.addEventListener('click', (event) => {
         const link = event.target.closest('[data-search-result]');
         if (!link) return;
-        const visible = cards.filter((c) => !c.hidden);
+        const visible = cards.filter((c) => !c.hidden).sort((a, b) => Number(a.style.order || 0) - Number(b.style.order || 0));
         const idx = visible.findIndex((c) => c.contains(link));
         trackSearchIntent('site_search_result_click', {
           query: input?.value.trim() || '',
           result_position: idx >= 0 ? idx + 1 : '',
+          result_kind: link.dataset.resultKind || link.dataset.resultType || 'tool',
           result_type: link.dataset.resultType || 'tool',
           result_title: link.dataset.resultTitle || link.textContent.trim(),
           result_url: link.dataset.resultUrl || link.getAttribute('href') || '',
@@ -383,6 +431,10 @@ const totalItems = catalogItems.length;
     .gt-tool-row-neutral { border-left: 3px solid var(--gt-warn); }
     .gt-tool-row-negative { border-left: 3px solid var(--gt-negative); }
     .gt-tool-row:hover { background: var(--gt-surface-2); }
+    .gt-tool-card {
+      display: grid;
+      gap: 0;
+    }
     .gt-tool-link {
       display: grid;
       grid-template-columns: 24px minmax(40px, auto) minmax(0, 1fr) minmax(0, max-content);
@@ -444,6 +496,44 @@ const totalItems = catalogItems.length;
     }
     .gt-tool-score { font-size: 16px; font-weight: 700; }
     .gt-tool-score-slash { font-size: 11px; color: var(--gt-subtle); font-weight: 500; }
+    .gt-tool-decision {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 8px 12px;
+      padding: 0 14px 14px 90px;
+      color: var(--gt-muted);
+    }
+    .gt-tool-decision p {
+      min-width: 0;
+      margin: 0;
+      font-size: 12px;
+      line-height: 1.4;
+    }
+    .gt-tool-decision p span {
+      margin-right: 6px;
+      color: var(--gt-subtle);
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .gt-tool-decision :global(.evidence-rail) {
+      grid-column: 1;
+    }
+    .gt-tool-action {
+      grid-column: 2;
+      grid-row: 1 / span 2;
+      align-self: start;
+      color: var(--gt-accent);
+      font-size: 12px;
+      font-weight: 760;
+      line-height: 1.2;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .gt-tool-action:hover {
+      color: var(--gt-accent-hover);
+    }
 
     @media (max-width: 640px) {
       .gt-tool-link {
@@ -455,6 +545,14 @@ const totalItems = catalogItems.length;
         align-items: flex-start;
       }
       .gt-tool-category { text-align: left; }
+      .gt-tool-decision {
+        grid-template-columns: 1fr;
+        padding: 0 10px 10px 78px;
+      }
+      .gt-tool-action {
+        grid-column: 1;
+        grid-row: auto;
+      }
     }
 
     .gt-search-empty {

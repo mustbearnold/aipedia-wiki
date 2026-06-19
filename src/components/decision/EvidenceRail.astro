@@ -1,0 +1,280 @@
+---
+import type { EvidenceRailModel } from '../../lib/content-models/evidence-rail';
+
+interface Props {
+  evidence: EvidenceRailModel;
+  variant?: 'compact' | 'inline' | 'full';
+  label?: string;
+}
+
+const { evidence, variant = 'full', label = 'Evidence summary' } = Astro.props;
+
+const stateLabel: Record<EvidenceRailModel['evidenceState'], string> = {
+  registered: 'Registered source',
+  inline_only: 'Inline source',
+  evidence_only: 'Evidence-only source',
+  unknown_id: 'Unknown source',
+};
+
+const freshnessLabel: Record<EvidenceRailModel['freshnessState'], string> = {
+  current: 'Current',
+  aging: 'Aging',
+  stale: 'Review due',
+  unknown: 'Freshness unknown',
+};
+
+const confidenceLabel: Record<EvidenceRailModel['confidence'], string> = {
+  high: 'High confidence',
+  medium: 'Medium confidence',
+  low: 'Low confidence',
+};
+
+const volatilityLabel: Record<NonNullable<EvidenceRailModel['volatility']>, string> = {
+  low: 'Stable',
+  medium: 'Drifts',
+  high: 'Volatile',
+};
+
+const formattedDate = (value: string | undefined): string | undefined => {
+  if (!value) return undefined;
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return value;
+  return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+};
+
+const verifiedLabel = formattedDate(evidence.verifiedAt);
+const nextReviewLabel = formattedDate(evidence.nextReviewAt);
+const sourceLabel = evidence.sourceCount === 1 ? '1 source' : `${evidence.sourceCount} sources`;
+const primarySourceText = evidence.primaryLabel ?? (evidence.sourceCount > 0 ? sourceLabel : 'No source attached');
+const ariaParts = [
+  label,
+  stateLabel[evidence.evidenceState],
+  freshnessLabel[evidence.freshnessState],
+  confidenceLabel[evidence.confidence],
+  verifiedLabel ? `verified ${verifiedLabel}` : undefined,
+  evidence.sourceCount > 0 ? sourceLabel : undefined,
+].filter(Boolean);
+---
+
+<div
+  class:list={[
+    'evidence-rail',
+    `evidence-rail--${variant}`,
+  ]}
+  data-state={evidence.evidenceState}
+  data-freshness={evidence.freshnessState}
+  data-confidence={evidence.confidence}
+  aria-label={ariaParts.join(', ')}
+  role="group"
+>
+  <div class="evidence-rail__summary">
+    <span class="evidence-rail__kicker">Evidence</span>
+    {evidence.primaryUrl ? (
+      <a class="evidence-rail__source" href={evidence.primaryUrl} rel="nofollow noopener noreferrer" target="_blank">
+        {primarySourceText}
+      </a>
+    ) : (
+      <span class="evidence-rail__source">{primarySourceText}</span>
+    )}
+  </div>
+
+  <dl class="evidence-rail__metrics">
+    <div class="evidence-rail__metric evidence-rail__metric--state">
+      <dt>Source</dt>
+      <dd>{stateLabel[evidence.evidenceState]}</dd>
+    </div>
+    <div class="evidence-rail__metric evidence-rail__metric--freshness">
+      <dt>Freshness</dt>
+      <dd>{freshnessLabel[evidence.freshnessState]}</dd>
+    </div>
+    <div class="evidence-rail__metric evidence-rail__metric--confidence">
+      <dt>Confidence</dt>
+      <dd>{confidenceLabel[evidence.confidence]}</dd>
+    </div>
+    {variant !== 'compact' && verifiedLabel && (
+      <div class="evidence-rail__metric">
+        <dt>Verified</dt>
+        <dd><time datetime={evidence.verifiedAt ?? verifiedLabel}>{verifiedLabel}</time></dd>
+      </div>
+    )}
+    {variant === 'full' && nextReviewLabel && (
+      <div class="evidence-rail__metric">
+        <dt>Review</dt>
+        <dd><time datetime={evidence.nextReviewAt ?? nextReviewLabel}>{nextReviewLabel}</time></dd>
+      </div>
+    )}
+    {variant === 'full' && evidence.volatility && (
+      <div class="evidence-rail__metric evidence-rail__metric--volatility">
+        <dt>Volatility</dt>
+        <dd>{volatilityLabel[evidence.volatility]}</dd>
+      </div>
+    )}
+  </dl>
+
+  {variant === 'full' && evidence.diagnostics.length > 0 && (
+    <p class="evidence-rail__diagnostic">{evidence.diagnostics[0]}</p>
+  )}
+</div>
+
+<style>
+  .evidence-rail {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.625rem;
+    min-width: 0;
+    color: var(--color-text-secondary);
+  }
+
+  .evidence-rail--full {
+    align-items: stretch;
+    padding: var(--site-card-padding);
+    border: 1px solid var(--color-accent-outline);
+    border-radius: var(--site-radius-emphasis);
+    background: var(--color-surface-card);
+  }
+
+  .evidence-rail--inline {
+    align-items: flex-start;
+  }
+
+  .evidence-rail--compact {
+    gap: 0.375rem;
+  }
+
+  .evidence-rail__summary {
+    display: flex;
+    flex: 1 1 10rem;
+    min-width: min(100%, 10rem);
+    flex-direction: column;
+    gap: 0.125rem;
+  }
+
+  .evidence-rail--compact .evidence-rail__summary {
+    flex: 0 1 auto;
+    min-width: 0;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.375rem;
+  }
+
+  .evidence-rail__kicker,
+  .evidence-rail__metric dt {
+    color: var(--color-text-muted);
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    line-height: var(--line-height-tight);
+    text-transform: uppercase;
+  }
+
+  .evidence-rail__source {
+    min-width: 0;
+    color: var(--color-text-primary);
+    font-size: var(--font-size-sm);
+    font-weight: 700;
+    line-height: var(--line-height-tight);
+    overflow-wrap: anywhere;
+    text-decoration-color: color-mix(in srgb, var(--color-evidence) 72%, transparent);
+    text-underline-offset: 0.18em;
+  }
+
+  a.evidence-rail__source:hover,
+  a.evidence-rail__source:focus-visible {
+    color: var(--color-evidence);
+  }
+
+  .evidence-rail__metrics {
+    display: flex;
+    flex: 999 1 auto;
+    flex-wrap: wrap;
+    gap: 0.375rem;
+    min-width: 0;
+    margin: 0;
+  }
+
+  .evidence-rail--inline .evidence-rail__metrics,
+  .evidence-rail--full .evidence-rail__metrics {
+    gap: 0.5rem;
+  }
+
+  .evidence-rail__metric {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    min-width: 0;
+    padding: 0.35rem 0.5rem;
+    border: 1px solid color-mix(in srgb, var(--color-evidence) 32%, transparent);
+    border-radius: var(--site-radius-button);
+    background: color-mix(in srgb, var(--color-evidence) 12%, transparent);
+    color: var(--color-text-secondary);
+  }
+
+  .evidence-rail--inline .evidence-rail__metric,
+  .evidence-rail--full .evidence-rail__metric {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.125rem;
+    min-width: 7rem;
+  }
+
+  .evidence-rail__metric dd {
+    margin: 0;
+    color: var(--color-text-primary);
+    font-size: var(--font-size-xs);
+    font-weight: 800;
+    line-height: var(--line-height-tight);
+    overflow-wrap: anywhere;
+  }
+
+  .evidence-rail__metric--state,
+  .evidence-rail__metric--freshness,
+  .evidence-rail__metric--confidence {
+    border-color: color-mix(in srgb, var(--color-evidence) 46%, transparent);
+  }
+
+  .evidence-rail[data-confidence='high'][data-freshness='current'] .evidence-rail__metric {
+    border-color: color-mix(in srgb, var(--color-verified) 38%, transparent);
+    background: color-mix(in srgb, var(--color-verified) 12%, transparent);
+  }
+
+  .evidence-rail[data-confidence='medium'] .evidence-rail__metric,
+  .evidence-rail[data-freshness='aging'] .evidence-rail__metric,
+  .evidence-rail[data-freshness='unknown'] .evidence-rail__metric {
+    border-color: color-mix(in srgb, var(--color-warning) 38%, transparent);
+    background: color-mix(in srgb, var(--color-warning) 12%, transparent);
+  }
+
+  .evidence-rail[data-confidence='low'] .evidence-rail__metric,
+  .evidence-rail[data-freshness='stale'] .evidence-rail__metric,
+  .evidence-rail[data-state='unknown_id'] .evidence-rail__metric {
+    border-color: color-mix(in srgb, var(--color-risk) 38%, transparent);
+    background: color-mix(in srgb, var(--color-risk) 12%, transparent);
+  }
+
+  .evidence-rail__diagnostic {
+    flex-basis: 100%;
+    margin: 0;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-xs);
+    line-height: var(--line-height-normal);
+  }
+
+  @media (max-width: 520px) {
+    .evidence-rail,
+    .evidence-rail__metrics {
+      align-items: stretch;
+      width: 100%;
+    }
+
+    .evidence-rail__summary,
+    .evidence-rail__metric {
+      flex: 1 1 100%;
+    }
+
+    .evidence-rail--compact .evidence-rail__summary,
+    .evidence-rail--compact .evidence-rail__metric {
+      flex: 1 1 auto;
+    }
+  }
+</style>
