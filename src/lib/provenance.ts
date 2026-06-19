@@ -22,6 +22,22 @@ export interface ResolvedProvenanceSource {
   is_registered: boolean;
 }
 
+export type PageSourceUse = 'fact' | 'pricing' | 'decision' | 'evidence' | 'body';
+export type PageSourceState = 'registered' | 'unknown_id' | 'inline_only' | 'evidence_only';
+
+export interface ResolvedPageSource {
+  source_id?: string;
+  label: string;
+  url: string;
+  type?: string;
+  trust_tier?: string;
+  volatility?: string;
+  last_checked?: string;
+  verified_at?: string;
+  used_by: PageSourceUse[];
+  state: PageSourceState;
+}
+
 export type ProvenanceCarrier = Record<string, unknown>;
 
 const rawRegistry: unknown = sourceRegistry;
@@ -69,6 +85,50 @@ export function resolveProvenanceSource(source: ProvenanceCarrier): ResolvedProv
     verified: dateishField(source.verified_at),
     is_registered: false,
   };
+}
+
+export function resolvePageSource(source: ProvenanceCarrier, usedBy: PageSourceUse): ResolvedPageSource | undefined {
+  const sourceId = stringField(source.source_id);
+  const registered = resolveSource(sourceId);
+  if (registered) {
+    return {
+      source_id: registered.id,
+      label: registered.label,
+      url: registered.url,
+      type: registered.type,
+      trust_tier: registered.trust_tier,
+      volatility: registered.volatility,
+      last_checked: registered.last_checked,
+      verified_at: registered.last_checked,
+      used_by: [usedBy],
+      state: 'registered',
+    };
+  }
+
+  const fallbackUrl = stringField(source.source) ?? stringField(source.url);
+  const fallbackLabel = stringField(source.source_label) ?? stringField(source.label) ?? fallbackUrl;
+  if (sourceId && fallbackUrl && fallbackLabel) {
+    return {
+      source_id: sourceId,
+      label: fallbackLabel,
+      url: fallbackUrl,
+      volatility: stringField(source.volatility),
+      verified_at: dateishField(source.verified_at) ?? dateishField(source.captured_at),
+      used_by: [usedBy],
+      state: 'unknown_id',
+    };
+  }
+  if (!sourceId && fallbackUrl && fallbackLabel) {
+    return {
+      label: fallbackLabel,
+      url: fallbackUrl,
+      volatility: stringField(source.volatility),
+      verified_at: dateishField(source.verified_at) ?? dateishField(source.captured_at),
+      used_by: [usedBy],
+      state: usedBy === 'evidence' ? 'evidence_only' : 'inline_only',
+    };
+  }
+  return undefined;
 }
 
 export function dateishField(value: unknown): string | undefined {

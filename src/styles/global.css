@@ -1,5 +1,6 @@
-@import './fonts.css';
+@import './tokens.css';
 @import 'tailwindcss';
+@import './fonts.css';
 
 /* Reserve scrollbar space always. Prevents layout jut when modals lock body scroll.
    `both-edges` splits the gutter across inline start/end so centered layouts do not
@@ -103,91 +104,6 @@ html.theme-morph-fallback *::after {
 }
 
 @layer base {
-  :root {
-    --font-sans: 'Metropolis', sans-serif;
-    --font-mono: 'Metropolis', sans-serif;
-    --default-font-family: var(--font-sans);
-    --default-mono-font-family: var(--font-mono);
-    --pf-font: var(--font-sans);
-    --pagefind-ui-font: var(--font-sans);
-    --motion-ease: cubic-bezier(0.16, 1, 0.3, 1);
-    --motion-ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
-    --motion-ease-press: cubic-bezier(0.2, 0, 0, 1);
-    --motion-fast: 160ms;
-    --motion-base: 240ms;
-    --motion-slow: 420ms;
-    --site-container-max: 72rem;
-    --site-article-max: 60rem;
-    --site-narrow-max: 54rem;
-    --site-hero-copy-max: 54rem;
-    --site-page-max: var(--site-container-max);
-    /* Mobile-first gutters: comfortable thumb reach, then widen. */
-    --site-page-gutter: clamp(1rem, 2.5vw + 0.5rem, 2rem);
-    --site-page-gutter-compact: clamp(0.875rem, 1.5vw + 0.5rem, 1.5rem);
-    --site-page-top: clamp(1.25rem, 3.5vw, 3rem);
-    --site-page-bottom: clamp(2.5rem, 5vw, 5rem);
-    --site-section-gap: clamp(1.75rem, 3.5vw, 3.25rem);
-    --site-section-padding-y: var(--site-section-gap);
-    --site-content-gap: clamp(1rem, 1.6vw, 1.5rem);
-    --site-content-gap-sm: clamp(0.75rem, 1.1vw, 1rem);
-    --site-grid-gap: clamp(0.75rem, 1.1vw, 1rem);
-    --site-card-gap: clamp(0.625rem, 0.8vw, 0.875rem);
-    --site-panel-gap: clamp(1.25rem, 2.8vw, 2.5rem);
-    --site-chip-gap: 0.5rem;
-    --site-hero-padding-y: clamp(1.75rem, 4vw, 4rem);
-    --site-index-hero-top: clamp(1rem, 2vw, 2rem);
-    --site-footer-padding-y: clamp(2rem, 4vw, 2.75rem);
-    --site-radius-card: 8px;
-    --site-radius-control: 8px;
-    --site-radius-emphasis: 12px;
-    --site-card-padding: clamp(0.875rem, 0.8vw + 0.7rem, 1.25rem);
-    --site-control-padding-y: 0.625rem;
-    --site-control-padding-x: 0.875rem;
-    --bg-base: #0c0a09;
-    /* Semi-transparent surface (same idea as .nav-root); blur applied via glass rules */
-    --bg-card: color-mix(in srgb, var(--bg-base) 78%, transparent);
-    --bg-card-hover: color-mix(in srgb, var(--bg-base) 88%, transparent);
-    --glass-inset: inset 0 1px 0 rgba(255, 255, 255, 0.07);
-    --border: rgba(255, 255, 255, 0.08);
-    /* Stone neutrals: slate reads slightly blue on screen; warm gray matches orange UI */
-    --text-primary: #fafaf9;
-    --text-secondary: rgba(231, 229, 228, 0.88);
-    --text-muted: rgba(168, 162, 158, 0.92);
-    --accent-primary: #f97316;
-    /* Text-on-background variant of accent-primary. Tuned brighter for
-       dark graphite surfaces and deeper for light surfaces so links,
-       icons, and small labels keep adequate contrast. */
-    --accent-primary-text: #fb923c;
-    --accent-secondary: #ea580c;
-    --accent-success: #34d399;
-    --accent-warning: #fbbf24;
-    --accent-danger: #fb7185;
-    /* Directory/detail surfaces: match homepage (.home-page) accent rails and outlines */
-    --site-accent-divider: rgba(249, 115, 22, 0.42);
-    --site-accent-outline: rgba(249, 115, 22, 0.22);
-    --site-accent-outline-hover: rgba(249, 115, 22, 0.48);
-    --site-glass-blur: blur(12px) saturate(140%);
-  }
-
-  .light {
-    --bg-base: #fafaf9;
-    --bg-card: color-mix(in srgb, #ffffff 82%, transparent);
-    --bg-card-hover: color-mix(in srgb, #ffffff 90%, transparent);
-    --glass-inset: inset 0 1px 0 rgba(255, 255, 255, 0.92);
-    --border: #e7e5e4;
-    --text-primary: #1c1917;
-    --text-secondary: #57534e;
-    --text-muted: #78716c;
-    --accent-primary: #ea580c;
-    --accent-primary-text: #c2410c;
-    --accent-secondary: #f97316;
-    --accent-success: #047857;
-    --accent-warning: #b45309;
-    --accent-danger: #dc2626;
-    --site-accent-divider: rgba(234, 88, 12, 0.42);
-    --site-accent-outline: rgba(249, 115, 22, 0.28);
-    --site-accent-outline-hover: rgba(249, 115, 22, 0.52);
-  }
 
   /* Accent gradient text utility. Dark mode: orange-to-amber gradient
      clipped to text for decorative headline words. Light mode falls

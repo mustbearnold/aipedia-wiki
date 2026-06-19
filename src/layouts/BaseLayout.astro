@@ -128,6 +128,10 @@ const ogImageUrl = ogImage
          via opacity when not scrolled so it doesn't flash on short pages. -->
     <div id="read-progress" aria-hidden="true" transition:persist="read-progress"></div>
     <div id="bg-gradient" class="fixed inset-0 -z-10" style="background: var(--bg-base);" transition:persist></div>
+    <script>
+      import { installMotionController } from '../lib/motion-controller';
+      installMotionController();
+    </script>
     <MoatLayer />
     <Nav transition:persist="nav" />
     <SearchModal transition:persist="search-modal" />
@@ -156,16 +160,17 @@ const ogImageUrl = ogImage
           return;
         }
 
-        var motionPolicy = window.__aipediaMotionPolicy || (window.__aipediaMotionPolicy = {
-          reduceQuery: '(prefers-reduced-motion: reduce)',
-        });
-        var reduceMotion = motionPolicy.reduceMotion || (motionPolicy.reduceMotion = window.matchMedia(motionPolicy.reduceQuery));
+        var motionController = window.__aipediaMotionController || null;
+        var reduceMotion = motionController ? null : window.matchMedia('(prefers-reduced-motion: reduce)');
+        var unregisterMotion = null;
+        var motionRegistering = false;
         var supportsIO = 'IntersectionObserver' in window;
         var progressTicking = false;
         var marqueeTimer = 0;
 
         function prefersReducedMotion() {
-          return reduceMotion.matches;
+          motionController = window.__aipediaMotionController || motionController;
+          return motionController ? motionController.policy.reduced : Boolean(reduceMotion && reduceMotion.matches);
         }
 
         function updateBg() {
@@ -335,13 +340,23 @@ const ogImageUrl = ogImage
           marqueeTimer = setTimeout(tuneMarquees, 150);
         }
 
+        function syncMotionController(event) {
+          motionController = (event && event.detail) || window.__aipediaMotionController || motionController;
+          if (!motionController || unregisterMotion || motionRegistering || typeof motionController.register !== 'function') return;
+          motionRegistering = true;
+          unregisterMotion = motionController.register({ refresh: refresh, policychange: refresh });
+          motionRegistering = false;
+        }
+
         window[KEY] = { refresh: refresh };
         window.addEventListener('scroll', onProgressScroll, { passive: true });
         window.addEventListener('resize', onResize, { passive: true });
+        window.addEventListener('aipedia:motion-controller-ready', syncMotionController);
         document.addEventListener('astro:after-swap', refresh);
-        if (typeof reduceMotion.addEventListener === 'function') {
+        syncMotionController();
+        if (reduceMotion && typeof reduceMotion.addEventListener === 'function') {
           reduceMotion.addEventListener('change', refresh);
-        } else if (typeof reduceMotion.addListener === 'function') {
+        } else if (reduceMotion && typeof reduceMotion.addListener === 'function') {
           reduceMotion.addListener(refresh);
         }
 

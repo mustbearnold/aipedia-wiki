@@ -1,0 +1,172 @@
+/* Canonical semantic tokens. Keep legacy aliases here until every caller migrates. */
+:root {
+  /* Color */
+  --color-bg-base: #0c0a09;
+  --color-surface-card: color-mix(in srgb, var(--color-bg-base) 78%, transparent);
+  --color-surface-raised: color-mix(in srgb, var(--color-bg-base) 88%, transparent);
+  --color-surface-muted: rgba(255, 255, 255, 0.08);
+  --color-text-primary: #fafaf9;
+  --color-text-secondary: rgba(231, 229, 228, 0.88);
+  --color-text-muted: rgba(168, 162, 158, 0.92);
+  --color-accent: #f97316;
+  --color-accent-strong: #fb923c;
+  --color-accent-secondary: #ea580c;
+  --color-accent-contrast: #0b0a14;
+  --color-verified: #34d399;
+  --color-warning: #fbbf24;
+  --color-risk: #fb7185;
+  --color-evidence: #38bdf8;
+  --color-accent-divider: rgba(249, 115, 22, 0.42);
+  --color-accent-outline: rgba(249, 115, 22, 0.22);
+  --color-accent-outline-hover: rgba(249, 115, 22, 0.48);
+
+  /* Type */
+  --font-sans: 'Metropolis', sans-serif;
+  --font-data: var(--font-sans);
+  --font-mono: 'Metropolis', sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 16px;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.6;
+
+  /* Radius */
+  --radius-control: 8px;
+  --radius-card: 8px;
+  --radius-panel: 12px;
+  --radius-pill: 999px;
+
+  /* Spacing and layout */
+  --layout-container-max: 72rem;
+  --layout-article-max: 60rem;
+  --layout-narrow-max: 54rem;
+  --layout-hero-copy-max: 54rem;
+  --space-page-gutter: clamp(1rem, 2.5vw + 0.5rem, 2rem);
+  --space-page-gutter-compact: clamp(0.875rem, 1.5vw + 0.5rem, 1.5rem);
+  --space-page-top: clamp(1.25rem, 3.5vw, 3rem);
+  --space-page-bottom: clamp(2.5rem, 5vw, 5rem);
+  --space-section-gap: clamp(1.75rem, 3.5vw, 3.25rem);
+  --space-content-gap: clamp(1rem, 1.6vw, 1.5rem);
+  --space-content-gap-sm: clamp(0.75rem, 1.1vw, 1rem);
+  --space-grid-gap: clamp(0.75rem, 1.1vw, 1rem);
+  --space-card-gap: clamp(0.625rem, 0.8vw, 0.875rem);
+  --space-panel-gap: clamp(1.25rem, 2.8vw, 2.5rem);
+  --space-chip-gap: 0.5rem;
+  --space-hero-padding-y: clamp(1.75rem, 4vw, 4rem);
+  --space-index-hero-top: clamp(1rem, 2vw, 2rem);
+  --space-footer-padding-y: clamp(2rem, 4vw, 2.75rem);
+  --space-card-padding: clamp(0.875rem, 0.8vw + 0.7rem, 1.25rem);
+  --space-control-padding-y: 0.625rem;
+  --space-control-padding-x: 0.875rem;
+
+  /* Motion */
+  --motion-ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --motion-ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
+  --motion-ease-press: cubic-bezier(0.2, 0, 0, 1);
+  --motion-fast: 160ms;
+  --motion-base: 240ms;
+  --motion-slow: 420ms;
+
+  /* Stacking */
+  --z-moat: 0;
+  --z-base: 1;
+  --z-raised: 30;
+  --z-sticky: 40;
+  --z-nav: 50;
+  --z-overlay: 80;
+  --z-modal: 100;
+  --z-toast: 120;
+  --z-skip-link: 200;
+
+  /* Effects */
+  --effect-glass-inset: inset 0 1px 0 rgba(255, 255, 255, 0.07);
+  --effect-glass-blur: blur(12px) saturate(140%);
+
+  /* Legacy migration aliases */
+  --default-font-family: var(--font-sans);
+  --default-mono-font-family: var(--font-mono);
+  --pf-font: var(--font-sans);
+  --pagefind-ui-font: var(--font-sans);
+  --site-container-max: var(--layout-container-max);
+  --site-article-max: var(--layout-article-max);
+  --site-narrow-max: var(--layout-narrow-max);
+  --site-hero-copy-max: var(--layout-hero-copy-max);
+  --site-page-max: var(--site-container-max);
+  --site-page-gutter: var(--space-page-gutter);
+  --site-page-gutter-compact: var(--space-page-gutter-compact);
+  --site-page-top: var(--space-page-top);
+  --site-page-bottom: var(--space-page-bottom);
+  --site-section-gap: var(--space-section-gap);
+  --site-section-padding-y: var(--site-section-gap);
+  --site-content-gap: var(--space-content-gap);
+  --site-content-gap-sm: var(--space-content-gap-sm);
+  --site-grid-gap: var(--space-grid-gap);
+  --site-card-gap: var(--space-card-gap);
+  --site-panel-gap: var(--space-panel-gap);
+  --site-chip-gap: var(--space-chip-gap);
+  --site-hero-padding-y: var(--space-hero-padding-y);
+  --site-index-hero-top: var(--space-index-hero-top);
+  --site-footer-padding-y: var(--space-footer-padding-y);
+  --site-radius-card: var(--radius-card);
+  --site-radius-control: var(--radius-control);
+  --site-radius-button: var(--radius-control);
+  --site-radius-emphasis: var(--radius-panel);
+  --site-card-padding: var(--space-card-padding);
+  --site-control-padding-y: var(--space-control-padding-y);
+  --site-control-padding-x: var(--space-control-padding-x);
+  --bg-base: var(--color-bg-base);
+  --bg-primary: var(--color-bg-base);
+  --site-bg: var(--color-bg-base);
+  --bg-card: var(--color-surface-card);
+  --bg-card-hover: var(--color-surface-raised);
+  --border: var(--color-surface-muted);
+  --site-text: var(--color-text-primary);
+  --site-muted: var(--color-text-muted);
+  --text-primary: var(--color-text-primary);
+  --text-secondary: var(--color-text-secondary);
+  --text-muted: var(--color-text-muted);
+  --site-accent: var(--color-accent);
+  --accent-primary: var(--color-accent);
+  --accent-primary-text: var(--color-accent-strong);
+  --accent-secondary: var(--color-accent-secondary);
+  --accent-success: var(--color-verified);
+  --accent-warning: var(--color-warning);
+  --accent-danger: var(--color-risk);
+  --site-accent-divider: var(--color-accent-divider);
+  --site-accent-outline: var(--color-accent-outline);
+  --site-accent-outline-hover: var(--color-accent-outline-hover);
+  --site-glass-blur: var(--effect-glass-blur);
+  --glass-inset: var(--effect-glass-inset);
+  --gt-surface: var(--color-surface-card);
+  --gt-surface-raised: var(--color-surface-raised);
+  --gt-text: var(--color-text-primary);
+  --gt-muted: var(--color-text-muted);
+  --gt-orange: var(--color-accent);
+  --home-surface: var(--color-surface-card);
+  --home-text: var(--color-text-primary);
+  --home-muted: var(--color-text-muted);
+  --home-accent: var(--color-accent);
+}
+
+.light {
+  --color-bg-base: #fafaf9;
+  --color-surface-card: color-mix(in srgb, #ffffff 82%, transparent);
+  --color-surface-raised: color-mix(in srgb, #ffffff 90%, transparent);
+  --color-surface-muted: #e7e5e4;
+  --color-text-primary: #1c1917;
+  --color-text-secondary: #57534e;
+  --color-text-muted: #78716c;
+  --color-accent: #ea580c;
+  --color-accent-strong: #c2410c;
+  --color-accent-secondary: #f97316;
+  --color-verified: #047857;
+  --color-warning: #b45309;
+  --color-risk: #dc2626;
+  --color-accent-divider: rgba(234, 88, 12, 0.42);
+  --color-accent-outline: rgba(249, 115, 22, 0.28);
+  --color-accent-outline-hover: rgba(249, 115, 22, 0.52);
+  --effect-glass-inset: inset 0 1px 0 rgba(255, 255, 255, 0.92);
+}
