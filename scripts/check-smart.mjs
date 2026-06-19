@@ -1,11 +1,12 @@
 #!/usr/bin/env node
 
 import { spawnSync } from 'node:child_process';
-import { existsSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
 const PROJECT_DIR = dirname(dirname(fileURLToPath(import.meta.url)));
+const OPERATOR_SURFACES_PATH = resolve(PROJECT_DIR, 'src/data/operator-surfaces.json');
 const args = process.argv.slice(2);
 const runMode = args.includes('--run');
 const jsonMode = args.includes('--json');
@@ -44,6 +45,47 @@ function normalizePath(path) {
   return path.replace(/\\/g, '/').replace(/^\.\//, '').trim();
 }
 
+function loadOperatorSurfaceContract() {
+  return JSON.parse(readFileSync(OPERATOR_SURFACES_PATH, 'utf8'));
+}
+
+const OPERATOR_SURFACE_CONTRACT = loadOperatorSurfaceContract();
+
+function matchesAny(value, candidates = []) {
+  return candidates.includes(value);
+}
+
+function startsWithAny(value, prefixes = []) {
+  return prefixes.some((prefix) => value.startsWith(prefix));
+}
+
+function matchesRegex(value, regexes = []) {
+  return regexes.some((regex) => new RegExp(regex).test(value));
+}
+
+function surfaceMatchesPath(surface, path) {
+  const match = surface.match || {};
+  return (
+    matchesAny(path, match.files) ||
+    startsWithAny(path, match.prefixes) ||
+    matchesRegex(path, match.regexes)
+  );
+}
+
+function matchingSurfaces(paths) {
+  const surfaces = new Set();
+
+  for (const path of paths.map(normalizePath)) {
+    if (!path) continue;
+
+    for (const surface of OPERATOR_SURFACE_CONTRACT.surfaces) {
+      if (surfaceMatchesPath(surface, path)) surfaces.add(surface);
+    }
+  }
+
+  return [...surfaces];
+}
+
 function gitLines(gitArgs) {
   const result = spawnSync('git', gitArgs, {
     cwd: PROJECT_DIR,
@@ -63,89 +105,53 @@ function changedPaths() {
   return [...new Set(paths)].sort();
 }
 
-export function classifyPaths(paths) {
+function categoriesForSurfaces(surfaces) {
   const categories = new Set();
 
-  for (const path of paths.map(normalizePath)) {
-    if (!path) continue;
-
-    if (
-      path.startsWith('.agent/') ||
-      path.startsWith('.claude/') ||
-      path === 'AGENTS.md' ||
-      path === 'README.md' ||
-      path.startsWith('docs/')
-    ) {
-      categories.add('docs');
-    }
-
-    if (
-      path.startsWith('src/content/') ||
-      path.startsWith('src/content-antigravity/') ||
-      path.startsWith('src/pages/answers/') ||
-      path.startsWith('src/data/') ||
-      path === 'PAGE_REFRESH_LEDGER.md'
-    ) {
-      categories.add('content');
-    }
-
-    if (
-      path.startsWith('src/layouts/') ||
-      path.startsWith('src/components/') ||
-      path.startsWith('src/styles/') ||
-      path.startsWith('src/plugins/') ||
-      path.startsWith('src/utils/') ||
-      path.startsWith('src/lib/') ||
-      path === 'astro.config.mjs' ||
-      path === 'tsconfig.json' ||
-      path === 'vercel.json' ||
-      /^src\/pages\/(?!api\/).+\.(astro|ts)$/.test(path)
-    ) {
-      categories.add('runtime');
-    }
-
-    if (path.startsWith('public/')) categories.add('assets');
-    if (path.startsWith('scripts/') || path.startsWith('tests/') || path === 'package.json') categories.add('tooling');
-    if (path === 'package-lock.json') categories.add('dependencies');
-    if (path.startsWith('.github/workflows/')) categories.add('ci');
-    if (path === '.gitignore' || path === '.gitattributes' || path === '.mcp.json') categories.add('repo');
-  }
+  for (const surface of surfaces) categories.add(surface.category);
 
   return [...categories].sort();
 }
 
-export function commandsForCategories(categories) {
-  const commands = new Set(['git diff --check']);
-  const has = (category) => categories.includes(category);
+export function classifyPaths(paths) {
+  return categoriesForSurfaces(matchingSurfaces(paths));
+}
 
-  if (has('tooling') || has('ci') || has('repo')) {
-    commands.add('npm run test:scripts');
-    commands.add('npm run audit:commands');
+function checksForSurfaces(surfaces) {
+  const checks = new Set();
+
+  for (const surface of surfaces) {
+    for (const check of surface.checks || []) checks.add(check);
   }
 
-  if (has('content')) {
-    commands.add('npm run ledger:pages:check');
-    commands.add('npm run guard:check');
-    commands.add('npm run audit:facts');
-    commands.add('npm run audit:sources');
-    commands.add('npm run check:links');
-    commands.add('npm run check:news');
-  }
+  return [...checks].sort();
+}
 
-  if (has('assets')) commands.add('npm run check:assets:quick');
-  if (has('runtime') || has('dependencies')) commands.add('npm run build:fast');
-  if (has('dependencies')) commands.add('npm run check:security');
+function commandsForSelection(categories, checks) {
+  const commands = new Set(OPERATOR_SURFACE_CONTRACT.verification.baseCommands);
+  const hasAny = (values, selected) => (values || []).some((value) => selected.includes(value));
+
+  for (const group of OPERATOR_SURFACE_CONTRACT.verification.commandGroups) {
+    if (!hasAny(group.categories, categories) && !hasAny(group.checks, checks)) continue;
+    for (const command of group.commands) commands.add(command);
+  }
 
   return [...commands];
 }
 
+export function commandsForCategories(categories) {
+  return commandsForSelection(categories, []);
+}
+
 export function planForPaths(paths) {
-  const categories = classifyPaths(paths);
+  const surfaces = matchingSurfaces(paths);
+  const categories = categoriesForSurfaces(surfaces);
+  const checks = checksForSurfaces(surfaces);
   return {
     project_dir: PROJECT_DIR,
     paths,
     categories,
-    commands: paths.length ? commandsForCategories(categories) : [],
+    commands: paths.length ? commandsForSelection(categories, checks) : [],
     note: paths.length
       ? 'Run with --run to execute these commands in order.'
       : 'No changed tracked or untracked files were detected.',

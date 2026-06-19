@@ -5,10 +5,10 @@ title: AI Infrastructure & Model APIs
 description: Developer platforms for LLM routing, pay-as-you-go model APIs, hosted inference, serverless GPUs, vector databases, speech APIs, and production retrieval systems.
 tool_count: 12
 seo_title: "Best AI Infrastructure & Model API Tools (June 2026)"
-meta_description: "Updated June 16, 2026: compare OpenRouter, OpenAI API, Claude API after Fable/Mythos suspension, Gemini API, Google Cloud data agents and managed MCP servers, Mistral, Groq, Together AI, Replicate, fal, Fireworks AI, Modal, Browserbase, Deepgram, Pinecone, Weaviate/Engram, Qdrant, Llama, LM Studio, and model-availability governance tradeoffs."
+meta_description: "Updated June 18, 2026: compare OpenRouter, OpenAI API, Claude API after Fable/Mythos suspension, Gemini API, Google Cloud data agents and managed MCP servers, Mistral, Groq, Together AI, Replicate, fal, Fireworks AI, Modal, Browserbase, Deepgram, Pinecone, Weaviate/Engram, Qdrant, Llama, LM Studio, and model-availability governance tradeoffs."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-16
-last_verified: 2026-06-16
+last_updated: 2026-06-18
+last_verified: 2026-06-18
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -46,7 +46,7 @@ The June 16 infrastructure update is governed data agents. Google Cloud's [data-
 
 **Use [Fireworks AI](/tools/fireworks-ai/) when the workload is production inference over open or commercial models.** Fireworks is not a consumer chatbot. It belongs here when serverless per-token inference, cached-token discounts, batch jobs, dedicated GPU deployments, fine-tuning, and B200/B300 capacity are the actual purchase.
 
-**Use [Browserbase](/tools/browserbase/) when the infrastructure problem is web interaction.** The June 1 pricing check keeps Free, Developer at $20/month, Startup at $99/month, and Scale custom, while the product surface now groups Browsers, Web Data APIs, Runtime, Identity, Models, Observability, Stagehand, and MCP. It belongs here when agents need reliable browser sessions rather than just another LLM API.
+**Use [Browserbase](/tools/browserbase/) when the infrastructure problem is web interaction.** The June 18 pricing check keeps Free, Developer at $20/month, Startup at $99/month, and Scale custom, while the product surface now groups real cloud Chromium browsers, Web Data APIs, Functions Runtime, Identity, Model Gateway, Observability, Stagehand, and MCP. It belongs here when agents need reliable browser sessions, Fetch/Extract, replay, and model routing rather than just another LLM API.
 
 **Use [Deepgram](/tools/deepgram/) when speech is infrastructure.** Deepgram is a better fit for product teams adding STT, TTS, audio intelligence, or voice agents than for creators who only need a one-off transcript.
 
@@ -63,7 +63,7 @@ The June 16 infrastructure update is governed data agents. Google Cloud's [data-
 | Fast media APIs | [fal.ai](/tools/fal-ai/) | Image, video, audio, and 3D APIs with per-output or per-second pricing | Prepaid credits and per-model units need tracking |
 | Production model inference | [Fireworks AI](/tools/fireworks-ai/) | Serverless inference, batch jobs, dedicated GPUs, fine-tuning, and cached-token discounts | Named model rates, GPU utilization, batch timing, and cached-token behavior decide the real bill |
 | Serverless Python/GPU apps | [Modal](/tools/modal/) | Python jobs, web endpoints, queues, sandboxes, and per-second GPU billing without Kubernetes | Region selection, non-preemptible execution, and steady 24/7 GPU load can change the economics |
-| Cloud browser infrastructure | [Browserbase](/tools/browserbase/) | Managed browser sessions, web data APIs, runtime, identity, observability, Stagehand, and MCP | Browser sessions and agent loops need cost, timeout, and credential controls |
+| Cloud browser infrastructure | [Browserbase](/tools/browserbase/) | Managed Chromium sessions, web data APIs, Functions runtime, identity, Model Gateway, observability, Stagehand, and MCP | Browser sessions, Fetch/Extract calls, proxy bandwidth, model tokens, and agent loops need cost, timeout, and credential controls |
 | Speech and voice infrastructure | [Deepgram](/tools/deepgram/) | STT, TTS, audio intelligence, and voice-agent APIs | Voice minutes, channels, model choice, and LLM orchestration affect cost |
 | Model discovery and endpoints | [Hugging Face](/tools/hugging-face/) | Model cards, datasets, Spaces, Inference Endpoints | License and safety checks stay with the builder |
 | Production retrieval | [Pinecone](/tools/pinecone/), [Weaviate](/tools/weaviate/), or [Qdrant](/tools/qdrant/) | Managed or open vector search for RAG | Index design and embedding cost matter as much as database pricing |
@@ -78,7 +78,7 @@ The June 16 infrastructure update is governed data agents. Google Cloud's [data-
 - **Media and community models:** Pick [Replicate](/tools/replicate/) when the job is running image, video, audio, or custom models by API. The June 9 check confirms buyers should model public output-priced examples separately from hardware-time runs and private deployments that can bill while idle.
 - **Fast media APIs:** Pick [fal.ai](/tools/fal-ai/) when successful-output billing, image/video/audio/3D endpoints, and fast experimentation matter.
 - **Production inference:** Pick [Fireworks AI](/tools/fireworks-ai/) when hosted model APIs, batch inference, dedicated GPU deployments, and fine-tuning are more important than a polished chatbot UI.
-- **Browser automation:** Pick [Browserbase](/tools/browserbase/) when an AI agent, scraper, QA runner, or workflow needs managed browsers, identity, observability, and Stagehand-style automation.
+- **Browser automation:** Pick [Browserbase](/tools/browserbase/) when an AI agent, scraper, QA runner, or workflow needs managed browsers, Search/Fetch, Functions runtime, identity, observability, Model Gateway, and Stagehand-style automation.
 - **Speech APIs:** Pick [Deepgram](/tools/deepgram/) when speech-to-text, text-to-speech, voice agents, or audio intelligence are infrastructure, not just creator utilities.
 - **Serverless GPU apps:** Pick [Modal](/tools/modal/) when you want Python jobs, endpoints, queues, sandboxes, and GPU workloads without Kubernetes. The June 8 check keeps Starter at $0 with $30/month credits, Team at $250/month plus compute with $100/month credits, B200 at $0.001736/sec, H100 at $0.001097/sec, and B200+ as a compatibility route that can run on B200 or B300 while billing as B200.
 - **Open-weight model family:** Pick [Llama](/tools/llama/) when infrastructure needs self-hostable or provider-hosted open weights rather than a closed frontier API. The June 8 check keeps Maverick as the flagship open-weight lane, Scout as the current Groq fast-inference card at $0.11/M input and $0.34/M output, and Together Maverick at $0.27/M input and $0.85/M output.
@@ -123,7 +123,10 @@ Do not publish infrastructure pages with old flat monthly subscription framing. 
 - [Fireworks AI pricing](https://fireworks.ai/pricing) (verified 2026-06-12)
 - [Fireworks billing FAQ](https://docs.fireworks.ai/faq-new/billing-pricing/how-much-does-fireworks-cost) (verified 2026-06-12)
 - [Fireworks inference documentation](https://docs.fireworks.ai/guides/inference-introduction) (verified 2026-06-12)
-- [Browserbase pricing](https://www.browserbase.com/pricing) (verified 2026-06-12)
+- [Browserbase pricing](https://www.browserbase.com/pricing) (verified 2026-06-18)
+- [Browserbase changelog](https://www.browserbase.com/changelog) (verified 2026-06-18)
+- [Browserbase Browser explainer](https://www.browserbase.com/blog/what-is-a-browserbase-browser) (verified 2026-06-18)
+- [Browserbase Model Gateway docs](https://docs.browserbase.com/platform/model-gateway/overview) (verified 2026-06-18)
 - [Deepgram pricing](https://deepgram.com/pricing) (verified 2026-06-12)
 - [Together AI pricing](https://www.together.ai/pricing) (verified 2026-06-12)
 - [Hugging Face pricing](https://huggingface.co/pricing) (verified 2026-06-12)

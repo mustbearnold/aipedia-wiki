@@ -6,10 +6,10 @@ tools: [capacities, readwise]
 category: ai-notes
 winner: depends
 seo_title: "Capacities vs Readwise Reader: PKM or Reading Retention? (June 2026)"
-meta_description: "Updated June 12, 2026: choose Capacities for object-based PKM and Readwise Reader for reading capture, highlights, Ghostreader AI, exports, and spaced-repetition review."
+meta_description: "Updated June 18, 2026: choose Capacities for object-based PKM with Pro AI connectors/provider choice and Readwise Reader for reading capture, highlights, Ghostreader AI, exports, and spaced-repetition review."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-18
+last_verified: 2026-06-18
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -31,8 +31,8 @@ The cleanest combined workflow is Readwise for ingestion and retention, then Cap
 | Buyer question | Capacities | Readwise Reader |
 |---|---|---|
 | **Primary job** | Object-based personal knowledge management | Reading capture, highlight review, and document-level reading assistance |
-| **Best first plan** | Basic for free PKM; Pro when AI assistant and advanced workflow features matter | 30-day trial, then Lite or Full depending whether Reader/full Readwise is needed |
-| **June 2026 price signal** | Basic is free; Pro adds AI assistant, smart queries, calendar integrations, task actions, and unlimited media uploads | Readwise pricing lists Lite at $5.59/mo billed annually and Full at $9.99/mo billed annually; Full monthly checkout shows $12.99/mo |
+| **Best first plan** | Basic for free PKM; Pro when AI assistant, AI Chat Connectors, provider choice, and advanced workflow features matter | 30-day trial, then Lite or Full depending whether Reader/full Readwise is needed |
+| **June 2026 price signal** | Basic is free core PKM; Pro adds AI assistant, AI Chat Connectors, provider choice, smart queries, task actions, and media workflows | Readwise pricing lists Lite at $5.59/mo billed annually and Full at $9.99/mo billed annually; Full monthly checkout shows $12.99/mo |
 | **Best output** | Linked objects, properties, daily notes, AI chats, and project memory | Highlights, reading inbox, daily review, exports, document chat, and Ghostreader prompts |
 | **Main watch-out** | Requires active organization habits | No perpetual free tier after trial; not a team knowledge base |
 
@@ -56,7 +56,7 @@ The cleanest combined workflow is Readwise for ingestion and retention, then Cap
 
 Start with **Readwise** if your pile of reading is the bottleneck. Use the 30-day trial to test whether you actually review highlights, use Ghostreader, and export notes into your downstream system. Lite is the cheaper reading/review path; Full is the better pick when Reader plus the full Readwise system is the product you need.
 
-Start with **Capacities Basic** if your inputs already come from many places and the bigger issue is structure. Upgrade to Pro when AI assistant access, smart queries, task actions, calendar integrations, and media limits become meaningful.
+Start with **Capacities Basic** if your inputs already come from many places and the bigger issue is structure. Upgrade to Pro when AI assistant access, AI Chat Connectors, provider choice, smart queries, task actions, recurring tasks, and media limits become meaningful.
 
 Do not buy both on day one unless you already know the workflow. Test Readwise as the capture layer and Capacities as the system of record; if either habit fails, the stack becomes expensive clutter.
 
@@ -73,7 +73,7 @@ Do not buy both on day one unless you already know the workflow. Test Readwise a
 
 ## Current Fact Check
 
-Verified June 12, 2026 against official Capacities pricing/docs, Readwise pricing, and Readwise Ghostreader docs. The old comparison's exact AI model claims were removed because Readwise's current docs describe Ghostreader behavior and prompts without requiring a fixed public model-version claim.
+Verified June 18, 2026 against official Capacities pricing/docs, Capacities Release 64, AI Chat Connector docs, Readwise pricing, and Readwise Ghostreader docs. Readwise's current docs describe Ghostreader behavior and prompts without requiring a fixed public model-version claim.
 
 ## Who Should Choose Capacities
 
@@ -106,6 +106,7 @@ Yes. Capture and review reading in Readwise, then move important themes, decisio
 - [Capacities pricing](https://capacities.io/pricing/)
 - [Capacities AI assistant docs](https://docs.capacities.io/reference/ai-assistant)
 - [Capacities AI Chat Connectors docs](https://docs.capacities.io/reference/ai-chat-connectors)
+- [Capacities Release 64](https://capacities.io/whats-new/release-64/)
 - [Readwise pricing](https://readwise.io/pricing)
 - [Readwise Reader overview](https://readwise.io/read)
 - [Readwise Ghostreader docs](https://docs.readwise.io/reader/guides/ghostreader/overview)

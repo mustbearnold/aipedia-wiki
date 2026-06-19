@@ -1,0 +1,157 @@
+{
+  "version": 1,
+  "surfaces": [
+    {
+      "id": "docs-agent",
+      "label": "Docs and agent operating files",
+      "category": "docs",
+      "match": {
+        "prefixes": [".agent/", ".claude/", "docs/"],
+        "files": ["AGENTS.md", "README.md"]
+      }
+    },
+    {
+      "id": "content",
+      "label": "Editorial content and content data",
+      "category": "content",
+      "match": {
+        "prefixes": ["src/content/", "src/content-antigravity/", "src/pages/answers/", "src/data/"],
+        "files": ["PAGE_REFRESH_LEDGER.md"]
+      }
+    },
+    {
+      "id": "api-routes",
+      "label": "Astro API routes",
+      "category": "runtime",
+      "checks": ["api"],
+      "match": {
+        "prefixes": ["src/pages/api/"]
+      }
+    },
+    {
+      "id": "runtime-pages",
+      "label": "Runtime pages",
+      "category": "runtime",
+      "match": {
+        "regexes": ["^src/pages/(?!api/).+\\.(astro|ts)$"]
+      }
+    },
+    {
+      "id": "runtime-layouts",
+      "label": "Runtime layouts",
+      "category": "runtime",
+      "match": {
+        "prefixes": ["src/layouts/"]
+      }
+    },
+    {
+      "id": "runtime-components",
+      "label": "Runtime components",
+      "category": "runtime",
+      "match": {
+        "prefixes": ["src/components/"]
+      }
+    },
+    {
+      "id": "runtime-styles",
+      "label": "Runtime styles",
+      "category": "runtime",
+      "match": {
+        "prefixes": ["src/styles/"]
+      }
+    },
+    {
+      "id": "runtime-modules",
+      "label": "Runtime support modules",
+      "category": "runtime",
+      "match": {
+        "prefixes": ["src/plugins/", "src/utils/", "src/lib/"]
+      }
+    },
+    {
+      "id": "config",
+      "label": "Runtime configuration",
+      "category": "runtime",
+      "match": {
+        "files": ["astro.config.mjs", "tsconfig.json", "vercel.json"]
+      }
+    },
+    {
+      "id": "assets",
+      "label": "Static assets",
+      "category": "assets",
+      "match": {
+        "prefixes": ["public/"]
+      }
+    },
+    {
+      "id": "scripts",
+      "label": "Scripts, script tests, and package command surface",
+      "category": "tooling",
+      "match": {
+        "prefixes": ["scripts/", "tests/"],
+        "files": ["package.json", "src/data/operator-surfaces.json"]
+      }
+    },
+    {
+      "id": "dependencies",
+      "label": "Dependency lockfile",
+      "category": "dependencies",
+      "match": {
+        "files": ["package-lock.json"]
+      }
+    },
+    {
+      "id": "ci",
+      "label": "CI workflows",
+      "category": "ci",
+      "match": {
+        "prefixes": [".github/workflows/"]
+      }
+    },
+    {
+      "id": "repo-config",
+      "label": "Repository metadata",
+      "category": "repo",
+      "match": {
+        "files": [".gitignore", ".gitattributes", ".mcp.json"]
+      }
+    }
+  ],
+  "verification": {
+    "baseCommands": ["git diff --check"],
+    "commandGroups": [
+      {
+        "categories": ["tooling", "ci", "repo"],
+        "commands": ["npm run test:scripts", "npm run audit:commands"]
+      },
+      {
+        "categories": ["content"],
+        "commands": [
+          "npm run ledger:pages:check",
+          "npm run guard:check",
+          "npm run audit:facts",
+          "npm run audit:sources",
+          "npm run check:links",
+          "npm run check:news"
+        ]
+      },
+      {
+        "categories": ["assets"],
+        "commands": ["npm run check:assets:quick"]
+      },
+      {
+        "checks": ["api"],
+        "commands": ["npm run smoke:api"]
+      },
+      {
+        "categories": ["runtime", "dependencies"],
+        "commands": ["npm run build:fast"]
+      },
+      {
+        "categories": ["dependencies"],
+        "commands": ["npm run check:security"]
+      }
+    ]
+  }
+}

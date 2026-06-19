@@ -1,0 +1,442 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation [ref=e4]:
+    - generic [ref=e5]:
+      - link "aipedia.wiki home" [ref=e6] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e8]: aipedia.wiki
+      - generic [ref=e9]:
+        - button "Search" [ref=e10] [cursor=pointer]:
+          - img [ref=e11]
+        - button "Open menu" [ref=e13] [cursor=pointer]:
+          - img [ref=e14]
+        - button "Switch to light theme" [ref=e16] [cursor=pointer]:
+          - generic [ref=e17]:
+            - img [ref=e18]
+            - img [ref=e21]
+  - main [ref=e24]:
+    - generic [ref=e25]:
+      - region "Don’t pick an AI tool without this." [ref=e26]:
+        - generic [ref=e29]:
+          - paragraph [ref=e30] [cursor=pointer]:
+            - text: Refreshed Jun 17
+            - generic [ref=e32]: ·
+            - text: Source-checked daily
+          - heading "Don’t pick an AI tool without this." [level=1] [ref=e33]:
+            - text: Don’t pick an AI tool
+            - generic [ref=e34]: without this.
+          - paragraph [ref=e35]:
+            - strong [ref=e36]: "260"
+            - text: tools scored. Real prices. Honest alternatives. Zero paid rankings.
+          - search [ref=e37]:
+            - generic [ref=e38]: Search aipedia.wiki
+            - generic [ref=e39]:
+              - img [ref=e40]
+              - combobox "Search aipedia.wiki" [ref=e42]
+              - button "Search" [ref=e43] [cursor=pointer]
+          - group "Popular searches" [ref=e44]:
+            - generic [ref=e45]: Popular
+            - button "ChatGPT" [ref=e46] [cursor=pointer]
+            - button "Claude" [ref=e47] [cursor=pointer]
+            - button "Cursor" [ref=e48] [cursor=pointer]
+            - button "Gemini" [ref=e49] [cursor=pointer]
+            - button "Midjourney" [ref=e50] [cursor=pointer]
+            - button "AI video" [ref=e51] [cursor=pointer]
+          - paragraph [ref=e52]:
+            - text: Independent · source-backed ·
+            - link "no paid rankings, ever" [ref=e53] [cursor=pointer]:
+              - /url: /about/editorial/
+      - generic "Catalog at a glance" [ref=e54]:
+        - link "260 tools scored" [ref=e55] [cursor=pointer]:
+          - /url: /tools/
+          - generic [ref=e56]: "260"
+          - generic [ref=e57]: tools scored
+        - link "279 comparisons" [ref=e58] [cursor=pointer]:
+          - /url: /compare/
+          - generic [ref=e59]: "279"
+          - generic [ref=e60]: comparisons
+        - link "399 news items" [ref=e61] [cursor=pointer]:
+          - /url: /news/
+          - generic [ref=e62]: "399"
+          - generic [ref=e63]: news items
+        - link "110 buyer guides" [ref=e64] [cursor=pointer]:
+          - /url: /guides/
+          - generic [ref=e65]: "110"
+          - generic [ref=e66]: buyer guides
+      - navigation "Main portals" [ref=e67]:
+        - link "260 Tools" [ref=e68] [cursor=pointer]:
+          - /url: /tools/
+          - generic [ref=e69]: "260"
+          - generic [ref=e70]: Tools
+        - link "15 Categories" [ref=e71] [cursor=pointer]:
+          - /url: /categories/
+          - generic [ref=e72]: "15"
+          - generic [ref=e73]: Categories
+        - link "279 Compare" [ref=e74] [cursor=pointer]:
+          - /url: /compare/
+          - generic [ref=e75]: "279"
+          - generic [ref=e76]: Compare
+        - link "110 Guides" [ref=e77] [cursor=pointer]:
+          - /url: /guides/
+          - generic [ref=e78]: "110"
+          - generic [ref=e79]: Guides
+        - link "Picks Answers" [ref=e80] [cursor=pointer]:
+          - /url: /answers/
+          - generic [ref=e81]: Picks
+          - generic [ref=e82]: Answers
+        - link "399 News" [ref=e83] [cursor=pointer]:
+          - /url: /news/
+          - generic [ref=e84]: "399"
+          - generic [ref=e85]: News
+      - region "Highest-rated right now" [ref=e86]:
+        - generic [ref=e87]:
+          - heading "Highest-rated right now" [level=2] [ref=e88]
+          - link "All 260" [ref=e89] [cursor=pointer]:
+            - /url: /tools/
+            - text: All 260 →
+        - list [ref=e90]:
+          - listitem [ref=e91]:
+            - link "1 ChatGPT logo ChatGPT OpenAI's flagship AI assistant, with GPT-5 models, image generation, Codex coding agent, voice, and agent mode across web, mobile, and desktop. Chatbots 9.5/10" [ref=e92] [cursor=pointer]:
+              - /url: /tools/chatgpt/
+              - generic [ref=e93]: "1"
+              - img "ChatGPT logo" [ref=e94]
+              - generic [ref=e95]:
+                - strong [ref=e96]: ChatGPT
+                - generic [ref=e97]: OpenAI's flagship AI assistant, with GPT-5 models, image generation, Codex coding agent, voice, and agent mode across web, mobile, and desktop.
+              - generic [ref=e98]:
+                - generic [ref=e99]: Chatbots
+                - generic [ref=e100]: 9.5/10
+          - listitem [ref=e101]:
+            - link "2 Claude logo Claude Anthropic's AI assistant. Strongest on long-context reasoning, agentic coding, and long-form writing. Chatbots 9.3/10" [ref=e102] [cursor=pointer]:
+              - /url: /tools/claude/
+              - generic [ref=e103]: "2"
+              - img "Claude logo" [ref=e104]
+              - generic [ref=e105]:
+                - strong [ref=e106]: Claude
+                - generic [ref=e107]: Anthropic's AI assistant. Strongest on long-context reasoning, agentic coding, and long-form writing.
+              - generic [ref=e108]:
+                - generic [ref=e109]: Chatbots
+                - generic [ref=e110]: 9.3/10
+          - listitem [ref=e111]:
+            - link "3 ElevenLabs logo ElevenLabs The top-ranked AI voice platform in June 2026. Eleven v3 covers 70+ languages with expressive audio tags, Flash v2.5 hits ~75ms latency for conversational agents, Scribe v2 Realtime targets ~150ms STT, and PAYG API/Agents pricing is now lower. Voice 9.3/10" [ref=e112] [cursor=pointer]:
+              - /url: /tools/elevenlabs/
+              - generic [ref=e113]: "3"
+              - img "ElevenLabs logo" [ref=e114]
+              - generic [ref=e115]:
+                - strong [ref=e116]: ElevenLabs
+                - generic [ref=e117]: The top-ranked AI voice platform in June 2026. Eleven v3 covers 70+ languages with expressive audio tags, Flash v2.5 hits ~75ms latency for conversational agents, Scribe v2 Realtime targets ~150ms STT, and PAYG API/Agents pricing is now lower.
+              - generic [ref=e118]:
+                - generic [ref=e119]: Voice
+                - generic [ref=e120]: 9.3/10
+          - listitem [ref=e121]:
+            - link "4 GitHub Copilot logo GitHub Copilot GitHub-native AI pair programmer across IDEs, GitHub, CLI, code review, Spaces, Spark, and cloud Coding Agent workflows, now governed by GitHub AI Credits. Coding 9.3/10" [ref=e122] [cursor=pointer]:
+              - /url: /tools/github-copilot/
+              - generic [ref=e123]: "4"
+              - img "GitHub Copilot logo" [ref=e124]
+              - generic [ref=e125]:
+                - strong [ref=e126]: GitHub Copilot
+                - generic [ref=e127]: GitHub-native AI pair programmer across IDEs, GitHub, CLI, code review, Spaces, Spark, and cloud Coding Agent workflows, now governed by GitHub AI Credits.
+              - generic [ref=e128]:
+                - generic [ref=e129]: Coding
+                - generic [ref=e130]: 9.3/10
+          - listitem [ref=e131]:
+            - link "5 GPT Image 2 logo GPT Image 2 OpenAI's reasoning-native image model. State-of-the-art text rendering across 12+ languages, 4K output, up to 8 variants per prompt. Image 9.3/10" [ref=e132] [cursor=pointer]:
+              - /url: /tools/gpt-image-2/
+              - generic [ref=e133]: "5"
+              - img "GPT Image 2 logo" [ref=e134]
+              - generic [ref=e135]:
+                - strong [ref=e136]: GPT Image 2
+                - generic [ref=e137]: OpenAI's reasoning-native image model. State-of-the-art text rendering across 12+ languages, 4K output, up to 8 variants per prompt.
+              - generic [ref=e138]:
+                - generic [ref=e139]: Image
+                - generic [ref=e140]: 9.3/10
+          - listitem [ref=e141]:
+            - link "6 Hugging Face logo Hugging Face Open AI collaboration hub for models, datasets, Spaces, inference endpoints, evaluations, and enterprise ML workflows. Infrastructure 9.3/10" [ref=e142] [cursor=pointer]:
+              - /url: /tools/hugging-face/
+              - generic [ref=e143]: "6"
+              - img "Hugging Face logo" [ref=e144]
+              - generic [ref=e145]:
+                - strong [ref=e146]: Hugging Face
+                - generic [ref=e147]: Open AI collaboration hub for models, datasets, Spaces, inference endpoints, evaluations, and enterprise ML workflows.
+              - generic [ref=e148]:
+                - generic [ref=e149]: Infrastructure
+                - generic [ref=e150]: 9.3/10
+      - region "Latest signals" [ref=e151]:
+        - generic [ref=e152]:
+          - heading "Latest signals" [level=2] [ref=e153]
+          - link "All news" [ref=e154] [cursor=pointer]:
+            - /url: /news/
+            - text: All news →
+        - list [ref=e155]:
+          - listitem [ref=e156]:
+            - link "Jun 17 NVIDIA's AI factory push makes compute, optics, and energy part of AI buying AP reported that Jensen Huang called for new social norms around AI and linked NVIDIA's AI buildout to a Texas Coherent facility. Coherent says it signed a CHIPS letter of intent for up to $50 million to expand optical-networking manufacturing for AI datacenters. Buyers should treat compute supply and infrastructure cost as AI-tool risk." [ref=e157] [cursor=pointer]:
+              - /url: /news/2026-06-17-nvidia-ai-factory-coherent-social-norms/
+              - time [ref=e158]: Jun 17
+              - generic [ref=e159]:
+                - strong [ref=e160]: NVIDIA's AI factory push makes compute, optics, and energy part of AI buying
+                - generic [ref=e161]: AP reported that Jensen Huang called for new social norms around AI and linked NVIDIA's AI buildout to a Texas Coherent facility. Coherent says it signed a CHIPS letter of intent for up to $50 million to expand optical-networking manufacturing for AI datacenters. Buyers should treat compute supply and infrastructure cost as AI-tool risk.
+          - listitem [ref=e162]:
+            - link "Jun 17 Microsoft Copilot Cowork makes metered workplace agents a procurement problem Microsoft says Copilot Cowork is generally available and requires a Microsoft 365 Copilot User Subscription License, then bills Cowork usage based on the tasks users run. Buyers should treat autonomous workplace agents as metered work with model-route, context, approval, and spend controls." [ref=e163] [cursor=pointer]:
+              - /url: /news/2026-06-17-microsoft-copilot-cowork-usage-billing/
+              - time [ref=e164]: Jun 17
+              - generic [ref=e165]:
+                - strong [ref=e166]: Microsoft Copilot Cowork makes metered workplace agents a procurement problem
+                - generic [ref=e167]: Microsoft says Copilot Cowork is generally available and requires a Microsoft 365 Copilot User Subscription License, then bills Cowork usage based on the tasks users run. Buyers should treat autonomous workplace agents as metered work with model-route, context, approval, and spend controls.
+          - listitem [ref=e168]:
+            - link "Jun 17 Google's June Pixel Drop turns Gemini Omni and music generation into phone-native AI tools Google's June 2026 Pixel Drop adds Gemini Omni video creation and editing, Gemini music generation, screen reactions, app Bubbles, and Ask Photos improvements. The buyer signal is that multimodal AI creation is moving from specialist web apps into the phone workflow." [ref=e169] [cursor=pointer]:
+              - /url: /news/2026-06-17-google-pixel-drop-gemini-omni-tools/
+              - time [ref=e170]: Jun 17
+              - generic [ref=e171]:
+                - strong [ref=e172]: Google's June Pixel Drop turns Gemini Omni and music generation into phone-native AI tools
+                - generic [ref=e173]: Google's June 2026 Pixel Drop adds Gemini Omni video creation and editing, Gemini music generation, screen reactions, app Bubbles, and Ask Photos improvements. The buyer signal is that multimodal AI creation is moving from specialist web apps into the phone workflow.
+          - listitem [ref=e174]:
+            - link "Jun 17 G7 AI sovereignty debate turns frontier-model access into infrastructure risk AP reported that OpenAI, Google DeepMind, Anthropic, Cohere, Mistral, Black Forest Labs, Domyn, Sakana AI, and Synthesia leaders were expected at the G7 AI working lunch in France. The buyer signal is that model access, local compute, and sovereign AI partnerships are now continuity questions." [ref=e175] [cursor=pointer]:
+              - /url: /news/2026-06-17-g7-ai-sovereignty-frontier-labs/
+              - time [ref=e176]: Jun 17
+              - generic [ref=e177]:
+                - strong [ref=e178]: G7 AI sovereignty debate turns frontier-model access into infrastructure risk
+                - generic [ref=e179]: AP reported that OpenAI, Google DeepMind, Anthropic, Cohere, Mistral, Black Forest Labs, Domyn, Sakana AI, and Synthesia leaders were expected at the G7 AI working lunch in France. The buyer signal is that model access, local compute, and sovereign AI partnerships are now continuity questions.
+      - region "Start with your question" [ref=e180]:
+        - heading "Start with your question" [level=2] [ref=e182]
+        - navigation "High-intent buyer routes" [ref=e183]:
+          - link "General work Pick an assistant ChatGPT, Claude, Gemini, or Perplexity by job. →" [ref=e184] [cursor=pointer]:
+            - /url: /answers/best-ai-chatbot-2026/
+            - generic [ref=e185]: General work
+            - strong [ref=e186]: Pick an assistant
+            - generic [ref=e187]: ChatGPT, Claude, Gemini, or Perplexity by job.
+            - text: →
+          - link "Developer stack Choose coding tools IDE assistant, terminal agent, or app builder. →" [ref=e188] [cursor=pointer]:
+            - /url: /answers/best-ai-coding-tool-2026/
+            - generic [ref=e189]: Developer stack
+            - strong [ref=e190]: Choose coding tools
+            - generic [ref=e191]: IDE assistant, terminal agent, or app builder.
+            - text: →
+          - link "Budget path Free and budget Free tiers and when paid is worth it. →" [ref=e192] [cursor=pointer]:
+            - /url: /answers/best-free-ai-tools-2026/
+            - generic [ref=e193]: Budget path
+            - strong [ref=e194]: Free and budget
+            - generic [ref=e195]: Free tiers and when paid is worth it.
+            - text: →
+          - link "Creative output Creative media Video, image, music, and voice paths. →" [ref=e196] [cursor=pointer]:
+            - /url: /answers/best-ai-video-generator-2026/
+            - generic [ref=e197]: Creative output
+            - strong [ref=e198]: Creative media
+            - generic [ref=e199]: Video, image, music, and voice paths.
+            - text: →
+      - region "Browse by category" [ref=e200]:
+        - generic [ref=e201]:
+          - heading "Browse by category" [level=2] [ref=e202]
+          - link "All" [ref=e203] [cursor=pointer]:
+            - /url: /categories/
+            - text: All →
+        - list [ref=e204]:
+          - listitem [ref=e205]:
+            - link "AI Chatbots & LLMs 26 Top 9.5" [ref=e206] [cursor=pointer]:
+              - /url: /categories/ai-chatbots/
+              - strong [ref=e207]: AI Chatbots & LLMs
+              - generic [ref=e208]: "26"
+              - generic [ref=e209]: Top 9.5
+          - listitem [ref=e210]:
+            - link "AI Coding Assistants 30 Top 9.3" [ref=e211] [cursor=pointer]:
+              - /url: /categories/ai-coding/
+              - strong [ref=e212]: AI Coding Assistants
+              - generic [ref=e213]: "30"
+              - generic [ref=e214]: Top 9.3
+          - listitem [ref=e215]:
+            - link "AI Image Generation 20 Top 9.3" [ref=e216] [cursor=pointer]:
+              - /url: /categories/ai-image/
+              - strong [ref=e217]: AI Image Generation
+              - generic [ref=e218]: "20"
+              - generic [ref=e219]: Top 9.3
+          - listitem [ref=e220]:
+            - link "AI Infrastructure & Model APIs 8 Top 9.3" [ref=e221] [cursor=pointer]:
+              - /url: /categories/ai-infrastructure/
+              - strong [ref=e222]: AI Infrastructure & Model APIs
+              - generic [ref=e223]: "8"
+              - generic [ref=e224]: Top 9.3
+          - listitem [ref=e225]:
+            - link "AI Voice Tools 21 Top 9.3" [ref=e226] [cursor=pointer]:
+              - /url: /categories/ai-voice/
+              - strong [ref=e227]: AI Voice Tools
+              - generic [ref=e228]: "21"
+              - generic [ref=e229]: Top 9.3
+          - listitem [ref=e230]:
+            - link "AI Automation & Agents 45 Top 9" [ref=e231] [cursor=pointer]:
+              - /url: /categories/ai-automation/
+              - strong [ref=e232]: AI Automation & Agents
+              - generic [ref=e233]: "45"
+              - generic [ref=e234]: Top 9
+          - listitem [ref=e235]:
+            - link "AI SEO Tools 9 Top 9" [ref=e236] [cursor=pointer]:
+              - /url: /categories/ai-seo/
+              - strong [ref=e237]: AI SEO Tools
+              - generic [ref=e238]: "9"
+              - generic [ref=e239]: Top 9
+          - listitem [ref=e240]:
+            - link "AI Research Tools 10 Top 8.8" [ref=e241] [cursor=pointer]:
+              - /url: /categories/ai-research/
+              - strong [ref=e242]: AI Research Tools
+              - generic [ref=e243]: "10"
+              - generic [ref=e244]: Top 8.8
+      - region "Buyer guides checked this week" [ref=e245]:
+        - generic [ref=e246]:
+          - paragraph [ref=e247]: Recently verified
+          - heading "Buyer guides checked this week" [level=2] [ref=e249]
+          - paragraph [ref=e250]: Checked June 12, 2026 against current official vendor surfaces. Model quality, usage credits, commercial rights, and export limits, separated before recommending an alternative.
+        - navigation "Freshly verified guide links" [ref=e251]:
+          - link "Video credits and models Runway alternatives Seedance, Kling, Veo, Luma, Pika, Hailuo" [ref=e252] [cursor=pointer]:
+            - /url: /guides/runway-alternatives/
+            - generic [ref=e253]: Video credits and models
+            - strong [ref=e254]: Runway alternatives
+            - generic [ref=e255]: Seedance, Kling, Veo, Luma, Pika, Hailuo
+          - link "Music rights and exports Suno alternatives ElevenLabs Music, Udio, AIVA, Mubert, Stable Audio" [ref=e256] [cursor=pointer]:
+            - /url: /guides/suno-alternatives/
+            - generic [ref=e257]: Music rights and exports
+            - strong [ref=e258]: Suno alternatives
+            - generic [ref=e259]: ElevenLabs Music, Udio, AIVA, Mubert, Stable Audio
+      - complementary "Editorial standards" [ref=e260]:
+        - generic [ref=e261]:
+          - heading "Editorial standards" [level=2] [ref=e262]
+          - paragraph [ref=e263]: aipedia.wiki is an agentically operated AI tools encyclopedia. Independent scores. Source-backed facts. Some outbound links are affiliate links, disclosed per-CTA. Affiliate relationships never influence scores, rankings, or reviews.
+        - list [ref=e264]:
+          - listitem [ref=e265]:
+            - link "Scoring methodology verified 2026-06-12" [ref=e266] [cursor=pointer]:
+              - /url: /about/scoring/
+              - generic [ref=e267]: Scoring methodology
+              - generic [ref=e268]: verified 2026-06-12
+          - listitem [ref=e269]:
+            - link "Editorial policy verified 2026-06-12" [ref=e270] [cursor=pointer]:
+              - /url: /about/editorial/
+              - generic [ref=e271]: Editorial policy
+              - generic [ref=e272]: verified 2026-06-12
+          - listitem [ref=e273]:
+            - link "How we verify facts verified 2026-06-12" [ref=e274] [cursor=pointer]:
+              - /url: /about/
+              - generic [ref=e275]: How we verify facts
+              - generic [ref=e276]: verified 2026-06-12
+          - listitem [ref=e277]:
+            - link "Affiliate disclosure verified 2026-06-06" [ref=e278] [cursor=pointer]:
+              - /url: /disclosure/
+              - generic [ref=e279]: Affiliate disclosure
+              - generic [ref=e280]: verified 2026-06-06
+  - contentinfo [ref=e281]:
+    - generic [ref=e282]:
+      - generic [ref=e283]:
+        - link "aipedia.wiki home" [ref=e284] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e286]: aipedia.wiki
+        - paragraph [ref=e287]: The AI tools encyclopedia and buyer decision engine. Independent reviews, comparisons, guides, and scoring across 14 categories.
+      - generic [ref=e288]:
+        - generic [ref=e289]:
+          - heading "Categories" [level=3] [ref=e290]
+          - generic [ref=e291]:
+            - link "AI Chatbots" [ref=e292] [cursor=pointer]:
+              - /url: /categories/ai-chatbots/
+            - link "AI Coding" [ref=e293] [cursor=pointer]:
+              - /url: /categories/ai-coding/
+            - link "AI Writing" [ref=e294] [cursor=pointer]:
+              - /url: /categories/ai-writing/
+            - link "AI Image" [ref=e295] [cursor=pointer]:
+              - /url: /categories/ai-image/
+            - link "AI Video" [ref=e296] [cursor=pointer]:
+              - /url: /categories/ai-video/
+            - link "AI Voice" [ref=e297] [cursor=pointer]:
+              - /url: /categories/ai-voice/
+            - link "AI Music" [ref=e298] [cursor=pointer]:
+              - /url: /categories/ai-music/
+            - link "AI Automation" [ref=e299] [cursor=pointer]:
+              - /url: /categories/ai-automation/
+            - link "AI Search" [ref=e300] [cursor=pointer]:
+              - /url: /categories/ai-search/
+            - link "AI Research" [ref=e301] [cursor=pointer]:
+              - /url: /categories/ai-research/
+            - link "AI SEO" [ref=e302] [cursor=pointer]:
+              - /url: /categories/ai-seo/
+            - link "AI Design" [ref=e303] [cursor=pointer]:
+              - /url: /categories/ai-design/
+            - link "AI Notes" [ref=e304] [cursor=pointer]:
+              - /url: /categories/ai-notes/
+            - link "AI Presentation" [ref=e305] [cursor=pointer]:
+              - /url: /categories/ai-presentation/
+        - generic [ref=e306]:
+          - generic [ref=e307]:
+            - heading "Explore" [level=3] [ref=e308]
+            - list [ref=e309]:
+              - listitem [ref=e310]:
+                - link "Explore hub" [ref=e311] [cursor=pointer]:
+                  - /url: /explore/
+              - listitem [ref=e312]:
+                - link "Categories" [ref=e313] [cursor=pointer]:
+                  - /url: /categories/
+              - listitem [ref=e314]:
+                - link "All Tools" [ref=e315] [cursor=pointer]:
+                  - /url: /tools/
+              - listitem [ref=e316]:
+                - link "Comparisons" [ref=e317] [cursor=pointer]:
+                  - /url: /compare/
+              - listitem [ref=e318]:
+                - link "Guides" [ref=e319] [cursor=pointer]:
+                  - /url: /guides/
+              - listitem [ref=e320]:
+                - link "Tool Set Builder" [ref=e321] [cursor=pointer]:
+                  - /url: /stack-builder/
+              - listitem [ref=e322]:
+                - link "Trending" [ref=e323] [cursor=pointer]:
+                  - /url: /trends/
+              - listitem [ref=e324]:
+                - link "Dead Tools" [ref=e325] [cursor=pointer]:
+                  - /url: /dead/
+              - listitem [ref=e326]:
+                - link "Glossary" [ref=e327] [cursor=pointer]:
+                  - /url: /glossary/
+          - generic [ref=e328]:
+            - heading "Editorial" [level=3] [ref=e329]
+            - list [ref=e330]:
+              - listitem [ref=e331]:
+                - link "About" [ref=e332] [cursor=pointer]:
+                  - /url: /about/
+              - listitem [ref=e333]:
+                - link "Editorial Policy" [ref=e334] [cursor=pointer]:
+                  - /url: /about/editorial/
+              - listitem [ref=e335]:
+                - link "Scoring Methodology" [ref=e336] [cursor=pointer]:
+                  - /url: /about/scoring/
+              - listitem [ref=e337]:
+                - link "Media Kit" [ref=e338] [cursor=pointer]:
+                  - /url: /media-kit/
+      - generic [ref=e339]:
+        - link "Privacy Policy" [ref=e340] [cursor=pointer]:
+          - /url: /privacy/
+        - link "Terms of Service" [ref=e341] [cursor=pointer]:
+          - /url: /terms/
+        - link "Affiliate Disclosure" [ref=e342] [cursor=pointer]:
+          - /url: /disclosure/
+      - generic [ref=e344]:
+        - generic [ref=e345]:
+          - generic [ref=e346]: ✓
+          - generic [ref=e347]: No paid placements
+        - generic [ref=e348]:
+          - generic [ref=e349]: ✓
+          - generic [ref=e350]: Monthly verification
+        - generic [ref=e351]:
+          - generic [ref=e352]: ✓
+          - generic [ref=e353]: Independent editorial
+        - generic [ref=e354]:
+          - generic [ref=e355]: ✓
+          - generic [ref=e356]: Cited sources
+      - paragraph [ref=e357]: Some links on aipedia.wiki are affiliate links. If you click through and purchase, we may earn a commission at no extra cost to you. Affiliate relationships do not influence our editorial scores, rankings, or reviews.
+      - paragraph [ref=e358]:
+        - text: © 2026 aipedia.wiki · Agentically operated. Standards-governed. Source-aware. Correction-friendly. See
+        - link "editorial policy" [ref=e359] [cursor=pointer]:
+          - /url: /about/editorial/
+        - text: .
+  - generic [ref=e361]:
+    - paragraph [ref=e363]:
+      - text: Optional analytics only. No ads, cross-site tracking, or resale.
+      - link "Read the policy" [ref=e364] [cursor=pointer]:
+        - /url: /privacy/
+      - text: .
+    - generic [ref=e365]:
+      - button "Reject" [ref=e366] [cursor=pointer]
+      - button "Allow analytics" [ref=e367] [cursor=pointer]

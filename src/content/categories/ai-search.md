@@ -5,10 +5,10 @@ title: AI Search & Research Tools
 description: AI answer engines, private search, research notebooks, semantic search APIs, and source-backed research assistants.
 tool_count: 8
 seo_title: "Best AI Search and Research Tools (June 2026)"
-meta_description: "Updated June 15, 2026: compare Perplexity, Kagi, You.com APIs, Comet, ChatGPT Search, Google AI Mode, NotebookLM, Exa, Weaviate/Engram, Grok X Search, Morphic, and Phind migration paths by citations, privacy, APIs, and buyer fit."
+meta_description: "Updated June 18, 2026: compare Perplexity, Kagi, You.com APIs, Comet, ChatGPT Search, Google AI Mode, NotebookLM, Exa, Weaviate/Engram, Cohere RAG, Grok X Search, Morphic, and Phind migration paths by citations, privacy, APIs, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-15
-last_verified: 2026-06-15
+last_updated: 2026-06-18
+last_verified: 2026-06-18
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -54,6 +54,8 @@ AI search is not one category anymore. Buyers now choose between **cited answer 
 
 **Use [Weaviate](/tools/weaviate/) when search is product infrastructure rather than an answer engine.** The June 10 check keeps Weaviate in the open vector database lane, but Engram's June 3 GA means it now also belongs in agent-memory conversations: it is for teams building retrieval, RAG, hybrid search, and durable scoped context inside products, not for non-technical users replacing Google or Perplexity.
 
+**Use [Cohere](/tools/cohere/) when the search problem is enterprise retrieval quality and deployment control.** Cohere is not an answer engine, but the June 18 refresh keeps it relevant to AI search infrastructure: Embed v4 and Rerank 4 remain strong RAG primitives, Model Vault supports isolated VPC/on-prem deployment, North Mini Code adds a model-control lane for coding-agent retrieval workflows, and the Cohere/Aleph Alpha announcement sharpens the European sovereign-AI procurement story.
+
 **Use [You.com](/tools/you-com/) when the buyer wants grounding and research APIs rather than a consumer chat UI.** The June 5 [Exa vs You.com](/compare/exa-vs-you-com/) refresh reflects the current API-first surface: Search at $5/1K calls, Contents at $1/1K pages, Research at $12/1K calls, Finance Research from $110/1K calls, $100 free credit, and custom Enterprise terms.
 
 **June 6 answer-engine vs API fork:** [Perplexity vs You.com](/compare/perplexity-vs-you-com/) now separates the human-facing cited research product from the programmable grounding stack. Start with Perplexity when the buyer needs a research UI today; start with You.com when the buyer needs primitives inside an app or agent.
@@ -81,6 +83,7 @@ AI search is not one category anymore. Buyers now choose between **cited answer 
 | Private paid search | [Kagi](/tools/kagi/) | Ad-free search, lenses, ranking controls, Assistant options | Paid search is a harder sell for casual users |
 | Search/retrieval API | [Exa](/tools/exa/) | Search, contents, answer, monitors, summaries, and Agent primitives for AI apps | Value depends on integration quality, request economics, extra results, summaries, monitor usage, enrichment, and Agent effort |
 | Product RAG and agent memory | [Weaviate](/tools/weaviate/) | Open vector database, managed cloud, hybrid search, hosted embeddings, Query Agent, and Engram memory/context service | Infrastructure ownership, index design, add-on pricing, and app-layer permissions still matter |
+| Enterprise RAG model stack | [Cohere](/tools/cohere/) | Embed v4, Rerank 4, Command A+, North Mini Code, and Model Vault for private retrieval-heavy systems | Not a human search UI; model serving, Rerank chunk math, deployment terms, and evals remain the buyer's responsibility |
 | Search-to-deliverable AI workspace | [Genspark](/tools/genspark/) | Turns research into docs, slides, sheets, calls, media, and agent outputs | Credit burn and enterprise/API availability need direct verification |
 | Enterprise work search | [Glean](/tools/glean/) | Permission-aware search and agents over company apps and knowledge | Contact-sales pricing and connector/security review are mandatory |
 | Self-hosted answer engine | [Morphic](/tools/morphic/) | Apache 2.0, forkable answer-engine stack with BYOK model/search routing | Requires deployment, provider keys, search-backend setup, and no first-party hosted SLA |
@@ -166,6 +169,10 @@ Do not leave this category stale. Google AI Mode, Perplexity Pro/Max/Enterprise,
 - [Exa API pricing](https://exa.ai/pricing/api) (verified 2026-06-12)
 - [Weaviate pricing](https://weaviate.io/pricing) (verified 2026-06-12)
 - [Weaviate Engram GA announcement](https://weaviate.io/blog/engram-generally-available) (verified 2026-06-12)
+- [Cohere pricing](https://cohere.com/pricing) (verified 2026-06-18)
+- [Cohere models docs](https://docs.cohere.com/docs/models) (verified 2026-06-18)
+- [Cohere Rerank docs](https://docs.cohere.com/docs/reranking-with-cohere) (verified 2026-06-18)
+- [Cohere and Aleph Alpha](https://cohere.com/blog/cohere-alephalpha-join-forces) (verified 2026-06-18)
 - [Genspark membership benefits](https://www.genspark.ai/membership-benefits-lp) (verified 2026-06-12)
 - [Glean official site](https://www.glean.com/) (verified 2026-06-12)
 - [Glean developer platform](https://developers.glean.com/) (verified 2026-06-12)

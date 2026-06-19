@@ -145,190 +145,211 @@ const ogImageUrl = ogImage
     <SpeedInsights />
 
     <script is:inline>
-      // Update background gradient based on theme
-      function updateBg() {
-        const bg = document.getElementById('bg-gradient');
-        if (!bg) return;
-        const isLight = document.documentElement.classList.contains('light');
-        bg.style.background = 'var(--bg-base)';
-      }
-      updateBg();
-      // Watch for class changes on html element
-      const observer = new MutationObserver(updateBg);
-      observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
-    </script>
-
-    <script is:inline>
-      // Score-bar fill: when a .score-grid enters view, flip data-played
-      // so CSS transitions fire (staggered via per-cell --bar-delay).
+      // Site-wide runtime initializers. Astro ClientRouter re-runs inline
+      // scripts after swaps, so this block owns one guarded set of observers
+      // and listeners and exposes refresh() for new page DOM.
       (function () {
-        if (!('IntersectionObserver' in window)) return;
-        var io = new IntersectionObserver(function (entries) {
+        var KEY = '__aipediaBaseRuntime';
+        var existing = window[KEY];
+        if (existing && typeof existing.refresh === 'function') {
+          existing.refresh();
+          return;
+        }
+
+        var motionPolicy = window.__aipediaMotionPolicy || (window.__aipediaMotionPolicy = {
+          reduceQuery: '(prefers-reduced-motion: reduce)',
+        });
+        var reduceMotion = motionPolicy.reduceMotion || (motionPolicy.reduceMotion = window.matchMedia(motionPolicy.reduceQuery));
+        var supportsIO = 'IntersectionObserver' in window;
+        var progressTicking = false;
+        var marqueeTimer = 0;
+
+        function prefersReducedMotion() {
+          return reduceMotion.matches;
+        }
+
+        function updateBg() {
+          var bg = document.getElementById('bg-gradient');
+          if (!bg) return;
+          bg.style.background = 'var(--bg-base)';
+        }
+
+        var themeObserver = new MutationObserver(updateBg);
+        themeObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+
+        var scoreIo = supportsIO ? new IntersectionObserver(function (entries) {
           entries.forEach(function (e) {
             if (e.isIntersecting) {
               e.target.setAttribute('data-played', '1');
-              io.unobserve(e.target);
+              scoreIo.unobserve(e.target);
             }
           });
-        }, { threshold: 0.4 });
-        function scan() {
-          document.querySelectorAll('.score-grid:not([data-played])').forEach(function (el) {
-            io.observe(el);
-          });
-        }
-        if (document.readyState === 'loading') {
-          document.addEventListener('DOMContentLoaded', scan);
-        } else {
-          scan();
-        }
-        document.addEventListener('astro:after-swap', scan);
-      })();
-    </script>
+        }, { threshold: 0.4 }) : null;
 
-    <script is:inline>
-      // Scroll-reveal system. Any element with [data-reveal] starts
-      // opacity:0 + translateY(24px) and gets .is-revealed when it
-      // enters the viewport. Works on SPA nav via astro:after-swap.
-      // Children can opt into staggered delays via --reveal-delay.
-      // Respects prefers-reduced-motion (CSS forces static state).
-      (function () {
-        if (!('IntersectionObserver' in window)) {
-          // No IO: reveal everything immediately so content isn't
-          // permanently hidden on very old browsers.
-          document.querySelectorAll('[data-reveal]').forEach(function (el) {
-            el.classList.add('is-revealed');
+        function scanScores() {
+          document.querySelectorAll('.score-grid:not([data-played])').forEach(function (el) {
+            if (!scoreIo) {
+              el.setAttribute('data-played', '1');
+              return;
+            }
+            scoreIo.observe(el);
           });
-          return;
         }
-        var io = new IntersectionObserver(function (entries) {
+
+        var revealIo = supportsIO ? new IntersectionObserver(function (entries) {
           entries.forEach(function (e) {
             if (e.isIntersecting) {
               e.target.classList.add('is-revealed');
-              io.unobserve(e.target);
+              revealIo.unobserve(e.target);
             }
           });
-        }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
-        function scan() {
+        }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' }) : null;
+
+        function scanReveals() {
           document.querySelectorAll('[data-reveal]:not(.is-revealed)').forEach(function (el) {
-            io.observe(el);
+            if (!revealIo || prefersReducedMotion()) {
+              el.classList.add('is-revealed');
+              return;
+            }
+            revealIo.observe(el);
           });
         }
-        if (document.readyState === 'loading') {
-          document.addEventListener('DOMContentLoaded', scan);
-        } else {
-          scan();
-        }
-        document.addEventListener('astro:after-swap', scan);
-      })();
-    </script>
 
-    <script is:inline>
-      // Reading-progress bar. Thin gradient line fixed to the top of
-      // the viewport. Width scales with scroll position. Only renders
-      // after the user has scrolled >40px so it doesn't flash for
-      // no-scroll pages. Cheap: single rAF-throttled scroll listener.
-      (function () {
-        var bar = document.getElementById('read-progress');
-        if (!bar) return;
-        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-        var ticking = false;
-        function update() {
-          ticking = false;
+        function updateProgress() {
+          progressTicking = false;
+          var bar = document.getElementById('read-progress');
+          if (!bar || prefersReducedMotion()) return;
           var h = document.documentElement;
-          var top = (window.pageYOffset || h.scrollTop || 0);
+          var top = window.pageYOffset || h.scrollTop || 0;
           var max = (h.scrollHeight || 0) - (window.innerHeight || 0);
           var pct = max > 0 ? Math.max(0, Math.min(1, top / max)) : 0;
           bar.style.transform = 'scaleX(' + pct.toFixed(4) + ')';
           bar.style.opacity = top > 40 ? '1' : '0';
         }
-        window.addEventListener('scroll', function () {
-          if (!ticking) { requestAnimationFrame(update); ticking = true; }
-        }, { passive: true });
-        window.addEventListener('resize', update, { passive: true });
-        document.addEventListener('astro:after-swap', update);
-        update();
-      })();
-    </script>
 
-    <script is:inline>
-      // Count-up animation for .count-up elements. On first intersection,
-      // animate from 0 to the element's data-target over ~1.2s with an
-      // ease-out curve. One-shot; no rerun on re-enter.
-      (function () {
-        if (!('IntersectionObserver' in window)) return;
-        var DURATION = 1200;
-        function easeOut(t) { return 1 - Math.pow(1 - t, 3); }
-        function animate(el) {
+        function onProgressScroll() {
+          if (!progressTicking) {
+            requestAnimationFrame(updateProgress);
+            progressTicking = true;
+          }
+        }
+
+        var COUNT_DURATION = 1200;
+        function countTarget(el) {
+          return Number(el.getAttribute('data-target') || el.textContent || '0');
+        }
+
+        function finishCount(el) {
           if (el.dataset.counted === '1') return;
+          var target = countTarget(el);
+          if (!Number.isFinite(target)) return;
           el.dataset.counted = '1';
-          var target = Number(el.getAttribute('data-target') || el.textContent || '0');
-          if (!target || isNaN(target)) return;
+          el.textContent = Math.round(target).toLocaleString();
+        }
+
+        function easeOut(t) {
+          return 1 - Math.pow(1 - t, 3);
+        }
+
+        function animateCount(el) {
+          if (el.dataset.counted === '1') return;
+          if (prefersReducedMotion()) {
+            finishCount(el);
+            return;
+          }
+          var target = countTarget(el);
+          if (!Number.isFinite(target)) return;
+          el.dataset.counted = '1';
           var start = performance.now();
           function step(now) {
-            var p = Math.min(1, (now - start) / DURATION);
+            if (prefersReducedMotion()) {
+              el.textContent = Math.round(target).toLocaleString();
+              return;
+            }
+            var p = Math.min(1, (now - start) / COUNT_DURATION);
             el.textContent = Math.round(easeOut(p) * target).toLocaleString();
-            if (p < 1) requestAnimationFrame(step);
+            if (p < 1) {
+              requestAnimationFrame(step);
+            } else {
+              el.textContent = Math.round(target).toLocaleString();
+            }
           }
           el.textContent = '0';
           requestAnimationFrame(step);
         }
-        var io = new IntersectionObserver(function (entries) {
+
+        var countIo = supportsIO ? new IntersectionObserver(function (entries) {
           entries.forEach(function (e) {
-            if (e.isIntersecting) { animate(e.target); io.unobserve(e.target); }
+            if (e.isIntersecting) {
+              animateCount(e.target);
+              countIo.unobserve(e.target);
+            }
           });
-        }, { threshold: 0.3 });
-        function scan() {
+        }, { threshold: 0.3 }) : null;
+
+        function scanCounts() {
           document.querySelectorAll('.count-up').forEach(function (el) {
-            if (el.dataset.counted !== '1') io.observe(el);
+            if (el.dataset.counted === '1') return;
+            if (!countIo || prefersReducedMotion()) {
+              finishCount(el);
+              return;
+            }
+            countIo.observe(el);
           });
         }
-        if (document.readyState === 'loading') {
-          document.addEventListener('DOMContentLoaded', scan);
-        } else {
-          scan();
-        }
-        document.addEventListener('astro:after-swap', scan);
-      })();
-    </script>
 
-    <script is:inline>
-      // Constant-speed marquee: measure each .marquee-hover element's
-      // overflow distance and set --marquee-duration so speed stays
-      // uniform across cards regardless of text length.
-      (function () {
-        var PX_PER_SEC = 80;   // perceived scroll speed
-        var PAUSE_FRAC = 0.1;  // 10% of cycle is the pause at the end
-        var MIN_S = 3;         // don't let very short marquees cycle too fast
-        var MAX_S = 14;        // or very long ones too slow
-
-        function tune(el) {
+        function tuneMarquee(el) {
           var inner = el.querySelector('.marquee-hover-inner');
           if (!inner) return;
+          if (prefersReducedMotion()) {
+            el.style.setProperty('--marquee-duration', '0s');
+            return;
+          }
           var overflow = inner.scrollWidth - el.clientWidth;
           if (overflow <= 2) {
             el.style.setProperty('--marquee-duration', '0s');
             return;
           }
-          var motionSec = (overflow * 2) / PX_PER_SEC;
-          var totalSec = motionSec / (1 - PAUSE_FRAC);
-          totalSec = Math.max(MIN_S, Math.min(MAX_S, totalSec));
+          var motionSec = (overflow * 2) / 80;
+          var totalSec = motionSec / 0.9;
+          totalSec = Math.max(3, Math.min(14, totalSec));
           el.style.setProperty('--marquee-duration', totalSec.toFixed(2) + 's');
         }
 
-        function tuneAll() {
-          document.querySelectorAll('.marquee-hover').forEach(tune);
+        function tuneMarquees() {
+          document.querySelectorAll('.marquee-hover').forEach(tuneMarquee);
+        }
+
+        function refresh() {
+          updateBg();
+          scanScores();
+          scanReveals();
+          updateProgress();
+          scanCounts();
+          tuneMarquees();
+        }
+
+        function onResize() {
+          updateProgress();
+          clearTimeout(marqueeTimer);
+          marqueeTimer = setTimeout(tuneMarquees, 150);
+        }
+
+        window[KEY] = { refresh: refresh };
+        window.addEventListener('scroll', onProgressScroll, { passive: true });
+        window.addEventListener('resize', onResize, { passive: true });
+        document.addEventListener('astro:after-swap', refresh);
+        if (typeof reduceMotion.addEventListener === 'function') {
+          reduceMotion.addEventListener('change', refresh);
+        } else if (typeof reduceMotion.addListener === 'function') {
+          reduceMotion.addListener(refresh);
         }
 
         if (document.readyState === 'loading') {
-          document.addEventListener('DOMContentLoaded', tuneAll);
+          document.addEventListener('DOMContentLoaded', refresh, { once: true });
         } else {
-          tuneAll();
+          refresh();
         }
-        window.addEventListener('resize', (function () {
-          var t;
-          return function () { clearTimeout(t); t = setTimeout(tuneAll, 150); };
-        })());
-        document.addEventListener('astro:after-swap', tuneAll);
       })();
     </script>
   </body>

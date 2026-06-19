@@ -2,7 +2,7 @@
 type: tool
 slug: ada
 title: Ada
-tagline: Enterprise AI customer service platform. The ACX Platform resolves 80%+ of inquiries across chat, email, voice, and social via a unified Reasoning Engine and Playbooks-based SOP automation.
+tagline: Enterprise AI customer service platform. The ACX Platform now centers on autonomous customer-service agents, Playbooks, MCP-assisted optimization, Web Chat SDK control, and conversation-based enterprise pricing.
 category: ai-automation
 secondary_categories: [ai-chatbots]
 company: Ada Support Inc.
@@ -11,11 +11,11 @@ pricing_model: enterprise
 price_range: "Contact sales; no public tier sheet"
 status: active
 launched: 2016-01
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-18
+last_verified: 2026-06-18
 update_frequency: quarterly
 seo_title: "Ada (ada.cx): AI Customer Service Platform Review (June 2026)"
-meta_description: "Ada runs the ACX Platform for enterprise AI customer support: voice, chat, email, SMS, social, Reasoning Engine, Playbooks, and demo-gated contact-sales pricing."
+meta_description: "Ada runs the ACX Platform for enterprise AI customer support: chat, voice, email, SMS, social, Reasoning Engine, Playbooks, MCP, Web Chat SDK, and demo-gated pricing."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -30,82 +30,79 @@ scores:
   longevity: 8
 facts:
   best_for:
-    value: Best for enterprise support teams evaluating AI customer-service automation across chat, email, voice, and agent-assist
-      workflows. Ada now describes the ACX Platform as a 4-component system (Reasoning Engine, Conversation Hub, Performance Center, Developer Toolkit) deployed across 9+ channels.
+    value: Best for enterprise support teams evaluating AI customer-service agents across chat, email, voice, SMS, social, and in-app workflows. Ada now frames ACX as a platform plus practice plus expert-services system, with four platform components and more than 550 deployed AI agents.
     source: https://www.ada.cx/platform
     source_label: Ada platform
     source_id: ada-platform
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-18'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-13'
+    next_review_at: '2026-09-18'
   pricing_anchor:
-    value: Ada does not expose a simple public tier sheet in the current source set; pricing should be validated with sales
-      and the official agent-pricing explainer.
-    source: https://www.ada.cx/blog/unpacking-ai-agent-pricing-resolution-based-vs-conversation-based-models/
-    source_label: Ada AI agent pricing explainer
-    source_id: ada-pricing
-    verified_at: '2026-06-12'
+    value: Ada does not publish a public tier sheet. The current platform FAQ says conversation-based pricing is the primary model for most customers, while resolution-based pricing is still available for enterprises with specific needs.
+    source: https://www.ada.cx/platform
+    source_label: Ada platform
+    source_id: ada-platform
+    verified_at: '2026-06-18'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-13'
+    next_review_at: '2026-07-18'
   enterprise_controls:
-    value: Ada is an enterprise platform decision, so security, routing, omnichannel support, reporting, and handoff workflows
-      matter as much as model quality. SOC 2, HIPAA, GDPR, AIUC-1, zero-retention LLM policies, and continuous accuracy monitoring are documented on the platform page.
+    value: Ada is an enterprise platform decision, so security, routing, omnichannel support, reporting, handoffs, and change governance matter as much as model quality. SOC 2, HIPAA, GDPR, AIUC-1, zero-retention LLM policies, safety controls, and continuous accuracy monitoring are documented on the platform page.
     source: https://www.ada.cx/platform
     source_label: Ada platform
     source_id: ada-platform
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-18'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-13'
+    next_review_at: '2026-09-18'
   api_available:
-    value: Ada's Developer Toolkit (APIs, SDKs, and MCP integration) supports custom deployment alongside the platform's Salesforce, Zendesk, Twilio, and Shopify direct integrations. Integration depth should still be checked during enterprise evaluation.
-    source: https://www.ada.cx/platform
-    source_label: Ada platform
-    source_id: ada-platform
-    verified_at: '2026-06-12'
+    value: Ada's Developer Toolkit includes APIs, SDKs, and MCP. The current MCP overview says connected assistants can analyze performance, update and create resources, run tests, answer natural-language questions, and stage changes before execution.
+    source: https://docs.ada.cx/mcp/introduction/overview
+    source_label: Ada MCP overview
+    source_id: ada-mcp-overview
+    verified_at: '2026-06-18'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-13'
+    next_review_at: '2026-09-18'
   watch_out_for:
-    value: Ada's pricing path redirects to a demo request and remains contact-sales only, so use sales confirmation before quoting exact price ranges. Ada's February 2026 Reasoning Engine release discloses 550+ deployed AI agents, 5.5B+ interactions, and 85+ countries.
-    source: https://www.ada.cx/blog/unpacking-ai-agent-pricing-resolution-based-vs-conversation-based-models/
-    source_label: Ada AI agent pricing explainer
-    source_id: ada-pricing
-    verified_at: '2026-06-12'
+    value: Ada's buying path remains demo-led and contact-sales only. The June 2026 product surface is also more operationally powerful than the older page implied, so buyers should govern who can use MCP, coaching changes, multilingual Knowledge ingestion, Web Chat SDK headless mode, and Zendesk handoff settings.
+    source: https://docs.ada.cx/release-notes
+    source_label: Ada release notes
+    source_id: ada-release-notes
+    verified_at: '2026-06-18'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-13'
+    next_review_at: '2026-07-18'
 tags: [customer-support, ai-agent, chatbot, voice-ai, enterprise, ada]
 best_for:
   - enterprise CX teams with 300K+ annual conversations
-  - omnichannel automation across chat, voice, email, SMS
-  - regulated industries needing SOC 2, HIPAA, GDPR, AIUC-1
-  - CX teams standardizing on one reasoning engine across channels
-  - high-stakes voice deflection with CRM integration
+  - omnichannel automation across chat, voice, email, SMS, social, and in-app
+  - regulated industries needing SOC 2, HIPAA, GDPR, AIUC-1, and audit discipline
+  - CX teams standardizing support automation on one reasoning engine
+  - teams that can govern MCP, SDK, Playbooks, coaching, and human handoff changes
 not_best_for:
   - SMBs or solo operators
   - teams needing transparent self-serve pricing
   - quick-deploy chatbot builders with drag-and-drop UX
-  - fewer than ~100K conversations per year
+  - teams below enterprise conversation volume
 quick_answer: >-
-  Ada is the ACX Platform, an enterprise AI customer service system that resolves 80%+ of inquiries across chat, voice, email, SMS, and social. Pick it for regulated, high-volume CX with a unified Reasoning Engine and Playbooks SOP automation. Skip it for SMBs, self-serve pricing, or simple chatbot builds.
+  Ada is an enterprise ACX Platform for autonomous customer-service agents across chat, voice, email, SMS, social, and in-app channels. Pick it for high-volume, regulated CX where one reasoning engine, Playbooks, MCP-assisted optimization, and strong handoffs matter. Skip it for SMBs, self-serve pricing, or simple chatbot builds.
 price_history:
   - date: 2026-04-18
     plan: "Enterprise (contact sales)"
-    price: "~$30K+/year (entry) to $500K+ (large deployments)"
+    price: "Contact sales; no public tier sheet"
     source: "https://www.ada.cx/blog/unpacking-ai-agent-pricing-resolution-based-vs-conversation-based-models/"
-    source_label: "Source"
+    source_label: "Ada AI agent pricing explainer"
     source_id: ada-pricing
-    note: "Verified contact-sales model; resolution-based and conversation-based options both offered; no public tier sheet."
+    note: "Historical page carried third-party budget ranges; current refresh treats exact ACV ranges as unverified unless Ada sales confirms them in writing."
   - date: 2026-05-13
     plan: "Enterprise (contact sales)"
-    price: "~$30K+/year (entry) to $500K+ (large deployments)"
-    source: "https://www.ada.cx/blog/unpacking-ai-agent-pricing-resolution-based-vs-conversation-based-models/"
-    source_label: "Source"
-    source_id: ada-pricing
-    note: "Reverified May 2026. Pricing model unchanged; ACX Platform components reorganized into 4 named modules (Reasoning Engine, Conversation Hub, Performance Center, Developer Toolkit). 350+ customers across 85+ countries confirmed."
+    price: "Contact sales; no public tier sheet"
+    source: "https://www.ada.cx/platform"
+    source_label: "Ada platform"
+    source_id: ada-platform
+    note: "ACX Platform components were organized around Reasoning Engine, Conversation Hub, Performance Center, and Developer Toolkit."
   - date: 2026-06-01
     plan: "Enterprise (contact sales)"
     price: "No public tier sheet; confirm with sales"
@@ -113,140 +110,154 @@ price_history:
     source_label: "Ada demo request"
     source_id: ada-demo
     note: "Ada's former pricing URL redirects to a demo page. Official platform copy still frames Ada for companies with at least 300,000 annual customer-service conversations."
+  - date: 2026-06-18
+    plan: "Enterprise (contact sales)"
+    price: "No public tier sheet; conversation-based pricing is the primary public model"
+    source: "https://www.ada.cx/platform"
+    source_label: "Ada platform"
+    source_id: ada-platform
+    note: "Current platform FAQ says most customers use conversation-based pricing and resolution-based pricing remains available for enterprises with specific needs."
 ---
 
 # Ada
 
-Ada is an enterprise AI customer service platform built around the **ACX Platform**, an AI-native operating system that resolves customer conversations across chat, voice, email, SMS, social, and in-app channels. The platform now ships as four named components: the **Reasoning Engine** (shared cross-channel intelligence), **Conversation Hub** (9+ channel deployment surface), **Performance Center** (monitoring and optimization), and **Developer Toolkit** (APIs, SDKs, and MCP integration). Combined with **Playbooks** (structured SOP automation) and Coaching feedback loops, the platform targets 80%+ autoresolution at enterprise scale.
+Ada is an enterprise AI customer service platform built around the **ACX Platform**, an AI-native system for support automation across chat, voice, email, SMS, social, WhatsApp, Messenger, Instagram, in-app, and custom channels. The platform is organized around the **Reasoning Engine**, **Conversation Hub**, **Performance Center**, and **Developer Toolkit**, with Playbooks as the structured automation primitive for repeatable support procedures.
 
-The company was founded in 2016 in Toronto and hit unicorn status in a $130M Series C at a $1.2B valuation. Ada's February 2026 Reasoning Engine announcement says more than 550 AI agents are deployed globally and more than 5.5 billion interactions have been handled for brands including Ancestry, Cebu Pacific, IPSY, monday.com, Pinterest, Square, and Sky. Pricing is contact-sales only; the old pricing path now routes buyers to a demo request.
+The current Ada platform page says its AI agents resolve **84%** of inquiries autonomously, support deployments in **85+ countries**, and have handled **6.4B+ interactions** across **550+ AI agents**. Treat those as platform-level marketing and FAQ signals, not a guaranteed result for every deployment. The practical buying question is whether Ada can encode your support SOPs, connect to your CX stack, measure quality, and hand off safely when the AI should stop.
 
-Ada sits squarely in the enterprise CX lane. It is not a self-serve chatbot builder. It is a reasoning and orchestration layer for large support operations that want one AI system running every channel.
+Ada is not a self-serve chatbot widget. It is a sales-led enterprise CX platform for teams with serious conversation volume, regulated workflows, and enough CX operations capacity to own Playbooks, coaching, test cases, integrations, and escalation policy.
 
 ## System Verdict
 
-> **Pick Ada if you run an enterprise CX operation with 300K+ annual conversations and want one reasoning engine across chat, voice, email, and social.** The unified Reasoning Engine plus Playbooks model is the strongest generally-available pairing for regulated, high-volume support automation. Deep integrations with Salesforce, Zendesk, and Twilio make it a natural fit for teams already on those stacks. SOC 2, HIPAA, GDPR, and AIUC-1 compliance are in place.
+> **Pick Ada if you run an enterprise CX operation with 300K+ annual conversations and want one governed AI agent layer across chat, voice, email, SMS, social, and in-app support.** Ada is strongest when support automation needs Playbooks, CRM/ticketing integrations, quality monitoring, human handoff, and compliance controls in one operating model.
 >
-> **Skip it if you are an SMB, a solo founder, or a mid-market team under ~100K conversations per year.** Pricing starts in the five figures and the platform is designed for configuration by CX operations staff, not an end-user. [Intercom Fin](/tools/intercom/) is better if you already run Intercom. [Voiceflow](/tools/voiceflow/) is better if you want to build the flows yourself. Off-the-shelf Zendesk AI is cheaper if your volume is low.
+> **Skip it if you need transparent self-serve pricing, a lightweight chatbot builder, or a cheap SMB support widget.** [Intercom Fin](/tools/intercom/) is better if your support team already lives in Intercom and outcome pricing works for your volume. [Voiceflow](/tools/voiceflow/) is better for builder-led agent design. Zendesk AI or HubSpot-style support automation is usually easier for smaller teams.
 >
-> **Who pays:** large enterprise CX teams with real conversation volume, regulated workflows, and owned CX operations capacity. The current demo page says Ada is a fit for companies with at least 300,000 annual customer-service conversations.
+> **Who pays:** enterprise CX leaders, support operations teams, regulated service organizations, and brands with enough volume to justify a demo-led procurement cycle. The current demo path still frames Ada for companies with at least 300,000 annual customer-service conversations.
+
+## What Changed Since The Last Refresh
+
+The prior Ada page was last verified on 2026-06-12 and mainly described the February 2026 Reasoning Engine launch. Five June 18 changes matter most.
+
+- **MCP is now part of the operating surface.** Ada's MCP overview says connected assistants such as Claude, ChatGPT, or any MCP client can analyze performance, update and create resources, run tests, answer questions, and stage changes safely. This makes Ada more admin-assistive, but it also creates a governance question around who can propose or confirm production changes.
+- **June 16 release notes expand AI-assisted coaching work.** Ada says `propose_change` can now create coaching across six types: `reply`, `action`, `process`, `search_knowledge`, `handoff`, and `playbook`. That matters because optimization is no longer only dashboard work.
+- **Multilingual Knowledge ingestion became more self-serve.** The same June 16 notes added a dashboard toggle for multilingual Knowledge ingestion. Buyers should check language coverage, review workflow, and ownership before enabling it broadly.
+- **The Web Chat SDK gained deeper programmatic control.** June 12 notes added actions such as `sendMessage`, `getConversation`, `getMessages`, `getMetaFields`, `setComposerText`, `setDelegate`, and `isOpen`, plus headless mode and lifecycle events. That makes custom front ends more realistic, but raises QA and accessibility requirements.
+- **Zendesk handoff behavior got a sharper setting.** Ada's June 12 notes added a setting to keep the same Sunshine Conversation after Zendesk Messaging handoff, which matters for continuity, auditability, and agent context.
+
+The page also updates Ada's scale signal from **5.5B+** handled interactions to the current platform FAQ's **6.4B+** interactions, and replaces the older pricing read with the current platform FAQ: conversation-based pricing is the main public model, while resolution-based pricing is still available for specific enterprise needs.
 
 ## Key Facts
 
 | | |
 |---|---|
-| **Flagship product** | Ada ACX Platform (AI-native customer experience operating system) |
-| **Platform components** | Reasoning Engine · Conversation Hub · Performance Center · Developer Toolkit |
-| **Channels** | Chat · Voice · Email · SMS · WhatsApp · Messenger · Instagram · In-app (9+) |
-| **Core engine** | Unified Reasoning Engine with multi-layer safeguards and adaptive reasoning |
-| **Automation primitive** | Playbooks (structured SOP automation) plus Coaching feedback loops |
-| **Languages** | Multilingual out of the box |
-| **Reported autoresolution** | 80%+ on customer case studies |
-| **Response time** | Sub-60-second on the platform marketing materials |
-| **CSAT lift** | 50%+ improvement claimed in customer-success references |
-| **Integrations** | Salesforce · Zendesk · Twilio · Shopify · MCP · open APIs + SDKs |
-| **Compliance** | SOC 2 · HIPAA · GDPR · AIUC-1 · zero-retention LLM policy |
-| **Pricing model** | Enterprise contact-sales; former pricing URL redirects to demo |
-| **Entry price signal** | Not publicly quoted; third-party ACV ranges require live sales validation |
-| **Typical deployment** | 300K+ annual conversations |
-| **Scale signal** | 550+ AI agents deployed globally; 5.5B+ interactions handled |
-| **Notable customers** | Ancestry · Cebu Pacific · IPSY · monday.com · Pinterest · Square · Sky |
-| **Funding** | $190M+ total · $1.2B valuation (2021 Series C) |
+| **Flagship product** | Ada ACX Platform |
+| **Platform components** | Reasoning Engine, Conversation Hub, Performance Center, Developer Toolkit |
+| **Channels** | Chat, Voice, Email, SMS, Messenger, WhatsApp, Instagram, In-app, Custom |
+| **Automation primitive** | Playbooks for structured SOP automation plus Coaching feedback loops |
+| **Current AI operations surface** | MCP, APIs, SDKs, Web Chat SDK, test cases, coaching, handoff settings |
+| **Reported autonomous resolution** | Platform FAQ says 84%; customer outcomes still vary by deployment |
+| **Scale signal** | 550+ deployed AI agents and 6.4B+ interactions handled |
+| **Compliance** | SOC 2, HIPAA, GDPR, AIUC-1, zero-retention LLM provider policy |
+| **Integrations** | Zendesk, Salesforce, Twilio, AWS, Freshworks, Genesys, GitHub, Aircall, ServiceNow, Shopify, MCP, APIs, SDKs |
+| **Pricing model** | Contact sales; conversation-based pricing is primary, resolution-based remains available for specific enterprise needs |
+| **Public tier sheet** | None found on June 18, 2026 |
+| **Typical deployment** | Ada says the platform fits companies with at least 300K annual customer-service conversations |
 | **HQ** | Toronto, Canada |
 | **Founded** | 2016 |
 
-## What it actually is
+## What It Actually Is
 
-An enterprise AI agent platform for customer support. The ACX Platform deploys, orchestrates, and continuously improves AI agents that autonomously resolve conversations. The design premise is that one Reasoning Engine handles every channel, so voice, chat, and email share the same policies, knowledge, and tooling.
+Ada is an enterprise AI agent platform for customer support. It deploys and improves AI agents that can answer questions, execute structured support procedures, escalate to humans, and report on performance. The main design idea is that one Reasoning Engine and one operating surface should govern every service channel instead of splitting chat, voice, email, and social support across separate tools.
 
-Playbooks are the key product primitive. A Playbook is a structured SOP (refund a customer, update a shipping address, escalate a billing dispute) expressed in a way the AI agent can execute end to end, not a rigid decision tree. CX leaders get guardrails and audit trails without hand-coding every branch.
+Playbooks are the key product primitive. A Playbook is a structured support SOP, such as refunding a customer, changing a shipping address, routing a billing dispute, or checking an order. It gives the AI agent enough structure to act without turning every path into a brittle decision tree.
 
-The Voice product runs the same Reasoning Engine as the text channels. Voice deflection pulls from the same knowledge base and Playbooks that power chat, which is the main structural moat against voice-only competitors and chat-only legacy vendors retrofitting voice.
+The June 2026 product read is more operational than the older page suggested. Ada is not only "AI chatbot plus voice." It now has a stronger optimization layer: MCP for admin-assistive changes, coaching creation, test-case expansion, Performance Center monitoring, SDK-level Web Chat control, and handoff settings that affect how conversations survive escalation.
 
-Integrations are built for CX-stack realities: Salesforce for customer data, Zendesk for ticketing, Twilio for voice and SMS, Shopify for commerce, plus open APIs and SDKs for custom systems.
+## When To Pick Ada
 
-## When to pick Ada
+- **Enterprise CX with real volume.** Ada's own demo path points to companies with at least 300K annual customer-service conversations. Below that, procurement and implementation overhead usually outweigh the benefit.
+- **Omnichannel consolidation.** Teams running separate vendors for chat, voice, email, SMS, and social can standardize on one reasoning and governance layer.
+- **Regulated support.** SOC 2, HIPAA, GDPR, AIUC-1, zero-retention LLM policy, safety controls, and audit expectations make Ada a stronger fit than lightweight chatbot builders for healthcare, financial services, telecom, travel, and enterprise SaaS.
+- **Support teams that can govern change.** MCP, Playbooks, coaching, multilingual ingestion, SDK customization, and handoff settings are powerful only when CX ops, compliance, and engineering know who owns each change.
+- **Zendesk, Salesforce, or Twilio-heavy teams.** Direct integrations and handoff behavior make Ada more attractive when the support stack is already standardized.
 
-- **Enterprise CX with real volume.** The platform pays off at 300K+ conversations per year. Below that, the fixed cost of a contact-sales deal rarely pencils out.
-- **Omnichannel consolidation.** Teams running separate vendors for chat, voice, and email can replace the stack with one Reasoning Engine driving every channel.
-- **Regulated industries.** Financial services, healthcare, telecom, travel. SOC 2, HIPAA, GDPR, and AIUC-1 coverage plus Playbooks-level governance are the reason buyers pick Ada over lighter-weight Fin-style competitors.
-- **Voice deflection with real CRM integration.** The unified engine lets voice agents read the same customer record, run the same Playbook, and hand off to a human agent without breaking state.
-- **Already on Salesforce or Zendesk.** Deep direct integrations shorten deployment by months.
+## When To Pick Something Else
 
-## When to pick something else
-
-- **SMB or mid-market (<100K conversations/year):** [Intercom](/tools/intercom/) Fin AI Agent, Zendesk's built-in AI agent, or HubSpot are cheaper and faster to deploy. Ada's floor price makes no sense below this threshold.
-- **Self-serve chatbot building:** [Voiceflow](/tools/voiceflow/) gives teams a builder-first experience with transparent pricing. Ada expects CX ops configuration work.
-- **Developer-first agent framework:** Rasa, LangChain, or a custom build on [Claude](/tools/claude/) or [ChatGPT](/tools/chatgpt/) gives engineering teams full control.
-- **Voice-only deployments without CX context:** Purpose-built voice-AI vendors (ElevenLabs Conversational AI, Retell, Vapi) can be cheaper for standalone voice bots that do not need full CX tooling.
-- **Transparent per-seat pricing:** Ada is contact-sales. If procurement needs a price page before demo, this will stall.
+- **SMB or lower-volume support:** [Intercom](/tools/intercom/), Zendesk AI, HubSpot, or Help Scout-style support automation will usually deploy faster and cost less.
+- **Builder-first conversational design:** [Voiceflow](/tools/voiceflow/) gives product and CX teams a more visual builder experience with clearer public packaging.
+- **Developer-first agent framework:** Rasa, LangChain, LangGraph, or a custom build on [Claude](/tools/claude/) or [ChatGPT](/tools/chatgpt/) gives engineering teams deeper control.
+- **Voice-only deployment without full CX context:** ElevenLabs Conversational AI, Retell AI, Vapi, or CloudTalk may fit better when the job is phone automation rather than a complete service platform.
+- **Procurement that needs a price page before a call:** Ada remains contact-sales. If buying cannot begin without published tiers, this will slow the process.
 
 ## Pricing
 
-Ada publishes no pricing tiers. Deals are quoted per deployment based on conversation volume, channels, and integration depth.
+Ada publishes no public pricing tiers. The current platform FAQ says conversation-based pricing is the primary model for most customers, while resolution-based pricing is still offered to enterprises with specific needs. The older pricing explainer frames conversation-based pricing as easier to forecast and compare because resolution definitions can vary across vendors.
 
-| Signal | Source | Value |
-|---|---|---|
-| Reported entry ACV | Third-party pricing analyses | Often cited around $30,000/year, but not confirmed by Ada's public pages |
-| Typical enterprise ACV | Industry chatter + case-study scale | Six-figure deployments are plausible; validate in procurement |
-| Pricing models | Ada's own pricing blog | Resolution-based ($1-$3.50 per resolved conversation) or conversation-based annual commitments |
-| Deployment floor | Case-study volumes | Economics begin making sense at 300K+ annual conversations |
+| Signal | Current source-backed read |
+|---|---|
+| Public price sheet | None found on June 18, 2026 |
+| Buying path | Demo and sales consultation |
+| Primary public pricing model | Conversation-based pricing |
+| Optional pricing model | Resolution-based pricing for specific enterprise needs |
+| Budget modeling questions | Conversation definition, resolution definition, included channels, implementation services, MCP/SDK usage, support seats, overage treatment, contract length |
+| Exact ACV | Not source-backed from Ada public pages; validate with sales |
 
-Ada originally pushed outcome-based pricing (per resolved conversation), then shifted toward conversation-based annual commitments after enterprise buyers asked for budget predictability. Both models are still on the table. Large accounts typically negotiate multi-year deals with professional-services components.
+Do not quote old third-party ACV ranges as current Ada pricing. They can be used internally as rough procurement preparation only after marking them as unverified. For buyer-facing content, the honest answer is simpler: Ada is enterprise contact-sales, and the contract should be modeled around volume, channels, integration depth, professional services, support operations, and the pricing unit Ada proposes.
 
-Prices rechecked 2026-06-12 via Ada's demo and platform pages. Ada has not published a public tier sheet; exact entry-deal signals should not be quoted without sales confirmation.
-
-## Against the alternatives
+## Against The Alternatives
 
 | | Ada ACX Platform | Intercom Fin AI Agent | Voiceflow |
 |---|---|---|---|
-| **Target buyer** | Enterprise CX ops | Intercom-centric support teams | Builder-first teams |
-| **Pricing transparency** | Contact-sales only | Usage-based, published | Usage-based, published |
-| **Voice support** | Native, same Reasoning Engine as chat | Limited | Via integrations |
-| **Omnichannel** | Chat · Voice · Email · SMS · social · in-app | Primarily Intercom Inbox | Depends on build |
-| **Compliance** | SOC 2 · HIPAA · GDPR · AIUC-1 | SOC 2 · GDPR | SOC 2 · GDPR |
-| **Deployment effort** | Medium-high (CX ops project) | Low (Intercom-native) | Builder-dependent |
-| **Best viewed as** | Enterprise CX operating system | Intercom's built-in AI | Configurable agent builder |
+| **Target buyer** | Enterprise CX operations | Intercom-centric support teams | Builder-first product, CX, and agency teams |
+| **Pricing transparency** | Contact-sales only | Published seats plus Fin outcome pricing | Public path is demo/trial-led, usage terms need confirmation |
+| **Voice support** | Native, same platform strategy as chat | Limited compared with Ada | Via design and integrations |
+| **Omnichannel** | Chat, Voice, Email, SMS, social, in-app, custom | Primarily Intercom support channels | Depends on build and deployment target |
+| **Governance depth** | Stronger enterprise controls, Playbooks, MCP, coaching, handoff settings | Strong inside Intercom workflows | Builder governance depends on workspace process |
+| **Best viewed as** | Enterprise customer-service AI operating system | Intercom's AI support layer | Conversational agent builder |
 
-## Failure modes
+## Failure Modes
 
-- **No public pricing.** Procurement gets stuck without a price page. Every deal runs through sales, which adds weeks to evaluation.
-- **Resolution-based pricing can sting at scale.** $1-$3.50 per resolved conversation looks fine in pilots and painful at 10M conversations per year. Buyers should model both pricing modes before signing.
-- **CX ops configuration is real work.** Playbooks do not write themselves. Teams without a dedicated CX operations function can underinvest in configuration and leave autoresolution well below the 80% target.
-- **Voice maturity is newer than chat.** Voice is running on the unified engine, but chat has more customer-tested hours than voice. Early voice deployments should run shadow periods.
-- **Integration depth varies.** Salesforce and Zendesk are first class. Smaller CRM or ticketing stacks need custom API work.
-- **Contact-center legacy reluctance.** Large enterprises with 20-year-old IVRs and on-prem phone systems face meaningful migration projects before Voice pays off.
-- **The compliance story assumes correct configuration.** SOC 2 and HIPAA coverage is the platform's; actual deployments still need PII redaction policies, retention rules, and audit reviews configured correctly.
+- **No public pricing.** Procurement can stall because every serious quote requires a sales process.
+- **Pricing unit risk.** Conversation-based pricing is easier to forecast than outcome-style pricing, but buyers still need definitions for billable conversations, handoffs, channel coverage, and overages.
+- **MCP and coaching need permissions.** Ada's MCP surface can propose and stage operational changes. That is useful for optimization and risky without owner review, role policy, test cases, and audit trails.
+- **SDK control increases QA responsibility.** Web Chat SDK headless mode and programmatic actions are helpful for custom experiences, but the buyer owns UI state, accessibility, error handling, and regression testing.
+- **Multilingual ingestion can create support risk.** Self-serve multilingual Knowledge ingestion should have language review, fallback policy, and measurement before broad rollout.
+- **CX ops configuration is real work.** Playbooks, coaching, handoffs, knowledge, test cases, and routing need owners. Ada is not a plug-in-and-ignore support bot.
+- **Compliance depends on deployment choices.** SOC 2, HIPAA, GDPR, AIUC-1, zero-retention LLM policy, and safety controls matter, but every customer still owns PII rules, retention, redaction, access, and audit workflow.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-12 against [Ada's homepage](https://www.ada.cx), the [Ada ACX Platform overview](https://www.ada.cx/platform/), the demo-gated pricing path, and the [Reasoning Engine announcement](https://www.ada.cx/media-center/press-release/ada-launches-industrys-first-unified-reasoning-engine/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-18 against [Ada's homepage](https://www.ada.cx/), the [Ada ACX Platform overview](https://www.ada.cx/platform/), [Ada release notes](https://docs.ada.cx/release-notes), [Ada MCP overview](https://docs.ada.cx/mcp/introduction/overview), [Ada Playbooks](https://www.ada.cx/platform/playbooks/), [Ada's pricing explainer](https://www.ada.cx/blog/unpacking-ai-agent-pricing-resolution-based-vs-conversation-based-models/), and the [Ada demo request path](https://www.ada.cx/demo/).
 
 ## FAQ
 
 **Is there a free trial?**
-No. Ada is contact-sales only, and every deployment runs through a formal demo, scoping, and pilot process. There is no self-serve tier.
+No public self-serve free trial was found in the current source set. Ada is demo-led and contact-sales.
 
 **What does Ada actually cost?**
-No public price sheet. Ada routes buyers to a demo and sales consultation; older third-party ACV ranges should be treated as budget signals only, not current quoted prices.
+Ada does not publish a price sheet. The current platform FAQ says most customers use conversation-based pricing, with resolution-based pricing still available for specific enterprise needs. Exact prices require sales confirmation.
+
+**How has Ada changed since the last page refresh?**
+The important changes are operational: Ada's current docs now emphasize MCP-assisted performance work, June 16 coaching creation through `propose_change`, self-serve multilingual Knowledge ingestion, Web Chat SDK programmatic and headless control, and more explicit Zendesk Messaging handoff continuity.
 
 **How does Ada compare to Intercom Fin?**
-[Intercom Fin](/tools/intercom/) is best if the customer support team already lives inside Intercom's Inbox. Ada is best for enterprise CX teams running multi-channel support across chat, voice, email, and social, especially in regulated industries. Fin is usage-priced and self-serve. Ada is contact-sales and configuration-heavy.
+[Intercom Fin](/tools/intercom/) is best when the support team already runs on Intercom and Fin's outcome pricing is easy to model. Ada is a heavier enterprise CX platform for multi-channel support, Playbooks, governance, compliance, MCP-assisted operations, and larger implementation programs.
 
 **Does Ada handle voice?**
-Yes. Ada Voice runs on the same unified Reasoning Engine as chat and email, so voice agents share policies, knowledge, and Playbooks with the text channels. Integration with Twilio is first class.
+Yes. Ada positions Voice as part of the ACX Platform and the same support automation strategy as chat, email, and social channels. Buyers should still test voice handoff quality, transcript accuracy, latency, and CRM integration before committing.
 
 **What integrations does Ada support?**
-Salesforce, Zendesk, Twilio, Shopify, and open APIs + SDKs for custom systems. The Salesforce AppExchange and Zendesk partner listings are the official ingress points.
+Ada lists Zendesk, Salesforce, Twilio, AWS, Freshworks, Genesys, GitHub, Aircall, ServiceNow, Shopify, MCP, APIs, and SDKs across current platform and integration surfaces. Enterprise buyers should verify exact connector scope, data permissions, and region terms during procurement.
 
 **Is Ada SOC 2 and HIPAA compliant?**
-Yes. The ACX Platform is SOC 2, HIPAA, GDPR, and AIUC-1 covered. Individual deployment compliance still depends on correct PII redaction and retention configuration.
+Ada's platform page lists SOC 2, HIPAA, GDPR, AIUC-1, zero-retention LLM provider policy, safety controls, and enterprise security practices. Actual deployment compliance still depends on the customer's configuration, data flows, access controls, and retention rules.
 
 **How large is Ada as a company?**
-Founded 2016 in Toronto. Raised $190M+ across Seed, A, B, and C rounds, hitting a $1.2B valuation in the 2021 Series C led by Spark Capital. Ada disclosed 550+ deployed AI agents and 5.5B+ handled interactions in its February 2026 Reasoning Engine announcement.
+Ada was founded in Toronto in 2016 and reached a $1.2B valuation in its 2021 Series C. The current platform FAQ says more than 550 AI agents are deployed and more than 6.4B interactions have been handled.
 
 ## Related
 
-- **Category:** [AI Automation](/categories/ai-automation/) · [AI Chatbots](/categories/ai-chatbots/)
-- **Alternatives:** [Intercom](/tools/intercom/) · [Voiceflow](/tools/voiceflow/)
-- **Related tools:** [Claude](/tools/claude/) · [ChatGPT](/tools/chatgpt/) · [ElevenLabs](/tools/elevenlabs/)
+- **Category:** [AI Automation](/categories/ai-automation/) and [AI Chatbots](/categories/ai-chatbots/)
+- **Alternatives:** [Intercom](/tools/intercom/) and [Voiceflow](/tools/voiceflow/)
+- **Related tools:** [Claude](/tools/claude/), [ChatGPT](/tools/chatgpt/), and [ElevenLabs](/tools/elevenlabs/)

@@ -1,67 +1,62 @@
 ---
 type: dead
 slug: stability-ai-clipdrop
-title: Clipdrop
-tagline: Stability AI's suite of AI image editing tools - background removal, upscaling, relighting - shut down in 2024.
+title: Stability AI's Clipdrop Ownership
+tagline: Stability AI did not shut Clipdrop down. It divested Init ML, the maker of Clipdrop, to Jasper in February 2024, and Clipdrop remains active under Jasper.
 category: ai-image
 company: Stability AI
-url: https://stability.ai
+url: https://stability.ai/news-updates/init-ml-divestment
 status: dead
-launched: 2021-10
-died: 2024-05
-cause: shutdown
-acquired_by: ""
-seo_title: "Clipdrop: What Happened? (Discontinued)"
-meta_description: "Stability AI shut down Clipdrop in May 2024 amid financial difficulties. Here's what Clipdrop did, why it closed, and the best alternatives."
+launched: 2023-02
+died: 2024-02
+cause: divested
+acquired_by: "Jasper AI"
+seo_title: "Stability AI Clipdrop Ownership: What Happened?"
+meta_description: "Updated June 18, 2026: Stability AI divested Init ML, the maker of Clipdrop, to Jasper in February 2024. Clipdrop remains active at clipdrop.co under Jasper."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-18
+last_verified: 2026-06-18
 ---
 
-# Clipdrop (Discontinued)
+# Stability AI's Clipdrop Ownership
 
-Clipdrop was a suite of AI-powered image editing tools owned by Stability AI. Stability AI acquired Clipdrop's maker, Init ML, in March 2023 and shut down the service on May 1, 2024, during the company's financial restructuring.[1][2]
+This archive page tracks the end of Stability AI's ownership of Clipdrop, not the death of Clipdrop itself.
 
-## What It Was
-
-Clipdrop provided browser-based, API, and mobile app tools for image editing tasks such as background removal, object cleanup, relighting, upscaling, and background replacement. Developed by Paris-based Init ML and founded by Cyril Diagne, it launched in October 2021 as a set of single-purpose AI utilities that required no advanced skills.[1]
-
-After Stability AI's acquisition in March 2023, Clipdrop integrated Stable Diffusion models, including SDXL and features like Stable Diffusion Reimagine for generating image variants.[2] It used a freemium model with free credits and a $9/month Pro plan for higher limits, serving both consumers and developers via API.[5]
+The previous version of this page incorrectly said Stability AI shut Clipdrop down in 2024. Current June 18, 2026 source checks show the active product still resolves at [Clipdrop](/tools/clipdrop/), with live web tools, a pricing page, and API pages. The accurate historical event is that Stability AI divested Init ML, the maker of Clipdrop, to Jasper in February 2024.
 
 ## What Happened
 
-Stability AI announced the Clipdrop shutdown on April 2024, with operations ending May 1, 2024.[1] This followed CEO Emad Mostaque's resignation in March 2024 amid reports of cash shortages, with monthly spending on wages and compute exceeding $8 million while revenue lagged.[3]
+Stability AI announced on February 21, 2024 that it had divested Init ML, the makers of Clipdrop, to Jasper. Stability framed the move as a way to sharpen its focus on open generative AI models and deployment routes.
 
-Users received notices in April 2024, allowing a one-month wind-down. The API shut down immediately, disrupting developer integrations. No acquisition of Clipdrop assets occurred, despite Stability AI's ongoing platform operations as of 2026.[6]
+Jasper's acquisition announcement says the transaction closed on February 20, 2024. It also said business customers could access Clipdrop through the Jasper API immediately, that Clipdrop would be integrated more deeply into Jasper over time, and that individuals could still buy Clipdrop as a standalone product through `clipdrop.co`.
 
-## Why It Died
+## What Changed For Buyers
 
-Clipdrop's closure stemmed from Stability AI's financial crisis rather than product shortcomings. The tools, especially background removal and relighting, received positive feedback.[5]
+- Stability AI is no longer the owner to evaluate for Clipdrop.
+- Clipdrop remains active under Jasper.
+- The consumer web tools still live at `clipdrop.co`.
+- Clipdrop's legacy API page now says Clipdrop is part of Jasper and points users toward the newer Jasper API docs.
+- Jasper image API docs say image endpoint access requires a Jasper Business plan with an API subscription.
 
-Key factors included parent company overspending on funding from a 2022 $1 billion valuation without profitability, rapid commoditization by competitors like Adobe and Canva, and lack of a buyer amid Stability AI's legal issues.[3]
+## Why This Matters
+
+This is a trust correction. A dead-product archive should not tell readers that an active tool is gone. The useful lesson is ownership and API-route risk: Clipdrop moved from Stability to Jasper, and API buyers now need to verify Jasper Business/API terms instead of assuming old Clipdrop or Stability terms apply.
 
 ## Current Alternatives
 
-Replacements for Clipdrop's features as of June 2026:
+If you want the active product, use [Clipdrop](/tools/clipdrop/).
 
-- **[Adobe Firefly](../tools/adobe-firefly.md)** - background removal, generative fill, relighting; commercial-grade with copyright protections
-- **[Canva](../tools/canva.md)** - background remover, magic eraser, AI generation in design platform
-- **Photoroom** - background removal and replacement with API support
-- **Topaz Labs Gigapixel AI** - specialized upscaling to high resolutions
-- **[Runway ML](../tools/runway.md)** - image editing, inpainting, and relighting tools
+For replacement workflows:
 
-## Lessons
-
-Clipdrop's end shows the risks of consumer AI tools tied to unstable parent companies. Even capable products falter without sustainable revenue when funding dries up.[3]
-
-It highlights rapid commoditization in AI image editing: core features like background removal became table stakes, eroding differentiation.[2]
-
-Acquisitions do not guarantee longevity; Stability AI's purchase integrated Clipdrop but exposed it to broader collapse, underscoring the need for independent viability or strategic buyers.[1]
+- [Adobe Firefly](/tools/adobe-firefly/) for Photoshop-native production editing.
+- [Canva](/tools/canva/) for finished social/design assets.
+- [Flux](/tools/flux/), [Midjourney](/tools/midjourney/), or [Ideogram](/tools/ideogram/) for stronger generation workflows.
+- Jasper API, fal.ai, Stability API, Photoroom, and remove.bg for high-volume image API procurement, depending on endpoint, rights, price, and rate limits.
 
 ## Sources
 
-- [Stability AI acquires Init ML, Clipdrop makers](https://stability.ai/blog/stability-ai-acquires-init-ml-makers-of-clipdrop-application)[1]
-- [Stable Diffusion Reimagine on Clipdrop](https://www.cgchannel.com/2023/03/stability-ai-launches-stable-diffusion-reimagine/)[2]
-- [Stability AI financial reports](https://news.ycombinator.com/item?id=39768402)[3]
-- [Clipdrop status and tools](https://status.stability.ai)[6]
----
+- [Stability AI divests Init ML to Jasper](https://stability.ai/news-updates/init-ml-divestment) (verified 2026-06-18)
+- [Jasper acquisition announcement via PR Newswire](https://www.prnewswire.com/news-releases/jasper-expands-by-acquiring-image-platform-clipdrop-from-stability-ai-302068891.html) (verified 2026-06-18)
+- [Clipdrop official site](https://clipdrop.co/) (verified 2026-06-18)
+- [Clipdrop APIs](https://clipdrop.co/apis) (verified 2026-06-18)
+- [Jasper image API docs](https://developers.jasper.ai/docs/using-images) (verified 2026-06-18)

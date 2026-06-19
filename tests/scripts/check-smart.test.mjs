@@ -1,7 +1,10 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
+import { readFileSync } from 'node:fs';
 
 import { classifyPaths, commandsForCategories, planForPaths } from '../../scripts/check-smart.mjs';
+
+const operatorSurfaces = JSON.parse(readFileSync(new URL('../../src/data/operator-surfaces.json', import.meta.url), 'utf8'));
 
 test('check-smart classifies editorial content without requiring a build', () => {
   const plan = planForPaths(['src/content/tools/chatgpt.md', 'PAGE_REFRESH_LEDGER.md']);
@@ -13,12 +16,48 @@ test('check-smart classifies editorial content without requiring a build', () =>
   assert.ok(!plan.commands.includes('npm run build:fast'));
 });
 
-test('check-smart classifies layout and component work as runtime', () => {
-  const categories = classifyPaths(['src/layouts/ToolLayout.astro', 'src/components/seo/Meta.astro']);
+test('check-smart keeps docs and agent files on diff-only verification', () => {
+  const plan = planForPaths(['docs/notes.md', '.agent/PLANS.md']);
+
+  assert.deepEqual(plan.categories, ['docs']);
+  assert.deepEqual(plan.commands, ['git diff --check']);
+});
+
+test('check-smart classifies runtime pages, layout, components, styles, and config as runtime', () => {
+  const categories = classifyPaths([
+    'src/pages/tools/[slug].astro',
+    'src/layouts/ToolLayout.astro',
+    'src/components/seo/Meta.astro',
+    'src/styles/global.css',
+    'astro.config.mjs',
+  ]);
   const commands = commandsForCategories(categories);
 
   assert.deepEqual(categories, ['runtime']);
   assert.ok(commands.includes('npm run build:fast'));
+});
+
+test('check-smart routes API pages through API verification', () => {
+  const plan = planForPaths(['src/pages/api/search.json.ts']);
+
+  assert.deepEqual(plan.categories, ['runtime']);
+  assert.ok(plan.commands.includes('npm run smoke:api'));
+  assert.ok(plan.commands.includes('npm run build:fast'));
+});
+
+test('operator surface contract names verification surfaces explicitly', () => {
+  const surfaceIds = operatorSurfaces.surfaces.map((surface) => surface.id);
+
+  assert.ok(surfaceIds.includes('content'));
+  assert.ok(surfaceIds.includes('api-routes'));
+  assert.ok(surfaceIds.includes('runtime-pages'));
+  assert.ok(surfaceIds.includes('runtime-layouts'));
+  assert.ok(surfaceIds.includes('runtime-components'));
+  assert.ok(surfaceIds.includes('runtime-styles'));
+  assert.ok(surfaceIds.includes('assets'));
+  assert.ok(surfaceIds.includes('scripts'));
+  assert.ok(surfaceIds.includes('config'));
+  assert.ok(surfaceIds.includes('docs-agent'));
 });
 
 test('check-smart classifies tooling work without asset checks', () => {

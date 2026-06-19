@@ -74,6 +74,14 @@ html.theme-morph-fallback *::after {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+
+  ::view-transition-group(root),
+  ::view-transition-image-pair(root),
+  ::view-transition-old(root),
+  ::view-transition-new(root),
   html.theme-morphing::view-transition-old(root),
   html.theme-morphing::view-transition-new(root),
   html.theme-morph-fallback,
@@ -1584,19 +1592,28 @@ a.ds-metric:hover {
   filter: saturate(0.95);
 }
 @media (max-width: 760px) {
-  .moat-canvas { opacity: 0.22; }
-  .moat-layer[data-mode="home"] .moat-canvas { opacity: 0.28; }
-  .moat-layer::after { opacity: 0.12; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .moat-canvas {
-    opacity: 0.34;
-    filter: saturate(0.9);
-  }
+  .moat-canvas,
+  .light .moat-canvas,
   .moat-layer[data-mode="home"] .moat-canvas,
   .moat-layer[data-mode="detail"] .moat-canvas,
   .moat-layer[data-mode="inner"] .moat-canvas {
-    opacity: 0.34;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .moat-layer::after { opacity: 0.12; }
+}
+.moat-layer[data-runtime="static"] .moat-canvas,
+.moat-layer[data-runtime="hidden"] .moat-canvas {
+  opacity: 0;
+  visibility: hidden;
+}
+@media (prefers-reduced-motion: reduce) {
+  .moat-canvas,
+  .moat-layer[data-mode="home"] .moat-canvas,
+  .moat-layer[data-mode="detail"] .moat-canvas,
+  .moat-layer[data-mode="inner"] .moat-canvas {
+    opacity: 0;
+    visibility: hidden;
   }
 }
 

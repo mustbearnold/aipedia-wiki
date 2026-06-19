@@ -666,6 +666,7 @@ import TrustPanel from '../components/godtier/TrustPanel.astro';
 import ToolLogo from '../components/ToolLogo.astro';
 import HomepageLD from '../components/seo/HomepageLD.astro';
 import { categoryLabel, overallScore } from '../utils/tool-metadata';
+import { searchEntrySlug } from '../lib/search-index';
 
 const allTools = await getCollection('tools');
 const activeTools = allTools.filter((tool: any) => !['dead', 'retired', 'acquired'].includes(String(tool.data.status ?? 'active')));
@@ -679,13 +680,9 @@ const comparisonCount = allComparisons.length;
 const newsCount = allNews.length;
 const guideCount = allGuides.length;
 
-function entrySlug(entry: any): string {
-  return String(entry.data.slug ?? entry.id.replace(/\.md$/, '').replace(/\\/g, '/'));
-}
-
 const scoredTools = activeTools
   .map((tool: any) => ({
-    slug: entrySlug(tool),
+    slug: searchEntrySlug(tool),
     title: tool.data.title,
     category: tool.data.category ?? 'ai-tools',
     categoryLabel: categoryLabel(tool.data.category ?? 'ai-tools'),
@@ -803,7 +800,7 @@ const featuredDecisionRoutes = [
 
 const latestNews = allNews
   .map((news: any) => ({
-    slug: entrySlug(news),
+    slug: searchEntrySlug(news),
     title: news.data.title,
     summary: news.data.summary ?? news.data.description ?? '',
     date: String(news.data.date),
@@ -843,7 +840,7 @@ const refreshGuideSlugs = ['runway-alternatives', 'suno-alternatives', 'synthesi
 const toIsoDate = (v: any): string =>
   v instanceof Date ? v.toISOString().slice(0, 10) : String(v ?? '').slice(0, 10);
 const refreshGuideIso = allGuides
-  .filter((g: any) => refreshGuideSlugs.includes(entrySlug(g)))
+  .filter((g: any) => refreshGuideSlugs.includes(searchEntrySlug(g)))
   .map((g: any) => toIsoDate(g.data.last_verified ?? g.data.last_updated))
   .filter(Boolean)
   .sort()
@@ -1153,7 +1150,9 @@ function newsDateFmt(iso: string): string {
       </nav>
     </section>
 
-    <script is:inline>
+    <script>
+      import { normalizeSearchText, scoreSearchItem, searchItemMatches, searchTerms } from '../lib/search-index';
+
       (() => {
         const root = document.querySelector('[data-home-search]');
         if (!root) return;
@@ -1236,14 +1235,6 @@ function newsDateFmt(iso: string): string {
           }, 350);
         }
 
-        function normalize(v) {
-          return String(v || '').toLowerCase().trim();
-        }
-
-        function terms(value) {
-          return normalize(value).split(/\s+/).filter(Boolean);
-        }
-
         function escape(s) {
           return String(s).replace(/[&<>"']/g, (c) => (
             { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]
@@ -1261,37 +1252,18 @@ function newsDateFmt(iso: string): string {
           return loadPromise;
         }
 
-        function rank(item, qTerms, query) {
-          const title = normalize(item.title);
-          const kind = normalize(item.kind);
-          const haystack = normalize(item.search);
-          let score = Number(item.priority || 0);
-          if (!qTerms.length) return score;
-          if (title === query) score += 1000;
-          else if (title.startsWith(query)) score += 720;
-          else if (qTerms.every((t) => title.split(/[^a-z0-9]+/).includes(t))) score += 640;
-          else if (qTerms.every((t) => title.includes(t))) score += 520;
-          if (qTerms.every((t) => kind.includes(t))) score += 80;
-          for (const t of qTerms) {
-            if (title.startsWith(t)) score += 90;
-            else if (title.includes(t)) score += 65;
-            else if (haystack.includes(t)) score += 20;
-          }
-          return score;
-        }
-
         function getMatches() {
           if (!data) return [];
-          const qTerms = terms(input.value);
+          const qTerms = searchTerms(input.value);
           const query = qTerms.join(' ');
+          const searchOptions = { includeKindMatch: true };
           return data
-            .map((item) => ({ item, score: rank(item, qTerms, query) }))
+            .map((item) => ({ item, score: scoreSearchItem(item, qTerms, query, searchOptions) }))
             .filter(({ item, score }) => {
               if (!qTerms.length) return item.kind === 'Tool';
-              const haystack = `${normalize(item.title)} ${normalize(item.search)}`;
-              return score > Number(item.priority || 0) && qTerms.every((t) => haystack.includes(t));
+              return searchItemMatches(item, qTerms, score, searchOptions);
             })
-            .sort((a, b) => b.score - a.score || normalize(a.item.title).localeCompare(normalize(b.item.title)))
+            .sort((a, b) => b.score - a.score || normalizeSearchText(a.item.title).localeCompare(normalizeSearchText(b.item.title)))
             .map(({ item }) => item)
             .slice(0, MAX_RESULTS);
         }
@@ -1331,7 +1303,7 @@ function newsDateFmt(iso: string): string {
           }
           const matches = getMatches();
           openMatches = matches;
-          const hasQuery = terms(input.value).length > 0;
+          const hasQuery = searchTerms(input.value).length > 0;
           heading.textContent = hasQuery ? 'Top matches' : 'Popular tools';
           count.textContent = `${matches.length} shown`;
           if (hasQuery) scheduleSearchAnalytics(input.value, matches.length, 'home_typeahead');

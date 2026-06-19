@@ -6,10 +6,10 @@ tools: [capacities, obsidian]
 category: ai-notes
 winner: depends
 seo_title: "Capacities vs Obsidian: Object PKM or Local Markdown? (June 2026)"
-meta_description: "Updated June 12, 2026: choose Capacities for hosted object-based PKM with built-in AI features, or Obsidian for local-first Markdown, plugins, and file ownership."
+meta_description: "Updated June 18, 2026: choose Capacities for hosted object-based PKM with Pro AI connectors and provider choice, or Obsidian for local-first Markdown, plugins, and file ownership."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-18
+last_verified: 2026-06-18
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -32,8 +32,8 @@ This is less about "which notes app is better" and more about "do you want a man
 |---|---|---|
 | **Primary job** | Hosted object-based PKM | Local-first Markdown knowledge base |
 | **Data model** | Objects, properties, collections, backlinks, daily notes | Markdown files, vaults, links, graph, Canvas, community plugins |
-| **June 2026 price signal** | Basic is free; Pro adds AI assistant, task actions, smart queries, calendar integrations, and unlimited media uploads | Core app is free; Sync is $4/mo annual or $5/mo monthly; Publish is $8/mo annual or $10/mo monthly; Commercial license is $50/user/year |
-| **AI path** | Built-in AI assistant plus BYOK and AI Chat Connectors | No native AI assistant; AI depends on plugins, local tools, or provider API keys |
+| **June 2026 price signal** | Basic is free core PKM; Pro adds AI assistant, AI Chat Connectors, provider choice, task actions, smart queries, and media workflows | Core app is free; Sync is $4/mo annual or $5/mo monthly; Publish is $8/mo annual or $10/mo monthly; Commercial license is $50/user/year |
+| **AI path** | Built-in AI assistant, BYOK paths, provider choice, and AI Chat Connectors | No native AI assistant; AI depends on plugins, local tools, or provider API keys |
 | **Main watch-out** | Hosted app and object-first workflow may not satisfy file-ownership purists | Plugin-heavy setups can become brittle and require maintenance |
 
 ## Where Capacities Wins
@@ -56,7 +56,7 @@ This is less about "which notes app is better" and more about "do you want a man
 
 Start with **Obsidian** if you already know you want local files. Add Sync when cross-device encrypted sync is worth $4/mo annual or $5/mo monthly. Add Publish only when you want to turn selected notes into a public site.
 
-Start with **Capacities Basic** if you want a cleaner object model and less setup. Upgrade to Pro when AI assistant access, smart queries, task actions, calendar integrations, and unlimited media uploads become part of the workflow.
+Start with **Capacities Basic** if you want a cleaner object model and less setup. Upgrade to Pro when AI assistant access, AI Chat Connectors, provider choice, task actions, recurring tasks, calendar integrations, and media workflows become part of the workflow.
 
 For organizations, Obsidian's commercial license is not required for commercial use according to its pricing FAQ, but Obsidian encourages work users to buy it to support development. Capacities is the more managed app; Obsidian is the more controllable substrate.
 
@@ -73,7 +73,7 @@ For organizations, Obsidian's commercial license is not required for commercial 
 
 ## Current Fact Check
 
-Verified June 12, 2026 against official Capacities docs/pricing and Obsidian pricing/community pages. The old comparison claims about fixed frontier model versions are not reliable enough to keep. Capacities documents provider preferences and BYOK options; Obsidian's AI story depends on user-selected plugins or external tooling.
+Verified June 18, 2026 against official Capacities docs/pricing, Capacities Release 64, AI Chat Connector docs, and Obsidian pricing/community pages. Capacities now documents provider choice and BYOK paths; Obsidian's AI story depends on user-selected plugins or external tooling.
 
 ## Who Should Choose Capacities
 
@@ -106,6 +106,7 @@ Yes. Some users keep Obsidian as the local archive and use Capacities for active
 - [Capacities pricing](https://capacities.io/pricing/)
 - [Capacities AI assistant docs](https://docs.capacities.io/reference/ai-assistant)
 - [Capacities AI Chat Connectors docs](https://docs.capacities.io/reference/ai-chat-connectors)
+- [Capacities Release 64](https://capacities.io/whats-new/release-64/)
 - [Obsidian pricing](https://obsidian.md/pricing)
 - [Obsidian community plugins](https://obsidian.md/plugins)
 - [Obsidian Help](https://help.obsidian.md/)

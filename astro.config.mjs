@@ -36,6 +36,7 @@ function shouldIncludeInSitemap(page) {
 
   if (path.startsWith('/admin/')) return false;
   if (path.startsWith('/api/')) return false;
+  if (path.startsWith('/prototype/')) return false;
   if (SITEMAP_EXCLUDED_PATHS.has(path)) return false;
 
   return true;

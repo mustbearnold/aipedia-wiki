@@ -5,10 +5,10 @@ title: AI Chatbots & LLMs
 description: General-purpose AI assistants and large language model chatbots for writing, research, coding help, analysis, multimodal work, and everyday decision support.
 tool_count: 17
 seo_title: "Best AI Chatbots & LLMs (June 2026), aipedia.wiki"
-meta_description: "Updated June 15, 2026: compare AI chatbots after Visa/ChatGPT payments made spend controls part of agent buying, Claude Fable/Mythos access stayed suspended, GPT-5.2 retired, and safety controls became procurement criteria."
+meta_description: "Updated June 18, 2026: compare AI chatbots after Character.AI's c.ai+ Memory, creator, AvatarFX, and teen-safety changes, plus current ChatGPT, Claude, Gemini, and model-churn checks."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-15
-last_verified: 2026-06-15
+last_updated: 2026-06-18
+last_verified: 2026-06-18
 update_frequency: monthly
 ---
 
@@ -58,11 +58,13 @@ The June 15 [ChatGPT](/tools/chatgpt/) update adds an agent-commerce watch-out a
 
 For most people, the first paid chatbot to compare is still one of three: [ChatGPT](/tools/chatgpt/) for the broadest all-purpose AI workspace, [Claude](/tools/claude/) for writing, long analysis, and code reasoning, or [Gemini](/tools/gemini/) for Google-native work across Search, Gmail, Docs, Drive, NotebookLM, and Google AI subscription benefits. [Perplexity](/tools/perplexity/) is the better answer engine when every serious claim needs a source trail. [Grok](/tools/grok/) is most useful when X-native real-time context matters; the June 15 Grok check keeps the buyer anchor on Grok 4.3, 1M context, SuperGrok at $30/month, X Search, Imagine, Voice API, Grok Build coding-agent tests, and separate review of consumer memory versus API response storage. [Mistral AI](/tools/mistral-ai/) matters more for builders and teams that care about model control, European AI infrastructure, APIs, Vibe Work/Code, Search Toolkit, and open-weight options; the June 15 Mistral check keeps the buyer anchor on Vibe Free/Pro/Team, Chat-mode sunset planning, Medium 3.5 open weights, Large 3/Small 4/Ministral 3 model choices, Small 4 and Large-family pricing-source drift, and exact model-ID checks. [Qwen](/tools/qwen/) is the Alibaba Cloud lane: hosted Qwen3.7-Max, the June 8 Max changelog snapshot, qwen3.7-plus for multimodal/GUI-agent evaluation, Qwen Chat testing, Apache 2.0 Qwen3 open weights, and a growing Qwen Cloud / agent-platform push after [Alibaba's first international Qwen Conference](/news/2026-05-27-qwen-conference-agent-cloud-suite/). [GLM](/tools/glm/) is the Z.AI lane for teams evaluating GLM-5.1's 200K context, 128K maximum output, OpenAI-compatible API examples, MCP/tool support, MIT Hugging Face weights, and $1.40/M input plus $4.40/M output API pricing. [Kimi](/tools/kimi/) is the Moonshot lane for builders evaluating Kimi K2.6, 256K context, multimodal input, usage-based API pricing, and a post-K2-retirement model path; the June 3 [ChatGPT vs Kimi](/compare/chatgpt-vs-kimi/) refresh keeps ChatGPT as the better finished assistant and Kimi as the model/API alternative. [MiniMax](/tools/minimax/) is the M3 lane for buyers testing low-cost coding, agentic, multimodal, and long-context API work, with Speech 2.8 and Hailuo as adjacent MiniMax modalities. [Yi](/tools/yi/) is now a frozen-model/history lane rather than a first-purchase chatbot: 01.AI still lists Yi-Lightning and Yi open models, but the active 2026 company story is WorldWise/WanZhi 2.5 enterprise agents. [Hunyuan](/tools/hunyuan/) is Tencent's open-weight/model-family lane for Hy3-preview, HY-World 2.0, and HY-OmniWeaving; [Jan.ai](/tools/jan-ai/) is the free local desktop lane, with v0.8.2 now adding faster startup, AMD ROCm/HIP on Linux, and resumable downloads.
 
-For document chat and private RAG, [AnythingLLM](/tools/anythingllm/) and [Open WebUI](/tools/open-webui/) are the two practical self-hosted app lanes. AnythingLLM remains the MIT app-plus-cloud lane; Open WebUI is the broader self-hosted interface/knowledge-base layer that many Ollama users adopt for team chat. In both cases, quality depends on the hosted or local LLM you connect.
+For document chat and private RAG, [AnythingLLM](/tools/anythingllm/) and [Open WebUI](/tools/open-webui/) are the two practical self-hosted app lanes. AnythingLLM remains the MIT app-plus-cloud lane, now with v1.14.1 Meeting Assistant improvements, MCP tools, Agent Flows, mobile sync, and stronger desktop-assistant polish. Open WebUI is the broader self-hosted interface/knowledge-base layer that many Ollama users adopt for team chat. In both cases, quality depends on the hosted or local LLM you connect.
 
 For API-first model serving, [Fireworks AI](/tools/fireworks-ai/) and [Groq](/tools/groq/) are tracked in this category because they expose LLM and multimodal model endpoints, but buyers should treat them as infrastructure rather than chatbot subscriptions. The June 2 Groq check keeps the buyer story focused on LPU inference speed, pricing/model docs, and production throughput rather than acquisition rumors. The Fireworks pricing check keeps serverless inference, cached-token discounts, batch discounts, B200/B300 dedicated deployments, and fine-tuning as the important purchase variables.
 
-For companion-style character chat, [Character.AI](/tools/character-ai/) is a different lane from general assistants. The June 2 c.ai+ check keeps the buyer story simple: pay for ad-free chats, unlimited voice calls, no slow mode, better memory, and early-access perks when the product itself is the entertainment/social workflow, not a work assistant.
+**June 18 Cohere refresh:** [Cohere](/tools/cohere/) is now best understood as enterprise model infrastructure, retrieval, sovereign deployment, and open model control rather than a consumer chatbot. Command A+ remains the Apache 2.0 agentic flagship, Embed v4 and Rerank 4 remain the RAG moat, and North Mini Code adds a 30B total / 3B active Apache 2.0 coding-model lane. Buyers should not confuse that with Cursor or Copilot: North Mini Code needs a harness, serving path, evals, and policy controls. The official Cohere/Aleph Alpha announcement also turns European sovereign AI from a rumor-cycle note into part of the procurement story.
+
+For companion-style character chat, [Character.AI](/tools/character-ai/) is a different lane from general assistants. The June 18 refresh changes the buyer story from "pay for fewer frictions" to "evaluate the entertainment platform": c.ai+ still lists $9.99/month or $94.99/year, but now also matters for latest and best model access, better Memory, Facts, fuller Memory Usage, AvatarFX, and early features. The same refresh also adds a sharper user-safety caveat: Character.AI says under-18 users are being moved away from open-ended chat and toward creative modes, so do not recommend it to minors as a general companion-chat app.
 
 The wrong move is paying for three overlapping chatbots without a job for each one. Start with the assistant closest to your daily work, then add a specialist only when it solves a real gap: citations, Google integration, long-form editing, X context, coding workflows, or enterprise controls.
 
@@ -89,11 +91,12 @@ The wrong move is paying for three overlapping chatbots without a job for each o
 | **[Doubao](/tools/doubao/)** | China-first ByteDance assistant and Volcengine model/API evaluation | Best for Chinese-language consumer and Asia cloud evaluation, not Western regulated data residency or primary English chat. |
 | **[Groq](/tools/groq/)** | Low-latency hosted inference and API throughput | Best when inference speed, OpenAI-compatible APIs, and predictable production serving matter more than a consumer chat workspace. |
 | **[Fireworks AI](/tools/fireworks-ai/)** | Hosted inference, batch jobs, dedicated GPUs, and fine-tuning | Best when the buyer needs model APIs and deployment controls rather than a consumer chat UI. |
+| **[Cohere](/tools/cohere/)** | Enterprise RAG, Command A+, North Mini Code, private deployment, and sovereign AI | Best for organizations that need retrieval quality, open Apache 2.0 model control, Model Vault, and European sovereign-AI positioning; not a consumer assistant. |
 | **[Ollama](/tools/ollama/)** | Local open-model runtime, embeddings, OpenAI-compatible local API, optional Cloud inference | Best when privacy, local prototyping, or open-model testing matters; not a full team chat app by itself. |
 | **[Open WebUI](/tools/open-webui/)** | Self-hosted AI chat interface, knowledge bases, local/cloud model access, enterprise controls | Best when a technical team wants a governed self-hosted UI layer over Ollama or OpenAI-compatible APIs. |
 | **[Jan.ai](/tools/jan-ai/)** | Local desktop ChatGPT-style app for local and cloud models | Best when a user wants an open-source desktop app, local-model privacy, and optional cloud providers in one UI. |
 | **[NotebookLM](/tools/notebooklm/)** | Source-grounded study and document research | Not a general chatbot replacement; excellent when answers should come from a fixed source library. |
-| **[AnythingLLM](/tools/anythingllm/)** | Self-hosted document chat and RAG app | Best when the buyer wants an MIT-licensed app, local/private documents, agents, and bring-your-own-model control instead of another hosted chatbot subscription. |
+| **[AnythingLLM](/tools/anythingllm/)** | Self-hosted document chat, RAG, agents, and MCP app | Best when the buyer wants an MIT-licensed app, local/private documents, Agent Flows, Meeting Assistant, mobile sync, and bring-your-own-model control instead of another hosted chatbot subscription. |
 
 ## Our Picks
 
@@ -113,7 +116,7 @@ The wrong move is paying for three overlapping chatbots without a job for each o
 - **Best local model runtime:** [Ollama](/tools/ollama/) when local inference, OpenAI-compatible API experiments, embeddings, and open-model testing are the purchase reason.
 - **Best self-hosted team chat UI:** [Open WebUI](/tools/open-webui/) when a technical team wants a self-hosted interface, knowledge-base/RAG layer, and enterprise controls over local or cloud models.
 - **Best open-source local desktop chatbot:** [Jan.ai](/tools/jan-ai/) when a user wants a free desktop app for local models, optional provider connections, and a more open alternative to LM Studio.
-- **Best self-hosted RAG app:** [AnythingLLM](/tools/anythingllm/) when document chat, local/private deployment, and bring-your-own-model flexibility matter more than polished consumer-chat features.
+- **Best self-hosted RAG app:** [AnythingLLM](/tools/anythingllm/) when document chat, local/private deployment, MCP tools, Agent Flows, Meeting Assistant, and bring-your-own-model flexibility matter more than polished consumer-chat features.
 
 ## Choosing the Right Chatbot
 
@@ -152,6 +155,8 @@ The wrong move is paying for three overlapping chatbots without a job for each o
 **Use Groq if:** the job is low-latency API inference, high-throughput serving, or production model routing. Use Groq's official site, docs, and pricing pages for purchase facts; do not rely on rumor-cycle claims.
 
 **Use Fireworks AI if:** the job is hosted model inference, batch processing, deployment capacity, cached-token optimization, or fine-tuning rather than a general assistant interface.
+
+**Use Cohere if:** the job is enterprise RAG, multilingual retrieval, private deployment, Command A+ open-model evaluation, North Mini Code coding-model infrastructure, or sovereign-AI procurement. Do not use it as a first consumer chatbot or as a finished IDE assistant.
 
 **Use Ollama if:** the buyer wants local inference, OpenAI-compatible local endpoints, embeddings, and open-model experiments before committing to hosted inference.
 
@@ -277,12 +282,18 @@ Do not subscribe to multiple chatbots because each one has a new model announcem
 - [OpenAI ChatGPT release notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes) (verified 2026-06-12)
 - [Anthropic Project Glasswing expansion](https://www.anthropic.com/news/expanding-project-glasswing) (verified 2026-06-14)
 - [Google Workspace Gemini Drive sharing](https://workspaceupdates.googleblog.com/2026/04/share-chats-canvases-and-generated-media-from-the-Gemini-app-securely-via-Google-Drive.html) (verified 2026-06-14)
-- [AnythingLLM cloud pricing](https://anythingllm.com/cloud) (verified 2026-06-12)
-- [AnythingLLM GitHub releases](https://github.com/Mintplex-Labs/anything-llm/releases) (verified 2026-06-12)
-- [Character.AI c.ai+ pricing](https://character.ai/subscription/plus/pricing) (verified 2026-06-12)
+- [AnythingLLM cloud pricing](https://anythingllm.com/cloud) (verified 2026-06-18)
+- [AnythingLLM v1.14.1 changelog](https://docs.anythingllm.com/changelog/v1.14.1) (verified 2026-06-18)
+- [AnythingLLM MCP compatibility docs](https://docs.anythingllm.com/mcp-compatibility/overview) (verified 2026-06-18)
+- [AnythingLLM GitHub releases](https://github.com/Mintplex-Labs/anything-llm/releases) (verified 2026-06-18)
+- [Character.AI c.ai+ pricing](https://character.ai/subscribe), [Summer Flash Sale terms](https://support.character.ai/hc/en-us/articles/51248493096987-c-ai-Summer-Flash-Sale-Offer-Terms), [Memory update](https://blog.character.ai/memory/), [creator update](https://blog.character.ai/creator-bundle/), and [under-18 chat announcement](https://blog.character.ai/u18-chat-announcement/) (verified 2026-06-18)
 - [Fireworks AI pricing](https://fireworks.ai/pricing) (verified 2026-06-12)
 - [Fireworks billing FAQ](https://docs.fireworks.ai/faq-new/billing-pricing/how-much-does-fireworks-cost) (verified 2026-06-12)
 - [Fireworks inference documentation](https://docs.fireworks.ai/guides/inference-introduction) (verified 2026-06-12)
+- [Cohere pricing](https://cohere.com/pricing) (verified 2026-06-18)
+- [Cohere models docs](https://docs.cohere.com/docs/models) (verified 2026-06-18)
+- [Cohere North Mini Code](https://cohere.com/blog/north-mini-code) (verified 2026-06-18)
+- [Cohere and Aleph Alpha](https://cohere.com/blog/cohere-alephalpha-join-forces) (verified 2026-06-18)
 - [Ollama official site](https://ollama.com/) (verified 2026-06-12)
 - [Ollama pricing](https://ollama.com/pricing) (verified 2026-06-12)
 - [Ollama model library](https://ollama.com/library) (verified 2026-06-12)

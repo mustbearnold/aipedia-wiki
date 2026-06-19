@@ -224,7 +224,7 @@ function loadRegistry() {
 
 function priorityWeight(source) {
   const volatility = { high: 0, medium: 1, low: 2 }[source.volatility] ?? 3;
-  const type = { pricing: 0, docs: 1, official: 2, status: 3, newsroom: 4, blog: 5, repository: 6, third_party: 7 }[source.type] ?? 8;
+  const type = { pricing: 0, docs: 1, official: 2, status: 3, newsroom: 4, blog: 5, repository: 6, release_notes: 7, report: 8, affiliate: 9, third_party: 10 }[source.type] ?? 11;
   return volatility * 10 + type;
 }
 

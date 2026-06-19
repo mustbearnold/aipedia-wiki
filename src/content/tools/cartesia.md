@@ -2,7 +2,7 @@
 type: tool
 slug: cartesia
 title: Cartesia
-tagline: Real-time voice synthesis API. Sonic-3.5 is the current pricing-page model family, with Sonic built for low-latency voice agents and Line agent minutes billed from $0.06/min.
+tagline: Real-time voice stack for agents. Sonic-3.5 TTS and Ink-2 STT now form the default Line model pair for eligible voice agents, with Line minutes billed from $0.06/min.
 category: ai-voice
 company: Cartesia AI
 url: https://cartesia.ai
@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$239/month + credits"
 status: active
 launched: 2023-09
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-18
+last_verified: 2026-06-18
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://cartesia.ai/sonic"
     source_label: "Cartesia Sonic"
     source_id: cartesia-sonic
-    verified_at: 2026-06-12
+    verified_at: 2026-06-18
     next_review_at: 2026-08-13
     volatility: medium
     confidence: high
@@ -39,25 +39,33 @@ facts:
     source: "https://cartesia.ai/pricing"
     source_label: "Cartesia pricing"
     source_id: cartesia-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-18
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
   flagship_model:
-    value: "Sonic-3.5 is the model named in the current pricing matrix; Sonic remains Cartesia's voice model family for fast, expressive speech generation positioned around real-time voice agents."
-    source: "https://cartesia.ai/sonic"
-    source_label: "Cartesia Sonic"
-    source_id: cartesia-sonic
-    verified_at: 2026-06-12
+    value: "Sonic-3.5 is Cartesia's current fastest and most natural TTS model, with docs listing sub-90ms latency and native support for 42 languages."
+    source: "https://docs.cartesia.ai/build-with-cartesia/tts-models/latest"
+    source_label: "Cartesia Sonic 3.5 docs"
+    source_id: cartesia-sonic-latest-docs
+    verified_at: 2026-06-18
     next_review_at: 2026-08-13
     volatility: medium
     confidence: high
+  default_line_stack:
+    value: "The 2026 changelog says eligible Line agents run on Sonic 3.5 for TTS and Ink 2 for STT by default, improving naturalness, pacing, latency, and turn-taking without a configuration change."
+    source: "https://docs.cartesia.ai/changelog/2026"
+    source_label: "Cartesia 2026 changelog"
+    source_id: cartesia-changelog-2026
+    verified_at: 2026-06-18
+    volatility: high
+    confidence: high
   developer_surface:
-    value: "Cartesia provides developer docs and SDKs for integrating streaming TTS, Ink-Whisper STT, and the Line agent platform into voice applications. API-first, not a creator suite."
+    value: "Cartesia provides developer docs and SDKs for integrating Sonic streaming TTS, Ink-2 STT, Line voice agents, and Twilio/LiveKit/Daily paths into voice applications. API-first, not a creator suite."
     source: "https://docs.cartesia.ai/"
     source_label: "Cartesia docs"
     source_id: cartesia-docs
-    verified_at: 2026-06-12
+    verified_at: 2026-06-18
     volatility: medium
     confidence: high
   watch_out_for:
@@ -65,12 +73,12 @@ facts:
     source: "https://cartesia.ai/pricing"
     source_label: "Cartesia pricing"
     source_id: cartesia-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-18
     volatility: medium
     confidence: high
 tags: [ai-voice, tts, text-to-speech, real-time, voice-api, low-latency, voice-agents, sonic, cartesia, line]
 seo_title: "Cartesia: Features, Pricing & Review (June 2026)"
-meta_description: "Cartesia Sonic-3.5 and Line power low-latency voice agents. June 2026 pricing check: Free, Pro $4, Startup $39, Scale $239, TTS 15 credits/sec, Line from $0.06/min."
+meta_description: "Cartesia Sonic-3.5, Ink-2, and Line power low-latency voice agents. June 2026 check: eligible Line agents default to Sonic 3.5 TTS and Ink 2 STT, with Line from $0.06/min."
 author: "aipedia.wiki Editorial"
 best_for:
   - real-time voice agents and conversational AI
@@ -83,7 +91,7 @@ not_best_for:
   - workflows needing the broadest voice library
   - creators who want a no-code UI
 quick_answer: >-
-  Cartesia is the real-time voice synthesis leader to test in 2026. Sonic-3.5 is the current pricing-page model, and the Line stack is built for voice agents, phone systems, and interactive products where latency sets trust. Skip it for podcasts or audiobooks where Fish Audio and ElevenLabs rank higher on creator workflow and expressiveness.
+  Cartesia is the real-time voice stack to test in 2026 when the job is a low-latency voice agent. Sonic-3.5 is the current flagship TTS model, Ink-2 is the current STT model, and eligible Line agents now run on both by default. Skip it for podcasts or audiobooks where Fish Audio and ElevenLabs rank higher on creator workflow and expressiveness.
 price_history:
   - date: 2026-03-01
     plan: "Credits"
@@ -106,13 +114,28 @@ price_history:
     source_label: "Cartesia pricing"
     source_id: cartesia-pricing
     note: "Re-verified current plan cards, Sonic-3.5 in plan matrix, TTS at 15 credits/sec, professional voice cloning one-time 225-credit cost, and Cartesia-provided phone numbers at $0.014/min."
+  - date: 2026-06-18
+    plan: "Sonic-3.5 / Ink-2 / Line"
+    price: "Free / $4 / $39 / $239 annual tiers; Line from $0.06/min"
+    source: "https://docs.cartesia.ai/changelog/2026"
+    source_label: "Cartesia 2026 changelog"
+    source_id: cartesia-changelog-2026
+    note: "Refresh moved the buyer story from Sonic-3.5 alone to the Sonic-3.5 plus Ink-2 voice-agent stack. Eligible Line agents now default to Sonic 3.5 TTS and Ink 2 STT, and Cartesia added bring-your-own Twilio account support."
 ---
 
 # Cartesia
 
-Voice synthesis built for real-time use. **Sonic-3.5** is the current model family named in Cartesia's public pricing matrix, while Sonic remains the voice stack buyers evaluate for low-latency generated speech. The **Line** agent platform bundles TTS, Ink-Whisper streaming STT, and LLM orchestration for voice agents in one stack.
+Voice synthesis built for real-time use. **Sonic-3.5** is the current flagship TTS model, and **Ink-2** is the current speech-to-text model for the voice-agent stack. The **Line** agent platform bundles TTS, STT, LLM orchestration, turn-taking, and telephony paths for voice agents in one stack.
 
 Founded in 2023 by MIT and Carnegie Mellon researchers. Integrates natively with LiveKit, Daily.co, and Twilio Voice for voice-agent deployments. SOC 2 Type II, HIPAA, and PCI Level 1 compliant.
+
+## What Changed Since The Last Refresh
+
+- Cartesia now positions Sonic-3.5 and Ink-2 together as the current voice-agent model stack, not Sonic-3.5 alone.
+- The 2026 changelog says eligible Line agents run on Sonic 3.5 for TTS and Ink 2 for STT by default, with no configuration change needed.
+- Cartesia's Sonic 3.5 docs list sub-90ms latency, native support for 42 languages, and better handling of confirmation codes, heteronyms, and transcript fidelity.
+- Cartesia added bring-your-own Twilio account support, so teams can connect an existing Twilio account and import phone numbers instead of relying only on Cartesia-provisioned numbers.
+- Pricing remains close to the prior refresh: Free, Pro, Startup, Scale, and Enterprise, with TTS at 15 credits per second of audio and Line from $0.06/min. Production buyers still need to model phone minutes, retries, limited-time free LLM usage, and concurrency.
 
 ## System Verdict
 
@@ -127,9 +150,9 @@ Founded in 2023 by MIT and Carnegie Mellon researchers. Integrates natively with
 | | |
 |---|---|
 | **Current pricing-page model** | Sonic-3.5 |
-| **Speech-to-text** | Ink-Whisper streaming, $0.13/hr |
+| **Speech-to-text** | Ink-2 for current eligible Line agents; pricing page still shows STT hours and credit accounting |
 | **Agent platform** | Line (TTS + STT + LLM orchestration), launched 2026 |
-| **Languages** | 40+ with native prosody, ~95% world population coverage |
+| **Languages** | 42 in current Sonic 3.5 docs and product positioning |
 | **Indian-language coverage** | 9 Indian languages including Hindi at native-speaker quality |
 | **Voice cloning** | Instant clone in ~10 seconds (no clone fee) + Professional fine-tuned voices |
 | **Streaming** | WebSocket, bidirectional audio |
@@ -138,13 +161,13 @@ Founded in 2023 by MIT and Carnegie Mellon researchers. Integrates natively with
 | **Pricing model** | Bundled credits + prepaid Agent dollars; TTS bills at 15 credits per second of audio; Line starts at $0.06/min |
 | **Compliance** | SOC 2 Type II, HIPAA, PCI Level 1 |
 
-Every data point above was verified against vendor sources on 2026-06-12. See Sources.
+Every data point above was verified against vendor sources on 2026-06-18. See Sources.
 
 ## What it actually is
 
 A developer API built specifically for real-time voice applications. Not a creator studio, not a consumer app. Cartesia sells latency, streaming reliability, and end-to-end agent infrastructure to teams shipping voice agents.
 
-Sonic handles the real-time TTS case, and the current pricing matrix names Sonic-3.5 for included monthly minutes. The 2026 product expansion added Ink-Whisper and the Line platform now wraps STT, TTS, and LLM orchestration into a single agent stack billed via prepaid Agent dollars and per-minute Line rates.
+Sonic handles the real-time TTS case, and the current docs name Sonic-3.5 as the fastest and most natural Cartesia TTS model. The 2026 product expansion now pairs Sonic-3.5 with Ink-2 for eligible Line agents, so Cartesia is increasingly a full voice-agent stack rather than a standalone TTS API.
 
 The moat is the combination of architecture and integration depth. Competing TTS APIs ship streaming, but few maintain sub-100ms time-to-first-audio at scale, and none have the same native hooks into LiveKit and Twilio. Instant voice cloning from a 10-second sample covers most production scenarios.
 
@@ -177,7 +200,7 @@ The moat is the combination of architecture and integration depth. Competing TTS
 
 TTS is billed at 15 credits per second of generated audio. The current pricing page also lists professional voice cloning as a 225-credit one-time cost, Line at $0.06/min, and Cartesia-provided phone numbers at $0.014/min. UI-created agents and LLM usage during text-to-agent calls remain marked free for a limited time, so production buyers should model that as a future line item rather than permanent zero-cost usage.
 
-*Prices verified 2026-06-12 via [cartesia.ai/pricing](https://cartesia.ai/pricing) and [Cartesia docs](https://docs.cartesia.ai/).*
+*Prices verified 2026-06-18 via [cartesia.ai/pricing](https://cartesia.ai/pricing), [Cartesia docs](https://docs.cartesia.ai/), and the [2026 changelog](https://docs.cartesia.ai/changelog/2026).*
 
 ## Against the alternatives
 
@@ -203,7 +226,7 @@ TTS is billed at 15 credits per second of generated audio. The current pricing p
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity). Last verified 2026-06-12 against [Cartesia pricing](https://cartesia.ai/pricing), [Cartesia Sonic](https://cartesia.ai/sonic), and [Cartesia docs](https://docs.cartesia.ai/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity). Last verified 2026-06-18 against [Cartesia pricing](https://cartesia.ai/pricing), [Cartesia Sonic](https://cartesia.ai/sonic), [Cartesia Sonic 3.5 docs](https://docs.cartesia.ai/build-with-cartesia/tts-models/latest), [Cartesia changelog](https://docs.cartesia.ai/changelog/2026), and [Cartesia docs](https://docs.cartesia.ai/).
 
 ## FAQ
 
@@ -217,7 +240,7 @@ Instant cloning works from ~10 seconds of clean reference audio. Professional fi
 Yes. The model maintains prosody context across multiple turns, which keeps voice consistency stable across long voice-agent sessions. The Line platform layers turn-taking and interruption handling on top.
 
 **Can Cartesia handle non-English languages?**
-Yes. 40+ languages with native prosody, covering approximately 95% of the world population. 9 Indian languages including Hindi ship at native-speaker quality. Coverage is now broader than the late-2025 Sonic 2 stack and competitive with [ElevenLabs](/tools/elevenlabs/) on Western markets.
+Yes. Sonic 3.5 docs list native support for 42 languages, and public positioning still emphasizes 9 Indian languages including Hindi. Test the exact language, accent, and telephony path before committing.
 
 **Is there a free tier?**
 Yes. The free plan provides 20K model credits and $1 in prepaid Agent dollars for prototyping on Sonic-3.5. Production workloads start on Pro at $4/mo (annual).
@@ -226,7 +249,9 @@ Yes. The free plan provides 20K model credits and $1 in prepaid Agent dollars fo
 
 - [Cartesia pricing](https://cartesia.ai/pricing): current tier structure, credit allowances, Agent prepaid amounts
 - [Cartesia Sonic](https://cartesia.ai/sonic): voice model positioning, language coverage, voice cloning, compliance posture
-- [Cartesia docs](https://docs.cartesia.ai/): API spec, SDKs, Line agent platform, Ink-Whisper STT pricing
+- [Cartesia Sonic 3.5 docs](https://docs.cartesia.ai/build-with-cartesia/tts-models/latest): Sonic 3.5 latency, language, and transcript-following claims
+- [Cartesia 2026 changelog](https://docs.cartesia.ai/changelog/2026): Line default model upgrade and Twilio account import
+- [Cartesia docs](https://docs.cartesia.ai/): API spec, SDKs, Line agent platform, and STT/TTS docs
 - [Inworld: Best TTS APIs for real-time voice agents 2026](https://inworld.ai/resources/best-voice-ai-tts-apis-for-real-time-voice-agents-2026-benchmarks): latency benchmarks
 
 ## Related

@@ -27,7 +27,7 @@ test('canonical source registry exists with stable IDs and trust metadata', () =
   for (const source of registry.sources) {
     assert.match(source.id, /^[a-z0-9][a-z0-9-]*$/, `bad source id: ${source.id}`);
     assert.match(source.url, /^https:\/\//, `${source.id} should use an https URL`);
-    assert.ok(['official', 'docs', 'pricing', 'status', 'newsroom', 'blog', 'repository', 'third_party'].includes(source.type));
+    assert.ok(['official', 'docs', 'pricing', 'status', 'newsroom', 'blog', 'repository', 'third_party', 'affiliate', 'release_notes', 'report'].includes(source.type));
     assert.ok(['primary', 'secondary', 'tertiary'].includes(source.trust_tier));
     assert.ok(['low', 'medium', 'high'].includes(source.volatility));
   }

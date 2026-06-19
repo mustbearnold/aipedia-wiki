@@ -95,19 +95,26 @@ const data = {
   const root = document.getElementById('moat-layer');
   const canvas = document.getElementById('moat-canvas');
   if (!root || !(canvas instanceof HTMLCanvasElement)) return;
-  if (window.__aipediaMoatInit) {
-    window.__aipediaMoatUpdate?.();
+
+  const existing = window.__aipediaMoat;
+  if (existing && typeof existing.update === 'function') {
+    existing.update();
     return;
   }
-  window.__aipediaMoatInit = true;
 
   const ctx = canvas.getContext('2d', { alpha: true });
   if (!ctx) return;
 
+  window.__aipediaMoatInit = true;
+
   const payload = JSON.parse(root.getAttribute('data-moat') || '{}');
   const categories = Array.isArray(payload.categories) ? payload.categories : [];
   const news = payload.news || {};
-  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const motionPolicy = window.__aipediaMotionPolicy || (window.__aipediaMotionPolicy = {
+    reduceQuery: '(prefers-reduced-motion: reduce)',
+  });
+  const reduceMotion = motionPolicy.reduceMotion || (motionPolicy.reduceMotion = window.matchMedia(motionPolicy.reduceQuery));
+  const smallViewport = window.matchMedia('(max-width: 760px), (pointer: coarse)');
   const state = {
     dpr: 1,
     width: 0,
@@ -117,10 +124,12 @@ const data = {
     rivers: [],
     tick: 0,
     mode: 'inner',
-    visible: !document.hidden,
+    runtime: 'static',
+    frameId: 0,
+    forcedPaused: false,
     pointerX: 0,
     pointerY: 0,
-    scroll: 0,
+    scroll: window.scrollY || 0,
   };
 
   function hashSeed(input) {
@@ -230,6 +239,10 @@ const data = {
     canvas.style.width = `${state.width}px`;
     canvas.style.height = `${state.height}px`;
     ctx.setTransform(state.dpr, 0, 0, state.dpr, 0, 0);
+  }
+
+  function clearCanvas() {
+    ctx.clearRect(0, 0, state.width || canvas.width, state.height || canvas.height);
   }
 
   function drawBackground(t) {
@@ -422,53 +435,142 @@ const data = {
     }
   }
 
-  function frame(t) {
-    if (!state.visible) {
-      requestAnimationFrame(frame);
+  function overlayOpen() {
+    const search = document.getElementById('search-modal');
+    if (search && (search.classList.contains('is-visible') || search.classList.contains('is-open'))) return true;
+    const modal = document.querySelector('[role="dialog"][aria-modal="true"].is-visible, [role="dialog"][aria-modal="true"].is-open');
+    if (modal) return true;
+    const overlay = document.querySelector('.tool-preview-layer.is-visible, .source-preview-layer.is-visible');
+    if (overlay) return true;
+    const menu = document.getElementById('mobile-menu');
+    if (menu && !menu.hidden) {
+      const display = typeof window.getComputedStyle === 'function'
+        ? window.getComputedStyle(menu).display
+        : menu.style.display;
+      if (display && display !== 'none') return true;
+    }
+    return document.body.style.overflow === 'hidden';
+  }
+
+  function nextRuntime() {
+    if (document.hidden) return 'hidden';
+    if (reduceMotion.matches || smallViewport.matches) return 'static';
+    if (state.forcedPaused || overlayOpen()) return 'paused';
+    return 'active';
+  }
+
+  function stopLoop() {
+    if (!state.frameId) return;
+    cancelAnimationFrame(state.frameId);
+    state.frameId = 0;
+  }
+
+  function startLoop() {
+    if (state.frameId || state.runtime !== 'active') return;
+    state.frameId = requestAnimationFrame(frame);
+  }
+
+  function applyRuntime(rebuild = false) {
+    const runtime = nextRuntime();
+    const changed = runtime !== state.runtime;
+    state.runtime = runtime;
+    root.dataset.runtime = runtime;
+
+    if (runtime === 'active') {
+      if (changed || rebuild) {
+        resize();
+        createNodes();
+      }
+      startLoop();
       return;
     }
+
+    stopLoop();
+    if (runtime === 'static' || runtime === 'hidden') {
+      clearCanvas();
+    }
+  }
+
+  function frame(t) {
+    state.frameId = 0;
+    if (state.runtime !== 'active') return;
     state.tick = t;
     drawBackground(t);
     drawRivers(t);
     drawTraces(t);
     drawNetwork(t);
     drawRadar(t);
-    if (!reduceMotion.matches) requestAnimationFrame(frame);
+    startLoop();
   }
 
-  function boot() {
-    setMode();
-    resize();
-    createNodes();
-    frame(performance.now());
+  function listenMedia(mql, handler) {
+    if (typeof mql.addEventListener === 'function') {
+      mql.addEventListener('change', handler);
+    } else if (typeof mql.addListener === 'function') {
+      mql.addListener(handler);
+    }
   }
 
-  window.__aipediaMoatUpdate = () => {
-    setMode();
-    createNodes();
-  };
+  let runtimeCheckId = 0;
+  function scheduleRuntimeCheck() {
+    if (runtimeCheckId) return;
+    runtimeCheckId = requestAnimationFrame(() => {
+      runtimeCheckId = 0;
+      applyRuntime(false);
+    });
+  }
 
-  window.addEventListener('resize', () => {
-    resize();
-    createNodes();
-  }, { passive: true });
+  function setPaused(paused) {
+    state.forcedPaused = Boolean(paused);
+    applyRuntime(false);
+  }
+
+  const overlayObserver = new MutationObserver(scheduleRuntimeCheck);
+  let observedOverlayBody = null;
+  function observeOverlayBody() {
+    const body = document.body;
+    if (!body || body === observedOverlayBody) return;
+    overlayObserver.disconnect();
+    overlayObserver.observe(body, {
+      attributes: true,
+      attributeFilter: ['class', 'style', 'hidden', 'aria-hidden'],
+      subtree: true,
+    });
+    observedOverlayBody = body;
+  }
+  observeOverlayBody();
+  function update() {
+    observeOverlayBody();
+    setMode();
+    state.scroll = window.scrollY || 0;
+    applyRuntime(true);
+  }
+
+  const api = { update, setPaused };
+  window.__aipediaMoat = api;
+  window.__aipediaMoatUpdate = update;
+
+  window.addEventListener('resize', () => applyRuntime(true), { passive: true });
   window.addEventListener('pointermove', (event) => {
+    if (state.runtime !== 'active') return;
     state.pointerX = (event.clientX / Math.max(1, state.width) - 0.5);
     state.pointerY = (event.clientY / Math.max(1, state.height) - 0.5);
   }, { passive: true });
   window.addEventListener('scroll', () => {
     state.scroll = window.scrollY || 0;
   }, { passive: true });
-  document.addEventListener('visibilitychange', () => {
-    state.visible = !document.hidden;
+  document.addEventListener('visibilitychange', () => applyRuntime(false));
+  document.addEventListener('astro:after-swap', update);
+  document.addEventListener('aipedia:moat-pause', (event) => {
+    const detail = event instanceof CustomEvent ? event.detail : null;
+    setPaused(Boolean(detail && detail.paused));
   });
-  document.addEventListener('astro:after-swap', window.__aipediaMoatUpdate);
-  reduceMotion.addEventListener?.('change', () => {
-    resize();
-    createNodes();
-    frame(performance.now());
-  });
+  listenMedia(reduceMotion, () => applyRuntime(true));
+  listenMedia(smallViewport, () => applyRuntime(true));
 
-  boot();
+  setMode();
+  resize();
+  createNodes();
+  applyRuntime(false);
 })();
 </script>

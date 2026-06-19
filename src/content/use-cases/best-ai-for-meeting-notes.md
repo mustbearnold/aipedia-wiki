@@ -3,7 +3,7 @@ type: use-case
 slug: best-ai-for-meeting-notes
 title: "Best AI for Meeting Notes (June 2026)"
 seo_title: "Best AI Meeting Notes Tools: Fathom, Fireflies, MeetGeek, Otter & Read AI (June 2026)"
-meta_description: "Updated June 12, 2026: compare Fathom, Fireflies, MeetGeek, Otter, Read AI, NotebookLM, and Castmagic for meeting notes, CS meeting memory, CRM handoff, live transcription, and content repurposing."
+meta_description: "Updated June 18, 2026: compare Fathom, Fireflies, MeetGeek, Otter, Read AI, NotebookLM, and Castmagic for meeting notes, CS meeting memory, CRM handoff, live transcription, and content repurposing."
 description: "A current buyer guide to AI meeting-note tools for transcripts, summaries, action items, CRM handoff, customer-success meeting memory, live transcription, team meeting intelligence, and post-meeting source review."
 tools_mentioned: ["fathom", "fireflies", "otter-ai", "read-ai", "notebooklm", "meetgeek", "castmagic"]
 guide_picks:
@@ -32,8 +32,8 @@ guide_picks:
       - label: "Fireflies pricing"
         url: "https://fireflies.ai/pricing"
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-18
+last_verified: 2026-06-18
 update_frequency: monthly
 ---
 
@@ -41,7 +41,7 @@ update_frequency: monthly
 
 The best AI meeting-note tool depends on whether you need a personal notetaker, live captions, team meeting intelligence, CRM handoff, enterprise controls, or source-grounded review after the call.
 
-Verified June 12, 2026 against official Fathom, Fireflies, Otter, Read AI, NotebookLM, MeetGeek, and Castmagic sources. AiPedia may earn from some tool links, including MeetGeek, but the ranking is editorial.
+Castmagic was reverified June 18, 2026 against official pricing, product, feature, API, and affiliate sources; the wider Fathom, Fireflies, Otter, Read AI, NotebookLM, and MeetGeek checks remain June 12, 2026. AiPedia may earn from some tool links, including MeetGeek and Castmagic, but the ranking is editorial.
 
 ## Quick Verdict
 
@@ -57,7 +57,7 @@ Pick **[NotebookLM](/tools/notebooklm/)** as the free post-meeting analysis comp
 
 Pick **[MeetGeek](/tools/meetgeek/)** when meeting notes need to become a customer-success memory layer. Its current pricing page lists Basic free with 3 transcription hours/month, Pro at $9.99/user/month billed annually with 20 hours, and Business at $17/user/month billed annually with unlimited transcription, team spaces, analytics, unlimited AI Chat/tools, unlimited workflows, and consent notifications. It is especially strong for onboarding, renewal, QBR, implementation, and multilingual customer calls where the follow-up needs to land in a CRM, task manager, or knowledge workflow.
 
-Consider **[Castmagic](/tools/castmagic/)** when the real bottleneck is turning a recorded meeting, interview, or podcast into show notes, blog posts, social threads, or newsletter sections rather than the meeting notes themselves.
+Consider **[Castmagic](/tools/castmagic/)** when the real bottleneck is turning a recorded meeting, interview, webinar, or podcast into show notes, blog posts, social threads, newsletter sections, clips, campaign drafts, or reusable transcript-library context rather than the meeting notes themselves.
 
 ## Best Picks by Meeting Job
 
@@ -132,11 +132,11 @@ Start with the meeting type:
 
 ### 7. Castmagic
 
-[Castmagic](/tools/castmagic/) is not a meeting notetaker in the Fathom or Fireflies sense. It is a content factory for recorded audio: upload a recorded meeting, interview, or podcast, and Castmagic produces show notes, timestamped chapters, blog drafts, social threads, newsletter sections, and quote pulls. AiPedia is tracking it as of May 13, 2026 for buyers whose real bottleneck is repurposing the meeting, not summarizing it.
+[Castmagic](/tools/castmagic/) is not a meeting notetaker in the Fathom or Fireflies sense. It is a content workspace for recorded audio and video: upload or import a recorded meeting, interview, webinar, or podcast, and Castmagic produces show notes, timestamped chapters, blog drafts, social threads, newsletter sections, clips, campaign assets, and quote pulls. The June 18 check adds Content Pipeline, brand voice/templates, semantic search across recordings, Castmagic MCP for Claude, and iOS recording to the buying story.
 
 **Best for:** podcasters, interview-driven creators, marketers who turn customer or expert calls into content, and founders who repurpose recordings across newsletter, blog, and social.
 
-**Watch-out:** Castmagic does not replace a calendar-aware notetaker for routine internal meetings. Use it on the recordings that need to become published content.
+**Watch-out:** Castmagic does not replace a calendar-aware notetaker for routine internal meetings. Use it on recordings that need to become published content, sales collateral, training material, or source context. Also verify API scope before building automation, because the public API docs still emphasize transcription while content generation is described as in development.
 
 ## What Not To Do
 
@@ -168,7 +168,7 @@ Read AI fits when you want meeting reports, coaching, workplace search, email/me
 
 **How often is this guide updated?**
 
-Monthly, and sooner when pricing, plan limits, recording policies, affiliate programs, or major meeting-intelligence features change. This page was last verified on 2026-06-12.
+Monthly, and sooner when pricing, plan limits, recording policies, affiliate programs, or major meeting-intelligence features change. Castmagic was last verified on 2026-06-18; the rest of this guide was last broadly verified on 2026-06-12.
 
 ## Sources
 
@@ -181,4 +181,6 @@ Monthly, and sooner when pricing, plan limits, recording policies, affiliate pro
 - [MeetGeek pricing](https://meetgeek.ai/pricing) (verified 2026-06-12)
 - [MeetGeek customer success playbook](https://meetgeek.ai/blog/ai-for-customer-success) (verified 2026-06-12)
 - [MeetGeek PartnerStack program](https://market.partnerstack.com/page/meetgeek) (verified 2026-06-12)
-- [Castmagic pricing](https://www.castmagic.io/pricing?via=getcastmagic) (verified 2026-06-12)
+- [Castmagic pricing](https://www.castmagic.io/pricing) (verified 2026-06-18)
+- [Castmagic product overview](https://www.castmagic.io/) (verified 2026-06-18)
+- [Castmagic API docs](https://docs.castmagic.io/) (verified 2026-06-18)

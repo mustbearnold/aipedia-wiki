@@ -267,7 +267,7 @@ const dead = defineCollection({
     meta_description: z.string().optional(),
     author: z.string().optional(),
     died: dateish,
-    cause: z.enum(['acquired', 'shutdown', 'pivoted', 'bankrupt']).optional(),
+    cause: z.enum(['acquired', 'shutdown', 'pivoted', 'bankrupt', 'divested']).optional(),
     acquired_by: z.string().optional(),
     last_updated: dateish,
   }).passthrough(),

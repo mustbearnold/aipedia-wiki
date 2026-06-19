@@ -5,10 +5,10 @@ title: AI Image Generation
 description: Current AI image tools for generation, photo editing, upscaling, product visuals, text-heavy graphics, creative ideation, and commercially safer Adobe workflows.
 tool_count: 18
 seo_title: "Best AI Image Tools, Photo Editors & 3D Generators (June 2026)"
-meta_description: "Updated June 15, 2026: compare Midjourney, ChatGPT Images, Adobe Firefly, Canva, Flux, Ideogram, Leonardo AI, Google Nano Banana/Imagen, Recraft, Freepik, AdCreative.ai, Meshy, Tripo3D, Rodin, and other AI image/3D tools by quality, workflow, pricing risk, text rendering, rights, and production fit."
+meta_description: "Updated June 18, 2026: compare Midjourney, ChatGPT Images, Adobe Firefly, Canva, Flux, Ideogram, Leonardo AI, Google Nano Banana/Imagen, Recraft, Freepik, AdCreative.ai, Meshy, Tripo3D, Rodin, and other AI image/3D tools by quality, workflow, pricing risk, text rendering, rights, and production fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-15
-last_verified: 2026-06-15
+last_updated: 2026-06-18
+last_verified: 2026-06-18
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -28,13 +28,15 @@ AiPedia rechecked Canva, Midjourney, and Adobe Firefly on June 15, 2026 after th
 
 [Midjourney](/tools/midjourney/) remains the aesthetic ideation benchmark, and the June 15 check keeps the buyer math anchored to Basic, Standard, Pro, and Mega subscriptions, V8.1 as the default image model, V7 as the Omni Reference fallback, annual effective pricing at $8/$24/$48/$96 per month, and Midjourney Video as a short image-to-video add-on with GPU-minute costs that can outpace still-image work. [ChatGPT](/tools/chatgpt/) is the best default when image generation or editing is part of a broader assistant workflow, especially after current ChatGPT release notes added ImageGen 2.0 and image-prompt editing updates. [Adobe Firefly](/tools/adobe-firefly/) is the safer first pick for Photoshop, Creative Cloud, Generative Fill, object removal, image expansion, Firefly Image 5/Image5, partner-model-aware Adobe workflows, and credit-aware commercial review that now includes per-model credit rates and prompt/reference-file sharing checks. [Canva](/tools/canva/) wins when the image needs to become a finished post, ad, thumbnail, product graphic, or presentation asset quickly, but the June 15 Canva refresh makes AI allowance, AI Pass, AI usage-limit drift, and commercial-rights review part of the image-production decision.
 
-For paid-media image production, [AdCreative.ai](/tools/adcreative/) is a narrow specialist rather than a general image model. The June 1 check found Starter at $39/month, Professional at $249/month, Ultimate at $999/month, Enterprise custom, and a seasonal discount on longer billing cycles. Use it when the image job is ad-variant production, brand-kit workflow, and creative scoring, not art direction.
+For paid-media image production, [AdCreative.ai](/tools/adcreative/) is a narrow specialist rather than a general image model. The June 18 check keeps monthly list prices at Starter $39, Professional $249, Ultimate $999, and Enterprise custom, with live sale messaging around 25% quarterly and 50% yearly discounts. Use it when the image job is ad-variant production, product visuals, product/fashion videoshoots, UGC-style assets, brand-kit workflow, and creative scoring, not art direction. Verify checkout because credits, brands, users, video usage, and discounted effective monthly values can shift the real cost.
 
 Flux by Black Forest Labs remains the power-user and self-hosting choice, with a strong LoRA and ComfyUI ecosystem. The June 5 check anchors Flux pricing to BFL's FLUX.2 table: Klein 4B starts around $0.014/image, Pro starts at $0.03/MP for text-to-image and $0.045/MP for editing, Max starts at $0.07/MP, Flex starts at $0.06/MP in the API pricing table, and FLUX.2 dev remains the local/non-commercial lane. Ideogram is still the safer pick for English-first logos, thumbnails, posters, labels, and marketing text; its live annual pricing lists Plus $15/month, Pro $42/month, Team $20/user/month, and Enterprise contact sales, so do not rely on old Basic-era pricing. The refreshed Midjourney vs Ideogram and Midjourney vs Flux comparisons now separate Midjourney's aesthetic subscription workflow from Ideogram's text-in-image workflow and Flux's API/open-weight stack. Freepik AI Suite / Magnific belongs in the production-suite lane: verify the live web-app plan allowances before claiming a model is unlimited or credit-free, and treat the API separately because Magnific docs say API calls always deduct credits even where web-app plans include Unlimited allowances. Leonardo AI offers one of the easiest free entry points, but the June 8 check replaces the old Apprentice/Artisan/Maestro ladder with current Free, Essential $12/month, Premium $30/month, Ultimate $60/month, separate Team Starter/Growth, and separate API pay-as-you-go/custom plans. [Meshy](/tools/meshy/) is still the first 3D specialist to shortlist when the buyer needs an integrated editor and 3D asset workflow; its June 8 check keeps Meshy 6 as current, Free as an evaluation lane with 100 credits and Meshy 5-only download limits, Pro at $20/month, Studio at $60/seat/month, and credit math as the main buyer risk. [Tripo3D](/tools/tripo3d/) is the topology/API challenger: the June 10 check moves its buyer math to Free with 200 credits, Pro at $13.93/month annual or $19.90 monthly, Max at $53.94/month annual or $89.90 monthly, and Team at $54.93/month/seat annual or $109.90 monthly, with public CC BY 4.0 output on Free and private/commercial output on paid tiers. [fal.ai](/tools/fal-ai/) is the developer API lane for fast image, video, audio, and 3D generation; its June 2 pricing check keeps prepaid credits, successful-output billing, queue behavior, failed-output rules, and batch discounts in the buyer math.
 
 The June 8 [Krea](/tools/krea/) refresh keeps the multi-model creative-suite lane current. Krea is useful when one workspace needs image, video, 3D, lipsync, LoRA, realtime canvas, node workflows, and access to models such as Veo3, Sora, Kling, Flux, Nano Banana, Topaz, Magnific, and Seedance. The buyer risk is compute-unit accounting: Basic, Pro, and Max monthly units do not roll over, Business/Enterprise can support rollover, and one-time packs expire after 90 days.
 
 The June 8 [Playground AI](/tools/playground-ai/) refresh keeps the quick design-generation lane current for social graphics, prompts, and fast image ideation. The rendered pricing page now frames Free as a non-commercial lane with 10 images every 3 hours and 3 monthly generations across Nano Banana, GPT Image 2, and Seedream; Pro at $15/month or $12/month annual adds commercial use, 75 images every 3 hours, 150 monthly credits, 2K GPT Image 2 editing, and limited Nano Banana Pro use; Pro Plus at $45/month or $36/month annual adds 1,000 monthly credits, 4K GPT Image 2 editing, broader Nano Banana Pro use, and request-gated API access. The help center still lists Day Pass and $8 one-time 100-credit packs, so light buyers should verify the live checkout before assuming those are available in every region.
+
+The June 18 [Clipdrop](/tools/clipdrop/) refresh corrects the Stability-era story. Clipdrop is active under Jasper, not discontinued, and remains useful for quick background removal, cleanup, uncrop, upscaling, relighting, text removal, text-to-image, background replacement, and social-format resizing. Treat it as a utility toolkit, not a frontier image model. Consumer buyers should verify live Pro checkout because the pricing page renders the price by region, while API buyers should now evaluate Jasper Business/API terms because the Clipdrop API surface points toward Jasper's newer image API.
 
 The practical question is no longer "which model can make an image?" Most major systems can. The better question is which workflow you trust for the job: artistic direction, readable text, self-hosting, brand consistency, or integration with the rest of your AI stack.
 
@@ -47,6 +49,7 @@ The practical question is no longer "which model can make an image?" Most major 
 | **Flux (Black Forest Labs)** | Open-weight / hosted varies | Local workflows, self-hosting, fine-tuning | 9 | 10 | 6 | 8 |
 | **Ideogram** | Free; Plus $15/mo annual | English text-in-image, logos, marketing materials | 8 | 9 | 7 | 7 |
 | **Leonardo AI** | Free-$60/mo web plans | Free daily generation, private paid generations, and quick creative iteration | 8 | 10 | 5 | 7 |
+| **Clipdrop** | Free; Pro region-rendered | Quick background removal, cleanup, uncrop, upscaling, relighting, and Jasper-routed image API evaluation | 8 | 8 | 5 | 7 |
 | **Google Nano Banana / Imagen** | In Gemini / Google AI plans; API pricing varies | Google users, text rendering, personal-context images, and photorealism | 8 | 8 | 8 | 9 |
 | **Stable Diffusion** | Free open-source | Self-hosting, no restrictions, fine-tuning | 9 | 10 | 7 | 9 |
 | **Adobe Firefly** | Free-$199.99/mo | Commercially safer Creative Cloud workflows | 7 | 7 | 8 | 9 |
@@ -63,6 +66,7 @@ The practical question is no longer "which model can make an image?" Most major 
 - **Specialists still matter.** Recraft V4 remains the shortlist entry for vector/text-heavy brand assets, NightCafe is the hobbyist/community multi-model playground, and Rodin is the 3D detail specialist when the output must become a mesh rather than a flat image.
 - **3D generation is a separate workflow.** Meshy is the safer first editor/workspace pick, Tripo3D is the cleaner topology/API pick, and Rodin remains the detail specialist. Do not compare them only against flat image tools.
 - **Media APIs are their own buyer lane.** fal.ai is worth shortlisting when the image job is part of a product API, workflow, or batch media pipeline rather than a human-facing design app.
+- **Utility image APIs need ownership checks.** Clipdrop is now Jasper-owned and its API page points toward Jasper's image API, so do not treat it as a Stability API replacement without checking Jasper Business/API terms.
 - **Magnific is a creative-finishing tool, not a faithful-restoration default.** Creative Upscaler can add or infer detail and supports 2x/4x/8x/16x output; use Precision or a conservative alternative when the image must stay factually faithful.
 
 ## Our Picks
@@ -136,7 +140,8 @@ Image generation is approaching commodity. The real differentiation is workflow 
 - [Tripo3D pricing](https://www.tripo3d.ai/pricing) (verified 2026-06-12)
 - [Tripo v3.0 Ultra release](https://www.tripo3d.ai/blog/introducing-tripo-new-algorithm3) (verified 2026-06-12)
 - [Recraft V4 docs](https://www.recraft.ai/docs/recraft-models/recraft-V4) (verified 2026-06-12)
-- [AdCreative.ai official site](https://www.adcreative.ai/) (verified 2026-06-12)
+- [AdCreative.ai official site](https://www.adcreative.ai/) (verified 2026-06-18)
+- [AdCreative.ai fashion videoshoots](https://www.adcreative.ai/fashion-videoshoot) (verified 2026-06-18)
 - [NightCafe pricing](https://creator.nightcafe.studio/pricing) (verified 2026-05-24)
 - [Rodin pricing](https://hyper3d.ai/pricing) (verified 2026-05-24)
 - [fal Model API pricing docs](https://fal.ai/docs/documentation/model-apis/pricing) (verified 2026-06-12)
@@ -145,3 +150,6 @@ Image generation is approaching commodity. The real differentiation is workflow 
 - [Playground paid-plan limits](https://help.playgroundai.com/en/articles/11165689-how-many-images-or-edits-under-the-paid-plans-pro-day-pass) (verified 2026-06-12)
 - [Gemini API image generation docs](https://ai.google.dev/gemini-api/docs/image-generation) (verified 2026-06-14)
 - [Google AI subscriptions](https://gemini.google/subscriptions/) (verified 2026-06-14)
+- [Clipdrop official site](https://clipdrop.co/) (verified 2026-06-18)
+- [Clipdrop pricing](https://clipdrop.co/pricing) (verified 2026-06-18)
+- [Jasper image API docs](https://developers.jasper.ai/docs/using-images) (verified 2026-06-18)

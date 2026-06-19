@@ -43,3 +43,64 @@ test('search tools API returns active tools only in compact shape', async ({ req
     expect(Object.keys(tool).sort()).toEqual(['category', 'price', 'slug', 'tagline', 'title', 'url']);
   }
 });
+
+test('home search API returns populated backward-compatible JSON', async ({ request }) => {
+  const data = await expectJson(await request.get('/api/home-search.json'));
+
+  expect(data.count).toBeGreaterThan(100);
+  expect(Array.isArray(data.items)).toBe(true);
+  expect(data.items.length).toBe(data.count);
+
+  const kinds = new Set(data.items.map((item) => item.kind));
+  expect(kinds.has('Tool')).toBe(true);
+  expect(kinds.has('Compare')).toBe(true);
+
+  const chatgpt = data.items.find((item) => item.kind === 'Tool' && item.href === '/tools/chatgpt/');
+  expect(chatgpt).toMatchObject({
+    kind: 'Tool',
+    title: expect.stringMatching(/ChatGPT/i),
+    href: '/tools/chatgpt/',
+    meta: expect.any(String),
+    detail: expect.any(String),
+    badge: expect.any(String),
+    priority: expect.any(Number),
+    search: expect.stringMatching(/chatgpt/i),
+  });
+
+  for (const item of data.items.slice(0, 25)) {
+    expect(Object.keys(item).sort()).toEqual(['badge', 'detail', 'href', 'kind', 'logo', 'meta', 'priority', 'search', 'title']);
+    expect(item.title).toEqual(expect.any(String));
+    expect(item.href).toMatch(/^\//);
+    expect(item.search).toEqual(expect.any(String));
+    expect(item.search.length).toBeGreaterThan(0);
+  }
+});
+
+test('comparisons API returns populated comparison JSON', async ({ request }) => {
+  const data = await expectJson(await request.get('/api/comparisons.json'));
+
+  expect(data.count).toBeGreaterThan(0);
+  expect(Array.isArray(data.comparisons)).toBe(true);
+  expect(data.comparisons.length).toBe(data.count);
+
+  const comparison = data.comparisons.find((item) => item.slug === 'chatgpt-vs-poe');
+  expect(comparison).toMatchObject({
+    slug: 'chatgpt-vs-poe',
+    title: expect.any(String),
+    tools: expect.arrayContaining(['chatgpt', 'poe']),
+    page_url: 'https://aipedia.wiki/compare/chatgpt-vs-poe/',
+    category: expect.any(String),
+  });
+
+  for (const comparison of data.comparisons.slice(0, 25)) {
+    expect(Object.keys(comparison).sort()).toEqual(['category', 'last_updated', 'page_url', 'seo_title', 'slug', 'title', 'tools', 'winner']);
+    expect(comparison.slug).toEqual(expect.any(String));
+    expect(comparison.title).toEqual(expect.any(String));
+    expect(comparison.tools.length).toBeGreaterThan(0);
+    expect(comparison.page_url).toMatch(/^https:\/\/aipedia\.wiki\/compare\/.+\/$/);
+  }
+
+  for (let i = 1; i < Math.min(data.comparisons.length, 25); i += 1) {
+    expect(data.comparisons[i - 1].title.localeCompare(data.comparisons[i].title)).toBeLessThanOrEqual(0);
+  }
+});

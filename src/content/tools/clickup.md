@@ -2,21 +2,19 @@
 type: tool
 slug: clickup
 title: ClickUp
-tagline: >-
-  All-in-one productivity workspace: tasks, docs, chat, whiteboards, goals, and ClickUp Brain AI across Free, Unlimited ($7), Business ($12), Enterprise tiers.
+tagline: All-in-one work-management workspace for tasks, docs, chat, dashboards, automations, Brain AI, Super Agents, Brain MAX apps, MCP access, and AI Super Credit-based agent work.
 category: ai-automation
-company: clickup
-url: 'https://clickup.com'
+company: ClickUp
+url: https://clickup.com
 pricing_model: freemium
-price_range: $0-$40/user/month
+price_range: "$0-$40/user/month; Brain AI $9/user/month; Everything AI $28/user/month; AI Super Credits $10 per 10K credits"
 status: active
 launched: 2017-01
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-18
+last_verified: 2026-06-18
 update_frequency: monthly
-seo_title: 'ClickUp: Features, Pricing & Review (June 2026)'
-meta_description: >-
-  ClickUp bundles tasks, docs, chat, whiteboards, goals, and ClickUp Brain AI into one workspace. Free tier is genuinely usable; Unlimited $7/user/mo annual, Business $12, Brain AI $9/user/mo add-on, Everything AI $28/user/mo.
+seo_title: "ClickUp Review (June 2026): Pricing, Brain AI, Super Agents, MCP"
+meta_description: "ClickUp review updated June 18, 2026: Free, Unlimited $7, Business $12, Brain AI $9, Everything AI $28, Super Agents, Brain MAX, MCP, AI Super Credits, pricing risks, and workspace fit."
 author: aipedia.wiki Editorial
 affiliate:
   has_program: true
@@ -30,239 +28,289 @@ affiliate:
 scores:
   utility: 8
   value: 8
-  moat: 5
+  moat: 6
   longevity: 8
 facts:
   best_for:
-    value: Best for teams consolidating tasks, docs, chat, goals, and AI assistance into one work-management workspace.
-    source: https://clickup.com/
-    source_label: ClickUp official site
-    source_id: clickup-official
-    verified_at: '2026-06-12'
+    value: "ClickUp is best for teams consolidating tasks, docs, chat, dashboards, automations, AI assistance, Super Agents, and work-search context into one work-management workspace."
+    source: https://clickup.com/pricing
+    source_label: ClickUp pricing
+    source_id: clickup-pricing
+    verified_at: 2026-06-18
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-13'
+    next_review_at: 2026-09-18
   pricing_anchor:
-    value: ClickUp pricing is seat and plan based, with AI features potentially tied to plan/add-on packaging; verify current
-      annual/monthly rates and ClickUp Brain availability.
+    value: "ClickUp's June 18 pricing check keeps Free Forever, Unlimited at $7/user/month billed yearly, Business at $12/user/month billed yearly, Enterprise custom, Brain AI at $9/user/month, Everything AI at $28/user/month, and AI Super Credits at $10 per 10,000 credits."
     source: https://clickup.com/pricing
     source_label: ClickUp pricing
     source_id: clickup-pricing
-    verified_at: '2026-06-12'
+    verified_at: 2026-06-18
     volatility: high
     confidence: high
-    next_review_at: '2026-08-13'
+    next_review_at: 2026-08-18
   ai_workflow:
-    value: ClickUp Brain is positioned as AI across the workspace, so evaluation should test whether answers, writing, summaries,
-      automations, and task context work on the buyer's real data.
-    source: https://clickup.com/ai
-    source_label: ClickUp Brain product page
-    source_id: clickup-brain
-    verified_at: '2026-06-12'
+    value: "Brain 2 is now positioned as company-specific AI that uses tasks, Docs, Chat, wikis, connected-app data, memory, preferences, premium models, Super Agents, external MCP connections, deep research, and Gmail/Slack read-write-search paths."
+    source: https://help.clickup.com/hc/en-us/articles/12578085238039-What-is-ClickUp-Brain-AI
+    source_label: ClickUp Brain AI help
+    source_id: clickup-brain-help
+    verified_at: 2026-06-18
     volatility: high
     confidence: high
-    next_review_at: '2026-08-13'
+    next_review_at: 2026-08-18
   integration_surface:
-    value: The main implementation surface is migrating or connecting work-management objects, automations, docs, chat, and
-      reporting, not simply enabling a chatbot.
-    source: https://clickup.com/
-    source_label: ClickUp official site
-    source_id: clickup-official
-    verified_at: '2026-06-12'
-    volatility: medium
-    confidence: high
-    next_review_at: '2026-11-13'
-  watch_out_for:
-    value: 'ClickUp can replace multiple tools, but rollout risk is workspace complexity: permissions, notification noise, hierarchy
-      design, and user adoption matter more than the AI demo.'
-    source: https://clickup.com/pricing
-    source_label: ClickUp pricing
-    source_id: clickup-pricing
-    verified_at: '2026-06-12'
+    value: "ClickUp now has a public-beta MCP server available on all plans, with setup docs for Claude, Claude Code, Cursor, Devin, Microsoft Copilot Studio, VS Code, Windsurf, ChatGPT, Antigravity, and other clients."
+    source: https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server
+    source_label: ClickUp MCP server
+    source_id: clickup-mcp
+    verified_at: 2026-06-18
     volatility: high
     confidence: high
-    next_review_at: '2026-08-13'
-tags: [project-management, productivity, workspace, tasks, docs, whiteboards, ai-agents, automations, clickup-brain]
+    next_review_at: 2026-08-18
+  watch_out_for:
+    value: "The main risk is no longer just feature sprawl. Buyers must govern workspace hierarchy, permissions, AI role access, Super Agent permissions, AI Super Credit burn, fair-use limits, MCP access, and whole-workspace upgrade requirements."
+    source: https://help.clickup.com/hc/en-us/articles/20686299081879-ClickUp-Brain-AI-feature-availability-and-limits
+    source_label: ClickUp Brain AI feature availability and limits
+    source_id: clickup-ai-limits
+    verified_at: 2026-06-18
+    volatility: high
+    confidence: high
+    next_review_at: 2026-08-18
+tags: [project-management, productivity, workspace, tasks, docs, whiteboards, ai-agents, automations, clickup-brain, mcp]
 best_for:
-  - small-to-mid teams consolidating tasks + docs + chat in one tool
-  - agencies managing multiple client workspaces
-  - startups wanting AI-integrated project management without multiple subscriptions
-  - marketing ops centralising campaign tracking, briefs, and approvals
+  - small-to-mid teams consolidating tasks, docs, chat, dashboards, and automations
+  - agencies managing client delivery workspaces
+  - marketing ops teams centralizing campaigns, briefs, approvals, and reporting
+  - teams that want Brain AI over live work context instead of a separate chatbot
+  - teams ready to govern Super Agents and AI Super Credit usage
 not_best_for:
   - engineering teams that prefer Linear or GitHub Projects purity
-  - solo users happy with Notion or a simple todo app
-  - enterprises needing deep ITSM or CRM integration (dedicated platforms win)
-  - teams that resent feature sprawl
+  - solo users happy with Notion, Todoist, or a simple task app
+  - teams that resist feature depth and admin setup
+  - enterprises needing a pure ITSM, CRM, or ERP platform
+  - teams that cannot govern agent permissions, AI spend, and workspace hierarchy
 quick_answer: >-
-  ClickUp is the "do everything in one workspace" tool: tasks, docs, chat, whiteboards, goals, time tracking, and ClickUp Brain AI. Pick it when consolidating 3+ SaaS subscriptions into one seat makes sense. Skip if your team already runs a focused stack (Linear + Notion + Slack) and feature sprawl would slow them down.
+  ClickUp is the all-in-one work-management workspace for teams that want tasks, docs, chat, dashboards, automations, and AI in the same operating system. The June 18, 2026 check keeps core pricing stable: Free Forever, Unlimited $7/user/month billed yearly, Business $12/user/month billed yearly, Enterprise custom, Brain AI $9/user/month, Everything AI $28/user/month, and AI Super Credits at $10 per 10K credits. The bigger change is product scope: Brain 2, Brain MAX apps, Super Agents, AI Super Credits, public-beta MCP, and cross-tool AI context make ClickUp more agentic, but also raise governance and spend-control risk.
 price_history:
   - date: 2026-04-19
     plan: "Unlimited"
     price: "$7/user/mo (annual)"
     source: "https://clickup.com/pricing"
-    source_label: "Source"
+    source_label: "ClickUp pricing"
     source_id: clickup-pricing
-    note: "Annual billing. Monthly rate shown at $10/user/mo. Confirmed on clickup.com/pricing."
+    note: "Annual billing. Monthly rate shown at $10/user/mo on the pricing page at the time."
   - date: 2026-04-19
     plan: "Business"
     price: "$12/user/mo (annual)"
     source: "https://clickup.com/pricing"
-    source_label: "Source"
+    source_label: "ClickUp pricing"
     source_id: clickup-pricing
-    note: "Annual billing. Monthly rate $19/user/mo. Includes 5K automations/mo, advanced dashboards, SSO."
-  - date: 2026-04-19
-    plan: "ClickUp Brain"
-    price: "$9/user/mo"
-    source: "https://clickup.com/pricing"
-    source_label: "Source"
-    source_id: clickup-pricing
-    note: "AI add-on. Unlimited assistant, @Brain Agent, premium model routing (ChatGPT/Gemini/Claude), 1,500 AI Super Credits."
+    note: "Annual billing. Monthly rate $19/user/mo at the time. Includes dashboards, SSO, and 5K automations/mo."
   - date: 2026-05-13
-    plan: "All tiers"
-    price: "Unchanged"
-    source: "https://clickup.com/pricing"
-    source_label: "Source"
-    source_id: clickup-pricing
-    note: "Re-verified May 13, 2026: Free, Unlimited ($7), Business ($12), Enterprise (custom), Brain ($9), Everything AI ($28) all hold. AI Super Credits $0.001 to $10 per 10,000 credits. 5K automations on Business, 250K on Enterprise."
-  - date: 2026-06-02
-    plan: "All tiers"
-    price: "Unchanged"
+    plan: "Brain AI / Everything AI"
+    price: "$9/user/mo / $28/user/mo"
     source: "https://clickup.com/pricing"
     source_label: "ClickUp pricing"
     source_id: clickup-pricing
-    note: "Re-verified: Unlimited $7/user/mo annual, Business $12/user/mo annual, Brain AI $9/user/mo, Everything AI $28/user/mo, AI Super Credits $0.001-$10 per 10,000 credits."
+    note: "Brain AI and Everything AI pricing remained live, with AI Super Credits priced separately."
+  - date: 2026-06-18
+    plan: "Core workspace"
+    price: "Free; Unlimited $7/user/mo annual; Business $12/user/mo annual; Enterprise custom"
+    source: "https://clickup.com/pricing"
+    source_label: "ClickUp pricing"
+    source_id: clickup-pricing
+    note: "Free has 60MB storage, unlimited tasks, unlimited free members, 1 form, and limited advanced use. Unlimited adds unlimited storage, integrations, Gantt, goals, resource management, Chat, email in ClickUp, and permission-controlled guests. Business adds unlimited dashboards with advanced cards, unlimited message history, 5K automations/mo, Google SSO, proofing, and advanced work views."
+  - date: 2026-06-18
+    plan: "Brain AI"
+    price: "$9/user/mo"
+    source: "https://clickup.com/pricing"
+    source_label: "ClickUp pricing"
+    source_id: clickup-pricing
+    note: "Includes unlimited Brain Assistant, @Brain Agent, unlimited AI chat with Claude/ChatGPT/Gemini, expanded premium model use, unlimited AI writing, Enterprise Search Workspace, and 1,500 AI Super Credits per user/month."
+  - date: 2026-06-18
+    plan: "Everything AI"
+    price: "$28/user/mo"
+    source: "https://clickup.com/pricing"
+    source_label: "ClickUp pricing"
+    source_id: clickup-pricing
+    note: "Adds Ambient Answers, AI Notetaker, image generation, AI Fields, AI Automations and Dashboards, AI Assign and Prioritize, 3x more Super Agent usage, private/workspace Enterprise Search, and 5,000 AI Super Credits per user/month."
+  - date: 2026-06-18
+    plan: "AI Super Credits"
+    price: "$10 per 10,000 credits"
+    source: "https://help.clickup.com/hc/en-us/articles/37837088720151-How-are-AI-Super-Credits-consumed"
+    source_label: "ClickUp AI Super Credits help"
+    source_id: clickup-ai-credits
+    note: "AI Super Credits renew monthly, do not roll over, cost $0.001/credit, and are consumed by premium AI features such as AI Fields, image generation, Autopilot Agents, and Super Agents."
 ---
 
 # ClickUp
 
-ClickUp is the productivity workspace that bundles tasks, docs, chat, whiteboards, goals, time tracking, and AI agents into one seat. The pitch is consolidation: replace Asana plus Notion plus Slack plus a time tracker plus a whiteboard tool with a single tool and a single bill.
+ClickUp is an all-in-one work-management workspace. It bundles tasks, docs, chat, calendars, dashboards, whiteboards, time tracking, goals, automations, integrations, and AI into one operating system for team work.
 
-**ClickUp Brain** is the AI layer. It adds an in-workspace assistant, autonomous AI agents (Project Manager, Campaign Manager, Content Reviewer), enterprise search across every task and doc, and multi-model routing (ChatGPT, Claude, Gemini) without a separate subscription. The Brain add-on is $9/user/mo on top of any paid plan.
+The June 18, 2026 refresh keeps the old pricing story mostly stable, but changes the buyer read. ClickUp is no longer just "tasks plus ClickUp Brain." The current product story is Brain 2, Brain MAX apps, Super Agents, Everything AI, public-beta MCP, AI Super Credits, and workspace-context AI that can answer, write, search, create tasks, build workflows, and act through ClickUp permissions.
 
 ## System Verdict
 
-> **Pick ClickUp when consolidating multiple SaaS subscriptions is the goal.** Small-to-mid teams that would otherwise pay for Asana + Notion + Slack + Toggl + Miro can collapse the stack into one $7-12/user/mo seat. AI agents inside ClickUp Brain act on the same tasks and docs your team is already working in, which is genuinely different from bolting ChatGPT onto a separate workspace.
->
-> **Skip it if your team is happy with a focused stack.** Engineering teams that run Linear for issues + GitHub for code + Slack for chat rarely find ClickUp's Everything App framing compelling. Feature sprawl is a real tax: the permissions model, the 15+ views, and the settings depth take weeks to internalize. [Notion](/tools/notion-ai/) wins for doc-first work, [Monday.com](https://monday.com) wins for visual ops dashboards, and [Linear](https://linear.app) wins for engineering-only workflows.
->
-> **Who pays which tier:** Free Forever for personal use and tiny teams (unlimited tasks, limited storage, 100 uses of dashboards and Gantt). Unlimited $7/user/mo annual for most teams needing integrations, dashboards, and unlimited storage. Business $12/user/mo annual when automations + SSO + advanced permissions matter. Enterprise custom for SAML/SCIM, audit logs, HIPAA, and 250K monthly automations. Add Brain at $9/user/mo or Everything AI at $28/user/mo as AI usage scales.
+Pick ClickUp when the team wants work management and AI in the same workspace. It is strongest for marketing, agency, operations, product, customer-facing, and general project teams that want fewer disconnected tools and can tolerate an admin-heavy setup period.
+
+Skip ClickUp if your team prizes speed and focus over breadth. [Linear](https://linear.app) is cleaner for engineering issue tracking. [Notion AI](/tools/notion-ai/) is cleaner for doc-first knowledge work. [Monday.com](https://monday.com) is cleaner for visual ops boards. A focused stack can beat ClickUp when users already like the current tools.
+
+Best plan: Unlimited is the lowest serious workspace tier for most teams. Business is the practical tier when dashboards, message history, automations, proofing, Google SSO, and portfolio workload matter. Add Brain AI only after proving the team will use AI across real ClickUp tasks, docs, chats, and connected apps. Add Everything AI only when AI Notetaker, Ambient Answers, AI Fields, AI Automations, dashboards, and higher Super Agent usage are core to the workflow.
+
+## What Changed Since The Last Refresh
+
+- **Core workspace pricing stayed stable.** Unlimited remains $7/user/month billed yearly, Business remains $12/user/month billed yearly, and Enterprise remains custom.
+- **AI pricing needs clearer separation.** Brain AI remains $9/user/month and Everything AI remains $28/user/month, but the separate Brain pricing page now also lists flexible add-ons: AI Super Credits at $10 per 10K credits, Talk to Text at $9/user/month, and AI Notetaker from $12 for 60 hours/month.
+- **Brain 2 is now the center of the story.** ClickUp help says Brain 2 completes workflows end to end, uses persistent memory and personal preferences, builds slides/dashboards/prototypes from real work data, creates Super Agents, supports external MCP server connections, does deep research, and can read/write/search Gmail and Slack.
+- **Brain MAX matters.** ClickUp now positions Brain MAX desktop, mobile, and BrainGPT Chrome extension as dedicated apps for working directly with Brain outside the normal web app.
+- **Super Agents moved from marketing claim to operating risk.** Super Agents can be created, triggered, managed, and permissioned by members/admins/owners, and their AI Super Credit use varies by complexity.
+- **MCP is now a first-party surface.** ClickUp's developer docs describe a public-beta MCP server available on all plans, with setup paths for Claude, Claude Code, Cursor, Devin, Microsoft Copilot Studio, VS Code, Windsurf, ChatGPT, Antigravity, and other clients.
+- **AI Super Credit math is now the cost watch-out.** Credits renew monthly, do not roll over, cost $0.001 each, and can be consumed by AI Fields, AI Assign/Prioritize, image generation, Autopilot Agents, and Super Agents.
+- **Governance is more important than the demo.** Buyers must review role access, Super Agent permissions, fair-use limits, workspace upgrade requirements, MCP authentication, and who can trigger agents before rolling out AI broadly.
 
 ## Key Facts
 
 | | |
 |---|---|
-| **Core paradigm** | One workspace for tasks, docs, chat, whiteboards, goals, time tracking |
-| **AI add-on** | ClickUp Brain ($9/user/mo) · Everything AI ($28/user/mo) |
-| **AI agents** | Project Manager · Campaign Manager · Content Reviewer · Super Agents (custom) |
-| **Multi-model routing** | ChatGPT · Claude · Gemini accessible from Brain without extra subs |
-| **Views** | List · Board · Calendar · Gantt · Timeline · Mind Map · Whiteboard · Form |
-| **Automations** | 5K/mo on Business · 250K/mo on Enterprise |
-| **Integrations** | 1,000+ native integrations · Zapier · Make · open API |
-| **Compliance** | SOC 2 · GDPR · HIPAA (Enterprise) · ISO 42001 · SAML SSO · SCIM |
-| **Storage (paid plans)** | Unlimited on Unlimited and above |
-| **Free tier limits** | 60MB storage, 100 uses of dashboards and Gantt, 1 form |
-| **Data residency** | US (default) · EU · AU (Enterprise) |
-| **Mobile** | iOS and Android apps |
+| Core paradigm | One workspace for tasks, docs, chat, dashboards, whiteboards, goals, time tracking, automations, and AI |
+| Main AI product | Brain AI and Brain 2 |
+| AI apps | Brain MAX desktop, Brain MAX mobile, BrainGPT Chrome extension |
+| Agent layer | Super Agents and Autopilot Agents |
+| AI model access | Brain's default Max model plus ChatGPT, Claude, and Gemini options |
+| MCP | Public-beta ClickUp MCP server, available on all plans |
+| MCP clients named in docs | Claude, Claude Code, Cursor, Devin, Microsoft Copilot Studio, VS Code, Windsurf, ChatGPT, Antigravity, other clients |
+| AI usage unit | AI Super Credits |
+| AI credit price | $10 per 10K credits, $0.001/credit |
+| Enterprise controls | SAML SSO, SCIM, audit log, session management, Enterprise API, HIPAA available, data residency |
+| Business automations | 5K/month |
+| Enterprise automations | 250K/month |
 
-Every data point above verified against ClickUp's published sources on 2026-06-12.
+## What It Actually Is
 
-## What it actually is
+ClickUp is the "put the work graph in one place" product. Tasks, docs, chats, comments, files, dashboards, goals, and automations all become one permissioned workspace. That is the reason its AI story is stronger than a generic chatbot: Brain can use live work context instead of only files a user uploads.
 
-A SaaS workspace designed around "Everything App" positioning: a single tool that covers the full knowledge-work stack for a team. Tasks live in a hierarchical Workspace / Space / Folder / List / Task model. Docs sit alongside tasks with bidirectional linking. Chat channels exist in the same workspace. Whiteboards, Mind Maps, and Forms each add their own surface.
+The tradeoff is complexity. ClickUp's Workspace, Space, Folder, List, Task, Doc, Chat, and permission hierarchy needs deliberate design. Teams that start with every feature at once often create noisy dashboards, vague statuses, and automations nobody trusts. Teams that start with one workflow, one naming system, and one admin owner get more value.
 
-Where it gets interesting for 2026: **ClickUp Brain** and **Everything AI** put autonomous agents on top of the entire data layer. A Project Manager Agent can auto-assign tasks based on team expertise and availability. A Content Reviewer Agent watches doc changes and flags inconsistencies. Enterprise search works across every task, doc, chat message, and integrated app. Multi-model LLM routing lets teams use Claude for reasoning and Gemini for long context without a second subscription.
+## Pricing And Access
 
-The real moats: depth of features per dollar (no competitor bundles this much at $7/user/mo), AI inside your existing workspace data (versus bolting ChatGPT onto a separate tool), and a genuinely usable free tier.
+ClickUp workspace pricing, checked June 18, 2026:
 
-## When to pick ClickUp
+| Plan | Annual price | Best for | Key limits or upgrades |
+|---|---:|---|---|
+| Free Forever | $0 | Personal use, tiny teams, trial workspaces | 60MB storage, unlimited tasks, unlimited free members, 1 form, trial AI access |
+| Unlimited | $7/user/month billed yearly | Most small teams | Unlimited storage, integrations, Gantt, spaces/folders/forms, custom fields, goals, resource management, Chat, email in ClickUp |
+| Business | $12/user/month billed yearly | Teams needing dashboards and controls | Advanced dashboards, unlimited message history, 5K automations/mo, Google SSO, proofing, custom exports, portfolio workload |
+| Enterprise | Custom | Regulated and large organizations | Governance, custom roles, SAML SSO, SCIM, audit log, session management, Enterprise API, HIPAA available, data residency, 250K automations/mo |
 
-- **Consolidating multiple SaaS tools.** Teams paying for Asana + Notion + Slack + Toggl + Miro separately often save 40-60% by moving to ClickUp Business.
-- **AI-first project management.** ClickUp Brain's agents act on your actual tasks and docs, not a generic model without context. The Project Manager Agent and Campaign Manager Agent are the differentiator.
-- **Agencies managing multiple client workspaces.** The Spaces/Folders/Lists hierarchy plus Guest permissions scales to client-of-clients setups where Notion or Linear would flatten out.
-- **Marketing ops centralising campaigns.** Brand Voice, Campaign Manager Agent, and AI-generated briefs let a 5-person marketing team run work that would otherwise need a PM + a writer + a reviewer.
-- **Teams that actually use dashboards.** ClickUp's reporting and workload views genuinely beat Notion here. If your team lives in dashboards, Business tier unlocks the right set.
+AI pricing, checked June 18, 2026:
 
-## When to pick something else
+| AI option | Price | What it adds |
+|---|---:|---|
+| Brain AI | $9/user/month | Brain Assistant, @Brain Agent, Claude/ChatGPT/Gemini chat, premium models, AI writing, Enterprise Search Workspace, 1,500 AI Super Credits per user/month |
+| Everything AI | $28/user/month | Ambient Answers, AI Notetaker, image generation, AI Fields, AI Automations and Dashboards, AI Assign and Prioritize, 3x more Super Agent usage, 5,000 AI Super Credits per user/month |
+| AI Super Credits | $10 per 10K credits | Additional credits for Super Agents, AI Fields, Image Gen, automations, and other premium AI features |
+| Talk to Text | $9/user/month | Standalone unlimited voice dictation add-on |
+| AI Notetaker | From $12 for 60 hours/month | Standalone meeting recording, summaries, transcripts, and action items |
 
-- **Engineering teams:** [Linear](https://linear.app) wins on speed, opinionated workflows, and developer ergonomics. ClickUp tries to do engineering but Linear's focus is unmatched.
-- **Doc-first work:** [Notion](/tools/notion-ai/) is cleaner when the primary output is written content, wikis, or customer-facing docs.
-- **Visual ops dashboards:** [Monday.com](https://monday.com) has a tighter visual language for ops teams who manage-by-board.
-- **Simple todo:** If the team needs "shared list of tasks" and nothing else, ClickUp's feature depth becomes a drag. Todoist or Things cover this lane.
-- **Deep CRM / sales pipeline:** ClickUp can do CRM but [HubSpot](https://hubspot.com) or [Pipedrive](https://pipedrive.com) are built for sales teams.
+Important billing watch-outs:
 
-## Pricing
+- To upgrade ClickUp, the pricing FAQ says you upgrade the entire Workspace.
+- AI usage is subject to fair-use terms, and ClickUp's help docs say Brain AI limits may change as usage and costs are assessed.
+- AI Super Credits renew monthly and do not roll over.
+- Super Agents can cost around 100 to 300 credits per use depending on complexity, while AI Fields, AI Assign, and AI Prioritize examples are listed at 10 credits and image generation at 100 credits.
+- Building a Super Agent does not consume credits. Running the actions in its prompt does.
 
-Subscription pricing via [clickup.com/pricing](https://clickup.com/pricing):
+## Brain AI, Super Agents, And MCP
 
-| Plan | Annual | Monthly | Storage | Automations | Best for |
-|---|---|---|---|---|---|
-| Free Forever | $0 | $0 | 60MB | Limited | Personal use, tiny teams |
-| Unlimited | $7/user/mo | $10/user/mo | Unlimited | Basic | **Most teams should land here** |
-| Business | $12/user/mo | $19/user/mo | Unlimited | 5K/mo | Dashboards + SSO + automations |
-| Enterprise | Custom | Custom | Unlimited | 250K/mo | Compliance, audit logs, SAML |
+Brain AI is the assistant and context layer. It can answer questions with workspace context, draft content, create tasks, summarize conversations, analyze spreadsheets, and work from tasks, docs, chats, wikis, connected apps, and user permissions.
 
-AI add-ons (sit on top of any paid plan):
+Brain 2 adds the more agentic framing: persistent memory, personal preferences, workflow completion, slide/dashboard/prototype creation from real work data, Super Agent creation, multi-model support, external MCP server connections, deep research, and Gmail/Slack read-write-search support.
 
-| Add-on | Price | Includes |
+Super Agents are ClickUp's AI coworkers. They can run workflows using tasks, docs, chat, meetings, schedules, connected tools, memory, and permissions. That is powerful, but it means rollout should include agent ownership, permission review, trigger testing, cost panels, and a shutdown path.
+
+ClickUp MCP extends the workspace to external assistants. The public-beta MCP server is available on all plans and exposes tasks, lists, folders, docs, search, task management, custom fields, comments, chat, webhooks, and related API-backed capabilities. It can be useful for Claude, ChatGPT, Cursor, VS Code, Devin, Copilot Studio, Windsurf, Antigravity, and other clients, but buyers should start with read/search workflows before allowing write-heavy actions.
+
+## When To Pick ClickUp
+
+- **Tool consolidation is the goal.** ClickUp makes most sense when tasks, docs, chat, dashboards, forms, goals, and automations are spread across too many tools.
+- **Work context matters to AI.** Brain is more useful when the team's actual work lives in ClickUp.
+- **Agencies need structured client delivery.** Spaces, folders, lists, dashboards, docs, guest permissions, and proofing can support client workflows.
+- **Marketing ops needs one campaign surface.** Briefs, content calendars, approvals, automations, AI writing, AI Notetaker, and dashboards can live together.
+- **The team can govern agents.** Super Agents and MCP are worth exploring when admins can control permissions, cost, triggers, and review.
+
+## When To Pick Something Else
+
+- **Engineering-only issue tracking:** [Linear](https://linear.app) or GitHub Projects. They are faster and more opinionated.
+- **Doc-first knowledge work:** [Notion AI](/tools/notion-ai/). It is cleaner when docs and wikis are the center.
+- **Simple task lists:** Todoist, Things, or a lightweight project board. ClickUp is too much if you only need tasks.
+- **Visual operations boards:** [Monday.com](https://monday.com). It is often easier for teams that want board-led operations and less hierarchy.
+- **Deep CRM or ITSM:** HubSpot, Pipedrive, Jira Service Management, or ServiceNow. ClickUp can approximate these workflows, but specialists usually govern them better.
+
+## Watch-Outs
+
+**Feature sprawl is still real.** ClickUp can do a lot, which means admins must decide what not to use.
+
+**AI is workspace-shaped.** Brain works best when ClickUp has clean tasks, docs, chats, wikis, and permissions. Messy workspaces produce messy AI answers.
+
+**Agent permissions need review.** Super Agents and MCP can perform useful actions, but only if the team controls who can create, trigger, and manage them.
+
+**AI credits can surprise teams.** Super Agents, AI Fields, image generation, AI Assign/Prioritize, and other premium AI actions consume credits, and credits do not roll over.
+
+**Paid upgrades may be workspace-wide.** Budget owners should confirm which add-ons and plan upgrades must apply to the entire Workspace before rolling out Brain or Everything AI.
+
+**MCP is public beta.** Treat the first-party MCP server as promising but still beta. Start with low-risk search and task workflows, then test write actions with a small admin-owned group.
+
+**Migration lock-in is practical, not theoretical.** Once tasks, docs, comments, dashboards, automations, and agents live in ClickUp, leaving requires a real migration project.
+
+## ClickUp Vs Alternatives
+
+| Need | Best AiPedia pick | Why |
 |---|---|---|
-| ClickUp Brain | $9/user/mo | Unlimited assistant, @Brain Agent, multi-model LLM routing (ChatGPT/Claude/Gemini), 1,500 AI Super Credits |
-| Everything AI | $28/user/mo | Brain + ambient answers, talk-to-text, AI notetaker, image generation, AI fields, AI automations, AI dashboards, 5,000 AI Super Credits |
-| AI Super Credits | Pay-as-you-go | $0.001 to $10 per 10,000 credits (depends on model used) |
-
-Prices verified 2026-06-12 via [ClickUp pricing](https://clickup.com/pricing) and [ClickUp Brain](https://clickup.com/brain). Annual billing saves up to 30% vs monthly. 100% money-back guarantee advertised on the public pricing page.
-
-## Against the alternatives
-
-| | ClickUp | Notion | Monday.com | Linear |
-|---|---|---|---|---|
-| **Core use** | Everything workspace | Docs + lightweight tasks | Visual ops boards | Engineering issues |
-| **Entry price** | $7/user/mo | $8/user/mo | $9/user/mo | $8/user/mo |
-| **AI included / add-on** | Brain $9 add-on | Notion AI $8 add-on | AI Assistant add-on | No native AI |
-| **Free tier** | Generous (unlimited tasks, 60MB) | Generous | Limited | 250 issues |
-| **AI agents** | Super Agents (Project Mgr, Campaign, Content) | Basic AI assist | Limited | None |
-| **Multi-model LLM routing** | Yes (ChatGPT / Claude / Gemini) | ChatGPT only | No | N/A |
-| **Dashboards** | Strong on Business+ | Weak | Strong | Limited |
-| **Best viewed as** | Everything App consolidator | Docs-first hybrid | Ops-first dashboards | Dev-first issue tracker |
-
-## Failure modes
-
-- **Feature sprawl is a real tax.** New teams report 2-4 weeks of friction before they settle on which views, statuses, and automations to actually use. Power users love this; users who want simplicity complain.
-- **Performance on large workspaces.** Teams with 50K+ tasks report occasional slowdowns in list rendering and search. Enterprise tier helps but it's not instant.
-- **Mobile app is catching up.** Full feature parity with web is closer in 2026 but still not 1:1. Field users sometimes need laptop for admin tasks.
-- **Permissions model depth.** The Workspace → Space → Folder → List → Task hierarchy with per-level permissions is powerful but takes an admin to configure correctly. Easy to misconfigure early.
-- **AI Super Credits can surprise.** Brain includes 1,500 credits/mo; Everything AI includes 5,000. Heavy AI users (especially with multi-model routing to Claude Opus or OpenAI frontier models) can exhaust monthly allocations faster than expected.
-- **Integration depth varies.** Native integrations are 1,000+ but many are read-only. Deep two-way sync often requires Zapier or Make in the middle.
-- **Migrating away is work.** Once a team has 10K+ tasks, 500+ docs, and a permissions model inside ClickUp, leaving takes a dedicated migration project. Standard affiliate-review caveat: this is true of any all-in-one workspace, not unique to ClickUp.
-
-## Methodology
-
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against [ClickUp pricing](https://clickup.com/pricing), [ClickUp Brain](https://clickup.com/brain), and the [ClickUp Everything App overview](https://clickup.com/everything-app).
+| All-in-one work management plus AI | [ClickUp](/tools/clickup/) | Tasks, docs, chat, dashboards, automations, Brain AI, Super Agents, MCP, and workspace context |
+| Doc-first workspace | [Notion AI](/tools/notion-ai/) | Cleaner docs, wikis, databases, and publishing |
+| Engineering issue tracking | [Linear](https://linear.app) | Faster, more focused developer workflow |
+| Visual operations management | [Monday.com](https://monday.com) | Strong visual boards and ops dashboards |
+| Calendar-first task scheduling | [Reclaim.ai](/tools/reclaim-ai/) | Better when the real bottleneck is calendar defense and task scheduling |
+| Lightweight AI project workspace | [Taskade](/tools/taskade/) | Smaller-team planning and AI agents with less enterprise PM depth |
 
 ## FAQ
 
 **Is ClickUp free to use?**
-Yes. The Free Forever plan gives unlimited tasks, unlimited free members, kanban boards, calendars, and basic custom fields. Limits: 60MB storage, 100 uses each of dashboards and Gantt, 1 form. Sufficient for personal use and small side projects.
+Yes. Free Forever includes unlimited tasks, unlimited free plan members, 60MB storage, collaborative docs, kanban boards, sprint management, calendar view, basic custom fields, in-app video recording, 24/7 support, and 1 form.
 
-**What does ClickUp Brain actually do?**
-ClickUp Brain is the AI layer that sits on top of your existing tasks, docs, and chats. It includes an unlimited in-workspace assistant, the @Brain Agent for conversational queries against your data, enterprise search across everything in the workspace, and multi-model LLM routing so teams can use ChatGPT, Claude, or Gemini without separate subscriptions. Brain is $9/user/mo on top of any paid plan.
+**What changed with ClickUp Brain in 2026?**
+The current help docs now frame Brain 2 as context-aware AI that can complete workflows, remember preferences, build artifacts from real work data, create Super Agents, use multiple models, connect external MCP servers, do deep research, and work with Gmail and Slack.
 
-**What's the difference between Brain and Everything AI?**
-Brain ($9/user/mo) is the base assistant + chat + enterprise search + 1,500 AI Super Credits. Everything AI ($28/user/mo) adds ambient answers, talk-to-text, AI notetaker, image generation, AI fields, AI automations, AI dashboards, and bumps Super Credits to 5,000. Everything AI is the full stack; Brain is the starter.
+**What is the difference between Brain AI and Everything AI?**
+Brain AI is the $9/user/month AI layer for assistant, @Brain Agent, AI chat, writing, premium models, workspace search, and 1,500 AI Super Credits. Everything AI is the $28/user/month full agentic suite with Ambient Answers, AI Notetaker, image generation, AI Fields, AI Automations/Dashboards, AI Assign/Prioritize, 3x more Super Agent usage, and 5,000 credits.
 
-**How does ClickUp compare to Notion?**
-ClickUp wins for task-first teams, dashboards, time tracking, and AI agents that act on project data. Notion wins for doc-first teams, wikis, and public-facing pages. Teams that do 70% tasks + 30% docs land on ClickUp; teams that do 30% tasks + 70% docs land on Notion.
-
-**Does ClickUp have HIPAA compliance?**
-Yes, on Enterprise tier with a signed BAA. Healthcare teams need the Enterprise plan for HIPAA. Business tier and below do not include BAA.
+**Does ClickUp have MCP?**
+Yes. ClickUp's developer docs describe a first-party MCP server in public beta, available on all plans, at `https://mcp.clickup.com/mcp`. It supports clients such as Claude, Claude Code, Cursor, Devin, Microsoft Copilot Studio, VS Code, Windsurf, ChatGPT, and Antigravity.
 
 **Can ClickUp replace Slack?**
-The built-in Chat feature is functional but not a Slack replacement for communication-heavy teams. It works well for project-scoped discussion inside ClickUp itself. Teams that spend most of their day in chat typically keep Slack and use ClickUp for work surface only.
+Sometimes, but only when chat is project-scoped and the team wants conversation tied tightly to tasks and docs. Communication-heavy organizations may still keep Slack.
 
-**What's the PartnerStack affiliate payout?**
-$25 per signup in T1 countries (US, UK, Canada, Australia, Western Europe), $12.50 in T2 countries, $5 in T3 countries. Flat per-paid-signup, not recurring.
+**Does ClickUp have HIPAA support?**
+The pricing page lists HIPAA as available on Enterprise. Healthcare and regulated buyers should verify BAA, data residency, audit log, SAML/SCIM, API, and workspace governance terms directly.
+
+**Does AiPedia earn from ClickUp?**
+Not currently. AiPedia applied through PartnerStack and was rejected as of the prior affiliate check. Recommendations remain editorial.
 
 ## Related
 
 - **Category:** [AI Automation](/categories/ai-automation/)
-- **Alternatives:** [Notion AI](/tools/notion-ai/)
+- **Alternatives:** [Notion AI](/tools/notion-ai/), [Taskade](/tools/taskade/), [Reclaim.ai](/tools/reclaim-ai/)
 - **Use cases:** Stack Builder at [aipedia.wiki/stack-builder/](/stack-builder/) composes ClickUp into Agency, Marketer, and Data Analyst role stacks
+
+## Sources
+
+- [ClickUp pricing](https://clickup.com/pricing) (verified 2026-06-18)
+- [ClickUp Brain](https://clickup.com/brain) (verified 2026-06-18)
+- [ClickUp Brain pricing](https://clickup.com/brain/pricing) (verified 2026-06-18)
+- [What is ClickUp Brain AI?](https://help.clickup.com/hc/en-us/articles/12578085238039-What-is-ClickUp-Brain-AI) (verified 2026-06-18)
+- [ClickUp Brain AI feature availability and limits](https://help.clickup.com/hc/en-us/articles/20686299081879-ClickUp-Brain-AI-feature-availability-and-limits) (verified 2026-06-18)
+- [How AI Super Credits are consumed](https://help.clickup.com/hc/en-us/articles/37837088720151-How-are-AI-Super-Credits-consumed) (verified 2026-06-18)
+- [ClickUp MCP server](https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server) (verified 2026-06-18)
+- [ClickUp MCP setup instructions](https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server-1) (verified 2026-06-18)
+- [ClickUp MCP supported tools](https://developer.clickup.com/docs/mcp-tools) (verified 2026-06-18)
+- [ClickUp Super Agents launch](https://clickup.com/blog/super-agents-launch/) (verified 2026-06-18)

@@ -2,16 +2,16 @@
 type: tool
 slug: connected-papers
 title: Connected Papers
-tagline: Visual academic paper graph that maps the conceptual neighborhood around a seed paper using Semantic Scholar's 200M+ index.
+tagline: Visual academic paper graph that maps the conceptual neighborhood around a seed paper using Semantic Scholar's 234M+ paper index.
 category: ai-research
 company: Connected Papers Ltd.
 url: https://connectedpapers.com
 pricing_model: freemium
-price_range: "$0-$10/month billed annually"
+price_range: "$0-$20/month billed annually"
 status: active
 launched: 2020-06
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-18
+last_verified: 2026-06-18
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,24 +30,24 @@ facts:
     source: "https://www.connectedpapers.com/about"
     source_label: "Connected Papers about"
     source_id: connected-papers-about
-    verified_at: 2026-06-12
+    verified_at: 2026-06-18
     volatility: low
     confidence: high
   pricing_anchor:
-    value: "Connected Papers pricing is driven by graph limits and academic/business usage, so buyers should estimate how often they need unlimited graph generation."
+    value: "Connected Papers pricing is driven by graph limits and academic/business usage: Free is 5 graphs/month after sign-up, Academic is USD 6/month billed annually, and Business is USD 20/month billed annually."
     source: "https://www.connectedpapers.com/pricing"
     source_label: "Connected Papers pricing"
     source_id: connected-papers-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-18
     next_review_at: 2026-09-02
     volatility: high
     confidence: high
   graph_workflow:
-    value: "The main workflow starts from a seed paper and generates a visual graph of conceptually similar papers, which is useful for quickly understanding a research neighborhood."
+    value: "The main workflow starts from a seed paper and generates a visual graph of conceptually similar papers; multi-origin graphs can refine the map around more than one selected paper."
     source: "https://www.connectedpapers.com/main"
     source_label: "Connected Papers graph search"
     source_id: connected-papers-main
-    verified_at: 2026-06-12
+    verified_at: 2026-06-18
     volatility: medium
     confidence: high
   research_positioning:
@@ -55,24 +55,24 @@ facts:
     source: "https://www.connectedpapers.com/about"
     source_label: "Connected Papers about"
     source_id: connected-papers-about
-    verified_at: 2026-06-12
+    verified_at: 2026-06-18
     volatility: low
     confidence: high
   watch_out_for:
-    value: "It helps find related work but does not replace reading papers, assessing methods, or maintaining a citation database; pair it with a reference manager for serious reviews."
+    value: "It helps find related work but does not replace reading papers, assessing methods, or maintaining a citation database; active researchers should also budget for the higher 2026 paid-tier prices."
     source: "https://www.connectedpapers.com/pricing"
     source_label: "Connected Papers pricing"
     source_id: connected-papers-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-18
     volatility: medium
     confidence: high
 tags: [academic-search, research, visualization, citations, paper-graph, literature-review]
 seo_title: "Connected Papers: Visual Research Graph Review (June 2026)"
 meta_description: >-
-  Connected Papers builds a visual similarity graph of related academic papers from a single seed paper. Free tier gives 5 graphs/month; Academic is $36/year and Business is $120/year for unlimited graphs. Verified June 2026.
+  Connected Papers builds visual similarity graphs of related academic papers from a seed paper. Free tier gives 5 graphs/month after sign-up; Academic is USD 6/month billed annually and Business is USD 20/month billed annually. Verified June 2026.
 author: "aipedia.wiki Editorial"
 quick_answer: >-
-  Connected Papers generates a visual similarity graph from a single seed paper, revealing the conceptual neighborhood around it. Built on Semantic Scholar's 200M+ index. Pick it for entering unfamiliar fields. Skip it for synthesis or research Q&A.
+  Connected Papers generates a visual similarity graph from a seed paper, revealing the conceptual neighborhood around it. Built on Semantic Scholar's 234M+ paper index. Pick it for entering unfamiliar fields. Skip it for synthesis or research Q&A.
 best_for:
   - researchers entering unfamiliar fields
   - literature review scoping
@@ -104,15 +104,22 @@ price_history:
     source_label: "Connected Papers pricing"
     source_id: connected-papers-pricing
     note: "Re-verified current public pricing: Free 5 graphs/month; Academic and Business both unlock unlimited graphs, billed $36 and $120 annually respectively."
+  - date: 2026-06-18
+    plan: "Free / Academic / Business"
+    price: "$0 / $72 yearly / $240 yearly"
+    source: "https://www.connectedpapers.com/pricing"
+    source_label: "Connected Papers pricing"
+    source_id: connected-papers-pricing
+    note: "Current pricing page shows Free sign-up with 5 graphs/month, Academic at USD 6/month billed annually, and Business at USD 20/month billed annually."
 ---
 
 # Connected Papers
 
-Connected Papers Ltd.'s visual academic research graph. Paste a paper by title, DOI, URL, or ArXiv ID and get a similarity graph showing related papers arranged by co-citation and bibliographic coupling, not keyword matching. Center nodes are foundational. Periphery nodes are newer or more specialized.
+Connected Papers Ltd.'s visual academic research graph. Paste a paper by title, DOI, URL, or ArXiv ID and get a similarity graph showing related papers arranged by co-citation and bibliographic coupling, not keyword matching. Center nodes are foundational. Periphery nodes are newer or more specialized. Multi-origin graphs let users add another selected paper as an origin to refine the neighborhood.
 
-Built on [Semantic Scholar](/tools/semantic-scholar/)'s index of 200M-plus papers.
+Built on [Semantic Scholar](/tools/semantic-scholar/)'s index of 234M-plus papers.
 
-Pricing: Free (5 graphs/month), Academic $36/year for unlimited graphs, Business $120/year for unlimited graphs and business/industry use.
+Pricing changed since the previous write. Current pricing: Free sign-up with 5 graphs/month, Academic USD 72/year for unlimited graphs, and Business USD 240/year for unlimited graphs and business/industry use.
 
 ## System Verdict
 
@@ -120,26 +127,27 @@ Pricing: Free (5 graphs/month), Academic $36/year for unlimited graphs, Business
 >
 > **Skip it when you need synthesis, Q&A, or citation sentiment.** Connected Papers finds papers. It does not read them. [Elicit](/tools/elicit/) extracts structured data across hundreds of studies. [Consensus](/tools/consensus/) synthesizes answers from abstracts. [Scite](/tools/scite/) classifies citations as supporting or contrasting.
 >
-> **Who pays which tier:** Free for occasional mapping (5 graphs/month covers casual use), Academic at $36/year for students, academics, nonprofits, and personal use, Business at $120/year for business and industry use.
+> **Who pays which tier:** Free for occasional mapping (5 graphs/month covers casual use), Academic at USD 72/year for students, academics, nonprofits, and personal use, Business at USD 240/year for business and industry use.
 
 ## Key Facts
 
 | | |
 |---|---|
 | **Seed input** | Title, DOI, URL, or ArXiv ID |
-| **Underlying index** | Semantic Scholar (200M+ papers) |
+| **Underlying index** | Semantic Scholar (234M+ papers on the public homepage) |
 | **Graph algorithm** | Co-citation and bibliographic coupling, not keyword match |
+| **Multi-origin graphs** | Add another selected paper as an origin to refine graph similarity |
 | **Prior Works view** | Foundational papers the seed builds on |
 | **Derivative Works view** | Work that built on the seed paper |
-| **Free tier** | 5 graphs/month, no account required |
-| **Academic tier** | $36/year, unlimited graphs |
-| **Business tier** | $120/year, unlimited graphs for business/industry use |
+| **Free tier** | 5 graphs/month after sign-up |
+| **Academic tier** | USD 72/year, unlimited graphs |
+| **Business tier** | USD 240/year, unlimited graphs for business/industry use |
 | **Export** | Graph image and paper metadata |
 | **Coverage ceiling** | Inherited from Semantic Scholar |
 
 ## What it actually is
 
-One web tool that does one thing: build a similarity graph from a seed paper. Nodes are papers sized by citation count. Edges imply shared references and co-citation patterns. Hover shows title, authors, year, and abstract snippet. Clicking any node opens it on Semantic Scholar or jumps to a new graph centered on that paper.
+One web tool that does one thing: build a similarity graph from a seed paper. Nodes are papers sized by citation count. Edges imply shared references and co-citation patterns. Hover shows title, authors, year, and abstract snippet. Clicking any node opens it on Semantic Scholar or jumps to a new graph centered on that paper. Multi-origin graphs refine the map when one seed paper is too broad or too narrow.
 
 The Prior Works view ranks foundational papers the seed builds on. The Derivative Works view tracks what came after. Both reveal a field's structure at a glance, something keyword search cannot do.
 
@@ -151,7 +159,7 @@ The moat is thin. The similarity algorithm is proprietary but the underlying dat
 - **You are writing a grant's related-work section.** Map the landscape, identify foundational citations, avoid missing obvious priors.
 - **You learn visually.** The graph shows clustering and influence in a way a citation list cannot.
 - **You need to verify a paper sits in the right neighborhood.** Papers that cluster unexpectedly often signal methodological overlap worth checking.
-- **You run multiple reviews per month.** Free tier caps at 5 graphs. Academic at $3/mo unlocks unlimited.
+- **You run multiple reviews per month.** Free tier caps at 5 graphs. Academic at USD 6/month billed annually unlocks unlimited graphs.
 
 ## When to pick something else
 
@@ -165,20 +173,20 @@ The moat is thin. The similarity algorithm is proprietary but the underlying dat
 
 | Plan | Price | Graphs/Month | Features |
 |------|-------|-------------|----------|
-| Free | $0 | 5 graphs | Basic graph, Prior/Derivative Works, no account required |
-| Academic | $3/mo (billed annually) | Unlimited | Batch operations, graph export, metadata export |
-| Business | $120/year | Unlimited | Business and industry use |
+| Free | $0 | 5 graphs | Basic graph, Prior/Derivative Works, sign-up path |
+| Academic | USD 6/month (USD 72/year) | Unlimited | Unlimited graph generation for academic, nonprofit, and personal use |
+| Business | USD 20/month (USD 240/year) | Unlimited | Unlimited graph generation for business and industry use |
 
-*Prices verified 2026-06-12 via [Connected Papers pricing](https://www.connectedpapers.com/pricing). Free tier requires no signup. Academic and Business are billed annually.*
+*Prices verified 2026-06-18 via [Connected Papers pricing](https://www.connectedpapers.com/pricing). The current page presents Free with sign-up, Academic at USD 6/month billed annually, and Business at USD 20/month billed annually.*
 
 ## Against the alternatives
 
 | | Connected Papers | Semantic Scholar | ResearchRabbit |
 |---|---|---|---|
 | **Primary output** | Visual similarity graph | Paper list + TLDR | Graph + collaboration |
-| **Underlying corpus** | Semantic Scholar (200M+) | Own index (200M+) | Semantic Scholar + others |
+| **Underlying corpus** | Semantic Scholar (234M+) | Own index (234M+ on public homepage) | Semantic Scholar + others |
 | **Free tier** | 5 graphs/month | Fully free, forever | Free with account |
-| **Price floor (paid)** | $36/year Academic | $0 | Free |
+| **Price floor (paid)** | USD 72/year Academic | $0 | Free |
 | **Team features** | Minimal | None | Built-in |
 | **Graph speed** | Fast | N/A | Slower |
 | **Best viewed as** | Solo field-mapping tool | Free discovery layer | Team literature workflow |
@@ -187,15 +195,16 @@ The moat is thin. The similarity algorithm is proprietary but the underlying dat
 
 - **Finds, does not read.** Connected Papers surfaces related work. It will not extract data, answer research questions, or synthesize findings.
 - **5 graphs/month free tier is thin.** A single literature review often consumes it. Active researchers will hit the cap in week one.
+- **Paid plan doubled versus old reviews.** Do not quote $36/year Academic or $120/year Business unless the buyer is looking at an old invoice or legacy account. The current visible annual prices are USD 72/year and USD 240/year.
 - **No citation classification.** Cannot distinguish supporting from contrasting citations. [Scite](/tools/scite/) fills that gap.
 - **Coverage ceiling inherited from Semantic Scholar.** Humanities and some social sciences are less comprehensively indexed.
 - **Graph can overwhelm for popular seed papers.** Well-cited works in large fields produce dense graphs with limited filtering.
 - **No synthesis or chat layer.** Researchers who want both a graph and Q&A will need a second tool.
-- **Single seed paper required.** Multi-origin graphs exist but still start from user-selected roots, not free-form research questions.
+- **Graph roots are still user-selected.** Multi-origin graphs help refine a field map, but they are not a free-form research question workflow.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the analysis above. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against [Connected Papers pricing](https://www.connectedpapers.com/pricing), [Connected Papers about](https://www.connectedpapers.com/about), and [Semantic Scholar about](https://www.semanticscholar.org/about).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the analysis above. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-18 against [Connected Papers pricing](https://www.connectedpapers.com/pricing), [Connected Papers about](https://www.connectedpapers.com/about), [Connected Papers Premium/multi-origin announcement](https://medium.com/connectedpapers/announcing-premium-accounts-multi-origin-graphs-and-more-92e8dbd66848), and [Semantic Scholar](https://www.semanticscholar.org/).
 
 ## FAQ
 
@@ -206,7 +215,7 @@ Google Scholar shows direct citations. Connected Papers shows conceptual similar
 Coverage strongest in STEM, computer science, and social sciences. Humanities and arts are sparser because the underlying [Semantic Scholar](/tools/semantic-scholar/) index is thinner there.
 
 **Is the Academic plan worth it?**
-For active researchers, yes. The 5 graph/month free cap disappears fast during a real literature review. Academic at $36/year is one of the cheapest productivity upgrades in the research-tool category.
+For active researchers, often yes. The 5 graph/month free cap disappears fast during a real literature review. Academic is now USD 72/year, so it is still inexpensive compared with most research SaaS, but no longer the old $36/year impulse buy.
 
 **Can I use Connected Papers offline?**
 No. All graph generation runs server-side against Semantic Scholar's index.
@@ -220,7 +229,8 @@ Minimal. Single-user workflow by design. Teams needing shared literature librari
 ## Sources
 
 - [Connected Papers pricing](https://www.connectedpapers.com/pricing): current tier prices and limits
-- [Semantic Scholar about](https://www.semanticscholar.org/about): underlying index size and coverage
+- [Connected Papers about](https://www.connectedpapers.com/about): product positioning
+- [Semantic Scholar](https://www.semanticscholar.org/): current public corpus count
 - [Connected Papers Premium announcement](https://medium.com/connectedpapers/announcing-premium-accounts-multi-origin-graphs-and-more-92e8dbd66848): feature history
 
 ## Related

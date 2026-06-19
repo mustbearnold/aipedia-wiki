@@ -6,10 +6,10 @@ tools: [capacities, otter-ai]
 category: ai-notes
 winner: depends
 seo_title: "Capacities vs Otter.ai: PKM or Meeting Transcription? (June 2026)"
-meta_description: "Updated June 12, 2026: choose Capacities for object-based personal knowledge management and Otter.ai for live transcription, OtterPilot meeting notes, and team meeting workflows."
+meta_description: "Updated June 18, 2026: choose Capacities for object-based PKM with Pro AI connectors/provider choice and Otter.ai for live transcription, OtterPilot meeting notes, and team meeting workflows."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-18
+last_verified: 2026-06-18
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -31,8 +31,8 @@ Use both when meetings produce important knowledge: Otter captures the call; Cap
 | Buyer question | Capacities | Otter |
 |---|---|---|
 | **Primary job** | Object-based PKM | Meeting transcription |
-| **Best first plan** | Basic for free PKM; Pro when AI assistant and advanced workflow features matter | Basic for trial use; Pro or Business for recurring work meetings |
-| **June 2026 price signal** | Basic is free; Pro adds AI assistant, smart queries, calendar integrations, task actions, and unlimited media uploads | Basic is free; Pro is listed at $16.99/user/mo monthly or $8.33/user/mo annual; Business is listed at $30/user/mo monthly or $19.99/user/mo annual |
+| **Best first plan** | Basic for free PKM; Pro when AI assistant, AI Chat Connectors, provider choice, and advanced workflow features matter | Basic for trial use; Pro or Business for recurring work meetings |
+| **June 2026 price signal** | Basic is free core PKM; Pro adds AI assistant, AI Chat Connectors, provider choice, smart queries, task actions, and media workflows | Basic is free; Pro is listed at $16.99/user/mo monthly or $8.33/user/mo annual; Business is listed at $30/user/mo monthly or $19.99/user/mo annual |
 | **Best output** | Linked objects and project memory | Transcripts, summaries, action items, and call search |
 | **Main watch-out** | Object-first workflows need setup discipline | Consent, retention, sharing, and regulated-call policies need review |
 
@@ -56,7 +56,7 @@ Use both when meetings produce important knowledge: Otter captures the call; Cap
 
 Start with **Otter Basic** only to test transcript quality, meeting UX, and whether a visible assistant is acceptable in your calls. Move to Pro if an individual or small team needs more recording minutes, imports, storage, exports, and templates. Move to Business if shared team administration, longer meetings, concurrent meetings, and unlimited meetings matter.
 
-Start with **Capacities Basic** when the work is not primarily meetings. Upgrade to Pro when the AI assistant, task actions, calendar integrations, smart queries, and media limits are active parts of your system.
+Start with **Capacities Basic** when the work is not primarily meetings. Upgrade to Pro when the AI assistant, AI Chat Connectors, provider choice, task actions, recurring tasks, smart queries, and media limits are active parts of your system.
 
 For regulated industries, HR, education, healthcare, legal, and customer calls, test Otter with a consent and retention policy before rolling it out. Meeting notes are sensitive data, even when the tool is working as intended.
 
@@ -73,7 +73,7 @@ For regulated industries, HR, education, healthcare, legal, and customer calls, 
 
 ## Current Fact Check
 
-Verified June 12, 2026 against official Capacities pricing/docs and Otter.ai pricing. Otter's pricing page currently shows Basic, Pro, Business, and Enterprise with distinct meeting-minute, import, storage, workflow, and admin limits; Capacities remains the object-based PKM pick rather than a meeting transcription substitute.
+Verified June 18, 2026 against official Capacities pricing/docs, Capacities Release 64, AI Chat Connector docs, and Otter.ai pricing. Otter's pricing page currently shows Basic, Pro, Business, and Enterprise with distinct meeting-minute, import, storage, workflow, and admin limits; Capacities remains the object-based PKM pick rather than a meeting transcription substitute.
 
 ## Who Should Choose Capacities
 
@@ -106,5 +106,6 @@ Yes. Export or summarize the important meeting outputs from Otter, then store de
 - [Capacities pricing](https://capacities.io/pricing/)
 - [Capacities AI assistant docs](https://docs.capacities.io/reference/ai-assistant)
 - [Capacities AI Chat Connectors docs](https://docs.capacities.io/reference/ai-chat-connectors)
+- [Capacities Release 64](https://capacities.io/whats-new/release-64/)
 - [Otter.ai pricing](https://otter.ai/pricing)
 - [OtterPilot overview](https://otter.ai/otterpilot)

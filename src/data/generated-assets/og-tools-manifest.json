@@ -1,7 +1,7 @@
 {
   "version": 1,
   "kind": "tool-og",
-  "source_hash": "ecf946c7362dbb10de606bcc333d4532ac2e4ade1cb8f08edb715790fcd988d7",
+  "source_hash": "0fabc75d5d53c0d57a152cff6e31f0347a57d8dcf09b276edaa1151df06a716d",
   "generated_at": "deterministic",
   "meta": {
     "tools": 220,
@@ -32,8 +32,8 @@
       "slug": "ada",
       "theme": null,
       "target": null,
-      "bytes": 24344,
-      "sha256": "0c82a4324239b16a26d6c1f541289e5aa08ac2b64cd9830fd76e25fa44b99fa4"
+      "bytes": 31263,
+      "sha256": "730c54245e5739249af7512289ab9d8ed554fae0feb4d5d19c286a34c931ba30"
     },
     {
       "file": "public/og/tools/adcreative.png",
@@ -59,8 +59,8 @@
       "slug": "ag2",
       "theme": null,
       "target": null,
-      "bytes": 25339,
-      "sha256": "328e2e0001b90d8ffb13e787cae2817ab67e12a8d01e0dfc0e5f5a50e0cab19b"
+      "bytes": 28331,
+      "sha256": "705327caadcf513a6487dd5e8945a599d84078b1436b6b7c3d4b67624030546d"
     },
     {
       "file": "public/og/tools/ahrefs.png",
@@ -68,8 +68,8 @@
       "slug": "ahrefs",
       "theme": null,
       "target": null,
-      "bytes": 29110,
-      "sha256": "2871ab36bf5e0537f333bda7f0372b2d59c89729d3c3d712da50e9f7a039d5c0"
+      "bytes": 25215,
+      "sha256": "37f0de68060c4a71136384e9303eb17f12f680e7b6fb46e7970bfcdf1d4d7f33"
     },
     {
       "file": "public/og/tools/aider.png",
@@ -104,8 +104,8 @@
       "slug": "amplemarket",
       "theme": null,
       "target": null,
-      "bytes": 26736,
-      "sha256": "b877108d26d11d3b03acf64d28beefb870d4bc69aaa2094075b78fb5874979d5"
+      "bytes": 29397,
+      "sha256": "713977b754e7deaeb37b15d0c804d00eab7413b040ea3797e3b2641fe79084a5"
     },
     {
       "file": "public/og/tools/antigravity.png",
@@ -113,8 +113,8 @@
       "slug": "antigravity",
       "theme": null,
       "target": null,
-      "bytes": 28207,
-      "sha256": "8a6754daecc92b8055d283e3c49e608571b5817fa5bd126bb3846ade6f71c702"
+      "bytes": 26065,
+      "sha256": "bb83fbfcd80923990ed477f2bae396c03f66b7b213380738721fc0585894b470"
     },
     {
       "file": "public/og/tools/anythingllm.png",
@@ -122,8 +122,8 @@
       "slug": "anythingllm",
       "theme": null,
       "target": null,
-      "bytes": 28808,
-      "sha256": "0b1697e29436c8fc7cc19a0b26e9591265626f1885f733bdd6a106bf63e8c41b"
+      "bytes": 29901,
+      "sha256": "7515f0ac60f87cca08a7d22fc33400dd3bd7844171e8248565558e97d11a3523"
     },
     {
       "file": "public/og/tools/apollo.png",
@@ -131,8 +131,8 @@
       "slug": "apollo",
       "theme": null,
       "target": null,
-      "bytes": 25510,
-      "sha256": "8d712d8ed24c93d19f08b2517c3808f48414d52eecc92d88048554405e9e83cb"
+      "bytes": 25278,
+      "sha256": "f69e8fcf6126cf067f3c0980bec925a9afba788213f503f050425c96cf2e8f7a"
     },
     {
       "file": "public/og/tools/argil.png",
@@ -176,8 +176,8 @@
       "slug": "boomy",
       "theme": null,
       "target": null,
-      "bytes": 27564,
-      "sha256": "ec20e11d2aa8c9bfb2898b8d1fe489447529660969da236176e807133e052105"
+      "bytes": 27778,
+      "sha256": "3c012aac576e2ee551a5f99b5e1876106c63d79a87ba62999a02695aa9edb9bf"
     },
     {
       "file": "public/og/tools/canva.png",
@@ -194,8 +194,8 @@
       "slug": "capacities",
       "theme": null,
       "target": null,
-      "bytes": 29511,
-      "sha256": "2e1a04ba09c5e4dfb60fd5dd5385214e0b321fceae396ec033cb01e3c2233ecc"
+      "bytes": 27755,
+      "sha256": "b4d8a9b6af0983427fcbea545755a9bd29c93e88281f2698647f3623fc4efc38"
     },
     {
       "file": "public/og/tools/captions.png",
@@ -212,8 +212,8 @@
       "slug": "cartesia",
       "theme": null,
       "target": null,
-      "bytes": 26577,
-      "sha256": "6e55493d673d01a811a2be18bbdec33618982974e58baa7dc23f46fd7c4fda1f"
+      "bytes": 27590,
+      "sha256": "de7d6131c4afb3ef98a7a46cbe0d4b69f35264159c2f20120d812fa6fca2b4dd"
     },
     {
       "file": "public/og/tools/castmagic.png",
@@ -221,8 +221,8 @@
       "slug": "castmagic",
       "theme": null,
       "target": null,
-      "bytes": 24671,
-      "sha256": "29cfcdc15836767a6fbceab5ca1704775af8c99bc4347a28096ba43ec7ee1224"
+      "bytes": 25327,
+      "sha256": "ccdbe5b900b484bfa062ae4a0cdb80b59dde84bd2294c14bed1c31d7e6d80b01"
     },
     {
       "file": "public/og/tools/character-ai.png",
@@ -230,8 +230,8 @@
       "slug": "character-ai",
       "theme": null,
       "target": null,
-      "bytes": 27642,
-      "sha256": "443d436e9025f7e37b33fa85ff8401c6abd2aa4da79c675a34ed48d1961cd2c9"
+      "bytes": 30769,
+      "sha256": "75fee8d44aaa1111bc16edb90ad6a57d1d9ae2e0647221556e60faf6dfa7fb84"
     },
     {
       "file": "public/og/tools/chatgpt.png",
@@ -248,8 +248,8 @@
       "slug": "chatpdf",
       "theme": null,
       "target": null,
-      "bytes": 26384,
-      "sha256": "5be48941df24c25456d310221c7844d9c2e7c50f87cba507dbd5352a445a8ec4"
+      "bytes": 30868,
+      "sha256": "223373de42e1d287d6f966baf2d972e32e73816598ad5a7219de4f60a88956f4"
     },
     {
       "file": "public/og/tools/claude-code.png",
@@ -266,8 +266,8 @@
       "slug": "claude-design",
       "theme": null,
       "target": null,
-      "bytes": 29905,
-      "sha256": "66e2a3c2021d152869c91f0c8049ba4be24135fe5cf4b01226046b6d61fac03a"
+      "bytes": 33218,
+      "sha256": "90fd39eadfaaee745536cbd7e48d3b92b31a4fec934d233c55cec16bb39e8cd9"
     },
     {
       "file": "public/og/tools/claude.png",
@@ -284,8 +284,8 @@
       "slug": "clay",
       "theme": null,
       "target": null,
-      "bytes": 27329,
-      "sha256": "8ea8f35c9e2a648d99f4c01d29126cbdd2e1d5bb00446ce46728329d36f2337c"
+      "bytes": 23264,
+      "sha256": "675099ab3553a6cfafd575d9c56a29fb1328aa6d26f9cd5cf3df1e7fb218f7cb"
     },
     {
       "file": "public/og/tools/clearscope.png",
@@ -293,8 +293,8 @@
       "slug": "clearscope",
       "theme": null,
       "target": null,
-      "bytes": 31227,
-      "sha256": "d2e1f1499355a14b5694293bacb33457a0393f75499c4e72f48d4b6b9d6efcc1"
+      "bytes": 28621,
+      "sha256": "36d220dd8e6c89b2987c4b34c03df067936510406397b45ee5fa1d253256571b"
     },
     {
       "file": "public/og/tools/clickup.png",
@@ -302,8 +302,8 @@
       "slug": "clickup",
       "theme": null,
       "target": null,
-      "bytes": 26260,
-      "sha256": "b503f8e58f2359f786437ab898742dc6bfb88dcd2fa973eeaaf8111a6976e505"
+      "bytes": 23649,
+      "sha256": "0e5d83e0d7b8f1090224885097413a5466d5a94d9c42211dd7f1b822025c1cd1"
     },
     {
       "file": "public/og/tools/cline.png",
@@ -320,8 +320,8 @@
       "slug": "clipdrop",
       "theme": null,
       "target": null,
-      "bytes": 24652,
-      "sha256": "99789878183b0e1820973fc15fb77ed428553f09ef72b98c589dd21d799f3bf1"
+      "bytes": 26047,
+      "sha256": "3f392c24a803b1e2c8b6b6b81d095b4f17ca7d32f5f81f6ff84f3f32b6e7d292"
     },
     {
       "file": "public/og/tools/codeium.png",

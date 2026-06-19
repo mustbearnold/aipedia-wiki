@@ -11,11 +11,11 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2023-03
-last_updated: 2026-06-15
-last_verified: 2026-06-15
+last_updated: 2026-06-18
+last_verified: 2026-06-18
 update_frequency: monthly
 seo_title: "Claude: Features, Pricing & Review (2026)"
-meta_description: "Updated June 15, 2026: Claude runs Opus 4.8 as the stable buyable high-end route while Fable/Mythos access remains suspended and Agent SDK credits are now active."
+meta_description: "Updated June 18, 2026: Claude runs Opus 4.8 as the stable high-end route, Fable/Mythos access remains suspended, Agent SDK credits are active, and Claude Design is separately metered."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -232,12 +232,12 @@ price_history:
     note: "New flagship released · per-token pricing matches Opus 4.6; effective cost rises 1.0-1.35x due to new tokenizer"
   - date: 2026-04-17
     plan: "Claude Design"
-    price: "Bundled in Pro+"
+    price: "Included with Pro+; separately metered as of June 18 support docs"
     source: "https://claude.com/pricing"
     source_id: claude-pricing
     source_label: "Claude pricing"
     verified_at: 2026-06-14
-    note: "New product: prompt-to-prototype tool for slides, mockups, one-pagers. Research preview. Available to Pro, Max, Team, Enterprise. Figma stock fell ~7% on the announcement."
+    note: "New product: prompt-to-prototype tool for slides, mockups, one-pagers. Research preview at launch and available to Pro, Max, Team, Enterprise. June 18 support docs now say Design is metered independently from chat and Claude Code with weekly allowances and usage credits."
   - date: 2026-04-17
     plan: "Pro"
     price: "$20/mo"
@@ -292,7 +292,7 @@ price_history:
 
 Anthropic's AI assistant. **Opus 4.8** is the stable buyable high-end route as of **June 15, 2026**. Anthropic launched the more capable Claude Fable 5 on June 9, but says access to Fable 5 and Mythos 5 is suspended after a US government directive, with all other Claude models unaffected. The current buyer-safe interpretation is simple: use Opus 4.8 for the hardest reasoning, coding, and agentic work until Anthropic restores Fable/Mythos access, and treat model docs that still describe Fable as launch documentation rather than availability proof. Standard Opus API pricing remains $5 input / $25 output per million tokens. Sonnet 4.6 and Haiku 4.5 round out the lineup. The 1M token context window carries across Opus and Sonnet; Claude Code CLI handles agentic coding from the terminal; Constitutional AI training targets reduced sycophancy and harmful outputs. Anthropic's May and June updates reinforce that Claude's product story is now as much about execution controls, capacity, governance, model-route fallback, and enterprise trust as raw model quality.
 
-**[Claude Design](/tools/claude-design/)** (launched April 17, 2026) is the prompt-to-prototype product in the Claude lineup: it produces slide decks, app mockups, marketing one-pagers, and pitch materials from text prompts. It reads a company's codebase and design files to apply the existing design system automatically, then hands off to Claude Code for production builds. Exports to PDF, PPTX, URL, or Canva. Available to Claude Pro, Max, Team, and Enterprise subscribers. The launch sent Figma stock down ~7% on the day. See the [dedicated tool page](/tools/claude-design/) or the [launch coverage](/news/2026-04-17-anthropic-launches-claude-design/).
+**[Claude Design](/tools/claude-design/)** (launched April 17, 2026) is the prompt-to-prototype product in the Claude lineup: it produces slide decks, app mockups, marketing one-pagers, and pitch materials from text prompts. It reads a company's codebase and design files to apply the existing design system automatically, then hands off to Claude Code for production builds through `/design-sync` and `/design` workflows. Exports to PDF, PPTX, URL, or Canva. Available to Claude Pro, Max, Team, and Enterprise subscribers, but now metered independently from chat and Claude Code with weekly allowances and usage credits. The launch sent Figma stock down ~7% on the day. See the [dedicated tool page](/tools/claude-design/) or the [launch coverage](/news/2026-04-17-anthropic-launches-claude-design/).
 
 ## Recent developments
 
@@ -369,7 +369,7 @@ Anthropic's AI assistant. **Opus 4.8** is the stable buyable high-end route as o
 |---|---|
 | **Flagship model** | Claude Opus 4.8 (released May 28, 2026) |
 | **Other production models** | Sonnet 4.6 (speed/quality balance) · Haiku 4.5 (fast, high-volume) |
-| **Claude Design** | Prompt-to-prototype tool · launched April 17, 2026 · research preview · Pro/Max/Team/Enterprise only |
+| **Claude Design** | Prompt-to-prototype tool · launched April 17, 2026 · beta/research-preview lineage · Pro/Max/Team/Enterprise only · metered separately from chat and Claude Code |
 | **Context window** | 1M tokens on Opus and Sonnet · 200K on Haiku · Opus 4.8 is 200K on Microsoft Foundry |
 | **Max output** | 128K (Opus) · 64K (Sonnet) · 64K (Haiku) |
 | **API pricing** | Opus 4.8: $5 in / $25 out per MTok standard; $10 / $50 per MTok fast mode |
@@ -379,7 +379,7 @@ Anthropic's AI assistant. **Opus 4.8** is the stable buyable high-end route as o
 | **Agentic coding** | Claude Code CLI · top terminal coding agent; GPT-5.5 Codex is now the main overall challenger |
 | **Enterprise distribution** | NEC partnership announced April 24, 2026 · about 30,000 NEC employees plus BluStellar and cybersecurity services |
 | **Recent infrastructure financing** | Anthropic raised $65B at a $965B post-money valuation on May 28, 2026, citing Claude demand, compute expansion, and enterprise scaling |
-| **Design tooling** | Claude Design · prompt-to-prototype · exports PDF, PPTX, URL, Canva · hands off to Claude Code for build |
+| **Design tooling** | Claude Design · prompt-to-prototype · exports PDF, PPTX, URL, Canva · hands off to Claude Code for build · separate Design allowances and credits |
 | **Image generation** | None (use Midjourney or GPT Image 2 alongside) |
 | **Video generation** | None (use Veo 3 or Kling alongside) |
 | **Restricted frontier routes** | Fable 5 and Mythos 5 access is suspended · older Mythos Preview / Project Glasswing notes are historical until Anthropic restores access |
@@ -495,7 +495,7 @@ A CLI coding agent that reads, writes, and manages full codebases from the termi
 <details>
 <summary>What is Claude Design?</summary>
 
-A new (April 17, 2026) prompt-to-prototype product bundled with Claude Pro and higher tiers. Turns text prompts into slide decks, app mockups, one-pagers, and pitch materials. Reads your codebase and design files to extract the design system automatically, so outputs stay on-brand. Exports to PDF, PPTX, URL, or Canva. Hands off to Claude Code for production builds. Direct competition to Figma, Lovable, Bolt.new, and v0. Figma stock fell ~7% on launch. Currently research preview; not in the free tier. See the full [Claude Design tool page](/tools/claude-design/).
+A prompt-to-prototype product launched April 17, 2026 and available on Claude Pro, Max, Team, and Enterprise. It turns text prompts into slide decks, app mockups, one-pagers, and pitch materials; reads codebases and design files to extract the design system; exports to PDF, PPTX, URL, or Canva; and hands off to Claude Code for production builds. It is not in the free tier, and as of the June 18 support check it is metered separately from chat and Claude Code with weekly allowances and usage credits. See the full [Claude Design tool page](/tools/claude-design/).
 
 </details>
 

@@ -5,10 +5,10 @@ title: AI Automation & Agents
 description: Current workflow automation, AI agent platforms, meeting automation, call automation, and operations tools for technical teams, non-technical operators, GTM workflows, customer success, support, sales, and internal automation.
 tool_count: 27
 seo_title: "Best AI Automation Tools & Agent Platforms (June 2026)"
-meta_description: "Updated June 16, 2026: compare n8n, Zapier, Make, Workato, Microsoft Agent Framework, Taskade, Rows, Voiceflow, watsonx Orchestrate, Tines, Reclaim.ai, Intercom, Gumloop, Relevance AI, Activepieces, AG2, CrewAI, Langflow, Langfuse, LangGraph, Letta, Glean, Goose, OpenClaw, Browserbase, Modal, Apollo, Lindy, Pipedream, CloudTalk, and MeetGeek by workflow, pricing unit, AI orchestration, governance, and risk."
+meta_description: "Updated June 18, 2026: compare n8n, Zapier, Make, Workato, Microsoft Agent Framework, Taskade, Rows, Voiceflow, watsonx Orchestrate, Tines, Reclaim.ai, Intercom, Gumloop, Relevance AI, Activepieces, AG2, CrewAI, Langflow, Langfuse, LangGraph, Letta, Glean, Goose, OpenClaw, Browserbase, Modal, Apollo, Lindy, Pipedream, CloudTalk, and MeetGeek by workflow, pricing unit, AI orchestration, governance, and risk."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-16
-last_verified: 2026-06-16
+last_updated: 2026-06-18
+last_verified: 2026-06-18
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -29,6 +29,12 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 **June 16 Microsoft agent-framework update:** [Microsoft Agent Framework](/tools/microsoft-agent-framework/) remains the Microsoft-aligned open-source agent framework, but the current check sharpens the watch-out. GitHub releases still show dotnet-1.10.0 from June 10 and python-1.8.1 from June 9, with recent breaking or experimental notes, so production teams should pin package versions. Work IQ is now generally available as of June 16: Microsoft's licensing and Partner Center notices say Work IQ API usage draws down Copilot Credits, has no separate Work IQ API SKU/subscription/per-user license, and should be governed with admin billing, access policies, limits, and alerts before custom or third-party agents use Microsoft 365 data. Do not treat Work IQ-backed agents as free just because Agent Framework itself is MIT open source.
 
 **June 16 Google Cloud data-agent update:** Google's [data-agent rollout](/news/2026-06-16-google-cloud-data-agents/) moves automation deeper into governed analytics and database workflows. Data Engineering Agent and Managed MCP Servers for Databases are now generally available, while Data Science Agent, Data Agent Kit, Looker MCP, Gemini Enterprise Conversational Analytics, Data Insights Agent, Deep Research Agent, QueryData, and UCP Analytics are preview or select-customer routes. Treat this as an automation-control-plane update: verify IAM, `roles/mcp.toolUser`, separate production identities, SQL review, spend limits, job labels, data retention, and GA-versus-preview status before agents touch production data.
+
+**June 18 Activepieces update:** [Activepieces](/tools/activepieces/) remains the open-source, self-hostable automation pick, but the refresh now treats it as more than a pricing story. GitHub releases after the prior page date added Mistral AI as a platform provider, flow formulas, data manipulation functions and triggers, admin run-health metrics, AI/chat reliability work, MCP-created flow labeling, and a June 14 pgvector migration startup fix for locked-down PostgreSQL. Buyers should now evaluate it as an MCP-capable workflow control plane, not only as a cheaper Zapier alternative.
+
+**June 18 Ada update:** [Ada](/tools/ada/) stays in the enterprise customer-service automation lane, but the current refresh changes the read from "Reasoning Engine launch" to "AI customer-service operations platform." Ada's June release notes and MCP docs now put coaching creation, multilingual Knowledge ingestion, Web Chat SDK headless/programmatic control, Zendesk handoff continuity, and MCP-assisted resource changes into the buyer checklist. The platform FAQ now says 550+ deployed AI agents, 6.4B+ handled interactions, and 84% autonomous resolution, while pricing remains demo-led with conversation-based pricing as the primary public model.
+
+**June 18 Apollo update:** [Apollo](/tools/apollo/) remains the all-in-one outbound GTM pick, but the current refresh changes the read from "prospect database plus sequencer" to "AI-native GTM operating layer." Official pricing data now anchors Free at $0, Basic at $49/month, Professional at $99/month, and Enterprise custom, while fair-use and credit rules still decide real cost. May release notes add Apollo on Perplexity, MCP guided sequence and bulk-action reviews, Apollo CLI, Codex integration, AI Assistant admin/view updates, ChatGPT workflows, contact-level website visitors, Gong call import, and removal-request compliance exports. Buyers should now evaluate Apollo around data quality, credit burn, MCP permissions, CRM writes, sequence enrollment, deliverability, and opt-out handling.
 
 **June 3 agent-stack update:** Microsoft's [Build 2026 Work IQ and Foundry announcements](/news/2026-06-02-microsoft-build-work-iq-agent-stack/), GitHub's [Copilot SDK GA plus AI Credits migration](/news/2026-06-02-github-copilot-ai-credits-sdk-ga/), NVIDIA's [enterprise and physical-AI agent stack](/news/2026-06-01-nvidia-agents-physical-ai-gtc-taipei/), and the [enterprise-agent roundup](/news/2026-06-02-enterprise-agent-roundup-postman-relationalai-7ai-white-house/) make one rule sharper: agents are safest when they inherit permissioned context, log actions, expose spend, and route risky writes through review. Generic "autonomous" claims are weaker than tenant boundaries, tool scopes, audit logs, budget controls, and task-specific runtime evidence.
 
@@ -60,9 +66,9 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 
 **Use [Tines](/tools/tines/) when security, IT, or compliance teams need workflow runs that hold up in audit.** The June 9 check keeps Community free, Starter starting at $500/mo, Business/Enterprise contact-sales, and the AI Agent action broader than the old FAQ wording. The practical purchase question is not app count; it is AI run-time credits, package limits, logs, SSO/SAML, flexible hosting, and whether a SOC or IT team can own the workflow safely.
 
-**Use [Activepieces](/tools/activepieces/) when open-source workflow automation and self-hosting matter.** The June 1 check keeps the buyer story stable: MIT-licensed self-hosting is free, cloud Standard remains free for 10 flows and then $5 per active flow per month, and the public site now frames the platform around 700+ integrations plus AI agents.
+**Use [Activepieces](/tools/activepieces/) when open-source workflow automation, self-hosting, and MCP-mediated workflow control matter.** The June 18 check keeps Standard pricing at 10 free active flows and then $5 per active flow per month, confirms 749 pieces on the live catalog, and updates the product-change story around Mistral AI support, formulas, data manipulation triggers, admin health metrics, MCP flow tooling, and a self-host startup fix.
 
-**Use [AG2](/tools/ag2/) when the buyer wants an open-source multi-agent framework rather than a SaaS workflow canvas.** The current release check found AG2 v0.13.2 from May 29, 2026 with agent-evaluation, client, tool, and security work. It is a developer framework, not a non-technical ops platform.
+**Use [AG2](/tools/ag2/) when the buyer wants an open-source multi-agent framework rather than a SaaS workflow canvas.** The June 18 release check found AG2 v0.13.4 from June 12 after v0.13.3 added cross-process Network, sandbox protocol work, background-agent tooling, A2A fixes, and evaluation improvements. v0.13.4 then added AG2 Agent-as-MCP-server support, OAuth Resource Server authentication, SkillPlugin support, Bedrock Beta client support, decoupled usage reporting, and governance examples. It is more AgentOS-shaped than the old page implied, but still a developer framework, not a non-technical ops platform.
 
 **Use [CrewAI](/tools/crewai/) when Python developers want role-based multi-agent orchestration.** The June 2 check found CrewAI 1.14.6 as the current stable release and a public pricing split of Free Basic cloud plus custom Enterprise. It belongs here as a framework/cloud-control-plane option, not as a no-code workflow builder.
 
@@ -74,17 +80,17 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 
 **Use [Letta](/tools/letta/) when the agent's memory must persist across sessions and model swaps.** The June 8 check keeps Letta Code Free, Pro $20/month, and Enterprise custom, with BYOK on every plan, Letta Auto quota on Pro, pay-as-you-go overage, and a separate API-plan distinction for automated workloads. It is strongest when memory governance is a product requirement, not when the job is a stateless workflow.
 
-**Use [Browserbase](/tools/browserbase/) when automation needs reliable cloud browsers.** Browserbase belongs in this category when agents, scraping, QA, or workflow systems need managed browser sessions, identity, web-data APIs, Stagehand, MCP, and observability instead of local Playwright infrastructure.
+**Use [Browserbase](/tools/browserbase/) when automation needs reliable cloud browsers.** The June 18 refresh keeps the same Free, Developer $20/month, Startup $99/month, and Scale custom pricing, but the product has shifted further into browser-agent infrastructure: real cloud Chromium browsers, Search and Fetch APIs, Functions runtime, Identity, Model Gateway, Stagehand, MCP, replay, and observability instead of local Playwright infrastructure.
 
 **Use [Modal](/tools/modal/) when automation is Python jobs, queues, web endpoints, sandboxes, or serverless GPU work rather than SaaS connector routing.** Modal is not a Zapier/n8n replacement; it is the better fit when the automation owner can write Python and wants per-second compute, GPU classes, scheduled jobs, web functions, and infrastructure-as-code ergonomics.
 
 **Use [Helicone](/tools/helicone/) when automation depends on LLM observability and gateway controls.** It is not a workflow builder; it is the control layer for AI app traffic: request logging, cost tracking, prompt/session debugging, caching, fallbacks, rate limits, 0% markup gateway credits, and bring-your-own provider keys.
 
-**Use [Apollo](/tools/apollo/) or [Amplemarket](/tools/amplemarket/) when automation starts with outbound revenue.** Apollo is the broader prospect-data and sales-engagement platform, while Amplemarket is the higher-touch AI SDR suite with Duo agents and a $600/month annual Startup plan for two seats. Both need real sender, deliverability, and CRM governance before scale.
+**Use [Apollo](/tools/apollo/) or [Amplemarket](/tools/amplemarket/) when automation starts with outbound revenue.** Apollo is the broader prospect-data, sales-engagement, enrichment, AI Assistant, MCP/API, and CLI platform, while Amplemarket is the higher-touch AI SDR operating stack with Duo Copilot, Workflows, contact-level signals, MCP access from Claude and ChatGPT, and a $600/month annual Startup plan for two seats. Both need real sender, deliverability, AI-agent, credit, opt-out, and CRM-write governance before scale.
 
-**Use [Clay](/tools/clay/) when GTM automation starts with enrichment, signals, and account research.** The June 4 Clay comparison refresh now separates the four common buyer forks: [Clay vs Instantly](/compare/clay-vs-instantly/) for enrichment versus cold-email execution, [Clay vs Intercom](/compare/clay-vs-intercom/) for outbound GTM versus AI support, [Clay vs Make](/compare/clay-vs-make/) for GTM tables versus visual automation, and [Clay vs Zapier](/compare/clay-vs-zapier/) for revenue-data prep versus no-code SaaS orchestration. Clay's current pricing still requires action/data-credit modeling rather than a single flat price.
+**Use [Clay](/tools/clay/) when GTM automation starts with enrichment, signals, account research, and actioning GTM data.** The June 18 Clay refresh changes the read from enrichment spreadsheet to GTM workflow layer: 150+ data partners, enrichment waterfalls, Claygent, Sculptor workflow setup, Functions, MCP access from ChatGPT/Codex/Claude, native Sequencer, Ads audiences, CRM enrichment, HTTP API, webhooks, and warehouse syncs. Clay still needs the buyer forks from [Clay vs Instantly](/compare/clay-vs-instantly/), [Clay vs Intercom](/compare/clay-vs-intercom/), [Clay vs Make](/compare/clay-vs-make/), and [Clay vs Zapier](/compare/clay-vs-zapier/), but the current cost question is now Actions, Data Credits, fixed versus token-priced AI models, BYO API keys, no-result behavior, rollover rules, and MCP budget guardrails.
 
-**Use [ClickUp](/tools/clickup/) when work management and AI sit in the same operating system.** ClickUp is not a generic agent platform; it is the better fit when tasks, docs, project automation, ClickUp Brain, Everything AI, and workspace governance need to live together.
+**Use [ClickUp](/tools/clickup/) when work management and AI sit in the same operating system.** ClickUp is not a generic agent platform; it is the better fit when tasks, docs, project automation, ClickUp Brain, Brain MAX apps, Super Agents, Everything AI, MCP access, and workspace governance need to live together. The June 18 refresh keeps core plan pricing stable, but makes AI Super Credits, role access, Super Agent permissions, fair-use limits, public-beta MCP, and whole-workspace upgrade requirements the buyer checklist.
 
 **Use [Dust](/tools/dust/) when teams want internal AI agents over company knowledge and actions.** Dust Pro remains 29 EUR/user/month as of June 2, and Enterprise stays custom from 100 members. It is strongest when connected data sources, Slack/Zendesk/API surfaces, and permissioned agents replace repeated internal questions.
 
@@ -114,13 +120,13 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 
 **Use [Paradox](/tools/paradox/) when high-volume hiring needs conversational candidate experience, mobile apply, screening, resume matching, and scheduling rather than another sourcing database.** The June 8 check confirms Workday completed the acquisition in 2025 and made Paradox Conversational ATS available through Workday in January 2026, so procurement should verify the Workday/Paradox buying route, candidate consent, audit trails, accessibility, adverse-impact review, and recruiter override paths.
 
-**Use [Ada](/tools/ada/) when enterprise customer service wants AI agents for support outcomes.** Ada is now a demo-gated contact-sales page for serious service volumes, not a self-serve chatbot widget. Its June 1 source check found 550+ deployed AI agents and 5.5B+ interactions, so the buyer question is enterprise fit, resolution quality, and channel coverage.
+**Use [Ada](/tools/ada/) when enterprise customer service wants governed AI agents for support outcomes.** Ada is a demo-gated contact-sales platform for serious service volumes, not a self-serve chatbot widget. The June 18 source check found 550+ deployed AI agents, 6.4B+ handled interactions, MCP-assisted operations, coaching creation, multilingual Knowledge ingestion, Web Chat SDK control, and Zendesk handoff continuity. The buyer question is now enterprise fit, resolution quality, channel coverage, and whether CX ops can govern changes across Playbooks, MCP, SDKs, handoffs, and knowledge ingestion.
 
 **Use [Intercom](/tools/intercom/) when support automation is chat-first and Fin outcome pricing fits the volume model.** The June 5 check keeps Essential/Advanced/Expert annual seats at $29/$85/$132, Fin at $0.99 per outcome, and the core buyer risk around seats, outcome volume, Copilot, and add-ons. The refreshed comparisons separate Intercom's support platform from Make/Zapier orchestration and Instantly outbound sending.
 
 **Use [Voiceflow](/tools/voiceflow/) when a product, CX, or agency team needs to design chat/voice agents without code.** The June 10 check confirms the public pricing page still does not publish the old Sandbox/Pro/Teams tier sheet; it is a free-trial-plus-demo path with usage-based billing. Treat historical Pro/Teams rates as quote-review baselines only, and ask for written credit, editor-seat, model-provider, voice/phone, and overage terms before buying.
 
-**Use [CloudTalk](/tools/cloudtalk/) when automation starts with phone operations.** CloudTalk is not a generic workflow router. It is the better fit when a sales or support team needs cloud calling, routing, dialers, CRM call logging, AI summaries, coaching analytics, and optional AI voice agents in one system.
+**Use [CloudTalk](/tools/cloudtalk/) when automation starts with phone operations.** CloudTalk is not a generic workflow router. It is the better fit when a sales or support team needs cloud calling, routing, AI dialers, CRM/helpdesk logging, AI summaries, coaching analytics, AI Receptionist, and a later AI Specialist path in one system. The June 18 refresh keeps core seat pricing stable but adds cost-model attention to Power/Parallel Dialer, AI Voice Agent minutes, Branded Caller ID, Spam Remediation, messaging, included regional minutes, and call-consent governance.
 
 **Use [MeetGeek](/tools/meetgeek/) when automation starts with meetings.** MeetGeek is the better fit when customer success, sales, recruiting, or implementation teams need meeting transcripts, summaries, action items, AI Chat, Zapier/Make/n8n workflows, API/MCP access, and CRM/task handoff from customer calls.
 
@@ -152,20 +158,20 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 | Multi-agent enterprise control plane | [watsonx Orchestrate](/tools/watsonx-orchestrate/) | IBM control-plane path for heterogeneous agents, monitoring, partner agents, audit logs, voice paths, and data-isolation controls | Preview-vs-GA scope, regions, agentic MAUs/messages/add-ons, and non-IBM agent support need written confirmation |
 | Enterprise iPaaS and agentic orchestration | [Workato](/tools/workato/) | Workato One, Agent Studio genies, Workato GO, MCP, 1,000+ connectors, and governance-heavy workflow execution | Usage-based custom pricing, legacy-contract differences, region-scoped MCP, OPAs, concurrency, and agentic entitlements need written confirmation |
 | Security and IT workflow automation | [Tines](/tools/tines/) | Audit logs, RBAC, SSO/SAML, flexible hosting, Workbench, and AI Agent actions for SOC/IT workflows | Starter floor is high and AI Agent usage depends on credits and package limits |
-| Open-source automation and self-hosting | [Activepieces](/tools/activepieces/) | MIT-licensed self-host path, cloud active-flow billing, 700+ integrations, and AI-agent support | Someone still has to own hosting, secrets, and connector maintenance |
-| Developer multi-agent framework | [AG2](/tools/ag2/) | Apache 2.0 framework for AutoGen-style agent systems with active releases | Requires Python engineering judgment; not a turnkey workflow product |
+| Open-source automation and self-hosting | [Activepieces](/tools/activepieces/) | MIT-licensed self-host path, cloud active-flow billing, 749 live catalog pieces on June 18, and MCP/AI-agent support | Someone still has to own hosting, secrets, and connector maintenance |
+| Developer multi-agent framework | [AG2](/tools/ag2/) | Apache 2.0 framework for AutoGen-style agent systems, MCP/A2A work, cross-process networks, skills, and sandboxing | Requires Python engineering judgment, tool-governance policy, and production hardening; not a turnkey workflow product |
 | Python multi-agent orchestration | [CrewAI](/tools/crewai/) | Role-based agents, crews, flows, Studio, tracing, triggers, and an Enterprise path | Basic cloud is small; LLM costs and production controls still need engineering ownership |
 | Visual LangChain/RAG canvas | [Langflow](/tools/langflow/) | Open-source visual builder for agents, MCP servers, RAG, and deployable flows | Pin versions and patch quickly; not a general SaaS automation platform |
 | LLM observability, prompt management, and evals | [Langfuse](/tools/langfuse/) | Open-source traces, prompt management, datasets, annotations, metrics, and eval workflows | Not a gateway; usage-unit and self-hosting operations need ownership |
 | Durable stateful agent runtime | [LangGraph](/tools/langgraph/) | Low-level orchestration for persistence, streaming, human-in-the-loop, and deployment via LangSmith | Multiple LangSmith meters plus separate model/API costs |
 | Persistent-memory agents | [Letta](/tools/letta/) | Open-source memory-first agents and Letta Code with BYOK and Letta Auto | Memory retention, deletion, sensitive data, and pay-as-you-go overage need controls |
-| Cloud browser automation for agents | [Browserbase](/tools/browserbase/) | Managed browsers, Web Data APIs, runtime, identity, observability, Stagehand, and MCP | Costs move with browser sessions and runtime design |
+| Cloud browser automation for agents | [Browserbase](/tools/browserbase/) | Managed Chromium browsers, Web Data APIs, Functions runtime, identity, Model Gateway, observability, Stagehand, and MCP | Costs move with browser sessions, Fetch/Extract calls, proxies, Model Gateway tokens, and runtime design |
 | Python jobs, endpoints, queues, and GPU automation | [Modal](/tools/modal/) | Serverless Python functions, web endpoints, scheduled jobs, sandboxes, and per-second GPU billing | Not a no-code app connector; region and non-preemptible multipliers change production cost |
 | LLM observability and gateway control | [Helicone](/tools/helicone/) | Open-source observability, AI Gateway, caching, failovers, 0% markup credits, and BYOK provider support | Sits in sensitive prompt/data paths; review retention, PII, and proxy mode |
-| Enterprise customer-service AI agents | [Ada](/tools/ada/) | Strong fit for high-volume support teams that need chat, voice, email, SMS, social, and reasoning workflows | Pricing is demo-gated; verify volume, channel, and resolution economics |
-| Outbound revenue automation | [Apollo](/tools/apollo/) or [Amplemarket](/tools/amplemarket/) | Prospect data, enrichment, sequencing, and AI-assisted GTM execution | Credit systems, deliverability, and CRM hygiene decide real value |
-| Enrichment and GTM research workflows | [Clay](/tools/clay/) | Waterfalls data providers, research agents, and account enrichment before sending | Credits, action counts, and annual-vs-monthly pricing need direct plan math |
-| AI work management | [ClickUp](/tools/clickup/) | Tasks, docs, automation, Brain, and Everything AI inside one workspace | Easy to overbuy AI add-ons if the team has not standardized ClickUp usage |
+| Enterprise customer-service AI agents | [Ada](/tools/ada/) | Strong fit for high-volume support teams that need chat, voice, email, SMS, social, Playbooks, MCP-assisted optimization, and handoff governance | Pricing is demo-gated; verify conversation definitions, channel coverage, MCP/SDK scope, and resolution economics |
+| Outbound revenue automation | [Apollo](/tools/apollo/) or [Amplemarket](/tools/amplemarket/) | Prospect data, enrichment, sequencing, Workflows, MCP-assisted GTM execution, and AI sales copilot behavior | Credit systems, deliverability, AI-agent permissions, and CRM hygiene decide real value |
+| Enrichment and GTM research workflows | [Clay](/tools/clay/) | Data-provider waterfalls, Claygent, Sculptor, Functions, MCP, native Sequencer, Ads audiences, and CRM/warehouse activation | Actions, Data Credits, AI token usage, BYO API keys, rollover rules, and MCP budget guardrails need direct plan math |
+| AI work management | [ClickUp](/tools/clickup/) | Tasks, docs, chat, dashboards, automations, Brain AI, Brain MAX apps, Super Agents, Everything AI, and public-beta MCP inside one workspace | Easy to overbuy AI add-ons or burn AI Super Credits if the team has not standardized workspace hierarchy, permissions, and agent triggers |
 | Internal team AI agents | [Dust](/tools/dust/) | Custom agents over company data and tools, Slack/Zendesk/API surfaces, model choice | Value depends on source hygiene, permissions, and repeated team workflows |
 | Enterprise knowledge agents | [Glean](/tools/glean/) | Permission-aware work search, agents, MCP, and developer-tool integrations over company data | Contact-sales pricing, connectors, and security review drive procurement |
 | Open-source local/BYOK agent | [Goose](/tools/goose/) | Apache-2.0 desktop/CLI/API agent with provider choice and MCP extensions | Local permissions, model costs, and extension trust need controls |
@@ -179,7 +185,7 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 | Recruiting sourcing and CRM automation | [hireEZ](/tools/hireez/) | Sourcing, CRM, rediscovery, applicant match, hiring intelligence, scheduling, job distribution, and ATS workflows | Demo-led pricing and broad implementation scope need procurement discipline |
 | Chat-first customer support automation | [Intercom](/tools/intercom/) | Fin AI Agent, human inbox, Copilot, help center, workflows, and customer context in one support platform | Seat, outcome, Copilot, and add-on fees stack quickly |
 | No-code conversational agents | [Voiceflow](/tools/voiceflow/) | Visual agent design, knowledge-base RAG, testing, deployment, and monitoring for chat/voice experiences | Public pricing is demo-gated; confirm usage, model, seat, voice/phone, and overage terms |
-| Phone-heavy sales/support operations | [CloudTalk](/tools/cloudtalk/) | Business calling, routing, dialers, CRM sync, AI Conversation Intelligence, and AI Voice Agents in one platform | More than teams need if the job is internal-only calling or pure chat support |
+| Phone-heavy sales/support operations | [CloudTalk](/tools/cloudtalk/) | Business calling, routing, AI dialers, CRM/helpdesk sync, AI Conversation Intelligence, AI Receptionist, and AI Specialist paths in one platform | More than teams need if the job is internal-only calling, pure chat support, or a developer-only voice-agent API |
 | Meeting-to-workflow automation for CS, sales, recruiting, and ops | [MeetGeek](/tools/meetgeek/) | Transcripts, summaries, AI Chat, action items, Zapier/Make/n8n workflows, API/MCP access, and CRM/task handoff from meeting content | Needs consent policy, workspace permissions, and a defined post-meeting workflow |
 | No-bot browser meeting capture | [Tactiq](/tools/tactiq/) | Meet/Zoom/Teams caption capture, AI summaries, workflow integrations, and Business-tier MCP/Claude Connector betas | Browser-caption quality, consent, AI credits, and Business beta access need verification |
 | One-off general autonomous tasks | [Manus](/tools/manus/) | Hosted VM agent for research, spreadsheets, slides, files, and browser work; official site now describes Manus as part of Meta | Credit burn and data-handling terms need direct verification before sensitive work |
@@ -203,11 +209,11 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 - [Best AI automation platform](/guides/best-ai-automation-platform/) is the primary buyer guide and should stay current weekly while automation pricing and agent surfaces move quickly. The May 13 n8n cloud price cut and the May Make price reduction both flow into this page.
 - [Best AI tools for agencies](/guides/best-ai-tools-for-agencies/) is now the June 6 verified role guide for ChatGPT, Claude, Zapier, n8n, Make, Copy.ai, and client-data guardrails. Keep it aligned with [AI automation agency tech stack](/guides/ai-agency-stack/), sales, support, and lead-generation updates.
 - [AI automation agency tech stack](/guides/ai-agency-stack/) is now the June 6 verified agency delivery-stack page for n8n, Zapier, Make, Claude, ChatGPT, voice agents, Browserbase, and client dashboard decisions, including the June 15 Claude Agent SDK billing split. Keep it aligned with agency role guidance, sales, support, and lead-generation updates.
-- [AI lead generation stack](/guides/ai-lead-generation/) is now the June 6 verified buyer flow for Apollo, Clay, Amplemarket, Instantly, and n8n across prospect data, enrichment, AI research, sender handoff, deliverability, and GTM automation. Keep it synchronized with the June 6 verified [cold-email buyer guide](/guides/best-ai-for-cold-email/) because Apollo trial/credit rules, Instantly Outreach versus Credits packaging, Clay Actions/Data Credits, and Amplemarket AI SDR packaging all affect outbound-automation advice.
-- [Best AI tools for sales teams](/guides/best-ai-tools-for-sales-teams/) is the June 6 verified sales-stack guide for Apollo, Instantly, Clay, Amplemarket, and ChatGPT across prospect data, outbound execution, GTM enrichment, AI SDR workflow, CRM hygiene, and credit/export modeling.
+- [AI lead generation stack](/guides/ai-lead-generation/) is now the June 6 verified buyer flow for Apollo, Clay, Amplemarket, Instantly, and n8n across prospect data, enrichment, AI research, sender handoff, deliverability, and GTM automation. Keep it synchronized with the June 6 verified [cold-email buyer guide](/guides/best-ai-for-cold-email/) because Apollo trial/credit rules, Instantly Outreach versus Credits packaging, Clay's June 18 Actions/Data Credits, Sculptor, MCP, Sequencer, fixed-versus-variable AI pricing, and Amplemarket's June 18 credit-matrix, MCP sequence creation, and Workflows updates all affect outbound-automation advice.
+- [Best AI tools for sales teams](/guides/best-ai-tools-for-sales-teams/) is the June 6 verified sales-stack guide for Apollo, Instantly, Clay, Amplemarket, and ChatGPT across prospect data, outbound execution, GTM enrichment, AI SDR workflow, CRM hygiene, and credit/export modeling. Amplemarket's June 18 refresh now requires extra attention to MCP permissions, Workflows routing, and live-matrix credit counts.
 - [Best AI tools for recruiters](/guides/best-ai-tools-for-recruiters/) is the June 6 verified hiring-automation guide for LinkedIn Recruiter + Hiring Assistant, hireEZ, Paradox, Eightfold AI, and ChatGPT, with human-in-the-loop, candidate-data, ATS/CRM, screening, and scheduling cautions.
-- [Best AI tools for customer support](/guides/best-ai-tools-for-customer-support/) is the June 6 verified support-automation buyer guide for Intercom/Fin, Voiceflow, Ada, and Retell AI. Keep it synchronized with Intercom seats/outcomes, Voiceflow builder ownership, Ada enterprise CX positioning, Retell minute billing, included/extra concurrency, the June 15, 2026 legacy endpoint migration, and escalation governance.
-- [Best AI phone system for SMB sales and support teams](/guides/best-ai-phone-system-for-smb-sales-and-support-teams/) is the CloudTalk money page for teams that need phone operations, CRM logging, AI conversation intelligence, coaching, and a path to AI voice agents.
+- [Best AI tools for customer support](/guides/best-ai-tools-for-customer-support/) is the June 6 verified support-automation buyer guide for Intercom/Fin, Voiceflow, Ada, and Retell AI. Keep it synchronized with Intercom seats/outcomes, Voiceflow builder ownership, Ada's June 18 enterprise CX, MCP, SDK, multilingual Knowledge, and handoff-governance positioning, Retell minute billing, included/extra concurrency, the June 15, 2026 legacy endpoint migration, and escalation governance.
+- [Best AI phone system for SMB sales and support teams](/guides/best-ai-phone-system-for-smb-sales-and-support-teams/) is the June 18 CloudTalk money page for teams that need phone operations, CRM logging, AI conversation intelligence, coaching, AI Receptionist, AI Specialist, dialer add-ons, caller-ID/spam controls, and a safe path from human call flow to voice-agent automation.
 - [Best AI meeting assistant for customer success teams](/guides/best-ai-meeting-assistant-for-customer-success-teams/) is the MeetGeek money page for teams that need customer calls to become account memory, action items, CRM/task updates, QBR prep, and renewal context.
 - [Best AI tools for accountants](/guides/best-ai-tools-for-accountants/) is the June 6 verified finance-ops guide for Microsoft 365 Copilot in Excel, ChatGPT analysis, Claude memo review, Gemini Workspace context, Perplexity source trails, Intuit Assist, Xero JAX, and client-data governance.
 - [Best AI personal assistant for work](/guides/best-ai-personal-assistant-for-work/) is the Lindy money page for buyers who want inbox, calendar, meeting, follow-up, and text-delegation help before they choose a workflow platform.
@@ -259,9 +265,12 @@ Do not leave this category stale. Automation tools are adding MCP, agent builder
 - [Tines pricing](https://www.tines.com/pricing/) (verified 2026-06-09)
 - [Tines pricing explainer](https://explained.tines.com/en/articles/9620399-understanding-tines-pricing-and-packaging) (verified 2026-06-09)
 - [Tines AI Agents introduction](https://explained.tines.com/en/articles/11571096-introduction-to-ai-agents) (verified 2026-06-09)
-- [Activepieces pricing](https://www.activepieces.com/pricing) (verified 2026-06-01)
-- [Activepieces GitHub releases](https://github.com/activepieces/activepieces/releases) (verified 2026-06-01)
-- [AG2 releases](https://github.com/ag2ai/ag2/releases) (verified 2026-06-01)
+- [Activepieces pricing](https://www.activepieces.com/pricing) (verified 2026-06-18)
+- [Activepieces GitHub releases](https://github.com/activepieces/activepieces/releases) (verified 2026-06-18)
+- [Activepieces MCP tools docs](https://www.activepieces.com/docs/mcp/tools) (verified 2026-06-18)
+- [Activepieces pieces catalog](https://www.activepieces.com/pieces) (verified 2026-06-18)
+- [AG2 releases](https://github.com/ag2ai/ag2/releases) (verified 2026-06-18)
+- [AG2 official site](https://www.ag2.ai/) (verified 2026-06-18)
 - [CrewAI releases](https://github.com/crewAIInc/crewAI/releases) (verified 2026-06-02)
 - [CrewAI pricing](https://crewai.com/pricing) (verified 2026-06-02)
 - [Langflow official site](https://www.langflow.org/) (verified 2026-06-08)
@@ -299,11 +308,21 @@ Do not leave this category stale. Automation tools are adding MCP, agent builder
 - [Paradox recruiting solution](https://www.paradox.ai/solutions/recruiters) (verified 2026-06-08)
 - [Workday completes Paradox acquisition](https://investor.workday.com/news-and-events/press-releases/news-details/2025/Workday-Completes-Acquisition-of-Paradox-10-01-2025/default.aspx) (verified 2026-06-08)
 - [Paradox Conversational ATS available through Workday](https://investor.workday.com/news-and-events/press-releases/news-details/2026/Paradox-Conversational-Applicant-Tracking-System-ATS-Now-Available-Through-Workday-Helping-Organizations-Hire-Frontline-Workers-Faster/default.aspx) (verified 2026-06-08)
-- [Apollo pricing](https://www.apollo.io/pricing) (verified 2026-06-06)
+- [Apollo pricing](https://www.apollo.io/pricing) (verified 2026-06-18)
+- [Apollo 2026 release notes](https://knowledge.apollo.io/hc/en-us/articles/43226752968077-Release-Notes-2026) (verified 2026-06-18)
+- [Apollo Developer Docs overview](https://docs.apollo.io/reference/overview) (verified 2026-06-18)
 - [Instantly pricing](https://instantly.ai/pricing) (verified 2026-06-06)
-- [Clay pricing](https://www.clay.com/pricing) (verified 2026-06-06)
-- [Amplemarket pricing](https://www.amplemarket.com/pricing) (verified 2026-06-06)
-- [Ada platform](https://www.ada.cx/platform) (verified 2026-06-01)
+- [Clay pricing](https://www.clay.com/pricing) (verified 2026-06-18)
+- [Clay official site](https://www.clay.com/) (verified 2026-06-18)
+- [Clay MCP](https://www.clay.com/mcp) (verified 2026-06-18)
+- [Clay Sculptor](https://www.clay.com/sculptor) (verified 2026-06-18)
+- [Clay Sequencer](https://www.clay.com/sequencer) (verified 2026-06-18)
+- [Clay changelog](https://www.clay.com/changelog) (verified 2026-06-18)
+- [Amplemarket pricing](https://www.amplemarket.com/pricing) (verified 2026-06-18)
+- [Amplemarket June 2026 product update](https://www.amplemarket.com/blog/made-for-you-may-2026) (verified 2026-06-18)
+- [Ada platform](https://www.ada.cx/platform) (verified 2026-06-18)
+- [Ada release notes](https://docs.ada.cx/release-notes) (verified 2026-06-18)
+- [Ada MCP overview](https://docs.ada.cx/mcp/introduction/overview) (verified 2026-06-18)
 - [Intercom pricing](https://www.intercom.com/pricing) (verified 2026-06-05)
 - [Fin AI Agent pricing](https://fin.ai/pricing) (verified 2026-06-05)
 - [Voiceflow pricing](https://www.voiceflow.com/pricing) (verified 2026-06-10)
@@ -328,19 +347,29 @@ Do not leave this category stale. Automation tools are adding MCP, agent builder
 - [RelationalAI Snowflake agentic decision intelligence](https://www.globenewswire.com/news-release/2026/06/02/3305546/0/en/RelationalAI-Closes-the-AI-Value-Gap-with-New-Agentic-Decision-Intelligence-Capabilities-for-the-Snowflake-AI-Data-Cloud.html) (verified 2026-06-03)
 - [7AI Agentic Security Platform](https://7ai.com/platform) (verified 2026-06-03)
 - [White House AI cybersecurity order](https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security/) (verified 2026-06-03)
-- [Apollo pricing](https://apollo.io/pricing) (verified 2026-06-01)
-- [Amplemarket pricing](https://www.amplemarket.com/pricing) (verified 2026-06-01)
-- [Browserbase pricing](https://www.browserbase.com/pricing) (verified 2026-06-01)
+- [Apollo AI platform information](https://www.apollo.io/llm-info) (verified 2026-06-18)
+- [Amplemarket pricing](https://www.amplemarket.com/pricing) (verified 2026-06-18)
+- [Amplemarket MCP announcement](https://www.amplemarket.com/blog/mcp) (verified 2026-06-18)
+- [Browserbase pricing](https://www.browserbase.com/pricing) (verified 2026-06-18)
+- [Browserbase changelog](https://www.browserbase.com/changelog) (verified 2026-06-18)
+- [Browserbase Browser explainer](https://www.browserbase.com/blog/what-is-a-browserbase-browser) (verified 2026-06-18)
 - [Modal pricing](https://modal.com/pricing) (verified 2026-06-08)
 - [Modal GPU docs](https://modal.com/docs/guide/gpu) (verified 2026-06-08)
 - [Helicone pricing](https://www.helicone.ai/pricing) (verified 2026-06-02)
 - [Helicone platform docs](https://docs.helicone.ai/getting-started/platform-overview) (verified 2026-06-02)
-- [Clay pricing](https://www.clay.com/pricing) (verified 2026-06-04)
-- [Clay integrations](https://www.clay.com/integrations) (verified 2026-06-04)
+- [Clay pricing](https://www.clay.com/pricing) (verified 2026-06-18)
+- [Clay integrations](https://www.clay.com/integrations) (verified 2026-06-18)
+- [Clay MCP](https://www.clay.com/mcp) (verified 2026-06-18)
+- [Clay Sculptor](https://www.clay.com/sculptor) (verified 2026-06-18)
+- [Clay Sequencer](https://www.clay.com/sequencer) (verified 2026-06-18)
+- [Clay changelog](https://www.clay.com/changelog) (verified 2026-06-18)
 - [Instantly pricing](https://instantly.ai/pricing) (verified 2026-06-05)
 - [Instantly SuperSearch help](https://help.instantly.ai/en/articles/11364248-supersearch) (verified 2026-06-05)
-- [ClickUp pricing](https://clickup.com/pricing) (verified 2026-06-02)
-- [ClickUp Brain](https://clickup.com/ai) (verified 2026-06-02)
+- [ClickUp pricing](https://clickup.com/pricing) (verified 2026-06-18)
+- [ClickUp Brain](https://clickup.com/brain) (verified 2026-06-18)
+- [ClickUp Brain AI help](https://help.clickup.com/hc/en-us/articles/12578085238039-What-is-ClickUp-Brain-AI) (verified 2026-06-18)
+- [ClickUp AI Super Credits help](https://help.clickup.com/hc/en-us/articles/37837088720151-How-are-AI-Super-Credits-consumed) (verified 2026-06-18)
+- [ClickUp MCP server](https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server) (verified 2026-06-18)
 - [Manus pricing](https://manus.im/pricing) (verified 2026-05-24)
 - [Lindy pricing](https://www.lindy.ai/pricing) (verified 2026-05-27)
 - [Lindy quickstart docs](https://docs.lindy.ai/start-here/quickstart) (verified 2026-05-27)
@@ -351,8 +380,10 @@ Do not leave this category stale. Automation tools are adding MCP, agent builder
 - [Pipedream MCP end-user docs](https://pipedream.com/docs/connect/mcp/users) (verified 2026-06-08)
 - [Workday FY2026 Q4 results: Pipedream acquisition closed](https://newsroom.workday.com/2026-02-24-Workday-Announces-Fiscal-2026-Fourth-Quarter-and-Full-Year-Financial-Results) (verified 2026-06-08)
 - [Microsoft Research MagenticLite, MagenticBrain, and Fara1.5](https://www.microsoft.com/en-us/research/blog/magenticlite-magenticbrain-fara1-5-an-agentic-experience-optimized-for-small-models/) (verified 2026-05-26)
-- [CloudTalk pricing](https://www.cloudtalk.io/pricing/) (verified 2026-05-26)
-- [CloudTalk official site](https://www.cloudtalk.io/) (verified 2026-05-26)
+- [CloudTalk pricing](https://www.cloudtalk.io/pricing/) (verified 2026-06-18)
+- [CloudTalk official site](https://www.cloudtalk.io/) (verified 2026-06-18)
+- [CloudTalk AI Voice Agents](https://www.cloudtalk.io/ai-voice-agents/) (verified 2026-06-18)
+- [CloudTalk AI Receptionist](https://www.cloudtalk.io/ai-receptionist/) (verified 2026-06-18)
 - [MeetGeek pricing](https://meetgeek.ai/pricing) (verified 2026-05-26)
 - [MeetGeek integrations](https://meetgeek.ai/integrations) (verified 2026-05-26)
 - [Tactiq pricing](https://tactiq.io/buy) (verified 2026-06-09)

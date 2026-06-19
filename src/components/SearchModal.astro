@@ -62,7 +62,9 @@ const toolsCount = allTools.filter(
   </div>
 </div>
 
-<script is:inline>
+<script>
+  import { scoreSearchItem, searchItemMatches, searchTerms } from '../lib/search-index';
+
   (() => {
     if (window.__searchPaletteInit) return;
     window.__searchPaletteInit = true;
@@ -178,43 +180,22 @@ const toolsCount = allTools.filter(
       return loadPromise;
     }
 
-    function normalize(v) { return String(v || '').toLowerCase().trim(); }
-    function termsFor(v) { return normalize(v).split(/\s+/).filter(Boolean); }
     function escape(s) {
       return String(s).replace(/[&<>"']/g, (c) => (
         { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]
       ));
     }
 
-    function rank(item, qTerms, query) {
-      const title = normalize(item.title);
-      const haystack = normalize(item.search);
-      let score = Number(item.priority || 0);
-      if (!qTerms.length) return score;
-      if (title === query) score += 1000;
-      else if (title.startsWith(query)) score += 720;
-      else if (qTerms.every((t) => title.split(/[^a-z0-9]+/).includes(t))) score += 640;
-      else if (qTerms.every((t) => title.includes(t))) score += 520;
-      for (const t of qTerms) {
-        if (title.startsWith(t)) score += 90;
-        else if (title.includes(t)) score += 65;
-        else if (haystack.includes(t)) score += 20;
-      }
-      return score;
-    }
-
     function getMatchesByGroup() {
-      const qTerms = termsFor(input.value);
+      const qTerms = searchTerms(input.value);
       const query = qTerms.join(' ');
       const out = {};
       for (const group of RESULT_GROUPS) out[group.kind] = [];
-      if (!data) return out;
       const scored = data
-        .map((item) => ({ item, score: rank(item, qTerms, query) }))
+        .map((item) => ({ item, score: scoreSearchItem(item, qTerms, query) }))
         .filter(({ item, score }) => {
           if (!qTerms.length) return false;
-          const haystack = `${normalize(item.title)} ${normalize(item.search)}`;
-          return score > Number(item.priority || 0) && qTerms.every((t) => haystack.includes(t));
+          return searchItemMatches(item, qTerms, score);
         })
         .sort((a, b) => b.score - a.score);
       for (const { item } of scored) {

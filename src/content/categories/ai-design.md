@@ -5,10 +5,10 @@ title: AI Design & App Building
 description: Current AI design tools and app builders for social creative, product design, design systems, web prototypes, full-stack apps, and Vercel-native UI workflows.
 tool_count: 9
 seo_title: "Best AI Design & App Builder Tools (June 2026)"
-meta_description: "Updated June 15, 2026: compare Canva AI, Figma, Midjourney, Lovart, Uizard, Unbounce, Adobe Firefly, Recraft V4, Google Stitch, Framer, Lovable, Rork, Base44, Bolt.new, and v0 by buyer fit, pricing, workflow, credits, rights review, and production risk."
+meta_description: "Updated June 18, 2026: compare Canva AI, Figma, Midjourney, Lovart, Uizard, Unbounce, AdCreative.ai, Adobe Firefly, Recraft V4, Google Stitch, Framer, Lovable, Rork, Base44, Bolt.new, and v0 by buyer fit, pricing, workflow, credits, rights review, and production risk."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-15
-last_verified: 2026-06-15
+last_updated: 2026-06-18
+last_verified: 2026-06-18
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -33,6 +33,8 @@ As of June 15, 2026, start with the job:
 **Use [Napkin AI](/tools/napkin-ai/) when the design task starts as text and needs an explanatory visual.** The June 8 pricing check keeps Free at 500 weekly AI credits, Plus at $9/person/month, and Pro at $22/person/month. It is a diagram/flowchart/slide-visual builder, not a full design system or campaign creative suite.
 
 **Use [Figma](/tools/figma/) when design quality, design systems, multiplayer review, and handoff matter.** Figma's June 5 pricing check lists AI add-ons, daily/monthly AI credits by plan, Figma Make, Figma Sites, Dev Mode, MCP support, libraries, variables, governance, and enterprise seats. The June 5 model-selection check confirms Figma Make has multiple selectable non-default models, a default-model caveat, and credit-burn caveats. Pick Figma when the artifact has to survive design critique and developer handoff, not just look plausible in a generator.
+
+**Use [Claude Design](/tools/claude-design/) when a Claude team wants prompt-to-prototype work, decks, one-pagers, and Claude Code handoff in the same ecosystem.** The June 18 check keeps the launch backing-model caveat on Opus 4.7, but updates the buying math: Claude Design is available on Pro, Max, Team, and Enterprise, is metered independently from chat and Claude Code, has recurring weekly allowances, and can use purchasable usage credits. It is strongest when `/design-sync` can pull in an existing design system from Claude Code and weakest when teams need mature Figma-style multiplayer editing, audit logs, or design-ops governance.
 
 **Use [Uizard](/tools/uizard/) when non-designers need editable UI mockups before a Figma handoff.** The June 10 check keeps Free at 3 AI generations/month with Autodesigner 1.5, Pro at $12/month billed annually with 500 generations and Autodesigner 2.0, Business at $39/month billed annually with 5,000 generations, and Enterprise custom. Treat React/CSS handoff as component-level developer reference, because Uizard's own export docs still say full-project HTML/JavaScript export is not available.
 
@@ -59,6 +61,8 @@ As of June 15, 2026, start with the job:
 **Use [Framer AI](/tools/framer-ai/) when the job is a marketing site, landing page, portfolio, or polished web presence rather than a full app.** Framer's June 2 pricing check keeps Free, Basic at $10/month annual, Pro at $30/month annual, Scale at $100/month annual, and Enterprise custom. The important buyer split is website publishing and CMS limits, not app backend generation.
 
 **Use [Unbounce](/tools/unbounce/) when the design job is paid-campaign conversion, not general web design.** The June 10 check keeps Starter at $29/month or $22/month annual, Build at $99/$74, Experiment at $149/$112, Optimize at $249/$187, and Concierge/Agency custom. Build is the practical floor for active campaigns, Experiment is the A/B-testing inspection point, and Optimize is the tier to inspect when Smart Traffic is the reason to buy.
+
+**Use [AdCreative.ai](/tools/adcreative/) when the design job is paid-social creative velocity.** The June 18 check keeps it out of the general design-system lane and updates the product read around ad creatives, product videoshoots, fashion videoshoots, UGC-style videos, buyer personas, ROI calculator, compliance checking, and creative scoring. Treat pricing as checkout-sensitive because credits, brands, users, video usage, and quarterly/yearly sale displays affect the real cost.
 
 ## Buyer Paths
 
@@ -196,11 +200,12 @@ Do not position Unbounce Starter as the default serious paid-campaign tier. Its 
 - [Canva Shield](https://www.canva.com/safe-ai-canva-shield/) (verified 2026-06-15)
 - [Canva AI social media post generator](https://www.canva.com/features/ai-social-media-post-generator/) (verified 2026-06-14)
 - [Napkin AI pricing](https://www.napkin.ai/pricing/) (verified 2026-06-12)
-- [AdCreative.ai social media ads](https://www.adcreative.ai/social-media-ads) (verified 2026-06-12)
+- [AdCreative.ai official site](https://www.adcreative.ai/) (verified 2026-06-18)
+- [AdCreative.ai product videoshoots](https://www.adcreative.ai/product-videoshoot-ai) (verified 2026-06-18)
 - [Jasper pricing](https://www.jasper.ai/pricing) (verified 2026-06-12)
 - [Jasper Brand Voice help](https://help.jasper.ai/hc/en-us/articles/27419540851995-Brand-Voice) (verified 2026-06-12)
 - [OpusClip pricing](https://www.opus.pro/pricing) (verified 2026-06-12)
-- [Anthropic Claude Design launch](https://www.anthropic.com/news/claude-design-anthropic-labs) (verified 2026-06-12)
+- [Anthropic Claude Design launch](https://www.anthropic.com/news/claude-design-anthropic-labs), [Claude Design usage and pricing](https://support.claude.com/en/articles/14667344-claude-design-subscription-usage-and-pricing), and [Claude Design get-started guide](https://support.claude.com/en/articles/14604416-get-started-with-claude-design) (verified 2026-06-18)
 - [Claude pricing](https://claude.com/pricing) (verified 2026-06-14)
 - [Figma pricing](https://www.figma.com/pricing/) (verified 2026-06-12)
 - [Figma AI credits](https://help.figma.com/hc/en-us/articles/33459875669015-How-AI-credits-work) (verified 2026-06-12)
