@@ -6,14 +6,14 @@ For the plain-English project state, read `.agent/CURRENT_STATUS.md` first. For 
 
 ## Current Snapshot
 
-- Last updated: 2026-06-21.
+- Last updated: 2026-06-20.
 - `master` should be checked with `git status --short --branch` before starting work.
 - The June 2026 standards remediation, Guard Challenge Workflow, Project Folder Tidy, Verification Router, and June 17 news catch-up are complete.
 - Continuity recording is now centralized in `.agent/CURRENT_STATUS.md`, `.agent/PLANS.md`, and `.agent/WORK_LOG.md`.
 - Vercel CLI is installed globally as `vercel@54.14.2`; upstream dependency warnings are tracked in `.agent/WORK_LOG.md`.
 - Current build timing baseline from 2026-06-21: `npm run build:fast` passed in 191.31 seconds and `npm run build` passed in 214.37 seconds. Main drivers are static route fan-out, Pagefind, and large generated/search surfaces.
 - The decision content flywheel is now the default repeatable loop. Use `npm run loop:next` to pick the next buyer-intent cluster.
-- Best next product move from the 2026-06-21 review remains a focused comparison decision sprint starting with `canva-vs-claude`.
+- The first decision content loop cycle, `canva-vs-claude`, is complete. `npm run loop:next -- --json` now selects `claude-vs-replit-agent`.
 - The main active ongoing lane is the oldest-first AI tools wiki refresh.
 - The Phase 3 parallel surface and June 18-20 news backfill plan is written but not executed on `master`.
 
@@ -36,26 +36,27 @@ Run AiPedia as a repeatable buyer-decision loop: cluster, verify, improve decisi
 ### Status
 
 - 2026-06-21: Loop spec and `loop:next` command are implemented.
-- 2026-06-21: First selected cluster is expected to be `canva-vs-claude` unless a newer backlog changes the order or the comparison already exists.
+- 2026-06-20: First selected cluster, `canva-vs-claude`, is complete.
+- 2026-06-20: Next selected cluster is `claude-vs-replit-agent` unless a newer backlog changes the order or the comparison already exists.
 
-## Recommended Next: Canva Vs Claude Comparison Sprint
+## Recommended Next: Claude Vs Replit Agent Comparison Sprint
 
 ### Objective
 
-Create a high-intent, source-backed comparison page for `canva-vs-claude` while refreshing the affected Canva and Claude facts, parent hubs, and ledger rows.
+Create a high-intent, source-backed comparison page for `claude-vs-replit-agent` while refreshing the affected Claude, Replit Agent, AI coding, parent hub, source registry, LLM surface, and ledger rows.
 
 ### Why This Is Next
 
-- The coverage backlog ranks `canva-vs-claude` as the top missing comparison.
-- Canva and Claude are both high-interest buyer-decision tools.
+- `npm run loop:next -- --json` selects `claude-vs-replit-agent` after the completed Canva vs Claude cycle.
+- Claude and Replit Agent are high-interest coding and agentic-workflow buyer-decision tools.
 - The work improves SEO, trust, mobile decision usefulness, and the comparison template baseline in one focused slice.
 
 ### First Slice
 
-- Verify current June 2026 Canva and Claude pricing, plan, feature, model, and source facts.
-- Refresh `src/content/tools/canva.md` and `src/content/tools/claude.md` only where current sources justify changes.
-- Create `src/content/comparisons/canva-vs-claude.md`.
-- Inspect and update affected parent surfaces, especially `/compare/`, `/tools/`, AI design category pages, sitemap/LLM surfaces, and `PAGE_REFRESH_LEDGER.md`.
+- Verify current June 2026 Claude and Replit Agent pricing, plan, feature, model, and source facts.
+- Refresh `src/content/tools/claude.md` and `src/content/tools/replit-agent.md` only where current sources justify changes.
+- Create or refresh `src/content/comparisons/claude-vs-replit-agent.md`.
+- Inspect and update affected parent surfaces, especially `/compare/`, `/tools/`, AI coding category pages, sitemap/LLM surfaces, and `PAGE_REFRESH_LEDGER.md`.
 
 ### Verification
 

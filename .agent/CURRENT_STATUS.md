@@ -1,6 +1,6 @@
 # AiPedia Current Status
 
-Last updated: 2026-06-21
+Last updated: 2026-06-20
 
 Audience: maintainers, future agents, and Matt.
 
@@ -17,17 +17,23 @@ Local ignored docs, old specs, and archived plans are not canonical when they co
 
 ## Plain English
 
-The June 2026 standards remediation is done and pushed to `origin/master`. Do not restart that work from the original spec. Use this file to see what was completed, what remains active, and which docs to trust first.
+The June 2026 standards remediation is done and pushed to `origin/master`. The first Decision Content Flywheel content cycle, `canva-vs-claude`, is complete. Do not restart either from the original specs. Use this file to see what was completed, what remains active, and which docs to trust first.
 
 At the time this status was last checked, `master` was clean and synced with `origin/master`. Run `git status --short --branch` and `git log --oneline -5` for the exact current head.
 
 ## Done Recently
 
+- First Decision Content Flywheel cycle is complete.
+  - Completed cycle: `canva-vs-claude`.
+  - Added `src/content/comparisons/canva-vs-claude.md`.
+  - Refreshed affected Canva, Claude, Claude Code, Anthropic, AI design, AI coding, developer guide, Copilot alternatives, May Agent SDK news correction, source registry, LLM surfaces, and ledger rows.
+  - Corrected the stale Claude Agent SDK credit claim: Anthropic's current help guidance says the June 15 Agent SDK usage changes are paused and the separate monthly credit is not currently available.
+  - `npm run loop:next -- --json` now selects `claude-vs-replit-agent`.
 - Decision content loop is implemented.
   - Spec: `docs/superpowers/specs/2026-06-21-aipedia-decision-content-loop.md`
   - Command: `npm run loop:next`
   - Purpose: choose one buyer-intent cluster, verify current facts, improve the decision page, update parent surfaces, run the right checks, record, repeat.
-  - First cycle: `canva-vs-claude` unless the coverage backlog changes or the page already exists.
+  - Next cycle: `claude-vs-replit-agent` unless the coverage backlog changes or the page already exists.
 - Build-time diagnosis is complete.
   - `npm run build:fast` passed in 191.31 seconds after regenerating the page refresh ledger.
   - `npm run build` passed in 214.37 seconds.
@@ -62,7 +68,7 @@ At the time this status was last checked, `master` was clean and synced with `or
 - Decision Content Flywheel is active.
   - Use `npm run loop:next` at the start of monetizable content work.
   - Do not write comparison, pricing, model, plan, affiliate, or commercial claims until current sources have been verified.
-  - Current recommended first cycle is `canva-vs-claude`.
+  - Current recommended next cycle is `claude-vs-replit-agent`.
 - Oldest-First AI Tools Wiki Refresh remains active.
   - Work from `PAGE_REFRESH_LEDGER.md`, oldest first.
   - Latest logged refresh in `.agent/PLANS.md` is `Connected Papers`, completed on 2026-06-18.
@@ -75,6 +81,14 @@ At the time this status was last checked, `master` was clean and synced with `or
 
 ## Verification Baseline
 
+- The first Decision Content Flywheel cycle passed:
+  - `npm run check:quick`
+  - `npm run ledger:pages:check`
+  - `npm run audit:coverage-quality:changed`
+  - `npm run audit:provenance:changed`
+  - `npm run audit:facts`
+  - `npm run check:links`
+  - `npm run check:smart:run -- --path <changed paths>` with `build:fast` completing in 2 minutes 13 seconds.
 - The 2026-06-21 build-time diagnosis passed:
   - `npm run ledger:pages:check`
   - `npm run build:fast`
@@ -93,6 +107,7 @@ At the time this status was last checked, `master` was clean and synced with `or
 
 ## Known Caveats
 
+- Public content touched during the first loop cycle uses `2026-06-20` as the verification date because the repo audit guards use the US/UTC project date. The local New Zealand shell clock showed `2026-06-21` during part of the work.
 - Full local builds currently take about 3.5 minutes on this machine. That is understandable for the current static site size, but too slow for normal edit loops. Prefer `npm run check:smart`, `npm run check:quick`, focused tests, and `npm run build:fast` unless a full pre-ship build is needed.
 - Large generated surfaces deserve future optimization: `/search/`, archive pages, `api/home-search.json`, public OG assets, and Pagefind output near the 10 MB budget.
 - `npm run check:ci` passed, but GitHub stats used stale cached fallback data because the GitHub API returned a 403 rate-limit response.

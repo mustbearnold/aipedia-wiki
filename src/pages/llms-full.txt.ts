@@ -3,6 +3,12 @@
 // comparisons, guides, answers, news, trends, workflows, reports, companies,
 // and dead-tool records. Intended for crawlers willing to ingest a larger
 // manifest without parsing the sitemap.
+// Refresh metadata: 2026-06-20 Canva vs Claude comparison loop after current
+// Canva AI 2.0, Canva Business, AI Pass, AI Product Terms, Canva Claude
+// connector, Claude pricing, Claude for Small Business, and Agent SDK credit
+// help checks; added comparison, refreshed Canva, Claude, AI Design, source
+// registry, ledger, and LLM maintenance around creative-production vs
+// reasoning-assistant fit and the paused Agent SDK credit split.
 // Refresh metadata: 2026-06-17 June 17 AI news catch-up after current Google
 // Pixel Drop, Gemini Omni, Microsoft Copilot Cowork, Work IQ billing, AP G7
 // AI sovereignty, official G7 statement, AP NVIDIA, and Coherent source checks;
@@ -117,12 +123,12 @@
 // Coding, homepage, news archive, RSS, and LLM surfaces.
 // Refresh metadata: 2026-06-15 Claude active-tool, Anthropic company, Claude
 // alternatives, and AI Chatbots parent refresh after Opus 4.8 fallback,
-// Fable/Mythos suspension, model-doc availability drift, active Agent SDK
-// credits, source registry, homepage, tools/categories/guides/companies
+// Fable/Mythos suspension, model-doc availability drift, Agent SDK billing
+// caveats, source registry, homepage, tools/categories/guides/companies
 // indexes, and LLM maintenance.
 // Refresh metadata: 2026-06-15 Claude Code active-tool, AI Coding parent, and
-// developer/Cursor/GitHub Copilot alternatives guide refresh after active
-// Agent SDK, claude -p, and GitHub Actions per-user credits, interactive
+// developer/Cursor/GitHub Copilot alternatives guide refresh after Agent SDK,
+// claude -p, and GitHub Actions billing caveats, interactive
 // subscription limits, API billing paths, Opus 4.8 fallback, Fable/Mythos
 // suspension, source registry, homepage, tools/categories/guides indexes, and
 // LLM maintenance.
@@ -439,6 +445,7 @@ export const GET: APIRoute = async () => {
   lines.push('');
   lines.push('> Extended LLM-friendly site manifest. Enumerates the major active editorial collections across tools, categories, comparisons, buyer guides, answers, news, trends, workflows, reports, companies, and dead-tool records. It does not claim to list every utility, API, prototype, or static policy page. See /llms.txt for the concise version.');
   lines.push('');
+  lines.push('Recent comparison refresh: June 20, 2026 added Canva vs Claude and refreshed Canva, Claude, AI Design, source registry, ledger, and LLM maintenance after current Canva AI 2.0, Canva Business, AI Pass, Canva AI Product Terms, Canva Claude connector, Claude pricing, Claude for Small Business, and Agent SDK credit help checks; buyer guidance now separates final creative production from upstream reasoning, critique, coding, connector workflows, and the paused Agent SDK credit split.');
   lines.push('Recent news refresh: June 17, 2026 filled the active June date gap with the June 17 AI News Desk plus Google Pixel/Gemini, Microsoft Copilot Cowork, G7 AI sovereignty, and NVIDIA AI infrastructure coverage, updating news archive, RSS, ledger, and LLM maintenance around phone-native Gemini creation, metered workplace agents, sovereign model-access risk, and compute-capacity procurement checks.');
   lines.push('Recent answer refresh: June 16, 2026 refreshed the best AI image generator answer plus answers index, homepage/explore comments, source registry cleanup, ledger, and LLM maintenance around ChatGPT with GPT Image 2 as the default, Midjourney for art direction, Ideogram for typography, Adobe Firefly for Adobe-governed creative, and Flux/Stable Diffusion/API-first routes for control-heavy workflows.');
   lines.push('Recent answer refresh: June 16, 2026 refreshed the Midjourney worth-it answer plus answers index, homepage/explore comments, source registry, ledger, and LLM maintenance around Standard-vs-Pro fit, V8.1 default status, V7 Omni Reference fallback, Stealth Mode, SD video Relax Mode, video GPU cost caveats, commercial-rights thresholds, no generally available public API, and alternatives for text-heavy, Adobe-governed, assistant-first, or local/API image workflows.');
@@ -455,8 +462,8 @@ export const GET: APIRoute = async () => {
   lines.push('Recent tool refresh: June 15, 2026 refreshed Grammarly plus AI Writing, source registry, homepage, tools index, categories index, and LLM maintenance around Pro pricing, Free/Pro prompt allowances, Superhuman Business suite fit, Trust Center privacy posture, Expert Review trust risk, Impact affiliate application link, and the public 90-day affiliate cookie without unapproved payout claims.');
   lines.push('Recent tool refresh: June 15, 2026 refreshed Microsoft Agent Framework plus AI Automation, source registry, homepage, tools index, categories index, and LLM maintenance around dotnet-1.10.0, python-1.8.1, recent breaking/experimental release notes, Work IQ June 16 GA timing, Copilot Credits billing, Microsoft Foundry/Agent 365 context, provider matrix updates, and non-Azure data/cost responsibility.');
   lines.push('Recent tool refresh: June 15, 2026 refreshed BLACKBOX AI plus AI Coding, source registry, homepage, tools index, categories index, and LLM maintenance around $10/$20/$40 plan prices, conflicting included-credit copy, Pro Plus as the practical app-builder/coding-agent tier, Pro Max team/admin controls, ZDR/security docs, Desktop Agent docs, Enterprise deployment docs, and the paused Cuelinks affiliate listing.');
-  lines.push('Recent tool refresh: June 15, 2026 refreshed Claude plus Anthropic, Claude alternatives, AI Chatbots, source registry, homepage, tools index, categories index, guides index, companies index, and LLM maintenance around Opus 4.8 as the stable buyable route, Fable/Mythos suspension, model-doc availability drift, active Agent SDK credits, ZDR scope, and platform-fee caveats.');
-  lines.push('Recent tool refresh: June 15, 2026 refreshed Claude Code plus AI Coding, developer guide, Cursor alternatives, GitHub Copilot alternatives, source registry, homepage, tools index, categories index, guides index, and LLM maintenance around active per-user Agent SDK credits for claude -p, GitHub Actions, and Agent SDK apps, interactive subscription limits, API paths, Opus 4.8 fallback, and Fable/Mythos suspension.');
+  lines.push('Recent tool refresh: June 15, 2026 refreshed Claude plus Anthropic, Claude alternatives, AI Chatbots, source registry, homepage, tools index, categories index, guides index, companies index, and LLM maintenance around Opus 4.8 as the stable buyable route, Fable/Mythos suspension, model-doc availability drift, Agent SDK billing caveats, ZDR scope, and platform-fee caveats.');
+  lines.push('Recent tool refresh: June 15, 2026 refreshed Claude Code plus AI Coding, developer guide, Cursor alternatives, GitHub Copilot alternatives, source registry, homepage, tools index, categories index, guides index, and LLM maintenance around Agent SDK, claude -p, GitHub Actions billing caveats, interactive subscription limits, API paths, Opus 4.8 fallback, and Fable/Mythos suspension.');
   lines.push('Recent tool refresh: June 15, 2026 refreshed Augment Code plus AI Coding, source registry, homepage, tools index, categories index, and LLM maintenance around Business $100/month flat pricing for up to 50 seats, $100 included usage, Cosmos, Auggie CLI, usage-balance billing, feature-availability caveats, Fable route risk, and retired Indie/Standard/Max public-plan framing.');
   lines.push('Recent tool refresh: June 15, 2026 refreshed Base44 plus AI Design, AI Coding source rows, vibe-coding, source registry, homepage, tools index, categories index, trends index, and LLM maintenance around the Free 100-vs-500 integration-credit source conflict, Builder domain/GitHub/backend/model gates, annual pricing, stale sale-block caveats, and public affiliate terms.');
   lines.push('Recent tool refresh: June 15, 2026 refreshed Canva plus AI Design, AI Image, source registry, homepage, tools index, categories index, and LLM maintenance around Canva AI 2.0, Business, AI Pass, pooled Standard/Premium/Ultra allowances, AI usage limits as operational controls, AI Product Terms, Canva Shield, region-rendered checkout caveats, and commercial-rights review.');

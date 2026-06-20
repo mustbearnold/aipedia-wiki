@@ -575,7 +575,8 @@
       "url": "https://aipedia.wiki/news/",
       "type": "newsroom",
       "trust_tier": "secondary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-20"
     },
     {
       "id": "aipedia-chatgpt-safety-checklist",
@@ -845,7 +846,16 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-16"
+      "last_checked": "2026-06-20"
+    },
+    {
+      "id": "anthropic-claude-for-small-business",
+      "label": "Anthropic Claude for Small Business",
+      "url": "https://www.anthropic.com/news/claude-for-small-business",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-20"
     },
     {
       "id": "anthropic-project-glasswing-expansion",
@@ -1735,7 +1745,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "canva-ai-2-newsroom",
@@ -1744,7 +1754,7 @@
       "type": "newsroom",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "canva-ai-pass",
@@ -1753,7 +1763,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "canva-business-newsroom",
@@ -1762,7 +1772,16 @@
       "type": "newsroom",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-20"
+    },
+    {
+      "id": "canva-claude-connector",
+      "label": "Canva Claude connector announcement",
+      "url": "https://www.canva.com/newsroom/news/claude-ai-connector/",
+      "type": "newsroom",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-20"
     },
     {
       "id": "canva-newsroom",
@@ -1780,7 +1799,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "canva-pro",
@@ -1789,7 +1808,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "canva-ai-product-terms",
@@ -1798,7 +1817,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "canva-shield",
@@ -1807,7 +1826,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "capacities-docs",
@@ -11682,7 +11701,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "cohere-transcribe",

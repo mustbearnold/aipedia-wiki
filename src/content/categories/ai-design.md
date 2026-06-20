@@ -5,10 +5,10 @@ title: AI Design & App Building
 description: Current AI design tools and app builders for social creative, product design, design systems, web prototypes, full-stack apps, and Vercel-native UI workflows.
 tool_count: 9
 seo_title: "Best AI Design & App Builder Tools (June 2026)"
-meta_description: "Updated June 18, 2026: compare Canva AI, Figma, Midjourney, Lovart, Uizard, Unbounce, AdCreative.ai, Adobe Firefly, Recraft V4, Google Stitch, Framer, Lovable, Rork, Base44, Bolt.new, and v0 by buyer fit, pricing, workflow, credits, rights review, and production risk."
+meta_description: "Updated June 20, 2026: compare Canva AI, Claude, Figma, Midjourney, Lovart, Uizard, Unbounce, AdCreative.ai, Adobe Firefly, Google Stitch, Framer, Lovable, Rork, Base44, Bolt.new, and v0 by buyer fit, pricing, workflow, credits, rights review, and production risk."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-18
-last_verified: 2026-06-18
+last_updated: 2026-06-20
+last_verified: 2026-06-20
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -26,7 +26,7 @@ top_picks:
 
 AI design is now two overlapping markets. The first is **visual creation and product design**: brand assets, social posts, presentations, UX mockups, design systems, and stakeholder review. The second is **AI app building**: prompts, screenshots, Figma context, and code turning into web apps, prototypes, deploys, or pull requests.
 
-As of June 15, 2026, start with the job:
+As of June 20, 2026, start with the job:
 
 **Use [Canva](/tools/canva/) when non-designers need finished creative fast.** Canva AI 2.0 is built across Canva's Visual Suite and supports conversational creation, editable layered layouts, on-brand generation, AI images, AI video, Magic Write, connectors, web research, Canva Code 2.0, and business controls. It is the safest first stop for marketers, creators, teachers, small businesses, and teams that need to publish polished content without a design department, but heavy users now need to inspect AI Pass, allowance burn, AI Product Terms, and commercial-rights review before buying.
 
@@ -35,6 +35,8 @@ As of June 15, 2026, start with the job:
 **Use [Figma](/tools/figma/) when design quality, design systems, multiplayer review, and handoff matter.** Figma's June 5 pricing check lists AI add-ons, daily/monthly AI credits by plan, Figma Make, Figma Sites, Dev Mode, MCP support, libraries, variables, governance, and enterprise seats. The June 5 model-selection check confirms Figma Make has multiple selectable non-default models, a default-model caveat, and credit-burn caveats. Pick Figma when the artifact has to survive design critique and developer handoff, not just look plausible in a generator.
 
 **Use [Claude Design](/tools/claude-design/) when a Claude team wants prompt-to-prototype work, decks, one-pagers, and Claude Code handoff in the same ecosystem.** The June 18 check keeps the launch backing-model caveat on Opus 4.7, but updates the buying math: Claude Design is available on Pro, Max, Team, and Enterprise, is metered independently from chat and Claude Code, has recurring weekly allowances, and can use purchasable usage credits. It is strongest when `/design-sync` can pull in an existing design system from Claude Code and weakest when teams need mature Figma-style multiplayer editing, audit logs, or design-ops governance.
+
+**Use the new [Canva vs Claude](/compare/canva-vs-claude/) comparison when the buyer is deciding between a finished creative workspace and a reasoning assistant.** The June 20 check separates the jobs cleanly: Claude is better for campaign briefs, copy, critique, long documents, code, and business workflow orchestration; Canva is better for final visual production, Brand Kits, templates, resizing, approvals, exports, and commercial creative review.
 
 **Use [Uizard](/tools/uizard/) when non-designers need editable UI mockups before a Figma handoff.** The June 10 check keeps Free at 3 AI generations/month with Autodesigner 1.5, Pro at $12/month billed annually with 500 generations and Autodesigner 2.0, Business at $39/month billed annually with 5,000 generations, and Enterprise custom. Treat React/CSS handoff as component-level developer reference, because Uizard's own export docs still say full-project HTML/JavaScript export is not available.
 
@@ -86,7 +88,7 @@ As of June 15, 2026, start with the job:
 
 ## Current Shortlist
 
-**Best for non-designers: Canva.** The reason is not just AI generation. Canva wins because it combines templates, brand controls, image/video/editor workflows, AI writing, social formats, education use cases, and a familiar editor. If the buyer is a marketer, creator, teacher, founder, or small business operator, Canva usually turns intent into a publishable asset faster than Figma or an app builder. The June 15 refresh adds two buying cautions: AI Pass is an allowance extender for Pro/Business, and Canva's AI Product Terms still make output uniqueness, licensed-content handling, AI usage limits, and commercial review the buyer's responsibility.
+**Best for non-designers: Canva.** The reason is not just AI generation. Canva wins because it combines templates, brand controls, image/video/editor workflows, AI writing, social formats, education use cases, and a familiar editor. If the buyer is a marketer, creator, teacher, founder, or small business operator, Canva usually turns intent into a publishable asset faster than Figma or an app builder. The June 20 source pass keeps two buying cautions in the foreground: AI Pass is an allowance extender for Pro/Business, and Canva's AI Product Terms still make output uniqueness, licensed-content handling, AI usage limits, and commercial review the buyer's responsibility.
 
 **Best pro design suite: Figma.** Figma is still the pro team default because design is social: designers, PMs, engineers, marketers, and stakeholders need comments, versions, libraries, variables, prototypes, Dev Mode, and governance. Figma Make and Sites make the category more competitive with app builders, but the strongest reason to buy Figma is still shared product design discipline.
 
@@ -172,6 +174,7 @@ Do not position Unbounce Starter as the default serious paid-campaign tier. Its 
 
 - [Lovable vs Bolt.new vs v0](/compare/lovable-vs-bolt-vs-v0/) should be rebuilt first because it is the highest-intent app-builder comparison in this category and still has stale pricing and scope language.
 - [ChatGPT vs Lovable](/compare/chatgpt-vs-lovable/) should stay current because founders often confuse the planning assistant with the app-builder workspace.
+- [Canva vs Claude](/compare/canva-vs-claude/) is the June 20 verified decision page for teams deciding between final creative production in Canva and upstream reasoning, writing, critique, coding, and connector workflows in Claude.
 - [Best Canva AI Alternatives](/guides/canva-ai-alternatives/) is the June 7 verified design money-page rotation entry for Canva switching intent: Figma for product design, Firefly for Adobe production, Midjourney for ideation, Freepik for creator assets, Recraft for vector/design-forward brand output, and Ideogram for text-heavy marketing graphics.
 - [Best AI for Logo Design](/guides/best-ai-for-logo-design/) is the June 6 verified logo concepting guide for Ideogram, Recraft, Midjourney, Adobe Firefly, Canva, and ChatGPT, with stronger vector cleanup, commercial-rights, small-size, and trademark-review warnings.
 - [Figma vs v0](/compare/figma-vs-v0/) is now refreshed around design-system workflow versus Vercel-native implementation, and should stay current because it captures high-intent design-to-code buyers.
@@ -191,13 +194,14 @@ Do not position Unbounce Starter as the default serious paid-campaign tier. Its 
 
 ## Sources
 
-- [Canva AI](https://www.canva.com/canva-ai/) (verified 2026-06-15)
-- [Canva Pro](https://www.canva.com/pro/) (verified 2026-06-15)
-- [Canva AI 2.0 announcement](https://www.canva.com/newsroom/news/canva-create-2026-ai/) (verified 2026-06-15)
-- [Canva Business announcement](https://www.canva.com/newsroom/news/introducing-canva-business/) (verified 2026-06-15)
-- [Canva AI Pass](https://www.canva.com/ai-pass/) (verified 2026-06-15)
-- [Canva AI Product Terms](https://www.canva.com/policies/ai-product-terms/) (verified 2026-06-15)
-- [Canva Shield](https://www.canva.com/safe-ai-canva-shield/) (verified 2026-06-15)
+- [Canva AI](https://www.canva.com/canva-ai/) (verified 2026-06-20)
+- [Canva Pro](https://www.canva.com/pro/) (verified 2026-06-20)
+- [Canva AI 2.0 announcement](https://www.canva.com/newsroom/news/canva-create-2026-ai/) (verified 2026-06-20)
+- [Canva Business announcement](https://www.canva.com/newsroom/news/introducing-canva-business/) (verified 2026-06-20)
+- [Canva AI Pass](https://www.canva.com/ai-pass/) (verified 2026-06-20)
+- [Canva AI Product Terms](https://www.canva.com/policies/ai-product-terms/) (verified 2026-06-20)
+- [Canva Claude connector announcement](https://www.canva.com/newsroom/news/claude-ai-connector/) (verified 2026-06-20)
+- [Canva Shield](https://www.canva.com/safe-ai-canva-shield/) (verified 2026-06-20)
 - [Canva AI social media post generator](https://www.canva.com/features/ai-social-media-post-generator/) (verified 2026-06-14)
 - [Napkin AI pricing](https://www.napkin.ai/pricing/) (verified 2026-06-12)
 - [AdCreative.ai official site](https://www.adcreative.ai/) (verified 2026-06-18)
@@ -206,7 +210,9 @@ Do not position Unbounce Starter as the default serious paid-campaign tier. Its 
 - [Jasper Brand Voice help](https://help.jasper.ai/hc/en-us/articles/27419540851995-Brand-Voice) (verified 2026-06-12)
 - [OpusClip pricing](https://www.opus.pro/pricing) (verified 2026-06-12)
 - [Anthropic Claude Design launch](https://www.anthropic.com/news/claude-design-anthropic-labs), [Claude Design usage and pricing](https://support.claude.com/en/articles/14667344-claude-design-subscription-usage-and-pricing), and [Claude Design get-started guide](https://support.claude.com/en/articles/14604416-get-started-with-claude-design) (verified 2026-06-18)
-- [Claude pricing](https://claude.com/pricing) (verified 2026-06-14)
+- [Claude pricing](https://claude.com/pricing) (verified 2026-06-20)
+- [Anthropic Claude for Small Business](https://www.anthropic.com/news/claude-for-small-business) (verified 2026-06-20)
+- [Anthropic Agent SDK credit help](https://support.claude.com/en/articles/15036540-use-the-claude-agent-sdk-with-your-claude-plan) (verified 2026-06-20)
 - [Figma pricing](https://www.figma.com/pricing/) (verified 2026-06-12)
 - [Figma AI credits](https://help.figma.com/hc/en-us/articles/33459875669015-How-AI-credits-work) (verified 2026-06-12)
 - [Figma Make model selection](https://help.figma.com/hc/en-us/articles/36400680326551-Select-an-AI-model-to-use-in-Figma-Make) (verified 2026-06-12)

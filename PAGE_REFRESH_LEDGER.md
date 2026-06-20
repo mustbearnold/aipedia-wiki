@@ -1,7 +1,7 @@
 # AiPedia Page Refresh Ledger
 
-Ledger updated through: 2026-06-20
-Tracked public pages and crawl surfaces: 781
+Ledger updated through: 2026-06-21
+Tracked public pages and crawl surfaces: 782
 
 Hard rule: every time a tracked website page is edited, refreshed, materially re-ranked, or has volatile facts re-verified, update that page row in this file on the same change. If a child page update affects a parent hub, archive, internal-link block, sitemap, or LLM surface, update those affected rows too.
 
@@ -612,24 +612,19 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-14 | /workflows/micro-saas-weekend-build/ | Workflow | Yes | frontmatter | src/content/workflows/micro-saas-weekend-build.md |
 | 2026-06-15 | /about/our-stack/ | Static page | Yes | git | src/pages/about/our-stack.astro |
 | 2026-06-15 | /companies/ | Static page | Yes | git | src/pages/companies/index.astro |
-| 2026-06-15 | /companies/anthropic/ | Company | Yes | frontmatter | src/content/companies/anthropic.md |
 | 2026-06-15 | /companies/openai/ | Company | Yes | frontmatter | src/content/companies/openai.md |
 | 2026-06-15 | /compare/hailuo-vs-kling/ | Comparison | Yes | frontmatter | src/content/comparisons/hailuo-vs-kling.md |
 | 2026-06-15 | /guides/best-ai-avatar-video-generator/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-avatar-video-generator.md |
 | 2026-06-15 | /guides/best-ai-for-code-review/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-code-review.md |
-| 2026-06-15 | /guides/best-ai-tools-for-developers/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-tools-for-developers.md |
 | 2026-06-15 | /guides/claude-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/claude-alternatives.md |
 | 2026-06-15 | /guides/cursor-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/cursor-alternatives.md |
-| 2026-06-15 | /guides/github-copilot-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/github-copilot-alternatives.md |
 | 2026-06-15 | /privacy/ | Static page | Yes | git | src/pages/privacy.astro |
 | 2026-06-15 | /tools/adobe-firefly/ | Tool | Yes | frontmatter | src/content/tools/adobe-firefly.md |
 | 2026-06-15 | /tools/augment-code/ | Tool | Yes | frontmatter | src/content/tools/augment-code.md |
 | 2026-06-15 | /tools/base44/ | Tool | Yes | frontmatter | src/content/tools/base44.md |
 | 2026-06-15 | /tools/blackbox-ai/ | Tool | Yes | frontmatter | src/content/tools/blackbox-ai.md |
-| 2026-06-15 | /tools/canva/ | Tool | Yes | frontmatter | src/content/tools/canva.md |
 | 2026-06-15 | /tools/captions/ | Tool | Yes | frontmatter | src/content/tools/captions.md |
 | 2026-06-15 | /tools/chatgpt/ | Tool | Yes | frontmatter | src/content/tools/chatgpt.md |
-| 2026-06-15 | /tools/claude-code/ | Tool | Yes | frontmatter | src/content/tools/claude-code.md |
 | 2026-06-15 | /tools/cline/ | Tool | Yes | frontmatter | src/content/tools/cline.md |
 | 2026-06-15 | /tools/coderabbit/ | Tool | Yes | frontmatter | src/content/tools/coderabbit.md |
 | 2026-06-15 | /tools/codex/ | Tool | Yes | frontmatter | src/content/tools/codex.md |
@@ -711,8 +706,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-17 | /news/ | Static page | Yes | page metadata | src/pages/news/index.astro |
 | 2026-06-18 | /categories/ai-automation/ | Category | Yes | frontmatter | src/content/categories/ai-automation.md |
 | 2026-06-18 | /categories/ai-chatbots/ | Category | Yes | frontmatter | src/content/categories/ai-chatbots.md |
-| 2026-06-18 | /categories/ai-coding/ | Category | Yes | frontmatter | src/content/categories/ai-coding.md |
-| 2026-06-18 | /categories/ai-design/ | Category | Yes | frontmatter | src/content/categories/ai-design.md |
 | 2026-06-18 | /categories/ai-image/ | Category | Yes | frontmatter | src/content/categories/ai-image.md |
 | 2026-06-18 | /categories/ai-infrastructure/ | Category | Yes | frontmatter | src/content/categories/ai-infrastructure.md |
 | 2026-06-18 | /categories/ai-music/ | Category | Yes | frontmatter | src/content/categories/ai-music.md |
@@ -760,7 +753,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-18 | /tools/character-ai/ | Tool | Yes | frontmatter | src/content/tools/character-ai.md |
 | 2026-06-18 | /tools/chatpdf/ | Tool | Yes | frontmatter | src/content/tools/chatpdf.md |
 | 2026-06-18 | /tools/claude-design/ | Tool | Yes | frontmatter | src/content/tools/claude-design.md |
-| 2026-06-18 | /tools/claude/ | Tool | Yes | frontmatter | src/content/tools/claude.md |
 | 2026-06-18 | /tools/clay/ | Tool | Yes | frontmatter | src/content/tools/clay.md |
 | 2026-06-18 | /tools/clickup/ | Tool | Yes | frontmatter | src/content/tools/clickup.md |
 | 2026-06-18 | /tools/clipdrop/ | Tool | Yes | frontmatter | src/content/tools/clipdrop.md |
@@ -778,9 +770,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-20 | /demo-godtier/ | Static page | Yes | git | src/pages/demo-godtier.astro |
 | 2026-06-20 | /explore/ | Static page | Yes | git | src/pages/explore/index.astro |
 | 2026-06-20 | /glossary/ | Static page | Yes | git | src/pages/glossary/index.astro |
-| 2026-06-20 | /guides/ | Static page | Yes | git | src/pages/guides/index.astro |
-| 2026-06-20 | /llms-full.txt | Crawl surface | No | git | src/pages/llms-full.txt.ts |
-| 2026-06-20 | /llms.txt | Crawl surface | No | git | src/pages/llms.txt.ts |
 | 2026-06-20 | /media-kit/ | Static page | Yes | git | src/pages/media-kit.astro |
 | 2026-06-20 | /search/ | Static page | No | git | src/pages/search.astro |
 | 2026-06-20 | /sitemap-index.xml | Crawl surface | No | git | astro.config.mjs |
@@ -792,3 +781,15 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-20 | /tools/semrush/ | Tool | Yes | frontmatter | src/content/tools/semrush.md |
 | 2026-06-20 | /trends/ | Static page | Yes | git | src/pages/trends/index.astro |
 | 2026-06-20 | /workflows/ | Static page | Yes | git | src/pages/workflows/index.astro |
+| 2026-06-21 | /categories/ai-coding/ | Category | Yes | working tree | src/content/categories/ai-coding.md |
+| 2026-06-21 | /categories/ai-design/ | Category | Yes | working tree | src/content/categories/ai-design.md |
+| 2026-06-21 | /companies/anthropic/ | Company | Yes | working tree | src/content/companies/anthropic.md |
+| 2026-06-21 | /compare/canva-vs-claude/ | Comparison | Yes | working tree | src/content/comparisons/canva-vs-claude.md |
+| 2026-06-21 | /guides/ | Static page | Yes | working tree | src/pages/guides/index.astro |
+| 2026-06-21 | /guides/best-ai-tools-for-developers/ | Guide | Yes | working tree | src/content/use-cases/best-ai-tools-for-developers.md |
+| 2026-06-21 | /guides/github-copilot-alternatives/ | Guide | Yes | working tree | src/content/use-cases/github-copilot-alternatives.md |
+| 2026-06-21 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
+| 2026-06-21 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
+| 2026-06-21 | /tools/canva/ | Tool | Yes | working tree | src/content/tools/canva.md |
+| 2026-06-21 | /tools/claude-code/ | Tool | Yes | working tree | src/content/tools/claude-code.md |
+| 2026-06-21 | /tools/claude/ | Tool | Yes | working tree | src/content/tools/claude.md |
