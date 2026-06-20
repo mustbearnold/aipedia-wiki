@@ -68,6 +68,9 @@ If `.worktrees/` contains empty or unregistered directories after generated cove
 - Run `npm run check:smart` to see the recommended checks for the current diff.
 - Run `npm run check:smart:run` to execute that recommendation.
 - Run `npm run loop:next` to start the repeatable cluster loop for monetizable decision content.
+- Run `npm run loop:verify -- --date <YYYY-MM-DD> --route /compare/<slug>/ --path <changed paths>` to execute date-stable verification for a rendered decision-content cycle.
+- Run `npm run qa:route -- --route /compare/<slug>/` to verify a built route across mobile, tablet, and desktop widths.
+- Run `npm run loop:record -- --date <YYYY-MM-DD> --slug <slug> --status complete` to write a durable cycle receipt under `.agent/loop-runs/`.
 - Run `npm run check:quick` when tooling or repo-maintenance work needs the established no-build gate.
 - Run `npm run audit:generated-models` with `npm run test:scripts` when generated model/search seams or their audit script change.
 - Run `npm run build:fast` when layouts, runtime routes, metadata, schemas, or rendered output changed.

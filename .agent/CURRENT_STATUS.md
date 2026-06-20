@@ -1,6 +1,6 @@
 # AiPedia Current Status
 
-Last updated: 2026-06-20
+Last updated: 2026-06-21
 
 Audience: maintainers, future agents, and Matt.
 
@@ -17,12 +17,18 @@ Local ignored docs, old specs, and archived plans are not canonical when they co
 
 ## Plain English
 
-The June 2026 standards remediation is done and pushed to `origin/master`. The first two Decision Content Flywheel content cycles, `canva-vs-claude` and `claude-vs-replit-agent`, are complete. Do not restart either from the original specs. Use this file to see what was completed, what remains active, and which docs to trust first.
+The June 2026 standards remediation is done and pushed to `origin/master`. The first two Decision Content Flywheel content cycles, `canva-vs-claude` and `claude-vs-replit-agent`, are complete. The loop has now been hardened with executable verification, route QA, changed-route smart guidance, and durable run receipts. Do not restart completed cycles from the original specs. Use this file to see what was completed, what remains active, and which docs to trust first.
 
 At the time this status was last checked, `master` was clean and synced with `origin/master`. Run `git status --short --branch` and `git log --oneline -5` for the exact current head.
 
 ## Done Recently
 
+- Decision Content Flywheel hardening is implemented.
+  - Added `npm run loop:verify` to run the cycle checks with one explicit `AIPEDIA_LEDGER_DATE`, preventing local timezone drift from breaking ledger, guard, or build checks.
+  - Added `npm run qa:route` for reusable Playwright route QA at mobile, tablet, and desktop widths.
+  - Added `npm run loop:record` and `.agent/loop-runs/` receipts so completed or attempted cycles leave one durable artifact.
+  - `npm run check:smart` now surfaces route-specific QA targets for changed tool, category, and comparison content.
+  - `npm run audit:coverage-quality:changed` now rejects raw Markdown tables in changed comparison pages so mobile-hostile tables are caught before browser QA.
 - Second Decision Content Flywheel cycle is complete.
   - Completed cycle: `claude-vs-replit-agent`.
   - Added `src/content/comparisons/claude-vs-replit-agent.md`.
@@ -39,6 +45,9 @@ At the time this status was last checked, `master` was clean and synced with `or
 - Decision content loop is implemented.
   - Spec: `docs/superpowers/specs/2026-06-21-aipedia-decision-content-loop.md`
   - Command: `npm run loop:next`
+  - Verification command: `npm run loop:verify -- --date <YYYY-MM-DD> --route /compare/<slug>/ --path <changed paths>`
+  - Route QA command: `npm run qa:route -- --route /compare/<slug>/`
+  - Recording command: `npm run loop:record -- --date <YYYY-MM-DD> --slug <slug> --status complete`
   - Purpose: choose one buyer-intent cluster, verify current facts, improve the decision page, update parent surfaces, run the right checks, record, repeat.
   - Next cycle: `cursor-vs-deepseek` unless the coverage backlog changes or the page already exists.
   - The loop brief now requires related-surface discovery, source registry inspection, stale-backlog warnings, and rendered route QA at 360, 390, 430, 768, 1024, and 1366 px.
@@ -75,6 +84,8 @@ At the time this status was last checked, `master` was clean and synced with `or
 
 - Decision Content Flywheel is active.
   - Use `npm run loop:next` at the start of monetizable content work.
+  - Use `npm run loop:verify -- --date <YYYY-MM-DD> --route /compare/<slug>/ --path <changed paths>` before closing a rendered comparison cycle.
+  - Use `npm run loop:record` to write `.agent/loop-runs/YYYY-MM-DD-slug.md` after a completed, failed, partial, or blocked major cycle.
   - Do not write comparison, pricing, model, plan, affiliate, or commercial claims until current sources have been verified.
   - For rendered comparison cycles, record route QA at 360, 390, 430, 768, 1024, and 1366 px, covering mobile/tablet and desktop.
   - Current recommended next cycle is `cursor-vs-deepseek`.
@@ -90,6 +101,11 @@ At the time this status was last checked, `master` was clean and synced with `or
 
 ## Verification Baseline
 
+- Decision loop hardening passed:
+  - `node --test tests/scripts/decision-loop.test.mjs tests/scripts/check-smart.test.mjs tests/scripts/audit-coverage-quality.test.mjs tests/scripts/loop-hardening.test.mjs`
+  - `node scripts/qa-route.mjs --route /compare/claude-vs-replit-agent/ --widths 360 --site-dir dist-fast/client`
+  - `npm run guard:challenge:check`
+  - `npm run check:quick`
 - The second Decision Content Flywheel cycle passed:
   - `npm run test:scripts`
   - `$env:AIPEDIA_LEDGER_DATE='2026-06-20'; npm run ledger:pages`
@@ -130,7 +146,7 @@ At the time this status was last checked, `master` was clean and synced with `or
 
 ## Known Caveats
 
-- Public content touched during the first loop cycle uses `2026-06-20` as the verification date because the repo audit guards use the US/UTC project date. The local New Zealand shell clock showed `2026-06-21` during part of the work.
+- Public content touched during the first two loop cycles uses `2026-06-20` as the verification date because the repo audit guards use the US/UTC project date. The local New Zealand shell clock showed `2026-06-21` during part of the work. New loop cycles should pass the intended project date explicitly to `npm run loop:verify -- --date <YYYY-MM-DD>`.
 - Full local builds currently take about 3.5 minutes on this machine. That is understandable for the current static site size, but too slow for normal edit loops. Prefer `npm run check:smart`, `npm run check:quick`, focused tests, and `npm run build:fast` unless a full pre-ship build is needed.
 - Large generated surfaces deserve future optimization: `/search/`, archive pages, `api/home-search.json`, public OG assets, and Pagefind output near the 10 MB budget.
 - `npm run check:ci` passed, but GitHub stats used stale cached fallback data because the GitHub API returned a 403 rate-limit response.

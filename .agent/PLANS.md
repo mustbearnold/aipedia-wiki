@@ -6,13 +6,16 @@ For the plain-English project state, read `.agent/CURRENT_STATUS.md` first. For 
 
 ## Current Snapshot
 
-- Last updated: 2026-06-20.
+- Last updated: 2026-06-21.
 - `master` should be checked with `git status --short --branch` before starting work.
 - The June 2026 standards remediation, Guard Challenge Workflow, Project Folder Tidy, Verification Router, and June 17 news catch-up are complete.
 - Continuity recording is now centralized in `.agent/CURRENT_STATUS.md`, `.agent/PLANS.md`, and `.agent/WORK_LOG.md`.
 - Vercel CLI is installed globally as `vercel@54.14.2`; upstream dependency warnings are tracked in `.agent/WORK_LOG.md`.
 - Current build timing baseline from 2026-06-21: `npm run build:fast` passed in 191.31 seconds and `npm run build` passed in 214.37 seconds. Main drivers are static route fan-out, Pagefind, and large generated/search surfaces.
 - The decision content flywheel is now the default repeatable loop. Use `npm run loop:next` to pick the next buyer-intent cluster.
+- The loop verifier is now executable. Use `npm run loop:verify -- --date <YYYY-MM-DD> --route /compare/<slug>/ --path <changed paths>` for rendered comparison cycles.
+- Route QA is now reusable through `npm run qa:route -- --route /compare/<slug>/`.
+- Major loop cycles should write `.agent/loop-runs/` receipts with `npm run loop:record`.
 - The first two decision content loop cycles, `canva-vs-claude` and `claude-vs-replit-agent`, are complete. `npm run loop:next -- --json` now selects `cursor-vs-deepseek`.
 - Loop briefs now require related-surface discovery, source registry inspection, stale-backlog warnings, and rendered route QA at 360, 390, 430, 768, 1024, and 1366 px.
 - The main active ongoing lane is the oldest-first AI tools wiki refresh.
@@ -40,7 +43,7 @@ Run AiPedia as a repeatable buyer-decision loop: cluster, verify, improve decisi
 - 2026-06-20: First selected cluster, `canva-vs-claude`, is complete.
 - 2026-06-20: Second selected cluster, `claude-vs-replit-agent`, is complete.
 - 2026-06-20: Next selected cluster is `cursor-vs-deepseek` unless a newer backlog changes the order or the comparison already exists.
-- 2026-06-20: Loop hardening requires mobile, tablet, and desktop route QA for rendered comparison cycles.
+- 2026-06-21: Loop hardening added `loop:verify`, `qa:route`, `loop:record`, changed-route smart guidance, and raw Markdown table rejection for changed comparison pages.
 
 ## Recommended Next: Cursor Vs DeepSeek Comparison Sprint
 
@@ -63,15 +66,18 @@ Create a high-intent, source-backed comparison page for `cursor-vs-deepseek` whi
 
 ### Verification
 
-- `npm run ledger:pages`
-- `npm run ledger:pages:check`
+- `npm run loop:verify -- --date <YYYY-MM-DD> --route /compare/cursor-vs-deepseek/ --path <changed paths>`
+- `npm run loop:record -- --date <YYYY-MM-DD> --slug cursor-vs-deepseek --status complete`
+- Focused retry commands, if needed:
+- `npm run ledger:pages -- --date <YYYY-MM-DD>`
+- `npm run ledger:pages:check -- --date <YYYY-MM-DD>`
 - `npm run audit:coverage-quality:changed`
 - `npm run audit:tool-quality`
 - `npm run audit:facts`
 - `npm run audit:provenance:changed`
 - `npm run check:smart:run -- --path <changed paths>`
-- `npm run build:fast` if rendered output or pre-ship confidence requires it.
-- Browser or Playwright route QA for `/compare/cursor-vs-deepseek/` at 360, 390, 430, 768, 1024, and 1366 px.
+- `npm run build:fast` if rendered output or pre-ship confidence requires it and `loop:verify` did not already run it.
+- `npm run qa:route -- --route /compare/cursor-vs-deepseek/ --widths 360,390,430,768,1024,1366` for route-QA retry.
 
 ## Active: Oldest-First AI Tools Wiki Refresh
 

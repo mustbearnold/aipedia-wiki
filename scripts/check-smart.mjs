@@ -184,7 +184,30 @@ function surfaceSummariesForSurfaces(surfaces) {
     .sort((a, b) => a.id.localeCompare(b.id));
 }
 
-function smokeRoutesForSurfaces(surfaces) {
+function routeQaRoutesForPaths(paths) {
+  const routes = [];
+  for (const path of paths.map(normalizePath)) {
+    let match = path.match(/^src\/content\/comparisons\/([^/]+)\.md$/);
+    if (match) {
+      routes.push({ route: `/compare/${match[1]}/`, command: 'npm run qa:route', focus: 'changed comparison route' });
+      continue;
+    }
+
+    match = path.match(/^src\/content\/tools\/([^/]+)\.md$/);
+    if (match) {
+      routes.push({ route: `/tools/${match[1]}/`, command: 'npm run qa:route', focus: 'changed tool route' });
+      continue;
+    }
+
+    match = path.match(/^src\/content\/categories\/([^/]+)\.md$/);
+    if (match) {
+      routes.push({ route: `/categories/${match[1]}/`, command: 'npm run qa:route', focus: 'changed category route' });
+    }
+  }
+  return routes;
+}
+
+function smokeRoutesForSurfaces(surfaces, paths = []) {
   const routes = new Map();
 
   for (const surface of surfaces) {
@@ -192,6 +215,10 @@ function smokeRoutesForSurfaces(surfaces) {
       const key = `${route.command || ''}\0${route.route || ''}\0${route.focus || ''}`;
       if (!routes.has(key)) routes.set(key, route);
     }
+  }
+  for (const route of routeQaRoutesForPaths(paths)) {
+    const key = `${route.command || ''}\0${route.route || ''}\0${route.focus || ''}`;
+    if (!routes.has(key)) routes.set(key, route);
   }
 
   return [...routes.values()].sort((a, b) => {
@@ -231,7 +258,7 @@ export function planForPaths(paths) {
     categories,
     checks,
     guidance,
-    smoke_routes: smokeRoutesForSurfaces(surfaces),
+    smoke_routes: smokeRoutesForSurfaces(surfaces, paths),
     commands: paths.length ? commandsForSelection(categories, checks) : [],
     note: paths.length
       ? 'Run with --run to execute these commands in order.'

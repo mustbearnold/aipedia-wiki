@@ -215,14 +215,16 @@ test('check-smart routes Phase 3 model, category, motion, and token surfaces', (
   assert.ok(categoryPlan.checks.includes('decision-pick'));
   assert.ok(categoryPlan.commands.includes('npm run test:scripts'));
   assert.ok(categoryPlan.smoke_routes.some((route) => route.route === '/categories/ai-coding/'));
+  assert.ok(categoryPlan.smoke_routes.some((route) => route.route === '/categories/ai-coding/' && route.command === 'npm run qa:route'));
 
-  const comparePlan = planForPaths(['src/layouts/ComparisonLayout.astro']);
+  const comparePlan = planForPaths(['src/content/comparisons/cursor-vs-deepseek.md']);
   assert.ok(comparePlan.surfaces.some((surface) => surface.id === 'phase3-compare-decision-surfaces'));
   assert.ok(comparePlan.checks.includes('decision-pick'));
   assert.ok(comparePlan.checks.includes('tool-page-model'));
   assert.ok(comparePlan.checks.includes('generated-models'));
   assert.ok(comparePlan.commands.includes('npm run audit:generated-models'));
   assert.ok(comparePlan.smoke_routes.some((route) => route.route === '/compare/chatgpt-vs-claude/'));
+  assert.ok(comparePlan.smoke_routes.some((route) => route.route === '/compare/cursor-vs-deepseek/' && route.command === 'npm run qa:route'));
 
   const motionPlan = planForPaths(['src/lib/motion-controller.ts']);
   assert.ok(motionPlan.surfaces.some((surface) => surface.id === 'phase3-motion-controller'));

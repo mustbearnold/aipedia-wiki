@@ -118,6 +118,31 @@ test('coverage quality changed-file mode checks only supplied comparison files',
   }
 });
 
+test('coverage quality rejects raw Markdown tables on changed comparison pages', () => {
+  const dir = writeFixtureProject();
+  writeComparison(
+    dir,
+    'foo-vs-bar',
+    `${validComparisonBody()}
+
+| Buyer question | Better pick |
+|---|---|
+| Mobile page | Foo |
+`,
+  );
+
+  try {
+    const result = runCoverageQuality(dir, ['--json', '--changed-file', 'src/content/comparisons/foo-vs-bar.md']);
+
+    assert.equal(result.status, 1);
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.mode, 'changed');
+    assert.ok(report.failures.some((failure) => /raw Markdown table/.test(failure)));
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
 test('coverage quality all mode still reports full comparison debt', () => {
   const dir = writeFixtureProject();
   writeComparison(dir, 'foo-vs-bar');

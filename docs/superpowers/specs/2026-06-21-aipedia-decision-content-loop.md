@@ -31,6 +31,7 @@ The loop should make the next useful task obvious, starting with the highest-val
 - Do not require full builds for routine content or docs changes.
 - Do not create a separate planning system outside `.agent/`.
 - Do not replace current ledger, source, audit, and guard rules.
+- Do not treat loop-run records as plans. They are receipts for completed or attempted cycles.
 
 ## Operating Loop
 
@@ -77,10 +78,16 @@ Search related surfaces before closing the cycle. At minimum, sweep `src/content
 
 ### 5. Check
 
-Use the smallest verification set that matches the change. For a comparison decision cluster, the default check set is:
+Use the smallest verification set that matches the change. For a comparison decision cluster, the preferred command is:
 
-- `npm run ledger:pages`
-- `npm run ledger:pages:check`
+- `npm run loop:verify -- --date <YYYY-MM-DD> --route /compare/<slug>/ --path <changed paths>`
+
+The wrapper sets `AIPEDIA_LEDGER_DATE` for every child command, regenerates and checks the page refresh ledger with the same date, runs changed comparison quality, provenance, fact, link, and smart checks, runs `build:fast` when the smart plan did not already select it, and calls route QA when a route is supplied.
+
+The underlying commands remain valid when a focused retry is needed:
+
+- `npm run ledger:pages -- --date <YYYY-MM-DD>`
+- `npm run ledger:pages:check -- --date <YYYY-MM-DD>`
 - `npm run audit:coverage-quality:changed`
 - `npm run audit:provenance:changed`
 - `npm run audit:facts`
@@ -88,9 +95,9 @@ Use the smallest verification set that matches the change. For a comparison deci
 - `npm run check:smart`
 - `npm run check:smart:run -- --path <changed paths>`
 
-Use `npm run build:fast` when rendered output, runtime surfaces, metadata, schema, or pre-ship confidence require it. Reserve full `npm run build` for final production confidence, broad template changes, runtime changes, deployment changes, or explicit pre-ship checks.
+Use `npm run build:fast` when rendered output, runtime surfaces, metadata, schema, or pre-ship confidence require it and the loop verifier did not already run it. Reserve full `npm run build` for final production confidence, broad template changes, runtime changes, deployment changes, or explicit pre-ship checks.
 
-For any new or refreshed rendered comparison page, run browser or Playwright route QA at `360`, `390`, `430`, `768`, `1024`, and `1366` px. Record the result. The pass must cover mobile/tablet first-screen decision content plus desktop layout quality, including no horizontal overflow, overlap, stretched cards, broken CTAs, or missing primary content.
+For any new or refreshed rendered comparison page, run `npm run qa:route -- --route /compare/<slug>/ --widths 360,390,430,768,1024,1366` or let `loop:verify` run it. Record the result. The pass must cover mobile/tablet first-screen decision content plus desktop layout quality, including no horizontal overflow, overlap, stretched cards, broken CTAs, or missing primary content.
 
 ### 6. Record
 
@@ -99,6 +106,7 @@ Before final report on a major loop cycle:
 - Update `.agent/CURRENT_STATUS.md`.
 - Update `.agent/PLANS.md`.
 - Append `.agent/WORK_LOG.md`.
+- Run `npm run loop:record -- --date <YYYY-MM-DD> --slug <slug> --status complete --route /compare/<slug>/` with changed files, checks, risks, and next action when the cycle is major.
 - Update the governing spec only when the loop itself changes.
 
 The record should say what landed, what passed, what failed, what remains, which route QA widths passed, and the next recommended cluster.
@@ -115,6 +123,12 @@ Expected modes:
 - `--json` output for future automation.
 - `--count <n>` for batch planning.
 - `--slug <slug>` for a specific comparison cluster.
+
+Additional loop commands:
+
+- `npm run loop:verify`: executable, date-stable verification for a cycle.
+- `npm run qa:route`: reusable route QA across mobile, tablet, and desktop widths.
+- `npm run loop:record`: durable run receipt under `.agent/loop-runs/`.
 
 ## First Cycle
 
@@ -137,6 +151,9 @@ Do not write the comparison until current-month Canva and Claude facts are verif
 
 - `npm run loop:next` prints the next cluster and its working brief.
 - `npm run loop:next -- --json` emits structured data suitable for future agents.
+- `npm run loop:verify -- --dry-run --date <YYYY-MM-DD> --route /compare/<slug>/ --path <changed paths>` shows the exact verification plan.
+- `npm run qa:route -- --route /compare/<slug>/` verifies built output across the default mobile, tablet, and desktop widths.
+- `npm run loop:record` writes a durable `.agent/loop-runs/` receipt.
 - Existing comparison pairs are skipped.
 - Invalid arguments fail before reading repo state.
 - Missing backlog files fail with a recovery action.

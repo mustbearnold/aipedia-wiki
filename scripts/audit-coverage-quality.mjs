@@ -186,6 +186,18 @@ function daysAgo(value, now) {
   const today = new Date(`${now.toISOString().slice(0, 10)}T00:00:00Z`);
   return Math.round((today.getTime() - d.getTime()) / 86_400_000);
 }
+function markdownTableLines(body) {
+  const lines = body.split(/\r?\n/);
+  const tableLines = [];
+  for (let index = 0; index < lines.length - 1; index += 1) {
+    const header = lines[index].trim();
+    const separator = lines[index + 1].trim();
+    if (!/^\|.+\|$/.test(header)) continue;
+    if (!/^\|?\s*:?-{3,}:?\s*(?:\|\s*:?-{3,}:?\s*)+\|?$/.test(separator)) continue;
+    tableLines.push(index + 1);
+  }
+  return tableLines;
+}
 
 const activeToolSlugs = new Set();
 if (existsSync(TOOLS_DIR)) {
@@ -328,6 +340,11 @@ function checkFile(path) {
   const sourcesBlock = body.split(/^##\s+Sources\b.*$/m)[1] ?? '';
   const sourceLinks = (sourcesBlock.match(/\]\(https?:\/\//g) || []).length + (sourcesBlock.match(/\]\(\/tools\//g) || []).length;
   if (sourceLinks < MIN_SOURCES) failures.push(`${rel}: Sources section has ${sourceLinks} links (min ${MIN_SOURCES})`);
+
+  const tableLines = markdownTableLines(body);
+  for (const line of tableLines) {
+    failures.push(`${rel}: line ${line} uses a raw Markdown table; use stacked decision bullets or a responsive comparison component for mobile-first layout`);
+  }
 
   // Substance.
   const wordCount = body.replace(/[#>*|`\-]/g, ' ').split(/\s+/).filter(Boolean).length;

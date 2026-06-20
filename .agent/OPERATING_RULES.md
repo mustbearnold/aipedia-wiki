@@ -56,8 +56,8 @@ Use this loop as the default for monetizable AiPedia content work:
 2. Verify current volatile facts from live sources before editing.
 3. Create or refresh the decision page.
 4. Update affected tool pages, parent hubs, top-layer pages, sitemap or LLM surfaces, internal links, and `PAGE_REFRESH_LEDGER.md`.
-5. Run the smallest valid verification set for the changed surfaces.
-6. Record the result in `.agent/CURRENT_STATUS.md`, `.agent/PLANS.md`, and `.agent/WORK_LOG.md` when the cycle is major or future sessions need continuity.
+5. Run the smallest valid verification set for the changed surfaces. For rendered comparison cycles, prefer `npm run loop:verify -- --date <YYYY-MM-DD> --route /compare/<slug>/ --path <changed paths>` so ledger, guard, build, and route-QA checks share one explicit project date.
+6. Record the result in `.agent/CURRENT_STATUS.md`, `.agent/PLANS.md`, `.agent/WORK_LOG.md`, and `.agent/loop-runs/` when the cycle is major or future sessions need continuity. Use `npm run loop:record` for the run receipt.
 
 The loop exists to avoid random isolated refreshes. Prefer clusters that improve a real decision path, such as a comparison plus its tool pages and parent category, over single-page maintenance with no buyer outcome.
 
@@ -82,7 +82,7 @@ Before finishing:
 
 1. Match verification scope to the changed surface. For tooling, tests, command docs, or other non-rendered repo maintenance, prefer `npm run check:quick`, focused tests, and scoped diff checks. Do not run a full build unless rendered output, runtime behavior, deployment config, or pre-ship confidence is affected.
 2. For page, content, template, runtime, SEO, schema, affiliate, or deployment changes, run lint, typecheck, tests, build, and any relevant page or audit scripts.
-3. Check mobile and tablet widths of 360, 390, 430, and 768, plus desktop widths of 1024 and 1366, when rendered pages or UI components are affected.
+3. Check mobile and tablet widths of 360, 390, 430, and 768, plus desktop widths of 1024 and 1366, when rendered pages or UI components are affected. Use `npm run qa:route -- --route <route>` for built route checks when possible.
 4. Check for horizontal overflow, layout shift, broken CTAs, broken internal links, and missing metadata when rendered pages or UI components are affected.
 5. Verify schema, canonical URL, title, description, indexability, and affiliate disclosure where relevant.
 6. Verify affected top-layer pages and parent hubs are current, internally linked, and aligned with the edited sub-pages.

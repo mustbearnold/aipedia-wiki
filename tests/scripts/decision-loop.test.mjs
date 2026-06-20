@@ -106,7 +106,9 @@ test('decision loop emits the next cluster as JSON', () => {
     assert.deepEqual(cluster.route_qa.widths, [360, 390, 430, 768, 1024, 1366]);
     assert.ok(cluster.route_qa.checks.some((check) => /desktop 1024 and 1366/.test(check)));
     assert.ok(cluster.verification_commands.includes('npm run audit:coverage-quality:changed'));
-    assert.ok(cluster.verification_commands.some((command) => /360, 390, 430, 768, 1024, 1366/.test(command)));
+    assert.ok(cluster.verification_commands.some((command) => /npm run loop:verify/.test(command)));
+    assert.ok(cluster.verification_commands.some((command) => /npm run qa:route/.test(command) && /360,390,430,768,1024,1366/.test(command)));
+    assert.ok(cluster.verification_commands.some((command) => /npm run loop:record/.test(command)));
     assert.ok(cluster.done_definition.some((item) => /Desktop 1024 and 1366/.test(item)));
     assert.equal(cluster.loop_steps[0].name, 'Pick cluster');
   } finally {

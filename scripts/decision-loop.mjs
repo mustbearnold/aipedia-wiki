@@ -256,7 +256,7 @@ function clusterBrief(item, rank) {
       {
         order: 6,
         name: 'Record',
-        exit_criteria: '.agent status, active plans, and work log say what landed, what passed, and what remains.',
+        exit_criteria: '.agent status, active plans, work log, and a loop-run receipt say what landed, what passed, and what remains.',
       },
     ],
     source_requirements: [
@@ -266,8 +266,10 @@ function clusterBrief(item, rank) {
       'Defer or qualify any volatile claim that cannot be verified.',
     ],
     verification_commands: [
-      'npm run ledger:pages',
-      'npm run ledger:pages:check',
+      `npm run loop:verify -- --date <YYYY-MM-DD> --route ${comparisonRoute} --path <changed paths>`,
+      `npm run qa:route -- --route ${comparisonRoute} --widths ${ROUTE_QA_WIDTHS.join(',')}`,
+      'npm run ledger:pages -- --date <YYYY-MM-DD>',
+      'npm run ledger:pages:check -- --date <YYYY-MM-DD>',
       'npm run audit:coverage-quality:changed',
       'npm run audit:provenance:changed',
       'npm run audit:facts',
@@ -275,7 +277,7 @@ function clusterBrief(item, rank) {
       'npm run check:smart',
       'npm run check:smart:run -- --path <changed paths>',
       'npm run build:fast when rendered output, runtime surfaces, metadata, schema, or pre-ship confidence require it',
-      `Browser or Playwright route QA for ${comparisonRoute} at ${ROUTE_QA_WIDTHS.join(', ')} px`,
+      `npm run loop:record -- --date <YYYY-MM-DD> --slug ${item.slug} --route ${comparisonRoute} --status complete`,
     ],
     done_definition: [
       'No placeholder copy, fake source, stale pricing, unsupported claim, or untracked commercial CTA ships.',
