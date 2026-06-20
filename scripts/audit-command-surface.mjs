@@ -15,12 +15,15 @@ const README_PATH = join(PROJECT_DIR, 'README.md');
 const DOC_PATHS = ['AGENTS.md', 'README.md'].map((path) => join(PROJECT_DIR, path));
 const WORKFLOW_DIR = join(PROJECT_DIR, '.github', 'workflows');
 const REQUIRED_OPERATOR_NPM_SCRIPTS = [
+  'audit:coverage-quality:changed',
+  'audit:provenance:changed',
   'build',
   'build:fast',
   'check',
   'check:assets',
   'check:assets:quick',
   'check:ci',
+  'check:dist',
   'check:hosting',
   'check:links',
   'check:news',
@@ -32,7 +35,9 @@ const REQUIRED_OPERATOR_NPM_SCRIPTS = [
   'deploy',
   'guard:challenge',
   'guard:challenge:check',
+  'lint',
   'ship:check',
+  'typecheck',
   'vercel:env:pull',
 ];
 const REQUIRED_DOCUMENTED_NPM_SCRIPTS = ['check:quick', 'check', 'build', 'deploy', 'editorial:weekly', 'ledger:pages'];
@@ -47,8 +52,18 @@ const REQUIRED_README_TEXT_INVARIANTS = [
   { code: 'readme-build-not-routine', pattern: /`npm run build`:[^\n]*Do not use it as routine verification/i, detail: 'README must say build is not routine verification for content/script-only changes' },
   { code: 'readme-deploy-vercel-production', pattern: /`npm run deploy`:[^\n]*Vercel production deploy/i, detail: 'README must describe deploy as the Vercel production deploy' },
 ];
-const REQUIRED_WORKFLOW_NPM_SCRIPTS = ['check:quick', 'check', 'build:fast'];
-const REQUIRED_WORKFLOW_COMMAND_ORDER = ['npm ci', 'npm run check:quick', 'npm run check', 'npm run build:fast'];
+const REQUIRED_WORKFLOW_NPM_SCRIPTS = ['lint', 'typecheck', 'check:quick', 'check', 'audit:provenance:changed', 'audit:coverage-quality:changed', 'build', 'check:dist'];
+const REQUIRED_WORKFLOW_COMMAND_ORDER = [
+  'npm ci',
+  'npm run lint',
+  'npm run typecheck',
+  'npm run check:quick',
+  'npm run check',
+  'npm run audit:provenance:changed',
+  'npm run audit:coverage-quality:changed',
+  'npm run build',
+  'npm run check:dist',
+];
 const REQUIRED_PACKAGE_SCRIPT_CHAINS = {
   prebuild: ['guard-content.mjs', 'guard-stale-facts.mjs', 'audit-guide-picks.mjs', 'fetch-github-stats.mjs', 'generate-og-news.mjs'],
   'guard:check': [
@@ -64,11 +79,13 @@ const REQUIRED_PACKAGE_SCRIPT_CHAINS = {
   ],
   check: ['guard:check', 'check:links', 'check:news', 'check:security'],
   'check:quick': ['test:scripts', 'audit:commands', 'check:assets:quick'],
-  'check:ci': ['check:quick', 'check', 'build:fast'],
-  'ship:check': ['check:quick', 'check', 'build:fast'],
+  'check:ci': ['lint', 'typecheck', 'check:quick', 'check', 'audit:provenance:changed', 'audit:coverage-quality:changed', 'build', 'check:dist'],
+  'ship:check': ['lint', 'typecheck', 'check:quick', 'check', 'audit:provenance:changed', 'audit:coverage-quality:changed', 'build', 'check:dist'],
   'build:fast': ['guard:check', 'build-fast.mjs'],
 };
 const REQUIRED_PACKAGE_COMMAND_PARTS = {
+  build: ['node scripts/build-pagefind.mjs', 'node scripts/check-dist-budget.mjs --mode full'],
+  'build:full:node24': ['node scripts/build-pagefind.mjs', 'node scripts/check-dist-budget.mjs --mode full'],
   prebuild: ['node scripts/fetch-github-stats.mjs --output src/data/github-stats.build.json --skip-render-unchanged'],
 };
 const REQUIRED_EXACT_NPM_SCRIPT_COMMANDS = {
@@ -106,7 +123,6 @@ const FORBIDDEN_HOSTING_COMMAND_PATTERNS = [
   { code: 'hosting-cloudflare-pages-command', pattern: /\bcloudflare\s+pages\b|\bpages:(?:deploy|build)\b/i, detail: 'must not use Cloudflare Pages commands' },
 ];
 const FORBIDDEN_WORKFLOW_COMMAND_PATTERNS = [
-  { code: 'workflow-full-build', pattern: /\bnpm\s+run\s+build(?!:fast\b)(?::[A-Za-z0-9_-]+)?\b/i, detail: 'must not run full production builds in CI workflows' },
   { code: 'workflow-production-deploy', pattern: /\bnpm\s+run\s+deploy\b|\bnpx\s+vercel\s+deploy\b/i, detail: 'must not run production deploy commands in CI workflows' },
   { code: 'workflow-vercel-prod-build', pattern: /\bnpx\s+vercel\s+build\s+--prod\b/i, detail: 'must not run Vercel production builds in CI workflows' },
 ];

@@ -8,7 +8,6 @@ const allComparisons = await getCollection('comparisons');
 
 const activeTools = allTools.filter((t) =>
   t.data.status !== 'dead' &&
-  t.data.status !== 'retired' &&
   t.data.status !== 'acquired'
 );
 
@@ -45,7 +44,7 @@ const palette: Record<string, { a: string; b: string }> = {
 
 const categories = allCategories
   .map((category) => {
-    const slug = category.data.slug;
+    const slug = category.data.slug ?? category.id.replace(/\.md$/, '');
     const count = categoryCounts[slug] ?? 0;
     return {
       slug,

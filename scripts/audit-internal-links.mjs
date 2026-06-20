@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
- * Audit internal /tools/<slug>/ and /news/<slug>/ links across content files.
- * Flags links pointing at non-existent first-party slugs.
+ * Audit internal collection links across content and page files.
+ * Flags links pointing at non-existent first-party routes.
  */
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { dirname, join, relative, resolve, sep } from 'node:path';
@@ -14,20 +14,37 @@ const PROJECT_DIR = resolve(projectDirArg || defaultProjectDir);
 const CONTENT = join(PROJECT_DIR, 'src/content');
 const TOOLS_DIR = join(CONTENT, 'tools');
 const NEWS_DIR = join(CONTENT, 'news');
+const PAGES_DIR = join(PROJECT_DIR, 'src/pages');
 const JSON_MODE = args.includes('--json');
 const HELP_MODE = args.includes('--help') || args.includes('-h');
 const KNOWN_FLAGS = new Set(['--json', '--project-dir', '--root', '--help', '-h']);
 const VALUE_FLAGS = new Set(['--project-dir', '--root']);
 const argumentIssues = collectArgumentIssues();
 
-const subdirs = ['tools', 'news', 'comparisons', 'use-cases', 'categories', 'reports', 'trends', 'companies', 'workflows', 'benchmarks', 'glossary'];
+const contentSubdirs = ['tools', 'news', 'comparisons', 'use-cases', 'categories', 'reports', 'trends', 'companies', 'workflows', 'dead', 'glossary'];
+const scanExtensions = new Set(['.md', '.astro']);
+
+const routeSpecs = [
+  { key: 'tools', label: '/tools/', contentDir: TOOLS_DIR, routePrefix: 'tools', routeBase: 'tools' },
+  { key: 'news', label: '/news/', contentDir: NEWS_DIR, routePrefix: 'news', routeBase: 'news' },
+  { key: 'categories', label: '/categories/', contentDir: join(CONTENT, 'categories'), routePrefix: 'categories', routeBase: 'categories' },
+  { key: 'comparisons', label: '/compare/', contentDir: join(CONTENT, 'comparisons'), routePrefix: 'compare', routeBase: 'compare', staticSlugs: ['build'] },
+  { key: 'guides', label: '/guides/', contentDir: join(CONTENT, 'use-cases'), routePrefix: 'guides', routeBase: 'guides' },
+  { key: 'trends', label: '/trends/', contentDir: join(CONTENT, 'trends'), routePrefix: 'trends', routeBase: 'trends' },
+  { key: 'companies', label: '/companies/', contentDir: join(CONTENT, 'companies'), routePrefix: 'companies', routeBase: 'companies' },
+  { key: 'reports', label: '/reports/', contentDir: join(CONTENT, 'reports'), routePrefix: 'reports', routeBase: 'reports' },
+  { key: 'workflows', label: '/workflows/', contentDir: join(CONTENT, 'workflows'), routePrefix: 'workflows', routeBase: 'workflows' },
+  { key: 'dead', label: '/dead/', contentDir: join(CONTENT, 'dead'), routePrefix: 'dead', routeBase: 'dead' },
+  { key: 'glossary', label: '/glossary/', contentDir: join(CONTENT, 'glossary'), routePrefix: 'glossary', routeBase: 'glossary' },
+  { key: 'answers', label: '/answers/', pageDir: join(PAGES_DIR, 'answers'), routePrefix: 'answers', routeBase: 'answers' },
+];
+const routeSpecByPrefix = new Map(routeSpecs.map((spec) => [spec.routePrefix, spec]));
+const routeLinkRe = /(?<![a-zA-Z0-9.:])\/(tools|news|categories|compare|guides|trends|companies|reports|workflows|dead|glossary|answers)\/([a-z0-9][a-z0-9-]*)\/?(?=[^a-z0-9-]|$)/g;
 
 // Match only first-party internal links, not embedded URLs (which carry
 // a scheme:// or a host before the path). The lookbehind rejects the
 // character immediately before /tools/ or /news/ if it is alphanumeric,
 // a dot, or a colon (e.g. "captions.ai/tools/" or "example.com:443/news/").
-const toolLinkRe = /(?<![a-zA-Z0-9.:])\/tools\/([a-z0-9][a-z0-9-]*)\/?(?=[^a-z0-9-]|$)/g;
-const newsLinkRe = /(?<![a-zA-Z0-9.:])\/news\/(\d{4}-\d{2}-\d{2}-[a-z0-9][a-z0-9-]*)\/?(?=[^a-z0-9-]|$)/g;
 const claudeCodeWrongTargetRe = /\[([^\]\n]*Claude Code[^\]\n]*)\]\(\/tools\/claude\/?\)/gi;
 const claudeAlternativeUnlinkedClaudeCodeRe = /\[Claude\]\(\/tools\/claude\/?\)\s+(?:or|and)\s+Claude Code\b/gi;
 
@@ -92,12 +109,20 @@ function rel(path) {
   return relative(PROJECT_DIR, path).replaceAll(sep, '/');
 }
 
-function slugsIn(dir) {
+function slugsIn(dir, extensions = ['.md']) {
+  if (!existsSync(dir)) return new Set();
+  const allowed = new Set(extensions);
   return new Set(
     readdirSync(dir)
-      .filter((file) => file.endsWith('.md'))
-      .map((file) => file.replace(/\.md$/, '')),
+      .filter((file) => allowed.has(extnameLite(file)))
+      .map((file) => file.replace(/\.(md|astro)$/, ''))
+      .filter((slug) => !slug.startsWith('[') && slug !== 'index'),
   );
+}
+
+function extnameLite(file) {
+  const index = file.lastIndexOf('.');
+  return index >= 0 ? file.slice(index) : '';
 }
 
 function mapReport(broken) {
@@ -106,7 +131,13 @@ function mapReport(broken) {
     .map(([slug, paths]) => ({ slug, paths: [...new Set(paths)].sort() }));
 }
 
-function reportFor({ ok, mode = 'audit', brokenTools = [], brokenNews = [], filesScanned = 0, issues = [] }) {
+function reportFor({ ok, mode = 'audit', brokenRoutes = {}, filesScanned = 0, issues = [] }) {
+  const routeReports = Object.fromEntries(
+    routeSpecs.map((spec) => [spec.key, brokenRoutes[spec.key] ?? []]),
+  );
+  const brokenTools = routeReports.tools ?? [];
+  const brokenNews = routeReports.news ?? [];
+  const brokenUniqueRoutes = Object.values(routeReports).reduce((sum, routes) => sum + routes.length, 0);
   return {
     ok,
     mode,
@@ -117,10 +148,12 @@ function reportFor({ ok, mode = 'audit', brokenTools = [], brokenNews = [], file
       broken_tool_slugs: brokenTools.length,
       broken_news_slugs: brokenNews.length,
       broken_unique_slugs: brokenTools.length + brokenNews.length,
+      broken_unique_routes: brokenUniqueRoutes,
       issues: issues.length,
     },
     broken_tools: brokenTools,
     broken_news: brokenNews,
+    broken_routes: routeReports,
     issues,
   };
 }
@@ -159,21 +192,22 @@ function emitReport(report) {
     return;
   }
 
-  emitBroken('Broken /tools/ links', report.broken_tools);
-  emitBroken('Broken /news/ links', report.broken_news);
+  for (const spec of routeSpecs) {
+    emitBroken(`Broken ${spec.label} links`, report.broken_routes[spec.key] ?? []);
+  }
   console.log('');
 
   if (report.ok) {
     console.log('[audit-internal-links] clean.');
   } else {
-    console.log(`[audit-internal-links] ${report.totals.broken_unique_slugs} unique broken slug(s) found.`);
+    console.log(`[audit-internal-links] ${report.totals.broken_unique_routes} unique broken route(s) found.`);
   }
 }
 
-function addBroken(broken, slug, path) {
-  const list = broken.get(slug) ?? [];
+function addBroken(broken, route, path) {
+  const list = broken.get(route) ?? [];
   list.push(rel(path));
-  broken.set(slug, list);
+  broken.set(route, list);
 }
 
 function scan(dir, context) {
@@ -186,22 +220,22 @@ function scan(dir, context) {
       continue;
     }
 
-    if (!entry.isFile() || !entry.name.endsWith('.md')) continue;
+    if (!entry.isFile() || !scanExtensions.has(extnameLite(entry.name))) continue;
 
     context.filesScanned++;
     const raw = readFileSync(path, 'utf8');
     let match;
 
-    toolLinkRe.lastIndex = 0;
-    while ((match = toolLinkRe.exec(raw))) {
-      const slug = match[1];
-      if (!context.toolSlugs.has(slug)) addBroken(context.brokenTools, slug, path);
-    }
-
-    newsLinkRe.lastIndex = 0;
-    while ((match = newsLinkRe.exec(raw))) {
-      const slug = match[1];
-      if (!context.newsSlugs.has(slug)) addBroken(context.brokenNews, slug, path);
+    routeLinkRe.lastIndex = 0;
+    while ((match = routeLinkRe.exec(raw))) {
+      const prefix = match[1];
+      const slug = match[2];
+      const spec = routeSpecByPrefix.get(prefix);
+      if (!spec) continue;
+      const slugs = context.routeSlugs.get(spec.key);
+      if (slugs && !slugs.has(slug)) {
+        addBroken(context.brokenRoutes.get(spec.key), `/${prefix}/${slug}/`, path);
+      }
     }
 
     claudeCodeWrongTargetRe.lastIndex = 0;
@@ -235,11 +269,13 @@ if (argumentIssues.length > 0) {
 }
 
 const rootIssues = [];
-for (const [file, detail] of [
-  ['src/content/tools', TOOLS_DIR],
-  ['src/content/news', NEWS_DIR],
-]) {
-  if (!existsSync(detail)) rootIssues.push({ code: 'internal-links-root-missing', file, detail });
+for (const spec of routeSpecs.filter((item) => item.key === 'tools' || item.key === 'news')) {
+  const dir = spec.contentDir ?? spec.pageDir;
+  if (!dir) continue;
+  const file = spec.contentDir
+    ? rel(spec.contentDir)
+    : rel(spec.pageDir);
+  if (!existsSync(dir)) rootIssues.push({ code: 'internal-links-root-missing', file, detail: dir });
 }
 
 if (rootIssues.length > 0) {
@@ -249,24 +285,30 @@ if (rootIssues.length > 0) {
 }
 
 const context = {
-  toolSlugs: slugsIn(TOOLS_DIR),
-  newsSlugs: slugsIn(NEWS_DIR),
-  brokenTools: new Map(),
-  brokenNews: new Map(),
+  routeSlugs: new Map(routeSpecs.map((spec) => {
+    const slugs = spec.contentDir
+      ? slugsIn(spec.contentDir, ['.md'])
+      : slugsIn(spec.pageDir, ['.astro']);
+    for (const slug of spec.staticSlugs ?? []) slugs.add(slug);
+    return [spec.key, slugs];
+  })),
+  brokenRoutes: new Map(routeSpecs.map((spec) => [spec.key, new Map()])),
   issues: [],
   filesScanned: 0,
 };
 
-for (const subdir of subdirs) {
+for (const subdir of contentSubdirs) {
   scan(join(CONTENT, subdir), context);
 }
+scan(PAGES_DIR, context);
 
-const brokenTools = mapReport(context.brokenTools);
-const brokenNews = mapReport(context.brokenNews);
+const brokenRoutes = Object.fromEntries(
+  routeSpecs.map((spec) => [spec.key, mapReport(context.brokenRoutes.get(spec.key))]),
+);
+const brokenRouteCount = Object.values(brokenRoutes).reduce((sum, routes) => sum + routes.length, 0);
 const report = reportFor({
-  ok: brokenTools.length + brokenNews.length + context.issues.length === 0,
-  brokenTools,
-  brokenNews,
+  ok: brokenRouteCount + context.issues.length === 0,
+  brokenRoutes,
   filesScanned: context.filesScanned,
   issues: context.issues,
 });

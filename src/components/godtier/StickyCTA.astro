@@ -28,6 +28,7 @@ interface Props {
   toolSlug?: string;
   canonicalUrl?: string | null;
   affiliateUrl?: string | null;
+  affiliateStatus?: 'none' | 'applied' | 'approved' | 'rejected' | 'paused' | 'unknown' | string | null;
   pricingModel?: string | null;
   priceRange?: string | null;
   affiliateProgram?: string | null;
@@ -48,6 +49,7 @@ const {
   toolSlug,
   canonicalUrl,
   affiliateUrl,
+  affiliateStatus,
   pricingModel,
   priceRange,
   affiliateProgram,
@@ -66,6 +68,7 @@ const resolvedToolName = toolName ?? title;
 const resolvedToolSlug = toolSlug ?? '';
 const resolvedCanonicalUrl = canonicalUrl ?? (!affiliateUrl ? cta.href : null);
 const resolvedAffiliateUrl = affiliateUrl ?? null;
+const isAffiliate = affiliateStatus === 'approved' && Boolean(resolvedAffiliateUrl);
 ---
 
 <div
@@ -84,6 +87,7 @@ const resolvedAffiliateUrl = affiliateUrl ?? null;
     toolSlug={resolvedToolSlug}
     canonicalUrl={resolvedCanonicalUrl}
     affiliateUrl={resolvedAffiliateUrl}
+    affiliateStatus={affiliateStatus ?? null}
     affiliateProgram={affiliateProgram ?? null}
     pricingModel={pricingModel ?? null}
     priceRange={priceRange ?? price ?? null}
@@ -94,7 +98,8 @@ const resolvedAffiliateUrl = affiliateUrl ?? null;
     label={cta.label}
     className="gt-btn gt-btn-primary gt-sticky-btn"
     wrapperClass="gt-sticky-cta-wrap"
-    showDisclosure={false}
+    showDisclosure={isAffiliate}
+    disclosureClass="gt-sticky-disclosure"
     isStickyCta
     arrow="→"
   />
@@ -178,6 +183,9 @@ const resolvedAffiliateUrl = affiliateUrl ?? null;
   .gt-sticky-cta-wrap {
     flex: 0 0 auto;
     display: inline-flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 3px;
   }
   .gt-sticky-btn {
     width: auto;
@@ -185,6 +193,13 @@ const resolvedAffiliateUrl = affiliateUrl ?? null;
     padding: 10px 16px;
     min-height: 44px;
     font-size: 14px;
+  }
+  .gt-sticky-disclosure {
+    max-width: 180px;
+    color: var(--gt-subtle);
+    font-size: 10px;
+    line-height: 1.25;
+    text-align: right;
   }
   @media (prefers-reduced-motion: reduce) {
     .gt-sticky { transition: none; }

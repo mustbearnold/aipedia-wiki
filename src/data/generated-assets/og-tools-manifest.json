@@ -1,7 +1,7 @@
 {
   "version": 1,
   "kind": "tool-og",
-  "source_hash": "0fabc75d5d53c0d57a152cff6e31f0347a57d8dcf09b276edaa1151df06a716d",
+  "source_hash": "b2ca003e5835b3197fd2f93af9bc620b45531afe7bc0032f0cdaa6fb4647dc2f",
   "generated_at": "deterministic",
   "meta": {
     "tools": 220,
@@ -1634,8 +1634,8 @@
       "slug": "semrush",
       "theme": null,
       "target": null,
-      "bytes": 29245,
-      "sha256": "e8d53963ff5e3ff3fa7c0885f54d50d86b6ea01a9f2e3387a45662329f49ff74"
+      "bytes": 30338,
+      "sha256": "a943ea0349a06170fc58ef877247f693c6d4e6dc00361f11894a5f248304b263"
     },
     {
       "file": "public/og/tools/speechify.png",

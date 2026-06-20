@@ -31,7 +31,7 @@ interface ToolData {
   price_range?: string;
   pricing_model?: string;
   status?: string;
-  affiliate?: { link?: string | null; network?: string | null } | null;
+  affiliate?: { link?: string | null; network?: string | null; application_status?: string | null } | null;
   scores?: { utility?: number; value?: number; moat?: number; longevity?: number };
   facts?: Record<string, any>;
   best_for?: string[];
@@ -98,6 +98,7 @@ const fallbackWinner = !winnerTool && tools.length > 0
   ? [...tools].sort((a, b) => overallScore(b) - overallScore(a))[0]
   : undefined;
 const featured = winnerTool ?? fallbackWinner;
+const featuredIsAffiliate = featured?.affiliate?.application_status === 'approved' && Boolean(featured.affiliate?.link);
 const featuredScore = featured ? overallScore(featured) : 0;
 const featuredBand = featuredScore >= 9
   ? 'Top-tier'
@@ -187,7 +188,7 @@ const relatedItems = [
         statusActive={true}
         statusLabel="Winner"
         price={featured.price_range}
-        affiliate={Boolean(featured.affiliate?.link)}
+        affiliate={featuredIsAffiliate}
       >
         <CommercialCTA
           slot="primary-cta"
@@ -195,6 +196,7 @@ const relatedItems = [
           toolSlug={featured.slug}
           canonicalUrl={featured.url ?? null}
           affiliateUrl={featured.affiliate?.link ?? null}
+          affiliateStatus={featured.affiliate?.application_status ?? null}
           affiliateProgram={featured.affiliate?.network ?? null}
           pricingModel={featured.pricing_model ?? null}
           priceRange={featured.price_range ?? null}
@@ -203,7 +205,7 @@ const relatedItems = [
           pageSlug={slug}
           comparisonPair={tools.map((t) => t.slug).join(',')}
           className="gt-btn gt-btn-primary"
-          showDisclosure={Boolean(featured.affiliate?.link)}
+          showDisclosure={featuredIsAffiliate}
           compareCtaMarker
           arrow="→"
         />
@@ -241,6 +243,33 @@ const relatedItems = [
       </section>
     )}
 
+    {featured && (
+      <section class="gt-compare-use-case" aria-labelledby="gt-compare-use-case-h">
+        <h2 id="gt-compare-use-case-h" class="gt-section-h">Best by use case</h2>
+        <div class="gt-compare-use-case-card">
+          <p>For most readers, <strong>{featured.title}</strong> is the right pick across pricing, feature surface, and team fit.</p>
+          <CommercialCTA
+            toolName={featured.title}
+            toolSlug={featured.slug}
+            canonicalUrl={featured.url ?? null}
+            affiliateUrl={featured.affiliate?.link ?? null}
+            affiliateStatus={featured.affiliate?.application_status ?? null}
+            affiliateProgram={featured.affiliate?.network ?? null}
+            pricingModel={featured.pricing_model ?? null}
+            priceRange={featured.price_range ?? null}
+            pageType="comparison"
+            placement="comparison_use_case_winner"
+            pageSlug={slug}
+            comparisonPair={tools.map((x) => x.slug).join(',')}
+            className="gt-btn gt-btn-primary"
+            showDisclosure={featuredIsAffiliate}
+            compareCtaMarker
+            arrow="→"
+          />
+        </div>
+      </section>
+    )}
+
     <section class="gt-compare-tools" aria-labelledby="gt-compare-h">
       <div class="gt-compare-section-head">
         <h2 id="gt-compare-h" class="gt-section-h">The contenders</h2>
@@ -260,7 +289,7 @@ const relatedItems = [
         {tools.map((t) => {
           const score = overallScore(t);
           const isFeatured = featured && t.slug === featured.slug;
-          const isAffiliate = Boolean(t.affiliate?.link);
+          const isAffiliate = t.affiliate?.application_status === 'approved' && Boolean(t.affiliate?.link);
           const cues = decisionCues(t);
           return (
             <li class={`gt-compare-row ${isFeatured ? 'is-featured' : ''}`}>
@@ -309,6 +338,7 @@ const relatedItems = [
                   toolSlug={t.slug}
                   canonicalUrl={t.url ?? null}
                   affiliateUrl={t.affiliate?.link ?? null}
+                  affiliateStatus={t.affiliate?.application_status ?? null}
                   affiliateProgram={t.affiliate?.network ?? null}
                   pricingModel={t.pricing_model ?? null}
                   priceRange={t.price_range ?? null}
@@ -337,32 +367,6 @@ const relatedItems = [
         })}
       </ol>
     </section>
-
-    {featured && (
-      <section class="gt-compare-use-case" aria-labelledby="gt-compare-use-case-h">
-        <h2 id="gt-compare-use-case-h" class="gt-section-h">Best by use case</h2>
-        <div class="gt-compare-use-case-card">
-          <p>For most readers, <strong>{featured.title}</strong> is the right pick across pricing, feature surface, and team fit.</p>
-          <CommercialCTA
-            toolName={featured.title}
-            toolSlug={featured.slug}
-            canonicalUrl={featured.url ?? null}
-            affiliateUrl={featured.affiliate?.link ?? null}
-            affiliateProgram={featured.affiliate?.network ?? null}
-            pricingModel={featured.pricing_model ?? null}
-            priceRange={featured.price_range ?? null}
-            pageType="comparison"
-            placement="comparison_use_case_winner"
-            pageSlug={slug}
-            comparisonPair={tools.map((x) => x.slug).join(',')}
-            className="gt-btn gt-btn-primary"
-            showDisclosure={Boolean(featured.affiliate?.link)}
-            compareCtaMarker
-            arrow="→"
-          />
-        </div>
-      </section>
-    )}
 
     <div id="full-comparison" class="gt-full-comparison">
       {canonicalFactTable && tools.length >= 2 && (

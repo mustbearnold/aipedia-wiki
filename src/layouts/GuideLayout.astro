@@ -30,7 +30,7 @@ interface ToolData {
   price_range?: string;
   pricing_model?: string;
   status?: string;
-  affiliate?: { link?: string | null; network?: string | null } | null;
+  affiliate?: { link?: string | null; network?: string | null; application_status?: string | null } | null;
   scores?: { utility?: number; value?: number; moat?: number; longevity?: number };
   facts?: Record<string, any>;
   best_for?: string[];
@@ -104,7 +104,10 @@ function pickFromGuide(pickSlug?: string): ToolData | undefined {
 
 // Featured pick: configured best_overall, fallback to highest score
 const bestOverallSlug = guidePicks?.best_overall?.tool;
-const featuredTool = (bestOverallSlug && sortedTools.find((t) => t.slug === bestOverallSlug)) ?? sortedTools[0];
+const featuredTool: ToolData | undefined = bestOverallSlug
+  ? sortedTools.find((t) => t.slug === bestOverallSlug) ?? sortedTools[0]
+  : sortedTools[0];
+const featuredIsAffiliate = featuredTool?.affiliate?.application_status === 'approved' && Boolean(featuredTool.affiliate?.link);
 const featuredScore = featuredTool ? overallScore(featuredTool) : 0;
 const featuredBand = bandFor(featuredScore);
 const featuredReason = guidePicks?.best_overall?.reason ?? '';
@@ -194,7 +197,7 @@ const relatedItems = related.length > 0 ? related : fallbackRelated;
         statusActive={true}
         statusLabel="Best overall"
         price={featuredTool.price_range}
-        affiliate={Boolean(featuredTool.affiliate?.link)}
+        affiliate={featuredIsAffiliate}
         eyebrow={featuredLabel}
         title={featuredTool.title}
         description={featuredSummary}
@@ -205,6 +208,7 @@ const relatedItems = related.length > 0 ? related : fallbackRelated;
           toolSlug={featuredTool.slug}
           canonicalUrl={featuredTool.url ?? null}
           affiliateUrl={featuredTool.affiliate?.link ?? null}
+          affiliateStatus={featuredTool.affiliate?.application_status ?? null}
           affiliateProgram={featuredTool.affiliate?.network ?? null}
           label={`Start with ${featuredTool.title}`}
           pricingModel={featuredTool.pricing_model ?? null}
@@ -213,7 +217,7 @@ const relatedItems = related.length > 0 ? related : fallbackRelated;
           placement="guide_decision_best_overall"
           pageSlug={slug}
           className="gt-btn gt-btn-primary"
-          showDisclosure={Boolean(featuredTool.affiliate?.link)}
+          showDisclosure={featuredIsAffiliate}
           guideCtaMarker
           arrow="→"
         />
@@ -253,6 +257,7 @@ const relatedItems = related.length > 0 ? related : fallbackRelated;
                 toolSlug={budgetPickTool.slug}
                 canonicalUrl={budgetPickTool.url ?? null}
                 affiliateUrl={budgetPickTool.affiliate?.link ?? null}
+                affiliateStatus={budgetPickTool.affiliate?.application_status ?? null}
                 affiliateProgram={budgetPickTool.affiliate?.network ?? null}
                 label={`See ${budgetPickTool.title} plans`}
                 pricingModel={budgetPickTool.pricing_model ?? null}
@@ -261,7 +266,7 @@ const relatedItems = related.length > 0 ? related : fallbackRelated;
                 placement="guide_decision_budget"
                 pageSlug={slug}
                 className="gt-btn gt-btn-secondary gt-guide-tier-cta"
-                showDisclosure={Boolean(budgetPickTool.affiliate?.link)}
+                showDisclosure={budgetPickTool.affiliate?.application_status === 'approved' && Boolean(budgetPickTool.affiliate?.link)}
                 guideCtaMarker
                 arrow="→"
               />
@@ -279,6 +284,7 @@ const relatedItems = related.length > 0 ? related : fallbackRelated;
                 toolSlug={proTeamPickTool.slug}
                 canonicalUrl={proTeamPickTool.url ?? null}
                 affiliateUrl={proTeamPickTool.affiliate?.link ?? null}
+                affiliateStatus={proTeamPickTool.affiliate?.application_status ?? null}
                 affiliateProgram={proTeamPickTool.affiliate?.network ?? null}
                 label={`See ${proTeamPickTool.title} plans`}
                 pricingModel={proTeamPickTool.pricing_model ?? null}
@@ -287,7 +293,7 @@ const relatedItems = related.length > 0 ? related : fallbackRelated;
                 placement="guide_decision_pro_team"
                 pageSlug={slug}
                 className="gt-btn gt-btn-secondary gt-guide-tier-cta"
-                showDisclosure={Boolean(proTeamPickTool.affiliate?.link)}
+                showDisclosure={proTeamPickTool.affiliate?.application_status === 'approved' && Boolean(proTeamPickTool.affiliate?.link)}
                 guideCtaMarker
                 arrow="→"
               />
@@ -305,7 +311,7 @@ const relatedItems = related.length > 0 ? related : fallbackRelated;
             const score = overallScore(t);
             const isFeatured = featuredTool && t.slug === featuredTool.slug;
             const tone = score >= 8 ? 'positive' : score >= 6.5 ? 'neutral' : 'negative';
-            const isAffiliate = Boolean(t.affiliate?.link);
+            const isAffiliate = t.affiliate?.application_status === 'approved' && Boolean(t.affiliate?.link);
             // Render CTAs on the top 5 tools so every guide hits the
             // audit's min-CTA bar and surfaces ranked picks as actions.
             const showInlineCta = i < 5;
@@ -339,6 +345,7 @@ const relatedItems = related.length > 0 ? related : fallbackRelated;
                       toolSlug={t.slug}
                       canonicalUrl={t.url ?? null}
                       affiliateUrl={t.affiliate?.link ?? null}
+                      affiliateStatus={t.affiliate?.application_status ?? null}
                       affiliateProgram={t.affiliate?.network ?? null}
                       label={isFeatured ? `Start with ${t.title}` : `Check ${t.title}`}
                       pricingModel={t.pricing_model ?? null}
@@ -388,16 +395,17 @@ const relatedItems = related.length > 0 ? related : fallbackRelated;
     <FeedbackForm toolName={title} />
   </div>
 
-  {featuredTool && featuredTool.affiliate?.link && (
+  {featuredTool && (featuredTool.url || featuredTool.affiliate?.link) && (
     <StickyCTA
       title={featuredTool.title}
       score={featuredScore || undefined}
       price={featuredTool.price_range ?? undefined}
-      cta={{ label: `Try ${featuredTool.title}`, href: featuredTool.affiliate.link, external: true }}
+      cta={{ label: `Try ${featuredTool.title}`, href: featuredTool.affiliate?.link ?? featuredTool.url ?? '', external: true }}
       toolName={featuredTool.title}
       toolSlug={featuredTool.slug}
       canonicalUrl={featuredTool.url ?? null}
-      affiliateUrl={featuredTool.affiliate.link}
+      affiliateUrl={featuredTool.affiliate?.link ?? null}
+      affiliateStatus={featuredTool.affiliate?.application_status ?? null}
       affiliateProgram={featuredTool.affiliate?.network ?? null}
       pricingModel={featuredTool.pricing_model ?? null}
       priceRange={featuredTool.price_range ?? null}

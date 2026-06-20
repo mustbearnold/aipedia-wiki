@@ -229,17 +229,74 @@ test('ToolPageModel applies decision and CTA precedence from normalized fields',
   assert.equal(model.decision.best_alternative, 'Alternative X');
   assert.equal(model.decision.recent_change, 'Launched model controls');
   assert.equal(model.cta.label, 'Start explicitly');
-  assert.equal(model.cta.href, 'https://partners.example.com/precedence');
-  assert.equal(model.cta.disclosure, 'Affiliate link');
+  assert.equal(model.cta.href, 'https://example.com/precedence');
+  assert.equal(model.cta.disclosure, undefined);
   assert.equal(model.cta.affiliate_state, 'applied');
-  assert.equal(model.cta.affiliate_url, 'https://partners.example.com/precedence');
+  assert.equal(model.cta.affiliate_url, undefined);
   assert.equal(model.cta.canonical_url, 'https://example.com/precedence');
+});
+
+test('ToolPageModel only prefers approved affiliate URLs', async () => {
+  const { buildToolPageModel } = await loadToolPageModel();
+  const approved = buildToolPageModel({
+    slug: 'approved-affiliate-tool',
+    title: 'Approved Affiliate Tool',
+    tagline: 'Fixture tagline',
+    url: 'https://example.com/approved',
+    quick_answer: 'Use the approved public partner link.',
+    affiliate: {
+      link: 'https://partners.example.com/approved',
+      network: 'FixtureNet',
+      application_status: 'approved',
+    },
+  });
+  const none = buildToolPageModel({
+    slug: 'none-affiliate-tool',
+    title: 'None Affiliate Tool',
+    tagline: 'Fixture tagline',
+    url: 'https://example.com/none',
+    quick_answer: 'Use the official fallback.',
+    affiliate: {
+      link: 'https://partners.example.com/none',
+      network: 'FixtureNet',
+      application_status: 'none',
+    },
+  });
+  const unknown = buildToolPageModel({
+    slug: 'unknown-affiliate-tool',
+    title: 'Unknown Affiliate Tool',
+    tagline: 'Fixture tagline',
+    url: 'https://example.com/unknown',
+    quick_answer: 'Use the official fallback.',
+    affiliate: {
+      link: 'https://partners.example.com/unknown',
+      network: 'FixtureNet',
+    },
+  });
+
+  assert.equal(approved.cta.href, 'https://partners.example.com/approved');
+  assert.equal(approved.cta.disclosure, 'Affiliate link');
+  assert.equal(approved.cta.affiliate_state, 'approved');
+  assert.equal(approved.cta.affiliate_url, 'https://partners.example.com/approved');
+  assert.equal(approved.cta.affiliate_program, 'FixtureNet');
+
+  assert.equal(none.cta.href, 'https://example.com/none');
+  assert.equal(none.cta.disclosure, undefined);
+  assert.equal(none.cta.affiliate_state, 'none');
+  assert.equal(none.cta.affiliate_url, undefined);
+  assert.equal(none.cta.affiliate_program, undefined);
+
+  assert.equal(unknown.cta.href, 'https://example.com/unknown');
+  assert.equal(unknown.cta.affiliate_state, 'unknown');
+  assert.equal(unknown.cta.affiliate_url, undefined);
 });
 
 test('ToolLayout adapts ToolPageModel facts and normalized page fields before rendering', () => {
   const layout = readSource('src/layouts/ToolLayout.astro');
   assert.match(layout, /const toolTitle = model\.identity\.title/);
   assert.match(layout, /const affiliateUrl = model\.cta\.affiliate_url/);
+  assert.match(layout, /const affiliateStatus = model\.cta\.affiliate_state/);
+  assert.match(layout, /affiliateStatus=\{affiliateStatus\}/);
   assert.match(layout, /const primaryCtaLabel = model\.cta\.label === 'Visit tool' \? undefined : model\.cta\.label/);
   assert.match(layout, /const pricingModel = model\.cta\.pricing_model/);
   assert.match(layout, /const quickAnswer = model\.decision\.verdict/);

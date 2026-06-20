@@ -110,7 +110,8 @@ export const POST: APIRoute = async ({ request, clientAddress }) => {
       WHERE ip_hash = ${ipHash}
         AND created_at > NOW() - INTERVAL '24 hours'
     `;
-    if (Number(recent[0]?.n ?? 0) >= 3) {
+    const recentRows = Array.isArray(recent) ? recent as Array<{ n?: unknown }> : [];
+    if (Number(recentRows[0]?.n ?? 0) >= 3) {
       return json({ error: 'rate_limited' }, 429);
     }
 
@@ -121,7 +122,8 @@ export const POST: APIRoute = async ({ request, clientAddress }) => {
         AND tool_slug = ${toolSlug}
       LIMIT 1
     `;
-    if (duplicate.length > 0) {
+    const duplicateRows = Array.isArray(duplicate) ? duplicate : [];
+    if (duplicateRows.length > 0) {
       return json({ error: 'already_reviewed' }, 409);
     }
 

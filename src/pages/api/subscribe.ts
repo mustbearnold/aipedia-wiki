@@ -21,7 +21,8 @@ async function checkRateLimit(sql: NonNullable<ReturnType<typeof getSql>>, ipHas
       WHERE ip_hash = ${ipHash}
         AND created_at > NOW() - INTERVAL '24 hours'
     `;
-    return Number(recent[0]?.n ?? 0) < 5;
+    const recentRows = Array.isArray(recent) ? recent as Array<{ n?: unknown }> : [];
+    return Number(recentRows[0]?.n ?? 0) < 5;
   } catch {
     return true;
   }
@@ -98,7 +99,8 @@ export const POST: APIRoute = async ({ request, clientAddress }) => {
         RETURNING id
       `;
 
-      const already = rows.length === 0;
+      const insertedRows = Array.isArray(rows) ? rows : [];
+      const already = insertedRows.length === 0;
       return json({ ok: true, already }, 200);
     } catch (err: any) {
       return json(

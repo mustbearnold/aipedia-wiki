@@ -8,12 +8,14 @@
  */
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Hero from '../../components/godtier/Hero.astro';
+import BreadcrumbLD from '../../components/seo/BreadcrumbLD.astro';
+import CollectionPageLD from '../../components/seo/CollectionPageLD.astro';
 import { getCollection } from 'astro:content';
 import { shortenPrice } from '../../utils/shorten-price';
 
 const allTools = await getCollection('tools');
 const activeToolCount = allTools.filter(
-  (t) => t.data.status !== 'dead' && t.data.status !== 'retired' && t.data.status !== 'acquired'
+  (t) => t.data.status !== 'dead' && t.data.status !== 'acquired'
 ).length;
 const newsEntries = await getCollection('news');
 
@@ -103,6 +105,8 @@ function resolveSlug(slug: string) {
   const t = toolLookup.get(slug);
   if (!t) return null;
   const affiliate = (t.data as any).affiliate ?? {};
+  const affiliateStatus = affiliate?.application_status ?? null;
+  const approvedAffiliateLink = affiliateStatus === 'approved' ? affiliate?.link ?? null : null;
   return {
     slug,
     title: t.data.title,
@@ -112,9 +116,10 @@ function resolveSlug(slug: string) {
     priceDisplay: shortenPrice(t.data.price_range ?? ''),
     url: `/tools/${slug}/`,
     vendorUrl: (t.data as any).url ?? null,
-    affiliateLink: affiliate?.link ?? null,
+    affiliateLink: approvedAffiliateLink,
+    affiliateStatus,
     hasProgram: !!affiliate?.has_program,
-    affiliateProgram: affiliate?.network ?? null,
+    affiliateProgram: approvedAffiliateLink ? affiliate?.network ?? null : null,
   };
 }
 
@@ -129,6 +134,7 @@ interface ResolvedTool {
   url: string;
   vendorUrl?: string | null;
   affiliateLink?: string | null;
+  affiliateStatus?: string | null;
   hasProgram?: boolean;
   affiliateProgram?: string | null;
 }
@@ -177,7 +183,8 @@ const now = Date.now();
 const FOURTEEN_DAYS_MS = 14 * 86400000;
 const recentlyUpdated: Record<string, string> = {}; // slug -> latest news slug
 for (const n of newsEntries) {
-  const dateVal = n.data.date instanceof Date ? n.data.date.toISOString() : String(n.data.date);
+  const rawDate = n.data.date as unknown;
+  const dateVal = rawDate instanceof Date ? rawDate.toISOString() : String(rawDate);
   const d = new Date(dateVal);
   if (isNaN(d.getTime())) continue;
   if (now - d.getTime() > FOURTEEN_DAYS_MS) continue;
@@ -253,12 +260,30 @@ const categoryIconSvg: Record<string, string> = {
 };
 
 const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
+const stackBuilderDescription = 'Pick your role, set your budget, get a suggested AI tool set, swap any tool, and share the result. Recently-updated badges flag tools that shipped in the last 14 days.';
+const stackBuilderItems = roles.map((role) => ({
+  name: `${role.label} AI tool set`,
+  url: new URL(`/stack-builder/?roles=${role.id}`, siteBase).href,
+  description: role.desc,
+}));
 ---
 
 <BaseLayout
   title="AI Tool Set Builder: Find Your Best AI Tools"
-  description="Pick your role, set your budget, get a suggested AI tool set, swap any tool, and share the result. Recently-updated badges flag tools that shipped in the last 14 days."
+  description={stackBuilderDescription}
 >
+  <BreadcrumbLD items={[
+    { name: 'Home', url: new URL('/', siteBase).href },
+    { name: 'Tool Set Builder', url: new URL('/stack-builder/', siteBase).href },
+  ]} />
+  <CollectionPageLD
+    name="AI Tool Set Builder"
+    description={stackBuilderDescription}
+    pageUrl={new URL('/stack-builder/', siteBase).href}
+    items={stackBuilderItems}
+    itemType="WebPage"
+  />
+
   <div class="gt-canvas stack-builder-page-root">
     <Hero
       title="Tool set builder"
@@ -1416,25 +1441,28 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
       return s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
     }
 
-    function commercialCtaAttrs(t, placement, clickEvent) {
+    function commercialCtaAttrs(t, placement, clickEvent, label, viewEvent) {
       const isAffiliate = !!t.affiliateLink;
-      return [
+      const attrs = [
         'data-commercial-cta',
-        `data-cta-view-event="${escapeHtml(clickEvent + '_view')}"`,
+        `data-cta-view-event="${escapeHtml(viewEvent)}"`,
         `data-cta-click-event="${escapeHtml(clickEvent)}"`,
         'data-cta-page-type="stack_builder"',
         'data-cta-page-slug="stack-builder"',
         `data-cta-placement="${escapeHtml(placement)}"`,
         `data-cta-tool-slug="${escapeHtml(t.slug)}"`,
         `data-cta-tool-name="${escapeHtml(t.title)}"`,
-        'data-cta-label="Try"',
+        `data-cta-label="${escapeHtml(label)}"`,
         `data-cta-destination-type="${isAffiliate ? 'affiliate' : 'official'}"`,
         `data-cta-is-affiliate="${String(isAffiliate)}"`,
         `data-cta-category-slug="${escapeHtml(t.category || '')}"`,
-        `data-cta-affiliate-program="${escapeHtml(t.affiliateProgram || '')}"`,
         `data-cta-price-range="${escapeHtml(t.price || '')}"`,
         'data-cta-is-sticky="false"',
-      ].join(' ');
+      ];
+      if (isAffiliate && t.affiliateProgram) {
+        attrs.push(`data-cta-affiliate-program="${escapeHtml(t.affiliateProgram)}"`);
+      }
+      return attrs.join(' ');
     }
 
     function renderCategoryIcon(category) {
@@ -1508,18 +1536,14 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
                 // <a> inside <a>; browsers auto-close the outer when they
                 // see the inner, which breaks the layout).
                 //
-                // The "Try" CTA uses the affiliate link when a program
+                // The vendor CTA uses an approved affiliate link when one
                 // exists, else the canonical vendor URL. Opens in a new
                 // tab with rel=noopener (and sponsored when affiliate) so
                 // we earn on the intent moment without hijacking nav.
-                // Label is "Try" for every tool, consistent UX. The rel
-                // value still flips to "sponsored" for affiliate links so
-                // Google + FTC see the disclosure, but users see a single
-                // action verb instead of a confusing Try/Open mix.
                 const tryUrl = t.affiliateLink || t.vendorUrl || '';
                 const tryRel = t.affiliateLink ? 'noopener nofollow sponsored' : 'noopener';
-                const tryLabel = 'Try';
-        const tryAttrs = commercialCtaAttrs(t, 'stack_builder_tool_row', 'stack_builder_tool_click');
+                const tryLabel = t.affiliateLink ? `Try ${t.title}` : `Visit ${t.title}`;
+        const tryAttrs = commercialCtaAttrs(t, 'stack_builder_tool_row', 'stack_builder_tool_click', tryLabel, 'stack_builder_try_tool_view');
                 return `
                   <article class="sb-stack-row home-surface-inner">
                     <a href="${t.url}" class="sb-stack-icon" aria-label="Open ${escapeHtml(t.title)} review">
@@ -1550,7 +1574,7 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
                       <button type="button" class="sb-swap-action" data-swap-role="${escapeHtml(role)}" data-swap-cat="${escapeHtml(catName)}" data-swap-slug="${escapeHtml(original.slug)}" aria-label="Swap ${escapeHtml(t.title)} for an alternative">
                         Swap
                       </button>
-                      ${tryUrl ? `<a href="${escapeHtml(tryUrl)}" target="_blank" rel="${tryRel}" class="sb-try-link" aria-label="${tryLabel} ${escapeHtml(t.title)} on vendor site" ${tryAttrs}>${tryLabel}</a>${t.affiliateLink ? '<span class="sb-affiliate-note">Affiliate</span>' : ''}` : ''}
+                      ${tryUrl ? `<a href="${escapeHtml(tryUrl)}" target="_blank" rel="${tryRel}" class="sb-try-link" aria-label="${escapeHtml(tryLabel)} on vendor site" ${tryAttrs}>${escapeHtml(tryLabel)}</a>${t.affiliateLink ? '<span class="sb-affiliate-note">Affiliate</span>' : ''}` : ''}
                       <button type="button" class="sb-compare-link" data-compare-add="${escapeHtml(t.slug)}" aria-pressed="false"><span data-compare-label>Compare</span></button>
                     </div>
                   </article>
@@ -1564,7 +1588,7 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
       if (countChip) countChip.textContent = `${toolCount} tool${toolCount !== 1 ? 's' : ''} / ${catCount} categor${catCount !== 1 ? 'ies' : 'y'}`;
 
       // Build the "Try the whole stack" CTA grid. Every tool with a URL
-      // gets a chip; affiliate links are preferred + flagged with sponsored
+      // gets a chip; approved affiliate links are preferred and flagged with sponsored
       // rel. This is the primary conversion path for the builder.
       const allPicks = [];
       for (const [catName, tiers] of Object.entries(merged)) {
@@ -1581,12 +1605,14 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
         const tryUrl = t.affiliateLink || t.vendorUrl || '';
         if (!tryUrl) return '';
         const rel = t.affiliateLink ? 'noopener nofollow sponsored' : 'noopener';
-        const tryAttrs = commercialCtaAttrs(t, 'stack_builder_try_stack_grid', 'stack_builder_tool_click');
+        const tryLabel = t.affiliateLink ? `Try ${t.title}` : `Visit ${t.title}`;
+        const chipAction = t.affiliateLink ? 'Try tool' : 'Visit site';
+        const tryAttrs = commercialCtaAttrs(t, 'stack_builder_try_stack_grid', 'stack_builder_tool_click', tryLabel, 'stack_builder_try_stack_view');
         return `
           <a href="${escapeHtml(tryUrl)}" target="_blank" rel="${rel}" class="sb-cta-chip home-surface-inner" title="Open ${escapeHtml(t.title)} in a new tab" ${tryAttrs}>
             ${renderCategoryIcon(t.category)}
             <span>${escapeHtml(t.title)}</span>
-            <strong>Try</strong>
+            <strong>${escapeHtml(chipAction)}</strong>
           </a>
         `;
       }).filter(Boolean).join('');

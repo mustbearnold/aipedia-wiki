@@ -207,7 +207,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-18"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "adcreative-pricing",
@@ -216,7 +216,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-18"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "adcreative-product-videoshoot",
@@ -225,7 +225,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-18"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "adcreative-fashion-videoshoot",
@@ -234,7 +234,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-18"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "adcreative-affiliate",
@@ -243,7 +243,7 @@
       "type": "affiliate",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-18"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "adobe-firefly-blog-2026",
@@ -423,7 +423,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-18"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "ahrefs-brand-radar-help",
@@ -432,7 +432,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-18"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "ahrefs-changelog",
@@ -441,7 +441,7 @@
       "type": "release_notes",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-18"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "ahrefs-pricing-guide",
@@ -468,7 +468,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-16"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "google-search-console-gen-ai-performance-reports",
@@ -477,7 +477,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-16"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "pew-google-ai-summaries-clicks-2025",
@@ -495,7 +495,16 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-16"
+      "last_checked": "2026-06-20"
+    },
+    {
+      "id": "semrush-ai-visibility-features",
+      "label": "Semrush AI visibility features",
+      "url": "https://www.semrush.com/kb/1626-ai-visibility-features",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-20"
     },
     {
       "id": "writesonic-ai-visibility-tracker",
@@ -513,7 +522,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-18"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "ahrefs-site-explorer",
@@ -809,7 +818,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "anthropic-opus-47",
@@ -827,7 +836,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-18"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "anthropic-fable-mythos-access",
@@ -881,7 +890,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-16"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "anthropic-spacex-limits-2026",
@@ -2302,7 +2311,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-18"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "anthropic-higher-limits-spacex",
@@ -2401,7 +2410,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-18"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "clearscope-ai-search-2026",
@@ -2410,7 +2419,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-18"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "clearscope-discover",
@@ -2419,7 +2428,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-18"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "clearscope-expand",
@@ -2428,7 +2437,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-18"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "clearscope-internal-linking",
@@ -2437,7 +2446,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-18"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "clearscope-localize",
@@ -2446,7 +2455,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-18"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "clearscope-optimize",
@@ -2455,7 +2464,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-18"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "clearscope-pricing",
@@ -2464,7 +2473,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-18"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "clearscope-protect",
@@ -2473,7 +2482,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-18"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "clearscope-tracked-topics",
@@ -2482,7 +2491,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-18"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "clearscope-write",
@@ -2491,7 +2500,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-18"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "clickup-brain",
@@ -4474,7 +4483,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "frase-official",
@@ -4492,7 +4501,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "freepik-official",
@@ -7258,7 +7267,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "marketmuse-inventory",
@@ -7267,7 +7276,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "marketmuse-official",
@@ -7276,7 +7285,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "mastra-about",
@@ -8014,7 +8023,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "neuronwriter-affiliate",
@@ -8023,7 +8032,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "nightcafe-pricing",
@@ -8194,7 +8203,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "open-webui-official",
@@ -8443,7 +8452,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "perplexity-pricing",
@@ -8461,7 +8470,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-16"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "perplexity-max-help",
@@ -8488,7 +8497,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "perplexity-media-docs",
@@ -9822,7 +9831,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "adobe-semrush-close",
@@ -9831,16 +9840,16 @@
       "type": "newsroom",
       "trust_tier": "primary",
       "volatility": "low",
-      "last_checked": "2026-06-19"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "semrush-pricing",
-      "label": "Source",
-      "url": "https://www.semrush.com/pricing/",
+      "label": "Semrush SEO Toolkit pricing and limits",
+      "url": "https://www.semrush.com/kb/1547-seo-toolkit-pricing-limits",
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "speechify-pricing",
@@ -10131,7 +10140,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "synthesia-help",
@@ -11812,7 +11821,8 @@
       "url": "https://meetgeek.ai/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "low"
+      "volatility": "low",
+      "last_checked": "2026-06-20"
     },
     {
       "id": "meetgeek-pricing",
@@ -11820,7 +11830,26 @@
       "url": "https://meetgeek.ai/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-20"
+    },
+    {
+      "id": "meetgeek-consent",
+      "label": "MeetGeek recording consent help center",
+      "url": "https://support.meetgeek.ai/en/articles/6021904-recording-consents-notifications",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-20"
+    },
+    {
+      "id": "meetgeek-partnerstack",
+      "label": "MeetGeek PartnerStack program",
+      "url": "https://market.partnerstack.com/page/meetgeek",
+      "type": "affiliate",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-20"
     },
     {
       "id": "midjourney-v81-update",
@@ -12190,7 +12219,7 @@
       "type": "third_party",
       "trust_tier": "secondary",
       "volatility": "high",
-      "last_checked": "2026-06-16"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "wispr-funding-260m",

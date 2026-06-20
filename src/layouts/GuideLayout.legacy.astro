@@ -358,6 +358,7 @@ const tocHeadings = (headings ?? []).filter((h) => h.depth === 2).map((h) => ({ 
                   toolSlug={card.tool.slug}
                   canonicalUrl={card.tool.url}
                   affiliateUrl={card.tool.affiliate?.link}
+                  affiliateStatus={card.tool.affiliate?.application_status}
                   affiliateProgram={card.tool.affiliate?.network}
                   label={label}
                   pricingModel={card.tool.pricing_model}
@@ -399,6 +400,7 @@ const tocHeadings = (headings ?? []).filter((h) => h.depth === 2).map((h) => ({ 
                   toolSlug={t.slug}
                   canonicalUrl={t.url}
                   affiliateUrl={t.affiliate?.link}
+                  affiliateStatus={t.affiliate?.application_status}
                   affiliateProgram={t.affiliate?.network}
                   label={label}
                   pricingModel={t.pricing_model}

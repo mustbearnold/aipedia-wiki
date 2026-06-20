@@ -6,7 +6,7 @@ import { getCollection } from 'astro:content';
 // source logo changed from cyan-forward to orange-forward.
 const allTools = await getCollection('tools');
 const activeTools = allTools.filter(
-  (t) => t.data.status !== 'dead' && t.data.status !== 'retired' && t.data.status !== 'acquired'
+  (t) => t.data.status !== 'dead' && t.data.status !== 'acquired'
 );
 const allComparisons = await getCollection('comparisons');
 const allCategories = await getCollection('categories');

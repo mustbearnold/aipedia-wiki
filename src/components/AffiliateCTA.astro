@@ -10,22 +10,26 @@ interface Props {
   title: string;
   url: string;
   hasProgram: boolean;
+  applicationStatus?: string | null;
   commission?: string | null; // accepted but intentionally unused in render
 }
 
-const { title, url, hasProgram } = Astro.props;
+const { title, url, hasProgram, applicationStatus } = Astro.props;
 const legacySlug = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+const isApprovedAffiliate = hasProgram && applicationStatus === 'approved';
+const officialFallbackUrl = hasProgram ? null : url;
 ---
 
 <CommercialCTA
   toolName={title}
   toolSlug={legacySlug}
-  canonicalUrl={hasProgram ? null : url}
-  affiliateUrl={hasProgram ? url : null}
-  label={hasProgram ? `Try ${title}` : `Visit ${title}`}
+  canonicalUrl={officialFallbackUrl}
+  affiliateUrl={isApprovedAffiliate ? url : null}
+  affiliateStatus={applicationStatus ?? null}
+  label={isApprovedAffiliate ? `Try ${title}` : `Visit ${title}`}
   pageType="tool"
   placement="legacy_affiliate_cta"
-  className={hasProgram
+  className={isApprovedAffiliate
     ? 'flex w-full items-center justify-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold bg-[var(--accent-primary)] text-[#0b0a14] no-underline hover:no-underline transition-all hover:brightness-110 shadow-[0_4px_14px_rgba(249, 115, 22,0.32)]'
     : 'flex w-full items-center justify-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold text-[var(--text-secondary)] border border-[var(--border)] no-underline hover:no-underline hover:bg-[var(--bg-card-hover)] transition-colors'}
   wrapperClass="commercial-cta-stack w-full"

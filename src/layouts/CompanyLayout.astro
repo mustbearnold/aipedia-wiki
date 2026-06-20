@@ -24,7 +24,7 @@ interface ToolData {
   url?: string;
   price_range?: string;
   pricing_model?: string;
-  affiliate?: { link?: string | null; network?: string | null } | null;
+  affiliate?: { link?: string | null; network?: string | null; application_status?: string | null } | null;
   scores?: { utility?: number; value?: number; moat?: number; longevity?: number };
   tagline?: string;
 }
@@ -59,6 +59,7 @@ function overallScore(t: ToolData): number {
 
 const sortedProducts = [...keyProducts].sort((a, b) => overallScore(b) - overallScore(a));
 const flagship = sortedProducts[0];
+const flagshipIsAffiliate = flagship?.affiliate?.application_status === 'approved' && Boolean(flagship.affiliate?.link);
 const flagshipScore = flagship ? overallScore(flagship) : 0;
 const flagshipBand = flagshipScore >= 9
   ? 'Top-tier'
@@ -134,6 +135,7 @@ const tagline = metaBits.length > 0 ? metaBits.join(' · ') : description;
         statusActive={companyType !== 'dead' && companyType !== 'acquired'}
         statusLabel="Flagship"
         price={flagship.price_range}
+        affiliate={flagshipIsAffiliate}
       >
         <CommercialCTA
           slot="primary-cta"
@@ -141,6 +143,7 @@ const tagline = metaBits.length > 0 ? metaBits.join(' · ') : description;
           toolSlug={flagship.slug}
           canonicalUrl={flagship.url ?? null}
           affiliateUrl={flagship.affiliate?.link ?? null}
+          affiliateStatus={flagship.affiliate?.application_status ?? null}
           affiliateProgram={flagship.affiliate?.network ?? null}
           pricingModel={flagship.pricing_model ?? null}
           priceRange={flagship.price_range ?? null}
@@ -148,7 +151,7 @@ const tagline = metaBits.length > 0 ? metaBits.join(' · ') : description;
           placement="company_hero_primary"
           pageSlug={slug}
           className="gt-btn gt-btn-primary"
-          showDisclosure={false}
+          showDisclosure={flagshipIsAffiliate}
           companyProductCtaMarker
           arrow="→"
         />

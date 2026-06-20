@@ -216,6 +216,10 @@ function cta(pageType, index, placement = `${pageType}_test_${index}`, options =
   const href = options.href ?? `https://example.com/${pageType}/${index}`;
   const toolSlug = options.toolSlug ?? 'chatgpt';
   const toolName = options.toolName ?? 'ChatGPT';
+  const label = options.label ?? (isAffiliate ? `Get ${toolName}` : 'Try ChatGPT free');
+  const viewEvent = options.viewEvent ?? (isAffiliate ? 'affiliate_cta_view' : 'tool_cta_view');
+  const clickEvent = options.clickEvent ?? (isAffiliate ? 'affiliate_click' : 'tool_cta_click');
+  const isSticky = Boolean(options.isSticky);
   const rel = isAffiliate ? 'sponsored noopener' : 'noopener';
   const destinationType = isAffiliate ? 'affiliate' : 'official';
   const affiliateProgram = options.affiliateProgram
@@ -227,19 +231,19 @@ function cta(pageType, index, placement = `${pageType}_test_${index}`, options =
       href="${href}"
       rel="${rel}"
       data-commercial-cta
-      data-cta-view-event="${isAffiliate ? 'affiliate_cta_view' : 'tool_cta_view'}"
-      data-cta-click-event="${isAffiliate ? 'affiliate_click' : 'tool_cta_click'}"
+      data-cta-view-event="${viewEvent}"
+      data-cta-click-event="${clickEvent}"
       data-cta-page-type="${pageType}"
       data-cta-page-slug="${pageType}-page"
       data-cta-placement="${placement}"
       data-cta-tool-slug="${toolSlug}"
       data-cta-tool-name="${toolName}"
-      data-cta-label="${isAffiliate ? `Get ${toolName}` : 'Try ChatGPT free'}"
+      data-cta-label="${label}"
       data-cta-destination-type="${destinationType}"
       data-cta-is-affiliate="${String(isAffiliate)}"
       ${affiliateProgram}
-      data-cta-is-sticky="false"
-    >${isAffiliate ? `Get ${toolName}` : 'Try ChatGPT free'}</a>
+      data-cta-is-sticky="${String(isSticky)}"
+    >${label}</a>
   `;
 }
 
@@ -247,7 +251,7 @@ function fixtureHtml(anchors) {
   return `<!doctype html><html><body><script>window.__aipediaTrackCommercialCTA = true;</script>${anchors}<p>Affiliate link; no extra cost to you.</p></body></html>`;
 }
 
-test('commercial CTA audit validates representative built money pages', () => {
+test('commercial CTA audit validates representative and discovered built money pages', () => {
   const fixture = mkdtempSync(join(tmpdir(), 'aipedia-commercial-cta-'));
 
   try {
@@ -269,6 +273,9 @@ test('commercial CTA audit validates representative built money pages', () => {
         fixtureHtml(anchors),
       );
     }
+    const discoveredDir = join(fixture, 'workflows', 'solo-founder-stack');
+    mkdirSync(discoveredDir, { recursive: true });
+    writeFileSync(join(discoveredDir, 'index.html'), fixtureHtml(cta('workflow', 1)));
 
     const result = spawnSync(process.execPath, ['scripts/audit-commercial-cta.mjs', '--json', '--site-dir', fixture], {
       cwd: process.cwd(),
@@ -283,8 +290,49 @@ test('commercial CTA audit validates representative built money pages', () => {
 
     const report = JSON.parse(result.stdout);
     assert.equal(report.ok, true);
-    assert.equal(report.routes.length, routes.length);
+    assert.equal(report.routes.length, routes.length + 1);
+    assert.ok(report.routes.some((route) => route.route === '/workflows/solo-founder-stack/' && route.discovered === true));
     assert.equal(report.issues.length, 0);
+  } finally {
+    rmSync(fixture, { recursive: true, force: true });
+  }
+});
+
+test('commercial CTA audit flags known partner links that are not marked as commercial CTAs', () => {
+  const fixture = mkdtempSync(join(tmpdir(), 'aipedia-commercial-cta-unmarked-affiliate-'));
+
+  try {
+    for (const route of routes) {
+      const dir = join(fixture, route.path);
+      mkdirSync(dir, { recursive: true });
+      const requiredAffiliateLinks = route.requiredAffiliateLinks ?? [];
+      const anchors = [
+        ...requiredAffiliateLinks.map((link, index) => cta(route.pageType, index + 1, undefined, link)),
+        ...Array.from({ length: Math.max(route.count - requiredAffiliateLinks.length, 0) }, (_, index) => cta(route.pageType, requiredAffiliateLinks.length + index + 1)),
+      ].join('\n');
+      writeFileSync(join(dir, 'index.html'), fixtureHtml(anchors));
+    }
+
+    const unmarkedDir = join(fixture, 'guides', 'raw-affiliate-link');
+    mkdirSync(unmarkedDir, { recursive: true });
+    writeFileSync(
+      join(unmarkedDir, 'index.html'),
+      '<!doctype html><html><body><a href="https://get.apollo.io/xdiykcapi88b">Try Apollo</a></body></html>',
+    );
+
+    const result = spawnSync(process.execPath, ['scripts/audit-commercial-cta.mjs', '--json', '--site-dir', fixture], {
+      cwd: process.cwd(),
+      encoding: 'utf8',
+    });
+
+    assert.notEqual(result.status, 0);
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, false);
+    assert.ok(report.issues.some((issue) => (
+      issue.code === 'affiliate-link-unmarked-commercial-cta' &&
+      issue.route === '/guides/raw-affiliate-link/' &&
+      issue.detail.includes('apollo')
+    )));
   } finally {
     rmSync(fixture, { recursive: true, force: true });
   }
@@ -320,6 +368,51 @@ test('commercial CTA audit fails when a required affiliate link is missing from 
       issue.route === '/guides/best-ai-tools-for-sales-teams/' &&
       issue.detail.includes('apollo')
     )));
+  } finally {
+    rmSync(fixture, { recursive: true, force: true });
+  }
+});
+
+test('commercial CTA audit catches generic labels, unknown events, and sticky affiliate CTAs without nearby disclosure', () => {
+  const fixture = mkdtempSync(join(tmpdir(), 'aipedia-commercial-cta-regressions-'));
+
+  try {
+    for (const route of routes) {
+      const dir = join(fixture, route.path);
+      mkdirSync(dir, { recursive: true });
+      const requiredAffiliateLinks = route.requiredAffiliateLinks ?? [];
+      const anchors = [
+        ...requiredAffiliateLinks.map((link, index) => cta(route.pageType, index + 1, undefined, link)),
+        ...Array.from({ length: Math.max(route.count - requiredAffiliateLinks.length, 0) }, (_, index) => cta(route.pageType, requiredAffiliateLinks.length + index + 1)),
+      ].join('\n');
+      const farFromStickyDisclosure = '<div aria-hidden="true">'.padEnd(900, '.') + '</div>';
+      const html = route.path === 'tools/apollo'
+        ? `<!doctype html><html><body><p>Affiliate link; no extra cost to you.</p>${farFromStickyDisclosure}<script>window.__aipediaTrackCommercialCTA = true;</script>${
+            cta('tool', 1, 'tool_sticky_mobile', {
+              href: 'https://get.apollo.io/xdiykcapi88b',
+              toolSlug: 'apollo',
+              toolName: 'Apollo.io',
+              affiliateProgram: 'Impact',
+              label: 'Try',
+              viewEvent: 'stack_builder_tool_click_view',
+              isSticky: true,
+            })
+          }${cta('tool', 2)}</body></html>`
+        : fixtureHtml(anchors);
+      writeFileSync(join(dir, 'index.html'), html);
+    }
+
+    const result = spawnSync(process.execPath, ['scripts/audit-commercial-cta.mjs', '--json', '--site-dir', fixture], {
+      cwd: process.cwd(),
+      encoding: 'utf8',
+    });
+
+    assert.notEqual(result.status, 0);
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, false);
+    assert.ok(report.issues.some((issue) => issue.code === 'commercial-cta-generic-label' && issue.route === '/tools/apollo/'));
+    assert.ok(report.issues.some((issue) => issue.code === 'commercial-cta-unknown-event' && issue.route === '/tools/apollo/'));
+    assert.ok(report.issues.some((issue) => issue.code === 'sticky-affiliate-disclosure-not-nearby' && issue.route === '/tools/apollo/'));
   } finally {
     rmSync(fixture, { recursive: true, force: true });
   }

@@ -9,8 +9,8 @@ import { builtSiteDir } from './lib/built-site-dir.mjs';
 const args = process.argv.slice(2);
 const JSON_MODE = args.includes('--json');
 const HELP_MODE = args.includes('--help') || args.includes('-h');
-const KNOWN_FLAGS = new Set(['--json', '--site-dir', '--dist-dir', '--project-dir', '--root', '--help', '-h']);
-const VALUE_FLAGS = new Set(['--site-dir', '--dist-dir', '--project-dir', '--root']);
+const KNOWN_FLAGS = new Set(['--json', '--site-dir', '--dist-dir', '--project-dir', '--root', '--mode', '--help', '-h']);
+const VALUE_FLAGS = new Set(['--site-dir', '--dist-dir', '--project-dir', '--root', '--mode']);
 const argumentIssues = collectArgumentIssues();
 const defaultProjectDir = dirname(dirname(fileURLToPath(import.meta.url)));
 const projectDirArg = valueFor('--project-dir') || valueFor('--root');
@@ -18,6 +18,8 @@ const PROJECT_DIR = resolve(projectDirArg || defaultProjectDir);
 const siteDirArg = valueFor('--site-dir') || valueFor('--dist-dir');
 const explicitSiteDir = Boolean(siteDirArg);
 const SITE_DIR = builtSiteDir(PROJECT_DIR, siteDirArg);
+const modeArg = valueFor('--mode') || 'auto';
+const BUILD_MODE = resolveBuildMode();
 
 if (HELP_MODE) {
   console.log(usage());
@@ -30,7 +32,7 @@ if (argumentIssues.length > 0) {
 }
 
 const budgets = [
-  { path: join(SITE_DIR, 'pagefind'), rawMaxMb: 10 },
+  { path: join(SITE_DIR, 'pagefind'), rawMaxMb: 10, requiredIn: ['full'] },
   { path: join(SITE_DIR, 'index.html'), rawMaxMb: 0.3, gzipMaxMb: 0.08 },
   { path: join(SITE_DIR, 'tools', 'index.html'), rawMaxMb: 1.1, gzipMaxMb: 0.18 },
 ];
@@ -90,8 +92,19 @@ function collectArgumentIssues() {
   if (foundValueFlags.has('--project-dir') && foundValueFlags.has('--root')) {
     issues.push({ code: 'argument-invalid', detail: 'choose only one of --project-dir or --root' });
   }
+  const mode = valueFor('--mode');
+  if (mode && !['auto', 'full', 'fast'].includes(mode)) {
+    issues.push({ code: 'argument-invalid', detail: '--mode must be one of auto, full, or fast' });
+  }
 
   return issues;
+}
+
+function resolveBuildMode() {
+  if (modeArg === 'full' || modeArg === 'fast') return modeArg;
+  const normalizedSiteDir = SITE_DIR.replace(/\\/g, '/');
+  if (process.env.AIPEDIA_FAST_BUILD === '1' || /(^|\/)dist-fast(\/|$)/.test(normalizedSiteDir)) return 'fast';
+  return 'full';
 }
 
 function usage() {
@@ -106,6 +119,7 @@ function usage() {
     '  --dist-dir <dir>       Alias for --site-dir.',
     '  --project-dir <dir>    Resolve default built output from another project root.',
     '  --root <dir>           Alias for --project-dir.',
+    '  --mode <auto|full|fast> Treat Pagefind as required for full builds and optional for fast builds.',
     '  --help, -h             Print this help message.',
   ].join('\n');
 }
@@ -134,6 +148,7 @@ function reportFor({ mode = 'budget', issues = [], items = [] }) {
   return {
     ok: mode !== 'argument-error' && issues.length === 0,
     mode,
+    build_mode: BUILD_MODE,
     project_dir: PROJECT_DIR,
     site_dir: SITE_DIR,
     argument_issues: mode === 'argument-error' ? argumentIssues : [],
@@ -161,13 +176,15 @@ function emitReport(report) {
   for (const item of report.items) {
     if (item.raw_mb != null) console.log(`${item.label}: ${item.raw_mb.toFixed(2)}MB / ${item.raw_max_mb}MB raw`);
     if (item.gzip_mb != null) console.log(`${item.label}: ${item.gzip_mb.toFixed(2)}MB / ${item.gzip_max_mb}MB gzip`);
+    if (item.skipped) console.log(`${item.label}: skipped (${item.reason})`);
   }
 
   for (const issue of report.issues) {
     if (issue.code === 'built-site-dir-missing') {
       console.error(`[check-dist-budget] ${issue.path} does not exist. Run astro build first.`);
     } else if (issue.code === 'built-artifact-missing') {
-      console.error(`  x ${issue.label} is missing from the built site output`);
+      const requirement = BUILD_MODE === 'fast' ? 'fast built site output' : 'full built site output';
+      console.error(`  x ${issue.label} is missing from the ${requirement}`);
     } else if (issue.code === 'raw-budget-exceeded') {
       console.error(`  x ${issue.label} exceeds raw budget`);
     } else if (issue.code === 'gzip-budget-exceeded') {
@@ -195,6 +212,15 @@ for (const budget of budgets) {
   const label = budgetLabel(budget.path);
 
   if (!existsSync(budget.path)) {
+    if (BUILD_MODE === 'fast' && budget.requiredIn?.includes('full')) {
+      items.push({
+        label,
+        path: budget.path,
+        skipped: true,
+        reason: 'not emitted by build:fast',
+      });
+      continue;
+    }
     issues.push({ code: 'built-artifact-missing', path: budget.path, label, detail: `${label} is missing from the built site output` });
     continue;
   }

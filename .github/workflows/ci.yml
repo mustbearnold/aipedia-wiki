@@ -36,11 +36,26 @@ jobs:
           PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
         run: npm ci
 
+      - name: Lint
+        run: npm run lint
+
+      - name: Typecheck
+        run: npm run typecheck
+
       - name: Quick verification
         run: npm run check:quick
 
       - name: Guards and audits
         run: npm run check
 
-      - name: Fast build
-        run: npm run build:fast
+      - name: Changed provenance quality
+        run: npm run audit:provenance:changed
+
+      - name: Changed comparison quality
+        run: npm run audit:coverage-quality:changed
+
+      - name: Production build
+        run: npm run build
+
+      - name: Dist validation
+        run: npm run check:dist

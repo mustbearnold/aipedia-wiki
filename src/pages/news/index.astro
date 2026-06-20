@@ -66,6 +66,7 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Hero from '../../components/godtier/Hero.astro';
 import BreadcrumbLD from '../../components/seo/BreadcrumbLD.astro';
+import CollectionPageLD from '../../components/seo/CollectionPageLD.astro';
 
 const entries = await getCollection('news');
 
@@ -129,6 +130,11 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
 const description = `AI tools news verified against primary sources and named reporting. Model releases, pricing changes, security advisories, acquisitions, shutdowns, and funding rounds affecting the aipedia.wiki tool catalog.`;
 
 const topStory = sorted[0];
+const collectionItems = sorted.map((item) => ({
+  name: item.title,
+  url: new URL(`/news/${item.slug}/`, siteBase).href,
+  description: item.summary,
+}));
 ---
 
 <BaseLayout
@@ -139,6 +145,13 @@ const topStory = sorted[0];
     { name: 'Home', url: new URL('/', siteBase).href },
     { name: 'News', url: new URL('/news/', siteBase).href },
   ]} />
+  <CollectionPageLD
+    name="AI Tools News"
+    description={description}
+    pageUrl={new URL('/news/', siteBase).href}
+    items={collectionItems}
+    itemType="NewsArticle"
+  />
 
   <div class="sr-only" data-pagefind-ignore>
     <span data-pagefind-filter="Type">NewsIndex</span>

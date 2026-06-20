@@ -519,7 +519,7 @@ export const GET: APIRoute = async () => {
     lines.push('## Categories');
     lines.push('');
     for (const cat of activeCategories) {
-      const slug = cat.slug || cat.id?.replace(/\.md$/, '');
+      const slug = cat.data.slug || cat.id?.replace(/\.md$/, '');
       const desc = excerpt(cat.data.description || cat.data.tagline || '', 140);
       lines.push(`- [${cat.data.title}](https://aipedia.wiki/categories/${slug}/)${desc ? `: ${desc}` : ''}`);
     }

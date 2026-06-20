@@ -155,6 +155,7 @@ const tocHeadings = (headings ?? []).filter((h) => h.depth === 2).map((h) => ({ 
                     toolSlug={t.slug}
                     canonicalUrl={t.url}
                     affiliateUrl={t.affiliate?.link}
+                    affiliateStatus={t.affiliate?.application_status}
                     affiliateProgram={t.affiliate?.network}
                     label={label}
                     pricingModel={t.pricing_model}

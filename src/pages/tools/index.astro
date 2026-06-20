@@ -3,6 +3,10 @@
  * /tools/ index — god-tier 10/10 mobile-first.
  *
  * Full catalog of active AI tools sorted by score, with category filter chips.
+ * Refresh metadata: 2026-06-20 active-tool hub inspected after Semrush
+ * canonical/archive cleanup, affiliate approval gating, mobile-first tool
+ * CTA disclosure fixes, source provenance gates, and LLM/indexability
+ * maintenance.
  * Refresh metadata: 2026-06-16 active-tool hub inspected after Google Cloud
  * data-agents coverage refreshed Gemini-adjacent data-agent context, AI
  * Automation, AI Infrastructure, source registry, homepage, categories,
@@ -509,7 +513,7 @@ const itemList = scoredTools.map((t) => ({
     { name: 'Home', url: new URL('/', siteBase).href },
     { name: 'All tools', url: new URL('/tools/', siteBase).href },
   ]} />
-  <ItemListLD items={itemList} listName="All AI Tools" pageUrl={new URL('/tools/', siteBase).href} />
+  <ItemListLD name="All AI Tools" items={itemList} siteBase={siteBase} />
 
   <div class="sr-only" data-pagefind-ignore>
     <span data-pagefind-filter="Type">ToolIndex</span>

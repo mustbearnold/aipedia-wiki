@@ -28,6 +28,7 @@ const SITEMAP_EXCLUDED_PATHS = new Set([
   '/guides/otter-ai-alternatives/',
   '/search/',
   '/tool-finder/',
+  '/tools/semrush-demo/',
 ]);
 
 function shouldIncludeInSitemap(page) {

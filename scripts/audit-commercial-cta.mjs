@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { existsSync, readFileSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { dirname, join, relative, resolve, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { builtSiteDir } from './lib/built-site-dir.mjs';
@@ -111,6 +111,7 @@ const partnerLinks = {
     affiliateProgram: 'PartnerStack',
   },
 };
+const knownPartnerLinks = Object.values(partnerLinks);
 
 const requiredRoutes = [
   { path: '/tools/chatgpt/', minCtas: 2, pageType: 'tool' },
@@ -163,6 +164,21 @@ const requiredAttributes = [
   'data-cta-is-sticky',
 ];
 
+const knownCtaEvents = new Set([
+  'affiliate_click',
+  'tool_cta_click',
+  'mobile_sticky_cta_click',
+  'stack_builder_tool_click',
+  'affiliate_cta_view',
+  'tool_cta_view',
+  'official_cta_view',
+  'stack_builder_try_tool_view',
+  'stack_builder_try_stack_view',
+]);
+
+const genericCtaLabels = new Set(['try', 'open']);
+const affiliateDisclosureText = 'Affiliate link; no extra cost to you.';
+
 function routeHtmlPath(pathname) {
   if (pathname === '/') return join(distDir, 'index.html');
   return join(distDir, pathname.replace(/^\/|\/$/g, ''), 'index.html');
@@ -186,7 +202,47 @@ function commercialAnchors(html) {
   return [...html.matchAll(/<a\b(?=[^>]*\bdata-commercial-cta\b)[^>]*>/gi)].map((match) => ({
     tag: match[0],
     attrs: attrsFromTag(match[0]),
+    index: match.index ?? 0,
   }));
+}
+
+function allAnchors(html) {
+  return [...html.matchAll(/<a\b[^>]*>/gi)].map((match) => ({
+    tag: match[0],
+    attrs: attrsFromTag(match[0]),
+    index: match.index ?? 0,
+  }));
+}
+
+function walkHtml(dir) {
+  if (!existsSync(dir)) return [];
+  const entries = readdirSync(dir, { withFileTypes: true });
+  return entries.flatMap((entry) => {
+    const path = join(dir, entry.name);
+    if (entry.isDirectory()) return walkHtml(path);
+    return entry.isFile() && entry.name === 'index.html' ? [path] : [];
+  });
+}
+
+function routeFromHtmlPath(htmlPath) {
+  const rel = relative(distDir, htmlPath).replaceAll(sep, '/');
+  if (rel === 'index.html') return '/';
+  return `/${rel.replace(/\/index\.html$/, '/')}`;
+}
+
+function discoverCommercialRoutes() {
+  const requiredPaths = new Set(requiredRoutes.map((route) => route.path));
+  return walkHtml(distDir)
+    .map((htmlPath) => {
+      const route = routeFromHtmlPath(htmlPath);
+      if (requiredPaths.has(route)) return null;
+      const html = read(htmlPath);
+      return commercialAnchors(html).length > 0
+        ? { path: route, minCtas: 0, pageType: null, discovered: true }
+        : null;
+    })
+    .filter(Boolean)
+    .sort((a, b) => a.path.localeCompare(b.path));
 }
 
 function isExternalHref(href) {
@@ -202,7 +258,7 @@ function emitReport(report) {
     process.stdout.write(`${JSON.stringify(report, null, 2)}\n`);
   } else if (report.ok) {
     const total = report.routes.reduce((sum, route) => sum + route.anchors, 0);
-    console.log(`[audit-commercial-cta] OK: ${total} commercial CTA(s) checked across ${report.routes.length} representative money routes.`);
+    console.log(`[audit-commercial-cta] OK: ${total} commercial CTA(s) checked across ${report.routes.length} built route(s).`);
   } else {
     console.error('[audit-commercial-cta] Commercial CTA issues found:');
     for (const issue of report.issues) {
@@ -229,7 +285,44 @@ if (!existsSync(distDir)) {
   issues.push({ code: 'dist-missing', detail: formatDistLabel(distDir) });
 }
 
-for (const route of requiredRoutes) {
+const routesToCheck = existsSync(distDir)
+  ? [...requiredRoutes, ...discoverCommercialRoutes()]
+  : requiredRoutes;
+
+if (existsSync(distDir)) {
+  for (const htmlPath of walkHtml(distDir)) {
+    const route = routeFromHtmlPath(htmlPath);
+    const html = read(htmlPath);
+    allAnchors(html).forEach((anchor, index) => {
+      const href = anchor.attrs.get('href') ?? '';
+      const partnerLink = knownPartnerLinks.find((link) => link.href === href);
+      if (!partnerLink) return;
+
+      if (!anchor.attrs.has('data-commercial-cta')) {
+        issues.push({
+          code: 'affiliate-link-unmarked-commercial-cta',
+          route,
+          detail: `anchor ${index + 1}: ${partnerLink.toolSlug} ${href}`,
+        });
+        return;
+      }
+
+      if (
+        anchor.attrs.get('data-cta-destination-type') !== 'affiliate' ||
+        anchor.attrs.get('data-cta-is-affiliate') !== 'true' ||
+        anchor.attrs.get('data-cta-tool-slug') !== partnerLink.toolSlug
+      ) {
+        issues.push({
+          code: 'affiliate-link-misclassified-commercial-cta',
+          route,
+          detail: `anchor ${index + 1}: ${partnerLink.toolSlug} ${href}`,
+        });
+      }
+    });
+  }
+}
+
+for (const route of routesToCheck) {
   const htmlPath = routeHtmlPath(route.path);
   if (!existsSync(htmlPath)) {
     issues.push({ code: 'representative-route-missing', route: route.path, detail: formatDistLabel(htmlPath) });
@@ -238,7 +331,9 @@ for (const route of requiredRoutes) {
 
   const html = read(htmlPath);
   const anchors = commercialAnchors(html);
-  const pageTypeAnchors = anchors.filter((anchor) => anchor.attrs.get('data-cta-page-type') === route.pageType);
+  const pageTypeAnchors = route.pageType
+    ? anchors.filter((anchor) => anchor.attrs.get('data-cta-page-type') === route.pageType)
+    : anchors;
 
   if (!html.includes('__aipediaTrackCommercialCTA')) {
     issues.push({ code: 'commercial-analytics-missing', route: route.path });
@@ -289,7 +384,7 @@ for (const route of requiredRoutes) {
       });
     }
 
-    if (!html.includes('Affiliate link; no extra cost to you.')) {
+    if (!html.includes(affiliateDisclosureText)) {
       issues.push({
         code: 'required-affiliate-disclosure-missing',
         route: route.path,
@@ -307,6 +402,10 @@ for (const route of requiredRoutes) {
 
     const destinationType = anchor.attrs.get('data-cta-destination-type');
     const isAffiliate = anchor.attrs.get('data-cta-is-affiliate');
+    const viewEvent = anchor.attrs.get('data-cta-view-event') ?? '';
+    const clickEvent = anchor.attrs.get('data-cta-click-event') ?? '';
+    const label = anchor.attrs.get('data-cta-label') ?? '';
+    const isSticky = anchor.attrs.get('data-cta-is-sticky');
     const href = anchor.attrs.get('href') ?? '';
     const rel = anchor.attrs.get('rel') ?? '';
 
@@ -318,8 +417,27 @@ for (const route of requiredRoutes) {
       issues.push({ code: 'commercial-cta-bad-affiliate-flag', route: route.path, detail: `anchor ${index + 1}: ${isAffiliate}` });
     }
 
+    if (viewEvent && !knownCtaEvents.has(viewEvent)) {
+      issues.push({ code: 'commercial-cta-unknown-event', route: route.path, detail: `anchor ${index + 1} view ${viewEvent}` });
+    }
+
+    if (clickEvent && !knownCtaEvents.has(clickEvent)) {
+      issues.push({ code: 'commercial-cta-unknown-event', route: route.path, detail: `anchor ${index + 1} click ${clickEvent}` });
+    }
+
+    if (genericCtaLabels.has(label.trim().toLowerCase())) {
+      issues.push({ code: 'commercial-cta-generic-label', route: route.path, detail: `anchor ${index + 1}: ${label}` });
+    }
+
     if (isAffiliate === 'true' && !/\bsponsored\b/i.test(rel)) {
       issues.push({ code: 'affiliate-cta-missing-sponsored-rel', route: route.path, detail: `anchor ${index + 1}` });
+    }
+
+    if (isAffiliate === 'true' && isSticky === 'true') {
+      const nearby = html.slice(Math.max(0, anchor.index - 400), anchor.index + anchor.tag.length + 400);
+      if (!nearby.includes(affiliateDisclosureText)) {
+        issues.push({ code: 'sticky-affiliate-disclosure-not-nearby', route: route.path, detail: `anchor ${index + 1}` });
+      }
     }
 
     if (isExternalHref(href) && !/\bnoopener\b/i.test(rel)) {
@@ -331,6 +449,8 @@ for (const route of requiredRoutes) {
     route: route.path,
     anchors: anchors.length,
     page_type_anchors: pageTypeAnchors.length,
+    page_type: route.pageType ?? 'any',
+    discovered: route.discovered === true,
     placements: [...placements].sort(),
   });
 }

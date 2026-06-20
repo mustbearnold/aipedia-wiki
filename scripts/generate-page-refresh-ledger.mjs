@@ -180,6 +180,7 @@ const sitemapExcludedPaths = new Set([
   '/guides/otter-ai-alternatives/',
   '/search/',
   '/tool-finder/',
+  '/tools/semrush-demo/',
 ]);
 
 function git(args) {
@@ -314,7 +315,13 @@ function isHtmlStaticPage(relPath) {
   return !relPath.includes('[');
 }
 
-function sitemapStatus(route) {
+function frontmatterNoindex(data = {}) {
+  return String(data.noindex ?? '').trim().toLowerCase() === 'true'
+    || String(data.robots ?? '').trim().toLowerCase().includes('noindex');
+}
+
+function sitemapStatus(route, data = {}) {
+  if (frontmatterNoindex(data)) return 'No';
   if (route.startsWith('/admin/')) return 'No';
   if (route.startsWith('/api/')) return 'No';
   if (route === '/404/') return 'No';
@@ -350,7 +357,7 @@ for (const collection of collectionRoutes) {
       lastUpdated: dateForFile(rel, explicitDate),
       dateSource: dateSourceForFile(rel, explicitDate, 'frontmatter'),
       source: rel,
-      sitemap: sitemapStatus(routeForContent(collection.routePrefix, slug)),
+      sitemap: sitemapStatus(routeForContent(collection.routePrefix, slug), data),
     });
   }
 }

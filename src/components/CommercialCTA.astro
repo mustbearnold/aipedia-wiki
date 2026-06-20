@@ -4,6 +4,7 @@ interface Props {
   toolSlug: string;
   canonicalUrl?: string | null;
   affiliateUrl?: string | null;
+  affiliateStatus?: 'none' | 'applied' | 'approved' | 'rejected' | 'paused' | 'unknown' | string | null;
   label?: string;
   pricingModel?: string | null;
   priceRange?: string | null;
@@ -36,6 +37,7 @@ const {
   toolSlug,
   canonicalUrl,
   affiliateUrl,
+  affiliateStatus,
   label,
   pricingModel,
   priceRange,
@@ -63,8 +65,9 @@ const {
   clickEvent,
 } = Astro.props;
 
-const href = (affiliateUrl && affiliateUrl.length > 0 ? affiliateUrl : canonicalUrl) ?? '';
-const isAffiliate = Boolean(affiliateUrl && affiliateUrl.length > 0);
+const approvedAffiliateUrl = affiliateStatus === 'approved' ? affiliateUrl : null;
+const href = (approvedAffiliateUrl && approvedAffiliateUrl.length > 0 ? approvedAffiliateUrl : canonicalUrl) ?? '';
+const isAffiliate = Boolean(approvedAffiliateUrl && approvedAffiliateUrl.length > 0);
 const destinationType = isAffiliate ? 'affiliate' : 'official';
 const rel = isAffiliate ? 'sponsored noopener' : 'noopener';
 const hasUrl = href.length > 0 && href !== '#';
@@ -111,7 +114,7 @@ const guideSlug = pageType === 'guide' ? pageSlug : undefined;
       data-cta-comparison-slug={comparisonSlug ?? undefined}
       data-cta-guide-slug={guideSlug ?? undefined}
       data-cta-comparison-pair={comparisonPair ?? undefined}
-      data-cta-affiliate-program={affiliateProgram ?? undefined}
+      data-cta-affiliate-program={isAffiliate ? affiliateProgram ?? undefined : undefined}
       data-cta-price-range={priceRange ?? undefined}
       data-cta-is-sticky={String(isStickyCta)}
       data-tool-cta={toolCtaMarker ? toolSlug : undefined}

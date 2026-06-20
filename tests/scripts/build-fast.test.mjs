@@ -9,6 +9,7 @@ test('fast build audits the nested Vercel static client output when present', ()
   assert.match(script, /const fastStaticDir =/);
   assert.match(script, /\['scripts\/audit-indexability\.mjs', '--dist', fastStaticDir\]/);
   assert.match(script, /\['scripts\/audit-commercial-cta\.mjs', '--dist', fastStaticDir\]/);
+  assert.match(script, /\['scripts\/check-dist-budget\.mjs', '--site-dir', fastStaticDir, '--mode', 'fast'\]/);
   assert.doesNotMatch(script, /\['scripts\/audit-indexability\.mjs', '--dist', 'dist-fast'\]/);
   assert.doesNotMatch(script, /\['scripts\/audit-commercial-cta\.mjs', '--dist', 'dist-fast'\]/);
 });

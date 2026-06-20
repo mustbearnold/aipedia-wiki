@@ -120,6 +120,8 @@ const FACT_ORDER = [
   'best_paid_tier',
 ];
 
+type AffiliateState = ToolPageModel['cta']['affiliate_state'];
+
 function isRecord(value: unknown): value is UnknownRecord {
   return value !== null && typeof value === 'object' && !Array.isArray(value);
 }
@@ -142,6 +144,11 @@ function confidenceFromScore(score: number): Confidence {
   return 'low';
 }
 
+function affiliateState(value: unknown, affiliateUrl?: string): AffiliateState {
+  const state = stringField(value);
+  if (state === 'none' || state === 'applied' || state === 'approved' || state === 'rejected' || state === 'paused') return state;
+  return affiliateUrl ? 'unknown' : 'none';
+}
 
 export function toFactListFacts(facts: ToolFactModel[]): ToolFactListItem[] {
   return facts.map((fact) => ({
@@ -245,7 +252,8 @@ export function buildToolPageModel(frontmatter: UnknownRecord): ToolPageModel {
   const affiliate = isRecord(frontmatter.affiliate) ? frontmatter.affiliate : {};
   const affiliateUrl = stringField(affiliate.link);
   const canonicalUrl = stringField(frontmatter.url);
-  const affiliateState = stringField(affiliate.application_status) ?? (affiliateUrl ? 'approved' : 'none');
+  const resolvedAffiliateState = affiliateState(affiliate.application_status, affiliateUrl);
+  const approvedAffiliateUrl = resolvedAffiliateState === 'approved' ? affiliateUrl : undefined;
   const sourceList = Array.from(sources.values());
   for (const source of sourceList) {
     if (isEvidenceSourceStale(source)) {
@@ -301,11 +309,11 @@ export function buildToolPageModel(frontmatter: UnknownRecord): ToolPageModel {
     }),
     cta: {
       label: stringField(frontmatter.primary_cta_label) ?? 'Visit tool',
-      href: affiliateUrl ?? canonicalUrl,
-      disclosure: affiliateUrl ? 'Affiliate link' : undefined,
-      affiliate_state: affiliateState === 'none' || affiliateState === 'applied' || affiliateState === 'approved' || affiliateState === 'rejected' || affiliateState === 'paused' ? affiliateState : 'unknown',
-      affiliate_url: affiliateUrl,
-      affiliate_program: stringField(affiliate.network),
+      href: approvedAffiliateUrl ?? canonicalUrl,
+      disclosure: approvedAffiliateUrl ? 'Affiliate link' : undefined,
+      affiliate_state: resolvedAffiliateState,
+      affiliate_url: approvedAffiliateUrl,
+      affiliate_program: approvedAffiliateUrl ? stringField(affiliate.network) : undefined,
       canonical_url: canonicalUrl,
       pricing_model: stringField(frontmatter.pricing_model),
       price_range: stringField(frontmatter.price_range),

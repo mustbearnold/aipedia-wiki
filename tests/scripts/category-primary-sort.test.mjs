@@ -58,7 +58,7 @@ test('category pages preserve primary-category tools ahead of secondary matches'
   const routeSource = readFileSync(join(ROOT, 'src/pages/categories/[slug].astro'), 'utf8');
   const layoutSource = readFileSync(join(ROOT, 'src/layouts/CategoryLayout.astro'), 'utf8');
 
-  assert.match(routeSource, /category_match_type:\s*primaryMatch \? 'primary' : 'secondary'/);
+  assert.match(routeSource, /category_match_type:\s*primaryMatch \? 'primary'(?: as const)? : 'secondary'(?: as const)?/);
   assert.match(layoutSource, /categoryMatchRank\(t: ToolData\)/);
   assert.match(layoutSource, /configuredPickCards/);
   assert.doesNotMatch(layoutSource, /reason: typeof raw === 'object' && raw\.reason/);

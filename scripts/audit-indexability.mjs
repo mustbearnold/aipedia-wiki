@@ -16,6 +16,7 @@ const REQUIRED_NOINDEX_PATHS = [
   '/admin/reviews/',
   '/compare/build/',
   '/search/',
+  '/tools/semrush-demo/',
 ];
 
 function argValue(name) {

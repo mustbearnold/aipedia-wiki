@@ -39,11 +39,13 @@ export const GET: APIRoute = async ({ params }) => {
           AND approved = 1
       `,
     ]);
+    const aggRows = Array.isArray(agg) ? agg as Array<{ count?: unknown; avg?: unknown }> : [];
+    const firstAgg = aggRows[0];
 
     return json(
       {
-        count: Number(agg[0]?.count ?? 0),
-        average: agg[0]?.avg ? Math.round(Number(agg[0].avg) * 10) / 10 : null,
+        count: Number(firstAgg?.count ?? 0),
+        average: firstAgg?.avg ? Math.round(Number(firstAgg.avg) * 10) / 10 : null,
         reviews,
       },
       200,

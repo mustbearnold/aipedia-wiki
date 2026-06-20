@@ -1,7 +1,8 @@
 // /llms-full.txt - verbose LLM-friendly site manifest.
-// Lists every active tool with category + tagline, every comparison, every
-// use-case guide. Intended for crawlers willing to ingest a larger manifest
-// to discover the full content map without parsing the sitemap.
+// Lists the major active editorial collections: tools, categories,
+// comparisons, guides, answers, news, trends, workflows, reports, companies,
+// and dead-tool records. Intended for crawlers willing to ingest a larger
+// manifest without parsing the sitemap.
 // Refresh metadata: 2026-06-17 June 17 AI news catch-up after current Google
 // Pixel Drop, Gemini Omni, Microsoft Copilot Cowork, Work IQ billing, AP G7
 // AI sovereignty, official G7 statement, AP NVIDIA, and Coherent source checks;
@@ -380,6 +381,7 @@
 // Refresh metadata: 2026-06-05 Devin comparison slice across GitHub Copilot and Val Town plus Val Town, AI Coding, tools, comparison, category, homepage, source registry, and LLM maintenance; 2026-06-05 Codeium lineage vs GitHub Copilot comparison slice plus Codeium, AI Coding, tools, comparison, category, homepage, source registry, and LLM maintenance; 2026-06-05 Descript voice comparison slice across ElevenLabs, Fish Audio, Resemble AI, and Voxtral plus Descript, ElevenLabs, Fish Audio, Resemble AI, Voxtral, AI Voice, tools, comparison, category, homepage, source registry, and LLM maintenance; 2026-06-05 DeepSeek model-family comparison slice across Gemini, Mistral AI, and Qwen plus DeepSeek, Gemini, Mistral AI, Qwen, AI Chatbots, tools, comparison, category, homepage, source registry, and LLM maintenance; 2026-06-05 Decktopus presentation comparison slice across Gamma, Pitch, and Presentations.AI plus Decktopus, Gamma, Pitch, Presentations.AI, AI Presentation, tools, comparison, category, homepage, source registry, and LLM maintenance; 2026-06-05 Cursor comparison slice across Devin, Gemini, GitHub Copilot, Lovable, Tabnine, v0, Val Town, and Windsurf/Devin Desktop plus Devin, Lovable, Windsurf, AI Coding, AI Design, tools, comparison, category, homepage, source registry, and LLM maintenance; 2026-06-05 Copy.ai writing comparison slice across Grammarly, HyperWrite, QuillBot, Sudowrite, and Wordtune plus QuillBot tool refresh, AI Writing, tools, comparison, category, homepage, source registry, and LLM maintenance; 2026-06-04 Continue comparison slice across Cursor, Devin, GitHub Copilot, and Val Town plus Continue source-controlled AI PR-check tool refresh, AI Coding, tools, comparison, category, homepage, and LLM maintenance; 2026-06-04 research-discovery comparison slice across Connected Papers, Consensus, Elicit, nanochat, Scite, and Semantic Scholar plus nanochat/Semantic Scholar tool refresh, AI Research, tools, comparison, category, homepage, and LLM maintenance; 2026-06-04 Cline/Cody vs Cursor coding comparison slice plus AI Coding, comparison, category, homepage, and LLM maintenance; 2026-06-04 Clay automation comparison slice across Instantly, Intercom, Make, and Zapier plus Make tool, AI Automation, tools, comparison, category, homepage, and LLM maintenance; 2026-06-04 Claude specialist comparison slice across GitHub Copilot, Grammarly, Grok, Jasper, Kimi, Mistral AI, Notion AI, Perplexity, Qwen, and Sudowrite plus AI Coding, AI Writing, AI Chatbots, AI Notes, AI Search, comparison, category, homepage, and LLM maintenance; 2026-06-04 Claude comparison slice across Cline, Cody, Cursor, DeepSeek, Elicit, and Gemini plus AI Coding, AI Chatbots, AI Research, comparison, and LLM surface maintenance; 2026-06-04 Claude Code comparison slice across Continue, Devin, GitHub Copilot, and Val Town plus affected tool/category/top-layer maintenance; 2026-06-04 ChatGPT comparison continuation across Scite, Sudowrite, Surfer SEO, v0, Wordtune, Writesonic, You.com, and Zapier plus affected tool/category/top-layer maintenance; 2026-06-03 AI news catch-up across Microsoft Work IQ, GitHub Copilot SDK/AI Credits, Anthropic Glasswing, OpenAI retirements, Gemini Drive sharing, NVIDIA GTC Taipei, and enterprise-agent policy; 2026-06-03 ChatGPT comparison clusters refresh across Claude, Copy.ai, Cursor, DeepSeek, Elicit, Figma, Fireflies.ai, Gamma, Gemini, GitHub Copilot, GLM, Grammarly, Grok, Hermes Agent, Jasper, Kagi, Kimi, Lovable, MarketMuse, Mem, Mistral AI, NeuronWriter, Notion AI, Otter.ai, and QuillBot plus ChatGPT/category maintenance; 2026-06-03 Cartesia comparison cluster refresh across Descript, ElevenLabs, Fish Audio, Resemble AI, and Voxtral, plus Voxtral TTS/STT correction; 2026-06-03 Capacities comparison cluster refresh across Fireflies.ai, NotebookLM, Obsidian, Otter.ai, and Readwise; 2026-06-03 Canva comparison cluster refresh across ChatGPT, Figma, Google Stitch, Lovable, Midjourney, and v0; 2026-06-02 Aider comparison cluster refresh across Claude Code, Cursor, and GitHub Copilot; Ahrefs comparison cluster refresh across Frase, MarketMuse, NeuronWriter, and Surfer SEO; Adobe Firefly comparison cluster refresh across Canva, Flux, Magnific/Freepik, Ideogram, Midjourney, and Stable Diffusion; company/methodology refresh for Anthropic, ElevenLabs, /404, /about/, /about/scoring, and /companies; active-tool refresh for Canva, Capacities, Captions, Cartesia, Castmagic, Character.AI, ChatPDF, Claude Design, Clay, Clearscope, ClickUp, Clipdrop, Comet, Connected Papers, Consensus, Copy.ai, CrewAI, Deepgram, DeepL, DeepSeek, Descript, Dext, Dia, Doubao, Dust, Eightfold AI, ElevenLabs, Elicit, Exa, fal.ai, Fathom, Figma, Fireflies, Fireworks AI, Fish Audio, Flux, Framer AI, Galileo/Stitch, Genspark, GetResponse, Glean, GLM, Google Stitch, Goose, Grammarly, Granola, Grok, Groq, Gumloop, Hailuo, Harvey, Hedra, Helicone, Hermes Agent, Hex, Higgsfield, hireEZ, Hugging Face, Humata, Hume AI, Hunyuan, HyperWrite, Ideogram, Intercom, and Jan.ai; 2026-06-01 mixed and coding refresh retained.
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
+import { ANSWER_ITEMS } from '../data/answers';
 
 const inactiveStatuses = new Set(['dead', 'retired', 'acquired']);
 
@@ -402,6 +404,10 @@ export const GET: APIRoute = async () => {
   const useCases = await getCollection('use-cases').catch(() => []);
   const companies = await getCollection('companies').catch(() => []);
   const reports = await getCollection('reports').catch(() => []);
+  const news = await getCollection('news').catch(() => []);
+  const trends = await getCollection('trends').catch(() => []);
+  const workflows = await getCollection('workflows').catch(() => []);
+  const dead = await getCollection('dead').catch(() => []);
 
   const activeTools = tools
     .filter(isActive)
@@ -418,10 +424,20 @@ export const GET: APIRoute = async () => {
     .filter(isActive)
     .sort((a: any, b: any) => (a.data.title || '').localeCompare(b.data.title || ''));
 
+  const publicUseCases = useCases.filter((item: any) => item.data.noindex !== true);
+  const sortedNews = [...news].sort((a: any, b: any) => {
+    const dateA = String(a.data.date ?? a.data.last_updated ?? '');
+    const dateB = String(b.data.date ?? b.data.last_updated ?? '');
+    return dateB.localeCompare(dateA);
+  });
+  const sortedTrends = [...trends].filter(isActive).sort((a: any, b: any) => (a.data.title || '').localeCompare(b.data.title || ''));
+  const sortedWorkflows = [...workflows].filter(isActive).sort((a: any, b: any) => (a.data.title || '').localeCompare(b.data.title || ''));
+  const sortedDead = [...dead].sort((a: any, b: any) => (a.data.title || '').localeCompare(b.data.title || ''));
+
   const lines: string[] = [];
   lines.push('# aipedia.wiki full manifest');
   lines.push('');
-  lines.push('> Extended LLM-friendly site manifest. Enumerates every active page across tools, categories, comparisons, buyer guides, and companies. See /llms.txt for the concise version.');
+  lines.push('> Extended LLM-friendly site manifest. Enumerates the major active editorial collections across tools, categories, comparisons, buyer guides, answers, news, trends, workflows, reports, companies, and dead-tool records. It does not claim to list every utility, API, prototype, or static policy page. See /llms.txt for the concise version.');
   lines.push('');
   lines.push('Recent news refresh: June 17, 2026 filled the active June date gap with the June 17 AI News Desk plus Google Pixel/Gemini, Microsoft Copilot Cowork, G7 AI sovereignty, and NVIDIA AI infrastructure coverage, updating news archive, RSS, ledger, and LLM maintenance around phone-native Gemini creation, metered workplace agents, sovereign model-access risk, and compute-capacity procurement checks.');
   lines.push('Recent answer refresh: June 16, 2026 refreshed the best AI image generator answer plus answers index, homepage/explore comments, source registry cleanup, ledger, and LLM maintenance around ChatGPT with GPT Image 2 as the default, Midjourney for art direction, Ideogram for typography, Adobe Firefly for Adobe-governed creative, and Flux/Stable Diffusion/API-first routes for control-heavy workflows.');
@@ -527,11 +543,58 @@ export const GET: APIRoute = async () => {
   lines.push('- [Affiliate Disclosure](https://aipedia.wiki/disclosure/)');
   lines.push('');
 
+  if (ANSWER_ITEMS.length > 0) {
+    lines.push('## Answers');
+    lines.push('');
+    lines.push(`Short decision-answer pages: ${ANSWER_ITEMS.length}.`);
+    lines.push('');
+    for (const answer of ANSWER_ITEMS) {
+      lines.push(`- [${answer.q}](https://aipedia.wiki/answers/${answer.slug}/)${answer.a ? `: ${answer.a}` : ''}`);
+    }
+    lines.push('');
+  }
+
+  if (sortedNews.length > 0) {
+    lines.push('## News archive');
+    lines.push('');
+    lines.push(`News stories: ${sortedNews.length}. Ordered newest first and verified against primary sources or named reporting.`);
+    lines.push('');
+    for (const item of sortedNews) {
+      const slug = item.data.slug || item.id?.replace(/\.md$/, '');
+      const date = item.data.date ? String(item.data.date).slice(0, 10) : '';
+      const summary = excerpt(item.data.summary || item.data.description || '', 180);
+      lines.push(`- [${item.data.title}](https://aipedia.wiki/news/${slug}/)${date ? ` (${date})` : ''}${summary ? `: ${summary}` : ''}`);
+    }
+    lines.push('');
+  }
+
+  if (sortedTrends.length > 0) {
+    lines.push('## Trend analysis');
+    lines.push('');
+    for (const trend of sortedTrends) {
+      const slug = trend.data.slug || trend.id?.replace(/\.md$/, '');
+      const desc = excerpt(trend.data.meta_description || trend.data.description || '', 180);
+      lines.push(`- [${trend.data.title}](https://aipedia.wiki/trends/${slug}/)${desc ? `: ${desc}` : ''}`);
+    }
+    lines.push('');
+  }
+
+  if (sortedWorkflows.length > 0) {
+    lines.push('## Workflow stacks');
+    lines.push('');
+    for (const workflow of sortedWorkflows) {
+      const slug = workflow.data.slug || workflow.id?.replace(/\.md$/, '');
+      const desc = excerpt(workflow.data.meta_description || workflow.data.description || '', 180);
+      lines.push(`- [${workflow.data.title}](https://aipedia.wiki/workflows/${slug}/)${desc ? `: ${desc}` : ''}`);
+    }
+    lines.push('');
+  }
+
   if (activeCategories.length > 0) {
     lines.push('## Category hubs');
     lines.push('');
     for (const cat of activeCategories) {
-      const slug = cat.slug || cat.id?.replace(/\.md$/, '');
+      const slug = cat.data.slug || cat.id?.replace(/\.md$/, '');
       const desc = excerpt(cat.data.description || cat.data.tagline || '', 160);
       lines.push(`- [${cat.data.title}](https://aipedia.wiki/categories/${slug}/)${desc ? `: ${desc}` : ''}`);
     }
@@ -547,7 +610,7 @@ export const GET: APIRoute = async () => {
       lines.push(`### ${cat}`);
       lines.push('');
       for (const t of catTools) {
-        const slug = t.slug || t.id?.replace(/\.md$/, '');
+        const slug = t.data.slug || t.id?.replace(/\.md$/, '');
         const tagline = excerpt(t.data.tagline || '', 180);
         lines.push(`- [${t.data.title}](https://aipedia.wiki/tools/${slug}/)${tagline ? `: ${tagline}` : ''}`);
       }
@@ -560,18 +623,18 @@ export const GET: APIRoute = async () => {
     lines.push('');
     const sortedComparisons = [...comparisons].sort((a: any, b: any) => (a.data.title || '').localeCompare(b.data.title || ''));
     for (const c of sortedComparisons) {
-      const slug = c.slug || c.id?.replace(/\.md$/, '');
+      const slug = c.data.slug || c.id?.replace(/\.md$/, '');
       lines.push(`- [${c.data.title}](https://aipedia.wiki/compare/${slug}/)`);
     }
     lines.push('');
   }
 
-  if (useCases.length > 0) {
+  if (publicUseCases.length > 0) {
     lines.push('## Guides');
     lines.push('');
-    const sortedUseCases = [...useCases].sort((a: any, b: any) => (a.data.title || '').localeCompare(b.data.title || ''));
+    const sortedUseCases = [...publicUseCases].sort((a: any, b: any) => (a.data.title || '').localeCompare(b.data.title || ''));
     for (const u of sortedUseCases) {
-      const slug = u.slug || u.id?.replace(/\.md$/, '');
+      const slug = u.data.slug || u.id?.replace(/\.md$/, '');
       lines.push(`- [${u.data.title}](https://aipedia.wiki/guides/${slug}/)`);
     }
     lines.push('');
@@ -594,8 +657,19 @@ export const GET: APIRoute = async () => {
     lines.push('');
     const sortedCompanies = [...companies].sort((a: any, b: any) => (a.data.title || '').localeCompare(b.data.title || ''));
     for (const co of sortedCompanies) {
-      const slug = co.slug || co.id?.replace(/\.md$/, '');
+      const slug = co.data.slug || co.id?.replace(/\.md$/, '');
       lines.push(`- [${co.data.title}](https://aipedia.wiki/companies/${slug}/)`);
+    }
+    lines.push('');
+  }
+
+  if (sortedDead.length > 0) {
+    lines.push('## Dead tools and migrations');
+    lines.push('');
+    for (const item of sortedDead) {
+      const slug = item.data.slug || item.id?.replace(/\.md$/, '');
+      const desc = excerpt(item.data.meta_description || item.data.description || item.data.cause || '', 180);
+      lines.push(`- [${item.data.title}](https://aipedia.wiki/dead/${slug}/)${desc ? `: ${desc}` : ''}`);
     }
     lines.push('');
   }

@@ -18,7 +18,9 @@ const entries = await getCollection('glossary');
 const entry = entries[0];
 const body = glossaryRaw.replace(/^---\s*[\s\S]*?\s*---\s*/, '');
 const title = entry.data.title ?? 'AI Tools Glossary';
-const description = entry.data.description ?? 'Definitions of key AI terms used throughout the AI tools wiki.';
+const description = typeof entry.data.description === 'string'
+  ? entry.data.description
+  : 'Definitions of key AI terms used throughout the AI tools wiki.';
 const toDateString = (value: unknown) => {
   if (value instanceof Date) return value.toISOString().slice(0, 10);
   return String(value ?? '2026-04-17').slice(0, 10);

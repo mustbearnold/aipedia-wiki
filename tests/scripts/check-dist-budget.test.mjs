@@ -69,6 +69,53 @@ test('dist budget checker passes against a complete small fixture', () => {
   }
 });
 
+test('dist budget checker skips Pagefind only for fast build output', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-fast-dist-budget-'));
+  mkdirSync(join(dir, 'tools'), { recursive: true });
+  writeFileSync(join(dir, 'index.html'), '<!doctype html><title>AiPedia</title>\n');
+  writeFileSync(join(dir, 'tools', 'index.html'), '<!doctype html><title>Tools</title>\n');
+
+  try {
+    const fastResult = runDistBudgetArgs(['--json', '--site-dir', dir, '--mode', 'fast']);
+
+    assert.equal(fastResult.status, 0, `stdout:\n${fastResult.stdout}\nstderr:\n${fastResult.stderr}`);
+    const fastReport = JSON.parse(fastResult.stdout);
+    assert.equal(fastReport.ok, true);
+    assert.equal(fastReport.build_mode, 'fast');
+    assert.ok(fastReport.items.some((item) => item.label === 'pagefind' && item.skipped === true));
+
+    const fullResult = runDistBudgetArgs(['--json', '--site-dir', dir, '--mode', 'full']);
+
+    assert.equal(fullResult.status, 2);
+    const fullReport = JSON.parse(fullResult.stdout);
+    assert.equal(fullReport.ok, false);
+    assert.equal(fullReport.build_mode, 'full');
+    assert.ok(fullReport.issues.some((issue) => issue.code === 'built-artifact-missing' && issue.label === 'pagefind'));
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('dist budget checker treats dist-fast paths as fast output in auto mode', () => {
+  const projectDir = mkdtempSync(join(tmpdir(), 'aipedia-fast-dist-project-'));
+  const siteDir = join(projectDir, 'dist-fast');
+  mkdirSync(join(siteDir, 'tools'), { recursive: true });
+  writeFileSync(join(siteDir, 'index.html'), '<!doctype html><title>AiPedia</title>\n');
+  writeFileSync(join(siteDir, 'tools', 'index.html'), '<!doctype html><title>Tools</title>\n');
+
+  try {
+    const result = runDistBudgetArgs(['--json', '--project-dir', projectDir, '--site-dir', 'dist-fast']);
+
+    assert.equal(result.status, 0, `stdout:\n${result.stdout}\nstderr:\n${result.stderr}`);
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.build_mode, 'fast');
+    assert.equal(report.site_dir, resolve(siteDir));
+    assert.ok(report.items.some((item) => item.label === 'pagefind' && item.skipped === true));
+  } finally {
+    rmSync(projectDir, { recursive: true, force: true });
+  }
+});
+
 test('dist budget checker emits structured JSON for complete fixtures', () => {
   const dir = writeValidBuiltSiteFixture();
 
@@ -164,6 +211,11 @@ test('dist budget checker rejects invalid fixture arguments', () => {
   assert.equal(conflictingRoot.status, 2);
   const conflictingRootReport = JSON.parse(conflictingRoot.stdout);
   assert.ok(conflictingRootReport.argument_issues.some((issue) => issue.code === 'argument-invalid' && /choose only one of --project-dir or --root/.test(issue.detail)));
+
+  const invalidMode = runDistBudgetArgs(['--json', '--mode', 'preview']);
+  assert.equal(invalidMode.status, 2);
+  const invalidModeReport = JSON.parse(invalidMode.stdout);
+  assert.ok(invalidModeReport.argument_issues.some((issue) => issue.code === 'argument-invalid' && /--mode must be one of auto, full, or fast/.test(issue.detail)));
 });
 
 test('dist budget checker prints CLI help', () => {
@@ -174,4 +226,5 @@ test('dist budget checker prints CLI help', () => {
   assert.match(result.stdout, /--json/);
   assert.match(result.stdout, /--site-dir <dir>/);
   assert.match(result.stdout, /--project-dir <dir>/);
+  assert.match(result.stdout, /--mode <auto\|full\|fast>/);
 });

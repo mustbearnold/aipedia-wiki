@@ -6,10 +6,10 @@ tools: [claude, perplexity]
 category: ai-search
 winner: depends
 seo_title: "Claude vs Perplexity: assistant or cited research engine? (June 2026)"
-meta_description: "Claude vs Perplexity, verified June 12, 2026: compare Claude Opus 4.8 with Perplexity Pro, Enterprise Pro, Enterprise Max, cited search, model choice, and API research workflows."
+meta_description: "Claude vs Perplexity, verified June 20, 2026: compare Claude Opus 4.8 with Perplexity Pro, Enterprise Pro, Enterprise Max, cited search, model choice, and API research workflows."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-20
+last_verified: 2026-06-20
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -18,7 +18,7 @@ canonical_fact_table: true
 
 [Claude](/tools/claude/) is the better assistant for deep reasoning, writing, coding, and long-document work. [Perplexity](/tools/perplexity/) is the better first stop for cited web research, source-backed answers, market scans, and finding the primary sources that should feed a final decision.
 
-**Verified June 12, 2026:** Claude's current model docs list Opus 4.8 as Anthropic's top complex-reasoning and agentic-coding model. Perplexity's current Enterprise pricing page lists Pro at $20/month or $200/year, Enterprise Pro at $40/seat/month or $400/year, and Enterprise Max at $325/seat/month or $3,250/year, with annual equivalents shown as $17, $34, and $271 per month. The page also lists model choice across GPT, Claude, Gemini, and more, plus cited search, file/app search, deep research, Spaces, Comet, and team controls.
+**Verified June 20, 2026:** Claude's current model docs list Opus 4.8 as Anthropic's top complex-reasoning and agentic-coding model. Perplexity's current Enterprise pricing page lists Pro at $20/month or $200/year, Enterprise Pro at $40/seat/month or $400/year, and Enterprise Max at $325/seat/month or $3,250/year, with annual equivalents shown as $17, $34, and $271 per month. The page also lists model choice across GPT, Claude, Gemini, and more, plus cited search, file/app search, deep research, Spaces, Comet, and team controls.
 
 ## Quick Answer
 
@@ -111,15 +111,15 @@ Perplexity first if source discovery is the bottleneck. Claude first if writing 
 
 ## Sources
 
-- [Claude pricing](https://claude.com/pricing)
-- [Anthropic model docs](https://platform.claude.com/docs/en/about-claude/models/overview)
-- [Anthropic API pricing](https://platform.claude.com/docs/en/about-claude/pricing)
-- [Perplexity Pro](https://www.perplexity.ai/pro)
-- [Perplexity Enterprise pricing](https://www.perplexity.ai/enterprise/pricing)
-- [Perplexity API pricing](https://docs.perplexity.ai/docs/getting-started/pricing)
+- [Claude pricing](https://claude.com/pricing) (verified 2026-06-20)
+- [Anthropic model docs](https://platform.claude.com/docs/en/about-claude/models/overview) (verified 2026-06-20)
+- [Anthropic API pricing](https://platform.claude.com/docs/en/about-claude/pricing) (verified 2026-06-20)
+- [Perplexity Pro](https://www.perplexity.ai/pro) (verified 2026-06-20)
+- [Perplexity Enterprise pricing](https://www.perplexity.ai/enterprise/pricing) (verified 2026-06-20)
+- [Perplexity API pricing](https://docs.perplexity.ai/docs/getting-started/pricing) (verified 2026-06-20)
 
 ## Related
 
 - **Tool pages:** [Claude](/tools/claude/) | [Perplexity](/tools/perplexity/)
 - **Category:** [AI Search](/categories/ai-search/)
-- **Comparisons:** [ChatGPT vs Perplexity](/compare/chatgpt-vs-perplexity/) | [Claude vs Grok](/compare/claude-vs-grok/) | [Claude vs Notion AI](/compare/claude-vs-notion-ai/)
+- **Comparisons:** [Perplexity vs ChatGPT](/compare/perplexity-vs-chatgpt/) | [Claude vs Grok](/compare/claude-vs-grok/) | [Claude vs Notion AI](/compare/claude-vs-notion-ai/)

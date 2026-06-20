@@ -45,7 +45,7 @@ const matchingTools = allTools
       scores: t.data.scores,
       tagline: t.data.tagline,
       quick_answer: (t.data as any).quick_answer,
-      category_match_type: primaryMatch ? 'primary' : 'secondary',
+      category_match_type: primaryMatch ? 'primary' as const : 'secondary' as const,
     }];
   });
 ---

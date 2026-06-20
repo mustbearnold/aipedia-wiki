@@ -34,7 +34,7 @@ interface ToolData {
   price_range?: string;
   pricing_model?: string;
   status?: string;
-  affiliate?: { link?: string | null; network?: string | null } | null;
+  affiliate?: { link?: string | null; network?: string | null; application_status?: string | null } | null;
   scores?: { utility?: number; value?: number; moat?: number; longevity?: number };
   tagline?: string;
   quick_answer?: string;
@@ -115,12 +115,13 @@ const configuredPickCards = configuredTopPicks
         if (!tool || usedConfiguredPickSlugs.has(tool.slug)) return undefined;
         usedConfiguredPickSlugs.add(tool.slug);
         return {
+          key,
           label: typeof raw === 'object' && raw.label ? raw.label : label,
           placement,
           tool,
         };
       })
-      .filter(Boolean) as Array<{ label: string; placement: string; tool: ToolData }>
+      .filter(Boolean) as Array<{ key: keyof CategoryTopPicks; label: string; placement: string; tool: ToolData }>
   : [];
 
 const buyerPathPicks = decisionPicks
@@ -142,11 +143,39 @@ const buyerPathEvidence = buyerPathPicks.length > 0
     })
   : undefined;
 
-const topPick = configuredPickCards[0]?.tool ?? sorted[0];
+function firstUnusedPick(predicate: (tool: ToolData) => boolean, used: Set<string>): ToolData | undefined {
+  const found = sorted.find((tool) => !used.has(tool.slug) && predicate(tool));
+  if (found) {
+    used.add(found.slug);
+    return found;
+  }
+  const fallback = sorted.find((tool) => !used.has(tool.slug)) ?? sorted[0];
+  if (fallback) used.add(fallback.slug);
+  return fallback;
+}
+
+const quickPickUsed = new Set<string>();
+const configuredBestOverall = configuredPickCards.find((pick) => pick.key === 'best_overall')?.tool;
+const bestOverallPick = configuredBestOverall ?? firstUnusedPick(() => true, quickPickUsed);
+if (bestOverallPick) quickPickUsed.add(bestOverallPick.slug);
+const configuredBudget = configuredPickCards.find((pick) => pick.key === 'budget')?.tool;
+const budgetPick = configuredBudget ?? firstUnusedPick((tool) => ['free', 'freemium', 'open-source'].includes(String(tool.pricing_model ?? '')), quickPickUsed);
+if (budgetPick) quickPickUsed.add(budgetPick.slug);
+const configuredProTeam = configuredPickCards.find((pick) => pick.key === 'pro_team')?.tool;
+const proTeamPick = configuredProTeam ?? firstUnusedPick((tool) => ['paid', 'enterprise'].includes(String(tool.pricing_model ?? '')), quickPickUsed);
+if (proTeamPick) quickPickUsed.add(proTeamPick.slug);
+const quickPickCards = [
+  { key: 'best_overall', label: configuredPickCards.find((pick) => pick.key === 'best_overall')?.label ?? 'Best overall', placement: 'category_top_pick', tool: bestOverallPick },
+  { key: 'budget', label: configuredPickCards.find((pick) => pick.key === 'budget')?.label ?? 'Best free or budget', placement: 'category_decision_budget', tool: budgetPick },
+  { key: 'pro_team', label: configuredPickCards.find((pick) => pick.key === 'pro_team')?.label ?? 'Best pro or team', placement: 'category_decision_pro_team', tool: proTeamPick },
+].filter((pick): pick is { key: string; label: string; placement: string; tool: ToolData } => Boolean(pick.tool));
+
+const topPick = bestOverallPick ?? sorted[0];
+const topPickIsAffiliate = topPick?.affiliate?.application_status === 'approved' && Boolean(topPick.affiliate?.link);
 const topPickScore = topPick ? overallScore(topPick) : 0;
 const topScoreBand = bandFor(topPickScore);
 const topPickCard = configuredPickCards.find((pick) => pick.tool.slug === topPick?.slug);
-const tierPickCards = configuredPickCards
+const tierPickCards = quickPickCards
   .filter((pick) => pick.tool.slug !== topPick?.slug)
   .slice(0, 2);
 
@@ -180,7 +209,7 @@ const rankLabel = sorted.length > 0 ? `${sorted.length} tools verified` : undefi
   description={description}
 >
   <BreadcrumbLD items={breadcrumbLdItems} />
-  <ItemListLD items={itemListItems} listName={`${title} — AI Tools`} pageUrl={`${siteBase}categories/${slug}/`} />
+  <ItemListLD name={`${title}: AI Tools`} description={description} items={itemListItems} siteBase={siteBase} />
 
   <div class="sr-only" data-pagefind-ignore>
     <span data-pagefind-filter="Type">Category</span>
@@ -207,7 +236,7 @@ const rankLabel = sorted.length > 0 ? `${sorted.length} tools verified` : undefi
         statusActive={true}
         statusLabel={topPickCard?.label ?? 'Top pick'}
         price={topPick.price_range}
-        affiliate={Boolean(topPick.affiliate?.link)}
+        affiliate={topPickIsAffiliate}
         eyebrow={topPickCard?.label}
         title={topPick.title}
         description={topPick.tagline}
@@ -218,6 +247,7 @@ const rankLabel = sorted.length > 0 ? `${sorted.length} tools verified` : undefi
           toolSlug={topPick.slug}
           canonicalUrl={topPick.url ?? null}
           affiliateUrl={topPick.affiliate?.link ?? null}
+          affiliateStatus={topPick.affiliate?.application_status ?? null}
           affiliateProgram={topPick.affiliate?.network ?? null}
           pricingModel={topPick.pricing_model ?? null}
           priceRange={topPick.price_range ?? null}
@@ -226,7 +256,7 @@ const rankLabel = sorted.length > 0 ? `${sorted.length} tools verified` : undefi
           pageSlug={slug}
           categorySlug={slug}
           className="gt-btn gt-btn-primary"
-          showDisclosure={Boolean(topPick.affiliate?.link)}
+          showDisclosure={topPickIsAffiliate}
           categoryCtaMarker
           arrow="→"
         />
@@ -248,10 +278,10 @@ const rankLabel = sorted.length > 0 ? `${sorted.length} tools verified` : undefi
 
     {tierPickCards.length > 0 && (
       <section class="gt-category-tiers" aria-labelledby="gt-category-tiers-h">
-        <h2 id="gt-category-tiers-h" class="gt-section-h">Fast CTA picks</h2>
+        <h2 id="gt-category-tiers-h" class="gt-section-h">Quick paths</h2>
         <div class="gt-category-tier-grid">
           {tierPickCards.map((pick) => {
-            const isAffiliate = Boolean(pick.tool.affiliate?.link);
+            const isAffiliate = pick.tool.affiliate?.application_status === 'approved' && Boolean(pick.tool.affiliate?.link);
             return (
               <article class="gt-category-tier-card">
                 <p class="gt-category-tier-kicker">{pick.label}</p>
@@ -261,6 +291,7 @@ const rankLabel = sorted.length > 0 ? `${sorted.length} tools verified` : undefi
                   toolSlug={pick.tool.slug}
                   canonicalUrl={pick.tool.url ?? null}
                   affiliateUrl={pick.tool.affiliate?.link ?? null}
+                  affiliateStatus={pick.tool.affiliate?.application_status ?? null}
                   affiliateProgram={pick.tool.affiliate?.network ?? null}
                   label={`See ${pick.tool.title} plans`}
                   pricingModel={pick.tool.pricing_model ?? null}
@@ -379,7 +410,7 @@ const rankLabel = sorted.length > 0 ? `${sorted.length} tools verified` : undefi
         {sorted.map((t, i) => {
           const score = overallScore(t);
           const tone = score >= 8 ? 'positive' : score >= 6.5 ? 'neutral' : 'negative';
-          const isAffiliate = Boolean(t.affiliate?.link);
+          const isAffiliate = t.affiliate?.application_status === 'approved' && Boolean(t.affiliate?.link);
           // Render an inline CommercialCTA on every tool so affiliate
           // links surface no matter how a tool is ranked. Visually
           // light — small secondary button below the link row.
@@ -416,6 +447,7 @@ const rankLabel = sorted.length > 0 ? `${sorted.length} tools verified` : undefi
                     toolSlug={t.slug}
                     canonicalUrl={t.url ?? null}
                     affiliateUrl={t.affiliate?.link ?? null}
+                    affiliateStatus={t.affiliate?.application_status ?? null}
                     affiliateProgram={t.affiliate?.network ?? null}
                     pricingModel={t.pricing_model ?? null}
                     priceRange={t.price_range ?? null}

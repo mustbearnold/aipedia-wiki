@@ -26,7 +26,7 @@ interface ToolData {
   url?: string;
   price_range?: string;
   pricing_model?: string;
-  affiliate?: { link?: string | null; network?: string | null } | null;
+  affiliate?: { link?: string | null; network?: string | null; application_status?: string | null } | null;
   scores?: { utility?: number; value?: number; moat?: number; longevity?: number };
 }
 
@@ -102,7 +102,11 @@ const heroBreadcrumbs = breadcrumbs
     ]
   : [{ label: 'aipedia', href: '/' }, { label: title }];
 
-const affiliateStack = stack.filter((t) => Boolean(t.affiliate?.link));
+function isApprovedAffiliate(t: ToolData): boolean {
+  return t.affiliate?.application_status === 'approved' && Boolean(t.affiliate?.link);
+}
+
+const affiliateStack = stack.filter(isApprovedAffiliate);
 const nonAffiliateStack = stack.filter((t) => !t.affiliate?.link);
 
 // Pick the lead affiliate tool for the sticky mobile CTA. Use the first
@@ -194,6 +198,7 @@ const relatedItems = related.length > 0 ? related : fallbackRelated;
               toolSlug={leadTool.slug}
               canonicalUrl={leadTool.url ?? null}
               affiliateUrl={leadTool.affiliate?.link ?? null}
+              affiliateStatus={leadTool.affiliate?.application_status ?? null}
               affiliateProgram={leadTool.affiliate?.network ?? null}
               label={`Start ${leadTool.title}`}
               pricingModel={leadTool.pricing_model ?? null}
@@ -202,7 +207,7 @@ const relatedItems = related.length > 0 ? related : fallbackRelated;
               placement="workflow_primary_start"
               pageSlug={slug}
               className="gt-btn gt-btn-primary wf-snapshot-cta"
-              showDisclosure={Boolean(leadTool.affiliate?.link)}
+              showDisclosure={isApprovedAffiliate(leadTool)}
               arrow="→"
             />
           )}
@@ -228,7 +233,7 @@ const relatedItems = related.length > 0 ? related : fallbackRelated;
         <p class="wf-stack-intro">Buy by bottleneck. Each card shows the role, current price signal, direct path, and review link.</p>
         <div class="wf-stack-grid">
           {stack.map((t, index) => {
-            const isAffiliate = Boolean(t.affiliate?.link);
+            const isAffiliate = isApprovedAffiliate(t);
             return (
               <article class={`wf-stack-card ${isAffiliate ? 'wf-stack-card-affiliate' : ''}`}>
                 <header class="wf-stack-card-head">
@@ -252,6 +257,7 @@ const relatedItems = related.length > 0 ? related : fallbackRelated;
                     toolSlug={t.slug}
                     canonicalUrl={t.url ?? null}
                     affiliateUrl={t.affiliate?.link ?? null}
+                    affiliateStatus={t.affiliate?.application_status ?? null}
                     affiliateProgram={t.affiliate?.network ?? null}
                     label={isAffiliate ? `Start ${t.title}` : `See ${t.title} plans`}
                     pricingModel={t.pricing_model ?? null}
@@ -308,15 +314,16 @@ const relatedItems = related.length > 0 ? related : fallbackRelated;
     <FeedbackForm toolName={title} />
   </div>
 
-  {stickyTool && stickyTool.affiliate?.link && (
+  {stickyTool && (stickyTool.url || stickyTool.affiliate?.link) && (
     <StickyCTA
       title={stickyTool.title}
       price={stickyTool.price_range ?? undefined}
-      cta={{ label: `Try ${stickyTool.title}`, href: stickyTool.affiliate.link, external: true }}
+      cta={{ label: `Try ${stickyTool.title}`, href: stickyTool.affiliate?.link ?? stickyTool.url ?? '', external: true }}
       toolName={stickyTool.title}
       toolSlug={stickyTool.slug}
       canonicalUrl={stickyTool.url ?? null}
-      affiliateUrl={stickyTool.affiliate.link}
+      affiliateUrl={stickyTool.affiliate?.link ?? null}
+      affiliateStatus={stickyTool.affiliate?.application_status ?? null}
       affiliateProgram={stickyTool.affiliate?.network ?? null}
       pricingModel={stickyTool.pricing_model ?? null}
       priceRange={stickyTool.price_range ?? null}

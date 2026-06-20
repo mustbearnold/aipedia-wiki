@@ -2,6 +2,39 @@
 
 Keep this file short. Archive completed plans under `.agent/archive/` once their final report is written.
 
+## Active: June 2026 Standards Remediation
+
+### Objective
+
+Fix the June 2026 comprehensive review findings across content provenance, commercial trust, mobile-first UX, SEO crawl surfaces, and build/CI verification, then run an independent re-review.
+
+### Scope
+
+- Refresh stale Semrush and related provenance records with current June 2026 sources.
+- Gate affiliate URLs by approved status and keep disclosure visible near commercial CTAs.
+- Broaden internal-link audits and fix known broken routes.
+- Bring tool, category, and comparison mobile first screens into line with AiPedia law.
+- Align Node/build/CI checks so local, CI, and Vercel expectations do not drift.
+
+### Verification
+
+- Focused lane tests and audits during implementation.
+- `npm run check:quick`
+- `npm run check`
+- `npm run build`
+- `npm run check:dist`
+- Mobile/browser probes for affected rendered pages.
+- Parallel standards/spec re-review before commit.
+
+### Status
+
+- 2026-06-20: Started implementation from the June 2026 remediation spec with four parallel workers.
+- 2026-06-20: First re-review completed; follow-up fixes added for Semrush demo noindex/sitemap exclusion, glossary link coverage, all-route commercial CTA discovery, explicit lint/typecheck scripts, full local `ship:check`, and affected parent hub ledger metadata.
+- 2026-06-20: Second read-only standards/spec re-review found fast-only CI, unmarked affiliate-link risk, and stale top-layer ledger evidence. Follow-up fixes now require full `npm run build` plus `npm run check:dist` in CI, scan known partner URLs even when an anchor lacks `data-commercial-cta`, and refresh `/workflows/`, `/explore/`, `/answers/`, and `/trends/` ledger metadata. `npm run typecheck` covers active Astro/server surfaces while `tsconfig.typecheck.json` documents the legacy search client-script and archived `.legacy.astro` baseline debt through `scripts/README.md`.
+- 2026-06-20: Final four-lane read-only re-review ran across standards, spec closeout, commercial trust, and CI/tooling. Follow-up fixes updated `/categories/ai-seo/`, `/compare/claude-vs-perplexity/`, and `/tools/clearscope/` to June 20 visible verification metadata, aligned source-registry timestamps for the rechecked sources, suppressed legacy affiliate CTAs when no approved affiliate URL exists, and gated `data-cta-affiliate-program` to true affiliate clicks only. Focused closeout checks passed: `npm run ledger:pages:check`, `node scripts/audit-commercial-cta.mjs`, `node --test tests/scripts/audit-commercial-cta.test.mjs tests/scripts/tool-page-model-behavior.test.mjs`, `npm run audit:provenance:changed`, `npm run audit:coverage-quality:changed`, `npm run audit:commands`, and `git diff --check`.
+- 2026-06-20: Full final gate passed with `npm run check:ci`, covering lint/guards, typecheck, script tests, command audit, quick assets, full checks, changed provenance and comparison audits, production build, Pagefind, indexability, commercial CTA audit, and dist budgets.
+- 2026-06-20: Final confirmation pass returned no remaining P0/P1/P2 findings after spec whitespace cleanup and the last commercial metadata fixes in stack builder and `StickyMobileCTA`. Re-ran `npm run check:ci` after those rendered CTA changes; it passed again, with GitHub stats falling back to stale cached values because the GitHub API rate limit was exceeded.
+
 ## Active: Guard Challenge Workflow
 
 ### Goal

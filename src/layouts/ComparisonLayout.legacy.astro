@@ -390,6 +390,7 @@ const tocHeadings = (headings ?? []).filter((h) => h.depth === 2).map((h) => ({ 
                 toolSlug={scoreLeader.slug}
                 canonicalUrl={scoreLeader.url}
                 affiliateUrl={scoreLeader.affiliate?.link}
+                affiliateStatus={scoreLeader.affiliate?.application_status}
                 affiliateProgram={scoreLeader.affiliate?.network}
                 label={ctaLabel(scoreLeader)}
                 pricingModel={scoreLeader.pricing_model}
@@ -490,6 +491,7 @@ const tocHeadings = (headings ?? []).filter((h) => h.depth === 2).map((h) => ({ 
               toolSlug={t.slug}
               canonicalUrl={t.url}
               affiliateUrl={t.affiliate?.link}
+              affiliateStatus={t.affiliate?.application_status}
               affiliateProgram={t.affiliate?.network}
               label={label}
               pricingModel={t.pricing_model}
@@ -534,6 +536,7 @@ const tocHeadings = (headings ?? []).filter((h) => h.depth === 2).map((h) => ({ 
                   toolSlug={tool.slug}
                   canonicalUrl={tool.url}
                   affiliateUrl={tool.affiliate?.link}
+                  affiliateStatus={tool.affiliate?.application_status}
                   affiliateProgram={tool.affiliate?.network}
                   label={ctaLabel(tool)}
                   pricingModel={tool.pricing_model}

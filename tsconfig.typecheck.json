@@ -1,0 +1,18 @@
+{
+  "extends": "./tsconfig.json",
+  "exclude": [
+    "dist",
+    "dist-fast",
+    "node_modules",
+    "public/pagefind",
+    "src/components/SearchModal.astro",
+    "src/components/SearchModal.legacy.astro",
+    "src/legacy-pages",
+    "src/layouts/*.legacy.astro",
+    "src/pages/index.astro",
+    "src/pages/prototype",
+    "src/pages/prototypes",
+    "src/pages/search.astro",
+    "tests"
+  ]
+}

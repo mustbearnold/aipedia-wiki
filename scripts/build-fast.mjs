@@ -59,4 +59,11 @@ const commercialCtaAuditResult = spawnSync(process.execPath, ['scripts/audit-com
   stdio: 'inherit',
 });
 
-process.exit(commercialCtaAuditResult.status ?? 1);
+if ((commercialCtaAuditResult.status ?? 1) !== 0) process.exit(commercialCtaAuditResult.status ?? 1);
+
+const distBudgetResult = spawnSync(process.execPath, ['scripts/check-dist-budget.mjs', '--site-dir', fastStaticDir, '--mode', 'fast'], {
+  cwd: PROJECT_DIR,
+  stdio: 'inherit',
+});
+
+process.exit(distBudgetResult.status ?? 1);

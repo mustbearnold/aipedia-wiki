@@ -6,12 +6,15 @@ import { join, resolve } from 'node:path';
 import { test } from 'node:test';
 
 const REQUIRED_SCRIPTS = [
+  'audit:coverage-quality:changed',
+  'audit:provenance:changed',
   'build',
   'build:fast',
   'check',
   'check:assets',
   'check:assets:quick',
   'check:ci',
+  'check:dist',
   'check:hosting',
   'check:links',
   'check:news',
@@ -21,6 +24,7 @@ const REQUIRED_SCRIPTS = [
   'guard:challenge',
   'guard:challenge:check',
   'guard:check',
+  'lint',
   'prebuild',
   'db:migrate',
   'db:migrate:check',
@@ -29,6 +33,7 @@ const REQUIRED_SCRIPTS = [
   'editorial:weekly',
   'ship:check',
   'test:scripts',
+  'typecheck',
   'ledger:pages',
   'vercel:env:pull',
 ];
@@ -42,13 +47,20 @@ function writeFixtureProject(workflows, scriptOverrides = {}) {
   scripts['check:assets:quick'] =
     'node scripts/prep-favicons.mjs --check && node scripts/generate-og-svgs.mjs --check --limit 5 && node scripts/generate-og-news.mjs --check --limit 2 && node scripts/optimize-og-images.mjs --check --limit 20 && node scripts/generate-logo-manifest.mjs --check';
   scripts['check:quick'] = 'npm run test:scripts && npm run audit:commands && npm run check:assets:quick';
-  scripts['check:ci'] = 'npm run check:quick && npm run check && npm run build:fast';
-  scripts['ship:check'] = 'npm run check:quick && npm run check && npm run build:fast';
+  scripts.lint = 'npm run guard:check';
+  scripts.typecheck = 'npm exec --yes --package=node@24 -- node node_modules/astro/bin/astro.mjs check --tsconfig tsconfig.typecheck.json --minimumSeverity error';
+  scripts['check:dist'] = 'node scripts/check-dist-budget.mjs && node scripts/audit-indexability.mjs && node scripts/audit-commercial-cta.mjs';
+  scripts['check:ci'] = 'npm run lint && npm run typecheck && npm run check:quick && npm run check && npm run audit:provenance:changed && npm run audit:coverage-quality:changed && npm run build && npm run check:dist';
+  scripts['ship:check'] = 'npm run lint && npm run typecheck && npm run check:quick && npm run check && npm run audit:provenance:changed && npm run audit:coverage-quality:changed && npm run build && npm run check:dist';
   scripts['guard:check'] =
     'node scripts/guard-content.mjs && node scripts/guard-stale-facts.mjs && node scripts/guard-em-dashes.mjs && node scripts/audit-guide-picks.mjs && node scripts/audit-tool-logos.mjs && node scripts/audit-news-rendering.mjs && node scripts/audit-hosting-runtime.mjs && node scripts/generate-page-refresh-ledger.mjs --check && node scripts/audit-font-policy.mjs --source';
   scripts['guard:challenge'] = 'node scripts/guard-challenge.mjs';
   scripts['guard:challenge:check'] = 'node scripts/guard-challenge.mjs --check';
   scripts.check = 'npm run guard:check && npm run check:links && npm run check:news && npm run check:security';
+  scripts.build =
+    'node scripts/copy-content.mjs && npm exec --yes --package=node@24 -- node node_modules/astro/bin/astro.mjs build && node scripts/audit-indexability.mjs && node scripts/audit-commercial-cta.mjs && node scripts/build-pagefind.mjs && node scripts/check-dist-budget.mjs --mode full && node scripts/enforce-built-font-policy.mjs && node scripts/audit-font-policy.mjs --dist';
+  scripts['build:full:node24'] =
+    'npm exec --yes --package=node@24 -- node scripts/copy-content.mjs && npm exec --yes --package=node@24 -- node node_modules/astro/bin/astro.mjs build && npm exec --yes --package=node@24 -- node scripts/audit-indexability.mjs && npm exec --yes --package=node@24 -- node scripts/audit-commercial-cta.mjs && npm exec --yes --package=node@24 -- node scripts/build-pagefind.mjs && npm exec --yes --package=node@24 -- node scripts/check-dist-budget.mjs --mode full && npm exec --yes --package=node@24 -- node scripts/enforce-built-font-policy.mjs && npm exec --yes --package=node@24 -- node scripts/audit-font-policy.mjs --dist';
   scripts['build:fast'] = 'npm run guard:check && npm exec --yes --package=node@24 -- node scripts/build-fast.mjs';
   scripts.deploy = 'npx vercel build --prod && npx vercel deploy --prebuilt --prod';
   scripts['vercel:env:pull'] = 'npx vercel env pull .env.local --yes';
@@ -125,9 +137,14 @@ jobs:
         with:
           node-version: '24'
       - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
       - run: npm run check:quick
       - run: npm run check
-      - run: npm run build:fast
+      - run: npm run audit:provenance:changed
+      - run: npm run audit:coverage-quality:changed
+      - run: npm run build
+      - run: npm run check:dist
 `;
 
 test('command surface audit verifies documented npm scripts and script paths', () => {
@@ -166,9 +183,12 @@ test('command surface audit verifies documented npm scripts and script paths', (
   assert.equal(report.workflow_command_issues.length, 0);
   assert.equal(report.missing_exact_npm_script_command_invariants.length, 0);
   assert.equal(report.missing_script_paths.length, 0);
+  assert.ok(report.required_operator_npm_scripts.includes('audit:coverage-quality:changed'));
+  assert.ok(report.required_operator_npm_scripts.includes('audit:provenance:changed'));
   assert.ok(report.required_operator_npm_scripts.includes('check:assets'));
   assert.ok(report.required_operator_npm_scripts.includes('check:assets:quick'));
   assert.ok(report.required_operator_npm_scripts.includes('build:fast'));
+  assert.ok(report.required_operator_npm_scripts.includes('check:dist'));
   assert.ok(report.required_operator_npm_scripts.includes('check:ci'));
   assert.ok(report.required_operator_npm_scripts.includes('check:hosting'));
   assert.ok(report.required_operator_npm_scripts.includes('check:links'));
@@ -180,6 +200,8 @@ test('command surface audit verifies documented npm scripts and script paths', (
   assert.ok(report.required_operator_npm_scripts.includes('vercel:env:pull'));
   assert.ok(report.required_operator_npm_scripts.includes('guard:challenge'));
   assert.ok(report.required_operator_npm_scripts.includes('guard:challenge:check'));
+  assert.ok(report.required_operator_npm_scripts.includes('lint'));
+  assert.ok(report.required_operator_npm_scripts.includes('typecheck'));
   assert.deepEqual(report.required_documented_npm_scripts, ['check:quick', 'check', 'build', 'deploy', 'editorial:weekly', 'ledger:pages']);
   assert.deepEqual(report.required_readme_npm_run_order, ['check:quick', 'check', 'editorial:weekly', 'ledger:pages', 'build', 'deploy']);
   assert.deepEqual(
@@ -195,8 +217,18 @@ test('command surface audit verifies documented npm scripts and script paths', (
       'readme-deploy-vercel-production',
     ],
   );
-  assert.deepEqual(report.required_workflow_npm_scripts, ['check:quick', 'check', 'build:fast']);
-  assert.deepEqual(report.required_workflow_command_order, ['npm ci', 'npm run check:quick', 'npm run check', 'npm run build:fast']);
+  assert.deepEqual(report.required_workflow_npm_scripts, ['lint', 'typecheck', 'check:quick', 'check', 'audit:provenance:changed', 'audit:coverage-quality:changed', 'build', 'check:dist']);
+  assert.deepEqual(report.required_workflow_command_order, [
+    'npm ci',
+    'npm run lint',
+    'npm run typecheck',
+    'npm run check:quick',
+    'npm run check',
+    'npm run audit:provenance:changed',
+    'npm run audit:coverage-quality:changed',
+    'npm run build',
+    'npm run check:dist',
+  ]);
   assert.deepEqual(report.required_package_script_chains, {
     prebuild: ['guard-content.mjs', 'guard-stale-facts.mjs', 'audit-guide-picks.mjs', 'fetch-github-stats.mjs', 'generate-og-news.mjs'],
     'guard:check': [
@@ -212,11 +244,13 @@ test('command surface audit verifies documented npm scripts and script paths', (
     ],
     check: ['guard:check', 'check:links', 'check:news', 'check:security'],
     'check:quick': ['test:scripts', 'audit:commands', 'check:assets:quick'],
-    'check:ci': ['check:quick', 'check', 'build:fast'],
-    'ship:check': ['check:quick', 'check', 'build:fast'],
+    'check:ci': ['lint', 'typecheck', 'check:quick', 'check', 'audit:provenance:changed', 'audit:coverage-quality:changed', 'build', 'check:dist'],
+    'ship:check': ['lint', 'typecheck', 'check:quick', 'check', 'audit:provenance:changed', 'audit:coverage-quality:changed', 'build', 'check:dist'],
     'build:fast': ['guard:check', 'build-fast.mjs'],
   });
   assert.deepEqual(report.required_package_command_parts, {
+    build: ['node scripts/build-pagefind.mjs', 'node scripts/check-dist-budget.mjs --mode full'],
+    'build:full:node24': ['node scripts/build-pagefind.mjs', 'node scripts/check-dist-budget.mjs --mode full'],
     prebuild: ['node scripts/fetch-github-stats.mjs --output src/data/github-stats.build.json --skip-render-unchanged'],
   });
   assert.deepEqual(report.required_exact_npm_script_commands, {
@@ -256,7 +290,7 @@ test('command surface audit verifies documented npm scripts and script paths', (
   );
   assert.deepEqual(
     report.forbidden_workflow_command_patterns.map((pattern) => pattern.code),
-    ['workflow-full-build', 'workflow-production-deploy', 'workflow-vercel-prod-build'],
+    ['workflow-production-deploy', 'workflow-vercel-prod-build'],
   );
   assert.deepEqual(report.required_workflow_triggers, ['pull_request', 'push', 'workflow_dispatch']);
   assert.deepEqual(report.required_workflow_push_branches, ['master']);
@@ -265,7 +299,8 @@ test('command surface audit verifies documented npm scripts and script paths', (
   assert.ok(report.documented_npm_scripts.includes('build'));
   assert.ok(report.documented_npm_scripts.includes('check'));
   assert.ok(report.workflow_referenced_npm_scripts.includes('check:quick'));
-  assert.ok(report.workflow_referenced_npm_scripts.includes('build:fast'));
+  assert.ok(report.workflow_referenced_npm_scripts.includes('build'));
+  assert.ok(report.workflow_referenced_npm_scripts.includes('check:dist'));
   assert.ok(report.workflow_referenced_npm_scripts.includes('check'));
   assert.equal(report.workflow_node_version_expected, '24');
   assert.equal(report.workflow_node_version_matches_engines, true);
@@ -275,7 +310,6 @@ test('command surface audit verifies documented npm scripts and script paths', (
   assert.deepEqual(report.workflow_job_timeout_minutes, [30]);
   assert.ok(report.package_referenced_npm_scripts.includes('guard:check'));
   assert.ok(report.package_referenced_npm_scripts.includes('smoke:api'));
-  assert.ok(report.package_referenced_npm_scripts.includes('build:fast'));
   assert.ok(report.package_referenced_npm_scripts.includes('audit:commands'));
   assert.ok(report.package_referenced_npm_scripts.includes('check:assets:quick'));
   assert.ok(report.package_referenced_npm_scripts.includes('test:scripts'));
@@ -404,9 +438,14 @@ jobs:
         with:
           node-version: '20'
       - run: npm install
+      - run: npm run lint
+      - run: npm run typecheck
       - run: npm run check:quick
       - run: npm run check
-      - run: npm run build:fast
+      - run: npm run audit:provenance:changed
+      - run: npm run audit:coverage-quality:changed
+      - run: npm run build
+      - run: npm run check:dist
 `);
 
   try {
@@ -461,9 +500,14 @@ jobs:
         with:
           node-version: '24'
       - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
       - run: npm run test:scripts && npm run audit:commands && npm run check:assets:quick
       - run: npm run check
-      - run: npm run build:fast
+      - run: npm run audit:provenance:changed
+      - run: npm run audit:coverage-quality:changed
+      - run: npm run build
+      - run: npm run check:dist
 `);
 
   try {
@@ -511,10 +555,14 @@ jobs:
         with:
           node-version: '24'
       - run: npm ci
-      - run: npm run build:fast
+      - run: npm run build
+      - run: npm run lint
+      - run: npm run typecheck
       - run: npm run check:quick
       - run: npm run check
-      - run: npm run build
+      - run: npm run audit:provenance:changed
+      - run: npm run audit:coverage-quality:changed
+      - run: npm run check:dist
       - run: npx vercel build --prod
       - run: npx vercel deploy --prebuilt --prod
 `);
@@ -529,8 +577,10 @@ jobs:
 
     const report = JSON.parse(result.stdout);
     assert.equal(report.ok, false);
-    assert.match(report.missing_workflow_command_order_invariants.join('\n'), /npm ci -> npm run check:quick -> npm run check -> npm run build:fast/);
-    assert.ok(report.workflow_command_issues.some((issue) => issue.code === 'workflow-full-build'));
+    assert.match(
+      report.missing_workflow_command_order_invariants.join('\n'),
+      /npm ci -> npm run lint -> npm run typecheck -> npm run check:quick -> npm run check -> npm run audit:provenance:changed -> npm run audit:coverage-quality:changed -> npm run build -> npm run check:dist/,
+    );
     assert.ok(report.workflow_command_issues.some((issue) => issue.code === 'workflow-production-deploy'));
     assert.ok(report.workflow_command_issues.some((issue) => issue.code === 'workflow-vercel-prod-build'));
   } finally {
@@ -582,8 +632,8 @@ jobs:
 
 test('command surface audit fails closed when local release commands drop the quick check gate', () => {
   const dir = writeFixtureProject(STRONG_CI_WORKFLOW, {
-    'check:ci': 'npm run check && npm run build:fast',
-    'ship:check': 'npm run check && npm run build:fast',
+    'check:ci': 'npm run check && npm run build && npm run check:dist',
+    'ship:check': 'npm run check && npm run build && npm run check:dist',
   });
 
   try {
@@ -923,10 +973,13 @@ jobs:
       - run: npm run check:quick
         continue-on-error: true
       - run: npm run check
-      - run: npm run build:fast
+      - run: npm run audit:provenance:changed
+      - run: npm run audit:coverage-quality:changed
+      - run: npm run build
+      - run: npm run check:dist
 `,
     {
-      'ship:check': 'npm run check:quick && npm run check || true && npm run build:fast',
+      'ship:check': 'npm run check:quick && npm run check || true && npm run build && npm run check:dist',
     },
   );
 
@@ -978,7 +1031,10 @@ jobs:
       - run: npm ci
       - run: npm run check:quick
       - run: npm run check
-      - run: npm run build:fast
+      - run: npm run audit:provenance:changed
+      - run: npm run audit:coverage-quality:changed
+      - run: npm run build
+      - run: npm run check:dist
       - run: npx wrangler pages deploy dist
 `,
     {

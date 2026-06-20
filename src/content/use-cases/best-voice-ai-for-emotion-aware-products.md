@@ -52,7 +52,7 @@ related:
     title: "Cartesia review"
     description: "Low-latency expressive voice for real-time applications."
     kind: tool
-  - href: /guides/best-ai-voice-generator/
+  - href: /answers/best-ai-voice-generator-2026/
     title: "Best AI Voice Generator"
     description: "Broader category guide across voice AI tools."
     kind: guide
@@ -261,4 +261,4 @@ Internal references:
 - [ElevenLabs tool page](/tools/elevenlabs/)
 - [Cartesia tool page](/tools/cartesia/)
 - [Deepgram tool page](/tools/deepgram/)
-- [Best AI voice generator](/guides/best-ai-voice-generator/)
+- [Best AI voice generator](/answers/best-ai-voice-generator-2026/)

@@ -9,6 +9,8 @@ const commercialCtaSource = readFileSync('src/components/CommercialCTA.astro', '
 const commercialAnalyticsSource = readFileSync('src/components/CommercialAnalytics.astro', 'utf8');
 const compareTraySource = readFileSync('src/components/CompareTray.astro', 'utf8');
 const stackBuilderSource = readFileSync('src/pages/stack-builder/index.astro', 'utf8');
+const companyLayoutSource = readFileSync('src/layouts/CompanyLayout.astro', 'utf8');
+const stickyCtaSource = readFileSync('src/components/godtier/StickyCTA.astro', 'utf8');
 
 const requiredEvents = [
   'affiliate_click',
@@ -82,5 +84,15 @@ test('commercial, compare tray, and stack builder use the truth-layer events', (
   assert.match(stackBuilderSource, /stack_builder_step_complete/);
   assert.match(stackBuilderSource, /stack_builder_complete/);
   assert.match(stackBuilderSource, /stack_builder_tool_click/);
+  assert.match(stackBuilderSource, /stack_builder_try_tool_view/);
+  assert.match(stackBuilderSource, /stack_builder_try_stack_view/);
+  assert.doesNotMatch(stackBuilderSource, /stack_builder_tool_click_view/);
   assert.match(stackBuilderSource, /stack_builder_swap_click/);
+  assert.match(commercialCtaSource, /affiliateStatus === 'approved'/);
+  assert.match(commercialCtaSource, /data-cta-destination-type=\{destinationType\}/);
+  assert.match(companyLayoutSource, /flagshipIsAffiliate/);
+  assert.match(companyLayoutSource, /showDisclosure=\{flagshipIsAffiliate\}/);
+  assert.doesNotMatch(companyLayoutSource, /showDisclosure=\{false\}/);
+  assert.match(stickyCtaSource, /showDisclosure=\{isAffiliate\}/);
+  assert.match(stickyCtaSource, /gt-sticky-disclosure/);
 });

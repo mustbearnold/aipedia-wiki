@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { existsSync, mkdtempSync, readFileSync, rmSync } from 'node:fs';
+import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
 import { spawnSync } from 'node:child_process';
@@ -52,11 +52,79 @@ test('provenance and pricing audit is report-only and exposes migration debt', (
   assert.equal(data.mode, 'report-only');
   assert.deepEqual(data.argument_issues, []);
   assert.ok(data.registry.total_sources >= 10);
+  assert.ok(Array.isArray(data.registry.sources_missing_last_checked));
   assert.ok(Array.isArray(data.provenance.facts_missing_source_id));
   assert.ok(Array.isArray(data.provenance.unknown_source_ids));
   assert.ok(Array.isArray(data.provenance.high_volatility_missing_next_review));
   assert.ok(Array.isArray(data.pricing.price_history_missing_source));
+  assert.ok(Array.isArray(data.pricing.price_history_missing_verified_at));
   assert.ok(data.totals.tools_scanned > 200);
+});
+
+test('provenance and pricing changed gate passes on clean changed tool pages', () => {
+  const result = runAudit('--json', '--changed-file', 'src/content/tools/semrush.md');
+  assert.equal(result.status, 0, `changed provenance gate should pass\nstdout:\n${result.stdout}\nstderr:\n${result.stderr}`);
+  const data = JSON.parse(result.stdout);
+
+  assert.equal(data.ok, true);
+  assert.equal(data.mode, 'changed');
+  assert.deepEqual(data.files, ['src/content/tools/semrush.md']);
+  assert.equal(data.pricing.price_history_missing_verified_at.length, 0);
+  assert.equal(data.registry.sources_missing_last_checked.length, 0);
+});
+
+test('provenance and pricing changed gate fails on touched tool pricing without verification metadata', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-provenance-changed-'));
+
+  try {
+    mkdirSync(join(dir, 'src', 'content', 'tools'), { recursive: true });
+    mkdirSync(join(dir, 'src', 'data'), { recursive: true });
+    writeFileSync(join(dir, 'src', 'data', 'source-registry.json'), JSON.stringify({
+      sources: [
+        {
+          id: 'fixture-pricing',
+          label: 'Fixture pricing',
+          url: 'https://example.com/pricing',
+          type: 'pricing',
+          trust_tier: 'primary',
+          volatility: 'high',
+        },
+      ],
+    }, null, 2));
+    writeFileSync(join(dir, 'src', 'content', 'tools', 'fixture.md'), [
+      '---',
+      'slug: fixture',
+      'title: Fixture',
+      'last_updated: 2026-06-20',
+      'last_verified: 2026-06-20',
+      'facts:',
+      '  pricing_anchor:',
+      '    value: "$10/mo"',
+      '    source_id: fixture-pricing',
+      '    confidence: high',
+      '    verified_at: 2026-06-20',
+      '    next_review_at: 2026-07-20',
+      'price_history:',
+      '  - date: 2026-06-20',
+      '    plan: Pro',
+      '    price: "$10/mo"',
+      '    source_id: fixture-pricing',
+      '---',
+      '',
+      'Fixture body.',
+    ].join('\n'));
+
+    const result = runAudit('--json', `--project-dir=${dir}`, '--changed-file', 'src/content/tools/fixture.md');
+    assert.equal(result.status, 1, `changed provenance gate should fail\nstdout:\n${result.stdout}\nstderr:\n${result.stderr}`);
+    const data = JSON.parse(result.stdout);
+
+    assert.equal(data.ok, false);
+    assert.equal(data.mode, 'changed');
+    assert.equal(data.pricing.price_history_missing_verified_at.length, 1);
+    assert.equal(data.registry.sources_missing_last_checked.length, 1);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
 });
 
 test('provenance and pricing audit rejects invalid arguments before catalog scans', () => {

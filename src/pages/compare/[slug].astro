@@ -6,7 +6,7 @@ import { buildToolPageModel } from '../../lib/content-models/tool-page-model';
 export async function getStaticPaths() {
   const entries = await getCollection('comparisons');
   const tools = await getCollection('tools');
-  const entrySlug = (entry) => entry.data.slug ?? entry.id.replace(/\.md$/, '').replace(/\\/g, '/');
+  const entrySlug = (entry: (typeof entries)[number]) => entry.data.slug ?? entry.id.replace(/\.md$/, '').replace(/\\/g, '/');
   const toolTitleBySlug = new Map(
     tools.map((tool) => {
       const slug = tool.data.slug ?? tool.id.replace(/\.md$/, '').replace(/\\/g, '/');

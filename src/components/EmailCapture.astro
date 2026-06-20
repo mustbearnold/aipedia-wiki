@@ -15,7 +15,7 @@ export interface Props {
 
 const { variant = 'inline', source = 'unknown' } = Astro.props;
 const toolCount = (await getCollection('tools')).filter(
-  (t) => t.data.status !== 'dead' && t.data.status !== 'retired' && t.data.status !== 'acquired'
+  (t) => t.data.status !== 'dead' && t.data.status !== 'acquired'
 ).length;
 
 // Unique id suffix so multiple instances on one page don't collide

@@ -14,12 +14,14 @@
     "dev:codex": "npm exec --yes --package=node@24 -- node node_modules/astro/bin/astro.mjs dev",
     "build:astro": "npm exec --yes --package=node@24 -- node node_modules/astro/bin/astro.mjs build",
     "build:fast": "npm run guard:check && npm exec --yes --package=node@24 -- node scripts/build-fast.mjs",
-    "build:full:node24": "npm exec --yes --package=node@24 -- node scripts/copy-content.mjs && npm exec --yes --package=node@24 -- node node_modules/astro/bin/astro.mjs build && npm exec --yes --package=node@24 -- node scripts/audit-indexability.mjs && npm exec --yes --package=node@24 -- node scripts/audit-commercial-cta.mjs && npm exec --yes --package=node@24 -- node scripts/build-pagefind.mjs && npm exec --yes --package=node@24 -- node scripts/enforce-built-font-policy.mjs && npm exec --yes --package=node@24 -- node scripts/audit-font-policy.mjs --dist",
-    "build": "node scripts/copy-content.mjs && npm exec --yes --package=node@24 -- node node_modules/astro/bin/astro.mjs build && node scripts/audit-indexability.mjs && node scripts/audit-commercial-cta.mjs && node scripts/build-pagefind.mjs && node scripts/enforce-built-font-policy.mjs && node scripts/audit-font-policy.mjs --dist",
+    "build:full:node24": "npm exec --yes --package=node@24 -- node scripts/copy-content.mjs && npm exec --yes --package=node@24 -- node node_modules/astro/bin/astro.mjs build && npm exec --yes --package=node@24 -- node scripts/audit-indexability.mjs && npm exec --yes --package=node@24 -- node scripts/audit-commercial-cta.mjs && npm exec --yes --package=node@24 -- node scripts/build-pagefind.mjs && npm exec --yes --package=node@24 -- node scripts/check-dist-budget.mjs --mode full && npm exec --yes --package=node@24 -- node scripts/enforce-built-font-policy.mjs && npm exec --yes --package=node@24 -- node scripts/audit-font-policy.mjs --dist",
+    "build": "node scripts/copy-content.mjs && npm exec --yes --package=node@24 -- node node_modules/astro/bin/astro.mjs build && node scripts/audit-indexability.mjs && node scripts/audit-commercial-cta.mjs && node scripts/build-pagefind.mjs && node scripts/check-dist-budget.mjs --mode full && node scripts/enforce-built-font-policy.mjs && node scripts/audit-font-policy.mjs --dist",
     "guard:check": "node scripts/guard-content.mjs && node scripts/guard-stale-facts.mjs && node scripts/guard-em-dashes.mjs && node scripts/audit-guide-picks.mjs && node scripts/audit-tool-logos.mjs && node scripts/audit-news-rendering.mjs && node scripts/audit-hosting-runtime.mjs && node scripts/generate-page-refresh-ledger.mjs --check && node scripts/audit-font-policy.mjs --source",
     "guard:challenge": "node scripts/guard-challenge.mjs",
     "guard:challenge:check": "node scripts/guard-challenge.mjs --check",
     "guard:baseline": "node scripts/guard-content.mjs --baseline",
+    "lint": "npm run guard:check",
+    "typecheck": "npm exec --yes --package=node@24 -- node node_modules/astro/bin/astro.mjs check --tsconfig tsconfig.typecheck.json --minimumSeverity error",
     "ops:dashboard": "node scripts/ops-dashboard.mjs",
     "test": "node --test tests/scripts/*.test.mjs",
     "test:scripts": "node --test tests/scripts/*.test.mjs",
@@ -28,9 +30,11 @@
     "audit:facts": "node scripts/audit-tool-facts.mjs",
     "audit:generated-models": "node scripts/audit-generated-models.mjs",
     "audit:provenance": "node scripts/audit-provenance-pricing.mjs",
+    "audit:provenance:changed": "node scripts/audit-provenance-pricing.mjs --changed",
     "audit:freshness": "node scripts/audit-freshness-queue.mjs",
     "audit:coverage": "node scripts/audit-coverage-gaps.mjs",
     "audit:coverage-quality": "node scripts/audit-coverage-quality.mjs --all",
+    "audit:coverage-quality:changed": "node scripts/audit-coverage-quality.mjs --changed",
     "coverage:backlog": "node scripts/audit-coverage-gaps.mjs --out src/data/coverage-backlog.json",
     "coverage:next": "node scripts/coverage-next.mjs",
     "audit:glossary": "node scripts/audit-glossary.mjs --check",
@@ -66,8 +70,8 @@
     "check:fonts": "node scripts/audit-font-policy.mjs --source",
     "check:security": "npm audit --audit-level=moderate",
     "check:dist": "node scripts/check-dist-budget.mjs && node scripts/audit-indexability.mjs && node scripts/audit-commercial-cta.mjs",
-    "check:ci": "npm run check:quick && npm run check && npm run build:fast",
-    "ship:check": "npm run check:quick && npm run check && npm run build:fast",
+    "check:ci": "npm run lint && npm run typecheck && npm run check:quick && npm run check && npm run audit:provenance:changed && npm run audit:coverage-quality:changed && npm run build && npm run check:dist",
+    "ship:check": "npm run lint && npm run typecheck && npm run check:quick && npm run check && npm run audit:provenance:changed && npm run audit:coverage-quality:changed && npm run build && npm run check:dist",
     "vercel:link": "npx vercel link",
     "vercel:pull": "npx vercel pull",
     "vercel:preview": "npx vercel",
@@ -96,8 +100,10 @@
     "unist-util-visit": "^5.1.0"
   },
   "devDependencies": {
+    "@astrojs/check": "^0.9.2",
     "@playwright/test": "1.59.1",
-    "sharp": "^0.34.5"
+    "sharp": "^0.34.5",
+    "typescript": "^5.9.3"
   },
   "optionalDependencies": {
     "@rollup/rollup-linux-x64-gnu": "4.60.3"
@@ -105,6 +111,7 @@
   "overrides": {
     "esbuild": "0.28.1",
     "path-to-regexp": "6.3.0",
+    "yaml": "2.9.0",
     "vite": "^7.3.2"
   }
 }

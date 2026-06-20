@@ -4,6 +4,7 @@ interface Props {
   toolSlug?: string;
   canonicalUrl?: string;
   affiliateUrl?: string | null;
+  affiliateStatus?: string | null;
   affiliateProgram?: string | null;
   pricingModel?: string;
   priceRange?: string;
@@ -11,10 +12,11 @@ interface Props {
   categorySlug?: string;
 }
 
-const { name, toolSlug, canonicalUrl, affiliateUrl, affiliateProgram, pricingModel, priceRange, pageSlug, categorySlug } = Astro.props;
+const { name, toolSlug, canonicalUrl, affiliateUrl, affiliateStatus, affiliateProgram, pricingModel, priceRange, pageSlug, categorySlug } = Astro.props;
 
-const href = (affiliateUrl && affiliateUrl.length > 0 ? affiliateUrl : canonicalUrl) ?? '';
-const isAffiliate = Boolean(affiliateUrl && affiliateUrl.length > 0);
+const approvedAffiliateUrl = affiliateStatus === 'approved' ? affiliateUrl : null;
+const href = (approvedAffiliateUrl && approvedAffiliateUrl.length > 0 ? approvedAffiliateUrl : canonicalUrl) ?? '';
+const isAffiliate = Boolean(approvedAffiliateUrl && approvedAffiliateUrl.length > 0);
 const rel = isAffiliate ? 'sponsored noopener' : 'noopener';
 
 function ctaLabel() {
@@ -63,7 +65,7 @@ const trackingSlug = toolSlug ?? name.toLowerCase().replace(/[^a-z0-9]+/g, '-').
         data-cta-destination-type={isAffiliate ? 'affiliate' : 'official'}
         data-cta-is-affiliate={String(isAffiliate)}
         data-cta-category-slug={categorySlug ?? undefined}
-        data-cta-affiliate-program={affiliateProgram ?? undefined}
+        data-cta-affiliate-program={isAffiliate ? affiliateProgram ?? undefined : undefined}
         data-cta-price-range={priceRange ?? undefined}
         data-cta-is-sticky="true"
       >

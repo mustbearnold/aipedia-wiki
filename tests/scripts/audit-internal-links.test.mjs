@@ -17,12 +17,24 @@ function writeFixture({ broken = false } = {}) {
   const toolsDir = join(fixture, 'src/content/tools');
   const newsDir = join(fixture, 'src/content/news');
   const categoriesDir = join(fixture, 'src/content/categories');
+  const comparisonsDir = join(fixture, 'src/content/comparisons');
+  const useCasesDir = join(fixture, 'src/content/use-cases');
+  const glossaryDir = join(fixture, 'src/content/glossary');
+  const answersDir = join(fixture, 'src/pages/answers');
   mkdirSync(toolsDir, { recursive: true });
   mkdirSync(newsDir, { recursive: true });
   mkdirSync(categoriesDir, { recursive: true });
+  mkdirSync(comparisonsDir, { recursive: true });
+  mkdirSync(useCasesDir, { recursive: true });
+  mkdirSync(glossaryDir, { recursive: true });
+  mkdirSync(answersDir, { recursive: true });
 
   writeFileSync(join(toolsDir, 'alpha.md'), '---\nslug: alpha\n---\n# Alpha\n');
   writeFileSync(join(newsDir, '2026-06-10-alpha-launch.md'), '---\nslug: 2026-06-10-alpha-launch\n---\n# Alpha launch\n');
+  writeFileSync(join(comparisonsDir, 'alpha-vs-beta.md'), '---\nslug: alpha-vs-beta\n---\n# Alpha vs Beta\n');
+  writeFileSync(join(useCasesDir, 'best-alpha-tool.md'), '---\nslug: best-alpha-tool\n---\n# Best Alpha Tool\n');
+  writeFileSync(join(glossaryDir, 'retrieval.md'), '---\nslug: retrieval\n---\n# Retrieval\n');
+  writeFileSync(join(answersDir, 'best-alpha-answer.astro'), '---\n---\n<h1>Best Alpha Answer</h1>\n');
 
   const toolSlug = broken ? 'missing-tool' : 'alpha';
   const newsSlug = broken ? '2026-06-10-missing-news' : '2026-06-10-alpha-launch';
@@ -73,9 +85,46 @@ test('internal link audit flags broken tool and news slugs', () => {
     assert.equal(report.ok, false);
     assert.equal(report.totals.broken_tool_slugs, 1);
     assert.equal(report.totals.broken_news_slugs, 1);
-    assert.equal(report.broken_tools[0].slug, 'missing-tool');
-    assert.equal(report.broken_news[0].slug, '2026-06-10-missing-news');
+    assert.equal(report.broken_tools[0].slug, '/tools/missing-tool/');
+    assert.equal(report.broken_news[0].slug, '/news/2026-06-10-missing-news/');
     assert.ok(report.broken_tools[0].paths.some((path) => path.endsWith('src/content/categories/ai-test.md')));
+  } finally {
+    rmSync(fixture, { recursive: true, force: true });
+  }
+});
+
+test('internal link audit flags broken comparison, guide, and answer routes', () => {
+  const fixture = writeFixture({ broken: false });
+  const categoriesDir = join(fixture, 'src/content/categories');
+
+  try {
+    writeFileSync(
+      join(categoriesDir, 'route-matrix.md'),
+      [
+        '---',
+        'slug: route-matrix',
+        '---',
+        '# Route Matrix',
+        '',
+        'Valid routes: /compare/alpha-vs-beta/, /guides/best-alpha-tool/, /glossary/retrieval/, /answers/best-alpha-answer/.',
+        'Broken routes: /compare/missing-comparison/, /guides/missing-guide/, /glossary/missing-term/, /answers/missing-answer/.',
+        '',
+      ].join('\n'),
+    );
+
+    const result = runInternalLinks('--json', `--project-dir=${fixture}`);
+    assert.equal(result.status, 1);
+    assert.equal(result.stderr, '');
+
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, false);
+    assert.equal(report.totals.broken_tool_slugs, 0);
+    assert.equal(report.totals.broken_news_slugs, 0);
+    assert.equal(report.totals.broken_unique_routes, 4);
+    assert.equal(report.broken_routes.comparisons[0].slug, '/compare/missing-comparison/');
+    assert.equal(report.broken_routes.guides[0].slug, '/guides/missing-guide/');
+    assert.equal(report.broken_routes.glossary[0].slug, '/glossary/missing-term/');
+    assert.equal(report.broken_routes.answers[0].slug, '/answers/missing-answer/');
   } finally {
     rmSync(fixture, { recursive: true, force: true });
   }

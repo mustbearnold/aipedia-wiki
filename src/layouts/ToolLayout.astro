@@ -67,9 +67,12 @@ const toolUrl = model.identity.url;
 const toolStatus = model.identity.status;
 const siteBase = Astro.site?.href ?? 'https://aipedia.wiki';
 const affiliateUrl = model.cta.affiliate_url;
+const affiliateStatus = model.cta.affiliate_state;
 const affiliateProgram = model.cta.affiliate_program;
 const isAffiliate = Boolean(affiliateUrl);
 const ctaHref = model.cta.href ?? toolUrl ?? '#';
+const pageNoindex = f.noindex === true;
+const robotsPolicy = typeof f.robots === 'string' ? f.robots : undefined;
 
 const breadcrumbLdItems = [
   { name: 'Home', url: `${siteBase}` },
@@ -141,6 +144,7 @@ const bestPlanGlance = cleanSnippet(
   model.decision.best_plan ?? f.plan_recommendation,
   pricingSummary
 );
+const watchOutGlance = cleanSnippet(model.decision.watch_out, '');
 
 const decisionItems = [
   { tone: 'positive' as const, label: 'Buy if',  value: firstBestFor },
@@ -184,11 +188,13 @@ const tocItems = (headings ?? [])
   title={f.seo_title ?? toolTitle}
   description={f.meta_description ?? toolTagline ?? ''}
   ogImage={`/og/tools/${toolSlug}.png`}
+  noindex={pageNoindex}
+  robots={robotsPolicy}
 >
   <ReadingProgress />
   <BreadcrumbLD items={breadcrumbLdItems} />
   {faqItems.length > 0 && <FAQPageLD questions={faqItems} />}
-  <SoftwareApplicationLD
+  {!pageNoindex && <SoftwareApplicationLD
     name={toolTitle}
     url={toolUrl ?? ''}
     category={catLabel}
@@ -202,7 +208,7 @@ const tocItems = (headings ?? [])
     dateModified={model.freshness.last_verified ? String(model.freshness.last_verified) : undefined}
     slug={toolSlug}
     status={toolStatus}
-  />
+  />}
 
   <div class="sr-only" data-pagefind-ignore>
     <span data-pagefind-filter="Type">Tool</span>
@@ -235,6 +241,9 @@ const tocItems = (headings ?? [])
       statusActive={toolStatus === 'active'}
       price={pricingSummary}
       affiliate={isAffiliate}
+      eyebrow="Best plan"
+      title={bestPlanGlance}
+      description={watchOutGlance ? `Watch out: ${watchOutGlance}` : undefined}
     >
       <CommercialCTA
         slot="primary-cta"
@@ -242,6 +251,7 @@ const tocItems = (headings ?? [])
         toolSlug={toolSlug}
         canonicalUrl={toolUrl}
         affiliateUrl={affiliateUrl}
+        affiliateStatus={affiliateStatus}
         affiliateProgram={affiliateProgram}
         pricingModel={pricingModel}
         priceRange={priceRange}
@@ -376,6 +386,7 @@ const tocItems = (headings ?? [])
         toolSlug={toolSlug}
         canonicalUrl={toolUrl}
         affiliateUrl={affiliateUrl}
+        affiliateStatus={affiliateStatus}
         affiliateProgram={affiliateProgram}
         pricingModel={pricingModel}
         priceRange={priceRange}
@@ -426,6 +437,7 @@ const tocItems = (headings ?? [])
     toolSlug={toolSlug}
     canonicalUrl={toolUrl}
     affiliateUrl={affiliateUrl}
+    affiliateStatus={affiliateStatus}
     affiliateProgram={affiliateProgram}
     pricingModel={pricingModel}
     priceRange={priceRange}

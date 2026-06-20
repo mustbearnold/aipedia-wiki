@@ -142,9 +142,9 @@ function decisionSources(picks: readonly DecisionPick[]): ResolvedPageSource[] {
 }
 
 function categoryDecisionPicks(category: CatalogEntry): DecisionPick[] {
-  return Array.isArray(category.data.decision_picks)
-    ? category.data.decision_picks.map(normalizeDecisionPick).filter((pick): pick is DecisionPick => Boolean(pick))
-    : [];
+  if (!Array.isArray(category.data.decision_picks)) return [];
+  const rawPicks = category.data.decision_picks as unknown[];
+  return rawPicks.map(normalizeDecisionPick).filter((pick): pick is DecisionPick => Boolean(pick));
 }
 
 function categoryEvidence(category: CatalogEntry, picks: readonly DecisionPick[]): EvidenceRailModel {

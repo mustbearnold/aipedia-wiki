@@ -5,6 +5,7 @@ interface Props {
   name: string;
   canonicalUrl?: string;
   affiliateUrl?: string | null;
+  affiliateStatus?: string | null;
   pricingModel?: string;
   priceRange?: string;
   toolSlug?: string;
@@ -16,6 +17,7 @@ const {
   name,
   canonicalUrl,
   affiliateUrl,
+  affiliateStatus,
   pricingModel,
   priceRange,
   toolSlug,
@@ -31,6 +33,7 @@ const resolvedSlug = toolSlug ?? name.toLowerCase().replace(/[^a-z0-9]+/g, '-').
   toolSlug={resolvedSlug}
   canonicalUrl={canonicalUrl}
   affiliateUrl={affiliateUrl}
+  affiliateStatus={affiliateStatus ?? null}
   pricingModel={pricingModel}
   priceRange={priceRange}
   pageType={pageType}
