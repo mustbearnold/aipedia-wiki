@@ -1,11 +1,21 @@
 # AiPedia June 2026 Standards Remediation And Re-Review Spec
 
-**Status:** Ready for implementation planning
+**Status:** Completed and pushed to `master`
 **Date:** 2026-06-20
 **Owner:** AiPedia maintainers + parallel agent implementers
 **Trigger:** Comprehensive June 2026 standards review found current gaps in factual freshness, commercial trust, mobile-first decision surfaces, crawl integrity, and verification confidence.
 
 ---
+
+## Completion Summary
+
+Completed on 2026-06-20 in `3355ce1d fix: remediate June standards review`.
+
+The remediation resolved the June standards findings across stale duplicate Semrush crawl targets, affiliate approval gating, disclosure proximity, mobile first-screen decision data, broad internal-link auditing, source/provenance row freshness, changed-page quality blocking, Node/build/CI alignment, Pagefind/dist checks, lint/typecheck gates, top-layer/LLM coverage, mobile nav semantics, and commercial CTA audit coverage.
+
+Final verification passed with `npm run check:ci` after the last CTA metadata fixes. Focused closeout checks also passed: `npm run ledger:pages:check`, `node scripts/audit-commercial-cta.mjs`, `node --test tests/scripts/audit-commercial-cta.test.mjs tests/scripts/tool-page-model-behavior.test.mjs`, `npm run audit:provenance:changed`, `npm run audit:coverage-quality:changed`, `npm run audit:commands`, and `git diff --check`.
+
+Known caveat: GitHub stats fell back to stale cached values during `npm run check:ci` because the GitHub API rate limit returned 403. Existing Astro markdown plugin deprecation warnings remain. Legacy search client-script and archived `.legacy.astro` typecheck exclusions are documented in `tsconfig.typecheck.json` and `scripts/README.md`.
 
 ## 1. Objective
 

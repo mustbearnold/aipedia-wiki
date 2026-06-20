@@ -1,6 +1,6 @@
 # AiPedia Operating Rules
 
-This is the committed operating guide for agents working in this repository. Use it as the primary instruction source. Do not rely on a root `AGENTS.md`; that file is ignored and may be absent in clean clones or worktrees.
+This is the committed operating guide for agents working in this repository. Use it as the primary instruction source. Read `.agent/CURRENT_STATUS.md` first when resuming a session so you know what is already complete and what remains active. Do not rely on a root `AGENTS.md`; that file is ignored and may be absent in clean clones or worktrees.
 
 ## Mission
 

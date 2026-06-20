@@ -4,9 +4,16 @@
 
 AiPedia is an Astro site. Editorial source lives under `src/content/`; route templates, layouts, components, styles, data, and public assets live under `src/` and `public/`.
 
-Read `.agent/OPERATING_RULES.md` first for the committed operating rules. It replaces the ignored root `AGENTS.md` as the reliable instruction source for clean worktrees.
+Read `.agent/CURRENT_STATUS.md` first for the current branch state, recent completions, and active work. Then read `.agent/OPERATING_RULES.md` for the committed operating rules. It replaces the ignored root `AGENTS.md` as the reliable instruction source for clean worktrees.
 
 Use the smallest verification command that matches the changed surface. Start with `npm run check:smart` to get a scoped recommendation.
+
+## Current Status Pointers
+
+- June 2026 standards remediation is complete and pushed in `3355ce1d`.
+- Guard Challenge Workflow is implemented. Use it only when changing a guard, audit, check, or fixture is being considered.
+- Oldest-first AI tools wiki refresh remains active.
+- Phase 3 Parallel Surface Agent Orchestration is planned but not executed on `master`; recompute missed news dates before starting.
 
 ## Primary Surfaces
 
