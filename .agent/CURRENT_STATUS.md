@@ -1,6 +1,6 @@
 # AiPedia Current Status
 
-Last updated: 2026-06-20
+Last updated: 2026-06-21
 
 Audience: maintainers, future agents, and Matt.
 
@@ -41,6 +41,10 @@ At the time this status was last checked, `master` was clean and synced with `or
 - Continuity recording has been hardened.
   - Committed source-of-truth stack: `.agent/CURRENT_STATUS.md`, `.agent/PLANS.md`, `.agent/WORK_LOG.md`, `.agent/OPERATING_RULES.md`, and `.agent/PROJECT_MAP.md`.
   - Future major work should update status, active plans, and work log before final report.
+- Vercel CLI is installed globally for local operator workflows.
+  - Installed version: `vercel@54.14.2`.
+  - Local executable: `C:\Users\mustb\AppData\Local\npm\vercel.ps1`.
+  - Use it for Vercel login, env pull, deploy, inspect, and logs workflows once the project is linked and authenticated.
 
 ## Active Work
 
@@ -74,6 +78,7 @@ At the time this status was last checked, `master` was clean and synced with `or
 - Existing Astro markdown plugin deprecation warnings remain.
 - `npm run typecheck` covers active Astro/server surfaces. Legacy global search client scripts and archived `.legacy.astro` files are documented baseline exclusions in `tsconfig.typecheck.json` and `scripts/README.md`.
 - Some local-only historical plans and specs preserve their original task checklists. When they disagree with this file, this file and `.agent/PLANS.md` are the current committed orientation sources.
+- Global `vercel@54.14.2` install emits upstream dependency deprecation warnings for `stream-to-promise@2.2.0` and `tar@7.5.7` through Vercel CLI's own dependency graph. This is not an AiPedia repo dependency issue; update Vercel CLI when upstream bumps those transitive packages.
 
 ## Start The Next Session
 

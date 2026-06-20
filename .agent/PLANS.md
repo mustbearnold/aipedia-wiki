@@ -6,10 +6,11 @@ For the plain-English project state, read `.agent/CURRENT_STATUS.md` first. For 
 
 ## Current Snapshot
 
-- Last updated: 2026-06-20.
+- Last updated: 2026-06-21.
 - `master` should be checked with `git status --short --branch` before starting work.
 - The June 2026 standards remediation, Guard Challenge Workflow, Project Folder Tidy, Verification Router, and June 17 news catch-up are complete.
 - Continuity recording is now centralized in `.agent/CURRENT_STATUS.md`, `.agent/PLANS.md`, and `.agent/WORK_LOG.md`.
+- Vercel CLI is installed globally as `vercel@54.14.2`; upstream dependency warnings are tracked in `.agent/WORK_LOG.md`.
 - The main active ongoing lane is the oldest-first AI tools wiki refresh.
 - The Phase 3 parallel surface and June 18-20 news backfill plan is written but not executed on `master`.
 

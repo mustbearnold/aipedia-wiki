@@ -30,6 +30,16 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 
 ## Entries
 
+### 2026-06-21: Vercel CLI Install And Warning Classification
+
+- Status: Complete.
+- Commit: this commit.
+- Branch: `master`.
+- Changed: Recorded that global `vercel@54.14.2` is installed and classified the npm deprecation warnings as upstream Vercel CLI transitive dependency warnings, not AiPedia repo dependency drift.
+- Verification: `vercel --version`, `npm ls -g vercel stream-to-promise tar --depth=6`, `npm view vercel@latest version dependencies.@vercel/fun dependencies.@vercel/backends --json`, `git diff --check`, `npm run check:quick`.
+- Residual risks: Vercel CLI currently pins `@vercel/fun@1.3.0`, which pulls `stream-to-promise@2.2.0` and `tar@7.5.7`; `tar@7.5.7` also appears through `@vercel/backends -> @vercel/nft -> @mapbox/node-pre-gyp`. Wait for a Vercel CLI release that bumps those transitive dependencies rather than hand-editing global `node_modules`.
+- Next: Use `vercel` for local Vercel workflows after login/linking. Periodically rerun `npm i -g vercel@latest` and verify whether the warnings disappear.
+
 ### 2026-06-20: Continuity System Hardening
 
 - Status: Complete.
@@ -67,7 +77,7 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Branch: `master`.
 - Changed: Added `npm run ops:dashboard`, expanded `check-smart`, improved operator docs, and added tests for the new dashboard and verification-routing behavior.
 - Verification: Covered by script tests and later `npm run check:ci` during standards remediation.
-- Residual risks: Vercel CLI is not installed locally, so Vercel-specific dashboard or deployment workflows require installing it first.
+- Residual risks: Vercel CLI was not installed at the time of this commit. It is now installed globally as recorded in the 2026-06-21 work-log entry.
 - Next: Use `npm run ops:dashboard` for read-only branch, worktree, PR, issue, and audit summaries.
 
 ### 2026-06-20: Guard Challenge Workflow
