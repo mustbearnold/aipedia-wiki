@@ -117,11 +117,15 @@ export function classifyPaths(paths) {
   return categoriesForSurfaces(matchingSurfaces(paths));
 }
 
+function requiredChecksForSurface(surface) {
+  return [...(surface.checks || []), ...(surface.requiredChecks || [])];
+}
+
 function checksForSurfaces(surfaces) {
   const checks = new Set();
 
   for (const surface of surfaces) {
-    for (const check of surface.checks || []) checks.add(check);
+    for (const check of requiredChecksForSurface(surface)) checks.add(check);
   }
 
   return [...checks].sort();
@@ -135,6 +139,28 @@ function guidanceForSurfaces(surfaces) {
   }
 
   return [...guidance].sort();
+}
+
+function surfaceSummariesForSurfaces(surfaces) {
+  return surfaces
+    .map((surface) => ({ id: surface.id, label: surface.label }))
+    .sort((a, b) => a.id.localeCompare(b.id));
+}
+
+function smokeRoutesForSurfaces(surfaces) {
+  const routes = new Map();
+
+  for (const surface of surfaces) {
+    for (const route of surface.smokeRoutes || []) {
+      const key = `${route.command || ''}\0${route.route || ''}\0${route.focus || ''}`;
+      if (!routes.has(key)) routes.set(key, route);
+    }
+  }
+
+  return [...routes.values()].sort((a, b) => {
+    const commandOrder = String(a.command || '').localeCompare(String(b.command || ''));
+    return commandOrder || String(a.route || '').localeCompare(String(b.route || ''));
+  });
 }
 
 function commandsForSelection(categories, checks) {
@@ -155,14 +181,20 @@ export function commandsForCategories(categories) {
 
 export function planForPaths(paths) {
   const surfaces = matchingSurfaces(paths);
+  const surfaceSummaries = surfaceSummariesForSurfaces(surfaces);
   const categories = categoriesForSurfaces(surfaces);
   const checks = checksForSurfaces(surfaces);
   const guidance = guidanceForSurfaces(surfaces);
   return {
     project_dir: PROJECT_DIR,
     paths,
+    surfaces: surfaceSummaries,
+    surface_ids: surfaceSummaries.map((surface) => surface.id),
+    surface_labels: surfaceSummaries.map((surface) => surface.label),
     categories,
+    checks,
     guidance,
+    smoke_routes: smokeRoutesForSurfaces(surfaces),
     commands: paths.length ? commandsForSelection(categories, checks) : [],
     note: paths.length
       ? 'Run with --run to execute these commands in order.'
@@ -195,11 +227,24 @@ function printPlan(plan) {
 
   console.log('Changed paths:');
   for (const path of plan.paths) console.log(`- ${path}`);
+  console.log('\nDetected surfaces:');
+  for (const surface of plan.surfaces) console.log(`- ${surface.id}: ${surface.label}`);
   console.log('\nDetected categories:');
   for (const category of plan.categories) console.log(`- ${category}`);
+  if (plan.checks.length) {
+    console.log('\nRequired checks:');
+    for (const check of plan.checks) console.log(`- ${check}`);
+  }
   if (plan.guidance.length) {
     console.log('\nOperator guidance:');
     for (const line of plan.guidance) console.log(`- ${line}`);
+  }
+  if (plan.smoke_routes.length) {
+    console.log('\nBrowser smoke routes:');
+    for (const route of plan.smoke_routes) {
+      const focus = route.focus ? ` (${route.focus})` : '';
+      console.log(`- ${route.command}: ${route.route}${focus}`);
+    }
   }
   console.log('\nRecommended verification:');
   for (const command of plan.commands) console.log(`- ${command}`);

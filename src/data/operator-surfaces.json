@@ -11,6 +11,150 @@
       }
     },
     {
+      "id": "phase3-evidence-rail",
+      "label": "Phase 3 evidence rail and source-state model",
+      "category": "runtime",
+      "checks": ["tool-page-model", "generated-models", "visual-smoke"],
+      "routeTypes": ["tool page", "decision evidence component"],
+      "canonicalModel": "EvidenceRailModel",
+      "requiredChecks": ["tool-page-model", "generated-models", "visual-smoke"],
+      "smokeRoutes": [
+        { "route": "/tools/claude/", "command": "npm run smoke:visual", "focus": "evidence rail source states and trust affordances" }
+      ],
+      "auditImpact": "Generated model audit must keep registered, inline-only, evidence-only, and unknown source states visible.",
+      "match": {
+        "files": ["src/lib/content-models/evidence-rail.ts", "src/components/decision/EvidenceRail.astro"]
+      }
+    },
+    {
+      "id": "phase3-search-catalog",
+      "label": "Phase 3 search catalog and search UI",
+      "category": "runtime",
+      "checks": ["search-catalog", "api", "visual-smoke"],
+      "routeTypes": ["search page", "home search API", "search modal"],
+      "canonicalModel": "SearchCatalogItem",
+      "requiredChecks": ["search-catalog", "api", "visual-smoke"],
+      "smokeRoutes": [
+        { "route": "/api/home-search.json", "command": "npm run smoke:api", "focus": "home/search API catalog contract" },
+        { "route": "/search/", "command": "npm run smoke:visual", "focus": "search UI filtering and result metadata" }
+      ],
+      "auditImpact": "Search catalog field omissions are generated-model audit failures; search API changes need API smoke.",
+      "match": {
+        "files": [
+          "src/lib/search-catalog.ts",
+          "src/pages/search.astro",
+          "src/pages/api/home-search.json.ts",
+          "src/pages/api/search-tools.json.ts",
+          "src/components/SearchModal.astro",
+          "src/components/SearchModal.legacy.astro"
+        ]
+      }
+    },
+    {
+      "id": "phase3-homepage-intelligence-desk",
+      "label": "Phase 3 homepage intelligence desk",
+      "category": "runtime",
+      "checks": ["search-catalog", "decision-pick", "api", "visual-smoke"],
+      "routeTypes": ["homepage", "home search API", "decision entry"],
+      "canonicalModel": "SearchCatalogItem",
+      "requiredChecks": ["search-catalog", "decision-pick", "api", "visual-smoke"],
+      "smokeRoutes": [
+        { "route": "/", "command": "npm run smoke:visual", "focus": "homepage intelligence desk decision paths" },
+        { "route": "/api/home-search.json", "command": "npm run smoke:api", "focus": "homepage fast-path search payload" }
+      ],
+      "auditImpact": "Homepage buyer-intent surfaces depend on search catalog and decision-pick model audits staying current.",
+      "match": {
+        "files": ["src/pages/index.astro", "src/components/seo/HomepageLD.astro", "src/styles/home-page-tokens.css", "src/styles/home-surface-cards.css"]
+      }
+    },
+    {
+      "id": "phase3-tool-trust-panel",
+      "label": "Phase 3 tool trust panel",
+      "category": "runtime",
+      "checks": ["tool-page-model", "generated-models", "visual-smoke"],
+      "routeTypes": ["tool page", "trust panel"],
+      "canonicalModel": "ToolPageModel",
+      "requiredChecks": ["tool-page-model", "generated-models", "visual-smoke"],
+      "smokeRoutes": [
+        { "route": "/tools/claude/", "command": "npm run smoke:visual", "focus": "tool trust panel facts, pricing, and evidence states" }
+      ],
+      "auditImpact": "Tool trust edits must preserve ToolPageModel diagnostics and generated-model provenance checks.",
+      "match": {
+        "files": ["src/lib/content-models/tool-page-model.ts", "src/components/godtier/TrustPanel.astro", "src/layouts/ToolLayout.astro", "src/pages/tools/[slug].astro"]
+      }
+    },
+    {
+      "id": "phase3-category-buyer-path",
+      "label": "Phase 3 category buyer path",
+      "category": "content",
+      "checks": ["decision-pick", "visual-smoke"],
+      "routeTypes": ["category page", "buyer decision path"],
+      "canonicalModel": "DecisionPick",
+      "requiredChecks": ["decision-pick", "visual-smoke"],
+      "smokeRoutes": [
+        { "route": "/categories/ai-coding/", "command": "npm run smoke:visual", "focus": "affected category decision picks and buyer path" }
+      ],
+      "auditImpact": "Category decision-pick source refs must stay registered and buyer-path routes need visual smoke.",
+      "match": {
+        "prefixes": ["src/content/categories/"],
+        "files": ["src/lib/content-models/decision-pick.ts", "src/layouts/CategoryLayout.astro", "src/pages/categories/[slug].astro"]
+      }
+    },
+    {
+      "id": "phase3-compare-decision-surfaces",
+      "label": "Phase 3 compare decision surfaces",
+      "category": "runtime",
+      "checks": ["decision-pick", "tool-page-model", "generated-models", "visual-smoke"],
+      "routeTypes": ["comparison page", "compare hub", "decision card"],
+      "canonicalModel": "DecisionPick + ToolPageModel + EvidenceRailModel",
+      "requiredChecks": ["decision-pick", "tool-page-model", "generated-models", "visual-smoke"],
+      "smokeRoutes": [
+        { "route": "/compare/", "command": "npm run smoke:visual", "focus": "compare hub decision cards" },
+        { "route": "/compare/chatgpt-vs-claude/", "command": "npm run smoke:visual", "focus": "comparison decision surface" }
+      ],
+      "auditImpact": "Compare decision surfaces consume ToolPageModel evidence and share decision-pick expectations with category buyer paths.",
+      "match": {
+        "prefixes": ["src/content/comparisons/"],
+        "files": ["src/pages/compare/index.astro", "src/pages/compare/[slug].astro", "src/layouts/ComparisonLayout.astro", "src/components/godtier/DecisionCard.astro", "src/styles/compare-home-cards.css"]
+      }
+    },
+    {
+      "id": "phase3-motion-controller",
+      "label": "Phase 3 motion controller",
+      "category": "runtime",
+      "checks": ["motion-controller", "reduced-motion-smoke", "visual-smoke"],
+      "routeTypes": ["client runtime", "visual route"],
+      "canonicalModel": "MotionController",
+      "requiredChecks": ["motion-controller", "reduced-motion-smoke", "visual-smoke"],
+      "smokeRoutes": [
+        { "route": "/", "command": "npm run smoke:visual", "focus": "reduced-motion and visual motion safety" },
+        { "route": "/search/", "command": "npm run smoke:visual", "focus": "reduced-motion search interactions" }
+      ],
+      "auditImpact": "Motion edits affect browser-smoke reduced-motion coverage and script tests, not provenance.",
+      "match": {
+        "files": ["src/lib/motion-controller.ts", "tests/scripts/motion-controller.test.mjs"]
+      }
+    },
+    {
+      "id": "phase3-tokens-css",
+      "label": "Phase 3 design tokens and CSS",
+      "category": "runtime",
+      "checks": ["design-tokens", "visual-smoke"],
+      "routeTypes": ["global CSS", "visual route"],
+      "canonicalModel": "DesignTokens",
+      "requiredChecks": ["design-tokens", "visual-smoke"],
+      "smokeRoutes": [
+        { "route": "/", "command": "npm run smoke:visual", "focus": "homepage token application" },
+        { "route": "/search/", "command": "npm run smoke:visual", "focus": "search token application" },
+        { "route": "/tools/claude/", "command": "npm run smoke:visual", "focus": "tool token application" }
+      ],
+      "auditImpact": "Token/CSS edits require token script tests and visual smoke; provenance is unaffected.",
+      "match": {
+        "files": ["src/styles/tokens.css", "tests/scripts/design-tokens.test.mjs"],
+        "prefixes": ["src/styles/"]
+      }
+    },
+    {
       "id": "content",
       "label": "Editorial content and content data",
       "category": "content",
@@ -58,6 +202,16 @@
       "category": "runtime",
       "match": {
         "prefixes": ["src/styles/"]
+      }
+    },
+    {
+      "id": "generated-models",
+      "label": "Generated content models and search catalog",
+      "category": "tooling",
+      "checks": ["generated-models"],
+      "match": {
+        "prefixes": ["src/lib/content-models/"],
+        "files": ["src/lib/search-catalog.ts", "scripts/audit-generated-models.mjs"]
       }
     },
     {
@@ -150,12 +304,17 @@
         "commands": ["npm run test:scripts", "npm run audit:commands"]
       },
       {
+        "checks": ["search-catalog", "tool-page-model", "decision-pick", "motion-controller", "design-tokens"],
+        "commands": ["npm run test:scripts"]
+      },
+      {
         "categories": ["content"],
         "commands": [
           "npm run ledger:pages:check",
           "npm run guard:check",
           "npm run audit:facts",
           "npm run audit:sources",
+          "npm run audit:provenance",
           "npm run check:links",
           "npm run check:news"
         ]
@@ -167,6 +326,14 @@
       {
         "checks": ["api"],
         "commands": ["npm run smoke:api"]
+      },
+      {
+        "checks": ["generated-models"],
+        "commands": ["npm run audit:generated-models"]
+      },
+      {
+        "checks": ["visual-smoke", "reduced-motion-smoke"],
+        "commands": ["npm run smoke:visual"]
       },
       {
         "categories": ["runtime", "dependencies"],

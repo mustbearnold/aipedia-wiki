@@ -6,6 +6,14 @@ async function expectJson(response, expectedStatus = 200) {
   return response.json();
 }
 
+function assertCatalogItem(item) {
+  for (const field of ['kind', 'kindLabel', 'slug', 'title', 'href', 'detail', 'meta', 'badge', 'priority', 'search']) {
+    expect(item, `catalog item missing ${field}`).toHaveProperty(field);
+  }
+  expect(typeof item.href).toBe('string');
+  expect(item.href.startsWith('/')).toBe(true);
+}
+
 test('tools API returns a populated, sorted tool index', async ({ request }) => {
   const data = await expectJson(await request.get('/api/tools.json'));
 
@@ -44,7 +52,7 @@ test('search tools API returns active tools only in compact shape', async ({ req
   }
 });
 
-test('home search API returns populated backward-compatible JSON', async ({ request }) => {
+test('home search API returns populated catalog JSON', async ({ request }) => {
   const data = await expectJson(await request.get('/api/home-search.json'));
 
   expect(data.count).toBeGreaterThan(100);
@@ -52,12 +60,14 @@ test('home search API returns populated backward-compatible JSON', async ({ requ
   expect(data.items.length).toBe(data.count);
 
   const kinds = new Set(data.items.map((item) => item.kind));
-  expect(kinds.has('Tool')).toBe(true);
-  expect(kinds.has('Compare')).toBe(true);
+  expect(kinds.has('tool')).toBe(true);
+  expect(kinds.has('compare')).toBe(true);
 
-  const chatgpt = data.items.find((item) => item.kind === 'Tool' && item.href === '/tools/chatgpt/');
+  const chatgpt = data.items.find((item) => item.kind === 'tool' && item.href === '/tools/chatgpt/');
   expect(chatgpt).toMatchObject({
-    kind: 'Tool',
+    kind: 'tool',
+    kindLabel: 'Tool',
+    slug: 'chatgpt',
     title: expect.stringMatching(/ChatGPT/i),
     href: '/tools/chatgpt/',
     meta: expect.any(String),
@@ -68,9 +78,8 @@ test('home search API returns populated backward-compatible JSON', async ({ requ
   });
 
   for (const item of data.items.slice(0, 25)) {
-    expect(Object.keys(item).sort()).toEqual(['badge', 'detail', 'href', 'kind', 'logo', 'meta', 'priority', 'search', 'title']);
+    assertCatalogItem(item);
     expect(item.title).toEqual(expect.any(String));
-    expect(item.href).toMatch(/^\//);
     expect(item.search).toEqual(expect.any(String));
     expect(item.search.length).toBeGreaterThan(0);
   }

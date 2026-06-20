@@ -1,6 +1,7 @@
 ---
 import { getCollection, getEntry, render } from 'astro:content';
 import ComparisonLayout from '../../layouts/ComparisonLayout.astro';
+import { buildToolPageModel } from '../../lib/content-models/tool-page-model';
 
 export async function getStaticPaths() {
   const entries = await getCollection('comparisons');
@@ -61,22 +62,26 @@ const toolEntries = await Promise.all(
 
 const tools = toolEntries
   .filter((t): t is NonNullable<typeof t> => t != null)
-  .map((t) => ({
-    slug: t.data.slug ?? t.id.replace(/\.md$/, ''),
-    title: t.data.title,
-    category: t.data.category,
-    company: t.data.company,
-    url: t.data.url,
-    price_range: t.data.price_range,
-    pricing_model: t.data.pricing_model,
-    affiliate: t.data.affiliate,
-    scores: t.data.scores,
-    facts: t.data.facts,
-    best_for: t.data.best_for,
-    not_best_for: t.data.not_best_for,
-    tags: t.data.tags,
-    tagline: t.data.tagline,
-  }));
+  .map((t) => {
+    const model = buildToolPageModel(t.data as Record<string, unknown>);
+    return {
+      slug: model.identity.slug || t.data.slug || t.id.replace(/\.md$/, ''),
+      title: model.identity.title || t.data.title,
+      category: model.identity.category,
+      company: model.identity.company,
+      url: model.identity.url,
+      price_range: model.cta.price_range,
+      pricing_model: model.cta.pricing_model,
+      affiliate: t.data.affiliate,
+      scores: t.data.scores,
+      facts: t.data.facts,
+      best_for: model.decision.buy_if,
+      not_best_for: model.decision.skip_if,
+      tags: t.data.tags,
+      tagline: model.identity.tagline,
+      evidence: model.evidence,
+    };
+  });
 
 const newsEntries = await getCollection('news');
 const relatedNews = newsEntries

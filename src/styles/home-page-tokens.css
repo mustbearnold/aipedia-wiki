@@ -20,23 +20,23 @@
 .guides-page-root,
 .glossary-page-root,
 .companies-page-root {
-  --home-panel: color-mix(in srgb, var(--bg-base) 78%, transparent);
-  --home-panel-strong: color-mix(in srgb, var(--bg-base) 88%, transparent);
-  --home-line: var(--border);
-  --home-line-strong: var(--site-accent-divider);
-  --home-text: var(--text-primary);
-  --home-heading: var(--text-primary);
-  --home-muted: var(--text-secondary);
-  --home-dim: var(--text-muted);
-  --home-accent: var(--accent-primary-text);
-  --home-accent-solid: var(--accent-primary);
+  --home-panel: color-mix(in srgb, var(--color-bg-base) 78%, transparent);
+  --home-panel-strong: color-mix(in srgb, var(--color-bg-base) 88%, transparent);
+  --home-line: var(--color-surface-muted);
+  --home-line-strong: var(--color-accent-divider);
+  --home-text: var(--color-text-primary);
+  --home-heading: var(--color-text-primary);
+  --home-muted: var(--color-text-secondary);
+  --home-dim: var(--color-text-muted);
+  --home-accent: var(--color-accent-strong);
+  --home-accent-solid: var(--color-accent);
   --home-inverse: #0c0a09;
-  --home-chip-bg: color-mix(in srgb, var(--bg-base) 70%, transparent);
-  --home-inner-panel: color-mix(in srgb, var(--bg-base) 74%, transparent);
-  --home-input-bg: color-mix(in srgb, var(--bg-base) 72%, transparent);
+  --home-chip-bg: color-mix(in srgb, var(--color-bg-base) 70%, transparent);
+  --home-inner-panel: color-mix(in srgb, var(--color-bg-base) 74%, transparent);
+  --home-input-bg: color-mix(in srgb, var(--color-bg-base) 72%, transparent);
   --home-logo-bg: #fff;
-  --home-card-outline: var(--site-accent-outline);
-  --home-card-outline-hover: var(--site-accent-outline-hover);
+  --home-card-outline: var(--color-accent-outline);
+  --home-card-outline-hover: var(--color-accent-outline-hover);
   --home-on-card: rgba(255, 255, 255, 0.96);
   --home-on-card-muted: rgba(255, 255, 255, 0.62);
   --home-hero-search-bg: color-mix(in srgb, var(--bg-base) 76%, transparent);
@@ -71,14 +71,14 @@ html.light .explore-page-root,
 html.light .guides-page-root,
 html.light .glossary-page-root,
 html.light .companies-page-root {
-  --home-line-strong: var(--site-accent-divider);
+  --home-line-strong: var(--color-accent-divider);
   --home-panel: color-mix(in srgb, #ffffff 88%, transparent);
   --home-panel-strong: color-mix(in srgb, #ffffff 94%, transparent);
   --home-chip-bg: color-mix(in srgb, #ffffff 90%, transparent);
   --home-inner-panel: color-mix(in srgb, #ffffff 92%, transparent);
   --home-input-bg: color-mix(in srgb, #ffffff 96%, transparent);
-  --home-card-outline: var(--site-accent-outline);
-  --home-card-outline-hover: var(--site-accent-outline-hover);
+  --home-card-outline: var(--color-accent-outline);
+  --home-card-outline-hover: var(--color-accent-outline-hover);
   --home-on-card: #18181b;
   --home-on-card-muted: #52525b;
   --home-hero-search-bg: color-mix(in srgb, #ffffff 90%, transparent);

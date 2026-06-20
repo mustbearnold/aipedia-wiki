@@ -19,6 +19,8 @@ import FeedbackForm from '../components/FeedbackForm.astro';
 import ComparisonFactTable from '../components/comparison/ComparisonFactTable.astro';
 import CommercialCTA from '../components/CommercialCTA.astro';
 import RelatedReading from '../components/RelatedReading.astro';
+import EvidenceRail from '../components/decision/EvidenceRail.astro';
+import type { EvidenceRailModel } from '../lib/content-models/evidence-rail';
 
 interface ToolData {
   slug: string;
@@ -36,6 +38,7 @@ interface ToolData {
   not_best_for?: string[];
   tags?: string[];
   tagline?: string;
+  evidence?: EvidenceRailModel;
 }
 
 interface NewsSignal { slug: string; title: string; date?: string; severity?: string; summary?: string; }
@@ -77,6 +80,19 @@ function overallScore(t: ToolData): number {
   return Math.round(((u + v + m + l) / 4) * 10) / 10;
 }
 
+function pricingPosture(t: ToolData): string | undefined {
+  if (t.price_range) return t.price_range;
+  return t.pricing_model?.replace(/_/g, ' ');
+}
+
+function decisionCues(t: ToolData): Array<{ label: string; value: string }> {
+  return [
+    { label: 'Best for', value: t.best_for?.[0] },
+    { label: 'Avoid if', value: t.not_best_for?.[0] },
+    { label: 'Pricing posture', value: pricingPosture(t) },
+  ].filter((cue): cue is { label: string; value: string } => Boolean(cue.value));
+}
+
 const winnerTool = winner ? tools.find((t) => t.slug === winner) : undefined;
 const fallbackWinner = !winnerTool && tools.length > 0
   ? [...tools].sort((a, b) => overallScore(b) - overallScore(a))[0]
@@ -90,6 +106,7 @@ const featuredBand = featuredScore >= 9
     : featuredScore >= 6.5
       ? 'Useful'
       : 'Niche';
+const featuredCues = featured ? decisionCues(featured) : [];
 
 const breadcrumbLdItems = [
   { name: 'Home', url: siteBase },
@@ -107,6 +124,9 @@ const verifiedLabel = verifiedRecently && verifiedDate
   : undefined;
 
 const rankLabel = featured ? `Winner: ${featured.title}` : undefined;
+const comparisonBuildHref = tools.length > 0
+  ? `/compare/build/?tools=${tools.map((tool) => tool.slug).join(',')}`
+  : '/compare/build/';
 const relatedItems = [
   ...relatedComparisons.slice(0, 2).map((item) => ({
     href: `/compare/${item.slug}/`,
@@ -121,7 +141,7 @@ const relatedItems = [
     kind: 'news' as const,
   })),
   ...(tools.length >= 2 ? [{
-    href: `/compare/build/?tools=${tools.slice(0, 2).map((tool) => tool.slug).join(',')}`,
+    href: comparisonBuildHref,
     title: 'Build your own comparison',
     description: 'Start from these contenders and adjust the tool set.',
     kind: 'comparison' as const,
@@ -203,13 +223,45 @@ const relatedItems = [
       </DecisionCard>
     )}
 
+    {featured && (featured.evidence || featuredCues.length > 0) && (
+      <section class="gt-compare-winner-evidence" aria-label={`${featured.title} decision evidence`}>
+        {featured.evidence && (
+          <EvidenceRail evidence={featured.evidence} variant="compact" label={`${featured.title} winner evidence`} />
+        )}
+        {featuredCues.length > 0 && (
+          <dl class="gt-compare-cues gt-compare-cues-featured">
+            {featuredCues.map((cue) => (
+              <div>
+                <dt>{cue.label}</dt>
+                <dd>{cue.value}</dd>
+              </div>
+            ))}
+          </dl>
+        )}
+      </section>
+    )}
+
     <section class="gt-compare-tools" aria-labelledby="gt-compare-h">
-      <h2 id="gt-compare-h" class="gt-section-h">The contenders</h2>
+      <div class="gt-compare-section-head">
+        <h2 id="gt-compare-h" class="gt-section-h">The contenders</h2>
+        <a
+          href={comparisonBuildHref}
+          class="gt-btn gt-btn-secondary gt-compare-build-link"
+          data-analytics-event="internal_cta_click"
+          data-analytics-source-module="comparison_contenders"
+          data-analytics-destination-type="comparison"
+          data-analytics-destination-slug="compare/build"
+          data-analytics-comparison-slug={slug}
+          data-analytics-position="middle"
+          data-analytics-label="Build comparison from contenders"
+        >Build comparison</a>
+      </div>
       <ol class="gt-compare-list">
         {tools.map((t) => {
           const score = overallScore(t);
           const isFeatured = featured && t.slug === featured.slug;
           const isAffiliate = Boolean(t.affiliate?.link);
+          const cues = decisionCues(t);
           return (
             <li class={`gt-compare-row ${isFeatured ? 'is-featured' : ''}`}>
               <a
@@ -234,6 +286,23 @@ const relatedItems = [
                   {score > 0 && <span class="gt-compare-score tabular-nums">{score}<span class="gt-compare-score-slash">/10</span></span>}
                 </div>
               </a>
+              {(cues.length > 0 || t.evidence) && (
+                <div class="gt-compare-decision-strip">
+                  {cues.length > 0 && (
+                    <dl class="gt-compare-cues">
+                      {cues.map((cue) => (
+                        <div>
+                          <dt>{cue.label}</dt>
+                          <dd>{cue.value}</dd>
+                        </div>
+                      ))}
+                    </dl>
+                  )}
+                  {t.evidence && (
+                    <EvidenceRail evidence={t.evidence} variant="inline" label={`${t.title} comparison evidence`} />
+                  )}
+                </div>
+              )}
               <div class="gt-compare-cta-row">
                 <CommercialCTA
                   toolName={t.title}
@@ -422,6 +491,81 @@ const relatedItems = [
         text-align: right;
       }
       .gt-compare-price { flex: 0 0 auto; }
+    }
+
+    .gt-compare-winner-evidence {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin: -12px 0 28px;
+      padding: 14px;
+      border: 1px solid var(--gt-line);
+      border-radius: var(--gt-radius-sm);
+      background: var(--gt-surface);
+    }
+    .gt-compare-decision-strip {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      padding: 0 14px 14px;
+    }
+    .gt-compare-cues {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+      margin: 0;
+    }
+    .gt-compare-cues div {
+      padding-top: 8px;
+      border-top: 1px solid var(--gt-line);
+    }
+    .gt-compare-cues dt {
+      margin: 0 0 2px;
+      color: var(--gt-subtle);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .gt-compare-cues dd {
+      margin: 0;
+      color: var(--gt-fg);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+    @media (min-width: 700px) {
+      .gt-compare-winner-evidence {
+        grid-template-columns: minmax(220px, 320px) minmax(0, 1fr);
+        align-items: start;
+      }
+      .gt-compare-decision-strip {
+        grid-template-columns: minmax(0, 1fr) minmax(220px, 320px);
+        align-items: start;
+      }
+      .gt-compare-cues { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    }
+
+    .gt-compare-section-head {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    .gt-compare-section-head .gt-section-h {
+      margin-bottom: 0;
+    }
+    .gt-compare-build-link {
+      width: 100%;
+      min-height: 44px;
+      padding: 8px 14px;
+      font-size: 13px;
+    }
+    @media (min-width: 700px) {
+      .gt-compare-section-head {
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: center;
+      }
+      .gt-compare-build-link { width: auto; }
     }
 
     .gt-compare-cta-row {

@@ -631,7 +631,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-15 | /guides/cursor-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/cursor-alternatives.md |
 | 2026-06-15 | /guides/github-copilot-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/github-copilot-alternatives.md |
 | 2026-06-15 | /privacy/ | Static page | Yes | git | src/pages/privacy.astro |
-| 2026-06-15 | /search/ | Static page | No | git | src/pages/search.astro |
 | 2026-06-15 | /tools/adobe-firefly/ | Tool | Yes | frontmatter | src/content/tools/adobe-firefly.md |
 | 2026-06-15 | /tools/augment-code/ | Tool | Yes | frontmatter | src/content/tools/augment-code.md |
 | 2026-06-15 | /tools/base44/ | Tool | Yes | frontmatter | src/content/tools/base44.md |
@@ -666,7 +665,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-15 | /trends/agent-commerce/ | Trend | Yes | frontmatter | src/content/trends/agent-commerce.md |
 | 2026-06-15 | /trends/vibe-coding/ | Trend | Yes | frontmatter | src/content/trends/vibe-coding.md |
 | 2026-06-15 | /workflows/ | Static page | Yes | git | src/pages/workflows/index.astro |
-| 2026-06-16 | / | Static page | Yes | git | src/pages/index.astro |
 | 2026-06-16 | /admin/reviews/ | Static page | No | git | src/pages/admin/reviews.astro |
 | 2026-06-16 | /answers/ | Static page | Yes | git | src/pages/answers/index.astro |
 | 2026-06-16 | /answers/best-ai-chatbot-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-chatbot-2026.astro |
@@ -714,8 +712,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-16 | /compare/grok-vs-poe/ | Comparison | Yes | frontmatter | src/content/comparisons/grok-vs-poe.md |
 | 2026-06-16 | /compare/perplexity-vs-poe/ | Comparison | Yes | frontmatter | src/content/comparisons/perplexity-vs-poe.md |
 | 2026-06-16 | /explore/ | Static page | Yes | git | src/pages/explore/index.astro |
-| 2026-06-16 | /sitemap-index.xml | Crawl surface | No | git | astro.config.mjs |
-| 2026-06-16 | /tools/ | Static page | Yes | git | src/pages/tools/index.astro |
 | 2026-06-16 | /tools/hume/ | Tool | Yes | frontmatter | src/content/tools/hume.md |
 | 2026-06-16 | /tools/kling/ | Tool | Yes | frontmatter | src/content/tools/kling.md |
 | 2026-06-16 | /tools/microsoft-agent-framework/ | Tool | Yes | frontmatter | src/content/tools/microsoft-agent-framework.md |
@@ -791,4 +787,8 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-18 | /tools/codeium/ | Tool | Yes | frontmatter | src/content/tools/codeium.md |
 | 2026-06-18 | /tools/cohere/ | Tool | Yes | frontmatter | src/content/tools/cohere.md |
 | 2026-06-18 | /tools/connected-papers/ | Tool | Yes | frontmatter | src/content/tools/connected-papers.md |
+| 2026-06-19 | / | Static page | Yes | git | src/pages/index.astro |
+| 2026-06-19 | /search/ | Static page | No | git | src/pages/search.astro |
+| 2026-06-19 | /sitemap-index.xml | Crawl surface | No | git | astro.config.mjs |
+| 2026-06-19 | /tools/ | Static page | Yes | git | src/pages/tools/index.astro |
 | 2026-06-19 | /tools/semrush-demo/ | Tool | Yes | frontmatter | src/content/tools/semrush-demo.md |

@@ -664,8 +664,11 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import TrustPanel from '../components/godtier/TrustPanel.astro';
 import ToolLogo from '../components/ToolLogo.astro';
+import EvidenceRail from '../components/decision/EvidenceRail.astro';
 import HomepageLD from '../components/seo/HomepageLD.astro';
+import logoManifest from '../data/logo-manifest.json';
 import { categoryLabel, overallScore } from '../utils/tool-metadata';
+import { buildSearchCatalog } from '../lib/search-catalog';
 import { searchEntrySlug } from '../lib/search-index';
 
 const allTools = await getCollection('tools');
@@ -674,29 +677,28 @@ const allComparisons = await getCollection('comparisons');
 const allNews = await getCollection('news');
 const allCategories = await getCollection('categories');
 const allGuides = await getCollection('use-cases');
+const allWorkflows = await getCollection('workflows');
+const allTrends = await getCollection('trends');
+const allCompanies = await getCollection('companies');
 
 const toolCount = activeTools.length;
 const comparisonCount = allComparisons.length;
 const newsCount = allNews.length;
 const guideCount = allGuides.length;
 
-const scoredTools = activeTools
-  .map((tool: any) => ({
-    slug: searchEntrySlug(tool),
-    title: tool.data.title,
-    category: tool.data.category ?? 'ai-tools',
-    categoryLabel: categoryLabel(tool.data.category ?? 'ai-tools'),
-    tagline: tool.data.tagline ?? tool.data.meta_description ?? '',
-    pricing: tool.data.price_range ?? null,
-    pricingModel: tool.data.pricing_model ?? null,
-    url: tool.data.url ?? null,
-    affiliateLink: tool.data.affiliate?.link ?? null,
-    affiliateNetwork: tool.data.affiliate?.network ?? null,
-    score: overallScore(tool.data.scores ?? {}),
-  }))
-  .sort((a: any, b: any) => b.score - a.score);
+const catalogItems = buildSearchCatalog({
+  tools: allTools,
+  comparisons: allComparisons,
+  categories: allCategories,
+  guides: allGuides,
+  news: allNews,
+  workflows: allWorkflows,
+  trends: allTrends,
+  companies: allCompanies,
+  logos: logoManifest as Record<string, string>,
+});
 
-const topTools = scoredTools.slice(0, 5);
+const topTools = catalogItems.filter((item) => item.kind === 'tool').slice(0, 5);
 
 const categories = allCategories
   .map((cat: any) => {
@@ -767,36 +769,43 @@ const wikiPortals = [
   },
 ];
 
-const featuredDecisionRoutes = [
+const catalogItemByKey = new Map(catalogItems.map((item) => [`${item.kind}:${item.slug}`, item] as const));
+const decisionPathSeeds = [
   {
-    href: '/answers/best-ai-chatbot-2026/',
-    eyebrow: 'General work',
-    title: 'AI assistant picker',
-    description: 'ChatGPT default, Claude, Gemini, and Perplexity by job.',
-    slug: 'answers/best-ai-chatbot-2026',
+    key: 'category:ai-coding',
+    intent: 'I need an AI coding agent',
+    eyebrow: 'Coding agent',
   },
   {
-    href: '/answers/best-ai-coding-tool-2026/',
-    eyebrow: 'Developer stack',
-    title: 'Coding workflow',
-    description: 'IDE assistant, terminal agent, GitHub-native, or app builder.',
-    slug: 'answers/best-ai-coding-tool-2026',
+    key: 'category:ai-infrastructure',
+    intent: 'I need a local or open model',
+    eyebrow: 'Local/open model',
   },
   {
-    href: '/answers/best-free-ai-tools-2026/',
-    eyebrow: 'Budget path',
-    title: 'Free and budget tools',
-    description: 'Free tiers, low-cost plans, and when paid is worth it.',
-    slug: 'answers/best-free-ai-tools-2026',
+    key: 'category:ai-automation',
+    intent: 'I need a marketing or automation stack',
+    eyebrow: 'Marketing stack',
   },
   {
-    href: '/answers/best-ai-video-generator-2026/',
-    eyebrow: 'Creative output',
-    title: 'Creative media tools',
-    description: 'Video, image, music, and voice generator paths.',
-    slug: 'answers/best-ai-video-generator-2026',
+    key: 'compare:claude-vs-cursor',
+    intent: 'I need Claude vs Cursor',
+    eyebrow: 'Comparison',
+  },
+  {
+    key: 'tool:cursor',
+    intent: 'I need a high-confidence tool pick',
+    eyebrow: 'High-value tool',
+  },
+  {
+    key: 'answer:best-ai-chatbot-2026',
+    intent: 'I need a general AI assistant',
+    eyebrow: 'Fast answer',
   },
 ];
+const featuredDecisionRoutes = decisionPathSeeds.flatMap((seed) => {
+  const item = catalogItemByKey.get(seed.key);
+  return item ? [{ ...seed, item }] : [];
+});
 
 const latestNews = allNews
   .map((news: any) => ({
@@ -981,6 +990,50 @@ function newsDateFmt(iso: string): string {
       </nav>
     </section>
 
+
+    <section class="gt-buyer-router" aria-labelledby="gt-buyer-router-title">
+      <div class="gt-router-head">
+        <p class="gt-router-kicker">
+          <span class="gt-livedot" aria-hidden="true"></span>
+          Decision paths
+        </p>
+        <h2 id="gt-buyer-router-title">What are you trying to do with AI?</h2>
+        <p>
+          Choose the closest intent to jump straight into the shared search catalog, category shortlist, comparison, or tool record.
+        </p>
+      </div>
+
+      <div class="gt-router-grid" aria-label="High-intent buyer routes">
+        {featuredDecisionRoutes.map((route) => (
+          <article
+            class="gt-router-path"
+            data-analytics-card="home_decision_path"
+            data-analytics-kind={route.item.kind}
+            data-analytics-type={route.item.kind === 'compare' ? 'comparison' : route.item.kind}
+          >
+            <a
+              class="gt-router-path-link"
+              href={route.item.href}
+              data-analytics-event="internal_cta_click"
+              data-analytics-source-module="home_featured_decisions"
+              data-analytics-destination-type={route.item.kind === 'compare' ? 'comparison' : route.item.kind}
+              data-analytics-destination-slug={route.item.slug}
+              data-analytics-destination-url={route.item.href}
+              data-analytics-position="top"
+              data-analytics-label={route.intent}
+              data-analytics-intent={route.intent}
+            >
+              <span>{route.eyebrow}</span>
+              <strong>{route.intent}</strong>
+              <small>{route.item.buyerFit}</small>
+            </a>
+            <EvidenceRail evidence={route.item.evidence} variant="compact" label={`${route.intent} evidence`} />
+            <a class="gt-router-action" href={route.item.action.href}>{route.item.action.label} <span aria-hidden="true">→</span></a>
+          </article>
+        ))}
+      </div>
+    </section>
+
     {homeCategories.length > 0 && (
       <section class="gt-categories" aria-labelledby="gt-cat-h">
         <div class="gt-section-head">
@@ -1010,39 +1063,6 @@ function newsDateFmt(iso: string): string {
       </section>
     )}
 
-    <section class="gt-buyer-router" aria-labelledby="gt-buyer-router-title">
-      <div class="gt-router-head">
-        <p class="gt-router-kicker">
-          <span class="gt-livedot" aria-hidden="true"></span>
-          Decision paths
-        </p>
-        <h2 id="gt-buyer-router-title">Start with the question you have</h2>
-        <p>
-          Pick the closest buyer question, then drill into scores, plans, alternatives, and watch-outs.
-        </p>
-      </div>
-
-      <nav class="gt-router-grid" aria-label="High-intent buyer routes">
-        {featuredDecisionRoutes.map((route) => (
-          <a
-            class="gt-router-path"
-            href={route.href}
-            data-analytics-event="internal_cta_click"
-            data-analytics-source-module="home_featured_decisions"
-            data-analytics-destination-type="answer"
-            data-analytics-destination-slug={route.slug}
-            data-analytics-destination-url={route.href}
-            data-analytics-position="top"
-            data-analytics-label={route.title}
-          >
-            <span>{route.eyebrow}</span>
-            <strong>{route.title}</strong>
-            <small>{route.description}</small>
-          </a>
-        ))}
-      </nav>
-    </section>
-
     {topTools.length > 0 && (
       <section class="gt-top-tools" aria-labelledby="gt-top-h">
         <div class="gt-section-head">
@@ -1051,7 +1071,7 @@ function newsDateFmt(iso: string): string {
         </div>
         <ol class="gt-tool-list">
           {topTools.map((t, i) => {
-            const tone = t.score >= 8 ? 'positive' : t.score >= 6.5 ? 'neutral' : 'negative';
+            const tone = (t.score ?? 0) >= 8 ? 'positive' : (t.score ?? 0) >= 6.5 ? 'neutral' : 'negative';
             return (
               <li class={`gt-tool-row gt-tool-row-${tone}`}>
                 <a
@@ -1062,7 +1082,7 @@ function newsDateFmt(iso: string): string {
                   data-analytics-destination-type="tool"
                   data-analytics-destination-slug={`tools/${t.slug}`}
                   data-analytics-tool-slug={t.slug}
-                  data-analytics-category-slug={t.category}
+                  data-analytics-category-slug={t.categorySlug ?? ''}
                   data-analytics-position="top"
                   data-analytics-label={t.title}
                 >
@@ -1070,11 +1090,11 @@ function newsDateFmt(iso: string): string {
                   <ToolLogo slug={t.slug} title={t.title} size={40} />
                   <div class="gt-tool-main">
                     <strong class="gt-tool-title">{t.title}</strong>
-                    {t.tagline && <span class="gt-tool-tagline">{t.tagline}</span>}
+                    {t.detail && <span class="gt-tool-tagline">{t.detail}</span>}
                   </div>
                   <div class="gt-tool-meta">
-                    <span class="gt-tool-category">{t.categoryLabel}</span>
-                    <span class="gt-tool-score tabular-nums">{t.score}<span class="gt-tool-score-slash">/10</span></span>
+                    <span class="gt-tool-category">{t.meta}</span>
+                    {t.score && <span class="gt-tool-score tabular-nums">{t.score}<span class="gt-tool-score-slash">/10</span></span>}
                   </div>
                 </a>
               </li>
@@ -1260,7 +1280,7 @@ function newsDateFmt(iso: string): string {
           return data
             .map((item) => ({ item, score: scoreSearchItem(item, qTerms, query, searchOptions) }))
             .filter(({ item, score }) => {
-              if (!qTerms.length) return item.kind === 'Tool';
+              if (!qTerms.length) return item.kind === 'tool';
               return searchItemMatches(item, qTerms, score, searchOptions);
             })
             .sort((a, b) => b.score - a.score || normalizeSearchText(a.item.title).localeCompare(normalizeSearchText(b.item.title)))
@@ -1276,13 +1296,19 @@ function newsDateFmt(iso: string): string {
           panel.hidden = true;
           input.setAttribute('aria-expanded', 'false');
           activeIndex = -1;
+          input.removeAttribute('aria-activedescendant');
         }
 
         function setActive(idx) {
           const items = results.querySelectorAll('.gt-search-result');
           items.forEach((el, i) => el.classList.toggle('is-active', i === idx));
           activeIndex = idx;
-          if (idx >= 0 && items[idx]) items[idx].scrollIntoView({ block: 'nearest' });
+          if (idx >= 0 && items[idx]) {
+            input.setAttribute('aria-activedescendant', items[idx].id);
+            items[idx].scrollIntoView({ block: 'nearest' });
+          } else {
+            input.removeAttribute('aria-activedescendant');
+          }
         }
 
         function render() {
@@ -1329,7 +1355,7 @@ function newsDateFmt(iso: string): string {
                 ${second ? `<img src="${escape(second)}" alt="" loading="lazy" decoding="async" />` : ''}
               </span>`;
             }
-            return `<span class="gt-search-result-kind">${escape(m.kind || '')}</span>`;
+            return `<span class="gt-search-result-kind">${escape(m.kindLabel || m.kind || '')}</span>`;
           }
           results.innerHTML = matches.map((m, i) => `
             <a class="gt-search-result" href="${escape(m.href)}" role="option" id="gt-search-result-${i}" tabindex="-1" data-row-query="${escape(input.value)}" data-result-type="${escape(m.kind || '')}" data-result-title="${escape(m.title)}" data-result-url="${escape(m.href)}">
@@ -1340,6 +1366,7 @@ function newsDateFmt(iso: string): string {
             </a>
           `).join('');
           activeIndex = -1;
+          input.removeAttribute('aria-activedescendant');
           open();
         }
 
@@ -1649,10 +1676,10 @@ function newsDateFmt(iso: string): string {
     .gt-router-path {
       position: relative;
       min-width: 0;
-      min-height: 116px;
+      min-height: 156px;
       display: grid;
       align-content: start;
-      gap: 6px;
+      gap: 8px;
       padding: 14px 42px 14px 14px;
       border: 1px solid var(--gt-line);
       border-left: 3px solid var(--gt-accent);
@@ -1661,6 +1688,13 @@ function newsDateFmt(iso: string): string {
       color: var(--gt-fg);
       text-decoration: none;
       transition: border-color 140ms ease, background 140ms ease, transform 140ms ease;
+    }
+    .gt-router-path-link {
+      min-width: 0;
+      display: grid;
+      gap: 6px;
+      color: inherit;
+      text-decoration: none;
     }
     .gt-router-path::after {
       content: '→';
@@ -1671,7 +1705,7 @@ function newsDateFmt(iso: string): string {
       font-size: 16px;
       font-weight: 800;
     }
-    .gt-router-path span {
+    .gt-router-path-link span {
       color: var(--gt-subtle);
       font-size: 10px;
       font-weight: 800;
@@ -1679,17 +1713,28 @@ function newsDateFmt(iso: string): string {
       line-height: 1.2;
       text-transform: uppercase;
     }
-    .gt-router-path strong {
+    .gt-router-path-link strong {
       color: var(--gt-fg);
       font-size: 15px;
       font-weight: 760;
       line-height: 1.25;
     }
-    .gt-router-path small {
+    .gt-router-path-link small {
       color: var(--gt-muted);
       font-size: 12px;
       line-height: 1.4;
       overflow-wrap: anywhere;
+    }
+    .gt-router-action {
+      width: fit-content;
+      color: var(--gt-accent);
+      font-size: 12px;
+      font-weight: 760;
+      line-height: 1.2;
+      text-decoration: none;
+    }
+    .gt-router-action:hover {
+      color: var(--gt-accent-hover);
     }
     .gt-router-path:hover {
       border-color: var(--gt-accent);
@@ -1815,25 +1860,25 @@ function newsDateFmt(iso: string): string {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
       .gt-router-path {
-        min-height: 104px;
-        gap: 4px;
+        min-height: 150px;
+        gap: 6px;
         padding: 11px 36px 11px 11px;
       }
       .gt-router-path::after {
         top: 11px;
         right: 11px;
       }
-      .gt-router-path span {
+      .gt-router-path-link span {
         font-size: 9px;
       }
-      .gt-router-path strong {
+      .gt-router-path-link strong {
         font-size: 13.5px;
       }
-      .gt-router-path small {
+      .gt-router-path-link small {
         font-size: 11.5px;
         line-height: 1.3;
         display: -webkit-box;
-        -webkit-line-clamp: 3;
+        -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
         overflow: hidden;
       }

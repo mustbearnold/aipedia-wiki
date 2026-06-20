@@ -47,6 +47,73 @@ test('check-smart routes API pages through API verification', () => {
   assert.ok(plan.commands.includes('npm run build:fast'));
 });
 
+test('check-smart routes generated model surfaces through generated model audit', () => {
+  const modelPlan = planForPaths(['src/lib/content-models/tool-page-model.ts']);
+  const searchPlan = planForPaths(['src/lib/search-catalog.ts']);
+  const auditPlan = planForPaths(['scripts/audit-generated-models.mjs']);
+
+  assert.deepEqual(modelPlan.categories, ['runtime', 'tooling']);
+  assert.deepEqual(searchPlan.categories, ['runtime', 'tooling']);
+  assert.deepEqual(auditPlan.categories, ['tooling']);
+
+  for (const plan of [modelPlan, searchPlan, auditPlan]) {
+    assert.ok(plan.commands.includes('npm run audit:generated-models'));
+    assert.ok(plan.commands.includes('npm run test:scripts'));
+  }
+  assert.ok(modelPlan.commands.includes('npm run build:fast'));
+  assert.ok(searchPlan.commands.includes('npm run build:fast'));
+});
+
+test('check-smart exposes Phase 3 search surface checks and smoke routes', () => {
+  const plan = planForPaths(['src/pages/search.astro']);
+
+  assert.ok(plan.surfaces.some((surface) => surface.id === 'phase3-search-catalog'));
+  assert.ok(plan.surfaces.some((surface) => surface.label === 'Phase 3 search catalog and search UI'));
+  assert.ok(plan.surface_ids.includes('phase3-search-catalog'));
+  assert.ok(plan.surface_labels.includes('Phase 3 search catalog and search UI'));
+  assert.ok(plan.checks.includes('search-catalog'));
+  assert.ok(plan.checks.includes('api'));
+  assert.ok(plan.commands.includes('npm run test:scripts'));
+  assert.ok(plan.commands.includes('npm run smoke:api'));
+  assert.ok(plan.smoke_routes.some((route) => route.route === '/api/home-search.json' && route.command === 'npm run smoke:api'));
+});
+
+test('check-smart routes Phase 3 model, category, motion, and token surfaces', () => {
+  const toolModelPlan = planForPaths(['src/lib/content-models/tool-page-model.ts']);
+  assert.ok(toolModelPlan.surfaces.some((surface) => surface.id === 'phase3-tool-trust-panel'));
+  assert.ok(toolModelPlan.checks.includes('tool-page-model'));
+  assert.ok(toolModelPlan.commands.includes('npm run audit:generated-models'));
+  assert.ok(toolModelPlan.commands.includes('npm run test:scripts'));
+
+  const categoryPlan = planForPaths(['src/content/categories/ai-coding.md']);
+  assert.ok(categoryPlan.surfaces.some((surface) => surface.id === 'phase3-category-buyer-path'));
+  assert.ok(categoryPlan.checks.includes('decision-pick'));
+  assert.ok(categoryPlan.commands.includes('npm run test:scripts'));
+  assert.ok(categoryPlan.smoke_routes.some((route) => route.route === '/categories/ai-coding/'));
+
+  const comparePlan = planForPaths(['src/layouts/ComparisonLayout.astro']);
+  assert.ok(comparePlan.surfaces.some((surface) => surface.id === 'phase3-compare-decision-surfaces'));
+  assert.ok(comparePlan.checks.includes('decision-pick'));
+  assert.ok(comparePlan.checks.includes('tool-page-model'));
+  assert.ok(comparePlan.checks.includes('generated-models'));
+  assert.ok(comparePlan.commands.includes('npm run audit:generated-models'));
+  assert.ok(comparePlan.smoke_routes.some((route) => route.route === '/compare/chatgpt-vs-claude/'));
+
+  const motionPlan = planForPaths(['src/lib/motion-controller.ts']);
+  assert.ok(motionPlan.surfaces.some((surface) => surface.id === 'phase3-motion-controller'));
+  assert.ok(motionPlan.checks.includes('motion-controller'));
+  assert.ok(motionPlan.checks.includes('reduced-motion-smoke'));
+  assert.ok(motionPlan.smoke_routes.some((route) => route.focus.includes('reduced-motion')));
+  assert.ok(motionPlan.commands.includes('npm run smoke:visual'));
+
+  const tokenPlan = planForPaths(['src/styles/tokens.css']);
+  assert.ok(tokenPlan.surfaces.some((surface) => surface.id === 'phase3-tokens-css'));
+  assert.ok(tokenPlan.checks.includes('design-tokens'));
+  assert.ok(tokenPlan.commands.includes('npm run test:scripts'));
+  assert.ok(tokenPlan.commands.includes('npm run smoke:visual'));
+});
+
+
 test('operator surface contract names verification surfaces explicitly', () => {
   const surfaceIds = operatorSurfaces.surfaces.map((surface) => surface.id);
 
@@ -56,10 +123,29 @@ test('operator surface contract names verification surfaces explicitly', () => {
   assert.ok(surfaceIds.includes('runtime-layouts'));
   assert.ok(surfaceIds.includes('runtime-components'));
   assert.ok(surfaceIds.includes('runtime-styles'));
+  assert.ok(surfaceIds.includes('generated-models'));
   assert.ok(surfaceIds.includes('assets'));
   assert.ok(surfaceIds.includes('scripts'));
   assert.ok(surfaceIds.includes('config'));
   assert.ok(surfaceIds.includes('docs-agent'));
+  for (const id of [
+    'phase3-evidence-rail',
+    'phase3-search-catalog',
+    'phase3-homepage-intelligence-desk',
+    'phase3-tool-trust-panel',
+    'phase3-category-buyer-path',
+    'phase3-compare-decision-surfaces',
+    'phase3-motion-controller',
+    'phase3-tokens-css',
+  ]) {
+    const surface = operatorSurfaces.surfaces.find((candidate) => candidate.id === id);
+    assert.ok(surface, `missing ${id}`);
+    assert.ok(surface.canonicalModel, `${id} missing canonical model`);
+    assert.ok(surface.auditImpact, `${id} missing audit impact`);
+    assert.ok(Array.isArray(surface.routeTypes), `${id} missing route types`);
+    assert.ok(Array.isArray(surface.requiredChecks), `${id} missing required checks`);
+    assert.ok(Array.isArray(surface.smokeRoutes), `${id} missing smoke routes`);
+  }
 });
 
 test('operator surface contract names the guard challenge surface explicitly', () => {
