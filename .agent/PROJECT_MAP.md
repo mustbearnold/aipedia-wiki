@@ -4,7 +4,7 @@
 
 AiPedia is an Astro site. Editorial source lives under `src/content/`; route templates, layouts, components, styles, data, and public assets live under `src/` and `public/`.
 
-Read `.agent/CURRENT_STATUS.md` first for the current branch state, recent completions, and active work. Then read `.agent/OPERATING_RULES.md` for the committed operating rules. It replaces the ignored root `AGENTS.md` as the reliable instruction source for clean worktrees.
+Read `.agent/CURRENT_STATUS.md` first for the current branch state, recent completions, and active work. Then read `.agent/PLANS.md` for active lanes, `.agent/WORK_LOG.md` for landed milestones, and `.agent/OPERATING_RULES.md` for the committed operating rules. The `.agent/` stack replaces the ignored root `AGENTS.md` as the reliable instruction source for clean worktrees.
 
 Use the smallest verification command that matches the changed surface. Start with `npm run check:smart` to get a scoped recommendation.
 

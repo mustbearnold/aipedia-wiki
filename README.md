@@ -4,7 +4,7 @@ Astro source for aipedia.wiki, an AI tools encyclopedia and comparison system.
 
 ## Current project state
 
-Start with `.agent/CURRENT_STATUS.md` for the plain-English status of recent completed work, active lanes, verification baselines, and known caveats. Then use `.agent/PROJECT_MAP.md` for orientation and `.agent/PLANS.md` for active ExecPlans.
+Start with `.agent/CURRENT_STATUS.md` for the plain-English current state. Use `.agent/PLANS.md` for active work, `.agent/WORK_LOG.md` for completed major work, `.agent/PROJECT_MAP.md` for orientation, and `.agent/OPERATING_RULES.md` for the repo rules.
 
 ## Commands
 

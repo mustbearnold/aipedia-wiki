@@ -4,11 +4,22 @@ Last updated: 2026-06-20
 
 Audience: maintainers, future agents, and Matt.
 
+## Source-Of-Truth Stack
+
+1. `.agent/CURRENT_STATUS.md`: where we are now.
+2. `.agent/PLANS.md`: only active or immediately resumable work.
+3. `.agent/WORK_LOG.md`: append-only record of major completed work.
+4. `.agent/OPERATING_RULES.md`: how to work safely in this repo.
+5. `.agent/PROJECT_MAP.md`: where important code and verification surfaces live.
+6. `.agent/archive/`: historical detail. Read only when a current file points there.
+
+Local ignored docs, old specs, and archived plans are not canonical when they conflict with this stack.
+
 ## Plain English
 
 The June 2026 standards remediation is done and pushed to `origin/master`. Do not restart that work from the original spec. Use this file to see what was completed, what remains active, and which docs to trust first.
 
-At the time this status was written, `master` was clean and synced with `origin/master` at `3355ce1d`.
+At the time this status was last checked, `master` was clean and synced with `origin/master`. Run `git status --short --branch` and `git log --oneline -5` for the exact current head.
 
 ## Done Recently
 
@@ -22,11 +33,14 @@ At the time this status was written, `master` was clean and synced with `origin/
   - Use `npm run guard:challenge:check` to validate accepted guard challenge records.
 - Project Folder Tidy and Verification Router work is complete.
   - Relevant commits include `1c109370 chore: tidy repo and refresh June 17 coverage` and `af00cf70 feat: add ops efficiency tooling`.
-  - The active agent surface is now `.agent/README.md`, `.agent/OPERATING_RULES.md`, `.agent/PROJECT_MAP.md`, `.agent/PLANS.md`, and this file.
+  - The active agent surface is now `.agent/README.md`, `.agent/CURRENT_STATUS.md`, `.agent/PLANS.md`, `.agent/WORK_LOG.md`, `.agent/OPERATING_RULES.md`, and `.agent/PROJECT_MAP.md`.
   - Use `npm run check:smart` before choosing broad checks.
 - June 17, 2026 AI News Coverage Catch-Up is complete.
   - Added a June 17 daily desk plus focused Google Pixel/Gemini, Microsoft Copilot Cowork, G7 AI sovereignty, and NVIDIA AI factory stories.
   - Updated `/news/`, RSS, ledger, and related crawl surfaces.
+- Continuity recording has been hardened.
+  - Committed source-of-truth stack: `.agent/CURRENT_STATUS.md`, `.agent/PLANS.md`, `.agent/WORK_LOG.md`, `.agent/OPERATING_RULES.md`, and `.agent/PROJECT_MAP.md`.
+  - Future major work should update status, active plans, and work log before final report.
 
 ## Active Work
 
@@ -64,6 +78,15 @@ At the time this status was written, `master` was clean and synced with `origin/
 ## Start The Next Session
 
 1. Run `git status --short --branch`.
-2. Read `.agent/CURRENT_STATUS.md`, `.agent/PROJECT_MAP.md`, and `.agent/PLANS.md`.
-3. Use `npm run check:smart` to pick verification for the changed files.
-4. If editing website content or commercial claims, apply the current-date, ledger, source, top-layer, mobile, SEO, and affiliate rules from `.agent/OPERATING_RULES.md`.
+2. Read `.agent/CURRENT_STATUS.md`, `.agent/PLANS.md`, and `.agent/WORK_LOG.md`.
+3. Read `.agent/PROJECT_MAP.md` for paths and `.agent/OPERATING_RULES.md` for rules.
+4. Use `npm run check:smart` to pick verification for the changed files.
+5. If editing website content or commercial claims, apply the current-date, ledger, source, top-layer, mobile, SEO, and affiliate rules from `.agent/OPERATING_RULES.md`.
+
+## Finish A Major Session
+
+1. Update `.agent/CURRENT_STATUS.md` so it reflects the new current state.
+2. Update `.agent/PLANS.md` so completed work is no longer listed as active.
+3. Append `.agent/WORK_LOG.md` with what landed, commit or branch, checks, risks, and next step.
+4. Update any source spec only when that spec directly governed the work.
+5. Run the smallest valid verification gate and report what passed, failed, and remains.

@@ -1,6 +1,6 @@
 # AiPedia Operating Rules
 
-This is the committed operating guide for agents working in this repository. Use it as the primary instruction source. Read `.agent/CURRENT_STATUS.md` first when resuming a session so you know what is already complete and what remains active. Do not rely on a root `AGENTS.md`; that file is ignored and may be absent in clean clones or worktrees.
+This is the committed operating guide for agents working in this repository. Use it as the primary instruction source. Read `.agent/CURRENT_STATUS.md`, `.agent/PLANS.md`, and `.agent/WORK_LOG.md` first when resuming a session so you know what is current, active, and already complete. Do not rely on a root `AGENTS.md`; that file is ignored and may be absent in clean clones or worktrees.
 
 ## Mission
 
@@ -74,6 +74,20 @@ Before finishing:
 5. Verify schema, canonical URL, title, description, indexability, and affiliate disclosure where relevant.
 6. Verify affected top-layer pages and parent hubs are current, internally linked, and aligned with the edited sub-pages.
 7. Report exactly what changed, what passed, what failed, and what remains.
+
+## Continuity protocol
+
+Use this protocol for major work: implementation waves, reviews that produce fixes, content batches, migrations, tooling changes, deployment changes, and any task that changes multiple files or future-agent context.
+
+Before final report:
+
+1. Update `.agent/CURRENT_STATUS.md` with the current state and next action.
+2. Update `.agent/PLANS.md` so only active or immediately resumable work remains active.
+3. Append `.agent/WORK_LOG.md` with the completed work, commit or branch, verification, risks, and next step.
+4. Update the source spec or plan only when that document directly governed the work.
+5. Leave `.agent/archive/` as historical detail, not a required startup read.
+
+If the work is small and does not affect future context, it may skip the work log, but the final response must still name changed files, verification, and risks.
 
 ## Page quality law
 
