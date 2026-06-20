@@ -6,7 +6,31 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const PROJECT_DIR = dirname(dirname(fileURLToPath(import.meta.url)));
-const astroBin = join(PROJECT_DIR, 'node_modules', 'astro', 'bin', 'astro.mjs');
+
+function findNodeModuleBin(startDir, packagePath) {
+  let currentDir = startDir;
+  while (true) {
+    const candidate = join(currentDir, 'node_modules', ...packagePath);
+    if (existsSync(candidate)) return candidate;
+
+    const parentDir = dirname(currentDir);
+    if (parentDir === currentDir) return '';
+    currentDir = parentDir;
+  }
+}
+
+const astroBin = findNodeModuleBin(PROJECT_DIR, ['astro', 'bin', 'astro.mjs']);
+
+if (!astroBin) {
+  console.error([
+    '[build-fast] Missing Astro dependency at node_modules/astro/bin/astro.mjs.',
+    `Looked from ${PROJECT_DIR} upward for a usable node_modules directory.`,
+    'Install dependencies before running the fast build:',
+    '  npm install',
+    'If you are in a nested Git worktree, install dependencies in this worktree or a parent checkout.',
+  ].join('\n'));
+  process.exit(1);
+}
 
 console.log('[build-fast] Building to dist-fast; skipping GitHub stats refresh, OG generation, Pagefind, and live Worker runtime bundling.');
 

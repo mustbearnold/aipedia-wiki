@@ -1,10 +1,135 @@
 import assert from 'node:assert/strict';
-import { test } from 'node:test';
 import { readFileSync } from 'node:fs';
+import { spawnSync } from 'node:child_process';
+import { test } from 'node:test';
+import { fileURLToPath } from 'node:url';
 
-import { classifyPaths, commandsForCategories, planForPaths } from '../../scripts/check-smart.mjs';
+import * as checkSmart from '../../scripts/check-smart.mjs';
 
+const { classifyPaths, commandsForCategories, planForPaths } = checkSmart;
 const operatorSurfaces = JSON.parse(readFileSync(new URL('../../src/data/operator-surfaces.json', import.meta.url), 'utf8'));
+const checkSmartScriptPath = fileURLToPath(new URL('../../scripts/check-smart.mjs', import.meta.url));
+
+function changedPathsForArgs() {
+  assert.equal(typeof checkSmart.changedPathsForArgs, 'function');
+  return checkSmart.changedPathsForArgs;
+}
+
+test('check-smart preserves default dirty path discovery when --base is absent', () => {
+  const calls = [];
+  const gitOutputs = new Map([
+    ['diff\0--name-only', ['docs/dirty.md']],
+    ['diff\0--name-only\0--cached', ['scripts/check-smart.mjs']],
+    ['ls-files\0--others\0--exclude-standard', ['tests/scripts/check-smart.test.mjs', 'docs/dirty.md']],
+  ]);
+
+  const paths = changedPathsForArgs()([], {
+    gitLines(gitArgs) {
+      calls.push(gitArgs);
+      const key = gitArgs.join('\0');
+      assert.ok(gitOutputs.has(key), `unexpected git call: ${JSON.stringify(gitArgs)}`);
+      return gitOutputs.get(key);
+    },
+  });
+
+  assert.deepEqual(paths, ['docs/dirty.md', 'scripts/check-smart.mjs', 'tests/scripts/check-smart.test.mjs']);
+  assert.deepEqual(calls, [
+    ['diff', '--name-only'],
+    ['diff', '--name-only', '--cached'],
+    ['ls-files', '--others', '--exclude-standard'],
+  ]);
+});
+
+test('check-smart includes committed merge-base diff paths when --base ref is provided', () => {
+  const calls = [];
+  const gitOutputs = new Map([
+    ['merge-base\0origin/main\0HEAD', ['abc123']],
+    ['diff\0--name-only\0abc123..HEAD', ['src/pages/tools/[slug].astro', 'docs/base-only.md', 'src\\styles\\global.css']],
+    ['diff\0--name-only', ['docs/dirty.md']],
+    ['diff\0--name-only\0--cached', ['scripts/check-smart.mjs']],
+    ['ls-files\0--others\0--exclude-standard', ['tests/scripts/check-smart.test.mjs', 'docs/dirty.md']],
+  ]);
+
+  const paths = changedPathsForArgs()(['--base', 'origin/main'], {
+    gitLines(gitArgs) {
+      calls.push(gitArgs);
+      const key = gitArgs.join('\0');
+      assert.ok(gitOutputs.has(key), `unexpected git call: ${JSON.stringify(gitArgs)}`);
+      return gitOutputs.get(key);
+    },
+  });
+
+  assert.deepEqual(paths, [
+    'docs/base-only.md',
+    'docs/dirty.md',
+    'scripts/check-smart.mjs',
+    'src/pages/tools/[slug].astro',
+    'src/styles/global.css',
+    'tests/scripts/check-smart.test.mjs',
+  ]);
+  assert.deepEqual(calls, [
+    ['merge-base', 'origin/main', 'HEAD'],
+    ['diff', '--name-only', 'abc123..HEAD'],
+    ['diff', '--name-only'],
+    ['diff', '--name-only', '--cached'],
+    ['ls-files', '--others', '--exclude-standard'],
+  ]);
+});
+
+test('check-smart supports --base=<ref> syntax for committed merge-base diff paths', () => {
+  const calls = [];
+  const gitOutputs = new Map([
+    ['merge-base\0release/candidate\0HEAD', ['def456']],
+    ['diff\0--name-only\0def456..HEAD', ['src/content/tools/chatgpt.md']],
+    ['diff\0--name-only', []],
+    ['diff\0--name-only\0--cached', []],
+    ['ls-files\0--others\0--exclude-standard', []],
+  ]);
+
+  const paths = changedPathsForArgs()(['--base=release/candidate'], {
+    gitLines(gitArgs) {
+      calls.push(gitArgs);
+      const key = gitArgs.join('\0');
+      assert.ok(gitOutputs.has(key), `unexpected git call: ${JSON.stringify(gitArgs)}`);
+      return gitOutputs.get(key);
+    },
+  });
+
+  assert.deepEqual(paths, ['src/content/tools/chatgpt.md']);
+  assert.deepEqual(calls[0], ['merge-base', 'release/candidate', 'HEAD']);
+});
+
+test('check-smart fails closed when --base cannot be resolved', () => {
+  assert.throws(
+    () => changedPathsForArgs()(['--base', 'refs/heads/missing'], {
+      gitLines(gitArgs) {
+        assert.deepEqual(gitArgs, ['merge-base', 'refs/heads/missing', 'HEAD']);
+        return [];
+      },
+    }),
+    /could not resolve --base refs\/heads\/missing/,
+  );
+
+  const result = spawnSync(process.execPath, [checkSmartScriptPath, '--base', 'refs/heads/__missing_for_test__', '--json'], {
+    encoding: 'utf8',
+  });
+  assert.equal(result.status, 1, result.stdout);
+  const report = JSON.parse(result.stdout);
+  assert.equal(report.ok, false);
+  assert.match(report.error, /could not resolve --base refs\/heads\/__missing_for_test__/);
+});
+
+test('check-smart documents --base in help and accepts it as a known flag', () => {
+  const help = spawnSync(process.execPath, [checkSmartScriptPath, '--help'], { encoding: 'utf8' });
+  assert.equal(help.status, 0, help.stderr);
+  assert.match(help.stdout, /--base <ref>/);
+
+  const result = spawnSync(process.execPath, [checkSmartScriptPath, '--base=HEAD', '--json', '--path', 'package.json'], {
+    encoding: 'utf8',
+  });
+  assert.equal(result.status, 0, `${result.stderr}\n${result.stdout}`);
+  assert.deepEqual(JSON.parse(result.stdout).paths, ['package.json']);
+});
 
 test('check-smart classifies editorial content without requiring a build', () => {
   const plan = planForPaths(['src/content/tools/chatgpt.md', 'PAGE_REFRESH_LEDGER.md']);

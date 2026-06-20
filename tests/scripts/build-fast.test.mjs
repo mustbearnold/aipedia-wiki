@@ -12,3 +12,20 @@ test('fast build audits the nested Vercel static client output when present', ()
   assert.doesNotMatch(script, /\['scripts\/audit-indexability\.mjs', '--dist', 'dist-fast'\]/);
   assert.doesNotMatch(script, /\['scripts\/audit-commercial-cta\.mjs', '--dist', 'dist-fast'\]/);
 });
+
+test('fast build resolves Astro from the current worktree or a parent checkout before spawning the build', () => {
+  const script = readFileSync('scripts/build-fast.mjs', 'utf8');
+  const dependencyPreflightIndex = script.indexOf('findNodeModuleBin(PROJECT_DIR');
+  const astroBuildIndex = script.indexOf("[astroBin, 'build']");
+
+  assert.notEqual(dependencyPreflightIndex, -1);
+  assert.notEqual(astroBuildIndex, -1);
+  assert.ok(dependencyPreflightIndex < astroBuildIndex);
+  assert.match(script, /function findNodeModuleBin/);
+  assert.match(script, /dirname\(currentDir\)/);
+  assert.match(script, /node_modules/);
+  assert.match(script, /astro/);
+  assert.match(script, /npm install/);
+  assert.match(script, /worktree/);
+  assert.match(script, /process\.exit\(1\)/);
+});

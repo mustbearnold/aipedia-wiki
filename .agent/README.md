@@ -1,7 +1,8 @@
 # AiPedia Agent Workspace
 
-Read this directory only after `AGENTS.md`.
+Start here for committed agent instructions. Do not rely on a root `AGENTS.md`; that file is ignored and may be absent in clean clones or worktrees.
 
+- `OPERATING_RULES.md` is the primary committed operating guide for agent work.
 - `PROJECT_MAP.md` is the fast orientation map for future agent work.
 - `PLANS.md` is only for active or very recent ExecPlans.
 - `archive/` holds completed historical plans and handoffs that should not be loaded by default.

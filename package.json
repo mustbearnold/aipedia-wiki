@@ -20,6 +20,7 @@
     "guard:challenge": "node scripts/guard-challenge.mjs",
     "guard:challenge:check": "node scripts/guard-challenge.mjs --check",
     "guard:baseline": "node scripts/guard-content.mjs --baseline",
+    "ops:dashboard": "node scripts/ops-dashboard.mjs",
     "test": "node --test tests/scripts/*.test.mjs",
     "test:scripts": "node --test tests/scripts/*.test.mjs",
     "test:smoke": "npm run smoke:api && npm run smoke:visual",

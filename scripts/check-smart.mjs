@@ -11,31 +11,50 @@ const args = process.argv.slice(2);
 const runMode = args.includes('--run');
 const jsonMode = args.includes('--json');
 const helpMode = args.includes('--help') || args.includes('-h');
-const explicitPaths = valuesFor('--path').concat(valuesFor('--paths'));
 
-const KNOWN_FLAGS = new Set(['--run', '--json', '--help', '-h', '--path', '--paths']);
+const KNOWN_FLAGS = new Set(['--run', '--json', '--help', '-h', '--path', '--paths', '--base']);
 
-function valuesFor(flag) {
+function valuesFor(flag, sourceArgs = args, { normalize = true, split = true } = {}) {
   const values = [];
-  for (let i = 0; i < args.length; i += 1) {
-    const arg = args[i];
+  for (let i = 0; i < sourceArgs.length; i += 1) {
+    const arg = sourceArgs[i];
     if (arg === flag) {
-      const value = args[i + 1];
+      const value = sourceArgs[i + 1];
       if (value && !value.startsWith('--')) values.push(value);
     } else if (arg.startsWith(`${flag}=`)) {
       values.push(arg.slice(flag.length + 1));
     }
   }
-  return values.flatMap((value) => value.split(',')).map(normalizePath).filter(Boolean);
+  const parsedValues = split ? values.flatMap((value) => value.split(',')) : values;
+  return parsedValues
+    .map((value) => (normalize ? normalizePath(value) : value.trim()))
+    .filter(Boolean);
 }
 
-function validateArgs() {
+function pathValuesForArgs(sourceArgs = args) {
+  return valuesFor('--path', sourceArgs).concat(valuesFor('--paths', sourceArgs));
+}
+
+function baseRefForArgs(sourceArgs = args) {
+  return valuesFor('--base', sourceArgs, { normalize: false, split: false }).at(-1) || '';
+}
+
+function validateArgs(sourceArgs = args) {
   const issues = [];
-  for (let i = 0; i < args.length; i += 1) {
-    const arg = args[i];
+  for (let i = 0; i < sourceArgs.length; i += 1) {
+    const arg = sourceArgs[i];
     if (!arg.startsWith('-')) continue;
     const flag = arg.includes('=') ? arg.slice(0, arg.indexOf('=')) : arg;
     if (!KNOWN_FLAGS.has(flag)) issues.push(`unknown flag ${arg}`);
+    if (flag === '--base') {
+      if (arg.includes('=')) {
+        if (!arg.slice(arg.indexOf('=') + 1).trim()) issues.push('missing value for --base');
+      } else {
+        const value = sourceArgs[i + 1];
+        if (!value || value.startsWith('--')) issues.push('missing value for --base');
+        else i += 1;
+      }
+    }
     if ((flag === '--path' || flag === '--paths') && !arg.includes('=')) i += 1;
   }
   return issues;
@@ -95,14 +114,32 @@ function gitLines(gitArgs) {
   return result.stdout.split(/\r?\n/).map(normalizePath).filter(Boolean);
 }
 
-function changedPaths() {
+function normalizedGitLines(readGitLines, gitArgs) {
+  return (readGitLines(gitArgs) || []).map(normalizePath).filter(Boolean);
+}
+
+export function changedPathsForArgs(sourceArgs = args, { gitLines: readGitLines = gitLines } = {}) {
+  const explicitPaths = pathValuesForArgs(sourceArgs);
   if (explicitPaths.length) return [...new Set(explicitPaths)];
-  const paths = [
-    ...gitLines(['diff', '--name-only']),
-    ...gitLines(['diff', '--name-only', '--cached']),
-    ...gitLines(['ls-files', '--others', '--exclude-standard']),
-  ];
+
+  const paths = [];
+  const baseRef = baseRefForArgs(sourceArgs);
+  if (baseRef) {
+    const mergeBase = normalizedGitLines(readGitLines, ['merge-base', baseRef, 'HEAD'])[0];
+    if (!mergeBase) throw new Error(`could not resolve --base ${baseRef}`);
+    if (mergeBase) paths.push(...normalizedGitLines(readGitLines, ['diff', '--name-only', `${mergeBase}..HEAD`]));
+  }
+
+  paths.push(
+    ...normalizedGitLines(readGitLines, ['diff', '--name-only']),
+    ...normalizedGitLines(readGitLines, ['diff', '--name-only', '--cached']),
+    ...normalizedGitLines(readGitLines, ['ls-files', '--others', '--exclude-standard']),
+  );
   return [...new Set(paths)].sort();
+}
+
+function changedPaths() {
+  return changedPathsForArgs(args);
 }
 
 function categoriesForSurfaces(surfaces) {
@@ -203,13 +240,15 @@ export function planForPaths(paths) {
 }
 
 function printHelp() {
-  console.log(`Usage: node scripts/check-smart.mjs [--run] [--json] [--path <path>...]
+  console.log(`Usage: node scripts/check-smart.mjs [--run] [--json] [--base <ref>] [--path <path>...]
 
 Recommends the smallest AiPedia verification set for the current git diff.
+Use --base <ref> to include committed changes from merge-base(ref, HEAD)..HEAD.
 
 Examples:
   npm run check:smart
   npm run check:smart:run
+  node scripts/check-smart.mjs --base origin/master --json
   node scripts/check-smart.mjs --path src/content/tools/chatgpt.md --json
 `);
 }
@@ -282,7 +321,15 @@ function main() {
     process.exit(1);
   }
 
-  const plan = planForPaths(changedPaths());
+  let plan;
+  try {
+    plan = planForPaths(changedPaths());
+  } catch (error) {
+    const detail = error instanceof Error ? error.message : String(error);
+    if (jsonMode) console.log(`${JSON.stringify({ ok: false, error: detail }, null, 2)}\n`);
+    else console.error(detail);
+    process.exit(1);
+  }
   printPlan(plan);
 
   if (runMode && plan.commands.length) {

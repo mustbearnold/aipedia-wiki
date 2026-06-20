@@ -4,6 +4,8 @@
 
 AiPedia is an Astro site. Editorial source lives under `src/content/`; route templates, layouts, components, styles, data, and public assets live under `src/` and `public/`.
 
+Read `.agent/OPERATING_RULES.md` first for the committed operating rules. It replaces the ignored root `AGENTS.md` as the reliable instruction source for clean worktrees.
+
 Use the smallest verification command that matches the changed surface. Start with `npm run check:smart` to get a scoped recommendation.
 
 ## Primary Surfaces
@@ -78,4 +80,4 @@ The implementer cannot self-approve guard weakening. Accepted records must inclu
 
 ## Content Change Reminder
 
-For any page/content/fact/pricing/source update, apply the hard date, ledger, top-layer, source, mobile, SEO, and affiliate rules from `AGENTS.md`. `PAGE_REFRESH_LEDGER.md` must move with page edits.
+For any page/content/fact/pricing/source update, apply the hard date, ledger, top-layer, source, mobile, SEO, and affiliate rules from `.agent/OPERATING_RULES.md`. `PAGE_REFRESH_LEDGER.md` must move with page edits.

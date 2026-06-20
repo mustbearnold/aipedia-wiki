@@ -7,6 +7,7 @@ Scripts are operator tools for keeping AiPedia current, source-backed, buildable
 - `npm run check:smart`: recommends the smallest safe verification set for the current diff.
 - `npm run check:smart:run`: runs that recommendation.
 - `npm run check:quick`: established no-build loop for script/tooling changes.
+- `npm run ops:dashboard`: read-only branch, worktree, PR/issue, and optional audit summary for daily operations.
 - `npm run check`: broad source, content, link, news, asset, and security checks.
 - `npm run build:fast`: fast production-output validation for rendered/runtime changes.
 - `npm run build`: full production build and post-build audits.

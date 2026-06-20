@@ -10,6 +10,7 @@ Use the smallest verification command that matches the change.
 npm ci
 npm run check:smart
 npm run check:quick
+npm run ops:dashboard
 npm run check
 npm run editorial:weekly
 npm run ledger:pages
@@ -19,6 +20,7 @@ npm run deploy
 
 - `npm run check:smart`: recommends the smallest safe verification set for the current diff; use `npm run check:smart:run` to execute it.
 - `npm run check:quick`: no-build loop for script/tooling changes; runs script tests, command-surface audit, and bounded asset checks.
+- `npm run ops:dashboard`: read-only operational dashboard for branch state, dirty worktrees, open PRs/issues, and optional saved audit output.
 - `npm run check`: broader source, content, link, news, asset, and security checks.
 - `npm run editorial:weekly`: editorial freshness queue for deciding what to refresh next.
 - `npm run ledger:pages`: regenerates `PAGE_REFRESH_LEDGER.md` after page or content edits.
