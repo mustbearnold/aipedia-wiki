@@ -46,6 +46,20 @@ If `.worktrees/` contains empty or unregistered directories after generated cove
 - Run `npm run build:fast` when layouts, runtime routes, metadata, schemas, or rendered output changed.
 - Run `npm run build` only for full production confidence or deploy prep.
 
+## Guard Challenge Workflow
+
+Use Guard Challenge only when changing a guard, audit, check, or fixture is being considered. Ordinary product-code failures should be fixed directly.
+
+Flow:
+
+1. Create a proposed record with `npm run guard:challenge -- --command "<failing command>" --guard <guard file> --files <changed product files> --title "<short name>"`.
+2. Fill the Implementer brief with the exact failure, intended productive work, and why the guard appears stale, over-broad, or misaligned.
+3. Ask a guard defender subagent to state the protected invariant and whether the failure matches it.
+4. Ask an arbitrator subagent to choose `fix-code`, `narrow-guard`, `update-fixture`, `retire-guard`, or `human-escalate`.
+5. Change code or guard only after arbitration, then run `npm run guard:challenge:check` plus the focused verification named in the record.
+
+The implementer cannot self-approve guard weakening. Accepted records must include a fixture or test and green verification.
+
 ## Content Change Reminder
 
 For any page/content/fact/pricing/source update, apply the hard date, ledger, top-layer, source, mobile, SEO, and affiliate rules from `AGENTS.md`. `PAGE_REFRESH_LEDGER.md` must move with page edits.

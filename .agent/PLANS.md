@@ -2,6 +2,35 @@
 
 Keep this file short. Archive completed plans under `.agent/archive/` once their final report is written.
 
+## Active: Guard Challenge Workflow
+
+### Goal
+
+Add an operator-level workflow for challenging stale or over-broad guards without weakening AiPedia safety checks.
+
+### Scope
+
+- Add `.agent/guard-challenges/` artifact contract.
+- Add `scripts/guard-challenge.mjs` create and check modes.
+- Add tests for accepted, proposed, and incomplete challenge records.
+- Register `guard:challenge` and `guard:challenge:check` command-surface invariants.
+- Route guard/audit script edits through `check-smart` guidance.
+
+### Verification
+
+- `node --test tests/scripts/guard-challenge.test.mjs`
+- `node --test tests/scripts/check-smart.test.mjs`
+- `node --test tests/scripts/audit-command-surface.test.mjs`
+- `npm run guard:challenge:check`
+- `npm run test:scripts`
+- `npm run audit:commands`
+- `node scripts/check-smart.mjs --json --path scripts/guard-content.mjs --path scripts/audit-news-rendering.mjs`
+- `git diff --check`
+
+### Status
+
+- 2026-06-20: Spec approved. Implementation plan written.
+
 ## Active: Project Folder Tidy And Verification Router
 
 ### Objective
