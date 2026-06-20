@@ -48,6 +48,19 @@ Do not leave new tools on monogram fallback unless the final report explicitly d
 
 ## Work process
 
+### Decision content flywheel
+
+Use this loop as the default for monetizable AiPedia content work:
+
+1. Pick one buyer-intent cluster with `npm run loop:next`.
+2. Verify current volatile facts from live sources before editing.
+3. Create or refresh the decision page.
+4. Update affected tool pages, parent hubs, top-layer pages, sitemap or LLM surfaces, internal links, and `PAGE_REFRESH_LEDGER.md`.
+5. Run the smallest valid verification set for the changed surfaces.
+6. Record the result in `.agent/CURRENT_STATUS.md`, `.agent/PLANS.md`, and `.agent/WORK_LOG.md` when the cycle is major or future sessions need continuity.
+
+The loop exists to avoid random isolated refreshes. Prefer clusters that improve a real decision path, such as a comparison plus its tool pages and parent category, over single-page maintenance with no buyer outcome.
+
 Before editing:
 
 1. Inspect the relevant files, data models, routes, templates, components, and tests.

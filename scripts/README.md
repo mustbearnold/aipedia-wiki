@@ -10,6 +10,7 @@ Scripts are operator tools for keeping AiPedia current, source-backed, buildable
 - `npm run lint`: source/content guard bundle used as the repo lint gate.
 - `npm run typecheck`: Astro typecheck gate for active Astro/server surfaces; `tsconfig.typecheck.json` keeps the legacy global search client scripts and archived `.legacy.astro` files as documented baseline debt until the search rewrite is typed.
 - `npm run ops:dashboard`: read-only branch, worktree, PR/issue, and optional audit summary for daily operations.
+- `npm run loop:next`: read-only decision-content flywheel brief for the next buyer-intent cluster.
 - `npm run check`: broad source, content, link, news, asset, and security checks.
 - `npm run audit:provenance:changed`: scoped provenance and pricing gate for changed tool pages; `npm run audit:provenance` still reports all catalog debt.
 - `npm run audit:coverage-quality:changed`: scoped comparison quality gate for changed files; `npm run audit:coverage-quality` still reports all comparison debt.
@@ -20,6 +21,7 @@ Scripts are operator tools for keeping AiPedia current, source-backed, buildable
 
 - `guard-*.mjs`: fail-fast editorial and policy guards.
 - `audit-*.mjs`: source, SEO, conversion, data, command, freshness, and quality checks.
+- `decision-loop.mjs`: chooses the next cluster and prints the source, working-set, parent-surface, verification, and recording brief.
 - `npm run guard:challenge`: creates a proposed guard challenge artifact when a guard, audit, check, or fixture may need to change.
 - `npm run guard:challenge:check`: validates accepted guard challenge artifacts have implementer, defender, arbitrator, fixture or test, and verification evidence.
 - `generate-*.mjs`: generated ledgers, manifests, favicons, logos, and OG assets.

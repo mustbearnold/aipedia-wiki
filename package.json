@@ -46,6 +46,7 @@
     "company:gaps": "node scripts/audit-company.mjs --gaps",
     "audit:bestof-quality": "node scripts/audit-bestof-quality.mjs",
     "editorial:weekly": "node scripts/editorial-weekly-queue.mjs --window-days 30 --limit 50",
+    "loop:next": "node scripts/decision-loop.mjs",
     "audit:sources": "node scripts/audit-source-health.mjs",
     "audit:passed-dates": "node scripts/audit-passed-dates.mjs",
     "audit:indexability": "node scripts/audit-indexability.mjs",

@@ -23,6 +23,11 @@ At the time this status was last checked, `master` was clean and synced with `or
 
 ## Done Recently
 
+- Decision content loop is implemented.
+  - Spec: `docs/superpowers/specs/2026-06-21-aipedia-decision-content-loop.md`
+  - Command: `npm run loop:next`
+  - Purpose: choose one buyer-intent cluster, verify current facts, improve the decision page, update parent surfaces, run the right checks, record, repeat.
+  - First cycle: `canva-vs-claude` unless the coverage backlog changes or the page already exists.
 - Build-time diagnosis is complete.
   - `npm run build:fast` passed in 191.31 seconds after regenerating the page refresh ledger.
   - `npm run build` passed in 214.37 seconds.
@@ -54,6 +59,10 @@ At the time this status was last checked, `master` was clean and synced with `or
 
 ## Active Work
 
+- Decision Content Flywheel is active.
+  - Use `npm run loop:next` at the start of monetizable content work.
+  - Do not write comparison, pricing, model, plan, affiliate, or commercial claims until current sources have been verified.
+  - Current recommended first cycle is `canva-vs-claude`.
 - Oldest-First AI Tools Wiki Refresh remains active.
   - Work from `PAGE_REFRESH_LEDGER.md`, oldest first.
   - Latest logged refresh in `.agent/PLANS.md` is `Connected Papers`, completed on 2026-06-18.

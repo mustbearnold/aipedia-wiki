@@ -12,9 +12,31 @@ For the plain-English project state, read `.agent/CURRENT_STATUS.md` first. For 
 - Continuity recording is now centralized in `.agent/CURRENT_STATUS.md`, `.agent/PLANS.md`, and `.agent/WORK_LOG.md`.
 - Vercel CLI is installed globally as `vercel@54.14.2`; upstream dependency warnings are tracked in `.agent/WORK_LOG.md`.
 - Current build timing baseline from 2026-06-21: `npm run build:fast` passed in 191.31 seconds and `npm run build` passed in 214.37 seconds. Main drivers are static route fan-out, Pagefind, and large generated/search surfaces.
-- Best next product move from the 2026-06-21 review is a focused comparison decision sprint starting with `canva-vs-claude`.
+- The decision content flywheel is now the default repeatable loop. Use `npm run loop:next` to pick the next buyer-intent cluster.
+- Best next product move from the 2026-06-21 review remains a focused comparison decision sprint starting with `canva-vs-claude`.
 - The main active ongoing lane is the oldest-first AI tools wiki refresh.
 - The Phase 3 parallel surface and June 18-20 news backfill plan is written but not executed on `master`.
+
+## Active: Decision Content Flywheel
+
+### Objective
+
+Run AiPedia as a repeatable buyer-decision loop: cluster, verify, improve decision page, update hubs, check, record, repeat.
+
+### Source Spec
+
+`docs/superpowers/specs/2026-06-21-aipedia-decision-content-loop.md`
+
+### Command
+
+- `npm run loop:next`: read-only brief for the next buyer-intent cluster.
+- `npm run loop:next -- --json`: structured brief for automation or agent handoff.
+- `npm run coverage:backlog`: regenerate the coverage backlog when the selected cluster looks stale.
+
+### Status
+
+- 2026-06-21: Loop spec and `loop:next` command are implemented.
+- 2026-06-21: First selected cluster is expected to be `canva-vs-claude` unless a newer backlog changes the order or the comparison already exists.
 
 ## Recommended Next: Canva Vs Claude Comparison Sprint
 

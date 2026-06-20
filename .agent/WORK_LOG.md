@@ -30,6 +30,16 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 
 ## Entries
 
+### 2026-06-21: Decision Content Loop
+
+- Status: Complete and begun.
+- Commit: this commit.
+- Branch: `master`.
+- Changed: Added the AiPedia decision content loop spec, `npm run loop:next`, tests, script docs, and agent operating guidance. The first loop cycle is selected as `canva-vs-claude` unless the coverage backlog changes or that page already exists.
+- Verification: `npm run loop:next -- --json`, `node --test tests/scripts/decision-loop.test.mjs`, `git diff --check`, em-dash sweep over touched docs/scripts, `npm run check:quick`.
+- Residual risks: The loop chooses and briefs clusters, but it intentionally does not automate live web research or editorial judgment. Content cycles still require current-source verification before facts are edited.
+- Next: Run the first `canva-vs-claude` cycle with current June 2026 Canva and Claude sources, then update parent hubs and ledger rows.
+
 ### 2026-06-21: Build-Time Diagnosis And Next-Step Recommendation
 
 - Status: Complete.

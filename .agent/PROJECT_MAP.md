@@ -12,6 +12,7 @@ Use the smallest verification command that matches the changed surface. Start wi
 
 - June 2026 standards remediation is complete and pushed in `3355ce1d`.
 - Guard Challenge Workflow is implemented. Use it only when changing a guard, audit, check, or fixture is being considered.
+- Decision Content Flywheel is active. Use `npm run loop:next` to pick and brief the next buyer-intent cluster.
 - Oldest-first AI tools wiki refresh remains active.
 - Phase 3 Parallel Surface Agent Orchestration is planned but not executed on `master`; recompute missed news dates before starting.
 
@@ -66,6 +67,7 @@ If `.worktrees/` contains empty or unregistered directories after generated cove
 
 - Run `npm run check:smart` to see the recommended checks for the current diff.
 - Run `npm run check:smart:run` to execute that recommendation.
+- Run `npm run loop:next` to start the repeatable cluster loop for monetizable decision content.
 - Run `npm run check:quick` when tooling or repo-maintenance work needs the established no-build gate.
 - Run `npm run audit:generated-models` with `npm run test:scripts` when generated model/search seams or their audit script change.
 - Run `npm run build:fast` when layouts, runtime routes, metadata, schemas, or rendered output changed.
