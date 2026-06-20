@@ -2240,7 +2240,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "claude-code-costs",
@@ -2249,7 +2249,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "claude-code-usage-limits",
@@ -2258,7 +2258,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "claude-max-plan",
@@ -9270,7 +9270,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "replit-agent-product",
@@ -9279,7 +9279,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "replit-agent4-product",
@@ -9288,7 +9288,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "replit-agent-modes",
@@ -9297,7 +9297,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "replit-agent-app-testing",
@@ -9306,7 +9306,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "replit-agent-web-search",
@@ -9315,7 +9315,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "replit-agent-skills",
@@ -9324,7 +9324,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "replit-custom-skills",
@@ -9333,7 +9333,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "replit-package-firewall",
@@ -9342,7 +9342,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "replit-agent-plan-mode",
@@ -9351,7 +9351,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "replit-ai-billing",
@@ -9360,7 +9360,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "replit-effort-pricing",
@@ -9369,7 +9369,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "replit-pricing",
@@ -9378,7 +9378,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "replit-pro-plan",
@@ -9387,7 +9387,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-20"
     },
     {
       "trust_tier": "primary",

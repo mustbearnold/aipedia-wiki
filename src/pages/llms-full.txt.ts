@@ -3,6 +3,12 @@
 // comparisons, guides, answers, news, trends, workflows, reports, companies,
 // and dead-tool records. Intended for crawlers willing to ingest a larger
 // manifest without parsing the sitemap.
+// Refresh metadata: 2026-06-20 Claude vs Replit Agent comparison loop after
+// current Claude pricing, Claude Code, Agent SDK credit, Anthropic model,
+// Replit pricing, Agent, AI billing, Modes, App Testing, Skills, Custom
+// Instructions, and Package Firewall checks; added comparison, refreshed
+// Replit Agent, Claude related links, AI Coding, source registry, ledger, and
+// LLM maintenance around repo reasoning vs browser app-building fit.
 // Refresh metadata: 2026-06-20 Canva vs Claude comparison loop after current
 // Canva AI 2.0, Canva Business, AI Pass, AI Product Terms, Canva Claude
 // connector, Claude pricing, Claude for Small Business, and Agent SDK credit
@@ -445,6 +451,7 @@ export const GET: APIRoute = async () => {
   lines.push('');
   lines.push('> Extended LLM-friendly site manifest. Enumerates the major active editorial collections across tools, categories, comparisons, buyer guides, answers, news, trends, workflows, reports, companies, and dead-tool records. It does not claim to list every utility, API, prototype, or static policy page. See /llms.txt for the concise version.');
   lines.push('');
+  lines.push('Recent comparison refresh: June 20, 2026 added Claude vs Replit Agent and refreshed Replit Agent, Claude related links, AI Coding, source registry, ledger, and LLM maintenance after current Claude pricing, Claude Code, Agent SDK credit, Anthropic model, Replit pricing, Agent, AI billing, Modes, App Testing, Skills, Custom Instructions, and Package Firewall checks; buyer guidance now separates Claude-style reasoning, repo investigation, and code review from Replit-style browser app building, prototypes, and internal tools.');
   lines.push('Recent comparison refresh: June 20, 2026 added Canva vs Claude and refreshed Canva, Claude, AI Design, source registry, ledger, and LLM maintenance after current Canva AI 2.0, Canva Business, AI Pass, Canva AI Product Terms, Canva Claude connector, Claude pricing, Claude for Small Business, and Agent SDK credit help checks; buyer guidance now separates final creative production from upstream reasoning, critique, coding, connector workflows, and the paused Agent SDK credit split.');
   lines.push('Recent news refresh: June 17, 2026 filled the active June date gap with the June 17 AI News Desk plus Google Pixel/Gemini, Microsoft Copilot Cowork, G7 AI sovereignty, and NVIDIA AI infrastructure coverage, updating news archive, RSS, ledger, and LLM maintenance around phone-native Gemini creation, metered workplace agents, sovereign model-access risk, and compute-capacity procurement checks.');
   lines.push('Recent answer refresh: June 16, 2026 refreshed the best AI image generator answer plus answers index, homepage/explore comments, source registry cleanup, ledger, and LLM maintenance around ChatGPT with GPT Image 2 as the default, Midjourney for art direction, Ideogram for typography, Adobe Firefly for Adobe-governed creative, and Flux/Stable Diffusion/API-first routes for control-heavy workflows.');
