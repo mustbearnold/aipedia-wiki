@@ -127,6 +127,16 @@ function checksForSurfaces(surfaces) {
   return [...checks].sort();
 }
 
+function guidanceForSurfaces(surfaces) {
+  const guidance = new Set();
+
+  for (const surface of surfaces) {
+    for (const line of surface.guidance || []) guidance.add(line);
+  }
+
+  return [...guidance].sort();
+}
+
 function commandsForSelection(categories, checks) {
   const commands = new Set(OPERATOR_SURFACE_CONTRACT.verification.baseCommands);
   const hasAny = (values, selected) => (values || []).some((value) => selected.includes(value));
@@ -147,10 +157,12 @@ export function planForPaths(paths) {
   const surfaces = matchingSurfaces(paths);
   const categories = categoriesForSurfaces(surfaces);
   const checks = checksForSurfaces(surfaces);
+  const guidance = guidanceForSurfaces(surfaces);
   return {
     project_dir: PROJECT_DIR,
     paths,
     categories,
+    guidance,
     commands: paths.length ? commandsForSelection(categories, checks) : [],
     note: paths.length
       ? 'Run with --run to execute these commands in order.'
@@ -185,6 +197,10 @@ function printPlan(plan) {
   for (const path of plan.paths) console.log(`- ${path}`);
   console.log('\nDetected categories:');
   for (const category of plan.categories) console.log(`- ${category}`);
+  if (plan.guidance.length) {
+    console.log('\nOperator guidance:');
+    for (const line of plan.guidance) console.log(`- ${line}`);
+  }
   console.log('\nRecommended verification:');
   for (const command of plan.commands) console.log(`- ${command}`);
   console.log(`\n${plan.note}`);

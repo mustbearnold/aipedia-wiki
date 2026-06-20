@@ -94,6 +94,26 @@
       }
     },
     {
+      "id": "guard-challenge",
+      "label": "Guard, audit, and verification challenge workflow",
+      "category": "tooling",
+      "checks": ["guard-challenge"],
+      "guidance": [
+        "Open a guard challenge before changing guard pass or fail behavior. Product-code fixes do not need a challenge.",
+        "Accepted guard challenges require implementer, defender, arbitrator, fixture or test, and green verification."
+      ],
+      "match": {
+        "prefixes": [".agent/guard-challenges/"],
+        "files": ["scripts/guard-challenge.mjs"],
+        "regexes": [
+          "^scripts/(?:guard-|audit-).+\\.mjs$",
+          "^scripts/(?:check-smart|guard-challenge|generate-page-refresh-ledger)\\.mjs$",
+          "^tests/scripts/(?:guard-|audit-).+\\.test\\.mjs$",
+          "^tests/scripts/(?:check-smart|guard-challenge|page-refresh-ledger)\\.test\\.mjs$"
+        ]
+      }
+    },
+    {
       "id": "dependencies",
       "label": "Dependency lockfile",
       "category": "dependencies",
@@ -121,6 +141,10 @@
   "verification": {
     "baseCommands": ["git diff --check"],
     "commandGroups": [
+      {
+        "checks": ["guard-challenge"],
+        "commands": ["npm run guard:challenge:check"]
+      },
       {
         "categories": ["tooling", "ci", "repo"],
         "commands": ["npm run test:scripts", "npm run audit:commands"]
