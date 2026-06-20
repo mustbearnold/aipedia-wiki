@@ -34,12 +34,13 @@ At the time this status was last checked, `master` was clean and synced with `or
   - Command: `npm run loop:next`
   - Purpose: choose one buyer-intent cluster, verify current facts, improve the decision page, update parent surfaces, run the right checks, record, repeat.
   - Next cycle: `claude-vs-replit-agent` unless the coverage backlog changes or the page already exists.
+  - The loop brief now requires related-surface discovery, source registry inspection, stale-backlog warnings, and rendered route QA at 360, 390, 430, 768, 1024, and 1366 px.
 - Build-time diagnosis is complete.
   - `npm run build:fast` passed in 191.31 seconds after regenerating the page refresh ledger.
   - `npm run build` passed in 214.37 seconds.
   - Main cost is site scale: 1,135 content files, about 1,180 built HTML pages, Astro/Vercel static prerender around 2 minutes, and Pagefind around 44 seconds.
   - `PAGE_REFRESH_LEDGER.md` was normalized with `npm run ledger:pages` because the ledger check was stale.
-  - Best next product move from the review: run a focused comparison decision sprint, starting with `canva-vs-claude`.
+  - Best next product move from that review has been completed for `canva-vs-claude`; the current next sprint is `claude-vs-replit-agent`.
 - June 2026 standards remediation is complete.
   - Final commit: `3355ce1d fix: remediate June standards review`
   - Spec: `docs/superpowers/specs/2026-06-20-june-standards-remediation-and-rereview.md`
@@ -68,6 +69,7 @@ At the time this status was last checked, `master` was clean and synced with `or
 - Decision Content Flywheel is active.
   - Use `npm run loop:next` at the start of monetizable content work.
   - Do not write comparison, pricing, model, plan, affiliate, or commercial claims until current sources have been verified.
+  - For rendered comparison cycles, record route QA at 360, 390, 430, 768, 1024, and 1366 px, covering mobile/tablet and desktop.
   - Current recommended next cycle is `claude-vs-replit-agent`.
 - Oldest-First AI Tools Wiki Refresh remains active.
   - Work from `PAGE_REFRESH_LEDGER.md`, oldest first.

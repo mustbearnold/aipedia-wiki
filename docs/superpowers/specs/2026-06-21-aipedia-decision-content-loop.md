@@ -43,6 +43,8 @@ The brief must name:
 - Target comparison slug and file.
 - Tool pages that may need fact refresh.
 - Category pages and top-layer surfaces to inspect.
+- Source registry and related surface discovery checks.
+- Rendered route QA at mobile, tablet, and desktop widths.
 - Source discipline.
 - Verification commands.
 - Done definition.
@@ -71,6 +73,8 @@ Comparison pages must include a decision-first mobile experience, clear verdicts
 
 Inspect and update affected top-layer pages, parent hubs, internal links, sitemap or LLM surfaces, and the page refresh ledger. A child page must not leave `/tools/`, `/compare/`, `/categories/`, category hubs, or LLM surfaces stale or misleading.
 
+Search related surfaces before closing the cycle. At minimum, sweep `src/content` and `src/pages` for the two tool slugs and comparison slug, then inspect `src/data/source-registry.json` for source ids, `last_checked` dates, pricing rows, and source records touched by the verified facts.
+
 ### 5. Check
 
 Use the smallest verification set that matches the change. For a comparison decision cluster, the default check set is:
@@ -86,6 +90,8 @@ Use the smallest verification set that matches the change. For a comparison deci
 
 Use `npm run build:fast` when rendered output, runtime surfaces, metadata, schema, or pre-ship confidence require it. Reserve full `npm run build` for final production confidence, broad template changes, runtime changes, deployment changes, or explicit pre-ship checks.
 
+For any new or refreshed rendered comparison page, run browser or Playwright route QA at `360`, `390`, `430`, `768`, `1024`, and `1366` px. Record the result. The pass must cover mobile/tablet first-screen decision content plus desktop layout quality, including no horizontal overflow, overlap, stretched cards, broken CTAs, or missing primary content.
+
 ### 6. Record
 
 Before final report on a major loop cycle:
@@ -95,7 +101,7 @@ Before final report on a major loop cycle:
 - Append `.agent/WORK_LOG.md`.
 - Update the governing spec only when the loop itself changes.
 
-The record should say what landed, what passed, what failed, what remains, and the next recommended cluster.
+The record should say what landed, what passed, what failed, what remains, which route QA widths passed, and the next recommended cluster.
 
 ## Tooling
 
@@ -121,6 +127,8 @@ Initial working set:
 - `src/content/tools/claude.md`
 - `src/content/categories/ai-design.md`
 - `/compare/`, `/tools/`, `/categories/`, sitemap and LLM surfaces
+- `src/data/source-registry.json`
+- Related content and page search for `canva`, `claude`, and `canva-vs-claude`
 - `PAGE_REFRESH_LEDGER.md`
 
 Do not write the comparison until current-month Canva and Claude facts are verified from live sources.

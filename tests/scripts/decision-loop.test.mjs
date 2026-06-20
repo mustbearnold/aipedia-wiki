@@ -12,7 +12,7 @@ function runDecisionLoop(...args) {
   });
 }
 
-function writeFixtureProject({ existingComparison = false } = {}) {
+function writeFixtureProject({ existingComparison = false, generatedAt = '2026-06-21T00:00:00.000Z' } = {}) {
   const dir = mkdtempSync(join(tmpdir(), 'aipedia-decision-loop-'));
   mkdirSync(join(dir, 'src', 'data'), { recursive: true });
   mkdirSync(join(dir, 'src', 'content', 'tools'), { recursive: true });
@@ -24,7 +24,7 @@ function writeFixtureProject({ existingComparison = false } = {}) {
     `${JSON.stringify(
       {
         ok: true,
-        generated_at: '2026-06-21T00:00:00.000Z',
+        generated_at: generatedAt,
         backlog: {
           comparisons: [
             {
@@ -100,8 +100,30 @@ test('decision loop emits the next cluster as JSON', () => {
     assert.equal(cluster.working_set.comparison, 'src/content/comparisons/canva-vs-claude.md');
     assert.ok(cluster.working_set.tool_pages.includes('src/content/tools/canva.md'));
     assert.ok(cluster.working_set.category_pages.includes('src/content/categories/ai-design.md'));
+    assert.equal(cluster.working_set.source_registry, 'src/data/source-registry.json');
+    assert.ok(cluster.discovery_commands.some((command) => command.includes('rg -n "canva|claude|canva-vs-claude"')));
+    assert.equal(cluster.route_qa.route, '/compare/canva-vs-claude/');
+    assert.deepEqual(cluster.route_qa.widths, [360, 390, 430, 768, 1024, 1366]);
+    assert.ok(cluster.route_qa.checks.some((check) => /desktop 1024 and 1366/.test(check)));
     assert.ok(cluster.verification_commands.includes('npm run audit:coverage-quality:changed'));
+    assert.ok(cluster.verification_commands.some((command) => /360, 390, 430, 768, 1024, 1366/.test(command)));
+    assert.ok(cluster.done_definition.some((item) => /Desktop 1024 and 1366/.test(item)));
     assert.equal(cluster.loop_steps[0].name, 'Pick cluster');
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('decision loop warns when the coverage backlog is stale', () => {
+  const dir = writeFixtureProject({ generatedAt: '2026-06-01T00:00:00.000Z' });
+
+  try {
+    const result = runDecisionLoop('--json', `--project-dir=${dir}`);
+    assert.equal(result.status, 0, result.stderr);
+
+    const report = JSON.parse(result.stdout);
+    assert.ok(report.warnings.some((warning) => warning.code === 'backlog-stale'));
+    assert.match(report.warnings[0].message, /coverage:backlog/);
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }

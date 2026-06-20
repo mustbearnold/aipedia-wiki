@@ -14,6 +14,7 @@ For the plain-English project state, read `.agent/CURRENT_STATUS.md` first. For 
 - Current build timing baseline from 2026-06-21: `npm run build:fast` passed in 191.31 seconds and `npm run build` passed in 214.37 seconds. Main drivers are static route fan-out, Pagefind, and large generated/search surfaces.
 - The decision content flywheel is now the default repeatable loop. Use `npm run loop:next` to pick the next buyer-intent cluster.
 - The first decision content loop cycle, `canva-vs-claude`, is complete. `npm run loop:next -- --json` now selects `claude-vs-replit-agent`.
+- Loop briefs now require related-surface discovery, source registry inspection, stale-backlog warnings, and rendered route QA at 360, 390, 430, 768, 1024, and 1366 px.
 - The main active ongoing lane is the oldest-first AI tools wiki refresh.
 - The Phase 3 parallel surface and June 18-20 news backfill plan is written but not executed on `master`.
 
@@ -38,6 +39,7 @@ Run AiPedia as a repeatable buyer-decision loop: cluster, verify, improve decisi
 - 2026-06-21: Loop spec and `loop:next` command are implemented.
 - 2026-06-20: First selected cluster, `canva-vs-claude`, is complete.
 - 2026-06-20: Next selected cluster is `claude-vs-replit-agent` unless a newer backlog changes the order or the comparison already exists.
+- 2026-06-20: Loop hardening requires mobile, tablet, and desktop route QA for rendered comparison cycles.
 
 ## Recommended Next: Claude Vs Replit Agent Comparison Sprint
 
@@ -68,6 +70,7 @@ Create a high-intent, source-backed comparison page for `claude-vs-replit-agent`
 - `npm run audit:provenance:changed`
 - `npm run check:smart:run -- --path <changed paths>`
 - `npm run build:fast` if rendered output or pre-ship confidence requires it.
+- Browser or Playwright route QA for `/compare/claude-vs-replit-agent/` at 360, 390, 430, 768, 1024, and 1366 px.
 
 ## Active: Oldest-First AI Tools Wiki Refresh
 

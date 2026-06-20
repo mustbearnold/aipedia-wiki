@@ -16,6 +16,8 @@ const BACKLOG_PATH = resolve(PROJECT_DIR, valueFor('--backlog') || 'src/data/cov
 const COMPARISONS_DIR = join(PROJECT_DIR, 'src', 'content', 'comparisons');
 const TOOLS_DIR = join(PROJECT_DIR, 'src', 'content', 'tools');
 const CATEGORIES_DIR = join(PROJECT_DIR, 'src', 'content', 'categories');
+const ROUTE_QA_WIDTHS = [360, 390, 430, 768, 1024, 1366];
+const BACKLOG_STALE_DAYS = 2;
 const KNOWN_FLAGS = new Set(['--backlog', '--count', '--json', '--project-dir', '--root', '--slug', '--help', '-h']);
 const VALUE_FLAGS = new Set(['--backlog', '--count', '--project-dir', '--root', '--slug']);
 const CANONICAL_FACT_TOOLS = new Set([
@@ -65,6 +67,7 @@ if (!existsSync(BACKLOG_PATH)) {
 const backlog = JSON.parse(readFileSync(BACKLOG_PATH, 'utf8'));
 const existingPairs = existingComparisonPairs();
 const comparisonBacklog = backlog.backlog?.comparisons ?? [];
+const warnings = backlogWarnings(backlog.generated_at);
 const candidates = comparisonBacklog
   .filter((item) => item?.tools?.length >= 2)
   .filter((item) => !SLUG || item.slug === SLUG)
@@ -78,6 +81,7 @@ emitReport({
   project_dir: PROJECT_DIR,
   backlog_path: projectPath(BACKLOG_PATH),
   backlog_generated_at: backlog.generated_at ?? '',
+  warnings,
   count: candidates.length,
   clusters: candidates,
   next_action: candidates.length
@@ -131,6 +135,11 @@ function emitReport(report) {
     if (cluster.requires_canonical_fact_table) {
       console.log(`  required: canonical_fact_table: true for ${cluster.canonical_fact_tools.join(', ')}`);
     }
+    if (report.warnings?.length) {
+      console.log('');
+      console.log('Warnings:');
+      for (const warning of report.warnings) console.log(`  - ${warning.message}`);
+    }
     console.log('');
     console.log('Loop:');
     for (const step of cluster.loop_steps) console.log(`  ${step.order}. ${step.name}: ${step.exit_criteria}`);
@@ -138,8 +147,15 @@ function emitReport(report) {
     console.log('Working set:');
     for (const path of flatWorkingSet(cluster.working_set)) console.log(`  - ${path}`);
     console.log('');
+    console.log('Discovery:');
+    for (const command of cluster.discovery_commands) console.log(`  - ${command}`);
+    console.log('');
     console.log('Verification:');
     for (const command of cluster.verification_commands) console.log(`  - ${command}`);
+    console.log('');
+    console.log('Route QA:');
+    console.log(`  - ${cluster.route_qa.route} at ${cluster.route_qa.widths.join(', ')} px`);
+    for (const check of cluster.route_qa.checks) console.log(`  - ${check}`);
     console.log('');
   }
 }
@@ -150,6 +166,7 @@ function flatWorkingSet(workingSet) {
     ...workingSet.tool_pages,
     ...workingSet.category_pages,
     ...workingSet.top_layer_pages,
+    workingSet.source_registry,
     workingSet.ledger,
   ].filter(Boolean);
 }
@@ -168,6 +185,8 @@ function clusterBrief(item, rank) {
     .map(projectPath);
   const canonicalFactTools = item.tools.filter((slug) => CANONICAL_FACT_TOOLS.has(slug));
   const comparisonPath = `src/content/comparisons/${item.slug}.md`;
+  const comparisonRoute = `/compare/${item.slug}/`;
+  const relatedSurfacePattern = [...item.tools, item.slug].join('|');
 
   return {
     rank,
@@ -191,7 +210,22 @@ function clusterBrief(item, rank) {
         'src/pages/llms.txt.ts',
         'src/pages/llms-full.txt.ts',
       ],
+      source_registry: 'src/data/source-registry.json',
       ledger: 'PAGE_REFRESH_LEDGER.md',
+    },
+    discovery_commands: [
+      `rg -n "${relatedSurfacePattern}" src/content src/pages`,
+      'Inspect src/data/source-registry.json for source ids, last_checked dates, and pricing/source rows touched by the verified facts.',
+      'Inspect affected parent hubs, archives, LLM surfaces, internal-link blocks, and any related news or use-case pages before closing the cycle.',
+    ],
+    route_qa: {
+      route: comparisonRoute,
+      widths: ROUTE_QA_WIDTHS,
+      checks: [
+        'mobile and tablet first screen includes the decision, winners, CTA path, and no hidden critical buyer content',
+        'desktop 1024 and 1366 layouts have no horizontal overflow, overlap, stretched cards, broken CTAs, or missing primary content',
+        'canonical, title, description, indexability, affiliate disclosure, and source evidence remain visible where relevant',
+      ],
     },
     loop_steps: [
       {
@@ -241,15 +275,37 @@ function clusterBrief(item, rank) {
       'npm run check:smart',
       'npm run check:smart:run -- --path <changed paths>',
       'npm run build:fast when rendered output, runtime surfaces, metadata, schema, or pre-ship confidence require it',
+      `Browser or Playwright route QA for ${comparisonRoute} at ${ROUTE_QA_WIDTHS.join(', ')} px`,
     ],
     done_definition: [
       'No placeholder copy, fake source, stale pricing, unsupported claim, or untracked commercial CTA ships.',
       'Mobile first screen answers the comparison decision quickly.',
+      'Desktop 1024 and 1366 layouts are checked and recorded alongside mobile/tablet QA.',
       'Parent hubs and top-layer surfaces do not contradict the refreshed child pages.',
       'The page refresh ledger reflects the real editorial scope.',
       'The next cycle can resume from .agent/CURRENT_STATUS.md and .agent/PLANS.md.',
     ],
   };
+}
+
+function backlogWarnings(generatedAt) {
+  if (!generatedAt) return [{ code: 'backlog-generated-at-missing', message: 'coverage backlog has no generated_at timestamp; run npm run coverage:backlog if the ranking looks stale.' }];
+
+  const generatedDate = new Date(generatedAt);
+  if (Number.isNaN(generatedDate.getTime())) {
+    return [{ code: 'backlog-generated-at-invalid', message: `coverage backlog has an invalid generated_at timestamp (${generatedAt}); run npm run coverage:backlog.` }];
+  }
+
+  const ageMs = Date.now() - generatedDate.getTime();
+  const ageDays = Math.floor(ageMs / 86_400_000);
+  if (ageDays <= BACKLOG_STALE_DAYS) return [];
+
+  return [
+    {
+      code: 'backlog-stale',
+      message: `coverage backlog is ${ageDays} days old; run npm run coverage:backlog before committing if the selected cluster looks stale.`,
+    },
+  ];
 }
 
 function existingComparisonPairs() {

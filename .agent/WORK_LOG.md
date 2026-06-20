@@ -30,6 +30,16 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 
 ## Entries
 
+### 2026-06-20: Decision Loop QA Hardening
+
+- Status: Complete and pushed.
+- Commit: this commit.
+- Branch: `master`.
+- Changed: Hardened `npm run loop:next` so each brief includes stale-backlog warnings, source-registry inspection, related-surface discovery sweeps, and rendered route QA at 360, 390, 430, 768, 1024, and 1366 px. Updated the loop spec and `.agent` docs so desktop QA is recorded alongside mobile and tablet QA.
+- Verification: `node --test tests/scripts/decision-loop.test.mjs`, `git diff --check`, em-dash sweep over touched docs/scripts, `npm run check:quick`.
+- Residual risks: The route QA requirement is now in the brief and docs, but the command still does not automate browser screenshots by itself.
+- Next: Run `claude-vs-replit-agent` with current sources and record route QA at every listed width.
+
 ### 2026-06-20: First Decision Content Loop Cycle, Canva Vs Claude
 
 - Status: Complete and pushed.

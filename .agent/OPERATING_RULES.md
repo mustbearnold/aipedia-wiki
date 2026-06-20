@@ -82,7 +82,7 @@ Before finishing:
 
 1. Match verification scope to the changed surface. For tooling, tests, command docs, or other non-rendered repo maintenance, prefer `npm run check:quick`, focused tests, and scoped diff checks. Do not run a full build unless rendered output, runtime behavior, deployment config, or pre-ship confidence is affected.
 2. For page, content, template, runtime, SEO, schema, affiliate, or deployment changes, run lint, typecheck, tests, build, and any relevant page or audit scripts.
-3. Check mobile widths of 360, 390, 430, 768, and desktop 1024 or wider when rendered pages or UI components are affected.
+3. Check mobile and tablet widths of 360, 390, 430, and 768, plus desktop widths of 1024 and 1366, when rendered pages or UI components are affected.
 4. Check for horizontal overflow, layout shift, broken CTAs, broken internal links, and missing metadata when rendered pages or UI components are affected.
 5. Verify schema, canonical URL, title, description, indexability, and affiliate disclosure where relevant.
 6. Verify affected top-layer pages and parent hubs are current, internally linked, and aligned with the edited sub-pages.
