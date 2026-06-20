@@ -1,6 +1,6 @@
 # AiPedia Page Refresh Ledger
 
-Ledger updated through: 2026-06-19
+Ledger updated through: 2026-06-20
 Tracked public pages and crawl surfaces: 781
 
 Hard rule: every time a tracked website page is edited, refreshed, materially re-ranked, or has volatile facts re-verified, update that page row in this file on the same change. If a child page update affects a parent hub, archive, internal-link block, sitemap, or LLM surface, update those affected rows too.
@@ -787,8 +787,8 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-18 | /tools/codeium/ | Tool | Yes | frontmatter | src/content/tools/codeium.md |
 | 2026-06-18 | /tools/cohere/ | Tool | Yes | frontmatter | src/content/tools/cohere.md |
 | 2026-06-18 | /tools/connected-papers/ | Tool | Yes | frontmatter | src/content/tools/connected-papers.md |
-| 2026-06-19 | / | Static page | Yes | git | src/pages/index.astro |
-| 2026-06-19 | /search/ | Static page | No | git | src/pages/search.astro |
 | 2026-06-19 | /sitemap-index.xml | Crawl surface | No | git | astro.config.mjs |
 | 2026-06-19 | /tools/ | Static page | Yes | git | src/pages/tools/index.astro |
 | 2026-06-19 | /tools/semrush-demo/ | Tool | Yes | frontmatter | src/content/tools/semrush-demo.md |
+| 2026-06-20 | / | Static page | Yes | git | src/pages/index.astro |
+| 2026-06-20 | /search/ | Static page | No | git | src/pages/search.astro |

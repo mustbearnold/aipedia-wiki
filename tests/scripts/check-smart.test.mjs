@@ -14,6 +14,8 @@ test('check-smart classifies editorial content without requiring a build', () =>
   assert.ok(plan.commands.includes('npm run audit:facts'));
   assert.ok(plan.commands.includes('npm run check:links'));
   assert.ok(!plan.commands.includes('npm run build:fast'));
+  assert.ok(!plan.commands.includes('npm run guard:challenge:check'));
+  assert.ok(!plan.guidance.some((line) => line.includes('Open a guard challenge before changing guard pass or fail behavior')));
 });
 
 test('check-smart keeps docs and agent files on diff-only verification', () => {
@@ -146,6 +148,12 @@ test('operator surface contract names verification surfaces explicitly', () => {
   }
 });
 
+test('operator surface contract names the guard challenge surface explicitly', () => {
+  const surfaceIds = operatorSurfaces.surfaces.map((surface) => surface.id);
+
+  assert.ok(surfaceIds.includes('guard-challenge'));
+});
+
 test('check-smart classifies tooling work without asset checks', () => {
   const plan = planForPaths(['scripts/audit-command-surface.mjs', 'tests/scripts/audit-command-surface.test.mjs']);
 
@@ -153,6 +161,28 @@ test('check-smart classifies tooling work without asset checks', () => {
   assert.ok(plan.commands.includes('npm run test:scripts'));
   assert.ok(plan.commands.includes('npm run audit:commands'));
   assert.ok(!plan.commands.includes('npm run check:assets:quick'));
+});
+
+test('check-smart recommends guard challenge validation for guard and audit scripts', () => {
+  const plan = planForPaths(['scripts/guard-content.mjs', 'scripts/audit-news-rendering.mjs']);
+
+  assert.ok(plan.commands.includes('npm run guard:challenge:check'));
+  assert.ok(
+    plan.guidance.some((line) =>
+      line.includes('Open a guard challenge before changing guard pass or fail behavior'),
+    ),
+  );
+});
+
+test('check-smart recommends guard challenge validation for general check scripts', () => {
+  const plan = planForPaths(['scripts/check-dist-budget.mjs', 'tests/scripts/check-dist-budget.test.mjs']);
+
+  assert.ok(plan.commands.includes('npm run guard:challenge:check'));
+  assert.ok(
+    plan.guidance.some((line) =>
+      line.includes('Open a guard challenge before changing guard pass or fail behavior'),
+    ),
+  );
 });
 
 test('check-smart keeps dependency changes on the pre-ship path', () => {

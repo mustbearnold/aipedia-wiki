@@ -131,6 +131,16 @@ function checksForSurfaces(surfaces) {
   return [...checks].sort();
 }
 
+function guidanceForSurfaces(surfaces) {
+  const guidance = new Set();
+
+  for (const surface of surfaces) {
+    for (const line of surface.guidance || []) guidance.add(line);
+  }
+
+  return [...guidance].sort();
+}
+
 function surfaceSummariesForSurfaces(surfaces) {
   return surfaces
     .map((surface) => ({ id: surface.id, label: surface.label }))
@@ -174,6 +184,7 @@ export function planForPaths(paths) {
   const surfaceSummaries = surfaceSummariesForSurfaces(surfaces);
   const categories = categoriesForSurfaces(surfaces);
   const checks = checksForSurfaces(surfaces);
+  const guidance = guidanceForSurfaces(surfaces);
   return {
     project_dir: PROJECT_DIR,
     paths,
@@ -182,6 +193,7 @@ export function planForPaths(paths) {
     surface_labels: surfaceSummaries.map((surface) => surface.label),
     categories,
     checks,
+    guidance,
     smoke_routes: smokeRoutesForSurfaces(surfaces),
     commands: paths.length ? commandsForSelection(categories, checks) : [],
     note: paths.length
@@ -222,6 +234,10 @@ function printPlan(plan) {
   if (plan.checks.length) {
     console.log('\nRequired checks:');
     for (const check of plan.checks) console.log(`- ${check}`);
+  }
+  if (plan.guidance.length) {
+    console.log('\nOperator guidance:');
+    for (const line of plan.guidance) console.log(`- ${line}`);
   }
   if (plan.smoke_routes.length) {
     console.log('\nBrowser smoke routes:');

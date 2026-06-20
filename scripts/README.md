@@ -15,6 +15,8 @@ Scripts are operator tools for keeping AiPedia current, source-backed, buildable
 
 - `guard-*.mjs`: fail-fast editorial and policy guards.
 - `audit-*.mjs`: source, SEO, conversion, data, command, freshness, and quality checks.
+- `npm run guard:challenge`: creates a proposed guard challenge artifact when a guard, audit, check, or fixture may need to change.
+- `npm run guard:challenge:check`: validates accepted guard challenge artifacts have implementer, defender, arbitrator, fixture or test, and verification evidence.
 - `generate-*.mjs`: generated ledgers, manifests, favicons, logos, and OG assets.
 - `build-*.mjs`: build orchestration helpers.
 - `prep-*.mjs`, `optimize-*.mjs`, `fetch-*.mjs`: asset and data maintenance helpers.

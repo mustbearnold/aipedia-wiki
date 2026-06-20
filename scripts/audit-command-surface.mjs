@@ -30,6 +30,8 @@ const REQUIRED_OPERATOR_NPM_SCRIPTS = [
   'db:migrate:check',
   'db:migrate:verify',
   'deploy',
+  'guard:challenge',
+  'guard:challenge:check',
   'ship:check',
   'vercel:env:pull',
 ];
@@ -71,6 +73,8 @@ const REQUIRED_PACKAGE_COMMAND_PARTS = {
 };
 const REQUIRED_EXACT_NPM_SCRIPT_COMMANDS = {
   deploy: 'npx vercel build --prod && npx vercel deploy --prebuilt --prod',
+  'guard:challenge': 'node scripts/guard-challenge.mjs',
+  'guard:challenge:check': 'node scripts/guard-challenge.mjs --check',
   'vercel:env:pull': 'npx vercel env pull .env.local --yes',
 };
 const FORBIDDEN_QUICK_CHECK_PATTERNS = [
