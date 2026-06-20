@@ -14,6 +14,7 @@ const DRY_RUN = hasFlag('--dry-run');
 const HELP_MODE = hasFlag('--help') || hasFlag('-h');
 const SKIP_BUILD = hasFlag('--skip-build');
 const SKIP_ROUTE_QA = hasFlag('--skip-route-qa');
+const FORCE_BUILD = hasFlag('--force-build');
 const DEFAULT_ROUTE_WIDTHS = '360,390,430,768,1024,1366';
 const KNOWN_FLAGS = new Set([
   '--date',
@@ -27,6 +28,7 @@ const KNOWN_FLAGS = new Set([
   '--project-dir',
   '--root',
   '--skip-build',
+  '--force-build',
   '--skip-route-qa',
   '--dry-run',
   '--json',
@@ -96,7 +98,8 @@ function usage() {
     '  --path <path>        Changed path. Repeatable or comma-separated via --paths.',
     '  --widths <list>      Route QA widths. Default: 360,390,430,768,1024,1366.',
     '  --site-dir <dir>     Static build directory passed to qa:route.',
-    '  --skip-build         Do not run build:fast unless check-smart selected it.',
+    '  --skip-build         Do not add a fallback build:fast step.',
+    '  --force-build        Run build:fast even when no route QA is requested.',
     '  --skip-route-qa      Do not run qa:route.',
     '  --dry-run            Print the planned commands without executing.',
     '  --json               Emit a structured report.',
@@ -122,6 +125,9 @@ function collectArgumentIssues() {
 
   if (hasFlag('--project-dir') && hasFlag('--root')) {
     issues.push({ code: 'argument-invalid', detail: 'choose only one of --project-dir or --root' });
+  }
+  if (SKIP_BUILD && FORCE_BUILD) {
+    issues.push({ code: 'argument-invalid', detail: 'choose only one of --skip-build or --force-build' });
   }
 
   const date = verificationDate();
@@ -206,6 +212,8 @@ function nodeStep(script, args = []) {
 function commandPlan({ paths, date, route, widths }) {
   const smartPlan = paths.length ? planForPaths(paths) : { commands: [] };
   const smartRunsBuild = smartPlan.commands.includes('npm run build:fast');
+  const smartRouteCommand = route ? `npm run qa:route -- --route ${route}` : '';
+  const smartRunsRouteQa = Boolean(smartRouteCommand && smartPlan.commands.includes(smartRouteCommand));
   const coverageArgs = paths.length
     ? paths.flatMap((path) => ['--changed-file', path])
     : ['--changed'];
@@ -216,35 +224,35 @@ function commandPlan({ paths, date, route, widths }) {
     nodeStep('scripts/generate-page-refresh-ledger.mjs', ['--date', date], 'regenerate page refresh ledger'),
     nodeStep('scripts/generate-page-refresh-ledger.mjs', ['--check', '--date', date], 'check page refresh ledger with loop date'),
     nodeStep('scripts/audit-coverage-quality.mjs', coverageArgs, 'check changed comparison quality'),
-    npmStep('audit:provenance:changed'),
-    npmStep('audit:facts'),
-    npmStep('check:links'),
     step(process.execPath, smartArgs, 'run smart verification for changed paths'),
   ];
 
-  if (!SKIP_BUILD && !smartRunsBuild) {
+  if (!SKIP_BUILD && !smartRunsBuild && (FORCE_BUILD || route)) {
     steps.push(npmStep('build:fast'));
   }
 
-  if (!SKIP_ROUTE_QA && route) {
+  if (!SKIP_ROUTE_QA && route && !smartRunsRouteQa) {
     const routeArgs = ['scripts/qa-route.mjs', '--route', route, '--widths', widths.join(',')];
     const siteDir = valueFor('--site-dir');
     if (siteDir) routeArgs.push('--site-dir', siteDir);
     steps.push(step(process.execPath, routeArgs, `route QA for ${route} at ${widths.join(', ')} px`));
   }
 
-  return { steps, smartPlan, smartRunsBuild };
+  return { steps, smartPlan, smartRunsBuild, smartRunsRouteQa };
 }
 
 function runStep(item, env) {
   console.log(`\n> ${commandLabel(item)}`);
+  const startedAt = performance.now();
   const result = spawnSync(item.command, item.args, {
     cwd: PROJECT_DIR,
     env,
     shell: process.platform === 'win32' && item.command === 'npm',
     stdio: 'inherit',
   });
-  return result.status ?? 1;
+  const durationMs = Math.round(performance.now() - startedAt);
+  console.log(`[loop-verify] ${commandLabel(item)} finished in ${Math.round(durationMs / 100) / 10}s`);
+  return { status: result.status ?? 1, duration_ms: durationMs };
 }
 
 function emitReport(report) {
@@ -304,6 +312,7 @@ function main() {
     route,
     widths,
     smart_runs_build: plan.smartRunsBuild,
+    smart_runs_route_qa: plan.smartRunsRouteQa,
     commands,
     dry_run: DRY_RUN,
   };
@@ -319,15 +328,18 @@ function main() {
     AIPEDIA_FAST_BUILD: '1',
   };
 
+  const commandResults = [];
   for (const item of plan.steps) {
-    const status = runStep(item, env);
+    const result = runStep(item, env);
+    commandResults.push({ command: commandLabel(item), ...result });
+    const status = result.status;
     if (status !== 0) {
-      emitReport({ ...reportBase, ok: false, failed_command: commandLabel(item), failed_status: status });
+      emitReport({ ...reportBase, ok: false, command_results: commandResults, failed_command: commandLabel(item), failed_status: status });
       return status;
     }
   }
 
-  emitReport(reportBase);
+  emitReport({ ...reportBase, command_results: commandResults });
   return 0;
 }
 

@@ -225,6 +225,7 @@ test('check-smart routes Phase 3 model, category, motion, and token surfaces', (
   assert.ok(comparePlan.commands.includes('npm run audit:generated-models'));
   assert.ok(comparePlan.smoke_routes.some((route) => route.route === '/compare/chatgpt-vs-claude/'));
   assert.ok(comparePlan.smoke_routes.some((route) => route.route === '/compare/cursor-vs-deepseek/' && route.command === 'npm run qa:route'));
+  assert.ok(comparePlan.commands.includes('npm run qa:route -- --route /compare/cursor-vs-deepseek/'));
 
   const motionPlan = planForPaths(['src/lib/motion-controller.ts']);
   assert.ok(motionPlan.surfaces.some((surface) => surface.id === 'phase3-motion-controller'));

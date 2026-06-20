@@ -11,7 +11,7 @@ Scripts are operator tools for keeping AiPedia current, source-backed, buildable
 - `npm run typecheck`: Astro typecheck gate for active Astro/server surfaces; `tsconfig.typecheck.json` keeps the legacy global search client scripts and archived `.legacy.astro` files as documented baseline debt until the search rewrite is typed.
 - `npm run ops:dashboard`: read-only branch, worktree, PR/issue, and optional audit summary for daily operations.
 - `npm run loop:next`: read-only decision-content flywheel brief for the next buyer-intent cluster.
-- `npm run loop:verify`: date-stable verifier for a decision-content cycle; sets `AIPEDIA_LEDGER_DATE`, runs focused checks, builds when needed, and can call route QA.
+- `npm run loop:verify`: date-stable verifier for a decision-content cycle; sets `AIPEDIA_LEDGER_DATE`, runs focused checks, records per-command timing, builds when a route or `--force-build` needs it, and can call route QA.
 - `npm run loop:record`: writes a durable `.agent/loop-runs/` receipt after a cycle.
 - `npm run qa:route`: route-specific Playwright QA for mobile, tablet, and desktop widths.
 - `npm run check`: broad source, content, link, news, asset, and security checks.
@@ -25,7 +25,7 @@ Scripts are operator tools for keeping AiPedia current, source-backed, buildable
 - `guard-*.mjs`: fail-fast editorial and policy guards.
 - `audit-*.mjs`: source, SEO, conversion, data, command, freshness, and quality checks.
 - `decision-loop.mjs`: chooses the next cluster and prints the source, working-set, related-surface discovery, mobile and desktop route QA, verification, and recording brief.
-- `loop-verify.mjs`: executes the loop verification plan with one explicit ledger date so timezone differences do not break ledger, guard, or build checks.
+- `loop-verify.mjs`: executes the loop verification plan with one explicit ledger date so timezone differences do not break ledger, guard, or build checks. It delegates overlapping checks to `check-smart:run`, records per-command durations, and only adds fallback `build:fast` for route QA or `--force-build`.
 - `loop-record.mjs`: creates `.agent/loop-runs/YYYY-MM-DD-slug.md` receipts for completed or attempted cycles.
 - `qa-route.mjs`: serves the built output and verifies a local route across 360, 390, 430, 768, 1024, and 1366 px unless custom widths are supplied.
 - `npm run guard:challenge`: creates a proposed guard challenge artifact when a guard, audit, check, or fixture may need to change.

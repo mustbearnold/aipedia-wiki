@@ -30,9 +30,27 @@ test('loop verify dry-run pins the ledger date across its command plan', () => {
   assert.equal(report.dry_run, true);
   assert.equal(report.date, '2026-06-20');
   assert.equal(report.route, '/compare/foo-vs-bar/');
+  assert.equal(report.smart_runs_route_qa, true);
   assert.ok(report.commands.some((command) => /generate-page-refresh-ledger\.mjs --date 2026-06-20/.test(command)));
   assert.ok(report.commands.some((command) => /generate-page-refresh-ledger\.mjs --check --date 2026-06-20/.test(command)));
-  assert.ok(report.commands.some((command) => /qa-route\.mjs --route \/compare\/foo-vs-bar\//.test(command)));
+  assert.ok(report.commands.some((command) => /check-smart\.mjs --run --path src\/content\/comparisons\/foo-vs-bar\.md/.test(command)));
+});
+
+test('loop verify does not add a fallback build when no route or force-build is requested', () => {
+  const result = runNode('scripts/loop-verify.mjs', [
+    '--json',
+    '--dry-run',
+    '--date',
+    '2026-06-20',
+    '--path',
+    '.agent/CURRENT_STATUS.md',
+  ]);
+
+  assert.equal(result.status, 0, `${result.stdout}\n${result.stderr}`);
+  const report = JSON.parse(result.stdout);
+  assert.equal(report.route, '');
+  assert.equal(report.smart_runs_build, false);
+  assert.ok(!report.commands.includes('npm run build:fast'));
 });
 
 test('loop verify requires an explicit date or AIPEDIA_LEDGER_DATE', () => {
@@ -97,6 +115,33 @@ test('loop record writes a durable run receipt', () => {
     assert.match(text, /# 2026-06-20: foo-vs-bar/);
     assert.match(text, /\/compare\/foo-vs-bar\//);
     assert.match(text, /src\/content\/comparisons\/foo-vs-bar\.md/);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('loop record preserves comma-separated command text in checks', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-loop-record-command-'));
+
+  try {
+    const command = 'npm run qa:route -- --route /compare/foo-vs-bar/ --widths 360,390,430';
+    const result = runNode('scripts/loop-record.mjs', [
+      '--project-dir',
+      dir,
+      '--json',
+      '--date',
+      '2026-06-20',
+      '--slug',
+      'foo-vs-bar',
+      '--check',
+      command,
+    ]);
+
+    assert.equal(result.status, 0, `${result.stdout}\n${result.stderr}`);
+    const report = JSON.parse(result.stdout);
+    assert.deepEqual(report.record.checks, [command]);
+    const text = readFileSync(report.path, 'utf8');
+    assert.match(text, /--widths 360,390,430/);
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }

@@ -30,6 +30,16 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 
 ## Entries
 
+### 2026-06-21: Decision Loop Review Fixes
+
+- Status: Complete.
+- Commit: this commit.
+- Branch: `master`.
+- Changed: Fixed loop review findings by preserving comma-containing check text in `loop:record`, making changed comparison route QA executable through `check:smart:run`, preventing fallback `build:fast` for non-rendered loop verification, reducing duplicated loop checks, and adding per-command timing to `loop:verify`.
+- Verification: `node --test tests/scripts/check-smart.test.mjs tests/scripts/loop-hardening.test.mjs`.
+- Residual risks: `check:smart:run` now runs built route QA for changed comparison pages, so comparison content verification is more complete but still intentionally heavier than docs-only checks.
+- Next: Run the next Decision Content Flywheel cycle for `cursor-vs-deepseek`, then review loop timings and reliability again.
+
 ### 2026-06-21: Decision Loop Verification Hardening
 
 - Status: Complete.

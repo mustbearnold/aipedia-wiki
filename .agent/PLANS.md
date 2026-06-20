@@ -14,7 +14,8 @@ For the plain-English project state, read `.agent/CURRENT_STATUS.md` first. For 
 - Current build timing baseline from 2026-06-21: `npm run build:fast` passed in 191.31 seconds and `npm run build` passed in 214.37 seconds. Main drivers are static route fan-out, Pagefind, and large generated/search surfaces.
 - The decision content flywheel is now the default repeatable loop. Use `npm run loop:next` to pick the next buyer-intent cluster.
 - The loop verifier is now executable. Use `npm run loop:verify -- --date <YYYY-MM-DD> --route /compare/<slug>/ --path <changed paths>` for rendered comparison cycles.
-- Route QA is now reusable through `npm run qa:route -- --route /compare/<slug>/`.
+- Route QA is now reusable through `npm run qa:route -- --route /compare/<slug>/`; changed comparison routes also run through `check:smart:run`.
+- `loop:verify` now records per-command timings and avoids fallback builds unless route QA or `--force-build` requires one.
 - Major loop cycles should write `.agent/loop-runs/` receipts with `npm run loop:record`.
 - The first two decision content loop cycles, `canva-vs-claude` and `claude-vs-replit-agent`, are complete. `npm run loop:next -- --json` now selects `cursor-vs-deepseek`.
 - Loop briefs now require related-surface discovery, source registry inspection, stale-backlog warnings, and rendered route QA at 360, 390, 430, 768, 1024, and 1366 px.
@@ -43,7 +44,7 @@ Run AiPedia as a repeatable buyer-decision loop: cluster, verify, improve decisi
 - 2026-06-20: First selected cluster, `canva-vs-claude`, is complete.
 - 2026-06-20: Second selected cluster, `claude-vs-replit-agent`, is complete.
 - 2026-06-20: Next selected cluster is `cursor-vs-deepseek` unless a newer backlog changes the order or the comparison already exists.
-- 2026-06-21: Loop hardening added `loop:verify`, `qa:route`, `loop:record`, changed-route smart guidance, and raw Markdown table rejection for changed comparison pages.
+- 2026-06-21: Loop hardening added `loop:verify`, `qa:route`, `loop:record`, changed-route smart guidance, raw Markdown table rejection for changed comparison pages, executable changed-comparison route QA, conditional fallback builds, receipt-safe command recording, and per-command timing.
 
 ## Recommended Next: Cursor Vs DeepSeek Comparison Sprint
 

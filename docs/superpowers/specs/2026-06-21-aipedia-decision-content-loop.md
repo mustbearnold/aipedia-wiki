@@ -82,7 +82,7 @@ Use the smallest verification set that matches the change. For a comparison deci
 
 - `npm run loop:verify -- --date <YYYY-MM-DD> --route /compare/<slug>/ --path <changed paths>`
 
-The wrapper sets `AIPEDIA_LEDGER_DATE` for every child command, regenerates and checks the page refresh ledger with the same date, runs changed comparison quality, provenance, fact, link, and smart checks, runs `build:fast` when the smart plan did not already select it, and calls route QA when a route is supplied.
+The wrapper sets `AIPEDIA_LEDGER_DATE` for every child command, regenerates and checks the page refresh ledger with the same date, runs the changed comparison quality gate, delegates overlapping checks to `check:smart:run`, records per-command timing, runs `build:fast` when route QA or `--force-build` requires it and the smart plan did not already select it, and calls route QA when a route is supplied but smart verification did not already run that route.
 
 The underlying commands remain valid when a focused retry is needed:
 
@@ -97,7 +97,7 @@ The underlying commands remain valid when a focused retry is needed:
 
 Use `npm run build:fast` when rendered output, runtime surfaces, metadata, schema, or pre-ship confidence require it and the loop verifier did not already run it. Reserve full `npm run build` for final production confidence, broad template changes, runtime changes, deployment changes, or explicit pre-ship checks.
 
-For any new or refreshed rendered comparison page, run `npm run qa:route -- --route /compare/<slug>/ --widths 360,390,430,768,1024,1366` or let `loop:verify` run it. Record the result. The pass must cover mobile/tablet first-screen decision content plus desktop layout quality, including no horizontal overflow, overlap, stretched cards, broken CTAs, or missing primary content.
+For any new or refreshed rendered comparison page, run `npm run qa:route -- --route /compare/<slug>/ --widths 360,390,430,768,1024,1366` or let `loop:verify`/`check:smart:run` run it. Record the result. The pass must cover mobile/tablet first-screen decision content plus desktop layout quality, including no horizontal overflow, overlap, stretched cards, broken CTAs, or missing primary content.
 
 ### 6. Record
 

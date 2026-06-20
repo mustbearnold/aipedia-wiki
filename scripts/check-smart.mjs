@@ -227,6 +227,12 @@ function smokeRoutesForSurfaces(surfaces, paths = []) {
   });
 }
 
+function routeQaCommandsForPaths(paths) {
+  return routeQaRoutesForPaths(paths)
+    .filter((route) => route.focus === 'changed comparison route')
+    .map((route) => `${route.command} -- --route ${route.route}`);
+}
+
 function commandsForSelection(categories, checks) {
   const commands = new Set(OPERATOR_SURFACE_CONTRACT.verification.baseCommands);
   const hasAny = (values, selected) => (values || []).some((value) => selected.includes(value));
@@ -237,6 +243,17 @@ function commandsForSelection(categories, checks) {
   }
 
   return [...commands];
+}
+
+function commandsForPlan(categories, checks, paths) {
+  const commands = commandsForSelection(categories, checks);
+  const routeCommands = routeQaCommandsForPaths(paths);
+  if (!routeCommands.length) return commands;
+
+  const planned = [...commands];
+  if (!planned.includes('npm run build:fast')) planned.push('npm run build:fast');
+  for (const command of routeCommands) planned.push(command);
+  return planned;
 }
 
 export function commandsForCategories(categories) {
@@ -259,7 +276,7 @@ export function planForPaths(paths) {
     checks,
     guidance,
     smoke_routes: smokeRoutesForSurfaces(surfaces, paths),
-    commands: paths.length ? commandsForSelection(categories, checks) : [],
+    commands: paths.length ? commandsForPlan(categories, checks, paths) : [],
     note: paths.length
       ? 'Run with --run to execute these commands in order.'
       : 'No changed tracked or untracked files were detected.',

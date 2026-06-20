@@ -29,6 +29,7 @@ At the time this status was last checked, `master` was clean and synced with `or
   - Added `npm run loop:record` and `.agent/loop-runs/` receipts so completed or attempted cycles leave one durable artifact.
   - `npm run check:smart` now surfaces route-specific QA targets for changed tool, category, and comparison content.
   - `npm run audit:coverage-quality:changed` now rejects raw Markdown tables in changed comparison pages so mobile-hostile tables are caught before browser QA.
+  - Follow-up review fixes preserve comma-containing verification command text in loop receipts, make comparison route QA executable through `check:smart:run`, avoid fallback builds for non-rendered paths, reduce duplicated loop checks, and record per-command timings.
 - Second Decision Content Flywheel cycle is complete.
   - Completed cycle: `claude-vs-replit-agent`.
   - Added `src/content/comparisons/claude-vs-replit-agent.md`.
@@ -103,6 +104,7 @@ At the time this status was last checked, `master` was clean and synced with `or
 
 - Decision loop hardening passed:
   - `node --test tests/scripts/decision-loop.test.mjs tests/scripts/check-smart.test.mjs tests/scripts/audit-coverage-quality.test.mjs tests/scripts/loop-hardening.test.mjs`
+  - `node --test tests/scripts/check-smart.test.mjs tests/scripts/loop-hardening.test.mjs`
   - `node scripts/qa-route.mjs --route /compare/claude-vs-replit-agent/ --widths 360 --site-dir dist-fast/client`
   - `npm run guard:challenge:check`
   - `npm run check:quick`

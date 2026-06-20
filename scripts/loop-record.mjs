@@ -62,7 +62,10 @@ function valueFor(flag) {
   return index >= 0 ? rawArgs[index + 1] : '';
 }
 
-function valuesFor(...flags) {
+function valuesFor(...args) {
+  const options = typeof args.at(-1) === 'object' ? args.pop() : {};
+  const split = options.split ?? true;
+  const flags = args;
   const values = [];
   for (let index = 0; index < rawArgs.length; index += 1) {
     const arg = rawArgs[index];
@@ -76,7 +79,8 @@ function valuesFor(...flags) {
       }
     }
   }
-  return values.flatMap((value) => value.split(',').map((part) => part.trim()).filter(Boolean));
+  const parsed = split ? values.flatMap((value) => value.split(',')) : values;
+  return parsed.map((part) => part.trim()).filter(Boolean);
 }
 
 function flagName(arg) {
@@ -215,10 +219,10 @@ function main() {
     commit: valueFor('--commit'),
     branch: valueFor('--branch'),
     changed_files: valuesFor('--changed', '--changed-file', '--changed-files'),
-    checks: valuesFor('--check', '--checks'),
-    failures: valuesFor('--failure'),
-    risks: valuesFor('--risk'),
-    notes: valuesFor('--note'),
+    checks: valuesFor('--check', '--checks', { split: false }),
+    failures: valuesFor('--failure', { split: false }),
+    risks: valuesFor('--risk', { split: false }),
+    notes: valuesFor('--note', { split: false }),
     next: valueFor('--next'),
   };
 
