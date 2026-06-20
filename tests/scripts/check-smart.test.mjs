@@ -14,6 +14,8 @@ test('check-smart classifies editorial content without requiring a build', () =>
   assert.ok(plan.commands.includes('npm run audit:facts'));
   assert.ok(plan.commands.includes('npm run check:links'));
   assert.ok(!plan.commands.includes('npm run build:fast'));
+  assert.ok(!plan.commands.includes('npm run guard:challenge:check'));
+  assert.ok(!plan.guidance.some((line) => line.includes('Open a guard challenge before changing guard pass or fail behavior')));
 });
 
 test('check-smart keeps docs and agent files on diff-only verification', () => {
@@ -77,6 +79,17 @@ test('check-smart classifies tooling work without asset checks', () => {
 
 test('check-smart recommends guard challenge validation for guard and audit scripts', () => {
   const plan = planForPaths(['scripts/guard-content.mjs', 'scripts/audit-news-rendering.mjs']);
+
+  assert.ok(plan.commands.includes('npm run guard:challenge:check'));
+  assert.ok(
+    plan.guidance.some((line) =>
+      line.includes('Open a guard challenge before changing guard pass or fail behavior'),
+    ),
+  );
+});
+
+test('check-smart recommends guard challenge validation for general check scripts', () => {
+  const plan = planForPaths(['scripts/check-dist-budget.mjs', 'tests/scripts/check-dist-budget.test.mjs']);
 
   assert.ok(plan.commands.includes('npm run guard:challenge:check'));
   assert.ok(

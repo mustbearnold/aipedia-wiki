@@ -10,7 +10,8 @@ const args = process.argv.slice(2);
 export const VALID_STATUSES = new Set(['proposed', 'accepted', 'rejected', 'escalated']);
 export const VALID_DECISIONS = new Set(['pending', 'fix-code', 'narrow-guard', 'update-fixture', 'retire-guard', 'human-escalate']);
 const FINAL_STATUSES = new Set(['accepted', 'rejected', 'escalated']);
-const REQUIRED_FIELDS = ['Date', 'Status', 'Failing command', 'Guard files', 'Product files', 'Decision'];
+const ROLE_FIELDS = ['Implementer', 'Guard defender', 'Arbitrator'];
+const REQUIRED_FIELDS = ['Date', 'Status', 'Failing command', 'Guard files', 'Product files', 'Decision', ...ROLE_FIELDS];
 const REQUIRED_SECTIONS = [
   'Implementer brief',
   'Guard defender brief',
@@ -23,6 +24,11 @@ const IMPLEMENTER_BRIEF_TEMPLATE = 'The current guard failure blocks productive 
 const SECTION_TEMPLATE_TEXT = new Map([
   ['Implementer brief', IMPLEMENTER_BRIEF_TEMPLATE],
 ]);
+const RUNNABLE_COMMAND_PREFIX = '(?:npm\\s+run|node|npx|playwright)\\b';
+const RUNNABLE_COMMAND_LABEL_PATTERN = new RegExp('(?:^|\\n)\\s*(?:Run|Command):[^\\S\\r\\n]*`?' + RUNNABLE_COMMAND_PREFIX);
+const RUNNABLE_COMMAND_BACKTICK_PATTERN = new RegExp('`\\s*' + RUNNABLE_COMMAND_PREFIX);
+const RUNNABLE_COMMAND_LINE_PATTERN = new RegExp('(?:^|\\n)\\s*`?' + RUNNABLE_COMMAND_PREFIX);
+const TEST_OR_FIXTURE_EVIDENCE_PATTERN = /\b(?:tests?\/[^\s`]+|fixtures?\/[^\s`]+|[^\s`]*fixtures?\/[^\s`]+|[^\s`]+fixture[^\s`]+\.[A-Za-z0-9]+|[^\s`]+\.test\.(?:mjs|cjs|js|ts|tsx|jsx))\b/i;
 
 function valueFor(flag) {
   const index = args.indexOf(flag);
@@ -89,10 +95,20 @@ function isTemplateText(section, value) {
   return SECTION_TEMPLATE_TEXT.get(section) === value.trim();
 }
 
-function verificationNamesCommand(value) {
-  return /(^|\n)(Run|Command):[^\S\r\n]*\S/.test(value)
-    || /`(?:npm run|node |npx |playwright )/.test(value)
-    || /\b(?:npm run|node |npx |playwright )/.test(value);
+function textNamesRunnableCommand(value) {
+  return RUNNABLE_COMMAND_LABEL_PATTERN.test(value)
+    || RUNNABLE_COMMAND_BACKTICK_PATTERN.test(value)
+    || RUNNABLE_COMMAND_LINE_PATTERN.test(value);
+}
+
+function isFixturePlaceholder(value) {
+  const normalized = value.trim().toLowerCase().replace(/[.。]+$/g, '').replace(/\s+/g, ' ');
+  return ['none', 'n/a', 'na', 'not applicable', 'no fixture needed'].includes(normalized);
+}
+
+function fixtureOrTestEvidence(value) {
+  return !isFixturePlaceholder(value)
+    && (TEST_OR_FIXTURE_EVIDENCE_PATTERN.test(value) || textNamesRunnableCommand(value));
 }
 
 export function parseChallenge(text, filePath = '') {
@@ -126,11 +142,23 @@ export function validateChallenge(record) {
   }
 
   if (status === 'accepted') {
+    const roleIdentities = [];
+    for (const role of ROLE_FIELDS) {
+      const identity = record.fields[role] || '';
+      if (isPendingText(identity)) add(`role-pending:${role}`, `${role} must name a non-pending person or agent`);
+      else roleIdentities.push(identity.trim().toLowerCase());
+    }
+    if (new Set(roleIdentities).size !== roleIdentities.length) {
+      add('role-not-distinct', 'accepted challenge roles must name three distinct people or agents');
+    }
     for (const section of REQUIRED_SECTIONS) {
       if (isPendingText(record.sections[section])) add(`section-pending:${section}`, `${section} must contain final evidence`);
       if (isTemplateText(section, record.sections[section])) add(`section-template:${section}`, `${section} must replace generated template text`);
     }
-    if (!verificationNamesCommand(record.sections.Verification || '')) {
+    if (!fixtureOrTestEvidence(record.sections['Fixture or test change'] || '')) {
+      add('fixture-test-evidence-missing', 'Fixture or test change must name a test path, fixture path, .test.mjs file, or runnable command');
+    }
+    if (!textNamesRunnableCommand(record.sections.Verification || '')) {
       add('verification-command-missing', 'Verification must name at least one runnable command');
     }
   }
@@ -157,7 +185,7 @@ export function validateProject(projectDir = DEFAULT_PROJECT_DIR) {
 }
 
 function challengeTemplate({ date, title, command, guardFiles, productFiles }) {
-  return `# Guard Challenge: ${title}\n\n**Date:** ${date}\n**Status:** proposed\n**Failing command:** ${command}\n**Guard files:** ${guardFiles.join(', ')}\n**Product files:** ${productFiles.join(', ')}\n**Decision:** pending\n\n## Implementer brief\n\n${IMPLEMENTER_BRIEF_TEMPLATE}\n\n## Guard defender brief\n\nPending.\n\n## Arbitrator decision\n\nPending.\n\n## Fixture or test change\n\nPending.\n\n## Verification\n\nPending.\n\n## Follow-up risk\n\nPending.\n`;
+  return `# Guard Challenge: ${title}\n\n**Date:** ${date}\n**Status:** proposed\n**Failing command:** ${command}\n**Guard files:** ${guardFiles.join(', ')}\n**Product files:** ${productFiles.join(', ')}\n**Decision:** pending\n**Implementer:** pending\n**Guard defender:** pending\n**Arbitrator:** pending\n\n## Implementer brief\n\n${IMPLEMENTER_BRIEF_TEMPLATE}\n\n## Guard defender brief\n\nPending.\n\n## Arbitrator decision\n\nPending.\n\n## Fixture or test change\n\nPending.\n\n## Verification\n\nPending.\n\n## Follow-up risk\n\nPending.\n`;
 }
 
 function createChallenge(projectDir) {

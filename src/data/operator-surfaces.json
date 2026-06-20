@@ -107,9 +107,9 @@
         "files": ["scripts/guard-challenge.mjs"],
         "regexes": [
           "^scripts/(?:guard-|audit-).+\\.mjs$",
-          "^scripts/(?:check-smart|guard-challenge|generate-page-refresh-ledger)\\.mjs$",
+          "^scripts/(?:check-.+|guard-challenge|generate-page-refresh-ledger)\\.mjs$",
           "^tests/scripts/(?:guard-|audit-).+\\.test\\.mjs$",
-          "^tests/scripts/(?:check-smart|guard-challenge|page-refresh-ledger)\\.test\\.mjs$"
+          "^tests/scripts/(?:check-.+|guard-challenge|page-refresh-ledger)\\.test\\.mjs$"
         ]
       }
     },

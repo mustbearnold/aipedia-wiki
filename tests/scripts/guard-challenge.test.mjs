@@ -20,6 +20,9 @@ const COMPLETE_ACCEPTED = `# Guard Challenge: stale news fixture
 **Guard files:** scripts/audit-news-rendering.mjs
 **Product files:** src/content/news/2026-06-20-ai-news-desk.md
 **Decision:** update-fixture
+**Implementer:** NewsImplementer
+**Guard defender:** NewsGuardDefender
+**Arbitrator:** NewsArbitrator
 
 ## Implementer brief
 
@@ -35,7 +38,7 @@ Update the fixture only. Keep the minimum story count and OG asset requirements 
 
 ## Fixture or test change
 
-Change the expected latest daily-desk slug from the previous date to 2026-06-20 and add a regression assertion for the minimum story count.
+Update tests/scripts/news-rendering.test.mjs to expect the latest daily-desk slug for 2026-06-20 and assert the minimum story count.
 
 ## Verification
 
@@ -56,6 +59,9 @@ const INCOMPLETE_ACCEPTED = `# Guard Challenge: weak guard
 **Guard files:** scripts/guard-content.mjs
 **Product files:** src/content/tools/example.md
 **Decision:** narrow-guard
+**Implementer:** pending
+**Guard defender:** pending
+**Arbitrator:** pending
 
 ## Implementer brief
 
@@ -98,6 +104,9 @@ test('guard challenge validator rejects accepted records without opposition, fix
   assert.ok(issues.includes('section-pending:Fixture or test change'));
   assert.ok(issues.includes('section-pending:Verification'));
   assert.ok(issues.includes('verification-command-missing'));
+  assert.ok(issues.includes('role-pending:Implementer'));
+  assert.ok(issues.includes('role-pending:Guard defender'));
+  assert.ok(issues.includes('role-pending:Arbitrator'));
 });
 
 test('guard challenge validator rejects accepted records with empty verification command labels', () => {
@@ -113,6 +122,55 @@ test('guard challenge validator rejects accepted records with empty verification
 
     assert.ok(issues.includes('verification-command-missing'));
   }
+});
+
+test('guard challenge validator rejects accepted records with non-command verification labels', () => {
+  const validVerificationText = 'Run: node scripts/audit-news-rendering.mjs\nRun: npm run check:news\nExpected: both commands exit 0.';
+  const nonCommandVerificationTexts = ['Run: manual review', 'Run: TBD', 'Command: none'];
+
+  for (const nonCommandVerificationText of nonCommandVerificationTexts) {
+    const record = parseChallenge(
+      COMPLETE_ACCEPTED.replace(validVerificationText, `${nonCommandVerificationText}\nExpected: verification is not runnable.`),
+      '.agent/guard-challenges/2026-06-20-non-command-verification-challenge.md',
+    );
+    const issues = validateChallenge(record).map((issue) => issue.code);
+
+    assert.ok(issues.includes('verification-command-missing'));
+  }
+});
+
+test('guard challenge validator accepts explicit verification commands in labels and backticks', () => {
+  const validVerificationText = 'Run: node scripts/audit-news-rendering.mjs\nRun: npm run check:news\nExpected: both commands exit 0.';
+  const acceptedWithBacktickCommand = COMPLETE_ACCEPTED.replace(
+    validVerificationText,
+    'Command: `npx playwright test tests/smoke.spec.ts`\nExpected: the smoke test exits 0.',
+  );
+  const record = parseChallenge(acceptedWithBacktickCommand, '.agent/guard-challenges/2026-06-20-backtick-command-challenge.md');
+
+  assert.deepEqual(validateChallenge(record), []);
+});
+
+test('guard challenge validator rejects accepted records without fixture or test evidence', () => {
+  const fixtureEvidenceText = 'Update tests/scripts/news-rendering.test.mjs to expect the latest daily-desk slug for 2026-06-20 and assert the minimum story count.';
+  const placeholderFixtureTexts = ['None', 'N/A', 'No fixture needed'];
+
+  for (const placeholderFixtureText of placeholderFixtureTexts) {
+    const record = parseChallenge(
+      COMPLETE_ACCEPTED.replace(fixtureEvidenceText, placeholderFixtureText),
+      '.agent/guard-challenges/2026-06-20-missing-fixture-evidence-challenge.md',
+    );
+    const issues = validateChallenge(record).map((issue) => issue.code);
+
+    assert.ok(issues.includes('fixture-test-evidence-missing'));
+  }
+});
+
+test('guard challenge validator rejects accepted records with reused role identities', () => {
+  const selfApproved = COMPLETE_ACCEPTED.replace('**Arbitrator:** NewsArbitrator', '**Arbitrator:** NewsImplementer');
+  const record = parseChallenge(selfApproved, '.agent/guard-challenges/2026-06-20-self-approved-challenge.md');
+  const issues = validateChallenge(record).map((issue) => issue.code);
+
+  assert.ok(issues.includes('role-not-distinct'));
 });
 
 test('guard challenge validator rejects accepted records with generated implementer template text', () => {
@@ -179,6 +237,9 @@ test('guard challenge CLI creates a proposed challenge artifact', () => {
     const text = readFileSync(artifact, 'utf8');
     assert.match(text, /\*\*Status:\*\* proposed/);
     assert.match(text, /\*\*Decision:\*\* pending/);
+    assert.match(text, /\*\*Implementer:\*\* pending/);
+    assert.match(text, /\*\*Guard defender:\*\* pending/);
+    assert.match(text, /\*\*Arbitrator:\*\* pending/);
     assert.match(text, /npm run guard:check/);
   } finally {
     rmSync(dir, { recursive: true, force: true });

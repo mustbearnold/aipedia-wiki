@@ -10,7 +10,7 @@ Do not open a challenge for ordinary product-code failures. Fix the code instead
 2. Guard defender: states the invariant the guard protects and whether the failure matches that invariant.
 3. Arbitrator: chooses `fix-code`, `narrow-guard`, `update-fixture`, `retire-guard`, or `human-escalate`.
 
-The implementer cannot self-approve guard weakening.
+The implementer cannot self-approve guard weakening. Proposed records may set `**Implementer:**`, `**Guard defender:**`, and `**Arbitrator:** to `pending`. Accepted records must name non-pending values for all three role fields, and the three values must be distinct.
 
 ## Required artifact
 
@@ -26,7 +26,7 @@ Validate records with:
 npm run guard:challenge:check
 ```
 
-Accepted records must include final content in every section and at least one runnable verification command.
+Accepted records must include final content in every section, real fixture or test evidence, and at least one runnable verification command. Fixture evidence must name a test path, fixture path, `.test.mjs` file, or runnable command. Verification commands must use explicit command prefixes such as `npm run`, `node`, `npx`, or `playwright`, either after `Run:` or `Command:` or inside backticks.
 
 ## Decision meanings
 
