@@ -18,6 +18,8 @@ const REQUIRED_SCRIPTS = [
   'check:quick',
   'check:security',
   'audit:commands',
+  'guard:challenge',
+  'guard:challenge:check',
   'guard:check',
   'prebuild',
   'db:migrate',
@@ -44,6 +46,8 @@ function writeFixtureProject(workflows, scriptOverrides = {}) {
   scripts['ship:check'] = 'npm run check:quick && npm run check && npm run build:fast';
   scripts['guard:check'] =
     'node scripts/guard-content.mjs && node scripts/guard-stale-facts.mjs && node scripts/guard-em-dashes.mjs && node scripts/audit-guide-picks.mjs && node scripts/audit-tool-logos.mjs && node scripts/audit-news-rendering.mjs && node scripts/audit-hosting-runtime.mjs && node scripts/generate-page-refresh-ledger.mjs --check && node scripts/audit-font-policy.mjs --source';
+  scripts['guard:challenge'] = 'node scripts/guard-challenge.mjs';
+  scripts['guard:challenge:check'] = 'node scripts/guard-challenge.mjs --check';
   scripts.check = 'npm run guard:check && npm run check:links && npm run check:news && npm run check:security';
   scripts['build:fast'] = 'npm run guard:check && npm exec --yes --package=node@24 -- node scripts/build-fast.mjs';
   scripts.deploy = 'npx vercel build --prod && npx vercel deploy --prebuilt --prod';
@@ -174,6 +178,8 @@ test('command surface audit verifies documented npm scripts and script paths', (
   assert.ok(report.required_operator_npm_scripts.includes('ship:check'));
   assert.ok(report.required_operator_npm_scripts.includes('db:migrate'));
   assert.ok(report.required_operator_npm_scripts.includes('vercel:env:pull'));
+  assert.ok(report.required_operator_npm_scripts.includes('guard:challenge'));
+  assert.ok(report.required_operator_npm_scripts.includes('guard:challenge:check'));
   assert.deepEqual(report.required_documented_npm_scripts, ['check:quick', 'check', 'build', 'deploy', 'editorial:weekly', 'ledger:pages']);
   assert.deepEqual(report.required_readme_npm_run_order, ['check:quick', 'check', 'editorial:weekly', 'ledger:pages', 'build', 'deploy']);
   assert.deepEqual(
@@ -215,6 +221,8 @@ test('command surface audit verifies documented npm scripts and script paths', (
   });
   assert.deepEqual(report.required_exact_npm_script_commands, {
     deploy: 'npx vercel build --prod && npx vercel deploy --prebuilt --prod',
+    'guard:challenge': 'node scripts/guard-challenge.mjs',
+    'guard:challenge:check': 'node scripts/guard-challenge.mjs --check',
     'vercel:env:pull': 'npx vercel env pull .env.local --yes',
   });
   assert.deepEqual(
