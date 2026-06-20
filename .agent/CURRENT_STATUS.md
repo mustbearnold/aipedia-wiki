@@ -23,6 +23,12 @@ At the time this status was last checked, `master` was clean and synced with `or
 
 ## Done Recently
 
+- Build-time diagnosis is complete.
+  - `npm run build:fast` passed in 191.31 seconds after regenerating the page refresh ledger.
+  - `npm run build` passed in 214.37 seconds.
+  - Main cost is site scale: 1,135 content files, about 1,180 built HTML pages, Astro/Vercel static prerender around 2 minutes, and Pagefind around 44 seconds.
+  - `PAGE_REFRESH_LEDGER.md` was normalized with `npm run ledger:pages` because the ledger check was stale.
+  - Best next product move from the review: run a focused comparison decision sprint, starting with `canva-vs-claude`.
 - June 2026 standards remediation is complete.
   - Final commit: `3355ce1d fix: remediate June standards review`
   - Spec: `docs/superpowers/specs/2026-06-20-june-standards-remediation-and-rereview.md`
@@ -60,6 +66,10 @@ At the time this status was last checked, `master` was clean and synced with `or
 
 ## Verification Baseline
 
+- The 2026-06-21 build-time diagnosis passed:
+  - `npm run ledger:pages:check`
+  - `npm run build:fast`
+  - `npm run build`
 - The June remediation final gate passed `npm run check:ci` twice on 2026-06-20.
 - Focused closeout checks also passed:
   - `npm run ledger:pages:check`
@@ -74,8 +84,10 @@ At the time this status was last checked, `master` was clean and synced with `or
 
 ## Known Caveats
 
+- Full local builds currently take about 3.5 minutes on this machine. That is understandable for the current static site size, but too slow for normal edit loops. Prefer `npm run check:smart`, `npm run check:quick`, focused tests, and `npm run build:fast` unless a full pre-ship build is needed.
+- Large generated surfaces deserve future optimization: `/search/`, archive pages, `api/home-search.json`, public OG assets, and Pagefind output near the 10 MB budget.
 - `npm run check:ci` passed, but GitHub stats used stale cached fallback data because the GitHub API returned a 403 rate-limit response.
-- Existing Astro markdown plugin deprecation warnings remain.
+- Existing Astro markdown plugin deprecation warnings remain for `markdown.remarkPlugins`, `markdown.rehypePlugins`, and `markdown.remarkRehype`.
 - `npm run typecheck` covers active Astro/server surfaces. Legacy global search client scripts and archived `.legacy.astro` files are documented baseline exclusions in `tsconfig.typecheck.json` and `scripts/README.md`.
 - Some local-only historical plans and specs preserve their original task checklists. When they disagree with this file, this file and `.agent/PLANS.md` are the current committed orientation sources.
 - Global `vercel@54.14.2` install emits upstream dependency deprecation warnings for `stream-to-promise@2.2.0` and `tar@7.5.7` through Vercel CLI's own dependency graph. This is not an AiPedia repo dependency issue; update Vercel CLI when upstream bumps those transitive packages.

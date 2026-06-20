@@ -11,8 +11,40 @@ For the plain-English project state, read `.agent/CURRENT_STATUS.md` first. For 
 - The June 2026 standards remediation, Guard Challenge Workflow, Project Folder Tidy, Verification Router, and June 17 news catch-up are complete.
 - Continuity recording is now centralized in `.agent/CURRENT_STATUS.md`, `.agent/PLANS.md`, and `.agent/WORK_LOG.md`.
 - Vercel CLI is installed globally as `vercel@54.14.2`; upstream dependency warnings are tracked in `.agent/WORK_LOG.md`.
+- Current build timing baseline from 2026-06-21: `npm run build:fast` passed in 191.31 seconds and `npm run build` passed in 214.37 seconds. Main drivers are static route fan-out, Pagefind, and large generated/search surfaces.
+- Best next product move from the 2026-06-21 review is a focused comparison decision sprint starting with `canva-vs-claude`.
 - The main active ongoing lane is the oldest-first AI tools wiki refresh.
 - The Phase 3 parallel surface and June 18-20 news backfill plan is written but not executed on `master`.
+
+## Recommended Next: Canva Vs Claude Comparison Sprint
+
+### Objective
+
+Create a high-intent, source-backed comparison page for `canva-vs-claude` while refreshing the affected Canva and Claude facts, parent hubs, and ledger rows.
+
+### Why This Is Next
+
+- The coverage backlog ranks `canva-vs-claude` as the top missing comparison.
+- Canva and Claude are both high-interest buyer-decision tools.
+- The work improves SEO, trust, mobile decision usefulness, and the comparison template baseline in one focused slice.
+
+### First Slice
+
+- Verify current June 2026 Canva and Claude pricing, plan, feature, model, and source facts.
+- Refresh `src/content/tools/canva.md` and `src/content/tools/claude.md` only where current sources justify changes.
+- Create `src/content/comparisons/canva-vs-claude.md`.
+- Inspect and update affected parent surfaces, especially `/compare/`, `/tools/`, AI design category pages, sitemap/LLM surfaces, and `PAGE_REFRESH_LEDGER.md`.
+
+### Verification
+
+- `npm run ledger:pages`
+- `npm run ledger:pages:check`
+- `npm run audit:coverage-quality:changed`
+- `npm run audit:tool-quality`
+- `npm run audit:facts`
+- `npm run audit:provenance:changed`
+- `npm run check:smart:run -- --path <changed paths>`
+- `npm run build:fast` if rendered output or pre-ship confidence requires it.
 
 ## Active: Oldest-First AI Tools Wiki Refresh
 
