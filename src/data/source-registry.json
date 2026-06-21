@@ -3746,7 +3746,16 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-20"
+    },
+    {
+      "id": "deepseek-v4-release-note",
+      "label": "DeepSeek V4 release note",
+      "url": "https://api-docs.deepseek.com/news/news260424",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-20"
     },
     {
       "id": "deepseek-chat",

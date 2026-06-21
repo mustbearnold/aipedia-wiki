@@ -247,6 +247,7 @@ The key June 20 correction: the old `replit.com/agent3` URL still routes to Repl
 
 ## Recent developments
 
+- **2026-06-20:** [DeepSeek vs Replit Agent](/compare/deepseek-vs-replit-agent/) now separates Replit as the browser-native app-builder workflow from DeepSeek as a low-cost model/API backend. Replit wins when the buyer wants prompt, plan, build, preview, database/auth, App Testing, Skills, and publishing in one workspace; DeepSeek wins when engineers are building their own agent, router, eval harness, or low-cost model route.
 - **2026-06-20:** [Claude vs Replit Agent](/compare/claude-vs-replit-agent/) now separates the buyer choice: Claude is stronger for reasoning, repo investigation, code review, and Claude Code work, while Replit Agent is stronger for browser-native app building, prototypes, internal tools, and non-developer workflows.
 - **2026-06-20:** Replit pricing still shows Starter free, Core at $20/month billed annually with $25 monthly credits, Pro at $95/month billed annually with $100 monthly credits, and Enterprise custom. The June 20 recheck keeps two important billing details: Replit AI billing docs say Pro credits roll over for one month, and the feature table shows Starter lacks full build, Plan Mode, connectors, task planning, and Turbo.
 - **2026-06-20:** Replit's current Agent docs keep Lite, Economy, and Power as the main mode selector; High effort can be turned on in Economy/Power; Turbo is Pro/Enterprise-only in Power and can cost up to 6x Power. App Testing is useful, but currently scoped to web applications only and is effort-billed.
@@ -398,4 +399,4 @@ Replit's February 24, 2026 Pro announcement says Teams was sunset and Teams user
 
 - **Category:** [AI Coding](/categories/ai-coding/)
 - **Guides:** [Best AI Tools for Developers](/guides/best-ai-tools-for-developers/), [Best Cursor Alternatives](/guides/cursor-alternatives/)
-- **Comparisons:** [Claude vs Replit Agent](/compare/claude-vs-replit-agent/), [Cursor vs Replit Agent](/compare/cursor-vs-replit-agent/), [GitHub Copilot vs Replit Agent](/compare/github-copilot-vs-replit-agent/)
+- **Comparisons:** [DeepSeek vs Replit Agent](/compare/deepseek-vs-replit-agent/), [Claude vs Replit Agent](/compare/claude-vs-replit-agent/), [Cursor vs Replit Agent](/compare/cursor-vs-replit-agent/), [GitHub Copilot vs Replit Agent](/compare/github-copilot-vs-replit-agent/)

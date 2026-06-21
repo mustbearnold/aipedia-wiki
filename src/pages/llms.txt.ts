@@ -3,6 +3,12 @@
 // Copilot) at the canonical index + category hubs + editorial policy.
 //
 // See also /llms-full.txt for the verbose variant with every page listed.
+// Refresh metadata: 2026-06-20 DeepSeek vs Replit Agent comparison loop after
+// current DeepSeek API pricing, changelog, Hugging Face, Replit pricing,
+// AI billing, Starter/Core/Pro plan docs, Agent modes, App Testing, Skills,
+// and security checks; added comparison, refreshed DeepSeek, Replit Agent,
+// AI Coding, source registry, ledger, and LLM maintenance around
+// model-backend-vs-browser-app-builder buyer fit.
 // Refresh metadata: 2026-06-20 DeepSeek vs GitHub Copilot comparison loop after
 // current DeepSeek API pricing, V4 release, changelog, Hugging Face, GitHub
 // Copilot plans, AI Credits, app GA, signup reopening, Fable 5 suspension, and
@@ -439,6 +445,7 @@ export const GET: APIRoute = async () => {
   lines.push('');
   lines.push(`> Independent AI tools encyclopedia maintained by aipedia.wiki Editorial. ${activeTools.length} active tool pages across ${activeCategories.length} categories, ${comparisons.length} head-to-head comparisons, ${useCases.length} buyer guides. Public pages carry verification metadata and editorial sourcing controls.`);
   lines.push('');
+  lines.push('Recent comparison refresh: June 20, 2026 added DeepSeek vs Replit Agent and refreshed DeepSeek, Replit Agent, AI Coding, source registry, ledger, and LLM maintenance after current DeepSeek API pricing, changelog, Hugging Face, Replit pricing, AI billing, Starter/Core/Pro plan docs, Agent modes, App Testing, Skills, and security checks; buyer guidance now separates DeepSeek as a low-cost model/API backend from Replit Agent as the browser-native app-builder workflow.');
   lines.push('Recent comparison refresh: June 20, 2026 added Cursor vs Grok and refreshed Cursor, Grok, AI Coding, source registry, ledger, and LLM maintenance after current Cursor pricing, Teams pricing, changelog, xAI pricing, model docs, Grok Build, Grok Build enterprise, Responses API, and product checks; buyer guidance now separates Cursor as the daily AI-native IDE and agent workbench from Grok as an xAI-native coding-agent/API lane to benchmark.');
   lines.push('Recent comparison refresh: June 20, 2026 added DeepSeek vs GitHub Copilot and refreshed DeepSeek, GitHub Copilot, AI Coding, source registry, ledger, and LLM maintenance after current DeepSeek API pricing, V4 release, changelog, Hugging Face, GitHub Copilot plans, AI Credits, app GA, signup reopening, Fable 5 suspension, and usage-metrics checks; buyer guidance now separates DeepSeek as a low-cost model/backend lane from Copilot as the GitHub-native coding platform.');
   lines.push('Recent comparison refresh: June 20, 2026 added Cursor vs DeepSeek and refreshed Cursor, DeepSeek, AI Coding, source registry, ledger, and LLM maintenance after current Cursor pricing, Teams pricing, changelog, Data Use, Enterprise, CLI, Composer 2.5, DeepSeek API pricing, V4 release, and Hugging Face checks; buyer guidance now separates Cursor as the AI-native IDE and agent workbench from DeepSeek as a low-cost coding-model/API backend.');
