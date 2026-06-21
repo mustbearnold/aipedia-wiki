@@ -95,6 +95,8 @@ src/pages/prototypes/
 # If a local doc becomes canonical product or engineering documentation, move it out of this block intentionally.
 AGENTS.md
 CLAUDE.md
+.agents/
+skills-lock.json
 CU-AUDIT-REPORT.md
 REVIEWS-SETUP.md
 SETUP-D1-AND-FINDER.md

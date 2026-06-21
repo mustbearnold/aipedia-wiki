@@ -39,7 +39,7 @@ Stale or unknown built-output freshness is an `attention` signal. A rendered-out
 
 Use `npm run loop:all:record -- --json` after meaningful broad reviews. It writes a timestamped JSON receipt and `.agent/loop-runs/system/latest.json`, including deltas from the previous recorded run. Do not use it for every casual check.
 
-Loop verification should stay focused on AiPedia work. `check-smart` ignores untracked local-only `.agents/` and `skills-lock.json` artifacts during default dirty-path discovery, but it still counts `.agent/` continuity docs and any explicitly passed paths.
+Loop verification should stay focused on AiPedia work. `.agents/` and `skills-lock.json` are gitignored local tooling artifacts. `check-smart` also ignores them during default dirty-path discovery, but it still counts `.agent/` continuity docs and any explicitly passed paths.
 
 ## Loops
 

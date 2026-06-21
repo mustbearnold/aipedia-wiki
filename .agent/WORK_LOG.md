@@ -30,6 +30,16 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 
 ## Entries
 
+### 2026-06-21: Gitignored Local Agent Artifacts
+
+- Status: Complete.
+- Commit: this commit.
+- Branch: `master`.
+- Changed: Added `.agents/` and `skills-lock.json` to `.gitignore`, preserving `.agent/` as the canonical project memory folder; updated active continuity docs so future sessions understand the local-tooling distinction.
+- Verification: `git status --short --branch`; `node scripts/check-smart.mjs --json`; `git diff --check`; `node scripts/guard-em-dashes.mjs`; `npm run check:smart:run`.
+- Residual risks: None known. Local agent/plugin files stay available on this machine but no longer clutter raw git status.
+- Next: Continue loop-system review only if a new noisy or ambiguous signal appears; otherwise move to the top real work queue.
+
 ### 2026-06-21: Explicit Loop Review Summary Counts
 
 - Status: Complete.
