@@ -30,6 +30,16 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 
 ## Entries
 
+### 2026-06-21: False-Vs Comparison Policy Cleanup
+
+- Status: Complete.
+- Commit: this commit.
+- Branch: `master`.
+- Changed: Deleted five definite false-vs comparison pages, removed their visible internal links, added `src/data/comparison-policy.json`, changed coverage and loop tooling so only same-primary-category pairs or explicit adjacent workflow exceptions are auto-selected, regenerated `src/data/coverage-backlog.json`, updated active loop docs, and moved Astro markdown plugins to `processor: unified(...)` so the build no longer emits the old markdown plugin deprecation warning. `npm run loop:next -- --json` now selects `mistral-ai-vs-poe`.
+- Verification: `node --test tests/scripts/loop-hardening.test.mjs tests/scripts/check-smart.test.mjs tests/scripts/audit-coverage-gaps.test.mjs tests/scripts/decision-loop.test.mjs`; `npm run coverage:backlog`; `node scripts/decision-loop.mjs --json`; `$env:AIPEDIA_LEDGER_DATE='2026-06-21'; npm run build:fast`; `$env:AIPEDIA_LEDGER_DATE='2026-06-21'; npm run check:smart:run`.
+- Residual risks: Borderline historical cross-category comparison pages still exist where the buyer job may or may not be valid. They are no longer auto-selected by the loop unless explicitly allowed.
+- Next: Run `mistral-ai-vs-poe` as the next Decision Content Flywheel cluster.
+
 ### 2026-06-21: Operator Surface Route QA Contract
 
 - Status: Complete.

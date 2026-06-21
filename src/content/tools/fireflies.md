@@ -206,4 +206,4 @@ No. Fred is a visible participant during live capture. Teams forbidden from havi
 ## Related
 
 - **Category:** [AI Notes](/categories/ai-notes/)
-- **Comparisons:** [Capacities vs Fireflies](/compare/capacities-vs-fireflies/) · [ChatGPT vs Fireflies](/compare/chatgpt-vs-fireflies/) · [Fireflies vs NotebookLM](/compare/fireflies-vs-notebooklm/) · [Fireflies vs Obsidian](/compare/fireflies-vs-obsidian/) · [Fireflies vs Otter.ai](/compare/fireflies-vs-otter-ai/) · [Fireflies vs Readwise](/compare/fireflies-vs-readwise/)
+- **Comparisons:** [Capacities vs Fireflies](/compare/capacities-vs-fireflies/) · [Fireflies vs NotebookLM](/compare/fireflies-vs-notebooklm/) · [Fireflies vs Obsidian](/compare/fireflies-vs-obsidian/) · [Fireflies vs Otter.ai](/compare/fireflies-vs-otter-ai/) · [Fireflies vs Readwise](/compare/fireflies-vs-readwise/)

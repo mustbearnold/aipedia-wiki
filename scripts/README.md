@@ -24,7 +24,7 @@ Scripts are operator tools for keeping AiPedia current, source-backed, buildable
 
 - `guard-*.mjs`: fail-fast editorial and policy guards.
 - `audit-*.mjs`: source, SEO, conversion, data, command, freshness, and quality checks.
-- `decision-loop.mjs`: chooses the next cluster and prints the source, working-set, related-surface discovery, mobile and desktop route QA, verification, and recording brief.
+- `decision-loop.mjs`: chooses the next same-buyer-job cluster and prints the source, working-set, related-surface discovery, mobile and desktop route QA, verification, and recording brief. It skips blocked or review-only false-vs candidates from `src/data/comparison-policy.json`.
 - `loop-verify.mjs`: executes the loop verification plan with one explicit ledger date so timezone differences do not break ledger, guard, or build checks. It delegates overlapping checks to `check-smart:run`, records per-command durations, and only adds fallback `build:fast` for route QA or `--force-build`.
 - `loop-record.mjs`: creates `.agent/loop-runs/YYYY-MM-DD-slug.md` receipts for completed or attempted cycles.
 - `qa-route.mjs`: serves the built output and verifies a local route across 360, 390, 430, 768, 1024, and 1366 px unless custom widths are supplied.

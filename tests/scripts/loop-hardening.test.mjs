@@ -20,9 +20,9 @@ test('loop verify dry-run pins the ledger date across its command plan', () => {
     '--date',
     '2026-06-20',
     '--route',
-    '/compare/foo-vs-bar/',
+    '/compare/cursor-vs-deepseek/',
     '--path',
-    'src/content/comparisons/foo-vs-bar.md',
+    'src/content/comparisons/cursor-vs-deepseek.md',
   ]);
 
   assert.equal(result.status, 0, `${result.stdout}\n${result.stderr}`);
@@ -30,11 +30,11 @@ test('loop verify dry-run pins the ledger date across its command plan', () => {
   assert.equal(report.ok, true);
   assert.equal(report.dry_run, true);
   assert.equal(report.date, '2026-06-20');
-  assert.equal(report.route, '/compare/foo-vs-bar/');
+  assert.equal(report.route, '/compare/cursor-vs-deepseek/');
   assert.equal(report.smart_runs_route_qa, true);
   assert.ok(report.commands.some((command) => /generate-page-refresh-ledger\.mjs --date 2026-06-20/.test(command)));
   assert.ok(report.commands.some((command) => /generate-page-refresh-ledger\.mjs --check --date 2026-06-20/.test(command)));
-  assert.ok(report.commands.some((command) => /check-smart\.mjs --run --path src\/content\/comparisons\/foo-vs-bar\.md/.test(command)));
+  assert.ok(report.commands.some((command) => /check-smart\.mjs --run --path src\/content\/comparisons\/cursor-vs-deepseek\.md/.test(command)));
 });
 
 test('loop verify does not add a fallback build when no route or force-build is requested', () => {
@@ -61,11 +61,11 @@ test('loop verify recognizes combined smart route QA commands', () => {
     '--date',
     '2026-06-20',
     '--route',
-    '/compare/foo-vs-bar/',
+    '/compare/cursor-vs-deepseek/',
     '--path',
     'src/content/categories/ai-coding.md',
     '--path',
-    'src/content/comparisons/foo-vs-bar.md',
+    'src/content/comparisons/cursor-vs-deepseek.md',
     '--path',
     'src/content/tools/foo.md',
   ]);

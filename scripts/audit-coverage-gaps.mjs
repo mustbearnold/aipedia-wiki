@@ -22,6 +22,7 @@ const COMPARE_DIRS = [
 const ANSWERS_DIR = join(PROJECT_DIR, 'src', 'pages', 'answers');
 const CATEGORIES_DIR = join(PROJECT_DIR, 'src', 'content', 'categories');
 const PRIORITY_PATH = join(PROJECT_DIR, 'src', 'data', 'tool-priority.json');
+const COMPARISON_POLICY_PATH = join(PROJECT_DIR, 'src', 'data', 'comparison-policy.json');
 
 const JSON_MODE = args.includes('--json');
 const OUT_PATH = valueFor('--out');
@@ -125,18 +126,31 @@ const priority = existsSync(PRIORITY_PATH)
   : { tier1: [], tier2: [], tier3: [] };
 const tier1 = new Set(priority.tier1 || []);
 const tier2 = new Set(priority.tier2 || []);
+const comparisonPolicy = existsSync(COMPARISON_POLICY_PATH)
+  ? JSON.parse(readFileSync(COMPARISON_POLICY_PATH, 'utf8'))
+  : { allowed_adjacent_pairs: [], blocked_pairs: [] };
+const allowedAdjacentPairs = new Map(
+  (comparisonPolicy.allowed_adjacent_pairs || []).map((entry) => [pairKey(entry.tools[0], entry.tools[1]), entry]),
+);
+const blockedPairs = new Map(
+  (comparisonPolicy.blocked_pairs || []).map((entry) => [pairKey(entry.tools[0], entry.tools[1]), entry]),
+);
 
 const DEAD_STATUS = new Set(['dead', 'acquired', 'discontinued']);
 
 const tools = markdownFiles(TOOLS_DIR).map((path) => {
   const fm = readFrontmatter(path);
   const slug = scalar(fm, 'slug') || slugFromPath(path);
-  const cats = [scalar(fm, 'category'), ...inlineArray(fm, 'secondary_categories')].filter(Boolean);
+  const primaryCategory = scalar(fm, 'category');
+  const secondaryCategories = inlineArray(fm, 'secondary_categories');
+  const cats = [primaryCategory, ...secondaryCategories].filter(Boolean);
   const hasScores = /^scores:\s*$/m.test(fm);
   return {
     slug,
     title: scalar(fm, 'title') || slug,
     status: scalar(fm, 'status').toLowerCase(),
+    primary_category: primaryCategory,
+    secondary_categories: secondaryCategories,
     categories: [...new Set(cats)],
     hasScores,
   };
@@ -190,30 +204,95 @@ const existingAnswers = new Set(
 /* ------------------------------------------------------------------ */
 
 const notable = activeTools.map((t) => t.slug).filter(isNotable);
-const candidatePairs = new Map(); // pairKey -> {a, b, sharedCategories}
+const candidatePairs = new Map(); // pairKey -> {a, b, sharedCategories, policy}
+const reviewOnlyPairs = new Map(); // pairKey -> {a, b, sharedCategories, policy}
 
 function addPair(a, b) {
+  addPairFromSource(a, b);
+}
+
+function addPairFromSource(a, b, context = {}) {
   if (a === b) return;
   const key = pairKey(a, b);
   if (existingPairs.has(key)) return;
+  const policy = classifyComparison(a, b);
+  const target = policy.selectable ? candidatePairs : reviewOnlyPairs;
+  if (candidatePairs.has(key) && !policy.selectable) return;
+  if (policy.selectable) reviewOnlyPairs.delete(key);
   if (!candidatePairs.has(key)) {
     const [x, y] = key.split('|');
-    candidatePairs.set(key, { a: x, b: y, sharedCategories: [] });
+    target.set(key, { a: x, b: y, sharedCategories: [], policy });
+  }
+  const entry = target.get(key);
+  if (context.category && entry && !entry.sharedCategories.includes(context.category)) {
+    entry.sharedCategories.push(context.category);
   }
 }
 
-// 1) Every tier1 x tier1 pairing is high-search-volume regardless of category.
+function classifyComparison(a, b) {
+  const key = pairKey(a, b);
+  const blocked = blockedPairs.get(key);
+  if (blocked) {
+    return {
+      selectable: false,
+      mode: 'blocked',
+      reason: blocked.reason || 'blocked by comparison policy',
+    };
+  }
+
+  const allowed = allowedAdjacentPairs.get(key);
+  if (allowed) {
+    return {
+      selectable: true,
+      mode: 'allowed_adjacent',
+      workflow: allowed.workflow || '',
+      reason: allowed.reason || 'allowed adjacent buyer workflow',
+      requires_asymmetric_framing: true,
+    };
+  }
+
+  const first = toolBySlug.get(a);
+  const second = toolBySlug.get(b);
+  if (first?.primary_category && first.primary_category === second?.primary_category) {
+    return {
+      selectable: true,
+      mode: 'direct',
+      workflow: first.primary_category,
+      reason: 'same primary category',
+      requires_asymmetric_framing: false,
+    };
+  }
+
+  const shared = sharedCategoriesFor(a, b);
+  return {
+    selectable: false,
+    mode: 'review_only',
+    reason: shared.length
+      ? 'category overlap is not primary for both tools'
+      : 'different primary categories and no explicit same-workflow allowance',
+  };
+}
+
+function sharedCategoriesFor(a, b) {
+  const first = toolBySlug.get(a)?.categories || [];
+  const second = toolBySlug.get(b)?.categories || [];
+  return first.filter((category) => second.includes(category));
+}
+
+// 1) Tier-one cross-category pairings are review-only unless they are direct
+// substitutes or explicitly allowed by comparison policy.
 const tier1List = [...tier1].filter((slug) => toolBySlug.has(slug));
 for (let i = 0; i < tier1List.length; i += 1) {
   for (let j = i + 1; j < tier1List.length; j += 1) {
-    addPair(tier1List[i], tier1List[j]);
+    addPairFromSource(tier1List[i], tier1List[j], { source: 'tier1' });
   }
 }
 
-// 2) Within-category notable pairings (same buyer is choosing between them).
+// 2) Within-primary-category notable pairings (same buyer job by default).
 const byCategory = new Map();
 for (const slug of notable) {
-  for (const cat of toolBySlug.get(slug).categories) {
+  const cat = toolBySlug.get(slug).primary_category;
+  if (cat) {
     if (!byCategory.has(cat)) byCategory.set(cat, []);
     byCategory.get(cat).push(slug);
   }
@@ -221,28 +300,61 @@ for (const slug of notable) {
 for (const [cat, slugs] of byCategory) {
   for (let i = 0; i < slugs.length; i += 1) {
     for (let j = i + 1; j < slugs.length; j += 1) {
-      addPair(slugs[i], slugs[j]);
+      addPairFromSource(slugs[i], slugs[j], { category: cat, source: 'primary-category' });
       const entry = candidatePairs.get(pairKey(slugs[i], slugs[j]));
       if (entry && !entry.sharedCategories.includes(cat)) entry.sharedCategories.push(cat);
     }
   }
 }
 
+// 3) Explicitly allowed adjacent workflow pairs.
+for (const key of allowedAdjacentPairs.keys()) {
+  const [a, b] = key.split('|');
+  if (toolBySlug.has(a) && toolBySlug.has(b) && isNotable(a) && isNotable(b)) {
+    addPairFromSource(a, b, { source: 'allowed-adjacent' });
+  }
+}
+
 const comparisonGaps = [...candidatePairs.values()]
-  .map(({ a, b, sharedCategories }) => {
+  .map(({ a, b, sharedCategories, policy }) => {
     const bothTier1 = tier1.has(a) && tier1.has(b);
-    const sameCategory = sharedCategories.length > 0;
-    const score = priorityWeight(a) + priorityWeight(b) + (bothTier1 ? 2 : 0) + (sameCategory ? 2 : 0);
+    const direct = policy.mode === 'direct';
+    const allowedAdjacent = policy.mode === 'allowed_adjacent';
+    const score = priorityWeight(a) + priorityWeight(b) + (bothTier1 ? 2 : 0) + (direct ? 2 : 0) + (allowedAdjacent ? 1 : 0);
     return {
       kind: 'comparison',
       slug: comparisonSlug(a, b),
       tools: [a, b],
       shared_categories: sharedCategories,
+      primary_categories: [toolBySlug.get(a)?.primary_category || '', toolBySlug.get(b)?.primary_category || ''],
       both_tier1: bothTier1,
-      same_category: sameCategory,
+      same_category: direct,
+      comparison_mode: policy.mode,
+      selectable: true,
+      requires_asymmetric_framing: Boolean(policy.requires_asymmetric_framing),
+      workflow_family: policy.workflow || '',
+      policy_reason: policy.reason,
       score,
     };
   })
+  .sort((x, y) => y.score - x.score || x.slug.localeCompare(y.slug));
+
+const reviewOnlyComparisonGaps = [...reviewOnlyPairs.values()]
+  .filter(({ a, b }) => !candidatePairs.has(pairKey(a, b)))
+  .map(({ a, b, sharedCategories, policy }) => ({
+    kind: 'comparison',
+    slug: comparisonSlug(a, b),
+    tools: [a, b],
+    shared_categories: sharedCategories.length ? sharedCategories : sharedCategoriesFor(a, b),
+    primary_categories: [toolBySlug.get(a)?.primary_category || '', toolBySlug.get(b)?.primary_category || ''],
+    both_tier1: tier1.has(a) && tier1.has(b),
+    same_category: false,
+    comparison_mode: policy.mode,
+    selectable: false,
+    requires_human_review: true,
+    policy_reason: policy.reason,
+    score: priorityWeight(a) + priorityWeight(b),
+  }))
   .sort((x, y) => y.score - x.score || x.slug.localeCompare(y.slug));
 
 /* ------------------------------------------------------------------ */
@@ -301,10 +413,12 @@ const report = {
     comparisons_existing: existingComparisonSlugs.size,
     answers_existing: existingAnswers.size,
     comparison_gaps: comparisonGaps.length,
+    review_only_comparison_gaps: reviewOnlyComparisonGaps.length,
     answer_gaps: answerGaps.length,
   },
   backlog: {
     comparisons: comparisonGaps.slice(0, LIMIT),
+    review_only_comparisons: reviewOnlyComparisonGaps.slice(0, LIMIT),
     answers: answerGaps.slice(0, LIMIT),
   },
 };
@@ -325,7 +439,11 @@ if (JSON_MODE) {
   console.log('');
   console.log(`Top ${Math.min(15, comparisonGaps.length)} comparison gaps:`);
   for (const gap of comparisonGaps.slice(0, 15)) {
-    const tags = [gap.both_tier1 ? 'tier1' : null, gap.same_category ? gap.shared_categories[0] : 'cross-cat']
+    const tags = [
+      gap.both_tier1 ? 'tier1' : null,
+      gap.comparison_mode === 'direct' ? gap.shared_categories[0] : null,
+      gap.comparison_mode === 'allowed_adjacent' ? `allowed:${gap.workflow_family}` : null,
+    ]
       .filter(Boolean)
       .join(', ');
     console.log(`  [${gap.score}] ${gap.slug}  (${tags})`);

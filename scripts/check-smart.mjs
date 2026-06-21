@@ -192,26 +192,31 @@ function routeQaRoutesForPaths(paths) {
   const routes = [];
   const exactPathRoutes = OPERATOR_SURFACE_CONTRACT.verification.routeQa?.exactPathRoutes || [];
   for (const path of paths.map(normalizePath)) {
+    const pathExists = existsSync(resolve(PROJECT_DIR, path));
     const exactRoute = exactPathRoutes.find((route) => normalizePath(route.path || '') === path);
     if (exactRoute) {
+      if (!pathExists) continue;
       routes.push({ route: exactRoute.route, command: 'npm run qa:route', focus: exactRoute.focus });
       continue;
     }
 
     let match = path.match(/^src\/content\/comparisons\/([^/]+)\.md$/);
     if (match) {
+      if (!pathExists) continue;
       routes.push({ route: `/compare/${match[1]}/`, command: 'npm run qa:route', focus: 'changed comparison route' });
       continue;
     }
 
     match = path.match(/^src\/content\/tools\/([^/]+)\.md$/);
     if (match) {
+      if (!pathExists) continue;
       routes.push({ route: `/tools/${match[1]}/`, command: 'npm run qa:route', focus: 'changed tool route' });
       continue;
     }
 
     match = path.match(/^src\/content\/categories\/([^/]+)\.md$/);
     if (match) {
+      if (!pathExists) continue;
       routes.push({ route: `/categories/${match[1]}/`, command: 'npm run qa:route', focus: 'changed category route' });
     }
   }

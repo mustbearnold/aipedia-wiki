@@ -319,6 +319,18 @@ test('check-smart executes one route QA command for every changed content route'
   assert.ok(!plan.commands.includes('npm run smoke:visual'));
 });
 
+test('check-smart does not route-QA deleted content pages as live routes', () => {
+  const plan = planForPaths([
+    'src/content/comparisons/__deleted_false_vs__.md',
+    'src/pages/compare/index.astro',
+    'PAGE_REFRESH_LEDGER.md',
+  ]);
+
+  assert.ok(!plan.smoke_routes.some((route) => route.route === '/compare/__deleted_false_vs__/'));
+  assert.ok(!plan.commands.some((command) => command.includes('/compare/__deleted_false_vs__/')));
+  assert.ok(plan.commands.some((command) => command.includes('--route /compare/')));
+});
+
 
 test('operator surface contract names verification surfaces explicitly', () => {
   const surfaceIds = operatorSurfaces.surfaces.map((surface) => surface.id);

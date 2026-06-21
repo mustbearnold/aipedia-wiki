@@ -3,6 +3,10 @@
 // comparisons, guides, answers, news, trends, workflows, reports, companies,
 // and dead-tool records. Intended for crawlers willing to ingest a larger
 // manifest without parsing the sitemap.
+// Refresh metadata: 2026-06-21 comparison-policy cleanup after deleting
+// ChatGPT vs Fireflies, ChatGPT vs Hermes Agent, ChatGPT vs Otter.ai,
+// ChatGPT vs You.com, and ElevenLabs vs Otter.ai; the loop now skips
+// secondary-overlap and cross-workflow pairs unless explicitly allowlisted.
 // Refresh metadata: 2026-06-20 DeepSeek vs Replit Agent comparison loop after
 // current DeepSeek API pricing, changelog, Hugging Face, Replit pricing,
 // AI billing, Starter/Core/Pro plan docs, Agent modes, App Testing, Skills,
@@ -473,6 +477,7 @@ export const GET: APIRoute = async () => {
   lines.push('');
   lines.push('> Extended LLM-friendly site manifest. Enumerates the major active editorial collections across tools, categories, comparisons, buyer guides, answers, news, trends, workflows, reports, companies, and dead-tool records. It does not claim to list every utility, API, prototype, or static policy page. See /llms.txt for the concise version.');
   lines.push('');
+  lines.push('Recent comparison maintenance: June 21, 2026 removed five false-vs comparison pages, ChatGPT vs Fireflies, ChatGPT vs Hermes Agent, ChatGPT vs Otter.ai, ChatGPT vs You.com, and ElevenLabs vs Otter.ai, because they compared different buyer jobs rather than direct substitutes. The Decision Content Flywheel now auto-selects only same-primary-category comparisons or explicit adjacent workflow exceptions in comparison-policy.json.');
   lines.push('Recent comparison refresh: June 20, 2026 added DeepSeek vs Replit Agent and refreshed DeepSeek, Replit Agent, AI Coding, source registry, ledger, and LLM maintenance after current DeepSeek API pricing, changelog, Hugging Face, Replit pricing, AI billing, Starter/Core/Pro plan docs, Agent modes, App Testing, Skills, and security checks; buyer guidance now separates DeepSeek as a low-cost model/API backend from Replit Agent as the browser-native app-builder workflow.');
   lines.push('Recent comparison refresh: June 20, 2026 added Cursor vs Grok and refreshed Cursor, Grok, AI Coding, source registry, ledger, and LLM maintenance after current Cursor pricing, Teams pricing, changelog, xAI pricing, model docs, Grok Build, Grok Build enterprise, Responses API, and product checks; buyer guidance now separates Cursor as the daily AI-native IDE and agent workbench from Grok as an xAI-native coding-agent/API lane to benchmark.');
   lines.push('Recent comparison refresh: June 20, 2026 added DeepSeek vs GitHub Copilot and refreshed DeepSeek, GitHub Copilot, AI Coding, source registry, ledger, and LLM maintenance after current DeepSeek API pricing, V4 release, changelog, Hugging Face, GitHub Copilot plans, AI Credits, app GA, signup reopening, Fable 5 suspension, and usage-metrics checks; buyer guidance now separates DeepSeek as a low-cost model/backend lane from Copilot as the GitHub-native coding platform.');

@@ -17,12 +17,21 @@ Local ignored docs, old specs, and archived plans are not canonical when they co
 
 ## Plain English
 
-The June 2026 standards remediation is done and pushed to `origin/master`. The first six Decision Content Flywheel content cycles, `canva-vs-claude`, `claude-vs-replit-agent`, `cursor-vs-deepseek`, `cursor-vs-grok`, `deepseek-vs-github-copilot`, and `deepseek-vs-replit-agent`, are complete. The loop has now been hardened with executable verification, route QA, changed-route smart guidance, durable run receipts, per-command timing, scoped fast-build environment handling, safe build-before-browser-check ordering, fresh Playwright server output, combined route QA for all changed rendered content routes, duplicate fallback route-QA detection, exact route QA replacing broad visual smoke for content-only route cycles, and a contract-level operator surface rule for when that replacement is allowed. Do not restart completed cycles from the original specs. Use this file to see what was completed, what remains active, and which docs to trust first.
+The June 2026 standards remediation is done and pushed to `origin/master`. The first six Decision Content Flywheel content cycles, `canva-vs-claude`, `claude-vs-replit-agent`, `cursor-vs-deepseek`, `cursor-vs-grok`, `deepseek-vs-github-copilot`, and `deepseek-vs-replit-agent`, are complete. The loop has now been hardened with executable verification, route QA, changed-route smart guidance, durable run receipts, per-command timing, scoped fast-build environment handling, safe build-before-browser-check ordering, fresh Playwright server output, combined route QA for all changed rendered content routes, duplicate fallback route-QA detection, exact route QA replacing broad visual smoke for content-only route cycles, a contract-level operator surface rule for when that replacement is allowed, a comparison-policy guard that blocks false-vs pages for tools with different buyer jobs, and an Astro 6 markdown processor config that no longer emits the old markdown plugin deprecation warning. Do not restart completed cycles from the original specs. Use this file to see what was completed, what remains active, and which docs to trust first.
 
 At the time this status was last checked, `master` had local unpushed cycle work in progress. Run `git status --short --branch` and `git log --oneline -5` for the exact current head.
 
 ## Done Recently
 
+- Comparison policy cleanup is implemented.
+  - Deleted five definite false-vs comparison pages: `chatgpt-vs-fireflies`, `chatgpt-vs-hermes-agent`, `chatgpt-vs-otter-ai`, `chatgpt-vs-you-com`, and `elevenlabs-vs-otter-ai`.
+  - Removed visible internal links to those deleted routes from affected tool and category pages.
+  - Added `src/data/comparison-policy.json` so adjacent cross-category comparisons require an explicit same-buyer-job allowance.
+  - Regenerated `src/data/coverage-backlog.json`; it now stores selectable direct comparisons separately from `review_only_comparisons`.
+  - `npm run loop:next -- --json` now selects `mistral-ai-vs-poe`, not the blocked Descript vs Grok secondary-overlap pair.
+- Astro markdown deprecation cleanup is implemented.
+  - `astro.config.mjs` now passes the existing remark and rehype plugins through `processor: unified(...)` from `@astrojs/markdown-remark`.
+  - The follow-up `build:fast` and full `check:smart:run` passes completed without the previous Astro markdown plugin deprecation warning.
 - Decision Content Flywheel hardening is implemented.
   - Added `npm run loop:verify` to run the cycle checks with one explicit `AIPEDIA_LEDGER_DATE`, preventing local timezone drift from breaking ledger, guard, or build checks.
   - Added `npm run qa:route` for reusable Playwright route QA at mobile, tablet, and desktop widths.
@@ -43,7 +52,7 @@ At the time this status was last checked, `master` had local unpushed cycle work
   - Added a source registry row for the DeepSeek V4 release note and rechecked DeepSeek API changelog, Replit pricing, AI billing, Starter/Core/Pro plan docs, Agent modes, App Testing, Skills, and security docs.
   - Route QA passed for `/categories/`, `/categories/ai-coding/`, `/compare/`, `/compare/deepseek-vs-replit-agent/`, `/tools/`, `/tools/deepseek/`, and `/tools/replit-agent/` at 360, 390, 430, 768, 1024, and 1366 px after build-fast.
   - Loop verifier passed in about 193.5 seconds; `check-smart --run` took 190.4 seconds, `build:fast` took 126.2 seconds, and exact seven-route QA took 43.1 seconds.
-  - `npm run loop:next -- --json` now selects `descript-vs-grok`.
+  - `npm run loop:next -- --json` now selects `mistral-ai-vs-poe` after the comparison-policy cleanup.
 - Fifth Decision Content Flywheel cycle is complete.
   - Completed cycle: `deepseek-vs-github-copilot`.
   - Added `src/content/comparisons/deepseek-vs-github-copilot.md`.
@@ -92,7 +101,7 @@ At the time this status was last checked, `master` had local unpushed cycle work
   - `npm run build` passed in 214.37 seconds.
   - Main cost is site scale: 1,135 content files, about 1,180 built HTML pages, Astro/Vercel static prerender around 2 minutes, and Pagefind around 44 seconds.
   - `PAGE_REFRESH_LEDGER.md` was normalized with `npm run ledger:pages` because the ledger check was stale.
-  - Best next product move from that review has now completed six cycles through `deepseek-vs-replit-agent`; the current next sprint is `descript-vs-grok`.
+  - Best next product move from that review has now completed six cycles through `deepseek-vs-replit-agent`; the current next sprint is `mistral-ai-vs-poe`.
 - June 2026 standards remediation is complete.
   - Final commit: `3355ce1d fix: remediate June standards review`
   - Spec: `docs/superpowers/specs/2026-06-20-june-standards-remediation-and-rereview.md`
@@ -124,7 +133,7 @@ At the time this status was last checked, `master` had local unpushed cycle work
   - Use `npm run loop:record` to write `.agent/loop-runs/YYYY-MM-DD-slug.md` after a completed, failed, partial, or blocked major cycle.
   - Do not write comparison, pricing, model, plan, affiliate, or commercial claims until current sources have been verified.
   - For rendered comparison cycles, record route QA at 360, 390, 430, 768, 1024, and 1366 px, covering mobile/tablet and desktop.
-  - Current recommended next cycle is `descript-vs-grok`.
+  - Current recommended next cycle is `mistral-ai-vs-poe`.
 - Oldest-First AI Tools Wiki Refresh remains active.
   - Work from `PAGE_REFRESH_LEDGER.md`, oldest first.
   - Latest logged refresh in `.agent/PLANS.md` is `Connected Papers`, completed on 2026-06-18.
@@ -137,7 +146,15 @@ At the time this status was last checked, `master` had local unpushed cycle work
 
 ## Verification Baseline
 
+- False-vs comparison cleanup and Astro warning cleanup passed:
+  - `node --test tests/scripts/loop-hardening.test.mjs tests/scripts/check-smart.test.mjs tests/scripts/audit-coverage-gaps.test.mjs tests/scripts/decision-loop.test.mjs`
+  - `npm run coverage:backlog`
+  - `node scripts/decision-loop.mjs --json`
+  - `$env:AIPEDIA_LEDGER_DATE='2026-06-21'; npm run build:fast`
+  - `$env:AIPEDIA_LEDGER_DATE='2026-06-21'; npm run check:smart:run`
+  - The final smart run passed in about 270.6 seconds, including `test:scripts`, `build:fast`, broad `smoke:visual`, and route QA for `/categories/`, `/categories/ai-automation/`, `/categories/ai-notes/`, `/compare/`, `/tools/`, `/tools/fireflies/`, `/tools/hermes-agent/`, `/tools/otter-ai/`, and `/tools/you-com/` at 360, 390, 430, 768, 1024, and 1366 px.
 - Decision loop hardening passed:
+  - `node --test tests/scripts/audit-coverage-gaps.test.mjs tests/scripts/decision-loop.test.mjs`
   - `node --test tests/scripts/decision-loop.test.mjs tests/scripts/check-smart.test.mjs tests/scripts/audit-coverage-quality.test.mjs tests/scripts/loop-hardening.test.mjs`
   - `node --test tests/scripts/check-smart.test.mjs tests/scripts/loop-hardening.test.mjs`
   - `node scripts/qa-route.mjs --route /compare/claude-vs-replit-agent/ --widths 360 --site-dir dist-fast/client`
@@ -223,9 +240,9 @@ At the time this status was last checked, `master` had local unpushed cycle work
 - Decision loop verification is now more exact for rendered content because changed comparison, tool, category, and parent-hub routes run through combined route QA. Broad `smoke:visual` is now skipped for content-only route cycles only when `src/data/operator-surfaces.json` says the changed path set is safe. Runtime, layout, component, style, config, script, test, dependency, asset, and API changes still keep broad visual smoke when their surfaces require it.
 - Large generated surfaces deserve future optimization: `/search/`, archive pages, `api/home-search.json`, public OG assets, and Pagefind output near the 10 MB budget.
 - `npm run check:ci` passed, but GitHub stats used stale cached fallback data because the GitHub API returned a 403 rate-limit response.
-- Existing Astro markdown plugin deprecation warnings remain for `markdown.remarkPlugins`, `markdown.rehypePlugins`, and `markdown.remarkRehype`.
 - `npm run typecheck` covers active Astro/server surfaces. Legacy global search client scripts and archived `.legacy.astro` files are documented baseline exclusions in `tsconfig.typecheck.json` and `scripts/README.md`.
 - Some local-only historical plans and specs preserve their original task checklists. When they disagree with this file, this file and `.agent/PLANS.md` are the current committed orientation sources.
+- Historical work-log and archive entries may mention `descript-vs-grok` as a planned next loop target. That recommendation is superseded by the June 21 comparison-policy cleanup. Do not create that page unless the comparison policy is deliberately changed.
 - Global `vercel@54.14.2` install emits upstream dependency deprecation warnings for `stream-to-promise@2.2.0` and `tar@7.5.7` through Vercel CLI's own dependency graph. This is not an AiPedia repo dependency issue; update Vercel CLI when upstream bumps those transitive packages.
 
 ## Start The Next Session

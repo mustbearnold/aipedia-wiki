@@ -1,0 +1,57 @@
+{
+  "description": "Policy for comparison-page selection. A comparison page must help a buyer choose between tools for the same job, not force unrelated AI products into a fake versus page.",
+  "default_rule": "Auto-select only pairs that share the same primary category. Primary-secondary overlap, secondary-secondary overlap, and broad tier-one cross-category pairs are review-only unless explicitly allowed here.",
+  "allowed_adjacent_pairs": [
+    {
+      "tools": ["adobe-firefly", "canva"],
+      "workflow": "visual asset production",
+      "reason": "Image generation and design-suite buyers often choose where the finished creative asset should be made."
+    },
+    {
+      "tools": ["bolt", "cursor"],
+      "workflow": "app building",
+      "reason": "Both can sit in the app-building workflow, even though one starts from a prompt-to-app canvas and the other from an IDE."
+    },
+    {
+      "tools": ["chatgpt", "grammarly"],
+      "workflow": "writing and editing",
+      "reason": "Both compete for everyday writing improvement, drafting, and editing jobs."
+    },
+    {
+      "tools": ["cursor", "grok"],
+      "workflow": "coding-agent evaluation",
+      "reason": "Grok has a documented coding-agent lane, so this is a coding workflow decision when framed asymmetrically."
+    },
+    {
+      "tools": ["elicit", "perplexity"],
+      "workflow": "source-backed research",
+      "reason": "Both can answer source-backed research questions, with different depth and citation workflows."
+    }
+  ],
+  "blocked_pairs": [
+    {
+      "tools": ["descript", "grok"],
+      "reason": "Descript is a transcript-first media editor. Grok is a general assistant, API, search, media, voice, and coding platform. The overlapping voice/media words do not create the same buyer job."
+    },
+    {
+      "tools": ["chatgpt", "fireflies"],
+      "reason": "Broad assistant versus meeting capture and transcript archive."
+    },
+    {
+      "tools": ["chatgpt", "hermes-agent"],
+      "reason": "Hosted general assistant versus self-hosted operator-owned agent runtime."
+    },
+    {
+      "tools": ["chatgpt", "otter-ai"],
+      "reason": "Post-meeting synthesis assistant versus live meeting bot and archive."
+    },
+    {
+      "tools": ["chatgpt", "you-com"],
+      "reason": "General assistant versus API-first search/research platform."
+    },
+    {
+      "tools": ["elevenlabs", "otter-ai"],
+      "reason": "Speech generation and voice platform versus meeting transcription archive."
+    }
+  ]
+}

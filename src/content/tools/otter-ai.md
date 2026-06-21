@@ -240,4 +240,4 @@ Only on Business and Enterprise. Basic and Pro capture audio transcripts only.
 ## Related
 
 - **Category:** [AI Notes](/categories/ai-notes/)
-- **Comparisons:** [Otter.ai vs Fireflies](/compare/fireflies-vs-otter-ai/) | [ChatGPT vs Otter.ai](/compare/chatgpt-vs-otter-ai/) | [Google NotebookLM vs Otter.ai](/compare/notebooklm-vs-otter-ai/) | [Otter.ai vs Readwise Reader](/compare/otter-ai-vs-readwise/) | [ElevenLabs vs Otter.ai](/compare/elevenlabs-vs-otter-ai/)
+- **Comparisons:** [Otter.ai vs Fireflies](/compare/fireflies-vs-otter-ai/) | [Google NotebookLM vs Otter.ai](/compare/notebooklm-vs-otter-ai/) | [Otter.ai vs Readwise Reader](/compare/otter-ai-vs-readwise/)

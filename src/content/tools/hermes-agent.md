@@ -245,4 +245,3 @@ Nous Research, an AI research lab focused on open-weight models and agent archit
 ## Related
 
 - **Category:** [AI Automation](/categories/ai-automation/)
-- **Comparisons:** [ChatGPT vs Hermes Agent](/compare/chatgpt-vs-hermes-agent/)

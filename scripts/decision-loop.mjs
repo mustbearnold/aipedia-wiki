@@ -16,6 +16,7 @@ const BACKLOG_PATH = resolve(PROJECT_DIR, valueFor('--backlog') || 'src/data/cov
 const COMPARISONS_DIR = join(PROJECT_DIR, 'src', 'content', 'comparisons');
 const TOOLS_DIR = join(PROJECT_DIR, 'src', 'content', 'tools');
 const CATEGORIES_DIR = join(PROJECT_DIR, 'src', 'content', 'categories');
+const COMPARISON_POLICY_PATH = join(PROJECT_DIR, 'src', 'data', 'comparison-policy.json');
 const ROUTE_QA_WIDTHS = [360, 390, 430, 768, 1024, 1366];
 const BACKLOG_STALE_DAYS = 2;
 const KNOWN_FLAGS = new Set(['--backlog', '--count', '--json', '--project-dir', '--root', '--slug', '--help', '-h']);
@@ -65,12 +66,22 @@ if (!existsSync(BACKLOG_PATH)) {
 }
 
 const backlog = JSON.parse(readFileSync(BACKLOG_PATH, 'utf8'));
+const comparisonPolicy = existsSync(COMPARISON_POLICY_PATH)
+  ? JSON.parse(readFileSync(COMPARISON_POLICY_PATH, 'utf8'))
+  : { allowed_adjacent_pairs: [], blocked_pairs: [] };
+const allowedAdjacentPairs = new Set(
+  (comparisonPolicy.allowed_adjacent_pairs || []).map((entry) => pairKey(entry.tools[0], entry.tools[1])),
+);
+const blockedPairs = new Set(
+  (comparisonPolicy.blocked_pairs || []).map((entry) => pairKey(entry.tools[0], entry.tools[1])),
+);
 const existingPairs = existingComparisonPairs();
 const comparisonBacklog = backlog.backlog?.comparisons ?? [];
 const warnings = backlogWarnings(backlog.generated_at);
 const candidates = comparisonBacklog
   .filter((item) => item?.tools?.length >= 2)
   .filter((item) => !SLUG || item.slug === SLUG)
+  .filter((item) => selectableComparison(item))
   .filter((item) => !existingPairs.has(pairKey(item.tools[0], item.tools[1])))
   .slice(0, COUNT)
   .map((item, index) => clusterBrief(item, index + 1));
@@ -135,6 +146,8 @@ function emitReport(report) {
     if (cluster.requires_canonical_fact_table) {
       console.log(`  required: canonical_fact_table: true for ${cluster.canonical_fact_tools.join(', ')}`);
     }
+    console.log(`  comparison mode: ${cluster.comparison_mode}`);
+    if (cluster.requires_asymmetric_framing) console.log(`  required: asymmetric framing for ${cluster.workflow_family}`);
     if (report.warnings?.length) {
       console.log('');
       console.log('Warnings:');
@@ -195,6 +208,9 @@ function clusterBrief(item, rank) {
     title: `${toolTitle(first)} vs ${toolTitle(second)}`,
     score: item.score ?? 0,
     same_category: Boolean(item.same_category),
+    comparison_mode: item.comparison_mode || (item.same_category ? 'direct' : 'direct'),
+    requires_asymmetric_framing: Boolean(item.requires_asymmetric_framing),
+    workflow_family: item.workflow_family || '',
     categories,
     tools,
     requires_canonical_fact_table: canonicalFactTools.length > 0,
@@ -290,6 +306,19 @@ function clusterBrief(item, rank) {
   };
 }
 
+function selectableComparison(item) {
+  if (item.requires_human_review || item.selectable === false) return false;
+  if (['review_only', 'blocked'].includes(item.comparison_mode)) return false;
+
+  const key = pairKey(item.tools[0], item.tools[1]);
+  if (blockedPairs.has(key)) return false;
+  if (allowedAdjacentPairs.has(key)) return true;
+
+  const [first, second] = item.tools.map(toolMeta);
+  if (!first.primary_category || !second.primary_category) return false;
+  return first.primary_category === second.primary_category;
+}
+
 function backlogWarnings(generatedAt) {
   if (!generatedAt) return [{ code: 'backlog-generated-at-missing', message: 'coverage backlog has no generated_at timestamp; run npm run coverage:backlog if the ranking looks stale.' }];
 
@@ -329,6 +358,17 @@ function toolTitle(slug) {
   const path = join(TOOLS_DIR, `${slug}.md`);
   if (!existsSync(path)) return slug;
   return scalar(frontmatter(path), 'title') || slug;
+}
+
+function toolMeta(slug) {
+  const path = join(TOOLS_DIR, `${slug}.md`);
+  if (!existsSync(path)) return { slug, primary_category: '', secondary_categories: [] };
+  const fm = frontmatter(path);
+  return {
+    slug,
+    primary_category: scalar(fm, 'category'),
+    secondary_categories: inlineArray(fm, 'secondary_categories'),
+  };
 }
 
 function frontmatter(path) {

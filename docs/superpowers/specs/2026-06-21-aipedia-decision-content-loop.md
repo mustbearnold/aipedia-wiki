@@ -22,7 +22,7 @@ Create a default operating loop for AiPedia content work:
 6. Record what changed.
 7. Repeat.
 
-The loop should make the next useful task obvious, starting with the highest-value missing comparison cluster.
+The loop should make the next useful task obvious, starting with the highest-value missing comparison cluster that is a real buyer decision.
 
 ## Non-Goals
 
@@ -38,6 +38,8 @@ The loop should make the next useful task obvious, starting with the highest-val
 ### 1. Pick Cluster
 
 Use `npm run loop:next` to produce the next decision-content brief. The first version uses the comparison coverage backlog and live comparison files to select missing buyer-intent comparison clusters.
+
+Do not create comparison pages for tools that belong to different categories and serve different use cases or workflows. A valid comparison must help a buyer choose between tools for the same job. The default selector only auto-selects same-primary-category pairs; adjacent workflow exceptions must be explicit in `src/data/comparison-policy.json`. Primary-secondary overlap, secondary-secondary overlap, and broad tier-one cross-category pairs are review-only unless explicitly allowed.
 
 The brief must name:
 
@@ -115,7 +117,7 @@ The record should say what landed, what passed, what failed, what remains, which
 
 Add `scripts/decision-loop.mjs` and expose it as `npm run loop:next`.
 
-The command is read-only. It selects missing comparison clusters from `src/data/coverage-backlog.json`, skips pairs that already exist in `src/content/comparisons/`, and prints a working brief.
+The command is read-only. It selects missing comparison clusters from `src/data/coverage-backlog.json`, skips pairs that already exist in `src/content/comparisons/`, skips blocked or review-only false-vs candidates, and prints a working brief.
 
 Expected modes:
 
@@ -130,7 +132,7 @@ Additional loop commands:
 - `npm run qa:route`: reusable route QA across mobile, tablet, and desktop widths.
 - `npm run loop:record`: durable run receipt under `.agent/loop-runs/`.
 
-Current implementation status: `canva-vs-claude`, `claude-vs-replit-agent`, `cursor-vs-deepseek`, `cursor-vs-grok`, and `deepseek-vs-github-copilot` are complete. `npm run loop:next -- --json` currently selects `deepseek-vs-replit-agent`.
+Current implementation status: `canva-vs-claude`, `claude-vs-replit-agent`, `cursor-vs-deepseek`, `cursor-vs-grok`, `deepseek-vs-github-copilot`, and `deepseek-vs-replit-agent` are complete. The false-vs guard now skips Descript vs Grok and similar secondary-overlap pairs. `npm run loop:next -- --json` currently selects `mistral-ai-vs-poe`.
 
 ## First Cycle
 
@@ -157,6 +159,7 @@ Do not write the comparison until current-month Canva and Claude facts are verif
 - `npm run qa:route -- --route /compare/<slug>/` verifies built output across the default mobile, tablet, and desktop widths.
 - `npm run loop:record` writes a durable `.agent/loop-runs/` receipt.
 - Existing comparison pairs are skipped.
+- Cross-category or secondary-overlap pairs are skipped unless `src/data/comparison-policy.json` explicitly allows the adjacent workflow.
 - Invalid arguments fail before reading repo state.
 - Missing backlog files fail with a recovery action.
 - The command is documented in README and script docs.

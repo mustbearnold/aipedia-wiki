@@ -1,4 +1,5 @@
 import { defineConfig } from 'astro/config';
+import { unified } from '@astrojs/markdown-remark';
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
 import { remarkRewriteLinks } from './src/plugins/remark-rewrite-links.mjs';
@@ -55,8 +56,10 @@ export default defineConfig({
   },
 
   markdown: {
-    remarkPlugins: [remarkRewriteLinks, remarkFootnoteRefs, remarkToolMentions, remarkGlossaryMentions],
-    rehypePlugins: [rehypeRemoveFirstH1, rehypeRepairTables, rehypeCollapseSections],
+    processor: unified({
+      remarkPlugins: [remarkRewriteLinks, remarkFootnoteRefs, remarkToolMentions, remarkGlossaryMentions],
+      rehypePlugins: [rehypeRemoveFirstH1, rehypeRepairTables, rehypeCollapseSections],
+    }),
     shikiConfig: {
       theme: 'github-dark',
     },

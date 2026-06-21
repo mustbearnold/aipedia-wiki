@@ -17,9 +17,11 @@ For the plain-English project state, read `.agent/CURRENT_STATUS.md` first. For 
 - Route QA is now reusable through `npm run qa:route -- --route /compare/<slug>/`; changed comparison, tool, and category routes also run through `check:smart:run`.
 - `loop:verify` now records per-command timings and avoids fallback builds unless route QA or `--force-build` requires one.
 - Major loop cycles should write `.agent/loop-runs/` receipts with `npm run loop:record`.
-- The first six decision content loop cycles, `canva-vs-claude`, `claude-vs-replit-agent`, `cursor-vs-deepseek`, `cursor-vs-grok`, `deepseek-vs-github-copilot`, and `deepseek-vs-replit-agent`, are complete. `npm run loop:next -- --json` now selects `descript-vs-grok`.
+- The first six decision content loop cycles, `canva-vs-claude`, `claude-vs-replit-agent`, `cursor-vs-deepseek`, `cursor-vs-grok`, `deepseek-vs-github-copilot`, and `deepseek-vs-replit-agent`, are complete. False-vs comparison cleanup deleted five unrelated cross-workflow pages and blocked secondary-overlap auto-selection. `npm run loop:next -- --json` now selects `mistral-ai-vs-poe`.
 - Loop briefs now require related-surface discovery, source registry inspection, stale-backlog warnings, and rendered route QA at 360, 390, 430, 768, 1024, and 1366 px.
 - Latest loop-performance fixes: `AIPEDIA_FAST_BUILD=1` is scoped to build and route-QA commands so unit-test fixtures do not inherit fast-build mode, `check-smart --run` executes `build:fast` before browser-output checks while printing per-command durations, Playwright browser checks force fresh `dist-fast/client` output after fast builds, changed rendered content routes run through one combined route QA command, `loop:verify` no longer runs duplicate fallback route QA when smart verification already covers the requested route, exact route QA replaces broad `smoke:visual` for content-only route cycles, and the replacement rule now lives in `src/data/operator-surfaces.json`.
+- Latest comparison-policy fix: `npm run coverage:backlog`, `npm run loop:next`, and `npm run coverage:next` now treat primary-secondary overlap and broad cross-category pairs as review-only unless `src/data/comparison-policy.json` explicitly allows the adjacent workflow.
+- Latest build-warning fix: `astro.config.mjs` now uses `processor: unified(...)` from `@astrojs/markdown-remark`, so `build:fast` and `check:smart:run` no longer emit the old Astro markdown plugin deprecation warning.
 - The main active ongoing lane is the oldest-first AI tools wiki refresh.
 - The Phase 3 parallel surface and June 18-20 news backfill plan is written but not executed on `master`.
 
@@ -48,7 +50,7 @@ Run AiPedia as a repeatable buyer-decision loop: cluster, verify, improve decisi
 - 2026-06-20: Fourth selected cluster, `cursor-vs-grok`, is complete.
 - 2026-06-20: Fifth selected cluster, `deepseek-vs-github-copilot`, is complete.
 - 2026-06-20: Sixth selected cluster, `deepseek-vs-replit-agent`, is complete.
-- 2026-06-20: Next selected cluster is `descript-vs-grok` unless a newer backlog changes the order or the comparison already exists.
+- 2026-06-21: `descript-vs-grok` is blocked as a false-vs secondary-overlap pair. Next selected cluster is `mistral-ai-vs-poe`.
 - 2026-06-21: Loop hardening added `loop:verify`, `qa:route`, `loop:record`, changed-route smart guidance, raw Markdown table rejection for changed comparison pages, executable changed-comparison route QA, conditional fallback builds, receipt-safe command recording, per-command timing, scoped fast-build environment handling, build-before-browser-check ordering, and `check-smart --run` per-command timing output.
 
 ## Recently Completed: Cursor Vs DeepSeek Comparison Sprint
@@ -146,29 +148,29 @@ Create a high-intent, source-backed comparison page for `deepseek-vs-replit-agen
 - `node scripts/guard-em-dashes.mjs`
 - `git diff --check`
 
-## Recommended Next: Descript Vs Grok Comparison Sprint
+## Recommended Next: Mistral AI Vs Poe Comparison Sprint
 
 ### Objective
 
-Create a high-intent, source-backed comparison page for `descript-vs-grok` while refreshing affected Descript, Grok, AI Voice, parent hub, source registry, LLM surface, and ledger rows.
+Create a high-intent, source-backed comparison page for `mistral-ai-vs-poe` while refreshing affected Mistral AI, Poe, AI Chatbots, parent hub, source registry, LLM surface, and ledger rows.
 
 ### Why This Is Next
 
-- `npm run loop:next -- --json` selects `descript-vs-grok` after the completed DeepSeek vs Replit Agent cycle.
-- Descript and Grok are same-category in the current backlog, but the expected buyer question likely needs careful framing: Descript is a voice/video editing and production workflow, while Grok is a broader xAI assistant, search, voice/API, and coding-agent platform.
-- This sprint should avoid forcing a false substitute relationship. It should explain when the buyer needs media editing versus general assistant/API capability.
+- `npm run loop:next -- --json` selects `mistral-ai-vs-poe` after the comparison-policy cleanup and regenerated backlog.
+- Both tools are primary `ai-chatbots`, so this is a real same-category buyer decision.
+- The expected buyer question is model-provider/native app versus multi-model aggregator: use Mistral AI when the buyer wants Mistral-native models, APIs, Vibe/Le Chat routes, and provider control; use Poe when the buyer wants broad model access and point-bucket comparison in one consumer workspace.
 
 ### First Slice
 
-- Verify current June 2026 Descript and Grok pricing, model, voice, media, API, product, privacy, and source facts.
-- Refresh `src/content/tools/descript.md` and `src/content/tools/grok.md` only where current sources justify changes.
-- Create or refresh `src/content/comparisons/descript-vs-grok.md`.
-- Inspect and update affected parent surfaces, especially `/compare/`, `/tools/`, AI Voice category pages, sitemap/LLM surfaces, and `PAGE_REFRESH_LEDGER.md`.
+- Verify current June 2026 Mistral AI and Poe pricing, model access, app/API surfaces, point or credit systems, privacy, source, and product facts.
+- Refresh `src/content/tools/mistral-ai.md` and `src/content/tools/poe.md` only where current sources justify changes.
+- Create or refresh `src/content/comparisons/mistral-ai-vs-poe.md`.
+- Inspect and update affected parent surfaces, especially `/compare/`, `/tools/`, AI Chatbots category pages, sitemap/LLM surfaces, and `PAGE_REFRESH_LEDGER.md`.
 
 ### Verification
 
-- `npm run loop:verify -- --date <YYYY-MM-DD> --route /compare/descript-vs-grok/ --path <changed paths>`
-- `npm run loop:record -- --date <YYYY-MM-DD> --slug descript-vs-grok --status complete`
+- `npm run loop:verify -- --date <YYYY-MM-DD> --route /compare/mistral-ai-vs-poe/ --path <changed paths>`
+- `npm run loop:record -- --date <YYYY-MM-DD> --slug mistral-ai-vs-poe --status complete`
 - Focused retry commands, if needed:
 - `npm run ledger:pages -- --date <YYYY-MM-DD>`
 - `npm run ledger:pages:check -- --date <YYYY-MM-DD>`
@@ -178,7 +180,7 @@ Create a high-intent, source-backed comparison page for `descript-vs-grok` while
 - `npm run audit:provenance:changed`
 - `npm run check:smart:run -- --path <changed paths>`
 - `npm run build:fast` if rendered output or pre-ship confidence requires it and `loop:verify` did not already run it.
-- `npm run qa:route -- --route /compare/descript-vs-grok/ --widths 360,390,430,768,1024,1366` for route-QA retry.
+- `npm run qa:route -- --route /compare/mistral-ai-vs-poe/ --widths 360,390,430,768,1024,1366` for route-QA retry.
 
 ## Active: Oldest-First AI Tools Wiki Refresh
 

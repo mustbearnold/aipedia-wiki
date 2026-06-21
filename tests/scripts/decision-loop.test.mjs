@@ -146,6 +146,63 @@ test('decision loop skips comparison pairs that already exist', () => {
   }
 });
 
+test('decision loop skips stale false-vs backlog entries', () => {
+  const dir = writeFixtureProject();
+
+  try {
+    writeFileSync(
+      join(dir, 'src', 'content', 'tools', 'descript.md'),
+      '---\nslug: descript\ntitle: Descript\ncategory: ai-voice\nstatus: active\n---\n',
+    );
+    writeFileSync(
+      join(dir, 'src', 'content', 'tools', 'grok.md'),
+      '---\nslug: grok\ntitle: Grok\ncategory: ai-chatbots\nsecondary_categories: [ai-voice]\nstatus: active\n---\n',
+    );
+    writeFileSync(
+      join(dir, 'src', 'data', 'coverage-backlog.json'),
+      `${JSON.stringify(
+        {
+          ok: true,
+          generated_at: '2026-06-21T00:00:00.000Z',
+          backlog: {
+            comparisons: [
+              {
+                kind: 'comparison',
+                slug: 'descript-vs-grok',
+                tools: ['descript', 'grok'],
+                shared_categories: ['ai-voice'],
+                same_category: true,
+                both_tier1: true,
+                score: 10,
+              },
+              {
+                kind: 'comparison',
+                slug: 'chatgpt-vs-poe',
+                tools: ['chatgpt', 'poe'],
+                shared_categories: ['ai-chatbots'],
+                same_category: true,
+                both_tier1: true,
+                score: 10,
+              },
+            ],
+          },
+        },
+        null,
+        2,
+      )}\n`,
+    );
+
+    const result = runDecisionLoop('--json', `--project-dir=${dir}`);
+    assert.equal(result.status, 0, result.stderr);
+
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, true);
+    assert.equal(report.clusters[0].slug, 'chatgpt-vs-poe');
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
 test('decision loop rejects invalid arguments before reading the backlog', () => {
   const result = runDecisionLoop('--json', '--count', 'zero');
   assert.equal(result.status, 2);

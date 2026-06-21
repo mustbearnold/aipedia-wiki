@@ -15,6 +15,7 @@ const PROJECT_DIR = resolve(valueFor('--project-dir') || valueFor('--root') || d
 const BACKLOG_PATH = resolve(PROJECT_DIR, valueFor('--backlog') || 'src/data/coverage-backlog.json');
 const COMPARISONS_DIR = join(PROJECT_DIR, 'src', 'content', 'comparisons');
 const TOOLS_DIR = join(PROJECT_DIR, 'src', 'content', 'tools');
+const COMPARISON_POLICY_PATH = join(PROJECT_DIR, 'src', 'data', 'comparison-policy.json');
 const COUNT = numberArg('--count', 1);
 const JSON_MODE = args.includes('--json');
 
@@ -51,6 +52,10 @@ function inlineArray(fm, key) {
   return m ? m[1].split(',').map(stripYamlQuotes).filter(Boolean) : [];
 }
 
+function scalar(fm, key) {
+  return stripYamlQuotes(fm.match(new RegExp(`^${key}:\\s*(.+)$`, 'm'))?.[1] ?? '');
+}
+
 // Live set of existing comparison pairs.
 const existingPairs = new Set();
 if (existsSync(COMPARISONS_DIR)) {
@@ -63,6 +68,16 @@ if (existsSync(COMPARISONS_DIR)) {
   }
 }
 
+const comparisonPolicy = existsSync(COMPARISON_POLICY_PATH)
+  ? JSON.parse(readFileSync(COMPARISON_POLICY_PATH, 'utf8'))
+  : { allowed_adjacent_pairs: [], blocked_pairs: [] };
+const allowedAdjacentPairs = new Set(
+  (comparisonPolicy.allowed_adjacent_pairs || []).map((entry) => pairKey(entry.tools[0], entry.tools[1])),
+);
+const blockedPairs = new Set(
+  (comparisonPolicy.blocked_pairs || []).map((entry) => pairKey(entry.tools[0], entry.tools[1])),
+);
+
 // Tools that require canonical_fact_table + fact tokens (mirror guard-stale-facts).
 const CANONICAL_FACT_TOOLS = new Set([
   'chatgpt', 'claude', 'gemini', 'grok', 'deepseek',
@@ -74,8 +89,27 @@ function toolTitle(slug) {
   return existsSync(path) ? stripYamlQuotes(readFrontmatter(path).match(/^title:\s*(.+)$/m)?.[1] ?? slug) : slug;
 }
 
+function toolPrimaryCategory(slug) {
+  const path = join(TOOLS_DIR, `${slug}.md`);
+  return existsSync(path) ? scalar(readFrontmatter(path), 'category') : '';
+}
+
+function selectableComparison(item) {
+  if (item.requires_human_review || item.selectable === false) return false;
+  if (['review_only', 'blocked'].includes(item.comparison_mode)) return false;
+
+  const key = pairKey(item.tools[0], item.tools[1]);
+  if (blockedPairs.has(key)) return false;
+  if (allowedAdjacentPairs.has(key)) return true;
+
+  const [firstCategory, secondCategory] = item.tools.map(toolPrimaryCategory);
+  return Boolean(firstCategory && firstCategory === secondCategory);
+}
+
 const backlog = JSON.parse(readFileSync(BACKLOG_PATH, 'utf8'));
 const candidates = (backlog.backlog?.comparisons ?? [])
+  .filter((item) => item?.tools?.length >= 2)
+  .filter((item) => selectableComparison(item))
   .filter((item) => !existingPairs.has(pairKey(item.tools[0], item.tools[1])))
   .slice(0, COUNT)
   .map((item) => {
