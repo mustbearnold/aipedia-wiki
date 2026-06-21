@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 // Shared AiPedia loop registry and read-only loop runner.
 
-import { existsSync, readFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, readdirSync, statSync, writeFileSync } from 'node:fs';
 import { spawnSync } from 'node:child_process';
-import { dirname, relative, resolve } from 'node:path';
+import { dirname, join, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { performance } from 'node:perf_hooks';
 
@@ -17,9 +17,12 @@ const HELP_MODE = hasFlag('--help') || hasFlag('-h');
 const LOOP_IDS = valuesFor('--loop');
 const RUN_ALL = hasFlag('--all');
 const SITE_DIR_ARG = valueFor('--site-dir') || valueFor('--dist-dir') || '';
+const WRITE_LEDGER = hasFlag('--write-ledger');
+const LEDGER_DIR = resolve(PROJECT_DIR, valueFor('--ledger-dir') || '.agent/loop-runs/system');
 const KNOWN_FLAGS = new Set([
   '--all',
   '--dist-dir',
+  '--ledger-dir',
   '--json',
   '--loop',
   '--project-dir',
@@ -27,10 +30,12 @@ const KNOWN_FLAGS = new Set([
   '--root',
   '--run',
   '--site-dir',
+  '--write-ledger',
   '--help',
   '-h',
 ]);
-const VALUE_FLAGS = new Set(['--dist-dir', '--loop', '--project-dir', '--registry', '--root', '--site-dir']);
+const VALUE_FLAGS = new Set(['--dist-dir', '--ledger-dir', '--loop', '--project-dir', '--registry', '--root', '--site-dir']);
+const STALE_BUILD_GRACE_MS = 1000;
 
 if (HELP_MODE) {
   console.log(usage());
@@ -65,6 +70,8 @@ if (!existsSync(REGISTRY_PATH)) {
 
 const registry = JSON.parse(readFileSync(REGISTRY_PATH, 'utf8'));
 const defaultSiteDir = SITE_DIR_ARG || registry.default_site_dir || 'dist-fast/client';
+const buildFreshnessPaths = registry.build_freshness_paths || [];
+const buildFreshnessIgnorePaths = new Set((registry.build_freshness_ignore_paths || []).map(normalizeProjectPath));
 const knownLoopIds = new Set((registry.loops || []).map((loop) => loop.id));
 const unknownLoopIds = LOOP_IDS.filter((id) => !knownLoopIds.has(id));
 if (unknownLoopIds.length) {
@@ -84,6 +91,7 @@ const report = RUN_MODE
   ? runLoopReport(registry, selectedLoops)
   : briefReport(registry, selectedLoops);
 
+if (WRITE_LEDGER) writeLedger(report);
 emitReport(report);
 process.exit(report.ok ? 0 : 1);
 
@@ -103,6 +111,8 @@ function usage() {
     '  --registry <path>       Loop registry path. Defaults to src/data/aipedia-loops.json.',
     '  --site-dir <dir>        Built output used by built-site loops. Defaults to registry default_site_dir.',
     '  --project-dir <dir>     Project root. Alias: --root.',
+    '  --write-ledger          Persist this run under .agent/loop-runs/system/.',
+    '  --ledger-dir <dir>      Override the loop-run ledger directory.',
   ].join('\n');
 }
 
@@ -157,6 +167,7 @@ function reviewSummary(loopReports) {
   const attention = loopReports.filter((loop) => loop.status === 'attention');
   const skipped = loopReports.filter((loop) => loop.status === 'skipped');
   const clean = loopReports.filter((loop) => loop.status === 'ok');
+  const recommendations = rankedRecommendations(loopReports);
 
   return {
     summary: attention.length
@@ -164,10 +175,8 @@ function reviewSummary(loopReports) {
       : `${clean.length} loop(s) ok; ${skipped.length} skipped.`,
     attention_loops: attention.map((loop) => loop.id),
     skipped_loops: skipped.map((loop) => loop.id),
-    next_actions: [
-      ...attention.map((loop) => `${loop.id}: review ${loop.attention_reasons[0] || 'attention signals'}.`),
-      ...skipped.map((loop) => `${loop.id}: ${loop.skip_reason || 'run prerequisites first'}.`),
-    ],
+    recommendations,
+    next_actions: recommendations.slice(0, 5).map((item) => `${item.loop_id}: ${item.action}`),
   };
 }
 
@@ -220,7 +229,8 @@ function runLoopCommand(loop, command) {
     timeout: command.timeout_ms || 180000,
   });
   const parsed = parseJson(child.stdout);
-  const attentionReasons = attentionReasonsFor(command, child, parsed);
+  const buildFreshness = buildFreshnessFor(command);
+  const attentionReasons = attentionReasonsFor(command, child, parsed, buildFreshness);
   const status = attentionReasons.length ? 'attention' : 'ok';
 
   return {
@@ -231,17 +241,21 @@ function runLoopCommand(loop, command) {
     exit_code: child.status,
     signal: child.signal || '',
     attention_reasons: attentionReasons,
+    build_freshness: buildFreshness,
     parsed_summary: parsedSummary(parsed),
     stdout_tail: tail(child.stdout),
     stderr_tail: tail(child.stderr),
   };
 }
 
-function attentionReasonsFor(command, child, parsed) {
+function attentionReasonsFor(command, child, parsed, buildFreshness) {
   const reasons = [];
   if (child.error) reasons.push(`command error: ${child.error.message}`);
   if (child.status !== 0) reasons.push(`exit code ${child.status}`);
   if (parsed && parsed.ok === false) reasons.push('reported ok=false');
+  if (buildFreshness?.status === 'stale') {
+    reasons.push(`built output stale: run npm run build:fast before trusting ${buildFreshness.site_dir}`);
+  }
 
   const totals = parsed?.totals && typeof parsed.totals === 'object' ? parsed.totals : {};
   for (const key of command.attention_totals || []) {
@@ -250,6 +264,101 @@ function attentionReasonsFor(command, child, parsed) {
   }
 
   return reasons;
+}
+
+function rankedRecommendations(loopReports) {
+  return loopReports
+    .flatMap(loopRecommendations)
+    .sort((left, right) => right.score - left.score || left.loop_id.localeCompare(right.loop_id))
+    .slice(0, 10);
+}
+
+function loopRecommendations(loop) {
+  const items = [];
+  const staleCommand = loop.commands.find((command) => command.build_freshness?.status === 'stale');
+  if (staleCommand) {
+    items.push({
+      loop_id: loop.id,
+      title: loop.title,
+      score: 95,
+      severity: 'blocker',
+      confidence: 'high',
+      effort: 'medium',
+      action: `Run npm run build:fast, then rerun ${loop.id} because ${staleCommand.build_freshness.site_dir} is older than rendered inputs.`,
+      reason: staleCommand.attention_reasons.find((reason) => reason.includes('built output stale')) || 'built output stale',
+    });
+  }
+
+  if (loop.status === 'attention') {
+    items.push({
+      loop_id: loop.id,
+      title: loop.title,
+      score: staleCommand ? 90 : 92,
+      severity: 'attention',
+      confidence: 'high',
+      effort: 'varies',
+      action: `Review ${loop.attention_reasons[0] || 'attention signals'} and classify as fix, queue, or loop noise.`,
+      reason: loop.attention_reasons[0] || 'attention signal',
+    });
+  }
+
+  if (loop.status === 'skipped') {
+    items.push({
+      loop_id: loop.id,
+      title: loop.title,
+      score: 82,
+      severity: 'backlog',
+      confidence: 'high',
+      effort: 'medium',
+      action: loop.skip_reason || 'Satisfy prerequisites and rerun this loop.',
+      reason: 'skipped loop',
+    });
+  }
+
+  const summaries = loop.commands.map((command) => command.parsed_summary || {});
+  const firstCluster = summaries.find((summary) => summary.first_cluster)?.first_cluster;
+  if (loop.id === 'decision-content' && firstCluster) {
+    items.push({
+      loop_id: loop.id,
+      title: loop.title,
+      score: 74,
+      severity: 'next',
+      confidence: 'medium',
+      effort: 'large',
+      action: `Begin the next buyer-decision cycle: ${firstCluster}.`,
+      reason: 'top decision-content candidate',
+    });
+  }
+
+  const topReviewItem = summaries.flatMap((summary) => summary.top_review_queue || [])[0];
+  if (loop.id === 'freshness' && topReviewItem?.slug) {
+    items.push({
+      loop_id: loop.id,
+      title: loop.title,
+      score: 66,
+      severity: 'queue',
+      confidence: 'medium',
+      effort: 'medium',
+      action: `Refresh due fact ${topReviewItem.key || 'metadata'} on ${topReviewItem.slug}.`,
+      reason: `freshness queue due in ${topReviewItem.due_in_days ?? 'unknown'} day(s)`,
+    });
+  }
+
+  const sampleIssue = summaries.flatMap((summary) => summary.sample_issues || summary.sample_failures || summary.sample_gaps || [])[0];
+  if (!items.length && sampleIssue) {
+    items.push({
+      loop_id: loop.id,
+      title: loop.title,
+      score: 58,
+      severity: 'watch',
+      confidence: 'medium',
+      effort: 'varies',
+      action: `Inspect sample signal from ${loop.id}; keep it queued if it is not user-facing.`,
+      reason: JSON.stringify(sampleIssue).slice(0, 200),
+    });
+  }
+
+  return items;
 }
 
 function parsedSummary(parsed) {
@@ -299,6 +408,189 @@ function commandSummary(command) {
     command: commandLine(command),
     required: command.required === true,
     requires_paths: (command.requires_paths || []).map(substitutePath),
+    freshness_paths: (command.requires_paths || []).length ? freshnessPathsFor(command).map(projectPath) : [],
+  };
+}
+
+function buildFreshnessFor(command) {
+  if (!(command.requires_paths || []).length) return null;
+
+  const requiredPath = (command.requires_paths || []).map(substitutePath)[0] || defaultSiteDir;
+  const siteDir = resolve(PROJECT_DIR, requiredPath);
+  const inputPaths = freshnessPathsFor(command);
+  if (!inputPaths.length) {
+    return {
+      status: 'unknown',
+      site_dir: projectPath(siteDir),
+      reason: 'no freshness paths configured',
+    };
+  }
+
+  const newestOutput = newestMtime(siteDir);
+  const newestInput = newestMtime(inputPaths);
+  if (!newestOutput || !newestInput) {
+    return {
+      status: 'unknown',
+      site_dir: projectPath(siteDir),
+      newest_output: newestOutput ? mtimeSummary(newestOutput) : null,
+      newest_input: newestInput ? mtimeSummary(newestInput) : null,
+      reason: 'could not compare build output and inputs',
+    };
+  }
+
+  const stale = newestInput.mtimeMs > newestOutput.mtimeMs + STALE_BUILD_GRACE_MS;
+  return {
+    status: stale ? 'stale' : 'fresh',
+    site_dir: projectPath(siteDir),
+    newest_output: mtimeSummary(newestOutput),
+    newest_input: mtimeSummary(newestInput),
+    stale_by_ms: stale ? Math.round(newestInput.mtimeMs - newestOutput.mtimeMs) : 0,
+  };
+}
+
+function freshnessPathsFor(command) {
+  const rawPaths = command.build_freshness_paths || command.freshness_paths || buildFreshnessPaths;
+  return rawPaths.map(substitutePath).map((path) => resolve(PROJECT_DIR, path));
+}
+
+function newestMtime(paths) {
+  const list = Array.isArray(paths) ? paths : [paths];
+  let newest = null;
+  for (const path of list) {
+    const candidate = newestMtimeUnder(path);
+    if (candidate && (!newest || candidate.mtimeMs > newest.mtimeMs)) newest = candidate;
+  }
+  return newest;
+}
+
+function newestMtimeUnder(path) {
+  if (!existsSync(path)) return null;
+  const normalized = normalizeProjectPath(path);
+  if (buildFreshnessIgnorePaths.has(normalized)) return null;
+
+  const stats = statSync(path);
+  if (!stats.isDirectory()) {
+    return {
+      path,
+      mtimeMs: stats.mtimeMs,
+    };
+  }
+
+  let newest = null;
+  for (const entry of readdirSync(path, { withFileTypes: true })) {
+    if (entry.name === 'node_modules' || entry.name === '.git' || entry.name === 'dist' || entry.name === 'dist-fast') {
+      continue;
+    }
+    const candidate = newestMtimeUnder(join(path, entry.name));
+    if (candidate && (!newest || candidate.mtimeMs > newest.mtimeMs)) newest = candidate;
+  }
+  return newest;
+}
+
+function mtimeSummary(item) {
+  return {
+    path: projectPath(item.path),
+    mtime: new Date(item.mtimeMs).toISOString(),
+  };
+}
+
+function writeLedger(reportData) {
+  mkdirSync(LEDGER_DIR, { recursive: true });
+  const latestPath = resolve(LEDGER_DIR, 'latest.json');
+  const previous = readPreviousLedger(latestPath);
+  const timestamp = (reportData.generated_at || new Date().toISOString()).replace(/[:.]/g, '-');
+  const runPath = resolve(LEDGER_DIR, `${timestamp}-loop-run.json`);
+  const trend = ledgerTrend(previous, reportData);
+
+  reportData.ledger = {
+    written: true,
+    file: projectPath(runPath),
+    latest_file: projectPath(latestPath),
+    previous_file: previous?.ledger?.file || '',
+    trend,
+  };
+
+  const payload = `${JSON.stringify(persistableReport(reportData), null, 2)}\n`;
+  const latestPayload = `${JSON.stringify(latestLedgerSummary(reportData), null, 2)}\n`;
+  writeFileSync(runPath, payload);
+  writeFileSync(latestPath, latestPayload);
+}
+
+function persistableReport(reportData) {
+  const copy = JSON.parse(JSON.stringify(reportData));
+  copy.project_dir = '.';
+  return copy;
+}
+
+function latestLedgerSummary(reportData) {
+  const copy = persistableReport(reportData);
+  return {
+    ok: copy.ok,
+    mode: copy.mode,
+    project_dir: copy.project_dir,
+    registry_path: copy.registry_path,
+    schema_version: copy.schema_version,
+    default_site_dir: copy.default_site_dir,
+    generated_at: copy.generated_at,
+    duration_ms: copy.duration_ms,
+    totals: copy.totals,
+    review: copy.review,
+    loops: (copy.loops || []).map((loop) => ({
+      id: loop.id,
+      title: loop.title,
+      status: loop.status,
+      duration_ms: loop.duration_ms,
+      attention_reasons: loop.attention_reasons || [],
+      skip_reason: loop.skip_reason || '',
+      commands: (loop.commands || []).map((command) => ({
+        label: command.label,
+        status: command.status,
+        duration_ms: command.duration_ms,
+        attention_reasons: command.attention_reasons || [],
+        build_freshness: command.build_freshness || null,
+      })),
+    })),
+    ledger: copy.ledger,
+  };
+}
+
+function readPreviousLedger(latestPath) {
+  if (!existsSync(latestPath)) return null;
+  try {
+    return JSON.parse(readFileSync(latestPath, 'utf8'));
+  } catch {
+    return null;
+  }
+}
+
+function ledgerTrend(previous, current) {
+  if (!previous?.totals) {
+    return {
+      previous_run: '',
+      status_changes: [],
+      duration_delta_ms: null,
+      totals_delta: null,
+    };
+  }
+
+  const previousLoops = new Map((previous.loops || []).map((loop) => [loop.id, loop.status]));
+  const statusChanges = (current.loops || [])
+    .filter((loop) => previousLoops.has(loop.id) && previousLoops.get(loop.id) !== loop.status)
+    .map((loop) => ({
+      loop_id: loop.id,
+      previous: previousLoops.get(loop.id),
+      current: loop.status,
+    }));
+
+  return {
+    previous_run: previous.generated_at || previous.ledger?.file || '',
+    status_changes: statusChanges,
+    duration_delta_ms: typeof previous.duration_ms === 'number' ? current.duration_ms - previous.duration_ms : null,
+    totals_delta: {
+      ok: current.totals.ok - Number(previous.totals.ok || 0),
+      attention: current.totals.attention - Number(previous.totals.attention || 0),
+      skipped: current.totals.skipped - Number(previous.totals.skipped || 0),
+    },
   };
 }
 
@@ -440,10 +732,17 @@ function collectArgumentIssues() {
   if (RUN_ALL && LOOP_IDS.length) {
     issues.push({ code: 'argument-invalid', detail: 'choose either --all or one or more --loop values' });
   }
+  if (WRITE_LEDGER && !RUN_MODE) {
+    issues.push({ code: 'argument-invalid', detail: '--write-ledger requires --run' });
+  }
 
   return issues;
 }
 
 function projectPath(path) {
   return relative(PROJECT_DIR, path).replace(/\\/g, '/');
+}
+
+function normalizeProjectPath(path) {
+  return projectPath(resolve(PROJECT_DIR, path));
 }

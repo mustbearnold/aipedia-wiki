@@ -12,7 +12,7 @@ For plain-English project state, read `.agent/CURRENT_STATUS.md` first. For comp
 - The decision content flywheel is the default repeatable loop. Use `npm run loop:next -- --json`.
 - Comparison pages must compare the same buyer job and workflow. Same primary category is necessary but not sufficient. Cross-category and different-workflow pairs are review-only and must not become published `vs` pages.
 - The selector now uses explicit workflow lanes for broad categories, including automation, image, coding, music, chatbots, video, voice, design, writing, notes, and search.
-- The multi-loop system is green. Use `npm run loop:system` to list loops and `npm run loop:all -- --json` to review all loop signals.
+- The multi-loop system is green. Use `npm run loop:system` to list loops and `npm run loop:all -- --json` to review all loop signals. Use `npm run loop:all:record -- --json` when a broad review should create durable JSON history.
 - The live comparison inventory is 46 policy-aligned pages. `scripts/guard-content.mjs` now protects it with a 41-page floor after accepted Guard Challenge review.
 - Current next selected cluster is `amazon-q-vs-github-copilot`.
 - Current build timing baseline from 2026-06-21: `npm run build:fast` has recently passed in roughly 2 to 3 minutes for normal content runs. The full loop verifier can take about 8 minutes when content, guards, script tests, build, and route QA are all touched.
@@ -49,6 +49,7 @@ Run AiPedia as a repeatable buyer-decision loop: cluster, verify, improve decisi
 - 2026-06-21: Loop hardening includes `loop:verify`, `qa:route`, `loop:record`, changed-route smart guidance, raw Markdown table rejection for changed comparison pages, executable route QA, conditional fallback builds, receipt-safe command recording, per-command timing, scoped fast-build environment handling, build-before-browser-check ordering, exact route QA replacement for safe content-only route cycles, and explicit workflow-family selection for broad categories.
 - 2026-06-21: Multi-loop registry added Decision Content, Freshness, Trust and Provenance, Revenue and Conversion, Quality Pruning, Performance and UX, and News and Market Change loops.
 - 2026-06-21: Quality Pruning cleanup deleted 19 no-shared-workflow comparison pages, removed public links, strengthened the comparison quality audit with workflow-lane enforcement, re-anchored comparison inventory fixtures through Guard Challenge records, and brought `npm run loop:all -- --json` to 7 ok / 0 attention.
+- 2026-06-21: Loop runner now reports ranked recommendations, checks built-output freshness for rendered-output loops, and can persist system loop-run JSON receipts with deltas from the previous recorded run.
 
 ## Active: Multi-Loop System
 
@@ -60,6 +61,7 @@ Keep AiPedia maintenance repeatable without turning it into bureaucracy. The loo
 
 - `npm run loop:system`: list every registered loop.
 - `npm run loop:all -- --json`: run every loop read-only.
+- `npm run loop:all:record -- --json`: run every loop and write a machine-readable run receipt.
 - `npm run loop:decision -- --json`: review the Decision Content loop.
 - `npm run loop:freshness -- --json`: review stale and due fact queues.
 - `npm run loop:trust -- --json`: review provenance and source health.
@@ -75,12 +77,13 @@ Keep AiPedia maintenance repeatable without turning it into bureaucracy. The loo
 - 2026-06-21: Revised runner after review so due-soon freshness volume is queue context, not an alarm.
 - 2026-06-21: Revised runner summaries to expose sample failures, issues, gaps, top review queue items, and top tools.
 - 2026-06-21: Freshness metadata scheduling fixed 17 missing high-volatility `next_review_at` values.
-- 2026-06-21: Latest broad review is 7 ok / 0 attention.
+- 2026-06-21: Latest broad review is 7 ok / 0 attention. The first system receipt is `.agent/loop-runs/system/latest.json`.
 
 ### Next Improvement Pass
 
-- Run the next Decision Content cycle, currently `amazon-q-vs-github-copilot`, or pick a freshness queue item if fact freshness is the higher priority.
+- Run the next Decision Content cycle, currently `amazon-q-vs-github-copilot`, or pick the top freshness queue item if fact freshness is the higher priority.
 - After each meaningful cycle, rerun the relevant loop plus `npm run loop:all -- --json` and record whether attention returns.
+- For broad loop-system reviews, use `npm run loop:all:record -- --json` so `.agent/loop-runs/system/latest.json` captures the run, recommendations, built-output freshness, and trend.
 
 ## Recommended Next: Amazon Q Vs GitHub Copilot Comparison Sprint
 

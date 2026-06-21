@@ -1,6 +1,21 @@
 {
   "schema_version": 1,
   "default_site_dir": "dist-fast/client",
+  "build_freshness_paths": [
+    "astro.config.mjs",
+    "public",
+    "src/components",
+    "src/content",
+    "src/data",
+    "src/layouts",
+    "src/lib",
+    "src/pages",
+    "src/styles"
+  ],
+  "build_freshness_ignore_paths": [
+    "src/data/aipedia-loops.json",
+    "src/data/coverage-backlog.json"
+  ],
   "loops": [
     {
       "id": "decision-content",

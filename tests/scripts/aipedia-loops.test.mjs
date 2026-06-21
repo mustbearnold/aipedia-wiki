@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { spawnSync } from 'node:child_process';
-import { mkdirSync, mkdtempSync, rmSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, rmSync, utimesSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { test } from 'node:test';
@@ -21,6 +21,7 @@ function writeRegistry(dir) {
       {
         schema_version: 1,
         default_site_dir: 'dist-fast/client',
+        build_freshness_paths: ['src/content'],
         loops: [
           {
             id: 'clean-loop',
@@ -111,6 +112,7 @@ test('aipedia loops runs fixture loops and reports attention without failing', (
     assert.equal(report.totals.skipped, 1);
     assert.deepEqual(report.review.attention_loops, ['attention-loop']);
     assert.deepEqual(report.review.skipped_loops, ['built-loop']);
+    assert.equal(report.review.recommendations[0].loop_id, 'attention-loop');
     assert.match(report.loops.find((loop) => loop.id === 'attention-loop').attention_reasons.join('\n'), /due_now=2/);
   } finally {
     rmSync(dir, { recursive: true, force: true });
@@ -129,6 +131,69 @@ test('aipedia loops can select one loop', () => {
     assert.equal(report.totals.loops, 1);
     assert.equal(report.loops[0].id, 'clean-loop');
     assert.equal(report.loops[0].status, 'ok');
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('aipedia loops marks built-output commands as attention when output is stale', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-loops-stale-build-'));
+  const registry = writeRegistry(dir);
+  const distFile = join(dir, 'dist-fast', 'client', 'index.html');
+  const sourceFile = join(dir, 'src', 'content', 'page.md');
+
+  try {
+    mkdirSync(join(dir, 'dist-fast', 'client'), { recursive: true });
+    mkdirSync(join(dir, 'src', 'content'), { recursive: true });
+    writeFileSync(distFile, '<html></html>\n');
+    writeFileSync(sourceFile, '# Page\n');
+    const oldDate = new Date(Date.now() - 60_000);
+    const newDate = new Date();
+    utimesSync(distFile, oldDate, oldDate);
+    utimesSync(sourceFile, newDate, newDate);
+
+    const result = runLoops('--json', '--run', '--loop', 'built-loop', `--project-dir=${dir}`, `--registry=${registry}`);
+    assert.equal(result.status, 0, result.stderr);
+
+    const report = JSON.parse(result.stdout);
+    const command = report.loops[0].commands[0];
+    assert.equal(report.totals.attention, 1);
+    assert.equal(report.loops[0].status, 'attention');
+    assert.equal(command.build_freshness.status, 'stale');
+    assert.match(command.attention_reasons.join('\n'), /built output stale/);
+    assert.match(report.review.recommendations[0].action, /build:fast/);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('aipedia loops can write a machine-readable run ledger', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-loops-ledger-'));
+  const registry = writeRegistry(dir);
+  const ledgerDir = join(dir, '.agent', 'loop-runs', 'system');
+
+  try {
+    const result = runLoops(
+      '--json',
+      '--run',
+      '--loop',
+      'clean-loop',
+      '--write-ledger',
+      `--ledger-dir=${ledgerDir}`,
+      `--project-dir=${dir}`,
+      `--registry=${registry}`,
+    );
+    assert.equal(result.status, 0, result.stderr);
+
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ledger.written, true);
+    assert.ok(existsSync(join(ledgerDir, 'latest.json')));
+    const timestampedRuns = readdirSync(ledgerDir).filter((name) => name.endsWith('-loop-run.json'));
+    assert.equal(timestampedRuns.length, 1);
+
+    const latest = JSON.parse(readFileSync(join(ledgerDir, 'latest.json'), 'utf8'));
+    assert.equal(latest.totals.ok, 1);
+    assert.deepEqual(latest.ledger.trend.status_changes, []);
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }

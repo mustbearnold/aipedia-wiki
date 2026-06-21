@@ -1,0 +1,280 @@
+{
+  "ok": true,
+  "mode": "loop-run",
+  "project_dir": ".",
+  "registry_path": "src/data/aipedia-loops.json",
+  "schema_version": 1,
+  "default_site_dir": "dist-fast/client",
+  "generated_at": "2026-06-21T09:33:01.196Z",
+  "duration_ms": 7627,
+  "totals": {
+    "loops": 7,
+    "ok": 7,
+    "attention": 0,
+    "skipped": 0,
+    "commands": 16
+  },
+  "review": {
+    "summary": "7 loop(s) ok; 0 skipped.",
+    "attention_loops": [],
+    "skipped_loops": [],
+    "recommendations": [
+      {
+        "loop_id": "decision-content",
+        "title": "Decision Content Flywheel",
+        "score": 74,
+        "severity": "next",
+        "confidence": "medium",
+        "effort": "large",
+        "action": "Begin the next buyer-decision cycle: amazon-q-vs-github-copilot.",
+        "reason": "top decision-content candidate"
+      },
+      {
+        "loop_id": "freshness",
+        "title": "Freshness Loop",
+        "score": 66,
+        "severity": "queue",
+        "confidence": "medium",
+        "effort": "medium",
+        "action": "Refresh due fact integration_surface on presentations-ai.",
+        "reason": "freshness queue due in 0 day(s)"
+      }
+    ],
+    "next_actions": [
+      "decision-content: Begin the next buyer-decision cycle: amazon-q-vs-github-copilot.",
+      "freshness: Refresh due fact integration_surface on presentations-ai."
+    ]
+  },
+  "loops": [
+    {
+      "id": "decision-content",
+      "title": "Decision Content Flywheel",
+      "status": "ok",
+      "duration_ms": 193,
+      "attention_reasons": [],
+      "skip_reason": "",
+      "commands": [
+        {
+          "label": "next decision cluster",
+          "status": "ok",
+          "duration_ms": 92,
+          "attention_reasons": [],
+          "build_freshness": null
+        },
+        {
+          "label": "top coverage candidates",
+          "status": "ok",
+          "duration_ms": 100,
+          "attention_reasons": [],
+          "build_freshness": null
+        }
+      ]
+    },
+    {
+      "id": "freshness",
+      "title": "Freshness Loop",
+      "status": "ok",
+      "duration_ms": 433,
+      "attention_reasons": [],
+      "skip_reason": "",
+      "commands": [
+        {
+          "label": "freshness queue",
+          "status": "ok",
+          "duration_ms": 194,
+          "attention_reasons": [],
+          "build_freshness": null
+        },
+        {
+          "label": "weekly editorial queue",
+          "status": "ok",
+          "duration_ms": 238,
+          "attention_reasons": [],
+          "build_freshness": null
+        }
+      ]
+    },
+    {
+      "id": "trust-provenance",
+      "title": "Trust And Provenance Loop",
+      "status": "ok",
+      "duration_ms": 294,
+      "attention_reasons": [],
+      "skip_reason": "",
+      "commands": [
+        {
+          "label": "provenance and pricing",
+          "status": "ok",
+          "duration_ms": 124,
+          "attention_reasons": [],
+          "build_freshness": null
+        },
+        {
+          "label": "source registry health",
+          "status": "ok",
+          "duration_ms": 73,
+          "attention_reasons": [],
+          "build_freshness": null
+        },
+        {
+          "label": "stale facts guard",
+          "status": "ok",
+          "duration_ms": 96,
+          "attention_reasons": [],
+          "build_freshness": null
+        }
+      ]
+    },
+    {
+      "id": "revenue-conversion",
+      "title": "Revenue And Conversion Loop",
+      "status": "ok",
+      "duration_ms": 2687,
+      "attention_reasons": [],
+      "skip_reason": "",
+      "commands": [
+        {
+          "label": "commercial CTA audit",
+          "status": "ok",
+          "duration_ms": 2686,
+          "attention_reasons": [],
+          "build_freshness": {
+            "status": "fresh",
+            "site_dir": "dist-fast/client",
+            "newest_output": {
+              "path": "dist-fast/client/sitemap-0.xml",
+              "mtime": "2026-06-21T08:05:32.291Z"
+            },
+            "newest_input": {
+              "path": "src/layouts/ComparisonLayout.astro",
+              "mtime": "2026-06-21T07:48:12.768Z"
+            },
+            "stale_by_ms": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "quality-pruning",
+      "title": "Quality Pruning Loop",
+      "status": "ok",
+      "duration_ms": 504,
+      "attention_reasons": [],
+      "skip_reason": "",
+      "commands": [
+        {
+          "label": "site KPI audit",
+          "status": "ok",
+          "duration_ms": 236,
+          "attention_reasons": [],
+          "build_freshness": null
+        },
+        {
+          "label": "comparison quality audit",
+          "status": "ok",
+          "duration_ms": 103,
+          "attention_reasons": [],
+          "build_freshness": null
+        },
+        {
+          "label": "internal link audit",
+          "status": "ok",
+          "duration_ms": 165,
+          "attention_reasons": [],
+          "build_freshness": null
+        }
+      ]
+    },
+    {
+      "id": "performance-ux",
+      "title": "Performance And UX Loop",
+      "status": "ok",
+      "duration_ms": 3028,
+      "attention_reasons": [],
+      "skip_reason": "",
+      "commands": [
+        {
+          "label": "dist budget",
+          "status": "ok",
+          "duration_ms": 1357,
+          "attention_reasons": [],
+          "build_freshness": {
+            "status": "fresh",
+            "site_dir": "dist-fast/client",
+            "newest_output": {
+              "path": "dist-fast/client/sitemap-0.xml",
+              "mtime": "2026-06-21T08:05:32.291Z"
+            },
+            "newest_input": {
+              "path": "src/layouts/ComparisonLayout.astro",
+              "mtime": "2026-06-21T07:48:12.768Z"
+            },
+            "stale_by_ms": 0
+          }
+        },
+        {
+          "label": "indexability audit",
+          "status": "ok",
+          "duration_ms": 1671,
+          "attention_reasons": [],
+          "build_freshness": {
+            "status": "fresh",
+            "site_dir": "dist-fast/client",
+            "newest_output": {
+              "path": "dist-fast/client/sitemap-0.xml",
+              "mtime": "2026-06-21T08:05:32.291Z"
+            },
+            "newest_input": {
+              "path": "src/layouts/ComparisonLayout.astro",
+              "mtime": "2026-06-21T07:48:12.768Z"
+            },
+            "stale_by_ms": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "news-market",
+      "title": "News And Market Change Loop",
+      "status": "ok",
+      "duration_ms": 489,
+      "attention_reasons": [],
+      "skip_reason": "",
+      "commands": [
+        {
+          "label": "news rendering guard",
+          "status": "ok",
+          "duration_ms": 164,
+          "attention_reasons": [],
+          "build_freshness": null
+        },
+        {
+          "label": "news cross-reference audit",
+          "status": "ok",
+          "duration_ms": 94,
+          "attention_reasons": [],
+          "build_freshness": null
+        },
+        {
+          "label": "weekly editorial queue",
+          "status": "ok",
+          "duration_ms": 231,
+          "attention_reasons": [],
+          "build_freshness": null
+        }
+      ]
+    }
+  ],
+  "ledger": {
+    "written": true,
+    "file": ".agent/loop-runs/system/2026-06-21T09-33-01-196Z-loop-run.json",
+    "latest_file": ".agent/loop-runs/system/latest.json",
+    "previous_file": "",
+    "trend": {
+      "previous_run": "",
+      "status_changes": [],
+      "duration_delta_ms": null,
+      "totals_delta": null
+    }
+  }
+}

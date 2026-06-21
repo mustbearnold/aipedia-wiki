@@ -15,6 +15,7 @@ Loops produce queues and attention signals. They do not replace current-source v
 - `npm run loop:system`: list every loop and its commands.
 - `npm run loop:system -- --json`: structured registry output.
 - `npm run loop:all -- --json`: run every loop read-only and return a status report.
+- `npm run loop:all:record -- --json`: run every loop and write a JSON receipt under `.agent/loop-runs/system/`.
 - `npm run loop:decision -- --json`: run the Decision Content loop checks.
 - `npm run loop:freshness -- --json`: run the Freshness loop checks.
 - `npm run loop:trust -- --json`: run the Trust and Provenance loop checks.
@@ -23,7 +24,17 @@ Loops produce queues and attention signals. They do not replace current-source v
 - `npm run loop:performance -- --json`: run the Performance and UX loop checks.
 - `npm run loop:news -- --json`: run the News and Market Change loop checks.
 
-Built-output loops depend on fresh `dist-fast/client` output. If the runner skips conversion or performance, run `npm run build:fast`, then rerun the specific loop.
+Built-output loops depend on fresh `dist-fast/client` output. If the runner skips conversion or performance, run `npm run build:fast`, then rerun the specific loop. If the runner marks built output as stale, do the same before trusting rendered-output audits.
+
+## What The Runner Reports
+
+`npm run loop:all -- --json` now includes:
+
+- `review.recommendations`: ranked next actions with score, severity, confidence, effort, action, and reason.
+- `build_freshness`: per-command freshness status for built-output loops.
+- `review.next_actions`: the shortest human-readable action list derived from the ranked recommendations.
+
+Use `npm run loop:all:record -- --json` after meaningful broad reviews. It writes a timestamped JSON receipt and `.agent/loop-runs/system/latest.json`, including deltas from the previous recorded run. Do not use it for every casual check.
 
 ## Loops
 
@@ -74,10 +85,11 @@ Primary output: news rendering issues, recent news cross-reference gaps, and edi
 After running one or more loops:
 
 1. Check which loops are `attention`, `ok`, or `skipped`.
-2. For every `attention` loop, decide whether the signal is real work, known debt, noisy configuration, or a missing prerequisite.
-3. Revise the loop only when the signal is noisy, unclear, or hard for future agents to act on.
-4. Fix site content only when the loop points at a real user-facing issue and current-source verification has been done.
-5. Record major outcomes in `.agent/CURRENT_STATUS.md`, `.agent/PLANS.md`, `.agent/WORK_LOG.md`, and `.agent/loop-runs/` when a content cycle or major maintenance batch completes.
+2. Read `review.recommendations` before deciding what to do next. A green run can still have a best next action.
+3. For every `attention` loop, decide whether the signal is real work, known debt, noisy configuration, stale built output, or a missing prerequisite.
+4. Revise the loop only when the signal is noisy, unclear, or hard for future agents to act on.
+5. Fix site content only when the loop points at a real user-facing issue and current-source verification has been done.
+6. Record major outcomes in `.agent/CURRENT_STATUS.md`, `.agent/PLANS.md`, `.agent/WORK_LOG.md`, and `.agent/loop-runs/` when a content cycle or major maintenance batch completes.
 
 ## Closeout Standard
 
@@ -87,7 +99,9 @@ A loop-system change is done only when:
 - `npm run loop:all -- --json` runs without runner errors.
 - Attention signals are understandable and actionable.
 - Skipped loops explain the missing prerequisite.
+- Built-output loops report whether `dist-fast/client` is fresh, stale, or unavailable.
+- Broad review passes can be recorded with `npm run loop:all:record -- --json`.
 - Focused tests for `scripts/aipedia-loops.mjs` pass.
 - `.agent` status docs say which loop to run next.
 
-Latest baseline: 2026-06-21 broad review is 7 ok / 0 attention after the Quality Pruning workflow-policy cleanup.
+Latest baseline: 2026-06-21 broad review is 7 ok / 0 attention after the loop recommendation and build-freshness hardening.

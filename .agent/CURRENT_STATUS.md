@@ -18,7 +18,7 @@ Local ignored docs, old specs, and archived plans are not canonical when they co
 
 AiPedia is back on the normal Decision Content Flywheel. The TanStack rebuild idea is not active.
 
-The loop system is now healthy. `npm run loop:all -- --json` reports 7 ok loops and 0 attention loops across Decision Content, Freshness, Trust and Provenance, Revenue and Conversion, Quality Pruning, Performance and UX, and News and Market Change.
+The loop system is now healthy and more useful than a simple pass/fail dashboard. `npm run loop:all -- --json` reports 7 ok loops and 0 attention loops across Decision Content, Freshness, Trust and Provenance, Revenue and Conversion, Quality Pruning, Performance and UX, and News and Market Change. The runner now also emits ranked recommendations and checks whether built-output loops are using fresh `dist-fast/client` output.
 
 The comparison policy is strict: publish direct comparison pages only when tools serve the same buyer job and workflow. Same primary category is necessary, but not enough by itself. Do not create or keep `vs` pages for tools in different categories or for same-category tools that solve different workflows. Use category pages, buyer guides, alternatives sections, and internal-link blocks for those relationships instead.
 
@@ -37,6 +37,11 @@ The next selected Decision Content candidate is `amazon-q-vs-github-copilot`.
   - Added focused tests for shared-lane pass and no-shared-lane fail.
   - Re-anchored the content inventory guard from 60 to 41 comparisons through an accepted Guard Challenge, matching 46 live comparisons minus the existing five-page safety margin.
   - Added wrapping for long comparison-body links in `src/layouts/ComparisonLayout.astro`, fixing 360 px route QA overflow on Decktopus comparison pages.
+- Loop system hardening:
+  - Added ranked `review.recommendations` and short `review.next_actions` to `scripts/aipedia-loops.mjs`, so green runs still explain the best next move.
+  - Added built-output freshness checks for Conversion and Performance/UX loop commands that depend on `dist-fast/client`.
+  - Added `npm run loop:all:record`, which writes timestamped JSON receipts and `.agent/loop-runs/system/latest.json`.
+  - Recorded the first system-level loop receipt at `.agent/loop-runs/system/latest.json`.
 - Multi-loop system:
   - Added `src/data/aipedia-loops.json`, `scripts/aipedia-loops.mjs`, `.agent/LOOPS.md`, and npm aliases for all seven loops.
   - Tuned loop summaries so attention signals show actionable samples and due-soon freshness work is queue context, not a false alarm.
@@ -60,8 +65,10 @@ The next selected Decision Content candidate is `amazon-q-vs-github-copilot`.
   - Update source fields, `last_verified`, affected parent hubs, and the ledger in the same change.
 - Multi-Loop Review:
   - Use `npm run loop:all -- --json` for broad loop review.
+  - Use `npm run loop:all:record -- --json` when a broad review should become durable run history.
   - Current attention signals: none.
-  - Current next decision cluster: `amazon-q-vs-github-copilot`.
+  - Current top ranked recommendation: begin `amazon-q-vs-github-copilot`.
+  - Current second ranked recommendation: refresh the `integration_surface` fact on `presentations-ai`.
   - Current freshness queue starts with due-soon facts for `presentations-ai`, `minimax`, `claude`, and `gemini`; treat due-soon as queue context, not failure.
 - Phase 3 Parallel Surface Agent Orchestration:
   - Planned but not executed on `master`.
@@ -73,6 +80,7 @@ Latest completed maintenance batch checks:
 
 - `npm run loop:quality -- --json`
 - `npm run loop:all -- --json`
+- `npm run loop:all:record -- --json`
 - `node scripts/audit-coverage-quality.mjs --all --json`
 - `node scripts/guard-content.mjs --baseline --dry-run --json`
 - `node scripts/guard-content.mjs --json`

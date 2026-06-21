@@ -48,6 +48,7 @@
     "editorial:weekly": "node scripts/editorial-weekly-queue.mjs --window-days 30 --limit 50",
     "loop:system": "node scripts/aipedia-loops.mjs",
     "loop:all": "node scripts/aipedia-loops.mjs --all --run",
+    "loop:all:record": "node scripts/aipedia-loops.mjs --all --run --write-ledger",
     "loop:decision": "node scripts/aipedia-loops.mjs --loop decision-content --run",
     "loop:freshness": "node scripts/aipedia-loops.mjs --loop freshness --run",
     "loop:trust": "node scripts/aipedia-loops.mjs --loop trust-provenance --run",

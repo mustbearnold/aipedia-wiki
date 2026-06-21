@@ -30,6 +30,16 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 
 ## Entries
 
+### 2026-06-21: Loop Runner Recommendation And Ledger Hardening
+
+- Status: Complete.
+- Commit: this commit.
+- Branch: `master`.
+- Changed: Added ranked loop recommendations, built-output freshness checks, and opt-in system loop-run JSON receipts to `scripts/aipedia-loops.mjs`; added `npm run loop:all:record`; updated the loop registry with build freshness watch paths and ignored non-rendering loop data; added focused runner tests for stale builds and ledger writes; recorded the first `.agent/loop-runs/system/latest.json`; and updated README, script docs, and `.agent` operating docs.
+- Verification: `node --test tests/scripts/aipedia-loops.test.mjs`; `npm run loop:all -- --json`; `npm run loop:all:record -- --json`.
+- Residual risks: The system receipt is intentionally opt-in so casual loop checks remain read-only. Build freshness compares filesystem mtimes, so a clean rebuild is still the best answer when rendered-output confidence matters.
+- Next: Use the ranked recommendation from the latest system receipt: begin `amazon-q-vs-github-copilot`, or refresh the top due freshness item if fact freshness is higher priority.
+
 ### 2026-06-21: Quality Pruning Workflow Policy Cleanup
 
 - Status: Complete.

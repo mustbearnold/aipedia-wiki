@@ -11,7 +11,8 @@ Scripts are operator tools for keeping AiPedia current, source-backed, buildable
 - `npm run typecheck`: Astro typecheck gate for active Astro/server surfaces; `tsconfig.typecheck.json` keeps the legacy global search client scripts and archived `.legacy.astro` files as documented baseline debt until the search rewrite is typed.
 - `npm run ops:dashboard`: read-only branch, worktree, PR/issue, and optional audit summary for daily operations.
 - `npm run loop:system`: lists every registered AiPedia operating loop and its read-only commands.
-- `npm run loop:all`: runs every registered loop read-only and reports `ok`, `attention`, or `skipped`.
+- `npm run loop:all`: runs every registered loop read-only and reports `ok`, `attention`, `skipped`, ranked recommendations, and built-output freshness for rendered-output loops.
+- `npm run loop:all:record`: runs every registered loop and writes a JSON receipt plus `latest.json` under `.agent/loop-runs/system/`.
 - `npm run loop:next`: read-only decision-content flywheel brief for the next buyer-intent cluster.
 - `npm run loop:verify`: date-stable verifier for a decision-content cycle; sets `AIPEDIA_LEDGER_DATE`, runs focused checks, records per-command timing, builds when a route or `--force-build` needs it, and can call route QA.
 - `npm run loop:record`: writes a durable `.agent/loop-runs/` receipt after a cycle.
@@ -26,7 +27,7 @@ Scripts are operator tools for keeping AiPedia current, source-backed, buildable
 
 - `guard-*.mjs`: fail-fast editorial and policy guards.
 - `audit-*.mjs`: source, SEO, conversion, data, command, freshness, and quality checks.
-- `aipedia-loops.mjs`: shared loop registry runner for Decision Content, Freshness, Trust, Conversion, Quality Pruning, Performance/UX, and News/Market loops. Loop definitions live in `src/data/aipedia-loops.json`.
+- `aipedia-loops.mjs`: shared loop registry runner for Decision Content, Freshness, Trust, Conversion, Quality Pruning, Performance/UX, and News/Market loops. Loop definitions live in `src/data/aipedia-loops.json`. Use `--write-ledger` only for deliberate broad-review receipts.
 - `decision-loop.mjs`: chooses the next same-buyer-job cluster and prints the source, working-set, related-surface discovery, mobile and desktop route QA, verification, and recording brief. It skips blocked or review-only false-vs candidates from `src/data/comparison-policy.json`.
 - `loop-verify.mjs`: executes the loop verification plan with one explicit ledger date so timezone differences do not break ledger, guard, or build checks. It delegates overlapping checks to `check-smart:run`, records per-command durations, and only adds fallback `build:fast` for route QA or `--force-build`.
 - `loop-record.mjs`: creates `.agent/loop-runs/YYYY-MM-DD-slug.md` receipts for completed or attempted cycles.
