@@ -30,6 +30,16 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 
 ## Entries
 
+### 2026-06-21: Freshness Metadata Scheduling
+
+- Status: Complete.
+- Commit: this commit.
+- Branch: `master`.
+- Changed: Added missing `next_review_at` values to 17 high-volatility fact records across nine touched tool pages, backfilled missing `price_history[*].verified_at` metadata on those same touched pages from each page's existing `last_verified`, regenerated `PAGE_REFRESH_LEDGER.md`, and recorded `.agent/loop-runs/2026-06-21-freshness-metadata-scheduling.md`.
+- Verification: `npm run loop:freshness -- --json`; `npm run loop:all -- --json`; `npm run ledger:pages:check -- --date 2026-06-21`; `node scripts/audit-provenance-pricing.mjs --json --changed-file <nine changed tool pages>`; `node scripts/guard-em-dashes.mjs`; `git diff --check`; `npm run check:smart:run -- --path <nine changed tool pages> --path PAGE_REFRESH_LEDGER.md`.
+- Residual risks: This was scheduling/provenance metadata only, not a fresh source re-verification pass. The broad loop review now has one remaining attention loop: Quality Pruning, with 62 existing all-comparison quality failures.
+- Next: Start the Quality Pruning cleanup batch, especially raw Markdown tables and missing required comparison sections.
+
 ### 2026-06-21: AiPedia Multi-Loop System
 
 - Status: Complete.

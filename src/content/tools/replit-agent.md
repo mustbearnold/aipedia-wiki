@@ -10,7 +10,7 @@ pricing_model: freemium
 price_range: "$0-$100/month + usage credits; Enterprise custom"
 status: active
 launched: 2024-09
-last_updated: 2026-06-20
+last_updated: 2026-06-21
 last_verified: 2026-06-20
 update_frequency: monthly
 affiliate:
@@ -110,6 +110,7 @@ facts:
     verified_at: 2026-06-20
     volatility: high
     confidence: high
+    next_review_at: 2026-06-28
   coding_agent:
     value: "Yes: Agent builds and edits apps in the browser, can test its own work, create tasks, use modes, call web search, apply skills/custom instructions, and work with Replit projects, previews, databases, auth, publishing, and connected services."
     source: "https://docs.replit.com/references/agent/overview"

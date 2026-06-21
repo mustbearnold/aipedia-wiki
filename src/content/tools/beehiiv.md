@@ -14,7 +14,7 @@ pricing_model: freemium
 price_range: "$0-$109+/month"
 status: active
 launched: 2021-11
-last_updated: 2026-06-18
+last_updated: 2026-06-21
 last_verified: 2026-06-18
 update_frequency: monthly
 affiliate:
@@ -74,6 +74,7 @@ facts:
     verified_at: '2026-06-18'
     volatility: high
     confidence: high
+    next_review_at: '2026-06-25'
   product_updates:
     value: Recent product updates added MCP v2, MCP write access, webinars, podcast pages and hosting, Automations v4, On-Demand Ads, Dynamic Content, digital products v2, and broader media-library and website-builder controls.
     source: https://product.beehiiv.com/
@@ -82,6 +83,7 @@ facts:
     verified_at: '2026-06-18'
     volatility: high
     confidence: high
+    next_review_at: '2026-06-25'
   watch_out_for:
     value: Choose beehiiv for the newsletter operating system and MCP-connected creator workflow, not just AI copy; teams needing CRM-native lifecycle marketing, fixed production APIs, or one-click AI publishing should still compare HubSpot, Customer.io, Kit, or a custom stack.
     source: https://www.beehiiv.com/pricing
@@ -114,6 +116,7 @@ price_history:
     source: "https://www.beehiiv.com/pricing"
     source_label: "Source"
     source_id: beehiiv-pricing
+    verified_at: 2026-06-18
     note: "Free tier verified. Up to 2,500 subscribers, includes core publishing and referral tools."
   - date: 2026-04-15
     plan: "Scale / Max"
@@ -121,6 +124,7 @@ price_history:
     source: "https://www.beehiiv.com/pricing"
     source_label: "Source"
     source_id: beehiiv-pricing
+    verified_at: 2026-06-18
     note: "Paid tiers verified against beehiiv.com/pricing. Price scales with subscriber count."
   - date: 2026-05-13
     plan: "Scale / Max"
@@ -128,6 +132,7 @@ price_history:
     source: "https://www.beehiiv.com/pricing"
     source_label: "Source"
     source_id: beehiiv-pricing
+    verified_at: 2026-06-18
     note: "Repricing verified 2026-05-13. Scale now $43/mo ($517/yr), Max $96/mo ($1,151/yr); both tiers cap at 100,000 subscribers. Beehiiv now advertises a 0% take rate on paid subscription revenue and bundles Boosts plus Ad Network into Scale. Max-only adds branding removal, audio newsletters, up to 10 publications, unlimited team seats."
   - date: 2026-06-18
     plan: "Launch / Scale / Max / Enterprise"
@@ -135,6 +140,7 @@ price_history:
     source: "https://www.beehiiv.com/pricing"
     source_label: "Source"
     source_id: beehiiv-pricing
+    verified_at: 2026-06-18
     note: "June refresh confirmed Launch stays free to 2,500 subscribers, monthly paid billing starts at $49/month, annual starting prices still show Scale at $43/month and Max at $96/month, and Enterprise remains custom. The bigger buyer change is MCP write access on paid plans and all-user read access."
 ---
 

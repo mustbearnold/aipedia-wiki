@@ -12,7 +12,7 @@ pricing_model: paid
 price_range: $21-$790/month public self-serve; monthly billing higher
 status: active
 launched: 2022-07
-last_updated: 2026-06-18
+last_updated: 2026-06-21
 last_verified: 2026-06-18
 update_frequency: monthly
 affiliate:
@@ -86,6 +86,7 @@ facts:
     verified_at: 2026-06-18
     volatility: high
     confidence: high
+    next_review_at: 2026-06-25
   api_scope:
     value: "Castmagic's public docs describe a JSON transcription API with speaker diarization and English plus 17 additional languages, while content generation is still described as in development."
     source: "https://docs.castmagic.io/"
@@ -94,6 +95,7 @@ facts:
     verified_at: 2026-06-18
     volatility: high
     confidence: medium
+    next_review_at: 2026-06-25
   affiliate_program:
     value: "Castmagic publishes a FirstPromoter affiliate program with 30% recurring commissions and a 90-day cookie window, subject to approval and affiliate terms."
     source: "https://castmagic.firstpromoter.com/"
@@ -102,6 +104,7 @@ facts:
     verified_at: 2026-06-18
     volatility: high
     confidence: high
+    next_review_at: 2026-06-25
 tags: [podcast, content-creation, transcription, show-notes, blog-generation, social-posts, newsletter, repurposing, ai-writing]
 seo_title: 'Castmagic: Features, Pricing & Review (June 2026)'
 meta_description: >-
@@ -133,6 +136,7 @@ price_history:
     source: "https://www.castmagic.io/pricing"
     source_label: "Castmagic pricing"
     source_id: castmagic-pricing
+    verified_at: 2026-06-18
     note: "Re-verified public annual-billing plan cards, 10M+ minutes processed proof point, and 100-content-assets marketing claim."
   - date: 2026-06-18
     plan: "Hobby / Starter / Business / Scale"
@@ -140,6 +144,7 @@ price_history:
     source: "https://www.castmagic.io/pricing"
     source_label: "Castmagic pricing"
     source_id: castmagic-pricing
+    verified_at: 2026-06-18
     note: "Re-verified current plan cards, 5/20/80 monthly transcription-hour quotas, 5/10/20 included seats, 10GB max file size, 5 concurrent uploads, integrations, media library, Studio clipping/audiograms, and custom Scale path."
   - date: 2026-05-13
     plan: "Starter"

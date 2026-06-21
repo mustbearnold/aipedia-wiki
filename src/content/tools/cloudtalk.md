@@ -11,7 +11,7 @@ pricing_model: paid
 price_range: "EUR 19-EUR 49/user/month annual; AI Conversation Intelligence EUR 9/user/month; AI Voice Agents from EUR 99/month; dialer and caller-ID add-ons extra"
 status: active
 launched: 2016
-last_updated: 2026-06-18
+last_updated: 2026-06-21
 last_verified: 2026-06-18
 update_frequency: monthly
 best_plan: "Essential or Expert plus AI Conversation Intelligence; pilot AI Receptionist before AI Specialist"
@@ -56,6 +56,7 @@ facts:
     verified_at: 2026-06-18
     volatility: high
     confidence: high
+    next_review_at: 2026-06-25
   ai_conversation_intelligence:
     value: "AI Conversation Intelligence is a EUR 9/user/month add-on for summaries, searchable transcripts, AI notes, topic extraction, trending topics, talk/listen ratio, customer sentiment, call scoring, PDF export, and CRM export."
     source: "https://www.cloudtalk.io/pricing/"
@@ -64,6 +65,7 @@ facts:
     verified_at: 2026-06-18
     volatility: high
     confidence: high
+    next_review_at: 2026-06-25
   ai_voice_agents:
     value: "CloudTalk now separates AI Voice Agents into AI Receptionist for 24/7 inbound front-desk coverage and AI Specialist for end-to-end support, sales, billing, and operations workflows, with 60+ languages and accents, customizable skills, personalized data use, and system integrations."
     source: "https://www.cloudtalk.io/ai-voice-agents/"
@@ -72,6 +74,7 @@ facts:
     verified_at: 2026-06-18
     volatility: high
     confidence: high
+    next_review_at: 2026-06-25
   integrations:
     value: "CloudTalk's current navigation highlights 95+ standard CRM, helpdesk, and ATS integrations on the pricing page and 100+ integrations across the site, including HubSpot, Pipedrive, Zoho CRM, Salesforce, MS Dynamics, Odoo, Intercom, Zendesk, Salesloft, Outreach, Bullhorn, Monday, Shopify, and Microsoft Teams."
     source: "https://www.cloudtalk.io/pricing/"
@@ -88,6 +91,7 @@ facts:
     verified_at: 2026-06-18
     volatility: high
     confidence: high
+    next_review_at: 2026-06-25
 tags: [business-phone-system, call-center, sales-calling, support, ai-voice-agents, conversation-intelligence, crm, dialer, voip]
 seo_title: "CloudTalk Review (June 2026): AI Phone System, Pricing, Voice Agents"
 meta_description: "CloudTalk review updated June 18, 2026: current Lite, Starter, Essential, Expert pricing, AI Conversation Intelligence, AI Receptionist, AI Specialist, dialer add-ons, caller ID, spam remediation, and best plan."

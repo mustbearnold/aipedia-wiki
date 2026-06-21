@@ -72,10 +72,10 @@ Keep AiPedia maintenance repeatable without turning it into bureaucracy. The loo
 - 2026-06-21: First run found two attention loops: Freshness and Quality Pruning.
 - 2026-06-21: Revised runner after review so due-soon freshness volume is queue context, not an alarm.
 - 2026-06-21: Revised runner summaries to expose sample failures, issues, gaps, top review queue items, and top tools.
+- 2026-06-21: Freshness metadata scheduling fixed 17 missing high-volatility `next_review_at` values and changed the broad review to 6 ok / 1 attention.
 
 ### Next Improvement Pass
 
-- Freshness: schedule or fix 17 high-volatility facts missing `next_review_at`.
 - Quality Pruning: run `npm run loop:quality -- --json`, then fix or triage the 62 comparison-quality failures.
 - After each cleanup batch, rerun `npm run loop:all -- --json` and record whether attention dropped.
 

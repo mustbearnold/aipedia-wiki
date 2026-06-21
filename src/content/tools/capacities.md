@@ -10,7 +10,7 @@ pricing_model: freemium
 price_range: "Free; Pro/Believer pricing is region-rendered"
 status: active
 launched: 2021-06
-last_updated: 2026-06-18
+last_updated: 2026-06-21
 last_verified: 2026-06-18
 update_frequency: monthly
 affiliate:
@@ -58,6 +58,7 @@ facts:
     verified_at: 2026-06-18
     volatility: high
     confidence: high
+    next_review_at: 2026-06-25
   connector_surface:
     value: "AI Chat Connectors are a Pro beta that lets ChatGPT, Claude, Cursor, Le Chat, and other MCP-compatible tools search notes, read objects, add content to the daily note, and link objects in responses."
     source: "https://docs.capacities.io/reference/ai-chat-connectors"
@@ -66,6 +67,7 @@ facts:
     verified_at: 2026-06-18
     volatility: high
     confidence: high
+    next_review_at: 2026-06-25
   recent_product_change:
     value: "Release 64 added recurring tasks and AI model-provider choice across OpenAI, Gemini, Anthropic, Mistral, and xAI, with visibility into EU-hosted models and model budget usage."
     source: "https://capacities.io/whats-new/release-64/"
@@ -74,6 +76,7 @@ facts:
     verified_at: 2026-06-18
     volatility: high
     confidence: high
+    next_review_at: 2026-06-25
   watch_out_for:
     value: "The object-first model has a learning curve; users who mainly want plain Markdown files or maximum plugin extensibility may prefer Obsidian."
     source: "https://docs.capacities.io/"
@@ -104,6 +107,7 @@ price_history:
     source: "https://capacities.io/pricing"
     source_label: "Source"
     source_id: capacities-pricing
+    verified_at: 2026-06-18
     note: "Added AI assistant to Pro tier"
   - date: 2026-04-15
     plan: "Believer"
@@ -111,6 +115,7 @@ price_history:
     source: "https://capacities.io/pricing"
     source_label: "Source"
     source_id: capacities-pricing
+    verified_at: 2026-06-18
     note: "Verified unchanged"
   - date: 2026-05-13
     plan: "Pro / Believer"
@@ -118,6 +123,7 @@ price_history:
     source: "https://capacities.io/pricing"
     source_label: "Source"
     source_id: capacities-pricing
+    verified_at: 2026-06-18
     note: "Re-verified. Release 64 added AI provider choice (ChatGPT/Claude/Cursor); Release 62 shipped AI Chat Connectors. No price change."
   - date: 2026-06-02
     plan: "Free / Pro / Believer"
@@ -125,6 +131,7 @@ price_history:
     source: "https://capacities.io/pricing"
     source_label: "Capacities pricing"
     source_id: capacities-pricing
+    verified_at: 2026-06-18
     note: "Public pricing page rendered Free with unlimited spaces, objects, blocks, and custom object types; Pro adds AI assistant and unlimited media uploads. Local crawl rendered NZ$15.99/mo Pro and from NZ$18.99/mo Believer."
   - date: 2026-06-18
     plan: "Free / Pro / Believer"
@@ -132,6 +139,7 @@ price_history:
     source: "https://capacities.io/pricing/"
     source_label: "Capacities pricing"
     source_id: capacities-pricing
+    verified_at: 2026-06-18
     note: "Pricing page text confirms the core product remains free, but detailed Pro and Believer prices are region-rendered. Release 64 added AI provider choice; Release 62 and docs keep AI Chat Connectors as a Pro beta."
 ---
 

@@ -12,7 +12,7 @@ pricing_model: freemium
 price_range: $0-$199.99/month
 status: active
 launched: 2023-03
-last_updated: 2026-06-15
+last_updated: 2026-06-21
 last_verified: 2026-06-15
 update_frequency: monthly
 affiliate:
@@ -140,6 +140,7 @@ facts:
     verified_at: 2026-06-15
     volatility: high
     confidence: high
+    next_review_at: 2026-06-22
   open_source_or_local:
     value: "No: Adobe Firefly is proprietary hosted Adobe software"
     source: "https://www.adobe.com/products/firefly.html"
@@ -191,6 +192,7 @@ price_history:
     source: "https://www.adobe.com/products/firefly/plans.html"
     source_label: "Adobe Firefly plans"
     source_id: adobe-firefly-pricing
+    verified_at: 2026-06-15
     note: "Verified current Standard plan with 2,000 monthly credits and premium-feature credit deduction."
   - date: 2026-06-15
     plan: "Pro"
@@ -198,6 +200,7 @@ price_history:
     source: "https://www.adobe.com/products/firefly/plans.html"
     source_label: "Adobe Firefly plans"
     source_id: adobe-firefly-pricing
+    verified_at: 2026-06-15
     note: "Verified current Pro plan with 4,000 monthly credits, Photoshop web/mobile, Express Premium, and first-year unlimited generations on select models."
   - date: 2026-06-15
     plan: "Pro Plus"
@@ -205,6 +208,7 @@ price_history:
     source: "https://www.adobe.com/products/firefly/plans.html"
     source_label: "Adobe Firefly plans"
     source_id: adobe-firefly-pricing
+    verified_at: 2026-06-15
     note: "Verified current Pro Plus regular price, promo price, 10,000 monthly credits, and broader 1K/2K image plus select-video unlimited-generation language."
   - date: 2026-06-15
     plan: "Premium"
@@ -212,6 +216,7 @@ price_history:
     source: "https://www.adobe.com/products/firefly/plans.html"
     source_label: "Adobe Firefly plans"
     source_id: adobe-firefly-pricing
+    verified_at: 2026-06-15
     note: "Verified current Premium regular price, promo price, 50,000 monthly credits, unlimited Firefly Video Model access, and broader 4K/partner-model access language."
 ---
 

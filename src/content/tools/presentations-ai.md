@@ -11,7 +11,7 @@ pricing_model: freemium
 price_range: "$0-$100/month billed annually; Enterprise custom"
 status: active
 launched: 2022-01
-last_updated: 2026-06-12
+last_updated: 2026-06-21
 last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
@@ -59,6 +59,7 @@ facts:
     verified_at: 2026-06-12
     volatility: high
     confidence: medium
+    next_review_at: 2026-06-21
   watch_out_for:
     value: "The current English pricing page has replaced older Public Beta and $198/year Pro claims; verify the live checkout and local pricing before quoting old annual offers."
     source: "https://www.presentations.ai/pricing"
@@ -91,6 +92,7 @@ price_history:
     source: "https://www.presentations.ai/pricing"
     source_label: "Presentations.AI pricing"
     source_id: presentations-ai-pricing
+    verified_at: 2026-06-12
     note: "Historical AiPedia snapshot; superseded by the June 5, 2026 English pricing-page refresh."
   - date: 2026-06-05
     plan: "Starter"

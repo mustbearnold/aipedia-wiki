@@ -56,6 +56,11 @@ Run `git status --short --branch` and `git log --oneline -5` before starting. Th
   - Added `.agent/LOOPS.md` as the human guide.
   - First run showed two real attention signals: Freshness metadata debt and comparison-quality debt.
   - Revised the loop runner after the first run so due-soon freshness work stays queue context and JSON summaries expose sample failures, issues, gaps, and top queue items.
+- Freshness metadata scheduling:
+  - Added missing `next_review_at` metadata for 17 high-volatility fact records across nine touched tool pages.
+  - Backfilled missing `price_history[*].verified_at` values on those touched pages from each page's existing `last_verified`.
+  - Left fact text and `last_verified` unchanged because this was scheduling/provenance metadata, not fresh source re-verification.
+  - Recorded `.agent/loop-runs/2026-06-21-freshness-metadata-scheduling.md`.
 
 ## Active Work
 
@@ -71,7 +76,8 @@ Run `git status --short --branch` and `git log --oneline -5` before starting. Th
   - Update source fields, `last_verified`, affected parent hubs, and the ledger in the same change.
 - Multi-Loop Review:
   - Use `npm run loop:all -- --json` for broad loop review.
-  - Current attention signals: `freshness` reports 17 high-volatility facts missing `next_review_at`; `quality-pruning` reports 62 comparison-quality failures.
+  - Current attention signals: `quality-pruning` reports 62 comparison-quality failures.
+  - Freshness is currently ok: `high_volatility_missing_next_review` is 0.
   - The next cleanup batch should use `npm run loop:quality -- --json` and focus on raw Markdown tables, missing required comparison sections, thin pages, and missing tool links.
 - Phase 3 Parallel Surface Agent Orchestration:
   - Planned but not executed on `master`.
@@ -102,6 +108,9 @@ Latest completed cycle checks:
 - `npm run audit:commands`
 - `npm run check:quick`
 - `npm run loop:record -- --date 2026-06-21 --slug aipedia-loop-system-buildout --status complete`
+- `npm run loop:freshness -- --json`
+- `node scripts/audit-provenance-pricing.mjs --json --changed-file <nine changed tool pages>`
+- `npm run check:smart:run -- --path <nine changed tool pages> --path PAGE_REFRESH_LEDGER.md`
 
 The final `loop:verify` pass exited 0 and took about 8 minutes for this mixed content, guard, build, and route-QA cycle.
 
@@ -109,7 +118,7 @@ The final `loop:verify` pass exited 0 and took about 8 minutes for this mixed co
 
 - Five preexisting live comparison pages remain under the thin-content word threshold and should be refreshed in a future quality pass: `freepik-vs-midjourney`, `neuronwriter-vs-surfer-seo`, `ideogram-vs-stable-diffusion`, `freepik-vs-ideogram`, and `adobe-firefly-vs-freepik`.
 - The new Quality Pruning loop sees broader comparison-quality debt than the older KPI caveat: 62 all-comparison failures, mostly raw Markdown tables, missing required sections, missing tool links, and thin page bodies.
-- The new Freshness loop reports 17 high-volatility facts missing `next_review_at`; schedule these rather than treating them as newly verified facts.
+- The Freshness loop no longer reports missing `next_review_at` metadata, but the top queue still has due-soon facts. Treat due-soon as review queue context, not as proof that facts are newly verified.
 - Historical work-log and archive entries mention deleted comparison routes. Treat those as history, not live routing guidance.
 - The provenance backfill on older changed tool pages used existing page verification dates. Only Activepieces/Zapier facts were freshly browsed for the latest cycle.
 - Full local verifier runs are reliable but slow. Prefer `npm run check:smart`, focused tests, `npm run build:fast`, and exact `qa:route` unless a full pre-ship gate is needed.

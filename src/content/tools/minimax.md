@@ -11,7 +11,7 @@ pricing_model: freemium
 price_range: "Free - $0.30/$1.20 per 1M tokens (M3 standard <=512K input)"
 status: active
 launched: 2021-12
-last_updated: 2026-06-12
+last_updated: 2026-06-21
 last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
@@ -34,6 +34,7 @@ facts:
     verified_at: 2026-06-12
     volatility: high
     confidence: high
+    next_review_at: 2026-06-21
   pricing_anchor:
     value: "MiniMax-M3 standard pay-as-you-go is listed at $0.30/M input tokens and $1.20/M output tokens for <=512K input tokens; >512K input and Priority service tiers are listed with limited/early access caveats."
     source: "https://platform.minimax.io/docs/guides/pricing-paygo"
