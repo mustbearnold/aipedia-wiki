@@ -5,7 +5,7 @@
 - Status: complete
 - Route: /compare/activepieces-vs-zapier/
 - Branch: master
-- Commit: Not recorded
+- Commit: b2fd03c5
 
 ## Changed Files
 

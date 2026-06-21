@@ -32,8 +32,8 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 
 ### 2026-06-21: Activepieces Vs Zapier Loop Cycle And Selector Hardening
 
-- Status: Complete locally.
-- Commit: this commit.
+- Status: Complete and pushed.
+- Commit: `b2fd03c5`.
 - Branch: `master`.
 - Changed: Added `src/content/comparisons/activepieces-vs-zapier.md`; refreshed Activepieces and Zapier current June 2026 facts where verified; expanded `src/data/comparison-policy.json` with explicit workflow-family lanes for broad categories; regenerated `src/data/coverage-backlog.json`; repaired post-cleanup guard and test fixtures through an accepted Guard Challenge; converted changed live comparison tables to mobile-safe stacked bullets; backfilled missing historical `price_history[*].verified_at` values on changed tool pages from each page's existing `last_verified`; added missing provenance metadata discovered by changed-file audits; fixed 360 px overflow on `/tools/pika/`; and recorded `.agent/loop-runs/2026-06-21-activepieces-vs-zapier.md`.
 - Verification: `node --test tests/scripts/audit-site-kpis.test.mjs tests/scripts/guard-content.test.mjs tests/scripts/guard-stale-facts.test.mjs tests/scripts/check-smart.test.mjs tests/scripts/loop-hardening.test.mjs`; `node --test tests/scripts/audit-coverage-gaps.test.mjs tests/scripts/decision-loop.test.mjs`; `npm run guard:challenge:check`; `npm run coverage:backlog`; `npm run coverage:next -- --json --count 20`; `npm run loop:next -- --json`; `node scripts/audit-provenance-pricing.mjs --json --changed-file <changed tool paths>`; `node scripts/audit-coverage-quality.mjs --changed-file <changed live comparison paths>`; `npm run build:fast`; `npm run qa:route -- --route /tools/pika/ --widths 360 --site-dir dist-fast/client`; `npm run loop:verify -- --date 2026-06-21 --slug activepieces-vs-zapier --route /compare/activepieces-vs-zapier/ --paths <changed paths> --json`.

@@ -20,9 +20,9 @@ AiPedia is back on the normal Decision Content Flywheel. The TanStack rebuild id
 
 The comparison policy is now strict: publish direct comparison pages only when tools serve the same buyer job and workflow. Same primary category is necessary, but not enough by itself. Do not create or keep `vs` pages for tools in different categories or for same-category tools that solve different workflows. Use category pages, buyer guides, alternatives sections, and internal-link blocks for those relationships instead.
 
-The latest completed loop cycle is `activepieces-vs-zapier`. It passed the full loop verifier for `/compare/activepieces-vs-zapier/` on 2026-06-21. The next selector candidate is `amazon-q-vs-github-copilot`.
+The latest completed loop cycle is `activepieces-vs-zapier`. It passed the full loop verifier for `/compare/activepieces-vs-zapier/` on 2026-06-21 and was pushed to `master` in `b2fd03c5`. The next selector candidate is `amazon-q-vs-github-copilot`.
 
-Run `git status --short --branch` and `git log --oneline -5` before starting. The current local tree contains the completed comparison cleanup, the Activepieces/Zapier cycle, loop hardening, and updated continuity docs. Do not assume it is already committed or pushed until you verify Git state.
+Run `git status --short --branch` and `git log --oneline -5` before starting. The completed comparison cleanup, Activepieces/Zapier cycle, loop hardening, and continuity docs are on `master`; verify Git state before starting new edits.
 
 ## Done Recently
 
@@ -95,7 +95,7 @@ The final `loop:verify` pass exited 0 and took about 8 minutes for this mixed co
 - Full local verifier runs are reliable but slow. Prefer `npm run check:smart`, focused tests, `npm run build:fast`, and exact `qa:route` unless a full pre-ship gate is needed.
 - CRLF warnings may appear for a few script/test files when Git normalizes line endings. They were non-blocking in the latest checks.
 - Global `vercel@54.14.2` install emits upstream dependency deprecation warnings for `stream-to-promise@2.2.0` and `tar@7.5.7` through Vercel CLI's own dependency graph. This is not an AiPedia repo dependency issue.
-- The local untracked `.agents/` folder and `skills-lock.json` were not part of this AiPedia cycle unless Git status proves otherwise.
+- The local untracked `.agents/` folder and `skills-lock.json` were not part of this AiPedia cycle and were left untouched.
 
 ## Start The Next Session
 

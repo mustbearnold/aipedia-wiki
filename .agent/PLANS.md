@@ -8,7 +8,7 @@ For plain-English project state, read `.agent/CURRENT_STATUS.md` first. For comp
 
 - Last updated: 2026-06-21.
 - Check `master` with `git status --short --branch` before starting work.
-- The June 2026 standards remediation, Guard Challenge Workflow, Project Folder Tidy, Verification Router, June 17 news catch-up, Vercel CLI install, decision loop tooling, strict comparison cleanup, `activepieces-vs-n8n`, and `activepieces-vs-zapier` cycles are complete locally.
+- The June 2026 standards remediation, Guard Challenge Workflow, Project Folder Tidy, Verification Router, June 17 news catch-up, Vercel CLI install, decision loop tooling, strict comparison cleanup, `activepieces-vs-n8n`, and `activepieces-vs-zapier` cycles are complete and pushed to `master`.
 - The decision content flywheel is the default repeatable loop. Use `npm run loop:next -- --json`.
 - Comparison pages must compare the same buyer job and workflow. Same primary category is necessary but not sufficient. Cross-category and different-workflow pairs are review-only and must not become published `vs` pages.
 - The selector now uses explicit workflow lanes for broad categories, including automation, image, coding, music, chatbots, video, voice, design, writing, notes, and search.
