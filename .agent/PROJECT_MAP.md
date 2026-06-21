@@ -4,7 +4,7 @@
 
 AiPedia is an Astro site. Editorial source lives under `src/content/`; route templates, layouts, components, styles, data, and public assets live under `src/` and `public/`.
 
-Read `.agent/CURRENT_STATUS.md` first for the current branch state, recent completions, and active work. Then read `.agent/PLANS.md` for active lanes, `.agent/WORK_LOG.md` for landed milestones, and `.agent/OPERATING_RULES.md` for the committed operating rules. The `.agent/` stack replaces the ignored root `AGENTS.md` as the reliable instruction source for clean worktrees.
+Read `.agent/CURRENT_STATUS.md` first for the current branch state, recent completions, and active work. Then read `.agent/PLANS.md` for active lanes, `.agent/WORK_LOG.md` for landed milestones, `.agent/LOOPS.md` for repeatable operating loops, and `.agent/OPERATING_RULES.md` for the committed operating rules. The `.agent/` stack replaces the ignored root `AGENTS.md` as the reliable instruction source for clean worktrees.
 
 Use the smallest verification command that matches the changed surface. Start with `npm run check:smart` to get a scoped recommendation.
 
@@ -13,6 +13,7 @@ Use the smallest verification command that matches the changed surface. Start wi
 - June 2026 standards remediation is complete and pushed in `3355ce1d`.
 - Guard Challenge Workflow is implemented. Use it only when changing a guard, audit, check, or fixture is being considered.
 - Decision Content Flywheel is active. Use `npm run loop:next` to pick and brief the next buyer-intent cluster.
+- Multi-loop registry is active. Use `npm run loop:system` to list loops and `npm run loop:all -- --json` to run a read-only loop review.
 - Oldest-first AI tools wiki refresh remains active.
 - Phase 3 Parallel Surface Agent Orchestration is planned but not executed on `master`; recompute missed news dates before starting.
 
@@ -67,6 +68,7 @@ If `.worktrees/` contains empty or unregistered directories after generated cove
 
 - Run `npm run check:smart` to see the recommended checks for the current diff.
 - Run `npm run check:smart:run` to execute that recommendation.
+- Run `npm run loop:system` to list registered operating loops and `npm run loop:all -- --json` to review all loop signals.
 - Run `npm run loop:next` to start the repeatable cluster loop for monetizable decision content.
 - Run `npm run loop:verify -- --date <YYYY-MM-DD> --route /compare/<slug>/ --path <changed paths>` to execute date-stable verification for a rendered decision-content cycle.
 - Run `npm run qa:route -- --route /compare/<slug>/` to verify a built route across mobile, tablet, and desktop widths.

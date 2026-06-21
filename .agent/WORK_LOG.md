@@ -30,6 +30,16 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 
 ## Entries
 
+### 2026-06-21: AiPedia Multi-Loop System
+
+- Status: Complete.
+- Commit: this commit.
+- Branch: `master`.
+- Changed: Added `.agent/LOOPS.md`, `src/data/aipedia-loops.json`, `scripts/aipedia-loops.mjs`, focused tests, npm aliases for all seven loops, and orientation docs in README, script docs, project map, operating rules, status, and plans. The loop runner supports registry output, read-only execution, loop selection, built-output skips, attention totals, JSON summaries, sample failures, and top queue excerpts.
+- Verification: `node --test tests/scripts/aipedia-loops.test.mjs`; `npm run loop:system -- --json`; `npm run loop:all -- --json`; `npm run audit:commands`; `npm run loop:quality -- --json`; `npm run check:quick`.
+- Residual risks: The loop system is working, but it exposes real site debt: Freshness reports 17 high-volatility facts missing `next_review_at`, and Quality Pruning reports 62 comparison-quality failures.
+- Next: Run a Quality Pruning cleanup batch or schedule the missing high-volatility review dates, then rerun `npm run loop:all -- --json`.
+
 ### 2026-06-21: Activepieces Vs Zapier Loop Cycle And Selector Hardening
 
 - Status: Complete and pushed.

@@ -1,0 +1,354 @@
+{
+  "schema_version": 1,
+  "default_site_dir": "dist-fast/client",
+  "loops": [
+    {
+      "id": "decision-content",
+      "title": "Decision Content Flywheel",
+      "purpose": "Pick and improve one real buyer-decision cluster at a time, usually a same-workflow comparison plus its tool pages and parent hubs.",
+      "cadence": "Run whenever starting monetizable content work.",
+      "when_to_run": [
+        "A comparison, tool page, category hub, or buyer guide needs a next best target.",
+        "The team wants growth work that also improves trust and source coverage."
+      ],
+      "inputs": [
+        "src/data/coverage-backlog.json",
+        "src/data/comparison-policy.json",
+        "src/content/tools/",
+        "src/content/comparisons/",
+        "PAGE_REFRESH_LEDGER.md"
+      ],
+      "steps": [
+        "Pick one valid same-workflow cluster.",
+        "Verify current facts before editing.",
+        "Improve the decision page and related tool records.",
+        "Update parent hubs, top-layer pages, source registry, LLM surfaces, and ledger rows.",
+        "Run loop verification and route QA.",
+        "Record the run."
+      ],
+      "run_commands": [
+        {
+          "label": "next decision cluster",
+          "command": "node",
+          "args": ["scripts/decision-loop.mjs", "--json"],
+          "required": true
+        },
+        {
+          "label": "top coverage candidates",
+          "command": "node",
+          "args": ["scripts/coverage-next.mjs", "--json", "--count", "10"],
+          "required": true
+        }
+      ],
+      "review_questions": [
+        "Did the chosen pair share a real buyer job and workflow?",
+        "Did parent hubs and ledger rows move with the child page?",
+        "Did route QA cover mobile, tablet, and desktop?",
+        "Was the run recorded in .agent/loop-runs?"
+      ],
+      "record_targets": [
+        ".agent/loop-runs/",
+        ".agent/CURRENT_STATUS.md",
+        ".agent/PLANS.md",
+        ".agent/WORK_LOG.md"
+      ]
+    },
+    {
+      "id": "freshness",
+      "title": "Freshness Loop",
+      "purpose": "Turn stale verification dates, due review windows, and baseline pages into an oldest-first refresh queue.",
+      "cadence": "Run before broad editorial refresh work and at least weekly.",
+      "when_to_run": [
+        "A tool, category, or comparison page may have stale facts.",
+        "The team wants the next refresh target without guessing."
+      ],
+      "inputs": [
+        "PAGE_REFRESH_LEDGER.md",
+        "src/content/tools/",
+        "src/content/comparisons/",
+        "src/data/source-registry.json"
+      ],
+      "steps": [
+        "Find facts due now or soon.",
+        "Find old verification candidates and baseline pages.",
+        "Prioritize pages with comparison impact.",
+        "Refresh one page or cluster with current sources.",
+        "Update sources, parent hubs, and ledger rows.",
+        "Record the refresh."
+      ],
+      "run_commands": [
+        {
+          "label": "freshness queue",
+          "command": "node",
+          "args": ["scripts/audit-freshness-queue.mjs", "--json"],
+          "required": true,
+          "attention_totals": ["due_now", "high_volatility_missing_next_review", "unknown_source_ids", "stale_verification_candidates"]
+        },
+        {
+          "label": "weekly editorial queue",
+          "command": "node",
+          "args": ["scripts/editorial-weekly-queue.mjs", "--json", "--limit", "25"],
+          "required": true
+        }
+      ],
+      "review_questions": [
+        "Is the top queue item actually commercially or editorially important?",
+        "Can the facts be verified from current primary sources?",
+        "Did the ledger date represent the true refresh scope?"
+      ],
+      "record_targets": [
+        "PAGE_REFRESH_LEDGER.md",
+        ".agent/WORK_LOG.md for major batches"
+      ]
+    },
+    {
+      "id": "trust-provenance",
+      "title": "Trust And Provenance Loop",
+      "purpose": "Find unsupported claims, weak source metadata, pricing provenance gaps, stale facts, and source-registry drift.",
+      "cadence": "Run before and after source-heavy content work.",
+      "when_to_run": [
+        "Pricing, model, availability, source, or commercial claims changed.",
+        "The site needs a trust debt pass without choosing new content."
+      ],
+      "inputs": [
+        "src/content/tools/",
+        "src/data/source-registry.json",
+        "facts blocks",
+        "price_history blocks"
+      ],
+      "steps": [
+        "Audit provenance and pricing metadata.",
+        "Audit source registry health.",
+        "Audit stale facts.",
+        "Fix metadata or open a focused refresh task.",
+        "Rerun changed-file provenance checks."
+      ],
+      "run_commands": [
+        {
+          "label": "provenance and pricing",
+          "command": "node",
+          "args": ["scripts/audit-provenance-pricing.mjs", "--json"],
+          "required": true,
+          "attention_totals": ["missing_price_history_verified_at", "missing_fact_verified_at", "unknown_source_ids", "missing_source_fields"]
+        },
+        {
+          "label": "source registry health",
+          "command": "node",
+          "args": ["scripts/audit-source-health.mjs", "--json"],
+          "required": true,
+          "attention_totals": ["registry_issues", "duplicate_source_ids"]
+        },
+        {
+          "label": "stale facts guard",
+          "command": "node",
+          "args": ["scripts/guard-stale-facts.mjs", "--json"],
+          "required": true
+        }
+      ],
+      "review_questions": [
+        "Is each volatile claim tied to a source and date?",
+        "Are high-volatility facts scheduled for review?",
+        "Did any source URL or trust tier drift?"
+      ],
+      "record_targets": [
+        "src/data/source-registry.json",
+        ".agent/WORK_LOG.md for major provenance batches"
+      ]
+    },
+    {
+      "id": "revenue-conversion",
+      "title": "Revenue And Conversion Loop",
+      "purpose": "Verify commercial CTAs, affiliate disclosure, tracking attributes, CTA labels, and buyer-path clarity.",
+      "cadence": "Run after rendered commercial surfaces change and before deploys.",
+      "when_to_run": [
+        "Affiliate links, pricing, CTAs, guides, tool pages, or comparison pages changed.",
+        "The team wants to improve revenue without weakening trust."
+      ],
+      "inputs": [
+        "built static output",
+        "commercial CTA attributes",
+        "affiliate links",
+        "analytics event names"
+      ],
+      "steps": [
+        "Build or reuse fresh static output.",
+        "Audit tracked commercial CTAs.",
+        "Check disclosure proximity and label clarity.",
+        "Fix missing or generic CTA surfaces.",
+        "Rerun route QA on affected pages."
+      ],
+      "run_commands": [
+        {
+          "label": "commercial CTA audit",
+          "command": "node",
+          "args": ["scripts/audit-commercial-cta.mjs", "--json", "--site-dir", "dist-fast/client"],
+          "required": false,
+          "requires_paths": ["dist-fast/client"]
+        }
+      ],
+      "review_questions": [
+        "Is every commercial CTA honest and useful?",
+        "Is the disclosure close to the buying decision?",
+        "Are placement, tool slug, page type, and event names tracked?"
+      ],
+      "record_targets": [
+        "final report for changed commercial surfaces",
+        ".agent/WORK_LOG.md for major conversion batches"
+      ]
+    },
+    {
+      "id": "quality-pruning",
+      "title": "Quality Pruning Loop",
+      "purpose": "Find thin content, duplicate pages, false-vs candidates, stale internal links, and pages that should be deleted, merged, or rebuilt.",
+      "cadence": "Run after large content batches and before choosing new content expansion.",
+      "when_to_run": [
+        "The site has accumulated low-value pages.",
+        "Comparison policy or category taxonomy changes."
+      ],
+      "inputs": [
+        "src/content/comparisons/",
+        "src/data/comparison-policy.json",
+        "internal links",
+        "site KPI audit"
+      ],
+      "steps": [
+        "Audit site KPIs and comparison quality.",
+        "Classify issues as delete, merge, refresh, or keep.",
+        "Remove false-vs routes and public links.",
+        "Regenerate backlog and ledger.",
+        "Record the pruning decision."
+      ],
+      "run_commands": [
+        {
+          "label": "site KPI audit",
+          "command": "node",
+          "args": ["scripts/audit-site-kpis.mjs", "--json"],
+          "required": true,
+          "attention_totals": ["thin_comparison_risk"]
+        },
+        {
+          "label": "comparison quality audit",
+          "command": "node",
+          "args": ["scripts/audit-coverage-quality.mjs", "--all", "--json"],
+          "required": false
+        },
+        {
+          "label": "internal link audit",
+          "command": "node",
+          "args": ["scripts/audit-internal-links.mjs", "--json"],
+          "required": true
+        }
+      ],
+      "review_questions": [
+        "Should this page exist as a standalone route?",
+        "Does it satisfy a real buyer intent?",
+        "Would deletion improve the site more than a thin refresh?"
+      ],
+      "record_targets": [
+        "PAGE_REFRESH_LEDGER.md",
+        ".agent/WORK_LOG.md for deletion or merge batches"
+      ]
+    },
+    {
+      "id": "performance-ux",
+      "title": "Performance And UX Loop",
+      "purpose": "Check build output budgets, route indexability, commercial rendered output, and mobile/desktop layout risk.",
+      "cadence": "Run after layout, component, style, runtime, search, or rendered-output changes.",
+      "when_to_run": [
+        "Rendered UI, templates, CSS, search, Pagefind, or public assets changed.",
+        "Build time or route QA feels slow or brittle."
+      ],
+      "inputs": [
+        "built static output",
+        "dist budget",
+        "indexability",
+        "route QA widths"
+      ],
+      "steps": [
+        "Build or reuse fresh static output.",
+        "Audit dist budgets and indexability.",
+        "Run exact route QA for affected routes.",
+        "Fix overflow, missing metadata, or payload growth.",
+        "Record timing and residual risk."
+      ],
+      "run_commands": [
+        {
+          "label": "dist budget",
+          "command": "node",
+          "args": ["scripts/check-dist-budget.mjs", "--json", "--site-dir", "dist-fast/client", "--mode", "fast"],
+          "required": false,
+          "requires_paths": ["dist-fast/client"]
+        },
+        {
+          "label": "indexability audit",
+          "command": "node",
+          "args": ["scripts/audit-indexability.mjs", "--json", "--site-dir", "dist-fast/client"],
+          "required": false,
+          "requires_paths": ["dist-fast/client"]
+        }
+      ],
+      "review_questions": [
+        "Did the affected routes pass mobile, tablet, and desktop QA?",
+        "Did build output budgets or search payloads grow?",
+        "Is a full build justified or is exact route QA enough?"
+      ],
+      "record_targets": [
+        "loop receipt for rendered cycles",
+        ".agent/WORK_LOG.md for performance changes"
+      ]
+    },
+    {
+      "id": "news-market",
+      "title": "News And Market Change Loop",
+      "purpose": "Check news rendering, recent news cross-links, and market-change queues so product shifts reach affected tool and category pages.",
+      "cadence": "Run during news catch-up work and after important AI product announcements.",
+      "when_to_run": [
+        "New AI product news may affect tool, company, category, or comparison pages.",
+        "News pages, OG cards, or affected-tool references changed."
+      ],
+      "inputs": [
+        "src/content/news/",
+        "public/og/news/",
+        "affected tool links",
+        "editorial queue"
+      ],
+      "steps": [
+        "Audit news rendering and OG assets.",
+        "Audit affected-tool cross references.",
+        "Decide whether the market change needs a news item, tool refresh, category update, comparison update, or no action.",
+        "Update source-backed pages and crawl surfaces.",
+        "Record the decision."
+      ],
+      "run_commands": [
+        {
+          "label": "news rendering guard",
+          "command": "node",
+          "args": ["scripts/audit-news-rendering.mjs", "--json"],
+          "required": true
+        },
+        {
+          "label": "news cross-reference audit",
+          "command": "node",
+          "args": ["scripts/audit-news-xrefs.mjs", "--json"],
+          "required": true
+        },
+        {
+          "label": "weekly editorial queue",
+          "command": "node",
+          "args": ["scripts/editorial-weekly-queue.mjs", "--json", "--limit", "25"],
+          "required": true
+        }
+      ],
+      "review_questions": [
+        "Does the market change affect a buying decision?",
+        "Which existing pages need updates beyond the news article?",
+        "Are OG assets, affected-tool links, and source lists complete?"
+      ],
+      "record_targets": [
+        "src/content/news/",
+        "PAGE_REFRESH_LEDGER.md for hubs and crawl surfaces",
+        ".agent/WORK_LOG.md for major news catch-ups"
+      ]
+    }
+  ]
+}

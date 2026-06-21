@@ -22,7 +22,9 @@ The comparison policy is now strict: publish direct comparison pages only when t
 
 The latest completed loop cycle is `activepieces-vs-zapier`. It passed the full loop verifier for `/compare/activepieces-vs-zapier/` on 2026-06-21 and was pushed to `master` in `b2fd03c5`. The next selector candidate is `amazon-q-vs-github-copilot`.
 
-Run `git status --short --branch` and `git log --oneline -5` before starting. The completed comparison cleanup, Activepieces/Zapier cycle, loop hardening, and continuity docs are on `master`; verify Git state before starting new edits.
+The multi-loop system is implemented in the current working batch. Use `npm run loop:system` to list the loops and `npm run loop:all -- --json` to run a read-only review across Decision Content, Freshness, Trust and Provenance, Revenue and Conversion, Quality Pruning, Performance and UX, and News and Market Change. The human guide is `.agent/LOOPS.md`; the executable registry is `src/data/aipedia-loops.json`.
+
+Run `git status --short --branch` and `git log --oneline -5` before starting. The completed comparison cleanup, Activepieces/Zapier cycle, loop hardening, continuity docs, and multi-loop system should be verified against Git state before starting new edits.
 
 ## Done Recently
 
@@ -48,6 +50,12 @@ Run `git status --short --branch` and `git log --oneline -5` before starting. Th
 - Loop reliability:
   - `loop:verify` passed for the Activepieces/Zapier cycle after it ran ledger, changed comparison quality, changed tool provenance, guard challenge check, script tests, guard checks, fact/source/provenance audits, link/news checks, generated-model audit, `build:fast`, and route QA.
   - `npm run coverage:next -- --json --count 20` now shows lane-based candidates at the top of the backlog.
+- Multi-loop system:
+  - Added `src/data/aipedia-loops.json` and `scripts/aipedia-loops.mjs`.
+  - Added npm aliases: `loop:system`, `loop:all`, `loop:decision`, `loop:freshness`, `loop:trust`, `loop:conversion`, `loop:quality`, `loop:performance`, and `loop:news`.
+  - Added `.agent/LOOPS.md` as the human guide.
+  - First run showed two real attention signals: Freshness metadata debt and comparison-quality debt.
+  - Revised the loop runner after the first run so due-soon freshness work stays queue context and JSON summaries expose sample failures, issues, gaps, and top queue items.
 
 ## Active Work
 
@@ -61,6 +69,10 @@ Run `git status --short --branch` and `git log --oneline -5` before starting. Th
   - Work from `PAGE_REFRESH_LEDGER.md`, oldest first.
   - Verify volatile facts against current June 2026 sources before editing.
   - Update source fields, `last_verified`, affected parent hubs, and the ledger in the same change.
+- Multi-Loop Review:
+  - Use `npm run loop:all -- --json` for broad loop review.
+  - Current attention signals: `freshness` reports 17 high-volatility facts missing `next_review_at`; `quality-pruning` reports 62 comparison-quality failures.
+  - The next cleanup batch should use `npm run loop:quality -- --json` and focus on raw Markdown tables, missing required comparison sections, thin pages, and missing tool links.
 - Phase 3 Parallel Surface Agent Orchestration:
   - Planned but not executed on `master`.
   - If resumed, recompute missed news dates and verify current sources before dispatching subagents.
@@ -84,12 +96,20 @@ Latest completed cycle checks:
 - `npm run qa:route -- --route /tools/pika/ --widths 360 --site-dir dist-fast/client`
 - `npm run loop:verify -- --date 2026-06-21 --slug activepieces-vs-zapier --route /compare/activepieces-vs-zapier/ --paths <changed paths> --json`
 - `npm run loop:record -- --date 2026-06-21 --slug activepieces-vs-zapier --status complete --route /compare/activepieces-vs-zapier/`
+- `node --test tests/scripts/aipedia-loops.test.mjs`
+- `npm run loop:system -- --json`
+- `npm run loop:all -- --json`
+- `npm run audit:commands`
+- `npm run check:quick`
+- `npm run loop:record -- --date 2026-06-21 --slug aipedia-loop-system-buildout --status complete`
 
 The final `loop:verify` pass exited 0 and took about 8 minutes for this mixed content, guard, build, and route-QA cycle.
 
 ## Known Caveats
 
 - Five preexisting live comparison pages remain under the thin-content word threshold and should be refreshed in a future quality pass: `freepik-vs-midjourney`, `neuronwriter-vs-surfer-seo`, `ideogram-vs-stable-diffusion`, `freepik-vs-ideogram`, and `adobe-firefly-vs-freepik`.
+- The new Quality Pruning loop sees broader comparison-quality debt than the older KPI caveat: 62 all-comparison failures, mostly raw Markdown tables, missing required sections, missing tool links, and thin page bodies.
+- The new Freshness loop reports 17 high-volatility facts missing `next_review_at`; schedule these rather than treating them as newly verified facts.
 - Historical work-log and archive entries mention deleted comparison routes. Treat those as history, not live routing guidance.
 - The provenance backfill on older changed tool pages used existing page verification dates. Only Activepieces/Zapier facts were freshly browsed for the latest cycle.
 - Full local verifier runs are reliable but slow. Prefer `npm run check:smart`, focused tests, `npm run build:fast`, and exact `qa:route` unless a full pre-ship gate is needed.
@@ -101,8 +121,8 @@ The final `loop:verify` pass exited 0 and took about 8 minutes for this mixed co
 
 1. Run `git status --short --branch`.
 2. Read `.agent/CURRENT_STATUS.md`, `.agent/PLANS.md`, and `.agent/WORK_LOG.md`.
-3. Read `.agent/PROJECT_MAP.md` for paths and `.agent/OPERATING_RULES.md` for rules.
-4. Use `npm run loop:next -- --json` to confirm the next Decision Content Flywheel target.
+3. Read `.agent/LOOPS.md`, `.agent/PROJECT_MAP.md`, and `.agent/OPERATING_RULES.md`.
+4. Use `npm run loop:system` to pick the right loop, or `npm run loop:next -- --json` to continue Decision Content.
 5. If editing website content or commercial claims, apply the current-date, ledger, source, top-layer, mobile, SEO, and affiliate rules from `.agent/OPERATING_RULES.md`.
 
 ## Finish A Major Session

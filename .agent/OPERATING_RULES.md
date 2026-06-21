@@ -1,6 +1,6 @@
 # AiPedia Operating Rules
 
-This is the committed operating guide for agents working in this repository. Use it as the primary instruction source. Read `.agent/CURRENT_STATUS.md`, `.agent/PLANS.md`, and `.agent/WORK_LOG.md` first when resuming a session so you know what is current, active, and already complete. Do not rely on a root `AGENTS.md`; that file is ignored and may be absent in clean clones or worktrees.
+This is the committed operating guide for agents working in this repository. Use it as the primary instruction source. Read `.agent/CURRENT_STATUS.md`, `.agent/PLANS.md`, `.agent/WORK_LOG.md`, and `.agent/LOOPS.md` first when resuming a session so you know what is current, active, complete, and repeatable. Do not rely on a root `AGENTS.md`; that file is ignored and may be absent in clean clones or worktrees.
 
 ## Mission
 
@@ -62,6 +62,12 @@ Use this loop as the default for monetizable AiPedia content work:
 The loop exists to avoid random isolated refreshes. Prefer clusters that improve a real decision path, such as a comparison plus its tool pages and parent category, over single-page maintenance with no buyer outcome.
 
 Comparison pages must compare tools for the same buyer job. Same primary category is necessary but not sufficient. Do not create or keep fake versus pages for tools that only share a secondary capability, broad AI label, or category label while serving different use cases and workflows. The default selector only auto-picks same-primary-category pairs that are not listed in `src/data/comparison-policy.json` blocked pairs; review-only pairs must not be written without human product judgment.
+
+### Multi-loop registry
+
+Use `npm run loop:system` and `.agent/LOOPS.md` when deciding which repeatable loop fits the work. Use `npm run loop:all -- --json` only for loop-system review or broad operational checkups. Normal page work should choose one loop, run it, act on the top signal, verify, and record.
+
+The registered loops are Decision Content, Freshness, Trust and Provenance, Revenue and Conversion, Quality Pruning, Performance and UX, and News and Market Change. Loop output is a queue or attention signal, not permission to edit volatile facts without current-source verification.
 
 Before editing:
 
