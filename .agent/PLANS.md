@@ -14,12 +14,12 @@ For the plain-English project state, read `.agent/CURRENT_STATUS.md` first. For 
 - Current build timing baseline from 2026-06-21: `npm run build:fast` passed in 191.31 seconds and `npm run build` passed in 214.37 seconds. Main drivers are static route fan-out, Pagefind, and large generated/search surfaces.
 - The decision content flywheel is now the default repeatable loop. Use `npm run loop:next` to pick the next buyer-intent cluster.
 - The loop verifier is now executable. Use `npm run loop:verify -- --date <YYYY-MM-DD> --route /compare/<slug>/ --path <changed paths>` for rendered comparison cycles.
-- Route QA is now reusable through `npm run qa:route -- --route /compare/<slug>/`; changed comparison routes also run through `check:smart:run`.
+- Route QA is now reusable through `npm run qa:route -- --route /compare/<slug>/`; changed comparison, tool, and category routes also run through `check:smart:run`.
 - `loop:verify` now records per-command timings and avoids fallback builds unless route QA or `--force-build` requires one.
 - Major loop cycles should write `.agent/loop-runs/` receipts with `npm run loop:record`.
-- The first four decision content loop cycles, `canva-vs-claude`, `claude-vs-replit-agent`, `cursor-vs-deepseek`, and `cursor-vs-grok`, are complete. `npm run loop:next -- --json` now selects `deepseek-vs-github-copilot`.
+- The first five decision content loop cycles, `canva-vs-claude`, `claude-vs-replit-agent`, `cursor-vs-deepseek`, `cursor-vs-grok`, and `deepseek-vs-github-copilot`, are complete. `npm run loop:next -- --json` now selects `deepseek-vs-replit-agent`.
 - Loop briefs now require related-surface discovery, source registry inspection, stale-backlog warnings, and rendered route QA at 360, 390, 430, 768, 1024, and 1366 px.
-- Latest loop-performance fixes: `AIPEDIA_FAST_BUILD=1` is scoped to build and route-QA commands so unit-test fixtures do not inherit fast-build mode, and `check-smart --run` now executes `build:fast` before browser-output checks while printing per-command durations.
+- Latest loop-performance fixes: `AIPEDIA_FAST_BUILD=1` is scoped to build and route-QA commands so unit-test fixtures do not inherit fast-build mode, `check-smart --run` executes `build:fast` before browser-output checks while printing per-command durations, Playwright browser checks force fresh `dist-fast/client` output after fast builds, changed rendered content routes run through one combined route QA command, and `loop:verify` no longer runs duplicate fallback route QA when smart verification already covers the requested route.
 - The main active ongoing lane is the oldest-first AI tools wiki refresh.
 - The Phase 3 parallel surface and June 18-20 news backfill plan is written but not executed on `master`.
 
@@ -46,7 +46,8 @@ Run AiPedia as a repeatable buyer-decision loop: cluster, verify, improve decisi
 - 2026-06-20: Second selected cluster, `claude-vs-replit-agent`, is complete.
 - 2026-06-20: Third selected cluster, `cursor-vs-deepseek`, is complete.
 - 2026-06-20: Fourth selected cluster, `cursor-vs-grok`, is complete.
-- 2026-06-20: Next selected cluster is `deepseek-vs-github-copilot` unless a newer backlog changes the order or the comparison already exists.
+- 2026-06-20: Fifth selected cluster, `deepseek-vs-github-copilot`, is complete.
+- 2026-06-20: Next selected cluster is `deepseek-vs-replit-agent` unless a newer backlog changes the order or the comparison already exists.
 - 2026-06-21: Loop hardening added `loop:verify`, `qa:route`, `loop:record`, changed-route smart guidance, raw Markdown table rejection for changed comparison pages, executable changed-comparison route QA, conditional fallback builds, receipt-safe command recording, per-command timing, scoped fast-build environment handling, build-before-browser-check ordering, and `check-smart --run` per-command timing output.
 
 ## Recently Completed: Cursor Vs DeepSeek Comparison Sprint
@@ -95,29 +96,54 @@ Create a high-intent, source-backed comparison page for `cursor-vs-grok` while r
 - `node scripts/guard-em-dashes.mjs`
 - `git diff --check`
 
-## Recommended Next: DeepSeek Vs GitHub Copilot Comparison Sprint
+## Recently Completed: DeepSeek Vs GitHub Copilot Comparison Sprint
 
 ### Objective
 
 Create a high-intent, source-backed comparison page for `deepseek-vs-github-copilot` while refreshing affected DeepSeek, GitHub Copilot, AI Coding, parent hub, source registry, LLM surface, and ledger rows.
 
+### Result
+
+- Complete on 2026-06-20.
+- Added `src/content/comparisons/deepseek-vs-github-copilot.md`.
+- Refreshed DeepSeek, GitHub Copilot, AI Coding, source registry, top-layer surfaces, LLM surfaces, coverage backlog, and ledger rows.
+- Updated GitHub Copilot buyer guidance for gradual signup reopening, Copilot app GA, AI Credits usage reporting, `AGENTS.md` code-review support, MAI-Code-1-Flash expansion, and Fable 5 suspension caveats.
+- Loop verification passed, including exact route QA for `/categories/ai-coding/`, `/compare/deepseek-vs-github-copilot/`, `/tools/deepseek/`, and `/tools/github-copilot/` at 360, 390, 430, 768, 1024, and 1366 px.
+- Loop performance review: final verifier passed in about 251 seconds, with `check-smart --run` at 247.4 seconds, global `smoke:visual` at 47.0 seconds, and exact combined route QA at 26.1 seconds.
+- Remaining loop improvement: split content-route QA from broad `smoke:visual` when no runtime template, layout, component, style, or config changed.
+
+### Verification
+
+- `$env:AIPEDIA_LEDGER_DATE='2026-06-20'; npm run loop:verify -- --date 2026-06-20 --route /compare/deepseek-vs-github-copilot/ --path <changed paths>`
+- `node --test tests/scripts/check-smart.test.mjs tests/scripts/loop-hardening.test.mjs tests/scripts/playwright-config.test.mjs`
+- `npm run audit:provenance:changed`
+- `npm run audit:coverage-quality:changed`
+- `node scripts/guard-em-dashes.mjs`
+- `git diff --check`
+
+## Recommended Next: DeepSeek Vs Replit Agent Comparison Sprint
+
+### Objective
+
+Create a high-intent, source-backed comparison page for `deepseek-vs-replit-agent` while refreshing affected DeepSeek, Replit Agent, AI Coding, parent hub, source registry, LLM surface, and ledger rows.
+
 ### Why This Is Next
 
-- `npm run loop:next -- --json` selects `deepseek-vs-github-copilot` after the completed Cursor vs Grok cycle.
-- DeepSeek and GitHub Copilot are high-intent AI coding decisions: low-cost model/API backend versus GitHub-native IDE, PR, AI Credits, and enterprise governance.
-- The work improves SEO, trust, mobile decision usefulness, and the comparison loop baseline in one focused slice.
+- `npm run loop:next -- --json` selects `deepseek-vs-replit-agent` after the completed DeepSeek vs GitHub Copilot cycle.
+- DeepSeek and Replit Agent are high-intent AI coding decisions: low-cost model/API backend versus browser-native app-building agent workspace.
+- The work should clarify whether the buyer needs a model route behind their own agent, or a product that plans, builds, previews, tests, and publishes apps in one Replit workspace.
 
 ### First Slice
 
-- Verify current June 2026 DeepSeek and GitHub Copilot pricing, model, API, plan, governance, AI Credits, coding-agent, privacy, and source facts.
-- Refresh `src/content/tools/deepseek.md` and `src/content/tools/github-copilot.md` only where current sources justify changes.
-- Create or refresh `src/content/comparisons/deepseek-vs-github-copilot.md`.
+- Verify current June 2026 DeepSeek and Replit Agent pricing, model, API, app-building, agent, privacy, and source facts.
+- Refresh `src/content/tools/deepseek.md` and `src/content/tools/replit-agent.md` only where current sources justify changes.
+- Create or refresh `src/content/comparisons/deepseek-vs-replit-agent.md`.
 - Inspect and update affected parent surfaces, especially `/compare/`, `/tools/`, AI Coding category pages, sitemap/LLM surfaces, and `PAGE_REFRESH_LEDGER.md`.
 
 ### Verification
 
-- `npm run loop:verify -- --date <YYYY-MM-DD> --route /compare/deepseek-vs-github-copilot/ --path <changed paths>`
-- `npm run loop:record -- --date <YYYY-MM-DD> --slug deepseek-vs-github-copilot --status complete`
+- `npm run loop:verify -- --date <YYYY-MM-DD> --route /compare/deepseek-vs-replit-agent/ --path <changed paths>`
+- `npm run loop:record -- --date <YYYY-MM-DD> --slug deepseek-vs-replit-agent --status complete`
 - Focused retry commands, if needed:
 - `npm run ledger:pages -- --date <YYYY-MM-DD>`
 - `npm run ledger:pages:check -- --date <YYYY-MM-DD>`
@@ -127,7 +153,7 @@ Create a high-intent, source-backed comparison page for `deepseek-vs-github-copi
 - `npm run audit:provenance:changed`
 - `npm run check:smart:run -- --path <changed paths>`
 - `npm run build:fast` if rendered output or pre-ship confidence requires it and `loop:verify` did not already run it.
-- `npm run qa:route -- --route /compare/deepseek-vs-github-copilot/ --widths 360,390,430,768,1024,1366` for route-QA retry.
+- `npm run qa:route -- --route /compare/deepseek-vs-replit-agent/ --widths 360,390,430,768,1024,1366` for route-QA retry.
 
 ## Active: Oldest-First AI Tools Wiki Refresh
 

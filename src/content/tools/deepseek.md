@@ -250,6 +250,14 @@ price_history:
     source_id: deepseek-api-pricing
     verified_at: 2026-06-20
     note: "Rechecked for the Cursor vs DeepSeek comparison. Official docs still list V4-Flash and V4-Pro with 1M context, 384K max output, cache-hit pricing, OpenAI and Anthropic-compatible endpoints, and July 24 deprecation for legacy aliases; Hugging Face now shows DeepSeek V4 model releases."
+  - date: 2026-06-20
+    plan: "GitHub Copilot comparison recheck"
+    price: "V4-Flash $0.14/$0.28; V4-Pro $0.435/$0.87 per MTok"
+    source: "https://api-docs.deepseek.com/quick_start/pricing"
+    source_label: "DeepSeek API pricing docs"
+    source_id: deepseek-api-pricing
+    verified_at: 2026-06-20
+    note: "Rechecked for DeepSeek vs GitHub Copilot. The buyer split is now explicit: DeepSeek is a low-cost model/API and open-weight lane, while Copilot is the GitHub-native coding product."
 ---
 
 # DeepSeek
@@ -258,7 +266,7 @@ Chinese AI lab founded under High-Flyer Capital Management in Hangzhou. Releases
 
 DeepSeek-V4-Flash and DeepSeek-V4-Pro are the documented production models on the API. Both expose a 1M token context window with 384K maximum output, support thinking mode by default, and offer JSON output, tool calls, and chat prefix completion. V4-Pro is now listed at the adjusted quarter-price after the May 31 promo ended. The legacy `deepseek-chat` and `deepseek-reasoner` endpoint names still resolve to V4-Flash non-thinking and thinking modes respectively, and DeepSeek's docs flag them for deprecation. Hugging Face now lists DeepSeek V4 releases alongside earlier V3, V3.2, and R1 model families, so self-hosting is a real evaluation path even though hardware, license, and deployment controls still decide fit.
 
-Related coverage: [AI Industry Roundup, April 24](/news/2026-04-24-ai-industry-roundup/) tracked the DeepSeek V4 preview alongside frontier-coding model news, Anthropic capital pressure, and Cohere-Aleph Alpha. On April 27, [DeepSeek cut V4-Pro pricing by 75%](/news/2026-04-27-deepseek-v4-pro-price-cut/) in a developer adoption push that ended May 31 before the same quarter-price became the adjusted public rate on June 1.
+Related coverage: [AI Industry Roundup, April 24](/news/2026-04-24-ai-industry-roundup/) tracked the DeepSeek V4 preview alongside frontier-coding model news, Anthropic capital pressure, and Cohere-Aleph Alpha. On April 27, [DeepSeek cut V4-Pro pricing by 75%](/news/2026-04-27-deepseek-v4-pro-price-cut/) in a developer adoption push that ended May 31 before the same quarter-price became the adjusted public rate on June 1. The June 20 [DeepSeek vs GitHub Copilot](/compare/deepseek-vs-github-copilot/) refresh now separates DeepSeek's low-cost model/backend role from Copilot's GitHub-native developer workflow.
 
 ## System Verdict
 
@@ -388,4 +396,4 @@ For regulated industries, no. The Berlin DPA flagged the app as non-compliant wi
 ## Related
 
 - **Category:** [AI Chatbots](/categories/ai-chatbots/) · [AI Coding](/categories/ai-coding/)
-- **Comparisons:** [Cursor vs DeepSeek](/compare/cursor-vs-deepseek/) · [ChatGPT vs DeepSeek](/compare/chatgpt-vs-deepseek/) · [Claude vs DeepSeek](/compare/claude-vs-deepseek/) · [DeepSeek vs Gemini](/compare/deepseek-vs-gemini/) · [DeepSeek vs Mistral AI](/compare/deepseek-vs-mistral-ai/) · [DeepSeek vs Qwen](/compare/deepseek-vs-qwen/)
+- **Comparisons:** [DeepSeek vs GitHub Copilot](/compare/deepseek-vs-github-copilot/) · [Cursor vs DeepSeek](/compare/cursor-vs-deepseek/) · [ChatGPT vs DeepSeek](/compare/chatgpt-vs-deepseek/) · [Claude vs DeepSeek](/compare/claude-vs-deepseek/) · [DeepSeek vs Gemini](/compare/deepseek-vs-gemini/) · [DeepSeek vs Mistral AI](/compare/deepseek-vs-mistral-ai/) · [DeepSeek vs Qwen](/compare/deepseek-vs-qwen/)

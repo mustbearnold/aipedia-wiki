@@ -82,7 +82,7 @@ Use the smallest verification set that matches the change. For a comparison deci
 
 - `npm run loop:verify -- --date <YYYY-MM-DD> --route /compare/<slug>/ --path <changed paths>`
 
-The wrapper sets `AIPEDIA_LEDGER_DATE` for every child command, regenerates and checks the page refresh ledger with the same date, runs the changed comparison quality gate, delegates overlapping checks to `check:smart:run`, records per-command timing, runs `build:fast` when route QA or `--force-build` requires it and the smart plan did not already select it, and calls route QA when a route is supplied but smart verification did not already run that route. Fast-build mode is scoped to build and browser-output commands only, so unit tests and fixture audits do not inherit `AIPEDIA_FAST_BUILD=1`. `check-smart --run` now orders `build:fast` before `smoke:visual` and route QA when both are selected, and prints per-command durations for performance review.
+The wrapper sets `AIPEDIA_LEDGER_DATE` for every child command, regenerates and checks the page refresh ledger with the same date, runs the changed comparison quality gate, delegates overlapping checks to `check:smart:run`, records per-command timing, runs `build:fast` when route QA or `--force-build` requires it and the smart plan did not already select it, and calls route QA when a route is supplied but smart verification did not already run that route. Fast-build mode is scoped to build and browser-output commands only, so unit tests and fixture audits do not inherit `AIPEDIA_FAST_BUILD=1`. `check-smart --run` orders `build:fast` before `smoke:visual` and route QA when both are selected, forces Playwright browser checks to use fresh `dist-fast/client` output after fast builds, emits one combined route QA command for changed tool, category, and comparison routes, and prints per-command durations for performance review. `loop:verify` recognizes combined route QA so it does not add a duplicate fallback route check.
 
 The underlying commands remain valid when a focused retry is needed:
 
@@ -130,7 +130,7 @@ Additional loop commands:
 - `npm run qa:route`: reusable route QA across mobile, tablet, and desktop widths.
 - `npm run loop:record`: durable run receipt under `.agent/loop-runs/`.
 
-Current implementation status: `canva-vs-claude`, `claude-vs-replit-agent`, `cursor-vs-deepseek`, and `cursor-vs-grok` are complete. `npm run loop:next -- --json` currently selects `deepseek-vs-github-copilot`.
+Current implementation status: `canva-vs-claude`, `claude-vs-replit-agent`, `cursor-vs-deepseek`, `cursor-vs-grok`, and `deepseek-vs-github-copilot` are complete. `npm run loop:next -- --json` currently selects `deepseek-vs-replit-agent`.
 
 ## First Cycle
 

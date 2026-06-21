@@ -209,11 +209,15 @@ function nodeStep(script, args = []) {
   return step(process.execPath, [script, ...args], `node ${script}${args.length ? ` ${args.join(' ')}` : ''}`);
 }
 
+function smartCommandRunsRouteQa(command, route) {
+  if (!route) return false;
+  return /^npm run qa:route\b/.test(command) && command.includes(`--route ${route}`);
+}
+
 function commandPlan({ paths, date, route, widths }) {
   const smartPlan = paths.length ? planForPaths(paths) : { commands: [] };
   const smartRunsBuild = smartPlan.commands.includes('npm run build:fast');
-  const smartRouteCommand = route ? `npm run qa:route -- --route ${route}` : '';
-  const smartRunsRouteQa = Boolean(smartRouteCommand && smartPlan.commands.includes(smartRouteCommand));
+  const smartRunsRouteQa = smartPlan.commands.some((command) => smartCommandRunsRouteQa(command, route));
   const coverageArgs = paths.length
     ? paths.flatMap((path) => ['--changed-file', path])
     : ['--changed'];

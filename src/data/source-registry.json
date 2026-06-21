@@ -4673,7 +4673,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "github-copilot-feature-matrix",
@@ -4682,7 +4682,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "github-copilot-plans",
@@ -4700,7 +4700,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "github-copilot-ai-credits",
@@ -4709,7 +4709,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "github-copilot-ai-credits-orgs",
@@ -4718,7 +4718,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "github-copilot-ai-credits-announcement",
@@ -4745,7 +4745,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "github-copilot-supported-models",
@@ -4754,7 +4754,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "github-copilot-models-pricing",
@@ -4763,7 +4763,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "github-copilot-context-reasoning",
@@ -4772,7 +4772,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "github-copilot-agent-tasks-api",
@@ -4781,7 +4781,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "github-copilot-fable-5-suspension",
@@ -4790,7 +4790,34 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-20"
+    },
+    {
+      "id": "github-copilot-signups-reopening",
+      "label": "GitHub Copilot individual plan sign-ups reopening",
+      "url": "https://github.blog/changelog/2026-06-17-copilot-individual-plan-sign-ups-are-reopening/",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-20"
+    },
+    {
+      "id": "github-copilot-app-ga",
+      "label": "GitHub Copilot app generally available",
+      "url": "https://github.blog/changelog/2026-06-17-github-copilot-app-generally-available/",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-20"
+    },
+    {
+      "id": "github-copilot-usage-metrics-ai-credits",
+      "label": "GitHub Copilot AI credits usage metrics API",
+      "url": "https://github.blog/changelog/2026-06-19-ai-credits-consumed-per-user-now-in-the-copilot-usage-metrics-api/",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-20"
     },
     {
       "id": "github-copilot-chat-agent-sessions",

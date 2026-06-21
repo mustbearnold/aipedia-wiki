@@ -1,7 +1,8 @@
 import assert from 'node:assert/strict';
 import { existsSync, mkdtempSync, readFileSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
-import { join } from 'node:path';
+import { join, resolve } from 'node:path';
+import { pathToFileURL } from 'node:url';
 import { spawnSync } from 'node:child_process';
 import { test } from 'node:test';
 
@@ -53,6 +54,28 @@ test('loop verify does not add a fallback build when no route or force-build is 
   assert.ok(!report.commands.includes('npm run build:fast'));
 });
 
+test('loop verify recognizes combined smart route QA commands', () => {
+  const result = runNode('scripts/loop-verify.mjs', [
+    '--json',
+    '--dry-run',
+    '--date',
+    '2026-06-20',
+    '--route',
+    '/compare/foo-vs-bar/',
+    '--path',
+    'src/content/categories/ai-coding.md',
+    '--path',
+    'src/content/comparisons/foo-vs-bar.md',
+    '--path',
+    'src/content/tools/foo.md',
+  ]);
+
+  assert.equal(result.status, 0, `${result.stdout}\n${result.stderr}`);
+  const report = JSON.parse(result.stdout);
+  assert.equal(report.smart_runs_route_qa, true);
+  assert.ok(!report.commands.some((command) => /scripts\/qa-route\.mjs/.test(command)));
+});
+
 test('loop verify requires an explicit date or AIPEDIA_LEDGER_DATE', () => {
   const result = spawnSync(process.execPath, ['scripts/loop-verify.mjs', '--json', '--dry-run', '--route', '/compare/foo-vs-bar/'], {
     cwd: process.cwd(),
@@ -81,6 +104,15 @@ test('route QA documents its reusable route command', () => {
   assert.equal(result.status, 0);
   assert.match(result.stdout, /--route \/compare\/example\//);
   assert.match(result.stdout, /360,390,430,768,1024,1366/);
+});
+
+test('route QA tolerates only known local static runtime misses', async () => {
+  const { isAllowedLocalMissing } = await import(pathToFileURL(resolve('scripts/qa-route.mjs')).href);
+
+  assert.equal(isAllowedLocalMissing('http://127.0.0.1:18080/_vercel/insights/script.js'), true);
+  assert.equal(isAllowedLocalMissing('http://127.0.0.1:18080/api/reviews/for/deepseek/'), true);
+  assert.equal(isAllowedLocalMissing('http://127.0.0.1:18080/api/search-tools.json'), false);
+  assert.equal(isAllowedLocalMissing('not a url'), false);
 });
 
 test('loop record writes a durable run receipt', () => {

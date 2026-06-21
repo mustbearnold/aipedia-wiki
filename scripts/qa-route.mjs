@@ -5,7 +5,7 @@ import { spawn } from 'node:child_process';
 import { createServer, get } from 'node:http';
 import { existsSync, statSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 import { builtSiteDir, resolvePathFromProject } from './lib/built-site-dir.mjs';
 
 const rawArgs = process.argv.slice(2);
@@ -165,14 +165,18 @@ function viewportHeight(width) {
   return 900;
 }
 
-function isAllowedLocalMissing(url) {
+export function isAllowedLocalMissing(url) {
   let pathname = '';
   try {
     pathname = new URL(url).pathname;
   } catch {
     return false;
   }
-  return pathname === '/_vercel/insights/script.js' || pathname === '/_vercel/speed-insights/script.js';
+  return (
+    pathname === '/_vercel/insights/script.js' ||
+    pathname === '/_vercel/speed-insights/script.js' ||
+    /^\/api\/reviews\/for\/[^/]+\/?$/.test(pathname)
+  );
 }
 
 async function findOpenPort() {
@@ -466,8 +470,10 @@ async function main() {
   return report.ok ? 0 : 1;
 }
 
-main().then((code) => process.exit(code)).catch((error) => {
-  const message = error instanceof Error ? error.stack || error.message : String(error);
-  emitReport({ ok: false, mode: 'exception', failures: [message] });
-  process.exit(1);
-});
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  main().then((code) => process.exit(code)).catch((error) => {
+    const message = error instanceof Error ? error.stack || error.message : String(error);
+    emitReport({ ok: false, mode: 'exception', failures: [message] });
+    process.exit(1);
+  });
+}

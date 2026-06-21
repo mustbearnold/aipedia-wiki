@@ -11,6 +11,7 @@ async function loadPlaywrightConfig(env = {}) {
     'AIPEDIA_PLAYWRIGHT_PORT',
     'AIPEDIA_PLAYWRIGHT_SITE_DIR',
     'AIPEDIA_PLAYWRIGHT_STATIC_DIR',
+    'AIPEDIA_PLAYWRIGHT_REUSE_SERVER',
     'CI',
   ];
   const previous = new Map(keys.map((key) => [key, process.env[key]]));
@@ -57,6 +58,28 @@ test('playwright config can point smoke tests at an explicit static output direc
   );
   assert.equal(configModule.default.webServer.url, 'http://0.0.0.0:4599');
   assert.equal(configModule.default.webServer.reuseExistingServer, false);
+});
+
+test('playwright config can force a fresh server for generated output checks', async () => {
+  const configModule = await loadPlaywrightConfig({
+    AIPEDIA_PLAYWRIGHT_SITE_DIR: 'dist-fast/client',
+    AIPEDIA_PLAYWRIGHT_REUSE_SERVER: '0',
+  });
+
+  assert.equal(
+    configModule.serveStaticCommand,
+    'node scripts/serve-static.mjs --host 127.0.0.1 --port 4321 --site-dir dist-fast/client',
+  );
+  assert.equal(configModule.default.webServer.reuseExistingServer, false);
+});
+
+test('playwright config can force server reuse in CI when explicitly requested', async () => {
+  const configModule = await loadPlaywrightConfig({
+    AIPEDIA_PLAYWRIGHT_REUSE_SERVER: '1',
+    CI: 'true',
+  });
+
+  assert.equal(configModule.default.webServer.reuseExistingServer, true);
 });
 
 test('playwright config keeps a backwards-compatible static-dir alias and quotes spaces', async () => {

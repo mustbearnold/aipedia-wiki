@@ -3,6 +3,12 @@
 // comparisons, guides, answers, news, trends, workflows, reports, companies,
 // and dead-tool records. Intended for crawlers willing to ingest a larger
 // manifest without parsing the sitemap.
+// Refresh metadata: 2026-06-20 DeepSeek vs GitHub Copilot comparison loop after
+// current DeepSeek API pricing, V4 release, changelog, Hugging Face, GitHub
+// Copilot plans, AI Credits, app GA, signup reopening, Fable 5 suspension, and
+// usage-metrics checks; added comparison, refreshed DeepSeek, GitHub Copilot,
+// AI Coding, source registry, ledger, and LLM maintenance around
+// model-backend-vs-GitHub-platform buyer fit.
 // Refresh metadata: 2026-06-20 Cursor vs Grok comparison loop after current
 // Cursor pricing, Teams pricing, changelog, xAI pricing, model docs, Grok
 // Build, Grok Build enterprise, Responses API, and product checks; added
@@ -462,6 +468,7 @@ export const GET: APIRoute = async () => {
   lines.push('> Extended LLM-friendly site manifest. Enumerates the major active editorial collections across tools, categories, comparisons, buyer guides, answers, news, trends, workflows, reports, companies, and dead-tool records. It does not claim to list every utility, API, prototype, or static policy page. See /llms.txt for the concise version.');
   lines.push('');
   lines.push('Recent comparison refresh: June 20, 2026 added Cursor vs Grok and refreshed Cursor, Grok, AI Coding, source registry, ledger, and LLM maintenance after current Cursor pricing, Teams pricing, changelog, xAI pricing, model docs, Grok Build, Grok Build enterprise, Responses API, and product checks; buyer guidance now separates Cursor as the daily AI-native IDE and agent workbench from Grok as an xAI-native coding-agent/API lane to benchmark.');
+  lines.push('Recent comparison refresh: June 20, 2026 added DeepSeek vs GitHub Copilot and refreshed DeepSeek, GitHub Copilot, AI Coding, source registry, ledger, and LLM maintenance after current DeepSeek API pricing, V4 release, changelog, Hugging Face, GitHub Copilot plans, AI Credits, app GA, signup reopening, Fable 5 suspension, and usage-metrics checks; buyer guidance now separates DeepSeek as a low-cost model/backend lane from Copilot as the GitHub-native coding platform.');
   lines.push('Recent comparison refresh: June 20, 2026 added Cursor vs DeepSeek and refreshed Cursor, DeepSeek, AI Coding, source registry, ledger, and LLM maintenance after current Cursor pricing, Teams pricing, changelog, Data Use, Enterprise, CLI, Composer 2.5, DeepSeek API pricing, V4 release, and Hugging Face checks; buyer guidance now separates Cursor as the AI-native IDE and agent workbench from DeepSeek as a low-cost coding-model/API backend.');
   lines.push('Recent comparison refresh: June 20, 2026 added Claude vs Replit Agent and refreshed Replit Agent, Claude related links, AI Coding, source registry, ledger, and LLM maintenance after current Claude pricing, Claude Code, Agent SDK credit, Anthropic model, Replit pricing, Agent, AI billing, Modes, App Testing, Skills, Custom Instructions, and Package Firewall checks; buyer guidance now separates Claude-style reasoning, repo investigation, and code review from Replit-style browser app building, prototypes, and internal tools.');
   lines.push('Recent comparison refresh: June 20, 2026 added Canva vs Claude and refreshed Canva, Claude, AI Design, source registry, ledger, and LLM maintenance after current Canva AI 2.0, Canva Business, AI Pass, Canva AI Product Terms, Canva Claude connector, Claude pricing, Claude for Small Business, and Agent SDK credit help checks; buyer guidance now separates final creative production from upstream reasoning, critique, coding, connector workflows, and the paused Agent SDK credit split.');

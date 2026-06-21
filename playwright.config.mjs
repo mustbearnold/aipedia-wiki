@@ -3,6 +3,13 @@ const port = process.env.AIPEDIA_PLAYWRIGHT_PORT ?? '4321';
 const siteDir = process.env.AIPEDIA_PLAYWRIGHT_SITE_DIR ?? process.env.AIPEDIA_PLAYWRIGHT_STATIC_DIR ?? '';
 const baseURL = `http://${host}:${port}`;
 
+function reuseExistingServer() {
+  const value = process.env.AIPEDIA_PLAYWRIGHT_REUSE_SERVER;
+  if (value === '1' || value === 'true') return true;
+  if (value === '0' || value === 'false') return false;
+  return !process.env.CI;
+}
+
 function commandArg(value) {
   const text = String(value);
   if (/^[A-Za-z0-9_./:=@+-]+$/.test(text)) return text;
@@ -28,7 +35,7 @@ export default {
   webServer: {
     command: serveStaticCommand,
     url: baseURL,
-    reuseExistingServer: !process.env.CI,
+    reuseExistingServer: reuseExistingServer(),
     timeout: 30000,
   },
   use: {

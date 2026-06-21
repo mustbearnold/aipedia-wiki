@@ -229,9 +229,9 @@ function smokeRoutesForSurfaces(surfaces, paths = []) {
 }
 
 function routeQaCommandsForPaths(paths) {
-  return routeQaRoutesForPaths(paths)
-    .filter((route) => route.focus === 'changed comparison route')
-    .map((route) => `${route.command} -- --route ${route.route}`);
+  const routes = [...new Set(routeQaRoutesForPaths(paths).map((route) => route.route))];
+  if (!routes.length) return [];
+  return [`npm run qa:route -- ${routes.map((route) => `--route ${route}`).join(' ')}`];
 }
 
 function commandsForSelection(categories, checks) {
@@ -388,14 +388,23 @@ function needsFastBuildEnv(command, fastBuildReady) {
   return isBrowserOutputCommand(trimmed);
 }
 
-function envForCommand(command, fastBuildReady) {
+export function envForCommand(command, fastBuildReady) {
   const env = { ...process.env };
   if (needsFastBuildEnv(command, fastBuildReady)) {
     env.AIPEDIA_FAST_BUILD = '1';
   } else {
     delete env.AIPEDIA_FAST_BUILD;
   }
+  if (fastBuildReady && usesPlaywrightServer(command)) {
+    env.AIPEDIA_PLAYWRIGHT_SITE_DIR = 'dist-fast/client';
+    env.AIPEDIA_PLAYWRIGHT_REUSE_SERVER = '0';
+  }
   return env;
+}
+
+function usesPlaywrightServer(command) {
+  const trimmed = command.trim();
+  return /^npm run (qa:route|smoke:visual)\b/.test(trimmed) || /\bscripts\/qa-route\.mjs\b/.test(trimmed);
 }
 
 function main() {

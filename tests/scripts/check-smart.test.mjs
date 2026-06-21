@@ -131,8 +131,8 @@ test('check-smart documents --base in help and accepts it as a known flag', () =
   assert.deepEqual(JSON.parse(result.stdout).paths, ['package.json']);
 });
 
-test('check-smart classifies editorial content without requiring a build', () => {
-  const plan = planForPaths(['src/content/tools/chatgpt.md', 'PAGE_REFRESH_LEDGER.md']);
+test('check-smart classifies non-rendered content data without requiring a build', () => {
+  const plan = planForPaths(['src/data/source-registry.json', 'PAGE_REFRESH_LEDGER.md']);
 
   assert.deepEqual(plan.categories, ['content']);
   assert.ok(plan.commands.includes('npm run guard:check'));
@@ -141,6 +141,14 @@ test('check-smart classifies editorial content without requiring a build', () =>
   assert.ok(!plan.commands.includes('npm run build:fast'));
   assert.ok(!plan.commands.includes('npm run guard:challenge:check'));
   assert.ok(!plan.guidance.some((line) => line.includes('Open a guard challenge before changing guard pass or fail behavior')));
+});
+
+test('check-smart runs targeted route QA for rendered content routes', () => {
+  const plan = planForPaths(['src/content/tools/chatgpt.md', 'PAGE_REFRESH_LEDGER.md']);
+
+  assert.deepEqual(plan.categories, ['content']);
+  assert.ok(plan.commands.includes('npm run build:fast'));
+  assert.ok(plan.commands.includes('npm run qa:route -- --route /tools/chatgpt/'));
 });
 
 test('check-smart keeps docs and agent files on diff-only verification', () => {
@@ -241,6 +249,37 @@ test('check-smart routes Phase 3 model, category, motion, and token surfaces', (
   assert.ok(tokenPlan.checks.includes('design-tokens'));
   assert.ok(tokenPlan.commands.includes('npm run test:scripts'));
   assert.ok(tokenPlan.commands.includes('npm run smoke:visual'));
+});
+
+test('check-smart points browser checks at fresh fast-build output after build:fast', () => {
+  assert.equal(typeof checkSmart.envForCommand, 'function');
+
+  const env = checkSmart.envForCommand('npm run smoke:visual', true);
+
+  assert.equal(env.AIPEDIA_FAST_BUILD, '1');
+  assert.equal(env.AIPEDIA_PLAYWRIGHT_SITE_DIR, 'dist-fast/client');
+  assert.equal(env.AIPEDIA_PLAYWRIGHT_REUSE_SERVER, '0');
+
+  const nonBrowserEnv = checkSmart.envForCommand('npm run test:scripts', true);
+  assert.equal(nonBrowserEnv.AIPEDIA_FAST_BUILD, undefined);
+  assert.equal(nonBrowserEnv.AIPEDIA_PLAYWRIGHT_SITE_DIR, process.env.AIPEDIA_PLAYWRIGHT_SITE_DIR);
+  assert.equal(nonBrowserEnv.AIPEDIA_PLAYWRIGHT_REUSE_SERVER, process.env.AIPEDIA_PLAYWRIGHT_REUSE_SERVER);
+});
+
+test('check-smart executes one route QA command for every changed content route', () => {
+  const plan = planForPaths([
+    'src/content/categories/ai-coding.md',
+    'src/content/comparisons/cursor-vs-deepseek.md',
+    'src/content/tools/deepseek.md',
+    'src/content/tools/github-copilot.md',
+  ]);
+
+  const routeQaCommands = plan.commands.filter((command) => command.startsWith('npm run qa:route'));
+
+  assert.deepEqual(routeQaCommands, [
+    'npm run qa:route -- --route /categories/ai-coding/ --route /compare/cursor-vs-deepseek/ --route /tools/deepseek/ --route /tools/github-copilot/',
+  ]);
+  assert.ok(plan.commands.indexOf('npm run build:fast') < plan.commands.indexOf(routeQaCommands[0]));
 });
 
 

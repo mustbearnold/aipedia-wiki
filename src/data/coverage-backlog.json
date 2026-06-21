@@ -1,31 +1,17 @@
 {
   "ok": true,
-  "generated_at": "2026-06-21T00:18:51.825Z",
+  "generated_at": "2026-06-21T00:43:01.750Z",
   "project_dir": "C:\\Users\\mustb\\Projects\\aipedia-wiki-clean",
   "totals": {
     "tools_active": 260,
     "tools_notable": 260,
-    "comparisons_existing": 283,
+    "comparisons_existing": 284,
     "answers_existing": 12,
-    "comparison_gaps": 7038,
+    "comparison_gaps": 7037,
     "answer_gaps": 56
   },
   "backlog": {
     "comparisons": [
-      {
-        "kind": "comparison",
-        "slug": "deepseek-vs-github-copilot",
-        "tools": [
-          "deepseek",
-          "github-copilot"
-        ],
-        "shared_categories": [
-          "ai-coding"
-        ],
-        "both_tier1": true,
-        "same_category": true,
-        "score": 10
-      },
       {
         "kind": "comparison",
         "slug": "deepseek-vs-replit-agent",
@@ -747,6 +733,18 @@
         "tools": [
           "chatgpt",
           "suno"
+        ],
+        "shared_categories": [],
+        "both_tier1": true,
+        "same_category": false,
+        "score": 8
+      },
+      {
+        "kind": "comparison",
+        "slug": "chatgpt-vs-synthesia",
+        "tools": [
+          "chatgpt",
+          "synthesia"
         ],
         "shared_categories": [],
         "both_tier1": true,
