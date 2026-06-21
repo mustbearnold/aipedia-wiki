@@ -14,6 +14,8 @@ const jsonMode = args.includes('--json');
 const helpMode = args.includes('--help') || args.includes('-h');
 
 const KNOWN_FLAGS = new Set(['--run', '--json', '--help', '-h', '--path', '--paths', '--base']);
+const LOCAL_ONLY_UNTRACKED_FILES = new Set(['skills-lock.json']);
+const LOCAL_ONLY_UNTRACKED_PREFIXES = ['.agents/'];
 
 function valuesFor(flag, sourceArgs = args, { normalize = true, split = true } = {}) {
   const values = [];
@@ -63,6 +65,14 @@ function validateArgs(sourceArgs = args) {
 
 function normalizePath(path) {
   return path.replace(/\\/g, '/').replace(/^\.\//, '').trim();
+}
+
+function isLocalOnlyUntrackedPath(path) {
+  const normalizedPath = normalizePath(path);
+  return (
+    LOCAL_ONLY_UNTRACKED_FILES.has(normalizedPath) ||
+    LOCAL_ONLY_UNTRACKED_PREFIXES.some((prefix) => normalizedPath.startsWith(prefix))
+  );
 }
 
 function loadOperatorSurfaceContract() {
@@ -137,7 +147,9 @@ export function changedPathsForArgs(sourceArgs = args, { gitLines: readGitLines 
   paths.push(
     ...normalizedGitLines(readGitLines, ['diff', '--name-only']),
     ...normalizedGitLines(readGitLines, ['diff', '--name-only', '--cached']),
-    ...normalizedGitLines(readGitLines, ['ls-files', '--others', '--exclude-standard']),
+    ...normalizedGitLines(readGitLines, ['ls-files', '--others', '--exclude-standard']).filter(
+      (path) => !isLocalOnlyUntrackedPath(path),
+    ),
   );
   return [...new Set(paths)].sort();
 }

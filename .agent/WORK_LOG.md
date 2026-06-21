@@ -30,6 +30,16 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 
 ## Entries
 
+### 2026-06-21: Check-Smart Local Artifact Noise Filter
+
+- Status: Complete.
+- Commit: this commit.
+- Branch: `master`.
+- Changed: Updated `scripts/check-smart.mjs` so default dirty-path discovery filters local-only untracked `.agents/` and `skills-lock.json` artifacts, while preserving explicit paths, staged files, tracked diffs, and canonical `.agent/` project docs; added focused regression coverage; and updated the `.agent` continuity docs.
+- Verification: `node --test tests/scripts/check-smart.test.mjs`; `node scripts/check-smart.mjs --json`; `npm run check:smart:run`; `npm run loop:all:record -- --json`.
+- Residual risks: The filter is intentionally narrow. If local agent/plugin state ever becomes part of the actual repo, pass paths explicitly or stage the intended file so `check-smart` includes it.
+- Next: Continue the goal by reviewing the latest system loop receipt for any remaining noisy, weak, or under-tested signals.
+
 ### 2026-06-21: Built-Output Freshness Attention Hardening
 
 - Status: Complete.

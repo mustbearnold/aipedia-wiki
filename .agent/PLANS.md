@@ -13,6 +13,7 @@ For plain-English project state, read `.agent/CURRENT_STATUS.md` first. For comp
 - Comparison pages must compare the same buyer job and workflow. Same primary category is necessary but not sufficient. Cross-category and different-workflow pairs are review-only and must not become published `vs` pages.
 - The selector now uses explicit workflow lanes for broad categories, including automation, image, coding, music, chatbots, video, voice, design, writing, notes, and search.
 - The multi-loop system is green. Use `npm run loop:system` to list loops and `npm run loop:all -- --json` to review all loop signals. Use `npm run loop:all:record -- --json` when a broad review should create durable JSON history.
+- `check-smart` default dirty-path discovery ignores local-only untracked `.agents/` and `skills-lock.json` artifacts, while still treating canonical `.agent/` docs as project changes.
 - The live comparison inventory is 46 policy-aligned pages. `scripts/guard-content.mjs` now protects it with a 41-page floor after accepted Guard Challenge review.
 - Current next selected cluster is `amazon-q-vs-github-copilot`.
 - Current build timing baseline from 2026-06-21: `npm run build:fast` has recently passed in roughly 2 to 3 minutes for normal content runs. The full loop verifier can take about 8 minutes when content, guards, script tests, build, and route QA are all touched.
@@ -77,8 +78,9 @@ Keep AiPedia maintenance repeatable without turning it into bureaucracy. The loo
 - 2026-06-21: Revised runner after review so due-soon freshness volume is queue context, not an alarm.
 - 2026-06-21: Revised runner summaries to expose sample failures, issues, gaps, top review queue items, and top tools.
 - 2026-06-21: Freshness metadata scheduling fixed 17 missing high-volatility `next_review_at` values.
-- 2026-06-21: Latest broad review is 7 ok / 0 attention. The first system receipt is `.agent/loop-runs/system/latest.json`.
+- 2026-06-21: Latest broad review is 7 ok / 0 attention. The latest system receipt is `.agent/loop-runs/system/latest.json`.
 - 2026-06-21: Built-output freshness now fails into `attention` when stale or unknown, preventing rendered-output loops from looking green without a trustworthy build.
+- 2026-06-21: `check-smart` now filters local-only untracked `.agents/` and `skills-lock.json` noise from default discovery, without filtering explicit paths, staged files, or canonical `.agent/` docs.
 
 ### Next Improvement Pass
 

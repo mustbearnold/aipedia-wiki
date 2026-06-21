@@ -42,7 +42,8 @@ The next selected Decision Content candidate is `amazon-q-vs-github-copilot`.
   - Added built-output freshness checks for Conversion and Performance/UX loop commands that depend on `dist-fast/client`.
   - Hardened built-output freshness so stale or unknown freshness becomes an attention signal instead of a false green.
   - Added `npm run loop:all:record`, which writes timestamped JSON receipts and `.agent/loop-runs/system/latest.json`.
-  - Recorded the first system-level loop receipt at `.agent/loop-runs/system/latest.json`.
+  - Recorded fresh system-level loop receipts under `.agent/loop-runs/system/`, with the latest pointer in `.agent/loop-runs/system/latest.json`.
+  - Tightened `check-smart` default dirty-path discovery so local-only untracked `.agents/` and `skills-lock.json` artifacts do not create verification noise, while canonical `.agent/` project docs still count.
 - Multi-loop system:
   - Added `src/data/aipedia-loops.json`, `scripts/aipedia-loops.mjs`, `.agent/LOOPS.md`, and npm aliases for all seven loops.
   - Tuned loop summaries so attention signals show actionable samples and due-soon freshness work is queue context, not a false alarm.
@@ -107,7 +108,7 @@ The final `check:smart:run` pass exited 0. It ran script tests, guard checks, ge
 - Full local verifier runs are reliable but slow. Prefer `npm run check:smart`, focused tests, `npm run build:fast`, and exact `qa:route` unless a full pre-ship gate is needed.
 - CRLF warnings may appear for a few script/test files when Git normalizes line endings. They were non-blocking in the latest checks.
 - Global `vercel@54.14.2` install emits upstream dependency deprecation warnings for `stream-to-promise@2.2.0` and `tar@7.5.7` through Vercel CLI's own dependency graph. This is not an AiPedia repo dependency issue.
-- The local untracked `.agents/` folder and `skills-lock.json` were not part of this AiPedia cycle and were left untouched.
+- The local untracked `.agents/` folder and `skills-lock.json` are local agent/plugin state. They are ignored by `check-smart` default untracked discovery, remain uncommitted, and should be left untouched unless the task explicitly concerns local agent tooling.
 
 ## Start The Next Session
 

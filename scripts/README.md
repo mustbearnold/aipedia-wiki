@@ -4,7 +4,7 @@ Scripts are operator tools for keeping AiPedia current, source-backed, buildable
 
 ## Verification Entry Points
 
-- `npm run check:smart`: recommends the smallest safe verification set for the current diff.
+- `npm run check:smart`: recommends the smallest safe verification set for the current diff. Default dirty-path discovery ignores untracked local-only `.agents/` and `skills-lock.json` artifacts, while preserving `.agent/` continuity docs and explicitly passed paths.
 - `npm run check:smart:run`: runs that recommendation.
 - `npm run check:quick`: established no-build loop for script/tooling changes.
 - `npm run lint`: source/content guard bundle used as the repo lint gate.

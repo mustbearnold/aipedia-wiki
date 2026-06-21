@@ -38,6 +38,8 @@ Stale or unknown built-output freshness is an `attention` signal. A rendered-out
 
 Use `npm run loop:all:record -- --json` after meaningful broad reviews. It writes a timestamped JSON receipt and `.agent/loop-runs/system/latest.json`, including deltas from the previous recorded run. Do not use it for every casual check.
 
+Loop verification should stay focused on AiPedia work. `check-smart` ignores untracked local-only `.agents/` and `skills-lock.json` artifacts during default dirty-path discovery, but it still counts `.agent/` continuity docs and any explicitly passed paths.
+
 ## Loops
 
 ### Decision Content Flywheel
@@ -106,4 +108,4 @@ A loop-system change is done only when:
 - Focused tests for `scripts/aipedia-loops.mjs` pass.
 - `.agent` status docs say which loop to run next.
 
-Latest baseline: 2026-06-21 broad review is 7 ok / 0 attention after the loop recommendation and build-freshness hardening.
+Latest baseline: 2026-06-21 recorded broad review is 7 ok / 0 attention after recommendation, build-freshness, and local-artifact noise hardening.

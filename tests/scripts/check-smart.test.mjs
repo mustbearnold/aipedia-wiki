@@ -20,7 +20,16 @@ test('check-smart preserves default dirty path discovery when --base is absent',
   const gitOutputs = new Map([
     ['diff\0--name-only', ['docs/dirty.md']],
     ['diff\0--name-only\0--cached', ['scripts/check-smart.mjs']],
-    ['ls-files\0--others\0--exclude-standard', ['tests/scripts/check-smart.test.mjs', 'docs/dirty.md']],
+    [
+      'ls-files\0--others\0--exclude-standard',
+      [
+        'tests/scripts/check-smart.test.mjs',
+        'docs/dirty.md',
+        '.agent/CURRENT_STATUS.md',
+        '.agents/skills/design-taste-frontend/SKILL.md',
+        'skills-lock.json',
+      ],
+    ],
   ]);
 
   const paths = changedPathsForArgs()([], {
@@ -32,7 +41,12 @@ test('check-smart preserves default dirty path discovery when --base is absent',
     },
   });
 
-  assert.deepEqual(paths, ['docs/dirty.md', 'scripts/check-smart.mjs', 'tests/scripts/check-smart.test.mjs']);
+  assert.deepEqual(paths, [
+    '.agent/CURRENT_STATUS.md',
+    'docs/dirty.md',
+    'scripts/check-smart.mjs',
+    'tests/scripts/check-smart.test.mjs',
+  ]);
   assert.deepEqual(calls, [
     ['diff', '--name-only'],
     ['diff', '--name-only', '--cached'],

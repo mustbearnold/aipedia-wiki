@@ -61,8 +61,12 @@ Ignore these during code search unless the task is explicitly about generated ou
 - `.qa-shots/`
 - `test-results/`
 - `.worktrees/`
+- `.agents/`
+- `skills-lock.json`
 
 If `.worktrees/` contains empty or unregistered directories after generated coverage work has merged, remove them. Active Git worktrees must appear in `git worktree list`.
+
+`check-smart` ignores untracked `.agents/` and `skills-lock.json` by default because they are local agent/plugin state. It does not ignore `.agent/`, which is the canonical AiPedia continuity folder.
 
 ## Verification Router
 
