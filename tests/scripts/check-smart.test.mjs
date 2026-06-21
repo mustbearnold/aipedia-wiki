@@ -149,6 +149,41 @@ test('check-smart runs targeted route QA for rendered content routes', () => {
   assert.deepEqual(plan.categories, ['content']);
   assert.ok(plan.commands.includes('npm run build:fast'));
   assert.ok(plan.commands.includes('npm run qa:route -- --route /tools/chatgpt/'));
+  assert.equal(plan.broad_smoke_replaced_by_route_qa, true);
+});
+
+test('check-smart replaces broad visual smoke with exact route QA for content-only route cycles', () => {
+  const plan = planForPaths([
+    '.agent/CURRENT_STATUS.md',
+    'docs/superpowers/specs/2026-06-21-aipedia-decision-content-loop.md',
+    'PAGE_REFRESH_LEDGER.md',
+    'src/content/categories/ai-coding.md',
+    'src/content/comparisons/deepseek-vs-replit-agent.md',
+    'src/content/tools/deepseek.md',
+    'src/content/tools/replit-agent.md',
+    'src/data/coverage-backlog.json',
+    'src/data/source-registry.json',
+    'src/pages/categories/index.astro',
+    'src/pages/compare/index.astro',
+    'src/pages/llms-full.txt.ts',
+    'src/pages/llms.txt.ts',
+    'src/pages/tools/index.astro',
+  ]);
+
+  assert.equal(plan.broad_smoke_replaced_by_route_qa, true);
+  assert.ok(plan.commands.includes('npm run build:fast'));
+  assert.ok(!plan.commands.includes('npm run smoke:visual'));
+  assert.ok(plan.commands.includes([
+    'npm run qa:route --',
+    '--route /categories/',
+    '--route /categories/ai-coding/',
+    '--route /compare/',
+    '--route /compare/deepseek-vs-replit-agent/',
+    '--route /tools/',
+    '--route /tools/deepseek/',
+    '--route /tools/replit-agent/',
+  ].join(' ')));
+  assert.ok(!plan.smoke_routes.some((route) => route.command === 'npm run smoke:visual'));
 });
 
 test('check-smart keeps docs and agent files on diff-only verification', () => {
@@ -231,11 +266,12 @@ test('check-smart routes Phase 3 model, category, motion, and token surfaces', (
   assert.ok(comparePlan.checks.includes('tool-page-model'));
   assert.ok(comparePlan.checks.includes('generated-models'));
   assert.ok(comparePlan.commands.includes('npm run audit:generated-models'));
-  assert.ok(comparePlan.smoke_routes.some((route) => route.route === '/compare/chatgpt-vs-claude/'));
+  assert.equal(comparePlan.broad_smoke_replaced_by_route_qa, true);
+  assert.ok(!comparePlan.smoke_routes.some((route) => route.route === '/compare/chatgpt-vs-claude/'));
   assert.ok(comparePlan.smoke_routes.some((route) => route.route === '/compare/cursor-vs-deepseek/' && route.command === 'npm run qa:route'));
   assert.ok(comparePlan.commands.includes('npm run qa:route -- --route /compare/cursor-vs-deepseek/'));
-  assert.ok(comparePlan.commands.indexOf('npm run build:fast') < comparePlan.commands.indexOf('npm run smoke:visual'));
   assert.ok(comparePlan.commands.indexOf('npm run build:fast') < comparePlan.commands.indexOf('npm run qa:route -- --route /compare/cursor-vs-deepseek/'));
+  assert.ok(!comparePlan.commands.includes('npm run smoke:visual'));
 
   const motionPlan = planForPaths(['src/lib/motion-controller.ts']);
   assert.ok(motionPlan.surfaces.some((surface) => surface.id === 'phase3-motion-controller'));
@@ -280,6 +316,7 @@ test('check-smart executes one route QA command for every changed content route'
     'npm run qa:route -- --route /categories/ai-coding/ --route /compare/cursor-vs-deepseek/ --route /tools/deepseek/ --route /tools/github-copilot/',
   ]);
   assert.ok(plan.commands.indexOf('npm run build:fast') < plan.commands.indexOf(routeQaCommands[0]));
+  assert.ok(!plan.commands.includes('npm run smoke:visual'));
 });
 
 

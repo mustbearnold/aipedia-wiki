@@ -188,6 +188,12 @@ function surfaceSummariesForSurfaces(surfaces) {
 function routeQaRoutesForPaths(paths) {
   const routes = [];
   for (const path of paths.map(normalizePath)) {
+    const exactRoute = EXACT_ROUTE_QA_PATHS.get(path);
+    if (exactRoute) {
+      routes.push({ route: exactRoute.route, command: 'npm run qa:route', focus: exactRoute.focus });
+      continue;
+    }
+
     let match = path.match(/^src\/content\/comparisons\/([^/]+)\.md$/);
     if (match) {
       routes.push({ route: `/compare/${match[1]}/`, command: 'npm run qa:route', focus: 'changed comparison route' });
@@ -208,11 +214,39 @@ function routeQaRoutesForPaths(paths) {
   return routes;
 }
 
+const EXACT_ROUTE_QA_PATHS = new Map([
+  ['src/pages/categories/index.astro', { route: '/categories/', focus: 'changed category hub route' }],
+  ['src/pages/compare/index.astro', { route: '/compare/', focus: 'changed comparison hub route' }],
+  ['src/pages/tools/index.astro', { route: '/tools/', focus: 'changed tools hub route' }],
+]);
+
+const ROUTE_QA_REPLACES_BROAD_SMOKE_PATTERNS = [
+  /^\.agent\//,
+  /^docs\//,
+  /^src\/content\/(?:categories|comparisons|tools)\/[^/]+\.md$/,
+  /^src\/data\/(?:coverage-backlog|source-registry)\.json$/,
+  /^src\/pages\/(?:categories|compare|tools)\/index\.astro$/,
+  /^src\/pages\/llms(?:-full)?\.txt\.ts$/,
+  /^PAGE_REFRESH_LEDGER\.md$/,
+  /^AGENTS\.md$/,
+  /^README\.md$/,
+];
+
+function canReplaceBroadVisualSmoke(paths) {
+  const normalizedPaths = paths.map(normalizePath).filter(Boolean);
+  if (!routeQaRoutesForPaths(normalizedPaths).length) return false;
+  return normalizedPaths.every((path) =>
+    ROUTE_QA_REPLACES_BROAD_SMOKE_PATTERNS.some((pattern) => pattern.test(path)),
+  );
+}
+
 function smokeRoutesForSurfaces(surfaces, paths = []) {
   const routes = new Map();
+  const replaceBroadVisualSmoke = canReplaceBroadVisualSmoke(paths);
 
   for (const surface of surfaces) {
     for (const route of surface.smokeRoutes || []) {
+      if (replaceBroadVisualSmoke && route.command === 'npm run smoke:visual') continue;
       const key = `${route.command || ''}\0${route.route || ''}\0${route.focus || ''}`;
       if (!routes.has(key)) routes.set(key, route);
     }
@@ -229,7 +263,7 @@ function smokeRoutesForSurfaces(surfaces, paths = []) {
 }
 
 function routeQaCommandsForPaths(paths) {
-  const routes = [...new Set(routeQaRoutesForPaths(paths).map((route) => route.route))];
+  const routes = [...new Set(routeQaRoutesForPaths(paths).map((route) => route.route))].sort();
   if (!routes.length) return [];
   return [`npm run qa:route -- ${routes.map((route) => `--route ${route}`).join(' ')}`];
 }
@@ -247,7 +281,9 @@ function commandsForSelection(categories, checks) {
 }
 
 function commandsForPlan(categories, checks, paths) {
-  const commands = commandsForSelection(categories, checks);
+  const commands = canReplaceBroadVisualSmoke(paths)
+    ? commandsForSelection(categories, checks).filter((command) => command !== 'npm run smoke:visual')
+    : commandsForSelection(categories, checks);
   const routeCommands = routeQaCommandsForPaths(paths);
   if (!routeCommands.length) return commands;
 
@@ -261,12 +297,17 @@ export function commandsForCategories(categories) {
   return commandsForSelection(categories, []);
 }
 
+export function routeQaReplacesBroadVisualSmokeForPaths(paths) {
+  return canReplaceBroadVisualSmoke(paths);
+}
+
 export function planForPaths(paths) {
   const surfaces = matchingSurfaces(paths);
   const surfaceSummaries = surfaceSummariesForSurfaces(surfaces);
   const categories = categoriesForSurfaces(surfaces);
   const checks = checksForSurfaces(surfaces);
   const guidance = guidanceForSurfaces(surfaces);
+  const broadSmokeReplacedByRouteQa = canReplaceBroadVisualSmoke(paths);
   return {
     project_dir: PROJECT_DIR,
     paths,
@@ -277,6 +318,7 @@ export function planForPaths(paths) {
     checks,
     guidance,
     smoke_routes: smokeRoutesForSurfaces(surfaces, paths),
+    broad_smoke_replaced_by_route_qa: broadSmokeReplacedByRouteQa,
     commands: paths.length ? commandsForPlan(categories, checks, paths) : [],
     note: paths.length
       ? 'Run with --run to execute these commands in order.'
@@ -329,6 +371,9 @@ function printPlan(plan) {
       const focus = route.focus ? ` (${route.focus})` : '';
       console.log(`- ${route.command}: ${route.route}${focus}`);
     }
+  }
+  if (plan.broad_smoke_replaced_by_route_qa) {
+    console.log('\nBroad visual smoke: replaced by exact route QA for this content-only route set.');
   }
   console.log('\nRecommended verification:');
   for (const command of plan.commands) console.log(`- ${command}`);
