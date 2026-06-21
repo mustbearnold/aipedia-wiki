@@ -3,6 +3,7 @@
 import { spawnSync } from 'node:child_process';
 import { existsSync, readFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
+import { performance } from 'node:perf_hooks';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
 const PROJECT_DIR = dirname(dirname(fileURLToPath(import.meta.url)));
@@ -242,7 +243,7 @@ function commandsForSelection(categories, checks) {
     for (const command of group.commands) commands.add(command);
   }
 
-  return [...commands];
+  return orderCommandsForExecution([...commands]);
 }
 
 function commandsForPlan(categories, checks, paths) {
@@ -253,7 +254,7 @@ function commandsForPlan(categories, checks, paths) {
   const planned = [...commands];
   if (!planned.includes('npm run build:fast')) planned.push('npm run build:fast');
   for (const command of routeCommands) planned.push(command);
-  return planned;
+  return orderCommandsForExecution(planned);
 }
 
 export function commandsForCategories(categories) {
@@ -339,27 +340,52 @@ function runCommands(commands) {
 
   for (const command of commands) {
     console.log(`\n> ${command}`);
+    const startedAt = performance.now();
     const result = spawnSync(command, {
       cwd: PROJECT_DIR,
       env: envForCommand(command, fastBuildReady),
       shell: true,
       stdio: 'inherit',
     });
-    if (result.status !== 0) return result.status || 1;
+    const durationMs = performance.now() - startedAt;
+    const durationSeconds = (durationMs / 1000).toFixed(1);
+    if (result.status !== 0) {
+      console.log(`[check-smart] ${command} failed after ${durationSeconds}s`);
+      return result.status || 1;
+    }
+    console.log(`[check-smart] ${command} finished in ${durationSeconds}s`);
     if (isFastBuildCommand(command)) fastBuildReady = true;
   }
   return 0;
+}
+
+function orderCommandsForExecution(commands) {
+  const planned = [...commands];
+  const buildIndex = planned.findIndex(isFastBuildCommand);
+  if (buildIndex === -1) return planned;
+
+  const firstBrowserIndex = planned.findIndex(isBrowserOutputCommand);
+  if (firstBrowserIndex === -1 || buildIndex < firstBrowserIndex) return planned;
+
+  const [buildCommand] = planned.splice(buildIndex, 1);
+  planned.splice(firstBrowserIndex, 0, buildCommand);
+  return planned;
 }
 
 function isFastBuildCommand(command) {
   return /^npm run build:fast\b/.test(command.trim());
 }
 
+function isBrowserOutputCommand(command) {
+  const trimmed = command.trim();
+  return /^npm run (qa:route|smoke:visual|check:dist)\b/.test(trimmed) || /\bscripts\/qa-route\.mjs\b/.test(trimmed);
+}
+
 function needsFastBuildEnv(command, fastBuildReady) {
   const trimmed = command.trim();
   if (isFastBuildCommand(trimmed)) return true;
   if (!fastBuildReady) return false;
-  return /^npm run (qa:route|smoke:visual|check:dist)\b/.test(trimmed) || /\bscripts\/qa-route\.mjs\b/.test(trimmed);
+  return isBrowserOutputCommand(trimmed);
 }
 
 function envForCommand(command, fastBuildReady) {

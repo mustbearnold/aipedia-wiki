@@ -360,7 +360,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "adobe-affiliates",
@@ -2627,7 +2627,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "cline-docs",
@@ -2645,7 +2645,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-20"
     },
     {
       "id": "cline-repository",

@@ -17,7 +17,7 @@ Local ignored docs, old specs, and archived plans are not canonical when they co
 
 ## Plain English
 
-The June 2026 standards remediation is done and pushed to `origin/master`. The first three Decision Content Flywheel content cycles, `canva-vs-claude`, `claude-vs-replit-agent`, and `cursor-vs-deepseek`, are complete. The loop has now been hardened with executable verification, route QA, changed-route smart guidance, durable run receipts, per-command timing, and scoped fast-build environment handling. Do not restart completed cycles from the original specs. Use this file to see what was completed, what remains active, and which docs to trust first.
+The June 2026 standards remediation is done and pushed to `origin/master`. The first four Decision Content Flywheel content cycles, `canva-vs-claude`, `claude-vs-replit-agent`, `cursor-vs-deepseek`, and `cursor-vs-grok`, are complete. The loop has now been hardened with executable verification, route QA, changed-route smart guidance, durable run receipts, per-command timing, scoped fast-build environment handling, and safe build-before-browser-check ordering. Do not restart completed cycles from the original specs. Use this file to see what was completed, what remains active, and which docs to trust first.
 
 At the time this status was last checked, `master` had local unpushed cycle work in progress. Run `git status --short --branch` and `git log --oneline -5` for the exact current head.
 
@@ -31,20 +31,28 @@ At the time this status was last checked, `master` had local unpushed cycle work
   - `npm run audit:coverage-quality:changed` now rejects raw Markdown tables in changed comparison pages so mobile-hostile tables are caught before browser QA.
   - Follow-up review fixes preserve comma-containing verification command text in loop receipts, make comparison route QA executable through `check:smart:run`, avoid fallback builds for non-rendered paths, reduce duplicated loop checks, and record per-command timings.
   - Latest loop review fix scopes `AIPEDIA_FAST_BUILD=1` to build and route-QA commands, preventing fast-build mode from leaking into `test:scripts` fixture tests while keeping route QA pointed at fast-build output.
+  - Latest loop performance fix makes `check-smart --run` execute `build:fast` before `smoke:visual` and route QA when both are selected, and prints per-command durations so the next performance review is not a black box.
+- Fourth Decision Content Flywheel cycle is complete.
+  - Completed cycle: `cursor-vs-grok`.
+  - Added `src/content/comparisons/cursor-vs-grok.md`.
+  - Refreshed Cursor, Grok, AI Coding, compare/tools/categories top-layer metadata, LLM surfaces, source registry, coverage backlog, and ledger rows.
+  - Corrected over-specific xAI Responses API retention wording: current docs prove the request/response storage opt-out, but the exact old 30-day wording was not visible in the current source check.
+  - Route QA passed for `/compare/cursor-vs-grok/` at 360, 390, 430, 768, 1024, and 1366 px after build-fast.
+  - `npm run loop:next -- --json` now selects `deepseek-vs-github-copilot`.
 - Third Decision Content Flywheel cycle is complete.
   - Completed cycle: `cursor-vs-deepseek`.
   - Added `src/content/comparisons/cursor-vs-deepseek.md`.
   - Refreshed Cursor, DeepSeek, AI Coding, compare/tools/categories top-layer metadata, LLM surfaces, source registry, coverage backlog, and ledger rows.
   - Corrected stale DeepSeek V4 open-weight wording: current DeepSeek and Hugging Face sources now show V4 open-weight releases, while the page still warns that self-hosting requires hardware, license, hosting, and governance review.
   - Route QA passed for `/compare/cursor-vs-deepseek/` at 360, 390, 430, 768, 1024, and 1366 px after build-fast.
-  - `npm run loop:next -- --json` now selects `cursor-vs-grok`.
+  - `npm run loop:next -- --json` now selects `deepseek-vs-github-copilot`.
 - Second Decision Content Flywheel cycle is complete.
   - Completed cycle: `claude-vs-replit-agent`.
   - Added `src/content/comparisons/claude-vs-replit-agent.md`.
   - Refreshed Replit Agent, Claude related links, AI Coding, compare/tools/categories top-layer metadata, LLM surfaces, source registry, coverage backlog, and ledger rows.
   - Corrected Replit App Testing wording to the current web-app-only scope and replaced mobile-hostile comparison tables with stacked decision bullets.
   - Route QA passed for `/compare/claude-vs-replit-agent/` at 360, 390, 430, 768, 1024, and 1366 px after build-fast.
-  - `npm run loop:next -- --json` now selects `cursor-vs-grok`.
+  - `npm run loop:next -- --json` now selects `deepseek-vs-github-copilot`.
 - First Decision Content Flywheel cycle is complete.
   - Completed cycle: `canva-vs-claude`.
   - Added `src/content/comparisons/canva-vs-claude.md`.
@@ -58,14 +66,14 @@ At the time this status was last checked, `master` had local unpushed cycle work
   - Route QA command: `npm run qa:route -- --route /compare/<slug>/`
   - Recording command: `npm run loop:record -- --date <YYYY-MM-DD> --slug <slug> --status complete`
   - Purpose: choose one buyer-intent cluster, verify current facts, improve the decision page, update parent surfaces, run the right checks, record, repeat.
-  - Next cycle: `cursor-vs-grok` unless the coverage backlog changes or the page already exists.
+  - Next cycle: `deepseek-vs-github-copilot` unless the coverage backlog changes or the page already exists.
   - The loop brief now requires related-surface discovery, source registry inspection, stale-backlog warnings, and rendered route QA at 360, 390, 430, 768, 1024, and 1366 px.
 - Build-time diagnosis is complete.
   - `npm run build:fast` passed in 191.31 seconds after regenerating the page refresh ledger.
   - `npm run build` passed in 214.37 seconds.
   - Main cost is site scale: 1,135 content files, about 1,180 built HTML pages, Astro/Vercel static prerender around 2 minutes, and Pagefind around 44 seconds.
   - `PAGE_REFRESH_LEDGER.md` was normalized with `npm run ledger:pages` because the ledger check was stale.
-  - Best next product move from that review has now completed three cycles through `cursor-vs-deepseek`; the current next sprint is `cursor-vs-grok`.
+  - Best next product move from that review has now completed four cycles through `cursor-vs-grok`; the current next sprint is `deepseek-vs-github-copilot`.
 - June 2026 standards remediation is complete.
   - Final commit: `3355ce1d fix: remediate June standards review`
   - Spec: `docs/superpowers/specs/2026-06-20-june-standards-remediation-and-rereview.md`
@@ -97,7 +105,7 @@ At the time this status was last checked, `master` had local unpushed cycle work
   - Use `npm run loop:record` to write `.agent/loop-runs/YYYY-MM-DD-slug.md` after a completed, failed, partial, or blocked major cycle.
   - Do not write comparison, pricing, model, plan, affiliate, or commercial claims until current sources have been verified.
   - For rendered comparison cycles, record route QA at 360, 390, 430, 768, 1024, and 1366 px, covering mobile/tablet and desktop.
-  - Current recommended next cycle is `cursor-vs-grok`.
+  - Current recommended next cycle is `deepseek-vs-github-copilot`.
 - Oldest-First AI Tools Wiki Refresh remains active.
   - Work from `PAGE_REFRESH_LEDGER.md`, oldest first.
   - Latest logged refresh in `.agent/PLANS.md` is `Connected Papers`, completed on 2026-06-18.
@@ -139,6 +147,15 @@ At the time this status was last checked, `master` had local unpushed cycle work
   - `$env:AIPEDIA_LEDGER_DATE='2026-06-20'; npm run loop:verify -- --date 2026-06-20 --route /compare/cursor-vs-deepseek/ --path <changed paths>`
   - Loop verifier passed in about 234 seconds; the smart-verification block took 230.7 seconds, and build-fast reported about 2 minutes 23 seconds.
   - Playwright route QA passed for `/compare/cursor-vs-deepseek/` at 360, 390, 430, 768, 1024, and 1366 px.
+- The fourth Decision Content Flywheel cycle passed:
+  - `npm run audit:provenance:changed`
+  - `npm run audit:coverage-quality:changed`
+  - `node scripts/guard-em-dashes.mjs`
+  - `git diff --check`
+  - `$env:AIPEDIA_LEDGER_DATE='2026-06-20'; npm run loop:verify -- --date 2026-06-20 --route /compare/cursor-vs-grok/ --path <changed paths>`
+  - `node --test tests/scripts/check-smart.test.mjs tests/scripts/loop-hardening.test.mjs`
+  - Loop verifier passed in about 232 seconds; the smart-verification block took 228.9 seconds, and build-fast reported about 2 minutes 24 seconds.
+  - Playwright route QA passed for `/compare/cursor-vs-grok/` at 360, 390, 430, 768, 1024, and 1366 px.
 - The first Decision Content Flywheel cycle passed:
   - `npm run check:quick`
   - `npm run ledger:pages:check`
@@ -165,7 +182,7 @@ At the time this status was last checked, `master` had local unpushed cycle work
 
 ## Known Caveats
 
-- Public content touched during the first three loop cycles uses `2026-06-20` as the verification date because the repo audit guards use the US/UTC project date. The local New Zealand shell clock showed `2026-06-21` during part of the work. New loop cycles should pass the intended project date explicitly to `npm run loop:verify -- --date <YYYY-MM-DD>`.
+- Public content touched during the first four loop cycles uses `2026-06-20` as the verification date because the repo audit guards use the US/UTC project date. The local New Zealand shell clock showed `2026-06-21` during part of the work. New loop cycles should pass the intended project date explicitly to `npm run loop:verify -- --date <YYYY-MM-DD>`.
 - Full local builds currently take about 3.5 minutes on this machine. That is understandable for the current static site size, but too slow for normal edit loops. Prefer `npm run check:smart`, `npm run check:quick`, focused tests, and `npm run build:fast` unless a full pre-ship build is needed.
 - Large generated surfaces deserve future optimization: `/search/`, archive pages, `api/home-search.json`, public OG assets, and Pagefind output near the 10 MB budget.
 - `npm run check:ci` passed, but GitHub stats used stale cached fallback data because the GitHub API returned a 403 rate-limit response.

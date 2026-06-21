@@ -59,6 +59,8 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 
 **June 20 Cursor vs DeepSeek update:** [Cursor vs DeepSeek](/compare/cursor-vs-deepseek/) now separates the IDE/workbench purchase from the model/API purchase. Cursor remains the better daily AI coding workspace after current pricing, Teams Premium, Automations, cloud subagents, and Bugbot checks. DeepSeek belongs in the coding-model backend lane: V4-Flash and V4-Pro have 1M context, low API rates, OpenAI/Anthropic-compatible endpoints, and V4 open-weight releases, but do not replace an IDE, PR-review workflow, team admin, or compliance review.
 
+**June 20 Cursor vs Grok update:** [Cursor vs Grok](/compare/cursor-vs-grok/) now separates the daily AI IDE purchase from the xAI coding-agent/API evaluation lane. Cursor remains the better default for developers who need an editor, diffs, review, Cloud Agents, Automations, Bugbot, Teams controls, and usage dashboards. Grok belongs in the benchmark lane when teams want to test Grok Build, `grok-build-0.1`, Grok 4.3, X-aware workflows, or broader xAI platform tooling with explicit sandbox, permission, ZDR/team, and repo-quality checks.
+
 **June 5 Cursor-cluster update:** the oldest live Cursor comparison rows now separate [Cursor vs Devin](/compare/cursor-vs-devin/), [Cursor vs Gemini](/compare/cursor-vs-gemini/), [Cursor vs GitHub Copilot](/compare/cursor-vs-github-copilot/), [Cursor vs Lovable](/compare/cursor-vs-lovable/), [Cursor vs Tabnine](/compare/cursor-vs-tabnine/), [Cursor vs v0](/compare/cursor-vs-v0/), [Cursor vs Val Town](/compare/cursor-vs-val-town/), and [Cursor vs Windsurf](/compare/cursor-vs-windsurf/) against current primary sources. The buyer split is now clearer: Cursor is the hands-on AI-native IDE; Devin is asynchronous task delegation; Gemini is the broader Google AI ecosystem; Copilot is GitHub-native AI Credits/governance; Lovable and v0 are app-builder lanes; Tabnine is privacy-first enterprise code assistance; Val Town is an instant TypeScript runtime; and Windsurf is now best understood as Devin Desktop inside Cognition's stack.
 
 **Use [GitHub Copilot](/tools/github-copilot/) when the team already lives in GitHub and wants a safe default.** GitHub's official billing docs and June 1 changelog now make usage-based billing with GitHub AI Credits the active model, and the June 2 [Copilot SDK GA](/news/2026-06-02-github-copilot-ai-credits-sdk-ga/) turns Copilot into an embeddable agent runtime. It remains a strong value for GitHub-native teams that value IDE coverage, policy, pull requests, and enterprise governance, but heavy agentic, SDK, code-review, Spaces, Spark, and cloud-agent use needs modeling. The June 4 [Claude vs GitHub Copilot](/compare/claude-vs-github-copilot/) refresh now separates Claude as the broad reasoning/Claude Code lane from Copilot as the GitHub-native IDE, AI Credits, model-picker, and agent-platform lane.
@@ -231,9 +233,10 @@ Do not publish stale model-version claims. Coding tools route models and change 
 - [AiPedia Disney AI coding token-budget update](/news/2026-06-15-disney-ai-coding-tokenmaxxing/) (verified 2026-06-15)
 - [Business Insider Disney AI tokenmaxxing report](https://www.businessinsider.com/disney-ai-push-increase-velocity-tech-employees-tokenmaxxing-josh-damaro-2026-6) (verified 2026-06-15)
 - [Times of India Disney AI coding report](https://timesofindia.indiatimes.com/technology/tech-news/almost-a-year-after-giving-engineers-access-to-claude-and-cursor-disney-tells-engineers-minimise-ai-coded-products-that-/articleshow/131728705.cms) (verified 2026-06-15)
-- [xAI Grok Build docs](https://docs.x.ai/build/overview) (verified 2026-06-15)
-- [xAI Grok Build enterprise docs](https://docs.x.ai/build/enterprise) (verified 2026-06-15)
-- [xAI model docs](https://docs.x.ai/developers/models) (verified 2026-06-15)
+- [xAI Grok Build docs](https://docs.x.ai/build/overview) (verified 2026-06-20)
+- [xAI Grok Build enterprise docs](https://docs.x.ai/build/enterprise) (verified 2026-06-20)
+- [xAI model docs](https://docs.x.ai/developers/models) (verified 2026-06-20)
+- [xAI pricing](https://x.ai/pricing) (verified 2026-06-20)
 - [Cursor pricing](https://cursor.com/pricing) (verified 2026-06-20)
 - [Cursor Teams pricing update](https://cursor.com/blog/teams-pricing-june-2026) (verified 2026-06-20)
 - [Cursor Data Use and Privacy Overview](https://cursor.com/data-use) (verified 2026-06-20)

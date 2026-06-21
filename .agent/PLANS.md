@@ -17,9 +17,9 @@ For the plain-English project state, read `.agent/CURRENT_STATUS.md` first. For 
 - Route QA is now reusable through `npm run qa:route -- --route /compare/<slug>/`; changed comparison routes also run through `check:smart:run`.
 - `loop:verify` now records per-command timings and avoids fallback builds unless route QA or `--force-build` requires one.
 - Major loop cycles should write `.agent/loop-runs/` receipts with `npm run loop:record`.
-- The first three decision content loop cycles, `canva-vs-claude`, `claude-vs-replit-agent`, and `cursor-vs-deepseek`, are complete. `npm run loop:next -- --json` now selects `cursor-vs-grok`.
+- The first four decision content loop cycles, `canva-vs-claude`, `claude-vs-replit-agent`, `cursor-vs-deepseek`, and `cursor-vs-grok`, are complete. `npm run loop:next -- --json` now selects `deepseek-vs-github-copilot`.
 - Loop briefs now require related-surface discovery, source registry inspection, stale-backlog warnings, and rendered route QA at 360, 390, 430, 768, 1024, and 1366 px.
-- Latest loop-performance fix: `AIPEDIA_FAST_BUILD=1` is scoped to build and route-QA commands so unit-test fixtures do not inherit fast-build mode.
+- Latest loop-performance fixes: `AIPEDIA_FAST_BUILD=1` is scoped to build and route-QA commands so unit-test fixtures do not inherit fast-build mode, and `check-smart --run` now executes `build:fast` before browser-output checks while printing per-command durations.
 - The main active ongoing lane is the oldest-first AI tools wiki refresh.
 - The Phase 3 parallel surface and June 18-20 news backfill plan is written but not executed on `master`.
 
@@ -45,8 +45,9 @@ Run AiPedia as a repeatable buyer-decision loop: cluster, verify, improve decisi
 - 2026-06-20: First selected cluster, `canva-vs-claude`, is complete.
 - 2026-06-20: Second selected cluster, `claude-vs-replit-agent`, is complete.
 - 2026-06-20: Third selected cluster, `cursor-vs-deepseek`, is complete.
-- 2026-06-20: Next selected cluster is `cursor-vs-grok` unless a newer backlog changes the order or the comparison already exists.
-- 2026-06-21: Loop hardening added `loop:verify`, `qa:route`, `loop:record`, changed-route smart guidance, raw Markdown table rejection for changed comparison pages, executable changed-comparison route QA, conditional fallback builds, receipt-safe command recording, per-command timing, and scoped fast-build environment handling.
+- 2026-06-20: Fourth selected cluster, `cursor-vs-grok`, is complete.
+- 2026-06-20: Next selected cluster is `deepseek-vs-github-copilot` unless a newer backlog changes the order or the comparison already exists.
+- 2026-06-21: Loop hardening added `loop:verify`, `qa:route`, `loop:record`, changed-route smart guidance, raw Markdown table rejection for changed comparison pages, executable changed-comparison route QA, conditional fallback builds, receipt-safe command recording, per-command timing, scoped fast-build environment handling, build-before-browser-check ordering, and `check-smart --run` per-command timing output.
 
 ## Recently Completed: Cursor Vs DeepSeek Comparison Sprint
 
@@ -71,29 +72,52 @@ Create a high-intent, source-backed comparison page for `cursor-vs-deepseek` whi
 - `node scripts/guard-em-dashes.mjs`
 - `git diff --check`
 
-## Recommended Next: Cursor Vs Grok Comparison Sprint
+## Recently Completed: Cursor Vs Grok Comparison Sprint
 
 ### Objective
 
 Create a high-intent, source-backed comparison page for `cursor-vs-grok` while refreshing affected Cursor, Grok, AI Coding, parent hub, source registry, LLM surface, and ledger rows.
 
+### Result
+
+- Complete on 2026-06-20.
+- Added `src/content/comparisons/cursor-vs-grok.md`.
+- Refreshed Cursor, Grok, AI Coding, source registry, top-layer surfaces, LLM surfaces, coverage backlog, and ledger rows.
+- Corrected over-specific xAI Responses API retention wording after current docs proved the storage opt-out but not the old exact 30-day wording.
+- Loop verification passed, including route QA at 360, 390, 430, 768, 1024, and 1366 px.
+
+### Verification
+
+- `$env:AIPEDIA_LEDGER_DATE='2026-06-20'; npm run loop:verify -- --date 2026-06-20 --route /compare/cursor-vs-grok/ --path <changed paths>`
+- `node --test tests/scripts/check-smart.test.mjs tests/scripts/loop-hardening.test.mjs`
+- `npm run audit:provenance:changed`
+- `npm run audit:coverage-quality:changed`
+- `node scripts/guard-em-dashes.mjs`
+- `git diff --check`
+
+## Recommended Next: DeepSeek Vs GitHub Copilot Comparison Sprint
+
+### Objective
+
+Create a high-intent, source-backed comparison page for `deepseek-vs-github-copilot` while refreshing affected DeepSeek, GitHub Copilot, AI Coding, parent hub, source registry, LLM surface, and ledger rows.
+
 ### Why This Is Next
 
-- `npm run loop:next -- --json` selects `cursor-vs-grok` after the completed Cursor vs DeepSeek cycle.
-- Cursor and Grok are high-interest AI coding and xAI/Grok Build buyer-decision surfaces.
+- `npm run loop:next -- --json` selects `deepseek-vs-github-copilot` after the completed Cursor vs Grok cycle.
+- DeepSeek and GitHub Copilot are high-intent AI coding decisions: low-cost model/API backend versus GitHub-native IDE, PR, AI Credits, and enterprise governance.
 - The work improves SEO, trust, mobile decision usefulness, and the comparison loop baseline in one focused slice.
 
 ### First Slice
 
-- Verify current June 2026 Cursor and Grok pricing, plan, feature, model, API, coding-agent, privacy, and source facts.
-- Refresh `src/content/tools/cursor.md` and `src/content/tools/grok.md` only where current sources justify changes.
-- Create or refresh `src/content/comparisons/cursor-vs-grok.md`.
+- Verify current June 2026 DeepSeek and GitHub Copilot pricing, model, API, plan, governance, AI Credits, coding-agent, privacy, and source facts.
+- Refresh `src/content/tools/deepseek.md` and `src/content/tools/github-copilot.md` only where current sources justify changes.
+- Create or refresh `src/content/comparisons/deepseek-vs-github-copilot.md`.
 - Inspect and update affected parent surfaces, especially `/compare/`, `/tools/`, AI Coding category pages, sitemap/LLM surfaces, and `PAGE_REFRESH_LEDGER.md`.
 
 ### Verification
 
-- `npm run loop:verify -- --date <YYYY-MM-DD> --route /compare/cursor-vs-grok/ --path <changed paths>`
-- `npm run loop:record -- --date <YYYY-MM-DD> --slug cursor-vs-grok --status complete`
+- `npm run loop:verify -- --date <YYYY-MM-DD> --route /compare/deepseek-vs-github-copilot/ --path <changed paths>`
+- `npm run loop:record -- --date <YYYY-MM-DD> --slug deepseek-vs-github-copilot --status complete`
 - Focused retry commands, if needed:
 - `npm run ledger:pages -- --date <YYYY-MM-DD>`
 - `npm run ledger:pages:check -- --date <YYYY-MM-DD>`
@@ -103,7 +127,7 @@ Create a high-intent, source-backed comparison page for `cursor-vs-grok` while r
 - `npm run audit:provenance:changed`
 - `npm run check:smart:run -- --path <changed paths>`
 - `npm run build:fast` if rendered output or pre-ship confidence requires it and `loop:verify` did not already run it.
-- `npm run qa:route -- --route /compare/cursor-vs-grok/ --widths 360,390,430,768,1024,1366` for route-QA retry.
+- `npm run qa:route -- --route /compare/deepseek-vs-github-copilot/ --widths 360,390,430,768,1024,1366` for route-QA retry.
 
 ## Active: Oldest-First AI Tools Wiki Refresh
 
