@@ -10,7 +10,7 @@ pricing_model: paid
 price_range: "$10-$120/month"
 status: active
 launched: 2022-07
-last_updated: 2026-06-15
+last_updated: 2026-06-21
 last_verified: 2026-06-15
 update_frequency: monthly
 affiliate:
@@ -366,4 +366,4 @@ Ideogram still edges Midjourney on reliability for dense typography (logos, post
 ## Related
 
 - **Category:** [AI Image Generation](/categories/ai-image/)
-- **Comparisons:** [Ideogram vs Midjourney](/compare/ideogram-vs-midjourney/) · [Adobe Firefly vs Midjourney](/compare/adobe-firefly-vs-midjourney/)
+- **Compare:** Use [AI Image Generation](/categories/ai-image/) for adjacent image-generation alternatives; direct comparison pages are reserved for same-workflow substitutes.

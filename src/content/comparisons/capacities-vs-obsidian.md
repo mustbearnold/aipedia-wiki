@@ -8,7 +8,7 @@ winner: depends
 seo_title: "Capacities vs Obsidian: Object PKM or Local Markdown? (June 2026)"
 meta_description: "Updated June 18, 2026: choose Capacities for hosted object-based PKM with Pro AI connectors and provider choice, or Obsidian for local-first Markdown, plugins, and file ownership."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-18
+last_updated: 2026-06-21
 last_verified: 2026-06-18
 update_frequency: monthly
 canonical_fact_table: true
@@ -28,13 +28,11 @@ This is less about "which notes app is better" and more about "do you want a man
 
 ## Decision Snapshot
 
-| Buyer question | Capacities | Obsidian |
-|---|---|---|
-| **Primary job** | Hosted object-based PKM | Local-first Markdown knowledge base |
-| **Data model** | Objects, properties, collections, backlinks, daily notes | Markdown files, vaults, links, graph, Canvas, community plugins |
-| **June 2026 price signal** | Basic is free core PKM; Pro adds AI assistant, AI Chat Connectors, provider choice, task actions, smart queries, and media workflows | Core app is free; Sync is $4/mo annual or $5/mo monthly; Publish is $8/mo annual or $10/mo monthly; Commercial license is $50/user/year |
-| **AI path** | Built-in AI assistant, BYOK paths, provider choice, and AI Chat Connectors | No native AI assistant; AI depends on plugins, local tools, or provider API keys |
-| **Main watch-out** | Hosted app and object-first workflow may not satisfy file-ownership purists | Plugin-heavy setups can become brittle and require maintenance |
+- **Primary job:** Capacities: Hosted object-based PKM. Obsidian: Local-first Markdown knowledge base.
+- **Data model:** Capacities: Objects, properties, collections, backlinks, daily notes. Obsidian: Markdown files, vaults, links, graph, Canvas, community plugins.
+- **June 2026 price signal:** Capacities: Basic is free core PKM; Pro adds AI assistant, AI Chat Connectors, provider choice, task actions, smart queries, and media workflows. Obsidian: Core app is free; Sync is $4/mo annual or $5/mo monthly; Publish is $8/mo annual or $10/mo monthly; Commercial license is $50/user/year.
+- **AI path:** Capacities: Built-in AI assistant, BYOK paths, provider choice, and AI Chat Connectors. Obsidian: No native AI assistant; AI depends on plugins, local tools, or provider API keys.
+- **Main watch-out:** Capacities: Hosted app and object-first workflow may not satisfy file-ownership purists. Obsidian: Plugin-heavy setups can become brittle and require maintenance.
 
 ## Where Capacities Wins
 
@@ -62,14 +60,12 @@ For organizations, Obsidian's commercial license is not required for commercial 
 
 ## Workflow Fit
 
-| Workflow | Better fit | Why |
-|---|---|---|
-| Local-first notes | Obsidian | Markdown files stay on your device. |
-| Object-based PKM | Capacities | Typed objects and properties are native. |
-| Maximum plugin control | Obsidian | The community ecosystem is much broader. |
-| Built-in AI workflows | Capacities | AI is integrated into the product and Pro plan. |
-| Long-term file ownership | Obsidian | Plain files are easier to preserve and migrate. |
-| Minimal setup for structured notes | Capacities | The product supplies the structure. |
+- **Local-first notes:** Better fit: Obsidian. Why: Markdown files stay on your device.
+- **Object-based PKM:** Better fit: Capacities. Why: Typed objects and properties are native.
+- **Maximum plugin control:** Better fit: Obsidian. Why: The community ecosystem is much broader.
+- **Built-in AI workflows:** Better fit: Capacities. Why: AI is integrated into the product and Pro plan.
+- **Long-term file ownership:** Better fit: Obsidian. Why: Plain files are easier to preserve and migrate.
+- **Minimal setup for structured notes:** Better fit: Capacities. Why: The product supplies the structure.
 
 ## Current Fact Check
 

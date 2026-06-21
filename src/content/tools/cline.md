@@ -11,7 +11,7 @@ pricing_model: open-source
 price_range: "Free open-source runtime; usage-based inference; Enterprise/Spec Driven custom"
 status: active
 launched: 2024-07
-last_updated: 2026-06-15
+last_updated: 2026-06-21
 last_verified: 2026-06-15
 update_frequency: weekly
 affiliate:
@@ -303,4 +303,4 @@ Pick Cursor if you want the smoother AI-native IDE with less setup. Pick Cline i
 ## Related
 
 - **Category:** [AI Coding](/categories/ai-coding/)
-- **Comparisons:** [Cline vs Cursor](/compare/cline-vs-cursor/)
+- **Compare:** Use [AI Coding](/categories/ai-coding/) for adjacent IDE and terminal-agent choices; direct comparison pages are reserved for same-workflow substitutes.

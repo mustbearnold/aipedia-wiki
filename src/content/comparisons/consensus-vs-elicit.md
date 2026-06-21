@@ -8,7 +8,7 @@ winner: depends
 seo_title: "Consensus vs Elicit: Research Q&A or Systematic Review? (June 2026)"
 meta_description: "Updated June 12, 2026: Consensus is best for fast paper-backed answers and study-agreement signals; Elicit is best for screening, extraction, and systematic review workflows."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-12
+last_updated: 2026-06-21
 last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
@@ -24,11 +24,11 @@ Use **Consensus** when the buyer has a focused question and needs quick academic
 
 ## Decision Snapshot
 
-- ****Primary job**:** Consensus: Paper-backed research Q&A and evidence orientation; Elicit: Systematic review, screening, extraction, reports, exports
-- ****Best buyer**:** Consensus: Student, clinician, journalist, analyst checking a claim; Elicit: Researcher, lab, policy team, evidence-synthesis group
-- ****Current pricing signal**:** Consensus: Freemium Pro/Deep ladder; verify message and Deep-review limits at checkout; Elicit: Basic free; Plus/Pro/Scale paid; Enterprise custom; billing cadence changes price
-- ****Best output**:** Consensus: Cited answer, study snapshots, Consensus Meter, Deep review; Elicit: Evidence table, extraction columns, systematic-review report, exports
-- ****Main risk**:** Consensus: A concise answer can hide study-quality nuance; Elicit: A table can look rigorous even when extraction needs manual audit
+- **Primary job:** Consensus: Paper-backed research Q&A and evidence orientation; Elicit: Systematic review, screening, extraction, reports, exports
+- **Best buyer:** Consensus: Student, clinician, journalist, analyst checking a claim; Elicit: Researcher, lab, policy team, evidence-synthesis group
+- **Current pricing signal:** Consensus: Freemium Pro/Deep ladder; verify message and Deep-review limits at checkout; Elicit: Basic free; Plus/Pro/Scale paid; Enterprise custom; billing cadence changes price
+- **Best output:** Consensus: Cited answer, study snapshots, Consensus Meter, Deep review; Elicit: Evidence table, extraction columns, systematic-review report, exports
+- **Main risk:** Consensus: A concise answer can hide study-quality nuance; Elicit: A table can look rigorous even when extraction needs manual audit
 
 ## Where Consensus Wins
 

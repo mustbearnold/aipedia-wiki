@@ -1,14 +1,14 @@
 {
   "ok": true,
-  "generated_at": "2026-06-21T06:29:30.040Z",
+  "generated_at": "2026-06-21T08:02:30.135Z",
   "project_dir": "C:\\Users\\mustb\\Projects\\aipedia-wiki-clean",
   "totals": {
     "tools_active": 260,
     "tools_notable": 260,
-    "comparisons_existing": 65,
+    "comparisons_existing": 46,
     "answers_existing": 12,
     "comparison_gaps": 455,
-    "review_only_comparison_gaps": 2636,
+    "review_only_comparison_gaps": 2655,
     "answer_gaps": 56
   },
   "backlog": {
@@ -1397,7 +1397,7 @@
     "review_only_comparisons": [
       {
         "kind": "comparison",
-        "slug": "adobe-firefly-vs-canva",
+        "review_id": "adobe-firefly|canva",
         "tools": [
           "adobe-firefly",
           "canva"
@@ -1417,7 +1417,7 @@
       },
       {
         "kind": "comparison",
-        "slug": "adobe-firefly-vs-chatgpt",
+        "review_id": "adobe-firefly|chatgpt",
         "tools": [
           "adobe-firefly",
           "chatgpt"
@@ -1437,7 +1437,7 @@
       },
       {
         "kind": "comparison",
-        "slug": "adobe-firefly-vs-claude",
+        "review_id": "adobe-firefly|claude",
         "tools": [
           "adobe-firefly",
           "claude"
@@ -1457,7 +1457,7 @@
       },
       {
         "kind": "comparison",
-        "slug": "adobe-firefly-vs-cursor",
+        "review_id": "adobe-firefly|cursor",
         "tools": [
           "adobe-firefly",
           "cursor"
@@ -1477,7 +1477,7 @@
       },
       {
         "kind": "comparison",
-        "slug": "adobe-firefly-vs-deepseek",
+        "review_id": "adobe-firefly|deepseek",
         "tools": [
           "adobe-firefly",
           "deepseek"
@@ -1497,7 +1497,7 @@
       },
       {
         "kind": "comparison",
-        "slug": "adobe-firefly-vs-descript",
+        "review_id": "adobe-firefly|descript",
         "tools": [
           "adobe-firefly",
           "descript"
@@ -1517,7 +1517,7 @@
       },
       {
         "kind": "comparison",
-        "slug": "adobe-firefly-vs-elevenlabs",
+        "review_id": "adobe-firefly|elevenlabs",
         "tools": [
           "adobe-firefly",
           "elevenlabs"
@@ -1537,7 +1537,7 @@
       },
       {
         "kind": "comparison",
-        "slug": "adobe-firefly-vs-gemini",
+        "review_id": "adobe-firefly|gemini",
         "tools": [
           "adobe-firefly",
           "gemini"
@@ -1557,7 +1557,7 @@
       },
       {
         "kind": "comparison",
-        "slug": "adobe-firefly-vs-github-copilot",
+        "review_id": "adobe-firefly|github-copilot",
         "tools": [
           "adobe-firefly",
           "github-copilot"
@@ -1577,7 +1577,7 @@
       },
       {
         "kind": "comparison",
-        "slug": "adobe-firefly-vs-grammarly",
+        "review_id": "adobe-firefly|grammarly",
         "tools": [
           "adobe-firefly",
           "grammarly"
@@ -1597,7 +1597,7 @@
       },
       {
         "kind": "comparison",
-        "slug": "adobe-firefly-vs-grok",
+        "review_id": "adobe-firefly|grok",
         "tools": [
           "adobe-firefly",
           "grok"
@@ -1617,7 +1617,7 @@
       },
       {
         "kind": "comparison",
-        "slug": "adobe-firefly-vs-heygen",
+        "review_id": "adobe-firefly|heygen",
         "tools": [
           "adobe-firefly",
           "heygen"
@@ -1637,7 +1637,29 @@
       },
       {
         "kind": "comparison",
-        "slug": "adobe-firefly-vs-mistral-ai",
+        "review_id": "adobe-firefly|midjourney",
+        "tools": [
+          "adobe-firefly",
+          "midjourney"
+        ],
+        "shared_categories": [
+          "ai-image"
+        ],
+        "primary_categories": [
+          "ai-image",
+          "ai-image"
+        ],
+        "both_tier1": true,
+        "same_category": false,
+        "comparison_mode": "review_only",
+        "selectable": false,
+        "requires_human_review": true,
+        "policy_reason": "same primary category but no approved shared workflow lane (adobe-firefly: adobe_native_commercial_production; midjourney: hosted_aesthetic_generation)",
+        "score": 6
+      },
+      {
+        "kind": "comparison",
+        "review_id": "adobe-firefly|mistral-ai",
         "tools": [
           "adobe-firefly",
           "mistral-ai"
@@ -1657,7 +1679,7 @@
       },
       {
         "kind": "comparison",
-        "slug": "adobe-firefly-vs-n8n",
+        "review_id": "adobe-firefly|n8n",
         "tools": [
           "adobe-firefly",
           "n8n"
@@ -1677,7 +1699,7 @@
       },
       {
         "kind": "comparison",
-        "slug": "adobe-firefly-vs-notion-ai",
+        "review_id": "adobe-firefly|notion-ai",
         "tools": [
           "adobe-firefly",
           "notion-ai"
@@ -1697,7 +1719,7 @@
       },
       {
         "kind": "comparison",
-        "slug": "adobe-firefly-vs-perplexity",
+        "review_id": "adobe-firefly|perplexity",
         "tools": [
           "adobe-firefly",
           "perplexity"
@@ -1717,7 +1739,7 @@
       },
       {
         "kind": "comparison",
-        "slug": "adobe-firefly-vs-poe",
+        "review_id": "adobe-firefly|poe",
         "tools": [
           "adobe-firefly",
           "poe"
@@ -1737,7 +1759,7 @@
       },
       {
         "kind": "comparison",
-        "slug": "adobe-firefly-vs-replit-agent",
+        "review_id": "adobe-firefly|replit-agent",
         "tools": [
           "adobe-firefly",
           "replit-agent"
@@ -1757,7 +1779,7 @@
       },
       {
         "kind": "comparison",
-        "slug": "adobe-firefly-vs-runway",
+        "review_id": "adobe-firefly|runway",
         "tools": [
           "adobe-firefly",
           "runway"
@@ -1777,7 +1799,7 @@
       },
       {
         "kind": "comparison",
-        "slug": "adobe-firefly-vs-suno",
+        "review_id": "adobe-firefly|suno",
         "tools": [
           "adobe-firefly",
           "suno"
@@ -1797,7 +1819,7 @@
       },
       {
         "kind": "comparison",
-        "slug": "adobe-firefly-vs-synthesia",
+        "review_id": "adobe-firefly|synthesia",
         "tools": [
           "adobe-firefly",
           "synthesia"
@@ -1817,7 +1839,7 @@
       },
       {
         "kind": "comparison",
-        "slug": "adobe-firefly-vs-udio",
+        "review_id": "adobe-firefly|udio",
         "tools": [
           "adobe-firefly",
           "udio"
@@ -1837,7 +1859,7 @@
       },
       {
         "kind": "comparison",
-        "slug": "adobe-firefly-vs-zapier",
+        "review_id": "adobe-firefly|zapier",
         "tools": [
           "adobe-firefly",
           "zapier"
@@ -1857,7 +1879,7 @@
       },
       {
         "kind": "comparison",
-        "slug": "canva-vs-chatgpt",
+        "review_id": "canva|chatgpt",
         "tools": [
           "canva",
           "chatgpt"
@@ -1877,7 +1899,7 @@
       },
       {
         "kind": "comparison",
-        "slug": "canva-vs-claude",
+        "review_id": "canva|claude",
         "tools": [
           "canva",
           "claude"
@@ -1899,7 +1921,7 @@
       },
       {
         "kind": "comparison",
-        "slug": "canva-vs-cursor",
+        "review_id": "canva|cursor",
         "tools": [
           "canva",
           "cursor"
@@ -1919,7 +1941,7 @@
       },
       {
         "kind": "comparison",
-        "slug": "canva-vs-deepseek",
+        "review_id": "canva|deepseek",
         "tools": [
           "canva",
           "deepseek"
@@ -1939,7 +1961,7 @@
       },
       {
         "kind": "comparison",
-        "slug": "canva-vs-descript",
+        "review_id": "canva|descript",
         "tools": [
           "canva",
           "descript"
@@ -1959,7 +1981,7 @@
       },
       {
         "kind": "comparison",
-        "slug": "canva-vs-elevenlabs",
+        "review_id": "canva|elevenlabs",
         "tools": [
           "canva",
           "elevenlabs"
@@ -1979,7 +2001,7 @@
       },
       {
         "kind": "comparison",
-        "slug": "canva-vs-gemini",
+        "review_id": "canva|gemini",
         "tools": [
           "canva",
           "gemini"
@@ -1999,7 +2021,7 @@
       },
       {
         "kind": "comparison",
-        "slug": "canva-vs-github-copilot",
+        "review_id": "canva|github-copilot",
         "tools": [
           "canva",
           "github-copilot"
@@ -2019,7 +2041,7 @@
       },
       {
         "kind": "comparison",
-        "slug": "canva-vs-grammarly",
+        "review_id": "canva|grammarly",
         "tools": [
           "canva",
           "grammarly"
@@ -2039,7 +2061,7 @@
       },
       {
         "kind": "comparison",
-        "slug": "canva-vs-grok",
+        "review_id": "canva|grok",
         "tools": [
           "canva",
           "grok"
@@ -2059,7 +2081,7 @@
       },
       {
         "kind": "comparison",
-        "slug": "canva-vs-heygen",
+        "review_id": "canva|heygen",
         "tools": [
           "canva",
           "heygen"
@@ -2079,7 +2101,7 @@
       },
       {
         "kind": "comparison",
-        "slug": "canva-vs-midjourney",
+        "review_id": "canva|midjourney",
         "tools": [
           "canva",
           "midjourney"
@@ -2099,7 +2121,7 @@
       },
       {
         "kind": "comparison",
-        "slug": "canva-vs-mistral-ai",
+        "review_id": "canva|mistral-ai",
         "tools": [
           "canva",
           "mistral-ai"
@@ -2119,7 +2141,7 @@
       },
       {
         "kind": "comparison",
-        "slug": "canva-vs-n8n",
+        "review_id": "canva|n8n",
         "tools": [
           "canva",
           "n8n"
@@ -2139,7 +2161,7 @@
       },
       {
         "kind": "comparison",
-        "slug": "canva-vs-notion-ai",
+        "review_id": "canva|notion-ai",
         "tools": [
           "canva",
           "notion-ai"
@@ -2159,7 +2181,7 @@
       },
       {
         "kind": "comparison",
-        "slug": "canva-vs-perplexity",
+        "review_id": "canva|perplexity",
         "tools": [
           "canva",
           "perplexity"
@@ -2179,7 +2201,7 @@
       },
       {
         "kind": "comparison",
-        "slug": "canva-vs-poe",
+        "review_id": "canva|poe",
         "tools": [
           "canva",
           "poe"
@@ -2199,7 +2221,7 @@
       },
       {
         "kind": "comparison",
-        "slug": "canva-vs-replit-agent",
+        "review_id": "canva|replit-agent",
         "tools": [
           "canva",
           "replit-agent"
@@ -2219,7 +2241,7 @@
       },
       {
         "kind": "comparison",
-        "slug": "canva-vs-runway",
+        "review_id": "canva|runway",
         "tools": [
           "canva",
           "runway"
@@ -2239,7 +2261,7 @@
       },
       {
         "kind": "comparison",
-        "slug": "canva-vs-suno",
+        "review_id": "canva|suno",
         "tools": [
           "canva",
           "suno"
@@ -2259,7 +2281,7 @@
       },
       {
         "kind": "comparison",
-        "slug": "canva-vs-synthesia",
+        "review_id": "canva|synthesia",
         "tools": [
           "canva",
           "synthesia"
@@ -2279,7 +2301,7 @@
       },
       {
         "kind": "comparison",
-        "slug": "canva-vs-udio",
+        "review_id": "canva|udio",
         "tools": [
           "canva",
           "udio"
@@ -2299,7 +2321,7 @@
       },
       {
         "kind": "comparison",
-        "slug": "canva-vs-zapier",
+        "review_id": "canva|zapier",
         "tools": [
           "canva",
           "zapier"
@@ -2319,7 +2341,7 @@
       },
       {
         "kind": "comparison",
-        "slug": "chatgpt-vs-cursor",
+        "review_id": "chatgpt|cursor",
         "tools": [
           "chatgpt",
           "cursor"
@@ -2339,7 +2361,7 @@
       },
       {
         "kind": "comparison",
-        "slug": "chatgpt-vs-deepseek",
+        "review_id": "chatgpt|deepseek",
         "tools": [
           "chatgpt",
           "deepseek"
@@ -2361,7 +2383,7 @@
       },
       {
         "kind": "comparison",
-        "slug": "chatgpt-vs-descript",
+        "review_id": "chatgpt|descript",
         "tools": [
           "chatgpt",
           "descript"
@@ -2381,7 +2403,7 @@
       },
       {
         "kind": "comparison",
-        "slug": "chatgpt-vs-elevenlabs",
+        "review_id": "chatgpt|elevenlabs",
         "tools": [
           "chatgpt",
           "elevenlabs"
@@ -2401,7 +2423,7 @@
       },
       {
         "kind": "comparison",
-        "slug": "chatgpt-vs-github-copilot",
+        "review_id": "chatgpt|github-copilot",
         "tools": [
           "chatgpt",
           "github-copilot"
@@ -2421,7 +2443,7 @@
       },
       {
         "kind": "comparison",
-        "slug": "chatgpt-vs-grammarly",
+        "review_id": "chatgpt|grammarly",
         "tools": [
           "chatgpt",
           "grammarly"
@@ -2443,7 +2465,7 @@
       },
       {
         "kind": "comparison",
-        "slug": "chatgpt-vs-heygen",
+        "review_id": "chatgpt|heygen",
         "tools": [
           "chatgpt",
           "heygen"
@@ -2463,7 +2485,7 @@
       },
       {
         "kind": "comparison",
-        "slug": "chatgpt-vs-midjourney",
+        "review_id": "chatgpt|midjourney",
         "tools": [
           "chatgpt",
           "midjourney"
@@ -2483,7 +2505,7 @@
       },
       {
         "kind": "comparison",
-        "slug": "chatgpt-vs-mistral-ai",
+        "review_id": "chatgpt|mistral-ai",
         "tools": [
           "chatgpt",
           "mistral-ai"
@@ -2505,7 +2527,7 @@
       },
       {
         "kind": "comparison",
-        "slug": "chatgpt-vs-n8n",
+        "review_id": "chatgpt|n8n",
         "tools": [
           "chatgpt",
           "n8n"
@@ -2525,7 +2547,7 @@
       },
       {
         "kind": "comparison",
-        "slug": "chatgpt-vs-notion-ai",
+        "review_id": "chatgpt|notion-ai",
         "tools": [
           "chatgpt",
           "notion-ai"
@@ -2545,7 +2567,7 @@
       },
       {
         "kind": "comparison",
-        "slug": "chatgpt-vs-perplexity",
+        "review_id": "chatgpt|perplexity",
         "tools": [
           "chatgpt",
           "perplexity"
@@ -2569,7 +2591,7 @@
       },
       {
         "kind": "comparison",
-        "slug": "chatgpt-vs-poe",
+        "review_id": "chatgpt|poe",
         "tools": [
           "chatgpt",
           "poe"
@@ -2587,26 +2609,6 @@
         "selectable": false,
         "requires_human_review": true,
         "policy_reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21.",
-        "score": 6
-      },
-      {
-        "kind": "comparison",
-        "slug": "chatgpt-vs-replit-agent",
-        "tools": [
-          "chatgpt",
-          "replit-agent"
-        ],
-        "shared_categories": [],
-        "primary_categories": [
-          "ai-chatbots",
-          "ai-coding"
-        ],
-        "both_tier1": true,
-        "same_category": false,
-        "comparison_mode": "review_only",
-        "selectable": false,
-        "requires_human_review": true,
-        "policy_reason": "different primary categories",
         "score": 6
       }
     ],

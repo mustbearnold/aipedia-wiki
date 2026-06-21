@@ -12,7 +12,7 @@ pricing_model: freemium
 price_range: $0-$42/month annual; Team $20/user/mo annual; Enterprise custom
 status: active
 launched: 2023-08
-last_updated: 2026-06-12
+last_updated: 2026-06-21
 last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
@@ -258,4 +258,4 @@ Paid plans (Plus, Pro, Team, and legacy Basic for grandfathered users) include c
 ## Related
 
 - **Category:** [AI Image Generation](/categories/ai-image/)
-- **Comparisons:** [Ideogram vs Midjourney](/compare/ideogram-vs-midjourney/) · [Adobe Firefly vs Ideogram](/compare/adobe-firefly-vs-ideogram/) · [Ideogram vs Stable Diffusion](/compare/ideogram-vs-stable-diffusion/)
+- **Compare:** Use [AI Image Generation](/categories/ai-image/) for adjacent image-generation alternatives; direct comparison pages are reserved for same-workflow substitutes.

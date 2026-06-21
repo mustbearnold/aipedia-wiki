@@ -12,7 +12,7 @@ pricing_model: freemium
 price_range: "Free/freemium chat / K2.6 API $0.95/M cache-miss input"
 status: active
 launched: 2023-10
-last_updated: 2026-06-12
+last_updated: 2026-06-21
 last_verified: 2026-06-12
 update_frequency: quarterly
 affiliate:
@@ -247,4 +247,4 @@ Yes. Point your OpenAI SDK at api.moonshot by changing the base URL and plugging
 ## Related
 
 - **Category:** [AI Chatbots](/categories/ai-chatbots/) · [AI Research](/categories/ai-research/)
-- **Comparisons:** [ChatGPT vs Kimi](/compare/chatgpt-vs-kimi/) · [Claude vs Kimi](/compare/claude-vs-kimi/)
+- **Compare:** Use [AI Chatbots & LLMs](/categories/ai-chatbots/) for assistant and model-provider alternatives; direct comparison pages are reserved for same-workflow substitutes.

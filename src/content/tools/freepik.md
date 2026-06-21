@@ -10,7 +10,7 @@ pricing_model: freemium
 price_range: "$0-$158.33/month annual; Business and Enterprise custom"
 status: active
 launched: 2023-06
-last_updated: 2026-06-12
+last_updated: 2026-06-21
 last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
@@ -260,4 +260,4 @@ Different tools. Freepik AI Suite / Magnific is a creative-suite bundle with sto
 ## Related
 
 - **Category:** [AI Image Generation](/categories/ai-image/)
-- **Comparisons:** [Freepik vs Midjourney](/compare/freepik-vs-midjourney/) · [Adobe Firefly vs Freepik](/compare/adobe-firefly-vs-freepik/) · [Freepik vs Ideogram](/compare/freepik-vs-ideogram/)
+- **Compare:** Use [AI Image Generation](/categories/ai-image/) for adjacent creative-production alternatives; direct comparison pages are reserved for same-workflow substitutes.

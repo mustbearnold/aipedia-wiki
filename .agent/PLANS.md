@@ -8,11 +8,12 @@ For plain-English project state, read `.agent/CURRENT_STATUS.md` first. For comp
 
 - Last updated: 2026-06-21.
 - Check `master` with `git status --short --branch` before starting work.
-- The June 2026 standards remediation, Guard Challenge Workflow, Project Folder Tidy, Verification Router, June 17 news catch-up, Vercel CLI install, decision loop tooling, strict comparison cleanup, `activepieces-vs-n8n`, and `activepieces-vs-zapier` cycles are complete and pushed to `master`.
+- The June 2026 standards remediation, Guard Challenge Workflow, Project Folder Tidy, Verification Router, June 17 news catch-up, Vercel CLI install, decision loop tooling, strict comparison cleanup, `activepieces-vs-n8n`, `activepieces-vs-zapier`, multi-loop buildout, freshness metadata scheduling, and Quality Pruning workflow-policy cleanup are complete.
 - The decision content flywheel is the default repeatable loop. Use `npm run loop:next -- --json`.
 - Comparison pages must compare the same buyer job and workflow. Same primary category is necessary but not sufficient. Cross-category and different-workflow pairs are review-only and must not become published `vs` pages.
 - The selector now uses explicit workflow lanes for broad categories, including automation, image, coding, music, chatbots, video, voice, design, writing, notes, and search.
-- The multi-loop system is implemented in the current working batch. Use `npm run loop:system` to list loops and `npm run loop:all -- --json` to review all loop signals.
+- The multi-loop system is green. Use `npm run loop:system` to list loops and `npm run loop:all -- --json` to review all loop signals.
+- The live comparison inventory is 46 policy-aligned pages. `scripts/guard-content.mjs` now protects it with a 41-page floor after accepted Guard Challenge review.
 - Current next selected cluster is `amazon-q-vs-github-copilot`.
 - Current build timing baseline from 2026-06-21: `npm run build:fast` has recently passed in roughly 2 to 3 minutes for normal content runs. The full loop verifier can take about 8 minutes when content, guards, script tests, build, and route QA are all touched.
 - Route QA uses 360, 390, 430, 768, 1024, and 1366 px for rendered route work.
@@ -47,6 +48,7 @@ Run AiPedia as a repeatable buyer-decision loop: cluster, verify, improve decisi
 - 2026-06-21: Current next selected cluster is `amazon-q-vs-github-copilot`.
 - 2026-06-21: Loop hardening includes `loop:verify`, `qa:route`, `loop:record`, changed-route smart guidance, raw Markdown table rejection for changed comparison pages, executable route QA, conditional fallback builds, receipt-safe command recording, per-command timing, scoped fast-build environment handling, build-before-browser-check ordering, exact route QA replacement for safe content-only route cycles, and explicit workflow-family selection for broad categories.
 - 2026-06-21: Multi-loop registry added Decision Content, Freshness, Trust and Provenance, Revenue and Conversion, Quality Pruning, Performance and UX, and News and Market Change loops.
+- 2026-06-21: Quality Pruning cleanup deleted 19 no-shared-workflow comparison pages, removed public links, strengthened the comparison quality audit with workflow-lane enforcement, re-anchored comparison inventory fixtures through Guard Challenge records, and brought `npm run loop:all -- --json` to 7 ok / 0 attention.
 
 ## Active: Multi-Loop System
 
@@ -72,12 +74,13 @@ Keep AiPedia maintenance repeatable without turning it into bureaucracy. The loo
 - 2026-06-21: First run found two attention loops: Freshness and Quality Pruning.
 - 2026-06-21: Revised runner after review so due-soon freshness volume is queue context, not an alarm.
 - 2026-06-21: Revised runner summaries to expose sample failures, issues, gaps, top review queue items, and top tools.
-- 2026-06-21: Freshness metadata scheduling fixed 17 missing high-volatility `next_review_at` values and changed the broad review to 6 ok / 1 attention.
+- 2026-06-21: Freshness metadata scheduling fixed 17 missing high-volatility `next_review_at` values.
+- 2026-06-21: Latest broad review is 7 ok / 0 attention.
 
 ### Next Improvement Pass
 
-- Quality Pruning: run `npm run loop:quality -- --json`, then fix or triage the 62 comparison-quality failures.
-- After each cleanup batch, rerun `npm run loop:all -- --json` and record whether attention dropped.
+- Run the next Decision Content cycle, currently `amazon-q-vs-github-copilot`, or pick a freshness queue item if fact freshness is the higher priority.
+- After each meaningful cycle, rerun the relevant loop plus `npm run loop:all -- --json` and record whether attention returns.
 
 ## Recommended Next: Amazon Q Vs GitHub Copilot Comparison Sprint
 

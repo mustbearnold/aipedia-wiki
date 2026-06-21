@@ -8,7 +8,7 @@ winner: depends
 seo_title: "Fish Audio / OpenAudio S1 + S2 vs Voxtral: Which Voice AI Is Better in 2026?"
 meta_description: "June 2026 head-to-head of Fish Audio and Voxtral. Compare open-weight TTS, Mistral Voxtral TTS, transcription, realtime STT, pricing, and stack fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-12
+last_updated: 2026-06-21
 last_verified: 2026-06-12
 update_frequency: quarterly
 canonical_fact_table: true
@@ -25,13 +25,11 @@ canonical_fact_table: true
 Choose Fish Audio if the priority is open-weight expressive TTS, self-hosting, voice-cloning experiments, or API value around S1/S2 Pro at $15 per 1M UTF-8 bytes. Choose Voxtral if the priority is staying inside Mistral for hosted TTS at $0.016 per 1K characters plus batch and realtime STT. For many voice agents, the strongest answer is not either/or: use Voxtral on the input side and Fish Audio or Voxtral TTS on the output side depending on quality, latency, and governance tests.
 
 ## Decision Snapshot
-| | Fish Audio / OpenAudio S1 + S2 | Voxtral |
-|---|---|---|
-| **Primary job** | Open-weight expressive TTS and voice cloning | Mistral-native TTS, transcription, and realtime STT |
-| **Flagship audio pieces** | OpenAudio S1, OpenAudio S2/S2 Pro, hosted Fish Audio API | Voxtral TTS v26.03, Voxtral Mini Transcribe 2, Voxtral Realtime |
-| **Pricing shape** | Free/open-weight path plus hosted S1/S2 Pro at $15 per 1M UTF-8 bytes; creator tiers from free to Max $749/mo | Voxtral TTS at $0.016 per 1K characters; Mistral lists Voxtral Mini Transcribe at $0.002/min while the Mini Transcribe 2 card shows $0.003/min |
-| **Best for** | Custom speech generation, local deployment, open-source model evaluation, agent spoken output | Mistral-standardized apps, speech input loops, multilingual ASR, and hosted TTS/STT procurement |
-| **Main risk** | More operational QA and safety policy owned by your team | Less control outside Mistral's platform and model/license boundaries |
+- **Primary job:** Fish Audio / OpenAudio S1 + S2: Open-weight expressive TTS and voice cloning. Voxtral: Mistral-native TTS, transcription, and realtime STT.
+- **Flagship audio pieces:** Fish Audio / OpenAudio S1 + S2: OpenAudio S1, OpenAudio S2/S2 Pro, hosted Fish Audio API. Voxtral: Voxtral TTS v26.03, Voxtral Mini Transcribe 2, Voxtral Realtime.
+- **Pricing shape:** Fish Audio / OpenAudio S1 + S2: Free/open-weight path plus hosted S1/S2 Pro at $15 per 1M UTF-8 bytes; creator tiers from free to Max $749/mo. Voxtral: Voxtral TTS at $0.016 per 1K characters; Mistral lists Voxtral Mini Transcribe at $0.002/min while the Mini Transcribe 2 card shows $0.003/min.
+- **Best for:** Fish Audio / OpenAudio S1 + S2: Custom speech generation, local deployment, open-source model evaluation, agent spoken output. Voxtral: Mistral-standardized apps, speech input loops, multilingual ASR, and hosted TTS/STT procurement.
+- **Main risk:** Fish Audio / OpenAudio S1 + S2: More operational QA and safety policy owned by your team. Voxtral: Less control outside Mistral's platform and model/license boundaries.
 
 ## Where Fish Audio Wins
 

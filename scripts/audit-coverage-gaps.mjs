@@ -350,7 +350,7 @@ const reviewOnlyComparisonGaps = [...reviewOnlyPairs.values()]
   .filter(({ a, b }) => !candidatePairs.has(pairKey(a, b)))
   .map(({ a, b, sharedCategories, policy }) => ({
     kind: 'comparison',
-    slug: comparisonSlug(a, b),
+    review_id: pairKey(a, b),
     tools: [a, b],
     shared_categories: sharedCategories.length ? sharedCategories : sharedCategoriesFor(a, b),
     primary_categories: [toolBySlug.get(a)?.primary_category || '', toolBySlug.get(b)?.primary_category || ''],
@@ -362,7 +362,7 @@ const reviewOnlyComparisonGaps = [...reviewOnlyPairs.values()]
     policy_reason: policy.reason,
     score: priorityWeight(a) + priorityWeight(b),
   }))
-  .sort((x, y) => y.score - x.score || x.slug.localeCompare(y.slug));
+  .sort((x, y) => y.score - x.score || x.review_id.localeCompare(y.review_id));
 
 /* ------------------------------------------------------------------ */
 /*  Answer-page gaps                                                   */

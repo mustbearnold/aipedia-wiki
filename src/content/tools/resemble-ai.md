@@ -10,7 +10,7 @@ pricing_model: paid
 price_range: "$0 to start, pay-per-use + Enterprise"
 status: active
 launched: 2019-06
-last_updated: 2026-06-12
+last_updated: 2026-06-21
 last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
@@ -272,4 +272,4 @@ The current production voice model behind Generate. Handles streaming TTS, voice
 ## Related
 
 - **Category:** [AI Voice / TTS](/categories/ai-voice/)
-- **Comparisons:** , [ElevenLabs vs Resemble AI](/compare/elevenlabs-vs-resemble-ai/), [Fish Audio vs Resemble AI](/compare/fish-audio-vs-resemble-ai/)
+- **Comparisons:** [Fish Audio vs Resemble AI](/compare/fish-audio-vs-resemble-ai/)

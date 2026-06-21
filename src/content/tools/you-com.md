@@ -13,7 +13,7 @@ pricing_model: paid
 price_range: "$1-$110+ per 1K calls; $100 free credit; Enterprise custom"
 status: active
 launched: 2020-11
-last_updated: 2026-06-12
+last_updated: 2026-06-21
 last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
@@ -272,4 +272,4 @@ Yes. Enterprise customers can configure zero-retention deployments, and the plat
 ## Related
 
 - **Category:** [AI Search](/categories/ai-search/)
-- **Comparisons:** [Exa AI vs You.com](/compare/exa-vs-you-com/)
+- **Compare:** Use [AI Search](/categories/ai-search/) for answer-engine and search-API alternatives; direct comparison pages are reserved for same-workflow substitutes.

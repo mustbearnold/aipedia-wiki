@@ -30,6 +30,16 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 
 ## Entries
 
+### 2026-06-21: Quality Pruning Workflow Policy Cleanup
+
+- Status: Complete.
+- Commit: this commit.
+- Branch: `master`.
+- Changed: Deleted 19 invalid live comparison pages whose tools did not share an approved workflow lane; removed public links from affected tool pages, category pages, and curated comparison surfaces; regenerated `PAGE_REFRESH_LEDGER.md` and `src/data/coverage-backlog.json`; strengthened `scripts/audit-coverage-quality.mjs` to enforce `src/data/comparison-policy.json` workflow lanes; changed review-only coverage backlog entries to use `review_id` instead of route-style slugs; added focused comparison-quality and coverage-gap tests; re-anchored comparison inventory guards from 60 to 41 through accepted Guard Challenge records; and added link wrapping in `src/layouts/ComparisonLayout.astro` to prevent long source links from causing 360 px overflow.
+- Verification: `npm run coverage:backlog`; deleted-route `rg` sweep over `src` and `PAGE_REFRESH_LEDGER.md`; `npm run loop:quality -- --json`; `npm run loop:all -- --json`; `node scripts/audit-coverage-quality.mjs --all --json`; `node scripts/guard-content.mjs --baseline --dry-run --json`; `node scripts/guard-content.mjs --json`; `node scripts/audit-site-kpis.mjs --json`; `node scripts/guard-stale-facts.mjs --json`; `node --test tests/scripts/audit-coverage-quality.test.mjs`; `node --test tests/scripts/audit-coverage-gaps.test.mjs`; `node --test tests/scripts/audit-site-kpis.test.mjs tests/scripts/guard-content.test.mjs tests/scripts/guard-stale-facts.test.mjs tests/scripts/check-smart.test.mjs`; `npm run guard:challenge:check`; `npm run ledger:pages:check`; `node scripts/guard-em-dashes.mjs`; `git diff --check`; `npm run build:fast`; `npm run qa:route -- --route /compare/decktopus-vs-gamma/ --route /compare/decktopus-vs-pitch/`; `npm run check:smart:run`.
+- Residual risks: `audit-site-kpis` still flags `neuronwriter-vs-surfer-seo` below the 700-word comparison KPI threshold, but the quality loop is green because the page clears required comparison-quality rules. Historical archives still mention deleted routes as past work.
+- Next: Run the next Decision Content cycle, currently `amazon-q-vs-github-copilot`, with current June 2026 source verification before editing.
+
 ### 2026-06-21: Freshness Metadata Scheduling
 
 - Status: Complete.

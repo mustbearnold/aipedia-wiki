@@ -10,7 +10,7 @@ pricing_model: freemium
 price_range: "$0-$239/month + credits"
 status: active
 launched: 2023-09
-last_updated: 2026-06-18
+last_updated: 2026-06-21
 last_verified: 2026-06-18
 update_frequency: monthly
 affiliate:
@@ -262,4 +262,4 @@ Yes. The free plan provides 20K model credits and $1 in prepaid Agent dollars fo
 ## Related
 
 - **Category:** [AI Voice / TTS](/categories/ai-voice/)
-- **Comparisons:** [Cartesia vs ElevenLabs](/compare/cartesia-vs-elevenlabs/), [Cartesia vs Voxtral](/compare/cartesia-vs-voxtral/)
+- **Compare:** Use [AI Voice / TTS](/categories/ai-voice/) for real-time voice-agent alternatives; direct comparison pages are reserved for same-workflow substitutes.

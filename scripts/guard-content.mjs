@@ -37,7 +37,7 @@ const argumentIssues = collectArgumentIssues();
 // content. Re-run `npm run guard:baseline` if you added content.
 const FLOORS = {
   tools:        260,
-  comparisons:   60,
+  comparisons:   41,
   'use-cases':    105,
   categories:    10,
   trends:         8,

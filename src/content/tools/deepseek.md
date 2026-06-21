@@ -11,7 +11,7 @@ pricing_model: freemium
 price_range: "Free (chat) / Usage-based (V4-Flash from $0.14/M input; V4-Pro quarter-price from $0.435/M input)"
 status: active
 launched: 2023-07
-last_updated: 2026-06-20
+last_updated: 2026-06-21
 last_verified: 2026-06-20
 update_frequency: quarterly
 affiliate:
@@ -405,4 +405,4 @@ For regulated industries, no. The Berlin DPA flagged the app as non-compliant wi
 ## Related
 
 - **Category:** [AI Chatbots](/categories/ai-chatbots/) · [AI Coding](/categories/ai-coding/)
-- **Comparisons:** [Claude vs DeepSeek](/compare/claude-vs-deepseek/) · [DeepSeek vs Mistral AI](/compare/deepseek-vs-mistral-ai/) · [DeepSeek vs Qwen](/compare/deepseek-vs-qwen/)
+- **Comparisons:** [DeepSeek vs Mistral AI](/compare/deepseek-vs-mistral-ai/) · [DeepSeek vs Qwen](/compare/deepseek-vs-qwen/)

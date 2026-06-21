@@ -12,6 +12,8 @@ function runStaleFacts(...args) {
   });
 }
 
+const MIN_POLICY_ALIGNED_COMPARISONS = 40;
+
 test('stale fact guard exposes JSON output for baseline audits', () => {
   const result = runStaleFacts('--json');
 
@@ -26,7 +28,7 @@ test('stale fact guard exposes JSON output for baseline audits', () => {
   assert.deepEqual(data.argument_issues, []);
   assert.equal(data.totals.required_tools, 10);
   assert.equal(data.totals.failures, 0);
-  assert.ok(data.totals.comparisons_scanned >= 60);
+  assert.ok(data.totals.comparisons_scanned >= MIN_POLICY_ALIGNED_COMPARISONS);
   assert.ok(Array.isArray(data.failures));
 });
 

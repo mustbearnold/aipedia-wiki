@@ -7,7 +7,7 @@ tool_count: 31
 seo_title: "Best AI Coding Tools & Copilot Alternatives (June 2026)"
 meta_description: "Updated June 20, 2026: compare Cursor, Claude Code, GitHub Copilot after app GA and gradual signup reopening, DeepSeek V4, Grok Build, Amazon Q Developer's Kiro transition, Mastra, Codex, Devin, v0, Replit Agent, Aider, Cline, CodeRabbit, Cody, and Augment by workflow, pricing, autonomy, model-route risk, and team fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-20
+last_updated: 2026-06-21
 last_verified: 2026-06-20
 update_frequency: weekly
 top_picks:
@@ -136,7 +136,7 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 
 **June 15 Augment Code update:** [Augment Code](/tools/augment-code/) is no longer a clean $20 solo / $60 team / $200 Max comparison in the public pricing surface. The current Augment page centers Business at $100/month flat for up to 50 seats with $100 included usage, Cosmos, Auggie CLI, MCP/native tools, pay-as-you-go after included usage, and Enterprise custom. Treat Augment as a team usage-balance product, not a simple per-developer Copilot replacement. Its model docs list Claude Fable 5, but Anthropic's Fable/Mythos suspension still makes route verification mandatory before using Fable-specific pilot results.
 
-**June 4 maintenance note:** earlier coding-ledger work still informs the lane map: Continue is source-controlled AI PR checks and agent governance, Cursor is the managed AI-native IDE, Devin is async ticket delegation, GitHub Copilot is the GitHub-native AI Credits platform, and Val Town is a hosted TypeScript runtime. Keep adjacent-lane comparisons in hub, tool, guide, or workflow pages unless a standalone page compares direct substitutes. The refreshed [Cline vs Cursor](/compare/cline-vs-cursor/) row remains live because it still maps a same-workflow IDE/agent choice. Earlier June 2 maintenance remains in force for Aider, Cline, CodeRabbit, Amazon Q Developer, Augment Code, Sourcegraph Cody, Factory, JetBrains AI, Kiro, Mastra, OpenHands, Pieces, Qodo, Replit Agent, Same.dev, Supermaven, Tabnine, Windsurf/Devin Desktop, Zed, Goose, GLM-5.1, and Glean.
+**June 4 maintenance note:** earlier coding-ledger work still informs the lane map: Continue is source-controlled AI PR checks and agent governance, Cursor is the managed AI-native IDE, Devin is async ticket delegation, GitHub Copilot is the GitHub-native AI Credits platform, and Val Town is a hosted TypeScript runtime. Keep adjacent-lane comparisons in hub, tool, guide, or workflow pages unless a standalone page compares direct substitutes. Earlier June 2 maintenance remains in force for Aider, Cline, CodeRabbit, Amazon Q Developer, Augment Code, Sourcegraph Cody, Factory, JetBrains AI, Kiro, Mastra, OpenHands, Pieces, Qodo, Replit Agent, Same.dev, Supermaven, Tabnine, Windsurf/Devin Desktop, Zed, Goose, GLM-5.1, and Glean.
 
 ## Buyer Paths
 

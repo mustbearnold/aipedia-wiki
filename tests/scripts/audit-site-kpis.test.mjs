@@ -12,6 +12,8 @@ function runSiteKpis(...args) {
   });
 }
 
+const MIN_POLICY_ALIGNED_COMPARISONS = 40;
+
 test('site KPI audit emits stable JSON with core remediation metrics', () => {
   const result = runSiteKpis('--json');
 
@@ -26,7 +28,7 @@ test('site KPI audit emits stable JSON with core remediation metrics', () => {
   assert.equal(data.mode, 'report');
   assert.deepEqual(data.argument_issues, []);
   assert.ok(data.collections.tools >= 253);
-  assert.ok(data.collections.comparisons >= 60);
+  assert.ok(data.collections.comparisons >= MIN_POLICY_ALIGNED_COMPARISONS);
   assert.equal(data.collections.news, data.news.total);
   assert.ok(data.collections['use-cases'] >= 93);
 

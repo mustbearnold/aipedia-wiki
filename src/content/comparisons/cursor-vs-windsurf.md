@@ -8,7 +8,7 @@ winner: cursor
 seo_title: "Cursor vs Windsurf / Devin Desktop: Which AI IDE Wins? (June 2026)"
 meta_description: "Cursor vs Windsurf, verified June 12, 2026: Cursor AI IDE versus Windsurf's move into Devin Desktop, current pricing redirects, SWE-1.6, BYOK, and buyer risk."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-12
+last_updated: 2026-06-21
 last_verified: 2026-06-12
 update_frequency: monthly
 canonical_fact_table: true
@@ -28,21 +28,17 @@ Cursor wins for most buyers because the product and pricing page are still clean
 
 ## Decision Snapshot
 
-| Buyer question | Better choice | Why |
-|---|---|---|
-| Stable standalone AI IDE | Cursor | Cursor's public product/pricing story is clearer as a dedicated AI-native editor. |
-| Cognition stack and Devin handoff | Windsurf / Devin Desktop | Windsurf is now presented as Devin Desktop and fits Cognition's agent ecosystem. |
-| Current public pricing clarity | Cursor | Cursor publishes Hobby, Individual, Teams, and Enterprise pricing directly. |
-| SWE model family | Windsurf / Devin Desktop | Devin Desktop docs list SWE-1.6, SWE-1.6 Fast, SWE-1.5, SWE-1-mini, and swe-grep. |
-| Migration from old Windsurf/Codeium workflow | Windsurf / Devin Desktop | Existing users should follow Cognition's current product path rather than treat old Windsurf pricing as durable. |
-| General AI-IDE recommendation | Cursor | Lower rebrand risk and stronger independent buyer clarity. |
+- **Stable standalone AI IDE:** Better choice: Cursor. Why: Cursor's public product/pricing story is clearer as a dedicated AI-native editor.
+- **Cognition stack and Devin handoff:** Better choice: Windsurf / Devin Desktop. Why: Windsurf is now presented as Devin Desktop and fits Cognition's agent ecosystem.
+- **Current public pricing clarity:** Better choice: Cursor. Why: Cursor publishes Hobby, Individual, Teams, and Enterprise pricing directly.
+- **SWE model family:** Better choice: Windsurf / Devin Desktop. Why: Devin Desktop docs list SWE-1.6, SWE-1.6 Fast, SWE-1.5, SWE-1-mini, and swe-grep.
+- **Migration from old Windsurf/Codeium workflow:** Better choice: Windsurf / Devin Desktop. Why: Existing users should follow Cognition's current product path rather than treat old Windsurf pricing as durable.
+- **General AI-IDE recommendation:** Better choice: Cursor. Why: Lower rebrand risk and stronger independent buyer clarity.
 
 ## Pricing Reality
 
-| Product | Current public pricing anchor | Buyer caveat |
-|---|---|---|
-| Cursor | Hobby free; Individual from $20/month; Teams $40/user/month; Enterprise custom | Pro+/Ultra-style upgrades and on-demand model usage matter for heavy agent work. |
-| Windsurf / Devin Desktop | `windsurf.com/pricing` redirects to Devin pricing: Free, Pro $20/month, Max $200/month, Teams $80/month plus $40/month per full dev seat, Enterprise custom | Do not quote old Windsurf-only plan names or prices without checking the current Cognition/Devin account screen. |
+- **Cursor:** Current public pricing anchor: Hobby free; Individual from $20/month; Teams $40/user/month; Enterprise custom. Buyer caveat: Pro+/Ultra-style upgrades and on-demand model usage matter for heavy agent work.
+- **Windsurf / Devin Desktop:** Current public pricing anchor: `windsurf.com/pricing` redirects to Devin pricing: Free, Pro $20/month, Max $200/month, Teams $80/month plus $40/month per full dev seat, Enterprise custom. Buyer caveat: Do not quote old Windsurf-only plan names or prices without checking the current Cognition/Devin account screen.
 
 If a buying page still says "Windsurf Pro $15" or "Windsurf Pro $20" as a standalone durable plan, treat it as stale until the current Devin/Windsurf account screen confirms it.
 

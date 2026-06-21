@@ -10,7 +10,7 @@ pricing_model: freemium
 price_range: "$0-$40+/user/month; Enterprise custom"
 status: active
 launched: 2023-03
-last_updated: 2026-06-20
+last_updated: 2026-06-21
 last_verified: 2026-06-20
 update_frequency: monthly
 affiliate:
@@ -428,4 +428,4 @@ No. Cursor is a VS Code fork, not a plugin. Users on other editors should look a
 
 - **Category:** [AI Coding](/categories/ai-coding/)
 - **Alternatives:** [Claude Code](/tools/claude-code/) · [GitHub Copilot](/tools/github-copilot/) · [Windsurf](/tools/windsurf/) · [Cline](/tools/cline/) · [Aider](/tools/aider/) · [Continue](/tools/continue/) · [Zed](/tools/zed/)
-- **Comparisons:** [Cline vs Cursor](/compare/cline-vs-cursor/)
+- **Compare:** Use [AI Coding](/categories/ai-coding/) for adjacent IDE and terminal-agent choices; direct comparison pages are reserved for same-workflow substitutes.

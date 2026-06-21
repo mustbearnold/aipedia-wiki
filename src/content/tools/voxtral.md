@@ -10,7 +10,7 @@ pricing_model: freemium
 price_range: "Open weights for eligible use; hosted TTS $0.016/1k chars; Transcribe 2 from $0.002/min"
 status: active
 launched: 2025-07
-last_updated: 2026-06-12
+last_updated: 2026-06-21
 last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
@@ -259,4 +259,4 @@ Cartesia is stronger for managed, low-latency production voice agents. Voxtral i
 ## Related
 
 - **Category:** [AI Voice / Speech](/categories/ai-voice/)
-- **Comparisons:** [Cartesia vs Voxtral](/compare/cartesia-vs-voxtral/), [Fish Audio vs Voxtral](/compare/fish-audio-vs-voxtral/)
+- **Comparisons:** [Fish Audio vs Voxtral](/compare/fish-audio-vs-voxtral/)

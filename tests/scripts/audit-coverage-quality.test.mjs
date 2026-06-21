@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { spawnSync } from 'node:child_process';
-import { mkdirSync, mkdtempSync, rmSync, writeFileSync } from 'node:fs';
+import { mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { test } from 'node:test';
@@ -72,8 +72,26 @@ function writeFixtureProject() {
   const dir = mkdtempSync(join(tmpdir(), 'aipedia-coverage-quality-'));
   mkdirSync(join(dir, 'src', 'content', 'comparisons'), { recursive: true });
   mkdirSync(join(dir, 'src', 'content', 'tools'), { recursive: true });
+  mkdirSync(join(dir, 'src', 'data'), { recursive: true });
   writeTool(dir, 'foo');
   writeTool(dir, 'bar');
+  writeTool(dir, 'baz');
+  writeFileSync(
+    join(dir, 'src', 'data', 'comparison-policy.json'),
+    JSON.stringify(
+      {
+        workflow_lanes: {
+          'AI testing': {
+            same_job: ['foo', 'bar'],
+            different_job: ['baz'],
+          },
+        },
+        blocked_pairs: [],
+      },
+      null,
+      2,
+    ),
+  );
   return dir;
 }
 
@@ -138,6 +156,47 @@ test('coverage quality rejects raw Markdown tables on changed comparison pages',
     const report = JSON.parse(result.stdout);
     assert.equal(report.mode, 'changed');
     assert.ok(report.failures.some((failure) => /raw Markdown table/.test(failure)));
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('coverage quality allows comparison pages with a shared workflow lane', () => {
+  const dir = writeFixtureProject();
+  writeComparison(dir, 'foo-vs-bar');
+
+  try {
+    const result = runCoverageQuality(dir, ['--json', '--file', 'src/content/comparisons/foo-vs-bar.md']);
+
+    assert.equal(result.status, 0, `stdout:\n${result.stdout}\nstderr:\n${result.stderr}`);
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, true);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('coverage quality rejects live comparison pages without a shared workflow lane', () => {
+  const dir = writeFixtureProject();
+  writeComparison(
+    dir,
+    'foo-vs-baz',
+    validComparisonBody()
+      .replaceAll('/tools/bar/', '/tools/baz/')
+      .replaceAll('[Bar]', '[Baz]'),
+  );
+  const comparisonPath = join(dir, 'src', 'content', 'comparisons', 'foo-vs-baz.md');
+  writeFileSync(
+    comparisonPath,
+    readFileSync(comparisonPath, 'utf8').replace('tools: [foo, bar]', 'tools: [foo, baz]'),
+  );
+
+  try {
+    const result = runCoverageQuality(dir, ['--json', '--file', 'src/content/comparisons/foo-vs-baz.md']);
+
+    assert.equal(result.status, 1);
+    const report = JSON.parse(result.stdout);
+    assert.ok(report.failures.some((failure) => /do not share an approved workflow lane/.test(failure)));
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }

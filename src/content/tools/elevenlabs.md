@@ -10,7 +10,7 @@ pricing_model: freemium
 price_range: $0-$990/month
 status: active
 launched: 2023-01
-last_updated: 2026-06-12
+last_updated: 2026-06-21
 last_verified: 2026-06-12
 update_frequency: monthly
 affiliate:
@@ -360,5 +360,5 @@ Yes, API access is included from Starter ($6) and above. API usage is billed aga
 ## Related
 
 - **Category:** [AI Voice / TTS](/categories/ai-voice/)
-- **Compare:** [Cartesia vs ElevenLabs](/compare/cartesia-vs-elevenlabs/) · [ElevenLabs vs Fish Audio](/compare/elevenlabs-vs-fish-audio/) · [ElevenLabs vs Murf](/compare/elevenlabs-vs-murf/) · [ElevenLabs vs Resemble AI](/compare/elevenlabs-vs-resemble-ai/)
+- **Compare:** [ElevenLabs vs Murf](/compare/elevenlabs-vs-murf/) · [ElevenLabs vs WellSaid](/compare/elevenlabs-vs-wellsaid/)
 - **Use cases:** [Best AI for Podcasters](/use-cases/best-ai-for-podcasters/) · [Best AI for YouTube Creators](/use-cases/best-ai-for-youtube-creators/) · [Best AI for Transcription](/use-cases/best-ai-for-transcription/)

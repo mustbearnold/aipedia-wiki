@@ -55,7 +55,7 @@ Primary output: commercial CTA issues on built pages. Requires built output.
 
 Use when the site may have thin, duplicate, low-value, or invalid pages. This is the loop for deleting, merging, refreshing, or keeping pages.
 
-Primary output: thin comparison risk, comparison-quality failures, and internal-link issues.
+Primary output: thin comparison risk, workflow-lane policy violations, comparison-quality failures, and internal-link issues.
 
 ### Performance And UX Loop
 
@@ -89,3 +89,5 @@ A loop-system change is done only when:
 - Skipped loops explain the missing prerequisite.
 - Focused tests for `scripts/aipedia-loops.mjs` pass.
 - `.agent` status docs say which loop to run next.
+
+Latest baseline: 2026-06-21 broad review is 7 ok / 0 attention after the Quality Pruning workflow-policy cleanup.

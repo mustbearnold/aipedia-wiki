@@ -16,6 +16,7 @@ const defaultProjectDir = dirname(dirname(fileURLToPath(import.meta.url)));
 const PROJECT_DIR = resolve(valueFor('--project-dir') || valueFor('--root') || defaultProjectDir);
 const COMPARISONS_DIR = join(PROJECT_DIR, 'src', 'content', 'comparisons');
 const TOOLS_DIR = join(PROJECT_DIR, 'src', 'content', 'tools');
+const COMPARISON_POLICY_PATH = join(PROJECT_DIR, 'src', 'data', 'comparison-policy.json');
 const JSON_MODE = args.includes('--json');
 const ALL_MODE = args.includes('--all');
 const CHANGED_MODE = args.includes('--changed');
@@ -67,6 +68,14 @@ const CANONICAL_FACT_TOOLS = new Set([
 ]);
 const PLACEHOLDER_PATTERNS = [/\bTODO\b/, /\bTKTK\b/i, /\blorem ipsum\b/i, /\bplaceholder\b/i, /\[\s*\]/, /\bXXX\b/];
 const gitIssues = [];
+
+const comparisonPolicy = existsSync(COMPARISON_POLICY_PATH)
+  ? JSON.parse(readFileSync(COMPARISON_POLICY_PATH, 'utf8'))
+  : { workflow_lanes: {}, blocked_pairs: [] };
+const workflowLanes = comparisonPolicy.workflow_lanes || {};
+const blockedPairs = new Map(
+  (comparisonPolicy.blocked_pairs || []).map((entry) => [pairKey(entry.tools?.[0], entry.tools?.[1]), entry]),
+);
 
 function valueFor(name) {
   const inline = args.find((a) => a.startsWith(`${name}=`));
@@ -174,6 +183,15 @@ function scalar(fm, key) {
 function inlineArray(fm, key) {
   const m = fm.match(new RegExp(`^${key}:\\s*\\[(.*?)\\]\\s*$`, 'm'));
   return m ? m[1].split(',').map(stripYamlQuotes).filter(Boolean) : [];
+}
+function pairKey(a, b) {
+  return [a, b].filter(Boolean).sort().join('::');
+}
+function toolWorkflowLanes(category, tool) {
+  const lanes = workflowLanes?.[category] || {};
+  return Object.entries(lanes)
+    .filter(([, toolSlugs]) => Array.isArray(toolSlugs) && toolSlugs.includes(tool))
+    .map(([lane]) => lane);
 }
 function slugFromPath(path) {
   return path.split(/[\\/]/).pop().replace(/\.md$/, '');
@@ -302,6 +320,24 @@ function checkFile(path) {
     for (const t of tools) {
       if (!new RegExp(`\\]\\(/tools/${t}/?\\)`).test(body)) {
         failures.push(`${rel}: body does not link to /tools/${t}/`);
+      }
+    }
+
+    const blockedPair = blockedPairs.get(pairKey(tools[0], tools[1]));
+    if (blockedPair) {
+      failures.push(`${rel}: comparison pair is blocked by src/data/comparison-policy.json: ${blockedPair.reason || 'blocked pair'}`);
+    }
+
+    const category = scalar(fm, 'category');
+    const categoryWorkflowLanes = workflowLanes?.[category];
+    if (categoryWorkflowLanes) {
+      const firstLanes = toolWorkflowLanes(category, tools[0]);
+      const secondLanes = toolWorkflowLanes(category, tools[1]);
+      const sharedLanes = firstLanes.filter((lane) => secondLanes.includes(lane));
+      if (sharedLanes.length === 0) {
+        failures.push(
+          `${rel}: comparison tools do not share an approved workflow lane in src/data/comparison-policy.json (${tools[0]}: ${firstLanes.join(', ') || 'unclassified'}; ${tools[1]}: ${secondLanes.join(', ') || 'unclassified'})`,
+        );
       }
     }
   }

@@ -12,6 +12,10 @@ function runCoverageGaps(...args) {
   });
 }
 
+function reviewId(a, b) {
+  return [a, b].sort((x, y) => x.localeCompare(y)).join('|');
+}
+
 function writeFixtureProject() {
   const dir = mkdtempSync(join(tmpdir(), 'aipedia-coverage-gaps-'));
   mkdirSync(join(dir, 'src', 'data'), { recursive: true });
@@ -69,11 +73,11 @@ test('coverage backlog keeps primary-secondary overlap out of selectable compari
 
     const report = JSON.parse(result.stdout);
     const selectableSlugs = report.backlog.comparisons.map((item) => item.slug);
-    const reviewSlugs = report.backlog.review_only_comparisons.map((item) => item.slug);
+    const reviewIds = report.backlog.review_only_comparisons.map((item) => item.review_id);
 
     assert.ok(selectableSlugs.includes('descript-vs-elevenlabs'));
     assert.ok(!selectableSlugs.includes('descript-vs-grok'));
-    assert.ok(reviewSlugs.includes('descript-vs-grok'));
+    assert.ok(reviewIds.includes(reviewId('descript', 'grok')));
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }
@@ -105,9 +109,9 @@ test('coverage backlog keeps adjacent workflow pairs review-only even if policy 
 
     const report = JSON.parse(result.stdout);
     const selectableSlugs = report.backlog.comparisons.map((item) => item.slug);
-    const reviewSlugs = report.backlog.review_only_comparisons.map((item) => item.slug);
+    const reviewIds = report.backlog.review_only_comparisons.map((item) => item.review_id);
     assert.ok(!selectableSlugs.includes('chatgpt-vs-grammarly'));
-    assert.ok(reviewSlugs.includes('chatgpt-vs-grammarly'));
+    assert.ok(reviewIds.includes(reviewId('chatgpt', 'grammarly')));
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }
@@ -163,13 +167,13 @@ test('coverage backlog requires a shared workflow lane for broad categories', ()
 
     const report = JSON.parse(result.stdout);
     const selectableSlugs = report.backlog.comparisons.map((item) => item.slug);
-    const reviewSlugs = report.backlog.review_only_comparisons.map((item) => item.slug);
+    const reviewIds = report.backlog.review_only_comparisons.map((item) => item.review_id);
 
     assert.ok(selectableSlugs.includes('activepieces-vs-zapier'));
     assert.ok(!selectableSlugs.includes('ada-vs-n8n'));
     assert.ok(!selectableSlugs.includes('ada-vs-zapier'));
-    assert.ok(reviewSlugs.includes('ada-vs-n8n'));
-    assert.ok(reviewSlugs.includes('ada-vs-zapier'));
+    assert.ok(reviewIds.includes(reviewId('ada', 'n8n')));
+    assert.ok(reviewIds.includes(reviewId('ada', 'zapier')));
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }
@@ -226,13 +230,13 @@ test('coverage backlog keeps broad image tools inside explicit buyer workflow la
 
     const report = JSON.parse(result.stdout);
     const selectableSlugs = report.backlog.comparisons.map((item) => item.slug);
-    const reviewSlugs = report.backlog.review_only_comparisons.map((item) => item.slug);
+    const reviewIds = report.backlog.review_only_comparisons.map((item) => item.review_id);
 
     assert.ok(selectableSlugs.includes('meshy-vs-tripo3d'));
     assert.ok(!selectableSlugs.includes('adobe-firefly-vs-clipdrop'));
     assert.ok(!selectableSlugs.includes('adobe-firefly-vs-meshy'));
-    assert.ok(reviewSlugs.includes('adobe-firefly-vs-clipdrop'));
-    assert.ok(reviewSlugs.includes('adobe-firefly-vs-meshy'));
+    assert.ok(reviewIds.includes(reviewId('adobe-firefly', 'clipdrop')));
+    assert.ok(reviewIds.includes(reviewId('adobe-firefly', 'meshy')));
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }
@@ -298,7 +302,7 @@ test('coverage backlog keeps broad design and writing tools inside explicit work
 
     const report = JSON.parse(result.stdout);
     const selectableSlugs = report.backlog.comparisons.map((item) => item.slug);
-    const reviewSlugs = report.backlog.review_only_comparisons.map((item) => item.slug);
+    const reviewIds = report.backlog.review_only_comparisons.map((item) => item.review_id);
 
     assert.ok(selectableSlugs.includes('base44-vs-lovable'));
     assert.ok(selectableSlugs.includes('lovable-vs-v0'));
@@ -306,8 +310,8 @@ test('coverage backlog keeps broad design and writing tools inside explicit work
     assert.ok(selectableSlugs.includes('grammarly-vs-wordtune'));
     assert.ok(!selectableSlugs.includes('base44-vs-canva'));
     assert.ok(!selectableSlugs.includes('beehiiv-vs-grammarly'));
-    assert.ok(reviewSlugs.includes('base44-vs-canva'));
-    assert.ok(reviewSlugs.includes('beehiiv-vs-grammarly'));
+    assert.ok(reviewIds.includes(reviewId('base44', 'canva')));
+    assert.ok(reviewIds.includes(reviewId('beehiiv', 'grammarly')));
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }
@@ -363,14 +367,14 @@ test('coverage backlog separates notes workspaces from meeting capture tools', (
 
     const report = JSON.parse(result.stdout);
     const selectableSlugs = report.backlog.comparisons.map((item) => item.slug);
-    const reviewSlugs = report.backlog.review_only_comparisons.map((item) => item.slug);
+    const reviewIds = report.backlog.review_only_comparisons.map((item) => item.review_id);
 
     assert.ok(selectableSlugs.includes('capacities-vs-notion-ai'));
     assert.ok(selectableSlugs.includes('fireflies-vs-otter-ai'));
     assert.ok(!selectableSlugs.includes('capacities-vs-fireflies'));
     assert.ok(!selectableSlugs.includes('notion-ai-vs-otter-ai'));
-    assert.ok(reviewSlugs.includes('capacities-vs-fireflies'));
-    assert.ok(reviewSlugs.includes('notion-ai-vs-otter-ai'));
+    assert.ok(reviewIds.includes(reviewId('capacities', 'fireflies')));
+    assert.ok(reviewIds.includes(reviewId('notion-ai', 'otter-ai')));
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }
@@ -428,14 +432,14 @@ test('coverage backlog separates search answer engines from browsers and enterpr
 
     const report = JSON.parse(result.stdout);
     const selectableSlugs = report.backlog.comparisons.map((item) => item.slug);
-    const reviewSlugs = report.backlog.review_only_comparisons.map((item) => item.slug);
+    const reviewIds = report.backlog.review_only_comparisons.map((item) => item.review_id);
 
     assert.ok(selectableSlugs.includes('comet-vs-dia'));
     assert.ok(selectableSlugs.includes('morphic-vs-perplexity'));
     assert.ok(!selectableSlugs.includes('comet-vs-perplexity'));
     assert.ok(!selectableSlugs.includes('glean-vs-perplexity'));
-    assert.ok(reviewSlugs.includes('comet-vs-perplexity'));
-    assert.ok(reviewSlugs.includes('glean-vs-perplexity'));
+    assert.ok(reviewIds.includes(reviewId('comet', 'perplexity')));
+    assert.ok(reviewIds.includes(reviewId('glean', 'perplexity')));
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }

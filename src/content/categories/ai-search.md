@@ -7,7 +7,7 @@ tool_count: 8
 seo_title: "Best AI Search and Research Tools (June 2026)"
 meta_description: "Updated June 18, 2026: compare Perplexity, Kagi, You.com APIs, Comet, ChatGPT Search, Google AI Mode, NotebookLM, Exa, Weaviate/Engram, Cohere RAG, Grok X Search, Morphic, and Phind migration paths by citations, privacy, APIs, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-18
+last_updated: 2026-06-21
 last_verified: 2026-06-18
 update_frequency: weekly
 top_picks:
@@ -56,7 +56,7 @@ AI search is not one category anymore. Buyers now choose between **cited answer 
 
 **Use [Cohere](/tools/cohere/) when the search problem is enterprise retrieval quality and deployment control.** Cohere is not an answer engine, but the June 18 refresh keeps it relevant to AI search infrastructure: Embed v4 and Rerank 4 remain strong RAG primitives, Model Vault supports isolated VPC/on-prem deployment, North Mini Code adds a model-control lane for coding-agent retrieval workflows, and the Cohere/Aleph Alpha announcement sharpens the European sovereign-AI procurement story.
 
-**Use [You.com](/tools/you-com/) when the buyer wants grounding and research APIs rather than a consumer chat UI.** The June 5 [Exa vs You.com](/compare/exa-vs-you-com/) refresh reflects the current API-first surface: Search at $5/1K calls, Contents at $1/1K pages, Research at $12/1K calls, Finance Research from $110/1K calls, $100 free credit, and custom Enterprise terms.
+**Use [You.com](/tools/you-com/) when the buyer wants grounding and research APIs rather than a consumer chat UI.** Keep Exa and You.com in separate API/search workflow guidance unless a future policy exception confirms they are direct substitutes for the same buyer job.
 
 **June 6 answer-engine vs API fork:** Perplexity vs You.com now separates the human-facing cited research product from the programmable grounding stack. Start with Perplexity when the buyer needs a research UI today; start with You.com when the buyer needs primitives inside an app or agent.
 
