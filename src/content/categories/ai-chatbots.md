@@ -44,7 +44,7 @@ The June 15 Qwen recheck found no material change versus the June 14 refresh: Qw
 
 The June 8 Kimi tool refresh keeps Moonshot's lane current: Kimi K2.6 remains the active Kimi API path for new model evaluation, with $0.16/M cache-hit input, $0.95/M cache-miss input, $4.00/M output, 256K context, multimodal input, and long-horizon agent/coding positioning. Legacy K2 pricing URLs should be treated as historical or redirecting documentation, not a new-production recommendation.
 
-The June 8 MiniMax refresh moves MiniMax out of the old M2.7-first framing. [MiniMax](/tools/minimax/) is now the M3 evaluation lane: MiniMax-M3 standard pay-as-you-go is listed at $0.30/M input and $1.20/M output for <=512K input, the official model page positions M3 around coding, agentic work, native multimodality, and up-to-1M context, and the pricing page still flags >512K input and Priority tiers with access caveats. Treat M3 as a model/API benchmark candidate, not a finished ChatGPT-style default.
+The June 21 MiniMax refresh keeps MiniMax out of the old M2.7-first framing. [MiniMax](/tools/minimax/) is now the M3 evaluation lane: MiniMax-M3 standard pay-as-you-go is listed at $0.30/M input and $1.20/M output for <=512K input, the official model page positions M3 around coding, agentic work, native multimodality, and up-to-1M context, and the pricing page still flags >512K input and Priority tiers with access caveats. Treat M3 as a model/API benchmark candidate, not a finished ChatGPT-style default.
 
 The June 9 [Reka](/tools/reka/) refresh keeps Reka in the model-infrastructure lane, not the consumer-chatbot lane. Reka now foregrounds physical AI, Edge 2, Infer, Vision, and Claru; its docs list Edge at $0.10/M input and $0.10/M output, Flash at $0.80/M input and $2/M output, and Core at $2/M input and $6/M output. Reka Edge weights are source-available under BSL 1.1 with a commercial threshold, so buyers should not call them permissive open source without checking license fit.
 
@@ -260,9 +260,9 @@ Do not subscribe to multiple chatbots because each one has a new model announcem
 - [Kimi API platform](https://platform.moonshot.ai/) (verified 2026-06-12)
 - [Kimi K2.6 pricing docs](https://platform.kimi.ai/docs/pricing/chat-k26) (verified 2026-06-12)
 - [Legacy Kimi K2 pricing URL](https://platform.kimi.ai/docs/pricing/chat-k2) (redirect behavior checked 2026-06-12)
-- [MiniMax M3 model page](https://www.minimax.io/models/text/m3) (verified 2026-06-12)
-- [MiniMax M3 launch post](https://www.minimax.io/blog/minimax-m3) (verified 2026-06-12)
-- [MiniMax pay-as-you-go pricing](https://platform.minimax.io/docs/guides/pricing-paygo) (verified 2026-06-12)
+- [MiniMax M3 model page](https://www.minimax.io/models/text/m3) (verified 2026-06-21)
+- [MiniMax M3 launch post](https://www.minimax.io/blog/minimax-m3) (verified 2026-06-21)
+- [MiniMax pay-as-you-go pricing](https://platform.minimax.io/docs/guides/pricing-paygo) (verified 2026-06-21)
 - [Reka homepage](https://reka.ai/) (verified 2026-06-12)
 - [Reka pricing docs](https://docs.reka.ai/pricing) (verified 2026-06-12)
 - [Reka Edge product page](https://reka.ai/reka-edge) (verified 2026-06-12)

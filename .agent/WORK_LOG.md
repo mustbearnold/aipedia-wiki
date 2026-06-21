@@ -30,6 +30,16 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 
 ## Entries
 
+### 2026-06-21: Presentations.AI And MiniMax Freshness Pass
+
+- Status: Complete.
+- Commit: this commit.
+- Branch: `master`.
+- Changed: Refreshed Presentations.AI integration, API, enterprise, pricing, and verification metadata; refreshed MiniMax M3, long-context, multimodal, coding, API, and pay-go pricing metadata; updated AI Presentation, AI Coding, AI Chatbots, and AI Research category surfaces; updated `src/data/source-registry.json`, `PAGE_REFRESH_LEDGER.md`, and `.agent/loop-runs/2026-06-21-presentations-ai-minimax-freshness.md`.
+- Verification: `npm run check:smart:run`; `npm run loop:all -- --json`; `npm run loop:freshness -- --json`; `npm run audit:freshness -- --json`; `npm run audit:provenance:changed -- --json`; `npm run ledger:pages:check`; `node scripts/guard-em-dashes.mjs`; `git diff --check`.
+- Residual risks: This is not whole-site completion. The active freshness goal continues through the June 21 to June 22 window, with Claude, Gemini, and Claude Code next in the due-soon queue.
+- Next: Continue the active freshness goal, or run the top Decision Content recommendation `amazon-q-vs-github-copilot` if buyer-decision growth is prioritized.
+
 ### 2026-06-21: Gitignored Local Agent Artifacts
 
 - Status: Complete.

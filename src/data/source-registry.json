@@ -5461,7 +5461,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-21"
     },
     {
       "id": "minimax-token-plan",
@@ -7619,7 +7619,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-08"
+      "last_checked": "2026-06-21"
     },
     {
       "id": "minimax-pricing",
@@ -7628,7 +7628,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-08"
+      "last_checked": "2026-06-21"
     },
     {
       "id": "minimax-m3-model",
@@ -7637,7 +7637,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-08"
+      "last_checked": "2026-06-21"
     },
     {
       "id": "minimax-m3-launch",
@@ -7646,7 +7646,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-08"
+      "last_checked": "2026-06-21"
     },
     {
       "id": "minimax-m3-coding-tools",
@@ -7655,7 +7655,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-08"
+      "last_checked": "2026-06-21"
     },
     {
       "id": "minimax-speech-official",
@@ -8928,7 +8928,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-21"
     },
     {
       "id": "presentations-ai-pricing",
@@ -8937,7 +8937,34 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-21"
+    },
+    {
+      "id": "presentations-ai-api",
+      "label": "Presentations.AI API",
+      "url": "https://www.presentations.ai/solutions/api",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-21"
+    },
+    {
+      "id": "presentations-ai-features",
+      "label": "Presentations.AI features",
+      "url": "https://www.presentations.ai/features",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-21"
+    },
+    {
+      "id": "presentations-ai-enterprise",
+      "label": "Presentations.AI Enterprise",
+      "url": "https://www.presentations.ai/solutions/enterprise",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-21"
     },
     {
       "id": "prezi-official",

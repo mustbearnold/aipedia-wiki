@@ -24,10 +24,18 @@ The comparison policy is strict: publish direct comparison pages only when tools
 
 The latest completed maintenance batch fixed the Quality Pruning loop: invalid no-shared-workflow comparison pages were deleted, public links were removed, the comparison-quality audit now enforces workflow lanes, and content inventory guard fixtures were re-anchored through Guard Challenge records. The live comparison inventory is now 46 policy-aligned comparison pages, with a content guard floor of 41.
 
+The June 21 to June 22 site freshness goal is active. The first freshness pass cleared the June 21 due-now queue by refreshing Presentations.AI and MiniMax, including affected parent category hubs, source registry rows, and the page refresh ledger. The goal is not complete until the remaining June 22 freshness queue and loop recommendations are handled or explicitly documented as non-blocking.
+
 The next selected Decision Content candidate is `amazon-q-vs-github-copilot`.
 
 ## Done Recently
 
+- Presentations.AI and MiniMax freshness pass:
+  - Refreshed Presentations.AI integration, API, enterprise, pricing, and verification metadata using current June 2026 official sources.
+  - Refreshed MiniMax M3, long-context, multimodal, coding, API, and pay-go pricing metadata using current June 2026 official sources.
+  - Updated affected AI Presentation, AI Coding, AI Chatbots, and AI Research category surfaces.
+  - Updated `src/data/source-registry.json` and `PAGE_REFRESH_LEDGER.md`.
+  - Recorded `.agent/loop-runs/2026-06-21-presentations-ai-minimax-freshness.md`.
 - Quality Pruning workflow-policy cleanup:
   - Deleted 19 live comparison pages whose tools did not share an approved workflow lane.
   - Removed public links to those deleted routes from affected tool pages, category pages, and curated comparison surfaces.
@@ -72,40 +80,31 @@ The next selected Decision Content candidate is `amazon-q-vs-github-copilot`.
   - Use `npm run loop:all:record -- --json` when a broad review should become durable run history.
   - Current attention signals: none.
   - Current top ranked recommendation: begin `amazon-q-vs-github-copilot`.
-  - Current second ranked recommendation: refresh the `integration_surface` fact on `presentations-ai`.
-  - Current freshness queue starts with due-soon facts for `presentations-ai`, `minimax`, `claude`, and `gemini`; treat due-soon as queue context, not failure.
+  - Current second ranked recommendation: refresh Claude `api_available` and related Claude, Gemini, and Claude Code facts due on 2026-06-22.
+  - Current freshness queue has 0 due-now items after the Presentations.AI and MiniMax pass. The next queue starts with Claude, Gemini, Claude Code, GitHub Copilot, Grammarly, Qwen, Hailuo, and HeyGen; treat due-soon as queue context, not failure.
 - Phase 3 Parallel Surface Agent Orchestration:
   - Planned but not executed on `master`.
   - If resumed, recompute missed news dates and verify current sources before dispatching subagents.
 
 ## Verification Baseline
 
-Latest completed maintenance batch checks:
+Latest completed freshness batch checks:
 
-- `npm run loop:quality -- --json`
+- `npm run check:smart:run`
 - `npm run loop:all -- --json`
-- `npm run loop:all:record -- --json`
-- `node scripts/audit-coverage-quality.mjs --all --json`
-- `node scripts/guard-content.mjs --baseline --dry-run --json`
-- `node scripts/guard-content.mjs --json`
-- `node scripts/audit-site-kpis.mjs --json`
-- `node scripts/guard-stale-facts.mjs --json`
-- `node --test tests/scripts/audit-coverage-quality.test.mjs`
-- `node --test tests/scripts/audit-site-kpis.test.mjs tests/scripts/guard-content.test.mjs tests/scripts/guard-stale-facts.test.mjs tests/scripts/check-smart.test.mjs`
-- `npm run guard:challenge:check`
+- `npm run loop:freshness -- --json`
+- `npm run audit:freshness -- --json`
+- `npm run audit:provenance:changed -- --json`
 - `npm run ledger:pages:check`
 - `node scripts/guard-em-dashes.mjs`
 - `git diff --check`
-- `npm run build:fast`
-- `npm run qa:route -- --route /compare/decktopus-vs-gamma/ --route /compare/decktopus-vs-pitch/`
-- `npm run check:smart:run`
 
-The final `check:smart:run` pass exited 0. It ran script tests, guard checks, generated-model audits, link/news/provenance checks, `build:fast`, broad visual smoke, and route QA across changed category, comparison, and tool routes at 360, 390, 430, 768, 1024, and 1366 px.
+The final `check:smart:run` pass exited 0. It ran script tests, guard checks, generated-model audits, link/news/provenance checks, `build:fast`, and route QA across `/categories/ai-chatbots/`, `/categories/ai-coding/`, `/categories/ai-presentation/`, `/categories/ai-research/`, `/tools/minimax/`, and `/tools/presentations-ai/` at 360, 390, 430, 768, 1024, and 1366 px. `npm run loop:all -- --json` reported 7 ok loops, 0 attention loops, and 0 skipped loops. `npm run audit:freshness -- --json` reported 0 due-now items.
 
 ## Known Caveats
 
 - `node scripts/audit-site-kpis.mjs --json` still reports `neuronwriter-vs-surfer-seo` under the 700-word comparison KPI threshold. This is an improvement opportunity, not a failing loop signal.
-- Freshness is green, but due-soon review items remain a normal queue. Verify current sources before editing any volatile fact.
+- Freshness is green for due-now items, but the June 22 queue still needs current-source review before the active site freshness goal can be called complete.
 - Historical work-log and archive entries mention deleted comparison routes. Treat those as history, not live routing guidance.
 - Full local verifier runs are reliable but slow. Prefer `npm run check:smart`, focused tests, `npm run build:fast`, and exact `qa:route` unless a full pre-ship gate is needed.
 - CRLF warnings may appear for a few script/test files when Git normalizes line endings. They were non-blocking in the latest checks.

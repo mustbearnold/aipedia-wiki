@@ -5,10 +5,10 @@ title: AI Coding Assistants
 description: Current AI coding assistants, AI-native IDEs, terminal coding agents, PR agents, and app builders for developers, founders, teams, and non-developers.
 tool_count: 31
 seo_title: "Best AI Coding Tools & Copilot Alternatives (June 2026)"
-meta_description: "Updated June 20, 2026: compare Cursor, Claude Code, GitHub Copilot after app GA and gradual signup reopening, DeepSeek V4, Grok Build, Amazon Q Developer's Kiro transition, Mastra, Codex, Devin, v0, Replit Agent, Aider, Cline, CodeRabbit, Cody, and Augment by workflow, pricing, autonomy, model-route risk, and team fit."
+meta_description: "Updated June 21, 2026: compare Cursor, Claude Code, GitHub Copilot, MiniMax-M3, DeepSeek V4, Grok Build, Amazon Q Developer's Kiro transition, Mastra, Codex, Devin, v0, Replit Agent, Aider, Cline, CodeRabbit, Cody, and Augment by workflow, pricing, autonomy, model-route risk, and team fit."
 author: "aipedia.wiki Editorial"
 last_updated: 2026-06-21
-last_verified: 2026-06-20
+last_verified: 2026-06-21
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -122,7 +122,7 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 
 **Use [GLM](/tools/glm/) when the coding question is model backend evaluation.** Z.AI's GLM-5.1 docs list 200K context, 128K maximum output, OpenAI-compatible API examples, MCP/tool support, and MIT Hugging Face weights, with public API pricing at $1.40/M input and $4.40/M output.
 
-**Use [MiniMax](/tools/minimax/) when the coding question is MiniMax-M3 backend evaluation.** The June 8 check moves MiniMax from M2.7-first to M3-first: standard M3 pay-as-you-go is listed at $0.30/M input and $1.20/M output for <=512K input, while >512K input and Priority tiers still need account-level access confirmation.
+**Use [MiniMax](/tools/minimax/) when the coding question is MiniMax-M3 backend evaluation.** The June 21 check keeps MiniMax M3-first: standard M3 pay-as-you-go is listed at $0.30/M input and $1.20/M output for <=512K input, the M3 page positions it around coding, agentic, long-context, and native multimodal work, and >512K input plus Priority tiers still need account-level access confirmation.
 
 **Use [Yi](/tools/yi/) only for legacy Yi-Coder or frozen-model coding experiments.** The June 10 check keeps 01.AI's public Yi pages alive, but the company headline is WorldWise/WanZhi 2.5 enterprise agents rather than a new Yi coding-model roadmap. Teams with Yi-Coder integrated can keep it as a reproducible baseline after license review; new coding-model evaluations should start with GLM, Qwen, Kimi, MiniMax, DeepSeek, or current hosted coding assistants. The June 15 Qwen recheck matters for coding-agent buyers because Qwen Cloud still lists a June 8 Max snapshot, while qwen3.7-plus remains the clearer multimodal/GUI-agent lane and the live qwen3.7-max marketplace page still describes text input/output.
 
@@ -354,8 +354,8 @@ Do not publish stale model-version claims. Coding tools route models and change 
 - [Z.AI GLM-5.1 docs](https://docs.z.ai/guides/llm/glm-5.1) (verified 2026-06-12)
 - [Z.AI pricing](https://docs.z.ai/guides/overview/pricing) (verified 2026-06-12)
 - [GLM-5.1 on Hugging Face](https://huggingface.co/zai-org/GLM-5.1) (verified 2026-06-12)
-- [MiniMax M3 model page](https://www.minimax.io/models/text/m3) (verified 2026-06-12)
-- [MiniMax pay-as-you-go pricing](https://platform.minimax.io/docs/guides/pricing-paygo) (verified 2026-06-12)
+- [MiniMax M3 model page](https://www.minimax.io/models/text/m3) (verified 2026-06-21)
+- [MiniMax pay-as-you-go pricing](https://platform.minimax.io/docs/guides/pricing-paygo) (verified 2026-06-21)
 - [Qwen Cloud model releases](https://docs.qwencloud.com/changelog/models) (verified 2026-06-15)
 - [Qwen3.7-Max model page](https://www.qwencloud.com/models/qwen3.7-max) (verified 2026-06-15)
 - [01.AI Yi models](https://www.01.ai/yi-models) (verified 2026-06-12)

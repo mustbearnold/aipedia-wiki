@@ -5,10 +5,10 @@ title: AI Research Tools
 description: Source-backed AI tools for literature review, paper discovery, citation context, research notebooks, academic search, and evidence synthesis.
 tool_count: 9
 seo_title: "Best AI Research Tools: Elicit, Scite, Semantic Scholar & Perplexity (June 2026)"
-meta_description: "Updated June 18, 2026: Elicit for systematic-review workflow, Semantic Scholar for academic search/API, Scite for citation context/MCP, NotebookLM for source-grounded notebooks, Perplexity for cited web research, and ChatPDF for quick document chat plus study tools."
+meta_description: "Updated June 21, 2026: Elicit for systematic-review workflow, Semantic Scholar for academic search/API, Scite for citation context/MCP, NotebookLM for source-grounded notebooks, Perplexity for cited web research, ChatPDF for quick document chat, and MiniMax-M3 as a model-infrastructure lane."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-18
-last_verified: 2026-06-18
+last_updated: 2026-06-21
+last_verified: 2026-06-21
 update_frequency: monthly
 ---
 
@@ -28,7 +28,7 @@ The June 4 Claude vs Elicit refresh adds the matching research-buyer boundary: C
 
 The June 21 cleanup retired adjacent research-discovery `vs` pages where field mapping, academic Q&A, systematic review workflow, citation context, and academic search were not direct substitutes. Keep [Consensus vs Elicit](/compare/consensus-vs-elicit/) as the direct workflow comparison, and use this hub for the broader lane split: Connected Papers maps a field, Consensus answers focused academic questions, Elicit manages systematic-review workflow, Scite checks citation context, Semantic Scholar is the free academic-search/API baseline, and [nanochat](/tools/nanochat/) is an educational LLM training harness rather than a paper-search product.
 
-For budget-conscious research teams running their own pipelines, [Reka Edge](/tools/reka/) is now a physical-AI and multimodal infrastructure candidate rather than a generic literature-review app. The June 9 check keeps Edge API pricing at $0.10 per million input tokens and $0.10 per million output tokens, with Edge image input at $0.005 and video at $0.03/minute. Its weights are source-available under BSL 1.1 with a commercial threshold, so buyers should not describe it as permissive Apache/MIT open source. Teams evaluating open-weight, long-context extraction or agentic coding around research corpora can also shortlist [GLM](/tools/glm/): GLM-5.1 has MIT Hugging Face weights, 200K context, 128K maximum output, and public Z.AI API pricing, but it is model infrastructure rather than a literature-review workflow. The June 8 [MiniMax](/tools/minimax/) refresh adds a similar model-infrastructure lane: MiniMax-M3 is worth benchmarking for long-context/coding/agentic extraction experiments, but it is not a research workflow product and buyers must verify whether their account has >512K input or Priority access before relying on the 1M-context positioning.
+For budget-conscious research teams running their own pipelines, [Reka Edge](/tools/reka/) is now a physical-AI and multimodal infrastructure candidate rather than a generic literature-review app. The June 9 check keeps Edge API pricing at $0.10 per million input tokens and $0.10 per million output tokens, with Edge image input at $0.005 and video at $0.03/minute. Its weights are source-available under BSL 1.1 with a commercial threshold, so buyers should not describe it as permissive Apache/MIT open source. Teams evaluating open-weight, long-context extraction or agentic coding around research corpora can also shortlist [GLM](/tools/glm/): GLM-5.1 has MIT Hugging Face weights, 200K context, 128K maximum output, and public Z.AI API pricing, but it is model infrastructure rather than a literature-review workflow. The June 21 [MiniMax](/tools/minimax/) recheck adds a similar model-infrastructure lane: MiniMax-M3 is worth benchmarking for long-context, native multimodal, coding, or agentic extraction experiments, but it is not a research workflow product and buyers must verify whether their account has >512K input or Priority access before relying on the 1M-context positioning.
 
 The June 10 [Yi](/tools/yi/) refresh keeps 01.AI in this hub only as a frozen-model and enterprise-platform research edge case. Yi-Lightning and Yi open models still appear on 01.AI, Hugging Face, and GitHub surfaces, but 01.AI's active 2026 story is WorldWise/WanZhi 2.5, multi-agent enterprise deployment, and Super Employee products. Use Yi for reproducible baselines, legacy bilingual experiments, or studying 01.AI's pivot; use active model families such as Qwen, DeepSeek, GLM, Kimi, Reka, or MiniMax for new model-infrastructure evaluation. The June 15 Qwen recheck keeps an important research caveat in place: Qwen Cloud's newest changelog item is still the June 8 qwen3.7-max snapshot, but the live qwen3.7-max marketplace page still describes text input/output, so modality-sensitive extraction or screen-understanding research should verify the exact endpoint.
 
@@ -121,8 +121,8 @@ Do not cite generated text. Cite the original source. Do not treat a linked sour
 - [Z.AI GLM-5.1 docs](https://docs.z.ai/guides/llm/glm-5.1) - verified 2026-06-12.
 - [Z.AI pricing](https://docs.z.ai/guides/overview/pricing) - verified 2026-06-12.
 - [GLM-5.1 on Hugging Face](https://huggingface.co/zai-org/GLM-5.1) - verified 2026-06-12.
-- [MiniMax M3 model page](https://www.minimax.io/models/text/m3) - verified 2026-06-12.
-- [MiniMax pay-as-you-go pricing](https://platform.minimax.io/docs/guides/pricing-paygo) - verified 2026-06-12.
+- [MiniMax M3 model page](https://www.minimax.io/models/text/m3) - verified 2026-06-21.
+- [MiniMax pay-as-you-go pricing](https://platform.minimax.io/docs/guides/pricing-paygo) - verified 2026-06-21.
 - [Qwen Cloud model releases](https://docs.qwencloud.com/changelog/models) - verified 2026-06-15.
 - [Qwen3.7-Max model page](https://www.qwencloud.com/models/qwen3.7-max) - verified 2026-06-15.
 - [01.AI company site](https://www.01.ai/) - verified 2026-06-12.

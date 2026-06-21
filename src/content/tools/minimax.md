@@ -12,7 +12,7 @@ price_range: "Free - $0.30/$1.20 per 1M tokens (M3 standard <=512K input)"
 status: active
 launched: 2021-12
 last_updated: 2026-06-21
-last_verified: 2026-06-12
+last_verified: 2026-06-21
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -27,20 +27,20 @@ scores:
   longevity: 7
 facts:
   best_for:
-    value: "Shanghai AI lab behind MiniMax-M3, MiniMax Code, Hailuo video, Speech 2.8, Music 2.6, and the Talkie companion app. Best for builders evaluating low-cost M3 coding/agentic API access plus adjacent voice, video, and music APIs."
+    value: "Shanghai AI lab behind MiniMax-M3, MiniMax Code, Hailuo video, Speech 2.8, Music 2.6, and the Talkie companion app. Best for builders evaluating low-cost M3 coding, agentic, long-context, and native multimodal API access plus adjacent voice, video, and music APIs."
     source: "https://www.minimax.io/models/text/m3"
     source_label: "MiniMax M3 model page"
     source_id: minimax-m3-model
-    verified_at: 2026-06-12
+    verified_at: 2026-06-21
     volatility: high
     confidence: high
-    next_review_at: 2026-06-21
+    next_review_at: 2026-07-21
   pricing_anchor:
     value: "MiniMax-M3 standard pay-as-you-go is listed at $0.30/M input tokens and $1.20/M output tokens for <=512K input tokens; >512K input and Priority service tiers are listed with limited/early access caveats."
     source: "https://platform.minimax.io/docs/guides/pricing-paygo"
     source_label: "MiniMax pay-as-you-go pricing"
-    source_id: minimax-pricing
-    verified_at: 2026-06-12
+    source_id: minimax-paygo-pricing
+    verified_at: 2026-06-21
     next_review_at: 2026-07-08
     volatility: high
     confidence: high
@@ -48,14 +48,14 @@ facts:
     value: "M3 is now the flagship path, but MiniMax docs still expose M2.7/M2.5 and separate Token Plan, Audio Subscription, video package, and pay-as-you-go routes. Verify model name, context tier, service tier, quotas, and billing lane before procurement."
     source: "https://platform.minimax.io/docs/guides/pricing-paygo"
     source_label: "MiniMax pay-as-you-go pricing"
-    source_id: minimax-pricing
-    verified_at: 2026-06-12
+    source_id: minimax-paygo-pricing
+    verified_at: 2026-06-21
     next_review_at: 2026-07-08
     volatility: high
     confidence: high
 tags: [chinese-ai, multimodal, llm, minimax-m3, talkie, hailuo, companion-ai, api, foundation-models]
 seo_title: "MiniMax M3: Features, Pricing & Review (June 2026)"
-meta_description: "MiniMax is the Shanghai AI lab behind MiniMax-M3, MiniMax Code, Hailuo video, Speech 2.8, Music 2.6, and Talkie. M3 standard API starts at $0.30/$1.20 per 1M tokens for <=512K input. Verified June 12, 2026."
+meta_description: "MiniMax is the Shanghai AI lab behind MiniMax-M3, MiniMax Code, Hailuo video, Speech 2.8, Music 2.6, and Talkie. M3 standard API starts at $0.30/$1.20 per 1M tokens for <=512K input. Verified June 21, 2026."
 author: "aipedia.wiki Editorial"
 best_for:
   - developers evaluating low-cost MiniMax-M3 API access
@@ -75,16 +75,16 @@ price_history:
     source: "https://www.minimax.io/blog/minimax-m3"
     source_label: "MiniMax M3 launch post"
     source_id: minimax-m3-launch
-    verified_at: 2026-06-08
+    verified_at: 2026-06-21
     note: "MiniMax released M3 with up to 1M context, coding/agentic positioning, native multimodal input, and MiniMax Code as the paired agent surface."
   - date: 2026-06-08
     plan: "MiniMax-M3 standard API"
     price: "$0.30/M input, $1.20/M output for <=512K input"
     source: "https://platform.minimax.io/docs/guides/pricing-paygo"
     source_label: "MiniMax pay-as-you-go pricing"
-    source_id: minimax-pricing
-    verified_at: 2026-06-08
-    note: "June 8 verification pass. M3 standard pricing is now the buyer anchor; >512K input and Priority tiers remain access-gated/limited in the docs."
+    source_id: minimax-paygo-pricing
+    verified_at: 2026-06-21
+    note: "June 21 verification pass. M3 standard pricing is still the buyer anchor; >512K input and Priority tiers remain access-gated/limited in the docs."
 ---
 
 # MiniMax
@@ -99,7 +99,7 @@ The June 2026 portfolio is now led by **MiniMax-M3** for text/coding/agentic wor
 >
 > **Skip it if procurement needs ecosystem maturity, independent benchmark proof, or Western data-residency defaults.** MiniMax publishes aggressive M3 benchmark claims, but production buyers should test it against Claude, ChatGPT, Gemini, Qwen, Kimi, and GLM on their own tasks before moving workloads.
 >
-> **Do not buy from an old M2.7 mental model.** M2.7 still appears in the pricing table and older docs, but M3 is the current flagship path for new model evaluation as of June 12, 2026.
+> **Do not buy from an old M2.7 mental model.** M2.7 still appears in the pricing table and older docs, but M3 is the current flagship path for new model evaluation as of June 21, 2026.
 
 ## Key Facts
 
@@ -157,9 +157,9 @@ The June 2026 portfolio is now led by **MiniMax-M3** for text/coding/agentic wor
 
 **Older text-model pricing still listed:** M2.7 remains at $0.30/M input and $1.20/M output, while M2.7-highspeed remains at $0.60/M input and $2.40/M output. Treat these as compatibility/fallback lanes unless your workload specifically needs M2 behavior.
 
-**Voice, video, music APIs:** separate pricing. June 8 pay-as-you-go docs list Speech 2.8 Turbo at $60/M characters, Speech 2.8 HD at $100/M characters, Hailuo 2.3 at $0.28 for a 768P 6-second clip, Hailuo 2.3 Fast at $0.19 for a 768P 6-second clip, Music 2.6 at $0.15 per up-to-5-minute generation, image-01 at $0.0035/image, and API-vlm at $0.06/request.
+**Voice, video, music APIs:** separate pricing. June 21 pay-as-you-go docs list Speech 2.8 Turbo at $60/M characters, Speech 2.8 HD at $100/M characters, Hailuo 2.3 at $0.28 for a 768P 6-second clip, Hailuo 2.3 Fast at $0.19 for a 768P 6-second clip, Music 2.6 at $0.15 per up-to-5-minute generation, image-01 at $0.0035/image, and API-vlm at $0.06/request.
 
-*Prices verified 2026-06-12 via the [MiniMax pay-as-you-go pricing docs](https://platform.minimax.io/docs/guides/pricing-paygo). Token Plan, Credits, Audio Subscription, Video Packages, and pay-as-you-go are different purchase paths; do not assume credits or quotas move between them.*
+*Prices verified 2026-06-21 via the [MiniMax pay-as-you-go pricing docs](https://platform.minimax.io/docs/guides/pricing-paygo). Token Plan, Credits, Audio Subscription, Video Packages, and pay-as-you-go are different purchase paths; do not assume credits or quotas move between them.*
 
 ## Against the alternatives
 
@@ -184,12 +184,12 @@ The June 2026 portfolio is now led by **MiniMax-M3** for text/coding/agentic wor
 
 ## Methodology
 
-This page was rechecked by the aipedia.wiki editorial workflow on June 12, 2026 against the [MiniMax M3 model page](https://www.minimax.io/models/text/m3), [MiniMax M3 launch post](https://www.minimax.io/blog/minimax-m3), [M3 for AI Coding Tools docs](https://platform.minimax.io/docs/guides/text-ai-coding-tools), [MiniMax pay-as-you-go pricing](https://platform.minimax.io/docs/guides/pricing-paygo), [MiniMax pricing overview](https://platform.minimax.io/docs/pricing/overview), [MiniMax T2A API overview](https://platform.minimax.io/docs/api-reference/speech-t2a-intro), and MiniMax company/financial-results sources. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average).
+This page was rechecked by the aipedia.wiki editorial workflow on June 21, 2026 against the [MiniMax M3 model page](https://www.minimax.io/models/text/m3), [MiniMax M3 launch post](https://www.minimax.io/blog/minimax-m3), [M3 for AI Coding Tools docs](https://platform.minimax.io/docs/guides/text-ai-coding-tools), [MiniMax pay-as-you-go pricing](https://platform.minimax.io/docs/guides/pricing-paygo), [MiniMax pricing overview](https://platform.minimax.io/docs/pricing/overview), [MiniMax T2A API overview](https://platform.minimax.io/docs/api-reference/speech-t2a-intro), and MiniMax company/financial-results sources. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average).
 
 ## FAQ
 
 **Is MiniMax free to use?**
-Consumer MiniMax products can be tried through public product surfaces, and the developer platform supports several purchase routes. API procurement should start by choosing between Token Plan/Credits and pay-as-you-go; the June 8 pay-as-you-go table lists MiniMax-M3 standard at $0.30/M input and $1.20/M output for <=512K input tokens.
+Consumer MiniMax products can be tried through public product surfaces, and the developer platform supports several purchase routes. API procurement should start by choosing between Token Plan/Credits and pay-as-you-go; the June 21 pay-as-you-go table lists MiniMax-M3 standard at $0.30/M input and $1.20/M output for <=512K input tokens.
 
 **What is the current MiniMax flagship model?**
 MiniMax-M3. It was released June 1, 2026 and is now the current flagship model path for coding, agentic, long-context, and native multimodal evaluation. M2.7 remains visible in pricing/docs but should no longer be treated as the primary new-buyer benchmark.
@@ -208,10 +208,10 @@ Talkie is MiniMax's character and companion-chat app. It is strategically import
 
 ## Sources
 
-- [MiniMax M3 model page](https://www.minimax.io/models/text/m3): M3 positioning, context, multimodality, API access, and MiniMax Code path
-- [MiniMax M3 launch post](https://www.minimax.io/blog/minimax-m3): June 1 release details and vendor benchmark claims
-- [M3 for AI Coding Tools](https://platform.minimax.io/docs/guides/text-ai-coding-tools): coding-tool setup and model naming
-- [MiniMax pay-as-you-go pricing](https://platform.minimax.io/docs/guides/pricing-paygo): current text, audio, video, music, image, and MCP usage rates
+- [MiniMax M3 model page](https://www.minimax.io/models/text/m3): M3 positioning, context, multimodality, API access, and MiniMax Code path (verified 2026-06-21)
+- [MiniMax M3 launch post](https://www.minimax.io/blog/minimax-m3): June 1 release details and vendor benchmark claims (verified 2026-06-21)
+- [M3 for AI Coding Tools](https://platform.minimax.io/docs/guides/text-ai-coding-tools): coding-tool setup and model naming (verified 2026-06-21)
+- [MiniMax pay-as-you-go pricing](https://platform.minimax.io/docs/guides/pricing-paygo): current text, audio, video, music, image, and MCP usage rates (verified 2026-06-21)
 - [MiniMax platform pricing](https://platform.minimax.io/docs/pricing/overview): Token Plan, Credits, Audio Subscription, Video Packages, and pay-as-you-go route overview
 - [MiniMax T2A API overview](https://platform.minimax.io/docs/api-reference/speech-t2a-intro): current Speech 2.8 and voice API surface
 - [MiniMax FY2025 results](https://www.prnewswire.com/news-releases/minimax-announces-full-year-2025-financial-results-302700868.html): company and multimodal usage context

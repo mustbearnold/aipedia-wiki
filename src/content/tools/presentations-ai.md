@@ -12,7 +12,7 @@ price_range: "$0-$100/month billed annually; Enterprise custom"
 status: active
 launched: 2022-01
 last_updated: 2026-06-21
-last_verified: 2026-06-12
+last_verified: 2026-06-21
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: "https://www.presentations.ai"
     source_label: "Presentations.AI official site"
     source_id: presentations-ai-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-21
     volatility: medium
     confidence: high
   workflow_surface:
@@ -39,7 +39,7 @@ facts:
     source: "https://www.presentations.ai"
     source_label: "Presentations.AI official site"
     source_id: presentations-ai-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-21
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -47,25 +47,25 @@ facts:
     source: "https://www.presentations.ai/pricing"
     source_label: "Presentations.AI pricing"
     source_id: presentations-ai-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-21
     next_review_at: 2026-09-05
     volatility: high
     confidence: high
   integration_surface:
-    value: "Enterprise positioning includes API, webhooks, white-label generation, SSO, data integrations, and scheduled presentation generation, so serious org buyers should evaluate the sales-led path separately from self-serve Pro and Gold."
+    value: "Enterprise and API positioning includes REST API generation, webhooks, white-label generation, SSO/SAML, audit logging, data integrations, advanced auto-refresh, and scheduled presentation generation, so serious org buyers should evaluate the sales-led/API path separately from self-serve Pro and Gold."
     source: "https://www.presentations.ai/solutions/enterprise"
     source_label: "Presentations.AI Enterprise"
-    source_id: presentations-ai-official
-    verified_at: 2026-06-12
+    source_id: presentations-ai-enterprise
+    verified_at: 2026-06-21
     volatility: high
-    confidence: medium
-    next_review_at: 2026-06-21
+    confidence: high
+    next_review_at: 2026-07-21
   watch_out_for:
     value: "The current English pricing page has replaced older Public Beta and $198/year Pro claims; verify the live checkout and local pricing before quoting old annual offers."
     source: "https://www.presentations.ai/pricing"
     source_label: "Presentations.AI pricing"
     source_id: presentations-ai-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-21
     next_review_at: 2026-09-05
     volatility: high
     confidence: high
@@ -92,7 +92,7 @@ price_history:
     source: "https://www.presentations.ai/pricing"
     source_label: "Presentations.AI pricing"
     source_id: presentations-ai-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-21
     note: "Historical AiPedia snapshot; superseded by the June 5, 2026 English pricing-page refresh."
   - date: 2026-06-05
     plan: "Starter"
@@ -100,7 +100,7 @@ price_history:
     source: "https://www.presentations.ai/pricing"
     source_label: "Presentations.AI pricing"
     source_id: presentations-ai-pricing
-    verified_at: 2026-06-05
+    verified_at: 2026-06-21
     note: "Current English pricing page lists Starter with 100 credits, a starter AI model/agent, and up to 20 slides."
   - date: 2026-06-05
     plan: "Pro"
@@ -108,7 +108,7 @@ price_history:
     source: "https://www.presentations.ai/pricing"
     source_label: "Presentations.AI pricing"
     source_id: presentations-ai-pricing
-    verified_at: 2026-06-05
+    verified_at: 2026-06-21
     note: "Current English pricing page lists Pro with 5,000 credits, high-quality PowerPoint export, tracking/analytics, and brand customization."
   - date: 2026-06-05
     plan: "Gold"
@@ -116,7 +116,7 @@ price_history:
     source: "https://www.presentations.ai/pricing"
     source_label: "Presentations.AI pricing"
     source_id: presentations-ai-pricing
-    verified_at: 2026-06-05
+    verified_at: 2026-06-21
     note: "Current English pricing page lists Gold with 50,000 credits, frontier AI models and agents, advanced brand customization, and a shared knowledge base."
 ---
 
@@ -149,7 +149,7 @@ The important June 2026 correction: Presentations.AI should not be described as 
 | **Brand controls** | Brand colors, brand fonts, Pro brand customization, Gold advanced branding and templates |
 | **Security positioning** | Official site claims SOC 2 Type II certification and GDPR compliance |
 
-Every data point above was verified against current Presentations.AI public pages on 2026-06-12. See Sources.
+Every data point above was verified against current Presentations.AI public pages on 2026-06-21. See Sources.
 
 ## Recent Changes
 
@@ -192,7 +192,7 @@ Subscription pricing via [presentations.ai/pricing](https://www.presentations.ai
 | Gold | $100/mo billed annually | 50,000 | High-stakes presenters needing frontier models, advanced branding, and shared knowledge |
 | Enterprise | Custom/contact sales | Custom or unlimited path | SSO, audit logging, data integrations, API, white-label, private deployment, and large-scale generation |
 
-*Prices verified 2026-06-12 via [Presentations.AI pricing](https://www.presentations.ai/pricing). The old Public Beta and $198/year Pro claims should be treated as stale unless they appear in your own live regional checkout.*
+*Prices verified 2026-06-21 via [Presentations.AI pricing](https://www.presentations.ai/pricing). The old Public Beta and $198/year Pro claims should be treated as stale unless they appear in your own live regional checkout.*
 
 ## Against The Alternatives
 
@@ -216,7 +216,7 @@ Subscription pricing via [presentations.ai/pricing](https://www.presentations.ai
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against Presentations.AI pricing, official product pages, and enterprise positioning.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-21 against Presentations.AI pricing, official product pages, API positioning, feature pages, and enterprise positioning.
 
 ## FAQ
 
@@ -234,7 +234,7 @@ Gold is listed at $100/month billed annually, with 50,000 credits, frontier AI m
 
 **Does Presentations.AI still have Public Beta pricing?**
 
-Not on the current English pricing page AiPedia verified on 2026-06-12. Older Public Beta and $198/year Pro claims should be treated as stale unless they appear in your live regional checkout.
+Not on the current English pricing page AiPedia verified on 2026-06-21. Older Public Beta and $198/year Pro claims should be treated as stale unless they appear in your live regional checkout.
 
 **Does Presentations.AI export to PowerPoint?**
 
@@ -250,9 +250,11 @@ The official site claims SOC 2 Type II certification and GDPR compliance, while 
 
 ## Sources
 
-- [Presentations.AI pricing](https://www.presentations.ai/pricing): current Starter, Pro, Gold, credits, export, brand, analytics, and sharing features
-- [Presentations.AI official site](https://www.presentations.ai): product workflow, inputs, PowerPoint export, security positioning, and enterprise messaging
-- [Presentations.AI Enterprise](https://www.presentations.ai/solutions/enterprise): enterprise feature comparison, custom pricing, API, SSO, integrations, and support claims
+- [Presentations.AI pricing](https://www.presentations.ai/pricing): current Starter, Pro, Gold, credits, export, brand, analytics, and sharing features (verified 2026-06-21)
+- [Presentations.AI official site](https://www.presentations.ai): product workflow, inputs, PowerPoint export, security positioning, and enterprise messaging (verified 2026-06-21)
+- [Presentations.AI API](https://www.presentations.ai/solutions/api): REST API generation, webhooks, white-label output, integration hooks, and API security claims (verified 2026-06-21)
+- [Presentations.AI features](https://www.presentations.ai/features): CRM/BI integrations, auto-refresh, and compliance positioning (verified 2026-06-21)
+- [Presentations.AI Enterprise](https://www.presentations.ai/solutions/enterprise): enterprise feature comparison, custom pricing, SSO/SAML, audit logging, data integrations, API, and support claims (verified 2026-06-21)
 
 ## Related
 

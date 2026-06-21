@@ -424,8 +424,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-18 | /categories/ai-infrastructure/ | Category | Yes | frontmatter | src/content/categories/ai-infrastructure.md |
 | 2026-06-18 | /categories/ai-music/ | Category | Yes | frontmatter | src/content/categories/ai-music.md |
 | 2026-06-18 | /categories/ai-notes/ | Category | Yes | frontmatter | src/content/categories/ai-notes.md |
-| 2026-06-18 | /categories/ai-presentation/ | Category | Yes | frontmatter | src/content/categories/ai-presentation.md |
-| 2026-06-18 | /categories/ai-research/ | Category | Yes | frontmatter | src/content/categories/ai-research.md |
 | 2026-06-18 | /categories/ai-video/ | Category | Yes | frontmatter | src/content/categories/ai-video.md |
 | 2026-06-18 | /categories/ai-voice/ | Category | Yes | frontmatter | src/content/categories/ai-voice.md |
 | 2026-06-18 | /categories/ai-writing/ | Category | Yes | frontmatter | src/content/categories/ai-writing.md |
@@ -486,8 +484,10 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-20 | /workflows/ | Static page | Yes | git | src/pages/workflows/index.astro |
 | 2026-06-21 | /categories/ | Static page | Yes | git | src/pages/categories/index.astro |
 | 2026-06-21 | /categories/ai-automation/ | Category | Yes | frontmatter | src/content/categories/ai-automation.md |
-| 2026-06-21 | /categories/ai-chatbots/ | Category | Yes | frontmatter | src/content/categories/ai-chatbots.md |
-| 2026-06-21 | /categories/ai-coding/ | Category | Yes | frontmatter | src/content/categories/ai-coding.md |
+| 2026-06-21 | /categories/ai-chatbots/ | Category | Yes | working tree | src/content/categories/ai-chatbots.md |
+| 2026-06-21 | /categories/ai-coding/ | Category | Yes | working tree | src/content/categories/ai-coding.md |
+| 2026-06-21 | /categories/ai-presentation/ | Category | Yes | working tree | src/content/categories/ai-presentation.md |
+| 2026-06-21 | /categories/ai-research/ | Category | Yes | working tree | src/content/categories/ai-research.md |
 | 2026-06-21 | /categories/ai-search/ | Category | Yes | frontmatter | src/content/categories/ai-search.md |
 | 2026-06-21 | /compare/ | Static page | Yes | git | src/pages/compare/index.astro |
 | 2026-06-21 | /compare/activepieces-vs-n8n/ | Comparison | Yes | frontmatter | src/content/comparisons/activepieces-vs-n8n.md |
@@ -549,11 +549,11 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-21 | /tools/kimi/ | Tool | Yes | frontmatter | src/content/tools/kimi.md |
 | 2026-06-21 | /tools/lindy/ | Tool | Yes | frontmatter | src/content/tools/lindy.md |
 | 2026-06-21 | /tools/midjourney/ | Tool | Yes | frontmatter | src/content/tools/midjourney.md |
-| 2026-06-21 | /tools/minimax/ | Tool | Yes | frontmatter | src/content/tools/minimax.md |
+| 2026-06-21 | /tools/minimax/ | Tool | Yes | working tree | src/content/tools/minimax.md |
 | 2026-06-21 | /tools/mistral-ai/ | Tool | Yes | frontmatter | src/content/tools/mistral-ai.md |
 | 2026-06-21 | /tools/n8n/ | Tool | Yes | frontmatter | src/content/tools/n8n.md |
 | 2026-06-21 | /tools/poe/ | Tool | Yes | frontmatter | src/content/tools/poe.md |
-| 2026-06-21 | /tools/presentations-ai/ | Tool | Yes | frontmatter | src/content/tools/presentations-ai.md |
+| 2026-06-21 | /tools/presentations-ai/ | Tool | Yes | working tree | src/content/tools/presentations-ai.md |
 | 2026-06-21 | /tools/replit-agent/ | Tool | Yes | frontmatter | src/content/tools/replit-agent.md |
 | 2026-06-21 | /tools/resemble-ai/ | Tool | Yes | frontmatter | src/content/tools/resemble-ai.md |
 | 2026-06-21 | /tools/voxtral/ | Tool | Yes | frontmatter | src/content/tools/voxtral.md |

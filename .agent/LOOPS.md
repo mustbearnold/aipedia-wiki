@@ -109,4 +109,4 @@ A loop-system change is done only when:
 - Focused tests for `scripts/aipedia-loops.mjs` pass.
 - `.agent` status docs say which loop to run next.
 
-Latest baseline: 2026-06-21 recorded broad review is 7 ok / 0 attention after recommendation, build-freshness, and local-artifact noise hardening.
+Latest baseline: 2026-06-21 broad review is 7 ok / 0 attention / 0 skipped after the Presentations.AI and MiniMax freshness pass. Due-now freshness is 0, and the next freshness queue starts with Claude, Gemini, and Claude Code for 2026-06-22.

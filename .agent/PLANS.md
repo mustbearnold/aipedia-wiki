@@ -8,16 +8,37 @@ For plain-English project state, read `.agent/CURRENT_STATUS.md` first. For comp
 
 - Last updated: 2026-06-21.
 - Check `master` with `git status --short --branch` before starting work.
-- The June 2026 standards remediation, Guard Challenge Workflow, Project Folder Tidy, Verification Router, June 17 news catch-up, Vercel CLI install, decision loop tooling, strict comparison cleanup, `activepieces-vs-n8n`, `activepieces-vs-zapier`, multi-loop buildout, freshness metadata scheduling, and Quality Pruning workflow-policy cleanup are complete.
+- The June 2026 standards remediation, Guard Challenge Workflow, Project Folder Tidy, Verification Router, June 17 news catch-up, Vercel CLI install, decision loop tooling, strict comparison cleanup, `activepieces-vs-n8n`, `activepieces-vs-zapier`, multi-loop buildout, freshness metadata scheduling, Quality Pruning workflow-policy cleanup, and the Presentations.AI plus MiniMax freshness pass are complete.
 - The decision content flywheel is the default repeatable loop. Use `npm run loop:next -- --json`.
 - Comparison pages must compare the same buyer job and workflow. Same primary category is necessary but not sufficient. Cross-category and different-workflow pairs are review-only and must not become published `vs` pages.
 - The selector now uses explicit workflow lanes for broad categories, including automation, image, coding, music, chatbots, video, voice, design, writing, notes, and search.
-- The multi-loop system is green. Use `npm run loop:system` to list loops and `npm run loop:all -- --json` to review all loop signals. Use `npm run loop:all:record -- --json` when a broad review should create durable JSON history.
+- The multi-loop system is green. Latest broad review is 7 ok / 0 attention / 0 skipped. Use `npm run loop:system` to list loops and `npm run loop:all -- --json` to review all loop signals. Use `npm run loop:all:record -- --json` when a broad review should create durable JSON history.
 - `.agents/` and `skills-lock.json` are gitignored local agent/plugin artifacts. `check-smart` default dirty-path discovery also ignores them, while still treating canonical `.agent/` docs as project changes.
 - The live comparison inventory is 46 policy-aligned pages. `scripts/guard-content.mjs` now protects it with a 41-page floor after accepted Guard Challenge review.
 - Current next selected cluster is `amazon-q-vs-github-copilot`.
+- Current freshness state: 0 due-now items after the Presentations.AI and MiniMax pass. The next freshness queue starts with Claude, Gemini, and Claude Code facts due on 2026-06-22.
 - Current build timing baseline from 2026-06-21: `npm run build:fast` has recently passed in roughly 2 to 3 minutes for normal content runs. The full loop verifier can take about 8 minutes when content, guards, script tests, build, and route QA are all touched.
 - Route QA uses 360, 390, 430, 768, 1024, and 1366 px for rendered route work.
+
+## Active: June 21 To June 22 Site Freshness Goal
+
+### Objective
+
+Run the AiPedia loop system until every tracked website page, volatile fact, source-backed claim, commercial surface, parent hub, crawl surface, and loop receipt is fresh for the June 21 to June 22, 2026 refresh window, or explicitly documented as non-blocking future queue work.
+
+### Status
+
+- 2026-06-21: Goal created and active.
+- 2026-06-21: Cleared June 21 due-now freshness items for Presentations.AI and MiniMax.
+- 2026-06-21: Updated affected tool records, AI Presentation, AI Coding, AI Chatbots, AI Research, source registry rows, and `PAGE_REFRESH_LEDGER.md`.
+- 2026-06-21: Verification passed with `npm run check:smart:run`, `npm run loop:all -- --json`, `npm run loop:freshness -- --json`, `npm run audit:freshness -- --json`, `npm run audit:provenance:changed -- --json`, `npm run ledger:pages:check`, `node scripts/guard-em-dashes.mjs`, and `git diff --check`.
+
+### Next
+
+- Continue the freshness window with Claude, Gemini, and Claude Code facts due on 2026-06-22.
+- Keep deleting or avoiding invalid different-workflow comparison pages.
+- Record each meaningful cycle in `.agent/loop-runs/`.
+- Keep `.agent/CURRENT_STATUS.md`, `.agent/PLANS.md`, `.agent/WORK_LOG.md`, and `.agent/LOOPS.md` current before each push.
 
 ## Active: Decision Content Flywheel
 
@@ -51,6 +72,7 @@ Run AiPedia as a repeatable buyer-decision loop: cluster, verify, improve decisi
 - 2026-06-21: Multi-loop registry added Decision Content, Freshness, Trust and Provenance, Revenue and Conversion, Quality Pruning, Performance and UX, and News and Market Change loops.
 - 2026-06-21: Quality Pruning cleanup deleted 19 no-shared-workflow comparison pages, removed public links, strengthened the comparison quality audit with workflow-lane enforcement, re-anchored comparison inventory fixtures through Guard Challenge records, and brought `npm run loop:all -- --json` to 7 ok / 0 attention.
 - 2026-06-21: Loop runner now reports ranked recommendations, checks built-output freshness for rendered-output loops, and can persist system loop-run JSON receipts with deltas from the previous recorded run.
+- 2026-06-21: Presentations.AI and MiniMax freshness pass cleared the old second-ranked freshness recommendation. Current decision recommendation remains `amazon-q-vs-github-copilot`.
 
 ## Active: Multi-Loop System
 
@@ -83,10 +105,11 @@ Keep AiPedia maintenance repeatable without turning it into bureaucracy. The loo
 - 2026-06-21: `check-smart` now filters local-only untracked `.agents/` and `skills-lock.json` noise from default discovery, without filtering explicit paths, staged files, or canonical `.agent/` docs.
 - 2026-06-21: Loop summaries now always show ok, attention, and skipped counts, including all-green runs.
 - 2026-06-21: `.gitignore` now ignores `.agents/` and `skills-lock.json` so raw git status is aligned with the smart-check filter.
+- 2026-06-21: Cleared due-now freshness items by refreshing Presentations.AI integration, API, enterprise, and pricing facts plus MiniMax M3, API, coding, multimodal, long-context, and pay-go facts. Parent category hubs, source registry, page ledger, and route QA were updated.
 
 ### Next Improvement Pass
 
-- Run the next Decision Content cycle, currently `amazon-q-vs-github-copilot`, or pick the top freshness queue item if fact freshness is the higher priority.
+- Run the next Decision Content cycle, currently `amazon-q-vs-github-copilot`, or pick the Claude, Gemini, and Claude Code due-soon freshness queue if the active June 21 to June 22 freshness goal is the higher priority.
 - After each meaningful cycle, rerun the relevant loop plus `npm run loop:all -- --json` and record whether attention returns.
 - For broad loop-system reviews, use `npm run loop:all:record -- --json` so `.agent/loop-runs/system/latest.json` captures the run, recommendations, built-output freshness, and trend.
 
