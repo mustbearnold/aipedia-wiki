@@ -112,11 +112,25 @@ test('AI coding category contains pilot decision picks', () => {
   assert.match(category, /- github-copilot-plans/);
 });
 
+test('homepage featured categories contain source-backed decision picks', () => {
+  for (const [path, expectedTool, expectedSource] of [
+    ['src/content/categories/ai-infrastructure.md', 'lm-studio', 'lm-studio-openai-compat-docs'],
+    ['src/content/categories/ai-automation.md', 'n8n', 'n8n-pricing'],
+  ]) {
+    const category = readSource(path);
+    assert.match(category, /^decision_picks:/m);
+    assert.match(category, new RegExp(`tool: ${expectedTool}`));
+    assert.match(category, new RegExp(`- ${expectedSource}`));
+    assert.match(category, /verified_at: 2026-06-22/);
+    assert.match(category, /confidence: high/);
+  }
+});
+
 test('AI coding decision pick source refs are registered', () => {
   const registry = JSON.parse(readSource('src/data/source-registry.json'));
   const sourceIds = new Set(registry.sources.map((source) => source.id));
 
-  for (const sourceId of ['cursor-pricing', 'github-copilot-plans']) {
+  for (const sourceId of ['cursor-pricing', 'github-copilot-plans', 'lm-studio-openai-compat-docs', 'n8n-pricing', 'zapier-mcp-guide']) {
     assert.ok(sourceIds.has(sourceId), `missing registered source ${sourceId}`);
   }
 });

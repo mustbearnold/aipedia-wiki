@@ -30,6 +30,76 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 
 ## Entries
 
+### 2026-06-22: Claude And Claude Code Freshness Completion
+
+- Status: Complete in this batch.
+- Commit: this commit.
+- Branch: `master`.
+- Changed: Completed the paused Claude and Claude Code freshness batch; refreshed Claude/Claude Code, Anthropic, affected category hubs, comparisons, guides, answer pages, source registry, top-layer surfaces, and ledger rows around Fable/Mythos suspension, Opus 4.8, paused Agent SDK credit changes, Claude Code usage/cost guidance, data retention, and web search. Fixed the selected lantern logo palette so brand and favicon rasters stay inside Signal Orange.
+- Verification: stale bad-phrase scan; `npm run audit:provenance:changed -- --json`; `npm run ledger:pages:check`; `npm run loop:freshness -- --json`; affected route QA across Claude, Claude Code, category, comparison, guide, answer, `/tools/`, and `/categories/` routes at 360, 390, 430, 768, 1024, and 1366 px; `node scripts\prep-favicons.mjs --check --json`; `npm run smoke:visual`; `npm run check:smart:run`.
+- Residual risks: None blocking. The site still has due-soon freshness work, with Gemini currently first in the queue.
+- Next: Commit and push this verified June 22 batch, then rerun the loop suite and choose between Gemini freshness and `amazon-q-vs-github-copilot`.
+
+### 2026-06-22: News Loop Rules Standard
+
+- Status: Complete in this batch.
+- Commit: this commit.
+- Branch: `master`.
+- Changed: Added explicit missed-date news rules to `.agent/OPERATING_RULES.md`, `.agent/LOOPS.md`, and `src/data/aipedia-loops.json`; the News and Market Change loop now requires broad AI news plus AI tools or tool-control coverage when sourceable, `/news/` and homepage latest-news alignment, OG assets, affected-tool links, source lists, crawl surfaces, ledger updates, and mobile/tablet/desktop layout QA. Added a regression test so the rule remains visible in loop-registry output.
+- Verification: `node --test tests\scripts\aipedia-loops.test.mjs`; `npm run loop:system -- --json`; `npm run loop:news -- --json`; `npm run build:fast`; `npm run loop:all:record -- --json`; `npm run qa:route -- --route /news/ --widths 319,360,390,430,768,1024,1366 --site-dir dist-fast/client`; `npm run qa:route -- --route / --widths 319,360,390,430,768,1024,1366 --site-dir dist-fast/client`; `node scripts\guard-em-dashes.mjs`.
+- Residual risks: The loop standard is now explicit and green, but article selection still needs editorial judgment and current-source verification. The broader June 21 to June 22 freshness goal remains active and dirty.
+- Next: Finish the paused Claude and Claude Code freshness batch, rerun and record all loops, then choose Gemini freshness or the Amazon Q vs GitHub Copilot cycle from the fresh recommendations.
+
+### 2026-06-22: Visual Layout Precision Standard
+
+- Status: Complete in this batch.
+- Commit: this commit.
+- Branch: `master`.
+- Changed: Added a strict layout precision rule to the canonical agent docs, expanded the Performance and UX loop and Decision Content brief so rendered work must check grid symmetry, gutters, card containment, text-to-card ratios, CTA placement, orphan text, broken wrapping, and horizontal overflow across mobile, tablet, and desktop.
+- Verification: `npm run qa:route -- --route /news/ --widths 319,360,390,430,768,1024,1366 --site-dir dist-fast/client`; `npm run qa:route -- --route / --widths 319,360,390,430,768,1024,1366 --site-dir dist-fast/client`; `node --test tests\scripts\decision-loop.test.mjs tests\scripts\aipedia-loops.test.mjs`; `npm run loop:system -- --json`; `npm run loop:next -- --json`; `node scripts/guard-em-dashes.mjs`; `git diff --check`.
+- Residual risks: This codifies the standard and strengthens operator prompts, but true visual balance still needs human/browser judgment alongside route QA.
+- Next: Apply this standard to every rendered page change, starting with the remaining June 22 hotfix and freshness work.
+
+### 2026-06-22: Homepage Copy Density Pass
+
+- Status: Complete in this batch.
+- Commit: this commit.
+- Branch: `master`.
+- Changed: Tightened homepage visible copy into smart one-line decision guidance; removed portal blurbs, news summaries, top-tool taglines, and long catalog blurbs; shortened homepage news labels, verified-guide copy, and trust copy so the first mobile pass is scannable without generic AI tells.
+- Verification: `npm run ledger:pages`; `npm run typecheck`; `npm run build:fast`; `npm run qa:route -- --route / --widths 319,360,390,430,768,1024,1366 --site-dir dist-fast/client`; stale-copy `rg` sweep against `dist-fast\client\index.html` and `src\pages\index.astro`; `npm run ledger:pages:check`; `node scripts/guard-em-dashes.mjs`; `git diff --check`; live app-browser DOM inspection at `http://127.0.0.1:4321/?brand-check=lantern&copy-check=compact2` on the 319 px viewport.
+- Residual risks: None known for homepage copy density. The broader June 21 to June 22 freshness goal remains active and dirty.
+- Next: Keep this with the June 22 hotfix batch when committing, then finish the paused Claude and Claude Code freshness work.
+
+### 2026-06-22: Homepage Verified Panel Restyle
+
+- Status: Complete in this batch.
+- Commit: this commit.
+- Branch: `master`.
+- Changed: Fixed the reported homepage `Recently verified` panel style issue by replacing the broad orange-brown wash with a neutral charcoal panel, subtle cool highlight, and thin amber accent while keeping the guide cards readable and contained.
+- Verification: `npm run ledger:pages`; `npm run typecheck`; `npm run build:fast`; `npm run qa:route -- --route / --widths 319,360,390,430,768,1024,1366 --site-dir dist-fast/client`; `npm run ledger:pages:check`; `git diff --check`; live browser DOM style and geometry inspection at `http://127.0.0.1:4321/` on the 319 px viewport.
+- Residual risks: None known for this panel. The broader June 21 to June 22 freshness goal remains active and dirty.
+- Next: Keep this with the June 22 hotfix batch when committing, then finish the paused Claude and Claude Code freshness work.
+
+### 2026-06-22: Homepage Mobile Portal Containment
+
+- Status: Complete in this batch.
+- Commit: this commit.
+- Branch: `master`.
+- Changed: Fixed the reported 319 px homepage portal overflow by switching the portal grid to two columns on very narrow screens and adding defensive text containment to portal meta/title labels.
+- Verification: `npm run ledger:pages`; `npm run typecheck`; `npm run build:fast`; `npm run qa:route -- --route / --widths 319,360,390,430,768,1024,1366 --site-dir dist-fast/client`; `npm run ledger:pages:check`; `git diff --check`; live browser DOM geometry inspection at `http://127.0.0.1:4321/` on the 319 px viewport.
+- Residual risks: None known for the portal card overflow. The broader June 21 to June 22 freshness goal remains active and dirty.
+- Next: Keep this with the June 22 hotfix batch when committing, then finish the paused Claude and Claude Code freshness work.
+
+### 2026-06-22: Homepage Decision Evidence Hardening
+
+- Status: Complete in this batch.
+- Commit: this commit.
+- Branch: `master`.
+- Changed: Added registered, current, high-confidence evidence to the homepage decision paths that previously fell back to `No source attached` or `Unknown source`; added source-backed evidence for the featured general-assistant answer; added a homepage build assertion for featured decision cards; separated tool-page evidence confidence from editorial score confidence; and kept older price-history rows out of the live recommendation evidence freshness calculation.
+- Verification: `node --test tests\scripts\search-catalog.test.mjs tests\scripts\generated-models.test.mjs`; `npm run typecheck`; `npm run build:fast`; `npm run qa:route -- --route / --widths 319,360,390,430,768,1024,1366 --site-dir dist-fast/client`; built-output text scan for bad evidence fallback labels; live browser DOM inspection at `http://127.0.0.1:4321/` on the 319 px viewport.
+- Residual risks: The broader June 21 to June 22 freshness goal is still active. The paused Claude and Claude Code batch remains dirty and unfinished.
+- Next: Keep this with the June 22 hotfix batch when committing, then finish the paused Claude and Claude Code freshness work before starting another content batch.
+
 ### 2026-06-21: Presentations.AI And MiniMax Freshness Pass
 
 - Status: Complete.
@@ -279,6 +349,16 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Verification: `npm run loop:next -- --json`, `node --test tests/scripts/decision-loop.test.mjs`, `git diff --check`, em-dash sweep over touched docs/scripts, `npm run check:quick`.
 - Residual risks: The loop chooses and briefs clusters, but it intentionally does not automate live web research or editorial judgment. Content cycles still require current-source verification before facts are edited.
 - Next: Run the first `canva-vs-claude` cycle with current June 2026 Canva and Claude sources, then update parent hubs and ledger rows.
+
+### 2026-06-22: News Gap And Lantern Logo Hotfix
+
+- Status: Complete in this batch.
+- Commit: this commit.
+- Branch: `master`.
+- Changed: Replaced the visible blue/cyan brand regression with the selected lantern logo, removed the old nav hue filter that recolored the logo blue, regenerated favicon and brand assets, deleted cyan brand PNGs, added June 18 through June 22 news coverage, regenerated news OG assets and the page refresh ledger, and recorded `.agent/loop-runs/2026-06-22-news-logo-hotfix.md`.
+- Verification: `node scripts/guard-em-dashes.mjs`; `node scripts/audit-news-rendering.mjs`; `node scripts/audit-news-xrefs.mjs`; `node scripts/prep-favicons.mjs --check --json`; `node scripts/generate-og-news.mjs --check <June 18-22 slugs>`; `node scripts/generate-og-svgs.mjs --check --limit 20 --json`; `node scripts/generate-logo-manifest.mjs --check`; `node --test tests\scripts\prep-favicons.test.mjs tests\scripts\generate-og-news.test.mjs`; `node scripts\optimize-og-images.mjs --check --limit 20 --json`; `npm run ledger:pages:check`; `git diff --check`; `npm run build:fast`; `npm run qa:route -- --route / --widths 360,390,430,768,1024,1366 --site-dir dist-fast/client`; `npm run qa:route -- --route /news/ --widths 360,390,430,768,1024,1366 --site-dir dist-fast/client`; `npm run typecheck`; `npm run check:links`.
+- Residual risks: None blocking. The lantern logo palette was later normalized by the Claude completion pass so visual smoke accepts both nav and favicon rasters.
+- Next: Continue from the newest work-log entries for the final June 22 batch status.
 
 ### 2026-06-21: Build-Time Diagnosis And Next-Step Recommendation
 

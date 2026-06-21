@@ -82,7 +82,7 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 
 **Use [Claude Code](/tools/claude-code/) when the buyer wants a Claude-backed coding agent for serious repo work.** The June 4 comparison pass clarified the real buyer split: specialist Claude agent, open-source BYOK IDE layer, async ticket delegation, GitHub-native AI platform, or hosted TypeScript runtime. Adjacent-lane pages from that pass are retired unless the tools are direct substitutes for the same workflow. Claude Code is better for repo investigation, multi-file work, command execution, debugging loops, and senior-engineer-style delegation than for passive autocomplete.
 
-**June 20 Claude Code billing correction:** [Claude Fable 5 and Mythos 5 access is suspended](/news/2026-06-13-us-blocks-anthropic-fable-mythos-openai-probe/), and the [June 14 desk](/news/2026-06-14-ai-news-desk/) makes the route-risk lesson explicit. Claude Code buyers should treat Opus 4.8 as the stable high-end Anthropic route until Anthropic restores Fable/Mythos access. Do not use Fable- or Mythos-specific pilot notes as production-default evidence until the account route is actually available again. Anthropic's Agent SDK help now says the separate Agent SDK credit changes are paused, so do not budget around a separate Agent SDK, `claude -p`, or GitHub Actions credit pool until Anthropic updates the guidance. For coding-agent route stability across Claude Code, Codex, GitHub Copilot, and model routers, use the [AI Model Availability & Churn Tracker](/trends/model-availability-churn/).
+**June 21 Claude Code billing correction:** [Claude Fable 5 and Mythos 5 access is suspended](/news/2026-06-13-us-blocks-anthropic-fable-mythos-openai-probe/), and the [June 14 desk](/news/2026-06-14-ai-news-desk/) makes the route-risk lesson explicit. Claude Code buyers should treat Opus 4.8 as the stable high-end Anthropic route until Anthropic restores Fable/Mythos access. Do not use Fable- or Mythos-specific pilot notes as production-default evidence until the account route is actually available again. Anthropic's Agent SDK help still says the separate Agent SDK credit changes are paused, so do not budget around a separate Agent SDK, `claude -p`, or GitHub Actions credit pool until Anthropic updates the guidance. For coding-agent route stability across Claude Code, Codex, GitHub Copilot, and model routers, use the [AI Model Availability & Churn Tracker](/trends/model-availability-churn/).
 
 **Use [Windsurf / Devin Desktop](/tools/windsurf/) when the buyer wants Cognition's IDE surface beside Devin.** The June 18 recheck keeps `windsurf.com/pricing` routed through Devin pricing, but the page now needs to be evaluated as a current Devin Desktop stack, not a simple rename. Devin pricing still lists Free, Pro $20/month, Max $200/month, Teams $80/month plus $40/month per full dev seat, and Enterprise custom, while docs now make daily/weekly quotas, extra usage at API pricing, SWE-1.6, Devin Local, ACP, and migration/admin details central to the buyer decision.
 
@@ -106,7 +106,7 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 
 **June 20 Replit vs model-backend update:** the new DeepSeek vs Replit Agent page makes Replit's category lane more explicit. Replit is not the cheapest model API, and DeepSeek is not a no-code app builder. Use Replit for low-risk browser prototypes and internal apps; use DeepSeek when engineers own the backend, evaluation, privacy review, and model routing.
 
-**June 20 Claude vs Replit Agent update:** Claude vs Replit Agent now captures the current buyer split. Claude is the better reasoning, repo investigation, code review, and Claude Code lane for developers working around existing codebases. Replit Agent is the better browser-native app-builder lane for non-developers, prototypes, internal tools, and small projects that need prompt, build, preview, database/auth, publish, and iteration in one workspace.
+**June 20 Claude/Replit buyer-lane update:** keep Claude and Replit Agent in separate guidance unless a human narrows the buyer job. Claude is the better reasoning, repo investigation, code review, and Claude Code lane for developers working around existing codebases. Replit Agent is the better browser-native app-builder lane for non-developers, prototypes, internal tools, and small projects that need prompt, build, preview, database/auth, publish, and iteration in one workspace.
 
 **Use [Codex](/tools/codex/) when the team wants OpenAI-native agent coding.** It fits local repo work, PR preparation, checks, and tasks where an agent can edit and verify code rather than only suggest completions. After OpenAI's June 11 Ona acquisition agreement, watch how Codex exposes persistent customer-controlled cloud workspaces, scoped credentials, audit logs, and review gates once the deal closes.
 
@@ -175,7 +175,7 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 
 **Best terminal agent: Claude Code.** Choose it when a senior developer wants to delegate real repo work from the command line, especially after Opus 4.8 and dynamic workflows widened its lane for codebase-scale work.
 
-**Best browser app-builder for non-developers: Replit Agent.** Choose it when the buyer values prompt-to-preview speed, browser-native building, and integrated database/auth/publishing more than local repo ownership. Use the Claude vs Replit Agent comparison when the decision is Claude-style repo reasoning versus Replit-style app creation, and DeepSeek vs Replit Agent when the decision is app-builder workflow versus low-cost model backend.
+**Best browser app-builder for non-developers: Replit Agent.** Choose it when the buyer values prompt-to-preview speed, browser-native building, and integrated database/auth/publishing more than local repo ownership. Use category guidance when the question is Claude-style repo reasoning versus Replit-style app creation, and use DeepSeek vs Replit Agent when the decision is app-builder workflow versus low-cost model backend.
 
 **Best Copilot alternative guide:** [GitHub Copilot alternatives](/guides/github-copilot-alternatives/) was refreshed June 15, 2026 around Cursor, Claude Code, Codex, Windsurf/Devin Desktop, Gemini Code Assist, Copilot AI Credits, Fable 5 route risk, one-million-token context, signup/upgrade eligibility, and Copilot agent workflow controls so teams can compare AI-native IDEs, terminal agents, OpenAI-native agents, Google-native workflows, and Copilot's usage-based billing risk before switching.
 
@@ -256,13 +256,13 @@ Do not publish stale model-version claims. Coding tools route models and change 
 - [DeepSeek API pricing docs](https://api-docs.deepseek.com/quick_start/pricing) (verified 2026-06-20)
 - [DeepSeek V4 release note](https://api-docs.deepseek.com/news/news260424) (verified 2026-06-20)
 - [DeepSeek Hugging Face organization](https://huggingface.co/deepseek-ai) (verified 2026-06-20)
-- [Claude Code docs](https://code.claude.com/docs) (verified 2026-06-15)
-- [Claude Code cost management](https://code.claude.com/docs/en/costs) (verified 2026-06-15)
-- [Claude Agent SDK credit help](https://support.claude.com/en/articles/15036540-use-the-claude-agent-sdk-with-your-claude-plan) (verified 2026-06-20)
+- [Claude Code docs](https://code.claude.com/docs) (verified 2026-06-21)
+- [Claude Code cost management](https://code.claude.com/docs/en/costs) (verified 2026-06-21)
+- [Claude Agent SDK credit help](https://support.claude.com/en/articles/15036540-use-the-claude-agent-sdk-with-your-claude-plan) (verified 2026-06-21)
 - [AiPedia late June 13 AI news update](/news/2026-06-13-us-blocks-anthropic-fable-mythos-openai-probe/) (verified 2026-06-13)
 - [AiPedia June 14 AI news desk](/news/2026-06-14-ai-news-desk/) (verified 2026-06-14)
-- [Anthropic Fable/Mythos access statement](https://www.anthropic.com/news/fable-mythos-access) (verified 2026-06-15)
-- [Claude Opus 4.8 and dynamic workflows](https://www.anthropic.com/news/claude-opus-4-8) (verified 2026-06-15)
+- [Anthropic Fable/Mythos access statement](https://www.anthropic.com/news/fable-mythos-access) (verified 2026-06-21)
+- [Claude Opus 4.8 and dynamic workflows](https://www.anthropic.com/news/claude-opus-4-8) (verified 2026-06-21)
 - [Claude dynamic workflows in Claude Code](https://claude.com/blog/introducing-dynamic-workflows-in-claude-code) (verified 2026-06-14)
 - [Claude Max plan](https://support.claude.com/en/articles/11049741-what-is-the-max-plan) (verified 2026-06-14)
 - [Windsurf pricing redirect to Devin pricing](https://windsurf.com/pricing) (verified 2026-06-18)

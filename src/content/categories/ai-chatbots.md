@@ -5,7 +5,7 @@ title: AI Chatbots & LLMs
 description: General-purpose AI assistants and large language model chatbots for writing, research, coding help, analysis, multimodal work, and everyday decision support.
 tool_count: 17
 seo_title: "Best AI Chatbots & LLMs (June 2026), aipedia.wiki"
-meta_description: "Updated June 21, 2026: compare AI chatbots after the Mistral AI and Poe source refresh, corrected Poe point pricing, and stricter no-false-vs comparison policy."
+meta_description: "Updated June 21, 2026: compare AI chatbots after Claude Fable/Mythos and Agent SDK billing rechecks, Mistral AI and Poe source refreshes, corrected Poe point pricing, and stricter no-false-vs comparison policy."
 author: "aipedia.wiki Editorial"
 last_updated: 2026-06-21
 last_verified: 2026-06-21
@@ -18,7 +18,7 @@ AI chatbots are now the default starting point for writing, research, coding hel
 
 The June 14 update adds a sharper governance layer to this category. [Claude Fable/Mythos access is suspended, GPT-5.2 is retired from ChatGPT, and OpenAI faces reported state-AG scrutiny](/news/2026-06-13-us-blocks-anthropic-fable-mythos-openai-probe/), and the follow-up [ChatGPT safety checklist](/news/2026-06-14-openai-chatgpt-probe-safety-checklist/) turns the OpenAI probe reporting into buyer questions about minors, vulnerable users, data practices, engagement, escalation, and safety controls. The practical buyer lesson is simple: do not buy only the benchmark winner. Buy the assistant with current verified access, a fallback model path, sane data controls, and policies that fit the users who will rely on it. For the current cross-provider status matrix, use the [AI Model Availability & Churn Tracker](/trends/model-availability-churn/).
 
-The June 15 Claude follow-up keeps that rule practical: Claude pricing still labels Fable as unavailable, Anthropic's model docs can still describe Fable 5 as a launched highest-capability route, and Agent SDK credits are now active for eligible programmatic workloads. Treat that as a model-doc availability mismatch, not a reason to ignore Claude. Claude remains the writing and long-analysis specialist, but buyers should anchor hard work on Opus 4.8 until Fable/Mythos access is restored.
+The June 21 Claude follow-up keeps that rule practical: Claude pricing still labels Fable as unavailable, Anthropic's model docs can still describe Fable 5 as a launched highest-capability route, and Anthropic's Agent SDK help still says the June 15 credit changes are paused. Treat that as a model-doc availability and billing-guidance mismatch, not a reason to ignore Claude. Claude remains the writing and long-analysis specialist, but buyers should anchor hard work on Opus 4.8 until Fable/Mythos access is restored and should not budget around a separate Agent SDK credit pool until Anthropic updates the help guidance.
 
 The June 15 news desk widens the governance lens beyond model access. [G7 opened in Evian while AI search liability tightened](/news/2026-06-15-ai-news-desk/): AP reports AI regulation is on the G7 agenda, WIRED reports a German AI Overviews liability ruling, and Times of India reports Google's lawsuit allegations around Gemini-assisted phishing infrastructure. The companion [Google AI search risk checklist](/news/2026-06-15-google-ai-search-liability-gemini-abuse/) turns that into procurement controls for source trails, logs, abuse monitoring, and human review paths alongside model quality.
 
@@ -220,11 +220,11 @@ Do not subscribe to multiple chatbots because each one has a new model announcem
 - [OpenAI GPT-5.5 in ChatGPT](https://help.openai.com/en/articles/11909943-gpt-55-in-chatgpt) (verified 2026-06-12)
 - [OpenAI ChatGPT release notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes) (verified 2026-06-13)
 - [AiPedia late June 13 AI news update](/news/2026-06-13-us-blocks-anthropic-fable-mythos-openai-probe/) (verified 2026-06-13)
-- [Anthropic Fable/Mythos access statement](https://www.anthropic.com/news/fable-mythos-access) (verified 2026-06-15)
-- [Anthropic Claude Opus 4.8 launch](https://www.anthropic.com/news/claude-opus-4-8) (verified 2026-06-15)
-- [Anthropic Claude models](https://platform.claude.com/docs/en/about-claude/models/overview) (verified 2026-06-15)
-- [Claude pricing](https://claude.com/pricing) (verified 2026-06-15)
-- [Claude Agent SDK credit help](https://support.claude.com/en/articles/15036540-use-the-claude-agent-sdk-with-your-claude-plan) (verified 2026-06-15)
+- [Anthropic Fable/Mythos access statement](https://www.anthropic.com/news/fable-mythos-access) (verified 2026-06-21)
+- [Anthropic Claude Opus 4.8 launch](https://www.anthropic.com/news/claude-opus-4-8) (verified 2026-06-21)
+- [Anthropic Claude models](https://platform.claude.com/docs/en/about-claude/models/overview) (verified 2026-06-21)
+- [Claude pricing](https://claude.com/pricing) (verified 2026-06-21)
+- [Claude Agent SDK credit help](https://support.claude.com/en/articles/15036540-use-the-claude-agent-sdk-with-your-claude-plan) (verified 2026-06-21)
 - [AiPedia June 15 AI news desk](/news/2026-06-15-ai-news-desk/) (verified 2026-06-15)
 - [AiPedia Google AI search risk checklist](/news/2026-06-15-google-ai-search-liability-gemini-abuse/) (verified 2026-06-15)
 - [Anthropic Chris Olah remarks on Magnifica Humanitas](https://www.anthropic.com/news/chris-olah-pope-leo-encyclical) (verified 2026-05-26)

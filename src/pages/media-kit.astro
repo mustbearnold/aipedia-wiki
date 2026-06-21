@@ -2,8 +2,8 @@
 import ArticleLayout from '../layouts/ArticleLayout.astro';
 import { getCollection } from 'astro:content';
 
-// Refresh metadata: 2026-06-17 media kit brand asset refresh after favicon
-// source logo changed from cyan-forward to orange-forward.
+// Refresh metadata: 2026-06-22 media kit brand asset refresh after favicon
+// source logo changed from the previous crystal mark to the generated lantern mark.
 const allTools = await getCollection('tools');
 const activeTools = allTools.filter(
   (t) => t.data.status !== 'dead' && t.data.status !== 'acquired'
@@ -14,8 +14,8 @@ const allUseCases = await getCollection('use-cases');
 const allDead = await getCollection('dead');
 const allNews = await getCollection('news');
 
-const LAST_UPDATED = '2026-06-17';
-const LAST_UPDATED_HUMAN = 'June 17, 2026';
+const LAST_UPDATED = '2026-06-22';
+const LAST_UPDATED_HUMAN = 'June 22, 2026';
 
 const pageName = 'Media Kit & Partnerships, aipedia.wiki';
 const pageDesc =
@@ -33,22 +33,22 @@ const brandAssets = [
   {
     title: 'Primary logo',
     meta: '512x512 PNG with alpha',
-    href: '/brand/aipedia-logo-crystal-orange-512.png',
-    preview: '/brand/aipedia-logo-crystal-orange-512.png',
+    href: '/brand/aipedia-logo-lantern-512.png',
+    preview: '/brand/aipedia-logo-lantern-512.png',
     type: 'logo',
   },
   {
     title: 'Profile logo',
     meta: '128x128 PNG',
-    href: '/brand/aipedia-logo-crystal-orange-128.png',
-    preview: '/brand/aipedia-logo-crystal-orange-128.png',
+    href: '/brand/aipedia-logo-lantern-128.png',
+    preview: '/brand/aipedia-logo-lantern-128.png',
     type: 'logo',
   },
   {
     title: 'Compact UI logo',
     meta: '48x48 PNG',
-    href: '/brand/aipedia-logo-crystal-orange-48.png',
-    preview: '/brand/aipedia-logo-crystal-orange-48.png',
+    href: '/brand/aipedia-logo-lantern-48.png',
+    preview: '/brand/aipedia-logo-lantern-48.png',
     type: 'logo',
   },
   {
@@ -214,7 +214,7 @@ const brandNotes = [
   <h2>Brand assets</h2>
 
   <p>
-    Current Signal Orange logo, favicon, and preview images are available under the paths below. Partners may use these for partner-directory pages, press coverage, affiliate dashboards, and integration announcements that accurately describe aipedia.wiki as an independent AI tools review and reference site.
+    Current Signal Orange lantern logo, favicon, and preview images are available under the paths below. Partners may use these for partner-directory pages, press coverage, affiliate dashboards, and integration announcements that accurately describe aipedia.wiki as an independent AI tools review and reference site.
   </p>
 
   <div class="not-prose media-brand-kit my-[var(--site-content-gap)]">

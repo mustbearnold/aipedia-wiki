@@ -246,6 +246,96 @@ test('category decision source refs surface unknown ids in search evidence', asy
   assert.equal(category.evidence.primaryLabel, 'missing-source-ref');
 });
 
+test('featured chatbot answer has registered source-backed evidence', async () => {
+  const { buildSearchCatalog } = await loadSearchCatalog();
+  const catalog = buildSearchCatalog({
+    tools: [],
+    comparisons: [],
+    categories: [],
+    guides: [],
+    news: [],
+    workflows: [],
+    trends: [],
+    companies: [],
+    logos: {},
+  });
+
+  const answer = catalog.find((item) => item.kind === 'answer' && item.slug === 'best-ai-chatbot-2026');
+  assert.ok(answer);
+  assert.equal(answer.evidence.evidenceState, 'registered');
+  assert.equal(answer.evidence.confidence, 'high');
+  assert.ok(answer.evidence.sourceCount >= 3);
+  assert.ok(answer.evidence.primaryUrl);
+});
+
+test('tool recommendation evidence ignores older historical price rows', async () => {
+  const { buildSearchCatalog } = await loadSearchCatalog();
+  const catalog = buildSearchCatalog({
+    tools: [{
+      id: 'cursor',
+      data: {
+        type: 'tool',
+        status: 'active',
+        slug: 'cursor',
+        title: 'Cursor',
+        category: 'ai-coding',
+        tagline: 'AI-native code editor',
+        last_updated: '2026-06-22',
+        last_verified: '2026-06-22',
+        scores: { utility: 9, value: 8, moat: 7, longevity: 9 },
+        facts: {
+          pricing_anchor: {
+            value: 'Individual starts at $20/mo; Teams Standard is $40/user/mo monthly.',
+            source_id: 'cursor-pricing',
+            verified_at: '2026-06-22',
+            volatility: 'high',
+            confidence: 'high',
+          },
+          best_for: {
+            value: 'GUI-first multi-agent coding workflows.',
+            source_id: 'cursor-changelog',
+            verified_at: '2026-06-22',
+            volatility: 'high',
+            confidence: 'high',
+          },
+        },
+        price_history: [
+          {
+            date: '2026-06-22',
+            price: 'Individual starts at $20/mo; Teams Standard is $40/user/mo monthly.',
+            source_id: 'cursor-pricing',
+            verified_at: '2026-06-22',
+          },
+          {
+            date: '2026-04-02',
+            price: 'Historical Cursor pricing snapshot.',
+            source_id: 'cursor-pricing',
+            verified_at: '2026-04-02',
+          },
+        ],
+        best_for: ['GUI-first coding agents'],
+        not_best_for: ['pure terminal-agent workflows'],
+        quick_answer: 'Cursor is strongest for GUI-first coding agent workflows.',
+      },
+    }],
+    comparisons: [],
+    categories: [],
+    guides: [],
+    news: [],
+    workflows: [],
+    trends: [],
+    companies: [],
+    logos: {},
+  });
+
+  const tool = catalog.find((item) => item.kind === 'tool' && item.slug === 'cursor');
+  assert.ok(tool);
+  assert.equal(tool.evidence.evidenceState, 'registered');
+  assert.equal(tool.evidence.freshnessState, 'current');
+  assert.equal(tool.evidence.confidence, 'high');
+  assert.doesNotMatch(tool.evidence.diagnostics.join('\n'), /Stale source|past its review window/);
+});
+
 test('buyer intent queries resolve through the shared search scoring contract', async () => {
   const { buildSearchCatalog } = await loadSearchCatalog();
   const { scoreSearchItem, searchItemMatches, searchTerms } = await loadSearchIndex();

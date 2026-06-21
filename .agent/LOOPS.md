@@ -8,7 +8,7 @@ This file explains the repeatable AiPedia loops in plain English. The executable
 
 Use one loop at a time. Do not run every loop as a reflex unless you are doing a review pass of the loop system itself.
 
-Loops produce queues and attention signals. They do not replace current-source verification, editorial judgment, page refresh ledger updates, mobile QA, or final reporting.
+Loops produce queues and attention signals. They do not replace current-source verification, editorial judgment, page refresh ledger updates, mobile QA, layout precision review, or final reporting.
 
 ## Commands
 
@@ -75,15 +75,23 @@ Primary output: thin comparison risk, workflow-lane policy violations, compariso
 
 ### Performance And UX Loop
 
-Use after layout, component, style, runtime, search, asset, or route-output changes. This loop checks output budgets and indexability, and points to route QA when needed.
+Use after layout, component, style, runtime, search, asset, or route-output changes. This loop checks output budgets and indexability, and points to route QA plus layout precision review when needed.
 
-Primary output: dist budget and indexability issues on built output. Requires built output.
+Primary output: dist budget, indexability, overflow, and layout precision issues on built output. Requires built output.
 
 ### News And Market Change Loop
 
-Use after AI market news, news page edits, or affected-tool changes. This loop decides whether a market change needs a news item, tool refresh, category update, comparison update, or no action.
+Use after AI market news, news page edits, missed-date catch-up work, or affected-tool changes. This loop decides whether a market change needs a daily desk story, AI tools or tool-control story, tool refresh, category update, comparison update, or no action.
 
-Primary output: news rendering issues, recent news cross-reference gaps, and editorial queue signals.
+Primary output: news rendering issues, active-month date coverage gaps, recent news cross-reference gaps, homepage and `/news/` alignment, and editorial queue signals.
+
+Rules for June 2026 onward:
+
+- Check each missed date in scope, not just the newest day.
+- For each date, verify whether both broad AI news and AI tools or tool-control news deserve coverage. Publish both only when current sources support both.
+- Keep `/news/`, the homepage latest-news surface, OG or thumbnail assets, affected-tool links, source lists, RSS or feed surfaces, sitemap or LLM surfaces, and the page ledger aligned with the news batch.
+- Run mobile, tablet, and desktop route QA for `/news/` after catch-up work, including layout precision review for card rhythm, date labels, gutters, and overflow.
+- If a date has no sourceable AI tools story, record the no-action reason in the loop receipt rather than forcing a low-value article.
 
 ## Loop Review Protocol
 
@@ -109,4 +117,4 @@ A loop-system change is done only when:
 - Focused tests for `scripts/aipedia-loops.mjs` pass.
 - `.agent` status docs say which loop to run next.
 
-Latest baseline: 2026-06-21 broad review is 7 ok / 0 attention / 0 skipped after the Presentations.AI and MiniMax freshness pass. Due-now freshness is 0, and the next freshness queue starts with Claude, Gemini, and Claude Code for 2026-06-22.
+Latest baseline: 2026-06-22 broad review is 7 ok / 0 attention / 0 skipped after a fresh `npm run build:fast` and the News loop rules update. The News loop checks 410 news files with 0 issues and a minimum of 2 stories per active day. Due-now freshness is 0. Current runner recommendations are `amazon-q-vs-github-copilot` and Gemini due-soon facts, but the paused Claude and Claude Code dirty batch still takes priority before new content work.

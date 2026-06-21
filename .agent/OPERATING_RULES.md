@@ -16,6 +16,8 @@ Affiliate conversion must never override trust. Every commercial CTA needs hones
 
 Mobile-first means the mobile page must be complete, crawlable, fast, and decision-oriented. Do not remove important content from mobile. Use accordions, tabs, summaries, and progressive disclosure instead.
 
+Every rendered page must obey layout precision. Cards, boxes, rails, lists, headings, CTAs, source chips, and text blocks must sit on a clear grid with consistent gutters, padding, border radii, and visual weight. Text density must match the container: compact cards get one-line or tightly clamped copy, detail pages get readable line length, and repeated cards preserve consistent ratios between heading, body, metadata, and CTA. No text may spill out of a card, collide with neighboring content, wrap into broken letter stacks, create horizontal overflow, or leave awkward orphan labels. If a layout looks asymmetric, cramped, stretched, or mathematically sloppy on any checked viewport, fix it before shipping.
+
 ## Current facts and source discipline
 
 When any website page, template, content record, source registry entry, pricing fact, model fact, ranking, recommendation, affiliate surface, or commercial claim is updated, verify volatile facts against current sources as of the actual current date before editing or publishing.
@@ -39,6 +41,14 @@ Whenever sub-pages, content records, rankings, recommendations, affiliate surfac
 Top-layer pages include the homepage, `/tools/`, `/categories/`, `/compare/`, `/guides/`, `/news/`, `/trends/`, `/workflows/`, `/answers/`, `/explore/`, sitemap and LLM surfaces, and any parent category, guide archive, comparison archive, or hub page that summarizes the changed content.
 
 Parent hubs must not become stale, misleading, or weaker than their child pages.
+
+## News coverage discipline
+
+News catch-up work must check every missed public date in scope. For each date, publish or verify both broad AI news coverage and AI tools or tool-control coverage when current sources support both. If one lane is quiet or not sourceable, record the no-action reason in the loop receipt instead of forcing a weak story.
+
+Every news item must be source-backed, dated, current for the publication date, connected to affected tools or pages when relevant, and supported by required OG or thumbnail assets. News updates must also inspect `/news/`, the homepage latest-news surface, RSS or feed surfaces, sitemap or LLM surfaces, and any affected tool, category, company, or comparison pages.
+
+Before closing news work, run the News and Market Change loop plus mobile, tablet, and desktop route QA for `/news/` and any changed top-layer route. The visible layout must satisfy the same layout precision standard as every other page.
 
 ## Logo rule
 
@@ -90,11 +100,12 @@ Before finishing:
 
 1. Match verification scope to the changed surface. For tooling, tests, command docs, or other non-rendered repo maintenance, prefer `npm run check:quick`, focused tests, and scoped diff checks. Do not run a full build unless rendered output, runtime behavior, deployment config, or pre-ship confidence is affected.
 2. For page, content, template, runtime, SEO, schema, affiliate, or deployment changes, run lint, typecheck, tests, build, and any relevant page or audit scripts.
-3. Check mobile and tablet widths of 360, 390, 430, and 768, plus desktop widths of 1024 and 1366, when rendered pages or UI components are affected. Use `npm run qa:route -- --route <route>` for built route checks when possible.
+3. Check mobile and tablet widths of 360, 390, 430, and 768, plus desktop widths of 1024 and 1366, when rendered pages or UI components are affected. Add 319 px for homepage, navigation, card grids, or any narrow-mobile risk. Use `npm run qa:route -- --route <route>` for built route checks when possible.
 4. Check for horizontal overflow, layout shift, broken CTAs, broken internal links, and missing metadata when rendered pages or UI components are affected.
-5. Verify schema, canonical URL, title, description, indexability, and affiliate disclosure where relevant.
-6. Verify affected top-layer pages and parent hubs are current, internally linked, and aligned with the edited sub-pages.
-7. Report exactly what changed, what passed, what failed, and what remains.
+5. Check visual layout precision: symmetric grid math, consistent gutters, card containment, balanced text-to-card ratios, no awkward orphan text, no broken wrapping, and no lopsided visual weight at mobile, tablet, or desktop widths.
+6. Verify schema, canonical URL, title, description, indexability, and affiliate disclosure where relevant.
+7. Verify affected top-layer pages and parent hubs are current, internally linked, and aligned with the edited sub-pages.
+8. Report exactly what changed, what passed, what failed, and what remains.
 
 ## Continuity protocol
 
@@ -134,6 +145,8 @@ Done is the floor. Excellence is the bar. Every page, not only tool pages, must 
 
 ## First-screen mobile requirements
 
+All page layouts must use disciplined alignment and repeatable geometry. Treat the design as a grid system, not approximate stacked boxes. Container widths, column counts, gutters, card padding, chip spacing, heading rhythm, and CTA placement must be intentional and consistent across the page. Repeated card sets should use the same internal proportions unless the content model requires a documented exception.
+
 For tool pages, the first mobile screen must include:
 
 - Trust strip with verified date, editorial or no paid ranking signal, and source-backed signal.
@@ -157,6 +170,8 @@ For category pages, the first mobile screen must include:
 - Best free or budget option when applicable.
 - Best option for the main buyer segment.
 - A clear path into the ranked list.
+
+Layout precision failures include horizontal overflow, text clipping, one-letter-per-line wrapping, card labels escaping their box, uneven repeated-card padding, inconsistent radius systems, unbalanced card text density, CTA labels wrapping awkwardly, and any section whose visual weight is clearly lopsided on a checked viewport.
 
 ## Verification router
 

@@ -171,17 +171,10 @@ function relativeFile(path) {
   return relative(ROOT, path).replace(/\\/g, '/');
 }
 
-/** Same nudge as `src/styles/global.css` `.nav-logo-frame img` (cyan PNG -> orange accent). */
-const HEADER_BRAND_FILTER = Object.freeze({
-  hue: -152,
-  saturation: 1.08,
-  brightness: 1.02,
-});
-
 const BRAND_LOGO_CANDIDATES = [
-  join(ROOT, 'public/brand/aipedia-logo-crystal-cyan-128.png'),
-  join(ROOT, 'public/brand/aipedia-logo-crystal-cyan-512.png'),
-  join(ROOT, 'public/brand/aipedia-logo-crystal-cyan-64.png'),
+  join(ROOT, 'public/brand/aipedia-logo-lantern-128.png'),
+  join(ROOT, 'public/brand/aipedia-logo-lantern-512.png'),
+  join(ROOT, 'public/brand/aipedia-logo-lantern-64.png'),
   join(ROOT, 'public/brand/aipedia-logo-crystal-128.png'),
   join(ROOT, 'public/brand/aipedia-logo-128.png'),
   join(ROOT, 'public/brand/aipedia-logo.png'),
@@ -195,16 +188,13 @@ function pickBrandLogoPath() {
 }
 
 /**
- * Raster match for the header lockup (crystal-cyan asset + hue modulate).
+ * Raster match for the header lockup.
  * Returns a PNG data URL for embedding in OG SVG before resvg renders.
  */
 async function prepareBrandLogoForOg() {
   const path = pickBrandLogoPath();
   if (!path) return null;
-  let pipe = sharp(path).ensureAlpha();
-  /* Only the cyan-forward crystal matches Nav + footer; hue nudge aligns with orange UI. */
-  if (path.includes('crystal-cyan')) pipe = pipe.modulate({ ...HEADER_BRAND_FILTER });
-  const buf = await pipe
+  const buf = await sharp(path).ensureAlpha()
     .resize(128, 128, { fit: 'inside', kernel: sharp.kernel.lanczos3 })
     .png({ compressionLevel: 9 })
     .toBuffer();

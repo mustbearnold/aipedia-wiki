@@ -68,11 +68,11 @@ categories: [ai-research]
       width: 128,
       height: 128,
       channels: 4,
-      background: { r: 12, g: 210, b: 236, alpha: 1 },
+      background: { r: 249, g: 115, b: 22, alpha: 1 },
     },
   }).png().toBuffer();
   writeFileSync(join(fixture, 'public/logos/tools/alpha.png'), logo);
-  writeFileSync(join(fixture, 'public/brand/aipedia-logo-crystal-cyan-128.png'), logo);
+  writeFileSync(join(fixture, 'public/brand/aipedia-logo-lantern-128.png'), logo);
 
   for (const font of REQUIRED_FONTS) {
     const source = join(process.cwd(), 'public/fonts/metropolis', font);

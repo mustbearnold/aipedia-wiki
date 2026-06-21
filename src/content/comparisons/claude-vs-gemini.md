@@ -6,10 +6,10 @@ tools: [claude, gemini]
 category: ai-chatbots
 winner: depends
 seo_title: "Claude vs Gemini: reasoning assistant or Google AI bundle? (June 2026)"
-meta_description: "Claude vs Gemini, verified June 12, 2026: compare Claude Opus 4.8, Claude Code, Gemini 3.5 Flash, Gemini 3.1 Pro API, Google AI plans, Nano Banana, and Veo."
+meta_description: "Claude vs Gemini, verified June 21, 2026: compare Claude Opus 4.8, Claude Code, suspended Fable/Mythos access, Gemini 3.5 Flash, Gemini 3.1 Pro API, Google AI plans, Nano Banana, and Veo."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-21
+last_verified: 2026-06-21
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -42,6 +42,8 @@ Claude's pricing is also easier to understand when the buyer wants a focused ass
 
 Claude also wins for developers who want Anthropic's coding lane. Claude Code is included in Pro and higher plans, while Claude's model lineup is strongly associated with careful code reasoning, repo investigation, and terminal-agent workflows.
 
+The June 21 Claude caveat is model availability. Anthropic's pricing page still labels Fable unavailable, and Anthropic's access statement says Fable/Mythos access remains suspended. Use Opus 4.8 as Claude's stable buyable high-end route until Anthropic restores those models.
+
 ## Where Gemini Wins
 
 Gemini wins on ecosystem gravity. The official US subscription page lists Free, Google AI Plus at $7.99/month, Google AI Pro at $19.99/month, and Google AI Ultra starting at $99.99/month with a $199.99/month 20x-usage tier. Google AI Pro includes 5TB storage, Gemini in Gmail/Docs/Vids, NotebookLM, Google Flow credits, Gemini in Chrome early access, Google Home Premium Standard, YouTube Premium Lite, and higher access to Gemini 3 Pro/Deep Search/agentic capabilities.
@@ -73,6 +75,7 @@ The best trial is not a benchmark prompt. Give both products one week of real do
 
 - **Gemini plan names and limits change quickly.** Check your region, account type, and plan page before buying.
 - **Claude has no native image or video generation.** Pair it with a media tool if that is part of the workflow.
+- **Claude's Fable/Mythos route is not available.** Do not treat model-doc launch language as procurement proof until Anthropic restores access.
 - **Gemini's product surface is wider but more complex.** Plus, Pro, Ultra, Search, Workspace, Android, AI Studio, Flow, and Vertex all have different limits.
 - **Claude is less useful inside Google files.** If Docs, Drive, Gmail, and Search are the daily workspace, Gemini's placement matters.
 - **Consumer and enterprise privacy differ.** Sensitive Google work belongs in managed Workspace/Cloud contexts, not casual consumer accounts.
@@ -109,6 +112,7 @@ Gemini. Nano Banana covers image generation/editing and Veo 3.1 covers video. Cl
 - [Claude pricing](https://claude.com/pricing)
 - [Anthropic API pricing](https://platform.claude.com/docs/en/about-claude/pricing)
 - [Anthropic model docs](https://platform.claude.com/docs/en/about-claude/models/overview)
+- [Anthropic Fable/Mythos access statement](https://www.anthropic.com/news/fable-mythos-access)
 - [Gemini US subscriptions](https://gemini.google/us/subscriptions/)
 - [Google AI plans](https://one.google.com/about/google-ai-plans/)
 - [Gemini API model docs](https://ai.google.dev/gemini-api/docs/models)

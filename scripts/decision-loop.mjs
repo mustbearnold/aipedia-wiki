@@ -237,6 +237,7 @@ function clusterBrief(item, rank) {
       checks: [
         'mobile and tablet first screen includes the decision, winners, CTA path, and no hidden critical buyer content',
         'desktop 1024 and 1366 layouts have no horizontal overflow, overlap, stretched cards, broken CTAs, or missing primary content',
+        'mobile, tablet, and desktop layouts keep disciplined grid math, gutters, card containment, text-to-card ratios, and CTA placement',
         'canonical, title, description, indexability, affiliate disclosure, and source evidence remain visible where relevant',
       ],
     },
@@ -296,6 +297,7 @@ function clusterBrief(item, rank) {
       'No placeholder copy, fake source, stale pricing, unsupported claim, or untracked commercial CTA ships.',
       'Mobile first screen answers the comparison decision quickly.',
       'Desktop 1024 and 1366 layouts are checked and recorded alongside mobile/tablet QA.',
+      'Layout precision is checked for grid symmetry, card containment, balanced text density, no orphan labels, and no broken wrapping.',
       'Parent hubs and top-layer surfaces do not contradict the refreshed child pages.',
       'The page refresh ledger reflects the real editorial scope.',
       'The next cycle can resume from .agent/CURRENT_STATUS.md and .agent/PLANS.md.',

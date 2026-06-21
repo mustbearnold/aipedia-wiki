@@ -157,6 +157,36 @@ function categoryEvidence(category: CatalogEntry, picks: readonly DecisionPick[]
   }
   return fallbackEvidence(category.data);
 }
+
+function answerEvidence(answer: typeof ANSWER_ITEMS[number]): EvidenceRailModel {
+  const sourceRefs = Array.isArray(answer.source_refs) ? answer.source_refs.filter(Boolean) : [];
+  const verifiedAt = dateishField(answer.verified_at);
+  const confidence = answer.confidence === 'high' || answer.confidence === 'medium' || answer.confidence === 'low'
+    ? answer.confidence
+    : 'medium';
+
+  if (sourceRefs.length > 0 && verifiedAt) {
+    const pick: DecisionPick = {
+      tool: answer.slug,
+      label: answer.q,
+      reason: answer.a ?? answer.q,
+      source_refs: sourceRefs,
+      verified_at: verifiedAt,
+      confidence,
+    };
+    return evidenceRailFromDecisionPicks([pick], {
+      sources: decisionSources([pick]),
+      verifiedAt,
+      confidence,
+    });
+  }
+
+  return buildEvidenceRailModel({
+    confidence: 'medium',
+    diagnostics: ['Answer catalog entries use editorial answer text without structured source references.'],
+  });
+}
+
 export function buildSearchCatalog(input: CatalogInput): SearchCatalogItem[] {
   const activeTools = input.tools.filter(isCatalogActiveTool);
   const toolTitleBySlug = new Map(activeTools.map((tool) => {
@@ -282,30 +312,33 @@ export function buildSearchCatalog(input: CatalogInput): SearchCatalogItem[] {
     };
   });
 
-  const answerItems = ANSWER_ITEMS.map((answer) => ({
-    kind: 'answer' as const,
-    kindLabel: 'Answer',
-    slug: answer.slug,
-    title: answer.q,
-    href: `/answers/${answer.slug}/`,
-    detail: trimSearchDetail(answer.a, 125),
-    meta: answer.group,
-    badge: 'Fast answer',
-    priority: 73,
-    buyerFit: trimSearchDetail(answer.a, 96),
-    action: { label: 'Open fast answer', href: `/answers/${answer.slug}/` },
-    evidence: buildEvidenceRailModel({
-      confidence: 'medium',
-      diagnostics: ['Answer catalog entries use editorial answer text without structured source references.'],
-    }),
-    tags: [answer.group],
-    search: buildSearchHaystack([
-      answer.q,
-      answer.a,
-      answer.slug,
-      answer.group,
-    ]),
-  }));
+  const answerItems = ANSWER_ITEMS.map((answer) => {
+    const evidence = answerEvidence(answer);
+
+    return {
+      kind: 'answer' as const,
+      kindLabel: 'Answer',
+      slug: answer.slug,
+      title: answer.q,
+      href: `/answers/${answer.slug}/`,
+      detail: trimSearchDetail(answer.a, 125),
+      meta: answer.group,
+      badge: 'Fast answer',
+      priority: 73,
+      buyerFit: trimSearchDetail(answer.a, 96),
+      action: { label: 'Open fast answer', href: `/answers/${answer.slug}/` },
+      evidence,
+      verifiedAt: evidence.verifiedAt,
+      sourceLabel: evidence.primaryLabel,
+      tags: [answer.group],
+      search: buildSearchHaystack([
+        answer.q,
+        answer.a,
+        answer.slug,
+        answer.group,
+      ]),
+    };
+  });
 
   const workflowItems = input.workflows.map((workflow) => {
     const slug = searchEntrySlug(workflow);

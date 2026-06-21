@@ -6,17 +6,17 @@ For plain-English project state, read `.agent/CURRENT_STATUS.md` first. For comp
 
 ## Current Snapshot
 
-- Last updated: 2026-06-21.
+- Last updated: 2026-06-22.
 - Check `master` with `git status --short --branch` before starting work.
 - The June 2026 standards remediation, Guard Challenge Workflow, Project Folder Tidy, Verification Router, June 17 news catch-up, Vercel CLI install, decision loop tooling, strict comparison cleanup, `activepieces-vs-n8n`, `activepieces-vs-zapier`, multi-loop buildout, freshness metadata scheduling, Quality Pruning workflow-policy cleanup, and the Presentations.AI plus MiniMax freshness pass are complete.
 - The decision content flywheel is the default repeatable loop. Use `npm run loop:next -- --json`.
 - Comparison pages must compare the same buyer job and workflow. Same primary category is necessary but not sufficient. Cross-category and different-workflow pairs are review-only and must not become published `vs` pages.
 - The selector now uses explicit workflow lanes for broad categories, including automation, image, coding, music, chatbots, video, voice, design, writing, notes, and search.
-- The multi-loop system is green. Latest broad review is 7 ok / 0 attention / 0 skipped. Use `npm run loop:system` to list loops and `npm run loop:all -- --json` to review all loop signals. Use `npm run loop:all:record -- --json` when a broad review should create durable JSON history.
+- The multi-loop system is green. Latest recorded broad review is 7 ok / 0 attention / 0 skipped after `npm run build:fast`. Use `npm run loop:system` to list loops and `npm run loop:all -- --json` to review all loop signals. Use `npm run loop:all:record -- --json` when a broad review should create durable JSON history.
 - `.agents/` and `skills-lock.json` are gitignored local agent/plugin artifacts. `check-smart` default dirty-path discovery also ignores them, while still treating canonical `.agent/` docs as project changes.
 - The live comparison inventory is 46 policy-aligned pages. `scripts/guard-content.mjs` now protects it with a 41-page floor after accepted Guard Challenge review.
 - Current next selected cluster is `amazon-q-vs-github-copilot`.
-- Current freshness state: 0 due-now items after the Presentations.AI and MiniMax pass. The next freshness queue starts with Claude, Gemini, and Claude Code facts due on 2026-06-22.
+- Current freshness state: 0 due-now items after the Presentations.AI, MiniMax, Claude, and Claude Code passes. June 22 hotfixes filled the June 18 through June 22 `/news/` gap, replaced the visible blue/cyan brand regression with the selected lantern logo, hardened homepage decision-path evidence so featured cards must be registered, current, and high confidence, fixed the 319 px homepage portal overflow, restyled the homepage `Recently verified` panel away from the ugly orange-brown wash, and tightened homepage text density into one-line decision copy. The visual layout precision standard now requires disciplined grid math, card containment, balanced text-to-card ratios, and no broken wrapping across mobile, tablet, and desktop. The News and Market Change loop now requires missed-date checks for broad AI news and AI tools or tool-control news, plus `/news/`, homepage latest-news, assets, affected links, crawl surfaces, and mobile/tablet/desktop route QA. The next freshness queue starts with Gemini due-soon facts unless a fresh loop recommendation makes the Amazon Q vs GitHub Copilot decision cycle higher leverage.
 - Current build timing baseline from 2026-06-21: `npm run build:fast` has recently passed in roughly 2 to 3 minutes for normal content runs. The full loop verifier can take about 8 minutes when content, guards, script tests, build, and route QA are all touched.
 - Route QA uses 360, 390, 430, 768, 1024, and 1366 px for rendered route work.
 
@@ -32,10 +32,31 @@ Run the AiPedia loop system until every tracked website page, volatile fact, sou
 - 2026-06-21: Cleared June 21 due-now freshness items for Presentations.AI and MiniMax.
 - 2026-06-21: Updated affected tool records, AI Presentation, AI Coding, AI Chatbots, AI Research, source registry rows, and `PAGE_REFRESH_LEDGER.md`.
 - 2026-06-21: Verification passed with `npm run check:smart:run`, `npm run loop:all -- --json`, `npm run loop:freshness -- --json`, `npm run audit:freshness -- --json`, `npm run audit:provenance:changed -- --json`, `npm run ledger:pages:check`, `node scripts/guard-em-dashes.mjs`, and `git diff --check`.
+- 2026-06-21: Started the next freshness batch for Claude and Claude Code. Paused safely before ledger/build/route QA/commit. Pause receipt: `.agent/loop-runs/2026-06-21-claude-claude-code-freshness-paused.md`.
+- 2026-06-22: Completed the Claude and Claude Code freshness batch. Completion receipt: `.agent/loop-runs/2026-06-22-claude-claude-code-freshness-complete.md`.
+- 2026-06-22: Closed the reported homepage blue-logo regression by removing the legacy nav logo hue filter, installing the selected lantern brand assets, regenerating favicons, and deleting cyan brand PNGs.
+- 2026-06-22: Filled missing `/news/` coverage for June 18, 19, 20, 21, and 22 with source-backed desk and focused stories. Generated all required OG and thumbnail assets, regenerated `PAGE_REFRESH_LEDGER.md`, and recorded `.agent/loop-runs/2026-06-22-news-logo-hotfix.md`.
+- 2026-06-22: Verification passed for the hotfix with targeted asset/news checks, script tests, `npm run ledger:pages:check`, `npm run build:fast`, route QA for `/` and `/news/` at 360, 390, 430, 768, 1024, and 1366 px, `npm run typecheck`, and `npm run check:links`.
+- 2026-06-22: Closed the reported homepage decision-path evidence regression. The local/open-model and marketing/automation cards now use current registered sources, the general-assistant answer has registered source-backed evidence, and the shared tool evidence model no longer lets old price-history rows or score-band confidence weaken live recommendation evidence.
+- 2026-06-22: Verification passed for the decision-evidence hotfix with `node --test tests\scripts\search-catalog.test.mjs tests\scripts\generated-models.test.mjs`, `npm run typecheck`, `npm run build:fast`, homepage route QA at 319, 360, 390, 430, 768, 1024, and 1366 px, built-output text scan, and live browser DOM inspection at 319 px.
+- 2026-06-22: Closed the reported 319 px homepage portal overflow by switching very narrow homepage portal grids to two columns and adding text containment to portal labels. Verification passed with ledger regeneration, `npm run typecheck`, `npm run build:fast`, homepage route QA at 319, 360, 390, 430, 768, 1024, and 1366 px, ledger check, `git diff --check`, and live browser DOM geometry inspection.
+- 2026-06-22: Closed the reported homepage `Recently verified` panel style issue by replacing the orange-brown panel wash with neutral charcoal styling, a subtle cool highlight, and a thin amber accent. Verification passed with ledger regeneration, `npm run typecheck`, `npm run build:fast`, homepage route QA at 319, 360, 390, 430, 768, 1024, and 1366 px, ledger check, `git diff --check`, and live browser DOM style and geometry inspection.
+- 2026-06-22: Closed the reported homepage text-density issue by removing visible portal blurbs, news summaries, top-tool taglines, and long catalog blurbs, then replacing featured decision summaries with one-line homepage copy. Verification passed with ledger regeneration, `npm run typecheck`, `npm run build:fast`, homepage route QA at 319, 360, 390, 430, 768, 1024, and 1366 px, stale-copy `rg` sweep, ledger check, em-dash guard, `git diff --check`, and live app-browser DOM inspection.
+- 2026-06-22: Added the visual layout precision standard to canonical operating docs and loop tooling. Future rendered UI work must check grid math, gutters, card containment, balanced text density, CTA placement, no orphan labels, no broken wrapping, and no horizontal overflow across mobile, tablet, and desktop.
+- 2026-06-22: Added the News loop rules standard to canonical operating docs and loop tooling. Future news catch-up work must check each missed date for broad AI news and AI tools or tool-control news when sourceable, keep `/news/`, homepage latest-news, OG assets, affected-tool links, crawl surfaces, and ledger rows aligned, and verify `/news/` across mobile, tablet, and desktop.
+- 2026-06-22: Rebuilt with `npm run build:fast` after the first recorded broad loop correctly flagged stale rendered output. The latest recorded broad loop is back to 7 ok / 0 attention / 0 skipped.
+- 2026-06-22: Fixed the selected lantern logo palette after visual smoke found brownish pixels outside Signal Orange. Regenerated brand sizes and favicons. `npm run smoke:visual` passed 158/158, and `npm run check:smart:run` passed.
 
 ### Next
 
-- Continue the freshness window with Claude, Gemini, and Claude Code facts due on 2026-06-22.
+- Commit and push this verified June 22 batch before starting Gemini or another queue item.
+- Treat the rest-of-date operating plan as: push this batch, rerun and record all loops if the worktree changes, then decide between Gemini freshness and the Amazon Q vs GitHub Copilot decision cycle from the fresh loop recommendations.
+- Keep the June 22 news/logo, homepage decision-evidence, homepage mobile portal, homepage verified-panel, homepage copy-density, and layout precision standard changes with their generated assets, ledger updates, tests, and `.agent` receipts when committing.
+- Regenerate and inspect `PAGE_REFRESH_LEDGER.md`.
+- Run focused smart verification plus mobile and desktop route QA for affected rendered routes.
+- Record a final complete loop receipt only after verification passes.
+- Commit and push only after the batch is solid.
+- Then continue the freshness window with Gemini and the remaining facts due on 2026-06-22.
 - Keep deleting or avoiding invalid different-workflow comparison pages.
 - Record each meaningful cycle in `.agent/loop-runs/`.
 - Keep `.agent/CURRENT_STATUS.md`, `.agent/PLANS.md`, `.agent/WORK_LOG.md`, and `.agent/LOOPS.md` current before each push.
@@ -100,16 +121,19 @@ Keep AiPedia maintenance repeatable without turning it into bureaucracy. The loo
 - 2026-06-21: Revised runner after review so due-soon freshness volume is queue context, not an alarm.
 - 2026-06-21: Revised runner summaries to expose sample failures, issues, gaps, top review queue items, and top tools.
 - 2026-06-21: Freshness metadata scheduling fixed 17 missing high-volatility `next_review_at` values.
-- 2026-06-21: Latest broad review is 7 ok / 0 attention. The latest system receipt is `.agent/loop-runs/system/latest.json`.
+- 2026-06-22: Latest broad review is 7 ok / 0 attention / 0 skipped after a fresh `npm run build:fast`. The latest system receipt is `.agent/loop-runs/system/latest.json`.
 - 2026-06-21: Built-output freshness now fails into `attention` when stale or unknown, preventing rendered-output loops from looking green without a trustworthy build.
 - 2026-06-21: `check-smart` now filters local-only untracked `.agents/` and `skills-lock.json` noise from default discovery, without filtering explicit paths, staged files, or canonical `.agent/` docs.
 - 2026-06-21: Loop summaries now always show ok, attention, and skipped counts, including all-green runs.
 - 2026-06-21: `.gitignore` now ignores `.agents/` and `skills-lock.json` so raw git status is aligned with the smart-check filter.
 - 2026-06-21: Cleared due-now freshness items by refreshing Presentations.AI integration, API, enterprise, and pricing facts plus MiniMax M3, API, coding, multimodal, long-context, and pay-go facts. Parent category hubs, source registry, page ledger, and route QA were updated.
+- 2026-06-22: Added explicit news catch-up rules to `.agent/OPERATING_RULES.md`, `.agent/LOOPS.md`, `src/data/aipedia-loops.json`, and `tests/scripts/aipedia-loops.test.mjs`. The News loop now surfaces active-month date coverage, broad AI news, AI tools or tool-control news, homepage latest-news alignment, and `/news/` layout QA as first-class review requirements.
 
 ### Next Improvement Pass
 
-- Run the next Decision Content cycle, currently `amazon-q-vs-github-copilot`, or pick the Claude, Gemini, and Claude Code due-soon freshness queue if the active June 21 to June 22 freshness goal is the higher priority.
+- Push the verified June 22 batch before new content work.
+- Rerun `npm run loop:all:record -- --json` after push or after any further dirty worktree change.
+- Then run either the Gemini freshness queue or the `amazon-q-vs-github-copilot` Decision Content cycle, depending on the fresh recorded recommendations and current-source availability.
 - After each meaningful cycle, rerun the relevant loop plus `npm run loop:all -- --json` and record whether attention returns.
 - For broad loop-system reviews, use `npm run loop:all:record -- --json` so `.agent/loop-runs/system/latest.json` captures the run, recommendations, built-output freshness, and trend.
 

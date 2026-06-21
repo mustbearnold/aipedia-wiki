@@ -1013,10 +1013,8 @@ a, button, [role="button"], .tool-card, .category-pill, .helpful-btn, .copy-btn 
   border: 1px solid var(--border);
   transition: border-color 160ms ease, background 160ms ease, transform 240ms cubic-bezier(.2,.7,.2,1);
 }
-/* Crystal PNG is cyan-forward; nudge hue so header/footer match orange UI */
 .nav-logo-frame img {
   display: block;
-  filter: hue-rotate(-152deg) saturate(1.08) brightness(1.02);
 }
 .nav-brand:hover .nav-logo-frame {
   border-color: rgba(249, 115, 22, 0.28);
@@ -1667,4 +1665,3 @@ a.ds-metric:hover {
   .idx-eyebrow-livedot { animation: none; }
   .idx-gradient { animation: none; }
 }
-

@@ -32,7 +32,7 @@ async function writeFixtureProject() {
       width: 512,
       height: 512,
       channels: 4,
-          background: { r: 34, g: 211, b: 238, alpha: 1 },
+          background: { r: 249, g: 115, b: 22, alpha: 1 },
     },
   })
     .composite([{
@@ -50,7 +50,7 @@ async function writeFixtureProject() {
     .png({ compressionLevel: 9, adaptiveFiltering: true })
     .toBuffer();
 
-  writeFileSync(join(brandDir, 'aipedia-logo-crystal-cyan-512.png'), source);
+  writeFileSync(join(brandDir, 'aipedia-logo-lantern-512.png'), source);
   return fixture;
 }
 

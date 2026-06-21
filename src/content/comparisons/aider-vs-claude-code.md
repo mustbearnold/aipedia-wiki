@@ -2,15 +2,15 @@
 type: comparison
 slug: aider-vs-claude-code
 title: "Aider vs Claude Code"
-description: "Aider vs Claude Code, verified June 12, 2026: open-source BYOK terminal pair-programmer versus Anthropic's Claude-native coding agent for repo work, plans, costs, and safety."
+description: "Aider vs Claude Code, verified June 21, 2026: open-source BYOK terminal pair-programmer versus Anthropic's Claude-native coding agent for repo work, plans, paused Agent SDK credit changes, costs, and safety."
 tools: [aider, claude-code]
 category: ai-coding
 winner: depends
 seo_title: "Aider vs Claude Code: Open-Source CLI or Claude Coding Agent?"
-meta_description: "Aider vs Claude Code, updated June 2026: compare open-source BYOK terminal coding against Anthropic's Claude Code for repo edits, costs, model control, and team use."
+meta_description: "Aider vs Claude Code, updated June 21, 2026: compare open-source BYOK terminal coding against Anthropic's Claude Code for repo edits, costs, model control, paused Agent SDK credit changes, and team use."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-21
+last_verified: 2026-06-21
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -19,7 +19,7 @@ canonical_fact_table: true
 
 [Aider](/tools/aider/) and [Claude Code](/tools/claude-code/) both belong in the terminal-coding lane, but they answer different buyer questions. Aider is an Apache-2.0 open-source CLI that edits files in your local git repo while you bring your own model/API. Claude Code is Anthropic's Claude-native coding agent, available through Claude subscriptions, Anthropic API billing, and enterprise deployment paths.
 
-Verified June 12, 2026: Aider remains free to install, with real cost driven by the model provider you connect. Claude Code is included with Claude Pro, Max, Team, and Enterprise style access, while API-key use is billed per token. Claude Code now also has Opus 4.8 available for harder work and a research-preview dynamic-workflows lane for large parallel tasks.
+Verified June 21, 2026: Aider remains free to install, with real cost driven by the model provider you connect. Claude Code is included with Claude Pro, Max, Team, and Enterprise style access, while API-key use is billed per token. Opus 4.8 is the stable high-end Claude route for harder work while Fable/Mythos access remains suspended. Anthropic's current Agent SDK help says the June 15 credit changes are paused, so `claude -p`, GitHub Actions, Agent SDK, and third-party Agent SDK app usage still draw from subscription usage limits until Anthropic updates the guidance.
 
 ## Quick Answer
 
@@ -33,7 +33,7 @@ Choose Claude Code first if you want the strongest Claude-native repo agent with
 - **Best plan:** Aider buyers should start free with a low-cost model, then route expensive jobs deliberately. Claude Code buyers should start with Pro for regular use, Max 5x or 20x for heavier individual use, and Team or Enterprise for org controls.
 - **Model control:** Aider lets you choose the provider and model, including Anthropic, OpenAI-compatible APIs, Gemini, Mistral, Ollama, and local routes. Claude Code's `/model` command shows what your account can use, with Sonnet as the normal default and Opus for hard planning or debugging.
 - **Audit trail:** Aider keeps git diffs and commits central to the workflow. Claude Code has a stronger managed agent loop, but teams still need to review diffs, commands, and generated code.
-- **Main watch-out:** Aider users own API keys, model costs, shell safety, and review discipline. Claude Code usage limits and token cost can climb during long sessions, subagent teams, and high-effort runs.
+- **Main watch-out:** Aider users own API keys, model costs, shell safety, and review discipline. Claude Code usage limits and token cost can climb during long sessions, subagent teams, high-effort runs, and non-interactive Agent SDK work.
 
 ## Where Aider Wins
 
@@ -49,6 +49,7 @@ Choose Claude Code first if you want the strongest Claude-native repo agent with
 - **Better model guidance.** Anthropic's usage guide recommends Sonnet for most coding, Opus for hard cross-cutting refactors/debugging/architecture, and Haiku for quick low-cost work where available.
 - **Subscription and enterprise paths.** Claude Pro includes Claude Code; Max 5x is $100/month and Max 20x is $200/month for heavier individual usage; Team and Enterprise add admin and organizational controls.
 - **Cost tooling.** Claude Code exposes `/usage`, `/cost`, spend-limit guidance, and enterprise cost-management docs. API users still need to monitor token spend closely.
+- **Current billing caveat.** The separate Agent SDK credit changes are paused under Anthropic's current help guidance, so non-interactive usage needs active limit and billing review.
 - **Large-task roadmap.** Anthropic's Opus 4.8 launch and dynamic-workflows preview make Claude Code more credible for long-running discovery, review, migration, and modernization work.
 
 ## Plan Guidance
@@ -67,7 +68,7 @@ Claude Code fits investigation loops: "find why this regression happens," "plan 
 
 Do not assume Aider is always cheaper. It is free as software, but a long run on an expensive model can cost more than a subscription. Put provider budgets in place and review API usage.
 
-Do not assume Claude Code is flat-rate unlimited. Subscription users have usage limits; API users pay per token; Opus and long sessions consume more capacity; subagents and dynamic workflows can multiply usage. Use `/clear`, `/compact`, `/usage`, and small pilot groups before broad team rollout.
+Do not assume Claude Code is flat-rate unlimited. Subscription users have usage limits; API users pay per token; Opus and long sessions consume more capacity; subagents and dynamic workflows can multiply usage; Agent SDK credit changes are paused under current help guidance. Use `/clear`, `/compact`, `/usage`, and small pilot groups before broad team rollout.
 
 ## Who Should Choose Aider
 
@@ -107,7 +108,9 @@ Pilot Claude Code if the team wants managed Anthropic access and agent workflows
 - [Claude Code docs](https://code.claude.com/docs/en/overview): supported surfaces and account access paths
 - [Claude Code cost management](https://code.claude.com/docs/en/costs): usage tracking, API/subscription billing behavior, cost controls, and agent-team caveats
 - [Claude Code usage limits help](https://support.claude.com/en/articles/14552983-models-usage-and-limits-in-claude-code): model choice, `/model`, context, and usage-limit guidance
+- [Claude Agent SDK credit help](https://support.claude.com/en/articles/15036540-use-the-claude-agent-sdk-with-your-claude-plan): paused Agent SDK, `claude -p`, GitHub Actions, and third-party app credit guidance
 - [Claude pricing](https://claude.com/pricing): Pro, Max, Team, and Enterprise plan packaging
+- [Anthropic Fable/Mythos access statement](https://www.anthropic.com/news/fable-mythos-access): Fable/Mythos suspension and unaffected-model note
 - [Claude Max plan help](https://support.claude.com/en/articles/11049741-what-is-the-max-plan): Max 5x and 20x pricing and limits
 - [Claude Opus 4.8 release](https://www.anthropic.com/news/claude-opus-4-8): Opus 4.8 coding/agent update and dynamic-workflows launch context
 - [Claude dynamic workflows](https://claude.com/blog/introducing-dynamic-workflows-in-claude-code): research-preview long-running and parallel workflow details

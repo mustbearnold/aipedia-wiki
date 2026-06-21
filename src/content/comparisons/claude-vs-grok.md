@@ -6,10 +6,10 @@ tools: [claude, grok]
 category: ai-chatbots
 winner: depends
 seo_title: "Claude vs Grok: careful assistant or X-native xAI stack? (June 2026)"
-meta_description: "Claude vs Grok, verified June 12, 2026: compare Claude Opus 4.8 with Grok 4.3, SuperGrok, xAI API pricing, X search, Imagine, Voice API, and enterprise fit."
+meta_description: "Claude vs Grok, verified June 21, 2026: compare Claude Opus 4.8 and suspended Fable/Mythos access with Grok 4.3, SuperGrok, xAI API pricing, X search, Imagine, Voice API, and enterprise fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-21
+last_verified: 2026-06-21
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -18,7 +18,7 @@ canonical_fact_table: true
 
 [Claude](/tools/claude/) is the better careful assistant for writing, analysis, coding, long documents, and professional trust. [Grok](/tools/grok/) is the better specialist when the buyer wants xAI's stack: Grok app, X-native search, real-time web/X context, Grok Build CLI, Imagine image/video, Voice API, and low-cost Grok 4.3 API pricing.
 
-**Verified June 12, 2026:** Anthropic's current model docs list Claude Opus 4.8 as its strongest complex-reasoning and agentic-coding model. xAI's current pricing page lists Grok Free at $0/month and SuperGrok at $30/month, while its model docs list Grok 4.3 with 1M context at $1.25 input and $2.50 output per million tokens. The same model docs warn that real-time data requires enabling Web Search or X Search tools.
+**Verified June 21, 2026:** Anthropic's current model docs list Claude Opus 4.8 as its stable buyable high-end complex-reasoning and agentic-coding model while Fable/Mythos access remains suspended. xAI's current pricing page lists Grok Free at $0/month and SuperGrok at $30/month, while its model docs list Grok 4.3 with 1M context at $1.25 input and $2.50 output per million tokens. The same model docs warn that real-time data requires enabling Web Search or X Search tools.
 
 ## Quick Answer
 
@@ -40,6 +40,7 @@ Claude is the safer everyday professional assistant. Grok is the sharper xAI/X s
 - **Trust-sensitive writing.** Claude is the better default for output that leadership, clients, regulators, or customers will read.
 - **Document and code reasoning.** Claude is stronger for long source packs, architecture review, debugging, and structured analysis.
 - **Claude Code.** Developers who want a terminal agent for repo work should start with Claude before treating Grok as a coding substitute.
+- **Stable Claude route.** Opus 4.8 is the Claude route to compare while Fable/Mythos access remains suspended.
 - **Enterprise comfort.** Anthropic's pricing and enterprise surfaces are easier to evaluate for SSO, SCIM, audit, retention, HIPAA-ready posture, and team rollout.
 - **Measured tone.** Claude's caution is a feature in high-stakes workflows where a glib answer creates review burden.
 
@@ -69,6 +70,7 @@ The key budgeting issue is not only token price. Grok workflows that depend on w
 - **Grok is not automatically live.** xAI's model docs say real-time data requires server-side Web Search or X Search tools.
 - **Social signal is noisy.** X context can reveal momentum, but it can also amplify rumors, campaigns, jokes, and incomplete claims.
 - **Claude has no native image/video generation.** Pair Claude with a media tool when visual generation is part of the deliverable.
+- **Claude Fable/Mythos access is suspended.** Use Opus 4.8 as the current Claude comparison route until Anthropic restores access.
 - **Grok API costs are not only tokens.** Tools, media, voice, files, and code execution can change real cost.
 - **Tone risk differs.** Grok may feel more current or culturally aware; Claude is usually safer for polished professional output.
 
@@ -111,6 +113,7 @@ Grok. Claude can analyze images but does not offer native image or video generat
 - [Claude pricing](https://claude.com/pricing)
 - [Anthropic model docs](https://platform.claude.com/docs/en/about-claude/models/overview)
 - [Anthropic API pricing](https://platform.claude.com/docs/en/about-claude/pricing)
+- [Anthropic Fable/Mythos access statement](https://www.anthropic.com/news/fable-mythos-access)
 - [xAI pricing](https://x.ai/pricing)
 - [xAI model docs](https://docs.x.ai/developers/models)
 - [xAI Grok product page](https://x.ai/grok)

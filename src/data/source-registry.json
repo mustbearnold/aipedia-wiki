@@ -819,7 +819,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-21"
     },
     {
       "id": "anthropic-opus-48",
@@ -828,7 +828,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-20"
+      "last_checked": "2026-06-21"
     },
     {
       "id": "anthropic-opus-47",
@@ -846,7 +846,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-20"
+      "last_checked": "2026-06-21"
     },
     {
       "id": "anthropic-fable-mythos-access",
@@ -855,7 +855,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-20"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "anthropic-claude-for-small-business",
@@ -909,7 +909,25 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-20"
+      "last_checked": "2026-06-21"
+    },
+    {
+      "id": "anthropic-api-data-retention",
+      "label": "Anthropic API and data retention docs",
+      "url": "https://platform.claude.com/docs/en/manage-claude/api-and-data-retention",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-21"
+    },
+    {
+      "id": "anthropic-web-search-tool",
+      "label": "Anthropic web search tool docs",
+      "url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/web-search-tool",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-21"
     },
     {
       "id": "anthropic-spacex-limits-2026",
@@ -2240,7 +2258,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-21"
     },
     {
       "id": "claude-code-official",
@@ -2249,7 +2267,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-20"
+      "last_checked": "2026-06-21"
     },
     {
       "id": "claude-code-costs",
@@ -2258,7 +2276,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-20"
+      "last_checked": "2026-06-21"
     },
     {
       "id": "claude-code-usage-limits",
@@ -2267,7 +2285,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-20"
+      "last_checked": "2026-06-21"
     },
     {
       "id": "claude-max-plan",
@@ -2339,7 +2357,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-20"
+      "last_checked": "2026-06-21"
     },
     {
       "id": "anthropic-higher-limits-spacex",
@@ -5050,7 +5068,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-16"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "google-gemini-35-announcement",
@@ -5086,7 +5104,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-16"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "google-one-ai-plans",
@@ -5095,7 +5113,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-16"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "google-gemini-api-pricing",
@@ -6979,6 +6997,15 @@
       "volatility": "medium"
     },
     {
+      "id": "lm-studio-openai-compat-docs",
+      "label": "LM Studio OpenAI-compatible endpoints docs",
+      "url": "https://lmstudio.ai/docs/developer/openai-compat",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-22"
+    },
+    {
       "id": "lm-studio-api-docs",
       "label": "LM Studio developer docs",
       "url": "https://lmstudio.ai/docs/api",
@@ -7952,7 +7979,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-21"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "n8n-docs",
@@ -7988,7 +8015,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-21"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "n8n-release-notes",
@@ -8330,7 +8357,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-16"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "openai-chatgpt-gpt-55-help",
@@ -8357,7 +8384,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-16"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "openai-model-release-notes",
@@ -8543,7 +8570,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-20"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "perplexity-max-help",
@@ -11576,7 +11603,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-21"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "zapier-apps",
@@ -11594,7 +11621,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-21"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "zed-pricing",
@@ -11800,7 +11827,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-20"
+      "last_checked": "2026-06-21"
     },
     {
       "id": "cohere-transcribe",

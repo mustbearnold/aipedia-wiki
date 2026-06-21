@@ -211,12 +211,11 @@ function factModels(factsBlock: unknown, diagnostics: ModelDiagnostic[], sources
   return facts.slice(0, 8);
 }
 
-function pricingModels(priceHistory: unknown, diagnostics: ModelDiagnostic[], sources: Map<string, ResolvedPageSource>): PriceHistoryModel[] {
+function pricingModels(priceHistory: unknown, diagnostics: ModelDiagnostic[]): PriceHistoryModel[] {
   if (!Array.isArray(priceHistory)) return [];
   return priceHistory.map((item, index) => {
     const raw = isRecord(item) ? item : {};
     const source = resolvePageSource(raw, 'pricing');
-    mergeSource(sources, source);
     if (source?.state === 'unknown_id') {
       diagnostics.push({ severity: 'error', code: 'unknown_source_id', path: `price_history.${index}.source_id`, message: `Unknown source ID on price_history row ${index}` });
     } else if (source?.state === 'inline_only') {
@@ -232,6 +231,19 @@ function pricingModels(priceHistory: unknown, diagnostics: ModelDiagnostic[], so
   }).filter((item) => item.date && item.price);
 }
 
+function latestPricingSources(pricing: readonly PriceHistoryModel[]): ResolvedPageSource[] {
+  let latestTime = Number.NEGATIVE_INFINITY;
+  for (const item of pricing) {
+    const time = new Date(item.date).getTime();
+    if (!Number.isNaN(time) && time > latestTime) latestTime = time;
+  }
+  if (!Number.isFinite(latestTime)) return [];
+  return pricing
+    .filter((item) => new Date(item.date).getTime() === latestTime)
+    .map((item) => item.source)
+    .filter((source): source is ResolvedPageSource => Boolean(source?.url));
+}
+
 export function buildToolPageModel(frontmatter: UnknownRecord): ToolPageModel {
   const scoresRaw = isRecord(frontmatter.scores) ? frontmatter.scores : {};
   const scores = {
@@ -244,7 +256,8 @@ export function buildToolPageModel(frontmatter: UnknownRecord): ToolPageModel {
   const diagnostics: ModelDiagnostic[] = [];
   const sources = new Map<string, ResolvedPageSource>();
   const facts = factModels(frontmatter.facts, diagnostics, sources);
-  const pricing = pricingModels(frontmatter.price_history, diagnostics, sources);
+  const pricing = pricingModels(frontmatter.price_history, diagnostics);
+  for (const source of latestPricingSources(pricing)) mergeSource(sources, source);
   const buyIf = stringArray(frontmatter.best_for);
   const skipIf = stringArray(frontmatter.not_best_for);
   const watchOut = facts.find((fact) => fact.key === 'watch_out_for')?.value;
@@ -305,7 +318,6 @@ export function buildToolPageModel(frontmatter: UnknownRecord): ToolPageModel {
       sources: sourceList,
       facts,
       verifiedAt: dateishField(frontmatter.last_verified) ?? dateishField(frontmatter.last_updated),
-      confidence: confidenceFromScore(overall),
     }),
     cta: {
       label: stringField(frontmatter.primary_cta_label) ?? 'Visit tool',

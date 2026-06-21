@@ -3,12 +3,12 @@ type: use-case
 slug: ai-solo-founder-stack
 title: "Best AI Stack for Solo Founders (2026)"
 seo_title: "Best AI Stack for Solo Founders in 2026: What to Buy First"
-meta_description: "Updated June 12, 2026: a source-backed AI stack for solo founders choosing coding, research, automation, support, notes, and deck tools while modeling Copilot AI Credits, Claude Agent SDK credits, app-builder credits, and support outcomes."
+meta_description: "Updated June 21, 2026: a source-backed AI stack for solo founders choosing coding, research, automation, support, notes, and deck tools while modeling Copilot AI Credits, paused Claude Agent SDK credit changes, app-builder credits, and support outcomes."
 author: "aipedia.wiki Editorial"
 description: The AI tools solo founders should buy first, defer, or avoid when building products, writing copy, automating operations, researching competitors, and supporting users.
 tools_mentioned: [cursor, claude, chatgpt, lovable, bolt, n8n, perplexity, intercom, notion-ai, gamma, github-copilot, zapier]
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-21
+last_verified: 2026-06-21
 update_frequency: monthly
 guide_picks:
   best_overall:
@@ -43,7 +43,7 @@ guide_picks:
 
 The best solo-founder AI stack is not ten subscriptions. It is a sequence: buy the tool that removes today's biggest bottleneck, prove the workflow, then add the next layer only when usage is visible.
 
-**AiPedia verdict, verified June 12, 2026:** technical founders should usually start with [Cursor](/tools/cursor/) plus one general reasoning assistant. Non-technical founders should test [Lovable](/tools/lovable/) or [Bolt](/tools/bolt/) before hiring a prototype team. Add [n8n](/tools/n8n/) after workflows repeat, [Perplexity](/tools/perplexity/) when research needs citations, and [Intercom](/tools/intercom/) only when support volume justifies seat plus usage/outcome pricing.
+**AiPedia verdict, verified June 21, 2026 for Claude billing guidance:** technical founders should usually start with [Cursor](/tools/cursor/) plus one general reasoning assistant. Non-technical founders should test [Lovable](/tools/lovable/) or [Bolt](/tools/bolt/) before hiring a prototype team. Add [n8n](/tools/n8n/) after workflows repeat, [Perplexity](/tools/perplexity/) when research needs citations, and [Intercom](/tools/intercom/) only when support volume justifies seat plus usage/outcome pricing.
 
 **Who this is for:** solo founders, indie hackers, and 1-3 person teams building SaaS, apps, services, or content-led businesses. The goal is to choose the first two or three tools that make the founder faster without creating a subscription mess.
 
@@ -67,7 +67,7 @@ The best solo-founder AI stack is not ten subscriptions. It is a sequence: buy t
 The founder-stack trap in June 2026 is treating AI subscriptions as fixed monthly costs. That is no longer safe for coding agents, app builders, support agents, research tools, or deck generators.
 
 - **GitHub Copilot** moved all plans to usage-based billing with GitHub AI Credits on June 1, 2026, and Copilot code review can also consume GitHub Actions minutes. It is still a strong GitHub-native option, but agent-heavy use needs a budget.
-- **Claude Agent SDK and `claude -p`** move to a separate monthly Agent SDK credit on June 15, 2026 for eligible Claude plan users. Interactive Claude Code remains separate, but automation and CI-style SDK work should be modeled before you depend on it.
+- **Claude Agent SDK and `claude -p`** should not be budgeted around a separate monthly credit pool right now. Anthropic's current help page says the June 15 Agent SDK credit changes are paused, so Agent SDK, `claude -p`, GitHub Actions, and third-party Agent SDK app usage still draw from subscription usage limits until Anthropic updates the guidance.
 - **Lovable, Bolt, Gamma, Notion Custom Agents, Intercom Fin, and n8n** all expose some kind of credit, token, execution, outcome, or usage meter. Before upgrading, write down the unit that makes cost rise.
 - **ChatGPT Plus** remains the lowest-friction generalist at $20/month, but API usage is separate and plan limits change by model/tool. Do not use a chat subscription as a proxy for production API cost.
 
@@ -83,7 +83,7 @@ Cursor is the right first purchase when the founder's time is going into impleme
 
 Use Claude when the work needs careful writing, product specs, architecture tradeoffs, launch emails, and support docs. Use ChatGPT when the same subscription needs to cover broad daily assistant work, multimodal tasks, voice, images, and general coding help. OpenAI's current ChatGPT Plus help page lists Plus at $20/month and says API usage is billed separately.
 
-**Avoid:** paying for Cursor, GitHub Copilot, Claude Code, ChatGPT Pro, and multiple app builders at once before you know which build surface you actually use. The new Copilot AI Credits and Claude Agent SDK credit split make duplicate coding-agent subscriptions easier to overspend.
+**Avoid:** paying for Cursor, GitHub Copilot, Claude Code, ChatGPT Pro, and multiple app builders at once before you know which build surface you actually use. Copilot AI Credits, paused Claude Agent SDK credit changes, and separate API paths make duplicate coding-agent subscriptions easier to overspend.
 
 ### If you do not code
 
@@ -213,7 +213,7 @@ Often, but that is the wrong first question. The right question is whether each 
 - [Claude Code authentication](https://code.claude.com/docs/en/authentication), verified 2026-06-12
 - [Use Claude Code with Pro or Max](https://support.claude.com/en/articles/11145838-use-claude-code-with-your-pro-or-max-plan), verified 2026-06-12
 - [Claude Agent SDK overview](https://code.claude.com/docs/en/agent-sdk/overview), verified 2026-06-12
-- [Use the Claude Agent SDK with your Claude plan](https://support.claude.com/en/articles/15036540-use-the-claude-agent-sdk-with-your-claude-plan), verified 2026-06-12
+- [Use the Claude Agent SDK with your Claude plan](https://support.claude.com/en/articles/15036540-use-the-claude-agent-sdk-with-your-claude-plan), verified 2026-06-21
 - [ChatGPT Plus](https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus), verified 2026-06-12
 - [Lovable pricing](https://lovable.dev/pricing), verified 2026-06-12
 - [Lovable plans and credits](https://docs.lovable.dev/introduction/plans-and-credits), verified 2026-06-12

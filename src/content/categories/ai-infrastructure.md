@@ -5,10 +5,10 @@ title: AI Infrastructure & Model APIs
 description: Developer platforms for LLM routing, pay-as-you-go model APIs, hosted inference, serverless GPUs, vector databases, speech APIs, and production retrieval systems.
 tool_count: 12
 seo_title: "Best AI Infrastructure & Model API Tools (June 2026)"
-meta_description: "Updated June 18, 2026: compare OpenRouter, OpenAI API, Claude API after Fable/Mythos suspension, Gemini API, Google Cloud data agents and managed MCP servers, Mistral, Groq, Together AI, Replicate, fal, Fireworks AI, Modal, Browserbase, Deepgram, Pinecone, Weaviate/Engram, Qdrant, Llama, LM Studio, and model-availability governance tradeoffs."
+meta_description: "Updated June 22, 2026: compare OpenRouter, OpenAI API, Claude API after Fable/Mythos suspension, Gemini API, Google Cloud data agents and managed MCP servers, Mistral, Groq, Together AI, Replicate, fal, Fireworks AI, Modal, Browserbase, Deepgram, Pinecone, Weaviate/Engram, Qdrant, Llama, LM Studio, and model-availability governance tradeoffs."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-18
-last_verified: 2026-06-18
+last_updated: 2026-06-22
+last_verified: 2026-06-22
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -20,6 +20,15 @@ top_picks:
   pro_team:
     tool: replicate
     label: "Best hosted model catalog"
+decision_picks:
+  - tool: lm-studio
+    label: Best local or open-model starter
+    reason: LM Studio is the cleanest first stop when the buyer wants local model testing, a desktop workflow, and an OpenAI-compatible local API before choosing hosted inference.
+    plan: Free local app
+    source_refs:
+      - lm-studio-openai-compat-docs
+    verified_at: 2026-06-22
+    confidence: high
 ---
 
 ## Quick Decision

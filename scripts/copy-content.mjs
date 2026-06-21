@@ -176,7 +176,7 @@ if (argumentIssues.length > 0) {
 }
 
 // 1. Regenerate favicon assets so browser icons stay aligned with the current
-//    Signal Cyan brand mark.
+//    Signal Orange brand mark.
 const taskResults = [];
 taskResults.push(runNode(generatorTasks[0].script, generatorTasks[0].label));
 

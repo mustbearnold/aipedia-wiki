@@ -1,7 +1,7 @@
 {
   "version": 1,
   "kind": "tool-og",
-  "source_hash": "b2ca003e5835b3197fd2f93af9bc620b45531afe7bc0032f0cdaa6fb4647dc2f",
+  "source_hash": "23bf850062c7047bcdd70093c5c5f0f4d03776aab50abba0c467812647f90d09",
   "generated_at": "deterministic",
   "meta": {
     "tools": 220,
@@ -95,8 +95,8 @@
       "slug": "amazon-q",
       "theme": null,
       "target": null,
-      "bytes": 32782,
-      "sha256": "70e6bfd9e62e1924736bb8d22094e7f36b7f60b5a3ffaf3e66c6a705440c5049"
+      "bytes": 27716,
+      "sha256": "255b8373db57d02750af8bedb829cfa4c509a8eca8f2ed022c88b51d8e96e77c"
     },
     {
       "file": "public/og/tools/amplemarket.png",
@@ -1076,8 +1076,8 @@
       "slug": "lovo",
       "theme": null,
       "target": null,
-      "bytes": 26586,
-      "sha256": "839e71fa77996ded74f674a8a51a0ba2fab9d0b72a8c497c103002cea5801af0"
+      "bytes": 24219,
+      "sha256": "09c1db20ba59b41638ca56b6c1696af3d43a24573dfb5b52e5efdc1f4da909dc"
     },
     {
       "file": "public/og/tools/luma.png",

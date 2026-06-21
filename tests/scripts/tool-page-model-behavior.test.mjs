@@ -107,8 +107,8 @@ test('ToolPageModel reports provenance states and dedupes source uses', async ()
   });
 
   const registered = model.sources.find((source) => source.source_id === '7ai-platform');
-  assert.ok(registered, 'registered fact/pricing source should be retained once');
-  assert.deepEqual(registered.used_by.sort(), ['fact', 'pricing']);
+  assert.ok(registered, 'registered fact source should be retained once while older pricing rows stay historical');
+  assert.deepEqual(registered.used_by.sort(), ['fact']);
   assert.equal(model.sources.filter((source) => source.source_id === '7ai-platform').length, 1);
 
   assert.ok(

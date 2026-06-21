@@ -82,6 +82,7 @@ If `.worktrees/` contains empty or unregistered directories after generated cove
 - Run `npm run audit:generated-models` with `npm run test:scripts` when generated model/search seams or their audit script change.
 - Run `npm run build:fast` when layouts, runtime routes, metadata, schemas, or rendered output changed.
 - Run `npm run build` only for full production confidence or deploy prep.
+- For rendered UI work, route QA is only the automated floor. Also inspect layout precision on affected routes: grid symmetry, gutters, card containment, text-to-card ratios, orphan text, CTA wrapping, and visual balance at mobile, tablet, and desktop widths. Add 319 px when narrow mobile is plausible.
 
 ## Guard Challenge Workflow
 

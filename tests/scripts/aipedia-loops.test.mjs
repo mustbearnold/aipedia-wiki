@@ -96,6 +96,25 @@ test('aipedia loops emits the committed registry as JSON', () => {
   assert.ok(report.loops.some((loop) => loop.id === 'performance-ux'));
 });
 
+test('news loop preserves daily AI news and tools-news catch-up rules', () => {
+  const result = runLoops('--json');
+  assert.equal(result.status, 0, result.stderr);
+
+  const report = JSON.parse(result.stdout);
+  const newsLoop = report.loops.find((loop) => loop.id === 'news-market');
+  assert.ok(newsLoop);
+  const loopText = [
+    newsLoop.purpose,
+    ...newsLoop.when_to_run,
+    ...newsLoop.review_questions,
+  ].join('\n');
+
+  assert.match(loopText, /AI news and AI tools news catch-up/);
+  assert.match(loopText, /broad AI news and AI tools or tool-control news/);
+  assert.match(loopText, /homepage latest-news/);
+  assert.match(loopText, /mobile, tablet, desktop, and layout precision QA/);
+});
+
 test('aipedia loops runs fixture loops and reports attention without failing', () => {
   const dir = mkdtempSync(join(tmpdir(), 'aipedia-loops-'));
   const registry = writeRegistry(dir);

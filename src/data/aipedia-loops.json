@@ -267,7 +267,7 @@
     {
       "id": "performance-ux",
       "title": "Performance And UX Loop",
-      "purpose": "Check build output budgets, route indexability, commercial rendered output, and mobile/desktop layout risk.",
+      "purpose": "Check build output budgets, route indexability, commercial rendered output, overflow, and mobile/desktop layout precision risk.",
       "cadence": "Run after layout, component, style, runtime, search, or rendered-output changes.",
       "when_to_run": [
         "Rendered UI, templates, CSS, search, Pagefind, or public assets changed.",
@@ -277,13 +277,15 @@
         "built static output",
         "dist budget",
         "indexability",
-        "route QA widths"
+        "route QA widths",
+        "layout precision review"
       ],
       "steps": [
         "Build or reuse fresh static output.",
         "Audit dist budgets and indexability.",
         "Run exact route QA for affected routes.",
-        "Fix overflow, missing metadata, or payload growth.",
+        "Inspect layout precision across mobile, tablet, and desktop widths.",
+        "Fix overflow, broken wrapping, lopsided visual weight, missing metadata, or payload growth.",
         "Record timing and residual risk."
       ],
       "run_commands": [
@@ -304,6 +306,7 @@
       ],
       "review_questions": [
         "Did the affected routes pass mobile, tablet, and desktop QA?",
+        "Do card grids, gutters, text density, CTA placement, and repeated-card proportions look mathematically disciplined?",
         "Did build output budgets or search payloads grow?",
         "Is a full build justified or is exact route QA enough?"
       ],
@@ -315,23 +318,29 @@
     {
       "id": "news-market",
       "title": "News And Market Change Loop",
-      "purpose": "Check news rendering, recent news cross-links, and market-change queues so product shifts reach affected tool and category pages.",
+      "purpose": "Check news rendering, active-month date coverage, AI news and AI tools news catch-up, recent news cross-links, and market-change queues so product shifts reach affected tool and category pages.",
       "cadence": "Run during news catch-up work and after important AI product announcements.",
       "when_to_run": [
         "New AI product news may affect tool, company, category, or comparison pages.",
-        "News pages, OG cards, or affected-tool references changed."
+        "News pages, OG cards, affected-tool references, homepage latest-news surfaces, or date coverage changed.",
+        "A calendar date is missing broad AI news or AI tools and tool-control coverage."
       ],
       "inputs": [
         "src/content/news/",
         "public/og/news/",
+        "src/pages/news/index.astro",
+        "src/pages/index.astro latest-news surfaces",
         "affected tool links",
-        "editorial queue"
+        "editorial queue",
+        "active date coverage"
       ],
       "steps": [
-        "Audit news rendering and OG assets.",
+        "Audit news rendering, active-month date coverage, and OG assets.",
+        "Confirm each catch-up date has broad AI news and AI tools or tool-control coverage when current sources support both.",
         "Audit affected-tool cross references.",
         "Decide whether the market change needs a news item, tool refresh, category update, comparison update, or no action.",
-        "Update source-backed pages and crawl surfaces.",
+        "Update /news/, homepage latest-news, source-backed pages, crawl surfaces, source lists, affected-tool links, and PAGE_REFRESH_LEDGER.md.",
+        "Run mobile, tablet, and desktop route QA plus layout precision checks for /news/ and affected top-layer pages.",
         "Record the decision."
       ],
       "run_commands": [
@@ -355,9 +364,11 @@
         }
       ],
       "review_questions": [
+        "Does every active catch-up date expose broad AI news and AI tools or tool-control news when the market produced both?",
         "Does the market change affect a buying decision?",
         "Which existing pages need updates beyond the news article?",
-        "Are OG assets, affected-tool links, and source lists complete?"
+        "Are /news/, homepage latest-news, OG assets, affected-tool links, and source lists complete?",
+        "Did /news/ pass mobile, tablet, desktop, and layout precision QA?"
       ],
       "record_targets": [
         "src/content/news/",

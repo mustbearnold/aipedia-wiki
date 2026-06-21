@@ -11,7 +11,7 @@ The June 16 source check keeps ChatGPT as the default for most people, but the r
 
 ChatGPT wins when one subscription needs to cover images, browsing, voice, files, memory, Codex, agents, research, and everyday problem solving. If the buyer wants the broadest assistant with the least switching, ChatGPT is the easier first payment.
 
-Claude wins when the output needs more restraint and structure. It is especially strong for long documents, nuanced writing, careful analysis, and code work through [Claude Code](/tools/claude-code/). Anthropic's current docs still make model availability and plan limits something to verify before standardizing: Mythos is limited availability, Opus 4.8 remains listed separately, and Claude Code usage has had both limit increases and quality postmortem updates in 2026.
+Claude wins when the output needs more restraint and structure. It is especially strong for long documents, nuanced writing, careful analysis, and code work through [Claude Code](/tools/claude-code/). Anthropic's current docs still make model availability and plan limits something to verify before standardizing: Fable/Mythos access remains suspended despite model-doc references, Opus 4.8 is the stable buyable high-end route, and the June 15 Agent SDK credit changes remain paused under Anthropic's current help guidance.
 
 The decision is mostly workflow fit. Choose ChatGPT for multimodal work, images, voice, Codex, and broad assistant coverage. Choose Claude for writing quality, long-context analysis, and codebase reasoning. Many power users keep both because they solve different jobs. If you only want one paid subscription, test your hardest real task in both before annualizing. For the full buyer breakdown, read [ChatGPT vs Claude](/compare/chatgpt-vs-claude/).
 `;
@@ -23,12 +23,12 @@ const answerLD = JSON.stringify({
   author: { '@type': 'Organization', name: 'aipedia.wiki Editorial', url: 'https://aipedia.wiki/about/editorial/' },
   publisher: { '@id': 'https://aipedia.wiki/#organization' },
   datePublished: '2026-04-16',
-  dateModified: '2026-06-16',
+  dateModified: '2026-06-21',
   mainEntityOfPage: 'https://aipedia.wiki/answers/chatgpt-vs-claude-which-is-better/',
 });
 ---
 
-<BaseLayout title="ChatGPT vs Claude: Which Is Actually Better (2026)?" description="Updated June 16, 2026: ChatGPT wins on breadth, multimodal tools, Codex, and agents; Claude wins careful writing, long-context work, and codebase reasoning.">
+<BaseLayout title="ChatGPT vs Claude: Which Is Actually Better (2026)?" description="Updated June 21, 2026: ChatGPT wins on breadth, multimodal tools, Codex, and agents; Claude wins careful writing, long-context work, and codebase reasoning.">
   <script type="application/ld+json" set:html={answerLD} />
   
   <div class="gt-canvas">
@@ -39,7 +39,7 @@ const answerLD = JSON.stringify({
         { label: 'Answers', href: '/answers/' },
         { label: "ChatGPT vs Claude: which is better?" },
       ]}
-      verifiedLabel="Verified June 16, 2026"
+      verifiedLabel="Verified June 21, 2026"
     />
 
     <article class="gt-body" id="gt-body">
@@ -61,7 +61,7 @@ const answerLD = JSON.stringify({
     <AnswerContent content={answerContent} />
 
     <div class="mt-[var(--site-section-gap)] pt-[var(--site-content-gap)] border-t border-[var(--border)] text-sm text-[var(--text-muted)]">
-      <p>This answer was checked against current vendor sources on June 16, 2026, including <a href="https://openai.com/index/introducing-gpt-5-5/" class="text-[var(--accent-primary)] no-underline hover:underline">OpenAI GPT-5.5</a>, <a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" class="text-[var(--accent-primary)] no-underline hover:underline">ChatGPT release notes</a>, <a href="https://help.openai.com/en/articles/9624314-model-release-notes" class="text-[var(--accent-primary)] no-underline hover:underline">OpenAI model release notes</a>, <a href="https://openai.com/index/gpt-5-5-instant/" class="text-[var(--accent-primary)] no-underline hover:underline">GPT-5.5 Instant</a>, <a href="https://platform.claude.com/docs/en/about-claude/models/overview" class="text-[var(--accent-primary)] no-underline hover:underline">Anthropic model docs</a>, <a href="https://www.anthropic.com/news/higher-limits-spacex" class="text-[var(--accent-primary)] no-underline hover:underline">Claude usage-limit update</a>, and <a href="https://www.anthropic.com/engineering/april-23-postmortem" class="text-[var(--accent-primary)] no-underline hover:underline">Claude Code quality postmortem</a>. See our <a href="/about/scoring/" class="text-[var(--accent-primary)] no-underline hover:underline">scoring methodology</a>.</p>
+      <p>This answer was checked against current vendor sources on June 21, 2026, including <a href="https://openai.com/index/introducing-gpt-5-5/" class="text-[var(--accent-primary)] no-underline hover:underline">OpenAI GPT-5.5</a>, <a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" class="text-[var(--accent-primary)] no-underline hover:underline">ChatGPT release notes</a>, <a href="https://help.openai.com/en/articles/9624314-model-release-notes" class="text-[var(--accent-primary)] no-underline hover:underline">OpenAI model release notes</a>, <a href="https://openai.com/index/gpt-5-5-instant/" class="text-[var(--accent-primary)] no-underline hover:underline">GPT-5.5 Instant</a>, <a href="https://platform.claude.com/docs/en/about-claude/models/overview" class="text-[var(--accent-primary)] no-underline hover:underline">Anthropic model docs</a>, <a href="https://www.anthropic.com/news/fable-mythos-access" class="text-[var(--accent-primary)] no-underline hover:underline">Anthropic Fable/Mythos access statement</a>, <a href="https://support.claude.com/en/articles/15036540-use-the-claude-agent-sdk-with-your-claude-plan" class="text-[var(--accent-primary)] no-underline hover:underline">Claude Agent SDK credit help</a>, and <a href="https://www.anthropic.com/engineering/april-23-postmortem" class="text-[var(--accent-primary)] no-underline hover:underline">Claude Code quality postmortem</a>. See our <a href="/about/scoring/" class="text-[var(--accent-primary)] no-underline hover:underline">scoring methodology</a>.</p>
     </div>
   </article>
   </div>

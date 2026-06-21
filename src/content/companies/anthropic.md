@@ -3,23 +3,23 @@ type: company
 slug: anthropic
 title: Anthropic
 seo_title: "Anthropic Company Profile (June 2026), aipedia.wiki"
-meta_description: "Anthropic builds Claude, Claude Code, Claude Cowork, and enterprise AI products. Verified June 20, 2026: Fable/Mythos access remains suspended, Agent SDK credit changes are paused, and Opus 4.8 is the stable buyable high-end Claude route."
+meta_description: "Anthropic builds Claude, Claude Code, Claude Cowork, and enterprise AI products. Verified June 21, 2026: Fable/Mythos access remains suspended, Agent SDK credit changes are paused, and Opus 4.8 is the stable buyable high-end Claude route."
 author: "aipedia.wiki Editorial"
 company_type: startup
 founded: 2021
 hq: San Francisco, USA
 funding: "$65B Series H at $965B post-money (May 2026)"
 key_products: [claude, claude-code]
-last_updated: 2026-06-20
+last_updated: 2026-06-21
 update_frequency: monthly
-last_verified: 2026-06-20
+last_verified: 2026-06-21
 ---
 
 # Anthropic
 
 Anthropic is an AI safety and research company founded in 2021 by Dario Amodei, Daniela Amodei, and former OpenAI researchers. Headquartered in San Francisco, the company develops the Claude family of models and enterprise products around coding, knowledge work, agents, and regulated-industry deployments.
 
-As of June 20, 2026, Anthropic is no longer just a fast-growing private frontier lab. It has raised a $65 billion Series H at a $965 billion post-money valuation, disclosed that run-rate revenue crossed $47 billion earlier in May, and confidentially submitted a draft S-1 registration statement to the SEC on June 1. The S-1 filing is not a completed IPO and the number of shares and price have not been set, but it is a clear signal that Anthropic is preparing optionality for public-market listing while Claude demand is still accelerating. The same month also exposed two buyer risks: Anthropic says access to Claude Fable 5 and Claude Mythos 5 remains suspended after a US government directive, while all other Claude models remain unaffected, and Anthropic's current Agent SDK help says the separate Agent SDK credit changes are paused.
+As of June 21, 2026, Anthropic is no longer just a fast-growing private frontier lab. It has raised a $65 billion Series H at a $965 billion post-money valuation, disclosed that run-rate revenue crossed $47 billion earlier in May, and confidentially submitted a draft S-1 registration statement to the SEC on June 1. The S-1 filing is not a completed IPO and the number of shares and price have not been set, but it is a clear signal that Anthropic is preparing optionality for public-market listing while Claude demand is still accelerating. The same month also exposed two buyer risks: Anthropic says access to Claude Fable 5 and Claude Mythos 5 remains suspended after a US government directive, while all other Claude models remain unaffected, and Anthropic's current Agent SDK help says the separate Agent SDK credit changes are paused.
 
 ## Key Facts
 
@@ -33,7 +33,7 @@ As of June 20, 2026, Anthropic is no longer just a fast-growing private frontier
 | **Run-rate revenue** | Crossed $47B earlier in May 2026, per Anthropic's Series H announcement |
 | **Enterprise signal** | Global enterprise adoption, Claude Code/Cowork demand, and availability across AWS, Google Cloud, and Microsoft Azure |
 | **Key products** | Claude, Claude Code, Claude Cowork, Claude for Work, Claude for Legal, Claude Security, Claude API |
-| **Current model line** | Claude Opus 4.8, Claude Sonnet 4.6, Claude Haiku 4.5; Claude Fable 5 and Claude Mythos 5 access remains suspended as of June 20, 2026 |
+| **Current model line** | Claude Opus 4.8, Claude Sonnet 4.6, Claude Haiku 4.5; Claude Fable 5 and Claude Mythos 5 access remains suspended as of June 21, 2026 |
 
 ## What They Do
 
@@ -43,7 +43,7 @@ Claude models support long context windows and are sold through Anthropic's own 
 
 ## Current Flagship Products
 
-- **[Claude](/tools/claude/):** AI assistant and model family. Opus 4.8 is the stable buyable high-end route as of June 20, 2026. Claude Fable 5 launched above Opus on June 9, but Anthropic says Fable 5 and Mythos 5 access is currently suspended after a US government directive.
+- **[Claude](/tools/claude/):** AI assistant and model family. Opus 4.8 is the stable buyable high-end route as of June 21, 2026. Claude Fable 5 launched above Opus on June 9, but Anthropic says Fable 5 and Mythos 5 access is currently suspended after a US government directive.
 - **[Claude Code](/tools/claude-code/):** Agentic coding product for terminal, IDE, desktop, web, Slack, and mobile-to-desktop workflows. Current Claude Code product copy says Pro includes Claude Code access and both Sonnet 4.6 and Opus 4.8; Max 5x and Max 20x increase usage for heavier codebase work.
 - **Claude Cowork and Claude for Work:** Knowledge-work and team products that extend Claude beyond individual chat into documents, workflows, connectors, Microsoft 365, Slack, enterprise search, and organizational controls.
 - **Claude for Legal and Claude Security:** Vertical enterprise products for legal-document work and code/security review, respectively. These matter because Anthropic is packaging Claude into buyer-specific workflows rather than leaving all deployment work to customers.
@@ -69,7 +69,7 @@ The main risk is cost, dependency surface, and model availability. Anthropic's a
 
 ## Current Buyer Notes
 
-| Buyer question | June 20, 2026 answer |
+| Buyer question | June 21, 2026 answer |
 |---|---|
 | **Best Anthropic product for individuals** | Claude Pro for most paid users; Claude Max when higher usage and Claude Code volume matter |
 | **Best developer product** | Claude Code for repo work, plus Claude API for app integration |

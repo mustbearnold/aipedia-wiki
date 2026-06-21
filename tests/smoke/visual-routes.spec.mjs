@@ -310,7 +310,7 @@ test('homepage catalog root keeps warm accents out of decorative beams', async (
   expect(rootPaint.backgroundImage).not.toMatch(/245,\s*158,\s*11|251,\s*146,\s*60|orange|amber/i);
 });
 
-test('source styles stay inside the Signal Cyan palette', () => {
+test('source styles stay inside the approved site palette', () => {
   const violations = [];
   for (const root of colorSourceRoots) {
     for (const file of collectColorSourceFiles(root)) {
@@ -327,8 +327,8 @@ test('source styles stay inside the Signal Cyan palette', () => {
   expect(violations).toEqual([]);
 });
 
-test('brand logo raster stays inside the Signal Cyan palette', async () => {
-  const { data, info } = await sharp('public/brand/aipedia-logo-crystal-cyan-512.png')
+test('brand logo raster stays inside the Signal Orange palette', async () => {
+  const { data, info } = await sharp('public/brand/aipedia-logo-lantern-512.png')
     .ensureAlpha()
     .raw()
     .toBuffer({ resolveWithObject: true });
@@ -356,7 +356,7 @@ test('brand logo raster stays inside the Signal Cyan palette', async () => {
     hue = (hue * 60 + 360) % 360;
     const saturation = delta / (1 - Math.abs(max + min - 1));
 
-    if (saturation > 0.2 && (hue < 160 || hue > 205)) {
+    if (saturation > 0.2 && (hue < 15 || hue > 75)) {
       violations.push({ r, g, b, hue: Math.round(hue), saturation: Math.round(saturation * 100) / 100 });
       if (violations.length >= 12) break;
     }
@@ -365,7 +365,7 @@ test('brand logo raster stays inside the Signal Cyan palette', async () => {
   expect(violations).toEqual([]);
 });
 
-test('browser tab icon raster stays inside the Signal Cyan palette', async () => {
+test('browser tab icon raster stays inside the Signal Orange palette', async () => {
   const { data, info } = await sharp('public/favicon-512.png')
     .ensureAlpha()
     .raw()
@@ -394,7 +394,7 @@ test('browser tab icon raster stays inside the Signal Cyan palette', async () =>
     hue = (hue * 60 + 360) % 360;
     const saturation = delta / (1 - Math.abs(max + min - 1));
 
-    if (saturation > 0.2 && (hue < 160 || hue > 205)) {
+    if (saturation > 0.2 && (hue < 15 || hue > 75)) {
       violations.push({ r, g, b, hue: Math.round(hue), saturation: Math.round(saturation * 100) / 100 });
       if (violations.length >= 12) break;
     }
@@ -403,7 +403,7 @@ test('browser tab icon raster stays inside the Signal Cyan palette', async () =>
   expect(violations).toEqual([]);
 });
 
-test.describe('Signal Cyan palette', () => {
+test.describe('approved site palette', () => {
   for (const route of paletteRoutes) {
     test(`decorative surfaces avoid off-palette hues: ${route}`, async ({ page }) => {
       await page.goto(route);
