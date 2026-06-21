@@ -111,6 +111,7 @@ test('aipedia loops runs fixture loops and reports attention without failing', (
     assert.equal(report.totals.ok, 1);
     assert.equal(report.totals.attention, 1);
     assert.equal(report.totals.skipped, 1);
+    assert.equal(report.review.summary, '1 loop(s) ok; 1 attention; 1 skipped.');
     assert.deepEqual(report.review.attention_loops, ['attention-loop']);
     assert.deepEqual(report.review.skipped_loops, ['built-loop']);
     assert.equal(report.review.recommendations[0].loop_id, 'attention-loop');
@@ -132,6 +133,7 @@ test('aipedia loops can select one loop', () => {
     assert.equal(report.totals.loops, 1);
     assert.equal(report.loops[0].id, 'clean-loop');
     assert.equal(report.loops[0].status, 'ok');
+    assert.equal(report.review.summary, '1 loop(s) ok; 0 attention; 0 skipped.');
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }

@@ -30,6 +30,16 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 
 ## Entries
 
+### 2026-06-21: Explicit Loop Review Summary Counts
+
+- Status: Complete.
+- Commit: this commit.
+- Branch: `master`.
+- Changed: Updated `scripts/aipedia-loops.mjs` so `review.summary` always states ok, attention, and skipped loop counts, including all-green runs; added regression coverage for attention and clean summaries; and updated loop continuity docs.
+- Verification: `node --test tests/scripts/aipedia-loops.test.mjs`; `node scripts/aipedia-loops.mjs --all --run --json`; `npm run check:smart:run`; `npm run loop:all:record -- --json`.
+- Residual risks: None known. This is a reporting-only loop-system improvement.
+- Next: Continue reviewing for any remaining practical loop-system improvements.
+
 ### 2026-06-21: Check-Smart Local Artifact Noise Filter
 
 - Status: Complete.

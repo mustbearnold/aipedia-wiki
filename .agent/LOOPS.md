@@ -30,6 +30,7 @@ Built-output loops depend on fresh `dist-fast/client` output. If the runner skip
 
 `npm run loop:all -- --json` now includes:
 
+- `review.summary`: explicit ok, attention, and skipped counts.
 - `review.recommendations`: ranked next actions with score, severity, confidence, effort, action, and reason.
 - `build_freshness`: per-command freshness status for built-output loops.
 - `review.next_actions`: the shortest human-readable action list derived from the ranked recommendations.

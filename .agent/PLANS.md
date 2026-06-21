@@ -81,6 +81,7 @@ Keep AiPedia maintenance repeatable without turning it into bureaucracy. The loo
 - 2026-06-21: Latest broad review is 7 ok / 0 attention. The latest system receipt is `.agent/loop-runs/system/latest.json`.
 - 2026-06-21: Built-output freshness now fails into `attention` when stale or unknown, preventing rendered-output loops from looking green without a trustworthy build.
 - 2026-06-21: `check-smart` now filters local-only untracked `.agents/` and `skills-lock.json` noise from default discovery, without filtering explicit paths, staged files, or canonical `.agent/` docs.
+- 2026-06-21: Loop summaries now always show ok, attention, and skipped counts, including all-green runs.
 
 ### Next Improvement Pass
 

@@ -44,6 +44,7 @@ The next selected Decision Content candidate is `amazon-q-vs-github-copilot`.
   - Added `npm run loop:all:record`, which writes timestamped JSON receipts and `.agent/loop-runs/system/latest.json`.
   - Recorded fresh system-level loop receipts under `.agent/loop-runs/system/`, with the latest pointer in `.agent/loop-runs/system/latest.json`.
   - Tightened `check-smart` default dirty-path discovery so local-only untracked `.agents/` and `skills-lock.json` artifacts do not create verification noise, while canonical `.agent/` project docs still count.
+  - Made the loop review summary always state ok, attention, and skipped counts explicitly.
 - Multi-loop system:
   - Added `src/data/aipedia-loops.json`, `scripts/aipedia-loops.mjs`, `.agent/LOOPS.md`, and npm aliases for all seven loops.
   - Tuned loop summaries so attention signals show actionable samples and due-soon freshness work is queue context, not a false alarm.

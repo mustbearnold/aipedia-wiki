@@ -170,9 +170,7 @@ function reviewSummary(loopReports) {
   const recommendations = rankedRecommendations(loopReports);
 
   return {
-    summary: attention.length
-      ? `${attention.length} loop(s) need attention; ${clean.length} ok; ${skipped.length} skipped.`
-      : `${clean.length} loop(s) ok; ${skipped.length} skipped.`,
+    summary: `${clean.length} loop(s) ok; ${attention.length} attention; ${skipped.length} skipped.`,
     attention_loops: attention.map((loop) => loop.id),
     skipped_loops: skipped.map((loop) => loop.id),
     recommendations,
