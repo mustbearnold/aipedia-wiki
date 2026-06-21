@@ -96,6 +96,7 @@ price_history:
     source: "https://devin.ai/pricing/"
     source_label: "Devin pricing"
     source_id: codeium-devin-pricing
+    verified_at: 2026-06-18
     note: "Devin pricing now lists public plan prices, free SWE-1.6 on Pro, daily/weekly quota allowances, and paid-plan extra usage at API pricing."
   - date: 2026-06-18
     plan: "Release path"
@@ -103,6 +104,7 @@ price_history:
     source: "https://docs.devin.ai/desktop/changelog"
     source_label: "Devin Desktop changelog"
     source_id: codeium-devin-changelog
+    verified_at: 2026-06-18
     note: "Current release stream shows post-rebrand v3.2 updates, including Devin Local plugin, subagent MCP, terminal permission scopes, and a June 18 skill-file fix."
   - date: 2026-06-02
     plan: "Brand path"
@@ -110,6 +112,7 @@ price_history:
     source: "https://devin.ai/blog/windsurf-is-now-devin-desktop"
     source_label: "Devin Desktop announcement"
     source_id: codeium-devin-desktop
+    verified_at: 2026-06-18
     note: "Cognition announced Devin Desktop as the next generation of Windsurf."
 ---
 
@@ -255,4 +258,3 @@ Do not choose Codeium as a product. Choose Devin Desktop if you want Cognition's
 
 - **Category:** [AI Coding](/categories/ai-coding/)
 - **Current product:** [Windsurf / Devin Desktop](/tools/windsurf/)
-- **Comparisons:** [Codeium vs GitHub Copilot](/compare/codeium-vs-github-copilot/)

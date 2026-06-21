@@ -208,4 +208,4 @@ For single-brief work, generalist assistants can produce a usable outline cheapl
 ## Related
 
 - **Category:** [AI SEO](/categories/ai-seo/)
-- **Comparisons:** [Frase vs MarketMuse](/compare/frase-vs-marketmuse/), [MarketMuse vs NeuronWriter](/compare/marketmuse-vs-neuronwriter/), [MarketMuse vs Surfer SEO](/compare/marketmuse-vs-surfer-seo/)
+- **Comparisons:** [Frase vs MarketMuse](/compare/frase-vs-marketmuse/)

@@ -232,4 +232,4 @@ Yes. A 7-day Gold trial exposes plagiarism checks, integrations, and team collab
 ## Related
 
 - **Category:** [AI SEO](/categories/ai-seo/)
-- **Comparisons:** [NeuronWriter vs Surfer SEO](/compare/neuronwriter-vs-surfer-seo/) · [Frase vs NeuronWriter](/compare/frase-vs-neuronwriter/) · [MarketMuse vs NeuronWriter](/compare/marketmuse-vs-neuronwriter/) · [NeuronWriter vs Semrush](/compare/neuronwriter-vs-semrush/)
+- **Comparisons:** [NeuronWriter vs Surfer SEO](/compare/neuronwriter-vs-surfer-seo/) · [Frase vs NeuronWriter](/compare/frase-vs-neuronwriter/)

@@ -428,4 +428,4 @@ No. Cursor is a VS Code fork, not a plugin. Users on other editors should look a
 
 - **Category:** [AI Coding](/categories/ai-coding/)
 - **Alternatives:** [Claude Code](/tools/claude-code/) · [GitHub Copilot](/tools/github-copilot/) · [Windsurf](/tools/windsurf/) · [Cline](/tools/cline/) · [Aider](/tools/aider/) · [Continue](/tools/continue/) · [Zed](/tools/zed/)
-- **Comparisons:** [Cursor vs Claude Code vs Copilot](/compare/cursor-vs-claude-code-vs-copilot/) · [Cline vs Cursor](/compare/cline-vs-cursor/) · [Continue vs Cursor](/compare/continue-vs-cursor/)
+- **Comparisons:** [Cline vs Cursor](/compare/cline-vs-cursor/)

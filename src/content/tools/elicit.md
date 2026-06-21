@@ -90,6 +90,7 @@ price_history:
     source: "https://elicit.com/pricing"
     source_label: "Elicit pricing"
     source_id: elicit-pricing
+    verified_at: 2026-06-12
     note: "June 5 refresh rechecked the pricing page, Elicit product site, API terms, and API launch post. Pro remains the practical systematic-review/API entry tier; Scale adds collaboration and figure interpretation; Enterprise adds larger screening/extraction scale and unlimited API access."
   - date: 2026-05-13
     plan: "Pro"
@@ -97,6 +98,7 @@ price_history:
     source: "https://elicit.com/pricing"
     source_label: "Elicit pricing"
     source_id: elicit-pricing
+    verified_at: 2026-06-12
     note: "Pro includes the dedicated systematic-review workflow, 5,000-paper screening, 144 reports or systematic reviews per year, 20 extraction columns, 10 personalized alerts, custom upload extraction, explanations, templates, and API access."
   - date: 2026-05-13
     plan: "Plus"
@@ -104,6 +106,7 @@ price_history:
     source: "https://elicit.com/pricing"
     source_label: "Elicit pricing"
     source_id: elicit-pricing
+    verified_at: 2026-06-12
     note: "Plus is surfaced as a yearly-billed plan with 4 automated reports/month, export, 5 table columns at a time, and clinical-trials search. Monthly Plus pricing was not exposed in the captured pricing surface."
 ---
 
@@ -230,4 +233,4 @@ No. It compresses search, screening, and extraction. Final inclusion decisions, 
 ## Related
 
 - **Category:** [AI Research](/categories/ai-research/)
-- **Comparisons:** [Elicit vs Consensus](/compare/consensus-vs-elicit/) | [Connected Papers vs Elicit](/compare/connected-papers-vs-elicit/)
+- **Comparisons:** [Elicit vs Consensus](/compare/consensus-vs-elicit/)

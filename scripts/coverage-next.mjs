@@ -74,6 +74,7 @@ const comparisonPolicy = existsSync(COMPARISON_POLICY_PATH)
 const blockedPairs = new Set(
   (comparisonPolicy.blocked_pairs || []).map((entry) => pairKey(entry.tools[0], entry.tools[1])),
 );
+const workflowLanes = comparisonPolicy.workflow_lanes || {};
 
 // Tools that require canonical_fact_table + fact tokens (mirror guard-stale-facts).
 const CANONICAL_FACT_TOOLS = new Set([
@@ -99,7 +100,14 @@ function selectableComparison(item) {
   if (blockedPairs.has(key)) return false;
 
   const [firstCategory, secondCategory] = item.tools.map(toolPrimaryCategory);
-  return Boolean(firstCategory && firstCategory === secondCategory);
+  if (!firstCategory || firstCategory !== secondCategory) return false;
+  return hasApprovedSharedWorkflowLane(firstCategory, item.tools[0], item.tools[1]);
+}
+
+function hasApprovedSharedWorkflowLane(category, a, b) {
+  const lanes = workflowLanes?.[category];
+  if (!lanes) return true;
+  return Object.values(lanes).some((slugs) => Array.isArray(slugs) && slugs.includes(a) && slugs.includes(b));
 }
 
 const backlog = JSON.parse(readFileSync(BACKLOG_PATH, 'utf8'));

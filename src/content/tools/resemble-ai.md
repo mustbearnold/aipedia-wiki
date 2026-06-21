@@ -93,6 +93,7 @@ price_history:
     source: "https://www.resemble.ai/pricing/"
     source_label: "Source"
     source_id: resemble-ai-pricing
+    verified_at: 2026-06-12
     note: "Consumer tiers restructured; Flex Plan added for Detect"
   - date: 2026-04-15
     plan: "Creator"
@@ -100,6 +101,7 @@ price_history:
     source: "https://www.resemble.ai/pricing/"
     source_label: "Source"
     source_id: resemble-ai-pricing
+    verified_at: 2026-06-12
     note: "Verified unchanged (later retired in May 2026 pricing reset)"
   - date: 2026-05-13
     plan: "Flex Plan"
@@ -107,6 +109,7 @@ price_history:
     source: "https://www.resemble.ai/pricing/"
     source_label: "Source"
     source_id: resemble-ai-pricing
+    verified_at: 2026-06-12
     note: "Major restructure: Free/Creator/Professional/Business flat tiers retired; replaced by single pay-per-consumption Flex Plan ($0.0002 to $0.07/second across TTS, cloning, detection) with non-expiring credits. Enterprise tier preserved with volume discounts up to 80%."
   - date: 2026-05-13
     plan: "Team Seat (add-on)"
@@ -114,6 +117,7 @@ price_history:
     source: "https://www.resemble.ai/pricing/"
     source_label: "Source"
     source_id: resemble-ai-pricing
+    verified_at: 2026-06-12
     note: "New seat add-on under Flex Plan; Rapid Voice Clone $2/voice/mo, Pro Voice Clone $5/voice/mo, Voice Design $2/voice/mo"
   - date: 2026-06-05
     plan: "Flex Plan"
@@ -121,6 +125,7 @@ price_history:
     source: "https://www.resemble.ai/pricing/"
     source_label: "Source"
     source_id: resemble-ai-pricing
+    verified_at: 2026-06-12
     note: "Comparison refresh rechecked Flex Plan, add-ons, and Enterprise positioning against Descript. Flex remains pay-per-consumption with team seats at $20/user/mo, Rapid clone $2/voice/mo, Pro clone $5/voice/mo, and Voice Design $2/voice/mo."
 ---
 
@@ -267,4 +272,4 @@ The current production voice model behind Generate. Handles streaming TTS, voice
 ## Related
 
 - **Category:** [AI Voice / TTS](/categories/ai-voice/)
-- **Comparisons:** [Cartesia vs Resemble AI](/compare/cartesia-vs-resemble-ai/), [ElevenLabs vs Resemble AI](/compare/elevenlabs-vs-resemble-ai/), [Fish Audio vs Resemble AI](/compare/fish-audio-vs-resemble-ai/)
+- **Comparisons:** , [ElevenLabs vs Resemble AI](/compare/elevenlabs-vs-resemble-ai/), [Fish Audio vs Resemble AI](/compare/fish-audio-vs-resemble-ai/)

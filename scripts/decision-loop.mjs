@@ -72,6 +72,7 @@ const comparisonPolicy = existsSync(COMPARISON_POLICY_PATH)
 const blockedPairs = new Set(
   (comparisonPolicy.blocked_pairs || []).map((entry) => pairKey(entry.tools[0], entry.tools[1])),
 );
+const workflowLanes = comparisonPolicy.workflow_lanes || {};
 const existingPairs = existingComparisonPairs();
 const comparisonBacklog = backlog.backlog?.comparisons ?? [];
 const warnings = backlogWarnings(backlog.generated_at);
@@ -103,7 +104,7 @@ function usage() {
     '  node scripts/decision-loop.mjs',
     '  node scripts/decision-loop.mjs --json',
     '  node scripts/decision-loop.mjs --count 3',
-    '  node scripts/decision-loop.mjs --slug canva-vs-claude',
+    '  node scripts/decision-loop.mjs --slug activepieces-vs-zapier',
     '',
     'Options:',
     '  --json                 Emit a structured report.',
@@ -311,7 +312,14 @@ function selectableComparison(item) {
 
   const [first, second] = item.tools.map(toolMeta);
   if (!first.primary_category || !second.primary_category) return false;
-  return first.primary_category === second.primary_category;
+  if (first.primary_category !== second.primary_category) return false;
+  return hasApprovedSharedWorkflowLane(first.primary_category, item.tools[0], item.tools[1]);
+}
+
+function hasApprovedSharedWorkflowLane(category, a, b) {
+  const lanes = workflowLanes?.[category];
+  if (!lanes) return true;
+  return Object.values(lanes).some((slugs) => Array.isArray(slugs) && slugs.includes(a) && slugs.includes(b));
 }
 
 function backlogWarnings(generatedAt) {

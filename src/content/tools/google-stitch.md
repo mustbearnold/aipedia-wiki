@@ -93,6 +93,7 @@ price_history:
     source: "https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/"
     source_label: "Google Stitch announcement"
     source_id: google-stitch-pricing
+    verified_at: 2026-06-12
     note: "Google announced Stitch as a Google Labs experiment; public Google sources do not publish durable procurement terms."
   - date: 2026-04-17
     plan: "Labs"
@@ -100,6 +101,7 @@ price_history:
     source: "https://stitch.withgoogle.com/"
     source_label: "Google Stitch official site"
     source_id: google-stitch-pricing
+    verified_at: 2026-06-12
     note: "Rechecked the public Google surface; do not treat third-party quota or paid-tier predictions as stable Google-published procurement terms."
   - date: 2026-06-05
     plan: "Labs"
@@ -107,6 +109,7 @@ price_history:
     source: "https://stitch.withgoogle.com/"
     source_label: "Google Stitch official site"
     source_id: google-stitch-pricing
+    verified_at: 2026-06-12
     note: "Reconfirmed Labs access and the May 19 real-time design update from public Google surfaces. Google public pages do not publish stable quota, paid-tier timing, SLA, or billing terms."
 ---
 
@@ -236,4 +239,3 @@ Gemini-powered prompt handling is reliable for layout, theme, and component-leve
 ## Related
 
 - **Category:** [AI Design](/categories/ai-design/)
-- **Comparisons:** [Figma vs Google Stitch](/compare/figma-vs-google-stitch/)

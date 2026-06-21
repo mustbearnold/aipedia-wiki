@@ -146,6 +146,7 @@ price_history:
     source: "https://help.figma.com/hc/en-us/articles/33459875669015-How-AI-credits-work"
     source_label: "Figma AI credits"
     source_id: figma-ai-credits
+    verified_at: 2026-06-12
     note: "Full-seat AI credit limits became enforced; heavy Figma Make and image workflows now need credit planning."
   - date: 2026-05-08
     plan: "Professional Full seat"
@@ -153,6 +154,7 @@ price_history:
     source: "https://www.figma.com/pricing/"
     source_label: "Figma pricing"
     source_id: figma-pricing
+    verified_at: 2026-06-12
     note: "Current public pricing page lists Starter free, Professional Full seat $16/mo, Organization Full seat $55/mo, and Enterprise Full seat $90/mo."
   - date: 2026-05-13
     plan: "Professional Full seat"
@@ -160,6 +162,7 @@ price_history:
     source: "https://www.figma.com/pricing/"
     source_label: "Figma pricing"
     source_id: figma-pricing
+    verified_at: 2026-06-12
     note: "Reverified after Anthropic May 12 Claude for Legal launch; Figma pricing ladder unchanged at Starter free, Professional $16/mo Full seat, Organization $55/mo, Enterprise $90/mo."
 ---
 
@@ -325,7 +328,7 @@ No. It can help design, prototype, generate, inspect, and hand off code. Product
 ## Related
 
 - **Category:** [AI Design](/categories/ai-design/)
-- **More comparisons:** [Figma vs Google Stitch](/compare/figma-vs-google-stitch/)
+- **More comparisons:** Figma vs Google Stitch
 - **Alternatives:** [Lovable](/tools/lovable/) · [v0](/tools/v0/) · [Bolt.new](/tools/bolt/) · [Canva](/tools/canva/) · [Google Stitch](/tools/google-stitch/)
 
 Commercial note: AiPedia is using the official Figma URL for reader CTAs. Editorial recommendations do not depend on commercial relationships.

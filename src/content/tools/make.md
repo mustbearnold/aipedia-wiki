@@ -95,6 +95,7 @@ price_history:
     source: "https://www.make.com/en/pricing"
     source_label: "Source"
     source_id: make-pricing
+    verified_at: 2026-06-12
     note: "Credits now the billing unit to accommodate AI modules"
   - date: 2026-04-15
     plan: "Core"
@@ -102,6 +103,7 @@ price_history:
     source: "https://www.make.com/en/pricing"
     source_label: "Source"
     source_id: make-pricing
+    verified_at: 2026-06-12
     note: "Verified unchanged"
   - date: 2026-05-13
     plan: "Core / Pro / Teams"
@@ -109,6 +111,7 @@ price_history:
     source: "https://www.make.com/en/pricing"
     source_label: "Source"
     source_id: make-pricing
+    verified_at: 2026-06-12
     note: "Headline price drop. Core $10.59 to $9, Pro $18.82 to $16, Teams $34.12 to $29. Credits and tier features otherwise unchanged."
   - date: 2026-06-04
     plan: "Free / Core / Pro / Teams / Enterprise"
@@ -116,6 +119,7 @@ price_history:
     source: "https://www.make.com/en/pricing"
     source_label: "Source"
     source_id: make-pricing
+    verified_at: 2026-06-12
     note: "Reverified current pricing, 3,000+ standard apps, MCP Server, AI Web Search beta, Make AI Agents beta, AI Toolkit, and code-app credit usage."
 ---
 
@@ -241,4 +245,3 @@ No. Make is cloud-only. [n8n](/tools/n8n/) is the standard pick for self-hosted 
 ## Related
 
 - **Category:** [AI Automation](/categories/ai-automation/)
-- **Comparisons:** [n8n vs Make vs Zapier](/compare/n8n-vs-make-vs-zapier/)

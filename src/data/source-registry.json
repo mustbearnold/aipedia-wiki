@@ -11531,7 +11531,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-21"
     },
     {
       "id": "zapier-ai",
@@ -11540,7 +11540,16 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-05"
+      "last_checked": "2026-06-21"
+    },
+    {
+      "id": "zapier-mcp-guide",
+      "label": "Zapier MCP guide",
+      "url": "https://zapier.com/blog/zapier-mcp-guide/",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-21"
     },
     {
       "id": "zapier-apps",
@@ -11549,7 +11558,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-05"
+      "last_checked": "2026-06-21"
     },
     {
       "id": "zapier-pricing",
@@ -11558,7 +11567,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-05"
+      "last_checked": "2026-06-21"
     },
     {
       "id": "zed-pricing",
@@ -12145,7 +12154,8 @@
       "url": "https://runwayml.com/news/introducing-runway-agent",
       "type": "blog",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-12"
     },
     {
       "id": "sanebox-overview",

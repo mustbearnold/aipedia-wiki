@@ -94,6 +94,7 @@ price_history:
     source: "https://www.semanticscholar.org"
     source_label: "Source"
     source_id: semantic-scholar-pricing
+    verified_at: 2026-06-12
     note: "Verified fully free. No paid tier exists."
   - date: 2026-06-04
     plan: "Free"
@@ -101,6 +102,7 @@ price_history:
     source: "https://www.semanticscholar.org/about"
     source_label: "Source"
     source_id: semantic-scholar-pricing
+    verified_at: 2026-06-12
     note: "Re-verified. Core Semantic Scholar search remains free; API access is free but rate-limited and some endpoints require an API key."
   - date: 2026-06-06
     plan: "Free"
@@ -108,6 +110,7 @@ price_history:
     source: "https://www.semanticscholar.org/"
     source_label: "Semantic Scholar"
     source_id: semantic-scholar-pricing
+    verified_at: 2026-06-12
     note: "Reverified free core search. Homepage showed 234,531,320 searchable papers; API overview still listed free but rate-limited access with optional API-key paths."
 ---
 
@@ -231,4 +234,3 @@ No. It finds and summarizes individual papers. For cross-paper synthesis or meta
 ## Related
 
 - **Category:** [AI Research](/categories/ai-research/)
-- **Comparisons:** [Semantic Scholar vs Consensus](/compare/consensus-vs-semantic-scholar/) | [Connected Papers vs Semantic Scholar](/compare/connected-papers-vs-semantic-scholar/)

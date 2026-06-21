@@ -102,6 +102,7 @@ price_history:
     source: "https://github.com/Wan-Video/Wan2.2"
     source_label: "Wan2.2 GitHub"
     source_id: wan2-2-github
+    verified_at: 2026-06-12
     note: "Official repo lists model weights and Apache 2.0 license terms for Wan2.2"
   - date: 2026-04-23
     plan: "Alibaba Cloud Model Studio Wan 2.6 routes"
@@ -109,6 +110,7 @@ price_history:
     source: "https://www.alibabacloud.com/help/en/model-studio/model-pricing"
     source_label: "Alibaba Cloud Model Studio pricing"
     source_id: wan-model-studio-pricing
+    verified_at: 2026-06-12
     note: "Pricing depends on deployment mode, resolution, audio mode, and exact model"
   - date: 2026-05-08
     plan: "fal.ai Wan 2.7"
@@ -116,6 +118,7 @@ price_history:
     source: "https://fal.ai/models/fal-ai/wan/v2.7/reference-to-video"
     source_label: "fal.ai Wan 2.7 reference-to-video"
     source_id: fal-wan-27
+    verified_at: 2026-06-12
     note: "Provider-specific price for Wan 2.7 endpoints, not universal Alibaba Cloud pricing"
   - date: 2026-05-13
     plan: "fal.ai Wan 2.7"
@@ -266,5 +269,4 @@ For raw model quality, test Wan against Seedance 2.0, Kling 3.0, and Veo 3.1. Fo
 
 - **Category:** [AI Video Generation](/categories/ai-video/)
 - **Guide:** [Best AI Video Generator](/guides/best-ai-video-generator/)
-- **Comparison:** [Runway vs Kling vs Seedance vs Veo](/compare/kling-vs-seedance-vs-runway/)
 - **Alternatives:** [Seedance 2.0](/tools/seedance/) · [Kling 3.0](/tools/kling/) · [Google Veo 3.1](/tools/veo/) · [Runway](/tools/runway/) · [Pika](/tools/pika/)

@@ -252,7 +252,7 @@ Cloud Standard is free for the first 10 active flows, then $5 per active flow pe
 Yes, but do not read it as "every catalog piece is guaranteed." On June 21, 2026, the pricing page included unlimited MCP servers, the MCP page showed 754 MCP listings, and the docs listed MCP tools for flow discovery, editing, validation, testing, and publishing.
 
 **Activepieces vs Zapier in 2026?**
-Activepieces wins on cost, self-host option, and MCP-driven workflow control. Zapier wins when connector breadth and hands-off SaaS reliability matter more than infrastructure control.
+Activepieces wins on cost, self-host option, and MCP-driven workflow control. Zapier wins when connector breadth and hands-off SaaS reliability matter more than infrastructure control. See [Activepieces vs Zapier](/compare/activepieces-vs-zapier/) for the full buyer fork.
 
 **Which AI providers ship as native pieces?**
 OpenAI, Anthropic Claude, Google Gemini, OpenRouter, Mistral AI, vector-store, and agent pieces are all represented. Use the live piece catalog for exact model availability because provider model lists change faster than the workflow platform.
@@ -270,4 +270,4 @@ OpenAI, Anthropic Claude, Google Gemini, OpenRouter, Mistral AI, vector-store, a
 ## Related
 
 - **Category:** [AI Automation](/categories/ai-automation/)
-- **Comparison:** [Activepieces vs n8n](/compare/activepieces-vs-n8n/)
+- **Comparisons:** [Activepieces vs n8n](/compare/activepieces-vs-n8n/) · [Activepieces vs Zapier](/compare/activepieces-vs-zapier/)

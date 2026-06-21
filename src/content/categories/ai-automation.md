@@ -32,6 +32,8 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 
 **June 21 Activepieces vs n8n update:** [Activepieces](/tools/activepieces/) remains the open-source, self-hostable automation pick, and [n8n](/tools/n8n/) remains the stronger default for technical production workflows. The new [Activepieces vs n8n](/compare/activepieces-vs-n8n/) fork keeps that buyer question inside one valid same-category automation lane: permissive MIT self-hosting, 754 pieces, 754 MCP listings, and simple active-flow pricing on the Activepieces side; execution-based hosted cloud, code nodes, AI Agent nodes, and deeper governance tiers on the n8n side.
 
+**June 21 Activepieces vs Zapier update:** [Activepieces vs Zapier](/compare/activepieces-vs-zapier/) now covers the direct open-source automation fork: Activepieces for MIT self-hosting, active-flow pricing, 754 pieces, and MCP-first workflow control; Zapier for 9,000+ apps, 30,000+ MCP actions, managed no-code rollout, and Team/Enterprise governance.
+
 **June 18 Ada update:** [Ada](/tools/ada/) stays in the enterprise customer-service automation lane, but the current refresh changes the read from "Reasoning Engine launch" to "AI customer-service operations platform." Ada's June release notes and MCP docs now put coaching creation, multilingual Knowledge ingestion, Web Chat SDK headless/programmatic control, Zendesk handoff continuity, and MCP-assisted resource changes into the buyer checklist. The platform FAQ now says 550+ deployed AI agents, 6.4B+ handled interactions, and 84% autonomous resolution, while pricing remains demo-led with conversation-based pricing as the primary public model.
 
 **June 18 Apollo update:** [Apollo](/tools/apollo/) remains the all-in-one outbound GTM pick, but the current refresh changes the read from "prospect database plus sequencer" to "AI-native GTM operating layer." Official pricing data now anchors Free at $0, Basic at $49/month, Professional at $99/month, and Enterprise custom, while fair-use and credit rules still decide real cost. May release notes add Apollo on Perplexity, MCP guided sequence and bulk-action reviews, Apollo CLI, Codex integration, AI Assistant admin/view updates, ChatGPT workflows, contact-level website visitors, Gong call import, and removal-request compliance exports. Buyers should now evaluate Apollo around data quality, credit burn, MCP permissions, CRM writes, sequence enrollment, deliverability, and opt-out handling.
@@ -42,7 +44,7 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 
 **June 21 comparison-policy update:** AiPedia deleted false `vs` pages that compared different buyer jobs. Use direct comparison pages only when tools are plausible substitutes for the same workflow. For adjacent-but-different jobs, use this category page, buyer guides, or alternatives sections instead.
 
-**June 5 automation comparison update:** AiPedia rebuilt the high-intent automation fork across Instantly vs Intercom, Instantly vs Make, Instantly vs Zapier, Intercom vs Make, Intercom vs Zapier, and [n8n vs Make vs Zapier](/compare/n8n-vs-make-vs-zapier/). The practical split is sharper now: outbound sending, customer support, visual workflow orchestration, broad no-code app automation, and self-hosted technical AI workflows are different buying jobs.
+**June 5 automation comparison update:** AiPedia rebuilt the high-intent automation fork across Instantly vs Intercom, Instantly vs Make, Instantly vs Zapier, Intercom vs Make, and Intercom vs Zapier. The retired n8n/Make/Zapier comparison now belongs in category and tool guidance because visual workflow orchestration, broad no-code app automation, and self-hosted technical AI workflows are different buying jobs.
 
 **Use [n8n](/tools/n8n/) when a technical founder, ops engineer, or agency wants control.** n8n's current pricing page says plans include unlimited users, unlimited workflows, every integration, and monthly workflow-execution billing rather than per-step billing. As of the June 21 spot-check, hosted Starter is still listed at EUR20/month billed annually, hosted Pro at EUR50/month billed annually, Business at EUR667/month billed annually for self-hosted teams, and the Community self-host path remains free. The current AI Agent docs still standardize AI Agent nodes around Tools Agent behavior, while n8n's hosting docs warn that self-hosting is for expert users because server, scaling, and security mistakes can cause data loss or downtime. Buyers should also model the Business license-key ping, default telemetry setting, and EUR4,000 per 300,000-execution overage bucket before treating paid self-host as a simple isolated deployment. This makes n8n the strongest default for complex AI workflows when someone can own credentials, logs, retries, and security.
 
@@ -223,7 +225,8 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 - [Best AI tools for small business](/guides/best-ai-tools-for-small-business/) is the June 6 verified owner-operator guide for ChatGPT, Gemini, Zapier, Claude, Canva, and Perplexity, with the conservative buying sequence sharpened around general assistant first, Google-native assistant when it reduces switching, and Zapier only after workflows already work manually. It now calls out Zapier's bundled Tables, Forms, MCP, and AI-action packaging plus MCP task-count risk.
 - [Best AI tools for ecommerce](/guides/best-ai-tools-for-ecommerce/) is the June 6 verified store-operations guide for ChatGPT catalog/support work, Canva creative, Jasper campaign governance, Perplexity source trails, and Zapier handoffs after workflows are stable.
 - [Activepieces vs n8n](/compare/activepieces-vs-n8n/) is now the direct open-source automation fork for MIT self-hosting, MCP-first app actions, active-flow pricing, code-node depth, AI Agent nodes, execution-based cloud, and governed self-hosting.
-- [n8n vs Make vs Zapier](/compare/n8n-vs-make-vs-zapier/) is now the primary automation-platform fork for workflow complexity, pricing unit, AI-agent support, self-hosting, and owner type.
+- [Activepieces vs Zapier](/compare/activepieces-vs-zapier/) is now the direct open-source automation fork for teams deciding between self-hostable active-flow pricing and Zapier's managed 9,000+ app catalog.
+- Do not recreate n8n vs Make vs Zapier as one page unless the scope is narrowed to a single same-workflow purchase. Split future automation comparisons by buyer job.
 - A new `Gumloop vs Relevance AI` comparison would capture high-intent buyers choosing between AI-native workflow building and agent workforce deployment.
 - A new `n8n vs Gumloop` comparison would separate technical workflow control from modern agent-flow UX.
 - A new `Zapier MCP vs n8n AI workflows` answer page could capture buyers asking how AI tools should connect to SaaS apps.
@@ -245,8 +248,10 @@ Do not leave this category stale. Automation tools are adding MCP, agent builder
 - [n8n GitHub repository](https://github.com/n8n-io/n8n) (verified 2026-06-21)
 - [n8n affiliate program](https://n8n.io/affiliates/) (verified 2026-06-21)
 - [Claude Agent SDK with a Claude plan](https://support.claude.com/en/articles/15036540-use-the-claude-agent-sdk-with-your-claude-plan) (verified 2026-06-06)
-- [Zapier pricing](https://zapier.com/pricing) (verified 2026-06-05)
-- [Zapier AI](https://zapier.com/ai) (verified 2026-06-05)
+- [Zapier pricing](https://zapier.com/pricing) (verified 2026-06-21)
+- [Zapier AI](https://zapier.com/ai) (verified 2026-06-21)
+- [Zapier apps directory](https://zapier.com/apps) (verified 2026-06-21)
+- [Zapier MCP guide](https://zapier.com/blog/zapier-mcp-guide/) (verified 2026-06-21)
 - [Make pricing](https://www.make.com/en/pricing) (verified 2026-06-12)
 - [Make AI Agents](https://www.make.com/en/ai-agents) (verified 2026-06-12)
 - [Make pricing adjustments](https://help.make.com/adjustments-to-plans-and-pricing) (verified 2026-06-04)

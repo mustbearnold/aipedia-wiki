@@ -27,15 +27,13 @@ Choose Claude Code first if you want the strongest Claude-native repo agent with
 
 ## Decision Snapshot
 
-| Buyer question | Aider | Claude Code |
-|---|---|---|
-| Best default | Terminal-native developers who want BYOK control | Developers who want Claude to inspect, edit, run, and iterate inside a managed agent |
-| Product shape | Open-source CLI pair-programmer | Anthropic coding agent across terminal, VS Code, web, desktop, and JetBrains surfaces |
-| Pricing model | Free tool; pay your chosen model/API/provider costs | Free Claude exists, but Claude Code access is mainly Pro/Max/Team/Enterprise or API billing |
-| Best plan | Start free with a low-cost model, then route expensive jobs deliberately | Pro for regular use; Max 5x/20x for heavier individual use; Team/Enterprise for org controls |
-| Model control | You choose provider/model, including Anthropic, OpenAI-compatible APIs, Gemini, Mistral, Ollama, and local routes | `/model` shows what your account can use; Sonnet is the normal default, Opus is for hard planning/debugging |
-| Audit trail | Git diffs and commits are central to the workflow | Strong agent loop, but teams must still review diffs, commands, and generated code |
-| Main watch-out | You own API keys, model costs, shell safety, and review discipline | Usage limits and token cost can climb during long sessions, subagent teams, and high-effort runs |
+- **Best default:** Aider fits terminal-native developers who want BYOK control. Claude Code fits developers who want Claude to inspect, edit, run, and iterate inside a managed agent.
+- **Product shape:** Aider is an open-source CLI pair-programmer. Claude Code is Anthropic's coding agent across terminal, VS Code, web, desktop, and JetBrains surfaces.
+- **Pricing model:** Aider is a free tool, with cost driven by the model, API, or provider you choose. Claude Code access is mainly through Pro, Max, Team, Enterprise, or API billing.
+- **Best plan:** Aider buyers should start free with a low-cost model, then route expensive jobs deliberately. Claude Code buyers should start with Pro for regular use, Max 5x or 20x for heavier individual use, and Team or Enterprise for org controls.
+- **Model control:** Aider lets you choose the provider and model, including Anthropic, OpenAI-compatible APIs, Gemini, Mistral, Ollama, and local routes. Claude Code's `/model` command shows what your account can use, with Sonnet as the normal default and Opus for hard planning or debugging.
+- **Audit trail:** Aider keeps git diffs and commits central to the workflow. Claude Code has a stronger managed agent loop, but teams still need to review diffs, commands, and generated code.
+- **Main watch-out:** Aider users own API keys, model costs, shell safety, and review discipline. Claude Code usage limits and token cost can climb during long sessions, subagent teams, and high-effort runs.
 
 ## Where Aider Wins
 
@@ -119,5 +117,3 @@ Pilot Claude Code if the team wants managed Anthropic access and agent workflows
 - [Aider](/tools/aider/)
 - [Claude Code](/tools/claude-code/)
 - [AI Coding Assistants](/categories/ai-coding/)
-- [Aider vs Cursor](/compare/aider-vs-cursor/)
-- [Aider vs GitHub Copilot](/compare/aider-vs-github-copilot/)

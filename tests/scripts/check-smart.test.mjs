@@ -158,9 +158,9 @@ test('check-smart replaces broad visual smoke with exact route QA for content-on
     'docs/superpowers/specs/2026-06-21-aipedia-decision-content-loop.md',
     'PAGE_REFRESH_LEDGER.md',
     'src/content/categories/ai-automation.md',
-    'src/content/comparisons/n8n-vs-make-vs-zapier.md',
-    'src/content/tools/make.md',
-    'src/content/tools/n8n.md',
+    'src/content/comparisons/activepieces-vs-zapier.md',
+    'src/content/tools/activepieces.md',
+    'src/content/tools/zapier.md',
     'src/data/coverage-backlog.json',
     'src/data/source-registry.json',
     'src/pages/categories/index.astro',
@@ -178,10 +178,10 @@ test('check-smart replaces broad visual smoke with exact route QA for content-on
     '--route /categories/',
     '--route /categories/ai-automation/',
     '--route /compare/',
-    '--route /compare/n8n-vs-make-vs-zapier/',
+    '--route /compare/activepieces-vs-zapier/',
     '--route /tools/',
-    '--route /tools/make/',
-    '--route /tools/n8n/',
+    '--route /tools/activepieces/',
+    '--route /tools/zapier/',
   ].join(' ')));
   assert.ok(!plan.smoke_routes.some((route) => route.command === 'npm run smoke:visual'));
 });
@@ -260,7 +260,7 @@ test('check-smart routes Phase 3 model, category, motion, and token surfaces', (
   assert.ok(categoryPlan.smoke_routes.some((route) => route.route === '/categories/ai-coding/'));
   assert.ok(categoryPlan.smoke_routes.some((route) => route.route === '/categories/ai-coding/' && route.command === 'npm run qa:route'));
 
-  const comparePlan = planForPaths(['src/content/comparisons/n8n-vs-make-vs-zapier.md']);
+  const comparePlan = planForPaths(['src/content/comparisons/activepieces-vs-zapier.md']);
   assert.ok(comparePlan.surfaces.some((surface) => surface.id === 'phase3-compare-decision-surfaces'));
   assert.ok(comparePlan.checks.includes('decision-pick'));
   assert.ok(comparePlan.checks.includes('tool-page-model'));
@@ -268,9 +268,9 @@ test('check-smart routes Phase 3 model, category, motion, and token surfaces', (
   assert.ok(comparePlan.commands.includes('npm run audit:generated-models'));
   assert.equal(comparePlan.broad_smoke_replaced_by_route_qa, true);
   assert.ok(!comparePlan.smoke_routes.some((route) => route.route === '/compare/chatgpt-vs-claude/'));
-  assert.ok(comparePlan.smoke_routes.some((route) => route.route === '/compare/n8n-vs-make-vs-zapier/' && route.command === 'npm run qa:route'));
-  assert.ok(comparePlan.commands.includes('npm run qa:route -- --route /compare/n8n-vs-make-vs-zapier/'));
-  assert.ok(comparePlan.commands.indexOf('npm run build:fast') < comparePlan.commands.indexOf('npm run qa:route -- --route /compare/n8n-vs-make-vs-zapier/'));
+  assert.ok(comparePlan.smoke_routes.some((route) => route.route === '/compare/activepieces-vs-zapier/' && route.command === 'npm run qa:route'));
+  assert.ok(comparePlan.commands.includes('npm run qa:route -- --route /compare/activepieces-vs-zapier/'));
+  assert.ok(comparePlan.commands.indexOf('npm run build:fast') < comparePlan.commands.indexOf('npm run qa:route -- --route /compare/activepieces-vs-zapier/'));
   assert.ok(!comparePlan.commands.includes('npm run smoke:visual'));
 
   const motionPlan = planForPaths(['src/lib/motion-controller.ts']);
@@ -305,15 +305,15 @@ test('check-smart points browser checks at fresh fast-build output after build:f
 test('check-smart executes one route QA command for every changed content route', () => {
   const plan = planForPaths([
     'src/content/categories/ai-automation.md',
-    'src/content/comparisons/n8n-vs-make-vs-zapier.md',
-    'src/content/tools/make.md',
-    'src/content/tools/n8n.md',
+    'src/content/comparisons/activepieces-vs-zapier.md',
+    'src/content/tools/activepieces.md',
+    'src/content/tools/zapier.md',
   ]);
 
   const routeQaCommands = plan.commands.filter((command) => command.startsWith('npm run qa:route'));
 
   assert.deepEqual(routeQaCommands, [
-    'npm run qa:route -- --route /categories/ai-automation/ --route /compare/n8n-vs-make-vs-zapier/ --route /tools/make/ --route /tools/n8n/',
+    'npm run qa:route -- --route /categories/ai-automation/ --route /compare/activepieces-vs-zapier/ --route /tools/activepieces/ --route /tools/zapier/',
   ]);
   assert.ok(plan.commands.indexOf('npm run build:fast') < plan.commands.indexOf(routeQaCommands[0]));
   assert.ok(!plan.commands.includes('npm run smoke:visual'));

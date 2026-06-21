@@ -253,7 +253,7 @@ Yes, but with honest positioning. They are useful for budget testing, effects, o
 - [Best AI avatar video generator guide](/guides/best-ai-avatar-video-generator/)
 - [Runway alternatives guide](/guides/runway-alternatives/)
 - [Best Synthesia alternatives](/guides/synthesia-alternatives/)
-- [Runway vs Kling vs Seedance vs Veo](/compare/kling-vs-seedance-vs-runway/)
+- Use this hub and the video generator guide for multi-model routing across Runway, Kling, Seedance, and Veo instead of recreating one broad multi-tool `vs` page.
 - [Seedance 2.0](/tools/seedance/)
 - [Kling 3.0](/tools/kling/)
 - [Google Veo 3.1](/tools/veo/)

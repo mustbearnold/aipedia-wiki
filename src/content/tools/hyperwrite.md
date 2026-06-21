@@ -90,6 +90,7 @@ price_history:
     source: "https://www.hyperwriteai.com/pricing"
     source_label: "Source"
     source_id: hyperwrite-pricing
+    verified_at: 2026-06-12
     note: "Premium and Ultra tiers verified at $19.99 and $44.99 monthly."
   - date: 2026-05-13
     plan: "Premium / Ultra"
@@ -97,6 +98,7 @@ price_history:
     source: "https://www.hyperwriteai.com/pricing"
     source_label: "Source"
     source_id: hyperwrite-pricing
+    verified_at: 2026-06-12
     note: "Pricing page now publishes a 250 AI messages per month limit on Premium plus 3 custom personas and citations with real-time info. Ultra moves to unlimited AI messages, 10 custom personas, and first access to experimental features. Annual billing saves 20%: $192/yr Premium ($16/mo equivalent), $348/yr Ultra ($29/mo equivalent)."
   - date: 2026-06-02
     plan: "Premium / Ultra"
@@ -104,6 +106,7 @@ price_history:
     source: "https://www.hyperwriteai.com/pricing"
     source_label: "Source"
     source_id: hyperwrite-pricing
+    verified_at: 2026-06-12
     note: "Pricing page rechecked after a May 20, 2026 publish timestamp. Premium remains 250 AI messages/month with unlimited TypeAheads, citations with real-time info, and 3 custom personas; Ultra remains unlimited AI messages, 10 custom personas, and first access to experimental features."
   - date: 2026-06-05
     plan: "Premium / Ultra"
@@ -111,6 +114,7 @@ price_history:
     source: "https://www.hyperwriteai.com/pricing"
     source_label: "Source"
     source_id: hyperwrite-pricing
+    verified_at: 2026-06-12
     note: "Rechecked during the HyperWrite comparison refresh. Premium and Ultra prices, AI-message limits, TypeAhead access, citations with real-time info, and persona limits remain unchanged from the June 2 check."
 ---
 
@@ -236,4 +240,3 @@ HyperWrite routes to third-party models rather than publishing a proprietary bas
 ## Related
 
 - **Category:** [AI Writing](/categories/ai-writing/)
-- **Comparisons:** [Grammarly vs HyperWrite](/compare/grammarly-vs-hyperwrite/), [HyperWrite vs QuillBot](/compare/hyperwrite-vs-quillbot/), [HyperWrite vs Wordtune](/compare/hyperwrite-vs-wordtune/)

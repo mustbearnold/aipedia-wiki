@@ -26,7 +26,7 @@ test('stale fact guard exposes JSON output for baseline audits', () => {
   assert.deepEqual(data.argument_issues, []);
   assert.equal(data.totals.required_tools, 10);
   assert.equal(data.totals.failures, 0);
-  assert.ok(data.totals.comparisons_scanned >= 90);
+  assert.ok(data.totals.comparisons_scanned >= 60);
   assert.ok(Array.isArray(data.failures));
 });
 

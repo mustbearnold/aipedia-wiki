@@ -94,6 +94,7 @@ price_history:
     source: "https://mistral.ai/news/voxtral"
     source_label: "Mistral Voxtral launch"
     source_id: voxtral-pricing
+    verified_at: 2026-06-12
     note: "Original Voxtral launch positioned the family as open-weight speech understanding with hosted transcription pricing materially below Whisper and ElevenLabs Scribe."
   - date: 2026-05-13
     plan: "Mini Transcribe V2 / Realtime"
@@ -101,6 +102,7 @@ price_history:
     source: "https://docs.mistral.ai/studio-api/audio/speech_to_text"
     source_label: "Mistral speech-to-text docs"
     source_id: voxtral-docs
+    verified_at: 2026-06-12
     note: "Production STT lineup documented as Voxtral Mini Transcribe V2 for batch and Voxtral Realtime for live transcription."
   - date: 2026-06-03
     plan: "Voxtral TTS v26.03"
@@ -108,6 +110,7 @@ price_history:
     source: "https://mistral.ai/pricing"
     source_label: "Mistral pricing"
     source_id: mistral-pricing
+    verified_at: 2026-06-12
     note: "Mistral pricing now lists Voxtral TTS v26.03 as an audio generation model with $0 input and $16/M output characters, equivalent to $0.016 per 1k characters."
   - date: 2026-06-03
     plan: "Voxtral Mini Transcribe 2"
@@ -115,6 +118,7 @@ price_history:
     source: "https://mistral.ai/pricing"
     source_label: "Mistral pricing"
     source_id: mistral-pricing
+    verified_at: 2026-06-12
     note: "Mistral pricing lists Mini Transcribe 2 as the current transcription price anchor; verify before production because audio prices can move quickly."
   - date: 2026-06-05
     plan: "Voxtral TTS / Mini Transcribe 2"
@@ -122,6 +126,7 @@ price_history:
     source: "https://mistral.ai/pricing"
     source_label: "Mistral pricing"
     source_id: mistral-pricing
+    verified_at: 2026-06-12
     note: "Comparison refresh rechecked Voxtral against Descript and removed stale/fake creator-app claims. Voxtral remains a Mistral audio model family, not a Descript-style editor."
 ---
 
@@ -254,4 +259,4 @@ Cartesia is stronger for managed, low-latency production voice agents. Voxtral i
 ## Related
 
 - **Category:** [AI Voice / Speech](/categories/ai-voice/)
-- **Comparisons:** [Cartesia vs Voxtral](/compare/cartesia-vs-voxtral/), [ElevenLabs vs Voxtral](/compare/elevenlabs-vs-voxtral/), [Fish Audio vs Voxtral](/compare/fish-audio-vs-voxtral/)
+- **Comparisons:** [Cartesia vs Voxtral](/compare/cartesia-vs-voxtral/), [Fish Audio vs Voxtral](/compare/fish-audio-vs-voxtral/)

@@ -89,6 +89,7 @@ price_history:
     source: "https://www.connectedpapers.com/pricing"
     source_label: "Source"
     source_id: connected-papers-pricing
+    verified_at: 2026-06-18
     note: "Verified. Billed annually for unlimited graphs."
   - date: 2026-05-13
     plan: "Free / Academic"
@@ -96,6 +97,7 @@ price_history:
     source: "https://www.connectedpapers.com/pricing"
     source_label: "Source"
     source_id: connected-papers-pricing
+    verified_at: 2026-06-18
     note: "Re-verified unchanged. Free tier still capped at 5 graphs/month; Academic still cheapest paid productivity upgrade in research tooling."
   - date: 2026-06-02
     plan: "Free / Academic / Business"
@@ -103,6 +105,7 @@ price_history:
     source: "https://www.connectedpapers.com/pricing"
     source_label: "Connected Papers pricing"
     source_id: connected-papers-pricing
+    verified_at: 2026-06-18
     note: "Re-verified current public pricing: Free 5 graphs/month; Academic and Business both unlock unlimited graphs, billed $36 and $120 annually respectively."
   - date: 2026-06-18
     plan: "Free / Academic / Business"
@@ -110,6 +113,7 @@ price_history:
     source: "https://www.connectedpapers.com/pricing"
     source_label: "Connected Papers pricing"
     source_id: connected-papers-pricing
+    verified_at: 2026-06-18
     note: "Current pricing page shows Free sign-up with 5 graphs/month, Academic at USD 6/month billed annually, and Business at USD 20/month billed annually."
 ---
 
@@ -236,4 +240,3 @@ Minimal. Single-user workflow by design. Teams needing shared literature librari
 ## Related
 
 - **Category:** [AI Research](/categories/ai-research/)
-- **Comparisons:** [Connected Papers vs Semantic Scholar](/compare/connected-papers-vs-semantic-scholar/) | [Connected Papers vs Elicit](/compare/connected-papers-vs-elicit/) | [Connected Papers vs Consensus](/compare/connected-papers-vs-consensus/)

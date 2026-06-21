@@ -568,4 +568,3 @@ Yes. Agent mode in VS Code and the Coding Agent both support the Model Context P
 
 - **Category:** [AI Coding](/categories/ai-coding/)
 - **Alternatives:** [Cursor](/tools/cursor/) · [Claude Code](/tools/claude-code/) · [Cline](/tools/cline/) · [Aider](/tools/aider/) · [Windsurf](/tools/windsurf/) · [Continue](/tools/continue/)
-- **Comparisons:** [Cursor vs Claude Code vs GitHub Copilot](/compare/cursor-vs-claude-code-vs-copilot/) · [Cursor vs GitHub Copilot](/compare/cursor-vs-github-copilot/) · [Claude Code vs GitHub Copilot](/compare/claude-code-vs-github-copilot/)

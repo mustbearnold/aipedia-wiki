@@ -132,7 +132,7 @@ Additional loop commands:
 - `npm run qa:route`: reusable route QA across mobile, tablet, and desktop widths.
 - `npm run loop:record`: durable run receipt under `.agent/loop-runs/`.
 
-Current implementation status: the stricter June 21 cleanup deleted 179 comparison files in total, including false-vs pages and multi-tool pages that should only be rebuilt as focused two-tool direct-substitute pages. It also added 127 blocked pairs for known same-category false-vs traps. The false-vs guard now skips Descript vs Grok, Mistral AI vs Poe, and similar different-workflow pairs. The `activepieces-vs-n8n` cycle is complete, including a guard-test fixture update for the post-cleanup comparison inventory. `npm run loop:next -- --json` currently selects `activepieces-vs-zapier`.
+Current implementation status: the stricter June 21 cleanup deleted false-vs comparison files, removed stale public links, and added blocked pairs for known same-category false-vs traps. The selector now uses explicit workflow-family lanes for broad categories, so same primary category alone is not enough for automatic publication. The `activepieces-vs-n8n` and `activepieces-vs-zapier` cycles are complete. The Activepieces/Zapier run also updated post-cleanup guard fixtures through an accepted Guard Challenge, backfilled changed-file provenance gaps, fixed a 360 px overflow issue on `/tools/pika/`, and recorded `.agent/loop-runs/2026-06-21-activepieces-vs-zapier.md`. `npm run loop:next -- --json` currently selects `amazon-q-vs-github-copilot`.
 
 ## First Cycle
 

@@ -243,4 +243,4 @@ Enterprise includes SOC 2 Type II, GDPR, CCPA, PCI, SSO, SCIM provisioning, audi
 ## Related
 
 - **Category:** [AI Presentation Tools](/categories/ai-presentation/)
-- **Comparisons:** [Beautiful.ai vs Gamma](/compare/beautiful-ai-vs-gamma/) · [Beautiful.ai vs Pitch](/compare/beautiful-ai-vs-pitch/) · [Beautiful.ai vs Tome](/compare/beautiful-ai-vs-tome/) · [Beautiful.ai vs Presentations.AI](/compare/beautiful-ai-vs-presentations-ai/) · [Beautiful.ai vs Decktopus AI](/compare/beautiful-ai-vs-decktopus/)
+- **Comparisons:** [Beautiful.ai vs Gamma](/compare/beautiful-ai-vs-gamma/) · [Beautiful.ai vs Pitch](/compare/beautiful-ai-vs-pitch/) · [Beautiful.ai vs Presentations.AI](/compare/beautiful-ai-vs-presentations-ai/) · [Beautiful.ai vs Decktopus AI](/compare/beautiful-ai-vs-decktopus/)

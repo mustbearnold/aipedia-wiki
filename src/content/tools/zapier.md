@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: $0-$69+/month
 status: active
 launched: 2012-01
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-21
+last_verified: 2026-06-21
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -32,7 +32,7 @@ facts:
     source: "https://zapier.com/ai"
     source_label: "Zapier AI"
     source_id: zapier-ai
-    verified_at: 2026-06-12
+    verified_at: 2026-06-21
     volatility: high
     confidence: high
     next_review_at: 2026-09-04
@@ -41,7 +41,7 @@ facts:
     source: "https://zapier.com/ai"
     source_label: "Zapier AI"
     source_id: zapier-ai
-    verified_at: 2026-06-12
+    verified_at: 2026-06-21
     volatility: low
     confidence: high
     next_review_at: 2026-09-04
@@ -50,7 +50,7 @@ facts:
     source: "https://zapier.com/pricing"
     source_label: "Zapier pricing"
     source_id: zapier-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-21
     volatility: high
     confidence: high
     next_review_at: 2026-09-04
@@ -59,7 +59,7 @@ facts:
     source: "https://zapier.com/pricing"
     source_label: "Zapier pricing"
     source_id: zapier-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-21
     volatility: high
     confidence: high
     next_review_at: 2026-09-04
@@ -68,7 +68,7 @@ facts:
     source: "https://zapier.com/pricing"
     source_label: "Zapier pricing"
     source_id: zapier-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-21
     volatility: high
     confidence: high
     next_review_at: 2026-09-04
@@ -77,7 +77,7 @@ facts:
     source: "https://zapier.com/apps"
     source_label: "Zapier apps directory"
     source_id: zapier-apps
-    verified_at: 2026-06-12
+    verified_at: 2026-06-21
     volatility: medium
     confidence: high
   image_generation:
@@ -85,7 +85,7 @@ facts:
     source: "https://zapier.com/apps"
     source_label: "Zapier apps directory"
     source_id: zapier-apps
-    verified_at: 2026-06-12
+    verified_at: 2026-06-21
     volatility: medium
     confidence: high
   video_generation:
@@ -93,7 +93,7 @@ facts:
     source: "https://zapier.com/apps"
     source_label: "Zapier apps directory"
     source_id: zapier-apps
-    verified_at: 2026-06-12
+    verified_at: 2026-06-21
     volatility: medium
     confidence: high
   real_time_voice:
@@ -101,7 +101,7 @@ facts:
     source: "https://zapier.com/apps"
     source_label: "Zapier apps directory"
     source_id: zapier-apps
-    verified_at: 2026-06-12
+    verified_at: 2026-06-21
     volatility: low
     confidence: high
   web_browsing:
@@ -109,7 +109,7 @@ facts:
     source: "https://zapier.com/ai"
     source_label: "Zapier AI"
     source_id: zapier-ai
-    verified_at: 2026-06-12
+    verified_at: 2026-06-21
     volatility: medium
     confidence: high
   coding_agent:
@@ -117,7 +117,7 @@ facts:
     source: "https://zapier.com/blog/zapier-agents-guide/"
     source_label: "Zapier Agents guide"
     source_id: zapier-agents-guide
-    verified_at: 2026-06-12
+    verified_at: 2026-06-21
     volatility: medium
     confidence: high
   enterprise_controls:
@@ -125,7 +125,7 @@ facts:
     source: "https://zapier.com/pricing"
     source_label: "Zapier pricing"
     source_id: zapier-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-21
     volatility: high
     confidence: high
     next_review_at: 2026-09-04
@@ -134,7 +134,7 @@ facts:
     source: "https://zapier.com/pricing"
     source_label: "Zapier pricing"
     source_id: zapier-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-21
     volatility: medium
     confidence: high
   open_source_or_local:
@@ -142,7 +142,7 @@ facts:
     source: "https://zapier.com/pricing"
     source_label: "Zapier pricing"
     source_id: zapier-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-21
     volatility: low
     confidence: high
   best_for:
@@ -150,7 +150,7 @@ facts:
     source: "https://zapier.com/apps"
     source_label: "Zapier apps directory"
     source_id: zapier-apps
-    verified_at: 2026-06-12
+    verified_at: 2026-06-21
     volatility: medium
     confidence: high
   watch_out_for:
@@ -158,7 +158,7 @@ facts:
     source: "https://zapier.com/pricing"
     source_label: "Zapier pricing"
     source_id: zapier-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-21
     volatility: high
     confidence: high
     next_review_at: 2026-09-04
@@ -177,7 +177,7 @@ not_best_for:
   - self-hosting or data-residency needs
   - complex branching and looping logic
 quick_answer: >-
-  Zapier is the automation incumbent. Pick it for the widest integration library and lowest learning curve. Skip for high-volume workflows (Make is cheaper), self-hosting (n8n is free), or complex branching (Make handles it cleaner).
+  Zapier is the automation incumbent. Pick it for the widest integration library and lowest learning curve. Skip for high-volume workflows (Make is cheaper), self-hosting (Activepieces or n8n), or complex branching (Make handles it cleaner).
 price_history:
   - date: 2026-05-10
     plan: "Professional"
@@ -185,6 +185,7 @@ price_history:
     source: "https://zapier.com/pricing"
     source_label: "Zapier pricing"
     source_id: zapier-pricing
+    verified_at: 2026-06-21
     note: "Starting annual price for Professional plan with 750 tasks/month."
   - date: 2026-05-10
     plan: "Team"
@@ -192,6 +193,7 @@ price_history:
     source: "https://zapier.com/pricing"
     source_label: "Zapier pricing"
     source_id: zapier-pricing
+    verified_at: 2026-06-21
     note: "Starting annual price for Team plan with collaboration, shared folders, and SAML SSO."
   - date: 2026-06-04
     plan: "Public ladder"
@@ -199,7 +201,16 @@ price_history:
     source: "https://zapier.com/pricing"
     source_label: "Zapier pricing"
     source_id: zapier-pricing
+    verified_at: 2026-06-21
     note: "Reverified Free, Professional, Team, and Enterprise public pricing plus AI orchestration positioning across Zaps, Tables, Forms, MCP, Copilot, and Agents."
+  - date: 2026-06-21
+    plan: "Public ladder"
+    price: "$0-$69+/mo annual; Enterprise custom"
+    source: "https://zapier.com/pricing"
+    source_label: "Zapier pricing"
+    source_id: zapier-pricing
+    verified_at: 2026-06-21
+    note: "Reverified Free 100 tasks, Professional from $19.99/month annually, Team from $69/month annually, Enterprise custom, 9,000+ apps, AI products on pricing, and Zapier MCP's 30,000+ action positioning."
 ---
 
 # Zapier
@@ -230,7 +241,7 @@ Pricing runs from Free to Professional, Team, and Enterprise. Professional start
 | **Self-host** | None |
 | **Data residency** | Cloud only, Zapier servers |
 
-Every data point above was verified against vendor sources on 2026-06-12. See Sources.
+Every data point above was verified against vendor sources on 2026-06-21. See Sources.
 
 ## What it actually is
 
@@ -251,7 +262,7 @@ The moat is integration breadth. Competitors land at 2,000 to 3,000 connectors. 
 ## When to pick something else
 
 - **High-volume workflows or complex branching:** [Make](/tools/make/). Operations-based pricing stays flat while Zapier tasks stack up. Routers and iterators handle loops more cleanly.
-- **Self-hosting, data residency, or zero vendor lock-in:** [n8n](/tools/n8n/). Free self-hosted with unlimited executions. Full workflow export.
+- **Self-hosting, data residency, or zero vendor lock-in:** [Activepieces](/tools/activepieces/) for MIT-licensed workflow automation, or [n8n](/tools/n8n/) for deeper technical workflow operations.
 - **Building LangChain-style RAG or multi-agent pipelines:** [Langflow](/tools/langflow/). Visual canvas for LLM chains, not SaaS glue.
 - **Customer-facing conversational agents:** [Voiceflow](/tools/voiceflow/). Purpose-built for support chat and voice, not workflow automation.
 - **Code-first automation with full control:** n8n self-hosted or direct API integration.
@@ -267,7 +278,7 @@ Subscription pricing via [zapier.com/pricing](https://zapier.com/pricing). Annua
 | Team | $69+ | Shared task tier | Shared Zaps/folders/connections, SAML SSO, premier support | Collaborative teams |
 | Enterprise | Custom | Annual task limits | Advanced admin, observability, governance, technical account manager | Enterprise governance |
 
-*Prices verified 2026-06-12 via [Zapier pricing](https://zapier.com/pricing). Monthly billing runs higher than the annual rates shown. Task counts scale with selected task tier and add-ons.*
+*Prices verified 2026-06-21 via [Zapier pricing](https://zapier.com/pricing). Monthly billing runs higher than the annual rates shown. Task counts scale with selected task tier and add-ons.*
 
 ## Against the alternatives
 
@@ -294,7 +305,7 @@ Subscription pricing via [zapier.com/pricing](https://zapier.com/pricing). Annua
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-12 against the [Zapier pricing page](https://zapier.com/pricing), Zapier pricing documentation, and Zapier's AI orchestration materials.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-21 against the [Zapier pricing page](https://zapier.com/pricing), Zapier pricing documentation, Zapier's apps directory, Zapier MCP guidance, and Zapier's AI orchestration materials.
 
 ## FAQ
 
@@ -319,8 +330,9 @@ No. Zapier is cloud-only. Data passes through Zapier servers. [n8n](/tools/n8n/)
 - [Zapier Agents guide](https://zapier.com/blog/zapier-agents-guide/): Agent capabilities and pricing model
 - [Zapier AI orchestration](https://zapier.com/ai): Central and cross-product workflows
 - [Zapier apps directory](https://zapier.com/apps): live integration count
+- [Zapier MCP guide](https://zapier.com/blog/zapier-mcp-guide/): MCP action-library positioning
 
 ## Related
 
 - **Category:** [AI Automation](/categories/ai-automation/)
-- **Comparisons:** [n8n vs Make vs Zapier](/compare/n8n-vs-make-vs-zapier/)
+- **Comparison:** [Activepieces vs Zapier](/compare/activepieces-vs-zapier/)

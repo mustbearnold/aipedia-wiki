@@ -93,6 +93,7 @@ price_history:
     source: "https://pika.art/pricing"
     source_label: "Source"
     source_id: pika-pricing
+    verified_at: 2026-06-12
     note: "Historic paid entry point before 2026 tier restructure"
   - date: 2026-04-17
     plan: "Standard (legacy)"
@@ -100,6 +101,7 @@ price_history:
     source: "https://pika.art/pricing"
     source_label: "Source"
     source_id: pika-pricing
+    verified_at: 2026-06-12
     note: "Pre-restructure pricing snapshot"
   - date: 2026-05-13
     plan: "Basic"
@@ -107,6 +109,7 @@ price_history:
     source: "https://pika.art/pricing"
     source_label: "Source"
     source_id: pika-pricing
+    verified_at: 2026-06-12
     note: "New entry paid tier post-restructure; 80 credits with commercial use"
   - date: 2026-05-13
     plan: "Standard"
@@ -114,6 +117,7 @@ price_history:
     source: "https://pika.art/pricing"
     source_label: "Source"
     source_id: pika-pricing
+    verified_at: 2026-06-12
     note: "Restructured Standard now lists 700 credits, all resolutions, Pikaframes"
   - date: 2026-05-13
     plan: "Pro"
@@ -121,6 +125,7 @@ price_history:
     source: "https://pika.art/pricing"
     source_label: "Source"
     source_id: pika-pricing
+    verified_at: 2026-06-12
     note: "Restructured Pro at 2,300 credits with faster generations"
   - date: 2026-05-13
     plan: "Fancy"
@@ -128,6 +133,7 @@ price_history:
     source: "https://pika.art/pricing"
     source_label: "Source"
     source_id: pika-pricing
+    verified_at: 2026-06-12
     note: "New top tier with 6,000 credits and fastest generations"
 ---
 
@@ -259,4 +265,3 @@ Yes, but treat API access as a separate/custom route. Standard and Pro users sho
 ## Related
 
 - **Category:** [AI Video Generation](/categories/ai-video/)
-- **Comparisons:** [Pika vs Runway](/compare/pika-vs-runway/) · [Kling vs Pika](/compare/kling-vs-pika/) · [Pika vs Seedance](/compare/pika-vs-seedance/)

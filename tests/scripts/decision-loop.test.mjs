@@ -29,17 +29,17 @@ function writeFixtureProject({ existingComparison = false, generatedAt = '2026-0
           comparisons: [
             {
               kind: 'comparison',
-              slug: 'canva-vs-claude',
-              tools: ['canva', 'claude'],
-              shared_categories: ['ai-design'],
+              slug: 'activepieces-vs-zapier',
+              tools: ['activepieces', 'zapier'],
+              shared_categories: ['ai-automation'],
               same_category: true,
               both_tier1: true,
               score: 10,
             },
             {
               kind: 'comparison',
-              slug: 'chatgpt-vs-poe',
-              tools: ['chatgpt', 'poe'],
+              slug: 'chatgpt-vs-claude',
+              tools: ['chatgpt', 'claude'],
               shared_categories: ['ai-chatbots'],
               same_category: true,
               both_tier1: true,
@@ -54,10 +54,10 @@ function writeFixtureProject({ existingComparison = false, generatedAt = '2026-0
   );
 
   for (const [slug, title, category] of [
-    ['canva', 'Canva', 'ai-design'],
-    ['claude', 'Claude', 'ai-design'],
+    ['activepieces', 'Activepieces', 'ai-automation'],
+    ['zapier', 'Zapier', 'ai-automation'],
     ['chatgpt', 'ChatGPT', 'ai-chatbots'],
-    ['poe', 'Poe', 'ai-chatbots'],
+    ['claude', 'Claude', 'ai-chatbots'],
   ]) {
     writeFileSync(
       join(dir, 'src', 'content', 'tools', `${slug}.md`),
@@ -65,14 +65,14 @@ function writeFixtureProject({ existingComparison = false, generatedAt = '2026-0
     );
   }
 
-  for (const category of ['ai-design', 'ai-chatbots']) {
+  for (const category of ['ai-automation', 'ai-chatbots']) {
     writeFileSync(join(dir, 'src', 'content', 'categories', `${category}.md`), `---\nslug: ${category}\ntitle: ${category}\n---\n`);
   }
 
   if (existingComparison) {
     writeFileSync(
-      join(dir, 'src', 'content', 'comparisons', 'canva-vs-claude.md'),
-      '---\ntype: comparison\nslug: canva-vs-claude\ntitle: Canva vs Claude\ntools: [claude, canva]\n---\n',
+      join(dir, 'src', 'content', 'comparisons', 'activepieces-vs-zapier.md'),
+      '---\ntype: comparison\nslug: activepieces-vs-zapier\ntitle: Activepieces vs Zapier\ntools: [activepieces, zapier]\n---\n',
     );
   }
 
@@ -93,16 +93,16 @@ test('decision loop emits the next cluster as JSON', () => {
     assert.equal(report.count, 1);
 
     const [cluster] = report.clusters;
-    assert.equal(cluster.slug, 'canva-vs-claude');
-    assert.equal(cluster.title, 'Canva vs Claude');
-    assert.equal(cluster.requires_canonical_fact_table, true);
-    assert.deepEqual(cluster.canonical_fact_tools, ['claude']);
-    assert.equal(cluster.working_set.comparison, 'src/content/comparisons/canva-vs-claude.md');
-    assert.ok(cluster.working_set.tool_pages.includes('src/content/tools/canva.md'));
-    assert.ok(cluster.working_set.category_pages.includes('src/content/categories/ai-design.md'));
+    assert.equal(cluster.slug, 'activepieces-vs-zapier');
+    assert.equal(cluster.title, 'Activepieces vs Zapier');
+    assert.equal(cluster.requires_canonical_fact_table, false);
+    assert.deepEqual(cluster.canonical_fact_tools, []);
+    assert.equal(cluster.working_set.comparison, 'src/content/comparisons/activepieces-vs-zapier.md');
+    assert.ok(cluster.working_set.tool_pages.includes('src/content/tools/activepieces.md'));
+    assert.ok(cluster.working_set.category_pages.includes('src/content/categories/ai-automation.md'));
     assert.equal(cluster.working_set.source_registry, 'src/data/source-registry.json');
-    assert.ok(cluster.discovery_commands.some((command) => command.includes('rg -n "canva|claude|canva-vs-claude"')));
-    assert.equal(cluster.route_qa.route, '/compare/canva-vs-claude/');
+    assert.ok(cluster.discovery_commands.some((command) => command.includes('rg -n "activepieces|zapier|activepieces-vs-zapier"')));
+    assert.equal(cluster.route_qa.route, '/compare/activepieces-vs-zapier/');
     assert.deepEqual(cluster.route_qa.widths, [360, 390, 430, 768, 1024, 1366]);
     assert.ok(cluster.route_qa.checks.some((check) => /desktop 1024 and 1366/.test(check)));
     assert.ok(cluster.verification_commands.includes('npm run audit:coverage-quality:changed'));
@@ -140,7 +140,7 @@ test('decision loop skips comparison pairs that already exist', () => {
 
     const report = JSON.parse(result.stdout);
     assert.equal(report.ok, true);
-    assert.equal(report.clusters[0].slug, 'chatgpt-vs-poe');
+    assert.equal(report.clusters[0].slug, 'chatgpt-vs-claude');
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }
@@ -177,8 +177,8 @@ test('decision loop skips stale false-vs backlog entries', () => {
               },
               {
                 kind: 'comparison',
-                slug: 'chatgpt-vs-poe',
-                tools: ['chatgpt', 'poe'],
+                slug: 'chatgpt-vs-claude',
+                tools: ['chatgpt', 'claude'],
                 shared_categories: ['ai-chatbots'],
                 same_category: true,
                 both_tier1: true,
@@ -197,7 +197,159 @@ test('decision loop skips stale false-vs backlog entries', () => {
 
     const report = JSON.parse(result.stdout);
     assert.equal(report.ok, true);
-    assert.equal(report.clusters[0].slug, 'chatgpt-vs-poe');
+    assert.equal(report.clusters[0].slug, 'chatgpt-vs-claude');
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('decision loop skips same-category pairs without a shared workflow lane', () => {
+  const dir = writeFixtureProject();
+
+  try {
+    writeFileSync(
+      join(dir, 'src', 'content', 'tools', 'ada.md'),
+      '---\nslug: ada\ntitle: Ada\ncategory: ai-automation\nstatus: active\n---\n',
+    );
+    writeFileSync(
+      join(dir, 'src', 'content', 'tools', 'n8n.md'),
+      '---\nslug: n8n\ntitle: n8n\ncategory: ai-automation\nstatus: active\n---\n',
+    );
+    writeFileSync(join(dir, 'src', 'content', 'categories', 'ai-automation.md'), '---\nslug: ai-automation\ntitle: Automation\n---\n');
+    writeFileSync(
+      join(dir, 'src', 'data', 'comparison-policy.json'),
+      `${JSON.stringify(
+        {
+          workflow_lanes: {
+            'ai-automation': {
+              customer_support_automation: ['ada'],
+              general_app_automation: ['n8n'],
+            },
+          },
+          blocked_pairs: [],
+        },
+        null,
+        2,
+      )}\n`,
+    );
+    writeFileSync(
+      join(dir, 'src', 'data', 'coverage-backlog.json'),
+      `${JSON.stringify(
+        {
+          ok: true,
+          generated_at: '2026-06-21T00:00:00.000Z',
+          backlog: {
+            comparisons: [
+              {
+                kind: 'comparison',
+                slug: 'ada-vs-n8n',
+                tools: ['ada', 'n8n'],
+                shared_categories: ['ai-automation'],
+                same_category: true,
+                comparison_mode: 'direct',
+                score: 10,
+              },
+              {
+                kind: 'comparison',
+                slug: 'chatgpt-vs-claude',
+                tools: ['chatgpt', 'claude'],
+                shared_categories: ['ai-chatbots'],
+                same_category: true,
+                comparison_mode: 'direct',
+                score: 9,
+              },
+            ],
+          },
+        },
+        null,
+        2,
+      )}\n`,
+    );
+
+    const result = runDecisionLoop('--json', `--project-dir=${dir}`);
+    assert.equal(result.status, 0, result.stderr);
+
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, true);
+    assert.equal(report.clusters[0].slug, 'chatgpt-vs-claude');
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('decision loop skips stale broad image pairs without a shared workflow lane', () => {
+  const dir = writeFixtureProject();
+
+  try {
+    for (const [slug, title] of [
+      ['adobe-firefly', 'Adobe Firefly'],
+      ['clipdrop', 'Clipdrop'],
+      ['meshy', 'Meshy'],
+      ['tripo3d', 'Tripo3D'],
+    ]) {
+      writeFileSync(
+        join(dir, 'src', 'content', 'tools', `${slug}.md`),
+        ['---', `slug: ${slug}`, `title: "${title}"`, 'category: ai-image', 'status: active', '---', '', `# ${title}`, ''].join('\n'),
+      );
+    }
+    writeFileSync(join(dir, 'src', 'content', 'categories', 'ai-image.md'), '---\nslug: ai-image\ntitle: AI Image\n---\n');
+    writeFileSync(
+      join(dir, 'src', 'data', 'comparison-policy.json'),
+      `${JSON.stringify(
+        {
+          workflow_lanes: {
+            'ai-image': {
+              creative_cloud_production: ['adobe-firefly'],
+              utility_image_editing: ['clipdrop'],
+              '3d_asset_generation': ['meshy', 'tripo3d'],
+            },
+          },
+          blocked_pairs: [],
+        },
+        null,
+        2,
+      )}\n`,
+    );
+    writeFileSync(
+      join(dir, 'src', 'data', 'coverage-backlog.json'),
+      `${JSON.stringify(
+        {
+          ok: true,
+          generated_at: '2026-06-21T00:00:00.000Z',
+          backlog: {
+            comparisons: [
+              {
+                kind: 'comparison',
+                slug: 'adobe-firefly-vs-clipdrop',
+                tools: ['adobe-firefly', 'clipdrop'],
+                shared_categories: ['ai-image'],
+                same_category: true,
+                comparison_mode: 'direct',
+                score: 10,
+              },
+              {
+                kind: 'comparison',
+                slug: 'meshy-vs-tripo3d',
+                tools: ['meshy', 'tripo3d'],
+                shared_categories: ['ai-image'],
+                same_category: true,
+                comparison_mode: 'direct',
+                score: 9,
+              },
+            ],
+          },
+        },
+        null,
+        2,
+      )}\n`,
+    );
+
+    const result = runDecisionLoop('--json', `--project-dir=${dir}`);
+    assert.equal(result.status, 0, result.stderr);
+
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, true);
+    assert.equal(report.clusters[0].slug, 'meshy-vs-tripo3d');
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }

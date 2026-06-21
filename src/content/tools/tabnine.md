@@ -108,6 +108,7 @@ price_history:
     source: "https://www.tabnine.com/pricing"
     source_label: "Source"
     source_id: tabnine-pricing
+    verified_at: 2026-06-12
     note: "June 1 recheck: Code Assistant Platform remains $39 per user per month on annual subscription, with IDE completions, chat, Jira integration, deployment flexibility, zero retention, SSO, compliance, and license-safe AI language."
   - date: 2026-06-01
     plan: "Agentic Platform"
@@ -115,6 +116,7 @@ price_history:
     source: "https://www.tabnine.com/pricing"
     source_label: "Source"
     source_id: tabnine-pricing
+    verified_at: 2026-06-12
     note: "June 1 recheck: Agentic Platform remains $59 per user per month on annual subscription and adds autonomous agents, Tabnine CLI, Context Engine, MCP tooling, and optional Headless Agents."
   - date: 2026-04-15
     plan: "Enterprise"
@@ -122,6 +124,7 @@ price_history:
     source: "https://www.tabnine.com/pricing"
     source_label: "Source"
     source_id: tabnine-pricing
+    verified_at: 2026-06-12
     note: "Prior Free, Dev Pro $12, Enterprise $39 structure."
   - date: 2026-05-13
     plan: "Code Assistant Platform"
@@ -129,6 +132,7 @@ price_history:
     source: "https://www.tabnine.com/pricing"
     source_label: "Source"
     source_id: tabnine-pricing
+    verified_at: 2026-06-12
     note: "Tabnine consolidated to two paid tiers: Code Assistant Platform replaces the prior Enterprise tier and remains at $39/user/mo with annual billing."
   - date: 2026-05-13
     plan: "Agentic Platform"
@@ -136,6 +140,7 @@ price_history:
     source: "https://www.tabnine.com/pricing"
     source_label: "Source"
     source_id: tabnine-pricing
+    verified_at: 2026-06-12
     note: "New top tier adds autonomous agents with user oversight, Tabnine CLI for terminal agentic workflows, Tabnine Context Engine with unlimited codebase connections (GitHub, GitLab, Bitbucket, Perforce), MCP tool integration, and optional Headless Agents for CI/CD."
 ---
 
@@ -269,4 +274,4 @@ Yes. Tabnine's pricing and privacy pages describe SaaS, VPC, on-premises, and fu
 ## Related
 
 - **Category:** [AI Coding](/categories/ai-coding/)
-- **Comparisons:** [Cursor vs Tabnine](/compare/cursor-vs-tabnine/) · [GitHub Copilot vs Tabnine](/compare/github-copilot-vs-tabnine/)
+- **Comparisons:** [GitHub Copilot vs Tabnine](/compare/github-copilot-vs-tabnine/)

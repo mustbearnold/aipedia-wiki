@@ -103,6 +103,7 @@ price_history:
     source: "https://aider.chat/docs/"
     source_label: "Source"
     source_id: aider-pricing
+    verified_at: 2026-06-14
     note: "Open-source since launch"
   - date: 2026-04-15
     plan: "License"
@@ -110,6 +111,7 @@ price_history:
     source: "https://aider.chat/docs/"
     source_label: "Source"
     source_id: aider-pricing
+    verified_at: 2026-06-14
     note: "Verified unchanged. BYOK API costs remain the only spend."
   - date: 2026-05-13
     plan: "License"
@@ -117,6 +119,7 @@ price_history:
     source: "https://aider.chat/docs/"
     source_label: "Source"
     source_id: aider-pricing
+    verified_at: 2026-06-14
     note: "Re-verified unchanged in May. BYOK API or local-model costs remain the only spend."
   - date: 2026-06-01
     plan: "License"
@@ -124,6 +127,7 @@ price_history:
     source: "https://aider.chat/docs/"
     source_label: "Source"
     source_id: aider-pricing
+    verified_at: 2026-06-14
     note: "Re-verified June 1, 2026. License unchanged; model choice and token cost depend on Aider's live model docs, provider APIs, and local Ollama setup."
   - date: 2026-06-02
     plan: "License"
@@ -131,6 +135,7 @@ price_history:
     source: "https://aider.chat/docs/"
     source_label: "Aider docs"
     source_id: aider-pricing
+    verified_at: 2026-06-14
     note: "Re-verified during Aider comparison refresh. License unchanged; API or local-model costs remain the spend driver."
 ---
 
@@ -258,4 +263,4 @@ Yes. Every accepted change becomes a git commit with an AI-generated descriptive
 ## Related
 
 - **Category:** [AI Coding](/categories/ai-coding/)
-- **Comparisons:** [Aider vs Claude Code](/compare/aider-vs-claude-code/) · [Aider vs Cursor](/compare/aider-vs-cursor/) · [Aider vs GitHub Copilot](/compare/aider-vs-github-copilot/)
+- **Comparisons:** [Aider vs Claude Code](/compare/aider-vs-claude-code/)

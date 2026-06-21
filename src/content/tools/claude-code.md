@@ -400,4 +400,4 @@ Claude Code is a deeper agentic coding workflow with terminal, IDE, desktop, bro
 ## Related
 
 - **Category:** [AI Coding](/categories/ai-coding/)
-- **Comparisons:** [Cursor vs Claude Code vs Copilot](/compare/cursor-vs-claude-code-vs-copilot/) · [Claude Code vs GitHub Copilot](/compare/claude-code-vs-github-copilot/) · [Claude Code vs Devin](/compare/claude-code-vs-devin/) · [Aider vs Claude Code](/compare/aider-vs-claude-code/) · [Claude Code vs Continue](/compare/claude-code-vs-continue/)
+- **Comparisons:** [Aider vs Claude Code](/compare/aider-vs-claude-code/)

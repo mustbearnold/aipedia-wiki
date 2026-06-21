@@ -83,6 +83,7 @@ price_history:
     source: "https://mubert.com/render/pricing"
     source_label: "Source"
     source_id: mubert-pricing
+    verified_at: 2026-06-12
     note: "Verified via public pricing API."
   - date: 2026-05-13
     plan: "Pro"
@@ -90,6 +91,7 @@ price_history:
     source: "https://mubert.com/render/pricing"
     source_label: "Source"
     source_id: mubert-pricing
+    verified_at: 2026-06-12
     note: "Reverified, unchanged. One-track licenses still $19 to $499."
   - date: 2026-06-06
     plan: "Public pricing table"
@@ -97,6 +99,7 @@ price_history:
     source: "https://mubert.com/render/pricing"
     source_label: "Source"
     source_id: mubert-pricing
+    verified_at: 2026-06-12
     note: "Public page still exposes subscription/perpetual-license paths and licensing disclaimer, but exact price table is app-rendered in the live flow."
 best_for:
   - non-monetized personal videos on Creator
@@ -235,6 +238,5 @@ Mubert has a paid Creator path, but AiPedia could not cleanly reverify the exact
 ## Related
 
 - **Category:** [AI Music](/categories/ai-music/)
-- **Comparisons:** [Mubert vs Suno](/compare/mubert-vs-suno/) · [Mubert vs Udio](/compare/mubert-vs-udio/)
 
 *Some links on this page are affiliate links. We earn a commission at no extra cost to you. This does not influence ratings or recommendations.*

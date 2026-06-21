@@ -92,12 +92,12 @@ test('comparisons API returns populated comparison JSON', async ({ request }) =>
   expect(Array.isArray(data.comparisons)).toBe(true);
   expect(data.comparisons.length).toBe(data.count);
 
-  const comparison = data.comparisons.find((item) => item.slug === 'chatgpt-vs-poe');
+  const comparison = data.comparisons.find((item) => item.slug === 'chatgpt-vs-claude');
   expect(comparison).toMatchObject({
-    slug: 'chatgpt-vs-poe',
+    slug: 'chatgpt-vs-claude',
     title: expect.any(String),
-    tools: expect.arrayContaining(['chatgpt', 'poe']),
-    page_url: 'https://aipedia.wiki/compare/chatgpt-vs-poe/',
+    tools: expect.arrayContaining(['chatgpt', 'claude']),
+    page_url: 'https://aipedia.wiki/compare/chatgpt-vs-claude/',
     category: expect.any(String),
   });
 

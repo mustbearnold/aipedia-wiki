@@ -98,4 +98,3 @@ No. Use both for triage, then inspect methods, populations, limitations, and res
 
 - **Tool pages:** [Consensus](/tools/consensus/) | [Elicit](/tools/elicit/)
 - **Category:** [AI Research Tools](/categories/ai-research/)
-- **Comparisons:** [Connected Papers vs Elicit](/compare/connected-papers-vs-elicit/) | [Consensus vs Semantic Scholar](/compare/consensus-vs-semantic-scholar/)

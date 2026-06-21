@@ -101,6 +101,7 @@ price_history:
     source: "https://www.continue.dev/pricing"
     source_label: "Source"
     source_id: continue-pricing
+    verified_at: 2026-06-12
     note: "Re-verified for the Continue comparison refresh. Public homepage/docs now position Continue around source-controlled AI checks on every pull request; GitHub repo lists Apache-2.0 license."
   - date: 2026-03-01
     plan: "Team"
@@ -108,6 +109,7 @@ price_history:
     source: "https://www.continue.dev/pricing"
     source_label: "Source"
     source_id: continue-pricing
+    verified_at: 2026-06-12
     note: "Team tier restructured with $10 per-seat frontier-model credits included"
   - date: 2026-04-15
     plan: "Solo"
@@ -115,6 +117,7 @@ price_history:
     source: "https://www.continue.dev/pricing"
     source_label: "Source"
     source_id: continue-pricing
+    verified_at: 2026-06-12
     note: "Solo remains free with full open-source extension access"
   - date: 2026-05-13
     plan: "Starter"
@@ -122,6 +125,7 @@ price_history:
     source: "https://www.continue.dev/pricing"
     source_label: "Source"
     source_id: continue-pricing
+    verified_at: 2026-06-12
     note: "Verified pay-as-you-go Starter tier at $3 per million tokens (input and output) with Slack, Sentry, and Snyk integrations. Team holds at $20/seat with $10 bundled credits; Company stays custom."
   - date: 2026-06-01
     plan: "Pricing refresh"
@@ -129,6 +133,7 @@ price_history:
     source: "https://www.continue.dev/pricing"
     source_label: "Source"
     source_id: continue-pricing
+    verified_at: 2026-06-12
     note: "Re-verified June 1, 2026. Continue remains BYOK/open-source for core IDE use; paid Continue tiers cover managed credits, integrations, shared agents, and team governance."
 ---
 
@@ -244,4 +249,3 @@ Start with one narrow check, such as secrets, input validation, deprecated API u
 ## Related
 
 - **Category:** [AI Coding](/categories/ai-coding/)
-- **Comparisons:** [Claude Code vs Continue](/compare/claude-code-vs-continue/) | [Continue vs Cursor](/compare/continue-vs-cursor/) | [Continue vs Devin](/compare/continue-vs-devin/)

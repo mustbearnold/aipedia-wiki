@@ -58,6 +58,7 @@ facts:
     source_label: "Cartesia 2026 changelog"
     source_id: cartesia-changelog-2026
     verified_at: 2026-06-18
+    next_review_at: 2026-08-13
     volatility: high
     confidence: high
   developer_surface:
@@ -99,6 +100,7 @@ price_history:
     source: "https://cartesia.ai/pricing"
     source_label: "Source"
     source_id: cartesia-pricing
+    verified_at: 2026-06-18
     note: "Sonic 3 launch with credit-based pricing"
   - date: 2026-05-13
     plan: "Pro / Startup / Scale"
@@ -106,6 +108,7 @@ price_history:
     source: "https://cartesia.ai/pricing"
     source_label: "Source"
     source_id: cartesia-pricing
+    verified_at: 2026-06-18
     note: "Plan structure rebuilt around the Line agent platform: bundled model credits plus prepaid Agent dollars. TTS rebilled at 15 credits per second of audio; LLM usage during text-to-agent calls is free for a limited time."
   - date: 2026-06-02
     plan: "Sonic-3.5 / Line"
@@ -113,6 +116,7 @@ price_history:
     source: "https://cartesia.ai/pricing"
     source_label: "Cartesia pricing"
     source_id: cartesia-pricing
+    verified_at: 2026-06-18
     note: "Re-verified current plan cards, Sonic-3.5 in plan matrix, TTS at 15 credits/sec, professional voice cloning one-time 225-credit cost, and Cartesia-provided phone numbers at $0.014/min."
   - date: 2026-06-18
     plan: "Sonic-3.5 / Ink-2 / Line"
@@ -120,6 +124,7 @@ price_history:
     source: "https://docs.cartesia.ai/changelog/2026"
     source_label: "Cartesia 2026 changelog"
     source_id: cartesia-changelog-2026
+    verified_at: 2026-06-18
     note: "Refresh moved the buyer story from Sonic-3.5 alone to the Sonic-3.5 plus Ink-2 voice-agent stack. Eligible Line agents now default to Sonic 3.5 TTS and Ink 2 STT, and Cartesia added bring-your-own Twilio account support."
 ---
 
@@ -257,4 +262,4 @@ Yes. The free plan provides 20K model credits and $1 in prepaid Agent dollars fo
 ## Related
 
 - **Category:** [AI Voice / TTS](/categories/ai-voice/)
-- **Comparisons:** [Cartesia vs ElevenLabs](/compare/cartesia-vs-elevenlabs/), [Cartesia vs Fish Audio](/compare/cartesia-vs-fish-audio/), [Cartesia vs Voxtral](/compare/cartesia-vs-voxtral/), [Cartesia vs Resemble AI](/compare/cartesia-vs-resemble-ai/)
+- **Comparisons:** [Cartesia vs ElevenLabs](/compare/cartesia-vs-elevenlabs/), [Cartesia vs Voxtral](/compare/cartesia-vs-voxtral/)

@@ -92,6 +92,7 @@ price_history:
     source: "https://devin.ai/pricing"
     source_label: "Devin pricing"
     source_id: devin-pricing
+    verified_at: 2026-06-12
     note: "June 5 recheck: public pricing now describes paid-plan usage allowances that refresh daily/weekly and extra usage at API pricing. The pricing page also says Windsurf is now Devin Desktop."
   - date: 2026-06-04
     plan: "Team billing wording"
@@ -99,6 +100,7 @@ price_history:
     source: "https://devin.ai/pricing"
     source_label: "Devin pricing"
     source_id: devin-pricing
+    verified_at: 2026-06-12
     note: "Corrected team-plan wording after June 4 recheck. Team is not a simple unlimited-full-developer $80 plan; full dev seats add to the base subscription."
   - date: 2025-04-03
     plan: "Pro"
@@ -106,6 +108,7 @@ price_history:
     source: "https://devin.ai/pricing"
     source_label: "Source"
     source_id: devin-pricing
+    verified_at: 2026-06-12
     note: "Self-serve Pro launched, replacing the old $500 Team-only tier"
   - date: 2026-04-15
     plan: "Teams"
@@ -113,6 +116,7 @@ price_history:
     source: "https://devin.ai/pricing"
     source_label: "Source"
     source_id: devin-pricing
+    verified_at: 2026-06-12
     note: "Teams plan re-priced and unlimited-seat structure introduced"
   - date: 2026-05-13
     plan: "Pro"
@@ -120,6 +124,7 @@ price_history:
     source: "https://devin.ai/pricing"
     source_label: "Source"
     source_id: devin-pricing
+    verified_at: 2026-06-12
     note: "Pricing unchanged. Verified against vendor pricing page on 2026-05-13."
   - date: 2026-06-01
     plan: "Pricing refresh"
@@ -127,6 +132,7 @@ price_history:
     source: "https://devin.ai/pricing"
     source_label: "Source"
     source_id: devin-pricing
+    verified_at: 2026-06-12
     note: "Superseded by the June 5 wording update: public pricing now emphasizes included quotas plus extra usage at API pricing."
 ---
 
@@ -256,4 +262,3 @@ Cognition replaced the old $500 Team-only tier with self-serve Pro at $20/mo in 
 ## Related
 
 - **Category:** [AI Coding](/categories/ai-coding/)
-- **Comparisons:** [Claude Code vs Devin](/compare/claude-code-vs-devin/) · [Continue vs Devin](/compare/continue-vs-devin/) · [Devin vs GitHub Copilot](/compare/devin-vs-github-copilot/)

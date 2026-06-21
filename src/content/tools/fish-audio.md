@@ -90,6 +90,7 @@ price_history:
     source: "https://fish.audio"
     source_label: "Source"
     source_id: fish-audio-pricing
+    verified_at: 2026-06-12
     note: "S2 cloud tiers restructured around minutes of generation"
   - date: 2026-04-15
     plan: "API"
@@ -97,6 +98,7 @@ price_history:
     source: "https://fish.audio"
     source_label: "Source"
     source_id: fish-audio-pricing
+    verified_at: 2026-06-12
     note: "Verified unchanged"
   - date: 2026-06-02
     plan: "Pro"
@@ -104,6 +106,7 @@ price_history:
     source: "https://fish.audio/plan/"
     source_label: "Source"
     source_id: fish-audio-pricing
+    verified_at: 2026-06-12
     note: "Verified Pro at $75/mo, 1,620 minutes (~27 hours). Max tier $749/mo confirmed at 6,250 minutes for sustained agency workloads. API docs list s1 and s2-pro at $15 per 1M UTF-8 bytes."
   - date: 2026-06-05
     plan: "Plus / Pro / API"
@@ -111,6 +114,7 @@ price_history:
     source: "https://fish.audio/plan/"
     source_label: "Source"
     source_id: fish-audio-pricing
+    verified_at: 2026-06-12
     note: "Comparison refresh rechecked Fish Audio against Descript. Fish remains the better path for open-weight/self-hosted or high-volume generated speech; Descript remains the better transcript editor."
 ---
 
@@ -243,4 +247,4 @@ Yes. Both S1 and S2 support cloning from short reference samples. Quality improv
 ## Related
 
 - **Category:** [AI Voice / TTS](/categories/ai-voice/)
-- **Comparisons:** [ElevenLabs vs Fish Audio](/compare/elevenlabs-vs-fish-audio/), [Cartesia vs Fish Audio](/compare/cartesia-vs-fish-audio/), [Fish Audio vs Voxtral](/compare/fish-audio-vs-voxtral/), [Fish Audio vs Resemble AI](/compare/fish-audio-vs-resemble-ai/)
+- **Comparisons:** [ElevenLabs vs Fish Audio](/compare/elevenlabs-vs-fish-audio/), [Fish Audio vs Voxtral](/compare/fish-audio-vs-voxtral/), [Fish Audio vs Resemble AI](/compare/fish-audio-vs-resemble-ai/)

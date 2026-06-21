@@ -543,4 +543,3 @@ Only on eligible API and Claude Code routes. Anthropic says ZDR can cover the Cl
 ## Related
 
 - **Category:** [AI Chatbots](/categories/ai-chatbots/) · [AI Coding](/categories/ai-coding/) · [AI Writing](/categories/ai-writing/)
-- **Comparisons:** [Claude Code vs GitHub Copilot](/compare/claude-code-vs-github-copilot/)

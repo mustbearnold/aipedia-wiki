@@ -74,12 +74,10 @@ const enriched: EnrichedComparison[] = allComparisons.map((c) => {
 
 const priorityComparisonSlugs = [
   'chatgpt-vs-claude',
-  'cursor-vs-github-copilot',
-  'kling-vs-seedance-vs-runway',
+  'activepieces-vs-zapier',
   'veo-vs-seedance',
   'runway-vs-veo',
   'heygen-vs-synthesia',
-  'n8n-vs-make-vs-zapier',
 ];
 const comparisonBySlug = new Map(enriched.map(c => [c.slug, c]));
 const usedFeaturedSlugs = new Set<string>();

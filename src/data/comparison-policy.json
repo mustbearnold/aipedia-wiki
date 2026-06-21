@@ -1,6 +1,393 @@
 {
   "description": "Policy for comparison-page selection. A comparison page must help a buyer choose between tools for the same job, not force unrelated AI products into a fake versus page.",
-  "default_rule": "Auto-select only pairs that share the same primary category. Primary-secondary overlap, secondary-secondary overlap, and broad tier-one cross-category pairs are review-only and must not become published comparison pages.",
+  "default_rule": "Auto-select only pairs that share the same primary category and, when a category has workflow_lanes, also share at least one approved workflow lane. Primary-secondary overlap, secondary-secondary overlap, unclassified broad-category pairs, and broad tier-one cross-category pairs are review-only and must not become published comparison pages.",
+  "workflow_lanes": {
+    "ai-automation": {
+      "general_app_automation": [
+        "activepieces",
+        "zapier",
+        "make",
+        "n8n",
+        "pipedream",
+        "workato"
+      ],
+      "customer_support_automation": [
+        "ada",
+        "intercom",
+        "voiceflow"
+      ],
+      "outbound_gtm_automation": [
+        "apollo",
+        "clay",
+        "instantly",
+        "amplemarket"
+      ],
+      "ai_native_workflow_builder": [
+        "gumloop",
+        "relevance-ai"
+      ],
+      "developer_agent_frameworks": [
+        "ag2",
+        "crewai",
+        "langflow",
+        "langgraph",
+        "letta",
+        "mastra"
+      ]
+    },
+    "ai-image": {
+      "hosted_aesthetic_generation": [
+        "midjourney",
+        "leonardo",
+        "nightcafe"
+      ],
+      "text_or_vector_graphic_generation": [
+        "ideogram",
+        "recraft"
+      ],
+      "open_or_self_hosted_image_models": [
+        "flux",
+        "stable-diffusion"
+      ],
+      "frontier_image_model_apis": [
+        "gpt-image-2",
+        "imagen"
+      ],
+      "quick_image_utility_editing": [
+        "clipdrop"
+      ],
+      "creative_upscaling_and_finishing": [
+        "magnific"
+      ],
+      "adobe_native_commercial_production": [
+        "adobe-firefly"
+      ],
+      "stock_and_asset_production_suite": [
+        "freepik"
+      ],
+      "serverless_media_api_platform": [
+        "fal-ai"
+      ],
+      "realtime_multimodel_creative_workspace": [
+        "krea"
+      ],
+      "consumer_social_image_video_app": [
+        "jimeng"
+      ],
+      "social_design_canvas": [
+        "playground-ai"
+      ],
+      "3d_asset_generation": [
+        "meshy",
+        "rodin",
+        "tripo3d"
+      ]
+    },
+    "ai-coding": {
+      "ai_native_ide_agents": [
+        "antigravity",
+        "cursor",
+        "kiro",
+        "trae",
+        "windsurf",
+        "zed"
+      ],
+      "ide_copilot_extensions": [
+        "amazon-q",
+        "codeium",
+        "cody",
+        "github-copilot",
+        "jetbrains-ai",
+        "supermaven",
+        "tabnine"
+      ],
+      "terminal_repo_agents": [
+        "aider",
+        "augment-code",
+        "claude-code",
+        "cline",
+        "codex"
+      ],
+      "autonomous_swe_agents": [
+        "codex",
+        "devin",
+        "factory",
+        "openhands"
+      ],
+      "pull_request_review_agents": [
+        "coderabbit",
+        "continue",
+        "factory",
+        "qodo"
+      ],
+      "browser_app_builders": [
+        "blackbox-ai",
+        "replit-agent",
+        "same-dev"
+      ],
+      "developer_utility_runtimes": [
+        "pieces",
+        "val-town"
+      ],
+      "developer_agent_frameworks": [
+        "mastra"
+      ]
+    },
+    "ai-music": {
+      "full_song_generation": [
+        "boomy",
+        "suno",
+        "udio"
+      ],
+      "composition_and_scoring": [
+        "aiva"
+      ],
+      "background_music_beds": [
+        "mubert"
+      ],
+      "audio_model_infrastructure": [
+        "stable-audio"
+      ]
+    },
+    "ai-chatbots": {
+      "finished_general_assistants": [
+        "chatgpt",
+        "claude",
+        "gemini",
+        "grok"
+      ],
+      "model_provider_platforms": [
+        "cohere",
+        "deepseek",
+        "doubao",
+        "fireworks-ai",
+        "glm",
+        "groq",
+        "hunyuan",
+        "kimi",
+        "llama",
+        "minimax",
+        "mistral-ai",
+        "qwen",
+        "reka"
+      ],
+      "local_or_self_hosted_chat": [
+        "anythingllm",
+        "jan-ai",
+        "lm-studio",
+        "ollama",
+        "open-webui"
+      ],
+      "multi_model_chat_frontends": [
+        "poe",
+        "typingmind"
+      ],
+      "companion_chat": [
+        "character-ai"
+      ],
+      "customer_support_chat": [
+        "tidio"
+      ]
+    },
+    "ai-video": {
+      "raw_video_generation_models": [
+        "gemini-omni",
+        "hailuo",
+        "higgsfield",
+        "kling",
+        "luma",
+        "pika",
+        "pixverse",
+        "runway",
+        "seedance",
+        "veo",
+        "vidu",
+        "wan"
+      ],
+      "avatar_and_presenter_video": [
+        "argil",
+        "captions",
+        "d-id",
+        "hedra",
+        "heygen",
+        "synthesia",
+        "tavus"
+      ],
+      "prompt_to_social_video": [
+        "invideo"
+      ],
+      "long_form_repurposing": [
+        "opusclip"
+      ]
+    },
+    "ai-voice": {
+      "creator_tts_and_voiceover": [
+        "elevenlabs",
+        "lovo",
+        "murf",
+        "speechify",
+        "wellsaid"
+      ],
+      "voice_cloning_and_model_apis": [
+        "fish-audio",
+        "kokoro",
+        "minimax-speech",
+        "resemble-ai",
+        "voxtral"
+      ],
+      "real_time_voice_agents": [
+        "cartesia",
+        "deepgram",
+        "hume",
+        "hume-ai",
+        "retell-ai",
+        "vapi"
+      ],
+      "speech_to_text_apis": [
+        "assemblyai",
+        "deepgram",
+        "whisper"
+      ],
+      "creator_audio_editing": [
+        "descript",
+        "riverside"
+      ],
+      "dictation_and_voice_writing": [
+        "wispr-flow"
+      ]
+    },
+    "ai-design": {
+      "app_and_website_builders": [
+        "base44",
+        "bolt",
+        "lovable",
+        "rork",
+        "v0"
+      ],
+      "ui_product_design_generators": [
+        "claude-design",
+        "figma",
+        "galileo-ai",
+        "google-stitch",
+        "uizard"
+      ],
+      "web_and_landing_page_builders": [
+        "framer-ai",
+        "unbounce"
+      ],
+      "visual_design_canvas": [
+        "canva"
+      ],
+      "creative_concept_generation": [
+        "lovart"
+      ],
+      "diagram_and_explainer_generation": [
+        "napkin",
+        "napkin-ai"
+      ]
+    },
+    "ai-writing": {
+      "grammar_rewriting_and_paraphrase": [
+        "grammarly",
+        "quillbot",
+        "wordtune"
+      ],
+      "marketing_copy_generation": [
+        "copy-ai",
+        "jasper",
+        "rytr",
+        "writesonic"
+      ],
+      "brand_content_operations": [
+        "typeface",
+        "writer"
+      ],
+      "translation_localization": [
+        "deepl"
+      ],
+      "newsletter_publishing": [
+        "beehiiv"
+      ],
+      "transcript_to_content": [
+        "castmagic"
+      ],
+      "creative_fiction_writing": [
+        "sudowrite"
+      ],
+      "legal_drafting": [
+        "harvey",
+        "spellbook"
+      ],
+      "general_writing_assistant": [
+        "hyperwrite"
+      ]
+    },
+    "ai-notes": {
+      "meeting_capture_and_transcription": [
+        "fathom",
+        "fireflies",
+        "granola",
+        "meetgeek",
+        "otter-ai",
+        "read-ai",
+        "tactiq"
+      ],
+      "personal_knowledge_workspace": [
+        "capacities",
+        "logseq",
+        "mem",
+        "notion-ai",
+        "obsidian",
+        "reflect",
+        "tana"
+      ],
+      "research_and_reading_workflow": [
+        "notebooklm",
+        "readwise"
+      ],
+      "calendar_and_task_assistants": [
+        "reclaim-ai",
+        "taskade"
+      ],
+      "data_notebook_workspace": [
+        "hex"
+      ],
+      "email_attention_management": [
+        "sanebox"
+      ]
+    },
+    "ai-search": {
+      "answer_engines": [
+        "genspark",
+        "kagi",
+        "morphic",
+        "perplexity",
+        "you-com"
+      ],
+      "ai_browsers": [
+        "comet",
+        "dia"
+      ],
+      "developer_search": [
+        "phind"
+      ],
+      "enterprise_knowledge_search": [
+        "glean"
+      ],
+      "web_search_apis": [
+        "exa"
+      ],
+      "vector_search_infrastructure": [
+        "pinecone",
+        "qdrant",
+        "weaviate"
+      ],
+      "recruiting_search": [
+        "hireez",
+        "linkedin-recruiter"
+      ]
+    }
+  },
   "blocked_pairs": [
     {
       "tools": [
@@ -46,6 +433,20 @@
     },
     {
       "tools": [
+        "aider",
+        "cursor"
+      ],
+      "reason": "Deleted aider-vs-cursor on 2026-06-21 under the strict same-buyer-job policy. Do not recreate this pair automatically unless a human confirms the tools are direct substitutes for the same workflow."
+    },
+    {
+      "tools": [
+        "aider",
+        "github-copilot"
+      ],
+      "reason": "Deleted aider-vs-github-copilot on 2026-06-21 under the strict same-buyer-job policy. Do not recreate this pair automatically unless a human confirms the tools are direct substitutes for the same workflow."
+    },
+    {
+      "tools": [
         "apollo",
         "clay"
       ],
@@ -78,6 +479,13 @@
         "zapier"
       ],
       "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "beautiful-ai",
+        "tome"
+      ],
+      "reason": "Deleted beautiful-ai-vs-tome on 2026-06-21 under the strict same-buyer-job policy. Do not recreate this pair automatically unless a human confirms the tools are direct substitutes for the same workflow."
     },
     {
       "tools": [
@@ -165,6 +573,20 @@
     },
     {
       "tools": [
+        "cartesia",
+        "fish-audio"
+      ],
+      "reason": "Deleted cartesia-vs-fish-audio on 2026-06-21 under the strict same-buyer-job policy. Do not recreate this pair automatically unless a human confirms the tools are direct substitutes for the same workflow."
+    },
+    {
+      "tools": [
+        "cartesia",
+        "resemble-ai"
+      ],
+      "reason": "Deleted cartesia-vs-resemble-ai on 2026-06-21 under the strict same-buyer-job policy. Do not recreate this pair automatically unless a human confirms the tools are direct substitutes for the same workflow."
+    },
+    {
+      "tools": [
         "chatgpt",
         "deepseek"
       ],
@@ -229,6 +651,34 @@
     {
       "tools": [
         "claude-code",
+        "continue"
+      ],
+      "reason": "Deleted claude-code-vs-continue on 2026-06-21 under the strict same-buyer-job policy. Do not recreate this pair automatically unless a human confirms the tools are direct substitutes for the same workflow."
+    },
+    {
+      "tools": [
+        "cursor",
+        "claude-code"
+      ],
+      "reason": "Deleted cursor-vs-claude-code-vs-copilot on 2026-06-21 under the strict same-buyer-job policy. Do not recreate this pair automatically unless a human confirms the tools are direct substitutes for the same workflow."
+    },
+    {
+      "tools": [
+        "claude-code",
+        "devin"
+      ],
+      "reason": "Deleted claude-code-vs-devin on 2026-06-21 under the strict same-buyer-job policy. Do not recreate this pair automatically unless a human confirms the tools are direct substitutes for the same workflow."
+    },
+    {
+      "tools": [
+        "claude-code",
+        "github-copilot"
+      ],
+      "reason": "Deleted claude-code-vs-github-copilot on 2026-06-21 under the strict same-buyer-job policy. Do not recreate this pair automatically unless a human confirms the tools are direct substitutes for the same workflow."
+    },
+    {
+      "tools": [
+        "claude-code",
         "val-town"
       ],
       "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
@@ -284,6 +734,13 @@
     },
     {
       "tools": [
+        "codeium",
+        "github-copilot"
+      ],
+      "reason": "Deleted codeium-vs-github-copilot on 2026-06-21 under the strict same-buyer-job policy. Do not recreate this pair automatically unless a human confirms the tools are direct substitutes for the same workflow."
+    },
+    {
+      "tools": [
         "cody",
         "cursor"
       ],
@@ -292,6 +749,20 @@
     {
       "tools": [
         "connected-papers",
+        "consensus"
+      ],
+      "reason": "Deleted connected-papers-vs-consensus on 2026-06-21 under the strict same-buyer-job policy. Do not recreate this pair automatically unless a human confirms the tools are direct substitutes for the same workflow."
+    },
+    {
+      "tools": [
+        "connected-papers",
+        "elicit"
+      ],
+      "reason": "Deleted connected-papers-vs-elicit on 2026-06-21 under the strict same-buyer-job policy. Do not recreate this pair automatically unless a human confirms the tools are direct substitutes for the same workflow."
+    },
+    {
+      "tools": [
+        "connected-papers",
         "nanochat"
       ],
       "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
@@ -305,6 +776,13 @@
     },
     {
       "tools": [
+        "connected-papers",
+        "semantic-scholar"
+      ],
+      "reason": "Deleted connected-papers-vs-semantic-scholar on 2026-06-21 under the strict same-buyer-job policy. Do not recreate this pair automatically unless a human confirms the tools are direct substitutes for the same workflow."
+    },
+    {
+      "tools": [
         "consensus",
         "nanochat"
       ],
@@ -316,6 +794,27 @@
         "scite"
       ],
       "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "consensus",
+        "semantic-scholar"
+      ],
+      "reason": "Deleted consensus-vs-semantic-scholar on 2026-06-21 under the strict same-buyer-job policy. Do not recreate this pair automatically unless a human confirms the tools are direct substitutes for the same workflow."
+    },
+    {
+      "tools": [
+        "continue",
+        "cursor"
+      ],
+      "reason": "Deleted continue-vs-cursor on 2026-06-21 under the strict same-buyer-job policy. Do not recreate this pair automatically unless a human confirms the tools are direct substitutes for the same workflow."
+    },
+    {
+      "tools": [
+        "continue",
+        "devin"
+      ],
+      "reason": "Deleted continue-vs-devin on 2026-06-21 under the strict same-buyer-job policy. Do not recreate this pair automatically unless a human confirms the tools are direct substitutes for the same workflow."
     },
     {
       "tools": [
@@ -376,6 +875,13 @@
     {
       "tools": [
         "cursor",
+        "github-copilot"
+      ],
+      "reason": "Deleted cursor-vs-claude-code-vs-copilot on 2026-06-21 under the strict same-buyer-job policy. Do not recreate this pair automatically unless a human confirms the tools are direct substitutes for the same workflow."
+    },
+    {
+      "tools": [
+        "cursor",
         "replit-agent"
       ],
       "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
@@ -383,9 +889,23 @@
     {
       "tools": [
         "cursor",
+        "tabnine"
+      ],
+      "reason": "Deleted cursor-vs-tabnine on 2026-06-21 under the strict same-buyer-job policy. Do not recreate this pair automatically unless a human confirms the tools are direct substitutes for the same workflow."
+    },
+    {
+      "tools": [
+        "cursor",
         "val-town"
       ],
       "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "decktopus",
+        "tome"
+      ],
+      "reason": "Deleted decktopus-vs-tome on 2026-06-21 under the strict same-buyer-job policy. Do not recreate this pair automatically unless a human confirms the tools are direct substitutes for the same workflow."
     },
     {
       "tools": [
@@ -439,6 +959,13 @@
     {
       "tools": [
         "devin",
+        "github-copilot"
+      ],
+      "reason": "Deleted devin-vs-github-copilot on 2026-06-21 under the strict same-buyer-job policy. Do not recreate this pair automatically unless a human confirms the tools are direct substitutes for the same workflow."
+    },
+    {
+      "tools": [
+        "devin",
         "val-town"
       ],
       "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
@@ -449,6 +976,13 @@
         "otter-ai"
       ],
       "reason": "Speech generation and voice platform versus meeting transcription archive."
+    },
+    {
+      "tools": [
+        "elevenlabs",
+        "voxtral"
+      ],
+      "reason": "Deleted elevenlabs-vs-voxtral on 2026-06-21 under the strict same-buyer-job policy. Do not recreate this pair automatically unless a human confirms the tools are direct substitutes for the same workflow."
     },
     {
       "tools": [
@@ -491,6 +1025,13 @@
         "phind"
       ],
       "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "figma",
+        "google-stitch"
+      ],
+      "reason": "Deleted figma-vs-google-stitch on 2026-06-21 under the strict same-buyer-job policy. Do not recreate this pair automatically unless a human confirms the tools are direct substitutes for the same workflow."
     },
     {
       "tools": [
@@ -564,6 +1105,13 @@
     },
     {
       "tools": [
+        "gamma",
+        "tome"
+      ],
+      "reason": "Deleted gamma-vs-tome on 2026-06-21 under the strict same-buyer-job policy. Do not recreate this pair automatically unless a human confirms the tools are direct substitutes for the same workflow."
+    },
+    {
+      "tools": [
         "gemini",
         "mistral-ai"
       ],
@@ -614,6 +1162,13 @@
     {
       "tools": [
         "grammarly",
+        "hyperwrite"
+      ],
+      "reason": "Deleted grammarly-vs-hyperwrite on 2026-06-21 under the strict same-buyer-job policy. Do not recreate this pair automatically unless a human confirms the tools are direct substitutes for the same workflow."
+    },
+    {
+      "tools": [
+        "grammarly",
         "sudowrite"
       ],
       "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
@@ -656,9 +1211,23 @@
     {
       "tools": [
         "hyperwrite",
+        "quillbot"
+      ],
+      "reason": "Deleted hyperwrite-vs-quillbot on 2026-06-21 under the strict same-buyer-job policy. Do not recreate this pair automatically unless a human confirms the tools are direct substitutes for the same workflow."
+    },
+    {
+      "tools": [
+        "hyperwrite",
         "sudowrite"
       ],
       "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "hyperwrite",
+        "wordtune"
+      ],
+      "reason": "Deleted hyperwrite-vs-wordtune on 2026-06-21 under the strict same-buyer-job policy. Do not recreate this pair automatically unless a human confirms the tools are direct substitutes for the same workflow."
     },
     {
       "tools": [
@@ -719,6 +1288,27 @@
     {
       "tools": [
         "kling",
+        "pika"
+      ],
+      "reason": "Deleted kling-vs-pika on 2026-06-21 under the strict same-buyer-job policy. Do not recreate this pair automatically unless a human confirms the tools are direct substitutes for the same workflow."
+    },
+    {
+      "tools": [
+        "kling",
+        "runway"
+      ],
+      "reason": "Deleted kling-vs-seedance-vs-runway on 2026-06-21 under the strict same-buyer-job policy. Do not recreate this pair automatically unless a human confirms the tools are direct substitutes for the same workflow."
+    },
+    {
+      "tools": [
+        "seedance",
+        "kling"
+      ],
+      "reason": "Deleted kling-vs-seedance-vs-runway on 2026-06-21 under the strict same-buyer-job policy. Do not recreate this pair automatically unless a human confirms the tools are direct substitutes for the same workflow."
+    },
+    {
+      "tools": [
+        "kling",
         "synthesia"
       ],
       "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
@@ -739,6 +1329,27 @@
     },
     {
       "tools": [
+        "n8n",
+        "make"
+      ],
+      "reason": "Deleted n8n-vs-make-vs-zapier on 2026-06-21 under the strict same-buyer-job policy. Do not recreate this pair automatically unless a human confirms the tools are direct substitutes for the same workflow."
+    },
+    {
+      "tools": [
+        "make",
+        "zapier"
+      ],
+      "reason": "Deleted n8n-vs-make-vs-zapier on 2026-06-21 under the strict same-buyer-job policy. Do not recreate this pair automatically unless a human confirms the tools are direct substitutes for the same workflow."
+    },
+    {
+      "tools": [
+        "marketmuse",
+        "neuronwriter"
+      ],
+      "reason": "Deleted marketmuse-vs-neuronwriter on 2026-06-21 under the strict same-buyer-job policy. Do not recreate this pair automatically unless a human confirms the tools are direct substitutes for the same workflow."
+    },
+    {
+      "tools": [
         "marketmuse",
         "semrush"
       ],
@@ -746,10 +1357,38 @@
     },
     {
       "tools": [
+        "marketmuse",
+        "surfer-seo"
+      ],
+      "reason": "Deleted marketmuse-vs-surfer-seo on 2026-06-21 under the strict same-buyer-job policy. Do not recreate this pair automatically unless a human confirms the tools are direct substitutes for the same workflow."
+    },
+    {
+      "tools": [
         "mistral-ai",
         "poe"
       ],
       "reason": "Native model-provider and platform-control lane versus multi-model aggregator lane. Same top-level chatbot category, but different buyer jobs and workflows."
+    },
+    {
+      "tools": [
+        "mubert",
+        "suno"
+      ],
+      "reason": "Deleted mubert-vs-suno on 2026-06-21 under the strict same-buyer-job policy. Do not recreate this pair automatically unless a human confirms the tools are direct substitutes for the same workflow."
+    },
+    {
+      "tools": [
+        "mubert",
+        "udio"
+      ],
+      "reason": "Deleted mubert-vs-udio on 2026-06-21 under the strict same-buyer-job policy. Do not recreate this pair automatically unless a human confirms the tools are direct substitutes for the same workflow."
+    },
+    {
+      "tools": [
+        "n8n",
+        "zapier"
+      ],
+      "reason": "Deleted n8n-vs-make-vs-zapier on 2026-06-21 under the strict same-buyer-job policy. Do not recreate this pair automatically unless a human confirms the tools are direct substitutes for the same workflow."
     },
     {
       "tools": [
@@ -764,6 +1403,13 @@
         "semantic-scholar"
       ],
       "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "neuronwriter",
+        "semrush"
+      ],
+      "reason": "Deleted neuronwriter-vs-semrush on 2026-06-21 under the strict same-buyer-job policy. Do not recreate this pair automatically unless a human confirms the tools are direct substitutes for the same workflow."
     },
     {
       "tools": [
@@ -831,9 +1477,37 @@
     {
       "tools": [
         "pika",
+        "runway"
+      ],
+      "reason": "Deleted pika-vs-runway on 2026-06-21 under the strict same-buyer-job policy. Do not recreate this pair automatically unless a human confirms the tools are direct substitutes for the same workflow."
+    },
+    {
+      "tools": [
+        "pika",
+        "seedance"
+      ],
+      "reason": "Deleted pika-vs-seedance on 2026-06-21 under the strict same-buyer-job policy. Do not recreate this pair automatically unless a human confirms the tools are direct substitutes for the same workflow."
+    },
+    {
+      "tools": [
+        "pika",
         "synthesia"
       ],
       "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "pitch",
+        "tome"
+      ],
+      "reason": "Deleted pitch-vs-tome on 2026-06-21 under the strict same-buyer-job policy. Do not recreate this pair automatically unless a human confirms the tools are direct substitutes for the same workflow."
+    },
+    {
+      "tools": [
+        "presentations-ai",
+        "tome"
+      ],
+      "reason": "Deleted presentations-ai-vs-tome on 2026-06-21 under the strict same-buyer-job policy. Do not recreate this pair automatically unless a human confirms the tools are direct substitutes for the same workflow."
     },
     {
       "tools": [
@@ -848,6 +1522,13 @@
         "voxtral"
       ],
       "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "seedance",
+        "runway"
+      ],
+      "reason": "Deleted kling-vs-seedance-vs-runway on 2026-06-21 under the strict same-buyer-job policy. Do not recreate this pair automatically unless a human confirms the tools are direct substitutes for the same workflow."
     },
     {
       "tools": [

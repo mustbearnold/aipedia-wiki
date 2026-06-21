@@ -132,6 +132,7 @@ const comparisonPolicy = existsSync(COMPARISON_POLICY_PATH)
 const blockedPairs = new Map(
   (comparisonPolicy.blocked_pairs || []).map((entry) => [pairKey(entry.tools[0], entry.tools[1]), entry]),
 );
+const workflowLanes = comparisonPolicy.workflow_lanes || {};
 
 const DEAD_STATUS = new Set(['dead', 'acquired', 'discontinued']);
 
@@ -240,11 +241,22 @@ function classifyComparison(a, b) {
   const first = toolBySlug.get(a);
   const second = toolBySlug.get(b);
   if (first?.primary_category && first.primary_category === second?.primary_category) {
+    const lanePolicy = sharedWorkflowLanes(first.primary_category, a, b);
+    if (lanePolicy && lanePolicy.shared.length === 0) {
+      return {
+        selectable: false,
+        mode: 'review_only',
+        reason: lanePolicy.reason,
+      };
+    }
+
     return {
       selectable: true,
       mode: 'direct',
-      workflow: first.primary_category,
-      reason: 'same primary category',
+      workflow: lanePolicy?.shared[0] || first.primary_category,
+      reason: lanePolicy?.shared.length
+        ? `same primary category and workflow lane: ${lanePolicy.shared.join(', ')}`
+        : 'same primary category',
       requires_asymmetric_framing: false,
     };
   }
@@ -263,6 +275,24 @@ function sharedCategoriesFor(a, b) {
   const first = toolBySlug.get(a)?.categories || [];
   const second = toolBySlug.get(b)?.categories || [];
   return first.filter((category) => second.includes(category));
+}
+
+function sharedWorkflowLanes(category, a, b) {
+  const lanes = workflowLanes?.[category];
+  if (!lanes) return null;
+  const firstLanes = [];
+  const secondLanes = [];
+  for (const [lane, slugs] of Object.entries(lanes)) {
+    if (Array.isArray(slugs) && slugs.includes(a)) firstLanes.push(lane);
+    if (Array.isArray(slugs) && slugs.includes(b)) secondLanes.push(lane);
+  }
+  const shared = firstLanes.filter((lane) => secondLanes.includes(lane));
+  return {
+    shared,
+    reason: shared.length
+      ? `same primary category and workflow lane: ${shared.join(', ')}`
+      : `same primary category but no approved shared workflow lane (${a}: ${firstLanes.join(', ') || 'unclassified'}; ${b}: ${secondLanes.join(', ') || 'unclassified'})`,
+  };
 }
 
 // 1) Tier-one cross-category pairings are review-only unless they share the

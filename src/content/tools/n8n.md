@@ -342,4 +342,4 @@ n8n prices by workflow execution. The current pricing FAQ defines an execution a
 ## Related
 
 - **Category:** [AI Automation](/categories/ai-automation/)
-- **Comparisons:** [Activepieces vs n8n](/compare/activepieces-vs-n8n/), [n8n vs Make vs Zapier](/compare/n8n-vs-make-vs-zapier/)
+- **Comparisons:** [Activepieces vs n8n](/compare/activepieces-vs-n8n/)

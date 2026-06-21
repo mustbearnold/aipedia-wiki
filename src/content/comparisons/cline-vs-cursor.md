@@ -103,4 +103,3 @@ Try Cursor first if you want a ready-to-use AI IDE. Try Cline first if open sour
 
 - **Tool pages:** [Cline](/tools/cline/) | [Cursor](/tools/cursor/)
 - **Category:** [AI Coding Assistants](/categories/ai-coding/)
-- **Comparisons:** [Cursor vs GitHub Copilot](/compare/cursor-vs-github-copilot/)

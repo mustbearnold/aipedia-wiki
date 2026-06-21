@@ -183,4 +183,3 @@ For narrative-first decks: [Gamma](/tools/gamma/). For polished business slides:
 ## Related
 
 - **Category:** [AI Presentation Tools](/categories/ai-presentation/)
-- **Comparisons:** [Gamma vs Tome](/compare/gamma-vs-tome/) · [Beautiful.ai vs Tome](/compare/beautiful-ai-vs-tome/) · [Pitch vs Tome](/compare/pitch-vs-tome/) · [Presentations.AI vs Tome](/compare/presentations-ai-vs-tome/) · [Decktopus AI vs Tome](/compare/decktopus-vs-tome/)

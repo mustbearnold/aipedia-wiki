@@ -104,6 +104,7 @@ price_history:
     source: "https://surferseo.com/pricing/"
     source_label: "Source"
     source_id: surfer-seo-pricing
+    verified_at: 2026-06-12
     note: "120 documents, 10 pages tracked, 1 seat, 1 workspace, no AI prompt tracking."
   - date: 2026-05-13
     plan: "Standard"
@@ -111,6 +112,7 @@ price_history:
     source: "https://surferseo.com/pricing/"
     source_label: "Source"
     source_id: surfer-seo-pricing
+    verified_at: 2026-06-12
     note: "360 documents, 25 pages tracked, 3 seats, 1 workspace, AI Tracker (25 prompts/week), Content Audit, Topical Map."
   - date: 2026-05-13
     plan: "Pro"
@@ -118,6 +120,7 @@ price_history:
     source: "https://surferseo.com/pricing/"
     source_label: "Source"
     source_id: surfer-seo-pricing
+    verified_at: 2026-06-12
     note: "360 documents, 50 pages tracked, 5 seats, 5 workspaces, AI Tracker (50 prompts/day), internal linking, content ideas, cannibalization reports."
   - date: 2026-05-13
     plan: "Peace of Mind"
@@ -125,6 +128,7 @@ price_history:
     source: "https://surferseo.com/pricing/"
     source_label: "Source"
     source_id: surfer-seo-pricing
+    verified_at: 2026-06-12
     note: "Unlimited documents, 500 pages tracked, 10 seats, unlimited workspaces, AI Tracker (100 prompts/day), API access, dedicated success manager."
   - date: 2026-05-13
     plan: "Enterprise"
@@ -132,6 +136,7 @@ price_history:
     source: "https://surferseo.com/pricing/"
     source_label: "Source"
     source_id: surfer-seo-pricing
+    verified_at: 2026-06-12
     note: "SSO, white-label options, advisory program, priority support, annual contract."
   - date: 2026-06-04
     plan: "Public ladder"
@@ -139,6 +144,7 @@ price_history:
     source: "https://surferseo.com/pricing/"
     source_label: "Source"
     source_id: surfer-seo-pricing
+    verified_at: 2026-06-12
     note: "Reverified Discovery, Standard, Pro, Peace of Mind, and Enterprise positioning, including AI Tracker prompt caps and tracked-page limits."
   - date: 2026-05-08
     plan: "Standard"
@@ -146,6 +152,7 @@ price_history:
     source: "https://surferseo.com/pricing/"
     source_label: "Source"
     source_id: surfer-seo-pricing
+    verified_at: 2026-06-12
     note: "360 documents, 3 seats, AI Tracker (25 prompts/week), Content Audit, Topical Map."
   - date: 2026-05-08
     plan: "Pro"
@@ -153,6 +160,7 @@ price_history:
     source: "https://surferseo.com/pricing/"
     source_label: "Source"
     source_id: surfer-seo-pricing
+    verified_at: 2026-06-12
     note: "360 documents, 5 seats, AI Tracker (50 prompts/day), 5 brand workspaces, 200 pages tracked."
   - date: 2026-05-08
     plan: "Peace of Mind"
@@ -160,6 +168,7 @@ price_history:
     source: "https://surferseo.com/pricing/"
     source_label: "Source"
     source_id: surfer-seo-pricing
+    verified_at: 2026-06-12
     note: "Unlimited-style higher tier for AI visibility, optimization, API access, and VIP support; verify active limits before procurement."
 ---
 
@@ -299,6 +308,6 @@ The Content Editor scores in English, Spanish, French, German, Dutch, Swedish, D
 ## Related
 
 - **Category:** [AI SEO](/categories/ai-seo/)
-- **Comparisons:** [Frase vs Surfer SEO](/compare/frase-vs-surfer-seo/) · [NeuronWriter vs Surfer SEO](/compare/neuronwriter-vs-surfer-seo/) · [MarketMuse vs Surfer SEO](/compare/marketmuse-vs-surfer-seo/)
+- **Comparisons:** [Frase vs Surfer SEO](/compare/frase-vs-surfer-seo/) · [NeuronWriter vs Surfer SEO](/compare/neuronwriter-vs-surfer-seo/)
 
 *Some links on this page are affiliate links. We earn a commission at no extra cost to you. This does not influence our ratings or recommendations.*

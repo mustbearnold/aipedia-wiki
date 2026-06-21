@@ -196,6 +196,7 @@ price_history:
     source: "https://udio.com/pricing"
     source_label: "Source"
     source_id: udio-pricing
+    verified_at: 2026-06-12
     note: "10 daily credits plus 100 monthly credits; commercial use with attribution; help center caps free output at 3 songs (130 seconds each) per day."
   - date: 2026-05-13
     plan: "Standard"
@@ -203,6 +204,7 @@ price_history:
     source: "https://udio.com/pricing"
     source_label: "Source"
     source_id: udio-pricing
+    verified_at: 2026-06-12
     note: "2,400 credits per month, no rollover, commercial use without attribution, API access listed."
   - date: 2026-05-13
     plan: "Pro"
@@ -210,6 +212,7 @@ price_history:
     source: "https://udio.com/pricing"
     source_label: "Source"
     source_id: udio-pricing
+    verified_at: 2026-06-12
     note: "6,000 credits per month, no rollover, commercial use without attribution, API access listed."
 ---
 
@@ -343,6 +346,6 @@ Udio's help center says downloading audio, video, and stems has been disabled du
 ## Related
 
 - **Category:** [AI Music](/categories/ai-music/)
-- **Comparisons:** [Suno vs Udio](/compare/suno-vs-udio/) · [Mubert vs Udio](/compare/mubert-vs-udio/)
+- **Comparisons:** [Suno vs Udio](/compare/suno-vs-udio/)
 
 *Udio does not currently have an affiliate program. No affiliate relationship exists between aipedia.wiki and Udio.*

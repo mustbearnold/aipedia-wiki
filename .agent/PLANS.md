@@ -8,12 +8,12 @@ For plain-English project state, read `.agent/CURRENT_STATUS.md` first. For comp
 
 - Last updated: 2026-06-21.
 - Check `master` with `git status --short --branch` before starting work.
-- The June 2026 standards remediation, Guard Challenge Workflow, Project Folder Tidy, Verification Router, June 17 news catch-up, Vercel CLI install, decision loop tooling, strict comparison cleanup, and `activepieces-vs-n8n` loop cycle are complete.
+- The June 2026 standards remediation, Guard Challenge Workflow, Project Folder Tidy, Verification Router, June 17 news catch-up, Vercel CLI install, decision loop tooling, strict comparison cleanup, `activepieces-vs-n8n`, and `activepieces-vs-zapier` cycles are complete locally.
 - The decision content flywheel is the default repeatable loop. Use `npm run loop:next -- --json`.
-- Comparison pages must compare the same buyer job. Same primary category is necessary but not sufficient. Cross-category and different-workflow pairs are review-only and must not become published `vs` pages.
-- The previous cross-category loop comparison files were deleted under the stricter policy. Their associated tool and category refreshes can remain where they improve live pages.
-- `npm run loop:next -- --json` now selects `activepieces-vs-zapier`.
-- Current build timing baseline from 2026-06-21: `npm run build:fast` passed in 191.31 seconds and `npm run build` passed in 214.37 seconds. Main drivers are static route fan-out, Pagefind, and large generated/search surfaces.
+- Comparison pages must compare the same buyer job and workflow. Same primary category is necessary but not sufficient. Cross-category and different-workflow pairs are review-only and must not become published `vs` pages.
+- The selector now uses explicit workflow lanes for broad categories, including automation, image, coding, music, chatbots, video, voice, design, writing, notes, and search.
+- Current next selected cluster is `amazon-q-vs-github-copilot`.
+- Current build timing baseline from 2026-06-21: `npm run build:fast` has recently passed in roughly 2 to 3 minutes for normal content runs. The full loop verifier can take about 8 minutes when content, guards, script tests, build, and route QA are all touched.
 - Route QA uses 360, 390, 430, 768, 1024, and 1366 px for rendered route work.
 
 ## Active: Decision Content Flywheel
@@ -36,38 +36,39 @@ Run AiPedia as a repeatable buyer-decision loop: cluster, verify, improve decisi
 
 ### Status
 
-- 2026-06-21: Strict comparison cleanup deleted 179 comparison files in total, including false-vs pages and multi-tool pages that should only be rebuilt as focused two-tool direct-substitute pages.
+- 2026-06-21: Strict comparison cleanup deleted false-vs comparison files and removed public links to deleted routes.
 - 2026-06-21: `src/data/comparison-policy.json` no longer has an adjacent-workflow allowlist.
-- 2026-06-21: `src/data/comparison-policy.json` now stores 127 blocked pairs for known same-category false-vs traps.
 - 2026-06-21: `coverage:backlog`, `coverage:next`, and `loop:next` now select only same-primary-category pairs that are not blocked as false-vs.
-- 2026-06-21: Focused tests prove adjacent workflow pairs remain review-only even if a future policy file tries to list them.
-- 2026-06-21: Completed `activepieces-vs-n8n`; the first verifier attempt exposed stale guard-test assumptions from the deleted false-vs inventory, and those tests now use live direct-substitute routes and a post-cleanup comparison floor.
-- 2026-06-21: Current next selected cluster is `activepieces-vs-zapier`.
-- 2026-06-21: Loop hardening includes `loop:verify`, `qa:route`, `loop:record`, changed-route smart guidance, raw Markdown table rejection for changed comparison pages, executable route QA, conditional fallback builds, receipt-safe command recording, per-command timing, scoped fast-build environment handling, build-before-browser-check ordering, and exact route QA replacement for safe content-only route cycles.
+- 2026-06-21: The selector now uses explicit workflow-family lanes for broad categories so same-category but different-workflow pages do not slip in as automatic `vs` pages.
+- 2026-06-21: Guard and test fixtures were updated through an accepted Guard Challenge after the comparison inventory changed.
+- 2026-06-21: Completed `activepieces-vs-n8n`.
+- 2026-06-21: Completed `activepieces-vs-zapier`; recorded `.agent/loop-runs/2026-06-21-activepieces-vs-zapier.md`.
+- 2026-06-21: Current next selected cluster is `amazon-q-vs-github-copilot`.
+- 2026-06-21: Loop hardening includes `loop:verify`, `qa:route`, `loop:record`, changed-route smart guidance, raw Markdown table rejection for changed comparison pages, executable route QA, conditional fallback builds, receipt-safe command recording, per-command timing, scoped fast-build environment handling, build-before-browser-check ordering, exact route QA replacement for safe content-only route cycles, and explicit workflow-family selection for broad categories.
 
-## Recommended Next: Activepieces Vs Zapier Comparison Sprint
+## Recommended Next: Amazon Q Vs GitHub Copilot Comparison Sprint
 
 ### Objective
 
-Create a high-intent, source-backed comparison page for `activepieces-vs-zapier` while refreshing affected Activepieces, Zapier, AI Automation, parent hubs, source registry, LLM surfaces, and ledger rows.
+Create a high-intent, source-backed comparison page for `amazon-q-vs-github-copilot` while refreshing affected Amazon Q Developer, GitHub Copilot, AI Coding, parent hubs, source registry, LLM surfaces, and ledger rows.
 
 ### Why This Is Next
 
-- `npm run loop:next -- --json` selects `activepieces-vs-zapier`.
-- Both tools are primary `ai-automation`, so this is a real same-category buyer decision.
-- The expected buyer question is open-source active-flow automation versus broad SaaS app automation: use Activepieces when self-hosting, MIT licensing, MCP-first tool control, and predictable active-flow billing matter; use Zapier when non-technical teams need the fastest app coverage, AI actions, and managed SaaS workflow setup.
+- `npm run loop:next -- --json` selects `amazon-q-vs-github-copilot`.
+- Both tools are in the `ide_copilot_extensions` workflow lane, so this is a real same-job coding-assistant comparison.
+- The expected buyer question is AWS-centered development and cloud operations versus broad IDE and GitHub-native coding assistance.
 
 ### First Slice
 
-- Verify current June 2026 Activepieces and Zapier pricing, hosting, open-source/licensing posture, AI-agent, MCP, app coverage, affiliate, privacy, source, and product facts.
-- Refresh `src/content/tools/activepieces.md` and `src/content/tools/zapier.md` only where current sources justify changes.
-- Create or refresh `src/content/comparisons/activepieces-vs-zapier.md`.
-- Inspect and update affected parent surfaces, especially `/compare/`, `/tools/`, AI Automation category pages, sitemap/LLM surfaces, and `PAGE_REFRESH_LEDGER.md`.
+- Verify current June 2026 Amazon Q Developer and GitHub Copilot pricing, IDE support, enterprise controls, model access, limits, agent features, source, privacy, and affiliate facts.
+- Refresh `src/content/tools/amazon-q.md` and `src/content/tools/github-copilot.md` only where current sources justify changes.
+- Create or refresh `src/content/comparisons/amazon-q-vs-github-copilot.md`.
+- Inspect and update affected parent surfaces, especially `/compare/`, `/tools/`, AI Coding category pages, sitemap/LLM surfaces, and `PAGE_REFRESH_LEDGER.md`.
 
 ### Verification
 
-- `npm run loop:verify -- --date <YYYY-MM-DD> --route /compare/activepieces-vs-zapier/ --path <changed paths>`
-- `npm run loop:record -- --date <YYYY-MM-DD> --slug activepieces-vs-zapier --status complete`
+- `npm run loop:verify -- --date <YYYY-MM-DD> --route /compare/amazon-q-vs-github-copilot/ --path <changed paths>`
+- `npm run loop:record -- --date <YYYY-MM-DD> --slug amazon-q-vs-github-copilot --status complete`
 - Retry commands if needed:
 - `npm run ledger:pages -- --date <YYYY-MM-DD>`
 - `npm run ledger:pages:check -- --date <YYYY-MM-DD>`
@@ -77,7 +78,7 @@ Create a high-intent, source-backed comparison page for `activepieces-vs-zapier`
 - `npm run audit:provenance:changed`
 - `npm run check:smart:run -- --path <changed paths>`
 - `npm run build:fast` if rendered output or pre-ship confidence requires it and `loop:verify` did not already run it.
-- `npm run qa:route -- --route /compare/activepieces-vs-zapier/ --widths 360,390,430,768,1024,1366`
+- `npm run qa:route -- --route /compare/amazon-q-vs-github-copilot/ --widths 360,390,430,768,1024,1366`
 
 ## Active: Oldest-First AI Tools Wiki Refresh
 

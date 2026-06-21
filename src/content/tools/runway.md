@@ -191,6 +191,7 @@ price_history:
     source: "https://runwayml.com/pricing"
     source_label: "Runway pricing"
     source_id: runway-pricing
+    verified_at: 2026-06-12
     note: "Reverified public plan pricing, Max replacing old Unlimited language, paid Aleph/Edit Studio availability, Gen-4.5/Veo/third-party model access, and API credit economics against official Runway pricing and API docs."
   - date: 2026-05-21
     plan: "Aleph 2.0 / Edit Studio"
@@ -198,6 +199,7 @@ price_history:
     source: "/news/2026-05-21-runway-aleph-20-edit-studio/"
     source_label: "AIpedia coverage"
     source_id: aipedia-news
+    verified_at: 2026-06-12
     note: "Aleph 2.0 adds controlled editing for up to 30s of 1080p footage, localized edits, image-guided video changes, and multi-shot edit propagation in Edit Studio."
   - date: 2026-05-13
     plan: "Runway Agent"
@@ -205,6 +207,7 @@ price_history:
     source: "https://runwayml.com/news/introducing-runway-agent"
     source_label: "Runway Agent announcement"
     source_id: runway-agent
+    verified_at: 2026-06-12
     note: "Runway Agent turns a brief into a multi-shot finished video through a conversational workflow, then hands the timeline back for final edits."
   - date: 2026-05-08
     plan: "Standard"
@@ -212,6 +215,7 @@ price_history:
     source: "https://runwayml.com/pricing"
     source_label: "Runway pricing"
     source_id: runway-pricing
+    verified_at: 2026-06-12
     note: "Verified against public pricing page; includes 625 monthly credits and Standard video/model access."
   - date: 2026-05-08
     plan: "Pro"
@@ -219,6 +223,7 @@ price_history:
     source: "https://runwayml.com/pricing"
     source_label: "Runway pricing"
     source_id: runway-pricing
+    verified_at: 2026-06-12
     note: "Verified against public pricing page; includes 2,250 monthly credits and custom voice creation."
   - date: 2026-05-08
     plan: "Unlimited (legacy label)"
@@ -226,6 +231,7 @@ price_history:
     source: "https://runwayml.com/pricing"
     source_label: "Runway pricing"
     source_id: runway-pricing
+    verified_at: 2026-06-12
     note: "Verified against public pricing page; adds Explore Mode relaxed-rate unlimited generation."
   - date: 2026-05-08
     plan: "API credits"
@@ -233,6 +239,7 @@ price_history:
     source: "https://docs.dev.runwayml.com/guides/pricing/"
     source_label: "Runway API pricing"
     source_id: runway-api-pricing
+    verified_at: 2026-06-12
     note: "Developer API credits can be purchased in the developer portal; model costs vary by credits per second/image/audio unit."
 ---
 
@@ -380,5 +387,4 @@ For Google-stack API and provenance use cases, Veo 3.1 may be the cleaner model 
 
 - **Guide:** [Best AI video generator](/guides/best-ai-video-generator/)
 - **Category:** [AI Video Generation](/categories/ai-video/)
-- **Compare:** Runway vs Veo - [Runway vs Kling vs Seedance vs Veo](/compare/kling-vs-seedance-vs-runway/) - [Pika vs Runway](/compare/pika-vs-runway/) - Runway vs Synthesia - HeyGen vs Runway
 - **Alternatives:** [Seedance 2.0](/tools/seedance/) - [Kling 3.0](/tools/kling/) - [Google Veo 3.1](/tools/veo/) - [Pika](/tools/pika/) - [HeyGen](/tools/heygen/) - [Synthesia](/tools/synthesia/)
