@@ -30,6 +30,16 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 
 ## Entries
 
+### 2026-06-21: Built-Output Freshness Attention Hardening
+
+- Status: Complete.
+- Commit: this commit.
+- Branch: `master`.
+- Changed: Tightened `scripts/aipedia-loops.mjs` so built-output loop commands become `attention` when freshness is stale or unknown; added regression coverage for unknown freshness and compact `latest.json` receipts; updated loop docs to make the behavior explicit; and recorded a fresh system loop receipt.
+- Verification: `node --test tests/scripts/aipedia-loops.test.mjs`; `npm run loop:all -- --json`; `npm run loop:all:record -- --json`; `npm run check:smart:run`.
+- Residual risks: Build freshness is based on filesystem mtimes, so a clean `npm run build:fast` remains the right response whenever rendered-output confidence is uncertain.
+- Next: Keep iterating the loop-system goal by reviewing the latest system receipt and improving noisy, weak, or under-tested loop signals.
+
 ### 2026-06-21: Loop Runner Recommendation And Ledger Hardening
 
 - Status: Complete.

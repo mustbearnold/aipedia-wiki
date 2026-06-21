@@ -256,6 +256,9 @@ function attentionReasonsFor(command, child, parsed, buildFreshness) {
   if (buildFreshness?.status === 'stale') {
     reasons.push(`built output stale: run npm run build:fast before trusting ${buildFreshness.site_dir}`);
   }
+  if (buildFreshness?.status === 'unknown') {
+    reasons.push(`built output freshness unknown: ${buildFreshness.reason || 'rerun npm run build:fast before trusting rendered-output loops'}`);
+  }
 
   const totals = parsed?.totals && typeof parsed.totals === 'object' ? parsed.totals : {};
   for (const key of command.attention_totals || []) {
@@ -501,12 +504,13 @@ function writeLedger(reportData) {
   const timestamp = (reportData.generated_at || new Date().toISOString()).replace(/[:.]/g, '-');
   const runPath = resolve(LEDGER_DIR, `${timestamp}-loop-run.json`);
   const trend = ledgerTrend(previous, reportData);
+  const previousFile = existingPreviousLedgerFile(previous);
 
   reportData.ledger = {
     written: true,
     file: projectPath(runPath),
     latest_file: projectPath(latestPath),
-    previous_file: previous?.ledger?.file || '',
+    previous_file: previousFile,
     trend,
   };
 
@@ -561,6 +565,12 @@ function readPreviousLedger(latestPath) {
   } catch {
     return null;
   }
+}
+
+function existingPreviousLedgerFile(previous) {
+  const previousFile = previous?.ledger?.file || '';
+  if (!previousFile) return '';
+  return existsSync(resolve(PROJECT_DIR, previousFile)) ? previousFile : '';
 }
 
 function ledgerTrend(previous, current) {

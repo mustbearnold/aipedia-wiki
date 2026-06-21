@@ -12,16 +12,17 @@ function runLoops(...args) {
   });
 }
 
-function writeRegistry(dir) {
+function writeRegistry(dir, options = {}) {
   mkdirSync(join(dir, 'src', 'data'), { recursive: true });
   const registryPath = join(dir, 'src', 'data', 'aipedia-loops.json');
+  const freshnessPaths = options.includeFreshnessPaths === false ? {} : { build_freshness_paths: ['src/content'] };
   writeFileSync(
     registryPath,
     `${JSON.stringify(
       {
         schema_version: 1,
         default_site_dir: 'dist-fast/client',
-        build_freshness_paths: ['src/content'],
+        ...freshnessPaths,
         loops: [
           {
             id: 'clean-loop',
@@ -167,6 +168,28 @@ test('aipedia loops marks built-output commands as attention when output is stal
   }
 });
 
+test('aipedia loops marks built-output commands as attention when freshness is unknown', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-loops-unknown-build-'));
+  const registry = writeRegistry(dir, { includeFreshnessPaths: false });
+  const distFile = join(dir, 'dist-fast', 'client', 'index.html');
+
+  try {
+    mkdirSync(join(dir, 'dist-fast', 'client'), { recursive: true });
+    writeFileSync(distFile, '<html></html>\n');
+
+    const result = runLoops('--json', '--run', '--loop', 'built-loop', `--project-dir=${dir}`, `--registry=${registry}`);
+    assert.equal(result.status, 0, result.stderr);
+
+    const report = JSON.parse(result.stdout);
+    const command = report.loops[0].commands[0];
+    assert.equal(report.loops[0].status, 'attention');
+    assert.equal(command.build_freshness.status, 'unknown');
+    assert.match(command.attention_reasons.join('\n'), /freshness unknown/);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
 test('aipedia loops can write a machine-readable run ledger', () => {
   const dir = mkdtempSync(join(tmpdir(), 'aipedia-loops-ledger-'));
   const registry = writeRegistry(dir);
@@ -192,8 +215,27 @@ test('aipedia loops can write a machine-readable run ledger', () => {
     assert.equal(timestampedRuns.length, 1);
 
     const latest = JSON.parse(readFileSync(join(ledgerDir, 'latest.json'), 'utf8'));
+    const fullRun = JSON.parse(readFileSync(join(ledgerDir, timestampedRuns[0]), 'utf8'));
     assert.equal(latest.totals.ok, 1);
     assert.deepEqual(latest.ledger.trend.status_changes, []);
+    assert.equal(latest.project_dir, '.');
+    assert.equal(JSON.stringify(latest).includes('stdout_tail'), false);
+    assert.equal(JSON.stringify(fullRun).includes('stdout_tail'), true);
+
+    rmSync(join(ledgerDir, timestampedRuns[0]), { force: true });
+    const secondResult = runLoops(
+      '--json',
+      '--run',
+      '--loop',
+      'clean-loop',
+      '--write-ledger',
+      `--ledger-dir=${ledgerDir}`,
+      `--project-dir=${dir}`,
+      `--registry=${registry}`,
+    );
+    assert.equal(secondResult.status, 0, secondResult.stderr);
+    const secondLatest = JSON.parse(readFileSync(join(ledgerDir, 'latest.json'), 'utf8'));
+    assert.equal(secondLatest.ledger.previous_file, '');
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }

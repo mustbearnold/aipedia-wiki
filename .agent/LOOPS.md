@@ -24,7 +24,7 @@ Loops produce queues and attention signals. They do not replace current-source v
 - `npm run loop:performance -- --json`: run the Performance and UX loop checks.
 - `npm run loop:news -- --json`: run the News and Market Change loop checks.
 
-Built-output loops depend on fresh `dist-fast/client` output. If the runner skips conversion or performance, run `npm run build:fast`, then rerun the specific loop. If the runner marks built output as stale, do the same before trusting rendered-output audits.
+Built-output loops depend on fresh `dist-fast/client` output. If the runner skips conversion or performance, run `npm run build:fast`, then rerun the specific loop. If the runner marks built output as stale or unknown, do the same before trusting rendered-output audits.
 
 ## What The Runner Reports
 
@@ -33,6 +33,8 @@ Built-output loops depend on fresh `dist-fast/client` output. If the runner skip
 - `review.recommendations`: ranked next actions with score, severity, confidence, effort, action, and reason.
 - `build_freshness`: per-command freshness status for built-output loops.
 - `review.next_actions`: the shortest human-readable action list derived from the ranked recommendations.
+
+Stale or unknown built-output freshness is an `attention` signal. A rendered-output loop is only green when the command succeeds and the runner can prove the checked build is fresh.
 
 Use `npm run loop:all:record -- --json` after meaningful broad reviews. It writes a timestamped JSON receipt and `.agent/loop-runs/system/latest.json`, including deltas from the previous recorded run. Do not use it for every casual check.
 
@@ -99,7 +101,7 @@ A loop-system change is done only when:
 - `npm run loop:all -- --json` runs without runner errors.
 - Attention signals are understandable and actionable.
 - Skipped loops explain the missing prerequisite.
-- Built-output loops report whether `dist-fast/client` is fresh, stale, or unavailable.
+- Built-output loops report whether `dist-fast/client` is fresh, stale, or unknown, and stale or unknown states become actionable attention.
 - Broad review passes can be recorded with `npm run loop:all:record -- --json`.
 - Focused tests for `scripts/aipedia-loops.mjs` pass.
 - `.agent` status docs say which loop to run next.

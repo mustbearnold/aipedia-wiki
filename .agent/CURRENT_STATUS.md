@@ -40,6 +40,7 @@ The next selected Decision Content candidate is `amazon-q-vs-github-copilot`.
 - Loop system hardening:
   - Added ranked `review.recommendations` and short `review.next_actions` to `scripts/aipedia-loops.mjs`, so green runs still explain the best next move.
   - Added built-output freshness checks for Conversion and Performance/UX loop commands that depend on `dist-fast/client`.
+  - Hardened built-output freshness so stale or unknown freshness becomes an attention signal instead of a false green.
   - Added `npm run loop:all:record`, which writes timestamped JSON receipts and `.agent/loop-runs/system/latest.json`.
   - Recorded the first system-level loop receipt at `.agent/loop-runs/system/latest.json`.
 - Multi-loop system:

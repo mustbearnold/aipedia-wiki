@@ -78,6 +78,7 @@ Keep AiPedia maintenance repeatable without turning it into bureaucracy. The loo
 - 2026-06-21: Revised runner summaries to expose sample failures, issues, gaps, top review queue items, and top tools.
 - 2026-06-21: Freshness metadata scheduling fixed 17 missing high-volatility `next_review_at` values.
 - 2026-06-21: Latest broad review is 7 ok / 0 attention. The first system receipt is `.agent/loop-runs/system/latest.json`.
+- 2026-06-21: Built-output freshness now fails into `attention` when stale or unknown, preventing rendered-output loops from looking green without a trustworthy build.
 
 ### Next Improvement Pass
 
