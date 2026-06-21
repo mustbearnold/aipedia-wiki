@@ -39,7 +39,7 @@ The loop should make the next useful task obvious, starting with the highest-val
 
 Use `npm run loop:next` to produce the next decision-content brief. The first version uses the comparison coverage backlog and live comparison files to select missing buyer-intent comparison clusters.
 
-Do not create comparison pages for tools that belong to different categories and serve different use cases or workflows. A valid comparison must help a buyer choose between tools for the same job. The default selector only auto-selects same-primary-category pairs; adjacent workflow exceptions must be explicit in `src/data/comparison-policy.json`. Primary-secondary overlap, secondary-secondary overlap, and broad tier-one cross-category pairs are review-only unless explicitly allowed.
+Do not create comparison pages for tools that belong to different categories or serve different use cases or workflows. A valid comparison must help a buyer choose between tools for the same job. Same primary category is necessary but not sufficient. The default selector only auto-selects same-primary-category pairs that are not listed in `src/data/comparison-policy.json` blocked pairs. Primary-secondary overlap, secondary-secondary overlap, broad tier-one cross-category pairs, and known same-category false-vs pairs are review-only.
 
 The brief must name:
 
@@ -132,7 +132,7 @@ Additional loop commands:
 - `npm run qa:route`: reusable route QA across mobile, tablet, and desktop widths.
 - `npm run loop:record`: durable run receipt under `.agent/loop-runs/`.
 
-Current implementation status: `canva-vs-claude`, `claude-vs-replit-agent`, `cursor-vs-deepseek`, `cursor-vs-grok`, `deepseek-vs-github-copilot`, and `deepseek-vs-replit-agent` are complete. The false-vs guard now skips Descript vs Grok and similar secondary-overlap pairs. `npm run loop:next -- --json` currently selects `mistral-ai-vs-poe`.
+Current implementation status: the stricter June 21 cleanup deleted 179 comparison files in total, including false-vs pages and multi-tool pages that should only be rebuilt as focused two-tool direct-substitute pages. It also added 127 blocked pairs for known same-category false-vs traps. The false-vs guard now skips Descript vs Grok, Mistral AI vs Poe, and similar different-workflow pairs. `npm run loop:next -- --json` currently selects `activepieces-vs-n8n`.
 
 ## First Cycle
 
@@ -159,7 +159,7 @@ Do not write the comparison until current-month Canva and Claude facts are verif
 - `npm run qa:route -- --route /compare/<slug>/` verifies built output across the default mobile, tablet, and desktop widths.
 - `npm run loop:record` writes a durable `.agent/loop-runs/` receipt.
 - Existing comparison pairs are skipped.
-- Cross-category or secondary-overlap pairs are skipped unless `src/data/comparison-policy.json` explicitly allows the adjacent workflow.
+- Cross-category, secondary-overlap, and `blocked_pairs` entries in `src/data/comparison-policy.json` are skipped.
 - Invalid arguments fail before reading repo state.
 - Missing backlog files fail with a recovery action.
 - The command is documented in README and script docs.

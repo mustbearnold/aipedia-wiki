@@ -128,10 +128,7 @@ const tier1 = new Set(priority.tier1 || []);
 const tier2 = new Set(priority.tier2 || []);
 const comparisonPolicy = existsSync(COMPARISON_POLICY_PATH)
   ? JSON.parse(readFileSync(COMPARISON_POLICY_PATH, 'utf8'))
-  : { allowed_adjacent_pairs: [], blocked_pairs: [] };
-const allowedAdjacentPairs = new Map(
-  (comparisonPolicy.allowed_adjacent_pairs || []).map((entry) => [pairKey(entry.tools[0], entry.tools[1]), entry]),
-);
+  : { blocked_pairs: [] };
 const blockedPairs = new Map(
   (comparisonPolicy.blocked_pairs || []).map((entry) => [pairKey(entry.tools[0], entry.tools[1]), entry]),
 );
@@ -240,17 +237,6 @@ function classifyComparison(a, b) {
     };
   }
 
-  const allowed = allowedAdjacentPairs.get(key);
-  if (allowed) {
-    return {
-      selectable: true,
-      mode: 'allowed_adjacent',
-      workflow: allowed.workflow || '',
-      reason: allowed.reason || 'allowed adjacent buyer workflow',
-      requires_asymmetric_framing: true,
-    };
-  }
-
   const first = toolBySlug.get(a);
   const second = toolBySlug.get(b);
   if (first?.primary_category && first.primary_category === second?.primary_category) {
@@ -269,7 +255,7 @@ function classifyComparison(a, b) {
     mode: 'review_only',
     reason: shared.length
       ? 'category overlap is not primary for both tools'
-      : 'different primary categories and no explicit same-workflow allowance',
+      : 'different primary categories',
   };
 }
 
@@ -279,8 +265,8 @@ function sharedCategoriesFor(a, b) {
   return first.filter((category) => second.includes(category));
 }
 
-// 1) Tier-one cross-category pairings are review-only unless they are direct
-// substitutes or explicitly allowed by comparison policy.
+// 1) Tier-one cross-category pairings are review-only unless they share the
+// same primary category.
 const tier1List = [...tier1].filter((slug) => toolBySlug.has(slug));
 for (let i = 0; i < tier1List.length; i += 1) {
   for (let j = i + 1; j < tier1List.length; j += 1) {
@@ -307,20 +293,11 @@ for (const [cat, slugs] of byCategory) {
   }
 }
 
-// 3) Explicitly allowed adjacent workflow pairs.
-for (const key of allowedAdjacentPairs.keys()) {
-  const [a, b] = key.split('|');
-  if (toolBySlug.has(a) && toolBySlug.has(b) && isNotable(a) && isNotable(b)) {
-    addPairFromSource(a, b, { source: 'allowed-adjacent' });
-  }
-}
-
 const comparisonGaps = [...candidatePairs.values()]
   .map(({ a, b, sharedCategories, policy }) => {
     const bothTier1 = tier1.has(a) && tier1.has(b);
     const direct = policy.mode === 'direct';
-    const allowedAdjacent = policy.mode === 'allowed_adjacent';
-    const score = priorityWeight(a) + priorityWeight(b) + (bothTier1 ? 2 : 0) + (direct ? 2 : 0) + (allowedAdjacent ? 1 : 0);
+    const score = priorityWeight(a) + priorityWeight(b) + (bothTier1 ? 2 : 0) + (direct ? 2 : 0);
     return {
       kind: 'comparison',
       slug: comparisonSlug(a, b),
@@ -442,7 +419,6 @@ if (JSON_MODE) {
     const tags = [
       gap.both_tier1 ? 'tier1' : null,
       gap.comparison_mode === 'direct' ? gap.shared_categories[0] : null,
-      gap.comparison_mode === 'allowed_adjacent' ? `allowed:${gap.workflow_family}` : null,
     ]
       .filter(Boolean)
       .join(', ');

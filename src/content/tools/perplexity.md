@@ -272,7 +272,7 @@ Perplexity's core product is cited AI search. Paid subscribers can select among 
 - **April 16:** [Perplexity Personal Computer ships for Mac](/news/2026-04-16-perplexity-personal-computer-mac/), a desktop-native research agent that works across your local files and browser tabs alongside web search.
 - **March 18:** Comet browser paywall dropped. Free across iOS, Android, Mac, and Windows.
 
-**June 6 comparison update:** [Kagi vs Perplexity](/compare/kagi-vs-perplexity/) and [Perplexity vs You.com](/compare/perplexity-vs-you-com/) were refreshed to separate three buyer jobs: private paid search, cited answer/research workflow, and grounding/research APIs.
+**June 6 comparison update:** Kagi vs Perplexity and Perplexity vs You.com were refreshed to separate three buyer jobs: private paid search, cited answer/research workflow, and grounding/research APIs.
 
 Max adds Model Council and heavier Computer/research access. The Comet browser is free on every major platform. Paid pricing surfaces now also show asset and video generation limits, but Perplexity is still best understood as a research engine, not a creative media suite.
 

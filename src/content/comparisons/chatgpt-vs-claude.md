@@ -26,15 +26,13 @@ For most individuals, start with one $20/month plan. Pick ChatGPT Plus for bread
 
 ## Decision Snapshot
 
-| Decision point | ChatGPT | Claude |
-|---|---|---|
-| Best first paid plan | Plus for most individuals | Pro for most individuals |
-| Current flagship signal | GPT-5.5 Instant, GPT-5.5 Thinking, and GPT-5.5 Pro by plan | Claude Opus 4.8, with Sonnet 4.6 as the faster workhorse |
-| Broad product surface | Stronger: images, voice, files, data analysis, apps, custom GPTs, Codex, deep research, and agent mode | Strong, but narrower: chat, writing, web search, files, connectors, code/data work, Claude Code, Cowork, and projects |
-| Long-context planning | ChatGPT context varies by plan and model; pricing page lists Instant and Reasoning context by tier | API docs list 1M context for Opus 4.8 and Sonnet 4.6, with Microsoft Foundry caveat for Opus |
-| Coding workflow | Better if you want Codex inside the OpenAI workspace | Better if Claude Code is the primary developer agent |
-| Image generation | Native image generation and editing | No native image generation; Claude supports image input and vision |
-| Enterprise posture | Broad apps, data analysis, record mode, shared projects, admin controls, data residency, and no training on business data by default | Strong controls, Team/Enterprise seats, audit logs, SCIM, custom retention, Enterprise search, and no model training on Team content by default |
+- **Best first paid plan:** ChatGPT: Plus for most individuals; Claude: Pro for most individuals
+- **Current flagship signal:** ChatGPT: GPT-5.5 Instant, GPT-5.5 Thinking, and GPT-5.5 Pro by plan; Claude: Claude Opus 4.8, with Sonnet 4.6 as the faster workhorse
+- **Broad product surface:** ChatGPT: Stronger: images, voice, files, data analysis, apps, custom GPTs, Codex, deep research, and agent mode; Claude: Strong, but narrower: chat, writing, web search, files, connectors, code/data work, Claude Code, Cowork, and projects
+- **Long-context planning:** ChatGPT: ChatGPT context varies by plan and model; pricing page lists Instant and Reasoning context by tier; Claude: API docs list 1M context for Opus 4.8 and Sonnet 4.6, with Microsoft Foundry caveat for Opus
+- **Coding workflow:** ChatGPT: Better if you want Codex inside the OpenAI workspace; Claude: Better if Claude Code is the primary developer agent
+- **Image generation:** ChatGPT: Native image generation and editing; Claude: No native image generation; Claude supports image input and vision
+- **Enterprise posture:** ChatGPT: Broad apps, data analysis, record mode, shared projects, admin controls, data residency, and no training on business data by default; Claude: Strong controls, Team/Enterprise seats, audit logs, SCIM, custom retention, Enterprise search, and no model training on Team content by default
 
 ## Where ChatGPT Wins
 
@@ -129,4 +127,4 @@ Use both only when each has a repeatable role. A high-value split is ChatGPT for
 - **Categories:** [AI Chatbots](/categories/ai-chatbots/) · [AI Writing](/categories/ai-writing/) · [AI Coding](/categories/ai-coding/)
 - **Tools:** [ChatGPT](/tools/chatgpt/) · [Claude](/tools/claude/) · [Claude Code](/tools/claude-code/) · [Codex](/tools/codex/)
 - **Guides:** [Best ChatGPT Alternatives](/guides/chatgpt-alternatives/) · [Best Claude Alternatives](/guides/claude-alternatives/) · [Best AI for Blog Writing](/guides/best-ai-for-blog-writing/)
-- **Comparisons:** [ChatGPT vs Gemini](/compare/chatgpt-vs-gemini/) · [Claude vs Gemini](/compare/claude-vs-gemini/) · [ChatGPT vs Cursor](/compare/chatgpt-vs-cursor/) · [Claude vs Perplexity](/compare/claude-vs-perplexity/)
+- **Comparisons:** [ChatGPT vs Gemini](/compare/chatgpt-vs-gemini/) · [Claude vs Gemini](/compare/claude-vs-gemini/)

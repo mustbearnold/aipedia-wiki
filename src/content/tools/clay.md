@@ -276,4 +276,3 @@ Clay pricing, AI model costs, MCP behavior, and GTM packaging are volatile, so A
 ## Related
 
 - **Category:** [AI Automation](/categories/ai-automation/)
-- **Comparisons:** [Apollo vs Clay](/compare/apollo-vs-clay/) · [Clay vs Instantly](/compare/clay-vs-instantly/) · [Clay vs Intercom](/compare/clay-vs-intercom/) · [Clay vs Make](/compare/clay-vs-make/) · [Clay vs Zapier](/compare/clay-vs-zapier/)

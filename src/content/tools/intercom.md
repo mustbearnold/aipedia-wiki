@@ -237,4 +237,3 @@ Yes for supported patterns (refunds through connected systems, account lookups, 
 ## Related
 
 - **Category:** [AI Automation](/categories/ai-automation/)
-- **Comparisons:** [Apollo vs Intercom](/compare/apollo-vs-intercom/) · [Clay vs Intercom](/compare/clay-vs-intercom/) · [Instantly vs Intercom](/compare/instantly-vs-intercom/) · [Intercom vs Make](/compare/intercom-vs-make/) · [Intercom vs Zapier](/compare/intercom-vs-zapier/)

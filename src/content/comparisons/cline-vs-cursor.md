@@ -24,14 +24,12 @@ Use **Cline** when you want control: open source, BYOK or local models, explicit
 
 ## Decision Snapshot
 
-| | Cline | Cursor |
-|---|---|---|
-| **Primary job** | Open-source coding agent runtime for IDE, CLI, and SDK workflows | Managed AI-native IDE and agent workspace |
-| **Best buyer** | BYOK power user, open-source team, platform engineer, privacy-sensitive developer | Developer or team willing to standardize on an AI-first editor |
-| **Current pricing signal** | Open-source agent; real cost is model/API/local infrastructure usage | Hobby free; Individual starts at $20/mo; Teams $40/user/mo; Enterprise custom |
-| **Model control** | Bring Claude, GPT, Gemini, local Ollama/LM Studio, OpenRouter, Bedrock, Vertex, Groq, or compatible endpoints | Cursor-supported models with plan and usage rules controlled by Cursor |
-| **Agent surface** | Files, terminal, browser, checkpoints, Plan/Act, CLI, SDK, Kanban, MCP, hooks, plugins | Tab, Composer 2.5, Agents, Cloud Agents, Bugbot, MCPs, skills, hooks, team marketplace |
-| **Main risk** | You own model spend, keys, MCP permissions, local security, and rollout policy | Subscription plus model usage can rise quickly for heavy agent work |
+- ****Primary job**:** Cline: Open-source coding agent runtime for IDE, CLI, and SDK workflows; Cursor: Managed AI-native IDE and agent workspace
+- ****Best buyer**:** Cline: BYOK power user, open-source team, platform engineer, privacy-sensitive developer; Cursor: Developer or team willing to standardize on an AI-first editor
+- ****Current pricing signal**:** Cline: Open-source agent; real cost is model/API/local infrastructure usage; Cursor: Hobby free; Individual starts at $20/mo; Teams $40/user/mo; Enterprise custom
+- ****Model control**:** Cline: Bring Claude, GPT, Gemini, local Ollama/LM Studio, OpenRouter, Bedrock, Vertex, Groq, or compatible endpoints; Cursor: Cursor-supported models with plan and usage rules controlled by Cursor
+- ****Agent surface**:** Cline: Files, terminal, browser, checkpoints, Plan/Act, CLI, SDK, Kanban, MCP, hooks, plugins; Cursor: Tab, Composer 2.5, Agents, Cloud Agents, Bugbot, MCPs, skills, hooks, team marketplace
+- ****Main risk**:** Cline: You own model spend, keys, MCP permissions, local security, and rollout policy; Cursor: Subscription plus model usage can rise quickly for heavy agent work
 
 ## Where Cline Wins
 
@@ -105,4 +103,4 @@ Try Cursor first if you want a ready-to-use AI IDE. Try Cline first if open sour
 
 - **Tool pages:** [Cline](/tools/cline/) | [Cursor](/tools/cursor/)
 - **Category:** [AI Coding Assistants](/categories/ai-coding/)
-- **Comparisons:** [Claude vs Cline](/compare/claude-vs-cline/) | [Claude vs Cursor](/compare/claude-vs-cursor/) | [Cody vs Cursor](/compare/cody-vs-cursor/) | [Cursor vs GitHub Copilot](/compare/cursor-vs-github-copilot/)
+- **Comparisons:** [Cursor vs GitHub Copilot](/compare/cursor-vs-github-copilot/)

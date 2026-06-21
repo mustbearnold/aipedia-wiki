@@ -213,4 +213,4 @@ Yes. Consensus ships Teams for research groups and Enterprise for 200+ seat inst
 ## Related
 
 - **Category:** [AI Research](/categories/ai-research/)
-- **Comparisons:** [Connected Papers vs Consensus](/compare/connected-papers-vs-consensus/) | [Consensus vs Elicit](/compare/consensus-vs-elicit/) | [Consensus vs Scite](/compare/consensus-vs-scite/) | [Consensus vs Semantic Scholar](/compare/consensus-vs-semantic-scholar/)
+- **Comparisons:** [Connected Papers vs Consensus](/compare/connected-papers-vs-consensus/) | [Consensus vs Elicit](/compare/consensus-vs-elicit/) | [Consensus vs Semantic Scholar](/compare/consensus-vs-semantic-scholar/)

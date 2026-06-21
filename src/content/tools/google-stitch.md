@@ -236,4 +236,4 @@ Gemini-powered prompt handling is reliable for layout, theme, and component-leve
 ## Related
 
 - **Category:** [AI Design](/categories/ai-design/)
-- **Comparisons:** [Figma vs Google Stitch](/compare/figma-vs-google-stitch/) · [Google Stitch vs Lovable](/compare/google-stitch-vs-lovable/) · [Google Stitch vs v0](/compare/google-stitch-vs-v0/) · [Canva AI vs Google Stitch](/compare/canva-vs-google-stitch/) · [Bolt vs Google Stitch](/compare/bolt-vs-google-stitch/)
+- **Comparisons:** [Figma vs Google Stitch](/compare/figma-vs-google-stitch/)

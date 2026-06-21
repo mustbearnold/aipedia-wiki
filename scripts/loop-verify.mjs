@@ -214,6 +214,10 @@ function smartCommandRunsRouteQa(command, route) {
   return /^npm run qa:route\b/.test(command) && command.includes(`--route ${route}`);
 }
 
+function changedToolPaths(paths) {
+  return paths.filter((path) => /^src\/content\/tools\/[^/]+\.md$/.test(path));
+}
+
 function commandPlan({ paths, date, route, widths }) {
   const smartPlan = paths.length ? planForPaths(paths) : { commands: [] };
   const smartRunsBuild = smartPlan.commands.includes('npm run build:fast');
@@ -221,6 +225,7 @@ function commandPlan({ paths, date, route, widths }) {
   const coverageArgs = paths.length
     ? paths.flatMap((path) => ['--changed-file', path])
     : ['--changed'];
+  const provenanceArgs = changedToolPaths(paths).flatMap((path) => ['--changed-file', path]);
   const smartArgs = ['scripts/check-smart.mjs', '--run'];
   for (const path of paths) smartArgs.push('--path', path);
 
@@ -228,8 +233,11 @@ function commandPlan({ paths, date, route, widths }) {
     nodeStep('scripts/generate-page-refresh-ledger.mjs', ['--date', date], 'regenerate page refresh ledger'),
     nodeStep('scripts/generate-page-refresh-ledger.mjs', ['--check', '--date', date], 'check page refresh ledger with loop date'),
     nodeStep('scripts/audit-coverage-quality.mjs', coverageArgs, 'check changed comparison quality'),
-    step(process.execPath, smartArgs, 'run smart verification for changed paths'),
   ];
+  if (provenanceArgs.length) {
+    steps.push(nodeStep('scripts/audit-provenance-pricing.mjs', provenanceArgs, 'check changed tool provenance'));
+  }
+  steps.push(step(process.execPath, smartArgs, 'run smart verification for changed paths'));
 
   if (!SKIP_BUILD && !smartRunsBuild && (FORCE_BUILD || route)) {
     steps.push(npmStep('build:fast'));

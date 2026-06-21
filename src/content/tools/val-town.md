@@ -283,4 +283,3 @@ Deno. Val Town uses Deno's official TypeScript language server and supports npm 
 ## Related
 
 - **Category:** [AI Coding](/categories/ai-coding/)
-- **Comparisons:** [Val Town vs Cursor](/compare/cursor-vs-val-town/), [Val Town vs Claude Code](/compare/claude-code-vs-val-town/), [Val Town vs GitHub Copilot](/compare/github-copilot-vs-val-town/)

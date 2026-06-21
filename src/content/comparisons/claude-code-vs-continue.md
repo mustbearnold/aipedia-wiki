@@ -28,14 +28,12 @@ Choose **Continue** when the job is "give our developers an open-source coding a
 
 ## Decision Snapshot
 
-| Buyer job | Better pick | Why |
-|---|---|---|
-| Anthropic-native agentic coding | **Claude Code** | First-party Claude workflow, repo tools, command execution, memory, MCP, and usage controls. |
-| Open-source IDE assistant | **Continue** | MIT-licensed extension with BYOK routing across providers and local models. |
-| Lowest fixed subscription | **Continue** | Core extension is free; paid managed usage starts with Starter token billing. |
-| Least setup for Claude-heavy work | **Claude Code** | Claude subscription/API access and first-party docs are the center of the product. |
-| Provider flexibility | **Continue** | Teams can route OpenAI, Anthropic, Google, Mistral, Bedrock, Azure, Vertex, Ollama, LM Studio, or vLLM. |
-| Team-wide reusable rules and agents | **Continue** | Continue Hub is built for sharing agents, slash commands, rules, and MCP blocks. |
+- **Anthropic-native agentic coding:** Better pick: **Claude Code**; Why: First-party Claude workflow, repo tools, command execution, memory, MCP, and usage controls.
+- **Open-source IDE assistant:** Better pick: **Continue**; Why: MIT-licensed extension with BYOK routing across providers and local models.
+- **Lowest fixed subscription:** Better pick: **Continue**; Why: Core extension is free; paid managed usage starts with Starter token billing.
+- **Least setup for Claude-heavy work:** Better pick: **Claude Code**; Why: Claude subscription/API access and first-party docs are the center of the product.
+- **Provider flexibility:** Better pick: **Continue**; Why: Teams can route OpenAI, Anthropic, Google, Mistral, Bedrock, Azure, Vertex, Ollama, LM Studio, or vLLM.
+- **Team-wide reusable rules and agents:** Better pick: **Continue**; Why: Continue Hub is built for sharing agents, slash commands, rules, and MCP blocks.
 
 ## Where Claude Code Wins
 
@@ -55,10 +53,8 @@ Choose **Continue** when the job is "give our developers an open-source coding a
 
 ## Pricing And Plan Guidance
 
-| Product | Public pricing anchor | Best plan guidance |
-|---|---:|---|
-| Claude Code | Claude Free/Pro/Max/Team/Enterprise/API paths; Pro is the practical $20/mo individual starting point, Max tiers scale sustained usage | Start with Pro for light work, Max 5x for daily agentic coding, API/Team/Enterprise for governed team usage. |
-| Continue | Free OSS extension; Starter pay-as-you-go at $3 per million tokens; Team $20/seat/mo with bundled credits; Company custom | Use free BYOK for individuals, Starter for managed solo usage, Team when shared agents and controls matter. |
+- **Claude Code:** Public pricing anchor: Claude Free/Pro/Max/Team/Enterprise/API paths; Pro is the practical $20/mo individual starting point, Max tiers scale sustained usage; Best plan guidance: Start with Pro for light work, Max 5x for daily agentic coding, API/Team/Enterprise for governed team usage.
+- **Continue:** Public pricing anchor: Free OSS extension; Starter pay-as-you-go at $3 per million tokens; Team $20/seat/mo with bundled credits; Company custom; Best plan guidance: Use free BYOK for individuals, Starter for managed solo usage, Team when shared agents and controls matter.
 
 The budget question is not just sticker price. Claude Code cost depends on subscription limits, model choice, and session length. Continue cost depends on the provider, model, token volume, embeddings, and whether managed Continue credits are used.
 
@@ -110,5 +106,5 @@ Continue is better when teams need IDE and provider flexibility. Claude Code is 
 - [Claude Code review](/tools/claude-code/)
 - [Continue review](/tools/continue/)
 - [Continue vs Cursor](/compare/continue-vs-cursor/)
-- [Continue vs GitHub Copilot](/compare/continue-vs-github-copilot/)
+-
 - [AI Coding category](/categories/ai-coding/)

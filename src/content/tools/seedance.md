@@ -227,5 +227,5 @@ AiPedia would test Seedance 2.0 first for raw model quality on June 6, 2026. Ser
 ## Related
 
 - **Category:** [AI Video Generation](/categories/ai-video/)
-- **Compare:** [Veo vs Seedance](/compare/veo-vs-seedance/) · [Pika vs Seedance](/compare/pika-vs-seedance/) · [HeyGen vs Seedance](/compare/heygen-vs-seedance/) · [Runway vs Kling vs Seedance vs Veo](/compare/kling-vs-seedance-vs-runway/)
+- **Compare:** [Veo vs Seedance](/compare/veo-vs-seedance/) · [Pika vs Seedance](/compare/pika-vs-seedance/) · HeyGen vs Seedance · [Runway vs Kling vs Seedance vs Veo](/compare/kling-vs-seedance-vs-runway/)
 - **Alternatives:** [Kling 3.0](/tools/kling/) · [Google Veo 3.1](/tools/veo/) · [Runway](/tools/runway/) · [Pika](/tools/pika/) · [HeyGen](/tools/heygen/)

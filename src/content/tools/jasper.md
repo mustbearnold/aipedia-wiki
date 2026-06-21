@@ -245,4 +245,3 @@ Jasper targets enterprise marketing teams with heavier brand workflow, campaign 
 ## Related
 
 - **Category:** [AI Writing](/categories/ai-writing/)
-- **Comparisons:** [ChatGPT vs Jasper](/compare/chatgpt-vs-jasper/) · [Claude vs Jasper](/compare/claude-vs-jasper/)

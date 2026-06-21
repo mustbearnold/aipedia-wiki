@@ -98,4 +98,4 @@ It depends on stack fit. ElevenLabs is easier for a voice-specific app. Voxtral 
 ## Related
 
 - [AI Voice Tools](/categories/ai-voice/)
-- [Descript vs Voxtral](/compare/descript-vs-voxtral/)
+-

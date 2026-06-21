@@ -242,4 +242,3 @@ Reflect costs less ($10/mo), adds end-to-end encryption, and relies on manual ba
 ## Related
 
 - **Category:** [AI Notes](/categories/ai-notes/)
-- **Comparisons:** [ChatGPT vs Mem](/compare/chatgpt-vs-mem/)

@@ -323,4 +323,4 @@ No. Zapier is cloud-only. Data passes through Zapier servers. [n8n](/tools/n8n/)
 ## Related
 
 - **Category:** [AI Automation](/categories/ai-automation/)
-- **Comparisons:** [n8n vs Make vs Zapier](/compare/n8n-vs-make-vs-zapier/) · [ChatGPT vs Zapier](/compare/chatgpt-vs-zapier/) · [Clay vs Zapier](/compare/clay-vs-zapier/)
+- **Comparisons:** [n8n vs Make vs Zapier](/compare/n8n-vs-make-vs-zapier/)

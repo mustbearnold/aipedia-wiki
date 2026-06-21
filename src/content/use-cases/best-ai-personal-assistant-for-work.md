@@ -42,10 +42,6 @@ related:
     title: "Lindy review"
     description: "Pricing, trial, best plan, alternatives, usage risks, and affiliate disclosure."
     kind: tool
-  - href: /compare/lindy-vs-zapier-vs-n8n/
-    title: "Lindy vs Zapier vs n8n"
-    description: "Decide whether you need assistant delegation, no-code SaaS automation, or technical workflow ownership."
-    kind: comparison
   - href: /guides/best-ai-automation-platform/
     title: "Best AI automation platform"
     description: "Broader workflow automation guide for n8n, Zapier, Make, Gumloop, Relevance AI, and Lindy."
@@ -211,7 +207,7 @@ Yes. AiPedia may earn a commission from Lindy signups through its PartnerStack l
 ## Related
 
 - [Lindy review](/tools/lindy/)
-- [Lindy vs Zapier vs n8n](/compare/lindy-vs-zapier-vs-n8n/)
+-
 - [Best AI automation platform](/guides/best-ai-automation-platform/)
 - [Best AI for meeting notes](/guides/best-ai-for-meeting-notes/)
 - [Best AI email triage for heavy inboxes](/guides/best-ai-email-triage-for-heavy-inboxes/)

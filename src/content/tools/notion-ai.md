@@ -333,4 +333,4 @@ Notion AI wins on workspace context: it searches your pages and databases automa
 ## Related
 
 - **Category:** [AI Notes & Knowledge](/categories/ai-notes/)
-- **Comparisons:** [ChatGPT vs Notion AI](/compare/chatgpt-vs-notion-ai/) · [Claude vs Notion AI](/compare/claude-vs-notion-ai/) · [Notion AI vs Obsidian](/compare/notion-ai-vs-obsidian/)
+- **Comparisons:** [Notion AI vs Obsidian](/compare/notion-ai-vs-obsidian/)

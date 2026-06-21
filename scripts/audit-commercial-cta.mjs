@@ -143,7 +143,6 @@ const requiredRoutes = [
   { path: '/guides/best-ai-personal-assistant-for-work/', minCtas: 5, pageType: 'guide', requiredAffiliateLinks: [partnerLinks.lindy] },
   { path: '/guides/best-ai-tools-for-marketers/', minCtas: 5, pageType: 'guide', requiredAffiliateLinks: [partnerLinks.adcreative, partnerLinks.unbounce] },
   { path: '/guides/best-ai-for-ad-copy/', minCtas: 5, pageType: 'guide', requiredAffiliateLinks: [partnerLinks.adcreative, partnerLinks.unbounce] },
-  { path: '/compare/lindy-vs-zapier-vs-n8n/', minCtas: 4, pageType: 'comparison', requiredAffiliateLinks: [partnerLinks.lindy] },
   { path: '/categories/ai-design/', minCtas: 3, pageType: 'category', requiredAffiliateLinks: [partnerLinks.adcreative, partnerLinks.unbounce] },
   { path: '/categories/ai-seo/', minCtas: 3, pageType: 'category', requiredAffiliateLinks: [partnerLinks.adcreative] },
   { path: '/companies/openai/', minCtas: 1, pageType: 'company' },

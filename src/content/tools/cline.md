@@ -303,4 +303,4 @@ Pick Cursor if you want the smoother AI-native IDE with less setup. Pick Cline i
 ## Related
 
 - **Category:** [AI Coding](/categories/ai-coding/)
-- **Comparisons:** [Claude vs Cline](/compare/claude-vs-cline/) · [Cline vs Cursor](/compare/cline-vs-cursor/)
+- **Comparisons:** [Cline vs Cursor](/compare/cline-vs-cursor/)

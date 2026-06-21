@@ -20,9 +20,9 @@ test('loop verify dry-run pins the ledger date across its command plan', () => {
     '--date',
     '2026-06-20',
     '--route',
-    '/compare/cursor-vs-deepseek/',
+    '/compare/cursor-vs-github-copilot/',
     '--path',
-    'src/content/comparisons/cursor-vs-deepseek.md',
+    'src/content/comparisons/cursor-vs-github-copilot.md',
   ]);
 
   assert.equal(result.status, 0, `${result.stdout}\n${result.stderr}`);
@@ -30,11 +30,11 @@ test('loop verify dry-run pins the ledger date across its command plan', () => {
   assert.equal(report.ok, true);
   assert.equal(report.dry_run, true);
   assert.equal(report.date, '2026-06-20');
-  assert.equal(report.route, '/compare/cursor-vs-deepseek/');
+  assert.equal(report.route, '/compare/cursor-vs-github-copilot/');
   assert.equal(report.smart_runs_route_qa, true);
   assert.ok(report.commands.some((command) => /generate-page-refresh-ledger\.mjs --date 2026-06-20/.test(command)));
   assert.ok(report.commands.some((command) => /generate-page-refresh-ledger\.mjs --check --date 2026-06-20/.test(command)));
-  assert.ok(report.commands.some((command) => /check-smart\.mjs --run --path src\/content\/comparisons\/cursor-vs-deepseek\.md/.test(command)));
+  assert.ok(report.commands.some((command) => /check-smart\.mjs --run --path src\/content\/comparisons\/cursor-vs-github-copilot\.md/.test(command)));
 });
 
 test('loop verify does not add a fallback build when no route or force-build is requested', () => {
@@ -61,11 +61,11 @@ test('loop verify recognizes combined smart route QA commands', () => {
     '--date',
     '2026-06-20',
     '--route',
-    '/compare/cursor-vs-deepseek/',
+    '/compare/cursor-vs-github-copilot/',
     '--path',
     'src/content/categories/ai-coding.md',
     '--path',
-    'src/content/comparisons/cursor-vs-deepseek.md',
+    'src/content/comparisons/cursor-vs-github-copilot.md',
     '--path',
     'src/content/tools/foo.md',
   ]);
@@ -74,6 +74,31 @@ test('loop verify recognizes combined smart route QA commands', () => {
   const report = JSON.parse(result.stdout);
   assert.equal(report.smart_runs_route_qa, true);
   assert.ok(!report.commands.some((command) => /scripts\/qa-route\.mjs/.test(command)));
+});
+
+test('loop verify scopes provenance checks to changed tool pages', () => {
+  const result = runNode('scripts/loop-verify.mjs', [
+    '--json',
+    '--dry-run',
+    '--date',
+    '2026-06-21',
+    '--route',
+    '/compare/chatgpt-vs-poe/',
+    '--path',
+    'src/content/comparisons/chatgpt-vs-poe.md',
+    '--path',
+    'src/content/tools/chatgpt.md',
+    '--path',
+    'src/content/tools/poe.md',
+  ]);
+
+  assert.equal(result.status, 0, `${result.stdout}\n${result.stderr}`);
+  const report = JSON.parse(result.stdout);
+  const provenanceCommand = report.commands.find((command) => /audit-provenance-pricing\.mjs/.test(command));
+  assert.ok(provenanceCommand);
+  assert.match(provenanceCommand, /--changed-file src\/content\/tools\/chatgpt\.md/);
+  assert.match(provenanceCommand, /--changed-file src\/content\/tools\/poe\.md/);
+  assert.doesNotMatch(provenanceCommand, /src\/content\/comparisons\/chatgpt-vs-poe\.md/);
 });
 
 test('loop verify requires an explicit date or AIPEDIA_LEDGER_DATE', () => {

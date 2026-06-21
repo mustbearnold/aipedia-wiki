@@ -68,10 +68,7 @@ if (!existsSync(BACKLOG_PATH)) {
 const backlog = JSON.parse(readFileSync(BACKLOG_PATH, 'utf8'));
 const comparisonPolicy = existsSync(COMPARISON_POLICY_PATH)
   ? JSON.parse(readFileSync(COMPARISON_POLICY_PATH, 'utf8'))
-  : { allowed_adjacent_pairs: [], blocked_pairs: [] };
-const allowedAdjacentPairs = new Set(
-  (comparisonPolicy.allowed_adjacent_pairs || []).map((entry) => pairKey(entry.tools[0], entry.tools[1])),
-);
+  : { blocked_pairs: [] };
 const blockedPairs = new Set(
   (comparisonPolicy.blocked_pairs || []).map((entry) => pairKey(entry.tools[0], entry.tools[1])),
 );
@@ -147,7 +144,6 @@ function emitReport(report) {
       console.log(`  required: canonical_fact_table: true for ${cluster.canonical_fact_tools.join(', ')}`);
     }
     console.log(`  comparison mode: ${cluster.comparison_mode}`);
-    if (cluster.requires_asymmetric_framing) console.log(`  required: asymmetric framing for ${cluster.workflow_family}`);
     if (report.warnings?.length) {
       console.log('');
       console.log('Warnings:');
@@ -312,7 +308,6 @@ function selectableComparison(item) {
 
   const key = pairKey(item.tools[0], item.tools[1]);
   if (blockedPairs.has(key)) return false;
-  if (allowedAdjacentPairs.has(key)) return true;
 
   const [first, second] = item.tools.map(toolMeta);
   if (!first.primary_category || !second.primary_category) return false;

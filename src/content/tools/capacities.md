@@ -277,4 +277,4 @@ No. Capacities is solo-focused. No shared workspaces or real-time collaboration.
 ## Related
 
 - **Category:** [AI Notes](/categories/ai-notes/)
-- **Comparisons:** [Capacities vs NotebookLM](/compare/capacities-vs-notebooklm/) · [Capacities vs Obsidian](/compare/capacities-vs-obsidian/) · [Capacities vs Readwise](/compare/capacities-vs-readwise/) · [Capacities vs Fireflies](/compare/capacities-vs-fireflies/) · [Capacities vs Otter.ai](/compare/capacities-vs-otter-ai/)
+- **Comparisons:** [Capacities vs Obsidian](/compare/capacities-vs-obsidian/)

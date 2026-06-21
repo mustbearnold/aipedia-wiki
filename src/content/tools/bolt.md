@@ -179,7 +179,7 @@ Do not pick Bolt because you think it eliminates engineering. It still needs rev
 - **Model competition raises the alternatives bar:** Bolt's value is the browser workspace, WebContainers runtime, hosting path, and app-builder ergonomics, not raw model exclusivity. Serious coders comparing Bolt with Claude Code, Cursor, or local IDE workflows should test the same task in each tool before going annual.
 - **Bolt Cloud changes the comparison:** Current docs say Bolt can create and manage databases, handle hosting, publish to a free `.bolt.host` subdomain, and connect custom domains for Pro users.
 - **Supported stack is clearer now:** Bolt supports JavaScript-based web technologies and Node.js for backend work. It does not support PHP or Python backends.
-- **AI Design buyer path:** The refreshed [Lovable vs Bolt.new vs v0](/compare/lovable-vs-bolt-vs-v0/) comparison now positions Bolt as the browser-native build/run/debug winner rather than treating it as a frontend-only tool.
+- **AI Design buyer path:** Bolt is the browser-native build/run/debug lane for app builders rather than a frontend-only tool.
 
 ## Key Facts
 
@@ -328,8 +328,7 @@ Bolt is broader as a browser development workspace. v0 is better when the buyer 
 ## Related
 
 - **Category:** [AI Design](/categories/ai-design/)
-- **Main comparison:** [Lovable vs Bolt.new vs v0](/compare/lovable-vs-bolt-vs-v0/)
-- **More comparisons:** [Bolt.new vs ChatGPT](/compare/bolt-vs-chatgpt/) · [Bolt.new vs Cursor](/compare/bolt-vs-cursor/) · [Bolt.new vs Figma AI](/compare/bolt-vs-figma/) · [Bolt.new vs Google Stitch](/compare/bolt-vs-google-stitch/)
+- **Category:** [AI Design](/categories/ai-design/)
 - **Alternatives:** [Lovable](/tools/lovable/) · [v0](/tools/v0/) · [Replit Agent](/tools/replit-agent/) · [Cursor](/tools/cursor/) · [Claude](/tools/claude/)
 
 Commercial note: AiPedia uses the official Bolt.new URL for reader CTAs. Editorial ratings and recommendations do not depend on commercial relationships.

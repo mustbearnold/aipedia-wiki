@@ -24,13 +24,11 @@ Use **Semantic Scholar** as the default free starting point for academic search,
 
 ## Decision Snapshot
 
-| | Connected Papers | Semantic Scholar |
-|---|---|---|
-| **Primary job** | Visual graph around a seed paper | Free academic search, paper pages, recommendations, APIs, datasets |
-| **Best buyer** | Visual learner or researcher scoping related work | Student, researcher, developer, analyst, citation manager builder |
-| **Current pricing signal** | Free limited graph tier plus paid annual plans; verify limits at checkout | Free core search; API free but rate-limited and some endpoints require keys |
-| **Best output** | Graph, Prior Works, Derivative Works, paper list | Search results, TLDRs, citations, related papers, API data |
-| **Main risk** | Narrower workflow and inherited corpus limits | Search breadth without structured review or citation-sentiment analysis |
+- ****Primary job**:** Connected Papers: Visual graph around a seed paper; Semantic Scholar: Free academic search, paper pages, recommendations, APIs, datasets
+- ****Best buyer**:** Connected Papers: Visual learner or researcher scoping related work; Semantic Scholar: Student, researcher, developer, analyst, citation manager builder
+- ****Current pricing signal**:** Connected Papers: Free limited graph tier plus paid annual plans; verify limits at checkout; Semantic Scholar: Free core search; API free but rate-limited and some endpoints require keys
+- ****Best output**:** Connected Papers: Graph, Prior Works, Derivative Works, paper list; Semantic Scholar: Search results, TLDRs, citations, related papers, API data
+- ****Main risk**:** Connected Papers: Narrower workflow and inherited corpus limits; Semantic Scholar: Search breadth without structured review or citation-sentiment analysis
 
 ## Where Connected Papers Wins
 
@@ -100,4 +98,4 @@ Semantic Scholar. Its Academic Graph, Recommendations, and Datasets APIs are the
 
 - **Tool pages:** [Connected Papers](/tools/connected-papers/) | [Semantic Scholar](/tools/semantic-scholar/)
 - **Category:** [AI Research Tools](/categories/ai-research/)
-- **Comparisons:** [Consensus vs Semantic Scholar](/compare/consensus-vs-semantic-scholar/) | [Connected Papers vs Elicit](/compare/connected-papers-vs-elicit/) | [Connected Papers vs Scite](/compare/connected-papers-vs-scite/)
+- **Comparisons:** [Consensus vs Semantic Scholar](/compare/consensus-vs-semantic-scholar/) | [Connected Papers vs Elicit](/compare/connected-papers-vs-elicit/)

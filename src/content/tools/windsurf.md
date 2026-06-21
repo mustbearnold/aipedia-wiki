@@ -233,4 +233,4 @@ Choose Cursor for the cleaner standalone AI IDE. Choose Windsurf / Devin Desktop
 ## Related
 
 - **Category:** [AI Coding](/categories/ai-coding/)
-- **Comparisons:** [Cursor vs Windsurf](/compare/cursor-vs-windsurf/) · [Cursor vs Devin](/compare/cursor-vs-devin/)
+- **Comparisons:** [Cursor vs Windsurf](/compare/cursor-vs-windsurf/)

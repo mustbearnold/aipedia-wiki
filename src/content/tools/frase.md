@@ -197,4 +197,4 @@ Frase sells the workflow, not a public menu of named third-party model routes. E
 ## Related
 
 - **Category:** [AI SEO](/categories/ai-seo/)
-- **Comparisons:** [Frase vs Surfer SEO](/compare/frase-vs-surfer-seo/) · [Frase vs NeuronWriter](/compare/frase-vs-neuronwriter/) · [Frase vs MarketMuse](/compare/frase-vs-marketmuse/) · [Frase vs Semrush](/compare/frase-vs-semrush/) · [Ahrefs vs Frase](/compare/ahrefs-vs-frase/)
+- **Comparisons:** [Frase vs Surfer SEO](/compare/frase-vs-surfer-seo/) · [Frase vs NeuronWriter](/compare/frase-vs-neuronwriter/) · [Frase vs MarketMuse](/compare/frase-vs-marketmuse/)

@@ -366,4 +366,4 @@ Ideogram still edges Midjourney on reliability for dense typography (logos, post
 ## Related
 
 - **Category:** [AI Image Generation](/categories/ai-image/)
-- **Comparisons:** [Midjourney vs Flux](/compare/midjourney-vs-flux/) · [Ideogram vs Midjourney](/compare/ideogram-vs-midjourney/) · [Adobe Firefly vs Midjourney](/compare/adobe-firefly-vs-midjourney/) · [Canva AI vs Midjourney](/compare/canva-vs-midjourney/)
+- **Comparisons:** [Ideogram vs Midjourney](/compare/ideogram-vs-midjourney/) · [Adobe Firefly vs Midjourney](/compare/adobe-firefly-vs-midjourney/)

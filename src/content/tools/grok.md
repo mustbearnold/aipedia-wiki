@@ -242,7 +242,7 @@ Older third-party or news-cycle claims about Grok 4.20 variants, future Grok 5 t
 
 ## Recent developments (April-June 2026)
 
-- **June 20:** Grok was rechecked for the [Cursor vs Grok](/compare/cursor-vs-grok/) loop against current xAI pricing, model docs, Grok Build, Grok Build enterprise, Responses API, and product pages. The buyer split is now clearer: Cursor is the finished IDE/workbench, while Grok is an xAI-native coding-agent and API lane that should be benchmarked with permission, sandbox, ZDR/team, and repo-quality checks before rollout.
+- **June 20:** Grok was rechecked for the Cursor vs Grok loop against current xAI pricing, model docs, Grok Build, Grok Build enterprise, Responses API, and product pages. The buyer split is now clearer: Cursor is the finished IDE/workbench, while Grok is an xAI-native coding-agent and API lane that should be benchmarked with permission, sandbox, ZDR/team, and repo-quality checks before rollout.
 - **June 15:** Current xAI docs now make Grok Build a first-class coding-agent surface: interactive TUI, headless scripting, custom models, skills/plugins, ACP integration, and a Grok Build 0.1 API route. Treat it as a new xAI-native coding lane to test against Cursor, Claude Code, Codex, Copilot, Aider, and Devin rather than as only a model backend.
 - **May 8:** [GitHub announced it would deprecate Grok Code Fast 1 across Copilot on May 15](/news/2026-05-08-github-copilot-grok-code-fast-1-deprecation/) following an xAI provider-side deprecation; that removal is now in effect. GitHub points users to GPT-5 mini and Claude Haiku 4.5. Teams treating Grok as a stable coding backend should re-verify the exact surface and model before relying on it.
 - **May 1:** [Grok 4.3 moved into the xAI API and OpenRouter while Custom Voices added team-scoped voice cloning](/news/2026-05-03-xai-grok-43-custom-voices-api/). The June 20 source check keeps the current official buyer anchor on xAI's model docs: Grok 4.3, 1M context, $1.25/M input, $2.50/M output.
@@ -385,4 +385,4 @@ AiPedia is not publishing a launch date until xAI posts one in current primary s
 ## Related
 
 - **Category:** [AI Chatbots](/categories/ai-chatbots/) · [AI Search](/categories/ai-search/) · [AI Coding](/categories/ai-coding/)
-- **Comparisons:** [Cursor vs Grok](/compare/cursor-vs-grok/) · [ChatGPT vs Grok](/compare/chatgpt-vs-grok/) · [Claude vs Grok](/compare/claude-vs-grok/) · [Gemini vs Grok](/compare/gemini-vs-grok/)
+- **Comparisons:** [ChatGPT vs Grok](/compare/chatgpt-vs-grok/) · [Claude vs Grok](/compare/claude-vs-grok/) · [Gemini vs Grok](/compare/gemini-vs-grok/)

@@ -242,4 +242,3 @@ Instantly pricing and packaging are volatile, so AiPedia treats it as a monthly 
 ## Related
 
 - **Category:** [AI Automation](/categories/ai-automation/)
-- **Comparisons:** [Apollo vs Instantly](/compare/apollo-vs-instantly/) · [Clay vs Instantly](/compare/clay-vs-instantly/) · [Instantly vs Intercom](/compare/instantly-vs-intercom/) · [Instantly vs Make](/compare/instantly-vs-make/) · [Instantly vs Zapier](/compare/instantly-vs-zapier/)

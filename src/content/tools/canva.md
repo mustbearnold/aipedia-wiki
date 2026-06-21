@@ -346,6 +346,5 @@ Custom pricing only. Treat Enterprise as a sales-led security, admin, privacy, C
 ## Related
 
 - **Category:** [AI Design](/categories/ai-design/)
-- **Comparisons:** [Canva vs Claude](/compare/canva-vs-claude/) · [Canva vs Figma](/compare/canva-vs-figma/) · [Adobe Firefly vs Canva](/compare/adobe-firefly-vs-canva/) · [Canva vs ChatGPT](/compare/canva-vs-chatgpt/) · [Canva vs Midjourney](/compare/canva-vs-midjourney/) · [Canva vs Google Stitch](/compare/canva-vs-google-stitch/)
 
 *Canva affiliate status: no standard publisher affiliate route is used on this page. AiPedia's ranking is editorial and source-backed.*

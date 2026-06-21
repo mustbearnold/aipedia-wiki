@@ -282,6 +282,5 @@ If content workflows drive the use case, Guru or a dedicated content-toolkit che
 ## Related
 
 - **Category:** [AI SEO](/categories/ai-seo/)
-- **Comparisons:** [Surfer vs Semrush vs Ahrefs](/compare/surfer-vs-semrush-vs-ahrefs/) · [Semrush vs Surfer SEO](/compare/semrush-vs-surfer-seo/) · [Frase vs Semrush](/compare/frase-vs-semrush/) · [MarketMuse vs Semrush](/compare/marketmuse-vs-semrush/)
 
 *Some links on this page are affiliate links. We earn a commission at no extra cost to you. This does not influence our ratings or recommendations.*

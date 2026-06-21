@@ -252,4 +252,3 @@ NotebookLM wins on citation precision, source-pack study, and artifact generatio
 ## Related
 
 - **Category:** [AI Notes](/categories/ai-notes/) · [AI Search](/categories/ai-search/)
-- **Comparisons:** [Capacities vs NotebookLM](/compare/capacities-vs-notebooklm/) · [NotebookLM vs Obsidian](/compare/notebooklm-vs-obsidian/) · [NotebookLM vs Otter.ai](/compare/notebooklm-vs-otter-ai/) · [NotebookLM vs Readwise](/compare/notebooklm-vs-readwise/) · [Fireflies vs NotebookLM](/compare/fireflies-vs-notebooklm/)

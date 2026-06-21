@@ -235,4 +235,3 @@ Copy.ai compressed the self-serve lineup. The Free trial, Starter ($49/month), a
 ## Related
 
 - **Category:** [AI Writing](/categories/ai-writing/)
-- **Comparisons:** [ChatGPT vs Copy.ai](/compare/chatgpt-vs-copy-ai/), [Copy.ai vs Grammarly](/compare/copy-ai-vs-grammarly/), [Copy.ai vs HyperWrite](/compare/copy-ai-vs-hyperwrite/), [Copy.ai vs QuillBot](/compare/copy-ai-vs-quillbot/), [Copy.ai vs Sudowrite](/compare/copy-ai-vs-sudowrite/), [Copy.ai vs Wordtune](/compare/copy-ai-vs-wordtune/)

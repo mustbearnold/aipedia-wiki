@@ -242,4 +242,4 @@ Yes. QuillBot's affiliate page says the program uses PartnerStack, 30-day cookie
 ## Related
 
 - **Category:** [AI Writing](/categories/ai-writing/)
-- **Comparisons:** [ChatGPT vs QuillBot](/compare/chatgpt-vs-quillbot/) · [Grammarly vs QuillBot](/compare/grammarly-vs-quillbot/) · [QuillBot vs Wordtune](/compare/quillbot-vs-wordtune/) · [QuillBot vs Sudowrite](/compare/quillbot-vs-sudowrite/) · [Copy.ai vs QuillBot](/compare/copy-ai-vs-quillbot/)
+- **Comparisons:** [Grammarly vs QuillBot](/compare/grammarly-vs-quillbot/) · [QuillBot vs Wordtune](/compare/quillbot-vs-wordtune/)

@@ -236,4 +236,4 @@ Minimal. Single-user workflow by design. Teams needing shared literature librari
 ## Related
 
 - **Category:** [AI Research](/categories/ai-research/)
-- **Comparisons:** [Connected Papers vs Semantic Scholar](/compare/connected-papers-vs-semantic-scholar/) | [Connected Papers vs Elicit](/compare/connected-papers-vs-elicit/) | [Connected Papers vs Consensus](/compare/connected-papers-vs-consensus/) | [Connected Papers vs Scite](/compare/connected-papers-vs-scite/)
+- **Comparisons:** [Connected Papers vs Semantic Scholar](/compare/connected-papers-vs-semantic-scholar/) | [Connected Papers vs Elicit](/compare/connected-papers-vs-elicit/) | [Connected Papers vs Consensus](/compare/connected-papers-vs-consensus/)

@@ -232,6 +232,6 @@ Yes. Google's January 2026 update specifically highlights native vertical 9:16 o
 ## Related
 
 - **Category:** [AI Video Generation](/categories/ai-video/)
-- **Compare:** [Veo vs Seedance](/compare/veo-vs-seedance/) · [Veo vs Kling](/compare/veo-vs-kling/) · [Runway vs Veo](/compare/runway-vs-veo/) · [Runway vs Kling vs Seedance vs Veo](/compare/kling-vs-seedance-vs-runway/)
+- **Compare:** [Veo vs Seedance](/compare/veo-vs-seedance/) · [Veo vs Kling](/compare/veo-vs-kling/) · Runway vs Veo · [Runway vs Kling vs Seedance vs Veo](/compare/kling-vs-seedance-vs-runway/)
 - **Google media tools:** [Gemini Omni](/tools/gemini-omni/) · [Gemini](/tools/gemini/) · [Imagen 4](/tools/imagen/)
 - **Alternatives:** [Seedance 2.0](/tools/seedance/) · [Kling 3.0](/tools/kling/) · [Runway](/tools/runway/) · [Pika](/tools/pika/)

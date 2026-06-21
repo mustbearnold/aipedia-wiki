@@ -237,4 +237,4 @@ Yes, if you use Obsidian for business purposes and your organization has more th
 ## Related
 
 - **Category:** [AI Notes & Knowledge](/categories/ai-notes/)
-- **Comparisons:** [Capacities vs Obsidian](/compare/capacities-vs-obsidian/) · [Fireflies.ai vs Obsidian](/compare/fireflies-vs-obsidian/) · [Google NotebookLM vs Obsidian](/compare/notebooklm-vs-obsidian/) · [Notion AI vs Obsidian](/compare/notion-ai-vs-obsidian/) · [Obsidian vs Otter.ai](/compare/obsidian-vs-otter-ai/) · [Obsidian vs Readwise Reader](/compare/obsidian-vs-readwise/)
+- **Comparisons:** [Capacities vs Obsidian](/compare/capacities-vs-obsidian/) · [Notion AI vs Obsidian](/compare/notion-ai-vs-obsidian/)

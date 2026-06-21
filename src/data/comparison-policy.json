@@ -1,57 +1,895 @@
 {
   "description": "Policy for comparison-page selection. A comparison page must help a buyer choose between tools for the same job, not force unrelated AI products into a fake versus page.",
-  "default_rule": "Auto-select only pairs that share the same primary category. Primary-secondary overlap, secondary-secondary overlap, and broad tier-one cross-category pairs are review-only unless explicitly allowed here.",
-  "allowed_adjacent_pairs": [
-    {
-      "tools": ["adobe-firefly", "canva"],
-      "workflow": "visual asset production",
-      "reason": "Image generation and design-suite buyers often choose where the finished creative asset should be made."
-    },
-    {
-      "tools": ["bolt", "cursor"],
-      "workflow": "app building",
-      "reason": "Both can sit in the app-building workflow, even though one starts from a prompt-to-app canvas and the other from an IDE."
-    },
-    {
-      "tools": ["chatgpt", "grammarly"],
-      "workflow": "writing and editing",
-      "reason": "Both compete for everyday writing improvement, drafting, and editing jobs."
-    },
-    {
-      "tools": ["cursor", "grok"],
-      "workflow": "coding-agent evaluation",
-      "reason": "Grok has a documented coding-agent lane, so this is a coding workflow decision when framed asymmetrically."
-    },
-    {
-      "tools": ["elicit", "perplexity"],
-      "workflow": "source-backed research",
-      "reason": "Both can answer source-backed research questions, with different depth and citation workflows."
-    }
-  ],
+  "default_rule": "Auto-select only pairs that share the same primary category. Primary-secondary overlap, secondary-secondary overlap, and broad tier-one cross-category pairs are review-only and must not become published comparison pages.",
   "blocked_pairs": [
     {
-      "tools": ["descript", "grok"],
-      "reason": "Descript is a transcript-first media editor. Grok is a general assistant, API, search, media, voice, and coding platform. The overlapping voice/media words do not create the same buyer job."
+      "tools": [
+        "adobe-firefly",
+        "flux"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
     },
     {
-      "tools": ["chatgpt", "fireflies"],
+      "tools": [
+        "adobe-firefly",
+        "stable-diffusion"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "ahrefs",
+        "frase"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "ahrefs",
+        "marketmuse"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "ahrefs",
+        "neuronwriter"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "surfer-seo",
+        "ahrefs"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "apollo",
+        "clay"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "apollo",
+        "instantly"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "apollo",
+        "intercom"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "apollo",
+        "make"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "apollo",
+        "zapier"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "bolt",
+        "canva"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "bolt",
+        "figma"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "bolt",
+        "google-stitch"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "canva",
+        "figma"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "canva",
+        "google-stitch"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "canva",
+        "lovable"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "canva",
+        "v0"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "capacities",
+        "fireflies"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "capacities",
+        "notebooklm"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "capacities",
+        "otter-ai"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "capacities",
+        "readwise"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "cartesia",
+        "descript"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "chatgpt",
+        "deepseek"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "chatgpt",
+        "fireflies"
+      ],
       "reason": "Broad assistant versus meeting capture and transcript archive."
     },
     {
-      "tools": ["chatgpt", "hermes-agent"],
+      "tools": [
+        "chatgpt",
+        "glm"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "chatgpt",
+        "hermes-agent"
+      ],
       "reason": "Hosted general assistant versus self-hosted operator-owned agent runtime."
     },
     {
-      "tools": ["chatgpt", "otter-ai"],
+      "tools": [
+        "chatgpt",
+        "mistral-ai"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "chatgpt",
+        "otter-ai"
+      ],
       "reason": "Post-meeting synthesis assistant versus live meeting bot and archive."
     },
     {
-      "tools": ["chatgpt", "you-com"],
+      "tools": [
+        "chatgpt",
+        "poe"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "chatgpt",
+        "qwen"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "chatgpt",
+        "you-com"
+      ],
       "reason": "General assistant versus API-first search/research platform."
     },
     {
-      "tools": ["elevenlabs", "otter-ai"],
+      "tools": [
+        "claude-code",
+        "val-town"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "claude",
+        "mistral-ai"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "claude",
+        "poe"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "claude",
+        "qwen"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "clay",
+        "instantly"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "clay",
+        "intercom"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "clay",
+        "make"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "clay",
+        "zapier"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "cody",
+        "cursor"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "connected-papers",
+        "nanochat"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "connected-papers",
+        "scite"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "consensus",
+        "nanochat"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "consensus",
+        "scite"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "continue",
+        "github-copilot"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "continue",
+        "val-town"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "copy-ai",
+        "grammarly"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "copy-ai",
+        "hyperwrite"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "copy-ai",
+        "quillbot"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "copy-ai",
+        "sudowrite"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "copy-ai",
+        "wordtune"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "cursor",
+        "devin"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "cursor",
+        "replit-agent"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "cursor",
+        "val-town"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "deepseek",
+        "gemini"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "deepseek",
+        "poe"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "descript",
+        "elevenlabs"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "descript",
+        "fish-audio"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "descript",
+        "grok"
+      ],
+      "reason": "Descript is a transcript-first media editor. Grok is a general assistant, API, search, media, voice, and coding platform. The overlapping voice/media words do not create the same buyer job."
+    },
+    {
+      "tools": [
+        "descript",
+        "resemble-ai"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "descript",
+        "voxtral"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "devin",
+        "val-town"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "elevenlabs",
+        "otter-ai"
+      ],
       "reason": "Speech generation and voice platform versus meeting transcription archive."
+    },
+    {
+      "tools": [
+        "elicit",
+        "nanochat"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "elicit",
+        "scite"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "elicit",
+        "semantic-scholar"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "exa",
+        "kagi"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "exa",
+        "perplexity"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "exa",
+        "phind"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "figma",
+        "lovable"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "figma",
+        "v0"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "fireflies",
+        "notebooklm"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "fireflies",
+        "obsidian"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "fireflies",
+        "readwise"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "flux",
+        "freepik"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "flux",
+        "ideogram"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "midjourney",
+        "flux"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "frase",
+        "semrush"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "freepik",
+        "stable-diffusion"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "gemini",
+        "mistral-ai"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "gemini",
+        "poe"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "gemini",
+        "qwen"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "github-copilot",
+        "replit-agent"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "github-copilot",
+        "val-town"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "google-stitch",
+        "lovable"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "google-stitch",
+        "v0"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "grammarly",
+        "sudowrite"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "grok",
+        "poe"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "heygen",
+        "kling"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "heygen",
+        "pika"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "heygen",
+        "runway"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "heygen",
+        "seedance"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "hyperwrite",
+        "sudowrite"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "instantly",
+        "intercom"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "instantly",
+        "make"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "instantly",
+        "zapier"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "intercom",
+        "make"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "intercom",
+        "zapier"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "kagi",
+        "perplexity"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "kagi",
+        "phind"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "kagi",
+        "you-com"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "kling",
+        "synthesia"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "lindy",
+        "n8n"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "lindy",
+        "zapier"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "marketmuse",
+        "semrush"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "mistral-ai",
+        "poe"
+      ],
+      "reason": "Native model-provider and platform-control lane versus multi-model aggregator lane. Same top-level chatbot category, but different buyer jobs and workflows."
+    },
+    {
+      "tools": [
+        "nanochat",
+        "scite"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "nanochat",
+        "semantic-scholar"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "notebooklm",
+        "obsidian"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "notebooklm",
+        "otter-ai"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "notebooklm",
+        "readwise"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "obsidian",
+        "otter-ai"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "obsidian",
+        "readwise"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "otter-ai",
+        "readwise"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "perplexity",
+        "phind"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "perplexity",
+        "you-com"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "phind",
+        "you-com"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "pika",
+        "synthesia"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "quillbot",
+        "sudowrite"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "resemble-ai",
+        "voxtral"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "runway",
+        "synthesia"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "runway",
+        "veo"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "scite",
+        "semantic-scholar"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "seedance",
+        "synthesia"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "surfer-seo",
+        "semrush"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
+    },
+    {
+      "tools": [
+        "sudowrite",
+        "wordtune"
+      ],
+      "reason": "Same primary category, but different buyer jobs or workflows. Deleted as a false-vs comparison on 2026-06-21."
     }
   ]
 }

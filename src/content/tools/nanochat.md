@@ -197,4 +197,3 @@ Not in the modern assistant sense. The speedrun output is a GPT-2-grade model su
 ## Related
 
 - **Category:** [AI Research](/categories/ai-research/) · [AI Coding](/categories/ai-coding/)
-- **Comparisons:** [nanochat vs Scite](/compare/nanochat-vs-scite/) · [nanochat vs Semantic Scholar](/compare/nanochat-vs-semantic-scholar/) · [Connected Papers vs nanochat](/compare/connected-papers-vs-nanochat/) · [Consensus vs nanochat](/compare/consensus-vs-nanochat/) · [Elicit vs nanochat](/compare/elicit-vs-nanochat/)

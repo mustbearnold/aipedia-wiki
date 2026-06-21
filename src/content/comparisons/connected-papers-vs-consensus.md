@@ -24,13 +24,11 @@ Use **Connected Papers** when the first problem is "what papers belong in this n
 
 ## Decision Snapshot
 
-| | Connected Papers | Consensus |
-|---|---|---|
-| **Primary job** | Visual related-paper graph from one seed paper | Academic search, paper-backed answers, and study-agreement signals |
-| **Best buyer** | Student, researcher, or analyst entering a new field | Student, clinician, journalist, or policy analyst checking a focused claim |
-| **Current pricing signal** | Free limited graph tier plus paid annual academic/business plans; verify graph limits at checkout | Freemium Pro/Deep ladder; verify current message/review limits at checkout |
-| **Best output** | Similarity graph, Prior Works, Derivative Works, paper list | Cited answer, study snapshots, Consensus Meter where applicable, Deep review |
-| **Main risk** | It finds papers but does not evaluate or synthesize them | It can compress evidence too aggressively if the question is broad or contested |
+- ****Primary job**:** Connected Papers: Visual related-paper graph from one seed paper; Consensus: Academic search, paper-backed answers, and study-agreement signals
+- ****Best buyer**:** Connected Papers: Student, researcher, or analyst entering a new field; Consensus: Student, clinician, journalist, or policy analyst checking a focused claim
+- ****Current pricing signal**:** Connected Papers: Free limited graph tier plus paid annual academic/business plans; verify graph limits at checkout; Consensus: Freemium Pro/Deep ladder; verify current message/review limits at checkout
+- ****Best output**:** Connected Papers: Similarity graph, Prior Works, Derivative Works, paper list; Consensus: Cited answer, study snapshots, Consensus Meter where applicable, Deep review
+- ****Main risk**:** Connected Papers: It finds papers but does not evaluate or synthesize them; Consensus: It can compress evidence too aggressively if the question is broad or contested
 
 ## Where Connected Papers Wins
 
@@ -100,4 +98,4 @@ Consensus is usually more useful for focused biomedical questions because it ret
 
 - **Tool pages:** [Connected Papers](/tools/connected-papers/) | [Consensus](/tools/consensus/)
 - **Category:** [AI Research Tools](/categories/ai-research/)
-- **Comparisons:** [Consensus vs Elicit](/compare/consensus-vs-elicit/) | [Consensus vs Scite](/compare/consensus-vs-scite/) | [Connected Papers vs Semantic Scholar](/compare/connected-papers-vs-semantic-scholar/)
+- **Comparisons:** [Consensus vs Elicit](/compare/consensus-vs-elicit/) | [Connected Papers vs Semantic Scholar](/compare/connected-papers-vs-semantic-scholar/)

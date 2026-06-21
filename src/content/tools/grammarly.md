@@ -347,6 +347,6 @@ No public general-purpose writing API for buyers. Grammarly is primarily deliver
 ## Related
 
 - **Category:** [AI Writing](/categories/ai-writing/)
-- **Comparisons:** [ChatGPT vs Grammarly](/compare/chatgpt-vs-grammarly/) · [Claude vs Grammarly](/compare/claude-vs-grammarly/) · [Grammarly vs QuillBot](/compare/grammarly-vs-quillbot/) · [Grammarly vs Wordtune](/compare/grammarly-vs-wordtune/) · [Grammarly vs Sudowrite](/compare/grammarly-vs-sudowrite/)
+- **Comparisons:** [Grammarly vs QuillBot](/compare/grammarly-vs-quillbot/) · [Grammarly vs Wordtune](/compare/grammarly-vs-wordtune/)
 
 *Affiliate status: Grammarly has an official affiliate program with an Impact application link and a public 90-day cookie claim, but this page does not currently use a tracked affiliate URL or publish unapproved payout amounts. Pricing and rankings above are editorial and source-backed.*

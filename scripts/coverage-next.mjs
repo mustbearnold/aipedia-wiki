@@ -70,10 +70,7 @@ if (existsSync(COMPARISONS_DIR)) {
 
 const comparisonPolicy = existsSync(COMPARISON_POLICY_PATH)
   ? JSON.parse(readFileSync(COMPARISON_POLICY_PATH, 'utf8'))
-  : { allowed_adjacent_pairs: [], blocked_pairs: [] };
-const allowedAdjacentPairs = new Set(
-  (comparisonPolicy.allowed_adjacent_pairs || []).map((entry) => pairKey(entry.tools[0], entry.tools[1])),
-);
+  : { blocked_pairs: [] };
 const blockedPairs = new Set(
   (comparisonPolicy.blocked_pairs || []).map((entry) => pairKey(entry.tools[0], entry.tools[1])),
 );
@@ -100,7 +97,6 @@ function selectableComparison(item) {
 
   const key = pairKey(item.tools[0], item.tools[1]);
   if (blockedPairs.has(key)) return false;
-  if (allowedAdjacentPairs.has(key)) return true;
 
   const [firstCategory, secondCategory] = item.tools.map(toolPrimaryCategory);
   return Boolean(firstCategory && firstCategory === secondCategory);

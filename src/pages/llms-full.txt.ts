@@ -3,6 +3,11 @@
 // comparisons, guides, answers, news, trends, workflows, reports, companies,
 // and dead-tool records. Intended for crawlers willing to ingest a larger
 // manifest without parsing the sitemap.
+// Refresh metadata: 2026-06-21 Mistral AI vs Poe comparison loop after current
+// Mistral pricing, Vibe, model docs, Search Toolkit, Poe subscription plans,
+// purchases FAQ, Creator Platform API, and download checks; added comparison,
+// refreshed Mistral AI, Poe, AI Chatbots, source registry, ledger, and LLM
+// maintenance around native model platform versus multi-model aggregator fit.
 // Refresh metadata: 2026-06-21 comparison-policy cleanup after deleting
 // ChatGPT vs Fireflies, ChatGPT vs Hermes Agent, ChatGPT vs Otter.ai,
 // ChatGPT vs You.com, and ElevenLabs vs Otter.ai; the loop now skips

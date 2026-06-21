@@ -71,7 +71,7 @@ If `.worktrees/` contains empty or unregistered directories after generated cove
 - Run `npm run loop:verify -- --date <YYYY-MM-DD> --route /compare/<slug>/ --path <changed paths>` to execute date-stable verification for a rendered decision-content cycle.
 - Run `npm run qa:route -- --route /compare/<slug>/` to verify a built route across mobile, tablet, and desktop widths.
 - Run `npm run loop:record -- --date <YYYY-MM-DD> --slug <slug> --status complete` to write a durable cycle receipt under `.agent/loop-runs/`.
-- Use `src/data/comparison-policy.json` to understand which cross-category adjacent workflow comparisons are allowed. Anything not same-primary-category or explicitly allowed is review-only and must not become an automatic vs page.
+- Use `src/data/comparison-policy.json` to understand known blocked false-vs pairs. Same primary category is only a first gate. Anything cross-category, different-workflow, or listed in `blocked_pairs` is review-only and must not become an automatic vs page.
 - Run `npm run check:quick` when tooling or repo-maintenance work needs the established no-build gate.
 - Run `npm run audit:generated-models` with `npm run test:scripts` when generated model/search seams or their audit script change.
 - Run `npm run build:fast` when layouts, runtime routes, metadata, schemas, or rendered output changed.

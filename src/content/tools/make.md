@@ -241,4 +241,4 @@ No. Make is cloud-only. [n8n](/tools/n8n/) is the standard pick for self-hosted 
 ## Related
 
 - **Category:** [AI Automation](/categories/ai-automation/)
-- **Comparisons:** [n8n vs Make vs Zapier](/compare/n8n-vs-make-vs-zapier/) · [Clay vs Make](/compare/clay-vs-make/)
+- **Comparisons:** [n8n vs Make vs Zapier](/compare/n8n-vs-make-vs-zapier/)

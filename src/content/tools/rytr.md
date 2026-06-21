@@ -253,6 +253,5 @@ For drafts, yes. For published content, treat Rytr output as a first pass. Edit 
 ## Related
 
 - **Category:** [AI Writing](/categories/ai-writing/)
-- **Comparisons:** [ChatGPT vs Rytr](/compare/chatgpt-vs-rytr/)
 
 *Some links on this page may be affiliate links. We earn a commission at no extra cost to you. This does not influence our ratings or recommendations.*

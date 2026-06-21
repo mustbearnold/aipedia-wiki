@@ -380,5 +380,5 @@ For Google-stack API and provenance use cases, Veo 3.1 may be the cleaner model 
 
 - **Guide:** [Best AI video generator](/guides/best-ai-video-generator/)
 - **Category:** [AI Video Generation](/categories/ai-video/)
-- **Compare:** [Runway vs Veo](/compare/runway-vs-veo/) - [Runway vs Kling vs Seedance vs Veo](/compare/kling-vs-seedance-vs-runway/) - [Pika vs Runway](/compare/pika-vs-runway/) - [Runway vs Synthesia](/compare/runway-vs-synthesia/) - [HeyGen vs Runway](/compare/heygen-vs-runway/)
+- **Compare:** Runway vs Veo - [Runway vs Kling vs Seedance vs Veo](/compare/kling-vs-seedance-vs-runway/) - [Pika vs Runway](/compare/pika-vs-runway/) - Runway vs Synthesia - HeyGen vs Runway
 - **Alternatives:** [Seedance 2.0](/tools/seedance/) - [Kling 3.0](/tools/kling/) - [Google Veo 3.1](/tools/veo/) - [Pika](/tools/pika/) - [HeyGen](/tools/heygen/) - [Synthesia](/tools/synthesia/)

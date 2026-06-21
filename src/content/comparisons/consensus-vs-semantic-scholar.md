@@ -24,13 +24,11 @@ Use **Semantic Scholar** first when the buyer needs broad, free academic search,
 
 ## Decision Snapshot
 
-| | Consensus | Semantic Scholar |
-|---|---|---|
-| **Primary job** | Academic Q&A and evidence orientation | Free academic search, citation trails, recommendations, APIs, datasets |
-| **Best buyer** | Student, clinician, journalist, analyst checking a claim | Student, researcher, developer, citation-tool builder, budget-limited user |
-| **Current pricing signal** | Freemium Pro/Deep ladder; verify plan limits at checkout | Free core search; API free but rate-limited and some endpoints require keys |
-| **Best output** | Cited answer, study snapshots, Consensus Meter, Deep review | Search results, TLDRs, related papers, citation graph, API metadata |
-| **Main risk** | Synthesis can hide quality or inclusion-criteria gaps | Search breadth does not equal evidence synthesis |
+- ****Primary job**:** Consensus: Academic Q&A and evidence orientation; Semantic Scholar: Free academic search, citation trails, recommendations, APIs, datasets
+- ****Best buyer**:** Consensus: Student, clinician, journalist, analyst checking a claim; Semantic Scholar: Student, researcher, developer, citation-tool builder, budget-limited user
+- ****Current pricing signal**:** Consensus: Freemium Pro/Deep ladder; verify plan limits at checkout; Semantic Scholar: Free core search; API free but rate-limited and some endpoints require keys
+- ****Best output**:** Consensus: Cited answer, study snapshots, Consensus Meter, Deep review; Semantic Scholar: Search results, TLDRs, related papers, citation graph, API metadata
+- ****Main risk**:** Consensus: Synthesis can hide quality or inclusion-criteria gaps; Semantic Scholar: Search breadth does not equal evidence synthesis
 
 ## Where Consensus Wins
 
@@ -100,4 +98,4 @@ Semantic Scholar, because it exposes Academic Graph, Recommendations, and Datase
 
 - **Tool pages:** [Consensus](/tools/consensus/) | [Semantic Scholar](/tools/semantic-scholar/)
 - **Category:** [AI Research Tools](/categories/ai-research/)
-- **Comparisons:** [Connected Papers vs Semantic Scholar](/compare/connected-papers-vs-semantic-scholar/) | [Consensus vs Elicit](/compare/consensus-vs-elicit/) | [Consensus vs Scite](/compare/consensus-vs-scite/)
+- **Comparisons:** [Connected Papers vs Semantic Scholar](/compare/connected-papers-vs-semantic-scholar/) | [Consensus vs Elicit](/compare/consensus-vs-elicit/)

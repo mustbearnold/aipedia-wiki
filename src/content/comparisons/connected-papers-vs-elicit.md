@@ -24,13 +24,11 @@ Use **Connected Papers** for the first hour of field mapping. Use **Elicit** whe
 
 ## Decision Snapshot
 
-| | Connected Papers | Elicit |
-|---|---|---|
-| **Primary job** | Visual paper graph from a seed work | Literature search, screening, extraction, reports, systematic reviews |
-| **Best buyer** | Researcher entering an unfamiliar topic | Researcher, lab, policy team, or evidence-synthesis group |
-| **Current pricing signal** | Free limited graph tier plus paid annual plans; verify graph limits at checkout | Basic free; Plus/Pro/Scale paid; Enterprise custom; billing cadence changes the visible price |
-| **Best output** | Graph, Prior Works, Derivative Works, paper list | Evidence table, extraction columns, exports, research report |
-| **Main risk** | Discovery without synthesis or methods review | AI extraction still needs human quality checks |
+- ****Primary job**:** Connected Papers: Visual paper graph from a seed work; Elicit: Literature search, screening, extraction, reports, systematic reviews
+- ****Best buyer**:** Connected Papers: Researcher entering an unfamiliar topic; Elicit: Researcher, lab, policy team, or evidence-synthesis group
+- ****Current pricing signal**:** Connected Papers: Free limited graph tier plus paid annual plans; verify graph limits at checkout; Elicit: Basic free; Plus/Pro/Scale paid; Enterprise custom; billing cadence changes the visible price
+- ****Best output**:** Connected Papers: Graph, Prior Works, Derivative Works, paper list; Elicit: Evidence table, extraction columns, exports, research report
+- ****Main risk**:** Connected Papers: Discovery without synthesis or methods review; Elicit: AI extraction still needs human quality checks
 
 ## Where Connected Papers Wins
 
@@ -100,4 +98,4 @@ Start with the free tiers. Pay for Connected Papers if you need more graphs. Pay
 
 - **Tool pages:** [Connected Papers](/tools/connected-papers/) | [Elicit](/tools/elicit/)
 - **Category:** [AI Research Tools](/categories/ai-research/)
-- **Comparisons:** [Consensus vs Elicit](/compare/consensus-vs-elicit/) | [Connected Papers vs Consensus](/compare/connected-papers-vs-consensus/) | [Connected Papers vs Scite](/compare/connected-papers-vs-scite/)
+- **Comparisons:** [Consensus vs Elicit](/compare/consensus-vs-elicit/) | [Connected Papers vs Consensus](/compare/connected-papers-vs-consensus/)

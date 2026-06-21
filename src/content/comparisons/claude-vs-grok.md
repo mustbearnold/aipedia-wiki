@@ -28,14 +28,12 @@ Claude is the safer everyday professional assistant. Grok is the sharper xAI/X s
 
 ## Decision Table
 
-| Need | Better choice | Why |
-|---|---|---|
-| Careful professional writing | Claude | More consistent for memos, policy, technical explanation, and client-facing prose. |
-| Long document/code reasoning | Claude | Opus 4.8 and Claude Code are better packaged for deep work. |
-| X-native research | Grok | xAI exposes X Search for posts, profiles, and threads. |
-| Web + social signal monitoring | Grok | Stronger when live web and X are both source layers. |
-| Native image/video generation | Grok | Grok Imagine covers image and video generation/editing; Claude has no native generation. |
-| Lower API token cost | Grok | Grok 4.3 is $1.25/$2.50 per million tokens versus Opus 4.8 at $5/$25. |
+- **Careful professional writing:** Better choice: Claude; Why: More consistent for memos, policy, technical explanation, and client-facing prose.
+- **Long document/code reasoning:** Better choice: Claude; Why: Opus 4.8 and Claude Code are better packaged for deep work.
+- **X-native research:** Better choice: Grok; Why: xAI exposes X Search for posts, profiles, and threads.
+- **Web + social signal monitoring:** Better choice: Grok; Why: Stronger when live web and X are both source layers.
+- **Native image/video generation:** Better choice: Grok; Why: Grok Imagine covers image and video generation/editing; Claude has no native generation.
+- **Lower API token cost:** Better choice: Grok; Why: Grok 4.3 is $1.25/$2.50 per million tokens versus Opus 4.8 at $5/$25.
 
 ## Where Claude Wins
 
@@ -55,16 +53,14 @@ Claude is the safer everyday professional assistant. Grok is the sharper xAI/X s
 
 ## Pricing Reality
 
-| Product | Current pricing signal | Buyer implication |
-|---|---|---|
-| Claude Pro | $20/month or $17/month annual | Better first paid assistant for most professional users. |
-| Claude Max | From $100/month | Heavy Claude and Claude Code use. |
-| Claude API Opus 4.8 | $5 input / $25 output per million tokens | Premium reasoning and coding-agent route. |
-| Grok Free | $0/month | Trial path with limited real-time web/X capabilities. |
-| SuperGrok | $30/month | Higher rate limits, Grok 4, connectors, image/video generation, and priority-style features. |
-| Grok 4.3 API | $1.25 input / $2.50 output per million tokens | Lower token price for xAI API builders. |
-| Grok Build 0.1 API | $1 input / $2 output per million tokens | Coding-specific xAI model path for agentic coding experiments. |
-| Voice / Imagine APIs | Usage-priced | Useful for xAI-native apps, but not comparable to Claude subscriptions. |
+- **Claude Pro:** Current pricing signal: $20/month or $17/month annual; Buyer implication: Better first paid assistant for most professional users.
+- **Claude Max:** Current pricing signal: From $100/month; Buyer implication: Heavy Claude and Claude Code use.
+- **Claude API Opus 4.8:** Current pricing signal: $5 input / $25 output per million tokens; Buyer implication: Premium reasoning and coding-agent route.
+- **Grok Free:** Current pricing signal: $0/month; Buyer implication: Trial path with limited real-time web/X capabilities.
+- **SuperGrok:** Current pricing signal: $30/month; Buyer implication: Higher rate limits, Grok 4, connectors, image/video generation, and priority-style features.
+- **Grok 4.3 API:** Current pricing signal: $1.25 input / $2.50 output per million tokens; Buyer implication: Lower token price for xAI API builders.
+- **Grok Build 0.1 API:** Current pricing signal: $1 input / $2 output per million tokens; Buyer implication: Coding-specific xAI model path for agentic coding experiments.
+- **Voice / Imagine APIs:** Current pricing signal: Usage-priced; Buyer implication: Useful for xAI-native apps, but not comparable to Claude subscriptions.
 
 The key budgeting issue is not only token price. Grok workflows that depend on web search, X search, voice, image, video, files, or code execution need tool-level pricing review. Claude workflows that depend on Opus 4.8 need prompt-caching and model-routing discipline.
 
@@ -123,4 +119,4 @@ Grok. Claude can analyze images but does not offer native image or video generat
 
 - **Tool pages:** [Claude](/tools/claude/) | [Grok](/tools/grok/)
 - **Categories:** [AI Chatbots](/categories/ai-chatbots/) | [AI Search](/categories/ai-search/)
-- **Comparisons:** [ChatGPT vs Grok](/compare/chatgpt-vs-grok/) | [Claude vs Perplexity](/compare/claude-vs-perplexity/) | [Claude vs Gemini](/compare/claude-vs-gemini/)
+- **Comparisons:** [ChatGPT vs Grok](/compare/chatgpt-vs-grok/) | [Claude vs Gemini](/compare/claude-vs-gemini/)

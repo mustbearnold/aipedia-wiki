@@ -28,14 +28,12 @@ Claude is the safer assistant. Kimi is the sharper model-evaluation lane.
 
 ## Decision Table
 
-| Need | Better choice | Why |
-|---|---|---|
-| Professional assistant for a team | Claude | More polished UI, clearer plans, stronger enterprise story. |
-| Long-form writing and critique | Claude | Better for careful prose, document reasoning, and editorial judgment. |
-| Kimi K2.6 API evaluation | Kimi | Current docs expose K2.6, 256K context, multimodal input, and token pricing. |
-| Cost-sensitive model routing | Kimi | Cache-aware pricing can be attractive for repeated-prefix workloads. |
-| Chinese-English model diversity | Kimi | Moonshot AI is a relevant Asia/China frontier-model lane to evaluate. |
-| Nontechnical adoption | Claude | Easier to explain, govern, and use as a daily assistant. |
+- **Professional assistant for a team:** Better choice: Claude; Why: More polished UI, clearer plans, stronger enterprise story.
+- **Long-form writing and critique:** Better choice: Claude; Why: Better for careful prose, document reasoning, and editorial judgment.
+- **Kimi K2.6 API evaluation:** Better choice: Kimi; Why: Current docs expose K2.6, 256K context, multimodal input, and token pricing.
+- **Cost-sensitive model routing:** Better choice: Kimi; Why: Cache-aware pricing can be attractive for repeated-prefix workloads.
+- **Chinese-English model diversity:** Better choice: Kimi; Why: Moonshot AI is a relevant Asia/China frontier-model lane to evaluate.
+- **Nontechnical adoption:** Better choice: Claude; Why: Easier to explain, govern, and use as a daily assistant.
 
 ## Where Claude Wins
 
@@ -55,13 +53,11 @@ Claude is the safer assistant. Kimi is the sharper model-evaluation lane.
 
 ## Pricing Reality
 
-| Product | Current pricing signal | Buyer implication |
-|---|---|---|
-| Claude Pro | $20/month or $17/month annual | Better first purchase for most assistant users. |
-| Claude Max | From $100/month | Heavy Claude and Claude Code sessions. |
-| Claude API Opus 4.8 | $5 input / $25 output per million tokens | Premium reasoning model pricing. |
-| Kimi K2.6 API | $0.16 cache-hit input / $0.95 cache-miss input / $4 output per million tokens | Attractive for some API workloads, especially repeated context. |
-| Kimi K2.6 context | 262,144 tokens in current pricing docs | Long-context but not Claude's first-party 1M context. |
+- **Claude Pro:** Current pricing signal: $20/month or $17/month annual; Buyer implication: Better first purchase for most assistant users.
+- **Claude Max:** Current pricing signal: From $100/month; Buyer implication: Heavy Claude and Claude Code sessions.
+- **Claude API Opus 4.8:** Current pricing signal: $5 input / $25 output per million tokens; Buyer implication: Premium reasoning model pricing.
+- **Kimi K2.6 API:** Current pricing signal: $0.16 cache-hit input / $0.95 cache-miss input / $4 output per million tokens; Buyer implication: Attractive for some API workloads, especially repeated context.
+- **Kimi K2.6 context:** Current pricing signal: 262,144 tokens in current pricing docs; Buyer implication: Long-context but not Claude's first-party 1M context.
 
 The key comparison is not just "which costs less per token." Claude may produce a stronger result with fewer retries for many professional tasks. Kimi may be more economical for model-routing pipelines, coding experiments, and workloads where cache behavior is predictable.
 
@@ -120,4 +116,4 @@ Developers and model-platform teams, not casual assistant users.
 
 - **Tool pages:** [Claude](/tools/claude/) | [Kimi](/tools/kimi/)
 - **Category:** [AI Chatbots](/categories/ai-chatbots/)
-- **Comparisons:** [ChatGPT vs Kimi](/compare/chatgpt-vs-kimi/) | [Claude vs Qwen](/compare/claude-vs-qwen/) | [Claude vs DeepSeek](/compare/claude-vs-deepseek/)
+- **Comparisons:** [ChatGPT vs Kimi](/compare/chatgpt-vs-kimi/) | [Claude vs DeepSeek](/compare/claude-vs-deepseek/)

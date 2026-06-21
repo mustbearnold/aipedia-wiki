@@ -41,7 +41,7 @@ The June 20 recheck adds a measurement filter: **first-party Search Console evid
 
 **Use [OmniSEO](/tools/omniseo/) when the job is AI visibility monitoring.** OmniSEO is not a backlink suite or content optimizer. Its official pricing page describes AI-channel tracking, saved prompts, competitor tracking, prompt research, citation analytics, and placement recommendations. It belongs in the stack when a brand needs repeatable reporting on what AI answer engines say, especially if the output must be reviewed before it becomes a board report or public claim.
 
-**Use [MarketMuse](/tools/marketmuse/) when content strategy, inventory, and briefs are the expensive problem.** The June 3 [ChatGPT vs MarketMuse](/compare/chatgpt-vs-marketmuse/) refresh keeps MarketMuse positioned as the strategy and optimization layer for larger sites, not a generic chatbot substitute.
+**Use [MarketMuse](/tools/marketmuse/) when content strategy, inventory, and briefs are the expensive problem.** The June 3 ChatGPT vs MarketMuse refresh keeps MarketMuse positioned as the strategy and optimization layer for larger sites, not a generic chatbot substitute.
 
 **Use [AdCreative.ai](/tools/adcreative/) only for paid-media creative, not organic SEO.** It is in this category because search marketers often run landing-page and ad-creative tests beside SEO programs. The June 20 check still treats it as creative workflow adjacent to search, not as a keyword, backlink, or GEO visibility platform. The current buyer caution is broader than price: AdCreative.ai's live site is now heavily video, UGC, product-visual, fashion-visual, ROI-calculator, and affiliate-program oriented, while checkout promotions and credit/brand limits need live confirmation.
 
@@ -106,12 +106,7 @@ Do not rank AdCreative.ai as an SEO winner. It can help search marketers improve
 ## Money Pages To Build Next
 
 - [Best AI for SEO Content](/guides/best-ai-for-seo-content/) should be treated as the live buyer guide for choosing the content-writing and optimization layer: Surfer for optimization, ChatGPT and Claude for drafting/editing, Jasper for brand workflow, and Semrush/Ahrefs for SEO data.
-- [Surfer vs Semrush vs Ahrefs](/compare/surfer-vs-semrush-vs-ahrefs/) should be used for broad SEO suite comparison until the narrower Ahrefs and Semrush page is rebuilt.
-- [Ahrefs vs Surfer SEO](/compare/ahrefs-vs-surfer-seo/) is the current closest content workflow comparison while a dedicated Surfer SEO and Clearscope page is rebuilt.
 - [Frase vs NeuronWriter](/compare/frase-vs-neuronwriter/) was refreshed June 5 around budget, brief speed, GEO workflow, and content volume.
-- [ChatGPT vs MarketMuse](/compare/chatgpt-vs-marketmuse/) should stay current because content teams often need to know when a general AI writer stops being enough and a strategy platform becomes justified.
-- [ChatGPT vs NeuronWriter](/compare/chatgpt-vs-neuronwriter/) should stay current because many publishers need a direct answer on when a general assistant needs a dedicated SERP/content-scoring layer.
-- [Surfer vs Semrush vs Ahrefs](/compare/surfer-vs-semrush-vs-ahrefs/) is the valid broad-suite comparison while an OmniSEO and Semrush specialist page is created.
 - A new guide for "best AI visibility tracker" should separate brand monitoring, prompt tracking, citation analytics, source-log retention, GEO consulting, PR/legal escalation, and classic SEO reporting.
 
 ## Sources

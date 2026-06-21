@@ -190,4 +190,3 @@ Public reporting indicates closure roughly one month after a $10M funding round.
 ## Related
 
 - **Category:** [AI Search](/categories/ai-search/)
-- **Comparisons:** [ChatGPT vs Phind](/compare/chatgpt-vs-phind/) | [Exa AI vs Phind](/compare/exa-vs-phind/) | [Kagi vs Phind](/compare/kagi-vs-phind/) | [Perplexity vs Phind](/compare/perplexity-vs-phind/) | [Phind vs You.com](/compare/phind-vs-you-com/)

@@ -231,4 +231,4 @@ No. It finds and summarizes individual papers. For cross-paper synthesis or meta
 ## Related
 
 - **Category:** [AI Research](/categories/ai-research/)
-- **Comparisons:** [nanochat vs Semantic Scholar](/compare/nanochat-vs-semantic-scholar/) | [Semantic Scholar vs Consensus](/compare/consensus-vs-semantic-scholar/) | [Scite vs Semantic Scholar](/compare/scite-vs-semantic-scholar/) | [Elicit vs Semantic Scholar](/compare/elicit-vs-semantic-scholar/) | [Connected Papers vs Semantic Scholar](/compare/connected-papers-vs-semantic-scholar/)
+- **Comparisons:** [Semantic Scholar vs Consensus](/compare/consensus-vs-semantic-scholar/) | [Connected Papers vs Semantic Scholar](/compare/connected-papers-vs-semantic-scholar/)

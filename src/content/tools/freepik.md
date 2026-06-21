@@ -260,4 +260,4 @@ Different tools. Freepik AI Suite / Magnific is a creative-suite bundle with sto
 ## Related
 
 - **Category:** [AI Image Generation](/categories/ai-image/)
-- **Comparisons:** [Freepik vs Midjourney](/compare/freepik-vs-midjourney/) · [Freepik vs Flux](/compare/flux-vs-freepik/) · [Adobe Firefly vs Freepik](/compare/adobe-firefly-vs-freepik/) · [Freepik vs Ideogram](/compare/freepik-vs-ideogram/)
+- **Comparisons:** [Freepik vs Midjourney](/compare/freepik-vs-midjourney/) · [Adobe Firefly vs Freepik](/compare/adobe-firefly-vs-freepik/) · [Freepik vs Ideogram](/compare/freepik-vs-ideogram/)

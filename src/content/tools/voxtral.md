@@ -254,4 +254,4 @@ Cartesia is stronger for managed, low-latency production voice agents. Voxtral i
 ## Related
 
 - **Category:** [AI Voice / Speech](/categories/ai-voice/)
-- **Comparisons:** [Cartesia vs Voxtral](/compare/cartesia-vs-voxtral/), [ElevenLabs vs Voxtral](/compare/elevenlabs-vs-voxtral/), [Fish Audio vs Voxtral](/compare/fish-audio-vs-voxtral/), [Resemble AI vs Voxtral](/compare/resemble-ai-vs-voxtral/)
+- **Comparisons:** [Cartesia vs Voxtral](/compare/cartesia-vs-voxtral/), [ElevenLabs vs Voxtral](/compare/elevenlabs-vs-voxtral/), [Fish Audio vs Voxtral](/compare/fish-audio-vs-voxtral/)

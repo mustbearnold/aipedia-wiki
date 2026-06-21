@@ -271,4 +271,3 @@ Only if cross-repo context and Sourcegraph's platform features pay for themselve
 ## Related
 
 - **Category:** [AI Coding](/categories/ai-coding/)
-- **Comparisons:** [Cody vs Cursor](/compare/cody-vs-cursor/), [Claude vs Cody](/compare/claude-vs-cody/)

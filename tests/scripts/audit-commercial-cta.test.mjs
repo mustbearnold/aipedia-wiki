@@ -168,17 +168,6 @@ const routes = [
     ],
   },
   {
-    path: 'compare/lindy-vs-zapier-vs-n8n',
-    count: 4,
-    pageType: 'comparison',
-    requiredAffiliateLinks: [{
-      href: 'https://try.lindy.ai/a1y1dlsexvk1',
-      toolSlug: 'lindy',
-      toolName: 'Lindy',
-      affiliateProgram: 'PartnerStack',
-    }],
-  },
-  {
     path: 'categories/ai-design',
     count: 3,
     pageType: 'category',

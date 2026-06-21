@@ -79,7 +79,7 @@ test('coverage backlog keeps primary-secondary overlap out of selectable compari
   }
 });
 
-test('coverage backlog allows explicitly approved adjacent workflow pairs', () => {
+test('coverage backlog keeps adjacent workflow pairs review-only even if policy lists them', () => {
   const dir = writeFixtureProject();
   writeFileSync(
     join(dir, 'src', 'data', 'comparison-policy.json'),
@@ -104,10 +104,10 @@ test('coverage backlog allows explicitly approved adjacent workflow pairs', () =
     assert.equal(result.status, 0, result.stderr);
 
     const report = JSON.parse(result.stdout);
-    const pair = report.backlog.comparisons.find((item) => item.slug === 'chatgpt-vs-grammarly');
-    assert.equal(pair?.comparison_mode, 'allowed_adjacent');
-    assert.equal(pair?.requires_asymmetric_framing, true);
-    assert.equal(pair?.workflow_family, 'writing and editing');
+    const selectableSlugs = report.backlog.comparisons.map((item) => item.slug);
+    const reviewSlugs = report.backlog.review_only_comparisons.map((item) => item.slug);
+    assert.ok(!selectableSlugs.includes('chatgpt-vs-grammarly'));
+    assert.ok(reviewSlugs.includes('chatgpt-vs-grammarly'));
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }

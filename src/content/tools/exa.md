@@ -259,4 +259,4 @@ Exa is the rebrand of Metaphor Systems from 2023. Same neural search API, broade
 ## Related
 
 - **Category:** [AI Search](/categories/ai-search/)
-- **Comparisons:** [Exa AI vs Kagi](/compare/exa-vs-kagi/) | [Exa AI vs Perplexity](/compare/exa-vs-perplexity/) | [Exa AI vs You.com](/compare/exa-vs-you-com/)
+- **Comparisons:** [Exa AI vs You.com](/compare/exa-vs-you-com/)

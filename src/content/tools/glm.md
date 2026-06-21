@@ -221,4 +221,3 @@ Inference latency depends on the deployment. Self-hosted GLM-5.1 on modern hardw
 ## Related
 
 - **Category:** [AI Chatbots](/categories/ai-chatbots/) · [AI Coding](/categories/ai-coding/)
-- **Comparisons:** [ChatGPT vs GLM](/compare/chatgpt-vs-glm/)

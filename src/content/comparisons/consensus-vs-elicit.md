@@ -24,13 +24,11 @@ Use **Consensus** when the buyer has a focused question and needs quick academic
 
 ## Decision Snapshot
 
-| | Consensus | Elicit |
-|---|---|---|
-| **Primary job** | Paper-backed research Q&A and evidence orientation | Systematic review, screening, extraction, reports, exports |
-| **Best buyer** | Student, clinician, journalist, analyst checking a claim | Researcher, lab, policy team, evidence-synthesis group |
-| **Current pricing signal** | Freemium Pro/Deep ladder; verify message and Deep-review limits at checkout | Basic free; Plus/Pro/Scale paid; Enterprise custom; billing cadence changes price |
-| **Best output** | Cited answer, study snapshots, Consensus Meter, Deep review | Evidence table, extraction columns, systematic-review report, exports |
-| **Main risk** | A concise answer can hide study-quality nuance | A table can look rigorous even when extraction needs manual audit |
+- ****Primary job**:** Consensus: Paper-backed research Q&A and evidence orientation; Elicit: Systematic review, screening, extraction, reports, exports
+- ****Best buyer**:** Consensus: Student, clinician, journalist, analyst checking a claim; Elicit: Researcher, lab, policy team, evidence-synthesis group
+- ****Current pricing signal**:** Consensus: Freemium Pro/Deep ladder; verify message and Deep-review limits at checkout; Elicit: Basic free; Plus/Pro/Scale paid; Enterprise custom; billing cadence changes price
+- ****Best output**:** Consensus: Cited answer, study snapshots, Consensus Meter, Deep review; Elicit: Evidence table, extraction columns, systematic-review report, exports
+- ****Main risk**:** Consensus: A concise answer can hide study-quality nuance; Elicit: A table can look rigorous even when extraction needs manual audit
 
 ## Where Consensus Wins
 
@@ -100,4 +98,4 @@ No. Use both for triage, then inspect methods, populations, limitations, and res
 
 - **Tool pages:** [Consensus](/tools/consensus/) | [Elicit](/tools/elicit/)
 - **Category:** [AI Research Tools](/categories/ai-research/)
-- **Comparisons:** [Connected Papers vs Elicit](/compare/connected-papers-vs-elicit/) | [Consensus vs Scite](/compare/consensus-vs-scite/) | [Consensus vs Semantic Scholar](/compare/consensus-vs-semantic-scholar/)
+- **Comparisons:** [Connected Papers vs Elicit](/compare/connected-papers-vs-elicit/) | [Consensus vs Semantic Scholar](/compare/consensus-vs-semantic-scholar/)

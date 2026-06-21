@@ -298,4 +298,4 @@ Yes. Official Qwen3 sizes start at 0.6B and scale up to 235B MoE. Practical hard
 ## Related
 
 - **Category:** [AI Chatbots](/categories/ai-chatbots/) · [AI Coding](/categories/ai-coding/)
-- **Comparisons:** [ChatGPT vs Qwen](/compare/chatgpt-vs-qwen/) · [Claude vs Qwen](/compare/claude-vs-qwen/) · [DeepSeek vs Qwen](/compare/deepseek-vs-qwen/) · [Gemini vs Qwen](/compare/gemini-vs-qwen/) · [Mistral AI vs Qwen](/compare/mistral-ai-vs-qwen/)
+- **Comparisons:** [DeepSeek vs Qwen](/compare/deepseek-vs-qwen/) · [Mistral AI vs Qwen](/compare/mistral-ai-vs-qwen/)

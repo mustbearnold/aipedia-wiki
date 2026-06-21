@@ -230,4 +230,4 @@ No. It compresses search, screening, and extraction. Final inclusion decisions, 
 ## Related
 
 - **Category:** [AI Research](/categories/ai-research/)
-- **Comparisons:** [ChatGPT vs Elicit](/compare/chatgpt-vs-elicit/) | [Elicit vs Consensus](/compare/consensus-vs-elicit/) | [Elicit vs Scite](/compare/elicit-vs-scite/) | [Elicit vs Semantic Scholar](/compare/elicit-vs-semantic-scholar/) | [Elicit vs Perplexity](/compare/elicit-vs-perplexity/) | [Connected Papers vs Elicit](/compare/connected-papers-vs-elicit/)
+- **Comparisons:** [Elicit vs Consensus](/compare/consensus-vs-elicit/) | [Connected Papers vs Elicit](/compare/connected-papers-vs-elicit/)

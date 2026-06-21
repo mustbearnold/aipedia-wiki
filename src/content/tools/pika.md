@@ -259,4 +259,4 @@ Yes, but treat API access as a separate/custom route. Standard and Pro users sho
 ## Related
 
 - **Category:** [AI Video Generation](/categories/ai-video/)
-- **Comparisons:** [Pika vs Runway](/compare/pika-vs-runway/) · [Kling vs Pika](/compare/kling-vs-pika/) · [Pika vs Seedance](/compare/pika-vs-seedance/) · [HeyGen vs Pika](/compare/heygen-vs-pika/) · [Pika vs Synthesia](/compare/pika-vs-synthesia/)
+- **Comparisons:** [Pika vs Runway](/compare/pika-vs-runway/) · [Kling vs Pika](/compare/kling-vs-pika/) · [Pika vs Seedance](/compare/pika-vs-seedance/)

@@ -263,4 +263,3 @@ Yes. Ahrefs applies a 2-months-free discount on annual plans across every tier, 
 ## Related
 
 - **Category:** [AI SEO](/categories/ai-seo/)
-- **Comparisons:** [Ahrefs vs Surfer SEO](/compare/ahrefs-vs-surfer-seo/) · [Surfer vs Semrush vs Ahrefs](/compare/surfer-vs-semrush-vs-ahrefs/) · [Ahrefs vs Frase](/compare/ahrefs-vs-frase/) · [Ahrefs vs MarketMuse](/compare/ahrefs-vs-marketmuse/)

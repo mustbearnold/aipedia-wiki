@@ -61,7 +61,7 @@ Use this loop as the default for monetizable AiPedia content work:
 
 The loop exists to avoid random isolated refreshes. Prefer clusters that improve a real decision path, such as a comparison plus its tool pages and parent category, over single-page maintenance with no buyer outcome.
 
-Comparison pages must compare tools for the same buyer job. Do not create or keep fake versus pages for tools that only share a secondary capability or broad AI label while serving different categories, use cases, and workflows. The default selector only auto-picks same-primary-category pairs; explicit adjacent-workflow exceptions live in `src/data/comparison-policy.json`, and review-only pairs must not be written without human product judgment.
+Comparison pages must compare tools for the same buyer job. Same primary category is necessary but not sufficient. Do not create or keep fake versus pages for tools that only share a secondary capability, broad AI label, or category label while serving different use cases and workflows. The default selector only auto-picks same-primary-category pairs that are not listed in `src/data/comparison-policy.json` blocked pairs; review-only pairs must not be written without human product judgment.
 
 Before editing:
 

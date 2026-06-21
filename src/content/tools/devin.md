@@ -256,4 +256,4 @@ Cognition replaced the old $500 Team-only tier with self-serve Pro at $20/mo in 
 ## Related
 
 - **Category:** [AI Coding](/categories/ai-coding/)
-- **Comparisons:** [Claude Code vs Devin](/compare/claude-code-vs-devin/) · [Continue vs Devin](/compare/continue-vs-devin/) · [Cursor vs Devin](/compare/cursor-vs-devin/) · [Devin vs GitHub Copilot](/compare/devin-vs-github-copilot/) · [Devin vs Val Town](/compare/devin-vs-val-town/)
+- **Comparisons:** [Claude Code vs Devin](/compare/claude-code-vs-devin/) · [Continue vs Devin](/compare/continue-vs-devin/) · [Devin vs GitHub Copilot](/compare/devin-vs-github-copilot/)

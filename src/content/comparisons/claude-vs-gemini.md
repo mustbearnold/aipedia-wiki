@@ -18,19 +18,21 @@ canonical_fact_table: true
 
 [Claude](/tools/claude/) is Anthropic's premium reasoning, writing, long-document, and Claude Code assistant. [Gemini](/tools/gemini/) is Google's AI assistant and model ecosystem across Gemini app, Search, Workspace, Android, Google One subscriptions, Gemini API, AI Studio, Nano Banana image generation, Veo video generation, Jules, Antigravity, and NotebookLM.
 
-**Quick answer:** choose Claude when the buyer needs careful writing, critique, long-form reasoning, Claude Code, or a cleaner high-trust assistant. Choose Gemini when the buyer lives in Google, wants AI bundled with Search/Docs/Gmail/Drive/storage, or needs native image/video and Google developer-agent surfaces in the same ecosystem.
+## Quick Answer
+
+Choose **Claude** when the buyer needs careful writing, critique, long-form reasoning, Claude Code, or a cleaner high-trust assistant.
+
+Choose **Gemini** when the buyer lives in Google, wants AI bundled with Search/Docs/Gmail/Drive/storage, or needs native image/video and Google developer-agent surfaces in the same ecosystem.
 
 ## Decision Table
 
-| Need | Better choice | Why |
-|---|---|---|
-| Long-form writing and critique | Claude | Claude remains stronger for careful prose, pushback, and complex document reasoning. |
-| Google Workspace and Android | Gemini | Gemini sits closer to Gmail, Docs, Drive, Search, Chrome, Android, NotebookLM, and Google One benefits. |
-| Terminal-native coding agent | Claude | Claude Code is the tighter Anthropic-backed repo agent. |
-| Google-native coding and agents | Gemini | Google AI Pro/Ultra expose Jules, Antigravity, and higher agent/developer limits by plan. |
-| Native image generation | Gemini | Gemini API docs list Nano Banana, Nano Banana 2, and Nano Banana Pro surfaces. Claude has no native image generation. |
-| Native video generation | Gemini | Veo 3.1 is a Google/Gemini API video-generation surface. Claude has no native video generation. |
-| Direct enterprise assistant procurement | Depends | Claude is cleaner for a focused assistant; Gemini is stronger when Workspace/Google Cloud already govern the org. |
+- **Long-form writing and critique:** Better choice: Claude; Why: Claude remains stronger for careful prose, pushback, and complex document reasoning.
+- **Google Workspace and Android:** Better choice: Gemini; Why: Gemini sits closer to Gmail, Docs, Drive, Search, Chrome, Android, NotebookLM, and Google One benefits.
+- **Terminal-native coding agent:** Better choice: Claude; Why: Claude Code is the tighter Anthropic-backed repo agent.
+- **Google-native coding and agents:** Better choice: Gemini; Why: Google AI Pro/Ultra expose Jules, Antigravity, and higher agent/developer limits by plan.
+- **Native image generation:** Better choice: Gemini; Why: Gemini API docs list Nano Banana, Nano Banana 2, and Nano Banana Pro surfaces. Claude has no native image generation.
+- **Native video generation:** Better choice: Gemini; Why: Veo 3.1 is a Google/Gemini API video-generation surface. Claude has no native video generation.
+- **Direct enterprise assistant procurement:** Better choice: Depends; Why: Claude is cleaner for a focused assistant; Gemini is stronger when Workspace/Google Cloud already govern the org.
 
 ## Where Claude Wins
 
@@ -50,16 +52,14 @@ For developers already in Google's stack, Gemini has a wider platform story: AI 
 
 ## Pricing Reality
 
-| Product | June 2026 pricing signal | Practical implication |
-|---|---|---|
-| Claude Pro | $20/month or $17/month annual | Best individual Claude tier for most users. |
-| Claude Max | From $100/month | Heavy Claude and Claude Code use. |
-| Claude Opus 4.8 API | $5 input / $25 output per MTok | Premium reasoning and coding-agent model. |
-| Google AI Plus | $7.99/month in the US | Light paid Gemini tier with more quota and selected media/Workspace benefits. |
-| Google AI Pro | $19.99/month in the US | Main individual Gemini bundle with 5TB storage and Google app benefits. |
-| Google AI Ultra | $99.99/month or $199.99/month in the US | Higher Gemini, agent, media, Flow, Jules/Antigravity, storage, and premium benefits. |
-| Gemini Flash / Flash-Lite API rows | Lower-cost Google API routes; exact rates vary by model generation and tier | Better for cost-sensitive Google API workflows than for final-assistant quality comparisons. |
-| Gemini Pro API rows | Tiered pricing by model, prompt size, and tier | Advanced Gemini API route; check the live pricing table before production routing. |
+- **Claude Pro:** June 2026 pricing signal: $20/month or $17/month annual; Practical implication: Best individual Claude tier for most users.
+- **Claude Max:** June 2026 pricing signal: From $100/month; Practical implication: Heavy Claude and Claude Code use.
+- **Claude Opus 4.8 API:** June 2026 pricing signal: $5 input / $25 output per MTok; Practical implication: Premium reasoning and coding-agent model.
+- **Google AI Plus:** June 2026 pricing signal: $7.99/month in the US; Practical implication: Light paid Gemini tier with more quota and selected media/Workspace benefits.
+- **Google AI Pro:** June 2026 pricing signal: $19.99/month in the US; Practical implication: Main individual Gemini bundle with 5TB storage and Google app benefits.
+- **Google AI Ultra:** June 2026 pricing signal: $99.99/month or $199.99/month in the US; Practical implication: Higher Gemini, agent, media, Flow, Jules/Antigravity, storage, and premium benefits.
+- **Gemini Flash / Flash-Lite API rows:** June 2026 pricing signal: Lower-cost Google API routes; exact rates vary by model generation and tier; Practical implication: Better for cost-sensitive Google API workflows than for final-assistant quality comparisons.
+- **Gemini Pro API rows:** June 2026 pricing signal: Tiered pricing by model, prompt size, and tier; Practical implication: Advanced Gemini API route; check the live pricing table before production routing.
 
 Do not pick only by sticker price. Claude Pro and Google AI Pro are similar monthly buys, but Gemini includes storage and Google app benefits while Claude buys a more focused reasoning assistant. API buyers should price exact model, prompt size, tier, grounding, cache, media, and region.
 
@@ -120,4 +120,4 @@ Gemini. Nano Banana covers image generation/editing and Veo 3.1 covers video. Cl
 
 - **Tool pages:** [Claude](/tools/claude/) | [Gemini](/tools/gemini/)
 - **Categories:** [AI Chatbots](/categories/ai-chatbots/) | [AI Search](/categories/ai-search/) | [AI Coding](/categories/ai-coding/)
-- **Comparisons:** [ChatGPT vs Gemini](/compare/chatgpt-vs-gemini/) | [DeepSeek vs Gemini](/compare/deepseek-vs-gemini/) | [Cursor vs Gemini](/compare/cursor-vs-gemini/)
+- **Comparisons:** [ChatGPT vs Gemini](/compare/chatgpt-vs-gemini/)

@@ -233,4 +233,3 @@ Apollo is a volatile sales/pricing tool, so AiPedia treats it as a monthly revie
 ## Related
 
 - **Category:** [AI Automation](/categories/ai-automation/)
-- **Comparisons:** [Apollo vs Clay](/compare/apollo-vs-clay/) · [Apollo vs Instantly](/compare/apollo-vs-instantly/) · [Apollo vs Intercom](/compare/apollo-vs-intercom/) · [Apollo vs Make](/compare/apollo-vs-make/) · [Apollo vs Zapier](/compare/apollo-vs-zapier/)

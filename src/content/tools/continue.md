@@ -244,4 +244,4 @@ Start with one narrow check, such as secrets, input validation, deprecated API u
 ## Related
 
 - **Category:** [AI Coding](/categories/ai-coding/)
-- **Comparisons:** [Claude Code vs Continue](/compare/claude-code-vs-continue/) | [Continue vs Cursor](/compare/continue-vs-cursor/) | [Continue vs Devin](/compare/continue-vs-devin/) | [Continue vs GitHub Copilot](/compare/continue-vs-github-copilot/) | [Continue vs Val Town](/compare/continue-vs-val-town/)
+- **Comparisons:** [Claude Code vs Continue](/compare/claude-code-vs-continue/) | [Continue vs Cursor](/compare/continue-vs-cursor/) | [Continue vs Devin](/compare/continue-vs-devin/)

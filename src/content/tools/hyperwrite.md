@@ -236,4 +236,4 @@ HyperWrite routes to third-party models rather than publishing a proprietary bas
 ## Related
 
 - **Category:** [AI Writing](/categories/ai-writing/)
-- **Comparisons:** [Copy.ai vs HyperWrite](/compare/copy-ai-vs-hyperwrite/), [Grammarly vs HyperWrite](/compare/grammarly-vs-hyperwrite/), [HyperWrite vs QuillBot](/compare/hyperwrite-vs-quillbot/), [HyperWrite vs Sudowrite](/compare/hyperwrite-vs-sudowrite/), [HyperWrite vs Wordtune](/compare/hyperwrite-vs-wordtune/)
+- **Comparisons:** [Grammarly vs HyperWrite](/compare/grammarly-vs-hyperwrite/), [HyperWrite vs QuillBot](/compare/hyperwrite-vs-quillbot/), [HyperWrite vs Wordtune](/compare/hyperwrite-vs-wordtune/)

@@ -7,256 +7,107 @@ Audience: maintainers, future agents, and Matt.
 ## Source-Of-Truth Stack
 
 1. `.agent/CURRENT_STATUS.md`: where we are now.
-2. `.agent/PLANS.md`: only active or immediately resumable work.
-3. `.agent/WORK_LOG.md`: append-only record of major completed work.
-4. `.agent/OPERATING_RULES.md`: how to work safely in this repo.
-5. `.agent/PROJECT_MAP.md`: where important code and verification surfaces live.
-6. `.agent/archive/`: historical detail. Read only when a current file points there.
+2. `.agent/PLANS.md`: active or immediately resumable work.
+3. `.agent/WORK_LOG.md`: append-only record of major landed work.
+4. `.agent/OPERATING_RULES.md`: repo operating rules.
+5. `.agent/PROJECT_MAP.md`: paths, commands, and verification surfaces.
 
 Local ignored docs, old specs, and archived plans are not canonical when they conflict with this stack.
 
 ## Plain English
 
-The June 2026 standards remediation is done and pushed to `origin/master`. The first six Decision Content Flywheel content cycles, `canva-vs-claude`, `claude-vs-replit-agent`, `cursor-vs-deepseek`, `cursor-vs-grok`, `deepseek-vs-github-copilot`, and `deepseek-vs-replit-agent`, are complete. The loop has now been hardened with executable verification, route QA, changed-route smart guidance, durable run receipts, per-command timing, scoped fast-build environment handling, safe build-before-browser-check ordering, fresh Playwright server output, combined route QA for all changed rendered content routes, duplicate fallback route-QA detection, exact route QA replacing broad visual smoke for content-only route cycles, a contract-level operator surface rule for when that replacement is allowed, a comparison-policy guard that blocks false-vs pages for tools with different buyer jobs, and an Astro 6 markdown processor config that no longer emits the old markdown plugin deprecation warning. Do not restart completed cycles from the original specs. Use this file to see what was completed, what remains active, and which docs to trust first.
+AiPedia now has a strict same-buyer-job comparison policy. Same primary category is necessary but not sufficient. Do not create or keep comparison pages for tools in different primary categories, and do not create a direct `vs` page when same-category tools solve different buyer jobs or workflows. Use category pages, guides, alternatives pages, or buyer-path sections for those relationships instead.
 
-At the time this status was last checked, `master` had local unpushed cycle work in progress. Run `git status --short --branch` and `git log --oneline -5` for the exact current head.
+The cleanup deleted 179 comparison files in total. That includes false-vs pages, the newly drafted `mistral-ai-vs-poe` page, and the multi-tool pages `lindy-vs-zapier-vs-n8n` and `lovable-vs-bolt-vs-v0`. Rebuild any useful multi-tool coverage later as focused two-tool direct-substitute pages only. Deleted routes include earlier loop pages such as `canva-vs-claude`, `claude-vs-replit-agent`, `cursor-vs-deepseek`, `cursor-vs-grok`, `deepseek-vs-github-copilot`, and `deepseek-vs-replit-agent`. Their tool/source refresh work remains useful where it touched live tool and category pages, but those comparison routes are no longer live.
+
+At last check, there were no remaining published comparison files whose tools have different primary categories. `npm run loop:next -- --json` selects `activepieces-vs-n8n`, which is a valid same-category `ai-automation` comparison.
+
+Run `git status --short --branch` and `git log --oneline -5` before starting. This branch has local unpushed work.
 
 ## Done Recently
 
-- Comparison policy cleanup is implemented.
-  - Deleted five definite false-vs comparison pages: `chatgpt-vs-fireflies`, `chatgpt-vs-hermes-agent`, `chatgpt-vs-otter-ai`, `chatgpt-vs-you-com`, and `elevenlabs-vs-otter-ai`.
-  - Removed visible internal links to those deleted routes from affected tool and category pages.
-  - Added `src/data/comparison-policy.json` so adjacent cross-category comparisons require an explicit same-buyer-job allowance.
-  - Regenerated `src/data/coverage-backlog.json`; it now stores selectable direct comparisons separately from `review_only_comparisons`.
-  - `npm run loop:next -- --json` now selects `mistral-ai-vs-poe`, not the blocked Descript vs Grok secondary-overlap pair.
-- Astro markdown deprecation cleanup is implemented.
-  - `astro.config.mjs` now passes the existing remark and rehype plugins through `processor: unified(...)` from `@astrojs/markdown-remark`.
-  - The follow-up `build:fast` and full `check:smart:run` passes completed without the previous Astro markdown plugin deprecation warning.
-- Decision Content Flywheel hardening is implemented.
-  - Added `npm run loop:verify` to run the cycle checks with one explicit `AIPEDIA_LEDGER_DATE`, preventing local timezone drift from breaking ledger, guard, or build checks.
-  - Added `npm run qa:route` for reusable Playwright route QA at mobile, tablet, and desktop widths.
-  - Added `npm run loop:record` and `.agent/loop-runs/` receipts so completed or attempted cycles leave one durable artifact.
-  - `npm run check:smart` now surfaces route-specific QA targets for changed tool, category, and comparison content.
-  - `npm run audit:coverage-quality:changed` now rejects raw Markdown tables in changed comparison pages so mobile-hostile tables are caught before browser QA.
-  - Follow-up review fixes preserve comma-containing verification command text in loop receipts, make comparison route QA executable through `check:smart:run`, avoid fallback builds for non-rendered paths, reduce duplicated loop checks, and record per-command timings.
-  - Latest loop review fix scopes `AIPEDIA_FAST_BUILD=1` to build and route-QA commands, preventing fast-build mode from leaking into `test:scripts` fixture tests while keeping route QA pointed at fast-build output.
-  - Latest loop performance fix makes `check-smart --run` execute `build:fast` before `smoke:visual` and route QA when both are selected, and prints per-command durations so the next performance review is not a black box.
-  - Latest loop reliability fix forces Playwright browser checks to use fresh `dist-fast/client` output after `build:fast`, instead of reusing a stale local server.
-  - Latest loop QA fix makes `check-smart --run` execute one combined `qa:route` command for all changed tool, category, and comparison content routes. Local static QA now tolerates the hosted reviews runtime API miss, and `loop:verify` recognizes combined route QA so it does not run a duplicate comparison QA fallback.
-  - Latest loop performance fix lets exact route QA replace broad `smoke:visual` for content-only rendered route cycles. Runtime/template/layout/component/style/config changes still keep broad visual smoke.
-  - Latest loop maintainability fix moves the exact parent-hub route list and broad-smoke replacement rule into `src/data/operator-surfaces.json`, so future agents can inspect the contract instead of inferring script internals.
-- Sixth Decision Content Flywheel cycle is complete.
-  - Completed cycle: `deepseek-vs-replit-agent`.
-  - Added `src/content/comparisons/deepseek-vs-replit-agent.md`.
-  - Refreshed DeepSeek, Replit Agent, AI Coding, compare/tools/categories top-layer metadata, LLM surfaces, source registry, coverage backlog, and ledger rows.
-  - Added a source registry row for the DeepSeek V4 release note and rechecked DeepSeek API changelog, Replit pricing, AI billing, Starter/Core/Pro plan docs, Agent modes, App Testing, Skills, and security docs.
-  - Route QA passed for `/categories/`, `/categories/ai-coding/`, `/compare/`, `/compare/deepseek-vs-replit-agent/`, `/tools/`, `/tools/deepseek/`, and `/tools/replit-agent/` at 360, 390, 430, 768, 1024, and 1366 px after build-fast.
-  - Loop verifier passed in about 193.5 seconds; `check-smart --run` took 190.4 seconds, `build:fast` took 126.2 seconds, and exact seven-route QA took 43.1 seconds.
-  - `npm run loop:next -- --json` now selects `mistral-ai-vs-poe` after the comparison-policy cleanup.
-- Fifth Decision Content Flywheel cycle is complete.
-  - Completed cycle: `deepseek-vs-github-copilot`.
-  - Added `src/content/comparisons/deepseek-vs-github-copilot.md`.
-  - Refreshed DeepSeek, GitHub Copilot, AI Coding, compare/tools/categories top-layer metadata, LLM surfaces, source registry, coverage backlog, and ledger rows.
-  - Updated GitHub Copilot buyer guidance for gradual individual-plan signup reopening, Copilot app GA, AI Credits usage reporting, `AGENTS.md` code-review support, MAI-Code-1-Flash expansion, and Fable 5 suspension caveats.
-  - Route QA passed for `/categories/ai-coding/`, `/compare/deepseek-vs-github-copilot/`, `/tools/deepseek/`, and `/tools/github-copilot/` at 360, 390, 430, 768, 1024, and 1366 px after build-fast.
-  - The later backlog advanced through `deepseek-vs-replit-agent`, which is now complete.
-- Fourth Decision Content Flywheel cycle is complete.
-  - Completed cycle: `cursor-vs-grok`.
-  - Added `src/content/comparisons/cursor-vs-grok.md`.
-  - Refreshed Cursor, Grok, AI Coding, compare/tools/categories top-layer metadata, LLM surfaces, source registry, coverage backlog, and ledger rows.
-  - Corrected over-specific xAI Responses API retention wording: current docs prove the request/response storage opt-out, but the exact old 30-day wording was not visible in the current source check.
-  - Route QA passed for `/compare/cursor-vs-grok/` at 360, 390, 430, 768, 1024, and 1366 px after build-fast.
-  - The next cycle after this completed work was `deepseek-vs-github-copilot`, which is now also complete.
-- Third Decision Content Flywheel cycle is complete.
-  - Completed cycle: `cursor-vs-deepseek`.
-  - Added `src/content/comparisons/cursor-vs-deepseek.md`.
-  - Refreshed Cursor, DeepSeek, AI Coding, compare/tools/categories top-layer metadata, LLM surfaces, source registry, coverage backlog, and ledger rows.
-  - Corrected stale DeepSeek V4 open-weight wording: current DeepSeek and Hugging Face sources now show V4 open-weight releases, while the page still warns that self-hosting requires hardware, license, hosting, and governance review.
-  - Route QA passed for `/compare/cursor-vs-deepseek/` at 360, 390, 430, 768, 1024, and 1366 px after build-fast.
-  - The later backlog advanced through `deepseek-vs-github-copilot`, which is now complete.
-- Second Decision Content Flywheel cycle is complete.
-  - Completed cycle: `claude-vs-replit-agent`.
-  - Added `src/content/comparisons/claude-vs-replit-agent.md`.
-  - Refreshed Replit Agent, Claude related links, AI Coding, compare/tools/categories top-layer metadata, LLM surfaces, source registry, coverage backlog, and ledger rows.
-  - Corrected Replit App Testing wording to the current web-app-only scope and replaced mobile-hostile comparison tables with stacked decision bullets.
-  - Route QA passed for `/compare/claude-vs-replit-agent/` at 360, 390, 430, 768, 1024, and 1366 px after build-fast.
-  - The later backlog advanced through `deepseek-vs-github-copilot`, which is now complete.
-- First Decision Content Flywheel cycle is complete.
-  - Completed cycle: `canva-vs-claude`.
-  - Added `src/content/comparisons/canva-vs-claude.md`.
-  - Refreshed affected Canva, Claude, Claude Code, Anthropic, AI design, AI coding, developer guide, Copilot alternatives, May Agent SDK news correction, source registry, LLM surfaces, and ledger rows.
-  - Corrected the stale Claude Agent SDK credit claim: Anthropic's current help guidance says the June 15 Agent SDK usage changes are paused and the separate monthly credit is not currently available.
-  - The next cycle after this completed work was `claude-vs-replit-agent`, which is now also complete.
-- Decision content loop is implemented.
-  - Spec: `docs/superpowers/specs/2026-06-21-aipedia-decision-content-loop.md`
-  - Command: `npm run loop:next`
-  - Verification command: `npm run loop:verify -- --date <YYYY-MM-DD> --route /compare/<slug>/ --path <changed paths>`
-  - Route QA command: `npm run qa:route -- --route /compare/<slug>/`
-  - Recording command: `npm run loop:record -- --date <YYYY-MM-DD> --slug <slug> --status complete`
-  - Purpose: choose one buyer-intent cluster, verify current facts, improve the decision page, update parent surfaces, run the right checks, record, repeat.
-  - Next cycle after the first pass was `deepseek-vs-replit-agent`, which is now also complete.
-  - The loop brief now requires related-surface discovery, source registry inspection, stale-backlog warnings, and rendered route QA at 360, 390, 430, 768, 1024, and 1366 px.
-- Build-time diagnosis is complete.
-  - `npm run build:fast` passed in 191.31 seconds after regenerating the page refresh ledger.
-  - `npm run build` passed in 214.37 seconds.
-  - Main cost is site scale: 1,135 content files, about 1,180 built HTML pages, Astro/Vercel static prerender around 2 minutes, and Pagefind around 44 seconds.
-  - `PAGE_REFRESH_LEDGER.md` was normalized with `npm run ledger:pages` because the ledger check was stale.
-  - Best next product move from that review has now completed six cycles through `deepseek-vs-replit-agent`; the current next sprint is `mistral-ai-vs-poe`.
-- June 2026 standards remediation is complete.
-  - Final commit: `3355ce1d fix: remediate June standards review`
-  - Spec: `docs/superpowers/specs/2026-06-20-june-standards-remediation-and-rereview.md`
-  - Result: Semrush duplication, commercial CTA approval gating, mobile first-screen data, internal-link coverage, source/provenance checks, Node/build/CI alignment, typecheck/lint gates, Pagefind/dist checks, top-layer crawl coverage, nav semantics, and broader commercial CTA auditing were remediated or converted into documented baseline debt.
-- Guard Challenge Workflow is implemented and merged.
-  - Merge commit: `cd6ff483 Merge pull request #43 from mustbearnold/codex/guard-challenge-workflow`
-  - Use `npm run guard:challenge` only when a guard, audit, check, or fixture may need to change.
-  - Use `npm run guard:challenge:check` to validate accepted guard challenge records.
-- Project Folder Tidy and Verification Router work is complete.
-  - Relevant commits include `1c109370 chore: tidy repo and refresh June 17 coverage` and `af00cf70 feat: add ops efficiency tooling`.
-  - The active agent surface is now `.agent/README.md`, `.agent/CURRENT_STATUS.md`, `.agent/PLANS.md`, `.agent/WORK_LOG.md`, `.agent/OPERATING_RULES.md`, and `.agent/PROJECT_MAP.md`.
-  - Use `npm run check:smart` before choosing broad checks.
-- June 17, 2026 AI News Coverage Catch-Up is complete.
-  - Added a June 17 daily desk plus focused Google Pixel/Gemini, Microsoft Copilot Cowork, G7 AI sovereignty, and NVIDIA AI factory stories.
-  - Updated `/news/`, RSS, ledger, and related crawl surfaces.
-- Continuity recording has been hardened.
-  - Committed source-of-truth stack: `.agent/CURRENT_STATUS.md`, `.agent/PLANS.md`, `.agent/WORK_LOG.md`, `.agent/OPERATING_RULES.md`, and `.agent/PROJECT_MAP.md`.
-  - Future major work should update status, active plans, and work log before final report.
-- Vercel CLI is installed globally for local operator workflows.
-  - Installed version: `vercel@54.14.2`.
-  - Local executable: `C:\Users\mustb\AppData\Local\npm\vercel.ps1`.
-  - Use it for Vercel login, env pull, deploy, inspect, and logs workflows once the project is linked and authenticated.
+- Strict comparison cleanup:
+  - Deleted 179 comparison files from `src/content/comparisons/`.
+  - Removed public links to those deleted routes from `src/content`, `src/pages`, components, and layouts.
+  - Regenerated `PAGE_REFRESH_LEDGER.md`; it now tracks 603 rows after the removed routes dropped out.
+  - Regenerated `src/data/coverage-backlog.json`.
+  - Verified no cross-primary comparison files remain.
+  - Verified no public links to the deleted comparison routes remain.
+- Comparison selector hardening:
+  - `src/data/comparison-policy.json` no longer has an `allowed_adjacent_pairs` loophole.
+  - `scripts/audit-coverage-gaps.mjs`, `scripts/coverage-next.mjs`, and `scripts/decision-loop.mjs` now only select same-primary-category pairs.
+  - `src/data/comparison-policy.json` now stores 127 blocked pairs for known same-category false-vs traps.
+  - `mistral-ai-vs-poe` is explicitly blocked because it is native model-provider/platform-control versus multi-model aggregator.
+  - Focused tests now prove adjacent workflow pairs remain review-only even if a future policy file tries to list them as allowed.
+- Mistral AI, Poe, and AI Chatbots remain refreshed:
+  - Mistral keeps the June 21 pricing, Vibe, Studio/API, Search Toolkit, EU data-posture, and Voxtral license clarifications.
+  - Poe keeps the June 21 point tier, Windows desktop, Creator Platform API, and structured-data annual anchor corrections.
+  - AI Chatbots now explains Mistral and Poe as separate lanes without publishing a direct comparison route.
+- Decision loop verifier hardening remains:
+  - `loop:verify` includes scoped provenance checks for changed tool pages.
+  - `qa:route` still checks 360, 390, 430, 768, 1024, and 1366 px when rendered routes are affected.
+  - Exact route QA can replace broad visual smoke for content-only route cycles when `src/data/operator-surfaces.json` allows it.
+- Astro markdown warning cleanup remains:
+  - `astro.config.mjs` uses `processor: unified(...)` from `@astrojs/markdown-remark`.
+  - The old markdown plugin deprecation warning was cleared in the previous build checks.
 
 ## Active Work
 
-- Decision Content Flywheel is active.
-  - Use `npm run loop:next` at the start of monetizable content work.
+- Decision Content Flywheel:
+  - Use `npm run loop:next -- --json` to pick the next valid same-category comparison.
+  - Current recommended next cycle: `activepieces-vs-n8n`.
+  - Do not restart the deleted cross-category loop pages. Their routes were intentionally removed.
   - Use `npm run loop:verify -- --date <YYYY-MM-DD> --route /compare/<slug>/ --path <changed paths>` before closing a rendered comparison cycle.
-  - Use `npm run loop:record` to write `.agent/loop-runs/YYYY-MM-DD-slug.md` after a completed, failed, partial, or blocked major cycle.
-  - Do not write comparison, pricing, model, plan, affiliate, or commercial claims until current sources have been verified.
-  - For rendered comparison cycles, record route QA at 360, 390, 430, 768, 1024, and 1366 px, covering mobile/tablet and desktop.
-  - Current recommended next cycle is `mistral-ai-vs-poe`.
-- Oldest-First AI Tools Wiki Refresh remains active.
+  - Use `npm run loop:record -- --date <YYYY-MM-DD> --slug <slug> --status complete` after a completed, failed, partial, or blocked major cycle.
+- Oldest-First AI Tools Wiki Refresh:
   - Work from `PAGE_REFRESH_LEDGER.md`, oldest first.
-  - Latest logged refresh in `.agent/PLANS.md` is `Connected Papers`, completed on 2026-06-18.
-  - Before editing any page, verify volatile facts against current June 2026 sources, update source fields, update `PAGE_REFRESH_LEDGER.md`, and inspect affected top-layer pages.
-- Phase 3 Parallel Surface Agent Orchestration is planned but not executed on `master`.
-  - Local detailed plan, if present: `docs/superpowers/plans/2026-06-20-parallel-surface-agent-orchestration.md`
-  - Committed summary: `.agent/PLANS.md`
-  - Local scan at this update found no news files dated 2026-06-18, 2026-06-19, or 2026-06-20.
-  - If resuming it, recompute missed news dates and verify current sources before dispatching subagents.
+  - Verify volatile facts against current June 2026 sources before editing.
+  - Update source fields, `last_verified`, affected parent hubs, and the ledger in the same change.
+- Phase 3 Parallel Surface Agent Orchestration:
+  - Planned but not executed on `master`.
+  - If resumed, recompute missed news dates and verify current sources before dispatching subagents.
 
 ## Verification Baseline
 
-- False-vs comparison cleanup and Astro warning cleanup passed:
-  - `node --test tests/scripts/loop-hardening.test.mjs tests/scripts/check-smart.test.mjs tests/scripts/audit-coverage-gaps.test.mjs tests/scripts/decision-loop.test.mjs`
-  - `npm run coverage:backlog`
-  - `node scripts/decision-loop.mjs --json`
-  - `$env:AIPEDIA_LEDGER_DATE='2026-06-21'; npm run build:fast`
-  - `$env:AIPEDIA_LEDGER_DATE='2026-06-21'; npm run check:smart:run`
-  - The final smart run passed in about 270.6 seconds, including `test:scripts`, `build:fast`, broad `smoke:visual`, and route QA for `/categories/`, `/categories/ai-automation/`, `/categories/ai-notes/`, `/compare/`, `/tools/`, `/tools/fireflies/`, `/tools/hermes-agent/`, `/tools/otter-ai/`, and `/tools/you-com/` at 360, 390, 430, 768, 1024, and 1366 px.
-- Decision loop hardening passed:
-  - `node --test tests/scripts/audit-coverage-gaps.test.mjs tests/scripts/decision-loop.test.mjs`
-  - `node --test tests/scripts/decision-loop.test.mjs tests/scripts/check-smart.test.mjs tests/scripts/audit-coverage-quality.test.mjs tests/scripts/loop-hardening.test.mjs`
-  - `node --test tests/scripts/check-smart.test.mjs tests/scripts/loop-hardening.test.mjs`
-  - `node scripts/qa-route.mjs --route /compare/claude-vs-replit-agent/ --widths 360 --site-dir dist-fast/client`
-  - `npm run guard:challenge:check`
-  - `npm run check:quick`
-- The second Decision Content Flywheel cycle passed:
-  - `npm run test:scripts`
-  - `$env:AIPEDIA_LEDGER_DATE='2026-06-20'; npm run ledger:pages`
-  - `$env:AIPEDIA_LEDGER_DATE='2026-06-20'; npm run ledger:pages:check`
-  - `$env:AIPEDIA_LEDGER_DATE='2026-06-20'; npm run guard:check`
-  - `$env:AIPEDIA_LEDGER_DATE='2026-06-20'; npm run check:smart:run -- --path <changed paths>`
-  - `$env:AIPEDIA_LEDGER_DATE='2026-06-20'; npm run build:fast`
-  - `npm run audit:coverage-quality:changed`
-  - `npm run audit:provenance:changed`
-  - `npm run audit:facts`
-  - `npm run audit:tool-quality -- --file src/content/tools/replit-agent.md`
-  - `npm run audit:tool-quality -- --file src/content/tools/claude.md`
-  - `npm run check:links`
-  - Playwright route QA for `/compare/claude-vs-replit-agent/` at 360, 390, 430, 768, 1024, and 1366 px.
-- The third Decision Content Flywheel cycle passed:
-  - `node --test tests/scripts/check-dist-budget.test.mjs tests/scripts/check-smart.test.mjs tests/scripts/loop-hardening.test.mjs`
-  - `npm run audit:provenance:changed`
-  - `npm run audit:coverage-quality:changed`
-  - `node scripts/guard-em-dashes.mjs`
-  - `git diff --check`
-  - `$env:AIPEDIA_LEDGER_DATE='2026-06-20'; npm run loop:verify -- --date 2026-06-20 --route /compare/cursor-vs-deepseek/ --path <changed paths>`
-  - Loop verifier passed in about 234 seconds; the smart-verification block took 230.7 seconds, and build-fast reported about 2 minutes 23 seconds.
-  - Playwright route QA passed for `/compare/cursor-vs-deepseek/` at 360, 390, 430, 768, 1024, and 1366 px.
-- The fourth Decision Content Flywheel cycle passed:
-  - `npm run audit:provenance:changed`
-  - `npm run audit:coverage-quality:changed`
-  - `node scripts/guard-em-dashes.mjs`
-  - `git diff --check`
-  - `$env:AIPEDIA_LEDGER_DATE='2026-06-20'; npm run loop:verify -- --date 2026-06-20 --route /compare/cursor-vs-grok/ --path <changed paths>`
-  - `node --test tests/scripts/check-smart.test.mjs tests/scripts/loop-hardening.test.mjs`
-  - Loop verifier passed in about 232 seconds; the smart-verification block took 228.9 seconds, and build-fast reported about 2 minutes 24 seconds.
-  - Playwright route QA passed for `/compare/cursor-vs-grok/` at 360, 390, 430, 768, 1024, and 1366 px.
-- The fifth Decision Content Flywheel cycle passed:
-  - `node --test tests/scripts/check-smart.test.mjs tests/scripts/loop-hardening.test.mjs tests/scripts/playwright-config.test.mjs`
-  - `npm run audit:provenance:changed`
-  - `npm run audit:coverage-quality:changed`
-  - `node scripts/guard-em-dashes.mjs`
-  - `git diff --check`
-  - `$env:AIPEDIA_LEDGER_DATE='2026-06-20'; npm run loop:verify -- --date 2026-06-20 --route /compare/deepseek-vs-github-copilot/ --path <changed paths>`
-  - Loop verifier passed in about 251 seconds; the smart-verification block took 247.4 seconds, global `smoke:visual` took 47.0 seconds, and exact combined route QA took 26.1 seconds.
-  - Playwright route QA passed for `/categories/ai-coding/`, `/compare/deepseek-vs-github-copilot/`, `/tools/deepseek/`, and `/tools/github-copilot/` at 360, 390, 430, 768, 1024, and 1366 px after build-fast.
-- The sixth Decision Content Flywheel cycle passed:
-  - `npm run audit:coverage-quality:changed`
-  - `npm run audit:provenance:changed`
-  - `node scripts/guard-em-dashes.mjs`
-  - `git diff --check`
-  - `$env:AIPEDIA_LEDGER_DATE='2026-06-20'; npm run loop:verify -- --date 2026-06-20 --route /compare/deepseek-vs-replit-agent/ --path <changed paths>`
-  - Loop verifier passed in about 193.5 seconds; `check-smart --run` took 190.4 seconds, `build:fast` took 126.2 seconds, and exact combined route QA for seven routes took 43.1 seconds.
-  - Playwright route QA passed for `/categories/`, `/categories/ai-coding/`, `/compare/`, `/compare/deepseek-vs-replit-agent/`, `/tools/`, `/tools/deepseek/`, and `/tools/replit-agent/` at 360, 390, 430, 768, 1024, and 1366 px after build-fast.
-- The first Decision Content Flywheel cycle passed:
-  - `npm run check:quick`
-  - `npm run ledger:pages:check`
-  - `npm run audit:coverage-quality:changed`
-  - `npm run audit:provenance:changed`
-  - `npm run audit:facts`
-  - `npm run check:links`
-  - `npm run check:smart:run -- --path <changed paths>` with `build:fast` completing in 2 minutes 13 seconds.
-- The 2026-06-21 build-time diagnosis passed:
-  - `npm run ledger:pages:check`
-  - `npm run build:fast`
-  - `npm run build`
-- The June remediation final gate passed `npm run check:ci` twice on 2026-06-20.
-- Focused closeout checks also passed:
-  - `npm run ledger:pages:check`
-  - `node scripts/audit-commercial-cta.mjs`
-  - `node --test tests/scripts/audit-commercial-cta.test.mjs tests/scripts/tool-page-model-behavior.test.mjs`
-  - `npm run audit:provenance:changed`
-  - `npm run audit:coverage-quality:changed`
-  - `npm run audit:commands`
-  - `git diff --check`
-- For docs-only or tooling-only updates, prefer `npm run check:quick` plus `git diff --check`.
-- For page, content, template, runtime, SEO, schema, affiliate, or deployment changes, follow `.agent/OPERATING_RULES.md` and run the broader gates required for that surface.
+Latest cleanup checks:
+
+- `npm run coverage:backlog`
+- `$env:AIPEDIA_LEDGER_DATE='2026-06-21'; npm run ledger:pages`
+- `npm run loop:next -- --json`
+- No cross-primary comparison pages remain, checked with a one-off Node inventory audit.
+- No public links to deleted comparison routes remain, checked with `rg` over `src` and `PAGE_REFRESH_LEDGER.md`.
+- `node --test tests/scripts/audit-coverage-gaps.test.mjs tests/scripts/decision-loop.test.mjs tests/scripts/loop-hardening.test.mjs`
+- `node scripts/guard-em-dashes.mjs`
+
+Still recommended before final commit:
+
+- `git diff --check`
+- `npm run check:links`
+- `npm run audit:coverage-quality:changed`
+- A scoped provenance check for the changed tool pages if they remain in the final diff:
+  - `node scripts/audit-provenance-pricing.mjs --changed-file src/content/tools/mistral-ai.md --changed-file src/content/tools/poe.md`
 
 ## Known Caveats
 
-- Public content touched during the first six loop cycles uses `2026-06-20` as the verification date because the repo audit guards use the US/UTC project date. The local New Zealand shell clock showed `2026-06-21` during part of the work. New loop cycles should pass the intended project date explicitly to `npm run loop:verify -- --date <YYYY-MM-DD>`.
-- Full local builds currently take about 3.5 minutes on this machine. That is understandable for the current static site size, but too slow for normal edit loops. Prefer `npm run check:smart`, `npm run check:quick`, focused tests, and `npm run build:fast` unless a full pre-ship build is needed.
-- Decision loop verification is now more exact for rendered content because changed comparison, tool, category, and parent-hub routes run through combined route QA. Broad `smoke:visual` is now skipped for content-only route cycles only when `src/data/operator-surfaces.json` says the changed path set is safe. Runtime, layout, component, style, config, script, test, dependency, asset, and API changes still keep broad visual smoke when their surfaces require it.
+- Historical work-log and archive entries mention deleted comparison routes. Treat them as history, not live routing guidance.
+- Public content touched during the first six loop attempts used `2026-06-20` as the verification date. Current and future loop work should pass the intended date explicitly.
+- Full local builds currently take about 3.5 minutes. Prefer `npm run check:smart`, `npm run check:quick`, focused tests, and `npm run build:fast` unless a full pre-ship build is needed.
 - Large generated surfaces deserve future optimization: `/search/`, archive pages, `api/home-search.json`, public OG assets, and Pagefind output near the 10 MB budget.
-- `npm run check:ci` passed, but GitHub stats used stale cached fallback data because the GitHub API returned a 403 rate-limit response.
-- `npm run typecheck` covers active Astro/server surfaces. Legacy global search client scripts and archived `.legacy.astro` files are documented baseline exclusions in `tsconfig.typecheck.json` and `scripts/README.md`.
-- Some local-only historical plans and specs preserve their original task checklists. When they disagree with this file, this file and `.agent/PLANS.md` are the current committed orientation sources.
-- Historical work-log and archive entries may mention `descript-vs-grok` as a planned next loop target. That recommendation is superseded by the June 21 comparison-policy cleanup. Do not create that page unless the comparison policy is deliberately changed.
-- Global `vercel@54.14.2` install emits upstream dependency deprecation warnings for `stream-to-promise@2.2.0` and `tar@7.5.7` through Vercel CLI's own dependency graph. This is not an AiPedia repo dependency issue; update Vercel CLI when upstream bumps those transitive packages.
+- `npm run check:ci` previously passed, but GitHub stats used stale cached fallback data because the GitHub API returned a 403 rate-limit response.
+- Global `vercel@54.14.2` install emits upstream dependency deprecation warnings for `stream-to-promise@2.2.0` and `tar@7.5.7` through Vercel CLI's own dependency graph. This is not an AiPedia repo dependency issue.
 
 ## Start The Next Session
 
 1. Run `git status --short --branch`.
 2. Read `.agent/CURRENT_STATUS.md`, `.agent/PLANS.md`, and `.agent/WORK_LOG.md`.
 3. Read `.agent/PROJECT_MAP.md` for paths and `.agent/OPERATING_RULES.md` for rules.
-4. Use `npm run check:smart` to pick verification for the changed files.
+4. Use `npm run check:smart` to choose verification for changed files.
 5. If editing website content or commercial claims, apply the current-date, ledger, source, top-layer, mobile, SEO, and affiliate rules from `.agent/OPERATING_RULES.md`.
 
 ## Finish A Major Session
 
-1. Update `.agent/CURRENT_STATUS.md` so it reflects the new current state.
-2. Update `.agent/PLANS.md` so completed work is no longer listed as active.
-3. Append `.agent/WORK_LOG.md` with what landed, commit or branch, checks, risks, and next step.
+1. Update `.agent/CURRENT_STATUS.md`.
+2. Update `.agent/PLANS.md`.
+3. Append `.agent/WORK_LOG.md`.
 4. Update any source spec only when that spec directly governed the work.
 5. Run the smallest valid verification gate and report what passed, failed, and remains.

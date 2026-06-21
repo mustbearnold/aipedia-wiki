@@ -7682,7 +7682,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-21"
     },
     {
       "id": "mistral-vibe-product",
@@ -7691,7 +7691,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-21"
     },
     {
       "id": "mistral-vibe-agent",
@@ -7700,7 +7700,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-21"
     },
     {
       "id": "mistral-ai-now-summit-2026",
@@ -7709,7 +7709,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-21"
     },
     {
       "id": "mistral-vibe-github",
@@ -7718,7 +7718,7 @@
       "type": "repository",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-21"
     },
     {
       "id": "mistral-huggingface",
@@ -7727,7 +7727,7 @@
       "type": "repository",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-21"
     },
     {
       "id": "mistral-model-docs",
@@ -7736,11 +7736,11 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-21"
     },
     {
       "trust_tier": "primary",
-      "last_checked": "2026-06-15",
+      "last_checked": "2026-06-21",
       "id": "mistral-models-docs",
       "label": "Mistral model overview",
       "url": "https://docs.mistral.ai/models/overview",
@@ -7754,7 +7754,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-21"
     },
     {
       "id": "mistral-medium-35-card",
@@ -7763,7 +7763,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-21"
     },
     {
       "id": "mistral-small-4-card",
@@ -7772,7 +7772,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-21"
     },
     {
       "id": "mistral-large-3-card",
@@ -7781,7 +7781,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-21"
     },
     {
       "id": "mistral-search-toolkit",
@@ -7790,7 +7790,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-21"
     },
     {
       "id": "modal-official",
@@ -8838,16 +8838,16 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-08"
+      "last_checked": "2026-06-21"
     },
     {
       "id": "poe-api-docs",
-      "label": "Poe API docs",
-      "url": "https://poe.com/api_docs",
+      "label": "Poe Creator Platform API overview",
+      "url": "https://creator.poe.com/api-reference/overview",
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-08"
+      "last_checked": "2026-06-21"
     },
     {
       "id": "poe-creator-docs",
@@ -8856,7 +8856,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-08"
+      "last_checked": "2026-06-21"
     },
     {
       "id": "poe-product",
@@ -8865,7 +8865,16 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-08"
+      "last_checked": "2026-06-21"
+    },
+    {
+      "id": "poe-download",
+      "label": "Poe download page",
+      "url": "https://poe.com/download",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-21"
     },
     {
       "id": "poe-subscription-plans",
@@ -8874,7 +8883,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-08"
+      "last_checked": "2026-06-21"
     },
     {
       "id": "poe-purchases-faq",
@@ -8883,7 +8892,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-08"
+      "last_checked": "2026-06-21"
     },
     {
       "id": "postman-ai-engineer",
@@ -11967,7 +11976,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-21"
     },
     {
       "id": "mistral-security-advisories",
@@ -11976,7 +11985,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-21"
     },
     {
       "id": "morphic-github",

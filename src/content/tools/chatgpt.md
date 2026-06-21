@@ -468,8 +468,8 @@ The score is highest overall because GPT-5.5, Codex, image generation, workspace
 |---|---|
 | Long-form reasoning and writing | [ChatGPT vs Claude](/compare/chatgpt-vs-claude/) |
 | Google Workspace workflows | [ChatGPT vs Gemini](/compare/chatgpt-vs-gemini/) |
-| Citation-first research | [ChatGPT vs Perplexity](/compare/perplexity-vs-chatgpt/) |
-| Coding workflow choice | [ChatGPT vs Cursor](/compare/chatgpt-vs-cursor/) |
+| Citation-first research | ChatGPT vs Perplexity |
+| Coding workflow choice | ChatGPT vs Cursor |
 | Video generation | Veo, Runway, Kling, Luma, or Pika |
 
 ## FAQ

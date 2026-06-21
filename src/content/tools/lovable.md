@@ -161,7 +161,7 @@ The best first paid plan for most serious builders is **Pro 100 credits at $25/m
 - **Lovable Cloud is now central to the buyer story:** Current docs describe Lovable Cloud as the built-in full-stack hosting/backend path, while the quick start also keeps native Supabase integration available for backend capabilities.
 - **April 28, 2026:** [Lovable launched mobile apps for iOS and Android](/news/2026-04-28-lovable-mobile-app-ios-android/), which matters for founders capturing and iterating on product ideas away from a desktop setup.
 - **April 17, 2026:** [Anthropic launched Claude Design](/news/2026-04-17-anthropic-launches-claude-design/), giving design-to-code buyers another path to compare against Lovable's prompt-to-app workflow.
-- **App-builder competition is tightening:** [Bolt.new](/tools/bolt/) is stronger for browser-native coding sessions, while [v0](/tools/v0/) is stronger for Vercel-native React, Next.js, Tailwind, and shadcn workflows. See [Lovable vs Bolt.new vs v0](/compare/lovable-vs-bolt-vs-v0/).
+- **App-builder competition is tightening:** [Bolt.new](/tools/bolt/) is stronger for browser-native coding sessions, while [v0](/tools/v0/) is stronger for Vercel-native React, Next.js, Tailwind, and shadcn workflows. Rebuild this coverage as focused two-tool comparisons when the facts are refreshed.
 
 ## Key Facts
 
@@ -294,8 +294,7 @@ Lovable is broader for MVPs. v0 is stronger when the buyer specifically wants Ve
 ## Related
 
 - **Category:** [AI Design](/categories/ai-design/)
-- **Main comparison:** [Lovable vs Bolt.new vs v0](/compare/lovable-vs-bolt-vs-v0/)
-- **More comparisons:** [ChatGPT vs Lovable](/compare/chatgpt-vs-lovable/) · [Cursor vs Lovable](/compare/cursor-vs-lovable/) · [Figma AI vs Lovable](/compare/figma-vs-lovable/) · [Google Stitch vs Lovable](/compare/google-stitch-vs-lovable/)
+- **Category:** [AI Design](/categories/ai-design/)
 - **Alternatives:** [Bolt.new](/tools/bolt/) · [v0](/tools/v0/) · [Replit Agent](/tools/replit-agent/) · [Cursor](/tools/cursor/) · [Claude](/tools/claude/)
 
 Commercial note: AiPedia is using the official Lovable URL for reader CTAs. Editorial ratings and recommendations do not depend on commercial relationships.

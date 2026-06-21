@@ -277,7 +277,7 @@ If the trial only feels impressive but does not change the week, do not subscrib
 | "Can we only fix email triage?" | [SaneBox](/tools/sanebox/) | Cheaper and narrower for inbox filtering |
 | "Can we only record meeting notes?" | [Fathom](/tools/fathom/) or [MeetGeek](/tools/meetgeek/) | Better when meeting capture is the only job |
 
-Read the full comparison: [Lindy vs Zapier vs n8n](/compare/lindy-vs-zapier-vs-n8n/).
+Read the full comparison: Lindy vs Zapier vs n8n.
 
 ## Who Should Buy Lindy
 
@@ -357,5 +357,5 @@ Yes. AiPedia uses a Lindy PartnerStack affiliate link. The disclosure is shown b
 ## Related
 
 - **Guide:** [Best AI personal assistant for work](/guides/best-ai-personal-assistant-for-work/)
-- **Compare:** [Lindy vs Zapier vs n8n](/compare/lindy-vs-zapier-vs-n8n/)
+- **Compare:** Lindy vs Zapier vs n8n
 - **Category:** [AI Automation & Agents](/categories/ai-automation/)

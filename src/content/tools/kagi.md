@@ -243,4 +243,3 @@ No behavioral tracking, no ad profiles, no data sold to third parties. IP is not
 ## Related
 
 - **Category:** [AI Search](/categories/ai-search/)
-- **Comparisons:** [ChatGPT vs Kagi](/compare/chatgpt-vs-kagi/) | [Exa AI vs Kagi](/compare/exa-vs-kagi/) | [Kagi vs Perplexity](/compare/kagi-vs-perplexity/) | [Kagi vs You.com](/compare/kagi-vs-you-com/)

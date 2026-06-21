@@ -244,4 +244,3 @@ Yes, via Organization or Developer access. Scite's pricing page says API and MCP
 ## Related
 
 - **Category:** [AI Research](/categories/ai-research/)
-- **Comparisons:** [nanochat vs Scite](/compare/nanochat-vs-scite/) | [Scite vs Consensus](/compare/consensus-vs-scite/) | [Scite vs Semantic Scholar](/compare/scite-vs-semantic-scholar/) | [Elicit vs Scite](/compare/elicit-vs-scite/) | [Connected Papers vs Scite](/compare/connected-papers-vs-scite/) | [ChatGPT vs Scite](/compare/chatgpt-vs-scite/)

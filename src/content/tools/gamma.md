@@ -220,4 +220,4 @@ Yes. Gamma's help center says its affiliate program is managed through PartnerSt
 ## Related
 
 - **Category:** [AI Presentation Tools](/categories/ai-presentation/)
-- **Comparisons:** [Beautiful.ai vs Gamma](/compare/beautiful-ai-vs-gamma/) · [Decktopus AI vs Gamma](/compare/decktopus-vs-gamma/) · [Gamma vs Pitch](/compare/gamma-vs-pitch/) · [Gamma vs Presentations.AI](/compare/gamma-vs-presentations-ai/) · [ChatGPT vs Gamma](/compare/chatgpt-vs-gamma/)
+- **Comparisons:** [Beautiful.ai vs Gamma](/compare/beautiful-ai-vs-gamma/) · [Decktopus AI vs Gamma](/compare/decktopus-vs-gamma/) · [Gamma vs Pitch](/compare/gamma-vs-pitch/) · [Gamma vs Presentations.AI](/compare/gamma-vs-presentations-ai/)

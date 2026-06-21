@@ -369,6 +369,6 @@ Creative Cloud and Firefly bundles are moving targets. The current Firefly plan 
 ## Related
 
 - **Category:** [AI Image Generation](/categories/ai-image/)
-- **Comparisons:** [Adobe Firefly vs Midjourney](/compare/adobe-firefly-vs-midjourney/) · [Adobe Firefly vs Flux](/compare/adobe-firefly-vs-flux/) · [Adobe Firefly vs Ideogram](/compare/adobe-firefly-vs-ideogram/) · [Adobe Firefly vs Canva AI](/compare/adobe-firefly-vs-canva/)
+- **Comparisons:** [Adobe Firefly vs Midjourney](/compare/adobe-firefly-vs-midjourney/) · [Adobe Firefly vs Ideogram](/compare/adobe-firefly-vs-ideogram/)
 
 *Some links on this page are affiliate links. Commissions do not influence ratings or recommendations.*

@@ -36,17 +36,17 @@ const argumentIssues = collectArgumentIssues();
 // Known-good floors. Do not hand-edit unless you've intentionally pruned
 // content. Re-run `npm run guard:baseline` if you added content.
 const FLOORS = {
-  tools:       100,
-  comparisons: 200,
-  'use-cases':  50,
-  categories:   10,
-  trends:        3,
-  companies:     3,
-  dead:          3,
-  glossary:      1,
-  news:          3,
-  workflows:     3,
-  reports:       1,
+  tools:        260,
+  comparisons:   96,
+  'use-cases':    105,
+  categories:    10,
+  trends:         8,
+  companies:     25,
+  dead:           3,
+  glossary:       1,
+  news:         394,
+  workflows:      9,
+  reports:        1,
 };
 
 function usage() {

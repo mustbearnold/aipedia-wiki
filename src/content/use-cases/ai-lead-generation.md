@@ -213,4 +213,3 @@ It should not. AI can score, enrich, route, summarize, and draft, but humans sho
 
 - **Tools:** [Apollo](/tools/apollo/) · [Clay](/tools/clay/) · [Amplemarket](/tools/amplemarket/) · [n8n](/tools/n8n/) · [Instantly](/tools/instantly/)
 - **Guides:** [Best AI tools for sales teams](/guides/best-ai-tools-for-sales-teams/) · [Best AI for cold email](/guides/best-ai-for-cold-email/)
-- **Comparisons:** [Apollo vs Clay](/compare/apollo-vs-clay/) · [Apollo vs Instantly](/compare/apollo-vs-instantly/) · [Clay vs Instantly](/compare/clay-vs-instantly/)

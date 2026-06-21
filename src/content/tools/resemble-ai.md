@@ -267,4 +267,4 @@ The current production voice model behind Generate. Handles streaming TTS, voice
 ## Related
 
 - **Category:** [AI Voice / TTS](/categories/ai-voice/)
-- **Comparisons:** [Cartesia vs Resemble AI](/compare/cartesia-vs-resemble-ai/), [ElevenLabs vs Resemble AI](/compare/elevenlabs-vs-resemble-ai/), [Fish Audio vs Resemble AI](/compare/fish-audio-vs-resemble-ai/), [Resemble AI vs Voxtral](/compare/resemble-ai-vs-voxtral/)
+- **Comparisons:** [Cartesia vs Resemble AI](/compare/cartesia-vs-resemble-ai/), [ElevenLabs vs Resemble AI](/compare/elevenlabs-vs-resemble-ai/), [Fish Audio vs Resemble AI](/compare/fish-audio-vs-resemble-ai/)

@@ -273,7 +273,7 @@ Essentials is the small-team test tier. Business is the more realistic team plan
 ## Related
 
 - **Category:** [AI SEO](/categories/ai-seo/) and [AI Writing](/categories/ai-writing/)
-- **Compare next:** [Ahrefs vs Surfer SEO](/compare/ahrefs-vs-surfer-seo/)
+- **Compare next:** Ahrefs vs Surfer SEO
 - **Alternatives:** [NeuronWriter](/tools/neuronwriter/), [Frase](/tools/frase/), [Ahrefs](/tools/ahrefs/), [Semrush](/tools/semrush/), [MarketMuse](/tools/marketmuse/)
 
 ## Sources

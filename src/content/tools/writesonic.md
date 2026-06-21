@@ -260,4 +260,3 @@ Writesonic wins on AI search visibility tracking and the Action Center. [ChatGPT
 ## Related
 
 - **Category:** [AI Writing](/categories/ai-writing/)
-- **Comparisons:** [ChatGPT vs Writesonic](/compare/chatgpt-vs-writesonic/)

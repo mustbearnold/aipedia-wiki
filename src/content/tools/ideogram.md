@@ -258,4 +258,4 @@ Paid plans (Plus, Pro, Team, and legacy Basic for grandfathered users) include c
 ## Related
 
 - **Category:** [AI Image Generation](/categories/ai-image/)
-- **Comparisons:** [Ideogram vs Midjourney](/compare/ideogram-vs-midjourney/) · [Flux vs Ideogram](/compare/flux-vs-ideogram/) · [Adobe Firefly vs Ideogram](/compare/adobe-firefly-vs-ideogram/) · [Ideogram vs Stable Diffusion](/compare/ideogram-vs-stable-diffusion/)
+- **Comparisons:** [Ideogram vs Midjourney](/compare/ideogram-vs-midjourney/) · [Adobe Firefly vs Ideogram](/compare/adobe-firefly-vs-ideogram/) · [Ideogram vs Stable Diffusion](/compare/ideogram-vs-stable-diffusion/)

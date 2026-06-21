@@ -272,4 +272,4 @@ Yes. Enterprise customers can configure zero-retention deployments, and the plat
 ## Related
 
 - **Category:** [AI Search](/categories/ai-search/)
-- **Comparisons:** [Exa AI vs You.com](/compare/exa-vs-you-com/) | [Kagi vs You.com](/compare/kagi-vs-you-com/) | [Perplexity vs You.com](/compare/perplexity-vs-you-com/)
+- **Comparisons:** [Exa AI vs You.com](/compare/exa-vs-you-com/)

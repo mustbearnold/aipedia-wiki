@@ -226,4 +226,3 @@ For active knowledge-base builders, yes. Passive highlighting rarely survives pa
 ## Related
 
 - **Category:** [AI Notes](/categories/ai-notes/)
-- **Comparisons:** [Capacities vs Readwise](/compare/capacities-vs-readwise/) · [NotebookLM vs Readwise](/compare/notebooklm-vs-readwise/) · [Obsidian vs Readwise](/compare/obsidian-vs-readwise/) · [Fireflies vs Readwise](/compare/fireflies-vs-readwise/) · [Otter.ai vs Readwise](/compare/otter-ai-vs-readwise/)
