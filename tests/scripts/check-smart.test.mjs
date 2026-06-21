@@ -354,6 +354,24 @@ test('operator surface contract names verification surfaces explicitly', () => {
   }
 });
 
+test('operator surface contract declares route QA smoke replacement rules', () => {
+  const routeQa = operatorSurfaces.verification.routeQa;
+  assert.ok(routeQa, 'missing route QA contract');
+  assert.deepEqual(
+    routeQa.exactPathRoutes.map((route) => route.path),
+    ['src/pages/categories/index.astro', 'src/pages/compare/index.astro', 'src/pages/tools/index.astro'],
+  );
+  assert.deepEqual(
+    routeQa.exactPathRoutes.map((route) => route.route),
+    ['/categories/', '/compare/', '/tools/'],
+  );
+  assert.equal(routeQa.broadVisualSmokeReplacement.id, 'content-route-qa-replaces-broad-smoke');
+  assert.ok(routeQa.broadVisualSmokeReplacement.description.includes('Exact route QA may replace broad smoke:visual'));
+  assert.ok(routeQa.broadVisualSmokeReplacement.match.prefixes.includes('.agent/'));
+  assert.ok(routeQa.broadVisualSmokeReplacement.match.files.includes('PAGE_REFRESH_LEDGER.md'));
+  assert.ok(routeQa.broadVisualSmokeReplacement.match.regexes.includes('^src/content/(?:categories|comparisons|tools)/[^/]+\\.md$'));
+});
+
 test('operator surface contract names the guard challenge surface explicitly', () => {
   const surfaceIds = operatorSurfaces.surfaces.map((surface) => surface.id);
 

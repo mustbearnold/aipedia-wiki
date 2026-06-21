@@ -19,7 +19,7 @@ For the plain-English project state, read `.agent/CURRENT_STATUS.md` first. For 
 - Major loop cycles should write `.agent/loop-runs/` receipts with `npm run loop:record`.
 - The first six decision content loop cycles, `canva-vs-claude`, `claude-vs-replit-agent`, `cursor-vs-deepseek`, `cursor-vs-grok`, `deepseek-vs-github-copilot`, and `deepseek-vs-replit-agent`, are complete. `npm run loop:next -- --json` now selects `descript-vs-grok`.
 - Loop briefs now require related-surface discovery, source registry inspection, stale-backlog warnings, and rendered route QA at 360, 390, 430, 768, 1024, and 1366 px.
-- Latest loop-performance fixes: `AIPEDIA_FAST_BUILD=1` is scoped to build and route-QA commands so unit-test fixtures do not inherit fast-build mode, `check-smart --run` executes `build:fast` before browser-output checks while printing per-command durations, Playwright browser checks force fresh `dist-fast/client` output after fast builds, changed rendered content routes run through one combined route QA command, `loop:verify` no longer runs duplicate fallback route QA when smart verification already covers the requested route, and exact route QA replaces broad `smoke:visual` for content-only route cycles.
+- Latest loop-performance fixes: `AIPEDIA_FAST_BUILD=1` is scoped to build and route-QA commands so unit-test fixtures do not inherit fast-build mode, `check-smart --run` executes `build:fast` before browser-output checks while printing per-command durations, Playwright browser checks force fresh `dist-fast/client` output after fast builds, changed rendered content routes run through one combined route QA command, `loop:verify` no longer runs duplicate fallback route QA when smart verification already covers the requested route, exact route QA replaces broad `smoke:visual` for content-only route cycles, and the replacement rule now lives in `src/data/operator-surfaces.json`.
 - The main active ongoing lane is the oldest-first AI tools wiki refresh.
 - The Phase 3 parallel surface and June 18-20 news backfill plan is written but not executed on `master`.
 
@@ -136,7 +136,7 @@ Create a high-intent, source-backed comparison page for `deepseek-vs-replit-agen
 - Added the `deepseek-v4-release-note` source registry row and clarified the buyer split: DeepSeek is the low-cost model/API/open-weight backend lane, while Replit Agent is the browser-native prompt-to-live-app workspace.
 - Loop verification passed, including exact route QA for `/categories/`, `/categories/ai-coding/`, `/compare/`, `/compare/deepseek-vs-replit-agent/`, `/tools/`, `/tools/deepseek/`, and `/tools/replit-agent/` at 360, 390, 430, 768, 1024, and 1366 px.
 - Loop performance review: final verifier passed in about 193.5 seconds, with `check-smart --run` at 190.4 seconds, `build:fast` at 126.2 seconds, and exact combined route QA for seven routes at 43.1 seconds. This is faster than the previous 251-second cycle because broad `smoke:visual` was replaced by exact route QA for the content-only route set.
-- Remaining loop improvement: move the content-only broad-smoke replacement rule into `src/data/operator-surfaces.json` or another contract-level surface model, rather than keeping it only as a script allowlist.
+- Remaining loop improvement: run the next full cycle, then compare the timing split again. The biggest remaining wall-time target is likely `build:fast`, not route QA.
 
 ### Verification
 

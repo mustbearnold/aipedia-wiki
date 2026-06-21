@@ -30,6 +30,16 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 
 ## Entries
 
+### 2026-06-21: Operator Surface Route QA Contract
+
+- Status: Complete.
+- Commit: this commit.
+- Branch: `master`.
+- Changed: Moved exact parent-hub route QA targets and the content-only broad visual smoke replacement rule into `src/data/operator-surfaces.json`; updated `scripts/check-smart.mjs` to consume the contract instead of hardcoded route and path allowlists; added focused tests proving the contract exists and still preserves broad visual smoke when tooling or runtime paths are part of the change.
+- Verification: `node --test tests/scripts/check-smart.test.mjs tests/scripts/loop-hardening.test.mjs tests/scripts/playwright-config.test.mjs`; `node scripts/guard-em-dashes.mjs`; `git diff --check`; `node scripts/check-smart.mjs --json --path src/content/comparisons/descript-vs-grok.md --path src/pages/compare/index.astro --path src/data/operator-surfaces.json`.
+- Residual risks: The next performance bottleneck appears to be `build:fast`, which took 126.2 seconds in the latest full cycle. Recheck after the `descript-vs-grok` cycle before optimizing build output or Pagefind.
+- Next: Run `descript-vs-grok` as the next Decision Content Flywheel cluster and compare timing again.
+
 ### 2026-06-20: DeepSeek Vs Replit Agent Loop Cycle
 
 - Status: Complete.

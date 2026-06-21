@@ -83,13 +83,16 @@ function matchesRegex(value, regexes = []) {
   return regexes.some((regex) => new RegExp(regex).test(value));
 }
 
-function surfaceMatchesPath(surface, path) {
-  const match = surface.match || {};
+function matchSpecMatchesPath(match = {}, path) {
   return (
     matchesAny(path, match.files) ||
     startsWithAny(path, match.prefixes) ||
     matchesRegex(path, match.regexes)
   );
+}
+
+function surfaceMatchesPath(surface, path) {
+  return matchSpecMatchesPath(surface.match || {}, path);
 }
 
 function matchingSurfaces(paths) {
@@ -187,8 +190,9 @@ function surfaceSummariesForSurfaces(surfaces) {
 
 function routeQaRoutesForPaths(paths) {
   const routes = [];
+  const exactPathRoutes = OPERATOR_SURFACE_CONTRACT.verification.routeQa?.exactPathRoutes || [];
   for (const path of paths.map(normalizePath)) {
-    const exactRoute = EXACT_ROUTE_QA_PATHS.get(path);
+    const exactRoute = exactPathRoutes.find((route) => normalizePath(route.path || '') === path);
     if (exactRoute) {
       routes.push({ route: exactRoute.route, command: 'npm run qa:route', focus: exactRoute.focus });
       continue;
@@ -214,30 +218,12 @@ function routeQaRoutesForPaths(paths) {
   return routes;
 }
 
-const EXACT_ROUTE_QA_PATHS = new Map([
-  ['src/pages/categories/index.astro', { route: '/categories/', focus: 'changed category hub route' }],
-  ['src/pages/compare/index.astro', { route: '/compare/', focus: 'changed comparison hub route' }],
-  ['src/pages/tools/index.astro', { route: '/tools/', focus: 'changed tools hub route' }],
-]);
-
-const ROUTE_QA_REPLACES_BROAD_SMOKE_PATTERNS = [
-  /^\.agent\//,
-  /^docs\//,
-  /^src\/content\/(?:categories|comparisons|tools)\/[^/]+\.md$/,
-  /^src\/data\/(?:coverage-backlog|source-registry)\.json$/,
-  /^src\/pages\/(?:categories|compare|tools)\/index\.astro$/,
-  /^src\/pages\/llms(?:-full)?\.txt\.ts$/,
-  /^PAGE_REFRESH_LEDGER\.md$/,
-  /^AGENTS\.md$/,
-  /^README\.md$/,
-];
-
 function canReplaceBroadVisualSmoke(paths) {
   const normalizedPaths = paths.map(normalizePath).filter(Boolean);
+  const replacementRule = OPERATOR_SURFACE_CONTRACT.verification.routeQa?.broadVisualSmokeReplacement;
+  if (!replacementRule) return false;
   if (!routeQaRoutesForPaths(normalizedPaths).length) return false;
-  return normalizedPaths.every((path) =>
-    ROUTE_QA_REPLACES_BROAD_SMOKE_PATTERNS.some((pattern) => pattern.test(path)),
-  );
+  return normalizedPaths.every((path) => matchSpecMatchesPath(replacementRule.match || {}, path));
 }
 
 function smokeRoutesForSurfaces(surfaces, paths = []) {

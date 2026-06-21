@@ -294,6 +294,39 @@
   ],
   "verification": {
     "baseCommands": ["git diff --check"],
+    "routeQa": {
+      "exactPathRoutes": [
+        {
+          "path": "src/pages/categories/index.astro",
+          "route": "/categories/",
+          "focus": "changed category hub route"
+        },
+        {
+          "path": "src/pages/compare/index.astro",
+          "route": "/compare/",
+          "focus": "changed comparison hub route"
+        },
+        {
+          "path": "src/pages/tools/index.astro",
+          "route": "/tools/",
+          "focus": "changed tools hub route"
+        }
+      ],
+      "broadVisualSmokeReplacement": {
+        "id": "content-route-qa-replaces-broad-smoke",
+        "description": "Exact route QA may replace broad smoke:visual only when every changed path is editorial content, agent documentation, source or coverage registry data, page refresh ledger data, LLM text surfaces, or the parent hub files listed here and at least one exact route QA target is present. Runtime layout, component, style, config, script, test, dependency, asset, and API changes still keep broad visual smoke when selected by their surfaces.",
+        "match": {
+          "prefixes": [".agent/", "docs/"],
+          "files": ["PAGE_REFRESH_LEDGER.md", "AGENTS.md", "README.md"],
+          "regexes": [
+            "^src/content/(?:categories|comparisons|tools)/[^/]+\\.md$",
+            "^src/data/(?:coverage-backlog|source-registry)\\.json$",
+            "^src/pages/(?:categories|compare|tools)/index\\.astro$",
+            "^src/pages/llms(?:-full)?\\.txt\\.ts$"
+          ]
+        }
+      }
+    },
     "commandGroups": [
       {
         "checks": ["guard-challenge"],
