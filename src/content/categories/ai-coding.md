@@ -27,7 +27,9 @@ decision_picks:
     plan: Pro or Ultra depending on usage volume
     source_refs:
       - cursor-pricing
-    verified_at: 2026-06-15
+      - cursor-changelog
+      - cursor-teams-pricing-june-2026
+    verified_at: 2026-06-20
     confidence: high
   - tool: github-copilot
     label: Best GitHub-native enterprise default
@@ -54,6 +56,8 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 **Use [Cursor](/tools/cursor/) when a developer wants a full AI-native IDE.** The June 15 recheck keeps it the best default for daily coding when the buyer wants Composer 2.5, repo-aware chat, multi-file edits, the Agents Window, Cloud Agents, CLI/SDK automation, Design Mode, Bugbot review, and a VS Code-like surface built around AI rather than an extension. Cursor's May 22 Gartner enterprise-coding-agent recognition is a procurement signal, but teams should still test it on their own repositories against Codex, Claude Code, and GitHub Copilot.
 
 **June 15 Cursor update:** Cursor now needs a sharper buyer note around usage-sensitive agent economics and enterprise controls. The live pricing page proves Hobby free, Individual from $20/month, Teams at $40/user/month, Enterprise custom, recommends Pro+ for daily agent users plus Ultra for agent power users, and says on-demand usage can continue after included usage is consumed and be billed in arrears. The June 3-10 official updates added Enterprise organizations, SDK custom tools and auto-review, Design Mode/context usage reporting, and a faster Composer 2.5-powered Bugbot with `/review` before push. Treat Cursor as an editor-native agent platform, not just a Copilot replacement.
+
+**June 20 Cursor vs DeepSeek update:** [Cursor vs DeepSeek](/compare/cursor-vs-deepseek/) now separates the IDE/workbench purchase from the model/API purchase. Cursor remains the better daily AI coding workspace after current pricing, Teams Premium, Automations, cloud subagents, and Bugbot checks. DeepSeek belongs in the coding-model backend lane: V4-Flash and V4-Pro have 1M context, low API rates, OpenAI/Anthropic-compatible endpoints, and V4 open-weight releases, but do not replace an IDE, PR-review workflow, team admin, or compliance review.
 
 **June 5 Cursor-cluster update:** the oldest live Cursor comparison rows now separate [Cursor vs Devin](/compare/cursor-vs-devin/), [Cursor vs Gemini](/compare/cursor-vs-gemini/), [Cursor vs GitHub Copilot](/compare/cursor-vs-github-copilot/), [Cursor vs Lovable](/compare/cursor-vs-lovable/), [Cursor vs Tabnine](/compare/cursor-vs-tabnine/), [Cursor vs v0](/compare/cursor-vs-v0/), [Cursor vs Val Town](/compare/cursor-vs-val-town/), and [Cursor vs Windsurf](/compare/cursor-vs-windsurf/) against current primary sources. The buyer split is now clearer: Cursor is the hands-on AI-native IDE; Devin is asynchronous task delegation; Gemini is the broader Google AI ecosystem; Copilot is GitHub-native AI Credits/governance; Lovable and v0 are app-builder lanes; Tabnine is privacy-first enterprise code assistance; Val Town is an instant TypeScript runtime; and Windsurf is now best understood as Devin Desktop inside Cognition's stack.
 
@@ -142,6 +146,7 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 | Coding model backend evaluation | [GLM](/tools/glm/) | GLM-5.1 open weights, OpenAI-compatible API examples, MCP/tool support, and long context | Verify endpoint behavior, region, compliance, and output-heavy costs |
 | MiniMax M3 backend evaluation | [MiniMax](/tools/minimax/) | M3 coding/agentic positioning, native multimodality, low standard token price, and MiniMax Code path | Verify 512K vs 1M context access, Priority tier access, data residency, and independent benchmark fit |
 | xAI coding-agent and API evaluation | [Grok](/tools/grok/) | Grok Build CLI/TUI, headless scripting, custom models, skills/plugins, ACP integration, and Grok Build 0.1 API | Newer coding lane; benchmark permissions, sandboxing, ZDR/team settings, account limits, and repo-quality output before rollout |
+| Low-cost coding-model backend | [DeepSeek](/tools/deepseek/) | V4-Flash and V4-Pro provide low-cost API pricing, 1M context, OpenAI/Anthropic-compatible endpoints, and open-weight evaluation paths | Not an IDE or PR-review product; verify endpoint deprecation, hosted-data posture, license/hardware fit, and regulatory risk before production |
 | Legacy Yi-Coder or frozen-model baseline | [Yi](/tools/yi/) | Yi-Coder/Yi-1.5 remain available through public 01.AI-linked model paths | Not a current coding-agent default; confirm license, support, and whether WorldWise/WanZhi is the actual 01.AI product path |
 | Enterprise code/context search | [Glean](/tools/glean/) | Permission-aware work search and MCP/IDE integrations for developer tools | Sales-led pricing and connector/security review are required |
 | Browser app building for non-devs | [Replit Agent](/tools/replit-agent/) | Useful when the buyer wants prompt, plan, build, test, database/auth, publish, skills/custom instructions, and iterate in one browser workspace | Effort-based credits, Plan Mode billing, provider pass-through costs, App Testing scope, Turbo cost, lock-in, security, and maintenance need review |
@@ -229,13 +234,17 @@ Do not publish stale model-version claims. Coding tools route models and change 
 - [xAI Grok Build docs](https://docs.x.ai/build/overview) (verified 2026-06-15)
 - [xAI Grok Build enterprise docs](https://docs.x.ai/build/enterprise) (verified 2026-06-15)
 - [xAI model docs](https://docs.x.ai/developers/models) (verified 2026-06-15)
-- [Cursor pricing](https://cursor.com/pricing) (verified 2026-06-15)
-- [Cursor Data Use and Privacy Overview](https://cursor.com/en-US/data-use) (verified 2026-06-15)
-- [Cursor Enterprise](https://cursor.com/enterprise) (verified 2026-06-15)
-- [Cursor CLI](https://cursor.com/cli) (verified 2026-06-15)
-- [Cursor Composer 2.5 changelog](https://cursor.com/changelog/composer-2-5) (verified 2026-06-15)
+- [Cursor pricing](https://cursor.com/pricing) (verified 2026-06-20)
+- [Cursor Teams pricing update](https://cursor.com/blog/teams-pricing-june-2026) (verified 2026-06-20)
+- [Cursor Data Use and Privacy Overview](https://cursor.com/data-use) (verified 2026-06-20)
+- [Cursor Enterprise](https://cursor.com/enterprise) (verified 2026-06-20)
+- [Cursor CLI](https://cursor.com/cli) (verified 2026-06-20)
+- [Cursor Composer 2.5 changelog](https://cursor.com/changelog/composer-2-5) (verified 2026-06-20)
 - [Cursor Gartner enterprise-coding-agent recognition](https://cursor.com/blog/cursor-leads-gartner-mq-2026) (verified 2026-05-26)
-- [Cursor changelog](https://cursor.com/changelog) (verified 2026-06-15)
+- [Cursor changelog](https://cursor.com/changelog) (verified 2026-06-20)
+- [DeepSeek API pricing docs](https://api-docs.deepseek.com/quick_start/pricing) (verified 2026-06-20)
+- [DeepSeek V4 release note](https://api-docs.deepseek.com/news/news260424) (verified 2026-06-20)
+- [DeepSeek Hugging Face organization](https://huggingface.co/deepseek-ai) (verified 2026-06-20)
 - [Claude Code docs](https://code.claude.com/docs) (verified 2026-06-15)
 - [Claude Code cost management](https://code.claude.com/docs/en/costs) (verified 2026-06-15)
 - [Claude Agent SDK credit help](https://support.claude.com/en/articles/15036540-use-the-claude-agent-sdk-with-your-claude-plan) (verified 2026-06-20)

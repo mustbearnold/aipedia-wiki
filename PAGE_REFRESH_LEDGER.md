@@ -1,7 +1,7 @@
 # AiPedia Page Refresh Ledger
 
 Ledger updated through: 2026-06-21
-Tracked public pages and crawl surfaces: 783
+Tracked public pages and crawl surfaces: 784
 
 Hard rule: every time a tracked website page is edited, refreshed, materially re-ranked, or has volatile facts re-verified, update that page row in this file on the same change. If a child page update affects a parent hub, archive, internal-link block, sitemap, or LLM surface, update those affected rows too.
 
@@ -398,7 +398,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-12 | /tools/decktopus/ | Tool | Yes | frontmatter | src/content/tools/decktopus.md |
 | 2026-06-12 | /tools/deepgram/ | Tool | Yes | frontmatter | src/content/tools/deepgram.md |
 | 2026-06-12 | /tools/deepl/ | Tool | Yes | frontmatter | src/content/tools/deepl.md |
-| 2026-06-12 | /tools/deepseek/ | Tool | Yes | frontmatter | src/content/tools/deepseek.md |
 | 2026-06-12 | /tools/descript/ | Tool | Yes | frontmatter | src/content/tools/descript.md |
 | 2026-06-12 | /tools/devin/ | Tool | Yes | frontmatter | src/content/tools/devin.md |
 | 2026-06-12 | /tools/dext/ | Tool | Yes | frontmatter | src/content/tools/dext.md |
@@ -630,7 +629,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-15 | /tools/codex/ | Tool | Yes | frontmatter | src/content/tools/codex.md |
 | 2026-06-15 | /tools/cody/ | Tool | Yes | frontmatter | src/content/tools/cody.md |
 | 2026-06-15 | /tools/comet/ | Tool | Yes | frontmatter | src/content/tools/comet.md |
-| 2026-06-15 | /tools/cursor/ | Tool | Yes | frontmatter | src/content/tools/cursor.md |
 | 2026-06-15 | /tools/d-id/ | Tool | Yes | frontmatter | src/content/tools/d-id.md |
 | 2026-06-15 | /tools/gemini/ | Tool | Yes | frontmatter | src/content/tools/gemini.md |
 | 2026-06-15 | /tools/github-copilot/ | Tool | Yes | frontmatter | src/content/tools/github-copilot.md |
@@ -762,35 +760,38 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-20 | / | Static page | Yes | git | src/pages/index.astro |
 | 2026-06-20 | /about/ | Static page | Yes | git | src/pages/about/index.astro |
 | 2026-06-20 | /answers/ | Static page | Yes | git | src/pages/answers/index.astro |
-| 2026-06-20 | /categories/ | Static page | Yes | working tree | src/pages/categories/index.astro |
-| 2026-06-20 | /categories/ai-coding/ | Category | Yes | working tree | src/content/categories/ai-coding.md |
+| 2026-06-20 | /categories/ai-coding/ | Category | Yes | frontmatter | src/content/categories/ai-coding.md |
 | 2026-06-20 | /categories/ai-design/ | Category | Yes | frontmatter | src/content/categories/ai-design.md |
 | 2026-06-20 | /categories/ai-seo/ | Category | Yes | frontmatter | src/content/categories/ai-seo.md |
 | 2026-06-20 | /companies/anthropic/ | Company | Yes | frontmatter | src/content/companies/anthropic.md |
-| 2026-06-20 | /compare/ | Static page | Yes | working tree | src/pages/compare/index.astro |
 | 2026-06-20 | /compare/canva-vs-claude/ | Comparison | Yes | frontmatter | src/content/comparisons/canva-vs-claude.md |
 | 2026-06-20 | /compare/claude-vs-perplexity/ | Comparison | Yes | frontmatter | src/content/comparisons/claude-vs-perplexity.md |
-| 2026-06-20 | /compare/claude-vs-replit-agent/ | Comparison | Yes | working tree | src/content/comparisons/claude-vs-replit-agent.md |
+| 2026-06-20 | /compare/claude-vs-replit-agent/ | Comparison | Yes | frontmatter | src/content/comparisons/claude-vs-replit-agent.md |
+| 2026-06-20 | /compare/cursor-vs-deepseek/ | Comparison | Yes | frontmatter | src/content/comparisons/cursor-vs-deepseek.md |
 | 2026-06-20 | /demo-godtier/ | Static page | Yes | git | src/pages/demo-godtier.astro |
 | 2026-06-20 | /explore/ | Static page | Yes | git | src/pages/explore/index.astro |
 | 2026-06-20 | /glossary/ | Static page | Yes | git | src/pages/glossary/index.astro |
 | 2026-06-20 | /guides/best-ai-tools-for-developers/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-tools-for-developers.md |
 | 2026-06-20 | /guides/github-copilot-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/github-copilot-alternatives.md |
-| 2026-06-20 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
-| 2026-06-20 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
 | 2026-06-20 | /media-kit/ | Static page | Yes | git | src/pages/media-kit.astro |
 | 2026-06-20 | /search/ | Static page | No | git | src/pages/search.astro |
 | 2026-06-20 | /sitemap-index.xml | Crawl surface | No | git | astro.config.mjs |
 | 2026-06-20 | /stack-builder/ | Static page | Yes | git | src/pages/stack-builder/index.astro |
-| 2026-06-20 | /tools/ | Static page | Yes | working tree | src/pages/tools/index.astro |
 | 2026-06-20 | /tools/canva/ | Tool | Yes | frontmatter | src/content/tools/canva.md |
 | 2026-06-20 | /tools/claude-code/ | Tool | Yes | frontmatter | src/content/tools/claude-code.md |
-| 2026-06-20 | /tools/claude/ | Tool | Yes | working tree | src/content/tools/claude.md |
+| 2026-06-20 | /tools/claude/ | Tool | Yes | frontmatter | src/content/tools/claude.md |
 | 2026-06-20 | /tools/clearscope/ | Tool | Yes | frontmatter | src/content/tools/clearscope.md |
+| 2026-06-20 | /tools/cursor/ | Tool | Yes | frontmatter | src/content/tools/cursor.md |
+| 2026-06-20 | /tools/deepseek/ | Tool | Yes | frontmatter | src/content/tools/deepseek.md |
 | 2026-06-20 | /tools/meetgeek/ | Tool | Yes | frontmatter | src/content/tools/meetgeek.md |
-| 2026-06-20 | /tools/replit-agent/ | Tool | Yes | working tree | src/content/tools/replit-agent.md |
+| 2026-06-20 | /tools/replit-agent/ | Tool | Yes | frontmatter | src/content/tools/replit-agent.md |
 | 2026-06-20 | /tools/semrush-demo/ | Tool | No | frontmatter | src/content/tools/semrush-demo.md |
 | 2026-06-20 | /tools/semrush/ | Tool | Yes | frontmatter | src/content/tools/semrush.md |
 | 2026-06-20 | /trends/ | Static page | Yes | git | src/pages/trends/index.astro |
 | 2026-06-20 | /workflows/ | Static page | Yes | git | src/pages/workflows/index.astro |
+| 2026-06-21 | /categories/ | Static page | Yes | git | src/pages/categories/index.astro |
+| 2026-06-21 | /compare/ | Static page | Yes | git | src/pages/compare/index.astro |
 | 2026-06-21 | /guides/ | Static page | Yes | git | src/pages/guides/index.astro |
+| 2026-06-21 | /llms-full.txt | Crawl surface | No | git | src/pages/llms-full.txt.ts |
+| 2026-06-21 | /llms.txt | Crawl surface | No | git | src/pages/llms.txt.ts |
+| 2026-06-21 | /tools/ | Static page | Yes | git | src/pages/tools/index.astro |

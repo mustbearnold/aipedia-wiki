@@ -246,13 +246,28 @@ function runStep(item, env) {
   const startedAt = performance.now();
   const result = spawnSync(item.command, item.args, {
     cwd: PROJECT_DIR,
-    env,
+    env: envForStep(item, env),
     shell: process.platform === 'win32' && item.command === 'npm',
     stdio: 'inherit',
   });
   const durationMs = Math.round(performance.now() - startedAt);
   console.log(`[loop-verify] ${commandLabel(item)} finished in ${Math.round(durationMs / 100) / 10}s`);
   return { status: result.status ?? 1, duration_ms: durationMs };
+}
+
+function stepNeedsFastBuildEnv(item) {
+  const label = commandLabel(item);
+  return /\bnpm run build:fast\b/.test(label) || /\bscripts[\\/]qa-route\.mjs\b/.test(label) || /\bnpm run qa:route\b/.test(label);
+}
+
+function envForStep(item, baseEnv) {
+  const env = { ...baseEnv };
+  if (stepNeedsFastBuildEnv(item)) {
+    env.AIPEDIA_FAST_BUILD = '1';
+  } else {
+    delete env.AIPEDIA_FAST_BUILD;
+  }
+  return env;
 }
 
 function emitReport(report) {
@@ -325,7 +340,6 @@ function main() {
   const env = {
     ...process.env,
     AIPEDIA_LEDGER_DATE: date,
-    AIPEDIA_FAST_BUILD: '1',
   };
 
   const commandResults = [];

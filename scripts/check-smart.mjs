@@ -335,16 +335,41 @@ function printPlan(plan) {
 }
 
 function runCommands(commands) {
+  let fastBuildReady = false;
+
   for (const command of commands) {
     console.log(`\n> ${command}`);
     const result = spawnSync(command, {
       cwd: PROJECT_DIR,
+      env: envForCommand(command, fastBuildReady),
       shell: true,
       stdio: 'inherit',
     });
     if (result.status !== 0) return result.status || 1;
+    if (isFastBuildCommand(command)) fastBuildReady = true;
   }
   return 0;
+}
+
+function isFastBuildCommand(command) {
+  return /^npm run build:fast\b/.test(command.trim());
+}
+
+function needsFastBuildEnv(command, fastBuildReady) {
+  const trimmed = command.trim();
+  if (isFastBuildCommand(trimmed)) return true;
+  if (!fastBuildReady) return false;
+  return /^npm run (qa:route|smoke:visual|check:dist)\b/.test(trimmed) || /\bscripts\/qa-route\.mjs\b/.test(trimmed);
+}
+
+function envForCommand(command, fastBuildReady) {
+  const env = { ...process.env };
+  if (needsFastBuildEnv(command, fastBuildReady)) {
+    env.AIPEDIA_FAST_BUILD = '1';
+  } else {
+    delete env.AIPEDIA_FAST_BUILD;
+  }
+  return env;
 }
 
 function main() {

@@ -82,7 +82,7 @@ Use the smallest verification set that matches the change. For a comparison deci
 
 - `npm run loop:verify -- --date <YYYY-MM-DD> --route /compare/<slug>/ --path <changed paths>`
 
-The wrapper sets `AIPEDIA_LEDGER_DATE` for every child command, regenerates and checks the page refresh ledger with the same date, runs the changed comparison quality gate, delegates overlapping checks to `check:smart:run`, records per-command timing, runs `build:fast` when route QA or `--force-build` requires it and the smart plan did not already select it, and calls route QA when a route is supplied but smart verification did not already run that route.
+The wrapper sets `AIPEDIA_LEDGER_DATE` for every child command, regenerates and checks the page refresh ledger with the same date, runs the changed comparison quality gate, delegates overlapping checks to `check:smart:run`, records per-command timing, runs `build:fast` when route QA or `--force-build` requires it and the smart plan did not already select it, and calls route QA when a route is supplied but smart verification did not already run that route. Fast-build mode is scoped to build and route-QA commands only, so unit tests and fixture audits do not inherit `AIPEDIA_FAST_BUILD=1`.
 
 The underlying commands remain valid when a focused retry is needed:
 
@@ -129,6 +129,8 @@ Additional loop commands:
 - `npm run loop:verify`: executable, date-stable verification for a cycle.
 - `npm run qa:route`: reusable route QA across mobile, tablet, and desktop widths.
 - `npm run loop:record`: durable run receipt under `.agent/loop-runs/`.
+
+Current implementation status: `canva-vs-claude`, `claude-vs-replit-agent`, and `cursor-vs-deepseek` are complete. `npm run loop:next -- --json` currently selects `cursor-vs-grok`.
 
 ## First Cycle
 
