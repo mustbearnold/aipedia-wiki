@@ -20,19 +20,26 @@ AiPedia now has a strict same-buyer-job comparison policy. Same primary category
 
 The cleanup deleted 179 comparison files in total. That includes false-vs pages, the newly drafted `mistral-ai-vs-poe` page, and the multi-tool pages `lindy-vs-zapier-vs-n8n` and `lovable-vs-bolt-vs-v0`. Rebuild any useful multi-tool coverage later as focused two-tool direct-substitute pages only. Deleted routes include earlier loop pages such as `canva-vs-claude`, `claude-vs-replit-agent`, `cursor-vs-deepseek`, `cursor-vs-grok`, `deepseek-vs-github-copilot`, and `deepseek-vs-replit-agent`. Their tool/source refresh work remains useful where it touched live tool and category pages, but those comparison routes are no longer live.
 
-At last check, there were no remaining published comparison files whose tools have different primary categories. `npm run loop:next -- --json` selects `activepieces-vs-n8n`, which is a valid same-category `ai-automation` comparison.
+At last check, there were no remaining published comparison files whose tools have different primary categories. The `activepieces-vs-n8n` cycle is complete and `npm run loop:next -- --json` now selects `activepieces-vs-zapier`, which is also a valid same-category `ai-automation` comparison.
 
-Run `git status --short --branch` and `git log --oneline -5` before starting. This branch has local unpushed work.
+Run `git status --short --branch` and `git log --oneline -5` before starting. The final state for this entry should be pushed to `master`; verify before editing.
 
 ## Done Recently
 
 - Strict comparison cleanup:
   - Deleted 179 comparison files from `src/content/comparisons/`.
   - Removed public links to those deleted routes from `src/content`, `src/pages`, components, and layouts.
-  - Regenerated `PAGE_REFRESH_LEDGER.md`; it now tracks 603 rows after the removed routes dropped out.
+  - Regenerated `PAGE_REFRESH_LEDGER.md`; it now tracks 604 rows after the valid `activepieces-vs-n8n` route was added.
   - Regenerated `src/data/coverage-backlog.json`.
   - Verified no cross-primary comparison files remain.
   - Verified no public links to the deleted comparison routes remain.
+- Activepieces vs n8n loop cycle:
+  - Added `src/content/comparisons/activepieces-vs-n8n.md` as a valid same-category automation comparison.
+  - Refreshed Activepieces, n8n, AI Automation, related Lindy guide routing, compare/tools/categories top-layer pages, LLM surfaces, source registry, coverage backlog, and page ledger rows.
+  - Verified Activepieces against current pricing, pieces, MCP, install docs, MCP tools docs, and GitHub release sources.
+  - Verified n8n against current pricing, AI Agent docs, hosting docs, GitHub release, and affiliate sources.
+  - Updated stale guard-test fixtures that still expected the old false-vs comparison inventory and deleted routes.
+  - Recorded `.agent/loop-runs/2026-06-21-activepieces-vs-n8n.md`.
 - Comparison selector hardening:
   - `src/data/comparison-policy.json` no longer has an `allowed_adjacent_pairs` loophole.
   - `scripts/audit-coverage-gaps.mjs`, `scripts/coverage-next.mjs`, and `scripts/decision-loop.mjs` now only select same-primary-category pairs.
@@ -55,7 +62,7 @@ Run `git status --short --branch` and `git log --oneline -5` before starting. Th
 
 - Decision Content Flywheel:
   - Use `npm run loop:next -- --json` to pick the next valid same-category comparison.
-  - Current recommended next cycle: `activepieces-vs-n8n`.
+  - Current recommended next cycle: `activepieces-vs-zapier`.
   - Do not restart the deleted cross-category loop pages. Their routes were intentionally removed.
   - Use `npm run loop:verify -- --date <YYYY-MM-DD> --route /compare/<slug>/ --path <changed paths>` before closing a rendered comparison cycle.
   - Use `npm run loop:record -- --date <YYYY-MM-DD> --slug <slug> --status complete` after a completed, failed, partial, or blocked major cycle.
@@ -69,7 +76,7 @@ Run `git status --short --branch` and `git log --oneline -5` before starting. Th
 
 ## Verification Baseline
 
-Latest cleanup checks:
+Latest completed cycle checks:
 
 - `npm run coverage:backlog`
 - `$env:AIPEDIA_LEDGER_DATE='2026-06-21'; npm run ledger:pages`
@@ -77,20 +84,18 @@ Latest cleanup checks:
 - No cross-primary comparison pages remain, checked with a one-off Node inventory audit.
 - No public links to deleted comparison routes remain, checked with `rg` over `src` and `PAGE_REFRESH_LEDGER.md`.
 - `node --test tests/scripts/audit-coverage-gaps.test.mjs tests/scripts/decision-loop.test.mjs tests/scripts/loop-hardening.test.mjs`
+- `node --test tests/scripts/audit-site-kpis.test.mjs tests/scripts/check-smart.test.mjs tests/scripts/guard-stale-facts.test.mjs`
 - `node scripts/guard-em-dashes.mjs`
-
-Still recommended before final commit:
-
 - `git diff --check`
-- `npm run check:links`
-- `npm run audit:coverage-quality:changed`
-- A scoped provenance check for the changed tool pages if they remain in the final diff:
-  - `node scripts/audit-provenance-pricing.mjs --changed-file src/content/tools/mistral-ai.md --changed-file src/content/tools/poe.md`
+- `$env:AIPEDIA_LEDGER_DATE='2026-06-21'; npm run loop:verify -- --date 2026-06-21 --route /compare/activepieces-vs-n8n/ --path <changed paths>`
+
+The final `loop:verify` pass included ledger check, changed comparison quality, changed tool provenance, guard challenge check, all script tests, commands audit, guard checks, fact/source/provenance audits, link/news checks, generated-model audit, `build:fast`, broad visual smoke, and exact route QA for `/categories/`, `/categories/ai-automation/`, `/compare/`, `/compare/activepieces-vs-n8n/`, `/tools/`, `/tools/activepieces/`, `/tools/lindy/`, and `/tools/n8n/` at 360, 390, 430, 768, 1024, and 1366 px.
 
 ## Known Caveats
 
 - Historical work-log and archive entries mention deleted comparison routes. Treat them as history, not live routing guidance.
 - Public content touched during the first six loop attempts used `2026-06-20` as the verification date. Current and future loop work should pass the intended date explicitly.
+- The first `activepieces-vs-n8n` verifier run failed because tests still assumed 266+ comparison pages and deleted comparison routes. Those fixtures now use the post-cleanup direct-substitute inventory and live AI Automation routes.
 - Full local builds currently take about 3.5 minutes. Prefer `npm run check:smart`, `npm run check:quick`, focused tests, and `npm run build:fast` unless a full pre-ship build is needed.
 - Large generated surfaces deserve future optimization: `/search/`, archive pages, `api/home-search.json`, public OG assets, and Pagefind output near the 10 MB budget.
 - `npm run check:ci` previously passed, but GitHub stats used stale cached fallback data because the GitHub API returned a 403 rate-limit response.

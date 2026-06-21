@@ -132,7 +132,7 @@ Additional loop commands:
 - `npm run qa:route`: reusable route QA across mobile, tablet, and desktop widths.
 - `npm run loop:record`: durable run receipt under `.agent/loop-runs/`.
 
-Current implementation status: the stricter June 21 cleanup deleted 179 comparison files in total, including false-vs pages and multi-tool pages that should only be rebuilt as focused two-tool direct-substitute pages. It also added 127 blocked pairs for known same-category false-vs traps. The false-vs guard now skips Descript vs Grok, Mistral AI vs Poe, and similar different-workflow pairs. `npm run loop:next -- --json` currently selects `activepieces-vs-n8n`.
+Current implementation status: the stricter June 21 cleanup deleted 179 comparison files in total, including false-vs pages and multi-tool pages that should only be rebuilt as focused two-tool direct-substitute pages. It also added 127 blocked pairs for known same-category false-vs traps. The false-vs guard now skips Descript vs Grok, Mistral AI vs Poe, and similar different-workflow pairs. The `activepieces-vs-n8n` cycle is complete, including a guard-test fixture update for the post-cleanup comparison inventory. `npm run loop:next -- --json` currently selects `activepieces-vs-zapier`.
 
 ## First Cycle
 

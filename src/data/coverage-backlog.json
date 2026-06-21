@@ -1,41 +1,18 @@
 {
   "ok": true,
-  "generated_at": "2026-06-21T03:35:55.338Z",
+  "generated_at": "2026-06-21T03:56:22.177Z",
   "project_dir": "C:\\Users\\mustb\\Projects\\aipedia-wiki-clean",
   "totals": {
     "tools_active": 260,
     "tools_notable": 260,
-    "comparisons_existing": 101,
+    "comparisons_existing": 102,
     "answers_existing": 12,
-    "comparison_gaps": 2670,
+    "comparison_gaps": 2669,
     "review_only_comparison_gaps": 385,
     "answer_gaps": 56
   },
   "backlog": {
     "comparisons": [
-      {
-        "kind": "comparison",
-        "slug": "activepieces-vs-n8n",
-        "tools": [
-          "activepieces",
-          "n8n"
-        ],
-        "shared_categories": [
-          "ai-automation"
-        ],
-        "primary_categories": [
-          "ai-automation",
-          "ai-automation"
-        ],
-        "both_tier1": false,
-        "same_category": true,
-        "comparison_mode": "direct",
-        "selectable": true,
-        "requires_asymmetric_framing": false,
-        "workflow_family": "ai-automation",
-        "policy_reason": "same primary category",
-        "score": 6
-      },
       {
         "kind": "comparison",
         "slug": "activepieces-vs-zapier",
@@ -1376,6 +1353,29 @@
         "tools": [
           "canva",
           "lovart"
+        ],
+        "shared_categories": [
+          "ai-design"
+        ],
+        "primary_categories": [
+          "ai-design",
+          "ai-design"
+        ],
+        "both_tier1": false,
+        "same_category": true,
+        "comparison_mode": "direct",
+        "selectable": true,
+        "requires_asymmetric_framing": false,
+        "workflow_family": "ai-design",
+        "policy_reason": "same primary category",
+        "score": 6
+      },
+      {
+        "kind": "comparison",
+        "slug": "canva-vs-napkin",
+        "tools": [
+          "canva",
+          "napkin"
         ],
         "shared_categories": [
           "ai-design"

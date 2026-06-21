@@ -5,10 +5,10 @@ title: AI Automation & Agents
 description: Current workflow automation, AI agent platforms, meeting automation, call automation, and operations tools for technical teams, non-technical operators, GTM workflows, customer success, support, sales, and internal automation.
 tool_count: 27
 seo_title: "Best AI Automation Tools & Agent Platforms (June 2026)"
-meta_description: "Updated June 18, 2026: compare n8n, Zapier, Make, Workato, Microsoft Agent Framework, Taskade, Rows, Voiceflow, watsonx Orchestrate, Tines, Reclaim.ai, Intercom, Gumloop, Relevance AI, Activepieces, AG2, CrewAI, Langflow, Langfuse, LangGraph, Letta, Glean, Goose, OpenClaw, Browserbase, Modal, Apollo, Lindy, Pipedream, CloudTalk, and MeetGeek by workflow, pricing unit, AI orchestration, governance, and risk."
+meta_description: "Updated June 21, 2026: compare n8n, Zapier, Make, Workato, Microsoft Agent Framework, Taskade, Rows, Voiceflow, watsonx Orchestrate, Tines, Reclaim.ai, Intercom, Gumloop, Relevance AI, Activepieces, AG2, CrewAI, Langflow, Langfuse, LangGraph, Letta, Glean, Goose, OpenClaw, Browserbase, Modal, Apollo, Lindy, Pipedream, CloudTalk, and MeetGeek by workflow, pricing unit, AI orchestration, governance, and risk."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-18
-last_verified: 2026-06-18
+last_updated: 2026-06-21
+last_verified: 2026-06-21
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -30,7 +30,7 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 
 **June 16 Google Cloud data-agent update:** Google's [data-agent rollout](/news/2026-06-16-google-cloud-data-agents/) moves automation deeper into governed analytics and database workflows. Data Engineering Agent and Managed MCP Servers for Databases are now generally available, while Data Science Agent, Data Agent Kit, Looker MCP, Gemini Enterprise Conversational Analytics, Data Insights Agent, Deep Research Agent, QueryData, and UCP Analytics are preview or select-customer routes. Treat this as an automation-control-plane update: verify IAM, `roles/mcp.toolUser`, separate production identities, SQL review, spend limits, job labels, data retention, and GA-versus-preview status before agents touch production data.
 
-**June 18 Activepieces update:** [Activepieces](/tools/activepieces/) remains the open-source, self-hostable automation pick, but the refresh now treats it as more than a pricing story. GitHub releases after the prior page date added Mistral AI as a platform provider, flow formulas, data manipulation functions and triggers, admin run-health metrics, AI/chat reliability work, MCP-created flow labeling, and a June 14 pgvector migration startup fix for locked-down PostgreSQL. Buyers should now evaluate it as an MCP-capable workflow control plane, not only as a cheaper Zapier alternative.
+**June 21 Activepieces vs n8n update:** [Activepieces](/tools/activepieces/) remains the open-source, self-hostable automation pick, and [n8n](/tools/n8n/) remains the stronger default for technical production workflows. The new [Activepieces vs n8n](/compare/activepieces-vs-n8n/) fork keeps that buyer question inside one valid same-category automation lane: permissive MIT self-hosting, 754 pieces, 754 MCP listings, and simple active-flow pricing on the Activepieces side; execution-based hosted cloud, code nodes, AI Agent nodes, and deeper governance tiers on the n8n side.
 
 **June 18 Ada update:** [Ada](/tools/ada/) stays in the enterprise customer-service automation lane, but the current refresh changes the read from "Reasoning Engine launch" to "AI customer-service operations platform." Ada's June release notes and MCP docs now put coaching creation, multilingual Knowledge ingestion, Web Chat SDK headless/programmatic control, Zendesk handoff continuity, and MCP-assisted resource changes into the buyer checklist. The platform FAQ now says 550+ deployed AI agents, 6.4B+ handled interactions, and 84% autonomous resolution, while pricing remains demo-led with conversation-based pricing as the primary public model.
 
@@ -40,9 +40,11 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 
 **June 12 local-agent update:** [OpenClaw](/tools/openclaw/) stays in the high-control, high-risk lane. The current GitHub README shows 22+ supported messaging surfaces, DM pairing defaults, explicit public-DM opt-in, `openclaw doctor`, and non-main sandbox guidance, while June 2026 security coverage reinforces the same buyer rule: do not expose privileged agents to messages, browsers, files, or gateways without patching, allowlists, sandbox policy, and owner accountability.
 
+**June 21 comparison-policy update:** AiPedia deleted false `vs` pages that compared different buyer jobs. Use direct comparison pages only when tools are plausible substitutes for the same workflow. For adjacent-but-different jobs, use this category page, buyer guides, or alternatives sections instead.
+
 **June 5 automation comparison update:** AiPedia rebuilt the high-intent automation fork across Instantly vs Intercom, Instantly vs Make, Instantly vs Zapier, Intercom vs Make, Intercom vs Zapier, and [n8n vs Make vs Zapier](/compare/n8n-vs-make-vs-zapier/). The practical split is sharper now: outbound sending, customer support, visual workflow orchestration, broad no-code app automation, and self-hosted technical AI workflows are different buying jobs.
 
-**Use [n8n](/tools/n8n/) when a technical founder, ops engineer, or agency wants control.** n8n's current pricing page says plans include unlimited users, unlimited workflows, every integration, and monthly workflow-execution billing rather than per-step billing. As of the June 15 spot-check, hosted Starter is still listed at EUR20/month billed annually, hosted Pro at EUR50/month billed annually, Business at EUR667/month billed annually for self-hosted teams, and the Community self-host path remains free. The current AI Agent docs still standardize AI Agent nodes around Tools Agent behavior, while n8n's hosting docs warn that self-hosting is for expert users because server, scaling, and security mistakes can cause data loss or downtime. Buyers should also model the Business license-key ping, default telemetry setting, and EUR4,000 per 300,000-execution overage bucket before treating paid self-host as a simple isolated deployment. This makes n8n the strongest default for complex AI workflows when someone can own credentials, logs, retries, and security.
+**Use [n8n](/tools/n8n/) when a technical founder, ops engineer, or agency wants control.** n8n's current pricing page says plans include unlimited users, unlimited workflows, every integration, and monthly workflow-execution billing rather than per-step billing. As of the June 21 spot-check, hosted Starter is still listed at EUR20/month billed annually, hosted Pro at EUR50/month billed annually, Business at EUR667/month billed annually for self-hosted teams, and the Community self-host path remains free. The current AI Agent docs still standardize AI Agent nodes around Tools Agent behavior, while n8n's hosting docs warn that self-hosting is for expert users because server, scaling, and security mistakes can cause data loss or downtime. Buyers should also model the Business license-key ping, default telemetry setting, and EUR4,000 per 300,000-execution overage bucket before treating paid self-host as a simple isolated deployment. This makes n8n the strongest default for complex AI workflows when someone can own credentials, logs, retries, and security.
 
 **Use [Zapier](/tools/zapier/) when non-technical teams need the fastest SaaS connection path.** Zapier's current pricing and AI pages frame the platform around Zaps, Tables, Forms, MCP, Copilot, Agents, and more than 9,000 apps. The June 4 ChatGPT vs Zapier refresh keeps the distinction explicit: ChatGPT is the thinking and drafting assistant; Zapier is the workflow execution layer when SaaS actions need to run repeatedly. It is still the cleanest recommendation when app coverage and speed matter more than self-hosting or code-level control.
 
@@ -66,7 +68,7 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 
 **Use [Tines](/tools/tines/) when security, IT, or compliance teams need workflow runs that hold up in audit.** The June 9 check keeps Community free, Starter starting at $500/mo, Business/Enterprise contact-sales, and the AI Agent action broader than the old FAQ wording. The practical purchase question is not app count; it is AI run-time credits, package limits, logs, SSO/SAML, flexible hosting, and whether a SOC or IT team can own the workflow safely.
 
-**Use [Activepieces](/tools/activepieces/) when open-source workflow automation, self-hosting, and MCP-mediated workflow control matter.** The June 18 check keeps Standard pricing at 10 free active flows and then $5 per active flow per month, confirms 749 pieces on the live catalog, and updates the product-change story around Mistral AI support, formulas, data manipulation triggers, admin health metrics, MCP flow tooling, and a self-host startup fix.
+**Use [Activepieces](/tools/activepieces/) when open-source workflow automation, self-hosting, and MCP-mediated workflow control matter.** The June 21 check keeps Standard pricing at 10 free active flows and then $5 per active flow per month, confirms 754 pieces and 754 MCP listings on the live catalog surfaces, and updates the product-change story around 0.85.4, AI-ready metadata, Mistral AI support, formulas, data manipulation triggers, admin health metrics, MCP flow tooling, and self-host reliability fixes.
 
 **Use [AG2](/tools/ag2/) when the buyer wants an open-source multi-agent framework rather than a SaaS workflow canvas.** The June 18 release check found AG2 v0.13.4 from June 12 after v0.13.3 added cross-process Network, sandbox protocol work, background-agent tooling, A2A fixes, and evaluation improvements. v0.13.4 then added AG2 Agent-as-MCP-server support, OAuth Resource Server authentication, SkillPlugin support, Bedrock Beta client support, decoupled usage reporting, and governance examples. It is more AgentOS-shaped than the old page implied, but still a developer framework, not a non-technical ops platform.
 
@@ -132,7 +134,7 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 
 **Use [Tactiq](/tools/tactiq/) when meeting automation needs no-bot browser capture.** The June 9 check keeps Tactiq's Free plan at 10 transcripts/month and 5 AI credits, Pro at $8/user/month annual, Team at $16.67, and Business at $29.17 with SAML SSO, advanced retention, Tactiq MCP beta, and Claude Connector beta for transcript context in AI tools.
 
-**Use [Lindy](/tools/lindy/) when the buyer wants an AI work assistant, not a workflow canvas.** Lindy's May 27 refresh now routes high-intent buyers into a 7-day trial, Plus-first plan guidance, and the Lindy vs Zapier vs n8n decision path. It belongs in this category for inbox, calendar, meeting prep, meeting notes, follow-up drafting, and iMessage/SMS delegation, but not for high-volume backend automation.
+**Use [Lindy](/tools/lindy/) when the buyer wants an AI work assistant, not a workflow canvas.** Lindy's May 27 refresh now routes high-intent buyers into a 7-day trial, Plus-first plan guidance, and the [work-assistant guide](/guides/best-ai-personal-assistant-for-work/). It belongs in this category for inbox, calendar, meeting prep, meeting notes, follow-up drafting, and iMessage/SMS delegation, but not for high-volume backend automation.
 
 **Use [Pipedream](/tools/pipedream/) when developer API workflows, embedded integrations, or AI-agent tool access matter more than no-code breadth.** The June 8 rendered pricing check replaces the stale daily-credit model with monthly included credits: Free 100/month, Basic 2,000/month, Advanced 2,000/month, Connect 10,000/month, and Business custom. Treat Connect, MCP tool scoping, Workday ownership, and monthly overage modeling as the main procurement questions.
 
@@ -158,7 +160,7 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 | Multi-agent enterprise control plane | [watsonx Orchestrate](/tools/watsonx-orchestrate/) | IBM control-plane path for heterogeneous agents, monitoring, partner agents, audit logs, voice paths, and data-isolation controls | Preview-vs-GA scope, regions, agentic MAUs/messages/add-ons, and non-IBM agent support need written confirmation |
 | Enterprise iPaaS and agentic orchestration | [Workato](/tools/workato/) | Workato One, Agent Studio genies, Workato GO, MCP, 1,000+ connectors, and governance-heavy workflow execution | Usage-based custom pricing, legacy-contract differences, region-scoped MCP, OPAs, concurrency, and agentic entitlements need written confirmation |
 | Security and IT workflow automation | [Tines](/tools/tines/) | Audit logs, RBAC, SSO/SAML, flexible hosting, Workbench, and AI Agent actions for SOC/IT workflows | Starter floor is high and AI Agent usage depends on credits and package limits |
-| Open-source automation and self-hosting | [Activepieces](/tools/activepieces/) | MIT-licensed self-host path, cloud active-flow billing, 749 live catalog pieces on June 18, and MCP/AI-agent support | Someone still has to own hosting, secrets, and connector maintenance |
+| Open-source automation and self-hosting | [Activepieces](/tools/activepieces/) | MIT-licensed self-host path, cloud active-flow billing, 754 live catalog pieces, 754 MCP listings, and MCP/AI-agent support | Someone still has to own hosting, secrets, and connector maintenance |
 | Developer multi-agent framework | [AG2](/tools/ag2/) | Apache 2.0 framework for AutoGen-style agent systems, MCP/A2A work, cross-process networks, skills, and sandboxing | Requires Python engineering judgment, tool-governance policy, and production hardening; not a turnkey workflow product |
 | Python multi-agent orchestration | [CrewAI](/tools/crewai/) | Role-based agents, crews, flows, Studio, tracing, triggers, and an Enterprise path | Basic cloud is small; LLM costs and production controls still need engineering ownership |
 | Visual LangChain/RAG canvas | [Langflow](/tools/langflow/) | Open-source visual builder for agents, MCP servers, RAG, and deployable flows | Pin versions and patch quickly; not a general SaaS automation platform |
@@ -189,7 +191,7 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 | Meeting-to-workflow automation for CS, sales, recruiting, and ops | [MeetGeek](/tools/meetgeek/) | Transcripts, summaries, AI Chat, action items, Zapier/Make/n8n workflows, API/MCP access, and CRM/task handoff from meeting content | Needs consent policy, workspace permissions, and a defined post-meeting workflow |
 | No-bot browser meeting capture | [Tactiq](/tools/tactiq/) | Meet/Zoom/Teams caption capture, AI summaries, workflow integrations, and Business-tier MCP/Claude Connector betas | Browser-caption quality, consent, AI credits, and Business beta access need verification |
 | One-off general autonomous tasks | [Manus](/tools/manus/) | Hosted VM agent for research, spreadsheets, slides, files, and browser work; official site now describes Manus as part of Meta | Credit burn and data-handling terms need direct verification before sensitive work |
-| Inbox, calendar, meeting, and follow-up assistant | [Lindy](/tools/lindy/) | Assistant-style automation for professionals who want delegation, not a blank canvas; start with [the work-assistant guide](/guides/best-ai-personal-assistant-for-work/) or Lindy vs Zapier vs n8n | Current public pricing starts with a 7-day trial; Plus is the first paid plan for most solo buyers, while usage and inbox limits must be tested |
+| Inbox, calendar, meeting, and follow-up assistant | [Lindy](/tools/lindy/) | Assistant-style automation for professionals who want delegation, not a blank canvas; start with [the work-assistant guide](/guides/best-ai-personal-assistant-for-work/) or this category's buyer paths | Current public pricing starts with a 7-day trial; Plus is the first paid plan for most solo buyers, while usage and inbox limits must be tested |
 | Developer API workflows and embedded integrations | [Pipedream](/tools/pipedream/) | Developer-friendly workflows, Connect, MCP servers, monthly included credits, and Workday ownership | Requires more technical judgment than Zapier or Make; model monthly credit overage and ask how Workday packaging affects enterprise rollout |
 
 ## Our Picks
@@ -220,6 +222,7 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 - [Best AI stack for solo founders](/guides/ai-solo-founder-stack/) is now the June 6 verified founder sequence: manual first, n8n once workflows repeat, Intercom only after real support volume, and explicit budgeting for Copilot AI Credits, Claude Agent SDK credits, app-builder credits, Fin outcomes, and workflow executions.
 - [Best AI tools for small business](/guides/best-ai-tools-for-small-business/) is the June 6 verified owner-operator guide for ChatGPT, Gemini, Zapier, Claude, Canva, and Perplexity, with the conservative buying sequence sharpened around general assistant first, Google-native assistant when it reduces switching, and Zapier only after workflows already work manually. It now calls out Zapier's bundled Tables, Forms, MCP, and AI-action packaging plus MCP task-count risk.
 - [Best AI tools for ecommerce](/guides/best-ai-tools-for-ecommerce/) is the June 6 verified store-operations guide for ChatGPT catalog/support work, Canva creative, Jasper campaign governance, Perplexity source trails, and Zapier handoffs after workflows are stable.
+- [Activepieces vs n8n](/compare/activepieces-vs-n8n/) is now the direct open-source automation fork for MIT self-hosting, MCP-first app actions, active-flow pricing, code-node depth, AI Agent nodes, execution-based cloud, and governed self-hosting.
 - [n8n vs Make vs Zapier](/compare/n8n-vs-make-vs-zapier/) is now the primary automation-platform fork for workflow complexity, pricing unit, AI-agent support, self-hosting, and owner type.
 - A new `Gumloop vs Relevance AI` comparison would capture high-intent buyers choosing between AI-native workflow building and agent workforce deployment.
 - A new `n8n vs Gumloop` comparison would separate technical workflow control from modern agent-flow UX.
@@ -235,10 +238,12 @@ Do not leave this category stale. Automation tools are adding MCP, agent builder
 
 ## Sources
 
-- [n8n pricing](https://n8n.io/pricing/) (verified 2026-06-15)
-- [n8n hosting documentation](https://docs.n8n.io/hosting/) (verified 2026-06-15)
-- [n8n AI documentation](https://docs.n8n.io/advanced-ai/) (verified 2026-06-15)
-- [n8n AI Agent node documentation](https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/) (verified 2026-06-15)
+- [n8n pricing](https://n8n.io/pricing/) (verified 2026-06-21)
+- [n8n hosting documentation](https://docs.n8n.io/hosting/) (verified 2026-06-21)
+- [n8n AI documentation](https://docs.n8n.io/advanced-ai/) (verified 2026-06-21)
+- [n8n AI Agent node documentation](https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/) (verified 2026-06-21)
+- [n8n GitHub repository](https://github.com/n8n-io/n8n) (verified 2026-06-21)
+- [n8n affiliate program](https://n8n.io/affiliates/) (verified 2026-06-21)
 - [Claude Agent SDK with a Claude plan](https://support.claude.com/en/articles/15036540-use-the-claude-agent-sdk-with-your-claude-plan) (verified 2026-06-06)
 - [Zapier pricing](https://zapier.com/pricing) (verified 2026-06-05)
 - [Zapier AI](https://zapier.com/ai) (verified 2026-06-05)
@@ -264,10 +269,12 @@ Do not leave this category stale. Automation tools are adding MCP, agent builder
 - [Tines pricing](https://www.tines.com/pricing/) (verified 2026-06-09)
 - [Tines pricing explainer](https://explained.tines.com/en/articles/9620399-understanding-tines-pricing-and-packaging) (verified 2026-06-09)
 - [Tines AI Agents introduction](https://explained.tines.com/en/articles/11571096-introduction-to-ai-agents) (verified 2026-06-09)
-- [Activepieces pricing](https://www.activepieces.com/pricing) (verified 2026-06-18)
-- [Activepieces GitHub releases](https://github.com/activepieces/activepieces/releases) (verified 2026-06-18)
-- [Activepieces MCP tools docs](https://www.activepieces.com/docs/mcp/tools) (verified 2026-06-18)
-- [Activepieces pieces catalog](https://www.activepieces.com/pieces) (verified 2026-06-18)
+- [Activepieces pricing](https://www.activepieces.com/pricing) (verified 2026-06-21)
+- [Activepieces GitHub releases](https://github.com/activepieces/activepieces/releases) (verified 2026-06-21)
+- [Activepieces MCP page](https://www.activepieces.com/mcp) (verified 2026-06-21)
+- [Activepieces MCP tools docs](https://www.activepieces.com/docs/mcp/tools) (verified 2026-06-21)
+- [Activepieces pieces catalog](https://www.activepieces.com/pieces) (verified 2026-06-21)
+- [Activepieces install docs](https://www.activepieces.com/docs/install/overview) (verified 2026-06-21)
 - [AG2 releases](https://github.com/ag2ai/ag2/releases) (verified 2026-06-18)
 - [AG2 official site](https://www.ag2.ai/) (verified 2026-06-18)
 - [CrewAI releases](https://github.com/crewAIInc/crewAI/releases) (verified 2026-06-02)

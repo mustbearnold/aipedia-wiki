@@ -26,7 +26,7 @@ test('site KPI audit emits stable JSON with core remediation metrics', () => {
   assert.equal(data.mode, 'report');
   assert.deepEqual(data.argument_issues, []);
   assert.ok(data.collections.tools >= 253);
-  assert.ok(data.collections.comparisons >= 266);
+  assert.ok(data.collections.comparisons >= 90);
   assert.equal(data.collections.news, data.news.total);
   assert.ok(data.collections['use-cases'] >= 93);
 

@@ -30,6 +30,16 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 
 ## Entries
 
+### 2026-06-21: Activepieces Vs n8n Loop Cycle
+
+- Status: Complete.
+- Commit: this commit.
+- Branch: `master`.
+- Changed: Added `src/content/comparisons/activepieces-vs-n8n.md`; refreshed Activepieces, n8n, AI Automation, Lindy buyer-path links, the automation buyer guide link surface, compare/tools/categories top-layer metadata, LLM surfaces, source registry, coverage backlog, and page refresh ledger rows; removed remaining public references to deleted cross-workflow comparison routes; removed `lovable-vs-bolt-vs-v0` from the legacy compare priority list; and updated KPI, stale-fact, and smart-check tests that still assumed the old false-vs comparison inventory and deleted comparison routes.
+- Verification: `node --test tests/scripts/audit-site-kpis.test.mjs tests/scripts/check-smart.test.mjs tests/scripts/guard-stale-facts.test.mjs`; `$env:AIPEDIA_LEDGER_DATE='2026-06-21'; npm run loop:verify -- --date 2026-06-21 --route /compare/activepieces-vs-n8n/ --path <changed paths>`.
+- Residual risks: The full loop is reliable but still slow when script-test and runtime page paths are touched. This pass took about 267 seconds, with `check-smart --run` at 263.4 seconds, broad `smoke:visual` at 42.7 seconds, and exact combined route QA at 49.4 seconds.
+- Next: `npm run loop:next -- --json` selects `activepieces-vs-zapier`, another same-category AI Automation comparison. Verify Zapier current facts before editing.
+
 ### 2026-06-21: Strict Same-Category Comparison Cleanup
 
 - Status: Complete.
@@ -38,7 +48,7 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Changed: Deleted 179 comparison files, removed public links to those deleted routes, removed the adjacent-workflow allowlist from `src/data/comparison-policy.json`, added 127 blocked pairs for known same-category false-vs traps, hardened `coverage:backlog`, `coverage:next`, and `loop:next` so they select only same-primary-category pairs that are not blocked, regenerated `src/data/coverage-backlog.json` and `PAGE_REFRESH_LEDGER.md`, and rewrote the active `.agent` docs around the stricter policy. The Mistral AI and Poe tool/source refreshes remain, but `mistral-ai-vs-poe` is now blocked and deleted as a direct comparison page. Removed multi-tool pages such as `lindy-vs-zapier-vs-n8n` and `lovable-vs-bolt-vs-v0` should be rebuilt later only as focused two-tool direct-substitute pages.
 - Verification: `npm run coverage:backlog`; `$env:AIPEDIA_LEDGER_DATE='2026-06-21'; npm run ledger:pages`; `npm run loop:next -- --json`; one-off inventory audit proving no cross-primary comparison files remain; `rg` over `src` and `PAGE_REFRESH_LEDGER.md` proving no public links to deleted routes remain; `node --test tests/scripts/audit-coverage-gaps.test.mjs tests/scripts/decision-loop.test.mjs tests/scripts/loop-hardening.test.mjs`; `node scripts/guard-em-dashes.mjs`.
 - Residual risks: Historical archive docs still mention deleted routes as past work. Treat those as history only. A future content pass can remove or rewrite plain-text historical references in public category prose where they no longer add value.
-- Next: `npm run loop:next -- --json` selects `activepieces-vs-n8n`, a same-primary-category `ai-automation` comparison.
+- Next: Superseded by the Activepieces vs n8n loop cycle. Current next target is `activepieces-vs-zapier`.
 
 ### 2026-06-21: False-Vs Comparison Policy Cleanup
 
@@ -48,7 +58,7 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Changed: Deleted five definite false-vs comparison pages, removed their visible internal links, added the first `src/data/comparison-policy.json`, changed coverage and loop tooling so false-vs candidates were not auto-selected, regenerated `src/data/coverage-backlog.json`, updated active loop docs, and moved Astro markdown plugins to `processor: unified(...)` so the build no longer emits the old markdown plugin deprecation warning. This entry is superseded by the stricter same-primary-category cleanup above.
 - Verification: `node --test tests/scripts/loop-hardening.test.mjs tests/scripts/check-smart.test.mjs tests/scripts/audit-coverage-gaps.test.mjs tests/scripts/decision-loop.test.mjs`; `npm run coverage:backlog`; `node scripts/decision-loop.mjs --json`; `$env:AIPEDIA_LEDGER_DATE='2026-06-21'; npm run build:fast`; `$env:AIPEDIA_LEDGER_DATE='2026-06-21'; npm run check:smart:run`.
 - Residual risks: Superseded. Borderline historical cross-category comparison pages were later removed instead of allowed.
-- Next: Superseded by the strict same-primary-category cleanup. Current next target is `activepieces-vs-n8n`.
+- Next: Superseded by the Activepieces vs n8n loop cycle. Current next target is `activepieces-vs-zapier`.
 
 ### 2026-06-21: Operator Surface Route QA Contract
 
@@ -58,7 +68,7 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Changed: Moved exact parent-hub route QA targets and the content-only broad visual smoke replacement rule into `src/data/operator-surfaces.json`; updated `scripts/check-smart.mjs` to consume the contract instead of hardcoded route and path allowlists; added focused tests proving the contract exists and still preserves broad visual smoke when tooling or runtime paths are part of the change.
 - Verification: `node --test tests/scripts/check-smart.test.mjs tests/scripts/loop-hardening.test.mjs tests/scripts/playwright-config.test.mjs`; `node scripts/guard-em-dashes.mjs`; `git diff --check`; `node scripts/check-smart.mjs --json --path src/content/comparisons/descript-vs-grok.md --path src/pages/compare/index.astro --path src/data/operator-surfaces.json`.
 - Residual risks: The next performance bottleneck appears to be `build:fast`, which took 126.2 seconds in the latest full cycle. `descript-vs-grok` was later blocked by comparison policy as a false-vs secondary-overlap pair.
-- Next: Superseded by comparison-policy cleanup; current next target is `activepieces-vs-n8n`.
+- Next: Superseded by the Activepieces vs n8n loop cycle. Current next target is `activepieces-vs-zapier`.
 
 ### 2026-06-20: DeepSeek Vs Replit Agent Loop Cycle
 

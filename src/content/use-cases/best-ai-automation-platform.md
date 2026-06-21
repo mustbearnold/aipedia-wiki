@@ -3,7 +3,7 @@ type: use-case
 slug: best-ai-automation-platform
 title: "Best AI Automation Platform (June 2026)"
 seo_title: "Best AI Automation Platform: n8n, Zapier, Make, Gumloop & Relevance AI (June 2026)"
-meta_description: "Best AI automation platforms in June 2026 (refreshed May 27): n8n for technical teams, Zapier for no-code integrations, Make for visual operations, Gumloop for AI-native workflows, Relevance AI for agent workforces, and Lindy for assistant-style delegation."
+meta_description: "Best AI automation platforms in June 2026: n8n for technical teams, Zapier for no-code integrations, Make for visual operations, Gumloop for AI-native workflows, Relevance AI for agent workforces, and Lindy for assistant-style delegation. Buyer-path links updated June 21."
 author: "aipedia.wiki Editorial"
 description: "A current buyer guide to AI automation platforms, covering workflow automation, AI agents, integrations, self-hosting, pricing units, governance, and which platform to buy first."
 tools_mentioned: ["n8n", "zapier", "make", "gumloop", "relevance-ai", "lindy", "pipedream", "crewai"]
@@ -36,7 +36,7 @@ guide_picks:
     sources:
       - label: "Zapier pricing"
         url: "https://zapier.com/pricing"
-last_updated: 2026-06-12
+last_updated: 2026-06-21
 last_verified: 2026-06-12
 update_frequency: monthly
 ---
@@ -66,7 +66,7 @@ AiPedia verified this guide on 2026-06-12 against current official pricing, docs
 | Visual workflows with strong branching and low entry cost | [Make](/tools/make/) | Polished scenario builder, routers, filters, credits, 3000+ apps, and AI agents on all plans | Credit math and scenario design still need monitoring |
 | Agent-heavy workflows with modern team controls | [Gumloop](/tools/gumloop/) | Flows, agents, triggers, MCP support, app policies, guardrails, unlimited agents and flows | Credit usage and enterprise features should be reviewed before rollout |
 | Delegated AI workforce for GTM, research, support, and ops | [Relevance AI](/tools/relevance-ai/) | Agent workforces, actions, scheduling, escalations, marketplace, and BYO LLM on paid plans | Not the cheapest generic workflow router; vendor-credit model needs attention |
-| Inbox, calendar, meeting, and follow-up assistant | [Lindy](/tools/lindy/) | Best fit for professionals who want assistant-style delegation, not a blank automation canvas; see [Best AI personal assistant for work](/guides/best-ai-personal-assistant-for-work/) and Lindy vs Zapier vs n8n | Current public entry is a 7-day trial; Plus is the first paid plan for most solo buyers, while usage and inbox limits need a real pilot |
+| Inbox, calendar, meeting, and follow-up assistant | [Lindy](/tools/lindy/) | Best fit for professionals who want assistant-style delegation, not a blank automation canvas; see [Best AI personal assistant for work](/guides/best-ai-personal-assistant-for-work/) and the AI Automation buyer paths | Current public entry is a 7-day trial; Plus is the first paid plan for most solo buyers, while usage and inbox limits need a real pilot |
 | Developer API workflows and embedded integrations | [Pipedream](/tools/pipedream/) | Good when every step can be code and workflows need API/developer control | Credit-based compute billing requires careful estimation |
 
 ## What To Buy First

@@ -11,11 +11,11 @@ pricing_model: paid
 price_range: "7-day free trial; $49.99-$199.99/month + Enterprise"
 status: active
 launched: 2022-12
-last_updated: 2026-06-12
+last_updated: 2026-06-21
 last_verified: 2026-06-12
 update_frequency: monthly
 seo_title: "Lindy Review: Pricing, Trial, Best Plan & Alternatives (June 2026)"
-meta_description: "Updated June 12, 2026: Lindy pricing, free trial, best plan, use cases, usage limits, security, Zapier/n8n alternatives, and whether Lindy is worth it for inbox, meetings, calendar, and follow-up automation."
+meta_description: "Lindy pricing, free trial, best plan, use cases, usage limits, security, and alternatives for inbox, meetings, calendar, and follow-up automation. Pricing facts last verified June 12, 2026; buyer-path links updated June 21."
 author: "aipedia.wiki Editorial"
 primary_cta_label: "Start Lindy free trial"
 best_plan: "Plus at $49.99/month for most solo professionals; Pro only after computer use or heavier usage is proven."
@@ -277,7 +277,7 @@ If the trial only feels impressive but does not change the week, do not subscrib
 | "Can we only fix email triage?" | [SaneBox](/tools/sanebox/) | Cheaper and narrower for inbox filtering |
 | "Can we only record meeting notes?" | [Fathom](/tools/fathom/) or [MeetGeek](/tools/meetgeek/) | Better when meeting capture is the only job |
 
-Read the full comparison: Lindy vs Zapier vs n8n.
+For the broader routing question, use the [AI Automation buyer paths](/categories/ai-automation/) and the [Best AI personal assistant for work](/guides/best-ai-personal-assistant-for-work/) guide.
 
 ## Who Should Buy Lindy
 
@@ -357,5 +357,5 @@ Yes. AiPedia uses a Lindy PartnerStack affiliate link. The disclosure is shown b
 ## Related
 
 - **Guide:** [Best AI personal assistant for work](/guides/best-ai-personal-assistant-for-work/)
-- **Compare:** Lindy vs Zapier vs n8n
+- **Guide:** [Best AI personal assistant for work](/guides/best-ai-personal-assistant-for-work/)
 - **Category:** [AI Automation & Agents](/categories/ai-automation/)
