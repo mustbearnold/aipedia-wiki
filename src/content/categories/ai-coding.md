@@ -96,7 +96,7 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 
 **June 15 Mastra update:** [Mastra](/tools/mastra/) remains the TypeScript-first agent-framework lane, not a no-code app builder. The current pricing page keeps Starter at $0/month, Teams at $250/month, and Enterprise/self-hosted custom, but the June 15 check sharpens the real cost model around observability events, CPU time, data egress, persistent servers, Memory Gateway input/output at market rate plus 5.5%, memory tokens, retrieval storage, platform storage, and outside model-provider spend. Current docs also make Mastra a broader production-agent surface: the model router claims 4,243 models across 124 providers, while June posts added Code Mode, Agent Signals, and ACP delegation to Claude Agent, Codex CLI, Cursor, Gemini CLI, or compatible harnesses. Treat sandbox policy, workspace isolation, tool approvals, and provider-key handling as part of the buying decision.
 
-**June 15 CodeRabbit update:** [CodeRabbit](/tools/coderabbit/) remains the dedicated PR-review lane for teams that want AI summaries, comments, IDE/CLI review, Knowledge Base, linters, SAST hooks, and human approval before merge. The current check keeps Pro at $24/developer/month annual or $30 monthly, Pro+ at $48 annual or $60 monthly, Slack Agent at $0.50 per active agent minute, and adds sharper capacity guidance: Pro, Pro+, and Enterprise review limits are refillable per-developer allowances, while usage add-on credits are $1 each and cover four reviewed files for eligible over-limit PR/CLI reviews. June changelog updates also matter for coding-agent teams: CodeRabbit Plan in VS Code, CLI v0.6.0, automatic repository linking, and newer GitLab/GHES review support.
+**June 22 CodeRabbit update:** [CodeRabbit](/tools/coderabbit/) remains the dedicated PR-review lane for teams that want AI summaries, comments, IDE/CLI review, Knowledge Base, linters, SAST hooks, and human approval before merge. The June 22 check keeps Pro at $24/developer/month annual or $30 monthly, Pro+ at $48 annual or $60 monthly, Slack Agent at $0.50 per active agent minute, and adds sharper capacity guidance: Pro, Pro+, and Enterprise review limits are refillable per-developer allowances, while usage add-on credits are $1 each and cover four reviewed files for eligible over-limit PR/CLI reviews. June changelog updates also matter for coding-agent teams: CodeRabbit Plan in VS Code, CLI v0.6.0, automatic repository linking, and newer GitLab/GHES review support.
 
 **June 15 Qodo update:** [Qodo](/tools/qodo/) remains the enterprise code-review governance lane, not an autocomplete replacement. Current pricing still lists Developer free, Teams at $38/user/month monthly or $30 annual, and Enterprise custom, but current subscription docs add the operational catch: Teams PR reviews require an assigned paid seat plus a linked Git account, otherwise the developer falls back to Free-tier behavior. Also treat Qodo CLI as sales-verified only: pricing lists CLI workflows on Enterprise, while current CLI docs call the CLI legacy and no longer maintained.
 
@@ -118,7 +118,7 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 
 **June 22 Cline update:** [Cline](/tools/cline/) is no longer just a "free VS Code extension" buyer lane. Current Cline pages position it as an open-source agent runtime across IDE, CLI, Kanban, SDK, and a separate licensed Spec Driven enterprise platform with LG CNS. Open Source remains free for individual developers, but inference is usage-based or BYOK, and the pricing navigation now shows roughly 64k GitHub stars. Enterprise and Spec Driven are custom/licensed governance and delivery-platform lanes for SSO/RBAC/billing/audit/deployment controls, enterprise context, fixed spec pipelines, and model/deployment boundaries. Teams should review Auto Approve/YOLO plus SDK tool policies before broad automation because unlisted SDK tools default to enabled and auto-approved. Vercel AI Gateway is one supported provider route, not the whole product.
 
-**June 15 Cody update:** [Cody](/tools/cody/) remains a Sourcegraph Enterprise-only code-intelligence lane, not a self-serve Copilot alternative. Current Sourcegraph sources keep Enterprise starting at $16K with AI-feature credits, org-wide credit pooling, no monthly credit expiry, and renewal rollover; the VS Code Marketplace now warns Cody is no longer available for non-enterprise users even while the listing still carries stale Cody Pro/model-option copy. Evaluate it only when Sourcegraph code graph, Deep Search, MCP/API/CLI access, Cody Gateway/model controls, and enterprise procurement are part of the platform decision.
+**June 22 Cody update:** [Cody](/tools/cody/) remains a Sourcegraph Enterprise-only code-intelligence lane, not a self-serve Copilot alternative. Current Sourcegraph sources still keep Enterprise starting at $16K with AI-feature credits, org-wide credit pooling, no monthly credit expiry, and renewal rollover; the VS Code Marketplace now warns Cody is no longer available for non-enterprise users even while the listing still carries stale Cody Pro/model-option copy. Evaluate it only when Sourcegraph code graph, Deep Search, MCP/API/CLI access, Cody Gateway/model controls, and enterprise procurement are part of the platform decision.
 
 **Use [GLM](/tools/glm/) when the coding question is model backend evaluation.** Z.AI's GLM-5.1 docs list 200K context, 128K maximum output, OpenAI-compatible API examples, MCP/tool support, and MIT Hugging Face weights, with public API pricing at $1.40/M input and $4.40/M output.
 
@@ -292,10 +292,10 @@ Do not publish stale model-version claims. Coding tools route models and change 
 - [Cline Spec Driven](https://cline.bot/spec-driven) (verified 2026-06-22)
 - [Cline provider configuration docs](https://docs.cline.bot/provider-config/other-30-plus-providers) (verified 2026-06-22)
 - [Cline SDK permission handling](https://docs.cline.bot/sdk/guides/permission-handling) (verified 2026-06-22)
-- [CodeRabbit pricing](https://www.coderabbit.ai/pricing) (verified 2026-06-15)
-- [CodeRabbit plans documentation](https://docs.coderabbit.ai/management/plans) (verified 2026-06-15)
-- [CodeRabbit usage-based add-on docs](https://docs.coderabbit.ai/management/usage-based-addon) (verified 2026-06-15)
-- [CodeRabbit changelog](https://docs.coderabbit.ai/changelog) (verified 2026-06-15)
+- [CodeRabbit pricing](https://www.coderabbit.ai/pricing) (verified 2026-06-22)
+- [CodeRabbit plans documentation](https://docs.coderabbit.ai/management/plans) (verified 2026-06-22)
+- [CodeRabbit usage-based add-on docs](https://docs.coderabbit.ai/management/usage-based-addon) (verified 2026-06-22)
+- [CodeRabbit changelog](https://docs.coderabbit.ai/changelog) (verified 2026-06-22)
 - [Continue pricing](https://www.continue.dev/pricing) (verified 2026-06-12)
 - [Continue docs](https://docs.continue.dev/) (verified 2026-06-12)
 - [Continue GitHub repository](https://github.com/continuedev/continue) (verified 2026-06-12)
@@ -333,12 +333,12 @@ Do not publish stale model-version claims. Coding tools route models and change 
 - [OpenAI public API pricing](https://openai.com/api/pricing/) (verified 2026-06-12)
 - [Supermaven pricing](https://supermaven.com/pricing) (verified 2026-06-12)
 - [Tabnine pricing](https://www.tabnine.com/pricing) (verified 2026-06-12)
-- [Sourcegraph pricing](https://sourcegraph.com/pricing) (verified 2026-06-15)
-- [Sourcegraph Cody docs](https://sourcegraph.com/docs/cody) (verified 2026-06-15)
-- [Sourcegraph Cody plan changes](https://sourcegraph.com/blog/changes-to-cody-free-pro-and-enterprise-starter-plans) (verified 2026-06-15)
-- [Sourcegraph Model Provider docs](https://sourcegraph.com/docs/model-provider) (verified 2026-06-15)
-- [Sourcegraph AI Terms](https://sourcegraph.com/terms/ai-terms) (verified 2026-06-15)
-- [Cody VS Code Marketplace listing](https://marketplace.visualstudio.com/items?itemName=sourcegraph.cody-ai) (verified 2026-06-15)
+- [Sourcegraph pricing](https://sourcegraph.com/pricing) (verified 2026-06-22)
+- [Sourcegraph Cody docs](https://sourcegraph.com/docs/cody) (verified 2026-06-22)
+- [Sourcegraph Cody plan changes](https://sourcegraph.com/blog/changes-to-cody-free-pro-and-enterprise-starter-plans) (verified 2026-06-22)
+- [Sourcegraph Model Provider docs](https://sourcegraph.com/docs/model-provider) (verified 2026-06-22)
+- [Sourcegraph AI Terms](https://sourcegraph.com/terms/ai-terms) (verified 2026-06-22)
+- [Cody VS Code Marketplace listing](https://marketplace.visualstudio.com/items?itemName=sourcegraph.cody-ai) (verified 2026-06-22)
 - [Val Town pricing](https://www.val.town/pricing) (verified 2026-06-14)
 - [Vercel Functions docs](https://vercel.com/docs/functions) (verified 2026-06-14)
 - [Vercel Functions runtimes](https://vercel.com/docs/functions/runtimes) (verified 2026-06-14)

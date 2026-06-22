@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "Free trial; paid Studio and API plans"
 status: active
 launched: 2017-01
-last_updated: 2026-06-15
-last_verified: 2026-06-15
+last_updated: 2026-06-22
+last_verified: 2026-06-22
 update_frequency: weekly
 affiliate:
   has_program: true
@@ -19,7 +19,7 @@ affiliate:
   cookie_days: null
   network: direct
   link: null
-  notes: "Official D-ID affiliate terms verified 2026-06-15: selected-user program, payment only after two consecutive paid months, minimum $30 accumulated fee, and personal/non-commercial sharing limits."
+  notes: "Official D-ID affiliate terms verified 2026-06-22: selected-user program, payment only after two consecutive paid months, minimum $30 accumulated fee, and personal/non-commercial sharing limits."
 scores:
   utility: 8
   value: 6
@@ -31,7 +31,7 @@ facts:
     source: https://www.d-id.com/ai-agents/
     source_label: D-ID AI Agents
     source_id: d-id-agents
-    verified_at: '2026-06-15'
+    verified_at: '2026-06-22'
     volatility: medium
     confidence: high
     next_review_at: '2026-08-14'
@@ -40,16 +40,16 @@ facts:
     source: https://www.d-id.com/pricing/studio/
     source_label: D-ID Studio pricing
     source_id: d-id-studio-pricing
-    verified_at: '2026-06-15'
+    verified_at: '2026-06-22'
     volatility: high
     confidence: high
-    next_review_at: '2026-06-22'
+    next_review_at: '2026-06-29'
   api_available:
     value: D-ID developer docs cover real-time conversational agents over WebRTC, agent sessions, knowledge bases with RAG, LLM/provider or bring-your-own-model configuration, avatar video APIs, video translation, chat exports, and SDK/embed surfaces.
     source: https://docs.d-id.com/
     source_label: D-ID docs
     source_id: d-id-docs
-    verified_at: '2026-06-15'
+    verified_at: '2026-06-22'
     volatility: medium
     confidence: high
     next_review_at: '2026-08-14'
@@ -58,7 +58,7 @@ facts:
     source: https://www.d-id.com/ai-agents/
     source_label: D-ID AI Agents
     source_id: d-id-agents
-    verified_at: '2026-06-15'
+    verified_at: '2026-06-22'
     volatility: medium
     confidence: high
     next_review_at: '2026-08-14'
@@ -67,34 +67,34 @@ facts:
     source: https://www.d-id.com/agentic-videos/
     source_label: D-ID Agentic Videos
     source_id: d-id-agentic-videos
-    verified_at: '2026-06-15'
+    verified_at: '2026-06-22'
     volatility: high
     confidence: medium
-    next_review_at: '2026-06-22'
+    next_review_at: '2026-06-29'
   agent_usage_metering:
     value: D-ID says everyone gets 200 free conversation sessions to start; after that, sessions depend on the selected plan, and Agents usage is charged by generated response video volume at 0.5 credit for every 30 seconds.
     source: https://www.d-id.com/ai-agents/
     source_label: D-ID AI Agents
     source_id: d-id-agents
-    verified_at: '2026-06-15'
+    verified_at: '2026-06-22'
     volatility: high
     confidence: high
-    next_review_at: '2026-06-22'
+    next_review_at: '2026-06-29'
   watch_out_for:
     value: Treat D-ID as a visual-agent and avatar API platform first; for high-volume scripted videos, compare current 15-second-rounded minute usage, watermark, API-balance, session, and agent-credit economics against HeyGen, Synthesia, Tavus, and Captions before buying.
     source: https://www.d-id.com/pricing/studio/
     source_label: D-ID Studio pricing
     source_id: d-id-studio-pricing
-    verified_at: '2026-06-15'
+    verified_at: '2026-06-22'
     volatility: high
     confidence: high
-    next_review_at: '2026-06-22'
+    next_review_at: '2026-06-29'
   affiliate_terms:
     value: D-ID's affiliate program terms describe a selected-user program, referral payout only after the referred user pays for at least two consecutive months, a $30 minimum accumulated payout threshold, and restrictions against public coupon/social/blog-style sharing.
     source: https://www.d-id.com/affiliate-terms/
     source_label: D-ID affiliate terms
     source_id: d-id-affiliate-terms
-    verified_at: '2026-06-15'
+    verified_at: '2026-06-22'
     volatility: medium
     confidence: high
     next_review_at: '2026-08-14'
@@ -143,7 +143,7 @@ D-ID is an AI avatar platform for two related jobs: generating talking-avatar vi
 - **Watermark caveat:** D-ID states that Trial and Lite videos carry watermarks, including full-screen watermarking for trial users.
 - **Buyer watch-out:** old exact self-serve prices should not be treated as current unless the live pricing page or logged-in checkout confirms them on the purchase date.
 
-Verified against D-ID official pages on 2026-06-15.
+Verified against D-ID official pages on 2026-06-22.
 
 ## What It Actually Is
 
@@ -197,7 +197,7 @@ Use [D-ID Studio pricing](https://www.d-id.com/pricing/studio/) and [D-ID API pr
 
 ## Methodology
 
-AiPedia refreshed this page on 2026-06-15 against primary D-ID sources only: the official Visual AI Agents page, Agentic Videos page, Studio pricing page, API pricing page, affiliate terms, and developer docs. V4 Expressive Visual Agents, Agentic Videos, the sub-two-second latency and over-90-percent-accuracy claims, the 5-document / 500K-character knowledge-base limits, the 200 free conversation sessions, 0.5 credit per 30 seconds agent metering, same-balance API minutes, 15-second Studio video-usage rounding, and Trial/Lite watermark caveats were rechecked from live official pages. Older exact prices, unsupported language claims, and unsupported LLM-name claims remain out.
+AiPedia refreshed this page on 2026-06-22 against primary D-ID sources only: the official Visual AI Agents page, Agentic Videos page, Studio pricing page, API pricing page, affiliate terms, and developer docs. V4 Expressive Visual Agents, Agentic Videos, the sub-two-second latency and over-90-percent-accuracy claims, the 5-document / 500K-character knowledge-base limits, the 200 free conversation sessions, 0.5 credit per 30 seconds agent metering, same-balance API minutes, 15-second Studio video-usage rounding, and Trial/Lite watermark caveats were rechecked from live official pages. Older exact prices, unsupported language claims, and unsupported LLM-name claims remain out.
 
 ## FAQ
 

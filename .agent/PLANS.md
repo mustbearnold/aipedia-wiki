@@ -7,10 +7,11 @@ For current state, read `.agent/CURRENT_STATUS.md` first. For completed work, re
 ## Current Snapshot
 
 - Last updated: 2026-06-22.
-- Branch baseline: `master` pushed to `origin/master` at `610b3800`; current local batch is verified but not yet pushed.
+- Branch baseline: `master` pushed to `origin/master` at `a7f5c41d`; current local batch is verified but not yet pushed.
 - The loop system is green: 7 ok / 0 attention / 0 skipped after a fresh build.
 - The active site-freshness lane uses batched tool refreshes, not one full build per tool.
-- The next freshness batch is `coderabbit`, `cody`, `comet`, `d-id`, and `hedra`.
+- The just-verified batch is `coderabbit`, `cody`, `comet`, `d-id`, and `hedra`.
+- The next freshness batch is `mastra`, `microsoft-agent-framework`, `midjourney`, `notebooklm`, and `qodo`.
 - The next Decision Content candidate remains `amazon-q-vs-github-copilot`, but freshness batch work is currently in progress.
 - Comparison pages must compare the same buyer job and workflow.
 - Route QA for rendered work uses 360, 390, 430, 768, 1024, and 1366 px. Add 319 px for homepage, nav, card grids, or narrow-mobile risk. Add 346 px when reproducing in-app browser reports.
@@ -32,30 +33,32 @@ Keep every volatile tool fact, source-backed claim, commercial surface, affected
 - Qwen, Hailuo, HeyGen, Adobe Firefly.
 - Augment Code, Base44, BLACKBOX AI, Captions.ai, Cline.
 - Batched refresh planner and fast batch check command.
+- CodeRabbit, Cody, Comet, D-ID, and Hedra.
 
 ### Active Batch
 
 Current batch from `npm run tool:refresh:batch -- --limit 5 --json`:
 
-- `src/content/tools/coderabbit.md`
-- `src/content/tools/cody.md`
-- `src/content/tools/comet.md`
-- `src/content/tools/d-id.md`
-- `src/content/tools/hedra.md`
+- `src/content/tools/mastra.md`
+- `src/content/tools/microsoft-agent-framework.md`
+- `src/content/tools/midjourney.md`
+- `src/content/tools/notebooklm.md`
+- `src/content/tools/qodo.md`
 
 Affected parent hubs:
 
 - `src/content/categories/ai-coding.md`
-- `src/content/categories/ai-search.md`
-- `src/content/categories/ai-video.md`
+- `src/content/categories/ai-automation.md`
+- `src/content/categories/ai-image.md`
+- `src/content/categories/ai-notes.md`
 
 Required closeout:
 
 - `npm run ledger:pages`
-- `npm run tool:refresh:batch:check -- --file src\content\tools\coderabbit.md --file src\content\tools\cody.md --file src\content\tools\comet.md --file src\content\tools\d-id.md --file src\content\tools\hedra.md`
+- `npm run tool:refresh:batch:check -- --file src\content\tools\mastra.md --file src\content\tools\microsoft-agent-framework.md --file src\content\tools\midjourney.md --file src\content\tools\notebooklm.md --file src\content\tools\qodo.md`
 - `npm run typecheck`
 - `npm run build:fast`
-- `npm run qa:route -- --route /tools/coderabbit/ --route /categories/ai-coding/ --route /tools/cody/ --route /tools/comet/ --route /categories/ai-search/ --route /tools/d-id/ --route /categories/ai-video/ --route /tools/hedra/ --route /tools/ --route /categories/ --widths 319,360,390,430,768,1024,1366 --site-dir dist-fast/client`
+- `npm run qa:route -- --route /tools/mastra/ --route /categories/ai-coding/ --route /tools/microsoft-agent-framework/ --route /categories/ai-automation/ --route /tools/midjourney/ --route /categories/ai-image/ --route /tools/notebooklm/ --route /categories/ai-notes/ --route /tools/qodo/ --route /tools/ --route /categories/ --widths 319,360,390,430,768,1024,1366 --site-dir dist-fast/client`
 
 Run `typecheck` and `build:fast` sequentially. They both sync Astro content, and running them in parallel can race on `node_modules/.astro/data-store.json`.
 

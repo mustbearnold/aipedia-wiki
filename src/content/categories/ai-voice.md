@@ -5,10 +5,10 @@ title: AI Voice Tools
 description: Compare AI voice generation, voice cloning, text-to-speech, speech-to-text, dubbing, meeting transcription, transcription APIs, voice-agent tools, and AI-powered phone systems.
 tool_count: 24
 seo_title: "Best AI Voice Tools 2026: TTS, Voice Agents, AI Phone Systems"
-meta_description: "Updated June 18, 2026: compare AI voice tools including ElevenLabs, Whisper, Wispr Flow, Resemble AI, Voxtral, Cartesia, Retell AI, Hedra, Deepgram, AssemblyAI, and meeting transcription apps by TTS, STT, dictation, agents, and buyer fit."
+meta_description: "Updated June 22, 2026: compare AI voice tools including ElevenLabs, Whisper, Wispr Flow, Resemble AI, Voxtral, Cartesia, Retell AI, Hedra, Deepgram, AssemblyAI, and meeting transcription apps by TTS, STT, dictation, agents, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-18
-last_verified: 2026-06-18
+last_updated: 2026-06-22
+last_verified: 2026-06-22
 update_frequency: monthly
 ---
 
@@ -103,9 +103,9 @@ The June 10 refresh adds two voice lanes that are easy to blur. [Whisper](/tools
 - [Castmagic pricing](https://www.castmagic.io/pricing) (verified 2026-06-18)
 - [Castmagic product overview](https://www.castmagic.io/) (verified 2026-06-18)
 - [Castmagic API docs](https://docs.castmagic.io/) (verified 2026-06-18)
-- [Hedra pricing](https://www.hedra.com/pricing) (verified 2026-06-15)
-- [Hedra models](https://www.hedra.com/models) (verified 2026-06-15)
-- [Hedra Agent creative workflows](https://www.hedra.com/blog/agent-creative-workflows) (verified 2026-06-15)
+- [Hedra pricing](https://www.hedra.com/pricing) (verified 2026-06-22)
+- [Hedra models](https://www.hedra.com/models) (verified 2026-06-22)
+- [Hedra Agent creative workflows](https://www.hedra.com/blog/agent-creative-workflows) (verified 2026-06-22)
 - [Hume AI pricing](https://www.hume.ai/pricing) (verified 2026-06-12)
 - [Hume Expression Measurement docs](https://dev.hume.ai/docs/expression-measurement/overview) (verified 2026-06-12)
 - [YouTube altered or synthetic content disclosure](https://support.google.com/youtube/answer/14328491) (verified 2026-06-12)

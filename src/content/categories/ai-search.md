@@ -30,7 +30,7 @@ AI search is not one category anymore. Buyers now choose between **cited answer 
 
 **June 6 Perplexity vs ChatGPT update:** Perplexity vs ChatGPT now gives Perplexity the answer-engine lane and ChatGPT the general AI workbench lane. Buyers who need source trails, market scans, vendor checks, and current web due diligence should start with Perplexity; buyers who need writing, coding, files, data, image, voice, and agent workflows should start with ChatGPT and add source discipline when browsing.
 
-**Use [Comet](/tools/comet/) when the search workflow should live inside the browser.** Comet is the Perplexity browser lane for users who want AI search, page context, shopping/research help, and everyday web actions closer to tabs instead of a separate answer-engine page. The June 15 Comet recheck keeps the free-first rule: upgrade Perplexity only when Comet Agent queries, Max Assistant, Computer credits, advanced models, or team controls become the actual bottleneck, and require explicit review before Comet handles email, finance, shopping, account, file, or checkout actions.
+**Use [Comet](/tools/comet/) when the search workflow should live inside the browser.** Comet is the Perplexity browser lane for users who want AI search, page context, shopping/research help, and everyday web actions closer to tabs instead of a separate answer-engine page. The June 22 Comet recheck keeps the free-first rule: upgrade Perplexity only when Comet Agent queries, Max Assistant, Computer credits, advanced models, or enterprise assistant controls become the actual bottleneck, and require explicit review before Comet handles email, finance, shopping, account, file, or checkout actions.
 
 **Use [Dia](/tools/dia/) when browser context, tabs, meetings, and connected work apps are the AI surface.** The June 2 check found Dia explicitly positioned as part of Atlassian, with SSO, MDM controls, admin-managed profiles, SOC 2 Type II coverage, and provider no-training restrictions now surfaced on the security page. It is still a user browser, not a programmable browser automation API.
 
@@ -136,17 +136,17 @@ Do not leave this category stale. Google AI Mode, Perplexity Pro/Max/Enterprise,
 
 ## Sources
 
-- [Perplexity Comet](https://www.perplexity.ai/comet) (verified 2026-06-15)
+- [Perplexity Comet](https://www.perplexity.ai/comet) (verified 2026-06-22)
 - [Dia website](https://www.diabrowser.com) (verified 2026-06-12)
 - [Dia security](https://www.diabrowser.com/security) (verified 2026-06-12)
 - [Perplexity Pro](https://www.perplexity.ai/pro) (verified 2026-06-15)
-- [Perplexity Max help](https://www.perplexity.ai/help-center/en/articles/11680686-perplexity-max) (verified 2026-06-15)
+- [Perplexity Max help](https://www.perplexity.ai/help-center/en/articles/11680686-perplexity-max) (verified 2026-06-22)
 - [Perplexity Enterprise](https://www.perplexity.ai/enterprise) (verified 2026-06-15)
 - [Perplexity API pricing](https://docs.perplexity.ai/docs/getting-started/pricing) (verified 2026-06-15)
 - [Perplexity Agent API tools](https://docs.perplexity.ai/docs/agent-api/tools) (verified 2026-06-15)
 - [Perplexity Sonar media docs](https://docs.perplexity.ai/docs/sonar/media) (verified 2026-06-15)
-- [Perplexity Enterprise pricing](https://www.perplexity.ai/enterprise/pricing) (verified 2026-06-15)
-- [Perplexity API privacy and security](https://docs.perplexity.ai/docs/resources/privacy-security) (verified 2026-06-15)
+- [Perplexity Enterprise pricing](https://www.perplexity.ai/enterprise/pricing) (verified 2026-06-22)
+- [Perplexity API privacy and security](https://docs.perplexity.ai/docs/resources/privacy-security) (verified 2026-06-22)
 - [Perplexity security](https://www.perplexity.ai/hub/security) (verified 2026-06-15)
 - [ChatGPT Search Help](https://help.openai.com/en/articles/9237897-chatgpt-search) (verified 2026-06-12)
 - [Google AI Mode and AI Overviews updates](https://blog.google/products-and-platforms/products/search/explore-web-generative-ai-search/) (verified 2026-06-12)

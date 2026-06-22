@@ -2969,7 +2969,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "coderabbit-best-paid-tier",
@@ -2978,7 +2978,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "coderabbit-usage-addon",
@@ -2987,7 +2987,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "coderabbit-platform-docs",
@@ -2996,7 +2996,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "coderabbit-knowledge-base",
@@ -3005,7 +3005,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "coderabbit-cli",
@@ -3014,7 +3014,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "coderabbit-slack-agent-docs",
@@ -3023,7 +3023,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "coderabbit-changelog",
@@ -3032,7 +3032,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "codex-docs",
@@ -3138,7 +3138,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "cody-pricing",
@@ -3147,7 +3147,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "cody-plan-changes",
@@ -3156,7 +3156,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "cody-model-provider",
@@ -3165,7 +3165,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "cody-model-configuration",
@@ -3174,7 +3174,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "sourcegraph-ai-terms",
@@ -3183,7 +3183,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "cody-vscode-marketplace",
@@ -3192,7 +3192,7 @@
       "type": "third_party",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "cohere-command",
@@ -3587,7 +3587,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "d-id-agentic-videos",
@@ -3596,7 +3596,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "d-id-api-pricing",
@@ -3605,7 +3605,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "d-id-docs",
@@ -3614,7 +3614,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "d-id-affiliate-terms",
@@ -3623,7 +3623,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "d-id-official",
@@ -3632,7 +3632,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "d-id-studio-pricing",
@@ -3641,7 +3641,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "dalle-best-for",
@@ -5596,7 +5596,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "hedra-models",
@@ -5605,7 +5605,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "hedra-pricing",
@@ -5614,7 +5614,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "hedra-enterprise",
@@ -5623,7 +5623,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "hedra-agent-workflows",
@@ -5632,7 +5632,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "hedra-skills",
@@ -5641,7 +5641,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "helicone-docs",
@@ -8606,7 +8606,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-20"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "perplexity-pricing",
@@ -8633,7 +8633,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "perplexity-sonar-pro-docs",
@@ -8678,7 +8678,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "perplexity-comet",
@@ -8687,7 +8687,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "perplexity-security",

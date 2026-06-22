@@ -16,7 +16,7 @@ Old specs, archived plans, local ignored docs, and stale chat history are not ca
 
 ## Current State
 
-- Branch: `master`, pushed to `origin/master` at `610b3800 chore: batch June tool freshness refresh`; current local batch is verified but not yet pushed.
+- Branch: `master`, pushed to `origin/master` at `a7f5c41d chore: refresh next June tool batch`; current local batch is verified but not yet pushed.
 - The TanStack rebuild is not active.
 - The loop system is healthy: latest broad recorded review is 7 ok / 0 attention / 0 skipped after a fresh `npm run build:fast`.
 - Comparison policy is strict: publish `vs` pages only for tools that solve the same buyer job and workflow. Cross-category or different-workflow pages must be deleted or avoided.
@@ -43,14 +43,19 @@ Completed for June 21-22:
 - BLACKBOX AI.
 - Captions.ai.
 - Cline.
+- CodeRabbit.
+- Cody.
+- Comet.
+- D-ID.
+- Hedra.
 
 Next batched freshness queue from `npm run tool:refresh:batch -- --limit 5 --json`:
 
-1. `coderabbit`: `/tools/coderabbit/`, parent `/categories/ai-coding/`.
-2. `cody`: `/tools/cody/`, parent `/categories/ai-coding/`.
-3. `comet`: `/tools/comet/`, parent `/categories/ai-search/`.
-4. `d-id`: `/tools/d-id/`, parent `/categories/ai-video/`.
-5. `hedra`: `/tools/hedra/`, parent `/categories/ai-video/`.
+1. `mastra`: `/tools/mastra/`, parent `/categories/ai-coding/`.
+2. `microsoft-agent-framework`: `/tools/microsoft-agent-framework/`, parent `/categories/ai-automation/`.
+3. `midjourney`: `/tools/midjourney/`, parent `/categories/ai-image/`.
+4. `notebooklm`: `/tools/notebooklm/`, parent `/categories/ai-notes/`.
+5. `qodo`: `/tools/qodo/`, parent `/categories/ai-coding/`.
 
 Use the batched tool refresh flow:
 
@@ -65,11 +70,12 @@ Do not return to one full build per tool unless a template, runtime, layout, gen
 
 ### Oldest-First Tool Freshness
 
-Continue the five-tool batch above. Update affected parent hubs:
+The CodeRabbit, Cody, Comet, D-ID, and Hedra batch is verified locally and ready to push. After push, continue the next five-tool batch above. Update affected parent hubs:
 
 - `src/content/categories/ai-coding.md`
-- `src/content/categories/ai-search.md`
-- `src/content/categories/ai-video.md`
+- `src/content/categories/ai-automation.md`
+- `src/content/categories/ai-image.md`
+- `src/content/categories/ai-notes.md`
 - `/tools/` and `/categories/` via ledger/build output
 
 ### Decision Content Flywheel
@@ -84,11 +90,10 @@ Shared width and card-surface work is complete. Future visual work should inspec
 
 Latest completed batched tool refresh passed:
 
-- `npm run tool:refresh:batch:check -- --file src\content\tools\augment-code.md --file src\content\tools\base44.md --file src\content\tools\blackbox-ai.md --file src\content\tools\captions.md --file src\content\tools\cline.md --json`
-- `npm run ledger:pages`
+- `npm run tool:refresh:batch:check -- --file src\content\tools\coderabbit.md --file src\content\tools\cody.md --file src\content\tools\comet.md --file src\content\tools\d-id.md --file src\content\tools\hedra.md --json`
 - `npm run typecheck`
 - `npm run build:fast`
-- `npm run qa:route -- --route /tools/augment-code/ --route /categories/ai-coding/ --route /tools/base44/ --route /categories/ai-design/ --route /tools/blackbox-ai/ --route /tools/captions/ --route /categories/ai-video/ --route /tools/cline/ --route /tools/ --route /categories/ --widths 319,360,390,430,768,1024,1366 --site-dir dist-fast/client`
+- `npm run qa:route -- --route /tools/coderabbit/ --route /categories/ai-coding/ --route /tools/cody/ --route /tools/comet/ --route /categories/ai-search/ --route /tools/d-id/ --route /categories/ai-video/ --route /tools/hedra/ --route /tools/ --route /categories/ --widths 319,360,390,430,768,1024,1366 --site-dir dist-fast/client`
 - `node scripts\guard-em-dashes.mjs`
 - `git diff --check`
 

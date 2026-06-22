@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$60/developer/month"
 status: active
 launched: 2023
-last_updated: 2026-06-15
-last_verified: 2026-06-15
+last_updated: 2026-06-22
+last_verified: 2026-06-22
 update_frequency: monthly
 seo_title: "CodeRabbit: Features, Pricing & Review (June 2026)"
 meta_description: "CodeRabbit provides AI code reviews for pull requests, IDEs, CLI workflows, and Slack. Pro is $24/user/mo annual, Pro+ is $48/user/mo annual, and the Slack agent is usage priced."
@@ -34,22 +34,22 @@ facts:
     source: "https://docs.coderabbit.ai/"
     source_label: "CodeRabbit platform docs"
     source_id: coderabbit-platform-docs
-    verified_at: 2026-06-15
+    verified_at: 2026-06-22
     confidence: high
   best_paid_tier:
     value: "Pro ($24/user/month annual) for review; Pro+ ($48/user/month annual) for planning, unit tests, merge-conflict help, and higher limits; add credits for deliberate over-limit PR/CLI review volume"
     source: "https://docs.coderabbit.ai/management/plans"
     source_label: "CodeRabbit plans docs"
     source_id: coderabbit-best-paid-tier
-    verified_at: 2026-06-15
-    next_review_at: 2026-06-22
+    verified_at: 2026-06-22
+    next_review_at: 2026-06-29
     confidence: high
   best_for:
     value: "Teams that want a first-pass AI reviewer on pull requests before human review"
     source: "https://www.coderabbit.ai/pricing"
     source_label: "CodeRabbit pricing"
     source_id: coderabbit-best-for
-    verified_at: 2026-06-15
+    verified_at: 2026-06-22
     confidence: high
 tags: [ai-coding, code-review, pull-requests, github, gitlab, cli, vscode, sast, linters]
 best_for:
@@ -64,12 +64,21 @@ not_best_for:
 quick_answer: >-
   CodeRabbit is useful when pull request review is the bottleneck. Pick it for automated summaries, contextual PR comments, IDE/CLI reviews, linter and SAST support, and OSS-friendly public repository terms. Consider the Slack agent separately for investigation, planning, and PR-opening workflows. Skip it if your team needs deeper architecture review from humans, not more comments.
 price_history:
+  - date: 2026-06-22
+    plan: "Pricing and usage refresh"
+    price: "Free / Pro $24 annual or $30 monthly / Pro+ $48 annual or $60 monthly / credits at $1 for 4 reviewed files / Slack agent $0.50 per active agent minute"
+    source: "https://docs.coderabbit.ai/management/plans"
+    source_label: "CodeRabbit plans docs"
+    source_id: coderabbit-best-paid-tier
+    verified_at: 2026-06-22
+    note: "Rechecked official pricing, plan, usage add-on, and Slack Agent pages. Pro and Pro+ prices remain unchanged. Refillable review allowances, $1 credits for four reviewed files, and $0.50 active-agent-minute Slack pricing still make review-volume controls the main buyer issue."
   - date: 2026-05-10
     plan: "Free"
     price: "$0/user/mo"
     source: "https://www.coderabbit.ai/pricing"
     source_label: "Source"
     source_id: coderabbit-best-for
+    verified_at: 2026-05-10
     note: "PR summarization, unlimited public/private repositories, limited review access via IDE/CLI, and a 14-day trial"
   - date: 2026-05-10
     plan: "Pro"
@@ -77,6 +86,7 @@ price_history:
     source: "https://www.coderabbit.ai/pricing"
     source_label: "Source"
     source_id: coderabbit-best-for
+    verified_at: 2026-05-10
     note: "Verified against pricing page and plans docs; includes PR reviews, Knowledge Base, SAST/linter support, dashboards, docstrings, autofix, MCP connections, linked-repo analysis, and usage-based add-on access"
   - date: 2026-05-10
     plan: "Pro+"
@@ -84,6 +94,7 @@ price_history:
     source: "https://www.coderabbit.ai/pricing"
     source_label: "Source"
     source_id: coderabbit-best-for
+    verified_at: 2026-05-10
     note: "Verified against pricing page and plans docs; adds custom pre-merge checks, unit-test generation, simplify, merge-conflict resolution, issue planning, and higher limits"
   - date: 2026-05-10
     plan: "CodeRabbit Agent for Slack"
@@ -91,6 +102,7 @@ price_history:
     source: "https://www.coderabbit.ai/pricing"
     source_label: "Source"
     source_id: coderabbit-best-for
+    verified_at: 2026-05-10
     note: "Usage-priced Slack agent for investigation, recurring tasks, planning, code generation, opening PRs, and progress summaries"
   - date: 2026-06-01
     plan: "Pricing refresh"
@@ -98,6 +110,7 @@ price_history:
     source: "https://www.coderabbit.ai/pricing"
     source_label: "Source"
     source_id: coderabbit-best-for
+    verified_at: 2026-06-01
     note: "Re-verified June 1, 2026 against CodeRabbit pricing and plan docs; public paid-seat and Slack agent anchors remain unchanged from the May snapshot."
   - date: 2026-06-15
     plan: "Pricing and usage refresh"
@@ -105,6 +118,7 @@ price_history:
     source: "https://docs.coderabbit.ai/management/usage-based-addon"
     source_label: "Source"
     source_id: coderabbit-usage-addon
+    verified_at: 2026-06-15
     note: "Re-verified against pricing, plans, and usage add-on docs; Pro, Pro+, Enterprise can use on-demand credits for eligible over-limit PR and CLI reviews after plan allowances."
 ---
 
@@ -224,7 +238,7 @@ Current feature limits worth budgeting around: Pro lists 5 MCP connections and 1
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-15 against CodeRabbit primary sources, including documented refillable review allowances (Pro: 5 PR / 5 IDE / 5 CLI reviews per developer, 5 MCP connections, 1 linked repo; Pro+: 10 / 10 / 10 reviews, 15 MCP connections, 10 linked repos), usage add-on credit pricing, Knowledge Base behavior, Slack Agent billing, CLI positioning, and June changelog updates.
+This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-22 against CodeRabbit primary sources. The check covered refillable review allowances, usage add-on credit pricing, Knowledge Base behavior, Slack Agent billing, CLI positioning, and June changelog updates.
 
 ## FAQ
 

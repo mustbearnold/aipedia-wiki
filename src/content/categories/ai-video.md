@@ -50,7 +50,7 @@ AI video is no longer one clean product category. On June 9, 2026, the useful bu
 
 **June 7 switching-route refresh:** AiPedia rechecked the Runway and Synthesia alternatives guides against current official sources. The current hub logic still holds: Seedance first for raw model tests, Kling as the value/cinematic challenger, Veo for Google/API/provenance, Runway for production workflow, Pika/Luma/Hailuo for lighter social experiments, and Synthesia/HeyGen/Tavus/D-ID/Hedra/Argil/Captions for avatar-led business video.
 
-**June 15 Hedra route refresh:** Hedra is now best framed as a creative-agent workspace plus pooled-credit media studio, not just a talking-avatar tool. Current official pricing still lists Basic at $15/month, Creator at $30/month, Professional and Teams at $75/month, and Enterprise custom, while the visible model-rate table now includes Character-3, Veo 3.1, Sora 2 Pro, Kling 2.5 Turbo, MiniMax Hailuo 2.3, image models, and voice models under one credit balance. Use Hedra when the job is character-led creative plus model choice and reusable workflow, but verify the exact model route in-app because public rate rows can move.
+**June 22 Hedra route refresh:** Hedra is now best framed as a creative-agent workspace plus pooled-credit media studio, not just a talking-avatar tool. Current official pricing still lists Basic at $15/month, Creator at $30/month, Professional and Teams at $75/month, and Enterprise custom, while the visible model-rate table now includes Character-3, Veo 3.1, Sora 2 Pro, Kling 2.5 Turbo, MiniMax Hailuo 2.3, image models, and voice models under one credit balance. Use Hedra when the job is character-led creative plus model choice and reusable workflow, but verify the exact model route in-app because public rate rows can move.
 
 The June 6 [best AI video generator guide](/guides/best-ai-video-generator/) refresh now mirrors this hub on mobile: no wide comparison table as the primary experience, separate buying lanes for Seedance, Kling, Veo, Runway, Pika, and HeyGen, plus explicit rights, credit, region, procurement, and production-workflow checks before CTAs.
 
@@ -92,7 +92,7 @@ If you need a person on camera, use avatar tools. The [best AI avatar video gene
 
 **Best PixVerse use case:** treat [PixVerse](/tools/pixverse/) as a budget/stylized test bed and API-credit route, not as a default enterprise video system. Its June 8 Platform docs publish C1, V6, V5.6, and V5.5 credit rates, one-time API credit packs, and Essential/Scale/Business API memberships that are separate from PixVerse Web memberships, so buyers should verify web-plan pricing, watermark rules, commercial rights, and upload/data policy before paying.
 
-**Best avatar-video pick:** [HeyGen](/tools/heygen/) for creator/business presenter video, sales video, localization, digital twins, and fast templates. The June 22 HeyGen recheck keeps app plans, API-key wallet usage, OAuth/web-plan usage, LiveAvatar streaming, and affiliate terms separate: the app still lists Free, Creator $29/month with 600 credits, Pro from $49/month with 1,000 credits, Business $149/month plus $20/seat with 1,500 credits, and Enterprise custom, while current developer pricing lists Avatar IV/V 720p/1080p at $0.05/sec or $0.0667/sec, Cinematic Avatar at $7/video, Video Agent at $0.0333/sec, and HyperFrames at $0.10-$0.30/min. LiveAvatar now needs Free and Starter $19/month coverage before Essential $99/month, Business $475/month, and Enterprise custom with a stated $48,800 minimum budget. The pricing help route still matters for API plan caveats, so buyers should use the live pricing page, developer pricing docs, and LiveAvatar help for current purchase math. The June 9 Tavus check keeps Tavus as the API-first live video-agent lane, with Developer pricing at Free, Starter $59/mo, Growth $397/mo, Enterprise custom, plus pay-as-you-go usage and a current Growth card showing 10 concurrent streams. The June 15 D-ID check keeps D-ID as the visual-agent and agentic-video lane: API minutes draw from the same balance as web D-ID, Studio video usage rounds to the nearest 15-second interval, Trial/Lite outputs can carry watermarks, everyone gets 200 free conversation sessions to start, and generated agent response video is metered at 0.5 credit per 30 seconds. The June 22 Captions check keeps Captions as the short-form social editor lane: Max adds AI Twin/custom actors, Mirage-generated actors, chat editing, and 500 credits, while Scale/Scale 2x/Scale 4x only make sense after measuring model-specific credit burn, platform support, and the live-account rollover state. Use the June 15 verified [avatar-video buyer guide](/guides/best-ai-avatar-video-generator/) when the choice is between HeyGen, Synthesia, Tavus, D-ID, Hedra, Argil, and Captions. If Synthesia is already the incumbent, use the June 7 verified [Synthesia alternatives guide](/guides/synthesia-alternatives/) to decide whether switching is worth the migration cost.
+**Best avatar-video pick:** [HeyGen](/tools/heygen/) for creator/business presenter video, sales video, localization, digital twins, and fast templates. The June 22 HeyGen recheck keeps app plans, API-key wallet usage, OAuth/web-plan usage, LiveAvatar streaming, and affiliate terms separate: the app still lists Free, Creator $29/month with 600 credits, Pro from $49/month with 1,000 credits, Business $149/month plus $20/seat with 1,500 credits, and Enterprise custom, while current developer pricing lists Avatar IV/V 720p/1080p at $0.05/sec or $0.0667/sec, Cinematic Avatar at $7/video, Video Agent at $0.0333/sec, and HyperFrames at $0.10-$0.30/min. LiveAvatar now needs Free and Starter $19/month coverage before Essential $99/month, Business $475/month, and Enterprise custom with a stated $48,800 minimum budget. The pricing help route still matters for API plan caveats, so buyers should use the live pricing page, developer pricing docs, and LiveAvatar help for current purchase math. The June 9 Tavus check keeps Tavus as the API-first live video-agent lane, with Developer pricing at Free, Starter $59/mo, Growth $397/mo, Enterprise custom, plus pay-as-you-go usage and a current Growth card showing 10 concurrent streams. The June 22 D-ID check keeps D-ID as the visual-agent and agentic-video lane: API minutes draw from the same balance as web D-ID, Studio video usage rounds to the nearest 15-second interval, Trial/Lite outputs can carry watermarks, everyone gets 200 free conversation sessions to start, and generated agent response video is metered at 0.5 credit per 30 seconds. The June 22 Captions check keeps Captions as the short-form social editor lane: Max adds AI Twin/custom actors, Mirage-generated actors, chat editing, and 500 credits, while Scale/Scale 2x/Scale 4x only make sense after measuring model-specific credit burn, platform support, and the live-account rollover state. Use the June 22 verified [avatar-video buyer guide](/guides/best-ai-avatar-video-generator/) when the choice is between HeyGen, Synthesia, Tavus, D-ID, Hedra, Argil, and Captions. If Synthesia is already the incumbent, use the June 7 verified [Synthesia alternatives guide](/guides/synthesia-alternatives/) to decide whether switching is worth the migration cost.
 
 ## What Hurts Trust
 
@@ -206,10 +206,10 @@ Yes, but with honest positioning. They are useful for budget testing, effects, o
 - [Luma Dream Machine pricing support](https://lumalabs.ai/learning-hub/dream-machine-support-pricing-information) (verified 2026-06-12)
 - [Luma pricing](https://lumalabs.ai/pricing) (verified 2026-06-12)
 - [Luma Ray3.14 FAQ](https://lumalabs.ai/learning-hub/ray3-faq) (verified 2026-06-12)
-- [Hedra pricing](https://www.hedra.com/pricing) (verified 2026-06-15)
-- [Hedra models](https://www.hedra.com/models) (verified 2026-06-15)
-- [Hedra Agent creative workflows](https://www.hedra.com/blog/agent-creative-workflows) (verified 2026-06-15)
-- [Hedra Enterprise](https://www.hedra.com/enterprise) (verified 2026-06-15)
+- [Hedra pricing](https://www.hedra.com/pricing) (verified 2026-06-22)
+- [Hedra models](https://www.hedra.com/models) (verified 2026-06-22)
+- [Hedra Agent creative workflows](https://www.hedra.com/blog/agent-creative-workflows) (verified 2026-06-22)
+- [Hedra Enterprise](https://www.hedra.com/enterprise) (verified 2026-06-22)
 - [Higgsfield pricing](https://higgsfield.ai/pricing) (verified 2026-06-12)
 - [Higgsfield about](https://higgsfield.ai/about) (verified 2026-06-12)
 - [ChatGPT pricing](https://chatgpt.com/pricing/) (verified 2026-06-12)
@@ -242,11 +242,11 @@ Yes, but with honest positioning. They are useful for budget testing, effects, o
 - [Tavus pricing](https://www.tavus.io/pricing) (verified 2026-06-12)
 - [Tavus CVI](https://www.tavus.io/cvi) (verified 2026-06-12)
 - [Synthesia pricing](https://www.synthesia.io/pricing) (verified 2026-06-12)
-- [D-ID Studio pricing](https://www.d-id.com/pricing/studio/) (verified 2026-06-15)
-- [D-ID API pricing](https://www.d-id.com/pricing/api/) (verified 2026-06-15)
-- [D-ID Visual Agents](https://www.d-id.com/ai-agents/) (verified 2026-06-15)
-- [D-ID Agentic Videos](https://www.d-id.com/agentic-videos/) (verified 2026-06-15)
-- [D-ID developer docs](https://docs.d-id.com/docs/quickstart) (verified 2026-06-15)
+- [D-ID Studio pricing](https://www.d-id.com/pricing/studio/) (verified 2026-06-22)
+- [D-ID API pricing](https://www.d-id.com/pricing/api/) (verified 2026-06-22)
+- [D-ID Visual Agents](https://www.d-id.com/ai-agents/) (verified 2026-06-22)
+- [D-ID Agentic Videos](https://www.d-id.com/agentic-videos/) (verified 2026-06-22)
+- [D-ID developer docs](https://docs.d-id.com/docs/quickstart) (verified 2026-06-22)
 
 ## Related
 

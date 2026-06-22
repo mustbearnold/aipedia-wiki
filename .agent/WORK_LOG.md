@@ -450,6 +450,16 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Residual risks: Full local build time is still about 3.5 minutes. Astro markdown plugin deprecation warnings remain. Pagefind output is near the 10 MB budget, and large search/archive payloads are likely worth future trimming.
 - Next: Start the focused `canva-vs-claude` comparison sprint, or do a small build-performance pass that adds phase timing and trims Pagefind/search payload growth.
 
+### 2026-06-22: CodeRabbit, Cody, Comet, D-ID, Hedra Batch
+
+- Status: Complete locally, verified, not yet pushed.
+- Commit: pending.
+- Branch: `master`.
+- Changed: Refreshed CodeRabbit, Cody, Comet, D-ID, and Hedra against current June 22 primary sources, updated affected AI Coding, AI Search, AI Video, AI Voice, code review, and avatar video surfaces, refreshed relevant source registry checks, regenerated `PAGE_REFRESH_LEDGER.md`, and recorded `.agent/loop-runs/2026-06-22-coderabbit-cody-comet-d-id-hedra-batch.md`.
+- Verification: `npm run tool:refresh:batch:check -- --file src\content\tools\coderabbit.md --file src\content\tools\cody.md --file src\content\tools\comet.md --file src\content\tools\d-id.md --file src\content\tools\hedra.md --json`; `npm run typecheck`; `npm run build:fast`; `npm run qa:route -- --route /tools/coderabbit/ --route /categories/ai-coding/ --route /tools/cody/ --route /tools/comet/ --route /categories/ai-search/ --route /tools/d-id/ --route /categories/ai-video/ --route /tools/hedra/ --route /tools/ --route /categories/ --widths 319,360,390,430,768,1024,1366 --site-dir dist-fast/client`; `node scripts\guard-em-dashes.mjs`; `git diff --check`.
+- Residual risks: Full freshness is still incomplete across the whole tool inventory. Continue the active `/goal` with Mastra, Microsoft Agent Framework, Midjourney, NotebookLM, and Qodo.
+- Next: Push this batch, then start the next oldest-first five-tool batch.
+
 ### 2026-06-21: Vercel CLI Install And Warning Classification
 
 - Status: Complete.
